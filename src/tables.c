@@ -2875,15 +2875,15 @@ deity_type deity_info_init[MAX_GODS_INIT] =
 tactic_info_type tactic_info[9] =
 {
 	/*        hit  dam   ac stl  dis  sav */
-	{ -10, -10, + 15, + 3, + 15, + 14, "coward"},             /* 4-4 */
-	{ -8, -8, + 10, + 2, + 9, + 9, "meek"},               /* 4-3 */
-	{ -4, -4, + 5, + 1, + 5, + 5, "wary"},               /* 4-2 */
-	{ -2, -2, + 2, + 1, + 2, + 2, "careful"},            /* 4-1 */
+	{ -10, -10, + 15, + 3, 0, 0, "coward"},             /* 4-4 */
+	{ -8, -8, + 10, + 2, 0, 0, "meek"},               /* 4-3 */
+	{ -4, -4, + 5, + 1, 0, 0, "wary"},               /* 4-2 */
+	{ -2, -2, + 2, + 1, 0, 0, "careful"},            /* 4-1 */
 	{ 0, 0, 0, 0, 0, 0, "normal"},             /* 4+0 */
-	{ 2, 2, -2, -1, -2, -3, "confident"},          /* 4+1 */
-	{ 4, 4, -5, -2, -5, -7, "aggressive"},         /* 4+2 */
-	{ 6, 6, -10, -3, -11, -12, "furious"},            /* 4+3 */
-	{ 8, 12, -25, -5, -18, -18, "berserker"}         /* 4+4 */
+	{ 2, 2, -2, -1, 0, 0, "confident"},          /* 4+1 */
+	{ 4, 4, -5, -2, 0, 0, "aggressive"},         /* 4+2 */
+	{ 6, 6, -10, -3, 0, 0, "furious"},            /* 4+3 */
+	{ 8, 8, -20, -5, 0, 0, "berserker"}         /* 4+4 */
 };
 
 /*
@@ -2953,15 +2953,15 @@ activation activation_info[MAX_T_ACT] =
 move_info_type move_info[9] =
 {
 	/*        speed, searching, stealth, perception */
-	{ -10, 17, 4, 20, "slug-like"},
-	{ -8, 12, 4, 16, "very slow"},
-	{ -6, 8, 3, 10, "slow"},
-	{ -3, 4, 2, 6, "leisurely"},
+	{ -12, 0, 5, 0, "slug-like"},
+	{ -8, 0, 4, 0, "very slow"},
+	{ -6, 0, 3, 0, "slow"},
+	{ -3, 0, 2, 0, "leisurely"},
 	{ 0, 0, 0, 0, "normal"},
-	{ 1, -4, -1, -4, "brisk"},
-	{ 2, -6, -4, -8, "fast"},
-	{ 3, -10, -7, -14, "very fast"},
-	{ 4, -16, -10, -20, "running"}
+	{ 1, 0, -1, 0, "brisk"},
+	{ 2, 0, -4, 0, "fast"},
+	{ 3, 0, -7, 0, "very fast"},
+	{ 4, 0, -10, 0, "running"}
 };
 
 /*

@@ -17,12 +17,12 @@ M:Z:516
 
 # Maximum number of monsters in r_info.txt
 # WARNING ! add one more to the real count for the player ghost !!
-M:R:1078
+M:R:1155
 
 # Maximum number of monsters in re_info.txt
 # WARNING ! Use the exact amount of ego types used, if not you
 # will get weird results !
-M:r:14
+M:r:32
 
 # Maximum number of items in k_info.txt
 M:K:819

@@ -126,7 +126,7 @@
 #define CHANCE_TRAP_SECRET_DOOR 1500
 #define CHANCE_TRAP_LOCKED_DOOR 1000
 #define CHANCE_TRAP_DOOR  500        /* in 10000 */
-#define CHANCE_TRAP_FLOOR 4          /* in 10000 chance of placing a trap */
+#define CHANCE_TRAP_FLOOR 5          /* in 10000 chance of placing a trap */
 
 #define MAX_BOUNTIES        24
 
@@ -346,8 +346,8 @@
 #define STORE_CHOICES   56              /* Number of items to choose stock from */
 #define STORE_OBJ_LEVEL 5               /* Magic Level for normal stores */
 #define STORE_TURNOVER  9               /* Normal shop turnover, per day */
-#define STORE_MIN_KEEP  6               /* Min slots to "always" keep full */
-#define STORE_MAX_KEEP  18              /* Max slots to "always" keep full */
+#define STORE_MIN_KEEP  12              /* Min slots to "always" keep full */
+#define STORE_MAX_KEEP  72              /* Max slots to "always" keep full */
 #define STORE_SHUFFLE   21              /* 1/Chance (per day) of an owner changing */
 #define STORE_TURNS             1000    /* Number of turns between turnovers */
 
@@ -365,7 +365,7 @@
 #define BREAK_GLYPH             550             /* Rune of protection resistance */
 #define BREAK_MINOR_GLYPH       99             /* For explosive runes */
 #define BTH_PLUS_ADJ    3       /* Adjust BTH per plus-to-hit */
-#define MON_MULT_ADJ    10              /* High value slows multiplication */
+#define MON_MULT_ADJ    50              /* High value slows multiplication */
 #define MON_SUMMON_ADJ  2               /* Adjust level of summoned creatures */
 #define MON_DRAIN_LIFE  2               /* Percent of player exp drained per hit */
 #define USE_DEVICE      3               /* x> Harder devices x< Easier devices     */
@@ -452,7 +452,7 @@
  * is a hack which prevents the "m_list[]" array from exploding due to
  * reproducing monsters.  Messy, but necessary.
  */
-#define MAX_REPRO       100
+#define MAX_REPRO       50
 
 
 /*
@@ -4282,7 +4282,7 @@ extern int PlayerUID;
 #define MEGO_FIX                2
 #define MEGO_PRC                3
 
-#define MEGO_CHANCE             18      /* % chances of getting ego monsters */
+#define MEGO_CHANCE             1      /* % chances of getting ego monsters */
 
 #define race_inf(m_ptr) (((m_ptr)->sr_ptr) ? (m_ptr)->sr_ptr : race_info_idx((m_ptr)->r_idx, (m_ptr)->ego))
 
@@ -4570,7 +4570,7 @@ extern int PlayerUID;
 /*
  * Skills !
  */
-#define SKILL_MAX               50000           /* Maximun skill value */
+#define SKILL_MAX               100000           /* Maximun skill value */
 #define SKILL_STEP              1000            /* 1 skill point */
 
 #define SKILL_EXCLUSIVE         9999            /* Flag to tell exclusive skills */

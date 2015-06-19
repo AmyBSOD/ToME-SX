@@ -1610,61 +1610,94 @@ static cptr likert(int x, int y)
 	if (y <= 0) y = 1;
 
 	/* Negative value */
-	if (x < 0)
+	if (x >= -25 && x < 0)
 	{
-		likert_color = TERM_L_DARK;
+		likert_color = TERM_RED;
 		return ("Very Bad");
 	}
+	else if (x < -25)
+	{
+		likert_color = TERM_RED;
+		return ("Extremely Bad");
+	}
+
 
 	/* Analyze the value */
 	switch ((x / y))
 	{
 	case 0:
 	case 1:
+	case 2:
 		{
-			likert_color = TERM_RED;
+			likert_color = TERM_L_RED;
 			return ("Bad");
 		}
-	case 2:
+	case 3:
+	case 4:
+	case 5:
 		{
 			likert_color = TERM_L_RED;
 			return ("Poor");
 		}
-	case 3:
-	case 4:
+	case 6:
+	case 7:
+	case 8:
+	case 9:
 		{
 			likert_color = TERM_ORANGE;
 			return ("Fair");
 		}
-	case 5:
-		{
-			likert_color = TERM_YELLOW;
-			return ("Good");
-		}
-	case 6:
-		{
-			likert_color = TERM_YELLOW;
-			return ("Very Good");
-		}
-	case 7:
-	case 8:
-		{
-			likert_color = TERM_L_GREEN;
-			return ("Excellent");
-		}
-	case 9:
 	case 10:
 	case 11:
 	case 12:
 	case 13:
+	case 14:
+		{
+			likert_color = TERM_YELLOW;
+			return ("Good");
+		}
+	case 15:
+	case 16:
+	case 17:
+	case 18:
+	case 19:
+	case 20:
+		{
+			likert_color = TERM_YELLOW;
+			return ("Very Good");
+		}
+	case 21:
+	case 22:
+	case 23:
+	case 24:
+	case 25:
+	case 26:
+	case 27:
+	case 28:
+		{
+			likert_color = TERM_L_GREEN;
+			return ("Excellent");
+		}
+	case 29:
+	case 30:
+	case 31:
+	case 32:
+	case 33:
+	case 34:
+	case 35:
+	case 36:
 		{
 			likert_color = TERM_GREEN;
 			return ("Superb");
 		}
-	case 14:
-	case 15:
-	case 16:
-	case 17:
+	case 37:
+	case 38:
+	case 39:
+	case 40:
+	case 41:
+	case 42:
+	case 43:
+	case 44:
 		{
 			likert_color = TERM_L_GREEN;
 			return ("Heroic");
@@ -1672,8 +1705,7 @@ static cptr likert(int x, int y)
 	default:
 		{
 			likert_color = TERM_L_GREEN;
-			sprintf(dummy, "Legendary[%d]", (int)((((x / y) - 17) * 5) / 2));
-			return dummy;
+			return ("Legendary");
 		}
 	}
 }
@@ -3132,7 +3164,7 @@ errr file_character(cptr name, bool full)
 
 
 	/* Begin dump */
-	fprintf(fff, "  [%s %ld.%ld.%ld%s Character Sheet]\n\n",
+	fprintf(fff, "  [%s %ld.%ld.%ld%s (SX) Character Sheet]\n\n",
 	        game_module, VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH, IS_CVS);
 
 

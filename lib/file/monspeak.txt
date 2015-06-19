@@ -359,3 +359,49 @@ screams 'Your code is ugly!'
 mutters something about bugs.
 1
 screams 'ToME rules!'.
+
+N:1086:Elif
+4
+announces that she'll kick your hands until they start bleeding.
+tells you that she'd like to stroke you softly.
+shows you her pointy fingernails with which she wants to scratch you!
+creates a "Pfffffffff!" sound.
+1
+hopes that you won't actually kill her.
+
+N:1090:Jessica
+4
+regards you as a danger to her life.
+gets ready to fight you.
+shouts 'You can't be allowed to rape me!'
+releases stinking gas with her butt.
+2
+screams 'I'm an innocent virgin! Stay away from me!'
+sighs 'What a cruel world this is, where even harmless ladies are being raped...'
+
+N:1092:Wendy
+4
+farts in your general direction.
+announces 'I'll scratch open your legs with my heels.'
+announces 'You can't possibly best me in heel-to-heel combat.'
+shouts 'I'll make you pay dearly, just like I did those no-good plumbers.'
+1
+is looking for the nearest toilet.
+
+N:1099:Nadja
+4
+tells you to stop acting like a crazy person.
+flips you the bird.
+boasts about her shiny buckled lady's shoes.
+tells you to stop staring at her all the damn time.
+1
+threatens to report you to the principal.
+
+N:1100:Katia
+4
+starts scratching your legs with her block-heeled combat boots.
+produces charming noises with her butt.
+pulls down your trousers.
+asks you if you'll allow her to use the WC.
+1
+tries to run for her life.

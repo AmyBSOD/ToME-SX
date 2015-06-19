@@ -497,13 +497,13 @@ F:SUPPORT_GROWTH
 
 # -1 = player level
 N:85:pool of deep lava
-G:.:R
+G:~:R
 E:-1d2:1:FIRE
 F:FLOOR | CAN_LEVITATE | CAN_FLY | REMEMBER | SUPPORT_LIGHT
 D:0:You move across the deep lava.
 
 N:86:stream of shallow lava
-G:.:r
+G:~:r
 E:-1d1:1:FIRE
 F:FLOOR | CAN_LEVITATE | CAN_FLY | REMEMBER | SUPPORT_LIGHT
 D:0:You move across the shallow lava.
@@ -528,7 +528,7 @@ F:DONT_NOTICE_RUNNING
 F:SUPPORT_GROWTH
 
 N:90:ice
-G:.:W
+G:~:W
 E:1d1:50:ICE
 F:FLOOR | NOTICE
 
@@ -752,7 +752,7 @@ F:FLOOR | CAN_LEVITATE | CAN_FLY | REMEMBER | SUPPORT_LIGHT
 
 # Glass wall -- can see but not pass
 N:188:glass wall
-G:.:B
+G:#:B
 F:NO_WALK | WALL | PERMANENT | NOTICE
 F:DONT_NOTICE_RUNNING
 D:1:This glass seems to be totaly impenetrable.

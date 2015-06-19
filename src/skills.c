@@ -137,7 +137,7 @@ s16b get_skill_scale(int skill, u32b scale)
 	*/
 	temp = scale * s_info[skill].value;
 
-	return (temp / SKILL_MAX);
+	return (temp / /*SKILL_MAX*/50000);
 }
 
 
@@ -301,7 +301,7 @@ void print_skills(int table[MAX_SKILLS][2], int max, int sel, int start)
 			if (s_info[i].mod == 0) color = TERM_L_DARK;
 			else color = TERM_ORANGE;
 		}
-		else if (s_info[i].value == SKILL_MAX) color = TERM_L_BLUE;
+		else if (s_info[i].value >= 50) color = TERM_L_BLUE;
 		if (s_info[i].hidden) color = TERM_L_RED;
 		if (j == sel)
 		{
@@ -1346,7 +1346,7 @@ void do_get_new_skill()
 			else
 			{
 				val[max] = s_ptr->mod * 3;
-				mod[max] = 0;
+				mod[max] = 50;
 			}
 		}
 		else

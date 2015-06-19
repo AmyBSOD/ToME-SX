@@ -8879,14 +8879,14 @@ void generate_cave(void)
 			}
 
 			/* Extract the feeling */
-			if (rating > 100) feeling = 2;
-			else if (rating > 80) feeling = 3;
-			else if (rating > 60) feeling = 4;
-			else if (rating > 40) feeling = 5;
-			else if (rating > 30) feeling = 6;
-			else if (rating > 20) feeling = 7;
-			else if (rating > 10) feeling = 8;
-			else if (rating > 0) feeling = 9;
+			if (rating > 200) feeling = 2;
+			else if (rating > 150) feeling = 3;
+			else if (rating > 120) feeling = 4;
+			else if (rating > 100) feeling = 5;
+			else if (rating > 70) feeling = 6;
+			else if (rating > 50) feeling = 7;
+			else if (rating > 30) feeling = 8;
+			else if (rating > 10) feeling = 9;
 			else feeling = 10;
 
 			/* Hack -- Have a special feeling sometimes */

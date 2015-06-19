@@ -417,7 +417,7 @@ static s32b price_item(object_type *o_ptr, int greed, bool flip)
 		if (adjust > 100) adjust = 100;
 
 		/* Mega-Hack -- Black market sucks */
-		if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM) price = price / 2;
+		if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM) price = price / 3;
 	}
 
 	/* Shop is selling */
@@ -430,7 +430,7 @@ static s32b price_item(object_type *o_ptr, int greed, bool flip)
 		if (adjust < 100) adjust = 100;
 
 		/* Mega-Hack -- Black market sucks */
-		if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM) price = price * 2;
+		if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM) price = price * 3;
 	}
 
 	/* Compute the final price (with rounding) */
@@ -551,19 +551,19 @@ static void mass_produce(object_type *o_ptr)
 	{
 		discount = 0;
 	}
-	else if (rand_int(25) == 0)
+	else if (rand_int(125) == 0)
 	{
 		discount = 25;
 	}
-	else if (rand_int(150) == 0)
+	else if (rand_int(750) == 0)
 	{
 		discount = 50;
 	}
-	else if (rand_int(300) == 0)
+	else if (rand_int(2000) == 0)
 	{
 		discount = 75;
 	}
-	else if (rand_int(500) == 0)
+	else if (rand_int(50000) == 0)
 	{
 		discount = 90;
 	}
@@ -1297,14 +1297,14 @@ static void store_create(void)
 		if (q_ptr->tval == TV_CHEST) continue;
 
 		/* Prune the black market */
-		if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM)
-		{
+		/*if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM)
+		{*/
 			/* Hack -- No "crappy" items */
-			if (black_market_crap(q_ptr)) continue;
+			/*if (black_market_crap(q_ptr)) continue;*/
 
 			/* Hack -- No "cheap" items */
-			if (object_value(q_ptr) < 10) continue;
-		}
+			/*if (object_value(q_ptr) < 10) continue;
+		}*/
 
 		/* Prune normal stores */
 		else
@@ -4056,7 +4056,10 @@ void store_shuffle(int which)
  */
 void store_maint(int town_num, int store_num)
 {
-	int j, tries = 100;
+	int j, tries = 200;
+
+	/*if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM) tries = 500;*/ /* crash because st_ptr not set! --Amy */
+	/* But unneccessary since the black market gets enough items even without this line. :-) */
 
 	int old_rating = rating;
 
@@ -4078,22 +4081,22 @@ void store_maint(int town_num, int store_num)
 	st_ptr->insult_cur = 0;
 
 	/* Mega-Hack -- prune the black market */
-	if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM)
-	{
+	/*if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM)
+	{*/
 		/* Destroy crappy black market items */
-		for (j = st_ptr->stock_num - 1; j >= 0; j--)
+		/*for (j = st_ptr->stock_num - 1; j >= 0; j--)
 		{
-			object_type *o_ptr = &st_ptr->stock[j];
+			object_type *o_ptr = &st_ptr->stock[j];*/
 
 			/* Destroy crappy items */
-			if (black_market_crap(o_ptr))
-			{
+			/*if (black_market_crap(o_ptr))
+			{*/
 				/* Destroy the item */
-				store_item_increase(j, 0 - o_ptr->number);
+				/*store_item_increase(j, 0 - o_ptr->number);
 				store_item_optimize(j);
 			}
 		}
-	}
+	}*/
 
 
 	/* Choose the number of slots to keep */
@@ -4120,6 +4123,10 @@ void store_maint(int town_num, int store_num)
 
 	/* Buy some more items */
 	j = j + randint(STORE_TURNOVER);
+
+	if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM) {
+		j = j + randint(STORE_TURNOVER);
+	}
 
 	/* Never keep more than "STORE_MAX_KEEP" slots */
 	if (j > STORE_MAX_KEEP) j = STORE_MAX_KEEP;

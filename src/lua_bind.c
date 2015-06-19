@@ -281,7 +281,7 @@ s32b lua_get_level(s32b s, s32b lvl, s32b max, s32b min, s32b bonus)
 	if (tmp >= (SKILL_STEP / 10)) /* We require at least one spell level */
 		tmp += bonus;
 
-	tmp = (tmp * (max * (SKILL_STEP / 10)) / (SKILL_MAX / 10));
+	tmp = (tmp * (max * (SKILL_STEP / 10)) / (/*SKILL_MAX*/50000 / 10));
 
 	if (tmp < 0) /* Shift all negative values, so they map to appropriate integer */
 		tmp -= SKILL_STEP / 10 - 1;

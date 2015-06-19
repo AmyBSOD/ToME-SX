@@ -1,0 +1,9 @@
+src/w_dun.c
+src/w_mnster.c
+src/w_obj.c
+src/w_player.c
+src/w_play_c.c
+src/w_quest.c
+src/w_spells.c
+src/w_util.c
+src/w_z_pack.c

@@ -1195,11 +1195,9 @@ static void player_outfit(void)
 
 
 /* Possible number(and layout) or random quests */
-#define MAX_RANDOM_QUESTS_TYPES ((8 * 3) + (8 * 1))
+#define MAX_RANDOM_QUESTS_TYPES ((8 * 1) + (8 * 1))
 int random_quests_types[MAX_RANDOM_QUESTS_TYPES] =
 {
-	1, 5, 6, 7, 10, 11, 12, 14,          /* Princess type */
-	1, 5, 6, 7, 10, 11, 12, 14,          /* Princess type */
 	1, 5, 6, 7, 10, 11, 12, 14,          /* Princess type */
 	20, 13, 15, 16, 9, 17, 18, 8,        /* Hero Sword Quest */
 };
@@ -1257,7 +1255,7 @@ static void gen_random_quests(int n)
 			tries--;
 
 			/* Random monster 5 - 10 levels out of depth */
-			q_ptr->r_idx = get_mon_num(rl + 4 + randint(6));
+			q_ptr->r_idx = get_mon_num(rl + randint(10));
 
 			if (!q_ptr->r_idx) continue;
 
@@ -1271,7 +1269,7 @@ static void gen_random_quests(int n)
 			if (r_ptr->flags4 & RF4_MULTIPLY) continue;
 
 			/* Forbid joke monsters */
-			if (r_ptr->flags8 & RF8_JOKEANGBAND) continue;
+			/*if (r_ptr->flags8 & RF8_JOKEANGBAND) continue;*/
 
 			/* Accept only monsters that are not friends */
 			if (r_ptr->flags7 & RF7_PET) continue;
@@ -1280,7 +1278,7 @@ static void gen_random_quests(int n)
 			if (r_ptr->flags7 & RF7_NAZGUL) continue;
 
 			/* Accept only monsters that are not good */
-			if (r_ptr->flags3 & RF3_GOOD) continue;
+			/*if (r_ptr->flags3 & RF3_GOOD) continue;*/
 
 			/* Assume no explosion attacks */
 			ok = TRUE;
@@ -2459,7 +2457,7 @@ static bool player_birth_aux_ask()
 					put_str("", 20, 27);
 
 					/* Default */
-					strcpy(inp, "20");
+					strcpy(inp, "98");
 
 					/* Get a response (or escape) */
 					if (!askfor_aux(inp, 2)) inp[0] = '\0';

@@ -1160,7 +1160,7 @@ void do_cmd_eat_food(void)
 
 		case SV_FOOD_CURE_SERIOUS:
 			{
-				if (hp_player(damroll(4, 8))) ident = TRUE;
+				if (hp_player(75)) ident = TRUE;
 
 				break;
 			}
@@ -2093,7 +2093,7 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 
 		case SV_POTION_CURE_LIGHT:
 			{
-				if (hp_player(damroll(2, 8))) ident = TRUE;
+				if (hp_player(40)) ident = TRUE;
 				if (set_blind(0)) ident = TRUE;
 				if (set_cut(p_ptr->cut - 10)) ident = TRUE;
 
@@ -2102,7 +2102,7 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 
 		case SV_POTION_CURE_SERIOUS:
 			{
-				if (hp_player(damroll(4, 8))) ident = TRUE;
+				if (hp_player(75)) ident = TRUE;
 				if (set_blind(0)) ident = TRUE;
 				if (set_confused(0)) ident = TRUE;
 				if (set_cut((p_ptr->cut / 2) - 50)) ident = TRUE;
@@ -2112,7 +2112,7 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 
 		case SV_POTION_CURE_CRITICAL:
 			{
-				if (hp_player(damroll(6, 8))) ident = TRUE;
+				if (hp_player(150)) ident = TRUE;
 				if (set_blind(0)) ident = TRUE;
 				if (set_confused(0)) ident = TRUE;
 				if (set_poisoned(0)) ident = TRUE;
@@ -6600,7 +6600,7 @@ turn_monsters(40 + p_ptr->lev);
 			{
 				if (!doit) return format("cure serious wounds every %s turns", (is_junkart? "75" : "3+d3"));
 				msg_print("It radiates deep purple...");
-				hp_player(damroll(4, 8));
+				hp_player(60);
 				(void)set_cut((p_ptr->cut / 2) - 50);
 
 				o_ptr->timeout = rand_int(3) + 3;

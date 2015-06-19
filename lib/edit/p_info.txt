@@ -110,11 +110,7 @@ C:a:k:+0:-100:Axe-mastery
 C:a:k:+0:-100:Hafted-mastery
 C:a:k:+0:-100:Polearm-mastery
 C:a:O:23:16:1d1
-C:a:g:Nobody
-C:a:g:Manwe Sulimo
-C:a:g:Tulkas
-C:a:g:Melkor Bauglir
-C:a:g:Yavanna Kementari
+C:a:g:All Gods
 
 C:a:N:Axemaster
 C:a:D:Fighters specialised in the use of axes
@@ -125,11 +121,7 @@ C:a:k:+0:-100:Sword-mastery
 C:a:k:+0:-100:Hafted-mastery
 C:a:k:+0:-100:Polearm-mastery
 C:a:O:24:1:1d1
-C:a:g:Nobody
-C:a:g:Manwe Sulimo
-C:a:g:Tulkas
-C:a:g:Melkor Bauglir
-C:a:g:Yavanna Kementari
+C:a:g:All Gods
 
 C:a:N:Haftedmaster
 C:a:D:Fighters specialised in the use of hafted weapons
@@ -181,10 +173,7 @@ C:a:k:+1000:+400:Magic
 C:a:k:+1000:+300:Spirituality
 C:a:k:=0:=0:Antimagic
 C:a:k:+1000:+1000:Demonology
-C:a:g:Nobody
-C:a:g:Manwe Sulimo
-C:a:g:Tulkas
-C:a:g:Melkor Bauglir
+C:a:g:All Gods
 
 C:N:1:Mage
 C:D:0:The basic spellcaster with lots of different skills
@@ -435,10 +424,7 @@ C:a:k:+0:+200:Monster-lore
 C:a:O:19:12:1d1
 C:a:O:17:1:10d3
 C:a:O:23:10:1d1
-C:a:g:Nobody
-C:a:g:Manwe Sulimo
-C:a:g:Tulkas
-C:a:g:Yavanna Kementari
+C:a:g:All Gods
 
 C:N:3:Rogue
 C:D:0:Rogues are masters of tricks. They can steal from shops and monsters,
@@ -790,11 +776,7 @@ C:a:b:1:Extra Max Blow(1)
 C:a:N:Mindcrafter
 C:a:D:A priest who has learned to tap in his own mental powers
 C:a:O:21:5:1d1
-C:a:g:Eru Iluvatar
-C:a:g:Manwe Sulimo
-C:a:g:Tulkas
-C:a:g:Melkor Bauglir
-C:a:g:Yavanna Kementari
+C:a:g:All Gods
 C:a:k:+0:-300:Prayer
 C:a:k:+0:-200:Necromancy
 C:a:k:+1000:+300:Mindcraft
@@ -907,7 +889,7 @@ R:M:75:75:60:4:100:6:54:4:80:6
 R:E:1:1:1:2:1:1
 R:R:1:0
 R:F:RES_LITE | 
-R:C:Warrior | Archer | Mage | Priest | Loremaster
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:G:ELF
 R:k:+500:+000:Disarming
 R:k:+600:+000:Magic-Device
@@ -929,7 +911,7 @@ R:Z:create food
 R:G:RESIST_BLACK_BREATH | XTRA_MIGHT_SLING |
 R:R:1:0
 R:F:SUST_DEX | 
-R:C:Warrior | Archer | Mage | Rogue | Loremaster
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+0:+300:Sling-mastery
 R:k:+1500:+000:Disarming
 R:k:+1800:+000:Magic-Device
@@ -950,7 +932,7 @@ R:E:1:1:1:2:1:1
 R:Z:blink
 R:R:1:0
 R:F:FREE_ACT | 
-R:C:Warrior | Mage | Rogue
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+1000:+000:Disarming
 R:k:+1200:+000:Magic-Device
 R:k:+6000:+000:Spirituality
@@ -970,7 +952,7 @@ R:E:1:1:1:2:1:1
 R:Z:find secret passages
 R:R:1:0
 R:F:RES_BLIND | 
-R:C:Warrior | Priest
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+0:+200:Axe-mastery
 R:k:+200:+000:Disarming
 R:k:+900:+000:Magic-Device
@@ -990,7 +972,7 @@ R:E:1:1:1:2:1:1
 R:Z:remove fear
 R:R:1:0
 R:F:RES_DARK | 
-R:C:Warrior | Archer | Rogue | Priest
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:-300:+000:Disarming
 R:k:-300:+000:Magic-Device
 R:k:-1000:+000:Spirituality
@@ -1012,7 +994,7 @@ R:R:1:0
 R:F:SUST_STR | 
 R:R:15:0
 R:F:REGEN | 
-R:C:Warrior
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:-500:+000:Disarming
 R:k:-800:+000:Magic-Device
 R:k:-4000:+000:Spirituality
@@ -1053,7 +1035,7 @@ R:R:1:0
 R:F:SEE_INVIS | 
 R:F:RES_LITE | 
 R:G:ELF
-R:C:Warrior | Archer | Mage | Priest | Loremaster
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+400:+000:Disarming
 R:k:+2000:+000:Magic-Device
 R:k:+10000:+000:Spirituality
@@ -1073,7 +1055,7 @@ R:E:1:1:1:2:1:1
 R:Z:set explosive rune
 R:R:1:0
 R:F:SUST_STR | RES_DARK | 
-R:C:Warrior | Priest
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:-300:+000:Disarming
 R:k:-500:+000:Magic-Device
 R:k:-2500:+000:Spirituality
@@ -1095,7 +1077,7 @@ R:R:1:0
 R:F:SUST_STR | 
 R:R:20:1
 R:F:STR | 
-R:C:Warrior | Rogue | Loremaster
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+1000:+1000:Bearform-combat
 R:k:-600:+000:Disarming
 R:k:-800:+000:Magic-Device
@@ -1115,7 +1097,7 @@ R:E:1:1:1:2:1:1
 R:Z:poison dart
 R:R:1:0
 R:F:RES_POIS | 
-R:C:Warrior | Archer | Rogue
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:-200:+000:Disarming
 R:k:-300:+000:Magic-Device
 R:k:-1000:+000:Spirituality
@@ -1135,7 +1117,7 @@ R:E:1:1:1:2:1:1
 R:Z:detect doors and traps
 R:R:1:0
 R:F:RES_DARK | RES_DISEN | 
-R:C:Warrior | Rogue
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+300:+000:Disarming
 R:k:+500:+000:Magic-Device
 R:k:+5000:+000:Spirituality
@@ -1158,7 +1140,7 @@ R:R:1:0
 R:F:RES_DARK | 
 R:R:20:0
 R:F:SEE_INVIS | 
-R:C:Warrior | Archer | Mage | Rogue | Priest
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:G:ELF
 R:k:+0:+200:Magic
 R:k:+500:+000:Disarming
@@ -1187,7 +1169,7 @@ R:F:SEE_INVIS |
 R:R:20:0
 R:F:ESP_ORC | 
 R:F:ESP_TROLL | ESP_EVIL | 
-R:C:Warrior | Priest | Loremaster
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:O:70:32:2d3
 R:b:1:Tree walking
 R:k:+0:+200:Barehand-combat
@@ -1229,7 +1211,7 @@ R:R:40:1
 R:F:SPEED | 
 R:R:45:1
 R:F:SPEED | 
-R:C:Warrior | Priest
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+1000:+000:Disarming
 R:k:+500:+000:Magic-Device
 R:k:+2500:+000:Spirituality
@@ -1263,7 +1245,7 @@ R:R:35:0
 R:F:RES_POIS | 
 R:R:45:0
 R:F:IM_ELEC | 
-R:C:Warrior | Mage | Archer | Priest
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+600:+000:Disarming
 R:k:+000:+000:Magic-Device
 R:k:+5000:+000:Spirituality
@@ -1285,7 +1267,7 @@ R:G:EXPERIMENTAL
 R:R:1:0
 R:F:IMMOVABLE | HOLD_LIFE |
 R:F:RES_NETHER | RES_NEXUS | 
-R:C:Mage | Priest
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+0:+200:Necromancy
 R:k:+1500:+000:Disarming
 R:k:-500:+000:Magic-Device
@@ -1322,7 +1304,7 @@ R:E:1:1:1:2:1:1
 R:G:XTRA_MIGHT_BOW | 
 R:R:1:1
 R:F:XTRA_MIGHT | RES_LITE | 
-R:C:Warrior | Archer | Mage | Priest | Loremaster
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:G:ELF
 R:k:+0:+200:Archery
 R:b:1:Tree walking
@@ -1363,7 +1345,7 @@ R:R:42:1
 R:F:STR | INT | WIS | DEX | CON | CHR | 
 R:R:48:1
 R:F:STR | INT | WIS | DEX | CON | CHR | 
-R:C:Warrior | Archer | Mage
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+000:+000:Disarming
 R:k:+000:+000:Magic-Device
 R:k:+000:+000:Spirituality
@@ -1418,10 +1400,10 @@ S:K:0:0:0:0:0:0:0:0
 S:P:0:0:0
 S:M:0:0:0:0:0:0:0:0:0:0
 S:E:0:0:0:0:0:0
-S:A:Human | Half-Elf | Hobbit | Gnome | Dwarf | Orc |
-S:A:Troll | Dunadan | Half-Ogre | Beorning | Kobold | Petty-Dwarf | 
-S:A:Dark-Elf | RohanKnight | Yeek | 
-S:C:A:Mage
+S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
+S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
+S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | 
 S:O:70:0:5d3
 S:O:70:32:2d3
 
@@ -1435,8 +1417,8 @@ S:M:50:15:0:0:-10:-5:0:0:-10:-5
 S:E:0:0:0:0:0:0
 S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
 S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
-S:A:Kobold | Petty-Dwarf | Dark-Elf | RohanKnight | Yeek | Wood-Elf | 
-S:C:F:Warrior | Archer
+S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | 
 S:G:UNDEAD | NO_CUT | NO_FOOD | SEMI_WRAITH | NO_SUBRACE_CHANGE
 S:R:1:0
 S:F:SEE_INVIS | HOLD_LIFE | 
@@ -1460,7 +1442,8 @@ S:M:50:15:0:0:-10:-5:0:0:-10:-5
 S:E:0:0:0:0:0:0
 S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
 S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
-S:A:Kobold | Petty-Dwarf | Dark-Elf | RohanKnight | Yeek | Wood-Elf | 
+S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | 
 S:G:UNDEAD | NO_CUT | NO_FOOD | NO_SUBRACE_CHANGE
 S:R:1:0
 S:F:SEE_INVIS | HOLD_LIFE | 
@@ -1485,8 +1468,8 @@ S:M:50:15:0:0:0:0:0:0:0:0
 S:E:0:0:0:0:0:0
 S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
 S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
-S:A:Kobold | Petty-Dwarf | Dark-Elf | RohanKnight | Yeek | Wood-Elf | 
-S:C:F:Mage
+S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | 
 S:G:UNDEAD | NO_FOOD | NO_SUBRACE_CHANGE
 S:R:1:0
 S:F:SEE_INVIS | HOLD_LIFE | 
@@ -1509,8 +1492,10 @@ S:K:-2:-10:2:-2:0:1:12:5
 S:P:1:25:0
 S:M:0:0:0:0:0:0:0:0:0:0
 S:E:0:0:0:0:0:0
-S:A:Human | Dwarf | Orc | Troll | Half-Ogre | Beorning | 
-S:C:F:Mage
+S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
+S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
+S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | 
 S:R:10:0
 S:F:RES_FEAR | 
 S:k:-200:+000:Disarming
@@ -1530,9 +1515,9 @@ S:P:-3:20:1
 S:M:0:0:0:0:0:0:0:0:0:0
 S:E:0:0:0:0:0:0
 S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
-S:A:Dunadan | High-Elf | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | 
-S:A:Thunderlord | DeathMold | Yeek | Wood-Elf | Maia | 
-S:C:F:Warrior | Archer
+S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
+S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | 
 S:k:+500:+000:Disarming
 S:k:+1000:+000:Magic-Device
 S:k:+500:+000:Spirituality

@@ -1,4 +1,4 @@
-299
+300
 ******************BUFFER LINE -- DO NOT REMOVE!*****************************
 Borg
 Dalek
@@ -299,3 +299,4 @@ Beast of the Black Forest
 Demon of the Belfry
 Sex Beast
 Sunday Morning Slasher
+Kerio the Ill-Tempered Swearing Italian
