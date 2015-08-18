@@ -1330,7 +1330,7 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You are surrounded with electricity.";
 	}
-	if (p_ptr->antimagic)
+	if (p_ptr->antimagic > 0)
 	{
 		info[i++] = "You are surrounded by an anti-magic field.";
 	}

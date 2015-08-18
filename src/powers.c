@@ -94,6 +94,7 @@ bool power_chance(power_type *x_ptr)
 
 	if (flush_failure) flush();
 	msg_print("You've failed to concentrate hard enough.");
+	msg_print(NULL);
 
 	return (FALSE);
 }

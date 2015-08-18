@@ -2929,7 +2929,7 @@ void calc_bonuses(bool silent)
 			p_ptr->free_act = TRUE;
 	}
 
-	if (get_skill(SKILL_ANTIMAGIC))
+	if (get_skill(SKILL_ANTIMAGIC) > 0)
 	{
 		p_ptr->antimagic += get_skill(SKILL_ANTIMAGIC);
 		p_ptr->antimagic_dis += get_skill_scale(SKILL_ANTIMAGIC, 10) + 1;

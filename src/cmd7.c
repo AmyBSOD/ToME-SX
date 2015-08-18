@@ -356,7 +356,7 @@ void do_cmd_mindcraft(void)
 
 
 	/* No magic */
-	if (p_ptr->antimagic)
+	if (p_ptr->antimagic > 0)
 	{
 		msg_print("Your anti-magic field disrupts any magic attempts.");
 		return;
@@ -427,6 +427,7 @@ void do_cmd_mindcraft(void)
 		if (flush_failure) flush();
 
 		msg_format("You failed to concentrate hard enough!");
+		msg_print(NULL);
 
 		sound(SOUND_FAIL);
 
@@ -902,7 +903,7 @@ void do_cmd_mimic(void)
 	}
 
 	/* No magic */
-	if (p_ptr->antimagic)
+	if (p_ptr->antimagic > 0)
 	{
 		msg_print("Your anti-magic field disrupts any magic attempts.");
 		return;
@@ -973,6 +974,7 @@ void do_cmd_mimic(void)
 		if (flush_failure) flush();
 
 		msg_format("You failed to concentrate hard enough!");
+		msg_print(NULL);
 
 		sound(SOUND_FAIL);
 
@@ -4767,7 +4769,7 @@ void do_cmd_powermage(void)
 
 
 	/* No magic */
-	if (p_ptr->antimagic)
+	if (p_ptr->antimagic > 0)
 	{
 		msg_print("Your anti-magic field disrupts any magic attempts.");
 		return;
@@ -4814,6 +4816,7 @@ void do_cmd_powermage(void)
 		else
 		{
 			msg_print("You failed to get the spell off!");
+			msg_print(NULL);
 		}
 
 		sound(SOUND_FAIL);
@@ -5111,7 +5114,7 @@ void do_cmd_possessor()
 
 
 	/* No magic */
-	if (p_ptr->antimagic)
+	if (p_ptr->antimagic > 0)
 	{
 		msg_print("Your anti-magic field disrupts any magic attempts.");
 		return;
@@ -5519,7 +5522,7 @@ void do_cmd_necromancer(void)
 	if (mto_s2 == 0) mto_s2 = 1;
 
 	/* No magic */
-	if (p_ptr->antimagic)
+	if (p_ptr->antimagic > 0)
 	{
 		msg_print("Your anti-magic field disrupts any magic attempts.");
 		return;
@@ -5588,6 +5591,7 @@ void do_cmd_necromancer(void)
 	{
 		if (flush_failure) flush();
 		msg_format("You failed to concentrate hard enough!");
+		msg_print(NULL);
 		sound(SOUND_FAIL);
 
 		if (randint(100) < (chance / 2))
@@ -6037,6 +6041,7 @@ int rune_exec(rune_spell *spell, int cost)
 		else
 		{
 			msg_print("You failed to get the spell off!");
+			msg_print(NULL);
 		}
 
 		sound(SOUND_FAIL);
@@ -6524,7 +6529,7 @@ void do_cmd_rune_cast()
 	}
 
 	/* No magic */
-	if (p_ptr->antimagic)
+	if (p_ptr->antimagic > 0)
 	{
 		msg_print("Your anti-magic field disrupts any magic attempts.");
 		return;
@@ -6607,7 +6612,7 @@ void do_cmd_runestone()
 	}
 
 	/* No magic */
-	if (p_ptr->antimagic)
+	if (p_ptr->antimagic > 0)
 	{
 		msg_print("Your anti-magic field disrupts any magic attempts.");
 		return;
@@ -7385,7 +7390,7 @@ void do_cmd_summoner(void)
 	char ch;
 
 	/* No magic */
-	if (p_ptr->antimagic)
+	if (p_ptr->antimagic > 0)
 	{
 		msg_print("Your anti-magic field disrupts any magic attempts.");
 		return;
@@ -7552,7 +7557,7 @@ void do_cmd_symbiotic(void)
 	object_type *o_ptr = &p_ptr->inventory[INVEN_CARRY];
 
 	/* No magic */
-	if (p_ptr->antimagic)
+	if (p_ptr->antimagic > 0)
 	{
 		msg_print("Your anti-magic field disrupts any magic attempts.");
 		return;
@@ -7621,6 +7626,7 @@ void do_cmd_symbiotic(void)
 	{
 		if (flush_failure) flush();
 		msg_format("You failed to concentrate hard enough!");
+		msg_print(NULL);
 		sound(SOUND_FAIL);
 	}
 	else

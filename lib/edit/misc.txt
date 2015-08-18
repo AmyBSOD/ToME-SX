@@ -17,7 +17,7 @@ M:Z:516
 
 # Maximum number of monsters in r_info.txt
 # WARNING ! add one more to the real count for the player ghost !!
-M:R:1155
+M:R:1328
 
 # Maximum number of monsters in re_info.txt
 # WARNING ! Use the exact amount of ego types used, if not you
@@ -52,7 +52,7 @@ M:D:31
 M:U:176
 
 # Maximum number of terrain types in wf_info.txt
-M:W:30
+M:W:34
 
 # Maximum number of owners types in ow_info.txt
 M:N:70
@@ -76,7 +76,7 @@ M:P:R:22
 M:P:S:10
 
 # Maximum number of class types in p_info.txt
-M:P:C:32
+M:P:C:53
 
 # Maximum number of meta class types in p_info.txt
 M:P:M:1

@@ -3768,7 +3768,7 @@ void do_cmd_use_staff(void)
 	cptr q, s;
 
 	/* No magic */
-	if (p_ptr->antimagic)
+	if (p_ptr->antimagic > 0)
 	{
 		msg_print("Your anti-magic field disrupts any magic attempts.");
 		return;
@@ -3971,7 +3971,7 @@ void do_cmd_aim_wand(void)
 
 
 	/* No magic */
-	if (p_ptr->antimagic)
+	if (p_ptr->antimagic > 0)
 	{
 		msg_print("Your anti-magic field disrupts any magic attempts.");
 		return;
@@ -4167,7 +4167,7 @@ void zap_combine_rod_tip(object_type *q_ptr, int tip_item)
 
 
 	/* No magic */
-	if (p_ptr->antimagic)
+	if (p_ptr->antimagic > 0)
 	{
 		msg_print("Your anti-magic field disrupts any magic attempts.");
 		return;
@@ -4262,7 +4262,7 @@ void do_cmd_zap_rod(void)
 
 
 	/* No magic */
-	if (p_ptr->antimagic)
+	if (p_ptr->antimagic > 0)
 	{
 		msg_print("Your anti-magic field disrupts any magic attempts.");
 		return;

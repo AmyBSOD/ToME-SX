@@ -571,6 +571,7 @@ T:Main:Spirituality
 T:Spirituality:Prayer
 T:Spirituality:Mindcraft
 T:Spirituality:Music
+T:Spirituality:Druidistic
 
 T:Main:Monster-lore
 T:Monster-lore:Summoning

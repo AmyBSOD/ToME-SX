@@ -84,6 +84,7 @@ bool lua_spell_success(magic_power *spell, int stat, char *oups_fct)
 	{
 		if (flush_failure) flush();
 		msg_format("You failed to concentrate hard enough!");
+		msg_print(NULL);
 		sound(SOUND_FAIL);
 
 		if (oups_fct != NULL)

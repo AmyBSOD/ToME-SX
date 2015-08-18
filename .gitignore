@@ -7,3 +7,4 @@ src/w_quest.c
 src/w_spells.c
 src/w_util.c
 src/w_z_pack.c
+*.o

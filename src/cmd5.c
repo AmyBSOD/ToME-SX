@@ -2423,7 +2423,7 @@ void cast_school_spell()
 	int spell;
 
 	/* No magic */
-	if (p_ptr->antimagic)
+	if (p_ptr->antimagic > 0)
 	{
 		msg_print("Your anti-magic field disrupts any magic attempts.");
 		return;

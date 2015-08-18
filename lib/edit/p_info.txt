@@ -175,6 +175,46 @@ C:a:k:=0:=0:Antimagic
 C:a:k:+1000:+1000:Demonology
 C:a:g:All Gods
 
+C:a:N:Allrounder
+C:a:D:Fighters with melee and ranged abilities
+C:a:k:+0:+100:Weaponmastery
+C:a:k:+0:+100:Combat
+C:a:k:+0:-200:Sword-mastery
+C:a:k:+0:-200:Axe-mastery
+C:a:k:+0:-200:Hafted-mastery
+C:a:k:+0:-200:Polearm-mastery
+C:a:k:+0:+200:Sling-mastery
+C:a:k:+0:+200:Bow-mastery
+C:a:k:+0:+200:Crossbow-mastery
+C:a:k:+0:+200:Boomerang-mastery
+C:a:O:23:16:1d1
+C:a:g:All Gods
+
+C:a:N:Weirdo warrior
+C:a:D:Warrior with weird skills
+C:a:k:+0:+200:Bearform-combat
+C:a:k:+0:+300:Combat
+C:a:k:+0:+600:Necromancy
+C:a:k:+0:+400:Disarming
+C:a:k:+0:+300:Critical-hits
+C:a:k:+4000:+100:Fire
+C:a:k:+1000:+100:Meta
+C:a:k:+3000:+800:Monster-lore
+C:a:g:All Gods
+
+C:a:N:Mofo warrior
+C:a:D:Warrior with stunted abilities
+C:a:k:-3000:+0:Thaumaturgy
+C:a:k:-4000:+0:Temporal
+C:a:k:-8000:+0:Magic-Device
+C:a:k:-4000:+0:Music
+C:a:k:-8000:+400:Sword-mastery
+C:a:k:-11200:+1800:Disarming
+C:a:k:-5800:+533:Fire
+C:a:k:-21200:+867:Sorcery
+C:a:k:-12500:+675:Stealing
+C:a:k:-6500:+560:Barehand-combat
+
 C:N:1:Mage
 C:D:0:The basic spellcaster with lots of different skills
 C:D:1:Apprentice
@@ -360,6 +400,59 @@ C:a:O:2:1:1d1
 C:a:O:23:4:1d1
 C:a:G:EXPERIMENTAL
 
+C:a:N:Weird mage
+C:a:D:Mage with weird skills
+C:a:k:+0:+200:Magic-Device
+C:a:k:+0:+300:Music
+C:a:k:+0:+100:Symbiosis
+C:a:k:+0:+300:Thaumaturgy
+C:a:k:+0:+100:Earth
+C:a:k:+1000:+0:Stunning-blows
+C:a:k:+1000:+0:Crossbow-mastery
+C:a:k:+1000:+300:Monster-lore
+
+C:a:N:Weird caster
+C:a:D:Caster with weird skills
+C:a:k:+0:+200:Symbiosis
+C:a:k:+0:+300:Earth
+C:a:k:+0:+700:Fire
+C:a:k:+0:+400:Alchemy
+C:a:k:+0:+300:Geomancy
+C:a:k:+3000:+0:Udun
+C:a:k:+9000:+0:Crossbow-mastery
+C:a:k:+2000:+800:Demonology
+
+C:a:N:Mofo mage
+C:a:D:Mage with stunted skills
+C:a:k:-4000:+0:Dodging
+C:a:k:-2000:+0:Conveyance
+C:a:k:-3000:+0:Backstab
+C:a:k:-1000:+0:Necromancy
+C:a:k:-1000:+0:Temporal
+C:a:k:-14600:+1467:Axe-mastery
+C:a:k:-1800:+600:Spirituality
+C:a:k:-3700:+700:Polearm-mastery
+C:a:k:-4800:+450:Thaumaturgy
+C:a:k:-7200:+533:Air
+C:a:k:-6400:+800:Antimagic
+C:a:k:-6000:+480:Mindcraft
+
+C:a:N:Mofo caster
+C:a:D:Caster with stunted skills
+C:a:k:-2000:+0:Thaumaturgy
+C:a:k:-2000:+0:Udun
+C:a:k:-2000:+0:Disarming
+C:a:k:-1000:+0:Polearm-mastery
+C:a:k:-3000:+0:Barehand-combat
+C:a:k:-6000:+400:Spell-power
+C:a:k:-4700:+525:Stunning-blows
+C:a:k:-6800:+560:Alchemy
+C:a:k:-5700:+720:Geomancy
+C:a:k:-4000:+500:Temporal
+C:a:k:-5800:+560:Mind
+C:a:k:-4600:+800:Nature
+C:a:k:-6200:+400:Necromancy
+
 C:N:2:Archer
 C:D:0:'Kill them before they see you' could be the motto of the archer class.
 C:D:0:As deadly with a bow as a warrior is with a sword.
@@ -425,6 +518,76 @@ C:a:O:19:12:1d1
 C:a:O:17:1:10d3
 C:a:O:23:10:1d1
 C:a:g:All Gods
+
+C:a:N:Bowman
+C:a:D:Archer specialized in the use of bows.
+C:a:k:+0:+100:Archery
+C:a:k:+0:+400:Bow-mastery
+C:a:k:-1000:-100:Magic
+C:a:O:19:12:1d1
+C:a:O:19:2:1d1
+C:a:O:17:1:10d4
+C:a:O:17:1:10d4
+C:a:g:All Gods
+
+C:a:N:Crossbowman
+C:a:D:Archer specialized in the use of crossbows.
+C:a:k:+0:+100:Archery
+C:a:k:+0:+400:Crossbow-mastery
+C:a:k:-1000:-100:Magic
+C:a:O:19:23:1d1
+C:a:O:19:2:1d1
+C:a:O:18:1:10d2
+C:a:O:18:1:10d2
+C:a:g:All Gods
+
+C:a:N:Slinger
+C:a:D:Archer specialized in the use of slings.
+C:a:k:+0:+100:Archery
+C:a:k:+0:+400:Sling-mastery
+C:a:k:-1000:-100:Magic
+C:a:O:19:12:1d1
+C:a:O:19:2:1d1
+C:a:O:16:0:10d4
+C:a:O:16:0:10d5
+C:a:g:All Gods
+
+C:a:N:Boomerang-master
+C:a:D:Archer specialized in the use of boomerangs.
+C:a:k:+0:+100:Archery
+C:a:k:+0:+400:Boomerang-mastery
+C:a:k:-1000:-100:Magic
+C:a:O:15:1:1d1
+C:a:O:15:1:1d1
+C:a:O:17:1:10d3
+C:a:O:17:1:10d3
+C:a:g:All Gods
+
+C:a:N:Weird archer
+C:a:D:Archer with weird skills
+C:a:k:+0:+400:Sorcery
+C:a:k:+0:+100:Magic
+C:a:k:+0:+200:Disarming
+C:a:k:+0:+500:Stunning-blows
+C:a:k:+0:+400:Druidistic
+C:a:k:+1000:+0:Spell-power
+C:a:k:+1000:+0:Dodging
+C:a:k:+1000:+100:Necromancy
+
+C:a:N:Mofo archer
+C:a:D:Archer with stunted skills
+C:a:k:-9000:+0:Runecraft
+C:a:k:-1000:+0:Music
+C:a:k:-10200:+480:Air
+C:a:k:-3000:+0:Antimagic
+C:a:k:-1000:+0:Meta
+C:a:k:-1900:+900:Sword-mastery
+C:a:k:-8100:+560:Sling-mastery
+C:a:k:-2200:+400:Symbiosis
+C:a:k:-3400:+560:Corpse-preservation
+C:a:k:-3600:+480:Bearform-combat
+C:a:k:-9000:+750:Backstab
+C:a:k:-6300:+550:Bow-mastery
 
 C:N:3:Rogue
 C:D:0:Rogues are masters of tricks. They can steal from shops and monsters,
@@ -521,6 +684,32 @@ C:a:k:+0:-1000:Disarming
 C:a:k:+0:+1000:Backstab
 C:a:k:+0:-1800:Stealing
 C:a:k:+0:-800:Magic-Device
+
+C:a:N:Weird rogue
+C:a:D:Rogue with weird skills
+C:a:k:+0:+200:Water
+C:a:k:+0:+200:Sneakiness
+C:a:k:+0:+100:Critical-hits
+C:a:k:+0:+400:Bearform-combat
+C:a:k:+1000:+300:Weaponmastery
+C:a:k:+1000:+0:Runecraft
+C:a:k:+1000:+100:Mindcraft
+
+C:a:N:Mofo rogue
+C:a:D:Rogue with stunted skills
+C:a:k:-2000:+0:Backstab
+C:a:k:-6000:+0:Meta
+C:a:k:-2000:+0:Critical-hits
+C:a:k:-7000:+0:Disarming
+C:a:k:-2000:+0:Udun
+C:a:k:-2600:+800:Barehand-combat
+C:a:k:-4200:+533:Monster-lore
+C:a:k:-7000:+600:Magic
+C:a:k:-5700:+450:Geomancy
+C:a:k:-7600:+450:Boomerang-mastery
+C:a:k:-2200:+480:Prayer
+C:a:k:-5400:+450:Thaumaturgy
+C:a:k:-6700:+675:Water
 
 C:N:4:Loremaster
 C:D:0:Loremasters are skilled in most combat and monster skills.
@@ -685,6 +874,72 @@ C:a:k:+0:-100:Symbiosis
 C:a:k:+0:-100:Mimicry
 C:a:k:+1000:+500:Music
 
+C:a:N:Weird loremaster
+C:a:D:Loremaster with weird skills
+C:a:k:+0:+400:Udun
+C:a:k:+0:+300:Symbiosis
+C:a:k:+0:+200:Dodging
+C:a:k:+0:+200:Mimicry
+C:a:k:+0:+500:Geomancy
+C:a:k:+0:+400:Hafted-mastery
+C:a:k:+0:+500:Meta
+C:a:k:+0:+100:Disarming
+C:a:k:+4000:+0:Sword-mastery
+C:a:k:+6000:+200:Combat
+C:a:k:+1000:+0:Bow-mastery
+C:a:k:+6000:+400:Stunning-blows
+C:a:k:+2000:+200:Bearform-combat
+
+C:a:N:Uberweirdo
+C:a:D:Extraordinarily weird character
+C:a:k:+1000:+700:Sorcery
+C:a:k:+2000:+400:Alchemy
+C:a:k:+1000:+500:Mana
+C:a:k:+1000:+500:Boulder-throwing
+C:a:k:+1000:+600:Magic
+C:a:k:+2000:+300:Sling-mastery
+C:a:k:+1000:+400:Archery
+C:a:k:+1000:+100:Prayer
+
+C:a:N:Tough Motherfucker
+C:a:D:Extraordinarily stunted character
+C:a:k:-1000:+0:Bearform-combat
+C:a:k:-3000:+0:Magic
+C:a:k:-1000:+0:Sorcery
+C:a:k:-3000:+0:Spirituality
+C:a:k:-4000:+0:Prayer
+C:a:k:-7100:+560:Water
+C:a:k:-9300:+733:Sling-mastery
+C:a:k:-9500:+350:Conveyance
+C:a:k:-14200:+867:Crossbow-mastery
+C:a:k:-7600:+720:Backstab
+C:a:k:-8600:+600:Mana
+C:a:k:-9000:+750:Hafted-mastery
+C:a:k:-12600:+800:Monster-lore
+C:a:k:-4700:+600:Stealing
+C:a:k:-4600:+640:Disarming
+C:a:k:-10200:+1400:Necromancy
+C:a:k:-5800:+600:Druidistic
+C:a:k:-7500:+350:Mindcraft
+C:a:k:-7600:+600:Air
+C:a:k:-1900:+600:Combat
+
+C:a:N:Mofo loremaster
+C:a:D:Loremaster with stunted skills
+C:a:k:-9000:+0:Divination
+C:a:k:-4000:+0:Demonology
+C:a:k:-4000:+0:Monster-lore
+C:a:k:-3000:+0:Spell-power
+C:a:k:-4000:+0:Boomerang-mastery
+C:a:k:-5400:+700:Conveyance
+C:a:k:-5200:+733:Spirituality
+C:a:k:-5000:+400:Bow-mastery
+C:a:k:-2800:+600:Sorcery
+C:a:k:-8000:+800:Barehand-combat
+C:a:k:-4600:+600:Archery
+C:a:k:-6000:+400:Disarming
+C:a:k:-2200:+450:Summoning
+
 C:N:5:Priest
 C:D:0:A priest serves a god (Vala, Maia or Eru himself) to bring down
 C:D:0:the empire of fear and shadows of Morgoth.
@@ -749,6 +1004,7 @@ C:a:k:+0:-600:Necromancy
 C:a:k:+0:+50:Weaponmastery
 C:a:k:+1000:+700:Monster-lore
 C:a:k:+1000:+700:Summoning
+C:a:k:+1000:+700:Druidistic
 
 C:a:N:Dark-Priest
 C:a:D:A priest that serves Melkor Bauglir to bring chaos
@@ -782,6 +1038,32 @@ C:a:k:+0:-200:Necromancy
 C:a:k:+1000:+300:Mindcraft
 C:a:k:+0:+200:Sneakiness
 C:a:k:+0:+100:Magic-Device
+
+C:a:N:Weird priest
+C:a:D:Priest with weird skills
+C:a:g:All Gods
+C:a:k:+0:+300:Runecraft
+C:a:k:+0:+100:Sword-mastery
+C:a:k:+0:+100:Water
+C:a:k:+0:+700:Earth
+C:a:k:+2000:+0:Combat
+C:a:k:+2000:+200:Barehand-combat
+C:a:k:+3000:+100:Possession
+
+C:a:N:Mofo priest
+C:a:D:Priest with stunted skills
+C:a:g:All Gods
+C:a:k:-2000:+0:Archery
+C:a:k:-5000:+0:Bearform-combat
+C:a:k:-2000:+0:Runecraft
+C:a:k:-5000:+0:Backstab
+C:a:k:-13900:+1200:Hafted-mastery
+C:a:k:-2800:+900:Necromancy
+C:a:k:-6800:+350:Symbiosis
+C:a:k:-3800:+800:Combat
+C:a:k:-7800:+400:Mindcraft
+C:a:k:-5400:+640:Thaumaturgy
+C:a:k:-8200:+400:Meta
 
 ###############################TEST###############################
 C:N:30:Test
