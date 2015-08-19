@@ -3838,6 +3838,7 @@ void do_cmd_use_staff(void)
 	{
 		if (flush_failure) flush();
 		msg_print("You failed to use the staff properly.");
+		msg_print(NULL);
 		sound(SOUND_FAIL);
 
 		/* Leave device mode  */
@@ -4035,6 +4036,7 @@ void do_cmd_aim_wand(void)
 	{
 		if (flush_failure) flush();
 		msg_print("You failed to use the wand properly.");
+		msg_print(NULL);
 		sound(SOUND_FAIL);
 
 		/* Leave device mode  */
@@ -4395,6 +4397,7 @@ void do_cmd_zap_rod(void)
 
 		/* Message */
 		msg_print("You failed to use the rod properly.");
+		msg_print(NULL);
 
 		sound(SOUND_FAIL);
 
