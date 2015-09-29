@@ -365,10 +365,10 @@ int generate_area(int y, int x, bool border, bool corner, bool refresh)
 	}
 
 	/* Set the monster generation level to the wilderness level */
-	monster_level = wf_info[wild_map[y][x].feat].level;
+	monster_level = wf_info[wild_map[y][x].feat].level + rand_int(p_ptr->lev);
 
 	/* Set the object generation level to the wilderness level */
-	object_level = wf_info[wild_map[y][x].feat].level;
+	object_level = wf_info[wild_map[y][x].feat].level + rand_int(p_ptr->lev);
 
 	return hack_floor;
 }
