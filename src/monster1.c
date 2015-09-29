@@ -1907,6 +1907,7 @@ void set_mon_num_hook(void)
 			get_mon_num_hook = monster_shore;
 			break;
 		case TERRAIN_DIRT:
+		case TERRAIN_DESERT:
 			get_mon_num_hook = monster_waste;
 			break;
 		case TERRAIN_GRASS:
