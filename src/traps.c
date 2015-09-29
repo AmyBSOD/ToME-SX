@@ -616,7 +616,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/* Paralyzing Trap */
 	case TRAP_OF_PARALYZING:
 		{
-			if (!p_ptr->free_act)
+			if (!p_ptr->free_act || (rand_int(100) == 0) )
 			{
 				msg_print("You touch a poisoned part and can't move.");
 				(void)set_paralyzed(p_ptr->paralyzed + rand_int(10) + 10);
@@ -669,7 +669,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			ident |= dec_stat(A_WIS, rand_int(20) + 10, STAT_DEC_NORMAL);
 			ident |= dec_stat(A_INT, rand_int(20) + 10, STAT_DEC_NORMAL);
 
-			if (!p_ptr->resist_conf)
+			if (!p_ptr->resist_conf || (rand_int(100) == 0) )
 			{
 				ident |= set_confused(p_ptr->confused + rand_int(100) + 50);
 			}
@@ -706,7 +706,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			(void)set_food(PY_FOOD_STARVE - 1);
 			(void)set_poisoned(0);
 
-			if (!p_ptr->free_act)
+			if (!p_ptr->free_act || (rand_int(100) == 0) )
 			{
 				(void)set_paralyzed(p_ptr->paralyzed + rand_int(dun_level) + 6);
 			}
@@ -719,11 +719,11 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			msg_print("A powerful magic protected this.");
 
-			if (!p_ptr->resist_blind)
+			if (!p_ptr->resist_blind || (rand_int(100) == 0) )
 			{
 				ident |= set_blind(p_ptr->blind + rand_int(100) + 100);
 			}
-			if (!p_ptr->resist_conf)
+			if (!p_ptr->resist_conf || (rand_int(100) == 0) )
 			{
 				ident |= set_confused(p_ptr->confused + rand_int(20) + 15);
 			}
@@ -735,6 +735,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			msg_print("You hear a hollow noise echoing through the dungeons.");
 			aggravate_monsters(1);
+			ident = TRUE;
 			break;
 		}
 
@@ -832,6 +833,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_SINKING:
 		{
 			msg_print("You fell through a trap door!");
+			ident = TRUE;
 
 			if (p_ptr->ffall)
 			{
@@ -1043,7 +1045,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (!ident)
 			{
 				/* Increase "afraid" */
-				if (p_ptr->resist_fear)
+				if (p_ptr->resist_fear && (rand_int(100) > 0) )
 				{
 					msg_print("You feel as if you had a nightmare!");
 				}
@@ -1891,6 +1893,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				msg_format("You feel you have angered %s.", name);
 				inc_piety(p_ptr->pgod, -3000);
 			}
+			ident = TRUE;
 			break;
 		}
 
@@ -1910,6 +1913,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				msg_format("%s quakes in rage: ``Thou art supremely insolent, mortal!!''", name);
 				inc_piety(p_ptr->pgod, -500 * p_ptr->lev);
 			}
+			ident = TRUE;
 			break;
 		}
 
@@ -1917,6 +1921,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_HALLUCINATION:
 		{
 			msg_print("Scintillating colors hypnotise you for a moment.");
+			ident = TRUE;
 
 			set_image(80);
 		}

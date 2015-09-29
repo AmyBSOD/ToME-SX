@@ -3430,10 +3430,11 @@ void calc_bonuses(bool silent)
 	}
 
 	/* Hack -- Res Chaos -> Res Conf */
-	if (p_ptr->resist_chaos)
+	/* Amy edit: sorry but I want confusion resistance to be important, so... */
+	/*if (p_ptr->resist_chaos)
 	{
 		p_ptr->resist_conf = TRUE;
-	}
+	}*/
 
 	/* Hack -- Hero/Shero -> Res fear */
 	if (p_ptr->hero || p_ptr->shero)

@@ -106,7 +106,7 @@
  * Dungeon generation values
  */
 #define DUN_ROOMS      50	/* Number of rooms to attempt */
-#define DUN_UNUSUAL   194	/* Level/chance of unusual room (was 200) */
+#define DUN_UNUSUAL   /*194*/134	/* Level/chance of unusual room (was 200) */
 #define DUN_DEST       18	/* 1/chance of having a destroyed level */
 #define SMALL_LEVEL     6	/* 1/chance of smaller size (3->6) */
 #define EMPTY_LEVEL    15	/* 1/chance of being 'empty' (15)*/
@@ -326,16 +326,16 @@ static s16b roomdep[] =
 	0, 	/* 0 = Nothing */
 	1, 	/* 1 = Simple (33x11) */
 	1, 	/* 2 = Overlapping (33x11) */
-	3, 	/* 3 = Crossed (33x11) */
-	3, 	/* 4 = Large (33x11) */
-	5, 	/* 5 = Monster nest (33x11) */
-	5, 	/* 6 = Monster pit (33x11) */
-	5, 	/* 7 = Lesser vault (33x22) */
-	10, 	/* 8 = Greater vault (66x44) */
+	1, 	/* 3 = Crossed (33x11) */
+	1, 	/* 4 = Large (33x11) */
+	1, 	/* 5 = Monster nest (33x11) */
+	1, 	/* 6 = Monster pit (33x11) */
+	1, 	/* 7 = Lesser vault (33x22) */
+	1, 	/* 8 = Greater vault (66x44) */
 	1, 	/* 9 = Circular rooms (22x22) */
-	3, 	/* 10 = Fractal cave (42x24) */
-	10, 	/* 11 = Random vault (44x22) */
-	10, 	/* 12 = Crypts (22x22) */
+	1, 	/* 10 = Fractal cave (42x24) */
+	1, 	/* 11 = Random vault (44x22) */
+	1, 	/* 12 = Crypts (22x22) */
 };
 
 

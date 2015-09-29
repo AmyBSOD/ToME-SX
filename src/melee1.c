@@ -737,7 +737,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Increase "blind" */
-					if (!p_ptr->resist_blind)
+					if (!p_ptr->resist_blind || (rand_int(100) == 0) )
 					{
 						if (set_blind(p_ptr->blind + 10 + randint(rlev)))
 						{
@@ -756,7 +756,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Increase "confused" */
-					if (!p_ptr->resist_conf)
+					if (!p_ptr->resist_conf || (rand_int(100) == 0) )
 					{
 						if (set_confused(p_ptr->confused + 3 + randint(rlev)))
 						{
@@ -775,7 +775,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Increase "afraid" */
-					if (p_ptr->resist_fear)
+					if (p_ptr->resist_fear && (rand_int(100) > 0) )
 					{
 						msg_print("You stand your ground!");
 						obvious = TRUE;
@@ -807,7 +807,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Increase "paralyzed" */
-					if (p_ptr->free_act)
+					if (p_ptr->free_act && (rand_int(100) > 0) )
 					{
 						msg_print("You are unaffected!");
 						obvious = TRUE;
@@ -2024,7 +2024,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					obvious = TRUE;
 
 					/* Saving throw (unless paralyzed) based on dex and level */
-					if (!p_ptr->paralyzed &&
+					if (!p_ptr->paralyzed && (rand_int(10) > 0) &&
 					                (rand_int(100) < (adj_dex_safe[p_ptr->stat_ind[A_DEX]] +
 					                                  p_ptr->lev)))
 					{
@@ -2095,7 +2095,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 
 					/* Saving throw (unless paralyzed) based on dex and level */
-					if (!p_ptr->paralyzed &&
+					if (!p_ptr->paralyzed && (rand_int(10) > 0) &&
 					                (rand_int(100) < (adj_dex_safe[p_ptr->stat_ind[A_DEX]] +
 					                                  p_ptr->lev)))
 					{
@@ -2376,7 +2376,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 
 					/* Increase "blind" */
-					if (!p_ptr->resist_blind)
+					if (!p_ptr->resist_blind || (rand_int(100) == 0) )
 					{
 						if (set_blind(p_ptr->blind + 10 + randint(rlev)))
 						{
@@ -2396,7 +2396,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 
 					/* Increase "confused" */
-					if (!p_ptr->resist_conf)
+					if (!p_ptr->resist_conf || (rand_int(100) == 0) )
 					{
 						if (set_confused(p_ptr->confused + 3 + randint(rlev)))
 						{
@@ -2416,7 +2416,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 
 					/* Increase "afraid" */
-					if (p_ptr->resist_fear)
+					if (p_ptr->resist_fear && (rand_int(100) > 0) )
 					{
 						msg_print("You stand your ground!");
 						obvious = TRUE;
@@ -2449,7 +2449,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 
 					/* Increase "paralyzed" */
-					if (p_ptr->free_act)
+					if (p_ptr->free_act && (rand_int(100) > 0) )
 					{
 						msg_print("You are unaffected!");
 						obvious = TRUE;

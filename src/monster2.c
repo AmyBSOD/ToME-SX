@@ -1606,7 +1606,7 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 	}
 	if (randint(power) < p_ptr->skill_sav) /* Mind blast */
 	{
-		if (!p_ptr->resist_conf)
+		if (!p_ptr->resist_conf || (rand_int(100) == 0) )
 		{
 			(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 		}
@@ -1627,11 +1627,11 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 
 	if (randint(power) < p_ptr->skill_sav) /* Brain smash */
 	{
-		if (!p_ptr->resist_conf)
+		if (!p_ptr->resist_conf || (rand_int(100) == 0) )
 		{
 			(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 		}
-		if (!p_ptr->free_act)
+		if (!p_ptr->free_act || (rand_int(100) == 0) )
 		{
 			(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
 		}
@@ -2631,6 +2631,13 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	base = dun_level;
 	if (dungeon_flags2 & DF2_ADJUST_LEVEL_PLAYER)
 		base = p_ptr->lev * 2;
+
+	if (p_ptr->lvling_system)
+	{
+		if (!min_level) min_level = /*dun_level*/1;
+		max_level = randint(dun_level);
+		add_level = TRUE;
+	}
 
 	if (dungeon_flags2 & DF2_ADJUST_LEVEL_1_2)
 	{

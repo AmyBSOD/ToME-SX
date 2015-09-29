@@ -549,7 +549,7 @@ extern bool generate_encounter;
 extern bool permanent_levels;
 extern bool autoroll;
 extern bool point_based;
-extern bool maximize, preserve, special_lvls, ironman_rooms;
+extern bool maximize, preserve, special_lvls, ironman_rooms, lvling_system;
 extern bool inventory_no_move;
 extern bool take_notes, auto_notes;
 extern bool *m_allow_special;

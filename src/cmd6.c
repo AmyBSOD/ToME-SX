@@ -238,7 +238,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 
 			case RBE_BLIND:
 				{
-					if (!p_ptr->resist_blind)
+					if (!p_ptr->resist_blind || (rand_int(100) == 0) )
 					{
 						set_blind(p_ptr->blind + dam * 2 + idam * 2 + 20);
 					}
@@ -248,7 +248,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 
 			case RBE_CONFUSE:
 				{
-					if (!p_ptr->resist_conf)
+					if (!p_ptr->resist_conf || (rand_int(100) == 0) )
 					{
 						set_confused(p_ptr->confused + dam + idam + 10);
 					}
@@ -272,7 +272,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 
 			case RBE_TERRIFY:
 				{
-					if (!p_ptr->resist_fear)
+					if (!p_ptr->resist_fear || (rand_int(100) == 0) )
 					{
 						set_afraid(p_ptr->afraid + dam + idam + 10);
 					}
@@ -282,7 +282,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 
 			case RBE_PARALYZE:
 				{
-					if (!p_ptr->free_act)
+					if (!p_ptr->free_act || (rand_int(100) == 0) )
 					{
 						set_paralyzed(p_ptr->paralyzed + dam + idam + 10);
 					}
@@ -637,7 +637,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 	{
 		msg_print("A strange liquid splashes on you!");
 
-		if (!p_ptr->resist_conf)
+		if (!p_ptr->resist_conf || (rand_int(100) == 0) )
 		{
 			set_confused(p_ptr->confused + brdam + idam + 10);
 		}
@@ -658,7 +658,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 			brdam /= (randint(6) + 6);
 		}
 
-		if (!p_ptr->resist_conf)
+		if (!p_ptr->resist_conf || (rand_int(100) == 0) )
 		{
 			(void)set_confused(p_ptr->confused + rand_int(20) + 10);
 		}
@@ -723,7 +723,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 		/* Resist the damage */
 		if (p_ptr->resist_fire || p_ptr->oppose_fire) brdam = (brdam + 2) / 3;
 
-		if (!p_ptr->resist_sound)
+		if (!p_ptr->resist_sound || (rand_int(3) == 0) )
 		{
 			int k = (randint((brdam > 40) ? 35 : (brdam * 3 / 4 + 5)));
 			(void)set_stun(p_ptr->stun + k);
@@ -1007,7 +1007,7 @@ void do_cmd_eat_food(void)
 
 		case SV_FOOD_BLINDNESS:
 			{
-				if (!p_ptr->resist_blind)
+				if (!p_ptr->resist_blind || (rand_int(100) == 0) )
 				{
 					if (set_blind(p_ptr->blind + rand_int(200) + 200))
 					{
@@ -1020,7 +1020,7 @@ void do_cmd_eat_food(void)
 
 		case SV_FOOD_PARANOIA:
 			{
-				if (!p_ptr->resist_fear)
+				if (!p_ptr->resist_fear || (rand_int(100) == 0) )
 				{
 					if (set_afraid(p_ptr->afraid + rand_int(10) + 10))
 					{
@@ -1033,7 +1033,7 @@ void do_cmd_eat_food(void)
 
 		case SV_FOOD_CONFUSION:
 			{
-				if (!p_ptr->resist_conf)
+				if (!p_ptr->resist_conf || (rand_int(100) == 0) )
 				{
 					if (set_confused(p_ptr->confused + rand_int(10) + 10))
 					{
@@ -1059,7 +1059,7 @@ void do_cmd_eat_food(void)
 
 		case SV_FOOD_PARALYSIS:
 			{
-				if (!p_ptr->free_act)
+				if (!p_ptr->free_act || (rand_int(100) == 0) )
 				{
 					if (set_paralyzed(p_ptr->paralyzed + rand_int(10) + 10))
 					{
@@ -1854,7 +1854,7 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 
 		case SV_POTION_BLINDNESS:
 			{
-				if (!p_ptr->resist_blind)
+				if (!p_ptr->resist_blind || (rand_int(100) == 0) )
 				{
 					if (set_blind(p_ptr->blind + rand_int(100) + 100))
 					{
@@ -1868,7 +1868,7 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 			/* Booze */
 		case SV_POTION_CONFUSION:
 			{
-				if (!((p_ptr->resist_conf) || (p_ptr->resist_chaos)))
+				if (!((p_ptr->resist_conf) || (p_ptr->resist_chaos)) || (rand_int(100) == 0) )
 				{
 					if (set_confused(p_ptr->confused + rand_int(20) + 15))
 					{
@@ -1898,7 +1898,7 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 
 		case SV_POTION_SLEEP:
 			{
-				if (!p_ptr->free_act)
+				if (!p_ptr->free_act || (rand_int(100) == 0) )
 				{
 					if (set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4))
 					{
@@ -3111,7 +3111,7 @@ void do_cmd_read_scroll(void)
 
 		case SV_SCROLL_DARKNESS:
 			{
-				if (!(p_ptr->resist_blind) && !(p_ptr->resist_dark))
+				if ((!(p_ptr->resist_blind) && !(p_ptr->resist_dark)) || (rand_int(100) == 0) )
 				{
 					(void)set_blind(p_ptr->blind + 3 + randint(5));
 				}

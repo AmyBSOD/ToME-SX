@@ -3731,7 +3731,7 @@ bool make_attack_spell(int m_idx)
 				{
 					msg_print("Your mind is blasted by psionic energy.");
 
-					if (!p_ptr->resist_conf)
+					if (!p_ptr->resist_conf || (rand_int(100) == 0) )
 					{
 						(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 					}
@@ -3768,15 +3768,15 @@ bool make_attack_spell(int m_idx)
 				{
 					msg_print("Your mind is blasted by psionic energy.");
 					take_sanity_hit(damroll(12, 15), ddesc);
-					if (!p_ptr->resist_blind)
+					if (!p_ptr->resist_blind || (rand_int(100) == 0) )
 					{
 						(void)set_blind(p_ptr->blind + 8 + rand_int(8));
 					}
-					if (!p_ptr->resist_conf)
+					if (!p_ptr->resist_conf || (rand_int(100) == 0) )
 					{
 						(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 					}
-					if (!p_ptr->free_act)
+					if (!p_ptr->free_act || (rand_int(100) == 0) )
 					{
 						(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
 					}
@@ -4001,7 +4001,7 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles, and you hear scary noises.", m_name);
 				else msg_format("%^s casts a fearful illusion.", m_name);
-				if (p_ptr->resist_fear)
+				if (p_ptr->resist_fear && (rand_int(100) > 0) )
 				{
 					msg_print("You refuse to be frightened.");
 				}
@@ -4024,7 +4024,7 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s casts a spell, burning your eyes!", m_name);
-				if (p_ptr->resist_blind)
+				if (p_ptr->resist_blind && (rand_int(100) > 0) )
 				{
 					msg_print("You are unaffected!");
 				}
@@ -4047,7 +4047,7 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles, and you hear puzzling noises.", m_name);
 				else msg_format("%^s creates a mesmerizing illusion.", m_name);
-				if (p_ptr->resist_conf)
+				if (p_ptr->resist_conf && (rand_int(100) > 0) )
 				{
 					msg_print("You disbelieve the feeble spell.");
 				}
@@ -4069,7 +4069,7 @@ bool make_attack_spell(int m_idx)
 				if (!direct) break;
 				disturb(1, 0);
 				msg_format("%^s drains power from your muscles!", m_name);
-				if (p_ptr->free_act)
+				if (p_ptr->free_act && (rand_int(100) > 0) )
 				{
 					msg_print("You are unaffected!");
 				}
@@ -4092,7 +4092,7 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s stares deep into your eyes!", m_name);
-				if (p_ptr->free_act)
+				if (p_ptr->free_act && (rand_int(100) > 0) )
 				{
 					msg_print("You are unaffected!");
 				}

@@ -692,6 +692,7 @@ static bool do_extra(int flag)
 	do_byte((byte*)&fate_flag, flag);
 	do_byte(&p_ptr->searching, flag);
 	do_byte(&p_ptr->maximize, flag);
+	do_byte(&p_ptr->lvling_system, flag);
 	do_byte(&p_ptr->preserve, flag);
 	do_byte(&p_ptr->special, flag);
 	do_byte((byte*)&ambush_flag, flag);

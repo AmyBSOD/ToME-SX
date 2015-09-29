@@ -405,3 +405,22 @@ pulls down your trousers.
 asks you if you'll allow her to use the WC.
 1
 tries to run for her life.
+
+N:1327:Magdalena
+4
+challenges you to a duel on life and death.
+wants to find out whether you can withstand her female combat boots.
+asks whether you know what you're getting into.
+closes in on you to attack.
+1
+feels that she's met her match.
+
+N:1332:Ina
+4
+screams 'I'm not anorexic! I'm too fat!'
+shouts 'Look at yourself, you're much too skinny! Why don't you eat?'
+mutters something about her dietary plans failing.
+remarks that you need something to eat or you'll starve.
+1
+screams 'Nobody ever tells me I'm beautiful! I just can't lose enough weight!'
+

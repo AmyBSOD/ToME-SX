@@ -8,3 +8,16 @@ src/w_spells.c
 src/w_util.c
 src/w_z_pack.c
 *.o
+*.txt1
+*.raw
+lib/apex/scores.raw
+*.prf1
+*.prf3
+lib/apex/scores.raw
+lib/edit/r_info - Kopie.txt
+lib/note/Amy.nte
+lib/note/testchar.nte
+lib/save/global.svg
+lib/user/artifacts.txt
+lib/note/lostsoul.nte
+lib/note/oeimie.nte

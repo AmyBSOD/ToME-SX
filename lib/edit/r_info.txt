@@ -23024,3 +23024,106 @@ D:this one seems different. With shock you realize that she knows
 D:the secret arts of taekwondo, which she will use on you with deadly 
 D:efficiency!
 
+N:1327:Magdalena
+G:r:r
+I:115:12d6:15:25:20
+W:8:5:200:160
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:KICK:FIRE:3d6
+F:RAND_50 | WILD_TOO | WILD_SWAMP | WILD_MOUNTAIN | WILD_GRASS | AURA_FIRE | 
+F:CAN_SWIM | IM_POIS | IM_FIRE | CAN_SPEAK |
+F:ANIMAL | UNIQUE | DROP_CORPSE | FEMALE |
+F:MORTAL | BASEANGBAND |
+D:A dangerous-looking burly woman wearing high-heeled combat boots. 
+D:She'll probably try to stomp you if you don't watch out...
+
+N:1328:Eveline
+G:v:u
+I:135:32d30:100:50:0
+W:55:5:0:2600
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:KICK:TIME:7d7
+B:KICK:UN_POWER:7d7
+F:RAND_50 | RAND_25 | 
+F:EMPTY_MIND | BASH_DOOR | POWERFUL | CAN_FLY | WILD_TOO | WILD_SHORE | 
+F:WILD_WASTE | IM_ACID | NO_CONF | NO_STUN | RES_WATE | FEMALE | HAS_EGG | 
+F:NO_SLEEP | NO_FEAR | NONLIVING | BASEANGBAND | NO_CUT
+S:1_IN_6 | 
+S:BR_TIME | BR_WALL | BR_INER | BR_CHAO
+D:This wedge-heeled sandal has killed many an unsuspecting adventurer. 
+D:She's probably quite powerful, so take care!
+
+N:1329:Sabine
+G:P:w
+I:115:10d100:30:100:15
+W:40:5:4000:1450
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:KICK:SHATTER:15d15
+F:FORCE_SLEEP | FORCE_MAXHP | NO_FEAR | 
+F:WILD_TOO | WILD_OCEAN | WILD_MOUNTAIN | WILD_VOLCANO | 
+F:ONLY_GOLD | MOVE_BODY | CAN_SWIM | FEMALE | HAS_EGG | 
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR |
+F:EVIL | GIANT | NO_CUT | IM_ACID
+S:1_IN_10 | 
+S:ARROW_3
+D:A block-heeled female sandal that looks very nice and lovely. 
+D:But they aim for your head... this could get painful...
+
+N:1330:Eveline
+G:v:u
+I:135:32d30:100:50:0
+W:55:25:0:2600
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:KICK:TIME:7d7
+B:KICK:UN_POWER:7d7
+F:RAND_50 | RAND_25 | 
+F:EMPTY_MIND | BASH_DOOR | POWERFUL | CAN_FLY | WILD_TOO | WILD_SHORE | 
+F:WILD_WASTE | IM_ACID | NO_CONF | NO_STUN | RES_WATE | FEMALE | HAS_EGG | 
+F:NO_SLEEP | NO_FEAR | NONLIVING | BASEANGBAND | NO_CUT
+S:1_IN_6 | 
+S:BR_TIME | BR_WALL | BR_INER | BR_CHAO
+S:MULTIPLY
+D:This wedge-heeled sandal has killed many an unsuspecting adventurer. 
+D:She's probably quite powerful, so take care!
+
+N:1331:Sabine
+G:P:w
+I:115:10d100:30:100:15
+W:40:25:4000:1450
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:KICK:SHATTER:15d15
+F:FORCE_SLEEP | FORCE_MAXHP | NO_FEAR | 
+F:WILD_TOO | WILD_OCEAN | WILD_MOUNTAIN | WILD_VOLCANO | 
+F:ONLY_GOLD | MOVE_BODY | CAN_SWIM | FEMALE | HAS_EGG | 
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR |
+F:EVIL | GIANT | NO_CUT | IM_ACID
+S:1_IN_10 | 
+S:ARROW_3
+S:MULTIPLY
+D:A block-heeled female sandal that looks very nice and lovely. 
+D:But they aim for your head... this could get painful...
+
+N:1332:Ina
+G:U:o
+I:125:50d10:25:75:80
+W:25:5:0:2000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:KICK:HURT:10d10
+B:KICK:EAT_FOOD
+B:KICK:EAT_FOOD
+B:KICK:INSANITY:4d4
+F:FORCE_SLEEP | FORCE_MAXHP | FEMALE | WILD_TOO | WILD_WASTE | 
+F:ONLY_ITEM | DROP_1D2 | NONLIVING | BASEANGBAND | UNIQUE |
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_STUN | CAN_SPEAK |
+F:EVIL | DEMON | IM_POIS | NO_CONF | NO_SLEEP | IM_FIRE | RES_NETH
+S:1_IN_5 | 
+S:BR_DISE | DRAIN_MANA | BRAIN_SMASH | BO_WATE | FORGET | S_MONSTER
+D:She's thin enough to be anorexic. And she'll try to steal both your 
+D:food and your sanity... can you bring yourself to end her misery?
+

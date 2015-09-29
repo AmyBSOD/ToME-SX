@@ -2375,6 +2375,7 @@ static bool player_birth_aux_ask()
 
 	/* Set birth options: maximize, preserve, sepcial levels and astral */
 	p_ptr->maximize = maximize;
+	p_ptr->lvling_system = lvling_system;
 	p_ptr->preserve = preserve;
 	p_ptr->special = special_lvls;
 	p_ptr->astral = (PRACE_FLAG2(PR2_ASTRAL)) ? TRUE : FALSE;

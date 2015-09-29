@@ -1641,6 +1641,9 @@ option_type option_info[] =
 	{ &maximize, TRUE, 6, 1,
 	  "maximize", "Maximise stats" },
 
+	{ &lvling_system, TRUE, 6, 19,
+	  "lvling_system", "Level scaling" },
+
 	{ &preserve, TRUE, 6, 2,
 	  "preserve", "Preserve artifacts" },
 

@@ -3229,6 +3229,11 @@ errr file_character(cptr name, bool full)
 	else
 		fprintf(fff, "\n Maximize mode:        OFF");
 
+	if (p_ptr->lvling_system)
+		fprintf(fff, "\n Monster levelscaling: ON");
+	else
+		fprintf(fff, "\n Monster levelscaling: OFF");
+
 	if (p_ptr->preserve)
 		fprintf(fff, "\n Preserve Mode:        ON");
 	else

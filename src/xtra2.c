@@ -1536,7 +1536,8 @@ bool set_paralyzed(int v)
 	}
 
 	/* Use the value */
-	p_ptr->paralyzed = v;
+	/* and don't paralyze an already paralyzed player - paralysis is deadly enough... --Amy */
+	if (!v || !p_ptr->paralyzed || (v < p_ptr->paralyzed) ) p_ptr->paralyzed = v;
 
 	/* Nothing to notice */
 	if (!notice) return (FALSE);
