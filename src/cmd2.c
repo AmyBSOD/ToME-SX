@@ -2727,7 +2727,7 @@ static void do_cmd_walk_jump(int pickup, bool disarm)
 
 	/* Hack again -- Is there a special encounter ??? */
 	if ((p_ptr->wild_mode &&
-	                magik(wf_info[wild_map[p_ptr->py][p_ptr->px].feat].level - (p_ptr->lev * 2))) || (rand_int(50) < 1) )
+	                magik(wf_info[wild_map[p_ptr->py][p_ptr->px].feat].level - (p_ptr->lev * 2))) || (p_ptr->wild_mode && (rand_int(50) < 1) ) )
 	{
 		/* Go into large wilderness view */
 		p_ptr->wilderness_x = p_ptr->px;
