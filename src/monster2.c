@@ -2636,6 +2636,7 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	{
 		if (!min_level) min_level = /*dun_level*/1;
 		max_level = randint(dun_level);
+		if (monster_level > dun_level) max_level = randint(monster_level);
 		add_level = TRUE;
 	}
 
