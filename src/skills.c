@@ -1338,7 +1338,7 @@ void do_get_new_skill()
 			}
 			else if (s_ptr->mod < 500)
 			{
-				val[max] = s_ptr->mod * 1;
+				val[max] = s_ptr->mod * 3;
 				mod[max] = 100;
 				if (mod[max] + s_ptr->mod > 500)
 					mod[max] = 500 - s_ptr->mod;
@@ -1405,7 +1405,7 @@ void do_get_new_skill()
 			s_ptr = &s_info[skl[res]];
 			s_ptr->value += val[res];
 			s_ptr->mod += mod[res];
-			if (mod[res])
+			if (mod[res] >= 300)
 			{
 				msg_format("You can now learn the %s skill.",
 				           s_ptr->name + s_name);
