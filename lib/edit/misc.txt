@@ -52,7 +52,7 @@ M:D:31
 M:U:176
 
 # Maximum number of terrain types in wf_info.txt
-M:W:34
+M:W:36
 
 # Maximum number of owners types in ow_info.txt
 M:N:70

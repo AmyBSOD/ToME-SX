@@ -297,8 +297,8 @@ function place_rand_dung()
 		or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_EDGE)
 		or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_DEEP_WATER)
 		or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_TREES)
-		or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_SHALLOW_LAVA)
-		or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_DEEP_LAVA)
+		-- or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_SHALLOW_LAVA)
+		-- or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_DEEP_LAVA)
 		or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_MOUNTAIN) then
 			-- try again
 		else
