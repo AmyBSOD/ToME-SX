@@ -5180,7 +5180,11 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				/* Normal monsters slow down */
 				else
 				{
-					if (m_ptr->mspeed > 60) m_ptr->mspeed -= 10;
+					if (m_ptr->mspeed > 100) m_ptr->mspeed -= 10;
+					else if (m_ptr->mspeed > 90) m_ptr->mspeed -= 5;
+					else if (m_ptr->mspeed > 80) m_ptr->mspeed -= 3;
+					else if (m_ptr->mspeed > 70) m_ptr->mspeed -= 2;
+					else if (m_ptr->mspeed > 60) m_ptr->mspeed -= 1;
 					note = " starts moving slower.";
 				}
 			}
@@ -5245,7 +5249,11 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				/* Normal monsters slow down */
 				else
 				{
-					if (m_ptr->mspeed > 60) m_ptr->mspeed -= 10;
+					if (m_ptr->mspeed > 100) m_ptr->mspeed -= 10;
+					else if (m_ptr->mspeed > 90) m_ptr->mspeed -= 5;
+					else if (m_ptr->mspeed > 80) m_ptr->mspeed -= 3;
+					else if (m_ptr->mspeed > 70) m_ptr->mspeed -= 2;
+					else if (m_ptr->mspeed > 60) m_ptr->mspeed -= 1;
 					note = " starts moving slower.";
 				}
 
@@ -5773,7 +5781,11 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			/* Normal monsters slow down */
 			else
 			{
-				if (m_ptr->mspeed > 60) m_ptr->mspeed -= 10;
+				if (m_ptr->mspeed > 100) m_ptr->mspeed -= 10;
+				else if (m_ptr->mspeed > 90) m_ptr->mspeed -= 5;
+				else if (m_ptr->mspeed > 80) m_ptr->mspeed -= 3;
+				else if (m_ptr->mspeed > 70) m_ptr->mspeed -= 2;
+				else if (m_ptr->mspeed > 60) m_ptr->mspeed -= 1;
 				note = " starts moving slower.";
 			}
 
