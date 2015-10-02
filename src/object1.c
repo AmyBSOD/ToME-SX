@@ -2832,13 +2832,13 @@ void output_ammo_dam(object_type *o_ptr, int mult, int mult2, cptr against, cptr
 	object_type *b_ptr = &p_ptr->inventory[INVEN_BOW];
 	int is_boomerang = (o_ptr->tval == TV_BOOMERANG);
 	int tmul = get_shooter_mult(b_ptr) + p_ptr->xtra_might;
-	if (is_boomerang) tmul = p_ptr->throw_mult;
+	if (is_boomerang) tmul = p_ptr->throw_mult + p_ptr->xtra_might;
 
 	dam = (o_ptr->dd + (o_ptr->dd * o_ptr->ds)) * 5;
 	dam += o_ptr->to_d * 10;
 	if (!is_boomerang) dam += b_ptr->to_d * 10;
 	dam *= tmul;
-	if (!is_boomerang) dam += (p_ptr->to_d_ranged) * 10;
+	/*if (!is_boomerang)*/ dam += (p_ptr->to_d_ranged) * 10;
 	dam *= mult;
 	CHECK_FIRST("", *first);
 	if (dam > 0)
@@ -2858,7 +2858,7 @@ void output_ammo_dam(object_type *o_ptr, int mult, int mult2, cptr against, cptr
 		dam += o_ptr->to_d * 10;
 		if (!is_boomerang) dam += b_ptr->to_d * 10;
 		dam *= tmul;
-		if (!is_boomerang) dam += (p_ptr->to_d_ranged) * 10;
+		/*if (!is_boomerang)*/ dam += (p_ptr->to_d_ranged) * 10;
 		dam *= mult2;
 		CHECK_FIRST("", *first);
 		if (dam > 0)

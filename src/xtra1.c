@@ -3569,6 +3569,10 @@ void calc_bonuses(bool silent)
 			case SKILL_XBOW:
 				if (p_ptr->tval_ammo == TV_BOLT) p_ptr->xtra_might += get_skill(archery) / 30;
 				break;
+			case SKILL_BOOMERANG:
+				p_ptr->xtra_might += get_skill(archery) / 10;
+				p_ptr->to_d_ranged += get_skill(SKILL_DRUID);
+				break;
 			}
 		}
 

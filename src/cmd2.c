@@ -3987,7 +3987,7 @@ void do_cmd_boomerang(void)
 
 	int j, y, x, ny, nx, ty, tx;
 
-	int chance, tdam, tdis;
+	int chance, tdam, tdis, tmul;
 
 	int mul, div;
 
@@ -4061,6 +4061,14 @@ void do_cmd_boomerang(void)
 	         ((p_ptr->to_h + p_ptr->to_h_ranged) * BTH_PLUS_ADJ));
 
 	chance += get_skill(SKILL_BOOMERANG);
+
+	tmul = 0 + p_ptr->xtra_might;
+
+	/* Boost the damage */
+	tdam *= tmul;
+
+	/* Add in the player damage */
+	tdam += p_ptr->to_d_ranged;
 
 	/* Take a turn */
 	energy_use = 100;
@@ -4256,8 +4264,8 @@ void do_cmd_boomerang(void)
 				j = (hit_body ? breakage_chance(o_ptr) : 0);
 
 				/* Break the boomerang */
-				if (!(o_ptr->art_name || artifact_p(o_ptr)) &&
-				                (rand_int(100) < j))
+				if ((!(o_ptr->art_name || artifact_p(o_ptr)) &&
+				                (rand_int(100) < j)) && (rand_int(55) > get_skill(SKILL_BOOMERANG) ) )
 				{
 					msg_print(format("Your %s is destroyed.", o_name));
 					inven_item_increase(INVEN_BOW, -1);
