@@ -529,6 +529,7 @@ static void mass_produce(object_type *o_ptr)
 			if (cost <= 5L) size += mass_roll(5, 5);
 			if (cost <= 50L) size += mass_roll(5, 5);
 			if (cost <= 500L) size += mass_roll(5, 5);
+			size += mass_roll(5, 5);
 			break;
 		}
 
