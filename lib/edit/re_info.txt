@@ -277,6 +277,96 @@ G:*:*
 I:+2:%115d%100:+1:%105:-2
 W:+2:5:%105:%115:A
 
+N:32:Timer
+G:*:B
+I:+0:+0d+0:+0:+10:-30
+W:+1:25:%90:%100:A
+B:*:TIME:+0d+0
+
+N:33:Crack-abuser
+G:*:v
+I:+0:+0d+0:+0:+10:-30
+W:+1:10:%90:%100:A
+B:*:HALLU:+0d+0
+
+N:34:Shatterer
+G:*:w
+I:+0:+0d+0:+0:+10:-30
+W:+1:10:%90:%100:A
+B:*:SHATTER:+0d+0
+
+N:35:Drainer
+G:*:D
+I:+0:+0d+0:+0:+10:-30
+W:+1:15:%90:%100:A
+B:*:LOSE_ALL:+0d+0
+
+N:36:Disenchanter
+G:*:D
+I:+0:+0d+0:+0:+10:-30
+W:+1:20:%90:%100:A
+B:*:UN_BONUS:+0d+0
+
+N:37:Shrieker
+G:*:v
+I:+0:+0d+0:+0:+10:-30
+W:+1:5:%90:%100:A
+S:1_IN_4 | SHRIEK
+
+N:38:Inert
+G:*:U
+I:+0:+0d+0:+0:+10:-30
+W:+1:25:%90:%100:A
+S:1_IN_4 | BR_INER
+
+N:39:Gravitator
+G:*:s
+I:+0:+0d+0:+0:+10:-30
+W:+1:25:%90:%100:A
+S:1_IN_4 | BR_GRAV
+
+N:40:Shredder
+G:*:b
+I:+0:+0d+0:+0:+10:-30
+W:+1:25:%90:%100:A
+S:1_IN_4 | BR_SHAR
+
+N:41:Plasmon
+G:*:o
+I:+0:+0d+0:+0:+10:-30
+W:+1:25:%90:%100:A
+S:1_IN_4 | BR_PLAS
+
+N:42:Manastormer
+G:*:b
+I:+0:+0d+0:+0:+10:-30
+W:+1:30:%90:%100:A
+S:1_IN_4 | BR_MANA
+
+N:43:Aquaman
+G:*:b
+I:+0:+0d+0:+0:+10:-30
+W:+1:50:%90:%100:A
+S:1_IN_4 | BA_WATE
+
+N:44:Abomination
+G:*:v
+I:+0:+0d+0:+0:+10:-30
+W:+1:10:%90:%100:A
+M:ELDRITCH_HORROR
+
+N:45:Phaser
+G:*:s
+I:+0:+0d+0:+0:+10:-30
+W:+1:20:%90:%100:A
+M:PASS_WALL
+
+N:46:Digger
+G:*:D
+I:+0:+0d+0:+0:+10:-30
+W:+1:20:%90:%100:A
+M:KILL_WALL
+
 # N:x:ego name
 # G:x:y                 x is the char, y the attribute, * means the normal one
 # I:speed:(dice)d(side):aaf:ac:sleep
