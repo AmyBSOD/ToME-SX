@@ -4282,7 +4282,7 @@ extern int PlayerUID;
 #define MEGO_FIX                2
 #define MEGO_PRC                3
 
-#define MEGO_CHANCE             1      /* % chances of getting ego monsters */
+#define MEGO_CHANCE             4      /* % chances of getting ego monsters */
 
 #define race_inf(m_ptr) (((m_ptr)->sr_ptr) ? (m_ptr)->sr_ptr : race_info_idx((m_ptr)->r_idx, (m_ptr)->ego))
 

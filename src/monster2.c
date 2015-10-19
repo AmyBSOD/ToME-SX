@@ -176,10 +176,12 @@ int pick_ego_monster(int r_idx)
 	int tries = max_re_idx + 10;
 	monster_ego *re_ptr;
 
-	if ((!(dungeon_flags2 & DF2_ELVEN)) && (!(dungeon_flags2 & DF2_DWARVEN)))
+	/* changed by Amy: remove useless dwarf/elf egotype, allow egotypes for town NPCs etc. */
+
+	/*if ((!(dungeon_flags2 & DF2_ELVEN)) && (!(dungeon_flags2 & DF2_DWARVEN)))*/
 	{
 		/* No townspeople ego */
-		if (!r_info[r_idx].level) return 0;
+		/*if (!r_info[r_idx].level) return 0;*/
 
 		/* First are we allowed to find an ego */
 		if (!magik(MEGO_CHANCE)) return 0;
@@ -209,7 +211,7 @@ int pick_ego_monster(int r_idx)
 		}
 	}
 	/* Bypass restrictions for themed townspeople */
-	else
+	/*else
 	{
 		if (dungeon_flags2 & DF2_ELVEN)
 			ego = test_mego_name("Elven");
@@ -218,7 +220,7 @@ int pick_ego_monster(int r_idx)
 
 		if (mego_ok(r_idx, ego))
 			return ego;
-	}
+	}*/
 
 	/* Found none ? so sad, well no ego for the time being */
 	return 0;
