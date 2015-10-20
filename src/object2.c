@@ -3439,8 +3439,17 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 			}
 
 			/* Ok now get a base level */
-			call_lua("get_stick_base_level", "(d,d,d)", "d", TV_WAND, dun_level, o_ptr->pval2, &bonus_lvl);
-			call_lua("get_stick_max_level", "(d,d,d)", "d", TV_WAND, dun_level, o_ptr->pval2, &max_lvl);
+
+			if (dun_level) call_lua("get_stick_base_level", "(d,d,d)", "d", TV_WAND, dun_level, o_ptr->pval2, &bonus_lvl);
+			else if (level > 1) call_lua("get_stick_base_level", "(d,d,d)", "d", TV_WAND, level, o_ptr->pval2, &bonus_lvl);
+			else call_lua("get_stick_base_level", "(d,d,d)", "d", TV_WAND, 1, o_ptr->pval2, &bonus_lvl);
+			if (dun_level) call_lua("get_stick_max_level", "(d,d,d)", "d", TV_WAND, dun_level, o_ptr->pval2, &max_lvl);
+			else if (level > 1) call_lua("get_stick_max_level", "(d,d,d)", "d", TV_WAND, level, o_ptr->pval2, &max_lvl);
+			else call_lua("get_stick_max_level", "(d,d,d)", "d", TV_WAND, 1, o_ptr->pval2, &max_lvl);
+
+			/*call_lua("get_stick_base_level", "(d,d,d)", "d", TV_WAND, dun_level, o_ptr->pval2, &bonus_lvl);
+			call_lua("get_stick_max_level", "(d,d,d)", "d", TV_WAND, dun_level, o_ptr->pval2, &max_lvl);*/
+
 			o_ptr->pval3 = (max_lvl << 16) + (bonus_lvl & 0xFFFF);
 
 			/* Hack -- charge wands */
@@ -3467,8 +3476,16 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 			}
 
 			/* Ok now get a base level */
-			call_lua("get_stick_base_level", "(d,d,d)", "d", TV_STAFF, dun_level, o_ptr->pval2, &bonus_lvl);
-			call_lua("get_stick_max_level", "(d,d,d)", "d", TV_STAFF, dun_level, o_ptr->pval2, &max_lvl);
+
+			if (dun_level) call_lua("get_stick_base_level", "(d,d,d)", "d", TV_STAFF, dun_level, o_ptr->pval2, &bonus_lvl);
+			else if (level > 1) call_lua("get_stick_base_level", "(d,d,d)", "d", TV_STAFF, level, o_ptr->pval2, &bonus_lvl);
+			else call_lua("get_stick_base_level", "(d,d,d)", "d", TV_STAFF, 1, o_ptr->pval2, &bonus_lvl);
+			if (dun_level) call_lua("get_stick_max_level", "(d,d,d)", "d", TV_STAFF, dun_level, o_ptr->pval2, &max_lvl);
+			else if (level > 1) call_lua("get_stick_max_level", "(d,d,d)", "d", TV_STAFF, level, o_ptr->pval2, &max_lvl);
+			else call_lua("get_stick_max_level", "(d,d,d)", "d", TV_STAFF, 1, o_ptr->pval2, &max_lvl);
+
+			/*call_lua("get_stick_base_level", "(d,d,d)", "d", TV_STAFF, dun_level, o_ptr->pval2, &bonus_lvl);
+			call_lua("get_stick_max_level", "(d,d,d)", "d", TV_STAFF, dun_level, o_ptr->pval2, &max_lvl);*/
 			o_ptr->pval3 = (max_lvl << 16) + (bonus_lvl & 0xFFFF);
 
 			/* Hack -- charge staffs */
@@ -4052,8 +4069,13 @@ void apply_magic(object_type *o_ptr, int lev, bool okay, bool good, bool great)
 				}
 
 				/* Determine a base and a max level */
-				call_lua("get_stick_base_level", "(d,d,d)", "d", o_ptr->tval, dun_level, o_ptr->pval2, &base_lvl);
-				call_lua("get_stick_max_level", "(d,d,d)", "d", o_ptr->tval, dun_level, o_ptr->pval2, &max_lvl);
+
+				if (dun_level) call_lua("get_stick_base_level", "(d,d,d)", "d", o_ptr->tval, dun_level, o_ptr->pval2, &base_lvl);
+				else if (lev > 1) call_lua("get_stick_base_level", "(d,d,d)", "d", o_ptr->tval, lev, o_ptr->pval2, &base_lvl);
+				else call_lua("get_stick_base_level", "(d,d,d)", "d", o_ptr->tval, 1, o_ptr->pval2, &base_lvl);
+				if (dun_level) call_lua("get_stick_max_level", "(d,d,d)", "d", o_ptr->tval, dun_level, o_ptr->pval2, &max_lvl);
+				else if (lev > 1) call_lua("get_stick_max_level", "(d,d,d)", "d", o_ptr->tval, lev, o_ptr->pval2, &max_lvl);
+				else call_lua("get_stick_max_level", "(d,d,d)", "d", o_ptr->tval, 1, o_ptr->pval2, &max_lvl);
 				o_ptr->pval3 = (max_lvl << 16) + (base_lvl & 0xFFFF);
 
 				/* Hack -- charge wands */

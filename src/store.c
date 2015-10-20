@@ -475,8 +475,9 @@ static void mass_produce(object_type *o_ptr)
 	case TV_FLASK:
 	case TV_LITE:
 		{
-			if (cost <= 5L) size += mass_roll(3, 5);
-			if (cost <= 20L) size += mass_roll(3, 5);
+			if (cost <= 5L) size += mass_roll(2, 5);
+			if (cost <= 20L) size += mass_roll(2, 5);
+			size += mass_roll(2, 5);
 			break;
 		}
 
@@ -484,8 +485,9 @@ static void mass_produce(object_type *o_ptr)
 	case TV_POTION2:
 	case TV_SCROLL:
 		{
-			if (cost <= 60L) size += mass_roll(3, 5);
+			if (cost <= 60L) size += mass_roll(2, 5);
 			if (cost <= 240L) size += mass_roll(1, 5);
+			size += mass_roll(1, 5);
 			break;
 		}
 
@@ -495,8 +497,9 @@ static void mass_produce(object_type *o_ptr)
 	case TV_DAEMON_BOOK:
 	case TV_BOOK:
 		{
-			if (cost <= 50L) size += mass_roll(2, 3);
+			if (cost <= 50L) size += mass_roll(1, 3);
 			if (cost <= 500L) size += mass_roll(1, 3);
+			size += mass_roll(1, 3);
 			break;
 		}
 
@@ -526,10 +529,10 @@ static void mass_produce(object_type *o_ptr)
 	case TV_ARROW:
 	case TV_BOLT:
 		{
-			if (cost <= 5L) size += mass_roll(5, 5);
-			if (cost <= 50L) size += mass_roll(5, 5);
-			if (cost <= 500L) size += mass_roll(5, 5);
-			size += mass_roll(5, 5);
+			if (cost <= 5L) size += mass_roll(4, 5);
+			if (cost <= 50L) size += mass_roll(4, 5);
+			if (cost <= 500L) size += mass_roll(4, 5);
+			size += mass_roll(8, 5);
 			break;
 		}
 
@@ -542,6 +545,7 @@ static void mass_produce(object_type *o_ptr)
 		{
 			if (cost < 1601L) size += mass_roll(1, 5);
 			else if (cost < 3201L) size += mass_roll(1, 3);
+			size += mass_roll(1, 3);
 			break;
 		}
 	}
