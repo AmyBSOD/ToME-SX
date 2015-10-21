@@ -46,12 +46,12 @@ I:2:100:5:5:2:0d0:b
 D:A poisoned needle weakens you!
 F:FLOOR | CHEST | DOOR
 
-N:2:Weakness Trap
+N:2:Greater Weakness Trap
 I:5:100:5:5:20:0d0:b
 D:A poisoned needle seriously weakens you!
 F:FLOOR | CHEST | DOOR
 
-N:3:Weakness Trap
+N:3:Permanent Weakness Trap
 I:7:100:5:8:40:0d0:b
 D:A poisoned needle permanently weakens you!
 F:FLOOR | CHEST | DOOR
@@ -61,12 +61,12 @@ I:2:100:5:2:2:0d0:b
 D:A poisoned needle makes you feel stupid!
 F:FLOOR | CHEST | DOOR
 
-N:5:Intelligence Trap
+N:5:Greater Intelligence Trap
 I:5:100:5:5:20:0d0:b
 D:A poisoned needle makes you feel very stupid!
 F:FLOOR | CHEST | DOOR
 
-N:6:Intelligence Trap
+N:6:Permanent Intelligence Trap
 I:7:100:5:8:40:0d0:b
 D:A poisoned needle makes you feel permanently stupid!
 F:FLOOR | CHEST | DOOR
@@ -76,12 +76,12 @@ I:2:100:5:2:2:0d0:b
 D:A poisoned needle makes you feel naive!
 F:FLOOR | CHEST | DOOR
 
-N:8:Wisdom Trap
+N:8:Greater Wisdom Trap
 I:5:100:5:5:20:0d0:b
 D:A poisoned needle makes you feel very naive!
 F:FLOOR | CHEST | DOOR
 
-N:9:Wisdom Trap
+N:9:Permanent Wisdom Trap
 I:7:100:5:8:40:0d0:b
 D:A poisoned needle makes you feel permanently naive!
 F:FLOOR | CHEST | DOOR
@@ -91,12 +91,12 @@ I:2:100:5:2:2:0d0:b
 D:A poisoned needle makes you feel clumsy!
 F:FLOOR | CHEST | DOOR
 
-N:11:Fumbling Fingers Trap
+N:11:Greater Fumbling Fingers Trap
 I:5:100:5:5:20:0d0:b
 D:A poisoned needle makes you feel very clumsy!
 F:FLOOR | CHEST | DOOR
 
-N:12:Fumbling Fingers Trap
+N:12:Permanent Fumbling Fingers Trap
 I:7:100:5:8:40:0d0:b
 D:A poisoned needle makes you feel permanently clumsy!
 F:FLOOR | CHEST | DOOR
@@ -106,12 +106,12 @@ I:2:100:5:2:2:0d0:b
 D:A poisoned needle makes you feel sickly!
 F:FLOOR | CHEST | DOOR
 
-N:14:Wasting Trap
+N:14:Greater Wasting Trap
 I:5:100:5:5:20:0d0:b
 D:A poisoned needle makes you feel very sickly!
 F:FLOOR | CHEST | DOOR
 
-N:15:Wasting Trap
+N:15:Permanent Wasting Trap
 I:7:100:5:8:40:0d0:b
 D:A poisoned needle makes you feel permanently sickly!
 F:FLOOR | CHEST | DOOR
@@ -121,12 +121,12 @@ I:2:100:5:2:2:0d0:b
 D:A poisoned needle scars you!
 F:FLOOR | CHEST | DOOR
 
-N:17:Beauty Trap
+N:17:Greater Beauty Trap
 I:5:100:5:5:20:0d0:b
 D:A poisoned needle scars you horribly!
 F:FLOOR | CHEST | DOOR
 
-N:18:Beauty Trap
+N:18:Permanent Beauty Trap
 I:7:100:5:8:40:0d0:b
 D:A poisoned needle scars you permanently!
 F:FLOOR | CHEST | DOOR
