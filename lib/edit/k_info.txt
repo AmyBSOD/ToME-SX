@@ -2173,6 +2173,7 @@ I:71:48:0
 W:20:0:0:8000
 A:20/6:25/3:30/1
 P:0:1d1:0:0:0
+F:FOUNTAIN
 D:This beneficial potion will magically improve your physical strength.
 
 N:226:Weakness
@@ -2199,6 +2200,7 @@ I:71:49:0
 W:20:0:0:8000
 A:20/6:25/3:30/1
 P:0:1d1:0:0:0
+F:FOUNTAIN
 D:This nice potion will magically enhance your wit, permanently improving your intellect.
 
 N:229:Stupidity
@@ -2225,6 +2227,7 @@ I:71:50:0
 W:20:0:0:8000
 A:20/6:25/3:30/1
 P:0:1d1:0:0:0
+F:FOUNTAIN
 D:This potion grants great insight, making you wiser.
 
 N:232:Naivety
@@ -2251,6 +2254,7 @@ I:71:53:0
 W:20:0:0:1000
 A:20/1:25/1
 P:0:1d1:0:0:0
+F:FOUNTAIN
 D:This potion infuses you with beauty and charm.
 
 N:235:Ugliness
@@ -2288,6 +2292,7 @@ I:71:62:-2500
 W:90:0:0:100000
 A:90/9
 P:0:1d1:0:0:0
+F:FOUNTAIN
 D:This immensely powerful potion makes your physique almost indestructible for a very short
 D:time. Very rarely, an attempt to hurt you will still succeed, so don't be too confident.
 
@@ -2297,6 +2302,7 @@ I:71:63:100
 W:50:0:0:750000
 A:50/20:100/10:120/5
 P:0:1d1:0:0:0
+F:FOUNTAIN
 D:This potion fundamentally twists your physical features, as if you were another mother's child.
 D:Your physique will be shaped anew.
 
@@ -2335,6 +2341,7 @@ I:71:52:0
 W:20:0:0:8000
 A:20/6:25/3:30/1
 P:0:1d1:0:0:0
+F:FOUNTAIN
 D:This magical concoction greatly improves your health, making you permanently tougher.
 
 N:244:Experience
@@ -2343,6 +2350,7 @@ I:71:59:0
 W:65:0:0:25000
 A:65/1
 P:0:1d1:0:0:0
+F:FOUNTAIN
 D:This exceptional drink instills into you knowledge, allowing you to advance further in your trade.
 
 N:245:Sleep
@@ -2410,6 +2418,7 @@ I:71:51:0
 W:20:0:0:8000
 A:20/6:25/3:30/1
 P:0:1d1:0:0:0
+F:FOUNTAIN
 D:A strange magical drink which greatly improves your agility and nimbleness.
 
 N:252:Restore Dexterity
@@ -3753,6 +3762,7 @@ I:71:39:0
 W:60:0:0:5000
 A:60/4:100/2
 P:0:1d1:0:0:0
+F:FOUNTAIN
 D:This wonderful potion will fully heal you no matter how badly you're hurt, allow drained
 D:abilities to recover and remove various other ailments.
 
