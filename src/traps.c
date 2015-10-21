@@ -1259,7 +1259,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				place_trap(y, x);
 			}
 			msg_print("You hear a noise, and then its echo.");
-			ident = FALSE;
+			ident = TRUE;
 			break;
 		}
 
@@ -1288,7 +1288,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("You hear a noise, and then its echo.");
 
 			/* Never known */
-			ident = FALSE;
+			ident = TRUE;
 		}
 		break;
 
@@ -1414,7 +1414,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				}
 
 			msg_print("The floor vibrates in a strange way.");
-			ident = FALSE;
+			ident = TRUE;
 			break;
 		}
 
