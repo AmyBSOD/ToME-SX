@@ -1243,6 +1243,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/* Trap of New Trap */
 	case TRAP_OF_NEW:
 		{
+			t_info[trap].ident = TRUE;
+
 			/* if we're on a floor or on a door, place a new trap */
 			if ((item == -1) || (item == -2))
 			{
@@ -1259,7 +1261,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				place_trap(y, x);
 			}
 			msg_print("You hear a noise, and then its echo.");
-			ident = TRUE;
+			ident = FALSE;
+			msg_print("You identified that trap as Trap of New Trap.");
 			break;
 		}
 
