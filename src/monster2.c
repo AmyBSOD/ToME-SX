@@ -1560,8 +1560,8 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 			if (!(m_ptr->ml))
 				return ;  /* Cannot see it for some reason */
 
-			if (!(r_ptr->flags2 & RF2_ELDRITCH_HORROR))
-				return ;  /* oops */
+			/*if (!(r_ptr->flags2 & RF2_ELDRITCH_HORROR))
+				return ;*/  /* oops */
 
 
 
