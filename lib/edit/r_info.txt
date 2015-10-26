@@ -17089,7 +17089,7 @@ F:NEVER_MOVE | UNIQUE |
 F:STUPID | EMPTY_MIND | 
 F:IM_POIS | 
 F:NO_CONF | NO_SLEEP | NO_FEAR |
-F:MORTAL | WYRM_PROTECT | ONLY_DEPTH | JOKEANGBAND | NO_CUT
+F:MORTAL | WYRM_PROTECT | JOKEANGBAND | NO_CUT
 D:A small strange growth. It seems to be defenceless... 
 
 N:979:The Physics Teacher
