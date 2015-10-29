@@ -16,7 +16,8 @@ ToME 2.3.5 (which ToME-SX is based on) is subject to the Angband License.
 The changes to the game that were made by ToME-SX are subject to the
 Angband License and/or the GNU General Public License. In all cases where
 the Angband License and the GNU General Public License have contradictory
-meanings, the Angband License is the valid one.
+meanings, the Angband License takes precedence over the GNU General
+Public License.
 
                     GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
