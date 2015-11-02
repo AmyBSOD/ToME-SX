@@ -1228,7 +1228,7 @@ void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *
 	}
 
 	/* Hack - Res Chaos -> Res Confusion */
-	if (*f2 & TR2_RES_CHAOS) (*f2) |= (TR2_RES_CONF);
+	/* if (*f2 & TR2_RES_CHAOS) (*f2) |= (TR2_RES_CONF); */
 }
 
 
