@@ -1281,9 +1281,9 @@ void init_skill(s32b value, s32b mod, int i)
 
 void do_get_new_skill()
 {
-	char *items[4];
-	int skl[4];
-	s32b val[4], mod[4];
+	char *items[6];
+	int skl[6];
+	s32b val[6], mod[6];
 	bool used[MAX_SKILLS];
 	int available_skills[MAX_SKILLS];
 	int max = 0, max_a = 0, res, i;
@@ -1310,7 +1310,7 @@ void do_get_new_skill()
 	while (available_skills[max_a] != -1) max_a++;
 
 	/* Get 4 skills */
-	for (max = 0; max < 4; max++)
+	for (max = 0; max < 6; max++)
 	{
 		int i;
 		skill_type *s_ptr;
@@ -1331,10 +1331,20 @@ void do_get_new_skill()
 
 		if (s_ptr->mod)
 		{
-			if (s_ptr->mod < 300)
+			if (s_ptr->mod < 100)
 			{
 				val[max] = 1000;
-				mod[max] = 300 - s_ptr->mod;
+				mod[max] = 300;
+			}
+			else if (s_ptr->mod < 200)
+			{
+				val[max] = 1300;
+				mod[max] = 300;
+			}
+			else if (s_ptr->mod < 300)
+			{
+				val[max] = 1600;
+				mod[max] = 300;
 			}
 			else if (s_ptr->mod < 500)
 			{
@@ -1361,7 +1371,7 @@ void do_get_new_skill()
 
 	while (TRUE)
 	{
-		res = ask_menu("Choose a skill to learn(a-d to choose, ESC to cancel)?", (char **)items, 4);
+		res = ask_menu("Choose a skill to learn(a-d to choose, ESC to cancel)?", (char **)items, 6);
 
 		/* Ok ? lets learn ! */
 		if (res > -1)
@@ -1420,7 +1430,7 @@ void do_get_new_skill()
 	}
 
 	/* Free them ! */
-	for (max = 0; max < 4; max++)
+	for (max = 0; max < 6; max++)
 	{
 		string_free(items[max]);
 	}
