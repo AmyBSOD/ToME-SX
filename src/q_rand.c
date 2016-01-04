@@ -61,6 +61,13 @@ void do_get_new_obj(int y, int x)
 			drop_near(q_ptr[res], -1, y + 1, x);
 
 			cmsg_print(TERM_YELLOW, "There, Noble Hero. I put it there. Thanks again!");
+
+			cmsg_print(TERM_YELLOW, "Since you took the time to rescue me even though I'm an utter bitch who always");
+			cmsg_print(TERM_YELLOW, "gets captured by the most annoying monsters in existence, I have another reward for you!");
+			cmsg_print(TERM_YELLOW, "You are infused with the Princess's bitchy charm...");
+
+			do_get_new_skill(1);
+
 			break;
 		}
 	}
@@ -148,7 +155,7 @@ void hero_death(s32b m_idx, s32b r_idx)
 		cmsg_print(TERM_YELLOW, "I must go on my own way now.");
 		cmsg_print(TERM_YELLOW, "But before I go, I can help your skills.'");
 		cmsg_print(TERM_YELLOW, "He touches your forehead.");
-		do_get_new_skill();
+		do_get_new_skill(0);
 		return;
 	}
 	cmsg_print(TERM_YELLOW, "If you wish, I can help you in your adventures.'");
@@ -209,7 +216,7 @@ void hero_death(s32b m_idx, s32b r_idx)
 	{
 		cmsg_print(TERM_YELLOW, "'As you wish, but I want to do something for you.'");
 		cmsg_print(TERM_YELLOW, "He touches your forehead.");
-		do_get_new_skill();
+		do_get_new_skill(0);
 	}
 }
 

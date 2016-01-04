@@ -1903,7 +1903,7 @@ extern bool forbid_non_blessed(void);
 extern int validate_autoskiller(s32b *ideal);
 extern void compute_skills(s32b *v, s32b *m, int i);
 extern void select_default_melee(void);
-extern void do_get_new_skill(void);
+extern void do_get_new_skill(bool princessbitch);
 extern void init_skill(s32b value, s32b mod, int i);
 extern s16b find_ability(cptr name);
 extern void dump_abilities(FILE *fff);

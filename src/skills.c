@@ -1279,7 +1279,7 @@ void init_skill(s32b value, s32b mod, int i)
 		s_info[i].hidden = FALSE;
 }
 
-void do_get_new_skill()
+void do_get_new_skill(bool princessbitch)
 {
 	char *items[6];
 	int skl[6];
@@ -1331,20 +1331,10 @@ void do_get_new_skill()
 
 		if (s_ptr->mod)
 		{
-			if (s_ptr->mod < 100)
+			if (s_ptr->mod < 300)
 			{
-				val[max] = 1000;
-				mod[max] = 300;
-			}
-			else if (s_ptr->mod < 200)
-			{
-				val[max] = 1300;
-				mod[max] = 300;
-			}
-			else if (s_ptr->mod < 300)
-			{
-				val[max] = 1600;
-				mod[max] = 300;
+				val[max] = s_ptr->mod * 3;
+				mod[max] = 300 - s_ptr->mod;
 			}
 			else if (s_ptr->mod < 500)
 			{
@@ -1364,6 +1354,14 @@ void do_get_new_skill()
 			mod[max] = 300;
 			val[max] = 1000;
 		}
+
+		if (princessbitch) {
+
+			mod[max] /= 5;
+			val[max] /= 5;
+
+		}
+
 		if (s_ptr->value + val[max] > SKILL_MAX) val[max] = SKILL_MAX - s_ptr->value;
 		skl[max] = available_skills[i];
 		items[max] = (char *)string_make(format("%-40s: +%02ld.%03ld value, +%01d.%03d modifier", s_ptr->name + s_name, val[max] / SKILL_STEP, val[max] % SKILL_STEP, mod[max] / SKILL_STEP, mod[max] % SKILL_STEP));
@@ -1416,6 +1414,11 @@ void do_get_new_skill()
 			s_ptr->value += val[res];
 			s_ptr->mod += mod[res];
 			if (mod[res] >= 300)
+			{
+				msg_format("You can now learn the %s skill.",
+				           s_ptr->name + s_name);
+			}
+			else if (princessbitch && mod[res] >= 60)
 			{
 				msg_format("You can now learn the %s skill.",
 				           s_ptr->name + s_name);
