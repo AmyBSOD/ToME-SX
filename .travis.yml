@@ -1,0 +1,10 @@
+language: c
+sudo: false
+script: make -f src/makefile.std install
+compiler:
+  - gcc
+  - clang
+notifications:
+  irc:
+    channels: "chat.freenode.net#slashemextended"
+    skip_join: true
