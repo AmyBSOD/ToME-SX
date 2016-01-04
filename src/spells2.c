@@ -2849,7 +2849,7 @@ void stair_creation(void)
 		/* Town/wilderness */
 		cave_set_feat(p_ptr->py, p_ptr->px, FEAT_MORE);
 	}
-	else if (is_quest(dun_level) || (dun_level >= MAX_DEPTH - 1))
+	else if ( (is_quest(dun_level) && (is_quest(dun_level) != QUEST_RANDOM) ) || (dun_level >= MAX_DEPTH - 1))
 	{
 		/* Quest level */
 		cave_set_feat(p_ptr->py, p_ptr->px, FEAT_LESS);
@@ -7428,7 +7428,7 @@ void wall_breaker(void)
 	else if (randint(100) > 30)
 	{
 		/* Prevent destruction of quest levels and town */
-		if (!is_quest(dun_level) && dun_level)
+		if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
 			earthquake(p_ptr->py, p_ptr->px, 1);
 	}
 	else

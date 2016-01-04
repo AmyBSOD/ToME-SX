@@ -882,7 +882,7 @@ void teleport_player_level(void)
 		/* Leaving */
 		p_ptr->leaving = TRUE;
 	}
-	else if (is_quest(dun_level) || (dun_level >= MAX_DEPTH - 1))
+	else if ( (is_quest(dun_level) && (is_quest(dun_level) != QUEST_RANDOM) ) || (dun_level >= MAX_DEPTH - 1))
 	{
 		msg_print("You rise up through the ceiling.");
 

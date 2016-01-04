@@ -1337,7 +1337,7 @@ static void carried_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 					if (damage > 23)
 					{
 						/* Prevent destruction of quest levels and town */
-						if (!is_quest(dun_level) && dun_level)
+						if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
 							earthquake(p_ptr->py, p_ptr->px, 8);
 					}
 					break;
@@ -1968,7 +1968,7 @@ static void incarnate_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 					if (damage > 23)
 					{
 						/* Prevent destruction of quest levels and town */
-						if (!is_quest(dun_level) && dun_level)
+						if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
 							earthquake(p_ptr->py, p_ptr->px, 8);
 					}
 					break;
@@ -3073,7 +3073,7 @@ void py_attack(int y, int x, int max_blow)
 	if (do_quake)
 	{
 		/* Prevent destruction of quest levels and town */
-		if (!is_quest(dun_level) && dun_level)
+		if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
 			earthquake(p_ptr->py, p_ptr->px, 10);
 	}
 }

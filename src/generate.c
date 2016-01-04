@@ -897,7 +897,7 @@ static void place_random_stairs(int y, int x)
 	{
 		place_down_stairs(y, x);
 	}
-	else if (is_quest(dun_level) && (dun_level > 1))
+	else if (is_quest(dun_level) && (is_quest(dun_level) != QUEST_RANDOM) && (dun_level > 1))
 	{
 		place_up_stairs(y, x);
 	}
@@ -1076,7 +1076,7 @@ static void alloc_stairs(int feat, int num, int walls, int branch)
 			}
 
 			/* Quest -- must go up */
-			else if ((is_quest(dun_level) && (dun_level >= 1)) ||
+			else if ((is_quest(dun_level) && (is_quest(dun_level) != QUEST_RANDOM) && (dun_level >= 1)) ||
 			                ((dun_level >= d_info[dungeon_type].maxdepth) &&
 			                 (!dungeon_flags1 & DF1_FORCE_DOWN)))
 			{
@@ -6831,7 +6831,7 @@ bool level_generate_dungeon(cptr name)
 	}
 
 	/* Hack -- No destroyed "quest" levels */
-	if (is_quest(dun_level)) destroyed = FALSE;
+	if (is_quest(dun_level) && (is_quest(dun_level) != QUEST_RANDOM) ) destroyed = FALSE;
 
 	/* Hack -- No destroyed "small" levels */
 	if ((cur_wid != MAX_WID) || (cur_hgt != MAX_HGT)) destroyed = FALSE;

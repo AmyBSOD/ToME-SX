@@ -934,7 +934,7 @@ bool carried_make_attack_normal(int r_idx)
 					if (damage > 23)
 					{
 						/* Prevent destruction of quest levels and town */
-						if (!is_quest(dun_level) && dun_level)
+						if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
 							earthquake(p_ptr->py, p_ptr->px, 8);
 					}
 
@@ -2570,7 +2570,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					if (damage > 23)
 					{
 						/* Prevent destruction of quest levels and town */
-						if (!is_quest(dun_level) && dun_level)
+						if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
 							earthquake(m_ptr->fy, m_ptr->fx, 8);
 					}
 

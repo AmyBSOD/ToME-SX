@@ -2090,7 +2090,7 @@ void place_trap(int y, int x)
 		 */
 		if ((trap == TRAP_OF_SINKING) &&
 		    ((d_ptr->maxdepth == dun_level) ||
-		     (dungeon_flags1 & DF1_FLAT) || (is_quest(dun_level))) )
+		     (dungeon_flags1 & DF1_FLAT) || (is_quest(dun_level) && (is_quest(dun_level) != QUEST_RANDOM) )) )
 		{
 			continue;
 		}

@@ -483,7 +483,7 @@ void do_cmd_go_down(void)
 			for (j = 1; j < i; j++)
 			{
 				dun_level++;
-				if (is_quest(dun_level + i - 1)) break;
+				if (is_quest(dun_level + i - 1) && (is_quest(dun_level + i - 1) != QUEST_RANDOM) ) break;
 				if (d_ptr->maxdepth == dun_level) break;
 			}
 		}

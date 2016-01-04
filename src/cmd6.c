@@ -3451,7 +3451,7 @@ void do_cmd_read_scroll(void)
 		case SV_SCROLL_STAR_DESTRUCTION:
 			{
 				/* Prevent destruction of quest levels and town */
-				if (!is_quest(dun_level) && dun_level)
+				if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
 				{
 					destroy_area(p_ptr->py, p_ptr->px, 15, TRUE, FALSE);
 				}
@@ -6361,7 +6361,7 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 			{
 				if (!doit) return "earthquake (rad 10) every 50 turns";
 				/* Prevent destruction of quest levels and town */
-				if (!is_quest(dun_level) && dun_level)
+				if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
 				{
 					earthquake(p_ptr->py, p_ptr->px, 10);
 					o_ptr->timeout = 50;

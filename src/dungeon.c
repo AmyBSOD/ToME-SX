@@ -5238,7 +5238,7 @@ static void dungeon(void)
 	}
 
 	/* No stairs down from Quest */
-	if (is_quest(dun_level) && !p_ptr->astral)
+	if (is_quest(dun_level) && (is_quest(dun_level) != QUEST_RANDOM) && !p_ptr->astral)
 	{
 		create_down_stair = FALSE;
 		create_down_shaft = FALSE;

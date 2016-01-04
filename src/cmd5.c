@@ -706,7 +706,7 @@ void wild_magic(int spell)
 	case 26:
 		{
 			/* Prevent destruction of quest levels and town */
-			if (!is_quest(dun_level) && dun_level)
+			if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
 				earthquake(p_ptr->py, p_ptr->px, 5);
 
 			break;

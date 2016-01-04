@@ -6098,7 +6098,7 @@ static bool monst_attack_monst(int m_idx, int t_idx)
 					if (damage > 23)
 					{
 						/* Prevent destruction of quest levels and town */
-						if (!is_quest(dun_level) && dun_level)
+						if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
 							earthquake(m_ptr->fy, m_ptr->fx, 8);
 					}
 					break;

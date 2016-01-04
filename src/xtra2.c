@@ -7111,7 +7111,7 @@ void gain_level_reward(int chosen_reward)
 
 	case REW_DESTRUCT:
 		/* Prevent destruction of quest levels and town */
-		if (!is_quest(dun_level) && dun_level)
+		if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
 		{
 			msg_format("The voice of %s booms out:",
 			           chaos_patrons[p_ptr->chaos_patron]);
