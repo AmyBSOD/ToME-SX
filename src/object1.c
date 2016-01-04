@@ -3151,6 +3151,31 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 			text_out("It prevents the space-time continuum from being disrupted.  ");
 		}
 
+		if (o_ptr->name1 == ART_ANCHOR2)
+		{
+			text_out("It prevents the space-time continuum from being disrupted.  ");
+		}
+
+		if (o_ptr->name1 == ART_ANCHOR3)
+		{
+			text_out("It prevents the space-time continuum from being disrupted.  ");
+		}
+
+		if (o_ptr->name1 == ART_ANCHOR4)
+		{
+			text_out("It prevents the space-time continuum from being disrupted.  ");
+		}
+
+		if (o_ptr->name1 == ART_ANCHOR5)
+		{
+			text_out("It prevents the space-time continuum from being disrupted.  ");
+		}
+
+		if (o_ptr->name1 == ART_ANCHOR6)
+		{
+			text_out("It prevents the space-time continuum from being disrupted.  ");
+		}
+
 		if ((f4 & (TR4_ANTIMAGIC_50)) || (f4 & (TR4_ANTIMAGIC_30)) || (f4 & (TR4_ANTIMAGIC_20)) || (f4 & (TR4_ANTIMAGIC_10)))
 		{
 			text_out("It generates an antimagic field.  ");

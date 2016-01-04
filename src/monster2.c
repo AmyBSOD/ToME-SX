@@ -1257,7 +1257,8 @@ void monster_desc(char *desc, monster_type *m_ptr, int mode)
 			{
 				hallu_race = &r_info[randint(max_r_idx - 2)];
 			}
-			while (hallu_race->flags1 & RF1_UNIQUE);
+			while (hallu_race->flags1 & /*RF1_UNIQUE*/RF8_ZANGBAND);
+			/* why exempt uniques from this? It makes no fucking sense! --Amy */
 
 			strcpy(silly_name, (r_name + hallu_race->name));
 		}
@@ -2240,11 +2241,12 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	}
 
 	/* Ego Uniques are NOT to be created */
-	if ((r_ptr->flags1 & RF1_UNIQUE) && ego)
+	/* Amy edit - why not? I allowed it in slex, so I'll allow it here too. */
+	/*if ((r_ptr->flags1 & RF1_UNIQUE) && ego)
 	{
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
 		return 0;
-	}
+	}*/
 
 	/* Now could we generate an Ego Monster */
 	/* Grab the special race if needed */

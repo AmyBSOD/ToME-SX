@@ -1675,7 +1675,7 @@ option_type option_info[] =
 	{ &fast_autoroller, FALSE, 6, 10,
 	  "fast_autoroller", "Fast autoroller(NOT on multiuser systems)" },
 
-	{ &joke_monsters, FALSE, 6, 14,
+	{ &joke_monsters, TRUE, 6, 14,
 	  "joke_monsters", "Allow use of some 'joke' monsters" },
 
 	/* XXX */

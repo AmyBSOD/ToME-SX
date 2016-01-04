@@ -4062,7 +4062,7 @@ void do_cmd_boomerang(void)
 
 	chance += get_skill(SKILL_BOOMERANG);
 
-	tmul = 0 + p_ptr->xtra_might;
+	tmul = 1 + p_ptr->xtra_might;
 
 	/* Boost the damage */
 	tdam *= tmul;

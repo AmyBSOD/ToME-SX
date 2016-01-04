@@ -918,6 +918,11 @@
 #define ART_ANCHOR                      14
 #define ART_ELESSAR                     206
 #define ART_EVENSTAR                    207
+#define ART_ANCHOR2                     219
+#define ART_ANCHOR3                     220
+#define ART_ANCHOR4                     221
+#define ART_ANCHOR5                     222
+#define ART_ANCHOR6                     223
 
 /* Rings */
 #define ART_FLAR                        7

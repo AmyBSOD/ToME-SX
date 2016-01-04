@@ -2999,6 +2999,26 @@ void calc_bonuses(bool silent)
 		{
 			p_ptr->resist_continuum = TRUE;
 		}
+		if (o_ptr->name1 == ART_ANCHOR2)
+		{
+			p_ptr->resist_continuum = TRUE;
+		}
+		if (o_ptr->name1 == ART_ANCHOR3)
+		{
+			p_ptr->resist_continuum = TRUE;
+		}
+		if (o_ptr->name1 == ART_ANCHOR4)
+		{
+			p_ptr->resist_continuum = TRUE;
+		}
+		if (o_ptr->name1 == ART_ANCHOR5)
+		{
+			p_ptr->resist_continuum = TRUE;
+		}
+		if (o_ptr->name1 == ART_ANCHOR6)
+		{
+			p_ptr->resist_continuum = TRUE;
+		}
 
 		/* Hack - don't give the Black Breath when merely inspecting a weapon */
 		if (silent)

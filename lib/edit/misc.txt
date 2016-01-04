@@ -17,7 +17,7 @@ M:Z:529
 
 # Maximum number of monsters in r_info.txt
 # WARNING ! add one more to the real count for the player ghost !!
-M:R:1334
+M:R:2684
 
 # Maximum number of monsters in re_info.txt
 # WARNING ! Use the exact amount of ego types used, if not you
@@ -37,7 +37,7 @@ M:F:256
 M:a:1000
 
 # Maximum number of artifacts in a_info.txt
-M:A:219
+M:A:224
 
 # Maximum number of sets types in set_info.txt
 M:s:10

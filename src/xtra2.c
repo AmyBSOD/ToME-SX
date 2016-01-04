@@ -4200,7 +4200,7 @@ void monster_death(int m_idx)
 			/* Drop it in the dungeon */
 			drop_near(q_ptr, -1, y, x);
 		}
-		else if (r_ptr->flags7 & RF7_NAZGUL)
+		else if ((r_ptr->flags7 & RF7_NAZGUL) && !(r_ptr->flags8 & RF8_WILD_TOO) )
 		{
 			/* Get local object */
 			q_ptr = &forge;
