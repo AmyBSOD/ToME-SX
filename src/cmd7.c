@@ -4815,7 +4815,7 @@ void do_cmd_powermage(void)
 		/* Normal failure messages */
 		else
 		{
-			msg_print("You failed to get the spell off!");
+			msg_format("You failed to get the spell off!");
 			msg_print(NULL);
 		}
 
@@ -6040,7 +6040,7 @@ int rune_exec(rune_spell *spell, int cost)
 		/* Normal failure messages */
 		else
 		{
-			msg_print("You failed to get the spell off!");
+			msg_format("You failed to get the spell off!");
 			msg_print(NULL);
 		}
 

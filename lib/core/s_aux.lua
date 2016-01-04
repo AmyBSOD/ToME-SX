@@ -497,7 +497,7 @@ function cast_school_spell(s, s_ptr, no_cost)
 			-- added because this is *extremely* important --pelpel
 			if (flush_failure) then flush() end
 
-			msg_print("You failed to get the spell off!")
+			msg_print("You failed to get the spell off! This message needs to be extra long to force a MORE prompt so you don't hit a direction key and move when you wanted to target.")
 			for index, sch in __spell_school[s] do
 				if __schools[sch].fail then
 					__schools[sch].fail(spell_chance(s))
