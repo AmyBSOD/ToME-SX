@@ -2498,6 +2498,7 @@ void py_attack(int y, int x, int max_blow)
 	object_type *o_ptr;
 
 	char m_name[80];
+	char securityquestion[160];
 
 	bool fear = FALSE;
 
@@ -2571,7 +2572,10 @@ void py_attack(int y, int x, int max_blow)
 	if (m_ptr->ml) health_track(c_ptr->m_idx);
 
 	/* Stop if friendly */
-	if ((is_friend(m_ptr) >= 0) &&
+
+	sprintf(securityquestion, "Really attack %s? ", m_name);
+
+	if ((is_friend(m_ptr) >= 0) && !get_check(securityquestion) &&
 	                !(p_ptr->stun || p_ptr->confused || p_ptr->image ||
 	                  !(m_ptr->ml)))
 	{
