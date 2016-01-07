@@ -616,12 +616,12 @@ I:4:100:0:7:18:0d0:R
 D:Some bolts shoot out at you.
 F:FLOOR | CHEST | DOOR
 
-N:124:Seeker Arrow Trap
+N:124:Seeker Arrows Trap
 I:5:100:0:8:20:0d0:R
 D:Some seeker arrows shoot out at you.
 F:FLOOR | CHEST | DOOR
 
-N:125:Seeker Bolt Trap
+N:125:Seeker Bolts Trap
 I:5:100:0:8:24:0d0:R
 D:Some seeker bolts shoot out at you.
 F:FLOOR | CHEST | DOOR
@@ -631,7 +631,7 @@ I:5:100:0:8:18:0d0:R
 D:Some poisoned arrows shoot out at you.
 F:FLOOR | CHEST | DOOR
 
-N:127:Poison Bolt Trap
+N:127:Poison Bolts Trap
 I:6:100:0:8:20:0d0:R
 D:Some poisoned bolts shoot out at you.
 F:FLOOR | CHEST | DOOR
@@ -651,7 +651,7 @@ I:4:100:0:6:12:0d0:R
 D:Some broken daggers shoot out at you.
 F:FLOOR | CHEST | DOOR
 
-N:131:Dagger Trap
+N:131:Daggers Trap
 I:4:100:0:6:15:0d0:R
 D:Some daggers shoot out at you.
 F:FLOOR | CHEST | DOOR
