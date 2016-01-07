@@ -2200,7 +2200,7 @@ F:XTRA_MIGHT | XTRA_SHOTS | REFLECT | IMMOVABLE
 # defense-boosting staff
 N:189:of Mage Defense
 X:A:24:60
-T:4:0:255
+T:6:0:255
 W:20:2:16:40000
 C:-40:-40:20:3
 R:100
