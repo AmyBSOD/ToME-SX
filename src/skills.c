@@ -1331,21 +1331,29 @@ void do_get_new_skill(bool princessbitch)
 
 		if (s_ptr->mod)
 		{
-			if (s_ptr->mod < 300)
+			if (s_ptr->mod < 100)
 			{
-				val[max] = s_ptr->mod * 3;
-				mod[max] = 300 - s_ptr->mod;
+				val[max] = 1000 + (s_ptr->mod * 3);
+				mod[max] = 300;
+			}
+			else if (s_ptr->mod < 200)
+			{
+				val[max] = 1000 + (s_ptr->mod * 3);
+				mod[max] = 200;
+			}
+			else if (s_ptr->mod < 300)
+			{
+				val[max] = 1000 + (s_ptr->mod * 3);
+				mod[max] = 100;
 			}
 			else if (s_ptr->mod < 500)
 			{
-				val[max] = s_ptr->mod * 3;
+				val[max] = 1000 + (s_ptr->mod * 3);
 				mod[max] = 100;
-				if (mod[max] + s_ptr->mod > 500)
-					mod[max] = 500 - s_ptr->mod;
 			}
 			else
 			{
-				val[max] = s_ptr->mod * 3;
+				val[max] = 1000 + (s_ptr->mod * 3);
 				mod[max] = 50;
 			}
 		}
