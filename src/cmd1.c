@@ -2575,9 +2575,9 @@ void py_attack(int y, int x, int max_blow)
 
 	sprintf(securityquestion, "Really attack %s? ", m_name);
 
-	if ((is_friend(m_ptr) >= 0) && !get_check(securityquestion) &&
+	if ((is_friend(m_ptr) >= 0) &&
 	                !(p_ptr->stun || p_ptr->confused || p_ptr->blind || p_ptr->image ||
-	                  !(m_ptr->ml)))
+	                  !(m_ptr->ml)) && !get_check(securityquestion) )
 	{
 		if (!(p_ptr->inventory[INVEN_WIELD].art_name))
 		{
