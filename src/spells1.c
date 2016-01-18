@@ -9304,7 +9304,7 @@ void generate_spell(int plev)
 	{
 		rspell->proj_flags |= PROJECT_STOP;
 		rspell->radius = dice;
-		rspell->dam_dice = sides;
+		rspell->dam_dice = dice;
 		rspell->dam_sides = sides / 3;
 		if (rspell->dam_sides < 1) rspell->dam_sides = 1;
 		ball_desc = TRUE;
