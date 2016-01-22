@@ -80,11 +80,13 @@ add_quest
 				if (player.astral ~= FALSE) or (player.pgod <= 0) 
 				or (quest(GOD_QUEST).status == QUEST_STATUS_TAKEN) or (quest(GOD_QUEST).status == QUEST_STATUS_FAILED)
 				or (god_quest.quests_given >= god_quest.MAX_NUM_GOD_QUESTS) or (give_god_quest == FALSE)
-				or ((current_dungeon_idx == god_quest.DUNGEON_GOD) and (dun_level > 0)) or (player.lev <= god_quest.dun_minplev) then
+				or ((current_dungeon_idx == god_quest.DUNGEON_GOD) and (dun_level > 0)) then
 					-- Don't let a player get quests with trickery
-					if player.lev > god_quest.dun_minplev then
-						god_quest.dun_minplev = player.lev
-					end
+					-- Amy edit: randarts of high experience loss are no trickery IMHO...
+
+					-- if player.lev > god_quest.dun_minplev then
+					-- 	god_quest.dun_minplev = player.lev
+					-- end
 					return
 				else
 					-- each god has different characteristics, so the quests are differnet depending on your god
@@ -297,8 +299,8 @@ function place_rand_dung()
 		or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_EDGE)
 		or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_DEEP_WATER)
 		or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_TREES)
-		-- or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_SHALLOW_LAVA)
-		-- or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_DEEP_LAVA)
+		or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_SHALLOW_LAVA)
+		or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_DEEP_LAVA)
 		or (wild_feat(wild_map(god_quest.dung_y, god_quest.dung_x)).terrain_idx == TERRAIN_MOUNTAIN) then
 			-- try again
 		else
