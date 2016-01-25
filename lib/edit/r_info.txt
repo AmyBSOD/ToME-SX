@@ -47438,7 +47438,7 @@ D:A large pink snake with a woman's torso.
 
 N:2694:Pink jelly
 G:j:v
-I:110:1d117:2:1:99
+I:110:4d30:2:1:99
 W:6:1:2000:9
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -47451,7 +47451,7 @@ D:It is a large pulsating mound of pink flesh.
 
 N:2695:Wood elf
 G:l:g
-I:110:1d37:20:16:20
+I:110:6d6:20:16:20
 W:7:1:900:12
 E:1:1:1:2:1:1
 O:0:70:25:0
@@ -47519,7 +47519,7 @@ D:Hmmm... it looks quite painful to eat.
 
 N:2699:Giant pink ant
 G:a:v
-I:110:1d17:12:34:60
+I:110:3d6:12:34:60
 W:8:2:300:13
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -47533,7 +47533,7 @@ D:It is large and has venomous mandibles.
 
 N:2700:Giant pink ant
 G:a:v
-I:110:1d17:12:34:60
+I:110:3d6:12:34:60
 W:8:24:300:13
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -47548,7 +47548,7 @@ D:It is large and has venomous mandibles.
 
 N:2701:Wood elf mage
 G:l:r
-I:120:1d37:20:16:20
+I:120:6d6:20:16:20
 W:10:1:900:23
 E:1:1:1:2:1:1
 O:0:70:25:0
@@ -47564,7 +47564,7 @@ D:A elven figure, hurling spells at you.
 
 N:2702:Wood elf warrior
 G:l:u
-I:110:1d59:20:16:20
+I:110:6d10:20:16:20
 W:13:2:900:41
 E:1:1:1:2:1:1
 O:0:70:25:0
@@ -47707,7 +47707,7 @@ D:An academic of short stature.
 
 N:2710:Orc captain
 G:o:y
-I:110:2d49:20:59:20
+I:110:4d25:20:59:20
 W:17:2:900:77
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -47785,7 +47785,7 @@ D:A elven figure in armour and radiating power.
 
 N:2715:Water vortex
 G:v:B
-I:110:1d43:100:30:0
+I:110:9d5:100:30:0
 W:15:2:0:56
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -47801,7 +47801,7 @@ D:A spinning whirlpool of water.
 
 N:2716:Water vortex
 G:v:B
-I:110:1d43:100:30:0
+I:110:9d5:100:30:0
 W:15:100:0:56
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -47818,7 +47818,7 @@ D:A spinning whirlpool of water.
 
 N:2717:Man-at-arms
 G:t:b
-I:110:1d83:20:40:40
+I:110:9d10:20:40:40
 W:18:2:1200:85
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -47833,7 +47833,7 @@ D:A well-armed warrior who moves with confidence.
 
 N:2718:Footpad
 G:t:B
-I:120:1d193:25:18:10
+I:120:20d10:25:18:10
 W:30:3:1200:280
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -47849,7 +47849,7 @@ D:A cunning-eyed thief of wiley artifice and shifty speed.
 
 N:2719:Wood elf shaman
 G:l:v
-I:120:1d179:15:75:10
+I:120:18d10:15:75:10
 W:26:3:900:210
 E:1:1:1:2:1:1
 O:0:70:25:0
@@ -47897,7 +47897,7 @@ D:It is a giant beetle with poisonous mandibles.
 
 N:2722:Giant grey termite
 G:a:s
-I:110:1d79:10:40:40
+I:110:8d10:10:40:40
 W:11:3:300:33
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -47912,7 +47912,7 @@ D: grey glistening exoskeleton.
 
 N:2723:Forgotten
 G:M:o
-I:110:1d151:30:45:125
+I:110:15d10:30:45:125
 W:26:3:4000:190
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -47949,7 +47949,7 @@ D:A hideous ogre wrapped in black sorcerous robes.
 
 N:2725:Lost
 G:M:b
-I:110:2d173:30:68:255
+I:110:35d10:30:68:255
 W:36:3:4000:910
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -48025,7 +48025,7 @@ D: ease any pain.
 
 N:2729:Bewitched
 G:M:G
-I:120:1d389:30:68:255
+I:120:40d10:30:68:255
 W:42:4:4000:4500
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -48048,7 +48048,7 @@ D: source of its anguish.
 
 N:2730:Bewitched
 G:M:G
-I:120:1d389:30:68:255
+I:120:40d10:30:68:255
 W:42:200:4000:4500
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -48180,7 +48180,7 @@ D:A massive elephantine form with eyes twisted by madness.
 
 N:2737:Giant fire termite
 G:a:r
-I:110:1d181:14:49:40
+I:110:10d18:14:49:40
 W:27:5:300:210
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -48195,7 +48195,7 @@ D: red exoskeleton alit with flame.
 
 N:2738:Giant fire termite
 G:a:r
-I:110:1d181:14:49:40
+I:110:10d18:14:49:40
 W:27:60:300:210
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -48521,7 +48521,7 @@ D:A skeletal form, which brings back the dead from beyond the grave...
 
 N:2756:Castigant
 G:s:U
-I:115:1d367:40:55:40
+I:115:37d10:40:55:40
 W:36:3:800:1200
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -48590,7 +48590,7 @@ D: terrible strength. Turn back while you can!
 
 N:2760:Black eye
 G:e:D
-I:120:1d67:2:6:10
+I:120:7d10:2:6:10
 W:16:2:500:76
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -48608,7 +48608,7 @@ D: do anything except approach it in horrified fascination.
 
 N:2761:Ogre chieftain
 G:O:v
-I:120:2d107:20:55:30
+I:120:22d10:20:55:30
 W:33:3:2100:420
 E:1:1:1:2:1:1
 O:10:85:0:0
@@ -48626,7 +48626,7 @@ D: followers rudely aside.
 
 N:2762:Troll chieftain
 G:T:v
-I:120:1d419:30:50:20
+I:120:42d10:30:50:20
 W:35:3:3000:610
 E:1:1:1:2:1:1
 O:30:70:0:0
@@ -48802,7 +48802,7 @@ D:Yum!  It looks quite tasty.
 
 N:2773:Explodestool
 G:,:v
-I:110:1d13:2:1:0
+I:110:2d7:2:1:0
 W:13:1:10:1
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -49001,7 +49001,7 @@ D:Ugh! It quickly creeps along the dungeon floor.
 
 N:2789:Purple slime
 G:,:v
-I:115:1d17:4:1:0
+I:115:3d6:4:1:0
 W:33:4:10:34
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -49014,7 +49014,7 @@ D:Ugh! It quickly creeps along the dungeon floor.
 
 N:2790:Purple slime
 G:,:v
-I:115:1d17:4:1:0
+I:115:3d6:4:1:0
 W:33:20:10:34
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -49597,7 +49597,7 @@ D:It is large and has venomous mandibles.
 
 N:2831:Giant mottled termite
 G:a:o
-I:120:2d49:14:50:40
+I:120:4d25:14:50:40
 W:16:3:300:76
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -49611,7 +49611,7 @@ D: mottled well-camouflagued exoskeleton.
 
 N:2832:Giant mottled termite
 G:a:o
-I:120:2d49:14:50:40
+I:120:4d25:14:50:40
 W:16:36:300:76
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -50124,7 +50124,7 @@ D:It screeches as it attacks.
 
 N:2860:Giant ebony bat
 G:b:D
-I:130:1d31:10:15:30
+I:130:8d4:10:15:30
 W:7:3:20:12
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -50137,7 +50137,7 @@ D:It screeches as it attacks.
 
 N:2861:Giant ebony bat
 G:b:D
-I:130:1d31:10:15:30
+I:130:8d4:10:15:30
 W:7:36:20:12
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -50151,7 +50151,7 @@ D:It screeches as it attacks.
 
 N:2862:White dragon bat
 G:b:w
-I:130:1d13:12:28:50
+I:130:2d7:12:28:50
 W:8:3:20:11
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -50166,7 +50166,7 @@ D:It is a sharp-tailed bat, clouded in frost.
 
 N:2863:Black dragon bat
 G:b:D
-I:130:1d13:12:28:50
+I:130:2d7:12:28:50
 W:10:3:20:19
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -50181,7 +50181,7 @@ D:It is a sharp-tailed bat, dripping in acid.
 
 N:2864:Black dragon bat
 G:b:D
-I:130:1d13:12:28:50
+I:130:2d7:12:28:50
 W:10:36:20:19
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -50197,7 +50197,7 @@ D:It is a sharp-tailed bat, dripping in acid.
 
 N:2865:Copper dragon bat
 G:b:u
-I:130:1d13:12:28:50
+I:130:2d7:12:28:50
 W:11:3:20:11
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -50212,7 +50212,7 @@ D:It is a sharp-tailed bat, crackling with electricity.
 
 N:2866:Brass dragon bat
 G:b:o
-I:130:1d13:12:28:50
+I:130:2d7:12:28:50
 W:17:2:20:16
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -50227,7 +50227,7 @@ D:It is a sharp-tailed bat, dripping in acid.
 
 N:2867:Silver dragon bat
 G:b:w
-I:130:1d17:12:28:50
+I:130:3d6:12:28:50
 W:10:3:20:13
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -50242,7 +50242,7 @@ D:It is a sharp-tailed bat, clouded in frost.
 
 N:2868:Gold dragon bat
 G:b:y
-I:130:1d17:12:28:50
+I:130:3d6:12:28:50
 W:12:3:20:21
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -50257,7 +50257,7 @@ D:It is a sharp-tailed bat, fuming with poison.
 
 N:2869:Bronze dragon bat
 G:b:U
-I:130:1d13:12:28:5
+I:130:2d7:12:28:5
 W:12:2:20:10
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -50272,7 +50272,7 @@ D:It is a sharp-tailed bat, wreathed in fire.
 
 N:2870:Bronze dragon bat
 G:b:U
-I:130:1d13:12:28:5
+I:130:2d7:12:28:5
 W:12:24:20:10
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -50427,7 +50427,7 @@ D:It is about four feet long and carnivorous.
 
 N:2880:Giant brown centipede
 G:c:u
-I:110:1d13:7:10:40
+I:110:2d7:7:10:40
 W:6:1:500:4
 E:0:0:0:0:1:0
 O:0:0:0:0
@@ -50484,7 +50484,7 @@ D:It is about four feet long and carnivorous.
 
 N:2884:Giant red centipede
 G:c:r
-I:120:1d13:12:26:40
+I:120:2d7:12:26:40
 W:7:2:500:10
 E:0:0:0:0:1:0
 O:0:0:0:0
@@ -50555,7 +50555,7 @@ D: its head.
 
 N:2889:Dungeon crawler
 G:c:W
-I:110:1d61:15:40:10
+I:110:8d8:15:40:10
 W:13:4:500:42
 E:0:0:0:0:1:0
 O:0:0:0:0
@@ -50701,7 +50701,7 @@ D:It is a large doglike creature with an oversize jaw.
 
 N:2899:Grey wolf
 G:C:s
-I:120:1d43:30:30:20
+I:120:4d11:30:30:20
 W:11:4:300:34
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -50717,7 +50717,7 @@ D: with poison.
 
 N:2900:Grey wolf
 G:C:s
-I:120:1d43:30:30:20
+I:120:4d11:30:30:20
 W:11:100:300:34
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -51028,7 +51028,7 @@ D: gleaming brass hue.  The air feels drained of magic.
 
 N:2918:Young amethyst dragon
 G:d:v
-I:110:2d141:20:60:50
+I:110:28d10:20:60:50
 W:30:3:4000:310
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -51047,7 +51047,7 @@ D: amethyst cover it.
 
 N:2919:Young diamond dragon
 G:d:w
-I:110:2d141:20:60:50
+I:110:28d10:20:60:50
 W:26:3:4000:210
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -51066,7 +51066,7 @@ D: diamond cover it.
 
 N:2920:Young emerald dragon
 G:d:g
-I:110:2d141:20:60:50
+I:110:28d10:20:60:50
 W:29:3:4000:240
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -51085,7 +51085,7 @@ D: emerald cover it.
 
 N:2921:Young sapphire dragon
 G:d:b
-I:110:2d141:20:60:50
+I:110:28d10:20:60:50
 W:30:3:4000:290
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -51104,7 +51104,7 @@ D: sapphire cover it.
 
 N:2922:Young ruby dragon
 G:d:r
-I:110:2d141:20:60:50
+I:110:28d10:20:60:50
 W:30:3:4000:290
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -51123,7 +51123,7 @@ D: ruby cover it.
 
 N:2923:Guard drake
 G:d:o
-I:110:2d141:20:60:20
+I:110:28d10:20:60:20
 W:34:3:18000:480
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -51238,7 +51238,7 @@ D: fumes shoot from its mouth.
 
 N:2929:Mature copper dragon
 G:d:u
-I:110:4d101:20:80:30
+I:110:40d10:20:80:30
 W:34:3:110000:520
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -51274,7 +51274,7 @@ D:A large dragon, scales tinted deep silver.
 
 N:2931:Mature brass dragon
 G:d:o
-I:110:4d101:20:80:30
+I:110:40d10:20:80:30
 W:35:3:110000:560
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -51292,7 +51292,7 @@ D:A large dragon, scales tinted deep brass.
 
 N:2932:Mature amethyst dragon
 G:d:v
-I:110:1d557:20:65:50
+I:110:56d10:20:65:50
 W:36:3:110000:1000
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -51310,7 +51310,7 @@ D:A large dragon, scales gleaming a deep amethyst.
 
 N:2933:Mature diamond dragon
 G:d:w
-I:110:1d557:20:65:50
+I:110:56d10:20:65:50
 W:36:3:110000:820
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -51328,7 +51328,7 @@ D:A large dragon, scales gleaming a clear diamond.
 
 N:2934:Mature emerald dragon
 G:d:g
-I:110:1d557:20:65:50
+I:110:56d10:20:65:50
 W:36:3:110000:820
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -51346,7 +51346,7 @@ D:A large dragon, scales gleaming a deep emerald.
 
 N:2935:Mature sapphire dragon
 G:d:b
-I:110:1d557:20:65:50
+I:110:56d10:20:65:50
 W:36:3:110000:1000
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -51364,7 +51364,7 @@ D:A large dragon, scales gleaming a deep sapphire.
 
 N:2936:Mature ruby dragon
 G:d:r
-I:110:1d557:20:65:50
+I:110:56d10:20:65:50
 W:36:3:110000:1000
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -51382,7 +51382,7 @@ D:A large dragon, scales gleaming a deep ruby.
 
 N:2937:Watch dragon
 G:d:G
-I:110:4d101:20:80:10
+I:110:40d10:20:80:10
 W:33:3:110000:460
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -51411,7 +51411,7 @@ D:A disembodied eye, that slowly crawls its way around the dungeon.
 
 N:2939:Rolling eye
 G:e:y
-I:115:1d17:2:6:10
+I:115:3d6:2:6:10
 W:9:2:500:23
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -51422,7 +51422,7 @@ D:A disembodied eye, that quickly rolls its away around the dungeon.
 
 N:2940:Blinking eye
 G:e:y
-I:110:1d17:2:6:10
+I:110:3d6:2:6:10
 W:8:1:500:3
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -51437,7 +51437,7 @@ D:A disembodied eye, that blinks occasionally.
 
 N:2941:Blind eye
 G:e:w
-I:110:1d31:2:6:10
+I:110:8d4:2:6:10
 W:6:1:500:1
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -51466,7 +51466,7 @@ D:A disembodied eye, charged with power.
 
 N:2943:Eye sore
 G:e:B
-I:110:2d29:2:6:10
+I:110:6d10:2:6:10
 W:7:1:500:13
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -51484,7 +51484,7 @@ D:A disembodied eye, hideously ugly.
 
 N:2944:Nexus eye
 G:e:b
-I:110:1d67:2:6:10
+I:110:7d10:2:6:10
 W:9:1:500:20
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -51499,7 +51499,7 @@ D:A disembodied eye, warped inside out.
 
 N:2945:Nether eye
 G:e:G
-I:110:1d89:2:6:10
+I:110:9d10:2:6:10
 W:17:1:500:53
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -51549,7 +51549,7 @@ D:A disembodied eye, gazing at you with malice.
 
 N:2948:Magic eye
 G:e:B
-I:110:2d67:2:6:10
+I:110:14d10:2:6:10
 W:26:1:500:45
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -51566,7 +51566,7 @@ D:  You squint as hard as you can, but you can't quite make it out...
 
 N:2949:Undead eye
 G:e:B
-I:110:1d147:2:6:10
+I:110:15d10:2:6:10
 W:17:2:500:77
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -51731,7 +51731,7 @@ D:A whirling form of sentient ooze.
 
 N:2960:Ice spirit
 G:E:B
-I:120:1d71:10:42:60
+I:120:10d7:10:42:60
 W:18:2:0:88
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -51764,7 +51764,7 @@ D: mortals.
 
 N:2962:Phase cat
 G:f:G
-I:120:1d43:40:30:0
+I:120:4d11:40:30:0
 W:18:2:100:86
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -51777,7 +51777,7 @@ D:The cat who could walk through walls.
 
 N:2963:Phase cat
 G:f:G
-I:120:1d43:40:30:0
+I:120:4d11:40:30:0
 W:18:100:100:86
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -52048,7 +52048,7 @@ D:It looks poisonous.
 
 N:2983:Giant tree frog
 G:F:G
-I:110:1d13:12:16:30
+I:110:2d7:12:16:30
 W:5:1:150:7
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -52062,7 +52062,7 @@ D:It is as big as a wolf.
 
 N:2984:Giant speckled tree frog
 G:F:G
-I:110:1d13:12:16:30
+I:110:2d7:12:16:30
 W:9:5:150:16
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -52076,7 +52076,7 @@ D:It is as big as a wolf.
 
 N:2985:Giant speckled tree frog
 G:F:G
-I:110:1d13:12:16:30
+I:110:2d7:12:16:30
 W:9:25:150:16
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -52124,7 +52124,7 @@ D:It is ugly and covered in big brown warts.
 
 N:2988:Giant horned toad
 G:F:U
-I:110:1d43:12:32:50
+I:110:4d11:12:32:50
 W:17:2:150:86
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -52292,7 +52292,7 @@ D:It is a large brass statue cast in the shape of a monkey.
 
 N:2997:Ice golem
 G:g:B
-I:120:2d139:10:60:10
+I:120:28d10:10:60:10
 W:38:3:3000:1900
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -52487,7 +52487,7 @@ D:A premonition of death. Its claws reach out to fulfill its dark purpose.
 
 N:3009:Phantasm
 G:G:v
-I:120:1d353:28:45:18
+I:120:36d10:28:45:18
 W:45:4:0:7400
 E:0:0:0:0:0:0
 O:50:5:30:10
@@ -52505,7 +52505,7 @@ D: caught in the fever of dreams.
 
 N:3010:Phantasm
 G:G:v
-I:120:1d353:28:45:18
+I:120:36d10:28:45:18
 W:45:200:0:7400
 E:0:0:0:0:0:0
 O:50:5:30:10
@@ -52543,7 +52543,7 @@ D: chains and knives.
 
 N:3012:Delerium
 G:G:v
-I:120:3d159:22:80:12
+I:120:48d10:22:80:12
 W:47:5:0:17000
 E:0:0:0:0:0:0
 O:50:5:30:10
@@ -52966,7 +52966,7 @@ D:A ghostly apparition that screams horribly.
 
 N:3039:Howling spirit
 G:G:B
-I:120:1d61:14:20:10
+I:120:6d10:14:20:10
 W:36:3:0:900
 E:0:0:0:0:0:0
 O:50:5:30:10
@@ -52984,7 +52984,7 @@ D:A ghostly apparition that howls horribly.
 
 N:3040:Howling spirit
 G:G:B
-I:120:1d61:14:20:10
+I:120:6d10:14:20:10
 W:36:150:0:900
 E:0:0:0:0:0:0
 O:50:5:30:10
@@ -53020,7 +53020,7 @@ D:A ghostly apparition that whispers horribly.
 
 N:3042:Greedy looking gnome
 G:h:y
-I:110:1d13:18:14:10
+I:110:2d7:18:14:10
 W:5:1:1000:6
 E:1:1:1:2:1:1
 O:0:50:0:40
@@ -53121,7 +53121,7 @@ D: for somewhere a little more sophisticated.
 
 N:3049:Gnome warrior
 G:h:u
-I:110:1d43:18:30:10
+I:110:4d11:18:30:10
 W:8:1:1000:17
 E:1:1:1:2:1:1
 O:0:50:0:40
@@ -53167,7 +53167,7 @@ D:A priest of short stature.
 
 N:3052:Gnome illusionist
 G:h:y
-I:110:1d31:20:10:10
+I:110:8d4:20:10:10
 W:6:1:1000:7
 E:1:1:1:2:1:1
 O:0:50:0:40
@@ -53212,7 +53212,7 @@ D:A dwarven warrior with a three-foot beard.
 
 N:3055:Dwarven ranger
 G:h:W
-I:115:1d53:20:24:20
+I:115:9d6:20:24:20
 W:10:2:1000:28
 E:1:1:1:2:1:1
 O:0:50:0:40
@@ -53244,7 +53244,7 @@ D: devoutly to his cause.
 
 N:3057:Dwarven lord
 G:h:v
-I:120:3d57:20:50:30
+I:120:17d10:20:50:30
 W:25:3:1000:190
 E:1:1:1:2:1:1
 O:0:50:0:40
@@ -53328,7 +53328,7 @@ D: turning banquets into foul-smelling scraps in the twinkling of an eye.
 
 N:3062:Hairy horror
 G:H:u
-I:115:3d67:12:45:10
+I:115:20d10:12:45:10
 W:21:2:500:120
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -53360,7 +53360,7 @@ D: those with scales and fins.
 
 N:3064:Clear horror
 G:H:w
-I:115:2d117:12:55:10
+I:115:24d10:12:55:10
 W:23:3:500:160
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -53377,7 +53377,7 @@ D: and you don't think you want to.
 
 N:3065:Clear horror
 G:H:w
-I:115:2d117:12:55:10
+I:115:24d10:12:55:10
 W:23:36:500:160
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -53443,7 +53443,7 @@ D: those with teeth and fangs.
 
 N:3069:Clawed horror
 G:H:v
-I:115:2d143:12:75:10
+I:115:29d10:12:75:10
 W:31:3:500:340
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -53459,7 +53459,7 @@ D: those with claws and talons.
 
 N:3070:Hunting horror
 G:H:W
-I:115:3d103:12:80:10
+I:115:31d10:12:80:10
 W:34:3:500:540
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -53475,7 +53475,7 @@ D: those that hunt and rend.
 
 N:3071:Hunting horror
 G:H:W
-I:115:3d103:12:80:10
+I:115:31d10:12:80:10
 W:34:36:500:540
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -53947,7 +53947,7 @@ D:An annoying pest.
 
 N:3104:Giant house fly
 G:I:B
-I:115:1d13:12:16:20
+I:115:2d7:12:16:20
 W:8:4:100:15
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -53960,7 +53960,7 @@ D:A sickening pest.
 
 N:3105:Giant house fly
 G:I:B
-I:115:1d13:12:16:20
+I:115:2d7:12:16:20
 W:8:20:100:15
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -53989,7 +53989,7 @@ D:It is a large pulsating mound of clear flesh.
 
 N:3107:Brown jelly
 G:j:u
-I:110:1d139:2:1:99
+I:110:14d10:2:1:99
 W:6:1:2000:8
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -54003,7 +54003,7 @@ D:It is a large pulsating mound of brown flesh.
 
 N:3108:Brown jelly
 G:j:u
-I:110:1d139:2:1:99
+I:110:14d10:2:1:99
 W:6:40:2000:8
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -54018,7 +54018,7 @@ D:It is a large pulsating mound of brown flesh.
 
 N:3109:Red jelly
 G:j:r
-I:110:2d81:2:1:99
+I:110:16d10:2:1:99
 W:6:1:2000:9
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -54047,7 +54047,7 @@ D:It is smarter than your average jelly.
 
 N:3111:Bright green jelly
 G:j:G
-I:120:3d69:2:1:99
+I:120:21d10:2:1:99
 W:16:2:2000:71
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -54063,7 +54063,7 @@ D:It is smarter than your average jelly.
 
 N:3112:Bright green jelly
 G:j:G
-I:120:3d69:2:1:99
+I:120:21d10:2:1:99
 W:16:80:2000:71
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -54108,7 +54108,7 @@ D:It's red and it's oozing.
 
 N:3115:Pink ooze
 G:j:v
-I:110:1d17:8:16:80
+I:110:3d6:8:16:80
 W:6:1:2000:7
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -54121,7 +54121,7 @@ D:It's pink and it's oozing.
 
 N:3116:Pink ooze
 G:j:v
-I:110:1d17:8:16:80
+I:110:3d6:8:16:80
 W:6:40:2000:7
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -54254,7 +54254,7 @@ D:It's clear and it's oozing.
 
 N:3125:Disenchanter ooze
 G:j:v
-I:110:1d53:15:15:5
+I:110:9d6:15:15:5
 W:8:1:2000:17
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -54325,7 +54325,7 @@ D:It is about ten feet long and charged with electricity.
 
 N:3130:Black snake
 G:J:D
-I:100:1d17:5:38:60
+I:100:3d6:5:38:60
 W:4:1:600:3
 E:0:0:0:0:1:0
 O:0:0:0:0
@@ -54352,7 +54352,7 @@ D:It is about three feet long.
 
 N:3132:Red snake
 G:J:r
-I:100:1d17:5:39:60
+I:100:3d6:5:39:60
 W:6:1:600:7
 E:0:0:0:0:1:0
 O:0:0:0:0
@@ -54366,7 +54366,7 @@ D:It is about six feet long.
 
 N:3133:Boa constrictor
 G:J:R
-I:100:1d41:5:45:30
+I:100:4d11:5:45:30
 W:6:1:600:8
 E:0:0:0:0:1:0
 O:0:0:0:0
@@ -54380,7 +54380,7 @@ D:It is about sixteen feet long.
 
 N:3134:Sea snake
 G:J:B
-I:110:1d43:10:32:1
+I:110:4d11:10:32:1
 W:8:1:600:16
 E:0:0:0:0:1:0
 O:0:0:0:0
@@ -54393,7 +54393,7 @@ D:It has glistening blue skin, a sinuous body and venomous fangs.
 
 N:3135:Sea snake
 G:J:B
-I:110:1d43:10:32:1
+I:110:4d11:10:32:1
 W:8:25:600:16
 E:0:0:0:0:1:0
 O:0:0:0:0
@@ -54407,7 +54407,7 @@ D:It has glistening blue skin, a sinuous body and venomous fangs.
 
 N:3136:Sea serpent
 G:J:B
-I:110:1d61:5:45:30
+I:110:6d10:5:45:30
 W:13:2:600:48
 E:0:0:0:0:1:0
 O:0:0:0:0
@@ -54436,7 +54436,7 @@ D:He is an ugly, green skinned humanoid armed with a bow.
 
 N:3138:Night goblin
 G:k:B
-I:110:1d43:20:32:30
+I:110:4d11:20:32:30
 W:10:4:800:27
 E:1:1:1:2:1:1
 O:0:50:0:30
@@ -54635,7 +54635,7 @@ D:It is a beetle with sharp mandibles and a steely carapace.
 
 N:3152:Killer borer beetle
 G:K:W
-I:110:2d57:14:70:30
+I:110:12d10:14:70:30
 W:20:2:500:110
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -54770,7 +54770,7 @@ D:An elven figure that glows with an inner light.
 
 N:3161:Grave lich
 G:L:u
-I:110:1d437:20:63:60
+I:110:44d10:20:63:60
 W:37:3:0:1300
 E:1:1:1:2:1:1
 O:0:10:90:0
@@ -54790,7 +54790,7 @@ D:It is a skeletal form dressed in robes.  It radiates vastly evil power.
 
 N:3162:Crypt lich
 G:L:U
-I:110:4d152:20:66:60
+I:110:61d10:20:66:60
 W:38:3:0:1700
 E:1:1:1:2:1:1
 O:0:10:90:0
@@ -54809,7 +54809,7 @@ D:It is a skeletal form dressed in robes.  It radiates vastly evil power.
 
 N:3163:Pit lich
 G:L:y
-I:110:4d194:20:69:60
+I:110:80d10:20:69:60
 W:39:4:0:2200
 E:1:1:1:2:1:1
 O:0:10:90:0
@@ -54828,7 +54828,7 @@ D:It is a skeletal form dressed in robes.  It radiates vastly evil power.
 
 N:3164:Spirit lich
 G:L:W
-I:110:6d157:20:72:60
+I:110:95d10:20:72:60
 W:50:4:0:6900
 E:1:1:1:2:1:1
 O:0:10:90:0
@@ -54907,7 +54907,7 @@ D: magic crackles along its bony fingers.
 
 N:3168:Death lich
 G:L:w
-I:120:1d2153:20:86:50
+I:120:215d10:20:86:50
 W:65:5:0:17000
 E:1:1:1:2:1:1
 O:0:10:90:0
@@ -54950,7 +54950,7 @@ D: magic crackles along its bony fingers.
 
 N:3170:Emperor lich
 G:L:v
-I:120:5d567:20:95:50
+I:120:284d10:20:95:50
 W:80:5:0:22000
 E:1:1:1:2:1:1
 O:0:10:90:0
@@ -55076,7 +55076,7 @@ D:A strange blue growth on the dungeon floor.
 
 N:3177:Wrinkled mold
 G:m:W
-I:110:2d69:2:24:70
+I:110:14d10:2:24:70
 W:16:2:20:78
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -55115,7 +55115,7 @@ D:It is a strange warty growth on the dungeon floor.
 
 N:3180:Wooden mold
 G:m:U
-I:110:1d101:2:50:75
+I:110:10d10:2:50:75
 W:14:2:20:52
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -55312,7 +55312,7 @@ D: face, twisted  in unlife. Death awaits you.
 
 N:3192:Nightcreeper
 G:N:w
-I:120:2d621:20:140:10
+I:120:125d10:20:140:10
 W:75:4:100000:7900
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -55335,7 +55335,7 @@ D: that leaves  you numb and worthless.
 
 N:3193:Nightrunner
 G:N:u
-I:130:3d539:20:160:10
+I:130:162d10:20:160:10
 W:82:6:100000:43000
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -55360,7 +55360,7 @@ D: body to pierce your very soul.
 
 N:3194:Nighthunter
 G:N:U
-I:130:4d497:20:180:5
+I:130:200d10:20:180:5
 W:90:6:100000:47000
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -55399,7 +55399,7 @@ D:A large orc who barks commands to his fellows.
 
 N:3196:Orc chieftain
 G:o:v
-I:110:2d71:20:72:14
+I:110:14d10:20:72:14
 W:22:2:900:140
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -55417,7 +55417,7 @@ D:A heavily armoured orc with the mantle of leadership.
 
 N:3197:Orc king
 G:o:v
-I:110:1d183:20:85:14
+I:110:18d10:20:85:14
 W:28:3:900:250
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -55646,7 +55646,7 @@ D:A massive orc-like figure with green skin and powerful arms.
 
 N:3211:Grey ogre
 G:O:s
-I:110:1d103:20:33:30
+I:110:10d10:20:33:30
 W:14:4:2100:53
 E:1:1:1:2:1:1
 O:10:85:0:0
@@ -55675,7 +55675,7 @@ D:A massive craggy ogre garbed in black and wielding an enormous mallet.
 
 N:3213:Forest ogre
 G:O:G
-I:110:3d47:20:33:30
+I:110:15d10:20:33:30
 W:18:4:2100:93
 E:1:1:1:2:1:1
 O:10:85:0:0
@@ -55689,7 +55689,7 @@ D:A giant, primative orc-like figure with an awesomely muscled frame.
 
 N:3214:Forest ogre
 G:O:G
-I:110:3d47:20:33:30
+I:110:15d10:20:33:30
 W:18:150:2100:93
 E:1:1:1:2:1:1
 O:10:85:0:0
@@ -55719,7 +55719,7 @@ D:A giant half-human orc-like figure.
 
 N:3216:Ogre sergeant
 G:O:o
-I:110:2d67:20:56:20
+I:110:14d10:20:56:20
 W:20:2:2100:110
 E:1:1:1:2:1:1
 O:10:85:0:0
@@ -55734,7 +55734,7 @@ D:A massive armoured figure who barks out commands.
 
 N:3217:Ogre leader
 G:O:v
-I:110:1d173:20:69:14
+I:110:17d10:20:69:14
 W:25:3:2100:180
 E:1:1:1:2:1:1
 O:10:85:0:0
@@ -55831,7 +55831,7 @@ D:He waves a magical talisman at you.
 
 N:3223:Black bishop
 G:p:D
-I:120:4d49:20:65:10
+I:120:20d10:20:65:10
 W:32:3:1600:390
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -55867,7 +55867,7 @@ D:A thirteen foot tall giant with smooth green skin.
 
 N:3225:Green giant
 G:P:G
-I:110:13d9:20:60:50
+I:110:13d19:20:60:50
 W:28:150:3500:240
 E:1:1:1:2:1:1
 O:20:50:20:5
@@ -55899,7 +55899,7 @@ D:A fifteen foot tall giant with legs like tree-trunks.
 
 N:3227:River giant
 G:P:B
-I:110:2d139:20:70:50
+I:110:28d10:20:70:50
 W:30:3:3500:300
 E:1:1:1:2:1:1
 O:20:50:20:5
@@ -55915,7 +55915,7 @@ D:A nineteen foot tall giant with unstoppable strength.
 
 N:3228:Swamp giant
 G:P:u
-I:110:2d139:20:70:50
+I:110:28d10:20:70:50
 W:32:3:3500:400
 E:1:1:1:2:1:1
 O:20:50:20:5
@@ -55931,7 +55931,7 @@ D:A seventeen foot tall giant with putrid hair and slimey skin.
 
 N:3229:Grey giant
 G:P:s
-I:110:1d301:20:70:50
+I:110:30d10:20:70:50
 W:32:3:3500:430
 E:1:1:1:2:1:1
 O:20:50:20:5
@@ -55947,7 +55947,7 @@ D:It is sixteen feet tall and drained of color.
 
 N:3230:Mountain giant
 G:P:v
-I:110:3d111:20:60:50
+I:110:9d37:20:60:50
 W:34:3:3500:490
 E:1:1:1:2:1:1
 O:20:50:20:5
@@ -56058,7 +56058,7 @@ D:He can't see straight, let alone cast spells straight.
 
 N:3237:Sorcerer
 G:p:v
-I:130:16d286:20:60:10
+I:130:46d100:20:60:10
 W:50:5:3000:30000
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -56375,7 +56375,7 @@ D:It is a rodent of unusual size.
 
 N:3260:Dark naga
 G:n:v
-I:110:1d91:20:30:50
+I:110:9d10:20:30:50
 W:9:2:1700:22
 E:0:0:0:0:1:0
 O:0:75:20:5
@@ -56460,7 +56460,7 @@ D: half-seen in the corner of one eye.
 
 N:3266:Giant ebony scorpion
 G:S:D
-I:120:1d67:20:25:40
+I:120:7d10:20:25:40
 W:19:2:400:110
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -56475,7 +56475,7 @@ D: and two great deadly claws.
 
 N:3267:Giant ebony scorpion
 G:S:D
-I:120:1d67:20:25:40
+I:120:7d10:20:25:40
 W:19:50:400:110
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -56558,7 +56558,7 @@ D: bigger, tougher  and stronger than most other trolls.
 
 N:3272:Troll King
 G:T:v
-I:120:5d255:30:75:20
+I:120:13d100:30:75:20
 W:40:4:3000:3000
 E:1:1:1:2:1:1
 O:30:70:0:0
@@ -56576,7 +56576,7 @@ D: trollish brains.
 
 N:3273:Troll High Priest
 G:T:b
-I:120:8d252:30:80:20
+I:120:20d100:30:80:20
 W:42:4:3000:4600
 E:1:1:1:2:1:1
 O:30:70:0:0
@@ -56753,7 +56753,7 @@ D: his legs.
 
 N:3284:Crystal hound
 G:Z:v
-I:110:1d127:30:30:0
+I:110:13d10:30:30:0
 W:30:4:600:120
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -56769,7 +56769,7 @@ D: clearly presents as it bores through the dungeon towards you.
 
 N:3285:Crystal hound
 G:Z:v
-I:110:1d127:30:30:0
+I:110:13d10:30:30:0
 W:30:200:600:120
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -56837,7 +56837,7 @@ D: unearthly.
 
 N:3289:The King of the Wood Elves
 G:l:B
-I:120:2d189:20:80:20
+I:120:38d10:20:80:20
 W:29:6:900:1600
 E:1:1:1:2:1:1
 O:0:70:25:0
@@ -57147,7 +57147,7 @@ D:This lesser mummy was created to do menial tasks after death.
 
 N:3311:Giant wolf tick
 G:S:u
-I:110:1d61:14:50:20
+I:110:6d10:14:50:20
 W:13:2:400:42
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -57244,7 +57244,7 @@ D: treasures long lost.
 
 N:3317:Corruption Vortex
 G:v:G
-I:130:3d59:100:40:0
+I:130:18d10:100:40:0
 W:31:3:0:370
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -57260,7 +57260,7 @@ D:A toxic whirlpool, it's foulness can be sensed from afar.
 
 N:3318:Mummified priest
 G:z:B
-I:120:5d139:20:70:50
+I:120:70d10:20:70:50
 W:37:3:300:1400
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -57314,7 +57314,7 @@ D:A well-perserved undead creature, decorated with lavish jewelry.
 
 N:3321:Mummified king
 G:z:v
-I:120:3d461:20:85:50
+I:120:138d10:20:85:50
 W:46:5:300:11000
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -57383,7 +57383,7 @@ D:A floating skull possessed by a malignant spirit.
 
 N:3325:Flaming skull
 G:s:r
-I:120:1d61:15:30:30
+I:120:6d10:15:30:30
 W:20:3:800:110
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -57430,7 +57430,7 @@ D: legs.
 
 N:3328:Creeping sapphire gems
 G:$:b
-I:115:2d63:5:50:10
+I:115:13d10:5:50:10
 W:24:3:0:180
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -57444,7 +57444,7 @@ D: tiny legs.
 
 N:3329:Creeping ruby gems
 G:$:r
-I:115:2d63:5:50:10
+I:115:13d10:5:50:10
 W:28:3:0:240
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -57459,7 +57459,7 @@ D: legs.
 
 N:3330:Creeping ruby gems
 G:$:r
-I:115:2d63:5:50:10
+I:115:13d10:5:50:10
 W:28:30:0:240
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -57475,7 +57475,7 @@ D: legs.
 
 N:3331:Creeping diamond gems
 G:$:w
-I:120:3d49:5:150:10
+I:120:15d10:5:150:10
 W:32:3:0:370
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -57506,7 +57506,7 @@ D:Ghostly, shimmering apparitions materializing out of solid wall.
 
 N:3333:Baby chromatic dragon
 G:d:v
-I:110:1d113:20:30:70
+I:110:11d10:20:30:70
 W:15:2:4000:63
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -57524,7 +57524,7 @@ D: its scales shimmering with hints of many different colours.
 
 N:3334:Young chromatic dragon
 G:d:u
-I:110:2d141:20:60:70
+I:110:28d10:20:60:70
 W:32:3:4000:370
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -57543,7 +57543,7 @@ D: and magical colours cover it.
 
 N:3335:Mature chromatic dragon
 G:d:u
-I:110:4d126:20:80:70
+I:110:50d10:20:80:70
 W:35:3:110000:600
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -57653,7 +57653,7 @@ D:A huge draconic form.
 
 N:3341:Chromatic hound
 G:Z:v
-I:110:1d203:25:40:0
+I:110:20d10:25:40:0
 W:30:5:600:300
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -57670,7 +57670,7 @@ D:Shimmering in rainbow hues, this hound is beautiful and deadly.
 
 N:3342:Chromatic hound
 G:Z:v
-I:110:1d203:25:40:0
+I:110:20d10:25:40:0
 W:30:250:600:300
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -57998,7 +57998,7 @@ D:It is a dragon-like form, festooned with spikes and the armor of war.
 
 N:3360:Inertia drake
 G:d:W
-I:110:3d129:30:70:70
+I:110:39d10:30:70:70
 W:33:3:18000:450
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -58017,7 +58017,7 @@ D: with deadly menace.
 
 N:3361:Maglor, Son of Feanor
 G:l:v
-I:115:2d389:30:68:255
+I:115:78d10:30:68:255
 W:33:6:900:4300
 E:1:1:1:2:1:1
 O:0:70:25:0
@@ -58038,7 +58038,7 @@ D: the three Silmarils.
 
 N:3362:Staff mimic
 G:_:w
-I:110:3d107:30:40:0
+I:110:32d10:30:40:0
 W:21:2:10:120
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -58076,7 +58076,7 @@ D: can follow.
 
 N:3364:Maedhros, Son of Feanor
 G:l:v
-I:120:2d389:30:68:255
+I:120:78d10:30:68:255
 W:37:5:900:6800
 E:1:1:1:2:1:1
 O:0:70:25:0
@@ -58097,7 +58097,7 @@ D: the three Silmarils.
 
 N:3365:Wand mimic
 G:-:w
-I:110:2d143:30:40:0
+I:110:29d10:30:40:0
 W:20:2:10:110
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -58160,7 +58160,7 @@ D: adventurers within reach of its venomous claws.
 
 N:3368:Maia
 G:M:u
-I:115:4d121:30:60:155
+I:115:48d10:30:60:155
 W:39:4:4000:2400
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -58180,7 +58180,7 @@ D:A spirit that descended into Arda in the beginning.
 
 N:3369:Greater Maia
 G:M:B
-I:115:4d173:30:68:155
+I:115:70d10:30:68:155
 W:43:4:4000:6100
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -58202,7 +58202,7 @@ D: frail body.
 
 N:3370:Blue Wizard
 G:M:b
-I:125:8d162:30:68:255
+I:125:13d100:30:68:255
 W:46:5:4000:12000
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -58226,7 +58226,7 @@ D: who make formidable opponents in combat.
 
 N:3371:Istar
 G:M:y
-I:130:8d162:30:140:255
+I:130:13d100:30:140:255
 W:57:5:4000:17000
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -58250,7 +58250,7 @@ D: combat to crush their enemies.
 
 N:3372:Phoenix
 G:B:r
-I:125:8d333:60:130:0
+I:125:267d10:60:130:0
 W:90:5:90:37000
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -58272,7 +58272,7 @@ D: skin and melts your armour.
 
 N:3373:Minotaur lord
 G:H:v
-I:130:4d893:30:120:30
+I:130:360d10:30:120:30
 W:93:6:500:81000
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -58503,7 +58503,7 @@ D: and immune to magic.  Fear its anger, for its devastation is unmatched!
 
 N:3383:Crypt creep
 G:s:D
-I:110:1d47:20:30:25
+I:110:6d8:20:30:25
 W:12:2:800:20
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -58520,7 +58520,7 @@ D:It is a frightening skeletal figures in black robes.
 
 N:3384:Whirling hatchet
 G:/:D
-I:130:1d29:14:32:8
+I:130:3d10:14:32:8
 W:23:2:0:150
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -58537,7 +58537,7 @@ D: your head, gashing you faster than you can react.
 
 N:3385:Giant marksman ant
 G:a:B
-I:110:1d51:16:40:10
+I:110:5d10:16:40:10
 W:11:3:300:33
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -58550,7 +58550,7 @@ D:A large, slimy ant spitting acid.
 
 N:3386:Giant marksman ant
 G:a:B
-I:110:1d51:16:40:10
+I:110:5d10:16:40:10
 W:11:36:300:33
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -58564,7 +58564,7 @@ D:A large, slimy ant spitting acid.
 
 N:3387:Zombified lion
 G:z:y
-I:120:1d67:15:24:25
+I:120:7d10:15:24:25
 W:15:2:300:61
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -58641,7 +58641,7 @@ D: in his sights.
 
 N:3392:Nruling
 G:u:R
-I:115:1d59:20:16:8
+I:115:6d10:20:16:8
 W:11:4:300:35
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -58909,7 +58909,7 @@ D: you and hits you every time you make a mistake.
 
 N:3409:Rock worm mass
 G:w:s
-I:100:1d17:10:28:15
+I:100:3d6:10:28:15
 W:11:4:30:33
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -58923,7 +58923,7 @@ D: until they move.  Acid drips from the worms and eats through the floor.
 
 N:3410:Rock worm mass
 G:w:s
-I:100:1d17:10:28:15
+I:100:3d6:10:28:15
 W:11:20:30:33
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -58955,7 +58955,7 @@ D: beat their wings, terrible winds rise up and buffet you.
 
 N:3412:Haradrim warrior
 G:t:v
-I:110:1d83:20:40:40
+I:110:9d15:20:40:40
 W:18:3:1200:85
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -58971,7 +58971,7 @@ D:A scarred warrior who moves with confidence.
 
 N:3413:Dwarf high priest
 G:h:w
-I:110:3d57:20:28:30
+I:110:18d10:20:28:30
 W:18:3:1000:98
 E:1:1:1:2:1:1
 O:0:50:0:40
@@ -59006,7 +59006,7 @@ D: accuracy.
 
 N:3415:Spectral hunter
 G:G:R
-I:110:3d53:30:20:0
+I:110:16d10:30:20:0
 W:35:3:0:560
 E:0:0:0:0:0:0
 O:50:5:30:10
@@ -59019,7 +59019,7 @@ D: unerringly.
 
 N:3416:Forge giant
 G:P:y
-I:110:1d241:20:25:50
+I:110:24d10:20:25:50
 W:25:3:3500:180
 E:1:1:1:2:1:1
 O:20:50:20:5
@@ -59089,7 +59089,7 @@ D: thin air.
 
 N:3420:Spectral anaconda
 G:J:b
-I:115:2d73:10:26:4
+I:115:15d10:10:26:4
 W:27:3:600:220
 E:0:0:0:0:1:0
 O:0:0:0:0
@@ -59109,7 +59109,7 @@ D: tales dwell on in horror.
 
 N:3421:Spectral anaconda
 G:J:b
-I:115:2d73:10:26:4
+I:115:15d10:10:26:4
 W:27:60:600:220
 E:0:0:0:0:1:0
 O:0:0:0:0
@@ -59130,7 +59130,7 @@ D: tales dwell on in horror.
 
 N:3422:Sharpshooter
 G:t:y
-I:110:1d181:20:18:15
+I:110:18d10:20:18:15
 W:18:2:1200:89
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -59145,7 +59145,7 @@ D:A dangerous archer with a longbow and a quiver full of arrows.
 
 N:3423:Abyss spider
 G:S:G
-I:120:1d187:20:28:100
+I:120:19d10:20:28:100
 W:30:3:400:310
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -59163,7 +59163,7 @@ D: spined legs.
 
 N:3424:Abyss spider
 G:S:G
-I:120:1d187:20:28:100
+I:120:19d10:20:28:100
 W:30:90:400:310
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -59182,7 +59182,7 @@ D: spined legs.
 
 N:3425:Lamia
 G:u:s
-I:110:1d133:20:15:40
+I:110:13d10:20:15:40
 W:25:3:300:190
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -59200,7 +59200,7 @@ D:A demonic woman-headed serpent, hungering for mortal flesh and souls.
 
 N:3426:Night-drake
 G:d:B
-I:110:2d136:20:25:40
+I:110:27d10:20:25:40
 W:36:2:18000:480
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -59234,7 +59234,7 @@ D:A pestiferous growth on the dungeon floor; its spores are deadly.
 
 N:3428:Gnomish wizard
 G:h:r
-I:115:1d193:20:15:10
+I:115:19d10:20:15:10
 W:21:2:1000:130
 E:1:1:1:2:1:1
 O:0:50:0:40
@@ -59250,7 +59250,7 @@ D:A wielder of strange magics and arcane forces.
 
 N:3429:Crystal mold
 G:m:v
-I:130:5d75:4:45:0
+I:130:25d15:4:45:0
 W:35:3:20:550
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -59295,7 +59295,7 @@ D: everything in its path.
 
 N:3432:Blade of slaughter
 G:|:r
-I:130:1d307:17:35:5
+I:130:31d10:17:35:5
 W:37:4:0:1600
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -59312,7 +59312,7 @@ D: utterly untamable:  destroy it, flee, or die.
 
 N:3433:Giant chieftain
 G:P:v
-I:115:1d491:20:30:50
+I:115:49d10:20:30:50
 W:35:3:3500:840
 E:1:1:1:2:1:1
 O:20:50:20:5
@@ -59330,7 +59330,7 @@ D: massive two-handed sword that strikes like a bolt of lightning.
 
 N:3434:Witch
 G:p:y
-I:115:1d293:30:15:10
+I:115:29d10:30:15:10
 W:30:3:1600:260
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -59346,7 +59346,7 @@ D:A wizened old crone with a malicious twinkle in her eye.
 
 N:3435:Witch
 G:p:y
-I:115:1d293:30:15:10
+I:115:29d10:30:15:10
 W:30:150:1600:260
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -59363,7 +59363,7 @@ D:A wizened old crone with a malicious twinkle in her eye.
 
 N:3436:Unmagic worm mass
 G:w:D
-I:115:1d79:10:9:6
+I:115:8d10:10:9:6
 W:36:6:30:310
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -59380,7 +59380,7 @@ D: in magic and spews it out again.
 
 N:3437:Unmagic worm mass
 G:w:D
-I:115:1d79:10:9:6
+I:115:8d10:10:9:6
 W:36:30:30:310
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -59398,7 +59398,7 @@ D: in magic and spews it out again.
 
 N:3438:Spectral killer
 G:G:v
-I:115:1d311:40:30:0
+I:115:31d10:40:30:0
 W:43:4:0:6100
 E:0:0:0:0:0:0
 O:50:5:30:10
@@ -59415,7 +59415,7 @@ D: you know that you cannot escape it.
 
 N:3439:Assassin
 G:p:v
-I:120:2d209:25:25:10
+I:120:42d10:25:25:10
 W:37:3:1600:1200
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -59433,7 +59433,7 @@ D:She hunts you down patiently, ready with her poison-tipped blades.
 
 N:3440:Living tornado
 G:~:u
-I:130:2d97:15:60:0
+I:130:20d10:15:60:0
 W:36:4:11:1000
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -59455,7 +59455,7 @@ D: will gladly fling them at you.
 
 N:3441:Mana vortex
 G:v:v
-I:140:1d259:22:30:0
+I:140:26d10:22:30:0
 W:33:3:0:460
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -59468,7 +59468,7 @@ D:Raw magic, driven by raw magic, a whirling devastation.
 
 N:3442:Blizzard giant
 G:P:B
-I:115:2d349:20:30:15
+I:115:70d10:20:30:15
 W:36:3:3500:910
 E:1:1:1:2:1:1
 O:20:50:20:5
@@ -59485,7 +59485,7 @@ D: Mountain-Gargantua, whose blows are avalanches.
 
 N:3443:Stone serpent
 G:J:W
-I:120:3d131:14:65:5
+I:120:40d10:14:65:5
 W:47:6:600:14000
 E:0:0:0:0:1:0
 O:0:0:0:0
@@ -59500,7 +59500,7 @@ D: mountains tremble as their roots are smashed and shattered.
 
 N:3444:Patriarch
 G:p:b
-I:120:9d91:20:35:25
+I:120:82d10:20:35:25
 W:37:3:1600:1500
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -59521,7 +59521,7 @@ D: many spells.
 
 N:3445:Legendary hobbit rogue
 G:h:D
-I:140:2d307:25:35:0
+I:140:42d10:25:35:0
 W:44:4:1000:7200
 E:1:1:1:2:1:1
 O:0:50:0:40
@@ -59540,7 +59540,7 @@ D: pockets of Smaug himself.
 
 N:3446:Shadow breeder
 G:S:b
-I:120:7d98:25:15:5
+I:120:70d10:25:15:5
 W:52:11:400:8300
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -59560,7 +59560,7 @@ D: everywhere the shadows lie.
 
 N:3447:Shadow breeder
 G:S:b
-I:120:7d98:25:15:5
+I:120:70d10:25:15:5
 W:52:55:400:8300
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -59581,7 +59581,7 @@ D: everywhere the shadows lie.
 
 N:3448:Hammer of the Underworld
 G:\:D
-I:130:5d147:18:55:15
+I:130:74d10:18:55:15
 W:80:5:0:30000
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -59597,7 +59597,7 @@ D: bone.  Appalling and horrific sight!
 
 N:3449:Elder elementalist
 G:l:v
-I:130:7d167:20:18:15
+I:130:117d10:20:18:15
 W:43:4:900:5700
 E:1:1:1:2:1:1
 O:0:70:25:0
@@ -59618,7 +59618,7 @@ D: to command.
 
 N:3450:Wizard of the High Council
 G:h:v
-I:130:7d167:20:18:15
+I:130:117d10:20:18:15
 W:42:4:1000:4400
 E:1:1:1:2:1:1
 O:0:50:0:40
@@ -59638,7 +59638,7 @@ D: of wonder.
 
 N:3451:Tyrant of Hell
 G:U:v
-I:130:3d279:25:40:50
+I:130:84d10:25:40:50
 W:39:4:2000:2200
 E:1:1:1:2:1:1
 O:0:100:0:0
@@ -59658,7 +59658,7 @@ D: materialize and leap upon you.
 
 N:3452:Aetheroi
 G:f:v
-I:130:2d883:35:40:5
+I:130:180d10:35:40:5
 W:85:7:100:33000
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -59728,7 +59728,7 @@ D: its scales a pink hue.
 
 N:3455:Young garnet dragon
 G:d:R
-I:110:2d141:20:60:50
+I:110:28d10:20:60:50
 W:30:3:4000:270
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -59748,7 +59748,7 @@ D: garnet cover it.
 
 N:3456:Mature garnet dragon
 G:d:R
-I:110:1d557:20:65:50
+I:110:56d10:20:65:50
 W:36:3:110000:860
 E:0:1:0:6:1:0
 O:0:0:0:0
@@ -59840,7 +59840,7 @@ D: tiny legs.
 
 N:3461:Marid
 G:E:B
-I:120:2d273:12:50:50
+I:120:55d10:12:50:50
 W:44:4:0:6400
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -59862,7 +59862,7 @@ D: mortals.
 
 N:3462:Efreet
 G:E:R
-I:120:2d273:12:50:50
+I:120:55d10:12:50:50
 W:49:4:0:7500
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -59884,7 +59884,7 @@ D: mortals.
 
 N:3463:Dao
 G:E:U
-I:120:2d273:12:50:50
+I:120:55d10:12:50:50
 W:54:4:0:8900
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -60074,7 +60074,7 @@ D: anyone else.
 
 N:3475:Demolitions expert
 G:t:v
-I:110:1d61:20:40:40
+I:110:6d10:20:40:40
 W:14:2:1200:59
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -60124,7 +60124,7 @@ D: of a hound.
 
 N:3478:Crystal vortex
 G:v:v
-I:120:2d97:15:60:0
+I:120:19d10:15:60:0
 W:38:3:0:1800
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -60142,7 +60142,7 @@ D: through the dungeon leaving a ruined jumble of rock in its wake.
 
 N:3479:Inquisitor
 G:p:r
-I:110:1d83:20:40:10
+I:110:9d17:20:40:10
 W:15:3:1600:59
 E:1:1:1:2:1:1
 O:25:50:0:20
@@ -60250,7 +60250,7 @@ D:It is a giant jellyfish glowing with pulsing green lights.
 
 N:3486:Giant pink jellyfish
 G:j:R
-I:110:3d39:2:1:99
+I:110:12d10:2:1:99
 W:14:4:2000:50
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -60263,7 +60263,7 @@ D:It is a giant jellyfish glowing with pulsing pink lights.
 
 N:3487:Giant pink jellyfish
 G:j:R
-I:110:3d39:2:1:99
+I:110:12d10:2:1:99
 W:14:80:2000:50
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -60277,7 +60277,7 @@ D:It is a giant jellyfish glowing with pulsing pink lights.
 
 N:3488:Giant purple jellyfish
 G:j:v
-I:110:2d117:2:1:99
+I:110:23d10:2:1:99
 W:21:4:2000:130
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -60366,7 +60366,7 @@ D:It is a giant almost transparent jellyfish glowing with pulsing lights.
 
 N:3494:Giant brown jellyfish
 G:j:u
-I:110:1d139:2:1:99
+I:110:14d10:2:1:99
 W:13:4:2000:47
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -60380,7 +60380,7 @@ D:It is a giant jellyfish glowing with pulsing brown lights.
 
 N:3495:Giant red jellyfish
 G:j:r
-I:110:2d81:2:1:99
+I:110:16d10:2:1:99
 W:14:4:2000:49
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -60393,7 +60393,7 @@ D:It is a giant jellyfish glowing with pulsing red lights.
 
 N:3496:Giant bright blue jellyfish
 G:j:B
-I:110:4d46:2:1:99
+I:110:18d10:2:1:99
 W:25:3:2000:51
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -60409,7 +60409,7 @@ D:It is smarter than your average giant jellyfish.
 
 N:3497:Giant bright blue jellyfish
 G:j:B
-I:110:4d46:2:1:99
+I:110:18d10:2:1:99
 W:25:60:2000:51
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -60426,7 +60426,7 @@ D:It is smarter than your average giant jellyfish.
 
 N:3498:Giant bright green jellyfish
 G:j:G
-I:120:3d69:2:1:99
+I:120:21d10:2:1:99
 W:25:5:2000:190
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -60518,7 +60518,7 @@ D: blasts and furious blows.
 
 N:3503:Kraken
 G:F:B
-I:120:5d419:30:75:80
+I:120:210d10:30:75:80
 W:62:6:150:60000
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -60540,7 +60540,7 @@ D: massive arms reach out to crush you and drag you below.
 
 N:3504:Wood elf ranger
 G:l:G
-I:115:1d83:20:40:40
+I:115:9d17:20:40:40
 W:22:2:900:140
 E:1:1:1:2:1:1
 O:0:70:25:0
@@ -60558,7 +60558,7 @@ D: and spiders come to do his bidding.
 
 N:3505:Wood elf enchanter
 G:l:b
-I:115:2d53:20:10:10
+I:115:11d10:20:10:10
 W:19:2:900:97
 E:1:1:1:2:1:1
 O:0:70:25:0
@@ -60609,7 +60609,7 @@ D: chain hanging around his neck.
 
 N:3508:Blade of Chaos
 G:|:v
-I:130:4d142:17:70:5
+I:130:57d10:17:70:5
 W:46:5:0:10000
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -60724,7 +60724,7 @@ D:A cat wrapped in bandages with a blank stare.  It won't give up.
 
 N:3515:Rotting horror
 G:H:w
-I:115:5d69:12:90:10
+I:115:35d10:12:90:10
 W:35:3:500:750
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -60807,7 +60807,7 @@ D:It is the reanimated form of a dragon, with an open wound of a mouth.
 
 N:3520:Giant rotting toad
 G:F:R
-I:110:1d43:12:32:50
+I:110:4d11:12:32:50
 W:11:2:150:34
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -60856,7 +60856,7 @@ D: to look at it.
 
 N:3523:Skeleton naga
 G:s:g
-I:110:1d37:18:40:120
+I:110:4d10:18:40:120
 W:15:2:800:61
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -60870,7 +60870,7 @@ D:A large skeleton serpent with the remainder of a female's torso.
 
 N:3524:Skeletal mount
 G:Q:y
-I:110:1d73:10:35:10
+I:110:5d15:10:35:10
 W:21:2:3000:130
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -60991,7 +60991,7 @@ D:It is large and has venomous mandibles.
 
 N:3532:Magic book mimic
 G:?:r
-I:110:2d283:30:40:0
+I:110:57d10:30:40:0
 W:26:3:10:200
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -61011,7 +61011,7 @@ D: unsuspecting adventurers within reach of its razor sharp pages.
 
 N:3533:Skeleton giant
 G:s:v
-I:110:3d73:20:45:50
+I:110:22d10:20:45:50
 W:32:3:800:390
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -61027,7 +61027,7 @@ D:It is a ten foot tall animated giant skeleton.
 
 N:3534:Zombified giant
 G:z:v
-I:110:5d51:20:60:50
+I:110:15d17:20:60:50
 W:29:3:300:240
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -61043,7 +61043,7 @@ D: shambles forward.
 
 N:3535:Prayer book mimic
 G:?:b
-I:110:2d283:30:40:0
+I:110:57d10:30:40:0
 W:24:3:10:170
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -61063,7 +61063,7 @@ D: unsuspecting adventurers within reach of its thumping pronouncements.
 
 N:3536:Song book mimic
 G:?:y
-I:110:2d283:30:40:0
+I:110:57d10:30:40:0
 W:21:2:10:120
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -61082,7 +61082,7 @@ D: unsuspecting adventurers within reach of its insidious music.
 
 N:3537:Map mimic
 G:?:U
-I:110:3d107:30:40:0
+I:110:32d10:30:40:0
 W:21:2:10:120
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -61101,7 +61101,7 @@ D: adventurers within reach of its venomous claws.
 
 N:3538:Runestone mimic
 G:?:g
-I:110:2d143:30:40:0
+I:110:29d10:30:40:0
 W:20:2:10:110
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -61121,7 +61121,7 @@ D: unsuspecting adventurers within reach of its venomous teeth.
 
 N:3539:Animated limb
 G:~:r
-I:120:1d17:2:40:99
+I:120:3d6:2:40:99
 W:3:1:0:3
 E:0:0:0:0:0:0
 O:0:0:0:0
@@ -61164,7 +61164,7 @@ D: might be something valuable inside.
 
 N:3542:Termite mound
 G:a:u
-I:110:1d139:20:4:40
+I:110:14d10:20:4:40
 W:7:1:300:3
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -61248,7 +61248,7 @@ D: battle-cry strikes terror into his foes.
 
 N:3547:Hama, Doorwarden of the Golden Hall
 G:t:y
-I:110:7d49:40:10:3
+I:110:35d10:40:10:3
 W:10:3:1200:80
 E:1:1:1:2:1:1
 O:0:0:0:0
@@ -61323,7 +61323,7 @@ D:A small winged humanoid that radiates some power.
 
 N:3552:Devil-bat
 G:b:v
-I:120:1d47:20:80:8
+I:120:4d12:20:80:8
 W:22:5:20:150
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -61340,7 +61340,7 @@ D:Devil-bats are notoriously difficult to kill.
 
 N:3553:Devil-bat
 G:b:v
-I:120:1d47:20:80:8
+I:120:4d12:20:80:8
 W:22:60:20:150
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -61373,7 +61373,7 @@ D:It resembles a normal cloak until some poor fool ventures too close!
 
 N:3555:Magpie
 G:B:W
-I:120:1d41:12:20:12
+I:120:4d11:12:20:12
 W:18:3:90:94
 E:0:1:1:0:1:0
 O:0:0:0:0
@@ -61438,7 +61438,7 @@ D: adventurers within reach of its venomous claws.
 
 N:3559:The Great Grey Wolf
 G:C:s
-I:120:2d107:60:60:40
+I:120:20d11:60:60:40
 W:17:4:300:490
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -61563,7 +61563,7 @@ D: endless searching for you.
 
 N:3565:Udun-spawn
 G:U:B
-I:120:1d301:40:64:30
+I:120:30d10:40:64:30
 W:37:7:2000:1400
 E:1:1:1:2:1:1
 O:0:100:0:0
