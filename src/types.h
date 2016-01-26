@@ -2341,7 +2341,7 @@ struct birther
 	s16b pclass;
 	s16b spec;
 
-	byte quests;
+	s32b quests;
 
 	byte god;
 	s32b grace;

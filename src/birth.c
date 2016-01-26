@@ -27,7 +27,7 @@
 #define MAX_TRIES 100
 
 /* Max quests */
-static byte max_quests = 0;
+static s32b max_quests = 0;
 
 /*
  * Current stats
