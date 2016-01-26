@@ -1211,7 +1211,7 @@ static void gen_random_quests(int n)
 	int old_type = dungeon_type;
 
 	/* Factor dlev value by 1000 to keep precision */
-	step = (98 * 1000) / n;
+	step = (980 * 1000) / n;
 
 	lvl = step / 2;
 
@@ -1255,7 +1255,7 @@ static void gen_random_quests(int n)
 			tries--;
 
 			/* Random monster 5 - 10 levels out of depth */
-			q_ptr->r_idx = get_mon_num(rl + randint(10));
+			q_ptr->r_idx = get_mon_num( (rl > 600) ? 150 : (rl + randint(10)) );
 
 			if (!q_ptr->r_idx) continue;
 
@@ -2458,10 +2458,10 @@ static bool player_birth_aux_ask()
 					put_str("", 20, 27);
 
 					/* Default */
-					strcpy(inp, "98");
+					strcpy(inp, "980");
 
 					/* Get a response (or escape) */
-					if (!askfor_aux(inp, 2)) inp[0] = '\0';
+					if (!askfor_aux(inp, 3)) inp[0] = '\0';
 					if (inp[0] == '*') v = rand_int(MAX_RANDOM_QUEST);
 					else v = atoi(inp);
 

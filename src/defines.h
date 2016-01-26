@@ -4410,7 +4410,7 @@ extern int PlayerUID;
 #define MAX_MON_QUEST       10
 #define MAX_ITEM_QUEST       5
 
-#define MAX_RANDOM_QUEST    99
+#define MAX_RANDOM_QUEST    981
 
 #define QUEST_NULL              0
 #define QUEST_NECRO             1

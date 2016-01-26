@@ -228,7 +228,7 @@ bool quest_random_death_hook(char *fmt)
 	m_idx = get_next_arg(fmt);
 	r_idx = m_list[m_idx].r_idx;
 
-	if (!(dungeon_flags1 & DF1_PRINCIPAL)) return (FALSE);
+	/*if (!(dungeon_flags1 & DF1_PRINCIPAL)) return (FALSE);*/
 	if ((dun_level < 1) || (dun_level >= MAX_RANDOM_QUEST)) return (FALSE);
 	if (!random_quests[dun_level].type) return (FALSE);
 	if (random_quests[dun_level].done) return (FALSE);
@@ -257,7 +257,7 @@ bool quest_random_turn_hook(char *fmt)
 }
 bool quest_random_feeling_hook(char *fmt)
 {
-	if (!(dungeon_flags1 & DF1_PRINCIPAL)) return (FALSE);
+	/*if (!(dungeon_flags1 & DF1_PRINCIPAL)) return (FALSE);*/
 	if ((dun_level < 1) || (dun_level >= MAX_RANDOM_QUEST)) return (FALSE);
 	if (!random_quests[dun_level].type) return (FALSE);
 	if (random_quests[dun_level].done) return (FALSE);
@@ -277,7 +277,7 @@ bool quest_random_gen_hero_hook(char *fmt)
 {
 	int i;
 
-	if (!(dungeon_flags1 & DF1_PRINCIPAL)) return (FALSE);
+	/*if (!(dungeon_flags1 & DF1_PRINCIPAL)) return (FALSE);*/
 	if ((dun_level < 1) || (dun_level >= MAX_RANDOM_QUEST)) return (FALSE);
 	if (!random_quests[dun_level].type) return (FALSE);
 	if (random_quests[dun_level].done) return (FALSE);
@@ -311,7 +311,7 @@ bool quest_random_gen_hook(char *fmt)
 	int y2, x2, yval, xval;
 	int y1, x1, xsize, ysize;
 
-	if (!(dungeon_flags1 & DF1_PRINCIPAL)) return (FALSE);
+	/*if (!(dungeon_flags1 & DF1_PRINCIPAL)) return (FALSE);*/
 	if ((dun_level < 1) || (dun_level >= MAX_RANDOM_QUEST)) return (FALSE);
 	if (!random_quests[dun_level].type) return (FALSE);
 	if (random_quests[dun_level].done) return (FALSE);
