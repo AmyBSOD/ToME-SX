@@ -669,7 +669,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			ident |= dec_stat(A_WIS, rand_int(20) + 10, STAT_DEC_NORMAL);
 			ident |= dec_stat(A_INT, rand_int(20) + 10, STAT_DEC_NORMAL);
 
-			if (!p_ptr->resist_conf || (rand_int(100) == 0) )
+			if (!p_ptr->resist_conf || (rand_int(100) < 5) )
 			{
 				ident |= set_confused(p_ptr->confused + rand_int(100) + 50);
 			}
@@ -719,11 +719,11 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			msg_print("A powerful magic protected this.");
 
-			if (!p_ptr->resist_blind || (rand_int(100) == 0) )
+			if (!p_ptr->resist_blind || (rand_int(100) < 5) )
 			{
 				ident |= set_blind(p_ptr->blind + rand_int(100) + 100);
 			}
-			if (!p_ptr->resist_conf || (rand_int(100) == 0) )
+			if (!p_ptr->resist_conf || (rand_int(100) < 5) )
 			{
 				ident |= set_confused(p_ptr->confused + rand_int(20) + 15);
 			}
@@ -1065,7 +1065,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (!ident)
 			{
 				/* Increase "afraid" */
-				if (p_ptr->resist_fear && (rand_int(100) > 0) )
+				if (p_ptr->resist_fear && (rand_int(100) > 4) )
 				{
 					msg_print("You feel as if you had a nightmare!");
 				}

@@ -253,7 +253,7 @@ bool do_dec_stat(int stat, int mode)
 	}
 
 	/* Sustain */
-	if (sust)
+	if (sust && rand_int(100) > 5)
 	{
 		/* Message */
 		msg_format("You feel %s for a moment, but the feeling passes.",
@@ -5532,7 +5532,7 @@ void wipe(int y1, int x1, int r)
 		msg_print("There is a searing blast of light!");
 
 		/* Blind the player */
-		if ((!p_ptr->resist_blind && !p_ptr->resist_lite) || (rand_int(100) == 0) )
+		if ((!p_ptr->resist_blind && !p_ptr->resist_lite) || (rand_int(100) < 5) )
 		{
 			/* Become blind */
 			(void)set_blind(p_ptr->blind + 10 + randint(10));
@@ -5677,7 +5677,7 @@ void destroy_area(int y1, int x1, int r, bool full, bool bypass)
 		msg_print("There is a searing blast of light!");
 
 		/* Blind the player */
-		if ((!p_ptr->resist_blind && !p_ptr->resist_lite) || (rand_int(100) == 0) )
+		if ((!p_ptr->resist_blind && !p_ptr->resist_lite) || (rand_int(100) < 5) )
 		{
 			/* Become blind */
 			(void)set_blind(p_ptr->blind + 10 + randint(10));

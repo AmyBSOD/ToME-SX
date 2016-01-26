@@ -3857,7 +3857,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 		msg_print("There is a searing blast of light!");
 
 		/* Blind the player */
-		if ((!p_ptr->resist_blind && !p_ptr->resist_lite) || (rand_int(100) == 0) )
+		if ((!p_ptr->resist_blind && !p_ptr->resist_lite) || (rand_int(100) < 5) )
 		{
 			/* Become blind */
 			(void)set_blind(p_ptr->blind + 10 + randint(10));
@@ -7538,7 +7538,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 			{
 				set_stun(p_ptr->stun + randint(40));
 			}
-			if (!p_ptr->resist_conf || (rand_int(100) == 0) )
+			if (!p_ptr->resist_conf || (rand_int(100) < 5) )
 			{
 				set_confused(p_ptr->confused + randint(5) + 5);
 			}
@@ -7561,11 +7561,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 				dam *= 6;
 				dam /= (randint(6) + 6);
 			}
-			if (!p_ptr->resist_conf || (rand_int(100) == 0) )
+			if (!p_ptr->resist_conf || (rand_int(100) < 5) )
 			{
 				(void)set_confused(p_ptr->confused + rand_int(20) + 10);
 			}
-			if (!p_ptr->resist_chaos)
+			if (!p_ptr->resist_chaos || (rand_int(100) < 5) )
 			{
 				(void)set_image(p_ptr->image + randint(10));
 			}
@@ -7651,7 +7651,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 				dam *= 5;
 				dam /= (randint(6) + 6);
 			}
-			if (!p_ptr->resist_conf || (rand_int(100) == 0) )
+			if (!p_ptr->resist_conf || (rand_int(100) < 5) )
 			{
 				(void)set_confused(p_ptr->confused + randint(20) + 10);
 			}
@@ -7827,7 +7827,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 				dam *= 4;
 				dam /= (randint(6) + 6);
 			}
-			else if (!blind && (!p_ptr->resist_blind || (rand_int(100) == 0) ) )
+			else if (!blind && (!p_ptr->resist_blind || (rand_int(100) < 5) ) )
 			{
 				(void)set_blind(p_ptr->blind + randint(5) + 2);
 			}
@@ -7862,7 +7862,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 				dam *= 4;
 				dam /= (randint(6) + 6);
 			}
-			else if (!blind && (!p_ptr->resist_blind || (rand_int(100) == 0) ) )
+			else if (!blind && (!p_ptr->resist_blind || (rand_int(100) < 5) ) )
 			{
 				(void)set_blind(p_ptr->blind + randint(5) + 2);
 			}

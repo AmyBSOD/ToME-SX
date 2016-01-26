@@ -737,7 +737,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Increase "blind" */
-					if (!p_ptr->resist_blind || (rand_int(100) == 0) )
+					if (!p_ptr->resist_blind || (rand_int(100) < 5) )
 					{
 						if (set_blind(p_ptr->blind + 10 + randint(rlev)))
 						{
@@ -756,7 +756,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Increase "confused" */
-					if (!p_ptr->resist_conf || (rand_int(100) == 0) )
+					if (!p_ptr->resist_conf || (rand_int(100) < 5) )
 					{
 						if (set_confused(p_ptr->confused + 3 + randint(rlev)))
 						{
@@ -775,7 +775,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Increase "afraid" */
-					if (p_ptr->resist_fear && (rand_int(100) > 0) )
+					if (p_ptr->resist_fear && (rand_int(100) > 4) )
 					{
 						msg_print("You stand your ground!");
 						obvious = TRUE;
@@ -1101,7 +1101,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Increase "image" */
-					if (!p_ptr->resist_chaos)
+					if (!p_ptr->resist_chaos || (rand_int(100) < 5) )
 					{
 						if (set_image(p_ptr->image + 3 + randint(rlev / 2)))
 						{
@@ -2376,7 +2376,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 
 					/* Increase "blind" */
-					if (!p_ptr->resist_blind || (rand_int(100) == 0) )
+					if (!p_ptr->resist_blind || (rand_int(100) < 5) )
 					{
 						if (set_blind(p_ptr->blind + 10 + randint(rlev)))
 						{
@@ -2396,7 +2396,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 
 					/* Increase "confused" */
-					if (!p_ptr->resist_conf || (rand_int(100) == 0) )
+					if (!p_ptr->resist_conf || (rand_int(100) < 5) )
 					{
 						if (set_confused(p_ptr->confused + 3 + randint(rlev)))
 						{
@@ -2416,7 +2416,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 
 					/* Increase "afraid" */
-					if (p_ptr->resist_fear && (rand_int(100) > 0) )
+					if (p_ptr->resist_fear && (rand_int(100) > 4) )
 					{
 						msg_print("You stand your ground!");
 						obvious = TRUE;
@@ -2723,7 +2723,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 
 					/* Increase "image" */
-					if (!p_ptr->resist_chaos)
+					if (!p_ptr->resist_chaos || (rand_int(100) < 5) )
 					{
 						if (set_image(p_ptr->image + 3 + randint(rlev / 2)))
 						{

@@ -1534,6 +1534,8 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 	bool happened = FALSE;
 	int power = 100;
 
+	char ddesc[80] = "the necronomicon";
+
 	if (!necro)
 	{
 		char m_name[80];
@@ -1547,6 +1549,7 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 		if (m_ptr != NULL)
 		{
 			monster_desc(m_name, m_ptr, 0);
+			monster_desc(ddesc, m_ptr, 0);
 
 			if (!(r_ptr->flags1 & RF1_UNIQUE))
 			{
@@ -1607,30 +1610,98 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 	{
 		msg_print("Your sanity is shaken by reading the Necronomicon!");
 	}
-	if (randint(power) < p_ptr->skill_sav) /* Mind blast */
+
+	switch (rand_int(100)) {
+
+	default:
+	case 0: /* Level drain */
+	case 1:
+	case 2:
+	case 3:
+	case 4:
+	case 5:
+	case 6:
+	case 7:
+	case 8:
 	{
-		if (!p_ptr->resist_conf || (rand_int(100) == 0) )
+		if (p_ptr->hold_life)
+		{
+			msg_print("You feel your life slipping away!");
+			lose_exp(p_ptr->exp / 100);
+		}
+		else
+		{
+			msg_print("You feel your life draining away!");
+			lose_exp(p_ptr->exp / 16);
+		}
+		return;
+	}
+
+	case 9: /* Mind blast */
+	case 10:
+	case 11:
+	case 12:
+	case 13:
+	case 14:
+	case 15:
+	case 16:
+	case 17:
+	{
+		if (!p_ptr->resist_conf || (rand_int(100) < 5) )
 		{
 			(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 		}
-		if ((!p_ptr->resist_chaos) && (randint(3) == 1))
+		if ( (!p_ptr->resist_chaos || (rand_int(100) < 5) ) && (randint(3) == 1))
 		{
 			(void) set_image(p_ptr->image + rand_int(250) + 150);
 		}
 		return;
 	}
 
-	if (randint(power) < p_ptr->skill_sav) /* Lose int & wis */
+	case 18: /* Lose int & wis */
+	case 19:
+	case 20:
+	case 21:
+	case 22:
+	case 23:
+	case 24:
+	case 25:
+	case 26:
 	{
 		do_dec_stat (A_INT, STAT_DEC_NORMAL);
 		do_dec_stat (A_WIS, STAT_DEC_NORMAL);
 		return;
 	}
 
-
-	if (randint(power) < p_ptr->skill_sav) /* Brain smash */
+	case 27: /* Insanity */
+	case 28:
+	case 29:
+	case 30:
+	case 31:
+	case 32:
+	case 33:
+	case 34:
+	case 35:
+	/* we even specifically call this function "sanity blast",
+	 * yet there is no reduction of sanity taking place??? --Amy */
 	{
-		if (!p_ptr->resist_conf || (rand_int(100) == 0) )
+		msg_print("You are getting insane!");
+		take_sanity_hit(rand_int(5 + power), ddesc);
+		return;
+	}
+
+	case 36: /* Brain smash */
+	case 37:
+	case 38:
+	case 39:
+	case 40:
+	case 41:
+	case 42:
+	case 43:
+	case 44:
+	case 45:
+	{
+		if (!p_ptr->resist_conf || (rand_int(100) < 5) )
 		{
 			(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 		}
@@ -1649,7 +1720,16 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 		return;
 	}
 
-	if (randint(power) < p_ptr->skill_sav) /* Permanent lose int & wis */
+	case 46: /* Permanent lose int & wis */
+	case 47:
+	case 48:
+	case 49:
+	case 50:
+	case 51:
+	case 52:
+	case 53:
+	case 54:
+	case 55:
 	{
 		if (dec_stat(A_INT, 10, TRUE)) happened = TRUE;
 		if (dec_stat(A_WIS, 10, TRUE)) happened = TRUE;
@@ -1658,13 +1738,104 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 		return;
 	}
 
+	case 56: /* Stun */
+	case 57:
+	case 58:
+	case 59:
+	case 60:
+	case 61:
+	case 62:
+	case 63:
+	case 64:
+	{
 
-	if (randint(power) < p_ptr->skill_sav) /* Amnesia */
+		msg_print("You stagger...");
+		(void)set_stun(p_ptr->stun + rand_int(10) );
+		return;
+	}
+
+	case 65: /* Amnesia */
+	case 66:
+	case 67:
+	case 68:
+	case 69:
+	case 70:
+	case 71:
+	case 72:
+	case 73:
 	{
 
 		if (lose_all_info())
 			msg_print("You forget everything in your utmost terror!");
 		return;
+	}
+
+	case 74: /* Aggravate monster */
+	case 75:
+	case 76:
+	case 77:
+	case 78:
+	case 79:
+	case 80:
+	case 81:
+	case 82:
+	{
+
+		msg_print("You let out a bloodcurdling scream of fear!");
+		aggravate_monsters(1);
+		return;
+	}
+
+	case 83: /* Fear */
+	case 84:
+	case 85:
+	case 86:
+	case 87:
+	case 88:
+	case 89:
+	case 90:
+	case 91:
+	{
+
+		if (!p_ptr->resist_fear || (rand_int(100) < 4) )
+		{
+			set_afraid(p_ptr->afraid + 3 + power);
+		}
+		return;
+	}
+
+	case 92: /* Lose money */
+	case 93:
+	case 94:
+	case 95:
+	case 96:
+	case 97:
+	case 98:
+	case 99:
+	case 100:
+	{
+		s32b gold = (p_ptr->au / 50) + randint(15 + (20 * power) );
+		if (gold < 2) gold = 2;
+		if (gold > 5000) gold = (p_ptr->au / 20) + randint(3000);
+		if (gold > p_ptr->au) gold = p_ptr->au;
+
+		p_ptr->au -= gold;
+		if (gold <= 0)
+		{
+			msg_print("You are startled.");			
+		}
+		else if (p_ptr->au)
+		{
+			msg_format("You drop %ld coins in terror!", (long)gold);
+		}
+		else
+		{
+			msg_print("You drop all your money in terror!");
+		}
+		p_ptr->redraw |= (PR_GOLD);
+		return;
+	}
+
 	}
 
 	p_ptr->update |= PU_BONUS;
