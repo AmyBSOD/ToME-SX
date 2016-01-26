@@ -16941,7 +16941,9 @@ S:SCARE | BR_POIS | BR_DARK
 D:Fed with horrid meats and grown to enormous size, this slavering creature 
 D:seeks livelier prey. 
 
-N:969:The Princess
+# The "unique already on level" bug was really getting annoying.
+# Let's see if we can make the bitch spawn correctly by removing UNIQUE.
+N:969:Princess
 G:p:y
 I:110:1d1:40:250:3
 W:0:4:730:0
@@ -16950,7 +16952,7 @@ O:0:0:1:0
 F:FEMALE | CAN_SPEAK
 F:FORCE_MAXHP | SPECIAL_GENE | NO_TARGET | PASS_WALL
 F:NEVER_MOVE | NEVER_BLOW | GOOD | NO_DEATH | RES_TELE
-F:MORTAL | BASEANGBAND | UNIQUE | PET | 
+F:MORTAL | BASEANGBAND | PET | 
 D:The princess of an unknown kingdom, you need to save her! 
 
 N:970:Merton Proudfoot, the lost hobbit
