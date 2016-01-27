@@ -1192,7 +1192,7 @@ static bool monst_spell_monst(int m_idx)
 				else if (blind) monster_msg("%^s shoots something.", m_name);
 				else monster_msg("%^s fires a rocket at %s.", m_name, t_name);
 				monst_breath_monst(m_idx, y, x, GF_ROCKET,
-				                   ((m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 4)), 2);
+				                   ((m_ptr->hp / 6) > 600 ? 600 : (m_ptr->hp / 6)), 2);
 				break;
 			}
 
@@ -3217,7 +3217,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s shoots something.", m_name);
 				else msg_format("%^s fires a rocket.", m_name);
 				breath(m_idx, GF_ROCKET,
-				       ((m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 4)), 2);
+				       ((m_ptr->hp / 6) > 600 ? 600 : (m_ptr->hp / 6)), 2);
 				update_smart_learn(m_idx, DRS_SHARD);
 				break;
 			}
