@@ -2157,8 +2157,7 @@ u32b get_school_spell(cptr do_what, cptr check_fct, s16b force_book)
 	int num = 0;
 	s32b where = 1;
 	int ask;
-	bool flag, redraw;
-	char choice;
+	bool flag;
 	char out_val[160];
 	char buf2[40];
 	char buf3[40];
@@ -2216,9 +2215,6 @@ u32b get_school_spell(cptr do_what, cptr check_fct, s16b force_book)
 	/* Nothing chosen yet */
 	flag = FALSE;
 
-	/* No redraw yet */
-	redraw = FALSE;
-
 	/* Show choices */
 	if (show_choices)
 	{
@@ -2241,48 +2237,38 @@ u32b get_school_spell(cptr do_what, cptr check_fct, s16b force_book)
 		pval = o_ptr->pval2;
 	}
 
+	/* Save the screen */ 
+	character_icky = TRUE; 
+	Term_save(); 
+ 
+	/* Go */ 
 	if (hack_force_spell == -1)
 	{
 		num = exec_lua(format("return book_spells_num(%d)", sval));
 
 		/* Build a prompt (accept all spells) */
-		strnfmt(out_val, 78, "(Spells %c-%c, Descs %c-%c, *=List, ESC=exit) %^s which spell? ",
+		strnfmt(out_val, 78, "(Spells %c-%c, Descs %c-%c, ESC=exit) %^s which spell? ",
 		        I2A(0), I2A(num - 1), I2A(0) - 'a' + 'A', I2A(num - 1) - 'a' + 'A', do_what);
 
 		/* Get a spell from the user */
-		while (!flag && get_com(out_val, &choice))
+		while (!flag)
 		{
-			/* Request redraw */
-			if (((choice == ' ') || (choice == '*') || (choice == '?')))
-			{
-				/* Show the list */
-				if (!redraw)
-				{
-					/* Show list */
-					redraw = TRUE;
+			char choice; 
 
-					/* Save the screen */
-					character_icky = TRUE;
-					Term_save();
+			/* Restore and save screen; this prevents 
+			   subprompt from leaving garbage when going 
+			   around the loop multiple times. */ 
+			Term_load(); 
+			Term_save(); 
 
-					/* Display a list of spells */
-					call_lua("print_book", "(d,d,O)", "d", sval, pval, o_ptr, &where);
-				}
+			/* Display a list of spells */ 
+				call_lua("print_book", "(d,d,O)", "d", sval, pval, o_ptr, &where);
 
-				/* Hide the list */
-				else
-				{
-					/* Hide list */
-					redraw = FALSE;
-					where = 1;
-
-					/* Restore the screen */
-					Term_load();
-					character_icky = FALSE;
-				}
-
-				/* Redo asking */
-				continue;
+			/* Input */ 
+			if (!get_com(out_val, &choice)) 
+			{ 
+				flag = FALSE; 
+				break; 
 			}
 
 
@@ -2305,24 +2291,6 @@ u32b get_school_spell(cptr do_what, cptr check_fct, s16b force_book)
 			/* Verify it */
 			if (ask)
 			{
-				/* Show the list */
-				if (!redraw)
-				{
-					/* Show list */
-					redraw = TRUE;
-
-					/* Save the screen */
-					character_icky = TRUE;
-					Term_load();
-					Term_save();
-
-				}
-				/* Rstore the screen */
-				else
-				{
-					/* Restore the screen */
-					Term_load();
-				}
 
 				/* Display a list of spells */
 				call_lua("print_book", "(d,d,O)", "d", sval, pval, o_ptr, &where);
@@ -2373,11 +2341,8 @@ u32b get_school_spell(cptr do_what, cptr check_fct, s16b force_book)
 
 
 	/* Restore the screen */
-	if (redraw)
-	{
-		Term_load();
-		character_icky = FALSE;
-	}
+	Term_load();
+	character_icky = FALSE;
 
 
 	/* Show choices */
