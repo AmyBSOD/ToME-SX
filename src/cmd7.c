@@ -4514,7 +4514,7 @@ static void print_spell_batch(int batch, int max)
 /*
  * List ten random spells and ask to pick one.
  */
-static random_spell* select_spell_from_batch(int batch, bool quick)
+static random_spell* select_spell_from_batch(int batch)
 {
 	char tmp[160];
 
@@ -4538,18 +4538,16 @@ static random_spell* select_spell_from_batch(int batch, bool quick)
 		mut_max = spell_num - batch * 10;
 	}
 
-	strnfmt(tmp, 160, "(a-%c, * to list, A-%cto browse, / to rename, - to comment) Select a power: ",
+	strnfmt(tmp, 160, "(a-%c, A-%cto browse, / to rename, - to comment) Select a power: ",
 	        I2A(mut_max - 1), I2A(mut_max - 1) - 'a' + 'A');
 
 	prt(tmp, 0, 0);
 
-	if (quick)
-	{
-		print_spell_batch(batch, mut_max);
-	}
-
 	while (1)
 	{
+		/* Print power list */ 
+		print_spell_batch(batch, mut_max);
+
 		/* Get a command */
 		which = inkey();
 
@@ -4562,16 +4560,6 @@ static random_spell* select_spell_from_batch(int batch, bool quick)
 			/* Leave the command loop */
 			break;
 
-		}
-
-		/* List */
-		if (which == '*' || which == '?' || which == ' ')
-		{
-			/* Print power list */
-			print_spell_batch(batch, mut_max);
-
-			/* Wait for next command */
-			continue;
 		}
 
 		/* Accept default */
@@ -4717,6 +4705,8 @@ random_spell* select_spell(bool quick)
 
 		if (which == ESCAPE)
 		{
+			Term_load(); 
+ 
 			ret = NULL;
 
 			break;
@@ -4726,7 +4716,7 @@ random_spell* select_spell(bool quick)
 		{
 			if (batch_max == 0)
 			{
-				ret = select_spell_from_batch(0, quick);
+				ret = select_spell_from_batch(0);
 
 				break;
 			}
@@ -4737,7 +4727,8 @@ random_spell* select_spell(bool quick)
 		which = tolower(which);
 		if (isalpha(which) && (A2I(which) <= batch_max))
 		{
-			ret = select_spell_from_batch(A2I(which), quick);
+			Term_load(); 
+			ret = select_spell_from_batch(A2I(which));
 
 			break;
 		}
@@ -4746,9 +4737,6 @@ random_spell* select_spell(bool quick)
 			bell();
 		}
 	}
-
-	/* Restore the screen */
-	Term_load();
 
 	/* Leave "icky" mode */
 	character_icky = FALSE;
@@ -6355,8 +6343,7 @@ static void print_runespell_batch(int batch, int max)
  * List ten random spells and ask to pick one.
  */
 
-static rune_spell* select_runespell_from_batch(int batch, bool quick,
-                int *s_idx)
+static rune_spell* select_runespell_from_batch(int batch, int *s_idx)
 {
 	char tmp[160];
 
@@ -6370,7 +6357,6 @@ static rune_spell* select_runespell_from_batch(int batch, bool quick,
 
 
 	character_icky = TRUE;
-	Term_save();
 
 	if (rune_num < (batch + 1) * 10)
 	{
@@ -6382,14 +6368,13 @@ static rune_spell* select_runespell_from_batch(int batch, bool quick,
 
 	prt(tmp, 0, 0);
 
-	if (quick)
-	{
-		print_runespell_batch(batch, mut_max);
-	}
-
 	while (1)
 	{
+		print_runespell_batch(batch, mut_max);
+
 		which = inkey();
+
+		Term_load(); 
 
 		if (which == ESCAPE)
 		{
@@ -6443,7 +6428,6 @@ static rune_spell* select_runespell_from_batch(int batch, bool quick,
 		}
 	}
 
-	Term_load();
 	character_icky = FALSE;
 
 	return (ret);
@@ -6454,7 +6438,7 @@ static rune_spell* select_runespell_from_batch(int batch, bool quick,
  * Pick a random spell from a menu
  */
 
-rune_spell* select_runespell(bool quick, int *s_idx)
+rune_spell* select_runespell(int *s_idx)
 {
 	char tmp[160];
 
@@ -6489,7 +6473,7 @@ rune_spell* select_runespell(bool quick, int *s_idx)
 		{
 			Term_load();
 			character_icky = FALSE;
-			return (select_runespell_from_batch(0, quick, s_idx));
+			return (select_runespell_from_batch(0, s_idx));
 
 		}
 		else
@@ -6499,7 +6483,7 @@ rune_spell* select_runespell(bool quick, int *s_idx)
 			{
 				Term_load();
 				character_icky = FALSE;
-				return (select_runespell_from_batch(A2I(which), quick, s_idx));
+				return (select_runespell_from_batch(A2I(which), s_idx));
 			}
 			else
 			{
@@ -6549,7 +6533,7 @@ void do_cmd_rune_cast()
 		return;
 	}
 
-	s_ptr = select_runespell(FALSE, &s_idx);
+	s_ptr = select_runespell(&s_idx);
 
 	if (s_ptr == NULL) return;
 
@@ -6838,7 +6822,7 @@ void do_cmd_rune_del()
 		return;
 	}
 
-	s_ptr = select_runespell(FALSE, &s_idx);
+	s_ptr = select_runespell(&s_idx);
 
 	if (s_ptr == NULL) return;
 
