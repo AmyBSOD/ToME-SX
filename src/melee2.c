@@ -1926,7 +1926,11 @@ static bool monst_spell_monst(int m_idx)
 			/* RF5_BO_POIS */
 		case 128 + 20:
 			{
-				/* XXX XXX XXX */
+				if (disturb_other) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s casts a poison bolt at %s.", m_name, t_name);
+				monst_bolt_monst(m_idx, y, x, GF_POIS,
+				                 damroll(3, 8) + (rlev / 3));
 				break;
 			}
 
@@ -3922,7 +3926,12 @@ bool make_attack_spell(int m_idx)
 			/* RF5_BO_POIS */
 		case 128 + 20:
 			{
-				/* XXX XXX XXX */
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s casts a poison bolt.", m_name);
+				bolt(m_idx, GF_POIS, damroll(3, 8) + (rlev / 3));
+				update_smart_learn(m_idx, DRS_POIS);
+				update_smart_learn(m_idx, DRS_REFLECT);
 				break;
 			}
 
