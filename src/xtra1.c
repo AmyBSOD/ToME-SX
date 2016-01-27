@@ -4848,6 +4848,7 @@ void dump_fates(FILE *outfile)
 {
 	int i;
 	char buf[120];
+	bool pending = FALSE; 
 
 	if (!outfile) return;
 
@@ -4858,6 +4859,11 @@ void dump_fates(FILE *outfile)
 			fate_desc(buf, i);
 			fprintf(outfile, "%s\n", buf);
 		}
+		if ((fates[i].fate) && !(fates[i].know)) pending = TRUE; 
+	} 
+	if (pending) 
+	{ 
+		fprintf(outfile, "You do not know all of your fate.\n"); 
 	}
 }
 
