@@ -36,14 +36,21 @@ void monster_check_experience(int m_idx, bool silent)
 		if (m_ptr->ml && (!silent)) cmsg_format(TERM_L_BLUE, "%^s gains a level.", m_name);
 
 		/* Gain hp */
-		if (magik(80))
+		if (magik(50))
 		{
-			m_ptr->maxhp += r_ptr->hside;
-			m_ptr->hp += r_ptr->hside;
+			m_ptr->maxhp += (r_ptr->hside > 50 ? 50 : r_ptr->hside);
+			m_ptr->hp += (r_ptr->hside > 50 ? 50 : r_ptr->hside);
+		}
+
+		if (magik(50))
+		{
+			int lowincrease = randint(10);
+			m_ptr->maxhp += lowincrease;
+			m_ptr->hp += lowincrease;
 		}
 
 		/* Gain speed */
-		if (magik(40))
+		if (magik(20))
 		{
 			int speed = randint(2);
 			m_ptr->speed += speed;
