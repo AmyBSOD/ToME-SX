@@ -744,12 +744,12 @@ void select_default_melee()
 /*
  * Print a batch of skills.
  */
-static void print_skill_batch(int *p, cptr *p_desc, int start, int max, bool mode)
+static void print_skill_batch(int *p, cptr *p_desc, int start, int max) 
 {
 	char buff[80];
 	int i = start, j = 0;
 
-	if (mode) prt(format("         %-31s", "Name"), 1, 20);
+	prt(format("         %-31s", "Name"), 1, 20);
 
 	for (i = start; i < (start + 20); i++)
 	{
@@ -760,10 +760,10 @@ static void print_skill_batch(int *p, cptr *p_desc, int start, int max, bool mod
 		else
 			sprintf(buff, "  %c - %d) %-30s", I2A(j), p[i], "Change melee style");
 
-		if (mode) prt(buff, 2 + j, 20);
+		prt(buff, 2 + j, 20);
 		j++;
 	}
-	if (mode) prt("", 2 + j, 20);
+	prt("", 2 + j, 20);
 	prt(format("Select a skill (a-%c), @ to select by name, +/- to scroll:", I2A(j - 1)), 0, 0);
 }
 
@@ -772,7 +772,6 @@ int do_cmd_activate_skill_aux()
 	char which;
 	int max = 0, i, start = 0;
 	int ret;
-	bool mode = FALSE;
 	int *p;
 	cptr *p_desc;
 
@@ -845,19 +844,13 @@ int do_cmd_activate_skill_aux()
 
 	while (1)
 	{
-		print_skill_batch(p, p_desc, start, max, mode);
+		print_skill_batch(p, p_desc, start, max);
 		which = inkey();
 
 		if (which == ESCAPE)
 		{
 			ret = -1;
 			break;
-		}
-		else if (which == '*' || which == '?' || which == ' ')
-		{
-			mode = (mode) ? FALSE : TRUE;
-			Term_load();
-			character_icky = FALSE;
 		}
 		else if (which == '+')
 		{
