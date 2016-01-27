@@ -2644,12 +2644,13 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 		object_level = (dun_level + r_ptr->level) / 2;
 
 		/* Determine how much we can drop */
-		if ((r_ptr->flags1 & (RF1_DROP_60)) && (rand_int(100) < 60)) number++;
-		if ((r_ptr->flags1 & (RF1_DROP_90)) && (rand_int(100) < 90)) number++;
-		if (r_ptr->flags1 & (RF1_DROP_1D2)) number += damroll(1, 2);
-		if (r_ptr->flags1 & (RF1_DROP_2D2)) number += damroll(2, 2);
-		if (r_ptr->flags1 & (RF1_DROP_3D2)) number += damroll(3, 2);
-		if (r_ptr->flags1 & (RF1_DROP_4D2)) number += damroll(4, 2);
+		/* Amy edit: greatly reduced, based on Steamband's implementation */
+		if ((r_ptr->flags1 & (RF1_DROP_60)) && (rand_int(100) < 20)) number++;
+		if ((r_ptr->flags1 & (RF1_DROP_90)) && (rand_int(100) < 40)) number++;
+		if ((r_ptr->flags1 & (RF1_DROP_1D2)) && (rand_int(100) < 60)) number++;
+		if ((r_ptr->flags1 & (RF1_DROP_2D2)) && (rand_int(100) < 90)) number++;
+		if ((r_ptr->flags1 & (RF1_DROP_3D2)) && (rand_int(100) < 90)) number += damroll(1, 2);
+		if ((r_ptr->flags1 & (RF1_DROP_4D2)) && (rand_int(100) < 90)) number += damroll(2, 2);
 		if (r_ptr->flags9 & (RF9_MIMIC)) number = 1;
 
 		/* Hack -- handle creeping coins */
