@@ -12,7 +12,7 @@ function do_melkor_curse(who)
 		if m_ptr.hp > m_ptr.maxhp then m_ptr.hp = m_ptr.maxhp end
 		player.redraw = bor(player.redraw, PR_HEALTH)
 	end
-	if get_level(MELKOR_CURSE) >= 25 then
+	if (get_level(MELKOR_CURSE) >= 25) and (randint(3) == 1) and ((m_ptr.speed >= 110) or ((m_ptr.speed >= 90) and (randint(3) == 1) ) or (randint(10) == 1)) then
 		m_ptr.speed = m_ptr.speed - get_level(MELKOR_CURSE, 7)
 		m_ptr.mspeed = m_ptr.mspeed - get_level(MELKOR_CURSE, 7)
 
