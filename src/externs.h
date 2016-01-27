@@ -1828,7 +1828,7 @@ extern bool select_module(void);
 
 /* lua_bind.c */
 extern magic_power *grab_magic_power(magic_power *m_ptr, int num);
-extern bool get_magic_power(int *sn, magic_power *powers, int max_powers, void (*power_info)(char *p, int power), int plev, int cast_stat);
+extern bool get_magic_power(int *sn, magic_power *powers, int max_powers, void (*power_info)(char *p, int power), int plev, int cast_stat);	
 extern magic_power *new_magic_power(int num);
 extern bool get_magic_power_lua(int *sn, magic_power *powers, int max_powers, char *info_fct, int plev, int cast_stat);
 extern bool lua_spell_success(magic_power *spell, int stat, char *oups_fct);
