@@ -29990,7 +29990,8 @@ F:TAKE_ITEM | DRAGON | EVIL | IM_ELEC | IM_FIRE | IM_COLD | NO_CONF |
 S:1_IN_4 | 
 S:ARROW_2 | BR_FIRE | BA_FIRE | MIND_BLAST | HEAL | BLINK | DARKNESS
 D:Fleecy and lovely, a.k.a. very dangerous! It seems that Victoria has lots 
-D:of high-heeled pumps and combat boots which she sends into combat. 
+D:of high-heeled pumps and combat boots which she sends into combat. What you 
+D:see here is a wine-red lady's pump that likes to aim for your hands.
 
 N:1714:Nataliya
 G:n:U
@@ -61901,7 +61902,9 @@ F:TAKE_ITEM | DRAGON | EVIL | IM_ELEC | IM_FIRE | IM_COLD | NO_CONF |
 S:1_IN_4 | 
 S:ARROW_2 | BR_CONF | BA_DARK | MIND_BLAST | HEAL | BLINK | DARKNESS
 D:Fleecy and lovely, a.k.a. very dangerous! It seems that Victoria has lots 
-D:of high-heeled pumps and combat boots which she sends into combat. 
+D:of high-heeled pumps and combat boots which she sends into combat. Such a fleecy 
+D:leather boot that is beautiful for falling in love... think of the sweet brown 
+D:leather your sputa will flow down.
 
 N:3584:Victoria
 G:A:u
