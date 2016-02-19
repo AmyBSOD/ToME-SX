@@ -4940,7 +4940,9 @@ bool make_object(object_type *j_ptr, bool good, bool great, obj_theme theme)
 	}
 
 	/* hack, no multiple artifacts */
-	if (artifact_p(j_ptr)) j_ptr->number = 1;
+	/*if (artifact_p(j_ptr)) j_ptr->number = 1;*/
+	/* Amy edit: seriously, single artifact ammos are almost never useful in combat. Sure, stat stick artifact ammo
+	 * is, but the primary function of ammo is to be fired at enemies, so there! */
 
 	/* Notice "okay" out-of-depth objects */
 	if (!cursed_p(j_ptr) &&
