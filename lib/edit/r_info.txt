@@ -62191,3 +62191,781 @@ D:She looks so incredibly sweet, too... hurting her would be an evil thing to do
 D:Instead, you should allow her to hurt you as much as she wants to. No matter 
 D:if you're male or not, that's what a gentleman would do.
 
+N:3598:Feanorian
+G:h:G
+I:120:50d30:20:70:0
+W:50:10:1400:500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:10d8
+B:HIT:HURT:10d8
+F:OPEN_DOOR | BASH_DOOR |
+F:DROP_SKELETON | DROP_CORPSE | SMART | 
+F:IM_ACID | IM_COLD | RES_WATE | RES_NETH |
+F:MORTAL | BASEANGBAND | HAS_LITE |
+S:1_IN_2 |
+S:ARROW_4
+D:An elf who lived in Formenos with Feanor, and landed with him at Losgar, 
+D:they are fiercely loyal, and will follow Feanor and his sons anywhere, 
+D:even to death.
+
+N:3599:Turin Turambar
+G:p:v
+I:142:180d100:200:170:0
+W:149:1:1000:350000
+E:1:1:1:2:1:1
+O:50:0:50:0
+B:HIT:UN_BONUS:10d10
+B:HIT:TIME:10d10
+B:HIT:INSANITY:10d10
+B:HIT:INSANITY:10d5
+F:UNIQUE | 
+F:FORCE_MAXHP | POWERFUL | 
+F:ONLY_ITEM | DROP_3D2 | DROP_4D2 | DROP_GOOD | DROP_GREAT | 
+F:INVISIBLE | COLD_BLOOD | KILL_WALL | 
+F:GOOD | UNDEAD | IM_COLD | IM_FIRE | IM_ACID | IM_ELEC | AURA_COLD |
+F:IM_POIS | RES_NETH | BASEANGBAND | NO_CUT
+S:1_IN_2 | 
+S:S_UNDEAD | S_DEMON | S_DRAGON | 
+S:S_UNIQUE | S_WRAITH | S_HI_DEMON | 
+S:S_HI_UNDEAD | S_HI_DRAGON | S_KIN | 
+S:BR_DISE | BA_NETH
+D:Turin Turambar, Master of Doom, by Doom mastered. None suffered more 
+D:from the evil's of Melkor than Turin, son of Hurin. Yet of all the Edain 
+D:none did more damage than to kill Melkor's favourite pet, and for this 
+D:Turin is remembered. He hates Melkor, and will avenge all the hurts 
+D:done by Melkor upon the Children of Eru, starting with destroying you!
+
+N:3600:Gondolindrim
+G:h:G
+I:110:3d7:20:16:10
+W:2:1:900:5
+E:1:1:1:2:1:1
+O:0:50:0:30
+B:HIT:HURT:1d8
+F:DROP_CORPSE |
+F:FORCE_MAXHP | NO_TARGET
+F:OPEN_DOOR | BASH_DOOR
+F:GOOD | 
+F:BASEANGBAND | HAS_LITE |
+D:It is a squat and ugly dog-headed humanoid. 
+
+### Intets Hevn additions ###
+#############################
+
+N:3601:Elderly gentleman
+G:t:w
+I:110:3d3:10:1:255
+W:0:1:1500:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d2
+F:MALE | RAND_50 |
+F:ONLY_GOLD | DROP_60 | DROP_SKELETON | DROP_CORPSE |
+F:TAKE_ITEM | OPEN_DOOR |  WILD_TOWN |
+F:MORTAL | BASEANGBAND | HAS_LITE | NEUTRAL
+D:This gentleman's favorite pastime is to take 
+D:strolls around the town.
+
+N:3602:Police officer
+G:t:b
+I:110:5d10:10:10:200
+W:0:1:1700:0
+E:1:1:1:2:1:1
+O:25:50:0:25
+B:HIT:HURT:3d5
+F:MALE | DROP_CORPSE | DROP_SKELETON |
+F:RAND_50 | DROP_90 | WILD_TOWN | KILL_BODY
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | MOVE_BODY
+F:MORTAL | BASEANGBAND | HAS_LITE | NEUTRAL
+D:A somewhat overworked police officer. 
+D:You'd better not disturb his patrolling.
+
+##### Modelled after Sauron, only good. 
+##### You will need to defeat him if you attempt the evil ending.
+N:3603:The Prophet of Skjebnestad
+G:h:r
+I:130:100d225:100:160:0
+W:99:1:1700:50000
+E:1:1:1:2:1:1
+O:10:0:90:0
+B:HIT:UN_BONUS:10d12
+B:HIT:UN_BONUS:10d12
+B:HIT:UN_POWER:8d12
+B:HIT:UN_POWER:8d12
+F:MALE | FORCE_MAXHP | DROP_GREAT | ONLY_ITEM |
+F:DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD | DROP_GREAT |
+F:SMART | CAN_SPEAK | REFLECTING | 
+F:REGENERATE | GOOD | NO_FEAR | NO_STUN |
+F:NO_CONF | NO_SLEEP | NEUTRAL |
+F:DROP_RANDART | NO_THEFT |  MOVE_BODY | NEVER_MOVE |
+F:HAS_LITE | BASEANGBAND | OPEN_DOOR | BASH_DOOR |
+F:UNIQUE | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | RES_TELE
+S:1_IN_2 |
+S:FORGET | BLIND | CONF | SCARE | HEAL | HOLD |
+S:TELE_AWAY | CAUSE_4 | BO_MANA | BA_MANA | TPORT
+D:He foresaw the coming of Intets Hevn from beyond the Void. 
+D:He rallies everyone to fight against its minions. 
+
+N:3604:Magamagol, Leader of the Mystics
+G:h:D
+I:130:75d100:50:150:2
+W:60:30:1800:30000
+E:1:1:1:2:1:1
+O:0:40:60:0
+B:HIT:HURT:20d2
+B:HIT:HURT:10d2
+B:HIT:PARALYZE:15d1
+F:MALE | UNIQUE |
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ONLY_ITEM | DROP_4D2 | DROP_GOOD | DROP_GREAT | DROP_RANDART |
+F:INVISIBLE | OPEN_DOOR | BASH_DOOR | RES_NETH | RES_NEXU |
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_4 | 
+S:HEAL | BO_NETH | BA_NETH | 
+D:He's very adept with his scythe and his dark magic.
+
+# Bargjeld-quest. 
+N:3605:Goldemar, the Kobold Warrior
+G:k:u
+I:110:17d10:20:50:255
+W:19:3:1100:200
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:2d12
+B:HIT:HURT:2d12
+F:UNIQUE | MALE | CAN_SPEAK | 
+F:FORCE_MAXHP | ESCORT | ESCORTS | FRIENDS | 
+F:DROP_SKELETON | DROP_CORPSE | FORCE_SLEEP |
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | MOVE_BODY |
+F:OPEN_DOOR | BASH_DOOR | EVIL | IM_POIS |
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:He's a great fighter, and revered by kobolds.
+
+# Make them rare, or remove them if they get too disturbing.
+N:3606:Dolgsman
+G:h:D
+I:110:3d7:20:16:40
+W:3:10:900:5
+E:1:1:1:2:1:1
+O:0:50:0:30
+B:HIT:HURT:1d3
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | HAS_LITE | NEUTRAL | AI_ANNOY |
+D:A curious little guy, eyeing you from a distance.
+
+N:3607:Dolgsman hunter
+G:h:s
+I:110:3d7:20:16:10
+W:3:5:900:5
+E:1:1:1:2:1:1
+O:0:50:0:30
+B:HIT:HURT:1d8
+F:DROP_1D2 | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:You're disturbing his hunting.
+
+N:3608:Roe deer
+G:c:U
+I:120:8d8:40:20:10
+W:5:3:1000:10
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+B:BUTT:HURT:1d6
+F:BASH_DOOR | WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:Capreolus capreolus.
+
+N:3609:Moose
+G:c:u
+I:110:10d8:40:30:10
+W:8:3:1300:25
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:BUTT:HURT:1d8
+F:BASH_DOOR | WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:Alces alces.
+
+N:3610:Musk ox
+G:c:W
+I:100:10d10:35:40:20
+W:10:2:1500:30
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d10
+B:BUTT:HURT:1d10
+F:BASH_DOOR | WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:Ovibus moschatus.
+
+N:3611:High priest
+G:p:G
+I:120:52d10:20:60:10
+W:40:5:1800:1700
+E:1:1:1:2:1:1
+O:0:10:90:0
+B:HIT:HURT:3d4
+B:HIT:HURT:3d4
+B:HIT:HURT:3d5
+F:MALE | 
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_SKELETON | DROP_CORPSE | 
+F:ONLY_ITEM | DROP_90 | DROP_2D2 | 
+F:SMART | OPEN_DOOR | BASH_DOOR | 
+F:GOOD | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_2 | 
+S:HEAL | BLIND | HOLD | CONF | BO_MANA
+D:An Intets Hevn monster that has no description because nobody has written one.
+
+# theme module monsters
+N:3612:Nightshade, Farmer Maggot's cousin
+G:h:D
+I:110:40d5:40:10:3
+W:0:2:660:0
+E:0:1:1:2:1:1
+O:0:40:10:40
+B:TOUCH:EAT_FOOD
+B:TOUCH:EAT_ITEM
+B:BEG:EAT_GOLD
+B:INSULT:*
+F:UNIQUE | FEMALE | CAN_SPEAK | DROP_CORPSE |
+F:FORCE_MAXHP | FORCE_DEPTH | WILD_TOWN | WILD_ONLY |
+F:OPEN_DOOR | BASH_DOOR |
+F:RAND_25 | DROP_60 | DROP_2D2 | DROP_GOOD | DROP_GREAT | ONLY_ITEM |
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:An unusually gaunt hobbit-lass with a vague family resemblance to 
+D:Farmer Maggot.  She has helped him make a handsome profit selling 
+D:"special" mushrooms to agents of the Black Market--although tasting 
+D:her cousin's wares has gradually driven Nightshade mad over the years. 
+
+N:3613:Michael, the Holy Commander
+G:A:s
+I:130:85d100:40:180:10
+W:79:3:3500:45000
+E:1:1:1:2:1:1
+O:0:75:15:10
+B:HIT:TERRIFY:8d8
+B:HIT:UN_BONUS:8d8
+B:HIT:SHATTER:10d12
+B:HIT:SHATTER:10d12
+F:UNIQUE | MALE | CAN_SPEAK | GOOD |
+F:NO_CONF | NO_FEAR | NO_SLEEP | NO_STUN | RES_DISE |
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | REFLECTING | RES_TELE
+F:ESCORT | CAN_FLY |
+F:ONLY_ITEM | DROP_3D2 | DROP_4D2 | DROP_GOOD | DROP_GREAT |
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | BASEANGBAND | HAS_LITE
+S:1_IN_2 |
+S:ARROW_2  |
+S:BR_DISE | BR_GRAV | BR_WALL | 
+S:CAUSE_3 | HASTE | HEAL | HOLD | SCARE |
+S:TELE_AWAY | TELE_LEVEL | TELE_TO | TPORT |
+S:S_ANGEL | S_KIN
+D:Strongest of the five archangels, Michael is fearlessly determined to crush 
+D:evil wherever he finds it.  He has weighed your soul in the balances of Heaven  
+D:and found it lacking; prepare to face your Creator next, and give an account of 
+D:your wrongs!
+
+N:3614:Stafspillir
+G:I:G
+I:120:60d10:40:60:10
+W:40:4:0:1500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CRAWL:CONFUSE:1d5
+B:CRAWL:HALLU:1d5
+B:BITE:LOSE_DEX:5d10
+B:BITE:LOSE_INT:5d10
+F:FORCE_SLEEP | 
+F:CAN_FLY |
+F:WEIRD_MIND | BASH_DOOR | ATTR_MULTI | ATTR_ANY | SHAPECHANGER |
+F:NO_CONF | NO_SLEEP | MORTAL | ANIMAL | JOKEANGBAND |
+S:1_IN_9
+S:BR_CONF | BR_CHAO | SHRIEK | FORGET |
+D:These bizarre, gadfly-like insects nest in hidden corners of
+D:dungeons, where they seek to distract adventurers into casting 
+D:the wrong spell, stepping onto a hidden trap or drinking an 
+D:unidentified Death potion.
+
+N:3615:Stafspillir
+G:I:G
+I:120:60d10:40:60:10
+W:40:40:0:1500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CRAWL:CONFUSE:1d5
+B:CRAWL:HALLU:1d5
+B:BITE:LOSE_DEX:5d10
+B:BITE:LOSE_INT:5d10
+F:FORCE_SLEEP | 
+F:CAN_FLY |
+F:WEIRD_MIND | BASH_DOOR | ATTR_MULTI | ATTR_ANY | SHAPECHANGER |
+F:NO_CONF | NO_SLEEP | MORTAL | ANIMAL | JOKEANGBAND |
+S:1_IN_9
+S:BR_CONF | BR_CHAO | SHRIEK | FORGET |
+S:MULTIPLY
+D:These bizarre, gadfly-like insects nest in hidden corners of
+D:dungeons, where they seek to distract adventurers into casting 
+D:the wrong spell, stepping onto a hidden trap or drinking an 
+D:unidentified Death potion.
+
+N:3616:Snugga
+G:o:r
+I:110:8d8:20:32:30
+W:10:5:1600:25
+E:1:1:1:2:1:1
+O:20:50:5:15
+B:CRUSH:HURT:1d4
+B:CRUSH:PARALYZE:1d4
+F:MALE | 
+F:CAN_SPEAK | PET | DROP_60 | WILD_TOO | DROP_SKELETON | DROP_CORPSE | 
+F:NO_FEAR | IM_COLD |
+F:OPEN_DOOR | BASH_DOOR | 
+F:GOOD | ORC | HURT_LITE | 
+F:MORTAL | JOKEANGBAND | HAS_LITE
+S:1_IN_12
+S:HEAL | SLOW | TELE_TO |
+D:Covered with shaggy pink hair, this bizarre mutation of Orc-kind 
+D:resulted from Morgoth's first failed attempts at corrupting 
+D:elves.  It wanders the Misty Mountains looking for someone to love 
+D:and hug--yet "common" Orcs consider Snuggas an embarrassment to 
+D:their race, and humans shun Snuggas for their tainted origin.
+
+N:3617:Hagia Sophia, Spirit of Wisdom
+G:A:B
+I:130:75d100:40:180:10
+W:64:3:3500:35000
+E:1:1:1:2:1:1
+O:0:40:60:0
+B:HIT:LOSE_WIS:6d8
+B:HIT:LOSE_INT:6d8
+B:HIT:CONFUSE:10d10
+B:HIT:TERRIFY:10d10
+F:UNIQUE | FEMALE | CAN_SPEAK | NO_SLEEP | NO_FEAR | NO_CONF | 
+F:GOOD | FORCE_SLEEP | FORCE_MAXHP | SMART | AURA_ELEC | REFLECTING | RES_TELE |
+F:ESCORT | CAN_FLY |
+F:ONLY_ITEM | DROP_3D2 | DROP_4D2 | DROP_GOOD | 
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | BASEANGBAND | HAS_LITE
+S:1_IN_2 | 
+S:BR_CONF | BR_LITE | BRAIN_SMASH | HEAL |
+S:S_ANGEL | S_KIN
+D:"How long, ye simple ones, will ye love simplicity? and the scorners delight in 
+D:their scorning, and fools hate knowledge?"  As these words echo clearly in 
+D:your mind, you tremble with fear at the just punishment soon to come, for every 
+D:foolish mistake you have made.
+
+N:3618:Barachiel, Keeper of the Bastion
+G:A:s
+I:130:70d77:30:180:255
+W:76:7:3200:42000
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:14d4
+B:HIT:HURT:14d4
+B:HIT:HURT:14d4
+B:HIT:HURT:14d4
+F:UNIQUE | MALE | GOOD | CAN_SPEAK |
+F:FORCE_MAXHP | FORCE_DEPTH | FORCE_SLEEP | 
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_GREAT |
+F:NO_CONF | NO_FEAR | NO_SLEEP | NO_STUN |
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | RES_TELE | CAN_FLY |
+F:AURA_FIRE | AURA_ELEC | REFLECTING |
+F:BASEANGBAND | HAS_LITE
+S:1_IN_7 | 
+S:ARROW_2 | BR_SOUN | BR_LITE | BA_ELEC | HASTE | HEAL | TPORT |
+S:S_KIN |
+D:A steel-skinned angel whose wings resemble living fire; his whole form 
+D:radiates awesome divine power.  His sword glints like lightning as he 
+D:strikes down anyone who ventures into the Bastion of Light without 
+D:permission.  (Unfortunately, you don't recall being invited here!)
+
+N:3619:Haakon Ormsbrynja
+G:p:w
+# AC, speed and hit points based loosely on equipment wielded/worn
+I:120:23d50:24:190:60
+W:70:7:1650:28000
+E:1:1:1:2:1:1
+O:25:35:10:30
+# I did have to tone down the sword damage, but he still hits hard!
+B:HIT:HURT:4d7
+B:HIT:HURT:4d7
+B:HIT:HURT:4d7
+B:HIT:HURT:4d7
+F:UNIQUE | MALE | PET | JOKEANGBAND | CAN_SPEAK |
+F:FORCE_MAXHP |
+# spends as much time wilderness-trekking as in the dungeons
+F:WILD_TOO | WILD_GRASS | WILD_WOOD | WILD_MOUNTAIN |
+F:SMART | POWERFUL | GOOD | MORTAL |
+F:MOVE_BODY | OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:HAS_LITE | CAN_FLY | DROP_SKELETON | DROP_CORPSE |
+F:DROP_90 | DROP_2D2 | DROP_GOOD | DROP_GREAT |
+# many resists from worn artifacts
+F:NO_FEAR | NO_CONF | NO_SLEEP |
+F:IM_ACID | IM_FIRE | IM_COLD | IM_POIS |
+#from Belthronding
+F:RES_DISE |
+# archery, monster lore and artifact activations here
+S:1_IN_10
+S:ARROW_1 | ARROW_2 | BLINK | BR_COLD |
+S:HEAL | S_ANIMAL | TPORT |
+D:A slim, graceful young man with fair hair, deep brown eyes, 
+D:and ruddy skin.  Every so often, you catch a glimpse of 
+D:glistening white scales beneath his blue cloak.  His 
+D:skill with both sword and bow reassures you that Haakon 
+D:is a worthy ally.
+
+N:3620:Greater Spam Demon
+G:U:R
+I:120:50d75:30:50:0
+W:76:1:1900:20000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:INSULT:LOSE_INT:15d5
+B:INSULT:LOSE_WIS:15d5
+B:TOUCH:DISEASE:5d5
+B:TOUCH:EAT_GOLD:5d5
+F:FORCE_SLEEP | FORCE_MAXHP | FRIENDS |
+F:BASH_DOOR | KILL_WALL |
+F:ONLY_ITEM | DROP_4D2 | DROP_3D2 | DROP_2D2 | DROP_60 |
+F:DROP_CORPSE |
+F:CAN_SPEAK | WEIRD_MIND | 
+F:EVIL | DEMON | NO_CONF | NO_SLEEP |
+F:AURA_ELEC | IM_ELEC | IM_POIS |
+F:JOKEANGBAND | HAS_LITE
+S:1_IN_2
+S:BR_INER | BR_NUKE | BR_TIME |
+S:BRAIN_SMASH | SHRIEK | TRAPS |
+D:An immense block of vile-smelling pink flesh, which glistens 
+D:with a greasy, jelly-like secretion.  Despite its apparent lack 
+D:of facial features, this demon continually raves about easy 
+D:money, cheap potions, and brothels available elsewhere on Arda.
+
+N:3621:Radiant spirit
+G:*:y
+I:120:28d7:100:40:0
+W:29:2:0:400
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:BLIND:1d7
+B:ENGULF:BLIND:1d7
+F:FORCE_SLEEP | 
+F:RAND_50 | RAND_25 | CAN_FLY | MOVE_BODY |
+F:WEIRD_MIND | STUPID | GOOD | FRIENDS | POWERFUL |
+F:NONLIVING | BASEANGBAND | HAS_LITE | 
+F:NO_CUT | NO_STUN | NO_CONF | NO_SLEEP | NO_FEAR |
+F:IM_FIRE | IM_COLD | IM_POIS | IM_ELEC | IM_ACID |
+S:1_IN_7 | 
+S:BR_LITE | BLINK |
+D:Rumors claim that foreign powers of Good create these floating, golden-white 
+D:orbs from the departed spirits of their faithful followers.
+
+N:3622:Mediator
+G:*:B
+I:130:35d100:140:75:0
+W:70:8:10:4000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:POWERFUL | WEIRD_MIND | SMART | GOOD |
+F:NO_CUT | NO_STUN | NO_CONF | NO_SLEEP | NO_FEAR |
+F:CAN_FLY | PASS_WALL | MOVE_BODY | NEVER_BLOW |
+F:IM_FIRE | IM_COLD | IM_POIS | IM_ELEC | IM_ACID |
+F:RES_DISE | RES_NEXU |
+F:REFLECTING | REGENERATE |
+F:NONLIVING | BASEANGBAND | HAS_LITE |
+S:1_IN_3
+S:SHRIEK |
+S:BR_MANA | BR_DISE | BR_NEXU |
+S:HASTE | HEAL | MIND_BLAST | S_ANGEL | 
+S:TELE_AWAY | TELE_LEVEL | TPORT |
+D:A translucent sphere of energy, silvery with a pulsing bluish-white 
+D:core.  These entities bear messages between the powers of Good in 
+D:one universe and those in another: any mortal who intercepts a 
+D:Mediator on duty, or tries to pervert the message it bears, should 
+D:prepare to face potent magic.
+
+
+N:3623:Aurora
+G:#:v
+I:120:28d10:100:40:0
+W:33:3:0:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:ELEC:7d4
+B:ENGULF:FIRE:7d4
+B:ENGULF:BLIND:7d4
+B:ENGULF:CONFUSE:7d4
+F:FORCE_SLEEP | FORCE_MAXHP | ATTR_MULTI |
+F:RAND_50 | RAND_25 | RES_PLAS | AURA_ELEC | AURA_FIRE |
+F:WEIRD_MIND | STUPID | GOOD |
+F:IM_ACID | IM_COLD | IM_ELEC | IM_FIRE | IM_POIS | CAN_FLY | PASS_WALL |
+F:NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING | BASEANGBAND | HAS_LITE | 
+F:NO_CUT | NO_STUN |
+S:1_IN_7 | 
+S:BO_PLAS | BLINK |
+D:An ever-changing band of light and color ripples before you in mid-air.
+
+N:3624:Cloud of glory
+G:#:o
+I:140:35d10:100:70:0
+W:49:6:0:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | POWERFUL | REFLECTING |
+F:NEVER_BLOW | KILL_ITEM |
+F:RES_PLAS | AURA_ELEC | AURA_FIRE |
+F:WEIRD_MIND | GOOD | 
+F:IM_ACID | IM_COLD | IM_ELEC | IM_FIRE | IM_POIS | CAN_FLY |
+F:NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING | BASEANGBAND | HAS_LITE | 
+F:NO_CUT | NO_STUN |
+S:1_IN_7 | 
+S:BR_LITE | BR_PLAS | 
+D:A blazing, sentient cloud of divine energy created to shield innocents 
+D:from harm; its maker senses you as a threat to the those who inhabit 
+D:the Bastion of Light.
+
+N:3625:Blade barrier
+G:|:B
+I:120:14d14:20:60:20
+W:42:4:0:210
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:2d14
+B:HIT:HURT:2d14
+F:CHAR_MULTI | GOOD | IM_POIS | IM_COLD | 
+F:RES_TELE |
+F:FORCE_SLEEP | FORCE_MAXHP | CAN_FLY | SUSCEP_ACID |
+F:COLD_BLOOD | BASH_DOOR | KILL_BODY | KILL_ITEM |
+F:NONLIVING | WEIRD_MIND | NEVER_MOVE |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | HAS_LITE | 
+F:NO_CUT | NO_STUN |
+S:1_IN_14
+S:BR_SHAR |
+D:A wall of whirling, needle-sharp sword blades created by 
+D:priestly magic.  Though it cannot chase intruders, 
+D:the barrier still deters most creatures who try to
+D:cross it.
+
+N:3626:Tome of Divine Wrath
+G:?:W
+I:120:50d15:20:150:15
+W:42:7:0:2250
+E:0:0:0:0:0:0
+O:20:0:80:0
+B:GAZE:CONFUSE:1d7
+B:GAZE:TERRIFY:1d7
+B:GAZE:PARALYZE:1d7
+B:GAZE:SHATTER:3d14
+F:NEVER_MOVE | NONLIVING |
+F:FORCE_SLEEP | DROP_90 | DROP_GOOD | GOOD | COLD_BLOOD | EMPTY_MIND |
+F:FORCE_MAXHP | NO_CONF | NO_FEAR | NO_SLEEP | NO_STUN | CHAR_MULTI |
+F:IM_ACID | IM_POIS | IM_COLD | IM_ELEC | SUSCEP_FIRE | RES_TELE | 
+F:BASEANGBAND | HAS_LITE | NO_CUT |
+S:1_IN_2  |
+S:BR_DISI | CAUSE_3 | S_ANGEL |
+D:A sentient sacred tome casting spells against enemies of the faith. 
+
+N:3627:Celestial clarion
+G:/:W
+I:120:50d15:20:150:15
+W:42:5:0:2250
+E:0:0:0:0:0:0
+O:20:0:80:0
+F:NEVER_MOVE | NEVER_BLOW | NONLIVING |
+F:FORCE_SLEEP | DROP_90 | DROP_GOOD | GOOD | COLD_BLOOD | EMPTY_MIND |
+F:FORCE_MAXHP | NO_CONF | NO_FEAR | NO_SLEEP | NO_STUN | CHAR_MULTI |
+F:IM_FIRE | IM_POIS | IM_COLD | IM_ELEC | RES_TELE | SUSCEP_ACID |
+F:BASEANGBAND | HAS_LITE | NO_CUT |
+S:1_IN_2  |
+S:BR_SOUN | BR_WALL | SHRIEK |
+D:A massive horn beaten from silver and engraved with sacred formulas.
+
+N:3628:Watchman of Ambarannon
+G:t:W
+I:110:7d8:10:30:250
+W:0:1:1650:0
+E:1:1:1:2:1:1
+O:25:50:25:0
+B:HIT:HURT:2d6
+F:MALE | DROP_SKELETON | DROP_CORPSE | 
+F:RAND_50 | DROP_90 | WILD_TOWN | 
+F:GOOD |
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:A holy warrior oathbound to guard his home-city from evil.
+
+N:3629:Weary pilgrim
+G:t:U
+I:120:3d3:6:1:0
+W:0:1:1200:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d3
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_TOWN |
+F:RAND_25 | DROP_1D2 | TAKE_ITEM |
+F:GOOD | NEUTRAL | FRIENDS |
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:A traveler who has landed in the Hidden Hallows; he hopes that the 
+D:locals' strange new faith can shield him from the evils of Morgoth.
+
+N:3630:White friar
+G:t:W
+I:110:1d4:10:1:40
+W:0:1:1300:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BEG:*
+F:MALE | DROP_SKELETON | DROP_CORPSE |
+F:GOOD | NEUTRAL | FRIENDS | 
+F:RAND_25 | WILD_TOWN | DROP_60 | DROP_1D2 | 
+F:TAKE_ITEM | OPEN_DOOR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:A man in cowled robes, sworn to chastity and poverty.  A strange  
+D:talisman hangs from a belt of cord around his waist.
+
+
+N:3631:The outland priest
+G:t:G
+I:110:35d20:50:60:4
+W:0:4:1700:0
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:1d10
+B:TOUCH:EAT_FOOD:*
+B:BEG:EAT_GOLD:*
+F:UNIQUE | MALE | SMART | CAN_SPEAK | 
+F:DROP_60 | DROP_GOOD | DROP_1D2 | DROP_SKELETON | DROP_CORPSE | 
+F:RAND_50 | DROP_90 | WILD_GRASS | WILD_TOWN | WILD_WOOD |
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:GOOD | NEUTRAL | MORTAL | BASEANGBAND | HAS_LITE |
+S:1_IN_10
+S:CAUSE_1 | CONF | HEAL | SCARE |
+D:When he isn't begging a passerby for alms, this stranger seeks 
+D:converts to the cult of his god--but he seems to believe that 
+D:*all* the Ainur, dark and bright alike, are demons.
+
+N:3632:The Guardian Angel
+G:A:W
+I:120:35d100:30:120:15
+W:63:7:6000:0
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:HURT:14d5
+B:HIT:HURT:14d5
+B:HIT:HURT:14d5
+B:HIT:HURT:14d5
+F:FORCE_SLEEP | FORCE_MAXHP | UNIQUE | MALE | CAN_SPEAK |
+F:HAS_LITE | RES_TELE | IM_FIRE | IM_COLD | IM_ELEC | IM_ACID | IM_POIS |
+F:MOVE_BODY |
+F:SMART | TAKE_ITEM | BASH_DOOR | NO_FEAR  | NO_CONF | NO_SLEEP |
+F:GOOD | PET | JOKEANGBAND | NO_CUT | NO_STUN |
+S:1_IN_14 |
+S:BLIND | CONF | HEAL | SCARE | TPORT |
+D:A shining, winged figure in battered white scale mail; he follows you 
+D:closely, watching you with a concerned expression,
+
+
+N:3633:Grotesque
+G:g:s
+I:110:36d24:10:100:15
+W:72:6:6000:110
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:HURT:3d8
+B:CLAW:HURT:3d8
+B:BITE:HURT:2d8
+F:DROP_60 | ONLY_GOLD | EVIL | FRIENDS | FORCE_MAXHP | REFLECTING |
+F:CAN_FLY | POWERFUL | NO_CUT | NO_STUN | NO_SLEEP | NO_CONF | EMPTY_MIND |
+F:IM_POIS | IM_FIRE | IM_COLD | IM_ELEC | HURT_ROCK | NONLIVING | RES_WATE |
+F:RES_DISE | RES_NETH |
+F:BASEANGBAND |
+S:1_IN_6
+S:BR_DARK | BR_DISE | BA_WATE | BR_NETH |
+D:A massive demon-like sculpture, animated by dark magic to 
+D:guard places consecrated to Evil.
+
+
+N:3634:Crystal gargoyle
+G:g:v
+I:110:24d18:10:75:15
+W:55:5:4500:110
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:HURT:3d5
+B:CLAW:HURT:3d5
+B:BITE:HURT:2d5
+F:DROP_60 | ONLY_GOLD | EVIL | FRIENDS | HAS_LITE | FORCE_MAXHP | STUPID |
+F:CAN_FLY | POWERFUL | NO_CUT | NO_STUN | NO_SLEEP | NO_CONF | EMPTY_MIND |
+F:IM_POIS | IM_FIRE | IM_COLD | IM_ELEC | HURT_ROCK | NONLIVING |
+F:AURA_ELEC | ATTR_MULTI |
+F:BASEANGBAND |
+S:1_IN_8
+S:BR_LITE | BR_ELEC | BR_SHAR |
+D:A gargoyle crafted from rock crystal, shimmering with evil magics.
+
+N:3635:Obsidian gargoyle
+G:g:D
+I:110:24d18:10:75:15
+W:55:5:4500:110
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:HURT:3d5
+B:CLAW:HURT:3d5
+B:BITE:HURT:2d5
+F:DROP_60 | ONLY_GOLD | EVIL | FRIENDS | HAS_LITE | FORCE_MAXHP | STUPID |
+F:CAN_FLY | POWERFUL | NO_CUT | NO_STUN | NO_SLEEP | NO_CONF | EMPTY_MIND |
+F:IM_POIS | IM_FIRE | IM_COLD | IM_ELEC | HURT_ROCK | NONLIVING |
+F:AURA_FIRE | BASEANGBAND |
+S:1_IN_8
+S:BR_DARK | BR_FIRE | BR_SHAR |
+D:A gargoyle crafted from glossy black stone, still smoldering with 
+D:volcanic heat.
+
+N:3636:Dimdrel, Queen of Trolls
+G:T:v
+I:120:33d110:30:120:30
+W:66:6:16000:20250
+E:1:1:1:2:1:1
+O:0:50:40:10
+B:INSULT:TERRIFY:9d11
+B:INSULT:INSANITY:9d11
+B:INSULT:LOSE_INT:9d11
+B:INSULT:LOSE_WIS:9d11
+F:UNIQUE | FEMALE | CAN_SPEAK |
+F:ATTR_MULTI | RAND_25 | ESCORTS |
+F:FORCE_SLEEP | FORCE_MAXHP | WEIRD_MIND | POWERFUL |
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_GREAT |
+F:DROP_60 | REGENERATE | KILL_WALL | RES_TELE | KILL_BODY | 
+F:OPEN_DOOR | BASH_DOOR | DROP_CORPSE | TAKE_ITEM |
+F:EVIL | TROLL | IM_POIS |
+F:IM_ELEC | IM_COLD | IM_FIRE | JOKEANGBAND
+F:NO_CONF | NO_SLEEP | NO_FEAR |
+S:1_IN_3
+S:BR_CHAO | BR_FIRE | BR_POIS | SHRIEK |
+D:A she-troll with a largish vocabulary, a taste for crude jokes, 
+D:and a twisted love/hate attitude towards the history of the 
+D:Free Peoples.
+
+N:3637:Racist Troll
+G:T:W
+I:120:50d10:20:100:50
+W:55:5:6500:1600
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:INSULT:TERRIFY:3d11
+B:INSULT:INSANITY:3d11
+B:INSULT:LOSE_INT:3d11
+B:INSULT:LOSE_WIS:3d11
+F:FORCE_MAXHP | REGENERATE | DROP_90 | REGENERATE | FRIENDS |
+F:OPEN_DOOR | BASH_DOOR | KILL_BODY | HAS_LITE | DROP_CORPSE | 
+F:EVIL | TROLL | IM_POIS | IM_FIRE | NO_CONF | NO_SLEEP | NO_FEAR | JOKEANGBAND
+S:1_IN_9
+S:BR_CONF | BR_FIRE | BR_POIS | SHRIEK |
+D:This ominous, sheet-wrapped figure hates all creatures which don't look like him.
+

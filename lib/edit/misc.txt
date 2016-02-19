@@ -17,7 +17,7 @@ M:Z:529
 
 # Maximum number of monsters in r_info.txt
 # WARNING ! add one more to the real count for the player ghost !!
-M:R:3599
+M:R:3639
 
 # Maximum number of monsters in re_info.txt
 # WARNING ! Use the exact amount of ego types used, if not you
@@ -70,13 +70,13 @@ M:O:1024
 M:M:768
 
 # Maximum number of race types in p_info.txt
-M:P:R:22
+M:P:R:36
 
 # Maximum number of subrace types in p_info.txt
-M:P:S:10
+M:P:S:14
 
 # Maximum number of class types in p_info.txt
-M:P:C:53
+M:P:C:88
 
 # Maximum number of meta class types in p_info.txt
 M:P:M:1

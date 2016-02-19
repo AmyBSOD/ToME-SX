@@ -175,6 +175,118 @@ C:a:k:=0:=0:Antimagic
 C:a:k:+1000:+1000:Demonology
 C:a:g:All Gods
 
+C:a:N:Eco-Warrior
+C:a:D:Fighters of nature.
+C:a:k:+0:-400:Sword-mastery
+C:a:k:+0:-400:Axe-mastery
+C:a:k:+0:-550:Antimagic
+C:a:k:+0:-100:Archery
+C:a:k:+250:+400:Hafted-mastery
+C:a:k:+250:+400:Polearm-mastery
+C:a:k:+1000:+600:Nature
+C:a:k:+500:+150:Symbiosis
+C:a:k:+500:+150:Music
+C:a:b:1:Tree walking
+C:a:g:All Gods
+
+C:a:N:Dark Paladin
+C:a:D:A evil warrior,attempting to bring chaos and destruction 
+C:a:D:to the world.
+C:a:k:+0:+250:Spell-power
+C:a:k:+0:+300:Necromancy
+C:a:k:+0:+300:Udun
+C:a:k:+0:+100:Corpse-preservation
+C:a:k:+0:+300:Fire
+C:a:O:23:32:1d1
+C:a:g:All Gods
+
+C:a:N:Gaeablade
+C:a:D:Trained in the way of the four elements, Gaeablades have mastered the
+C:a:D:art of infusing those elements into their swords.
+C:a:O:23:16:1d1
+C:a:k:+0:-50:Combat
+C:a:k:+0:-100:Weaponmastery
+C:a:k:+0:-100:Sword-mastery
+C:a:k:+0:-100:Axe-mastery
+C:a:k:+0:-100:Hafted-mastery
+C:a:k:+0:-100:Polearm-mastery
+C:a:k:+1000:-200:Archery
+C:a:k:+0:+900:Sneakiness
+C:a:k:+0:+900:Disarming
+C:a:k:+1000:+400:Magic
+C:a:k:+0:+200:Spirituality
+C:a:k:=0:=0:Antimagic
+C:a:k:+1000:+700:Fire
+C:a:k:+1000:+700:Water
+C:a:k:+1000:+700:Air
+C:a:k:+1000:+700:Earth
+C:a:g:All Gods
+
+C:a:N:Chaos Warrior
+C:a:D:Chaos Warriors can learn a large variety of destructive skills
+C:a:D:to wreck havoc upon Middle-earth.
+C:a:k:+0:-200:Combat
+C:a:k:+0:-150:Weaponmastery
+C:a:k:+1000:+200:Sword-mastery
+C:a:k:-1000:-300:Archery
+C:a:k:+0:-400:Sneakiness
+C:a:k:+0:-300:Disarming
+C:a:k:+0:+400:Magic
+C:a:k:-1000:+0:Spirituality
+C:a:k:=0:=0:Antimagic
+C:a:k:+0:-650:Magic-Device
+C:a:k:+1000:+600:Demonology
+C:a:k:+1000:+600:Necromancy
+C:a:k:+1000:+600:Mindcraft
+C:a:k:+1000:+600:Thaumaturgy
+C:a:k:+0:+200:Prayer
+C:a:k:+1000:+200:Udun
+C:a:g:All Gods
+C:a:b:10:Perfect casting
+C:a:O:115:55:1d1
+
+C:a:N:Berserker
+C:a:D:Beserkers can enter a wild uncontroleable fury in battle,
+C:a:D:but are peaceful and can meditate when in safety.
+C:a:k:+0:+200:Combat
+C:a:k:+0:+150:Weaponmastery
+C:a:k:+0:+200:Sword-mastery
+C:a:k:+0:+200:Axe-mastery
+C:a:k:+0:+200:Polearm-mastery
+C:a:k:+0:+200:Hafted-mastery
+C:a:k:-1000:-600:Sneakiness
+C:a:k:-1000:-400:Disarming
+C:a:k:=0:=0:Archery
+C:a:k:=0:=0:Antimagic
+C:a:k:=0:=0:Magic
+C:a:k:+0:+200:Spirituality
+C:a:k:+0:+400:Prayer
+C:a:k:=0:=0:Magic-Device
+C:a:b:1:Extra Max Blow(2)
+C:a:b:25:Spread blows
+C:a:b:45:Undead Form
+C:a:g:All Gods
+C:a:O:23:16:1d1
+C:Z:berserk
+
+C:a:N:Spellsword
+C:a:D:Spellswords are unlike other warriors as they value magic
+C:a:D:as a useful skill to back up their fighting.
+C:a:O:23:10:1d1
+C:a:O:111:50:1d1
+C:a:k:+0:-150:Weaponmastery
+C:a:k:+0:-100:Combat
+C:a:k:=0:=0:Antimagic
+C:a:k:=0:=0:Archery
+C:a:k:+1000:+800:Magic
+C:a:k:+0:-550:Magic-Device
+C:a:k:+0:+700:Divination
+C:a:k:+1000:+600:Conveyance
+C:a:k:+0:+600:Nature
+C:a:k:+0:+500:Earth
+C:a:k:+0:+400:Mind
+C:a:b:10:Perfect casting
+
 C:a:N:Allrounder
 C:a:D:Fighters with melee and ranged abilities
 C:a:k:+0:+100:Weaponmastery
@@ -400,6 +512,141 @@ C:a:O:2:1:1d1
 C:a:O:23:4:1d1
 C:a:G:EXPERIMENTAL
 
+C:a:N:Shaper
+C:a:D:Shapers are the masters of combining essences to create new magics.
+C:a:k:+0:+250:Spirituality
+C:a:k:+0:+300:Combat
+C:a:k:+0:+200:Weaponmastery
+C:a:k:+0:-100:Conveyance
+C:a:k:+0:-100:Temporal
+C:a:k:+0:-300:Mind
+C:a:k:+0:+100:Divination
+C:a:k:+0:+300:Meta
+C:a:k:+0:+100:Magic-Device
+C:a:O:111:50:1d1
+C:a:O:31:1:1d1
+C:a:O:4:2:10d2
+C:a:O:23:4:1d1
+C:a:g:All Gods
+
+C:a:N:Cosmic Mage
+C:a:D:The most potent of magics lie open to the Cosmic Mage, who needs no
+C:a:D:magical books to access potent magics.
+C:a:k:+0:-400:Magic-Device
+C:a:k:=0:=0:Weaponmastery
+C:a:k:=0:=0:Combat
+C:a:k:+0:+300:Magic
+C:a:k:+0:+700:Sorcery
+C:a:k:+0:+400:Mana
+C:a:k:+0:+300:Fire
+C:a:k:+0:+300:Water
+C:a:k:+0:+300:Air
+C:a:k:+0:+300:Earth
+C:a:k:+0:+300:Conveyance
+C:a:k:+0:+300:Nature
+C:a:k:+0:+300:Temporal
+C:a:k:+0:+300:Divination
+C:a:k:+0:+300:Meta
+C:a:k:+0:+300:Mind
+C:a:k:+0:+300:Necromancy
+C:a:k:+0:+300:Thaumaturgy
+C:a:O:6:1:1d1
+C:a:O:71:40:1d1
+C:a:G:EXPERIMENTAL
+C:a:g:Nobody
+
+C:a:N:Black Mage
+C:a:D:A mage that focusses only on destructive and pain-inflicting spells.
+C:a:D:They have extra mana but less health.
+C:a:k:+0:+100:Magic
+C:a:k:+0:+100:Spell-power
+C:a:k:+0:+600:Mana
+C:a:k:+0:+700:Fire
+C:a:k:+0:+600:Air
+C:a:k:+0:+500:Water
+C:a:k:+0:-100:Earth
+C:a:k:+0:+100:Divination
+C:a:k:+0:-100:Nature
+C:a:k:+0:+100:Mind
+C:a:k:+0:+600:Necromancy
+C:a:k:+1000:+700:Thaumaturgy
+C:a:k:-1000:-400:Sneakiness
+C:a:k:-1000:-400:Spirituality
+C:a:k:+0:+600:Runecraft
+C:a:O:23:4:1d1
+C:a:O:111:50:1d1
+
+C:a:N:White Mage
+C:a:D:A mage that focusses only on healing and defensive magic.
+C:a:D:They have extra health but less mana
+C:a:k:+0:+100:Magic
+C:a:k:+0:+100:Spell-power
+C:a:k:-1000:+100:Mana
+C:a:k:+0:+100:Water
+C:a:k:+0:-100:Fire
+C:a:k:+0:+600:Earth
+C:a:k:+0:+600:Temporal
+C:a:k:+0:+500:Divination
+C:a:k:+1000:+600:Conveyance
+C:a:k:+0:+700:Nature
+C:a:k:+0:+600:Meta
+C:a:k:+0:+500:Mind
+C:a:k:+0:-100:Weaponmastery
+C:a:k:+0:-200:Combat
+C:a:k:+0:-100:Necromancy
+C:a:k:+0:-100:Thaumaturgy
+C:a:k:+0:-100:Runecraft
+C:a:O:23:4:1d1
+C:a:O:111:50:1d1
+
+C:a:N:Rune-smith
+C:a:D:An alchemist that can use magic as well as create magical objects,
+C:a:D:but has extreme difficulty using any weapon or armour they create.
+C:a:k:+2000:+0:Magic
+C:a:k:+0:+250:Spirituality
+C:a:k:+0:-200:Combat
+C:a:k:+0:-500:Weaponmastery
+C:a:k:+1000:+700:Alchemy
+C:a:k:+1000:+200:Runecraft
+C:a:k:+0:-700:Necromancy
+C:a:k:+0:-100:Meta
+C:a:k:+0:-100:Mind
+C:a:k:+0:-100:Thaumaturgy
+C:a:k:+0:-100:Temporal
+C:a:O:31:1:1d1
+C:a:O:4:2:6d1
+C:a:O:2:1:1d1
+C:a:O:105:1:1d1
+C:a:O:104:5:1d1
+
+C:a:N:War-mage
+C:a:D:Weaker than other magi, they compensate with steel. 
+C:a:k:+0:-150:Magic-Device 
+C:a:k:+1000:-100:Spell-power 
+C:a:k:+0:-100:Mana 
+C:a:k:+0:-100:Fire 
+C:a:k:+0:-100:Water 
+C:a:k:+0:-100:Air 
+C:a:k:+0:+100:Earth 
+C:a:k:+0:+400:Conveyance 
+C:a:k:+0:+300:Nature 
+C:a:k:+0:+400:Temporal 
+C:a:k:+0:+300:Divination 
+C:a:k:+0:+200:Meta 
+C:a:k:+0:-300:Necromancy 
+C:a:k:+0:-700:Runecraft 
+C:a:k:+0:-200:Thaumaturgy 
+C:a:k:+0:+300:Combat 
+C:a:k:+0:+200:Weaponmastery 
+C:a:k:+0:+300:Sword-mastery 
+C:a:k:+0:+300:Axe-mastery 
+C:a:k:+0:+300:Hafted-mastery 
+C:a:k:+0:+300:Polearm-mastery
+C:a:k:=0:=0:Sorcery 
+C:a:O:111:50:1d1
+C:a:b:30:Spread blows
+C:a:b:1:Extra Max Blow(1)
+
 C:a:N:Weird mage
 C:a:D:Mage with weird skills
 C:a:k:+0:+200:Magic-Device
@@ -563,6 +810,107 @@ C:a:O:17:1:10d3
 C:a:O:17:1:10d3
 C:a:g:All Gods
 
+C:a:N:Magebow
+C:a:D:Magebows train to infuse their arrows with the power of magic
+C:a:k:+0:+100:Archery
+C:a:k:+0:+100:Bow-mastery
+C:a:k:+0:+100:Crossbow-mastery
+C:a:k:+0:+100:Sling-mastery
+C:a:k:+0:-300:Boomerang-mastery
+C:a:k:+0:+400:Magic
+C:a:k:+0:+500:Mana
+C:a:k:+0:+500:Fire
+C:a:k:+0:+500:Air
+C:a:k:+0:+500:Earth
+C:a:k:+0:+500:Water
+C:a:O:19:12:1d1
+C:a:O:19:2:1d1
+C:a:O:17:1:10d3
+C:a:O:17:1:10d3
+C:a:g:All Gods
+
+C:a:N:Runebow
+C:a:D:Runebows carve runes into their missile launchers to infuse the missiles
+C:a:D:with the power of runic magic
+C:a:k:+0:+100:Archery
+C:a:k:+0:+100:Bow-mastery
+C:a:k:+0:+100:Crossbow-mastery
+C:a:k:+0:+100:Sling-mastery
+C:a:k:+0:-300:Boomerang-mastery
+C:a:k:+0:+400:Magic
+C:a:k:+0:+500:Conveyance
+C:a:k:+0:+500:Temporal
+C:a:k:+1000:+500:Runecraft
+C:a:O:19:12:1d1
+C:a:O:17:1:10d3
+C:a:O:105:1:1d1
+C:a:g:All Gods
+
+C:a:N:Engineer
+C:a:D:Engineers use trapping kits instead of conventional missile launchers
+C:a:D:to strike at enemies from afar
+C:a:k:+0:+100:Archery
+C:a:k:+0:+500:Antimagic
+C:a:k:-1000:+200:Magic
+C:a:k:+0:-100:Magic-Device
+C:a:b:1:Trapping
+C:a:O:23:4:1d1
+C:a:O:46:1:1d1
+C:a:O:16:1:10d3
+C:a:O:16:1:10d3
+C:a:g:All Gods
+
+C:a:N:Boulder-hurler
+C:a:D:An incredibly strong archer that takes to throwing heavy
+C:a:D:boulders rather than shooting.
+C:a:k:-1000:-150:Archery
+C:a:k:+0:-100:Bow-mastery
+C:a:k:+0:-100:Crossbow-mastery
+C:a:k:+0:-100:Sling-mastery
+C:a:k:+0:-100:Boomerang-mastery
+C:a:k:+1000:+800:Boulder-throwing
+C:a:k:+0:-100:Magic
+C:a:k:+0:-100:Magic-Device
+C:a:k:+0:-200:Sneakiness
+
+C:a:N:Ammoless archer
+C:a:D:A rare class of archer, they prefer to fire boomerangs that
+C:a:D:require no ammo, supplemented by magical arrows of mana.
+C:a:k:+0:-100:Bow-mastery
+C:a:k:+0:-100:Crossbow-mastery
+C:a:k:+0:-100:Sling-mastery
+C:a:k:+1000:+700:Boomerang-mastery
+C:a:k:+1000:+700:Magic
+C:a:k:+1000:+1000:Mana
+C:a:O:15:1:1d1
+C:a:O:111:50:1d1
+C:a:b:2:Perfect casting
+
+C:a:N:Sniper
+C:a:D:Snipers are hit and run archers, who will sneak up on monsters
+C:a:D:and shoot them before fleeing themselves.
+C:a:k:+0:-200:Combat
+C:a:k:-1000:-200:Weaponmastery
+C:a:k:+0:+200:Bow-mastery
+C:a:k:+0:+200:Crossbow-mastery
+C:a:k:+0:+200:Sling-mastery
+C:a:k:+0:+200:Boomerang-mastery
+C:a:k:+1000:+1200:Stealth
+C:a:k:+0:+200:Sneakiness
+C:a:k:+0:+800:Dodging
+C:a:k:+0:+300:Divination
+C:a:k:+0:+500:Temporal
+C:a:k:+1000:+700:Conveyance
+C:a:k:+0:+300:Magic
+C:a:k:+0:-300:Magic-Device
+C:a:O:19:12:1d1
+C:a:O:19:2:1d1
+C:a:O:17:1:10d3
+C:a:O:17:1:10d3
+C:a:g:All Gods
+C:a:b:2:Ammo creation
+C:a:b:10:Tree walking
+
 C:a:N:Weird archer
 C:a:D:Archer with weird skills
 C:a:k:+0:+400:Sorcery
@@ -684,6 +1032,206 @@ C:a:k:+0:-1000:Disarming
 C:a:k:+0:+1000:Backstab
 C:a:k:+0:-1800:Stealing
 C:a:k:+0:-800:Magic-Device
+
+C:a:N:Chemist
+C:a:D:Chemists have discovered that mixing essences can be a quick and dirty
+C:a:D:way to get magical effects that are a great supplement to the sneaking
+C:a:D:skills normally studied by rogues.
+C:a:k:+0:-500:Disarming
+C:a:k:+0:-500:Stealth
+C:a:k:+0:-1000:Stealing
+C:a:k:+0:+100:Magic
+C:a:k:+0:-300:Magic-Device
+C:a:b:1:Trapping
+C:a:O:31:1:1d1
+C:a:O:23:4:1d1
+C:a:O:4:2:4d2
+C:a:g:All Gods
+
+C:a:N:Slayer
+C:a:D:Similar to assassins, instead of spending all of their time training
+C:a:D:to be silent killers, they spend some training in how to subvert their
+C:a:D:victims and get inside their minds.
+C:a:k:+0:+100:Combat
+C:a:k:+0:+100:Weaponmastery
+C:a:k:+0:+200:Sword-mastery
+C:a:k:+0:+200:Critical-hits
+C:a:k:+1000:+300:Boomerang-mastery
+C:a:k:+0:+100:Magic
+C:a:k:+0:+100:Divination
+C:a:k:+0:+600:Mind
+C:a:k:+0:+500:Stealth
+C:a:k:+0:-1500:Disarming
+C:a:k:+0:+700:Backstab
+C:a:k:+0:-1000:Stealing
+C:a:k:+0:-200:Magic-Device
+C:a:O:23:4:1d1
+C:a:g:All Gods
+
+C:a:N:Shadowblade
+C:a:D:Shadowblades are deadly assassins who have trained in a secret martial
+C:a:D:art steeped in darkness and death.  Their most feared talent is the
+C:a:D:ability to conjure a blade out of darkness itself.
+C:a:k:+0:+100:Combat
+C:a:k:+0:+100:Weaponmastery
+C:a:k:+0:+300:Sword-mastery
+C:a:k:+1000:+300:Critical-hits
+C:a:k:+1000:+300:Boomerang-mastery
+C:a:k:+0:+100:Magic
+C:a:k:+0:-500:Divination
+C:a:k:+0:-500:Temporal
+C:a:k:+1000:+500:Necromancy
+C:a:k:+0:+1000:Stealth
+C:a:k:+0:-1500:Disarming
+C:a:k:+0:+1000:Backstab
+C:a:k:=0:=0:Stealing
+C:a:k:+0:-800:Magic-Device
+C:a:g:All Gods
+
+C:a:N:Reaper
+C:a:D:A mysterious class that revels in death.
+C:a:D:They reap countless enemies, powering their magic.
+C:a:k:+0:+100:Combat
+C:a:k:+0:+100:Weaponmastery
+C:a:k:=0:=0:Sword-mastery
+C:a:k:=0:=0:Critical-hits
+C:a:k:+1000:+300:Polearm-mastery
+C:a:k:+0:+500:Magic
+C:a:k:+0:+500:Necromancy
+C:a:k:+0:-500:Stealth
+C:a:k:+0:-500:Backstab
+C:a:k:+0:-1500:Stealing
+C:a:b:45:Undead Form
+C:a:O:36:2:1d1
+C:a:O:31:1:1d1
+C:a:O:22:17:1d1 
+
+C:a:N:Trapper
+C:a:D:Trappers are experts at avoiding monsters attacks, both physically and
+C:a:D:magicaly, while setting powerful traps to slay enemies.
+C:a:k:=0:=0:Combat
+C:a:k:=0:=0:Weaponmastery
+C:a:k:=0:=0:Sword-mastery
+C:a:k:=0:=0:Axe-mastery
+C:a:k:=0:=0:Boomerang-mastery
+C:a:k:=0:=0:Bearform-combat
+C:a:k:=0:=0:Critical-hits
+C:a:k:=20000:+0:Archery
+C:a:k:+1000:+400:Conveyance
+C:a:k:=0:=0:Backstab
+C:a:k:+0:+500:Stealth
+C:a:k:+0:-500:Stealing
+C:a:b:1:Trapping
+C:a:b:10:Ammo creation
+C:a:k:+1000:-550:Magic-Device
+C:a:O:46:1:3d1
+C:a:O:46:4:1d1
+C:a:O:16:1:6d6
+C:a:O:71:6:3d1
+
+C:a:N:Technician
+C:a:D:Technicians are strange rogues that do not know how to fight, but 
+C:a:D:are extremely knowledgeable about magical devices.
+C:a:k:=0:=0:Combat
+C:a:k:=0:=0:Weaponmastery
+C:a:k:=0:=0:Sword-mastery
+C:a:k:=0:=0:Axe-mastery
+C:a:k:=0:=0:Boomerang-mastery
+C:a:k:=0:=0:Bearform-combat
+C:a:k:=0:=0:Critical-hits
+C:a:k:+0:-500:Temporal
+C:a:k:+1000:+900:Meta
+C:a:k:+0:-500:Conveyance
+C:a:k:+1000:+800:Divination
+C:a:k:+0:+100:Magic
+C:a:k:=0:=0:Backstab
+C:a:k:+1000:+450:Magic-Device
+C:a:O:66:22:1d1
+
+C:a:N:Spy
+C:a:D:Spies are well taught in the use of gadgets, and are used to sneaking
+C:a:D:and gathering information before any fight.
+C:a:k:+1000:-50:Magic-Device
+C:a:k:=0:=0:Temporal
+C:a:k:+0:+500:Meta
+C:a:k:+1000:+500:Stealth
+C:a:k:+0:-500:Backstab
+C:a:k:+0:-1000:Stealing
+C:a:k:+0:-1000:Dodging
+C:a:b:10:Extra Max Blow(1)
+C:a:b:20:Trapping
+C:a:O:23:4:1d1
+
+C:a:N:Thug
+C:a:D:Unlike most rogues,thugs rely on thier abilities in punch-ups,
+C:a:D:and support from their buddies rather than stealth or weapons.
+C:a:k:+1000:+900:Barehand-combat
+C:a:k:+0:-200:Weaponmastery
+C:a:k:-1000:-300:Sword-mastery
+C:a:k:-1000:-500:Critical-hits
+C:a:k:+0:-100:Conveyance
+C:a:k:+0:-100:Divination
+C:a:k:+0:-100:Temporal
+C:a:k:+0:-500:Sneakiness
+C:a:k:=0:=0:Stealth
+C:a:k:+0:-500:Disarming
+C:a:k:+0:-500:Backstab
+C:a:k:=0:-1050:Magic-Device
+C:a:k:+1000:+600:Summoning
+C:a:k:+1000:+700:Corpse-preservation
+
+C:a:N:Pirate
+C:a:D:Pirates are well trained in sword-play and some basic magic, but are
+C:a:D:not so good at sneaking, and always chalange enemies directly.
+C:a:k:+0:+700:Sword-mastery
+C:a:k:+0:+200:Critical-hits
+C:a:k:+0:+100:Magic
+C:a:k:+0:-350:Magic-Device
+C:a:k:+0:+100:Conveyance
+C:a:k:+0:+100:Temporal
+C:a:k:+0:+100:Divination
+C:a:k:+0:-500:Sneakiness
+C:a:k:-1000:-1000:Backstab
+C:a:k:+0:-500:Stealth
+C:a:k:+0:-1000:Disarming
+C:a:O:23:12:1d1
+C:a:O:35:1:1d1
+#Yo-ho-ho and a potion of confusion! :-)
+C:a:O:71:9:2d3
+C:a:b:10:Extra Max Blow(1)
+C:a:b:20:Extra Max Blow(2)
+
+C:a:N:Corpse-master
+C:a:D:A cold-hearted rogue that can preserve and use the corpses of
+C:a:D:his victims for his own use.
+C:a:k:+0:-100:Combat
+C:a:k:+0:-100:Weaponmastery
+C:a:k:+0:-100:Conveyance
+C:a:k:+0:-100:Divination
+C:a:k:+0:-100:Temporal
+C:a:k:+0:-100:Spirituality
+C:a:k:+0:-500:Sneakiness
+C:a:k:+0:-500:Stealth
+C:a:k:+0:-1000:Disarming
+C:a:k:+0:-1000:Stealing
+C:a:k:+0:-1000:Dodging
+C:a:k:+1000:+1200:Corpse-preservation
+C:a:k:+0:+650:Necromancy
+C:a:k:+0:+650:Possession
+C:a:k:+0:+650:Summoning
+C:a:O:46:1:1d1
+C:a:O:23:4:1d1
+
+C:a:N:Gambler
+C:a:D:A rogue that learns to gamble everything. As they get more experienced
+C:a:D:or gain extra luck, they learn to tip the skales in there favour...
+C:a:k:+0:-500:Divination
+C:a:k:+0:-500:Temporal
+C:a:k:+0:-500:Conveyance
+C:a:k:+0:-500:Disarming
+C:a:k:+0:-500:Stealing
+C:a:k:+0:-500:Dodging
+C:a:G:EXPERIMENTAL
 
 C:a:N:Weird rogue
 C:a:D:Rogue with weird skills
@@ -874,6 +1422,198 @@ C:a:k:+0:-100:Symbiosis
 C:a:k:+0:-100:Mimicry
 C:a:k:+1000:+500:Music
 
+C:a:N:Assimilator
+C:a:D:Assimilators absorb the magic of staves and wands to be released later
+C:a:D:when they see fit.  Assimilators can also absorb the magic of rings and
+C:a:D:amulets, making the magic work without the item.
+C:a:O:21:3:1d1
+C:a:k:+0:-100:Weaponmastery
+C:a:k:+0:-100:Archery
+C:a:k:=0:=0:Barehand-combat
+C:a:k:-1000:+0:Sneakiness
+C:a:k:=0:=0:Stealth
+C:a:k:-1000:-200:Disarming
+C:a:k:+0:+200:Magic
+C:a:k:+0:+500:Meta
+C:a:k:+0:-200:Spirituality
+C:a:k:+0:-300:Music
+C:a:k:+0:-200:Monster-lore
+C:a:k:=0:=0:Corpse-preservation
+C:a:k:=0:=0:Possession
+C:a:k:=0:=0:Summoning
+C:a:k:=0:=0:Symbiosis
+C:a:k:+0:+200:Mimicry
+
+C:a:N:Jack
+C:a:D:Jack of all trades, master of none, Jack's can learn all skills,
+C:a:D:they just can't get very good at any, regardless of race.
+C:a:k:=0:=600:Combat
+C:a:k:=0:=600:Weaponmastery
+C:a:k:=0:=600:Sword-mastery
+C:a:k:=0:=600:Critical-hits
+C:a:k:=0:=600:Axe-mastery
+C:a:k:=0:=600:Hafted-mastery
+C:a:k:=0:=600:Stunning-blows
+C:a:k:=0:=600:Polearm-mastery
+C:a:k:=0:=600:Archery
+C:a:k:=0:=600:Sling-mastery
+C:a:k:=0:=600:Bow-mastery
+C:a:k:=0:=600:Crossbow-mastery
+C:a:k:=0:=600:Boomerang-mastery
+C:a:k:=0:=600:Barehand-combat
+C:a:k:=0:=600:Bearform-combat
+C:a:k:=0:=600:Boulder-throwing
+C:a:k:=0:=600:Antimagic
+C:a:k:=0:=600:Sneakiness
+C:a:k:=0:=600:Stealth
+C:a:k:=0:=600:Disarming
+C:a:k:=0:=600:Dodging
+C:a:k:=0:=600:Stealing
+C:a:k:=0:=600:Backstab
+C:a:k:=0:=600:Magic
+C:a:k:=0:=600:Magic-Device
+C:a:k:=0:=600:Spell-power
+C:a:k:=0:=600:Sorcery
+C:a:k:=0:=600:Geomancy
+C:a:k:=0:=600:Mana
+C:a:k:=0:=600:Fire
+C:a:k:=0:=600:Water
+C:a:k:=0:=600:Air
+C:a:k:=0:=600:Earth
+C:a:k:=0:=600:Meta
+C:a:k:=0:=600:Conveyance
+C:a:k:=0:=600:Divination
+C:a:k:=0:=600:Temporal
+C:a:k:=0:=600:Mind
+C:a:k:=0:=600:Nature
+C:a:k:=0:=600:Demonology
+C:a:k:=0:=600:Necromancy
+C:a:k:=0:=600:Runecraft
+C:a:k:=0:=600:Thaumaturgy
+C:a:k:=0:=600:Alchemy
+C:a:k:=0:=600:Spirituality
+C:a:k:=0:=600:Prayer
+C:a:k:=0:=600:Mindcraft
+C:a:k:=0:=600:Music
+C:a:k:=0:=600:Monster-lore
+C:a:k:=0:=600:Summoning
+C:a:k:=0:=600:Corpse-preservation
+C:a:k:=0:=600:Possession
+C:a:k:=0:=600:Symbiosis
+C:a:k:=0:=600:Mimicry
+C:a:O:111:50:1d1
+C:a:O:19:12:1d1
+C:a:O:17:1:4d5
+C:a:O:36:6:1d1
+C:a:O:23:8:1d1
+C:a:g:All Gods
+
+C:a:N:Ascetic
+C:a:D:A monk that has sworn of worldly possessions, relying only on
+C:a:D:their own body, mind and soul.
+C:a:k:-1000:-300:Weaponmastery
+C:a:k:-1000:-300:Archery
+C:a:k:+0:+300:Barehand-combat
+C:a:k:+0:+200:Magic
+C:a:k:+0:+500:Stealth
+C:a:k:+0:+200:Disarming
+C:a:k:+0:+200:Spirituality
+C:a:k:-1000:-600:Monster-lore
+C:a:k:+0:-500:Possession
+C:a:k:+0:-500:Summoning
+C:a:k:+0:-500:Symbiosis
+C:a:k:+0:-500:Mimicry
+C:a:k:+0:-300:Music
+C:a:k:+1000:+750:Mindcraft
+C:a:k:+1000:+1000:Dodging
+C:a:k:+0:+400:Prayer
+C:a:k:-1000:-700:Corpse-preservation
+C:a:O:71:37:1d1
+C:a:O:36:4:1d1
+C:a:g:All Gods
+
+C:a:N:Tourist
+C:a:D:Tourists are on a vacation from Lower-earth, and are
+C:a:D:unprepared for the harsh relaties of Middle-earth.	
+C:a:k:+0:-700:Monster-lore
+C:a:k:=0:=0:Prayer
+C:a:k:+0:+200:Antimagic
+C:a:k:-1000:-500:Magic-Device
+C:a:k:-1000:-450:Combat
+C:a:k:+0:-600:Weaponmastery
+C:a:k:+0:+300:Dodging
+C:a:k:-1000:-700:Archery
+C:a:k:+0:-200:Barehand-combat
+C:a:k:+0:-200:Magic
+C:a:k:-1000:-700:Sneakiness
+C:a:k:=0:=0:Stealth
+C:a:k:-1000:-400:Disarming
+C:a:k:=0:=0:Spirituality
+C:a:k:+0:-500:Possession
+C:a:k:=0:=0:Corpse-preservation
+C:a:k:+0:-500:Summoning
+C:a:k:+0:-50:Symbiosis
+C:a:k:+0:-500:Mimicry
+C:a:k:+1000:+400:Runecraft
+C:a:k:+0:+300:Alchemy
+C:a:g:Nobody
+
+C:a:N:Polymath
+C:a:D:Jack of all trades and master of none, a Polymath learns nearly 
+C:a:D:everything equally well.  Only a few highly specialized skills 
+C:a:D:are out of his reach.
+C:a:O:36:10:1d1
+C:a:O:111:50:1d1
+C:a:O:40:6:1:1d1
+C:a:k:=0:=0:Antimagic
+C:a:k:=0:=0:Demonology
+C:a:k:=0:=0:Necromancy
+C:a:k:=0:=0:Prayer
+C:a:k:=0:=0:Sorcery
+C:a:k:=0:=0:Udun
+C:a:k:=0:=0:Axe-mastery
+C:a:k:=0:=0:Hafted-mastery
+C:a:k:=0:=0:Polearm-mastery
+C:a:k:=0:=0:Sword-mastery
+C:a:k:=0:=0:Bow-mastery
+C:a:k:=0:=0:Crossbow-mastery
+C:a:k:=0:=0:Sling-mastery
+C:a:k:=0:=0:Boomerang-mastery
+C:a:k:+0:+300:Combat
+C:a:k:+0:+100:Archery
+C:a:k:+0:+100:Weaponmastery
+C:a:k:+0:+100:Barehand-combat
+C:a:k:+0:+300:Sneakiness
+C:a:k:+0:+100:Stealth
+C:a:k:+0:+100:Disarming
+C:a:k:+0:+400:Dodging
+C:a:k:+0:+700:Spirituality
+C:a:k:+0:+400:Music
+C:a:k:+0:+300:Monster-lore
+C:a:k:+0:+100:Corpse-preservation
+C:a:k:+0:+300:Mimicry
+C:a:k:+0:+300:Summoning
+C:a:k:+0:+300:Symbiosis
+C:a:k:+1000:+400:Magic
+C:a:k:+0:+400:Magic-Device
+C:a:k:+0:+700:Geomancy
+C:a:k:+0:+400:Fire
+C:a:k:+0:+400:Water
+C:a:k:+0:+400:Air
+C:a:k:+0:+400:Earth
+C:a:k:+0:+400:Mana
+C:a:k:+0:+400:Conveyance
+C:a:k:+0:+400:Nature
+C:a:k:+0:+400:Temporal
+C:a:k:+0:+400:Divination
+C:a:k:+0:+400:Meta
+C:a:k:+0:+400:Mind
+C:a:k:+0:+400:Alchemy
+C:a:k:+0:+400:Runecraft
+C:a:k:+0:+400:Spell-power
+C:a:k:+0:+400:Thaumaturgy
+C:g:Nobody
+
 C:a:N:Weird loremaster
 C:a:D:Loremaster with weird skills
 C:a:k:+0:+400:Udun
@@ -1038,6 +1778,21 @@ C:a:k:+0:-200:Necromancy
 C:a:k:+1000:+300:Mindcraft
 C:a:k:+0:+200:Sneakiness
 C:a:k:+0:+100:Magic-Device
+
+C:a:N:Healer
+C:a:D:A healer comes from Gondolin's House of Healing, and
+C:a:D:is better at healing wounds rather than inflicting them.
+C:a:k:+0:-600:Necromancy
+C:a:k:-2000:-300:Combat
+C:a:k:-1000:-300:Weaponmastery
+C:a:k:+1000:+700:Nature
+C:a:k:+0:+500:Mind
+C:a:k:+1000:+500:Summoning
+C:a:g:Yavanna Kementari
+C:a:g:Eru Iluvatar
+C:a:k+1000:+400:Symbiosis
+C:a:O:21:5:1d1
+C:a:k:+1000:+700:Monster-lore
 
 C:a:N:Weird priest
 C:a:D:Priest with weird skills
@@ -1637,6 +2392,258 @@ R:k:+000:+000:Sneakiness
 R:k:+000:+000:Weaponmastery
 R:k:+000:+000:Archery
 
+R:N:22:Gremlin
+R:D:Intelligent creatures from the island of Viliarc. They are somewhat badly looked upon in 
+R:D:the rest of the world though, because of how they look. They are good at many things 
+R:D:though.
+R:S:0:1:1:1:0:-2:0
+R:K:5:2:1:3:2:1:1:1
+R:P:9:90:10:6
+R:M:50:50:82:5:190:20:78:6:180:15
+R:E:1:1:1:2:1:1
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:R:1:1
+R:F:RES_DARK | RES_FIRE
+R:R:25:1
+R:F:RES_NETHER | RES_NEXUS | RES_CHAOS | SPEED
+R:R:50:1
+R:F:SPEED
+R:k:+0:+200:Combat
+R:k:+0:+200:Meta
+R:k:+0:+200:Monster-lore
+
+R:N:23:Centaur
+R:D:Human bodies on top equine torso and legs. Very fast at running. They
+R:D:Prefer bows to swords though. Centaurs are very logical beings, thus
+R:D:they don't believe in magic.
+R:S:2:1:3:0:2:0:-2
+R:K:0:-10:10:0:10:15:10:15
+R:P:10:200:0:84
+R:M:20:3:60:3:80:4:54:3:70:4
+R:E:1:1:1:2:1:2
+R:R:1:5
+R:F:SPEED | 
+R:R:5:1
+R:F:SPEED | 
+R:R:10:1
+R:F:SPEED | 
+R:R:15:1
+R:F:SPEED | 
+R:R:20:1
+R:F:SPEED | 
+R:R:25:1
+R:F:SPEED | 
+R:R:30:1
+R:F:SPEED | 
+R:R:35:1
+R:F:SPEED | 
+R:R:40:1
+R:F:SPEED | 
+R:R:45:1
+R:F:SPEED |
+R:R:50:2
+R:F:SPEED | 
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:k:+0:+200:Bow-mastery
+R:k:+0:+300:Antimagic
+
+R:N:24:Sea-Elf
+R:D:Sea-Elves live in and around the coasts.
+R:D:Their life at sea has made them hardier then most elves and they are in tune with the
+R:D:powers of water. Most have also developped gills.
+R:S:1:1:-2:1:-1:0:2
+R:K:5:5:5:4:8:12:2:3
+R:P:10:200:2:0
+R:M:20:500:60:4:100:6:54:4:80:6
+R:E:1:1:1:2:1:1
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:G:ELF
+R:k:+500:+150:Water
+R:R:10:10
+R:F:RES_COLD 
+R:R:1:0
+R:F:WATER_BREATH | RES_FIRE
+R:Z:spit acid
+
+R:N:25:Deep-Elf
+R:D:Earth elves are elves that were long ago driven underground during one of the great wars.
+R:D:Earth elves hardly resemble normal elves any more. They have been twisted and mutated by
+R:D:the extreme heat of their caves and the darkness, though they have many good abilities.
+R:S:1:-1:-2:0:1:-2:-1
+R:K:5:5:5:4:6:7:1:2
+R:P:12:115:5:0
+R:M:20:500:60:4:100:6:54:4:80:6
+R:E:1:1:1:2:1:1
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:G:ELF 
+R:k:+500:+150:Fire
+R:k:+500:+150:Earth
+R:R:1:0
+R:F:RES_FIRE | RES_ELEC
+R:R:30:0
+R:F:SEE_INVIS | 
+R:R:20:10
+R:F:RES_FIRE | 
+R:R:20:0
+R:F:RES_DARK | RES_LITE
+R:R:40:0
+R:F:IGNORE_FIRE
+R:Z:fire breath
+
+R:N:26:Ice-Dwarf
+R:D:They inhabit the cold northern regions of the world, they are very strong
+R:D:Miners and fighters of legend. These Dwarves stayed in the north since before the eldar
+R:D:came.They are stronger than normal dwarves.
+R:S:3:-4:1:-3:3:-4:0
+R:K:2:9:10:-1:7:10:15:2
+R:P:11:125:0:16
+R:M:35:15:48:3:150:10:46:3:120:10
+R:E:1:1:1:2:1:1
+R:Z:find secret passages
+R:R:1:0
+R:F:RES_BLIND | RES_COLD 
+R:R:30:0
+R:F:IGNORE_COLD
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:k:+0:+200:Axe-mastery
+R:Z:cold touch
+
+R:N:27:Lizardman
+R:D:Intelligent lizard beings of the depths. Enormous beasts, scaly and green, these 
+R:D:monsters are under command of the dread basilisks.
+R:S:3:-4:-3:-1:3:-5:-4
+R:K:-2:-1:4:0:-1:3:10:5
+R:P:11:80:10:0
+R:M:14:256:100:350:100:350:50:300:50:300
+R:E:1:1:1:2:1:1
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:R:1:0
+R:F:RES_POIS | RES_FEAR | RES_ACID
+R:R:10:5
+R:F:RES_POIS | RES_FEAR | RES_ACID | FREE_ACT
+R:R:20:10
+R:F:RES_POIS | RES_FEAR | RES_ACID | RES_DISEN
+R:R:30:15
+R:F:RES_POIS | RES_FEAR | RES_ACID
+R:R:40:20
+R:F:RES_POIS | RES_FEAR | RES_ACID
+R:R:50:25
+R:F:RES_POIS | RES_FEAR | RES_ACID
+
+R:N:28:Ancipital
+R:D:So called for their ancipital horns. They are remotely humanoid and have thick, 
+R:D:shaggy fur. They feel at home in cold environments, and are afraid of fire and 
+R:D:water. They cannot wear some headgear, as their horns get in the way.
+R:S:4:-1:2:-4:3:-5:0
+R:K:3:5:2:-2:0:0:10:0
+R:P:11:150:5:87
+R:M:40:12:43:3:92:6:40:3:78:3
+R:E:1:1:1:2:1:1
+R:R:1:0
+R:F:SENS_FIRE | SLOW_DIGEST | RES_COLD |
+R:R:40:0
+R:F:IM_COLD |
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+
+R:N:29:Dolgsman
+R:D:The height of these humanoids are about waist-high compared to humans. 
+R:D:Dolgsmen have black fur and prefer to stay underground. 
+R:S:-1:0:1:3:-3:-4:0
+R:K:5:5:5:3:10:10:0:10
+R:P:7:130:4:10
+R:M:21:12:36:3:60:3:33:3:50:3
+R:E:1:1:1:2:1:1
+R:R:1:0
+R:F:HOLD_LIFE | RES_BLIND |
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+
+R:N:30:Nomad
+R:D:These proto-gnostic nomads travel the Earth all their life. 
+R:D:They're a bit smaller than humans and more agile.
+R:D:They have bird-like voices and are generally liked by humans.
+R:S:-2:2:0:1:-2:4:0
+R:K:5:2:5:2:4:3:5:5
+R:P:9:130:4:13
+R:M:50:40:42:3:90:6:39:3:75:3
+R:E:1:1:1:2:1:1
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:F:SUST_DEX
+
+R:N:31:Fawn
+R:D:Human from the waist up, but with
+R:D:goat feet, these creatures are merry
+R:D:dancers.
+R:S:-1:-1:0:3:0:4:5
+R:K:10:10:5:12:8:12:0:0
+R:P:9:145:5:10
+R:M:14:6:72:6:120:10:60:4:100:9
+R:E:1:1:1:2:1:0
+R:R:1:0
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:k:+0:+300:Music
+
+R:N:32:Satre
+R:D:Similar to Fawns, but more goat-like
+R:D:and less intelligent.
+R:S:-2:-3:0:6:-2:2:5
+R:K:10:10:5:14:10:15:0:0
+R:P:8:100:7:10
+R:M:14:6:70:6:110:10:60:4:95:9
+R:E:1:0:1:2:1:0
+R:R:1:0
+R:F:SUST_DEX | 
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:k:+0:+400:Music
+
+R:N:33:Giant
+R:D:A small, but genuine, giant
+R:S:10:-5:-5:-3:10:-2:1
+R:K:-5:-10:2:-5:-2:-2:15:-2
+R:P:15:200:0:69
+R:M:14:6:360:30:900:125:330:20:750:100
+R:E:1:1:1:2:1:1
+R:F:SUST_CON
+R:k:+0:+600:Boulder-throwing
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+
+R:N:34:Dufflepud
+R:D:Dufflepuds are a remarkably stupid group of dwarfs who were
+R:D:punished for their lazy natures by being altered so that
+R:D:they have a single, immense, and rather noisy, foot.
+R:S:1:-5:-5:-5:1:-5:-5
+R:K:-5:-10:-5:-15:-10:-10:1:1
+R:P:10:60:0:16
+R:M:15:8:52:4:160:18:50:4:140:15
+R:E:1:1:1:2:1:1
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+
+R:N:35:Jotun
+R:D:Jotnar are an ancient race of giants from a world beyond Arda; though humans 
+R:D:fear their strength and cunning, their size tends to slow them down.
+R:S:3:1:1:-3:3:-5:-5
+R:K:-5:-8:-8:-2:-1:5:20:-10
+R:P:14:150:0:16
+R:M:255:70:72:6:100:25:66:4:100:20
+R:E:1:1:1:2:1:1
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:G:NO_GOD |
+R:R:1:0
+R:F:SUST_STR |
+R:R:1:-5
+R:F:SPEED |
+R:k:+1000:+200:Combat
+R:k:+0:+200:Weaponmastery
+R:k:+0:+500:Magic
+R:k:+0:+500:Runecraft
+R:k:=0:=0:Archery
+R:k:=0:=0:Bow-mastery
+R:k:=0:=0:Crossbow-mastery
+R:k:=0:=0:Boomerang-mastery
+R:k:=0:=0:Sling-mastery
+R:k:=0:=0:Prayer
+R:k:=0:=0:Demonology
+R:k:=0:=0:Udun
+
 ##############################################################################
 ##############################################################################
 ##############################################################################
@@ -1670,7 +2677,9 @@ S:E:0:0:0:0:0:0
 S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
 S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
-S:A:DeathMold | Yeek | Wood-Elf | Maia | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
+S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun
 
 # Just a place holder, the actualy setting are done with corruptions, see
 # corrupt.lua and player.lua
@@ -1685,7 +2694,9 @@ S:E:0:0:0:0:0:0
 S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
 S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
-S:A:DeathMold | Yeek | Wood-Elf | Maia | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
+S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun
 S:O:70:0:5d3
 S:O:70:32:2d3
 
@@ -1700,7 +2711,9 @@ S:E:0:0:0:0:0:0
 S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
 S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
-S:A:DeathMold | Yeek | Wood-Elf | Maia | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
+S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun
 S:G:UNDEAD | NO_CUT | NO_FOOD | SEMI_WRAITH | NO_SUBRACE_CHANGE
 S:R:1:0
 S:F:SEE_INVIS | HOLD_LIFE | 
@@ -1725,7 +2738,9 @@ S:E:0:0:0:0:0:0
 S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
 S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
-S:A:DeathMold | Yeek | Wood-Elf | Maia | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
+S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun
 S:G:UNDEAD | NO_CUT | NO_FOOD | NO_SUBRACE_CHANGE
 S:R:1:0
 S:F:SEE_INVIS | HOLD_LIFE | 
@@ -1751,7 +2766,9 @@ S:E:0:0:0:0:0:0
 S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
 S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
-S:A:DeathMold | Yeek | Wood-Elf | Maia | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
+S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun
 S:G:UNDEAD | NO_FOOD | NO_SUBRACE_CHANGE
 S:R:1:0
 S:F:SEE_INVIS | HOLD_LIFE | 
@@ -1777,7 +2794,9 @@ S:E:0:0:0:0:0:0
 S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
 S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
-S:A:DeathMold | Yeek | Wood-Elf | Maia | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
+S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun
 S:R:10:0
 S:F:RES_FEAR | 
 S:k:-200:+000:Disarming
@@ -1799,7 +2818,9 @@ S:E:0:0:0:0:0:0
 S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
 S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
-S:A:DeathMold | Yeek | Wood-Elf | Maia | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
+S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun
 S:k:+500:+000:Disarming
 S:k:+1000:+000:Magic-Device
 S:k:+500:+000:Spirituality
@@ -1821,7 +2842,9 @@ S:F:SEE_INVIS
 S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
 S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
-S:A:DeathMold | Yeek | Wood-Elf | Maia | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
+S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun
 S:O:70:32:25d2
 S:O:70:12:25d3
 
@@ -1834,6 +2857,103 @@ S:P:0:0:0
 S:M:0:0:0:0:0:0:0:0:0:0
 S:E:0:0:0:0:0:0
 
+S:N:10:Corrupted
+S:D:B:Infused with corruption, these unfortunates randomly gain
+S:D:B:and lose corruptions as they gain experience.
+S:S:0:0:0:0:0:0:0:100
+S:K:0:0:0:0:0:0:0:0
+S:P:0:20:0
+S:M:0:0:0:0:0:0:0:0:0:0
+S:E:0:0:0:0:0:0
+S:G:CORRUPT | NO_SUBRACE_CHANGE
+S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
+S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
+S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
+S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+
+S:N:11:Knight
+S:D:A:Mounted soldiers.
+S:D:A:Powerful in battle, but they rely more on weapons than magic.
+S:S:3:-2:1:-2:3:3:0:25
+S:K:5:-5:-5:-10:-5:-5:12:-10
+S:P:10:75:0
+S:M:0:0:0:0:0:0:0:0:0:0
+S:E:0:0:0:0:0:0
+S:G:NO_SUBRACE_CHANGE
+S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
+S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
+S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
+S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+S:F:RES_FEAR
+S:k:+0:+200:Polearm-mastery
+S:k:+0:-200:Archery
+
+S:N:12:Lucky
+S:D:A:Once in a while, there are born beings so lucky that they are 
+S:D:A:scorned for life by everyone who comes near.
+S:S:0:0:0:0:0:0:0:0
+S:K:0:0:0:0:0:0:0:0
+S:P:0:40:0
+S:M:0:0:0:0:0:0:0:0:0:0
+S:E:0:0:0:0:0:0
+S:G:NO_SUBRACE_CHANGE |
+S:F:AGGRAVATE |
+S:R:5:2
+S:F:LUCK |
+S:R:10:2
+S:F:LUCK |
+S:R:15:2
+S:F:LUCK |
+S:R:20:2
+S:F:LUCK |
+S:R:25:2
+S:F:LUCK |
+S:R:30:2
+S:F:LUCK |
+S:R:35:2
+S:F:LUCK |
+S:R:40:2
+S:F:LUCK |
+S:R:45:2
+S:F:LUCK |
+S:R:50:2
+S:F:LUCK |
+S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
+S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
+S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
+S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+
+S:N:13:Herald
+S:D:B:Herald Angels have the Archangel Gabriel as patron.  They are more charismatic 
+S:D:B:than other angels, and resist sound-based attacks especially well.  They make 
+S:D:B:poor archers though, as they are used to carrying instruments rather than bows.
+S:S:-2:0:0:0:0:2:0:100
+S:K:5:10:5:3:4:10:-5:-10
+S:P:0:125:0
+R:M:10000:5000:72:6:180:25:66:4:150:20
+R:E:1:1:1:2:1:1
+S:A:Human | Half-Elf | Elf | Hobbit | Gnome | Dwarf | 
+S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning | 
+S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
+S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
+S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+S:G:NO_SUBRACE_CHANGE |
+S:R:1:0
+S:F:RES_SOUND | SUST_CHR 
+S:C:F:Archer |
+S:k:+1000:+200:Music
+S:k:=0:=0:Archery
+R:k:=0:=0:Bow-mastery
+R:k:=0:=0:Crossbow-mastery
+R:k:=0:=0:Boomerang-mastery
+R:k:=0:=0:Sling-mastery
 
 ##############################################################################
 ##############################################################################
