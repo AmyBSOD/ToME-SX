@@ -1112,6 +1112,23 @@ int return_level()
 
 	if (sti_ptr->flags1 & SF1_ALL_ITEM) level += p_ptr->lev;
 
+	switch (randint(1000)) {
+
+		case 94:
+		case 95:
+		case 96:
+		case 97:
+		case 98:
+			level += rand_int(20);
+			break;
+		case 99:
+			level += rand_int(100);
+			break;
+		default:
+			break;
+
+	}
+
 	return (level);
 }
 

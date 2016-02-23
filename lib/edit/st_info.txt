@@ -43,8 +43,7 @@ I:70:& Bolt~
 I:70:& Arrow~
 I:98:& Cloak~
 I:46:& Fur Cloak~
-T:10:20:9
-T:5:20:19
+T:5:20:256
 A:0:0:1:2:3:4
 O:0:5:6:7
 G:1:U
@@ -72,14 +71,14 @@ I:80:& Set~ of Gauntlets
 I:100:& Small Leather Shield~
 I:90:& Large Leather Shield~
 I:80:& Small Metal Shield~
-T:10:30:20
-T:10:31:20
-T:10:32:20
-T:10:33:20
-T:10:34:20
-T:10:35:20
-T:10:36:20
-T:10:37:20
+T:5:30:256
+T:5:31:256
+T:5:32:256
+T:5:33:256
+T:5:34:256
+T:5:35:256
+T:5:36:256
+T:5:37:256
 A:0:0:1:2:3:4
 O:8:9:10:11
 G:2:s
@@ -117,10 +116,10 @@ I:100:& Arrow~
 I:100:& Bolt~
 I:100:& Whip~
 I:100:& Small Wooden Boomerang~
-T:20:21:20
-T:20:22:20
-T:20:23:20
-T:20:24:20
+T:5:21:256
+T:5:22:256
+T:5:23:256
+T:5:24:256
 A:23:0:1:2:3:4
 O:12:13:14:15
 G:3:w
@@ -215,8 +214,6 @@ I:100:*Identify*
 I:100:*Identify*
 I:100:*Identify*
 I:100:*Identify*
-I:100:*Identify*
-I:100:*Identify*
 I:100:Light
 I:100:Restore Strength
 T:100:71:42
@@ -232,8 +229,8 @@ I:100:Recharging
 I:100:Satisfy Hunger
 I:100:Satisfy Hunger
 I:100:Satisfy Hunger
-T:50:70:20
-T:20:70:40
+T:5:70:256
+T:5:71:256
 A:0:0:1:2:3:4
 O:30:31:32:33
 G:5:b
@@ -272,6 +269,10 @@ T:100:55:14
 T:60:55:15
 T:60:55:16
 T:60:55:17
+T:5:40:256
+T:5:45:256
+T:5:55:256
+T:5:65:256
 A:0:0:1:2:3:4
 O:34:35:36:37
 G:6:r
@@ -300,6 +301,7 @@ T:100:111:255
 T:100:111:255
 T:100:111:255
 T:100:111:255
+T:5:111:256
 A:0:0:1:2:3:4
 O:42:43:44:45
 G:9:o
@@ -327,6 +329,7 @@ I:100:& Hard Biscuit~
 I:100:& Strip~ of Venison
 I:100:& Pint~ of Fine Wine
 I:100:& Pint~ of Fine Ale
+T:5:80:256
 A:2:4:5:6:7:0
 O:2:2:18:18
 G:+:w
@@ -452,6 +455,7 @@ I:100:& Hard Biscuit~
 I:100:& Strip~ of Venison
 I:100:& Pint~ of Fine Wine
 I:100:& Pint~ of Fine Ale
+T:5:80:256
 A:2:4:5:6:7:0
 O:59:59:59:59
 G:+:w
@@ -644,8 +648,10 @@ I:98:& Cloak~
 I:46:& Fur Cloak~
 I:100:Word of Recall
 I:100:Cure Critical Wounds
-T:10:20:9
-T:5:20:19
+T:5:20:256
+T:5:20:256
+T:5:80:256
+T:5:80:256
 A:0:0:1:2:3:4
 O:0:5:6:7
 G:1:U
@@ -730,6 +736,7 @@ I:100:& Hard Biscuit~
 I:100:& Strip~ of Venison
 I:100:& Pint~ of Fine Wine
 I:100:& Pint~ of Fine Ale
+T:5:80:256
 A:2:4:5:6:7:0
 O:69:69:69:69
 G:+:w
@@ -746,6 +753,7 @@ I:75:& Dwarven Lantern~
 I:60:& Feanorian Lamp~
 T:60:65:6
 T:70:71:22
+T:5:39:256
 A:0:0:1:2:3:4
 O:11:15:26:40
 F:MEDIUM_LEVEL
