@@ -1086,6 +1086,15 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 		/* Trap of Sliding */
 	case TRAP_OF_SLIDING:
+
+			/* make this trap do something --Amy */
+			msg_print("You are pushed around!");
+			teleport_player(5);
+			/* ...unfortunately teleport_player does not return a value, even if the player has anti-teleportation,
+			 * so let's just always tell them what trap it is. */
+			ident = TRUE;
+			break;
+
 		break;
 
 		/* Trap of Charges Drain */
@@ -1375,6 +1384,48 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 		/* Trap of Decay */
 	case TRAP_OF_DECAY:
+		{
+			s16b i, j;
+			object_type *o_ptr;
+			char o_name[80];
+
+			/* code by Amy - this trap used to do nothing at all... */
+
+			for (j = 0; j < 10; j++)
+			{
+				/* Pick an item from the pack */
+				i = rand_int(INVEN_PACK);
+
+				/* Get the item */
+				o_ptr = &p_ptr->inventory[i];
+
+				/* Skip non-objects */
+				if (!o_ptr->k_idx) continue;
+
+				/* Skip non-food objects */
+				if (o_ptr->tval != TV_FOOD) continue;
+
+				/* Get a description */
+				object_desc(o_name, o_ptr, FALSE, 0);
+
+				/* Message */
+				msg_format("%sour %s (%c) was eaten!",
+				           ((o_ptr->number > 1) ? "One of y" : "Y"),
+				           o_name, index_to_label(i));
+
+				/* Steal the items */
+				inven_item_increase(i, -1);
+				inven_item_optimize(i);
+
+				/* Obvious */
+				ident = TRUE;
+
+				/* Done */
+				break;
+			}
+			if (!ident) msg_print("You hear a growling sound.");
+		}
+
 		break;
 
 		/* Trap of Wasting Wands */
@@ -1560,42 +1611,43 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/*
 		 * multiple missile traps
 		 * numbers range from 2 (level 0 to 14) to 10 (level 120 and up)
+		 * Amy edit: reduced amount of missiles so players aren't hopelessly instakilled
 		 */
 	case TRAP_OF_ARROWS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 15), TV_ARROW, SV_AMMO_NORMAL, 4, 8, 0, "Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_NORMAL, 4, 8, 0, "Arrow Trap");
 		break;
 	case TRAP_OF_ARROWS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 15), TV_BOLT, SV_AMMO_NORMAL, 5, 8, 0, "Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_NORMAL, 5, 8, 0, "Bolt Trap");
 		break;
 	case TRAP_OF_ARROWS_III:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 15), TV_ARROW, SV_AMMO_HEAVY, 6, 8, 0, "Seeker Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_HEAVY, 6, 8, 0, "Seeker Arrow Trap");
 		break;
 	case TRAP_OF_ARROWS_IV:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 15), TV_BOLT, SV_AMMO_HEAVY, 8, 10, 0, "Seeker Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_HEAVY, 8, 10, 0, "Seeker Bolt Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 15), TV_ARROW, SV_AMMO_NORMAL, 4, 8, 10 + randint(20), "Poison Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_NORMAL, 4, 8, 10 + randint(20), "Poison Arrow Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 15), TV_BOLT, SV_AMMO_NORMAL, 5, 8, 15 + randint(30), "Poison Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_NORMAL, 5, 8, 15 + randint(30), "Poison Bolt Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_III:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 15), TV_ARROW, SV_AMMO_HEAVY, 6, 8, 30 + randint(50), "Poison Seeker Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_HEAVY, 6, 8, 30 + randint(50), "Poison Seeker Arrow Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_IV:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 15), TV_BOLT, SV_AMMO_HEAVY, 8, 10, 40 + randint(70), "Poison Seeker Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_HEAVY, 8, 10, 40 + randint(70), "Poison Seeker Bolt Trap");
 		break;
 	case TRAP_OF_DAGGERS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 15), TV_SWORD, SV_BROKEN_DAGGER, 2, 8, 0, "Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_BROKEN_DAGGER, 2, 8, 0, "Dagger Trap");
 		break;
 	case TRAP_OF_DAGGERS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 15), TV_SWORD, SV_DAGGER, 3, 8, 0, "Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_DAGGER, 3, 8, 0, "Dagger Trap");
 		break;
 	case TRAP_OF_POISON_DAGGERS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 15), TV_SWORD, SV_BROKEN_DAGGER, 2, 8, 15 + randint(20), "Poison Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_BROKEN_DAGGER, 2, 8, 15 + randint(20), "Poison Dagger Trap");
 		break;
 	case TRAP_OF_POISON_DAGGERS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 15), TV_SWORD, SV_DAGGER, 3, 8, 20 + randint(30), "Poison Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_DAGGER, 3, 8, 20 + randint(30), "Poison Dagger Trap");
 		break;
 
 	case TRAP_OF_DROP_ITEMS:
@@ -2052,9 +2104,13 @@ void place_trap(int y, int x)
 	u32b flags;
 	cave_type *c_ptr = &cave[y][x];
 	dungeon_info_type *d_ptr = &d_info[dungeon_type];
+	int effect_level;
 
 	/* No traps in town or on first level */
-	if (dun_level <= 1) return;
+	/*if (dun_level <= 1) return;*/
+	if (dun_level > 0) effect_level = dun_level;
+	else effect_level = monster_level;
+	if (monster_level > dun_level) effect_level = monster_level;
 
 	/*
 	 * Avoid open doors -- because DOOR flag is added to make much more
@@ -2079,7 +2135,7 @@ void place_trap(int y, int x)
 		t_ptr = &t_info[trap];
 
 		/* No traps below their minlevel */
-		if (t_ptr->minlevel > dun_level) continue;
+		if (t_ptr->minlevel > effect_level && ( (randint(3) != 1) || (randint(t_ptr->minlevel + 1) > (effect_level + 2) ) ) ) continue;
 
 		/* is this a correct trap now?   */
 		if (!(t_ptr->flags & flags)) continue;

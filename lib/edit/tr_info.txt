@@ -188,7 +188,7 @@ F:FLOOR | CHEST | DOOR
 N:30:Teleport Item Trap
 I:3:50:50:3:5:0d0:w
 D:The item magically disappears from your greedy hands!
-F:FLOOR | CHEST
+F:CHEST
 
 N:31:Lose Memory Trap
 I:6:30:30:6:10:0d0:r
@@ -306,7 +306,7 @@ D:The whole room vibrates in a strange way...
 F:FLOOR | CHEST | DOOR
 
 N:54:Trap of Drain Speed
-I:8:50:10:25:80:0d0:y
+I:8:50:10:25:30:0d0:y
 D:You suddenly seem to have more time to self-reflect...
 F:FLOOR | CHEST | DOOR
 
@@ -514,7 +514,7 @@ D:A violent blast of raw chaos engulfs you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:99:Nether Ball Trap
-I:10:60:5:10:30:16d20:g
+I:10:60:5:10:30:16d20:B
 D:A blast of energy from the netherworld engulfs you!
 F:FLOOR | CHEST | DOOR | LEVEL4
 
@@ -700,7 +700,7 @@ F:FLOOR | CHEST | DOOR
 N:153:Trap of Aging
 I:5:50:5:0:15:1d8:r
 D:You suddenly age very fast!
-F:CHEST | DOOR
+F:FLOOR | CHEST | DOOR
 
 N:154:Trap of Growing
 I:3:75:5:0:5:1d8:r
@@ -733,7 +733,7 @@ F:FLOOR | CHEST | DOOR
 
 # Bolt traps
 N:161:Greater Magic Missile Trap
-I:6:80:5:6:75:25d20:g
+I:6:80:5:6:50:25d20:g
 D:A greater magic missile hits you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
