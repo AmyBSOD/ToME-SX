@@ -193,13 +193,13 @@ N:18:Broodmaster
 G:*:y
 I:+0:+0d+0:+0:+10:-30
 W:+10:35:%90:%100:A
-S:1_IN_20 | S_KIN
+S:1_IN_10 | S_KIN
 
 N:19:Multiplicator
 G:*:r
 I:+0:+0d+0:+0:+10:-30
 W:+12:75:%90:%100:A
-S:1_IN_20 | S_MONSTERS
+S:1_IN_10 | S_MONSTERS
 
 N:20:Exploder
 G:*:r
@@ -210,9 +210,9 @@ S:MULTIPLY
 N:21:Breather
 G:*:g
 I:+0:%90d%100:+10:%90:+0
-W:+1:250:%90:%120:A
+W:+1:150:%90:%120:A
 M:FRIENDS | SMART | FORCE_MAXHP | DROP_1D2
-S:1_IN_20 | BR_POIS | BR_ACID | BR_ELEC | BR_FIRE | BR_COLD | BR_NETH | BR_LITE | BR_DARK
+S:1_IN_10 | BR_POIS | BR_ACID | BR_ELEC | BR_FIRE | BR_COLD | BR_NETH | BR_LITE | BR_DARK
 S:BR_CONF | BR_SOUN | BR_CHAO | BR_DISE | BR_NEXU | BR_TIME | BR_INER | BR_GRAV | BR_SHAR
 S:BR_PLAS | BR_WALL | BR_MANA
 
@@ -317,37 +317,37 @@ N:38:Inert
 G:*:U
 I:+0:+0d+0:+0:+10:-30
 W:+1:25:%90:%100:A
-S:1_IN_4 | BR_INER
+S:1_IN_10 | BR_INER
 
 N:39:Gravitator
 G:*:s
 I:+0:+0d+0:+0:+10:-30
 W:+1:25:%90:%100:A
-S:1_IN_4 | BR_GRAV
+S:1_IN_10 | BR_GRAV
 
 N:40:Shredder
 G:*:b
 I:+0:+0d+0:+0:+10:-30
 W:+1:25:%90:%100:A
-S:1_IN_4 | BR_SHAR
+S:1_IN_10 | BR_SHAR
 
 N:41:Plasmon
 G:*:o
 I:+0:+0d+0:+0:+10:-30
 W:+1:25:%90:%100:A
-S:1_IN_4 | BR_PLAS
+S:1_IN_10 | BR_PLAS
 
 N:42:Manastormer
 G:*:b
 I:+0:+0d+0:+0:+10:-30
 W:+1:30:%90:%100:A
-S:1_IN_4 | BR_MANA
+S:1_IN_10 | BR_MANA
 
 N:43:Aquaman
 G:*:b
 I:+0:+0d+0:+0:+10:-30
-W:+1:50:%90:%100:A
-S:1_IN_4 | BA_WATE
+W:+1:200:%90:%100:A
+S:1_IN_10 | BA_WATE
 
 N:44:Abomination
 G:*:v
