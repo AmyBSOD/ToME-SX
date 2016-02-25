@@ -9285,14 +9285,14 @@ void generate_spell(int plev)
 	chance = randint(100);
 
 	/* Hack -- Always start with Magic Missile or derivative at lev. 1 */
-	if (plev == 1 || chance < 30)
+	if (plev == 1 || chance < 33)
 	{
 		rspell->proj_flags |= PROJECT_STOP;
 		rspell->dam_dice = dice;
 		rspell->dam_sides = sides;
 		rspell->radius = 0;
 	}
-	else if (chance < 60)
+	else if (chance < 64)
 	{
 		rspell->proj_flags |= PROJECT_BEAM;
 		rspell->dam_dice = dice;
@@ -9300,7 +9300,7 @@ void generate_spell(int plev)
 		if (rspell->dam_sides < 1) rspell->dam_sides = 1;
 		rspell->radius = 0;
 	}
-	else if (chance < 87)
+	else if (chance < 93)
 	{
 		rspell->proj_flags |= PROJECT_STOP;
 		rspell->radius = dice;
