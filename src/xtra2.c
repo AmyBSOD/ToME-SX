@@ -4712,23 +4712,55 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		/* Yavanna likes when corruption is destroyed */
 		if ((r_ptr->flags3 & RF3_NONLIVING) || (r_ptr->flags3 & RF3_DEMON) || (r_ptr->flags3 & RF3_UNDEAD))
 		{
-			int inc = m_ptr->level / 2;
+			int inc = m_ptr->level / 4;
+			PRAY_GOD(GOD_YAVANNA) inc *= 2;
 
 			if (!inc) inc = 1;
 			inc_piety(GOD_YAVANNA, inc);
 		}
 
 		/* Yavanna doesnt like any killing in her name */
-		PRAY_GOD(GOD_YAVANNA)
+		/* Amy edit: whoa what a huge pain in the butt. We can do better than that. */
+			/* Killing animals in her name is a VERY bad idea */
+
+		if (r_ptr->flags3 & RF3_ANIMAL) /* only reduce if you actually kill animals --Amy */
+		{
+			int inc = m_ptr->level / 2;
+			PRAY_GOD(GOD_YAVANNA) inc *= 2;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_YAVANNA, -(inc * 3));
+		}
+
+		/*PRAY_GOD(GOD_YAVANNA)
 		{
 			int inc = m_ptr->level / 2;
 
 			if (!inc) inc = 1;
 			inc_piety(GOD_YAVANNA, -inc);
 
-			/* Killing animals in her name is a VERY bad idea */
 			if (r_ptr->flags3 & RF3_ANIMAL)
 				inc_piety(GOD_YAVANNA, -(inc * 3));
+		}*/
+
+		/* add a way to gain Eru piety --Amy */
+		if ( (r_ptr->flags3 & RF3_DEMON) || (r_ptr->flags3 & RF3_UNDEAD))
+		{
+			int inc = m_ptr->level / 10;
+			PRAY_GOD(GOD_ERU) inc *= 2;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_ERU, inc);
+		}
+
+		/* super big bonus if the monster is an eldritch horror */
+		if (r_ptr->flags2 & RF2_ELDRITCH_HORROR)
+		{
+			int inc = m_ptr->level * 3;
+			PRAY_GOD(GOD_ERU) inc *= 2;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_ERU, inc);
 		}
 
 		/* SHould we absorb its soul? */

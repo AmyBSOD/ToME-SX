@@ -1918,19 +1918,21 @@ static void process_world(void)
 	}
 
 	/* Eru piety incraese with time */
-	if (((turn % 100) == 0) && (!p_ptr->did_nothing) && (!p_ptr->wild_mode))
+	/* Amy edit: removed due to potential of abuse (intentionally overburdening yourself and then walking around) */
+	/*if (((turn % 100) == 0) && (!p_ptr->did_nothing) && (!p_ptr->wild_mode))
 	{
 		NOT_PRAY_GOD(GOD_ERU)
 		{
-			int inc = wisdom_scale(10);
+			int inc = wisdom_scale(10);*/
 
 			/* Increase by wisdom/4 */
-			if (!inc) inc = 1;
+			/*if (!inc) inc = 1;
 			inc_piety(GOD_ERU, inc);
 		}
-	}
+	}*/
 	/* Most gods piety decrease with time */
-	if (((turn % 300) == 0) && (!p_ptr->did_nothing) && (!p_ptr->wild_mode) && (dun_level))
+	/* Amy edit: replace "most" by "all", and do so regardless of whether you're in the dungeon */
+	if (((turn % 300) == 0) && (!p_ptr->did_nothing) && (!p_ptr->wild_mode) /*&& (dun_level)*/)
 	{
 		GOD(GOD_MANWE)
 		{
@@ -1943,6 +1945,15 @@ static void process_world(void)
 			if (dec < 1) dec = 1;
 			inc_piety(GOD_MANWE, -dec);
 		}
+		GOD(GOD_ERU)
+		{
+			int dec = 2 - wisdom_scale(1);
+
+			PRAY_GOD(GOD_ERU)
+			dec++;
+			if (dec < 1) dec = 1;
+			inc_piety(GOD_ERU, -dec);
+		}
 		GOD(GOD_MELKOR)
 		{
 			int dec = 8 - wisdom_scale(6);
@@ -1954,16 +1965,18 @@ static void process_world(void)
 			if (dec < 1) dec = 1;
 			inc_piety(GOD_MELKOR, -dec);
 		}
-		PRAY_GOD(GOD_TULKAS)
+		GOD(GOD_TULKAS)
 		{
-			int dec = 4 - wisdom_scale(3);
+			int dec = 2 - wisdom_scale(1);
+			PRAY_GOD(GOD_TULKAS)
+			dec += (2 - wisdom_scale(1));
 
 			if (dec < 1) dec = 1;
 			inc_piety(GOD_TULKAS, -dec);
 		}
 	}
 	/* Yavanna piety decrease with time */
-	if (((turn % 400) == 0) && (!p_ptr->did_nothing) && (!p_ptr->wild_mode) && (dun_level))
+	if (((turn % 400) == 0) && (!p_ptr->did_nothing) && (!p_ptr->wild_mode) /*&& (dun_level)*/)
 	{
 		GOD(GOD_YAVANNA)
 		{

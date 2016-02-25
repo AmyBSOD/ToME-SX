@@ -6037,6 +6037,10 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			{
 				note = " hates you too much!";
 			}
+			else if (m_ptr->status == MSTATUS_PET) /* fix yavanna piety farming exploit --Amy */
+			{
+				note = " is already charmed!";
+			}
 			else
 			{
 				note = " is tamed!";
