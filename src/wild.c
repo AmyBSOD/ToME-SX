@@ -546,13 +546,16 @@ void wilderness_gen(int refresh)
 
 	if (!refresh)
 	{
-		int lim = (generate_encounter == TRUE) ? 60 : MIN_M_ALLOC_TN;
+		/* randomize amount a bit --Amy */
+		int lim = (generate_encounter == TRUE) ? (30 + randint(60)) : (MIN_M_ALLOC_TN + randint(MIN_M_ALLOC_TN));
+		if (randint(10) == 2) lim += randint(MIN_M_ALLOC_TN);
+		if (randint(100) == 2) lim += randint(60);
 
 		/*
 		 * Can't have more monsters than floor grids -1(for the player,
 		 * not needed but safer
 		 */
-		if (lim > hack_floor - 1) lim = hack_floor - 1;
+		/*if (lim > hack_floor - 1) lim = hack_floor - 1;*/
 
 		/* Make some residents */
 		for (i = 0; i < lim; i++)

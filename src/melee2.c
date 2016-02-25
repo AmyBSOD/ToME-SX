@@ -6873,6 +6873,14 @@ static void process_monster(int m_idx, bool is_frien)
 			do_move = TRUE;
 		}
 
+		/* Some monsters can fly */
+		else if ((f_info[c_ptr->feat].flags1 & FF1_CAN_CLIMB) && (r_ptr->flags7 & (RF7_CAN_FLY)))
+		{
+			/* Pass through mountains --Amy */
+			/* must come before FF1_PERMANENT because mountain chains are flagged as permanent... */
+			do_move = TRUE;
+		}
+
 		/* Permanent wall */
 		else if (f_info[c_ptr->feat].flags1 & FF1_PERMANENT)
 		{

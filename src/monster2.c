@@ -2347,7 +2347,7 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	}
 
 	/* Require empty space */
-	if (!cave_empty_bold(y, x))
+	if (!cave_empty_bold(y, x) && !( ( (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_LEVITATE ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_FLY ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_CLIMB ) ) && (r_ptr->flags7 & (RF7_CAN_FLY)) ) )
 	{
 		if (wizard) cmsg_format(TERM_L_RED, "WARNING: Refused monster(%d): EMPTY BOLD", r_idx);
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
@@ -3255,8 +3255,9 @@ bool alloc_monster(int dis, bool slp)
 		if (distance(y, x, p_ptr->py, p_ptr->px) > dis) break;
 	}
 
-	if (!attempts_left)
+	if (!attempts_left && !( (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_LEVITATE ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_FLY ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_CLIMB )) )
 	{
+
 		if (cheat_xtra || cheat_hear)
 		{
 			msg_print("Warning! Could not allocate a new monster. Small level?");
