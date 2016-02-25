@@ -162,7 +162,7 @@
 
 /* Number of Random Artifacts */
 #define MAX_RANDARTS 84
-#define MAX_T_ACT    51
+#define MAX_T_ACT    71
 
 /* Chaos Warrior: Reward types: */
 #define REW_POLY_SLF    0
