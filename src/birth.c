@@ -2431,7 +2431,8 @@ static bool player_birth_aux_ask()
 	/* Heino Vander Sanden and Jimmy De Laet */
 
 	call_lua("get_module_info", "(s)", "d", "rand_quest", &allow_quest);
-	if (!ironman_rooms && !permanent_levels && allow_quest)
+	/* Ironman rooms work just fine with princess bitch quests. --Amy */
+	if (/*!ironman_rooms &&*/ !permanent_levels && allow_quest)
 	{
 		if (do_quick_start)
 		{
