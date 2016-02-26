@@ -899,11 +899,11 @@ static void prt_stun(void)
 {
 	int s = p_ptr->stun;
 
-	if (s > 100)
+	if (s > 300)
 	{
 		c_put_str(TERM_RED, "Knocked out ", ROW_STUN, COL_STUN);
 	}
-	else if (s > 50)
+	else if (s > 100)
 	{
 		c_put_str(TERM_ORANGE, "Heavy stun  ", ROW_STUN, COL_STUN);
 	}
@@ -3218,7 +3218,7 @@ void calc_bonuses(bool silent)
 	p_ptr->skill_stl += move_info[(byte)p_ptr->movement].to_stealth;
 
 	/* Apply temporary "stun" */
-	if (p_ptr->stun > 50)
+	if (p_ptr->stun > 100)
 	{
 		p_ptr->to_h -= 20;
 		p_ptr->dis_to_h -= 20;

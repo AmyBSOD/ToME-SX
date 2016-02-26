@@ -4926,7 +4926,7 @@ void process_player(void)
 
 
 		/* Paralyzed or Knocked Out */
-		if ((p_ptr->paralyzed) || (p_ptr->stun >= 100))
+		if ((p_ptr->paralyzed) || (p_ptr->stun >= 300))
 		{
 			/* Take a turn */
 			energy_use = 100;

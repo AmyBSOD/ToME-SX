@@ -2941,13 +2941,13 @@ bool set_stun(int v)
 	if (PRACE_FLAG(PR1_NO_STUN)) v = 0;
 
 	/* Knocked out */
-	if (p_ptr->stun > 100)
+	if (p_ptr->stun > 300)
 	{
 		old_aux = 3;
 	}
 
 	/* Heavy stun */
-	else if (p_ptr->stun > 50)
+	else if (p_ptr->stun > 100)
 	{
 		old_aux = 2;
 	}

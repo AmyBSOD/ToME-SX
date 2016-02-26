@@ -399,7 +399,7 @@ void do_cmd_mindcraft(void)
 	if (chance < minfail) chance = minfail;
 
 	/* Stunning makes spells harder */
-	if (p_ptr->stun > 50) chance += 25;
+	if (p_ptr->stun > 100) chance += 25;
 	else if (p_ptr->stun) chance += 15;
 
 	/* Always a 5 percent chance of working */
@@ -758,7 +758,7 @@ static int get_mimic_chance(int mimic)
 	if (chance < 2) chance = 2;
 
 	/* Stunning makes spells harder */
-	if (p_ptr->stun > 50) chance += 25;
+	if (p_ptr->stun > 100) chance += 25;
 	else if (p_ptr->stun) chance += 15;
 
 	/* Always a 5 percent chance of working */
@@ -946,7 +946,7 @@ void do_cmd_mimic(void)
 	if (fail < minfail) fail = minfail;
 
 	/* Stunning makes spells harder */
-	if (p_ptr->stun > 50) fail += 25;
+	if (p_ptr->stun > 100) fail += 25;
 	else if (p_ptr->stun) fail += 15;
 
 	/* Always a 5 percent chance of working */
@@ -4442,7 +4442,7 @@ int spell_chance_random(random_spell* rspell)
 	if (chance < minfail) chance = minfail;
 
 	/* Stunning makes spells harder */
-	if (p_ptr->stun > 50) chance += 25;
+	if (p_ptr->stun > 100) chance += 25;
 	else if (p_ptr->stun) chance += 15;
 
 	/* Always a 5 percent chance of working */
@@ -5552,7 +5552,7 @@ void do_cmd_necromancer(void)
 	if (chance < minfail) chance = minfail;
 
 	/* Stunning makes spells harder */
-	if (p_ptr->stun > 50) chance += 25;
+	if (p_ptr->stun > 100) chance += 25;
 	else if (p_ptr->stun) chance += 15;
 
 	/* Always a 5 percent chance of working */
@@ -5929,7 +5929,7 @@ int spell_chance_rune(rune_spell* spell)
 	if (chance < minfail) chance = minfail;
 
 	/* Stunning makes spells harder */
-	if (p_ptr->stun > 50) chance += 25;
+	if (p_ptr->stun > 100) chance += 25;
 	else if (p_ptr->stun) chance += 15;
 
 	/* Always a 5 percent chance of working */
@@ -7583,7 +7583,7 @@ void do_cmd_symbiotic(void)
 	if (chance < minfail) chance = minfail;
 
 	/* Stunning makes spells harder */
-	if (p_ptr->stun > 50) chance += 25;
+	if (p_ptr->stun > 100) chance += 25;
 	else if (p_ptr->stun) chance += 15;
 
 	/* Always a 5 percent chance of working */

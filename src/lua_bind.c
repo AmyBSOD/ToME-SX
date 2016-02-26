@@ -73,7 +73,7 @@ bool lua_spell_success(magic_power *spell, int stat, char *oups_fct)
 	if (chance < minfail) chance = minfail;
 
 	/* Stunning makes spells harder */
-	if (p_ptr->stun > 50) chance += 25;
+	if (p_ptr->stun > 100) chance += 25;
 	else if (p_ptr->stun) chance += 15;
 
 	/* Always a 5 percent chance of working */
@@ -330,7 +330,7 @@ s32b lua_spell_chance(s32b chance, int level, int skill_level, int mana, int cur
 	if (chance < minfail) chance = minfail;
 
 	/* Stunning makes spells harder */
-	if (p_ptr->stun > 50) chance += 25;
+	if (p_ptr->stun > 100) chance += 25;
 	else if (p_ptr->stun) chance += 15;
 
 	/* Always a 5 percent chance of working */
@@ -355,7 +355,7 @@ s32b lua_spell_device_chance(s32b chance, int level, int base_level)
 	if (chance < minfail) chance = minfail;
 
 	/* Stunning makes spells harder */
-	if (p_ptr->stun > 50) chance += 25;
+	if (p_ptr->stun > 100) chance += 25;
 	else if (p_ptr->stun) chance += 15;
 
 	/* Always a 5 percent chance of working */
