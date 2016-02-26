@@ -2824,20 +2824,22 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 		add_level = TRUE;
 	}
 
+	/* make the system a bit less unforgiving --Amy */
 	if (dungeon_flags2 & DF2_ADJUST_LEVEL_1_2)
 	{
-		min_level = max_level = dun_level / 2;
+		if (!min_level) min_level = 1;
+		max_level = dun_level / 2;
 		add_level = TRUE;
 	}
 	if (dungeon_flags1 & DF1_ADJUST_LEVEL_1)
 	{
-		if (!min_level) min_level = dun_level;
+		if (!min_level) min_level = /*dun_level*/1;
 		max_level = dun_level;
 		add_level = TRUE;
 	}
 	if (dungeon_flags1 & DF1_ADJUST_LEVEL_2)
 	{
-		if (!min_level) min_level = dun_level * 2;
+		if (!min_level) min_level = /*dun_level * 2*/1;
 		max_level = dun_level * 2;
 		add_level = TRUE;
 	}
