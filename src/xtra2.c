@@ -4683,7 +4683,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		/* Eru doesn't appreciate good monster death */
 		if (r_ptr->flags3 & RF3_GOOD)
 		{
-			inc_piety(GOD_ERU, -7 * m_ptr->level);
+			inc_piety(GOD_ERU, -2 * m_ptr->level);
 			inc_piety(GOD_MANWE, -10 * m_ptr->level);
 			inc_piety(GOD_MELKOR, 3 * m_ptr->level);
 		}
@@ -4712,7 +4712,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		/* Yavanna likes when corruption is destroyed */
 		if ((r_ptr->flags3 & RF3_NONLIVING) || (r_ptr->flags3 & RF3_DEMON) || (r_ptr->flags3 & RF3_UNDEAD))
 		{
-			int inc = m_ptr->level / 4;
+			int inc = m_ptr->level / 2;
 			PRAY_GOD(GOD_YAVANNA) inc *= 2;
 
 			if (!inc) inc = 1;
@@ -4725,11 +4725,11 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 
 		if (r_ptr->flags3 & RF3_ANIMAL) /* only reduce if you actually kill animals --Amy */
 		{
-			int inc = m_ptr->level / 2;
+			int inc = m_ptr->level / 10;
 			PRAY_GOD(GOD_YAVANNA) inc *= 2;
 
 			if (!inc) inc = 1;
-			inc_piety(GOD_YAVANNA, -(inc * 3));
+			inc_piety(GOD_YAVANNA, -inc);
 		}
 
 		/*PRAY_GOD(GOD_YAVANNA)
