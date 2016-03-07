@@ -291,12 +291,14 @@ bool quest_random_gen_hero_hook(char *fmt)
 	{
 		int m_idx, y = rand_range(1, cur_hgt - 2), x = rand_range(1, cur_wid - 2);
 
-		m_idx = place_monster_one(y, x, random_quests[dun_level].r_idx, 0, FALSE, MSTATUS_ENEMY);
-		if (m_idx)
-		{
-			monster_type *m_ptr = &m_list[m_idx];
-			m_ptr->mflag |= MFLAG_QUEST;
-			i--;
+		if (cave_empty_bold(y, x)) {
+			m_idx = place_monster_one(y, x, random_quests[dun_level].r_idx, 0, FALSE, MSTATUS_ENEMY);
+			if (m_idx)
+			{
+				monster_type *m_ptr = &m_list[m_idx];
+				m_ptr->mflag |= MFLAG_QUEST;
+				i--;
+			}
 		}
 	}
 	m_allow_special[random_quests[dun_level].r_idx] = FALSE;

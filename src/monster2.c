@@ -2347,7 +2347,7 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	}
 
 	/* Require empty space */
-	if (!cave_empty_bold(y, x) && !( ( (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_LEVITATE ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_FLY ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_CLIMB ) ) && (r_ptr->flags7 & (RF7_CAN_FLY)) ) )
+	if (!cave_empty_bold(y, x) && !( ( (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_LEVITATE ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_FLY ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_CLIMB ) ) && (!dun_level) && (r_ptr->flags7 & (RF7_CAN_FLY)) ) )
 	{
 		if (wizard) cmsg_format(TERM_L_RED, "WARNING: Refused monster(%d): EMPTY BOLD", r_idx);
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
