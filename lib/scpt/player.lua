@@ -20,6 +20,15 @@ function __birth_hook_objects()
 		end_object(obj)
 	end
 
+	-- Provide a book of Charm to topmodels
+	if get_class_name() == "Topmodel" then
+		local obj = create_object(TV_BOOK, 255);
+		obj.pval = find_spell("Charm")
+		obj.ident = bor(obj.ident, IDENT_MENTAL, IDENT_KNOWN)
+		inven_carry(obj, FALSE)
+		end_object(obj)
+	end
+
 	-- Provide a book of prayer to priests
 	if get_class_name() == "Priest(Eru)" then
 		local obj = create_object(TV_BOOK, 255);

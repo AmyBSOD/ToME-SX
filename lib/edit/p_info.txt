@@ -1444,6 +1444,42 @@ C:a:k:=0:=0:Summoning
 C:a:k:=0:=0:Symbiosis
 C:a:k:+0:+200:Mimicry
 
+C:a:N:Topmodel
+C:a:D:The would-be beauty queen of Middle-Earth. She would wear high heels,
+C:a:D:but unfortunately they're not invented yet. However she is very good at
+C:a:D:charming monsters even without heels. Oh, and she can be male too.
+C:a:D:She is a creation of Amy, to celebrate the "sexy farting butt edition". :-)
+C:a:O:19:24:1d1
+C:a:O:23:4:1d1
+C:a:O:18:1:50d1
+C:a:O:30:6:1d1
+C:a:k:+0:+100:Combat
+C:a:k:+0:-100:Weaponmastery
+C:a:k:+0:+300:Sword-mastery
+C:a:k:+0:+600:Crossbow-mastery
+C:a:k:+0:+300:Archery
+C:a:k:+0:+500:Antimagic
+C:a:k:+0:+300:Conveyance
+C:a:k:+0:+400:Geomancy
+C:a:k:+0:+500:Sorcery
+C:a:k:+1500:+900:Dodging
+C:a:k:+1000:+100:Air
+C:a:k:+1000:+400:Water
+C:a:k:+1000:+600:Nature
+C:a:k:+2000:+200:Divination
+C:a:k:+5000:+1000:Mind
+C:a:k:+0:-200:Barehand-combat
+C:a:k:+2000:+800:Stealth
+C:a:k:+0:-200:Spirituality
+C:a:k:-1000:-300:Monster-lore
+C:a:k:=0:=0:Possession
+C:a:k:=0:=0:Corpse-preservation
+C:a:k:=0:=0:Summoning
+C:a:k:+1000:+300:Symbiosis
+C:a:k:+1000:+200:Magic-Device
+C:a:k:+0:+500:Mimicry
+C:a:k:-0:-200:Prayer
+
 C:a:N:Jack
 C:a:D:Jack of all trades, master of none, Jack's can learn all skills,
 C:a:D:they just can't get very good at any, regardless of race.
@@ -2947,7 +2983,6 @@ S:A:Fawn | Satre | Giant | Dufflepud | Jotun
 S:G:NO_SUBRACE_CHANGE |
 S:R:1:0
 S:F:RES_SOUND | SUST_CHR 
-S:C:F:Archer |
 S:k:+1000:+200:Music
 S:k:=0:=0:Archery
 R:k:=0:=0:Bow-mastery
