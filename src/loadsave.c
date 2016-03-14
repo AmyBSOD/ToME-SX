@@ -2169,7 +2169,7 @@ static void do_monster(monster_type *m_ptr, int flag)
 			do_byte(&m_ptr->sr_ptr->body_parts[i], flag);
 
 		do_byte(&m_ptr->sr_ptr->level, flag);
-		do_byte(&m_ptr->sr_ptr->rarity, flag);
+		do_u32b(&m_ptr->sr_ptr->rarity, flag);
 
 		do_byte((byte*)&m_ptr->sr_ptr->d_char, flag);
 		do_byte(&m_ptr->sr_ptr->d_attr, flag);

@@ -62969,3 +62969,1853 @@ S:1_IN_9
 S:BR_CONF | BR_FIRE | BR_POIS | SHRIEK |
 D:This ominous, sheet-wrapped figure hates all creatures which don't look like him.
 
+N:3638:Swordfish
+G:~:W
+I:120:4d7:14:10:20
+W:4:100:800:15
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:HIT:HURT:1d5
+B:HIT:HURT:1d5
+F:ANIMAL | WILD_TOO | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+D:A fish with a swordlike "beak". 
+
+N:3639:Giant leech
+G:w:u
+I:120:6d8:10:20:50
+W:5:50:30:20
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:3d1
+B:BITE:HURT:3d1
+F:ANIMAL | WEIRD_MIND | RAND_25 | BASEANGBAND
+D:Yech! The disgusting thing only wants your blood! 
+
+N:3640:Barracuda
+G:~:G
+I:120:6d8:20:45:20
+W:5:100:150:30
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d10
+B:BITE:HURT:1d10
+F:ANIMAL | WILD_TOO | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+D:A predatory fish with razor-sharp teeth. 
+
+N:3641:Hippocampus
+G:H:B
+I:110:20d9:12:14:10
+W:11:50:900:30
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:2d5
+B:BITE:HURT:2d5
+F:WILD_TOO | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:A truly strange hybrid of a horse and a fish. 
+
+N:3642:Globefish
+G:~:w
+I:110:10d10:20:30:30
+W:21:50:600:111
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:POISON:10d5
+B:BITE:POISON:10d5
+F:EMPTY_MIND | BASH_DOOR | POWERFUL | 
+F:IM_POIS | NO_STUN | WILD_TOO | COLD_BLOOD | 
+F:ANIMAL | MORTAL | BASEANGBAND
+S:1_IN_8 | 
+S:BR_POIS
+D:This fish is among the most poisonous creatures there are. 
+
+N:3643:Seahorse
+G:~:o
+I:120:111d7:20:60:20
+W:28:100:3000:360
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:PARALYZE:4d5
+B:BITE:LOSE_DEX:4d5
+B:BITE:LOSE_CON:4d5
+F:FORCE_SLEEP | GOOD | ANIMAL |
+F:IM_COLD | IM_POIS | IM_FIRE | IM_ELEC | WILD_TOO | WILD_OCEAN 
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:BO_WATE | BO_COLD | BO_ICEE | BO_MANA
+D:Your mind is filled with admiration as you view this wondrous, 
+D:magical seahorse. 
+
+N:3644:Giant squid
+G:~:g
+I:110:80d10:8:80:80
+W:32:150:3000:600
+E:3:0:3:6:1:0
+O:0:0:0:0
+B:CRUSH:HURT:8d4
+B:CRUSH:HURT:8d4
+B:CRUSH:HURT:8d4
+F:IM_ACID | RES_WATE | ANIMAL | IM_COLD | MOVE_BODY
+F:FORCE_MAXHP | WILD_TOO | WILD_OCEAN | BASEANGBAND | COLD_BLOOD
+S:1_IN_8
+S:BR_ELEC | BR_ACID | BR_POIS
+D:Besides being capable of dragging whole ships underwater, 
+D:this creature can also harm you with ranged attacks. 
+
+N:3645:Scylla
+G:M:B
+I:125:100d20:20:100:70
+W:42:50:15000:13000
+E:0:1:0:2:2:0
+O:0:0:0:0
+B:BITE:POISON:10d3
+B:BITE:POISON:10d3
+B:BITE:POISON:10d3
+B:BITE:POISON:10d3
+F:FORCE_SLEEP | UNIQUE | FORCE_MAXHP | COLD_BLOOD | 
+F:ONLY_GOLD | DROP_2D2 | DROP_4D2 | DROP_CORPSE | 
+F:BASH_DOOR | MOVE_BODY | EVIL | BASEANGBAND | RES_WATE | 
+F:ANIMAL | IM_POIS | IM_FIRE
+S:1_IN_5 | 
+S:BR_POIS | BR_FIRE | SCARE | CONF | S_HYDRA
+D:A many-headed sea-monster, this foul creature preys on all those who 
+D:escape the clutches of Charybdis. 
+
+N:3646:Charybdis
+G:~:r
+I:120:20d100:20:100:70
+W:42:50:15000:13000
+E:0:0:0:0:1:0
+O:50:50:0:0
+B:ENGULF:HURT:10d8
+B:ENGULF:HURT:10d8
+B:ENGULF:HURT:10d8
+F:EVIL | UNIQUE |
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | 
+F:SMART | POWERFUL | MOVE_BODY | NEVER_MOVE |
+F:IM_ACID | IM_FIRE | IM_COLD | RES_WATE | COLD_BLOOD | 
+F:IM_ELEC | IM_POIS | NO_STUN | BASEANGBAND
+S:1_IN_5 | 
+S:BA_WATE 
+D:A monstrous dweller of the depths; its hungry maw has been the doom 
+D:of innumerable sailors! 
+
+N:3647:Behemoth
+G:H:B
+I:120:50d100:25:180:30
+W:49:150:6000:16000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:FIRE:5d8
+B:BITE:FIRE:5d8
+B:CRUSH:HURT:3d15
+B:CRUSH:HURT:3d15
+F:FORCE_SLEEP | FORCE_MAXHP | CAN_SWIM | ANIMAL |  
+F:IM_FIRE | IM_ACID | IM_COLD | IM_POIS | DROP_CORPSE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | 
+F:MORTAL | BASEANGBAND
+S:1_IN_9
+S:BR_FIRE
+D:A great water-beast, with an almost impenetrable skin. 
+
+N:3648:Lesser kraken
+G:~:G
+I:120:30d100:30:150:80
+W:54:100:8000:20000
+E:3:0:3:0:1:0
+O:25:25:50:0
+B:CRUSH:HURT:16d12
+B:CRUSH:HURT:16d12
+B:CRUSH:HURT:16d12
+B:CRUSH:HURT:16d12
+F:FORCE_SLEEP | FORCE_MAXHP | WILD_TOO | WILD_OCEAN |
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_CORPSE | 
+F:BASH_DOOR | POWERFUL | MOVE_BODY | SMART | RES_WATE |
+F:EVIL | IM_ELEC | NO_CONF | NO_SLEEP | IM_POIS | IM_FIRE | BASEANGBAND
+S:1_IN_4 | 
+S:BLIND | CONF | SCARE | CAUSE_4 | CAUSE_3 |
+S:BA_WATE | DARKNESS | BR_DARK | TELE_TO 
+D:An enormously fearsome and powerful inhabitant of the depths. It 
+D:resembles a gargantuan octopus and its evil is almost tangible. 
+
+N:3649:Greater kraken
+G:~:G
+I:120:40d100:30:175:80
+W:60:100:10000:25000
+E:3:0:3:0:1:0
+O:10:80:0:10
+B:CRUSH:HURT:15d15
+B:CRUSH:HURT:15d15
+B:CRUSH:HURT:15d15
+B:CRUSH:HURT:15d15
+F:FORCE_SLEEP | FORCE_MAXHP | WILD_TOO | WILD_OCEAN |
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_CORPSE | 
+F:BASH_DOOR | POWERFUL | MOVE_BODY | SMART | RES_WATE |
+F:EVIL | IM_ELEC | NO_CONF | NO_SLEEP | IM_POIS | IM_FIRE | BASEANGBAND
+S:1_IN_3 | 
+S:BLIND | CONF | SCARE | CAUSE_4 | CAUSE_3 | TELE_TO | TELE_AWAY |
+S:BA_WATE | DARKNESS | BR_DARK | BR_ACID | BR_POIS
+D:An enormously fearsome and powerful inhabitant of the depths. It 
+D:resembles a gargantuan octopus and its evil is almost tangible. 
+
+N:3650:Leviathan
+G:~:v
+I:120:50d100:40:180:30
+W:67:150:300000:28000
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:FIRE:5d12
+B:BITE:FIRE:5d12
+B:CRUSH:HURT:6d15
+B:CRUSH:HURT:6d15
+F:FORCE_SLEEP | FORCE_MAXHP | WILD_TOO | WILD_OCEAN |
+F:IM_FIRE | IM_ACID | IM_COLD | IM_POIS |
+F:ANIMAL | NO_CONF | NO_SLEEP | NO_FEAR | DROP_CORPSE | BASEANGBAND
+S:1_IN_9
+S:BR_FIRE | BR_ACID | BR_DARK | BR_POIS | BA_WATE | 
+S:S_DRAGON | S_HYDRA | HEAL | CONF | DARKNESS
+D:An enormous, terrible sea-monster, the true master of the ocean.
+
+N:3651:Pike
+G:~:s
+I:125:2d7:80:35:0
+W:2:50:100:7
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:2d3
+F:ANIMAL |  STUPID | DROP_CORPSE | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+D:It's a common fresh-water predatory fish. 
+
+N:3652:Electric eel
+G:J:B
+I:110:15d15:15:40:70
+W:20:100:500:145
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:TOUCH:ELEC:2d7
+B:TOUCH:ELEC:2d7
+B:TOUCH:ELEC:2d7
+F:ANIMAL | RAND_25 | IM_ELEC | RES_WATE | 
+F:WILD_TOO | WILD_OCEAN | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+D:This serpentine creature can create a deadly voltage.  Better watch out! 
+
+N:3653:Giant crayfish
+G:~:R
+I:90:4d10:6:100:20
+W:4:50:1200:10
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d4
+B:CLAW:HURT:3d4
+F:ANIMAL | STUPID | WEIRD_MIND | DROP_CORPSE | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+D:A man-sized, heavily armoured fresh-water relative of the lobster. 
+
+N:3654:Mermaid
+G:h:G
+I:110:5d8:50:30:0
+W:4:50:1600:20
+E:1:1:1:2:1:0
+O:20:50:10:5
+B:TOUCH:LOSE_WIS
+B:TOUCH:INSANITY:2d3
+B:TOUCH:CONFUSE
+F:FEMALE | RAND_25 | DROP_60 | SMART | NO_CONF | DROP_CORPSE |
+F:MORTAL | BASEANGBAND
+D:A green-skinned humanoid with a fishtail. Beware - there are rumours 
+D:of adventures losing their minds under the fearsome 
+D:charms of mermaids. 
+
+N:3655:Box jellyfish
+G:~:B
+I:110:10d10:20:30:75
+W:10:100:3000:25
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:PARALYZE:1d6
+B:TOUCH:PARALYZE:1d6
+F:ANIMAL | IM_POIS | WILD_TOO | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+D:A strange water creature, whose touch can be deadly. 
+
+N:3656:Giant piranha
+G:~:g
+I:120:6d8:30:20:10
+W:10:100:300:40
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:5d1
+B:BITE:HURT:5d1
+F:NO_SLEEP | WILD_TOO | COLD_BLOOD | 
+F:FRIENDS | ANIMAL | 
+F:MORTAL | BASEANGBAND
+D:A very large and bloodthirsty fish. 
+
+N:3657:Piranha
+G:~:g
+I:120:2d6:20:8:5
+W:3:50:200:8
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+F:FRIENDS | ANIMAL | WILD_TOO | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+D:Bloodthirsty fish who can smell your blood from a great distance. 
+
+N:3658:Bullywug
+G:h:g
+I:110:6d10:20:15:0
+W:7:50:700:25
+E:1:1:1:2:1:1
+O:30:40:10:10
+B:HIT:HURT:2d4
+B:HIT:HURT:2d4
+F:MALE | ONLY_ITEM | DROP_1D2 | SMART  | DROP_CORPSE | FRIENDS | 
+F:MORTAL | BASEANGBAND | HAS_LITE | COLD_BLOOD 
+D:A vaguely humanoid creature, it looks like a cross between a hobbit and a 
+D:frog. 
+
+N:3659:Bullywug warrior
+G:h:g
+I:110:8d10:20:15:0
+W:8:50:750:35
+E:1:1:1:2:1:1
+O:15:60:10:10
+B:HIT:HURT:2d5
+B:HIT:HURT:2d5
+F:MALE | ONLY_ITEM | DROP_1D2 | SMART  | DROP_CORPSE |
+F:MORTAL | BASEANGBAND | HAS_LITE | COLD_BLOOD
+D:A member of the frog-people clan. He is wielding a long, sharp shark tooth. 
+
+N:3660:Bullywug shaman
+G:h:g
+I:110:6d10:20:15:0
+W:8:50:800:35
+E:1:1:1:2:1:1
+O:25:10:50:10
+B:HIT:HURT:1d6
+B:HIT:HURT:1d6
+F:MALE | ONLY_ITEM | DROP_1D2 | SMART  | DROP_CORPSE |
+F:MORTAL | BASEANGBAND | HAS_LITE | COLD_BLOOD
+S:1_IN_5 |
+S:BLIND | CONF | DARKNESS | BO_COLD | HEAL | MISSILE | CAUSE_2
+D:A leader of a clan of frog-people, he is cloaked in a cloak made of 
+D:shark skin. 
+
+N:3661:Whale
+G:~:G
+I:110:22d22:15:50:70
+W:20:200:9000:175
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CRUSH:HURT:1d20
+B:CRUSH:HURT:1d20
+F:RAND_25 | FORCE_MAXHP | RES_WATE | 
+F:ANIMAL | WILD_TOO |
+F:MORTAL | BASEANGBAND
+D:Although it looks like a fish and lives in water, it is in fact 
+D:a mammal. And it is huge! 
+
+N:3662:Sand mite
+G:~:B
+I:110:3d10:5:25:80
+W:10:1000:500:25
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:POISON:3d6
+B:BITE:POISON:3d6
+F:ANIMAL | IM_POIS | FRIENDS | 
+F:CHAR_CLEAR | ATTR_CLEAR | DROP_CORPSE | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+S:MULTIPLY
+D:A relative of crabs and shrimp, this is a tiny creature that inhabits sandy 
+D:bottoms. It has a pair of dangerous-looking claws. 
+
+N:3663:Octopus
+G:~:g
+I:105:60d6:60:60:60
+W:15:100:1200:60
+E:3:0:3:6:1:0
+O:0:0:0:0
+B:SPIT:BLIND:1d3
+B:CRUSH:HURT:6d3
+B:CRUSH:HURT:6d3
+B:CRUSH:HURT:6d3
+F:RAND_25 | IM_COLD | RES_WATE | ANIMAL | WILD_TOO | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+D:It doesn't move very fast, but when it does - watch out! 
+
+N:3664:Giant octopus
+G:~:g
+I:115:100d6:10:35:5
+W:30:50:1800:180
+E:3:0:3:6:1:0
+O:0:0:0:0
+B:SPIT:BLIND:1d4
+B:CRUSH:HURT:8d4
+B:CRUSH:HURT:8d4
+B:CRUSH:PARALYZE:8d4
+F:SMART | IM_POIS | ANIMAL | NO_CONF | NO_SLEEP | 
+F:NO_FEAR  | SMART  | WEIRD_MIND | DROP_CORPSE | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+S:1_IN_15 |
+S:DARKNESS | SLOW | CONF | SCARE
+D:A cunning and dangerous undersea opponent. 
+
+N:3665:Eye of the deep
+G:e:b
+I:120:16d100:10:20:40
+W:40:150:1600:6000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:GAZE:EXP_20:2d6
+B:GAZE:UN_POWER:2d6
+B:GAZE:INSANITY:2d6
+B:BITE:HURT:6d6
+F:EVIL | IM_POIS | NO_CONF | NO_SLEEP |  
+F:FORCE_SLEEP | FORCE_MAXHP | CAN_FLY | RES_TELE | 
+F:SMART | DROP_CORPSE | BASEANGBAND
+S:1_IN_2 |
+S:BLIND | SLOW | CONF | SCARE | DRAIN_MANA | MIND_BLAST | 
+S:FORGET | DARKNESS | BO_WATE | BO_ICEE | BO_MANA | BO_COLD
+D:A beholder that inhabits the depths of the sea, sleeping and pondering 
+D:alien thoughts for centuries. Occasionally, it will float to the 
+D:surface to wreck the lives of surface dwellers. 
+
+N:3666:Murk dweller
+G:S:s
+I:110:200d5:70:30:0
+W:27:150:3000:800
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:5d10
+B:CLAW:PARALYZE
+B:STING:INSANITY:5d10
+B:STING:UN_BONUS
+F:ANIMAL | WEIRD_MIND | FORCE_MAXHP | HURT_LITE |
+F:EVIL | SMART   | NO_CONF | NO_SLEEP | DROP_CORPSE |
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:BA_POIS | BR_DARK | BLIND | BR_POIS | SLOW | CONF | MIND_BLAST |
+S:BRAIN_SMASH | DARKNESS
+D:A gigantic aquatic monster, somewhat resembling a cross between a 
+D:lobster and a spider. It is coated in poisonous slime and noxious 
+D:parasites. This foul creature hides in the silt of the deep ocean floor, 
+D:waiting to trap unsuspecting prey. 
+
+N:3667:Drowned soul
+G:G:B
+I:110:9d8:5:33:50
+W:11:50:0:30
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:BLIND:3d3
+B:TOUCH:POISON:2d4
+B:WAIL:TERRIFY
+F:COLD_BLOOD | EMPTY_MIND | EVIL | UNDEAD | IM_COLD | INVISIBLE | 
+F:IM_POIS | NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_8
+S:BLIND | HOLD | CONF
+D:A ghastly victim of drowning, forever doomed to wander the ocean waters 
+D:looking for revenge. 
+
+N:3668:Tiger shark
+G:~:g
+I:120:10d5:100:32:0
+W:12:50:3000:40
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:4d4
+F:RAND_25 | ANIMAL | STUPID | DROP_CORPSE |
+F:MORTAL | BASEANGBAND
+D:A small species of shark, although the teeth are still as deadly. 
+
+N:3669:Hammerhead shark
+G:~:g
+I:115:16d10:20:59:20
+W:16:150:1500:40
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:3d4
+B:BUTT:HURT:3d4
+B:BITE:HURT:3d4
+F:ANIMAL | WILD_TOO | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+D:A hungry shark with a strange head. 
+
+N:3670:Great white shark
+G:~:w
+I:120:100d6:20:70:20
+W:24:100:5000:250
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:4d6
+B:BITE:HURT:4d6
+B:BITE:HURT:4d6
+F:FORCE_SLEEP | COLD_BLOOD | 
+F:ANIMAL MORTAL | BASEANGBAND
+D:A very large carnivorous fish. 
+
+N:3671:Aquatic golem
+G:g:b
+I:100:25d10:35:75:10
+W:19:50:0:100
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:3d10
+B:HIT:HURT:3d10
+F:COLD_BLOOD | EMPTY_MIND |  
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:An ingenious gnomish invention -- a golem designed for underwater 
+D:usage. 
+
+N:3672:Aquatic kobold
+G:k:B
+I:110:13d9:10:30:15
+W:5:50:1500:35
+E:1:1:1:2:1:1
+O:0:50:0:30
+B:HIT:HURT:1d10
+F:DROP_90 | EVIL | IM_POIS | DROP_CORPSE |
+F:MORTAL | BASEANGBAND
+D:Yes, your favourite denizen of evil also comes in an aquatic variety. 
+
+N:3673:White shark
+G:~:W
+I:120:30d10:20:50:10
+W:18:50:3000:100
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:3d5
+B:BITE:HURT:3d5
+B:BITE:HURT:3d5
+F:ANIMAL | WILD_TOO | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+D:A fast-moving hunter of the depths. When this creature moves, 
+D:everybody in the water is in danger! 
+
+N:3674:Scrag
+G:T:B
+I:110:40d10:20:50:50
+W:35:50:5000:440
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+B:HIT:HURT:3d2
+B:HIT:HURT:3d2
+F:MALE | 
+F:FORCE_MAXHP | REGENERATE | 
+F:FRIENDS | DROP_60 | WILD_TOO | WILD_OCEAN |
+F:OPEN_DOOR | BASH_DOOR | RES_WATE | 
+F:EVIL | TROLL | IM_COLD | IM_POIS | HURT_LITE | BASEANGBAND
+D:A troll of the sea, he reeks of brine. 
+
+N:3675:Jaws
+G:~:w
+I:130:100d20:200:80:70
+W:40:100:7000:2000
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:11d2
+B:BITE:HURT:22d1
+B:BITE:HURT:11d2
+B:BITE:HURT:22d1
+F:FORCE_MAXHP | UNIQUE | MOVE_BODY | 
+F:WILD_OCEAN | WILD_TOO | COLD_BLOOD | 
+F:BASH_DOOR | IM_COLD | IM_ELEC | IM_POIS | ANIMAL | 
+F:NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND
+D:The biggest white shark who has ever lived, it is hunting for you now! 
+
+N:3676:Aquatic elf
+G:h:b
+I:110:14d8:30:30:6
+W:9:50:1400:25
+E:1:1:1:2:1:0
+O:20:20:50:10
+B:HIT:HURT:3d4
+F:MALE | SMART | DROP_CORPSE |
+F:FRIENDS | DROP_60 | BASEANGBAND | HAS_LITE
+D:A sleek form vaguely shaped like a dolphin, except with a humanoid 
+D:head and arms. The facial features are decidedly elven. 
+
+N:3677:Aquatic elven warrior
+G:h:b
+I:110:20d8:40:35:5
+W:10:50:1500:35
+E:1:1:1:2:1:0
+O:20:60:10:10
+B:HIT:HURT:4d4
+B:HIT:HURT:4d4
+F:MALE | FRIENDS | SMART | DROP_60 | DROP_CORPSE | BASEANGBAND |
+F:HAS_LITE
+D:An aquatic elf trained in all forms of combat. 
+
+N:3678:Aquatic elven shaman
+G:h:b
+I:110:12d8:30:30:6
+W:10:50:1400:35
+E:1:1:1:2:1:0
+O:10:10:70:10
+B:TOUCH:UN_BONUS
+F:MALE | SMART | DROP_2D2 | DROP_CORPSE | BASEANGBAND | 
+F:HAS_LITE
+S:1_IN_12 |
+S:BO_MANA | BO_COLD | S_MONSTERS
+D:A wizened aquatic elf skilled in the magical arts. You can see an 
+D:iridescent film coating the water around him. 
+
+N:3679:Stargazer
+G:~:y
+I:100:15d9:10:25:30
+W:21:50:800:60
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:GAZE:PARALYZE
+F:ANIMAL | SMART  | RAND_25 | DROP_CORPSE |
+F:MORTAL | BASEANGBAND
+S:1_IN_10 |
+S:S_MONSTER
+D:A giant fish shaped like a flounder. There are two enormous eyes 
+D:occupying half of the creature's body. 
+
+N:3680:Elder stargazer
+G:~:y
+I:100:20d10:15:25:30
+W:29:50:1000:75
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:GAZE:PARALYZE
+B:GAZE:CONFUSE
+F:ANIMAL | SMART | DROP_CORPSE |
+F:MORTAL | BASEANGBAND
+S:1_IN_10 |
+S:S_MONSTERS
+D:A stargazer a bit larger than average, covered with barnacles. 
+
+N:3681:Flounder
+G:~:s
+I:100:10d5:5:25:30
+W:13:50:700:55
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:2d6
+F:ANIMAL | RAND_25 | INVISIBLE | ATTR_CLEAR | DROP_CORPSE |
+F:MORTAL | BASEANGBAND
+D:A flattened fish which is able to change body colouring for 
+D:camouflage. 
+
+N:3682:Giant turtle
+G:R:G
+I:110:5d8:10:14:30
+W:7:50:3000:30
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d2
+B:BITE:HURT:2d2
+F:ANIMAL | DROP_CORPSE |
+F:MORTAL | BASEANGBAND
+D:A giant turtle with flippers, adapted for life in the ocean. 
+
+N:3683:Baby dragon turtle
+G:d:W
+I:110:10d10:20:60:50
+W:9:50:20000:35
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d3
+B:CLAW:HURT:1d3
+B:BITE:HURT:1d5
+F:FORCE_MAXHP | FORCE_SLEEP | DROP_CORPSE |
+F:ONLY_GOLD | DROP_60 | DROP_1D2 | 
+F:EVIL | DRAGON  | BASEANGBAND | ATTR_MULTI
+S:1_IN_12 | 
+S:BR_SOUN
+D:A newly-hatched dragon turtle. It still hasn't grown a proper shell. 
+
+N:3684:Young dragon turtle
+G:d:W
+I:110:30d10:20:70:70
+W:31:50:80000:700
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:2d6
+B:CLAW:HURT:2d6
+B:BITE:HURT:2d8
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_CORPSE |
+F:DROP_3D2 | 
+F:EVIL | DRAGON  | BASEANGBAND | ATTR_MULTI
+S:1_IN_11 | 
+S:SCARE | 
+S:BR_SOUN
+D:A dragon-like creature inhabiting lightless reaches of ocean caves. It has 
+D:a long neck with a tiny head, and four massive flippers. It has a soft and 
+D:flexible shell. 
+
+N:3685:Mature dragon turtle
+G:d:W
+I:110:50d10:20:80:70
+W:38:50:170000:1500
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:2d10
+B:CLAW:HURT:2d10
+B:BITE:HURT:4d10
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_CORPSE |
+F:DROP_4D2 | 
+F:EVIL | DRAGON | NO_CONF | NO_SLEEP | BASEANGBAND | HAS_LITE
+F:ATTR_MULTI
+S:1_IN_9 | 
+S:SCARE | 
+S:BR_SOUN
+D:A large dragon turtle, covered with a tough white shell. 
+
+N:3686:Ancient dragon turtle
+G:D:W
+I:120:70d10:20:90:80
+W:41:50:220000:2500
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:4d8
+B:CLAW:HURT:4d8
+B:BITE:HURT:7d8
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_CORPSE |
+F:DROP_1D2 | DROP_4D2 |
+F:SMART | POWERFUL | MOVE_BODY  |
+F:EVIL | DRAGON | NO_CONF | NO_SLEEP | BASEANGBAND | HAS_LITE | ATTR_MULTI
+S:1_IN_9 | 
+S:BLIND | CONF | SCARE | 
+S:BR_SOUN
+D:A huge dragon turtle. You can see many barnacles covering its body. 
+
+N:3687:Fastitocalon
+G:D:g
+I:120:40d100:25:150:30
+W:52:150:250000:16000
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:5d8
+B:BITE:HURT:5d8
+B:CRUSH:POISON:3d10
+B:CRUSH:POISON:3d10
+F:FORCE_SLEEP | FORCE_MAXHP | RES_TELE | WILD_TOO | WILD_OCEAN |
+F:IM_FIRE | IM_ACID | IM_COLD | IM_POIS |
+F:DRAGON | NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | ATTR_MULTI
+S:1_IN_6 | 
+S:BR_FIRE | BR_ACID | BR_SOUN | BA_WATE
+D:A huge aquatic dragon-turtle, its shell is as large as a small island. 
+
+N:3688:Undead stargazer
+G:~:y
+I:100:18d9:10:25:30
+W:25:50:0:100
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:GAZE:PARALYZE
+B:GAZE:EXP_20
+F:ANIMAL | SMART | INVISIBLE | UNDEAD | BASEANGBAND | NO_CUT
+S:1_IN_10 |
+S:S_UNDEAD | S_MONSTER
+D:A stargazer brought back from the dead under control of some unholy 
+D:sorceror. 
+
+N:3689:Killer whale
+G:~:w
+I:120:20d50:12:55:30
+W:25:50:9500:85
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:7d4
+B:BITE:HURT:7d4
+F:WILD_TOO | WILD_OCEAN | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:An almost beautiful, deadly beast. 
+
+N:3690:Merrow
+G:O:B
+I:110:30d9:20:33:30
+W:28:100:2300:80
+E:1:1:1:2:1:1
+O:20:70:0:10
+B:HIT:HURT:3d8
+B:HIT:HURT:3d8
+F:FRIENDS | DROP_60 | DROP_CORPSE | WILD_TOO | WILD_OCEAN | 
+F:OPEN_DOOR | BASH_DOOR | RES_WATE | IM_COLD | IM_POIS | 
+F:EVIL | GIANT | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:A great ogre of the sea, it is violent and stupid. 
+
+N:3691:Water naga
+G:n:B
+I:110:30d10:10:55:10
+W:24:50:1600:60
+E:0:0:0:0:1:0
+O:40:0:50:10
+B:CRUSH:HURT:2d8
+B:CRUSH:HURT:2d8
+B:BITE:POISON:1d8
+B:BITE:POISON:1d8
+F:FEMALE |
+F:DROP_CORPSE |
+F:ONLY_ITEM | DROP_90 | DROP_2D2 | 
+F:EVIL | NO_CONF | NO_SLEEP | SMART | 
+F:MORTAL | BASEANGBAND
+S:1_IN_7 | 
+S:DARKNESS | CAUSE_3 | BO_ICEE
+D:A naga adapted to underwater life. She has a fish-like tail and a pair 
+D:of gills. 
+
+N:3692:Devilfish
+G:~:s
+I:105:10d5:10:10:5
+W:12:50:900:60
+E:0:0:0:0:1:0
+O:0:0:0:0
+F:NEVER_BLOW | ATTR_MULTI | NO_CONF | DROP_CORPSE |
+F:MORTAL | BASEANGBAND
+S:1_IN_4 |
+S:BR_CHAO | BR_LITE | BR_SOUN | BR_DISE | BR_TIME
+D:A disgusting fish, it has a large gaping mouth and a small lantern dangling 
+D:from an outgrowth on its head. 
+
+N:3693:Undead devilfish
+G:~:D
+I:105:10d5:10:10:5
+W:15:50:0:75
+E:0:0:0:0:1:0
+O:0:0:0:0
+F:NEVER_BLOW | ATTR_MULTI | INVISIBLE | NO_CONF | UNDEAD |
+F:BASEANGBAND | NO_CUT
+S:1_IN_4 |
+S:BR_NETH | BR_DISE | BR_TIME | BR_NEXU | BR_POIS 
+D:A devilfish brought back from the dead. 
+
+N:3694:Moby Dick, the White Whale
+G:~:w
+I:120:100d25:200:80:70
+W:50:100:10000:2500
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CRUSH:HURT:10d10
+B:CRUSH:HURT:10d10
+B:CRUSH:HURT:10d10
+B:CRUSH:HURT:10d10
+F:FORCE_MAXHP | UNIQUE | MOVE_BODY | 
+F:WILD_OCEAN | WILD_TOO | COLD_BLOOD | 
+F:BASH_DOOR | IM_COLD | IM_ELEC | IM_POIS | ANIMAL | 
+F:MORTAL | JOKEANGBAND
+S:1_IN_6 | BA_WATE
+D:The mightiest whale of the seas, he has sunk many ships in his time. With 
+D:a mere flick of his tail he can create a mighty whirlpool, to the ruin 
+D:of all who would travel the ocean. 
+
+N:3695:Aquatic hound
+G:Z:B
+I:110:15d5:60:60:0
+W:20:50:600:200
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:CONFUSE:2d8
+B:BITE:HURT:2d8
+B:CLAW:POISON:2d8
+F:FRIENDS | DROP_CORPSE |
+F:ANIMAL | 
+F:MORTAL | BASEANGBAND
+S:1_IN_10 | 
+S:BO_ICEE | BO_WATE
+D:A dog with a finned tail and large, muscular flippers for hind legs. 
+D:It has a rubbery skin instead of fur. 
+
+N:3696:Water demon
+G:U:B
+I:110:35d20:30:50:10
+W:40:50:0:1000
+E:0:0:0:0:1:0
+O:20:60:20:0
+B:HIT:HURT:3d4
+B:GAZE:POISON:8d12
+B:CLAW:INSANITY:8d12
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:FRIENDS | SMART  |
+F:ONLY_ITEM | DROP_60 | 
+F:POWERFUL | 
+F:EVIL | DEMON | IM_ACID | NO_CONF | NO_SLEEP | BASEANGBAND | HAS_LITE
+S:1_IN_8 | 
+S:BO_ICEE | BA_WATE
+D:A hideous scaled demon, it is a sleek form with many fins but no visible 
+D:arms or legs. It has a toothed gaping maw, reminiscent of a caricature 
+D:of a shark's jaws. 
+
+N:3697:Ixitxachitl
+G:~:s
+I:110:12d8:20:30:20
+W:12:50:1600:40
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:STING:POISON:2d5
+B:STING:POISON:2d5
+F:ANIMAL | EVIL | IM_POIS | WILD_TOO | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+D:An intelligent devil-ray of the depths. 
+
+N:3698:Ixitxachitl priest
+G:~:s
+I:110:10d10:20:40:20
+W:19:50:1600:80
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:STING:POISON:2d7
+B:STING:POISON:2d7
+F:ANIMAL | EVIL | IM_POIS | WILD_TOO | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+S:1_IN_6
+S:TELE_TO | HEAL | SCARE | CAUSE_2 | BLIND | S_MONSTER
+D:A devil-ray of the depths, with priestly magic. 
+
+N:3699:Vampiric ixitxachitl
+G:~:D
+I:110:15d15:20:50:20
+W:26:50:1800:120
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:STING:POISON:3d8
+B:STING:EXP_40:3d8
+F:ANIMAL | EVIL | RES_NETH | IM_POIS | WILD_TOO |
+F:BASEANGBAND | COLD_BLOOD
+S:1_IN_6
+S:HEAL | SCARE | CAUSE_3 | BLIND | FORGET | HASTE
+D:A devil-ray of the depths, with vampiric powers. 
+
+N:3700:Wavelord
+G:p:b
+I:120:16d100:30:120:40
+W:61:150:1800:7000
+E:1:1:1:2:1:1
+O:20:50:10:5
+B:HIT:HURT:8d9
+B:HIT:COLD:8d9
+B:HIT:HURT:8d9
+B:HIT:COLD:8d9
+F:SMART | PET | DROP_CORPSE | FRIENDS | WILD_SHORE | WILD_OCEAN | WILD_TOO | 
+F:IM_POIS | CAN_SWIM | DROP_USEFUL |
+F:NO_CONF | NO_SLEEP | NO_FEAR | DROP_GOOD | DROP_3D2 |
+F:MORTAL | REGENERATE | TAKE_ITEM | GOOD | SUSCEP_FIRE |
+F:RES_WATE | RES_NEXU | HAS_LITE
+S:1_IN_4
+S:BO_WATE | BA_WATE | BO_ICEE
+D:The Dolphiners came with the Thunderlords from their far home. 
+D:These friendly beings ride their sharks into combat to assist you. 
+
+N:3701:Sand mite
+G:~:B
+I:110:3d10:5:25:80
+W:10:250:500:25
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:POISON:3d6
+B:BITE:POISON:3d6
+F:ANIMAL | IM_POIS | FRIENDS | 
+F:CHAR_CLEAR | ATTR_CLEAR | DROP_CORPSE | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+D:A relative of crabs and shrimp, this is a tiny creature that inhabits sandy 
+D:bottoms. It has a pair of dangerous-looking claws. 
+
+N:3702:Giant leech
+G:w:u
+I:120:6d8:10:20:50
+W:5:1000:30:20
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:3d1
+B:BITE:HURT:3d1
+F:ANIMAL | WEIRD_MIND | RAND_25 | BASEANGBAND
+S:MULTIPLY
+D:Yech! The disgusting thing only wants your blood! 
+
+N:3703:Mermaid
+G:h:G
+I:110:5d8:50:30:0
+W:4:2000:1600:20
+E:1:1:1:2:1:0
+O:20:50:10:5
+B:TOUCH:LOSE_WIS
+B:TOUCH:INSANITY:2d3
+B:TOUCH:CONFUSE
+F:FEMALE | RAND_25 | SMART | NO_CONF | DROP_CORPSE |
+F:MORTAL | BASEANGBAND
+S:MULTIPLY
+D:A green-skinned humanoid with a fishtail. Beware - there are rumours 
+D:of adventures losing their minds under the fearsome 
+D:charms of mermaids. 
+
+N:3704:Giant piranha
+G:~:g
+I:120:6d8:30:20:10
+W:10:1250:300:40
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:5d1
+B:BITE:HURT:5d1
+F:NO_SLEEP | WILD_TOO | COLD_BLOOD | 
+F:FRIENDS | ANIMAL | 
+F:MORTAL | BASEANGBAND
+S:MULTIPLY
+D:A very large and bloodthirsty fish. 
+
+N:3705:Piranha
+G:~:g
+I:120:2d6:20:8:5
+W:3:750:200:8
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+F:FRIENDS | ANIMAL | WILD_TOO | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND
+S:MULTIPLY
+D:Bloodthirsty fish who can smell your blood from a great distance. 
+
+N:3706:Flounder
+G:~:s
+I:100:10d5:5:25:30
+W:13:1000:700:55
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:2d6
+F:ANIMAL | RAND_25 | INVISIBLE | ATTR_CLEAR | DROP_CORPSE |
+F:MORTAL | BASEANGBAND
+S:MULTIPLY
+D:A flattened fish which is able to change body colouring for 
+D:camouflage. 
+
+N:3707:Giant kraken
+G:~:b
+I:130:100d100:30:200:80
+W:80:200:10000:50000
+E:3:0:3:0:1:0
+O:10:80:0:10
+B:CRUSH:HURT:25d15
+B:CRUSH:HURT:25d15
+B:CRUSH:HURT:25d15
+B:CRUSH:HURT:25d15
+F:FORCE_SLEEP | FORCE_MAXHP | WILD_TOO | WILD_OCEAN |
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_CORPSE | 
+F:BASH_DOOR | POWERFUL | MOVE_BODY | SMART | RES_WATE |
+F:EVIL | IM_ELEC | NO_CONF | NO_SLEEP | IM_POIS | IM_FIRE | BASEANGBAND |
+F:IM_COLD | NO_STUN | NO_FEAR
+S:1_IN_2 | 
+S:BLIND | CONF | SCARE | CAUSE_4 | CAUSE_3 | TELE_TO | TELE_AWAY |
+S:BA_WATE | DARKNESS | BR_DARK | BR_ACID | BR_POIS | S_KIN | S_UNIQUE
+S:BA_MANA | BRAIN_SMASH | BO_ICEE | HOLD | BA_NUKE | ROCKET
+D:This creature is the end of the world as we know it. 
+D:The mere sight of such a thing means certain and instant death. RUN!!!
+
+N:3708:Swan
+G:B:w
+I:120:9d10:8:100:255
+W:20:150:300:0
+E:0:1:0:6:1:0
+O:0:0:0:0
+F:CAN_FLY | NEUTRAL | NO_TARGET | GOOD |
+F:MORTAL |  NEVER_BLOW | DG_CURSE | BASEANGBAND | 
+F:WILD_SHORE | NO_TARGET | WILD_OCEAN
+D:Beautiful and graceful large white birds inhabiting aquatic 
+D:regions. They never do any harm, and it is said that anyone 
+D:who kills a swan incurs the wrath of the Valar.
+
+N:3709:Limlug
+G:J:G
+I:120:15d10:20:40:20
+W:22:300:900:75
+E:1:1:1:2:1:1
+O:25:20:25:20
+B:BITE:POISON:5d5
+B:BITE:POISON:5d5
+F:MALE | CAN_SWIM | IM_POIS | IM_ACID |  
+F:DROP_60 | DROP_2D2 | FRIENDS | DROP_CORPSE |
+F:OPEN_DOOR | BASH_DOOR | EVIL | MORTAL | BASEANGBAND
+F:WILD_TOO | WILD_OCEAN | WILD_SHORE | 
+S:1_IN_8
+S:BA_POIS | SCARE | HOLD
+D:A sea-serpent of Elvish legend.
+
+# New monster added for the Theme module
+# Adapted from UnAngband
+N:3710:Tom Bombadil
+G:Y:b
+I:140:440d100:255:10000:0
+W:127:250:0:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:SHOW:*
+F:BASEANGBAND | WILD_GRASS | WILD_WOOD | WILD_SHORE | 
+F:UNIQUE | MALE | FORCE_MAXHP | GOOD | HAS_LITE | CAN_SPEAK | 
+F:NO_THEFT | CAN_FLY | NO_CUT | DEATH_ORB | 
+F:WYRM_PROTECT | DG_CURSE | GOOD | OPEN_DOOR | BASH_DOOR | SMART | 
+F:RES_NETH | NEVER_BLOW | REFLECTING | WEIRD_MIND | 
+F:REGENERATE | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:RES_TELE | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | PET | 
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | CAN_SWIM |  
+S:1_IN_5 | 
+S:CONF | MIND_BLAST | BRAIN_SMASH | 
+S:BA_MANA | CAUSE_4 | MISSILE | SCARE | SLOW | HOLD | BO_MANA | 
+S:HASTE | HAND_DOOM | HEAL | BLINK | BR_MANA | S_MONSTERS | 
+D:A mysterious figure in a blue coat, his face creased in laughter. 
+D:Legend has it that he is older than Arda itself, and will aid 
+D:the forces of good in any way he can.
+
+# New monster added by furiosity for the Theme module
+N:3711:Vaire, the Weaver
+G:A:W
+I:200:440d100:255:1000:0
+W:80:2500:0:0
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:BASEANGBAND | WILD_TOWN | 
+F:WILD_GRASS | WILD_MOUNTAIN | WILD_WOOD | WILD_SHORE | 
+F:UNIQUE | FEMALE | FORCE_MAXHP | HAS_LITE | POWERFUL | 
+F:NO_THEFT | CAN_FLY | NO_CUT | DEATH_ORB | CAN_SPEAK | 
+F:WYRM_PROTECT | DG_CURSE | GOOD | SMART | NEUTRAL | NO_TARGET | NEVER_MOVE | 
+F:RES_NETH | NEVER_BLOW | REFLECTING | WEIRD_MIND | NO_DEATH | 
+F:REGENERATE | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:RES_TELE | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE |
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | CAN_SWIM |  
+S:1_IN_1
+S:HAND_DOOM | BR_MANA | HAND_DOOM | BR_MANA | HAND_DOOM 
+D:A Queen of the Valar, the spouse of Mandos, who weaves the 
+D:tales of the history of Arda.
+
+# New monster added by furiosity for the Theme module
+N:3712:Irmo of Lorien
+G:A:g
+I:200:440d100:255:1000:0
+W:80:2500:0:0
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:BASEANGBAND | WILD_TOWN | 
+F:WILD_GRASS | WILD_MOUNTAIN | WILD_WOOD | WILD_SHORE |  
+F:UNIQUE | MALE | FORCE_MAXHP | HAS_LITE | POWERFUL | 
+F:NO_THEFT | CAN_FLY | NO_CUT | DEATH_ORB | CAN_SPEAK | 
+F:WYRM_PROTECT | DG_CURSE | GOOD | SMART | NEUTRAL | NO_TARGET | NEVER_MOVE | 
+F:RES_NETH | NEVER_BLOW | REFLECTING | WEIRD_MIND | NO_DEATH | 
+F:REGENERATE | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:RES_TELE | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE |
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | CAN_SWIM |  
+S:1_IN_1
+S:HAND_DOOM | BR_MANA | HAND_DOOM | BR_MANA | HAND_DOOM 
+D:A Vala more commonly called Lorien, from the gardens of 
+D:Lorien in Valinor.
+
+# New monster added by furiosity for the Theme module
+N:3713:Este, the Gentle
+G:A:B
+I:200:440d100:255:1000:0
+W:80:2500:0:0
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:BASEANGBAND | WILD_TOWN | 
+F:WILD_GRASS | WILD_MOUNTAIN | WILD_WOOD | WILD_SHORE | 
+F:UNIQUE | FEMALE | FORCE_MAXHP | HAS_LITE | POWERFUL | 
+F:NO_THEFT | CAN_FLY | NO_CUT | DEATH_ORB | CAN_SPEAK | 
+F:WYRM_PROTECT | DG_CURSE | GOOD | SMART | NEUTRAL | NO_TARGET | NEVER_MOVE | 
+F:RES_NETH | NEVER_BLOW | REFLECTING | WEIRD_MIND | NO_DEATH | 
+F:REGENERATE | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:RES_TELE | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE |
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | CAN_SWIM |  
+S:1_IN_1
+S:HAND_DOOM | BR_MANA | HAND_DOOM | BR_MANA | HAND_DOOM 
+D:A lady of the Valar, the spouse of Irmo.
+
+# New monster added by furiosity for the Theme module
+N:3714:Nienna, the Sorrowful
+G:A:D
+I:200:440d100:255:1000:0
+W:80:2500:0:0
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:BASEANGBAND | WILD_TOWN | 
+F:WILD_GRASS | WILD_MOUNTAIN | WILD_WOOD | WILD_SHORE | 
+F:UNIQUE | FEMALE | FORCE_MAXHP | HAS_LITE | POWERFUL | 
+F:NO_THEFT | CAN_FLY | NO_CUT | DEATH_ORB | CAN_SPEAK | 
+F:WYRM_PROTECT | DG_CURSE | GOOD | SMART | NEUTRAL | NO_TARGET | NEVER_MOVE | 
+F:RES_NETH | NEVER_BLOW | REFLECTING | WEIRD_MIND | NO_DEATH | 
+F:REGENERATE | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:RES_TELE | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE |
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | CAN_SWIM |  
+S:1_IN_1
+S:HAND_DOOM | BR_MANA | HAND_DOOM | BR_MANA | HAND_DOOM 
+D:A Queen of the Valar, the sister of Namo and Irmo, who dwells 
+D:alone on the western borders of the World. Nienna ranks as one of 
+D:the eight Aratar, the most powerful of the Valar. Grief and mourning 
+D:are Nienna's province; she weeps for the suffering of Arda. She teaches 
+D:pity and endurance; she often goes to the halls of Mandos to comfort 
+D:and counsel those in the Halls of Waiting. The Maia Olorin was her 
+D:student and learned much from her.
+
+# New monster added by furiosity for the Theme module
+N:3715:Nessa the Lithe
+G:A:b
+I:200:440d100:255:1000:0
+W:80:2500:0:0
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:BASEANGBAND | WILD_TOWN | 
+F:WILD_GRASS | WILD_MOUNTAIN | WILD_WOOD | WILD_SHORE | 
+F:UNIQUE | FEMALE | FORCE_MAXHP | HAS_LITE | POWERFUL | 
+F:NO_THEFT | CAN_FLY | NO_CUT | DEATH_ORB | CAN_SPEAK | 
+F:WYRM_PROTECT | DG_CURSE | GOOD | SMART | NEUTRAL | NO_TARGET | NEVER_MOVE | 
+F:RES_NETH | NEVER_BLOW | REFLECTING | WEIRD_MIND | NO_DEATH | 
+F:REGENERATE | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:RES_TELE | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE |
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | CAN_SWIM |  
+S:1_IN_1
+S:HAND_DOOM | BR_MANA | HAND_DOOM | BR_MANA | HAND_DOOM 
+D:The spouse of Tulkas and sister to Orome, who delights in dancing 
+D:on the green lawns of Valimar.
+
+# New monster added by furiosity for the Theme module
+N:3716:Orome, the Huntsman of the Valar
+G:A:G
+I:200:440d100:255:1000:0
+W:80:2500:0:0
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:BASEANGBAND | WILD_TOWN | 
+F:WILD_GRASS | WILD_MOUNTAIN | WILD_WOOD | WILD_SHORE | 
+F:UNIQUE | MALE | FORCE_MAXHP | HAS_LITE | POWERFUL | 
+F:NO_THEFT | CAN_FLY | NO_CUT | DEATH_ORB | CAN_SPEAK | 
+F:WYRM_PROTECT | DG_CURSE | GOOD | SMART | NEUTRAL | NO_TARGET | NEVER_MOVE | 
+F:RES_NETH | NEVER_BLOW | REFLECTING | WEIRD_MIND | NO_DEATH | 
+F:REGENERATE | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:RES_TELE | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE |
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | CAN_SWIM |  
+S:1_IN_1
+S:HAND_DOOM | BR_MANA | HAND_DOOM | BR_MANA | HAND_DOOM 
+D:The brother of Nessa and one of the eight Aratar. In ancient times, 
+D:he rode often in the forests of Middle-earth, and it was he who first 
+D:discovered the Eldar at Cuivienen.
+
+# New monster added by furiosity for the Theme module
+N:3717:Vana, the Ever-young
+G:A:y
+I:200:440d100:255:1000:0
+W:80:2500:0:0
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:BASEANGBAND | WILD_TOWN | 
+F:WILD_GRASS | WILD_MOUNTAIN | WILD_WOOD | WILD_SHORE | 
+F:UNIQUE | FEMALE | FORCE_MAXHP | HAS_LITE | POWERFUL | 
+F:NO_THEFT | CAN_FLY | NO_CUT | DEATH_ORB | CAN_SPEAK | 
+F:WYRM_PROTECT | DG_CURSE | GOOD | SMART | NEUTRAL | NO_TARGET | NEVER_MOVE | 
+F:RES_NETH | NEVER_BLOW | REFLECTING | WEIRD_MIND | NO_DEATH | 
+F:REGENERATE | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:RES_TELE | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE |
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | CAN_SWIM |  
+S:1_IN_1
+S:HAND_DOOM | BR_MANA | HAND_DOOM | BR_MANA | HAND_DOOM 
+D:The sister of Yavanna and spouse of Orome. 
+D:Flowers open and birds sing at her passing. 
+
+# New monster added by furiosity for the Theme module
+N:3718:Aquatic ant
+G:a:B
+I:110:20d10:14:49:40
+W:35:50:700:350
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:3d12
+B:BITE:HURT:3d12
+F:FORCE_MAXHP | KILL_BODY | FRIENDS | DROP_SKELETON
+F:WEIRD_MIND | BASH_DOOR | CAN_SWIM | 
+F:ANIMAL | RES_WATE |  
+F:MORTAL | BASEANGBAND
+S:1_IN_4
+S:BA_WATE
+D:A strange antlike creature, animated by a powerful wizard you 
+D:cannot see. 
+
+# New monster added by furiosity for the Theme module
+N:3719:Aquatic ant
+G:a:B
+I:110:20d10:14:49:40
+W:35:2500:700:350
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:3d12
+B:BITE:HURT:3d12
+F:FORCE_MAXHP | KILL_BODY | FRIENDS | DROP_SKELETON
+F:WEIRD_MIND | BASH_DOOR | CAN_SWIM | 
+F:ANIMAL | RES_WATE |  
+F:MORTAL | BASEANGBAND
+S:1_IN_4
+S:BA_WATE
+S:MULTIPLY
+D:A strange antlike creature, animated by a powerful wizard you 
+D:cannot see. 
+
+# New monster added by furiosity for the Theme module
+N:3720:Killer aquatic beetle
+G:K:B
+I:110:22d8:14:45:30
+W:27:50:600:95
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:3d4
+B:SPIT:COLD:4d5
+F:WEIRD_MIND | BASH_DOOR | WILD_TOO | DROP_CORPSE | 
+F:ANIMAL | RES_WATE | CAN_FLY | SUSCEP_FIRE |
+F:MORTAL | BASEANGBAND | HAS_LITE |  
+D:It is a giant beetle that prefers to live in water. 
+
+# New monster added by furiosity for the Theme module
+N:3721:15-headed hydra
+G:M:U
+I:120:44d100:20:140:20
+W:59:100:8500:25000
+E:0:1:0:2:2:0
+O:0:0:0:0
+B:BITE:FIRE:5d11
+B:BITE:ACID:5d11
+B:BITE:COLD:5d11
+B:BITE:ELEC:5d11
+F:BASEANGBAND | ANIMAL | MORTAL | WILD_TOO | WILD_SHORE | WILD_SWAMP | 
+F:FORCE_SLEEP | CAN_SWIM | DROP_CORPSE | WILD_OCEAN | 
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_ACID | IM_POIS | RES_PLAS | SMART | 
+F:NO_CONF | NO_SLEEP | BASH_DOOR | ONLY_GOLD | DROP_4D2 | DROP_4D2 | 
+S:1_IN_3
+S:SCARE | BA_FIRE | BA_POIS | BA_COLD | BA_ELEC | BA_ACID | CONF | 
+S:BO_FIRE | BO_COLD | BO_ELEC | BO_ACID | S_KIN | 
+D:A cunning reptilian creature with fifteen multicoloured heads. 
+
+# New monster added by furiosity for the Theme module
+N:3722:Killer hydra
+G:M:D
+I:120:50d100:20:150:20
+W:65:250:9000:40000
+E:0:1:0:2:2:0
+O:0:0:0:0
+B:BITE:FIRE:6d12
+B:BITE:ACID:6d12
+B:BITE:COLD:6d12
+B:BITE:ELEC:6d12
+F:BASEANGBAND | ANIMAL | MORTAL | WILD_TOO | WILD_SHORE | WILD_SWAMP | 
+F:FORCE_SLEEP | CAN_SWIM | DROP_CORPSE | WILD_OCEAN | 
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_ACID | IM_POIS | RES_PLAS | RES_NETH | 
+F:RES_TELE | SMART | NO_CONF | NO_SLEEP | BASH_DOOR | ONLY_GOLD | DROP_4D2 | 
+F:RES_NEXU | DROP_4D2 | RES_WATE | NO_STUN | EVIL | 
+S:1_IN_3 | 
+S:SCARE | BA_FIRE | BA_POIS | BA_COLD | BA_ELEC | BA_ACID | CONF | 
+S:BO_FIRE | BO_COLD | BO_ICEE | BA_WATE | BO_ELEC | BO_ACID | BR_NETH |
+S:S_KIN | S_ANIMALS | S_MONSTERS | 
+D:A cunning, evil reptile from the depths. It has so many heads that you 
+D:give up after losing count twice.
+
+# New monster added by furiosity for the Theme module
+N:3723:Aquatic quylthulg
+G:Q:b
+I:120:48d10:20:1:0
+W:45:50:3000:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL |  
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_HYDRA
+D:It is a pulsing flesh mound that was once a many-headed reptile. 
+
+# New monster added by furiosity for the Theme module
+N:3724:Aquatic dragon fly
+G:F:B
+I:120:3d8:12:20:50
+W:20:100:150:70
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+F:FORCE_SLEEP | RAND_50 | RAND_25 | 
+F:WEIRD_MIND | BASH_DOOR | CAN_FLY | WILD_TOO | WILD_SWAMP | 
+F:ANIMAL | NO_CUT | RES_WATE | 
+F:MORTAL | BASEANGBAND
+S:1_IN_10 | 
+S:BA_WATE
+D:The size of a large bird, this fly prefers watery regions.
+
+# New monster added by furiosity for the Theme module
+N:3725:Aquatic dragon fly
+G:F:B
+I:120:3d8:12:20:50
+W:20:2500:150:70
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+F:FORCE_SLEEP | RAND_50 | RAND_25 | 
+F:WEIRD_MIND | BASH_DOOR | CAN_FLY | WILD_TOO | WILD_SWAMP | 
+F:ANIMAL | NO_CUT | RES_WATE | 
+F:MORTAL | BASEANGBAND
+S:1_IN_10 | 
+S:BA_WATE
+S:MULTIPLY
+D:The size of a large bird, this fly prefers watery regions.
+
+# New monster added by furiosity for the Theme module
+N:3726:Aquatic bear
+G:q:B
+I:110:10d10:10:35:10
+W:15:50:2000:40
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d4
+B:CLAW:CONFUSE:1d4
+B:BITE:PARALYZE:1d6
+F:WEIRD_MIND | BASH_DOOR | FRIENDS | DROP_SKELETON | DROP_CORPSE
+F:ANIMAL | RES_WATE | CAN_SWIM |  
+F:MORTAL | BASEANGBAND
+D:A strange bear the prefers to live in the water. 
+
+# New monster added by furiosity for the Theme module
+N:3727:Swamp naga
+G:n:o
+I:110:11d8:20:40:120
+W:10:150:1800:60
+E:0:0:0:0:1:0
+O:50:0:50:0
+B:CRUSH:HURT:2d10
+B:BITE:POISON:2d4
+F:FEMALE |  CAN_SWIM | WILD_TOO | WILD_SHORE |
+F:RAND_25 | DROP_90 | IM_POIS | 
+F:TAKE_ITEM | BASH_DOOR | DROP_CORPSE | IM_ACID | 
+F:EVIL | MORTAL | BASEANGBAND
+D:A large orange snake with a woman's torso. She prefers to live 
+D:in the swamp and can withstand marshland elements.
+
+# New monster added by furiosity for the Theme module
+N:3728:Ocean naga
+G:n:b
+I:110:11d80:20:40:120
+W:30:500:1800:60
+E:0:0:0:0:1:0
+O:50:0:50:0
+B:CRUSH:HURT:4d10
+B:BITE:ACID:3d6
+F:FEMALE |  CAN_SWIM | WILD_TOO | WILD_SHORE |
+F:DROP_90 | WILD_OCEAN | IM_ACID | 
+F:TAKE_ITEM | BASH_DOOR | DROP_CORPSE | RES_WATE | 
+F:EVIL | MORTAL | BASEANGBAND
+S:1_IN_8
+S:BA_WATE | BO_ICEE | 
+D:A large dark blue snake with a woman's torso. She prefers to live 
+D:in deep water.
+
+N:3729:Gaurrog
+G:U:B
+I:110:35d20:30:50:10
+W:40:50:0:1000
+E:0:0:0:0:1:0
+O:20:60:20:0
+B:HIT:HURT:3d4
+B:GAZE:POISON:8d12
+B:CLAW:INSANITY:8d12
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:FRIENDS | SMART  |
+F:ONLY_ITEM | DROP_60 | 
+F:POWERFUL | 
+F:EVIL | DEMON | IM_ACID | NO_CONF | NO_SLEEP | BASEANGBAND | HAS_LITE
+S:1_IN_8 | 
+S:BO_ICEE | BA_WATE
+D:A hideous scaled demon, it is a sleek form with many fins but no visible 
+D:arms or legs. It has a toothed gaping maw, reminiscent of a caricature 
+D:of a shark's jaws. 
+
+N:3730:Madeleine
+G:c:B
+I:115:2d8:2:12:200
+W:2:250:2000:4
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:POISON:2d5
+F:WILD_TOO | WILD_TOWN | WILD_SHORE | RAND_25 | AI_ANNOY | CAN_SWIM | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WEIRD_MIND | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | EVIL | IM_COLD | 
+S:1_IN_15 | 
+S:BLIND
+D:This female plateau boot really likes to kick you in the shins. 
+
+N:3731:Madeleine
+G:c:B
+I:115:2d8:2:12:200
+W:2:1250:2000:4
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:POISON:2d5
+F:WILD_TOO | WILD_TOWN | WILD_SHORE | RAND_25 | AI_ANNOY | CAN_SWIM | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WEIRD_MIND | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | EVIL | IM_COLD | 
+S:1_IN_15 | 
+S:BLIND
+S:MULTIPLY
+D:This female plateau boot really likes to kick you in the shins. 
+
+N:3732:Sea dragon
+G:D:B
+I:120:168d10:25:100:80
+W:43:200:170000:5100
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:4d10
+B:CLAW:HURT:4d10
+B:BITE:CONFUSE:7d10
+F:FORCE_MAXHP | FORCE_SLEEP | ONLY_ITEM | DROP_2D2 | DROP_3D2 |
+F:SMART | CAN_SWIM | POWERFUL | TAKE_ITEM |
+F:DRAGON | EVIL |  IM_ACID | IM_POIS | RES_NETH | NO_CONF | NO_SLEEP |
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND |
+S:1_IN_5 |
+S:BR_ACID | BR_POIS |
+S:SCARE | CONF | SLOW |
+D:It is a sinuous dragon-like form, that crashes through the waves as it
+D: moves.
+
+N:3733:Giant white jellyfish
+G:j:w
+I:120:3d12:2:1:99
+W:9:200:2000:20
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:POISON:1d3
+F:FRIENDS | BASEANGBAND |
+F:STUPID | HAS_LITE | EMPTY_MIND | CAN_SWIM | 
+F:IM_POIS | NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+D:It is a giant jellyfish glowing with pulsing white lights.
+
+N:3734:Giant silver jellyfish
+G:j:W
+I:120:9d5:2:1:99
+W:14:200:2000:53
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:EAT_LITE:1d3
+B:TOUCH:EAT_LITE:1d3
+B:SPORE:EAT_LITE
+F:FRIENDS | BASEANGBAND |
+F:STUPID | EMPTY_MIND | CAN_SWIM | AURA_COLD |
+F:IM_POIS | NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE |
+S:1_IN_6 |
+S:DRAIN_MANA |
+D:It is a giant silver jellyfish that sucks all light from its
+D: surroundings.
+
+N:3735:Giant silver jellyfish
+G:j:W
+I:120:9d5:2:1:99
+W:14:4000:2000:53
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:EAT_LITE:1d3
+B:TOUCH:EAT_LITE:1d3
+B:SPORE:EAT_LITE
+F:FRIENDS | BASEANGBAND |
+F:STUPID | EMPTY_MIND | CAN_SWIM | AURA_COLD |
+F:IM_POIS | NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE |
+S:1_IN_6 |
+S:DRAIN_MANA |
+S:MULTIPLY
+D:It is a giant silver jellyfish that sucks all light from its
+D: surroundings.
+
+N:3736:Giant yellow jellyfish
+G:j:y
+I:120:9d5:2:1:99
+W:13:150:2000:26
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:POISON:1d6
+F:FRIENDS | BASEANGBAND |
+F:STUPID | HAS_LITE | EMPTY_MIND | CAN_SWIM | 
+F:IM_POIS | NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+S:1_IN_6 |
+S:DRAIN_MANA |
+D:It is a giant jellyfish glowing with pulsing yellow lights.
+
+N:3737:Giant blue jellyfish
+G:j:b
+I:110:9d6:2:1:99
+W:9:200:2000:20
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:COLD:1d6
+F:FRIENDS | BASEANGBAND |
+F:STUPID | HAS_LITE | COLD_BLOOD | EMPTY_MIND | CAN_SWIM | 
+F:IM_COLD | NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+D:It is a giant jellyfish glowing with pulsing blue lights.
+
+N:3738:Giant green jellyfish
+G:j:g
+I:120:9d11:2:1:99
+W:18:200:2000:92
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:ACID:1d5
+F:FRIENDS | BASEANGBAND |
+F:STUPID | HAS_LITE | EMPTY_MIND | CAN_SWIM | 
+F:IM_ACID | NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+D:It is a giant jellyfish glowing with pulsing green lights.
+
+N:3739:Giant pink jellyfish
+G:j:R
+I:110:12d10:2:1:99
+W:14:200:2000:50
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:LOSE_STR:1d5
+F:FRIENDS | BASEANGBAND |
+F:STUPID | HAS_LITE | EMPTY_MIND | CAN_SWIM | 
+F:NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE |
+D:It is a giant jellyfish glowing with pulsing pink lights.
+
+N:3740:Giant pink jellyfish
+G:j:R
+I:110:12d10:2:1:99
+W:14:4000:2000:50
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:LOSE_STR:1d5
+F:FRIENDS | BASEANGBAND |
+F:STUPID | HAS_LITE | EMPTY_MIND | CAN_SWIM | 
+F:NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE |
+S:MULTIPLY
+D:It is a giant jellyfish glowing with pulsing pink lights.
+
+N:3741:Giant purple jellyfish
+G:j:v
+I:110:23d10:2:1:99
+W:21:200:2000:130
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:EXP_10
+F:FRIENDS | BASEANGBAND |
+F:STUPID | HAS_LITE | EMPTY_MIND | CAN_SWIM | 
+F:IM_POIS | NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+S:1_IN_6 |
+S:DRAIN_MANA |
+D:It is a giant jellyfish glowing with pulsing purple lights.
+
+N:3742:Giant spotted jellyfish
+G:j:b
+I:120:4d14:12:18:1
+W:20:200:2000:120
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:ACID:6d6
+F:FRIENDS | BASEANGBAND |
+F:STUPID | COLD_BLOOD | EMPTY_MIND | CAN_SWIM | 
+F:IM_ACID | IM_POIS | NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+D:It is a giant jellyfish covered in discoloured blotches.
+
+N:3743:Giant ochre jellyfish
+G:j:U
+I:120:4d14:12:18:1
+W:22:250:2000:150
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:ACID:2d10
+B:SPIT:ACID:2d10
+F:FRIENDS | BASEANGBAND |
+F:STUPID | COLD_BLOOD | EMPTY_MIND | CAN_SWIM | BASH_DOOR |
+F:TAKE_ITEM |
+F:IM_ACID | IM_POIS | NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+D:It is a fast moving highly acidic giant jellyfish.
+
+N:3744:Giant rotting jellyfish
+G:j:y
+I:120:5d17:2:30:99
+W:18:200:2000:84
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:EAT_FOOD:2d3
+B:TOUCH:LOSE_CHR:2d3
+F:FRIENDS | BASEANGBAND |
+F:STUPID | EMPTY_MIND | CAN_SWIM | 
+F:UNDEAD |  NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
+F:NO_SLEEP |
+F:DROP_CORPSE |
+D:It is a giant rotting jellyfish.
+
+N:3745:Giant rotting jellyfish
+G:j:y
+I:120:5d17:2:30:99
+W:18:4000:2000:84
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:EAT_FOOD:2d3
+B:TOUCH:LOSE_CHR:2d3
+F:FRIENDS | BASEANGBAND |
+F:STUPID | EMPTY_MIND | CAN_SWIM | 
+F:UNDEAD |  NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
+F:NO_SLEEP |
+F:DROP_CORPSE |
+S:MULTIPLY
+D:It is a giant rotting jellyfish.
+
+N:3746:Giant clear jellyfish
+G:j:w
+I:110:4d27:2:1:99
+W:26:50:2000:12
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:POISON:1d4
+F:ATTR_CLEAR | FRIENDS | BASEANGBAND |
+F:STUPID | HAS_LITE | INVISIBLE | EMPTY_MIND | CAN_SWIM | 
+F:NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+S:1_IN_6 |
+S:DRAIN_MANA |
+D:It is a giant almost transparent jellyfish glowing with pulsing lights.
+
+N:3747:Giant brown jellyfish
+G:j:u
+I:110:14d10:2:1:99
+W:13:200:2000:47
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:LOSE_CHR:1d4
+B:TOUCH:LOSE_CHR:1d4
+F:FRIENDS | BASEANGBAND |
+F:STUPID | HAS_LITE | EMPTY_MIND | CAN_SWIM | 
+F:NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+D:It is a giant jellyfish glowing with pulsing brown lights.
+
+N:3748:Giant red jellyfish
+G:j:r
+I:110:16d10:2:1:99
+W:14:200:2000:49
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:FIRE:1d8
+F:FRIENDS | BASEANGBAND |
+F:STUPID | HAS_LITE | EMPTY_MIND | CAN_SWIM | 
+F:NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+D:It is a giant jellyfish glowing with pulsing red lights.
+
+N:3749:Giant bright blue jellyfish
+G:j:B
+I:110:18d10:2:1:99
+W:25:150:2000:51
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:COLD:2d6
+F:FRIENDS | BASEANGBAND |
+F:STUPID | HAS_LITE | EMPTY_MIND | CAN_SWIM | 
+F:NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+S:1_IN_6 |
+S:BLINK | DRAIN_MANA |
+S:S_KIN |
+D:It is smarter than your average giant jellyfish.
+
+N:3750:Giant bright blue jellyfish
+G:j:B
+I:110:18d10:2:1:99
+W:25:3000:2000:51
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:COLD:2d6
+F:FRIENDS | BASEANGBAND |
+F:STUPID | HAS_LITE | EMPTY_MIND | CAN_SWIM | 
+F:NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+S:1_IN_6 |
+S:BLINK | DRAIN_MANA |
+S:S_KIN |
+S:MULTIPLY
+D:It is smarter than your average giant jellyfish.
+
+N:3751:Giant bright green jellyfish
+G:j:G
+I:120:21d10:2:1:99
+W:25:250:2000:190
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:ACID:2d5
+F:FRIENDS | BASEANGBAND |
+F:STUPID | HAS_LITE | EMPTY_MIND | CAN_SWIM | 
+F:NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+S:1_IN_6 |
+S:TPORT | DRAIN_MANA |
+S:S_MONSTER |
+D:It is smarter than your average giant jellyfish.
+
+N:3752:Giant black jellyfish
+G:j:D
+I:120:15d15:2:1:99
+W:30:250:2000:280
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:LOSE_ALL:2d8
+F:FRIENDS | BASEANGBAND |
+F:STUPID | HAS_LITE | EMPTY_MIND | CAN_SWIM | 
+F:IM_POIS | NO_FEAR | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+S:1_IN_6 |
+S:DRAIN_MANA |
+D:It is a giant jellyfish glowing with pulsing black lights.
+
+N:3753:Madeleine
+G:c:D
+I:115:5d8:2:100:200
+W:2:250:2000:4
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:1d1
+F:WILD_TOO | WILD_TOWN | WILD_SHORE | RAND_25 | AI_ANNOY | CAN_SWIM | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WEIRD_MIND | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | EVIL | IM_COLD | 
+F:REFLECTING | IM_POIS | IM_FIRE | IM_ELEC | IM_ACID | RES_NETH | RES_WATE | 
+F:RES_PLAS | RES_NEXU | RES_DISE | NO_FEAR | NO_TARGET | 
+S:1_IN_15 | 
+S:CONF | HEAL |
+D:This female calf-leather sandal really likes to kick you in the shins. 
+D:She looks so incredibly sweet, too... hurting her would be an evil thing to do. 
+D:Instead, you should allow her to hurt you as much as she wants to. No matter 
+D:if you're male or not, that's what a gentleman would do.
+
+N:3754:Madeleine
+G:c:D
+I:115:5d8:2:100:200
+W:2:1250:2000:4
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:1d1
+F:WILD_TOO | WILD_TOWN | WILD_SHORE | RAND_25 | AI_ANNOY | CAN_SWIM | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WEIRD_MIND | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | EVIL | IM_COLD | 
+F:REFLECTING | IM_POIS | IM_FIRE | IM_ELEC | IM_ACID | RES_NETH | RES_WATE | 
+F:RES_PLAS | RES_NEXU | RES_DISE | NO_FEAR | NO_TARGET | 
+S:1_IN_15 | 
+S:CONF | HEAL |
+S:MULTIPLY
+D:This female calf-leather sandal really likes to kick you in the shins. 
+D:She looks so incredibly sweet, too... hurting her would be an evil thing to do. 
+D:Instead, you should allow her to hurt you as much as she wants to. No matter 
+D:if you're male or not, that's what a gentleman would do.
+
+
