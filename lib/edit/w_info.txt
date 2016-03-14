@@ -115,6 +115,29 @@ W:E:23:30:60
 # Cirith Ungol
 W:E:9:56:65
 
+# The Northern Waste
+W:E:31:5:44
+
+# The Blue Mountains
+W:E:32:29:18
+
+# Dol Amroth
+W:E:33:60:48
+
+# Angmar
+W:E:34:13:48
+
+# Near Harad
+W:E:35:64:97
+
+# Isengard
+W:E:36:42:43
+
+# Tol Eressea
+W:E:37:64:1
+
+# Utumno
+W:E:38:1:99
 
 # Starting position
 W:P:34:21
