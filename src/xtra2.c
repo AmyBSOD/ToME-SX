@@ -2965,13 +2965,13 @@ bool set_stun(int v)
 	}
 
 	/* Knocked out */
-	if (v > 100)
+	if (v > 300)
 	{
 		new_aux = 3;
 	}
 
 	/* Heavy stun */
-	else if (v > 50)
+	else if (v > 100)
 	{
 		new_aux = 2;
 	}
