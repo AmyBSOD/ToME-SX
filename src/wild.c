@@ -551,6 +551,7 @@ void wilderness_gen(int refresh)
 		if (randint(10) == 2) lim += randint(MIN_M_ALLOC_TN);
 		if (randint(100) == 2) lim += randint(60);
 
+
 		/*
 		 * Can't have more monsters than floor grids -1(for the player,
 		 * not needed but safer
