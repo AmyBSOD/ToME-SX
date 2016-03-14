@@ -1572,40 +1572,40 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		 * single missile traps
 		 */
 	case TRAP_OF_ARROW_I:
-		ident = player_handle_missile_trap(1, TV_ARROW, SV_AMMO_NORMAL, 4, 8, 0, "Arrow Trap");
+		ident = player_handle_missile_trap(1, TV_ARROW, SV_AMMO_NORMAL, 4, 4, 0, "Arrow Trap");
 		break;
 	case TRAP_OF_ARROW_II:
-		ident = player_handle_missile_trap(1, TV_BOLT, SV_AMMO_NORMAL, 5, 8, 0, "Bolt Trap");
+		ident = player_handle_missile_trap(1, TV_BOLT, SV_AMMO_NORMAL, 5, 4, 0, "Bolt Trap");
 		break;
 	case TRAP_OF_ARROW_III:
-		ident = player_handle_missile_trap(1, TV_ARROW, SV_AMMO_HEAVY, 6, 8, 0, "Seeker Arrow Trap");
+		ident = player_handle_missile_trap(1, TV_ARROW, SV_AMMO_HEAVY, 6, 4, 0, "Seeker Arrow Trap");
 		break;
 	case TRAP_OF_ARROW_IV:
-		ident = player_handle_missile_trap(1, TV_BOLT, SV_AMMO_HEAVY, 8, 10, 0, "Seeker Bolt Trap");
+		ident = player_handle_missile_trap(1, TV_BOLT, SV_AMMO_HEAVY, 8, 5, 0, "Seeker Bolt Trap");
 		break;
 	case TRAP_OF_POISON_ARROW_I:
-		ident = player_handle_missile_trap(1, TV_ARROW, SV_AMMO_NORMAL, 4, 8, 10 + randint(20), "Poison Arrow Trap");
+		ident = player_handle_missile_trap(1, TV_ARROW, SV_AMMO_NORMAL, 4, 4, randint(20), "Poison Arrow Trap");
 		break;
 	case TRAP_OF_POISON_ARROW_II:
-		ident = player_handle_missile_trap(1, TV_BOLT, SV_AMMO_NORMAL, 5, 8, 15 + randint(30), "Poison Bolt Trap");
+		ident = player_handle_missile_trap(1, TV_BOLT, SV_AMMO_NORMAL, 5, 4, randint(30), "Poison Bolt Trap");
 		break;
 	case TRAP_OF_POISON_ARROW_III:
-		ident = player_handle_missile_trap(1, TV_ARROW, SV_AMMO_HEAVY, 6, 8, 30 + randint(50), "Poison Seeker Arrow Trap");
+		ident = player_handle_missile_trap(1, TV_ARROW, SV_AMMO_HEAVY, 6, 4, randint(50), "Poison Seeker Arrow Trap");
 		break;
 	case TRAP_OF_POISON_ARROW_IV:
-		ident = player_handle_missile_trap(1, TV_BOLT, SV_AMMO_HEAVY, 8, 10, 40 + randint(70), "Poison Seeker Bolt Trap");
+		ident = player_handle_missile_trap(1, TV_BOLT, SV_AMMO_HEAVY, 8, 5, randint(70), "Poison Seeker Bolt Trap");
 		break;
 	case TRAP_OF_DAGGER_I:
-		ident = player_handle_missile_trap(1, TV_SWORD, SV_BROKEN_DAGGER, 2, 8, 0, "Dagger Trap");
+		ident = player_handle_missile_trap(1, TV_SWORD, SV_BROKEN_DAGGER, 2, 4, 0, "Dagger Trap");
 		break;
 	case TRAP_OF_DAGGER_II:
-		ident = player_handle_missile_trap(1, TV_SWORD, SV_DAGGER, 3, 8, 0, "Dagger Trap");
+		ident = player_handle_missile_trap(1, TV_SWORD, SV_DAGGER, 3, 4, 0, "Dagger Trap");
 		break;
 	case TRAP_OF_POISON_DAGGER_I:
-		ident = player_handle_missile_trap(1, TV_SWORD, SV_BROKEN_DAGGER, 2, 8, 15 + randint(20), "Poison Dagger Trap");
+		ident = player_handle_missile_trap(1, TV_SWORD, SV_BROKEN_DAGGER, 2, 4, randint(20), "Poison Dagger Trap");
 		break;
 	case TRAP_OF_POISON_DAGGER_II:
-		ident = player_handle_missile_trap(1, TV_SWORD, SV_DAGGER, 3, 8, 20 + randint(30), "Poison Dagger Trap");
+		ident = player_handle_missile_trap(1, TV_SWORD, SV_DAGGER, 3, 4, randint(30), "Poison Dagger Trap");
 		break;
 
 		/*
@@ -1614,40 +1614,40 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		 * Amy edit: reduced amount of missiles so players aren't hopelessly instakilled
 		 */
 	case TRAP_OF_ARROWS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_NORMAL, 4, 8, 0, "Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_NORMAL, 4, 4, 0, "Arrow Trap");
 		break;
 	case TRAP_OF_ARROWS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_NORMAL, 5, 8, 0, "Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_NORMAL, 5, 4, 0, "Bolt Trap");
 		break;
 	case TRAP_OF_ARROWS_III:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_HEAVY, 6, 8, 0, "Seeker Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_HEAVY, 6, 4, 0, "Seeker Arrow Trap");
 		break;
 	case TRAP_OF_ARROWS_IV:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_HEAVY, 8, 10, 0, "Seeker Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_HEAVY, 8, 5, 0, "Seeker Bolt Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_NORMAL, 4, 8, 10 + randint(20), "Poison Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_NORMAL, 4, 4, randint(20), "Poison Arrow Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_NORMAL, 5, 8, 15 + randint(30), "Poison Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_NORMAL, 5, 4, randint(30), "Poison Bolt Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_III:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_HEAVY, 6, 8, 30 + randint(50), "Poison Seeker Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_HEAVY, 6, 4, randint(50), "Poison Seeker Arrow Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_IV:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_HEAVY, 8, 10, 40 + randint(70), "Poison Seeker Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_HEAVY, 8, 5, randint(70), "Poison Seeker Bolt Trap");
 		break;
 	case TRAP_OF_DAGGERS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_BROKEN_DAGGER, 2, 8, 0, "Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_BROKEN_DAGGER, 2, 4, 0, "Dagger Trap");
 		break;
 	case TRAP_OF_DAGGERS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_DAGGER, 3, 8, 0, "Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_DAGGER, 3, 4, 0, "Dagger Trap");
 		break;
 	case TRAP_OF_POISON_DAGGERS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_BROKEN_DAGGER, 2, 8, 15 + randint(20), "Poison Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_BROKEN_DAGGER, 2, 4, randint(20), "Poison Dagger Trap");
 		break;
 	case TRAP_OF_POISON_DAGGERS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_DAGGER, 3, 8, 20 + randint(30), "Poison Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_DAGGER, 3, 4, randint(30), "Poison Dagger Trap");
 		break;
 
 	case TRAP_OF_DROP_ITEMS:

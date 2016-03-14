@@ -7582,12 +7582,12 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 				else if (p_ptr->hold_life)
 				{
 					msg_print("You feel your life slipping away!");
-					lose_exp(500 + (p_ptr->exp / 1000) * MON_DRAIN_LIFE);
+					lose_exp(50 + (p_ptr->exp / 500) * MON_DRAIN_LIFE);
 				}
 				else
 				{
 					msg_print("You feel your life draining away!");
-					lose_exp(5000 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
+					lose_exp(500 + (p_ptr->exp / 50) * MON_DRAIN_LIFE);
 				}
 			}
 			if ((!p_ptr->resist_chaos) || (randint(9) == 1))
