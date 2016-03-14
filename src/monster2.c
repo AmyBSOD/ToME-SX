@@ -2454,7 +2454,7 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 
 	/* Disallow Spirits in The Void, now this *IS* an ugly hack, I hate to do it ... */
 	/* Amy edit: occasionally allow them in other places too */
-	if ((r_ptr->flags7 & RF7_SPIRIT) && (dungeon_type != DUNGEON_VOID) && (rand_int(100) > 5) )
+	if ((r_ptr->flags7 & RF7_SPIRIT) && (dungeon_type != DUNGEON_VOID) && (!m_allow_special[r_idx]) && (rand_int(100) > 5) )
 	{
 		if (wizard) cmsg_format(TERM_L_RED, "WARNING: Refused monster(%d): SPIRIT in non VOID", r_idx);
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
