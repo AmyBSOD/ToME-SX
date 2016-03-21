@@ -3768,9 +3768,11 @@ void do_cmd_use_staff(void)
 	cptr q, s;
 
 	/* No magic */
-	if (p_ptr->antimagic > 0)
+	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && (magik(p_ptr->antimagic)))
 	{
-		msg_print("Your anti-magic field disrupts any magic attempts.");
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
 		return;
 	}
 
@@ -3972,9 +3974,11 @@ void do_cmd_aim_wand(void)
 
 
 	/* No magic */
-	if (p_ptr->antimagic > 0)
+	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && (magik(p_ptr->antimagic)))
 	{
-		msg_print("Your anti-magic field disrupts any magic attempts.");
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
 		return;
 	}
 
@@ -4169,9 +4173,11 @@ void zap_combine_rod_tip(object_type *q_ptr, int tip_item)
 
 
 	/* No magic */
-	if (p_ptr->antimagic > 0)
+	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && (magik(p_ptr->antimagic)))
 	{
-		msg_print("Your anti-magic field disrupts any magic attempts.");
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
 		return;
 	}
 
@@ -4264,12 +4270,13 @@ void do_cmd_zap_rod(void)
 
 
 	/* No magic */
-	if (p_ptr->antimagic > 0)
+	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && (magik(p_ptr->antimagic)))
 	{
-		msg_print("Your anti-magic field disrupts any magic attempts.");
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
 		return;
 	}
-
 
 	/* Restrict choices to rods */
 	item_tester_hook = item_tester_hook_zapable;

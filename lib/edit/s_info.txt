@@ -407,29 +407,29 @@ I:1000
 F:RANDOM_GAIN
 
 # Antimagic exclude all magic
-E:Magic-Device:Antimagic
-E:Mana:Antimagic
-E:Geomancy:Antimagic
-E:Fire:Antimagic
-E:Air:Antimagic
-E:Water:Antimagic
-E:Earth:Antimagic
-E:Conveyance:Antimagic
-E:Divination:Antimagic
-E:Temporal:Antimagic
-E:Meta:Antimagic
-E:Mind:Antimagic
-E:Nature:Antimagic
-E:Udun:Antimagic
-E:Sorcery:Antimagic
-E:Demonology:Antimagic
-E:Runecraft:Antimagic
-E:Necromancy:Antimagic
-E:Mindcraft:Antimagic
-E:Music:Antimagic
-E:Prayer:Antimagic
-E:Druidistic:Antimagic
-E:Thaumaturgy:Antimagic
+# E:Magic-Device:Antimagic
+# E:Mana:Antimagic
+# E:Geomancy:Antimagic
+# E:Fire:Antimagic
+# E:Air:Antimagic
+# E:Water:Antimagic
+# E:Earth:Antimagic
+# E:Conveyance:Antimagic
+# E:Divination:Antimagic
+# E:Temporal:Antimagic
+# E:Meta:Antimagic
+# E:Mind:Antimagic
+# E:Nature:Antimagic
+# E:Udun:Antimagic
+# E:Sorcery:Antimagic
+# E:Demonology:Antimagic
+# E:Runecraft:Antimagic
+# E:Necromancy:Antimagic
+# E:Mindcraft:Antimagic
+# E:Music:Antimagic
+# E:Prayer:Antimagic
+# E:Druidistic:Antimagic
+# E:Thaumaturgy:Antimagic
 
 ################################## SNEAKINESS SKILLS ###############################
 

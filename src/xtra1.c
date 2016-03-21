@@ -3941,7 +3941,10 @@ void calc_bonuses(bool silent)
 	/* Limit Skill -- digging from 1 up */
 	if (p_ptr->skill_dig < 1) p_ptr->skill_dig = 1;
 
-	if ((p_ptr->anti_magic) && (p_ptr->skill_sav < 95)) p_ptr->skill_sav = 95;
+	if ((p_ptr->anti_magic) && (p_ptr->skill_sav < 95)) {
+		int randomvalue = randint(95);
+		if (p_ptr->skill_sav < randomvalue) p_ptr->skill_sav = randomvalue;
+	}
 
 	/* Hack -- handle "xtra" mode */
 	if (character_xtra) return;

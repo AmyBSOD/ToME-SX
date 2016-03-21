@@ -456,16 +456,16 @@ function cast_school_spell(s, s_ptr, no_cost)
 	local use = FALSE
 
 	-- No magic
-	if (player.antimagic > 0) then
-		msg_print("Your anti-magic field disrupts any magic attempts.")
-		return
-	end
+	--if (player.antimagic > 0) then
+	--	msg_print("Your anti-magic field disrupts any magic attempts.")
+	--	return
+	--end
 
 	-- No magic
-	if (player.anti_magic == TRUE) then
-		msg_print("Your anti-magic shell disrupts any magic attempts.")
-		return
-	end
+	--if (player.anti_magic == TRUE) then
+	--	msg_print("Your anti-magic shell disrupts any magic attempts.")
+	--	return
+	--end
 
 	-- if it costs something then some condition must be met
 	if not no_cost then

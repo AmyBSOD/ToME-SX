@@ -49,11 +49,11 @@ void abandon_god(int god)
 void follow_god(int god, bool silent)
 {
 	/* Poor unbelievers, i'm so mean ... BOUHAHAHA */
-	if (get_skill(SKILL_ANTIMAGIC))
+	/*if (get_skill(SKILL_ANTIMAGIC))
 	{
 		msg_print("Don't be silly; you don't believe in gods.");
 		return;
-	}
+	}*/
 
 	/* Are we allowed ? */
 	if (process_hooks(HOOK_FOLLOW_GOD, "(d,s)", god, "ask"))

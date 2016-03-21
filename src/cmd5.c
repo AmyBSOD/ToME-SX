@@ -2366,16 +2366,15 @@ void cast_school_spell()
 	int spell;
 
 	/* No magic */
-	if (p_ptr->antimagic > 0)
-	{
-		msg_print("Your anti-magic field disrupts any magic attempts.");
-		return;
-	}
 
-	/* No magic */
-	if (p_ptr->anti_magic)
+	/*msg_format("antimagic dis %d", p_ptr->antimagic_dis);
+	msg_format("player antimagic %d", p_ptr->antimagic);*/
+
+	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && (magik(p_ptr->antimagic)))
 	{
-		msg_print("Your anti-magic shell disrupts any magic attempts.");
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
 		return;
 	}
 
