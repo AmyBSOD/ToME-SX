@@ -5396,9 +5396,9 @@ static void dungeon(void)
 	/* Reset the monster generation level */
 	monster_level = dun_level;
 	/*msg_format("Monster level set to %d.", monster_level);*/
-	if (!dun_level && !p_ptr->wild_mode) {
+	/*if (!dun_level && !p_ptr->wild_mode) {
 		monster_level = wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level + rand_int(p_ptr->lev);
-	}
+	}*/
 
 	/* Reset the object generation level */
 	object_level = dun_level;

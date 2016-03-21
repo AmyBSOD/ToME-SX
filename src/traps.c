@@ -2109,8 +2109,11 @@ void place_trap(int y, int x)
 	/* No traps in town or on first level */
 	/*if (dun_level <= 1) return;*/
 	if (dun_level > 0) effect_level = dun_level;
-	else effect_level = monster_level;
-	if (monster_level > dun_level) effect_level = monster_level;
+	else effect_level = wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level + rand_int(p_ptr->lev);
+	if (monster_level > effect_level) effect_level = monster_level;
+
+	/*msg_format("Trap level %d.", effect_level);*/
+	/*msg_format("Monster level %d.", monster_level);*/
 
 	/*
 	 * Avoid open doors -- because DOOR flag is added to make much more
