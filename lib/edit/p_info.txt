@@ -287,6 +287,22 @@ C:a:k:+0:+500:Earth
 C:a:k:+0:+400:Mind
 C:a:b:10:Perfect casting
 
+C:a:N:Wainrider
+C:a:D:A proud warrior riding a majestic chariot.
+C:a:D:Wainriders are traditionally aligned with Melkor.
+C:a:O:71:10:1d1
+C:a:O:23:32:1d1
+C:a:g:Melkor Bauglir
+C:a:k:+0:+600:Sword-mastery
+C:a:k:=0:=0:Axe-mastery
+C:a:k:=0:=0:Hafted-mastery
+C:a:k:=0:=0:Polearm-mastery
+C:a:k:+0:+500:Critical-hits
+C:a:k:+0:+500:Magic
+C:a:k:+0:+500:Spirituality 
+C:a:k:+1000:+200:Prayer 
+C:a:k:=0:=0:Antimagic
+
 C:a:N:Allrounder
 C:a:D:Fighters with melee and ranged abilities
 C:a:k:+0:+100:Weaponmastery
@@ -646,6 +662,29 @@ C:a:k:=0:=0:Sorcery
 C:a:O:111:50:1d1
 C:a:b:30:Spread blows
 C:a:b:1:Extra Max Blow(1)
+
+C:a:N:Clairvoyant
+C:a:D:The master of the mind who sacrifices breadth of 
+C:a:D:ability for additional favour with their deity.
+C:a:k:=0:=0:Mana 
+C:a:k:=0:=0:Fire 
+C:a:k:=0:=0:Water 
+C:a:k:=0:=0:Air 
+C:a:k:=0:=0:Earth 
+C:a:k:=0:=0:Conveyance 
+C:a:k:=0:=0:Nature 
+C:a:k:=0:=0:Temporal 
+C:a:k:=0:=0:Meta 
+C:a:k:=0:=0:Necromancy 
+C:a:k:=0:=0:Runecraft 
+C:a:k:=0:=0:Thaumaturgy 
+C:a:k:+1000:+300:Divination
+C:a:k:+1000:+300:Mind
+C:a:k:+0:+500:Spirituality 
+C:a:k:+0:+500:Prayer
+C:a:k:+1000:+700:Mindcraft
+C:a:O:111:50:1d1
+C:a:O:21:3:1d1
 
 C:a:N:Weird mage
 C:a:D:Mage with weird skills
@@ -1233,6 +1272,19 @@ C:a:k:+0:-500:Stealing
 C:a:k:+0:-500:Dodging
 C:a:G:EXPERIMENTAL
 
+C:a:N:Mercenary
+C:a:D:Mercenaries are daring swashbucklers, masters of the blade.
+C:a:k:+0:+200:Weaponmastery
+C:a:k:+0:+400:Sword-mastery
+C:a:k:+0:+200:Critical-hits
+C:a:k:+0:+050:Magic-Device
+C:a:k:=0:=0:Conveyance
+C:a:k:=0:=0:Divination
+C:a:k:+0:+500:Temporal
+C:a:b:15:Extra Max Blow(2)
+C:a:O:23:7:1d1
+C:a:O:35:1:1d1
+
 C:a:N:Weird rogue
 C:a:D:Rogue with weird skills
 C:a:k:+0:+200:Water
@@ -1568,6 +1620,36 @@ C:a:O:71:37:1d1
 C:a:O:36:4:1d1
 C:a:g:All Gods
 
+C:a:N:Total Ascetic
+C:a:D:The monk who has sworn off all worldly things.
+C:a:D:The ascetics do not believe in magic or gods.
+C:a:k:+0:+200:Combat
+C:a:k:=0:=0:Weaponmastery
+C:a:k:+0:+200:Barehand-combat
+C:a:k:+1000:+1000:Antimagic
+C:a:k:+0:+200:Disarming
+C:a:k:+0:+300:Stealth
+C:a:k:+0:+1000:Dodging
+C:a:k:=0:=0:Magic
+C:a:k:=0:=0:Magic-Device
+C:a:k:=0:=0:Spell-power
+C:a:k:=0:=0:Meta
+C:a:k:=0:=0:Conveyance
+C:a:k:=0:=0:Divination
+C:a:k:=0:=0:Temporal
+C:a:k:=0:=0:Nature
+C:a:k:=0:=0:Prayer
+C:a:k:=0:=0:Music
+C:a:k:=0:=0:Summoning
+C:a:k:=0:=0:Symbiosis
+C:a:k:=0:=0:Possession
+C:a:k:=0:=0:Mimicry
+C:a:b:10:Spread blows
+C:a:b:1:Extra Max Blow(1)
+C:a:b:5:Extra Max Blow(2)
+C:a:O:71:37:1d1
+C:a:g:Nobody
+
 C:a:N:Tourist
 C:a:D:Tourists are on a vacation from Lower-earth, and are
 C:a:D:unprepared for the harsh relaties of Middle-earth.	
@@ -1826,9 +1908,50 @@ C:a:k:+0:+500:Mind
 C:a:k:+1000:+500:Summoning
 C:a:g:Yavanna Kementari
 C:a:g:Eru Iluvatar
-C:a:k+1000:+400:Symbiosis
+C:a:k:+1000:+400:Symbiosis
 C:a:O:21:5:1d1
 C:a:k:+1000:+700:Monster-lore
+
+C:a:N:Stonewright
+C:a:D:A war-priest of Aule who serves to protect and 
+C:a:D:further the works of the Valarin Smith.
+C:a:O:24:8:1d1
+C:a:g:All Gods
+C:a:k:+0:+400:Axe-mastery
+C:a:k:+0:+300:Prayer
+C:a:k:+0:-600:Necromancy
+C:a:k:+0:+100:Spell-power
+C:a:b:10:Extra Max Blow(1)
+
+C:a:N:Priest(Varda)
+C:a:D:A priest who serves Varda to bring light
+C:a:D:to all the reaches of the world.
+C:a:O:21:5:1d1
+C:a:g:Yavanna Kementari
+C:a:k:+0:+300:Prayer
+C:a:k:+0:-600:Necromancy
+C:a:k:+0:+100:Spell-power
+C:a:k:+0:+400:Archery
+
+C:a:N:Priest(Ulmo)
+C:a:D:A priest that serves Ulmo to bring down
+C:a:D:the empire of fear and shadows of Morgoth.
+C:a:O:22:5:1d1
+C:a:g:Manwe Sulimo
+C:a:k:+0:+400:Polearm-mastery
+C:a:k:+0:+300:Prayer
+C:a:k:+0:-600:Necromancy
+C:a:k:+0:+100:Spell-power
+
+C:a:N:Priest(Mandos)
+C:a:D:A priest that serves Mandos to bring down
+C:a:D:the empire of fear and shadows of Morgoth.
+C:a:O:21:5:1d1
+C:a:g:Eru Iluvatar
+C:a:k:+0:+400:Hafted-mastery
+C:a:k:+0:+300:Prayer
+C:a:k:+0:-600:Necromancy
+C:a:k:+0:+100:Spell-power
 
 C:a:N:Weird priest
 C:a:D:Priest with weird skills
