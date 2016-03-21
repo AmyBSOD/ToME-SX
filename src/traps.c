@@ -2136,6 +2136,7 @@ void place_trap(int y, int x)
 
 		/* No traps below their minlevel */
 		if (t_ptr->minlevel > effect_level && ( (randint(3) != 1) || (randint(t_ptr->minlevel + 1) > (effect_level + 2) ) ) ) continue;
+		if ( (t_ptr->minlevel > (effect_level + 5)) && (randint(t_ptr->minlevel) != 1) ) continue;
 
 		/* is this a correct trap now?   */
 		if (!(t_ptr->flags & flags)) continue;
