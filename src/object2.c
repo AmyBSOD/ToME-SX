@@ -2639,6 +2639,8 @@ static void a_m_aux_1(object_type *o_ptr, int level, int power)
 		/* Enchant */
 		o_ptr->to_h += tohit1;
 		o_ptr->to_d += todam1;
+		if (!rand_int(100)) o_ptr->to_h += tohit1;
+		if (!rand_int(100)) o_ptr->to_d += todam1;
 
 		/* Very good */
 		if (power > 1)
@@ -2655,6 +2657,8 @@ static void a_m_aux_1(object_type *o_ptr, int level, int power)
 		/* Penalize */
 		o_ptr->to_h -= tohit1;
 		o_ptr->to_d -= todam1;
+		if (!rand_int(100)) o_ptr->to_h -= tohit1;
+		if (!rand_int(100)) o_ptr->to_d -= todam1;
 
 		/* Very cursed */
 		if (power < -1)
@@ -2789,6 +2793,7 @@ static void a_m_aux_2(object_type *o_ptr, int level, int power)
 	{
 		/* Enchant */
 		o_ptr->to_a += toac1;
+		if (!rand_int(100)) o_ptr->to_a += toac1;
 
 		/* Very good */
 		if (power > 1)
@@ -2803,6 +2808,7 @@ static void a_m_aux_2(object_type *o_ptr, int level, int power)
 	{
 		/* Penalize */
 		o_ptr->to_a -= toac1;
+		if (!rand_int(100)) o_ptr->to_a -= toac1;
 
 		/* Very cursed */
 		if (power < -1)
@@ -4095,7 +4101,7 @@ void apply_magic(object_type *o_ptr, int lev, bool okay, bool good, bool great)
 
 
 	/* Base chance of being "good" */
-	f1 = lev + 10 + luck( -15, 15);
+	f1 = lev + 10 + rand_int(10) + luck( -15, 15);
 
 	/* Maximal chance of being "good" */
 	if (f1 > 75) f1 = 75;
