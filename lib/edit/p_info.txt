@@ -3054,7 +3054,7 @@ S:k:+0:-200:Archery
 S:N:12:Lucky
 S:D:A:Once in a while, there are born beings so lucky that they are 
 S:D:A:scorned for life by everyone who comes near.
-S:S:0:0:0:0:0:0:0:0
+S:S:0:0:0:0:0:0:0:100
 S:K:0:0:0:0:0:0:0:0
 S:P:0:40:0
 S:M:0:0:0:0:0:0:0:0:0:0
