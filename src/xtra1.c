@@ -3794,10 +3794,10 @@ void calc_bonuses(bool silent)
 		p_ptr->dodge_chance = get_skill_scale(SKILL_DODGE, 150) + get_skill(SKILL_HAND);
 
 		/* Armor weight bonus/penalty */
-		p_ptr->dodge_chance -= cur_wgt * 2;
+		p_ptr->dodge_chance -= cur_wgt;
 
 		/* Encumberance bonus/penalty */
-		p_ptr->dodge_chance = p_ptr->dodge_chance - (calc_total_weight() / 100);
+		p_ptr->dodge_chance = p_ptr->dodge_chance - (calc_total_weight() / 500);
 
 		/* Never below 0 */
 		if (p_ptr->dodge_chance < 0) p_ptr->dodge_chance = 0;

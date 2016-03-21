@@ -7238,7 +7238,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 	{
 		int chance = (p_ptr->dodge_chance - ((r_info[who].level * 5) / 6)) / 3;
 
-		if ((chance > 0) && magik(chance))
+		if ((chance > 0) && magik(chance) && (rand_int(8) > 0) ) /* minimum failure rate --Amy */
 		{
 			msg_print("You dodge a magical attack!");
 			return (TRUE);

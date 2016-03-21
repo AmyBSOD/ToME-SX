@@ -1570,7 +1570,7 @@ bool make_attack_normal(int m_idx, byte divis)
 			/* Always disturbing */
 			disturb(1, 0);
 
-			if ((chance > 0) && magik(chance))
+			if ((chance > 0) && magik(chance) && (rand_int(8) > 0) ) /* minimum failure rate --Amy */
 			{
 				msg_format("You dodge %s attack!", m_name);
 				continue;
