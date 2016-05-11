@@ -3936,6 +3936,25 @@ static void process_command(void)
 				reveal_wilderness_around_player(p_ptr->wilderness_y,
 				                                p_ptr->wilderness_x,
 				                                0, WILDERNESS_SEE_RADIUS);
+
+				/*msg_format("encounter level %d", wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level);*/
+
+				if ((p_ptr->wild_mode &&
+	                magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2))) || (p_ptr->wild_mode && (rand_int(20) < 1) ) ) {
+
+					change_wild_mode();
+
+					/* HACk -- set the encouter flag for the wilderness generation */
+					generate_encounter = TRUE;
+					p_ptr->oldpx = MAX_WID / 2;
+					p_ptr->oldpy = MAX_HGT / 2;
+
+					/* Inform the player of his horrible fate :=) */
+					msg_print("The monsters have been waiting for you, and now you're ambushed. Bwarharharharhar!");
+
+				}
+
+
 			}
 
 			break;
