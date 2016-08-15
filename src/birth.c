@@ -770,6 +770,12 @@ static void get_money(void)
 	/* Minimum 100 gold */
 	if (gold < 100) gold = 100;
 
+	/* Amy edit: give much more to speed up the boring early game */
+	gold *= 5;
+
+	/* and even more in ironman mode, where you'll definitely need all the help you can get */
+	if (ironman_rooms) gold *= 3;
+
 	/* Save the gold */
 	p_ptr->au = gold;
 }
