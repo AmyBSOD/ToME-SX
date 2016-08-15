@@ -4689,15 +4689,16 @@ void gain_fate(byte fate)
 				case 0:
 					{
 						/* The deepest the better */
-						int chance = dun_level / 4;
+						int chance = dun_level / 5;
 
-						/* No more than 1/2 chances */
-						if (chance > 50) chance = 50;
+						/* No more than 1/3 chances */
+						if (chance > 33) chance = 33;
 
 						/* It's HARD to get now */
 						if (magik(chance))
 						{
-							fates[i].fate = FATE_NO_DIE_MORTAL;
+							/* No idea how to balance this, so let's disable it for now --Amy */
+							fates[i].fate = /*FATE_NO_DIE_MORTAL*/FATE_DIE;
 						}
 						else
 						{
