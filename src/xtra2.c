@@ -4720,7 +4720,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		/* Yavanna likes when corruption is destroyed */
 		if ((r_ptr->flags3 & RF3_NONLIVING) || (r_ptr->flags3 & RF3_DEMON) || (r_ptr->flags3 & RF3_UNDEAD))
 		{
-			int inc = m_ptr->level / 2;
+			int inc = m_ptr->level;
 			PRAY_GOD(GOD_YAVANNA) inc *= 2;
 
 			if (!inc) inc = 1;
@@ -4740,22 +4740,11 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 			inc_piety(GOD_YAVANNA, -inc);
 		}
 
-		/*PRAY_GOD(GOD_YAVANNA)
-		{
-			int inc = m_ptr->level / 2;
-
-			if (!inc) inc = 1;
-			inc_piety(GOD_YAVANNA, -inc);
-
-			if (r_ptr->flags3 & RF3_ANIMAL)
-				inc_piety(GOD_YAVANNA, -(inc * 3));
-		}*/
-
 		/* add a way to gain Eru piety --Amy */
 		if ( (r_ptr->flags3 & RF3_DEMON) || (r_ptr->flags3 & RF3_UNDEAD))
 		{
-			int inc = m_ptr->level / 10;
-			PRAY_GOD(GOD_ERU) inc *= 2;
+			int inc = m_ptr->level / 9;
+			PRAY_GOD(GOD_ERU) inc *= 3;
 
 			if (!inc) inc = 1;
 			inc_piety(GOD_ERU, inc);
@@ -4764,8 +4753,8 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		/* super big bonus if the monster is an eldritch horror */
 		if (r_ptr->flags2 & RF2_ELDRITCH_HORROR)
 		{
-			int inc = m_ptr->level * 3;
-			PRAY_GOD(GOD_ERU) inc *= 2;
+			int inc = m_ptr->level * 4;
+			PRAY_GOD(GOD_ERU) inc *= 3;
 
 			if (!inc) inc = 1;
 			inc_piety(GOD_ERU, inc);
