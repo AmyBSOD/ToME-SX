@@ -1,4 +1,4 @@
-468
+483
 ****** BUFFER LINE *********************************** DO NOT REMOVE *******
 'Live and let live, right..?'
 'AAAAAAAAARRRRRRRRRRRRRRRRGGGGGGGGGGGGGGGGHHHHHHHHHHHHHHHH!!!!!!!!!!!'
@@ -468,3 +468,18 @@
 'This is just gruesome.'
 'I believe my kingdom will come.'
 'I'll see your descendants later!'
+'Duh! Lev Zakrevski wouldn't have fallen for that one.'
+'It's appalling.'
+'Oh, basely done! I had hoped for better of thee!'
+'I'll get even! Next time I see you, Death is yours!'
+'Empire Micro$oft is eternal!'
+'My God, Please visit a punishment upon this unrighteous sinner!'
+'Faugh, I'll be back...so long as human psyche has a blackness. Ho-ho.'
+'This CAN'T be happening! I am Dying....!!!!!'
+'I desire peace ... for all people...'
+'I finished my life with no regrets!'
+'Ah, PosChengband is too difficult!  I'm going back to Chengband!!'
+'I guess PosChengband is too easy!'
+'I guess this is the last version of PosChengband!'
+'Well, Hengband was much more fun than this!'
+'Damn that AmyBSOD harlot, she's such a terribly bad Game Master!'

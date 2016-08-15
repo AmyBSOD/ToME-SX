@@ -1,4 +1,4 @@
-85
+95
 ******** BUFFER LINE *********************************** DO NOT REMOVE *******
 says: 'Oi, loan me 2 quid for a drink or I'll knock your head off!'
 says: 'Nice boots, mate.'
@@ -85,3 +85,13 @@ says: 'Your shoelaces are untied.'
 asks: 'What did you go near them for?'
 says: 'You should post about that on the ToME forums.'
 says: 'Where did everybody go?'
+says: 'Don't space out. Cover me! Bogan!'
+says: 'I'll invoke fire magic. Attack concurrently with me!'
+says: 'I don't like Noxious Cloud. You should cast Manathrust instead.'
+says: 'Don't read scrolls of aggravate monster.'
+says: 'I'll get the leftovers!'
+says: 'With my brain and your gun, we'll make an excellent team.'
+says: 'I certainly hope you know where the bathroom is.'
+asks: 'Have you played SLASH'EM Extended? It's a great game, just like ToME!'
+says: 'You should totally give SLASH'EM Extended a try someday.'
+says: 'There's a Freenode IRC channel named #slashemextended available.'

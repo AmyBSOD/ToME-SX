@@ -138,7 +138,57 @@ static void say_comment_1(void)
 	if (randint(RUMOR_CHANCE) == 1 && speak_unique)
 	{
 		msg_print("The shopkeeper whispers something into your ear:");
-		get_rnd_line("rumors.txt", rumour);
+
+		/* Pick random text */
+		switch (randint(100))
+		{
+		case 1:
+			{
+				get_rnd_line("chainswd.txt", rumour);
+
+				break;
+			}
+
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+			{
+				get_rnd_line("error.txt", rumour);
+
+				break;
+			}
+
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		case 12:
+		case 13:
+		case 14:
+		case 15:
+		case 16:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+			{
+				get_rnd_line("death.txt", rumour);
+
+				break;
+			}
+
+		default:
+			{
+				get_rnd_line("rumors.txt", rumour);
+
+				break;
+			}
+		}
+
 		msg_print(rumour);
 	}
 }
