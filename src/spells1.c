@@ -2004,7 +2004,15 @@ void acid_dam(int dam, cptr kb_str)
 	int inv = (dam < 30) ? 1 : (dam < 60) ? 2 : 3;
 
 	/* Total Immunity */
-	if (p_ptr->immune_acid || (dam <= 0)) return;
+	if (p_ptr->immune_acid) {
+
+		dam = (dam + 9) / 10;
+		take_hit(dam, kb_str);
+		return;
+	}
+	/* note by Amy: now, immunity just means very high resistance, and prevents item destruction */
+
+	if (dam <= 0) return;
 
 	/* Resist the damage */
 	if (p_ptr->resist_acid) dam = (dam + 2) / 3;
@@ -2034,7 +2042,14 @@ void elec_dam(int dam, cptr kb_str)
 	int inv = (dam < 30) ? 1 : (dam < 60) ? 2 : 3;
 
 	/* Total immunity */
-	if (p_ptr->immune_elec || (dam <= 0)) return;
+	if (p_ptr->immune_elec) {
+
+		dam = (dam + 9) / 10;
+		take_hit(dam, kb_str);
+		return;
+	}
+
+	if (dam <= 0) return;
 
 	/* Resist the damage */
 	if (p_ptr->oppose_elec) dam = (dam + 2) / 3;
@@ -2063,7 +2078,14 @@ void fire_dam(int dam, cptr kb_str)
 	int inv = (dam < 30) ? 1 : (dam < 60) ? 2 : 3;
 
 	/* Totally immune */
-	if (p_ptr->immune_fire || (dam <= 0)) return;
+	if (p_ptr->immune_fire) {
+
+		dam = (dam + 9) / 10;
+		take_hit(dam, kb_str);
+		return;
+	}
+
+	if (dam <= 0) return;
 
 	/* Resist the damage */
 	if (p_ptr->sensible_fire) dam = (dam + 2) * 2;
@@ -2092,7 +2114,14 @@ void cold_dam(int dam, cptr kb_str)
 	int inv = (dam < 30) ? 1 : (dam < 60) ? 2 : 3;
 
 	/* Total immunity */
-	if (p_ptr->immune_cold || (dam <= 0)) return;
+	if (p_ptr->immune_cold) {
+
+		dam = (dam + 9) / 10;
+		take_hit(dam, kb_str);
+		return;
+	}
+
+	if (dam <= 0) return;
 
 	/* Resist the damage */
 	if (p_ptr->resist_cold) dam = (dam + 2) / 3;
@@ -7500,9 +7529,10 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 		{
 			if (fuzzy) msg_print("You are hit by nether forces!");
 			{
-				if (p_ptr->immune_neth)
+				if (p_ptr->immune_neth) /* only offers very high resistance now --Amy */
 				{
-					dam = 0;
+					dam += 9;
+					dam /= 10;
 				}
 				else if (p_ptr->resist_neth)
 				{
