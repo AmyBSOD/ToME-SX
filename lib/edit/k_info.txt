@@ -5697,14 +5697,11 @@ D:Life to the dying / In the King's hands lying.'
 
 # The Scroll of Deincarnation (now an artifact)
 
-N:720:& Old Scroll~ of Deincarnation
+N:720:Deincarnation
 G:?:d
 I:70:40:0
 W:90:0:0:160000
 A:90/140
-T:70:51
-F:NORM_ART | FULL_NAME
-F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 D:It allows you to leave your body to reincarnate into
 D:another one, however, your current body is lost in the process.
 
@@ -6045,9 +6042,6 @@ I:66:30:75
 W:90:0:2:150000
 A:100/14
 P:0:1d1:0:0:0
-T:66:1
-F:NORM_ART | FULL_NAME
-F:IGNORE_FIRE | IGNORE_ACID | IGNORE_COLD | IGNORE_ELEC
 D:This rod creates a little hatch, allowing access to your home, no matter how far away the abode
 D:is.
 
@@ -6277,14 +6271,11 @@ F:NORM_ART | FULL_NAME
 D:This food will, once eaten, permanently add 70 HP.
 
 # Scroll of Mass Resurrection - artifact scroll
-N:802:& Crumpled Scroll~ of Mass Resurrection
+N:802:Mass Resurrection
 G:?:d
 I:70:43:0
-W:55:0:0:0
+W:55:0:0:100000
 A:55/1
-T:70:1
-F:NORM_ART | FULL_NAME
-F:IGNORE_FIRE | IGNORE_ACID | IGNORE_COLD | IGNORE_ELEC
 D:This magical scroll sends a call to the halls of Mandos, issuing forth all those who have been
 D:slain by the reader.
 
