@@ -3955,10 +3955,10 @@ void calc_bonuses(bool silent)
 	p_ptr->skill_dev += (get_skill_scale(SKILL_DEVICE, 150));
 
 	/* Affect Skill -- saving throw (skill and level) */
-	p_ptr->skill_sav += (get_skill_scale(SKILL_SPIRITUALITY, 75));
+	p_ptr->skill_sav += (get_skill_scale(SKILL_SPIRITUALITY, 45));
 
 	/* Affect Skill -- stealth (skill) */
-	p_ptr->skill_stl += (get_skill_scale(SKILL_STEALTH, 25));
+	p_ptr->skill_stl += (get_skill_scale(SKILL_STEALTH, 12));
 
 	/* Affect Skill -- search ability (Sneakiness skill) */
 	p_ptr->skill_srh += (get_skill_scale(SKILL_SNEAK, 35));
