@@ -31,39 +31,39 @@ void mindcraft_info(char *p, int power)
 	switch (power)
 	{
 	case 0:
-		strnfmt(p, 80, " rad %d", DEFAULT_RADIUS);
+		strnfmt(p, 80, " rad %d", 15);
 		break;
 	case 1:
 		strnfmt(p, 80, " dam %dd%d", 3 + ((plev - 1) / 4), 3 + plev / 15);
 		break;
 	case 2:
-		strnfmt(p, 80, " range %d", (plev < 25 ? 10 : plev + 2 + p_ptr->to_s * 3));
+		strnfmt(p, 80, " range %d", (plev < 25 ? 10 : (plev / 2) + p_ptr->to_s * 3));
 		break;
 	case 3:
 		strnfmt(p, 80, " range %d", plev * 5);
 		break;
 	case 4:
-		strnfmt(p, 80, " power %d", plev * (plev < 30 ? 1 : 2));
+		strnfmt(p, 80, " power %d", plev);
 		break;
 	case 5:
-		if (plev > 20)
-			strnfmt(p, 80, " dam %dd8 rad %d", 8 + ((plev - 5) / 4), (plev - 20)/8 + 1);
+		if (plev > 35)
+			strnfmt(p, 80, " dam %dd8 rad %d", 8 + ((plev - 5) / 4), (plev - 35)/20 + 1);
 		else
 			strnfmt(p, 80, " dam %dd8", 8 + ((plev - 5) / 4));
 		break;
 	case 6:
-		strnfmt(p, 80, " dur %d", plev);
+		strnfmt(p, 80, " dur %d", 1 + (plev/3) );
 		break;
 	case 7:
 		break;
 	case 8:
-		if (plev < 25)
+		if (plev < 45)
 			strnfmt(p, 80, " dam %d rad %d", (3 * plev) / 2, 2 + (plev / 10));
 		else
 			strnfmt(p, 80, " dam %d", plev * ((plev - 5) / 10 + 1));
 		break;
 	case 9:
-		strnfmt(p, 80, " dur 11-%d", 10 + plev + plev / 2);
+		strnfmt(p, 80, " dur 5-%d", 5 + plev);
 		break;
 	case 10:
 		strnfmt(p, 80, " dam %dd6 rad %d", plev / 2, 0 + (plev - 25) / 10);
@@ -410,7 +410,7 @@ void do_cmd_mindcraft(void)
 
 		sound(SOUND_FAIL);
 
-		if (randint(100) < (chance / 2))
+		if (randint(100) < ((chance / 2) + 10) )
 		{
 			/* Backfire */
 			b = randint(100);
@@ -455,34 +455,34 @@ void do_cmd_mindcraft(void)
 			/* Precog */
 		case 0:
 			{
-				/* Magic mapping */
-				if (plev > 44)
+				/* Magic mapping - Amy edit: way too overpowered, makes divination useless */
+				/*if (plev > 44)
 				{
 					wiz_lite();
 				}
 				else if (plev > 19)
 				{
 					map_area();
-				}
+				}*/
 
-				/* Detection */
-				if (plev < 30)
+				/* Detection - radius reduced by Amy */
+				if (plev < 50)
 				{
-					b = detect_monsters_normal(DEFAULT_RADIUS);
-					if (plev > 14) b |= detect_monsters_invis(DEFAULT_RADIUS);
-					if (plev > 4) b |= detect_traps(DEFAULT_RADIUS);
+					b = detect_monsters_normal(15);
+					if (plev > 29) b |= detect_monsters_invis(15);
+					if (plev > 14) b |= detect_traps(15);
 				}
 				else
 				{
-					b = detect_all(DEFAULT_RADIUS);
+					b = detect_all(15);
 				}
 
-				/* Telepathy */
-				if (plev > 24)
+				/* Telepathy - much higher level requirement because it's teh uber --Amy */
+				if (plev > 40)
 				{
 					set_tim_esp(p_ptr->tim_esp + plev);
 
-					/* If plvl >= 40, we should have permanent ESP */
+					/* If plvl >= 75, we should have permanent ESP */
 				}
 
 				if (!b) msg_print("You feel safe.");
@@ -495,7 +495,7 @@ void do_cmd_mindcraft(void)
 			{
 				if (!get_aim_dir(&dir)) return;
 
-				if (randint(100) < plev * 2)
+				if (randint(100) < plev)
 				{
 					fire_beam(GF_PSI, dir, damroll(3 + ((plev - 1) / 4), (3 + plev / 15)));
 				}
@@ -531,7 +531,7 @@ void do_cmd_mindcraft(void)
 
 					if (!cave_empty_bold(ij, ii) ||
 					                (cave[ij][ii].info & CAVE_ICKY) ||
-					                (distance(ij, ii, p_ptr->py, p_ptr->px) > plev + 2 + (p_ptr->to_s*3)) ||
+					                (distance(ij, ii, p_ptr->py, p_ptr->px) > (plev / 2) + (p_ptr->to_s*3)) ||
 					                (rand_int(plev * plev / 2) == 0))
 					{
 						msg_print("You fail to exit the void correctly!");
@@ -551,7 +551,7 @@ void do_cmd_mindcraft(void)
 			/* Major displace */
 		case 3:
 			{
-				if (plev > 29) banish_monsters(plev);
+				if (plev > 49) banish_monsters(plev / 10);
 				teleport_player(plev * 5);
 
 				break;
@@ -567,7 +567,7 @@ void do_cmd_mindcraft(void)
 				}
 				else
 				{
-					charm_monsters(plev * 2);
+					charm_monsters(plev);
 				}
 
 				break;
@@ -578,7 +578,7 @@ void do_cmd_mindcraft(void)
 			{
 				if (!get_aim_dir(&dir)) return;
 				fire_ball(GF_SOUND, dir, damroll(8 + ((plev - 5) / 4), 8),
-				          (plev > 20 ? (plev - 20) / 8 + 1 : 0));
+				          (plev > 35 ? (plev - 35) / 20 + 1 : 0));
 
 				break;
 			}
@@ -586,12 +586,12 @@ void do_cmd_mindcraft(void)
 			/* Character Armour */
 		case 6:
 			{
-				set_shield(p_ptr->shield + plev, 50, 0, 0, 0);
-				if (plev > 14) set_oppose_acid(p_ptr->oppose_acid + plev);
-				if (plev > 19) set_oppose_fire(p_ptr->oppose_fire + plev);
-				if (plev > 24) set_oppose_cold(p_ptr->oppose_cold + plev);
-				if (plev > 29) set_oppose_elec(p_ptr->oppose_elec + plev);
-				if (plev > 34) set_oppose_pois(p_ptr->oppose_pois + plev);
+				set_shield(p_ptr->shield + 1 + (plev / 3), 50, 0, 0, 0);
+				if (plev > 19) set_oppose_acid(p_ptr->oppose_acid + 1 + (plev / 3));
+				if (plev > 29) set_oppose_fire(p_ptr->oppose_fire + 1 + (plev / 3));
+				if (plev > 39) set_oppose_cold(p_ptr->oppose_cold + 1 + (plev / 3));
+				if (plev > 49) set_oppose_pois(p_ptr->oppose_pois + 1 + (plev / 3));
+				if (plev > 59) set_oppose_elec(p_ptr->oppose_elec + 1 + (plev / 3));
 
 				break;
 			}
@@ -599,7 +599,7 @@ void do_cmd_mindcraft(void)
 			/* Psychometry */
 		case 7:
 			{
-				if (plev < 40)
+				if (plev < 75)
 				{
 					psychometry();
 				}
@@ -615,7 +615,7 @@ void do_cmd_mindcraft(void)
 		case 8:
 			{
 				msg_print("Mind-warping forces emanate from your brain!");
-				if (plev < 25)
+				if (plev < 45)
 				{
 					project(0, 2 + plev / 10, p_ptr->py, p_ptr->px,
 					        (plev*3) / 2, GF_PSI, PROJECT_KILL);
@@ -635,9 +635,9 @@ void do_cmd_mindcraft(void)
 				set_stun(0);
 				hp_player(plev);
 
-				b = 10 + randint((plev * 3) / 2);
+				b = 5 + randint(plev);
 
-				if (plev < 35)
+				if (plev < 45)
 				{
 					set_hero(p_ptr->hero + b);
 				}
@@ -5256,8 +5256,8 @@ void do_cmd_archer(void)
 			object_aware(q_ptr);
 			object_known(q_ptr);
 			q_ptr->ident |= IDENT_MENTAL;
-			apply_magic(q_ptr, dun_level, TRUE, TRUE, (magik(20)) ? TRUE : FALSE);
-			q_ptr->discount = 90;
+			apply_magic(q_ptr, dun_level, TRUE, (magik(20)) ? TRUE : FALSE, (magik(2)) ? TRUE : FALSE);
+			q_ptr->discount = 100;
 			q_ptr->found = OBJ_FOUND_SELFMADE;
 
 			(void)inven_carry(q_ptr, FALSE);
@@ -5309,8 +5309,8 @@ void do_cmd_archer(void)
 		object_aware(q_ptr);
 		object_known(q_ptr);
 		q_ptr->ident |= IDENT_MENTAL;
-		apply_magic(q_ptr, dun_level, TRUE, TRUE, (magik(20)) ? TRUE : FALSE);
-		q_ptr->discount = 90;
+		apply_magic(q_ptr, dun_level, TRUE, (magik(20)) ? TRUE : FALSE, (magik(2)) ? TRUE : FALSE);
+		q_ptr->discount = 100;
 		q_ptr->found = OBJ_FOUND_SELFMADE;
 
 		msg_print("You make some ammo.");
@@ -5370,8 +5370,8 @@ void do_cmd_archer(void)
 		object_aware(q_ptr);
 		object_known(q_ptr);
 		q_ptr->ident |= IDENT_MENTAL;
-		apply_magic(q_ptr, dun_level, TRUE, TRUE, (magik(20)) ? TRUE : FALSE);
-		q_ptr->discount = 90;
+		apply_magic(q_ptr, dun_level, TRUE, (magik(20)) ? TRUE : FALSE, (magik(2)) ? TRUE : FALSE);
+		q_ptr->discount = 100;
 		q_ptr->found = OBJ_FOUND_SELFMADE;
 
 		msg_print("You make some ammo.");

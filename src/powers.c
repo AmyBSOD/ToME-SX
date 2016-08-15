@@ -424,7 +424,6 @@ static void power_activate(int power)
 			(void)set_afraid(0);
 
 			(void)set_shero(p_ptr->shero + 10 + randint(plev));
-			(void)hp_player(30);
 		}
 		break;
 
