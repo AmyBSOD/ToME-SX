@@ -885,6 +885,7 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 
 	int label;
 
+	no_cost = FALSE;
 
 	/* List the monster powers -- RF4_* */
 	for (i = 0; i < 32; i++)
@@ -960,9 +961,9 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 			while (ctr < num) 
 			{ 
 				monster_power *mp_ptr = &monster_powers[powers[ctr]]; 
-				int mana = mp_ptr->mana / 10; 
+				int mana = mp_ptr->mana /* / 10*/; 
 
-				if (mana > p_ptr->msp) mana = p_ptr->msp; 
+				/*if (mana > p_ptr->msp) mana = p_ptr->msp; */
 
 				if (!mana) mana = 1; 
 
@@ -2059,9 +2060,9 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 
 		if (rand_int(chance) >= pchance)
 		{
-			int m = monster_powers[power].mana / 10;
+			int m = monster_powers[power].mana /* / 10*/;
 
-			if (m > p_ptr->msp) m = p_ptr->msp;
+			/*if (m > p_ptr->msp) m = p_ptr->msp;*/
 			if (!m) m = 1;
 
 			p_ptr->csp -= m;

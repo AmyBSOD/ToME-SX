@@ -1731,7 +1731,7 @@ static void calc_mana(void)
 	if (msp) msp++;
 
 	/* Possessors mana is different */
-	if (p_ptr->body_monster && (!p_ptr->disembodied))
+	/*if (p_ptr->body_monster && (!p_ptr->disembodied))
 	{
 		monster_race *r_ptr = &r_info[p_ptr->body_monster];
 		int f = 100 / (r_ptr->freq_spell ? r_ptr->freq_spell : 1);
@@ -1739,7 +1739,7 @@ static void calc_mana(void)
 		msp = 21 - f;
 
 		if (msp < 1) msp = 1;
-	}
+	}*/
 
 	/* Apply race mod mana */
 	msp = msp * rmp_ptr->mana / 100;
