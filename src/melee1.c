@@ -2026,7 +2026,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					/* Saving throw (unless paralyzed) based on dex and level */
 					if (!p_ptr->paralyzed && (rand_int(10) > 0) &&
 					                (rand_int(100) < (adj_dex_safe[p_ptr->stat_ind[A_DEX]] +
-					                                  p_ptr->lev)))
+					                                  p_ptr->lev - m_ptr->level)))
 					{
 						/* Saving throw message */
 						msg_print("You quickly protect your money pouch!");
@@ -2097,7 +2097,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					/* Saving throw (unless paralyzed) based on dex and level */
 					if (!p_ptr->paralyzed && (rand_int(10) > 0) &&
 					                (rand_int(100) < (adj_dex_safe[p_ptr->stat_ind[A_DEX]] +
-					                                  p_ptr->lev)))
+					                                  p_ptr->lev - m_ptr->level)))
 					{
 						/* Saving throw message */
 						msg_print("You grab hold of your backpack!");
