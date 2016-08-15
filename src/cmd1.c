@@ -2820,9 +2820,12 @@ void py_attack(int y, int x, int max_blow)
 
 							if (lv >= 10)
 							{
-								int chance = (wisdom_scale(30) * lv) / ((m_ptr->level < 1) ? 1 : m_ptr->level);
+								int chance = (wisdom_scale(10) * lv) / ((m_ptr->level < 1) ? 1 : m_ptr->level);
 
 								if (chance < 1) chance = 1;
+								if (chance > 15) chance = 15;
+	/* ever seen how unbalanced late-game Melkor characters are? This is in dire need of a nerf. --Amy */
+
 								if ((p_ptr->grace > 5000) && magik(chance))
 								{
 									exec_lua(format("do_melkor_curse(%d)", c_ptr->m_idx));

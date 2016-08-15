@@ -29,7 +29,7 @@ function do_melkor_curse(who)
 	i = 1
 	pow = get_level(MELKOR_CURSE, 2)
 	while (i <= 4) do
-		if m_ptr.blow[i].d_dice > 0 then
+		if m_ptr.blow[i].d_dice > 3 then
 			if m_ptr.blow[i].d_dice < pow then
 				pow = m_ptr.blow[i].d_dice
 			end
