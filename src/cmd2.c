@@ -178,10 +178,12 @@ void do_cmd_go_up(void)
 		{
 			if (get_check("Really leave the level? "))
 				go_up = TRUE;
+				p_ptr->prob_travel = FALSE;
 		}
 		else
 		{
 			go_up = TRUE;
+			p_ptr->prob_travel = FALSE;
 		}
 	}
 	else
@@ -430,10 +432,12 @@ void do_cmd_go_down(void)
 		{
 			if (get_check("Really leave the level? "))
 				go_down = TRUE;
+				p_ptr->prob_travel = FALSE;
 		}
 		else
 		{
 			go_down = TRUE;
+			p_ptr->prob_travel = FALSE;
 		}
 	}
 
