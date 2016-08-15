@@ -267,6 +267,66 @@ bool quest_one_death_hook(char *fmt)
 	{
 		ok = TRUE;
 	}
+	else if (magik(10) && (r_idx == test_monster_name("Smeagol")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("DarkGod, the Mighty Coder of Hell")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Marylene, Heartbreakeress of the Netherworld")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Tom Bombadil")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Ingeborg, the Runemistress")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Sunali")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Ariane")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Elena")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Katharina")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Marike")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Dr. Moreau")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Fu Manchu, The Yellow Peril")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Lina Inverse")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Neo, bane of the lands of Rgra")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Ken-Oh")))
+	{
+		ok = TRUE;
+	}
 
 	if (ok)
 	{
