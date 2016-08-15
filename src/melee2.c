@@ -1031,6 +1031,9 @@ static bool monst_spell_monst(int m_idx)
 
 	if (is_friend(m_ptr) > 0) friendly = TRUE;
 
+	/* summoner player characters are too cheesy, let their pets at least cast much less often --Amy */
+	if (friendly && (rand_int(100) > 9)) return (FALSE);
+
 	/* Cannot cast spells when confused */
 	if (m_ptr->confused) return (FALSE);
 
