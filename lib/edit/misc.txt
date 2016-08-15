@@ -25,13 +25,13 @@ M:R:3756
 M:r:47
 
 # Maximum number of items in k_info.txt
-M:K:819
+M:K:820
 
 # Maximum number of vaults in v_info.txt
 M:V:108
 
 # Maximum number of terrain features in f_info.txt
-M:F:256
+M:F:257
 
 # Maximum number of alchemist recipes
 M:a:1000
@@ -76,7 +76,7 @@ M:P:R:36
 M:P:S:14
 
 # Maximum number of class types in p_info.txt
-M:P:C:98
+M:P:C:99
 
 # Maximum number of meta class types in p_info.txt
 M:P:M:1

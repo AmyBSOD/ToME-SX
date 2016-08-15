@@ -1943,7 +1943,7 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
 /* Skills */
 	if (get_skill(SKILL_DAEMON) > 20) (*f2) |= TR2_RES_CONF;
 	if (get_skill(SKILL_DAEMON) > 30) (*f2) |= TR2_RES_FEAR;
-	if (get_skill(SKILL_MINDCRAFT) >= 40) (*esp) |= ESP_ALL;
+	if (get_skill(SKILL_MINDCRAFT) >= 75) (*esp) |= ESP_ALL;
 	if (p_ptr->melee_style == SKILL_HAND && get_skill(SKILL_HAND) > 24 && !monk_heavy_armor())
 		(*f2) |= TR2_FREE_ACT;
 /* Hack - from Lua */
@@ -1967,6 +1967,17 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
 		{
 			if (p_ptr->grace > 5000)  (*f2) |= TR2_INVIS;
 			if (p_ptr->grace > 15000) (*f2) |= TR2_IM_FIRE;
+		}
+	}
+
+	GOD(GOD_AMYBSOD)
+	{
+		if (p_ptr->grace > 10000) (*f1) |= (TR1_INT | TR1_WIS | TR1_CHR | TR1_STR | TR1_CON | TR1_DEX);
+		if (p_ptr->grace < 0)  (*f3) |= TR3_AGGRAVATE;
+		PRAY_GOD(GOD_AMYBSOD)
+		{
+			if (p_ptr->grace > 60000)  (*f2) |= TR2_IM_ACID;
+			if (p_ptr->grace > 90000) (*f2) |= TR2_RES_DISEN;
 		}
 	}
 

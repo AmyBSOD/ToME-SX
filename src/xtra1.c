@@ -2456,6 +2456,48 @@ void calc_gods()
 		p_ptr->resist_fire = TRUE;
 	}
 
+	GOD(GOD_AMYBSOD)
+	{
+		if (p_ptr->grace > 10000) p_ptr->stat_add[A_STR] -= 1;
+		if (p_ptr->grace > 20000) p_ptr->stat_add[A_STR] -= 1;
+		if (p_ptr->grace > 30000) p_ptr->stat_add[A_STR] -= 1;
+		if (p_ptr->grace > 40000) p_ptr->stat_add[A_STR] -= 1;
+		if (p_ptr->grace > 50000) p_ptr->stat_add[A_STR] -= 1;
+
+		if (p_ptr->grace > 10000) p_ptr->stat_add[A_DEX] -= 1;
+		if (p_ptr->grace > 20000) p_ptr->stat_add[A_DEX] -= 1;
+		if (p_ptr->grace > 30000) p_ptr->stat_add[A_DEX] -= 1;
+		if (p_ptr->grace > 40000) p_ptr->stat_add[A_DEX] -= 1;
+		if (p_ptr->grace > 50000) p_ptr->stat_add[A_DEX] -= 1;
+
+		if (p_ptr->grace > 10000) p_ptr->stat_add[A_CON] -= 1;
+		if (p_ptr->grace > 20000) p_ptr->stat_add[A_CON] -= 1;
+		if (p_ptr->grace > 30000) p_ptr->stat_add[A_CON] -= 1;
+		if (p_ptr->grace > 40000) p_ptr->stat_add[A_CON] -= 1;
+		if (p_ptr->grace > 50000) p_ptr->stat_add[A_CON] -= 1;
+
+		if (p_ptr->grace > 10000) p_ptr->stat_add[A_CHR] += 1;
+		if (p_ptr->grace > 20000) p_ptr->stat_add[A_CHR] += 1;
+		if (p_ptr->grace > 30000) p_ptr->stat_add[A_CHR] += 1;
+		if (p_ptr->grace > 40000) p_ptr->stat_add[A_CHR] += 1;
+		if (p_ptr->grace > 50000) p_ptr->stat_add[A_CHR] += 1;
+
+		if (p_ptr->grace > 10000) p_ptr->stat_add[A_INT] += 1;
+		if (p_ptr->grace > 20000) p_ptr->stat_add[A_INT] += 1;
+		if (p_ptr->grace > 30000) p_ptr->stat_add[A_INT] += 1;
+		if (p_ptr->grace > 40000) p_ptr->stat_add[A_INT] += 1;
+		if (p_ptr->grace > 50000) p_ptr->stat_add[A_INT] += 1;
+
+		if (p_ptr->grace > 10000) p_ptr->stat_add[A_WIS] += 1;
+		if (p_ptr->grace > 20000) p_ptr->stat_add[A_WIS] += 1;
+		if (p_ptr->grace > 30000) p_ptr->stat_add[A_WIS] += 1;
+		if (p_ptr->grace > 40000) p_ptr->stat_add[A_WIS] += 1;
+		if (p_ptr->grace > 50000) p_ptr->stat_add[A_WIS] += 1;
+
+		if (p_ptr->grace < 0) p_ptr->aggravate = TRUE;
+
+	}
+
 	/* Gifts of Manwe if the player is praying to Manwe */
 	PRAY_GOD(GOD_MANWE)
 	{
@@ -2944,7 +2986,7 @@ void calc_bonuses(bool silent)
 	if (get_skill(SKILL_DAEMON) > 20) p_ptr->resist_conf = TRUE;
 	if (get_skill(SKILL_DAEMON) > 30) p_ptr->resist_fear = TRUE;
 
-	if ( get_skill(SKILL_MINDCRAFT) >= 40 ) p_ptr->telepathy = ESP_ALL;
+	if ( get_skill(SKILL_MINDCRAFT) >= 75 ) p_ptr->telepathy = ESP_ALL;
 
 	if (p_ptr->astral)
 	{

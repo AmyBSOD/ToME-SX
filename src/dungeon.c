@@ -1965,6 +1965,15 @@ static void process_world(void)
 			if (dec < 1) dec = 1;
 			inc_piety(GOD_MELKOR, -dec);
 		}
+		GOD(GOD_AMYBSOD)
+		{
+			int dec = 20 - wisdom_scale(15);
+
+			PRAY_GOD(GOD_AMYBSOD)
+			dec += 10;
+			if (dec < 1) dec = 1;
+			inc_piety(GOD_AMYBSOD, -dec);
+		}
 		GOD(GOD_TULKAS)
 		{
 			int dec = 2 - wisdom_scale(1);

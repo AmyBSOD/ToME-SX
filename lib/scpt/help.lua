@@ -214,6 +214,7 @@ ingame_help
 					["Tulkas"] = { "g_tulkas.txt", 0 },
 					["Melkor Bauglir"] = { "g_melkor.txt", 0 },
 					["Yavanna Kementari"] = { "g_yavann.txt", 0 },  
+					["AmyBSOD"] = { "g_amybso.txt", 0 },  
 				},
 				["skill"] =
 				{

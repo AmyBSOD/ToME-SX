@@ -4686,10 +4686,18 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 			inc_piety(GOD_ERU, -2 * m_ptr->level);
 			inc_piety(GOD_MANWE, -10 * m_ptr->level);
 			inc_piety(GOD_MELKOR, 3 * m_ptr->level);
+			inc_piety(GOD_AMYBSOD, 3 * m_ptr->level);
+			PRAY_GOD(GOD_AMYBSOD) inc_piety(GOD_AMYBSOD, 10 * m_ptr->level);
 		}
 		else
 		{
 			inc_piety(GOD_MELKOR, 1 + m_ptr->level / 2);
+		}
+
+		if (r_ptr->flags3 & RF3_ANIMAL)
+		{
+			inc_piety(GOD_AMYBSOD, 1 + m_ptr->level / 5);
+			PRAY_GOD(GOD_AMYBSOD) inc_piety(GOD_AMYBSOD, 1 + m_ptr->level / 3);
 		}
 
 		/* Manwe appreciate evil monster death */
@@ -4761,6 +4769,15 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 
 			if (!inc) inc = 1;
 			inc_piety(GOD_ERU, inc);
+		}
+
+		if (r_ptr->flags2 & RF2_ELDRITCH_HORROR)
+		{
+			int inc = m_ptr->level * 2;
+			PRAY_GOD(GOD_AMYBSOD) inc *= 3;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_AMYBSOD, inc);
 		}
 
 		/* SHould we absorb its soul? */

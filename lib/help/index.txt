@@ -42,6 +42,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
     *****c_alchem.txt*03[Alchemy powers explained]
     *****essences.txt*02[Essence Spoiler]
   *****tome_faq.txt*03[Altars]
+  *****g_amybso.txt*01[AmyBSOD]
   *****tome_faq.txt*37[Anti-magic Amulets and the Anti-magic shell]
   *****c_unbel.txt*04[Antimagic]
   *****c_archer.txt*01[Archer]
@@ -222,6 +223,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
     *****spoil_faq.txt*23[Quest - Spoilers]
     *****g_tulkas.txt*02[Tulkas]
     *****g_yavann.txt*02[Yavanna]
+    *****g_amybso.txt*02[AmyBSOD]
   *****birth.txt*16[Gold]
 ~~~~~72
 *****/Hindex.txt*72[H]

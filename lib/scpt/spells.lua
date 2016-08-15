@@ -35,6 +35,16 @@ SCHOOL_FIRE = add_school
 	["skill"] = SKILL_FIRE,
 	["spell_power"] = TRUE,
 	["sorcery"] = TRUE,
+	["gods"] =
+	{
+		-- AmyBSOD provides the Fire school at 1/2 the prayer skill
+		[GOD_AMYBSOD] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 2,
+		},
+	},
 }
 SCHOOL_AIR = add_school
 {
@@ -210,6 +220,13 @@ SCHOOL_META = add_school
 			["mul"] = 1,
 			["div"] = 3,
 		},
+		-- AmyBSOD provides the Meta school at 1/2 the prayer skill
+		[GOD_AMYBSOD] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 2,
+		},
 	},
 }
 SCHOOL_MIND = add_school
@@ -287,6 +304,13 @@ SCHOOL_YAVANNA = add_school
 	["spell_power"] = TRUE,
 	["god"] = GOD_YAVANNA,
 }
+SCHOOL_AMYBSOD = add_school
+{
+	["name"] = "AmyBSOD",
+	["skill"] = SKILL_PRAY,
+	["spell_power"] = TRUE,
+	["god"] = GOD_AMYBSOD,
+}
 
 -- Not a real school, rather a palcehodler for stick only spells
 SCHOOL_DEVICE = add_school
@@ -323,6 +347,7 @@ tome_dofile("s_manwe.lua")
 tome_dofile("s_tulkas.lua")
 tome_dofile("s_melkor.lua")
 tome_dofile("s_yavann.lua")
+tome_dofile("s_amybsod.lua")
 
 -- Specific schools
 tome_dofile("s_demon.lua")
@@ -418,6 +443,11 @@ school_book[23] = {
 -- Create the book of yavanna
 school_book[24] = {
 	YAVANNA_CHARM_ANIMAL, YAVANNA_GROW_GRASS, YAVANNA_TREE_ROOTS, YAVANNA_WATER_BITE, YAVANNA_UPROOT,
+}
+
+-- Create the book of amybsod
+school_book[25] = {
+	AMYBSOD_SOUND, AMYBSOD_DARK, AMYBSOD_TROLL,
 }
 
 -- Create the book of beginner's cantrip

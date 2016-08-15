@@ -659,6 +659,13 @@ G:0:g
 F:FLOOR | REMEMBER | NOTICE | CAN_RUN
 D:0:You feel the desire to walk in a great forest.
 
+# New altars
+
+N:166:Altar of Scintillating Purple
+G:0:v
+F:FLOOR | REMEMBER | NOTICE | CAN_RUN
+D:0:Fleecy colors fill your mind.
+
 # XXX
 # XXX
 # XXX
@@ -931,3 +938,4 @@ F:NO_WALK | CAN_PASS | NOTICE | SUPPORT_LIGHT
 F:DONT_NOTICE_RUNNING | TUNNELABLE
 D:1:You tunnel into the battlement.
 D:2:a hard stone battlement blocking your way
+

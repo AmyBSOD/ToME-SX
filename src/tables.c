@@ -2539,70 +2539,70 @@ magic_power mindcraft_powers[MAX_MINDCRAFT_POWERS] =
 	/* Level gained,  cost,  %fail,  name,  desc */
 	{
 		/* Det. monsters/traps */
-		1, 1, 15,
+		1, 15, 15,
 		"Precognition",
-		"Detect monsters, traps and level layout and lights up at higher levels."
+		"Detect monsters, traps and grants ESP at higher levels."
 	},
 	{
 		/* ~MM */
-		2, 1, 20,
+		2, 10, 20,
 		"Neural Blast",
 		"Blast the minds of your foes."
 	},
 	{
 		/* Phase/Between gate */
-		3, 2, 25,
+		3, 20, 25,
 		"Minor Displacement",
 		"Short distance teleportation"
 	},
 	{
 		/* Tele. Self / All */
-		7, 6, 35,
+		7, 35, 35,
 		"Major Displacement",
 		"Teleport you and others at high levels."
 	},
 	{
-		9, 7, 50,
+		9, 45, 50,
 		"Domination",
 		"Charm monsters"
 	},
 	{
 		/* Telekinetic "bolt" */
-		11, 7, 30,
+		11, 70, 30,
 		"Pulverise",
 		"Fires a bolt of pure sound."
 	},
 	{
 		/* Psychic/physical defenses */
-		13, 12, 50,
+		13, 100, 50,
 		"Character Armour",
 		"Sets up physical/elemental shield."
 	},
 	{
-		15, 12, 60,
+		15, 120, 60,
 		"Psychometry",
 		"Senses/identifies objects."
 	},
 	{
 		/* Ball -> LOS */
-		18, 10, 45,
+		18, 100, 45,
 		"Mind Wave",
 		"Projects psi waves to crush the minds of your foes."
 	},
 	{
-		23, 15, 50,
+		23, 150, 50,
 		"Adrenaline Channeling",
 		"Heals you, cures you and speeds you."
 	},
 	{
 		/* Convert enemy HP to mana */
-		25, 10, 40,
+		25, 50, 40,
 		"Psychic Drain",
 		"Drain your foes' life into your mana reserves"
 	},
 	{
 		/* Ball -> LOS */
-		28, 20, 45,
+		28, 120, 45,
 		"Telekinetic Wave",
 		"Powerful wave of pure telekinetic forces."
 	},
@@ -2860,6 +2860,21 @@ deity_type deity_info_init[MAX_GODS_INIT] =
 			"She is the Vala of nature, protectress of the great forests of "
 			"Middle-earth.",
 			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+	},
+	{
+		"AmyBSOD",
+		{
+			"She is the queen of self-inserts and creator of ToME-SX. Famous mainly ",
+			"for her love of fleecy colors and high-heeled footwear.",
 			"",
 			"",
 			"",

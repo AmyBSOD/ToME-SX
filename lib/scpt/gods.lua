@@ -2,7 +2,7 @@ add_hooks
 {
 	[HOOK_FOLLOW_GOD] = function(god, action)
 		if action == "ask" then
-			if not (god == GOD_MELKOR) then
+			if not (god == GOD_MELKOR) and not (god == GOD_AMYBSOD) then
 				local i = INVEN_WIELD
 				while i < INVEN_TOTAL do
 					-- 13 is ART_POWER

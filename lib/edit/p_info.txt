@@ -1875,6 +1875,15 @@ C:a:k:+0:-600:Mindcraft
 C:a:k:+0:+200:Spell-power
 C:a:k:+1000:+1000:Corpse-preservation
 
+C:a:N:Fleecy Priest
+C:a:D:A priest that serves AmyBSOD to bring fleecy colors
+C:a:D:and lots of high-heeled shoes to Middle-earth.
+C:a:O:21:5:1d1
+C:a:g:AmyBSOD
+C:a:k:+0:+300:Prayer
+C:a:k:+0:-600:Mindcraft
+C:F:RES_CHAOS
+
 C:a:N:Paladin
 C:a:D:A fighting priest that serves Tulkas to bring down
 C:a:D:the empire of fear and shadows of Morgoth.

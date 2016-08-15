@@ -264,7 +264,7 @@ Read *****gods.txt*0[gods.txt] for a little more information about Gods.
 
     *****g_eru.txt*0[Eru Iluvatar]                  *****g_manwe.txt*0[Manwe Sulimo]
     *****g_yavann.txt*0[Yavanna Kementari]             *****g_tulkas.txt*0[Tulkas]
-    *****g_melkor.txt*0[Melkor Bauglir]
+    *****g_melkor.txt*0[Melkor Bauglir]             *****g_amybso.txt*0[AmyBSOD]
 
 
 ~~~~~39|Character|Stats 2

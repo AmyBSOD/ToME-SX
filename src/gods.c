@@ -70,6 +70,12 @@ void follow_god(int god, bool silent)
 			if (!silent) msg_print("You feel the dark powers of Melkor in you.  You can now use the Udun skill.");
 		}
 
+		GOD(GOD_AMYBSOD)
+		{
+			s_info[SKILL_UDUN].hidden = FALSE;
+			if (!silent) msg_print("You feel the fleecy colors of AmyBSOD in you.  You can now use the Udun skill.");
+		}
+
 		/* Anything to be done? */
 		process_hooks(HOOK_FOLLOW_GOD, "(d,s)", god, "done");
 	}

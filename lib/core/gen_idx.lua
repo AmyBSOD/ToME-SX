@@ -13,6 +13,7 @@ files =
 	"dungeon.txt",
 	"spoiler.hlp",
 	"g_melkor.txt",
+	"g_amybso.txt",
 	"skills.txt",
 	"c_bard.txt",
 	"c_druid.txt",
