@@ -2711,10 +2711,12 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pva
 
 		tmp = 10 + get_skill_scale(SKILL_ANTIMAGIC, 40)
 		      - to_h - to_d - pval - to_a;
+		tmp /= 2;
 		if (tmp > 0) p_ptr->antimagic += tmp;
 
 		tmp = 1 + get_skill_scale(SKILL_ANTIMAGIC, 4)
 		      - (to_h + to_d + pval + to_a) / 15;
+		tmp /= 2;
 		if (tmp > 0) p_ptr->antimagic_dis += tmp;
 	}
 
@@ -2724,10 +2726,12 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pva
 
 		tmp = 7 + get_skill_scale(SKILL_ANTIMAGIC, 33)
 		      - to_h - to_d - pval - to_a;
+		tmp /= 2;
 		if (tmp > 0) p_ptr->antimagic += tmp;
 
 		tmp = 1 + get_skill_scale(SKILL_ANTIMAGIC, 2)
 		      - (to_h + to_d + pval + to_a) / 15;
+		tmp /= 2;
 		if (tmp > 0) p_ptr->antimagic_dis += tmp;
 	}
 
@@ -2737,9 +2741,10 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pva
 
 		tmp = 5 + get_skill_scale(SKILL_ANTIMAGIC, 15)
 		      - to_h - to_d - pval - to_a;
+		tmp /= 2;
 		if (tmp > 0) p_ptr->antimagic += tmp;
 
-		p_ptr->antimagic_dis += 2;
+		p_ptr->antimagic_dis += 1;
 	}
 
 	if (f4 & (TR4_ANTIMAGIC_10))
@@ -2748,6 +2753,7 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pva
 
 		tmp = 1 + get_skill_scale(SKILL_ANTIMAGIC, 9)
 		      - to_h - to_d - pval - to_a;
+		tmp /= 2;
 		if (tmp > 0) p_ptr->antimagic += tmp;
 
 		p_ptr->antimagic_dis += 1;
@@ -3026,8 +3032,8 @@ void calc_bonuses(bool silent)
 
 	if (get_skill(SKILL_ANTIMAGIC) > 0)
 	{
-		p_ptr->antimagic += get_skill(SKILL_ANTIMAGIC);
-		p_ptr->antimagic_dis += get_skill_scale(SKILL_ANTIMAGIC, 10) + 1;
+		p_ptr->antimagic += get_skill_scale(SKILL_ANTIMAGIC, 30);
+		p_ptr->antimagic_dis += get_skill_scale(SKILL_ANTIMAGIC, 7) + 1;
 
 		if (p_ptr->antimagic_extra & CLASS_ANTIMAGIC)
 		{
