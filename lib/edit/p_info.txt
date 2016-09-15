@@ -1879,10 +1879,10 @@ C:a:N:Fleecy Priest
 C:a:D:A priest that serves AmyBSOD to bring fleecy colors
 C:a:D:and lots of high-heeled shoes to Middle-earth.
 C:a:O:21:5:1d1
+C:a:O:45:46:1d1
 C:a:g:AmyBSOD
 C:a:k:+0:+300:Prayer
 C:a:k:+0:-600:Mindcraft
-C:F:RES_CHAOS
 
 C:a:N:Paladin
 C:a:D:A fighting priest that serves Tulkas to bring down
@@ -1925,7 +1925,7 @@ C:a:N:Stonewright
 C:a:D:A war-priest of Aule who serves to protect and 
 C:a:D:further the works of the Valarin Smith.
 C:a:O:24:8:1d1
-C:a:g:All Gods
+C:a:g:Aule the Smith
 C:a:k:+0:+400:Axe-mastery
 C:a:k:+0:+300:Prayer
 C:a:k:+0:-600:Necromancy
@@ -1936,7 +1936,7 @@ C:a:N:Priest(Varda)
 C:a:D:A priest who serves Varda to bring light
 C:a:D:to all the reaches of the world.
 C:a:O:21:5:1d1
-C:a:g:Yavanna Kementari
+C:a:g:Varda Elentari
 C:a:k:+0:+300:Prayer
 C:a:k:+0:-600:Necromancy
 C:a:k:+0:+100:Spell-power
@@ -1946,7 +1946,7 @@ C:a:N:Priest(Ulmo)
 C:a:D:A priest that serves Ulmo to bring down
 C:a:D:the empire of fear and shadows of Morgoth.
 C:a:O:22:5:1d1
-C:a:g:Manwe Sulimo
+C:a:g:Ulmo
 C:a:k:+0:+400:Polearm-mastery
 C:a:k:+0:+300:Prayer
 C:a:k:+0:-600:Necromancy
@@ -1956,7 +1956,7 @@ C:a:N:Priest(Mandos)
 C:a:D:A priest that serves Mandos to bring down
 C:a:D:the empire of fear and shadows of Morgoth.
 C:a:O:21:5:1d1
-C:a:g:Eru Iluvatar
+C:a:g:Mandos
 C:a:k:+0:+400:Hafted-mastery
 C:a:k:+0:+300:Prayer
 C:a:k:+0:-600:Necromancy

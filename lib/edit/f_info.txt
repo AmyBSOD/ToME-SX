@@ -666,6 +666,26 @@ G:0:v
 F:FLOOR | REMEMBER | NOTICE | CAN_RUN
 D:0:Fleecy colors fill your mind.
 
+N:167:Altar of Stone
+G:0:s
+F:FLOOR | REMEMBER | NOTICE | CAN_RUN
+D:0:You grow a desire to forge items.
+
+N:168:Altar of Light
+G:0:y
+F:FLOOR | REMEMBER | NOTICE | CAN_RUN
+D:0:You grow a desire to light up dark places.
+
+N:169:Altar of Waters
+G:0:b
+F:FLOOR | REMEMBER | NOTICE | CAN_RUN
+D:0:You grow a desire to bathe in the ocean.
+
+N:170:Altar of Doom
+G:0:o
+F:FLOOR | REMEMBER | NOTICE | CAN_RUN
+D:0:You grow a desire to do justice.
+
 # XXX
 # XXX
 # XXX

@@ -35,6 +35,26 @@ bool quest_one_move_hook(char *fmt)
 			cmsg_print(TERM_YELLOW, "'Also, Manwe will abandon you if you wear it.'");
 		}
 
+		GOD(GOD_AULE)
+		{
+			cmsg_print(TERM_YELLOW, "'Also, Aule will abandon you if you wear it.'");
+		}
+
+		GOD(GOD_VARDA)
+		{
+			cmsg_print(TERM_YELLOW, "'Also, Varda will abandon you if you wear it.'");
+		}
+
+		GOD(GOD_ULMO)
+		{
+			cmsg_print(TERM_YELLOW, "'Also, Ulmo will abandon you if you wear it.'");
+		}
+
+		GOD(GOD_MANDOS)
+		{
+			cmsg_print(TERM_YELLOW, "'Also, Mandos will abandon you if you wear it.'");
+		}
+
 		GOD(GOD_TULKAS)
 		{
 			cmsg_print(TERM_YELLOW, "'Also, Tulkas will abandon you if you wear it.'");
@@ -137,6 +157,10 @@ bool quest_one_wield_hook(char *fmt)
 	abandon_god(GOD_MANWE);
 	abandon_god(GOD_TULKAS);
 	abandon_god(GOD_YAVANNA);
+	abandon_god(GOD_AULE);
+	abandon_god(GOD_MANDOS);
+	abandon_god(GOD_ULMO);
+	abandon_god(GOD_VARDA);
 
 	/*
 	 * Ok now we are evil, right ?

@@ -72,6 +72,34 @@ function __birth_hook_objects()
 		inven_carry(obj, FALSE)
 		end_object(obj)
 	end
+	if get_class_name() == "Stonewright" then
+		local obj = create_object(TV_BOOK, 255);
+		obj.pval = find_spell("Firebrand")
+		obj.ident = bor(obj.ident, IDENT_MENTAL, IDENT_KNOWN)
+		inven_carry(obj, FALSE)
+		end_object(obj)
+	end
+	if get_class_name() == "Priest(Varda)" then
+		local obj = create_object(TV_BOOK, 255);
+		obj.pval = find_spell("Light of Valinor")
+		obj.ident = bor(obj.ident, IDENT_MENTAL, IDENT_KNOWN)
+		inven_carry(obj, FALSE)
+		end_object(obj)
+	end
+	if get_class_name() == "Priest(Ulmo)" then
+		local obj = create_object(TV_BOOK, 255);
+		obj.pval = find_spell("Song of Belegaer")
+		obj.ident = bor(obj.ident, IDENT_MENTAL, IDENT_KNOWN)
+		inven_carry(obj, FALSE)
+		end_object(obj)
+	end
+	if get_class_name() == "Priest(Mandos)" then
+		local obj = create_object(TV_BOOK, 255);
+		obj.pval = find_spell("Tears of Luthien")
+		obj.ident = bor(obj.ident, IDENT_MENTAL, IDENT_KNOWN)
+		inven_carry(obj, FALSE)
+		end_object(obj)
+	end
 	if get_class_name() == "Mimic" then
 		local obj = create_object(TV_CLOAK, 100);
 		obj.pval2 = resolve_mimic_name("Mouse")

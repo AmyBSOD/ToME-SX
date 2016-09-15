@@ -1954,6 +1954,33 @@ static void process_world(void)
 			if (dec < 1) dec = 1;
 			inc_piety(GOD_ERU, -dec);
 		}
+		GOD(GOD_AULE)
+		{
+			int dec = 2 - wisdom_scale(1);
+
+			PRAY_GOD(GOD_AULE)
+			dec++;
+			if (dec < 1) dec = 1;
+			inc_piety(GOD_AULE, -dec);
+		}
+		GOD(GOD_VARDA)
+		{
+			int dec = 4 - wisdom_scale(1);
+
+			PRAY_GOD(GOD_VARDA)
+			dec++;
+			if (dec < 1) dec = 1;
+			inc_piety(GOD_VARDA, -dec);
+		}
+		GOD(GOD_MANDOS)
+		{
+			int dec = 4 - wisdom_scale(2);
+
+			PRAY_GOD(GOD_MANDOS)
+			dec += 15 - wisdom_scale(8);
+			if (dec < 1) dec = 1;
+			inc_piety(GOD_MANDOS, -dec);
+		}
 		GOD(GOD_MELKOR)
 		{
 			int dec = 8 - wisdom_scale(6);
@@ -1964,6 +1991,15 @@ static void process_world(void)
 				dec += 5 - wisdom_scale(4);
 			if (dec < 1) dec = 1;
 			inc_piety(GOD_MELKOR, -dec);
+		}
+		GOD(GOD_ULMO)
+		{
+			int dec = 8 - wisdom_scale(5);
+
+			PRAY_GOD(GOD_ULMO)
+			dec += 5;
+			if (dec < 1) dec = 1;
+			inc_piety(GOD_ULMO, -dec);
 		}
 		GOD(GOD_AMYBSOD)
 		{

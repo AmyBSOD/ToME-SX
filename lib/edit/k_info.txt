@@ -6451,3 +6451,87 @@ D:Although it looks like a piece of junk, it is actually part of an ancient
 D:relic belonging to Fleecy Priests. The relic now lies in pieces, hidden
 D:from all but the most faithful followers of AmyBSOD.
 
+N:820:& Piece~ of the Relic of Aule
+G:~:v
+I:11:16:0
+W:0:0:0:1000
+A:0/1
+P:0:1d1:0:0:0
+F:SPECIAL_GENE | FULL_NAME
+F:IGNORE_ACID | IGNORE_COLD | IGNORE_ELEC | IGNORE_FIRE |
+D:Although it looks like a piece of junk, it is actually part of an ancient
+D:relic belonging to the Stonewrights. The relic now lies in pieces, hidden
+D:from all but the most faithful followers of Aule.
+
+N:821:& Piece~ of the Relic of Varda
+G:~:v
+I:11:17:0
+W:0:0:0:1000
+A:0/1
+P:0:1d1:0:0:0
+F:SPECIAL_GENE | FULL_NAME
+F:IGNORE_ACID | IGNORE_COLD | IGNORE_ELEC | IGNORE_FIRE |
+D:Although it looks like a piece of junk, it is actually part of an ancient
+D:relic belonging to the Priests of Varda. The relic now lies in pieces, 
+D:hidden from all but the most faithful followers of Varda.
+
+N:822:& Piece~ of the Relic of Ulmo
+G:~:v
+I:11:18:0
+W:0:0:0:1000
+A:0/1
+P:0:1d1:0:0:0
+F:SPECIAL_GENE | FULL_NAME
+F:IGNORE_ACID | IGNORE_COLD | IGNORE_ELEC | IGNORE_FIRE |
+D:Although it looks like a piece of junk, it is actually part of an ancient
+D:relic belonging to the Priests of Ulmo. The relic now lies in pieces, hidden
+D:from all but the most faithful followers of Ulmo.
+
+N:823:& Piece~ of the Relic of Mandos
+G:~:v
+I:11:19:0
+W:0:0:0:1000
+A:0/1
+P:0:1d1:0:0:0
+F:SPECIAL_GENE | FULL_NAME
+F:IGNORE_ACID | IGNORE_COLD | IGNORE_ELEC | IGNORE_FIRE |
+D:Although it looks like a piece of junk, it is actually part of an ancient
+D:relic belonging to the Priests of Mandos. The relic now lies in pieces, 
+D:hidden from all but the most faithful followers of Mandos.
+
+N:824:& Ironclad Tome~ of Aule
+G:?:s
+I:111:63:0
+W:50:0:30:25000
+A:50/4
+P:0:1d1:0:0:0
+F:FULL_NAME | EASY_KNOW
+D:The sleek black cover of this tome is covered with intricate
+D:carved decorations, inset with rubies that sparkle like fire.
+
+N:825:& Shining Tome~ of Varda
+G:?:y
+I:111:64:0
+W:50:0:30:25000
+A:50/4
+P:0:1d1:0:0:0
+F:FULL_NAME | EASY_KNOW
+D:This tome's cover and pages radiate a soft white light.
+
+N:826:& Ocean Tome~ of Ulmo
+G:?:B
+I:111:65:0
+W:50:0:30:25000
+A:50/4
+P:0:1d1:0:0:0
+F:FULL_NAME | EASY_KNOW
+D:This book smells faintly of seaweed and appears to be wet.
+
+N:827:& Holy Tome~ of Mandos
+G:?:w
+I:111:66:0
+W:50:0:30:25000
+A:50/4
+P:0:1d1:0:0:0
+F:FULL_NAME | EASY_KNOW
+D:Just holding this tome makes you fill with quiet strength.

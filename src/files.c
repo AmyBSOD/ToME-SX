@@ -1970,6 +1970,39 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
 		}
 	}
 
+	GOD(GOD_AULE)
+	{
+		if (p_ptr->grace > 5000)  (*f2) |= TR2_RES_FIRE;
+	}
+
+	GOD(GOD_VARDA)
+	{
+		(*f3) |= TR3_LITE1;
+		PRAY_GOD(GOD_VARDA)
+		{
+			if (p_ptr->grace > 25000)  (*f2) |= TR2_RES_LITE;
+		}
+	}
+
+	GOD(GOD_ULMO)
+	{
+		(*f5) |= TR5_WATER_BREATH;
+		PRAY_GOD(GOD_ULMO)
+		{
+			if (p_ptr->grace > 1000)  (*f2) |= TR2_RES_POIS;
+			if (p_ptr->grace > 15000)  (*f5) |= TR5_MAGIC_BREATH;
+		}
+	}
+
+	GOD(GOD_MANDOS)
+	{
+		(*f2) |= TR2_RES_NETHER;
+		PRAY_GOD(GOD_MANDOS)
+		{
+			if (p_ptr->grace > 20000) (*f4) |= TR4_IM_NETHER;
+		}
+	}
+
 	GOD(GOD_AMYBSOD)
 	{
 		if (p_ptr->grace > 10000) (*f1) |= (TR1_INT | TR1_WIS | TR1_CHR | TR1_STR | TR1_CON | TR1_DEX);

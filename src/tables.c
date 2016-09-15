@@ -2885,6 +2885,67 @@ deity_type deity_info_init[MAX_GODS_INIT] =
 			"",
 		},
 	},
+	{
+		"Aule the Smith",
+		{
+			"The god of Smithing.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+	},
+	{
+		"Varda Elentari",
+		{
+			"The goddess of Light.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+	},
+	{
+		"Ulmo",
+		{
+			"The god of Water.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+	},
+	{
+		"Mandos",
+		{
+			"The god of the Dead, who is nonetheless good for some reason.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+	},
+
 };
 
 /* jk - to hit, to dam, to ac, to stealth, to disarm, to saving throw */

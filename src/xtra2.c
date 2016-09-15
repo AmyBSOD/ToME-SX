@@ -4694,6 +4694,65 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 			inc_piety(GOD_MELKOR, 1 + m_ptr->level / 2);
 		}
 
+		/* Ulmo doesn't want aquatic monsters to get killed */
+		if (r_ptr->flags7 & RF7_AQUATIC)
+		{
+			inc_piety(GOD_ULMO, -3 * m_ptr->level);
+		}
+
+		/* but likes it if you kill fiery monsters */
+		if (r_ptr->flags2 & RF2_AURA_FIRE)
+		{
+			inc_piety(GOD_ULMO, 3 * m_ptr->level);
+			PRAY_GOD(GOD_ULMO) inc_piety(GOD_ULMO, 5 * m_ptr->level);
+		}
+
+		if (r_ptr->flags3 & RF3_IM_FIRE)
+		{
+			int inc = m_ptr->level / 2;
+			if (!inc) inc = 1;
+
+			inc_piety(GOD_ULMO, inc);
+			PRAY_GOD(GOD_ULMO) inc_piety(GOD_ULMO, inc);
+		}
+
+		if (r_ptr->flags4 & RF4_BR_FIRE)
+		{
+			int inc = m_ptr->level / 2;
+			if (!inc) inc = 1;
+
+			inc_piety(GOD_ULMO, inc);
+			PRAY_GOD(GOD_ULMO) inc_piety(GOD_ULMO, inc);
+		}
+
+		if (r_ptr->flags5 & RF5_BA_FIRE)
+		{
+			int inc = m_ptr->level / 2;
+			if (!inc) inc = 1;
+
+			inc_piety(GOD_ULMO, inc);
+			PRAY_GOD(GOD_ULMO) inc_piety(GOD_ULMO, inc);
+		}
+
+		if (r_ptr->flags5 & RF5_BO_FIRE)
+		{
+			int inc = m_ptr->level / 3;
+			if (!inc) inc = 1;
+
+			inc_piety(GOD_ULMO, inc);
+			PRAY_GOD(GOD_ULMO) inc_piety(GOD_ULMO, inc);
+		}
+
+		/* Ulmo also hates orcs */
+		if (r_ptr->flags3 & RF3_ORC)
+		{
+			int inc = m_ptr->level / 5;
+			if (!inc) inc = 1;
+
+			inc_piety(GOD_ULMO, inc);
+			PRAY_GOD(GOD_ULMO) inc_piety(GOD_ULMO, inc);
+		}
+
 		if (r_ptr->flags3 & RF3_ANIMAL)
 		{
 			inc_piety(GOD_AMYBSOD, 1 + m_ptr->level / 5);
@@ -4715,6 +4774,64 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 				inc_piety(GOD_TULKAS, inc / 2);
 				if (r_ptr->flags3 & RF3_DEMON) inc_piety(GOD_TULKAS, inc);
 			}
+
+			/* I'm lazy, so I make Aule piety be gained by killing evil things. --Amy */
+			if (inc > 3) {
+				inc_piety(GOD_AULE, inc / 4);
+				PRAY_GOD(GOD_AULE)
+				{
+					inc_piety(GOD_AULE, inc);
+				}
+			}
+
+			/* and a bit of Varda piety as well */
+
+			if (inc > 9) {
+				inc_piety(GOD_VARDA, inc / 10);
+				PRAY_GOD(GOD_VARDA)
+				{
+					inc_piety(GOD_VARDA, inc / 4);
+				}
+			}
+
+		}
+
+		/* Varda likes it if you kill monsters associated with darkness --Amy */
+		if ((r_ptr->flags3 & RF3_HURT_LITE))
+		{
+			int inc = m_ptr->level / 2;
+			PRAY_GOD(GOD_VARDA) inc *= 2;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_VARDA, inc);
+
+		}
+		if ((r_ptr->flags4 & RF4_BR_DARK))
+		{
+			int inc = m_ptr->level / 2;
+			PRAY_GOD(GOD_VARDA) inc *= 2;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_VARDA, inc);
+
+		}
+		if ((r_ptr->flags5 & RF5_BA_DARK))
+		{
+			int inc = m_ptr->level / 2;
+			PRAY_GOD(GOD_VARDA) inc *= 2;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_VARDA, inc);
+
+		}
+		if ((r_ptr->flags6 & RF6_DARKNESS))
+		{
+			int inc = m_ptr->level / 4;
+			PRAY_GOD(GOD_VARDA) inc *= 2;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_VARDA, inc);
+
 		}
 
 		/* Yavanna likes when corruption is destroyed */
@@ -4767,6 +4884,102 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 
 			if (!inc) inc = 1;
 			inc_piety(GOD_AMYBSOD, inc);
+		}
+
+		/* Mandos likes it if you generate treasure from killed monsters */
+		if (r_ptr->flags1 & RF1_DROP_GOOD)
+		{
+			int inc = m_ptr->level / 2;
+			if (!inc) inc = 1;
+			PRAY_GOD(GOD_MANDOS) inc *= 2;
+
+			inc_piety(GOD_MANDOS, inc);
+		}
+
+		if (r_ptr->flags1 & RF1_DROP_GREAT)
+		{
+			int inc = m_ptr->level;
+			if (!inc) inc = 1;
+			PRAY_GOD(GOD_MANDOS) inc *= 2;
+
+			inc_piety(GOD_MANDOS, inc);
+		}
+
+		if (r_ptr->flags1 & RF7_DROP_ART)
+		{
+			int inc = m_ptr->level * 10;
+			if (!inc) inc = 1;
+			PRAY_GOD(GOD_MANDOS) inc *= 2;
+
+			inc_piety(GOD_MANDOS, inc);
+		}
+
+		if (r_ptr->flags1 & RF7_DROP_RANDART)
+		{
+			int inc = m_ptr->level * 10;
+			if (!inc) inc = 1;
+			PRAY_GOD(GOD_MANDOS) inc *= 2;
+
+			inc_piety(GOD_MANDOS, inc);
+		}
+
+		if (r_ptr->flags2 & RF2_TAKE_ITEM)
+		{
+			int inc = m_ptr->level / 5;
+			if (!inc) inc = 1;
+			PRAY_GOD(GOD_MANDOS) inc *= 2;
+
+			inc_piety(GOD_MANDOS, inc);
+		}
+
+		if (r_ptr->flags2 & RF2_KILL_ITEM)
+		{
+			int inc = m_ptr->level / 2;
+			if (!inc) inc = 1;
+			PRAY_GOD(GOD_MANDOS) inc *= 2;
+
+			inc_piety(GOD_MANDOS, inc);
+		}
+
+		/* or undead, nonliving */
+		if (r_ptr->flags3 & RF3_UNDEAD)
+		{
+			int inc = m_ptr->level / 10;
+			if (!inc) inc = 1;
+			PRAY_GOD(GOD_MANDOS) inc *= 2;
+
+			inc_piety(GOD_MANDOS, inc);
+		}
+
+		if (r_ptr->flags3 & RF3_NONLIVING)
+		{
+			int inc = m_ptr->level / 10;
+			if (!inc) inc = 1;
+			PRAY_GOD(GOD_MANDOS) inc *= 2;
+
+			inc_piety(GOD_MANDOS, inc);
+		}
+
+		/* or especially the spirits in the Void */
+		if (r_ptr->flags7 & RF7_SPIRIT)
+		{
+			int inc = m_ptr->level * 2;
+			if (!inc) inc = 1;
+			PRAY_GOD(GOD_MANDOS) inc *= 2;
+
+			inc_piety(GOD_MANDOS, inc);
+		}
+
+		/* but he absolutely detests it if you kill pets, e.g. wise spirits */
+		if (r_ptr->flags7 & RF7_PET)
+		{
+			inc_piety(GOD_MANDOS, -1000);
+			PRAY_GOD(GOD_MANDOS) inc_piety(GOD_MANDOS, -1000);
+		}
+		if (r_ptr->flags7 & RF7_FRIENDLY)
+		{
+			inc_piety(GOD_MANDOS, -100);
+			PRAY_GOD(GOD_MANDOS) inc_piety(GOD_MANDOS, -100);
 		}
 
 		/* SHould we absorb its soul? */

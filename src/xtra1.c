@@ -2023,6 +2023,11 @@ static void calc_torch(void)
 	/* Assume no light */
 	p_ptr->cur_lite = 0;
 
+	GOD(GOD_VARDA)
+	{
+		p_ptr->cur_lite = 1;
+	}
+
 	/* Loop through all wielded items */
 	for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
 	{
@@ -2454,6 +2459,54 @@ void calc_gods()
 			if (p_ptr->grace > 15000) p_ptr->immune_fire = TRUE;
 		}
 		p_ptr->resist_fire = TRUE;
+	}
+
+	GOD(GOD_AULE)
+	{
+		if (p_ptr->grace > 5000) p_ptr->resist_fire = TRUE;
+
+		int bonus = p_ptr->grace / 5000;
+		if (bonus > 5) bonus = 5;
+		p_ptr->to_h = p_ptr->to_h + bonus;
+		p_ptr->dis_to_h = p_ptr->dis_to_h + bonus;
+		p_ptr->to_d = p_ptr->to_d + bonus;
+		p_ptr->dis_to_d = p_ptr->dis_to_d + bonus;
+
+		PRAY_GOD(GOD_AULE) {
+			p_ptr->ac = p_ptr->ac + (bonus * 5);
+			p_ptr->dis_ac = p_ptr->dis_ac + (bonus * 5);
+		}
+
+	}
+
+	GOD(GOD_VARDA)
+	{
+		p_ptr->cur_lite = p_ptr->cur_lite + 1;
+		PRAY_GOD(GOD_VARDA)
+		{
+			if (p_ptr->grace > 25000) p_ptr->resist_lite = TRUE;
+		}
+	}
+
+	GOD(GOD_ULMO)
+	{
+		p_ptr->water_breath = TRUE;
+		PRAY_GOD(GOD_ULMO)
+		{
+			if (p_ptr->grace > 1000) p_ptr->resist_pois = TRUE;
+			if (p_ptr->grace > 15000) p_ptr->magical_breath = TRUE;
+		}
+	}
+
+	GOD(GOD_MANDOS)
+	{
+		p_ptr->resist_neth = TRUE;
+		PRAY_GOD(GOD_MANDOS)
+		{
+			if (p_ptr->grace > 10000) p_ptr->resist_continuum = TRUE;
+			if (p_ptr->grace > 20000) p_ptr->immune_neth = TRUE;
+
+		}
 	}
 
 	GOD(GOD_AMYBSOD)
