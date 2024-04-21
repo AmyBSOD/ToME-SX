@@ -2738,6 +2738,24 @@ static bool vault_aux_undead(int r_idx)
 
 
 /*
+ * Helper function for "monster nest (horror)"
+ */
+static bool vault_aux_horror(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	/* Decline unique monsters */
+	if (r_ptr->flags1 & (RF1_UNIQUE)) return (FALSE);
+
+	/* Require eldritch horror */
+	if (!(r_ptr->flags2 & (RF2_ELDRITCH_HORROR))) return (FALSE);
+
+	/* Okay */
+	return (TRUE);
+}
+
+
+/*
  * Helper function for "monster nest (chapel)"
  */
 static bool vault_aux_chapel(int r_idx)
@@ -2752,6 +2770,44 @@ static bool vault_aux_chapel(int r_idx)
 	                strstr((r_name + r_ptr->name), "riest")))
 	{
 		return (FALSE);
+	}
+
+	/* Okay */
+	return (TRUE);
+}
+
+
+/*
+ * Helper function for "monster nest (wilderness)"
+ */
+static bool vault_aux_wilderness(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	int wildertype = randint(dun_level);
+	while (wildertype > 100) wildertype -= 100;
+
+	/* Decline unique monsters */
+	if (r_ptr->flags1 & (RF1_UNIQUE)) return (FALSE);
+
+	/* Require some wilderness monster */
+
+	if (wildertype < 14) {
+		if (!(r_ptr->flags8 & (RF8_WILD_TOWN))) return (FALSE);
+	} else if (wildertype < 28) {
+		if (!(r_ptr->flags8 & (RF8_WILD_GRASS))) return (FALSE);
+	} else if (wildertype < 35) {
+		if (!(r_ptr->flags8 & (RF8_WILD_WOOD))) return (FALSE);
+	} else if (wildertype < 40) {
+		if (!(r_ptr->flags8 & (RF8_WILD_SHORE))) return (FALSE);
+	} else if (wildertype < 55) {
+		if (!(r_ptr->flags8 & (RF8_WILD_WASTE))) return (FALSE);
+	} else if (wildertype < 70) {
+		if (!(r_ptr->flags8 & (RF8_WILD_MOUNTAIN))) return (FALSE);
+	} else if (wildertype < 90) {
+		if (!(r_ptr->flags8 & (RF8_WILD_VOLCANO))) return (FALSE);
+	} else {
+		if (!(r_ptr->flags8 & (RF8_WILD_OCEAN))) return (FALSE);
 	}
 
 	/* Okay */
@@ -2834,6 +2890,23 @@ static bool vault_aux_orc(int r_idx)
 	return (TRUE);
 }
 
+/*
+ * Helper function for "monster pit (ogre)"
+ */
+static bool vault_aux_ogre(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	/* Decline unique monsters */
+	if (r_ptr->flags1 & (RF1_UNIQUE)) return (FALSE);
+
+	/* Hack -- Require "O" monsters */
+	if (!strchr("O", r_ptr->d_char)) return (FALSE);
+
+	/* Okay */
+	return (TRUE);
+}
+
 
 
 /*
@@ -2848,6 +2921,42 @@ static bool vault_aux_troll(int r_idx)
 
 	/* Hack -- Require "T" monsters */
 	if (!strchr("T", r_ptr->d_char)) return (FALSE);
+
+	/* Okay */
+	return (TRUE);
+}
+
+
+/*
+ * Helper function for "monster pit (zephyr)"
+ */
+static bool vault_aux_zephyr(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	/* Decline unique monsters */
+	if (r_ptr->flags1 & (RF1_UNIQUE)) return (FALSE);
+
+	/* Hack -- Require "T" monsters */
+	if (!strchr("Z", r_ptr->d_char)) return (FALSE);
+
+	/* Okay */
+	return (TRUE);
+}
+
+
+/*
+ * Helper function for "monster pit (hydra)"
+ */
+static bool vault_aux_hydra(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	/* Decline unique monsters */
+	if (r_ptr->flags1 & (RF1_UNIQUE)) return (FALSE);
+
+	/* Hack -- Require "M" monsters */
+	if (!strchr("M", r_ptr->d_char)) return (FALSE);
 
 	/* Okay */
 	return (TRUE);
@@ -3002,6 +3111,7 @@ static void build_type5(int by0, int bx0)
 
 	/* Hack -- Choose a nest type */
 	tmp = randint(dun_level);
+	while (tmp > 100) tmp -= 100;
 
 	old_get_mon_num_hook = get_mon_num_hook;
 
@@ -3033,7 +3143,18 @@ static void build_type5(int by0, int bx0)
 			get_mon_num_hook = vault_aux_clone;
 		}
 	}
-	else if (tmp < 25)
+
+	else if ((tmp < 35) && (rand_int(2) != 0))
+		/* Monster nest (wilderness) */
+	{
+		/* Describe */
+		name = "wilderness";
+
+		/* Restrict to jelly */
+		get_mon_num_hook = vault_aux_wilderness;
+	}
+
+	else if (tmp < 35)
 		/* Monster nest (jelly) */
 	{
 		/* Describe */
@@ -3065,6 +3186,13 @@ static void build_type5(int by0, int bx0)
 			/* Restrict to animal */
 			get_mon_num_hook = vault_aux_animal;
 		}
+	}
+
+	/* Monster nest (horror) */
+	else if (tmp < 75)
+	{
+		name = "horror";
+		get_mon_num_hook = vault_aux_horror;
 	}
 
 	/* Monster nest (undead) */
@@ -3243,11 +3371,12 @@ static void build_type6(int by0, int bx0)
 
 	/* Choose a pit type */
 	tmp = randint(dun_level);
+	while (tmp > 100) tmp -= 100;
 
 	old_get_mon_num_hook = get_mon_num_hook;
 
 	/* Orc pit */
-	if (tmp < 20)
+	if (tmp < 10)
 	{
 		/* Message */
 		name = "orc";
@@ -3257,13 +3386,43 @@ static void build_type6(int by0, int bx0)
 	}
 
 	/* Troll pit */
-	else if (tmp < 40)
+	else if (tmp < 20)
 	{
 		/* Message */
 		name = "troll";
 
 		/* Restrict monster selection */
 		get_mon_num_hook = vault_aux_troll;
+	}
+
+	/* Zephyr hound pit, by Amy */
+	else if (tmp < 30)
+	{
+		/* Message */
+		name = "zephyr";
+
+		/* Restrict monster selection */
+		get_mon_num_hook = vault_aux_zephyr;
+	}
+
+	/* Ogre pit, by Amy */
+	else if (tmp < 40)
+	{
+		/* Message */
+		name = "ogre";
+
+		/* Restrict monster selection */
+		get_mon_num_hook = vault_aux_ogre;
+	}
+
+	/* Hydra pit */
+	else if (tmp < 45)
+	{
+		/* Message */
+		name = "hydra";
+
+		/* Restrict monster selection */
+		get_mon_num_hook = vault_aux_hydra;
 	}
 
 	/* Giant pit */
@@ -3276,7 +3435,8 @@ static void build_type6(int by0, int bx0)
 		get_mon_num_hook = vault_aux_giant;
 	}
 
-	else if (tmp < 70)
+	/* Clone pit */
+	else if (tmp < 80)
 	{
 		if (randint(4) != 1)
 		{
@@ -3303,7 +3463,7 @@ static void build_type6(int by0, int bx0)
 	}
 
 	/* Dragon pit */
-	else if (tmp < 80)
+	else if (tmp < 90)
 	{
 		/* Pick dragon type */
 		switch (rand_int(6))
