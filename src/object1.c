@@ -3096,7 +3096,7 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		}
 
 		if (f4 & TR4_COULD2H) text_out("It can be wielded two-handed.  ");
-		if (f4 & TR4_MUST2H) text_out("It must be wielded two-handed.  ");
+		if (f4 & TR4_MUST2H) text_out_c(TERM_ORANGE, "It must be wielded two-handed.  ");
 
 		/* Mega-Hack -- describe activation */
 		if (f3 & (TR3_ACTIVATE))
@@ -3148,37 +3148,37 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		/* Mega Hack^3 -- describe the Anchor of Space-time */
 		if (o_ptr->name1 == ART_ANCHOR)
 		{
-			text_out("It prevents the space-time continuum from being disrupted.  ");
+			text_out_c(TERM_VIOLET, "It prevents the space-time continuum from being disrupted.  ");
 		}
 
 		if (o_ptr->name1 == ART_ANCHOR2)
 		{
-			text_out("It prevents the space-time continuum from being disrupted.  ");
+			text_out_c(TERM_VIOLET, "It prevents the space-time continuum from being disrupted.  ");
 		}
 
 		if (o_ptr->name1 == ART_ANCHOR3)
 		{
-			text_out("It prevents the space-time continuum from being disrupted.  ");
+			text_out_c(TERM_VIOLET, "It prevents the space-time continuum from being disrupted.  ");
 		}
 
 		if (o_ptr->name1 == ART_ANCHOR4)
 		{
-			text_out("It prevents the space-time continuum from being disrupted.  ");
+			text_out_c(TERM_VIOLET, "It prevents the space-time continuum from being disrupted.  ");
 		}
 
 		if (o_ptr->name1 == ART_ANCHOR5)
 		{
-			text_out("It prevents the space-time continuum from being disrupted.  ");
+			text_out_c(TERM_VIOLET, "It prevents the space-time continuum from being disrupted.  ");
 		}
 
 		if (o_ptr->name1 == ART_ANCHOR6)
 		{
-			text_out("It prevents the space-time continuum from being disrupted.  ");
+			text_out_c(TERM_VIOLET, "It prevents the space-time continuum from being disrupted.  ");
 		}
 
 		if ((f4 & (TR4_ANTIMAGIC_50)) || (f4 & (TR4_ANTIMAGIC_30)) || (f4 & (TR4_ANTIMAGIC_20)) || (f4 & (TR4_ANTIMAGIC_10)))
 		{
-			text_out("It generates an antimagic field.  ");
+			text_out_c(TERM_L_DARK, "It generates an antimagic field.  ");
 		}
 
 		if (f5 & TR5_SPELL_CONTAIN)
@@ -3332,7 +3332,7 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 
 		if (f1 & (TR1_CHAOTIC))
 		{
-			text_out("It produces chaotic effects.  ");
+			text_out_c(TERM_YELLOW, "It produces chaotic effects.  ");
 		}
 
 		if (f1 & (TR1_VAMPIRIC))
@@ -3342,7 +3342,7 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 
 		if (f1 & (TR1_IMPACT))
 		{
-			text_out("It can cause earthquakes.  ");
+			text_out_c(TERM_L_DARK, "It can cause earthquakes.  ");
 		}
 
 		if (f1 & (TR1_VORPAL))
@@ -3402,7 +3402,7 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 
 		if (f2 & (TR2_INVIS))
 		{
-			text_out("It makes you invisible.  ");
+			text_out_c(TERM_L_BLUE, "It makes you invisible.  ");
 		}
 
 		if (o_ptr->tval != TV_TRAPKIT)
@@ -3640,19 +3640,19 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 
 		if (f2 & (TR2_SENS_FIRE))
 		{
-			text_out("It renders you especially vulnerable to fire.  ");
+			text_out_c(TERM_RED, "It renders you especially vulnerable to fire.  ");
 		}
 		if (f3 & (TR3_WRAITH))
 		{
-			text_out("It renders you incorporeal.  ");
+			text_out_c(TERM_GREEN, "It renders you incorporeal.  ");
 		}
 		if (f5 & (TR5_WATER_BREATH))
 		{
-			text_out("It allows you to breathe underwater.  ");
+			text_out_c(TERM_BLUE, "It allows you to breathe underwater.  ");
 		}
 		if (f5 & (TR5_MAGIC_BREATH))
 		{
-			text_out("It allows you to breathe without air.  ");
+			text_out_c(TERM_L_BLUE, "It allows you to breathe without air.  ");
 		}
 		if (f3 & (TR3_FEATHER))
 		{
@@ -3660,15 +3660,15 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		}
 		if (f4 & (TR4_FLY))
 		{
-			text_out("It allows you to fly.  ");
+			text_out_c(TERM_GREEN, "It allows you to fly.  ");
 		}
 		if (f4 & (TR4_CLIMB))
 		{
-			text_out("It allows you to climb mountains.  ");
+			text_out_c(TERM_UMBER, "It allows you to climb mountains.  ");
 		}
 		if (f5 & (TR5_IMMOVABLE))
 		{
-			text_out("It renders you immovable.  ");
+			text_out_c(TERM_L_RED, "It renders you immovable.  ");
 		}
 		if (f3 & (TR3_SEE_INVIS))
 		{
@@ -3723,11 +3723,11 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		}
 		if (f3 & (TR3_REGEN))
 		{
-			text_out("It speeds your regenerative powers.  ");
+			text_out_c(TERM_YELLOW, "It speeds your regenerative powers.  ");
 		}
 		if (f2 & (TR2_REFLECT))
 		{
-			text_out("It reflects bolts and arrows.  ");
+			text_out_c(TERM_L_UMBER, "It reflects bolts and arrows.  ");
 		}
 		if (f3 & (TR3_SH_FIRE))
 		{
@@ -3739,11 +3739,11 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		}
 		if (f3 & (TR3_NO_MAGIC))
 		{
-			text_out("It produces an anti-magic shell.  ");
+			text_out_c(TERM_L_DARK, "It produces an anti-magic shell.  ");
 		}
 		if (f3 & (TR3_NO_TELE))
 		{
-			text_out("It prevents teleportation.  ");
+			text_out_c(TERM_L_DARK, "It prevents teleportation.  ");
 		}
 		if (f3 & (TR3_XTRA_MIGHT))
 		{
@@ -3794,60 +3794,60 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 
 		if (f3 & (TR3_BLESSED))
 		{
-			text_out("It has been blessed by the gods.  ");
+			text_out_c(TERM_GREEN, "It has been blessed by the gods.  ");
 		}
 		if (f4 & (TR4_AUTO_ID))
 		{
-			text_out("It identifies all items for you.  ");
+			text_out_c(TERM_L_GREEN, "It identifies all items for you.  ");
 		}
 
 		if (f3 & (TR3_TELEPORT))
 		{
-			text_out("It induces random teleportation.  ");
+			text_out_c(TERM_YELLOW, "It induces random teleportation.  ");
 		}
 		if (f3 & (TR3_AGGRAVATE))
 		{
-			text_out("It aggravates nearby creatures.  ");
+			text_out_c(TERM_L_RED, "It aggravates nearby creatures.  ");
 		}
 		if (f4 & (TR4_NEVER_BLOW))
 		{
-			text_out("It can't attack.  ");
+			text_out_c(TERM_L_RED, "It can't attack.  ");
 		}
 		if (f4 & (TR4_BLACK_BREATH))
 		{
-			text_out("It fills you with the Black Breath.  ");
+			text_out_c(TERM_L_RED, "It fills you with the Black Breath.  ");
 		}
 		if (cursed_p(o_ptr))
 		{
 			if (f3 & (TR3_PERMA_CURSE))
 			{
-				text_out("It is permanently cursed.  ");
+				text_out_c(TERM_L_RED, "It is permanently cursed.  ");
 			}
 			else if (f3 & (TR3_HEAVY_CURSE))
 			{
-				text_out("It is heavily cursed.  ");
+				text_out_c(TERM_L_RED, "It is heavily cursed.  ");
 			}
 			else
 			{
-				text_out("It is cursed.  ");
+				text_out_c(TERM_RED, "It is cursed.  ");
 			}
 		}
 		if (f3 & (TR3_TY_CURSE))
 		{
-			text_out("It carries an ancient foul curse.  ");
+			text_out_c(TERM_L_RED, "It carries an ancient foul curse.  ");
 		}
 
 		if (f4 & (TR4_DG_CURSE))
 		{
-			text_out("It carries an ancient Morgothian curse.  ");
+			text_out_c(TERM_L_RED, "It carries an ancient Morgothian curse.  ");
 		}
 		if (f4 & (TR4_CLONE))
 		{
-			text_out("It can clone monsters.  ");
+			text_out_c(TERM_YELLOW, "It can clone monsters.  ");
 		}
 		if (f4 & (TR4_CURSE_NO_DROP))
 		{
-			text_out("It cannot be dropped while cursed.  ");
+			text_out_c(TERM_L_RED, "It cannot be dropped while cursed.  ");
 		}
 		if (f3 & (TR3_AUTO_CURSE))
 		{
@@ -3873,7 +3873,7 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 
 		if (f5 & (TR5_RES_MORGUL))
 		{
-			text_out("It can resist being shattered by morgul beings.  ");
+			text_out_c(TERM_L_GREEN, "It can resist being shattered by morgul beings.  ");
 		}
 		if ((f3 & (TR3_IGNORE_ACID)) && (f3 & (TR3_IGNORE_FIRE)) && (f3 & (TR3_IGNORE_COLD)) && (f3 & (TR3_IGNORE_ELEC)))
 		{
