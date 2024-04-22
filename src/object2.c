@@ -2294,6 +2294,11 @@ static bool make_artifact_special(object_type *o_ptr)
 	/* No artifacts in the town */
 	if (!dun_level) return (FALSE);
 
+	/* runecraft improvement by Amy: improve object level */
+	int objlevelmax = object_level;
+	int runebonus = get_skill(SKILL_RUNECRAFT);
+	if (runebonus > 0) objlevelmax += runebonus;
+
 	/* Check the artifact list (just the "specials") */
 	for (i = 0; i < max_a_idx; i++)
 	{
@@ -2328,10 +2333,10 @@ static bool make_artifact_special(object_type *o_ptr)
 		k_idx = lookup_kind(a_ptr->tval, a_ptr->sval);
 
 		/* XXX XXX Enforce minimum "object" level (loosely) */
-		if (k_info[k_idx].level > object_level)
+		if (k_info[k_idx].level > objlevelmax)
 		{
 			/* Acquire the "out-of-depth factor" */
-			int d = (k_info[k_idx].level - object_level) * 5;
+			int d = (k_info[k_idx].level - objlevelmax) * 5;
 
 			/* Roll for out-of-depth creation */
 			if (rand_int(d) != 0) continue;
@@ -4861,12 +4866,15 @@ bool make_object(object_type *j_ptr, bool good, bool great, obj_theme theme)
 {
 	int invprob, base;
 
+	int objlevelmax = object_level;
+	int runebonus = get_skill(SKILL_RUNECRAFT);
+	if (runebonus > 0) objlevelmax += runebonus;
 
 	/* Chance of "special object" */
 	invprob = (good ? 10 - luck( -9, 9) : 1000);
 
 	/* Base level for the object */
-	base = (good ? (object_level + 10) : object_level);
+	base = (good ? (objlevelmax + 10) : objlevelmax);
 
 
 	/* Generate a special object, or a normal object */
@@ -4931,7 +4939,7 @@ bool make_object(object_type *j_ptr, bool good, bool great, obj_theme theme)
 	}
 
 	/* Apply magic (allow artifacts) */
-	apply_magic(j_ptr, object_level, TRUE, good, great);
+	apply_magic(j_ptr, objlevelmax, TRUE, good, great);
 
 	/* Hack -- generate multiple spikes/missiles */
 	switch (j_ptr->tval)

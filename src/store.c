@@ -1151,6 +1151,9 @@ int return_level()
 	store_info_type *sti_ptr = &st_info[st_ptr->st_idx];
 	int level;
 
+	/* Amy edit: make runecraft skill not completely useless */
+	int runebonus = get_skill(SKILL_RUNECRAFT);
+
 	if (sti_ptr->flags1 & SF1_RANDOM) level = 0;
 	else level = rand_range(1, STORE_OBJ_LEVEL);
 
@@ -1161,6 +1164,8 @@ int return_level()
 	if (sti_ptr->flags1 & SF1_DEEP_LEVEL) level += 45 + rand_int(45);
 
 	if (sti_ptr->flags1 & SF1_ALL_ITEM) level += p_ptr->lev;
+
+	if (runebonus > 0) level += runebonus;
 
 	switch (randint(1000)) {
 

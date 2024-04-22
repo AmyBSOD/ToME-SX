@@ -1984,6 +1984,9 @@ bool make_attack_normal(int m_idx, byte divis)
 						                (o_ptr->pval) &&
 					                     !artifact_p(o_ptr))
 						{
+							int drainedamount;
+							int drainmitigate;
+
 							/* Message */
 							msg_print("Energy drains from your pack!");
 
@@ -1998,8 +2001,16 @@ bool make_attack_normal(int m_idx, byte divis)
 							/* Redraw (later) if needed */
 							if (health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
 
-							/* Uncharge */
-							o_ptr->pval = 0;
+							/* Uncharge, changed by Amy to be less BS */
+
+							drainedamount = randint(o_ptr->pval) + 1;
+							if (drainedamount > o_ptr->pval) drainedamount = o_ptr->pval;
+							drainmitigate = get_skill(SKILL_ALCHEMY);
+							if (drainmitigate > 0) drainedamount -= drainmitigate;
+							if (drainedamount < 1) drainedamount = 1;
+
+							o_ptr->pval -= drainedamount;
+							if (o_ptr->pval < 0) o_ptr->pval = 0;
 
 							/* Combine / Reorder the pack */
 							p_ptr->notice |= (PN_COMBINE | PN_REORDER);

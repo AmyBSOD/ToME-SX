@@ -9039,15 +9039,18 @@ void generate_cave(void)
 			}
 
 			/* Extract the feeling */
-			if (rating > 200) feeling = 2;
-			else if (rating > 150) feeling = 3;
-			else if (rating > 120) feeling = 4;
-			else if (rating > 100) feeling = 5;
-			else if (rating > 70) feeling = 6;
-			else if (rating > 50) feeling = 7;
-			else if (rating > 30) feeling = 8;
-			else if (rating > 10) feeling = 9;
-			else feeling = 10;
+			if (rating > 500) feeling = 2;
+			else if (rating > 400) feeling = 3;
+			else if (rating > 300) feeling = 4;
+			else if (rating > 200) feeling = 5;
+			else if (rating > 150) feeling = 6;
+			else if (rating > 120) feeling = 7;
+			else if (rating > 100) feeling = 8;
+			else if (rating > 70) feeling = 9;
+			else if (rating > 50) feeling = 10;
+			else if (rating > 30) feeling = 11;
+			else if (rating > 10) feeling = 12;
+			else feeling = 13;
 
 			/* Hack -- Have a special feeling sometimes */
 			if (good_item_flag && !p_ptr->preserve) feeling = 1;

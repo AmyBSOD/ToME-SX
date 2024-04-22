@@ -2965,6 +2965,10 @@ bool make_attack_spell(int m_idx)
 	bool no_inate = FALSE;
 	int x, y;
 
+	/* Amy edit: druidistic skill should have some effect */
+	int druidsavingthrow = get_skill(SKILL_DRUID);
+	bool druidsave = FALSE;
+
 	/* Summon count */
 	int count = 0;
 
@@ -3039,6 +3043,8 @@ bool make_attack_spell(int m_idx)
 
 	/* Extract the monster level */
 	rlev = ((m_ptr->level >= 1) ? m_ptr->level : 1);
+
+	if (druidsavingthrow > randint(50 + rlev)) druidsave = TRUE;
 
 	/* Extract the racial spell flags */
 	f4 = r_ptr->flags4;
@@ -3273,6 +3279,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 8:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes acid.", m_name);
 				breath(m_idx, GF_ACID,
@@ -3285,6 +3297,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 9:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes lightning.", m_name);
 				breath(m_idx, GF_ELEC,
@@ -3297,6 +3315,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 10:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes fire.", m_name);
 				breath(m_idx, GF_FIRE,
@@ -3309,6 +3333,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 11:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes frost.", m_name);
 				breath(m_idx, GF_COLD,
@@ -3321,6 +3351,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 12:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes gas.", m_name);
 				breath(m_idx, GF_POIS,
@@ -3334,6 +3370,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 13:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes nether.", m_name);
 				breath(m_idx, GF_NETHER,
@@ -3346,6 +3388,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 14:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes light.", m_name);
 				breath(m_idx, GF_LITE,
@@ -3358,6 +3406,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 15:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes darkness.", m_name);
 				breath(m_idx, GF_DARK,
@@ -3370,6 +3424,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 16:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes confusion.", m_name);
 				breath(m_idx, GF_CONFUSION,
@@ -3382,6 +3442,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 17:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes sound.", m_name);
 				breath(m_idx, GF_SOUND,
@@ -3394,6 +3460,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 18:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes chaos.", m_name);
 				breath(m_idx, GF_CHAOS,
@@ -3406,6 +3478,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 19:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes disenchantment.", m_name);
 				breath(m_idx, GF_DISENCHANT,
@@ -3418,6 +3496,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 20:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes nexus.", m_name);
 				breath(m_idx, GF_NEXUS,
@@ -3430,6 +3514,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 21:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes time.", m_name);
 				breath(m_idx, GF_TIME,
@@ -3441,6 +3531,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 22:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes inertia.", m_name);
 				breath(m_idx, GF_INERTIA,
@@ -3452,6 +3548,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 23:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes gravity.", m_name);
 				breath(m_idx, GF_GRAVITY,
@@ -3463,6 +3565,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 24:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes shards.", m_name);
 				breath(m_idx, GF_SHARDS,
@@ -3475,6 +3583,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 25:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes plasma.", m_name);
 				breath(m_idx, GF_PLASMA,
@@ -3486,6 +3600,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 26:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes force.", m_name);
 				breath(m_idx, GF_FORCE,
@@ -3497,6 +3617,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 27:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes magical energy.", m_name);
 				breath(m_idx, GF_MANA,
@@ -3519,6 +3645,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 29:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes toxic waste.", m_name);
 				breath(m_idx, GF_NUKE,
@@ -3542,6 +3674,12 @@ bool make_attack_spell(int m_idx)
 		case 96 + 31:
 			{
 				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes disintegration.", m_name);
 				breath(m_idx, GF_DISINTEGRATE,

@@ -148,7 +148,7 @@ G:60
 
 N:34:Runecraft
 D:Ability to combine magic runes to create your own spells
-D:Runespells use the dexterity stat
+D:Improves quality of loot
 A:9:Use Runespells
 I:1000
 F:RANDOM_GAIN
@@ -356,7 +356,7 @@ F:RANDOM_GAIN
 
 N:12:Druidistic
 D:Ability to learn and use prayers from the Druidistic realm
-D:Nature powers use the wisdom stat
+D:Boosts boomerangs and inhibits enemy breathers
 A:1:Cast a druidistic spell
 I:1000
 F:RANDOM_GAIN
@@ -402,6 +402,7 @@ G:80
 
 N:39:Alchemy
 D:Ability to use essences to modify/create magic items
+D:Also protects against charge drain attacks
 A:5:Use Alchemy
 I:1000
 F:RANDOM_GAIN

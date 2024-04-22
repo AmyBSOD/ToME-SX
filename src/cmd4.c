@@ -2948,10 +2948,13 @@ void do_cmd_version(void)
 /*
  * Array of feeling strings
  */
-static cptr do_cmd_feeling_text[11] =
+static cptr do_cmd_feeling_text[14] =
 {
 	"Looks like any other level.",
 	"You feel there is something special about this level.",
+	"You have a extremely superb feeling about this level.",
+	"You have a truly superb feeling about this level.",
+	"You have a very superb feeling about this level.",
 	"You have a superb feeling about this level.",
 	"You have an excellent feeling...",
 	"You have a very good feeling...",
@@ -2972,7 +2975,7 @@ void do_cmd_feeling(void)
 {
 	/* Verify the feeling */
 	if (feeling < 0) feeling = 0;
-	if (feeling > 10) feeling = 10;
+	if (feeling > 13) feeling = 13;
 
 	/* Feeling of the fate */
 	if (fate_flag && !(dungeon_flags2 & DF2_SPECIAL) && !p_ptr->inside_quest)
