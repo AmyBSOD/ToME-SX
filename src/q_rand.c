@@ -67,6 +67,8 @@ void do_get_new_obj(int y, int x)
 			cmsg_print(TERM_YELLOW, "You are infused with the Princess's bitchy charm...");
 
 			do_get_new_skill(1);
+			p_ptr->skill_points += 1;
+			cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
 
 			break;
 		}

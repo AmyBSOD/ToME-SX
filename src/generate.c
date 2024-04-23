@@ -3260,6 +3260,8 @@ static void build_type5(int by0, int bx0)
 
 			/* Place that "random" monster (no groups) */
 			(void)place_monster_aux(y, x, r_idx, FALSE, FALSE, MSTATUS_ENEMY);
+			/* and fill the pit with a few items, from newer Angband versions, to make them worth exploring --Amy */
+			if (rand_int(12) < 1) place_object(y, x, FALSE, FALSE, OBJ_FOUND_FLOOR);
 		}
 	}
 
@@ -3646,7 +3648,9 @@ static void build_type6(int by0, int bx0)
 	for (x = xval - 9; x <= xval + 9; x++)
 	{
 		place_monster_aux(yval - 2, x, what[0], FALSE, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) place_object(yval - 2, xval, FALSE, FALSE, OBJ_FOUND_FLOOR);
 		place_monster_aux(yval + 2, x, what[0], FALSE, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) place_object(yval + 2, xval, FALSE, FALSE, OBJ_FOUND_FLOOR);
 	}
 
 	/* Middle columns */
@@ -3654,27 +3658,43 @@ static void build_type6(int by0, int bx0)
 	{
 		place_monster_aux(y, xval - 9, what[0], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 9, what[0], FALSE, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) place_object(yval, xval - 9, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) place_object(yval, xval + 9, FALSE, FALSE, OBJ_FOUND_FLOOR);
 
 		place_monster_aux(y, xval - 8, what[1], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 8, what[1], FALSE, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) place_object(yval, xval - 8, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) place_object(yval, xval + 8, FALSE, FALSE, OBJ_FOUND_FLOOR);
 
 		place_monster_aux(y, xval - 7, what[1], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 7, what[1], FALSE, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) place_object(yval, xval - 7, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) place_object(yval, xval + 7, FALSE, FALSE, OBJ_FOUND_FLOOR);
 
 		place_monster_aux(y, xval - 6, what[2], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 6, what[2], FALSE, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) place_object(yval, xval - 6, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) place_object(yval, xval + 6, FALSE, FALSE, OBJ_FOUND_FLOOR);
 
 		place_monster_aux(y, xval - 5, what[2], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 5, what[2], FALSE, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) place_object(yval, xval - 5, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) place_object(yval, xval + 5, FALSE, FALSE, OBJ_FOUND_FLOOR);
 
 		place_monster_aux(y, xval - 4, what[3], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 4, what[3], FALSE, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) place_object(yval, xval - 4, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) place_object(yval, xval + 4, FALSE, FALSE, OBJ_FOUND_FLOOR);
 
 		place_monster_aux(y, xval - 3, what[3], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 3, what[3], FALSE, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) place_object(yval, xval - 3, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) place_object(yval, xval + 3, FALSE, FALSE, OBJ_FOUND_FLOOR);
 
 		place_monster_aux(y, xval - 2, what[4], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 2, what[4], FALSE, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) place_object(yval, xval - 2, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) place_object(yval, xval + 2, FALSE, FALSE, OBJ_FOUND_FLOOR);
 	}
 
 	/* Above/Below the center monster */
@@ -3682,14 +3702,19 @@ static void build_type6(int by0, int bx0)
 	{
 		place_monster_aux(yval + 1, x, what[5], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(yval - 1, x, what[5], FALSE, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) place_object(yval + 1, xval, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) place_object(yval - 1, xval, FALSE, FALSE, OBJ_FOUND_FLOOR);
 	}
 
 	/* Next to the center monster */
 	place_monster_aux(yval, xval + 1, what[6], FALSE, FALSE, MSTATUS_ENEMY);
 	place_monster_aux(yval, xval - 1, what[6], FALSE, FALSE, MSTATUS_ENEMY);
+	if (rand_int(12) < 1) place_object(yval, xval + 1, FALSE, FALSE, OBJ_FOUND_FLOOR);
+	if (rand_int(12) < 1) place_object(yval, xval - 1, FALSE, FALSE, OBJ_FOUND_FLOOR);
 
 	/* Center monster */
 	place_monster_aux(yval, xval, what[7], FALSE, FALSE, MSTATUS_ENEMY);
+	if (rand_int(12) < 1) place_object(yval, xval, FALSE, FALSE, OBJ_FOUND_FLOOR);
 
 	if (seed_dungeon)
 	{
@@ -9086,11 +9111,11 @@ void generate_cave(void)
 			if (auto_scum && (num < 100) && !p_ptr->inside_quest && dun_level)
 			{
 				/* Require "goodness" */
-				if ((feeling > 9) ||
-				                ((dun_level >= 5) && (feeling > 8)) ||
-				                ((dun_level >= 10) && (feeling > 7)) ||
-				                ((dun_level >= 20) && (feeling > 6)) ||
-				                ((dun_level >= 40) && (feeling > 5)))
+				if ((feeling > 12) ||
+				                ((dun_level >= 5) && (feeling > 11)) ||
+				                ((dun_level >= 10) && (feeling > 10)) ||
+				                ((dun_level >= 20) && (feeling > 9)) ||
+				                ((dun_level >= 40) && (feeling > 8)))
 				{
 					/* Give message to cheaters */
 					if (cheat_room || cheat_hear ||
