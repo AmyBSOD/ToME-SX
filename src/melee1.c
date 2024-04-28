@@ -589,6 +589,7 @@ bool carried_make_attack_normal(int r_idx)
 				{
 					obvious = TRUE;
 
+					cmsg_print(TERM_VIOLET, "You're going insane!");
 					take_sanity_hit(damage, ddesc);
 					break;
 				}
@@ -1918,6 +1919,7 @@ bool make_attack_normal(int m_idx, byte divis)
 				{
 					obvious = TRUE;
 
+					cmsg_print(TERM_VIOLET, "You're going insane!");
 					take_sanity_hit(damage, ddesc);
 					break;
 				}

@@ -44407,8 +44407,8 @@ F:UNIQUE | MALE | DROP_CORPSE |
 F:FORCE_SLEEP | FORCE_MAXHP | 
 F:ONLY_ITEM | DROP_4D2 | DROP_GOOD | 
 F:NO_CONF | NO_SLEEP | JOKEANGBAND
-S:1_IN_1 | 
-S:ROCKET |
+S:1_IN_2 | 
+S:ROCKET | ARROW_4 |
 D:The legendary gunman of the crime world.  None can match his gunmanship.
 
 N:2542:Utsutsu Mujuro the Blind

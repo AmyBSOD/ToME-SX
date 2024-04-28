@@ -3909,6 +3909,10 @@ bool make_attack_spell(int m_idx)
 				{
 					msg_print("You resist the effects!");
 				}
+				else if (rand_int(100) < p_ptr->skill_sav)
+				{
+					msg_print("You resist the effects!");
+				}
 				else
 				{
 					msg_print("Your mind is blasted by psionic energy.");
