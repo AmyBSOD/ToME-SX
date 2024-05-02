@@ -2950,19 +2950,21 @@ deity_type deity_info_init[MAX_GODS_INIT] =
 
 /* jk - to hit, to dam, to ac, to stealth, to disarm, to saving throw */
 /* this concept is taken from Adom, where Thomas Biskup thought it out, */
-/* as far as I know. */
+/* as far as I know.
+ * Amy edit: it's a stupid and cumbersome mechanic, just give +5 to-hit and damage to everyone :-P
+ * why not zero? simple: because many chars just wouldn't stand a chance then */
 tactic_info_type tactic_info[9] =
 {
 	/*        hit  dam   ac stl  dis  sav */
-	{ -10, -10, + 15, + 3, 0, 0, "coward"},             /* 4-4 */
-	{ -8, -8, + 10, + 2, 0, 0, "meek"},               /* 4-3 */
-	{ -4, -4, + 5, + 1, 0, 0, "wary"},               /* 4-2 */
-	{ -2, -2, + 2, + 1, 0, 0, "careful"},            /* 4-1 */
-	{ 0, 0, 0, 0, 0, 0, "normal"},             /* 4+0 */
-	{ 2, 2, -2, -1, 0, 0, "confident"},          /* 4+1 */
-	{ 4, 4, -5, -2, 0, 0, "aggressive"},         /* 4+2 */
-	{ 6, 6, -10, -3, 0, 0, "furious"},            /* 4+3 */
-	{ 8, 8, -20, -5, 0, 0, "berserker"}         /* 4+4 */
+	{ 5, 5, 0, 0, 0, 0, "coward"},             /* 4-4 */
+	{ 5, 5, 0, 0, 0, 0, "meek"},               /* 4-3 */
+	{ 5, 5, 0, 0, 0, 0, "wary"},               /* 4-2 */
+	{ 5, 5, 0, 0, 0, 0, "careful"},            /* 4-1 */
+	{ 5, 5, 0, 0, 0, 0, "normal"},             /* 4+0 */
+	{ 5, 5, 0, 0, 0, 0, "confident"},          /* 4+1 */
+	{ 5, 5, 0, 0, 0, 0, "aggressive"},         /* 4+2 */
+	{ 5, 5, 0, 0, 0, 0, "furious"},            /* 4+3 */
+	{ 5, 5, 0, 0, 0, 0, "berserker"}         /* 4+4 */
 };
 
 /*
@@ -3048,19 +3050,20 @@ activation activation_info[MAX_T_ACT] =
 
 /*
  * Possible movement type.
+ * Amy edit: made so that it doesn't do anything and everyone just starts with +3 speed to give them a fighting chance
  */
 move_info_type move_info[9] =
 {
 	/*        speed, searching, stealth, perception */
-	{ -12, 0, 5, 0, "slug-like"},
-	{ -8, 0, 4, 0, "very slow"},
-	{ -6, 0, 3, 0, "slow"},
-	{ -3, 0, 2, 0, "leisurely"},
-	{ 0, 0, 0, 0, "normal"},
-	{ 1, 0, -1, 0, "brisk"},
-	{ 2, 0, -4, 0, "fast"},
-	{ 3, 0, -7, 0, "very fast"},
-	{ 4, 0, -10, 0, "running"}
+	{ 3, 0, 0, 0, "slug-like"},
+	{ 3, 0, 0, 0, "very slow"},
+	{ 3, 0, 0, 0, "slow"},
+	{ 3, 0, 0, 0, "leisurely"},
+	{ 3, 0, 0, 0, "normal"},
+	{ 3, 0, 0, 0, "brisk"},
+	{ 3, 0, 0, 0, "fast"},
+	{ 3, 0, 0, 0, "very fast"},
+	{ 3, 0, 0, 0, "running"}
 };
 
 /*
