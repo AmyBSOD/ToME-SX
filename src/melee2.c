@@ -4306,6 +4306,8 @@ bool make_attack_spell(int m_idx)
 				else
 				{
 					int dummy = (((s32b) ((65 + randint(25)) * (p_ptr->chp))) / 100);
+					int maxdummy = damroll(15, 30);
+					if (dummy > maxdummy) dummy = maxdummy;
 					msg_print("Your feel your life fade away!");
 					take_hit(dummy, m_name);
 					curse_equipment(100, 20);
