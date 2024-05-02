@@ -6944,6 +6944,8 @@ void do_cmd_unbeliever_antimagic()
 		msg_print("You start disrupting the magic continuum.");
 	}
 
+	energy_use = 100;
+
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
 }
@@ -7002,6 +7004,9 @@ void do_cmd_unbeliever()
 			detect_traps(DEFAULT_RADIUS);
 
 			if (skill >= 35) destroy_doors_touch();
+
+			/* uber cheator if that doesn't even cost you a turn... --Amy */
+			energy_use = 100;
 
 			break;
 		}
