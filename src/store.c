@@ -2531,7 +2531,7 @@ void store_stole(void)
 	}
 
 	/* Player tries to stole it */
-	if ((rand_int((40 - p_ptr->stat_ind[A_DEX]) +
+	if ((rand_int((65 - p_ptr->stat_ind[A_DEX]) +
 	                (( (j_ptr->weight + randint(5) ) * amt) / (5 + get_skill_scale(SKILL_STEALING, 15))) -
 	                (get_skill_scale(SKILL_STEALING, 15))) <= 10) && (rand_int(10) > 0)) /* minimum failure rate --Amy */
 	{
