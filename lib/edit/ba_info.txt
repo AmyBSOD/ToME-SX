@@ -42,11 +42,11 @@ C:0:0:0
 I:46:0:Z
 
 N:5:Rest for the night
-C:25:20:15
+C:200:100:75
 I:17:0:r
 
 N:6:Buy food and drink
-C:3:2:1
+C:10:8:7
 I:18:0:f
 
 N:7:Listen for rumours
@@ -54,7 +54,7 @@ C:0:0:0
 I:19:0:u
 
 N:8:Presage fate
-C:600:500:480
+C:2500:2000:1600
 I:42:0:l
 
 N:9:In-Between
@@ -78,7 +78,7 @@ C:0:0:0
 I:13:0:r
 
 N:14:Research item
-C:1400:1300:1200
+C:4000:3500:3000
 I:1:0:a
 
 N:15:Town history
@@ -118,27 +118,27 @@ C:220:200:180
 I:21:0:c
 
 N:24:Enchant weapon
-C:750:700:150
+C:2500:2000:1800
 I:23:0:w
 
 N:25:Enchant armour
-C:750:700:150
+C:2500:2000:1800
 I:24:0:a
 
 N:26:Recharge item
-C:350:300:75
+C:2000:1800:1600
 I:25:0:r
 
 N:27:Identify possessions
-C:900:800:100
+C:4000:3500:3000
 I:26:0:i
 
 N:28:Healing prayer
-C:600:400:0
+C:2500:2200:2000
 I:28:0:h
 
 N:29:Restoration
-C:600:500:100
+C:1500:1300:1200
 I:29:0:r
 
 N:30:Get share of stolen gold
@@ -146,19 +146,19 @@ C:0:0:0
 I:7:2:g
 
 N:31:Enchant arrows
-C:550:500:100
+C:2500:2000:1800
 I:30:0:a
 
 N:32:Enchant bow
-C:550:500:100
+C:2500:2000:1800
 I:31:0:b
 
 N:33:Recall to dungeon
-C:300:200:100
+C:1000:800:700
 I:33:0:r
 
 N:34:Teleport to dungeon-level
-C:15000:10000:1000
+C:20000:10000:9000
 I:34:0:t
 
 N:35:Get a quest
@@ -179,11 +179,11 @@ C:0:0:0
 I:49:0:q
 
 N:39:Herbal Healing
-C:32000:10000:0
+C:32000:30000:28000
 I:50:0:h
 
 N:40:Song of Lore
-C:2000:800:50
+C:2000:1500:1200
 I:26:0:s
 
 N:41:Distribute earnings
@@ -191,62 +191,62 @@ C:0:0:0
 I:7:2:d
 
 N:42:Morph restoration
-C:3000:1500:750
+C:5000:4500:4000
 I:37:0:r
 
 #for The Mirror
 N:43:View fate
-C:500:500:500
+C:2500:2000:1600
 I:42:0:v
 
 #for The Mirror
 N:44:Research item
-C:1500:1500:1500
+C:4000:3500:3000
 I:1:0:a
 
 #for library in gondol
 N:45:Research item
-C:2000:2000:2000
+C:4000:3500:3000
 I:1:0:a
 
 #for Star-Dome
 N:46:Identify possessions
-C:1200:1000:250
+C:4000:3500:3000
 I:26:0:i
 
 #for Star-Dome
 N:47:Recharge item
-C:1200:1000:150
+C:2000:1800:1600
 I:25:0:r
 
 #for Valarin Temple
 N:48:Restoration
-C:1200:1000:200
+C:1500:1300:1200
 I:29:0:r
 
 #for Sea-Dome
 N:49:Morph restoration
-C:1500:1500:1500
+C:5000:4500:4000
 I:37:0:r
 
 #for The Golden Flower
 N:50:Enchant arrows
-C:1100:1000:200
+C:2500:2000:1800
 I:30:0:a
 
 #for The Golden Flower
 N:51:Enchant bow
-C:1100:1000:200
+C:2500:2000:1800
 I:31:0:b
 
 #for The Fountain
 N:52:Enchant armour
-C:1100:1000:200
+C:2500:2000:1800
 I:24:0:a
 
 #for The Fountain
 N:53:See Healers
-C:1100:1000:0
+C:2500:2200:2000
 I:28:0:h
 
 N:54:Drop an item
