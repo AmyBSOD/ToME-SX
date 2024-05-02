@@ -291,6 +291,9 @@ bool create_artifact(object_type *o_ptr, bool a_scroll, bool get_name)
 
 	if (a_cursed) powers /= 2;
 
+	/* Amy edit: randarts should be a bit better! */
+	powers += randint(4);
+
 	C_MAKE(max_times, max_ra_idx, s16b);
 
 	/* Main loop */
