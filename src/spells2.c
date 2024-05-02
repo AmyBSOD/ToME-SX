@@ -468,13 +468,17 @@ bool remove_curse_object(object_type *o_ptr, bool all)
 	/* this does not go for artifacts - a Sword of Mormegil +40,+60 would */
 	/* be somewhat unbalancing */
 	/* due to the nature of this procedure, it only works on cursed items */
-	/* ie you get only one chance! */
+	/* ie you get only one chance!
+	 * Amy edit: way too uber, especially since some items re-curse themselves
+	 * neat concept, sure, but since stuff like amulets of doom exist... nope, sorry */
 	if ((randint(55-p_ptr->lev) == 1) && !artifact_p(o_ptr))
 	{
-		if (o_ptr->to_a < 0) o_ptr->to_a = -o_ptr->to_a;
+		;
+
+		/*if (o_ptr->to_a < 0) o_ptr->to_a = -o_ptr->to_a;
 		if (o_ptr->to_h < 0) o_ptr->to_h = -o_ptr->to_h;
 		if (o_ptr->to_d < 0) o_ptr->to_d = -o_ptr->to_d;
-		if (o_ptr->pval < 0) o_ptr->pval = -o_ptr->pval;
+		if (o_ptr->pval < 0) o_ptr->pval = -o_ptr->pval;*/
 	}
 
 	/* Recalculate the bonuses */
