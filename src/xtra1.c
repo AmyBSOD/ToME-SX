@@ -1683,6 +1683,10 @@ void calc_sanity(void)
 
 	if (msane < p_ptr->lev + 1) msane = p_ptr->lev + 1;
 
+	/* boost by Amy - otherwise, low-wisdom chars would have too little, and since brain smash "helpfully" deals
+	 * both sanity AND wisdom damage, that could otherwise instakill you... */
+	msane += 100;
+
 	if (p_ptr->msane != msane)
 	{
 		/* Sanity carries over between levels. */
