@@ -4613,6 +4613,7 @@ void update_flow(void)
 
 /*
  * Hack -- map the current panel (plus some) ala "magic mapping"
+ * Amy edit: BS, the radius shouldn't depend on your monitor's resolution.
  */
 void map_area(void)
 {
@@ -4622,10 +4623,10 @@ void map_area(void)
 
 
 	/* Pick an area to map */
-	y1 = panel_row_min - randint(10);
-	y2 = panel_row_max + randint(10);
-	x1 = panel_col_min - randint(20);
-	x2 = panel_col_max + randint(20);
+	y1 = p_ptr->py - (randint(15) + 20);
+	y2 = p_ptr->py + (randint(15) + 20);
+	x1 = p_ptr->px - (randint(20) + 30);
+	x2 = p_ptr->px + (randint(20) + 30);
 
 	/* Speed -- shrink to fit legal bounds */
 	if (y1 < 1) y1 = 1;
