@@ -15,6 +15,34 @@ store_buy_list
 		TV_CLOAK,
 		TV_BOTTLE,
 	},
+	["Common Shop"] =
+	{
+		TV_CORPSE,
+		TV_FOOD,
+		TV_LITE,
+		TV_FLASK,
+		TV_SPIKE,
+		TV_SHOT,
+		TV_ARROW,
+		TV_BOLT,
+		TV_DIGGING,
+		TV_CLOAK,
+		TV_BOTTLE,
+	},
+	["Mining Supply store"] =
+	{
+		TV_CORPSE,
+		TV_FOOD,
+		TV_LITE,
+		TV_FLASK,
+		TV_SPIKE,
+		TV_SHOT,
+		TV_ARROW,
+		TV_BOLT,
+		TV_DIGGING,
+		TV_CLOAK,
+		TV_BOTTLE,
+	},
 	["Armoury"] =
 	{
 		TV_BOOTS,
@@ -27,7 +55,113 @@ store_buy_list
 		TV_HARD_ARMOR,
 		TV_DRAG_ARMOR,
 	},
+	["Dragon Hunter"] =
+	{
+		TV_BOOTS,
+		TV_GLOVES,
+		TV_CROWN,
+		TV_HELM,
+		TV_SHIELD,
+		TV_CLOAK,
+		TV_SOFT_ARMOR,
+		TV_HARD_ARMOR,
+		TV_DRAG_ARMOR,
+	},
+	["Footwear Shop"] =
+	{
+		TV_BOOTS,
+		TV_GLOVES,
+		TV_CROWN,
+		TV_HELM,
+		TV_SHIELD,
+		TV_CLOAK,
+		TV_SOFT_ARMOR,
+		TV_HARD_ARMOR,
+		TV_DRAG_ARMOR,
+	},
+	["Rare Footwear Shop"] =
+	{
+		TV_BOOTS,
+		TV_GLOVES,
+		TV_CROWN,
+		TV_HELM,
+		TV_SHIELD,
+		TV_CLOAK,
+		TV_SOFT_ARMOR,
+		TV_HARD_ARMOR,
+		TV_DRAG_ARMOR,
+	},
 	["Weaponsmith"] =
+	{
+		TV_SHOT,
+		TV_BOLT,
+		TV_ARROW,
+		TV_BOOMERANG,
+		TV_BOW,
+		TV_DIGGING,
+		TV_HAFTED,
+		TV_POLEARM,
+		TV_SWORD,
+		TV_AXE,
+		TV_MSTAFF,
+	},
+	["Master Archer"] =
+	{
+		TV_SHOT,
+		TV_BOLT,
+		TV_ARROW,
+		TV_BOOMERANG,
+		TV_BOW,
+		TV_DIGGING,
+		TV_HAFTED,
+		TV_POLEARM,
+		TV_SWORD,
+		TV_AXE,
+		TV_MSTAFF,
+	},
+	["Axe Smith"] =
+	{
+		TV_SHOT,
+		TV_BOLT,
+		TV_ARROW,
+		TV_BOOMERANG,
+		TV_BOW,
+		TV_DIGGING,
+		TV_HAFTED,
+		TV_POLEARM,
+		TV_SWORD,
+		TV_AXE,
+		TV_MSTAFF,
+	},
+	["Hafted Smith"] =
+	{
+		TV_SHOT,
+		TV_BOLT,
+		TV_ARROW,
+		TV_BOOMERANG,
+		TV_BOW,
+		TV_DIGGING,
+		TV_HAFTED,
+		TV_POLEARM,
+		TV_SWORD,
+		TV_AXE,
+		TV_MSTAFF,
+	},
+	["Polearm Smith"] =
+	{
+		TV_SHOT,
+		TV_BOLT,
+		TV_ARROW,
+		TV_BOOMERANG,
+		TV_BOW,
+		TV_DIGGING,
+		TV_HAFTED,
+		TV_POLEARM,
+		TV_SWORD,
+		TV_AXE,
+		TV_MSTAFF,
+	},
+	["Sword Smith"] =
 	{
 		TV_SHOT,
 		TV_BOLT,
@@ -63,6 +197,34 @@ store_buy_list
 		TV_BATERIE,
 		TV_BOTTLE,
 	},
+	["Rare Jewelry Shop"] =
+	{
+		TV_AMULET,
+		TV_RING,
+	},
+	["Jewelry Shop"] =
+	{
+		TV_AMULET,
+		TV_RING,
+	},
+	["Scribe"] =
+	{
+		TV_SCROLL,
+	},
+	["Recaller"] =
+	{
+		TV_SCROLL,
+	},
+	["Potion Store"] =
+	{
+		TV_POTION,
+		TV_POTION2,
+	},
+	["Speed Ring Market"] =
+	{
+		TV_AMULET,
+		TV_RING,
+	},
 	-- We use a function because we dont want god spells
 	["Magic shop"] = function (obj)
 		local buy =
@@ -90,7 +252,26 @@ store_buy_list
 	["Black Market"] = function (obj)
 		return TRUE
 	end,
+	["Expensive Black Market"] = function (obj)
+		return TRUE
+	end,
 	["Book Store"] =
+	{
+		TV_BOOK,
+		TV_SYMBIOTIC_BOOK,
+		TV_MUSIC_BOOK,
+		TV_DAEMON_BOOK,
+		TV_DRUID_BOOK,
+	},
+	["Library"] =
+	{
+		TV_BOOK,
+		TV_SYMBIOTIC_BOOK,
+		TV_MUSIC_BOOK,
+		TV_DAEMON_BOOK,
+		TV_DRUID_BOOK,
+	},
+	["Forbidden Library"] =
 	{
 		TV_BOOK,
 		TV_SYMBIOTIC_BOOK,
