@@ -3275,6 +3275,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 };
 
 /* Powers */
+/* name, description, gain text, lose text, minimum level, mana/life cost, stat, difficulty */
 power_type powers_type_init[POWER_MAX_INIT] =
 {
 	{
@@ -3310,21 +3311,21 @@ power_type powers_type_init[POWER_MAX_INIT] =
 		"You can teleport at will.",
 		"You gain the power of teleportation at will.",
 		"You lose the power of teleportation at will.",
-		7, 7, A_WIS, 15,
+		7, 25, A_WIS, 15,
 	},
 	{
 		"mind blast",
 		"You can mind blast your enemies.",
 		"You gain the power of Mind Blast.",
 		"You lose the power of Mind Blast.",
-		5, 3, A_WIS, 15,
+		5, 10, A_WIS, 15,
 	},
 	{
 		"emit radiation",
 		"You can emit hard radiation at will.",
 		"You start emitting hard radiation.",
 		"You stop emitting hard radiation.",
-		15, 15, A_CON, 14,
+		15, 35, A_CON, 14,
 	},
 	{
 		"vampiric drain",
@@ -3338,35 +3339,35 @@ power_type powers_type_init[POWER_MAX_INIT] =
 		"You can smell nearby precious metal.",
 		"You smell a metallic odour.",
 		"You no longer smell a metallic odour.",
-		3, 2, A_INT, 12,
+		3, 4, A_INT, 12,
 	},
 	{
 		"smell monsters",
 		"You can smell nearby monsters.",
 		"You smell filthy monsters.",
 		"You no longer smell filthy monsters.",
-		5, 4, A_INT, 15,
+		5, 10, A_INT, 15,
 	},
 	{
 		"blink",
 		"You can teleport yourself short distances.",
 		"You gain the power of minor teleportation.",
 		"You lose the power of minor teleportation.",
-		3, 3, A_WIS, 12,
+		3, 8, A_WIS, 12,
 	},
 	{
 		"eat rock",
 		"You can consume solid rock.",
 		"The walls look delicious.",
 		"The walls look unappetising.",
-		8, 12, A_CON, 18,
+		8, 25, A_CON, 18,
 	},
 	{
 		"swap position",
 		"You can switch locations with another being.",
 		"You feel like walking a mile in someone else's shoes.",
 		"You feel like staying in your own shoes.",
-		15, 12, A_DEX, 16,
+		15, 50, A_DEX, 16,
 	},
 	{
 		"shriek",
@@ -3380,21 +3381,21 @@ power_type powers_type_init[POWER_MAX_INIT] =
 		"You can emit bright light.",
 		"You can light up rooms with your presence.",
 		"You can no longer light up rooms with your presence.",
-		3, 2, A_INT, 10,
+		3, 6, A_INT, 10,
 	},
 	{
 		"detect curses",
 		"You can feel the danger of evil magic.",
 		"You can feel evil magic.",
 		"You can no longer feel evil magic.",
-		7, 14, A_WIS, 14,
+		7, 20, A_WIS, 14,
 	},
 	{
 		"berserk",
 		"You can drive yourself into a berserk frenzy.",
 		"You feel a controlled rage.",
 		"You no longer feel a controlled rage.",
-		8, 8, A_STR, 14,
+		8, 20, A_STR, 14,
 	},
 	{
 		"polymorph",
@@ -3422,14 +3423,14 @@ power_type powers_type_init[POWER_MAX_INIT] =
 		"You can harden yourself to the ravages of the elements.",
 		"You feel like you can protect yourself.",
 		"You feel like you might be vulnerable.",
-		10, 12, A_CON, 12,
+		10, 20, A_CON, 12,
 	},
 	{
 		"earthquake",
 		"You can bring down the dungeon around your ears.",
 		"You gain the ability to wreck the dungeon.",
 		"You lose the ability to wreck the dungeon.",
-		12, 12, A_STR, 16,
+		12, 50, A_STR, 16,
 	},
 	{
 		"eat magic",
@@ -3443,7 +3444,7 @@ power_type powers_type_init[POWER_MAX_INIT] =
 		"You can feel the strength of the magics affecting you.",
 		"You feel you can better understand the magic around you.",
 		"You no longer sense magic.",
-		6, 6, A_INT, 10,
+		6, 10, A_INT, 10,
 	},
 	{
 		"sterilise",
@@ -3506,28 +3507,28 @@ power_type powers_type_init[POWER_MAX_INIT] =
 		"You can use secret passages.",
 		"You suddenly notice lots of hidden ways.",
 		"You no longer can use hidden ways.",
-		15, 15, A_DEX, 12,
+		15, 30, A_DEX, 12,
 	},
 	{
 		"detect doors and traps",
 		"You can detect hidden doors and traps.",
 		"You develop an affinity for traps.",
 		"You no longer can detect hidden doors and traps.",
-		5, 3, A_WIS, 10,
+		5, 40, A_WIS, 10,
 	},
 	{
 		"create food",
 		"You can create food.",
 		"Your cooking skills greatly improve.",
 		"Your cooking skills return to a normal level.",
-		15, 10, A_INT, 10,
+		15, 30, A_INT, 10,
 	},
 	{
 		"remove fear",
 		"You can embolden yourself.",
 		"You feel your fears lessening.",
 		"You feel your fears growing again.",
-		3, 5, A_WIS, 8,
+		3, 25, A_WIS, 8,
 	},
 	{
 		"set explosive rune",
@@ -3541,14 +3542,14 @@ power_type powers_type_init[POWER_MAX_INIT] =
 		"You can destroy walls.",
 		"You can destroy walls.",
 		"You cannot destroy walls anymore.",
-		20, 10, A_STR, 12,
+		20, 60, A_STR, 12,
 	},
 	{
 		"poison dart",
 		"You can throw poisoned darts.",
 		"You get an infinite supply of poisoned darts.",
 		"You lose your infinite supply of poisoned darts.",
-		12, 8, A_DEX, 14,
+		12, 12, A_DEX, 14,
 	},
 	{
 		"magic missile",
@@ -3562,7 +3563,7 @@ power_type powers_type_init[POWER_MAX_INIT] =
 		"You can grow trees.",
 		"You feel an affinity for trees.",
 		"You no longer feel an affinity for trees.",
-		2, 6, A_CHR, 3,
+		2, 20, A_CHR, 3,
 	},
 	{
 		"cold breath",
@@ -3576,14 +3577,14 @@ power_type powers_type_init[POWER_MAX_INIT] =
 		"You can breath chaos.",
 		"You gain the ability to breathe chaos.",
 		"You lose the ability to breathe chaos.",
-		20, 10, A_CON, 18,
+		20, 15, A_CON, 18,
 	},
 	{
 		"elemental breath",
 		"You can breath the elements.",
 		"You gain the ability to breathe the elements.",
 		"You lose the ability to breathe the elements.",
-		20, 10, A_CON, 18,
+		20, 20, A_CON, 18,
 	},
 	{
 		"change the world",
@@ -3597,7 +3598,7 @@ power_type powers_type_init[POWER_MAX_INIT] =
 		"You can scare monsters.",
 		"You gain the ability to scare monsters.",
 		"You lose the ability to scare monsters.",
-		4, 3, A_INT, 3,
+		4, 6, A_INT, 3,
 	},
 	{
 		"restore life",
@@ -3667,7 +3668,7 @@ power_type powers_type_init[POWER_MAX_INIT] =
 		"You can sense what is beyond walls.",
 		"You feel you can sense what is beyond walls.",
 		"You no longer can sense what is beyond walls.",
-		7, 10, A_WIS, 15,
+		7, 30, A_WIS, 15,
 	},
 	{
 		"lay trap",
@@ -3695,7 +3696,7 @@ power_type powers_type_init[POWER_MAX_INIT] =
 		"You can turn into a bear.",
 		"You suddenly gain beorning powers.",
 		"You can no longer shapeshift into a bear.",
-		2, 5, A_CON, 5,
+		2, 15, A_CON, 5,
 	},
 	{
 		"sense dodge success",
