@@ -3200,10 +3200,10 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		if ((o_ptr->tval != TV_TRAPKIT) && (f1 & (TR1_STEALTH))) vp[vn++] = "stealth";
 		if (f1 & (TR1_SEARCH)) vp[vn++] = "searching";
 		if (f1 & (TR1_INFRA)) vp[vn++] = "infravision";
-		if (f1 & (TR1_TUNNEL)) vp[vn++] = "ability to tunnel";
+		if (f1 & (TR1_TUNNEL)) vp[vn++] = "tunneling";
 		if (f1 & (TR1_SPEED)) vp[vn++] = "speed";
 		if (f1 & (TR1_BLOWS)) vp[vn++] = "attack speed";
-		if (f5 & (TR5_CRIT)) vp[vn++] = "ability to score critical hits";
+		if (f5 & (TR5_CRIT)) vp[vn++] = "crit chance";
 		if (f5 & (TR5_LUCK)) vp[vn++] = "luck";
 		if (f1 & (TR1_SPELL)) vp[vn++] = "spell power";
 
@@ -3347,57 +3347,57 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 
 		if (f1 & (TR1_VORPAL))
 		{
-			text_out("It is very sharp and can cut your foes.  ");
+			text_out("It is vorpal and can cut your foes.  ");
 		}
 
 		if (f5 & (TR5_WOUNDING))
 		{
-			text_out("It is very sharp and can make your foes bleed.  ");
+			text_out("It causes bleeding damage.  ");
 		}
 
 		if (f1 & (TR1_KILL_DRAGON))
 		{
-			text_out("It is a great bane of dragons.  ");
+			text_out("Kills dragons.  ");
 		}
 		else if (f1 & (TR1_SLAY_DRAGON))
 		{
-			text_out("It is especially deadly against dragons.  ");
+			text_out("Slays dragons.  ");
 		}
 		if (f1 & (TR1_SLAY_ORC))
 		{
-			text_out("It is especially deadly against orcs.  ");
+			text_out("Slays orcs.  ");
 		}
 		if (f1 & (TR1_SLAY_TROLL))
 		{
-			text_out("It is especially deadly against trolls.  ");
+			text_out("Slays trolls.  ");
 		}
 		if (f1 & (TR1_SLAY_GIANT))
 		{
-			text_out("It is especially deadly against giants.  ");
+			text_out("Slays giants.  ");
 		}
 		if (f5 & (TR5_KILL_DEMON))
 		{
-			text_out("It is a great bane of demons.  ");
+			text_out("Kills demons.  ");
 		}
 		else if (f1 & (TR1_SLAY_DEMON))
 		{
-			text_out("It strikes at demons with holy wrath.  ");
+			text_out("Slays demons.  ");
 		}
 		if (f5 & (TR5_KILL_UNDEAD))
 		{
-			text_out("It is a great bane of undead.  ");
+			text_out("Kills undead.  ");
 		}
 		else if (f1 & (TR1_SLAY_UNDEAD))
 		{
-			text_out("It strikes at undead with holy wrath.  ");
+			text_out("Slays undead.  ");
 		}
 		if (f1 & (TR1_SLAY_EVIL))
 		{
-			text_out("It fights against evil with holy fury.  ");
+			text_out("Slays evil.  ");
 		}
 		if (f1 & (TR1_SLAY_ANIMAL))
 		{
-			text_out("It is especially deadly against natural creatures.  ");
+			text_out("Slays animals.  ");
 		}
 
 		if (f2 & (TR2_INVIS))
@@ -3544,11 +3544,11 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 
 		if (f2 & (TR2_FREE_ACT))
 		{
-			text_out("It provides immunity to paralysis.  ");
+			text_out_c(TERM_ORANGE, "Free Action.  ");
 		}
 		if (f2 & (TR2_RES_FEAR))
 		{
-			text_out("It makes you completely fearless.  ");
+			text_out("Resist fear.  ");
 		}
 
 		vn = 0;
@@ -3622,7 +3622,7 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 			int i;
 
 			/* Intro */
-			text_out("It provides resistance ");
+			text_out("Resistance ");
 
 			/* List */
 			for (i = 0; i < vn; i++)
@@ -3640,7 +3640,7 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 
 		if (f2 & (TR2_SENS_FIRE))
 		{
-			text_out_c(TERM_RED, "It renders you especially vulnerable to fire.  ");
+			text_out_c(TERM_RED, "It makes you vulnerable to fire.  ");
 		}
 		if (f3 & (TR3_WRAITH))
 		{
@@ -3648,23 +3648,23 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		}
 		if (f5 & (TR5_WATER_BREATH))
 		{
-			text_out_c(TERM_BLUE, "It allows you to breathe underwater.  ");
+			text_out_c(TERM_BLUE, "Water Breathing.  ");
 		}
 		if (f5 & (TR5_MAGIC_BREATH))
 		{
-			text_out_c(TERM_L_BLUE, "It allows you to breathe without air.  ");
+			text_out_c(TERM_L_BLUE, "Void Breathing.  ");
 		}
 		if (f3 & (TR3_FEATHER))
 		{
-			text_out("It allows you to levitate.  ");
+			text_out_c(TERM_L_BLUE, "Levitation.  ");
 		}
 		if (f4 & (TR4_FLY))
 		{
-			text_out_c(TERM_GREEN, "It allows you to fly.  ");
+			text_out_c(TERM_GREEN, "Flying.  ");
 		}
 		if (f4 & (TR4_CLIMB))
 		{
-			text_out_c(TERM_UMBER, "It allows you to climb mountains.  ");
+			text_out_c(TERM_UMBER, "Mountain Climbing.  ");
 		}
 		if (f5 & (TR5_IMMOVABLE))
 		{
@@ -3672,11 +3672,11 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		}
 		if (f3 & (TR3_SEE_INVIS))
 		{
-			text_out("It allows you to see invisible monsters.  ");
+			text_out_c(TERM_L_BLUE, "See invisible.  ");
 		}
 		if (esp)
 		{
-			if (esp & ESP_ALL) text_out("It gives telepathic powers.  ");
+			if (esp & ESP_ALL) text_out_c(TERM_GREEN, "Full ESP.  ");
 			else
 			{
 				vn = 0;
@@ -3699,7 +3699,7 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 					int i;
 
 					/* Intro */
-					text_out("It allows you to sense the presence ");
+					text_out("It grants ESP ");
 
 					/* List */
 					for (i = 0; i < vn; i++)
@@ -3719,15 +3719,15 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 
 		if (f3 & (TR3_SLOW_DIGEST))
 		{
-			text_out("It slows your metabolism.  ");
+			text_out_c(TERM_L_GREEN, "Slow Digestion.  ");
 		}
 		if (f3 & (TR3_REGEN))
 		{
-			text_out_c(TERM_YELLOW, "It speeds your regenerative powers.  ");
+			text_out_c(TERM_YELLOW, "Regeneration.  ");
 		}
 		if (f2 & (TR2_REFLECT))
 		{
-			text_out_c(TERM_L_UMBER, "It reflects bolts and arrows.  ");
+			text_out_c(TERM_L_UMBER, "Reflection.  ");
 		}
 		if (f3 & (TR3_SH_FIRE))
 		{
@@ -3747,11 +3747,11 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		}
 		if (f3 & (TR3_XTRA_MIGHT))
 		{
-			text_out("It fires missiles with extra might.  ");
+			text_out_c(TERM_L_GREEN, "It fires missiles with extra might.  ");
 		}
 		if (f3 & (TR3_XTRA_SHOTS))
 		{
-			text_out("It fires missiles excessively fast.  ");
+			text_out_c(TERM_L_GREEN, "It fires missiles excessively fast.  ");
 		}
 
 		vn = 0;
@@ -3877,7 +3877,7 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		}
 		if ((f3 & (TR3_IGNORE_ACID)) && (f3 & (TR3_IGNORE_FIRE)) && (f3 & (TR3_IGNORE_COLD)) && (f3 & (TR3_IGNORE_ELEC)))
 		{
-			text_out("It cannot be harmed by acid, cold, lightning or fire.  ");
+			text_out("It cannot be harmed bla-bla.  ");
 		}
 		else
 		{
