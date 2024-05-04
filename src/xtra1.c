@@ -1640,6 +1640,11 @@ static void calc_powers(void)
 		if (p != -1) p_ptr->powers[p] = TRUE;
 	}
 
+	if (get_skill(SKILL_BEAR) >= 1) {
+		p = PWR_BEAR;
+		p_ptr->powers[p] = TRUE;
+	}
+
 	if (p_ptr->disembodied)
 	{
 		p = PWR_INCARNATE;

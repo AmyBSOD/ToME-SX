@@ -1205,7 +1205,7 @@ bool set_mimic(int v, int p, int level)
 			notice = TRUE;
 			if (p == resolve_mimic_name("Bear"))
 			{
-				s_info[SKILL_BEAR].hidden = TRUE;
+				/*s_info[SKILL_BEAR].hidden = TRUE;*/
 				select_default_melee();
 			}
 			p = 0;
