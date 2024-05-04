@@ -9107,8 +9107,11 @@ void generate_cave(void)
 				okay = FALSE;
 			}
 
-			/* Mega-Hack -- "auto-scum" */
-			if (auto_scum && (num < 100) && !p_ptr->inside_quest && dun_level)
+			/* Mega-Hack -- "auto-scum"
+			 * Amy edit: don't use this if ironman rooms is on, for two reasons
+			 * 1. ironman rooms creates so many vaults, you automatically get "good enough" levels
+			 * 2. autoscum on ironman mode causes laaaaaaaaag whenever you go to a new dungeon level! */
+			if (auto_scum && !ironman_rooms && (num < 100) && !p_ptr->inside_quest && dun_level)
 			{
 				/* Require "goodness" */
 				if ((feeling > 12) ||
