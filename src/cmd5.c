@@ -2054,11 +2054,13 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 	if (!no_cost)
 	{
 		int chance, pchance;
+		bool willalwayscost = TRUE; /* by Amy, because it's uber imba if you can do that stuff for free so often */
+		if (randint(10) == 1) willalwayscost = FALSE;
 
 		chance = (monster_powers[power].mana + r_ptr->level);
 		pchance = adj_str_wgt[p_ptr->stat_ind[A_WIS]] / 2 + get_skill(SKILL_POSSESSION);
 
-		if (rand_int(chance) >= pchance)
+		if ((rand_int(chance) >= pchance) && !willalwayscost)
 		{
 			int m = monster_powers[power].mana /* / 10*/;
 
