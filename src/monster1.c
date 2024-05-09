@@ -457,7 +457,7 @@ static void roff_aux(int r_idx, int ego, int remem)
 			text_out(", ");
 		else
 			text_out(format("%^s ", wd_he[msex]));
-		text_out_c(TERM_L_GREEN, "lives in the town or the wilderness");
+		text_out_c(TERM_L_GREEN, "lives in the town or wilderness");
 		old = TRUE;
 	}
 	else if (r_ptr->r_tkills)
@@ -481,7 +481,7 @@ static void roff_aux(int r_idx, int ego, int remem)
 		}
 		else
 		{
-			text_out(format("is normally found on level ", wd_he[msex]));
+			text_out(format("is normally level ", wd_he[msex]));
 			if (dun_level < r_ptr->level) /* out of depth monster */
 			{
 				text_out_c(TERM_L_RED, format("%d", r_ptr->level));
@@ -570,7 +570,7 @@ static void roff_aux(int r_idx, int ego, int remem)
 		}
 
 		/* Describe */
-		text_out("does not deign to chase intruders");
+		text_out_c(TERM_L_BLUE, "doesn't move");
 	}
 
 	/* End this sentence */
@@ -652,19 +652,19 @@ static void roff_aux(int r_idx, int ego, int remem)
 
 	if ((flags2 & (RF2_AURA_FIRE)) && (flags2 & (RF2_AURA_ELEC)))
 	{
-		text_out(format("%^s is surrounded by ", wd_he[msex]));
+		text_out(format("%^s has passive ", wd_he[msex]));
 		text_out_c(TERM_VIOLET, "flames and electricity");
 		text_out(".  ");
 	}
 	else if (flags2 & (RF2_AURA_FIRE))
 	{
-		text_out(format("%^s is surrounded by ", wd_he[msex]));
+		text_out(format("%^s has passive ", wd_he[msex]));
 		text_out_c(TERM_ORANGE, "flames");
 		text_out(".  ");
 	}
 	else if (flags2 & (RF2_AURA_ELEC))
 	{
-		text_out(format("%^s is surrounded by ", wd_he[msex]));
+		text_out(format("%^s has passive ", wd_he[msex]));
 		text_out_c(TERM_L_BLUE, "electricity");
 		text_out(".  ");
 	}
@@ -673,29 +673,29 @@ static void roff_aux(int r_idx, int ego, int remem)
 	{
 		text_out(format("%^s ", wd_he[msex]));
 		text_out_c(TERM_L_UMBER, "reflects");
-		text_out(" bolt spells.  ");
+		text_out(" bolts.  ");
 	}
 
 
 	/* Describe escorts */
 	if ((flags1 & (RF1_ESCORT)) || (flags1 & (RF1_ESCORTS)))
 	{
-		text_out(format("%^s usually appears with escorts.  ",
+		text_out_c(TERM_ORANGE, format("%^s has escorts.  ",
 		                wd_he[msex]));
 	}
 
 	/* Describe friends */
 	else if ((flags1 & (RF1_FRIEND)) || (flags1 & (RF1_FRIENDS)))
 	{
-		text_out(format("%^s usually appears in groups.  ",
+		text_out_c(TERM_ORANGE, format("%^s appears in groups.  ",
 		                wd_he[msex]));
 	}
 
 
 	/* Collect inate attacks */
 	vn = 0;
-	if (flags4 & (RF4_SHRIEK))	vp[vn++] = "shriek for help";
-	if (flags4 & (RF4_ROCKET))	vp[vn++] = "shoot a rocket";
+	if (flags4 & (RF4_SHRIEK))	vp[vn++] = "shriek";
+	if (flags4 & (RF4_ROCKET))	vp[vn++] = "shoot rockets";
 	if (flags4 & (RF4_ARROW_1))	vp[vn++] = "fire an arrow";
 	if (flags4 & (RF4_ARROW_2))	vp[vn++] = "fire arrows";
 	if (flags4 & (RF4_ARROW_3))	vp[vn++] = "fire a missile";
@@ -762,7 +762,7 @@ static void roff_aux(int r_idx, int ego, int remem)
 		for (n = 0; n < vn; n++)
 		{
 			/* Intro */
-			if (n == 0) text_out(" may breathe ");
+			if (n == 0) text_out(" breathes ");
 			else if (n < vn - 1) text_out(", ");
 			else text_out(" or ");
 
@@ -915,13 +915,13 @@ static void roff_aux(int r_idx, int ego, int remem)
 	if (know_armour(r_idx))
 	{
 		/* Armor */
-		text_out(format("%^s has an armor rating of ", wd_he[msex]));
+		text_out(format("%^s has an AC of ", wd_he[msex]));
 		text_out_c(TERM_L_GREEN, format("%d", r_ptr->ac));
 
 		/* Maximized hitpoints */
 		if (flags1 & (RF1_FORCE_MAXHP))
 		{
-			text_out(" and a life rating of ");
+			text_out(" and HP of ");
 			text_out_c(TERM_L_GREEN, format("%d", r_ptr->hdice * r_ptr->hside));
 			text_out(".  ");
 		}
@@ -929,7 +929,7 @@ static void roff_aux(int r_idx, int ego, int remem)
 		/* Variable hitpoints */
 		else
 		{
-			text_out(" and a life rating of ");
+			text_out(" and HP of ");
 			text_out_c(TERM_L_GREEN, format("%dd%d", r_ptr->hdice, r_ptr->hside));
 			text_out(".  ");
 		}
@@ -940,8 +940,8 @@ static void roff_aux(int r_idx, int ego, int remem)
 	/* Collect special abilities. */
 	vn = 0;
 	if (flags2 & (RF2_OPEN_DOOR)) vp[vn++] = "open doors";
-	if (flags2 & (RF2_BASH_DOOR)) vp[vn++] = "bash down doors";
-	if (flags2 & (RF2_PASS_WALL)) vp[vn++] = "pass through walls";
+	if (flags2 & (RF2_BASH_DOOR)) vp[vn++] = "smash doors";
+	if (flags2 & (RF2_PASS_WALL)) vp[vn++] = "wallwalk";
 	if (flags2 & (RF2_KILL_WALL)) vp[vn++] = "bore through walls";
 	if (flags2 & (RF2_MOVE_BODY)) vp[vn++] = "push past weaker monsters";
 	if (flags2 & (RF2_KILL_BODY)) vp[vn++] = "destroy weaker monsters";
@@ -964,7 +964,7 @@ static void roff_aux(int r_idx, int ego, int remem)
 			else text_out(" and ");
 
 			/* Dump */
-			text_out(vp[n]);
+			text_out_c(TERM_BLUE, vp[n]);
 		}
 
 		/* End */
@@ -983,11 +983,11 @@ static void roff_aux(int r_idx, int ego, int remem)
 	}
 	if (flags2 & (RF2_EMPTY_MIND))
 	{
-		text_out(format("%^s is not detected by telepathy.  ", wd_he[msex]));
+		text_out_c(TERM_VIOLET, format("%^s is not detected by telepathy.  ", wd_he[msex]));
 	}
 	if (flags2 & (RF2_WEIRD_MIND))
 	{
-		text_out(format("%^s is rarely detected by telepathy.  ", wd_he[msex]));
+		text_out_c(TERM_L_UMBER, format("%^s is rarely detected by telepathy.  ", wd_he[msex]));
 	}
 	if (flags4 & (RF4_MULTIPLY))
 	{
@@ -999,11 +999,11 @@ static void roff_aux(int r_idx, int ego, int remem)
 	}
 	if (r_ptr->flags7 & (RF7_MORTAL))
 	{
-		text_out_c(TERM_RED, format("%^s is a mortal being.  ", wd_he[msex]));
+		text_out_c(TERM_RED, format("%^s is mortal.  ", wd_he[msex]));
 	}
 	else
 	{
-		text_out_c(TERM_L_BLUE, format("%^s is an immortal being.  ", wd_he[msex]));
+		text_out_c(TERM_L_BLUE, format("%^s is immortal.  ", wd_he[msex]));
 	}
 
 
@@ -1173,7 +1173,7 @@ static void roff_aux(int r_idx, int ego, int remem)
 			else text_out(" or ");
 
 			/* Dump */
-			text_out(vp[n]);
+			text_out_c(TERM_YELLOW, vp[n]);
 		}
 
 		/* End */
@@ -1540,6 +1540,9 @@ static void roff_aux(int r_idx, int ego, int remem)
 		case RBE_PARASITE:
 			q = "parasite";
 			break;
+		case RBE_ABOMINATION:
+			q = "polymorph";
+			break;
 		}
 
 
@@ -1595,13 +1598,13 @@ static void roff_aux(int r_idx, int ego, int remem)
 	/* Notice lack of attacks */
 	else if (flags1 & (RF1_NEVER_BLOW))
 	{
-		text_out(format("%^s has no physical attacks.  ", wd_he[msex]));
+		text_out_c(TERM_GREEN, format("%^s has no physical attacks.  ", wd_he[msex]));
 	}
 
 	/* Or describe the lack of knowledge */
 	else
 	{
-		text_out(format("Nothing is known about %s attack.  ", wd_his[msex]));
+		text_out_c(TERM_ORANGE, format("Nothing is known about %s attack.  ", wd_his[msex]));
 	}
 
 
