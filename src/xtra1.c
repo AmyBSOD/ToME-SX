@@ -3064,6 +3064,11 @@ void calc_bonuses(bool silent)
 	{
 		p_ptr->wraith_form = TRUE;
 	}
+	/* Amy edit: lost souls shouldn't lose their wallwalking upon getting out of the halls! */
+	if (PRACE_FLAG2(PR2_ASTRAL))
+	{
+		p_ptr->wraith_form = TRUE;
+	}
 
 	/***** Races ****/
 	if ((!p_ptr->mimic_form) && (!p_ptr->body_monster))
