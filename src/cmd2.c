@@ -3536,9 +3536,10 @@ void do_cmd_fire(void)
 			break;
 		}
 
-		/* If the ammo doesn't break, it can pierce through */
+		/* If the ammo doesn't break, it can pierce through
+		 * Amy note: holy shit 45% base chance and 95% with maxxed archery??? no wonder people claim it's OP */
 		if ((num_pierce) && (hit_body) &&
-		                (magik(45 + get_skill(SKILL_ARCHERY))))
+		                (magik(1 + get_skill(SKILL_ARCHERY))))
 		{
 			num_pierce--;
 			hit_body = FALSE;
