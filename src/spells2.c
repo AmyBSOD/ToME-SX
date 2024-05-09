@@ -3013,6 +3013,10 @@ bool enchant(object_type *o_ptr, int n, int eflag)
 		if (eflag & (ENCH_TOHIT))
 		{
 			if (o_ptr->to_h < 0) chance = 0;
+			else if (o_ptr->to_h > 40) chance = 1000;
+			else if (o_ptr->to_h > 30) chance = 999;
+			else if (o_ptr->to_h > 25) chance = 998;
+			else if (o_ptr->to_h > 20) chance = 997;
 			else if (o_ptr->to_h > 15) chance = 995;
 			else chance = enchant_table[o_ptr->to_h];
 
@@ -3044,6 +3048,10 @@ bool enchant(object_type *o_ptr, int n, int eflag)
 		if (eflag & (ENCH_TODAM))
 		{
 			if (o_ptr->to_d < 0) chance = 0;
+			else if (o_ptr->to_d > 40) chance = 1000;
+			else if (o_ptr->to_d > 30) chance = 999;
+			else if (o_ptr->to_d > 25) chance = 998;
+			else if (o_ptr->to_d > 20) chance = 997;
 			else if (o_ptr->to_d > 15) chance = 995;
 			else chance = enchant_table[o_ptr->to_d];
 
@@ -3076,6 +3084,10 @@ bool enchant(object_type *o_ptr, int n, int eflag)
 		if (eflag & (ENCH_PVAL))
 		{
 			if (o_ptr->pval < 0) chance = 0;
+			else if (o_ptr->pval > 20) chance = 1000;
+			else if (o_ptr->pval > 15) chance = 999;
+			else if (o_ptr->pval > 12) chance = 998;
+			else if (o_ptr->pval > 10) chance = 997;
 			else if (o_ptr->pval > 6) chance = 995;
 			else chance = enchant_table[o_ptr->pval * 2];
 
@@ -3107,6 +3119,10 @@ bool enchant(object_type *o_ptr, int n, int eflag)
 		if (eflag & (ENCH_TOAC))
 		{
 			if (o_ptr->to_a < 0) chance = 0;
+			else if (o_ptr->to_a > 40) chance = 1000;
+			else if (o_ptr->to_a > 30) chance = 999;
+			else if (o_ptr->to_a > 25) chance = 998;
+			else if (o_ptr->to_a > 20) chance = 997;
 			else if (o_ptr->to_a > 15) chance = 995;
 			else chance = enchant_table[o_ptr->to_a];
 
