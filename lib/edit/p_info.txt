@@ -378,7 +378,7 @@ C:k:+0:+700:Meta
 C:k:+0:+700:Mind
 C:k:+0:+700:Necromancy
 C:k:+0:+700:Runecraft
-C:k:+0:+700:Thaumaturgy
+C:k:+0:+300:Thaumaturgy
 C:k:+1000:+550:Spirituality
 C:k:+1000:+200:Combat
 C:k:+700:+500:Weaponmastery
@@ -456,7 +456,7 @@ C:a:k:+0:+300:Meta
 C:a:k:+0:+300:Mind
 C:a:k:+0:+200:Necromancy
 C:a:k:+0:+200:Runecraft
-C:a:k:+0:+200:Thaumaturgy
+C:a:k:+0:+400:Thaumaturgy
 C:a:O:36:2:1d1
 C:a:O:111:50:1d1
 
@@ -493,7 +493,7 @@ C:a:D:Thaumaturgy spells come from within and are different for each character.
 C:a:D:Since attack is the best defence, all their spells are offensive.
 C:a:k:-1000:+0:Mana
 C:a:k:+2000:+50:Magic
-C:a:k:+1000:+300:Thaumaturgy
+C:a:k:+1000:+700:Thaumaturgy
 C:a:k:+0:-100:Weaponmastery
 C:a:k:+0:-150:Magic-Device
 C:a:O:23:4:1d1
@@ -505,7 +505,7 @@ C:a:D:of the essences of magic they can extract from magical objects.
 C:a:k:+2000:+0:Magic
 C:a:k:+0:-600:Spell-power
 C:a:k:+0:-600:Necromancy
-C:a:k:+0:-600:Thaumaturgy
+C:a:k:+0:-300:Thaumaturgy
 C:a:k:+0:+250:Spirituality
 C:a:k:+0:+500:Combat
 C:a:k:+0:+200:Weaponmastery
@@ -565,7 +565,7 @@ C:a:k:+0:+300:Divination
 C:a:k:+0:+300:Meta
 C:a:k:+0:+300:Mind
 C:a:k:+0:+300:Necromancy
-C:a:k:+0:+300:Thaumaturgy
+C:a:k:+0:+500:Thaumaturgy
 C:a:O:6:1:1d1
 C:a:O:71:40:1d1
 C:a:G:EXPERIMENTAL
@@ -585,7 +585,7 @@ C:a:k:+0:+100:Divination
 C:a:k:+0:-100:Nature
 C:a:k:+0:+100:Mind
 C:a:k:+0:+600:Necromancy
-C:a:k:+1000:+700:Thaumaturgy
+C:a:k:+1000:+900:Thaumaturgy
 C:a:k:-1000:-400:Sneakiness
 C:a:k:-1000:-400:Spirituality
 C:a:k:+0:+600:Runecraft
@@ -1823,7 +1823,7 @@ C:E:0:0:0:0:0:0
 C:k:+1000:+900:Magic
 C:k:+0:+600:Spell-power
 C:k:+0:+600:Necromancy
-C:k:+0:+600:Mindcraft
+C:k:+0:+300:Mindcraft
 C:k:+1000:+1000:Spirituality
 C:k:+1000:+700:Prayer
 C:k:+2000:+700:Combat
@@ -1871,7 +1871,7 @@ C:a:O:21:5:1d1
 C:a:g:Melkor Bauglir
 C:a:k:+0:+200:Prayer
 C:a:k:+0:+200:Necromancy
-C:a:k:+0:-600:Mindcraft
+C:a:k:+0:-300:Mindcraft
 C:a:k:+0:+200:Spell-power
 C:a:k:+1000:+1000:Corpse-preservation
 
@@ -1882,7 +1882,7 @@ C:a:O:21:5:1d1
 C:a:O:45:46:1d1
 C:a:g:AmyBSOD
 C:a:k:+0:+300:Prayer
-C:a:k:+0:-600:Mindcraft
+C:a:k:+0:-300:Mindcraft
 
 C:a:N:Paladin
 C:a:D:A fighting priest that serves Tulkas to bring down
@@ -1902,7 +1902,7 @@ C:a:O:21:5:1d1
 C:a:g:All Gods
 C:a:k:+0:-300:Prayer
 C:a:k:+0:-200:Necromancy
-C:a:k:+1000:+300:Mindcraft
+C:a:k:+1000:+600:Mindcraft
 C:a:k:+0:+200:Sneakiness
 C:a:k:+0:+100:Magic-Device
 
