@@ -24,7 +24,7 @@
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
 # W:level:extra:weight:cost
 # T:btval:bsval for artifacts
-# A:allocation
+# A:allocation, apparently "level/1 in X chance to spawn" i.e. make items rare by having a high chance behind the /
 # a:artifact activation
 # P:ac:hitdice1:hitdice2:tohit:todamage:toattacks
 # F:flags
@@ -5002,6 +5002,7 @@ f:INVIS |
 D:This magical bauble will hide you from sight.
 
 ### Just another essence, to confuse the edit file hackers ;) ###
+# Amy edit: you do know that this is shitty, right? Why not have a file that is tidy and neat?
 
 N:587:Time
 G:*:G
@@ -5361,6 +5362,7 @@ P:0:1d1:0:0:0
 F:INSTA_ART
 
 # Here is the random artifact type.
+# Amy edit: "randart" "junkart" because fuck why can't you simply grep for it
 # This is used as a template -- the sval will be chosen later
 # on in the game to be an index to the random_artifacts array,
 # which in turn determines:
@@ -5374,7 +5376,7 @@ N:662:Random Artifact
 G:~:o
 I:102:0:0
 W:1:0:50:0
-A:1/1:10/1:20/1:30/1
+A:1/50:10/50:20/50:30/50
 F:INSTA_ART | ACTIVATE | ACTIVATE_NO_WIELD
 
 N:663:Craftsmanship
@@ -5778,7 +5780,7 @@ D:A piece of rotten wood.
 N:738:& Book~ of Beginner Cantrips
 G:?:w
 I:111:50:0
-W:5:0:0:100
+W:5:0:0:800
 A:5/1
 P:0:1d1:0:0:0
 D:The blood smudged on the cover makes you wonder how many people had it before you...
@@ -5786,7 +5788,7 @@ D:The blood smudged on the cover makes you wonder how many people had it before 
 N:739:& Book~ of Teleportation
 G:?:w
 I:111:51:0
-W:10:0:0:1000
+W:10:0:0:2500
 A:10/1
 P:0:1d1:0:0:0
 D:A standard spellbook with a few spells.
@@ -5796,7 +5798,7 @@ D:A standard spellbook with a few spells.
 N:741:& Book~ of Summoning
 G:?:w
 I:111:52:0
-W:7:0:0:700
+W:7:0:0:5000
 A:7/1
 P:0:1d1:0:0:0
 D:A standard spellbook with a few spells.
