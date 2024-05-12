@@ -4664,6 +4664,12 @@ bool recharge(int power)
 		/* If the spell didn't backfire, recharge the wand or staff. */
 		else
 		{
+
+			/* balancing by Amy: you can't just stick 500 charges into an artifact, you lamer! */
+			if (o_ptr->pval > 0 && artifact_p(o_ptr) ) {
+				fail = TRUE;
+			}
+
 			/* Recharge based on the standard number of charges. */
 			recharge_amount = randint((power / (lev + 2)) + 1);
 
