@@ -4135,6 +4135,39 @@ void store_maint(int town_num, int store_num)
 {
 	int j, tries = 200;
 
+	int maxkeep = STORE_MAX_KEEP; /* 120 */
+	switch (randint(10)) {
+		case 1:
+			maxkeep = 12;
+			break;
+		case 2:
+			maxkeep = 15;
+			break;
+		case 3:
+			maxkeep = 18;
+			break;
+		case 4:
+			maxkeep = 24;
+			break;
+		case 5:
+			maxkeep = 30;
+			break;
+		case 6:
+			maxkeep = 40;
+			break;
+		case 7:
+			maxkeep = 60;
+			break;
+		case 8:
+			maxkeep = 80;
+			break;
+		case 9:
+			maxkeep = 90;
+			break;
+		case 10:
+			break;
+	}
+
 	/*if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM) tries = 500;*/ /* crash because st_ptr not set! --Amy */
 	/* But unneccessary since the black market gets enough items even without this line. :-) */
 
@@ -4182,8 +4215,9 @@ void store_maint(int town_num, int store_num)
 	/* Sell a few items */
 	j = j - randint(STORE_TURNOVER);
 
-	/* Never keep more than "STORE_MAX_KEEP" slots */
-	if (j > STORE_MAX_KEEP) j = STORE_MAX_KEEP;
+	/* Never keep more than "STORE_MAX_KEEP" slots
+	 * Amy edit: use a more randomized variable for this */
+	if (j > maxkeep) j = maxkeep;
 
 	/* Always "keep" at least "STORE_MIN_KEEP" items */
 	if (j < STORE_MIN_KEEP) j = STORE_MIN_KEEP;
