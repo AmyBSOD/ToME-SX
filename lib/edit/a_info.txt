@@ -3220,7 +3220,7 @@ D:and other corruptions of Morgoth.
 # Designed with no-infravision warrior-types in mind.
 # Replaces Marda's coat in Theme
 N:227:of Gil-galad
-I:32:6:10
+I:32:8:10
 W:50:80:50:20000
 P:6:1d3:0:0:10
 F:ACTIVATE | HIDE_TYPE | INFRA | LITE2 | LITE3 | SEARCH
@@ -3353,10 +3353,10 @@ D:a mighty dwarf warrior of old. The sounds emanating from it
 D:once gave a frightened hobbit a glimpse of beauty and helped 
 D:allay his fears, and to this day the harp preserves its magical 
 D:powers to encourage when all seems horribly wrong.
-# The Mithril Helm of Thorin
 
+# The Mithril Helm of Thorin
 N:238:of Thorin
-I:32:6:3
+I:32:8:3
 W:40:5:20:55000
 P:10:2d4:0:0:0
 F:ACTIVATE | DEX | HIDE_TYPE | HOLD_LIFE | REGEN | RES_FEAR | SUST_CON | SUST_DEX | SUST_STR
@@ -3518,7 +3518,7 @@ D:protect the wearer.
 # Adapted from Oangband; its chief benefits are the +to_ac and the activation
 
 N:250:of Earendil
-I:34:5:0
+I:34:8:0
 W:95:80:100:90000
 P:20:1d1:0:0:80
 F:ACTIVATE | RES_BLIND | RES_DARK | RES_ELEC | RES_FIRE | RES_NETHER
@@ -3563,7 +3563,7 @@ F:CHR | CON | FREE_ACT | IM_COLD | LIFE | LITE1 | LUCK |
 F:NO_MAGIC | PRECOGNITION | REGEN | RES_DARK | RES_FIRE |
 F:SEE_INVIS | SHOW_MODS | SLAY_DEMON | SLAY_EVIL | SLAY_TROLL | 
 F:SLAY_UNDEAD | SLOW_DIGEST | SUST_CHR | SUST_CON | 
-F:SUST_DEX | SUST_INT | SUST_STR | SUST_WIS | VORPAL
+F:SUST_DEX | SUST_INT | SUST_STR | SUST_WIS | VORPAL | ULTIMATE
 a:HARDCORE=ERU
 D:A weapon forged by Aule himself and blessed by Eru Iluvatar, 
 D:calling upon the strength of all his children (hence the name, 
@@ -3581,7 +3581,7 @@ F:CHR | CON | FREE_ACT | IM_COLD | LIFE | LITE1 | LUCK |
 F:NO_MAGIC | PRECOGNITION | REGEN | RES_DARK | RES_FIRE |
 F:SEE_INVIS | SHOW_MODS | SLAY_DEMON | SLAY_EVIL | SLAY_TROLL |
 F:SLAY_UNDEAD | SLOW_DIGEST | SUST_CHR | SUST_CON |
-F:SUST_DEX | SUST_INT | SUST_STR | SUST_WIS | VORPAL
+F:SUST_DEX | SUST_INT | SUST_STR | SUST_WIS | VORPAL | ULTIMATE
 a:HARDCORE=ERU
 D:The awesome weapon of the Vala Ulmo, Lord of Waters.  Mightiest of all the 
 D:powers of good save Manwe himself, Ulmo laughs in scorn at the dread powers 
@@ -3598,7 +3598,7 @@ F:CHR | CON | FREE_ACT | IM_COLD | LIFE | LITE1 | LUCK |
 F:NO_MAGIC | PRECOGNITION | REGEN | RES_DARK | RES_FIRE |
 F:SEE_INVIS | SHOW_MODS | SLAY_DEMON | SLAY_EVIL | SLAY_TROLL |
 F:SLAY_UNDEAD | SLOW_DIGEST | SUST_CHR | SUST_CON |
-F:SUST_DEX | SUST_INT | SUST_STR | SUST_WIS | VORPAL
+F:SUST_DEX | SUST_INT | SUST_STR | SUST_WIS | VORPAL | ULTIMATE
 a:HARDCORE=ERU
 D:Aule's mighty weapon, granted to you to aid the defeat of Melkor. 
 
@@ -3613,7 +3613,7 @@ F:CON | FREE_ACT | IM_COLD | LIFE | LITE1 | LUCK | NO_MAGIC |
 F:PRECOGNITION | REGEN | RES_DARK | RES_FIRE | SEE_INVIS | SHOW_MODS |
 F:SLAY_DEMON | SLAY_EVIL | SLAY_TROLL | SLAY_UNDEAD | SLOW_DIGEST |
 F:SUST_CHR | SUST_CON | SUST_DEX | SUST_INT | SUST_STR |
-F:SUST_WIS | VORPAL
+F:SUST_WIS | VORPAL | ULTIMATE
 a:HARDCORE=ERU
 D:A shining rapier used by Vaire to cut the strings of time when 
 D:dire need arises. Its power with that of the Flame Imperishable 
@@ -3630,7 +3630,7 @@ F:IM_ELEC | INFRA | INVIS | LUCK | NO_MAGIC | PRECOGNITION |
 F:REFLECT | RES_BLIND | RES_CHAOS | RES_CONF | RES_DISEN |
 F:SEE_INVIS | SLOW_DIGEST | SPEED | STEALTH |
 F:SUST_CHR | SUST_CON | SUST_DEX | SUST_INT | SUST_STR |
-F:SUST_WIS | XTRA_MIGHT | XTRA_SHOTS
+F:SUST_WIS | XTRA_MIGHT | XTRA_SHOTS | ULTIMATE
 D:A gift from Orome to Irmo, a mighty bow that sings the songs of the 
 D:garden of Lorien. It will guide your hand and steady your grip in 
 D:your encounter with Melkor. 
@@ -3646,7 +3646,7 @@ F:IM_ELEC | INFRA | INVIS | LUCK | NO_MAGIC | PRECOGNITION |
 F:REFLECT | RES_BLIND | RES_CHAOS | RES_CONF | RES_DISEN |
 F:SEE_INVIS | SLOW_DIGEST | SPEED | STEALTH |
 F:SUST_CHR | SUST_CON | SUST_DEX | SUST_INT | SUST_STR | SUST_WIS |
-F:XTRA_MIGHT | XTRA_SHOTS
+F:XTRA_MIGHT | XTRA_SHOTS | ULTIMATE
 D:This sling was made for the most lithe of the Valier to provide 
 D:her with amusement as she used it to shoot magical pebbles of 
 D:cheer and charm while dancing in the lush green fields of Valinor. 
@@ -3663,7 +3663,7 @@ F:IM_ELEC | INFRA | INVIS | LUCK | NO_MAGIC | PRECOGNITION |
 F:REFLECT | RES_BLIND | RES_CHAOS | RES_CONF | RES_DISEN |
 F:SEE_INVIS | SLOW_DIGEST | SPEED | STEALTH |
 F:SUST_CHR | SUST_CON | SUST_DEX | SUST_INT | SUST_STR | SUST_WIS |
-F:XTRA_MIGHT | XTRA_SHOTS
+F:XTRA_MIGHT | XTRA_SHOTS | ULTIMATE
 D:Made from living starlight, this boomerang will dispel the darkest 
 D:of darkness. It is a gift from Varda Elentari, to aid you in your 
 D:task. 
@@ -3678,7 +3678,7 @@ F:ACTIVATE | ESP_DRAGON | FEATHER | FLY | HOLD_LIFE | IGNORE_ACID |
 F:IGNORE_COLD | IGNORE_ELEC | IGNORE_FIRE | REGEN | RES_ACID |
 F:RES_BLIND | RES_CHAOS | RES_COLD | RES_CONF | RES_DARK | RES_DISEN |
 F:RES_ELEC | RES_FIRE | RES_LITE | RES_NETHER | RES_NEXUS | RES_POIS |
-F:RES_SHARDS | RES_SOUND
+F:RES_SHARDS | RES_SOUND | ULTIMATE
 a:HARDCORE=BLADETURNER
 D:This amulet contains the power of Mandos, the Doomsman of the 
 D:Valar. It will grant you protection against the foul dark magic 
