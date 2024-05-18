@@ -247,7 +247,7 @@ D:Not an incredible taste experience, but that'd be asking a bit much.
 N:25:& Lembas~
 G:,:B
 I:80:37:0
-W:5:0:3:10
+W:5:0:3:100
 A:5/1:10/1:20/1
 D:A sort of cake, tasty and sustaining. It even helps to overcome weariness. Its fabrication
 D:is a secret of the elves. If you 'E'at it, you will be full.
@@ -2055,7 +2055,7 @@ D:around you, protecting you from blows of evil creatures, unless they are more 
 N:210:Satisfy Hunger
 G:?:d
 I:70:32:0
-W:5:0:0:10
+W:5:0:0:1000
 A:5/1:20/1:50/1:75/1
 D:Reading this scroll will transport a good portion of nourishing gruel directly into your
 D:stomach. Some people say that this is a ploy of a food producer whose food nobody wants to eat.
