@@ -130,7 +130,7 @@
 
 #define MAX_BOUNTIES        24
 
-#define MAX_SPELLS          100
+#define MAX_SPELLS          200
 #define MAX_RUNES           100
 
 /*

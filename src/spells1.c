@@ -9302,10 +9302,10 @@ void generate_spell(int plev)
 
 	/* Stay within reasonable bounds. */
 	if (dice < 1) dice = 1;
-	if (dice > 10) dice = 10;
+	if (dice > 20) dice = 20;
 
 	if (sides < 5) sides = 5;
-	if (sides > 100) sides = 100;
+	if (sides > 200) sides = 200;
 
 	if (mana < 1) mana = 1;
 
