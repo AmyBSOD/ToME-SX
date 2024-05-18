@@ -6750,7 +6750,7 @@ void object_gain_level(object_type *o_ptr)
 	/* Extract some flags */
 	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
 
-	/* First it can gain some tohit and todam */
+	/* First it can gain some tohit and todam; Amy edit: but keep it sane, please... */
 	if ((o_ptr->tval == TV_AXE) || (o_ptr->tval == TV_SWORD) || (o_ptr->tval == TV_POLEARM) ||
 	                (o_ptr->tval == TV_HAFTED) || (o_ptr->tval == TV_MSTAFF))
 	{
@@ -6759,14 +6759,14 @@ void object_gain_level(object_type *o_ptr)
 		/* gain +2,+1 */
 		if (k < 33)
 		{
-			o_ptr->to_h += randint(2);
-			o_ptr->to_d += 1;
+			if (o_ptr->to_h < 15) o_ptr->to_h += randint(2);
+			if (o_ptr->to_d < 15) o_ptr->to_d += 1;
 		}
 		/* +1 and 1 point */
 		else if (k < 66)
 		{
-			o_ptr->to_h += 1;
-			o_ptr->pval2++;
+			if (o_ptr->to_h < 15) o_ptr->to_h += 1;
+			if (o_ptr->pval2 < 5) o_ptr->pval2++;
 
 			if (magik(NEW_GROUP_CHANCE)) gain_flag_group(o_ptr, FALSE);
 		}
