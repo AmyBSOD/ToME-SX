@@ -64818,4 +64818,22 @@ D:She looks so incredibly sweet, too... hurting her would be an evil thing to do
 D:Instead, you should allow her to hurt you as much as she wants to. No matter 
 D:if you're male or not, that's what a gentleman would do.
 
+N:3755:Uvatha the Horseman
+G:W:D
+I:120:24d100:90:60:10
+W:40:13:0:10000
+E:0:0:0:0:0:0
+O:30:30:30:10
+B:HIT:HURT:6d6
+B:HIT:HURT:6d6
+B:HIT:EXP_80:4d6
+B:HIT:EXP_80:4d6
+F:UNIQUE | MALE |
+F:FORCE_MAXHP |
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | NAZGUL |
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | MOVE_BODY | DROP_CHOSEN |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | 
+F:BASEANGBAND | NO_CUT
+D:A tall black Ringwraith, he is a master of horsemanship. He longs 
+D:to taste your blood. 
 
