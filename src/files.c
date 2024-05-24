@@ -1991,6 +1991,7 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
 		{
 			if (p_ptr->grace > 1000)  (*f2) |= TR2_RES_POIS;
 			if (p_ptr->grace > 15000)  (*f5) |= TR5_MAGIC_BREATH;
+			if (p_ptr->grace > 20000)  (*f5) |= TR5_RES_WATER;
 		}
 	}
 

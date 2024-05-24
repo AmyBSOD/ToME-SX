@@ -7568,7 +7568,12 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 	case GF_WATER:
 		{
 			if (fuzzy) msg_print("You are hit by something wet!");
-			if (!p_ptr->resist_sound || (rand_int(3) == 0) )
+			if (p_ptr->resist_water)
+			{
+				dam *= 6;
+				dam /= (randint(6) + 6);
+			}
+			if ((!p_ptr->resist_sound || (rand_int(3) == 0)) && (!p_ptr->resist_water || (rand_int(7) == 1) ) )
 			{
 				set_stun(p_ptr->stun + randint(40));
 			}
@@ -7577,7 +7582,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 				set_confused(p_ptr->confused + randint(5) + 5);
 			}
 
-			if (randint(5) == 1)
+			if (randint(5) == 1 && (!p_ptr->resist_water || (rand_int(13) == 1) ) )
 			{
 				inven_damage(set_cold_destroy, 3);
 			}
@@ -7847,7 +7852,15 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 	case GF_INERTIA:
 		{
 			if (fuzzy) msg_print("You are hit by something slow!");
-			(void)set_slow(p_ptr->slow + rand_int(4) + 4);
+			if (p_ptr->resist_inertia)
+			{
+				dam *= 6;
+				dam /= (randint(6) + 6);
+			}
+			if ((!p_ptr->resist_inertia) || (randint(10) == 1))
+			{
+				(void)set_slow(p_ptr->slow + rand_int(4) + 4);
+			}
 			take_hit(dam, killer);
 			break;
 		}

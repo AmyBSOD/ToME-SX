@@ -12,8 +12,10 @@ on Arda. His most faithful followers are those of the class *****c_pr_ulmo.txt*0
    you resistance to poison.
 3. If you are very pious and praying, Ulmo will grant you the ability 
    to breathe without air.
-4. Ulmo likes it if you kill orcs.
-5. Ulmo loves it if you kill monsters that are associated with fire.
+4. If you are extremely pious and praying, Ulmo will grant you resistance
+   to water-based attacks.
+5. Ulmo likes it if you kill orcs.
+6. Ulmo loves it if you kill monsters that are associated with fire.
    
 #####GThe disadvantages of worshipping Ulmo
 1. He doesn't like it if you kill aquatic creatures.

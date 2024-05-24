@@ -1366,6 +1366,16 @@ struct player_type
 	 * @note Resist shards
 	 */
 	bool resist_shard;
+	/** @structvar resist_water
+	 * @brief Boolean
+	 * @note Resist water
+	 */
+	bool resist_water;
+	/** @structvar resist_inertia
+	 * @brief Boolean
+	 * @note Resist inertia
+	 */
+	bool resist_inertia;
 	/** @structvar resist_nexus
 	 * @brief Boolean
 	 * @note Resist nexus

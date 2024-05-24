@@ -1032,6 +1032,8 @@ s32b flag_cost(object_type * o_ptr, int plusses)
 	if (f2 & TR2_RES_NEXUS) total += 2000;
 	if (f2 & TR2_RES_CHAOS) total += 2000;
 	if (f2 & TR2_RES_DISEN) total += 10000;
+	if (f5 & TR5_RES_WATER) total += 15000;
+	if (f5 & TR5_RES_INERTIA) total += 15000;
 	if (f3 & TR3_SH_FIRE) total += 5000;
 	if (f3 & TR3_SH_ELEC) total += 5000;
 	if (f3 & TR3_DECAY) total += 0;
@@ -3629,8 +3631,11 @@ void add_random_ego_flag(object_type *o_ptr, int fego, bool *limit_blows)
 
 	if (fego & ETR4_OLD_RESIST)
 	{
+		int xtrapowers = 11;
+		if (randint(10) == 1) xtrapowers = 13;
+
 		/* Make a random resist, equal probabilities */
-		switch (randint(11))
+		switch (randint(xtrapowers))
 		{
 		case 1:
 			o_ptr->art_flags2 |= (TR2_RES_BLIND);
@@ -3664,6 +3669,12 @@ void add_random_ego_flag(object_type *o_ptr, int fego, bool *limit_blows)
 			break;
 		case 11:
 			o_ptr->art_flags2 |= (TR2_RES_LITE);
+			break;
+		case 12:
+			o_ptr->art_flags5 |= (TR5_RES_WATER);
+			break;
+		case 13:
+			o_ptr->art_flags5 |= (TR5_RES_INERTIA);
 			break;
 		}
 	}

@@ -1460,6 +1460,14 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You are resistant to nether forces.";
 	}
+	if (p_ptr->resist_water)
+	{
+		info[i++] = "You are resistant to water.";
+	}
+	if (p_ptr->resist_inertia)
+	{
+		info[i++] = "You are resistant to inertia.";
+	}
 	if (p_ptr->resist_fear)
 	{
 		info[i++] = "You are completely fearless.";
@@ -3483,6 +3491,9 @@ void random_plus(object_type * o_ptr, bool is_scroll)
 
 void random_resistance (object_type * o_ptr, bool is_scroll, int specific)
 {
+	int xtrapowers = 41;
+	if (randint(10) == 1) xtrapowers = 43;
+
 	/* To avoid a number of possible bugs */
 	if (!specific)
 	{
@@ -3609,7 +3620,7 @@ void random_resistance (object_type * o_ptr, bool is_scroll, int specific)
 		}
 	}
 
-	switch (specific ? specific : randint(41))
+	switch (specific ? specific : randint(xtrapowers))
 	{
 	case 1 :
 		if (randint(WEIRD_LUCK) != 1)
@@ -3781,6 +3792,12 @@ void random_resistance (object_type * o_ptr, bool is_scroll, int specific)
 			o_ptr->art_flags2 |= TR2_REFLECT;
 		else
 			random_resistance(o_ptr, is_scroll, specific);
+		break;
+	case 42:
+		o_ptr->art_flags5 |= TR5_RES_WATER;
+		break;
+	case 43:
+		o_ptr->art_flags5 |= TR5_RES_INERTIA;
 		break;
 	}
 }

@@ -80,11 +80,12 @@ static bool grab_one_power(int *ra_idx, object_type *o_ptr, bool good, s16b *max
 		i = ok_ra[rand_int(ok_num)];
 		ra_ptr = &ra_info[i];
 
-		/* XXX XXX Enforce minimum player level (loosely) */
-		if (ra_ptr->level > p_ptr->lev)
+		/* XXX XXX Enforce minimum player level (loosely)
+		 * Amy edit: it's dumb if that depends on your XL, it should depend on dungeon level like ego items!! */
+		if (ra_ptr->level > dun_level)
 		{
 			/* Acquire the "out-of-depth factor" */
-			int d = (ra_ptr->level - p_ptr->lev);
+			int d = (ra_ptr->level - dun_level);
 
 			/* Roll for out-of-depth creation */
 			if (rand_int(d) != 0)

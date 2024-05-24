@@ -904,8 +904,11 @@ void object_flags(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4, u3
 
 		case EGO_XTRA_POWER:
 			{
+				int xtrapowers = 11;
+				if (randint(10) == 1) xtrapowers = 13;
+
 				/* Choose a power */
-				switch (o_ptr->xtra2 % 11)
+				switch (o_ptr->xtra2 % xtrapowers)
 				{
 				case 0:
 					(*f2) |= (TR2_RES_BLIND);
@@ -939,6 +942,12 @@ void object_flags(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4, u3
 					break;
 				case 10:
 					(*f2) |= (TR2_RES_LITE);
+					break;
+				case 11:
+					(*f5) |= (TR5_RES_WATER);
+					break;
+				case 12:
+					(*f5) |= (TR5_RES_INERTIA);
 					break;
 				}
 
@@ -1150,8 +1159,11 @@ void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *
 
 		case EGO_XTRA_POWER:
 			{
+				int xtrapowers = 11;
+				if (randint(10) == 1) xtrapowers = 13;
+
 				/* Choose a power */
-				switch (o_ptr->xtra2 % 11)
+				switch (o_ptr->xtra2 % xtrapowers)
 				{
 				case 0:
 					(*f2) |= (TR2_RES_BLIND);
@@ -1185,6 +1197,12 @@ void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *
 					break;
 				case 10:
 					(*f2) |= (TR2_RES_LITE);
+					break;
+				case 11:
+					(*f5) |= (TR5_RES_WATER);
+					break;
+				case 12:
+					(*f5) |= (TR5_RES_INERTIA);
 					break;
 				}
 
@@ -3615,6 +3633,14 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		if (f2 & (TR2_RES_DISEN))
 		{
 			vp[vn++] = "disenchantment";
+		}
+		if (f5 & (TR5_RES_WATER))
+		{
+			vp[vn++] = "water";
+		}
+		if (f5 & (TR5_RES_INERTIA))
+		{
+			vp[vn++] = "inertia";
 		}
 		/* Describe */
 		if (vn)

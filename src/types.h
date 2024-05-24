@@ -1697,6 +1697,9 @@ struct player_type
 	bool resist_fear;	/* Resist fear */
 	bool resist_continuum;  /* Resist space-time continuum disruption */
 
+	bool resist_water;	/* Resist water */
+	bool resist_inertia;	/* Resist inertia */
+
 	bool sensible_fire;     /* Fire does more damage on the player */
 	bool sensible_lite;     /* Lite does more damage on the player and blinds her/him */
 

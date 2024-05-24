@@ -175,6 +175,8 @@ static obj_theme lua_obj_theme @ theme_forge;
 #define TR5_MAGIC_BREATH        0x00004000L     /* Can breath anywere */
 #define TR5_WATER_BREATH        0x00008000L     /* Can breath underwater */
 #define TR5_WIELD_CAST          0x00010000L     /* Need to be wielded to cast spelsl fomr it(if it can be wiekded) */
+#define TR5_RES_WATER           0x00020000L
+#define TR5_RES_INERTIA         0x00040000L
 
 #define ESP_ORC                 0x00000001L
 #define ESP_TROLL               0x00000002L

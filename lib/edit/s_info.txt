@@ -356,7 +356,7 @@ F:RANDOM_GAIN
 
 N:12:Druidistic
 D:Ability to learn and use prayers from the Druidistic realm
-D:Boosts boomerangs and inhibits enemy breathers
+D:Boosts boomerangs and staves, inhibits enemy breathers
 A:1:Cast a druidistic spell
 I:1000
 F:RANDOM_GAIN

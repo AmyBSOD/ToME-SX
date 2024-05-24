@@ -350,6 +350,8 @@ void status_res(void)
 	row_bival("Free Act", 2, TR2_FREE_ACT, yo++, flag_arr);
 	row_bival("Reflect", 2, TR2_REFLECT, yo++, flag_arr);
 	row_bival("Hold Life", 2, TR2_HOLD_LIFE, yo++, flag_arr);
+	row_bival("Water", 2, TR5_RES_WATER, yo++, flag_arr);
+	row_bival("Inertia", 2, TR5_RES_INERTIA, yo++, flag_arr);
 
 	c_put_str(TERM_WHITE, "Press ESC to continue", 23, 0);
 	Term_fresh();
