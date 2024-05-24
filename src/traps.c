@@ -406,7 +406,8 @@ static bool player_handle_missile_trap(s16b num, s16b tval, s16b sval, s16b dd, 
 		}
 	}
 
-	drop_near(o_ptr, -1, p_ptr->py, p_ptr->px);
+	/* Amy edit: remove potential for lame farming */
+	/* drop_near(o_ptr, -1, p_ptr->py, p_ptr->px); */
 
 	return TRUE;
 }
@@ -565,6 +566,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			else
 			{
 				msg_print("You prick yourself on a needle.");
+				ident = TRUE;
 			}
 			break;
 		}
@@ -625,6 +627,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			else
 			{
 				msg_print("You prick yourself on a needle.");
+				ident = TRUE;
 			}
 			break;
 		}
@@ -721,12 +724,13 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 			if (!p_ptr->resist_blind || (rand_int(100) < 5) )
 			{
-				ident |= set_blind(p_ptr->blind + rand_int(100) + 100);
+				set_blind(p_ptr->blind + rand_int(100) + 100);
 			}
 			if (!p_ptr->resist_conf || (rand_int(100) < 5) )
 			{
-				ident |= set_confused(p_ptr->confused + rand_int(20) + 15);
+				set_confused(p_ptr->confused + rand_int(20) + 15);
 			}
+			ident = TRUE;
 			break;
 		}
 
