@@ -353,6 +353,7 @@ void do_cmd_mindcraft(void)
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -775,6 +776,7 @@ void do_cmd_mimic_lore()
 	if (p_ptr->blind || no_lite())
 	{
 		msg_print("You cannot see!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -782,6 +784,7 @@ void do_cmd_mimic_lore()
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -895,6 +898,7 @@ void do_cmd_mimic(void)
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -4653,6 +4657,7 @@ random_spell* select_spell(bool quick)
 	if (p_ptr->confused)
 	{
 		msg_print("You can't use your powers while confused!");
+		msg_print(NULL);
 		return NULL;
 	}
 
@@ -4747,6 +4752,7 @@ void do_cmd_powermage(void)
 	if (p_ptr->csp < s_ptr->mana)
 	{
 		msg_print("You do not have enough mana.");
+		msg_print(NULL);
 		return;
 	}
 
@@ -5486,6 +5492,7 @@ void do_cmd_necromancer(void)
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -7048,6 +7055,7 @@ void do_cmd_summoner_extract()
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -7055,6 +7063,7 @@ void do_cmd_summoner_extract()
 	if (p_ptr->blind || no_lite())
 	{
 		msg_print("You cannot see!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -7340,6 +7349,7 @@ void do_cmd_summoner(void)
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -7347,6 +7357,7 @@ void do_cmd_summoner(void)
 	if (p_ptr->blind || no_lite())
 	{
 		msg_print("You cannot see!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -7502,6 +7513,7 @@ void do_cmd_symbiotic(void)
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
