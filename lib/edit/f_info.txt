@@ -959,3 +959,25 @@ F:DONT_NOTICE_RUNNING | TUNNELABLE
 D:1:You tunnel into the battlement.
 D:2:a hard stone battlement blocking your way
 
+# stuff from Theme, stolen by Amy, credits go to the Theme devteam
+#Water lily
+N:222:water lily
+G:;:B
+F:FLOOR | DONT_NOTICE_RUNNING | CAN_RUN
+F:SUPPORT_GROWTH
+
+#Swamp
+N:226:swamp pool
+G:~:g
+E:1d1:1:POISON
+F:FLOOR | CAN_LEVITATE | CAN_FLY | REMEMBER | SUPPORT_LIGHT
+
+#Swift waterfall
+N:238:swift waterfall
+G:|:B
+E:2d10:1:WATER
+S:w:w:w:b:w:w:b
+F:ATTR_MULTI
+F:FLOOR | CAN_LEVITATE | CAN_FLY | REMEMBER | SUPPORT_LIGHT | 
+F:DONT_NOTICE_RUNNING | SUPPORT_GROWTH | 
+
