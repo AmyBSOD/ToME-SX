@@ -97,6 +97,37 @@ DEVICE_WISH = add_spell
 	}
 }
 
+DEVICE_HOME_SUMMONING = add_spell
+{
+	["name"] = 	"Home Summoning",
+	["school"] = 	{SCHOOL_DEVICE},
+	["level"] = 	50,
+	["mana"] = 	100,
+	["mana_max"] = 	100,
+	["fail"] = 	70,
+	["random"] =    -1,
+	["stick"] =
+	{
+			["charge"] =    { 3, 3 },
+			[TV_STAFF] =
+			{
+				["rarity"] = 		15,
+				["base_level"] =	{ 1, 1 },
+				["max_level"] =		{ 1, 1 },
+			},
+	},
+	["spell"] = 	function()
+			do_cmd_home_trump()
+			return TRUE
+	end,
+	["info"] = 	function()
+			return ""
+	end,
+	["desc"] =	{
+			"Allows you to recall to your home, letting you dump or retrieve items.",
+	}
+}
+
 DEVICE_SUMMON = add_spell
 {
 	["name"] = 	"Summon",

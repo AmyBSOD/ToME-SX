@@ -1840,6 +1840,7 @@
 #define SV_WAND_HEAL_MONSTER           24
 #define SV_WAND_HASTE_MONSTER          25
 #define SV_WAND_THRAIN                 26
+#define SV_WAND_HOME_SUMMONING         27
 
 /* The "sval" codes for TV_ROD(Rod Tips) */
 #define SV_ROD_NOTHING                   0

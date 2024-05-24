@@ -2803,6 +2803,7 @@ bool mon_hit_trap_aux_wand(int m_idx, object_type *o_ptr)
 		break;
 
 	case SV_WAND_TELEPORT_AWAY:
+	case SV_WAND_HOME_SUMMONING:
 		typ = GF_AWAY_ALL;
 		dam = MAX_SIGHT * 5;
 		break;

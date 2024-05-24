@@ -226,6 +226,7 @@ N:22:& Hard Biscuit~
 G:,:U
 I:80:32:500
 W:0:0:2:1
+A:10/5
 D:It doesn't look great, and 'E'ating it will only fill your stomach a bit,
 D:for a short time.
 
@@ -233,6 +234,7 @@ N:23:& Strip~ of Venison
 G:,:u
 I:80:33:1500
 W:0:0:2:2
+A:25/20
 D:It looks great, and 'E'ating it will fill your stomach well.
 
 N:24:& Slime Mold~
@@ -256,12 +258,14 @@ N:26:& Pint~ of Fine Ale
 G:,:y
 I:80:38:500
 W:0:0:5:1
+A:10/4
 D:A bottle of a dark beer-like beverage. You can drink it by pressing 'E'.
 
 N:27:& Pint~ of Fine Wine
 G:,:r
 I:80:39:1000
 W:0:0:10:2
+A:10/10:25/8
 D:A bottle of fine wine. You can drink it by pressing 'E'.
 
 ##### Extra digger #####
@@ -6748,4 +6752,11 @@ F:SPEED
 f:SPEED
 P:4:1d1:0:0:0
 D:A pair of boots with block heels, suitable for running.
+
+N:847:Home Summoning
+G:-:d
+I:65:27:-1:SPELL=Home Summoning
+W:1:0:2:0
+A:1/4
+P:0:1d1:0:0:0
 
