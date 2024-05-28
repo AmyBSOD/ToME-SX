@@ -3015,6 +3015,13 @@ int breakage_chance(object_type *o_ptr)
 		}
 	case TV_BOOMERANG:
 		{
+			/* Amy edit: really stupid if it's a fixed 1% risk with no way to reduce it! */
+			if (get_skill(SKILL_BOOMERANG) > 0) {
+				if (randint(25 + get_skill(SKILL_BOOMERANG)) > 25) {
+					return 0; /* 0.2% risk with a skill level of 100 */
+				}
+			}
+
 			return 1;
 		}
 	}
