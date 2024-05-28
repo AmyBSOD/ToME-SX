@@ -1034,6 +1034,7 @@ s32b flag_cost(object_type * o_ptr, int plusses)
 	if (f2 & TR2_RES_DISEN) total += 10000;
 	if (f5 & TR5_RES_WATER) total += 15000;
 	if (f5 & TR5_RES_INERTIA) total += 15000;
+	if (f5 & TR5_IM_POISON) total += 25000;
 	if (f3 & TR3_SH_FIRE) total += 5000;
 	if (f3 & TR3_SH_ELEC) total += 5000;
 	if (f3 & TR3_DECAY) total += 0;

@@ -1304,6 +1304,11 @@ struct player_type
 	 * @note Immunity to nether
 	 */
 	bool immune_neth;
+	/** @structvar immune_pois
+	 * @brief Boolean
+	 * @note Immunity to poison
+	 */
+	bool immune_pois;
 
 	/** @structvar resist_acid
 	 * @brief Boolean

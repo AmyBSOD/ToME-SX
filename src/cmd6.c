@@ -185,7 +185,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 
 			case RBE_POISON:
 				{
-					if (!(p_ptr->resist_pois || p_ptr->oppose_pois))
+					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
 					{
 						set_poisoned(p_ptr->poisoned + dam + idam + 10);
 						harmful = TRUE;
@@ -583,13 +583,15 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 		if (p_ptr->resist_pois) brdam = (brdam + 2) / 3;
 		if (p_ptr->oppose_pois) brdam = (brdam + 2) / 3;
 
-		if (!(p_ptr->resist_pois || p_ptr->oppose_pois))
+		if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
 		{
 			(void)set_poisoned(p_ptr->poisoned + rand_int(brdam) + 10);
 		}
 
 		/* Take damage */
-		take_hit(brdam, "toxic gases");
+		if (!(p_ptr->immune_pois)) {
+			take_hit(brdam, "toxic gases");
+		}
 		o_ptr->weight = o_ptr->weight - brpow;
 		o_ptr->pval = o_ptr->weight;
 		harmful = TRUE;
@@ -760,7 +762,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 	 */
 	if (strchr("ijkmS,", r_ptr->d_char) && (r_ptr->flags3 & RF3_IM_POIS))
 	{
-		if (!(p_ptr->resist_pois || p_ptr->oppose_pois))
+		if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
 		{
 			set_poisoned(p_ptr->poisoned + rand_int(15) + 10);
 		}
@@ -994,7 +996,7 @@ void do_cmd_eat_food(void)
 
 		case SV_FOOD_POISON:
 			{
-				if (!(p_ptr->resist_pois || p_ptr->oppose_pois))
+				if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
 				{
 					if (set_poisoned(p_ptr->poisoned + rand_int(10) + 10))
 					{
@@ -1397,7 +1399,7 @@ void do_cmd_eat_food(void)
 
 				/* Those darn microorganisms */
 				if (!o_ptr->timeout && (o_ptr->weight > o_ptr->pval) &&
-				                !(p_ptr->resist_pois || p_ptr->oppose_pois))
+				                !(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
 				{
 					set_poisoned(p_ptr->poisoned + rand_int(o_ptr->weight - o_ptr->pval) +
 					             (o_ptr->weight - o_ptr->pval));
@@ -1414,7 +1416,7 @@ void do_cmd_eat_food(void)
 
 		/* Those darn microorganisms */
 		if (!o_ptr->timeout && (o_ptr->weight - o_ptr->pval > 10) &&
-		                !(p_ptr->resist_pois || p_ptr->oppose_pois))
+		                !(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
 		{
 			set_poisoned(p_ptr->poisoned + rand_int(o_ptr->weight - o_ptr->pval) +
 			             (o_ptr->weight - o_ptr->pval));
@@ -1841,7 +1843,7 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 
 		case SV_POTION_POISON:
 			{
-				if (!(p_ptr->resist_pois || p_ptr->oppose_pois))
+				if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
 				{
 					if (set_poisoned(p_ptr->poisoned + rand_int(15) + 10))
 					{

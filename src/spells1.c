@@ -7412,10 +7412,13 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 	case GF_POIS:
 		{
 			if (fuzzy) msg_print("You are hit by poison!");
-			if (p_ptr->resist_pois) dam = (dam + 2) / 3;
-			if (p_ptr->oppose_pois) dam = (dam + 2) / 3;
+			if (p_ptr->immune_pois) dam /= 10;
+			else {
+				if (p_ptr->resist_pois) dam = (dam + 2) / 3;
+				if (p_ptr->oppose_pois) dam = (dam + 2) / 3;
+			}
 
-			if ((!(p_ptr->oppose_pois || p_ptr->resist_pois)) &&
+			if ((!(p_ptr->oppose_pois || p_ptr->immune_pois || p_ptr->resist_pois)) &&
 			                randint(HURT_CHANCE) == 1)
 			{
 				do_dec_stat(A_CON, STAT_DEC_NORMAL);
@@ -7423,7 +7426,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 
 			take_hit(dam, killer);
 
-			if (!(p_ptr->resist_pois || p_ptr->oppose_pois))
+			if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
 			{
 				set_poisoned(p_ptr->poisoned + rand_int(dam) + 10);
 			}
@@ -7434,10 +7437,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 	case GF_NUKE:
 		{
 			if (fuzzy) msg_print("You are hit by radiation!");
+			if (p_ptr->immune_pois) dam /= 2;
 			if (p_ptr->resist_pois) dam = (2 * dam + 2) / 5;
 			if (p_ptr->oppose_pois) dam = (2 * dam + 2) / 5;
 			take_hit(dam, killer);
-			if (!(p_ptr->resist_pois || p_ptr->oppose_pois))
+			if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
 			{
 				set_poisoned(p_ptr->poisoned + rand_int(dam) + 10);
 

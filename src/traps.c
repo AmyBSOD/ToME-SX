@@ -399,7 +399,7 @@ static bool player_handle_missile_trap(s16b num, s16b tval, s16b sval, s16b dd, 
 
 		if (pdam > 0)
 		{
-			if (!(p_ptr->resist_pois || p_ptr->oppose_pois))
+			if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
 			{
 				(void)set_poisoned(p_ptr->poisoned + pdam);
 			}
@@ -557,7 +557,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/* Poison Needle Trap */
 	case TRAP_OF_POISON_NEEDLE:
 		{
-			if (!(p_ptr->resist_pois || p_ptr->oppose_pois))
+			if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
 			{
 				msg_print("You prick yourself on a poisoned needle.");
 				(void)set_poisoned(p_ptr->poisoned + rand_int(15) + 10);

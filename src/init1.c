@@ -692,7 +692,7 @@ cptr k_info_flags5[] =
 	"WIELD_CAST",
 	"RES_WATER",
 	"RES_INERTIA",
-	"XXX8X19",
+	"IM_POISON",
 	"XXX8X20",
 	"XXX8X21",
 	"XXX8X22",

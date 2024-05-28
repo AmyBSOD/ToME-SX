@@ -3498,6 +3498,11 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 				vc[vn] = TERM_L_GREEN;
 				vp[vn++] = "nether";
 			}
+			if (f5 & (TR5_IM_POISON))
+			{
+				vc[vn] = TERM_L_GREEN;
+				vp[vn++] = "poison";
+			}
 			/* Describe */
 			if (vn)
 			{
@@ -3590,7 +3595,7 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		{
 			vp[vn++] = "cold";
 		}
-		if (f2 & (TR2_RES_POIS))
+		if ((f2 & (TR2_RES_POIS)) && !(f5 & (TR5_IM_POISON)))
 		{
 			vp[vn++] = "poison";
 		}

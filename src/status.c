@@ -335,7 +335,7 @@ void status_res(void)
 	row_trival("Cold", 2, TR2_IM_COLD, 2, TR2_RES_COLD, yo++, flag_arr);
 	row_trival("Acid", 2, TR2_IM_ACID, 2, TR2_RES_ACID, yo++, flag_arr);
 	row_trival("Lightning", 2, TR2_IM_ELEC, 2, TR2_RES_ELEC, yo++, flag_arr);
-	row_bival("Poison", 2, TR2_RES_POIS, yo++, flag_arr);
+	row_trival("Poison", 2, TR5_IM_POISON, 2, TR2_RES_POIS, yo++, flag_arr);
 	row_bival("Lite", 2, TR2_RES_LITE, yo++, flag_arr);
 	row_bival("Dark", 2, TR2_RES_DARK, yo++, flag_arr);
 	row_bival("Sound", 2, TR2_RES_SOUND, yo++, flag_arr);

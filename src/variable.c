@@ -1459,7 +1459,7 @@ bool joke_monsters;
 /*
  * How will mana staf & weapons of life act
  */
-bool munchkin_multipliers = TRUE;
+bool munchkin_multipliers = FALSE; /* remark by Amy: if "yes", items with +% to life and such are uber pwnz0r */
 
 /*
  * Center view

@@ -4179,6 +4179,7 @@ void update_smart_learn(int m_idx, int what)
 	case DRS_POIS:
 		if (p_ptr->resist_pois) m_ptr->smart |= (SM_RES_POIS);
 		if (p_ptr->oppose_pois) m_ptr->smart |= (SM_OPP_POIS);
+		if (p_ptr->immune_pois) m_ptr->smart |= (SM_OPP_POIS);
 		break;
 
 

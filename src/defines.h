@@ -2956,6 +2956,7 @@
 #define TR5_WIELD_CAST          0x00010000L     /* Need to be wielded to cast spelsl fomr it(if it can be wiekded) */
 #define TR5_RES_WATER           0x00020000L
 #define TR5_RES_INERTIA         0x00040000L
+#define TR5_IM_POISON           0x00080000L     /* Immunity to poison */
 
 /* ESP defines */
 #define ESP_ORC                 0x00000001L

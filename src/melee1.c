@@ -601,7 +601,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Take "poison" effect */
-					if (!(p_ptr->resist_pois || p_ptr->oppose_pois))
+					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
 					{
 						if (set_poisoned(p_ptr->poisoned + randint(rlev) + 5))
 						{
@@ -935,8 +935,10 @@ bool carried_make_attack_normal(int r_idx)
 					if (damage > 23)
 					{
 						/* Prevent destruction of quest levels and town */
-						if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
+						if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM)) {
+							msg_print("There is a rumbling sound!");
 							earthquake(p_ptr->py, p_ptr->px, 8);
+						}
 					}
 
 					break;
@@ -1069,7 +1071,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Take "poison" effect */
-					if (!(p_ptr->resist_pois || p_ptr->oppose_pois))
+					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
 					{
 						if (set_poisoned(p_ptr->poisoned + randint(rlev) + 5))
 						{
@@ -1078,7 +1080,7 @@ bool carried_make_attack_normal(int r_idx)
 					}
 
 					/* Damage CON (10% chance)*/
-					if (randint(100) < 11)
+					if (!(p_ptr->immune_pois) && (randint(100) < 11) )
 					{
 						/* 1% chance for perm. damage */
 						bool perm = (randint(10) == 1);
@@ -1930,7 +1932,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 
 					/* Take "poison" effect */
-					if (!(p_ptr->resist_pois || p_ptr->oppose_pois))
+					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
 					{
 						if (set_poisoned(p_ptr->poisoned + randint(rlev) + 5))
 						{
@@ -2583,8 +2585,10 @@ bool make_attack_normal(int m_idx, byte divis)
 					if (damage > 23)
 					{
 						/* Prevent destruction of quest levels and town */
-						if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
+						if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM)) {
+							msg_print("There is a rumbling sound!");
 							earthquake(m_ptr->fy, m_ptr->fx, 8);
+						}
 					}
 
 					break;
@@ -2712,7 +2716,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 
 					/* Take "poison" effect */
-					if (!(p_ptr->resist_pois || p_ptr->oppose_pois))
+					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
 					{
 						if (set_poisoned(p_ptr->poisoned + randint(rlev) + 5))
 						{
@@ -2721,7 +2725,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					}
 
 					/* Damage CON (10% chance)*/
-					if (randint(100) < 11)
+					if (!(p_ptr->immune_pois) && (randint(100) < 11) )
 					{
 						/* 1% chance for perm. damage */
 						bool perm = (randint(10) == 1);

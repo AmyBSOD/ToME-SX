@@ -2508,6 +2508,7 @@ void calc_gods()
 		{
 			if (p_ptr->grace > 1000) p_ptr->resist_pois = TRUE;
 			if (p_ptr->grace > 15000) p_ptr->magical_breath = TRUE;
+			if (p_ptr->grace > 20000) p_ptr->resist_water = TRUE;
 		}
 	}
 
@@ -2701,6 +2702,7 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pva
 	if (f2 & (TR2_RES_BLIND)) p_ptr->resist_blind = TRUE;
 	if (f2 & (TR2_RES_NETHER)) p_ptr->resist_neth = TRUE;
 	if (f4 & (TR4_IM_NETHER)) p_ptr->immune_neth = TRUE;
+	if (f5 & (TR5_IM_POISON)) p_ptr->immune_pois = TRUE;
 
 	if (f5 & (TR5_RES_WATER)) p_ptr->resist_water = TRUE;
 	if (f5 & (TR5_RES_INERTIA)) p_ptr->resist_inertia = TRUE;
@@ -2936,6 +2938,7 @@ void calc_bonuses(bool silent)
 	p_ptr->resist_water = FALSE;
 	p_ptr->resist_inertia = FALSE;
 	p_ptr->immune_neth = FALSE;
+	p_ptr->immune_pois = FALSE;
 	p_ptr->resist_fear = FALSE;
 	p_ptr->resist_continuum = FALSE;
 	p_ptr->reflect = FALSE;

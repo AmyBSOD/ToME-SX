@@ -323,6 +323,7 @@ static void remove_bad_spells(int m_idx, u32b *f4p, u32b *f5p, u32b *f6p)
 		/* Know poison info */
 		if (p_ptr->resist_pois) smart |= (SM_RES_POIS);
 		if (p_ptr->oppose_pois) smart |= (SM_OPP_POIS);
+		if (p_ptr->immune_pois) smart |= (SM_OPP_POIS);
 
 		/* Know special resistances */
 		if (p_ptr->resist_neth) smart |= (SM_RES_NETH);

@@ -22,8 +22,8 @@
 # N: serial number : ego type
 # D: description
 # T: tval : min sval : max sval
-# R: rarity
-# X: position : slot : rating
+# R: rarity for the following F flags
+# X: position : slot : rating - position means whether it's prefix or suffix
 # W: depth : rarity1 : rarity2 : cost
 # C: to-hit : to-dam : to-ac : pval
 # r:N:needed flags on the base object
@@ -3204,15 +3204,46 @@ R:100
 F:WIS | SEE_INVIS | HOLD_LIFE | BLESSED
 f:WIS | SEE_INVIS | HOLD_LIFE | BLESSED
 
+N:258:of Poison Immunity
+T:36:0:15
+T:36:17:255
+T:37:0:255
+X:A:30:50
+W:50:5:100:15000
+R:100
+F:IM_POISON
+f:IM_POISON
+
+N:259:of Poison Immunity
+T:115:56:56
+T:34:0:5
+T:34:7:255
+X:A:32:50
+W:60:5:120:20000
+R:100
+F:IM_POISON
+f:IM_POISON
+
+N:260:of Heavy Drain
+T:125:0:255
+T:23:0:255
+T:115:55:55
+X:A:24:25
+W:40:2:44:10000
+C:8:9:0:0
+R:100
+F:VAMPIRIC | IM_POISON
+f:VAMPIRIC
 
 # N: serial number : ego type
 # D: description
 # T: tval : min sval : max sval
-# R: rarity
-# X: position : slot : rating
+# R: rarity for the following F flags
+# X: position : slot : rating - position means whether it's prefix or suffix
 # W: depth : rarity1 : rarity2 : cost
 # C: to-hit : to-dam : to-ac : pval
 # r:N:needed flags on the base object
 # r:F:forbidden flags on the base object
 # Z: granted_power
 # F: flags
+
