@@ -48,12 +48,14 @@ void abandon_god(int god)
  */
 void follow_god(int god, bool silent)
 {
-	/* Poor unbelievers, i'm so mean ... BOUHAHAHA */
-	/*if (get_skill(SKILL_ANTIMAGIC))
+	/* Poor unbelievers, i'm so mean ... BOUHAHAHA
+	 * Amy edit: hardcode it to the unbeliever role using an ugly h@ck */
+	/*if (get_skill(SKILL_ANTIMAGIC))*/
+	if (!strcmp(spp_ptr->title + c_name, "Unbeliever") || !strcmp(spp_ptr->title + c_name, "Total Ascetic"))
 	{
 		msg_print("Don't be silly; you don't believe in gods.");
 		return;
-	}*/
+	}
 
 	/* Are we allowed ? */
 	if (process_hooks(HOOK_FOLLOW_GOD, "(d,s)", god, "ask"))
