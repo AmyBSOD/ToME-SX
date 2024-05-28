@@ -5161,8 +5161,9 @@ bool make_gold(object_type *j_ptr)
 	/* Hack -- Base coin cost */
 	base = k_info[OBJ_GOLD_LIST + i].cost;
 
-	/* Determine how much the treasure is "worth" */
-	j_ptr->pval = (base + (8L * randint(base)) + randint(8));
+	/* Determine how much the treasure is "worth"
+	 * Amy edit: increased because items now sell for less */
+	j_ptr->pval = (base + (15L * randint(base)) + randint(8));
 
 	/* Success */
 	return (TRUE);
