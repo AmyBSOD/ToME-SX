@@ -1834,6 +1834,20 @@ C:k:+0000:+400:Stealth
 C:k:+0:+50:Magic-Device
 C:b:1:Perfect casting
 
+C:a:N:Priest
+C:a:D:A regular priest who serves one of the gods.
+C:a:O:21:5:1d1
+C:a:g:Eru Iluvatar
+C:a:g:Manwe Sulimo
+C:a:g:Yavanna Kementari
+C:a:g:Melkor Bauglir
+C:a:g:AmyBSOD
+C:a:g:Tulkas
+C:a:g:Aule the Smith
+C:a:g:Mandos
+C:a:g:Ulmo
+C:a:g:Varda Elentari
+
 C:a:N:Priest(Eru)
 C:a:D:A priest that serves Eru Iluvatar to bring down
 C:a:D:the empire of fear and shadows of Morgoth.
@@ -1961,6 +1975,15 @@ C:a:k:+0:+400:Hafted-mastery
 C:a:k:+0:+300:Prayer
 C:a:k:+0:-600:Necromancy
 C:a:k:+0:+100:Spell-power
+
+C:a:N:Atheist Priest
+C:a:D:A priest who somehow doesn't believe in gods.
+C:a:D:Don't ask who that can be possible.
+C:a:O:23:33:1d1
+C:a:g:Nobody
+C:a:k:=0:=0:Prayer
+C:a:k:+1000:+100:Antimagic
+C:a:k:+0:+300:Sword-mastery
 
 C:a:N:Weird priest
 C:a:D:Priest with weird skills
