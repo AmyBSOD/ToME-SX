@@ -138,6 +138,9 @@ int generate_area(int y, int x, bool border, bool corner, bool refresh)
 	int road, entrance;
 	int x1, y1;
 	int hack_floor = 0;
+	int plyrlvl = p_ptr->lev;
+	int plyrlvllow = p_ptr->lev / 2;
+	if (plyrlvllow < 1) plyrlvllow = 1;
 
 	/* Number of the town (if any) */
 	p_ptr->town_num = wf_info[wild_map[y][x].feat].entrance;
@@ -364,12 +367,20 @@ int generate_area(int y, int x, bool border, bool corner, bool refresh)
 		hack_floor = 1;
 	}
 
-	/* Set the monster generation level to the wilderness level */
-	monster_level = wf_info[wild_map[y][x].feat].level + rand_int(p_ptr->lev);
+	/* Set the monster generation level to the wilderness level
+	 * Amy edit: player's level can be used for scaling, but it should be a random factor */
+	monster_level = wf_info[wild_map[y][x].feat].level;
+	if (randint(2) == 1) {
+		if (randint(2) == 1) monster_level += randint(plyrlvllow);
+		else monster_level += randint(plyrlvl);
+	}
+	if (randint(50) == 1) {
+		monster_level += plyrlvl;
+	}
 	/*msg_format("Monster level set to %d.", monster_level);*/
 
 	/* Set the object generation level to the wilderness level */
-	object_level = wf_info[wild_map[y][x].feat].level + rand_int(p_ptr->lev);
+	object_level = monster_level;
 
 	return hack_floor;
 }
