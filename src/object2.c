@@ -1220,7 +1220,7 @@ s32b object_value_real(object_type *o_ptr)
 			case TV_SHOT:
 			case TV_ARROW:
 			case TV_BOLT:
-				flagcostiem /= 500;
+				flagcostiem /= 50;
 				break;
 			default:
 				break;
