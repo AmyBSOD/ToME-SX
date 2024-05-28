@@ -511,7 +511,7 @@ void do_cmd_mindcraft(void)
 			/* Minor displace */
 		case 2:
 			{
-				if (plev < 25)
+				if (plev < 45)
 				{
 					teleport_player(10);
 				}

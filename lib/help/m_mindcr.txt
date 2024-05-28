@@ -21,7 +21,7 @@ as usual through the *****skills.txt*21[Magic] skill.
    Fires a bolt or beam, to stun and damage monsters.
 3. [[[[[sMinor Displacement] (Level 3) Cost:20
    Teleports you a short distance.
-   At level 25 it grants the ability to create void jumpgates.
+   At level 45 it grants the ability to create void jumpgates.
 4. [[[[[sMajor Displacement] (Level 7) Cost:35
    Teleports you a good distance. 
    At level 50 it also banishes the monsters around you.

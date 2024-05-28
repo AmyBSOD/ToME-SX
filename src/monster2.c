@@ -2375,11 +2375,12 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	}
 
 	/* Nor on the between */
-	if (cave[y][x].feat == FEAT_BETWEEN)
+	/* Amy edit: yes, can spawn on those! why not? */
+	/* if (cave[y][x].feat == FEAT_BETWEEN)
 	{
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
 		return 0;
-	}
+	} */
 
 	/* Nor on the altars */
 	if ((cave[y][x].feat >= FEAT_ALTAR_HEAD)
@@ -3644,7 +3645,10 @@ bool summon_specific(int y1, int x1, int lev, int type)
 		if (cave[y][x].feat == FEAT_MINOR_GLYPH) continue;
 
 		/* Nor on the between */
-		if (cave[y][x].feat == FEAT_BETWEEN) return (FALSE);
+		/* Amy edit: yes, can summon on them, because we don't want players with high mindcraft to be able to simply
+		 * create an endless sea of "between" (void) jumpgates as a cheaty anti-summoning room (not even a corridor;
+		 * you could theoretically fill entire rooms with jumpgates...)! */
+		/* if (cave[y][x].feat == FEAT_BETWEEN) return (FALSE); */
 
 		/* ... nor on the Pattern */
 		if ((cave[y][x].feat >= FEAT_PATTERN_START) &&
@@ -3732,7 +3736,8 @@ bool summon_specific_friendly(int y1, int x1, int lev, int type, bool Group_ok)
 		if (cave[y][x].feat == FEAT_MINOR_GLYPH) continue;
 
 		/* Nor on the between */
-		if (cave[y][x].feat == FEAT_BETWEEN) return (FALSE);
+		/* Amy edit: see above, can summon on those */
+		/* if (cave[y][x].feat == FEAT_BETWEEN) return (FALSE); */
 
 		/* ... nor on the Pattern */
 		if ((cave[y][x].feat >= FEAT_PATTERN_START) &&
