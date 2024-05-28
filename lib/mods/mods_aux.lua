@@ -166,13 +166,13 @@ function add_module(t)
 	if not t.astral_wild_y then t.astral_wild_y = 19 end
 
 	if not t.random_artifact_weapon_chance then
-		t.random_artifact_weapon_chance = 30
+		t.random_artifact_weapon_chance = 15
 	end
 	if not t.random_artifact_armor_chance then
-		t.random_artifact_armor_chance = 20
+		t.random_artifact_armor_chance = 15
 	end
 	if not t.random_artifact_jewelry_chance then
-		t.random_artifact_jewelry_chance = 20
+		t.random_artifact_jewelry_chance = 15
 	end
 
 	if not t.max_plev then t.max_plev = 50 end

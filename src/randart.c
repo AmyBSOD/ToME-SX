@@ -76,16 +76,22 @@ static bool grab_one_power(int *ra_idx, object_type *o_ptr, bool good, s16b *max
 	for (i = 0; i < ok_num * 10; i++)
 	{
 		randart_part_type *ra_ptr;
+		int maxposslvl;
+
+		maxposslvl = p_ptr->lev;
+		if (dun_level > maxposslvl) maxposslvl = dun_level;
+		maxposslvl += get_skill(SKILL_RUNECRAFT);
 
 		i = ok_ra[rand_int(ok_num)];
 		ra_ptr = &ra_info[i];
 
 		/* XXX XXX Enforce minimum player level (loosely)
-		 * Amy edit: it's dumb if that depends on your XL, it should depend on dungeon level like ego items!! */
-		if (ra_ptr->level > dun_level)
+		 * Amy edit: it's dumb if that depends on your XL, it should depend on dungeon level like ego items!!
+		 * calculation now uses maxposslvl, which can also be improved by runecraft skill */
+		if (ra_ptr->level > maxposslvl)
 		{
 			/* Acquire the "out-of-depth factor" */
-			int d = (ra_ptr->level - dun_level);
+			int d = (ra_ptr->level - maxposslvl);
 
 			/* Roll for out-of-depth creation */
 			if (rand_int(d) != 0)

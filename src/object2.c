@@ -2327,6 +2327,9 @@ static bool make_artifact_special(object_type *o_ptr)
 	int runebonus = get_skill(SKILL_RUNECRAFT);
 	if (runebonus > 0) objlevelmax += runebonus;
 
+	int dunlevelmax = dun_level;
+	if (get_skill(SKILL_RUNECRAFT) > 0) dunlevelmax += get_skill(SKILL_RUNECRAFT);
+
 	/* Check the artifact list (just the "specials") */
 	for (i = 0; i < max_a_idx; i++)
 	{
@@ -2345,10 +2348,10 @@ static bool make_artifact_special(object_type *o_ptr)
 		if ((a_ptr->flags4 & TR4_SPECIAL_GENE) && (!a_allow_special[i]) && (!vanilla_town)) continue;
 
 		/* XXX XXX Enforce minimum "depth" (loosely) */
-		if (a_ptr->level > dun_level)
+		if (a_ptr->level > dunlevelmax)
 		{
 			/* Acquire the "out-of-depth factor" */
-			int d = (a_ptr->level - dun_level) * 2;
+			int d = (a_ptr->level - dunlevelmax) * 2;
 
 			/* Roll for out-of-depth creation */
 			if (rand_int(d) != 0) continue;
@@ -2541,15 +2544,19 @@ static bool make_ego_item(object_type *o_ptr, bool good)
 	for (i = 0; i < ok_num * 10; i++)
 	{
 		ego_item_type *e_ptr;
+		int maxposslvl;
+
+		maxposslvl = dun_level;
+		maxposslvl += get_skill(SKILL_RUNECRAFT);
 
 		int j = ok_ego[rand_int(ok_num)];
 		e_ptr = &e_info[j];
 
 		/* XXX XXX Enforce minimum "depth" (loosely) */
-		if (e_ptr->level > dun_level)
+		if (e_ptr->level > maxposslvl)
 		{
 			/* Acquire the "out-of-depth factor" */
-			int d = (e_ptr->level - dun_level);
+			int d = (e_ptr->level - maxposslvl);
 
 			/* Roll for out-of-depth creation */
 			if (rand_int(d) != 0)
@@ -4907,8 +4914,9 @@ bool make_object(object_type *j_ptr, bool good, bool great, obj_theme theme)
 	int runebonus = get_skill(SKILL_RUNECRAFT);
 	if (runebonus > 0) objlevelmax += runebonus;
 
-	/* Chance of "special object" */
-	invprob = (good ? 10 - luck( -9, 9) : 1000);
+	/* Chance of "special object"
+	 * Amy edit: was too high, lowered and instead randart chances (mods/mods_aux.lua) increased */
+	invprob = (good ? 20 - luck( -9, 9) : 1000);
 
 	/* Base level for the object */
 	base = (good ? (objlevelmax + 10) : objlevelmax);
