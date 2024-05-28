@@ -1211,9 +1211,22 @@ s32b object_value_real(object_type *o_ptr)
 
 	if (f5 & TR5_TEMPORARY) return (0L);
 
+	/* Amy edit: it's real silly if branded ammo costs like 8000 per shot!! no one will ever buy those */
 	if (o_ptr->art_flags1 || o_ptr->art_flags2 || o_ptr->art_flags3)
 	{
-		value += flag_cost (o_ptr, o_ptr->pval);
+		int flagcostiem = flag_cost(o_ptr, o_ptr->pval);
+
+		switch (o_ptr->tval) {
+			case TV_SHOT:
+			case TV_ARROW:
+			case TV_BOLT:
+				flagcostiem /= 500;
+				break;
+			default:
+				break;
+		}
+
+		value += flagcostiem;
 	}
 	/* Artifact */
 	else if (o_ptr->name1)
@@ -1231,12 +1244,13 @@ s32b object_value_real(object_type *o_ptr)
 	else if (o_ptr->name2)
 	{
 		ego_item_type *e_ptr = &e_info[o_ptr->name2];
+		int flagcostiem = 0;
 
 		/* Hack -- "worthless" ego-items */
 		if (!e_ptr->cost) return (0L);
 
 		/* Hack -- Reward the ego-item with a bonus */
-		value += e_ptr->cost;
+		flagcostiem += e_ptr->cost;
 
 		if (o_ptr->name2b)
 		{
@@ -1246,8 +1260,20 @@ s32b object_value_real(object_type *o_ptr)
 			if (!e_ptr->cost) return (0L);
 
 			/* Hack -- Reward the ego-item with a bonus */
-			value += e_ptr->cost;
+			flagcostiem += e_ptr->cost;
 		}
+
+		switch (o_ptr->tval) {
+			case TV_SHOT:
+			case TV_ARROW:
+			case TV_BOLT:
+				flagcostiem /= 10;
+				break;
+			default:
+				break;
+		}
+
+		value += flagcostiem;
 	}
 
 	/* Pay the spell */
@@ -1473,16 +1499,16 @@ s32b object_value_real(object_type *o_ptr)
 			if (o_ptr->to_h + o_ptr->to_d < 0 && !value) return (0L);
 
 			/* Factor in the bonuses */
-			value += ((o_ptr->to_h + o_ptr->to_d) * 5L);
+			value += ((o_ptr->to_h + o_ptr->to_d) * 2);
 
 			/* Hack -- Factor in extra damage dice */
 			if ((o_ptr->dd > k_ptr->dd) && (o_ptr->ds == k_ptr->ds))
 			{
-				value += (o_ptr->dd - k_ptr->dd) * o_ptr->ds * 5L;
+				value += (o_ptr->dd - k_ptr->dd) * o_ptr->ds * 2;
 			}
 
 			/* Special attack (exploding arrow) */
-			if (o_ptr->pval2 != 0) value *= 14;
+			if (o_ptr->pval2 != 0) value *= 4;
 
 			/* Done */
 			break;
