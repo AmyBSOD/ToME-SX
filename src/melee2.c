@@ -3248,7 +3248,11 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 				if (blind) msg_format("%^s makes a strange noise.", m_name);
 				else msg_format("%^s fires an arrow!", m_name);
-				bolt(m_idx, GF_ARROW, damroll(3, 6));
+				if (rlev < 3) {
+					bolt(m_idx, GF_ARROW, damroll(rlev, 6));
+				} else {
+					bolt(m_idx, GF_ARROW, damroll(3, 6));
+				}
 				update_smart_learn(m_idx, DRS_REFLECT);
 				break;
 			}
@@ -3259,7 +3263,11 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 				if (blind) msg_format("%^s makes a strange noise.", m_name);
 				else msg_format("%^s fires a missile.", m_name);
-				bolt(m_idx, GF_ARROW, damroll(5, 6));
+				if (rlev < 5) {
+					bolt(m_idx, GF_ARROW, damroll(rlev, 6));
+				} else {
+					bolt(m_idx, GF_ARROW, damroll(5, 6));
+				}
 				update_smart_learn(m_idx, DRS_REFLECT);
 				break;
 			}
@@ -3270,7 +3278,11 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 				if (blind) msg_format("%^s makes a strange noise.", m_name);
 				else msg_format("%^s fires a missile!", m_name);
-				bolt(m_idx, GF_ARROW, damroll(7, 6));
+				if (rlev < 7) {
+					bolt(m_idx, GF_ARROW, damroll(rlev, 6));
+				} else {
+					bolt(m_idx, GF_ARROW, damroll(7, 6));
+				}
 				update_smart_learn(m_idx, DRS_REFLECT);
 				break;
 			}
@@ -3958,7 +3970,13 @@ bool make_attack_spell(int m_idx)
 				else
 				{
 					curse_equipment(33, 0);
-					take_hit(damroll(3, 8), ddesc);
+					if (rlev < 6) {
+						int extrafactor = rlev / 2;
+						if (extrafactor < 1) extrafactor = 1;
+						take_hit(damroll(extrafactor, 8), ddesc);
+					} else {
+						take_hit(damroll(3, 8), ddesc);
+					}
 				}
 				break;
 			}
@@ -3977,7 +3995,13 @@ bool make_attack_spell(int m_idx)
 				else
 				{
 					curse_equipment(50, 5);
-					take_hit(damroll(8, 8), ddesc);
+					if (rlev < 16) {
+						int extrafactor = rlev / 2;
+						if (extrafactor < 1) extrafactor = 1;
+						take_hit(damroll(extrafactor, 8), ddesc);
+					} else {
+						take_hit(damroll(8, 8), ddesc);
+					}
 				}
 				break;
 			}
@@ -3996,7 +4020,13 @@ bool make_attack_spell(int m_idx)
 				else
 				{
 					curse_equipment(80, 15);
-					take_hit(damroll(10, 15), ddesc);
+					if (rlev < 36) {
+						int extrafactor = rlev / 2;
+						if (extrafactor < 1) extrafactor = 1;
+						take_hit(damroll(extrafactor, 8), ddesc);
+					} else {
+						take_hit(damroll(10, 15), ddesc);
+					}
 				}
 				break;
 			}
@@ -4014,7 +4044,13 @@ bool make_attack_spell(int m_idx)
 				}
 				else
 				{
-					take_hit(damroll(15, 15), ddesc);
+					if (rlev < 56) {
+						int extrafactor = rlev / 2;
+						if (extrafactor < 1) extrafactor = 1;
+						take_hit(damroll(extrafactor, 8), ddesc);
+					} else {
+						take_hit(damroll(15, 15), ddesc);
+					}
 					(void)set_cut(p_ptr->cut + damroll(10, 10));
 				}
 				break;
