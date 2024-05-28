@@ -1274,9 +1274,9 @@ void init_skill(s32b value, s32b mod, int i)
 
 void do_get_new_skill(bool princessbitch)
 {
-	char *items[6];
-	int skl[6];
-	s32b val[6], mod[6];
+	char *items[10];
+	int skl[10];
+	s32b val[10], mod[10];
 	bool used[MAX_SKILLS];
 	int available_skills[MAX_SKILLS];
 	int max = 0, max_a = 0, res, i;
@@ -1303,7 +1303,7 @@ void do_get_new_skill(bool princessbitch)
 	while (available_skills[max_a] != -1) max_a++;
 
 	/* Get 4 skills */
-	for (max = 0; max < 6; max++)
+	for (max = 0; max < 10; max++)
 	{
 		int i;
 		skill_type *s_ptr;
@@ -1380,7 +1380,7 @@ void do_get_new_skill(bool princessbitch)
 
 	while (TRUE)
 	{
-		res = ask_menu("Choose a skill to learn(a-d to choose, ESC to cancel)?", (char **)items, 6);
+		res = ask_menu("Choose a skill to learn(a-j to choose, ESC to cancel)?", (char **)items, 10);
 
 		/* Ok ? lets learn ! */
 		if (res > -1)
@@ -1444,7 +1444,7 @@ void do_get_new_skill(bool princessbitch)
 	}
 
 	/* Free them ! */
-	for (max = 0; max < 6; max++)
+	for (max = 0; max < 10; max++)
 	{
 		string_free(items[max]);
 	}
