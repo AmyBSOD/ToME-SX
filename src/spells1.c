@@ -2159,24 +2159,30 @@ bool inc_stat(int stat)
 	/* Cannot go above 18/100 */
 	if (value < 18 + 100)
 	{
-		/* Gain one (sometimes two) points */
+		/* Gain one (sometimes two) points
+		 * Amy edit: shouldn't be so damn easy to max out stats */
 		if (value < 18)
 		{
-			gain = ((rand_int(100) < 75) ? 1 : 2);
+			/*gain = ((rand_int(100) < 75) ? 1 : 2);*/
+			gain = 1;
 			value += gain;
 		}
 
-		/* Gain 1/6 to 1/3 of distance to 18/100 */
+		/* Gain 1/6 to 1/3 of distance to 18/100
+		 * Amy edit: that's also kinda dumb, just gain 10 percentage points */
 		else if (value < 18 + 98)
 		{
 			/* Approximate gain value */
-			gain = (((18 + 100) - value) / 2 + 3) / 2;
+			/*gain = (((18 + 100) - value) / 2 + 3) / 2;*/
 
 			/* Paranoia */
-			if (gain < 1) gain = 1;
+			/*if (gain < 1) gain = 1;*/
 
 			/* Apply the bonus */
-			value += randint(gain) + gain / 2;
+			/*value += randint(gain) + gain / 2;*/
+
+			gain = 10;
+			value += gain;
 
 			/* Maximal value */
 			if (value > 18 + 99) value = 18 + 99;
