@@ -108,6 +108,34 @@ bool quest_invasion_turn_hook(char *fmt)
 
 	if (!get_check("Will you come?"))
 	{
+		cmsg_print(TERM_YELLOW, "'Hero, you can't just deny your help! Gondolin will fall if you don't come to help us!'");
+		if (get_check("You MUST agree to come to Gondolin!")) goto rightdecision;
+
+		cmsg_print(TERM_YELLOW, "'Hero, I'm not joking! You have to come to Gondolin at once or all is lost!'");
+		if (get_check("You MUST agree to come to Gondolin!")) goto rightdecision;
+
+		cmsg_print(TERM_YELLOW, "'You are testing my patience! Say yes, and come to Gondolin now!'");
+		if (get_check("You *MUST* agree to come to Gondolin!!!")) goto rightdecision;
+
+		cmsg_print(TERM_YELLOW, "'Look, I know you might be in the middle of looting a vault but you must come anyway!'");
+		if (get_check("You *MUST* agree to come to Gondolin!!!")) goto rightdecision;
+
+		cmsg_print(TERM_YELLOW, "'Yes, even if you just dropped your stuff on the ground you still must come!'");
+		if (get_check("You *MUST* agree to come to Gondolin!!!")) goto rightdecision;
+
+		cmsg_print(TERM_YELLOW, "'If you were to abandon us, Gondolin will be RAZED! Permanently!'");
+		if (get_check("You *MUST* agree to come to Gondolin!!!")) goto rightdecision;
+
+		cmsg_print(TERM_YELLOW, "'Everything you had in your Gondolin home will be lost forever!'");
+		if (get_check("You *MUST* agree to come to Gondolin!!!")) goto rightdecision;
+
+		cmsg_print(TERM_YELLOW, "'You'll lose access to all the shops and services in Gondolin if you don't come!'");
+		if (get_check("You *MUST* agree to come to Gondolin!!!")) goto rightdecision;
+
+		cmsg_print(TERM_YELLOW, "'This is your last chance! Just hit the 'y' key on your keyboard, it really can't be that hard!'");
+		cmsg_print(TERM_YELLOW, "'And yes I know I just broke the fourth wall but I'm serious, Gondolin will fall unless you help us!'");
+		if (get_check("You ***M*U*S*T*** agree to come to Gondolin!!! Or ALL is lost!")) goto rightdecision;
+
 		cmsg_print(TERM_YELLOW, "'Turgon overestimated you... Now Gondolin will fall.'");
 		cmsg_print(TERM_YELLOW, "'I will return alone and die there. May you be doomed!'");
 
@@ -120,6 +148,8 @@ bool quest_invasion_turn_hook(char *fmt)
 		process_hooks_restart = TRUE;
 		return (FALSE);
 	}
+rightdecision:
+
 	cmsg_print(TERM_YELLOW, "'You made the right decision! Quickly, jump on Tolan!'");
 	cmsg_print(TERM_YELLOW, "'Here we are: Gondolin. You must speak with Turgon now.'");
 
