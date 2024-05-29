@@ -2774,6 +2774,19 @@ void py_attack(int y, int x, int max_blow)
 								}
 							}
 
+							/* Chopping, by Amy - flat 30% chance */
+							if (magik(30) && (o_ptr->tval == TV_AXE)) {
+								if (!(r_ptr->flags4 & (RF4_BR_SHAR)) ) { /* shards breathers resist */
+									int tmp;
+									tmp = get_skill_scale(SKILL_CHOPPING, 40) + 1;
+									if (tmp > 1) tmp = randint(tmp);
+									if (tmp < 1) tmp = 1;
+									msg_format("%^s gets a cut.", m_name);
+									/* Apply bleeding */
+									m_ptr->bleeding += tmp;
+								}
+							}
+
 							if (vorpal_cut)
 							{
 								int step_k = k;

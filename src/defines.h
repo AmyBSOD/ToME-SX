@@ -4643,6 +4643,10 @@ extern int PlayerUID;
 #define SKILL_STUN              57
 #define SKILL_BOULDER           58
 #define SKILL_GEOMANCY          59
+#define SKILL_CLEARMIND         60
+#define SKILL_CHOPPING          61
+#define SKILL_WEIGHTLIFTING     62
+#define SKILL_CLEANING          63
 
 /* Ugly but needed */
 #define MAX_SKILLS              200

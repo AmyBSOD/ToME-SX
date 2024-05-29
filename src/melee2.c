@@ -2966,8 +2966,8 @@ bool make_attack_spell(int m_idx)
 	bool no_inate = FALSE;
 	int x, y;
 
-	/* Amy edit: druidistic skill should have some effect */
-	int druidsavingthrow = get_skill(SKILL_DRUID);
+	/* Amy edit: cleaning skill is there to reduce chance of breaths */
+	int druidsavingthrow = get_skill(SKILL_CLEANING);
 	bool druidsave = FALSE;
 
 	/* Summon count */

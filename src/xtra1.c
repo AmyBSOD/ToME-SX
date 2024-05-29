@@ -1689,8 +1689,10 @@ void calc_sanity(void)
 	if (msane < p_ptr->lev + 1) msane = p_ptr->lev + 1;
 
 	/* boost by Amy - otherwise, low-wisdom chars would have too little, and since brain smash "helpfully" deals
-	 * both sanity AND wisdom damage, that could otherwise instakill you... */
-	msane += 100;
+	 * both sanity AND wisdom damage, that could otherwise instakill you...
+	 * clear mind skill gives significant boosts */
+	msane += 50;
+	msane += (get_skill(SKILL_CLEARMIND) * 2);
 
 	if (p_ptr->msane != msane)
 	{
@@ -2117,7 +2119,8 @@ int weight_limit(void)
 	int i;
 
 	/* Weight limit based only on strength */
-	i = adj_str_wgt[p_ptr->stat_ind[A_STR]] * 200;
+	i = adj_str_wgt[p_ptr->stat_ind[A_STR]] * 150;
+	i += (get_skill(SKILL_WEIGHTLIFTING) * 100);
 
 	if (process_hooks_ret(HOOK_CALC_WEIGHT, "d", "(d)", i))
 		i = process_hooks_return[0].num;
