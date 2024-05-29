@@ -1268,7 +1268,7 @@ s32b object_value_real(object_type *o_ptr)
 			case TV_SHOT:
 			case TV_ARROW:
 			case TV_BOLT:
-				flagcostiem /= 10;
+				flagcostiem /= 5;
 				break;
 			default:
 				break;
@@ -1500,16 +1500,16 @@ s32b object_value_real(object_type *o_ptr)
 			if (o_ptr->to_h + o_ptr->to_d < 0 && !value) return (0L);
 
 			/* Factor in the bonuses */
-			value += ((o_ptr->to_h + o_ptr->to_d) * 2);
+			value += ((o_ptr->to_h + o_ptr->to_d) * 3L);
 
 			/* Hack -- Factor in extra damage dice */
 			if ((o_ptr->dd > k_ptr->dd) && (o_ptr->ds == k_ptr->ds))
 			{
-				value += (o_ptr->dd - k_ptr->dd) * o_ptr->ds * 2;
+				value += (o_ptr->dd - k_ptr->dd) * o_ptr->ds * 3L;
 			}
 
 			/* Special attack (exploding arrow) */
-			if (o_ptr->pval2 != 0) value *= 4;
+			if (o_ptr->pval2 != 0) value *= 8;
 
 			/* Done */
 			break;
