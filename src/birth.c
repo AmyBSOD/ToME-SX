@@ -2251,6 +2251,10 @@ static bool player_birth_aux_ask()
 	{
 		p_ptr->pgod = GOD_NONE;
 	}
+	else if (!strcmp(spp_ptr->title + c_name, "Total Ascetic") || !strcmp(spp_ptr->title + c_name, "Atheist Priest") || !strcmp(spp_ptr->title + c_name, "Unbeliever") || !strcmp(spp_ptr->title + c_name, "Cosmic Mage") || !strcmp(spp_ptr->title + c_name, "Tourist") || !strcmp(spp_ptr->title + c_name, "Polymath") )
+	{
+		p_ptr->pgod = GOD_NONE;
+	}
 	else
 	{
 		int *choice;
