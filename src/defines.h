@@ -3127,7 +3127,7 @@
 #define RBM_CLAW         5
 #define RBM_BITE         6
 #define RBM_STING        7
-#define RBM_XXX1         8
+#define RBM_FART         8
 #define RBM_BUTT         9
 #define RBM_CRUSH       10
 #define RBM_ENGULF      11
@@ -3139,11 +3139,12 @@
 #define RBM_GAZE        17
 #define RBM_WAIL        18
 #define RBM_SPORE       19
-#define RBM_XXX4        20
+#define RBM_FARTQUIET   20
 #define RBM_BEG         21
 #define RBM_INSULT      22
 #define RBM_MOAN        23
 #define RBM_SHOW        24
+#define RBM_FARTLOUD    25
 
 
 /*

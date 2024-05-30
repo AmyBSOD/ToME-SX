@@ -53,7 +53,7 @@ static cptr r_info_blow_method[] =
 	"CLAW",
 	"BITE",
 	"STING",
-	"XXX1",
+	"FART",
 	"BUTT",
 	"CRUSH",
 	"ENGULF",
@@ -65,11 +65,12 @@ static cptr r_info_blow_method[] =
 	"GAZE",
 	"WAIL",
 	"SPORE",
-	"XXX4",
+	"FARTQUIET",
 	"BEG",
 	"INSULT",
 	"MOAN",
 	"SHOW",
+	"FARTLOUD",
 	NULL
 };
 

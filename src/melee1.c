@@ -397,9 +397,33 @@ bool carried_make_attack_normal(int r_idx)
 					break;
 				}
 
-			case RBM_XXX1:
+			case RBM_FART:
 				{
-					act = "XXX1's you.";
+					if (randint(2) == 1)
+						act = "produces beautiful farting noises with her sexy butt.";
+					else
+						act = "produces squeaky farting noises with her sexy butt.";
+					/* sound(SOUND_FART); but that would require someone recording such a sound :-P --Amy */
+					break;
+				}
+
+			case RBM_FARTQUIET:
+				{
+					if (randint(2) == 1)
+						act = "produces soft farting noises with her sexy butt.";
+					else
+						act = "produces tender farting noises with her sexy butt.";
+					/* sound(SOUND_FART); but that would require someone recording such a sound :-P --Amy */
+					break;
+				}
+
+			case RBM_FARTLOUD:
+				{
+					if (randint(2) == 1)
+						act = "produces loud farting noises with her sexy butt.";
+					else
+						act = "produces disgusting farting noises with her sexy butt.";
+					/* sound(SOUND_FART); but that would require someone recording such a sound :-P --Amy */
 					break;
 				}
 
@@ -486,12 +510,6 @@ bool carried_make_attack_normal(int r_idx)
 					break;
 				}
 
-			case RBM_XXX4:
-				{
-					act = "projects XXX4's at you.";
-					break;
-				}
-
 			case RBM_BEG:
 				{
 					act = "begs you for money.";
@@ -526,7 +544,7 @@ bool carried_make_attack_normal(int r_idx)
 
 			/* Message */
 			if (act) msg_format("%s %s", sym_name, act);
-
+			if (method == RBM_FART || method == RBM_FARTLOUD || method == RBM_FARTQUIET) do_fart_effect();
 
 			/* Hack -- assume all attacks are obvious */
 			obvious = TRUE;
@@ -1312,7 +1330,6 @@ bool carried_make_attack_normal(int r_idx)
 			case RBM_CLAW:
 			case RBM_BITE:
 			case RBM_STING:
-			case RBM_XXX1:
 			case RBM_BUTT:
 			case RBM_CRUSH:
 			case RBM_ENGULF:
@@ -1707,9 +1724,33 @@ bool make_attack_normal(int m_idx, byte divis)
 					break;
 				}
 
-			case RBM_XXX1:
+			case RBM_FART:
 				{
-					act = "XXX1's you.";
+					if (randint(2) == 1)
+						act = "produces beautiful farting noises with her sexy butt.";
+					else
+						act = "produces squeaky farting noises with her sexy butt.";
+					/* sound(SOUND_FART); but that would require someone recording such a sound :-P --Amy */
+					break;
+				}
+
+			case RBM_FARTQUIET:
+				{
+					if (randint(2) == 1)
+						act = "produces soft farting noises with her sexy butt.";
+					else
+						act = "produces tender farting noises with her sexy butt.";
+					/* sound(SOUND_FART); but that would require someone recording such a sound :-P --Amy */
+					break;
+				}
+
+			case RBM_FARTLOUD:
+				{
+					if (randint(2) == 1)
+						act = "produces loud farting noises with her sexy butt.";
+					else
+						act = "produces disgusting farting noises with her sexy butt.";
+					/* sound(SOUND_FART); but that would require someone recording such a sound :-P --Amy */
 					break;
 				}
 
@@ -1796,12 +1837,6 @@ bool make_attack_normal(int m_idx, byte divis)
 					break;
 				}
 
-			case RBM_XXX4:
-				{
-					act = "projects XXX4's at you.";
-					break;
-				}
-
 			case RBM_BEG:
 				{
 					act = "begs you for money.";
@@ -1839,6 +1874,7 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			/* Message */
 			if (act) msg_format("%^s %s", m_name, act);
+			if (method == RBM_FART || method == RBM_FARTLOUD || method == RBM_FARTQUIET) do_fart_effect();
 
 			/* The undead can give the player the Black Breath with
 			 * a successful blow. Uniques have a better chance. -LM-
@@ -3061,7 +3097,6 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBM_CLAW:
 			case RBM_BITE:
 			case RBM_STING:
-			case RBM_XXX1:
 			case RBM_BUTT:
 			case RBM_CRUSH:
 			case RBM_ENGULF:

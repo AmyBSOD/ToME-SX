@@ -1092,9 +1092,11 @@ static void carried_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 					break;
 				}
 
-			case RBM_XXX1:
+			case RBM_FART:
+			case RBM_FARTLOUD:
+			case RBM_FARTQUIET:
 				{
-					act = "XXX1's %s.";
+					act = "farts at %s.";
 					break;
 				}
 
@@ -1164,13 +1166,6 @@ static void carried_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 			case RBM_SPORE:
 				{
 					act = "releases spores at %s.";
-					touched = FALSE;
-					break;
-				}
-
-			case RBM_XXX4:
-				{
-					act = "projects XXX4's at %s.";
 					touched = FALSE;
 					break;
 				}
@@ -1424,7 +1419,6 @@ static void carried_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 			case RBM_CLAW:
 			case RBM_BITE:
 			case RBM_STING:
-			case RBM_XXX1:
 			case RBM_BUTT:
 			case RBM_CRUSH:
 			case RBM_ENGULF:
@@ -1724,9 +1718,11 @@ static void incarnate_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 					break;
 				}
 
-			case RBM_XXX1:
+			case RBM_FART:
+			case RBM_FARTLOUD:
+			case RBM_FARTQUIET:
 				{
-					act = "XXX1's %s.";
+					act = "fart at %s.";
 					break;
 				}
 
@@ -1796,13 +1792,6 @@ static void incarnate_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 			case RBM_SPORE:
 				{
 					act = "release spores at %s.";
-					touched = FALSE;
-					break;
-				}
-
-			case RBM_XXX4:
-				{
-					act = "project XXX4's at %s.";
 					touched = FALSE;
 					break;
 				}
@@ -2056,7 +2045,6 @@ static void incarnate_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 			case RBM_CLAW:
 			case RBM_BITE:
 			case RBM_STING:
-			case RBM_XXX1:
 			case RBM_BUTT:
 			case RBM_CRUSH:
 			case RBM_ENGULF:

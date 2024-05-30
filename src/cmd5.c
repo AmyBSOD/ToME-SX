@@ -174,6 +174,311 @@ void do_poly_wounds(void)
 	}
 }
 
+/* random bad effect, similar to SLEX's badeffect() function --Amy */
+void do_fart_effect(void)
+{
+
+	switch (randint(56))
+	{
+	case 1:
+	case 2:
+	case 3:
+		{
+			msg_print("You are pushed away!");
+			teleport_player(10);
+
+			break;
+		}
+
+	case 4:
+	case 5:
+		{
+			msg_print("You are teleported away!");
+			teleport_player(100);
+
+			break;
+		}
+
+	case 6:
+		{
+			msg_print("You are teleported far away!");
+			teleport_player(200);
+
+			break;
+		}
+
+	case 7:
+	case 8:
+	case 9:
+		{
+			msg_print("It gets dark!");
+			unlite_area(10, 3);
+
+			break;
+		}
+
+	case 10:
+		{
+			msg_print("The doors around you are crushed!");
+			destroy_doors_touch();
+
+			break;
+		}
+
+	case 11:
+		{
+			msg_print("Walls start breaking!");
+			wall_breaker();
+
+			break;
+		}
+
+	case 12:
+	case 13:
+	case 14:
+		{
+			msg_print("You feel endangered!!");
+			trap_creation();
+
+			break;
+		}
+
+	case 15:
+	case 16:
+	case 17:
+	case 18:
+		{
+			msg_print("You feel that monsters are aware of your presence.");
+			aggravate_monsters(1);
+
+			break;
+		}
+
+	case 19:
+		{
+			msg_print("The earth is shaking!");
+			/* Prevent destruction of quest levels and town */
+			if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
+				earthquake(p_ptr->py, p_ptr->px, 5);
+
+			break;
+		}
+
+	case 20:
+	case 21:
+		{
+			msg_print("Your equipment seems less effective.");
+			apply_disenchant(0);
+
+			break;
+		}
+
+	case 22:
+	case 23:
+		{
+			msg_print("Oh, no! Your mind has gone blank!");
+			lose_all_info();
+
+			break;
+		}
+
+	case 24:
+	case 25:
+		{
+			msg_print("Monsters appear from nowhere!");
+			activate_hi_summon();
+
+			break;
+		}
+
+	case 26:
+		{
+			msg_print("An ancient foul curse afflicts you...");
+			activate_ty_curse();
+
+			break;
+		}
+
+	case 27:
+	case 28:
+		{
+			/* poison that ignores resistances (intentional) --Amy */
+			msg_print("Suddenly you're poisoned!");
+			(void)set_poisoned(p_ptr->poisoned + rand_int(15) + 10);
+			break;
+		}
+
+	case 29:
+		{
+			msg_print("Urgh, you have to vomit!");
+			(void)set_food(PY_FOOD_STARVE - 1);
+			break;
+		}
+
+	case 30:
+		{
+			msg_print("You're getting really dizzy...");
+			set_confused(p_ptr->confused + rand_int(20) + 15);
+			set_blind(p_ptr->blind + rand_int(100) + 100);
+			break;
+		}
+
+	case 31:
+	case 32:
+	case 33:
+		{
+			if (p_ptr->csp > 0)
+			{
+				p_ptr->csp = 0;
+				p_ptr->csp_frac = 0;
+				p_ptr->redraw |= (PR_MANA);
+				msg_print("You lose  Mana");
+			}
+			else msg_print("You feel lethargic.");
+			break;
+		}
+
+	case 34:
+		{
+			if (randint(1000) == 1) {
+				msg_print("You feel the dark corruptions of Morgoth coming over you!");
+				(void) gain_random_corruption(0);
+			} else {
+				msg_print("Ugghh, the world is spinning...");
+				set_confused(p_ptr->confused + rand_int(200) + 150);
+			}
+			break;
+		}
+
+	case 35:
+		{
+			msg_print("Ewwww, the stink is unbearable...");
+			msg_print("it smells foul, almost like the accursed black breath...");
+			msg_print("Oh damn, could it be that you're afflicted with it now?");
+			p_ptr->black_breath = TRUE;
+			break;
+		}
+
+	case 36:
+		{
+			if (p_ptr->pgod == 0)
+			{
+				msg_format("You feel a loss of faith.");
+			}
+			else
+			{
+				cptr name;
+
+				name = deity_info[p_ptr->pgod].name;
+				msg_format("You feel that %s is displeased.", name);
+				inc_piety(p_ptr->pgod, -500);
+			}
+			break;
+		}
+
+	case 37:
+	case 38:
+		{
+			msg_format("Scintillating colors hypnotise you for a moment.");
+			set_image(200);
+			break;
+		}
+
+	case 39:
+		{
+			msg_format("The loud sound drones in your head...");
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_SOUND, PROJECT_KILL | PROJECT_JUMP);
+			break;
+		}
+
+	case 40:
+	case 41:
+		{
+			msg_format("A static feeling is in the air...");
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_ELEC, PROJECT_KILL | PROJECT_JUMP);
+			break;
+		}
+
+	case 42:
+	case 43:
+		{
+			msg_format("You feel something dissolving you!");
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_ACID, PROJECT_KILL | PROJECT_JUMP);
+			break;
+		}
+
+	case 44:
+		{
+			msg_format("Water washes over you!");
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_WATER, PROJECT_KILL | PROJECT_JUMP);
+			break;
+		}
+
+	case 45:
+		{
+			msg_format("You're hit by a lot of little needles!");
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_SHARDS, PROJECT_KILL | PROJECT_JUMP);
+			break;
+		}
+
+	case 46:
+		{
+			msg_format("You feel your muscles cramping!");
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_INERTIA, PROJECT_KILL | PROJECT_JUMP);
+			break;
+		}
+
+	case 47:
+		{
+			msg_format("Everything's spinning!");
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_CHAOS, PROJECT_KILL | PROJECT_JUMP);
+			break;
+		}
+
+	case 48:
+		{
+			msg_format("You suddenly remember something horrible...");
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_TIME, PROJECT_KILL | PROJECT_JUMP);
+			break;
+		}
+
+	case 49:
+	case 50:
+	case 51:
+		{
+			cmsg_print(TERM_VIOLET, "You're going insane!");
+			take_sanity_hit(p_ptr->lev, "inhaling too much farting gas");
+			break;
+		}
+
+	case 52:
+	case 53:
+	case 54:
+		{
+			msg_format("You get the cold shivers.");
+			set_afraid(p_ptr->afraid + 3 + randint(50));
+			break;
+		}
+
+	case 55:
+	case 56:
+		{
+			msg_format("You stagger...");
+			(void)set_stun(p_ptr->stun + randint(20));
+			break;
+		}
+
+	default:
+		{
+			msg_print("An ancient foul curse afflicts you...");
+			activate_ty_curse();
+		}
+	}
+
+	return;
+
+}
+
 void do_poly_self(void)
 {
 	int power = p_ptr->lev;

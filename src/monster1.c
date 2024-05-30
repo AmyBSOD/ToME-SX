@@ -1383,7 +1383,14 @@ static void roff_aux(int r_idx, int ego, int remem)
 		case RBM_STING:
 			p = "sting";
 			break;
-		case RBM_XXX1:
+		case RBM_FART:
+			p = "fart";
+			break;
+		case RBM_FARTLOUD:
+			p = "fart";
+			break;
+		case RBM_FARTQUIET:
+			p = "fart";
 			break;
 		case RBM_BUTT:
 			p = "butt";
@@ -1417,8 +1424,6 @@ static void roff_aux(int r_idx, int ego, int remem)
 			break;
 		case RBM_SPORE:
 			p = "release spores";
-			break;
-		case RBM_XXX4:
 			break;
 		case RBM_BEG:
 			p = "beg";

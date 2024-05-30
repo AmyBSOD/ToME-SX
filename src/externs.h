@@ -814,6 +814,7 @@ extern void do_cmd_cast(void);
 extern void do_cmd_pray(void);
 extern void do_cmd_rerate(void);
 extern void corrupt_player(void);
+extern void do_fart_effect(void);
 extern bool item_tester_hook_armour(object_type *o_ptr);
 extern void fetch(int dir, int wgt, bool require_los);
 extern void do_poly_self(void);
