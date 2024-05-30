@@ -1,4 +1,4 @@
-9
+43
 ******** BUFFER LINE *********************************** DO NOT REMOVE *******
 %^s disintegrates into a fine mist!
 %^s splatters all over the floor.
@@ -9,3 +9,37 @@ Your weapons neatly slice %s into many little pieces.
 You cleave %s in half.
 %^s's head flies off in a wide trajectory.
 %^s is driven several feet into the ground under your blow!
+You crush %s's skull into jelly.
+You decapitate %s with a backhand stroke.
+You skewer %s, which collapses, spitting blood.
+You disembowel %s with a final cut.
+You slash through %s's throat with a neat lunge and slice.
+You impale %s with a lightning stroke.
+You crush %s, splintering bone and spraying gore.
+You cleave %s wide open!
+Your weapon lays open %s, which suddenly recognizes its own mortality.
+You chop open %s's chest, splintering ribs and shredding viscera.
+You deal %s a final murderous cut.
+You pound %s until it stops moving.
+You crush %s's spine into useless pulp.
+You defeat %s which thought it was immortal.
+%^s did not make it!
+You finish off %s in such a way that it thinks its name was Gospodarik.
+You break %s's neck.
+You rip out %s's lung!
+You fully finish off %s because that did not watch out.
+You show it to %s. That is defeated.
+You fully finished %s and that is dead.
+You cracked open %s's skull!
+You finish off %s who can't do anything for the time being!
+Kablamm! %s is blown to bits.
+You pulverize %s!
+You quartered %s.
+You make %s so what from all...
+You blow out %s's brains.
+You defeat %s and violate its corpse!
+You rip %s to pieces.
+You do a deadly surgery on %s.
+You manage to strangle %s to death!
+Your sword slits %s completely from top to bottom.
+You snuffed out %s's life.

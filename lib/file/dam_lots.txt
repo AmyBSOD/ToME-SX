@@ -1,4 +1,4 @@
-18
+36
 ******** BUFFER LINE *********************************** DO NOT REMOVE *******
 You stab %s in the stomach.
 You cut off %s's hand.
@@ -18,4 +18,21 @@ You broke some of %s's ribs!
 %^s sputters at your tight, choking hold!
 %^s grunts under the force of your blows.
 %^s screams shrilly in fear.
-
+%^s staggers from your furious assault.
+%^s reels from the fury of your attack.
+You deal %s a solid blow!
+%^s loses quite some energy.
+You fully kick %s into the nuts.
+You just fully lambasted %s!
+You slam %s against a wall.
+Paff! Dock! Kapow! You lambasted %s.
+You bash into %s's visage!
+You claw %s's face with your fingernails.
+Your hit lays bare the muscles of %s's arm!
+You use your teeth to deal an ugly, festering wound to %s.
+Your bite ripped off plenty of skin from %s!
+You give %s a free face-lift.
+You meanwhile know how to do a ground attack, so you stomp %s.
+You resole %s's ass!
+Your cannonball hits %s fully in the stomach.
+You take %s down a peg or two.

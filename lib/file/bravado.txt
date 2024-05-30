@@ -1,4 +1,4 @@
-314
+425
 ******** BUFFER LINE *********************************** DO NOT REMOVE *******
 cackles evilly.
 cackles diabolically.
@@ -314,3 +314,114 @@ laughs: 'My special dice always rolls a 20. I never miss.'
 wonders if your to-hit rating is even capable of hitting anything at all.
 laughs: 'You grinded 20 hours for those stats only to die to me now?'
 laughs: 'Your stats are awfully bad! Did you not do any grinding? Loser.'
+snorts: 'Fool! I can easily block your primitive techniques!'
+announces: 'Kwourstomal!'
+yells: 'I am your doom!'
+boasts: 'I'm a centuries-old spirit that has killed many people before you.'
+chortles: 'Not even death can save you from me.'
+exclaims: 'The stench of life surrounds you! I shall snuff you out!'
+screams: 'I'm gonna SMASH you!'
+threatens: 'Your soul will be food for hellfire.'
+laughs: 'I'm gonna make weapons from your bones!'
+announces: 'Lady Andariel instructs your death.'
+announces: 'My army will annihilate you. Ha ha ha ha ha ha ha...'
+starts to attack you mindlessly.
+swings its fists in your general direction.
+laughs: 'Now that I got you here, I'll play with you to my heart's desire.'
+laughs: 'Now the fun will really begin.'
+announces: 'My scentful perfume will place you at my mercy.'
+plans to transform you into dog food.
+laughs all the time: 'Hahahahahehehehehehehe! Huahahahahahaha hahahahahahhh!'
+shouts: 'If I get you, you're dead faster than you can scream!'
+says: 'You don't even know the powers you're dealing with.'
+announces: 'I'm an ancient being with 5000 years of combat experience.'
+announces: 'You're nothing but a filthy worm. Get stomped by my might.'
+shouts: 'I'll kick you with my high-heeled lady boots!'
+laughs: 'Watch out, I'll defeat you faster than you'd expect.'
+is the boss of this dungeon level! Prepare for battle!
+is coming for you through the walls!
+has just turned invisible and will sneak up on you from behind!
+says: 'I'm like a snake, poised to strike. One wrong move and I'll devour you.'
+offers: 'If you give me 20000 zorkmids, I'll let you live.'
+shouts: 'Be glad I don't have enough mana to summon an elder priest yet!'
+fiercely lashes its tentacles around.
+prepares a disintegration beam that will destroy your worn armor.
+shouts: 'Now I'll give you a load of pain!'
+announces: 'Now I'll pay you back for all the grief you've given me.'
+says: 'So you don't forgive me, huh? Well, I won't forgive you either.'
+snorts: 'You expected kindness from me? Know this: kindness has to be earned.'
+shouts: 'You persistent pest! You played for long enough today! Say goodbye!'
+says: 'I'll put you to rest here!'
+giggles: 'If you don't die to me, you'll die to some other bullshit.'
+exclaims: 'WTF? What are YOU doing here???'
+exclaims: 'I honestly expected you to die much earlier!'
+laughs: 'Oh, the little retard wants to fight me. This will be a quick battle.,
+screams: 'Intruder sighted! All units, attack!'
+subjects you to the torment of having to listen to its voice.
+tries to tie its worn socks in front of your nose.
+shouts: 'All shall feed the shattered night.'
+sneers: 'You, born of dishonest curves, are unworthy of my measure.'
+announces: 'You will pay for your sins.'
+mutters: 'Oh... You want to fight.'
+threatens: 'You killed my brood. Prepare to die.'
+mutters: 'I can smell the weaknesses others try to hide.'
+says: 'Sleep for all eternity.'
+mutters: 'Impure pack.'
+mutters: 'Dust to dust.'
+announces: 'My power will devour you!'
+summons an elder priest!
+recharges its wand of disintegration!
+pulls a scroll of ragnarok from its bag!
+starts changing weapons in real time!
+twirls its sword!
+announces: 'Prepare to be raided.'
+laughs: 'You're looking rather vulnerable.'
+laughs: 'You're an easy target. This won't take long.'
+says: 'Don't ask me to lay off.'
+sneers: 'Your options are shrinking.'
+laughs: 'What's goin' down? You!'
+laughs: 'Your time is up around here, you're being sacked!'
+announces: 'You're no longer wanted around here.'
+giggles: 'Are you frightened? You've turned pink!'
+laughs: 'You tripped over your own sword! Ha-ha!'
+shouts: 'I think I'll dispose of you right now.'
+readies its gun!
+sneers: 'You're in a dead end position.'
+threatens: 'You're going down, clown.'
+announces: 'I'm going to rub you out.'
+announces: 'You've violated the social distancing protocols!'
+shouts: 'Police! I've spotted someone who isn't wearing a face mask!'
+screams: 'That adventurer over there is obviously infected with corona!'
+points a finger at you and shouts 'Corona!'
+calls: 'You there! You have covid-19! Why aren't you quarantined?'
+calls: 'You there! You have covid-19! I'll now quarantine you permanently!'
+starts hacking the game code to nerf your most used spells!
+stopped time! You can't move!
+suddenly sprays you with a vial of drum stint reluctance perfume!
+throws a double free corruption grenade!
+extends its fingernails into claws!
+enters the IDDQD cheat and is now invulnerable!
+enters the IDCLIP cheat and can walk through walls now!
+casts world fall!
+deletes all your data!
+shouts 'IMPERIO!' Suddenly you're affected by an unforgivable curse!
+points at you and mutters a curse.
+casts a spell at you! You receive death verdict.
+snatches your bag and begins rummaging through the assorted items.
+sneers: 'Isn't that weapon skill of yours a bit low?'
+sneers: 'With your weapon you won't even dent me!'
+laughs: 'Your AC is too bad and therefore  my attacks will autohit you.'
+laughs: 'There's no way for you to survive this encounter.'
+snickers: 'Your maximum hit points are woefully sad!'
+snickers: 'How did you even manage to get this far?' 
+snickers: I'll just off you and then you can roll a new, better character.'
+announces: 'I'm gonna rape you, bitch.'
+pulls a phallus-shaped object from underneath his trousers!
+suspiciously eyes the orifice between your legs!
+barks: 'I'm gonna steal is your virginity, by using my penis.'
+shouts: 'You're a pariah now! You've been expelled from the community!'
+shouts: 'Everyone is going to attack you on sight!'
+decides to erase your save with no confirmation.
+deletes your game, along with your current savegame file.
+screams 'Antivaxxer! You'll never endanger anyone with covid again!'
+announces: 'I just decided to forcibly vaccinate you.'

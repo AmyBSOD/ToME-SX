@@ -1,4 +1,4 @@
-22
+76
 ******** BUFFER LINE *********************************** DO NOT REMOVE *******
 You scratch %s.
 You give %s a nasty bruise.
@@ -22,3 +22,57 @@ You scream an insult at %s.
 You scowl at %s.
 %^s gnashes his teeth.
 %^s lets out a gurgling laugh.
+You barely hit %s.
+%^s was scratched by your sword and is really angry now.
+%^s gets lung cancer from your attack!
+You spit %s in the face.
+You lightly caress %s.
+You gently stroke %s.
+You bite %s because you fight like a woman.
+%^s cringes from your strike behind its shield.
+You smash into %s's shield, striking sparks.
+%^s cowers under its shield, barely avoiding your blows.
+You stumble and miss %s, cleaving the air.
+%^s blocks your swing!
+%^s laughs fiendishly at your futile attack.
+You lunge at %s, but fumble the thrust.
+Your blow bounces off %s's armor!
+%^s blocks your clumsy blow!
+%^s ignores your puny attack.
+%^s ignores your feeble flailings.
+You slash at air as %s dances back.
+You miss %s by a league!
+%^s dodges your attack!
+%^s narrowly escapes your slashing attack.
+You strike sparks from %s's armor.
+You smash into %s's shield, sending splinters flying.
+%^s avoids your blow.
+Your weapon glances off of %s, striking sparks.
+%^s easily parries your strike.
+%^s lost only zero lines!
+Haha, you missed %s! Ha ha!
+Haha, you didn't hit %s!
+You did not hit %s, ha-ha-ha
+You didn't hit %s cause you were drinking liquor! Ha ha ha ha ha ha ha!
+Haha, you didn't hit %s, you dumb man! Hehehe!
+%^s uses hidden passages!
+%^s jumps over you!
+%^s is not hit, ha-ha-ha
+%^s slaps you silly.
+%^s's got a whole lot of talent!
+You missed %s cause you were acting stupid!
+%^s evades, bwarharharhar!
+%^s uses a hiding place!
+%^s helped itself!
+%^s ducks and you don't know how to do a ground attack!
+%^s is quickly away-coagulated!
+You whiffed at %s!
+%^s goes to the school abort!
+Your little-girl attack obviously doesn't hit %s!
+Your weapon rusts and fails to damage %s!
+You break off one of your nails while trying to fight %s!
+Your half assed attack failed to hit %s!
+Your fumbled attack completely missed %s!
+%^s does not budge!
+%^s's sexiness deflects the attack!
+%^s stays out of reach of your small weapon!

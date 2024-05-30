@@ -1,4 +1,4 @@
-7
+31
 ******** BUFFER LINE *********************************** DO NOT REMOVE *******
 You nearly decapitate %s!
 You impale %s on your weapon.
@@ -7,3 +7,27 @@ Your weapon almost slices %s in half!
 You broke %s's spine!
 Your weapon slices into %s's heart!
 You smashed %s's ribcage!
+You thrust deep into %s!
+%^s roars in pain as you draw blood!
+You heavily injured %s.
+%^s says: 'Ow-wow-wow!'
+Your polearm penetrates %s's stomach!
+Your axe almost manages to decapitate %s!
+You strike on %s like a dust bowl.
+One of %s's bones breaks!
+%^s survives what should have been a deadly hit!
+You rip into %s with maniacal fervor.
+You deal %s a crushing blow!
+You give %s a good flogging.
+You bashed %s's skull.
+You strike %s fully together, but genuinly...
+You strike out one of %s's ears.
+Your leather peep-toes broke %s's leg!
+%^s has been violated by you!
+You smash a wine glass into %s's face.
+Now you've however given an abrasion to %s.
+You kick %s, crunching his left testicle!
+You stab %s in the crotch, severing a major artery!
+%^s loses an arm as a result of your thrown knife!
+You smashed %s so hard, your weapon almost broke.
+%^s is crying bloody tears because you're so mean to it.

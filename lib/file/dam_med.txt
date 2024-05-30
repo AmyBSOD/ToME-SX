@@ -1,4 +1,4 @@
-23
+41
 ******** BUFFER LINE *********************************** DO NOT REMOVE *******
 You kick %s in the belly!
 You head-butt %s.
@@ -23,3 +23,21 @@ You bend %s's fingers.
 You punch %s in the kidneys!
 You smash %s with your elbow.
 You smash %s with your knee.
+%^s gasps as your weapon strikes home.
+%^s flinches as you score a hit.
+%^s stoically ignores your shallow cut.
+You merely bruise %s as it dodges to one side.
+You strike %s a glancing blow.
+You smite %s, driving it back a step.
+You slip past %s's guard and hit!
+You slash %s, opening a bloodless cut.
+You hit %s on the flank!
+%^s is fully flogged by you.
+You cover for %s one.
+You strike %s on the muzzle.
+You ram your blade into %s.
+Your sexy leather pumps scratch up and down %s's legs.
+You kick %s in the shin with your plateau sandals.
+You place a painful little-girl kick to %s's leg.
+You step on %s's toes with your lovely platform boots.
+Your soft dancing shoes land a shin kick of love on %s.
