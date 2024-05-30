@@ -748,6 +748,9 @@ static bool do_extra(int flag)
 	/* The comapnions killed */
 	do_s16b(&p_ptr->companion_killed, flag);
 
+	/* How many times you've died so far */
+	do_s16b(&p_ptr->char_death_count, flag);
+
 	/* The fate */
 	do_byte((byte*)&p_ptr->no_mortal, flag);
 

@@ -1764,6 +1764,11 @@ struct player_type
 	 * @note Number of companion death
 	 */
 	s16b companion_killed;
+	/** @structvar char_death_count
+	 * @brief Number
+	 * @note Number of character deaths
+	 */
+	s16b char_death_count;
 	/** @structvar black_breath
 	 * @brief Boolean
 	 * @note The Tolkien's Black Breath

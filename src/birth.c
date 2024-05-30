@@ -1061,6 +1061,8 @@ static void player_wipe(void)
 
 	/* No companions killed */
 	p_ptr->companion_killed = 0;
+	/* and didn't die yet */
+	p_ptr->char_death_count = 0;
 }
 
 

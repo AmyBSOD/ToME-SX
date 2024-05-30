@@ -1825,6 +1825,7 @@ struct player_type
 	char movement;                /* base movement way */
 
 	s16b companion_killed;  /* Number of companion death */
+	s16b char_death_count;  /* How often you died (including lifesaved deaths) */
 
 	bool no_mortal;         /* Fated to never die by the hand of a mortal being */
 

@@ -3452,6 +3452,14 @@ errr file_character(cptr name, bool full)
 			fprintf(fff, "\n %d of your companions have been killed.", p_ptr->companion_killed);
 	}
 
+	if (p_ptr->char_death_count)
+	{
+		if (p_ptr->char_death_count == 1)
+			fprintf(fff, "\n You have been killed once.");
+		else
+			fprintf(fff, "\n You have been killed %d times.", p_ptr->char_death_count);
+	}
+
 	for (i = 0; i < MAX_FATES; i++)
 	{
 		if ((fates[i].fate) && (fates[i].know))

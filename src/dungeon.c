@@ -6147,6 +6147,7 @@ void play_game(bool new_game)
 
 				/* One more life spent */
 				p_ptr->lives++;
+				p_ptr->char_death_count++;
 
 				/* Restore hit points */
 				p_ptr->chp = p_ptr->mhp;
