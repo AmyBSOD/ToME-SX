@@ -65165,3 +65165,15 @@ F:NONLIVING | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS | RES_WATE | RES_NETH |
 F:RES_NEXU | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
 D:You thought death swords were bad? Well, meet the killer katana! 
 
+N:3779:Extremely ugly cat
+G:f:w
+I:110:6d8:20:16:5
+W:4:1:100:20
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d7
+B:BITE:HURT:1d7
+F:FEMALE | JOKEANGBAND | 
+F:NO_SLEEP | DROP_CORPSE | EVIL | 
+D:This thing is just butt ugly. Kill it with fire!! 
+
