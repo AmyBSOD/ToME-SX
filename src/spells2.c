@@ -7434,6 +7434,72 @@ void activate_hi_summon(void)
 	}
 }
 
+/* summon monsters, sometimes specific but mostly not --Amy */
+void activate_lohi_summon(void)
+{
+	int i;
+
+	for (i = 0; i < (randint(3)); i++)
+	{
+		switch (randint(100))
+		{
+		case 1:
+		case 2:
+			(void) summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_ANT);
+			break;
+		case 3:
+		case 4:
+			(void) summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_SPIDER);
+			break;
+		case 5:
+		case 6:
+			(void) summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_HOUND);
+			break;
+		case 7:
+		case 8:
+			(void) summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_HYDRA);
+			break;
+		case 9:
+		case 10:
+			(void) summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_ANGEL);
+			break;
+		case 11:
+		case 12:
+			(void) summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_UNDEAD);
+			break;
+		case 13:
+		case 14:
+			(void) summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_DRAGON);
+			break;
+		case 15:
+		case 16:
+			(void) summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_DEMON);
+			break;
+		case 17:
+			(void) summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_WRAITH);
+			break;
+		case 18:
+		case 19:
+			(void) summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_UNIQUE);
+			break;
+		case 20:
+		case 21:
+			(void) summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_HI_UNDEAD);
+			break;
+		case 22:
+		case 23:
+			(void) summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_HI_DRAGON);
+			break;
+		case 24:
+		case 25:
+			(void) summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_HI_DEMON);
+			break;
+		default:
+			(void) summon_specific(p_ptr->py, p_ptr->px, dun_level, 0);
+		}
+	}
+}
+
 
 void summon_cyber(void)
 {

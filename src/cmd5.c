@@ -286,7 +286,7 @@ void do_fart_effect(void)
 	case 25:
 		{
 			msg_print("Monsters appear from nowhere!");
-			activate_hi_summon();
+			activate_lohi_summon();
 
 			break;
 		}
