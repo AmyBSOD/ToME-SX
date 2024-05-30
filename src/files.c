@@ -5036,7 +5036,7 @@ void do_cmd_suicide(void)
 		/* Verify */
 		if (!get_check("Do you really want to quit? ")) return;
 
-		if (!noscore)
+		/* if (!noscore) */ /* fuck you whoever made it so that we don't get this check in a cheating mode! --Amy */
 		{
 			/* Special Verification for suicide */
 			prt("Please verify QUITTING by typing the '@' sign: ", 0, 0);
