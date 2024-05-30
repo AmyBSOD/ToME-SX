@@ -1979,6 +1979,42 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* trap of corruption, by Amy, aka "completely fuck up that stupid player" :-P */
+	case TRAP_OF_CORRUPTION:
+		{
+			msg_print("You feel the dark corruptions of Morgoth coming over you!");
+			(void) gain_random_corruption(0);
+			ident = TRUE;
+			break;
+		}
+
+		/* trap of black breath, by Amy */
+	case TRAP_OF_BLACK_BREATH:
+		{
+			msg_print("You feel the Black Breath slowly draining your life...");
+			p_ptr->black_breath = TRUE;
+			ident = TRUE;
+			break;
+		}
+
+		/* ancient morgothian trap, by Amy, aka "lol darkgod's traps weren't bad enough" :-P */
+	case TRAP_OF_DG_CURSE:
+		{
+			msg_print("Morgoth's evil curse afflicts you.");
+			activate_dg_curse();
+			ident = TRUE;
+			break;
+		}
+
+		/* topi ylinen trap, by Amy */
+	case TRAP_OF_TOPI_YLINEN:
+		{
+			msg_print("An ancient foul curse takes hold of you.");
+			activate_ty_curse();
+			ident = TRUE;
+			break;
+		}
+
 		/* Trap of Divine Anger */
 	case TRAP_OF_DIVINE_ANGER:
 		{

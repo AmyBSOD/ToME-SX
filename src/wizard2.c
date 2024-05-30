@@ -705,7 +705,7 @@ static int wiz_create_itemtype(void)
 	cptr tval_desc2;
 	char ch;
 
-	int choice[60];
+	int choice[75];
 
 	char buf[160];
 
@@ -714,7 +714,7 @@ static int wiz_create_itemtype(void)
 	Term_clear();
 
 	/* Print all tval's and their descriptions */
-	for (num = 0; (num < 60) && tvals[num].tval; num++)
+	for (num = 0; (num < 75) && tvals[num].tval; num++)
 	{
 		wci_string(tvals[num].desc, num);
 	}
@@ -745,7 +745,7 @@ static int wiz_create_itemtype(void)
 	Term_clear();
 
 	/* We have to search the whole itemlist. */
-	for (num = 0, i = 1; (num < 60) && (i < max_k_idx); i++)
+	for (num = 0, i = 1; (num < 75) && (i < max_k_idx); i++)
 	{
 		object_kind *k_ptr = &k_info[i];
 

@@ -2021,8 +2021,9 @@
 #define SV_POTION2_CURE_CRITICAL_SANITY  16
 #define SV_POTION2_CURE_SANITY           17
 #define SV_POTION2_CURE_WATER            18
+#define SV_POTION2_CURE_CORRUPTION       19
 
-#define SV_POTION2_LAST                  18
+#define SV_POTION2_LAST                  19
 
 /* The "sval" codes for TV_FOOD */
 #define SV_FOOD_POISON                   0
@@ -2533,11 +2534,17 @@
 #define TRAP_OF_ACQUIREMENT               170
 
 /* Runescrye */
-#define TRAP_G_ELEC_BOLT                171
-#define TRAP_G_POIS_BOLT                172
-#define TRAP_G_ACID_BOLT                173
-#define TRAP_G_COLD_BOLT                174
-#define TRAP_G_FIRE_BOLT                175
+#define TRAP_G_ELEC_BOLT                  171
+#define TRAP_G_POIS_BOLT                  172
+#define TRAP_G_ACID_BOLT                  173
+#define TRAP_G_COLD_BOLT                  174
+#define TRAP_G_FIRE_BOLT                  175
+
+/* additional traps by Amy */
+#define TRAP_OF_CORRUPTION                176
+#define TRAP_OF_BLACK_BREATH              177
+#define TRAP_OF_DG_CURSE                  178
+#define TRAP_OF_TOPI_YLINEN               179
 
 /*** General index values ***/
 

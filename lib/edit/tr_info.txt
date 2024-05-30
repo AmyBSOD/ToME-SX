@@ -815,3 +815,27 @@ N:175:Greater Fire Bolt Trap
 I:3:60:5:3:6:3d6:g
 D:You are suddenly extremely hot!
 F:FLOOR | CHEST | DOOR | LEVEL1
+
+N:176:Trap of Corruption
+I:10:10:10:25:60:0d0:y
+D:Your body will never be the same again...
+F:FLOOR | CHEST | DOOR
+
+N:177:Trap of Black Breath
+I:4:100:10:25:20:0d0:r
+D:Ugggghh, what a horrible smell!
+F:FLOOR | CHEST | DOOR
+
+N:178:Ancient Morgothian Trap
+I:12:5:10:25:80:0d0:y
+D:Morgoth himself protected this device!
+F:FLOOR | CHEST | DOOR
+
+N:179:Topi Ylinen Trap
+I:10:25:10:25:35:0d0:y
+D:It was protected by an ancient foul curse!
+F:FLOOR | CHEST | DOOR
+
+# I:diff:prob:another:pval:minlevel:damage:color
+# I:diff:prob:            :minlevel:      :color
+

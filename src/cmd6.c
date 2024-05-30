@@ -2491,6 +2491,14 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 				break;
 			}
 
+		case SV_POTION2_CURE_CORRUPTION:
+			{
+				lose_corruption(0);
+				ident = TRUE;
+
+				break;
+			}
+
 		default:
 			{
 				break;
