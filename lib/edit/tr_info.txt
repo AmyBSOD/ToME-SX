@@ -836,6 +836,21 @@ I:10:25:10:25:35:0d0:y
 D:It was protected by an ancient foul curse!
 F:FLOOR | CHEST | DOOR
 
+N:180:Sanity Drain Trap
+I:4:100:50:4:20:0d0:r
+D:Whoops, you feel that you're much less sane than before.
+F:FLOOR | CHEST | DOOR
+
+N:181:Fear Trap
+I:3:100:50:4:2:0d0:r
+D:Something's giving you the creeps.
+F:FLOOR | CHEST | DOOR
+
+N:182:Stunning Trap
+I:4:100:50:4:10:0d0:r
+D:You stagger around aimlessly.
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

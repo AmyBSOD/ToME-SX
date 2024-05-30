@@ -2545,6 +2545,9 @@
 #define TRAP_OF_BLACK_BREATH              177
 #define TRAP_OF_DG_CURSE                  178
 #define TRAP_OF_TOPI_YLINEN               179
+#define TRAP_OF_SANITY_DRAIN              180
+#define TRAP_OF_FEAR                      181
+#define TRAP_OF_STUNNING                  182
 
 /*** General index values ***/
 

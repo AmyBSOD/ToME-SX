@@ -1061,6 +1061,30 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_SANITY_DRAIN:
+		{
+			cmsg_print(TERM_VIOLET, "You're going insane!");
+			take_sanity_hit(randint(50) + p_ptr->lev, "a trap of sanity draining");
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_FEAR:
+		{
+			msg_format("You get the cold shivers.");
+			set_afraid(p_ptr->afraid + 50 + randint(200));
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_STUNNING:
+		{
+			msg_format("You stagger...");
+			(void)set_stun(p_ptr->stun + randint(50) + p_ptr->lev);
+			ident = TRUE;
+			break;
+		}
+
 		/* Trap of Calling Out */
 	case TRAP_OF_CALLING_OUT:
 		{
