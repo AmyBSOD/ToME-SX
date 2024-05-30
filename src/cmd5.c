@@ -178,7 +178,7 @@ void do_poly_wounds(void)
 void do_fart_effect(void)
 {
 
-	switch (randint(56))
+	switch (randint(57))
 	{
 	case 1:
 	case 2:
@@ -468,10 +468,27 @@ void do_fart_effect(void)
 			break;
 		}
 
+	case 57:
+		{
+			if (p_ptr->hold_life)
+			{
+				msg_print("You feel your life slipping away!");
+				lose_exp(p_ptr->exp / 100);
+			}
+			else
+			{
+				msg_print("You feel your life draining away!");
+				lose_exp(p_ptr->exp / 16);
+			}
+
+			break;
+		}
+
 	default:
 		{
 			msg_print("An ancient foul curse afflicts you...");
 			activate_ty_curse();
+			break;
 		}
 	}
 
