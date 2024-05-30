@@ -3706,8 +3706,8 @@ void calc_bonuses(bool silent)
 		if (archery != -1)
 		{
 			p_ptr->to_h_ranged += get_skill_scale(archery, 25);
-			p_ptr->num_fire += (get_skill(archery) / 16);
-			p_ptr->xtra_might += (get_skill(archery) / 25);
+			p_ptr->num_fire += (get_skill(archery) / 25);
+			p_ptr->xtra_might += (get_skill(SKILL_ARCHERY) / 50);
 			switch (archery)
 			{
 			case SKILL_SLING:
@@ -3721,7 +3721,6 @@ void calc_bonuses(bool silent)
 				break;
 			case SKILL_BOOMERANG:
 				p_ptr->xtra_might += get_skill(archery) / 10;
-				p_ptr->to_d_ranged += get_skill(SKILL_DRUID);
 				break;
 			}
 		}
@@ -3731,6 +3730,22 @@ void calc_bonuses(bool silent)
 
 		/* Require at least one shot */
 		if (p_ptr->num_fire < 1) p_ptr->num_fire = 1;
+	}
+	if (o_ptr->k_idx)
+	{
+		int archery = get_archery_skill();
+
+		if (archery != -1)
+		{
+			p_ptr->to_d_ranged += get_skill(SKILL_RANGEDPOWER);
+
+			switch (archery)
+			{
+				case SKILL_BOOMERANG:
+					p_ptr->to_d_ranged += get_skill(SKILL_DRUID);
+					break;
+			}
+		}
 	}
 
 	if (PRACE_FLAG(PR1_XTRA_MIGHT_BOW) && p_ptr->tval_ammo == TV_ARROW)
@@ -3795,10 +3810,10 @@ void calc_bonuses(bool silent)
 
 		/* Weapon specialization bonus blows */
 		if (get_weaponmastery_skill() != -1)
-			p_ptr->num_blow += get_skill_scale(get_weaponmastery_skill(), 2);
+			p_ptr->num_blow += (get_skill(get_weaponmastery_skill()) / 40);
 
 		/* Bonus blows for plain weaponmastery skill */
-		p_ptr->num_blow += get_skill_scale(SKILL_MASTERY, 3);
+		p_ptr->num_blow += (get_skill(SKILL_MASTERY) / 30);
 
 		/* Require at least one blow */
 		if (p_ptr->num_blow < 1) p_ptr->num_blow = 1;
@@ -3897,12 +3912,20 @@ void calc_bonuses(bool silent)
 		int lev = get_skill(get_weaponmastery_skill());
 
 		p_ptr->to_h_melee += lev;
-		p_ptr->to_d_melee += lev / 2;
+		p_ptr->to_d_melee += lev / 3;
 	}
 
 	if (get_skill(SKILL_COMBAT))
 	{
-		int lev = get_skill_scale(SKILL_COMBAT, 10);
+		int lev = get_skill_scale(SKILL_COMBAT, 5);
+
+		p_ptr->to_d += lev;
+		p_ptr->dis_to_d += lev;
+	}
+
+	if (get_skill(SKILL_MASTERY))
+	{
+		int lev = get_skill_scale(SKILL_MASTERY, 5);
 
 		p_ptr->to_d += lev;
 		p_ptr->dis_to_d += lev;

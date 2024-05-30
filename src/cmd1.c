@@ -2762,8 +2762,23 @@ void py_attack(int y, int x, int max_blow)
 								}
 							}
 
+							/* Impale, by Amy - slows down enemies, more often if weapon is heavy
+							 * we want low proc chance values though or it'll be OP */
+							if ((o_ptr->tval == TV_POLEARM) && (get_skill(SKILL_IMPALE) >= 1) ) {
+								int slowdown = get_skill_scale(SKILL_IMPALE, 5) + 1;
+
+								if (randint(1500 + o_ptr->weight + get_skill(SKILL_IMPALE)) > 1500) {
+									msg_format("You impale %s!", m_name);
+									if (m_ptr->mspeed > 100) m_ptr->mspeed -= slowdown;
+									else if (m_ptr->mspeed > 90) m_ptr->mspeed -= (slowdown / 2);
+									else if (m_ptr->mspeed > 80) m_ptr->mspeed -= (slowdown / 3);
+									else if (m_ptr->mspeed > 70) m_ptr->mspeed -= (slowdown / 4);
+									else if (m_ptr->mspeed > 60) m_ptr->mspeed -= (slowdown / 5);
+								}
+							}
+
 							/* Chopping, by Amy - flat 30% chance */
-							if (magik(30) && (o_ptr->tval == TV_AXE)) {
+							if (magik(30) && (get_skill(SKILL_CHOPPING) >= 1) && (o_ptr->tval == TV_AXE)) {
 								if (!(r_ptr->flags4 & (RF4_BR_SHAR)) ) { /* shards breathers resist */
 									int tmp;
 									tmp = get_skill_scale(SKILL_CHOPPING, 40) + 1;

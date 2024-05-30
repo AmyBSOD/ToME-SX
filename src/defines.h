@@ -4659,6 +4659,8 @@ extern int PlayerUID;
 #define SKILL_CHOPPING          61
 #define SKILL_WEIGHTLIFTING     62
 #define SKILL_CLEANING          63
+#define SKILL_IMPALE            64
+#define SKILL_RANGEDPOWER       65
 
 /* Ugly but needed */
 #define MAX_SKILLS              200
