@@ -2548,6 +2548,7 @@
 #define TRAP_OF_SANITY_DRAIN              180
 #define TRAP_OF_FEAR                      181
 #define TRAP_OF_STUNNING                  182
+#define TRAP_OF_FARTING                   183
 
 /*** General index values ***/
 

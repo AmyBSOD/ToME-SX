@@ -461,6 +461,10 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 	s16b k, l;
 
+	/* Amy: for fart trap, determine the name; sadly the "trap" struct doesn't have extra fields here, unlike SLEX */
+	int fartingnumber = x + y; /* so we're using the x,y position to determine it */
+	int fartingtype = randint(2);
+
 	trap = cave[y][x].t_idx;
 
 	if (i_ptr != NULL)
@@ -475,6 +479,199 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 	switch (trap)
 	{
+
+	case TRAP_OF_FARTING:
+
+		/* one of the possible effects is trap creation... so make sure it doesn't ID some other trap! --Amy */
+		t_info[trap].ident = TRUE;
+		ident = FALSE;
+
+		while (fartingnumber < 1) fartingnumber = 43;
+		while (fartingnumber > 43) fartingnumber -= 43;
+
+		switch (fartingnumber) {
+
+			case 1:
+				msg_format("Kati produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 2:
+				msg_format("Maurah produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 3:
+				msg_format("Eveline produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 4:
+				msg_format("Larissa produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 5:
+				msg_format("Sandra produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 6:
+				msg_format("Meltem produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 7:
+				msg_format("Kerstin produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 8:
+				msg_format("Karin produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 9:
+				msg_format("Ina produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 10:
+				msg_format("Lou produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 11:
+				msg_format("Lisa produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 12:
+				msg_format("Miriam produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 13:
+				msg_format("Elena produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 14:
+				msg_format("Katharina produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 15:
+				msg_format("Simone produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 16:
+				msg_format("Jasieen produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 17:
+				msg_format("Marike produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 18:
+				msg_format("Sue Lyn produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 19:
+				msg_format("Marleen produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 20:
+				msg_format("Claudia produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 21:
+				msg_format("Ksenia produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+
+			case 22:
+				msg_format("Nadja produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "tender" : "soft");
+				break;
+
+			case 23:
+				msg_format("Mailie produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "tender" : "soft");
+				break;
+
+			case 24:
+				msg_format("Elif produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "tender" : "soft");
+				break;
+
+			case 25:
+				msg_format("Solvejg produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "tender" : "soft");
+				break;
+
+			case 26:
+				msg_format("Sueschen produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "tender" : "soft");
+				break;
+
+			case 27:
+				msg_format("Jessica produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "tender" : "soft");
+				break;
+
+			case 28:
+				msg_format("Yvonne produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "tender" : "soft");
+				break;
+
+			case 29:
+				msg_format("Patricia produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "tender" : "soft");
+				break;
+
+			case 30:
+				msg_format("Jennifer produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "tender" : "soft");
+				break;
+
+			case 31:
+				msg_format("Inge produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "tender" : "soft");
+				break;
+
+			case 32:
+				msg_format("Sarah produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "tender" : "soft");
+				break;
+
+			case 33:
+				msg_format("Birgit produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "tender" : "soft");
+				break;
+
+			case 34:
+				msg_format("Sunali produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "loud" : "disgusting");
+				break;
+
+			case 35:
+				msg_format("Thai produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "loud" : "disgusting");
+				break;
+
+			case 36:
+				msg_format("Klara produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "loud" : "disgusting");
+				break;
+
+			case 37:
+				msg_format("Ludgera produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "loud" : "disgusting");
+				break;
+
+			case 38:
+				msg_format("Johanetta produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "loud" : "disgusting");
+				break;
+
+			case 39:
+				msg_format("Antje produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "loud" : "disgusting");
+				break;
+
+			case 40:
+				msg_format("Ruea produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "loud" : "disgusting");
+				break;
+
+			case 41:
+				msg_format("Mariya produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "loud" : "disgusting");
+				break;
+
+			case 42:
+				msg_format("Wendy produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "loud" : "disgusting");
+				break;
+
+			case 43:
+				msg_format("Katia produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "loud" : "disgusting");
+				break;
+
+			default:
+				msg_format("Sandra produces %s farting noises with her sexy butt.", (fartingtype == 1) ? "squeaky" : "beautiful");
+				break;
+		}
+
+		do_fart_effect();
+
+		break;
+
 		/* stat traps */
 	case TRAP_OF_WEAKNESS_I:
 		ident = do_dec_stat(A_STR, STAT_DEC_TEMPORARY);

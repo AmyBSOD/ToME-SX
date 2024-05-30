@@ -3353,8 +3353,9 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 		/* Destroy Traps (and Locks) */
 	case GF_KILL_TRAP:
 		{
-			/* Destroy normal traps and disarm monster traps */
-			if ((c_ptr->t_idx != 0) || (c_ptr->feat == FEAT_MON_TRAP))
+			/* Destroy normal traps and disarm monster traps
+			 * Amy note: like in SLEX, fart traps are immune */
+			if (((c_ptr->t_idx != 0) || (c_ptr->feat == FEAT_MON_TRAP)) && c_ptr->t_idx != TRAP_OF_FARTING )
 			{
 				/* Check line of sight */
 				if (player_has_los_bold(y, x))
@@ -3438,7 +3439,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				c_ptr->info &= ~(CAVE_MARK | CAVE_TRDT);
 
 				/* Remove normal traps */
-				c_ptr->t_idx = 0;
+				if (c_ptr->t_idx != TRAP_OF_FARTING) c_ptr->t_idx = 0;
 
 				/* Disarm monster traps */
 				if (c_ptr->feat == FEAT_MON_TRAP)

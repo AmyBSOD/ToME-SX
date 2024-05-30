@@ -816,6 +816,8 @@ I:3:60:5:3:6:3d6:g
 D:You are suddenly extremely hot!
 F:FLOOR | CHEST | DOOR | LEVEL1
 
+# traps by Amy
+
 N:176:Trap of Corruption
 I:10:10:10:25:60:0d0:y
 D:Your body will never be the same again...
@@ -850,6 +852,11 @@ N:182:Stunning Trap
 I:4:100:50:4:10:0d0:r
 D:You stagger around aimlessly.
 F:FLOOR | CHEST | DOOR
+
+N:183:Fart Trap
+I:11:100:50:4:1:0d0:v
+D:A sexy girl has protected this.
+F:FLOOR
 
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
