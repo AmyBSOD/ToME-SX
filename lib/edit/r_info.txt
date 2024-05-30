@@ -64862,3 +64862,306 @@ D:Her powerful farting gas will intoxicate you, making you completely
 D:unable to fight back, and ultimately you're going to become her slave. 
 D:Don't try to defeat her unless you REALLY know what you're doing. 
 
+N:3757:Wendy's feminine pants
+G:N:r
+I:105:18d5:50:5:100
+W:18:10:50:180
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:ENGULF:HURT:3d12
+F:RAND_25 | FEMALE | BASEANGBAND | ELDRITCH_HORROR | CAN_FLY | 
+F:IM_POIS | REFLECTING
+S:1_IN_10 | 
+S:MIND_BLAST
+D:These female pants look pretty sexy. You'd love to feel them up. 
+
+N:3758:Sarah's airtight pants
+G:N:B
+I:110:10d5:80:100:20
+W:10:10:50:100
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:ENGULF:UN_POWER:6d12
+F:RAND_25 | FEMALE | BASEANGBAND | CAN_FLY | IM_ELEC | IM_COLD |
+F:IM_POIS | NO_SLEEP
+S:1_IN_10 | 
+S:MIND_BLAST | ARROW_2
+D:Uh-oh, these soft pants are airtight, and will release all the 
+D:stored farting gas inside when attacking you! 
+
+N:3759:Greta's string tanga
+G:N:D
+I:115:17d5:200:60:90
+W:17:10:50:170
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:ENGULF:HURT:7d7
+F:RAND_25 | FEMALE | BASEANGBAND | CAN_FLY | IM_FIRE | IM_COLD | DEMON
+S:1_IN_10 | 
+S:MIND_BLAST | BR_SOUN | CAUSE_2
+D:These sexy pants are incidentally looking exactly like Lisa's. 
+D:You'd be forgiven for thinking they were just as harmless, though. 
+
+N:3760:Mariya's erotic underwear
+G:N:D
+I:108:16d5:40:45:200
+W:16:10:50:160
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:ENGULF:UN_BONUS:1d10
+F:RAND_25 | FEMALE | BASEANGBAND | CAN_FLY
+S:1_IN_10 | 
+S:MIND_BLAST | SHRIEK
+D:A sexy set of female pants. 
+
+N:3761:Elena's sexy pants
+G:N:w
+I:108:20d5:200:150:0
+W:20:10:50:200
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:ENGULF:HURT:6d7
+F:RAND_25 | FEMALE | BASEANGBAND | CAN_FLY | IM_COLD | IM_FIRE | 
+F:NO_SLEEP
+S:1_IN_10 | 
+S:MIND_BLAST
+D:Wow, you absolutely love the soft cotton that this set of white pants 
+D:is made of. They're incredibly sexy. Thinking about how they cover 
+D:the erotic buttocks of Elena makes you all wet between the legs... 
+
+N:3762:Katharina's sexy pants
+G:N:w
+I:105:20d5:200:180:100
+W:20:10:50:200
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:ENGULF:TERRIFY:7d5
+F:RAND_25 | FEMALE | BASEANGBAND | CAN_FLY | IM_COLD | NO_SLEEP
+S:1_IN_10 | 
+S:MIND_BLAST
+D:You love these beautiful feminine pants. 
+
+N:3763:Ludgera's bridal challenge pants
+G:N:w
+I:110:7d5:200:34:40
+W:7:10:50:70
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:ENGULF:LOSE_CON:2d2
+B:ENGULF:LOSE_DEX:2d2
+B:ENGULF:EAT_ITEM:2d2
+B:ENGULF:EAT_GOLD:2d2
+F:RAND_25 | FEMALE | BASEANGBAND | CAN_FLY | IM_COLD
+S:1_IN_10 | 
+S:MIND_BLAST
+D:Eww, these worn female pants are really stinky. And they intentionally try 
+D:to float around in front of your nose. 
+
+N:3764:Lisa's string tanga
+G:N:D
+I:110:10d5:100:35:20
+W:10:10:50:100
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:ENGULF:HURT:3d7
+F:RAND_25 | FEMALE | BASEANGBAND | CAN_FLY | IM_COLD
+S:1_IN_10 | 
+S:MIND_BLAST
+D:Lovely female underwear that wants to do combat with you. 
+
+N:3765:Katia's soft underwear
+G:N:w
+I:90:5d5:50:0:50
+W:5:10:50:50
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:ENGULF:HURT:2d2
+F:RAND_25 | FEMALE | BASEANGBAND | CAN_FLY | IM_POIS | IM_ACID
+S:1_IN_10 | 
+S:MIND_BLAST
+D:These female pants are rather innocuous. 
+
+N:3766:Katharina's white socks
+G:x:w
+I:105:30d8:100:100:100
+W:30:10:25:300
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:SPORE:HURT:4d8
+B:SPORE:PARALYZE:1d6
+F:RAND_50 | FEMALE | BASEANGBAND | CAN_FLY | REFLECTING | IM_COLD |
+F:NO_SLEEP | IM_POIS
+S:1_IN_10 | 
+S:HOLD | BO_ICEE
+D:These white socks smell really sweaty. But you're curious, how long 
+D:can you smell them before you lose consciousness? 
+
+N:3767:Katrin's scentful socks
+G:x:v
+I:108:20d8:80:66:40
+W:20:10:25:200
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:SPORE:INSANITY:2d12
+B:SPORE:HURT:6d12
+F:RAND_50 | FEMALE | BASEANGBAND | CAN_FLY | IM_POIS | NO_SLEEP | 
+F:REGENERATE
+S:1_IN_10 | 
+S:HOLD
+D:It's gonna be really exhilirating to smell these sweaty girl's socks, 
+D:because their stench is pretty powerful. 
+
+N:3768:Laura's white socks
+G:x:w
+I:115:8d8:30:45:140
+W:8:10:25:80
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:SPORE:COLD:4d3
+F:RAND_50 | FEMALE | BASEANGBAND | ELDRITCH_HORROR | CAN_FLY | IM_COLD
+S:1_IN_10 | 
+S:HOLD
+D:A pair of girl's socks that looks cute, but also smells rather sweaty. 
+D:Your head becomes rather dizzy from their presence... 
+
+N:3769:Magdalena's green socks
+G:x:g
+I:108:8d8:60:50:50
+W:8:10:25:80
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:SPORE:POISON:2d11
+F:RAND_50 | FEMALE | BASEANGBAND | CAN_FLY | IM_POIS
+S:1_IN_10 | 
+S:HOLD
+D:These green socks look incredibly cute and emit a rather strong smell 
+D:of sweaty female feet, which you definitely want to inhale all day. 
+
+N:3770:Marian's lilac socks
+G:x:v
+I:105:14d8:0:75:200
+W:14:10:25:140
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:SPORE:DISEASE:6d8
+F:RAND_50 | FEMALE | BASEANGBAND | CAN_FLY | IM_POIS
+S:1_IN_10 | 
+S:HOLD
+D:Very cute lilac socks that have been worn by a girl. But... oh no! 
+D:They're covered with tiny anthrax spores! Suddenly you don't want to 
+D:touch them anymore... 
+
+N:3771:Eva's red socks
+G:x:R
+I:110:12d8:30:25:100
+W:12:10:25:120
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:SPORE:HURT:4d7
+F:RAND_50 | FEMALE | BASEANGBAND | CAN_FLY | IM_FIRE
+S:1_IN_10 | 
+S:HOLD
+D:They just look so innocuous and cute, you can't bring yourself to harm them. 
+
+N:3772:Monika's yellow socks
+G:x:y
+I:100:10d8:80:48:75
+W:10:10:25:100
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:SPORE:ACID:4d6
+F:RAND_50 | FEMALE | BASEANGBAND | CAN_FLY | IM_ACID
+S:1_IN_10 | 
+S:HOLD
+D:They look quite erotic. And they also emit an exciting, feminine smell... 
+
+N:3773:Jil's scentful socks
+G:x:U
+I:110:6d8:200:24:100
+W:6:10:25:60
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:SPORE:HURT:2d2
+F:RAND_50 | FEMALE | BASEANGBAND | CAN_FLY | IM_COLD | IM_POIS | NO_SLEEP
+S:1_IN_10 | 
+S:HOLD
+D:Jil is gonna tell you that her socks supposedly emit a beguiling odor, 
+D:although you can't help but feel that they stink. Because their owner 
+D:was wearing them for months while constantly having them enclosed by 
+D:thick shoes. 
+
+N:3774:Jane's blue socks
+G:x:b
+I:112:6d8:40:40:70
+W:6:10:25:60
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:SPORE:ELEC:2d3
+F:RAND_50 | FEMALE | BASEANGBAND | CAN_FLY | IM_ELEC
+S:1_IN_10 | 
+S:HOLD
+D:They look really cute and innocuous. 
+
+N:3775:Nora's red socks
+G:x:R
+I:125:5d8:100:40:150
+W:5:10:25:50
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:SPORE:FIRE:1d10
+F:RAND_50 | FEMALE | BASEANGBAND | CAN_FLY | IM_FIRE | NO_SLEEP |
+F:NEVER_MOVE
+S:1_IN_10 | 
+S:HOLD
+D:You feel that these cute red socks are important to their owner. 
+
+N:3776:Great Instadeath Wyrm
+G:D:s
+I:120:50d100:30:150:80
+W:67:5:190000:23000
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:4d12
+B:CLAW:HURT:4d12
+B:BITE:SHATTER:6d14
+B:BITE:SHATTER:6d14
+F:FORCE_SLEEP | FORCE_MAXHP | CAN_FLY | 
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD | 
+F:BASH_DOOR | POWERFUL | MOVE_BODY | DROP_CORPSE | 
+F:EVIL | DRAGON | IM_ACID | NO_CONF | NO_SLEEP | BASEANGBAND | HAS_LITE
+F:ATTR_MULTI
+S:1_IN_4 | 
+S:BLIND | CONF | SCARE | 
+S:BR_DISI
+D:A huge and very powerful dragon. Its breath is causing everything to 
+D:crumble. You don't want to get hit by that! 
+
+N:3777:Killer borer beetle
+G:K:B
+I:110:5d21:14:85:30
+W:20:2:500:120
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:4d6
+B:BITE:HURT:4d6
+F:WEIRD_MIND | BASH_DOOR | BASEANGBAND |
+F:ANIMAL | IM_ELEC | IM_FIRE | IM_POIS |
+F:KILL_WALL | DROP_CORPSE |
+D:It is a beetle with sharp mandibles and a steely carapace.
+
+N:3778:Killer katana
+G:|:v
+I:135:80d10:17:150:5
+W:80:20:0:50000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:5d12
+B:HIT:HURT:5d12
+B:HIT:HURT:5d12
+B:HIT:HURT:5d12
+F:CHAR_MULTI | FORCE_SLEEP | DROP_90 |
+F:EMPTY_MIND | CAN_FLY | BASEANGBAND |
+F:NONLIVING | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS | RES_WATE | RES_NETH |
+F:RES_NEXU | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+D:You thought death swords were bad? Well, meet the killer katana! 
+
