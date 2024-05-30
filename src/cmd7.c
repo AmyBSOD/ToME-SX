@@ -5145,6 +5145,16 @@ void do_cmd_possessor()
 		}
 		else
 		{
+			/* Amy: bluh that's such horribad design... all you get is "do you want to use your racial powers or
+			 * your incarnating powers?" and there is ZERO indication that using the latter makes you lose your body
+			 * and be set to 1 HP with NO body to snatch unless there happens to be one nearby!
+			 * How many players who are unfamiliar with possession have lost the game because they wanted to try out
+			 * this badly-documented ability and didn't know they had to make sure there was a body available??? */
+			if (!get_check("Do you really want to leave your body? "
+				                "(beware, it'll be destroyed!) "))
+			{
+					return;
+			}
 			do_cmd_leave_body(TRUE);
 		}
 	}
