@@ -19,6 +19,35 @@ void inc_piety(int god, s32b amt)
 {
 	s32b old = p_ptr->grace;
 
+	/* valarin and nether skills, by Amy; I have no idea what they used to do, apart from modifying the damage done
+	 * to you by hellfire/holy fire, but decided they should modify your piety gain/loss */
+	bool goodgod = TRUE;
+	if (god == GOD_AMYBSOD || god == GOD_MELKOR) goodgod = FALSE;
+
+	/* valarin skill is for good goods (Eru, Yavanna, Manwe, Tulkas, Ulmo, Aule, Mandos, Varda)
+	 * nether skill is for evil gods (Melkor, Amy)
+	 * the skill for your god increases both piety gain and loss, so it can be a double-edged sword
+	 * the skill that isn't for your god will reduce piety loss, which can couteract the negatives of the former skill
+	 * that way, neither of the two skills will be useless, unless your char is an atheist */
+
+	if (goodgod) {
+		amt *= (50 + get_skill(SKILL_VALARIN));
+		amt /= 50;
+		if (amt < 0) {
+			amt *= (100 - get_skill_scale(SKILL_NETHER, 20));
+			amt /= 100;
+			if (amt == 0) amt = -1; /* fail safe */
+		}
+	} else {
+		amt *= (50 + get_skill(SKILL_NETHER));
+		amt /= 50;
+		if (amt < 0) {
+			amt *= (100 - get_skill_scale(SKILL_VALARIN, 20));
+			amt /= 100;
+			if (amt == 0) amt = -1; /* fail safe */
+		}
+	}
+
 	if ((god == GOD_ALL) || (god == p_ptr->pgod))
 	{
 		set_grace(p_ptr->grace + amt);

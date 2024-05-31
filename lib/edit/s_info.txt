@@ -373,6 +373,18 @@ D:General ability to use spiritual skills and also influence your Saving Throw
 I:1000
 F:RANDOM_GAIN
 
+N:66:Valarin
+D:Increases piety gain and loss multipliers for "good" gods
+D:Reduces piety loss multipliers for "evil" gods
+I:1000
+F:RANDOM_GAIN
+
+N:67:Nether
+D:Increases piety gain and loss multipliers for "evil" gods
+D:Reduces piety loss multipliers for "good" gods
+I:1000
+F:RANDOM_GAIN
+
 N:53:Prayer
 D:Ability to learn and use spells from the gods' schools
 D:Spells use the wisdom stat and cost piety instead of mana
@@ -413,6 +425,8 @@ f:Druidistic:Spirituality%10
 f:Cleaning:Spirituality%10
 f:Mindcraft:Spirituality%10
 f:Music:Spirituality%10
+f:Valarin:Spirituality%5
+f:Nether:Spirituality%5
 
 f:Prayer:Magic%10
 f:Druidistic:Magic%10
@@ -616,6 +630,8 @@ T:Spirituality:Mindcraft
 T:Spirituality:Music
 T:Spirituality:Druidistic
 T:Spirituality:Cleaning
+T:Spirituality:Valarin
+T:Spirituality:Nether
 
 T:Main:Monster-lore
 T:Monster-lore:Summoning

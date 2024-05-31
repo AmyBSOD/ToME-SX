@@ -27,14 +27,14 @@
 /*
  * Max sizes of the following arrays
  */
-#define MAX_ROCKS      62       /* Used with rings (min 58) */
-#define MAX_AMULETS    34       /* Used with amulets (min 30) */
-#define MAX_WOODS      35       /* Used with staffs (min 32) */
-#define MAX_METALS     39       /* Used with wands/rods (min 32/30) */
-#define MAX_COLORS     66       /* Used with potions (min 62) */
+#define MAX_ROCKS      76       /* Used with rings (min 58) */
+#define MAX_AMULETS    44       /* Used with amulets (min 30) */
+#define MAX_WOODS      63       /* Used with staffs (min 32) */
+#define MAX_METALS     65       /* Used with wands/rods (min 32/30) */
+#define MAX_COLORS     86       /* Used with potions (min 62) */
 #define MAX_SHROOM     20       /* Used with mushrooms (min 20) */
-#define MAX_TITLES     55       /* Used with scrolls (min 55) */
-#define MAX_SYLLABLES 164       /* Used with scrolls (see below) */
+#define MAX_TITLES     85       /* Used with scrolls (min 55) */
+#define MAX_SYLLABLES 280       /* Used with scrolls (see below) */
 
 
 /*
@@ -57,6 +57,9 @@ static cptr ring_adj[MAX_ROCKS] =
 	"Plain", "Brass", "Scarab", "Shining",
 	"Rusty", "Transparent", "Copper", "Black Opal", "Nickel",
 	"Glass", "Fluorspar", "Agate",
+	"Kunzite", "Enamel", "Elysium", "Diametrine", "Andalusite", 
+	"Jacinth", "Citrine", "Chrysoberyl", "Thallium", "Cobalt", 
+	"Rhinestone", "Black Pearl", "Tourmaline", "Sandstone"
 };
 
 static byte ring_col[MAX_ROCKS] =
@@ -74,7 +77,10 @@ static byte ring_col[MAX_ROCKS] =
 	TERM_BLUE, TERM_GREEN, TERM_YELLOW, TERM_ORANGE,
 	TERM_YELLOW, TERM_ORANGE, TERM_L_GREEN, TERM_YELLOW,
 	TERM_RED, TERM_WHITE, TERM_UMBER, TERM_L_DARK, TERM_L_WHITE,
-	TERM_WHITE, TERM_BLUE, TERM_L_WHITE
+	TERM_WHITE, TERM_BLUE, TERM_L_WHITE,
+	TERM_VIOLET, TERM_YELLOW, TERM_L_BLUE, TERM_BLUE, TERM_L_BLUE, 
+	TERM_ORANGE, TERM_ORANGE, TERM_YELLOW, TERM_UMBER, TERM_L_BLUE, 
+	TERM_VIOLET, TERM_L_DARK, TERM_ORANGE, TERM_RED
 };
 
 
@@ -90,7 +96,9 @@ static cptr amulet_adj[MAX_AMULETS] =
 	"Copper", "Amethyst", "Mithril", "Sapphire", "Dragon Tooth",
 	"Carved Oak", "Sea Shell", "Flint Stone", "Ruby", "Scarab",
 	"Origami Paper", "Meteoric Iron", "Platinum", "Glass", "Beryl",
-	"Malachite", "Adamantite", "Mother-of-pearl", "Runed"
+	"Malachite", "Adamantite", "Mother-of-pearl", "Runed",
+	"Signet", "Oblong", "Chrome", "Lariat", "Pebble", 
+	"Megane", "Ether", "Nano", "Alloy", "Lustrous"
 };
 
 static byte amulet_col[MAX_AMULETS] =
@@ -101,7 +109,9 @@ static byte amulet_col[MAX_AMULETS] =
 	TERM_L_UMBER, TERM_VIOLET, TERM_L_BLUE, TERM_BLUE, TERM_L_WHITE,
 	TERM_UMBER, TERM_L_BLUE, TERM_SLATE, TERM_RED, TERM_L_GREEN,
 	TERM_WHITE, TERM_L_DARK, TERM_L_WHITE, TERM_WHITE, TERM_L_GREEN,
-	TERM_GREEN, TERM_VIOLET, TERM_L_WHITE, TERM_UMBER
+	TERM_GREEN, TERM_VIOLET, TERM_L_WHITE, TERM_UMBER,
+	TERM_L_BLUE, TERM_SLATE, TERM_L_DARK, TERM_YELLOW, TERM_L_DARK, 
+	TERM_BLUE, TERM_L_BLUE, TERM_GREEN, TERM_ORANGE, TERM_L_BLUE
 };
 
 
@@ -117,7 +127,14 @@ static cptr staff_adj[MAX_WOODS] =
 	"Maple", "Mulberry", "Oak", "Pine", "Redwood",
 	"Rosewood", "Spruce", "Sycamore", "Teak", "Walnut",
 	"Mistletoe", "Hawthorn", "Bamboo", "Silver", "Runed",
-	"Golden", "Ashen", "Gnarled", "Ivory", "Willow"
+	"Golden", "Ashen", "Gnarled", "Ivory", "Willow",
+	"Serpentine", "Cinnabar", "Ebony", "Timber", "Wooden", 
+	"Stoutwood", "Alabaster", "Lavender", "Viridian", "Cerulean", 
+	"Saffron", "Fuchsia", "Pallet", "Avocadowood", "Cherry", 
+	"Holly", "Kukui Wood", "Manzanita", "Persimmon Wood", "Pecan", 
+	"Wintry", "Poplar", "Zebrawood", "Wicker", "Plywood", 
+	"Tamarack", "Whitewood", "Basswood"
+
 };
 
 static byte staff_col[MAX_WOODS] =
@@ -128,7 +145,14 @@ static byte staff_col[MAX_WOODS] =
 	TERM_L_UMBER, TERM_L_UMBER, TERM_L_UMBER, TERM_L_UMBER, TERM_RED,
 	TERM_RED, TERM_L_UMBER, TERM_L_UMBER, TERM_L_UMBER, TERM_UMBER,
 	TERM_GREEN, TERM_L_UMBER, TERM_L_UMBER, TERM_L_WHITE, TERM_UMBER,
-	TERM_YELLOW, TERM_SLATE, TERM_UMBER, TERM_L_WHITE, TERM_L_UMBER
+	TERM_YELLOW, TERM_SLATE, TERM_UMBER, TERM_L_WHITE, TERM_L_UMBER,
+	TERM_L_BLUE, TERM_ORANGE, TERM_UMBER, TERM_L_UMBER, TERM_UMBER, 
+	TERM_YELLOW, TERM_L_UMBER, TERM_VIOLET, TERM_GREEN, TERM_L_BLUE, 
+	TERM_ORANGE, TERM_RED, TERM_VIOLET, TERM_GREEN, TERM_ORANGE, 
+	TERM_VIOLET, TERM_L_DARK, TERM_L_UMBER, TERM_GREEN, TERM_YELLOW, 
+	TERM_L_BLUE, TERM_WHITE, TERM_SLATE, TERM_RED, TERM_RED, 
+	TERM_L_DARK, TERM_WHITE, TERM_VIOLET
+
 };
 
 
@@ -145,7 +169,12 @@ static cptr wand_adj[MAX_METALS] =
 	"Nickel-Plated", "Silver-Plated", "Steel-Plated", "Tin-Plated", "Zinc-Plated",
 	"Mithril-Plated", "Mithril", "Runed", "Bronze", "Brass",
 	"Platinum", "Lead", "Lead-Plated", "Ivory" , "Adamantite",
-	"Uridium", "Long", "Short", "Hexagonal"
+	"Uridium", "Long", "Short", "Hexagonal", "Icosahedral", 
+	"Uranium", "Curved", "Octagonal", "Dodecagonal", "Bent", 
+	"Orichalcum", "Electrum", "Conundrum", "Tetragonal", "Trigonal", 
+	"Cubic", "Orthorhombic", "Skew", "Oblique", "Monoclinic", 
+	"Triclinic", "Angular", "Pentagonal", "Beryllium", "Mercury", 
+	"Bauxite", "Cavorite", "Diffuse", "Plutonium", "Asbestos"
 };
 
 static byte wand_col[MAX_METALS] =
@@ -157,7 +186,12 @@ static byte wand_col[MAX_METALS] =
 	TERM_L_UMBER, TERM_L_WHITE, TERM_L_WHITE, TERM_L_WHITE, TERM_L_WHITE,
 	TERM_L_BLUE, TERM_L_BLUE, TERM_UMBER, TERM_L_UMBER, TERM_L_UMBER,
 	TERM_WHITE, TERM_SLATE, TERM_SLATE, TERM_WHITE, TERM_VIOLET,
-	TERM_L_RED, TERM_L_BLUE, TERM_BLUE, TERM_RED
+	TERM_L_RED, TERM_L_BLUE, TERM_BLUE, TERM_RED, TERM_YELLOW, 
+	TERM_L_BLUE, TERM_L_BLUE, TERM_L_BLUE, TERM_L_BLUE, TERM_L_GREEN, 
+	TERM_L_BLUE, TERM_YELLOW, TERM_L_GREEN, TERM_L_GREEN, TERM_VIOLET, 
+	TERM_RED, TERM_VIOLET, TERM_L_DARK, TERM_L_BLUE, TERM_ORANGE, 
+	TERM_YELLOW, TERM_YELLOW, TERM_ORANGE, TERM_L_GREEN, TERM_SLATE, 
+	TERM_SLATE, TERM_BLUE, TERM_L_DARK, TERM_SLATE, TERM_L_GREEN
 };
 
 
@@ -213,6 +247,10 @@ static cptr potion_adj[MAX_COLORS] =
 	"Pungent", "Clotted Red", "Viscous Pink", "Oily Yellow", "Gloopy Green",
 	"Shimmering", "Coagulated Crimson", "Yellow Speckled", "Gold",
 	"Manly", "Stinking", "Oily Black", "Ichor", "Ivory White", "Sky Blue",
+	"Effervescent", "Luminescent", "Muddy", "Iridescent", "Simmering", 
+	"Manky", "Bubbly", "Swirly", "Steamy", "Gooey", 
+	"Fluorescent", "Fuming", "Sizzling", "Syrup", "Frothing", 
+	"Dimly Shining", "Glossy White", "Caustic", "Blood Red", "Sparkling"
 };
 
 static byte potion_col[MAX_COLORS] =
@@ -229,7 +267,11 @@ static byte potion_col[MAX_COLORS] =
 	TERM_VIOLET, TERM_RED, TERM_WHITE, TERM_YELLOW, TERM_VIOLET,
 	TERM_L_RED, TERM_RED, TERM_L_RED, TERM_YELLOW, TERM_GREEN,
 	TERM_MULTI, TERM_RED, TERM_YELLOW, TERM_YELLOW,
-	TERM_L_UMBER, TERM_UMBER, TERM_L_DARK, TERM_RED, TERM_WHITE, TERM_L_BLUE
+	TERM_L_UMBER, TERM_UMBER, TERM_L_DARK, TERM_RED, TERM_WHITE, TERM_L_BLUE,
+	TERM_SLATE, TERM_WHITE, TERM_UMBER, TERM_ORANGE, TERM_ORANGE, 
+	TERM_YELLOW, TERM_WHITE, TERM_UMBER, TERM_WHITE, TERM_VIOLET, 
+	TERM_ORANGE, TERM_SLATE, TERM_ORANGE, TERM_GREEN, TERM_YELLOW, 
+	TERM_WHITE, TERM_WHITE, TERM_GREEN, TERM_RED, TERM_L_BLUE
 };
 
 
@@ -259,7 +301,18 @@ static cptr syllables[MAX_SYLLABLES] =
 	"ulk", "um", "un", "uni", "ur", "val", "viv", "vly",
 	"vom", "wah", "wed", "werg", "wex", "whon", "wun", "x",
 	"yerg", "yp", "zun", "tri", "blaa", "jah", "bul", "on",
-	"foo", "ju", "xuxu"
+	"foo", "ju", "xuxu", "fuc", "sac", "fam", "ver", "bow", "bra", 
+	"pri", "rut", "se", "nie", "yum", "ker", "nod", "wel", "xi", "xo", 
+	"xu", "xa", "dai", "yen", "zel", "go", "mer", "tank", "crap", "shit", 
+	"prat", "ya", "va", "yah", "ven", "zar", "bor", "gav", "ve", "gon", 
+	"get", "boo", "hiss", "spu", "flow", "kir", "je", "dev", "team", "ex", 
+	"raw", "shoe", "ton", "by", "nus", "yed", "ell", "van", "ber", "heal",
+	"sym", "anus", "butt", "les", "bia", "kill", "fuck", "hack", "much", "king",
+	"over", "bib", "tsu", "hoy", "doom", "ene", "play", "bind", "jub", "lex", 
+	"fag", "you", "dud", "tek", "kiss", "kes", "path", "ran", "gem", "ral",
+	"ort", "tal", "ara", "bel", "ana", "sia", "nil", "lel", "lol", "god",
+	"zo", "sed", "ded", "ill", "mish", "fix", "goth", "xus", "xor", "wil",
+	"sub", "wit", "tich", "tle", "arr", "rar", "dyb", "agid", "fra", "fro"
 };
 
 /*

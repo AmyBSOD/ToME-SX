@@ -3555,6 +3555,26 @@ void do_cmd_read_scroll(void)
 				break;
 			}
 
+		case SV_SCROLL_RENOUNCE_RELIGION:
+			{
+				msg_print("You feel like an atheist.");
+
+				abandon_god(GOD_ERU);
+				abandon_god(GOD_MANWE);
+				abandon_god(GOD_TULKAS);
+				abandon_god(GOD_YAVANNA);
+				abandon_god(GOD_AULE);
+				abandon_god(GOD_MANDOS);
+				abandon_god(GOD_ULMO);
+				abandon_god(GOD_VARDA);
+				abandon_god(GOD_MELKOR);
+				abandon_god(GOD_AMYBSOD);
+
+				ident = TRUE;
+
+				break;
+			}
+
 		case SV_SCROLL_CHAOS:
 			{
 				fire_ball(GF_CHAOS, 0, 222, 4);

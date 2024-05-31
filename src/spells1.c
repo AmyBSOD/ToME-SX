@@ -7512,14 +7512,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 			break;
 		}
 
-		/* Holy Orb -- Player only takes partial damage */
+		/* Holy Orb -- Player only takes partial damage
+		 * Amy edit: "valarin" and "nether" skills re-enabled */
 	case GF_HOLY_FIRE:
 		{
-#if 0 /* DGDGDGDGD */
 			int diff = get_skill(SKILL_VALARIN) - get_skill(SKILL_NETHER);
-#else
-			int diff = 0;
-#endif
 			if (fuzzy) msg_print("You are hit by something!");
 			if (diff > 0)
 				dam /= 2;
@@ -7531,12 +7528,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 
 	case GF_HELL_FIRE:
 		{
-#if 0 /* DGDGDGDGD */
 			int diff = get_skill(SKILL_VALARIN) - get_skill(SKILL_NETHER);
-#else
-			int diff = 0;
-#endif
-
 			if (fuzzy) msg_print("You are hit by something!");
 			if (diff < 0)
 				dam /= 2;

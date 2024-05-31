@@ -6769,3 +6769,11 @@ P:0:1d1:0:0:0
 F:FOUNTAIN
 D:For use in curing harmful diseases only.
 
+N:849:Renounce Religion
+G:?:d
+I:70:54:0
+W:60:0:0:500000
+A:30/50:60/20:80/5
+P:0:1d1:0:0:0
+D:Causes you to become an atheist until you pick up a new religion.
+

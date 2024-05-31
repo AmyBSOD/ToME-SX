@@ -1945,6 +1945,7 @@
 #define SV_SCROLL_RUMOR                 51
 #define SV_SCROLL_ARTIFACT              52
 #define SV_SCROLL_NOTHING               53
+#define SV_SCROLL_RENOUNCE_RELIGION     54
 
 /* The "sval" codes for TV_POTION */
 #define SV_POTION_WATER                  0
@@ -4663,6 +4664,8 @@ extern int PlayerUID;
 #define SKILL_CLEANING          63
 #define SKILL_IMPALE            64
 #define SKILL_RANGEDPOWER       65
+#define SKILL_VALARIN           66
+#define SKILL_NETHER            67
 
 /* Ugly but needed */
 #define MAX_SKILLS              200
