@@ -1,4 +1,6 @@
 # File: misc.txt
+# most files use an ID of 0 for the first entry, so the maximum
+# generally has to be the last ID number used ***plus one*** !!!
 
 # Maximum number of towns
 M:T:100
@@ -17,7 +19,8 @@ M:Z:536
 
 # Maximum number of monsters in r_info.txt
 # WARNING ! add one more to the real count for the player ghost !!
-M:R:3781
+# this means that you add 2 to the last ID number used in the file
+M:R:3857
 
 # Maximum number of monsters in re_info.txt
 # WARNING ! Use the exact amount of ego types used, if not you
