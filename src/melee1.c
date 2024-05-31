@@ -1109,6 +1109,10 @@ bool carried_make_attack_normal(int r_idx)
 				}
 			case RBE_PARASITE:
 				{
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					take_hit(damage, ddesc);
+
 					/* Obvious */
 					obvious = TRUE;
 
@@ -2860,6 +2864,10 @@ bool make_attack_normal(int m_idx, byte divis)
 				}
 			case RBE_PARASITE:
 				{
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					take_hit(damage, ddesc);
+
 					/* Obvious */
 					obvious = TRUE;
 
