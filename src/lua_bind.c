@@ -551,6 +551,9 @@ int lua_get_new_bounty_monster(int lev)
 	/* Set up the quest monster. */
 	r_idx = get_mon_num(lev);
 
+	/* Save its ID in a variable that the C files can see, to force corpse generation if you kill it --Amy */
+	p_ptr->current_bounty_mon = r_idx;
+
 	/* Undo the filters */
 	get_mon_num_hook = NULL;
 	get_mon_num_prep();

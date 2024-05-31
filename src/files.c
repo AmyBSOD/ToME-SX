@@ -3455,9 +3455,9 @@ errr file_character(cptr name, bool full)
 	if (p_ptr->char_death_count)
 	{
 		if (p_ptr->char_death_count == 1)
-			fprintf(fff, "\n You have been killed once.");
+			fprintf(fff, "\n You have lifesaved once.");
 		else
-			fprintf(fff, "\n You have been killed %d times.", p_ptr->char_death_count);
+			fprintf(fff, "\n You have lifesaved %d times.", p_ptr->char_death_count);
 	}
 
 	for (i = 0; i < MAX_FATES; i++)

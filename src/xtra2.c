@@ -3930,7 +3930,6 @@ void monster_death(int m_idx)
 
 	bool visible = (m_ptr->ml || (r_ptr->flags1 & (RF1_UNIQUE)));
 
-
 	bool cloned = FALSE;
 	bool create_stairs = FALSE;
 	int force_coin = get_coin_type(r_ptr);
@@ -4452,7 +4451,7 @@ void monster_death(int m_idx)
 		}
 	}
 
-	if ((!force_coin) && (magik(10 + get_skill_scale(SKILL_PRESERVATION, 75))) && (!(m_ptr->mflag & MFLAG_NO_DROP)))
+	if ((!force_coin) && ( (magik(10 + get_skill_scale(SKILL_PRESERVATION, 45))) || (m_ptr->r_idx == p_ptr->current_bounty_mon) ) && (!(m_ptr->mflag & MFLAG_NO_DROP)))
 		place_corpse(m_ptr);
 
 	/* Take note of any dropped treasure */

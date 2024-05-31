@@ -1826,6 +1826,7 @@ struct player_type
 
 	s16b companion_killed;  /* Number of companion death */
 	s16b char_death_count;  /* How often you died (including lifesaved deaths) */
+	s16b current_bounty_mon;	/* Which monster does Sharra from the Beastmaster Shanty want? */
 
 	bool no_mortal;         /* Fated to never die by the hand of a mortal being */
 

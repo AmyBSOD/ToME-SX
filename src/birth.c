@@ -1063,6 +1063,8 @@ static void player_wipe(void)
 	p_ptr->companion_killed = 0;
 	/* and didn't die yet */
 	p_ptr->char_death_count = 0;
+	/* no monster currently has a bounty */
+	p_ptr->current_bounty_mon = 0;
 }
 
 

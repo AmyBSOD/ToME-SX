@@ -751,6 +751,9 @@ static bool do_extra(int flag)
 	/* How many times you've died so far */
 	do_s16b(&p_ptr->char_death_count, flag);
 
+	/* Current bounty monster */
+	do_s16b(&p_ptr->current_bounty_mon, flag);
+
 	/* The fate */
 	do_byte((byte*)&p_ptr->no_mortal, flag);
 

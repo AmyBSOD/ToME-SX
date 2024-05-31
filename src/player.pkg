@@ -1769,6 +1769,11 @@ struct player_type
 	 * @note Number of character deaths
 	 */
 	s16b char_death_count;
+	/** @structvar current_bounty_mon
+	 * @brief Number
+	 * @note ID of current bounty monster
+	 */
+	s16b current_bounty_mon;
 	/** @structvar black_breath
 	 * @brief Boolean
 	 * @note The Tolkien's Black Breath
