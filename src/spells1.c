@@ -1672,6 +1672,8 @@ static bool hates_elec(object_type *o_ptr)
 	{
 	case TV_RING:
 	case TV_WAND:
+	case TV_ROD:
+	case TV_ROD_MAIN:
 	case TV_EGG:
 		{
 			return (TRUE);
@@ -1896,7 +1898,7 @@ static int inven_damage(inven_func typ, int perc)
 				 * timeout or charges of the stack needs to be reduced, 
 				 * unless all the items are being destroyed. -LM-
 				 */
-				if ((o_ptr->tval == TV_WAND)
+				if ( (o_ptr->tval == TV_WAND || o_ptr->tval == TV_ROD || o_ptr->tval == TV_ROD_MAIN)
 				                && (amt < o_ptr->number))
 				{
 					o_ptr->pval -= o_ptr->pval * amt / o_ptr->number;
