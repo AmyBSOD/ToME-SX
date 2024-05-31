@@ -3520,8 +3520,9 @@ static bool enter_wizard_mode(void)
 	/* Ask first time */
 	if (!(noscore & 0x0002))
 #else
-	/* Ask first time, but not while loading a dead char with the -w option */
-	if (!noscore && !(p_ptr->chp < 0))
+	/* Ask first time, but not while loading a dead char with the -w option
+	 * Amy edit: too annoying, I want a confirmation anyway! */
+	if (/*!noscore && !(p_ptr->chp < 0)*/TRUE)
 #endif
 	{
 		/* Mention effects */
@@ -3555,7 +3556,8 @@ static bool enter_debug_mode(void)
 #if 0
 	if (!(noscore & 0x0008))
 #else
-if (!noscore && !wizard)
+	/* Amy note: I want a confirmation as long as I'm not in wizard mode! */
+if (/*!noscore &&*/ !wizard)
 #endif
 	{
 		/* Mention effects */
