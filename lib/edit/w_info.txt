@@ -3,9 +3,9 @@
 # Designed to "look like" Middle-earth map
 
 W:D:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-W:D:XgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggRRggggggggggggggggX
-W:D:XggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggRRRRgggggggggggggggX
-W:D:Xggggggggggg=========g=========ggggggggggggggggggggggggggggggggggggggggggggggggggRRRRgggggggggggggggX
+W:D:XgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggRRgggggggggggggRRgX
+W:D:XggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggRRRRggggggggggggRRRX
+W:D:Xggggggggggg=========g=========ggggggggggggggggggggggggggggggggggggggggggggggggggRRRRgggggggggggggRRX
 W:D:Xgggggg========t===ggg==========gggggtggggggggggggggggggggggggggggggggggggggggggggRRggggggggggggggggX
 W:D:Xggggg=========gtgg^g======ggg=gggggggggggtggtggggggggggggggggggggggggggggggggggggggggggggggggggggggX
 W:D:XgggB========gg^t^^g========ggggt^g^ttggtgtgggggggggggggggggggggggggggggggggggggggggggggggggggggggggX
@@ -16,15 +16,15 @@ W:D:XBBBB=====AAA&&,,,,__t,QQQ,t,,,,t,tAAAAAtttt&t&^MMM&ggggg&g&&&gggttttttgtttg
 W:D:XBBBB=====AAA&&,,_,__,,,Q,,,,,,,,,,,,AAAAAtttgAAA2Mt&&&&&&&t&t&&&&tgttttttttttttgtttttttttttttttttttX
 ?:[EQU $TOWN_DESTROY2 1]
 W:M:0:1
-W:D:XBBB======AAA&&,,_,__,,,,,,,,,,,,,,,,,,,,,tttgAAAPMt&&&&&&&t&t&&&&tgttttttttttttgtttttttttttttttttttX
+W:D:XBBB======AAA&&,,_,__,,,,,,,,,,,,,,,,AAAAAtttgAAAPMt&&&&&&&t&t&&&&tgttttttttttttgtttttttttttttttttttX
 ?:1
 W:D:XBB======AATA&___.___,,^,,,,,,,,,,,,,,,,,,ttttA&MMM^^__t^&&&,t^^ttttt,t,t,ttttttttttttttttttttttttttX
 W:D:XB=====AAAA__&&DD,,__,,^^,,,,,,,,,,,,,,,,,tAAAAt&&t^^__^__&.&,&&&^^AAtRRAAAAAAtAtAtAttttttttttttttttX
 W:D:XB====AAA__DT&&DD,,__,,^^,,,,.,,,^^,,,,,,,,^^^t^&&&&,__^__tTTTAAAAAAARRRRAtAAAAAAAAAAAAAtAttttttttttX
 W:D:XB==AAAA__DDD&&DD,,__,,_^,,,,,,,,^^,,,,,,,,^^,^^^_&_^^__TT__T_TTAA&_ARRRRAAAAAAAA^,^,t,,,,,,t,ttttttX
 W:D:XB==AAAA__DTT&&DD,__,__^^==,,.,^^,,.,,.,,,,^^____^&&___,TTTT_T__AA__AARR^^,^^^^^^^^,,,,,t,,,,,,,,,,tX
-W:D:XB==AAAA__DDT&&DD..__,^^=,__....,.....,,.,,^__^^,^&&,__,TTTTT__T_==AAAAAAA^_,,^,,,,,,,,,,,,,,t,t,,,,X
-W:D:XB==AAA__DDTT&&D..__,.^^^..__.........,,,,,__^^^^^&&,__,TTTTTT_TT_=AAAAAAA__,,,,,,,,,,,,,,,,,,,,,,t,X
+W:D:XB==AAAA__DDT&&DD..__,^^=,__....,.....,,.,,^__^^,^&&,__,TTTTT__T_==AAAAAAA^_Q,^,,,,,,,,,,,,,,t,t,,,,X
+W:D:XB==AAA__DDTT&&D..__,.^^^..__.........,,,,,__^^^^^&&,__,TTTTTT_TT_=AAAAAAA__QQQ,,,,,,,,,,,,,,,,,,,t,X
 W:D:XB==AAA__DDTT&&&..__..^..,.__...,..^..,,,,__^.^^^^&&,__,TTTTT&T&T__AAAAAAAAA__,,,,,,,,,,,,,,RR,,,,,,X
 W:D:XB==AAAA==DDT.&..__..,.....__TTT....^^...__..TTT._&&..__,TTT&T&T&T__AAAAAAAAA__,,,,,,,,,,,,RRRR,,,,,X
 W:D:XB===AAA==.....==......^...__TTTT.1.^^..,__...T__&&...__.TTTTTTTTT__AAAAAAAA__,,,,,,,,,,,,,RRRR,,,,,X
@@ -36,7 +36,7 @@ W:D:XBB====.Q......&&............__.,......__..__.^^&&___.___.TTTTTTTT....,,.,,,
 W:D:XBB====QQQ.....&&....^......__..........___...^^&&.....__.TTTTTQT.,.....,,,,,__DDDDD,,,,,,,,,,,,,,,,X
 W:D:XBB=====Q....T&&&..^^^^....__..........__....^^&&^...,__...TTTTQQ....,.Q..,,,__DDDDDD,,,,,,,,,,,,,,,X
 W:D:XBB========..T&&&T.......__..........__......^^&&&&^..__...TTTTQQ.....QQQ.,,,,__DDD_DD,,,,,T,T,,,,,,X
-W:D:XBB========..TTT&&T&&...__........,___......^)^&&.&^.__.....TTTTTT....,Q....,,__D__D_=,,,TTTTTTDDDDDX
+W:D:XBB========..TTT&&T&&...__........,___......^)^&&.&^.__....QTTTTTT....,Q....,,__D__D_=,,,TTTTTTDDDDDX
 W:D:XBBB=======...TT&TT..___.__.......__.@__..._^^^&&....__..TTTTTTTTTT...........DD_DDDD==...T=_TT,,,,,X
 W:D:XBBBB======.....T.T.__.._........__..._____^___&__...__,TTTTTTTTTT...,..,..,..DDDDDDD========TT,,,,,X
 W:D:XBBBBB======.=......__.........__.........^^^&&&_T,T__,.TT&TTTTTTT..........,.,DDDDD=========T,,,,,,X
@@ -67,10 +67,10 @@ W:D:XBBBBBBBBBBBBBBBBBB========A^^^AA__AAAA===.====__..&^...._^...__Q&&,^,^,,,,,
 W:D:XBBBBBBBBBBBBBBBBBB========^^AAAA__AA===========.&&^....__....__Q$&,,,,,,,,D,,,,,=C,,CC,,,,,DAADADAAX
 W:D:XBBBBBBBBBBBBBBBBBB======AA^^=AAA=_A==========&^^^^.._.__....__.Q&&,,,,,,,,,,,,,,==CC,,&AAAAAAAAAAAAX
 W:D:XBBRRBBBBBBBBBBBBBB====^^A^=====A==============^^^._=._......__.._&&,,,,,,,,,======,,,,&&AAEAEAEAEAAX
-W:D:XBRRRRBBBBBBBBBBBBB============================A^^^==...._.__..__A&&,,,CCC,C======,D,,&&AEAAAEAAAEEAX
-W:D:XBRRRRBBBBBBBBBBBBBBBB==========================AA====___A__.__AAA&&,CC,,DC,,D,,=C,,,D&&AEAEEAEEEAEEX
-W:D:XBBRRBBBBBBBBBBBBBBBBBBBB=======================A==^==_@@AAA_AAAAA&&_,,,,,,,,,,,CC,&&&&EEEEEEEEEAAEEX
-W:D:XBBBBBBBBBBBBBBBBBBBBBBBBBBB======================^^===AAAAAAAAAAA&&,&,&,&,&,&,&CC&&&EEAEEAEEEAEAAEEX
+W:D:XRRRRRBBBBBBBBBBBBB============================Q^^^==...._.__..__A&&,,,CCC,C======,D,,&&AEAAAEAAAEEAX
+W:D:XRRRRRBBBBBBBBBBBBBBBB==========================AA====___A__.__AAA&&,CC,,DC,,D,,=C,,,D&&AEAEEAEEEAEEX
+W:D:XRRRRBBBBBBBBBBBBBBBBBBBB=======================A==^==_@@AAA_AAAAA&&_,,,,,,,,,,,CC,&&&&EEEEEEEEEAAEEX
+W:D:XBRRRBBBBBBBBBBBBBBBBBBBBBBB======================^^===AAAAAAAAAAA&&,&,&,&,&,&,&CC&&&EEAEEAEEEAEAAEEX
 W:D:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 # Definition of all the entrances to the dungeons
