@@ -3546,7 +3546,7 @@ void do_cmd_fire(void)
 		/* If the ammo doesn't break, it can pierce through
 		 * Amy note: holy shit 45% base chance and 95% with maxxed archery??? no wonder people claim it's OP */
 		if ((num_pierce) && (hit_body) &&
-		                (magik(1 + get_skill(SKILL_ARCHERY))))
+		                (magik(1 + get_skill_scale(SKILL_ARCHERY, 33))))
 		{
 			num_pierce--;
 			hit_body = FALSE;
@@ -3664,8 +3664,8 @@ void do_cmd_throw(void)
 	/* Boulder throwing */
 	if ((o_ptr->tval == TV_JUNK) && (o_ptr->sval == SV_BOULDER) && (get_skill(SKILL_BOULDER)))
 	{
-		boulder_add = get_skill_scale(SKILL_BOULDER, 80);
-		boulder_mult = get_skill_scale(SKILL_BOULDER, 6);
+		boulder_add = get_skill_scale(SKILL_BOULDER, 60);
+		boulder_mult = get_skill_scale(SKILL_BOULDER, 4);
 	}
 
 	/* Get a direction (or cancel) */
@@ -4277,7 +4277,7 @@ void do_cmd_boomerang(void)
 
 				/* Break the boomerang */
 				if ((!(o_ptr->art_name || artifact_p(o_ptr)) &&
-				                (rand_int(100) < j)) && (rand_int(55) > get_skill(SKILL_BOOMERANG) ) )
+				                (rand_int(100) < j)) && (rand_int(55) > get_skill_scale(SKILL_BOOMERANG, 25) ) )
 				{
 					msg_print(format("Your %s is destroyed.", o_name));
 					inven_item_increase(INVEN_BOW, -1);

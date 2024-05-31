@@ -2587,7 +2587,7 @@ void do_cmd_quaff_potion(void)
 
 	if (get_skill(SKILL_ALCHEMY))
 	{
-		if (item >= 0)
+		if ((item >= 0) && (randint(100) < get_skill(SKILL_ALCHEMY)) )
 		{
 			q_ptr = &forge;
 			object_prep(q_ptr, lookup_kind(TV_BOTTLE, 1));
@@ -3727,7 +3727,7 @@ void do_cmd_read_scroll(void)
 
 	if (get_skill(SKILL_ALCHEMY))
 	{
-		if (item >= 0)
+		if ((item >= 0) && (randint(100) < get_skill(SKILL_ALCHEMY)))
 		{
 			q_ptr = &forge;
 			object_prep(q_ptr, lookup_kind(TV_SCROLL, SV_SCROLL_NOTHING));

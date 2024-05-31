@@ -7487,7 +7487,7 @@ void symbiotic_info(char *p, int power)
 		}
 	case 5:
 		{
-			strnfmt(p, 80, " heal %d%%", 15 + get_skill_scale(SKILL_SYMBIOTIC, 35));
+			strnfmt(p, 80, " heal %d%%", 15 + get_skill_scale(SKILL_SYMBIOTIC, 25));
 			break;
 		}
 	}
@@ -7781,7 +7781,7 @@ void do_cmd_symbiotic(void)
 				}
 
 				r_ptr = &r_info[o_ptr->pval];
-				hp = o_ptr->pval3 * (15 + get_skill_scale(SKILL_SYMBIOTIC, 35)) / 100;
+				hp = o_ptr->pval3 * (15 + get_skill_scale(SKILL_SYMBIOTIC, 25)) / 100;
 				o_ptr->pval2 += hp;
 				if (o_ptr->pval2 > o_ptr->pval3) o_ptr->pval2 = o_ptr->pval3;
 

@@ -2739,7 +2739,7 @@ void py_attack(int y, int x, int max_blow)
 							k = critical_norm(o_ptr->weight, o_ptr->to_h, k, o_ptr->tval, &done_crit);
 
 							/* Stunning blow */
-							if (magik(get_skill(SKILL_STUN)) && (o_ptr->tval == TV_HAFTED) && (o_ptr->weight > 50) && done_crit)
+							if (magik(get_skill_scale(SKILL_STUN, 30)) && (o_ptr->tval == TV_HAFTED) && (o_ptr->weight > 50) && done_crit)
 							{
 								if (!(r_ptr->flags4 & (RF4_BR_SOUN)) && !(r_ptr->flags4 & (RF4_BR_WALL)) && k)
 								{

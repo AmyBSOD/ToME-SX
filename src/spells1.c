@@ -1336,7 +1336,7 @@ void take_hit(int damage, cptr hit_from)
 	}
 
 	/* Hurt the wielded monster if any */
-	if ((o_ptr->k_idx) && (magik(5 + get_skill(SKILL_SYMBIOTIC))) && (!carried_monster_hit))
+	if ((o_ptr->k_idx) && (magik(5 + get_skill_scale(SKILL_SYMBIOTIC, 25))) && (!carried_monster_hit))
 	{
 		cptr sym_name = symbiote_name(TRUE);
 

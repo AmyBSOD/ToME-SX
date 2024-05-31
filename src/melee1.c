@@ -587,7 +587,7 @@ bool carried_make_attack_normal(int r_idx)
 					obvious = TRUE;
 
 					/* Morph, but let mimicry skill have a chance to stop this */
-					if (magik(60 - get_skill(SKILL_MIMICRY)))
+					if (magik(60 - get_skill_scale(SKILL_MIMICRY, 25)))
 					{
 						/* Message */
 						cmsg_print(TERM_VIOLET, "You feel the dark powers twisting your body!");
@@ -1937,7 +1937,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					obvious = TRUE;
 
 					/* Morph, but let mimicry skill have a chance to stop this */
-					if (magik(60 - get_skill(SKILL_MIMICRY)))
+					if (magik(60 - get_skill_scale(SKILL_MIMICRY, 25)))
 					{
 						/* Message */
 						cmsg_print(TERM_VIOLET, "You feel the dark powers twisting your body!");
@@ -2045,7 +2045,7 @@ bool make_attack_normal(int m_idx, byte divis)
 
 							drainedamount = randint(o_ptr->pval) + 1;
 							if (drainedamount > o_ptr->pval) drainedamount = o_ptr->pval;
-							drainmitigate = get_skill(SKILL_ALCHEMY);
+							drainmitigate = get_skill_scale(SKILL_ALCHEMY, 20);
 							if (drainmitigate > 0) drainedamount -= drainmitigate;
 							if (drainedamount < 1) drainedamount = 1;
 

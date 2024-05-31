@@ -1964,7 +1964,7 @@ void calc_hitpoints(void)
 		u32b rhp = maxroll(r_ptr->hdice, r_ptr->hside);
 
 		/* Adjust the hp with the possession skill */
-		rhp = (rhp * (20 + get_skill_scale(SKILL_POSSESSION, 80))) / 100;
+		rhp = (rhp * (20 + get_skill_scale(SKILL_POSSESSION, 40))) / 100;
 
 		mhp = (rhp + sroot(rhp) + mhp) / 3;
 	}
@@ -3066,8 +3066,8 @@ void calc_bonuses(bool silent)
 		}
 	}
 
-	if (get_skill(SKILL_DAEMON) > 20) p_ptr->resist_conf = TRUE;
-	if (get_skill(SKILL_DAEMON) > 30) p_ptr->resist_fear = TRUE;
+	if (get_skill(SKILL_DAEMON) > 40) p_ptr->resist_conf = TRUE;
+	if (get_skill(SKILL_DAEMON) > 50) p_ptr->resist_fear = TRUE;
 
 	if ( get_skill(SKILL_MINDCRAFT) >= 75 ) p_ptr->telepathy = ESP_ALL;
 
@@ -3944,7 +3944,7 @@ void calc_bonuses(bool silent)
 		cur_wgt += p_ptr->inventory[INVEN_FEET].weight;
 
 		/* Base dodge chance */
-		p_ptr->dodge_chance = get_skill_scale(SKILL_DODGE, 150) + get_skill(SKILL_HAND);
+		p_ptr->dodge_chance = get_skill_scale(SKILL_DODGE, 100) + get_skill(SKILL_HAND);
 
 		/* Armor weight bonus/penalty */
 		p_ptr->dodge_chance -= cur_wgt;
@@ -4706,7 +4706,7 @@ bool monk_heavy_armor(void)
 	monk_arm_wgt += p_ptr->inventory[INVEN_HANDS].weight;
 	monk_arm_wgt += p_ptr->inventory[INVEN_FEET].weight;
 
-	return (monk_arm_wgt > (100 + (get_skill(SKILL_HAND) * 4))) ;
+	return (monk_arm_wgt > (100 + (get_skill(SKILL_HAND) * 3))) ;
 }
 
 static int get_artifact_idx(int level)

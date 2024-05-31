@@ -134,9 +134,9 @@ bool mon_take_hit_mon(int s_idx, int m_idx, int dam, bool *fear, cptr note)
 
 				/*
 				 * Factor the xp by the skill level
-				 * Note that a score of 50 in the skill makes the gain be 120% of the exp
+				 * Note that a score of 100 in the skill makes the gain be 120% of the exp
 				 */
-				new_exp = new_exp * get_skill_scale(SKILL_LORE, 120) / 100;
+				new_exp = new_exp * get_skill_scale(SKILL_LORE, 60) / 100;
 
 				/* Gain experience */
 				gain_exp(new_exp);
@@ -2966,8 +2966,8 @@ bool make_attack_spell(int m_idx)
 	bool no_inate = FALSE;
 	int x, y;
 
-	/* Amy edit: cleaning skill is there to reduce chance of breaths */
-	int druidsavingthrow = get_skill(SKILL_CLEANING);
+	/* Amy edit: cleaning skill is there to reduce chance of breaths, to a minimum of 5% at skill level 100 */
+	int druidsavingthrow = get_skill_scale(SKILL_CLEANING, 47);
 	bool druidsave = FALSE;
 
 	/* Summon count */

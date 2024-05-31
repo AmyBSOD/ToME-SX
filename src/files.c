@@ -1941,8 +1941,8 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
 	}
 
 /* Skills */
-	if (get_skill(SKILL_DAEMON) > 20) (*f2) |= TR2_RES_CONF;
-	if (get_skill(SKILL_DAEMON) > 30) (*f2) |= TR2_RES_FEAR;
+	if (get_skill(SKILL_DAEMON) > 40) (*f2) |= TR2_RES_CONF;
+	if (get_skill(SKILL_DAEMON) > 50) (*f2) |= TR2_RES_FEAR;
 	if (get_skill(SKILL_MINDCRAFT) >= 75) (*esp) |= ESP_ALL;
 	if (p_ptr->melee_style == SKILL_HAND && get_skill(SKILL_HAND) > 24 && !monk_heavy_armor())
 		(*f2) |= TR2_FREE_ACT;
