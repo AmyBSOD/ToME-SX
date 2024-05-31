@@ -2146,7 +2146,7 @@ D:will suddenly be translocated to the other place.
 N:221:*Destruction*
 G:?:d
 I:70:41:0
-W:40:0:0:250
+W:40:0:0:2000
 A:40/1
 D:This scroll is inscribed with a mighty conjuration which wrecks the dungeon all around you.
 D:Monsters and objects will be annihilated by this blast; only completely indestructible things can
@@ -5308,7 +5308,7 @@ P:0:0d0:0:0:0
 N:654:Summon Never-Moving Pet
 G:?:d
 I:70:6:0
-W:5:0:0:125
+W:5:0:0:1000
 A:5/1:15/1:25/1:35/1:65/1:85/1:95/1
 D:A piece of paper, inscribed with runes which will summon an immobile creature to your aid.
 
