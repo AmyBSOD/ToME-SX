@@ -340,7 +340,7 @@ D:You are suddenly very hot!
 F:FLOOR | CHEST | DOOR | LEVEL1
 
 N:65:Plasma Bolt Trap
-I:6:80:5:6:15:5d12:g
+I:6:80:5:6:15:3d12:g
 D:A bolt of plasma hits you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
@@ -365,7 +365,7 @@ D:A blast of crystal shards hits you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:70:Sound Bolt Trap
-I:6:80:5:6:15:5d12:g
+I:6:80:5:6:15:3d12:g
 D:A sudden roar of sound hurts your eardrums!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
@@ -375,17 +375,17 @@ D:A blast of confusion gas engulfs you!
 F:FLOOR | CHEST | DOOR | LEVEL2
 
 N:72:Force Bolt Trap
-I:6:80:5:6:15:5d12:g
+I:6:80:5:6:15:3d12:g
 D:A bolt of pure force hits you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:73:Inertia Bolt Trap
-I:6:80:5:6:15:5d12:g
+I:6:80:5:6:15:3d12:g
 D:Your feet feel like lead!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:74:Mana Bolt Trap
-I:8:80:5:9:25:15d8:g
+I:8:80:5:9:25:8d8:g
 D:A bolt of pure magic hits you!
 F:FLOOR | CHEST | DOOR | LEVEL4
 
@@ -395,32 +395,32 @@ D:A bolt of ice hits you!
 F:FLOOR | CHEST | DOOR | LEVEL2
 
 N:76:Chaos Bolt Trap
-I:6:80:5:6:15:5d12:g
+I:6:80:5:6:15:3d12:g
 D:A blast of raw chaos hits you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:77:Nether Bolt Trap
-I:8:80:5:9:25:15d8:g
+I:8:80:5:9:25:7d8:g
 D:A bolt of negative energy hits you!
 F:FLOOR | CHEST | DOOR | LEVEL4
 
 N:78:Disenchantment Bolt Trap
-I:8:80:5:9:25:15d8:g
+I:8:80:5:9:25:8d8:g
 D:There is a static feeling in the air...
 F:FLOOR | CHEST | DOOR | LEVEL4
 
 N:79:Nexus Bolt Trap
-I:6:80:5:6:15:5d12:g
+I:6:80:5:6:15:3d12:g
 D:A bolt of nexus hits you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:80:Time Bolt Trap
-I:8:80:5:9:25:15d8:g
+I:8:80:5:9:25:8d8:g
 D:Suddenly, several months pass by in a second!
 F:FLOOR | CHEST | DOOR | LEVEL4
 
 N:81:Gravity Bolt Trap
-I:6:80:5:6:15:5d12:g
+I:6:80:5:6:15:3d12:g
 D:Gravity suddenly warps around you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
@@ -454,67 +454,67 @@ D:You are suddenly in the centre of a raging inferno!
 F:FLOOR | CHEST | DOOR | LEVEL1
 
 N:87:Plasma Ball Trap
-I:8:60:5:8:20:6d18:B
+I:8:60:5:8:20:3d18:B
 D:You are engulfed in plasma!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:88:Water Ball Trap
-I:5:60:5:6:15:4d12:B
+I:5:60:5:6:15:3d12:B
 D:A whirlpool engulfs you!
 F:FLOOR | CHEST | DOOR | LEVEL2
 
 N:89:Light Ball Trap
-I:5:60:5:6:15:4d12:B
+I:5:60:5:6:15:3d12:B
 D:A massive flash of light erupts around you!
 F:FLOOR | CHEST | DOOR | LEVEL2
 
 N:90:Darkness Ball Trap
-I:5:60:5:6:15:4d12:B
+I:5:60:5:6:15:3d12:B
 D:A large patch of darkness erupts around you!
 F:FLOOR | CHEST | DOOR | LEVEL2
 
 N:91:Shards Ball Trap
-I:8:60:5:8:20:6d18:B
+I:8:60:5:8:20:3d18:B
 D:A violent blast of crystal shards hits you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:92:Sound Ball Trap
-I:8:60:5:8:20:6d18:B
+I:8:60:5:8:20:3d18:B
 D:BOOM! Your eardrums nearly explode!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:93:Confusion Ball Trap
-I:5:60:5:6:15:4d12:B
+I:5:60:5:6:15:3d12:B
 D:You are enveloped in a cloud of confusion gas!
 F:FLOOR | CHEST | DOOR | LEVEL2
 
 N:94:Force Ball Trap
-I:8:60:5:8:20:6d18:B
+I:8:60:5:8:20:3d18:B
 D:A violent blast of pure force smashes down around you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:95:Inertia Ball Trap
-I:8:60:5:8:20:6d18:B
+I:8:60:5:8:20:3d18:B
 D:Suddenly, your entire body feels like lead!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:96:Mana Ball Trap
-I:10:60:5:10:30:8d20:B
+I:10:60:5:10:30:5d20:B
 D:You are hit by a blast of pure magic!
 F:FLOOR | CHEST | DOOR | LEVEL4
 
 N:97:Ice Ball Trap
-I:5:60:5:6:15:4d12:B
+I:5:60:5:6:15:3d12:B
 D:A massive blast of ice crystals engulfs you!
 F:FLOOR | CHEST | DOOR | LEVEL2
 
 N:98:Chaos Ball Trap
-I:8:60:5:8:20:6d18:B
+I:8:60:5:8:20:3d18:B
 D:A violent blast of raw chaos engulfs you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:99:Nether Ball Trap
-I:10:60:5:10:30:8d20:B
+I:10:60:5:10:30:4d20:B
 D:A blast of energy from the netherworld engulfs you!
 F:FLOOR | CHEST | DOOR | LEVEL4
 
@@ -523,22 +523,22 @@ F:FLOOR | CHEST | DOOR | LEVEL4
 # D:description
 
 N:100:Disenchantment Ball Trap
-I:10:60:5:10:30:8d20:B
+I:10:60:5:10:30:5d20:B
 D:You are hit by a blast of pure anti-magic!
 F:FLOOR | CHEST | DOOR | LEVEL4
 
 N:101:Nexus Ball Trap
-I:8:60:5:8:20:6d18:B
+I:8:60:5:8:20:3d18:B
 D:A ball of nexus hits you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:102:Time Ball Trap
-I:10:60:5:10:30:8d20:B
+I:10:60:5:10:30:5d20:B
 D:Suddenly, several years pass by in a second!
 F:FLOOR | CHEST | DOOR | LEVEL4
 
 N:103:Gravity Ball Trap
-I:8:60:5:8:20:6d18:B
+I:8:60:5:8:20:3d18:B
 D:You suddenly feel gravity warp violently around you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
@@ -733,37 +733,37 @@ F:FLOOR | CHEST | DOOR
 
 # Bolt traps
 N:161:Greater Magic Missile Trap
-I:6:80:5:6:50:25d10:g
+I:6:80:5:6:50:15d10:g
 D:A greater magic missile hits you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
-#N:162:Foulness Trap
-#I:6:80:5:6:15:10d12:g
-#D:You feel foul!
-#F:FLOOR | CHEST | DOOR | LEVEL3
+N:162:Nuke Bolt Trap
+I:6:80:5:6:15:3d12:g
+D:You feel foul!
+F:FLOOR | CHEST | DOOR | LEVEL3
 
-#N:163:Trap of Death Ray
-#I:8:80:5:9:25:15d16:g
-#D:A Ray of Death hits you!
-#F:FLOOR | CHEST | DOOR | LEVEL4
+N:163:Trap of Death Ray
+I:8:80:5:9:25:6d16:g
+D:A Ray of Death hits you!
+F:FLOOR | CHEST | DOOR | LEVEL4
 
 N:164:Trap of Holy Fire
-I:6:80:5:6:15:5d12:g
+I:6:80:5:6:15:3d12:g
 D:Holy fire rises around you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:165:Trap of Hell Fire
-I:6:80:5:6:15:5d12:g
+I:6:80:5:6:15:3d12:g
 D:Hellfire rises around you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:166:Psi Bolt Trap
-I:6:80:5:6:15:5d12:g
+I:6:80:5:6:15:3d10:g
 D:Your mind is suddenly blasted!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:167:Psi Drain Trap
-I:6:80:5:6:15:4d10:r
+I:6:80:5:6:15:3d12:r
 D:You suddenly can't think clearly any more...
 F:FLOOR | CHEST | DOOR | LEVEL3
 
@@ -772,13 +772,13 @@ F:FLOOR | CHEST | DOOR | LEVEL3
 ### this one *ought* to be a Nuke Ball trap, not plasma ball, as trap 87 
 ### is also plasma ball. I've put the description right in advance.
 
-#N:168:Plasma Ball Trap
-#I:8:60:5:8:20:12d18:B
-#D:A blast of radiation engulfs you!
-#F:FLOOR | CHEST | DOOR | LEVEL3
+N:168:Nuke Ball Trap
+I:8:60:5:8:20:4d18:B
+D:A blast of radiation engulfs you!
+F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:169:Psi Ball Trap
-I:8:60:5:8:20:6d18:B
+I:8:60:5:8:20:3d18:B
 D:Your brain is suddenly blasted!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
@@ -857,6 +857,16 @@ N:183:Fart Trap
 I:11:100:50:4:1:0d0:v
 D:A sexy girl has protected this.
 F:FLOOR
+
+N:184:Meteor Bolt Trap
+I:8:30:5:6:50:15d12:g
+D:A meteor slams on top of you!
+F:FLOOR | CHEST | DOOR | LEVEL4
+
+N:185:Meteor Ball Trap
+I:8:10:5:8:60:20d13:B
+D:A hail of meteors slams on top of you!
+F:FLOOR | CHEST | DOOR | LEVEL3
 
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color

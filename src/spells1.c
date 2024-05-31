@@ -7374,8 +7374,47 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 	{
 	case GF_DEATH_RAY:
 		{
+			/* Amy edit: instakilling the char is lame, let's just hit them with a variety of bad stuff instead */
 			if (fuzzy) msg_print("You are hit by pure death!");
-			take_hit(32000, killer);
+			take_hit(dam, killer);
+			do_dec_stat(A_STR, STAT_DEC_PERMANENT);
+			do_dec_stat(A_CON, STAT_DEC_PERMANENT);
+			do_dec_stat(A_DEX, STAT_DEC_PERMANENT);
+			do_dec_stat(A_INT, STAT_DEC_PERMANENT);
+			do_dec_stat(A_WIS, STAT_DEC_PERMANENT);
+			do_dec_stat(A_CHR, STAT_DEC_PERMANENT);
+			do_dec_stat(A_STR, STAT_DEC_PERMANENT);
+			do_dec_stat(A_CON, STAT_DEC_PERMANENT);
+			do_dec_stat(A_DEX, STAT_DEC_PERMANENT);
+			do_dec_stat(A_INT, STAT_DEC_PERMANENT);
+			do_dec_stat(A_WIS, STAT_DEC_PERMANENT);
+			do_dec_stat(A_CHR, STAT_DEC_PERMANENT);
+			do_dec_stat(A_STR, STAT_DEC_PERMANENT);
+			do_dec_stat(A_CON, STAT_DEC_PERMANENT);
+			do_dec_stat(A_DEX, STAT_DEC_PERMANENT);
+			do_dec_stat(A_INT, STAT_DEC_PERMANENT);
+			do_dec_stat(A_WIS, STAT_DEC_PERMANENT);
+			do_dec_stat(A_CHR, STAT_DEC_PERMANENT);
+			do_dec_stat(A_STR, STAT_DEC_PERMANENT);
+			do_dec_stat(A_CON, STAT_DEC_PERMANENT);
+			do_dec_stat(A_DEX, STAT_DEC_PERMANENT);
+			do_dec_stat(A_INT, STAT_DEC_PERMANENT);
+			do_dec_stat(A_WIS, STAT_DEC_PERMANENT);
+			do_dec_stat(A_CHR, STAT_DEC_PERMANENT);
+			do_dec_stat(A_STR, STAT_DEC_PERMANENT);
+			do_dec_stat(A_CON, STAT_DEC_PERMANENT);
+			do_dec_stat(A_DEX, STAT_DEC_PERMANENT);
+			do_dec_stat(A_INT, STAT_DEC_PERMANENT);
+			do_dec_stat(A_WIS, STAT_DEC_PERMANENT);
+			do_dec_stat(A_CHR, STAT_DEC_PERMANENT);
+			(void)set_food(PY_FOOD_STARVE - 1);
+			if (p_ptr->csp > 0)
+			{
+				p_ptr->csp = 0;
+				p_ptr->csp_frac = 0;
+				p_ptr->redraw |= (PR_MANA);
+			}
+			lose_exp(p_ptr->exp / 2);
 			break;
 		}
 

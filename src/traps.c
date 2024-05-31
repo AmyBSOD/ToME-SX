@@ -2061,6 +2061,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_GRAVITY_BOLT:
 		ident = player_handle_breath_trap(1, GF_GRAVITY, TRAP_OF_GRAVITY_BOLT);
 		break;
+	case TRAP_OF_METEOR_BOLT:
+		ident = player_handle_breath_trap(1, GF_METEOR, TRAP_OF_METEOR_BOLT);
+		break;
 
 		/* Ball Trap */
 	case TRAP_OF_ELEC_BALL:
@@ -2128,6 +2131,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		break;
 	case TRAP_OF_GRAVITY_BALL:
 		ident = player_handle_breath_trap(3, GF_GRAVITY, TRAP_OF_GRAVITY_BALL);
+		break;
+	case TRAP_OF_METEOR_BALL:
+		ident = player_handle_breath_trap(3, GF_METEOR, TRAP_OF_METEOR_BALL);
 		break;
 
 		/* -SC- */
@@ -2292,6 +2298,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_NUKE_BOLT:
 		ident = player_handle_breath_trap(1, GF_NUKE, trap);
 		break;
+	case TRAP_OF_DEATH_RAY:
+		ident = player_handle_breath_trap(1, GF_DEATH_RAY, trap);
+		break;
 	case TRAP_OF_HOLY_FIRE:
 		ident = player_handle_breath_trap(1, GF_HOLY_FIRE, trap);
 		break;
@@ -2307,10 +2316,10 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 		/* Ball Trap */
 	case TRAP_OF_NUKE_BALL:
-		ident = player_handle_breath_trap(3, GF_NUKE, TRAP_OF_NUKE_BALL);
+		ident = player_handle_breath_trap(3, GF_NUKE, trap);
 		break;
 	case TRAP_OF_PSI_BALL:
-		ident = player_handle_breath_trap(3, GF_PSI, TRAP_OF_NUKE_BALL);
+		ident = player_handle_breath_trap(3, GF_PSI, trap);
 		break;
 
 	default:

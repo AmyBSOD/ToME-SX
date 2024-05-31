@@ -2549,6 +2549,8 @@
 #define TRAP_OF_FEAR                      181
 #define TRAP_OF_STUNNING                  182
 #define TRAP_OF_FARTING                   183
+#define TRAP_OF_METEOR_BOLT               184
+#define TRAP_OF_METEOR_BALL               185
 
 /*** General index values ***/
 
