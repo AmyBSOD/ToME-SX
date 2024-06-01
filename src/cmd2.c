@@ -4717,6 +4717,10 @@ void do_cmd_immovable_special(void)
 		}
 
 		/* Fetch item */
+		/* note by Amy: deathmold + either ironman or lost soul = extreme easy mode, since you can just detect a vault
+		 * and then "Accio!" all the items inside while you twiddle your thumbs to recover mana. So I changed it, and
+		 * now you need line of sight, just like with telekinesis. Sue me :-P
+		 * stupid hard limit for weight is too low, now weight lifting skill helps */
 		else if (i == 'b')
 		{
 			Term_load();
@@ -4724,7 +4728,7 @@ void do_cmd_immovable_special(void)
 			did_load = TRUE;
 
 			if (!get_aim_dir(&dir)) return;
-			fetch(dir, p_ptr->lev * 15, FALSE);
+			fetch(dir, ((p_ptr->lev * 15) + (get_skill(SKILL_WEIGHTLIFTING) * 20) ), TRUE);
 			py_pickup_floor(always_pickup);
 
 			did_act = TRUE;
