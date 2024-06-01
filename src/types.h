@@ -1726,6 +1726,10 @@ struct player_type
 	byte drain_mana;        /* mana draining */
 	byte drain_life;        /* hp draining */
 
+	bool plr_peacekeep;     /* peacekeeping */
+	bool plr_invprot;       /* inventory protection */
+	bool plr_devicemast;    /* device mastery */
+
 	bool magical_breath;    /* Magical breathing -- can breath anywhere */
 	bool water_breath;      /* Water breathing -- can breath underwater */
 	bool climb;             /* Can climb mountains */

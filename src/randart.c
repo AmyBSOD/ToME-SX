@@ -101,6 +101,9 @@ static bool grab_one_power(int *ra_idx, object_type *o_ptr, bool good, s16b *max
 		}
 
 		/* We must make the "rarity roll" */
+
+		/*msg_format("Randart part %d rolling mrarity %d against rarity %d", i, ra_ptr->mrarity, ra_ptr->rarity);*/
+
 		if (rand_int(ra_ptr->mrarity) < ra_ptr->rarity)
 		{
 			continue;

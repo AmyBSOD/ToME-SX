@@ -1433,6 +1433,23 @@ struct player_type
 	 * @note Electric 'immolation' effect
 	 */
 	bool sh_elec;
+
+	/** @structvar plr_peacekeep
+	 * @brief Boolean
+	 * @note Peaceful creatures don't anger easily
+	 */
+	bool plr_peacekeep;
+	/** @structvar plr_invprot
+	 * @brief Boolean
+	 * @note Protect inventory items from destruction
+	 */
+	bool plr_invprot;
+	/** @structvar plr_devicemast
+	 * @brief Boolean
+	 * @note Better device success rates
+	 */
+	bool plr_devicemast;
+
 	/** @structvar wraith_form
 	 * @brief Boolean
 	 * @note wraithform

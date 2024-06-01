@@ -347,6 +347,13 @@ s32b lua_spell_device_chance(s32b chance, int level, int base_level)
 	/* Reduce failure rate by "effective" level adjustment */
 	chance -= (level - 1);
 
+	/* Amy edit: if you have device mastery, then your devices skill further reduces the failure rate
+	 * this will *finally* allow you to reach 0% fail with sticks, it's stupid if they always have a chance of failure
+	 * regardless of how good your dude is at using devices! after all, spells can reach 0% fail too! */
+	if (p_ptr->plr_devicemast) {
+		chance -= get_skill(SKILL_DEVICE);
+	}
+
 	/* Extract the minimum failure rate */
 	minfail = 15 - get_skill_scale(SKILL_DEVICE, 25);
 	if (minfail < 0) minfail = 0;

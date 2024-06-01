@@ -2929,8 +2929,12 @@ void py_attack(int y, int x, int max_blow)
 						switch (is_friend(m_ptr))
 						{
 						case 1:
-							msg_format("%^s gets angry!", m_name);
-							change_side(m_ptr);
+							if (p_ptr->plr_peacekeep && (randint(10) != 1)) {
+								msg_format("%^s shouts 'Hey! I'm on your side!'", m_name);
+							} else {
+								msg_format("%^s gets angry!", m_name);
+								change_side(m_ptr);
+							}
 							break;
 						case 0:
 							msg_format("%^s gets angry!", m_name);

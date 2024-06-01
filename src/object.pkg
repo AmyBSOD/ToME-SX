@@ -178,6 +178,9 @@ static obj_theme lua_obj_theme @ theme_forge;
 #define TR5_RES_WATER           0x00020000L
 #define TR5_RES_INERTIA         0x00040000L
 #define TR5_IM_POISON           0x00080000L     /* Immunity to poison */
+#define TR5_PEACEKEEPING        0x00100000L     /* coaligned monsters are less likely to turn hostile */
+#define TR5_INV_PROTECT         0x00200000L     /* prevents fucking inventory damage if you resist an element */
+#define TR5_DEVICE_MASTERY      0x00400000L     /* can reach 0% fail when using wands/staves/rods */
 
 #define ESP_ORC                 0x00000001L
 #define ESP_TROLL               0x00000002L

@@ -3821,6 +3821,18 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		{
 			text_out("It produces an electric sheath.  ");
 		}
+		if (f5 & (TR5_PEACEKEEPING))
+		{
+			text_out_c(TERM_GREEN, "Peacekeeping.  ");
+		}
+		if (f5 & (TR5_INV_PROTECT))
+		{
+			text_out_c(TERM_L_GREEN, "Inventory Protection.  ");
+		}
+		if (f5 & (TR5_DEVICE_MASTERY))
+		{
+			text_out_c(TERM_L_BLUE, "Device Mastery.  ");
+		}
 		if (f3 & (TR3_NO_MAGIC))
 		{
 			text_out_c(TERM_L_DARK, "It produces an anti-magic shell.  ");

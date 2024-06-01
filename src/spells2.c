@@ -5109,12 +5109,14 @@ void aggravate_monsters(int who)
 				speed = TRUE;
 			}
 
-			/* Pets may get angry (50% chance) */
+			/* Pets may get angry (50% chance); Amy edit: 5% if you have peacekeeping */
 			if (is_friend(m_ptr))
 			{
 				if (randint(2) == 1)
 				{
-					change_side(m_ptr);
+					if ((randint(10) == 1) || !(p_ptr->plr_peacekeep) ) {
+						change_side(m_ptr);
+					}
 				}
 			}
 		}

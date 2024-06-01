@@ -4594,7 +4594,11 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			switch (is_friend(m_ptr))
 			{
 			case 1:
-				if (change_side(m_ptr)) msg_format("%^s gets angry!", m_name);
+				if (p_ptr->plr_peacekeep) {
+					msg_format("%^s shouts 'Hey! I'm on your side!'", m_name);
+				} else {
+					if (change_side(m_ptr)) msg_format("%^s gets angry!", m_name);
+				}
 				break;
 			case 0:
 				msg_format("%^s gets angry!", m_name);
@@ -7628,7 +7632,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 
 			if (randint(5) == 1 && (!p_ptr->resist_water || (rand_int(13) == 1) ) )
 			{
-				inven_damage(set_cold_destroy, 3);
+				if (!p_ptr->resist_water || !p_ptr->plr_invprot) inven_damage(set_cold_destroy, 3);
 			}
 
 			take_hit(dam, killer);
@@ -7671,8 +7675,8 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 			}
 			if ((!p_ptr->resist_chaos) || (randint(9) == 1))
 			{
-				inven_damage(set_elec_destroy, 2);
-				inven_damage(set_fire_destroy, 2);
+				if (!p_ptr->resist_chaos || !p_ptr->plr_invprot) inven_damage(set_elec_destroy, 2);
+				if (!p_ptr->resist_chaos || !p_ptr->plr_invprot) inven_damage(set_fire_destroy, 2);
 			}
 			take_hit(dam, killer);
 			break;
@@ -7694,7 +7698,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 
 			if ((!p_ptr->resist_shard) || (randint(13) == 1))
 			{
-				inven_damage(set_cold_destroy, 2);
+				if (!p_ptr->resist_shard || !p_ptr->plr_invprot) inven_damage(set_cold_destroy, 2);
 			}
 
 			take_hit(dam, killer);
@@ -7718,7 +7722,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 
 			if ((!p_ptr->resist_sound) || (randint(13) == 1))
 			{
-				inven_damage(set_cold_destroy, 2);
+				if (!p_ptr->resist_sound || !p_ptr->plr_invprot) inven_damage(set_cold_destroy, 2);
 			}
 
 			take_hit(dam, killer);
@@ -7885,7 +7889,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 
 			if ((!p_ptr->resist_shard) || (randint(12) == 1))
 			{
-				inven_damage(set_cold_destroy, 3);
+				if (!p_ptr->resist_shard || !p_ptr->plr_invprot) inven_damage(set_cold_destroy, 3);
 			}
 
 			take_hit(dam, killer);
@@ -8070,7 +8074,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 
 				if ((!p_ptr->ffall) || (randint(13) == 1))
 				{
-					inven_damage(set_cold_destroy, 2);
+					if (!p_ptr->ffall || !p_ptr->plr_invprot) inven_damage(set_cold_destroy, 2);
 				}
 
 				take_hit(dam, killer);
@@ -8136,7 +8140,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 			if ((!p_ptr->resist_shard) || (randint(13) == 1))
 			{
 				if (!p_ptr->immune_fire) inven_damage(set_fire_destroy, 2);
-				inven_damage(set_cold_destroy, 2);
+				if (!p_ptr->resist_shard || !p_ptr->plr_invprot) inven_damage(set_cold_destroy, 2);
 			}
 
 			break;

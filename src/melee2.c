@@ -6761,13 +6761,15 @@ static void process_monster(int m_idx, bool is_frien)
 		}
 	}
 
-	/* No one wants to be your friend if you're aggravating */
-	if ((m_ptr->status > MSTATUS_NEUTRAL) && (m_ptr->status < MSTATUS_COMPANION) && (p_ptr->aggravate) && !(r_ptr->flags7 & RF7_PET))
+	/* No one wants to be your friend if you're aggravating... unless you also have peacekeeping (by Amy) */
+	if ((m_ptr->status > MSTATUS_NEUTRAL) && (m_ptr->status < MSTATUS_COMPANION) && !(p_ptr->plr_peacekeep) && (p_ptr->aggravate) && !(r_ptr->flags7 & RF7_PET))
 		gets_angry = TRUE;
 
-	/* Paranoia... no friendly uniques outside wizard mode -- TY */
-	if ((m_ptr->status > MSTATUS_NEUTRAL) && (m_ptr->status < MSTATUS_COMPANION) && !(wizard) &&
-	                (r_ptr->flags1 & (RF1_UNIQUE)) && !(r_ptr->flags7 & RF7_PET))
+	/* Paranoia... no friendly uniques outside wizard mode -- TY
+	 * Amy edit: but if you have peacekeeping, it's allowed */
+	if ((m_ptr->status > MSTATUS_NEUTRAL) && !(p_ptr->plr_peacekeep) &&
+			(m_ptr->status < MSTATUS_COMPANION) && !(wizard) &&
+	            (r_ptr->flags1 & (RF1_UNIQUE)) && !(r_ptr->flags7 & RF7_PET))
 		gets_angry = TRUE;
 
 	if (gets_angry)

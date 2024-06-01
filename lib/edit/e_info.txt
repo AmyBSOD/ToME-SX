@@ -24,7 +24,7 @@
 # T: tval : min sval : max sval
 # R: rarity for the following F flags
 # X: position : slot : rating - position means whether it's prefix or suffix
-# W: depth : rarity1 : rarity2 : cost
+# W: depth : rarity1 : rarity2 : cost - d(rarity2) may not be higher than rarity1 to make the item
 # C: to-hit : to-dam : to-ac : pval
 # r:N:needed flags on the base object
 # r:F:forbidden flags on the base object
@@ -3235,12 +3235,181 @@ R:100
 F:VAMPIRIC | IM_POISON
 f:VAMPIRIC
 
+N:261:of *Protection*
+X:A:31:20
+W:25:6:25:5000
+C:0:0:16:0
+T:35:0:255
+R:100
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | RES_SHARDS
+F:INV_PROTECT | R_ANY
+R:20
+F:R_HIGH
+
+N:262:of Inventory Protection
+X:A:31:10
+W:20:3:8:2000
+C:0:0:7:0
+T:35:0:255
+T:33:0:255
+T:34:0:255
+T:38:0:255
+R:100
+F:INV_PROTECT
+f:INV_PROTECT
+
+N:263:of Inventory Protection
+X:A:31:10
+W:24:5:12:2000
+C:0:0:7:0
+T:30:0:255
+T:31:0:255
+T:40:0:255
+T:14:0:255
+R:100
+F:INV_PROTECT
+f:INV_PROTECT
+
+N:264:of Spike Defense
+X:A:31:30
+W:35:8:20:4000
+C:7:8:0:0
+T:22:0:255
+R:100
+F:INV_PROTECT | R_HIGH | R_ANY
+f:INV_PROTECT
+R:100
+F:R_HIGH | R_ANY
+
+N:265:of Inventory Protection
+X:A:31:10
+W:40:6:14:2000
+C:0:0:8:0
+T:36:0:255
+T:37:0:255
+R:100
+F:INV_PROTECT
+f:INV_PROTECT
+
+N:266:of Forodwaith
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+X:A:24:50
+W:60:5:60:30000
+C:6:6:0:2
+R:100
+F:INT |
+F:SLAY_EVIL | SLAY_UNDEAD | SLAY_DEMON | 
+F:SEE_INVIS | BLESSED | RES_FEAR | ESP_EVIL
+F:SUSTAIN | LIMIT_BLOWS | INV_PROTECT
+R:10
+F:BLOWS
+R:20
+F:R_HIGH
+R:1
+F:PVAL_M1
+
+N:267:of Helcaraxe
+T:36:0:255
+T:37:0:255
+T:38:0:255
+X:A:30:60
+W:60:12:150:10000
+C:0:0:12:0
+R:100
+F:IM_COLD | IGNORE_COLD | INV_PROTECT | R_ANY
+f:IM_COLD | IGNORE_COLD | INV_PROTECT
+R:50
+F:R_ANY
+R:30
+F:R_HIGH
+
+N:268:of Peace
+T:36:0:255
+T:37:0:255
+T:38:0:255
+T:14:0:255
+X:A:30:5
+W:5:1:6:1000
+C:0:0:0:0
+R:100
+F:PEACEKEEPING
+f:PEACEKEEPING
+
+N:269:of Peace
+T:35:0:255
+T:40:0:255
+T:6:0:255
+X:A:30:5
+W:10:1:7:1000
+C:0:0:0:0
+R:100
+F:PEACEKEEPING
+f:PEACEKEEPING
+
+N:270:of the Elves
+T:6:0:255
+X:A:24:90
+W:50:12:100:32000
+C:0:0:0:6
+R:100
+F:ESP_EVIL | SPELL | INT | PEACEKEEPING | R_ANY
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+R:100
+F:R_ANY
+
+N:271:of Hocus Pocus
+T:6:0:255
+X:A:30:5
+W:5:1:6:500
+C:0:0:0:0
+R:100
+F:DEVICE_MASTERY
+f:DEVICE_MASTERY
+
+N:272:of Abracadabra
+T:6:0:255
+X:A:30:15
+W:20:3:30:500
+C:0:0:8:4
+R:100
+F:DEVICE_MASTERY | SPELL | INT
+f:DEVICE_MASTERY
+
+N:273:of Shininess
+T:33:0:255
+X:A:30:20
+W:5:1:6:1000
+C:0:0:20:3
+R:100
+F:DEVICE_MASTERY | R_HIGH | ABILITY
+f:DEVICE_MASTERY
+R:100
+F:R_HIGH
+R:100
+F:R_HIGH
+R:100
+F:R_ANY
+R:20
+F:R_P_ABILITY
+
+N:274:of Flinging
+T:19:0:255
+X:A:25:30
+C:12:5:0:1
+W:30:4:35:16000
+R:100
+F:XTRA_SHOTS | PVAL_M2 | DEVICE_MASTERY
+f:XTRA_SHOTS | 
+
 # N: serial number : ego type
 # D: description
 # T: tval : min sval : max sval
 # R: rarity for the following F flags
 # X: position : slot : rating - position means whether it's prefix or suffix
-# W: depth : rarity1 : rarity2 : cost
+# W: depth : rarity1 : rarity2 : cost - d(rarity2) may not be higher than rarity1 to make the item
 # C: to-hit : to-dam : to-ac : pval
 # r:N:needed flags on the base object
 # r:F:forbidden flags on the base object
