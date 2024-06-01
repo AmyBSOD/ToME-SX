@@ -3575,6 +3575,31 @@ void do_cmd_read_scroll(void)
 				break;
 			}
 
+		case SV_SCROLL_REINCARNATION:
+			{
+				object_type *reinc_ptr, forgeX;
+				monster_race *ree_ptr = &r_info[0];
+
+				reinc_ptr = &forgeX;
+				object_prep(reinc_ptr, lookup_kind(TV_CORPSE, SV_CORPSE_CORPSE));
+				reinc_ptr->number = 1;
+				reinc_ptr->pval = 0;
+				reinc_ptr->pval2 = 0;
+				reinc_ptr->pval3 = p_ptr->chp;
+				reinc_ptr->weight = (ree_ptr->weight + rand_int(ree_ptr->weight) / 10) + 1;
+				object_aware(reinc_ptr);
+				object_known(reinc_ptr);
+				reinc_ptr->ident |= IDENT_STOREB;
+
+				drop_near(reinc_ptr, -1, p_ptr->py, p_ptr->px);
+
+				msg_print("There's a body waiting for you to be used...");
+
+				ident = TRUE;
+
+				break;
+			}
+
 		case SV_SCROLL_CHAOS:
 			{
 				fire_ball(GF_CHAOS, 0, 222, 4);

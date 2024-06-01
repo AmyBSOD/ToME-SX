@@ -6777,3 +6777,11 @@ A:30/50:60/20:80/5
 P:0:1d1:0:0:0
 D:Causes you to become an atheist until you pick up a new religion.
 
+N:850:Reincarnation
+G:?:d
+I:70:55:0
+W:40:0:0:100000
+A:40/10
+P:0:1d1:0:0:0
+D:Provides a player body for possessors.
+
