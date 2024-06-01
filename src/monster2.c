@@ -2661,6 +2661,9 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 		if ((r_ptr->flags1 & (RF1_DROP_4D2)) && (rand_int(100) < 90)) number += damroll(2, 2);
 		if (r_ptr->flags9 & (RF9_MIMIC)) number = 1;
 
+		/* note by Amy: you shouldn't be able to scum summoned creatures for items!!! */
+		if (m_ptr->status >= MSTATUS_FRIEND) number = 0;
+
 		/* Hack -- handle creeping coins */
 		coin_type = force_coin;
 
