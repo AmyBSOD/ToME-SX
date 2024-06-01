@@ -1282,7 +1282,7 @@ static void print_power_batch(int *p, int start, int max)
 		j++;
 	}
 	prt("", 2 + j, 20);
-	prt(format("Select a power (a-%c), +/- to scroll:", I2A(j - 1)), 0, 0);
+	prt(format("Select a power (a-%c), @ to select by number, +/- to scroll:", I2A(j - 1)), 0, 0);
 }
 
 
@@ -1344,6 +1344,41 @@ static power_type* select_power(int *x_idx)
 				if (start < 0) start += 20;
 				Term_load();
 				character_icky = FALSE;
+			}
+			else if (which == '@') /* by Amy so that we can use macros */
+			{
+				char buf[80];
+				s32b whichpower;
+
+				ret = NULL;
+
+				strcpy(buf, "");
+				if (!get_string("Which power? ", buf, 79)) {
+					ret = NULL;
+					break;
+				}
+
+				whichpower = atoi(buf);
+
+				/* Find the skill it is related to */
+				for (i = 0; i <= power_max; i++)
+				{
+					if (whichpower == (p[i] + 1)) {
+						break;
+					}
+				}
+				if ((i < power_max))
+				{
+					*x_idx = p[i];
+					ret = &powers_type[p[i]];
+					break;
+				}
+				else /* none found */
+				{
+					*x_idx = -1;
+					ret = NULL;
+					break;
+				}
 			}
 			else
 			{
