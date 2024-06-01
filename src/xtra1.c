@@ -1956,6 +1956,10 @@ void calc_hitpoints(void)
 	{
 		mhp += mhp * p_ptr->to_l / 10;
 	}
+
+	/* boost by Amy, mainly to make the early game less deadly */
+	mhp += 15;
+
 	if (mhp < 1) mhp = 1;
 
 	if (p_ptr->body_monster)
