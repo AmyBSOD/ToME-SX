@@ -5172,7 +5172,7 @@ bool make_gold(object_type *j_ptr)
 
 	/* Determine how much the treasure is "worth"
 	 * Amy edit: increased because items now sell for less */
-	j_ptr->pval = (base + (15L * randint(base)) + randint(8));
+	j_ptr->pval = (base + (25L * randint(base)) + randint(8));
 
 	/* Success */
 	return (TRUE);
