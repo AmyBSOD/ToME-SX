@@ -88,6 +88,10 @@ bool quest_wolves_death_hook(char *fmt)
 	/* Nobody left ? */
 	if (mcnt <= 1)
 	{
+		/* Amy edit: you scummy scumbag, go find your ammo raw materials somewhere else! */
+		cave_set_feat(20, 31, FEAT_LESS);
+		cave[20][31].special = 0;
+
 		quest[p_ptr->inside_quest].status = QUEST_STATUS_COMPLETED;
 		del_hook(HOOK_MONSTER_DEATH, quest_wolves_death_hook);
 		del_hook(HOOK_GEN_QUEST, quest_wolves_gen_hook);

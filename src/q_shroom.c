@@ -23,7 +23,8 @@ bool quest_shroom_town_gen_hook(char *fmt)
 		{
 			object_type forge, *q_ptr = &forge;
 
-			object_prep(q_ptr, lookup_kind(TV_FOOD, rand_range(1, 18)));
+			/* Amy edit: it's soooooo lame if you can scum them. so now you only get negative ones :-P */
+			object_prep(q_ptr, lookup_kind(TV_FOOD, rand_range(1, 4)));
 			q_ptr->number = 1;
 			/* Mark them */
 			q_ptr->pval2 = 1;
