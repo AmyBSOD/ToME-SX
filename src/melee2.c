@@ -4920,7 +4920,7 @@ static int mon_will_run(int m_idx)
 
 	/* Optimize extreme cases below */
 	if (m_lev > p_lev + 4) return (FALSE);
-	if (m_lev + 4 <= p_lev) return (TRUE);
+	if ((m_lev + 4 <= p_lev) && (randint(10) == 1) ) return (TRUE);
 
 	/* Examine player health */
 	p_chp = p_ptr->chp;
@@ -4934,8 +4934,9 @@ static int mon_will_run(int m_idx)
 	p_val = (p_lev * p_mhp) + (p_chp << 2);  /* div p_mhp */
 	m_val = (m_lev * m_mhp) + (m_chp << 2);  /* div m_mhp */
 
-	/* Strong players scare strong monsters */
-	if (p_val * m_mhp > m_val * p_mhp) return (TRUE);
+	/* Strong players scare strong monsters
+	 * Amy edit: but not all the damn time! */
+	if ((p_val * m_mhp > m_val * p_mhp) && (randint(10) == 1) ) return (TRUE);
 
 #endif
 
