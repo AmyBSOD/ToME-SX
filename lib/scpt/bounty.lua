@@ -7,7 +7,7 @@ add_quest
 	["desc"] =      function()
 		if quest(BOUNTY_QUEST).status == QUEST_STATUS_TAKEN then
 			print_hook("#####yBounty quest!\n")
-			print_hook("You must bring back "..monster_race_desc(bounty_quest_monster, 0).." corpse to the beastmaster.\n")
+			print_hook("You must bring back "..monster_race_desc(bounty_quest_monster, 0).." (id "..bounty_quest_monster..") corpse to the beastmaster.\n")
 			print_hook("\n")
 		end
 	end,
@@ -32,9 +32,9 @@ add_building_action
 			quest(BOUNTY_QUEST).status = QUEST_STATUS_TAKEN
 			bounty_quest_monster = get_new_bounty_monster(3 + ((player.lev * 3) / 2))
 
-			msg_print("You must bring me back "..monster_race_desc(bounty_quest_monster, 0).." corpse.")
+			msg_print("You must bring me back "..monster_race_desc(bounty_quest_monster, 0).." (id "..bounty_quest_monster..") corpse.")
 		else
-			msg_print("You still must bring me back "..monster_race_desc(bounty_quest_monster, 0).." corpse.")
+			msg_print("You still must bring me back "..monster_race_desc(bounty_quest_monster, 0).." (id "..bounty_quest_monster..") corpse.")
 		end
 	end
 }
