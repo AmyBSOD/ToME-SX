@@ -8690,6 +8690,10 @@ bool project(int who, int rad, int y, int x, int dam, int typ, int flg)
 					else
 					{
 						if (!los(y2, x2, y, x)) continue;
+
+						/* Cannot cheatingly hit through glass walls, sucker --Amy */
+						if (!projectable(y2, x2, y, x)) continue;
+
 					}
 
 					/* Save this grid */
@@ -9382,14 +9386,14 @@ void generate_spell(int plev)
 	/* Hack -- Always start with Magic Missile or derivative at lev. 1 */
 	if (plev == 1 || chance < 33)
 	{
-		rspell->proj_flags |= PROJECT_STOP;
+		rspell->proj_flags |= PROJECT_STOP; /* bolt */
 		rspell->dam_dice = dice;
 		rspell->dam_sides = sides;
 		rspell->radius = 0;
 	}
 	else if (chance < 64)
 	{
-		rspell->proj_flags |= PROJECT_BEAM;
+		rspell->proj_flags |= PROJECT_BEAM; /* beam */
 		rspell->dam_dice = dice;
 		rspell->dam_sides = sides / 2;
 		if (rspell->dam_sides < 1) rspell->dam_sides = 1;
@@ -9397,16 +9401,16 @@ void generate_spell(int plev)
 	}
 	else if (chance < 93)
 	{
-		rspell->proj_flags |= PROJECT_STOP;
+		rspell->proj_flags |= PROJECT_STOP; /* ball */
 		rspell->radius = dice;
 		rspell->dam_dice = dice;
-		rspell->dam_sides = sides / 3;
+		rspell->dam_sides = sides * 2 / 5;
 		if (rspell->dam_sides < 1) rspell->dam_sides = 1;
 		ball_desc = TRUE;
 	}
 	else if (chance < 95)
 	{
-		rspell->proj_flags |= PROJECT_BLAST;
+		rspell->proj_flags |= PROJECT_BLAST; /* wall manipulation */
 		rspell->radius = sides / 3;
 		rspell->dam_dice = dice;
 		rspell->dam_sides = sides / 2;
@@ -9418,11 +9422,12 @@ void generate_spell(int plev)
 	}
 	else if (chance < 97)
 	{
-		rspell->proj_flags |= PROJECT_METEOR_SHOWER;
-		rspell->dam_dice = /*dice*/1;
+		rspell->proj_flags |= PROJECT_METEOR_SHOWER; /* area */
+		rspell->dam_dice = dice / 4;
+		if (rspell->dam_dice < 1) rspell->dam_dice = 1;
 		rspell->dam_sides = sides / 2;
 		if (rspell->dam_sides < 1) rspell->dam_sides = 1;
-		rspell->radius = sides / 3;
+		rspell->radius = sides / 2;
 		if (rspell->radius < 4) rspell->radius = 4;
 
 		destruc_gen = TRUE;
@@ -9430,9 +9435,9 @@ void generate_spell(int plev)
 	}
 	else
 	{
-		rspell->proj_flags |= PROJECT_VIEWABLE;
+		rspell->proj_flags |= PROJECT_VIEWABLE; /* view */
 		rspell->dam_dice = dice;
-		rspell->dam_sides = sides / 4;
+		rspell->dam_sides = sides / 3; /* should be low because they are rather abusable --Amy */
 		if (rspell->dam_sides < 1) rspell->dam_sides = 1;
 	}
 

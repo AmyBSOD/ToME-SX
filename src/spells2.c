@@ -4913,6 +4913,9 @@ bool project_hack(int typ, int dam)
 		/* Require line of sight */
 		if (!player_has_los_bold(y, x)) continue;
 
+		/* Cannot cheatingly hit through glass walls, sucker --Amy */
+		if (!projectable(p_ptr->py, p_ptr->px, y, x)) continue;
+
 		/* Jump directly to the target monster */
 		if (project(0, 0, y, x, dam, typ, flg)) obvious = TRUE;
 	}
