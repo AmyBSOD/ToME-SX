@@ -3081,6 +3081,9 @@ void calc_bonuses(bool silent)
 	if (get_skill(SKILL_DAEMON) > 40) p_ptr->resist_conf = TRUE;
 	if (get_skill(SKILL_DAEMON) > 50) p_ptr->resist_fear = TRUE;
 
+	if (get_skill(SKILL_VALARIN) >= 50) p_ptr->resist_lite = TRUE;
+	if (get_skill(SKILL_NETHER) >= 50) p_ptr->resist_neth = TRUE;
+
 	if ( get_skill(SKILL_MINDCRAFT) >= 75 ) p_ptr->telepathy = ESP_ALL;
 
 	if (p_ptr->astral)
