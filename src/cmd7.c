@@ -3608,6 +3608,9 @@ void do_cmd_alchemist(void)
 
 	cptr q, s;
 
+	msg_print("Sorry. Alchemy is for people who have no life, and was therefore deactivated.");
+	return;
+
 	/* With the new skill system, we can no longer depend on
 	 * check_exp to handle the changes and learning involved in
 	 * gaining levels.
@@ -6864,6 +6867,8 @@ void do_cmd_runecrafter()
 
 	char ch;
 
+	msg_print("Sorry. Runecraft was too unbalanced and is therefore deactivated.");
+	return;
 
 	/* Select what to do */
 	while (TRUE)
