@@ -3335,10 +3335,11 @@ void calc_bonuses(bool silent)
 		}
 	}
 
-	/* Provide the damage we get from sacrifice */
+	/* Provide the damage we get from sacrifice
+	 * Amy edit: hardcore nerf, because Melkor is powerful enough as it is */
 	GOD(GOD_MELKOR)
 	{
-		int x = wisdom_scale(4);
+		int x = /*wisdom_scale(4)*/1;
 		if (x < 1) x = 1;
 
 		p_ptr->dis_to_d += x * p_ptr->melkor_sacrifice;
