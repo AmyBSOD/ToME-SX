@@ -38,11 +38,19 @@ DRAIN = add_spell
 				end
 				if obj.tval == TV_ROD_MAIN then
 					add = obj.timeout
-					obj.timeout = 0;
+
+					-- Amy: waaaaaaay too imba if you can just repeatedly drain an adamantite rod of istari.
+					-- therefore, use up the rod too because goddamn it I'm gonna balance this game, and if
+					-- it's the last thing I do in my life!
+					inven_item_increase(item, -99)
+					inven_item_describe(item)
+					inven_item_optimize(item)
+
+					--obj.timeout = 0;
 
 					--Combine / Reorder the pack (later)
-					player.notice = bor(player.notice, PN_COMBINE, PN_REORDER)
-					player.window = bor(player.window, PW_INVEN, PW_EQUIP, PW_PLAYER)
+					--player.notice = bor(player.notice, PN_COMBINE, PN_REORDER)
+					--player.window = bor(player.window, PW_INVEN, PW_EQUIP, PW_PLAYER)
 				end
 				increase_mana(add)
 			end
