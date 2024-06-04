@@ -487,6 +487,12 @@ F:DONT_NOTICE_RUNNING
 
 # 79 --> 83 UNSUSED
 
+#Niphredil
+N:82:grass with Niphredil flowers
+G:;:w
+F:FLOOR | DONT_NOTICE_RUNNING | CAN_RUN
+F:SUPPORT_GROWTH
+
 N:84:stream of shallow water
 G:~:B
 S:B:B:B:B:B:B:b
