@@ -3100,6 +3100,8 @@ static void process_world(void)
 
 				/* Teleport player */
 				teleport_player(40);
+				/* FUCKing interrupt so that you don't bump into an AMHD with the next overshot keystroke --Amy */
+				msg_print(NULL);
 			}
 			else
 			{
