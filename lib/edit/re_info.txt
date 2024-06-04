@@ -367,6 +367,24 @@ I:+0:+0d+0:+0:+10:-30
 W:+1:20:%90:%100:A
 M:KILL_WALL
 
+N:47:Farter
+G:*:v
+I:+0:+0d+0:+0:+10:-30
+W:+1:15:%90:%100:A
+B:FART:*:+0d+0
+
+N:48:Farter
+G:*:v
+I:+0:+0d+0:+0:+10:-30
+W:+1:15:%90:%100:A
+B:FARTQUIET:*:+0d+0
+
+N:49:Farter
+G:*:v
+I:+0:+0d+0:+0:+10:-30
+W:+1:15:%90:%100:A
+B:FARTLOUD:*:+0d+0
+
 # N:x:ego name
 # G:x:y                 x is the char, y the attribute, * means the normal one
 # I:speed:(dice)d(side):aaf:ac:sleep
