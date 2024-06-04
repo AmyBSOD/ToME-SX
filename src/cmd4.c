@@ -2981,7 +2981,7 @@ void do_cmd_feeling(void)
 {
 	/* Verify the feeling */
 	if (feeling < 0) feeling = 0;
-	if (feeling > 13) feeling = 13;
+	if (feeling > 19) feeling = 19;
 
 	/* Feeling of the fate */
 	if (fate_flag && !(dungeon_flags2 & DF2_SPECIAL) && !p_ptr->inside_quest)
