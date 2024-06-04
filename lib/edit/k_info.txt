@@ -6655,6 +6655,7 @@ N:837:& Mithril Helm~
 G:]:B
 I:32:8:0
 W:50:0:60:2500
+A:50/2
 P:7:1d2:0:0:5
 F:IGNORE_ACID
 D:A cone-shaped helm with cheekguards, made of True-silver.
@@ -6729,7 +6730,7 @@ N:844:& Small Mithril Boomerang~
 G:{:B
 I:15:5:0
 W:25:0:40:300
-A:25/1:35:/2
+A:25/1:35/2
 P:0:2d5:0:0:0
 F:SHOW_MODS | IGNORE_ACID
 D:A small curved piece of wood with mithril blades on the "forward" edges.
