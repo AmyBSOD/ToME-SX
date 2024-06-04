@@ -2948,11 +2948,17 @@ void do_cmd_version(void)
 /*
  * Array of feeling strings
  */
-static cptr do_cmd_feeling_text[14] =
+static cptr do_cmd_feeling_text[20] =
 {
 	"Looks like any other level.",
 	"You feel there is something special about this level.",
-	"You have a extremely superb feeling about this level.",
+	"You have a hellishly superb feeling about this level.",
+	"You have a completely superb feeling about this level.",
+	"You have a totally superb feeling about this level.",
+	"You have an absolutely superb feeling about this level.",
+	"You have an incredibly superb feeling about this level.",
+	"You have an insanely superb feeling about this level.",
+	"You have an extremely superb feeling about this level.",
 	"You have a truly superb feeling about this level.",
 	"You have a very superb feeling about this level.",
 	"You have a superb feeling about this level.",

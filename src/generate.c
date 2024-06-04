@@ -7111,7 +7111,8 @@ bool level_generate_dungeon(cptr name)
 		                (ironman_rooms || (rand_int(DUN_UNUSUAL) < dun_level)))
 		{
 			/* Roll for room type */
-			k = (ironman_rooms ? 0 : rand_int(100));
+			/* Amy edit: ironman shouldn't create only greater vaults... have some other room types too, please */
+			k = ( (ironman_rooms && (randint(3) != 1)) ? 0 : rand_int(100));
 
 			/* Attempt a very unusual room */ /* test hack */
 			if (ironman_rooms || (rand_int(DUN_UNUSUAL) < dun_level))
@@ -9064,18 +9065,24 @@ void generate_cave(void)
 			}
 
 			/* Extract the feeling */
-			if (rating > 500) feeling = 2;
-			else if (rating > 400) feeling = 3;
-			else if (rating > 300) feeling = 4;
-			else if (rating > 200) feeling = 5;
-			else if (rating > 150) feeling = 6;
-			else if (rating > 120) feeling = 7;
-			else if (rating > 100) feeling = 8;
-			else if (rating > 70) feeling = 9;
-			else if (rating > 50) feeling = 10;
-			else if (rating > 30) feeling = 11;
-			else if (rating > 10) feeling = 12;
-			else feeling = 13;
+			if (rating > 30000) feeling = 2;
+			else if (rating > 20000) feeling = 3;
+			else if (rating > 10000) feeling = 4;
+			else if (rating > 5000) feeling = 5;
+			else if (rating > 2000) feeling = 6;
+			else if (rating > 1000) feeling = 7;
+			else if (rating > 500) feeling = 8;
+			else if (rating > 400) feeling = 9;
+			else if (rating > 300) feeling = 10;
+			else if (rating > 200) feeling = 11;
+			else if (rating > 150) feeling = 12;
+			else if (rating > 120) feeling = 13;
+			else if (rating > 100) feeling = 14;
+			else if (rating > 70) feeling = 15;
+			else if (rating > 50) feeling = 16;
+			else if (rating > 30) feeling = 17;
+			else if (rating > 10) feeling = 18;
+			else feeling = 19;
 
 			/* Hack -- Have a special feeling sometimes */
 			if (good_item_flag && !p_ptr->preserve) feeling = 1;
@@ -9114,11 +9121,11 @@ void generate_cave(void)
 			if (auto_scum && !ironman_rooms && (num < 100) && !p_ptr->inside_quest && dun_level)
 			{
 				/* Require "goodness" */
-				if ((feeling > 12) ||
-				                ((dun_level >= 5) && (feeling > 11)) ||
-				                ((dun_level >= 10) && (feeling > 10)) ||
-				                ((dun_level >= 20) && (feeling > 9)) ||
-				                ((dun_level >= 40) && (feeling > 8)))
+				if ((feeling > 18) ||
+				                ((dun_level >= 5) && (feeling > 17)) ||
+				                ((dun_level >= 10) && (feeling > 16)) ||
+				                ((dun_level >= 20) && (feeling > 15)) ||
+				                ((dun_level >= 40) && (feeling > 14)))
 				{
 					/* Give message to cheaters */
 					if (cheat_room || cheat_hear ||
