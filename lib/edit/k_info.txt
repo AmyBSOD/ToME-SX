@@ -6786,3 +6786,15 @@ A:40/10
 P:0:1d1:0:0:0
 D:Provides a player body for possessors.
 
+# N:number:name
+# G:glyph:color
+# I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
+# W:level:extra:weight:cost
+# T:btval:bsval for artifacts
+# A:allocation, apparently "level/1 in X chance to spawn" i.e. make items rare by having a high chance behind the /
+# a:artifact activation
+# P:ac:hitdice1:hitdice2:tohit:todamage:toattacks
+# F:flags
+# f:obvious flags
+# D:description lines
+

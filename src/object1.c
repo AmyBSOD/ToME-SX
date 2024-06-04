@@ -3249,7 +3249,10 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 
 		if ((f4 & (TR4_ANTIMAGIC_50)) || (f4 & (TR4_ANTIMAGIC_30)) || (f4 & (TR4_ANTIMAGIC_20)) || (f4 & (TR4_ANTIMAGIC_10)))
 		{
-			text_out_c(TERM_L_DARK, "It generates an antimagic field.  ");
+			if (f4 & (TR4_ANTIMAGIC_50)) text_out_c(TERM_L_DARK, "It generates an antimagic field (50). ");
+			else if (f4 & (TR4_ANTIMAGIC_30)) text_out_c(TERM_L_DARK, "It generates an antimagic field (30). ");
+			else if (f4 & (TR4_ANTIMAGIC_20)) text_out_c(TERM_L_DARK, "It generates an antimagic field (20). ");
+			else text_out_c(TERM_L_DARK, "It generates an antimagic field (10). ");
 		}
 
 		if (f5 & TR5_SPELL_CONTAIN)
@@ -3262,12 +3265,12 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 
 		/* Pick up stat bonuses */
 		vn = 0;
-		if (f1 & (TR1_STR)) vp[vn++] = "strength";
-		if (f1 & (TR1_INT)) vp[vn++] = "intelligence";
-		if (f1 & (TR1_WIS)) vp[vn++] = "wisdom";
-		if (f1 & (TR1_DEX)) vp[vn++] = "dexterity";
-		if (f1 & (TR1_CON)) vp[vn++] = "constitution";
-		if (f1 & (TR1_CHR)) vp[vn++] = "charisma";
+		if (f1 & (TR1_STR)) vp[vn++] = "STR";
+		if (f1 & (TR1_INT)) vp[vn++] = "INT";
+		if (f1 & (TR1_WIS)) vp[vn++] = "WIS";
+		if (f1 & (TR1_DEX)) vp[vn++] = "DEX";
+		if (f1 & (TR1_CON)) vp[vn++] = "CON";
+		if (f1 & (TR1_CHR)) vp[vn++] = "CHA";
 		if ((o_ptr->tval != TV_TRAPKIT) && (f1 & (TR1_STEALTH))) vp[vn++] = "stealth";
 		if (f1 & (TR1_SEARCH)) vp[vn++] = "searching";
 		if (f1 & (TR1_INFRA)) vp[vn++] = "infravision";
@@ -3620,7 +3623,7 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 
 		if (f2 & (TR2_FREE_ACT))
 		{
-			text_out_c(TERM_ORANGE, "Free Action.  ");
+			text_out_c(TERM_L_GREEN, "Free Action.  ");
 		}
 		if (f2 & (TR2_RES_FEAR))
 		{
@@ -3833,9 +3836,9 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		{
 			text_out_c(TERM_L_BLUE, "Device Mastery.  ");
 		}
-		if (f3 & (TR3_NO_MAGIC))
+		if (f3 & (TR3_NO_MAGIC)) /* stupid name, since it doesn't prevent spellcasting at all... --Amy */
 		{
-			text_out_c(TERM_L_DARK, "It produces an anti-magic shell.  ");
+			text_out_c(TERM_GREEN, "It boosts your saving throw.  ");
 		}
 		if (f3 & (TR3_NO_TELE))
 		{

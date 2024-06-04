@@ -4229,7 +4229,7 @@ void monster_death(int m_idx)
 		}
 		else
 		{
-			byte a_idx = 0;
+			int a_idx = 0;
 			int chance = 0;
 			int I_kind = 0;
 

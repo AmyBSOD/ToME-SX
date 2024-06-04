@@ -24,6 +24,16 @@
 #                                            -Leon Marrick
 # Contributors: Jeff Butler, Neal Hackler, Ethan Sicotte, Pat Tracy, Divia
 
+# N:number:name
+# I:tval:sval:pval
+# W:level:rarity:item weight:cost
+# P:ac:extra damage dice:to-hit:to-damage:to-ac
+# F:flags
+# f:obvious flags
+# a:activation
+# D:description lines
+# Z:granted power
+
 # Version stamp (required)
 
 V:2.0.0
@@ -3417,10 +3427,10 @@ D:somewhere on Arda.
 # The Map of Thror
 
 N:242:of Thror
-I:8:20:0
+I:35:3:0
 W:70:100:30:1
 P:0:0d0:0:0:0
-F:INSTA_ART
+F:PEACEKEEPING | WATER_BREATH | ESP_DRAGON | LITE2 | FLY | RES_SHARDS
 D:A map made by Thror, the King under the Mountain. It shows the Lonely 
 D:Mountain of Erebor, the Running River, and the lands about devastated by 
 D:Smaug. It also contains mention of a secret entrance to the Mountain. 
@@ -3429,10 +3439,11 @@ D:This map and a key are all you need to enter a special cavern in Erebor.
 # The Key of Thorin
 
 N:243:of Thorin
-I:11:6:0
+I:24:7:0
 W:70:100:5:1
 P:0:0d0:0:0:0
-F:INSTA_ART
+F:INV_PROTECT | ESP_UNIQUE | ESP_UNDEAD | KILL_DEMON | FREE_ACT | 
+F:BRAND_FIRE | BRAND_COLD | SLAY_UNDEAD
 D:A small silver key, given to Thorin Oakenshield by Gandalf the Grey, 
 D:who got it from Thrain, Thorin's father, in Dol Guldur. It opens a 
 D:magical gate to a special cavern in the Lonely Mountain - you will 
@@ -3441,10 +3452,10 @@ D:also need a map to show you the gate's precise location.
 # The Cup of Thror
 
 N:244:of Thror
-I:11:3:0
+I:20:3:0
 W:70:100:50:100000
 P:0:0d0:0:0:0
-F:ACTIVATE | ACTIVATE_NO_WIELD | HIDE_TYPE | INSTA_ART
+F:ACTIVATE
 a:HARDCORE=ALCHEMY
 D:It was made for Thror, King under the Mountain. It is a huge golden bowl 
 D:with two handles, hammered and carved, with birds and flowers whose eyes 
@@ -3685,4 +3696,95 @@ D:Valar. It will grant you protection against the foul dark magic
 D:of Melkor, though you will still need your wits and strength 
 D:about you as you face your ultimate foe.
 
+# artifact high heels
+N:261:of Amy
+I:30:4:5
+W:80:20:1:150000
+P:10:1d1:0:0:10
+F:INV_PROTECT | DEVICE_MASTERY | RES_WATER | SLOW_DIGEST | SEE_INVIS | 
+F:FEATHER | RES_DISEN | RES_CONF | SUST_CON | SUST_CHR | DEX
+f:INV_PROTECT | DEVICE_MASTERY
+D:This pair of block-heeled boots belongs to AmyBSOD, but I guess 
+D:you can use them since there's no sign of the owner. 
+
+# super scythe of slicing
+N:262:'Ultimacy'
+I:22:30:10
+W:80:30:250:50000
+P:0:1d1:15:20:0
+F:RES_MORGUL | ESP_UNDEAD | STR | CON | DEX | CHAOTIC | SLAY_EVIL | 
+F:SLAY_UNDEAD | SUST_STR | SUST_CON | SUST_DEX | HOLD_LIFE | 
+F:RES_DARK | RES_POIS
+f:RES_MORGUL | SLAY_EVIL | SLAY_UNDEAD
+D:The ultimate scythe for cutting down all who oppose you. 
+
+# early-game axe with resist morgul
+N:263:'Clever Cleaver'
+I:24:2:0
+W:15:5:110:3000
+P:0:1d1:8:8:0
+F:RES_MORGUL | SLAY_EVIL | SLAY_UNDEAD 
+f:RES_MORGUL | SLAY_EVIL | SLAY_UNDEAD
+D:Hither came Conan, the Cimmerian, black-haired, sullen-eyed, 
+D:sword in hand, a thief, a reaver, a slayer, with gigantic 
+D:melancholies and gigantic mirth, to tread the jeweled 
+D:thrones of the Earth under his sandalled feet. 
+D:(The Phoenix on the Sword, by Robert E. Howard) 
+
+# another trident
+N:264:of Poseidon
+I:22:5:3
+W:30:40:70:50000
+P:0:1d1:8:14:0
+F:RES_MORGUL | RES_WATER | ESP_DEMON | INT | WIS | INFRA | 
+F:SLAY_DEMON | SUST_INT | RES_COLD | LITE1 | SEE_INVIS | 
+F:RES_MORGUL | RES_WATER | INT | WIS | AUTO_CURSE
+D:The angry god of the sea uses this to control the waves and 
+D:send them to crush his opponents. 
+
+# boots with resist inertia
+N:265:'Wobiwaba Walk'
+I:30:6:2
+W:20:20:80:6000
+P:6:1d1:0:0:7
+F:CON | RES_INERTIA
+f:CON | RES_INERTIA
+D:For walking the Shifting Sand Land (or "Sand Sand Land", as 
+D:the Super Mario 64 speedrunners are referring to it, and which 
+D:has the much cooler-sounding name "Wobiwaba Desert" in the 
+D:German version of the game), these boots have been crafted. 
+D:Hint: the desert in Arda is actually called Near Harad. 
+D:(I'm kinda wondering where Far Harad is, though...) 
+
+# bar chain mail with poison immunity
+N:266:'Venomsward'
+I:37:8:0
+W:40:15:280:7000
+P:18:1d4:-2:0:15
+F:IM_POISON | LITE2
+f:IM_POISON
+D:From Diablo 2, this unique breast plate has almost unmatched 
+D:poison resistance as its main feature. 
+
+# mithril gauntlets with device mastery
+N:267:of the Dwarven Masters
+I:31:4:2
+W:50:20:25:20000
+P:4:2d4:0:0:19
+F:DEVICE_MASTERY | STR | CON | SEARCH | INFRA | TUNNEL | 
+F:SUST_CON | RES_DARK | FREE_ACT | SPELL_CONTAIN
+f:DEVICE_MASTERY
+D:Some master dwarves with lots of crafting skill have forged 
+D:this pair of gauntlets, which even allows the wearer to use 
+D:magic devices more effectively. 
+
+# N:number:name
+# I:tval:sval:pval
+# W:level:rarity:item weight:cost
+# P:ac:extra damage dice:to-hit:to-damage:to-ac
+# F:flags
+# f:obvious flags
+# a:activation
+# D:description lines
+# Z:granted power
 

@@ -2749,6 +2749,13 @@ static void display_player_ben_one(int mode)
 					a = TERM_L_GREEN;
 				}
 
+				/* and the same for poison immunity */
+				if (modetemp == 1 && x == 1 && y == 4 && p_ptr->immune_pois)
+				{
+					name = "Imm Pois";
+					a = TERM_L_GREEN;
+				}
+
 				/* Dump name */
 				if (modetemp == 1 && x == 0 && y > 7 && y < 12)
 				{

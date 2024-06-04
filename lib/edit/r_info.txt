@@ -66404,3 +66404,34 @@ D:called flamelords. Anyway, here you finally have one who breathes
 D:lightning, which is what you'd *expect* from a monster called 
 D:thunderlord. 
 
+N:3857:Firecracker mushroom patch
+G:,:R
+I:110:1d1:2:1:0
+W:1:1:10:1
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:HURT:2d1
+F:NEVER_MOVE | 
+F:STUPID | EMPTY_MIND | 
+F:DROP_CORPSE | SUSCEP_FIRE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A fast spreading volatile mushroom species that spreads 
+D:its spores around the dungeon by exploding. Chain 
+D:reactions of large patches of these can be, erm, exciting.
+
+N:3858:Firecracker mushroom patch
+G:,:R
+I:110:1d1:2:1:0
+W:1:5:10:1
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:HURT:2d1
+F:NEVER_MOVE | 
+F:STUPID | EMPTY_MIND | 
+F:DROP_CORPSE | SUSCEP_FIRE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:MULTIPLY
+D:A fast spreading volatile mushroom species that spreads 
+D:its spores around the dungeon by exploding. Chain 
+D:reactions of large patches of these can be, erm, exciting.
+

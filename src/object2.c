@@ -6569,7 +6569,7 @@ void pack_decay(int item)
 	s16b m_type;
 	s32b wt;
 
-	byte known = o_ptr->name1;
+	s16b known = o_ptr->name1;
 
 	byte gone = 1;
 
@@ -6655,7 +6655,7 @@ void floor_decay(int item)
 	s16b m_type;
 	s32b wt;
 
-	byte known = o_ptr->name1;
+	s16b known = o_ptr->name1;
 
 	/* Assume we disappear */
 	byte gone = 1;
