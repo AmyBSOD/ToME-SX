@@ -1034,9 +1034,11 @@ void map_info(int y, int x, byte *ap, char *cp)
 				else
 				{
 					/* Amy edit: finally fix the bullshit feature where traps are obscured by terrain */
-					/*if ((f_ptr->flags1 & (FF1_FLOOR | FF1_REMEMBER)) == FF1_FLOOR)*/
+					if ((f_ptr->flags1 & (FF1_FLOOR | FF1_REMEMBER)) == FF1_FLOOR)
 					{
 						c = f_info[FEAT_TRAP].x_char;
+					} else {
+						c = f_info[FEAT_TRAP_OBSCURED].x_char;
 					}
 
 					/* Add attr XXX XXX XXX */
@@ -1674,9 +1676,11 @@ void map_info_default(int y, int x, byte *ap, char *cp)
 			 * Cave macros cannot be used safely here, because of
 			 * c_ptr->mimic XXX XXX
 			 */
-			/*if ((f_ptr->flags1 & (FF1_FLOOR | FF1_REMEMBER)) == FF1_FLOOR)*/
+			if ((f_ptr->flags1 & (FF1_FLOOR | FF1_REMEMBER)) == FF1_FLOOR)
 			{
 				c = f_info[FEAT_TRAP].d_char;
+			} else {
+				c = f_info[FEAT_TRAP_OBSCURED].d_char;
 			}
 
 			/* Add attr */

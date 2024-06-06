@@ -741,6 +741,7 @@
 
 /* Traps */
 #define FEAT_TRAP               0x11
+#define FEAT_TRAP_OBSCURED      0x12
 
 /* Features 0x12 - 0x1F -- unused */
 
