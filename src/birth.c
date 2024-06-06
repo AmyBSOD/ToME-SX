@@ -1264,8 +1264,14 @@ static void gen_random_quests(int n)
 
 			tries--;
 
-			/* Random monster 5 - 10 levels out of depth */
-			q_ptr->r_idx = get_mon_num( (rl > 600) ? 150 : (rl + randint(10)) );
+			/* Random monster 5 - 10 levels out of depth
+			 * Amy edit: some adjustments to make the very early game more playable */
+
+			if (rl > 150) q_ptr->r_idx = get_mon_num(150);
+			else if (rl > 140) q_ptr->r_idx = get_mon_num(rl);
+			else if (rl > 9) q_ptr->r_idx = get_mon_num(rl + randint(10));
+			else if (rl > 2) q_ptr->r_idx = get_mon_num(rl + randint(rl));
+			else q_ptr->r_idx = get_mon_num(rl);
 
 			if (!q_ptr->r_idx) continue;
 
