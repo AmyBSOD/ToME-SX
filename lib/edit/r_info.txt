@@ -66896,3 +66896,119 @@ D:scratches up and down your shins like a bitch. Defeating her is
 D:the only way to stop her from destroying your skin and spilling your 
 D:blood. 
 
+N:3885:Human adventurer
+G:t:W
+I:110:1d6:6:1:0
+W:0:1:1500:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d3
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_TOWN | 
+F:ONLY_GOLD | RAND_25 | DROP_1D2 | TAKE_ITEM | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:He wants to find treasure. 
+
+N:3886:Dumb human
+G:t:W
+I:100:1d6:6:1:0
+W:0:1:1500:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d3
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_TOWN | 
+F:RAND_25 | TAKE_ITEM | 
+F:MORTAL | BASEANGBAND | STUPID
+D:An adventurer who isn't too terribly bright. 
+
+N:3887:Akira girl
+G:t:b
+I:110:2d4:6:5:0
+W:0:1:1500:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:1d2
+F:FEMALE | DROP_CORPSE | DROP_SKELETON | WILD_TOWN | 
+F:RAND_25 | TAKE_ITEM | DROP_1D2 | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:This lovely girl wants to try out her block-heeled combat boots in battle. 
+
+N:3888:Insane survivor
+G:t:b
+I:110:1d2:6:1:0
+W:0:5:1500:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:INSANITY:1d3
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_TOWN | 
+F:RAND_25 | TAKE_ITEM | DROP_1D2 | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:He constantly shouts "Aaah! Aaah!" and seems to be out of his mind. 
+
+N:3889:HC woman
+G:p:W
+I:113:12d10:20:10:40
+W:15:1:1700:45
+E:1:1:1:2:1:1
+O:20:50:20:0
+B:HIT:HURT:3d5
+B:KICK:HURT:3d5
+F:FEMALE | 
+F:DROP_1D2 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | WILD_WASTE | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND | MORTAL | HAS_LITE
+S:1_IN_4 |  
+S:CONF | DRAIN_MANA | SCARE | 
+D:"HC" means hardcore. This woman tries to convert you to her religion. 
+
+N:3890:HC alien
+G:p:D
+I:107:15d15:20:35:40
+W:20:5:1700:60
+E:1:1:1:2:1:1
+O:20:50:20:0
+B:HIT:HURT:6d4
+B:KICK:HURT:6d4
+F:FEMALE | 
+F:DROP_1D2 | ELDRITCH_HORROR | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | WILD_WASTE | WILD_VOLCANO | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND | MORTAL | HAS_LITE
+S:1_IN_3 |  
+S:FORGET | SHRIEK | MIND_BLAST | SCARE | BLIND | CONF | SLOW | HOLD | 
+S:TRAPS | DARKNESS | 
+D:"HC" means hardcore. You're not sure what this creature is supposed 
+D:to be, but it repeatedly emits a raspy noise that sounds like "Wouwou." 
+
+N:3891:Dissolved undead potato
+G:z:D
+I:108:36d15:30:80:255
+W:36:7:0:850
+E:1:1:1:2:1:1
+O:50:50:0:0
+B:CLAW:HURT:13d4
+F:FORCE_SLEEP | FORCE_MAXHP | NO_FEAR | EVIL | UNDEAD | COLD_BLOOD |
+F:ONLY_ITEM | DROP_2D2 | 
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | 
+F:IM_COLD | IM_POIS | 
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BR_POIS | MISSILE | 
+D:Teh meme! Although it's really just a mummy. 
+
+N:3892:Thai masseuse
+G:t:D
+I:110:10d10:6:3:0
+W:14:3:1500:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:7d10
+F:FEMALE | DROP_CORPSE | DROP_SKELETON | 
+F:RAND_25 | TAKE_ITEM | DROP_1D2 | NO_SLEEP | IM_POIS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_8
+S:HOLD
+D:She can kick her enemy's nuts incredibly painfully with her stiletto 
+D:heels, dislocating the delicate balls out of their original position 
+D:and giving the victim a horrible distortion fracture. Hopefully you're 
+D:male, because then you can let her break your pubic bone with the 
+D:very cuuuuuuute high heels. 
+
