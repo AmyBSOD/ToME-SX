@@ -418,12 +418,20 @@ static s32b price_item(object_type *o_ptr, int greed, bool flip)
 	int adjust;
 	s32b price;
 
+	object_kind *k_ptr = &k_info[o_ptr->k_idx];
 
 	/* Get the value of one of the items */
 	price = object_value(o_ptr);
 
-	/* Worthless items */
-	if (price <= 0) return (0L);
+	/* Worthless items - edit by Amy: shops should offer them, but you shouldn't be able to sell them */
+	if (price <= 0) {
+		if (flip) return(0L);
+		else {
+			/* and they should be pricey for higher-level stuff, since buying one IDs the base type permanently */
+			price = 200;
+			if (k_ptr->level > 1) price *= k_ptr->level;
+		}
+	}
 
 	/* Compute the racial factor */
 	if (is_state(st_ptr, STORE_LIKED))
@@ -529,8 +537,10 @@ static void mass_produce(object_type *o_ptr)
 	case TV_FLASK:
 	case TV_LITE:
 		{
-			if (cost <= 5L) size += mass_roll(2, 5);
-			if (cost <= 20L) size += mass_roll(2, 5);
+			if (cost > 0L) {
+				if (cost <= 5L) size += mass_roll(2, 5);
+				if (cost <= 20L) size += mass_roll(2, 5);
+			}
 			size += mass_roll(2, 5);
 			break;
 		}
@@ -539,8 +549,10 @@ static void mass_produce(object_type *o_ptr)
 	case TV_POTION2:
 	case TV_SCROLL:
 		{
-			if (cost <= 60L) size += mass_roll(2, 5);
-			if (cost <= 240L) size += mass_roll(1, 5);
+			if (cost > 0L) {
+				if (cost <= 60L) size += mass_roll(2, 5);
+				if (cost <= 240L) size += mass_roll(1, 5);
+			}
 			size += mass_roll(1, 5);
 			break;
 		}
@@ -551,8 +563,10 @@ static void mass_produce(object_type *o_ptr)
 	case TV_DAEMON_BOOK:
 	case TV_BOOK:
 		{
-			if (cost <= 50L) size += mass_roll(1, 3);
-			if (cost <= 500L) size += mass_roll(1, 3);
+			if (cost > 0L) {
+				if (cost <= 50L) size += mass_roll(1, 3);
+				if (cost <= 500L) size += mass_roll(1, 3);
+			}
 			size += mass_roll(1, 3);
 			break;
 		}
@@ -572,9 +586,10 @@ static void mass_produce(object_type *o_ptr)
 	case TV_DIGGING:
 	case TV_BOW:
 		{
-			if (o_ptr->name2) break;
-			if (cost <= 10L) size += mass_roll(3, 5);
-			if (cost <= 100L) size += mass_roll(3, 5);
+			if (cost > 0L) {
+				if (cost <= 10L) size += mass_roll(3, 5);
+				if (cost <= 100L) size += mass_roll(3, 5);
+			}
 			break;
 		}
 
@@ -583,9 +598,11 @@ static void mass_produce(object_type *o_ptr)
 	case TV_ARROW:
 	case TV_BOLT:
 		{
-			if (cost <= 5L) size += mass_roll(4, 5);
-			if (cost <= 50L) size += mass_roll(4, 5);
-			if (cost <= 500L) size += mass_roll(4, 5);
+			if (cost > 0L) {
+				if (cost <= 5L) size += mass_roll(4, 5);
+				if (cost <= 50L) size += mass_roll(4, 5);
+				if (cost <= 500L) size += mass_roll(4, 5);
+			}
 			size += mass_roll(8, 5);
 			break;
 		}
@@ -597,8 +614,10 @@ static void mass_produce(object_type *o_ptr)
 	case TV_WAND:
 	case TV_STAFF:
 		{
-			if (cost < 1601L) size += mass_roll(1, 5);
-			else if (cost < 3201L) size += mass_roll(1, 3);
+			if (cost > 0L) {
+				if (cost < 1601L) size += mass_roll(1, 5);
+				else if (cost < 3201L) size += mass_roll(1, 3);
+			}
 			size += mass_roll(1, 3);
 			break;
 		}
@@ -947,7 +966,7 @@ static int store_carry(object_type *o_ptr)
 	value = object_value(o_ptr);
 
 	/* Cursed/Worthless items "disappear" when sold */
-	if (value <= 0) return ( -1);
+	/*if (value <= 0) return ( -1);*/
 
 	/* All store items are fully *identified* */
 	o_ptr->ident |= IDENT_MENTAL;
@@ -1388,11 +1407,11 @@ static void store_create(void)
 		}*/
 
 		/* Prune normal stores */
-		else
+		/* No "worthless" items */
+		/*else
 		{
-			/* No "worthless" items */
 			if (object_value(q_ptr) <= 0) continue;
-		}
+		}*/
 
 
 		/* Mass produce and/or Apply discount */

@@ -3409,9 +3409,13 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 
 	case TV_CORPSE:
 		{
+			int runebonus = get_skill(SKILL_RUNECRAFT);
+			int egglevel = dun_level;
+			if (runebonus > 0) egglevel += runebonus;
+
 			/* Hack -- choose a monster */
 			monster_race* r_ptr;
-			int r_idx = get_mon_num(dun_level);
+			int r_idx = get_mon_num(egglevel);
 			r_ptr = &r_info[r_idx];
 
 			if (!(r_ptr->flags1 & RF1_UNIQUE))
@@ -3428,10 +3432,13 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 			monster_race* r_ptr;
 			int r_idx, count = 0;
 			bool OK = FALSE;
+			int runebonus = get_skill(SKILL_RUNECRAFT);
+			int egglevel = dun_level;
+			if (runebonus > 0) egglevel += runebonus;
 
 			while ((!OK) && (count < 1000))
 			{
-				r_idx = get_mon_num(dun_level);
+				r_idx = get_mon_num(egglevel);
 				r_ptr = &r_info[r_idx];
 
 				if (r_ptr->flags9 & RF9_HAS_EGG)
@@ -3451,9 +3458,13 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 
 	case TV_HYPNOS:
 		{
+			int runebonus = get_skill(SKILL_RUNECRAFT);
+			int egglevel = dun_level;
+			if (runebonus > 0) egglevel += runebonus;
+
 			/* Hack -- choose a monster */
 			monster_race* r_ptr;
-			int r_idx = get_mon_num(dun_level);
+			int r_idx = get_mon_num(egglevel);
 			r_ptr = &r_info[r_idx];
 
 			if (!(r_ptr->flags1 & RF1_NEVER_MOVE))
