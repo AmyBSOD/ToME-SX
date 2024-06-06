@@ -429,6 +429,17 @@ static s32b price_item(object_type *o_ptr, int greed, bool flip)
 		else {
 			/* and they should be pricey for higher-level stuff, since buying one IDs the base type permanently */
 			price = 200;
+
+			/* but ammo shouldn't be overly expensive */
+			switch (o_ptr->tval)
+			{
+			case TV_SHOT:
+			case TV_ARROW:
+			case TV_BOLT:
+				price = 10;
+				break;
+			}
+
 			if (k_ptr->level > 1) price *= k_ptr->level;
 		}
 	}
