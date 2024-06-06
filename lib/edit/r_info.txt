@@ -65202,7 +65202,7 @@ O:0:0:0:0
 B:KICK:HURT:1d10
 F:WILD_TOO | WILD_TOWN | WILD_GRASS | CAN_SWIM | RAND_25 | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | GOOD | 
-F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | ANIMAL | 
 D:This girl sneaker is cuddly-soft. 
 
 N:3782:Antonia
@@ -65213,7 +65213,7 @@ E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:2d8
 B:KICK:HURT:3d4
-F:WILD_TOO | WILD_WOOD | WILD_WASTE | CAN_SWIM |
+F:WILD_TOO | WILD_WOOD | WILD_WASTE | CAN_SWIM | TROLL | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | RES_NETH | 
 S:1_IN_10
@@ -65231,7 +65231,7 @@ B:KICK:HURT:4d4
 F:WILD_TOO | WILD_SHORE | WILD_MOUNTAIN | WILD_VOLCANO | GOOD | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | RAND_25 | RES_PLAS | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_ELEC | RES_WATE | 
-F:RES_DISE | NO_FEAR | NO_STUN | 
+F:RES_DISE | NO_FEAR | NO_STUN | THUNDERLORD | 
 S:1_IN_8
 S:BO_NETH
 D:Wow, such an erotic lacquered lady shoe! You absolutely want to be kicked 
@@ -65263,7 +65263,7 @@ B:KICK:HURT:1d27
 F:WILD_TOO | WILD_GRASS | WILD_WOOD | CAN_FLY | IM_ACID | IM_FIRE | IM_COLD | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_ELEC | IM_POIS | RES_NETH | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | RES_WATE | RES_PLAS | 
-F:RES_NEXU | RES_DISE | EMPTY_MIND | RAND_50 | STUPID | EVIL | 
+F:RES_NEXU | RES_DISE | EMPTY_MIND | RAND_50 | STUPID | EVIL | ANIMAL | 
 D:No one has defeated these velcro shoes, even though their owner is a 
 D:little girl. You won't be the first one to defeat them either. 
 
@@ -65278,7 +65278,7 @@ B:KICK:HURT:8d8
 F:WILD_TOO | WILD_WASTE | WILD_VOLCANO | CAN_SWIM | IM_ACID | RAND_25 | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_FIRE | IM_POIS | RES_WATE | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | REGENERATE | ELDRITCH_HORROR | 
-F:RES_PLAS | RES_NEXU | NO_FEAR | 
+F:RES_PLAS | RES_NEXU | NO_FEAR | DEMON | 
 D:You instantly fall in love with these incredibly beautiful moroccan 
 D:sandals with pink stiletto heels. And they produce the loveliest 
 D:clacking noises when walking on a hard floor! Plus they can smash you 
@@ -65293,7 +65293,7 @@ O:0:0:0:0
 B:KICK:CONFUSE:6d6
 B:KICK:HALLU:6d6
 F:WILD_TOO | WILD_TOWN | WILD_OCEAN | WILD_MOUNTAIN | RAND_25 | 
-F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_POIS | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_POIS | DRAGON | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | WEIRD_MIND | 
 S:1_IN_3
 S:BO_WATE
@@ -65309,7 +65309,7 @@ B:KICK:HURT:4d10
 F:WILD_TOO | WILD_WOOD | WILD_WASTE | WILD_VOLCANO | ELDRITCH_HORROR | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | RAND_25 | RAND_50 | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | EMPTY_MIND | NO_SLEEP | 
-F:IM_COLD | IM_ACID | EVIL | RES_WATE | RES_DISE | NO_FEAR | NO_STUN | 
+F:IM_COLD | IM_ACID | EVIL | RES_WATE | RES_DISE | NO_FEAR | NO_STUN | GIANT | 
 D:When Amy was younger, she referred to these as the "most beautiful shoes in the 
 D:world", even though they don't have heels. In fact, they're yellow suede sneakers, 
 D:but they can kick with an extreme force that will smash your shins. Yes, this 
@@ -65339,7 +65339,7 @@ O:0:0:0:0
 B:KICK:POISON:3d10
 B:KICK:LOSE_DEX:2d8
 F:WILD_TOO | WILD_MOUNTAIN | WILD_WASTE | WILD_OCEAN | WILD_VOLCANO |
-F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | EVIL | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | EVIL | ORC | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_COLD | RAND_25 | 
 S:1_IN_6
 S:BR_COLD
@@ -65368,7 +65368,7 @@ W:33:5:1800:1000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:12d18
-F:WILD_TOO | WILD_TOWN | WILD_SHORE | WILD_OCEAN |
+F:WILD_TOO | WILD_TOWN | WILD_SHORE | WILD_OCEAN | DRAGON | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | NO_FEAR | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | RES_WATE | 
 D:Wow, such a wonderfully massive wooden sandal! The shin kicks that she 
@@ -65381,7 +65381,7 @@ W:39:5:1600:1800
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:5d6
-F:WILD_TOO | WILD_OCEAN | WILD_VOLCANO | EVIL | NO_FEAR | 
+F:WILD_TOO | WILD_OCEAN | WILD_VOLCANO | EVIL | NO_FEAR | DEMON | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | NO_STUN | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_CONF | 
 D:While this female sneaker might be surprisingly sturdy, they aren't 
@@ -65398,7 +65398,7 @@ F:WILD_TOO | WILD_TOWN | WILD_OCEAN | WILD_VOLCANO |
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | REGENERATE |
 F:IM_ELEC | NO_SLEEP | RES_TELE | RES_WATE | RES_NEXU | EVIL | 
-F:RES_DISE | RES_PLAS | NO_FEAR | NO_STUN | NO_CONF | 
+F:RES_DISE | RES_PLAS | NO_FEAR | NO_STUN | NO_CONF | DEMON | 
 D:You'll receive absolutely horrible, bloody wounds on your legs if you 
 D:decide to try battling these dark blue lady pumps with razor-sharp heels. 
 
@@ -65410,7 +65410,7 @@ E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:3d7
 F:WILD_TOO | WILD_WASTE | WILD_WOOD | IM_POIS | IM_ELEC | RES_WATE | 
-F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | RAND_50 | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | RAND_50 | DRAGON | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_FLY | RES_WATE | 
 D:While these pink little-girl sandals don't hurt a lot when they kick you in 
 D:the shins, their razor-sharp buckles can really slit your legs in a very 
@@ -65439,7 +65439,7 @@ B:KICK:HURT:3d6
 F:WILD_TOO | WILD_MOUNTAIN | WILD_SHORE | WILD_OCEAN | EVIL | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM |
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_ACID | 
-F:NO_SLEEP | IM_POIS | NO_STUN | 
+F:NO_SLEEP | IM_POIS | NO_STUN | UNDEAD | 
 S:1_IN_2
 S:BR_SHAR
 D:Eww, this wedge-heeled skier's soles are covered with dog shit! You don't 
@@ -65456,7 +65456,7 @@ B:KICK:HURT:4d10
 B:KICK:FIRE:4d6
 F:WILD_TOO | WILD_WASTE | WILD_WOOD | CAN_FLY | RES_WATE | NO_STUN | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | NO_FEAR | 
-F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | DRAGON | 
 D:If you try to fight these asian block-heeled sandals, you will end up 
 D:with very scratched shins. The massive heels can also kick powerfully 
 D:and cause a lot of pain to you. 
@@ -65487,7 +65487,7 @@ B:KICK:HURT:4d6
 F:WILD_TOO | WILD_WOOD | WILD_MOUNTAIN | WILD_WASTE | NO_SLEEP | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | NO_FEAR | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | REGENERATE |
-F:RES_WATE | 
+F:RES_WATE | DRAGON | 
 D:A leather-and-lace boot with incredibly sexy treaded soles. They look 
 D:absolutely gorgeous and you want to marry them. 
 
@@ -65501,7 +65501,7 @@ B:KICK:HURT:4d6
 B:KICK:TERRIFY:4d6
 F:WILD_TOO | WILD_GRASS | WILD_WOOD | WILD_WASTE | RES_NETH | NO_FEAR | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | 
-F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | ANIMAL | 
 S:1_IN_20
 S:BO_NETH
 D:These lady boots have something that your shoes doesn't have. What is 
@@ -65521,7 +65521,7 @@ B:KICK:TERRIFY:2d6
 F:WILD_TOO | WILD_GRASS | WILD_WOOD | WILD_WASTE | IM_POIS | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | 
-F:RES_NETH | RES_WATE | RES_NEXU | NO_FEAR | 
+F:RES_NETH | RES_WATE | RES_NEXU | NO_FEAR | ANIMAL | 
 S:1_IN_8
 S:DARKNESS | SCARE
 D:This ultimate high heel sandal of destruction doesn't show any mercy. 
@@ -65540,6 +65540,7 @@ B:KICK:HURT:5d6
 F:WILD_TOO | WILD_OCEAN | WILD_MOUNTAIN | WILD_VOLCANO | NO_SLEEP | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | SMART | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | REFLECTING | NO_FEAR | 
+F:DRAGON | 
 S:1_IN_8
 S:SCARE | S_KIN
 D:Incredibly sexy and shiny! You forget that you're supposed to be 
@@ -65557,6 +65558,7 @@ B:KICK:HURT:5d10
 F:WILD_TOO | WILD_SHORE | WILD_OCEAN | WILD_WASTE | WILD_MOUNTAIN |
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | SMART | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_POIS | NO_SLEEP | 
+F:ANIMAL | 
 S:1_IN_8
 S:BR_POIS | BO_POIS
 D:These brown lady boots look very soft. 
@@ -65569,7 +65571,7 @@ E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:6d9
 F:WILD_TOO | WILD_TOWN | WILD_WOOD | WILD_GRASS | RAND_25 | 
-F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM |
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | TROLL | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_ELEC | RES_WATE | 
 S:1_IN_4
 S:HOLD
@@ -65583,7 +65585,7 @@ E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:2d6
 B:KICK:BLIND:3d4
-F:WILD_TOO | WILD_GRASS | WILD_WASTE | WILD_MOUNTAIN | RAND_50 | 
+F:WILD_TOO | WILD_GRASS | WILD_WASTE | WILD_MOUNTAIN | RAND_50 | ANIMAL | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | RES_WATE | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | AI_ANNOY | STUPID | 
 S:1_IN_12
@@ -65637,7 +65639,7 @@ O:0:0:0:0
 B:KICK:HURT:2d20
 B:KICK:HURT:2d20
 F:WILD_TOO | WILD_MOUNTAIN | ELDRITCH_HORROR | RES_DISE | NO_FEAR | 
-F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | UNDEAD | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | 
 D:Everyone spontaneously gets an orgasm upon seeing these gorgeous brown 
 D:lady boots with thick, treaded block heels. 
@@ -65650,7 +65652,7 @@ E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:TIME:3d7
 F:WILD_TOO | WILD_WOOD | WILD_WASTE | WILD_GRASS | RAND_50 | 
-F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM |
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | ANIMAL | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | GIANT | STUPID | 
 S:1_IN_15
 S:BR_TIME
@@ -65669,7 +65671,7 @@ B:KICK:TERRIFY:4d6
 F:WILD_TOO | WILD_MOUNTAIN | WILD_VOLCANO | WILD_OCEAN | IM_POIS | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | WEIRD_MIND | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | REFLECTING | IM_ELEC | 
-F:NO_SLEEP | EVIL | RES_DISE | RES_NETH | NO_FEAR | 
+F:NO_SLEEP | EVIL | RES_DISE | RES_NETH | NO_FEAR | GIANT | 
 S:1_IN_10
 S:BR_POIS
 D:You'll not have an easy time fighting these black combat boots with 
@@ -65684,7 +65686,7 @@ O:0:0:0:0
 B:KICK:COLD:2d8
 B:KICK:COLD:3d8
 F:WILD_TOO | WILD_MOUNTAIN | WILD_WOOD | RAND_25 | RAND_50 | 
-F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM |
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | ORC | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_COLD | STUPID | 
 S:1_IN_6
 S:BR_COLD | BO_ICEE | BO_COLD
@@ -65703,7 +65705,7 @@ B:KICK:HURT:2d10
 B:KICK:HURT:3d14
 F:WILD_TOO | WILD_WOOD | WILD_VOLCANO | WILD_MOUNTAIN | IM_FIRE | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | RES_PLAS | 
-F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | REGENERATE |
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | REGENERATE | GIANT | 
 S:1_IN_5
 S:TRAPS
 D:These red leather boots have such incredibly soft block heels, you 
@@ -65719,6 +65721,7 @@ B:KICK:COLD:6d6
 F:WILD_TOO | WILD_TOWN | WILD_WOOD | WILD_MOUNTAIN | IM_POIS | GOOD | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | RAND_25 | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | EMPTY_MIND | RAND_50 | 
+F:ANIMAL | 
 D:A black platform boot that likes to engage in dancing and 
 D:gymnastics. They don't really want to fight you. 
 
@@ -65732,6 +65735,7 @@ B:KICK:DISEASE:4d8
 F:WILD_TOO | WILD_SHORE | WILD_OCEAN | WILD_VOLCANO | IM_POIS | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_COLD | SMART | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_ELEC | RES_NETH | 
+F:TROLL | 
 F:NO_FEAR | 
 D:This black combat boot has high heels and uses them as a weapon. 
 
@@ -65744,7 +65748,7 @@ O:0:0:0:0
 B:KICK:FIRE:2d3
 F:WILD_TOO | WILD_WOOD | WILD_MOUNTAIN | WILD_VOLCANO | RAND_25 | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM |
-F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_FIRE | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_FIRE | ORC | 
 D:A red girl sneaker that wants to rub the knobs on her soles over 
 D:your skin in an attempt to cause irritations and bruises. 
 
@@ -65758,7 +65762,7 @@ B:KICK:HURT:6d4
 B:KICK:HURT:4d3
 F:WILD_TOO | WILD_WOOD | WILD_MOUNTAIN | WILD_VOLCANO | IM_COLD | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM |
-F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | ORC | 
 S:1_IN_6
 S:BR_DARK | BO_MANA
 D:The queen of the night herself is wearing these lovely black combat 
@@ -65773,7 +65777,7 @@ E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:COLD:6d8
 B:KICK:HURT:4d4
-F:WILD_TOO | WILD_GRASS | WILD_WOOD | WILD_SHORE |
+F:WILD_TOO | WILD_GRASS | WILD_WOOD | WILD_SHORE | ANIMAL | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM |
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_COLD | IM_ELEC | 
 S:1_IN_8
@@ -65790,7 +65794,7 @@ O:0:0:0:0
 B:KICK:HURT:13d13
 F:WILD_TOO | WILD_MOUNTAIN | WILD_VOLCANO | RAND_25 | RES_NEXU | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | SMART | 
-F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | GOOD | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | GOOD | DEMON | 
 D:A sexy lady pump that shouldn't be underestimated. 
 
 N:3820:Lou
@@ -65803,6 +65807,7 @@ B:KICK:TIME:1d2
 F:WILD_TOO | WILD_SHORE | WILD_MOUNTAIN | WILD_WASTE | RAND_25 | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_COLD | IM_ELEC | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_POIS | STUPID | 
+F:ORC | 
 D:Eww, these sneakers are very dirty. And they intentionally try to kick 
 D:you in order to transfer all that dirt to your clothing! 
 
@@ -65817,6 +65822,7 @@ B:KICK:TIME:1d1
 F:WILD_TOO | WILD_SHORE | WILD_MOUNTAIN | WILD_WASTE | IM_COLD | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WEIRD_MIND | STUPID | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | RAND_25 | 
+F:ORC | 
 D:This dancing shoe can be defeated easily with a decisive offensive 
 D:action, but you'd be wise to not allow her to hit you back... 
 
@@ -65829,7 +65835,7 @@ O:0:0:0:0
 B:KICK:LOSE_ALL:10d10
 F:WILD_TOO | WILD_OCEAN | WILD_MOUNTAIN | WILD_WASTE | NO_FEAR | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | 
-F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_STUN | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_STUN | DRAGON | 
 D:A lovely winter boot. Lovely, but very dangerous. They officially 
 D:have permission to kill you, so you should avoid being kicked by them! 
 
@@ -65842,7 +65848,7 @@ O:0:0:0:0
 B:KICK:DISEASE:2d4
 B:KICK:POISON:4d8
 F:WILD_TOO | WILD_OCEAN | WILD_MOUNTAIN | WILD_WASTE | RAND_50 | 
-F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM |
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | DRAGON | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_POIS | ELDRITCH_HORROR | 
 S:1_IN_3
 S:BR_POIS | BO_POIS
@@ -65860,8 +65866,8 @@ O:0:0:0:0
 B:KICK:HURT:10d10
 B:KICK:EXP_40:5d5
 F:WILD_TOO | WILD_VOLCANO | IM_POIS | COLD_BLOOD | NO_FEAR | 
-F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | 
-F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | DEMON | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | UNDEAD | 
 S:1_IN_20
 S:BR_NEXU
 D:This lady pump moves very slowly, but will deal lots of damage if you 
@@ -65874,7 +65880,7 @@ W:1:5:200:3
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:1d3
-F:WILD_TOO | WILD_TOWN | WILD_SHORE | WILD_WOOD | WILD_MOUNTAIN |
+F:WILD_TOO | WILD_TOWN | WILD_SHORE | WILD_WOOD | WILD_MOUNTAIN | TROLL | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WILD_VOLCANO | IM_FIRE | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SWIM | REFLECTING |
 D:Have fun with this female dancing shoe! They're very soft and won't 
@@ -65889,7 +65895,7 @@ O:0:0:0:0
 B:KICK:LOSE_STR:4d7
 B:KICK:LOSE_CON:6d8
 F:WILD_TOO | WILD_TOWN | WILD_SHORE | WILD_WOOD | WILD_MOUNTAIN |
-F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WILD_VOLCANO |
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WILD_VOLCANO | TROLL | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_FLY | IM_COLD | 
 F:NO_SLEEP | NO_FEAR | NO_STUN | RES_DISE | RES_NETH | RES_WATE | 
 S:1_IN_8
@@ -65909,7 +65915,7 @@ B:KICK:HURT:4d8
 B:KICK:HURT:4d8
 F:WILD_TOO | WILD_WOOD | WILD_MOUNTAIN | WILD_VOLCANO | WILD_OCEAN |
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_COLD | 
-F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_FLY | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_FLY | GIANT | 
 D:This hugging boot can kick very painfully! But you'll certainly enjoy 
 D:being hit in the shins by them again and again, because you want to 
 D:test your pain threshold without fighting back. 
@@ -65962,7 +65968,7 @@ O:0:0:0:0
 B:KICK:UN_BONUS:5d15
 B:KICK:HALLU:3d4
 F:WILD_TOO | WILD_MOUNTAIN | WILD_VOLCANO | WILD_WASTE | WILD_WOOD |
-F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | GIANT | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | 
 F:IM_POIS | IM_COLD | IM_FIRE | 
 D:Henrietta wants you to clean the dog shit from the treaded soles of 
@@ -65977,7 +65983,7 @@ E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:3d8
 B:KICK:HURT:4d10
-F:WILD_TOO | WILD_WASTE | WILD_WOOD | IM_COLD | IM_ELEC | 
+F:WILD_TOO | WILD_WASTE | WILD_WOOD | IM_COLD | IM_ELEC | TROLL | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_POIS | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | RES_NETH | 
 S:1_IN_3
@@ -65996,7 +66002,7 @@ O:0:0:0:0
 B:KICK:ELEC:8d16
 B:KICK:PARASITE:1d10
 F:WILD_TOO | WILD_OCEAN | WILD_VOLCANO | REGENERATE | SMART | 
-F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_ELEC | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_ELEC | GIANT | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SWIM |
 D:A velvety-soft blue peep-toe with high heels. They're incredibly lovely. 
 D:And you absolutely want to know what it feels like to be kicked by them! 
@@ -66058,7 +66064,7 @@ B:KICK:PARALYZE:1d4
 F:WILD_TOO | WILD_VOLCANO | WILD_MOUNTAIN | WILD_WOOD | IM_FIRE | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | AURA_FIRE | 
-F:IM_COLD | IM_POIS | NO_SLEEP | EVIL | 
+F:IM_COLD | IM_POIS | NO_SLEEP | EVIL | DRAGON | 
 D:This high-heeled sandal is pretty, but dangerous! Make sure you 
 D:don't constantly get whacked with the massive heel. 
 
@@ -66073,7 +66079,7 @@ B:KICK:UN_BONUS:5d8
 F:WILD_TOO | WILD_VOLCANO | WILD_MOUNTAIN | WILD_WOOD | EVIL | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | REFLECTING |
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | ELDRITCH_HORROR | 
-F:NO_FEAR | NO_CONF | 
+F:NO_FEAR | NO_CONF | DRAGON | 
 S:1_IN_4
 S:BR_LITE | BR_CHAO
 D:A high-heeled lady pump made of massive silver. Rumors say that 
@@ -66089,7 +66095,7 @@ W:19:5:1500:400
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:DISEASE:4d7
-F:WILD_TOO | WILD_TOWN | WILD_WOOD | DEMON | RAND_25 | 
+F:WILD_TOO | WILD_TOWN | WILD_WOOD | DEMON | RAND_25 | ANIMAL | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | GOOD | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | RES_NEXU | 
 S:1_IN_8
@@ -66109,6 +66115,7 @@ B:KICK:ACID:7d11
 F:WILD_TOO | WILD_VOLCANO | WILD_OCEAN | REGENERATE | IM_POIS | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | AURA_FIRE | IM_FIRE | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SWIM | IM_ACID | 
+F:DRAGON | 
 S:1_IN_4
 S:BR_FIRE | BR_ACID
 D:Careful. This dark blue hugging boot is covered with hydrofluoric 
@@ -66145,7 +66152,7 @@ E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:2d2
 F:WILD_TOO | WILD_GRASS | WILD_WASTE | IM_COLD | IM_POIS | 
-F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | ANIMAL | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SWIM |
 D:Very cute high-heeled sandals which want to play with you. 
 
@@ -66161,7 +66168,7 @@ B:KICK:ELEC:3d4
 F:WILD_TOO | WILD_WASTE | WILD_MOUNTAIN | WILD_SHORE | WILD_OCEAN |
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_ACID | IM_COLD | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SWIM | IM_ELEC | 
-F:RES_WATE | 
+F:RES_WATE | ORC | 
 S:1_IN_10
 S:BR_POIS
 D:You have officially gotten the permission by Jana to pee into these 
@@ -66178,7 +66185,7 @@ E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:5d8
 F:WILD_TOO | WILD_WOOD | WILD_SHORE | IM_ACID | NO_SLEEP | RAND_25 | 
-F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WEIRD_MIND | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WEIRD_MIND | UNDEAD | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SWIM | GOOD | 
 D:This black high-heeled lady pump may gladly scratch both your legs 
 D:bloodily with the heel, because she's really good at doing that. 
@@ -66193,6 +66200,7 @@ B:KICK:HURT:2d16
 F:WILD_TOO | WILD_GRASS | WILD_WOOD | WILD_MOUNTAIN | WILD_VOLCANO |
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | RES_NETH | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_COLD | NO_SLEEP | 
+F:DRAGON | 
 S:1_IN_20
 S:BO_NETH
 D:A cheap-looking black combat boot with a moderate block heel. They 
@@ -66212,7 +66220,7 @@ F:WILD_TOO | WILD_GRASS | WILD_WOOD | WILD_MOUNTAIN | WILD_VOLCANO |
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | IM_COLD | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_FLY | IM_ELEC | 
 F:IM_FIRE | IM_POIS | NO_SLEEP | RES_NETH | RES_DISE | NO_FEAR | 
-F:NO_STUN | 
+F:NO_STUN | DRAGON | 
 S:1_IN_7
 S:BR_GRAV
 D:This platform boot will totally bludgeon you with the thick sole. 
@@ -66232,7 +66240,7 @@ B:KICK:CONFUSE:3d6
 F:WILD_TOO | WILD_GRASS | WILD_WOOD | WILD_MOUNTAIN | WILD_VOLCANO |
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | IM_COLD | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | IM_ELEC | 
-F:NO_STUN | NO_FEAR | RES_NETH | 
+F:NO_STUN | NO_FEAR | RES_NETH | DRAGON | 
 S:1_IN_4
 S:BR_SHAR
 D:Wow, you love the beautiful thick block heels of this pair of 
@@ -66251,7 +66259,7 @@ B:KICK:LOSE_ALL:8d10
 F:WILD_TOO | WILD_MOUNTAIN | WILD_VOLCANO | ELDRITCH_HORROR | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_COLD | NO_SLEEP | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SWIM | IM_POIS | 
-F:IM_ELEC | IM_ACID | IM_FIRE | EVIL | RES_NETH | NO_FEAR | 
+F:IM_ELEC | IM_ACID | IM_FIRE | EVIL | RES_NETH | NO_FEAR | GIANT | 
 S:1_IN_3
 S:BR_INER | CAUSE_4
 D:You really shouldn't be fighting this high-heeled women's sandal, 
@@ -66268,7 +66276,7 @@ O:0:0:0:0
 B:KICK:PARASITE:3d10
 F:WILD_TOO | WILD_GRASS | WILD_MOUNTAIN | WILD_WOOD | IM_POIS | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | REGENERATE |
-F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SWIM |
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SWIM | TROLL | 
 D:This erotic dark green lady shoe really wants to slide over your 
 D:hands again and again, and she doesn't mind causing bloody wounds 
 D:either. Nope, she won't apologize. 
@@ -66300,7 +66308,7 @@ B:KICK:EAT_FOOD:4d6
 F:WILD_TOO | WILD_GRASS | WILD_MOUNTAIN | WILD_WOOD | RES_DISE | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_COLD | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SWIM |
-F:NO_FEAR | 
+F:NO_FEAR | TROLL | 
 S:1_IN_4
 S:BR_SHAR | BR_SOUN | BR_ACID | BR_NETH | BR_DARK | 
 S:BR_DISE | BR_CHAO | BR_GRAV | BR_DISI | 
@@ -66316,7 +66324,7 @@ E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HALLU:8d3
 F:WILD_TOO | WILD_SHORE | WILD_OCEAN | IM_ACID | RAND_25 | ELDRITCH_HORROR | 
-F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WEIRD_MIND | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WEIRD_MIND | DRAGON | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_FLY | STUPID | 
 S:1_IN_3
 S:TELE_TO
@@ -66334,6 +66342,7 @@ B:KICK:CONFUSE:4d8
 F:WILD_TOO | WILD_WOOD | WILD_WASTE | WEIRD_MIND | IM_COLD | IM_POIS | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | NO_SLEEP | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_FLY | RAND_50 | 
+F:TROLL | 
 S:1_IN_3
 S:TELE_AWAY
 D:Just another standard cone-heeled lady pump in a black color who 
@@ -66352,7 +66361,7 @@ B:KICK:ACID:1d1
 F:WILD_TOO | WILD_WOOD | WILD_MOUNTAIN | WILD_WASTE | NO_SLEEP | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | REGENERATE |
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | REFLECTING |
-F:EVIL | NO_STUN | 
+F:EVIL | NO_STUN | GIANT | 
 D:This thick women's shoe tries to stomp your body parts. 
 
 N:3854:Ute
@@ -66434,4 +66443,456 @@ S:MULTIPLY
 D:A fast spreading volatile mushroom species that spreads 
 D:its spores around the dungeon by exploding. Chain 
 D:reactions of large patches of these can be, erm, exciting.
+
+N:3859:Faroua
+G:k:v
+I:105:7d6:70:22:150
+W:17:25:500:300
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:7d5
+B:KICK:HURT:8d8
+F:WILD_TOO | WILD_WASTE | WILD_VOLCANO | CAN_SWIM | IM_ACID | RAND_25 | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_FIRE | IM_POIS | RES_WATE | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | REGENERATE | ELDRITCH_HORROR | 
+F:RES_PLAS | RES_NEXU | NO_FEAR | DEMON | 
+S:MULTIPLY
+D:You instantly fall in love with these incredibly beautiful moroccan 
+D:sandals with pink stiletto heels. And they produce the loveliest 
+D:clacking noises when walking on a hard floor! Plus they can smash you 
+D:with their massive heels incredibly painfully, which is a lot of fun! 
+
+N:3860:Roswitha
+G:m:D
+I:107:20d20:80:100:40
+W:60:25:2500:4000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:CONFUSE:6d6
+B:KICK:HALLU:6d6
+F:WILD_TOO | WILD_TOWN | WILD_OCEAN | WILD_MOUNTAIN | RAND_25 | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_POIS | DRAGON | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | WEIRD_MIND | 
+S:1_IN_3
+S:BO_WATE
+S:MULTIPLY
+D:A lady shoe with a rather icy black stiletto heel. 
+
+N:3861:Claudia
+G:r:U
+I:125:10d40:80:45:160
+W:33:25:1800:1000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:12d18
+F:WILD_TOO | WILD_TOWN | WILD_SHORE | WILD_OCEAN | DRAGON | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | NO_FEAR | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | RES_WATE | 
+S:MULTIPLY
+D:Wow, such a wonderfully massive wooden sandal! The shin kicks that she 
+D:can offer to you are very painful, and you just cannot resist! 
+
+N:3862:Annie
+G:r:w
+I:130:10d50:100:80:0
+W:39:25:1600:1800
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:5d6
+F:WILD_TOO | WILD_OCEAN | WILD_VOLCANO | EVIL | NO_FEAR | DEMON | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | NO_STUN | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_CONF | 
+S:MULTIPLY
+D:While this female sneaker might be surprisingly sturdy, they aren't 
+D:actually all that dangerous. 
+
+N:3863:Hanh
+G:,:v
+I:118:2d2:0:35:150
+W:2:25:100:15
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:3d7
+F:WILD_TOO | WILD_WASTE | WILD_WOOD | IM_POIS | IM_ELEC | RES_WATE | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | RAND_50 | DRAGON | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_FLY | RES_WATE | 
+S:MULTIPLY
+D:While these pink little-girl sandals don't hurt a lot when they kick you in 
+D:the shins, their razor-sharp buckles can really slit your legs in a very 
+D:painful, bloody way. 
+
+N:3864:Bridghitte
+G:,:D
+I:108:20d9:80:60:100
+W:19:25:7000:360
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:3d6
+F:WILD_TOO | WILD_MOUNTAIN | WILD_SHORE | WILD_OCEAN | EVIL | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM |
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_ACID | 
+F:NO_SLEEP | IM_POIS | NO_STUN | UNDEAD | 
+S:1_IN_2
+S:BR_SHAR
+S:MULTIPLY
+D:Eww, this wedge-heeled skier's soles are covered with dog shit! You don't 
+D:want to be kicked by them, in fact you'd prefer to not get into contact 
+D:with them at all... 
+
+N:3865:Hanh
+G:,:u
+I:113:10d20:20:24:150
+W:23:25:500:750
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:4d10
+B:KICK:FIRE:4d6
+F:WILD_TOO | WILD_WASTE | WILD_WOOD | CAN_FLY | RES_WATE | NO_STUN | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | NO_FEAR | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | DRAGON | 
+S:MULTIPLY
+D:If you try to fight these asian block-heeled sandals, you will end up 
+D:with very scratched shins. The massive heels can also kick powerfully 
+D:and cause a lot of pain to you. 
+
+N:3866:Lisa
+G:I:D
+I:110:10d12:50:35:30
+W:10:25:4000:100
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:4d6
+B:KICK:TERRIFY:4d6
+F:WILD_TOO | WILD_GRASS | WILD_WOOD | WILD_WASTE | RES_NETH | NO_FEAR | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | ANIMAL | 
+S:1_IN_20
+S:BO_NETH
+S:MULTIPLY
+D:These lady boots have something that your shoes doesn't have. What is 
+D:it? A thick sole? Metallic buckle? No, wait, it's the block heel! And 
+D:she uses the massive heel to kick you, which causes beautiful, 
+D:soothing pain! 
+
+N:3867:Lisa
+G:I:D
+I:110:8d9:50:15:0
+W:20:25:1000:350
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:6d9
+B:KICK:LOSE_ALL:5d7
+B:KICK:TERRIFY:2d6
+F:WILD_TOO | WILD_GRASS | WILD_WOOD | WILD_WASTE | IM_POIS | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | 
+F:RES_NETH | RES_WATE | RES_NEXU | NO_FEAR | ANIMAL | 
+S:1_IN_8
+S:DARKNESS | SCARE
+S:MULTIPLY
+D:This ultimate high heel sandal of destruction doesn't show any mercy. 
+D:She will scratch your legs to the bone and you'll spill blood 
+D:everywhere. And the girl sandal won't even be bothered by her 
+D:conscience, but marvel at the damage her sharp-edged heel can cause. 
+
+N:3868:Giulia
+G:b:U
+I:130:20d20:20:30:0
+W:33:25:500:1000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:6d9
+F:WILD_TOO | WILD_TOWN | WILD_WOOD | WILD_GRASS | RAND_25 | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | TROLL | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_ELEC | RES_WATE | 
+S:1_IN_4
+S:HOLD
+S:MULTIPLY
+D:A lightning-fast dancing shoe that challenges you to a battle. 
+
+N:3869:Luisa
+G:F:U
+I:110:40d60:50:0:50
+W:37:25:10000:2000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:2d20
+B:KICK:HURT:2d20
+F:WILD_TOO | WILD_MOUNTAIN | ELDRITCH_HORROR | RES_DISE | NO_FEAR | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | UNDEAD | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | 
+S:MULTIPLY
+D:Everyone spontaneously gets an orgasm upon seeing these gorgeous brown 
+D:lady boots with thick, treaded block heels. 
+
+N:3870:Bettina
+G:L:D
+I:120:23d25:90:36:30
+W:23:25:8000:1000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:DISEASE:4d8
+F:WILD_TOO | WILD_SHORE | WILD_OCEAN | WILD_VOLCANO | IM_POIS | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_COLD | SMART | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_ELEC | RES_NETH | 
+F:TROLL | 
+F:NO_FEAR | 
+S:MULTIPLY
+D:This black combat boot has high heels and uses them as a weapon. 
+
+N:3871:Lou
+G:R:w
+I:112:4d4:30:15:20
+W:1:25:1000:1
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:TIME:1d2
+F:WILD_TOO | WILD_SHORE | WILD_MOUNTAIN | WILD_WASTE | RAND_25 | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_COLD | IM_ELEC | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_POIS | STUPID | 
+F:ORC | 
+S:MULTIPLY
+D:Eww, these sneakers are very dirty. And they intentionally try to kick 
+D:you in order to transfer all that dirt to your clothing! 
+
+N:3872:Lou
+G:R:D
+I:112:5d5:20:25:30
+W:5:25:500:14
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:EXP_10:2d4
+B:KICK:TIME:1d1
+F:WILD_TOO | WILD_SHORE | WILD_MOUNTAIN | WILD_WASTE | IM_COLD | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WEIRD_MIND | STUPID | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | RAND_25 | 
+F:ORC | 
+S:MULTIPLY
+D:This dancing shoe can be defeated easily with a decisive offensive 
+D:action, but you'd be wise to not allow her to hit you back... 
+
+N:3873:Antje
+G:T:o
+I:110:2d3:50:2:20
+W:1:25:200:3
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:1d3
+F:WILD_TOO | WILD_TOWN | WILD_SHORE | WILD_WOOD | WILD_MOUNTAIN | TROLL | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WILD_VOLCANO | IM_FIRE | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SWIM | REFLECTING |
+S:MULTIPLY
+D:Have fun with this female dancing shoe! They're very soft and won't 
+D:hurt you much if they kick you in the shins. 
+
+N:3874:Antje
+G:T:D
+I:95:20d30:80:60:50
+W:20:25:15000:400
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:LOSE_STR:4d7
+B:KICK:LOSE_CON:6d8
+F:WILD_TOO | WILD_TOWN | WILD_SHORE | WILD_WOOD | WILD_MOUNTAIN |
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WILD_VOLCANO | TROLL | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_FLY | IM_COLD | 
+F:NO_SLEEP | NO_FEAR | NO_STUN | RES_DISE | RES_NETH | RES_WATE | 
+S:1_IN_8
+S:BR_DISI | DARKNESS
+S:MULTIPLY
+D:A powerful black lady boot with an extra thick block heel, which is 
+D:suitable for walking the dyke. She produces very erotic clacking noises 
+D:when walking on the floor, and she can't wait to try out her massive 
+D:heels on you as a melee weapon. 
+
+N:3875:Sing
+G:V:U
+I:130:30d70:50:65:35
+W:66:25:4000:4000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:PARALYZE:1d8
+B:KICK:EXP_80:8d9
+B:KICK:HURT:3d10
+B:KICK:EAT_ITEM:3d6
+F:WILD_TOO | WILD_TOWN | WILD_WASTE | WILD_WOOD | WILD_MOUNTAIN |
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WILD_GRASS |
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SWIM |
+F:CAN_FLY | ELDRITCH_HORROR | NO_SLEEP | IM_COLD | IM_POIS | 
+F:IM_FIRE | IM_ACID | UNDEAD | COLD_BLOOD | EVIL | RES_NETH | 
+S:1_IN_4
+S:BA_DARK
+S:MULTIPLY
+D:How cuuuuuute! A japanese wooden sandal! You can't fight back against 
+D:her. The only thing that you can do is to stand there and let the 
+D:very hard wooden sole slam into your shins again and again, even 
+D:though it's incredibly painful. 
+
+N:3876:Henrietta
+G:X:u
+I:115:30d40:80:100:120
+W:26:25:25000:1500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:UN_BONUS:5d15
+B:KICK:HALLU:3d4
+F:WILD_TOO | WILD_MOUNTAIN | WILD_VOLCANO | WILD_WASTE | WILD_WOOD |
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | GIANT | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | 
+F:IM_POIS | IM_COLD | IM_FIRE | 
+S:MULTIPLY
+D:Henrietta wants you to clean the dog shit from the treaded soles of 
+D:this block-heeled lady boot. If you lose to their kick attacks, 
+D:you'll actually have to do that, which you certainly don't want. 
+
+N:3877:Ruth
+G:G:W
+I:120:3d4:0:15:0
+W:2:25:1000:5
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:PARALYZE:1d5
+F:WILD_TOO | WILD_WASTE | WILD_TOWN | WILD_OCEAN | WILD_WOOD | STUPID | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | EMPTY_MIND | RAND_25 | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_POIS | IM_COLD | 
+F:NO_SLEEP | UNDEAD | EVIL | RES_NETH | 
+S:MULTIPLY
+D:Ugghh, the inlays of this white girl sneaker smell really sweaty. You 
+D:have to watch out or you'll fall down unconscious. 
+
+N:3878:Ruth
+G:G:D
+I:115:20d20:10:40:50
+W:18:25:2500:200
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:ABOMINATION:3d8
+B:KICK:POISON:3d6
+F:WILD_TOO | WILD_WASTE | WILD_TOWN | WILD_OCEAN | WILD_WOOD | UNDEAD | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | EMPTY_MIND | IM_POIS | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_COLD | NO_SLEEP | 
+F:STUPID | EVIL | RES_NETH | RES_DISE | 
+S:1_IN_4
+S:BR_POIS | BO_POIS
+S:MULTIPLY
+D:The little block heel of this black girl boot cannot really hurt 
+D:anyone. So you don't need to be afraid of anything and may as 
+D:well hug and stroke them. 
+
+N:3879:Kristin
+G:,:D
+I:118:11d11:50:25:50
+W:10:25:5000:50
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:2d16
+F:WILD_TOO | WILD_GRASS | WILD_WOOD | WILD_MOUNTAIN | WILD_VOLCANO |
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | RES_NETH | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_COLD | NO_SLEEP | 
+F:DRAGON | 
+S:1_IN_20
+S:BO_NETH
+S:MULTIPLY
+D:A cheap-looking black combat boot with a moderate block heel. They 
+D:probably cost at most 20 euros at the shop. Still, they're good at 
+D:cheating and will probably keep scratching the sharp-edged heel 
+D:over your legs even after they have been defeated! 
+
+N:3880:Kristin
+G:,:D
+I:110:25d25:100:90:100
+W:20:25:50000:300
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:10d10
+B:KICK:PARALYZE:1d8
+F:WILD_TOO | WILD_GRASS | WILD_WOOD | WILD_MOUNTAIN | WILD_VOLCANO |
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | IM_COLD | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_FLY | IM_ELEC | 
+F:IM_FIRE | IM_POIS | NO_SLEEP | RES_NETH | RES_DISE | NO_FEAR | 
+F:NO_STUN | DRAGON | 
+S:1_IN_7
+S:BR_GRAV
+S:MULTIPLY
+D:This platform boot will totally bludgeon you with the thick sole. 
+D:Even if you managed to defeat Kristin's other female shoes, 
+D:you'll certainly not succeed against this one. 
+
+N:3881:Kristin
+G:,:D
+I:120:20d15:40:60:20
+W:23:25:2000:300
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:6d6
+B:KICK:UN_BONUS:5d5
+B:KICK:HURT:2d4
+B:KICK:CONFUSE:3d6
+F:WILD_TOO | WILD_GRASS | WILD_WOOD | WILD_MOUNTAIN | WILD_VOLCANO |
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | IM_COLD | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | IM_ELEC | 
+F:NO_STUN | NO_FEAR | RES_NETH | DRAGON | 
+S:1_IN_4
+S:BR_SHAR
+S:MULTIPLY
+D:Wow, you love the beautiful thick block heels of this pair of 
+D:black lady sandals. Think about all the wonderful ways in which 
+D:they could hurt you! They can kick, scratch, stomp, and if you're 
+D:male, they might even squash your delicate nuts flat with their 
+D:incredibly sexy block heel! 
+
+N:3882:Bianca
+G:$:D
+I:130:50d25:90:110:40
+W:50:25:2000:1800
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:LOSE_ALL:8d10
+F:WILD_TOO | WILD_MOUNTAIN | WILD_VOLCANO | ELDRITCH_HORROR | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_COLD | NO_SLEEP | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SWIM | IM_POIS | 
+F:IM_ELEC | IM_ACID | IM_FIRE | EVIL | RES_NETH | NO_FEAR | GIANT | 
+S:1_IN_3
+S:BR_INER | CAUSE_4
+S:MULTIPLY
+D:You really shouldn't be fighting this high-heeled women's sandal, 
+D:because you'll lose definitely and end up crying. Better flee with 
+D:your life unless you want to roll a new character and start over 
+D:all the way from the beginning. 
+
+N:3883:Cornelia
+G:#:U
+I:129:18d18:0:24:10
+W:16:25:1500:450
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HALLU:8d3
+F:WILD_TOO | WILD_SHORE | WILD_OCEAN | IM_ACID | RAND_25 | ELDRITCH_HORROR | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | WEIRD_MIND | DRAGON | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_FLY | STUPID | 
+S:1_IN_3
+S:TELE_TO
+S:MULTIPLY
+D:A very erotic block-heeled sandal, which is also very unfair and 
+D:will try her best to screw you over. 
+
+N:3884:Sofia
+G:N:D
+I:115:15d16:40:25:90
+W:15:25:1600:200
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:ABOMINATION:4d8
+B:KICK:CONFUSE:4d8
+F:WILD_TOO | WILD_WOOD | WILD_WASTE | WEIRD_MIND | IM_COLD | IM_POIS | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | NO_SLEEP | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_FLY | RAND_50 | 
+F:TROLL | 
+S:1_IN_3
+S:TELE_AWAY
+S:MULTIPLY
+D:Just another standard cone-heeled lady pump in a black color who 
+D:scratches up and down your shins like a bitch. Defeating her is 
+D:the only way to stop her from destroying your skin and spilling your 
+D:blood. 
 
