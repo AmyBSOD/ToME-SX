@@ -836,6 +836,23 @@ int do_cmd_activate_skill_aux()
 	if (!max)
 	{
 		msg_print("You don't have any activable skills or abilities.");
+		/* if you have a macro to e.g. cast a spell, and you hit that with a char who happens to have nothing in the
+		 * 'm' menu, the results can be catastrophic, so we need to catch all the keystrokes that the macro runs;
+		 * it would have been too much to ask to simply have a keyboard command for "cast a spell" that gives a menu
+		 * like nethack, which shows all the spells you have available and where those are mapped to CONSISTENT KEYS
+		 * that don't randomly change! nooooo, we need to have a menu where the amount of entries affects the hotkeys
+		 * used by those entries, resulting in you needing to use macros, and of course there is NO sanity check if
+		 * you run a macro with a char who doesn't have the abilities/spells/whatever that the macro would try to call
+		 * so this is the best I can do, unfortunately, but it's better than nothing --Amy */
+		msg_print(NULL);
+		msg_print("additional more prompt because of macros, sorry");
+		msg_print(NULL);
+		msg_print("additional more prompt because of macros, sorry");
+		msg_print(NULL);
+		msg_print("additional more prompt because of macros, sorry");
+		msg_print(NULL);
+		msg_print("additional more prompt because of macros, sorry");
+		msg_print(NULL);
 		return -1;
 	}
 
