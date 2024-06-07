@@ -4671,6 +4671,7 @@ extern int PlayerUID;
 #define SKILL_RANGEDPOWER       65
 #define SKILL_VALARIN           66
 #define SKILL_NETHER            67
+#define SKILL_HAGGLING          68
 
 /* Ugly but needed */
 #define MAX_SKILLS              200

@@ -488,9 +488,10 @@ static s32b price_item(object_type *o_ptr, int greed, bool flip)
 		/* Mega-Hack -- Black market sucks */
 		if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM) price = price / 3;
 
-		/* Amy edit: items just give way too much gold when you sell them! */
-		price *= 2;
-		price /= 5;
+		/* Amy edit: items just give way too much gold when you sell them!
+		 * added a new skill that, if maxxed, gives the old values back */
+		price *= (20 + get_skill_scale(SKILL_HAGGLING, 15) );
+		price /= 50;
 	}
 
 	/* Shop is selling */

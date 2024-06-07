@@ -563,6 +563,11 @@ I:1000
 F:RANDOM_GAIN
 G:80
 
+N:68:Haggling
+D:Increases sale value of items
+I:0
+F:RANDOM_GAIN
+
 f:Possession:Monster-lore%10
 f:Corpse-preservation:Monster-lore%10
 f:Summoning:Monster-lore%10
@@ -640,3 +645,4 @@ T:Monster-lore:Possession
 T:Monster-lore:Symbiosis
 T:Monster-lore:Mimicry
 T:Monster-lore:Clear-mind
+T:Monster-lore:Haggling
