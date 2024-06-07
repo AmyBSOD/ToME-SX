@@ -35,10 +35,9 @@ I:1000
 F:RANDOM_GAIN
 
 N:54:Spell-learning
-D:You should not see that ! that is a BUG!
-#A:18:Learn a spell from a realm
+D:Increases the amount of loot carried by monsters
 I:1000
-F:HIDDEN
+F:RANDOM_GAIN
 
 N:41:Sorcery
 D:Ability to use all the magic schools as if their skill was sorcery
@@ -202,6 +201,7 @@ f:Udun:Magic%10
 f:Demonology:Magic%10
 f:Necromancy:Magic%4
 f:Runecraft:Magic%12
+f:Spell-learning:Magic%2
 f:Thaumaturgy:Magic%6
 
 
@@ -437,8 +437,9 @@ f:Music:Magic%10
 ################################## MISC SKILLS ###############################
 
 N:30:Misc
-D:Not a real skill, it is only used to regroup some skills
-I:0
+D:Protects you from bad effects
+I:1000
+F:RANDOM_GAIN
 
 N:33:Antimagic
 D:Ability to generate an antimagic field
@@ -623,6 +624,7 @@ T:Magic:Necromancy
 T:Magic:Runecraft
 T:Magic:Thaumaturgy
 T:Magic:Alchemy
+T:Magic:Spell-learning
 
 T:Geomancy:Fire
 T:Geomancy:Water
@@ -645,4 +647,7 @@ T:Monster-lore:Possession
 T:Monster-lore:Symbiosis
 T:Monster-lore:Mimicry
 T:Monster-lore:Clear-mind
-T:Monster-lore:Haggling
+
+T:Main:Misc
+T:Misc:Clear-mind
+T:Misc:Haggling

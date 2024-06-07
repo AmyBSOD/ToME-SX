@@ -239,7 +239,7 @@ void dump_skills(FILE *fff)
 
 		i = table[j][0];
 
-		if ((s_info[i].value == 0) && (i != SKILL_MISC))
+		if (s_info[i].value == 0)
 		{
 			if (s_info[i].mod == 0) continue;
 		}
@@ -296,7 +296,7 @@ void print_skills(int table[MAX_SKILLS][2], int max, int sel, int start)
 
 		i = table[j][0];
 
-		if ((s_info[i].value == 0) && (i != SKILL_MISC))
+		if (s_info[i].value == 0)
 		{
 			if (s_info[i].mod == 0) color = TERM_L_DARK;
 			else color = TERM_ORANGE;
@@ -528,7 +528,7 @@ void do_cmd_skill()
 			if (dir == 8) sel--;
 
 			/* Miscellaneous skills cannot be increased/decreased as a group */
-			if (table[sel][0] == SKILL_MISC) continue;
+			/*if (table[sel][0] == SKILL_MISC) continue;*/
 
 			/* Increase the current skill */
 			if (dir == 6) increase_skill(table[sel][0], skill_invest);
@@ -789,7 +789,7 @@ int do_cmd_activate_skill_aux()
 
 	for (i = 1; i < max_s_idx; i++)
 	{
-		if (s_info[i].action_mkey && s_info[i].value && ((!s_info[i].hidden) || (i == SKILL_LEARN)))
+		if (s_info[i].action_mkey && s_info[i].value && (!s_info[i].hidden) )
 		{
 			int j;
 			bool next = FALSE;

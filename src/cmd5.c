@@ -177,6 +177,11 @@ void do_poly_wounds(void)
 /* random bad effect, similar to SLEX's badeffect() function --Amy */
 void do_fart_effect(void)
 {
+	int randomnumber = randint(100);
+	if (get_skill(SKILL_MISC) > randomnumber) {
+		msg_print("You resist the effects!");
+		return;
+	}
 
 	switch (randint(57))
 	{

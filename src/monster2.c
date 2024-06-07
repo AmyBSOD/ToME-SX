@@ -2639,6 +2639,8 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 		bool do_mimic = (r_ptr->flags9 & (RF9_MIMIC));
 		int j;
 
+		int randomnumber = randint(100);
+
 		int force_coin = get_coin_type(r_ptr);
 
 		int dump_item = 0;
@@ -2660,6 +2662,10 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 		if ((r_ptr->flags1 & (RF1_DROP_3D2)) && (rand_int(100) < 90)) number += damroll(1, 2);
 		if ((r_ptr->flags1 & (RF1_DROP_4D2)) && (rand_int(100) < 90)) number += damroll(2, 2);
 		if (r_ptr->flags9 & (RF9_MIMIC)) number = 1;
+
+		if (get_skill(SKILL_LEARN) > randomnumber) {
+			if (number > 0) number *= 2;
+		}
 
 		/* note by Amy: you shouldn't be able to scum summoned creatures for items!!! */
 		if (m_ptr->status >= MSTATUS_FRIEND) number = 0;
