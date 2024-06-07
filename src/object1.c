@@ -3484,27 +3484,27 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 			vn = 0;
 			if (f2 & (TR2_SUST_STR))
 			{
-				vp[vn++] = "strength";
+				vp[vn++] = "STR";
 			}
 			if (f2 & (TR2_SUST_INT))
 			{
-				vp[vn++] = "intelligence";
+				vp[vn++] = "INT";
 			}
 			if (f2 & (TR2_SUST_WIS))
 			{
-				vp[vn++] = "wisdom";
+				vp[vn++] = "WIS";
 			}
 			if (f2 & (TR2_SUST_DEX))
 			{
-				vp[vn++] = "dexterity";
+				vp[vn++] = "DEX";
 			}
 			if (f2 & (TR2_SUST_CON))
 			{
-				vp[vn++] = "constitution";
+				vp[vn++] = "CON";
 			}
 			if (f2 & (TR2_SUST_CHR))
 			{
-				vp[vn++] = "charisma";
+				vp[vn++] = "CHA";
 			}
 			/* Describe */
 			if (vn)
@@ -3512,13 +3512,13 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 				int i;
 
 				/* Intro */
-				text_out("It sustains ");
+				text_out("Sustain ");
 
 				/* List */
 				for (i = 0; i < vn; i++)
 				{
 					/* Connectives */
-					if (i == 0) text_out("your ");
+					if (i == 0) text_out(" ");
 					else if (i < (vn - 1)) text_out(", ");
 					else text_out(" and ");
 
