@@ -1314,6 +1314,18 @@ static power_type* select_power(int *x_idx)
 		*x_idx = -1;
 		ret = NULL;
 		msg_print("You don't have any special powers.");
+		/* and since there is no sanity check if your macro then executes something like "@52\n", we need to make
+		 * stupidly many --More-- prompts... in a well-designed game, you'd have a GOOD menu with KEYSTROKE CONSISTENCY
+		 * but sadly Angband isn't such a game, unlike Nethack :-( --Amy */
+		msg_print(NULL);
+		msg_print("additional more prompt because of macros, sorry");
+		msg_print(NULL);
+		msg_print("additional more prompt because of macros, sorry");
+		msg_print(NULL);
+		msg_print("additional more prompt because of macros, sorry");
+		msg_print(NULL);
+		msg_print("additional more prompt because of macros, sorry");
+		msg_print(NULL);
 	}
 	else
 	{
