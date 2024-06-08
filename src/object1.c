@@ -3512,7 +3512,7 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 				int i;
 
 				/* Intro */
-				text_out("Sustain ");
+				text_out("Sustain");
 
 				/* List */
 				for (i = 0; i < vn; i++)
