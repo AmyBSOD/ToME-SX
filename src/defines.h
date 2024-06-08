@@ -1723,6 +1723,7 @@
 #define SV_AMULET_WISDOM                28
 #define SV_AMULET_RESIST_ELEC           29
 #define SV_AMULET_REGEN                 30
+#define SV_AMULET_LIFE_SAVING           32
 
 /* The sval codes for TV_RING */
 #define SV_RING_WOE                      0

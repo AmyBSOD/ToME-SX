@@ -6096,6 +6096,25 @@ void play_game(bool new_game)
 		if (alive && death)
 		{
 			cheat_death = FALSE;
+			object_type *lifesavingammy;
+			int will_lifesave = -1; /* 1 = regular amulet is LS, 2 = second amulet is LS */
+
+			/* amulet of life saving (from Nethack) by Amy; annoyingly we have to account for the fact that you
+			 * can have two neck slots in certain monster forms */
+			lifesavingammy = &p_ptr->inventory[INVEN_NECK];
+			if (lifesavingammy && lifesavingammy->k_idx) {
+				if (lifesavingammy->sval == SV_AMULET_LIFE_SAVING) {
+					will_lifesave = 1;
+				}
+			}
+			if (!will_lifesave) {
+				lifesavingammy = &p_ptr->inventory[INVEN_NECK + 1];
+				if (lifesavingammy && lifesavingammy->k_idx) {
+					if (lifesavingammy->sval == SV_AMULET_LIFE_SAVING) {
+						will_lifesave = 2;
+					}
+				}
+			}
 
 			/* Can we die ? please let us die ! */
 			if (process_hooks(HOOK_DIE, "()"))
@@ -6112,6 +6131,25 @@ void play_game(bool new_game)
 				            "The power of %s raises you back from the grave!",
 				            deity_info[p_ptr->pgod].name);
 				msg_print(NULL);
+			}
+
+			else if (will_lifesave)
+			{
+				cheat_death = TRUE;
+
+				if (will_lifesave == 1) {
+					inven_item_increase(INVEN_NECK, -1);
+					inven_item_optimize(INVEN_NECK);
+				} else {
+					inven_item_increase(INVEN_NECK + 1, -1);
+					inven_item_optimize(INVEN_NECK + 1);
+				}
+				do_dec_stat(A_CON, STAT_DEC_PERMANENT); /* like in nethack */
+
+				cmsg_print(TERM_L_GREEN, "But wait... Your amulet begins to glow!");
+				cmsg_print(TERM_L_GREEN, "You feel much better! The amulet disintegrates!");
+				msg_print(NULL);
+
 			}
 
 			/* Blood of life */
