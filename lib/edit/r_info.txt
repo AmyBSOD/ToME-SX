@@ -2595,7 +2595,7 @@ O:0:0:0:0
 B:STING:POISON:1d4
 B:STING:LOSE_STR:1d4
 F:WEIRD_MIND | FRIENDS | CAN_FLY | WILD_TOO |
-F:ANIMAL | MORTAL | BASEANGBAND
+F:ANIMAL | MORTAL | BASEANGBAND | WILD_WOOD
 D:It is poisonous and aggressive. 
 
 N:175:Giant spider
@@ -67011,4 +67011,51 @@ D:heels, dislocating the delicate balls out of their original position
 D:and giving the victim a horrible distortion fracture. Hopefully you're 
 D:male, because then you can let her break your pubic bone with the 
 D:very cuuuuuuute high heels. 
+
+N:3893:Kristina
+G:~:r
+I:115:15d20:20:50:60
+W:26:5:2000:450
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:FIRE:4d12
+F:WILD_TOO | WILD_TOWN | WILD_VOLCANO | WILD_MOUNTAIN | WILD_OCEAN | 
+F:CAN_SWIM | WILD_WOOD | STUPID | MOVE_BODY | TAKE_ITEM | 
+F:DRAGON | EVIL | HAS_EGG | DROP_CORPSE | FEMALE | WEIRD_MIND | 
+F:MORTAL | BASEANGBAND | AURA_FIRE | IM_FIRE | IM_COLD | RES_PLAS | 
+F:RES_DISE | NO_FEAR | NO_STUN | 
+S:1_IN_6
+S:BR_PLAS
+D:While these thick-soled girl sneakers look soft and gentle, they're 
+D:actually quite bitchy. 
+
+N:3894:Kristina
+G:~:r
+I:115:15d20:20:50:60
+W:26:25:2000:450
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:FIRE:4d12
+F:WILD_TOO | WILD_TOWN | WILD_VOLCANO | WILD_MOUNTAIN | WILD_OCEAN | 
+F:CAN_SWIM | WILD_WOOD | STUPID | MOVE_BODY | TAKE_ITEM | 
+F:DRAGON | EVIL | HAS_EGG | DROP_CORPSE | FEMALE | WEIRD_MIND | 
+F:MORTAL | BASEANGBAND | AURA_FIRE | IM_FIRE | IM_COLD | RES_PLAS | 
+F:RES_DISE | NO_FEAR | NO_STUN | 
+S:1_IN_6
+S:BR_PLAS
+S:MULTIPLY
+D:While these thick-soled girl sneakers look soft and gentle, they're 
+D:actually quite bitchy. 
+
+# N: serial number : monster name
+# G: symbol : color
+# I: speed : hit points : vision : armor class : alertness
+# W: depth : rarity : corpse weight : experience for kill
+# E: weapons : torso : arms : finger : head : leg
+# O: treasure : combat : magic : tool
+# B: attack method : attack effect : damage
+# F: flag | flag | etc
+# S: spell frequency |
+# S: spell type | spell type | etc
+# D: Description
 
