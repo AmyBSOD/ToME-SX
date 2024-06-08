@@ -1392,8 +1392,12 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 					if ((cv_ptr->feat != FEAT_LESS) &&
 					                (cv_ptr->feat != FEAT_MORE) &&
+					                (cv_ptr->feat != FEAT_WAY_LESS) &&
+					                (cv_ptr->feat != FEAT_WAY_MORE) &&
 					                (cv_ptr->feat != FEAT_SHAFT_UP) &&
-					                (cv_ptr->feat != FEAT_SHAFT_DOWN)) continue;
+					                (cv_ptr->feat != FEAT_SHAFT_DOWN)) {
+						continue;
+					}
 
 					index_x[cnt] = cx;
 					index_y[cnt] = cy;
@@ -1403,6 +1407,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (cnt == 0)
 			{
 				if (wizard) msg_print("Executing moving stairs trap on level with no stairs!");
+				/* Amy edit: at least give some vague message! traps that give no message when triggered suck! */
+				msg_print("You feel faint movements beneath the floor.");
 				break;
 			}
 
