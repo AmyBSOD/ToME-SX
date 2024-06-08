@@ -1269,7 +1269,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_FEAR:
 		{
 			msg_format("You get the cold shivers.");
-			set_afraid(p_ptr->afraid + 50 + randint(200));
+			if (!p_ptr->resist_fear || (rand_int(100) < 5) ) {
+				set_afraid(p_ptr->afraid + 50 + randint(200));
+			}
 			ident = TRUE;
 			break;
 		}
