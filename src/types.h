@@ -1477,6 +1477,7 @@ struct player_type
 	byte maximize;		/* Maximize stats */
 	byte preserve;		/* Preserve artifacts */
 	byte lvling_system;	/* Monsters level up with the dungeon's depth --Amy */
+	byte hard_mode;		/* hard mode, by Amy */
 	byte special;           /* Special levels */
 	byte allow_one_death;   /* Blood of life */
 

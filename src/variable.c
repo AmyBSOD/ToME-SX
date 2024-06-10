@@ -1452,6 +1452,11 @@ bool rand_birth;
 bool fast_autoroller;
 
 /*
+ * Hard mode
+ */
+bool hard_mode;
+
+/*
  * Which monsters are allowed ?
  */
 bool joke_monsters;

@@ -1675,6 +1675,9 @@ option_type option_info[] =
 	{ &fast_autoroller, FALSE, 6, 10,
 	  "fast_autoroller", "Fast autoroller(NOT on multiuser systems)" },
 
+	{ &hard_mode, FALSE, 6, 11,
+	  "hard_mode", "Hard mode (make game considerably harder)" },
+
 	{ &joke_monsters, TRUE, 6, 14,
 	  "joke_monsters", "Allow use of some 'joke' monsters" },
 
@@ -2967,6 +2970,20 @@ tactic_info_type tactic_info[9] =
 	{ 5, 5, 0, 0, 0, 0, "berserker"}         /* 4+4 */
 };
 
+tactic_info_type tactic_info_hard[9] =
+{
+	/*        hit  dam   ac stl  dis  sav */
+	{ 0, 0, 0, 0, 0, 0, "coward"},             /* 4-4 */
+	{ 0, 0, 0, 0, 0, 0, "meek"},               /* 4-3 */
+	{ 0, 0, 0, 0, 0, 0, "wary"},               /* 4-2 */
+	{ 0, 0, 0, 0, 0, 0, "careful"},            /* 4-1 */
+	{ 0, 0, 0, 0, 0, 0, "normal"},             /* 4+0 */
+	{ 0, 0, 0, 0, 0, 0, "confident"},          /* 4+1 */
+	{ 0, 0, 0, 0, 0, 0, "aggressive"},         /* 4+2 */
+	{ 0, 0, 0, 0, 0, 0, "furious"},            /* 4+3 */
+	{ 0, 0, 0, 0, 0, 0, "berserker"}         /* 4+4 */
+};
+
 /*
  * Random artifact activations.
  */
@@ -3064,6 +3081,20 @@ move_info_type move_info[9] =
 	{ 3, 0, 0, 0, "fast"},
 	{ 3, 0, 0, 0, "very fast"},
 	{ 3, 0, 0, 0, "running"}
+};
+
+move_info_type move_info_hard[9] =
+{
+	/*        speed, searching, stealth, perception */
+	{ 0, 0, 0, 0, "slug-like"},
+	{ 0, 0, 0, 0, "very slow"},
+	{ 0, 0, 0, 0, "slow"},
+	{ 0, 0, 0, 0, "leisurely"},
+	{ 0, 0, 0, 0, "normal"},
+	{ 0, 0, 0, 0, "brisk"},
+	{ 0, 0, 0, 0, "fast"},
+	{ 0, 0, 0, 0, "very fast"},
+	{ 0, 0, 0, 0, "running"}
 };
 
 /*
