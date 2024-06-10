@@ -2623,7 +2623,14 @@ void py_attack(int y, int x, int max_blow)
 		else /* SKILL_HAND */
 			weapons = 1;
 
-		/* Attack with ALL the weapons !!!!! -- ooh that's gonna hurt YOU */
+		if (weapons > 1) {
+			if (get_skill(SKILL_DUALWIELD) < rand_int(121)) weapons = 1;
+			else if ((weapons > 2) && (get_skill(SKILL_DUALWIELD) < rand_int(121)) ) weapons = 2;
+		}
+
+		/* Attack with ALL the weapons !!!!! -- ooh that's gonna hurt YOU
+		 * Amy edit: yeah, so much so that the watcher in the water was incredibly OP. which is why I decided to add
+		 * a dual-wielding skill so that you don't always get all the weapons' attacks */
 		for (weap = 0; weap < weapons; ++weap)
 		{
 			/* Monster is already dead ? oh :( */

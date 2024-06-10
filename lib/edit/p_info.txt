@@ -100,6 +100,7 @@ C:a:N:Warrior
 C:a:D:Simple fighters, they hack away with their trusty weapon.
 C:a:O:23:16:1d1
 C:a:g:All Gods
+C:a:k:+1000:+700:Dual-wielding
 
 C:a:N:Swordmaster
 C:a:D:Fighters specialised in the use of swords
@@ -109,6 +110,7 @@ C:a:k:+0:+100:Combat
 C:a:k:+0:-100:Axe-mastery
 C:a:k:+0:-100:Hafted-mastery
 C:a:k:+0:-100:Polearm-mastery
+C:a:k:+1000:+400:Dual-wielding
 C:a:O:23:16:1d1
 C:a:g:All Gods
 
@@ -122,6 +124,7 @@ C:a:k:+1000:+300:Axe-mastery
 C:a:k:+0:-100:Sword-mastery
 C:a:k:+0:-100:Hafted-mastery
 C:a:k:+0:-100:Polearm-mastery
+C:a:k:+1000:+600:Dual-wielding
 C:a:O:24:1:1d1
 C:a:g:All Gods
 
@@ -256,6 +259,7 @@ C:a:k:+1000:+600:Mindcraft
 C:a:k:+1000:+600:Thaumaturgy
 C:a:k:+0:+200:Prayer
 C:a:k:+1000:+200:Udun
+C:a:k:+0:+300:Dual-wielding
 C:a:g:All Gods
 C:a:b:10:Perfect casting
 C:a:O:115:55:1d1
@@ -277,6 +281,7 @@ C:a:k:=0:=0:Antimagic
 C:a:k:=0:=0:Magic
 C:a:k:+0:+200:Spirituality
 C:a:k:+0:+400:Prayer
+C:a:k:+1000:+700:Dual-wielding
 C:a:k:=0:=0:Magic-Device
 C:a:b:1:Extra Max Blow(2)
 C:a:b:25:Spread blows
@@ -1254,6 +1259,7 @@ C:a:k:+0:-500:Sneakiness
 C:a:k:-1000:-1000:Backstab
 C:a:k:+0:-500:Stealth
 C:a:k:+0:-1000:Disarming
+C:a:k:+0:+300:Dual-wielding
 C:a:O:23:12:1d1
 C:a:O:35:1:1d1
 #Yo-ho-ho and a potion of confusion! :-)
@@ -1292,6 +1298,7 @@ C:a:k:+0:-500:Disarming
 C:a:k:+0:-500:Stealing
 C:a:k:+0:-500:Dodging
 C:a:k:+0:+500:Haggling
+C:a:k:+0:+200:Dual-wielding
 C:a:G:EXPERIMENTAL
 
 C:a:N:Mercenary
@@ -1623,6 +1630,7 @@ C:a:k:=0:=600:Cleaning
 C:a:k:=0:=600:Impale
 C:a:k:=0:=600:Ranged-power
 C:a:k:=0:=600:Haggling
+C:a:k:=0:=600:Dual-wielding
 C:a:O:111:50:1d1
 C:a:O:19:12:1d1
 C:a:O:17:1:4d5
@@ -1770,6 +1778,7 @@ C:a:k:+0:+300:Weight-lifting
 C:a:k:+0:+400:Clear-mind
 C:a:k:+0:+400:Cleaning
 C:a:k:+0:+300:Haggling
+C:a:k:+0:+400:Dual-wielding
 C:g:Nobody
 
 C:a:N:Weird loremaster

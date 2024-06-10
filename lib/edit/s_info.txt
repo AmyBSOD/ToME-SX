@@ -244,6 +244,11 @@ D:Ability to backstab fleeing and sleeping monsters to increase damage
 I:1000
 F:RANDOM_GAIN
 
+N:69:Dual-wielding
+D:Ability to use several weapons at once
+I:1000
+F:RANDOM_GAIN
+
 N:23:Archery
 D:General ability to use ranged weapons
 I:1000
@@ -354,6 +359,7 @@ f:Boomerang-mastery:Combat%7
 f:Barehand-combat:Combat%50
 f:Boulder-throwing:Combat%40
 f:Weight-lifting:Combat%10
+f:Dual-wielding:Combat%10
 
 # No more, let's see how it turns out
 # Sorcery and Weaponmastery aren't exactly friendly to each other
@@ -597,6 +603,7 @@ T:Combat:Weight-lifting
 T:Combat:Barehand-combat
 T:Combat:Bearform-combat
 T:Combat:Boulder-throwing
+T:Combat:Dual-wielding
 T:Combat:Antimagic
 
 T:Main:Sneakiness
