@@ -1596,8 +1596,9 @@ static void process_world(void)
 	                !p_ptr->inside_quest &&
 	                (rand_int(d_info[(dun_level) ? dungeon_type : DUNGEON_WILDERNESS].max_m_alloc_chance) == 0))
 	{
-		/* Make a new monster */
-		if (!(dungeon_flags2 & DF2_NO_NEW_MONSTER))
+		/* Make a new monster
+		 * Amy edit: lame if special levels don't spawn anything over time. just make them spawn stuff slooooowly */
+		if (!(dungeon_flags2 & DF2_NO_NEW_MONSTER) || (randint(20) == 1) )
 		{
 			(void)alloc_monster(MAX_SIGHT + 5, FALSE);
 		}
