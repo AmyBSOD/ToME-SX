@@ -6098,7 +6098,7 @@ void play_game(bool new_game)
 		{
 			cheat_death = FALSE;
 			object_type *lifesavingammy;
-			int will_lifesave = -1; /* 1 = regular amulet is LS, 2 = second amulet is LS */
+			int will_lifesave = 0; /* 1 = regular amulet is LS, 2 = second amulet is LS */
 
 			/* amulet of life saving (from Nethack) by Amy; annoyingly we have to account for the fact that you
 			 * can have two neck slots in certain monster forms */
