@@ -2616,37 +2616,37 @@ magic_power mindcraft_powers[MAX_MINDCRAFT_POWERS] =
 			/* Level gained,  cost,  %fail,  name,  desc */
 			{
 				/* Bolt/beam/ball/LOS of stun/scare */
-				1, 2, 10,
+				1, 15, 10,
 				"Horrify",
 				"Calls upon the darkness to stun and scare your foes."
 			},
 	{
 		/* Ball */
-		5, 6, 20,
+		5, 35, 20,
 		"Raise Dead",
 		"Brings back your foes in the form of various undead.  Also, can heal monsters."
 	},
 	{
 		/* Summons weapon */
-		12, 20, 25,
+		12, 80, 25,
 		"Necromantic Teeth",
 		"Conjures a temporary vampiric weapon."
 	},
 	{
 		/* Heals when killing a monster */
-		20, 10, 25,
+		20, 100, 25,
 		"Absorb Soul",
 		"Gives back some life for each kill."
 	},
 	{
 		/* Bolt */
-		30, 15, 20,
+		30, 70, 20,
 		"Vampirism",
 		"Drain the life of your foes into your own."
 	},
 	{
 		/* The Death word, always bolt put your HP to 1 */
-		35, 100, 25,
+		35, 500, 25,
 		"Death",
 		"Instantly kills your opponent and you, turning yourself into an undead."
 	},
@@ -2657,31 +2657,31 @@ magic_power mimic_powers[MAX_MIMIC_POWERS] =
 	/* Level gained,  cost,  %fail,  name */
 	{
 		/* Use a book of lore */
-		1, 2, 0,
+		1, 20, 0,
 		"Mimic",
 		"Lets you use the powers of a Cloak of Mimicry."
 	},
 	{
 		/* Invisibility */
-		10, 6, 20,
+		10, 30, 20,
 		"Invisibility",
 		"Hides you from the sight of mortals."
 	},
 	{
 		/* +1 pair of legs */
-		25, 20, 25,
+		25, 100, 25,
 		"Legs Mimicry",
 		"Temporarily provides a new pair of legs."
 	},
 	{
 		/* wall form */
-		30, 40, 30,
+		30, 200, 30,
 		"Wall Mimicry",
 		"Temporarily lets you walk in walls, and ONLY in walls."
 	},
 	{
 		/* +1 pair of arms, +1 weapon */
-		35, 100, 40,
+		35, 500, 40,
 		"Arms Mimicry",
 		"Temporarily provides a new pair of arms."
 	},
@@ -2691,47 +2691,47 @@ magic_power symbiotic_powers[MAX_SYMBIOTIC_POWERS] =
 {
 	/* Level gained,  cost,  %fail,  name */
 	{
-		1, 1, 0,
+		1, 20, 0,
 		"Hypnotise",
 		"Hypnotise a non-moving pet to allow you to enter symbiosis(wear) with it."
 	},
 	{
-		1, 1, 0,
+		1, 10, 0,
 		"Release",
 		"Release an hypnotised pet."
 	},
 	{
-		3, 2, 10,
+		3, 50, 10,
 		"Charm Never-Moving",
 		"Tries to charm a never-moving monster."
 	},
 	{
-		5, 5, 20,
+		5, 25, 20,
 		"Life Share",
 		"Evens out your life with your symbiote."
 	},
 	{
-		10, 10, 20,
+		10, 60, 20,
 		"Use Minor Powers",
 		"Allows you to use some of the powers of your symbiote."
 	},
 	{
-		15, 14, 25,
+		15, 120, 25,
 		"Heal Symbiote",
 		"Heals your symbiotic monster."
 	},
 	{
-		25, 30, 40,
+		25, 150, 40,
 		"Use major powers",
 		"Allows you to use all the powers of your symbiote."
 	},
 	{
-		30, 35, 40,
+		30, 500, 40,
 		"Summon Never-Moving Pet",
 		"Summons a never-moving pet."
 	},
 	{
-		40, 60, 70,
+		40, 250, 70,
 		"Force Symbiosis",
 		"Allows you to use all the powers of a monster in your line of sight."
 	},

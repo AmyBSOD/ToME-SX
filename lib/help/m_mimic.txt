@@ -20,14 +20,14 @@ The powers are accessed using the 'm' key and then selecting 'Use Mimicry';
 they are cast with spell points, like normal spells, which can be increased
 as usual through the *****skills.txt*21[Magic] skill.
 
-1. [[[[[sMimic] (Level 1) Cost:2
+1. [[[[[sMimic] (Level 1) Cost:20
    Allows you to mimic the creature whose cloak you are wearing for a time.
-2. [[[[[sInvisibility] (Level 10) Cost:6
+2. [[[[[sInvisibility] (Level 10) Cost:30
    Turns you invisible for a time.
-3. [[[[[sLegs Mimicry] (Level 25) Cost:20
+3. [[[[[sLegs Mimicry] (Level 25) Cost:100
    Gives you an additional set of legs for a time.
-4. [[[[[sWall Mimicry] (Level 30) Cost:40
+4. [[[[[sWall Mimicry] (Level 30) Cost:200
    Allows you to move within walls, and [[[[[Bonly] walls, for a time.
 [[[[[v    Be careful you don't get stuck in a wall when it runs out.]
-5. [[[[[sArms Mimicry] (Level 35) Cost:100
+5. [[[[[sArms Mimicry] (Level 35) Cost:500
    Gives you an additional set of arms for a time.

@@ -833,9 +833,10 @@ void do_cmd_mimic_lore()
 		}
 
 		/* Success */
+		/* Amy edit: holy shit was the duration overpowered!! */
 		else
 		{
-			set_mimic(k_info[o_ptr->k_idx].pval2 + get_skill_scale(SKILL_MIMICRY, 1000), o_ptr->pval2, get_skill(SKILL_MIMICRY));
+			set_mimic(k_info[o_ptr->k_idx].pval2 + get_skill(SKILL_MIMICRY), o_ptr->pval2, get_skill(SKILL_MIMICRY));
 		}
 	}
 

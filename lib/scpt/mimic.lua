@@ -12,7 +12,7 @@ add_mimic_shape
 	["duration"] =  {20, 40},
 	["calc"] =      function ()
 			-- Mice run!
-			player.pspeed = player.pspeed + 5 + (player.mimic_level / 7)
+			player.pspeed = player.pspeed + 1 + (player.mimic_level / 12)
 
 			-- They can crtawl under your armor to hit you ;)
 			player.to_h = player.to_h + 10 + (player.mimic_level / 5)
@@ -25,8 +25,10 @@ add_mimic_shape
 			-- But they are stealthy
 			player.skill_stl = player.skill_stl + 10 + (player.mimic_level / 5)
 
+			player.skill_sav = player.skill_sav - 10
+
 			-- Stat mods
-			player.modify_stat(A_STR, -5)
+			player.modify_stat(A_STR, -15)
 			player.modify_stat(A_DEX, 3)
 			player.modify_stat(A_CON, 1)
 
@@ -49,20 +51,22 @@ add_mimic_shape
 	["duration"] =  {10, 50},
 	["calc"] =      function ()
 			player.ffall = TRUE
-			player.pspeed = player.pspeed + 2 + (player.mimic_level / 6)
+			player.pspeed = player.pspeed + 1 + (player.mimic_level / 20)
 
-			player.modify_stat(A_STR, -3)
+			player.modify_stat(A_STR, -10)
 			player.modify_stat(A_DEX, 2 + (player.mimic_level / 15))
 			player.modify_stat(A_CON, 4 + (player.mimic_level / 20))
-			player.modify_stat(A_INT, -1)
+			player.modify_stat(A_INT, -3)
 			player.modify_stat(A_WIS, 1)
-			player.modify_stat(A_CHR, -1)
+			player.modify_stat(A_CHR, -3)
+
+			player.skill_stl = player.skill_stl - 10
 
 			if player.mimic_level >= 20 then player.fly = TRUE end
-			if player.mimic_level >= 20 then player.see_inv = TRUE end
 			if player.mimic_level >= 25 then player.free_act = TRUE end
-			if player.mimic_level >= 30 then player.resist_elec = TRUE end
-			if player.mimic_level >= 40 then player.sh_elec = TRUE end
+			if player.mimic_level >= 30 then player.see_inv = TRUE end
+			if player.mimic_level >= 40 then player.resist_elec = TRUE end
+			if player.mimic_level >= 60 then player.sh_elec = TRUE end
 
 	end,
 }
@@ -79,18 +83,21 @@ add_mimic_shape
 	["calc"] =      function ()
 			player.modify_stat(A_STR, 2 + (player.mimic_level / 20))
 			player.modify_stat(A_DEX, 3 + (player.mimic_level / 20))
-			player.modify_stat(A_INT, -3)
-			player.modify_stat(A_CHR, -2)
+			player.modify_stat(A_INT, -10)
+			player.modify_stat(A_CHR, -8)
 
-			player.pspeed = player.pspeed + 10 + (player.mimic_level / 5)
+			player.pspeed = player.pspeed + 1 + (player.mimic_level / 10)
+
+			player.skill_stl = player.skill_stl - 5
+			player.to_h_ranged = player.to_h_ranged - 10
 
 			player.free_act = TRUE
 			player.resist_fear = TRUE
 
 			if player.mimic_level >= 10 then player.resist_cold = TRUE end
-			if player.mimic_level >= 15 then player.see_inv = TRUE end
-			if player.mimic_level >= 30 then player.resist_dark = TRUE end
-			if player.mimic_level >= 35 then player.resist_conf = TRUE end
+			if player.mimic_level >= 30 then player.see_inv = TRUE end
+			if player.mimic_level >= 40 then player.resist_dark = TRUE end
+			if player.mimic_level >= 60 then player.resist_conf = TRUE end
 
 	end,
 }
@@ -105,12 +112,12 @@ add_mimic_shape
 	["rarity"] =    50,
 	["duration"] =  {10, 50},
 	["calc"] =      function ()
-			player.modify_stat(A_STR, -4)
+			player.modify_stat(A_STR, -12)
 			player.modify_stat(A_DEX, 1 + (player.mimic_level / 8))
 			player.modify_stat(A_INT, 1 + (player.mimic_level / 5))
 			player.modify_stat(A_WIS, 1 + (player.mimic_level / 5))
-			player.modify_stat(A_CON, -5)
-			player.modify_stat(A_CHR, -10)
+			player.modify_stat(A_CON, -15)
+			player.modify_stat(A_CHR, -30)
 
 			player.pspeed = player.pspeed + 5
 
@@ -151,12 +158,14 @@ add_mimic_shape
 			player.see_inv = TRUE
 			player.sensible_fire = TRUE
 
+			player.skill_stl = player.skill_stl - 10
+
 			player.modify_stat(A_STR, player.mimic_level / 5)
 			player.modify_stat(A_INT, - (player.mimic_level / 7))
 			player.modify_stat(A_WIS, - (player.mimic_level / 7))
-			player.modify_stat(A_DEX, -4)
+			player.modify_stat(A_DEX, -12)
 			player.modify_stat(A_CON, player.mimic_level / 5)
-			player.modify_stat(A_CHR, -7)
+			player.modify_stat(A_CHR, -20)
 
 	end,
 	["power"] =     function ()
@@ -196,11 +205,16 @@ add_mimic_shape
 			player.sensible_fire = TRUE
 			player.levitate = TRUE
 
+			player.skill_dis = player.skill_dis - 10
+			player.skill_srh = player.skill_srh - 10
+			player.skill_fos = player.skill_fos - 10
+			player.skill_dig = player.skill_dig - 20
+
 			-- Stat mods
-			player.modify_stat(A_STR, -4)
+			player.modify_stat(A_STR, -20)
 			player.modify_stat(A_DEX, 5)
-			player.modify_stat(A_CON, -4)
-			player.modify_stat(A_CHR, -10)
+			player.modify_stat(A_CON, -20)
+			player.modify_stat(A_CHR, -30)
 	end,
 }
 
@@ -214,16 +228,19 @@ add_mimic_shape
 	["rarity"] =    25,
 	["duration"] =  {15, 20},
 	["calc"] =      function ()
-			player.pspeed = player.pspeed + 10 + (player.mimic_level / 6)
+			player.pspeed = player.pspeed + 1 + (player.mimic_level / 9)
 			player.to_a = player.to_a + 3 + (player.mimic_level / 8)
 			player.dis_to_a = player.dis_to_a + 3 + (player.mimic_level / 8)
 
 			player.modify_stat(A_STR, player.mimic_level / 8)
-			player.modify_stat(A_INT, -6)
-			player.modify_stat(A_WIS, -6)
-			player.modify_stat(A_DEX, -4)
+			player.modify_stat(A_INT, -18)
+			player.modify_stat(A_WIS, -18)
+			player.modify_stat(A_DEX, -12)
 			player.modify_stat(A_CON, player.mimic_level / 7)
-			player.modify_stat(A_CHR, -6)
+			player.modify_stat(A_CHR, -18)
+
+			player.skill_dis = player.skill_dis - 10
+			player.skill_dig = player.skill_dig - 5
 
 			player.resist_pois = TRUE
 			if player.mimic_level >= 25 then player.free_act = TRUE end
@@ -247,16 +264,20 @@ add_mimic_shape
 			player.dis_to_d = player.dis_to_d + 5 + ((player.mimic_level * 2) / 3)
 
 			player.modify_stat(A_STR, player.mimic_level / 4)
-			player.modify_stat(A_INT, -8)
-			player.modify_stat(A_WIS, -4)
-			player.modify_stat(A_DEX, -5)
+			player.modify_stat(A_INT, -20)
+			player.modify_stat(A_WIS, -12)
+			player.modify_stat(A_DEX, -15)
 			player.modify_stat(A_CON, player.mimic_level / 3)
-			player.modify_stat(A_CHR, -10)
+			player.modify_stat(A_CHR, -30)
+
+			player.skill_stl = player.skill_stl - 15
+			player.skill_dis = player.skill_dis - 5
+			player.skill_dev = player.skill_dev - 5
 
 			if player.mimic_level >= 10 then player.resist_fear = TRUE end
-			if player.mimic_level >= 25 then player.resist_conf = TRUE end
 			if player.mimic_level >= 30 then player.free_act = TRUE end
-			if player.mimic_level >= 35 then player.resist_nexus = TRUE end
+			if player.mimic_level >= 40 then player.resist_conf = TRUE end
+			if player.mimic_level >= 60 then player.resist_nexus = TRUE end
 	end,
 }
 
@@ -273,7 +294,7 @@ add_mimic_shape
 	["duration"] =  {50, 200},
 	["limit"] =     TRUE,
 	["calc"] =      function ()
-			player.pspeed = player.pspeed - 5 + (player.mimic_level / 5)
+			player.pspeed = player.pspeed - 5 + (player.mimic_level / 10)
 
 			player.to_a = player.to_a + 5 + ((player.mimic_level * 2) / 3)
 			player.dis_to_a = player.dis_to_a + 5 + ((player.mimic_level * 2) / 3)
@@ -287,8 +308,8 @@ add_mimic_shape
 
 			if player.mimic_level >= 10 then player.free_act = TRUE end
 			if player.mimic_level >= 20 then player.regenerate = TRUE end
-			if player.mimic_level >= 30 then player.resist_conf = TRUE end
-			if player.mimic_level >= 35 then player.resist_nexus = TRUE end
+			if player.mimic_level >= 40 then player.resist_conf = TRUE end
+			if player.mimic_level >= 60 then player.resist_nexus = TRUE end
 
 			-- activate the skill
 			skill(SKILL_BEAR).hidden = FALSE
@@ -338,12 +359,12 @@ add_mimic_shape
 	["duration"] =  {30, 70},
 	["limit"] =     TRUE,
 	["calc"] =      function ()
-			player.modify_stat(A_STR, 5 + player.mimic_level / 5)
-			player.modify_stat(A_INT, 5 + player.mimic_level / 5)
-			player.modify_stat(A_WIS, 5 + player.mimic_level / 5)
-			player.modify_stat(A_DEX, 5 + player.mimic_level / 5)
-			player.modify_stat(A_CON, 5 + player.mimic_level / 5)
-			player.modify_stat(A_CHR, 5 + player.mimic_level / 5)
+			player.modify_stat(A_STR, 5 + player.mimic_level / 10)
+			player.modify_stat(A_INT, 5 + player.mimic_level / 10)
+			player.modify_stat(A_WIS, 5 + player.mimic_level / 10)
+			player.modify_stat(A_DEX, 5 + player.mimic_level / 10)
+			player.modify_stat(A_CON, 5 + player.mimic_level / 10)
+			player.modify_stat(A_CHR, 5 + player.mimic_level / 10)
 
 			player.immune_fire = TRUE
 			player.immune_elec = TRUE
