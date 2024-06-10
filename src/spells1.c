@@ -192,6 +192,118 @@ void teleport_player_directed(int rad, int dir)
 }
 
 
+void teleport_player_directed_DM(int rad, int dir)
+{
+	int y = p_ptr->py;
+	int x = p_ptr->px;
+	int yfoo = ddy[dir];
+	int xfoo = ddx[dir];
+	int min = rad / 4;
+	int dis = rad;
+	int i, d;
+	bool look = TRUE;
+	bool y_major = FALSE;
+	bool x_major = FALSE;
+	int y_neg = 1;
+	int x_neg = 1;
+	cave_type *c_ptr;
+
+	if (xfoo == 0 && yfoo == 0)
+	{
+		teleport_player(rad);
+		return;
+	}
+
+	/* Rooted means no move */
+	if (p_ptr->tim_roots) return;
+
+	if (yfoo == 0) x_major = TRUE;
+	if (xfoo == 0) y_major = TRUE;
+	if (yfoo < 0) y_neg = -1;
+	if (xfoo < 0) x_neg = -1;
+
+	/* Look until done */
+	while (look)
+	{
+		/* Verify max distance */
+		if (dis > 200)
+		{
+			teleport_player(rad);
+			return;
+		}
+
+		/* Try several locations */
+		for (i = 0; i < 500; i++)
+		{
+			/* Pick a (possibly illegal) location */
+			while (1)
+			{
+				if (y_major)
+				{
+					y = rand_spread(p_ptr->py + y_neg * dis / 2, dis / 2);
+				}
+				else
+				{
+					y = rand_spread(p_ptr->py, dis / 3);
+				}
+
+				if (x_major)
+				{
+					x = rand_spread(p_ptr->px + x_neg * dis / 2, dis / 2);
+				}
+				else
+				{
+					x = rand_spread(p_ptr->px, dis / 3);
+				}
+
+				d = distance(p_ptr->py, p_ptr->px, y, x);
+				if ((d >= min) && (d <= dis)) break;
+			}
+
+			/* Ignore illegal locations */
+			if (!in_bounds(y, x)) continue;
+
+			/* Require "naked" floor space */
+			if (!cave_empty_bold(y, x)) continue;
+
+			/* This grid looks good */
+			look = FALSE;
+
+			/* Stop looking */
+			break;
+		}
+
+		/* Increase the maximum distance */
+		dis = dis * 2;
+
+		/* Decrease the minimum distance */
+		min = min / 2;
+
+	}
+
+	/* Sound */
+	sound(SOUND_TELEPORT);
+
+	/* Move player */
+	teleport_player_to_DM(y, x);
+
+	/* Handle stuff XXX XXX XXX */
+	handle_stuff();
+
+	c_ptr = &cave[y][x];
+
+	/* Hack -- enter a store if we are on one */
+	if (c_ptr->feat == FEAT_SHOP)
+	{
+		/* Disturb */
+		disturb(0, 0);
+
+		/* Hack -- enter store */
+		command_new = '_';
+	}
+}
+
+
 /*
  * Teleport a monster, normally up to "dis" grids away.
  *
@@ -589,6 +701,158 @@ void teleport_player(int dis)
 	handle_stuff();
 }
 
+/* deathmold phase door by Amy, because it's really stupid if you have to go out of your way to be able to do mount doom */
+void teleport_player_deathmold(int dis)
+{
+	int d, i, min, ox, oy, x = 0, y = 0;
+	int tries = 0;
+
+	int xx = -1, yy = -1;
+
+	bool look = TRUE;
+
+	if (p_ptr->resist_continuum && (!teleport_player_bypass))
+	{
+		msg_print("The space-time continuum can't be disrupted.");
+		return;
+	}
+
+	if (p_ptr->wild_mode) return;
+
+	/* Rooted means no move */
+	if (p_ptr->tim_roots) return;
+
+	if (p_ptr->anti_tele && (!teleport_player_bypass))
+	{
+		msg_print("A mysterious force prevents you from teleporting!");
+		return;
+	}
+
+	if (dis > 200) dis = 200;  /* To be on the safe side... */
+
+	/* Minimum distance */
+	min = dis / 2;
+
+	/* Look until done */
+	while (look)
+	{
+		tries++;
+
+		/* Verify max distance */
+		if (dis > 200) dis = 200;
+
+		/* Try several locations */
+		for (i = 0; i < 500; i++)
+		{
+			/* Pick a (possibly illegal) location */
+			while (1)
+			{
+				y = rand_spread(p_ptr->py, dis);
+				x = rand_spread(p_ptr->px, dis);
+				d = distance(p_ptr->py, p_ptr->px, y, x);
+				if ((d >= min) && (d <= dis)) break;
+			}
+
+			/* Ignore illegal locations */
+			if (!in_bounds(y, x)) continue;
+
+			/* Require "naked" floor space */
+			if (!cave_naked_bold(y, x)) continue;
+
+			/* No teleporting into vaults and such */
+			if (cave[y][x].info & (CAVE_ICKY)) continue;
+
+			/* This grid looks good */
+			look = FALSE;
+
+			/* Stop looking */
+			break;
+		}
+
+		/* Increase the maximum distance */
+		dis = dis * 2;
+
+		/* Decrease the minimum distance */
+		min = min / 2;
+
+		/* Stop after MAX_TRIES tries */
+		if (tries > MAX_TRIES) return;
+	}
+
+	/* Sound */
+	sound(SOUND_TELEPORT);
+
+	/* Save the old location */
+	oy = p_ptr->py;
+	ox = p_ptr->px;
+
+	/* Move the player */
+	p_ptr->py = y;
+	p_ptr->px = x;
+	last_teleportation_y = y;
+	last_teleportation_x = x;
+
+	/* Redraw the old spot */
+	lite_spot(oy, ox);
+
+	while (xx < 2)
+	{
+		yy = -1;
+
+		while (yy < 2)
+		{
+			if (xx == 0 && yy == 0)
+			{
+				/* Do nothing */
+			}
+			else
+			{
+				if (cave[oy + yy][ox + xx].m_idx)
+				{
+					monster_race *r_ptr = race_inf(&m_list[cave[oy + yy][ox + xx].m_idx]);
+
+					if ((r_ptr->flags6
+					                & RF6_TPORT) &&
+					                !(r_ptr->flags3
+					                  & RF3_RES_TELE))
+						/*
+						 * The latter limitation is to avoid
+						 * totally unkillable suckers...
+						 */
+					{
+						if (!(m_list[cave[oy + yy][ox + xx].m_idx].csleep))
+							teleport_to_player(cave[oy + yy][ox + xx].m_idx);
+					}
+				}
+			}
+			yy++;
+		}
+		xx++;
+	}
+
+	/* Redraw the new spot */
+	lite_spot(p_ptr->py, p_ptr->px);
+
+	/* Check for new panel (redraw map) */
+	verify_panel();
+
+	/* Update stuff */
+	p_ptr->update |= (PU_VIEW | PU_FLOW | PU_MON_LITE);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_DISTANCE);
+
+	/* Redraw trap detection status */
+	p_ptr->redraw |= (PR_DTRAP);
+
+	/* Window stuff */
+	p_ptr->window |= (PW_OVERHEAD);
+
+	/* Handle stuff XXX XXX XXX */
+	handle_stuff();
+}
+
+
 
 /*
  * get a grid near the given location
@@ -753,6 +1017,85 @@ void teleport_player_to(int ny, int nx)
 	if (dungeon_flags2 & DF2_NO_TELEPORT)
 	{
 		msg_print("No teleport on special levels...");
+		return;
+	}
+
+	/* Rooted means no move */
+	if (p_ptr->tim_roots) return;
+
+	/* Find a usable location */
+	while (1)
+	{
+		/* Pick a nearby legal location */
+		while (1)
+		{
+			y = rand_spread(ny, dis);
+			x = rand_spread(nx, dis);
+			if (in_bounds(y, x)) break;
+		}
+
+		/* Accept "naked" floor grids */
+		if (cave_naked_bold2(y, x)) break;
+
+		/* Occasionally advance the distance */
+		if (++ctr > (4 * dis * dis + 4 * dis + 1))
+		{
+			ctr = 0;
+			dis++;
+		}
+	}
+
+	/* Sound */
+	sound(SOUND_TELEPORT);
+
+	/* Save the old location */
+	oy = p_ptr->py;
+	ox = p_ptr->px;
+
+	/* Move the player */
+	p_ptr->py = y;
+	p_ptr->px = x;
+	last_teleportation_y = y;
+	last_teleportation_x = x;
+
+	/* Redraw the old spot */
+	lite_spot(oy, ox);
+
+	/* Redraw the new spot */
+	lite_spot(p_ptr->py, p_ptr->px);
+
+	/* Check for new panel (redraw map) */
+	verify_panel();
+
+	/* Update stuff */
+	p_ptr->update |= (PU_VIEW | PU_FLOW | PU_MON_LITE);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_DISTANCE);
+
+	/* Redraw trap detection status */
+	p_ptr->redraw |= (PR_DTRAP);
+
+	/* Window stuff */
+	p_ptr->window |= (PW_OVERHEAD);
+
+	/* Handle stuff XXX XXX XXX */
+	handle_stuff();
+}
+
+void teleport_player_to_DM(int ny, int nx)
+{
+	int y, x, oy, ox, dis = 0, ctr = 0;
+
+	if (p_ptr->resist_continuum)
+	{
+		msg_print("The space-time continuum can't be disrupted.");
+		return;
+	}
+
+	if (p_ptr->anti_tele)
+	{
+		msg_print("A mysterious force prevents you from teleporting!");
 		return;
 	}
 

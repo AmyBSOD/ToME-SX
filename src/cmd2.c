@@ -4349,6 +4349,9 @@ void do_cmd_boomerang(void)
 
 /*
  * Try to ``walk'' using phase door.
+ * note by Amy: this uses teleport_player_deathmold() because otherwise it'd be impossible to do mount doom unless you
+ * either have 200 morphic oils (which last for way too short a duration, hence why you need so many) or go out of your
+ * way via pumping mimicry or possession. And that's just stupid, the game should be beatable for everyone.
  */
 void do_cmd_unwalk()
 {
@@ -4556,7 +4559,7 @@ void do_cmd_unwalk()
 	/* Hack -- Ignore weird terrain types. */
 	else if (!cave_floor_grid(c_ptr))
 	{
-		teleport_player(10);
+		teleport_player_deathmold(10);
 	}
 
 	/* Enter quests */
@@ -4586,7 +4589,7 @@ void do_cmd_unwalk()
 	/* Walking semantics */
 	else
 	{
-		teleport_player_directed(10, dir);
+		teleport_player_directed_DM(10, dir);
 	}
 
 	/* Cancel repetition unless we can continue */
