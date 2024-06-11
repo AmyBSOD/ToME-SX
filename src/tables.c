@@ -2726,14 +2726,14 @@ magic_power symbiotic_powers[MAX_SYMBIOTIC_POWERS] =
 		"Allows you to use all the powers of your symbiote."
 	},
 	{
-		30, 500, 40,
-		"Summon Never-Moving Pet",
-		"Summons a never-moving pet."
-	},
-	{
 		40, 250, 70,
 		"Force Symbiosis",
 		"Allows you to use all the powers of a monster in your line of sight."
+	},
+	{
+		75, 500, 40,
+		"Summon Never-Moving Pet",
+		"Summons a never-moving pet."
 	},
 };
 

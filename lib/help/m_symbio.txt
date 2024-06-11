@@ -40,11 +40,11 @@ There are nine powers a symbiant can develop. They are:
    employ their summoning or teleporting powers on your behalf; this power
    can also call upon the abilities normally invoked by "Use minor powers"
    (but this would be a waste of mana).
-8. [[[[[uSummon never-moving pet] (level 30) Cost:500
-   By releasing certain chemicals in the air, a symbiant can attract the
-   attention of slimes and mold; the better specimens are found in deeper
-   dungeons, of course.
-9. [[[[[uForce symbiosis] (level 40) Cost:250
+8. [[[[[uForce symbiosis] (level 40) Cost:250
    An expert symbiant has such control over the cells of primitive
    life-forms that he can temporarily "charm" part of them, thus forcing
    their powers to manifest at his own advantage.
+9. [[[[[uSummon never-moving pet] (level 75) Cost:500
+   By releasing certain chemicals in the air, a symbiant can attract the
+   attention of slimes and mold; the better specimens are found in deeper
+   dungeons, of course.
