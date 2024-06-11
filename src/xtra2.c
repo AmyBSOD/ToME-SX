@@ -7443,9 +7443,9 @@ bool tgt_pt(int *x, int *y)
 	cv = Term->scr->cv;
 	Term->scr->cu = 0;
 	Term->scr->cv = 1;
-	msg_print("Select a point and press space.");
+	msg_print("Select a point and press space, or press the * key.");
 
-	while ((ch != 27) && (ch != ' '))
+	while ((ch != 27) && (ch != ' ') && (ch != '*'))
 	{
 		move_cursor_relative(*y, *x);
 		ch = inkey();
@@ -7455,6 +7455,13 @@ bool tgt_pt(int *x, int *y)
 			break;
 		case ' ':
 			success = TRUE;
+			break;
+		case '*':
+			target_set(TARGET_LOOK);
+			*x = target_col;
+			*y = target_row;
+			success = TRUE;
+
 			break;
 		default:
 			/* Look up the direction */
