@@ -3504,6 +3504,13 @@ void do_cmd_fire(void)
 							msg_format("%^s flees in terror!", m_name);
 						}
 					}
+				} else {
+					char m_name[80];
+
+					monster_desc(m_name, m_ptr, 0);
+
+					/* Message (by Amy) because SOMEone thought we'd not need any message if the ammo misses... */
+					msg_format("The %s misses %s.", o_name, m_name);
 				}
 
 				/* Stop looking */
@@ -3941,6 +3948,13 @@ void do_cmd_throw(void)
 						msg_format("%^s flees in terror!", m_name);
 					}
 				}
+			} else {
+				char m_name[80];
+
+				monster_desc(m_name, m_ptr, 0);
+
+				/* Message (by Amy) because SOMEone thought we'd not need any message if the ammo misses... */
+				msg_format("The %s misses %s.", o_name, m_name);
 			}
 
 			/* Stop looking */
@@ -4299,6 +4313,14 @@ void do_cmd_boomerang(void)
 					inven_item_increase(INVEN_BOW, -1);
 					inven_item_optimize(INVEN_BOW);
 				}
+			} else {
+				char m_name[80];
+
+				monster_desc(m_name, m_ptr, 0);
+
+				/* Message (by Amy) because SOMEone thought we'd not need any message if the ammo misses... */
+				msg_format("The %s misses %s.", o_name, m_name);
+
 			}
 
 			/* Stop looking */
