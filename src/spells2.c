@@ -5166,7 +5166,10 @@ bool invoke(int dam, int typee)
 	bool result = FALSE;
 	int msec = delay_factor * delay_factor * delay_factor;
 
-	if (dungeon_flags2 & DF2_NO_GENO) return (FALSE);
+	if (dungeon_flags2 & DF2_NO_GENO) {
+		msg_print("A mysterious force stops the genocide.");
+		return (FALSE);
+	}
 
 	/* Hack -- when you are fated to die, you cant cheat :) */
 	if (dungeon_type == DUNGEON_DEATH)
@@ -5321,7 +5324,10 @@ bool genocide(bool player_cast)
 {
 	char typ;
 
-	if (dungeon_flags2 & DF2_NO_GENO) return (FALSE);
+	if (dungeon_flags2 & DF2_NO_GENO) {
+		msg_print("A mysterious force stops the genocide.");
+		return (FALSE);
+	}
 
 	/* Hack -- when you are fated to die, you cant cheat :) */
 	if (dungeon_type == DUNGEON_DEATH)
@@ -5347,7 +5353,10 @@ bool mass_genocide(bool player_cast)
 	int msec = delay_factor * delay_factor * delay_factor;
 	int dam = 0;
 
-	if (dungeon_flags2 & DF2_NO_GENO) return (FALSE);
+	if (dungeon_flags2 & DF2_NO_GENO) {
+		msg_print("A mysterious force stops the genocide.");
+		return (FALSE);
+	}
 
 	/* Hack -- when you are fated to die, you cant cheat :) */
 	if (dungeon_type == DUNGEON_DEATH)
