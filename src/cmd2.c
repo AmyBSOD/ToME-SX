@@ -4565,6 +4565,7 @@ void do_cmd_unwalk()
 	/* Enter quests */
 	else if (((feat >= FEAT_QUEST_ENTER) && (feat <= FEAT_QUEST_UP)) ||
 	                ((feat >= FEAT_LESS) && (feat <= FEAT_MORE)) ||
+	                (feat == FEAT_SHOP) ||
 	                ((feat >= FEAT_WAY_MORE) && (feat <= FEAT_WAY_LESS)) ||
 			    ((feat >= FEAT_SHAFT_DOWN) && (feat <= FEAT_SHAFT_UP)) )
 	{
