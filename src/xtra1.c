@@ -4881,7 +4881,7 @@ void gain_fate(byte fate)
 						/* Rebuild allocation table */
 						get_obj_num_prep();
 
-						fates[i].o_idx = get_obj_num(max_dlv[dungeon_type] + randint(10));
+						fates[i].o_idx = get_obj_num(max_dlv[dungeon_type] + randint(50));
 
 						/* Invalidate the cached allocation table */
 						alloc_kind_table_valid = FALSE;
@@ -4890,7 +4890,7 @@ void gain_fate(byte fate)
 
 						if (!(k_ptr->flags3 & TR3_INSTA_ART) && !(k_ptr->flags3 & TR3_NORM_ART)) break;
 					}
-					level = rand_range(max_dlv[dungeon_type] - 20, max_dlv[dungeon_type] + 20);
+					level = randint(98);
 					fates[i].level = (level < 1) ? 1 : (level > 98) ? 98 : level;
 					fates[i].serious = rand_int(2);
 					fates[i].know = FALSE;
@@ -4901,8 +4901,8 @@ void gain_fate(byte fate)
 				/* Prepare allocation table */
 				get_mon_num_prep();
 
-				fates[i].r_idx = get_mon_num(max_dlv[dungeon_type] + randint(10));
-				level = rand_range(max_dlv[dungeon_type] - 20, max_dlv[dungeon_type] + 20);
+				fates[i].r_idx = get_mon_num(max_dlv[dungeon_type] + randint(50));
+				level = randint(98);
 				fates[i].level = (level < 1) ? 1 : (level > 98) ? 98 : level;
 				fates[i].serious = rand_int(2);
 				fates[i].know = FALSE;
@@ -4910,8 +4910,8 @@ void gain_fate(byte fate)
 				break;
 
 			case FATE_FIND_A:
-				fates[i].a_idx = get_artifact_idx(max_dlv[dungeon_type] + randint(10));
-				level = rand_range(max_dlv[dungeon_type] - 20, max_dlv[dungeon_type] + 20);
+				fates[i].a_idx = get_artifact_idx(max_dlv[dungeon_type] + randint(50));
+				level = randint(98);
 				fates[i].level = (level < 1) ? 1 : (level > 98) ? 98 : level;
 				fates[i].serious = TRUE;
 				fates[i].know = FALSE;
@@ -4919,7 +4919,7 @@ void gain_fate(byte fate)
 				break;
 
 			case FATE_DIE:
-				level = rand_range(max_dlv[dungeon_type] - 20, max_dlv[dungeon_type] + 20);
+				level = randint(98);
 				fates[i].level = (level < 1) ? 1 : (level > 98) ? 98 : level;
 				fates[i].serious = TRUE;
 				fates[i].know = FALSE;
