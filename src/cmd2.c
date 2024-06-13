@@ -3152,6 +3152,7 @@ void do_cmd_fire(void)
 	if (!j_ptr->tval)
 	{
 		msg_print("You have nothing with which to fire.");
+		msg_print(NULL);
 		return;
 	}
 
@@ -3159,6 +3160,7 @@ void do_cmd_fire(void)
 	if (j_ptr->tval == TV_INSTRUMENT)
 	{
 		msg_print("You cannot fire with an instrument.");
+		msg_print(NULL);
 		return;
 	}
 
