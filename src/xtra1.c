@@ -3984,7 +3984,9 @@ void calc_bonuses(bool silent)
 		cur_wgt += p_ptr->inventory[INVEN_FEET].weight;
 
 		/* Base dodge chance */
-		p_ptr->dodge_chance = get_skill_scale(SKILL_DODGE, 100) + get_skill(SKILL_HAND);
+		p_ptr->dodge_chance = get_skill_scale(SKILL_DODGE, 100);
+		/* Amy edit: give martial arts bonuses only when using martial arts style, please! */
+		if (p_ptr->melee_style == SKILL_HAND) p_ptr->dodge_chance += get_skill(SKILL_HAND);
 
 		/* Armor weight bonus/penalty */
 		p_ptr->dodge_chance -= cur_wgt;
