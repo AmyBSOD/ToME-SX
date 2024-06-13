@@ -3804,6 +3804,28 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 		/* Rooted means no move */
 		if (p_ptr->tim_roots) return;
 
+		/* note by Amy: if we're not gonna have a trap detection line or anything, it is *extremely* stupid if
+		 * only running prevents you from accidentally moving out of the detection zone. Because you can't
+		 * always run, and even if you could, you'd not always WANT to run. So there. Gotta have at least some
+		 * quality of life in this game after all. Why I have to add that, rather than just finding a game that
+		 * already HAS it, I have no idea. */
+		if (old_dtrap && !new_dtrap) {
+
+			cmsg_print(TERM_VIOLET, "You are about to leave a trap detected zone.");
+			char etrdt;
+
+			prt("Leave the trap detected zone (y/n)? ", 0, 0);
+			flush();
+			etrdt = inkey();
+			prt("", 0, 0);
+			if (etrdt != 'y') {
+				energy_use = 0;
+				oktomove = FALSE;
+				return;
+			}
+
+		}
+
 		/* Save old location */
 		oy = p_ptr->py;
 		ox = p_ptr->px;
