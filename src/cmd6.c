@@ -4308,6 +4308,8 @@ void do_cmd_zap_rod(void)
 
 	int cost;
 
+	bool autowork = FALSE;
+
 	bool require_dir;
 
 	object_type *o_ptr;
@@ -4439,10 +4441,11 @@ void do_cmd_zap_rod(void)
 		chance = 1;
 	}
 
-	/* Is it simple to use ? */
+	/* Is it simple to use ? Amy edit: device mastery makes it even easier */
 	if (f4 & TR4_EASY_USE)
 	{
 		chance *= 10;
+		if (p_ptr->plr_devicemast) chance *= 10;
 	}
 
 	/* Give everyone a (slight) chance */
@@ -4451,8 +4454,18 @@ void do_cmd_zap_rod(void)
 		chance = USE_DEVICE;
 	}
 
+	/* device mastery property by Amy */
+	if (p_ptr->plr_devicemast) {
+
+		/* boost chance depending on how much device skill you have, guarantee success at a skill level of 51 */
+		if (get_skill(SKILL_DEVICE) > randint(p_ptr->confused ? 100 : 50)) {
+			autowork = TRUE;
+		}
+
+	}
+
 	/* Roll for usage */
-	if ((chance < USE_DEVICE) || (randint(chance) < USE_DEVICE))
+	if (((chance < USE_DEVICE) || (randint(chance) < USE_DEVICE)) && !autowork)
 	{
 		/* Flush input if necessary */
 		if (flush_failure) flush();
