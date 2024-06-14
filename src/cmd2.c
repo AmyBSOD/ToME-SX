@@ -4307,13 +4307,21 @@ void do_cmd_boomerang(void)
 				/* Chance of breakage (during attacks) */
 				j = (hit_body ? breakage_chance(o_ptr) : 0);
 
-				/* Break the boomerang */
-				if ((!(o_ptr->art_name || artifact_p(o_ptr)) &&
-				                (rand_int(100) < j)) && (rand_int(55) > get_skill_scale(SKILL_BOOMERANG, 25) ) )
+				/* Break the boomerang, note by Amy: if it's an artifact, it should no longer be completely
+				 * immune, but rather be greatly disenchanted */
+				if ( (rand_int(100) < j) && (rand_int(55) > get_skill_scale(SKILL_BOOMERANG, 25) ) )
 				{
-					msg_print(format("Your %s is destroyed.", o_name));
-					inven_item_increase(INVEN_BOW, -1);
-					inven_item_optimize(INVEN_BOW);
+					if (o_ptr->art_name || artifact_p(o_ptr)) {
+						if (o_ptr->pval > 0) o_ptr->pval -= 1;
+						if (o_ptr->to_a > 0) o_ptr->to_a -= 1;
+						o_ptr->to_h = -99;
+						o_ptr->to_d = -99;
+						msg_print(format("Your %s is ruined.", o_name));
+					} else {
+						msg_print(format("Your %s is destroyed.", o_name));
+						inven_item_increase(INVEN_BOW, -1);
+						inven_item_optimize(INVEN_BOW);
+					}
 				}
 			} else {
 				char m_name[80];
