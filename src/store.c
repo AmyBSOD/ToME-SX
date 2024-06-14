@@ -411,6 +411,8 @@ static owner_type *ot_ptr = NULL;
  * Since greed/charisma/racial adjustments are centered at 100, we need
  * to adjust (by 200) to extract a usable multiplier.  Note that the
  * "greed" value is always something (?).
+ *
+ * "flip" means you're selling stuff to the shop
  */
 static s32b price_item(object_type *o_ptr, int greed, bool flip)
 {
@@ -422,6 +424,10 @@ static s32b price_item(object_type *o_ptr, int greed, bool flip)
 
 	/* Get the value of one of the items */
 	price = object_value(o_ptr);
+
+	if (!flip) {
+		if (object_value_shop(o_ptr) > price) price = object_value_shop(o_ptr);
+	}
 
 	/* Worthless items - edit by Amy: shops should offer them, but you shouldn't be able to sell them */
 	if (price <= 0) {
@@ -441,6 +447,21 @@ static s32b price_item(object_type *o_ptr, int greed, bool flip)
 			}
 
 			if (k_ptr->level > 1) price *= k_ptr->level;
+
+			/* still need to account for bonuses, e.g. "rohirric ring of teleportitis {cursed}" --Amy */
+			if (object_value_xtra(o_ptr) > 0) {
+				if (o_ptr->tval == TV_SHOT || o_ptr->tval == TV_ARROW || o_ptr->tval == TV_BOLT) {
+					int tempincrease = object_value_xtra(o_ptr);
+					if (tempincrease > 0) {
+						tempincrease /= 20;
+						if (tempincrease < 1) tempincrease = 1;
+					}
+					price += tempincrease;
+				} else { 
+					price += object_value_xtra(o_ptr);
+				}
+			}
+
 		}
 	}
 
@@ -2144,7 +2165,7 @@ static bool purchase_haggle(object_type *o_ptr, s32b *price)
 	max_per = min_per * 3;
 
 	/* Mega-Hack -- artificial "last offer" value */
-	last_offer = object_value(o_ptr) * o_ptr->number;
+	last_offer = object_value_shop(o_ptr) * o_ptr->number;
 	last_offer = last_offer * (200 - (int)(ot_ptr->max_inflate)) / 100L;
 	if (last_offer <= 0) last_offer = 1;
 

@@ -1523,6 +1523,318 @@ s32b object_value_real(object_type *o_ptr)
 	return (value);
 }
 
+/* addition to the cost of cursed objects in shops, by Amy */
+s32b object_value_xtra(object_type *o_ptr)
+{
+	s32b value = 0;
+
+	u32b f1, f2, f3, f4, f5, esp;
+
+	object_kind *k_ptr = &k_info[o_ptr->k_idx];
+
+	if (o_ptr->tval == TV_RANDART)
+	{
+		return random_artifacts[o_ptr->sval].cost;
+	}
+
+	/* Extract some flags */
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
+	if (f5 & TR5_TEMPORARY) return (0L);
+
+	/* Amy edit: it's real silly if branded ammo costs like 8000 per shot!! no one will ever buy those */
+	if (o_ptr->art_flags1 || o_ptr->art_flags2 || o_ptr->art_flags3)
+	{
+		int flagcostiem = flag_cost(o_ptr, o_ptr->pval);
+
+		value += flagcostiem;
+	}
+	/* Artifact */
+	else if (o_ptr->name1)
+	{
+		artifact_type *a_ptr = &a_info[o_ptr->name1];
+
+		/* add the artifact cost */
+		value += a_ptr->cost;
+	}
+
+	/* Ego-Item */
+	else if (o_ptr->name2)
+	{
+		ego_item_type *e_ptr = &e_info[o_ptr->name2];
+		int flagcostiem = 0;
+
+		/* Hack -- Reward the ego-item with a bonus */
+		flagcostiem += e_ptr->cost;
+
+		if (o_ptr->name2b)
+		{
+			ego_item_type *e_ptr = &e_info[o_ptr->name2b];
+
+			/* Hack -- Reward the ego-item with a bonus */
+			flagcostiem += e_ptr->cost;
+		}
+
+		value += flagcostiem;
+	}
+
+	/* Pay the spell */
+	if (f5 & TR5_SPELL_CONTAIN)
+	{
+		if (o_ptr->pval2 != -1)
+			value += 5000 + 500 * school_spells[o_ptr->pval2].skill_level;
+		else
+			value += 5000;
+	}
+
+	/* Analyze pval bonus */
+	switch (o_ptr->tval)
+	{
+	case TV_BOW:
+	case TV_BOOMERANG:
+	case TV_DIGGING:
+	case TV_HAFTED:
+	case TV_POLEARM:
+	case TV_SWORD:
+	case TV_AXE:
+	case TV_BOOTS:
+	case TV_GLOVES:
+	case TV_HELM:
+	case TV_CROWN:
+	case TV_SHIELD:
+	case TV_CLOAK:
+	case TV_SOFT_ARMOR:
+	case TV_HARD_ARMOR:
+	case TV_DRAG_ARMOR:
+	case TV_LITE:
+	case TV_AMULET:
+	case TV_RING:
+	case TV_MSTAFF:
+	case TV_TRAPKIT:
+	case TV_INSTRUMENT:
+		{
+#if 0 /* DG - no */
+			/* Hack -- Negative "pval" is always bad */
+			if (o_ptr->pval < 0) return (0L);
+#endif
+			/* No pval */
+			if (!o_ptr->pval) break;
+
+			/* Give credit for stat bonuses */
+			if (f1 & (TR1_STR)) value += (o_ptr->pval * 200L);
+			if (f1 & (TR1_INT)) value += (o_ptr->pval * 200L);
+			if (f1 & (TR1_WIS)) value += (o_ptr->pval * 200L);
+			if (f1 & (TR1_DEX)) value += (o_ptr->pval * 200L);
+			if (f1 & (TR1_CON)) value += (o_ptr->pval * 200L);
+			if (f1 & (TR1_CHR)) value += (o_ptr->pval * 200L);
+
+			if (f5 & (TR5_CRIT)) value += (o_ptr->pval * 500L);
+
+			/* Give credit for stealth and searching */
+			if (f1 & (TR1_STEALTH)) value += (o_ptr->pval * 100L);
+			if (f1 & (TR1_SEARCH)) value += (o_ptr->pval * 100L);
+
+			/* Give credit for infra-vision and tunneling */
+			if (f1 & (TR1_INFRA)) value += (o_ptr->pval * 50L);
+			if (f1 & (TR1_TUNNEL)) value += (o_ptr->pval * 50L);
+
+			/* Give credit for extra attacks */
+			if (f1 & (TR1_BLOWS)) value += (o_ptr->pval * 2000L);
+
+			/* Give credit for speed bonus */
+			if (f1 & (TR1_SPEED)) value += (o_ptr->pval * 30000L);
+
+			break;
+		}
+	}
+
+
+	/* Analyze the item */
+	switch (o_ptr->tval)
+	{
+		/* Eggs */
+	case TV_EGG:
+		{
+			monster_race *r_ptr = &r_info[o_ptr->pval2];
+
+			/* Pay the monster level */
+			value += r_ptr->level * 100;
+
+			/* Done */
+			break;
+		}
+
+		/* Wands/Staffs */
+	case TV_WAND:
+		{
+			/* Par for the spell */
+			value *= school_spells[o_ptr->pval2].skill_level;
+			/* Take the average of the base and max spell levels */
+			value *= (((o_ptr->pval3 >> 16) & 0xFFFF) + (o_ptr->pval3 & 0xFFFF)) / 2;
+			/* Hack */
+			value /= 6;
+
+			/* Pay extra for charges */
+			value += ((value / 20) * o_ptr->pval) / o_ptr->number;
+
+			/* Done */
+			break;
+		}
+	case TV_STAFF:
+		{
+			/* Par for the spell */
+			value *= school_spells[o_ptr->pval2].skill_level;
+			/* Take the average of the base and max spell levels */
+			value *= (((o_ptr->pval3 >> 16) & 0xFFFF) + (o_ptr->pval3 & 0xFFFF)) / 2;
+			/* Hack */
+			value /= 6;
+
+			/* Pay extra for charges */
+			value += ((value / 20) * o_ptr->pval);
+
+			/* Done */
+			break;
+		}
+	case TV_BOOK:
+		{
+			if (o_ptr->sval == 255)
+			{
+				/* Pay extra for the spell */
+				value = value * school_spells[o_ptr->pval].skill_level;
+			}
+			/* Done */
+			break;
+		}
+
+		/* Rods */
+	case TV_ROD_MAIN:
+		{
+			s16b tip_idx;
+
+			/* It's not combined */
+			if (o_ptr->pval == 0) break;
+
+			/* Look up the tip attached */
+			tip_idx = lookup_kind(TV_ROD, o_ptr->pval);
+
+			/* Paranoia */
+			if (tip_idx > 0)
+			{
+				/* Add its cost */
+				value += k_info[tip_idx].cost;
+			}
+
+			/* Done */
+			break;
+		}
+
+		/* Rings/Amulets */
+	case TV_RING:
+	case TV_AMULET:
+		{
+			int extratoa = o_ptr->to_a;
+			if (extratoa < 0) extratoa = 0;
+			int extratoh = o_ptr->to_h;
+			if (extratoh < 0) extratoh = 0;
+			int extratod = o_ptr->to_d;
+			if (extratod < 0) extratod = 0;
+
+			/* Give credit for bonuses */
+			value += ((extratoa + extratoh + extratod) * 100L);
+
+			/* Done */
+			break;
+		}
+
+		/* Armor */
+	case TV_BOOTS:
+	case TV_GLOVES:
+	case TV_CLOAK:
+	case TV_CROWN:
+	case TV_HELM:
+	case TV_SHIELD:
+	case TV_SOFT_ARMOR:
+	case TV_HARD_ARMOR:
+	case TV_DRAG_ARMOR:
+		{
+			int extratoa = o_ptr->to_a;
+			if (extratoa < 0) extratoa = 0;
+			int extratoh = o_ptr->to_h;
+			if (extratoh < 0) extratoh = 0;
+			int extratod = o_ptr->to_d;
+			if (extratod < 0) extratod = 0;
+
+			/* Give credit for bonuses */
+			value += ((extratoa + extratoh + extratod) * 100L);
+
+			/* Done */
+			break;
+		}
+
+		/* Bows/Weapons */
+	case TV_BOW:
+	case TV_BOOMERANG:
+	case TV_DIGGING:
+	case TV_HAFTED:
+	case TV_SWORD:
+	case TV_DAEMON_BOOK:
+	case TV_AXE:
+	case TV_POLEARM:
+	case TV_TRAPKIT:
+		{
+			int extratoa = o_ptr->to_a;
+			if (extratoa < 0) extratoa = 0;
+			int extratoh = o_ptr->to_h;
+			if (extratoh < 0) extratoh = 0;
+			int extratod = o_ptr->to_d;
+			if (extratod < 0) extratod = 0;
+
+			/* Give credit for bonuses */
+			value += ((extratoa + extratoh + extratod) * 100L);
+
+			/* Hack -- Factor in extra damage dice */
+			if ((o_ptr->dd > k_ptr->dd) && (o_ptr->ds == k_ptr->ds))
+			{
+				value += (o_ptr->dd - k_ptr->dd) * o_ptr->ds * 100L;
+			}
+
+			/* Done */
+			break;
+		}
+
+		/* Ammo */
+	case TV_SHOT:
+	case TV_ARROW:
+	case TV_BOLT:
+		{
+			int extratoa = o_ptr->to_a;
+			if (extratoa < 0) extratoa = 0;
+			int extratoh = o_ptr->to_h;
+			if (extratoh < 0) extratoh = 0;
+			int extratod = o_ptr->to_d;
+			if (extratod < 0) extratod = 0;
+
+			/* Give credit for bonuses */
+			value += ((extratoa + extratoh + extratod) * 100L);
+
+			/* Hack -- Factor in extra damage dice */
+			if ((o_ptr->dd > k_ptr->dd) && (o_ptr->ds == k_ptr->ds))
+			{
+				value += (o_ptr->dd - k_ptr->dd) * o_ptr->ds * 100L;
+			}
+
+			/* Special attack (exploding arrow) */
+			if (o_ptr->pval2 != 0) value *= 8;
+
+			/* Done */
+			break;
+		}
+	}
+
+	/* Return the value */
+	return (value);
+}
+
 
 /*
  * Return the price of an item including plusses (and charges)
@@ -1539,6 +1851,42 @@ s32b object_value(object_type *o_ptr)
 {
 	s32b value;
 
+
+	/* Unknown items -- acquire a base value */
+	if (object_known_p(o_ptr))
+	{
+		/* Cursed items -- worthless */
+		if (cursed_p(o_ptr)) return (0L);
+
+		/* Real value (see above) */
+		value = object_value_real(o_ptr);
+	}
+
+	/* Known items -- acquire the actual value */
+	else
+	{
+		/* Hack -- Felt cursed items */
+		if ((o_ptr->ident & (IDENT_SENSE)) && cursed_p(o_ptr)) return (0L);
+
+		/* Base value (see above) */
+		value = object_value_base(o_ptr);
+	}
+
+
+	/* Apply discount (if any) */
+	if (o_ptr->discount) value -= (value * o_ptr->discount / 100L);
+
+
+	/* Return the final value */
+	return (value);
+}
+
+/* object value for when a shop is selling: most importantly, cursed stuff should still be pricey --Amy */
+s32b object_value_shop(object_type *o_ptr)
+{
+	s32b value;
+
+	/* for now this is the same --Amy */
 
 	/* Unknown items -- acquire a base value */
 	if (object_known_p(o_ptr))
