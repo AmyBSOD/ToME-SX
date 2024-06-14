@@ -1153,6 +1153,8 @@ extern s16b label_to_inven(int c);
 extern s16b label_to_equip(int c);
 extern s16b wield_slot_ideal(object_type *o_ptr, bool ideal);
 extern s16b wield_slot(object_type *o_ptr);
+extern s16b wield_slot_special(object_type *o_ptr);
+extern s16b wield_slot_ideal_special(object_type *o_ptr, bool ideal);
 extern cptr mention_use(int i);
 extern cptr describe_use(int i);
 extern void inven_item_charges(int item);

@@ -4256,6 +4256,10 @@ s16b wield_slot_ideal(object_type *o_ptr, bool ideal)
 
 	case TV_BOOMERANG:
 	case TV_BOW:
+		{
+			return ideal ? INVEN_BOW : get_slot(INVEN_BOW);
+		}
+
 	case TV_INSTRUMENT:
 		{
 			return ideal ? INVEN_BOW : get_slot(INVEN_BOW);
@@ -4386,6 +4390,174 @@ s16b wield_slot_ideal(object_type *o_ptr, bool ideal)
 s16b wield_slot(object_type *o_ptr)
 {
 	return wield_slot_ideal(o_ptr, FALSE);
+}
+
+s16b wield_slot_special(object_type *o_ptr)
+{
+	return wield_slot_ideal_special(o_ptr, FALSE);
+}
+
+s16b wield_slot_ideal_special(object_type *o_ptr, bool ideal)
+{
+	/* Try for a script first */
+	if (process_hooks_ret(HOOK_WIELD_SLOT, "d", "(O,d)", o_ptr, ideal))
+		return process_hooks_return[0].num;
+
+	/* Slot for equipment */
+	switch (o_ptr->tval)
+	{
+	case TV_DIGGING:
+	case TV_TOOL:
+		{
+			return ideal ? INVEN_TOOL : get_slot(INVEN_TOOL);
+		}
+
+	case TV_HAFTED:
+	case TV_POLEARM:
+	case TV_MSTAFF:
+	case TV_SWORD:
+	case TV_AXE:
+		{
+			return ideal ? INVEN_WIELD : get_slot(INVEN_WIELD);
+		}
+
+	case TV_BOOMERANG:
+	case TV_BOW:
+		{
+			return ideal ? INVEN_BOW : get_slot(INVEN_BOW);
+		}
+
+	case TV_INSTRUMENT:
+		{
+			char etrdt;
+
+			prt("Wield the instrument in the light slot (y/n)? ", 0, 0);
+			flush();
+			etrdt = inkey();
+			prt("", 0, 0);
+			if (etrdt != 'y') {
+				return ideal ? INVEN_BOW : get_slot(INVEN_BOW);
+			} else {
+				return ideal ? INVEN_LITE : get_slot(INVEN_LITE);
+			}
+		}
+
+	case TV_RING:
+		{
+			return ideal ? INVEN_RING : get_slot(INVEN_RING);
+		}
+
+	case TV_AMULET:
+		{
+			return ideal ? INVEN_NECK : get_slot(INVEN_NECK);
+		}
+
+	case TV_LITE:
+		{
+			return ideal ? INVEN_LITE : get_slot(INVEN_LITE);
+		}
+
+	case TV_DRAG_ARMOR:
+	case TV_HARD_ARMOR:
+	case TV_SOFT_ARMOR:
+		{
+			return ideal ? INVEN_BODY : get_slot(INVEN_BODY);
+		}
+
+	case TV_CLOAK:
+		{
+			return ideal ? INVEN_OUTER : get_slot(INVEN_OUTER);
+		}
+
+	case TV_SHIELD:
+		{
+			return ideal ? INVEN_ARM : get_slot(INVEN_ARM);
+		}
+
+	case TV_CROWN:
+	case TV_HELM:
+		{
+			return ideal ? INVEN_HEAD : get_slot(INVEN_HEAD);
+		}
+
+	case TV_GLOVES:
+		{
+			return ideal ? INVEN_HANDS : get_slot(INVEN_HANDS);
+		}
+
+	case TV_BOOTS:
+		{
+			return ideal ? INVEN_FEET : get_slot(INVEN_FEET);
+		}
+
+	case TV_HYPNOS:
+		{
+			return ideal ? INVEN_CARRY : get_slot(INVEN_CARRY);
+		}
+
+	case TV_SHOT:
+		{
+			if (ideal)
+			{
+				return INVEN_AMMO;
+			}
+			else if (p_ptr->inventory[INVEN_AMMO].k_idx &&
+			         object_similar(o_ptr, &p_ptr->inventory[INVEN_AMMO]) &&
+			         p_ptr->inventory[INVEN_AMMO].number + o_ptr->number < MAX_STACK_SIZE)
+			{
+				return get_slot(INVEN_AMMO);
+			}
+			else if ((p_ptr->inventory[INVEN_BOW].k_idx) && (p_ptr->inventory[INVEN_BOW].tval == TV_BOW))
+			{
+				if (p_ptr->inventory[INVEN_BOW].sval < 10)
+					return get_slot(INVEN_AMMO);
+			}
+			return -1;
+		}
+
+	case TV_ARROW:
+		{
+			if (ideal)
+			{
+				return INVEN_AMMO;
+			}
+			else if (p_ptr->inventory[INVEN_AMMO].k_idx &&
+			         object_similar(o_ptr, &p_ptr->inventory[INVEN_AMMO]) &&
+			         p_ptr->inventory[INVEN_AMMO].number + o_ptr->number < MAX_STACK_SIZE)
+			{
+				return get_slot(INVEN_AMMO);
+			}
+			else if ((p_ptr->inventory[INVEN_BOW].k_idx) && (p_ptr->inventory[INVEN_BOW].tval == TV_BOW))
+			{
+				if ((p_ptr->inventory[INVEN_BOW].sval >= 10) && (p_ptr->inventory[INVEN_BOW].sval < 20))
+					return get_slot(INVEN_AMMO);
+			}
+			return -1;
+		}
+
+	case TV_BOLT:
+		{
+			if (ideal)
+			{
+				return INVEN_AMMO;
+			}
+			else if (p_ptr->inventory[INVEN_AMMO].k_idx &&
+			         object_similar(o_ptr, &p_ptr->inventory[INVEN_AMMO]) &&
+			         p_ptr->inventory[INVEN_AMMO].number + o_ptr->number < MAX_STACK_SIZE)
+			{
+				return get_slot(INVEN_AMMO);
+			}
+			else if ((p_ptr->inventory[INVEN_BOW].k_idx) && (p_ptr->inventory[INVEN_BOW].tval == TV_BOW))
+			{
+				if (p_ptr->inventory[INVEN_BOW].sval >= 20)
+					return get_slot(INVEN_AMMO);
+			}
+			return -1;
+		}
+	}
+
+	/* No slot available */
+	return ( -1);
 }
 
 /*

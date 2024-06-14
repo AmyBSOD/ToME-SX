@@ -268,7 +268,7 @@ void do_cmd_wield(void)
 	}
 
 	/* Check the slot */
-	slot = wield_slot(o_ptr);
+	slot = wield_slot_special(o_ptr);
 
 	/* Prevent wielding into a cursed slot */
 	if (cursed_p(&p_ptr->inventory[slot]))
@@ -435,6 +435,10 @@ void do_cmd_wield(void)
 		act = "You are wielding";
 	}
 	else if (( slot == INVEN_BOW ) && (o_ptr->tval == TV_INSTRUMENT))
+	{
+		act = "You are holding";
+	}
+	else if (( slot == INVEN_LITE ) && (o_ptr->tval == TV_INSTRUMENT))
 	{
 		act = "You are holding";
 	}
