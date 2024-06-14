@@ -1,0 +1,202 @@
+Version history for ToME-SX by AmyBSOD, given in reverse chronological order *bundlebundlebundle* <3
+
+June 2024
+- Trying to fire a ranged weapon while the ranged weapon slot is empty now properly gives a --More-- prompt.
+- Trying to move out of a trap detected zone gives a y/n prompt now; previously, only running would give that one while walking would actually move you out of the detected zone, possibly with disastrous consequences.
+- If you have the dodging skill, bare-handed combat will now only boost the dodging chance if you're actually in bare-handed combat mode.
+- Revamped the fates system to hopefully increase the chance of fates that are actually interesting.
+- If genocide doesn't work due to the player being on a no-genocide level, there is a message indicating it now.
+- If the player's ranged attack misses an enemy, there is now a message to indicate that the missile has at least tried to hit something (as opposed to stopping short of the enemy because he was in a wall or too far away or something).
+- Deathmolds can now walk onto adjacent shops or other town features, as well as all types of stair including shafts and "paths".
+- Targetted teleportation now also accepts the * key to give the old targetting cursor with the ability to scroll the screen. No longer is the power limited by what's currently visible on the screen.
+- Rebalanced the mana costs and effects of mimicry, necromancy and symbiosis abilities.
+- Added a new "hard mode" birth option. If that is active, the starting bonuses to the player's to-hit, to-damage, maximum HP, maximum sanity and speed are disabled.
+- Fumblefingers quests can no longer occur on special levels.
+- All special levels are persistent now, and monsters can slowly spawn on them over time.
+- Deathmold characters can still blink around with the movement keys on special levels now, they no longer need to go out of their way and polymorph into monsters just so they can move.
+- Fixed the trap of stair movement so that it can also affect "paths" now.
+- Macros can now be set up for the "U" menu, with a new option to select the power by number.
+- Traps now display as a special glyph if they're on nonstandard terrain, to make them easier to see.
+- Stores can now also sell cursed items.
+- Very early princess/fumblefingers quests are for lower level monsters on average now.
+- Added a dungeon randomizer. This C program has to be run prior to starting a game to create a modified d_info.txt file that can be used to get more random dungeons. It's optional, of course; the default d_info.txt file is still the default.
+- Ironman rooms mode now occasionally spawns other types of rooms, not just greater vaults.
+- Melkor's damage-boosting sacrifice has been nerfed.
+- The Drain spell now destroys rods.
+- The original effects of the Alchemy and Runecraft skills are disabled for now.
+- Teleportitis now gives a --More-- so as to not cause the one overshot keystroke to become an unwanted movement command.
+- The beastmaster shanty quest now indicates the monster's ID and the monster in question is guaranteed to leave a corpse while the quest is active.
+- Area and ball spells can no longer hit things through glass walls.
+- Gave back some of the thaumaturgy overnerfs.
+- New item properties: device mastery, peacekeeping, inventory protection.
+- The deathmold race's fetching power now requires line of sight to the item that can be fetched.
+- Friendly monsters no longer spawn with items.
+- Further increased gold drops.
+- Players start the game with +15 max HP.
+- Very low-level monsters no longer constantly flee from high-level characters; they still do that sometimes, but not always.
+- The mushroom and wolves quests can no longer be scummed as badly as before.
+- Rebalanced the levels of some wilderness areas to make the early game less deadly.
+
+May 2024
+- Parasite attacks used by monsters also deal damage to the player now.
+- The monsters that spawn GWOPs or cause the ancient morgothian curse upon being killed are much less common now and have a lot more HP to make it less likely for players to accidentally kill them.
+- Wizard mode or debug commands now still give a confirmation even if the player has used the cheating options.
+- Added more volcanoes to the world map, especially ones placed such that you have to go through them (and possibly risk being ambushed) when going to certain dungeons.
+- Rebalanced several skills so that their scaling makes sense with the increased skill cap.
+- Rebalanced the damage done by several types of traps to tone down the instakill potential in the early game.
+- Lightning damage can destroy rods now.
+- Some highly useful items are more expensive now, e.g. scrolls of star destruction.
+- Characters who are supposed to be atheists can no longer worship a god at an altar now.
+- The game now keeps track of how many times the player lifesaved.
+- Skills that give extra blows/shots now give less of those.
+- If using the possession ability would cause you to lose your current body, using the ability now gives a y/n prompt.
+- When cheating options have been used, the game still prompts for a @ sign to verify that you want to quit the game now.
+- Some monsters have farting attacks now, which cause random bad effects.
+- A potion of cure corruption has been added and is currently the only way to get rid of corruptions.
+- Adjusted the costs of ammo so that buying enchanted ones is no longer crazy expensive but selling such ammos also no longer gives incredible amounts of money.
+- Added lots of safety questions to the "Do you really want to abandon Gondolin?" message upon reaching XL45.
+- New item properties: poison immunity, resist water, resist inertia.
+- Some early-game monster spells have been made a bit weaker.
+- Increased the spawn chance of randarts while reducing the spawn chance of fixedarts.
+- Boomerang skill now boosts the chance that a boomerang avoids breakage.
+- Items sell for less money now, and random gold drops are increased to compensate.
+- Fumblefingers now offers a selection of 10 random skills to choose from, to account for the greater amount of possible skills.
+- Stat potions are less common now and give less of a boost to their relevant stat.
+- Monsters can now also be summoned onto a void jumpgate, preventing them from being used as an anti-summoning corridor.
+- Projectile traps can no longer be farmed for endless amounts of ammo.
+- Some traps that were almost impossible to identify can be identified now.
+- Added some --more-- prompts when spells fail.
+- Fumblefingers now gives better boosts to a skill's multiplier if the multiplier is low-ish.
+- Uvatha the Horseman can now spawn randomly.
+- Sentient weapons gain bonuses at a slower rate now.
+- Fixed the bug where despite the higher skill cap, a player couldn't learn more than 100 thaumaturgy spells.
+- Artifacts that can be recharged (like the wand of digging of Thrain) can now only be recharged when they're empty.
+- Many roles now have lower multipliers for the Thaumaturgy or Mindcraft skills.
+- Wendy's base level was increased from 24 to 40 to reduce the risk of players getting instakilled by her.
+- Junkarts are a lot less common now.
+- Pokedex and item descriptions are a lot less wordy now, making it much easier to see at a glance what they do.
+- Lost soul characters now retain the wraithform ability after escaping from the Halls of Mandos.
+- Possessor abilities are much less likely to be free. In almost all cases, the player has to pay the mana cost.
+- Piercing shots trigger a lot less often.
+- Changed the enchant weapon/armor calculations to prevent infinite enchantment values.
+- The Nether Realm is a lot shorter now, to account for the fact that the player has to trek all the way back up after completing it. It's long enough even now.
+- The Druidistic skill now improves the player's ability to use mage staves as weapons.
+- Ironman mode automatically disables autoscum to greatly reduce the loading time when entering a new level.
+- Learning the bearform-combat skill now properly unlocks the player's ability to transform into a bear.
+- Fixed the long-standing bug where you couldn't sell anything to dungeon town shops.
+- Increased the average amount of modifiers that spawn on randarts.
+- Added some new shops to Khazad-Doom.
+- Antimagic abilities now use up a turn when used.
+- Stealing from shops is much less likely to work.
+- Increased the cost of several shop services.
+- The player has more max sanity now.
+- Cursed items can no longer be flipped.
+- Several abilities have been made more expensive.
+- The tactics/explore settings don't do anything anymore, and to compensate, the player character starts with slight bonuses to speed, to-hit and to-damage.
+- Nerfed the Hand of Doom monster spell.
+- Magic mapping effects no longer depend on the currently visible screen; instead, they map a certain area around the player's current location.
+
+April 2024
+- Jigen Daisuke is now less likely to spam rockets.
+- Pits now have a chance of spawning items to give players an incentive to clear them out.
+- Princess quests now give an additional skill slot when completed.
+- The runecraft skill now improves loot quality, and the alchemy skill provides protection from charge drain.
+- Added more varieties of monster pits.
+
+September 2016
+- Antimagic is less likely to prevent monster spells.
+- Wizard mode now allows the player to edit their piety value.
+
+August 2016
+- Added the four gods from ToME/Fury: Mandos, Ulmo, Varda and Aule. And an all-new deity, AmyBSOD.
+- Nerfed Melkor's Curse spell.
+- The library quest reward now allows the player to select any spell that exists, rather than being restricted to an arbitrary selection.
+- Friendly spellcasters will cast spells a lot less often, mainly as a nerf to summoners.
+- Possessors no longer have their mana permanently set to a very low value, however the monster spells cost considerably more now.
+- More monsters can drop the One Ring now.
+- Higher-level monsters are more likely to successfully steal from the player.
+- Made it harder to reach very high values for saving throw and stealth.
+- The rod tip of home summoning and scroll of mass resurrection are base items instead of artifacts now and can therefore spawn several times.
+- Ammo creation is much less powerful now.
+- Nerfed the berserk ability.
+- Probability travel now ends upon changing dungeon levels.
+- The "never die at the hands of a mortal being" fate can no longer happen.
+- Elemental immunities now only reduce damage by 90%, but still fully prevent item destruction.
+
+May 2016
+- Going from one wilderness area to another, or from the wilderness to the overworld view, can now trigger ambushes.
+
+March 2016
+- Fixed bugs with the "lucky" subrace.
+- Stealing from shops is harder now.
+- The dodging skill has its success chances reduced by less than before when wearing armor now.
+- Antimagic skill doesn't always prevent the player's magic-related actions; instead, those are more likely to fail the more antimagic a player has.
+- The antimagic shell found on certain rare items no longer prevents the player's spellcasting, but its bonus to saving throw has also been greatly reduced.
+- Randarts with extra attacks should no longer generate with more than +2 extra attacks now.
+- Spirits can now spawn for princess/fumblefingers quests very deep in the dungeon.
+- Added new dungeons from Theme as well as a bunch of postgame dungeons.
+- Ambient damage effects in dungeons occur less often.
+- Made it less impossible to gain piety for Eru or Yavanna.
+
+February 2016
+- Doubled gold drops from monsters.
+- Artifacts are now preserved even when identified.
+- Increased the stunning threshold at which a player gets knocked out.
+- Nerfed a bunch of monster spells.
+- Tweaked monster levelscaling so that max-level monsters spawn less often.
+- Princess quests now work when playing in ironman mode, too.
+- All gods now cause your piety to go down when praying, and the exploit to gain lots of Yavanna piety was fixed.
+- Flying monsters can now move over mountains.
+- Added more possible activation effects for junkarts.
+- God quests can now appear anywhere on the world map.
+- Thaumaturgy is less likely to give the player a wall manipulation spell.
+- Added effects to the traps of decay and sliding, made it possible for traps to spawn everywhere and added a chance for them to be out of depth.
+- Artifact ammo can now spawn in stacks.
+
+January 2016
+- Nerfed the speed debuff effect from Melkor's Curse.
+- Changed the speed table so that it's not as extreme anymore.
+- Spell/ability/etc. menus are now immediately visible instead of requiring an extra keystroke.
+- Companions now appear on the character dump.
+- The fate menu now tells the player if they don't know all of their fate.
+- The "poison bolt" monster spell now works.
+- Reduced the amount of items dropped by monsters by about 50%.
+- Eldritch horrors now pick a random effect if they manage to blast the player, rather than having to check the saving throw for each effect individually.
+- Resistance to confusion, blindness etc. no longer gives 100% protection from those effects.
+- Essences, runes and parchments spawn a lot less often.
+- Fixed bugs where the princess sometimes refused to spawn, which used to result in you exploring the entire level only to find that the quest cannot be done.
+- Princess and fumblefingers quests can now appear in all dungeons.
+- If Sauron or Morgoth can spawn, and you go to the level where they should spawn, the game now guarantees that they do in fact spawn.
+- The player can now receive god quests upon regaining a lost character level, to prevent the problem where leveling up too fast could lock the player out of them.
+- Improved damage of ball thaumaturgy spells.
+- Fixed the bug where several different traps were sharing the same name.
+- Fixed a problem where certain types of rooms on a level could cause a princess room to fail to generate.
+- The character can now attack peaceful monsters by answering yes to a y/n prompt.
+- Princess quests can now be skipped, and downstairs appear normally on floors with such quests. Also, earthquakes now work on such levels.
+- Non-hostile unique monsters now appear in the unique monsters list.
+- Fumblefingers can now offer every skill in the game.
+
+November 2015
+- Fixed a bug where the character screen would sometimes show the character as having resist confusion when they didn't.
+
+October 2015
+- Moldoux can appear anywhere, not just on level 1.
+- Fixed problems where certain traps could not be identified.
+- Shops have more items in general, and cycle through items more quickly.
+- All potion types can now appear in fountains.
+- Stackable items in shops are more likely to spawn in stacks, and wands/staves have a chance of getting boosts to their max level.
+- Explosively breeding monsters can no longer be farmed for items and money.
+- Druidistic skill now boosts boomerang damage.
+- Effects that slow down monsters will slow them down less now.
+
+September 2015
+- The world map has volcanoes now.
+- Many monsters that were restricted to certain areas can spawn everywhere now.
+- Wilderness areas now spawn higher level monsters if the player is higher level.
+- New birth option "lvling_system" that causes monsters to levelscale everywhere.
+
+August 2015
+- Fixed some issues where messages didn't give a --More-- prompt.
+
+June 2015
+- Enchant foo can now bring an item beyond +15.
