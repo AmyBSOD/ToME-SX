@@ -1723,7 +1723,9 @@
 #define SV_AMULET_WISDOM                28
 #define SV_AMULET_RESIST_ELEC           29
 #define SV_AMULET_REGEN                 30
+#define SV_AMULET_WAR                   31
 #define SV_AMULET_LIFE_SAVING           32
+#define SV_AMULET_LIFE                  33
 
 /* The sval codes for TV_RING */
 #define SV_RING_WOE                      0
@@ -1786,6 +1788,8 @@
 #define SV_RING_DURIN                   57
 #define SV_RING_SPELL                   58
 #define SV_RING_CRIT                    59
+#define SV_RING_VITALITY                69
+#define SV_RING_WIZARDRY                70
 
 /* The "sval" codes for TV_STAFF */
 #define SV_STAFF_SCHOOL                 1

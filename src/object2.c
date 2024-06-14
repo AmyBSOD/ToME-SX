@@ -3310,6 +3310,8 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
 			{
 				/* Strength, Constitution, Dexterity, Intelligence */
 			case SV_RING_ATTACKS:
+			case SV_RING_WIZARDRY:
+			case SV_RING_VITALITY:
 				{
 					/* Stat bonus */
 					o_ptr->pval = m_bonus(3, level);
@@ -3601,6 +3603,27 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
 				}
 
 				/* Amulet of the Serpents */
+
+			case SV_AMULET_WAR:
+			case SV_AMULET_LIFE:
+				{
+					/* Stat bonus */
+					o_ptr->pval = m_bonus(3, level);
+					if (o_ptr->pval < 1) o_ptr->pval = 1;
+
+					/* Cursed */
+					if (power < 0)
+					{
+						/* Cursed */
+						o_ptr->ident |= (IDENT_CURSED);
+
+						/* Reverse pval */
+						o_ptr->pval = 0 - (o_ptr->pval);
+					}
+
+					break;
+				}
+
 			case SV_AMULET_SERPENT:
 				{
 					o_ptr->pval = 1 + m_bonus(5, level);
