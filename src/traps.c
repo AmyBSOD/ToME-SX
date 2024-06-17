@@ -1431,7 +1431,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					if (!cave_valid_bold(cy, cx) || cv_ptr2->o_idx != 0) continue;
 
 					/* don't put anything in vaults */
-					if (cv_ptr2->info & CAVE_ICKY) continue;
+					/* Amy edit: why not? */
+					/* if (cv_ptr2->info & CAVE_ICKY) continue; */
 
 					tmpx = cv_ptr2->mimic;
 					tmps = cv_ptr2->info;
@@ -1497,6 +1498,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			else
 			{
 				msg_print("You hear distant scraping noises.");
+				ident = TRUE; /* otherwise it'd be far too hard to ID this trap --Amy */
 			}
 			p_ptr->redraw |= PR_MAP;
 			break;
