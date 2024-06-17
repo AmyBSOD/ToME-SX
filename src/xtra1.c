@@ -4049,10 +4049,11 @@ void calc_bonuses(bool silent)
 			p_ptr->icky_wield = TRUE;
 		}
 
-		/* Sorcerer can't wield a weapon unless it's a mage staff */
+		/* Sorcerer can't wield a weapon unless it's a mage staff
+		 * Amy: way too harsh, divided penalty by a factor 10 to make it at least *slightly* more playable */
 		if (get_skill(SKILL_SORCERY))
 		{
-			int malus = get_skill_scale(SKILL_SORCERY, 100);
+			int malus = get_skill_scale(SKILL_SORCERY, 10);
 
 			if ((o_ptr->tval != TV_MSTAFF) && (o_ptr->k_idx))
 			{
