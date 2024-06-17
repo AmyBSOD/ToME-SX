@@ -37,7 +37,7 @@ void mindcraft_info(char *p, int power)
 		strnfmt(p, 80, " dam %dd%d", 3 + ((plev - 1) / 4), 3 + plev / 15);
 		break;
 	case 2:
-		strnfmt(p, 80, " range %d", (plev < 25 ? 10 : (plev / 2) + p_ptr->to_s * 3));
+		strnfmt(p, 80, " range %d", 10);
 		break;
 	case 3:
 		strnfmt(p, 80, " range %d", plev * 5);
@@ -532,7 +532,8 @@ void do_cmd_mindcraft(void)
 
 					if (!cave_empty_bold(ij, ii) ||
 					                (cave[ij][ii].info & CAVE_ICKY) ||
-					                (distance(ij, ii, p_ptr->py, p_ptr->px) > (plev / 2) + (p_ptr->to_s*3)) ||
+						/* Amy edit: holy shit the range scaled, how uber imba. fixed at 10 squares now */
+					                (distance(ij, ii, p_ptr->py, p_ptr->px) > 10) ||
 					                (rand_int(plev * plev / 2) == 0))
 					{
 						msg_print("You fail to exit the void correctly!");
