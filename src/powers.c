@@ -751,6 +751,7 @@ static void power_activate(int power)
 					q_ptr->number = 1;
 					q_ptr->pval = m_ptr->r_idx;
 					q_ptr->pval2 = m_ptr->hp;
+					if (q_ptr->pval2 > 1000) q_ptr->pval2 = 1000;
 					object_aware(q_ptr);
 					object_known(q_ptr);
 

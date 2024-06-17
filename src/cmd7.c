@@ -7631,6 +7631,7 @@ void do_cmd_symbiotic(void)
 						q_ptr->number = 1;
 						q_ptr->pval = m_ptr->r_idx;
 						q_ptr->pval2 = m_ptr->hp;
+						if (q_ptr->pval2 > 1000) q_ptr->pval2 = 1000;
 						q_ptr->pval3 = m_ptr->maxhp;
 						/* overflow alert */
 						q_ptr->exp = m_ptr->exp;

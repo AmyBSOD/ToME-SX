@@ -1971,6 +1971,9 @@ void calc_hitpoints(void)
 		rhp = (rhp * (20 + get_skill_scale(SKILL_POSSESSION, 40))) / 100;
 
 		mhp = (rhp + sroot(rhp) + mhp) / 3;
+
+		/* Amy edit: it's ridiculous if you can have five-digit HP by incarnating into Ingeborg's body... */
+		if (mhp > 2000) mhp = 2000;
 	}
 	if (p_ptr->disembodied) mhp = 1;
 
