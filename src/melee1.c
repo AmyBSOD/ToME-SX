@@ -1416,7 +1416,7 @@ bool make_attack_normal(int m_idx, byte divis)
 	/* ...nor if friendly */
 	if (is_friend(m_ptr) >= 0)
 	{
-		if (p_ptr->control == m_idx) swap_position(m_ptr->fy, m_ptr->fx);
+		if (p_ptr->control == m_idx) swap_position_ignorelos(m_ptr->fy, m_ptr->fx);
 		return FALSE;
 	}
 

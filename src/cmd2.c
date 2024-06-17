@@ -284,7 +284,7 @@ static bool between_effect(void)
 		msg_print("You fall into the void.");
 		msg_print("Brrrr! It's deadly cold.");
 
-		swap_position(by, bx);
+		swap_position_ignorelos(by, bx);
 
 		/* To avoid being teleported back */
 		energy_use = 100;

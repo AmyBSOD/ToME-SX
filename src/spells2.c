@@ -6737,6 +6737,115 @@ void swap_position(int lty, int ltx)
 		return;
 	}
 
+	/* note by Amy: swap positions power is turbo OP if you don't even have to worry about LOS! */
+	if (!player_has_los_bold(ty, tx)) {
+		msg_print("You have no direct line of sight to that location.");
+		return;
+	}
+
+	c_ptr = &cave[ty][tx];
+
+	if (!c_ptr->m_idx)
+	{
+		sound(SOUND_TELEPORT);
+
+		/* Keep trace of the old location */
+		tx = p_ptr->px;
+		ty = p_ptr->py;
+
+		/* Move the player */
+		p_ptr->px = ltx;
+		p_ptr->py = lty;
+
+		/* Redraw the old grid */
+		lite_spot(ty, tx);
+
+		/* Redraw the new grid */
+		lite_spot(p_ptr->py, p_ptr->px);
+
+		/* Check for new panel (redraw map) */
+		verify_panel();
+
+		/* Update stuff */
+		p_ptr->update |= (PU_VIEW | PU_FLOW | PU_MON_LITE);
+
+		/* Update the monsters */
+		p_ptr->update |= (PU_DISTANCE);
+
+		/* Redraw trap detection status */
+		p_ptr->redraw |= (PR_DTRAP);
+
+		/* Window stuff */
+		p_ptr->window |= (PW_OVERHEAD);
+
+		/* Handle stuff XXX XXX XXX */
+		handle_stuff();
+	}
+	else
+	{
+		m_ptr = &m_list[c_ptr->m_idx];
+		r_ptr = race_inf(m_ptr);
+
+		sound(SOUND_TELEPORT);
+
+		cave[p_ptr->py][p_ptr->px].m_idx = c_ptr->m_idx;
+
+		/* Update the old location */
+		c_ptr->m_idx = 0;
+
+		/* Move the monster */
+		m_ptr->fy = p_ptr->py;
+		m_ptr->fx = p_ptr->px;
+
+		/* Move the player */
+		p_ptr->px = tx;
+		p_ptr->py = ty;
+
+		tx = m_ptr->fx;
+		ty = m_ptr->fy;
+
+		/* Update the monster (new location) */
+		update_mon(cave[ty][tx].m_idx, TRUE);
+
+		/* Redraw the old grid */
+		lite_spot(ty, tx);
+
+		/* Redraw the new grid */
+		lite_spot(p_ptr->py, p_ptr->px);
+
+		/* Check for new panel (redraw map) */
+		verify_panel();
+
+		/* Update stuff */
+		p_ptr->update |= (PU_VIEW | PU_FLOW | PU_MON_LITE);
+
+		/* Update the monsters */
+		p_ptr->update |= (PU_DISTANCE);
+
+		/* Redraw trap detection status */
+		p_ptr->redraw |= (PR_DTRAP);
+
+		/* Window stuff */
+		p_ptr->window |= (PW_OVERHEAD);
+
+		/* Handle stuff XXX XXX XXX */
+		handle_stuff();
+	}
+}
+
+void swap_position_ignorelos(int lty, int ltx)
+{
+	int tx = ltx, ty = lty;
+	cave_type * c_ptr;
+	monster_type * m_ptr;
+	monster_race * r_ptr;
+
+	if (p_ptr->resist_continuum)
+	{
+		msg_print("The space-time continuum can't be disrupted.");
+		return;
+	}
+
 	c_ptr = &cave[ty][tx];
 
 	if (!c_ptr->m_idx)

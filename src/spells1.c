@@ -8602,7 +8602,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 		{
 			y1 = p_ptr->py + (b * back);
 			x1 = p_ptr->px + (a * back);
-			swap_position(y1, x1);
+			swap_position_ignorelos(y1, x1);
 
 			if (back == 2)
 			{

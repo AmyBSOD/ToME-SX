@@ -1412,6 +1412,7 @@ extern void alter_reality(void);
 extern void report_magics(void);
 extern void teleport_swap(int dir);
 extern void swap_position(int lty, int ltx);
+extern void swap_position_ignorelos(int lty, int ltx);
 extern bool item_tester_hook_recharge(object_type *o_ptr);
 extern bool fire_explosion(int y, int x, int typ, int rad, int dam);
 extern bool fire_godly_wrath(int y, int x, int typ, int dir, int dam);

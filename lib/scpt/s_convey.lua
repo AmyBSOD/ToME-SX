@@ -168,11 +168,8 @@ RECALL = add_spell
 				return TRUE
 			elseif c_ptr.o_idx > 0 then
 				set_target(y, x)
-				if get_level(RECALL, 50) >= 15 then
-					fetch(5, 10 + get_level(RECALL, 150), FALSE)
-				else
-					fetch(5, 10 + get_level(RECALL, 150), TRUE)
-				end
+				-- Amy edit: wow, it's not at all overpowered if it doesn't require LOS
+				fetch(5, 10 + get_level(RECALL, 150), TRUE)
 				return TRUE
 			end
 	end,
