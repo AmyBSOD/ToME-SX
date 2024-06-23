@@ -7612,7 +7612,10 @@ void do_cmd_symbiotic(void)
 					m_ptr = &m_list[c_ptr->m_idx];
 					r_ptr = race_inf(m_ptr);
 
-					if (!(r_ptr->flags1 & RF1_NEVER_MOVE))
+					if (r_ptr->flags1 & RF1_UNIQUE) {
+						msg_print("You can only hypnotize monsters that aren't bosses.");
+					}
+					else if (!(r_ptr->flags1 & RF1_NEVER_MOVE))
 					{
 						msg_print("You can only hypnotise monsters that cannot move.");
 					}

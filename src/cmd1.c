@@ -5319,6 +5319,14 @@ bool do_cmd_integrate_body()
 		return FALSE;
 	}
 
+	/* Amy edit: being able to incarnate into a boss (like the watcher in the water) is very cheater IMHO, because they
+	 * tend to be very powerful (well, some of them at least). Also there's the problem of having to get lucky to obtain
+	 * a corpse. So I'm just scrapping that mechanic and you now have to make do with regular monsters. */
+	if (artifact_p(o_ptr) || o_ptr->art_name) {
+		msg_print("You cannot incarnate into a unique monster's body.");
+		return FALSE;
+	}
+
 	p_ptr->body_monster = o_ptr->pval2;
 	p_ptr->chp = o_ptr->pval3;
 

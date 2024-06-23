@@ -744,7 +744,10 @@ static void power_activate(int power)
 				m_ptr = &m_list[c_ptr->m_idx];
 				r_ptr = race_inf(m_ptr);
 
-				if ((r_ptr->flags1 & RF1_NEVER_MOVE) && (m_ptr->status == MSTATUS_PET) && (!(r_ptr->flags9 & RF9_SPECIAL_GENE)))
+				if (r_ptr->flags1 & RF1_UNIQUE) {
+					msg_print("You can only hypnotize monsters that aren't bosses.");
+				}
+				else if ((r_ptr->flags1 & RF1_NEVER_MOVE) && (m_ptr->status == MSTATUS_PET) && (!(r_ptr->flags9 & RF9_SPECIAL_GENE)))
 				{
 					q_ptr = &forge;
 					object_prep(q_ptr, lookup_kind(TV_HYPNOS, 1));
