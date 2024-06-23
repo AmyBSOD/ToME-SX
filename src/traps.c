@@ -1500,6 +1500,29 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				msg_print("You hear distant scraping noises.");
 				ident = TRUE; /* otherwise it'd be far too hard to ID this trap --Amy */
 			}
+
+			if (randint(10) == 1) { /* fix endless exploitability --Amy */
+				t_info[trap].ident = TRUE;
+
+				/* if we're on a floor or on a door, place a new trap */
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+				ident = FALSE;
+				msg_print("You identified that trap as Trap of Stair Movement.");
+			}
+
 			p_ptr->redraw |= PR_MAP;
 			break;
 		}
