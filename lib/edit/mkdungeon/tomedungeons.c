@@ -665,6 +665,105 @@ void printRandoms(int lower, int upper, int count)
 						printf("F:FILL_METHOD_4\n");
 						break;
 				}
+				if (random_number(6) == 1) printf("F:FLAT\n");
+				if (random_number(50) == 1) printf("F:LAVA_RIVER\n");
+				if (random_number(20) == 1) printf("F:CAVERN\n");
+				if (random_number(20) == 1) printf("F:CAVE\n");
+				if (random_number(50) == 1) printf("F:FORGET\n");
+				if (random_number(25) == 1) printf("F:RANDOM_TOWNS\n");
+				if (random_number(20) == 1) printf("F:CIRCULAR_ROOMS\n");
+				if (random_number(30) == 1) printf("F:DOUBLE\n");
+				if (random_number(15) == 1) printf("F:WATER_RIVER\n");
+				if (random_number(25) == 1) printf("F:WATER_RIVERS\n");
+				if (random_number(40) == 1) printf("F:SAND_VEIN\n");
+
+				if (random_number(20) == 1) {
+					int dudrand;
+
+					dudrand = random_number(26);
+
+					switch (dudrand) {
+						case 1:
+						default:
+							printf("E:1d%d:%d:NETHER\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 2:
+							printf("E:1d%d:%d:ELEC\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 3:
+							printf("E:1d%d:%d:POISON\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 4:
+							printf("E:1d%d:%d:ACID\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 5:
+							printf("E:1d%d:%d:COLD\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 6:
+							printf("E:1d%d:%d:FIRE\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 7:
+							printf("E:1d%d:%d:PLASMA\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 8:
+							printf("E:1d%d:%d:WATER\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 9:
+							printf("E:1d%d:%d:LITE\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 10:
+							printf("E:1d%d:%d:DARK\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 11:
+							printf("E:1d%d:%d:SHARDS\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 12:
+							printf("E:1d%d:%d:SOUND\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 13:
+							printf("E:1d%d:%d:CONFUSION\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 14:
+							printf("E:1d%d:%d:FORCE\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 15:
+							printf("E:1d%d:%d:INERTIA\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 16:
+							printf("E:1d%d:%d:MANA\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 17:
+							printf("E:1d%d:%d:METEOR\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 18:
+							printf("E:1d%d:%d:ICE\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 19:
+							printf("E:1d%d:%d:CHAOS\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 20:
+							printf("E:1d%d:%d:DISENCHANT\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 21:
+							printf("E:1d%d:%d:NEXUS\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 22:
+							printf("E:1d%d:%d:TIME\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 23:
+							printf("E:1d%d:%d:GRAVITY\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 24:
+							printf("E:1d%d:%d:NUKE\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 25:
+							printf("E:1d%d:%d:DISINTEGRATE\n", random_number(6), 9 + random_number(31) );
+							break;
+						case 26:
+							printf("E:1d%d:%d:RAISE\n", random_number(6), 9 + random_number(31) );
+							break;
+					}
+				}
 
 			} else {
 
