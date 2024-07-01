@@ -3,6 +3,191 @@
 #include <stdlib.h>
 #include <time.h>
 
+/* generate random number from 1 to "maxrnd" (inclusive) */
+int random_number(int maxrnd)
+{
+	int num = (rand() % maxrnd) + 1;
+	return num;
+
+}
+
+/* select a random type of walkable terrain */
+int randomfloortype(void)
+{
+	int randfloor = random_number(22);
+	int floornumber = 1;
+
+	switch (randfloor) {
+		case 1:
+			floornumber = 1; /* open floor */
+			break;
+		case 2:
+			floornumber = 82; /* grass with niphredil flowers */
+			break;
+		case 3:
+			floornumber = 86; /* stream of shallow lava */
+			break;
+		case 4:
+			floornumber = 88; /* dirt */
+			break;
+		case 5:
+			floornumber = 89; /* patch of grass */
+			break;
+		case 6:
+			floornumber = 90; /* ice */
+			break;
+		case 7:
+			floornumber = 91; /* sand */
+			break;
+		case 8:
+			floornumber = 93; /* ash */
+			break;
+		case 9:
+			floornumber = 94; /* mud */
+			break;
+		case 10:
+			floornumber = 102; /* nether mist */
+			break;
+		case 11:
+			floornumber = 173; /* underground tunnel */
+			break;
+		case 12:
+			floornumber = 174; /* stream of tainted water */
+			break;
+		case 13:
+			floornumber = 187; /* pool of deep water */
+			break;
+		case 14:
+			floornumber = 199; /* grass with flowers */
+			break;
+		case 15:
+			floornumber = 200; /* cobblestone road */
+			break;
+		case 16:
+			floornumber = 202; /* small tree */
+			break;
+		case 17:
+			floornumber = 207; /* rocky ground */
+			break;
+		case 18:
+			floornumber = 208; /* cloud-like vapour */
+			break;
+		case 19:
+			floornumber = 209; /* condensing water */
+			break;
+		case 20:
+			floornumber = 210; /* dense mist */
+			break;
+		case 21:
+			floornumber = 222; /* water lily */
+			break;
+		case 22:
+			floornumber = 226; /* swamp pool */
+			break;
+
+		default:
+			floornumber = 1;
+			break;
+	}
+
+	return floornumber;
+}
+
+/* select a random type of non-walkable or otherwise obstructing terrain */
+int randomwalltype(void)
+{
+	int randfloor = random_number(24);
+	int floornumber = 56;
+
+	/* small chance of something walkable */
+	if (random_number(10) == 1) {
+		floornumber = randomfloortype();
+		return floornumber;
+	}
+
+	/* otherwise make a wall type */
+	switch (randfloor) {
+		case 1:
+			floornumber = 16; /* web */
+			break;
+		case 2:
+			floornumber = 50; /* magma vein */
+			break;
+		case 3:
+			floornumber = 51; /* quartz vein */
+			break;
+		case 4:
+			floornumber = 52; /* magma vein with treasure */
+			break;
+		case 5:
+			floornumber = 53; /* quartz vein with treasure */
+			break;
+		case 6:
+			floornumber = 56; /* granite wall */
+			break;
+		case 7:
+			floornumber = 57; /* inner granite wall */
+			break;
+		case 8:
+			floornumber = 58; /* outer granite wall */
+			break;
+		case 9:
+			floornumber = 59; /* solid granite wall */
+			break;
+		case 10:
+			floornumber = 87; /* dark pit */
+			break;
+		case 11:
+			floornumber = 92; /* dead tree */
+			break;
+		case 12:
+			floornumber = 95; /* ice wall */
+			break;
+		case 13:
+			floornumber = 96; /* tree */
+			break;
+		case 14:
+			floornumber = 97; /* mountain chain */
+			break;
+		case 15:
+			floornumber = 98; /* sandwall */
+			break;
+		case 16:
+			floornumber = 99; /* sandwall with treasure */
+			break;
+		case 17:
+			floornumber = 189; /* illusion wall */
+			break;
+		case 18:
+			floornumber = 205; /* blazing fire */
+			break;
+		case 19:
+			floornumber = 211; /* hailstone wall */
+			break;
+		case 20:
+			floornumber = 215; /* glacial wall */
+			break;
+		case 21:
+			floornumber = 216; /* battlement */
+			break;
+		case 22:
+			floornumber = 238; /* swift waterfall */
+			break;
+		case 23:
+			floornumber = 84; /* stream of shallow water */
+			break;
+		case 24:
+			floornumber = 85; /* pool of deep lava */
+			break;
+
+		default:
+			floornumber = 1;
+			break;
+	}
+
+	return floornumber;
+}
+
 /* Generates and prints 'count' random numbers in range [lower, upper]. */
 void printRandoms(int lower, int upper, int count)
 {
@@ -10,7 +195,7 @@ void printRandoms(int lower, int upper, int count)
 	int d_id;
 	int contnum;
 
-	num = (rand() % (upper - lower + 1)) + lower;
+	num = random_number(42);
 
 	printf("V:2.0.0\n", num);
 	printf("\n", num);
@@ -226,231 +411,76 @@ void printRandoms(int lower, int upper, int count)
 				printf("N:39:Deep Submerged Ruins\n");
 				printf("D:DNu:a submerged way to the deep submerged ruins.\n");
 				printf("W:840:940:1:0:14:160\n");
-				printf("L:84:95:187:5:1:0\n");
-				printf("A:187:80:84:10:56:10:57:187\n");
-				printf("A:60:0:40\n");
-				printf("O:30:30:10:10\n");
-				printf("E:1d1:4:ACID\n");
-				printf("F:NO_STREAMERS\n");
-				printf("F:FILL_METHOD_3 | WATER_BREATH\n");
-				printf("R:20:0\n");
-				printf("R:80:3\n");
-				printf("M:AQUATIC | CAN_SWIM | CAN_FLY\n");
 				break;
 			case 40:
 				printf("N:40:Deep Cirith Ungol\n");
 				printf("D:DCU:an entrance to Deep Cirith Ungol.\n");
 				printf("W:128:228:1:0:14:160\n");
-				printf("L:87:5:88:65:16:30\n");
-				printf("A:97:90:16:10:56:0:16:58\n");
-				printf("O:30:30:30:10\n");
-				printf("E:4d4:40:POISON\n");
-				printf("F:CIRCULAR_ROOMS\n");
-				printf("F:FILL_METHOD_2\n");
-				printf("R:20:0\n");
-				printf("R:40:3\n");
-				printf("M:SPIDER | R_CHAR_c | R_CHAR_a | R_CHAR_I | \n");
-				printf("R:40:3\n");
-				printf("M:ORC | R_CHAR_w | R_CHAR_m | R_CHAR_j\n");
 				break;
 			case 41:
 				printf("N:41:Paths of the Undead\n");
 				printf("D:PUD:the entrance to the Paths of the Undead.\n");
 				printf("W:880:980:1:0:24:100\n");
-				printf("L:88:85:84:15:1:0\n");
-				printf("A:56:75:87:25:56:0:57:58\n");
-				printf("O:30:30:30:2\n");
-				printf("E:1d1:20:RAISE\n");
-				printf("F:FILL_METHOD_3\n");
-				printf("R:25:0\n");
-				printf("R:10:3\n");
-				printf("M:R_CHAR_p\n");
-				printf("R:65:3\n");
-				printf("M:UNDEAD | NONLIVING\n");
 				break;
 			case 42:
 				printf("N:42:Fucktard Castle\n");
 				printf("D:Ftd:an entrance to Fucktard Castle.\n");
 				printf("W:400:500:1:0:24:100\n");
-				printf("L:1:98:188:2:1:0\n");
-				printf("A:56:50:189:50:56:0:57:58\n");
-				printf("O:50:10:20:20\n");
-				printf("E:6d2:30:CONFUSION\n");
-				printf("F:RANDOM_TOWNS | NO_STREAMERS\n");
-				printf("F:FILL_METHOD_1\n");
-				printf("R:30:0\n");
-				printf("R:70:3\n");
-				printf("M:STUPID | WEIRD_MIND | SHAPECHANGER | ATTR_MULTI | CHAR_MULTI | RAND_25 |\n");
-				printf("M:RAND_50 | EMPTY_MIND | INVISIBLE | PASS_WALL | KILL_WALL\n");
-				printf("S:BR_CONF | BR_CHAO | BA_CHAO | CONF | FORGET | TRAPS | MULTIPLY\n");
 				break;
 			case 43:
 				printf("N:43:Deep Erebor\n");
 				printf("D:DEr:a tunnel leading into depths of the Dragon Mountain.\n");
 				printf("W:780:880:1:0:20:140\n");
-				printf("L:88:100:1:0:1:0\n");
-				printf("A:97:90:87:10:56:0:57:97\n");
-				printf("O:40:40:40:40\n");
-				printf("F:BIG | LAVA_RIVER | CAVERN | NO_STREAMERS\n");
-				printf("F:CAVE | DOUBLE |\n");
-				printf("F:FILL_METHOD_2\n");
-				printf("R:40:0\n");
-				printf("R:45:1\n");
-				printf("M:DRAGON | R_CHAR_D\n");
-				printf("R:15:1\n");
-				printf("M:DRAGON | R_CHAR_d\n");
 				break;
 			case 44:
 				printf("N:44:The Young Forest\n");
 				printf("D:YFr:a path into the Young Forest.\n");
 				printf("W:188:288:1:0:15:100\n");
-				printf("L:88:76:84:16:199:8\n");
-				printf("L:68:16:16\n");
-				printf("A:96:100:56:0:56:0:202:96\n");
-				printf("O:20:5:15:30\n");
-				printf("F:WATER_RIVERS | NO_DOORS | FLAT | NO_STREAMERS\n");
-				printf("F:RANDOM_TOWNS |\n");
-				printf("F:FILL_METHOD_3\n");
-				printf("R:30:0\n");
-				printf("R:40:3\n");
-				printf("M:ANIMAL \n");
-				printf("R:30:3\n");
-				printf("M:UNDEAD | R_CHAR_h\n");
 				break;
 			case 45:
 				printf("N:45:Deep Moria\n");
 				printf("D:DoM:a stone door leading to the Depths of Moria.\n");
 				printf("W:248:348:1:0:40:40\n");
-				printf("L:88:100:1:0:1:0\n");
-				printf("A:97:100:56:0:56:0:57:97\n");
-				printf("O:30:50:10:5\n");
-				printf("F:WATER_RIVER | BIG | NO_STREAMERS\n");
-				printf("F:RANDOM_TOWNS\n");
-				printf("F:FILL_METHOD_0\n");
-				printf("R:35:3\n");
-				printf("M:ORC\n");
-				printf("R:25:3\n");
-				printf("M:TROLL | GIANT\n");
-				printf("R:15:3\n");
-				printf("M:DEMON\n");
-				printf("R:25:0\n");
 				break;
 			case 46:
 				printf("N:46:The Unholy Land Of Mountains\n");
 				printf("D:UoM:the way to the Unholy Land of Mountains.\n");
 				printf("W:740:840:1:0:14:160\n");
-				printf("L:89:100:89:0:89:0\n");
-				printf("A:97:100:56:0:56:0:97:97\n");
-				printf("O:20:20:20:20\n");
-				printf("F:RANDOM_TOWNS | FLAT | NO_STREAMERS\n");
-				printf("F:FILL_METHOD_0\n");
-				printf("R:60:3\n");
-				printf("M:CAN_FLY\n");
-				printf("R:40:0\n");
 				break;
 			case 47:
 				printf("N:47:The Depths Of Rhun\n");
 				printf("D:DoR:a way to the Depths of Rhun.\n");
 				printf("W:308:408:1:0:14:160\n");
-				printf("L:89:100:1:0:1:0\n");
-				printf("A:89:50:96:25:84:25:57:58\n");
-				printf("O:20:20:20:20\n");
-				printf("F:RANDOM_TOWNS | FLAT | NO_STREAMERS |\n");
-				printf("F:FILL_METHOD_1\n");
-				printf("R:30:3\n");
-				printf("M:R_CHAR_p | R_CHAR_h\n");
-				printf("R:30:3\n");
-				printf("M:ANIMAL\n");
-				printf("R:40:0\n");
 				break;
 			case 48:
 				printf("N:48:The Maggot lair\n");
 				printf("D:MgL:a maggot hole.\n");
 				printf("W:368:468:1:0:5:200\n");
-				printf("L:91:85:94:10:93:5\n");
-				printf("A:98:100:96:0:84:0:94:94\n");
-				printf("O:15:5:60:20\n");
-				printf("F:NO_DOORS | SAND_VEIN |\n");
-				printf("F:FILL_METHOD_0\n");
-				printf("R:60:3\n");
-				printf("M:R_CHAR_w\n");
-				printf("R:20:3\n");
-				printf("S:MULTIPLY\n");
-				printf("R:20:0\n");
 				break;
 			case 49:
 				printf("N:49:Winterhold\n");
 				printf("D:Who:the entrance to the Grinding Ice of the Winterhold.\n");
 				printf("W:680:780:1:0:14:160\n");
-				printf("L:90:0:88:70:84:30\n");
-				printf("L:90:0:10\n");
-				printf("A:95:0:56:100:56:0:57:58\n");
-				printf("A:100:0:0\n");
-				printf("O:20:20:20:20\n");
-				printf("E:1d4:45:COLD\n");
-				printf("F:DOUBLE | WATER_RIVER | CAVERN | NO_STREAMERS\n");
-				printf("F:FILL_METHOD_2\n");
-				printf("R:70:1\n");
-				printf("M:IM_COLD\n");
-				printf("R:30:0\n");
 				break;
 			case 50:
 				printf("N:50:Thunder Mountain\n");
 				printf("D:Thu:a path into the depths of the Thunder Mountains\n");
 				printf("W:550:650:1:0:14:160\n");
-				printf("L:89:45:81:5:88:50\n");
-				printf("A:215:100:215:0:215:0:56:211\n");
-				printf("O:50:20:10:30\n");
-				printf("F:CAVE | CAVERN | CIRCULAR_ROOMS | RANDOM_TOWNS | \n");
-				printf("F:NO_STREAMERS |\n");
-				printf("F:FILL_METHOD_3\n");
-				printf("R:20:3\n");
-				printf("M:R_CHAR_k | R_CHAR_o\n");
-				printf("R:80:0\n");
 				break;
 			case 51:
 				printf("N:51:Crashing Angmar\n");
 				printf("D:Cra:a dark path through the Crash King Realm of Angmar\n");
 				printf("W:620:720:1:0:14:160\n");
-				printf("L:93:70:174:20:226:10\n");
-				printf("A:214:100:214:0:214:0:214:214\n");
-				printf("O:20:20:20:20\n");
-				printf("E:1d1:5:DISENCHANT\n");
-				printf("F:ADJUST_LEVEL_1_2 | NO_DOORS | NO_STREAMERS | \n");
-				printf("F:HOT | FLAT | NO_SHAFT | CIRCULAR_ROOMS | \n");
-				printf("F:FILL_METHOD_2\n");
-				printf("R:50:0\n");
-				printf("R:50:3\n");
-				printf("M:RES_DISE | UNDEAD | DEMON | NONLIVING \n");
 				break;
 			case 52:
 				printf("N:52:Uber Isengard\n");
 				printf("D:UIs:a passage to Uber Isengard\n");
 				printf("W:428:528:1:0:14:160\n");
-				printf("L:88:100:1:0:1:0\n");
-				printf("A:97:100:56:0:56:0:57:97\n");
-				printf("O:20:20:20:20\n");
-				printf("F:CAVE | ADJUST_LEVEL_2 | NO_STREAMERS | \n");
-				printf("F:FILL_METHOD_0\n");
-				printf("R:30:0\n");
-				printf("R:25:3\n");
-				printf("M:TROLL | R_CHAR_T | \n");
-				printf("R:45:3\n");
-				printf("M:ORC | R_CHAR_o | R_CHAR_O\n");
 				break;
 			case 53:
 				printf("N:53:The Open Sea\n");
 				printf("D:OSe:a way to the Open Sea\n");
 				printf("W:488:588:1:0:14:160\n");
-				printf("L:84:60:222:40:222:0\n");
-				printf("A:211:100:211:0:211:0:211:211\n");
-				printf("O:1:1:1:1\n");
-				printf("F:NO_DOORS | EMPTY | FLAT | \n");
-				printf("F:ADJUST_LEVEL_1 | NO_STREAMERS | NO_SHAFT | \n");
-				printf("F:FILL_METHOD_0\n");
-				printf("R:35:0\n");
-				printf("R:65:1\n");
-				printf("M:R_CHAR_B\n");
 				break;
 		}
 
@@ -462,25 +492,31 @@ void printRandoms(int lower, int upper, int count)
 				printf("F:PRINCIPAL\n");
 				break;
 			case 3:
-				printf("F:PRINCIPAL\n");
+				printf("F:PRINCIPAL | NO_RECALL\n");
 				break;
 			case 4:
 				printf("F:PRINCIPAL\n");
 				break;
+			case 5:
+				printf("F:NO_RECALL\n");
+				break;
 			case 6:
-				printf("F:FINAL_GUARDIAN_1032 | FINAL_ARTIFACT_203 | NO_RECALL_OUT\n");
+				printf("F:FINAL_GUARDIAN_1032 | FINAL_ARTIFACT_203 | NO_RECALL_OUT | NO_RECALL\n");
 				break;
 			case 7:
 				printf("F:FINAL_GUARDIAN_980 | FINAL_ARTIFACT_204\n");
+				break;
+			case 8:
+				printf("F:NO_RECALL\n");
 				break;
 			case 9:
 				printf("F:FINAL_GUARDIAN_481\n");
 				break;
 			case 10:
-				printf("F:FINAL_GUARDIAN_1035\n");
+				printf("F:FINAL_GUARDIAN_1035 | NO_RECALL\n");
 				break;
 			case 11:
-				printf("F:NO_RECALL_OUT | FINAL_GUARDIAN_1044\n");
+				printf("F:NO_RECALL_OUT | NO_RECALL | FINAL_GUARDIAN_1044\n");
 				break;
 			case 16:
 				printf("F:FINAL_GUARDIAN_804 | FINAL_ARTIFACT_91\n");
@@ -495,7 +531,7 @@ void printRandoms(int lower, int upper, int count)
 				printf("F:FINAL_OBJECT_810 | FINAL_GUARDIAN_373\n");
 				break;
 			case 20:
-				printf("F:FINAL_GUARDIAN_715\n");
+				printf("F:FINAL_GUARDIAN_715 | NO_RECALL\n");
 				break;
 			case 21:
 				printf("F:FINAL_GUARDIAN_206\n");
@@ -507,7 +543,7 @@ void printRandoms(int lower, int upper, int count)
 				printf("F:FINAL_GUARDIAN_819 | FINAL_ARTIFACT_205\n");
 				break;
 			case 24:
-				printf("F:FINAL_GUARDIAN_517\n");
+				printf("F:FINAL_GUARDIAN_517 | NO_RECALL\n");
 				break;
 			case 25:
 				printf("F:FINAL_GUARDIAN_789 | FINAL_ARTIFACT_27\n");
@@ -521,526 +557,632 @@ void printRandoms(int lower, int upper, int count)
 			case 29:
 				printf("F:FINAL_GUARDIAN_1034\n");
 				break;
+			case 31:
+				printf("F:NO_RECALL\n");
+				break;
+			case 32:
+				printf("F:NO_RECALL\n");
+				break;
+			case 38:
+				printf("F:NO_RECALL\n");
+				break;
 		}
 
 		/* randomized content for those dungeons that should have randomized content --Amy */
-		if ( (d_id >= 1 && d_id <= 11) || (d_id >= 16 && d_id <= 27) || (d_id == 29) || (d_id >= 31 && d_id <= 38) ) {
+		if ( (d_id >= 1 && d_id <= 11) || (d_id >= 16 && d_id <= 27) || (d_id == 29) || (d_id >= 31 && d_id <= 53) ) {
 
-			contnum = (rand() % (upper - lower + 1)) + lower;
+			if (random_number(3) == 2) {
 
-			printf("# random type %d\n", contnum);
+				int numtries;
 
-			/* Dol Amroth is the most "normal" one out of this bunch, so that's the default */
-			switch (contnum) {
-				case 1:
-					printf("# based on Mirkwood\n", contnum);
-					printf("L:89:95:199:5:88:0\n");
-					printf("A:96:100:97:0:56:0:202:96\n");
-					printf("O:20:20:20:20\n");
-					printf("F:NO_DOORS | NO_DESTROY | FLAT\n");
-					printf("F:FILL_METHOD_0\n");
-					printf("R:100:0\n");
-					break;
-				case 2:
-					printf("# based on Mordor\n", contnum);
-					printf("L:88:67:93:33:1:0\n");
-					printf("L:0:100:0\n");
-					printf("A:97:50:56:50:56:0:57:97\n");
-					printf("A:0:100:0\n");
-					printf("O:20:20:20:20\n");
-					printf("F:LAVA_RIVER | CAVERN | NO_STREAMERS\n");
-					printf("F:FILL_METHOD_2\n");
-					printf("R:100:0\n");
-					break;
-				case 3:
-					printf("# based on Angband\n", contnum);
-					printf("L:1:100:1:0:1:0\n");
-					printf("A:56:100:56:0:56:0:57:58\n");
-					printf("O:20:20:20:20\n");
-					printf("F:CAVERN | NO_EASY_MOVE | NO_RECALL\n");
-					printf("F:ADJUST_LEVEL_1_2 | ADJUST_LEVEL_1\n");
-					printf("F:FILL_METHOD_0\n");
-					printf("R:100:0\n");
-					break;
-				case 4:
-					printf("# based on Barrow-Downs\n", contnum);
-					printf("L:88:78:89:18:199:4\n");
-					printf("L:0:95:5\n");
-					printf("A:96:34:97:66:56:0:57:97\n");
-					printf("A:100:0:0\n");
-					printf("O:20:20:20:20\n");
-					printf("F:FLAT\n");
-					printf("F:FILL_METHOD_3\n");
-					printf("R:25:1\n");
-					printf("M:UNDEAD\n");
-					printf("R:75:0\n");
-					break;
-				case 5:
-					printf("# based on Mount Doom\n", contnum);
-					printf("L:86:90:205:10:1:0\n");
-					printf("A:177:100:0:0:0:0:85:87\n");
-					printf("O:10:10:30:30\n");
-					printf("E:2d10:20:FIRE\n");
-					printf("F:CAVE | LAVA_RIVER | NO_RECALL | NO_STREAMERS\n");
-					printf("F:FILL_METHOD_0 | NO_EASY_MOVE\n");
-					printf("R:100:1\n");
-					printf("M:IM_FIRE\n");
-					break;
-				case 6:
-					printf("# based on Nether Realm\n", contnum);
-					printf("L:102:80:86:15:85:5\n");
-					printf("A:85:80:87:20:87:0:57:85\n");
-					printf("A:50:50:0\n");
-					printf("O:25:25:25:25\n");
-					printf("E:1d10:10:NETHER\n");
-					printf("F:EMPTY | FORGET | NO_BREATH | NO_EASY_MOVE | NO_SHAFT\n");
-					printf("F:RANDOM_TOWNS | ADJUST_LEVEL_2 | NO_RECALL | NO_STREAMERS\n");
-					printf("F:LAVA_RIVER\n");
-					printf("F:FILL_METHOD_2\n");
-					printf("R:5:0\n");
-					printf("R:95:3\n");
-					printf("M:RES_NETH | R_CHAR_G | R_CHAR_W | R_CHAR_U\n");
-					break;
-				case 7:
-					printf("# based on Numenor\n", contnum);
-					printf("L:84:95:187:5:1:0\n");
-					printf("A:187:80:84:10:56:10:57:187\n");
-					printf("A:60:0:40\n");
-					printf("O:30:30:10:10\n");
-					printf("E:1d1:4:ACID\n");
-					printf("F:NO_STREAMERS\n");
-					printf("F:FILL_METHOD_3 | WATER_BREATH\n");
-					printf("R:20:0\n");
-					printf("R:80:3\n");
-					printf("M:AQUATIC | CAN_SWIM | CAN_FLY\n");
-					break;
-				case 8:
-					printf("# based on Halls of Mandos\n", contnum);
-					printf("L:1:100:1:0:1:0\n");
-					printf("O:20:20:20:20\n");
-					printf("A:56:100:56:0:56:0:57:58\n");
-					printf("F:RANDOM_TOWNS | NO_RECALL | NO_SHAFT\n");
-					printf("F:FILL_METHOD_0\n");
-					break;
-				case 9:
-					printf("# based on Cirith Ungol\n", contnum);
-					printf("L:87:5:88:65:16:30\n");
-					printf("A:97:90:16:10:56:0:16:58\n");
-					printf("O:30:30:30:10\n");
-					printf("E:4d4:40:POISON\n");
-					printf("F:CIRCULAR_ROOMS\n");
-					printf("F:FILL_METHOD_2\n");
-					printf("R:10:0\n");
-					printf("R:45:3\n");
-					printf("M:SPIDER | R_CHAR_c | R_CHAR_a | R_CHAR_I | \n");
-					printf("R:45:3\n");
-					printf("M:ORC | R_CHAR_w | R_CHAR_m | R_CHAR_j\n");
-					break;
-				case 10:
-					printf("# based on Heart of the Earth\n", contnum);
-					printf("L:1:100:1:0:1:0\n");
-					printf("A:56:100:56:0:56:0:57:58\n");
-					printf("O:40:10:10:20\n");
-					printf("G:life\n");
-					printf("F:EVOLVE | NO_RECALL | NO_SHAFT\n");
-					printf("R:40:3\n");
-					printf("M:R_CHAR_# | R_CHAR_X | R_CHAR_g | R_CHAR_E | \n");
-					printf("R:30:3\n");
-					printf("M:PASS_WALL | KILL_WALL | HURT_ROCK\n");
-					printf("R:30:0\n");
-					break;
-				case 11:
-					printf("# based on Void\n", contnum);
-					printf("L:183:97:102:3:0:0\n");
-					printf("A:183:90:102:10:0:0:102:102\n");
-					printf("A:40:60:0\n");
-					printf("O:25:25:25:25\n");
-					printf("E:2d6:200:DARK\n");
-					printf("F:EMPTY | FORGET | NO_BREATH | NO_EASY_MOVE | NO_RECALL |\n");
-					printf("F:ADJUST_LEVEL_1_2 | ADJUST_LEVEL_1 | NO_STREAMERS | NO_SHAFT\n");
-					printf("F:FILL_METHOD_2\n");
-					printf("R:1:0\n");
-					printf("R:99:3\n");
-					printf("M:UNDEAD | DEMON | DRAGON | NONLIVING | SPIRIT\n");
-					break;
-				case 12:
-					printf("# based on Paths of the Dead\n", contnum);
-					printf("L:88:85:84:15:1:0\n");
-					printf("A:56:75:87:25:56:0:57:58\n");
-					printf("O:30:30:30:2\n");
-					printf("E:1d1:20:RAISE\n");
-					printf("F:FILL_METHOD_3\n");
-					printf("R:5:0\n");
-					printf("R:10:3\n");
-					printf("M:R_CHAR_p\n");
-					printf("R:85:3\n");
-					printf("M:UNDEAD | NONLIVING\n");
-					break;
-				case 13:
-					printf("# based on Illusory Castle\n", contnum);
-					printf("L:1:98:188:2:1:0\n");
-					printf("A:56:50:189:50:56:0:57:58\n");
-					printf("O:50:10:20:20\n");
-					printf("E:6d2:30:CONFUSION\n");
-					printf("F:RANDOM_TOWNS | NO_STREAMERS\n");
-					printf("F:FILL_METHOD_1\n");
-					printf("R:30:0\n");
-					printf("R:70:3\n");
-					printf("M:STUPID | WEIRD_MIND | SHAPECHANGER | ATTR_MULTI | CHAR_MULTI | RAND_25 |\n");
-					printf("M:RAND_50 | EMPTY_MIND | INVISIBLE | PASS_WALL | KILL_WALL\n");
-					printf("S:BR_CONF | BR_CHAO | BA_CHAO | CONF | FORGET | TRAPS | MULTIPLY\n");
-					break;
-				case 14:
-					printf("# based on Maze\n", contnum);
-					printf("L:1:100:1:0:1:0\n");
-					printf("A:56:98:48:2:56:0:57:58\n");
-					printf("O:2:40:10:40\n");
-					printf("G:maze\n");
-					printf("F:SMALLEST | FORGET\n");
-					printf("R:80:0\n");
-					printf("R:20:3\n");
-					printf("M:R_CHAR_p\n");
-					break;
-				case 15:
-					printf("# based on Orc Cave\n", contnum);
-					printf("L:88:100:1:0:1:0\n");
-					printf("A:97:100:56:0:56:0:57:97\n");
-					printf("O:5:50:10:25\n");
-					printf("F:RANDOM_TOWNS | \n");
-					printf("F:CAVE |\n");
-					printf("F:FILL_METHOD_0\n");
-					printf("R:30:3\n");
-					printf("M:TROLL\n");
-					printf("R:20:0\n");
-					printf("R:50:3\n");
-					printf("M:ORC | R_CHAR_k | R_CHAR_o | R_CHAR_O\n");
-					break;
-				case 16:
-					printf("# based on Erebor\n", contnum);
-					printf("L:88:100:1:0:1:0\n");
-					printf("A:97:90:87:10:56:0:57:97\n");
-					printf("O:40:40:40:40\n");
-					printf("F:BIG | LAVA_RIVER | CAVERN | NO_RECALL | NO_STREAMERS\n");
-					printf("F:CAVE | DOUBLE | \n");
-					printf("F:FILL_METHOD_2\n");
-					printf("R:20:0\n");
-					printf("R:55:1\n");
-					printf("M:DRAGON | R_CHAR_D\n");
-					printf("R:25:1\n");
-					printf("M:DRAGON | R_CHAR_d\n");
-					break;
-				case 17:
-					printf("# based on Old Forest\n", contnum);
-					printf("L:88:76:84:16:199:8\n");
-					printf("L:68:16:16\n");
-					printf("A:96:100:56:0:56:0:202:96\n");
-					printf("O:20:5:15:30\n");
-					printf("F:WATER_RIVERS | NO_DOORS | NO_DESTROY | FLAT | NO_STREAMERS\n");
-					printf("F:RANDOM_TOWNS\n");
-					printf("F:FILL_METHOD_3\n");
-					printf("R:30:0\n");
-					printf("R:40:3\n");
-					printf("M:ANIMAL \n");
-					printf("R:30:3\n");
-					printf("M:UNDEAD | R_CHAR_h\n");
-					break;
-				case 18:
-					printf("# based on Moria\n", contnum);
-					printf("L:88:100:1:0:1:0\n");
-					printf("A:97:100:56:0:56:0:57:97\n");
-					printf("O:30:50:10:5\n");
-					printf("F:WATER_RIVER | BIG | NO_STREAMERS\n");
-					printf("F:RANDOM_TOWNS\n");
-					printf("F:WILD_45_30__44_37\n");
-					printf("F:FILL_METHOD_0\n");
-					printf("R:40:3\n");
-					printf("M:ORC\n");
-					printf("R:30:3\n");
-					printf("M:TROLL | GIANT\n");
-					printf("R:20:3\n");
-					printf("M:DEMON\n");
-					printf("R:10:0\n");
-					break;
-				case 19:
-					printf("# based on Dol Guldur\n", contnum);
-					printf("L:1:80:174:20:1:0\n");
-					printf("A:56:100:56:0:56:0:57:58\n");
-					printf("O:20:1:70:9\n");
-					printf("F:SMALL\n");
-					printf("F:FILL_METHOD_3\n");
-					printf("R:30:3\n");
-					printf("M:R_CHAR_p | R_CHAR_P\n");
-					printf("R:10:3\n");
-					printf("M:ORC | TROLL\n");
-					printf("R:20:3\n");
-					printf("M:UNDEAD\n");
-					printf("R:30:3\n");
-					printf("M:DEMON | DRAGON\n");
-					printf("R:10:0\n");
-					break;
-				case 20:
-					printf("# based on Small Water Cave\n", contnum);
-					printf("L:84:100:84:0:84:0\n");
-					printf("A:97:100:56:0:56:0:57:58\n");
-					printf("O:10:10:30:30\n");
-					printf("E:1d1:40:ACID\n");
-					printf("F:NO_RECALL\n");
-					printf("F:FILL_METHOD_0\n");
-					printf("R:10:0\n");
-					printf("R:10:3\n");
-					printf("M:AQUATIC\n");
-					printf("R:40:1\n");
-					printf("M:IM_COLD\n");
-					printf("S:BA_WATE\n");
-					printf("R:40:3\n");
-					printf("M:IM_COLD\n");
-					break;
-				case 21:
-					printf("# based on Sacred Land of Mountains\n", contnum);
-					printf("L:89:100:89:0:89:0\n");
-					printf("A:97:100:56:0:56:0:97:97\n");
-					printf("O:20:20:20:20\n");
-					printf("F:RANDOM_TOWNS | FLAT | NO_STREAMERS\n");
-					printf("F:FILL_METHOD_0\n");
-					printf("R:60:3\n");
-					printf("M:CAN_FLY\n");
-					printf("R:40:0\n");
-					break;
-				case 22:
-					printf("# based on Land of Rhun\n", contnum);
-					printf("L:89:100:1:0:1:0\n");
-					printf("A:89:50:96:25:84:25:57:58\n");
-					printf("O:20:20:20:20\n");
-					printf("F:RANDOM_TOWNS | FLAT | NO_STREAMERS\n");
-					printf("F:FILL_METHOD_1\n");
-					printf("R:30:3\n");
-					printf("M:R_CHAR_p | R_CHAR_h\n");
-					printf("R:30:3\n");
-					printf("M:ANIMAL\n");
-					printf("R:40:0\n");
-					break;
-				case 23:
-					printf("# based on Sandworm Lair\n", contnum);
-					printf("L:91:85:94:10:93:5\n");
-					printf("A:98:100:96:0:84:0:94:94\n");
-					printf("O:15:5:60:20\n");
-					printf("F:NO_DOORS | SAND_VEIN |\n");
-					printf("F:FILL_METHOD_0\n");
-					printf("R:70:3\n");
-					printf("M:R_CHAR_w\n");
-					printf("R:20:3\n");
-					printf("S:MULTIPLY\n");
-					printf("R:10:0\n");
-					break;
-				case 24:
-					printf("# based on Helcaraxe\n", contnum);
-					printf("L:90:0:88:70:84:30\n");
-					printf("L:90:0:10\n");
-					printf("A:95:0:56:100:56:0:57:58\n");
-					printf("A:100:0:0\n");
-					printf("O:20:20:20:20\n");
-					printf("E:1d4:45:COLD\n");
-					printf("F:DOUBLE | WATER_RIVER | CAVERN | NO_STREAMERS\n");
-					printf("F:FILL_METHOD_2\n");
-					printf("R:100:1\n");
-					printf("M:IM_COLD\n");
-					break;
-				case 25:
-					printf("# based on Forodwaith\n", contnum);
-					printf("L:90:20:93:40:88:40\n");
-					printf("A:90:20:93:40:88:40:88:211\n");
-					printf("O:20:20:20:20\n");
-					printf("E:2d4:5:DARK\n");
-					printf("F:NO_DOORS | CAVERN | COLD | NO_DESTROY | EMPTY | FLAT | \n");
-					printf("F:NO_RECALL | LIFE_LEVEL | NO_STREAMERS | NO_SHAFT | \n");
-					printf("F:FILL_METHOD_4\n");
-					printf("R:100:3\n");
-					printf("M:COLD_BLOOD | HURT_LITE | IM_COLD\n");
-					break;
-				case 26:
-					printf("# based on Emyn Luin\n", contnum);
-					printf("L:89:45:81:5:88:50\n");
-					printf("A:215:100:215:0:215:0:56:211\n");
-					printf("O:50:20:10:30\n");
-					printf("F:CAVE | CAVERN | CIRCULAR_ROOMS | RANDOM_TOWNS | \n");
-					printf("F:NO_STREAMERS | NO_RECALL | NO_DESTROY \n");
-					printf("F:FILL_METHOD_3\n");
-					printf("R:20:3\n");
-					printf("M:R_CHAR_k | R_CHAR_o\n");
-					printf("R:80:0\n");
-					break;
-				case 27:
-				default:
-					printf("# based on Dol Amroth\n", contnum);
-					printf("L:1:100:1:0:1:0\n");
-					printf("A:56:100:56:0:56:0:57:58\n");
-					printf("O:20:20:20:20\n");
-					printf("F:SMALLEST | NO_DESTROY | TOWER | RANDOM_TOWNS | \n");
-					printf("F:ADJUST_LEVEL_1 | NO_STREAMERS | NO_SHAFT | NO_STAIR | \n");
-					printf("F:NO_EASY_MOVE | FILL_METHOD_2 \n");
-					printf("R:80:3\n");
-					printf("M:R_CHAR_p | R_CHAR_P \n");
-					printf("R:20:3\n");
-					printf("M:SMART | TAKE_ITEM\n");
-					break;
-				case 28:
-					printf("# based on Angmar\n", contnum);
-					printf("L:93:70:174:20:226:10\n");
-					printf("A:214:100:214:0:214:0:214:214\n");
-					printf("O:20:20:20:20\n");
-					printf("E:1d1:5:DISENCHANT\n");
-					printf("F:ADJUST_LEVEL_1_2 | NO_DOORS | NO_STREAMERS | \n");
-					printf("F:HOT | FLAT | NO_SHAFT | CIRCULAR_ROOMS | \n");
-					printf("F:FILL_METHOD_2\n");
-					printf("R:50:0\n");
-					printf("R:50:3\n");
-					printf("M:RES_DISE | UNDEAD | DEMON | NONLIVING \n");
-					break;
-				case 29:
-					printf("# based on Near Harad\n", contnum);
-					printf("L:91:100:91:0:91:0\n");
-					printf("A:91:100:91:0:91:0:98:91\n");
-					printf("O:20:20:20:20\n");
-					printf("E:1d1:5:INERTIA\n");
-					printf("F:NO_DOORS | CAVE | CAVERN | HOT | NO_DESTROY | EMPTY | FLAT\n");
-					printf("F:RANDOM_TOWNS | NO_STREAMERS | NO_SHAFT | \n");
-					printf("F:FILL_METHOD_4 \n");
-					printf("R:30:0\n");
-					printf("R:70:3\n");
-					printf("M:WILD_TOO | R_CHAR_p\n");
-					break;
-				case 30:
-					printf("# based on Isengard\n", contnum);
-					printf("L:88:100:1:0:1:0\n");
-					printf("A:97:100:56:0:56:0:57:97\n");
-					printf("O:20:20:20:20\n");
-					printf("F:CAVE | ADJUST_LEVEL_2 | NO_STREAMERS | \n");
-					printf("F:FILL_METHOD_0\n");
-					printf("R:20:0\n");
-					printf("R:30:3\n");
-					printf("M:TROLL | R_CHAR_T | \n");
-					printf("R:50:3\n");
-					printf("M:ORC | R_CHAR_o | R_CHAR_O\n");
-					break;
-				case 31:
-					printf("# based on Tol Eressea\n", contnum);
-					printf("L:84:60:222:40:222:0\n");
-					printf("A:211:100:211:0:211:0:211:211\n");
-					printf("O:1:1:1:1\n");
-					printf("F:SMALLEST | NO_DOORS | NO_DESTROY | EMPTY | FLAT | \n");
-					printf("F:ADJUST_LEVEL_1 | NO_STREAMERS | NO_SHAFT | \n");
-					printf("F:FILL_METHOD_0\n");
-					printf("R:15:0\n");
-					printf("R:85:1\n");
-					printf("M:R_CHAR_B\n");
-					break;
-				case 32:
-					printf("# based on Utumno\n", contnum);
-					printf("L:1:100:1:0:1:0\n");
-					printf("A:56:100:56:0:56:0:57:58\n");
-					printf("O:20:20:20:20\n");
-					printf("F:CAVERN | NO_EASY_MOVE | NO_RECALL \n");
-					printf("F:ADJUST_LEVEL_1_2 | ADJUST_LEVEL_1 \n");
-					printf("F:FILL_METHOD_0 \n");
-					printf("R:100:0\n");
-					break;
-				case 33:
-					printf("# based on Eru Temple\n", contnum);
-					printf("L:88:70:89:30:1:0\n");
-					printf("L:10:90:0\n");
-					printf("A:97:100:56:0:56:0:57:97\n");
-					printf("O:45:5:45:5\n");
-					printf("F:FILL_METHOD_2 | BIG | NO_DOORS | CIRCULAR_ROOMS | EMPTY | TOWER | FLAT\n");
-					printf("F:ADJUST_LEVEL_2 | ADJUST_LEVEL_1_2 | NO_SHAFT\n");
-					printf("R:100:3\n");
-					printf("M:EVIL | CAN_FLY\n");
-					break;
-				case 34:
-					printf("# based on Manwe Temple\n", contnum);
-					printf("L:208:85:209:15:1:0\n");
-					printf("A:211:100:56:0:56:0:210:211\n");
-					printf("O:15:25:5%:5\n");
-					printf("F:FILL_METHOD_4 | NO_DOORS | TOWER | CAVERN | ADJUST_LEVEL_2 | NO_SHAFT\n");
-					printf("R:100:3\n");
-					printf("M:INVISIBLE | ORC | IM_POIS | CAN_FLY\n");
-					printf("S:BR_POIS | BR_GRAV | BA_POIS\n");
-					break;
-				case 35:
-					printf("# based on Tulkas Temple\n", contnum);
-					printf("L:1:100:1:0:1:0\n");
-					printf("A:56:100:56:0:56:0:58:57\n");
-					printf("O:10:70:5:15\n");
-					printf("F:FILL_METHOD_0 | NO_DESTROY | ADJUST_LEVEL_2\n");
-					printf("R:100:3\n");
-					printf("M:DEMON | EVIL\n");
-					break;
-				case 36:
-					printf("# based on Melkor Temple\n", contnum);
-					printf("L:88:45:94:45:102:10\n");
-					printf("L:35:35:30\n");
-					printf("A:188:100:56:0:56:0:188:57\n");
-					printf("O:25:25:25:25\n");
-					printf("F:FILL_METHOD_1 | SMALL | LAVA_RIVERS | ADJUST_LEVEL_1 | ADJUST_LEVEL_1_2\n");
-					printf("R:100:3\n");
-					printf("M:GOOD | EVIL\n");
-					break;
-				case 37:
-					printf("# based on AmyBSOD Temple\n", contnum);
-					printf("L:88:45:94:45:102:10\n");
-					printf("L:35:35:30\n");
-					printf("A:188:100:56:0:56:0:188:57\n");
-					printf("O:25:25:25:25\n");
-					printf("F:FILL_METHOD_1 | LAVA_RIVERS | BIG | ADJUST_LEVEL_2\n");
-					printf("R:100:3\n");
-					printf("M:GOOD | EVIL | ELDRITCH_HORROR\n");
-					break;
-				case 38:
-					printf("# based on Yavanna Temple\n", contnum);
-					printf("L:89:40:199:15:88:45\n");
-					printf("A:96:100:56:0:56:0:202:96\n");
-					printf("O:20:10:30:40\n");
-					printf("F:FILL_METHOD_1 | NO_DOORS | WATER_RIVERS | NO_DESTROY | ADJUST_LEVEL_1 | NO_RECALL\n");
-					printf("F:ADJUST_LEVEL_1_2 | NO_SHAFT | NO_GENO\n");
-					printf("R:100:3\n");
-					printf("M:DEMON | UNDEAD | NONLIVING\n");
-					break;
-				case 39:
-					printf("# based on Aule Temple\n", contnum);
-					printf("L:88:45:94:45:84:10\n");
-					printf("L:35:35:30\n");
-					printf("A:216:100:56:0:56:0:216:213\n");
-					printf("O:0:50:0:50\n");
-					printf("F:FILL_METHOD_1 | SMALL | NO_DESTROY | ADJUST_LEVEL_1 | NO_STREAMERS\n");
-					printf("R:100:0\n");
-					break;
-				case 40:
-					printf("# based on Varda Temple\n", contnum);
-					printf("L:89:85:82:15:1:0\n");
-					printf("A:211:100:56:0:56:0:210:211\n");
-					printf("O:15:5:55:25\n");
-					printf("F:FILL_METHOD_4 | NO_DOORS | TOWER | CAVERN | ADJUST_LEVEL_1 | NO_SHAFT\n");
-					printf("R:100:3\n");
-					printf("M:EMPTY_MIND | ORC | IM_POIS | CAN_FLY | WILD_VOLCANO\n");
-					printf("S:BR_POIS | BR_GRAV | BA_POIS\n");
-					break;
-				case 41:
-					printf("# based on Ulmo Temple\n", contnum);
-					printf("L:88:100:1:0:1:0\n");
-					printf("A:187:100:56:0:56:0:238:84\n");
-					printf("O:90:0:5:5\n");
-					printf("F:FILL_METHOD_0 | NO_DESTROY | ADJUST_LEVEL_2\n");
-					printf("R:100:3\n");
-					printf("M:RES_WATE | CAN_FLY | AQUATIC\n");
-					break;
-				case 42:
-					printf("# based on Mandos Temple\n", contnum);
-					printf("L:1:100:1:0:1:0\n");
-					printf("A:56:100:56:0:56:0:58:57\n");
-					printf("O:10:70:5:15\n");
-					printf("F:FILL_METHOD_0 | NO_DESTROY | ADJUST_LEVEL_2\n");
-					printf("R:100:3\n");
-					printf("M:UNDEAD | EVIL | R_CHAR_V\n");
-					break;
+				printf("# very random\n", contnum);
+				int l_first = 0;
+				int l_second = 0;
+				int l_third = 0;
+				int a_first = 0;
+				int a_second = 0;
+				int a_third = 0;
+
+				l_first = random_number(100);
+				numtries = 100 - l_first;
+				while (numtries > 0) {
+					numtries--;
+					if (l_second == 0) l_second++;
+					else {
+						if (random_number(3) == 2) l_third++;
+						else l_second++;
+					}
+				}
+
+				a_first = random_number(100);
+				numtries = 100 - a_first;
+				while (numtries > 0) {
+					numtries--;
+					if (a_second == 0) a_second++;
+					else {
+						if (random_number(3) == 2) a_third++;
+						else a_second++;
+					}
+				}
+
+				int l_firsttype = randomfloortype();
+				int l_secondtype = randomfloortype();
+				int l_thirdtype = randomfloortype();
+
+				int a_firsttype = randomwalltype();
+				int a_secondtype = randomwalltype();
+				int a_thirdtype = randomwalltype();
+				int a_outertype = randomwalltype();
+				int a_innertype = randomwalltype();
+
+				int o_first = 0;
+				int o_second = 0;
+				int o_third = 0;
+				int o_fourth = 0;
+
+				numtries = 100;
+				while (numtries > 0) {
+					int dudelrand;
+					numtries--;
+
+					dudelrand = random_number(5);
+					switch (dudelrand) {
+						default: break;
+						case 1:
+							o_first++;
+							break;
+						case 2:
+							o_second++;
+							break;
+						case 3:
+							o_third++;
+							break;
+						case 4:
+							o_fourth++;
+							break;
+					}
+				}
+
+				printf("L:%d:%d:%d:%d:%d:%d\n", l_firsttype, l_first, l_secondtype, l_second, l_thirdtype, l_third);
+				printf("A:%d:%d:%d:%d:%d:%d:%d:%d\n", a_firsttype, a_first, a_secondtype, a_second, a_thirdtype, a_third, a_outertype, a_innertype);
+				printf("O:%d:%d:%d:%d\n", o_first, o_second, o_third, o_fourth);
+
+				switch (random_number(5)) {
+					default:
+					case 1:
+						printf("F:FILL_METHOD_0\n");
+						break;
+					case 2:
+						printf("F:FILL_METHOD_1\n");
+						break;
+					case 3:
+						printf("F:FILL_METHOD_2\n");
+						break;
+					case 4:
+						printf("F:FILL_METHOD_3\n");
+						break;
+					case 5:
+						printf("F:FILL_METHOD_4\n");
+						break;
+				}
+
+			} else {
+
+				contnum = random_number(42);
+
+				printf("# random type %d\n", contnum);
+
+				/* Dol Amroth is the most "normal" one out of this bunch, so that's the default */
+				switch (contnum) {
+					case 1:
+						printf("# based on Mirkwood\n", contnum);
+						printf("L:89:95:199:5:88:0\n");
+						printf("A:96:100:97:0:56:0:202:96\n");
+						printf("O:20:20:20:20\n");
+						printf("F:NO_DOORS | NO_DESTROY | FLAT\n");
+						printf("F:FILL_METHOD_0\n");
+						printf("R:100:0\n");
+						break;
+					case 2:
+						printf("# based on Mordor\n", contnum);
+						printf("L:88:67:93:33:1:0\n");
+						printf("L:0:100:0\n");
+						printf("A:97:50:56:50:56:0:57:97\n");
+						printf("A:0:100:0\n");
+						printf("O:20:20:20:20\n");
+						printf("F:LAVA_RIVER | CAVERN | NO_STREAMERS\n");
+						printf("F:FILL_METHOD_2\n");
+						printf("R:100:0\n");
+						break;
+					case 3:
+						printf("# based on Angband\n", contnum);
+						printf("L:1:100:1:0:1:0\n");
+						printf("A:56:100:56:0:56:0:57:58\n");
+						printf("O:20:20:20:20\n");
+						printf("F:CAVERN | NO_EASY_MOVE\n");
+						printf("F:ADJUST_LEVEL_1_2 | ADJUST_LEVEL_1\n");
+						printf("F:FILL_METHOD_0\n");
+						printf("R:100:0\n");
+						break;
+					case 4:
+						printf("# based on Barrow-Downs\n", contnum);
+						printf("L:88:78:89:18:199:4\n");
+						printf("L:0:95:5\n");
+						printf("A:96:34:97:66:56:0:57:97\n");
+						printf("A:100:0:0\n");
+						printf("O:20:20:20:20\n");
+						printf("F:FLAT\n");
+						printf("F:FILL_METHOD_3\n");
+						printf("R:25:1\n");
+						printf("M:UNDEAD\n");
+						printf("R:75:0\n");
+						break;
+					case 5:
+						printf("# based on Mount Doom\n", contnum);
+						printf("L:86:90:205:10:1:0\n");
+						printf("A:177:100:0:0:0:0:85:87\n");
+						printf("O:10:10:30:30\n");
+						printf("E:2d10:20:FIRE\n");
+						printf("F:CAVE | LAVA_RIVER | NO_STREAMERS\n");
+						printf("F:FILL_METHOD_0 | NO_EASY_MOVE\n");
+						printf("R:100:1\n");
+						printf("M:IM_FIRE\n");
+						break;
+					case 6:
+						printf("# based on Nether Realm\n", contnum);
+						printf("L:102:80:86:15:85:5\n");
+						printf("A:85:80:87:20:87:0:57:85\n");
+						printf("A:50:50:0\n");
+						printf("O:25:25:25:25\n");
+						printf("E:1d10:10:NETHER\n");
+						printf("F:EMPTY | FORGET | NO_BREATH | NO_EASY_MOVE | NO_SHAFT\n");
+						printf("F:RANDOM_TOWNS | ADJUST_LEVEL_2 | NO_STREAMERS\n");
+						printf("F:LAVA_RIVER\n");
+						printf("F:FILL_METHOD_2\n");
+						printf("R:5:0\n");
+						printf("R:95:3\n");
+						printf("M:RES_NETH | R_CHAR_G | R_CHAR_W | R_CHAR_U\n");
+						break;
+					case 7:
+						printf("# based on Numenor\n", contnum);
+						printf("L:84:95:187:5:1:0\n");
+						printf("A:187:80:84:10:56:10:57:187\n");
+						printf("A:60:0:40\n");
+						printf("O:30:30:10:10\n");
+						printf("E:1d1:4:ACID\n");
+						printf("F:NO_STREAMERS\n");
+						printf("F:FILL_METHOD_3 | WATER_BREATH\n");
+						printf("R:20:0\n");
+						printf("R:80:3\n");
+						printf("M:AQUATIC | CAN_SWIM | CAN_FLY\n");
+						break;
+					case 8:
+						printf("# based on Halls of Mandos\n", contnum);
+						printf("L:1:100:1:0:1:0\n");
+						printf("O:20:20:20:20\n");
+						printf("A:56:100:56:0:56:0:57:58\n");
+						printf("F:RANDOM_TOWNS | NO_SHAFT\n");
+						printf("F:FILL_METHOD_0\n");
+						break;
+					case 9:
+						printf("# based on Cirith Ungol\n", contnum);
+						printf("L:87:5:88:65:16:30\n");
+						printf("A:97:90:16:10:56:0:16:58\n");
+						printf("O:30:30:30:10\n");
+						printf("E:4d4:40:POISON\n");
+						printf("F:CIRCULAR_ROOMS\n");
+						printf("F:FILL_METHOD_2\n");
+						printf("R:10:0\n");
+						printf("R:45:3\n");
+						printf("M:SPIDER | R_CHAR_c | R_CHAR_a | R_CHAR_I | \n");
+						printf("R:45:3\n");
+						printf("M:ORC | R_CHAR_w | R_CHAR_m | R_CHAR_j\n");
+						break;
+					case 10:
+						printf("# based on Heart of the Earth\n", contnum);
+						printf("L:1:100:1:0:1:0\n");
+						printf("A:56:100:56:0:56:0:57:58\n");
+						printf("O:40:10:10:20\n");
+						printf("G:life\n");
+						printf("F:EVOLVE | NO_SHAFT\n");
+						printf("R:40:3\n");
+						printf("M:R_CHAR_# | R_CHAR_X | R_CHAR_g | R_CHAR_E | \n");
+						printf("R:30:3\n");
+						printf("M:PASS_WALL | KILL_WALL | HURT_ROCK\n");
+						printf("R:30:0\n");
+						break;
+					case 11:
+						printf("# based on Void\n", contnum);
+						printf("L:183:97:102:3:0:0\n");
+						printf("A:183:90:102:10:0:0:102:102\n");
+						printf("A:40:60:0\n");
+						printf("O:25:25:25:25\n");
+						printf("E:2d6:200:DARK\n");
+						printf("F:EMPTY | FORGET | NO_BREATH | NO_EASY_MOVE |\n");
+						printf("F:ADJUST_LEVEL_1_2 | ADJUST_LEVEL_1 | NO_STREAMERS | NO_SHAFT\n");
+						printf("F:FILL_METHOD_2\n");
+						printf("R:1:0\n");
+						printf("R:99:3\n");
+						printf("M:UNDEAD | DEMON | DRAGON | NONLIVING | SPIRIT\n");
+						break;
+					case 12:
+						printf("# based on Paths of the Dead\n", contnum);
+						printf("L:88:85:84:15:1:0\n");
+						printf("A:56:75:87:25:56:0:57:58\n");
+						printf("O:30:30:30:2\n");
+						printf("E:1d1:20:RAISE\n");
+						printf("F:FILL_METHOD_3\n");
+						printf("R:5:0\n");
+						printf("R:10:3\n");
+						printf("M:R_CHAR_p\n");
+						printf("R:85:3\n");
+						printf("M:UNDEAD | NONLIVING\n");
+						break;
+					case 13:
+						printf("# based on Illusory Castle\n", contnum);
+						printf("L:1:98:188:2:1:0\n");
+						printf("A:56:50:189:50:56:0:57:58\n");
+						printf("O:50:10:20:20\n");
+						printf("E:6d2:30:CONFUSION\n");
+						printf("F:RANDOM_TOWNS | NO_STREAMERS\n");
+						printf("F:FILL_METHOD_1\n");
+						printf("R:30:0\n");
+						printf("R:70:3\n");
+						printf("M:STUPID | WEIRD_MIND | SHAPECHANGER | ATTR_MULTI | CHAR_MULTI | RAND_25 |\n");
+						printf("M:RAND_50 | EMPTY_MIND | INVISIBLE | PASS_WALL | KILL_WALL\n");
+						printf("S:BR_CONF | BR_CHAO | BA_CHAO | CONF | FORGET | TRAPS | MULTIPLY\n");
+						break;
+					case 14:
+						printf("# based on Maze\n", contnum);
+						printf("L:1:100:1:0:1:0\n");
+						printf("A:56:98:48:2:56:0:57:58\n");
+						printf("O:2:40:10:40\n");
+						printf("G:maze\n");
+						printf("F:SMALLEST | FORGET\n");
+						printf("R:80:0\n");
+						printf("R:20:3\n");
+						printf("M:R_CHAR_p\n");
+						break;
+					case 15:
+						printf("# based on Orc Cave\n", contnum);
+						printf("L:88:100:1:0:1:0\n");
+						printf("A:97:100:56:0:56:0:57:97\n");
+						printf("O:5:50:10:25\n");
+						printf("F:RANDOM_TOWNS | \n");
+						printf("F:CAVE |\n");
+						printf("F:FILL_METHOD_0\n");
+						printf("R:30:3\n");
+						printf("M:TROLL\n");
+						printf("R:20:0\n");
+						printf("R:50:3\n");
+						printf("M:ORC | R_CHAR_k | R_CHAR_o | R_CHAR_O\n");
+						break;
+					case 16:
+						printf("# based on Erebor\n", contnum);
+						printf("L:88:100:1:0:1:0\n");
+						printf("A:97:90:87:10:56:0:57:97\n");
+						printf("O:40:40:40:40\n");
+						printf("F:BIG | LAVA_RIVER | CAVERN | NO_STREAMERS\n");
+						printf("F:CAVE | DOUBLE | \n");
+						printf("F:FILL_METHOD_2\n");
+						printf("R:20:0\n");
+						printf("R:55:1\n");
+						printf("M:DRAGON | R_CHAR_D\n");
+						printf("R:25:1\n");
+						printf("M:DRAGON | R_CHAR_d\n");
+						break;
+					case 17:
+						printf("# based on Old Forest\n", contnum);
+						printf("L:88:76:84:16:199:8\n");
+						printf("L:68:16:16\n");
+						printf("A:96:100:56:0:56:0:202:96\n");
+						printf("O:20:5:15:30\n");
+						printf("F:WATER_RIVERS | NO_DOORS | NO_DESTROY | FLAT | NO_STREAMERS\n");
+						printf("F:RANDOM_TOWNS\n");
+						printf("F:FILL_METHOD_3\n");
+						printf("R:30:0\n");
+						printf("R:40:3\n");
+						printf("M:ANIMAL \n");
+						printf("R:30:3\n");
+						printf("M:UNDEAD | R_CHAR_h\n");
+						break;
+					case 18:
+						printf("# based on Moria\n", contnum);
+						printf("L:88:100:1:0:1:0\n");
+						printf("A:97:100:56:0:56:0:57:97\n");
+						printf("O:30:50:10:5\n");
+						printf("F:WATER_RIVER | BIG | NO_STREAMERS\n");
+						printf("F:RANDOM_TOWNS\n");
+						printf("F:WILD_45_30__44_37\n");
+						printf("F:FILL_METHOD_0\n");
+						printf("R:40:3\n");
+						printf("M:ORC\n");
+						printf("R:30:3\n");
+						printf("M:TROLL | GIANT\n");
+						printf("R:20:3\n");
+						printf("M:DEMON\n");
+						printf("R:10:0\n");
+						break;
+					case 19:
+						printf("# based on Dol Guldur\n", contnum);
+						printf("L:1:80:174:20:1:0\n");
+						printf("A:56:100:56:0:56:0:57:58\n");
+						printf("O:20:1:70:9\n");
+						printf("F:SMALL\n");
+						printf("F:FILL_METHOD_3\n");
+						printf("R:30:3\n");
+						printf("M:R_CHAR_p | R_CHAR_P\n");
+						printf("R:10:3\n");
+						printf("M:ORC | TROLL\n");
+						printf("R:20:3\n");
+						printf("M:UNDEAD\n");
+						printf("R:30:3\n");
+						printf("M:DEMON | DRAGON\n");
+						printf("R:10:0\n");
+						break;
+					case 20:
+						printf("# based on Small Water Cave\n", contnum);
+						printf("L:84:100:84:0:84:0\n");
+						printf("A:97:100:56:0:56:0:57:58\n");
+						printf("O:10:10:30:30\n");
+						printf("E:1d1:40:ACID\n");
+						printf("F:FILL_METHOD_0\n");
+						printf("R:10:0\n");
+						printf("R:10:3\n");
+						printf("M:AQUATIC\n");
+						printf("R:40:1\n");
+						printf("M:IM_COLD\n");
+						printf("S:BA_WATE\n");
+						printf("R:40:3\n");
+						printf("M:IM_COLD\n");
+						break;
+					case 21:
+						printf("# based on Sacred Land of Mountains\n", contnum);
+						printf("L:89:100:89:0:89:0\n");
+						printf("A:97:100:56:0:56:0:97:97\n");
+						printf("O:20:20:20:20\n");
+						printf("F:RANDOM_TOWNS | FLAT | NO_STREAMERS\n");
+						printf("F:FILL_METHOD_0\n");
+						printf("R:60:3\n");
+						printf("M:CAN_FLY\n");
+						printf("R:40:0\n");
+						break;
+					case 22:
+						printf("# based on Land of Rhun\n", contnum);
+						printf("L:89:100:1:0:1:0\n");
+						printf("A:89:50:96:25:84:25:57:58\n");
+						printf("O:20:20:20:20\n");
+						printf("F:RANDOM_TOWNS | FLAT | NO_STREAMERS\n");
+						printf("F:FILL_METHOD_1\n");
+						printf("R:30:3\n");
+						printf("M:R_CHAR_p | R_CHAR_h\n");
+						printf("R:30:3\n");
+						printf("M:ANIMAL\n");
+						printf("R:40:0\n");
+						break;
+					case 23:
+						printf("# based on Sandworm Lair\n", contnum);
+						printf("L:91:85:94:10:93:5\n");
+						printf("A:98:100:96:0:84:0:94:94\n");
+						printf("O:15:5:60:20\n");
+						printf("F:NO_DOORS | SAND_VEIN |\n");
+						printf("F:FILL_METHOD_0\n");
+						printf("R:70:3\n");
+						printf("M:R_CHAR_w\n");
+						printf("R:20:3\n");
+						printf("S:MULTIPLY\n");
+						printf("R:10:0\n");
+						break;
+					case 24:
+						printf("# based on Helcaraxe\n", contnum);
+						printf("L:90:0:88:70:84:30\n");
+						printf("L:90:0:10\n");
+						printf("A:95:0:56:100:56:0:57:58\n");
+						printf("A:100:0:0\n");
+						printf("O:20:20:20:20\n");
+						printf("E:1d4:45:COLD\n");
+						printf("F:DOUBLE | WATER_RIVER | CAVERN | NO_STREAMERS\n");
+						printf("F:FILL_METHOD_2\n");
+						printf("R:100:1\n");
+						printf("M:IM_COLD\n");
+						break;
+					case 25:
+						printf("# based on Forodwaith\n", contnum);
+						printf("L:90:20:93:40:88:40\n");
+						printf("A:90:20:93:40:88:40:88:211\n");
+						printf("O:20:20:20:20\n");
+						printf("E:2d4:5:DARK\n");
+						printf("F:NO_DOORS | CAVERN | COLD | NO_DESTROY | EMPTY | FLAT | \n");
+						printf("F:LIFE_LEVEL | NO_STREAMERS | NO_SHAFT | \n");
+						printf("F:FILL_METHOD_4\n");
+						printf("R:100:3\n");
+						printf("M:COLD_BLOOD | HURT_LITE | IM_COLD\n");
+						break;
+					case 26:
+						printf("# based on Emyn Luin\n", contnum);
+						printf("L:89:45:81:5:88:50\n");
+						printf("A:215:100:215:0:215:0:56:211\n");
+						printf("O:50:20:10:30\n");
+						printf("F:CAVE | CAVERN | CIRCULAR_ROOMS | RANDOM_TOWNS | \n");
+						printf("F:NO_STREAMERS | NO_DESTROY \n");
+						printf("F:FILL_METHOD_3\n");
+						printf("R:20:3\n");
+						printf("M:R_CHAR_k | R_CHAR_o\n");
+						printf("R:80:0\n");
+						break;
+					case 27:
+					default:
+						printf("# based on Dol Amroth\n", contnum);
+						printf("L:1:100:1:0:1:0\n");
+						printf("A:56:100:56:0:56:0:57:58\n");
+						printf("O:20:20:20:20\n");
+						printf("F:SMALLEST | NO_DESTROY | TOWER | RANDOM_TOWNS | \n");
+						printf("F:ADJUST_LEVEL_1 | NO_STREAMERS | NO_SHAFT | NO_STAIR | \n");
+						printf("F:NO_EASY_MOVE | FILL_METHOD_2 \n");
+						printf("R:80:3\n");
+						printf("M:R_CHAR_p | R_CHAR_P \n");
+						printf("R:20:3\n");
+						printf("M:SMART | TAKE_ITEM\n");
+						break;
+					case 28:
+						printf("# based on Angmar\n", contnum);
+						printf("L:93:70:174:20:226:10\n");
+						printf("A:214:100:214:0:214:0:214:214\n");
+						printf("O:20:20:20:20\n");
+						printf("E:1d1:5:DISENCHANT\n");
+						printf("F:ADJUST_LEVEL_1_2 | NO_DOORS | NO_STREAMERS | \n");
+						printf("F:HOT | FLAT | NO_SHAFT | CIRCULAR_ROOMS | \n");
+						printf("F:FILL_METHOD_2\n");
+						printf("R:50:0\n");
+						printf("R:50:3\n");
+						printf("M:RES_DISE | UNDEAD | DEMON | NONLIVING \n");
+						break;
+					case 29:
+						printf("# based on Near Harad\n", contnum);
+						printf("L:91:100:91:0:91:0\n");
+						printf("A:91:100:91:0:91:0:98:91\n");
+						printf("O:20:20:20:20\n");
+						printf("E:1d1:5:INERTIA\n");
+						printf("F:NO_DOORS | CAVE | CAVERN | HOT | NO_DESTROY | EMPTY | FLAT\n");
+						printf("F:RANDOM_TOWNS | NO_STREAMERS | NO_SHAFT | \n");
+						printf("F:FILL_METHOD_4 \n");
+						printf("R:30:0\n");
+						printf("R:70:3\n");
+						printf("M:WILD_TOO | R_CHAR_p\n");
+						break;
+					case 30:
+						printf("# based on Isengard\n", contnum);
+						printf("L:88:100:1:0:1:0\n");
+						printf("A:97:100:56:0:56:0:57:97\n");
+						printf("O:20:20:20:20\n");
+						printf("F:CAVE | ADJUST_LEVEL_2 | NO_STREAMERS | \n");
+						printf("F:FILL_METHOD_0\n");
+						printf("R:20:0\n");
+						printf("R:30:3\n");
+						printf("M:TROLL | R_CHAR_T | \n");
+						printf("R:50:3\n");
+						printf("M:ORC | R_CHAR_o | R_CHAR_O\n");
+						break;
+					case 31:
+						printf("# based on Tol Eressea\n", contnum);
+						printf("L:84:60:222:40:222:0\n");
+						printf("A:211:100:211:0:211:0:211:211\n");
+						printf("O:1:1:1:1\n");
+						printf("F:SMALLEST | NO_DOORS | NO_DESTROY | EMPTY | FLAT | \n");
+						printf("F:ADJUST_LEVEL_1 | NO_STREAMERS | NO_SHAFT | \n");
+						printf("F:FILL_METHOD_0\n");
+						printf("R:15:0\n");
+						printf("R:85:1\n");
+						printf("M:R_CHAR_B\n");
+						break;
+					case 32:
+						printf("# based on Utumno\n", contnum);
+						printf("L:1:100:1:0:1:0\n");
+						printf("A:56:100:56:0:56:0:57:58\n");
+						printf("O:20:20:20:20\n");
+						printf("F:CAVERN | NO_EASY_MOVE \n");
+						printf("F:ADJUST_LEVEL_1_2 | ADJUST_LEVEL_1 \n");
+						printf("F:FILL_METHOD_0 \n");
+						printf("R:100:0\n");
+						break;
+					case 33:
+						printf("# based on Eru Temple\n", contnum);
+						printf("L:88:70:89:30:1:0\n");
+						printf("L:10:90:0\n");
+						printf("A:97:100:56:0:56:0:57:97\n");
+						printf("O:45:5:45:5\n");
+						printf("F:FILL_METHOD_2 | BIG | NO_DOORS | CIRCULAR_ROOMS | EMPTY | TOWER | FLAT\n");
+						printf("F:ADJUST_LEVEL_2 | ADJUST_LEVEL_1_2 | NO_SHAFT\n");
+						printf("R:100:3\n");
+						printf("M:EVIL | CAN_FLY\n");
+						break;
+					case 34:
+						printf("# based on Manwe Temple\n", contnum);
+						printf("L:208:85:209:15:1:0\n");
+						printf("A:211:100:56:0:56:0:210:211\n");
+						printf("O:15:25:5%:5\n");
+						printf("F:FILL_METHOD_4 | NO_DOORS | TOWER | CAVERN | ADJUST_LEVEL_2 | NO_SHAFT\n");
+						printf("R:100:3\n");
+						printf("M:INVISIBLE | ORC | IM_POIS | CAN_FLY\n");
+						printf("S:BR_POIS | BR_GRAV | BA_POIS\n");
+						break;
+					case 35:
+						printf("# based on Tulkas Temple\n", contnum);
+						printf("L:1:100:1:0:1:0\n");
+						printf("A:56:100:56:0:56:0:58:57\n");
+						printf("O:10:70:5:15\n");
+						printf("F:FILL_METHOD_0 | NO_DESTROY | ADJUST_LEVEL_2\n");
+						printf("R:100:3\n");
+						printf("M:DEMON | EVIL\n");
+						break;
+					case 36:
+						printf("# based on Melkor Temple\n", contnum);
+						printf("L:88:45:94:45:102:10\n");
+						printf("L:35:35:30\n");
+						printf("A:188:100:56:0:56:0:188:57\n");
+						printf("O:25:25:25:25\n");
+						printf("F:FILL_METHOD_1 | SMALL | LAVA_RIVERS | ADJUST_LEVEL_1 | ADJUST_LEVEL_1_2\n");
+						printf("R:100:3\n");
+						printf("M:GOOD | EVIL\n");
+						break;
+					case 37:
+						printf("# based on AmyBSOD Temple\n", contnum);
+						printf("L:88:45:94:45:102:10\n");
+						printf("L:35:35:30\n");
+						printf("A:188:100:56:0:56:0:188:57\n");
+						printf("O:25:25:25:25\n");
+						printf("F:FILL_METHOD_1 | LAVA_RIVERS | BIG | ADJUST_LEVEL_2\n");
+						printf("R:100:3\n");
+						printf("M:GOOD | EVIL | ELDRITCH_HORROR\n");
+						break;
+					case 38:
+						printf("# based on Yavanna Temple\n", contnum);
+						printf("L:89:40:199:15:88:45\n");
+						printf("A:96:100:56:0:56:0:202:96\n");
+						printf("O:20:10:30:40\n");
+						printf("F:FILL_METHOD_1 | NO_DOORS | WATER_RIVERS | NO_DESTROY | ADJUST_LEVEL_1\n");
+						printf("F:ADJUST_LEVEL_1_2 | NO_SHAFT | NO_GENO\n");
+						printf("R:100:3\n");
+						printf("M:DEMON | UNDEAD | NONLIVING\n");
+						break;
+					case 39:
+						printf("# based on Aule Temple\n", contnum);
+						printf("L:88:45:94:45:84:10\n");
+						printf("L:35:35:30\n");
+						printf("A:216:100:56:0:56:0:216:213\n");
+						printf("O:0:50:0:50\n");
+						printf("F:FILL_METHOD_1 | SMALL | NO_DESTROY | ADJUST_LEVEL_1 | NO_STREAMERS\n");
+						printf("R:100:0\n");
+						break;
+					case 40:
+						printf("# based on Varda Temple\n", contnum);
+						printf("L:89:85:82:15:1:0\n");
+						printf("A:211:100:56:0:56:0:210:211\n");
+						printf("O:15:5:55:25\n");
+						printf("F:FILL_METHOD_4 | NO_DOORS | TOWER | CAVERN | ADJUST_LEVEL_1 | NO_SHAFT\n");
+						printf("R:100:3\n");
+						printf("M:EMPTY_MIND | ORC | IM_POIS | CAN_FLY | WILD_VOLCANO\n");
+						printf("S:BR_POIS | BR_GRAV | BA_POIS\n");
+						break;
+					case 41:
+						printf("# based on Ulmo Temple\n", contnum);
+						printf("L:88:100:1:0:1:0\n");
+						printf("A:187:100:56:0:56:0:238:84\n");
+						printf("O:90:0:5:5\n");
+						printf("F:FILL_METHOD_0 | NO_DESTROY | ADJUST_LEVEL_2\n");
+						printf("R:100:3\n");
+						printf("M:RES_WATE | CAN_FLY | AQUATIC\n");
+						break;
+					case 42:
+						printf("# based on Mandos Temple\n", contnum);
+						printf("L:1:100:1:0:1:0\n");
+						printf("A:56:100:56:0:56:0:58:57\n");
+						printf("O:10:70:5:15\n");
+						printf("F:FILL_METHOD_0 | NO_DESTROY | ADJUST_LEVEL_2\n");
+						printf("R:100:3\n");
+						printf("M:UNDEAD | EVIL | R_CHAR_V\n");
+						break;
+				}
 			}
 
 		}
