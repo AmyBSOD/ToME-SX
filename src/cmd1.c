@@ -3579,6 +3579,15 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 			{
 				py_attack(y, x, -1);
 			}
+
+			/* note by Amy: if you stop upon moving into known traps, that should apply when displacing, too... */
+			else if (disarm && (c_ptr->info & (CAVE_TRDT)) && !(p_ptr->confused || p_ptr->stun || p_ptr->image))
+			{
+				msg_print("You stop to avoid triggering the trap.");
+				energy_use = 0;
+				oktomove = FALSE;
+			}
+
 			else if (cave_floor_bold(p_ptr->py, p_ptr->px) ||
 			                (mr_ptr->flags2 & RF2_PASS_WALL))
 			{
