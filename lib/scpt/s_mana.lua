@@ -10,7 +10,7 @@ MANATHRUST = add_spell
 	["school"] = 	SCHOOL_MANA,
 	["level"] = 	1,
 	["mana"] = 	1,
-	["mana_max"] =  25,
+	["mana_max"] =  35,
 	["fail"] = 	10,
 	["stick"] =
 	{

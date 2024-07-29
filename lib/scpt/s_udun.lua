@@ -69,8 +69,8 @@ GENOCIDE = add_spell
 	["name"] = 	"Genocide",
 	["school"] = 	{SCHOOL_UDUN, SCHOOL_NATURE},
 	["level"] = 	25,
-	["mana"] = 	50,
-	["mana_max"] = 	50,
+	["mana"] = 	200,
+	["mana_max"] = 	200,
 	["fail"] = 	90,
 	["stick"] =
 	{
@@ -86,7 +86,7 @@ GENOCIDE = add_spell
 			local type
 
 			type = 0
-			if get_level(GENOCIDE) >= 10 then type = 1 end
+			if get_level(GENOCIDE) >= 40 then type = 1 end
 			if type == 0 then
 				genocide(TRUE)
 				return TRUE
@@ -104,7 +104,7 @@ GENOCIDE = add_spell
 	end,
 	["desc"] =	{
 			"Genocides all monsters of a race on the level",
-			"At level 10 it can genocide all monsters near you"
+			"At level 40 it can genocide all monsters near you"
 	}
 }
 

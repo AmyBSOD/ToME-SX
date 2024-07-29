@@ -53,7 +53,7 @@ FIREFLASH = add_spell
 	["school"] =    {SCHOOL_FIRE},
 	["level"] =     10,
 	["mana"] =      5,
-	["mana_max"] =  70,
+	["mana_max"] =  100,
 	["fail"] =      35,
 	["stick"] =
 	{
@@ -128,7 +128,7 @@ FIREWALL = add_spell
 	["school"] =    {SCHOOL_FIRE},
 	["level"] =     15,
 	["mana"] =      25,
-	["mana_max"] =  100,
+	["mana_max"] =  120,
 	["fail"] =      40,
 	["stick"] =
 	{

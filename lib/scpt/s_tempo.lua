@@ -23,7 +23,7 @@ MAGELOCK = add_spell
 			if get_level(MAGELOCK, 50) >= 30 then
 				local ret, x, y, c_ptr
 
-				if get_level(MAGELOCK, 50) >= 40 then
+				if get_level(MAGELOCK, 50) >= 60 then
 					ret, x, y = tgt_pt()
 					if ret == FALSE then return end
 					if cave_is(cave(y, x), FF1_FLOOR) == FALSE or cave_is(cave(y, x), FF1_PERMANENT) == TRUE or los(player.py, player.px, y, x) == FALSE then
@@ -48,7 +48,7 @@ MAGELOCK = add_spell
 	["desc"] =	{
 			"Magically locks a door",
 			"At level 30 it creates a glyph of warding",
-			"At level 40 the glyph can be placed anywhere in the field of vision"
+			"At level 60 the glyph can be placed anywhere in the field of vision"
 	}
 }
 
