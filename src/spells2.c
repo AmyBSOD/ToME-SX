@@ -8368,7 +8368,11 @@ bool reset_recall(bool no_trepas_max_depth)
 	                            d_info[dun].mindepth, max),
 	                     max);
 
-	if (depth < 1) return FALSE;
+	if (depth < 1) {
+		msg_print("Depth is too low, or the dungeon hasn't been visited yet.");
+		msg_print(NULL);
+		return FALSE;
+	}
 
 	/* Enforce minimum level */
 	if (depth < d_info[dun].mindepth) depth = d_info[dun].mindepth;
