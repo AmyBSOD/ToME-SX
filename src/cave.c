@@ -984,7 +984,7 @@ void map_info(int y, int x, byte *ap, char *cp)
 		}
 
 		/* Mega-Hack 3 -- Traps don't have f_info entries either */
-		if ((info & (CAVE_TRDT)) && (feat != FEAT_ILLUS_WALL))
+		if ((info & (CAVE_TRDT)) /*&& (feat != FEAT_ILLUS_WALL)*/)
 		{
 			/* Trap index */
 			t_idx = c_ptr->t_idx;
@@ -1662,7 +1662,7 @@ void map_info_default(int y, int x, byte *ap, char *cp)
 		}
 
 		/* Mega-Hack 3 -- Traps don't have f_info entries either */
-		if ((info & (CAVE_TRDT)) && (feat != FEAT_ILLUS_WALL))
+		if ((info & (CAVE_TRDT)) /*&& (feat != FEAT_ILLUS_WALL)*/)
 		{
 			/* Trap index */
 			t_idx = c_ptr->t_idx;
