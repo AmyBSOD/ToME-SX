@@ -3477,6 +3477,8 @@ static void process_world(void)
 				{
 					msg_print("You feel yourself yanked upwards!");
 
+					if (old_turn > 0) old_turn = 0;
+
 					p_ptr->recall_dungeon = dungeon_type;
 					dungeon_type = DUNGEON_WILDERNESS;
 					dun_level = 0;
@@ -3489,6 +3491,8 @@ static void process_world(void)
 				else
 				{
 					msg_print("You feel yourself yanked downwards!");
+
+					if (old_turn > 0) old_turn = 0;
 
 					/* New depth */
 					dungeon_type = p_ptr->recall_dungeon;
