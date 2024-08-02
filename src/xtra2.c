@@ -4199,14 +4199,14 @@ void monster_death(int m_idx)
 			/* Drop it in the dungeon */
 			drop_near(q_ptr, -1, y, x);
 		}
-		else if ((r_ptr->flags7 & RF7_NAZGUL) && !(r_ptr->flags8 & RF8_WILD_TOO) )
+		else if ((r_ptr->flags7 & RF7_NAZGUL) && !(r_info[860].max_num) && !(r_ptr->flags8 & RF8_WILD_TOO) )
 		{
 			/* Get local object */
 			q_ptr = &forge;
 
 			object_wipe(q_ptr);
 
-			/* Mega-Hack -- Prepare to make a Ring of Power */
+			/* Mega-Hack -- Prepare to make a Ring of Power, but only if Sauron is dead (prevents farming --Amy) */
 			object_prep(q_ptr, lookup_kind(TV_RING, SV_RING_SPECIAL));
 			q_ptr->number = 1;
 
