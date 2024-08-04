@@ -14,6 +14,7 @@ store_buy_list
 		TV_DIGGING,
 		TV_CLOAK,
 		TV_BOTTLE,
+		TV_TRAPKIT,
 	},
 	["Common Shop"] =
 	{
@@ -28,6 +29,7 @@ store_buy_list
 		TV_DIGGING,
 		TV_CLOAK,
 		TV_BOTTLE,
+		TV_TRAPKIT,
 	},
 	["Mining Supply store"] =
 	{
@@ -42,6 +44,7 @@ store_buy_list
 		TV_DIGGING,
 		TV_CLOAK,
 		TV_BOTTLE,
+		TV_TRAPKIT,
 	},
 	["Armoury"] =
 	{
@@ -262,6 +265,22 @@ store_buy_list
 		TV_MUSIC_BOOK,
 		TV_DAEMON_BOOK,
 		TV_DRUID_BOOK,
+		TV_INSTRUMENT,
+	},
+	["Wand Shop"] =
+	{
+		TV_ROD,
+		TV_ROD_MAIN,
+		TV_WAND,
+		TV_STAFF,
+	},
+	["Misc Shop"] =
+	{
+		TV_MSTAFF,
+		TV_EGG,
+		TV_INSTRUMENT,
+		TV_TRAPKIT,
+		TV_FOOD,
 	},
 	["Library"] =
 	{
@@ -270,6 +289,7 @@ store_buy_list
 		TV_MUSIC_BOOK,
 		TV_DAEMON_BOOK,
 		TV_DRUID_BOOK,
+		TV_INSTRUMENT,
 	},
 	["Forbidden Library"] =
 	{
@@ -278,6 +298,7 @@ store_buy_list
 		TV_MUSIC_BOOK,
 		TV_DAEMON_BOOK,
 		TV_DRUID_BOOK,
+		TV_INSTRUMENT,
 	},
 	["Pet Shop"] =
 	{

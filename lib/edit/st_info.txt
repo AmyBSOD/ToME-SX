@@ -14,12 +14,16 @@
 # Some store indexes are defined in "defines.h", and must not be
 # changed.
 
-# N:<index>:<name>
-# I:<proba>:<item name>
-# T:<proba>:<tval>:<sval>
-# G:char:attr
-# W:max number of items in the store
+# Amy note: ***ALWAYS*** keep stores.lua in sync when adding new shops !!!!!!!!!!!!!!!!
 
+# N:<index>:<name>
+# I:<proba>:<item name> - for making the store sell a specific item
+# T:<proba>:<tval>:<sval> - for making the store sell a TV_something item class (sval 256 = wildcard?)
+# G:char:attr - graphics
+# A:values - actions that you can perform in the store
+# W:max number of items in the store
+# F:flags
+# O:possible owners
 # proba is the chance(out of 100) of the item being generated
 
 # Version stamp (required)
@@ -289,6 +293,7 @@ N:7:Home
 A:0:0:54:55:3:0
 O:0:0:0:0
 G:8:y
+F:RANDOM
 W:255
 
 N:8:Book Store
@@ -314,7 +319,7 @@ I:100:& Hard Biscuit~
 A:0:0:1:2:3:4
 O:46:47:48:49
 G:+:b
-F:MEDIUM_LEVEL
+F:MEDIUM_LEVEL | RANDOM
 W:12
 
 N:10:Mayor's Office
@@ -333,6 +338,7 @@ T:5:80:256
 A:2:4:5:6:7:0
 O:2:2:18:18
 G:+:w
+F:RANDOM
 W:255
 
 N:12:The Soothsayer
@@ -365,6 +371,7 @@ N:15:Casino
 A:13:0:9:10:0:12
 O:17:17:17:17
 G:+:s
+F:RANDOM
 W:0
 
 N:16:Beastmaster Shanty
@@ -410,6 +417,7 @@ N:22:Thunderlords' Nest
 A:0:0:33:2:34:0
 O:25:25:25:25
 G:+:U
+F:RANDOM
 W:0
 
 N:23:The Mirror
@@ -768,4 +776,39 @@ A:61:0:14:15:16:2
 O:4:4:4:4
 G:+:U
 W:2
+
+N:61:Wand Shop
+T:100:55:256
+T:100:65:256
+T:100:66:256
+T:100:67:256
+A:0:0:1:2:3:4
+O:34:35:36:37
+G:6:v
+F:RANDOM | MEDIUM_LEVEL | DEPEND_LEVEL
+F:VERY_RARE
+W:255
+
+N:62:Misc Shop
+T:100:6:256
+T:100:10:256
+T:100:14:256
+T:100:46:256
+T:100:80:256
+A:0:0:1:2:3:4
+O:0:5:6:7
+G:1:v
+F:RANDOM | SHALLOW_LEVEL | DEPEND_LEVEL
+F:VERY_RARE
+W:255
+
+# N:<index>:<name>
+# I:<proba>:<item name> - for making the store sell a specific item
+# T:<proba>:<tval>:<sval> - for making the store sell a TV_something item class (sval 256 = wildcard?)
+# G:char:attr - graphics
+# A:values - actions that you can perform in the store
+# W:max number of items in the store
+# F:flags
+# O:possible owners
+# proba is the chance(out of 100) of the item being generated
 
