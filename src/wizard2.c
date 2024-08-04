@@ -630,6 +630,12 @@ tval_desc2 tvals[] =
 	{ TV_RUNE2, "Rune 2" },
 	{ TV_JUNK, "Junk" },
 	{ TV_TRAPKIT, "Trapping Kit" },
+	{ TV_SKELETON, "Skeleton" },
+	{ TV_BOTTLE, "Bottle" },
+	{ TV_CORPSE, "Corpse" },
+	{ TV_EGG, "Egg" },
+	{ TV_TOOL, "Tool" },
+	{ TV_RANDART, "Randart" },
 	{ 0, NULL }
 };
 
