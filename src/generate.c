@@ -2037,6 +2037,78 @@ bool room_alloc(int width, int height, bool crowded, int by0, int bx0, int *cx, 
 	return (TRUE);
 }
 
+bool room_alloc_princ(int width, int height, bool crowded, int by0, int bx0, int *cx, int *cy)
+{
+	int temp, eby, ebx, by, bx;
+
+	/* Calculate number of room_map squares to allocate */
+
+	/* Total number along width */
+	temp = ((width - 1) / BLOCK_WID) + 1;
+
+	for (ebx = bx0 + temp; bx0 > 0 && ebx > dun->col_rooms; bx0--, ebx--);
+
+	if (ebx > dun->col_rooms) {
+		/*msg_format("dun col rooms exceeded (%d greater than %d)", ebx, dun->col_rooms);*/
+
+		return (FALSE);
+	}
+
+	/* Total number along height */
+	temp = ((height - 1) / BLOCK_HGT) + 1;
+
+	for (eby = by0 + temp; by0 > 0 && eby > dun->row_rooms; by0--, eby--);
+
+	/* Never run off the screen */
+	if (eby > dun->row_rooms) {
+		/*msg_format("dun row rooms exceeded (%d greater than %d)", ebx, dun->row_rooms);*/
+
+		return (FALSE);
+	}
+
+	/* Don't verify open space */
+
+	/*
+	 * It is *extremely* important that the following calculation
+	 * be *exactly* correct to prevent memory errors XXX XXX XXX
+	 */
+
+	/* Acquire the location of the room */
+	*cy = ((by0 + eby) * BLOCK_HGT) / 2;
+	*cx = ((bx0 + ebx) * BLOCK_WID) / 2;
+
+	/* Save the room location */
+	if (dun->cent_n < CENT_MAX)
+	{
+		dun->cent[dun->cent_n].y = *cy;
+		dun->cent[dun->cent_n].x = *cx;
+		dun->cent_n++;
+	}
+
+	/* Reserve some blocks */
+	for (by = by0; by < eby; by++)
+	{
+		for (bx = bx0; bx < ebx; bx++)
+		{
+			dun->room_map[by][bx] = TRUE;
+		}
+	}
+
+	/* Count "crowded" rooms */
+	if (crowded) dun->crowded = TRUE;
+
+	/*
+	 * Hack -- See if room will cut off a cavern.
+	 * If so, fix by tunneling outside the room in such a way as
+	 * to conect the caves.
+	 */
+	check_room_boundary(*cx - width / 2 - 1, *cy - height / 2 - 1,
+	                    *cx + width / 2 + 1, *cy + height / 2 + 1);
+
+	/* Success */
+	return (TRUE);
+}
+
 /*
  * Room building routines.
  *

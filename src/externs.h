@@ -949,6 +949,7 @@ extern bool level_generate_dungeon(cptr name);
 extern bool generate_fracave(int y0, int x0,int xsize,int ysize,int cutoff,bool light,bool room);
 extern void generate_hmap(int y0, int x0,int xsiz,int ysiz,int grd,int roug,int cutoff);
 extern bool room_alloc(int x,int y,bool crowded,int by0,int bx0,int *xx,int *yy);
+extern bool room_alloc_princ(int x,int y,bool crowded,int by0,int bx0,int *xx,int *yy);
 extern void generate_grid_mana(void);
 extern byte calc_dungeon_type(void);
 extern void generate_cave(void);

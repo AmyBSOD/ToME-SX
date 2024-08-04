@@ -341,7 +341,11 @@ bool quest_random_gen_hook(char *fmt)
 	process_dungeon_file_full = FALSE;
 
 	/* Try to allocate space for room.  If fails, exit */
-	if (!room_alloc(xsize + 2, ysize + 2, FALSE, by0, bx0, &xval, &yval)) return FALSE;
+	if (!room_alloc_princ(xsize + 2, ysize + 2, FALSE, by0, bx0, &xval, &yval)) {
+		/* return FALSE; */
+		yval = 2;
+		xval = 2;
+	}
 
 	/* Get corner values */
 	y1 = yval - ysize / 2;
