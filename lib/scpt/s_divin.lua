@@ -100,7 +100,7 @@ VISION = add_spell
 	},
 	["inertia"] = 	{ 2, 200 },
 	["spell"] = 	function()
-			if get_level(VISION, 50) >= 25 then
+			if get_level(VISION, 50) >= 60 then
 				wiz_lite_extra()
 			else
 				map_area()
@@ -112,7 +112,7 @@ VISION = add_spell
 	end,
 	["desc"] =	{
 			"Detects the layout of the surrounding area",
-			"At level 25 it maps and lights the whole level",
+			"At level 60 it maps and lights the whole level",
 	}
 }
 

@@ -74,10 +74,10 @@ FIREFLASH = add_spell
 		end
 		ret, dir = get_aim_dir()
 		if ret == FALSE then return end
-		return fire_ball(type, dir, 20 + get_level(FIREFLASH, 500), 2 + get_level(FIREFLASH, 5))
+		return fire_ball(type, dir, 20 + get_level(FIREFLASH, 500), 2 + get_level(FIREFLASH, 3))
 	end,
 	["info"] =      function()
-		return "dam "..(20 + get_level(FIREFLASH, 500)).." rad "..(2 + get_level(FIREFLASH, 5))
+		return "dam "..(20 + get_level(FIREFLASH, 500)).." rad "..(2 + get_level(FIREFLASH, 3))
 	end,
 	["desc"] =      {
 			"Conjures a ball of fire to burn your foes to ashes",
