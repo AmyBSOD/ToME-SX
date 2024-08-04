@@ -2031,7 +2031,9 @@ bool detect_traps(int rad)
 	 * item is used and return FALSE there are none,
 	 * followed by current implementation --pelpel
 	 */
-	p_ptr->redraw |= (PR_DTRAP);
+	if (!(dun_level && (dungeon_flags1 & DF1_FORGET)) ) {
+		p_ptr->redraw |= (PR_DTRAP);
+	}
 
 	/* Result -- see my comment above -- pelpel */
 	/* return (detect); */
@@ -2086,7 +2088,9 @@ bool detect_doors(int rad)
 				/* c_ptr->mimic = 0; */
 
 				/* Redraw */
-				lite_spot(y, x);
+				if (!(dun_level && (dungeon_flags1 & DF1_FORGET)) ) {
+					lite_spot(y, x);
+				}
 
 				/* Obvious */
 				detect = TRUE;
@@ -2140,7 +2144,9 @@ bool detect_stairs(int rad)
 				c_ptr->info |= (CAVE_MARK);
 
 				/* Redraw */
-				lite_spot(y, x);
+				if (!(dun_level && (dungeon_flags1 & DF1_FORGET)) ) {
+					lite_spot(y, x);
+				}
 
 				/* Obvious */
 				detect = TRUE;
@@ -2204,7 +2210,9 @@ bool detect_treasure(int rad)
 				c_ptr->info |= (CAVE_MARK);
 
 				/* Redraw */
-				lite_spot(y, x);
+				if (!(dun_level && (dungeon_flags1 & DF1_FORGET)) ) {
+					lite_spot(y, x);
+				}
 
 				/* Detect */
 				detect = TRUE;
@@ -2277,7 +2285,9 @@ bool detect_objects_gold(int rad)
 			o_ptr->marked = TRUE;
 
 			/* Redraw */
-			if (panel_contains(y, x)) lite_spot(y, x);
+			if (!(dun_level && (dungeon_flags1 & DF1_FORGET)) ) {
+				if (panel_contains(y, x)) lite_spot(y, x);
+			}
 
 			/* Detect */
 			detect = TRUE;
@@ -2350,7 +2360,9 @@ bool detect_objects_normal(int rad)
 			o_ptr->marked = TRUE;
 
 			/* Redraw */
-			if (panel_contains(y, x)) lite_spot(y, x);
+			if (!(dun_level && (dungeon_flags1 & DF1_FORGET)) ) {
+				if (panel_contains(y, x)) lite_spot(y, x);
+			}
 
 			/* Detect */
 			detect = TRUE;
@@ -2438,7 +2450,9 @@ bool detect_objects_magic(int rad)
 			o_ptr->marked = TRUE;
 
 			/* Redraw */
-			if (panel_contains(y, x)) lite_spot(y, x);
+			if (!(dun_level && (dungeon_flags1 & DF1_FORGET)) ) {
+				if (panel_contains(y, x)) lite_spot(y, x);
+			}
 
 			/* Detect */
 			detect = TRUE;
