@@ -1273,7 +1273,8 @@ bool carried_make_attack_normal(int r_idx)
 				/* Critical hit (zero if non-critical) */
 				tmp = monster_critical(d_dice, d_side, damage);
 
-				/* Roll for damage */
+				/* Roll for damage
+				 * Amy note: holy shit those values were faaaaaaar too high! technical instadeath galore! */
 				switch (tmp)
 				{
 				case 0:
@@ -1286,19 +1287,19 @@ bool carried_make_attack_normal(int r_idx)
 					k = randint(10) + 10;
 					break;
 				case 3:
-					k = randint(20) + 20;
+					k = randint(15) + 15;
 					break;
 				case 4:
-					k = randint(30) + 30;
+					k = randint(20) + 20;
 					break;
 				case 5:
-					k = randint(40) + 40;
+					k = randint(25) + 25;
 					break;
 				case 6:
-					k = 100;
+					k = randint(30) + 30;
 					break;
 				default:
-					k = 200;
+					k = randint(32) + 32;
 					break;
 				}
 
@@ -2956,19 +2957,19 @@ bool make_attack_normal(int m_idx, byte divis)
 					k = randint(10) + 10;
 					break;
 				case 3:
-					k = randint(20) + 20;
+					k = randint(15) + 15;
 					break;
 				case 4:
-					k = randint(30) + 30;
+					k = randint(20) + 20;
 					break;
 				case 5:
-					k = randint(40) + 40;
+					k = randint(25) + 25;
 					break;
 				case 6:
-					k = 100;
+					k = randint(30) + 30;
 					break;
 				default:
-					k = 200;
+					k = randint(32) + 32;
 					break;
 				}
 

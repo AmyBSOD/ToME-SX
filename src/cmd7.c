@@ -432,7 +432,7 @@ void do_cmd_mindcraft(void)
 			}
 			else if (b < 90)
 			{
-				set_stun(p_ptr->stun + randint(8));
+				set_stun(p_ptr->stun + randint(30));
 			}
 			else
 			{
@@ -980,7 +980,7 @@ void do_cmd_mimic(void)
 			}
 			else
 			{
-				set_stun(p_ptr->stun + randint(8));
+				set_stun(p_ptr->stun + randint(30));
 			}
 		}
 	}

@@ -1757,7 +1757,7 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 	{
 
 		msg_print("You stagger...");
-		(void)set_stun(p_ptr->stun + rand_int(10) );
+		(void)set_stun(p_ptr->stun + rand_int(30) );
 		return;
 	}
 

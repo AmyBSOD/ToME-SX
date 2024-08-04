@@ -469,7 +469,7 @@ void do_fart_effect(void)
 	case 56:
 		{
 			msg_format("You stagger...");
-			(void)set_stun(p_ptr->stun + randint(20));
+			(void)set_stun(p_ptr->stun + randint(40));
 			break;
 		}
 
