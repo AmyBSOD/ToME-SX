@@ -6793,6 +6793,30 @@ W:50:0:3:100000
 A:50/200
 D:If you die while wearing this amulet, it gets used up and revives you!
 
+N:852:& Water Dragon Scale Mail~
+G:[:w
+I:38:31:0
+W:60:0:200:50000
+A:60/8
+P:30:2d4:-2:0:10
+a:HARDCORE=BR_ACID
+F:RES_WATER | FLY |
+f:RES_WATER |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:An armour made of a water dragon's hide, containing some of this beast's powers.
+
+N:853:& Inertia Dragon Scale Mail~
+G:[:o
+I:38:32:0
+W:60:0:200:50000
+A:60/8
+P:30:2d4:-2:0:10
+a:HARDCORE=BR_CONF
+F:RES_INERTIA | FLY |
+f:RES_INERTIA |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:An armour made of an inertia dragon's hide, containing some of this beast's powers.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
