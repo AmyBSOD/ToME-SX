@@ -122,6 +122,7 @@ extern bool character_dungeon;
 extern bool character_loaded;
 extern bool character_saved;
 extern bool character_icky;
+extern bool four_dim_mode;
 extern bool character_xtra;
 extern u32b seed_flavor;
 extern u32b seed_town;
@@ -1448,6 +1449,7 @@ extern void store_examine(void);
 extern void store_stole(void);
 extern void store_prt_gold(void);
 extern void store_request_item(void);
+extern void do_cmd_four_dimensional(void);
 
 /* bldg.c -KMW- */
 extern bool bldg_process_command(store_type *s_ptr, int i);

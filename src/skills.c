@@ -1056,6 +1056,9 @@ void do_cmd_activate_skill()
 	case MKEY_PIERCING:
 		do_cmd_set_piercing();
 		break;
+	case MKEY_FOUR_DIM:
+		do_cmd_four_dimensional();
+		break;
 	default:
 		process_hooks(HOOK_MKEY, "(d)", x_idx);
 		break;

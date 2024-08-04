@@ -575,6 +575,12 @@ D:Increases sale value of items
 I:0
 F:RANDOM_GAIN
 
+N:70:Four-dimensional
+D:Allows you to use a 4-dimensional pocket
+A:24:Use Four-dimensional Pocket
+I:1000
+F:RANDOM_GAIN
+
 f:Possession:Monster-lore%10
 f:Corpse-preservation:Monster-lore%10
 f:Summoning:Monster-lore%10
@@ -658,3 +664,4 @@ T:Monster-lore:Clear-mind
 T:Main:Misc
 T:Misc:Clear-mind
 T:Misc:Haggling
+T:Misc:Four-dimensional

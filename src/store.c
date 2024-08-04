@@ -840,6 +840,48 @@ static bool store_check_num(object_type *o_ptr)
 	return (FALSE);
 }
 
+static bool store_check_fourdim(object_type *o_ptr)
+{
+	int i;
+	object_type *j_ptr;
+	int fourdimlevel = get_skill(SKILL_FOUR_DIM);
+
+	/* Free space is always usable */
+	if (st_ptr->stock_num < fourdimlevel) return TRUE;
+
+	/* The "home" acts like the player */
+	if ((cur_store_num == 7) ||
+	                (st_info[st_ptr->st_idx].flags1 & SF1_MUSEUM))
+	{
+		/* Check all the items */
+		for (i = 0; i < st_ptr->stock_num; i++)
+		{
+			/* Get the existing item */
+			j_ptr = &st_ptr->stock[i];
+
+			/* Can the new object be combined with the old one? */
+			if (object_similar(j_ptr, o_ptr)) return (TRUE);
+		}
+	}
+
+	/* Normal stores do special stuff */
+	else
+	{
+		/* Check all the items */
+		for (i = 0; i < st_ptr->stock_num; i++)
+		{
+			/* Get the existing item */
+			j_ptr = &st_ptr->stock[i];
+
+			/* Can the new object be combined with the old one? */
+			if (store_object_similar(j_ptr, o_ptr)) return (TRUE);
+		}
+	}
+
+	/* But there was no room at the inn... */
+	return (FALSE);
+}
+
 
 bool is_blessed(object_type *o_ptr)
 {
@@ -1738,7 +1780,11 @@ void display_store(void)
 		                (p_ptr->town_num == TOWN_RANDOM)) put_str("Hole Contents", 3, 30);
 		else
 #endif
+		if (four_dim_mode) {
+			put_str("4D Pocket", 3, 30);
+		} else {
 			put_str("Your Home", 3, 30);
+		}
 
 		/* Label the item descriptions */
 		put_str("Item Description", 5, 3);
@@ -2745,6 +2791,12 @@ void store_purchase(void)
 		return;
 	}
 
+	if (four_dim_mode) {
+		if (wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].terrain_idx != TERRAIN_TOWN) {
+			msg_print("Taking items out of the 4D pocket only works while in a town!");
+			return;
+		}
+	}
 
 	/* Find the number of objects on this and following pages */
 	i = (st_ptr->stock_num - store_top);
@@ -3222,6 +3274,13 @@ void store_sell(void)
 		else if (museum) msg_print("The museum is full.");
 		else msg_print("I have not the room in my store to keep it.");
 		return;
+	}
+
+	if (four_dim_mode) { /* four-dimensional */
+		if (!store_check_fourdim(q_ptr)) {
+			msg_print("Your 4D pocket is full.");
+			return;
+		}
 	}
 
 
@@ -4703,3 +4762,255 @@ void store_request_item(void)
 
 	st_ptr = ost_ptr;
 }
+
+/* Amy: 4D pocket */
+void do_cmd_four_dimensional(void)
+{
+	int fourdimlevel = get_skill(SKILL_FOUR_DIM);
+	if (fourdimlevel < 1) {
+		msg_print("You don't have enough skill to use that.");
+		msg_print(NULL);
+		return;
+	}
+
+	if (fourdimlevel > p_ptr->csp) {
+		msg_print("Not enough mana.");
+		msg_print(NULL);
+		return;
+	}
+
+	if (fourdimlevel <= p_ptr->csp)
+	{
+		/* Use some mana */
+		p_ptr->csp -= fourdimlevel;
+	}
+
+	int which;
+	int tmp_chr;
+	int i;
+
+	/* Extract the store code */
+	which = 7;
+
+	/* Forget the view */
+	forget_view();
+
+
+	/* Hack -- Character is in "icky" mode */
+	character_icky = TRUE;
+
+
+	/* No command argument */
+	command_arg = 0;
+
+	/* No repeated command */
+	command_rep = 0;
+
+	/* No automatic command */
+	command_new = 0;
+
+
+	/* Save the store number */
+	cur_store_num = which;
+
+	/* Save the store and owner pointers */
+	st_ptr = &town_info[TOWN_FOURDIM].store[STORE_HOME];
+	ot_ptr = &ow_info[st_ptr->owner];
+
+	four_dim_mode = TRUE;
+
+	/* Start at the beginning */
+	store_top = 0;
+
+	/* Display the store */
+	display_store();
+
+	/* Mega-Hack -- Ignore keymaps on store action letters */
+	for (i = 0; i < 6; i++)
+	{
+		store_action_type *ba_ptr =
+			&ba_info[st_info[st_ptr->st_idx].actions[i]];
+		request_command_ignore_keymaps[2*i] = ba_ptr->letter;
+		request_command_ignore_keymaps[2*i+1] = ba_ptr->letter_aux;
+	}
+
+	/* Do not leave */
+	leave_store = FALSE;
+
+	/* Interact with player */
+	while (!leave_store)
+	{
+		/* Hack -- Clear line 1 */
+		prt("", 1, 0);
+
+		/* Hack -- Check the charisma */
+		tmp_chr = p_ptr->stat_use[A_CHR];
+
+		/* Clear */
+		clear_from(21);
+
+
+		/* Basic commands */
+		prt(" ESC) Exit from Building.", 22, 0);
+
+		/* Browse if necessary */
+		if (st_ptr->stock_num > 12)
+		{
+			prt(" SPACE) Next page of stock", 23, 0);
+		}
+
+		/* Home commands */
+		if (cur_store_num == 7)
+		{
+			prt(" g) Get an item.", 22, 31);
+			prt(" d) Drop an item.", 23, 31);
+		}
+
+		/* Shop commands XXX XXX XXX */
+		else
+		{
+			prt(" p) Purchase an item.", 22, 31);
+			prt(" s) Sell an item.", 23, 31);
+		}
+
+		/* Add in the eXamine option */
+		prt(" x) eXamine an item.", 22, 56);
+
+		/* Prompt */
+		prt("You may: ", 21, 0);
+
+		/* Get a command */
+		request_command(TRUE);
+
+		/* Process the command */
+		store_process_command();
+
+		/* Hack -- Character is still in "icky" mode */
+		character_icky = TRUE;
+
+		/* Notice stuff */
+		notice_stuff();
+
+		/* Handle stuff */
+		handle_stuff();
+
+		/* XXX XXX XXX Pack Overflow */
+		if (p_ptr->inventory[INVEN_PACK].k_idx)
+		{
+			int item = INVEN_PACK;
+
+			object_type *o_ptr = &p_ptr->inventory[item];
+
+			/* Hack -- Flee from the store */
+			if (cur_store_num != 7)
+			{
+				/* Message */
+				msg_print("Your pack is so full that you flee the store...");
+
+				/* Leave */
+				leave_store = TRUE;
+			}
+
+			/* Hack -- Flee from the home */
+			else if (!store_check_num(o_ptr))
+			{
+				/* Message */
+				msg_print("Your pack is so full that you flee your home...");
+
+				/* Leave */
+				leave_store = TRUE;
+			}
+
+			/* Hack -- Drop items into the home */
+			else
+			{
+				int item_pos;
+
+				object_type forge;
+				object_type *q_ptr;
+
+				char o_name[80];
+
+
+				/* Give a message */
+				msg_print("Your pack overflows!");
+
+				/* Get local object */
+				q_ptr = &forge;
+
+				/* Grab a copy of the item */
+				object_copy(q_ptr, o_ptr);
+
+				/* Describe it */
+				object_desc(o_name, q_ptr, TRUE, 3);
+
+				/* Message */
+				msg_format("You drop %s (%c).", o_name, index_to_label(item));
+
+				/* Remove it from the players inventory */
+				inven_item_increase(item, -255);
+				inven_item_describe(item);
+				inven_item_optimize(item);
+
+				/* Handle stuff */
+				handle_stuff();
+
+				/* Let the home carry it */
+				item_pos = home_carry(q_ptr);
+
+				/* Redraw the home */
+				if (item_pos >= 0)
+				{
+					store_top = (item_pos / 12) * 12;
+					display_inventory();
+				}
+			}
+		}
+
+		/* Hack -- Redisplay store prices if charisma changes */
+		if (tmp_chr != p_ptr->stat_use[A_CHR]) display_inventory();
+
+		/* Hack -- get kicked out of the store */
+		if (st_ptr->store_open >= turn) leave_store = TRUE;
+	}
+
+
+	/* Hack -- Character is no longer in "icky" mode */
+	character_icky = FALSE;
+
+	four_dim_mode = FALSE;
+
+	/* Hack -- Cancel automatic command */
+	command_new = 0;
+
+	/* Hack -- Cancel "see" mode */
+	command_see = FALSE;
+
+	/* Mega-Hack -- Clear the 'ignore-keymaps' list */
+	memset(request_command_ignore_keymaps, 0, 12);
+
+	/* Flush messages XXX XXX XXX */
+	msg_print(NULL);
+
+
+	/* Clear the screen */
+	Term_clear();
+
+
+	/* Update everything */
+	p_ptr->update |= (PU_VIEW | PU_MON_LITE);
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Redraw entire screen */
+	p_ptr->redraw |= (PR_BASIC | PR_EXTRA);
+
+	/* Redraw map */
+	p_ptr->redraw |= (PR_MAP);
+
+	/* Window stuff */
+	p_ptr->window |= (PW_OVERHEAD);
+
+	/* Take a turn */
+	energy_use = 100;
+}
+

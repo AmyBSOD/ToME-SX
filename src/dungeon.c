@@ -3649,6 +3649,8 @@ static void process_command(void)
 	/* Handle repeating the last command */
 	repeat_check();
 
+	four_dim_mode = FALSE;
+
 #endif /* ALLOW_REPEAT -- TNB */
 
 	/* Process the appropriate hooks */

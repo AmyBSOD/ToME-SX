@@ -13,7 +13,6 @@
 
 #include "angband.h"
 
-
 /*
  * Describe class powers of Mindcrafters
  *
@@ -5444,6 +5443,7 @@ void do_cmd_set_piercing(void)
 		}
 	}
 }
+
 /*
  * Helper function to describe necro powers
  */

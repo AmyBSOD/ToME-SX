@@ -3223,7 +3223,7 @@ static bool do_savefile_aux(int flag)
 		{
 			do_byte((byte*)&town_info[i].destroyed, flag);
 
-			if (i >= TOWN_RANDOM)
+			if (i >= TOWN_FOURDIM)
 			{
 				do_u32b(&town_info[i].seed, flag);
 				do_byte(&town_info[i].numstores, flag);

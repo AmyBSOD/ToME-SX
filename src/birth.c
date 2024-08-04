@@ -3456,6 +3456,8 @@ void player_birth(void)
 	/* Hack -- outfit the player */
 	player_outfit();
 
+	init_town(TOWN_FOURDIM, 1);
+
 	/* Initialize random towns in the dungeons */
 	for (i = 0; i < max_d_idx; i++)
 	{

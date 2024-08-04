@@ -617,6 +617,7 @@
 #define MKEY_BOULDER            21
 #define MKEY_COMPANION          22
 #define MKEY_PIERCING           23
+#define MKEY_FOUR_DIM           24
 
 
 /*** Screen Locations ***/
@@ -4333,10 +4334,10 @@ extern int PlayerUID;
 #define BIT(x) (1L << (x))
 
 /* Town defines */
-#define TOWN_RANDOM     20              /* First random town */
+#define TOWN_FOURDIM    20              /* for 4D pocket */
+#define TOWN_RANDOM     21              /* First random town */
 #define TOWN_DUNGEON    4               /* Maximun number of towns per dungeon */
 #define TOWN_CHANCE     50              /* Chance of 1 town */
-
 
 /*
  * Store flags
@@ -4678,6 +4679,7 @@ extern int PlayerUID;
 #define SKILL_NETHER            67
 #define SKILL_HAGGLING          68
 #define SKILL_DUALWIELD         69
+#define SKILL_FOUR_DIM          70
 
 /* Ugly but needed */
 #define MAX_SKILLS              200
