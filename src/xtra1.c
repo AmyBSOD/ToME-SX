@@ -2742,40 +2742,61 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pva
 
 	if (f4 & (TR4_ANTIMAGIC_50))
 	{
+		int tohtmp = to_h;
+		if (tohtmp < -10) tohtmp = -10;
+		int todtmp = to_d;
+		if (todtmp < -10) todtmp = -10;
+		int toatmp = to_a;
+		if (toatmp < -10) toatmp = -10;
+
 		s32b tmp;
 
 		tmp = 10 + get_skill_scale(SKILL_ANTIMAGIC, 40)
-		      - to_h - to_d - pval - to_a;
+		      - tohtmp - todtmp - pval - toatmp;
 		tmp /= 2;
 		if (tmp > 0) p_ptr->antimagic += tmp;
 
 		tmp = 1 + get_skill_scale(SKILL_ANTIMAGIC, 4)
-		      - (to_h + to_d + pval + to_a) / 15;
+		      - (tohtmp + todtmp + pval + toatmp) / 15;
 		tmp /= 2;
 		if (tmp > 0) p_ptr->antimagic_dis += tmp;
 	}
 
 	if (f4 & (TR4_ANTIMAGIC_30))
 	{
+		int tohtmp = to_h;
+		if (tohtmp < -10) tohtmp = -10;
+		int todtmp = to_d;
+		if (todtmp < -10) todtmp = -10;
+		int toatmp = to_a;
+		if (toatmp < -10) toatmp = -10;
+
 		s32b tmp;
 
 		tmp = 7 + get_skill_scale(SKILL_ANTIMAGIC, 33)
-		      - to_h - to_d - pval - to_a;
+		      - tohtmp - todtmp - pval - toatmp;
 		tmp /= 2;
 		if (tmp > 0) p_ptr->antimagic += tmp;
 
 		tmp = 1 + get_skill_scale(SKILL_ANTIMAGIC, 2)
-		      - (to_h + to_d + pval + to_a) / 15;
+		      - (tohtmp + todtmp + pval + toatmp) / 15;
 		tmp /= 2;
 		if (tmp > 0) p_ptr->antimagic_dis += tmp;
 	}
 
 	if (f4 & (TR4_ANTIMAGIC_20))
 	{
+		int tohtmp = to_h;
+		if (tohtmp < -10) tohtmp = -10;
+		int todtmp = to_d;
+		if (todtmp < -10) todtmp = -10;
+		int toatmp = to_a;
+		if (toatmp < -10) toatmp = -10;
+
 		s32b tmp;
 
 		tmp = 5 + get_skill_scale(SKILL_ANTIMAGIC, 15)
-		      - to_h - to_d - pval - to_a;
+		      - tohtmp - todtmp - pval - toatmp;
 		tmp /= 2;
 		if (tmp > 0) p_ptr->antimagic += tmp;
 
@@ -2784,10 +2805,17 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pva
 
 	if (f4 & (TR4_ANTIMAGIC_10))
 	{
+		int tohtmp = to_h;
+		if (tohtmp < -10) tohtmp = -10;
+		int todtmp = to_d;
+		if (todtmp < -10) todtmp = -10;
+		int toatmp = to_a;
+		if (toatmp < -10) toatmp = -10;
+
 		s32b tmp;
 
 		tmp = 1 + get_skill_scale(SKILL_ANTIMAGIC, 9)
-		      - to_h - to_d - pval - to_a;
+		      - tohtmp - todtmp - pval - toatmp;
 		tmp /= 2;
 		if (tmp > 0) p_ptr->antimagic += tmp;
 
