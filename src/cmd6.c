@@ -5311,32 +5311,32 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 
 		case ACT_CELEBRIMBOR:
 			{
-				if (!doit) return "temporary ESP (dur 20+d20) every 20+d50 turns";
+				if (!doit) return "temporary ESP (dur 20+d20) every 200+d50 turns";
 				set_tim_esp(p_ptr->tim_esp + randint(20) + 20);
 
-				o_ptr->timeout = rand_int(50) + 20;
+				o_ptr->timeout = rand_int(50) + 200;
 
 				break;
 			}
 
 		case ACT_SKULLCLEAVER:
 			{
-				if (!doit) return "destruction every 200+d200 turns";
+				if (!doit) return "destruction every 2000+d2000 turns";
 				destroy_area(p_ptr->py, p_ptr->px, 15, TRUE, FALSE);
 
-				o_ptr->timeout = rand_int(200) + 200;
+				o_ptr->timeout = rand_int(2000) + 2000;
 
 				break;
 			}
 
 		case ACT_HARADRIM:
 			{
-				if (!doit) return "berserk strength every 50+d50 turns";
+				if (!doit) return "berserk strength every 50+d250 turns";
 				set_afraid(0);
 				set_shero(p_ptr->shero + randint(25) + 25);
 				hp_player(30);
 
-				o_ptr->timeout = rand_int(50) + 50;
+				o_ptr->timeout = rand_int(250) + 50;
 
 				break;
 			}
@@ -5465,11 +5465,11 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 
 		case ACT_THRAIN:
 			{
-				if (!doit) return "detection every 30+d30 turns";
+				if (!doit) return "detection every 100+d100 turns";
 				msg_print("The stone glows a deep green...");
 				detect_all(DEFAULT_RADIUS);
 
-				o_ptr->timeout = rand_int(30) + 30;
+				o_ptr->timeout = rand_int(100) + 100;
 
 				break;
 			}
@@ -5570,7 +5570,7 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 			/* The Stone of Lore is perilous, for the sake of game balance. */
 		case ACT_STONE_LORE:
 			{
-				if (!doit) return "perilous identify every turn";
+				if (!doit) return "perilous identify every 200+d200 turns";
 				msg_print("The stone reveals hidden mysteries...");
 				if (!ident_spell()) break;
 
@@ -5622,7 +5622,7 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 					take_hit(damroll(4, 10), "perilous secrets");
 				}
 
-				o_ptr->timeout = 1;
+				o_ptr->timeout = rand_int(200) + 200;
 
 				break;
 			}
@@ -5689,7 +5689,7 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 
 		case ACT_GORLIM:
 			{
-				if (!doit) return "rays of fear in every direction";
+				if (!doit) return "rays of fear in every direction every once in a while";
 				turn_monsters(40 + p_ptr->lev);
 
 				o_ptr->timeout = 3 * (p_ptr->lev + 10);
@@ -5727,7 +5727,7 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 
 		case ACT_ANGUIREL:
 			{
-				if (!doit) return "a getaway every 35 turns";
+				if (!doit) return "a getaway every 350 turns";
 				switch (randint(13))
 				{
 				case 1:
@@ -5780,7 +5780,7 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 					}
 				}
 
-				o_ptr->timeout = 35;
+				o_ptr->timeout = 350;
 
 				break;
 			}
@@ -5851,7 +5851,7 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 
 		case ACT_ELESSAR:
 			{
-				if (!doit) return "heal and cure black breath every 200 turns";
+				if (!doit) return "heal and cure black breath every 2000 turns";
 				if (p_ptr->black_breath)
 				{
 					msg_print("The hold of the Black Breath on you is broken!");
@@ -5859,7 +5859,7 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 				p_ptr->black_breath = FALSE;
 				hp_player(100);
 
-				o_ptr->timeout = 200;
+				o_ptr->timeout = 2000;
 
 				break;
 			}
@@ -5924,7 +5924,7 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 
 		case ACT_EREBOR:
 			{
-				if (!doit) return "open a secret passage every 75 turns";
+				if (!doit) return "open a secret passage every 500 turns";
 				msg_print("Your pick twists in your hands.");
 
 				if (!get_aim_dir(&dir)) break;
@@ -5937,18 +5937,18 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 					msg_print("There is no wall there!");
 				}
 
-				o_ptr->timeout = 75;
+				o_ptr->timeout = 500;
 
 				break;
 			}
 
 		case ACT_DRUEDAIN:
 			{
-				if (!doit) return "detection every 99 turns";
+				if (!doit) return "detection every 300 turns";
 				msg_print("Your drum shows you the world.");
 				detect_all(DEFAULT_RADIUS);
 
-				o_ptr->timeout = 99;
+				o_ptr->timeout = 300;
 
 				break;
 			}
@@ -6434,12 +6434,12 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 
 		case ACT_QUAKE:
 			{
-				if (!doit) return "earthquake (rad 10) every 50 turns";
+				if (!doit) return "earthquake (rad 10) every 500 turns";
 				/* Prevent destruction of quest levels and town */
 				if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
 				{
 					earthquake(p_ptr->py, p_ptr->px, 10);
-					o_ptr->timeout = 50;
+					o_ptr->timeout = 500;
 				}
 
 				break;
@@ -6461,11 +6461,11 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_TELE_AWAY:
 			{
-				if (!doit) return "teleport away every 200 turns";
+				if (!doit) return "teleport away every 500 turns";
 				if (!get_aim_dir(&dir)) break;
 				(void)fire_beam(GF_AWAY_ALL, dir, plev);
 
-				o_ptr->timeout = 200;
+				o_ptr->timeout = 500;
 
 				break;
 			}
@@ -6485,11 +6485,11 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_GENOCIDE:
 			{
-				if (!doit) return "genocide every 500 turns";
+				if (!doit) return "genocide every 2500 turns";
 				msg_print("It glows deep blue...");
 				(void)genocide(TRUE);
 
-				o_ptr->timeout = 500;
+				o_ptr->timeout = 2500;
 
 				break;
 			}
@@ -6500,7 +6500,7 @@ turn_monsters(40 + p_ptr->lev);
 				msg_print("It lets out a long, shrill note...");
 				(void)mass_genocide(TRUE);
 
-				o_ptr->timeout = 1000;
+				o_ptr->timeout = 5000;
 
 				break;
 			}
@@ -6688,12 +6688,12 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_CURE_POISON:
 			{
-				if (!doit) return "remove fear and cure poison every 5 turns";
+				if (!doit) return "remove fear and cure poison every 25 turns";
 				msg_print("It glows deep blue...");
 				(void)set_afraid(0);
 				(void)set_poisoned(0);
 
-				o_ptr->timeout = 5;
+				o_ptr->timeout = 25;
 
 				break;
 			}
@@ -6711,7 +6711,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_REST_ALL:
 			{
-				if (!doit) return format("restore stats and life levels every %d turns", (is_junkart ? 200 : 750));
+				if (!doit) return format("restore stats and life levels every %d turns", (is_junkart ? 2000 : 750));
 				msg_print("It glows a deep green...");
 				(void)do_res_stat(A_STR, TRUE);
 				(void)do_res_stat(A_INT, TRUE);
@@ -6728,7 +6728,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_CURE_700:
 			{
-				if (!doit) return format("heal 700 hit points every %d turns", (is_junkart ? 100 : 250));
+				if (!doit) return format("heal 700 hit points every %d turns", (is_junkart ? 1000 : 250));
 				msg_print("It glows deep blue...");
 				msg_print("You feel a warm tingling inside...");
 				(void)hp_player(700);
@@ -6883,46 +6883,46 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_DETECT_ALL:
 			{
-				if (!doit) return "detection every 55+d55 turns";
+				if (!doit) return "detection every 100+d100 turns";
 				msg_print("It glows bright white...");
 				msg_print("An image forms in your mind...");
 				detect_all(DEFAULT_RADIUS);
 
-				o_ptr->timeout = rand_int(55) + 55;
+				o_ptr->timeout = rand_int(100) + 100;
 
 				break;
 			}
 
 		case ACT_DETECT_XTRA:
 			{
-				if (!doit) return "detection, probing and identify true every 1000 turns";
+				if (!doit) return "detection, probing and identify true every 3000 turns";
 				msg_print("It glows brightly...");
 				detect_all(DEFAULT_RADIUS);
 				probing();
 				identify_fully();
 
-				o_ptr->timeout = 1000;
+				o_ptr->timeout = 3000;
 
 				break;
 			}
 
 		case ACT_ID_FULL:
 			{
-				if (!doit) return "identify true every 750 turns";
+				if (!doit) return "identify true every 2000 turns";
 				msg_print("It glows yellow...");
 				identify_fully();
 
-				o_ptr->timeout = 750;
+				o_ptr->timeout = 2000;
 
 				break;
 			}
 
 		case ACT_ID_PLAIN:
 			{
-				if (!doit) return "identify spell every 10 turns";
+				if (!doit) return "identify spell every 100 turns";
 				if (!ident_spell()) break;
 
-				o_ptr->timeout = 10;
+				o_ptr->timeout = 100;
 
 				break;
 			}
@@ -6951,43 +6951,43 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_SATIATE:
 			{
-				if (!doit) return "satisfy hunger every 200 turns";
+				if (!doit) return "satisfy hunger every 1000 turns";
 				(void)set_food(PY_FOOD_MAX - 1);
 
-				o_ptr->timeout = 200;
+				o_ptr->timeout = 1000;
 
 				break;
 			}
 
 		case ACT_DEST_DOOR:
 			{
-				if (!doit) return "destroy doors and traps every 10 turns";
+				if (!doit) return "destroy doors and traps every 50 turns";
 				msg_print("It glows bright red...");
 				destroy_doors_touch();
 
-				o_ptr->timeout = 10;
+				o_ptr->timeout = 50;
 
 				break;
 			}
 
 		case ACT_STONE_MUD:
 			{
-				if (!doit) return "stone to mud every 5 turns";
+				if (!doit) return "stone to mud every 50 turns";
 				msg_print("It pulsates...");
 				if (!get_aim_dir(&dir)) break;
 				wall_to_mud(dir);
 
-				o_ptr->timeout = 5;
+				o_ptr->timeout = 50;
 
 				break;
 			}
 
 		case ACT_RECHARGE:
 			{
-				if (!doit) return "recharging every 70 turns";
+				if (!doit) return "recharging every 2000 turns";
 				recharge(60);
 
-				o_ptr->timeout = 70;
+				o_ptr->timeout = 2000;
 
 				break;
 			}
@@ -7005,7 +7005,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_DIM_DOOR:
 			{
-				if (!doit) return "dimension door every 100 turns";
+				if (!doit) return "dimension door every 1000 turns";
 				if (dungeon_flags2 & DF2_NO_TELEPORT)
 				{
 					msg_print("Not on special levels!");
@@ -7031,14 +7031,14 @@ turn_monsters(40 + p_ptr->lev);
 				cave[p_ptr->py][p_ptr->px].special = ii + (ij << 8);
 				cave[ij][ii].special = p_ptr->px + (p_ptr->py << 8);
 
-				o_ptr->timeout = 100;
+				o_ptr->timeout = 1000;
 
 				break;
 			}
 
 		case ACT_TELEPORT:
 			{
-				if (!doit) return format("teleport (range 100) every %d turns", (is_junkart? 100 : 45));
+				if (!doit) return format("teleport (range 100) every %d turns", (is_junkart? 1000 : 45));
 				msg_print("It twists space around you...");
 				teleport_player(100);
 
@@ -7051,11 +7051,11 @@ turn_monsters(40 + p_ptr->lev);
 			{
 				if (!(dungeon_flags2 & DF2_ASK_LEAVE) || ((dungeon_flags2 & DF2_ASK_LEAVE) && !get_check("Leave this unique level forever? ")))
 				{
-					if (!doit) return "word of recall every 200 turns";
+					if (!doit) return "word of recall every 500 turns";
 					msg_print("It glows soft white...");
 					recall_player(20,15);
 
-					o_ptr->timeout = 200;
+					o_ptr->timeout = 500;
 				}
 
 				break;
@@ -7091,7 +7091,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_DESTRUC:
 			{
-				if (!doit) return "Destruction every 100 turns";
+				if (!doit) return "Destruction every 1000 turns";
 				earthquake(p_ptr->py, p_ptr->px, 12);
 
 				/* Timeout is set before return */
@@ -7191,7 +7191,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_EXPLOSS:
 			{
-				if (!doit) return "experience loss";
+				if (!doit) return "experience loss every 1000 turns";
 				lose_exp(p_ptr->exp / 20);
 
 				/* Timeout is set before return */
@@ -7201,7 +7201,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_HIEXPLOSS:
 			{
-				if (!doit) return "high experience loss";
+				if (!doit) return "high experience loss every 1000 turns";
 				lose_exp(p_ptr->exp / 10);
 
 				/* Timeout is set before return */
@@ -7211,7 +7211,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_SUMMON_MONST:
 			{
-				if (!doit) return "summon monster";
+				if (!doit) return "summon monster every 500 turns";
 				summon_specific(p_ptr->py, p_ptr->px, max_dlv[dungeon_type], 0);
 
 				/* Timeout is set before return */
@@ -7231,7 +7231,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_HALLU:
 			{
-				if (!doit) return "hallucination every 10 turns";
+				if (!doit) return "hallucination every 100 turns";
 				set_image(p_ptr->image + 20 + randint(10));
 
 				/* Timeout is set before return */
@@ -7311,7 +7311,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_PET_SUMMON:
 			{
-				if (!doit) return "summon pet every 101 turns";
+				if (!doit) return "summon pet every 1010 turns";
 				summon_specific_friendly(p_ptr->py, p_ptr->px, max_dlv[dungeon_type], 0, FALSE);
 
 				/* Timeout is set before return */
@@ -7322,7 +7322,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_CURE_PARA:
 			{
-				if (!doit) return "cure confusion every 500 turns";
+				if (!doit) return "cure confusion every 5000 turns";
 				set_confused(0);
 
 				/* Timeout is set before return */
@@ -7332,7 +7332,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_CURE_HALLU:
 			{
-				if (!doit) return "cure hallucination every 100 turns";
+				if (!doit) return "cure hallucination every 1000 turns";
 				set_image(0);
 
 				/* Timeout is set before return */
@@ -7342,7 +7342,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_CURE_POIS:
 			{
-				if (!doit) return "cure poison every 100 turns";
+				if (!doit) return "cure poison every 1000 turns";
 				set_poisoned(0);
 
 				/* Timeout is set before return */
@@ -7352,7 +7352,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_CURE_HUNGER:
 			{
-				if (!doit) return "satisfy hunger every 100 turns";
+				if (!doit) return "satisfy hunger every 1000 turns";
 				(void)set_food(PY_FOOD_MAX - 1);
 
 				/* Timeout is set before return */
@@ -7362,7 +7362,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_CURE_STUN:
 			{
-				if (!doit) return "cure stun every 100 turns";
+				if (!doit) return "cure stun every 1000 turns";
 				set_stun(0);
 
 				/* Timeout is set before return */
@@ -7372,7 +7372,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_CURE_CUTS:
 			{
-				if (!doit) return "cure cuts every 100 turns";
+				if (!doit) return "cure cuts every 1000 turns";
 				set_cut(0);
 
 				/* Timeout is set before return */
@@ -7382,7 +7382,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_CURE_FEAR:
 			{
-				if (!doit) return "cure fear every 100 turns";
+				if (!doit) return "cure fear every 1000 turns";
 				set_afraid(0);
 
 				/* Timeout is set before return */
@@ -7392,7 +7392,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_CURE_CONF:
 			{
-				if (!doit) return "cure confusion every 100 turns";
+				if (!doit) return "cure confusion every 1000 turns";
 				set_confused(0);
 
 				/* Timeout is set before return */
@@ -7402,7 +7402,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_CURE_BLIND:
 			{
-				if (!doit) return "cure blindness every 100 turns";
+				if (!doit) return "cure blindness every 1000 turns";
 				set_blind(0);
 
 				/* Timeout is set before return */
@@ -7412,7 +7412,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_CURING:
 			{
-				if (!doit) return "curing every 110 turns";
+				if (!doit) return "curing every 1100 turns";
 				set_blind(0);
 				set_poisoned(0);
 				set_confused(0);
@@ -7437,7 +7437,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_LEV_TELE:
 			{
-				if (!doit) return "teleport level every 50 turns";
+				if (!doit) return "teleport level every 500 turns";
 				teleport_player_level();
 
 				/* Timeout is set before return */
@@ -7447,7 +7447,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_ACQUIREMENT:
 			{
-				if (!doit) return "acquirement every 3000 turns";
+				if (!doit) return "acquirement every 30000 turns";
 				acquirement(p_ptr->py, p_ptr->px, 1, FALSE, FALSE);
 
 				/* Timeout is set before return */
@@ -7477,7 +7477,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_MUT:
 			{
-				if (!doit) return "gain corruption every 10 turns";
+				if (!doit) return "gain corruption every 100 turns";
 				gain_random_corruption(0);
 				/* Timeout is set before return */
 
@@ -7486,7 +7486,7 @@ turn_monsters(40 + p_ptr->lev);
 
 		case ACT_CURE_INSANITY:
 			{
-				if (!doit) return "cure insanity every 200 turns";
+				if (!doit) return "cure insanity every 2000 turns";
 				heal_insanity(damroll(10, 10));
 
 				/* Timeout is set before return */
@@ -7510,7 +7510,7 @@ turn_monsters(40 + p_ptr->lev);
 				int y, x, light = 0, dir;
 				cave_type *c_ptr;
 
-				if (!doit) return "light absorption every 80 turns";
+				if (!doit) return "light absorption every 800 turns";
 
 				for (y = p_ptr->py - 6; y <= p_ptr->py + 6; y++)
 				{
@@ -7631,10 +7631,10 @@ turn_monsters(40 + p_ptr->lev);
 			}
 		case ACT_NOLDOR:
 			{
-				if (!doit) return "detect treasure every 10+d20 turns";
+				if (!doit) return "detect treasure every 50+d50 turns";
 				detect_treasure(DEFAULT_RADIUS);
 
-				o_ptr->timeout = 10 + randint(20);
+				o_ptr->timeout = 50 + randint(50);
 
 				/* Window stuff */
 				p_ptr->window |= (PW_INVEN | PW_EQUIP);
@@ -7644,7 +7644,7 @@ turn_monsters(40 + p_ptr->lev);
 			}
 		case ACT_SPECTRAL:
 			{
-				if (!doit) return "wraith-form every 50+d50 turns";
+				if (!doit) return "wraith-form every 250+d250 turns";
 				if (!p_ptr->wraith_form)
 				{
 					set_shadow(20 + randint(20));
@@ -7654,7 +7654,7 @@ turn_monsters(40 + p_ptr->lev);
 					set_shadow(p_ptr->tim_wraith + randint(20));
 				}
 
-				o_ptr->timeout = 50 + randint(50);
+				o_ptr->timeout = 250 + randint(250);
 
 				/* Window stuff */
 				p_ptr->window |= PW_INVEN | PW_EQUIP;
@@ -7957,12 +7957,12 @@ turn_monsters(40 + p_ptr->lev);
 			}
 		case ACT_GROW_MOLD:
 			{
-				if (!doit) return "grow mushrooms every 50+d50 turns";
+				if (!doit) return "grow mushrooms every 500+d500 turns";
 				msg_print("You twirl and spores fly everywhere!");
 				for (i = 0; i < 8; i++)
 					summon_specific_friendly(p_ptr->py, p_ptr->px, p_ptr->lev, SUMMON_BIZARRE1, FALSE);
 
-				o_ptr->timeout = randint(50) + 50;
+				o_ptr->timeout = randint(500) + 500;
 
 				break;
 			}

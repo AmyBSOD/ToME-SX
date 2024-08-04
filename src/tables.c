@@ -2989,7 +2989,7 @@ tactic_info_type tactic_info_hard[9] =
  */
 activation activation_info[MAX_T_ACT] =
 {
-	{ "death", 0, ACT_DEATH },
+	{ "death", 0, ACT_DEATH }, /* 0 */
 	{ "ruination", 0, ACT_RUINATION },
 	{ "destruction", 1000, ACT_DESTRUC },
 	{ "stupidity", 0, ACT_UNINT },
@@ -2999,17 +2999,17 @@ activation activation_info[MAX_T_ACT] =
 	{ "clumsiness", 0, ACT_UNDEX },
 	{ "naivete", 0, ACT_UNWIS },
 	{ "stat loss", 0, ACT_STATLOSS },
-	{ "huge stat loss", 0, ACT_HISTATLOSS },
-	{ "experience loss", 0, ACT_EXPLOSS },
-	{ "huge experience loss", 0, ACT_HIEXPLOSS },
+	{ "huge stat loss", 0, ACT_HISTATLOSS }, /* 10 */
+	{ "experience loss", 1000, ACT_EXPLOSS },
+	{ "huge experience loss", 1000, ACT_HIEXPLOSS },
 	{ "teleportation", 1000, ACT_TELEPORT },
-	{ "monster summoning", 5, ACT_SUMMON_MONST },
+	{ "monster summoning", 500, ACT_SUMMON_MONST },
 	{ "paralyzation", 0, ACT_PARALYZE },
 	{ "hallucination", 100, ACT_HALLU },
 	{ "poisoning", 0, ACT_POISON },
 	{ "hunger", 0, ACT_HUNGER },
 	{ "stun", 0, ACT_STUN },
-	{ "cuts", 0, ACT_CUTS },
+	{ "cuts", 0, ACT_CUTS }, /* 20 */
 	{ "paranoia", 0, ACT_PARANO },
 	{ "confusion", 0, ACT_CONFUSION },
 	{ "blindness", 0, ACT_BLIND },
@@ -3019,7 +3019,7 @@ activation activation_info[MAX_T_ACT] =
 	{ "cure poison", 1000, ACT_CURE_POIS },
 	{ "cure hunger", 1000, ACT_CURE_HUNGER },
 	{ "cure stun", 1000, ACT_CURE_STUN },
-	{ "cure cut", 1000, ACT_CURE_CUTS },
+	{ "cure cut", 1000, ACT_CURE_CUTS }, /* 30 */
 	{ "cure fear", 1000, ACT_CURE_FEAR },
 	{ "cure confusion", 1000, ACT_CURE_CONF },
 	{ "cure blindness", 1000, ACT_CURE_BLIND },
@@ -3029,7 +3029,7 @@ activation activation_info[MAX_T_ACT] =
 	{ "curing", 1100, ACT_CURING },
 	{ "genocide", 5000, ACT_GENOCIDE },
 	{ "mass genocide", 10000, ACT_MASS_GENO },
-	{ "restoration", 2000, ACT_REST_ALL },
+	{ "restoration", 2000, ACT_REST_ALL }, /* 40 */
 	{ "light", 1000, ACT_LIGHT },
 	{ "darkness", 0, ACT_DARKNESS },
 	{ "teleportation", 1000, ACT_TELEPORT },
@@ -3039,8 +3039,8 @@ activation activation_info[MAX_T_ACT] =
 	{ "aggravation", 0, ACT_AGGRAVATE },
 	{ "corruption", 100, ACT_MUT },
 	{ "cure insanity", 2000, ACT_CURE_INSANITY },
-	{ "light absortion", 800, ACT_LIGHT_ABSORBTION },
-	{ "whispers from beyond", 0, ACT_KNOWLEDGE },
+	{ "light absortion", 800, ACT_LIGHT_ABSORBTION }, /* 50 */
+	{ "whispers from beyond", 2000, ACT_KNOWLEDGE },
 	{ "detect orcs", 10, ACT_ORCHAST },
 	{ "sunlight", 10, ACT_SUNLIGHT },
 	{ "whirlwind attack", 200, ACT_WHIRLWIND },
@@ -3049,7 +3049,7 @@ activation activation_info[MAX_T_ACT] =
 	{ "confuse monster", 50, ACT_CONFUSE },
 	{ "sleep monster", 50, ACT_SLEEP },
 	{ "teleport away", 2000, ACT_TELE_AWAY },
-	{ "charm animal", 1000, ACT_CHARM_ANIMAL },
+	{ "charm animal", 1000, ACT_CHARM_ANIMAL }, /* 60 */
 	{ "charm undead", 1000, ACT_CHARM_UNDEAD },
 	{ "charm other", 4000, ACT_CHARM_OTHER },
 	{ "charm animals", 2000, ACT_CHARM_ANIMALS },
@@ -3059,7 +3059,7 @@ activation activation_info[MAX_T_ACT] =
 	{ "restore life levels", 1000, ACT_REST_LIFE },
 	{ "full healing", 2000, ACT_CURE_1000 },
 	{ "protection from evil", 100, ACT_PROT_EVIL },
-	{ "speed", 20000, ACT_SPEED },
+	{ "speed", 20000, ACT_SPEED }, /* 70 */
 #if 0 /* No more for the time being, ehehhe evil I am :> */
 	{ "cure corruption", 2000, ACT_CURE_MUT },
 #endif
