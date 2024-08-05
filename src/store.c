@@ -2792,7 +2792,7 @@ void store_purchase(void)
 	}
 
 	if (four_dim_mode) {
-		if (wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].terrain_idx != TERRAIN_TOWN) {
+		if ((wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].terrain_idx != TERRAIN_TOWN) || (dun_level > 0) ) {
 			msg_print("Taking items out of the 4D pocket only works while in a town!");
 			return;
 		}
