@@ -3859,6 +3859,8 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 
 	case TV_WAND:
 		{
+			int devicelvlbonus = 0; /* by Amy, because it's really dumb if their levels are always so low */
+
 			/* Decide the spell, pval == -1 means to bypass spell selection */
 			if (o_ptr->pval != -1)
 			{
@@ -3886,6 +3888,18 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 			/*call_lua("get_stick_base_level", "(d,d,d)", "d", TV_WAND, dun_level, o_ptr->pval2, &bonus_lvl);
 			call_lua("get_stick_max_level", "(d,d,d)", "d", TV_WAND, dun_level, o_ptr->pval2, &max_lvl);*/
 
+			if (randint(7) == 1) {
+				if (dun_level) devicelvlbonus = dun_level;
+				else if (level > 0) devicelvlbonus = level;
+
+				if (devicelvlbonus > 1) devicelvlbonus = randint(devicelvlbonus);
+				devicelvlbonus /= randint(10);
+
+				if (devicelvlbonus < 1) devicelvlbonus = 1;
+			}
+			max_lvl += devicelvlbonus;
+			if (max_lvl > 100) max_lvl = 100;
+
 			o_ptr->pval3 = (max_lvl << 16) + (bonus_lvl & 0xFFFF);
 
 			/* Hack -- charge wands */
@@ -3896,6 +3910,8 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 
 	case TV_STAFF:
 		{
+			int devicelvlbonus = 0; /* by Amy, because it's really dumb if their levels are always so low */
+
 			/* Decide the spell, pval == -1 means to bypass spell selection */
 			if (o_ptr->pval != -1)
 			{
@@ -3922,6 +3938,19 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 
 			/*call_lua("get_stick_base_level", "(d,d,d)", "d", TV_STAFF, dun_level, o_ptr->pval2, &bonus_lvl);
 			call_lua("get_stick_max_level", "(d,d,d)", "d", TV_STAFF, dun_level, o_ptr->pval2, &max_lvl);*/
+
+			if (randint(7) == 1) {
+				if (dun_level) devicelvlbonus = dun_level;
+				else if (level > 0) devicelvlbonus = level;
+
+				if (devicelvlbonus > 1) devicelvlbonus = randint(devicelvlbonus);
+				devicelvlbonus /= randint(10);
+
+				if (devicelvlbonus < 1) devicelvlbonus = 1;
+			}
+			max_lvl += devicelvlbonus;
+			if (max_lvl > 100) max_lvl = 100;
+
 			o_ptr->pval3 = (max_lvl << 16) + (bonus_lvl & 0xFFFF);
 
 			/* Hack -- charge staffs */
@@ -4506,6 +4535,7 @@ void apply_magic(object_type *o_ptr, int lev, bool okay, bool good, bool great)
 			if ((o_ptr->tval == TV_WAND) || (o_ptr->tval == TV_STAFF))
 			{
 				s32b base_lvl, max_lvl;
+				int devicelvlbonus = 0; /* by Amy, because it's really dumb if their levels are always so low */
 
 				/* Is the spell predefined by the object kind? */
 				if (k_ptr->pval == -1)
@@ -4521,6 +4551,20 @@ void apply_magic(object_type *o_ptr, int lev, bool okay, bool good, bool great)
 				if (dun_level) call_lua("get_stick_max_level", "(d,d,d)", "d", o_ptr->tval, dun_level, o_ptr->pval2, &max_lvl);
 				else if (lev > 1) call_lua("get_stick_max_level", "(d,d,d)", "d", o_ptr->tval, lev, o_ptr->pval2, &max_lvl);
 				else call_lua("get_stick_max_level", "(d,d,d)", "d", o_ptr->tval, 1, o_ptr->pval2, &max_lvl);
+
+				if (randint(7) == 1) {
+					if (dun_level) devicelvlbonus = dun_level;
+					else if (lev > 0) devicelvlbonus = lev;
+
+					if (devicelvlbonus > 1) devicelvlbonus = randint(devicelvlbonus);
+
+					devicelvlbonus /= randint(10);
+
+					if (devicelvlbonus < 1) devicelvlbonus = 1;
+				}
+				max_lvl += devicelvlbonus;
+				if (max_lvl > 100) max_lvl = 100;
+
 				o_ptr->pval3 = (max_lvl << 16) + (base_lvl & 0xFFFF);
 
 				/* Hack -- charge wands */
