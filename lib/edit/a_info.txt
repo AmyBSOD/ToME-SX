@@ -3738,7 +3738,8 @@ W:30:40:70:50000
 P:0:1d1:8:14:0
 F:RES_MORGUL | RES_WATER | ESP_DEMON | INT | WIS | INFRA | 
 F:SLAY_DEMON | SUST_INT | RES_COLD | LITE1 | SEE_INVIS | 
-F:RES_MORGUL | RES_WATER | INT | WIS | AUTO_CURSE
+F:AUTO_CURSE
+f:RES_MORGUL | RES_WATER | INT | WIS
 D:The angry god of the sea uses this to control the waves and 
 D:send them to crush his opponents. 
 
