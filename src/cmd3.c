@@ -438,6 +438,10 @@ void do_cmd_wield(void)
 	{
 		act = "You are holding";
 	}
+	else if (( slot == INVEN_AMMO ) && (o_ptr->tval == TV_INSTRUMENT))
+	{
+		act = "You are holding";
+	}
 	else if (( slot == INVEN_LITE ) && (o_ptr->tval == TV_INSTRUMENT))
 	{
 		act = "You are holding";

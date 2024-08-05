@@ -4436,7 +4436,16 @@ s16b wield_slot_ideal_special(object_type *o_ptr, bool ideal)
 			etrdt = inkey();
 			prt("", 0, 0);
 			if (etrdt != 'y') {
-				return ideal ? INVEN_BOW : get_slot(INVEN_BOW);
+				prt("Wield the instrument in the ammo slot (y/n)? ", 0, 0);
+
+				flush();
+				etrdt = inkey();
+				prt("", 0, 0);
+				if (etrdt != 'y') {
+					return ideal ? INVEN_BOW : get_slot(INVEN_BOW);
+				} else {
+					return ideal ? INVEN_AMMO : get_slot(INVEN_AMMO);
+				}
 			} else {
 				return ideal ? INVEN_LITE : get_slot(INVEN_LITE);
 			}
