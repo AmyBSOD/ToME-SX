@@ -1506,6 +1506,33 @@ C:a:k:+0:-100:Mimicry
 C:a:k:+1000:+500:Music
 C:a:k:+0:+300:Haggling
 
+C:a:N:Pianist
+C:a:D:The Pianist is good at all the impractical skills, including, obviously,
+C:a:D:playing instruments. But they're not very good at combat
+C:a:O:71:37:1d1
+C:a:O:21:8:1d1
+C:a:O:36:4:1d1
+C:a:O:14:58:1d1
+C:a:k:+1000:+400:Music
+C:a:k:+0:-200:Combat
+C:a:k:+0:-300:Weaponmastery
+C:a:k:+0:-200:Archery
+C:a:k:+0:-350:Barehand-combat
+C:a:k:+0:+100:Magic
+C:a:k:+0:-500:Possession
+C:a:k:=0:=0:Corpse-preservation
+C:a:k:+0:-500:Summoning
+C:a:k:+0:-500:Symbiosis
+C:a:k:+0:-500:Mimicry
+C:a:k:+0:+200:Magic-Device
+C:a:k:+0:+300:Hafted-mastery
+C:a:k:+0:+200:Boulder-throwing
+C:a:k:+10000:+600:Weight-lifting
+C:a:k:+0:+300:Cleaning
+C:a:k:+0:+500:Clear-mind
+C:a:k:+0:+300:Dodging
+C:a:k:+0:+500:Haggling
+
 C:a:N:Assimilator
 C:a:D:Assimilators absorb the magic of staves and wands to be released later
 C:a:D:when they see fit.  Assimilators can also absorb the magic of rings and
