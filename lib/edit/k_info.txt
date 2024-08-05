@@ -1978,7 +1978,7 @@ D:key and will release them when read.
 N:200:Mass Genocide
 G:?:d
 I:70:45:0
-W:50:0:0:1000
+W:50:0:0:10000
 A:50/4:100/4
 D:An astoundingly powerful death spell is stored in the runes of this spell.  Reading
 D:it will annihilate all nearby creatures. Only a few beings of legendary stature
@@ -2034,7 +2034,7 @@ D:staves their power, allowing you to replenish their spent charges.
 N:207:Genocide
 G:?:d
 I:70:44:0
-W:40:0:0:750
+W:40:0:0:2500
 A:40/4:80/4
 D:This rare and powerful scroll will annihilate all members of a specified race of monsters in
 D:your current location, but this will also exact a price of pain from you.
