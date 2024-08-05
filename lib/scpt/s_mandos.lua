@@ -146,7 +146,7 @@ MANDOS_TALE_DOOM = add_spell
 }
 
 -- "Call to the Halls" based on Call Blessed Soul from T-Plus
-MANDOS_CALL_HALLS= add_spell
+MANDOS_CALL_HALLS = add_spell
 
 {
 	["name"] = 	"Call to the Halls",

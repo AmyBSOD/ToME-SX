@@ -17,7 +17,7 @@ TULKAS_AIM = add_spell
 			local obvious
 
 			obvious = set_strike(dur)
-			if get_level(TULKAS_AIM) >= 20 then
+			if get_level(TULKAS_AIM) >= 40 then
 				obvious = is_obvious(set_tim_deadly(dur), obvious)
 			end
 			return obvious
@@ -27,7 +27,7 @@ TULKAS_AIM = add_spell
 	end,
 	["desc"] =	{
 			"It makes you more accurate in combat",
-			"At level 20 all your blows are critical hits",
+			"At level 40 all your blows are critical hits",
 	}
 }
 
@@ -37,7 +37,7 @@ TULKAS_WAVE = add_spell
 	["school"] =    {SCHOOL_TULKAS},
 	["level"] =     20,
 	["mana"] =      200,
-	["mana_max"] =  200,
+	["mana_max"] =  300,
 	["fail"] = 	75,
 	-- Uses piety to cast
 	["piety"] =     TRUE,

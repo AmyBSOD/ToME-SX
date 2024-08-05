@@ -36,8 +36,8 @@ DIG = add_spell
 	["name"] = 	"Dig",
 	["school"] = 	SCHOOL_EARTH,
 	["level"] = 	12,
-	["mana"] = 	14,
-	["mana_max"] = 	14,
+	["mana"] = 	20,
+	["mana_max"] = 	20,
 	["fail"] = 	20,
 	["stick"] =
 	{
@@ -164,7 +164,7 @@ SHAKE = add_spell
 	["inertia"] = 	{ 2, 50 },
 	["spell"] = 	function()
 			local ret, x, y
-			if get_level(SHAKE, 50) >= 10 then
+			if get_level(SHAKE, 50) >= 20 then
 			       	ret, x, y = tgt_pt()
 				if ret == FALSE then return end
 			else
@@ -179,6 +179,6 @@ SHAKE = add_spell
 	end,
 	["desc"] =	{
 			"Creates a localised earthquake",
-			"At level 10 it can be targeted at any location"
+			"At level 20 it can be targeted at any location"
 	}
 }

@@ -5,8 +5,8 @@ NOXIOUSCLOUD = add_spell
 	["name"] = 	"Noxious Cloud",
 	["school"] = 	{SCHOOL_AIR},
 	["level"] = 	3,
-	["mana"] = 	3,
-	["mana_max"] = 	30,
+	["mana"] = 	4,
+	["mana_max"] = 	45,
 	["fail"] = 	20,
 	["stick"] =
 	{
@@ -23,7 +23,7 @@ NOXIOUSCLOUD = add_spell
 
 			ret, dir = get_aim_dir()
 			if ret == FALSE then return end
-			if get_level(NOXIOUSCLOUD, 50) >= 30 then type = GF_UNBREATH
+			if get_level(NOXIOUSCLOUD, 50) >= 50 then type = GF_UNBREATH
 			else type = GF_POIS end
 			fire_cloud(type, dir, 7 + get_level(NOXIOUSCLOUD, 150), 3, 5 + get_level(NOXIOUSCLOUD, 40))
 			return TRUE
@@ -34,7 +34,7 @@ NOXIOUSCLOUD = add_spell
 	["desc"] =	{
 			"Creates a cloud of poison",
 			"The cloud will persist for some turns, damaging all monsters passing by",
-			"At spell level 30 it turns into a thick gas attacking all living beings"
+			"At spell level 50 it turns into a thick gas attacking all living beings"
 	}
 }
 
@@ -134,7 +134,7 @@ THUNDERSTORM = add_spell
 	["school"] = 	{SCHOOL_AIR, SCHOOL_NATURE},
 	["level"] = 	25,
 	["mana"] = 	40,
-	["mana_max"] = 	60,
+	["mana_max"] = 	100,
 	["fail"] = 	60,
 	["stick"] =
 	{

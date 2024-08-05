@@ -260,7 +260,7 @@ MUSIC_MIND = add_spell
 	["pval"] =      4,
 	["lasting"] =   function()
 			set_tim_esp(5)
-			if get_level(MUSIC_MIND) >= 10 then
+			if get_level(MUSIC_MIND) >= 20 then
 				fire_ball(GF_IDENTIFY, 0, 1, 1 + get_level(MUSIC_MIND, 3, 0))
 			end
 			return get_mana(MUSIC_MIND)
@@ -270,7 +270,7 @@ MUSIC_MIND = add_spell
 			return TRUE
 	end,
 	["info"] =      function()
-			if get_level(MUSIC_MIND) >= 10 then
+			if get_level(MUSIC_MIND) >= 20 then
 				return "rad "..(1 + get_level(MUSIC_MIND, 3, 0))
 			else
 				return ""
@@ -278,7 +278,7 @@ MUSIC_MIND = add_spell
 	end,
 	["desc"] =      {
 			"Allows you to sense monster minds as long as you sing.",
-			"At level 10 it identifies all objects in a radius on the floor,",
+			"At level 20 it identifies all objects in a radius on the floor,",
 			"as well as probing monsters in that radius.",
 			"Consumes the amount of mana each turn.",
 	}
@@ -309,7 +309,7 @@ MUSIC_BLOW = add_spell
 			return "dam "..(2 + get_level(MUSIC_BLOW, 10, 0)).."d"..(4 + get_level(MUSIC_BLOW, 40, 0)).." rad "..(1 + get_level(MUSIC_BLOW, 12, 0))
 	end,
 	["desc"] =      {
-			"Produces a powerful, blowing, sound all around you.",
+			"Produces a powerful, blowing, sound all around you that damages enemies.",
 	}
 }
 

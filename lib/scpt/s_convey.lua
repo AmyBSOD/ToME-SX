@@ -84,7 +84,7 @@ TELEPORT = add_spell
 	},
 	["inertia"] = 	{ 1, 10 },
 	["spell"] = 	function()
-			player.energy = player.energy - (25 - get_level(TELEPORT, 50))
+			player.energy = player.energy - (25 - get_level(TELEPORT, 30))
 			teleport_player(100 + get_level(TELEPORT, 100))
 			return TRUE
 	end,
@@ -117,9 +117,9 @@ TELEAWAY = add_spell
 	["spell"] = 	function()
 	       		local ret, dir
 
-			if get_level(TELEAWAY, 50) >= 20 then
+			if get_level(TELEAWAY, 50) >= 60 then
 				return project_los(GF_AWAY_ALL, 100)
-			elseif get_level(TELEAWAY, 50) >= 10 then
+			elseif get_level(TELEAWAY, 50) >= 30 then
 				ret, dir = get_aim_dir()
 				if ret == FALSE then return end
 				return fire_ball(GF_AWAY_ALL, dir, 100, 3 + get_level(TELEAWAY, 4))
@@ -134,8 +134,8 @@ TELEAWAY = add_spell
 	end,
 	["desc"] =	{
 			"Teleports a line of monsters away",
-			"At level 10 it turns into a ball",
-			"At level 20 it teleports all monsters in sight"
+			"At level 30 it turns into a ball",
+			"At level 60 it teleports all monsters in sight"
 	}
 }
 
@@ -211,10 +211,10 @@ PROBABILITY_TRAVEL = add_spell
 	},
 	["inertia"] = 	{ 6, 40 },
 	["spell"] = 	function()
-			return set_prob_travel(randint(20) + get_level(PROBABILITY_TRAVEL, 60))
+			return set_prob_travel(randint(20) + get_level(PROBABILITY_TRAVEL, 30))
 	end,
 	["info"] = 	function()
-			return "dur "..get_level(PROBABILITY_TRAVEL, 60).."+d20"
+			return "dur "..get_level(PROBABILITY_TRAVEL, 30).."+d20"
 	end,
 	["desc"] =	{
 			"Renders you immaterial, when you hit a wall you travel through it and",

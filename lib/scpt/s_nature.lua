@@ -76,7 +76,7 @@ RECOVERY = add_spell
 				obvious = is_obvious(set_poisoned(0), obvious)
 				obvious = is_obvious(set_cut(0), obvious)
 			end
-			if get_level(RECOVERY, 50) >= 10 then
+			if get_level(RECOVERY, 50) >= 20 then
 				obvious = is_obvious(do_res_stat(A_STR, TRUE), obvious)
 				obvious = is_obvious(do_res_stat(A_CON, TRUE), obvious)
 				obvious = is_obvious(do_res_stat(A_DEX, TRUE), obvious)
@@ -84,7 +84,7 @@ RECOVERY = add_spell
 				obvious = is_obvious(do_res_stat(A_INT, TRUE), obvious)
 				obvious = is_obvious(do_res_stat(A_CHR, TRUE), obvious)
 			end
-			if get_level(RECOVERY, 50) >= 15 then
+			if get_level(RECOVERY, 50) >= 35 then
 				obvious = is_obvious(restore_level(), obvious)
 			end
 			return obvious
@@ -95,8 +95,8 @@ RECOVERY = add_spell
 	["desc"] =	{
 			"Reduces the length of time that you are poisoned",
 			"At level 5 it cures poison and cuts",
-			"At level 10 it restores drained stats",
-			"At level 15 it restores lost experience"
+			"At level 20 it restores drained stats",
+			"At level 35 it restores lost experience"
 	}
 }
 

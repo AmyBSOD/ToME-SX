@@ -574,8 +574,8 @@ ELEMENTAL_MINION = add_spell
 	["name"] = 	"Elemental Minion",
 	["school"] = 	{SCHOOL_GEOMANCY},
 	["level"] = 	20,
-	["mana"] = 	40,
-	["mana_max"] = 	80,
+	["mana"] = 	50,
+	["mana_max"] = 	120,
 	["fail"] = 	25,
 	-- Unnafected by blindness
 	["random"] =    0,

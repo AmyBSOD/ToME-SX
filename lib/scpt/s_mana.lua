@@ -1,7 +1,7 @@
 -- The mana school
 
 function get_manathrust_dam()
-	return 3 + get_level(MANATHRUST, 50), 1 + get_level(MANATHRUST, 20)
+	return 3 + get_level(MANATHRUST, 45), 1 + get_level(MANATHRUST, 18)
 end
 
 MANATHRUST = add_spell
@@ -63,7 +63,7 @@ DELCURSES = add_spell
 	["spell"] = 	function()
 			local done
 
-			if get_level(DELCURSES, 50) >= 20 then done = remove_all_curse()
+			if get_level(DELCURSES, 50) >= 40 then done = remove_all_curse()
 			else done = remove_curse() end
 			if done == TRUE then msg_print("The curse is broken!") end
 			return done
@@ -73,7 +73,7 @@ DELCURSES = add_spell
 	end,
 	["desc"] =	{
 			"Remove curses of worn objects",
-			"At level 20 switches to *remove curses*"
+			"At level 40 switches to *remove curses*"
 		}
 }
 

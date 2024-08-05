@@ -6,8 +6,8 @@ STARIDENTIFY = add_spell
 	["name"] = 	"Greater Identify",
 	["school"] = 	{SCHOOL_DIVINATION},
 	["level"] = 	35,
-	["mana"] = 	30,
-	["mana_max"] = 	30,
+	["mana"] = 	50,
+	["mana_max"] = 	50,
 	["fail"] = 	80,
 	["spell"] = 	function()
 			if get_check("Cast on yourself?") == TRUE then
@@ -45,7 +45,7 @@ IDENTIFY = add_spell
 			},
 	},
 	["spell"] = 	function()
-			if get_level(IDENTIFY, 50) >= 27 then
+			if get_level(IDENTIFY, 50) >= 50 then
 				local obvious
 				obvious = identify_pack()
 				obvious = is_obvious(fire_ball(GF_IDENTIFY, 0, 1, get_level(IDENTIFY, 3)), obvious)
@@ -53,7 +53,7 @@ IDENTIFY = add_spell
 					player.notice = bor(player.notice, PN_COMBINE, PN_REORDER)
 				end
 				return obvious
-			elseif get_level(IDENTIFY, 50) >= 17 then
+			elseif get_level(IDENTIFY, 50) >= 30 then
 				local obvious
 				obvious = identify_pack()
 				obvious = is_obvious(fire_ball(GF_IDENTIFY, 0, 1, 0), obvious)
@@ -74,8 +74,8 @@ IDENTIFY = add_spell
 	end,
 	["desc"] =	{
 			"Asks for an object and identifies it",
-			"At level 17 it identifies all objects in the inventory",
-			"At level 27 it identifies all objects in the inventory and in a",
+			"At level 30 it identifies all objects in the inventory",
+			"At level 50 it identifies all objects in the inventory and in a",
 			"radius on the floor, as well as probing monsters in that radius"
 	}
 }
@@ -177,12 +177,12 @@ REVEALWAYS = add_spell
 	["inertia"] = 	{ 1, 10 },
 	["spell"] = 	function()
 			local obvious
-			obvious = detect_doors(10 + get_level(REVEALWAYS, 40, 0))
-			obvious = is_obvious(detect_stairs(10 + get_level(REVEALWAYS, 40, 0)), obvious)
+			obvious = detect_doors(10 + get_level(REVEALWAYS, 25, 0))
+			obvious = is_obvious(detect_stairs(10 + get_level(REVEALWAYS, 25, 0)), obvious)
 			return obvious
 	end,
 	["info"] = 	function()
-			return "rad "..(10 + get_level(REVEALWAYS, 40))
+			return "rad "..(10 + get_level(REVEALWAYS, 25))
 	end,
 	["desc"] =	{
 			"Detects the doors/stairs/ways in a certain radius around you",
@@ -210,7 +210,7 @@ SENSEMONSTERS = add_spell
 	["inertia"] = 	{ 1, 10 },
 	["spell"] = 	function()
 			local obvious
-			obvious = detect_monsters_normal(10 + get_level(SENSEMONSTERS, 40, 0))
+			obvious = detect_monsters_normal(10 + get_level(SENSEMONSTERS, 25, 0))
 			if get_level(SENSEMONSTERS, 50) >= 30 then
 				obvious = is_obvious(set_tim_esp(10 + randint(10) + get_level(SENSEMONSTERS, 20)), obvious)
 			end
@@ -218,9 +218,9 @@ SENSEMONSTERS = add_spell
 	end,
 	["info"] = 	function()
 			if get_level(SENSEMONSTERS, 50) >= 30 then
-				return "rad "..(10 + get_level(SENSEMONSTERS, 40)).." dur "..(10 + get_level(SENSEMONSTERS, 20)).."+d10"
+				return "rad "..(10 + get_level(SENSEMONSTERS, 25)).." dur "..(10 + get_level(SENSEMONSTERS, 20)).."+d10"
 			else
-				return "rad "..(10 + get_level(SENSEMONSTERS, 40))
+				return "rad "..(10 + get_level(SENSEMONSTERS, 25))
 			end
 	end,
 	["desc"] =	{

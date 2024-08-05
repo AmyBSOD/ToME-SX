@@ -16,12 +16,12 @@ AULE_FIREBRAND = add_spell
 		local level = get_level(AULE_FIREBRAND)
 		type = GF_FIRE
 		
-		if (get_level(AULE_FIREBRAND) > 30) then
+		if (get_level(AULE_FIREBRAND) > 60) then
 			type = GF_HOLY_FIRE
 		end
 		
 		rad = 0
-		if (level >= 15) then 
+		if (level >= 20) then 
 			rad = 1 
 		end
 		return set_project(level + randint(20), 
@@ -34,8 +34,8 @@ AULE_FIREBRAND = add_spell
 	end, 
 	["desc"] =	{ 
 		"Imbues your melee weapon with fire to deal more damage", 
-		"At level 15 it spreads over a 1 radius zone around your target", 
-		"At level 30 it deals holy fire damage" 
+		"At level 20 it spreads over a 1 radius zone around your target", 
+		"At level 60 it deals holy fire damage" 
 	} 
 } 
  
@@ -92,15 +92,21 @@ AULE_ENCHANT_WEAPON = add_spell
 		
 		obj = get_object(item)
 		
-		if obj.to_h < 15 or magik(2) == TRUE then
+		if (obj.to_h < 15) then
+			obj.to_h = obj.to_h + num_h
+		elseif magik(2) == TRUE and obj.to_h < 20 then
 			obj.to_h = obj.to_h + num_h
 		end
 
-		if obj.to_d < 15 or magik(2) == TRUE then
-			obj.to_d = obj.to_d + num_h
+		if (obj.to_d < 15) then
+			obj.to_d = obj.to_d + num_d
+		elseif magik(2) == TRUE and obj.to_d < 20 then
+			obj.to_h = obj.to_h + num_h
 		end
 
-		if magik(2) == TRUE and (obj.pval < 3 or magik(3) == TRUE) then
+		if magik(2) == TRUE and obj.pval == 3 and magik(3) == TRUE then
+			obj.pval = obj.pval + num_p
+		elseif magik(2) == TRUE and obj.pval < 3 then
 			obj.pval = obj.pval + num_p
 		end
 
@@ -137,12 +143,12 @@ AULE_ENCHANT_ARMOUR = add_spell {
 		num_h = 0 
 		num_d = 0 
 		num_p = 0 
-		if (level >= 20) then 
-			num_h = 1 
-			num_d = 1 
-		end 
 		if (level >= 40) then 
 			num_p = 1 
+		end 
+		if (level >= 60) then 
+			num_h = 1 
+			num_d = 1 
 		end 
 		--return enchant_spell(num_h, num_d, num_a, num_p)
 		
@@ -177,20 +183,24 @@ AULE_ENCHANT_ARMOUR = add_spell {
 		
 		obj = get_object(item)
 		
-		if magik(2) == TRUE and obj.to_h < 10 then
+		if magik(2) == TRUE and obj.to_h < 3 then
 			obj.to_h = obj.to_h + num_h
 		end
 
-		if magik(2) == TRUE and obj.to_d < 10 then
-			obj.to_d = obj.to_d + num_h
+		if magik(2) == TRUE and obj.to_d < 3 then
+			obj.to_d = obj.to_d + num_d
 		end
 
-		if magik(2) == TRUE and (obj.pval < 3 or magik(3) == TRUE) then
+		if magik(2) == TRUE and obj.pval == 3 and magik(3) == TRUE then
+			obj.pval = obj.pval + num_p
+		elseif magik(2) == TRUE and obj.pval < 3 then
 			obj.pval = obj.pval + num_p
 		end
 
-		if obj.to_a < 15 or magik(2) == TRUE then
-			obj.to_a = obj.to_a + num_h
+		if (obj.to_a < 15) then
+			obj.to_a = obj.to_a + num_a
+		elseif magik(2) == TRUE and obj.to_a < 20 then
+			obj.to_a = obj.to_a + num_a
 		end
 		
 		return TRUE
@@ -201,8 +211,8 @@ AULE_ENCHANT_ARMOUR = add_spell {
 	end, 
 	["desc"] =	{
 		"Tries to enchant a piece of armour", 
-		"At level 20 it also enchants to-hit and to-dam", 
 		"At level 40 it enhances the special powers of magical armour", 
+		"At level 60 it also enchants to-hit and to-dam", 
 		"The might of the enchantment increases with the level" 
 	} 
 } 

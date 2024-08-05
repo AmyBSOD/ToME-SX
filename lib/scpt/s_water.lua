@@ -54,7 +54,7 @@ ICESTORM = add_spell
 	["spell"] = 	function()
 			local type
 	
-			if get_level(ICESTORM, 50) >= 10 then type = GF_ICE
+			if get_level(ICESTORM, 50) >= 25 then type = GF_ICE
 			else type = GF_COLD end
 			fire_wave(type, 0, 80 + get_level(ICESTORM, 200), 1 + get_level(ICESTORM, 3, 0), 20 + get_level(ICESTORM, 70), EFF_STORM)
 			return TRUE
@@ -64,7 +64,7 @@ ICESTORM = add_spell
 	end,
 	["desc"] =	{
 			"Engulfs you in a storm of roaring cold that strikes your foes.",
-			"At level 10 it turns into shards of ice."
+			"At level 25 it turns into shards of ice."
 	}
 }
 

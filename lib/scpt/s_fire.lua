@@ -106,7 +106,7 @@ FIERYAURA = add_spell
 	["inertia"] = 	{ 2, 15 },
 	["spell"] =     function()
 		local type
-		if (get_level(FIERYAURA, 50) >= 8) then
+		if (get_level(FIERYAURA, 50) >= 25) then
 			type = SHIELD_GREAT_FIRE
 		else
 			type = SHIELD_FIRE
@@ -118,7 +118,7 @@ FIERYAURA = add_spell
 	end,
 	["desc"] =      {
 			"Creates a shield of fierce flames around you",
-			"At level 8 it turns into a greater kind of flame that can not be resisted"
+			"At level 25 it turns into a greater kind of flame that can not be resisted"
 	}
 }
 
@@ -142,7 +142,7 @@ FIREWALL = add_spell
 	},
 	["spell"] =     function()
 		local ret, dir, type
-		if (get_level(FIREWALL, 50) >= 6) then
+		if (get_level(FIREWALL, 50) >= 50) then
 			type = GF_HELL_FIRE
 		else
 			type = GF_FIRE
@@ -157,7 +157,7 @@ FIREWALL = add_spell
 	end,
 	["desc"] =      {
 			"Creates a fiery wall to incinerate monsters stupid enough to attack you",
-			"At level 6 it turns into a wall of hell fire"
+			"At level 50 it turns into a wall of hell fire"
 	}
 }
 

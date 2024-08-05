@@ -17,7 +17,7 @@ ERU_SEE = add_spell
 	["spell"] = 	function()
 			local obvious
 			obvious = set_tim_invis(randint(20) + 10 + get_level(ERU_SEE, 100))
-			if get_level(ERU_SEE) >= 30 then
+			if get_level(ERU_SEE) >= 60 then
 				wiz_lite_extra()
 				obvious = TRUE
 			elseif get_level(ERU_SEE) >= 10 then
@@ -37,7 +37,7 @@ ERU_SEE = add_spell
 			"originates, allowing you to see unseen things",
 			"At level 10 it allows you to see your surroundings",
 			"At level 20 it allows you to cure blindness",
-			"At level 30 it allows you to fully see all the level"
+			"At level 60 it allows you to fully see all the level"
 	}
 }
 
@@ -46,19 +46,19 @@ ERU_LISTEN = add_spell
 	["name"] = 	"Listen to the Music",
 	["school"] = 	{SCHOOL_ERU},
 	["level"] = 	7,
-	["mana"] = 	15,
-	["mana_max"] = 	200,
+	["mana"] = 	30,
+	["mana_max"] = 	300,
 	["fail"] = 	25,
 	-- Uses piety to cast
 	["piety"] =     TRUE,
 	["stat"] =      A_WIS,
 	["random"] = 	SKILL_SPIRITUALITY,
 	["spell"] = 	function()
-			if get_level(ERU_LISTEN) >= 30 then
+			if get_level(ERU_LISTEN) >= 60 then
 				ident_all()
 				identify_pack()
 				return TRUE
-			elseif get_level(ERU_LISTEN) >= 14 then
+			elseif get_level(ERU_LISTEN) >= 30 then
 				identify_pack()
 				return TRUE
 			else
@@ -71,8 +71,8 @@ ERU_LISTEN = add_spell
 	["desc"] =	{
 			"Allows you to listen to the Great Music from which the world",
 			"originates, allowing you to understand the meaning of things",
-			"At level 14 it allows you to identify all your pack",
-			"At level 30 it allows you to identify all items on the level",
+			"At level 30 it allows you to identify all your pack",
+			"At level 60 it allows you to identify all items on the level",
 	}
 }
 
@@ -89,7 +89,7 @@ ERU_UNDERSTAND = add_spell
 	["stat"] =      A_WIS,
 	["random"] = 	SKILL_SPIRITUALITY,
 	["spell"] = 	function()
-			if get_level(ERU_UNDERSTAND) >= 10 then
+			if get_level(ERU_UNDERSTAND) >= 30 then
 				identify_pack_fully()
 				return TRUE
 			else
@@ -102,7 +102,7 @@ ERU_UNDERSTAND = add_spell
 	["desc"] =	{
 			"Allows you to understand the Great Music from which the world",
 			"originates, allowing you to know the full abilities of things",
-			"At level 10 it allows you to *identify* all your pack",
+			"At level 30 it allows you to *identify* all your pack",
 	}
 }
 
@@ -112,7 +112,7 @@ ERU_PROT = add_spell
 	["school"] = 	{SCHOOL_ERU},
 	["level"] = 	35,
 	["mana"] = 	400,
-	["mana_max"] = 	400,
+	["mana_max"] = 	800,
 	["fail"] = 	80,
 	-- Uses piety to cast
 	["piety"] =     TRUE,
