@@ -4213,11 +4213,11 @@ static bool item_tester_hook_attachable(object_type *o_ptr)
 /*
  * Combine a rod and a rod tip
  */
-void zap_combine_rod_tip(object_type *q_ptr, int tip_item)
+void zap_combine_rod_tip(object_type *q_ptr, int tip_item) /* q_ptr is the rod tip */
 {
 	int item;
 
-	object_type *o_ptr;
+	object_type *o_ptr; /* o_ptr is the rod to attach to */
 
 	object_kind *k_ptr;
 
@@ -4281,6 +4281,11 @@ void zap_combine_rod_tip(object_type *q_ptr, int tip_item)
 
 	/* Attach the tip to the rod */
 	o_ptr->pval = q_ptr->sval;
+
+	/* ego rod tips should transfer to the rod itself --Amy */
+	if (q_ptr->art_flags3 & TR3_IGNORE_ELEC) {
+		o_ptr->art_flags3 |= TR3_IGNORE_ELEC;
+	}
 
 	/* Destroy a rod tip in the pack */
 	if (tip_item >= 0)

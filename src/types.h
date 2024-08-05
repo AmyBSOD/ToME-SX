@@ -311,9 +311,9 @@ struct ego_item_type
 
 	bool before;                    /* Before or after the object name ? */
 
-	byte tval[10];
-	byte min_sval[10];
-	byte max_sval[10];
+	byte tval[20];
+	byte min_sval[20];
+	byte max_sval[20];
 
 	byte rating;		/* Rating boost */
 
@@ -369,9 +369,9 @@ struct ego_item_type
 typedef struct randart_part_type randart_part_type;
 struct randart_part_type
 {
-	byte tval[20];
-	byte min_sval[20];
-	byte max_sval[20];
+	byte tval[30];
+	byte min_sval[30];
+	byte max_sval[30];
 
 	byte level;             /* Minimum level */
 	s32b rarity;            /* Object rarity */

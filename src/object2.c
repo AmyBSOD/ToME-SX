@@ -2853,7 +2853,7 @@ static bool make_ego_item(object_type *o_ptr, bool good)
 		if (!e_ptr->name) continue;
 
 		/* Must have the correct fields */
-		for (j = 0; j < 6; j++)
+		for (j = 0; j < 20; j++)
 		{
 			if (e_ptr->tval[j] == o_ptr->tval)
 			{
@@ -3731,8 +3731,8 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 	if (power > 1)
 	{
 		/* Make ego item */
-		if ((rand_int(RANDART_JEWEL) == 1) && (o_ptr->tval == TV_LITE)) create_artifact(o_ptr, FALSE, TRUE);
-		else if (has_ability(AB_CREATE_ART) && (randint(5) == 1) && (rand_int(RANDART_JEWEL) == 1) && (o_ptr->tval == TV_LITE) ) create_artifact(o_ptr, FALSE, TRUE);
+		if ((rand_int(RANDART_JEWEL) == 1) && (o_ptr->tval == TV_LITE || o_ptr->tval == TV_TOOL || o_ptr->tval == TV_INSTRUMENT || o_ptr->tval == TV_DIGGING)) create_artifact(o_ptr, FALSE, TRUE);
+		else if (has_ability(AB_CREATE_ART) && (randint(5) == 1) && (rand_int(RANDART_JEWEL) == 1) && (o_ptr->tval == TV_LITE || o_ptr->tval == TV_TOOL || o_ptr->tval == TV_INSTRUMENT || o_ptr->tval == TV_DIGGING) ) create_artifact(o_ptr, FALSE, TRUE);
 		else make_ego_item(o_ptr, TRUE);
 	}
 	else if (power < -1)
@@ -5310,7 +5310,7 @@ bool kind_is_artifactable(int k_idx)
 		{
 			randart_part_type *ra_ptr = &ra_info[i];
 
-			for (j = 0; j < 20; j++)
+			for (j = 0; j < 30; j++)
 			{
 				if (ra_ptr->tval[j] != k_ptr->tval) continue;
 				if (ra_ptr->min_sval[j] > k_ptr->sval) continue;

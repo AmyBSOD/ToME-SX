@@ -7717,7 +7717,7 @@ bool test_object_wish(char *name, object_type *o_ptr, object_type *forge, char *
 				{
 					int z;
 
-					for (z = 0; z < 6; z++)
+					for (z = 0; z < 20; z++)
 					{
 						if (e_ptr->tval[z] == k_ptr->tval)
 						{
@@ -7747,7 +7747,7 @@ bool test_object_wish(char *name, object_type *o_ptr, object_type *forge, char *
 					{
 						int z;
 
-						for (z = 0; z < 6; z++)
+						for (z = 0; z < 20; z++)
 						{
 							if (eb_ptr->tval[z] == k_ptr->tval)
 							{

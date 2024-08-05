@@ -990,9 +990,9 @@ struct ego_item_type
 
 	bool before;                    /* Before or after the object name ? */
 
-	byte tval[6];
-	byte min_sval[6];
-	byte max_sval[6];
+	byte tval[20];
+	byte min_sval[20];
+	byte max_sval[20];
 
 	byte rating;		/* Rating boost */
 

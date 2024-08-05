@@ -37,7 +37,7 @@ static bool grab_one_power(int *ra_idx, object_type *o_ptr, bool good, s16b *max
 		bool ok = FALSE;
 
 		/* Must have the correct fields */
-		for (j = 0; j < 20; j++)
+		for (j = 0; j < 30; j++)
 		{
 			if (ra_ptr->tval[j] == o_ptr->tval)
 			{

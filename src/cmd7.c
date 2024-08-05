@@ -3057,7 +3057,7 @@ void alchemist_recipe_book(void)
 						if ( !(alchemist_known_egos[sval / 32] & (1 << (sval % 32))))
 							continue;
 
-						for ( j = 0 ; j < 6 && e_ptr->tval[j] ; j ++ )
+						for ( j = 0 ; j < 20 && e_ptr->tval[j] ; j ++ )
 						{
 							if ( j > 0 && e_ptr->tval[j] == e_ptr->tval[j - 1])
 								continue;
@@ -3209,7 +3209,7 @@ int alchemist_recipe_select(int *tval, int sval, int ego, bool recipe)
 					continue;
 
 				/* search in permitted tvals/svals for allowed egos */
-				for ( j = 0 ; j < 6 ; j ++ )
+				for ( j = 0 ; j < 20 ; j ++ )
 					if ( e_ptr->tval[j] == *tval
 					                && sval >= e_ptr->min_sval[j]
 					                && sval <= e_ptr->max_sval[j])

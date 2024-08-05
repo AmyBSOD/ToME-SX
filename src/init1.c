@@ -6804,7 +6804,7 @@ errr init_e_info_txt(FILE *fp, char *buf)
 			cur_r = -1;
 			cur_t = 0;
 
-			for (j = 0; j < 10; j++)
+			for (j = 0; j < 20; j++)
 			{
 				e_ptr->tval[j] = 255;
 			}
@@ -6858,7 +6858,7 @@ errr init_e_info_txt(FILE *fp, char *buf)
 		{
 			int tv, minsv, maxsv;
 
-			if (cur_t == 10) return 1;
+			if (cur_t == 20) return 1;
 
 			/* Scan for the values */
 			if (3 != sscanf(buf + 2, "%d:%d:%d",
@@ -7362,7 +7362,7 @@ errr init_ra_info_txt(FILE *fp, char *buf)
 			ra_ptr->power = -1;
 			cur_t = 0;
 
-			for (j = 0; j < 20; j++)
+			for (j = 0; j < 30; j++)
 			{
 				ra_ptr->tval[j] = 255;
 			}
@@ -7386,7 +7386,7 @@ errr init_ra_info_txt(FILE *fp, char *buf)
 		{
 			int tv, minsv, maxsv;
 
-			if (cur_t == 20) return 1;
+			if (cur_t == 30) return 1;
 
 			/* Scan for the values */
 			if (3 != sscanf(buf + 2, "%d:%d:%d",
