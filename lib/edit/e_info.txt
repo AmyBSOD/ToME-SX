@@ -1291,7 +1291,7 @@ N:101:of Digging
 T:20:0:255
 X:A:24:4
 W:0:1:2:500
-C:0:0:0:5
+C:0:0:0:12
 R:100
 F:TUNNEL |
 f:TUNNEL |
@@ -3465,6 +3465,167 @@ C:0:0:0:0
 R:100
 F:IGNORE_ELEC
 f:IGNORE_ELEC
+
+# more digging tools
+N:276:of Strength
+T:20:0:255
+X:A:24:4
+W:0:1:2:600
+C:0:0:0:8
+R:100
+F:STR |
+f:STR |
+
+N:277:of Endurance
+T:20:0:255
+X:A:24:4
+W:0:1:2:600
+C:0:0:0:4
+R:100
+F:CON |
+f:CON |
+
+N:278:of Searching
+T:20:0:255
+X:A:24:4
+W:0:1:2:600
+C:0:0:0:5
+R:100
+F:SEARCH |
+f:SEARCH |
+
+N:279:Trollsense
+T:20:0:255
+X:B:24:4
+W:0:1:3:800
+C:0:0:0:0
+R:100
+F:ESP_TROLL |
+f:ESP_TROLL |
+
+N:280:Giantsense
+T:20:0:255
+X:B:24:4
+W:0:1:3:800
+C:0:0:0:0
+R:100
+F:ESP_GIANT |
+f:ESP_GIANT |
+
+N:281:Unlive-attuned
+T:20:0:255
+X:B:24:20
+W:20:1:10:5000
+C:0:0:0:0
+R:100
+F:ESP_NONLIVING |
+f:ESP_NONLIVING |
+
+N:282:of Climbing
+T:20:0:255
+X:A:24:50
+W:50:1:20:10000
+C:0:0:0:0
+R:100
+F:CLIMB |
+f:CLIMB |
+
+N:283:of Light
+T:20:0:255
+X:A:24:3
+W:0:1:2:400
+C:0:0:0:0
+R:100
+F:LITE1 |
+f:LITE1 |
+
+N:284:of Brightness
+T:20:0:255
+X:A:24:6
+W:30:1:2:2000
+C:0:0:0:0
+R:100
+F:LITE2 |
+f:LITE2 |
+
+N:285:of Boldness
+T:20:0:255
+X:A:24:4
+W:0:1:2:500
+C:0:0:0:0
+R:100
+F:RES_FEAR |
+f:RES_FEAR |
+
+N:286:of Concentration
+T:20:0:255
+X:A:24:5
+W:0:1:2:750
+C:0:0:0:0
+R:100
+F:RES_CONF |
+f:RES_CONF |
+
+N:287:of Safety
+T:20:0:255
+X:A:24:3
+W:0:1:2:500
+C:0:0:0:-1
+R:100
+F:RES_SHARDS | TUNNEL |
+f:RES_SHARDS | TUNNEL |
+
+N:288:Pointless
+T:20:0:255
+X:B:24:0
+W:0:1:2:0
+C:0:0:0:-5
+R:100
+F:TUNNEL | CURSED | 
+f:TUNNEL |
+
+N:289:of Weakness
+T:20:0:255
+X:A:24:0
+W:0:1:2:0
+C:0:0:0:-10
+R:100
+F:STR | CURSED | 
+f:STR |
+
+N:290:of Water Shielding
+T:20:0:255
+X:A:24:50
+W:60:3:100:5000
+C:0:0:0:0
+R:100
+F:RES_WATER |
+f:RES_WATER |
+
+N:291:Stout
+T:20:0:255
+X:B:24:8
+W:0:1:3:1000
+C:0:0:10:0
+
+N:292:Stalwart
+T:20:0:255
+X:B:24:8
+W:15:1:5:1000
+C:0:0:10:2
+R:100
+F:STR | CON | 
+f:STR | CON | 
+
+# another instrument
+N:293:of Charisma
+T:14:0:255
+X:A:25:8
+W:0:2:3:600
+C:0:0:0:6
+R:100
+F:CHR | 
+f:CHR | 
 
 # N: serial number : ego type
 # D: description

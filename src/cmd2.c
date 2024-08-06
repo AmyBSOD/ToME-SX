@@ -1537,7 +1537,7 @@ bool do_cmd_tunnel_aux(int y, int x, int dir)
 		/* Chop Down */
 		skill_req = 10;
 		skill_req_1pct = 14;
-		if ((p_ptr->skill_dig > 10 + rand_int(400)) && twall(y, x, FEAT_GRASS))
+		if ((p_ptr->skill_dig > 5 + rand_int(800)) && twall(y, x, FEAT_GRASS))
 		{
 			msg_print("You have cleared away the trees.");
 		}
@@ -1562,7 +1562,7 @@ bool do_cmd_tunnel_aux(int y, int x, int dir)
 		/* Tunnel */
 		skill_req = 40;
 		skill_req_1pct = 56;
-		if ((p_ptr->skill_dig > 40 + rand_int(1600)) && twall(y, x, FEAT_FLOOR))
+		if ((p_ptr->skill_dig > 20 + rand_int(3200)) && twall(y, x, FEAT_FLOOR))
 		{
 			msg_print("You have finished the tunnel.");
 		}
@@ -1607,7 +1607,7 @@ bool do_cmd_tunnel_aux(int y, int x, int dir)
 		{
 			skill_req = 20;
 			skill_req_1pct = 28;
-			okay = (p_ptr->skill_dig > 20 + rand_int(800));
+			okay = (p_ptr->skill_dig > 10 + rand_int(1600));
 		}
 
 		/* Sandwall */
@@ -1615,7 +1615,7 @@ bool do_cmd_tunnel_aux(int y, int x, int dir)
 		{
 			skill_req = 5;
 			skill_req_1pct = 8;
-			okay = (p_ptr->skill_dig > 5 + rand_int(250));
+			okay = (p_ptr->skill_dig > 3 + rand_int(500));
 		}
 
 		/* Magma */
@@ -1623,7 +1623,7 @@ bool do_cmd_tunnel_aux(int y, int x, int dir)
 		{
 			skill_req = 10;
 			skill_req_1pct = 14;
-			okay = (p_ptr->skill_dig > 10 + rand_int(400));
+			okay = (p_ptr->skill_dig > 5 + rand_int(800));
 		}
 
 		/* Success */
@@ -1662,7 +1662,7 @@ bool do_cmd_tunnel_aux(int y, int x, int dir)
 		/* Remove the rubble */
 		skill_req = 0;
 		skill_req_1pct = 2;
-		if ((p_ptr->skill_dig > rand_int(200)) &&
+		if ((p_ptr->skill_dig > rand_int(400)) &&
 		                twall(y, x, d_info[dungeon_type].floor1))
 		{
 			/* Message */
@@ -1696,7 +1696,7 @@ bool do_cmd_tunnel_aux(int y, int x, int dir)
 		/* Tunnel */
 		skill_req = 30;
 		skill_req_1pct = 42;
-		if ((p_ptr->skill_dig > 30 + rand_int(1200)) && twall(y, x, FEAT_FLOOR))
+		if ((p_ptr->skill_dig > 15 + rand_int(2400)) && twall(y, x, FEAT_FLOOR))
 		{
 			msg_print("You have finished the tunnel.");
 			c_ptr->mimic = 0;
@@ -1730,7 +1730,7 @@ bool do_cmd_tunnel_aux(int y, int x, int dir)
 		/* Tunnel */
 		skill_req = 30;
 		skill_req_1pct = 42;
-		if ((p_ptr->skill_dig > 30 + rand_int(1200)) && twall(y, x, FEAT_FLOOR))
+		if ((p_ptr->skill_dig > 15 + rand_int(2400)) && twall(y, x, FEAT_FLOOR))
 		{
 			msg_print("You have finished the tunnel.");
 		}
