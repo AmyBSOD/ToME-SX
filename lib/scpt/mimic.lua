@@ -104,6 +104,34 @@ add_mimic_shape
 
 add_mimic_shape
 {
+	["name"] =      "Lion",
+	["obj_name"] =  "Lion Hide",
+	["desc"] = 	"Lions are fearsome, fast hunters.",
+	["realm"] =     "nature",
+	["level"] =     20,
+	["rarity"] =    40,
+	["duration"] =  {10, 50},
+	["calc"] =      function ()
+			player.modify_stat(A_DEX, 4 + (player.mimic_level / 10))
+			player.modify_stat(A_WIS, -5)
+
+			player.pspeed = player.pspeed + 1 + (player.mimic_level / 8)
+			player.xtra_crit = player.xtra_crit + 1 + (player.mimic_level / 10)
+
+			player.to_h_ranged = player.to_h_ranged - 5
+			player.to_a = player.to_a - 10
+			player.dis_to_a = player.dis_to_a - 10
+			player.skill_dev = player.skill_dev - 5
+			player.skill_fos = player.skill_fos - 5
+			player.skill_dig = player.skill_dig - 5
+
+			player.resist_fear = TRUE
+
+	end,
+}
+
+add_mimic_shape
+{
 	["name"] =      "Spider",
 	["obj_name"] =  "Spider Web",
 	["desc"] = 	"Spiders are clever and become good climbers.",

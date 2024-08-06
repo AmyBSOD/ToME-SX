@@ -1226,6 +1226,11 @@ struct player_type
 	 */
 	s16b pspeed;
 
+	/** @structvar xtra_speed
+	 * @brief Number
+	 */
+	s16b xtra_crit;
+
 	/** @structvar notice
 	 * @brief Number
 	 * @note Special Updates (bit flags)
