@@ -77,12 +77,14 @@ add_quest
 				local give_god_quest = magik(god_quest.CHANCE_OF_GOD_QUEST)
 
 				-- check player is worshipping a god, not already on a god quest.
-				if (player.astral ~= FALSE) or (player.pgod <= 0) 
+				-- and nope, being astral does NOT prevent you getting a quest --Amy
+				if (player.pgod <= 0) 
 				or (quest(GOD_QUEST).status == QUEST_STATUS_TAKEN) or (quest(GOD_QUEST).status == QUEST_STATUS_FAILED)
 				or (god_quest.quests_given >= god_quest.MAX_NUM_GOD_QUESTS) or (give_god_quest == FALSE)
 				or ((current_dungeon_idx == god_quest.DUNGEON_GOD) and (dun_level > 0)) then
 					-- Don't let a player get quests with trickery
 					-- Amy edit: randarts of high experience loss are no trickery IMHO...
+					-- especially since you may just have bad RNG and not get all the quests! FU!
 
 					-- if player.lev > god_quest.dun_minplev then
 					-- 	god_quest.dun_minplev = player.lev
