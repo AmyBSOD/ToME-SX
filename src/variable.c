@@ -81,6 +81,7 @@ bool character_icky; 		/* The game is in an icky full screen mode */
 bool character_xtra; 		/* The game is in an icky startup mode */
 
 bool four_dim_mode;           /* The player is currently using the 4D pocket */
+bool lifesave_no_mortal;      /* The player just got killed by a mortal being with the fate active */
 
 u32b seed_flavor; 		/* Hack -- consistent object colors */
 u32b seed_town; 			/* Hack -- consistent town layout */

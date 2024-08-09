@@ -1326,8 +1326,10 @@ static void process_world(void)
 	/* Handle class special actions */
 	gere_class_special();
 
-	/* Check the fate */
-	if (fate_option && (p_ptr->lev > 10))
+	/* Check the fate
+	 * Amy edit: it makes less than zero sense if you can't get them at lower XLs! man! why do I always have to fix such
+	 * things... why can't the devs just make a game without arrgh factors so that I can simply play :( */
+	if (fate_option /*&& (p_ptr->lev > 10)*/)
 	{
 		/*
 		 * WAS: == 666 against randint(50000).
@@ -3650,6 +3652,7 @@ static void process_command(void)
 	repeat_check();
 
 	four_dim_mode = FALSE;
+	lifesave_no_mortal = FALSE;
 
 #endif /* ALLOW_REPEAT -- TNB */
 
@@ -6169,6 +6172,34 @@ void play_game(bool new_game)
 
 				cmsg_print(TERM_L_GREEN,
 				           "You have been saved by the Blood of Life!");
+				msg_print(NULL);
+			}
+
+			/* Life saving if fated to not die by a mortal being, but only once because of game balance --Amy */
+			else if (p_ptr->no_mortal && lifesave_no_mortal)
+			{
+				p_ptr->no_mortal = FALSE;
+				lifesave_no_mortal = FALSE;
+
+				for (i = 0; i < MAX_FATES; i++)
+				{
+					/* Ignore empty slots */
+					if (!fates[i].fate) continue;
+
+					/* Analyse fate */
+					switch (fates[i].fate)
+					{
+						case FATE_NO_DIE_MORTAL:
+						{
+							fates[i].fate = FATE_NONE;
+							break;
+						}
+					}
+				}
+
+				cheat_death = TRUE;
+				cmsg_print(TERM_L_GREEN,
+				           "You weren't supposed to die to that monster and therefore survive!");
 				msg_print(NULL);
 			}
 

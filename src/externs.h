@@ -123,6 +123,7 @@ extern bool character_loaded;
 extern bool character_saved;
 extern bool character_icky;
 extern bool four_dim_mode;
+extern bool lifesave_no_mortal;
 extern bool character_xtra;
 extern u32b seed_flavor;
 extern u32b seed_town;

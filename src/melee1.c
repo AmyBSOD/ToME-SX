@@ -1128,6 +1128,7 @@ bool carried_make_attack_normal(int r_idx)
 			case RBE_HALLU:
 				{
 					/* Take damage */
+					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
 
 					/* Increase "image" */
@@ -1427,7 +1428,7 @@ bool make_attack_normal(int m_idx, byte divis)
 	}
 
 	/* Cannot attack the player if mortal and player fated to never die by the ... */
-	if ((r_ptr->flags7 & RF7_MORTAL) && (p_ptr->no_mortal)) return (FALSE);
+	/*if ((r_ptr->flags7 & RF7_MORTAL) && (p_ptr->no_mortal)) return (FALSE);*/
 
 	/* Total armor */
 	ac = p_ptr->ac + p_ptr->to_a;
@@ -1940,7 +1941,9 @@ bool make_attack_normal(int m_idx, byte divis)
 					damage -= (damage * ((ac < 150) ? ac : 150) / 250);
 
 					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					break;
 				}
@@ -1979,7 +1982,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_POISON:
 				{
 					/* Take some damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Take "poison" effect */
 					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
@@ -1999,7 +2004,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_UN_BONUS:
 				{
 					/* Take some damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Allow complete resist */
 					if (!p_ptr->resist_disen)
@@ -2017,7 +2024,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_UN_POWER:
 				{
 					/* Take some damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Find an item */
 					for (k = 0; k < 10; k++)
@@ -2083,7 +2092,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_EAT_GOLD:
 				{
 					/* Take some damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Obvious */
 					obvious = TRUE;
@@ -2157,7 +2168,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_EAT_ITEM:
 				{
 					/* Take some damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Saving throw (unless paralyzed) based on dex and level */
 					if (!p_ptr->paralyzed && (rand_int(10) > 0) &&
@@ -2299,7 +2312,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_EAT_FOOD:
 				{
 					/* Take some damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Steal some food */
 					for (k = 0; k < 10; k++)
@@ -2341,7 +2356,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_EAT_LITE:
 				{
 					/* Take some damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Access the lite */
 					o_ptr = &p_ptr->inventory[INVEN_LITE];
@@ -2438,7 +2455,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_BLIND:
 				{
 					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Increase "blind" */
 					if (!p_ptr->resist_blind || (rand_int(100) < 5) )
@@ -2458,7 +2477,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_CONFUSE:
 				{
 					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Increase "confused" */
 					if (!p_ptr->resist_conf || (rand_int(100) < 5) )
@@ -2478,7 +2499,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_TERRIFY:
 				{
 					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Increase "afraid" */
 					if (p_ptr->resist_fear && (rand_int(100) > 4) )
@@ -2511,7 +2534,9 @@ bool make_attack_normal(int m_idx, byte divis)
 					if (p_ptr->paralyzed && (damage < 1)) damage = 1;
 
 					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Increase "paralyzed" */
 					if (p_ptr->free_act && (rand_int(100) > 0) )
@@ -2541,7 +2566,10 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_LOSE_STR:
 				{
 					/* Damage (physical) */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					lifesave_no_mortal = FALSE;
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Damage (stat) */
 					if (do_dec_stat(A_STR, STAT_DEC_NORMAL)) obvious = TRUE;
@@ -2552,7 +2580,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_LOSE_INT:
 				{
 					/* Damage (physical) */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Damage (stat) */
 					if (do_dec_stat(A_INT, STAT_DEC_NORMAL)) obvious = TRUE;
@@ -2563,7 +2593,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_LOSE_WIS:
 				{
 					/* Damage (physical) */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Damage (stat) */
 					if (do_dec_stat(A_WIS, STAT_DEC_NORMAL)) obvious = TRUE;
@@ -2574,7 +2606,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_LOSE_DEX:
 				{
 					/* Damage (physical) */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Damage (stat) */
 					if (do_dec_stat(A_DEX, STAT_DEC_NORMAL)) obvious = TRUE;
@@ -2585,7 +2619,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_LOSE_CON:
 				{
 					/* Damage (physical) */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Damage (stat) */
 					if (do_dec_stat(A_CON, STAT_DEC_NORMAL)) obvious = TRUE;
@@ -2596,7 +2632,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_LOSE_CHR:
 				{
 					/* Damage (physical) */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Damage (stat) */
 					if (do_dec_stat(A_CHR, STAT_DEC_NORMAL)) obvious = TRUE;
@@ -2607,7 +2645,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_LOSE_ALL:
 				{
 					/* Damage (physical) */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Damage (stats) */
 					if (do_dec_stat(A_STR, STAT_DEC_NORMAL)) obvious = TRUE;
@@ -2629,7 +2669,9 @@ bool make_attack_normal(int m_idx, byte divis)
 					damage -= (damage * ((ac < 150) ? ac : 150) / 250);
 
 					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Radius 8 earthquake centered at the monster */
 					if (damage > 23)
@@ -2650,7 +2692,9 @@ bool make_attack_normal(int m_idx, byte divis)
 					obvious = TRUE;
 
 					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					if (p_ptr->hold_life && (rand_int(100) < 95))
 					{
@@ -2679,7 +2723,9 @@ bool make_attack_normal(int m_idx, byte divis)
 					obvious = TRUE;
 
 					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					if (p_ptr->hold_life && (rand_int(100) < 90))
 					{
@@ -2708,7 +2754,9 @@ bool make_attack_normal(int m_idx, byte divis)
 					obvious = TRUE;
 
 					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					if (p_ptr->hold_life && (rand_int(100) < 75))
 					{
@@ -2737,7 +2785,9 @@ bool make_attack_normal(int m_idx, byte divis)
 					obvious = TRUE;
 
 					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					if (p_ptr->hold_life && (rand_int(100) < 50))
 					{
@@ -2763,7 +2813,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_DISEASE:
 				{
 					/* Take some damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Take "poison" effect */
 					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
@@ -2787,7 +2839,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			case RBE_HALLU:
 				{
 					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Increase "image" */
 					if (!p_ptr->resist_chaos || (rand_int(100) < 5) )
@@ -2869,14 +2923,18 @@ bool make_attack_normal(int m_idx, byte divis)
 							break;
 						}
 					}
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 					break;
 				}
 			case RBE_PARASITE:
 				{
 					/* Take damage */
 					carried_monster_hit = TRUE;
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Obvious */
 					obvious = TRUE;

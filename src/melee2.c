@@ -3008,7 +3008,7 @@ bool make_attack_spell(int m_idx)
 	if (is_friend(m_ptr) >= 0) return (FALSE);
 
 	/* Cannot attack the player if mortal and player fated to never die by the ... */
-	if ((r_ptr->flags7 & RF7_MORTAL) && (p_ptr->no_mortal)) return (FALSE);
+	/*if ((r_ptr->flags7 & RF7_MORTAL) && (p_ptr->no_mortal)) return (FALSE);*/
 
 	/* Hack -- Extract the spell probability */
 	chance = (r_ptr->freq_inate + r_ptr->freq_spell) / 2;

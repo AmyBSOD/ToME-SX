@@ -4882,8 +4882,9 @@ void gain_fate(byte fate)
 						/* It's HARD to get now */
 						if (magik(chance))
 						{
-							/* No idea how to balance this, so let's disable it for now --Amy */
-							fates[i].fate = /*FATE_NO_DIE_MORTAL*/FATE_DIE;
+							/* no longer prevents any blows (that's basically IDDQD mode) --Amy
+							 * instead it just lifesaves you once if a mortal being kills you */
+							fates[i].fate = FATE_NO_DIE_MORTAL;
 						}
 						else
 						{
