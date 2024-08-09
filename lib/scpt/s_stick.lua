@@ -335,6 +335,22 @@ DEVICE_ETERNAL_FLAME = add_spell
 							return TRUE
 					     	elseif (obj.tval == TV_BOW) and (obj.sval == SV_HEAVY_XBOW) then
 							return TRUE
+					     	elseif (obj.tval == TV_HAFTED) and (obj.sval == SV_LUCERN_HAMMER) then
+							return TRUE
+					     	elseif (obj.tval == TV_POLEARM) and (obj.sval == SV_TRIDENT) then
+							return TRUE
+					     	elseif (obj.tval == TV_AXE) and (obj.sval == SV_BROAD_AXE) then
+							return TRUE
+					     	elseif (obj.tval == TV_SWORD) and (obj.sval == SV_RAPIER) then
+							return TRUE
+					     	elseif (obj.tval == TV_BOW) and (obj.sval == SV_LONG_BOW) then
+							return TRUE
+					     	elseif (obj.tval == TV_BOW) and (obj.sval == SV_SLING) then
+							return TRUE
+					     	elseif (obj.tval == TV_BOOMERANG) and (obj.sval == SV_BOOM_METAL) then
+							return TRUE
+					     	elseif (obj.tval == TV_AMULET) and (obj.sval == SV_AMULET_SPELL) then
+							return TRUE
 					     	elseif (obj.tval == TV_DRAG_ARMOR) and (obj.sval == SV_DRAGON_POWER) then
 							return TRUE
 					     	end
@@ -351,6 +367,22 @@ DEVICE_ETERNAL_FLAME = add_spell
 				obj.name1 = 127
 			elseif (obj.tval == TV_BOW) and (obj.sval == SV_HEAVY_XBOW) then
 				obj.name1 = 152
+		     	elseif (obj.tval == TV_HAFTED) and (obj.sval == SV_LUCERN_HAMMER) then
+				obj.name1 = 253
+		     	elseif (obj.tval == TV_POLEARM) and (obj.sval == SV_TRIDENT) then
+				obj.name1 = 254
+		     	elseif (obj.tval == TV_AXE) and (obj.sval == SV_BROAD_AXE) then
+				obj.name1 = 255
+		     	elseif (obj.tval == TV_SWORD) and (obj.sval == SV_RAPIER) then
+				obj.name1 = 256
+		     	elseif (obj.tval == TV_BOW) and (obj.sval == SV_LONG_BOW) then
+				obj.name1 = 257
+		     	elseif (obj.tval == TV_BOW) and (obj.sval == SV_SLING) then
+				obj.name1 = 258
+		     	elseif (obj.tval == TV_BOOMERANG) and (obj.sval == SV_BOOM_METAL) then
+				obj.name1 = 259
+		     	elseif (obj.tval == TV_AMULET) and (obj.sval == SV_AMULET_SPELL) then
+				obj.name1 = 260
 			elseif (obj.tval == TV_DRAG_ARMOR) and (obj.sval == SV_DRAGON_POWER) then
 				obj.name1 = 17
 			end
