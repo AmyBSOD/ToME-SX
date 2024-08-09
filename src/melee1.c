@@ -124,7 +124,7 @@ bool carried_make_attack_normal(int r_idx)
 
 	int ap_cnt;
 
-	int k, tmp, ac, rlev;
+	int k, tmp, ac, rlev, sqrtrlev;
 	int do_cut, do_stun;
 
 	char ddesc[80] = "your symbiote";
@@ -142,6 +142,11 @@ bool carried_make_attack_normal(int r_idx)
 
 	/* Extract the effective monster level */
 	rlev = ((r_ptr->level >= 1) ? r_ptr->level : 1);
+	sqrtrlev = rlev;
+	if (sqrtrlev > 1) {
+		sqrtrlev = sroot(rlev);
+		if (sqrtrlev < 1) sqrtrlev = 1;
+	}
 
 	/* Assume no blink */
 	blinked = FALSE;
@@ -838,7 +843,7 @@ bool carried_make_attack_normal(int r_idx)
 					}
 					else
 					{
-						if (set_paralyzed(p_ptr->paralyzed + 3 + randint(rlev)))
+						if (set_paralyzed(p_ptr->paralyzed + 3 + randint(sqrtrlev)))
 						{
 							obvious = TRUE;
 						}
@@ -1394,7 +1399,7 @@ bool make_attack_normal(int m_idx, byte divis)
 
 	int ap_cnt;
 
-	int i, j, k, tmp, ac, rlev;
+	int i, j, k, tmp, ac, rlev, sqrtrlev;
 	int do_cut, do_stun, do_vampire;
 
 	s32b gold;
@@ -1429,7 +1434,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 	/* Extract the effective monster level */
 	rlev = ((m_ptr->level >= 1) ? m_ptr->level : 1);
-
+	sqrtrlev = rlev;
+	if (sqrtrlev > 1) {
+		sqrtrlev = sroot(rlev);
+		if (sqrtrlev < 1) sqrtrlev = 1;
+	}
 
 	/* Get the monster name (or "it") */
 	monster_desc(m_name, m_ptr, 0);
@@ -2517,7 +2526,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					}
 					else
 					{
-						if (set_paralyzed(p_ptr->paralyzed + 3 + randint(rlev)))
+						if (set_paralyzed(p_ptr->paralyzed + 3 + randint(sqrtrlev)))
 						{
 							obvious = TRUE;
 						}

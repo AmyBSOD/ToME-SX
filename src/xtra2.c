@@ -3062,8 +3062,8 @@ bool set_stun(int v)
 		notice = TRUE;
 	}
 
-	/* Use the value */
-	p_ptr->stun = v;
+	/* Use the value - but don't increase stun if already knocked out, please (game balance) --Amy */
+	if (p_ptr->stun <= 300 || (v < p_ptr->stun) ) p_ptr->stun = v;
 
 	/* No change */
 	if (!notice) return (FALSE);
