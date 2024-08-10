@@ -45,7 +45,7 @@ add_quest
 		["god_quest.quests_given"] = 0,
 		["god_quest.relics_found"] = 0,
 		["god_quest.dun_mindepth"] = 1,
-		["god_quest.dun_maxdepth"] = 4,
+		["god_quest.dun_maxdepth"] = 19,
 		["god_quest.dun_minplev"] = 0,
 		["god_quest.relic_gen_tries"] = 0,
 		["god_quest.relic_generated"] = FALSE,
@@ -64,7 +64,7 @@ add_quest
 			god_quest.quests_given = 0
 			god_quest.relics_found = 0
 			god_quest.dun_mindepth = 1
-			god_quest.dun_maxdepth = 4
+			god_quest.dun_maxdepth = 19
 			god_quest.dun_minplev = 0
 			god_quest.relic_gen_tries = 0
 			god_quest.relic_generated = FALSE
@@ -79,7 +79,7 @@ add_quest
 				-- check player is worshipping a god, not already on a god quest.
 				-- and nope, being astral does NOT prevent you getting a quest --Amy
 				if (player.pgod <= 0) 
-				or (quest(GOD_QUEST).status == QUEST_STATUS_TAKEN) or (quest(GOD_QUEST).status == QUEST_STATUS_FAILED)
+				or (quest(GOD_QUEST).status == QUEST_STATUS_TAKEN) or (quest(GOD_QUEST).status == QUEST_STATUS_FAILED) or (quest(GOD_QUEST).status == QUEST_STATUS_SCREWED)
 				or (god_quest.quests_given >= god_quest.MAX_NUM_GOD_QUESTS) or (give_god_quest == FALSE)
 				or ((current_dungeon_idx == god_quest.DUNGEON_GOD) and (dun_level > 0)) then
 					-- Don't let a player get quests with trickery
@@ -152,7 +152,7 @@ add_quest
 					-- Prepare depth of dungeon. If this was generated in set_god_dungeon_attributes(),
 					-- then we'd have trouble if someone levelled up in the dungeon!
 					god_quest.dun_mindepth = player.lev*2/3
-					god_quest.dun_maxdepth = god_quest.dun_mindepth + 4
+					god_quest.dun_maxdepth = god_quest.dun_mindepth + 19
 				end
 			end
 		end,
@@ -164,6 +164,20 @@ add_quest
 				return
 			-- if the relic has been created at this point, then it was created on the *PREVIOUS* call of HOOK_LEVEL_END_GEN, and 
 			-- therefore the player has caused another level generation in the temple and hence failed the quest.
+			elseif (god_quest.relic_generated == TRUE) and quest(GOD_QUEST).status ~= QUEST_STATUS_SCREWED then 
+				
+					-- fail the quest, but give you another shot
+					quest(GOD_QUEST).status = QUEST_STATUS_TAKEN
+					-- God issues instructions
+					cmsg_print(TERM_L_BLUE, "The voice of "..deity(player.pgod).name.." booms in your head:")
+
+					cmsg_print(TERM_YELLOW, "'Thou art a fool!")
+					cmsg_print(TERM_YELLOW, "I told thee to look carefully for the relic. It appears thou hast missed the")
+					cmsg_print(TERM_YELLOW, "opportunity to claim it in my name, as I sense that those monsters who ")
+					cmsg_print(TERM_YELLOW, "have overrun my temple have destroyed it themselves.")
+					cmsg_print(TERM_YELLOW, "Now I shall punish thee, and then thou wilt try again!'")
+					quest_fail_penalty(1)
+					god_quest.relic_generated = FALSE
 			elseif (god_quest.relic_generated == TRUE) and quest(GOD_QUEST).status ~= QUEST_STATUS_FAILED then 
 				
 					-- fail the quest, don't give another one, don't give this message again
@@ -178,10 +192,10 @@ add_quest
 					cmsg_print(TERM_YELLOW, "I shall not ask thee to do such a thing again, as thou hast failed me in this")
 					cmsg_print(TERM_YELLOW, "simple task!'")					
 			else
-				-- Force relic generation on 5th attempt if others have been unsuccessful.
-				if (god_quest.relic_gen_tries == 4) and (god_quest.relic_generated == FALSE) then
-					generate_relic()
-				else
+				-- Force relic generation on 5th attempt if others have been unsuccessful. Amy edit: not needed
+				--if (god_quest.relic_gen_tries == 4) and (god_quest.relic_generated == FALSE) then
+					--generate_relic()
+				--else
 					-- 1/5 chance of generation
 					chance = randint(5)
 					if (chance == 5) then
@@ -189,7 +203,7 @@ add_quest
 					else
 						god_quest.relic_gen_tries = god_quest.relic_gen_tries + 1
 					end
-				end
+				--end
 			end
 		end,
 		[HOOK_ENTER_DUNGEON] = function(d_idx)

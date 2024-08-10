@@ -27,7 +27,12 @@ bool quest_invasion_gen_hook(char *fmt)
 
 	init_flags = INIT_CREATE_DUNGEON;
 	process_dungeon_file_full = TRUE;
-	process_dungeon_file(NULL, "maeglin.map", &ystart, &xstart, cur_hgt, cur_wid, TRUE);
+	/* if the player doesn't warp to Gondolin, no longer fail the quest; instead, get harder version with traps --Amy */
+	if (xtra_maeglin) {
+		process_dungeon_file(NULL, "xmaeglin.map", &ystart, &xstart, cur_hgt, cur_wid, TRUE);
+	} else {
+		process_dungeon_file(NULL, "maeglin.map", &ystart, &xstart, cur_hgt, cur_wid, TRUE);
+	}
 	process_dungeon_file_full = FALSE;
 
 	for (x = 3; x < xstart; x++)
@@ -64,8 +69,8 @@ bool quest_invasion_ai_hook(char *fmt)
 			delete_monster_idx(m_idx);
 
 			cmsg_print(TERM_YELLOW, "Maeglin found the way to Gondolin! All hope is lost now!");
-			cquest.status = QUEST_STATUS_FAILED;
-			town_info[2].destroyed = TRUE;
+			cquest.status = QUEST_STATUS_SCREWED;
+			/*town_info[2].destroyed = TRUE;*/
 			return (FALSE);
 		}
 
@@ -136,11 +141,18 @@ bool quest_invasion_turn_hook(char *fmt)
 		cmsg_print(TERM_YELLOW, "'And yes I know I just broke the fourth wall but I'm serious, Gondolin will fall unless you help us!'");
 		if (get_check("You ***M*U*S*T*** agree to come to Gondolin!!! Or ALL is lost!")) goto rightdecision;
 
-		cmsg_print(TERM_YELLOW, "'Turgon overestimated you... Now Gondolin will fall.'");
-		cmsg_print(TERM_YELLOW, "'I will return alone and die there. May you be doomed!'");
+		cmsg_print(TERM_YELLOW, "'Turgon overestimated you... Now Gondolin will probably fall.'");
+		cmsg_print(TERM_YELLOW, "'But I beseech you, come to Gondolin before it is too late!'");
+		cmsg_print(TERM_YELLOW, "'Morgoth's forces will grow stronger the longer you wait!'");
 
-		cquest.status = QUEST_STATUS_FAILED;
-		town_info[2].destroyed = TRUE;
+		xtra_maeglin = TRUE;
+
+		/*cquest.status = QUEST_STATUS_FAILED;
+		town_info[2].destroyed = TRUE;*/
+
+		quest_describe(QUEST_INVASION);
+		cquest.status = QUEST_STATUS_TAKEN;
+		quest_invasion_init_hook(QUEST_INVASION);
 
 		quick_messages = old_quick_messages;
 
@@ -221,6 +233,14 @@ bool quest_invasion_stair_hook(char *fmt)
 		{
 			cmsg_print(TERM_YELLOW, "The armies of Morgoth totally devastated Gondolin, leaving nothing but ruins...");
 		}
+		else if (cquest.status == QUEST_STATUS_SCREWED)
+		{
+			cmsg_print(TERM_YELLOW, "The armies of Morgoth are upon Gondolin, you have to get back and stop Maeglin before it is too late!");
+			quest_fail_penalty(3);
+			cquest.status = QUEST_STATUS_TAKEN;
+			do_cmd_go_up(TRUE);
+			return (TRUE);
+		}
 		else if (cquest.status == QUEST_STATUS_COMPLETED)
 		{
 			cmsg_print(TERM_YELLOW, "Turgon appears before you and speaks:");
@@ -238,8 +258,11 @@ bool quest_invasion_stair_hook(char *fmt)
 
 			if (!get_check("Really abandon the quest?")) return TRUE;
 			cmsg_print(TERM_YELLOW, "You flee away from Maeglin and his army...");
-			cquest.status = QUEST_STATUS_FAILED;
-			town_info[2].destroyed = TRUE;
+			/*cquest.status = QUEST_STATUS_FAILED;
+			town_info[2].destroyed = TRUE;*/
+			quest_fail_penalty(3);
+			do_cmd_go_up(TRUE);
+			return (TRUE);
 		}
 		del_hook(HOOK_STAIR, quest_invasion_stair_hook);
 		process_hooks_restart = TRUE;

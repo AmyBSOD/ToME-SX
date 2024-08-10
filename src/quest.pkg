@@ -76,6 +76,10 @@ typedef unsigned int u32b;
 #define QUEST_STATUS_FAILED_DONE     6
 /** @} */
 
+/** @def QUEST_STATUS_SCREWED */
+#define QUEST_STATUS_SCREWED     7
+/** @} */
+
 /** @struct quest_type
  * @brief Quest
  */

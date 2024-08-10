@@ -116,14 +116,26 @@ bool quest_shroom_give_hook(char *fmt)
 	                (r_info[test_monster_name("Wolf, Farmer Maggot's dog")].max_num == 0) ||
 	                (r_info[test_monster_name("Fang, Farmer Maggot's dog")].max_num == 0))
 	{
-		cquest.status = QUEST_STATUS_FAILED_DONE;
+		/*cquest.status = QUEST_STATUS_FAILED_DONE;*/
 		msg_print("My puppy!  My poor, defenceless puppy...");
-		msg_print("YOU MURDERER!  Out of my sight!");
-		delete_monster_idx(m_idx);
+
+		/* it's dumb if you can permanently fail a quest... --Amy */
+		if (p_ptr->au >= 30000) {
+			p_ptr->au -= 30000;
+			msg_print("I'm taking 30000 zorkmids from you to cover for the resurrection fees.");
+			r_info[test_monster_name("Grip, Farmer Maggot's dog")].max_num = 1;
+			r_info[test_monster_name("Wolf, Farmer Maggot's dog")].max_num = 1;
+			r_info[test_monster_name("Fang, Farmer Maggot's dog")].max_num = 1;
+			msg_print("Now that my dogs are back, GET THOSE MUSHROOMS and DON'T KILL MY DOGS AGAIN!!");
+		} else {
+			msg_print("YOU MURDERER!  Out of my sight!");
+		}
+
+/*		delete_monster_idx(m_idx);
 
 		del_hook(HOOK_GIVE, quest_shroom_give_hook);
 		del_hook(HOOK_CHAT, quest_shroom_speak_hook);
-		del_hook(HOOK_WILD_GEN, quest_shroom_town_gen_hook);
+		del_hook(HOOK_WILD_GEN, quest_shroom_town_gen_hook);*/
 		process_hooks_restart = TRUE;
 		return TRUE;
 	}
@@ -204,14 +216,24 @@ bool quest_shroom_speak_hook(char *fmt)
 		                (r_info[test_monster_name("Wolf, Farmer Maggot's dog")].max_num == 0) ||
 		                (r_info[test_monster_name("Fang, Farmer Maggot's dog")].max_num == 0))
 		{
-			cquest.status = QUEST_STATUS_FAILED_DONE;
+			/*cquest.status = QUEST_STATUS_FAILED_DONE;*/
 			msg_print("My puppy!  My poor, defenceless puppy...");
-			msg_print("YOU MURDERER!  Out of my sight!");
-			delete_monster_idx(m_idx);
+
+			if (p_ptr->au >= 30000) {
+				p_ptr->au -= 30000;
+				msg_print("I'm taking 30000 zorkmids from you to cover for the resurrection fees.");
+				r_info[test_monster_name("Grip, Farmer Maggot's dog")].max_num = 1;
+				r_info[test_monster_name("Wolf, Farmer Maggot's dog")].max_num = 1;
+				r_info[test_monster_name("Fang, Farmer Maggot's dog")].max_num = 1;
+				msg_print("Now that my dogs are back, GET THOSE MUSHROOMS and DON'T KILL MY DOGS AGAIN!!");
+			} else {
+				msg_print("YOU MURDERER!  Out of my sight!");
+			}
+/*			delete_monster_idx(m_idx);
 
 			del_hook(HOOK_GIVE, quest_shroom_give_hook);
 			del_hook(HOOK_CHAT, quest_shroom_speak_hook);
-			del_hook(HOOK_WILD_GEN, quest_shroom_town_gen_hook);
+			del_hook(HOOK_WILD_GEN, quest_shroom_town_gen_hook);*/
 			process_hooks_restart = TRUE;
 			return TRUE;
 		}
@@ -248,14 +270,23 @@ bool quest_shroom_chat_hook(char *fmt)
 		                (r_info[test_monster_name("Wolf, Farmer Maggot's dog")].max_num == 0) ||
 		                (r_info[test_monster_name("Fang, Farmer Maggot's dog")].max_num == 0))
 		{
-			cquest.status = QUEST_STATUS_FAILED_DONE;
+			/*cquest.status = QUEST_STATUS_FAILED_DONE;*/
 			msg_print("My puppy!  My poor, defenceless puppy...");
-			msg_print("YOU MURDERER!  Out of my sight!");
-			delete_monster_idx(m_idx);
+			if (p_ptr->au >= 30000) {
+				p_ptr->au -= 30000;
+				msg_print("I'm taking 30000 zorkmids from you to cover for the resurrection fees.");
+				r_info[test_monster_name("Grip, Farmer Maggot's dog")].max_num = 1;
+				r_info[test_monster_name("Wolf, Farmer Maggot's dog")].max_num = 1;
+				r_info[test_monster_name("Fang, Farmer Maggot's dog")].max_num = 1;
+				msg_print("Now that my dogs are back, GET THOSE MUSHROOMS and DON'T KILL MY DOGS AGAIN!!");
+			} else {
+				msg_print("YOU MURDERER!  Out of my sight!");
+			}
+/*			delete_monster_idx(m_idx);
 
 			del_hook(HOOK_GIVE, quest_shroom_give_hook);
 			del_hook(HOOK_CHAT, quest_shroom_speak_hook);
-			del_hook(HOOK_WILD_GEN, quest_shroom_town_gen_hook);
+			del_hook(HOOK_WILD_GEN, quest_shroom_town_gen_hook);*/
 			process_hooks_restart = TRUE;
 			return TRUE;
 		}

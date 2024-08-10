@@ -171,10 +171,12 @@ bool quest_eol_stair_hook(char *fmt)
 			if (!get_check("Really abandon the quest?")) return TRUE;
 
 			cmsg_print(TERM_YELLOW, "You flee away from Eol...");
-			cquest.status = QUEST_STATUS_FAILED;
-			del_hook(HOOK_STAIR, quest_eol_stair_hook);
+			quest_fail_penalty(3);
+			/*cquest.status = QUEST_STATUS_FAILED;
+			del_hook(HOOK_STAIR, quest_eol_stair_hook);*/
+			do_cmd_go_up(TRUE);
 			process_hooks_restart = TRUE;
-			return (FALSE);
+			return (TRUE);
 		}
 	}
 

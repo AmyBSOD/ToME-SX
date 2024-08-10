@@ -4520,10 +4520,9 @@ D:somewhat bulky, but still spacious enough to wear over armour.
 N:532:Water Curing
 G:!:d
 I:72:18:80
-W:0:0:0:0
-A:0/1
+W:30:0:0:0
+A:30/6
 P:0:1d1:0:0:0
-F:SPECIAL_GENE
 D:It is a magical component that can purify water.
 
 N:533:& Hatchet~

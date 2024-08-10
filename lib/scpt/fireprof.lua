@@ -211,7 +211,8 @@ add_quest
 					if  (ret == TRUE) then
 
 						-- fail the quest
-						quest(FIREPROOF_QUEST).status = QUEST_STATUS_FAILED
+						--quest(FIREPROOF_QUEST).status = QUEST_STATUS_FAILED
+						quest_fail_penalty(2)
 						return FALSE
 					else 
 						-- if no, they stay in the quest
@@ -279,12 +280,49 @@ add_building_action
 							if (obj.tval == TV_BATERIE) and (obj.sval == fireproof_quest.essence) and (obj.pval2 == fireproof_quest.essence) then
 								return TRUE
 							end
+
 							return FALSE
 						     end
 				)
 
 				-- didn't get the essence?
 				if (ret == FALSE) then 
+
+					ret = get_check("Fake it?")
+
+					if  (ret == TRUE) then
+						quest_fail_penalty(2)
+
+						msg_print("Great! Let me fireproof some of your items in thanks. I can do "..num_books.." books, ")
+						msg_print(num_staff.." staves, or "..num_scroll.." scrolls.")
+
+						-- how many items to proof?
+						local items = fireproof_quest.item_points_remaining
+
+						-- repeat till up to 3 (value defined as TOTAL_ITEM_POINTS constant) books fireproofed
+						while items > 0 do
+							ret = fireproof()
+
+							-- don't loop the fireproof if there's nothing to fireproof
+							if ret == FALSE then 
+								break 
+							end
+
+							-- subtract item points
+							items = fireproof_quest.item_points_remaining
+						end
+
+						-- have they all been done?
+						if (fireproof_quest.item_points_remaining == 0) then 
+							-- mark quest to make sure no more quests are given
+							quest(FIREPROOF_QUEST).status = QUEST_STATUS_REWARDED 
+						else
+							-- mark in preparation of anymore books to fireproof
+							quest(FIREPROOF_QUEST).status = QUEST_STATUS_FINISHED
+						end
+
+					end
+
 					return TRUE
 
 				-- got the essence!

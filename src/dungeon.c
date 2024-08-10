@@ -3946,7 +3946,7 @@ static void process_command(void)
 			/* Normal cases */
 			if (p_ptr->wild_mode || dun_level || is_quest(dun_level))
 			{
-				do_cmd_go_up();
+				do_cmd_go_up(FALSE);
 			}
 			else if (vanilla_town)
 			{

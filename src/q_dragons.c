@@ -109,6 +109,10 @@ bool quest_dragons_death_hook(char *fmt)
 	/* Nobody left ? */
 	if (mcnt <= 1)
 	{
+		/* Amy edit: you scummy scumbag, go farm dragon drops somewhere else! */
+		cave_set_feat(20, 29, FEAT_LESS);
+		cave[20][29].special = 0;
+
 		quest[p_ptr->inside_quest].status = QUEST_STATUS_COMPLETED;
 		del_hook(HOOK_MONSTER_DEATH, quest_dragons_death_hook);
 		del_hook(HOOK_GEN_QUEST, quest_dragons_gen_hook);

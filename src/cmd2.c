@@ -83,7 +83,7 @@ static bool do_cmd_bash_fountain(int y, int x)
 /*
  * Go up one level
  */
-void do_cmd_go_up(void)
+void do_cmd_go_up(bool pasthook)
 {
 	bool go_up = FALSE, go_up_many = FALSE, prob_traveling = FALSE;
 
@@ -98,7 +98,9 @@ void do_cmd_go_up(void)
 	c_ptr = &cave[p_ptr->py][p_ptr->px];
 
 	/* Can we ? */
-	if (process_hooks(HOOK_STAIR, "(s)", "up")) return;
+	if (!pasthook) {
+		if (process_hooks(HOOK_STAIR, "(s)", "up")) return;
+	}
 
 	/* Normal up stairs */
 	if ((c_ptr->feat == FEAT_LESS) || (c_ptr->feat == FEAT_WAY_LESS))

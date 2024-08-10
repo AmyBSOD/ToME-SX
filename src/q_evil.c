@@ -74,6 +74,10 @@ bool quest_evil_death_hook(char *fmt)
 	/* Nobody left ? */
 	if (mcnt <= 1)
 	{
+		/* Amy edit: you scummy scumbag, go farm demon drops somewhere else! */
+		cave_set_feat(11, 26, FEAT_LESS);
+		cave[11][26].special = 0;
+
 		/* TODO: change to COMPLETED and remove NULL when mayor is added */
 		quest[p_ptr->inside_quest].status = QUEST_STATUS_FINISHED;
 		*(quest[p_ptr->inside_quest].plot) = QUEST_NULL;

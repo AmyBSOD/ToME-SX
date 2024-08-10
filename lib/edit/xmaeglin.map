@@ -1,0 +1,88 @@
+# Created by Mynstral (mynstral@thehelm.com)
+# Made for PernAngband on 26/07/2001
+
+# Monsters starts awake
+N:0
+
+# Permanent wall
+F:X:63:3
+
+# Marker
+F:<:172:3
+
+# up stairs with maeglin
+F:{:6:3:825
+
+# Floor with dirt
+F:.:88:5
+
+# Floor with dirt with an Ettin
+F:e:88:5:621
+
+# Floor with dirt with a War Troll
+F:w:88:5:631
+
+# Floor with dirt with a Troll Chieftan
+F:t:88:5:799
+
+# Floor with dirt with a Snagga sapper
+F:s:88:5:251
+
+# Floor with dirt with an Orc Captain
+F:o:88:5:285
+
+# Floor with dirt with an Elite Uruk
+F:u:88:5:866
+
+# Floor with dirt with an Ancient blue dragon
+F:L:88:5:601
+
+# Floor with dirt with an Ancient bronze dragon
+F:Z:88:5:602
+
+# Floor with dirt with an Ancient white dragon
+F:W:88:5:617
+
+# Floor with dirt with an Ancient green dragon
+F:G:88:5:618
+
+# Floor with dirt with an Ancient black dragon
+F:B:88:5:624
+
+# Floor with dirt with an Ancient red dragon
+F:R:88:5:644
+
+# Floor with dirt with an Ancient gold dragon
+F:O:88:5:645
+
+# Floor with dirt with a Lesser Balrog
+F:U:88:5:996
+
+# Granite wall
+F:#:56:5
+
+# Floor with Trap
+F:p:1:8:0:0:0:0:*
+
+D:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+D:X##.p#########.p.#..p..p.p###p.Rp..p.###.ep.p{X
+D:X#pwt.######.pO...p#s..#..##w.#..###..p.p#.t.pX
+D:X#wBLep####pU.###...p##.Up#p..##p.u####.#####.X
+D:X#eRe.####..#p.######.Bp..w..p#.U#uuu##p#Up..eX
+D:X##.p.#..pG###sp.p##..p.##.p####p.##uu#B..##.pX
+D:X####...e..p#####.t.p.####...####.###u#####.w#X
+D:X###..p.##.w.######.ep#..##p.p###p.##uu#e..p##X
+D:X##p.W#####..p###..p..#p.p##.e####.L##..p#####X
+D:X##...######e.##Zp.w.###......p####.###t.#####X
+D:X...p########s....#s..p##R.p#.U.##p.####.p####X
+D:Xs.p####.p.p##ptU####...#####t..p#.######..###X
+D:X#...##..##..#..######pt.pe.p##.w..p#####w.###X
+D:X##p...p####s.p######.e.#.#t..p#p#U.####.p####X
+D:X#...####uu##.t..#####p..e####s#....p.p.w.####X
+D:X.p.####uoup.p##p.p#####p...p###.p#####p.p####X
+D:X..#####uu##...###s.##p...p...##..#####..#####X
+D:Xpo.#######..pe.###.....o.###sp##p.###sp.p#.p#X
+D:X#s.po#....p.#s.....p.u.p.####..#s.##...o.G...X
+D:Xsss##o.p..u###..p.u..o.o.#####.p..p..p###.OZpX
+D:X<ss..p###############p.p##################U.#X
+D:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

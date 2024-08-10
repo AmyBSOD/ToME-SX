@@ -444,7 +444,8 @@ add_quest
 			-- if yes, then
 			if ret == TRUE then
 				-- fail the quest
-				quest(LIBRARY_QUEST).status = QUEST_STATUS_FAILED
+				--quest(LIBRARY_QUEST).status = QUEST_STATUS_FAILED
+				quest_fail_penalty(2)
 				return FALSE
 			else 
 				-- if no, they stay in the quest

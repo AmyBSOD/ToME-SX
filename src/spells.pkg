@@ -1563,6 +1563,8 @@ extern bool fire_ball_beam(int typ, int dir, int dam, int rad);
 extern void make_wish(void);
 extern void do_cmd_home_trump(void);
 
+extern void quest_fail_penalty(int penalty_type);
+
 /** @fn fire_wave(int typ, int dir, int dam, int rad, int time, s32b eff)
  * @brief Generate a ball spell of type "typ" with radius "rad" and effect
  * "eff" lasting "time" turns aimed in direction "dir" for "dam" damage.\n

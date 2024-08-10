@@ -679,6 +679,45 @@ void do_poly_self(void)
 	}
 }
 
+/* Fail a quest, by Amy: give a penalty instead of making it forever impossible to get another quest
+ * always drain all stats; penalty_type determines the additional penalty
+ * 1 = -20000 piety
+ * 2 = disenchantment and black breath
+ * 3 = disenchantment and random elemental damage (to destroy or damage player's items) */
+void quest_fail_penalty(int penalty_type)
+{
+	do_dec_stat(A_STR, STAT_DEC_PERMANENT);
+	do_dec_stat(A_CON, STAT_DEC_PERMANENT);
+	do_dec_stat(A_DEX, STAT_DEC_PERMANENT);
+	do_dec_stat(A_INT, STAT_DEC_PERMANENT);
+	do_dec_stat(A_WIS, STAT_DEC_PERMANENT);
+	do_dec_stat(A_CHR, STAT_DEC_PERMANENT);
+
+	switch (penalty_type) {
+		case 0:
+		default:
+			break;
+		case 1:
+			inc_piety(p_ptr->pgod, -20000);
+			msg_print("Certainly, the gods are angry now.");
+			break;
+		case 2:
+			apply_disenchant(0);
+			p_ptr->black_breath = TRUE;
+			msg_print("Oh no! The Black Breath has taken hold of you!");
+			break;
+		case 3:
+			apply_disenchant(0);
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_SOUND, PROJECT_KILL | PROJECT_JUMP);
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_ELEC, PROJECT_KILL | PROJECT_JUMP);
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_ACID, PROJECT_KILL | PROJECT_JUMP);
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_WATER, PROJECT_KILL | PROJECT_JUMP);
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_SHARDS, PROJECT_KILL | PROJECT_JUMP);
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_CHAOS, PROJECT_KILL | PROJECT_JUMP);
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_TIME, PROJECT_KILL | PROJECT_JUMP);
+			break;
+	}
+}
 
 /*
  * Brand the current weapon

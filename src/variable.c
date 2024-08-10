@@ -82,6 +82,7 @@ bool character_xtra; 		/* The game is in an icky startup mode */
 
 bool four_dim_mode;           /* The player is currently using the 4D pocket */
 bool lifesave_no_mortal;      /* The player just got killed by a mortal being with the fate active */
+bool xtra_maeglin;            /* The player didn't warp to Gondolin and now Maeglin's quest is harder! */
 
 u32b seed_flavor; 		/* Hack -- consistent object colors */
 u32b seed_town; 			/* Hack -- consistent town layout */

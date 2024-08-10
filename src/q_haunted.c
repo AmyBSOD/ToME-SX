@@ -105,6 +105,10 @@ bool quest_haunted_death_hook(char *fmt)
 	/* Nobody left ? */
 	if (mcnt <= 1)
 	{
+		/* Amy edit: you scummy scumbag, go farm undead drops somewhere else! */
+		cave_set_feat(3, 17, FEAT_LESS);
+		cave[3][17].special = 0;
+
 		quest[p_ptr->inside_quest].status = QUEST_STATUS_COMPLETED;
 		del_hook(HOOK_MONSTER_DEATH, quest_haunted_death_hook);
 		del_hook(HOOK_GEN_QUEST, quest_haunted_gen_hook);
