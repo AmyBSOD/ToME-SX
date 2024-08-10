@@ -8810,6 +8810,7 @@ void generate_cave(void)
 	{
 		Rand_quick = TRUE;
 		seed_dungeon = town_info[town_level].seed;
+		Rand_value_saved = Rand_value;
 		Rand_value = seed_dungeon;
 	}
 

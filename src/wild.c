@@ -1053,6 +1053,8 @@ static void town_gen_hack(int t_idx, int qy, int qx)
 
 	/* Some inhabitants(leveled .. hehe :) */
 
+	Rand_value = Rand_value_saved;
+
 	/* Backup the old hook */
 	old_get_mon_num_hook = get_mon_num_hook;
 
@@ -1074,7 +1076,7 @@ static void town_gen_hack(int t_idx, int qy, int qx)
 
 			if (rand_int(100)) continue;
 
-			r_idx = get_mon_num(0);
+			r_idx = get_mon_num(dun_level);
 			m_allow_special[r_idx] = TRUE;
 			m_idx = place_monster_one(y, x, r_idx, 0, TRUE, MSTATUS_ENEMY);
 			m_allow_special[r_idx] = FALSE;
@@ -1185,6 +1187,8 @@ static void town_gen_circle(int t_idx, int qy, int qx)
 
 	/* Some inhabitants(leveled .. hehe :) */
 
+	Rand_value = Rand_value_saved;
+
 	/* Backup the old hook */
 	old_get_mon_num_hook = get_mon_num_hook;
 
@@ -1206,7 +1210,7 @@ static void town_gen_circle(int t_idx, int qy, int qx)
 
 			if (rand_int(100)) continue;
 
-			r_idx = get_mon_num(0);
+			r_idx = get_mon_num(dun_level);
 			m_allow_special[r_idx] = TRUE;
 			m_idx = place_monster_one(y, x, r_idx, 0, TRUE, MSTATUS_ENEMY);
 			m_allow_special[r_idx] = FALSE;

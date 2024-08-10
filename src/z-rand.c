@@ -66,6 +66,10 @@ u16b Rand_place;
  */
 u32b Rand_state[RAND_DEG];
 
+/*
+ * Saved "value" of the "simple" RNG, by Amy
+ */
+u32b Rand_value_saved;
 
 
 /*

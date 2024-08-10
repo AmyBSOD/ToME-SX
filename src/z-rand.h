@@ -72,6 +72,7 @@ extern u32b Rand_value;
 extern u16b Rand_place;
 extern u32b Rand_state[RAND_DEG];
 
+extern u32b Rand_value_saved;
 
 /**** Available Functions ****/
 
