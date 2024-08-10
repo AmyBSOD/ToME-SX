@@ -2100,6 +2100,8 @@ static void do_monster(monster_type *m_ptr, int flag)
 	do_s16b(&m_ptr->bleeding, flag);
 	do_s16b(&m_ptr->poisoned, flag);
 
+	do_byte(&m_ptr->stealdetect, flag);
+
 	do_s32b(&m_ptr->mflag, flag);
 
 	if (flag == LS_LOAD) m_ptr->mflag &= PERM_MFLAG_MASK;

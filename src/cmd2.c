@@ -5176,6 +5176,11 @@ void do_cmd_steal()
 		return;
 	}
 
+	if (m_ptr->stealdetect) {
+		msg_print("That monster has already caught you, so you cannot steal from it anymore.");
+		return;
+	}
+
 	screen_save();
 
 	num = show_monster_inven(c_ptr->m_idx, monst_list);
@@ -5261,6 +5266,8 @@ void do_cmd_steal()
 
 			/* Speed up because monsters are ANGRY when you try to thief them */
 			m_ptr->mspeed += 5;
+
+			m_ptr->stealdetect = TRUE;
 
 			screen_load();
 

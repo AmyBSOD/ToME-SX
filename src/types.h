@@ -904,6 +904,8 @@ struct monster_type
 	byte mspeed;		/* Monster "speed" */
 	byte energy;		/* Monster "energy" */
 
+	byte stealdetect;		/* Monster has caught you stealing */
+
 	byte stunned;		/* Monster is stunned */
 	byte confused;		/* Monster is confused */
 	byte monfear;		/* Monster is afraid */
