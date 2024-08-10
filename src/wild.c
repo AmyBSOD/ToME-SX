@@ -993,6 +993,8 @@ static bool create_townpeople_hook(int r_idx)
 	monster_race *r_ptr = &r_info[r_idx];
 
 	if (r_ptr->d_char == 't') return TRUE;
+	/* Amy edit: not all town monsters are 't' now... */
+	else if (r_ptr->flags8 & (RF8_WILD_TOWN) ) return TRUE;
 	else return FALSE;
 }
 
