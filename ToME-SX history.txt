@@ -1,6 +1,48 @@
 Version history for ToME-SX by AmyBSOD, given in reverse chronological order *bundlebundlebundle* <3
 
+August 2024
+- Dungeon towns now have a greater variety of townie monsters, and which ones are spawned is now actually randomized rather than dependant on that town's seed.
+- Added the theftproof flag to some boss monsters.
+- If the player is caught trying to steal from a monster, that particular monster can no longer be stolen from.
+- Quests can generally no longer be failed now; "failure" conditions hit the player with bad effects instead, but the quests can be attempted again.
+- The new ultimate artifacts can now be created.
+- Fates can now happen at any experience level (they used to only happen at XL11 and above), and the "never die by the hand of a mortal" fate is back, but balanced.
+- Lost soul mode characters can now once again get god quests while in the Halls of Mandos.
+- Melee paralysis attacks will now paralyze players for less turns on average, and stun damage can no longer increase the stun timer if the player is knocked out.
+- New mimicry form: lion.
+- Increased the price for (mass) genocide scrolls.
+- Fixed bugs with array sizes for ego items and randarts, and also added new ones.
+- Wands and staves can now occasionally spawn with higher maximum levels.
+- Instruments can also be wielded in the ammo slot now.
+- New character class: pianist.
+- New skill: 4D pocket, which gives an ability that allows the player to access an extra storage space for their loot.
+- Added several possible shops for dungeon towns.
+- Wizard mode object creation now also allows climbing sets and several other item types that weren't available before.
+- Nerfed several item activation abilities.
+- Rebalanced the stun damage dished out by monsters' critical hits.
+- Detection effects don't redraw the screen in a map amnesia dungeon anymore, to prevent leaking information.
+- Capped dark sword antimagic bonuses at an enchantment value of -10.
+- Recalling to the dungeon now always gives a level feeling, even if it's less than 100 turns since you were in the dungeon.
+- Nazgul can now only drop their rings if Sauron is already dead, to prevent farming.
+
+July 2024
+- Fixed the interface screw where traps wouldn't show up on illusory walls.
+- Added a message if the player tries to recall to a level that is lower than the minimum level of a dungeon.
+- Nerfed another bunch of spells.
+- Improved the variety created by the dungeon randomizer.
+- If the player knows that there's a trap underneath a pet, trying to displace the pet no longer automatically triggers the trap without a prompt.
+
 June 2024
+- Players can no longer use boss monsters for symbiosis or possession.
+- The artifact creation ability now boosts the chance of finding artifacts.
+- The trap of stair movement will now eventually turn into a different trap to prevent endless abuse.
+- Nerfed the displacement mindcraft power.
+- Nerfed another couple of spells, e.g. recall.
+- Reduced the weapon penalty for the sorcery skill.
+- Added a limit to the amount of maximum HP for symbiotes and possessors.
+- Nerfed and debugged some Theme jewelry.
+- Instruments can also be wielded in the light slot now.
+- Artifact projectiles now have a minuscule chance of breaking.
 - Trying to fire a ranged weapon while the ranged weapon slot is empty now properly gives a --More-- prompt.
 - Trying to move out of a trap detected zone gives a y/n prompt now; previously, only running would give that one while walking would actually move you out of the detected zone, possibly with disastrous consequences.
 - If you have the dodging skill, bare-handed combat will now only boost the dodging chance if you're actually in bare-handed combat mode.
