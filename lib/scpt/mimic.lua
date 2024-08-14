@@ -117,6 +117,7 @@ add_mimic_shape
 
 			player.pspeed = player.pspeed + 1 + (player.mimic_level / 8)
 			player.xtra_crit = player.xtra_crit + 1 + (player.mimic_level / 10)
+			--player.dodge_chance = player.dodge_chance + (player.mimic_level * 2 / 5) moved to xtra1.c
 
 			player.to_h_ranged = player.to_h_ranged - 5
 			player.to_a = player.to_a - 10

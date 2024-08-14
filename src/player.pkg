@@ -1231,6 +1231,8 @@ struct player_type
 	 */
 	s16b xtra_crit;
 
+	s16b dodge_chance;
+
 	/** @structvar notice
 	 * @brief Number
 	 * @note Special Updates (bit flags)

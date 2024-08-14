@@ -2490,7 +2490,7 @@ void calc_gods()
 
 		int bonus = p_ptr->grace / 5000;
 		if (bonus > 5) bonus = 5;
-		p_ptr->to_h = p_ptr->to_h + bonus;
+		p_ptr->to_h_melee = p_ptr->to_h_melee + bonus;
 		p_ptr->dis_to_h = p_ptr->dis_to_h + bonus;
 		p_ptr->to_d = p_ptr->to_d + bonus;
 		p_ptr->dis_to_d = p_ptr->dis_to_d + bonus;
@@ -3910,7 +3910,7 @@ void calc_bonuses(bool silent)
 
 		if (!monk_heavy_armor())
 		{
-			p_ptr->to_h += (plev / 3);
+			p_ptr->to_h_melee += (plev / 3);
 			p_ptr->to_d += (plev / 3);
 
 			p_ptr->dis_to_h += (plev / 3);
@@ -4018,6 +4018,11 @@ void calc_bonuses(bool silent)
 		p_ptr->dodge_chance = get_skill_scale(SKILL_DODGE, 100);
 		/* Amy edit: give martial arts bonuses only when using martial arts style, please! */
 		if (p_ptr->melee_style == SKILL_HAND) p_ptr->dodge_chance += get_skill(SKILL_HAND);
+
+		/* Amy: lions are evasive, but the lua script is being dumb... probably gets procced before this stuff */
+		if (p_ptr->mimic_form == resolve_mimic_name("Lion")) {
+			p_ptr->dodge_chance += (p_ptr->mimic_level * 2 / 5);
+		}
 
 		/* Armor weight bonus/penalty */
 		p_ptr->dodge_chance -= cur_wgt;
