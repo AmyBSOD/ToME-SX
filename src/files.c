@@ -3085,7 +3085,7 @@ void file_character_print_item(FILE *fff, char label, object_type *obj, bool ful
 	fprintf(fff, "%c%s %s\n", label, paren, o_name);
 
 	if ((artifact_p(obj) || ego_item_p(obj) || obj->tval == TV_RING || obj->tval == TV_AMULET || full) &&
-	                (obj->ident & IDENT_MENTAL))
+	                ((obj->ident & IDENT_MENTAL) || full) )
 	{
 		object_out_desc(obj, fff, TRUE, TRUE);
 	}
@@ -3116,6 +3116,30 @@ void file_character_print_store(FILE *fff, wilderness_type_info *place, int stor
 		/* Add an empty line */
 		fprintf(fff, "\n\n");
 	}
+}
+
+/* Print contents of 4D pocket, if any --Amy */
+void file_character_print_fourdim(FILE *fff, bool full)
+{
+	int i;
+	town_type *town = &town_info[TOWN_FOURDIM];
+	store_type *st_ptr = &town->store[STORE_HOME];
+
+	if (st_ptr->stock_num)
+	{
+		/* Header */
+		fprintf(fff, "  [4D Pocket]\n\n");
+
+		/* Dump all available items */
+		for (i = 0; i < st_ptr->stock_num; i++)
+		{
+			file_character_print_item(fff, I2A(i%24), &st_ptr->stock[i], full);
+		}
+
+		/* Add an empty line */
+		fprintf(fff, "\n\n");
+	}
+
 }
 
 /*
@@ -3509,6 +3533,9 @@ errr file_character(cptr name, bool full)
 		file_character_print_item(fff, index_to_label(i), &p_ptr->inventory[i], full);
 	}
 	fprintf(fff, "\n\n");
+
+	/* Print 4D pocket */
+	file_character_print_fourdim(fff, full);
 
 	/* Print all homes in the different towns */
 	for (j = 0; j < max_wf_idx; j++)
