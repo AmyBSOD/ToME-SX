@@ -53,22 +53,22 @@ O:0:5:6:7
 G:1:U
 W:255
 
-N:1:Armoury
+N:1:Armory
 I:70:& Pair~ of Soft Leather Boots
 I:60:& Pair~ of Hard Leather Boots
 I:80:& Hard Leather Cap~
 I:70:& Metal Cap~
 I:65:& Iron Helm~
 I:100:& Robe~
-I:90:& Soft Leather Armour~
+I:90:& Soft Leather Armor~
 I:90:& Soft Studded Leather~
-I:90:& Hard Leather Armour~
+I:90:& Hard Leather Armor~
 I:85:& Hard Studded Leather~
 I:90:& Leather Scale Mail~
 I:80:& Metal Scale Mail~
 I:75:& Chain Mail~
 I:80:& Augmented Chain Mail~
-I:75:& Metal Brigandine Armour~
+I:75:& Metal Brigandine Armor~
 I:68:& Bar Chain Mail~
 I:100:& Set~ of Leather Gloves
 I:80:& Set~ of Gauntlets
@@ -182,7 +182,7 @@ W:255
 N:4:Alchemy shop
 I:100:Enchant Weapon To-Hit
 I:100:Enchant Weapon To-Dam
-I:100:Enchant Armour
+I:100:Enchant Armor
 I:100:Identify
 I:100:Identify
 I:100:Identify
@@ -227,8 +227,8 @@ I:100:Restore Dexterity
 I:100:Restore Constitution
 T:100:71:46
 I:100:Restore Charisma
-I:100:Enchant Armour
-I:100:Enchant Armour
+I:100:Enchant Armor
+I:100:Enchant Armor
 I:100:Recharging
 I:100:Satisfy Hunger
 I:100:Satisfy Hunger

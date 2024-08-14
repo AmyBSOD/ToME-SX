@@ -204,7 +204,7 @@ MUSIC_HERO = add_spell
 	end,
 	["desc"] =      {
 			"Increases melee accuracy",
-			"At level 10 it increases it even more and reduces armour a bit",
+			"At level 10 it increases it even more and reduces armor a bit",
 			"At level 20 it increases it again",
 			"At level 25 it grants protection against chaos and confusion",
 			"Consumes the amount of mana each turn.",

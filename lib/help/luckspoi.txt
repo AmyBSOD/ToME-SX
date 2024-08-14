@@ -91,7 +91,7 @@ It affects your chance to-hit in ranged combat and melee combat.
 It affects your chance of critical hits in ranged combat and melee combat.
 
 It affects your chance of being missed by a monster attack. This effectively
-changes armour class by -13 (incredibly unlucky) to +13 (incredibly lucky).
+changes armor class by -13 (incredibly unlucky) to +13 (incredibly lucky).
 
 It affects the rarity of special objects, artifacts, and ego items.
 

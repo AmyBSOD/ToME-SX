@@ -134,7 +134,7 @@ CORRUPT_DEMON_HIDE = add_corruption
 	["lose_text"]   = "Your skin returns to a natural state.",
 	["desc"]	=
 	{
-			  "  Increases your armour class by your level",
+			  "  Increases your armor class by your level",
 			  "  Provides immunity to fire at level 40",
 			  "  But reduces speed by your level / 7",
 	},

@@ -351,7 +351,7 @@ W:30:3:200:30000
 P:19:1d4:0:0:15
 F:STR | DEX | SPEED | HIDE_TYPE | RES_FEAR | 
 F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_CONF | RES_SOUND
-D:A stiff suit of armour composed of small metal plates sewn to an 
+D:A stiff suit of armor composed of small metal plates sewn to an 
 D:inner layer of heavy canvas, and covered with a second layer of 
 D:cloth.  Within it is the spirit of Eorl the Young, matchless in combat.
 
@@ -426,9 +426,9 @@ F:REFLECT | RES_NEXUS | SH_FIRE | SUST_INT | SUST_CON | SUST_CHR |
 F:ESP_THUNDERLORD | CON | CHR | INT | 
 F:RES_ACID | RES_ELEC | IM_COLD | RES_COLD | AGGRAVATE | HEAVY_CURSE |
 F:CURSED
-D:The flying suit of Marda, very powerful armour that protects 
+D:The flying suit of Marda, very powerful armor that protects 
 D:the wearer from cold.  Wonderful as this mighty 
-D:armour is, beware wearing it, for it has been cursed by a 
+D:armor is, beware wearing it, for it has been cursed by a 
 D:powerful wizard since Marda had it and is said to have gained 
 D:a couple of undesirable side-effects...
 
@@ -1345,7 +1345,7 @@ F:WIS | CON | HIDE_TYPE |
 F:SLAY_DRAGON | ESP_EVIL | ESP_UNDEAD | SLOW_DIGEST | ACTIVATE | SHOW_MODS
 a:HARDCORE=DRAIN_2
 D:The narrow axe head of this weapon, finely balanced by a crow's beak, 
-D:would pierce even the armour of Smaug, and its wielder becomes aware of 
+D:would pierce even the armor of Smaug, and its wielder becomes aware of 
 D:the minds of their enemies.
 
 
@@ -2208,7 +2208,7 @@ W:30:3:80:65000
 P:30:0d0:0:0:0
 F:RES_POIS | RES_ELEC | RES_FIRE | RES_ACID | SPECIAL_GENE
 F:TUNNEL | STR | STEALTH | INFRA | ESP_ANIMAL
-D:This powerful piece of armour was made using the remains of 
+D:This powerful piece of armor was made using the remains of 
 D:the Sandworm Queen.
 
 
@@ -2314,7 +2314,7 @@ P:0:0d0:25:15:30
 F:STEALTH | AUTOMATIC_99 | XTRA_MIGHT | HIDE_TYPE
 D:A trap that can almost never be detected.  Its missiles may be mere pebbles, 
 D:but fired at an incredibly high velocity to penetrate even the toughest 
-D:hide or armour.
+D:hide or armor.
 
 
 # The Device Trap Set 'Hanisbroner's Surprise'
@@ -2377,7 +2377,7 @@ F:RES_SHARDS | RES_SOUND | RES_DISEN | RES_CONF |
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD |
 F:ACTIVATE
 a:HARDCORE=MEDIATOR
-D:A mighty suit of dragon armour, set with the scales of dragons of both 
+D:A mighty suit of dragon armor, set with the scales of dragons of both 
 D:Law and Chaos, and with power over both.
 
 
@@ -3373,7 +3373,7 @@ F:ACTIVATE | DEX | HIDE_TYPE | HOLD_LIFE | REGEN | RES_FEAR | SUST_CON | SUST_DE
 a:HARDCORE=TERROR
 D:Mighty was Thorin Oakenshield as he emerged from the Gate of the 
 D:Lonely Mountain on the day of the Battle of the Five Armies, clad 
-D:in shining armour, part of which was this helm. He gleamed like 
+D:in shining armor, part of which was this helm. He gleamed like 
 D:gold in the dying fire of the day, red light leapt from his 
 D:eyes, and his foes were terrified at the mere sight of him.
 

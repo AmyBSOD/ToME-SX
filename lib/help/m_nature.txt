@@ -24,8 +24,8 @@ There are five spells available for the nature school. These spells are:
 3. [[[[[GRecovery] (school level 15)
    Reduces the length of time that you are poisoned.
    At spell level 5 it cures poison and cuts.
-   At spell level 10 it restores drained stats.
-   At spell level 15 it restores lost experience.
+   At spell level 20 it restores drained stats.
+   At spell level 35 it restores lost experience.
 4. [[[[[GRegeneration] (school level 20)
    Increases your body's regeneration rate.
 5. [[[[[GSummon Animal] (school level 25)
@@ -48,6 +48,6 @@ There are five spells available for the nature school. These spells are:
 
 1. [[[[[DGenocide] (dual school level 25)
    Genocides all monsters of a specified race on the level.
-   At level 10 it can genocide all monsters near you.
+   At level 40 it can genocide all monsters near you.
 #####v   Your Nature and Udun skills must have reached a combined average level 
 #####v   of 25 in order to cast this spell.

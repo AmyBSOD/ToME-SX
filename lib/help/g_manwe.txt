@@ -42,7 +42,7 @@ grant. There are four prayers all told, which are:
 2. [[[[[BWind Shield] (Level 10)
    It surrounds you with a shield of wind that deflects blows from evil
       monsters.
-   At level 10 it increases your armour rating.
+   At level 10 it increases your armor rating.
    At level 20 it retaliates against monsters that melee you.
 3. [[[[[BManwe's Call] (Level 20)
    Manwe's Call summons a Great Eagle to help you battle the forces of

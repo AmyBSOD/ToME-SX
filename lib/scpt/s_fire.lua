@@ -67,7 +67,7 @@ FIREFLASH = add_spell
 	},
 	["spell"] =     function()
 		local ret, dir, type
-		if (get_level(FIREFLASH, 50) >= 20) then
+		if (get_level(FIREFLASH, 50) >= 40) then
 			type = GF_HOLY_FIRE
 		else
 			type = GF_FIRE
@@ -81,7 +81,7 @@ FIREFLASH = add_spell
 	end,
 	["desc"] =      {
 			"Conjures a ball of fire to burn your foes to ashes",
-			"At level 20 it turns into a ball of holy fire"
+			"At level 40 it turns into a ball of holy fire"
 	}
 }
 

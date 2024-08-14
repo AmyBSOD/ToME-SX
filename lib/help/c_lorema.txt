@@ -49,6 +49,6 @@ Monster-lore            1.000           [1.100]
 #####GStarting Equipment
 A Loremaster begins the game with:
     a Sling
-    a Hard Leather Armour
+    a Hard Leather Armor
     a Quarterstaff
     some Rounded Pebbles

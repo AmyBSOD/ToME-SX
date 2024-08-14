@@ -2824,7 +2824,7 @@ bool curse_armor(void)
 	if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
 	{
 		/* Cool */
-		msg_format("A terrible black aura tries to surround your armour, "
+		msg_format("A terrible black aura tries to surround your armor, "
 		           "but your %s resists the effects!", o_name);
 	}
 

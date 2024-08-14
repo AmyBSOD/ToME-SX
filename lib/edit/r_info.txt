@@ -1289,7 +1289,7 @@ O:0:0:0:0
 B:BITE:HURT:1d5
 F:ANIMAL | CAN_SWIM | DROP_CORPSE | HAS_EGG | 
 F:MORTAL | BASEANGBAND
-D:It is an armoured lizard with a powerful bite. 
+D:It is an armored lizard with a powerful bite. 
 
 N:83:Novice ranger
 G:p:W
@@ -2729,7 +2729,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:EVIL | HURT_LITE | BASEANGBAND | HAS_LITE
 S:1_IN_12
 S:MISSILE
-D:A dark elven figure in armour, ready with his sword. 
+D:A dark elven figure in armor, ready with his sword. 
 
 N:183:Sand-dweller
 G:u:y
@@ -3487,7 +3487,7 @@ B:BITE:HURT:2d4
 B:STING:HURT:2d4
 F:WEIRD_MIND | BASH_DOOR | 
 F:ANIMAL | DROP_SKELETON | MORTAL | BASEANGBAND
-D:It is a vast armoured centipede with massive mandibles and a spiked tail. 
+D:It is a vast armored centipede with massive mandibles and a spiked tail. 
 
 N:233:Spotted jelly
 G:j:o
@@ -5161,7 +5161,7 @@ F:BASH_DOOR | WILD_WOOD | WILD_TOO | WILD_GRASS |
 F:ANIMAL | DROP_SKELETON | DROP_CORPSE
 F:MORTAL | BASEANGBAND
 D:A fierce and dangerous cat, its huge tusks and sharp claws would lacerate 
-D:even the strongest armour.  
+D:even the strongest armor.  
 
 N:340:Acid hound
 G:Z:s
@@ -5303,7 +5303,7 @@ F:OPEN_DOOR | BASH_DOOR |
 F:EVIL | HURT_LITE | BASEANGBAND | HAS_LITE
 S:1_IN_5 | 
 S:HASTE | BLIND | CONF | DARKNESS | BO_FIRE | BO_COLD | MISSILE
-D:A dark elven figure in armour and radiating evil power. 
+D:A dark elven figure in armor and radiating evil power. 
 
 N:349:Cloud giant
 G:P:b
@@ -6835,7 +6835,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:EVIL | MORTAL | BASEANGBAND | HAS_LITE
 S:1_IN_8 | 
 S:BLIND | SCARE | CAUSE_3 | DARKNESS
-D:He is a figure encased in deep black plate armour; he looks at you 
+D:He is a figure encased in deep black plate armor; he looks at you 
 D:menacingly. 
 
 N:443:Seahorse
@@ -7377,7 +7377,7 @@ F:RAND_25 | KILL_BODY | FRIENDS | DROP_SKELETON
 F:WEIRD_MIND | BASH_DOOR | 
 F:ANIMAL
 F:MORTAL | BASEANGBAND
-D:An armoured form moving with purpose. Powerful on its own, flee when 
+D:An armored form moving with purpose. Powerful on its own, flee when 
 D:hordes of them march. 
 
 N:474:Killer slicer beetle
@@ -9581,7 +9581,7 @@ F:EVIL | IM_COLD | BASEANGBAND | HAS_LITE | NO_CUT
 S:1_IN_5 | 
 S:BLIND | SCARE | CAUSE_3 | BO_NETH | 
 S:S_MONSTERS
-D:It is a humanoid figure dressed in armour of an ancient form. From beneath 
+D:It is a humanoid figure dressed in armor of an ancient form. From beneath 
 D:its helmet, eyes glow a baleful red and seem to pierce you like lances of 
 D:fire. 
 
@@ -10212,7 +10212,7 @@ F:FORCE_MAXHP | SUSCEP_FIRE | REGENERATE |
 F:DROP_90 | REGENERATE | FRIENDS |
 F:OPEN_DOOR | BASH_DOOR | DROP_CORPSE | 
 F:EVIL | TROLL | IM_POIS | NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
-D:A massive troll, equipped with a scimitar and heavy armour. 
+D:A massive troll, equipped with a scimitar and heavy armor. 
 
 N:632:Disenchanter worm mass
 G:w:v
@@ -10553,7 +10553,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
 S:1_IN_10 | 
 S:BLIND | CONF | SCARE | CAUSE_3 | FORGET | 
 S:S_DEMON
-D:It is a demon of small stature, but its armoured frame moves with 
+D:It is a demon of small stature, but its armored frame moves with 
 D:lightning speed and its powers make it a tornado of death and destruction. 
 
 N:650:Giganto, the Gargantuan
@@ -11556,7 +11556,7 @@ S:BR_FIRE
 D:Smaug is one of the Uruloki that still survive, a fire-drake of immense 
 D:cunning and intelligence.  His speed through air is matched by few other 
 D:dragons, his dragonfire is legendary, and his hide is 
-D:armoured with diamonds. He is believed to be the greatest dragon still 
+D:armored with diamonds. He is believed to be the greatest dragon still 
 D:surviving into the Third Age. 
 
 N:698:The Stormbringer
@@ -12240,7 +12240,7 @@ F:MORTAL | BASEANGBAND | HAS_LITE
 S:1_IN_5 | 
 S:BLIND | SCARE | CAUSE_3 | BA_NETH | BA_FIRE | BO_PLAS
 S:S_MONSTERS | S_DEMON
-D:It is a humanoid form dressed in armour of ancient style. From beneath 
+D:It is a humanoid form dressed in armor of ancient style. From beneath 
 D:its helmet, eyes glow with hellfire. 
 
 N:732:Bull Gates
@@ -12504,7 +12504,7 @@ S:1_IN_3 |
 S:BO_FIRE | BO_PLAS | BA_FIRE | 
 S:BR_FIRE | BR_LITE | BR_PLAS
 D:A massive glowing eagle bathed in flames. The searing heat chars your 
-D:skin and melts your armour. 
+D:skin and melts your armor. 
 
 N:744:Nightcrawler
 G:W:D
@@ -12816,7 +12816,7 @@ F:CAN_FLY | BASEANGBAND | HAS_LITE
 D:Khorne's mightiest servant, a winged hound-demon walking on 
 D:two paws and wielding a mighty axe and a whip in the other 
 D:two. Intelligent, bloodthirsty eyes leer at you from inside 
-D:the blood-soaked demon armour. 
+D:the blood-soaked demon armor. 
 
 N:759:Draconic quylthulg
 G:Q:g
@@ -13045,7 +13045,7 @@ S:1_IN_4 |
 S:BLIND | SCARE | BRAIN_SMASH | 
 S:BO_MANA | BO_NETH | BA_NETH | S_UNDEAD
 D:A huge giant garbed in black, more massive than a titan and stronger than 
-D:a dragon. With terrible blows, it breaks your armour from your back, 
+D:a dragon. With terrible blows, it breaks your armor from your back, 
 D:leaving you defenceless against its evil wrath. It can smell your fear, 
 D:and you in turn smell the awful stench of death as this ghastly figure 
 D:strides towards you menacingly. 
@@ -15510,7 +15510,7 @@ B:CLAW:HURT:3d4
 B:CLAW:HURT:3d4
 F:ANIMAL | AQUATIC | STUPID | WEIRD_MIND | DROP_CORPSE | COLD_BLOOD | 
 F:MORTAL | BASEANGBAND
-D:A man-sized, heavily armoured fresh-water relative of the lobster. 
+D:A man-sized, heavily armored fresh-water relative of the lobster. 
 
 N:882:Mermaid
 G:h:G
@@ -20679,7 +20679,7 @@ B:STING:HURT:2d4
 F:WEIRD_MIND | BASH_DOOR | 
 F:ANIMAL | DROP_SKELETON | MORTAL | BASEANGBAND
 S:MULTIPLY
-D:It is a vast armoured centipede with massive mandibles and a spiked tail. 
+D:It is a vast armored centipede with massive mandibles and a spiked tail. 
 
 N:1193:Killer brown beetle
 G:K:u
@@ -25848,7 +25848,7 @@ F:RES_NEXU | MOVE_BODY | KILL_WALL | CAN_FLY |
 #Well, she has a boomerang:
 S:1_IN_4 |
 S:ARROW_2
-D:A lithe female wood-elf wearing no armour - she is 
+D:A lithe female wood-elf wearing no armor - she is 
 D:a monk of Manwe Sulimo, one of the most feared of her order.
 D:She is one of several children of an Avarin Prince. She has 
 D:light grey eyes, straight black hair, and a fair face. She 
@@ -25904,7 +25904,7 @@ F:EVIL | IM_COLD | BASEANGBAND | HAS_LITE | NO_CUT
 S:1_IN_5 | 
 S:BLIND | SCARE | CAUSE_3 | BO_NETH | 
 S:S_MONSTERS
-D:It is a humanoid figure dressed in armour of an ancient form. From beneath 
+D:It is a humanoid figure dressed in armor of an ancient form. From beneath 
 D:its helmet, eyes glow a baleful red and seem to pierce you like lances of 
 D:fire. Ever a faithful servant of Sauron, he'll stop at nothing to destroy 
 D:you. 
@@ -29386,7 +29386,7 @@ F:MALE | FRIENDS | OPEN_DOOR | BASH_DOOR |
 F:GOOD | DROP_SKELETON | DROP_CORPSE | SMART | PET |
 F:IM_ACID | IM_COLD | RES_WATE | RES_NETH |
 F:MORTAL | BASEANGBAND | HAS_LITE
-D:A stately man dressed in armour emblazoned with a picture of a beautiful 
+D:A stately man dressed in armor emblazoned with a picture of a beautiful 
 D:white swan, from Dol Amroth of old. 
 
 # Infernal Device -- created for the Orthanc special level in Isengard by Burb Lulls
@@ -31844,9 +31844,9 @@ B:CHARGE:HURT:5d8
 B:SPIT:POISON:2d10
 F:FRIENDS | EVIL | OPEN_DOOR | TROLL | IM_POIS | STUPID | HURT_LITE
 F:DROP_60 | BASEANGBAND | DROP_SKELETON 
-D:An armoured group of troglodytes moves towards you. These troglodytes have
+D:An armored group of troglodytes moves towards you. These troglodytes have
 D: been armed and organized by someone. Each troglodyte wears a mismatched set
-D: of battle armour and a wickedly pointed shortspear. They are no more
+D: of battle armor and a wickedly pointed shortspear. They are no more
 D: disciplined than their wild brethren, however. A series of hoots and shrieks
 D: erupt from the pack as they stumble into each other to charge you.
 
@@ -38234,7 +38234,7 @@ D:This mechanical chicken is as tall as a man and is
 D: very obviously steam-driven -- steam whistles at
 D: intervals from its ears and beak, while its interior
 D: fires glow through the eyes and tiny chinks in its
-D: armoured covering. Around it, the air shimmers with
+D: armored covering. Around it, the air shimmers with
 D: heat from its mighty engine.
 
 N:2192:Martian Missile Walker
@@ -38920,7 +38920,7 @@ S:1_IN_3 |
 S:ARROW_2 | ARROW_3 | ARROW_4 | ROCKET | BO_FIRE | BO_ELEC
 D:A great mechanical chicken (from which its name is
 D: contracted), it stands taller than a man, equipped
-D: with painted feathers of armoured strength. Weapons
+D: with painted feathers of armored strength. Weapons
 D: are built into its design with great cunning and
 D: it is clear that this is the work of a brilliant,
 D: dedicated, and monomaniacally chicken-obsessed mind.
@@ -39590,7 +39590,7 @@ S:1_IN_4 |
 S:BO_ELEC | CONF | BLINK | BO_PLAS | BR_DISE | HAND_DOOM | ROCKET
 D:A giant humanoid machine garbed in black and red, more massive
 D: than a factory and stronger than a locomotive.  With terrible blows,
-D: it breaks your armour from your back, leaving you defenseless
+D: it breaks your armor from your back, leaving you defenseless
 D: against its evil wrath.  It can smell your fear, and you in
 D: turn smell the awful stench of death as this ghastly automata
 D: strides towards you menacingly.
@@ -40182,7 +40182,7 @@ F:NO_FEAR | NO_CONF | NO_STUN | NO_SLEEP | GIANT | BASEANGBAND
 S:1_IN_3 | 
 S:ARROW_3 | ARROW_4 | ROCKET | MISSILE | BR_NUKE | BR_NEXU
 D:More than just another giant mechanical rooster with
-D: armoured feathers and deadly armaments, Rooster Cogs
+D: armored feathers and deadly armaments, Rooster Cogs
 D: is a clockwork masterpiece without peer. His eyes scan
 D: his surroundings with a cold and lifeless intelligence.
 D: Clearly, just as he contains mechanical apparatus of
@@ -47586,7 +47586,7 @@ F:HAS_LITE | OPEN_DOOR | BASH_DOOR |
 F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND |
 S:1_IN_10 |
 S:ARROW_2
-D:A elven figure in armour and ready with his sword.
+D:A elven figure in armor and ready with his sword.
 
 #Was Grishnakh, the Hill Orc
 
@@ -47731,7 +47731,7 @@ F:ORC | EVIL | BASEANGBAND |
 F:DROP_SKELETON | DROP_CORPSE |  
 S:1_IN_6 |
 S:ARROW_2
-D:An armoured orc with an air of authority.
+D:An armored orc with an air of authority.
 
 N:2711:Giant pink scorpion
 G:S:v
@@ -47792,7 +47792,7 @@ S:1_IN_4 |
 S:BR_LITE | BO_FIRE | BO_COLD |
 S:HASTE | DRAIN_MANA | TELE_TO | DARKNESS | BLIND | CONF |
 S:S_KIN | ARROW_1 |
-D:A elven figure in armour and radiating power.
+D:A elven figure in armor and radiating power.
 
 N:2715:Water vortex
 G:v:B
@@ -49508,7 +49508,7 @@ F:FRIENDS | RAND_25 |
 F:WEIRD_MIND | BASH_DOOR |
 F:ANIMAL | BASEANGBAND |
 F:DROP_CORPSE |
-D:An armoured form moving with purpose.  Powerful on its own, flee when
+D:An armored form moving with purpose.  Powerful on its own, flee when
 D: hordes of them march.
 
 N:2824:Giant driver ant
@@ -49523,7 +49523,7 @@ F:WEIRD_MIND | BASH_DOOR |
 F:ANIMAL | BASEANGBAND |
 F:DROP_CORPSE |
 S:MULTIPLY
-D:An armoured form moving with purpose.  Powerful on its own, flee when
+D:An armored form moving with purpose.  Powerful on its own, flee when
 D: hordes of them march.
 
 N:2825:Giant hunter ant
@@ -49765,7 +49765,7 @@ F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND |
 S:1_IN_5 |
 S:BR_ELEC | BR_GRAV |
 S:SCARE | BLIND | CONF |
-D:A huge draconic form.  The weight of your armour drags you  down as its
+D:A huge draconic form.  The weight of your armor drags you  down as its
 D: oppressive gravity overwhelms you.
 
 N:2840:Ancient ruby dragon
@@ -52166,7 +52166,7 @@ F:NO_CONF | NO_SLEEP |
 F:DROP_CORPSE |
 S:1_IN_4 |
 S:ARROW_2
-D:It is a massive steel statue of a rivetted armoured figure that moves
+D:It is a massive steel statue of a rivetted armored figure that moves
 D: steadily towards you.  A port open in its chest reveals the muzzle of a
 D: great cannon.
 
@@ -55424,7 +55424,7 @@ F:ORC | EVIL | BASEANGBAND |
 F:DROP_SKELETON | DROP_CORPSE |  
 S:1_IN_8 |
 S:S_KIN |
-D:A heavily armoured orc with the mantle of leadership.
+D:A heavily armored orc with the mantle of leadership.
 
 N:3197:Orc king
 G:o:v
@@ -55442,7 +55442,7 @@ F:ORC | EVIL | IM_POIS | BASEANGBAND |
 F:DROP_SKELETON | DROP_CORPSE |  
 S:1_IN_6 |
 S:S_KIN |
-D:A heavily armoured orc ruler who dominates his kin with his
+D:A heavily armored orc ruler who dominates his kin with his
 D: powerful blows.
 
 N:3198:Orc priest
@@ -55741,7 +55741,7 @@ F:MALE | FEMALE | ESCORT | DROP_90 |
 F:SMART | OPEN_DOOR | BASH_DOOR |
 F:ORC | GIANT | EVIL | BASEANGBAND |
 F:DROP_SKELETON | DROP_CORPSE |
-D:A massive armoured figure who barks out commands.
+D:A massive armored figure who barks out commands.
 
 N:3217:Ogre leader
 G:O:v
@@ -55757,7 +55757,7 @@ F:MALE | FEMALE | ESCORT | DROP_1D2 |
 F:SMART | OPEN_DOOR | BASH_DOOR |
 F:ORC | GIANT | EVIL | BASEANGBAND |
 F:DROP_SKELETON | DROP_CORPSE |
-D:A massive, heavily armoured figure with the mantle of leadership.
+D:A massive, heavily armored figure with the mantle of leadership.
 
 N:3218:Ogre captain
 G:O:v
@@ -55774,7 +55774,7 @@ F:ORC | GIANT | EVIL | BASEANGBAND |
 F:DROP_SKELETON | DROP_CORPSE |
 S:1_IN_8 |
 S:ARROW_2
-D:A massive, heavily armoured figure who dominates his kind.
+D:A massive, heavily armored figure who dominates his kind.
 
 N:3219:Ogre priest
 G:O:b
@@ -55857,7 +55857,7 @@ F:DROP_SKELETON | DROP_CORPSE |
 S:1_IN_5 |
 S:BA_DARK |
 S:HEAL | HEAL | CAUSE_1 | SCARE | BLIND | HOLD |
-D:He is a figure encased in deep black plate armour and wielding a
+D:He is a figure encased in deep black plate armor and wielding a
 D: black spiked mace.
 
 N:3224:Green giant
@@ -56619,7 +56619,7 @@ F:TROLL | EVIL |  IM_POIS | NO_FEAR | NO_CONF | NO_SLEEP |
 F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND |
 S:1_IN_4 |
 S:ARROW_2
-D:A massive troll, equipped with a scimitar, crossbow and heavy armour.
+D:A massive troll, equipped with a scimitar, crossbow and heavy armor.
 
 N:3275:Black troll
 G:T:D
@@ -58279,7 +58279,7 @@ S:BR_FIRE | BR_PLAS | BR_LITE |
 S:BA_FIRE | BO_FIRE | BO_PLAS |
 S:S_KIN |
 D:A massive glowing eagle bathed in flames.  The searing heat chars your
-D: skin and melts your armour.
+D: skin and melts your armor.
 
 N:3373:Minotaur lord
 G:H:v
@@ -61547,7 +61547,7 @@ F:NO_STUN | NO_CONF | NO_SLEEP | BASEANGBAND |
 S:1_IN_2 |
 S:HEAL | TPORT | FORGET | MIND_BLAST | CAUSE_1 | SCARE | BLIND |
 S:S_KIN | S_KIN | ARROW_2
-D:Sauron's form as a giant, a tall armoured impassive figure.
+D:Sauron's form as a giant, a tall armored impassive figure.
 
 N:3564:Eye-Sauron
 G:e:v
@@ -63223,7 +63223,7 @@ B:CLAW:HURT:3d4
 B:CLAW:HURT:3d4
 F:ANIMAL | STUPID | WEIRD_MIND | DROP_CORPSE | COLD_BLOOD | 
 F:MORTAL | BASEANGBAND
-D:A man-sized, heavily armoured fresh-water relative of the lobster. 
+D:A man-sized, heavily armored fresh-water relative of the lobster. 
 
 N:3654:Mermaid
 G:h:G

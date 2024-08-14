@@ -30,7 +30,7 @@ as usual through the *****skills.txt*21[Magic] skill.
    At level 30 it attempts to charm monsters.
 6. [[[[[sPulverise] (Level 11) Cost:70
    Fires pure sound at your opponents, crushing their bodies.
-7. [[[[[sCharacter Armour] (Level 13) Cost:100
+7. [[[[[sCharacter Armor] (Level 13) Cost:100
    Raises a physical shield around your body.
    At level 20 it also grants resistance to acid.
    At level 30 it also grants resistance to fire.

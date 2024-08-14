@@ -366,7 +366,7 @@ d:Feanorian Lamp
 A:2:38:-1:0:0:40:200000
 F:FLY
 D:Flight
-d:Suit of Dragon Armour (any colour)
+d:Suit of Dragon Armor (any colour)
 
 A:2:9:-1:862:0:50:10000000
 F:AUTO_ID

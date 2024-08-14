@@ -844,7 +844,7 @@ for a quantity will convert any "letters" into the maximal legal value.
 #####R---  Magical Object Commands ---
 ~~~~~2
 [[[[[GActivate an artifact (A)]
-        You have heard rumours of special weapons and armour deep in the
+        You have heard rumours of special weapons and armor deep in the
         Pits, items that can let you breath fire like a dragon or light
         rooms with just a thought.  Should you ever be lucky enough to
         find such an item, this command will let you activate its special

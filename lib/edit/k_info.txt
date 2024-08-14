@@ -311,7 +311,7 @@ D:This is a long, double-edged sword with a plain hilt that could
 D:be wielded in one or two hands. It's called a "bastard sword" because in
 D:size, it falls between the broad sword and the two-handed sword, thus not
 D:having a family of its own. It's typically around 51 inches long.
-D:It is effective for cutting through tougher armours. It could be used for
+D:It is effective for cutting through tougher armors. It could be used for
 D:thrusting, but most wielders swing it like a bat.
 
 N:32:& Scimitar~
@@ -652,9 +652,9 @@ F:SHOW_MODS | COULD2H
 f:COULD2H
 D:The halberd has a broad, short axe blade on a 5 - 6ft long haft, with a
 D:spearpoint at the top, often a back-spike and occasionally a butt-spike. Used to
-D:combat heavier armour. It's usually used for cutting and stabbing.  It's the most
+D:combat heavier armor. It's usually used for cutting and stabbing.  It's the most
 D:versatile polearm in Middle-earth. The axe is used in general melee. The top
-D:pike is used to pierce armour, or is set against a cavalry charge. The back
+D:pike is used to pierce armor, or is set against a cavalry charge. The back
 D:hook could unseat horses, trip opponents, parry a blow, or be a general
 D:piercing weapon.
 
@@ -1076,7 +1076,7 @@ W:1:0:20:4
 A:1/1:50/1
 P:2:0d0:0:0:0
 D:A full-length garment which can be worn on the body. It is not really
-D:armour, but mages often wear them as they are very light and don't hinder
+D:armor, but mages often wear them as they are very light and don't hinder
 D:movement much.
 
 N:102:& Filthy Rag~
@@ -1088,7 +1088,7 @@ P:1:0d0:0:0:-1
 D:A piece of discarded cloth, smelly and dirty. Eurgh. You're not going to
 D:wear this, are you?
 
-N:103:& Soft Leather Armour~
+N:103:& Soft Leather Armor~
 G:(:U
 I:36:4:0
 W:3:0:80:18
@@ -1105,13 +1105,13 @@ P:5:1d1:0:0:0
 D:A leather jerkin with metal studs in critical places offering slightly better
 D:protection.
 
-N:105:& Hard Leather Armour~
+N:105:& Hard Leather Armor~
 G:(:U
 I:36:6:0
 W:5:0:100:150
 A:5/1
 P:6:1d1:-1:0:0
-D:A leather armour covering only the body. It is made of hardened leather to
+D:A leather armor covering only the body. It is made of hardened leather to
 D:make it harder to penetrate.  It's also a bit harder to move in, as it is
 D:rather stiff.
 
@@ -1121,7 +1121,7 @@ I:36:7:0
 W:10:0:110:200
 A:10/1
 P:7:1d2:-1:0:0
-D:A suit of hardened leather armour, reinforced with metal studs.
+D:A suit of hardened leather armor, reinforced with metal studs.
 
 N:107:& Leather Scale Mail~
 G:(:U
@@ -1129,7 +1129,7 @@ I:36:11:0
 W:15:0:140:450
 A:15/1
 P:11:1d1:-1:0:0
-D:A suit of armour made of overlapping hardened leather scales. It offers good
+D:A suit of armor made of overlapping hardened leather scales. It offers good
 D:protection while still being rather lightweight.
 
 N:108:& Metal Scale Mail~
@@ -1174,26 +1174,26 @@ W:35:0:280:950
 A:35/1
 P:18:1d4:-2:0:0
 D:A suit of interlinked metal rings, with additional short metal bars added in
-D:many places to prevent penetration of the armour by piercing attacks.
+D:many places to prevent penetration of the armor by piercing attacks.
 
-N:113:& Metal Brigandine Armour~
+N:113:& Metal Brigandine Armor~
 G:[:s
 I:37:9:0
 W:35:0:290:1100
 A:35/1
 P:19:1d4:-3:0:0
-D:This is a leather armour with many small metal plates fixed to it, covering
+D:This is a leather armor with many small metal plates fixed to it, covering
 D:it entirely.
 
-N:114:& Partial Plate Armour~
+N:114:& Partial Plate Armor~
 G:[:W
 I:37:12:0
 W:45:0:260:1200
 A:45/1
 P:22:1d6:-3:0:0
-D:An armour made of steel plates, covering only the body of the wearer.
+D:An armor made of steel plates, covering only the body of the wearer.
 
-N:115:& Metal Lamellar Armour~
+N:115:& Metal Lamellar Armor~
 G:[:W
 I:37:13:0
 W:45:0:340:1250
@@ -1202,22 +1202,22 @@ P:23:1d6:-3:0:0
 D:Lamellar consists of small rectangular plates (lames) attached to each other
 D:at each edge or corner with leather lacings through small holes in the plates.
 
-N:116:& Full Plate Armour~
+N:116:& Full Plate Armor~
 G:[:W
 I:37:15:0
 W:45:0:380:1350
 A:45/1
 P:25:2d4:-3:0:0
-D:A suit of armour made of metal plates, covering the body, arms and upper legs.
-D:A very effective but very heavy armour.
+D:A suit of armor made of metal plates, covering the body, arms and upper legs.
+D:A very effective but very heavy armor.
 
-N:117:& Ribbed Plate Armour~
+N:117:& Ribbed Plate Armor~
 G:[:W
 I:37:18:0
 W:50:0:380:1500
 A:50/1
 P:28:2d4:-3:0:0
-D:This full suit of armour has been strengthened in places to better deflect or
+D:This full suit of armor has been strengthened in places to better deflect or
 D:absorb blows.
 
 N:118:& Adamantite Plate Mail~
@@ -1227,7 +1227,7 @@ W:75:0:420:20000
 A:75/4
 P:40:2d4:-4:0:0
 F:IGNORE_ACID
-D:A suit of plate armour fashioned from an unbreakable crystal by mage-smiths.
+D:A suit of plate armor fashioned from an unbreakable crystal by mage-smiths.
 
 N:119:& Mithril Plate Mail~
 G:[:B
@@ -1236,8 +1236,8 @@ W:60:0:300:15000
 A:60/3
 P:35:2d4:-3:0:0
 F:IGNORE_ACID
-D:A full suit of plate armour, fashioned from the rare true-silver. Only the
-D:dwarves know the secret of making armour or weapons of this metal.
+D:A full suit of plate armor, fashioned from the rare true-silver. Only the
+D:dwarves know the secret of making armor or weapons of this metal.
 
 N:120:& Mithril Chain Mail~
 G:[:B
@@ -1278,7 +1278,7 @@ W:1:0:10:3
 A:1/1:20/1
 P:1:0d0:0:0:0
 D:A cloth coat typically worn as a loose outer garment. It is spacious enough
-D:to be worn even over bulky metal armour.
+D:to be worn even over bulky metal armor.
 
 N:124:& Shadow Cloak~
 G:(:D
@@ -1722,7 +1722,7 @@ I:37:5:0
 W:25:0:230:700
 A:25/1
 P:15:1d4:-2:0:0
-D:A suit of leather armour with metal rings sewn onto it. In addition, in important parts it is
+D:A suit of leather armor with metal rings sewn onto it. In addition, in important parts it is
 D:reinforced with mail.
 
 ##### Additional amulets #####
@@ -1769,13 +1769,13 @@ D:Upon reading this scroll, a magical enchantment will be placed on a weapon in 
 D:possession, increasing the pain it inflicts when hitting. On very highly enchanted weapons this
 D:enchantment may fail, wasting the scroll.
 
-N:175:Enchant Armour
+N:175:Enchant Armor
 G:?:d
 I:70:16:0
 W:15:0:0:125
 A:15/1
-D:This scroll will try to enchant a piece of armour in your possession, making it more effective
-D:in protecting you. Highly enchanted armour is likely not to accept this enchantment, however.
+D:This scroll will try to enchant a piece of armor in your possession, making it more effective
+D:in protecting you. Highly enchanted armor is likely not to accept this enchantment, however.
 
 N:176:Identify
 G:?:d
@@ -1791,7 +1791,7 @@ W:30:0:0:1000
 A:30/1:50/2:80/1:100/1
 D:This scroll will allow you to gain insight into an object's special properties.
 D:Only the highly magical objects, like rare rings and amulets or very unusual weapons
-D:and armour possess abilities which warrant the use of this magic.
+D:and armor possess abilities which warrant the use of this magic.
 
 N:178:Rumour
 G:?:d
@@ -2088,21 +2088,21 @@ A:50/1
 D:This scroll will ruin your weapon beyond repair. Only weapons of legend have a hope of
 D:escaping destruction, but even they will often be shattered.
 
-N:214:*Enchant Armour*
+N:214:*Enchant Armor*
 G:?:d
 I:70:20:0
 W:50:0:0:500
 A:50/1:50/1
-D:This scroll will place a great enchantment on a piece of armour of your choice, making it much
-D:better at protecting you. Mark that improving armours which are already highly enchanted is very
+D:This scroll will place a great enchantment on a piece of armor of your choice, making it much
+D:better at protecting you. Mark that improving armors which are already highly enchanted is very
 D:difficult and will often fail.
 
-N:215:Curse Armour
+N:215:Curse Armor
 G:?:d
 I:70:2:0
 W:50:0:0:0
 A:50/1
-D:This scroll bears a curse that will tear your armour to shreds. Don't read it!
+D:This scroll bears a curse that will tear your armor to shreds. Don't read it!
 
 N:216:Summon Undead
 G:?:d
@@ -3546,7 +3546,7 @@ a:HARDCORE=BR_ACID
 F:RES_ACID | FLY |
 f:RES_ACID |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:An armour made of a black dragon's hide, containing some of this beast's powers.
+D:An armor made of a black dragon's hide, containing some of this beast's powers.
 
 N:401:& Blue Dragon Scale Mail~
 G:[:b
@@ -3558,7 +3558,7 @@ a:HARDCORE=BR_ELEC
 F:RES_ELEC | FLY |
 f:RES_ELEC |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:A piece of dragon hide fashioned into an armour, shimmering bright blue.
+D:A piece of dragon hide fashioned into an armor, shimmering bright blue.
 
 N:402:& White Dragon Scale Mail~
 G:[:w
@@ -3570,7 +3570,7 @@ P:30:2d4:-2:0:10
 F:RES_COLD | FLY |
 f:RES_COLD |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:An armour fashioned from dragon hide, glistening the white of snow.
+D:An armor fashioned from dragon hide, glistening the white of snow.
 
 N:403:& Red Dragon Scale Mail~
 G:[:r
@@ -3582,7 +3582,7 @@ a:HARDCORE=BR_FIRE
 F:RES_FIRE | FLY |
 f:RES_FIRE |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:The skin of a dragon made into a suit of armour. It glows a bright red and radiates heat.
+D:The skin of a dragon made into a suit of armor. It glows a bright red and radiates heat.
 
 N:404:& Green Dragon Scale Mail~
 G:[:g
@@ -3594,7 +3594,7 @@ a:HARDCORE=BR_POIS
 F:RES_POIS | FLY |
 f:RES_POIS |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:A suit of armour fashioned of dragon hide. It is dirty green and smells awful.
+D:A suit of armor fashioned of dragon hide. It is dirty green and smells awful.
 
 N:405:& Multi-Hued Dragon Scale Mail~
 G:[:v
@@ -3607,7 +3607,7 @@ F:ATTR_MULTI
 F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_POIS | FLY |
 f:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_POIS |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:A powerful armour made of dragonhide. It glows red, blue, green, black and white.
+D:A powerful armor made of dragonhide. It glows red, blue, green, black and white.
 
 N:406:& Pseudo Dragon Scale Mail~
 G:[:v
@@ -3618,7 +3618,7 @@ P:30:2d4:-2:0:10
 a:HARDCORE=BR_LIGHT
 F:RES_LITE | RES_DARK | FLY |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:A suit of armour made of dragon hide, glowing with a strange light, or is it darkness?
+D:A suit of armor made of dragon hide, glowing with a strange light, or is it darkness?
 
 N:407:& Law Dragon Scale Mail~
 G:[:B
@@ -3629,7 +3629,7 @@ P:30:2d4:-2:0:10
 a:HARDCORE=BR_SHARD
 F:RES_SOUND | RES_SHARDS | FLY |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:A piece of dragonhide cut and shaped so it can be worn as armour. The scales are very sharp,
+D:A piece of dragonhide cut and shaped so it can be worn as armor. The scales are very sharp,
 D:and the roaring of a storm seems to come from it, but you're not afraid of either.
 
 N:408:& Bronze Dragon Scale Mail~
@@ -3641,7 +3641,7 @@ P:30:2d4:-2:0:10
 a:HARDCORE=BR_CONF
 F:RES_CONF | FLY |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:A suit of armour made from dragon skin. Its brownish scales glitter in a dazzling light.
+D:A suit of armor made from dragon skin. Its brownish scales glitter in a dazzling light.
 
 N:409:& Gold Dragon Scale Mail~
 G:[:y
@@ -3652,7 +3652,7 @@ P:30:2d4:-2:0:10
 a:HARDCORE=BR_SOUND
 F:RES_SOUND | FLY |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:A suit of golden-hued armour made of dragonhide. The rustle of its scales occasionally
+D:A suit of golden-hued armor made of dragonhide. The rustle of its scales occasionally
 D:increases to a loud boom.
 
 N:410:& Chaos Dragon Scale Mail~
@@ -3666,7 +3666,7 @@ F:ATTR_MULTI
 F:RES_CHAOS | RES_DISEN | FLY |
 f:RES_CHAOS |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:A suit of armour made of dragon hide. It glows in colours you have never seen before. As you
+D:A suit of armor made of dragon hide. It glows in colours you have never seen before. As you
 D:put it on, you feel like you could change the world and are no longer afraid of your equipment
 D:losing its magic.
 
@@ -3679,7 +3679,7 @@ P:30:2d4:-2:0:10
 a:HARDCORE=BR_BALANCE
 F:RES_CHAOS | RES_DISEN | RES_SOUND | RES_SHARDS | FLY |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:A suit of armour made of the hide of a dead dragon. When wearing it, you feel like you
+D:A suit of armor made of the hide of a dead dragon. When wearing it, you feel like you
 D:understand the principles of law and chaos, and no longer fear either.
 
 N:412:& Power Dragon Scale Mail~
@@ -3694,7 +3694,7 @@ F:RES_ACID | RES_FIRE | RES_COLD | RES_ELEC | RES_POIS | FLY |
 F:RES_NETHER | RES_NEXUS | RES_CHAOS | RES_LITE | RES_DARK |
 F:RES_SHARDS | RES_SOUND | RES_DISEN | RES_CONF |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:A suit of armour made of a very thick richly coloured dragonhide. You think you'll never have
+D:A suit of armor made of a very thick richly coloured dragonhide. You think you'll never have
 D:to fear dragons if you put it on.
 
 #### PDSM has been restored to (almost) its former glory in Zangband
@@ -4462,7 +4462,7 @@ I:37:10:0
 W:35:0:250:950
 A:35/1
 P:19:1d4:-2:0:0
-D:A suit of metal armour that consists of metal strips applied vertically
+D:A suit of metal armor that consists of metal strips applied vertically
 D:to the backing of chain, leather, or cloth.
 
 # Everburning torch
@@ -4515,7 +4515,7 @@ W:20:0:30:100
 A:20/2:30/2
 P:3:0d0:0:0:0
 D:A coat made from the fur of various wild animals - it is
-D:somewhat bulky, but still spacious enough to wear over armour.
+D:somewhat bulky, but still spacious enough to wear over armor.
 
 N:532:Water Curing
 G:!:d
@@ -4534,17 +4534,17 @@ P:0:1d5:0:0:0
 F:SHOW_MODS | COULD2H
 f:COULD2H
 D:This is a large axe that could be wielded in one or two hands.  It has
-D:a single blade with a pick on the reverse, designed for armour piercing.
+D:a single blade with a pick on the reverse, designed for armor piercing.
 
 ##### New armour #####
 
-N:535:& Rhino Hide Armour~
+N:535:& Rhino Hide Armor~
 G:(:s
 I:36:8:0
 W:15:0:110:400
 A:15/1
 P:8:1d1:-1:0:0
-D:A hard leather armour made from the thick hide of a rhinoceros.
+D:A hard leather armor made from the thick hide of a rhinoceros.
 
 N:536:& Leather Jacket~
 G:(:U
@@ -4701,7 +4701,7 @@ P:0:4d8:0:0:0
 F:SHOW_MODS | MUST2H
 f:MUST2H
 D:This is a shock weapon. Its purpose is to unhorse a rider
-D:in single combat, or smash through the armour of opposing lines.
+D:in single combat, or smash through the armor of opposing lines.
 
 N:554:& Basilard~
 G:|:w
@@ -4712,7 +4712,7 @@ P:0:1d8:0:0:0
 F:SHOW_MODS
 D:This is a two-edged dagger with a long blade. A favourite among travellers
 D:and warriors alike, it can be worn comfortably with plain clothes
-D:as well as armour.
+D:as well as armor.
 
 ### Trapping Kits
 
@@ -4734,7 +4734,7 @@ P:12:1d4:-2:0:0
 D:A suit of non-overlapping metal rings sewn onto a
 D:heavy leather backing.
 
-N:557:& Cord Armour~
+N:557:& Cord Armor~
 G:(:y
 I:36:9:0
 W:5:0:80:40
@@ -4743,16 +4743,16 @@ P:6:1d1:0:0:0
 D:Fibres of hemp or other natural material woven and knotted
 D:into a thick, tough fabric.
 
-N:558:& Paper Armour~
+N:558:& Paper Armor~
 G:(:w
 I:36:3:0
 W:5:0:30:40
 A:5/2
 P:4:1d1:0:0:0
 D:Thickly pleated sheets of paper assembled together into
-D:a suit of armour.
+D:a suit of armor.
 
-N:559:& Padded Armour~
+N:559:& Padded Armor~
 G:(:y
 I:36:10:0
 W:2:0:60:40
@@ -4771,13 +4771,13 @@ A:2/25:30/25
 D:It must be loaded with potions, which will splatter
 D:over the monster who triggers the trap.
 
-N:561:& Stone and Hide Armour~
+N:561:& Stone and Hide Armor~
 G:(:U
 I:36:15:0
 W:35:0:200:500
 A:35/7
 P:15:1d1:-1:0:0
-D:A primitive armour made from a thick hide reinforced by stone shards.
+D:A primitive armor made from a thick hide reinforced by stone shards.
 
 ### Trapping Kits
 
@@ -6802,7 +6802,7 @@ a:HARDCORE=BR_ACID
 F:RES_WATER | FLY |
 f:RES_WATER |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:An armour made of a water dragon's hide, containing some of this beast's powers.
+D:An armor made of a water dragon's hide, containing some of this beast's powers.
 
 N:853:& Inertia Dragon Scale Mail~
 G:[:o
@@ -6814,7 +6814,7 @@ a:HARDCORE=BR_CONF
 F:RES_INERTIA | FLY |
 f:RES_INERTIA |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:An armour made of an inertia dragon's hide, containing some of this beast's powers.
+D:An armor made of an inertia dragon's hide, containing some of this beast's powers.
 
 # N:number:name
 # G:glyph:color

@@ -380,7 +380,7 @@ average.
 option 3: the player is above character level 25, and the sword pseudo id's as
 good.
 If any of these options are true, the rule is carried out. This rule could
-easily be copied for other weapons or pieces of armour, substituting only the
+easily be copied for other weapons or pieces of armor, substituting only the
 tval, and perhaps the name.
 
 #####GHmmm ok. looks good. I might want to change those character level values

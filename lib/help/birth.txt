@@ -128,7 +128,7 @@ in order to gain its attack capabilities.
 ~~~~~23|Character|Armor Class
 ~~~~~19|Armor|Armor Class
 ~~~~~20|Abbreviations|AC
-#####R === Armour Class ===
+#####R === Armor Class ===
 Each character has an armor class, representing how well the character can 
 avoid damage. The armor class is affected by dexterity, the equipment, and 
 sometimes the race. The higher the AC, the better.

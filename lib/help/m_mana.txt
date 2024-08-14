@@ -20,7 +20,7 @@ There are four spells available for the mana school. These spells are:
    The damage is irresistible and will increase with spell level.
 2. [[[[[sRemove Curses] (school level 10)
    Removes curses of worn objects.
-   At spell level 20, removes heavy curses.
+   At spell level 40, removes heavy curses.
 3. [[[[[sElemental Shield] (school level 20)
    Provides resistance to the four basic elements.
 4. [[[[[sDisruption Shield] (school level 45)

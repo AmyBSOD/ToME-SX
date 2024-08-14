@@ -52,7 +52,7 @@ happens to pick up a curse in the process.
 
 At skill level 5 you also gain knowledge of some basic ego item recipes.
 These are: Acidic, Shocking, Fiery, Frozen, Venomous, and Chaotic weapons,
-Resist Fire armour, and light sources of Fearlessness.
+Resist Fire armor, and light sources of Fearlessness.
 
 At skill level 10 you will gain knowledge of digging ego items, if you have
 selected the option "always generate very unusual rooms" (ironman_rooms).
@@ -112,7 +112,7 @@ lvl     xp   Power
  8     1000  Light                    Everburning Torch
 20    10000  Bright Light             Dwarven Lantern
 40   100000  Sunlight                 Feanorian Lamp
-40   200000  Flight                   Suit of Dragon Armour (any colour)
+40   200000  Flight                   Suit of Dragon Armor (any colour)
 50 10000000  Automatically IDs        Morgoth's Testicles
 29     2000  Anti-Teleportation       Teleport Inhibiting Amulet
 34     2000  Anti-Magic               Magic Inhibiting Amulet

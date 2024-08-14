@@ -26,8 +26,8 @@ There are six spells available for the conveyance school. These Spells are:
    The casting time decreases with level.
 4. [[[[[sTeleport Away] (school level 23)
    Teleports a line of monsters away.
-   At spell level 10 it turns into a ball.
-   At spell level 20 it teleports all monsters in sight.
+   At spell level 30 it turns into a ball.
+   At spell level 60 it teleports all monsters in sight.
 5. [[[[[sRecall] (school level 30)
    Cast on yourself, it will recall you to the surface/dungeon.
    Cast at a monster, it will make you swap positions with the monster.

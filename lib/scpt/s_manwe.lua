@@ -41,7 +41,7 @@ MANWE_SHIELD = add_spell
 	end,
 	["desc"] =	{
 			"It surrounds you with a shield of wind that deflects blows from evil monsters",
-			"At level 10 it increases your armour rating",
+			"At level 10 it increases your armor rating",
 			"At level 20 it retaliates against monsters that melee you",
 	}
 }

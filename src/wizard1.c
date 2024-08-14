@@ -198,11 +198,11 @@ static grouper group_item[] =
 
 	{ TV_INSTRUMENT, "Instruments" },
 
-	{ TV_SOFT_ARMOR, "Armour (Body)" },
+	{ TV_SOFT_ARMOR, "Armor (Body)" },
 	{ TV_HARD_ARMOR, NULL },
 	{ TV_DRAG_ARMOR, NULL },
 
-	{ TV_SHIELD, "Armour (Misc)" },
+	{ TV_SHIELD, "Armor (Misc)" },
 	{ TV_HELM, NULL },
 	{ TV_CROWN, NULL },
 	{ TV_GLOVES, NULL },
@@ -2438,7 +2438,7 @@ char *long_intro =
 	"happens to pick up a curse in the process.\n\n"
 	"At skill level 5 you also gain knowledge of some basic ego item recipes. "
 	"These are: Acidic, Shocking, Fiery, Frozen, Venomous, and Chaotic weapons, "
-	"Resist Fire armour, and light sources of Fearlessness.\n\n"
+	"Resist Fire armor, and light sources of Fearlessness.\n\n"
 	"At skill level 10 you will gain knowledge of digging ego items, "
 	"if you have selected the option "
 	"'always  generate very unusual rooms' (ironman_rooms).\n\n"

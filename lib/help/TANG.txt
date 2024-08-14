@@ -34,7 +34,7 @@ around to see the identity of stores and other inhabitants of the town. At
 this level, be wary of merchants and mercenaries -- they can probably kill you
 with little difficulty.
 
-	You will want to 'w'ield the weapons/armour you have started with
+	You will want to 'w'ield the weapons/armor you have started with
 (if you chose the archer, wield the bow, and then wield the arrows). You
 can check to see what you're wearing/wielding at any time by pressing
 'e'. Ideally, throughout the game you'll always have some kind of missile
@@ -45,7 +45,7 @@ much more complex, but for now, unless you start with a good melee weapon
 (unbelievers do), you might want to consider buying a whip from the
 weapon store '3' (or the temple '4'). If available, purchase a lantern
 and 2 or 3 flasks of oil from the general store '1'. If you have some
-money left, buy some of the cheaper armour pieces from the armoury '2',
+money left, buy some of the cheaper armor pieces from the armory '2',
 such as boots, gloves, cap, and the like.  You should now be ready to
 do some adventuring.
 
@@ -118,8 +118,8 @@ to visit.
 	getting the base and extra damage once for each attack.
 
 #####GA Shield [5,+4]
-	This is a piece of armour, with a base defence of 5 and a magical
-	bonus of +4. If you wear it, your armour rating will increase by 9. 
+	This is a piece of armor, with a base defence of 5 and a magical
+	bonus of +4. If you wear it, your armor rating will increase by 9. 
 
 #####GA Weapon (Defender) (1d6) (+12,+5) [+6] (+2 to stealth)
 	This is a special type of weapon, with special powers. The powers
@@ -129,6 +129,6 @@ to visit.
 	being sold in a store, use certain kinds of magic (*Id*), or use
 	the (very expensive) services of certain stores.
 
-Many armours also have special powers.
+Many armors also have special powers.
 Some very powerful items are unique, and are called artifacts. They are
 normally indestructible, and will prove very useful in your quest.

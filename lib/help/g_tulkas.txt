@@ -29,7 +29,7 @@ instructions for the procedure for each of the prayers Tulkas will grant.
 There are three prayers all told, which are:
 1. [[[[[BDivine Aim] (Level 1)
    It makes you more accurate in combat.
-   At spell level 20 all your blows are critical hits.
+   At spell level 40 all your blows are critical hits.
 2. [[[[[BWhirlwind] (Level 10)
    It allows you to spin around and hit all monsters nearby.
 3. [[[[[BWave of Power] (Level 20)

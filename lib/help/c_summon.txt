@@ -41,7 +41,7 @@ Monster-lore           16.000           [1.200]
 A Summoner starts the game with:
     A Potion of Healing
     A Short Sword
-    A Suit of Hard Leather Armour
+    A Suit of Hard Leather Armor
 ~~~~~03|Summoners|Summoning
 ~~~~~04|Skills|Summoning - Summoning powers
 #####GSummoning

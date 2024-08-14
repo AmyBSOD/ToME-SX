@@ -125,7 +125,7 @@ AULE_ENCHANT_WEAPON = add_spell
 } 
  
 AULE_ENCHANT_ARMOUR = add_spell { 
-	["name"] =	"Enchant Armour", 
+	["name"] =	"Enchant Armor", 
 	["school"] =	{SCHOOL_AULE}, 
 	["level"] =	15, 
 	["mana"] =	100, 
@@ -210,8 +210,8 @@ AULE_ENCHANT_ARMOUR = add_spell {
 		return "tries "..(1 + get_level(AULE_ENCHANT_ARMOUR)/10) 
 	end, 
 	["desc"] =	{
-		"Tries to enchant a piece of armour", 
-		"At level 40 it enhances the special powers of magical armour", 
+		"Tries to enchant a piece of armor", 
+		"At level 40 it enhances the special powers of magical armor", 
 		"At level 60 it also enchants to-hit and to-dam", 
 		"The might of the enchantment increases with the level" 
 	} 

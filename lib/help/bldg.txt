@@ -8,7 +8,7 @@ The stores are where you can pick up the supplies you need before entering the
 depths of the dungeon. These include:
 
 [[[[[GGeneral Store (1):] food, torches, shovels... the necessities.
-[[[[[GArmoury (2):] to protect from the ravages of the dungeon.
+[[[[[GArmory (2):] to protect from the ravages of the dungeon.
 [[[[[GWeaponsmith (3):] they carry anything sharp and to the point.
 [[[[[GTemple (4):] prayerbooks and those items holy.
 [[[[[GAlchemist (5):] for all sorts of bubbling potions and scrolls.
@@ -30,7 +30,7 @@ Adventurers looking for work besides exploring the dungeon should hunt in here.
 you to your chosen dungeon destination for a fee.
 [[[[[GBeastmaster Shanty:] For those who enjoy trophy hunting, and to research the
 strange animals seen during their adventures. 
-[[[[[GFighters Hall:] The place to reforge weapons and armour.
+[[[[[GFighters Hall:] The place to reforge weapons and armor.
 [[[[[GRangers Guild:] The place to reforge bows and arrows.
 [[[[[GLibrary:] For information of all kinds.
 [[[[[GGambling House:] Read the *****/bgambling.txt*0[rules ("b")] before paying. The games are not 

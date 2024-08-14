@@ -30,4 +30,4 @@ There are four spells available for the water school. These Spells are:
    its mighty waves.
 5. [[[[[bIce Storm] (school level 22)
    Engulfs you in a storm of roaring cold that strikes your foes.
-   At spell level 10 it turns into shards of ice.
+   At spell level 25 it turns into shards of ice.

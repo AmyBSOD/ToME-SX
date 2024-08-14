@@ -17,7 +17,7 @@
   The Longsword 'Anduril' (3d5) (+10,+15) [+5]
        The  Sword of Aragorn  the  Dunadan  Ranger  and  King.   It 
        increases your  strength  to  match  true  Kingly  strength,
-       increases  armour class by +5. Being the 'Flame of the West'
+       increases  armor class by +5. Being the 'Flame of the West'
        it delivers  heat criticals and defends  against  fire.   It 
        slays  evil, orcs and trolls. It allows you to see invisible
        and avoid paralyzation. So near to the element  fire  is the
@@ -101,7 +101,7 @@
   The Spear 'Aeglos' (3d6) (+15,+25) [+5]
        This  Snow-thorn of Gil-Galad the  High-Elf,  delivers  very
        deep cold-criticals, while  protecting  you  from  cold  and
-       increasing  your armour class.  Being  elvish  it  naturally 
+       increasing  your armor class.  Being  elvish  it  naturally 
        slays orcs and trolls. It  increases  the  wielders  wisdom, 
        slows their digestion and frees their actions  from  holding
        forces of evil, also casting Frost Balls occasionally.

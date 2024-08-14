@@ -31,13 +31,13 @@ There are five spells available for the fire school. These spells are:
 #####v   of 7 in order to cast this spell.
 3. [[[[[RFireflash] (school level 10)
    Conjures a ball of fire to burn your foes to ashes.
-   At spell level 20 it turns into a ball of holy fire.
+   At spell level 40 it turns into a ball of holy fire.
 4. [[[[[RFirewall] (school level 15)
    Creates a fiery wall to incinerate monsters stupid enough to attack you.
-   At spell level 6 it turns into a wall of hell fire.
+   At spell level 50 it turns into a wall of hell fire.
 5. [[[[[RFiery Shield] (school level 20)
    Creates a shield of fierce flames around you.
-   At spell level 8 it turns into a greater kind of flame that cannot be
+   At spell level 25 it turns into a greater kind of flame that cannot be
    resisted by your foes.
 
 

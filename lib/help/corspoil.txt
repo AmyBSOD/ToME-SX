@@ -59,7 +59,7 @@ It depends on:
 
 
 [[[[[BDemon Hide]
-  Increases your armour class by your level
+  Increases your armor class by your level
   Provides immunity to fire at level 40
   But reduces speed by your level / 7
 [[[[[GGain message: Your skin grows into a thick hide.]

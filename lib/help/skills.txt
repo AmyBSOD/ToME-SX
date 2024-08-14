@@ -126,10 +126,10 @@ The skills are:
 
 ~~~~~01|Skills|Combat
 [[[[[BCombat]
-The combat skill is used to determine the maximum combined weight of armour
+The combat skill is used to determine the maximum combined weight of armor
 you can wear before you become encumbered by it. It also affects your general
 fighting ability, although not to as great an extent as Weaponmastery, and
-determines the speed and strength of pseudo-id of weapons and armour.
+determines the speed and strength of pseudo-id of weapons and armor.
 
 Investing in the combat skill? You might be interested in the 
 *****ability.txt*05[Extra Max Blow(1)] and *****ability.txt*06[(2)] abilities.
@@ -233,7 +233,7 @@ using a weapon in the first place, but choose not to. Spending 1 skill point
 on your Barehand-combat skill adds 0.5 bonus skill points to your Combat skill.
 Barehand-combat fighters develop stronger and faster attacks, and also gain
 speed bonuses, as they advance in skill.  However, they cannot use this skill
-whilst wearing heavy armour.
+whilst wearing heavy armor.
 ~~~~~61|Skills|Bearform-combat
 [[[[[BBearform-combat]
 This skill is a sub-skill of the Combat skill. It affects your ability to fight 
@@ -295,9 +295,9 @@ points to your Sneakiness skill.
 ~~~~~20|Skills|Dodging
 [[[[[BDodging]
 This skill is a sub-skill of the Sneakiness skill. It affects your ability
-to dodge out of the way of monster blows and bolts. The less armour you wear 
+to dodge out of the way of monster blows and bolts. The less armor you wear 
 and the less you carry, the greater your chance of dodging a blow. Rings and 
-amulets do not affect your chance to dodge, but full armour will almost render 
+amulets do not affect your chance to dodge, but full armor will almost render 
 the effect of the skill obsolete. Spending 1 skill point on your Dodging skill 
 adds 0.1 bonus skill points to your Sneakiness skill.
 ~~~~~21|Skills|Magic

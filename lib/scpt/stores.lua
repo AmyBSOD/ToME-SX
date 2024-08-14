@@ -46,7 +46,7 @@ store_buy_list
 		TV_BOTTLE,
 		TV_TRAPKIT,
 	},
-	["Armoury"] =
+	["Armory"] =
 	{
 		TV_BOOTS,
 		TV_GLOVES,

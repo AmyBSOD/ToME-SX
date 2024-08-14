@@ -42,7 +42,7 @@ something you are more comfortable with.
 #####G                Features that do not block line of sight
  
   .   A floor space                   1   Entrance to General Store
-  .   A trap (hidden)                 2   Entrance to Armoury
+  .   A trap (hidden)                 2   Entrance to Armory
   ^   A trap (known)                  3   Entrance to Weapon Smith
   [[[[[y;]   A glyph of warding              4   Entrance to Temple
   [[[[[U']   An open door                    5   Entrance to Alchemy Shop
@@ -92,9 +92,9 @@ something you are more comfortable with.
   ,   A mushroom (or food)            \   A hafted weapon or digger
   -   A wand, rod or rod tip          }   A sling, bow, or x-bow
   _   A staff                         {   A shot, arrow, bolt, boomerang
-  =   A ring                          (   Soft armour/cloak
-  "   An amulet                       [   Hard armour
-  $   Gold or gems                    ]   Misc. armour
+  =   A ring                          (   Soft armor/cloak
+  "   An amulet                       [   Hard armor
+  $   Gold or gems                    ]   Misc. armor
   ~   Lites, Tools, Chests, etc       )   A shield
   ~   Junk, Sticks, Skeletons, etc    `   Trapping kit, climbing set
   ~   Stone, random artifact          o   Egg
@@ -225,8 +225,8 @@ item in case another is encountered.
      oil, shovels, picks, and spikes. All of these items and some others
      can be sold back to the General store for money.
 
-#####GThe Armoury ("2")
-     The Armoury is where the town's armour is fashioned. All sorts of
+#####GThe Armory ("2")
+     The Armory is where the town's armor is fashioned. All sorts of
      protective gear may be bought and sold here.
 
 #####GThe Weaponsmith's Shop ("3")
@@ -286,7 +286,7 @@ found in some towns. These Buildings (represented by +'s) include:
      you saw during your adventures. 
 
 #####GFighters Hall
-     The place to reforge weapons and armour.
+     The place to reforge weapons and armor.
 
 #####GRangers Guild
      The place to reforge distance weapons and their ammunition.
@@ -492,7 +492,7 @@ Also, occasionally you will notice that something in your inventory or
 equipment list seems to be magical. High level characters are much more
 likely to notice this than beginning characters. When you do notice this,
 the item in question will be inscribed with "good" or "cursed" as is
-relevant.  You can increase your ability to notice magical effects of armour 
+relevant.  You can increase your ability to notice magical effects of armor 
 and weapons by increasing the *****skills.txt*01[Combat] skill. You can increase your ability 
 to sense particularly well enchanted magical items (potions, scrolls. wands 
 etc) by increasing your *****skills.txt*21[Magic] skill. If you increase these 
@@ -519,7 +519,7 @@ potion will reach out and bite you...
 ~~~~~10|Cursed Objects
 #####R=== Cursed Objects ===
 
-Some objects, mainly armour and weapons, have had curses laid upon them.
+Some objects, mainly armor and weapons, have had curses laid upon them.
 These horrible objects will look like any other normal item, but will
 detract from your character's stats or abilities if worn. They will also
 be impossible to remove until the curse is removed. In fact some are

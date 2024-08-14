@@ -29,17 +29,17 @@ contains instructions for the procedure for each of the prayers Eru will
 grant. There are four prayers all told, which are:
 1. [[[[[BFirebrand] (Level 1)
    Imbues your melee weapon with fire to deal more damage.
-   At level 15 it spreads over a 1 radius zone around your target.
-   At level 30 it deals holy fire damage.
+   At level 20 it spreads over a 1 radius zone around your target.
+   At level 60 it deals holy fire damage.
 2. [[[[[BEnchant Weapon] (Level 10)
    Tries to enchant a weapon to-hit.
    At level 5 it also enchants to-dam.
    At level 45 it enhances the special powers of magical weapons.
    The might of the enchantment increases with level.
-3. [[[[[BEnchant Armour] (Level 15)
-   Tries to enchant a piece of armour.
-   At level 20 it also enchants to-hit and to-dam.
-   At level 40 it enhances the special powers of magical armour
+3. [[[[[BEnchant Armor] (Level 15)
+   Tries to enchant a piece of armor.
+   At level 40 it enhances the special powers of magical armor
+   At level 60 it also enchants to-hit and to-dam.
    The might of the enchantment increases with level.
 4. [[[[[BChild of Aule] (Level 20)
    Summons a levelled Dwarven warrior to help you battle the forces

@@ -42,7 +42,7 @@ Monster-lore            1.000           [1.100]
 A Possessor begins the game with:
     a Potion of Healing
     a Short Sword
-    a Hard Leather Armour
+    a Hard Leather Armor
 
 ~~~~~03|Possessor|Possessor powers 
 ~~~~~04|Skills|Possession - Possessor powers 

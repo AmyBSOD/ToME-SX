@@ -639,7 +639,7 @@ C:a:O:111:50:1d1
 
 C:a:N:Rune-smith
 C:a:D:An alchemist that can use magic as well as create magical objects,
-C:a:D:but has extreme difficulty using any weapon or armour they create.
+C:a:D:but has extreme difficulty using any weapon or armor they create.
 C:a:k:+2000:+0:Magic
 C:a:k:+0:+250:Spirituality
 C:a:k:+0:-200:Combat
@@ -1463,7 +1463,7 @@ C:a:k:+0:-500:Symbiosis
 C:a:k:+0:-500:Mimicry
 
 C:a:N:Monk
-C:a:D:Barehanded, lightly armoured fighters, they wreak havoc with
+C:a:D:Barehanded, lightly armored fighters, they wreak havoc with
 C:a:D:their bare fists, and can also use a few prayers.
 C:a:O:71:37:1d1
 C:a:O:36:4:1d1

@@ -209,8 +209,8 @@ f:Thaumaturgy:Magic%6
 ################################## COMBAT ##################################
 
 N:16:Combat
-D:General ability to fight and to pseudo-id armour and weapons
-D:It also allows the use of heavier armour without penalties
+D:General ability to fight and to pseudo-id armor and weapons
+D:It also allows the use of heavier armor without penalties
 I:1000
 F:RANDOM_GAIN
 

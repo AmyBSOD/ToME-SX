@@ -23,7 +23,7 @@ There are four spells available for the Udun school. These spells are:
 #####v   of 1 in order to cast this spell.
 2. [[[[[DGenocide] (dual school level 25)
    Genocides all monsters of a specified race on the level.
-   At level 10 it can genocide all monsters near you.
+   At level 40 it can genocide all monsters near you.
 #####v   Your Udun and Nature skills must have reached a combined average level 
 #####v   of 25 in order to cast this spell.
 3. [[[[[DWraithform] (dual school level 30)

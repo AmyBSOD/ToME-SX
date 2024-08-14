@@ -5,7 +5,7 @@
 
 
   Adamantite Plate Mail 'Soulkeeper' [40,+20]
-       This amazing armour protects your soul from cold,  and  from
+       This amazing armor protects your soul from cold,  and  from
        life level loss. It is also capable of fully healing you.
 
   The Pair of Hard Leather Boots of Feanor [3,+20]
@@ -19,8 +19,8 @@
        you will never become less agile. It is said that  they  can 
        also make you more confident and brave.
 
-  Full Plate Armour of Isildur [25,+25]
-       This armour of the Dunedain Lord, Isildur, Resists.
+  Full Plate Armor of Isildur [25,+25]
+       This armor of the Dunedain Lord, Isildur, Resists.
 
   The Large Metal Shield of Anarion [5,+20]
        This shield Resists and sustains your stats.
@@ -75,7 +75,7 @@
   The Iron Helm of Gorlim [5,+10] (-125)
        This unhappy helm of betrayal ruins thought and sight.
 
-  Soft Leather Armour 'Hithlomir' [4,+20] (+4)
+  Soft Leather Armor 'Hithlomir' [4,+20] (+4)
        This dark-misty leather resists the elements and melds  the
        wearer into the background with incredible stealth.
 

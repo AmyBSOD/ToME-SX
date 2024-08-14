@@ -19,7 +19,7 @@ There are four spells available for the temporal school. These Spells are:
 1. [[[[[sMagelock] (school level 1)
    Magically locks a door.
    At spell level 30 it creates a glyph of warding.
-   At spell level 40 the glyph can be placed anywhere in the field of vision.
+   At spell level 60 the glyph can be placed anywhere in the field of vision.
 2. [[[[[sSlow Monster] (school level 10)
    Magically slows down the passing of time around a monster.
    At level 20 it affects a zone.

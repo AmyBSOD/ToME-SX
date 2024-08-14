@@ -6,7 +6,7 @@
 #####GDescription
 Alchemists are the only class that can harness the abilities of the 
 essences found in the dungeon. They can add these essences to staves, 
-rings, wands, rods, and sometimes weapons and armour to create new items
+rings, wands, rods, and sometimes weapons and armor to create new items
 or recharge old ones. They can also extract essences from magical items
 they find. Using these abilities, Alchemists can get very good items at
 low levels. The trouble is getting them to survive later on.
@@ -16,7 +16,7 @@ and have made a fine art of extracting, storing, and using these
 objects' magical energies.  Because they neither fight well nor cast 
 powerful spells, Alchemists rely on their craftsmanship to cope with 
 the dangers of the dungeons.  They will quickly learn to create damage-
-dealing wands, rods, and staffs, forge powerful weapons and armour, 
+dealing wands, rods, and staffs, forge powerful weapons and armor, 
 make highly useful objects of other kinds, and eventually, at great cost 
 to other knowledge, they can learn the perilous art of artifact creation 
 itself.

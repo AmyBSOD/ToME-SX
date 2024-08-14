@@ -63,7 +63,7 @@ F:KILL_UNDEAD | SH_ELEC | FLY
 
 # Gothmog's Armoury -- Demonologists set
 
-N:3:Gothmog's Armoury
+N:3:Gothmog's Armory
 D:It is from a group of items that once belonged to Gothmog, 
 D:the High Captain of the Balrogs
 # The demonblade of Gothmog

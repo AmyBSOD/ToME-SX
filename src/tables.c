@@ -1491,7 +1491,7 @@ option_type option_info[] =
 	  "auto_scum", "Auto-scum for good levels" },
 
 	{ &stack_allow_items, TRUE, 3, 2,
-	  "stack_allow_items", "Allow weapons and armour to stack" },
+	  "stack_allow_items", "Allow weapons and armor to stack" },
 
 	{ &stack_allow_wands, TRUE, 3, 3,
 	  "stack_allow_wands", "Allow wands/staffs/rods to stack" },
@@ -2578,7 +2578,7 @@ magic_power mindcraft_powers[MAX_MINDCRAFT_POWERS] =
 	{
 		/* Psychic/physical defenses */
 		13, 100, 50,
-		"Character Armour",
+		"Character Armor",
 		"Sets up physical/elemental shield."
 	},
 	{
@@ -4590,8 +4590,8 @@ tval_desc tval_descs[] =
 	},
 	{
 		TV_DRAG_ARMOR,
-		"Dragon armour is made from the scales of dead dragons. "
-		"These mighty sets of armour usually yield great power to "
+		"Dragon armor is made from the scales of dead dragons. "
+		"These mighty sets of armor usually yield great power to "
 		"their wearer."
 	},
 	{
@@ -4701,7 +4701,7 @@ tval_desc tval_descs[] =
 	},
 	{
 		TV_BOOTS,
-		"Boots can help your armour rating.  Some of these are magical."
+		"Boots can help your armor rating.  Some of these are magical."
 	},
 	{
 		TV_GLOVES,
@@ -4729,12 +4729,12 @@ tval_desc tval_descs[] =
 	},
 	{
 		TV_SOFT_ARMOR,
-		"Soft armour is light, and will not hinder your combat much."
+		"Soft armor is light, and will not hinder your combat much."
 	},
 	{
 		TV_HARD_ARMOR,
-		"Hard armour provides much more protection than soft "
-		"armour but also hinders combat much more."
+		"Hard armor provides much more protection than soft "
+		"armor but also hinders combat much more."
 	},
 	{
 		TV_SYMBIOTIC_BOOK,
