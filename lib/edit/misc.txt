@@ -67,10 +67,10 @@ M:B:62
 M:S:63
 
 # Maximum size for "o_list[]"
-M:O:1024
+M:O:4096
 
 # Maximum size for "m_list[]"
-M:M:768
+M:M:4096
 
 # Maximum number of race types in p_info.txt
 M:P:R:36

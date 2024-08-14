@@ -9178,6 +9178,12 @@ void generate_cave(void)
 			}
 
 			/* Prevent monster over-flow */
+
+			if ((m_max >= 1024) && wizard)
+			{
+				msg_format("monster amount %d", m_max);
+			}
+
 			if (m_max >= max_m_idx)
 			{
 				/* Message */
