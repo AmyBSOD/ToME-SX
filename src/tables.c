@@ -1679,7 +1679,7 @@ option_type option_info[] =
 	  "hard_mode", "Hard mode (make game considerably harder)" },
 
 	{ &joke_monsters, TRUE, 6, 14,
-	  "joke_monsters", "Allow use of some 'joke' monsters" },
+	  "joke_monsters", "Allow use of some 'joke' monsters [FORCED]" },
 
 	/* XXX */
 

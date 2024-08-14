@@ -1089,15 +1089,15 @@ s16b get_mon_num(int level)
 
 		if(in_tome)
 		{
-			/* Zangbandish monsters not allowed */
-			if (r_ptr->flags8 & RF8_ZANGBAND) continue;
+			/* Zangbandish monsters not allowed - Amy edit: fuck you!! of course they are! */
+			/*if (r_ptr->flags8 & RF8_ZANGBAND) continue;*/
 
-			/* Lovecraftian monsters not allowed */
-			if (r_ptr->flags8 & RF8_CTHANGBAND) continue;
+			/* Lovecraftian monsters not allowed - Amy edit: rot in hell for unconditionally disabling them, you heretic! */
+			/*if (r_ptr->flags8 & RF8_CTHANGBAND) continue;*/
 		}
 
-		/* Joke monsters allowed ? or not ? */
-		if (!joke_monsters && (r_ptr->flags8 & RF8_JOKEANGBAND)) continue;
+		/* Joke monsters allowed ? or not ? Amy: always allowed */
+		/*if (!joke_monsters && (r_ptr->flags8 & RF8_JOKEANGBAND)) continue;*/
 
 		/* Some dungeon types restrict the possible monsters */
 		if (!summon_hack && !restrict_monster_to_dungeon(r_idx) && dun_level) continue;

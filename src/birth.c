@@ -2425,6 +2425,9 @@ static bool player_birth_aux_ask()
 		seed_dungeon = 0;
 	}
 
+	/* disallow turning joke monsters off, you lamer --Amy */
+	joke_monsters = TRUE;
+
 	/* Set the recall dungeon accordingly */
 	call_lua("get_module_info", "(s)", "d", "base_dungeon", &tmp);
 	dungeon_type = tmp;
