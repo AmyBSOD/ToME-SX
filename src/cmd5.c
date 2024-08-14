@@ -686,12 +686,12 @@ void do_poly_self(void)
  * 3 = disenchantment and random elemental damage (to destroy or damage player's items) */
 void quest_fail_penalty(int penalty_type)
 {
-	do_dec_stat(A_STR, STAT_DEC_PERMANENT);
-	do_dec_stat(A_CON, STAT_DEC_PERMANENT);
-	do_dec_stat(A_DEX, STAT_DEC_PERMANENT);
-	do_dec_stat(A_INT, STAT_DEC_PERMANENT);
-	do_dec_stat(A_WIS, STAT_DEC_PERMANENT);
-	do_dec_stat(A_CHR, STAT_DEC_PERMANENT);
+	do_dec_stat(A_STR, STAT_DEC_PERMANENT_NORESIST);
+	do_dec_stat(A_CON, STAT_DEC_PERMANENT_NORESIST);
+	do_dec_stat(A_DEX, STAT_DEC_PERMANENT_NORESIST);
+	do_dec_stat(A_INT, STAT_DEC_PERMANENT_NORESIST);
+	do_dec_stat(A_WIS, STAT_DEC_PERMANENT_NORESIST);
+	do_dec_stat(A_CHR, STAT_DEC_PERMANENT_NORESIST);
 
 	switch (penalty_type) {
 		case 0:

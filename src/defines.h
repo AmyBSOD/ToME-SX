@@ -2384,6 +2384,7 @@
 #define STAT_DEC_TEMPORARY 1
 #define STAT_DEC_NORMAL 2
 #define STAT_DEC_PERMANENT 3
+#define STAT_DEC_PERMANENT_NORESIST 4
 
 /* jk - which trap is which number */
 #define TRAP_OF_WEAKNESS_I                  1
@@ -4115,6 +4116,7 @@ extern int PlayerUID;
 #define QUEST_STATUS_FAILED          4
 #define QUEST_STATUS_FINISHED        5
 #define QUEST_STATUS_FAILED_DONE     6
+#define QUEST_STATUS_SCREWED         7
 
 /*
  * Quest flags

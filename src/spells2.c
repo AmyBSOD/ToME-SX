@@ -252,6 +252,9 @@ bool do_dec_stat(int stat, int mode)
 		break;
 	}
 
+	/* by Amy: if the stat drain type is "noresist", then even a sustain won't help you */
+	if (mode == STAT_DEC_PERMANENT_NORESIST) sust = FALSE;
+
 	/* Sustain */
 	if (sust && rand_int(100) > 5)
 	{
