@@ -199,8 +199,8 @@ struct object_kind
 	u32b oflags4;           /* Obvious Flags, set 4 */
 	u32b oflags5;           /* Obvious Flags, set 5 */
 
-	byte locale[4];		/* Allocation level(s) */
-	byte chance[4];		/* Allocation chance(s) */
+	byte locale[10];		/* Allocation level(s) */
+	byte chance[10];		/* Allocation chance(s) */
 
 	byte level;			/* Level */
 	byte extra;			/* Something */

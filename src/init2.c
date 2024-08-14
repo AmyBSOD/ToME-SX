@@ -6300,7 +6300,7 @@ static errr init_alloc(void)
 		k_ptr = &k_info[i];
 
 		/* Scan allocation pairs */
-		for (j = 0; j < 4; j++)
+		for (j = 0; j < 10; j++)
 		{
 			/* Count the "legal" entries */
 			if (k_ptr->chance[j])
@@ -6339,7 +6339,7 @@ static errr init_alloc(void)
 		k_ptr = &k_info[i];
 
 		/* Scan allocation pairs */
-		for (j = 0; j < 4; j++)
+		for (j = 0; j < 10; j++)
 		{
 			/* Count the "legal" entries */
 			if (k_ptr->chance[j])
