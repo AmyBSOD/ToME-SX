@@ -2795,25 +2795,16 @@ R:R:40:0
 R:F:IGNORE_FIRE
 R:Z:fire breath
 
-R:N:26:Ice-Dwarf
-R:D:They inhabit the cold northern regions of the world, they are very strong
-R:D:Miners and fighters of legend. These Dwarves stayed in the north since before the eldar
-R:D:came.They are stronger than normal dwarves.
-R:S:3:-4:1:-3:3:-4:0
-R:K:2:9:10:-1:7:10:15:2
-R:P:11:125:0:16
-R:M:35:15:48:3:150:10:46:3:120:10
-R:E:1:1:1:2:1:1
-R:Z:find secret passages
-R:R:1:0
-R:F:RES_BLIND | RES_COLD 
-R:R:30:0
-R:F:IGNORE_COLD
+R:N:26:Asura
+R:D:The multi-armed Hinduism demigods addicted to passion and violence.
+R:S:1:-1:-1:4:1:-1:-3
+R:K:1:-1:-3:-2:-1:15:2:-1
+R:P:10:140:10:1
+R:M:14:6:72:6:180:25:66:4:150:20
+R:E:2:1:1:2:1:1
 R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
-R:k:+0:+200:Axe-mastery
-R:k:+0:+200:Chopping
-R:k:+0:+250:Weight-lifting
-R:Z:cold touch
+R:k:+5000:+600:Dodging
+R:k:-1000:-100:Stealth
 
 R:N:27:Lizardman
 R:D:Intelligent lizard beings of the depths. Enormous beasts, scaly and green, these 
@@ -2955,6 +2946,26 @@ R:k:=0:=0:Prayer
 R:k:=0:=0:Demonology
 R:k:=0:=0:Udun
 
+R:N:36:Ice-Dwarf
+R:D:They inhabit the cold northern regions of the world, they are very strong
+R:D:Miners and fighters of legend. These Dwarves stayed in the north since before the eldar
+R:D:came.They are stronger than normal dwarves.
+R:S:3:-4:1:-3:3:-4:0
+R:K:2:9:10:-1:7:10:15:2
+R:P:11:125:0:16
+R:M:35:15:48:3:150:10:46:3:120:10
+R:E:1:1:1:2:1:1
+R:Z:find secret passages
+R:R:1:0
+R:F:RES_BLIND | RES_COLD 
+R:R:30:0
+R:F:IGNORE_COLD
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:k:+0:+200:Axe-mastery
+R:k:+0:+200:Chopping
+R:k:+0:+250:Weight-lifting
+R:Z:cold touch
+
 ##############################################################################
 ##############################################################################
 ##############################################################################
@@ -2990,7 +3001,7 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
 
 # Just a place holder, the actualy setting are done with corruptions, see
 # corrupt.lua and player.lua
@@ -3007,7 +3018,7 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
 S:O:70:0:5d3
 S:O:70:32:2d3
 
@@ -3024,7 +3035,7 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
 S:G:UNDEAD | NO_CUT | NO_FOOD | SEMI_WRAITH | NO_SUBRACE_CHANGE
 S:R:1:0
 S:F:SEE_INVIS | HOLD_LIFE | 
@@ -3051,7 +3062,7 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
 S:G:UNDEAD | NO_CUT | NO_FOOD | NO_SUBRACE_CHANGE
 S:R:1:0
 S:F:SEE_INVIS | HOLD_LIFE | 
@@ -3079,7 +3090,7 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
 S:G:UNDEAD | NO_FOOD | NO_SUBRACE_CHANGE
 S:R:1:0
 S:F:SEE_INVIS | HOLD_LIFE | 
@@ -3107,7 +3118,7 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
 S:R:10:0
 S:F:RES_FEAR | 
 S:k:-200:+000:Disarming
@@ -3131,7 +3142,7 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
 S:k:+500:+000:Disarming
 S:k:+1000:+000:Magic-Device
 S:k:+500:+000:Spirituality
@@ -3155,7 +3166,7 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
 S:O:70:32:25d2
 S:O:70:12:25d3
 
@@ -3182,7 +3193,7 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
 
 S:N:11:Knight
 S:D:A:Mounted soldiers.
@@ -3198,7 +3209,7 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
 S:F:RES_FEAR
 S:k:+0:+200:Polearm-mastery
 S:k:+0:-200:Archery
@@ -3238,7 +3249,7 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
 
 S:N:13:Herald
 S:D:B:Herald Angels have the Archangel Gabriel as patron.  They are more charismatic 
@@ -3254,7 +3265,7 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
 S:G:NO_SUBRACE_CHANGE |
 S:R:1:0
 S:F:RES_SOUND | SUST_CHR 

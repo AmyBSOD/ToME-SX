@@ -246,6 +246,7 @@ F:RANDOM_GAIN
 
 N:69:Dual-wielding
 D:Ability to use several weapons at once
+D:Requires you to be in a form with several weapon slots
 I:1000
 F:RANDOM_GAIN
 

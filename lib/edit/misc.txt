@@ -73,7 +73,7 @@ M:O:4096
 M:M:4096
 
 # Maximum number of race types in p_info.txt
-M:P:R:36
+M:P:R:37
 
 # Maximum number of subrace types in p_info.txt
 M:P:S:14
