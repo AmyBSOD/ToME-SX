@@ -4429,7 +4429,8 @@ s16b wield_slot_ideal_special(object_type *o_ptr, bool ideal)
 
 	case TV_INSTRUMENT:
 		{
-			char etrdt;
+			char etrdt; /* by Amy: can select a slot, because it's silly if you're forced to sacrifice the shooter slot */
+startover:
 
 			prt("Wield the instrument in the light slot (y/n)? ", 0, 0);
 			flush();
@@ -4442,7 +4443,25 @@ s16b wield_slot_ideal_special(object_type *o_ptr, bool ideal)
 				etrdt = inkey();
 				prt("", 0, 0);
 				if (etrdt != 'y') {
-					return ideal ? INVEN_BOW : get_slot(INVEN_BOW);
+					prt("Wield the instrument in the digging slot (y/n)? ", 0, 0);
+	
+					flush();
+					etrdt = inkey();
+					prt("", 0, 0);
+					if (etrdt != 'y') {
+						prt("Wield the instrument in the shooter slot (y/n)? ", 0, 0);
+
+						flush();
+						etrdt = inkey();
+						prt("", 0, 0);
+						if (etrdt != 'y') {
+							goto startover;
+						} else {
+							return ideal ? INVEN_TOOL : get_slot(INVEN_TOOL);
+						}
+					} else {
+						return ideal ? INVEN_BOW : get_slot(INVEN_BOW);
+					}
 				} else {
 					return ideal ? INVEN_AMMO : get_slot(INVEN_AMMO);
 				}
