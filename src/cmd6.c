@@ -3048,6 +3048,11 @@ void do_cmd_read_scroll(void)
 					{
 						r_ptr->max_num = 1;
 					}
+
+					/* just in case you murdered the quest giver NPCs... --Amy */
+					r_info[test_monster_name("Farmer Maggot")].max_num = 1;
+					r_info[test_monster_name("Melinda Proudfoot")].max_num = 1;
+
 				}
 
 				break;
