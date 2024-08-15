@@ -681,8 +681,8 @@ static char head[4] = { 'a', 'A', '0', ':' };
  */
 static void wci_string(cptr string, int num)
 {
-	int row = 2 + (num % 20), col = 30 * (num / 20);
-	int ch = head[num / 20] + (num % 20), max_len = 0;
+	int row = 2 + (num % 25), col = 30 * (num / 25);
+	int ch = head[num / 25] + (num % 25), max_len = 0;
 
 	if (76-col < (signed)max_len)
 		max_len = 76-col;
@@ -733,9 +733,9 @@ static int wiz_create_itemtype(void)
 
 	/* Analyze choice */
 	num = -1;
-	if ((ch >= head[0]) && (ch < head[0] + 20)) num = ch - head[0];
-	if ((ch >= head[1]) && (ch < head[1] + 20)) num = ch - head[1] + 20;
-	if ((ch >= head[2]) && (ch < head[2] + 17)) num = ch - head[2] + 40;
+	if ((ch >= head[0]) && (ch < head[0] + 25)) num = ch - head[0];
+	if ((ch >= head[1]) && (ch < head[1] + 25)) num = ch - head[1] + 25;
+	if ((ch >= head[2]) && (ch < head[2] + 17)) num = ch - head[2] + 50;
 
 	/* Bail out if choice is illegal */
 	if ((num < 0) || (num >= max_num)) return (0);
@@ -780,9 +780,9 @@ static int wiz_create_itemtype(void)
 
 	/* Analyze choice */
 	num = -1;
-	if ((ch >= head[0]) && (ch < head[0] + 20)) num = ch - head[0];
-	if ((ch >= head[1]) && (ch < head[1] + 20)) num = ch - head[1] + 20;
-	if ((ch >= head[2]) && (ch < head[2] + 17)) num = ch - head[2] + 40;
+	if ((ch >= head[0]) && (ch < head[0] + 25)) num = ch - head[0];
+	if ((ch >= head[1]) && (ch < head[1] + 25)) num = ch - head[1] + 25;
+	if ((ch >= head[2]) && (ch < head[2] + 17)) num = ch - head[2] + 50;
 
 	/* Bail out if choice is "illegal" */
 	if ((num < 0) || (num >= max_num)) return (0);

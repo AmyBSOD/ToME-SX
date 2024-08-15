@@ -6816,6 +6816,45 @@ f:RES_INERTIA |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 D:An armor made of an inertia dragon's hide, containing some of this beast's powers.
 
+N:854:Fireproofing
+G:?:d
+I:70:56:0
+W:30:0:0:20000
+A:30/4
+P:0:1d1:0:0:0
+D:Lets you fireproof an item.
+
+N:855:Coldproofing
+G:?:d
+I:70:57:0
+W:30:0:0:20000
+A:30/4
+P:0:1d1:0:0:0
+D:Lets you coldproof an item.
+
+N:856:Shockproofing
+G:?:d
+I:70:58:0
+W:30:0:0:20000
+A:30/4
+P:0:1d1:0:0:0
+D:Lets you shockproof an item.
+
+N:857:Acidproofing
+G:?:d
+I:70:59:0
+W:30:0:0:20000
+A:30/4
+P:0:1d1:0:0:0
+D:Lets you acidproof an item.
+
+N:858:Clone Monster
+G:-:d
+I:65:28:-1:SPELL=Clone Monster
+W:30:0:2:0
+A:30/10
+P:0:1d1:0:0:0
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

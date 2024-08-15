@@ -492,9 +492,33 @@ F:DONT_NOTICE_RUNNING
 
 # 79 --> 83 UNSUSED
 
+#Elanor
+N:79:grass with Elanor flowers
+G:&:y
+F:FLOOR | DONT_NOTICE_RUNNING | CAN_RUN
+F:SUPPORT_GROWTH
+
+#Fumellar
+N:80:grass with Fumella flowers
+G:;:r
+F:FLOOR | DONT_NOTICE_RUNNING | CAN_RUN
+F:SUPPORT_GROWTH
+
+#Anemones
+N:81:grass with anemones
+G:;:v
+F:FLOOR | DONT_NOTICE_RUNNING | CAN_RUN
+F:SUPPORT_GROWTH
+
 #Niphredil
 N:82:grass with Niphredil flowers
 G:;:w
+F:FLOOR | DONT_NOTICE_RUNNING | CAN_RUN
+F:SUPPORT_GROWTH
+
+#Iris
+N:83:grass with irises
+G:;:b
 F:FLOOR | DONT_NOTICE_RUNNING | CAN_RUN
 F:SUPPORT_GROWTH
 

@@ -1848,6 +1848,7 @@
 #define SV_WAND_HASTE_MONSTER          25
 #define SV_WAND_THRAIN                 26
 #define SV_WAND_HOME_SUMMONING         27
+#define SV_WAND_CLONE_MONSTER          28
 
 /* The "sval" codes for TV_ROD(Rod Tips) */
 #define SV_ROD_NOTHING                   0
@@ -1954,6 +1955,10 @@
 #define SV_SCROLL_NOTHING               53
 #define SV_SCROLL_RENOUNCE_RELIGION     54
 #define SV_SCROLL_REINCARNATION         55
+#define SV_SCROLL_PROOF_FIRE            56
+#define SV_SCROLL_PROOF_COLD            57
+#define SV_SCROLL_PROOF_ELEC            58
+#define SV_SCROLL_PROOF_ACID            59
 
 /* The "sval" codes for TV_POTION */
 #define SV_POTION_WATER                  0

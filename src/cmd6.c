@@ -3341,6 +3341,42 @@ void do_cmd_read_scroll(void)
 				break;
 			}
 
+		case SV_SCROLL_PROOF_FIRE:
+			{
+				ident = TRUE;
+
+				if (!proof_item(1)) used_up = FALSE;
+
+				break;
+			}
+
+		case SV_SCROLL_PROOF_COLD:
+			{
+				ident = TRUE;
+
+				if (!proof_item(2)) used_up = FALSE;
+
+				break;
+			}
+
+		case SV_SCROLL_PROOF_ELEC:
+			{
+				ident = TRUE;
+
+				if (!proof_item(3)) used_up = FALSE;
+
+				break;
+			}
+
+		case SV_SCROLL_PROOF_ACID:
+			{
+				ident = TRUE;
+
+				if (!proof_item(4)) used_up = FALSE;
+
+				break;
+			}
+
 		case SV_SCROLL_STAR_IDENTIFY:
 			{
 				ident = TRUE;

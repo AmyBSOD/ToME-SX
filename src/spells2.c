@@ -4325,6 +4325,65 @@ static bool item_tester_hook_unknown(object_type *o_ptr)
 	return (object_known_p(o_ptr) ? FALSE : TRUE);
 }
 
+/* add fooproofing to an item, by Amy */
+bool proof_item(int prooftype)
+{
+	int item;
+
+	object_type *o_ptr;
+
+	char o_name[80];
+
+	cptr q, s;
+
+	/* Get an item */
+	q = "Proof which item? ";
+	s = "You have nothing to proof.";
+	if (!get_item(&item, q, s, (USE_INVEN | USE_EQUIP))) return FALSE;
+
+	/* Access the item (if in the pack) */
+	if (item >= 0)
+	{
+		o_ptr = &p_ptr->inventory[item];
+	}
+	else
+	{
+		o_ptr = &o_list[0 - item];
+	}
+
+	/* Description */
+	object_desc(o_name, o_ptr, FALSE, 3);
+
+	if (o_ptr->number > 1) {
+		if (randint(o_ptr->number) != 1) {
+			msg_print("The proofing attempt failed.");
+			return TRUE; /* scroll will be used up */
+		}
+	}
+
+	switch (prooftype) {
+
+		case 1: /* fire */
+			o_ptr->art_flags3 |= TR3_IGNORE_FIRE;
+			msg_format("Your %s is fireproof now.", o_name);
+			break;
+		case 2: /* cold */
+			o_ptr->art_flags3 |= TR3_IGNORE_COLD;
+			msg_format("Your %s is coldproof now.", o_name);
+			break;
+		case 3: /* elec */
+			o_ptr->art_flags3 |= TR3_IGNORE_ELEC;
+			msg_format("Your %s is shockproof now.", o_name);
+			break;
+		case 4: /* acid */
+			o_ptr->art_flags3 |= TR3_IGNORE_ACID;
+			msg_format("Your %s is acidproof now.", o_name);
+			break;
+
+	}
+	return TRUE;
+}
+
 
 /*
  * Identify an object in the inventory (or on the floor)

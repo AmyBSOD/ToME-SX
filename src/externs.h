@@ -1324,6 +1324,7 @@ extern void stair_creation(void);
 extern bool wall_stone(int y, int x);
 extern bool enchant(object_type *o_ptr, int n, int eflag);
 extern bool enchant_spell(int num_hit, int num_dam, int num_ac, int num_pval);
+extern bool proof_item(int prooftype);
 extern bool ident_spell(void);
 extern bool ident_all(void);
 extern bool identify_fully(void);

@@ -66,6 +66,39 @@ DEVICE_SPEED_MONSTER = add_spell
 	}
 }
 
+DEVICE_CLONE_MONSTER = add_spell
+{
+	["name"] = 	"Clone Monster",
+	["school"] = 	{SCHOOL_DEVICE},
+	["level"] = 	30,
+	["mana"] = 	100,
+	["mana_max"] = 	100,
+	["fail"] = 	50,
+	["random"] =    -1,
+	["stick"] =
+	{
+			["charge"] =    { 6, 6 },
+			[TV_WAND] =
+			{
+				["rarity"] = 		15,
+				["base_level"] =	{ 1, 30 },
+				["max_level"] =		{ 25, 35 },
+			},
+	},
+	["spell"] = 	function()
+			local ret, dir = get_aim_dir()
+			if ret == FALSE then return end
+
+			return fire_ball(GF_OLD_CLONE, dir, 1, 0)
+	end,
+	["info"] = 	function()
+			return ""
+	end,
+	["desc"] =	{
+			"Clone a monster",
+	}
+}
+
 DEVICE_WISH = add_spell
 {
 	["name"] = 	"Wish",
