@@ -389,7 +389,7 @@ P:0:1d5:0:0:0
 F:SHOW_MODS
 D:This blade is sinuously curved and tipped with a harpoon-like end.
 D:This blade has a large handguard and was designed as an off-hand weapon.
-D:This short but cruel blade is a favourite among orcs.
+D:This short but cruel blade is a favorite among orcs.
 
 N:39:& Cutlass~
 G:|:W
@@ -478,7 +478,7 @@ W:5:0:75:48
 A:5/1
 P:0:1d6:0:0:0
 F:SHOW_MODS
-D:It's the favourite weapon of strong mages and thieves. The blade is
+D:It's the favorite weapon of strong mages and thieves. The blade is
 D:about twenty inches long. It's very easy to handle, although it is a lot less
 D:efficient than the longer and heavier designs.
 
@@ -939,7 +939,7 @@ P:0:1d3:0:0:0
 F:TUNNEL
 f:TUNNEL
 D:A heavy digging tool, primarily for earthworking, but also good for tunnelling
-D:through stone, if one is willing to perform the time-consuming labour.
+D:through stone, if one is willing to perform the time-consuming labor.
 
 N:88:& Orcish Pick~
 G:\:g
@@ -975,7 +975,7 @@ P:4:0d0:0:0:4
 F:IGNORE_ACID | IGNORE_COLD | IGNORE_FIRE | IGNORE_ELEC
 F:STEALTH | SEARCH | LUCK
 f:STEALTH
-D:A wonderfully light cloak coloured in brown and green hues. Its colouring
+D:A wonderfully light cloak colored in brown and green hues. Its coloring
 D:greatly helps the wearer to avoid undesired attention. Wearing it makes you
 D:feel lucky and somehow you seem to see what was meant to stay unseen.
 
@@ -1470,7 +1470,7 @@ A:60/2
 F:RES_POIS | EASY_KNOW
 f:RES_POIS
 D:This magical ring grants protection from poison.
-D:It is rumoured that in deep dungeons monsters can kill you at once if you
+D:It is rumored that in deep dungeons monsters can kill you at once if you
 D:don't have poison resistance.
 
 N:144:Free Action
@@ -1793,7 +1793,7 @@ D:This scroll will allow you to gain insight into an object's special properties
 D:Only the highly magical objects, like rare rings and amulets or very unusual weapons
 D:and armor possess abilities which warrant the use of this magic.
 
-N:178:Rumour
+N:178:Rumor
 G:?:d
 I:70:51:0
 W:1:0:0:10
@@ -3666,7 +3666,7 @@ F:ATTR_MULTI
 F:RES_CHAOS | RES_DISEN | FLY |
 f:RES_CHAOS |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:A suit of armor made of dragon hide. It glows in colours you have never seen before. As you
+D:A suit of armor made of dragon hide. It glows in colors you have never seen before. As you
 D:put it on, you feel like you could change the world and are no longer afraid of your equipment
 D:losing its magic.
 
@@ -3694,7 +3694,7 @@ F:RES_ACID | RES_FIRE | RES_COLD | RES_ELEC | RES_POIS | FLY |
 F:RES_NETHER | RES_NEXUS | RES_CHAOS | RES_LITE | RES_DARK |
 F:RES_SHARDS | RES_SOUND | RES_DISEN | RES_CONF |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
-D:A suit of armor made of a very thick richly coloured dragonhide. You think you'll never have
+D:A suit of armor made of a very thick richly colored dragonhide. You think you'll never have
 D:to fear dragons if you put it on.
 
 #### PDSM has been restored to (almost) its former glory in Zangband
@@ -4622,7 +4622,7 @@ A:40/2
 P:0:2d8:0:0:0
 F:SHOW_MODS | COULD2H
 f:COULD2H
-D:Also known as a Claidhmore, or Greatsword, this weapon is favoured
+D:Also known as a Claidhmore, or Greatsword, this weapon is favored
 D:by powerful mercenaries. The blade is large, straight, and broad,
 D:almost as large as a two-handed sword.
 
@@ -4710,7 +4710,7 @@ W:15:0:80:220
 A:15/3
 P:0:1d8:0:0:0
 F:SHOW_MODS
-D:This is a two-edged dagger with a long blade. A favourite among travellers
+D:This is a two-edged dagger with a long blade. A favorite among travellers
 D:and warriors alike, it can be worn comfortably with plain clothes
 D:as well as armor.
 
@@ -5046,7 +5046,7 @@ I:8:6:0
 W:40:0:0:50
 A:40/50
 D:This parchment contains information about unique
-D:artifacts that are rumoured to exist upon Arda.
+D:artifacts that are rumored to exist upon Arda.
 
 N:592:Artifact Lore Vol. II
 G:?:o
@@ -5054,7 +5054,7 @@ I:8:7:0
 W:40:0:0:50
 A:40/50
 D:This parchment contains information about unique
-D:artifacts that are rumoured to exist upon Arda.
+D:artifacts that are rumored to exist upon Arda.
 
 N:593:Artifact Lore Vol. III
 G:?:o
@@ -5062,7 +5062,7 @@ I:8:8:0
 W:40:0:0:50
 A:40/50
 D:This parchment contains information about unique
-D:artifacts that are rumoured to exist upon Arda.
+D:artifacts that are rumored to exist upon Arda.
 
 N:594:Monstrous Compendium 1
 G:?:o
@@ -5325,7 +5325,7 @@ W:1:5:0:15
 A:5/1:1/1:3/1
 P:0:1d1:0:0:0
 F:FOUNTAIN
-D:A magical potion which drives away irrational quirks of behaviour.
+D:A magical potion which drives away irrational quirks of behavior.
 
 N:658:Cure Serious Insanity
 G:!:d
@@ -5977,7 +5977,7 @@ A:50/4
 P:0:1d1:0:0:0
 F:FULL_NAME | EASY_KNOW | ATTR_MULTI | SPECIAL_GENE
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | NORM_ART
-D:This book has some of your favourite spells inside.
+D:This book has some of your favorite spells inside.
 
 # The Ring of Phasing -- see artifact list
 
@@ -6563,7 +6563,7 @@ D:even prevent it from being sapped. However, wearing this
 D:amulet makes you feel less adept at using magic.
 
 # New jewelry from T-Plus by Ingeborg S. Norden
-# They reuse some svals and so colours will match. This will change when ToME3 comes out.
+# They reuse some svals and so colors will match. This will change when ToME3 comes out.
 
 N:830:Wizardry
 G:=:d

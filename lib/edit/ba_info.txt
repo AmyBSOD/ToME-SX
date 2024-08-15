@@ -49,7 +49,7 @@ N:6:Buy food and drink
 C:10:8:7
 I:18:0:f
 
-N:7:Listen for rumours
+N:7:Listen for rumors
 C:0:0:0
 I:19:0:u
 

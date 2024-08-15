@@ -5,7 +5,7 @@
 This help system has been designed to be read whilst in-game. Printing it off 
 will make it look clumsy and a little difficult to read.
 
-Any text in orange/yellow colour is likely to be a hyperlink, and pressing 
+Any text in orange/yellow color is likely to be a hyperlink, and pressing 
 <enter> while the link is active (yellow) will take you to the relevant page. 
 Navigate between viewable links by using the left-right keys. Some links also 
 have bracketed letters included in the links. Pressing these letters on your 

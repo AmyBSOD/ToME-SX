@@ -809,7 +809,7 @@ for a quantity will convert any "letters" into the maximal legal value.
         weapons and armor after carrying them for a while.  Warriors get the
         most detailed feelings, and get them quicker than any other class.
         An item labeled as "{empty}" was found to be out of charges, and an
-        item labeled as "{tried}" is a "flavoured" item which the character
+        item labeled as "{tried}" is a "flavored" item which the character
         has used, but whose effects are unknown.  Certain inscriptions have
         a meaning to the game, see "@#", "@x#", "!*", and "!x", in the section
         on *****command.txt*90[inventory object selection.]
@@ -844,7 +844,7 @@ for a quantity will convert any "letters" into the maximal legal value.
 #####R---  Magical Object Commands ---
 ~~~~~2
 [[[[[GActivate an artifact (A)]
-        You have heard rumours of special weapons and armor deep in the
+        You have heard rumors of special weapons and armor deep in the
         Pits, items that can let you breath fire like a dragon or light
         rooms with just a thought.  Should you ever be lucky enough to
         find such an item, this command will let you activate its special
@@ -1034,7 +1034,7 @@ for a quantity will convert any "letters" into the maximal legal value.
         few remarkable exceptions.
 
         Display known objects
-        This list all 'flavoured' objects (such as rings, scrolls, wands,
+        This list all 'flavored' objects (such as rings, scrolls, wands,
         potions, etc.) which you have identified.
         
         Display kill count

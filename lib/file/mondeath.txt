@@ -349,7 +349,7 @@
 'This is a bitter adventure, if it must end so.'
 'I leave now all gold and silver, and go where it is of no worth.'
 'But sad or merry, I must leave it now. Farewell!'
-'His armor is shivered, his splendour is humbled.'
+'His armor is shivered, his splendor is humbled.'
 'Roads go ever ever on.'
 'Yet feet that wandering have gone, turn at last to home afar.'
 'Presumed dead.'

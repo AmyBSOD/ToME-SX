@@ -7823,6 +7823,13 @@ void do_cmd_symbiotic(void)
 			/* Summon never-moving pet */
 		case 7:
 			{
+				/* in order to at least reduce the spamfest somewhat... make it cost nutrition --Amy */
+				if (p_ptr->food < 10000) {
+					msg_print("You don't have enough nutrition to use that ability.");
+					break;
+				}
+
+				p_ptr->food -= 10000;
 				summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_MINE, FALSE);
 
 				break;

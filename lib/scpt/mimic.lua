@@ -204,7 +204,7 @@ add_mimic_shape
 
 add_mimic_shape
 {
-	["name"] =      "Vapour",
+	["name"] =      "Vapor",
 	["obj_name"] =  "Cloak of Mist",
 	["desc"] = 	"A sentient cloud, darting around",
 	["realm"] =     "nature",

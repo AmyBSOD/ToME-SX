@@ -5,7 +5,7 @@
 #####R === ToME Magic - Meta School ===
 
 The meta school of magic contains spells where the raw forces of magic are 
-manipulated by the spell. There are rumours of a "Tome of Meta Spells" which
+manipulated by the spell. There are rumors of a "Tome of Meta Spells" which
 contains all the meta school spells within its bindings.
 
 Worshipping the God Manwe Sulimo also gives the ability to cast spells from

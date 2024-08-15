@@ -44,11 +44,11 @@ Now, looking at this screen, there are several things to be aware of. The
 first line lets you know if you have any available skill points to spend, and
 how many there are. Following that are 2 description lines for the currently
 selected skill - in this case they are describing the "Combat" skill. When
-looking at the list of skills, there are a few different colours used - the
-light green coloured skill (which also has its starting character in square
+looking at the list of skills, there are a few different colors used - the
+light green colored skill (which also has its starting character in square
 brackets []) is the currently selected one - Combat in the example above.
 Skills that you cannot learn are omitted from the list. Skills that you are
-capable of learning, but as yet have not, are coloured in orange, while skills
+capable of learning, but as yet have not, are colored in orange, while skills
 of which you have some knowledge are shown in white.
 
 At the end of each skill is a pair of numbers. The first represents your

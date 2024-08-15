@@ -4238,7 +4238,7 @@ void monster_death(int m_idx)
 				a_idx = ART_MARDA;
 				chance = 50;
 			}
-			else if (strstr((r_name + r_ptr->name), "Saruman of Many Colours"))
+			else if (strstr((r_name + r_ptr->name), "Saruman of Many Colors"))
 			{
 				a_idx = ART_PALANTIR;
 				chance = 30;

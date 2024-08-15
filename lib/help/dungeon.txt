@@ -386,7 +386,7 @@ torch or lamp burns fuel as it is used, and once it is out of fuel, it stops
 supplying light. You will be warned as the light approaches this point. You 
 may use the "Fuel" command ("F") to refuel your lantern (with flasks of oil) 
 or your torch (with other torches), so it is a good idea to carry extra 
-torches or flasks of oil, as appropriate. There are rumours of objects of
+torches or flasks of oil, as appropriate. There are rumors of objects of
 exceptional power which glow with their own never-ending light.
 
 ~~~~~08|Objects
@@ -406,7 +406,7 @@ Although you are limited to 23 different items, each item may actually be a
 into your pack, for example, by removing an item from your head while your
 pack is full, then your pack will "overflow" and the most recently added
 item will fall out and onto the ground. You will be warned about any command
-that seems likely to induce this behaviour.
+that seems likely to induce this behavior.
 
 You are, in addition, limited in the total amount of weight that you can
 carry. As you approach this value, you become slower, making it easier for
@@ -501,15 +501,15 @@ inventory/equipment items, which tells you not only whether an item is "good"
 or "cursed", but also if it is "average", "special", "excellent", "terrible" or
 "worthless".
 
-~~~~~21|Objects|Colour of inventory slot letter
-The colour of the letter that identifies each item in your backpack can tell 
+~~~~~21|Objects|Color of inventory slot letter
+The color of the letter that identifies each item in your backpack can tell 
 you something about their magical status. Grey indicates the item has not been 
-identified yet. After identification, the colour changes to one of the 
+identified yet. After identification, the color changes to one of the 
 following: white, indicating it is normal; blue indicates it is an ego-item 
 (pseudo-id's as {excellent}); yellow indicates it is an artifact {special}; 
 green shows it is an artifact which is part of a set.
 
-It is rumoured that rings of power and extra rare spell books may be found
+It is rumored that rings of power and extra rare spell books may be found
 deeper in the dungeon....
 
 And lastly, a final warning: not all objects are what they seem. The line

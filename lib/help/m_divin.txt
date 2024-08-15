@@ -5,7 +5,7 @@
 #####R === ToME Magic - Divination School ===
 
 The divination school of magic contains spells where magic is used to 
-psychically gain information about things. There are rumours of a "Tome of 
+psychically gain information about things. There are rumors of a "Tome of 
 Knowledge" which contains all the divination school spells within its bindings.
 
 Worshipping the God Eru Iluvatar also gives the ability to cast spells from

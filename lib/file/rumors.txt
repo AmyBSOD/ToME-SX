@@ -245,7 +245,7 @@ I can feel it in the earth, I can smell it in the air.
 They say the Valar have returned to walk upon Middle-earth.
 Nauthannen i ned ol reniannen.
 Gandalf was here.
-Ignore the previous rumour.
+Ignore the previous rumor.
 I thought I had strayed into a dream.
 Gate of Elves listen to my word, Threshold of Dwarves!
 Nin o Chithaeglir lasto beth daer; rimmo nin Bruinen dan in Ulaer!
@@ -577,7 +577,7 @@ I see you have accustomed to plenty of local shopping snobberies.
 You won? You truly must have a brain as sharp as a woodsman's hatchet!
 Mimics: striking down men from behind certainly seems to be their trademark.
 He looks honest. This probably means he is a complete crook. Oh, I'm mocking.
-Flee while you can. Any decent adventurer has to honour the priorities.
+Flee while you can. Any decent adventurer has to honor the priorities.
 The average mage soon becomes accustomed to hard work and poor leisure.
 Are you sure to surpass your predecessors, being more than a mere brawler?
 Life: to mortgage yesterdays gains in order to move on to the next intermezzo.

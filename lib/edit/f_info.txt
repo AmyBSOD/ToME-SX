@@ -902,8 +902,8 @@ G:.:s
 F:FLOOR | SUPPORT_LIGHT | CAN_RUN
 F:DONT_NOTICE_RUNNING
 
-# cloud-like vapour. Floor for Eru's temple
-N:208:cloud-like vapour
+# cloud-like vapor. Floor for Eru's temple
+N:208:cloud-like vapor
 G:.:W
 S:W:B:B:W:w:W:B
 F:FLOOR | CAN_LEVITATE | CAN_FLY | SUPPORT_LIGHT 

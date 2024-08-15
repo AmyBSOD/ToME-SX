@@ -5751,7 +5751,7 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 				if (!get_aim_dir(&dir)) break;
 				msg_print("You breathe the elements.");
 				fire_ball(GF_MISSILE, dir, 300, 4);
-				msg_print("Your armor glows many colours...");
+				msg_print("Your armor glows many colors...");
 				(void)set_afraid(0);
 				(void)set_shero(p_ptr->shero + randint(50) + 50);
 				(void)hp_player(30);
@@ -5797,7 +5797,7 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 		case ACT_COLLUIN:
 			{
 				if (!doit) return "resistance (20+d20 turns) every 111 turns";
-				msg_print("Your cloak glows many colours...");
+				msg_print("Your cloak glows many colors...");
 				(void)set_oppose_acid(p_ptr->oppose_acid + randint(20) + 20);
 				(void)set_oppose_elec(p_ptr->oppose_elec + randint(20) + 20);
 				(void)set_oppose_fire(p_ptr->oppose_fire + randint(20) + 20);
@@ -6450,7 +6450,7 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 		case ACT_CALL_CHAOS:
 			{
 				if (!doit) return "call chaos every 350 turns";
-				msg_print("It glows in scintillating colours...");
+				msg_print("It glows in scintillating colors...");
 				call_chaos();
 
 				o_ptr->timeout = 350;
@@ -6509,7 +6509,7 @@ const char *activation_aux(object_type * o_ptr, bool doit, int item)
 		case ACT_CONFUSE:
 			{
 				if (!doit) return "confuse monster every 15 turns";
-				msg_print("It glows in scintillating colours...");
+				msg_print("It glows in scintillating colors...");
 				if (!get_aim_dir(&dir)) break;
 				confuse_monster(dir, 20);
 
@@ -6885,7 +6885,7 @@ turn_monsters(40 + p_ptr->lev);
 		case ACT_RESIST_ALL:
 			{
 				if (!doit) return "resist elements (dur 40+d40) every 200 turns";
-				msg_print("It glows many colours...");
+				msg_print("It glows many colors...");
 				(void)set_oppose_acid(p_ptr->oppose_acid + randint(40) + 40);
 				(void)set_oppose_elec(p_ptr->oppose_elec + randint(40) + 40);
 				(void)set_oppose_fire(p_ptr->oppose_fire + randint(40) + 40);
@@ -8055,7 +8055,15 @@ turn_monsters(40 + p_ptr->lev);
 		case ACT_GROW_MOLD:
 			{
 				if (!doit) return "grow mushrooms every 500+d500 turns";
+
+				/* by Amy: make it cost some nutrition, which isn't really going to do much but oh well */
+				if (p_ptr->food < 5000) {
+					msg_print("You are too hungry to use that ability.");
+					break;
+				}
+
 				msg_print("You twirl and spores fly everywhere!");
+				p_ptr->food -= 5000;
 				for (i = 0; i < 8; i++)
 					summon_specific_friendly(p_ptr->py, p_ptr->px, p_ptr->lev, SUMMON_BIZARRE1, FALSE);
 

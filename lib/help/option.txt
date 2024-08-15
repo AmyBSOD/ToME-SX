@@ -151,7 +151,7 @@ off at will during the course of the game.
     or "wearing" (in a given location).  After you have played for a while,
     this information is no longer useful, and can be annoying.
     Note that in ToME this option no longer controls the "plain
-    flavoured object descriptions": a separate option for them has been added
+    flavored object descriptions": a separate option for them has been added
     under "ToME Options".
 
 #####GShow weights in object lists    [show_weights]
@@ -182,9 +182,9 @@ off at will during the course of the game.
     Attempt to make a "bell" noise when various errors occur.
 
 #####GUse color if possible (slow)    [use_color]
-    This option enables the software support for colour.  Since this makes
+    This option enables the software support for color.  Since this makes
     the game slower, you should always disable this option if you are using
-    a machine which is not capable of using colours.
+    a machine which is not capable of using colors.
 
 ~~~~~09|Options|Disturbance
 #####R=== Option Set 2 -- Disturbance ===
@@ -255,7 +255,7 @@ off at will during the course of the game.
     instead.
 
 #####GAllow shopkeepers and uniques to speak    [speak_unique]
-    If this option is in use, shopkeepers may sometimes whisper rumours to
+    If this option is in use, shopkeepers may sometimes whisper rumors to
     you. Also certain monsters start boasting as they attack you, and when
     they die, they say their "last words".
 
@@ -389,12 +389,12 @@ off at will during the course of the game.
 ~~~~~3
 #####GUse special symbols for the player char   [player_symbols]
     If this option has been compiled in, it allows you to display your
-    character using race / class / sex dependent colours and graphical
+    character using race / class / sex dependent colors and graphical
     symbols. Note that the support for this option may not have been
     compiled in on all platforms.
 
 #####GPlain object descriptions    [plain_descriptions]
-    In ToME, this option disables "full" names for identified flavoured
+    In ToME, this option disables "full" names for identified flavored
     objects; in other words, if this option is not in use, an identified
     Potion of Speed could be listed (for example) as a Blue Potion of Speed.
     If you prefer simpler, less verbose descriptions, set this option.
@@ -575,11 +575,11 @@ Features which are unique to ToME are collected in this menu.
     instead of the character's current total experience.
 
 #####GUse the old(Z) coloring scheme(reload the game)    [old_colors]
-    Setting this option toggles the ASCII game colour display from the
-    standard Angband monster colours to the Zangband-based monster colours.
+    Setting this option toggles the ASCII game color display from the
+    standard Angband monster colors to the Zangband-based monster colors.
     Since this alters the display and monster memory display, you need to
     reload the game when you alter this setting before it will display the
-    new colours.
+    new colors.
 
 #####GAutomatically clear '-more-' prompts    [auto_more]
     Setting this option automatically clears any messages from the top

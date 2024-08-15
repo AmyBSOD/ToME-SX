@@ -5,7 +5,7 @@
 #####R === ToME Magic - Fire School ===
 
 The fire school of magic contains spells where the element of fire is used
-to create the final spell effect. There are rumours of a "Tome of the Eternal
+to create the final spell effect. There are rumors of a "Tome of the Eternal
 Flame" which contains all the fire school spells within its bindings.
 
 #####RFire Spells

@@ -335,7 +335,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
 *****/Oindex.txt*79[O]
   *****dungeon.txt*14[Objectives]
   *****dungeon.txt*08[Objects]
-    *****dungeon.txt*21[Colour of inventory slot letter]
+    *****dungeon.txt*21[Color of inventory slot letter]
     *****dungeon.txt*09[Cursed Objects]
     *****tome_faq.txt*33[Piles]
   *****option.txt*05[Options]

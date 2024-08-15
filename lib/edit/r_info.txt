@@ -3058,7 +3058,7 @@ F:BASEANGBAND | HAS_LITE
 S:1_IN_12 | 
 S:BR_ACID | BR_FIRE | BR_COLD | BR_ELEC | BR_POIS
 D:This hatchling dragon is still soft, its eyes unaccustomed to light and 
-D:its scales shimmering with a hint of colour. 
+D:its scales shimmering with a hint of color. 
 
 N:205:Vorpal bunny
 G:r:w
@@ -3502,7 +3502,7 @@ F:NEVER_MOVE |
 F:STUPID | EMPTY_MIND | COLD_BLOOD | 
 F:IM_ACID | IM_POIS | HURT_LITE | CAN_SWIM |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:A strange jelly thing, covered in discoloured blotches. 
+D:A strange jelly thing, covered in discolored blotches. 
 
 N:234:Drider
 G:S:b
@@ -4451,7 +4451,7 @@ F:SMART | INVISIBLE | BASH_DOOR |
 F:EVIL | DEMON | IM_FIRE | NONLIVING | BASEANGBAND | HAS_LITE
 S:1_IN_10 | 
 S:BLINK | TPORT | TELE_TO | TELE_LEVEL | BLIND | CONF | SCARE
-D:The chaotic evil master's favourite pet. 
+D:The chaotic evil master's favorite pet. 
 
 N:295:Sphinx
 G:H:o
@@ -4484,7 +4484,7 @@ F:SMART | INVISIBLE | COLD_BLOOD | BASH_DOOR |
 F:EVIL | DEMON | IM_FIRE | RES_TELE | BASEANGBAND | HAS_LITE
 S:1_IN_10 | 
 S:BLINK | TPORT | TELE_TO | TELE_LEVEL | BLIND | CONF | SCARE | BO_FIRE
-D:The lawful evil master's favourite pet. 
+D:The lawful evil master's favorite pet. 
 
 N:297:Forest troll
 G:T:g
@@ -5144,7 +5144,7 @@ F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | IM_POIS | MORTAL | BASEANGBAND
 S:1_IN_10 | 
 S:BR_POIS
-D:Swirling vapours surround this beast as it floats towards you, seemingly 
+D:Swirling vapors surround this beast as it floats towards you, seemingly 
 D:walking on air. Noxious gases sting your throat. 
 
 N:339:Sabre-tooth tiger
@@ -8744,7 +8744,7 @@ B:BITE:EXP_40:3d9
 F:FORCE_MAXHP | OPEN_DOOR | DROP_60 | WILD_TOO | WILD_SWAMP |
 F:SMART | BASH_DOOR | 
 F:EVIL | GIANT | IM_POIS | CAN_FLY | BASEANGBAND | NO_CUT
-D:"Two eyes, the colour of a thin, yellow wine, were set high in the 
+D:"Two eyes, the color of a thin, yellow wine, were set high in the 
 D:thing's body; though it had no separate head. A mouthing, obscene slit, 
 D:filled with fangs lay just beneath the eyes. It had no nose or ears... 
 D:Four appendages sprang from its upper parts and its lower body 
@@ -8830,7 +8830,7 @@ S:1_IN_8 |
 S:SCARE | 
 S:BR_ACID | BR_FIRE | BR_COLD | BR_ELEC | BR_POIS
 D:It has a form out of legend. Beautiful scales of shimmering 
-D:and magical colours cover it. 
+D:and magical colors cover it. 
 
 N:557:Raal's Tome of Destruction
 G:?:r
@@ -9465,7 +9465,7 @@ S:1_IN_6 |
 S:SLOW | CONF | SCARE | 
 S:BR_SHAR
 D:A dragon of strange crystalline form. Light shines through it, dazzling 
-D:your eyes with spectrums of colour. 
+D:your eyes with spectrums of color. 
 
 N:592:Mature black dragon
 G:d:s
@@ -9503,7 +9503,7 @@ F:IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP | BASEANGBAND | HAS_LITE
 S:1_IN_7 | 
 S:BLIND | CONF | SCARE | 
 S:BR_ACID | BR_FIRE | BR_COLD | BR_ELEC | BR_POIS
-D:A large dragon, scales shimmering many colours. 
+D:A large dragon, scales shimmering many colors. 
 
 N:594:Sky whale
 G:~:G
@@ -9673,7 +9673,7 @@ F:EVIL | DRAGON | NO_CONF | NO_SLEEP | BASEANGBAND | HAS_LITE | ATTR_MULTI
 S:1_IN_6 | 
 S:BLIND | CONF | SCARE | 
 S:BR_CONF
-D:A huge draconic form enveloped in a cascade of colour. 
+D:A huge draconic form enveloped in a cascade of color. 
 
 N:603:Beholder
 G:e:U
@@ -9982,7 +9982,7 @@ F:ATTR_MULTI
 S:1_IN_6 | 
 S:BLIND | CONF | SCARE | 
 S:BR_POIS
-D:A huge draconic form enveloped in clouds of poisonous vapour. 
+D:A huge draconic form enveloped in clouds of poisonous vapor. 
 
 N:619:Chthonian
 G:w:D
@@ -10494,7 +10494,7 @@ S:1_IN_6 |
 S:SLOW | CONF | SCARE | 
 S:BR_SHAR
 D:A huge crystalline dragon. Its claws could cut you to shreds and its 
-D:teeth are razor sharp. Strange colours ripple through it as it moves in 
+D:teeth are razor sharp. Strange colors ripple through it as it moves in 
 D:the light. 
 
 N:647:Wyrd sister
@@ -10515,7 +10515,7 @@ F:MORTAL | BASEANGBAND
 S:1_IN_2 | 
 S:BLIND | 
 S:S_DEMON | CONF | SCARE | DARKNESS | BA_CHAO
-D:This old crone is rumoured to be a witch of chaos... but you don't 
+D:This old crone is rumored to be a witch of chaos... but you don't 
 D:really believe in witches, do you? 
 
 N:648:Vrock
@@ -11081,7 +11081,7 @@ F:IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP | BASEANGBAND | HAS_LITE
 S:1_IN_5 | 
 S:BLIND | CONF | SCARE | 
 S:BR_ACID | BR_FIRE | BR_COLD | BR_ELEC | BR_POIS
-D:A huge draconic form. Many colours ripple down its massive frame. Few 
+D:A huge draconic form. Many colors ripple down its massive frame. Few 
 D:live to see another. 
 
 N:676:Ethereal dragon
@@ -11129,7 +11129,7 @@ D:hillside... and it was the black thing of my dreams... that black,
 D:ropy, slimy jelly tree-thing out of the woods. It crawled up and it 
 D:flowed up on its hoofs and mouths and snaky arms." 
 
-N:678:Colour out of space
+N:678:Color out of space
 G:.:v
 I:120:12d100:20:100:10
 W:43:2:0:8000
@@ -11147,7 +11147,7 @@ S:1_IN_9 |
 S:DRAIN_MANA | BR_DISE | BR_NETH | TPORT
 D:"The shaft of phosphorescence from the well... was no longer shining 
 D:out, it was pouring out; and as the shapeless stream of unplaceable 
-D:colour left the well it seemed to flow directly into the sky." 
+D:color left the well it seemed to flow directly into the sky." 
 
 N:679:Quaker, Master of Earth
 G:E:u
@@ -12057,7 +12057,7 @@ F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
 S:1_IN_4 | 
 S:BLIND | SCARE | CAUSE_4 | BRAIN_SMASH | 
 S:BO_MANA | BO_NETH | BA_NETH | S_UNDEAD
-D:Everywhere colours seem paler and the air chiller. At the centre of the 
+D:Everywhere colors seem paler and the air chiller. At the centre of the 
 D:cold stands a mighty figure. Its wings envelop you in the chill of death 
 D:as the nightwing reaches out to draw you into oblivion. Your muscles sag 
 D:and your mind loses all will to fight as you stand in awe of this mighty 
@@ -12549,7 +12549,7 @@ S:S_HOUND | S_DEMON | S_DRAGON | TPORT | HASTE | CONF | SCARE |
 S:TELE_AWAY | FORGET 
 D:The most powerful of Tzeentch's servitors. This demon looks like 
 D:a huge bird-creature, with the head of a predatory bird and 
-D:fantastically multi-coloured wings. 
+D:fantastically multi-colored wings. 
 
 N:746:Keeper of Secrets
 G:H:G
@@ -12728,7 +12728,7 @@ S:SCARE |
 S:BO_FIRE | BO_PLAS | BA_FIRE | BA_POIS | 
 S:BR_FIRE | BR_POIS | S_HYDRA | S_KIN
 D:A massive legendary hydra. It has twelve powerful heads. Its many eyes 
-D:stare at you as clouds of smoke and poisonous vapour rise from its 
+D:stare at you as clouds of smoke and poisonous vapor rise from its 
 D:seething form.  It grows new heads as fast as you chop them off. 
 
 N:755:Thuringwethil, the Vampire Messenger
@@ -13095,7 +13095,7 @@ D:He is one of the greatest warriors of chaos to walk the earth.
 D:His bloody blade has slain thousands and tens of thousands, and still 
 D:hungers for more. 
 
-N:771:Saruman of Many Colours
+N:771:Saruman of Many Colors
 G:p:v
 I:120:70d100:100:100:0
 W:60:1:1600:35000
@@ -13181,7 +13181,7 @@ S:1_IN_3 |
 S:HOLD | DRAIN_MANA | BLIND | S_UNDEAD | CONF |
 S:SCARE | TELE_TO | TPORT | BRAIN_SMASH | ANIM_DEAD
 S:BA_NETH | DARKNESS
-D:It is a massive form of animated death, its colour deeper than black.  It 
+D:It is a massive form of animated death, its color deeper than black.  It 
 D:drinks in light, and space around it is twisted and torn by the weight of 
 D:its evil.  It is unlife and it knows nothing but the stealing of souls and 
 D:the stench of death.  Flee its hunger! 
@@ -13507,7 +13507,7 @@ S:BO_MANA | S_THUNDERLORD
 D:As the Thunderlords came from afar to help the elves, Trone and his rebel 
 D:wing came to defend Morgoth! He is an evil and powerful Thunderlord. 
 
-N:790:Great Wyrm of Many Colours
+N:790:Great Wyrm of Many Colors
 G:D:v
 I:120:70d100:40:170:255
 W:80:2:190000:31000
@@ -13985,7 +13985,7 @@ S:BR_ACID | BR_FIRE | BR_COLD | BR_ELEC | BR_POIS |
 S:BR_LITE | BR_DARK | BR_SOUN | BR_CONF | BR_CHAO | BR_SHAR | 
 S:BR_NETH | BR_DISE | BR_WALL | BR_INER | BR_TIME | 
 S:BR_GRAV | BR_PLAS | BR_NEXU
-D:A shifting, swirling form. It seems to be all colours and sizes and 
+D:A shifting, swirling form. It seems to be all colors and sizes and 
 D:shapes, though the dominant form is that of a huge dog. You feel very 
 D:uncertain all of a sudden. 
 
@@ -14169,7 +14169,7 @@ S:CAUSE_3 | TELE_TO | BA_FIRE | DRAIN_MANA | HOLD |
 S:TRAPS | BA_WATE | BO_PLAS | BA_NETH |
 S:BA_MANA | BA_DARK | S_HI_UNDEAD | BA_CHAO | HAND_DOOM | ANIM_DEAD
 D:The dark master of the terrible fortress of southern Mirkwood.  It is 
-D:rumoured that this is in fact none other than Sauron in disguise: 
+D:rumored that this is in fact none other than Sauron in disguise: 
 D:although if this is so, he has yet to reveal his full power - and perhaps 
 D:will not do so while his deception lasts, in the hope of keeping it going. 
 
@@ -14221,8 +14221,8 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
 S:1_IN_1 | 
 S:S_MONSTERS | S_ANGEL | S_HOUND | S_HYDRA | S_SPIDER | S_ANT | S_ANIMALS | 
 S:S_HI_UNDEAD | S_HI_DRAGON | S_HI_DEMON | S_WRAITH | S_UNIQUE | S_KIN
-D:A gigantic seething mass of flesh, Qlzqqlzuup changes colours in front 
-D:of your eyes.  Pulsating first one colour then the next, it knows only it 
+D:A gigantic seething mass of flesh, Qlzqqlzuup changes colors in front 
+D:of your eyes.  Pulsating first one color then the next, it knows only it 
 D:must bring help to protect itself. 
 
 N:823:Cthugha, the Living Flame
@@ -14586,7 +14586,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY |
 F:EVIL | IM_FIRE | IM_COLD | NO_SLEEP | BASEANGBAND
 S:1_IN_2 | 
 S:BR_FIRE | BR_COLD | BR_DISE
-D:The Tarrasque is a massive reptile of legend, rumoured to be unkillable 
+D:The Tarrasque is a massive reptile of legend, rumored to be unkillable 
 D:and immune to magic. Fear its anger, for its devastation is unmatched! 
 
 N:839:Lungorthin, the Balrog of White Fire
@@ -15523,7 +15523,7 @@ B:TOUCH:INSANITY:2d3
 B:TOUCH:CONFUSE
 F:FEMALE | RAND_25 | DROP_60 | SMART | AQUATIC | NO_CONF | DROP_CORPSE |
 F:MORTAL | BASEANGBAND
-D:A green-skinned humanoid with a fishtail. Beware - there are rumours 
+D:A green-skinned humanoid with a fishtail. Beware - there are rumors 
 D:of adventures losing their minds under the fearsome 
 D:charms of mermaids. 
 
@@ -15780,7 +15780,7 @@ O:0:50:0:30
 B:HIT:HURT:1d10
 F:DROP_90 | EVIL | IM_POIS | AQUATIC  | DROP_CORPSE |
 F:MORTAL | BASEANGBAND
-D:Yes, your favourite denizen of evil also comes in an aquatic variety. 
+D:Yes, your favorite denizen of evil also comes in an aquatic variety. 
 
 N:901:White shark
 G:~:W
@@ -15905,7 +15905,7 @@ O:0:0:0:0
 B:BITE:HURT:2d6
 F:AQUATIC | ANIMAL | RAND_25 | INVISIBLE | ATTR_CLEAR | DROP_CORPSE |
 F:MORTAL | BASEANGBAND
-D:A flattened fish which is able to change body colouring for 
+D:A flattened fish which is able to change body coloring for 
 D:camouflage. 
 
 N:910:Giant turtle
@@ -16201,7 +16201,7 @@ F:ONLY_ITEM | DROP_90 | DROP_GOOD |
 F:OPEN_DOOR | DG_CURSE |
 F:MORTAL | JOKEANGBAND | HAS_LITE
 D:She loves joking, and she's constantly giggling. A very happy girl. 
-D:Beware, it is rumoured that Dark God has put a mighty curse on her. 
+D:Beware, it is rumored that Dark God has put a mighty curse on her. 
 
 
 N:929:Child spirit
@@ -17272,7 +17272,7 @@ F:EVIL | MORTAL | BASEANGBAND | HAS_LITE
 S:1_IN_10 | S_KIN
 D:An evil and cunning man from the East.  Having once sworn allegiance to the 
 D:sons of Feanor, it was Uldor's treachery that turned the tide of the Battle 
-D:of Unnumbered Tears in Morgoth's favour. 
+D:of Unnumbered Tears in Morgoth's favor. 
 
 N:988:Mystic
 G:p:o
@@ -17525,7 +17525,7 @@ F:BASEANGBAND
 S:1_IN_7 | 
 S:BLIND | CONF | BO_FIRE
 D:It is a lesser demon of female form; however, she takes little time to 
-D:show her true colours. 
+D:show her true colors. 
 
 N:1000:Novice mindcrafter
 G:p:y
@@ -18068,7 +18068,7 @@ S:MULTIPLY |
 S:1_IN_6 | BR_ELEC | BR_COLD | BR_FIRE | BR_ACID | BR_POIS
 D:You thought dragons used eggs, but this worm has the scales, and the bad 
 D:breath, and the fiery eyes, of a real dragon. Its scales shimmer different 
-D:colours as you watch. 
+D:colors as you watch. 
 
 N:1029:The Minotaur of the Labyrinth
 G:H:s
@@ -20059,7 +20059,7 @@ F:MORTAL | BASEANGBAND
 S:1_IN_6 | BR_ELEC | BR_COLD | BR_FIRE | BR_ACID | BR_POIS
 D:You thought dragons used eggs, but this worm has the scales, and the bad 
 D:breath, and the fiery eyes, of a real dragon. Its scales shimmer different 
-D:colours as you watch. 
+D:colors as you watch. 
 
 N:1151:Sandworm
 G:w:y
@@ -21241,7 +21241,7 @@ F:ANIMAL | IM_POIS | MORTAL | BASEANGBAND
 S:1_IN_10 | 
 S:BR_POIS
 S:MULTIPLY
-D:Swirling vapours surround this beast as it floats towards you, seemingly 
+D:Swirling vapors surround this beast as it floats towards you, seemingly 
 D:walking on air. Noxious gases sting your throat. 
 
 N:1227:Acid hound
@@ -22242,7 +22242,7 @@ S:BR_LITE | BR_DARK | BR_SOUN | BR_CONF | BR_CHAO | BR_SHAR |
 S:BR_NETH | BR_DISE | BR_WALL | BR_INER | BR_TIME | 
 S:BR_GRAV | BR_PLAS | BR_NEXU
 S:MULTIPLY
-D:A shifting, swirling form. It seems to be all colours and sizes and 
+D:A shifting, swirling form. It seems to be all colors and sizes and 
 D:shapes, though the dominant form is that of a huge dog. You feel very 
 D:uncertain all of a sudden. 
 
@@ -22258,7 +22258,7 @@ B:TOUCH:CONFUSE
 F:FEMALE | RAND_25 | SMART | AQUATIC | NO_CONF | DROP_CORPSE |
 F:MORTAL | BASEANGBAND
 S:MULTIPLY
-D:A green-skinned humanoid with a fishtail. Beware - there are rumours 
+D:A green-skinned humanoid with a fishtail. Beware - there are rumors 
 D:of adventures losing their minds under the fearsome 
 D:charms of mermaids. 
 
@@ -22298,7 +22298,7 @@ B:BITE:HURT:2d6
 F:AQUATIC | ANIMAL | RAND_25 | INVISIBLE | ATTR_CLEAR | DROP_CORPSE |
 F:MORTAL | BASEANGBAND
 S:MULTIPLY
-D:A flattened fish which is able to change body colouring for 
+D:A flattened fish which is able to change body coloring for 
 D:camouflage. 
 
 N:1288:Aranea
@@ -23645,7 +23645,7 @@ D:Small brown birds of thrush kind, famous for their clear
 D:singing, and the fact that they will sing during the night 
 D:as well as the day (hence their name). Since the days of 
 D:Luthien, the nightingales of Middle-earth are surrounded 
-D:by a strange blue aura and are rumoured to be under great 
+D:by a strange blue aura and are rumored to be under great 
 D:protection of the Valar.
 
 # New monster added by furiosity for the Theme module
@@ -24134,7 +24134,7 @@ B:TOUCH:LOSE_STR:4d4
 F:BASEANGBAND | EMPTY_MIND | STUPID | IM_POIS | 
 F:UNDEAD | RAND_50 | CAN_SWIM | EVIL | NO_CUT | 
 D:An evil cannibal spirit from the marshlands. It glows 
-D:an eerily unnatural pink colour.
+D:an eerily unnatural pink color.
 
 # New monster added by furiosity for the Theme module
 N:1397:Tree mewlip
@@ -24294,7 +24294,7 @@ S:1_IN_2 |
 S:ARROW_4 | S_KIN | 
 D:A fair Elf in a travel cloak, wielding a longbow and short sword. 
 D:Stately and graceful, he rides his steed Asfaloth with great speed. 
-D:It is rumoured that he is none other but Glorfindel of Gondolin, who 
+D:It is rumored that he is none other but Glorfindel of Gondolin, who 
 D:has been sent back from the halls of Mandos to serve the Free People 
 D:of Middle-earth in this time of darkness and sorrow.
 
@@ -24824,7 +24824,7 @@ S:S_UNDEAD | S_KIN | S_DEMON | S_DRAGON |
 D:The proud ruler of the gray-eyed Men of Dol Amroth, Imrahil 
 D:had been aligned with the forces of good for most of his life. 
 D:However, Sauron has managed to sway Imrahil to the Shadow by 
-D:making him jealous of King Elessar and the splendour of Gondor. 
+D:making him jealous of King Elessar and the splendor of Gondor. 
 D:He now sits sullenly upon his throne in Dol Amroth, unable to 
 D:resist Sauron's enchantments, and growing ever more bitter and 
 D:vengeful against the Free People.
@@ -25128,7 +25128,7 @@ F:OPEN_DOOR | BASH_DOOR | MOVE_BODY | KILL_ITEM |
 F:IM_ACID | IM_FIRE | IM_COLD | IM_POIS | BASEANGBAND | 
 S:1_IN_5
 S:BA_ACID | BA_WATE | BO_ICEE
-D:A powerful, fierce ogress, consort to Morgoth, rumoured to 
+D:A powerful, fierce ogress, consort to Morgoth, rumored to 
 D:be the mother of Gothmog, high captain of Balrogs.
 
 # New monster added by furiosity for the Theme module
@@ -25149,9 +25149,9 @@ F:DROP_GOOD | DROP_2D2 | ONLY_ITEM | BASEANGBAND |
 F:OPEN_DOOR | ESCORTS | IM_POIS | 
 S:1_IN_9 | 
 S:CONF | SCARE | HEAL | SHRIEK | S_KIN
-D:A powerful ogress, consort to Morgoth, rumoured to be 
+D:A powerful ogress, consort to Morgoth, rumored to be 
 D:the mother of Gothmog, high captain of Balrogs, also 
-D:rumoured to be related to Lokkak, the Ogre Chieftain.
+D:rumored to be related to Lokkak, the Ogre Chieftain.
 
 # New monster added for the Theme module
 # Suggested by Atarlost in the t-o-m-e.net forum
@@ -25648,7 +25648,7 @@ S:BR_POIS | ROCKET | SHRIEK | BR_WALL | BR_INER |
 S:BLINK | TELE_TO | S_MONSTERS | S_ANIMALS | 
 D:A mighty Maia of legend, associated with Vana. In the past, she 
 D:dwelt on Middle-earth in the form of a beneficent but unseen force. 
-D:She looks like she is a wall. It is rumoured that she has once 
+D:She looks like she is a wall. It is rumored that she has once 
 D:destroyed Morgoth Bauglir and is out to banish him from the Void as 
 D:well. It is a matter of principle for this sorceress, and you are 
 D:blocking her path to justice.
@@ -25820,7 +25820,7 @@ S:BR_SOUN | BR_MANA | BR_NUKE | BR_DISI | ROCKET |
 D:A yeek bard more famous for his buff physique and marriage to the beautiful 
 D:but dumb Jessica Yeekson than his music. The dark forces of Morgoth killed 
 D:his friend Justin TimberYeek and kidnapped poor Jessica Yeekson, and Nick 
-D:vowed revenge. He is the only yeek that could be called powerful. It is rumoured 
+D:vowed revenge. He is the only yeek that could be called powerful. It is rumored 
 D:that he had been successful in defeating Morgoth in a previous incarnation, and 
 D:now he is back to finish the job for good. You are all that he perceives to 
 D:stand in his way. 
@@ -27001,7 +27001,7 @@ F:IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | BASH_DOOR |
 F:ONLY_GOLD | DROP_4D2 | DROP_2D2 | 
 S:1_IN_4 | 
 S:SCARE
-D:A strange reptilian creature with ten multicoloured heads.
+D:A strange reptilian creature with ten multicolored heads.
 
 # New monster added by furiosity for the Theme module
 # From UnAngband
@@ -27081,7 +27081,7 @@ F:NO_CONF | NO_SLEEP | BASH_DOOR | ONLY_GOLD | DROP_4D2 | DROP_4D2 |
 S:1_IN_3
 S:SCARE | BA_FIRE | BA_POIS | BA_COLD | BA_ELEC | BA_ACID 
 S:S_KIN | 
-D:A cunning reptilian creature with fourteen multicoloured heads.
+D:A cunning reptilian creature with fourteen multicolored heads.
 
 # New monster added by furiosity for the Theme module
 N:1550:15-headed hydra
@@ -27101,7 +27101,7 @@ F:NO_CONF | NO_SLEEP | BASH_DOOR | ONLY_GOLD | DROP_4D2 | DROP_4D2 |
 S:1_IN_3
 S:SCARE | BA_FIRE | BA_POIS | BA_COLD | BA_ELEC | BA_ACID | CONF | 
 S:BO_FIRE | BO_COLD | BO_ELEC | BO_ACID | S_KIN | 
-D:A cunning reptilian creature with fifteen multicoloured heads. 
+D:A cunning reptilian creature with fifteen multicolored heads. 
 
 # New monster added by furiosity for the Theme module
 N:1551:Killer hydra
@@ -27194,7 +27194,7 @@ F:OPEN_DOOR | BASH_DOOR | PET |
 F:GOOD | GIANT | MALE | 
 F:MORTAL | BASEANGBAND | HAS_LITE
 D:A ten foot tall humanoid with powerful muscles. This giant has 
-D:abandoned the Darkness in favour of the forces of good. Thus he 
+D:abandoned the Darkness in favor of the forces of good. Thus he 
 D:is a rebel and hated among his kind.
 
 # New monster added by furiosity for the Theme module
@@ -28558,7 +28558,7 @@ F:ANIMAL | EMPTY_MIND | CAN_SWIM |  WILD_GRASS |
 F:DROP_CORPSE | MORTAL | BASEANGBAND | NEUTRAL | NO_TARGET | 
 D:A harmless shell-bearing gastropod mollusc 
 D:crawling slowly on the dungeon floor. 
-D:It is a favourite prey of birds.
+D:It is a favorite prey of birds.
 
 # New monster added by furiosity for the Theme module
 N:1634:Brown naga
@@ -31416,7 +31416,7 @@ B:SPIT:POISON:2d6
 F:FRIENDS | EVIL | OPEN_DOOR | TROLL | IM_POIS | STUPID | HURT_LITE | BASEANGBAND | DROP_SKELETON 
 D:A group of reptilian creatures with wiry frames and bloodied claws
 D: is standing over a recent kill. Each monster stands about 5 feet
-D: tall and is covered in multi-coloured scales. The creatures are
+D: tall and is covered in multi-colored scales. The creatures are
 D: celebrating their last kill with a chorus of strange shrieks and
 D: squeals. A loud trumpet erupts from the lookout when he finally
 D: notices your scrutiny.
@@ -32304,7 +32304,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN | BASEANGBAND
 D:You look about for the source of the refreshing tangy smell that
 D: pervades the cavern. A small but dense cloud seems to be the
 D: source of the smell. Your thoughts are confirmed as a puff of
-D: slightly acidic vapour is blasted towards you.
+D: slightly acidic vapor is blasted towards you.
 
 N:1864:Citric Acid Cloud
 G:E:G
@@ -32321,7 +32321,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN | BASEANGBAND
 D:You look about for the source of the refreshing tangy smell that
 D: pervades the cavern. A small but dense cloud seems to be the
 D: source of the smell. Your thoughts are confirmed as a puff of
-D: slightly acidic vapour is blasted towards you.
+D: slightly acidic vapor is blasted towards you.
 
 N:1865:Torchblaze
 G:E:r
@@ -33450,7 +33450,7 @@ D: hourglass rotates time seems to reverse itself or stand still.
 D: You feel an unresistable compulsion to retrace your steps as
 D: if time were moving backwards.
 
-N:1935:Vapour Denizen
+N:1935:Vapor Denizen
 G:E:s
 I:110:17d10:12:20:90
 W:20:2:40:50
@@ -33462,7 +33462,7 @@ S:SHRIEK | BLINK | CAUSE_4
 F:EVIL | RES_NEXU | ELDRITCH_HORROR 
 F:PASS_WALL | AI_ANNOY | WEIRD_MIND | INVISIBLE | BASEANGBAND
 F:NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN | 
-D:A cloud of gray vapour with charcoal-coloured eyes floats in your path.
+D:A cloud of gray vapor with charcoal-colored eyes floats in your path.
 D: The beast flails vaporous tendrils to keep you at bay as it hurls
 D: powerful spells at you.
 
@@ -33765,7 +33765,7 @@ B:BITE:HURT:4d12
 F:ANIMAL | IM_COLD | NO_FEAR | BASEANGBAND | DROP_CORPSE
 D:The Brown Bear (Ursus arctos) is a species of bear that can reach weights
 D: of 130-700 kg (300 to 1500 pounds). Brown Bears have coats in shades of
-D: blond, brown, black, or a combination of those colours; the long outer
+D: blond, brown, black, or a combination of those colors; the long outer
 D: guard hairs are often tipped with white or silver, giving a "grizzled"
 D: appearance. Brown Bears have a large hump of muscle over their shoulders
 D: which gives strength to the forelimbs for digging. Their heads are large
@@ -33784,7 +33784,7 @@ F:ANIMAL | IM_COLD | NO_FEAR | BASEANGBAND | DROP_CORPSE
 S:MULTIPLY
 D:The Brown Bear (Ursus arctos) is a species of bear that can reach weights
 D: of 130-700 kg (300 to 1500 pounds). Brown Bears have coats in shades of
-D: blond, brown, black, or a combination of those colours; the long outer
+D: blond, brown, black, or a combination of those colors; the long outer
 D: guard hairs are often tipped with white or silver, giving a "grizzled"
 D: appearance. Brown Bears have a large hump of muscle over their shoulders
 D: which gives strength to the forelimbs for digging. Their heads are large
@@ -34092,7 +34092,7 @@ F:ORC | STUPID | FRIENDS | EMPTY_MIND | BASEANGBAND
 F:HURT_LITE | IM_COLD |  
 D:"First of all impressions was its enormous size; the
 D: girth of its body was some fourscore feet, its length perhaps two
-D: hundred. Its sides rose and fell with its laboured breathing. I
+D: hundred. Its sides rose and fell with its labored breathing. I
 D: perceived that its gigantic, flabby body lay along the ground, and
 D: that its skin was of a corrugated white, dappling into blackness
 D: along the backbone. But of its feet we saw nothing. I think also
@@ -34119,7 +34119,7 @@ F:HURT_LITE | IM_COLD |
 S:MULTIPLY 
 D:"First of all impressions was its enormous size; the
 D: girth of its body was some fourscore feet, its length perhaps two
-D: hundred. Its sides rose and fell with its laboured breathing. I
+D: hundred. Its sides rose and fell with its labored breathing. I
 D: perceived that its gigantic, flabby body lay along the ground, and
 D: that its skin was of a corrugated white, dappling into blackness
 D: along the backbone. But of its feet we saw nothing. I think also
@@ -34431,7 +34431,7 @@ S:1_IN_3 |
 S:ARROW_4 | S_KIN
 F:UNIQUE | ATTR_MULTI | MALE | FORCE_MAXHP | DROP_3D2 | DROP_2D2 | DROP_CORPSE | 
 F:DROP_GOOD | DROP_GREAT | OPEN_DOOR | BASH_DOOR | EVIL | BASEANGBAND | CAN_SPEAK |
-D:"A youngish man with flaxen hair, a bristly straw-coloured
+D:"A youngish man with flaxen hair, a bristly straw-colored
 D: moustache, and a drooping nether lip, was sitting and holding
 D: my wrist. For a minute we stared at each other without speaking.
 D: He had watery grey eyes, oddly void of expression. Then just
@@ -34770,7 +34770,7 @@ D: it was not his stature, his shoulders, or the size
 D: of his head which caused the curious effect I have
 D: elsewhere described. It was his eyes, the shape of his
 D: face, the multitudinous wrinkles that lined it, and,
-D: above all, the extraordinary colour of his skin,
+D: above all, the extraordinary color of his skin,
 D: that rendered his appearance so repulsive. To understand
 D: what I mean you must think first of old ivory, and then
 D: endeavor to realize what the complexion of a corpse
@@ -35151,7 +35151,7 @@ B:CRUSH:HURT:1d15
 F:FRIEND | STUPID | BASH_DOOR | NO_FEAR | KILL_ITEM | BASEANGBAND | DROP_CORPSE
 S:1_IN_6 | 
 S:CAUSE_2
-D:A dishevelled labourer screams obscenities as he tears apart
+D:A dishevelled laborer screams obscenities as he tears apart
 D: what you can only guess used to be an automaton. As the
 D: machine lets out a halting screech he raises his fists in
 D: triumph and a rousing shout erupts from his brethren. He
@@ -35170,7 +35170,7 @@ F:EVIL | STUPID | IM_ACID | EMPTY_MIND | COLD_BLOOD | STUPID
 F:NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN | BASH_DOOR | BASEANGBAND
 F:AURA_COLD | RAND_25 | KILL_BODY | KILL_ITEM
 D:The terrible smell of vinegar announces the presence of another
-D: acid elemental. Another cloud of noxious vapour is floating about
+D: acid elemental. Another cloud of noxious vapor is floating about
 D: the caverns slowly corroding everything it touches.
 
 N:2030:Nine of Clubs
@@ -35393,7 +35393,7 @@ F:NO_SLEEP
 S:1_IN_2 | 
 S:BLINK | BA_COLD | BO_PLAS | S_KIN
 S:HEAL | TPORT | MIND_BLAST | DRAIN_MANA
-D:"These beings with big heads, on whom the intellectual labours fall,
+D:"These beings with big heads, on whom the intellectual labors fall,
 D: form a sort of aristocracy in this strange society - The
 D: unlimited development of the minds of the intellectual class is
 D: rendered possible by the absence of any body skull in the lunar
@@ -36428,7 +36428,7 @@ D: into itself as I drew nearer... I saw that shadowy attendants
 D: were busy spraying that great brain with a cooling spray, and patting 
 D: and sustaining it... And at last, as I reached a little landing that
 D: was separated only by ten steps or so from the supreme seat, 
-D: the woven splendour of the music reached a climax and ceased, 
+D: the woven splendor of the music reached a climax and ceased, 
 D: and I was left naked, as it were, in that vastness, beneath the still 
 D: scrutiny of the Grand Lunar's eyes. He was scrutinising the first man 
 D: he had ever seen." -H.G. Wells, "The First Men in the Moon"
@@ -37142,7 +37142,7 @@ D:The polar bear (Thalarctos maritimus or Ursus maritimus) is a large mammal
 D: of the order Carnivora, family Ursidae. It is a circumpolar species found
 D: in and around the Arctic Ocean. It is the world's largest known land
 D: carnivore. The polar bear is instantly recognisable by its white coat.
-D: Unlike other arctic mammals it never sheds this coat for a darker colour
+D: Unlike other arctic mammals it never sheds this coat for a darker color
 D: in summer. 
 
 ###########################
@@ -37588,7 +37588,7 @@ F:IM_ACID | RES_NETH |
 F:NO_FEAR | NO_CONF | NO_STUN | NO_SLEEP | GIANT | BASEANGBAND
 D:A large mechanical hen, with its "feathers" unpainted,
 D: leaving its metallic nature undisguised. Its power source
-D: appears to be chemical in nature, as strangely coloured
+D: appears to be chemical in nature, as strangely colored
 D: vapors rise from it at intervals. A small gun barrel can
 D: just be made out on its chest.
 
@@ -37601,9 +37601,9 @@ O:0:0:0:0
 F:NEVER_BLOW | NEVER_MOVE | FRIENDS | EMPTY_MIND | ORC | 
 F:ANIMAL | COLD_BLOOD | NO_FEAR | BASEANGBAND
 D:"Apparently the vegetable kingdom in Mars, instead of having green for a
-D: dominant colour, is of a vivid blood-red tint. At any rate, the seeds
+D: dominant color, is of a vivid blood-red tint. At any rate, the seeds
 D: which the Martians (intentionally or accidentally) brought with them
-D: gave rise in all cases to red-coloured growths. Only that known
+D: gave rise in all cases to red-colored growths. Only that known
 D: popularly as the red weed, however, gained any footing in competition
 D: with terrestrial forms. The red creeper was quite a transitory growth,
 D: and few people have seen it growing. For a time, however, the red weed grew
@@ -37620,9 +37620,9 @@ F:NEVER_BLOW | NEVER_MOVE | FRIENDS | EMPTY_MIND | ORC |
 F:ANIMAL | COLD_BLOOD | NO_FEAR | BASEANGBAND
 S:MULTIPLY
 D:"Apparently the vegetable kingdom in Mars, instead of having green for a
-D: dominant colour, is of a vivid blood-red tint. At any rate, the seeds
+D: dominant color, is of a vivid blood-red tint. At any rate, the seeds
 D: which the Martians (intentionally or accidentally) brought with them
-D: gave rise in all cases to red-coloured growths. Only that known
+D: gave rise in all cases to red-colored growths. Only that known
 D: popularly as the red weed, however, gained any footing in competition
 D: with terrestrial forms. The red creeper was quite a transitory growth,
 D: and few people have seen it growing. For a time, however, the red weed grew
@@ -37771,7 +37771,7 @@ F:SUSCEP_POIS | BASEANGBAND
 D:"A big greyish rounded bulk, the size, perhaps, of a bear,
 D: was rising slowly and painfully out of the cylinder.  As it
 D: bulged up and caught the light, it glistened like wet leather.
-D:  Two large dark-coloured eyes were regarding me steadfastly. 
+D:  Two large dark-colored eyes were regarding me steadfastly. 
 D: The mass that framed them, the head of the thing, it was 
 D: rounded and had, one might say, a face.  There was a mouth 
 D: under the eyes, the lipless brim of which quivered and panted,
@@ -37796,7 +37796,7 @@ D:"The Thing itself lay almost entirely buried in sand amidst
 D: the scattered splinters of a fir-tree it had shivered to fragments
 D: in its descent.  The uncovered part had the appearance of a
 D: huge cylinder, caked over and its outline softened by a thick
-D: scaly dun-coloured incrustation."
+D: scaly dun-colored incrustation."
 D: - H.G. Wells "The War of the Worlds"
 
 N:2170:Martian Service Robot
@@ -38095,7 +38095,7 @@ D: Beautiful!--Great God! His yellow skin scarcely covered the work
 D: of muscles and arteries beneath; his hair was of a lustrous black,
 D: and flowing; his teeth of a pearly whiteness; but these luxuriances
 D: only formed a more horrid contrast with his watery eyes, that seemed
-D: almost of the same colour as the dun white sockets in which they were
+D: almost of the same color as the dun white sockets in which they were
 D: set, his shrivelled complexion and straight black lips." Eloquent, and
 D: well educated, the monster demands that Victor make him a bride to give
 D: him a place in the world, or he will kill everyone that Victor
@@ -38456,13 +38456,13 @@ D: smashing among the neighboring fields.  One may picture, too,
 D: the sudden shifting of the attention, the swiftly spreading coils
 D: and bellyings of that blackness advancing headlong, towering
 D: heavenward, turning the twilight to a palpable darkness, a
-D: strange and horrible antagonist of vapour striding upon its
+D: strange and horrible antagonist of vapor striding upon its
 D: victims, men and horses near it seen dimly, running, shrieking,
 D: falling headlong, shouts of dismay, the guns suddenly
 D: abandoned, men choking and writhing on the ground, and the
 D: swift broadening-out of the opaque cone of smoke.  And then
 D: night and extinction nothing but a silent mass of impenetrable
-D: vapour hiding its dead."
+D: vapor hiding its dead."
 D: - H.G. Wells "The War of the Worlds"
 
 N:2202:Giant Wasp
@@ -38788,7 +38788,7 @@ D:"The only hypothesis, however, which the bucolic mind could evolve,
 D: was that which had already occurred to Mr. McNeil, the factor- namely,
 D: that the old general and his family were one and all afflicted with
 D: madness, or, as an alternative conclusion, that he had committed some
-D: heinous offence and was endeavouring to escape the consequences of his
+D: heinous offence and was endeavoring to escape the consequences of his
 D: misdeeds." - Arthur Conan Doyle: "The Mystery of Cloomber" (1888)
 
 ###########################################
@@ -38862,7 +38862,7 @@ F:HURT_LITE | NO_CONF | NO_SLEEP | BASEANGBAND | CAN_SPEAK
 D:"When Lucy, I call the thing that was before us Lucy because it bore
 D: her shape, saw us she drew back with an angry snarl, such as a cat
 D: gives when taken unawares, then her eyes ranged over us.  Lucy's eyes
-D: in form and colour, but Lucy's eyes unclean and full of hell fire,
+D: in form and color, but Lucy's eyes unclean and full of hell fire,
 D: instead of the pure, gentle orbs we knew.  At that moment the remnant
 D: of my love passed into hate and loathing. . . As she looked, her eyes
 D: blazed with unholy light, and the face became wreathed with a
@@ -39197,7 +39197,7 @@ S:BLIND | HOLD | SCARE | CAUSE_1 | CAUSE_2 | DRAIN_MANA | HEAL |
 S:BRAIN_SMASH | BA_NETH | S_KIN | TELE_TO | 
 D:Within stood a tall old man, clean-shaven save for a
 D: long white moustache, and clad in black from head to foot,
-D: without a single speck of colour about him anywhere. He
+D: without a single speck of color about him anywhere. He
 D: held in his hand an antique silver lamp, in which the flame
 D: burned without a chimney or globe of any kind, throwing long
 D: quivering shadows as it flickered in the draught of the open door.
@@ -39500,7 +39500,7 @@ F:SMART | INVISIBLE | OPEN_DOOR | DROP_4D2 | BASEANGBAND | DROP_CORPSE |
 F:IM_FIRE | IM_ELEC | IM_ACID | IM_COLD | IM_POIS | NO_FEAR | NO_CONF
 S:1_IN_5 | 
 S:ARROW_3 | HASTE | BLINK | TPORT | TELE_TO | DARKNESS
-D:You have heard rumours among the nobility of a man
+D:You have heard rumors among the nobility of a man
 D: who sells his deadly services to the highest bidder,
 D: a cold man who can accomplish any task, for a price.
 D: The royal assassin prefers to work in complete anonymity,
@@ -40388,7 +40388,7 @@ S:1_IN_3 |
 S:HASTE | DRAIN_MANA | TELE_TO | BRAIN_SMASH
 S:BR_POIS | BA_POIS
 D:This ancient demon is sometimes mistaken for a dragon, although his
-D: muddy colour and wingless body betray his non-draconic origin. A
+D: muddy color and wingless body betray his non-draconic origin. A
 D: destroyer of knowledge, the earth, and all lawful communities walks
 D: the land. Beware.
 
@@ -40621,7 +40621,7 @@ S:MIND_BLAST | CAUSE_3 | BA_ACID | BA_POIS |
 S:S_MONSTERS | S_KIN
 D:"'The Moreau Horrors!' The phrase drifted loose in my
 D: mind for a moment, and then I saw it in red lettering on
-D: a little buff-coloured pamphlet, to read which made one
+D: a little buff-colored pamphlet, to read which made one
 D: shiver and creep. . . .
 D:   Was this the same Moreau? He had published some very astonishing
 D: facts in connection with the transfusion of blood, and in addition
@@ -45411,7 +45411,7 @@ F:EVIL | IM_FIRE | IM_COLD | IM_ACID | NO_CONF |
 F:SMART | REGENERATE | NO_SLEEP | IM_ELEC | IM_POIS |
 S:1_IN_2 | 
 S:BR_NUKE | 
-D:Godzilla is a massive reptile of legend, rumoured to be unkillable by guns, 
+D:Godzilla is a massive reptile of legend, rumored to be unkillable by guns, 
 D:magic or anything.  Fear its anger, for its devastation is unmatched!  Watch 
 D:out, because he loves to destroy towns.  I mean seriously, where's Mothra or 
 D:Mecha-Godzilla when you need them?
@@ -48094,7 +48094,7 @@ F:HURT_LITE | IM_POIS | NO_FEAR | NO_CONF | NO_SLEEP |
 F:DROP_CORPSE | BASEANGBAND |
 S:1_IN_20 |
 S:ARROW_2
-D:Its a large pile of stone-coloured flesh.
+D:Its a large pile of stone-colored flesh.
 
 N:2732:Thief
 G:t:v
@@ -57531,7 +57531,7 @@ F:DROP_SKELETON | DROP_CORPSE |
 S:1_IN_9 |
 S:BR_ELEC | BR_FIRE | BR_POIS |
 D:This hatchling dragon is still soft, its eyes unaccustomed to light and
-D: its scales shimmering with hints of many different colours.
+D: its scales shimmering with hints of many different colors.
 
 N:3334:Young chromatic dragon
 G:d:u
@@ -57550,7 +57550,7 @@ S:1_IN_7 |
 S:BR_ELEC | BR_FIRE | BR_POIS |
 S:SCARE |
 D:It has a form that legends are made of.  Beautiful scales of shimmering
-D: and magical colours cover it.
+D: and magical colors cover it.
 
 N:3335:Mature chromatic dragon
 G:d:u
@@ -57568,7 +57568,7 @@ F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND |
 S:1_IN_6 |
 S:BR_ELEC | BR_FIRE | BR_POIS |
 S:SCARE | BLIND | CONF |
-D:A large dragon, scales shimmering many colours.
+D:A large dragon, scales shimmering many colors.
 
 N:3336:Ancient chromatic dragon
 G:D:v
@@ -57586,7 +57586,7 @@ F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND |
 S:1_IN_5 |
 S:BR_ELEC | BR_FIRE | BR_POIS |
 S:SCARE | BLIND | CONF |
-D:A huge draconic form.  Many colours and shades ripple down its massive
+D:A huge draconic form.  Many colors and shades ripple down its massive
 D: frame.  Few live to see another.
 
 N:3337:Baby grey dragon
@@ -58346,7 +58346,7 @@ S:1_IN_2 |
 S:BR_SHAR |
 S:SCARE | BLIND | CONF |
 D:A huge crystalline dragon.  Its skin is composed of thousands of
-D: razor-sharp silver plates.  Strange colours ripple through it as it
+D: razor-sharp silver plates.  Strange colors ripple through it as it
 D: moves in the light.
 
 N:3376:Great Inertia Wyrm
@@ -58393,7 +58393,7 @@ S:BR_LITE | BR_DARK | BR_CONF | BR_SOUN | BR_SHAR | BR_INER |
 S:BR_GRAV | BR_WALL | BR_NEXU | BR_NETH | BR_CHAO | BR_DISE |
 S:BR_TIME | BR_MANA |
 S:SCARE | BLIND | CONF |
-D:An awesome wyrm of pure magic.  It seems to be all colours and sizes and
+D:An awesome wyrm of pure magic.  It seems to be all colors and sizes and
 D: shapes, though the dominant form is that of a great dragon.
 
 N:3378:Great Ethereal Wyrm
@@ -58507,7 +58507,7 @@ F:NO_SLEEP | BASEANGBAND |
 F:DROP_SKELETON | DROP_CORPSE |
 S:1_IN_2 |
 S:BR_FIRE | BR_COLD | BR_DISE |
-D:A tarrasque is a massive reptile of legend, rumoured to be unkillable
+D:A tarrasque is a massive reptile of legend, rumored to be unkillable
 D: and immune to magic.  Fear its anger, for its devastation is unmatched!
 
 #The following monsters are from Sangband
@@ -60312,7 +60312,7 @@ F:FRIENDS | BASEANGBAND |
 F:STUPID | COLD_BLOOD | EMPTY_MIND | CAN_SWIM | AQUATIC |
 F:IM_ACID | IM_POIS | NO_FEAR | NO_CONF | NO_SLEEP |
 F:DROP_CORPSE | 
-D:It is a giant jellyfish covered in discoloured blotches.
+D:It is a giant jellyfish covered in discolored blotches.
 
 N:3490:Giant ochre jellyfish
 G:j:U
@@ -62241,7 +62241,7 @@ S:S_HI_UNDEAD | S_HI_DRAGON | S_KIN |
 S:BR_DISE | BA_NETH
 D:Turin Turambar, Master of Doom, by Doom mastered. None suffered more 
 D:from the evil's of Melkor than Turin, son of Hurin. Yet of all the Edain 
-D:none did more damage than to kill Melkor's favourite pet, and for this 
+D:none did more damage than to kill Melkor's favorite pet, and for this 
 D:Turin is remembered. He hates Melkor, and will avenge all the hurts 
 D:done by Melkor upon the Children of Eru, starting with destroying you!
 
@@ -63236,7 +63236,7 @@ B:TOUCH:INSANITY:2d3
 B:TOUCH:CONFUSE
 F:FEMALE | RAND_25 | DROP_60 | SMART | NO_CONF | DROP_CORPSE |
 F:MORTAL | BASEANGBAND
-D:A green-skinned humanoid with a fishtail. Beware - there are rumours 
+D:A green-skinned humanoid with a fishtail. Beware - there are rumors 
 D:of adventures losing their minds under the fearsome 
 D:charms of mermaids. 
 
@@ -63493,7 +63493,7 @@ O:0:50:0:30
 B:HIT:HURT:1d10
 F:DROP_90 | EVIL | IM_POIS | DROP_CORPSE |
 F:MORTAL | BASEANGBAND
-D:Yes, your favourite denizen of evil also comes in an aquatic variety. 
+D:Yes, your favorite denizen of evil also comes in an aquatic variety. 
 
 N:3673:White shark
 G:~:W
@@ -63618,7 +63618,7 @@ O:0:0:0:0
 B:BITE:HURT:2d6
 F:ANIMAL | RAND_25 | INVISIBLE | ATTR_CLEAR | DROP_CORPSE |
 F:MORTAL | BASEANGBAND
-D:A flattened fish which is able to change body colouring for 
+D:A flattened fish which is able to change body coloring for 
 D:camouflage. 
 
 N:3682:Giant turtle
@@ -63960,7 +63960,7 @@ B:TOUCH:CONFUSE
 F:FEMALE | RAND_25 | SMART | NO_CONF | DROP_CORPSE |
 F:MORTAL | BASEANGBAND
 S:MULTIPLY
-D:A green-skinned humanoid with a fishtail. Beware - there are rumours 
+D:A green-skinned humanoid with a fishtail. Beware - there are rumors 
 D:of adventures losing their minds under the fearsome 
 D:charms of mermaids. 
 
@@ -64000,7 +64000,7 @@ B:BITE:HURT:2d6
 F:ANIMAL | RAND_25 | INVISIBLE | ATTR_CLEAR | DROP_CORPSE |
 F:MORTAL | BASEANGBAND
 S:MULTIPLY
-D:A flattened fish which is able to change body colouring for 
+D:A flattened fish which is able to change body coloring for 
 D:camouflage. 
 
 N:3707:Giant kraken
@@ -64301,7 +64301,7 @@ F:NO_CONF | NO_SLEEP | BASH_DOOR | ONLY_GOLD | DROP_4D2 | DROP_4D2 |
 S:1_IN_3
 S:SCARE | BA_FIRE | BA_POIS | BA_COLD | BA_ELEC | BA_ACID | CONF | 
 S:BO_FIRE | BO_COLD | BO_ELEC | BO_ACID | S_KIN | 
-D:A cunning reptilian creature with fifteen multicoloured heads. 
+D:A cunning reptilian creature with fifteen multicolored heads. 
 
 # New monster added by furiosity for the Theme module
 N:3722:Killer hydra
@@ -64635,7 +64635,7 @@ F:FRIENDS | BASEANGBAND |
 F:STUPID | COLD_BLOOD | EMPTY_MIND | CAN_SWIM | 
 F:IM_ACID | IM_POIS | NO_FEAR | NO_CONF | NO_SLEEP |
 F:DROP_CORPSE | 
-D:It is a giant jellyfish covered in discoloured blotches.
+D:It is a giant jellyfish covered in discolored blotches.
 
 N:3743:Giant ochre jellyfish
 G:j:U

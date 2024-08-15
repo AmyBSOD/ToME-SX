@@ -5,7 +5,7 @@
 #####R === ToME Magic - Water School ===
 
 The water school of magic contains spells where the element of water is
-used to create the final spell effect. There are rumours of a "Tome of the
+used to create the final spell effect. There are rumors of a "Tome of the
 Everrunning Wave" which contains all the water school spells within its
 bindings.
 

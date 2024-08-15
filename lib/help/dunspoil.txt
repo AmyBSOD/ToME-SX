@@ -66,7 +66,7 @@ Equivalent to dungeon levels 10 to 22.
 A Forest is a haven for many animals, both of the good variety, and
 the bad. This forest is no exception. In the past, unsuccessful
 attempts have been made to cultivate this land, and it is possible
-that some of the towns may remain. It is also rumoured that Old Man
+that some of the towns may remain. It is also rumored that Old Man
 Willow has made his home here, and is the source of the Forest's
 resistance to cultivation.
 Equivalent to dungeon levels 13 to 25.
@@ -126,7 +126,7 @@ Equivalent to dungeon levels 35 to 50.
 
 #####GIllusory Castle
 The Illusory Castle is a very strange and confusing place for an
-adventurer to visit, and is rumoured to contain many strange
+adventurer to visit, and is rumored to contain many strange
 monsters. Deep within the castle can be found The Glass Golem.
 Equivalent to dungeon levels 35 to 52.
 
@@ -139,15 +139,15 @@ Equivalent to dungeon levels 40 to 70.
 #####GThe Sacred Land Of Mountains
 The Sacred Land Of Mountains is located in a large mountain range,
 with the remains of many old towns. Considered a perfect place to hide
-for one who could fly, it is rumoured that Trone the rebel Thunderlord
+for one who could fly, it is rumored that Trone the rebel Thunderlord
 fled into the ruins here.
 Equivalent to dungeon levels 45 to 70.
 
 #####GThe Tower of Dol Guldur
 The tower of of Dol Guldur is the last known residence of one known only
-as "the Necromancer". It is rumoured to be filled with his conjurations,
+as "the Necromancer". It is rumored to be filled with his conjurations,
 although none have made it out of the Tower alive to confirm or deny this
-rumour.
+rumor.
 Equivalent to dungeon levels 57 to 70.
 
 #####GErebor, the Lonely Mountain

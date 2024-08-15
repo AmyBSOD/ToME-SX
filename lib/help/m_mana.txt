@@ -5,7 +5,7 @@
 #####R === ToME Magic - Mana School ===
 
 The mana school of magic contains spells where the raw force of magic is used
-to create the final spell effect. There are rumours of a "Tome of Magical 
+to create the final spell effect. There are rumors of a "Tome of Magical 
 Energy" which contains all the mana school spells within its bindings.
 
 Worshipping the God Eru Iluvatar also gives the ability to cast spells from

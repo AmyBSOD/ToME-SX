@@ -31,7 +31,7 @@ F:STEALTH | REGEN
 # The Dragon Slayer
 
 N:1:Dragon Slayer
-D:It is from a group of items rumoured to be the bane of dragons.
+D:It is from a group of items rumored to be the bane of dragons.
 # Bow of bard
 P:125:2:3
 F:DEX | CON | RES_FIRE

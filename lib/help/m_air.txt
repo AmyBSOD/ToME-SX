@@ -5,7 +5,7 @@
 #####R === ToME Magic - Air School ===
 
 The air school of magic contains spells where the element of air is used
-to create the final spell effect. There are rumours of a "Tome of the Blowing
+to create the final spell effect. There are rumors of a "Tome of the Blowing
 Wind" which contains all the air school spells within its bindings.
 
 Worshipping the God Manwe Sulimo also gives the ability to cast spells from

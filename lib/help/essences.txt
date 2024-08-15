@@ -112,7 +112,7 @@ lvl     xp   Power
  8     1000  Light                    Everburning Torch
 20    10000  Bright Light             Dwarven Lantern
 40   100000  Sunlight                 Feanorian Lamp
-40   200000  Flight                   Suit of Dragon Armor (any colour)
+40   200000  Flight                   Suit of Dragon Armor (any color)
 50 10000000  Automatically IDs        Morgoth's Testicles
 29     2000  Anti-Teleportation       Teleport Inhibiting Amulet
 34     2000  Anti-Magic               Magic Inhibiting Amulet

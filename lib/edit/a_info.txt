@@ -247,7 +247,7 @@ W:30:12:15:50000
 P:0:1d1:0:0:0
 F:INSTA_ART | LITE1
 D:A powerful stone that provides a strong light for any who 
-D:wields it. It is rumoured that it may even protect the wearer from 
+D:wields it. It is rumored that it may even protect the wearer from 
 D:the passing of time.
 
 
@@ -278,7 +278,7 @@ F:RES_FIRE | RES_COLD | RES_POIS | RES_LITE | RES_DARK |
 F:LITE1 | SEE_INVIS | AGGRAVATE | ESP_DRAGON
 F:ACTIVATE
 a:HARDCORE=RAZORBACK
-D:A massive suit of heavy dragon scales deeply saturated with many colours.  
+D:A massive suit of heavy dragon scales deeply saturated with many colors.  
 D:It throbs with angry energies, and you feel the raw elemental might of 
 D:untamed Lightning as you put it on.
 
@@ -297,7 +297,7 @@ F:RES_SHARDS | RES_SOUND | RES_DISEN | RES_BLIND | RES_CONF |
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | SPECIAL_GENE
 F:ACTIVATE
 a:HARDCORE=BLADETURNER
-D:A suit of adamant, set with scales of every colour, surrounded in a nimbus 
+D:A suit of adamant, set with scales of every color, surrounded in a nimbus 
 D:of perfectly untramelled yet inextricably intermingled and utterly mastered 
 D:powers elemental and ethereal.
 
@@ -1682,7 +1682,7 @@ W:20:100:150:35000
 P:0:2d6:5:7:2
 F:BRAND_FIRE | IM_FIRE | ACTIVATE | SHOW_MODS | LITE1
 a:HARDCORE=FIRESTAR
-D:A famed battle-lord of old, with a ruddy head, coloured as embers are that 
+D:A famed battle-lord of old, with a ruddy head, colored as embers are that 
 D:can yet rise up in wrath.
 
 
@@ -2659,7 +2659,7 @@ F:RES_FIRE | RES_MORGUL | SEARCH | SEE_INVIS | SHOW_MODS |
 F:SLAY_ANIMAL | SLAY_EVIL | SPELL | SPELL_CONTAIN | 
 F:STEALTH | WATER_BREATH | WIELD_CAST | WIS
 Z:grow trees
-D:Rumoured to be a gift from Yavanna to Radagast the Brown, this 
+D:Rumored to be a gift from Yavanna to Radagast the Brown, this 
 D:plain-seeming oak staff shields its bearer against the elements 
 D:and helps him fight off malicious beasts (such as the goblins' 
 D:Warg-steeds).  It also grants exceptional insight into Nature 
@@ -2718,7 +2718,7 @@ W:30:15:10:25000
 P:1:0d0:5:5:13
 F:DEX | HIDE_TYPE | INVIS | SPEED | STEALTH | SUST_DEX
 Z:berserk
-D:This dark-coloured cloak once belonged to the leader of the 
+D:This dark-colored cloak once belonged to the leader of the 
 D:Druedain. As you put it on, you feel safer from attempts to 
 D:waylay you on your travels. 
 
@@ -2759,7 +2759,7 @@ F:ACTIVATE | HIDE_TYPE | IM_COLD | IM_ELEC | SPEED | SPELL_CONTAIN |
 F:SUST_CHR | SUST_CON | SUST_DEX | SUST_INT | SUST_STR | WIELD_CAST
 a:HARDCORE=BA_ELEC_2
 D:The white robe of the Istari wizard Curunir, known on Middle-earth as 
-D:Saruman the White and Saruman of Many Colours. Imbued with cold and 
+D:Saruman the White and Saruman of Many Colors. Imbued with cold and 
 D:lightning used in the creation of the Fire of Orthanc, it grants the 
 D:wearer some mastery over these elements. 
 
@@ -3147,7 +3147,7 @@ W:60:12:15:50000
 P:0:1d1:0:0:0
 F:INSTA_ART | SEARCH | LITE3 | LUCK
 D:A powerful anchor that provides a strong light for any who 
-D:wields it. It is rumoured that it may even protect the wearer from 
+D:wields it. It is rumored that it may even protect the wearer from 
 D:the passing of time.
 
 N:220:of Legolas
@@ -3246,7 +3246,7 @@ P:40:2d4:0:0:0
 F:CHR | CON | DEX | HIDE_TYPE | INT | STR | WIS
 Z:teleport
 D:This garment was once the property of Tom Bombadil - 
-D:a strange being rumoured to be older than Arda itself. It 
+D:a strange being rumored to be older than Arda itself. It 
 D:may be the explanation for how Tom could always turn up 
 D:when he was most needed.
 

@@ -12,8 +12,8 @@ overridden during the shape-shift.
 
 As your mimicry skill increases, your character is less likely to spoil
 the transformation attempt and may even gain other powers, such as making
-his colouration match his surroundings (becoming in all respects invisible)
-or even stranger abilities... rumours abound about Tarka the Chameleon and 
+his coloration match his surroundings (becoming in all respects invisible)
+or even stranger abilities... rumors abound about Tarka the Chameleon and 
 her two pairs of boots of speed.
 
 The powers are accessed using the 'm' key and then selecting 'Use Mimicry';

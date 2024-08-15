@@ -5,7 +5,7 @@
 #####R === ToME Magic - Earth School ===
 
 The earth school of magic contains spells where the element of earth is used
-to create the final spell effect. There are rumours of a "Tome of the
+to create the final spell effect. There are rumors of a "Tome of the
 Impenetrable Earth" which contains all the earth school spells within its
 bindings.
 

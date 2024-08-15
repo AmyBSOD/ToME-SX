@@ -4667,7 +4667,7 @@ tval_desc tval_descs[] =
 	},
 	{
 		TV_RANDART,
-		"Those objects are only known of by rumours.  It is said that "
+		"Those objects are only known of by rumors.  It is said that "
 		"they can be activated for great or strange effects..."
 	},
 	{

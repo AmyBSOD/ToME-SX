@@ -5,7 +5,7 @@
 #####R === ToME Magic - Nature School ===
 
 The nature school of magic contains spells that interact with nature. There
-are rumours of a "Tome of the Tree" which contains all the nature school
+are rumors of a "Tome of the Tree" which contains all the nature school
 spells within its bindings.
 
 Worshipping the Goddess Yavanna Kementari also gives the ability to cast spells
