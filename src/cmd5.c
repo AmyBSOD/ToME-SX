@@ -183,7 +183,7 @@ void do_fart_effect(void)
 		return;
 	}
 
-	switch (randint(57))
+	switch (randint(59))
 	{
 	case 1:
 	case 2:
@@ -486,6 +486,13 @@ void do_fart_effect(void)
 				lose_exp(p_ptr->exp / 16);
 			}
 
+			break;
+		}
+
+	case 58:
+	case 59:
+		{
+			curse_equipment(100, 10);
 			break;
 		}
 

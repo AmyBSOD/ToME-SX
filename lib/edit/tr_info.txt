@@ -868,6 +868,26 @@ I:8:10:5:8:60:20d13:B
 D:A hail of meteors slams on top of you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
+N:186:Trap of Curse Garment
+I:5:15:0:12:20:0d0:y
+D:This trap is doing evil things to your gear...
+F:FLOOR | CHEST | DOOR
+
+N:187:Trap of Item Curse
+I:5:100:0:12:5:0d0:y
+D:Your equipment becomes cursed.
+F:FLOOR | CHEST | DOOR
+
+N:188:Trap of Heavy Curse
+I:5:100:0:12:30:0d0:y
+D:Your equipment becomes heavily cursed.
+F:FLOOR | CHEST | DOOR
+
+N:189:Trap of Prime Curse
+I:5:10:0:12:70:0d0:y
+D:Your equipment becomes permanently cursed.
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

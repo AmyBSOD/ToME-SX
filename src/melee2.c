@@ -2786,16 +2786,19 @@ static bool monst_spell_monst(int m_idx)
 }
 
 
-void curse_equipment(int chance, int heavy_chance)
+bool curse_equipment(int chance, int heavy_chance)
 {
 	bool changed = FALSE;
+
+	bool willreturntrue = FALSE;
+
 	u32b o1, o2, o3, o4, esp, o5;
 	object_type * o_ptr =
 		&p_ptr->inventory[rand_range(INVEN_WIELD, INVEN_TOTAL - 1)];
 
-	if (randint(100) > chance) return;
+	if (randint(100) > chance) return FALSE;
 
-	if (!(o_ptr->k_idx)) return;
+	if (!(o_ptr->k_idx)) return FALSE;
 
 	object_flags(o_ptr, &o1, &o2, &o3, &o4, &o5, &esp);
 
@@ -2808,11 +2811,10 @@ void curse_equipment(int chance, int heavy_chance)
 		msg_format("Your %s resist%s cursing!", o_name,
 		           ((o_ptr->number > 1) ? "" : "s"));
 		/* Hmmm -- can we wear multiple items? If not, this is unnecessary */
-		return;
+		return TRUE;
 	}
 
-	if ((randint(100) <= heavy_chance) &&
-	                (o_ptr->name1 || o_ptr->name2 || o_ptr->art_name))
+	if (randint(100) <= heavy_chance)
 	{
 		if (!(o3 & TR3_HEAVY_CURSE))
 			changed = TRUE;
@@ -2830,6 +2832,7 @@ void curse_equipment(int chance, int heavy_chance)
 
 	if (changed)
 	{
+		willreturntrue = TRUE;
 		msg_print("There is a malignant black aura surrounding you...");
 		if (o_ptr->note)
 		{
@@ -2839,6 +2842,7 @@ void curse_equipment(int chance, int heavy_chance)
 			}
 		}
 	}
+	return willreturntrue;
 }
 
 
@@ -2868,8 +2872,7 @@ void curse_equipment_dg(int chance, int heavy_chance)
 		return;
 	}
 
-	if ((randint(100) <= heavy_chance) &&
-	                (o_ptr->name1 || o_ptr->name2 || o_ptr->art_name))
+	if (randint(100) <= heavy_chance)
 	{
 		if (!(o3 & TR3_HEAVY_CURSE))
 			changed = TRUE;
@@ -2899,6 +2902,94 @@ void curse_equipment_dg(int chance, int heavy_chance)
 		}
 	}
 }
+
+bool curse_equipment_prime(int chance, int heavy_chance)
+{
+	bool changed = FALSE;
+	u32b o1, o2, o3, o4, esp, o5;
+
+	bool willreturntrue = FALSE;
+
+	int whichslot = INVEN_OUTER;
+
+	switch (randint(7)) {
+		case 1:
+		default:
+			whichslot = INVEN_OUTER;
+			break;
+		case 2:
+			whichslot = INVEN_ARM;
+			break;
+		case 3:
+			whichslot = INVEN_HEAD;
+			break;
+		case 4:
+			whichslot = INVEN_HANDS;
+			break;
+		case 5:
+			whichslot = INVEN_FEET;
+			break;
+		case 6:
+			whichslot = INVEN_WIELD;
+			break;
+		case 7:
+			whichslot = INVEN_BODY;
+			break;
+	}
+
+	object_type * o_ptr = &p_ptr->inventory[whichslot];
+
+	if (randint(100) > chance) return FALSE;
+
+	if (!(o_ptr->k_idx)) return FALSE;
+
+	object_flags(o_ptr, &o1, &o2, &o3, &o4, &o5, &esp);
+
+
+	/* Extra, biased saving throw for blessed items */
+	if ((o3 & (TR3_BLESSED)) && (randint(222) > chance))
+	{
+		char o_name[256];
+		object_desc(o_name, o_ptr, FALSE, 0);
+		msg_format("Your %s resist%s cursing!", o_name,
+		           ((o_ptr->number > 1) ? "" : "s"));
+		/* Hmmm -- can we wear multiple items? If not, this is unnecessary */
+		return TRUE;
+	}
+
+	if (randint(100) <= heavy_chance)
+	{
+		if (!(o3 & TR3_PERMA_CURSE))
+			changed = TRUE;
+		o_ptr->art_flags3 |= TR3_PERMA_CURSE;
+		o_ptr->art_flags3 |= TR3_HEAVY_CURSE;
+		o_ptr->art_flags3 |= TR3_CURSED;
+		o_ptr->ident |= IDENT_CURSED;
+	}
+	else
+	{
+		if (!(o_ptr->ident & (IDENT_CURSED)))
+			changed = TRUE;
+		o_ptr->art_flags3 |= TR3_CURSED;
+		o_ptr->ident |= IDENT_CURSED;
+	}
+
+	if (changed)
+	{
+		msg_print("There is a malignant black aura surrounding you...");
+		willreturntrue = TRUE;
+		if (o_ptr->note)
+		{
+			if (streq(quark_str(o_ptr->note), "uncursed"))
+			{
+				o_ptr->note = 0;
+			}
+		}
+	}
+
+	return willreturntrue;
+}
+
 
 
 /*

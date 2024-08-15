@@ -1036,8 +1036,9 @@ extern bool carried_make_attack_normal(int r_idx);
 extern bool make_attack_normal(int m_idx, byte divis);
 extern bool make_attack_spell(int m_idx);
 extern void process_monsters(void);
-extern void curse_equipment(int chance, int heavy_chance);
+extern bool curse_equipment(int chance, int heavy_chance);
 extern void curse_equipment_dg(int chance, int heavy_chance);
+extern bool curse_equipment_prime(int chance, int heavy_chance);
 
 /* monster1.c */
 extern void screen_roff(int r_idx, int ego, int remember);
@@ -1680,6 +1681,7 @@ extern void do_poly_self(void);
 extern void do_poly_wounds(void);
 extern bool curse_weapon(void);
 extern bool curse_armor(void);
+extern bool curse_garment(void);
 extern void random_resistance(object_type * q_ptr, bool is_scroll, int specific);
 extern bool lose_corruption(int choose_mut);
 extern bool lose_all_corruptions(void);

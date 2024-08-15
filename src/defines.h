@@ -2562,6 +2562,11 @@
 #define TRAP_OF_METEOR_BOLT               184
 #define TRAP_OF_METEOR_BALL               185
 
+#define TRAP_OF_CURSE_GARMENT             186
+#define TRAP_OF_ITEM_CURSE                187
+#define TRAP_OF_HEAVY_CURSE               188
+#define TRAP_OF_PRIME_CURSE               189
+
 /*** General index values ***/
 
 

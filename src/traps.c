@@ -731,6 +731,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/* Trap of Curse Weapon */
 	case TRAP_OF_CURSE_WEAPON:
 		{
+			msg_print("You hear a terrible wail!");
 			ident = curse_weapon();
 			break;
 		}
@@ -738,7 +739,36 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/* Trap of Curse Armor */
 	case TRAP_OF_CURSE_ARMOR:
 		{
+			msg_print("You hear a terrible roar!");
 			ident = curse_armor();
+			break;
+		}
+
+	case TRAP_OF_CURSE_GARMENT:
+		{
+			msg_print("You hear a terrible scream!");
+			ident = curse_garment();
+			break;
+		}
+
+	case TRAP_OF_ITEM_CURSE:
+		{
+			msg_print("You hear a curse!");
+			ident = curse_equipment(100, 0);
+			break;
+		}
+
+	case TRAP_OF_HEAVY_CURSE:
+		{
+			msg_print("You hear a horrible curse!");
+			ident = curse_equipment(100, 100);
+			break;
+		}
+
+	case TRAP_OF_PRIME_CURSE:
+		{
+			msg_print("You hear a terrible incantation!");
+			ident = curse_equipment_prime(100, 100);
 			break;
 		}
 
