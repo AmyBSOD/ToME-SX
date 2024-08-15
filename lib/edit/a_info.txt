@@ -2488,10 +2488,9 @@ D:and subtlety, while the other gives endurance and strength.
 N:174:of Nain
 I:20:7:6
 W:60:5:250:30000
-P:0:3d8:12:18:0
-F:TUNNEL | INFRA | SEARCH | STR | ESP_ORC | CLIMB | 
-F:SLAY_ORC | SLAY_TROLL | SLAY_GIANT | SLAY_DRAGON | 
-F:BRAND_ACID | RES_ACID | RES_DARK | RES_DISEN | 
+P:0:0d0:0:0:5
+F:TUNNEL | INFRA | SEARCH | STR | ESP_ORC | CLIMB | CON | 
+F:RES_ACID | RES_DARK | RES_DISEN | 
 F:ACTIVATE
 a:HARDCORE=STONE_MUD
 D:Wielded by Nain of the Iron Hills at the Battle of Azanulbizar, this great 
@@ -3778,6 +3777,17 @@ f:DEVICE_MASTERY
 D:Some master dwarves with lots of crafting skill have forged 
 D:this pair of gauntlets, which even allows the wearer to use 
 D:magic devices more effectively. 
+
+N:268:of Nain
+I:24:3:6
+W:60:5:35:30000
+P:0:3d8:12:18:0
+F:INFRA | SEARCH | STR | ESP_ORC | 
+F:SLAY_ORC | SLAY_TROLL | SLAY_GIANT | SLAY_DRAGON | 
+F:BRAND_ACID | RES_ACID | RES_DARK | RES_DISEN | 
+D:Wielded by Nain of the Iron Hills at the Battle of Azanulbizar, this great 
+D:axe brought victory to the Dwarves over Azog's Orcs - though Nain 
+D:himself fell at the last, even with victory already assured.
 
 # N:number:name
 # I:tval:sval:pval
