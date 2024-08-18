@@ -3698,7 +3698,7 @@ D:about you as you face your ultimate foe.
 # artifact high heels
 N:261:of Amy
 I:30:4:5
-W:80:20:1:150000
+W:80:20:80:150000
 P:10:1d1:0:0:10
 F:INV_PROTECT | DEVICE_MASTERY | RES_WATER | SLOW_DIGEST | SEE_INVIS | 
 F:FEATHER | RES_DISEN | RES_CONF | SUST_CON | SUST_CHR | DEX
@@ -3710,7 +3710,7 @@ D:you can use them since there's no sign of the owner.
 N:262:'Ultimacy'
 I:22:30:10
 W:80:30:250:50000
-P:0:1d1:15:20:0
+P:0:8d4:15:20:0
 F:RES_MORGUL | ESP_UNDEAD | STR | CON | DEX | CHAOTIC | SLAY_EVIL | 
 F:SLAY_UNDEAD | SUST_STR | SUST_CON | SUST_DEX | HOLD_LIFE | 
 F:RES_DARK | RES_POIS
@@ -3721,7 +3721,7 @@ D:The ultimate scythe for cutting down all who oppose you.
 N:263:'Clever Cleaver'
 I:24:2:0
 W:15:5:110:3000
-P:0:1d1:8:8:0
+P:0:2d4:8:8:0
 F:RES_MORGUL | SLAY_EVIL | SLAY_UNDEAD 
 f:RES_MORGUL | SLAY_EVIL | SLAY_UNDEAD
 D:Hither came Conan, the Cimmerian, black-haired, sullen-eyed, 
@@ -3734,7 +3734,7 @@ D:(The Phoenix on the Sword, by Robert E. Howard)
 N:264:of Poseidon
 I:22:5:3
 W:30:40:70:50000
-P:0:1d1:8:14:0
+P:0:1d8:8:14:0
 F:RES_MORGUL | RES_WATER | ESP_DEMON | INT | WIS | INFRA | 
 F:SLAY_DEMON | SUST_INT | RES_COLD | LITE1 | SEE_INVIS | 
 F:AUTO_CURSE
