@@ -200,7 +200,7 @@ struct object_kind
 	u32b oflags5;           /* Obvious Flags, set 5 */
 
 	byte locale[10];		/* Allocation level(s) */
-	byte chance[10];		/* Allocation chance(s) */
+	s32b chance[10];		/* Allocation chance(s) */
 
 	byte level;			/* Level */
 	byte extra;			/* Something */

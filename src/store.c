@@ -1304,7 +1304,9 @@ static bool kind_is_storeok(int k_idx)
 	if (!kind_is_legal(k_idx)) return FALSE;
 
 	if (k_ptr->tval != store_tval) return (FALSE);
-	if (k_ptr->level < (store_level / 2)) return (FALSE);
+
+	/* stores that force their level usually spawn high-level items only, but allow the occasional low-level one too --Amy */
+	if ((k_ptr->level < (store_level / 2)) && (randint(10) != 1) ) return (FALSE);
 
 	return (TRUE);
 }

@@ -7130,6 +7130,7 @@ turn_monsters(40 + p_ptr->lev);
 			{
 				if (!doit) return "alchemy every 500 turns";
 				msg_print("It glows bright yellow...");
+
 				(void) alchemy();
 
 				o_ptr->timeout = 500;
