@@ -3139,6 +3139,7 @@ void do_cmd_read_scroll(void)
 					/* just in case you murdered the quest giver NPCs... --Amy */
 					r_info[test_monster_name("Farmer Maggot")].max_num = 1;
 					r_info[test_monster_name("Melinda Proudfoot")].max_num = 1;
+					r_info[test_monster_name("Merton Proudfoot, the lost hobbit")].max_num = 1;
 
 				}
 
