@@ -8100,9 +8100,17 @@ turn_monsters(40 + p_ptr->lev);
 					break;
 				}
 
+				/* Amy: and also some sanity to cut down on the spammability */
+				if (p_ptr->csane < 51) {
+					msg_print("You aren't sane enough to use that ability.");
+					break;
+				}
+
+				take_sanity_hit(50, "growing the mold");
+
 				msg_print("You twirl and spores fly everywhere!");
 				p_ptr->food -= 5000;
-				for (i = 0; i < 8; i++)
+				for (i = 0; i < 2; i++)
 					summon_specific_friendly(p_ptr->py, p_ptr->px, p_ptr->lev, SUMMON_BIZARRE1, FALSE);
 
 				o_ptr->timeout = randint(500) + 500;

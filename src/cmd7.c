@@ -7829,6 +7829,14 @@ void do_cmd_symbiotic(void)
 					break;
 				}
 
+				/* Amy: and also some sanity to cut down on the spammability */
+				if (p_ptr->csane < 101) {
+					msg_print("You aren't sane enough to use that ability.");
+					break;
+				}
+
+				take_sanity_hit(100, "summoning never-moving pets");
+
 				p_ptr->food -= 10000;
 				summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_MINE, FALSE);
 
