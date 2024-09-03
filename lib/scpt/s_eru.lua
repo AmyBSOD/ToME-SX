@@ -72,7 +72,7 @@ ERU_LISTEN = add_spell
 			"Allows you to listen to the Great Music from which the world",
 			"originates, allowing you to understand the meaning of things",
 			"At level 30 it allows you to identify all your pack",
-			"At level 60 it allows you to identify all items on the level",
+			"At level 60 it allows you to identify all non-artifact items on the level",
 	}
 }
 

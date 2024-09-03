@@ -479,7 +479,7 @@ void delete_monster_idx(int i)
 		if ( p_ptr->preserve )
 		{
 			/* Hack -- Preserve unknown artifacts */
-			if (artifact_p(o_ptr)/* && !object_known_p(o_ptr)*/)
+			if (artifact_p(o_ptr) && !object_known_p(o_ptr))
 			{
 				/* Mega-Hack -- Preserve the artifact */
 				if (o_ptr->tval == TV_RANDART)

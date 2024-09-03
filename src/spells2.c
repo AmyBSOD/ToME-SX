@@ -4488,11 +4488,15 @@ bool ident_all(void)
 		o_ptr = &o_list[i];
 
 		/* Identify it fully */
-		object_aware(o_ptr);
-		object_known(o_ptr);
+		/* but don't lose artifacts that were at the other end of a level!! --Amy */
+
+		if (!artifact_p(o_ptr)) {
+			object_aware(o_ptr);
+			object_known(o_ptr);
+		}
 
 		/* If the item was an artifact, and if the auto-note is selected, write a message. */
-		if (take_notes && auto_notes && (artifact_p(o_ptr) || o_ptr->name1))
+		if (take_notes && auto_notes && !artifact_p(o_ptr) && o_ptr->name1)
 		{
 			char note[150];
 			char item_name[80];
