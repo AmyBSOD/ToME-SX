@@ -2569,6 +2569,10 @@ void object_desc(char *buf, object_type *o_ptr, int pref, int mode)
 		t = object_desc_chr(t, p2);
 	}
 
+	/* mention that no item can have more than +2 extra blows (Amy) */
+	if ((f1 & (TR1_BLOWS)) && (o_ptr->pval > 2)) {
+			t = object_desc_str(t, " (extra blows capped at +2)");
+	}
 
 	/* Indicate "charging" artifacts XXX XXX XXX */
 	if (known && (f3 & TR3_ACTIVATE) && o_ptr->timeout)

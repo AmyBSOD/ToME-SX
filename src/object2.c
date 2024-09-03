@@ -743,6 +743,7 @@ s16b get_obj_num(int level)
 
 		/* Total */
 		total += table[i].prob3;
+
 	}
 
 	/* No legal objects */
@@ -4235,7 +4236,8 @@ void add_random_ego_flag(object_type *o_ptr, int fego, bool *limit_blows)
 	if (fego & ETR4_LIMIT_BLOWS)
 	{
 		/* Swap this flag */
-		*limit_blows = !(*limit_blows);
+		/* *limit_blows = !(*limit_blows); */
+		; /* no longer needed --Amy (but maybe someday...) */
 	}
 
 	if (fego & ETR4_PVAL_M1)

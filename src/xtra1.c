@@ -2650,8 +2650,11 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pva
 	/* Affect speed */
 	if (f1 & (TR1_SPEED)) p_ptr->pspeed += pval;
 
-	/* Affect blows */
-	if (f1 & (TR1_BLOWS)) extra_blows += pval;
+	/* Affect blows; max 2 per item (Amy change) because holy hell are items overpowered otherwise!! */
+	if (f1 & (TR1_BLOWS)) {
+		if (pval > 2) extra_blows += 2;
+		else extra_blows += pval;
+	}
 	if (f5 & (TR5_CRIT)) p_ptr->xtra_crit += pval;
 
 	/* Hack -- Sensible fire */
