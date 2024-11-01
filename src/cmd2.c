@@ -2133,7 +2133,7 @@ static bool do_cmd_disarm_aux(int y, int x, int dir, int do_pickup)
 	}
 
 	/* Failure -- Keep trying */
-	else if ((i > 5) && (randint(i) > 5))
+	else if ((i > 5) && (randint(i) > (5 + power) ))
 	{
 		/* Failure */
 		if (flush_failure) flush();

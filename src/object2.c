@@ -1039,6 +1039,7 @@ s32b flag_cost(object_type * o_ptr, int plusses)
 	if (f5 & TR5_DEVICE_MASTERY) total += 5000;
 	if (f5 & TR5_INV_PROTECT) total += 5000;
 	if (f5 & TR5_PEACEKEEPING) total += 2000;
+	if (f5 & TR5_LITHE) total += 500;
 	if (f3 & TR3_SH_FIRE) total += 5000;
 	if (f3 & TR3_SH_ELEC) total += 5000;
 	if (f3 & TR3_DECAY) total += 0;
@@ -1332,6 +1333,8 @@ s32b object_value_real(object_type *o_ptr)
 			if (f1 & (TR1_CHR)) value += (o_ptr->pval * 200L);
 
 			if (f5 & (TR5_CRIT)) value += (o_ptr->pval * 500L);
+			if (f5 & (TR5_DISARM)) value += (o_ptr->pval * 200L);
+			if (f5 & (TR5_DODGE)) value += (o_ptr->pval * 200L);
 
 			/* Give credit for stealth and searching */
 			if (f1 & (TR1_STEALTH)) value += (o_ptr->pval * 100L);
@@ -1630,6 +1633,8 @@ s32b object_value_xtra(object_type *o_ptr)
 			if (f1 & (TR1_CHR)) value += (o_ptr->pval * 200L);
 
 			if (f5 & (TR5_CRIT)) value += (o_ptr->pval * 500L);
+			if (f5 & (TR5_DISARM)) value += (o_ptr->pval * 200L);
+			if (f5 & (TR5_DODGE)) value += (o_ptr->pval * 200L);
 
 			/* Give credit for stealth and searching */
 			if (f1 & (TR1_STEALTH)) value += (o_ptr->pval * 100L);

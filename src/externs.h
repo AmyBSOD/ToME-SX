@@ -1282,7 +1282,7 @@ extern void generate_spell(int plev);
 extern bool unsafe;
 extern void describe_attack_fully(int type, char* r);
 extern s16b do_poly_monster(int y, int x);
-
+extern int lithe_object_weight(object_type *o_ptr);
 
 /* spells2.c */
 extern bool remove_curse_object(object_type *o_ptr, bool all);

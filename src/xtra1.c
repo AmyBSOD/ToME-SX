@@ -1809,12 +1809,12 @@ static void calc_mana(void)
 
 	/* Weigh the armor */
 	cur_wgt = 0;
-	cur_wgt += p_ptr->inventory[INVEN_BODY].weight;
-	cur_wgt += p_ptr->inventory[INVEN_HEAD].weight;
-	cur_wgt += p_ptr->inventory[INVEN_ARM].weight;
-	cur_wgt += p_ptr->inventory[INVEN_OUTER].weight;
-	cur_wgt += p_ptr->inventory[INVEN_HANDS].weight;
-	cur_wgt += p_ptr->inventory[INVEN_FEET].weight;
+	cur_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_BODY]);
+	cur_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_HEAD]);
+	cur_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_ARM]);
+	cur_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_OUTER]);
+	cur_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_HANDS]);
+	cur_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_FEET]);
 
 	/* Determine the weight allowance */
 	max_wgt = 200 + get_skill_scale(SKILL_COMBAT, 500);
@@ -2656,6 +2656,14 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pva
 		else extra_blows += pval;
 	}
 	if (f5 & (TR5_CRIT)) p_ptr->xtra_crit += pval;
+	if (f5 & (TR5_DISARM)) p_ptr->skill_dis += pval;
+
+	if (get_skill(SKILL_DODGE))
+	{
+		if (f5 & (TR5_DODGE)) {
+			p_ptr->dodge_chance += pval;
+		}
+	}
 
 	/* Hack -- Sensible fire */
 	if (f2 & (TR2_SENS_FIRE)) p_ptr->sensible_fire = TRUE;
@@ -2846,6 +2854,9 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pva
 		p_ptr->magical_breath = TRUE;
 		p_ptr->water_breath = TRUE;
 	}
+
+	if (f5 & (TR5_SAVING_MALUS)) p_ptr->skill_sav -= 20;
+
 }
 
 /*
@@ -3049,6 +3060,8 @@ void calc_bonuses(bool silent)
 	/* Base skill -- combat (throwing) */
 	p_ptr->skill_tht = 0;
 
+	/* Base dodge chance (nonzero only if you have the skill) */
+	p_ptr->dodge_chance = 0;
 
 	/* Base skill -- digging */
 	p_ptr->skill_dig = 0;
@@ -4010,15 +4023,15 @@ void calc_bonuses(bool silent)
 		/* Get the armor weight */
 		int cur_wgt = 0;
 
-		cur_wgt += p_ptr->inventory[INVEN_BODY].weight;
-		cur_wgt += p_ptr->inventory[INVEN_HEAD].weight;
-		cur_wgt += p_ptr->inventory[INVEN_ARM].weight;
-		cur_wgt += p_ptr->inventory[INVEN_OUTER].weight;
-		cur_wgt += p_ptr->inventory[INVEN_HANDS].weight;
-		cur_wgt += p_ptr->inventory[INVEN_FEET].weight;
+		cur_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_BODY]);
+		cur_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_HEAD]);
+		cur_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_ARM]);
+		cur_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_OUTER]);
+		cur_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_HANDS]);
+		cur_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_FEET]);
 
 		/* Base dodge chance */
-		p_ptr->dodge_chance = get_skill_scale(SKILL_DODGE, 100);
+		p_ptr->dodge_chance += get_skill_scale(SKILL_DODGE, 100);
 		/* Amy edit: give martial arts bonuses only when using martial arts style, please! */
 		if (p_ptr->melee_style == SKILL_HAND) p_ptr->dodge_chance += get_skill(SKILL_HAND);
 
@@ -4781,12 +4794,12 @@ bool monk_heavy_armor(void)
 	if (p_ptr->melee_style != SKILL_HAND) return FALSE;
 
 	/* Weight the armor */
-	monk_arm_wgt += p_ptr->inventory[INVEN_BODY].weight;
-	monk_arm_wgt += p_ptr->inventory[INVEN_HEAD].weight;
-	monk_arm_wgt += p_ptr->inventory[INVEN_ARM].weight;
-	monk_arm_wgt += p_ptr->inventory[INVEN_OUTER].weight;
-	monk_arm_wgt += p_ptr->inventory[INVEN_HANDS].weight;
-	monk_arm_wgt += p_ptr->inventory[INVEN_FEET].weight;
+	monk_arm_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_BODY]);
+	monk_arm_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_HEAD]);
+	monk_arm_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_ARM]);
+	monk_arm_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_OUTER]);
+	monk_arm_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_HANDS]);
+	monk_arm_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_FEET]);
 
 	return (monk_arm_wgt > (100 + (get_skill(SKILL_HAND) * 3))) ;
 }

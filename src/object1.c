@@ -3277,6 +3277,8 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		if (f1 & (TR1_SPEED)) vp[vn++] = "speed";
 		if (f1 & (TR1_BLOWS)) vp[vn++] = "attack speed";
 		if (f5 & (TR5_CRIT)) vp[vn++] = "crit chance";
+		if (f5 & (TR5_DISARM)) vp[vn++] = "disarming";
+		if (f5 & (TR5_DODGE)) vp[vn++] = "dodging";
 		if (f5 & (TR5_LUCK)) vp[vn++] = "luck";
 		if (f1 & (TR1_SPELL)) vp[vn++] = "spell power";
 
@@ -3836,6 +3838,10 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		{
 			text_out_c(TERM_L_GREEN, "Inventory Protection.  ");
 		}
+		if (f5 & (TR5_LITHE))
+		{
+			text_out_c(TERM_L_GREEN, "It is lithe.  ");
+		}
 		if (f5 & (TR5_DEVICE_MASTERY))
 		{
 			text_out_c(TERM_L_BLUE, "Device Mastery.  ");
@@ -3847,6 +3853,10 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		if (f3 & (TR3_NO_TELE))
 		{
 			text_out_c(TERM_L_DARK, "It prevents teleportation.  ");
+		}
+		if (f5 & (TR5_SAVING_MALUS))
+		{
+			text_out_c(TERM_L_DARK, "It weakens your saving throw.  ");
 		}
 		if (f3 & (TR3_XTRA_MIGHT))
 		{

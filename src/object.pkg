@@ -181,6 +181,10 @@ static obj_theme lua_obj_theme @ theme_forge;
 #define TR5_PEACEKEEPING        0x00100000L     /* coaligned monsters are less likely to turn hostile */
 #define TR5_INV_PROTECT         0x00200000L     /* prevents fucking inventory damage if you resist an element */
 #define TR5_DEVICE_MASTERY      0x00400000L     /* can reach 0% fail when using wands/staves/rods */
+#define TR5_SAVING_MALUS        0x00800000L     /* -20% saving throw (counts as a kind of curse) */
+#define TR5_DISARM              0x01000000L     /* disarming boosted by pval */
+#define TR5_DODGE               0x02000000L     /* dodging boosted by pval */
+#define TR5_LITHE               0x04000000L     /* item weight counts as if it was less */
 
 #define ESP_ORC                 0x00000001L
 #define ESP_TROLL               0x00000002L

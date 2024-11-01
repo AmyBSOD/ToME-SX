@@ -697,10 +697,10 @@ cptr k_info_flags5[] =
 	"PEACEKEEPING",
 	"INV_PROTECT",
 	"DEVICE_MASTERY",
-	"XXX8X23",
-	"XXX8X24",
-	"XXX8X25",
-	"XXX8X26",
+	"SAVING_MALUS",
+	"DISARM",
+	"DODGE",
+	"LITHE",
 	"XXX8X27",
 	"XXX8X28",
 	"XXX8X29",
@@ -2035,8 +2035,10 @@ errr init_player_info_txt(FILE *fp, char *buf)
 			if (BODY_MAX != sscanf(buf + 4, "%d:%d:%d:%d:%d:%d",
 			                       &s[0], &s[1], &s[2], &s[3], &s[4], &s[5])) return (1);
 
-			for (z = 0; z < BODY_MAX; z++)
+			for (z = 0; z < BODY_MAX; z++) {
+
 				rp_ptr->body_parts[z] = s[z];
+			}
 
 			/* Next... */
 			continue;

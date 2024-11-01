@@ -1570,6 +1570,14 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "Your ability to score critical hits is affected by your equipment.";
 	}
+	if (f5 & (TR5_DISARM))
+	{
+		info[i++] = "Your disarming ability is affected by your equipment.";
+	}
+	if (f5 & (TR5_DODGE))
+	{
+		info[i++] = "Your dodging chance is affected by your equipment.";
+	}
 
 
 	/* Access the current weapon */
@@ -3281,6 +3289,7 @@ void curse_artifact(object_type * o_ptr)
 	if (randint(20) == 1) o_ptr-> art_flags4 |= TR4_CURSE_NO_DROP; /* muahahahaha --Amy */
 	if (randint(2) == 1) o_ptr-> art_flags3 |= TR3_TELEPORT;
 	else if (randint(3) == 1) o_ptr->art_flags3 |= TR3_NO_TELE;
+	if (randint(7) == 1) o_ptr-> art_flags5 |= TR5_SAVING_MALUS;
 	o_ptr->ident |= IDENT_CURSED;
 }
 

@@ -2173,6 +2173,7 @@ static int set_cold_destroy(object_type *o_ptr)
 
 
 
+
 /*
  * This seems like a pretty standard "typedef"
  */
@@ -9893,4 +9894,22 @@ s16b do_poly_monster(int y, int x)
 	c_ptr->m_idx = hack_m_idx;
 
 	return new_m_idx;
+}
+
+int lithe_object_weight(object_type *o_ptr)
+{
+	int lobjweight = 0;
+	u32b f1, f2, f3, f4, f5, esp;
+
+	if (!o_ptr->k_idx) return FALSE;
+
+	/* Extract the flags */
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
+	lobjweight = o_ptr->weight;
+
+	if (f5 & (TR5_LITHE)) lobjweight /= 10;
+
+	return lobjweight;
+
 }

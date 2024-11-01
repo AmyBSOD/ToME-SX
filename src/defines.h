@@ -3000,6 +3000,10 @@
 #define TR5_PEACEKEEPING        0x00100000L     /* coaligned monsters are less likely to turn hostile */
 #define TR5_INV_PROTECT         0x00200000L     /* prevents fucking inventory damage if you resist an element */
 #define TR5_DEVICE_MASTERY      0x00400000L     /* can reach 0% fail when using wands/staves/rods */
+#define TR5_SAVING_MALUS        0x00800000L     /* -20% saving throw (counts as a kind of curse) */
+#define TR5_DISARM              0x01000000L     /* disarming boosted by pval */
+#define TR5_DODGE               0x02000000L     /* dodging boosted by pval */
+#define TR5_LITHE               0x04000000L     /* item weight counts as if it was less */
 
 /* ESP defines */
 #define ESP_ORC                 0x00000001L
@@ -3031,7 +3035,7 @@
      TR1_SPEED | TR1_BLOWS | TR1_SPELL)
 
 #define TR5_PVAL_MASK   \
-	(TR5_CRIT | TR5_LUCK)
+	(TR5_CRIT | TR5_LUCK | TR5_DISARM | TR5_DODGE)
 
 
 /*** Ego flags ***/
