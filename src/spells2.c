@@ -4335,6 +4335,8 @@ bool proof_item(int prooftype)
 
 	char o_name[80];
 
+	int proofchance = 100;
+
 	cptr q, s;
 
 	/* Get an item */
@@ -4355,8 +4357,11 @@ bool proof_item(int prooftype)
 	/* Description */
 	object_desc(o_name, o_ptr, FALSE, 3);
 
+	/* stacks can resist, more often the more items you try to proof at once --Amy */
 	if (o_ptr->number > 1) {
-		if (randint(o_ptr->number) != 1) {
+		proofchance = 80 + (o_ptr->number * 20);
+
+		if (randint(proofchance) > 100) {
 			msg_print("The proofing attempt failed.");
 			return TRUE; /* scroll will be used up */
 		}
