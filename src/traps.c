@@ -2362,7 +2362,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		ident = player_handle_breath_trap(1, GF_NUKE, trap);
 		break;
 	case TRAP_OF_DEATH_RAY:
-		ident = player_handle_breath_trap(1, GF_DEATH_RAY, trap);
+		ident = player_handle_breath_trap(0, GF_DEATH_RAY, trap);
 		break;
 	case TRAP_OF_HOLY_FIRE:
 		ident = player_handle_breath_trap(1, GF_HOLY_FIRE, trap);
