@@ -21,7 +21,7 @@ G:k:+1000:+0:Spell-learning
 G:k:+0:+1000:Four-dimensional
 G:k:+0:+500:Prayer
 G:k:+0:+400:Udun
-G:k:+1000:+1000:Magic-Device
+G:k:+1000:+500:Magic-Device
 
 ##############################################################################
 ##############################################################################
@@ -253,7 +253,7 @@ C:a:k:+0:-300:Disarming
 C:a:k:+0:+400:Magic
 C:a:k:-1000:+0:Spirituality
 C:a:k:=0:=0:Antimagic
-C:a:k:+0:-650:Magic-Device
+C:a:k:+0:-350:Magic-Device
 C:a:k:+1000:+600:Demonology
 C:a:k:+1000:+600:Necromancy
 C:a:k:+1000:+600:Mindcraft
@@ -301,7 +301,7 @@ C:a:k:+0:-100:Combat
 C:a:k:=0:=0:Antimagic
 C:a:k:=0:=0:Archery
 C:a:k:+1000:+800:Magic
-C:a:k:+0:-550:Magic-Device
+C:a:k:+0:-300:Magic-Device
 C:a:k:+0:+700:Divination
 C:a:k:+1000:+600:Conveyance
 C:a:k:+0:+600:Nature
@@ -570,7 +570,7 @@ C:a:g:All Gods
 C:a:N:Cosmic Mage
 C:a:D:The most potent of magics lie open to the Cosmic Mage, who needs no
 C:a:D:magical books to access potent magics.
-C:a:k:+0:-400:Magic-Device
+C:a:k:+0:-250:Magic-Device
 C:a:k:=0:=0:Weaponmastery
 C:a:k:=0:=0:Combat
 C:a:k:+0:+300:Magic
@@ -967,7 +967,7 @@ C:a:k:+0:+300:Divination
 C:a:k:+0:+500:Temporal
 C:a:k:+1000:+700:Conveyance
 C:a:k:+0:+300:Magic
-C:a:k:+0:-300:Magic-Device
+C:a:k:+0:-200:Magic-Device
 C:a:k:+1000:+500:Ranged-power
 C:a:O:19:12:1d1
 C:a:O:19:2:1d1
@@ -1097,7 +1097,7 @@ C:a:k:+0:+500:Stealth
 C:a:k:+0:-1000:Disarming
 C:a:k:+0:+1000:Backstab
 C:a:k:+0:-1800:Stealing
-C:a:k:+0:-800:Magic-Device
+C:a:k:+0:-400:Magic-Device
 
 C:a:N:Chemist
 C:a:D:Chemists have discovered that mixing essences can be a quick and dirty
@@ -1107,7 +1107,7 @@ C:a:k:+0:-500:Disarming
 C:a:k:+0:-500:Stealth
 C:a:k:+0:-1000:Stealing
 C:a:k:+0:+100:Magic
-C:a:k:+0:-300:Magic-Device
+C:a:k:+0:-150:Magic-Device
 C:a:b:1:Trapping
 C:a:O:31:1:1d1
 C:a:O:23:4:1d1
@@ -1130,7 +1130,7 @@ C:a:k:+0:+500:Stealth
 C:a:k:+0:-1500:Disarming
 C:a:k:+0:+700:Backstab
 C:a:k:+0:-1000:Stealing
-C:a:k:+0:-200:Magic-Device
+C:a:k:+0:-100:Magic-Device
 C:a:O:23:4:1d1
 C:a:g:All Gods
 
@@ -1151,7 +1151,7 @@ C:a:k:+0:+1000:Stealth
 C:a:k:+0:-1500:Disarming
 C:a:k:+0:+1000:Backstab
 C:a:k:=0:=0:Stealing
-C:a:k:+0:-800:Magic-Device
+C:a:k:+0:-400:Magic-Device
 C:a:g:All Gods
 
 C:a:N:Reaper
@@ -1189,7 +1189,7 @@ C:a:k:+0:+500:Stealth
 C:a:k:+0:-500:Stealing
 C:a:b:1:Trapping
 C:a:b:10:Ammo creation
-C:a:k:+1000:-550:Magic-Device
+C:a:k:+1000:-250:Magic-Device
 C:a:O:46:1:3d1
 C:a:O:46:4:1d1
 C:a:O:16:1:6d6
@@ -1242,7 +1242,7 @@ C:a:k:+0:-500:Sneakiness
 C:a:k:=0:=0:Stealth
 C:a:k:+0:-500:Disarming
 C:a:k:+0:-500:Backstab
-C:a:k:=0:-1050:Magic-Device
+C:a:k:=0:-450:Magic-Device
 C:a:k:+1000:+600:Summoning
 C:a:k:+1000:+700:Corpse-preservation
 
@@ -1252,7 +1252,7 @@ C:a:D:not so good at sneaking, and always chalange enemies directly.
 C:a:k:+0:+700:Sword-mastery
 C:a:k:+0:+200:Critical-hits
 C:a:k:+0:+100:Magic
-C:a:k:+0:-350:Magic-Device
+C:a:k:+0:-200:Magic-Device
 C:a:k:+0:+100:Conveyance
 C:a:k:+0:+100:Temporal
 C:a:k:+0:+100:Divination
@@ -1728,7 +1728,7 @@ C:a:D:unprepared for the harsh relaties of Middle-earth.
 C:a:k:+0:-700:Monster-lore
 C:a:k:=0:=0:Prayer
 C:a:k:+0:+200:Antimagic
-C:a:k:-1000:-500:Magic-Device
+C:a:k:-1000:-300:Magic-Device
 C:a:k:-1000:-450:Combat
 C:a:k:+0:-600:Weaponmastery
 C:a:k:+0:+300:Dodging
