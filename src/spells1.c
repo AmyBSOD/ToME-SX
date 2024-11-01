@@ -8524,6 +8524,18 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 		{
 			if (fuzzy) msg_print("You are hit by pure psionic energy!");
 			set_tim_esp(p_ptr->tim_esp + dam);
+			take_hit(dam, killer);
+			break;
+		}
+
+	case GF_PSI_DRAIN:
+		{
+			if (fuzzy) msg_print("You are hit by psionic drain!");
+			take_hit(dam, killer);
+			p_ptr->csp -= dam;
+			if (p_ptr->csp < 0) p_ptr->csp = 0;
+			p_ptr->redraw |= (PR_MANA);
+			p_ptr->window |= (PW_PLAYER);
 			break;
 		}
 
