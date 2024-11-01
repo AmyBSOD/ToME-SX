@@ -2572,6 +2572,13 @@
 #define TRAP_OF_HEAVY_CURSE               188
 #define TRAP_OF_PRIME_CURSE               189
 
+#define TRAP_OF_WEAKNESS_IV               190
+#define TRAP_OF_INTELLIGENCE_IV           191
+#define TRAP_OF_WISDOM_IV                 192
+#define TRAP_OF_FUMBLING_IV               193
+#define TRAP_OF_WASTING_IV                194
+#define TRAP_OF_BEAUTY_IV                 195
+
 /*** General index values ***/
 
 

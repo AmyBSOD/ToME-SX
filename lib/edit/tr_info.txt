@@ -888,6 +888,36 @@ I:5:10:0:12:70:0d0:y
 D:Your equipment becomes permanently cursed.
 F:FLOOR | CHEST | DOOR
 
+N:190:Unresistable Weakness Trap
+I:10:100:5:8:60:0d0:b
+D:A poisoned needle totally weakens you!
+F:FLOOR | CHEST | DOOR
+
+N:191:Unresistable Intelligence Trap
+I:10:100:5:8:60:0d0:b
+D:A poisoned needle makes you feel totally stupid!
+F:FLOOR | CHEST | DOOR
+
+N:192:Unresistable Wisdom Trap
+I:10:100:5:8:60:0d0:b
+D:A poisoned needle makes you feel totally naive!
+F:FLOOR | CHEST | DOOR
+
+N:193:Unresistable Fumbling Fingers Trap
+I:10:100:5:8:60:0d0:b
+D:A poisoned needle makes you feel totally clumsy!
+F:FLOOR | CHEST | DOOR
+
+N:194:Unresistable Wasting Trap
+I:10:100:5:8:60:0d0:b
+D:A poisoned needle makes you feel totally sickly!
+F:FLOOR | CHEST | DOOR
+
+N:195:Unresistable Beauty Trap
+I:10:100:5:8:60:0d0:b
+D:A poisoned needle scars you totally!
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

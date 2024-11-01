@@ -2629,7 +2629,7 @@ bool dec_stat(int stat, int amount, int mode)
 	}
 
 	/* Damage "max" value */
-	if ((mode == STAT_DEC_PERMANENT) && (max > 3))
+	if (( (mode == STAT_DEC_PERMANENT) || (mode == STAT_DEC_PERMANENT_NORESIST)) && (max > 3))
 	{
 		/* Handle "low" values */
 		if (max <= 18)

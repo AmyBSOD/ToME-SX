@@ -682,6 +682,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_WEAKNESS_III:
 		ident = do_dec_stat(A_STR, STAT_DEC_PERMANENT);
 		break;
+	case TRAP_OF_WEAKNESS_IV:
+		ident = do_dec_stat(A_STR, STAT_DEC_PERMANENT_NORESIST);
+		break;
 	case TRAP_OF_INTELLIGENCE_I:
 		ident = do_dec_stat(A_INT, STAT_DEC_TEMPORARY);
 		break;
@@ -690,6 +693,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		break;
 	case TRAP_OF_INTELLIGENCE_III:
 		ident = do_dec_stat(A_INT, STAT_DEC_PERMANENT);
+		break;
+	case TRAP_OF_INTELLIGENCE_IV:
+		ident = do_dec_stat(A_INT, STAT_DEC_PERMANENT_NORESIST);
 		break;
 	case TRAP_OF_WISDOM_I:
 		ident = do_dec_stat(A_WIS, STAT_DEC_TEMPORARY);
@@ -700,6 +706,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_WISDOM_III:
 		ident = do_dec_stat(A_WIS, STAT_DEC_PERMANENT);
 		break;
+	case TRAP_OF_WISDOM_IV:
+		ident = do_dec_stat(A_WIS, STAT_DEC_PERMANENT_NORESIST);
+		break;
 	case TRAP_OF_FUMBLING_I:
 		ident = do_dec_stat(A_DEX, STAT_DEC_TEMPORARY);
 		break;
@@ -708,6 +717,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		break;
 	case TRAP_OF_FUMBLING_III:
 		ident = do_dec_stat(A_DEX, STAT_DEC_PERMANENT);
+		break;
+	case TRAP_OF_FUMBLING_IV:
+		ident = do_dec_stat(A_DEX, STAT_DEC_PERMANENT_NORESIST);
 		break;
 	case TRAP_OF_WASTING_I:
 		ident = do_dec_stat(A_CON, STAT_DEC_TEMPORARY);
@@ -718,6 +730,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_WASTING_III:
 		ident = do_dec_stat(A_CON, STAT_DEC_PERMANENT);
 		break;
+	case TRAP_OF_WASTING_IV:
+		ident = do_dec_stat(A_CON, STAT_DEC_PERMANENT_NORESIST);
+		break;
 	case TRAP_OF_BEAUTY_I:
 		ident = do_dec_stat(A_CHR, STAT_DEC_TEMPORARY);
 		break;
@@ -726,6 +741,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		break;
 	case TRAP_OF_BEAUTY_III:
 		ident = do_dec_stat(A_CHR, STAT_DEC_PERMANENT);
+		break;
+	case TRAP_OF_BEAUTY_IV:
+		ident = do_dec_stat(A_CHR, STAT_DEC_PERMANENT_NORESIST);
 		break;
 
 		/* Trap of Curse Weapon */
