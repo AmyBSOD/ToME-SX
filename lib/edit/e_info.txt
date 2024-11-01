@@ -3690,6 +3690,17 @@ F:HOLD_LIFE
 R:22
 F:DEX
 
+# Potions
+N:298:Coldproof
+X:B:0:1
+T:71:0:255
+T:72:0:255
+W:0:1:10:1000
+C:0:0:0:0
+R:100
+F:IGNORE_COLD
+f:IGNORE_COLD
+
 # N: serial number : ego type
 # D: description
 # T: tval : min sval : max sval
