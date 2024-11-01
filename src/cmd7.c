@@ -7105,7 +7105,10 @@ void do_cmd_summoner_extract()
 
 	if (r_info[o_ptr->pval2].flags1 & RF1_UNIQUE)
 	{
-		partial = FALSE;
+		/* muahahahaha --Amy :-P */
+		msg_print("Sorry. You cannot turn bosses into totems. Game balance and all.");
+		msg_print(NULL);
+		return;
 	}
 	else
 	{
@@ -7279,6 +7282,8 @@ void do_cmd_summoner_summon()
 
 	monster_type *m_ptr;
 
+	bool used = FALSE;
+
 
 	/* Which Totem? */
 	item_tester_tval = TV_TOTEM;
@@ -7344,6 +7349,30 @@ void do_cmd_summoner_summon()
 	/* Mark the monster as a "partial" ally */
 	m_ptr = &m_list[m_idx];
 	m_ptr->mflag |= MFLAG_PARTIAL | MFLAG_NO_DROP;
+
+	/* summoning shouldn't be completely endless --Amy */
+	if (randint(100) == 1) used = TRUE;
+
+	/* Destroy the totem if the used flag is set */
+	if (used)
+	{
+		/* Eliminate the totem (from the pack) */
+		if (item >= 0)
+		{
+			inven_item_increase(item, -1);
+			inven_item_describe(item);
+			inven_item_optimize(item);
+		}
+
+		/* Eliminate the totem (from the floor) */
+		else
+		{
+			floor_item_increase(0 - item, -1);
+			floor_item_describe(0 - item);
+			floor_item_optimize(0 - item);
+		}
+	}
+
 }
 
 
