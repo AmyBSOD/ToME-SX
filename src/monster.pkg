@@ -931,6 +931,10 @@ static monster_type lua_monster_forge @ monster_forge;
  * @note IM melee 
  */
 #define RF7_IM_MELEE            0x00100000  
+/** @def RF7_REVBOSS
+ * @note Monster is reviving boss 
+ */
+#define RF7_REVBOSS              0x00200000  
 /** @} */
 
 /** @name Race flags #8

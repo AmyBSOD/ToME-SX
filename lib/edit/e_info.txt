@@ -3851,6 +3851,24 @@ R:100
 F:DODGE
 f:DODGE
 
+N:309:*Lithe*
+X:B:0:1
+T:30:0:255
+T:31:0:255
+T:32:0:255
+T:33:0:255
+T:34:0:255
+T:35:0:255
+T:36:0:255
+T:37:0:255
+T:38:0:255
+T:115:56:57
+W:50:5:50:8000
+C:0:0:0:2
+R:100
+F:LITHE | DEX | FEATHER
+f:LITHE | DEX | FEATHER
+
 # N: serial number : ego type
 # D: description
 # T: tval : min sval : max sval

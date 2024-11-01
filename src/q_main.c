@@ -176,7 +176,13 @@ bool quest_sauron_resurect_hook(char *fmt)
 	monster_type *m_ptr = &m_list[m_idx];
 	monster_race *r_ptr = &r_info[m_ptr->r_idx];
 
-	if ((r_ptr->flags7 & RF7_NAZGUL) && r_info[860].max_num)
+	/* some bosses don't die for real as long as Morgy is alive, but don't actually have nazgul properties --Amy */
+	if ((r_ptr->flags7 & RF7_REVBOSS) && r_info[862].max_num)
+	{
+		msg_format("Somehow you feel %s is not totally destroyed...", (r_ptr->flags1 & RF1_FEMALE ? "she" : "he"));
+		r_ptr->max_num = 1;
+	}
+	else if ((r_ptr->flags7 & RF7_NAZGUL) && r_info[860].max_num)
 	{
 		msg_format("Somehow you feel %s is not totally destroyed...", (r_ptr->flags1 & RF1_FEMALE ? "she" : "he"));
 		r_ptr->max_num = 1;

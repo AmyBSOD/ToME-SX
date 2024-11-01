@@ -380,7 +380,7 @@ static cptr r_info_flags7[] =
 	"NO_THEFT",
 	"SPIRIT",
 	"IM_MELEE",
-	"XXX7X21",
+	"REVBOSS",
 	"XXX7X22",
 	"XXX7X23",
 	"XXX7X24",

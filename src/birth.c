@@ -1293,6 +1293,9 @@ static void gen_random_quests(int n)
 			/* Refuse nazguls */
 			if (r_ptr->flags7 & RF7_NAZGUL) continue;
 
+			/* Refuse reviving bosses */
+			if (r_ptr->flags7 & RF7_REVBOSS) continue;
+
 			/* Accept only monsters that are not good */
 			/*if (r_ptr->flags3 & RF3_GOOD) continue;*/
 

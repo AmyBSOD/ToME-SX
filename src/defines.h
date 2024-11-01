@@ -3472,6 +3472,7 @@
 #define RF7_NO_THEFT		0x00040000  /* Monster is immune to theft */
 #define RF7_SPIRIT		0x00080000  /* This is a Spirit, coming from the Void */
 #define RF7_IM_MELEE            0x00100000  /* IM melee */
+#define RF7_REVBOSS             0x00200000  /* Boss monster doesn't die while Morgy is alive */
 
 
 /*
