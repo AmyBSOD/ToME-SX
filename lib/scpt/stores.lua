@@ -300,6 +300,18 @@ store_buy_list
 		TV_DRUID_BOOK,
 		TV_INSTRUMENT,
 	},
+	["Type of Arms"] =
+	{
+		TV_BOOTS,
+		TV_GLOVES,
+		TV_CROWN,
+		TV_HELM,
+		TV_SHIELD,
+		TV_CLOAK,
+		TV_SOFT_ARMOR,
+		TV_HARD_ARMOR,
+		TV_DRAG_ARMOR,
+	},
 	["Pet Shop"] =
 	{
 		TV_EGG,

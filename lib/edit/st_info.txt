@@ -802,6 +802,30 @@ F:RANDOM | SHALLOW_LEVEL | DEPEND_LEVEL
 F:VERY_RARE
 W:255
 
+N:63:Type of Arms
+T:100:30:256
+T:100:30:256
+T:100:31:256
+T:100:31:256
+T:100:32:256
+T:100:32:256
+T:100:33:256
+T:100:34:256
+T:100:34:256
+T:100:35:256
+T:100:35:256
+T:100:36:256
+T:100:36:256
+T:100:37:256
+T:100:37:256
+T:10:38:256
+A:0:0:1:2:3:4
+O:8:9:10:11
+G:2:u
+F:RANDOM | DEPEND_LEVEL
+F:COMMON
+W:255
+
 # N:<index>:<name>
 # I:<proba>:<item name> - for making the store sell a specific item
 # T:<proba>:<tval>:<sval> - for making the store sell a TV_something item class (sval 256 = wildcard?)
