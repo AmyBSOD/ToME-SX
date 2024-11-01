@@ -299,7 +299,8 @@ bool create_artifact(object_type *o_ptr, bool a_scroll, bool get_name)
 
 	if ((!a_cursed) && (randint(30) == 1)) powers *= 2;
 
-	if (a_cursed) powers /= 2;
+	/* cursed randarts should have more, not less powers, to make them worth using --Amy */
+	if (a_cursed) powers *= 2;
 
 	/* Amy edit: randarts should be a bit better! */
 	powers += randint(4);

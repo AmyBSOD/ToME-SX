@@ -3278,6 +3278,7 @@ void curse_artifact(object_type * o_ptr)
 	if (randint(2) == 1) o_ptr-> art_flags3 |= TR3_AGGRAVATE;
 	if (randint(3) == 1) o_ptr-> art_flags3 |= TR3_DRAIN_EXP;
 	if (randint(3) == 1) o_ptr-> art_flags4 |= TR4_BLACK_BREATH;
+	if (randint(20) == 1) o_ptr-> art_flags4 |= TR4_CURSE_NO_DROP; /* muahahahaha --Amy */
 	if (randint(2) == 1) o_ptr-> art_flags3 |= TR3_TELEPORT;
 	else if (randint(3) == 1) o_ptr->art_flags3 |= TR3_NO_TELE;
 	o_ptr->ident |= IDENT_CURSED;
