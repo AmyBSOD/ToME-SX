@@ -7081,8 +7081,8 @@ bool level_generate_dungeon(cptr name)
 		build_cavern();
 	}
 
-	/* Possible "destroyed" level */
-	if ((dun_level > 10) && (rand_int(DUN_DEST) == 0))
+	/* Possible "destroyed" level - Amy: can be at dlvl1 now, doesn't need 11 or higher anymore */
+	if ((dun_level > 0) && (rand_int(DUN_DEST) == 0))
 	{
 		destroyed = TRUE;
 	}
@@ -7151,7 +7151,7 @@ bool level_generate_dungeon(cptr name)
 		}
 
 		/* Destroyed levels are boring */
-		if (destroyed)
+		if (destroyed && (randint(5) != 1) )
 		{
 			/* The deeper you are, the more cavelike the rooms are */
 
@@ -7179,7 +7179,7 @@ bool level_generate_dungeon(cptr name)
 		}
 
 		/* Attempt an "unusual" room -- no vaults on town levels */
-		if (!town_level &&
+		if (!(town_level && (randint(2) != 1) ) &&
 		                (ironman_rooms || (rand_int(DUN_UNUSUAL) < dun_level)))
 		{
 			/* Roll for room type */
