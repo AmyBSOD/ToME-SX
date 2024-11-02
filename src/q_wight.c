@@ -61,8 +61,11 @@ bool quest_wight_gen_hook(char *fmt)
 					                       TR3_IGNORE_FIRE | TR3_IGNORE_COLD | TR3_SEE_INVIS);
 
 					/* For game balance... */
-					q_ptr->art_flags3 |= (TR3_CURSED | TR3_HEAVY_CURSE);
+					q_ptr->art_flags3 |= (TR3_CURSED | TR3_HEAVY_CURSE | TR3_DRAIN_EXP | TR3_AUTO_CURSE | TR3_AGGRAVATE);
 					q_ptr->ident |= IDENT_CURSED;
+
+					q_ptr->art_flags4 |= (TR4_BLACK_BREATH);
+					q_ptr->art_flags5 |= (TR5_SAVING_MALUS);
 
 					if (randint(2) == 1)
 					{

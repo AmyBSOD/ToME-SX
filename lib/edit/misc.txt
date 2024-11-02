@@ -40,7 +40,7 @@ M:F:257
 M:a:1000
 
 # Maximum number of artifacts in a_info.txt
-M:A:269
+M:A:296
 
 # Maximum number of sets types in set_info.txt
 M:s:10

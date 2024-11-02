@@ -169,12 +169,10 @@ N:10:of Power 'Narya'
 I:45:34:1
 W:70:30:2:100000
 P:0:1d1:6:6:0
-F:STR | INT | WIS | DEX | CON | CHR | SPEED | HIDE_TYPE | LUCK
-F:ACTIVATE | FREE_ACT | SEE_INVIS | 
+F:STR | INT | WIS | DEX | CON | CHR | HIDE_TYPE
+F:FREE_ACT | 
 F:SUST_STR | SUST_CON | SUST_WIS | SUST_CHR | SPECIAL_GENE |
-F:IM_FIRE | RES_NETHER | RES_FEAR | REGEN | 
 F:INSTA_ART
-a:HARDCORE=NARYA
 D:The Ring of Fire, set with a ruby that glows like flame.  Narya is one 
 D:of the three Rings of Power created by the Elves and hidden by them from 
 D:Sauron.
@@ -274,10 +272,8 @@ I:38:6:0
 W:90:9:500:400000
 P:30:2d4:-4:0:25
 F:FREE_ACT | IM_ELEC | SPECIAL_GENE |
-F:RES_FIRE | RES_COLD | RES_POIS | RES_LITE | RES_DARK | 
-F:LITE1 | SEE_INVIS | AGGRAVATE | ESP_DRAGON
-F:ACTIVATE
-a:HARDCORE=RAZORBACK
+F:RES_FIRE | RES_COLD | RES_POIS | 
+F:LITE1 | SEE_INVIS | AGGRAVATE | 
 D:A massive suit of heavy dragon scales deeply saturated with many colors.  
 D:It throbs with angry energies, and you feel the raw elemental might of 
 D:untamed Lightning as you put it on.
@@ -439,8 +435,8 @@ N:27:of Trone
 I:36:16:4
 W:30:3:80:65000
 P:9:0d0:0:0:20
-F:REFLECT | RES_NEXUS | SH_FIRE | FLY | SPECIAL_GENE | 
-F:STEALTH | ESP_THUNDERLORD | CON | INT | SPEED | 
+F:SH_FIRE | FLY | SPECIAL_GENE | 
+F:STEALTH | ESP_THUNDERLORD | 
 F:RES_ACID | RES_ELEC | IM_FIRE | RES_COLD
 D:The flying suit of Trone.  It protects the user from fire and 
 D:imps are said to be less annoying with this on.
@@ -452,8 +448,8 @@ N:28:'Thalkettoth'
 I:36:11:3
 W:20:3:60:25000
 P:11:1d1:-1:0:25
-F:DEX | SPEED | HIDE_TYPE | SPECIAL_GENE |
-F:RES_ACID | RES_SHARDS
+F:DEX | HIDE_TYPE | SPECIAL_GENE |
+F:RES_ACID |
 D:A tunic and skirt sewn with thick, overlapping scales of hardened 
 D:leather whose wearer moves with agility and assurance.
 
@@ -583,13 +579,11 @@ D:understanding.
 # The Steel Helm of Hammerhand
 
 N:38:of Hammerhand
-I:32:6:3
+I:32:6:2
 W:20:2:60:45000
 P:6:1d3:0:0:20
 F:STR | DEX | CON | HIDE_TYPE | SPECIAL_GENE | RES_FEAR | 
 F:SUST_STR | SUST_DEX | SUST_CON | 
-F:RES_ACID | RES_NEXUS | RES_COLD | RES_DARK | SLOW_DIGEST | 
-Z:berserk
 D:A great helm as steady as the heroes of the Westdike. Mighty were the 
 D:blows of Helm, the Hammerhand!
 
@@ -739,9 +733,8 @@ N:49:of Luthien
 I:35:6:2
 W:40:40:5:55000
 P:6:0d0:0:0:20
-F:INT | WIS | CHR | HIDE_TYPE | SPEED | STEALTH | INVIS | LUCK
-F:RES_ACID | RES_FIRE | RES_COLD | SPECIAL_GENE | ACTIVATE | SPELL_CONTAIN | WIELD_CAST
-a:HARDCORE=REST_LIFE
+F:HIDE_TYPE | STEALTH | 
+F:RES_ACID | RES_FIRE | RES_COLD | SPECIAL_GENE | SPELL_CONTAIN | WIELD_CAST
 D:The opaque midnight folds, inset with a multitude of tiny diamonds, of 
 D:this cloak swirl around you and you feel a hint, a fragment of the 
 D:knowledge and power to restore that lay in Luthien, the most beautiful 
@@ -788,9 +781,8 @@ N:53:'Cammithrim'
 I:31:1:0
 W:10:3:5:30000
 P:1:0d0:0:0:10
-F:FREE_ACT | RES_LITE | SUST_CON | LITE1 | ACTIVATE
+F:FREE_ACT | LITE1 |
 F:SPECIAL_GENE
-a:HARDCORE=BO_MISS_1
 D:These gloves glow so brightly as to light the way for their owner and cast 
 D:magical bolts with great frequency.
 
@@ -931,11 +923,11 @@ D:feared especially by the wyrmkin.
 # The Main Gauche of Maedhros
 
 N:64:of Maedhros
-I:23:5:3
+I:23:5:2
 W:15:30:30:22500
 P:0:2d5:12:15:0
-F:INT | DEX | HIDE_TYPE | SPEED | SPECIAL_GENE
-F:SLAY_TROLL | SLAY_GIANT | FREE_ACT | SEE_INVIS | SHOW_MODS
+F:DEX | HIDE_TYPE | SPECIAL_GENE
+F:SLAY_TROLL | SLAY_GIANT | SHOW_MODS
 D:A short thrusting blade with a large guard worn by Maedhros the Tall, 
 D:eldest son of Feanor, and wielded with his left hand after the loss of 
 D:his right hand in the pits of Thangorodrim.
@@ -1056,9 +1048,9 @@ N:73:'Glamdring'
 I:23:16:1
 W:20:20:150:40000
 P:0:2d5:10:15:0
-F:SEARCH | HIDE_TYPE | BLESSED | SLAY_DEMON | 
-F:SLAY_EVIL | BRAND_FIRE | SLAY_ORC | RES_FIRE | RES_LITE | LITE1 | 
-F:SLOW_DIGEST | SHOW_MODS | ESP_ORC | SPECIAL_GENE |
+F:HIDE_TYPE | SLAY_DEMON | 
+F:SLAY_EVIL | SLAY_ORC | RES_FIRE | RES_LITE | LITE1 | 
+F:SHOW_MODS | ESP_ORC | SPECIAL_GENE |
 D:This fiery, shining blade earned its sobriquet "Foe-Hammer" from dying orcs 
 D:who dared to come near hidden Gondolin.
 
@@ -1314,10 +1306,10 @@ N:91:'Doomcaller'
 I:23:30:0
 W:70:25:180:250000
 P:0:6d5:18:28:-50
-F:KILL_DRAGON | SLAY_ANIMAL | SLAY_EVIL | BRAND_COLD | SLAY_TROLL | 
-F:SLAY_ORC | FREE_ACT | RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | 
-F:RES_CHAOS | SEE_INVIS | ESP_EVIL | AGGRAVATE | SHOW_MODS | 
-F:CHAOTIC | VORPAL | BRAND_FIRE | BRAND_POIS | SPECIAL_GENE
+F:SLAY_DRAGON | SLAY_ANIMAL | SLAY_EVIL | SLAY_TROLL | 
+F:SLAY_ORC | RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | 
+F:SEE_INVIS | AGGRAVATE | SHOW_MODS | 
+F:CHAOTIC | SPECIAL_GENE
 D:This weapon of wrath, cursed with a violent anger, dives hungrily 
 D:into the flesh of its enemies. It gathers shadows of death into its 
 D:owner as they inflict wounds that will never heal.
@@ -2143,9 +2135,8 @@ N:149:of Farmer Maggot
 I:19:2:2
 W:10:10:5:20000
 P:0:0d0:20:0:0
-F:INFRA | SEARCH | HIDE_TYPE | 
-F:XTRA_SHOTS | SHOW_MODS | ACTIVATE | SPECIAL_GENE
-a:SPELL=Artifact Maggot
+F:INFRA | HIDE_TYPE | 
+F:SHOW_MODS | SPECIAL_GENE
 D:This ordinary seeming leather sling has been raised to legendary 
 D:status amongst generations of hobbit children.  Farmer Maggot's 
 D:ability to notice and strike any mushroom thief anywhere within 
@@ -2203,11 +2194,11 @@ D:is perfect against the terrible powers of Morgoth.
 # The Soft Leather Armour of the Sandworm
 
 N:153:of the Sandworm
-I:36:4:5
+I:36:4:3
 W:30:3:80:65000
 P:30:0d0:0:0:0
-F:RES_POIS | RES_ELEC | RES_FIRE | RES_ACID | SPECIAL_GENE
-F:TUNNEL | STR | STEALTH | INFRA | ESP_ANIMAL
+F:RES_POIS | RES_ELEC | RES_FIRE | SPECIAL_GENE
+F:STR | STEALTH |
 D:This powerful piece of armor was made using the remains of 
 D:the Sandworm Queen.
 
@@ -2290,11 +2281,11 @@ D:delivers a chill of death to its victims.
 # The Iron Helm of Knowledge
 
 N:160:of Knowledge
-I:32:5:-6
+I:32:5:-10
 W:20:5:75:100000
 P:6:1d3:0:0:20
-F:LITE1 | HIDE_TYPE | SPECIAL_GENE | LUCK |
-F:AUTO_ID | ACTIVATE
+F:LITE1 | HIDE_TYPE | SPECIAL_GENE | LUCK | AUTO_CURSE | 
+F:AUTO_ID | ACTIVATE | TY_CURSE | CURSE_NO_DROP | SAVING_MALUS | 
 a:HARDCORE=KNOWLEDGE
 D:This helm, designed by Petty-Dwarves ages ago to act as the brain of a 
 D:long lost project, is made of finest glass.  Its light banishes all secrets, 
@@ -2896,11 +2887,11 @@ D:particular Palantir.
 # The Ring of Phasing
 
 N:203:of Phasing
-I:45:55:15
+I:45:55:5
 W:110:0:2:3000000
 P:0:1d1:0:0:0
-F:SPEED | SEE_INVIS | LUCK | MAGIC_BREATH
-F:CURSED | HEAVY_CURSE | REGEN
+F:SEE_INVIS | LUCK | MAGIC_BREATH | 
+F:CURSED | HEAVY_CURSE | AUTO_CURSE | TY_CURSE | 
 F:WRAITH | IM_NETHER | DRAIN_EXP | HOLD_LIFE | SPECIAL_GENE |
 F:INSTA_ART
 Z:teleport
@@ -2916,11 +2907,10 @@ D:this ring as far from you as possible.
 N:204:'Toris Mejistos'
 I:40:18:2
 W:50:10:3:60000
-Z:restore life
-F:INT | WIS | HIDE_TYPE | MANA | LUCK
-F:SUST_INT | SUST_WIS | LITE1 | REGEN
-F:SLOW_DIGEST | AUTO_CURSE | HEAVY_CURSE
-F:ESP_GOOD | ESP_EVIL | HOLD_LIFE
+F:INT | WIS | HIDE_TYPE | 
+F:SUST_INT | SUST_WIS | LITE1 | 
+F:AUTO_CURSE | HEAVY_CURSE
+F:HOLD_LIFE | 
 F:INSTA_ART | SPECIAL_GENE | WATER_BREATH
 F:SPELL_CONTAIN | WIELD_CAST
 D:A blue stone, with an incredible number of incredibly small runes of power 
@@ -2933,10 +2923,9 @@ N:205:of Durin
 I:45:57:2
 W:70:70:2:65000
 F:CON | CHR | STR | SUST_CHR | SUST_CON | SUST_STR | HIDE_TYPE | 
-F:ESP_EVIL | AGGRAVATE | HEAVY_CURSE | HOLD_LIFE | DRAIN_EXP | 
-F:RES_DARK | RES_CHAOS | RES_NETHER | RES_COLD | RES_ACID | 
+F:AGGRAVATE | HEAVY_CURSE | DRAIN_EXP | 
+F:RES_COLD | RES_ACID | 
 F:INSTA_ART | SPECIAL_GENE | CURSED
-Z:Midas touch
 D:The greatest of the Seven Rings of the Dwarf-lords, and the last to be 
 D:lost.  Alone among the Seven, it was not taken by Sauron when he made 
 D:war on the Elves, but was given as a gift from Celebrimbor to King Durin 
@@ -3054,11 +3043,11 @@ D:them swiftly.
 # The Mage Staff of Forochel
 
 N:213:of Forochel
-I:6:1:3
+I:6:1:2
 W:65:70:60:60000
 P:0:3d4:-12:-8:0
-F:INT | WIS | MANA | SPELL | INFRA | SEE_INVIS |
-F:SUST_INT | SUST_WIS | RES_BLIND | IM_COLD | SENS_FIRE |
+F:INT | WIS | MANA | SPELL | 
+F:SUST_INT | SUST_WIS | SENS_FIRE |
 F:SPECIAL_GENE | WIELD_CAST |
 F:COULD2H
 f:COULD2H
@@ -3070,10 +3059,10 @@ D:While you hold it, your mind feels as clear as the winter sky.
 # The Elven Cloak of Mellyrn
 
 N:214:of Mellyrn
-I:35:2:4
+I:35:2:2
 W:40:40:5:65000
 P:4:0d0:0:0:20
-F:HIDE_TYPE | INVIS | DEX |  SPEED | STEALTH | LUCK |
+F:HIDE_TYPE | INVIS | DEX | STEALTH | 
 F:SUST_DEX | RES_LITE | RES_DARK | SPECIAL_GENE
 D:Bearing the same lyrical name as the great trees of Lothlorien 
 D:and containing in its close-woven folds the speed and skill of 
@@ -3087,7 +3076,7 @@ N:215:of Ephel Duath
 I:23:31:-3
 W:60:60:50:30000
 P:0:2d6:-20:-18:0
-F:STR | WIS | CHR | BRAND_POIS | VAMPIRIC | VORPAL |
+F:STR | WIS | CHR | VAMPIRIC | VORPAL |
 F:INVIS | AGGRAVATE | CURSED | HEAVY_CURSE | SHOW_MODS |
 F:SPECIAL_GENE
 D:This filthy orc-blade is famed for vile deeds of torture and blood, 
@@ -3100,9 +3089,9 @@ N:216:'Garachoth'
 I:24:30:2
 W:70:300:400:91000
 P:0:7d5:18:18:-20
-F:STR | CON | SPEED | LEVELS | BLACK_BREATH |
-F:KILL_DEMON | SLAY_ANIMAL |  BRAND_FIRE | VORPAL |
-F:RES_FEAR | RES_FIRE | RES_CHAOS | RES_NETHER  |
+F:STR | CON | LEVELS | BLACK_BREATH |
+F:SLAY_DEMON | SLAY_ANIMAL |
+F:RES_FEAR | RES_FIRE | 
 F:HIDE_TYPE | SHOW_MODS | SPECIAL_GENE
 D:A ghastly axe with the soul of a demon lord trapped inside, this horrifying 
 D:creation reverberates with the screams of the damned.  As you gaze into its 
@@ -3116,8 +3105,8 @@ N:217:'Skycleaver'
 I:31:5:1
 W:40:45:40:100000
 P:5:1d1:16:7:16
-F:STR | CON | DEX | CHR | LUCK | FLY |
-F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_POIS |
+F:STR | CON | DEX | CHR |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD |
 F:HIDE_TYPE | SHOW_MODS | SPECIAL_GENE
 D:The handgear of a legendary dragonslaying hero.  The wearer of these 
 D:wyrmskin gauntlets will be versed in all aerial ways, and will fear no 
@@ -3131,8 +3120,8 @@ N:218:of the Machine
 I:30:6:3
 W:30:100:170:19000
 P:6:1d1:0:0:24
-F:INT | SPEED | TUNNEL | AGGRAVATE |
-F:RES_CHAOS | RES_SHARDS | RES_CONF |
+F:TUNNEL | AGGRAVATE |
+F:RES_CONF |
 F:ESP_NONLIVING | HIDE_TYPE | SPECIAL_GENE
 D:A massive pair of adamantine boots studded with gold, the final and 
 D:greatest product of the petty-dwarven magical forge.  Despite 
@@ -3788,6 +3777,310 @@ F:BRAND_ACID | RES_ACID | RES_DARK | RES_DISEN |
 D:Wielded by Nain of the Iron Hills at the Battle of Azanulbizar, this great 
 D:axe brought victory to the Dwarves over Azog's Orcs - though Nain 
 D:himself fell at the last, even with victory already assured.
+
+N:269:of Power 'Lomya'
+I:45:34:1
+W:70:300:2:100000
+P:0:1d1:6:6:0
+F:STR | INT | WIS | DEX | CON | CHR | SPEED | HIDE_TYPE | LUCK
+F:ACTIVATE | FREE_ACT | SEE_INVIS | 
+F:SUST_STR | SUST_CON | SUST_WIS | SUST_CHR | 
+F:IM_FIRE | RES_NETHER | RES_FEAR | REGEN | 
+F:INSTA_ART
+a:HARDCORE=NARYA
+D:The Ring of Fire, set with a ruby that glows like flame.  Lomya is one 
+D:of the three Rings of Power created by the Elves and hidden by them from 
+D:Sauron.
+
+N:270:'Scratchback'
+I:38:6:0
+W:90:900:500:400000
+P:30:2d4:-4:0:25
+F:FREE_ACT | IM_ELEC | 
+F:RES_FIRE | RES_COLD | RES_POIS | RES_LITE | RES_DARK | 
+F:LITE1 | SEE_INVIS | AGGRAVATE | ESP_DRAGON
+F:ACTIVATE
+a:HARDCORE=RAZORBACK
+D:A massive suit of heavy dragon scales deeply saturated with many colors.  
+D:It throbs with angry energies, and you feel the raw elemental might of 
+D:untamed Lightning as you put it on.
+
+N:271:of Unnamed PStarStarStar Guy
+I:36:16:4
+W:30:300:80:65000
+P:9:0d0:0:0:20
+F:REFLECT | RES_NEXUS | SH_FIRE | FLY |  
+F:STEALTH | ESP_THUNDERLORD | CON | INT | SPEED | 
+F:RES_ACID | RES_ELEC | IM_FIRE | RES_COLD
+D:The flying suit of Trone.  It protects the user from fire and 
+D:imps are said to be less annoying with this on.
+
+N:272:'Halentokkh'
+I:36:11:3
+W:20:60:60:25000
+P:11:1d1:-1:0:25
+F:DEX | SPEED | HIDE_TYPE | 
+F:RES_ACID | RES_SHARDS
+D:A tunic and skirt sewn with thick, overlapping scales of hardened 
+D:leather whose wearer moves with agility and assurance.
+
+N:273:of Steelhand
+I:32:6:3
+W:20:200:60:45000
+P:6:1d3:0:0:20
+F:STR | DEX | CON | HIDE_TYPE | RES_FEAR | 
+F:SUST_STR | SUST_DEX | SUST_CON | 
+F:RES_ACID | RES_NEXUS | RES_COLD | RES_DARK | SLOW_DIGEST | 
+Z:berserk
+D:A great helm as steady as the heroes of the Westdike. Mighty were the 
+D:blows of Helm, the Steelhand!
+
+N:274:of Luthien S.
+I:35:6:2
+W:40:400:5:55000
+P:6:0d0:0:0:20
+F:INT | WIS | CHR | HIDE_TYPE | SPEED | STEALTH | INVIS | LUCK
+F:RES_ACID | RES_FIRE | RES_COLD | ACTIVATE | SPELL_CONTAIN | WIELD_CAST
+a:HARDCORE=REST_LIFE
+D:The opaque midnight folds, inset with a multitude of tiny diamonds, of 
+D:this cloak swirl around you and you feel a hint, a fragment of the 
+D:knowledge and power to restore that lay in Luthien, the most beautiful 
+D:being that ever knew death.
+
+N:275:'Cammithrust'
+I:31:1:0
+W:10:70:5:30000
+P:1:0d0:0:0:10
+F:FREE_ACT | RES_LITE | SUST_CON | LITE1 | ACTIVATE
+a:HARDCORE=BO_MISS_1
+D:These gloves glow so brightly as to light the way for their owner and cast 
+D:magical bolts with great frequency.
+
+N:276:of Saralonde
+I:23:5:3
+W:15:300:30:22500
+P:0:2d5:12:15:0
+F:INT | DEX | HIDE_TYPE | SPEED | 
+F:SLAY_TROLL | SLAY_GIANT | FREE_ACT | SEE_INVIS | SHOW_MODS
+D:A short thrusting blade with a large guard worn by Saralonde the Tall, 
+D:eldest son of Feanor, and wielded with his left hand after the loss of 
+D:his right hand in the pits of Thangorodrim.
+
+N:277:'Glamourdring'
+I:23:16:1
+W:20:200:150:40000
+P:0:2d5:10:15:0
+F:SEARCH | HIDE_TYPE | BLESSED | SLAY_DEMON | 
+F:SLAY_EVIL | BRAND_FIRE | SLAY_ORC | RES_FIRE | RES_LITE | LITE1 | 
+F:SLOW_DIGEST | SHOW_MODS | ESP_ORC | 
+D:This fiery, shining blade earned its sobriquet "Foe-Hammer" from dying orcs 
+D:who dared to come near hidden Gondolin.
+
+N:278:'Doomcaster'
+I:23:30:0
+W:70:250:180:250000
+P:0:6d5:18:28:-50
+F:KILL_DRAGON | SLAY_ANIMAL | SLAY_EVIL | BRAND_COLD | SLAY_TROLL | 
+F:SLAY_ORC | FREE_ACT | RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | 
+F:RES_CHAOS | SEE_INVIS | ESP_EVIL | AGGRAVATE | SHOW_MODS | 
+F:CHAOTIC | VORPAL | BRAND_FIRE | BRAND_POIS | 
+D:This weapon of wrath, cursed with a violent anger, dives hungrily 
+D:into the flesh of its enemies. It gathers shadows of death into its 
+D:owner as they inflict wounds that will never heal.
+
+N:279:of Pebbling
+I:19:2:2
+W:10:100:5:20000
+P:0:0d0:20:0:0
+F:INFRA | SEARCH | HIDE_TYPE | 
+F:XTRA_SHOTS | SHOW_MODS | ACTIVATE | 
+a:SPELL=Artifact Maggot
+D:This ordinary seeming leather sling has been raised to legendary 
+D:status amongst generations of hobbit children.  Farmer Maggot's 
+D:ability to notice and strike any mushroom thief anywhere within 
+D:his patch almost keeps young poachers at bay, but once they get 
+D:within range they soon flee for less painful pastures, frequently 
+D:with rounded pebbles stinging their backsides...
+
+N:280:of the Sand Maggot
+I:36:4:5
+W:30:90:80:65000
+P:30:0d0:0:0:0
+F:RES_POIS | RES_ELEC | RES_FIRE | RES_ACID | 
+F:TUNNEL | STR | STEALTH | INFRA | ESP_ANIMAL
+D:This powerful piece of armor was made using the remains of 
+D:the Sandworm Queen.
+
+N:281:of Cheating
+I:45:55:15
+W:110:900:2:3000000
+P:0:1d1:0:0:0
+F:SPEED | SEE_INVIS | LUCK | MAGIC_BREATH
+F:CURSED | HEAVY_CURSE | REGEN
+F:WRAITH | IM_NETHER | DRAIN_EXP | HOLD_LIFE | 
+F:INSTA_ART
+Z:teleport
+D:Imbued with the screams of the victims of undead everywhere, this 
+D:ring is more a hole in reality than anything else.  Strange forces ripple over 
+D:its surface, giving you visions of a reality considerably less solid than this 
+D:one.  You feel your senses reel, and must make a conscious effort not to throw 
+D:this ring as far from you as possible.
+
+N:282:'Toris Lagistos'
+I:40:18:2
+W:50:200:3:60000
+Z:restore life
+F:INT | WIS | HIDE_TYPE | MANA | LUCK
+F:SUST_INT | SUST_WIS | LITE1 | REGEN
+F:SLOW_DIGEST | AUTO_CURSE | HEAVY_CURSE
+F:ESP_GOOD | ESP_EVIL | HOLD_LIFE
+F:INSTA_ART | WATER_BREATH
+F:SPELL_CONTAIN | WIELD_CAST
+D:A blue stone, with an incredible number of incredibly small runes of power 
+D:on it.  It carries many secrets.
+
+N:283:of Duriel
+I:45:57:2
+W:70:700:2:65000
+F:CON | CHR | STR | SUST_CHR | SUST_CON | SUST_STR | HIDE_TYPE | 
+F:ESP_EVIL | AGGRAVATE | HEAVY_CURSE | HOLD_LIFE | DRAIN_EXP | 
+F:RES_DARK | RES_CHAOS | RES_NETHER | RES_COLD | RES_ACID | 
+F:INSTA_ART | CURSED
+Z:Midas touch
+D:The greatest of the Seven Rings of the Dwarf-lords, and the last to be 
+D:lost.  Alone among the Seven, it was not taken by Sauron when he made 
+D:war on the Elves, but was given as a gift from Celebrimbor to King Duriel 
+D:III of Moria in token of friendship:  nevertheless, Sauron in disguise 
+D:had a hand in its making, and so it is cursed, and draws evil towards it.
+
+N:284:of Monochel
+I:6:1:3
+W:65:700:60:60000
+P:0:3d4:-12:-8:0
+F:INT | WIS | MANA | SPELL | INFRA | SEE_INVIS |
+F:SUST_INT | SUST_WIS | RES_BLIND | IM_COLD | SENS_FIRE |
+F:WIELD_CAST |
+F:COULD2H
+f:COULD2H
+D:A shaft of pure, invincible crystal cut from the heart of one 
+D:of the great glaciers ringing the Ice-Bay of Monochel. 
+D:While you hold it, your mind feels as clear as the winter sky.
+
+N:285:of Melloyrn
+I:35:2:4
+W:40:400:5:65000
+P:4:0d0:0:0:20
+F:HIDE_TYPE | INVIS | DEX |  SPEED | STEALTH | LUCK |
+F:SUST_DEX | RES_LITE | RES_DARK | 
+D:Bearing the same lyrical name as the great trees of Lothlorien 
+D:and containing in its close-woven folds the speed and skill of 
+D:the Galadrim, this grey cloak is ideal for those who travel in 
+D:forests.
+
+N:286:of Ephel Triath
+I:23:31:-3
+W:60:600:50:30000
+P:0:2d6:-20:-18:0
+F:STR | WIS | CHR | BRAND_POIS | VAMPIRIC | VORPAL |
+F:INVIS | AGGRAVATE | CURSED | HEAVY_CURSE | SHOW_MODS |
+D:This filthy orc-blade is famed for vile deeds of torture and blood, 
+D:and its wielder will never cease to fear treachery.
+
+N:287:'Charagoth'
+I:24:30:2
+W:70:900:400:91000
+P:0:7d5:18:18:-20
+F:STR | CON | SPEED | LEVELS | BLACK_BREATH |
+F:KILL_DEMON | SLAY_ANIMAL |  BRAND_FIRE | VORPAL |
+F:RES_FEAR | RES_FIRE | RES_CHAOS | RES_NETHER  |
+F:HIDE_TYPE | SHOW_MODS | 
+D:A ghastly axe with the soul of a demon lord trapped inside, this horrifying 
+D:creation reverberates with the screams of the damned.  As you gaze into its 
+D:glassy, translucent blade, it seems that endless sulphrous wastelands 
+D:stretch away from you into the distance, obscured by sheets of fire.
+
+N:288:'ThreeSixCleaver'
+I:31:5:1
+W:40:450:40:100000
+P:5:1d1:16:7:16
+F:STR | CON | DEX | CHR | LUCK | FLY |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_POIS |
+F:HIDE_TYPE | SHOW_MODS | 
+D:The handgear of a legendary dragonslaying hero.  The wearer of these 
+D:wyrmskin gauntlets will be versed in all aerial ways, and will fear no 
+D:dragon that walks or flies.
+
+N:289:of Head Exploding
+I:30:6:3
+W:30:900:170:19000
+P:6:1d1:0:0:24
+F:INT | SPEED | TUNNEL | AGGRAVATE |
+F:RES_CHAOS | RES_SHARDS | RES_CONF |
+F:ESP_NONLIVING | HIDE_TYPE | 
+D:A massive pair of adamantine boots studded with gold, the final and 
+D:greatest product of the petty-dwarven magical forge.  Despite 
+D:the great powers they contain, they are heavy and awkward enough to 
+D:make quite a racket whenever you move.
+
+N:290:of the Thundergod
+I:34:2:0
+W:30:10:50:20000
+P:2:1d2:0:0:8
+F:LITHE | IM_ELEC | 
+D:This lightweight shield is fused with the power of the Thundergod,
+D:enabling the wearer to withstand a current of 10000 volts unharmed.
+
+N:291:'Weightly Concern'
+I:36:16:2
+W:20:20:80:8000
+P:9:0d0:0:0:4
+F:LITHE | DODGE | INT | SH_FIRE | FLY | INV_PROTECT | 
+D:A very light coat that allows the wearer to dodge incoming attacks.
+
+N:292:of Robigus
+I:37:1:0
+W:25:15:200:9000
+P:14:0d0:0:0:15
+F:LITHE | RES_ELEC | RES_ACID | RES_SOUND | RES_NETHER | RES_BLIND | 
+F:SUST_STR | SUST_INT | 
+D:Said to be created by the god of rust, this suit of armor offers many
+D:resistances to the wearer and is also surprisingly lightweight.
+
+N:293:of Mount Repper
+I:37:18:3
+W:35:20:380:12000
+P:28:0d0:0:0:22
+F:LITHE | DODGE | CHR | FREE_ACT | RES_ACID | RES_LITE | RES_SHARDS | 
+F:FEATHER | 
+D:An impossibly light metallic armor. It is said that skillful fighters
+D:have managed to dodge blows and arrows while wearing it.
+
+N:294:'Defusing Box'
+I:24:9:12
+W:15:25:15:10000
+P:0:1d3:6:6:0
+F:DISARM | DEX | SUST_DEX | RES_FIRE | 
+f:DISARM
+D:With this axe in hand, you can disarm traps much more safely.
+
+N:295:'Champs Elysees'
+I:22:4:5
+W:20:40:160:4000
+P:0:2d8:13:13:6
+F:CURSED | AGGRAVATE | STR | DEX | TUNNEL | SPEED | BLOWS | CHAOTIC |
+F:KILL_DRAGON | SLAY_DEMON | BRAND_ELEC | SUST_STR | SUST_DEX | 
+F:INVIS | LIFE | IM_COLD | REFLECT | FREE_ACT | RES_FEAR | RES_BLIND |
+F:RES_CONF | RES_DISEN | RES_CHAOS | AUTO_CURSE | NO_TELE | TY_CURSE | 
+F:FEATHER | SEE_INVIS | REGEN | DRAIN_EXP | BLACK_BREATH | 
+F:CLIMB | IM_NETHER | LITE3 | CURSE_NO_DROP | DRAIN_MANA | 
+F:CRIT | LUCK | RES_MORGUL | MAGIC_BREATH | RES_WATER | RES_INERTIA | 
+F:IM_POISON | INV_PROTECT | SAVING_MALUS | DODGE | ESP_UNIQUE | 
+F:ESP_NONLIVING | 
+F:COULD2H
+f:COULD2H | AGGRAVATE | AUTO_CURSE | TY_CURSE | BLACK_BREATH | 
+f:CURSE_NO_DROP | SAVING_MALUS | 
+D:A hilariously cursed artifact weapon that tempts you to use it with
+D:all the useful properties it has.
 
 # N:number:name
 # I:tval:sval:pval
