@@ -1978,7 +1978,7 @@ D:key and will release them when read.
 N:200:Mass Genocide
 G:?:d
 I:70:45:0
-W:50:0:0:10000
+W:50:0:0:20000
 A:50/4:100/4
 D:An astoundingly powerful death spell is stored in the runes of this spell.  Reading
 D:it will annihilate all nearby creatures. Only a few beings of legendary stature
@@ -2146,7 +2146,7 @@ D:will suddenly be translocated to the other place.
 N:221:*Destruction*
 G:?:d
 I:70:41:0
-W:40:0:0:2000
+W:40:0:0:15000
 A:40/1
 D:This scroll is inscribed with a mighty conjuration which wrecks the dungeon all around you.
 D:Monsters and objects will be annihilated by this blast; only completely indestructible things can
@@ -5479,7 +5479,7 @@ F:ACTIVATE | ACTIVATE_NO_WIELD
 N:677:Reset Recall
 G:?:d
 I:70:23:0
-W:20:0:0:125
+W:20:0:0:5000
 A:20/1:25/1:35/1
 D:A strange formula is inscribed on this scroll, which allows you to define another place as the
 D:location to which recalls shall move you.

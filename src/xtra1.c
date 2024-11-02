@@ -2387,7 +2387,7 @@ int get_weaponmastery_skill()
 			if ((!skill) || (skill == SKILL_POLEARM)) skill = SKILL_POLEARM;
 			else skill = -1;
 			break;
-		case TV_STAFF: /* by Amy; there's no staff-mastery skill and they somehow don't count as hafted, so... */
+		case TV_MSTAFF: /* by Amy; there's no staff-mastery skill and they somehow don't count as hafted, so... */
 			if ((!skill) || (skill == SKILL_DRUID)) skill = SKILL_DRUID;
 			else skill = -1;
 			break;

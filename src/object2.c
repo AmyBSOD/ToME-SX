@@ -1375,6 +1375,10 @@ s32b object_value_real(object_type *o_ptr)
 		{
 			/* Par for the spell */
 			value *= school_spells[o_ptr->pval2].skill_level;
+
+			if (strstr(school_spells[o_ptr->pval2].name, "Genocide")) value *= 20;
+			if (strstr(school_spells[o_ptr->pval2].name, "Probability Travel")) value *= 5;
+
 			/* Take the average of the base and max spell levels */
 			value *= (((o_ptr->pval3 >> 16) & 0xFFFF) + (o_ptr->pval3 & 0xFFFF)) / 2;
 			/* Hack */
@@ -1390,6 +1394,10 @@ s32b object_value_real(object_type *o_ptr)
 		{
 			/* Par for the spell */
 			value *= school_spells[o_ptr->pval2].skill_level;
+
+			if (strstr(school_spells[o_ptr->pval2].name, "Genocide")) value *= 20;
+			if (strstr(school_spells[o_ptr->pval2].name, "Probability Travel")) value *= 5;
+
 			/* Take the average of the base and max spell levels */
 			value *= (((o_ptr->pval3 >> 16) & 0xFFFF) + (o_ptr->pval3 & 0xFFFF)) / 2;
 			/* Hack */
@@ -1675,6 +1683,10 @@ s32b object_value_xtra(object_type *o_ptr)
 		{
 			/* Par for the spell */
 			value *= school_spells[o_ptr->pval2].skill_level;
+
+			if (strstr(school_spells[o_ptr->pval2].name, "Genocide")) value *= 20;
+			if (strstr(school_spells[o_ptr->pval2].name, "Probability Travel")) value *= 5;
+
 			/* Take the average of the base and max spell levels */
 			value *= (((o_ptr->pval3 >> 16) & 0xFFFF) + (o_ptr->pval3 & 0xFFFF)) / 2;
 			/* Hack */
@@ -1690,6 +1702,10 @@ s32b object_value_xtra(object_type *o_ptr)
 		{
 			/* Par for the spell */
 			value *= school_spells[o_ptr->pval2].skill_level;
+
+			if (strstr(school_spells[o_ptr->pval2].name, "Genocide")) value *= 20;
+			if (strstr(school_spells[o_ptr->pval2].name, "Probability Travel")) value *= 5;
+
 			/* Take the average of the base and max spell levels */
 			value *= (((o_ptr->pval3 >> 16) & 0xFFFF) + (o_ptr->pval3 & 0xFFFF)) / 2;
 			/* Hack */

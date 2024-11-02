@@ -158,7 +158,7 @@ C:1000:800:700
 I:33:0:r
 
 N:34:Teleport to dungeon-level
-C:20000:10000:9000
+C:200000:100000:90000
 I:34:0:t
 
 N:35:Get a quest
