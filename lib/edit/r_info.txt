@@ -46601,8 +46601,8 @@ F:UNIQUE | MALE | JOKEANGBAND | DROP_CORPSE |
 F:FORCE_SLEEP | FORCE_MAXHP | 
 F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT |
 F:NO_CONF | NO_SLEEP | NO_FEAR |
-S:1_IN_1 | 
-S:ROCKET | BLINK |
+S:1_IN_2 | 
+S:ROCKET | BLINK | MISSILE | 
 D:A priest who turned into a fierce gunman.  He works alongside with Vash the 
 D:Stampede.  
 
@@ -67046,6 +67046,242 @@ S:BR_PLAS
 S:MULTIPLY
 D:While these thick-soled girl sneakers look soft and gentle, they're 
 D:actually quite bitchy. 
+
+N:3895:Kati
+G:p:r
+I:115:8d12:5:20:90
+W:9:5:1000:200
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:2d7
+B:FART:EAT_ITEM
+F:RAND_25 | WILD_TOO | REVBOSS | 
+F:UNIQUE | CAN_SPEAK | WILD_WOOD | GOOD | 
+F:DROP_CORPSE | FEMALE | REGENERATE | IM_FIRE | RES_PLAS | 
+F:MORTAL | BASEANGBAND |
+D:She certainly has the sexiest butt of all the girls you've ever seen. 
+D:And she's pretty enough to seduce you, too, but beware, she'll steal 
+D:your stuff if you don't watch out! 
+
+N:3896:Maurah
+G:t:o
+I:115:20d50:20:90:120
+W:27:5:2000:2500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:LOSE_STR:6d8
+B:FART:*
+F:RAND_25 | WILD_TOO | REVBOSS | 
+F:UNIQUE | CAN_SPEAK | WILD_WASTE | 
+F:DROP_CORPSE | FEMALE | IM_POIS | 
+F:MORTAL | BASEANGBAND |
+S:1_IN_5
+S:BR_POIS | MIND_BLAST | TELE_LEVEL
+D:She's very pretty and has a long bundle. But she doesn't seem to like 
+D:your presence, and wishes you weren't there. 
+
+N:3897:Eveline
+G:v:B
+I:130:11d30:10:80:40
+W:34:5:500:20000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:TIME:10d5
+B:ENGULF:EXP_80:5d5
+B:FART:*
+F:RAND_50 | WILD_TOO | REVBOSS | SMART | 
+F:UNIQUE | CAN_SPEAK | POWERFUL | BASH_DOOR | CAN_SWIM | 
+F:DROP_CORPSE | FEMALE | CAN_FLY | WILD_SHORE | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | IM_FIRE | IM_COLD | IM_ELEC | 
+F:NO_CONF | 
+S:1_IN_3
+S:BR_INER | BR_TIME
+D:She's the whirlwind of cuteness. Her lightning-fast kicks will hit you 
+D:with the full force of her hard, unyielding wedge sandals, and she 
+D:thorougly enjoys knocking you down, you loser. 
+
+N:3898:Sandra
+G:T:o
+I:125:50d40:2:90:200
+W:26:5:5000:10000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:6d11
+B:FART:*
+F:RAND_25 | WILD_TOO | REVBOSS | 
+F:UNIQUE | CAN_SPEAK | WILD_WOOD | EVIL | 
+F:DROP_CORPSE | FEMALE | IM_FIRE | IM_COLD | RES_WATE | 
+F:MORTAL | BASEANGBAND | NO_STUN | NO_SLEEP | 
+S:1_IN_10
+S:BR_NUKE | BR_CHAO
+D:This beautiful blonde girl is sassy enough to not care how much of your 
+D:skin she scratches into bloody shreds with her sharp-edged combat boot 
+D:heels. And she also likes to produce particularly disgusting, squeaking 
+D:farting noises specially for you. 
+
+N:3899:Simone
+G:c:y
+I:105:12d20:0:30:170
+W:12:5:2000:800
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:3d10
+B:FART:*
+F:RAND_50 | WILD_TOO | REVBOSS | STUPID | WEIRD_MIND | 
+F:UNIQUE | CAN_SPEAK | IM_POIS | GOOD | 
+F:DROP_CORPSE | FEMALE | KILL_WALL | 
+F:MORTAL | BASEANGBAND | TROLL | WILD_MOUNTAIN | 
+S:1_IN_14
+S:BR_SHAR | SLOW | HOLD
+D:She doesn't really want to fight you. It might be best to leave her alone, 
+D:as long as she doesn't get in your way. 
+
+N:3900:Sue Lyn
+G:E:B
+I:130:20d60:5:70:60
+W:26:5:2500:9000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:TERRIFY:6d8
+B:KICK:TIME:5d4
+B:KICK:LOSE_WIS:5d4
+B:FART:*
+F:RAND_25 | WILD_TOO | REVBOSS | IM_POIS | 
+F:UNIQUE | CAN_SPEAK | NO_SLEEP | RES_NETH | 
+F:DROP_CORPSE | FEMALE | CAN_SWIM | BASH_DOOR | WILD_VOLCANO | 
+F:MORTAL | BASEANGBAND | THUNDERLORD | WILD_MOUNTAIN | 
+S:1_IN_10
+S:SLOW | CONF
+D:A very beautiful girl wearing thick winter boots, which she likes to use 
+D:as a weapon. Her cute buttocks also like to fart in your face. 
+
+N:3901:Marleen
+G:J:w
+I:130:5d100:2:31:80
+W:20:5:1000:4000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:2d20
+B:FART:*
+F:RAND_25 | WILD_TOO | REVBOSS | ESCORT | OPEN_DOOR | CAN_SWIM | 
+F:UNIQUE | CAN_SPEAK | WEIRD_MIND | STUPID | WILD_TOWN | GOOD | 
+F:DROP_CORPSE | FEMALE | RES_WATE | IM_COLD | 
+F:MORTAL | BASEANGBAND |
+S:1_IN_10
+S:HOLD | TRAPS | FORGET | DRAIN_MANA | S_KIN
+D:She knows karate, and will do her best to defeat you in melee. However, 
+D:what really annoys you is her boyfriend, who happens to be a really 
+D:disgusting boy with a severe case of ADHD. Like, how could she fall for 
+D:that guy??? She must be out of her mind! 
+
+N:3902:Claudia
+G:D:y
+I:108:30d60:9:15:100
+W:30:5:3000:18000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:4d8
+B:FART:*
+F:RAND_25 | WILD_TOO | REVBOSS | CAN_SWIM | OPEN_DOOR | GOOD | 
+F:UNIQUE | CAN_SPEAK | IM_COLD | WILD_SHORE | WILD_OCEAN | SMART | 
+F:DROP_CORPSE | FEMALE | DRAGON | 
+F:MORTAL | BASEANGBAND |
+D:Wow! Claudia is such a beautiful woman with wonderful blonde hair, 
+D:wearing cuuuuuute wooden sandals with high heels which she'll gladly 
+D:slam into your shins again and again! Plus her tender buttocks are 
+D:incredibly sexy and produce the loveliest squeaky farting noises that 
+D:you've ever heard. You immediately fall in love with this beautiful 
+D:bundle woman. 
+
+N:3903:Ksenia
+G:D:v
+I:130:20d50:10:150:40
+W:33:5:1500:16000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HALLU:6d6
+B:KICK:HURT:5d8
+B:FART:*
+F:RAND_25 | WILD_TOO | REVBOSS | WILD_WOOD | 
+F:UNIQUE | CAN_SPEAK | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | NO_SLEEP | 
+F:DROP_CORPSE | FEMALE | RES_WATE | RES_NEXU | RES_DISE | NO_FEAR | 
+F:NO_CONF | NO_STUN | GOOD | DRAGON | 
+F:MORTAL | BASEANGBAND |
+S:1_IN_5
+S:ARROW_4 | BA_NETH | BR_NEXU | MIND_BLAST | TELE_AWAY | 
+D:This russian girl looks very kind, but she can actually be dangerous 
+D:when angered. In that case, she repeatedly slams her high-heeled sandals 
+D:into your shins, giving you some pretty bruises. Also, her sexy butt 
+D:occasionally produces farting noises. 
+
+N:3904:Solvejg
+G:r:o
+I:110:5d10:0:8:150
+W:5:5:200:40
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:2d4
+B:KICK:LOSE_STR:2d4
+B:KICK:LOSE_WIS:2d3
+B:FARTQUIET:*
+F:RAND_25 | WILD_TOO | REVBOSS | IM_POIS | 
+F:UNIQUE | CAN_SPEAK | WILD_TOWN | WEIRD_MIND | GOOD | 
+F:DROP_CORPSE | FEMALE |
+F:MORTAL | BASEANGBAND |
+D:Solvejg will intoxicate you with the beguiling smell of her lovely orange 
+D:mocassins, and then use them to kick your hands repeatedly. 
+
+N:3905:Jennifer
+G:R:D
+I:115:8d8:5:20:70
+W:8:5:1000:100
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:2d9
+B:FARTQUIET:*
+F:RAND_50 | WILD_TOO | REVBOSS | 
+F:UNIQUE | CAN_SPEAK | RES_NETH | GOOD | OPEN_DOOR | 
+F:DROP_CORPSE | FEMALE | WILD_GRASS | 
+F:MORTAL | BASEANGBAND |
+S:1_IN_3
+S:DARKNESS
+D:An innocuous girl who likes the color black, and casts spells that make 
+D:the surroundings darker. 
+
+N:3906:Sarah
+G:n:B
+I:115:5d15:1:25:250
+W:7:5:1000:50
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:COLD:9d5
+B:FARTQUIET:*
+F:RAND_50 | WILD_TOO | REVBOSS | IM_COLD | IM_POIS | CAN_SWIM | STUPID | 
+F:UNIQUE | CAN_SPEAK | FORCE_SLEEP | EMPTY_MIND | REGENERATE | GOOD | 
+F:DROP_CORPSE | FEMALE | WILD_GRASS | 
+F:MORTAL | BASEANGBAND |
+D:A rather sleepy girl. Just don't try to annoy her, or she'll use her 
+D:dark blue hugging boots to kick you in the shins rather painfully. 
+
+N:3907:Mariya
+G:P:D
+I:130:20d50:10:200:40
+W:31:5:2500:4000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:LOSE_INT:3d20
+B:KICK:UN_POWER:5d8
+B:FARTLOUD:*
+F:RAND_25 | WILD_TOO | REVBOSS | IM_POIS | WEIRD_MIND | REGENERATE | 
+F:UNIQUE | CAN_SPEAK | POWERFUL | UNDEAD | DEMON | NO_THEFT | BASH_DOOR | 
+F:DROP_CORPSE | FEMALE | ELDRITCH_HORROR | WILD_VOLCANO | WILD_OCEAN | 
+F:MORTAL | BASEANGBAND | RES_WATE | RES_PLAS | RES_NETH | RES_DISE | 
+F:NO_FEAR | NO_SLEEP | 
+S:1_IN_3
+S:BR_POIS | FORGET | BRAIN_SMASH | 
+D:Eurgh, this girl reeks of farting gas and decay! Do your best to stay 
+D:far away from her, or she'll subject you to whatever she emits, and 
+D:it certainly won't be pleasant! 
 
 # N: serial number : monster name
 # G: symbol : color

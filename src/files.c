@@ -6941,7 +6941,7 @@ errr get_xtra_line(char *file_name, monster_type *m_ptr, char *output)
 		int n;
 
 		/* Read a line */
-		if (my_fgets(fp, buf, 90) != 0)
+		if (my_fgets(fp, buf, 150) != 0)
 		{
 			my_fclose(fp);
 			return ( -1);
@@ -6961,7 +6961,7 @@ errr get_xtra_line(char *file_name, monster_type *m_ptr, char *output)
 	while (1)
 	{
 		/* Read next line */
-		if (my_fgets(fp, buf, 90) != 0)
+		if (my_fgets(fp, buf, 150) != 0)
 		{
 			my_fclose(fp);
 			return ( -1);
@@ -6981,7 +6981,7 @@ errr get_xtra_line(char *file_name, monster_type *m_ptr, char *output)
 		/* Read past normal lines */
 		for (line = 0; line < num_entries + 1; line++)
 		{
-			if (my_fgets(fp, buf, 90))
+			if (my_fgets(fp, buf, 150))
 			{
 				my_fclose(fp);
 				return ( -1);
@@ -7007,7 +7007,7 @@ errr get_xtra_line(char *file_name, monster_type *m_ptr, char *output)
 	for (i = 0; i <= line; i++)
 	{
 		/* Oops */
-		if (0 != my_fgets(fp, buf, 90))
+		if (0 != my_fgets(fp, buf, 150))
 		{
 			my_fclose(fp);
 			return ( -1);
