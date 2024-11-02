@@ -178,6 +178,20 @@ store_buy_list
 		TV_AXE,
 		TV_MSTAFF,
 	},
+	["Craft Chief"] =
+	{
+		TV_SHOT,
+		TV_BOLT,
+		TV_ARROW,
+		TV_BOOMERANG,
+		TV_BOW,
+		TV_DIGGING,
+		TV_HAFTED,
+		TV_POLEARM,
+		TV_SWORD,
+		TV_AXE,
+		TV_MSTAFF,
+	},
 	-- We use a function because we want to restrict to blessed weapons and god spells
 	["Temple"] = function (obj)
 		if obj.tval == TV_DRUID_BOOK then return TRUE
@@ -301,6 +315,18 @@ store_buy_list
 		TV_INSTRUMENT,
 	},
 	["Type of Arms"] =
+	{
+		TV_BOOTS,
+		TV_GLOVES,
+		TV_CROWN,
+		TV_HELM,
+		TV_SHIELD,
+		TV_CLOAK,
+		TV_SOFT_ARMOR,
+		TV_HARD_ARMOR,
+		TV_DRAG_ARMOR,
+	},
+	["Armor Emporium"] =
 	{
 		TV_BOOTS,
 		TV_GLOVES,

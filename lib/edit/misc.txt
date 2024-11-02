@@ -64,7 +64,7 @@ M:N:70
 M:B:62
 
 # Maximum number of store types in st_info.txt
-M:S:64
+M:S:66
 
 # Maximum size for "o_list[]"
 M:O:4096
