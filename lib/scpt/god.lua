@@ -81,14 +81,19 @@ add_quest
 				if (player.pgod <= 0) 
 				or (quest(GOD_QUEST).status == QUEST_STATUS_TAKEN) or (quest(GOD_QUEST).status == QUEST_STATUS_FAILED) or (quest(GOD_QUEST).status == QUEST_STATUS_SCREWED)
 				or (god_quest.quests_given >= god_quest.MAX_NUM_GOD_QUESTS) or (give_god_quest == FALSE)
-				or ((current_dungeon_idx == god_quest.DUNGEON_GOD) and (dun_level > 0)) then
+				or ((current_dungeon_idx == god_quest.DUNGEON_GOD) and (dun_level > 0))
+				or ((player.lev <= god_quest.dun_minplev) and (player.lev < 45)) then
 					-- Don't let a player get quests with trickery
 					-- Amy edit: randarts of high experience loss are no trickery IMHO...
 					-- especially since you may just have bad RNG and not get all the quests! FU!
+					-- okay, as a compromise, your max level has to be at least 45 if you want to
+					-- get the quests via the draining method; that way, you don't permanently miss
+					-- out on them just because the RNG didn't give them early enough but also can't
+					-- simply drain yourself to a deliberately low level for an easier quest
 
-					-- if player.lev > god_quest.dun_minplev then
-					-- 	god_quest.dun_minplev = player.lev
-					-- end
+					if player.lev > god_quest.dun_minplev then
+						god_quest.dun_minplev = player.lev
+					end
 					return
 				else
 					-- each god has different characteristics, so the quests are differnet depending on your god
@@ -808,7 +813,7 @@ function set_god_dungeon_attributes()
 	-- W: All dungeons are 5 levels deep, and created at 2/3 of the player clvl when the quest is given
 	dungeon(god_quest.DUNGEON_GOD).mindepth = god_quest.dun_mindepth
 	dungeon(god_quest.DUNGEON_GOD).maxdepth = god_quest.dun_maxdepth
-	dungeon(god_quest.DUNGEON_GOD).minplev = god_quest.dun_minplev
+	dungeon(god_quest.DUNGEON_GOD).minplev = 1 -- don't arbitrarily prevent player from entering, goddammit --Amy
 
 end
 
