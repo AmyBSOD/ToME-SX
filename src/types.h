@@ -2252,6 +2252,7 @@ struct flags_group
 	u32b flags2;            /* Flags set 2 */
 	u32b flags3;            /* Flags set 3 */
 	u32b flags4;            /* Flags set 4 */
+	u32b flags5;            /* Flags set 5 */
 	u32b esp;               /* ESP flags set */
 };
 

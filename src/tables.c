@@ -3191,6 +3191,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		TR2_RES_FIRE,
 		TR3_SH_FIRE | TR3_LITE1 | TR3_IGNORE_FIRE,
 		0,
+		TR5_INV_PROTECT,
 		0,
 	},
 	{
@@ -3201,6 +3202,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		TR2_RES_COLD | TR2_INVIS,
 		TR3_SLOW_DIGEST | TR3_IGNORE_COLD,
 		0,
+		TR5_PEACEKEEPING,
 		0,
 	},
 	{
@@ -3211,6 +3213,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		TR2_RES_ACID,
 		TR3_IGNORE_ACID,
 		0,
+		TR5_DISARM,
 		0,
 	},
 	{
@@ -3221,6 +3224,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		TR2_RES_ELEC,
 		TR3_IGNORE_ELEC | TR3_SH_ELEC | TR3_TELEPORT,
 		0,
+		TR5_DEVICE_MASTERY,
 		0,
 	},
 	{
@@ -3231,6 +3235,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		TR2_SUST_CHR | TR2_RES_POIS,
 		TR3_DRAIN_EXP,
 		0,
+		TR5_RES_WATER,
 		ESP_TROLL | ESP_GIANT,
 	},
 	{
@@ -3241,6 +3246,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		TR2_RES_LITE | TR2_RES_DARK | TR2_RES_BLIND | TR2_SUST_WIS,
 		TR3_FEATHER | TR3_SEE_INVIS | TR3_BLESSED,
 		0,
+		TR5_MAGIC_BREATH,
 		ESP_GOOD,
 	},
 	{
@@ -3251,6 +3257,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		TR2_SUST_STR | TR2_SUST_CON | TR2_FREE_ACT | TR2_RES_FEAR | TR2_RES_SHARDS,
 		TR3_REGEN,
 		0,
+		TR5_DODGE,
 		ESP_TROLL | ESP_GIANT,
 	},
 	{
@@ -3261,6 +3268,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		TR2_SUST_INT | TR2_RES_CONF | TR2_RES_FEAR,
 		0,
 		0,
+		TR5_LUCK,
 		ESP_ORC | ESP_TROLL | ESP_GIANT | ESP_ANIMAL | ESP_UNIQUE | ESP_SPIDER | ESP_DEMON,
 	},
 	{
@@ -3271,6 +3279,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		TR2_SUST_DEX | TR2_INVIS | TR2_REFLECT | TR2_HOLD_LIFE | TR2_RES_SOUND | TR2_RES_NEXUS,
 		TR3_REGEN,
 		0,
+		TR5_WATER_BREATH,
 		0,
 	},
 	{
@@ -3281,6 +3290,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		TR2_RES_CHAOS | TR2_RES_DISEN,
 		TR3_REGEN,
 		0,
+		TR5_WOUNDING,
 		ESP_ALL,
 	},
 	{
@@ -3291,6 +3301,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		TR2_RES_CHAOS | TR2_RES_DISEN,
 		TR3_WRAITH,
 		TR4_PRECOGNITION | TR4_FLY | TR4_CLONE,
+		TR5_RES_INERTIA,
 		0,
 	},
 	{
@@ -3301,6 +3312,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		TR2_LIFE | TR2_REFLECT | TR2_FREE_ACT | TR2_HOLD_LIFE,
 		TR3_NO_MAGIC | TR3_NO_TELE | TR3_SEE_INVIS,
 		TR4_ANTIMAGIC_10 | TR4_ANTIMAGIC_20,
+		TR5_RES_MORGUL,
 		0,
 	},
 };

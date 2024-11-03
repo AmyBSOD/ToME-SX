@@ -6965,6 +6965,10 @@ u32b get_flag(object_type *o_ptr, int grp, int k)
 		flag_test = f4;
 		break;
 	case 4:
+		flag_set = flags_groups[grp].flags5;
+		flag_test = f5;
+		break;
+	case 5:
 		flag_set = flags_groups[grp].esp;
 		flag_test = esp;
 		break;
@@ -7002,23 +7006,62 @@ void gain_flag_group_flag(object_type *o_ptr, bool silent)
 	int grp = 0, k = 0;
 	u32b f = 0;
 	int tries = 20000;
+	int usertries = 500;
+	char etrdt; /* by Amy: can select a realm, because it's silly if the artifact just decides for itself */
 
 	if (!count_bits(o_ptr->pval3)) return;
 
+	msg_print("The sentient weapon wants to gain a new property!");
+	msg_print("Your weapon will roll 500 times for a realm, or until you agree with the one that gets rolled.");
+
+trynewflag:
 	while (tries--)
 	{
 		/* Get a flag set */
-		k = rand_int(5);
+		k = rand_int(6);
 
 		/* get a flag group */
 		grp = rand_int(MAX_FLAG_GROUP);
 
 		if (!(BIT(grp) & o_ptr->pval3)) continue;
 
-		/* Return a flag from the group/set */
-		f = get_flag(o_ptr, grp, k);
+		msg_format("Rolled the %s realm.", flags_groups[grp].name);
+		msg_print(NULL);
+		prt("Gain a power from that realm (y/n)? ", 0, 0);
+		flush();
+		etrdt = inkey();
+		prt("", 0, 0);
+		if (etrdt != 'y') {
+			/* after all, if you cannot choose anything at all, the sentient weapon is basically a 'fixed' artifact
+			 * with properties that get revealed (and rolled) over time but still with no way for you to avoid bad properties
+			 * in vanilla ToME, such artifacts are therefore set in stone just like other artis with the only difference
+			 * being that you have to painstakingly level the weapon up to "see" what properties it has
+			 * yes you can probably savescum, but then you're cheating :P so unless you cheat, the weapon gets one pass
+			 * through the various levels and gains whatever the RNG says it gains, which is basically equivalent to it
+			 * being predetermined even if the results aren't RNG-technically known when the weapon is generated */
+			if (usertries > 1) {
+				usertries--;
+				if (usertries < 10) msg_print("Warning: you have less than 10 attempts left!");
+				goto trynewflag;
+			} else if (usertries > 0) {
+				usertries--;
+				goto trynewflag;
+				msg_print("Warning: this is the last time the weapon tries to roll a realm!");
+			} else {
+				msg_print("You chose to not allow the artifact weapon to gain a new power!");
+				return;
+			}
+		} else {
 
-		if (!f) continue;
+			/* Return a flag from the group/set */
+			f = get_flag(o_ptr, grp, k);
+
+			if (!f) {
+				msg_print("Whoops! Failed to roll a property from that realm!");
+				continue;
+			}
+
+		}
 
 		break;
 	}
@@ -7038,9 +7081,47 @@ void gain_flag_group_flag(object_type *o_ptr, bool silent)
 		break;
 	case 3:
 		o_ptr->art_flags4 |= f;
+
+		if (f & TR3_WRAITH) {
+			char o_name[80];
+			object_desc(o_name, o_ptr, FALSE, 0);
+
+			o_ptr->art_flags5 |= TR5_DRAIN_MANA;
+			o_ptr->art_flags5 |= TR5_DRAIN_HP;
+			msg_format("WARNING: %s gained the Drain Mana and HP curse!!", o_name);
+		}
+
 		break;
 	case 4:
+		o_ptr->art_flags5 |= f;
+
+		if (f & TR5_MAGIC_BREATH) {
+			char o_name[80];
+			object_desc(o_name, o_ptr, FALSE, 0);
+
+			o_ptr->art_flags3 |= TR3_TY_CURSE;
+			msg_format("WARNING: %s gained the Topi Ylinen curse!!", o_name);
+		}
+		if (f & TR5_WATER_BREATH) {
+			char o_name[80];
+			object_desc(o_name, o_ptr, FALSE, 0);
+
+			o_ptr->art_flags4 |= TR4_BLACK_BREATH;
+			msg_format("WARNING: %s gained the Black Breath curse!!", o_name);
+		}
+
+		break;
+	case 5:
 		o_ptr->art_esp |= f;
+
+		if (f & ESP_ALL) {
+			char o_name[80];
+			object_desc(o_name, o_ptr, FALSE, 0);
+
+			o_ptr->art_flags5 |= TR5_SAVING_MALUS;
+			msg_format("WARNING: %s gained the Saving Malus curse!!", o_name);
+		}
+
 		break;
 	}
 
