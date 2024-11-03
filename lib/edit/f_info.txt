@@ -995,6 +995,14 @@ D:1:You tunnel into the battlement.
 D:2:a hard stone battlement blocking your way
 
 # stuff from Theme, stolen by Amy, credits go to the Theme devteam
+#light post
+N:221:light post
+G:|:w
+F:WALL | NO_WALK | CAN_FLY | CAN_PASS
+F:SUPPORT_LIGHT | REMEMBER
+D:1:You cannot tunnel a light post.
+D:2:A light post blocking your way
+
 #Water lily
 N:222:water lily
 G:;:B
@@ -1007,6 +1015,21 @@ G:~:g
 E:1d1:1:POISON
 F:FLOOR | CAN_LEVITATE | CAN_FLY | REMEMBER | SUPPORT_LIGHT
 
+#Anduin river
+N:227:stream of the Anduin river
+G:~:B
+E:1d1:1:WATER
+S:w:w:w:b:w:w:b
+F:ATTR_MULTI
+F:FLOOR | CAN_LEVITATE | CAN_FLY | REMEMBER | SUPPORT_LIGHT | SUPPORT_GROWTH
+
+#Light wooden board - horizontal
+N:235:wooden board
+G:-:U
+F:WALL | PERMANENT | SUPPORT_LIGHT | NO_WALK | NO_VISION | CAN_FLY
+D:1:You cannot tunnel through that.
+D:2:a wooden board blocking your way
+
 #Swift waterfall
 N:238:swift waterfall
 G:|:B
@@ -1015,4 +1038,21 @@ S:w:w:w:b:w:w:b
 F:ATTR_MULTI
 F:FLOOR | CAN_LEVITATE | CAN_FLY | REMEMBER | SUPPORT_LIGHT | 
 F:DONT_NOTICE_RUNNING | SUPPORT_GROWTH | 
+
+#Stable
+N:240:stable
+G:#:u
+F:WALL | NO_WALK | NO_VISION | PERMANENT | CAN_FLY
+D:1:You cannot tunnel through that.
+D:2:a stable wall blocking your way
+
+#Mallorn
+N:243:Mallorn
+G:*:y
+S:y:W:W:y:w:W:y
+F:CAN_FLY | CAN_PASS | SUPPORT_LIGHT
+F:WALL | NO_WALK | NO_VISION
+F:DONT_NOTICE_RUNNING
+D:1:It isn't a good idea to harm a Mallorn.
+D:2:a Mallorn blocking your way
 

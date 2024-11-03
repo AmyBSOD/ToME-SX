@@ -42,6 +42,12 @@ extern bool quest_between_init_hook(int q_idx);
 /******* Plot Khazad-dum *********/
 extern bool quest_evil_init_hook(int q_idx);
 
+/******* Plot Hobbiton *********/
+extern bool quest_shoes_init_hook(int q_idx);
+
+/******* Plot Osgiliath *********/
+extern bool quest_eldritch_init_hook(int q_idx);
+
 /******* Plot Other *********/
 extern bool quest_narsil_init_hook(int q_idx);
 extern bool quest_thrain_init_hook(int q_idx);

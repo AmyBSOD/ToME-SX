@@ -2545,6 +2545,12 @@ static bool player_birth_aux_ask()
 		plots[PLOT_KHAZAD] = QUEST_EVIL;
 		quest[plots[PLOT_KHAZAD]].status = QUEST_STATUS_UNTAKEN;
 
+		plots[PLOT_HOBBITON] = QUEST_SHOES;
+		quest[plots[PLOT_HOBBITON]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_OSGILIATH] = QUEST_ELDRITCH;
+		quest[plots[PLOT_OSGILIATH]].status = QUEST_STATUS_UNTAKEN;
+
 		plots[PLOT_OTHER] = QUEST_NULL;
 	}
 

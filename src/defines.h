@@ -4492,7 +4492,9 @@ extern int PlayerUID;
 #define QUEST_DRAGONS           23
 #define QUEST_HAUNTED           24
 #define QUEST_EVIL              25
-#define MAX_Q_IDX_INIT          26
+#define QUEST_SHOES             26
+#define QUEST_ELDRITCH          27
+#define MAX_Q_IDX_INIT          28
 
 #define PLOT_MAIN               0
 #define PLOT_BREE               1
@@ -4501,7 +4503,9 @@ extern int PlayerUID;
 #define PLOT_GONDOLIN           4
 #define PLOT_MINAS              5
 #define PLOT_KHAZAD             6
-#define MAX_PLOTS               7
+#define PLOT_HOBBITON           7
+#define PLOT_OSGILIATH          8
+#define MAX_PLOTS               9
 
 /*
  * Hooks

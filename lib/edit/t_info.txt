@@ -39,3 +39,18 @@
 ?:[AND [EQU $TOWN 5] [NOT [EQU $TOWN_DESTROY5 1] ] ]
 %:t_khazad.txt
 ?:1
+
+# Hobbiton
+?:[AND [EQU $TOWN 6] [EQU $TOWN_DESTROY6 1] ]
+%:t_d_hobb.txt
+?:[AND [EQU $TOWN 6] [NOT [EQU $TOWN_DESTROY6 1] ] ]
+%:t_hobb.txt
+?:1
+
+# Osgiliath
+?:[AND [EQU $TOWN 7] [EQU $TOWN_DESTROY7 1] ]
+%:t_d_osgili.txt
+?:[AND [EQU $TOWN 7] [NOT [EQU $TOWN_DESTROY7 1] ] ]
+%:t_osgili.txt
+?:1
+

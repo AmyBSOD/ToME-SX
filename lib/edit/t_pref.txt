@@ -109,3 +109,21 @@ F:M:204:3
 
 # Fake blank feature
 F: :0:3
+
+### Flowers for Theme ###
+
+#Elanor (yellow)
+F:E:79:3
+
+#Fumellar (red)
+F:F:80:3
+
+#Anemones (purple)
+F:A:81:3
+
+#Niphredil (white)
+F:N:82:3
+
+#Iris (blue)
+F:R:83:3
+

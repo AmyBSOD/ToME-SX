@@ -4406,6 +4406,57 @@ quest_type quest_init_tome[MAX_Q_IDX_INIT] =
 		quest_evil_init_hook,
 		{0, 0},
 	},
+	/* Hobbiton */
+	{
+		FALSE,
+		FALSE,
+		"Shoes!",
+		{
+			"There's a house in this town where a bunch of sentient shoes",
+			"happen to live after their owners had passed away. These",
+			"beauties attack anyone who dares venture in there.",
+			"Please, defeat the dangerous shoes, and you shall be rewarded.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+		QUEST_STATUS_UNTAKEN,
+		15,
+	
+		&plots[PLOT_HOBBITON],
+		HOOK_TYPE_C,
+		quest_shoes_init_hook,
+		{0, 0},
+	},
+	/* Osgiliath */
+	{
+		FALSE,
+		FALSE,
+		"Teh horror!",
+		{
+			"Oh no! We need help with a house full of lovecraftian horrors!",
+			"Go in there and clear out those monsters, but be careful, and",
+			"bring some sanity-restoring potions if possible.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+		QUEST_STATUS_UNTAKEN,
+		15,
+	
+		&plots[PLOT_OSGILIATH],
+		HOOK_TYPE_C,
+		quest_eldritch_init_hook,
+		{0, 0},
+	},
+
 };
 
 

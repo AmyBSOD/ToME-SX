@@ -468,6 +468,12 @@ bool quest_null_hook(int q)
 /************************* Khazad-dum plot ************************/
 #include "q_evil.c"
 
+/************************** Hobbiton plot *************************/
+#include "q_shoes.c"
+
+/************************** Osgiliath plot ************************/
+#include "q_eldritch.c"
+
 /*************************** Other plot ***************************/
 #include "q_narsil.c"
 #include "q_thrain.c"
