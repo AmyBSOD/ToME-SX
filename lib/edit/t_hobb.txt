@@ -36,6 +36,9 @@ F:z:74:3:0:0:0:0:0:7
 F:z:74:3:0:0:0:0:0:7
 ?:1
 
+# Castle: Plot Hobbiton
+F:B:75:3:0:0:0:0:0:7
+
 ### Buildings ###
 
 # Farm
@@ -90,7 +93,7 @@ D:#bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbb------------
 D:#bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbb---------------------TTT-OOb-------------------------------------------------------------------------------------------------------#
 D:#bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbb----------------------T--OOb-##############----------------------------------------------------------------------------------------#
 D:#bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbb-----------------TTT-TTT-OO--##############----------------------------------------------------------------------------------------#
-D:#bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbb------------------T-TTTT-OOOO1############9----------------------------------------------------------------------------------------#
+D:#bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbb------------------T-TTTT-OOOO1#####B######9----------------------------------------------------------------------------------------#
 D:#bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbOO--##############@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#
 D:#VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVaOOaV##############VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV#
 D:#VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVaOOaVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV#

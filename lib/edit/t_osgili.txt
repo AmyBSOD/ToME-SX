@@ -30,13 +30,16 @@ F:z:74:3:0:0:0:0:0:7
 F:z:74:3:0:0:0:0:0:7
 ?:1
 
+# Castle: Plot Osgiliath
+F:B:75:3:0:0:0:0:0:8
+
 ### Buildings ###
 
 # The Twinkling Star inn
 F:e:74:3:0:0:0:0:0:58
 
 # The Castle of Stars
-F:f:74:3:0:0:0:0:0:18
+F:f:74:3:0:0:0:0:0:10
 
 # Map store
 F:g:74:3:0:0:0:0:0:28
@@ -58,6 +61,9 @@ F:p:74:3:0:0:0:0:0:17
 
 # Tower of Magery
 F:q:74:3:0:0:0:0:0:18
+
+# Mayor
+F:y:74:3:0:0:0:0:0:10
 
 # Inner Temple
 F:r:74:3:0:0:0:0:0:19
@@ -101,7 +107,7 @@ D:#--------------------##TOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 D:#--------------------##TOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO.###############.O----##---------------------#
 D:#--------------------##TOOcccccccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbOObbb############################################bbbbbbbbbbbbbbbbbbbOOd--------O.f##############.O----##---------------------#
 D:#--------------------##TOOc--VVVVV--c,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dOOd,d##@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@##d,,,,,,,,,,,,,,,,dOOdbbbbbbb-O.f##############.O----##---------------------#
-D:#--------------------##TOOc-VVdWdVV-c,,,######,,,,,,,,,,,,,,,,,T,,,,,bOOb,,,,,@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@,,,,,,,,,,,,,,,,,,,dOOdbOOOOOb-O.f##############.O----##---------------------#
+D:#--------------------##TOOc-VVdWdVV-c,,,######,,,,,,,,,,,,,,,,,T,,,,,bOOb,,,,,@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@,,,,,,,,,,,,,,,,,,,dOOdbOOOOOb-O.f######B#######.O----##---------------------#
 D:#--------------------##TOOcVVVWWWVVVc,,,######,,,,,,,,,,,,,,,,TTT,,,bOOb,,,,,,,@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@,,,,dAAAAAAAAAd,,,,dOOdbOVVVOb-O.###############.O----##---------------------#
 D:#--------------------##TOOc-VVdWdVVOc,,,######,,,,,,,,,,,,,,,,,T,,,bOOb,,,,,,,,@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@,,,AAAAAAAAAAAAA,,,dOOdbOVVVbb-O.###############.O----##---------------------#
 D:#--------------------##TOOc--VVVVV-Oc,,,##h###,,,,,,,,######,,,,,,bOOb,,,,,,,,,,@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@,,,,,dAAAAAAAAAd,,,,dOOdbOOOOOOOO..#############..O----##---------------------#
