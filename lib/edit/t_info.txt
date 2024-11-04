@@ -54,3 +54,17 @@
 %:t_osgili.txt
 ?:1
 
+# Edoras
+?:[AND [EQU $TOWN 8] [EQU $TOWN_DESTROY8 1] ]
+%:t_d_edoras.txt
+?:[AND [EQU $TOWN 8] [NOT [EQU $TOWN_DESTROY7 8] ] ]
+%:t_edoras.txt
+?:1
+
+# Pelargir
+?:[AND [EQU $TOWN 9] [EQU $TOWN_DESTROY9 1] ]
+%:t_d_pelar.txt
+?:[AND [EQU $TOWN 9] [NOT [EQU $TOWN_DESTROY7 9] ] ]
+%:t_pelar.txt
+?:1
+

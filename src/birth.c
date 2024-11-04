@@ -2551,6 +2551,12 @@ static bool player_birth_aux_ask()
 		plots[PLOT_OSGILIATH] = QUEST_ELDRITCH;
 		quest[plots[PLOT_OSGILIATH]].status = QUEST_STATUS_UNTAKEN;
 
+		plots[PLOT_EDORAS] = QUEST_GLACIER;
+		quest[plots[PLOT_EDORAS]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_PELARGIR] = QUEST_OCEAN;
+		quest[plots[PLOT_PELARGIR]].status = QUEST_STATUS_UNTAKEN;
+
 		plots[PLOT_OTHER] = QUEST_NULL;
 	}
 

@@ -474,6 +474,12 @@ bool quest_null_hook(int q)
 /************************** Osgiliath plot ************************/
 #include "q_eldritch.c"
 
+/**************************** Edoras plot *************************/
+#include "q_glacier.c"
+
+/*************************** Pelargir plot ************************/
+#include "q_ocean.c"
+
 /*************************** Other plot ***************************/
 #include "q_narsil.c"
 #include "q_thrain.c"
