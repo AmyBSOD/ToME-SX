@@ -139,5 +139,20 @@ W:E:37:64:1
 # Utumno
 W:E:38:1:99
 
+# Barad-Dur
+W:E:54:21:39
+
+# Amon Sul
+W:E:55:42:53
+
+# Hornburg
+W:E:56:14:80
+
+# Fornost Erain
+W:E:57:16:93
+
+# Caras Galadhon
+W:E:58:64:85
+
 # Starting position
 W:P:34:21

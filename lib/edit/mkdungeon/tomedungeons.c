@@ -14,7 +14,7 @@ int random_number(int maxrnd)
 /* select a random type of walkable terrain */
 int randomfloortype(void)
 {
-	int randfloor = random_number(22);
+	int randfloor = random_number(31);
 	int floornumber = 1;
 
 	switch (randfloor) {
@@ -84,6 +84,17 @@ int randomfloortype(void)
 		case 22:
 			floornumber = 226; /* swamp pool */
 			break;
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+		case 31:
+			floornumber = 1; /* open floor */
+			break;
 
 		default:
 			floornumber = 1;
@@ -96,7 +107,7 @@ int randomfloortype(void)
 /* select a random type of non-walkable or otherwise obstructing terrain */
 int randomwalltype(void)
 {
-	int randfloor = random_number(24);
+	int randfloor = random_number(35);
 	int floornumber = 56;
 
 	/* small chance of something walkable */
@@ -179,6 +190,23 @@ int randomwalltype(void)
 		case 24:
 			floornumber = 85; /* pool of deep lava */
 			break;
+		case 25:
+		case 26:
+		case 27:
+		case 28:
+		case 29:
+		case 30:
+			floornumber = 56; /* granite wall */
+			break;
+		case 31:
+		case 32:
+		case 33:
+			floornumber = 50; /* magma vein */
+			break;
+		case 34:
+		case 35:
+			floornumber = 96; /* tree */
+			break;
 
 		default:
 			floornumber = 1;
@@ -195,12 +223,12 @@ void printRandoms(int lower, int upper, int count)
 	int d_id;
 	int contnum;
 
-	num = random_number(42);
+	num = random_number(47);
 
 	printf("V:2.0.0\n", num);
 	printf("\n", num);
 
-	for (d_id = 0; d_id <= 53; d_id++) {
+	for (d_id = 0; d_id <= 58; d_id++) {
 
 		switch (d_id) {
 			case 0:
@@ -482,6 +510,31 @@ void printRandoms(int lower, int upper, int count)
 				printf("D:OSe:a way to the Open Sea\n");
 				printf("W:488:588:1:0:14:160\n");
 				break;
+			case 54:
+				printf("N:54:Barad-Dur\n");
+				printf("D:BDu:the entrance to the abandoned fortress Barad-Dur.\n");
+				printf("W:1:20:1:0:14:160\n");
+				break;
+			case 55:
+				printf("N:55:Amon Sul\n");
+				printf("D:ASu:the entrance to the tower of Amon Sul.\n");
+				printf("W:20:40:1:0:14:160\n");
+				break;
+			case 56:
+				printf("N:56:Hornburg\n");
+				printf("D:Hor:the entrance to Hornburg.\n");
+				printf("W:40:60:1:0:50:160\n");
+				break;
+			case 57:
+				printf("N:57:Fornost Erain\n");
+				printf("D:For:the entrance to Fornost Erain.\n");
+				printf("W:50:70:1:0:50:160\n");
+				break;
+			case 58:
+				printf("N:58:Caras Galadhon\n");
+				printf("D:Car:the entrance to the remains of Caras Galadhon.\n");
+				printf("W:71:98:1:0:50:160\n");
+				break;
 		}
 
 		switch (d_id) {
@@ -569,7 +622,7 @@ void printRandoms(int lower, int upper, int count)
 		}
 
 		/* randomized content for those dungeons that should have randomized content --Amy */
-		if ( (d_id >= 1 && d_id <= 11) || (d_id >= 16 && d_id <= 27) || (d_id == 29) || (d_id >= 31 && d_id <= 53) ) {
+		if ( (d_id >= 1 && d_id <= 11) || (d_id >= 16 && d_id <= 27) || (d_id == 29) || (d_id >= 31 && d_id <= 58) ) {
 
 			if (random_number(3) == 2) {
 
@@ -767,7 +820,7 @@ void printRandoms(int lower, int upper, int count)
 
 			} else {
 
-				contnum = random_number(42);
+				contnum = random_number(47);
 
 				printf("# random type %d\n", contnum);
 
@@ -1281,6 +1334,48 @@ void printRandoms(int lower, int upper, int count)
 						printf("R:100:3\n");
 						printf("M:UNDEAD | EVIL | R_CHAR_V\n");
 						break;
+					case 43:
+						printf("# based on Barad-Dur\n", contnum);
+						printf("L:1:100:1:0:1:0\n");
+						printf("A:56:100:56:0:56:0:57:58\n");
+						printf("O:20:20:20:20\n");
+						printf("F:NO_STREAMERS | NO_SHAFT | CAVERN |\n");
+						printf("F:FILL_METHOD_2\n");
+						break;
+					case 44:
+						printf("# based on Amon Sul\n", contnum);
+						printf("L:1:100:1:0:1:0\n");
+						printf("A:56:80:50:20:56:0:57:50\n");
+						printf("O:20:20:20:20\n");
+						printf("F:NO_STREAMERS | NO_SHAFT | CAVERN |\n");
+						printf("F:FILL_METHOD_3\n");
+						break;
+					case 45:
+						printf("# based on Hornburg\n", contnum);
+						printf("L:1:100:1:0:1:0\n");
+						printf("A:56:70:50:30:56:0:57:50\n");
+						printf("O:20:20:20:20\n");
+						printf("F:NO_SHAFT | RANDOM_TOWNS |\n");
+						printf("F:FILL_METHOD_1\n");
+						break;
+					case 46:
+						printf("# based on Fornost Erain\n", contnum);
+						printf("L:1:70:89:25:79:5\n");
+						printf("A:56:40:96:50:226:10:57:58\n");
+						printf("O:20:20:20:20\n");
+						printf("F:NO_SHAFT | RANDOM_TOWNS | FLAT | CAVE | WATER_RIVER | LAVA_RIVER |\n");
+						printf("F:FILL_METHOD_1\n");
+						printf("E:2d5:60:SHARDS\n");
+						break;
+					case 47:
+						printf("# based on Caras Galadhon\n", contnum);
+						printf("L:1:80:86:20:1:0\n");
+						printf("A:56:80:87:10:177:10:205:58\n");
+						printf("O:20:20:20:20\n");
+						printf("F:RANDOM_TOWNS | BIG | LAVA_RIVERS | CAVERN | NO_EASY_MOVE |\n");
+						printf("F:FILL_METHOD_4\n");
+						printf("E:3d5:30:SOUND\n");
+						break;
 				}
 			}
 
@@ -1295,7 +1390,7 @@ void printRandoms(int lower, int upper, int count)
 /* Driver code */
 int main()
 {
-	int lower = 1, upper = 42, count = 31;
+	int lower = 1, upper = 47, count = 31;
 
 	// Use current time as
 	// seed for random generator

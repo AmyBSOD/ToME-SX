@@ -7036,6 +7036,8 @@ bool level_generate_dungeon(cptr name)
 	int i, k, y, x, y1, x1, branch = get_branch();
 	dungeon_info_type *d_ptr = &d_info[dungeon_type];
 
+	int mincavern;
+
 	int max_vault_ok = 2;
 
 	bool destroyed = FALSE;
@@ -7068,7 +7070,12 @@ bool level_generate_dungeon(cptr name)
 	}
 
 	/* Possible cavern */
-	if ((dungeon_flags1 & DF1_CAVERN) && (rand_int(dun_level / 2) > DUN_CAVERN))
+	/* Amy edit: don't have zero chance of a cavern level on shallow levels, please! */
+
+	mincavern = dun_level / 2;
+	if (mincavern < 40) mincavern = 40;
+
+	if ((dungeon_flags1 & DF1_CAVERN) && (rand_int(mincavern) > DUN_CAVERN))
 	{
 		cavern = TRUE;
 

@@ -862,6 +862,58 @@ R:35:0
 R:65:1
 M:R_CHAR_B
 
+N:54:Barad-Dur
+D:BDu:the entrance to the abandoned fortress Barad-Dur.
+W:1:20:1:0:14:160
+# Vanilla-style
+L:1:100:1:0:1:0
+A:56:100:56:0:56:0:57:58
+O:20:20:20:20
+F:NO_STREAMERS | NO_SHAFT | CAVERN | 
+F:FILL_METHOD_2 
+
+N:55:Amon Sul
+D:ASu:the entrance to the tower of Amon Sul.
+W:20:40:1:0:14:160
+# Vanilla-style
+L:1:100:1:0:1:0
+A:56:80:50:20:56:0:57:50
+O:20:20:20:20
+F:NO_STREAMERS | NO_SHAFT | CAVERN | 
+F:FILL_METHOD_3
+
+N:56:Hornburg
+D:Hor:the entrance to Hornburg.
+W:40:60:1:0:50:160
+# Vanilla-style
+L:1:100:1:0:1:0
+A:56:70:50:30:56:0:57:50
+O:20:20:20:20
+F:NO_SHAFT | RANDOM_TOWNS | 
+F:FILL_METHOD_1
+
+N:57:Fornost Erain
+D:For:the entrance to Fornost Erain.
+W:50:70:1:0:50:160
+# Vanilla-style
+L:1:70:89:25:79:5
+A:56:40:96:50:226:10:57:58
+O:20:20:20:20
+F:NO_SHAFT | RANDOM_TOWNS | FLAT | CAVE | WATER_RIVER | LAVA_RIVER |
+F:FILL_METHOD_1
+E:2d5:60:SHARDS
+
+N:58:Caras Galadhon
+D:Car:the entrance to the remains of Caras Galadhon.
+W:71:98:1:0:50:160
+# Vanilla-style
+L:1:80:86:20:1:0
+A:56:80:87:10:177:10:205:58
+O:20:20:20:20
+F:RANDOM_TOWNS | BIG | LAVA_RIVERS | CAVERN | NO_EASY_MOVE | 
+F:FILL_METHOD_4
+E:3d5:30:SOUND
+
 # N:<index>:<name>
 # D:<3 letter short name>:<long name>
 # W:<min depth>:<max depth>:<min player level>:<next dungeon>:<min alloc>:<max alloc chance>
