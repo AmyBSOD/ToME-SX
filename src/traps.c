@@ -2875,6 +2875,8 @@ bool mon_hit_trap_aux_staff(int m_idx, object_type *o_ptr)
 	monster_type *m_ptr = &m_list[m_idx];
 	int y = m_ptr->fy;
 	int x = m_ptr->fx;
+	int k; /* because some turbo wierdo commented out all the item code below --Amy */
+	int level = exec_lua("return get_level(o_ptr->pval2, 50, 0)");
 
 	/* sval and base level of the staff */
 	int sval = o_ptr->sval;
@@ -2886,7 +2888,6 @@ bool mon_hit_trap_aux_staff(int m_idx, object_type *o_ptr)
 	/* Depend on staff type */
 	switch (sval)
 	{
-#if 0 /*must be tested*/
 	case SV_STAFF_IDENTIFY:
 	case SV_STAFF_MANA:
 	case SV_STAFF_REMOVE_CURSES:
@@ -2952,8 +2953,6 @@ bool mon_hit_trap_aux_staff(int m_idx, object_type *o_ptr)
 	case SV_STAFF_FIERY_SHIELD:
 	case SV_STAFF_WINGS_WIND:
 	case SV_STAFF_PROBABILITY_TRAVEL:
-
-#endif
 
 	default:
 		return (FALSE);
@@ -3103,6 +3102,8 @@ bool mon_hit_trap_aux_wand(int m_idx, object_type *o_ptr)
 	int y = m_ptr->fy;
 	int x = m_ptr->fx;
 
+	int level = exec_lua("return get_level(o_ptr->pval2, 50, 0)");
+
 	/* sval and bonus level of the wand */
 	int sval = o_ptr->sval;
 
@@ -3113,8 +3114,6 @@ bool mon_hit_trap_aux_wand(int m_idx, object_type *o_ptr)
 	/* Depend on wand type */
 	switch (sval)
 	{
-
-#if 0 /* must be tested */
 
 	case SV_WAND_MANATHRUST:
 		typ = GF_MANA;
@@ -3221,8 +3220,6 @@ bool mon_hit_trap_aux_wand(int m_idx, object_type *o_ptr)
 	case SV_WAND_MAGELOCK:
 	case SV_WAND_DEMON_BLADE:
 	case SV_WAND_POISON_BLOOD:
-
-#endif
 
 	default:
 		return (FALSE);
