@@ -5884,6 +5884,7 @@ void earthquake(int cy, int cx, int r)
 	bool hurt = FALSE;
 	cave_type *c_ptr;
 	bool map[32][32];
+	int quakeefflvl; /* by Amy - dumb if you get a flat 300 damage because not everyone has that much HP early on */
 
 	if (p_ptr->inside_quest)
 	{
@@ -5990,9 +5991,14 @@ void earthquake(int cy, int cx, int r)
 		/* Hurt the player a lot */
 		if (!sn)
 		{
+			quakeefflvl = dun_level;
+			if (dun_level < 1) quakeefflvl = p_ptr->lev;
+
 			/* Message and damage */
 			msg_print("You are severely crushed!");
 			damage = 300;
+			/* balancing by Amy */
+			if (quakeefflvl < 60) damage = quakeefflvl * 5;
 		}
 
 		/* Destroy the grid, and push the player to safety */
