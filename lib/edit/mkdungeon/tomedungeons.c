@@ -128,10 +128,10 @@ int randomwalltype(void)
 			floornumber = 51; /* quartz vein */
 			break;
 		case 4:
-			floornumber = 52; /* magma vein with treasure */
+			floornumber = 50; /* magma vein */
 			break;
 		case 5:
-			floornumber = 53; /* quartz vein with treasure */
+			floornumber = 51; /* quartz vein */
 			break;
 		case 6:
 			floornumber = 56; /* granite wall */
@@ -164,7 +164,7 @@ int randomwalltype(void)
 			floornumber = 98; /* sandwall */
 			break;
 		case 16:
-			floornumber = 99; /* sandwall with treasure */
+			floornumber = 98; /* sandwall */
 			break;
 		case 17:
 			floornumber = 189; /* illusion wall */
