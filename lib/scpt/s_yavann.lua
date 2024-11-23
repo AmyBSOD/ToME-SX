@@ -96,12 +96,12 @@ YAVANNA_WATER_BITE = add_spell
 
 			return set_project(randint(30) + 30 + get_level(YAVANNA_WATER_BITE, 150),
 				    GF_WATER,
-				    10 + get_level(YAVANNA_WATER_BITE),
+				    10 + get_level(YAVANNA_WATER_BITE, 10),
 				    rad,
 				    bor(PROJECT_STOP, PROJECT_KILL))
 	end,
 	["info"] =      function()
-			return "dur "..(30 + get_level(YAVANNA_WATER_BITE, 150)).."+d30 dam "..(10 + get_level(YAVANNA_WATER_BITE)).."/blow"
+			return "dur "..(30 + get_level(YAVANNA_WATER_BITE, 150)).."+d30 dam "..(10 + get_level(YAVANNA_WATER_BITE, 10)).."/blow"
 	end,
 	["desc"] =      {
 			"Imbues your melee weapon with a natural stream of water",
