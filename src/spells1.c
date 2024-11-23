@@ -7640,6 +7640,12 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 		if (blind) msg_print("Something bounces!");
 		else msg_print("The attack bounces!");
 
+		/* prevent ch3at0r players from reflecting death rays at monsters --Amy */
+		if (typ == GF_DEATH || typ == GF_DEATH_RAY) {
+			disturb(1, 0);
+			return TRUE;
+		}
+
 		/* Choose 'new' target */
 		do
 		{
