@@ -1025,7 +1025,7 @@ struct owner_type
 	u32b races[2][2];                  /* Liked/hated races */
 	u32b classes[2][2];                /* Liked/hated classes */
 
-	s16b costs[3];                  /* Costs for liked people */
+	s32b costs[3];                  /* Costs for liked people */
 };
 
 
@@ -1092,7 +1092,7 @@ struct store_action_type
 {
 	u32b name;                      /* Name (offset) */
 
-	s16b costs[3];                  /* Costs for liked people */
+	s32b costs[3];                  /* Costs for liked people */
 	char letter;                    /* Action letter */
 	char letter_aux;                /* Action letter */
 	s16b action;                    /* Action code */
