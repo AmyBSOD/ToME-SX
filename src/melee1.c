@@ -2329,7 +2329,7 @@ bool make_attack_normal(int m_idx, byte divis)
 						if (!o_ptr->k_idx) continue;
 
 						/* Skip non-food objects */
-						if (o_ptr->tval != TV_FOOD) continue;
+						if (o_ptr->tval != TV_FOOD && o_ptr->tval != TV_CORPSE && o_ptr->tval != TV_EGG) continue;
 
 						/* Get a description */
 						object_desc(o_name, o_ptr, FALSE, 0);
