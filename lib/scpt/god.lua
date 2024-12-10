@@ -443,11 +443,14 @@ function set_god_dungeon_attributes()
 
 		-- R:
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mode = 3
-		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 100
+		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 95
 
 		-- M: We want evil or flying characters
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags3 = RF3_EVIL
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags7 = RF7_CAN_FLY
+
+		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
+		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
 
 	elseif player.pgod == GOD_MANWE then
 
@@ -482,7 +485,7 @@ function set_god_dungeon_attributes()
 
 		-- R:
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mode = 3
-		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 100
+		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 95
 
 		-- M: We want air(poison-type) or flying characters. Orcs too. They would have ransacked his elf-loving temple :)
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags2 = RF2_INVISIBLE
@@ -491,6 +494,8 @@ function set_god_dungeon_attributes()
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags5 = RF5_BA_POIS
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags7 = RF7_CAN_FLY
 
+		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
+		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
 
 	elseif player.pgod == GOD_TULKAS then
 
@@ -524,11 +529,13 @@ function set_god_dungeon_attributes()
 
 		-- R:
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mode = 3
-		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 100
+		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 95
 
 		-- M: plenty demons please
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags3 = bor(RF3_DEMON, RF3_EVIL)
 
+		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
+		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
 
 	elseif player.pgod == GOD_MELKOR then
 
@@ -569,10 +576,13 @@ function set_god_dungeon_attributes()
 		-- R: No restrictions on monsters here
 		-- R: Apart from making sure we have some GOOD ones
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mode = 3
-		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 100
+		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 95
 
 		-- M:
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags3 = bor(RF3_GOOD, RF3_EVIL)
+
+		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
+		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
 
 	elseif player.pgod == GOD_AMYBSOD then
 
@@ -612,11 +622,14 @@ function set_god_dungeon_attributes()
 		-- R: Apart from making sure we have some GOOD ones
 		-- R: and eldritch horrors because I'm evil
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mode = 3
-		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 100
+		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 95
 
 		-- M:
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags3 = bor(RF3_GOOD, RF3_EVIL)
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags2 = RF2_ELDRITCH_HORROR
+
+		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
+		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
 
 	elseif player.pgod == GOD_YAVANNA then
 
@@ -651,10 +664,13 @@ function set_god_dungeon_attributes()
 
 		-- R: Demons, Undead, non-living
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mode = 3
-		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 100
+		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 95
 
 		-- M:
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags3 = bor(RF3_DEMON, RF3_UNDEAD, RF3_NONLIVING)
+
+		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
+		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
 
 	elseif player.pgod == GOD_AULE then
 
@@ -725,7 +741,7 @@ function set_god_dungeon_attributes()
 
 		-- R:
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mode = 3
-		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 100
+		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 95
 
 		-- M: We want air(poison-type) or flying characters. Orcs too.
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags2 = RF2_EMPTY_MIND
@@ -735,6 +751,8 @@ function set_god_dungeon_attributes()
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags7 = RF7_CAN_FLY
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags8 = RF8_WILD_VOLCANO
 
+		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
+		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
 
 	elseif player.pgod == GOD_ULMO then
 
@@ -766,11 +784,14 @@ function set_god_dungeon_attributes()
 
 		-- R:
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mode = 3
-		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 100
+		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 95
 
 		-- M: Aquatic creatures only.
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags3 = RF3_RES_WATE
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags7 = bor(RF7_CAN_FLY, RF7_AQUATIC)
+
+		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
+		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
 
 	elseif player.pgod == GOD_MANDOS then
 
@@ -802,11 +823,14 @@ function set_god_dungeon_attributes()
 
 		-- R:
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mode = 3
-		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 100
+		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 95
 
 		-- M: vampires!
 		dungeon(god_quest.DUNGEON_GOD).rules[1].r_char = "V"
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags3 = bor(RF3_UNDEAD, RF3_EVIL)
+
+		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
+		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
 
 	end
 

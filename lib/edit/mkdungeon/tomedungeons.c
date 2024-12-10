@@ -720,13 +720,13 @@ void printRandoms(int lower, int upper, int count)
 				}
 				if (random_number(6) == 1) printf("F:FLAT\n");
 				if (random_number(50) == 1) printf("F:LAVA_RIVER\n");
-				if (random_number(20) == 1) printf("F:CAVERN\n");
-				if (random_number(20) == 1) printf("F:CAVE\n");
+				if (random_number(8) == 1) printf("F:CAVERN\n");
+				if (random_number(8) == 1) printf("F:CAVE\n");
 				if (random_number(50) == 1) printf("F:FORGET\n");
-				if (random_number(25) == 1) printf("F:RANDOM_TOWNS\n");
-				if (random_number(20) == 1) printf("F:CIRCULAR_ROOMS\n");
-				if (random_number(30) == 1) printf("F:DOUBLE\n");
-				if (random_number(15) == 1) printf("F:WATER_RIVER\n");
+				if (random_number(5) == 1) printf("F:RANDOM_TOWNS\n");
+				if (random_number(15) == 1) printf("F:CIRCULAR_ROOMS\n");
+				if (random_number(20) == 1) printf("F:DOUBLE\n");
+				if (random_number(10) == 1) printf("F:WATER_RIVER\n");
 				if (random_number(25) == 1) printf("F:WATER_RIVERS\n");
 				if (random_number(40) == 1) printf("F:SAND_VEIN\n");
 
@@ -877,8 +877,9 @@ void printRandoms(int lower, int upper, int count)
 						printf("E:2d10:20:FIRE\n");
 						printf("F:CAVE | LAVA_RIVER | NO_STREAMERS\n");
 						printf("F:FILL_METHOD_0 | NO_EASY_MOVE\n");
-						printf("R:100:1\n");
+						printf("R:95:1\n");
 						printf("M:IM_FIRE\n");
+						printf("R:5:0\n");
 						break;
 					case 6:
 						printf("# based on Nether Realm\n", contnum);
@@ -1135,8 +1136,9 @@ void printRandoms(int lower, int upper, int count)
 						printf("E:1d4:45:COLD\n");
 						printf("F:DOUBLE | WATER_RIVER | CAVERN | NO_STREAMERS\n");
 						printf("F:FILL_METHOD_2\n");
-						printf("R:100:1\n");
+						printf("R:95:1\n");
 						printf("M:IM_COLD\n");
+						printf("R:5:0\n");
 						break;
 					case 25:
 						printf("# based on Forodwaith\n", contnum);
@@ -1147,8 +1149,9 @@ void printRandoms(int lower, int upper, int count)
 						printf("F:NO_DOORS | CAVERN | COLD | NO_DESTROY | EMPTY | FLAT | \n");
 						printf("F:LIFE_LEVEL | NO_STREAMERS | NO_SHAFT | \n");
 						printf("F:FILL_METHOD_4\n");
-						printf("R:100:3\n");
+						printf("R:95:3\n");
 						printf("M:COLD_BLOOD | HURT_LITE | IM_COLD\n");
+						printf("R:5:0\n");
 						break;
 					case 26:
 						printf("# based on Emyn Luin\n", contnum);
@@ -1245,8 +1248,9 @@ void printRandoms(int lower, int upper, int count)
 						printf("O:45:5:45:5\n");
 						printf("F:FILL_METHOD_2 | BIG | NO_DOORS | CIRCULAR_ROOMS | EMPTY | TOWER | FLAT\n");
 						printf("F:ADJUST_LEVEL_2 | ADJUST_LEVEL_1_2 | NO_SHAFT\n");
-						printf("R:100:3\n");
+						printf("R:95:3\n");
 						printf("M:EVIL | CAN_FLY\n");
+						printf("R:5:0\n");
 						break;
 					case 34:
 						printf("# based on Manwe Temple\n", contnum);
@@ -1254,9 +1258,10 @@ void printRandoms(int lower, int upper, int count)
 						printf("A:211:100:56:0:56:0:210:211\n");
 						printf("O:15:25:5%:5\n");
 						printf("F:FILL_METHOD_4 | NO_DOORS | TOWER | CAVERN | ADJUST_LEVEL_2 | NO_SHAFT\n");
-						printf("R:100:3\n");
+						printf("R:95:3\n");
 						printf("M:INVISIBLE | ORC | IM_POIS | CAN_FLY\n");
 						printf("S:BR_POIS | BR_GRAV | BA_POIS\n");
+						printf("R:5:0\n");
 						break;
 					case 35:
 						printf("# based on Tulkas Temple\n", contnum);
@@ -1264,8 +1269,9 @@ void printRandoms(int lower, int upper, int count)
 						printf("A:56:100:56:0:56:0:58:57\n");
 						printf("O:10:70:5:15\n");
 						printf("F:FILL_METHOD_0 | NO_DESTROY | ADJUST_LEVEL_2\n");
-						printf("R:100:3\n");
+						printf("R:95:3\n");
 						printf("M:DEMON | EVIL\n");
+						printf("R:5:0\n");
 						break;
 					case 36:
 						printf("# based on Melkor Temple\n", contnum);
@@ -1274,8 +1280,9 @@ void printRandoms(int lower, int upper, int count)
 						printf("A:188:100:56:0:56:0:188:57\n");
 						printf("O:25:25:25:25\n");
 						printf("F:FILL_METHOD_1 | SMALL | LAVA_RIVERS | ADJUST_LEVEL_1 | ADJUST_LEVEL_1_2\n");
-						printf("R:100:3\n");
+						printf("R:95:3\n");
 						printf("M:GOOD | EVIL\n");
+						printf("R:5:0\n");
 						break;
 					case 37:
 						printf("# based on AmyBSOD Temple\n", contnum);
@@ -1284,8 +1291,9 @@ void printRandoms(int lower, int upper, int count)
 						printf("A:188:100:56:0:56:0:188:57\n");
 						printf("O:25:25:25:25\n");
 						printf("F:FILL_METHOD_1 | LAVA_RIVERS | BIG | ADJUST_LEVEL_2\n");
-						printf("R:100:3\n");
+						printf("R:95:3\n");
 						printf("M:GOOD | EVIL | ELDRITCH_HORROR\n");
+						printf("R:5:0\n");
 						break;
 					case 38:
 						printf("# based on Yavanna Temple\n", contnum);
@@ -1294,8 +1302,9 @@ void printRandoms(int lower, int upper, int count)
 						printf("O:20:10:30:40\n");
 						printf("F:FILL_METHOD_1 | NO_DOORS | WATER_RIVERS | NO_DESTROY | ADJUST_LEVEL_1\n");
 						printf("F:ADJUST_LEVEL_1_2 | NO_SHAFT | NO_GENO\n");
-						printf("R:100:3\n");
+						printf("R:95:3\n");
 						printf("M:DEMON | UNDEAD | NONLIVING\n");
+						printf("R:5:0\n");
 						break;
 					case 39:
 						printf("# based on Aule Temple\n", contnum);
@@ -1312,9 +1321,10 @@ void printRandoms(int lower, int upper, int count)
 						printf("A:211:100:56:0:56:0:210:211\n");
 						printf("O:15:5:55:25\n");
 						printf("F:FILL_METHOD_4 | NO_DOORS | TOWER | CAVERN | ADJUST_LEVEL_1 | NO_SHAFT\n");
-						printf("R:100:3\n");
+						printf("R:95:3\n");
 						printf("M:EMPTY_MIND | ORC | IM_POIS | CAN_FLY | WILD_VOLCANO\n");
 						printf("S:BR_POIS | BR_GRAV | BA_POIS\n");
+						printf("R:5:0\n");
 						break;
 					case 41:
 						printf("# based on Ulmo Temple\n", contnum);
@@ -1322,8 +1332,9 @@ void printRandoms(int lower, int upper, int count)
 						printf("A:187:100:56:0:56:0:238:84\n");
 						printf("O:90:0:5:5\n");
 						printf("F:FILL_METHOD_0 | NO_DESTROY | ADJUST_LEVEL_2\n");
-						printf("R:100:3\n");
+						printf("R:95:3\n");
 						printf("M:RES_WATE | CAN_FLY | AQUATIC\n");
+						printf("R:5:0\n");
 						break;
 					case 42:
 						printf("# based on Mandos Temple\n", contnum);
@@ -1331,8 +1342,9 @@ void printRandoms(int lower, int upper, int count)
 						printf("A:56:100:56:0:56:0:58:57\n");
 						printf("O:10:70:5:15\n");
 						printf("F:FILL_METHOD_0 | NO_DESTROY | ADJUST_LEVEL_2\n");
-						printf("R:100:3\n");
+						printf("R:95:3\n");
 						printf("M:UNDEAD | EVIL | R_CHAR_V\n");
+						printf("R:5:0\n");
 						break;
 					case 43:
 						printf("# based on Barad-Dur\n", contnum);
