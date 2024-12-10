@@ -2859,6 +2859,8 @@ static bool vault_aux_wilderness(int r_idx)
 	int wildertype = randint(dun_level);
 	while (wildertype > 100) wildertype -= 100;
 
+	if (randint(40) == 1) wildertype = randint(100);
+
 	/* Decline unique monsters */
 	if (r_ptr->flags1 & (RF1_UNIQUE)) return (FALSE);
 
@@ -3185,6 +3187,8 @@ static void build_type5(int by0, int bx0)
 	tmp = randint(dun_level);
 	while (tmp > 100) tmp -= 100;
 
+	if (randint(40) == 1) tmp = randint(100);
+
 	old_get_mon_num_hook = get_mon_num_hook;
 
 	if ((tmp < 25) && (rand_int(2) != 0))
@@ -3333,7 +3337,12 @@ static void build_type5(int by0, int bx0)
 			/* Place that "random" monster (no groups) */
 			(void)place_monster_aux(y, x, r_idx, FALSE, FALSE, MSTATUS_ENEMY);
 			/* and fill the pit with a few items, from newer Angband versions, to make them worth exploring --Amy */
-			if (rand_int(12) < 1) place_object(y, x, FALSE, FALSE, OBJ_FOUND_FLOOR);
+			if (rand_int(12) < 1) {
+				if (rand_int(20) < 1) object_level = dun_level + 10;
+				if (rand_int(50) < 1) object_level = dun_level + 20;
+				place_object(y, x, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+				object_level = dun_level;
+			}
 		}
 	}
 
@@ -3446,6 +3455,8 @@ static void build_type6(int by0, int bx0)
 	/* Choose a pit type */
 	tmp = randint(dun_level);
 	while (tmp > 100) tmp -= 100;
+
+	if (randint(40) == 1) tmp = randint(100);
 
 	old_get_mon_num_hook = get_mon_num_hook;
 
@@ -3720,9 +3731,19 @@ static void build_type6(int by0, int bx0)
 	for (x = xval - 9; x <= xval + 9; x++)
 	{
 		place_monster_aux(yval - 2, x, what[0], FALSE, FALSE, MSTATUS_ENEMY);
-		if (rand_int(12) < 1) place_object(yval - 2, xval, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval - 2, xval, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
 		place_monster_aux(yval + 2, x, what[0], FALSE, FALSE, MSTATUS_ENEMY);
-		if (rand_int(12) < 1) place_object(yval + 2, xval, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval + 2, xval, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
 	}
 
 	/* Middle columns */
@@ -3730,43 +3751,123 @@ static void build_type6(int by0, int bx0)
 	{
 		place_monster_aux(y, xval - 9, what[0], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 9, what[0], FALSE, FALSE, MSTATUS_ENEMY);
-		if (rand_int(12) < 1) place_object(yval, xval - 9, FALSE, FALSE, OBJ_FOUND_FLOOR);
-		if (rand_int(12) < 1) place_object(yval, xval + 9, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval - 9, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval + 9, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
 
 		place_monster_aux(y, xval - 8, what[1], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 8, what[1], FALSE, FALSE, MSTATUS_ENEMY);
-		if (rand_int(12) < 1) place_object(yval, xval - 8, FALSE, FALSE, OBJ_FOUND_FLOOR);
-		if (rand_int(12) < 1) place_object(yval, xval + 8, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval - 8, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval + 8, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
 
 		place_monster_aux(y, xval - 7, what[1], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 7, what[1], FALSE, FALSE, MSTATUS_ENEMY);
-		if (rand_int(12) < 1) place_object(yval, xval - 7, FALSE, FALSE, OBJ_FOUND_FLOOR);
-		if (rand_int(12) < 1) place_object(yval, xval + 7, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval - 7, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval + 7, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
 
 		place_monster_aux(y, xval - 6, what[2], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 6, what[2], FALSE, FALSE, MSTATUS_ENEMY);
-		if (rand_int(12) < 1) place_object(yval, xval - 6, FALSE, FALSE, OBJ_FOUND_FLOOR);
-		if (rand_int(12) < 1) place_object(yval, xval + 6, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval - 6, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval + 6, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
 
 		place_monster_aux(y, xval - 5, what[2], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 5, what[2], FALSE, FALSE, MSTATUS_ENEMY);
-		if (rand_int(12) < 1) place_object(yval, xval - 5, FALSE, FALSE, OBJ_FOUND_FLOOR);
-		if (rand_int(12) < 1) place_object(yval, xval + 5, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval - 5, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval + 5, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
 
 		place_monster_aux(y, xval - 4, what[3], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 4, what[3], FALSE, FALSE, MSTATUS_ENEMY);
-		if (rand_int(12) < 1) place_object(yval, xval - 4, FALSE, FALSE, OBJ_FOUND_FLOOR);
-		if (rand_int(12) < 1) place_object(yval, xval + 4, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval - 4, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval + 4, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
 
 		place_monster_aux(y, xval - 3, what[3], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 3, what[3], FALSE, FALSE, MSTATUS_ENEMY);
-		if (rand_int(12) < 1) place_object(yval, xval - 3, FALSE, FALSE, OBJ_FOUND_FLOOR);
-		if (rand_int(12) < 1) place_object(yval, xval + 3, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval - 3, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval + 3, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
 
 		place_monster_aux(y, xval - 2, what[4], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(y, xval + 2, what[4], FALSE, FALSE, MSTATUS_ENEMY);
-		if (rand_int(12) < 1) place_object(yval, xval - 2, FALSE, FALSE, OBJ_FOUND_FLOOR);
-		if (rand_int(12) < 1) place_object(yval, xval + 2, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval - 2, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval + 2, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
 	}
 
 	/* Above/Below the center monster */
@@ -3774,19 +3875,44 @@ static void build_type6(int by0, int bx0)
 	{
 		place_monster_aux(yval + 1, x, what[5], FALSE, FALSE, MSTATUS_ENEMY);
 		place_monster_aux(yval - 1, x, what[5], FALSE, FALSE, MSTATUS_ENEMY);
-		if (rand_int(12) < 1) place_object(yval + 1, xval, FALSE, FALSE, OBJ_FOUND_FLOOR);
-		if (rand_int(12) < 1) place_object(yval - 1, xval, FALSE, FALSE, OBJ_FOUND_FLOOR);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval + 1, xval, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval - 1, xval, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
 	}
 
 	/* Next to the center monster */
 	place_monster_aux(yval, xval + 1, what[6], FALSE, FALSE, MSTATUS_ENEMY);
 	place_monster_aux(yval, xval - 1, what[6], FALSE, FALSE, MSTATUS_ENEMY);
-	if (rand_int(12) < 1) place_object(yval, xval + 1, FALSE, FALSE, OBJ_FOUND_FLOOR);
-	if (rand_int(12) < 1) place_object(yval, xval - 1, FALSE, FALSE, OBJ_FOUND_FLOOR);
+	if (rand_int(12) < 1) {
+		if (rand_int(20) < 1) object_level = dun_level + 10;
+		if (rand_int(50) < 1) object_level = dun_level + 20;
+		place_object(yval, xval + 1, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+		object_level = dun_level;
+	}
+	if (rand_int(12) < 1) {
+		if (rand_int(20) < 1) object_level = dun_level + 10;
+		if (rand_int(50) < 1) object_level = dun_level + 20;
+		place_object(yval, xval - 1, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+		object_level = dun_level;
+	}
 
 	/* Center monster */
 	place_monster_aux(yval, xval, what[7], FALSE, FALSE, MSTATUS_ENEMY);
-	if (rand_int(12) < 1) place_object(yval, xval, FALSE, FALSE, OBJ_FOUND_FLOOR);
+	if (rand_int(12) < 1) {
+		if (rand_int(20) < 1) object_level = dun_level + 10;
+		if (rand_int(50) < 1) object_level = dun_level + 20;
+		place_object(yval, xval, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+		object_level = dun_level;
+	}
 
 	if (seed_dungeon)
 	{
@@ -7162,10 +7288,11 @@ bool level_generate_dungeon(cptr name)
 		{
 			/* The deeper you are, the more cavelike the rooms are */
 
-			/* no caves when cavern exists: they look bad */
+			/* no caves when cavern exists: they look bad
+			 * Amy edit: who cares? have a small chance anyway! */
 			k = randint(100);
 
-			if (!cavern && (k < dun_level))
+			if (!(cavern && randint(20) != 1) && (k < dun_level))
 			{
 				/* Type 10 -- Fractal cave */
 				if (room_build(y, x, 10)) continue;
@@ -7187,14 +7314,14 @@ bool level_generate_dungeon(cptr name)
 
 		/* Attempt an "unusual" room -- no vaults on town levels */
 		if (!(town_level && (randint(2) != 1) ) &&
-		                (ironman_rooms || (rand_int(DUN_UNUSUAL) < dun_level)))
+		                (ironman_rooms || (randint(50) == 1) || (rand_int(DUN_UNUSUAL) < dun_level)))
 		{
 			/* Roll for room type */
 			/* Amy edit: ironman shouldn't create only greater vaults... have some other room types too, please */
 			k = ( (ironman_rooms && (randint(3) != 1)) ? 0 : rand_int(100));
 
 			/* Attempt a very unusual room */ /* test hack */
-			if (ironman_rooms || (rand_int(DUN_UNUSUAL) < dun_level))
+			if (ironman_rooms || (randint(50) == 1) || (rand_int(DUN_UNUSUAL) < dun_level))
 			{
 #ifdef FORCE_V_IDX
 				if (room_build(y, x, 8)) continue;
