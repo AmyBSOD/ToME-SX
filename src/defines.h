@@ -797,6 +797,12 @@
 
 /* Features 0x4F - 0x53 -- unused */
 
+#define FEAT_GRASS_ELANOR       0x4F
+#define FEAT_GRASS_FUMELLA      0x50
+#define FEAT_GRASS_ANEMONE      0x51
+#define FEAT_GRASS_NIPHREDIL    0x52
+#define FEAT_GRASS_IRIS         0x53
+
 /* Additional terrains */
 #define FEAT_SHAL_WATER         0x54
 #define FEAT_DEEP_LAVA          0x55

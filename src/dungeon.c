@@ -2056,6 +2056,12 @@ static void process_world(void)
 		{
 			regen_amount += 200 + wisdom_scale(800);
 		}
+
+		/* Amy edit: and if there's flowers as well, regenerate more, rather than not at all (like wtf did the original devs just forget this terrain exists?!) */
+		if (cave[p_ptr->py][p_ptr->px].feat == FEAT_GRASS_ELANOR || cave[p_ptr->py][p_ptr->px].feat == FEAT_GRASS_FUMELLA || cave[p_ptr->py][p_ptr->px].feat == FEAT_GRASS_ANEMONE || cave[p_ptr->py][p_ptr->px].feat == FEAT_GRASS_NIPHREDIL || cave[p_ptr->py][p_ptr->px].feat == FEAT_GRASS_IRIS || cave[p_ptr->py][p_ptr->px].feat == FEAT_FLOWER)
+		{
+			regen_amount += 300 + wisdom_scale(1200);
+		}
 	}
 
 	/* Regenerate Hit Points if needed */
