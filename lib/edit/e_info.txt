@@ -3869,6 +3869,14 @@ R:100
 F:LITHE | DEX | FEATHER
 f:LITHE | DEX | FEATHER
 
+# amulet of doom 2
+N:310:2
+X:A:0:2
+T:40:0:0
+W:0:1:15:5000
+C:0:0:10:10
+R:100
+
 # N: serial number : ego type
 # D: description
 # T: tval : min sval : max sval
