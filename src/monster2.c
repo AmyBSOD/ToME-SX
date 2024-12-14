@@ -2943,7 +2943,7 @@ static bool place_monster_group(int y, int x, int r_idx, bool slp, int status)
 	}
 
 	/* Easy monsters, large groups */
-	else if (r_ptr->level < dun_level)
+	else if ((r_ptr->level < dun_level) && (randint(2) == 1) )
 	{
 		extra = dun_level - r_ptr->level;
 		extra = randint(extra);
@@ -2954,6 +2954,10 @@ static bool place_monster_group(int y, int x, int r_idx, bool slp, int status)
 
 	/* Modify the group size */
 	total += extra;
+
+	if (randint(2) == 1) total /= 2;
+
+	if (total > 1) total = randint(total);
 
 	/* Minimum size */
 	if (total < 1) total = 1;
@@ -3086,6 +3090,10 @@ bool place_monster_aux(int y, int x, int r_idx, bool slp, bool grp, int status)
 	{
 		old_get_mon_num_hook = get_mon_num_hook;
 
+		int maxescorts = 20;
+		if (randint(2)) maxescorts = 10;
+		maxescorts = randint(maxescorts);
+
 		/* Set the escort index */
 		place_monster_idx = r_idx;
 
@@ -3096,7 +3104,7 @@ bool place_monster_aux(int y, int x, int r_idx, bool slp, bool grp, int status)
 		get_mon_num_prep();
 
 		/* Try to place several "escorts" */
-		for (i = 0; i < 50; i++)
+		for (i = 0; i < maxescorts; i++)
 		{
 			int nx, ny, z, d = 3;
 
