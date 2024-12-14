@@ -962,10 +962,14 @@ bool apply_rule(monster_race *r_ptr, byte rule)
 	return FALSE;
 }
 
+/* monster allowed in this dungeon? returns FALSE if not */
 bool restrict_monster_to_dungeon(int r_idx)
 {
 	dungeon_info_type *d_ptr = &d_info[dungeon_type];
 	monster_race *r_ptr = &r_info[r_idx];
+
+	/* kludge for ultra stupid god quests because SOMEone made the chance values in god.lua not work --Amy */
+	if (dungeon_type == 30 && (randint(20) == 1) ) return TRUE;
 
 	/* Select a random rule */
 	byte rule = d_ptr->rule_percents[rand_int(100)];
