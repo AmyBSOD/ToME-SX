@@ -29,12 +29,12 @@
  */
 #define MAX_ROCKS      76       /* Used with rings (min 58) */
 #define MAX_AMULETS    44       /* Used with amulets (min 30) */
-#define MAX_WOODS      63       /* Used with staffs (min 32) */
-#define MAX_METALS     65       /* Used with wands/rods (min 32/30) */
-#define MAX_COLORS     86       /* Used with potions (min 62) */
+#define MAX_WOODS      65       /* Used with staffs (min 32) */
+#define MAX_METALS     70       /* Used with wands/rods (min 32/30) */
+#define MAX_COLORS    101       /* Used with potions (min 62) */
 #define MAX_SHROOM     20       /* Used with mushrooms (min 20) */
-#define MAX_TITLES     85       /* Used with scrolls (min 55) */
-#define MAX_SYLLABLES 280       /* Used with scrolls (see below) */
+#define MAX_TITLES    115       /* Used with scrolls (min 55) */
+#define MAX_SYLLABLES 290       /* Used with scrolls (see below) */
 
 
 /*
@@ -133,7 +133,7 @@ static cptr staff_adj[MAX_WOODS] =
 	"Saffron", "Fuchsia", "Pallet", "Avocadowood", "Cherry", 
 	"Holly", "Kukui Wood", "Manzanita", "Persimmon Wood", "Pecan", 
 	"Wintry", "Poplar", "Zebrawood", "Wicker", "Plywood", 
-	"Tamarack", "Whitewood", "Basswood"
+	"Tamarack", "Whitewood", "Basswood", "Fossilized", "Chestnut"
 
 };
 
@@ -151,7 +151,7 @@ static byte staff_col[MAX_WOODS] =
 	TERM_ORANGE, TERM_RED, TERM_VIOLET, TERM_GREEN, TERM_ORANGE, 
 	TERM_VIOLET, TERM_L_DARK, TERM_L_UMBER, TERM_GREEN, TERM_YELLOW, 
 	TERM_L_BLUE, TERM_WHITE, TERM_SLATE, TERM_RED, TERM_RED, 
-	TERM_L_DARK, TERM_WHITE, TERM_VIOLET
+	TERM_L_DARK, TERM_WHITE, TERM_VIOLET, TERM_WHITE, TERM_UMBER
 
 };
 
@@ -174,7 +174,8 @@ static cptr wand_adj[MAX_METALS] =
 	"Orichalcum", "Electrum", "Conundrum", "Tetragonal", "Trigonal", 
 	"Cubic", "Orthorhombic", "Skew", "Oblique", "Monoclinic", 
 	"Triclinic", "Angular", "Pentagonal", "Beryllium", "Mercury", 
-	"Bauxite", "Cavorite", "Diffuse", "Plutonium", "Asbestos"
+	"Bauxite", "Cavorite", "Diffuse", "Plutonium", "Asbestos",
+	"Oxidized", "Slim", "Rickety", "Martian", "Venusian"
 };
 
 static byte wand_col[MAX_METALS] =
@@ -191,7 +192,8 @@ static byte wand_col[MAX_METALS] =
 	TERM_L_BLUE, TERM_YELLOW, TERM_L_GREEN, TERM_L_GREEN, TERM_VIOLET, 
 	TERM_RED, TERM_VIOLET, TERM_L_DARK, TERM_L_BLUE, TERM_ORANGE, 
 	TERM_YELLOW, TERM_YELLOW, TERM_ORANGE, TERM_L_GREEN, TERM_SLATE, 
-	TERM_SLATE, TERM_BLUE, TERM_L_DARK, TERM_SLATE, TERM_L_GREEN
+	TERM_SLATE, TERM_BLUE, TERM_L_DARK, TERM_SLATE, TERM_L_GREEN,
+	TERM_L_DARK, TERM_SLATE, TERM_L_RED, TERM_GREEN, TERM_L_BLUE
 };
 
 
@@ -250,7 +252,10 @@ static cptr potion_adj[MAX_COLORS] =
 	"Effervescent", "Luminescent", "Muddy", "Iridescent", "Simmering", 
 	"Manky", "Bubbly", "Swirly", "Steamy", "Gooey", 
 	"Fluorescent", "Fuming", "Sizzling", "Syrup", "Frothing", 
-	"Dimly Shining", "Glossy White", "Caustic", "Blood Red", "Sparkling"
+	"Dimly Shining", "Glossy White", "Caustic", "Blood Red", "Sparkling",
+	"Antihistamine", "Flowering", "Crispy", "Smooth", "Silky", 
+	"Noble", "Serum", "Verdant", "Olive", "Gloss", 
+	"Essential", "Alcoholic", "Moonshine", "Opaque", "Spoonful"
 };
 
 static byte potion_col[MAX_COLORS] =
@@ -271,7 +276,10 @@ static byte potion_col[MAX_COLORS] =
 	TERM_SLATE, TERM_WHITE, TERM_UMBER, TERM_ORANGE, TERM_ORANGE, 
 	TERM_YELLOW, TERM_WHITE, TERM_UMBER, TERM_WHITE, TERM_VIOLET, 
 	TERM_ORANGE, TERM_SLATE, TERM_ORANGE, TERM_GREEN, TERM_YELLOW, 
-	TERM_WHITE, TERM_WHITE, TERM_GREEN, TERM_RED, TERM_L_BLUE
+	TERM_WHITE, TERM_WHITE, TERM_GREEN, TERM_RED, TERM_L_BLUE, 
+	TERM_GREEN, TERM_L_GREEN, TERM_RED, TERM_WHITE, TERM_VIOLET, 
+	TERM_BLUE, TERM_YELLOW, TERM_YELLOW, TERM_GREEN, TERM_L_RED, 
+	TERM_GREEN, TERM_L_RED, TERM_YELLOW, TERM_UMBER, TERM_RED
 };
 
 
@@ -312,7 +320,8 @@ static cptr syllables[MAX_SYLLABLES] =
 	"fag", "you", "dud", "tek", "kiss", "kes", "path", "ran", "gem", "ral",
 	"ort", "tal", "ara", "bel", "ana", "sia", "nil", "lel", "lol", "god",
 	"zo", "sed", "ded", "ill", "mish", "fix", "goth", "xus", "xor", "wil",
-	"sub", "wit", "tich", "tle", "arr", "rar", "dyb", "agid", "fra", "fro"
+	"sub", "wit", "tich", "tle", "arr", "rar", "dyb", "agid", "fra", "fro",
+	"gol", "deh", "glo", "bli", "ice", "cold", "hot", "cave", "sel", "lim"
 };
 
 /*
