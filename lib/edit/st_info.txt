@@ -54,8 +54,10 @@ G:1:U
 W:255
 
 N:1:Armory
+I:100:& Pair~ of Leather Sandals
 I:70:& Pair~ of Soft Leather Boots
 I:60:& Pair~ of Hard Leather Boots
+I:100:& Soft Leather Cap~
 I:80:& Hard Leather Cap~
 I:70:& Metal Cap~
 I:65:& Iron Helm~
@@ -72,6 +74,7 @@ I:75:& Metal Brigandine Armor~
 I:68:& Bar Chain Mail~
 I:100:& Set~ of Leather Gloves
 I:80:& Set~ of Gauntlets
+I:100:& Light Shield~
 I:100:& Small Leather Shield~
 I:90:& Large Leather Shield~
 I:80:& Small Metal Shield~
