@@ -5288,6 +5288,12 @@ bool invoke(int dam, int typee)
 		/* Hack -- Skip Unique Monsters */
 		if (r_ptr->flags1 & (RF1_UNIQUE)) continue;
 
+		/* Amy edit: 10% unconditional chance for monster to resist */
+		if (randint(10) == 1) continue;
+
+		/* Amy edit: monsters whose level is higher than yours can resist */
+		if ((m_ptr->level > 1) && (randint(m_ptr->level) > p_ptr->lev) ) continue;
+
 		/* Hack -- Skip Quest Monsters */
 		if (m_ptr->mflag & MFLAG_QUEST) continue;
 
@@ -5328,12 +5334,15 @@ bool genocide_aux(bool player_cast, char typ)
 	bool result = FALSE;
 	int msec = delay_factor * delay_factor * delay_factor;
 	int dam = 0;
+	bool willdelete = TRUE;
 
 	/* Delete the monsters of that "type" */
 	for (i = 1; i < m_max; i++)
 	{
 		monster_type *m_ptr = &m_list[i];
 		monster_race *r_ptr = race_inf(m_ptr);
+
+		willdelete = TRUE;
 
 		/* Paranoia -- Skip dead monsters */
 		if (!m_ptr->r_idx) continue;
@@ -5343,6 +5352,12 @@ bool genocide_aux(bool player_cast, char typ)
 
 		/* Hack -- Skip Quest Monsters */
 		if (m_ptr->mflag & MFLAG_QUEST) continue;
+
+		/* Amy edit: 10% unconditional chance for monster to resist */
+		if (randint(10) == 1) willdelete = FALSE;
+
+		/* Amy edit: monsters whose level is higher than yours can resist */
+		if ((m_ptr->level > 1) && (randint(m_ptr->level) > p_ptr->lev) ) willdelete = FALSE;
 
 		/* Skip "wrong" monsters */
 		if (r_ptr->d_char != typ) continue;
@@ -5369,9 +5384,10 @@ bool genocide_aux(bool player_cast, char typ)
 			return TRUE;
 		}
 
-		/* Delete the monster */
-		delete_monster_idx(i);
+		/* Delete the monster (if it doesn't resist) */
+		if (willdelete) delete_monster_idx(i);
 
+		/* if the monster resisted, still damage player --Amy */
 		if (player_cast)
 		{
 			/* Keep track of damage */
@@ -5447,6 +5463,7 @@ bool mass_genocide(bool player_cast)
 	bool result = FALSE;
 	int msec = delay_factor * delay_factor * delay_factor;
 	int dam = 0;
+	bool willdelete;
 
 	if (dungeon_flags2 & DF2_NO_GENO) {
 		msg_print("A mysterious force stops the genocide.");
@@ -5466,6 +5483,8 @@ bool mass_genocide(bool player_cast)
 		monster_type *m_ptr = &m_list[i];
 		monster_race *r_ptr = race_inf(m_ptr);
 
+		willdelete = TRUE;
+
 		/* Paranoia -- Skip dead monsters */
 		if (!m_ptr->r_idx) continue;
 
@@ -5474,6 +5493,12 @@ bool mass_genocide(bool player_cast)
 
 		/* Hack -- Skip Quest Monsters */
 		if (m_ptr->mflag & MFLAG_QUEST) continue;
+
+		/* Amy edit: 10% unconditional chance for monster to resist */
+		if (randint(10) == 1) willdelete = FALSE;
+
+		/* Amy edit: monsters whose level is higher than yours can resist */
+		if ((m_ptr->level > 1) && (randint(m_ptr->level) > p_ptr->lev) ) willdelete = FALSE;
 
 		/* Skip distant monsters */
 		if (m_ptr->cdis > MAX_SIGHT) continue;
@@ -5500,8 +5525,8 @@ bool mass_genocide(bool player_cast)
 			return TRUE;
 		}
 
-		/* Delete the monster */
-		delete_monster_idx(i);
+		/* Delete the monster if it didn't resist */
+		if (willdelete) delete_monster_idx(i);
 
 		if (player_cast)
 		{
