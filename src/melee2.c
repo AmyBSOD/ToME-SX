@@ -7522,8 +7522,9 @@ static void process_monster(int m_idx, bool is_frien)
 		 * This is checked after the normal attacks
 		 * to allow monsters to attack an enemy,
 		 * even if it can't enter the terrain.
+		 * Amy edit: monsters that are low on HP can cross terrain, to prevent lame strategies
 		 */
-		if (do_move && !monster_can_cross_terrain(c_ptr->feat, r_ptr))
+		if (do_move && (m_ptr->hp > (m_ptr->maxhp / 2) ) && !monster_can_cross_terrain(c_ptr->feat, r_ptr))
 		{
 			/* Assume no move allowed */
 			do_move = FALSE;
