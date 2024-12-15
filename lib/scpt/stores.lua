@@ -305,6 +305,20 @@ store_buy_list
 		TV_DRUID_BOOK,
 		TV_INSTRUMENT,
 	},
+	["Junk Shop"] =
+	{
+		TV_BOTTLE,
+		TV_BATERIE,
+		TV_SPIKE,
+		TV_PARCHMENT,
+		TV_RUNE1,
+		TV_RUNE2,
+	},
+	["Butchery"] =
+	{
+		TV_CORPSE,
+		TV_FOOD,
+	},
 	["Forbidden Library"] =
 	{
 		TV_BOOK,

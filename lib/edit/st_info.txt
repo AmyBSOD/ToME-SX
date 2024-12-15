@@ -864,6 +864,33 @@ F:RANDOM | DEEP_LEVEL | MEDIUM_LEVEL
 F:VERY_RARE
 W:255
 
+N:66:Junk Shop
+T:100:11:256
+T:100:2:256
+T:100:4:256
+T:100:5:256
+T:100:8:256
+T:100:104:256
+T:100:105:256
+T:1:7:256
+A:0:0:1:2:3:4
+O:0:5:6:7
+G:1:r
+F:RANDOM | SHALLOW_LEVEL
+F:RARE
+W:255
+
+N:67:Butchery
+T:100:1:256
+T:100:9:256
+T:10:80:256
+A:0:0:1:2:3:4
+O:0:5:6:7
+G:1:b
+F:RANDOM | MEDIUM_LEVEL
+F:RARE
+W:20
+
 # N:<index>:<name>
 # I:<proba>:<item name> - for making the store sell a specific item
 # T:<proba>:<tval>:<sval> - for making the store sell a TV_something item class (sval 256 = wildcard?)
