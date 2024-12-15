@@ -243,7 +243,7 @@ N:14:of Space-Time
 I:39:105:0
 W:30:12:15:50000
 P:0:1d1:0:0:0
-F:INSTA_ART | LITE1
+F:INSTA_ART | LITE1 | RES_TIME
 D:A powerful stone that provides a strong light for any who 
 D:wields it. It is rumored that it may even protect the wearer from 
 D:the passing of time.
@@ -2121,7 +2121,7 @@ F:BRAND_FIRE | BRAND_COLD | BRAND_ELEC | VORPAL | IM_COLD |
 F:SLAY_EVIL | SLAY_UNDEAD | SLAY_DEMON | SLAY_TROLL | SLAY_DEMON |
 F:FREE_ACT | RES_FIRE | RES_DARK | LITE1 | SEE_INVIS | SLOW_DIGEST | REGEN | 
 F:ACTIVATE | SHOW_MODS | BLESSED |
-F:PRECOGNITION | NO_MAGIC | ULTIMATE | SPECIAL_GENE
+F:PRECOGNITION | NO_MAGIC | ULTIMATE | SPECIAL_GENE | ANTIMAGIC_50
 a:HARDCORE=ERU
 D:A warm light bathes this translucent blade.  The power of the fates are 
 D:at the command of its wielder as the weapon passes Supreme Judgment on 
@@ -2197,7 +2197,7 @@ F:SEE_INVIS | SLOW_DIGEST | FREE_ACT | SPEED | DEX | CON | FLY | LUCK
 F:XTRA_MIGHT | XTRA_SHOTS | IM_ELEC | REFLECT | INVIS | STEALTH |
 F:SUST_STR | SUST_INT | SUST_WIS | SUST_DEX | SUST_CON | SUST_CHR |
 F:RES_CHAOS | RES_DISEN | RES_CONF | RES_BLIND | INFRA | ESP_ORC | ESP_TROLL | ESP_EVIL |
-F:PRECOGNITION | NO_MAGIC | ULTIMATE | SPECIAL_GENE
+F:PRECOGNITION | NO_MAGIC | ULTIMATE | SPECIAL_GENE | ANTIMAGIC_50
 D:Designed to be used with the Seeker Bolt of Feanor, this Crossbow 
 D:is perfect against the terrible powers of Morgoth.
 
@@ -2643,7 +2643,7 @@ I:14:59:4
 W:80:60:20:150000
 P:0:3d4:0:0:0
 F:ACTIVATE | BLESSED | CHR | ESP_UNDEAD | FREE_ACT | 
-F:HIDE_TYPE | HOLD_LIFE | LIFE | LUCK | RES_FEAR | 
+F:HIDE_TYPE | HOLD_LIFE | LIFE | LUCK | RES_FEAR | WIELD_CAST | 
 F:RES_SOUND | SEARCH | SEE_INVIS | STEALTH | SUST_CHR
 a:HARDCORE=PROT_EVIL
 D:This small, serviceable wooden harp once belonged to Tom Bombadil-- 
@@ -2679,7 +2679,7 @@ W:80:60:15:90000
 P:0:3d4:0:0:0
 F:ACTIVATE | BLESSED | CON | ESP_ANIMAL | ESP_EVIL | 
 F:FREE_ACT | HIDE_TYPE | LUCK | RES_CONF | RES_FEAR | 
-F:RES_SOUND | SEARCH | SEE_INVIS | STEALTH
+F:RES_SOUND | SEARCH | SEE_INVIS | STEALTH | WIELD_CAST
 D:This heavenly instrument, wrought from gleaming silver, most 
 D:often appears in the hands of the Valarin huntsman Orome; yet 
 D:he may lend mortal champions the horn from time to time.  Its 
@@ -3149,7 +3149,7 @@ N:219:of Elbereth
 I:39:105:4
 W:60:12:15:50000
 P:0:1d1:0:0:0
-F:INSTA_ART | SEARCH | LITE3 | LUCK
+F:INSTA_ART | SEARCH | LITE3 | LUCK | RES_TIME
 D:A powerful anchor that provides a strong light for any who 
 D:wields it. It is rumored that it may even protect the wearer from 
 D:the passing of time.
@@ -3159,14 +3159,14 @@ I:39:105:1
 W:80:25:5:32500
 P:0:1d1:0:0:0
 F:INSTA_ART | SEE_INVIS | HOLD_LIFE |
-F:SPEED | LITE3 | LITE1
+F:SPEED | LITE3 | LITE1 | RES_TIME
 D:The shining Anchor of the West, a famed heirloom of Legolas's house.
 
 N:221:of the Wizard of Yendor
 I:39:105:3
 W:99:50:5:50000
 P:0:1d1:0:0:0
-F:SEE_INVIS | HOLD_LIFE | RES_CHAOS | LUCK
+F:SEE_INVIS | HOLD_LIFE | RES_CHAOS | LUCK | RES_TIME
 F:INSTA_ART | SPEED | RES_LITE | RES_DARK | ESP_ORC | LITE3
 D:A great anchor seemingly filled with moonlight, the famed Heart of the 
 D:Mountain, which splinters the light that falls upon it into a thousand 
@@ -3177,7 +3177,7 @@ I:39:105:-5
 W:50:10:10:0
 P:0:1d1:0:0:0
 F:CURSED | INT | WIS | CON | DEX | CHR | STR | 
-F:LITE3 | LITE2 | LUCK | MAGIC_BREATH
+F:LITE3 | LITE2 | LUCK | MAGIC_BREATH | RES_TIME
 F:INSTA_ART | DG_CURSE | ESP_UNDEAD |
 D:It appears like the Anchor of Elbereth at first - but wait! It 
 D:is a cursed anchor created by an evil wizard to lure adventurers 
@@ -3188,7 +3188,7 @@ I:39:105:0
 W:99:10:10:0
 P:0:1d1:0:0:0
 F:CURSED | 
-F:LITE3 | LITE2 | LUCK | MAGIC_BREATH
+F:LITE3 | LITE2 | LUCK | MAGIC_BREATH | RES_TIME
 F:INSTA_ART | TY_CURSE | ESP_UNDEAD |
 D:A cursed anchor that was put into the game by an evil developer.
 
@@ -3359,6 +3359,7 @@ I:14:59:2
 W:50:10:30:40000
 P:0:1d1:0:0:0
 F:ACTIVATE | CHR | INFRA | LUCK | STEALTH | SUST_CHR | TUNNEL
+F:WIELD_CAST
 a:HARDCORE=CHARM_OTHERS
 Z:remove fear
 D:This magical instrument once belonged to Thorin Oakenshield, 
@@ -3579,7 +3580,7 @@ F:NO_MAGIC | PRECOGNITION | REGEN | RES_DARK | RES_FIRE |
 F:SEE_INVIS | SHOW_MODS | SLAY_DEMON | SLAY_EVIL | SLAY_TROLL | 
 F:SLAY_UNDEAD | SLOW_DIGEST | SUST_CHR | SUST_CON | SPECIAL_GENE | 
 F:SUST_DEX | SUST_INT | SUST_STR | SUST_WIS | VORPAL | ULTIMATE | 
-F:COULD2H
+F:COULD2H | ANTIMAGIC_50
 f:COULD2H
 a:HARDCORE=ERU
 D:A weapon forged by Aule himself and blessed by Eru Iluvatar, 
@@ -3599,7 +3600,7 @@ F:NO_MAGIC | PRECOGNITION | REGEN | RES_DARK | RES_FIRE |
 F:SEE_INVIS | SHOW_MODS | SLAY_DEMON | SLAY_EVIL | SLAY_TROLL |
 F:SLAY_UNDEAD | SLOW_DIGEST | SUST_CHR | SUST_CON | SPECIAL_GENE |
 F:SUST_DEX | SUST_INT | SUST_STR | SUST_WIS | VORPAL | ULTIMATE |
-F:COULD2H
+F:COULD2H | ANTIMAGIC_50
 f:COULD2H
 a:HARDCORE=ERU
 D:The awesome weapon of the Vala Ulmo, Lord of Waters.  Mightiest of all the 
@@ -3618,7 +3619,7 @@ F:NO_MAGIC | PRECOGNITION | REGEN | RES_DARK | RES_FIRE |
 F:SEE_INVIS | SHOW_MODS | SLAY_DEMON | SLAY_EVIL | SLAY_TROLL |
 F:SLAY_UNDEAD | SLOW_DIGEST | SUST_CHR | SUST_CON | SPECIAL_GENE |
 F:SUST_DEX | SUST_INT | SUST_STR | SUST_WIS | VORPAL | ULTIMATE |
-F:COULD2H
+F:COULD2H | ANTIMAGIC_50
 f:COULD2H
 a:HARDCORE=ERU
 D:Aule's mighty weapon, granted to you to aid the defeat of Melkor. 
@@ -3634,7 +3635,7 @@ F:CON | FREE_ACT | IM_COLD | LIFE | LITE1 | LUCK | NO_MAGIC |
 F:PRECOGNITION | REGEN | RES_DARK | RES_FIRE | SEE_INVIS | SHOW_MODS |
 F:SLAY_DEMON | SLAY_EVIL | SLAY_TROLL | SLAY_UNDEAD | SLOW_DIGEST |
 F:SUST_CHR | SUST_CON | SUST_DEX | SUST_INT | SUST_STR |
-F:SUST_WIS | VORPAL | SPECIAL_GENE | ULTIMATE
+F:SUST_WIS | VORPAL | SPECIAL_GENE | ULTIMATE | ANTIMAGIC_50
 a:HARDCORE=ERU
 D:A shining rapier used by Vaire to cut the strings of time when 
 D:dire need arises. Its power with that of the Flame Imperishable 
@@ -3649,7 +3650,7 @@ P:0:0d0:36:28:0
 F:CON | DEX | ESP_EVIL | ESP_ORC | ESP_TROLL | FLY | FREE_ACT |
 F:IM_ELEC | INFRA | INVIS | LUCK | NO_MAGIC | PRECOGNITION |
 F:REFLECT | RES_BLIND | RES_CHAOS | RES_CONF | RES_DISEN |
-F:SEE_INVIS | SLOW_DIGEST | SPEED | STEALTH |
+F:SEE_INVIS | SLOW_DIGEST | SPEED | STEALTH | ANTIMAGIC_50 | 
 F:SUST_CHR | SUST_CON | SUST_DEX | SUST_INT | SUST_STR |
 F:SUST_WIS | XTRA_MIGHT | XTRA_SHOTS | SPECIAL_GENE | ULTIMATE
 D:A gift from Orome to Irmo, a mighty bow that sings the songs of the 
@@ -3665,7 +3666,7 @@ P:0:0d0:36:28:0
 F:CON | DEX | ESP_EVIL | ESP_ORC | ESP_TROLL | FLY | FREE_ACT |
 F:IM_ELEC | INFRA | INVIS | LUCK | NO_MAGIC | PRECOGNITION |
 F:REFLECT | RES_BLIND | RES_CHAOS | RES_CONF | RES_DISEN |
-F:SEE_INVIS | SLOW_DIGEST | SPEED | STEALTH |
+F:SEE_INVIS | SLOW_DIGEST | SPEED | STEALTH | ANTIMAGIC_50 |
 F:SUST_CHR | SUST_CON | SUST_DEX | SUST_INT | SUST_STR | SUST_WIS |
 F:XTRA_MIGHT | XTRA_SHOTS | SPECIAL_GENE | ULTIMATE
 D:This sling was made for the most lithe of the Valier to provide 
@@ -3682,7 +3683,7 @@ P:0:0d0:36:28:0
 F:CON | DEX | ESP_EVIL | ESP_ORC | ESP_TROLL | FLY | FREE_ACT |
 F:IM_ELEC | INFRA | INVIS | LUCK | NO_MAGIC | PRECOGNITION |
 F:REFLECT | RES_BLIND | RES_CHAOS | RES_CONF | RES_DISEN |
-F:SEE_INVIS | SLOW_DIGEST | SPEED | STEALTH |
+F:SEE_INVIS | SLOW_DIGEST | SPEED | STEALTH | ANTIMAGIC_50 |
 F:SUST_CHR | SUST_CON | SUST_DEX | SUST_INT | SUST_STR | SUST_WIS |
 F:XTRA_MIGHT | XTRA_SHOTS | SPECIAL_GENE | ULTIMATE
 D:Made from living starlight, this boomerang will dispel the darkest 
@@ -3709,7 +3710,7 @@ D:about you as you face your ultimate foe.
 # artifact high heels
 N:261:of Amy
 I:30:4:5
-W:80:20:80:150000
+W:80:20:10:150000
 P:10:1d1:0:0:10
 F:INV_PROTECT | DEVICE_MASTERY | RES_WATER | SLOW_DIGEST | SEE_INVIS | 
 F:FEATHER | RES_DISEN | RES_CONF | SUST_CON | SUST_CHR | DEX
@@ -4104,6 +4105,1748 @@ f:COULD2H | AGGRAVATE | AUTO_CURSE | TY_CURSE | BLACK_BREATH |
 f:CURSE_NO_DROP | SAVING_MALUS | 
 D:A hilariously cursed artifact weapon that tempts you to use it with
 D:all the useful properties it has.
+
+N:296:'Kusanagi-no-tsurugi'
+I:23:27:3
+W:50:20:190:50000
+P:0:5d4:15:15:0
+F:STEALTH | DEX | RES_NETHER | RES_DISEN |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD |
+F:SLAY_EVIL | SLAY_ANIMAL | SLAY_DEMON | SLAY_DRAGON |
+F:SEE_INVIS | REGEN | BLESSED | LITE1 | SHOW_MODS | MUST2H
+f:LITE1 | BLESSED | STEALTH | MUST2H
+D:Artifact two-handed sword from Poschengband.
+
+N:297:of Xiaolong
+I:21:4:3
+W:45:14:60:40000
+P:0:4d3:20:10:10
+F:STEALTH | SUST_STR | SUST_DEX | SUST_CON |
+F:SPEED | RES_FIRE | BRAND_FIRE |
+F:SLAY_ANIMAL | SLAY_DRAGON | FREE_ACT |
+F:REGEN | SHOW_MODS
+f:STEALTH | SPEED
+D:Artifact nunchaku from Poschengband.
+
+N:298:of Benkei
+I:22:9:4
+W:45:20:150:40000
+P:0:3d6:5:23:5
+F:STR | CON | SLAY_EVIL | SLAY_UNDEAD | SLAY_ORC | SLAY_TROLL |
+F:FREE_ACT | REGEN | SHOW_MODS | COULD2H
+f:FREE_ACT | STR | CON | COULD2H
+D:Artifact naginata from Poschengband.
+
+N:299:'Nyoi-bou'
+I:21:16:5
+W:80:70:190:50000
+P:0:7d7:5:25:10
+F:STR | SLAY_EVIL | SEE_INVIS | COULD2H
+f:STR | COULD2H
+D:Artifact tetsubo from Poschengband.
+
+N:300:'Matoi'
+I:21:7:3
+W:20:5:70:808
+P:0:1d7:-5:10:3
+F:STR | CHR | RES_FIRE
+f:STR | CHR
+D:Artifact jo staff from Poschengband.
+
+N:301:of Musashi
+I:23:13:3
+W:50:5:90:20000
+P:0:2d4:28:17:0
+F:DEX | SUST_DEX | SHOW_MODS
+f:DEX | SUST_DEX
+D:It is the wakizashi of the famed creator of the dual sword technique,
+D:Miyamoto Musashi, and wielded with his left hand in combat.
+
+N:302:of Shuten-douji
+I:21:16:6
+W:40:40:190:30000
+P:0:4d7:0:20:10
+F:STR | COULD2H
+f:STR | COULD2H
+D:Artifact tetsubo from Poschengband.
+
+N:303:of Kamui the Escapee
+I:23:19:4
+W:20:8:100:60000
+P:0:2d9:15:2:0
+F:DEX | STEALTH | SEARCH | RES_FIRE | BRAND_POIS |
+F:SEE_INVIS | SHOW_MODS
+f:DEX | STEALTH | SEARCH
+D:Artifact ninjato from Poschengband.
+
+N:304:of The Bonze Octopus
+I:21:7:4
+W:35:40:70:60000
+P:0:1d7:8:8:8
+F:STR | WIS | BLOWS | TUNNEL | RES_ACID | RES_ELEC
+F:REGEN | FREE_ACT | BRAND_ELEC | BLESSED
+f:STR | WIS | BLOWS | FREE_ACT
+D:Artifact jo staff from Poschengband. The name was misspelled in the original too.
+
+N:305:of Asclepius
+I:21:14:3
+W:40:45:160:60000
+P:0:2d11:15:15:5
+F:WIS | CHR | BLESSED | LITE2 | LIFE
+F:SEE_INVIS | FREE_ACT | HOLD_LIFE | REGEN | SLOW_DIGEST |
+F:VAMPIRIC | SLAY_ANIMAL | SLAY_DRAGON | 
+F:SLAY_ORC | SLAY_TROLL | SLAY_GIANT |
+F:RES_POIS | RES_CONF | RES_CHAOS | COULD2H | 
+f:WIS | CHR | LITE2 | SEE_INVIS | COULD2H
+D:This is the staff of Aesculapius, who is a greek god of
+D:the medicine.
+
+N:306:of Sha Wujing
+I:22:14:2
+W:35:30:175:40000
+P:0:3d7:12:10:0
+F:BLESSED | STR | WIS |
+F:SLAY_EVIL | SLAY_UNDEAD | KILL_DEMON |
+F:SEE_INVIS | REGEN | INFRA |
+F:RES_ACID | RES_COLD | RES_DARK | COULD2H
+f:BLESSED | STR | WIS | KILL_DEMON | COULD2H
+D:This lajatang looks like a staff because it has only a
+D:blade which looks like a half moon. Sha Wujing helped a
+D:long journey of Tang Sanzang with it.
+
+N:307:'Taro Dachi'
+I:23:27:4
+W:45:25:190:40000
+P:0:9d4:0:0:-5
+F:STR | VORPAL |
+F:SLAY_ORC | SLAY_TROLL | SLAY_GIANT | MUST2H
+f:VORPAL | MUST2H
+D:Asakura's captain Naotaka Magara defeated a lot of soldiers
+D:with this large katana.
+
+N:308:of Jing Ke
+I:23:6:3
+W:30:15:20:30000
+P:0:2d5:-2:13:0
+F:DEX | BLOWS | SPEED | 
+F:BRAND_COLD | BRAND_POIS | VORPAL
+f:BLOWS | SPEED | VORPAL
+D:Artifact tanto from Poschengband.
+
+N:309:of the Heavenly Maiden
+I:35:5:4
+W:50:3:0:45000
+P:0:0d0:0:0:20
+F:CHR | FEATHER | SEE_INVIS | FREE_ACT |
+F:RES_COLD | RES_ELEC
+f:CHR | SEE_INVIS | FREE_ACT
+D:This is a heavenly cloak of the maiden which was stolen
+D:by a man, when she was having a bath at a lake with her
+D:friend maidens.
+
+N:310:of Yositsune
+I:32:18:2
+W:50:20:80:36000
+P:7:1d2:0:0:8
+F:DEX | CON | CHR | SEARCH | INFRA | 
+F:RES_FEAR | RES_BLIND | RES_SOUND |
+f:RES_FEAR | RES_BLIND
+D:This is Yositsune's kabuto. It defended his head against
+D:many arrows and blades from his enemies.
+
+N:311:of Yositsune
+I:37:14:2
+W:50:20:280:40000
+P:17:1d4:0:0:28
+F:DEX | SPEED | STEALTH | 
+F:FREE_ACT | REGEN | SLOW_DIGEST |
+F:RES_ACID | RES_FIRE | RES_COLD | RES_ELEC | RES_CONF |
+F:RES_CHAOS | RES_NEXUS |
+f:DEX | SPEED | STEALTH
+D:This is the haramakido of Yositsune who is the best brave
+D:warrior of Genji. You can feel his agility and dexterity,
+D:when you put it on.
+
+N:312:of the Bando Musha
+I:37:16:2
+W:70:15:320:50000
+P:24:1d4:5:5:20
+F:STR | CON | CHR | SHOW_MODS |
+F:RES_ACID | RES_COLD | RES_ELEC | RES_BLIND | RES_DISEN |
+F:RES_FEAR | 
+f:RES_FEAR
+D:This is Shigetada Hatakeyama's O-yoroi. He is brave, wise
+D:and honest warrior, so he was called the best model of
+D:eastern samurai. This O-yoroi is majestic like him.
+
+N:313:'Ruyi Jingu Bang'
+I:21:14:2
+W:70:80:160:60000
+P:0:2d11:20:15:15
+F:SLAY_ANIMAL | SLAY_DEMON | SLAY_UNDEAD |
+F:FREE_ACT | RES_SOUND | HOLD_LIFE | SUST_STR | SUST_DEX |
+F:BLOWS | SPEED | STR | DEX | CON | WIS | COULD2H
+f:BLOWS | SPEED | STR | DEX | CON | WIS | COULD2H
+D:The magic cudgel of The Monkey King, Sun Wukong, this iron rod has
+D:the power to change its size at the will of its master.
+
+N:314:of Hades
+I:36:13:5
+W:90:127:80:55555
+P:4:1d1:0:0:38
+F:CON | STEALTH | SPEED | SUST_CON | FREE_ACT |
+F:SEE_INVIS | HOLD_LIFE | SLOW_DIGEST | RES_ACID | RES_ELEC |
+F:RES_COLD | RES_FIRE | RES_POIS | RES_DARK | RES_NETHER |
+F:RES_NEXUS | ESP_UNDEAD | ESP_DEMON | ESP_EVIL | 
+F:PERMA_CURSE | CURSED | HEAVY_CURSE
+D:This simple tunic belongs to Hades, Lord of the Underworld.
+
+N:315:of Ancalagon
+I:23:35:4
+W:60:50:20:35000
+P:0:3d8:16:16:0
+F:STR | DEX | BLOWS | BRAND_ACID | IM_ACID
+f:BLOWS
+D:Artifact dragon fang from Poschengband.
+
+N:316:'Eternal Blade'
+I:23:41:2
+W:90:50:150:40000
+P:0:7d7:32:32:0
+F:STR | CON | REGEN | SPEED | VORPAL | MUST2H
+F:RES_TIME
+f:SPEED | MUST2H
+D:Artifact diamond edge from Poschengband.
+
+N:317:of Ariel, Queen of Air
+I:35:5:5
+W:50:300:0:45000
+P:0:0d0:17:2:15
+F:FEATHER | SEE_INVIS | FREE_ACT |
+F:RES_COLD | RES_ELEC | SPEED | DEX
+f:SEE_INVIS | FREE_ACT
+D:Artifact ethereal cloak from Poschengband.
+
+N:318:'Shimo Style'
+I:37:11:2
+W:20:5:290:10000
+P:20:1d1:0:0:12
+F:STR | SPEED
+f:SPEED
+D:If you wonder what 'shimo style' is: it means participating in a roguelike tournament
+D:and playing only samurai. You're not allowed to play any other role.
+
+N:319:'Keiryo'
+I:32:4:2
+W:5:2:30:2500
+P:4:1d1:0:0:2
+F:LITHE | DODGE
+f:LITHE | DODGE
+D:An impossibly lightweight helmet.
+
+N:320:of Complaining
+I:36:0:2
+W:1:2:10:1000
+P:1:1d1:0:0:5
+F:STEALTH | SEARCH
+f:STEALTH | SEARCH
+D:'I went through the dungeons of Angband and all I got was this lousy t-shirt!'
+
+N:321:of Volgar
+I:6:21:4
+W:40:10:40:20000
+P:0:3d2:5:12:0
+F:COULD2H | MANA | INT | RES_ELEC | RES_NEXUS | TELEPORT
+f:COULD2H | MANA
+D:Wielded by the evil sorceror from Dungeon Lords, this staff grants magical power
+D:but may turn out to be difficult to control.
+
+N:322:'Freedom Forever'
+I:31:3:4
+W:40:10:30:15000
+P:4:1d1:0:0:12
+F:FREE_ACT | DEX | DISARM | LITHE
+f:FREE_ACT | DEX | LITHE
+D:These gloves are lightweight and nimble.
+
+N:323:'Dragon Master'
+I:30:5:0
+W:40:10:60:20000
+P:5:1d1:0:0:15
+F:DEVICE_MASTERY | INV_PROTECT | PEACEKEEPING | LITHE
+F:RES_FIRE | RES_COLD | RES_ELEC | RES_ACID | RES_POIS
+f:DEVICE_MASTERY | RES_FIRE | RES_COLD | RES_ELEC | RES_ACID
+D:The wearer of these boots becomes powerful like a dragon.
+
+N:324:'Habiba's Tankini'
+I:36:50:10
+W:50:15:2:50000
+P:0:2d2:0:0:10
+F:AGGRAVATE | DEX | CON | RES_NETHER | HOLD_LIFE | LUCK
+F:SUST_DEX | SUST_CON | RES_LITE | RES_DARK | RES_SHARDS
+F:SPELL_CONTAIN | WIELD_CAST | INV_PROTECT | DODGE | LITHE
+f:AGGRAVATE | DEX | CON | LUCK
+D:Originally worn by a thick matron, this swimsuit is pretty buff.
+
+N:325:'Arthubert's Stride'
+I:34:17:4
+W:30:20:160:25000
+P:10:1d6:0:4:20
+F:ESP_EVIL | STR | INFRA | SUST_STR | IM_FIRE | FREE_ACT | RES_FEAR
+F:RES_CHAOS | SEE_INVIS | LITE2 | CRIT
+f:ESP_EVIL | STR | INFRA | FREE_ACT | RES_FEAR | LITE2
+D:The legendary shield of King Arthubert.
+
+N:326:'Gentle Gossamer'
+I:35:7:0
+W:50:25:5:50000
+P:4:1d1:0:0:20
+F:FEATHER | SUST_STR | SUST_INT | SUST_WIS | SUST_CHR | INVIS | 
+F:IM_COLD | IM_ELEC | RES_SOUND | RES_DISEN | RES_ACID | RES_FIRE | 
+F:FLY | DEVICE_MASTERY | LITHE | ESP_DRAGON | ESP_THUNDERLORD
+f:FEATHER | SUST_STR | SUST_INT | SUST_WIS | SUST_CHR | FLY
+D:An incredibly gentle wing that grants flight, as well as other benefits.
+
+N:327:'Full of Mystic Power'
+I:35:8:6
+W:75:50:5:40000
+P:4:1d1:0:0:12
+F:MANA | INT | SPELL | SUST_INT | INV_PROTECT
+f:MANA | INT | SPELL
+D:A mage's best friend.
+
+N:328:'Martina's Gentleness'
+I:30:1:1
+W:1:1:5:2000
+P:1:1d1:0:0:4
+F:CHR | STEALTH | SUST_CHR | RES_ACID | RES_COLD | RES_SHARDS | RES_DISEN | 
+f:CHR | STEALTH
+D:These lady sandals are made of particularly soft calfskin leather and
+D:absolutely want to be caressed.
+
+N:329:'On The Muzzle'
+I:21:24:2
+W:10:10:200:10000
+P:0:6d4:0:0:0
+F:STR | COULD2H | TUNNEL | SLAY_EVIL | SLAY_DEMON | SLAY_ORC | KILL_UNDEAD | 
+F:CRIT | RES_MORGUL | 
+f:STR | COULD2H | KILL_UNDEAD
+D:This hammer is meant to bash enemies' faces in.
+
+N:330:'Heavenly Celestion'
+I:34:11:0
+W:5:5:10:10000
+P:1:1d1:0:0:8
+F:LITHE | BLESSED | RES_LITE | SEE_INVIS | LITE1
+f:LITHE | BLESSED | LITE1
+D:A shield blessed by the heavens themselves.
+
+N:331:'Ina's Sorrow'
+I:31:7:7
+W:25:15:5:10000
+P:1:1d1:0:0:6
+F:CURSED | DEX | LITHE | FREE_ACT | RES_ACID | AUTO_CURSE | NO_TELE | 
+F:SEE_INVIS | DRAIN_EXP | ANTIMAGIC_10 | CURSE_NO_DROP | DRAIN_MANA | 
+F:PEACEKEEPING | INV_PROTECT | SAVING_MALUS | DODGE | ESP_GIANT | 
+F:RES_PLASMA | RAPID_HUNGER |
+f:DEX | LITHE | FREE_ACT | AUTO_CURSE | NO_TELE | ANTIMAGIC_10 | DRAIN_MANA | 
+D:Poor Ina, she's forever being terrorized by Manuela, the mean assistant.
+D:Day after day, she's forced to mix alchemical concoctions and if she steps
+D:out of line, she has to suffer terrible punishments.
+
+N:332:of the Joyful Singer
+I:32:12:6
+W:5:5:5:5555
+P:1:1d1:0:0:0
+F:LITHE | DODGE | CHR | SUST_CHR
+f:LITHE | DODGE | CHR
+D:This cap makes the wearer very light and charismatic.
+
+N:333:of Shiva's Avatar
+I:36:12:2
+W:70:50:130:40000
+P:12:1d2:3:4:20
+F:BLOWS | RES_SHARDS | HOLD_LIFE | SLOW_DIGEST |
+F:SUST_STR | SUST_DEX | SUST_CON | SUST_INT | SUST_WIS | SUST_CHR |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD
+f:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD
+D:Artifact leather jacket from Poschengband.
+
+N:334:of Indra
+I:32:2:5
+W:60:50:15:40000
+P:2:0d0:0:0:18
+F:INT | WIS | CHR | SUST_INT | SUST_WIS | SUST_CHR | RES_BLIND | IM_ELEC
+f:RES_BLIND | IM_ELEC
+D:Artifact hard leather cap from Poschengband.
+
+N:335:of Jack of Shadows
+I:35:1:7
+W:50:50:10:40000
+P:1:0d0:0:0:19
+F:STEALTH | SEARCH | FREE_ACT | SEE_INVIS | HOLD_LIFE | ESP_ALL
+f:STEALTH | SEARCH | FREE_ACT
+D:Artifact cloak from Poschengband.
+
+# The Pair of Soft Leather Boots of Shiva's Avatar
+
+N:336:of Shiva's Avatar
+I:30:2:4
+W:60:20:20:40000
+P:4:1d1:5:5:16
+F:SPEED | DEX | SUST_DEX | RES_NEXUS | FREE_ACT | FEATHER
+f:SPEED | FREE_ACT
+D:Artifact pair of soft leather boots from Poschengband.
+
+N:337:'Twilight'
+I:23:25:10
+W:70:15:200:10000
+P:0:4d6:-40:-60:-50
+F:SPEED | IM_FIRE | RES_FIRE | BRAND_FIRE | RES_DISEN |
+F:SHOW_MODS | LITE2 | MUST2H
+f:MUST2H | SPEED | LITE2
+D:Artifact two-handed sword from Poschengband.
+
+N:338:'Werewindle'
+I:23:17:3
+W:45:20:130:50000
+P:0:3d5:8:12:0
+F:STR | CON | CHAOTIC | REGEN | SLOW_DIGEST |
+F:SLAY_EVIL | BRAND_ELEC | SLAY_DEMON | FREE_ACT | RES_ELEC |
+F:RES_LITE | LITE1 | SEE_INVIS | SHOW_MODS | SPEED |
+F:SUST_CON | SUST_STR | SUST_INT | SUST_WIS | RES_DARK |
+F:RES_DISEN
+f:CHAOTIC | STR | CON | FREE_ACT | SPEED | 
+D:Artifact long sword from Poschengband.
+
+N:339:'Mjollnir'
+I:21:8:4
+W:35:30:120:40000
+P:0:5d3:3:15:0
+F:BRAND_ELEC | IM_ELEC | STR | DEX | SLAY_GIANT
+f:BRAND_ELEC | IM_ELEC
+D:The famous throwing hammer of the Norse god Thor, it crackles with
+D:lightning as you swing it at your opponents.
+
+N:340:'Goln Nova'
+I:23:16:2
+W:30:50:150:40000
+P:0:2d5:15:15:0
+F:STR | DEX | 
+F:SHOW_MODS | KILL_DEMON
+f:STR | DEX | 
+D:Artifact broad sword from Poschengband.
+
+N:341:'Winblows'
+I:21:13:-4
+W:30:20:150:200
+P:0:8d6:0:30:0
+F:STEALTH | INT | WIS | AGGRAVATE | CURSED | HEAVY_CURSE |
+F:SHOW_MODS | CHAOTIC | IMPACT | SPEED
+F:AUTO_CURSE
+f:AUTO_CURSE
+D:Artifact flail from Poschengband.
+
+N:342:'Silver Chariot'
+I:23:7:3
+W:50:15:40:40000
+P:0:2d6:17:12:0
+F:DEX | BLOWS | SLAY_EVIL | SLAY_UNDEAD | SLAY_ORC | SLAY_DEMON |
+F:FREE_ACT | SEE_INVIS | SHOW_MODS | RES_DARK | RES_DISEN | SPEED
+f:BLOWS | DEX | SPEED
+D:Artifact rapier from Poschengband.
+
+N:343:'Platinum Yendorian Express Card'
+I:45:56:3
+W:127:100:2:50000
+P:0:1d1:15:15:25
+F:STR | INT | WIS | DEX | CON | CHR | SPEED | STEALTH | 
+F:HOLD_LIFE | FREE_ACT | SEE_INVIS | ESP_ALL | AGGRAVATE | 
+F:FEATHER | SLOW_DIGEST | REGEN | SEARCH | LITE2 | DRAIN_EXP | 
+f:SPEED | STEALTH | SEARCH
+D:Your card gleams with blinding light...
+
+N:344:'Worpal Blade'
+I:23:17:2
+W:50:5:130:100
+P:0:5d5:32:32:0
+F:TY_CURSE | AGGRAVATE | DRAIN_EXP | INFRA | NO_TELE | NO_MAGIC | 
+F:SENS_FIRE
+f:AGGRAVATE
+D:It is a look-alike for the strongest sword!
+
+N:345:'Muramasa'
+I:23:20:4
+W:66:200:120:50000
+P:0:10d4:0:0:-20
+F:HIDE_TYPE | BLOWS | VORPAL | VAMPIRIC | 
+F:SHOW_MODS | SPEED | RES_DISEN | NO_TELE | COULD2H | 
+F:DRAIN_EXP | AGGRAVATE | RES_DARK | RES_NETHER | TY_CURSE |
+f:COULD2H | SPEED | VORPAL | AGGRAVATE
+D:The Muramasa pulsates...
+
+N:346:'Stone Mask'
+I:32:5:3
+W:66:66:75:5000
+P:5:1d3:8:8:-10
+F:STR | CON | INFRA | HIDE_TYPE | SHOW_MODS |
+F:RES_CONF | RES_NETHER | RES_COLD | RES_POIS | RES_DARK | RES_FEAR |
+F:SEE_INVIS | DRAIN_EXP |
+F:HOLD_LIFE | FEATHER | REGEN
+f:REGEN | DRAIN_EXP
+D:Artifact iron helm from Poschengband.
+
+N:347:of Laputa
+I:39:106:2
+W:60:60:15:60000
+P:0:1d1:0:0:0
+F:INT | CHR | SPEED | FEATHER | HOLD_LIFE | INSTA_ART
+F:SPEED
+D:Your stone glows pale...
+
+N:348:of Yoichi
+I:19:13:4
+W:50:30:40:30000
+P:0:0d0:40:13:0
+F:DEX | HIDE_TYPE | SEE_INVIS | SHOW_MODS
+f:DEX
+D:Artifact long bow from Poschengband.
+
+N:349:'Yasaka-no-Magatama'
+I:40:16:3
+W:65:25:3:30000
+F:INT | CHR | SEARCH | HIDE_TYPE |
+F:SEE_INVIS | FREE_ACT |
+F:RES_FIRE | RES_COLD | RES_ELEC |
+f:INT | CHR | FREE_ACT | 
+D:Your amulet glows soft white...
+
+N:350:'Zantetsuken'
+I:23:20:2
+W:50:25:120:40000
+P:0:8d4:17:21:0
+F:STR | DEX | VORPAL | TUNNEL | SHOW_MODS | COULD2H
+f:COULD2H | VORPAL
+D:Artifact katana from Poschengband.
+
+N:351:'Yata-no-Kagami'
+I:34:10:3
+W:65:65:100:50000
+P:10:1d1:0:0:18
+F:SEE_INVIS | REFLECT | LITE2 | INFRA |
+F:INT | WIS | ESP_ALL | HOLD_LIFE | HIDE_TYPE
+f:SEE_INVIS | REFLECT | LITE2 | ESP_ALL
+D:The mirror floods the area with goodness...
+
+N:352:'Soulcrusher'
+I:23:30:4
+W:70:25:180:50000
+P:0:6d6:20:15:0
+F:SLAY_DEMON | STR | CON | SLAY_UNDEAD | BRAND_FIRE | 
+F:SUST_STR | FREE_ACT | RES_ACID | RES_DISEN | RES_FIRE | RES_COLD |
+F:RES_CHAOS | SEE_INVIS | ESP_ALL | AGGRAVATE | DRAIN_EXP | SHOW_MODS |
+F:CHAOTIC | CURSED | HEAVY_CURSE | LITE1
+f:CHAOTIC | LITE1 | RES_CHAOS | 
+D:Artifact blade of chaos from Poschengband.
+
+N:353:of Falis
+I:23:17:5
+W:70:25:130:30000
+P:0:4d5:20:15:0
+F:KILL_DEMON | STR | SLAY_EVIL | KILL_UNDEAD | BRAND_FIRE | SLAY_TROLL |
+F:SLAY_ORC | FREE_ACT | RES_FIRE | RES_ACID | RES_COLD | RES_ELEC |
+F:SUST_STR | SEE_INVIS | SHOW_MODS | LITE1 | BLESSED
+f:STR | BLESSED | FREE_ACT
+D:Artifact long sword from Poschengband.
+
+N:354:'Hrunting'
+I:23:25:4
+W:50:90:200:40000
+P:0:4d6:13:21:0
+F:STR | HIDE_TYPE |
+F:VORPAL | SLAY_DRAGON | SLAY_GIANT | MUST2H |
+F:FREE_ACT | LITE2 | FEATHER | SHOW_MODS
+f:MUST2H | VORPAL | FEATHER
+D:Artifact two-handed sword from Poschengband.
+
+N:355:of Anubis
+I:23:20:7
+W:80:90:120:40000
+P:0:3d4:28:22:-30
+F:CHR | CHAOTIC | CURSED | HEAVY_CURSE | TUNNEL | AGGRAVATE | BLOWS |
+F:RES_CONF | RES_CHAOS | RES_DISEN | NO_TELE | COULD2H
+f:COULD2H | CHAOTIC | AGGRAVATE | TUNNEL
+D:Artifact katana from Poschengband.
+
+N:356:'Gurenki'
+I:23:17:2
+W:80:75:130:30000
+P:0:5d5:-10:25:0
+F:VORPAL | VAMPIRIC | SLAY_EVIL | KILL_DEMON | ESP_DEMON |
+F:AGGRAVATE | LITE1 | CON
+f:VORPAL | VAMPIRIC | AGGRAVATE
+D:Artifact long sword from Poschengband.
+
+N:357:'Tonbo giri'
+I:22:7:3
+W:50:70:100:50000
+P:0:4d9:6:23:10
+F:STR | DEX | HIDE_TYPE | SEARCH | FREE_ACT | 
+F:SLAY_TROLL | SLAY_GIANT | SLAY_ANIMAL | SLAY_ORC | RES_FIRE | RES_COLD |
+F:RES_ELEC | RES_ACID | SHOW_MODS
+f:FREE_ACT | STR | DEX 
+D:Artifact broad spear from Poschengband.
+
+N:358:of Dr. Jones
+I:21:2:1
+W:8:5:30:18000
+P:0:1d6:16:13:0
+F:INT | WIS | FEATHER | SHOW_MODS | SEE_INVIS
+f:INT | WIS | 
+D:You stretch your whip.
+
+N:359:'Gae Bulg'
+I:22:2:4
+W:55:90:50:50000
+P:0:3d6:16:18:0
+F:STR | DEX | HIDE_TYPE | 
+F:BRAND_ELEC | SLAY_EVIL | SLAY_GIANT |
+F:RES_ELEC | RES_LITE | RES_DARK |
+F:LITE2 | SEE_INVIS | RES_BLIND | SHOW_MODS | 
+f:LITE2 | BRAND_ELEC | SEE_INVIS | 
+D:Your spear grows brightly...
+
+N:360:of Arryu-Chien-Kun
+I:22:5:2
+W:35:45:70:40000
+P:0:2d8:12:16:0
+F:WIS | DEX | HIDE_TYPE |
+F:SLAY_DRAGON | SLAY_DEMON | SLAY_ANIMAL | FREE_ACT | HOLD_LIFE |
+F:RES_COLD | RES_NEXUS |
+F:SEE_INVIS | SLOW_DIGEST | REGEN |
+F:BLESSED | SHOW_MODS | ESP_ANIMAL
+f:BLESSED | WIS | DEX | HOLD_LIFE
+D:Artifact trident from Poschengband.
+
+N:361:'Glass Slippers'
+I:30:2:-3
+W:40:40:20:40000
+P:0:1d1:0:0:0
+F:DEX | HIDE_TYPE | SUST_CHR | STEALTH | SPEED | CHR
+F:RES_LITE | RES_DARK | RES_NEXUS |
+F:RES_NETHER | RES_CHAOS | LITE3 | 
+f:DEX | STEALTH | SPEED | CHR
+D:Artifact pair of soft leather boots from Poschengband.
+
+N:362:'Inro of Mito Koumon'
+I:40:3:2
+W:30:40:3:40000
+F:INT | WIS | CHR | SEARCH | INFRA | SEE_INVIS |
+f:INFRA
+D:Some artifact from Poschengband.
+
+N:363:'Tailbiter'
+I:23:16:3
+W:40:20:150:35000
+P:0:2d5:18:9:0
+F:CON | SEARCH | BLOWS |
+F:SLAY_EVIL | KILL_DRAGON | ESP_DRAGON |
+F:SHOW_MODS
+f:BLOWS
+D:Artifact broadsword from Poschengband.
+
+N:364:of Giles
+I:37:2:-2
+W:20:20:200:30000
+P:12:1d4:-2:0:18
+F:STEALTH |
+F:RES_FIRE | RES_CHAOS | RES_NEXUS | RES_COLD
+F:HIDE_TYPE
+f:STEALTH
+D:Artifact ring mail from Poschengband.
+
+N:365:'Hyousi-gi'
+I:21:4:3
+W:15:5:60:808
+P:0:2d3:-3:-7:6
+F:SEARCH | SHOW_MODS | HIDE_TYPE
+f:SEARCH
+D:You beat your wooden clappers.
+
+N:366:'Iron ball'
+I:21:6:-6
+W:66:40:666:66666
+P:0:25d4:-30:0:20
+F:SPEED | STEALTH | WIS | STR | IMPACT | SHOW_MODS | HIDE_TYPE |
+F:CURSED | HEAVY_CURSE
+f:SPEED | STEALTH
+D:Artifact ball-and-chain from Poschengband.
+
+N:367:'Quickthorn'
+I:23:7:4
+W:35:15:40:35000
+P:0:1d7:27:9:0
+F:DEX | BLOWS | SLAY_DEMON | SPEED
+F:FREE_ACT | SEE_INVIS | SHOW_MODS | RES_CHAOS | RES_DISEN |
+F:SPEED | BLOWS | DEX
+D:Artifact rapier from Poschengband.
+
+N:368:'Littlethorn'
+I:23:5:3
+W:20:6:30:22500
+P:0:1d5:18:6:0
+F:INT | CHR | REGEN | SLAY_EVIL |
+F:RES_NEXUS | FREE_ACT | SEE_INVIS | SHOW_MODS |
+f:INT | CHR | FREE_ACT
+D:Artifact main gauche from Poschengband.
+
+N:369:'Excalibur'
+I:23:17:3
+W:60:100:130:50000
+P:0:5d5:21:19:5
+F:WIS | CHR | SUST_WIS | SUST_CHR |
+F:VORPAL | TUNNEL | 
+F:SLAY_EVIL | SLAY_UNDEAD | SLAY_DEMON |
+F:RES_SHARDS | RES_FEAR | BLESSED | HOLD_LIFE |
+F:SEE_INVIS | SHOW_MODS
+f:VORPAL
+D:Artifact long sword from Poschengband.
+
+N:370:'Excalipur'
+I:23:17:-3
+W:50:15:130:0
+P:0:5d5:-50:-50:-5
+F:WIS | CHR | 
+F:TY_CURSE | AGGRAVATE | DRAIN_EXP | SHOW_MODS | 
+f:TY_CURSE
+D:Artifact long sword from Poschengband.
+
+N:371:of Samson
+I:21:1:3
+W:10:20:100:20000
+P:0:3d4:8:10:0
+F:STR | CON | SEE_INVIS | SLAY_EVIL | SLAY_UNDEAD
+f:STR
+D:Artifact club from Poschengband.
+
+N:372:'Excalibur Jr.'
+I:23:8:3
+W:25:15:75:20000
+P:0:2d6:3:5:0
+F:BLOWS
+F:SLAY_UNDEAD | SLAY_DRAGON | SLAY_ANIMAL |
+F:RES_FIRE | BLESSED |
+F:SLOW_DIGEST | SHOW_MODS
+f:BLESSED | BLOWS
+D:Artifact small sword from Poschengband.
+
+N:373:of Harad
+I:19:24:4
+W:60:120:200:35000
+P:0:5d1:18:18:-44
+F:WIS | STEALTH | XTRA_SHOTS | AGGRAVATE | RES_LITE | RES_DARK |
+F:HIDE_TYPE | SHOW_MODS | TY_CURSE
+f:TY_CURSE
+D:A great brazen arbalest with arms of gleaming steel shooting quarrels with
+D:speed and power for those brave enough to risk betrayal.
+
+N:374:of halfheart
+I:21:20:7
+W:127:100:400:50000
+P:0:8d8:22:27:10
+F:STR | DEX | SUST_STR | SUST_DEX | FREE_ACT | SEE_INVIS | VAMPIRIC |
+F:KILL_DRAGON | SLAY_ANIMAL | SLAY_EVIL | BRAND_ELEC | BRAND_ACID |
+F:SLAY_UNDEAD | SLAY_DEMON | SLAY_TROLL | SLAY_GIANT | SLAY_ORC | 
+F:IM_FIRE | RES_SHARDS | RES_FEAR | TUNNEL | INFRA | SEARCH | REFLECT |
+F:LITE1 | ESP_ALL | REGEN | BRAND_FIRE | BRAND_COLD | BRAND_POIS
+F:HIDE_TYPE | SHOW_MODS | TY_CURSE | AGGRAVATE
+f:TY_CURSE | AGGRAVATE
+D:Artifact mace of disruption from Poschengband.
+
+N:375:of irresponsibility
+I:19:2:7
+W:127:100:5:50000
+P:0:0d0:22:22:10
+F:SPEED | INT | WIS | SUST_INT | SUST_WIS | XTRA_SHOTS |
+F:DRAIN_MANA | TY_CURSE |
+F:RES_DARK | RES_LITE | RES_DISEN | RES_BLIND | IM_COLD | SLOW_DIGEST |
+F:HIDE_TYPE | SHOW_MODS
+f:DRAIN_MANA | TY_CURSE
+D:Artifact sling from Poschengband.
+
+N:376:of idler
+I:36:16:7
+W:127:100:20:50000
+P:77:1d1:10:10:0
+F:STEALTH | CON | CHR | SUST_CON | SUST_CHR | IM_ELEC | RES_ACID |
+F:RES_CONF | RES_SOUND | RES_NETHER | RES_NEXUS | RES_CHAOS |
+F:SH_FIRE | SH_ELEC | RES_POIS | HOLD_LIFE | FEATHER |
+F:HIDE_TYPE | SHOW_MODS | TY_CURSE | NO_MAGIC | ANTIMAGIC_50 | 
+f:TY_CURSE | NO_MAGIC | ANTIMAGIC_50 | 
+D:Artifact thunderlord coat from Poschengband.
+
+N:377:'Aranruth'
+I:23:16:4
+W:30:45:150:50000
+P:0:3d5:20:12:0
+F:DEX | HIDE_TYPE |
+F:SLAY_DEMON | SLAY_ORC | FREE_ACT | RES_COLD | FEATHER |
+F:SLOW_DIGEST | SHOW_MODS |
+F:ESP_ORC | ESP_TROLL | ESP_GIANT | ESP_DEMON
+f:SLAY_DEMON | SLAY_ORC
+D:The beautiful sword of Thingol, justly named "King's Ire". It glistens
+D:icy enough to freeze the hearts of demons, and you feel supple and
+D:lightfooted as you clasp its hilt of gold and silver inlay.
+
+N:378:of Bolshoi
+I:21:2:4
+W:15:8:30:22500
+P:0:2d6:6:9:0
+F:DEX | CHR | HIDE_TYPE | 
+F:SLAY_ANIMAL | ESP_ANIMAL | BRAND_FIRE
+f:BRAND_FIRE
+D:Artifact whip from Poschengband.
+
+N:379:of Destruction
+I:23:33:4
+W:70:8:70:40000
+P:0:3d7:-25:25:0
+F:STR | DEX | BLOWS | CHAOTIC | CURSED | HEAVY_CURSE | TY_CURSE | AGGRAVATE
+F:BRAND_FIRE | BRAND_COLD | BRAND_ELEC | BRAND_ACID | BRAND_POIS | SPEED | ANTIMAGIC_50
+f:ANTIMAGIC_50
+D:Artifact dark sword from Poschengband.
+
+N:380:'Stormbringer'
+I:23:30:2
+W:45:1:180:50000
+P:0:6d6:16:16:0
+F:VAMPIRIC | STR | CON | FREE_ACT | HOLD_LIFE | RES_NETHER | RES_CONF |
+F:RES_CHAOS | 
+D:Artifact blade of chaos from Poschengband.
+
+N:381:of Guan Yu
+I:23:22:3
+W:60:60:240:60000
+P:0:4d5:20:20:5
+F:STR | DEX | CON | SLAY_EVIL | 
+F:VORPAL | SHOW_MODS | MUST2H
+f:MUST2H
+D:Artifact great scimitar from Poschengband.
+
+N:382:'Grimtooth'
+I:23:4:3
+W:7:15:12:25000
+P:0:1d4:5:5:0
+F:DEX | BLOWS | BRAND_POIS | SHOW_MODS | 
+D:Artifact dagger from Poschengband.
+
+N:383:of Perseus
+I:34:3:2
+W:30:10:65:45000
+P:5:1d2:0:0:15
+F:STR | RES_ACID | RES_COLD |
+F:REFLECT | SUST_STR |
+f:REFLECT
+D:Artifact small metal shield from Poschengband.
+
+N:384:'Bloody Moon'
+I:22:30:2
+W:70:12:250:60000
+P:0:8d4:8:8:8
+D:Your scythe glows brightly!
+
+N:385:'Dasai'
+I:36:8:-10
+W:20:3:110:0
+P:64:1d1:-1:0:8
+F:AGGRAVATE | SUST_CHR | CHR
+D:Artifact rhino hide armor from Poschengband.
+
+N:386:'Elemental of Ching-Rong'
+I:38:2:0
+W:80:9:200:50000
+P:40:2d4:-3:0:30
+F:RES_ACID | RES_FIRE | RES_COLD | RES_ELEC |
+F:RES_DARK | RES_CONF | RES_POIS |
+F:FREE_ACT | SEE_INVIS | FLY
+f:FLY
+D:Your armor glows many colors ...
+
+N:387:'Ama-no-NumaHoko'
+I:22:4:4
+W:50:40:160:50000
+P:0:2d8:16:20:0
+F:WIS | CHR | SUST_WIS | SUST_CHR | HIDE_TYPE |
+F:SLAY_EVIL | SLAY_DEMON | SLAY_UNDEAD |
+F:RES_ACID | RES_COLD | RES_BLIND | RES_CHAOS |
+F:LITE1 | BLESSED | SEE_INVIS | SHOW_MODS | COULD2H
+f:COULD2H
+D:Your awl pike throbs deep blue...
+
+N:388:of The High Preist of Morlok
+I:37:1:2
+W:90:8:200:40000
+P:14:1d4:-5:0:-40
+F:INT | WIS | CHR | HIDE_TYPE | RES_LITE | RES_DARK |
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD |
+F:RES_POIS | RES_CONF | RES_CHAOS | RES_NETHER |
+F:RES_NEXUS | AGGRAVATE | CURSED | HEAVY_CURSE | TY_CURSE
+F:SPELL
+D:Artifact rusty chain mail from Poschengband.
+
+N:389:'Sumo Wrestler's Loincloth'
+I:36:9:4
+W:20:10:80:20000
+P:6:0d0:0:0:0
+F:STR | CON | SUST_STR | SUST_CON |
+F:FREE_ACT
+D:You stamp your feet (as if you are in a ring.)
+
+N:390:of Mook
+I:35:3:0
+W:50:20:30:20000
+P:3:0d0:0:0:20
+F:RES_COLD | RES_ACID | RES_CHAOS | FEATHER
+D:Your cloak grows white. (Gratuitous engrish from Poschengband, of course.)
+
+N:391:of The Padre
+I:37:13:2
+W:55:5:340:30000
+P:23:1d6:5:5:17
+F:CHR | REFLECT |
+F:RES_FIRE | RES_CHAOS | LITE1
+D:Artifact metal lamellar armor from Poschengband.
+
+N:392:'Dragonic Sword'
+I:23:25:3
+W:55:160:200:50000
+P:0:4d6:17:23:0
+F:STR | SLAY_EVIL | SLAY_DEMON | BRAND_ELEC |
+F:RES_ELEC | RES_FIRE | RES_NETHER |
+F:LITE2 | SEE_INVIS | SHOW_MODS | MUST2H
+f:MUST2H
+D:The sword glows deep blue...
+
+N:393:'Aegis Fang'
+I:21:8:2
+W:30:40:120:40000
+P:0:3d3:11:22:0
+F:STR | DEX | CHR | TUNNEL | BLESSED |
+F:SLAY_EVIL | SLAY_DRAGON | SLAY_ORC | SLAY_GIANT | SLAY_DEMON |
+F:RES_COLD | SEE_INVIS | REGEN
+D:Artifact war hammer from Poschengband.
+
+N:394:'hermit's purple'
+I:21:2:2
+W:40:40:30:40000
+P:0:1d6:10:5:0
+F:INT | WIS | BRAND_ELEC
+F:SEE_INVIS | ESP_ALL
+D:The whip lets out a shrill wail...
+
+N:395:'Tetsu-geta of Flame'
+I:30:6:-1
+W:20:15:80:40000
+P:6:1d1:-5:10:20
+F:INT | WIS | CHR | STEALTH | SPEED | RES_FIRE |
+F:SUST_STR | SUST_CON | SH_FIRE | REGEN | RES_FEAR
+D:Artifact metal shod boots from Poschengband.
+
+N:396:of The Pitch Dark Night
+I:40:14:4
+W:50:75:3:30000
+P:0:0d0:0:0:5
+F:STEALTH | SEARCH | HIDE_TYPE | SEE_INVIS |
+F:RES_DARK | 
+D:Your amulet is covered in pitch-darkness...
+
+N:397:of Eowyn
+I:23:21:4
+W:50:50:140:40000
+P:0:4d4:12:16:0
+F:STR | CHR | STEALTH | SPEED |
+F:SLAY_EVIL | KILL_UNDEAD | SLAY_GIANT | SLAY_ANIMAL |
+F:RES_NETHER | RES_FEAR | RES_DARK | RES_COLD | COULD2H
+f:COULD2H | SPEED
+D:Artifact bastard sword from Poschengband.
+
+N:398:of Sacred Knights
+I:40:27:2
+W:50:25:3:30000
+P:0:0d0:0:0:10
+F:STR | WIS | HIDE_TYPE |
+F:RES_CONF | RES_CHAOS | BLESSED |
+F:SEE_INVIS | FREE_ACT | REGEN | HOLD_LIFE |
+D:Your amulet exhibits the truth...
+
+N:399:'Harness of the Hell'
+I:40:13:-2
+W:50:20:3:30000
+P:0:0d0:15:15:-5
+F:INT | WIS | CHR | STEALTH | SPEED | HIDE_TYPE |
+F:RES_DARK | RES_NETHER |
+F:SEE_INVIS | AGGRAVATE | ESP_UNDEAD |
+D:Your collar harness is covered in pitch-darkness...
+
+N:400:'Charmed Pendant'
+I:40:25:3
+W:50:50:3:40000
+P:0:0d0:0:0:5
+F:INT | CHR | INFRA | SEARCH | HIDE_TYPE | 
+F:SEE_INVIS | FREE_ACT | SLOW_DIGEST | REGEN | LITE2 | 
+F:SH_FIRE | SH_ELEC | DEVICE_MASTERY
+D:Your pendant glows pale...
+
+N:401:of Gogo
+I:40:2:4
+W:50:50:3:25000
+P:0:0d0:0:0:0
+F:INT | WIS | DEX |
+F:SEE_INVIS | LITE3 |
+D:Some artifact from Poschengband.
+
+N:402:of Robin Hood
+I:19:12:2
+W:20:15:30:30000
+P:0:3d3:15:17:0
+F:DEX | CHR | STEALTH |
+F:HIDE_TYPE | SHOW_MODS | 
+D:This is of Robin Hood who live in the deep forest.
+
+# from Slash'EM
+N:403:of Hellfire
+I:19:23:4
+W:50:15:110:20000
+P:0:4d1:10:12:0
+F:STR | INFRA | RES_FIRE | SH_FIRE |
+F:HIDE_TYPE | SHOW_MODS
+F:BRAND_FIRE
+f:BRAND_FIRE
+D:This crossbow gives flame energy to bolts which it fires.
+
+N:404:of Wilhelm Tell
+I:19:23:4
+W:50:30:110:20000
+P:0:4d1:40:13:0
+F:DEX | HIDE_TYPE | SEE_INVIS | SHOW_MODS
+f:DEX
+D:With this crossbow, Swiss hero Tell shot an apple exactly
+D:though it was on his son's head, and then he defeated evil
+D:magistrate Gessler.
+
+N:405:of Wilhelm Tell
+I:18:1:0
+W:35:35:0:5000
+P:0:6d5:20:16:0
+F:XTRA_MIGHT
+D:It is said that this bolt sticked onto the heart of Gessler
+D:when Wilhelm Tell shot it.
+
+N:406:'Spectral Dragon Scale Mail'
+I:38:3:-4
+W:75:30:200:60000
+P:40:2d4:-2:0:20
+F:RES_COLD | RES_POIS | RES_CONF |
+F:RES_NETHER | RES_NEXUS | RES_DISEN |
+F:SEE_INVIS | HOLD_LIFE | FEATHER |
+F:STR | DEX | CON | LIFE | STEALTH
+F:CURSED | HEAVY_CURSE | 
+D:A white transparent dragon scale mail which was made from
+D:the tortured soul of a once powerful wyrm.
+
+N:407:of Elmi the Murderer
+I:24:1:2
+W:15:10:60:20000
+P:0:5d5:5:19:0
+F:DEX | STEALTH | HIDE_TYPE | 
+F:VORPAL | SEE_INVIS |
+f:VORPAL
+D:This is a hatchet of Elmi who was a horrible murderer of
+D:Raffnor.
+
+N:408:of Maggot
+I:22:3:1
+W:10:4:70:10000
+P:0:2d3:7:9:0
+F:STR | DEX | RES_FIRE | RES_LITE | VORPAL |
+D:This is farmer Maggot's sickle. He left it behind on his
+D:farm.
+
+N:409:of Bruce Lee
+I:35:1:3
+W:50:85:10:40000
+P:1:0d0:5:5:15
+F:STR | CON | DEX | HIDE_TYPE | SHOW_MODS | REGEN |
+F:RES_SOUND | RES_DISEN | 
+D:A cape worn by a hero from Hong Kong.
+
+N:410:of Aragorn
+I:30:2:2
+W:50:20:20:30000
+P:4:1d1:7:3:17
+F:STR | DEX | WIS
+F:SPEED | HIDE_TYPE | STEALTH | FREE_ACT |
+F:RES_ELEC | RES_FIRE | RES_COLD
+f:STR | DEX | WIS
+D:Artifact pair of leather boots from Poschengband.
+
+N:411:of Sam
+I:32:2:1
+W:20:3:15:15000
+P:2:0d0:1:1:7
+F:DEX | HIDE_TYPE | SPEED
+D:Sam was brave and trustworthy companion of Frodo.
+D:With this cap, you feel able to face the dangers
+D:ahead with a steady hand and a noble heart.
+
+N:412:of Merry
+I:35:1:1
+W:20:3:10:15000
+P:1:0d0:1:1:7
+F:DEX | STEALTH | SPEED | RES_CONF | SEARCH | HIDE_TYPE
+D:Merry was the most perceptive and intelligent of hobbits.
+
+N:413:of Pippin
+I:31:1:1
+W:20:3:5:15000
+P:1:0d0:1:1:7
+F:DEX | HIDE_TYPE | SHOW_MODS | SPEED
+D:'Fool of a Took' ... Ah, but Peregrin was brave if not wise.
+
+N:414:of Bilbo
+I:37:20:2
+W:60:4:150:40000
+P:28:1d4:2:2:7
+F:STEALTH | SEE_INVIS | DEX | SPEED |
+F:RES_ACID | RES_FIRE | RES_COLD | RES_POIS | RES_DARK | 
+D:"Also there is this!" said Bilbo, bringing out a parcel which seemed
+D:to be rather heavy for its size. He unwound several folds of old cloth,
+D:and held up a small shirt of mail. It was close-woven of many rings,
+D:as supple almost as linen, cold as ice, and harder than steel. It shone
+D:like moonlit silver, and was studded with white gems.
+
+N:415:'Bloodrip'
+I:23:21:2
+W:66:6:140:50000
+P:0:6d4:10:10:0
+F:CON | HIDE_TYPE | SHOW_MODS |
+F:VORPAL | VAMPIRIC | FREE_ACT | SEE_INVIS | 
+F:RES_CONF | RES_SOUND | AGGRAVATE | COULD2H | DRAIN_HP
+f:COULD2H | DRAIN_HP
+D:This weapon is infused with the soul of the first Blood Knight. Beware!
+D:It longs for blood, even the wielder's! But there is no finer weapon for
+D:those who walk the red path.
+
+N:416:of Eternity
+I:36:2:3
+W:70:120:20:40000
+P:42:0d0:0:0:0
+F:CON | SUST_STR | SUST_INT | SUST_WIS | SUST_DEX | SUST_CON | SUST_CHR |
+F:FREE_ACT | FEATHER | SEE_INVIS | HOLD_LIFE |
+F:RES_LITE | RES_DARK | RES_DISEN
+F:RES_TIME
+D:This robe is invisible to the naked eye. It's a wonder you found it at all! Yet,
+D:it holds an incredible power, undiluted by time.
+
+N:417:of Maglor
+I:14:59:4
+W:80:5:30:40000
+P:0:0d0:0:0:0
+F:STR | INT | CHR |
+F:SUST_STR | SUST_INT | SUST_CHR | FREE_ACT | HOLD_LIFE |
+F:RES_DARK | RES_NETHER | RES_BLIND | WIELD_CAST
+D:Maglor, son of Feanor and Nerdanel, was the greatest poet and bard of the Noldor.
+
+N:418:of Daeron
+I:14:59:4
+W:70:5:30:40000
+P:0:0d0:0:0:0
+F:WIS | CON | CHR |
+F:SUST_WIS | SUST_CON | SUST_CHR | SEE_INVIS | REFLECT |
+F:RES_FIRE | RES_ELEC | RES_LITE | RES_POIS | WIELD_CAST
+D:Daeron is mentioned as the greatest minstrel of all the Children of Iluvatar,
+D:and only Maglor son of Feanor is said to come close to his skill.
+
+N:419:of the Master Tonberry
+I:31:2:-2
+W:99:150:25:40000
+P:2:0d0:10:100:0
+F:FREE_ACT | SUST_STR | SUST_CON | STR | CON | RES_DISEN
+F:BLOWS | SPEED | INT | WIS | TY_CURSE | DRAIN_EXP | SAVING_MALUS
+F:RES_TIME
+f:TY_CURSE
+D:Artifact gauntlets from Poschengband.
+
+N:420:of the Duelist
+I:23:7:4
+W:50:7:40:40000
+P:0:1d7:7:17:17
+F:VAMPIRIC | SHOW_MODS | SPEED | DEX | INT | FREE_ACT
+D:Your rapier glows a deep purple...
+
+N:421:of Saruman
+I:6:1:3
+W:66:20:12:40000
+P:0:1d6:8:8:0
+F:INT | HIDE_TYPE | DRAIN_MANA | REGEN |
+F:RES_FIRE | RES_COLD | RES_ACID | RES_ELEC | COULD2H
+F:VAMPIRIC | BRAND_POIS | SPELL
+f:COULD2H
+D:Your staff glows many colours...
+
+N:422:of Kaschei
+I:21:12:4
+W:90:66:150:40000
+P:0:3d6:-6:-6:0
+F:CURSED | HEAVY_CURSE | PERMA_CURSE | AGGRAVATE | DRAIN_EXP
+F:STR | DEX | CON | SPELL | DRAIN_MANA | INT
+F:RES_POIS | RES_NETHER | RES_DARK | RES_DISEN
+D:Artifact morning star from Poschengband.
+
+N:423:of Aegir
+I:21:1:4
+W:80:50:100:40000
+P:0:3d8:13:20:10
+F:STR | CON | CHR | RES_COLD | SLAY_EVIL | SLAY_UNDEAD
+F:SLAY_DEMON | BRAND_COLD
+D:The mighty black stone club of the sea-god Aegir, crafted from
+D:hot magma quarried from a volcano in the blackest depths of his
+D:watery domain. Although a jovial soul in nature, Aegir is
+D:terrifying to behold when angered. You feel the contained rage
+D:within this heavy truncheon, awaiting your command to be released.
+
+N:424:of the Defender of the Crown
+I:21:6:3
+W:50:50:150:40000
+P:0:5d4:0:20:0
+F:STR | CON | LITE2 | HIDE_TYPE |
+F:SLAY_EVIL | SLAY_DEMON | COULD2H
+F:RES_SOUND | RES_SHARDS | RES_NETHER | HOLD_LIFE |
+f:COULD2H
+D:A rather clumsy but large ball-and-chain forged of iron.
+D:It emits a curiously muted bell-like tone when you strike
+D:your foes.
+
+N:425:of Rygar
+I:21:12:1
+W:70:50:150:50000
+P:0:3d9:12:20:5
+F:STR | DEX | BLOWS | HIDE_TYPE | 
+F:SLAY_ANIMAL | SLAY_EVIL | SLAY_DRAGON | SEE_INVIS |
+F:FREE_ACT | SHOW_MODS |
+D:This curious weapon with an oversized head seems to flail out with
+D:amazing ease. In fact, it seems to leap out several times on its own
+D:without your trying.
+
+N:426:'Big Punch'
+I:21:15:0
+W:50:50:180:40000
+P:0:8d5:1:3:-6
+F:HIDE_TYPE | SHOW_MODS |
+D:This gigantic, dull-gray mace was rumored to be a gift
+D:from an ancient dwarven king to an adventurer for saving
+D:his people from a fearsome demon.
+
+N:427:of Zeus
+I:40:24:5
+W:90:127:3:55555
+P:0:0d0:5:5:5
+F:SPEED | DEVICE_MASTERY | LITE3 | REGEN | FREE_ACT |
+F:RES_SHARDS | SH_ELEC | HEAVY_CURSE | CURSED | 
+D:This is the charm worn by Zeus, King of the Olympians and Bane of the Titans.
+
+N:428:of Poseidon
+I:22:5:3
+W:90:127:70:55555
+P:0:1d20:30:30:0
+F:STR | DEX | SPEED | BRAND_ACID | SLAY_EVIL
+F:RES_ACID | RES_FIRE | RES_SOUND |
+F:PERMA_CURSE | COULD2H | CURSED | HEAVY_CURSE
+f:COULD2H
+D:The ground trembles!
+
+N:429:of Athena
+I:22:2:4
+W:90:127:50:55555
+P:0:3d6:15:15:15
+F:SUST_INT | SUST_WIS | DRAIN_MANA | BLESSED |
+F:HOLD_LIFE | ESP_ALL | PERMA_CURSE | CURSED | HEAVY_CURSE | 
+F:STR | DEX | CON | SPELL | INT |
+D:This is the favored weapon of Athena, the great goddess of War and Wisdom.
+
+N:430:of Ares
+I:32:5:2
+W:90:127:75:55555
+P:5:5d5:12:12:-5
+F:STR | DEX | CON | SPEED | BLOWS | RES_FEAR
+F:REFLECT | AGGRAVATE | PERMA_CURSE | CURSED | HEAVY_CURSE |
+D:The helm of Ares, the Olympian whose legendary combat prowess exceeds that
+D:of Zeus himself.
+
+N:431:of Hermes
+I:30:2:7
+W:90:127:20:55555
+P:2:1d1:0:0:7
+F:SPEED | DEX | STEALTH | FREE_ACT | FEATHER |
+F:RES_CHAOS | PERMA_CURSE | CURSED | HEAVY_CURSE | 
+D:Your boots shine.
+
+N:432:of Apollo
+I:14:59:5
+W:90:127:30:55555
+P:0:0d0:0:0:0
+F:STR | INT | CHR | SPEED | SUST_STR |
+F:SUST_INT | SUST_CHR | FREE_ACT | RES_FEAR | RES_LITE |
+F:RES_NETHER | HEAVY_CURSE | CURSED | WIELD_CAST | 
+D:The is the lyre of Apollo, the sun god.
+
+N:433:of Artemis
+I:19:12:3
+W:90:127:30:55555
+P:0:3d5:12:18:0
+F:STR | DEX | CHR | STEALTH |
+F:XTRA_SHOTS | SUST_STR | SUST_DEX | SUST_CHR | SEE_INVIS |
+F:RES_BLIND | HEAVY_CURSE | CURSED | 
+D:This is the bow of Artemis, the virgin huntress and twin of Apollo.
+
+N:434:of Hephaestus
+I:21:19:1
+W:90:127:300:55555
+P:0:5d6:0:0:0
+F:STR | DEX | CON | INT | WIS | CHR |
+F:SPEED | SLAY_EVIL | KILL_DRAGON | KILL_UNDEAD |
+F:KILL_DEMON | SLAY_ANIMAL | SLAY_ORC | SLAY_TROLL |
+F:SLAY_GIANT | BRAND_ACID | BRAND_COLD | BRAND_FIRE | BRAND_ELEC |
+F:VAMPIRIC | PERMA_CURSE | CURSED | HEAVY_CURSE | 
+D:Your mighty hammer glows red hot!
+
+N:435:of Hera
+I:33:12:3
+W:90:127:40:55555
+P:0:1d1:0:0:20
+F:INT | WIS | CHR | SPELL | SUST_INT | SPEED
+F:SUST_WIS | SUST_CHR | RES_CONF | RES_SOUND | DRAIN_MANA |
+F:PERMA_CURSE | CURSED | HEAVY_CURSE | 
+D:Artifact jewel encrusted crown from Poschengband.
+
+N:436:of Demeter
+I:39:0:2
+W:90:127:30:55555
+P:0:1d1:0:0:0
+F:WIS | CON | REGEN | LITE3 |
+F:HEAVY_CURSE | CURSED | 
+F:RES_TIME
+D:Your torch engulfs you in a purifying flame!
+
+N:437:of Aphrodite
+I:40:33:5
+W:90:127:3:55555
+P:0:1d1:0:0:25
+F:CHR | SUST_CHR | RES_POIS | RES_BLIND | RES_NEXUS |
+F:RES_CHAOS | RES_DISEN | FREE_ACT | SEE_INVIS | FEATHER |
+F:ESP_ALL | REFLECT | AGGRAVATE | HEAVY_CURSE | CURSED | 
+D:The legendary Apple of Discord, created by Eris in revenge for
+D:not being invited to the wedding of Peleus and Thetis. On this
+D:apple is engrave "For the Fairest," and Athena, Hera, and Aphrodite
+D:all laid claim to it. When the Trojan Prince gave the apple to
+D:Aphrodite, he received Helen of Troy, which sparked the Trojan War.
+
+N:438:'Cupid's Arrow'
+I:17:1:4
+W:35:35:0:2000
+P:0:1d4:0:0:0
+F:SHOW_MODS | CHR
+f:CHR
+D:This arrow is traditionally shot only by fat, scantily clad babies.
+
+N:439:'Ballista'
+I:19:24:3
+W:50:15:200:25000
+P:0:0d0:10:12:0
+F:HIDE_TYPE | SHOW_MODS
+F:STR | RES_CONF
+D:Your ballista glows black...
+
+N:440:of the Kamikaze Warrior
+I:36:2:2
+W:50:40:20:30000
+P:2:0d0:10:10:-20
+F:STR | DEX | SPEED | HIDE_TYPE
+F:SUST_STR | SUST_DEX | HOLD_LIFE | FEATHER
+F:RES_FIRE | RES_POIS | RES_CONF | RES_SOUND | RES_NETHER | RES_FEAR
+F:NO_MAGIC | 
+D:This robe is stained with the the blood of many fallen heroes.
+D:So much death. So much destruction. What could cause such a thing?
+
+N:441:'Railgun'
+I:19:13:2
+W:85:150:40:30000
+P:0:0d0:0:0:0
+F:DEX | SPEED | SUST_DEX | IM_FIRE | RES_LITE |
+D:Your gun glows with blinding light...
+
+N:442:of the Ages
+I:45:39:4
+W:70:35:2:40000
+P:0:0d0:0:0:20
+F:CON | SUST_STR | SUST_INT | SUST_WIS | SUST_DEX | SUST_CON | SUST_CHR
+F:HOLD_LIFE |
+F:RES_TIME
+D:Forged you know not when, this ring seems to have withstood the test of time.
+
+N:443:'Assassinator'
+I:23:4:4
+W:44:250:12:30000
+P:0:1d4:44:4:0
+F:VORPAL | STEALTH | DEX
+D:It is the ultimate weapon of the assassin who prefers to dispatch enemies
+D:while they sleep.
+
+N:444:of the Bard
+I:30:2:4
+W:30:25:20:30000
+P:2:1d1:0:0:18
+F:DEX | CHR | STEALTH | RES_POIS | FREE_ACT | HIDE_TYPE
+D:Artifact pair of soft leather boots from Poschengband.
+
+N:445:'Stomper'
+I:30:6:3
+W:30:25:80:35000
+P:6:1d1:0:0:21
+F:STR | CON | AGGRAVATE | RES_SHARDS | RES_CONF | RES_NEXUS
+D:You stomp your foot down powerfully...
+
+N:446:'Gong'
+I:34:5:4
+W:40:9:120:30000
+P:15:1d3:0:0:15
+F:STR | WIS | HOLD_LIFE | REFLECT
+D:BOOOOOOOOOOOOOOOOOOONGGGGGGGGGGG!!!
+
+N:447:'Great Maul of Vice'
+I:21:8:2
+W:60:88:120:50000
+P:0:8d8:8:8:8
+F:CON | CHR | VAMPIRIC | BRAND_ELEC | BRAND_POIS | COULD2H
+F:FREE_ACT | HOLD_LIFE | RES_NETHER | RES_NEXUS | RES_FEAR
+F:TY_CURSE | PERMA_CURSE | CURSED | HEAVY_CURSE
+f:COULD2H | PERMA_CURSE
+D:This curious object is the favorite of many a female of every
+D:species. Those who find themselves in a proximity of one seem
+D:to constantly lose cash, and it seems impossible to leave its presence.
+
+N:448:of Destruction
+I:24:25:-4
+W:90:35:230:40000
+P:0:6d4:10:10:0
+F:BRAND_ELEC | BRAND_FIRE | BRAND_COLD | BRAND_ACID | BRAND_POIS |
+F:CON
+D:An artifact axe.
+
+N:449:of David
+I:16:0:0
+W:5:10:0:2000
+P:0:2d3:20:12:0
+F:SLAY_GIANT
+D:Artifact rounded pebble from Poschengband.
+
+N:450:'Goblet Holy Grail'
+I:40:2:3
+W:30:125:3:20000
+F:HIDE_TYPE | 
+F:WIS | CHR | RES_NETHER
+D:You drink from the holy grail.
+
+N:451:of Khazad-dum
+I:20:7:4
+W:60:25:250:30000
+P:0:4d8:0:0:0
+F:TUNNEL | INFRA | REGEN | STR | CON | RES_BLIND
+F:RES_DISEN
+D:"The Dwarves delved too greedily and too deep. You know what
+D:they awoke in the darkness of Khazad-dum: Shadow and Flame!"
+
+N:452:of the Undertaker
+I:20:1:5
+W:50:20:60:20000
+P:0:7d2:0:0:0
+F:TUNNEL | RES_POIS | RES_NETHER | RES_DARK
+D:Artifact shovel from Poschengband.
+
+N:453:of Ubbo-Sathla
+I:36:12:1
+W:30:50:130:20000
+P:12:1d2:2:3:15
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD
+F:RES_CONF | RES_CHAOS | STR | CON
+F:HOLD_LIFE | SEE_INVIS | REGEN | DRAIN_EXP | AUTO_CURSE
+F:SAVING_MALUS
+F:RAPID_HUNGER
+D:Artifact leather jacket from Poschengband.
+
+N:454:of Devouring Darkness
+I:45:0:5
+W:50:40:2:10000
+P:0:1d2:10:12:0
+F:STEALTH | SEE_INVIS | HOLD_LIFE | FREE_ACT
+F:RES_BLIND | RES_DARK | RES_NETHER | RES_POIS
+F:CURSED | TELEPORT | AUTO_CURSE | SAVING_MALUS
+F:RAPID_HUNGER
+D:Some artifact ring.
+
+N:455:of Dragonkind
+I:33:11:2
+W:60:40:30:35000
+P:0:1d1:5:5:15
+F:HIDE_TYPE
+F:STR | INT | WIS | DEX | CON | CHR | SPEED |
+F:RES_COLD | RES_FIRE | RES_ACID | RES_ELEC | RES_POIS
+F:HOLD_LIFE | REGEN | 
+D:Artifact golden crown from Poschengband.
+
+N:456:of the Emperor Lich
+I:33:11:3
+W:80:40:30:35000
+P:0:1d1:0:0:12
+F:HIDE_TYPE
+F:INT | CHR | SPEED |
+F:RES_COLD | RES_FIRE | RES_ACID | RES_ELEC | RES_POIS | RES_NETHER | RES_DARK | RES_LITE
+F:DRAIN_MANA | SPELL
+F:REGEN | 
+D:Artifact golden crown from Poschengband.
+
+N:457:'Dog Collar of Carcharoth'
+I:40:15:0
+W:50:40:3:20000
+P:0:0d0:3:17:25
+F:HIDE_TYPE | 
+F:RES_FEAR | ESP_ALL | HEAVY_CURSE | CURSED | AUTO_CURSE | TY_CURSE
+f:TY_CURSE
+D:Some artifact amulet.
+
+N:458:of Ymir
+I:23:25:3
+W:70:15:200:500
+P:0:5d10:7:17:0
+F:STR | CON | SENS_FIRE | SAVING_MALUS
+F:IM_COLD | RES_COLD | BRAND_COLD | VORPAL | MUST2H
+F:RAPID_HUNGER
+f:MUST2H
+D:Artifact two-handed sword from Poschengband.
+
+N:459:of Typhoeus
+I:23:25:0
+W:70:15:200:1000
+P:0:5d12:4:14:0
+F:IM_ELEC | RES_ELEC | BRAND_ELEC | VORPAL
+D:Artifact two-handed sword from Poschengband.
+
+N:460:of Kronos
+I:22:3:3
+W:90:4:70:10000
+P:0:10d3:15:15:0
+F:STR | INT | WIS | DEX | CON | CHR | SPEED
+F:RES_FIRE | RES_SOUND | RES_CHAOS | RES_CONF
+F:VORPAL | SLAY_GIANT | SLAY_EVIL | 
+D:An incredibly sharp sickle rumored to have been wielded
+D:by Kronos to castrate his father, Uranus.
+
+N:461:of Eyes
+I:33:12:3
+W:60:15:40:20000
+P:0:1d1:0:0:25
+F:SEE_INVIS | ESP_ALL | RES_BLIND | RES_DISEN
+F:INT | SEARCH
+D:The crown grants amazing sight!
+
+N:462:of the Hydra
+I:39:107:3
+W:50:1:200:30000
+P:0:1d1:0:0:0
+F:SPEED | SUST_CON | SUST_STR | REGEN | RES_POIS
+D:The Eye engulfs you in healing flames!
+
+N:463:'Dog Collar of Fang'
+I:40:16:1
+W:5:70:3:5000
+P:0:0d0:2:3:0
+F:HIDE_TYPE | 
+F:RES_FEAR | STR
+D:Some artifact amulet.
+
+N:464:'Dog Collar of Wolf'
+I:40:16:1
+W:5:70:3:5000
+P:0:0d0:0:0:7
+F:HIDE_TYPE | 
+F:FREE_ACT | CON
+D:Some artifact amulet.
+
+N:465:'Dog Collar of Grip'
+I:40:16:1
+W:5:70:3:5000
+P:0:0d0:0:0:0
+F:HIDE_TYPE | 
+F:SPEED | DEX
+D:Some artifact amulet.
+
+N:466:of the Cyberdemon Lord
+I:37:15:3
+W:90:3:380:25000
+P:50:2d4:-5:15:40
+F:STR | CON | CHR
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_POIS | RES_SHARDS | RES_CONF
+D:Artifact full plate armor from Poschengband.
+
+N:467:'Bloodthirster'
+I:23:30:-3
+W:70:25:180:50000
+P:0:10d5:-6:-16:-26
+F:SHOW_MODS | PERMA_CURSE | CURSED | HEAVY_CURSE
+F:FREE_ACT | SEE_INVIS | RES_CONF | RES_CHAOS | AGGRAVATE
+F:SLAY_DRAGON | SLAY_EVIL |
+F:BRAND_ACID | BRAND_ELEC
+F:STR | INT | WIS | DEX | CON | SPEED | LIFE
+D:Artifact blade of chaos from Poschengband.
+
+N:468:of Mephistopheles
+I:31:1:2
+W:90:6:5:36000
+P:1:0d0:16:6:16
+F:STR | DEX | SPEED | HIDE_TYPE | FREE_ACT | SHOW_MODS | TY_CURSE
+F:SAVING_MALUS | AUTO_CURSE
+D:Artifact leather gloves from Poschengband.
+
+N:469:of Ulik
+I:21:1:4
+W:50:50:100:50000
+P:0:5d8:0:25:0
+F:STR | CON | SLAY_TROLL
+D:Artifact club from Poschengband.
+
+N:470:of Quaker, Master of Earth
+I:31:1:2
+W:40:6:5:36000
+P:1:0d0:2:5:19
+F:STR | CON | HIDE_TYPE | FREE_ACT | SHOW_MODS | RES_SHARDS
+D:Artifact leather gloves from Poschengband.
+
+N:471:of Moire, Queen of Rebma
+I:33:11:2
+W:40:40:30:35000
+P:0:1d1:0:0:15
+F:STR | CON | HIDE_TYPE
+F:RES_ACID | RES_BLIND | RES_CONF
+F:SEE_INVIS | REGEN | ESP_ALL
+D:Artifact golden crown from Poschengband.
+
+N:472:of Loge, Spirit of Fire
+I:23:17:1
+W:50:240:130:50000
+P:0:5d5:0:0:0
+F:VORPAL | BRAND_FIRE | RES_FIRE | STR | DEX
+D:Artifact long sword from Poschengband.
+
+N:473:of the Emperor Quylthulg
+I:33:11:5
+W:80:40:30:35000
+P:0:1d1:0:0:0
+F:CHR | SPEED | FREE_ACT | ESP_ALL
+F:RES_BLIND | RES_CONF | RES_CHAOS | SEE_INVIS | REGEN
+D:Artifact golden crown from Poschengband.
+
+N:474:of the Destroyer
+I:31:5:-2
+W:99:150:40:50000
+P:5:0d0:-15:125:0
+F:SPEED | REFLECT | DG_CURSE | CURSED
+f:DG_CURSE
+D:Artifact set of cesti from Poschengband.
+
+N:475:of Atlas
+I:21:19:9
+W:100:100:300:50000
+P:0:9d9:9:19:0
+F:IMPACT | 
+F:STR | SUST_STR
+D:Artifact hammer from Poschengband.
+
+N:476:'Dragonlance'
+I:22:29:4
+W:60:40:400:50000
+P:0:6d8:2:17:0
+F:STR | CHR |
+F:KILL_DRAGON | BLESSED
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_POIS |
+f:BLESSED
+D:Artifact heavy lance from Poschengband.
+
+N:477:'Kaladanda'
+I:21:1:4
+W:70:100:100:50000
+P:0:7d8:5:15:0
+F:STR | RES_COLD | VAMPIRIC | BRAND_COLD |  
+F:HOLD_LIFE |
+F:SUST_STR | SUST_INT | SUST_WIS | SUST_DEX | SUST_CON | SUST_CHR
+D:The staff of Death, this mighty, lethal club was used
+D:by the God Yama and is the ultimate weapon. None can
+D:withstand its wrath!
+
+N:478:'Impaler'
+I:22:29:0
+W:60:40:400:50000
+P:0:5d8:17:23:0
+F:SLAY_GIANT | SLAY_TROLL | BRAND_POIS
+D:You charge your foe ...
+
+N:479:of Heracles
+I:19:13:2
+W:40:30:40:20000
+P:0:0d0:12:17:0
+F:STR | INT | CHR | SPEED
+F:BRAND_POIS | RES_FEAR
+D:This bow belonged to the greatest of Greek heroes. Its
+D:arrows are coated in the Lernaean Hydra's venom.
+
+N:480:'Fake Dramborleg'
+I:24:25:1
+W:50:70:230:21000
+P:0:4d4:3:12:0
+F:STR | CON | INFRA | HIDE_TYPE
+F:KILL_DEMON | VORPAL | WOUNDING | 
+F:RES_BLIND | RES_DARK | RES_DISEN | REGEN
+D:This is the great axe, used by Tuor, that both
+D:cuts and stuns its foes. With this axe, Tuor slew
+D:five balrogs in the battle of Gondolin. It was
+D:believed lost in the drowning of Numenor.
+
+N:481:of The Multi-hued Centipede
+I:30:2:1
+W:30:20:20:10000
+P:2:1d1:2:3:10
+F:STR | DEX | CON | SPEED | STEALTH
+F:FREE_ACT
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_POIS
+D:Artifact pair of soft leather boots from Poschengband.
+
+N:482:'Antje's Powerstride'
+I:30:4:5
+W:80:20:10:150000
+P:4:1d1:0:0:20
+F:SPEED | STR | CON | CHR | SUST_CON | REGEN | RES_DISINT | RES_DISEN | 
+F:SUST_STR | IM_COLD | RES_FIRE | RES_DARK | 
+f:SPEED
+D:A very erotic pair of block-heeled combat boots that produces beautiful
+D:clacking noises when walking on a hard floor. They're suitable for walking
+D:the dyke.
+
+N:483:'Sexual Pleasure'
+I:38:1:0
+W:40:9:200:25000
+P:30:2d4:-2:0:20
+F:RES_ACID | FLY | RES_DISINT
+f:RES_ACID | FLY
+D:BDSM! :-)
 
 # N:number:name
 # I:tval:sval:pval

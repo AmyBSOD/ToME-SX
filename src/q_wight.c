@@ -65,7 +65,7 @@ bool quest_wight_gen_hook(char *fmt)
 					q_ptr->ident |= IDENT_CURSED;
 
 					q_ptr->art_flags4 |= (TR4_BLACK_BREATH);
-					q_ptr->art_flags5 |= (TR5_SAVING_MALUS);
+					q_ptr->art_flags5 |= (TR5_SAVING_MALUS | TR5_RAPID_HUNGER);
 
 					if (randint(2) == 1)
 					{

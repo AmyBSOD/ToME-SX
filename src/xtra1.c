@@ -2657,6 +2657,7 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pva
 	}
 	if (f5 & (TR5_CRIT)) p_ptr->xtra_crit += pval;
 	if (f5 & (TR5_DISARM)) p_ptr->skill_dis += pval;
+	if (f5 & (TR5_RES_TIME)) p_ptr->resist_continuum = TRUE;
 
 	if (get_skill(SKILL_DODGE))
 	{
@@ -2730,10 +2731,15 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pva
 
 	if (f5 & (TR5_RES_WATER)) p_ptr->resist_water = TRUE;
 	if (f5 & (TR5_RES_INERTIA)) p_ptr->resist_inertia = TRUE;
+	if (f5 & (TR5_RES_PLASMA)) p_ptr->resist_plasma = TRUE;
+	if (f5 & (TR5_RES_DISINT)) p_ptr->resist_disint = TRUE;
+	if (f5 & (TR5_RES_TIME)) p_ptr->resist_time = TRUE;
 
 	if (f5 & (TR5_PEACEKEEPING)) p_ptr->plr_peacekeep = TRUE;
 	if (f5 & (TR5_INV_PROTECT)) p_ptr->plr_invprot = TRUE;
 	if (f5 & (TR5_DEVICE_MASTERY)) p_ptr->plr_devicemast = TRUE;
+
+	if (f5 & (TR5_RAPID_HUNGER)) p_ptr->rapid_hunger = TRUE;
 
 	if (f2 & (TR2_REFLECT)) p_ptr->reflect = TRUE;
 	if (f3 & (TR3_SH_FIRE)) p_ptr->sh_fire = TRUE;
@@ -2996,6 +3002,9 @@ void calc_bonuses(bool silent)
 	p_ptr->resist_neth = FALSE;
 	p_ptr->resist_water = FALSE;
 	p_ptr->resist_inertia = FALSE;
+	p_ptr->resist_plasma = FALSE;
+	p_ptr->resist_disint = FALSE;
+	p_ptr->resist_time = FALSE;
 	p_ptr->immune_neth = FALSE;
 	p_ptr->immune_pois = FALSE;
 	p_ptr->resist_fear = FALSE;
@@ -3005,6 +3014,7 @@ void calc_bonuses(bool silent)
 	p_ptr->sh_elec = FALSE;
 	p_ptr->anti_magic = FALSE;
 	p_ptr->anti_tele = FALSE;
+	p_ptr->rapid_hunger = FALSE;
 	p_ptr->water_breath = FALSE;
 	p_ptr->magical_breath = FALSE;
 
@@ -3190,30 +3200,7 @@ void calc_bonuses(bool silent)
 		object_flags_no_set = FALSE;
 
 		/* MEGA ugly hack -- set spacetime distortion resistance */
-		if (o_ptr->name1 == ART_ANCHOR)
-		{
-			p_ptr->resist_continuum = TRUE;
-		}
-		if (o_ptr->name1 == ART_ANCHOR2)
-		{
-			p_ptr->resist_continuum = TRUE;
-		}
-		if (o_ptr->name1 == ART_ANCHOR3)
-		{
-			p_ptr->resist_continuum = TRUE;
-		}
-		if (o_ptr->name1 == ART_ANCHOR4)
-		{
-			p_ptr->resist_continuum = TRUE;
-		}
-		if (o_ptr->name1 == ART_ANCHOR5)
-		{
-			p_ptr->resist_continuum = TRUE;
-		}
-		if (o_ptr->name1 == ART_ANCHOR6)
-		{
-			p_ptr->resist_continuum = TRUE;
-		}
+		/* not needed --Amy */
 
 		/* Hack - don't give the Black Breath when merely inspecting a weapon */
 		if (silent)

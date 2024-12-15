@@ -701,11 +701,11 @@ cptr k_info_flags5[] =
 	"DISARM",
 	"DODGE",
 	"LITHE",
-	"XXX8X27",
-	"XXX8X28",
-	"XXX8X29",
-	"XXX8X02",
-	"XXX8X22",
+	"RES_PLASMA",
+	"RES_DISINT",
+	"RES_TIME",
+	"RAPID_HUNGER",
+	"CHARGE_HOLDING",
 };
 
 /*

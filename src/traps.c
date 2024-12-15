@@ -1375,6 +1375,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/* Trap of Charges Drain */
 	case TRAP_OF_CHARGES_DRAIN:
 		{
+			u32b f1, f2, f3, f4, f5, esp;
+
 			/* Find an item */
 			for (k = 0; k < 10; k++)
 			{
@@ -1382,15 +1384,23 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 				object_type *j_ptr = &p_ptr->inventory[i];
 
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
 				/* Drain charged wands/staffs
 				   Hack -- don't let artifacts get drained */
-				if (((j_ptr->tval == TV_STAFF) ||
+				if (((j_ptr->tval == TV_STAFF) || (j_ptr->tval == TV_ROD_MAIN) ||
 				                (j_ptr->tval == TV_WAND)) &&
 				                (j_ptr->pval) &&
-			                     !artifact_p(j_ptr))
+			                     !artifact_p(j_ptr) && !( (f5 & (TR5_CHARGE_HOLDING)) && (randint(10) != 1) ) )
 				{
 					ident = TRUE;
-					j_ptr->pval = j_ptr->pval / (randint(4) + 1);
+
+					if (j_ptr->tval == TV_ROD_MAIN) {
+						j_ptr->timeout = j_ptr->timeout / (randint(4) + 1);
+					} else {
+						j_ptr->pval = j_ptr->pval / (randint(4) + 1);
+					}
+
 
 					/* 60% chance of only 1 */
 					if (randint(10) > 3) break;

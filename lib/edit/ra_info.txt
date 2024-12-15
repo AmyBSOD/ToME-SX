@@ -2566,6 +2566,57 @@ W:50:50:60
 C:0:0:0:5
 F:DODGE
 
+# resist plasma, by Amy
+N:550
+X:30:1
+T:30:0:255
+T:31:0:255
+T:32:0:255
+T:33:0:255
+T:34:0:255
+T:115:56:57
+T:35:0:255
+T:36:0:255
+T:37:0:255
+T:38:0:255
+T:40:0:255
+T:45:0:255
+T:12:0:255
+T:14:0:255
+W:10:20:25
+C:0:0:0:0
+F:RES_PLASMA
+
+# resist disint, by Amy
+N:551
+X:50:1
+T:30:0:255
+T:31:0:255
+T:32:0:255
+T:33:0:255
+T:34:0:255
+T:115:56:57
+T:35:0:255
+T:36:0:255
+T:37:0:255
+T:38:0:255
+T:40:0:255
+T:45:0:255
+T:12:0:255
+T:14:0:255
+W:25:70:75
+C:0:0:0:0
+F:RES_DISINT
+
+# resist time, by Amy
+N:552
+X:80:1
+T:39:0:255
+T:40:0:255
+W:50:150:152
+C:0:0:0:0
+F:RES_TIME
+
 # N:index
 # X:power value:max number of time it can appear on one object
 # T:tval:min sval:max sval  (up to 20 T: lines)

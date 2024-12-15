@@ -7900,13 +7900,20 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 			break;
 		}
 
-		/* Plasma -- XXX No resist */
+		/* Plasma -- can resist now --Amy */
 	case GF_PLASMA:
 		{
 			if (fuzzy) msg_print("You are hit by something *HOT*!");
+
+			if (p_ptr->resist_plasma)
+			{
+				dam *= 6;
+				dam /= (randint(6) + 6);
+			}
+
 			take_hit(dam, killer);
 
-			if (!p_ptr->resist_sound || (rand_int(3) == 0) )
+			if (!(p_ptr->resist_sound || p_ptr->resist_plasma) || (rand_int(3) == 0) )
 			{
 				int k = (randint((dam > 40) ? 35 : (dam * 3 / 4 + 5)));
 				(void)set_stun(p_ptr->stun + k);
@@ -8321,7 +8328,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 		{
 			if (fuzzy) msg_print("You are hit by a blast from the past!");
 
-			if (p_ptr->resist_continuum)
+			if (p_ptr->resist_continuum || p_ptr->resist_time)
 			{
 				dam *= 4;
 				dam /= (randint(6) + 6);
@@ -8437,6 +8444,12 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 		/* Standard damage */
 	case GF_DISINTEGRATE:
 		{
+			if (p_ptr->resist_disint)
+			{
+				dam *= 6;
+				dam /= (randint(6) + 6);
+			}
+
 			if (fuzzy) msg_print("You are hit by pure energy!");
 			take_hit(dam, killer);
 			break;

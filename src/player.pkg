@@ -1388,6 +1388,21 @@ struct player_type
 	 * @note Resist inertia
 	 */
 	bool resist_inertia;
+	/** @structvar resist_plasma
+	 * @brief Boolean
+	 * @note Resist plasma
+	 */
+	bool resist_plasma;
+	/** @structvar resist_disint
+	 * @brief Boolean
+	 * @note Resist disint
+	 */
+	bool resist_disint;
+	/** @structvar resist_time
+	 * @brief Boolean
+	 * @note Resist time
+	 */
+	bool resist_time;
 	/** @structvar resist_nexus
 	 * @brief Boolean
 	 * @note Resist nexus
@@ -1413,6 +1428,12 @@ struct player_type
 	 * @note Resist space-time continuum disruption
 	 */
 	bool resist_continuum;
+
+	/** @structvar rapid_hunger
+	 * @brief Boolean
+	 * @note Player hungers rapidly
+	 */
+	bool rapid_hunger;
 
 	/** @structvar sensible_fire
 	 * @brief Boolean

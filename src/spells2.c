@@ -1475,6 +1475,18 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You are resistant to inertia.";
 	}
+	if (p_ptr->resist_plasma)
+	{
+		info[i++] = "You are resistant to plasma.";
+	}
+	if (p_ptr->resist_disint)
+	{
+		info[i++] = "You are resistant to disintegration.";
+	}
+	if (p_ptr->resist_time)
+	{
+		info[i++] = "The space-time continuum is stabilized.";
+	}
 	if (p_ptr->resist_fear)
 	{
 		info[i++] = "You are completely fearless.";
@@ -3282,14 +3294,15 @@ void curse_artifact(object_type * o_ptr)
 #if 0 /* Silly */
 	if (randint(4) == 1) o_ptr-> art_flags3 |= TR3_PERMA_CURSE;
 #endif
-	if (randint(3) == 1) o_ptr-> art_flags3 |= TR3_TY_CURSE;
-	if (randint(2) == 1) o_ptr-> art_flags3 |= TR3_AGGRAVATE;
+	if (randint(5) == 1) o_ptr-> art_flags3 |= TR3_TY_CURSE;
+	if (randint(3) == 1) o_ptr-> art_flags3 |= TR3_AGGRAVATE;
 	if (randint(3) == 1) o_ptr-> art_flags3 |= TR3_DRAIN_EXP;
-	if (randint(3) == 1) o_ptr-> art_flags4 |= TR4_BLACK_BREATH;
+	if (randint(4) == 1) o_ptr-> art_flags4 |= TR4_BLACK_BREATH;
 	if (randint(20) == 1) o_ptr-> art_flags4 |= TR4_CURSE_NO_DROP; /* muahahahaha --Amy */
 	if (randint(2) == 1) o_ptr-> art_flags3 |= TR3_TELEPORT;
 	else if (randint(3) == 1) o_ptr->art_flags3 |= TR3_NO_TELE;
 	if (randint(7) == 1) o_ptr-> art_flags5 |= TR5_SAVING_MALUS;
+	if (randint(8) == 1) o_ptr-> art_flags5 |= TR5_RAPID_HUNGER;
 	o_ptr->ident |= IDENT_CURSED;
 }
 
@@ -3523,7 +3536,7 @@ void random_plus(object_type * o_ptr, bool is_scroll)
 void random_resistance (object_type * o_ptr, bool is_scroll, int specific)
 {
 	int xtrapowers = 41;
-	if (randint(10) == 1) xtrapowers = 43;
+	if (randint(10) == 1) xtrapowers = 46;
 
 	/* To avoid a number of possible bugs */
 	if (!specific)
@@ -3829,6 +3842,15 @@ void random_resistance (object_type * o_ptr, bool is_scroll, int specific)
 		break;
 	case 43:
 		o_ptr->art_flags5 |= TR5_RES_INERTIA;
+		break;
+	case 44:
+		o_ptr->art_flags5 |= TR5_RES_PLASMA;
+		break;
+	case 45:
+		o_ptr->art_flags5 |= TR5_RES_DISINT;
+		break;
+	case 46:
+		o_ptr->art_flags5 |= TR5_RES_TIME;
 		break;
 	}
 }

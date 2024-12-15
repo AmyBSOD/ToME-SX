@@ -685,6 +685,9 @@ static const flag_desc resist_flags_desc[] =
 	{ TR2_RES_DISEN, "Disenchantment" },
 	{ TR5_RES_WATER, "Water" },
 	{ TR5_RES_INERTIA, "Inertia" },
+	{ TR5_RES_PLASMA, "Plasma" },
+	{ TR5_RES_DISINT, "Disintegration" },
+	{ TR5_RES_TIME, "Time" },
 };
 
 /*

@@ -1144,67 +1144,69 @@ bool carried_make_attack_normal(int r_idx)
 				}
 			case RBE_TIME:
 				{
-					switch (randint(10))
-					{
-					case 1:
-					case 2:
-					case 3:
-					case 4:
-					case 5:
+					if (!p_ptr->resist_time) {
+						switch (randint(10))
 						{
-							msg_print("You feel life has clocked back.");
-							lose_exp(100 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
-							break;
-						}
-
-					case 6:
-					case 7:
-					case 8:
-					case 9:
-						{
-							int stat = rand_int(6);
-
-							switch (stat)
+						case 1:
+						case 2:
+						case 3:
+						case 4:
+						case 5:
 							{
-							case A_STR:
-								act = "strong";
-								break;
-							case A_INT:
-								act = "bright";
-								break;
-							case A_WIS:
-								act = "wise";
-								break;
-							case A_DEX:
-								act = "agile";
-								break;
-							case A_CON:
-								act = "hardy";
-								break;
-							case A_CHR:
-								act = "beautiful";
+								msg_print("You feel life has clocked back.");
+								lose_exp(100 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
 								break;
 							}
 
-							msg_format("You're not as %s as you used to be...", act);
-
-							p_ptr->stat_cur[stat] = (p_ptr->stat_cur[stat] * 3) / 4;
-							if (p_ptr->stat_cur[stat] < 3) p_ptr->stat_cur[stat] = 3;
-							p_ptr->update |= (PU_BONUS);
-							break;
-						}
-
-					case 10:
-						{
-							msg_print("You're not as powerful as you used to be...");
-
-							for (k = 0; k < 6; k++)
+						case 6:
+						case 7:
+						case 8:
+						case 9:
 							{
-								p_ptr->stat_cur[k] = (p_ptr->stat_cur[k] * 3) / 4;
-								if (p_ptr->stat_cur[k] < 3) p_ptr->stat_cur[k] = 3;
+								int stat = rand_int(6);
+
+								switch (stat)
+								{
+								case A_STR:
+									act = "strong";
+									break;
+								case A_INT:
+									act = "bright";
+									break;
+								case A_WIS:
+									act = "wise";
+									break;
+								case A_DEX:
+									act = "agile";
+									break;
+								case A_CON:
+									act = "hardy";
+									break;
+								case A_CHR:
+									act = "beautiful";
+									break;
+								}
+
+								msg_format("You're not as %s as you used to be...", act);
+
+								p_ptr->stat_cur[stat] = (p_ptr->stat_cur[stat] * 3) / 4;
+								if (p_ptr->stat_cur[stat] < 3) p_ptr->stat_cur[stat] = 3;
+								p_ptr->update |= (PU_BONUS);
+								break;
 							}
-							p_ptr->update |= (PU_BONUS);
-							break;
+
+						case 10:
+							{
+								msg_print("You're not as powerful as you used to be...");
+
+								for (k = 0; k < 6; k++)
+								{
+									p_ptr->stat_cur[k] = (p_ptr->stat_cur[k] * 3) / 4;
+									if (p_ptr->stat_cur[k] < 3) p_ptr->stat_cur[k] = 3;
+								}
+								p_ptr->update |= (PU_BONUS);
+								break;
+							}
 						}
 					}
 					carried_monster_hit = TRUE;
@@ -2031,18 +2033,25 @@ bool make_attack_normal(int m_idx, byte divis)
 					/* Find an item */
 					for (k = 0; k < 10; k++)
 					{
+						u32b f1, f2, f3, f4, f5, esp;
+
 						/* Pick an item */
 						i = rand_int(INVEN_PACK);
 
 						/* Obtain the item */
 						o_ptr = &p_ptr->inventory[i];
 
+						object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
+						/* charge holding allows item to resist 90% of the time --Amy */
+						if ((f5 & (TR5_CHARGE_HOLDING)) && randint(10) != 1) continue;
+
 						/* Skip non-objects */
 						if (!o_ptr->k_idx) continue;
 
 						/* Drain charged wands/staffs
 						   Hack -- don't let artifacts get drained */
-						if (((o_ptr->tval == TV_STAFF) ||
+						if (((o_ptr->tval == TV_STAFF) || (o_ptr->tval == TV_ROD_MAIN) ||
 						                (o_ptr->tval == TV_WAND)) &&
 						                (o_ptr->pval) &&
 					                     !artifact_p(o_ptr))
@@ -2050,36 +2059,67 @@ bool make_attack_normal(int m_idx, byte divis)
 							int drainedamount;
 							int drainmitigate;
 
+							if (o_ptr->tval == TV_ROD_MAIN) {
+
+								/* Heal */
+								j = rlev;
+								m_ptr->hp += j * o_ptr->timeout * o_ptr->number;
+								if (m_ptr->hp > m_ptr->maxhp) m_ptr->hp = m_ptr->maxhp;
+
+								/* Redraw (later) if needed */
+								if (health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
+
+								/* Uncharge, changed by Amy to be less BS */
+
+								drainedamount = randint(o_ptr->timeout) + 1;
+								if (drainedamount > o_ptr->timeout) drainedamount = o_ptr->timeout;
+								drainmitigate = get_skill_scale(SKILL_ALCHEMY, 20);
+								if (drainmitigate > 0) drainedamount -= randint(drainmitigate);
+								if (drainedamount < 1) drainedamount = 1;
+
+								o_ptr->timeout -= drainedamount;
+								if (o_ptr->timeout < 0) o_ptr->timeout = 0;
+
+								/* Combine / Reorder the pack */
+								p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+
+								/* Window stuff */
+								p_ptr->window |= (PW_INVEN);
+
+							} else {
+								/* Heal */
+								j = rlev;
+								m_ptr->hp += j * o_ptr->pval * o_ptr->number;
+								if (m_ptr->hp > m_ptr->maxhp) m_ptr->hp = m_ptr->maxhp;
+
+								/* Redraw (later) if needed */
+								if (health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
+
+								/* Uncharge, changed by Amy to be less BS */
+
+								drainedamount = randint(o_ptr->pval) + 1;
+								if (drainedamount > o_ptr->pval) drainedamount = o_ptr->pval;
+								drainmitigate = get_skill_scale(SKILL_ALCHEMY, 20);
+								if (drainmitigate > 0) drainedamount -= randint(drainmitigate);
+								if (drainedamount < 1) drainedamount = 1;
+
+								o_ptr->pval -= drainedamount;
+								if (o_ptr->pval < 0) o_ptr->pval = 0;
+
+								/* Combine / Reorder the pack */
+								p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+
+								/* Window stuff */
+								p_ptr->window |= (PW_INVEN);
+
+							}
+
 							/* Message */
 							msg_print("Energy drains from your pack!");
 
 							/* Obvious */
 							obvious = TRUE;
 
-							/* Heal */
-							j = rlev;
-							m_ptr->hp += j * o_ptr->pval * o_ptr->number;
-							if (m_ptr->hp > m_ptr->maxhp) m_ptr->hp = m_ptr->maxhp;
-
-							/* Redraw (later) if needed */
-							if (health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
-
-							/* Uncharge, changed by Amy to be less BS */
-
-							drainedamount = randint(o_ptr->pval) + 1;
-							if (drainedamount > o_ptr->pval) drainedamount = o_ptr->pval;
-							drainmitigate = get_skill_scale(SKILL_ALCHEMY, 20);
-							if (drainmitigate > 0) drainedamount -= drainmitigate;
-							if (drainedamount < 1) drainedamount = 1;
-
-							o_ptr->pval -= drainedamount;
-							if (o_ptr->pval < 0) o_ptr->pval = 0;
-
-							/* Combine / Reorder the pack */
-							p_ptr->notice |= (PN_COMBINE | PN_REORDER);
-
-							/* Window stuff */
-							p_ptr->window |= (PW_INVEN);
 
 							/* Done */
 							break;
@@ -2860,67 +2900,69 @@ bool make_attack_normal(int m_idx, byte divis)
 				}
 			case RBE_TIME:
 				{
-					switch (randint(10))
-					{
-					case 1:
-					case 2:
-					case 3:
-					case 4:
-					case 5:
+					if (!p_ptr->resist_time) {
+						switch (randint(10))
 						{
-							msg_print("You feel life has clocked back.");
-							lose_exp(100 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
-							break;
-						}
-
-					case 6:
-					case 7:
-					case 8:
-					case 9:
-						{
-							int stat = rand_int(6);
-
-							switch (stat)
+						case 1:
+						case 2:
+						case 3:
+						case 4:
+						case 5:
 							{
-							case A_STR:
-								act = "strong";
-								break;
-							case A_INT:
-								act = "bright";
-								break;
-							case A_WIS:
-								act = "wise";
-								break;
-							case A_DEX:
-								act = "agile";
-								break;
-							case A_CON:
-								act = "hardy";
-								break;
-							case A_CHR:
-								act = "beautiful";
+								msg_print("You feel life has clocked back.");
+								lose_exp(100 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
 								break;
 							}
 
-							msg_format("You're not as %s as you used to be...", act);
-
-							p_ptr->stat_cur[stat] = (p_ptr->stat_cur[stat] * 3) / 4;
-							if (p_ptr->stat_cur[stat] < 3) p_ptr->stat_cur[stat] = 3;
-							p_ptr->update |= (PU_BONUS);
-							break;
-						}
-
-					case 10:
-						{
-							msg_print("You're not as powerful as you used to be...");
-
-							for (k = 0; k < 6; k++)
+						case 6:
+						case 7:
+						case 8:
+						case 9:
 							{
-								p_ptr->stat_cur[k] = (p_ptr->stat_cur[k] * 3) / 4;
-								if (p_ptr->stat_cur[k] < 3) p_ptr->stat_cur[k] = 3;
+								int stat = rand_int(6);
+
+								switch (stat)
+								{
+								case A_STR:
+									act = "strong";
+									break;
+								case A_INT:
+									act = "bright";
+									break;
+								case A_WIS:
+									act = "wise";
+									break;
+								case A_DEX:
+									act = "agile";
+									break;
+								case A_CON:
+									act = "hardy";
+									break;
+								case A_CHR:
+									act = "beautiful";
+									break;
+								}
+
+								msg_format("You're not as %s as you used to be...", act);
+
+								p_ptr->stat_cur[stat] = (p_ptr->stat_cur[stat] * 3) / 4;
+								if (p_ptr->stat_cur[stat] < 3) p_ptr->stat_cur[stat] = 3;
+								p_ptr->update |= (PU_BONUS);
+								break;
 							}
-							p_ptr->update |= (PU_BONUS);
-							break;
+
+						case 10:
+							{
+								msg_print("You're not as powerful as you used to be...");
+
+								for (k = 0; k < 6; k++)
+								{
+									p_ptr->stat_cur[k] = (p_ptr->stat_cur[k] * 3) / 4;
+									if (p_ptr->stat_cur[k] < 3) p_ptr->stat_cur[k] = 3;
+								}
+								p_ptr->update |= (PU_BONUS);
+								break;
+							}
 						}
 					}
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;

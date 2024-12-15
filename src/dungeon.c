@@ -1762,6 +1762,9 @@ static void process_world(void)
 			/* Regeneration takes more food */
 			if (p_ptr->regenerate) i += 30;
 
+			/* Rapid hunger does what it says on the tin --Amy */
+			if (p_ptr->rapid_hunger) i += 100;
+
 			/* Regeneration takes more food */
 			if (p_ptr->tim_regen) i += p_ptr->tim_regen_pow / 10;
 

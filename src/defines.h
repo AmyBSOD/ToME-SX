@@ -3010,6 +3010,11 @@
 #define TR5_DISARM              0x01000000L     /* disarming boosted by pval */
 #define TR5_DODGE               0x02000000L     /* dodging boosted by pval */
 #define TR5_LITHE               0x04000000L     /* item weight counts as if it was less */
+#define TR5_RES_PLASMA          0x08000000L
+#define TR5_RES_DISINT          0x10000000L
+#define TR5_RES_TIME            0x20000000L     /* also prevents teleportation */
+#define TR5_RAPID_HUNGER        0x40000000L     /* player hungers rapidly (counts as a kind of curse) */
+#define TR5_CHARGE_HOLDING      0x80000000L     /* for rods, wands and staves: item can resist charge drain */
 
 /* ESP defines */
 #define ESP_ORC                 0x00000001L

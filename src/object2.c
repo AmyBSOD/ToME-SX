@@ -1035,6 +1035,9 @@ s32b flag_cost(object_type * o_ptr, int plusses)
 	if (f2 & TR2_RES_DISEN) total += 10000;
 	if (f5 & TR5_RES_WATER) total += 15000;
 	if (f5 & TR5_RES_INERTIA) total += 15000;
+	if (f5 & TR5_RES_TIME) total += 5000;
+	if (f5 & TR5_RES_PLASMA) total += 5000;
+	if (f5 & TR5_RES_DISINT) total += 10000;
 	if (f5 & TR5_IM_POISON) total += 25000;
 	if (f5 & TR5_DEVICE_MASTERY) total += 5000;
 	if (f5 & TR5_INV_PROTECT) total += 5000;
@@ -4106,7 +4109,7 @@ void add_random_ego_flag(object_type *o_ptr, int fego, bool *limit_blows)
 	if (fego & ETR4_OLD_RESIST)
 	{
 		int xtrapowers = 11;
-		if (randint(10) == 1) xtrapowers = 13;
+		if (randint(10) == 1) xtrapowers = 16;
 
 		/* Make a random resist, equal probabilities */
 		switch (randint(xtrapowers))
@@ -4149,6 +4152,15 @@ void add_random_ego_flag(object_type *o_ptr, int fego, bool *limit_blows)
 			break;
 		case 13:
 			o_ptr->art_flags5 |= (TR5_RES_INERTIA);
+			break;
+		case 14:
+			o_ptr->art_flags5 |= (TR5_RES_PLASMA);
+			break;
+		case 15:
+			o_ptr->art_flags5 |= (TR5_RES_DISINT);
+			break;
+		case 16:
+			o_ptr->art_flags5 |= (TR5_RES_TIME);
 			break;
 		}
 	}

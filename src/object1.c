@@ -967,7 +967,7 @@ void object_flags(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4, u3
 		case EGO_XTRA_POWER:
 			{
 				int xtrapowers = 11;
-				if (randint(10) == 1) xtrapowers = 13;
+				if (randint(10) == 1) xtrapowers = 16;
 
 				/* Choose a power */
 				switch (o_ptr->xtra2 % xtrapowers)
@@ -1010,6 +1010,15 @@ void object_flags(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4, u3
 					break;
 				case 12:
 					(*f5) |= (TR5_RES_INERTIA);
+					break;
+				case 13:
+					(*f5) |= (TR5_RES_PLASMA);
+					break;
+				case 14:
+					(*f5) |= (TR5_RES_DISINT);
+					break;
+				case 15:
+					(*f5) |= (TR5_RES_TIME);
 					break;
 				}
 
@@ -1222,7 +1231,7 @@ void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *
 		case EGO_XTRA_POWER:
 			{
 				int xtrapowers = 11;
-				if (randint(10) == 1) xtrapowers = 13;
+				if (randint(10) == 1) xtrapowers = 16;
 
 				/* Choose a power */
 				switch (o_ptr->xtra2 % xtrapowers)
@@ -1265,6 +1274,15 @@ void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *
 					break;
 				case 12:
 					(*f5) |= (TR5_RES_INERTIA);
+					break;
+				case 13:
+					(*f5) |= (TR5_RES_PLASMA);
+					break;
+				case 14:
+					(*f5) |= (TR5_RES_DISINT);
+					break;
+				case 15:
+					(*f5) |= (TR5_RES_TIME);
 					break;
 				}
 
@@ -3224,33 +3242,8 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 			}
 		}
 
-		/* Mega Hack^3 -- describe the Anchor of Space-time */
-		if (o_ptr->name1 == ART_ANCHOR)
-		{
-			text_out_c(TERM_VIOLET, "It prevents the space-time continuum from being disrupted.  ");
-		}
-
-		if (o_ptr->name1 == ART_ANCHOR2)
-		{
-			text_out_c(TERM_VIOLET, "It prevents the space-time continuum from being disrupted.  ");
-		}
-
-		if (o_ptr->name1 == ART_ANCHOR3)
-		{
-			text_out_c(TERM_VIOLET, "It prevents the space-time continuum from being disrupted.  ");
-		}
-
-		if (o_ptr->name1 == ART_ANCHOR4)
-		{
-			text_out_c(TERM_VIOLET, "It prevents the space-time continuum from being disrupted.  ");
-		}
-
-		if (o_ptr->name1 == ART_ANCHOR5)
-		{
-			text_out_c(TERM_VIOLET, "It prevents the space-time continuum from being disrupted.  ");
-		}
-
-		if (o_ptr->name1 == ART_ANCHOR6)
+		/* Mega Hack^3 -- describe the Anchor of Space-time; turned into property by Amy */
+		if (f5 & TR5_RES_TIME)
 		{
 			text_out_c(TERM_VIOLET, "It prevents the space-time continuum from being disrupted.  ");
 		}
@@ -3718,6 +3711,14 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		{
 			vp[vn++] = "inertia";
 		}
+		if (f5 & (TR5_RES_PLASMA))
+		{
+			vp[vn++] = "plasma";
+		}
+		if (f5 & (TR5_RES_DISINT))
+		{
+			vp[vn++] = "disintegration";
+		}
 		/* Describe */
 		if (vn)
 		{
@@ -3867,6 +3868,10 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		{
 			text_out_c(TERM_L_DARK, "It weakens your saving throw.  ");
 		}
+		if (f5 & (TR5_RAPID_HUNGER))
+		{
+			text_out_c(TERM_L_DARK, "It massively increases hunger.  ");
+		}
 		if (f3 & (TR3_XTRA_MIGHT))
 		{
 			text_out_c(TERM_L_GREEN, "It fires missiles with extra might.  ");
@@ -3991,6 +3996,10 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		if (f4 & (TR4_CHARGING))
 		{
 			text_out("It regenerates its mana faster.  ");
+		}
+		if (f5 & (TR5_CHARGE_HOLDING))
+		{
+			text_out("It resists charge draining.  ");
 		}
 
 		if (f5 & (TR5_RES_MORGUL))

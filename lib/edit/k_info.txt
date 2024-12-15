@@ -1932,7 +1932,7 @@ D:might otherwise blunder into.
 
 N:195:& Sheaf Arrow~
 G:{:o
-I:17:1:0
+I:17:6:0
 W:10:0:0:3
 A:15/2:50/2
 P:0:1d5:0:0:0
@@ -2773,7 +2773,7 @@ P:0:1d1:0:0:0
 
 N:293:& Flight Arrow~
 G:{:y
-I:17:1:0
+I:17:7:0
 W:3:0:0:1
 A:3/2
 P:0:1d3:0:0:0
@@ -6746,7 +6746,7 @@ D:A curved leaf-shaped piece of wood, its "forward" edges enhanced with mithril 
 N:846:& Pair~ of Running Heels
 G:]:v
 I:30:4:3
-W:90:0:1:100000
+W:90:0:10:100000
 A:90/2
 F:SPEED
 f:SPEED
@@ -6969,7 +6969,7 @@ D:A Japanese broadsword.
 
 N:871:& Kabuto~
 G:]:d
-I:32:8:0
+I:32:18:0
 W:50:0:80:300
 A:50/3
 P:7:1d2:0:0:0

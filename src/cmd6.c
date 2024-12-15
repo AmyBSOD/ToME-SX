@@ -4415,6 +4415,9 @@ void zap_combine_rod_tip(object_type *q_ptr, int tip_item) /* q_ptr is the rod t
 	if (q_ptr->art_flags3 & TR3_IGNORE_ELEC) {
 		o_ptr->art_flags3 |= TR3_IGNORE_ELEC;
 	}
+	if (q_ptr->art_flags5 & TR5_CHARGE_HOLDING) {
+		o_ptr->art_flags5 |= TR5_CHARGE_HOLDING;
+	}
 
 	/* Destroy a rod tip in the pack */
 	if (tip_item >= 0)

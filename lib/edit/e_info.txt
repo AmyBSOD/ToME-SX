@@ -3877,6 +3877,85 @@ W:0:1:15:5000
 C:0:0:10:10
 R:100
 
+# Rods ego
+N:311:of Charge Holding
+T:55:0:255
+T:65:0:255
+T:66:0:255
+X:A:51:10
+W:0:2:10:2000
+C:0:0:0:0
+R:100
+F:CHARGE_HOLDING
+f:CHARGE_HOLDING
+
+# Rods ego
+N:312:Charge Holding of 
+T:67:0:255
+X:A:51:10
+W:0:2:10:2000
+C:0:0:0:0
+R:100
+F:CHARGE_HOLDING
+f:CHARGE_HOLDING
+
+N:313:the Maiar of 
+T:67:0:255
+X:A:51:10
+W:0:1:25:20000
+C:0:0:0:0
+R:100
+F:CAPACITY | CHARGING | CHEAPNESS | CHARGE_HOLDING |
+
+N:314:of Stability
+T:34:0:255
+X:A:50:50
+W:20:5:25:3000
+C:0:0:5:0
+R:100
+F:RES_DISINT |
+f:RES_DISINT |
+
+# amulet of hunger
+N:315:of Hunger
+X:A:0:2
+T:40:0:255
+W:0:1:20:0
+C:0:0:0:0
+R:100
+F:CURSED | RAPID_HUNGER
+f:RAPID_HUNGER
+
+# crown of plasma resist
+N:316:of Heat
+T:33:0:255
+X:A:50:50
+W:10:2:10:6000
+C:0:0:8:0
+R:100
+F:RES_PLASMA | RES_FIRE
+f:RES_PLASMA | RES_FIRE
+
+# amulet of time resistance
+N:317:of Time-Space Continuum
+X:A:30:2
+T:40:0:255
+W:40:3:25:5000
+C:0:0:4:0
+R:100
+F:RES_TIME
+f:RES_TIME
+
+# light of time resistance
+N:318:of Time-Space Continuum
+X:A:30:2
+T:39:0:255
+W:50:3:50:5000
+C:0:0:0:0
+R:100
+F:RES_TIME
+f:RES_TIME
+
 # N: serial number : ego type
 # D: description
 # T: tval : min sval : max sval
