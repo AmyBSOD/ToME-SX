@@ -3614,6 +3614,8 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
 			case SV_AMULET_CHARISMA:
 			case SV_AMULET_WISDOM:
 			case SV_AMULET_INFRA:
+			case SV_AMULET_DISARMING:
+			case SV_AMULET_DODGING:
 				{
 					o_ptr->pval = 1 + m_bonus(5, level);
 

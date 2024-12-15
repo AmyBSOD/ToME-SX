@@ -2147,7 +2147,7 @@ N:221:*Destruction*
 G:?:d
 I:70:41:0
 W:40:0:0:15000
-A:40/1
+A:40/2
 D:This scroll is inscribed with a mighty conjuration which wrecks the dungeon all around you.
 D:Monsters and objects will be annihilated by this blast; only completely indestructible things can
 D:withstand it.
@@ -6883,7 +6883,7 @@ P:20:1d4:-2:0:0
 D:The Samurai's suit of armor.
 
 N:862:& O-yoroi~
-G:[:d
+G:[:D
 I:37:16:0
 W:45:0:320:1300
 A:45/2
@@ -6968,7 +6968,7 @@ F:SHOW_MODS
 D:A Japanese broadsword.
 
 N:871:& Kabuto~
-G:]:d
+G:]:D
 I:32:18:0
 W:50:0:80:300
 A:50/3
@@ -6984,7 +6984,7 @@ P:4:1d2:0:0:0
 D:Japanese helmet from Poschengband.
 
 N:873:& Haramakido~
-G:[:d
+G:[:D
 I:37:14:0
 W:32:0:280:920
 A:32/2
@@ -7099,7 +7099,7 @@ f:BLOWS
 D:Supposedly, this sword has a pretty high attack rate.
 
 N:885:& Black Clothes
-G:(:d
+G:(:D
 I:36:13:1
 W:15:0:80:5000
 A:40/4
@@ -7167,7 +7167,7 @@ D:A set of open-topped footgear with soft calfskin lacings and a sturdy
 D:cured leather base.
 
 N:891:& Maul~
-G:\:d
+G:\:D
 I:21:24:0
 W:5:0:200:130
 A:20/1
@@ -7203,6 +7203,88 @@ A:0/1
 P:1:0d0:0:0:0
 D:It's soft and lightweight, but it can prevent your skull from being cut off by the
 D:enemy's blades.
+
+N:895:Device Mastery
+G:":d
+I:40:34:0
+W:20:0:3:500
+A:20/1
+F:DEVICE_MASTERY | EASY_KNOW
+f:DEVICE_MASTERY
+D:This talisman makes it much easier to use wands, rods and staves.
+
+N:896:Peace
+G:":d
+I:40:35:0
+W:5:0:3:500
+A:5/1
+F:PEACEKEEPING | EASY_KNOW
+f:PEACEKEEPING
+D:An amulet that lets you keep the peace in the dungeon. While wearing it, accidentally
+D:hitting a peaceful or tame creature won't anger it.
+
+N:897:Water Resistance
+G:":d
+I:40:36:0
+W:50:0:3:5000
+A:50/4
+F:RES_WATER | EASY_KNOW
+f:RES_WATER
+D:A very useful amulet that lets you resist water-elemental spells.
+
+N:898:Disarming
+G:":d
+I:40:37:0
+W:5:0:3:800
+A:5/1
+F:DISARM | EASY_KNOW
+f:DISARM
+D:Wearing this amulet makes it easier to disarm traps.
+
+N:899:Dodging
+G:":d
+I:40:38:0
+W:5:0:3:1000
+A:5/2
+F:DODGE | EASY_KNOW
+f:DODGE
+D:If you have the dodging skill, then this amulet will improve your chance to successfully
+D:perform a dodge. Otherwise, it just does nothing.
+
+N:900:Space-Time Continuum
+G:":d
+I:40:39:0
+W:60:0:3:20000
+A:60/8
+F:RES_TIME | EASY_KNOW
+f:RES_TIME
+D:This amulet grants you resistance to time, but also stabilizes the space-time continuum
+D:while being worn, preventing all teleportation.
+
+N:901:Plasma Resistance
+G:=:d
+I:45:61:0
+W:30:0:2:3500
+A:30/1
+F:RES_PLASMA | EASY_KNOW
+f:RES_PLASMA
+D:Wearing this ring lets you resist plasma attacks.
+
+N:902:Disintegration Resistance
+G:=:d
+I:45:62:0
+W:60:0:2:8000
+A:60/3
+F:RES_DISINT | EASY_KNOW
+f:RES_DISINT
+D:Wearing this ring lets you resist disintegration attacks.
+
+N:903:Destruction
+G:?:d
+I:70:60:0
+W:30:0:0:7000
+A:30/1
+D:Launches a tactical nuke on your location that destroys the dungeon in a radius of 5 tiles.
 
 # N:number:name
 # G:glyph:color

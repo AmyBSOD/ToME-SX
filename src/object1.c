@@ -27,10 +27,10 @@
 /*
  * Max sizes of the following arrays
  */
-#define MAX_ROCKS      76       /* Used with rings (min 58) */
-#define MAX_AMULETS    44       /* Used with amulets (min 30) */
-#define MAX_WOODS      65       /* Used with staffs (min 32) */
-#define MAX_METALS     70       /* Used with wands/rods (min 32/30) */
+#define MAX_ROCKS      82       /* Used with rings (min 58) */
+#define MAX_AMULETS    55       /* Used with amulets (min 30) */
+#define MAX_WOODS      70       /* Used with staffs (min 32) */
+#define MAX_METALS     75       /* Used with wands/rods (min 32/30) */
 #define MAX_COLORS    101       /* Used with potions (min 62) */
 #define MAX_SHROOM     20       /* Used with mushrooms (min 20) */
 #define MAX_TITLES    115       /* Used with scrolls (min 55) */
@@ -59,7 +59,8 @@ static cptr ring_adj[MAX_ROCKS] =
 	"Glass", "Fluorspar", "Agate",
 	"Kunzite", "Enamel", "Elysium", "Diametrine", "Andalusite", 
 	"Jacinth", "Citrine", "Chrysoberyl", "Thallium", "Cobalt", 
-	"Rhinestone", "Black Pearl", "Tourmaline", "Sandstone"
+	"Rhinestone", "Black Pearl", "Tourmaline", "Sandstone", "Fadeless",
+	"Viridigen", "Eternal", "Mesh", "Tropical", "Greenish"
 };
 
 static byte ring_col[MAX_ROCKS] =
@@ -80,7 +81,8 @@ static byte ring_col[MAX_ROCKS] =
 	TERM_WHITE, TERM_BLUE, TERM_L_WHITE,
 	TERM_VIOLET, TERM_YELLOW, TERM_L_BLUE, TERM_BLUE, TERM_L_BLUE, 
 	TERM_ORANGE, TERM_ORANGE, TERM_YELLOW, TERM_UMBER, TERM_L_BLUE, 
-	TERM_VIOLET, TERM_L_DARK, TERM_ORANGE, TERM_RED
+	TERM_VIOLET, TERM_L_DARK, TERM_ORANGE, TERM_RED, TERM_L_BLUE,
+	TERM_L_GREEN, TERM_L_UMBER, TERM_WHITE, TERM_L_UMBER, TERM_GREEN
 };
 
 
@@ -96,9 +98,11 @@ static cptr amulet_adj[MAX_AMULETS] =
 	"Copper", "Amethyst", "Mithril", "Sapphire", "Dragon Tooth",
 	"Carved Oak", "Sea Shell", "Flint Stone", "Ruby", "Scarab",
 	"Origami Paper", "Meteoric Iron", "Platinum", "Glass", "Beryl",
-	"Malachite", "Adamantite", "Mother-of-pearl", "Runed",
+	"Malachite", "Adamantite", "Mother-of-pearl", "Runed", "Titanic",
 	"Signet", "Oblong", "Chrome", "Lariat", "Pebble", 
-	"Megane", "Ether", "Nano", "Alloy", "Lustrous"
+	"Megane", "Ether", "Nano", "Alloy", "Lustrous",
+	"Layered", "Clawmark", "Bimetal", "Meteosteel", "Leaden",
+	"Mysterious", "Everlasting", "Permanent", "Perpetual", "Cuboid"
 };
 
 static byte amulet_col[MAX_AMULETS] =
@@ -109,9 +113,11 @@ static byte amulet_col[MAX_AMULETS] =
 	TERM_L_UMBER, TERM_VIOLET, TERM_L_BLUE, TERM_BLUE, TERM_L_WHITE,
 	TERM_UMBER, TERM_L_BLUE, TERM_SLATE, TERM_RED, TERM_L_GREEN,
 	TERM_WHITE, TERM_L_DARK, TERM_L_WHITE, TERM_WHITE, TERM_L_GREEN,
-	TERM_GREEN, TERM_VIOLET, TERM_L_WHITE, TERM_UMBER,
+	TERM_GREEN, TERM_VIOLET, TERM_L_WHITE, TERM_UMBER, TERM_ORANGE,
 	TERM_L_BLUE, TERM_SLATE, TERM_L_DARK, TERM_YELLOW, TERM_L_DARK, 
-	TERM_BLUE, TERM_L_BLUE, TERM_GREEN, TERM_ORANGE, TERM_L_BLUE
+	TERM_BLUE, TERM_L_BLUE, TERM_GREEN, TERM_ORANGE, TERM_L_BLUE,
+	TERM_WHITE, TERM_SLATE, TERM_WHITE, TERM_SLATE, TERM_SLATE,
+	TERM_L_DARK, TERM_L_BLUE, TERM_GREEN, TERM_L_RED, TERM_RED
 };
 
 
@@ -133,7 +139,8 @@ static cptr staff_adj[MAX_WOODS] =
 	"Saffron", "Fuchsia", "Pallet", "Avocadowood", "Cherry", 
 	"Holly", "Kukui Wood", "Manzanita", "Persimmon Wood", "Pecan", 
 	"Wintry", "Poplar", "Zebrawood", "Wicker", "Plywood", 
-	"Tamarack", "Whitewood", "Basswood", "Fossilized", "Chestnut"
+	"Tamarack", "Whitewood", "Basswood", "Fossilized", "Chestnut",
+	"Lignine", "Nanoscale", "Microscopic", "Replica", "Volcanic"
 
 };
 
@@ -151,7 +158,8 @@ static byte staff_col[MAX_WOODS] =
 	TERM_ORANGE, TERM_RED, TERM_VIOLET, TERM_GREEN, TERM_ORANGE, 
 	TERM_VIOLET, TERM_L_DARK, TERM_L_UMBER, TERM_GREEN, TERM_YELLOW, 
 	TERM_L_BLUE, TERM_WHITE, TERM_SLATE, TERM_RED, TERM_RED, 
-	TERM_L_DARK, TERM_WHITE, TERM_VIOLET, TERM_WHITE, TERM_UMBER
+	TERM_L_DARK, TERM_WHITE, TERM_VIOLET, TERM_WHITE, TERM_UMBER,
+	TERM_L_UMBER, TERM_GREEN, TERM_L_DARK, TERM_L_GREEN, TERM_L_DARK
 
 };
 
@@ -175,7 +183,8 @@ static cptr wand_adj[MAX_METALS] =
 	"Cubic", "Orthorhombic", "Skew", "Oblique", "Monoclinic", 
 	"Triclinic", "Angular", "Pentagonal", "Beryllium", "Mercury", 
 	"Bauxite", "Cavorite", "Diffuse", "Plutonium", "Asbestos",
-	"Oxidized", "Slim", "Rickety", "Martian", "Venusian"
+	"Oxidized", "Slim", "Rickety", "Martian", "Venusian",
+	"Tanned", "Bipartite", "Negatronic", "Gilded", "Zebetite"
 };
 
 static byte wand_col[MAX_METALS] =
@@ -193,7 +202,8 @@ static byte wand_col[MAX_METALS] =
 	TERM_RED, TERM_VIOLET, TERM_L_DARK, TERM_L_BLUE, TERM_ORANGE, 
 	TERM_YELLOW, TERM_YELLOW, TERM_ORANGE, TERM_L_GREEN, TERM_SLATE, 
 	TERM_SLATE, TERM_BLUE, TERM_L_DARK, TERM_SLATE, TERM_L_GREEN,
-	TERM_L_DARK, TERM_SLATE, TERM_L_RED, TERM_GREEN, TERM_L_BLUE
+	TERM_L_DARK, TERM_SLATE, TERM_L_RED, TERM_GREEN, TERM_L_BLUE,
+	TERM_L_UMBER, TERM_SLATE, TERM_L_GREEN, TERM_YELLOW, TERM_GREEN
 };
 
 

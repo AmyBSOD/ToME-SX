@@ -3604,6 +3604,23 @@ void do_cmd_read_scroll(void)
 				break;
 			}
 
+		case SV_SCROLL_DESTRUCTION:
+			{
+				/* Prevent destruction of quest levels and town */
+				if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
+				{
+					destroy_area(p_ptr->py, p_ptr->px, 5, TRUE, FALSE);
+				}
+				else
+				{
+					msg_print("The dungeon trembles...");
+				}
+
+				ident = TRUE;
+
+				break;
+			}
+
 		case SV_SCROLL_DISPEL_UNDEAD:
 			{
 				if (dispel_undead(60)) ident = TRUE;

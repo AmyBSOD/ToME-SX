@@ -3068,6 +3068,9 @@ bool mon_hit_trap_aux_scroll(int m_idx, int sval)
 	case SV_SCROLL_STAR_DESTRUCTION:
 		destroy_area(y, x, 15, TRUE, FALSE);
 		return (FALSE);
+	case SV_SCROLL_DESTRUCTION:
+		destroy_area(y, x, 5, TRUE, FALSE);
+		return (FALSE);
 	case SV_SCROLL_DISPEL_UNDEAD:
 		typ = GF_DISP_UNDEAD;
 		rad = 5;
