@@ -533,6 +533,7 @@ void search(void)
 
 	/* Start with base search ability */
 	chance = p_ptr->skill_srh;
+	if (chance > 1) chance = randint(chance); /* nerf by Amy */
 
 	/* Penalize various conditions */
 	if (p_ptr->blind || no_lite()) chance = chance / 10;
@@ -3903,9 +3904,15 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 		}
 
 		/* Spontaneous Searching */
-		if ((p_ptr->skill_fos >= 50) || (0 == rand_int(50 - p_ptr->skill_fos)))
-		{
-			search();
+
+		if (p_ptr->skill_fos >= 1) {
+			int fosfactor = randint(p_ptr->skill_fos);
+
+			if ((fosfactor >= 50) || (0 == rand_int(50 - fosfactor)))
+			{
+				search();
+			}
+
 		}
 
 		/* Continuous Searching */

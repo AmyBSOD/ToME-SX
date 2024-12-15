@@ -1584,7 +1584,7 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 				return ;  /* Pet eldritch horrors are safe most of the time */
 
 
-			if (randint(power) < p_ptr->skill_sav)
+			if (randint(power) < p_ptr->skill_sav) /* power can go over 100, so no need to use player_actual_saving_throw() */
 			{
 				return ;  /* Save, no adverse effects */
 			}
@@ -1720,9 +1720,9 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 		{
 			(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
 		}
-		while (rand_int(100) > p_ptr->skill_sav)
+		while (rand_int(100) > player_actual_saving_throw())
 			(void)do_dec_stat(A_INT, STAT_DEC_NORMAL);
-		while (rand_int(100) > p_ptr->skill_sav)
+		while (rand_int(100) > player_actual_saving_throw())
 			(void)do_dec_stat(A_WIS, STAT_DEC_NORMAL);
 		if (!p_ptr->resist_chaos)
 		{

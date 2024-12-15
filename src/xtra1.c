@@ -2635,11 +2635,11 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pva
 	/* Affect stealth */
 	if (f1 & (TR1_STEALTH)) p_ptr->skill_stl += pval;
 
-	/* Affect searching ability (factor of five) */
-	if (f1 & (TR1_SEARCH)) p_ptr->skill_srh += (pval * 5);
+	/* Affect searching ability */
+	if (f1 & (TR1_SEARCH)) p_ptr->skill_srh += pval;
 
-	/* Affect searching frequency (factor of five) */
-	if (f1 & (TR1_SEARCH)) p_ptr->skill_fos += (pval * 5);
+	/* Affect searching frequency */
+	if (f1 & (TR1_SEARCH)) p_ptr->skill_fos += pval;
 
 	/* Affect infravision */
 	if (f1 & (TR1_INFRA)) p_ptr->see_infra += pval;
@@ -4182,16 +4182,17 @@ void calc_bonuses(bool silent)
 	p_ptr->skill_tht += (50 * p_ptr->lev / 10);
 
 
-	/* Limit Skill -- stealth from 0 to 30 */
-	if (p_ptr->skill_stl > 30) p_ptr->skill_stl = 30;
-	if (p_ptr->skill_stl < 0) p_ptr->skill_stl = 0;
+	/* Limit Skill -- stealth from 0 to 30
+	 * Amy edit: changed formula in melee2.c, stealth can go beyond 30 now */
+	/* if (p_ptr->skill_stl > 30) p_ptr->skill_stl = 30; */
+	/* if (p_ptr->skill_stl < 0) p_ptr->skill_stl = 0; */
 
 	/* Limit Skill -- digging from 1 up */
 	if (p_ptr->skill_dig < 1) p_ptr->skill_dig = 1;
 
 	if (p_ptr->anti_magic) {
 		p_ptr->skill_sav += 20;
-		if (p_ptr->skill_sav > 100) p_ptr->skill_sav = 100;
+		/*if (p_ptr->skill_sav > 100) p_ptr->skill_sav = 100;*/ /* no longer needed --Amy */
 	}
 
 	/* Hack -- handle "xtra" mode */

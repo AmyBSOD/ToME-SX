@@ -802,6 +802,7 @@ static bool do_cmd_open_chest(int y, int x, s16b o_idx)
 
 		/* Get the "disarm" factor */
 		i = p_ptr->skill_dis;
+		if (i > 1) i = randint(i);
 
 		/* Penalize some conditions */
 		if (p_ptr->blind || no_lite()) i = i / 10;
@@ -1055,6 +1056,7 @@ static bool do_cmd_open_aux(int y, int x, int dir)
 	{
 		/* Disarm factor */
 		i = p_ptr->skill_dis;
+		if (i > 1) i = randint(i);
 
 		/* Penalize some conditions */
 		if (p_ptr->blind || no_lite()) i = i / 10;
@@ -1903,6 +1905,7 @@ bool easy_open_door(int y, int x)
 	{
 		/* Disarm factor */
 		i = p_ptr->skill_dis;
+		if (i > 1) i = randint(i);
 
 		/* Penalize some conditions */
 		if (p_ptr->blind || no_lite()) i = i / 10;
@@ -2001,6 +2004,7 @@ static bool do_cmd_disarm_chest(int y, int x, s16b o_idx)
 
 	/* Get the "disarm" factor */
 	i = p_ptr->skill_dis;
+	if (i > 1) i = randint(i);
 
 	/* Penalize some conditions */
 	if (p_ptr->blind || no_lite()) i = i / 10;
@@ -2092,6 +2096,7 @@ static bool do_cmd_disarm_aux(int y, int x, int dir, int do_pickup)
 
 	/* Get the "disarm" factor */
 	i = p_ptr->skill_dis;
+	if (i > 1) i = randint(i);
 
 	/* Penalize some conditions */
 	if (p_ptr->blind || no_lite()) i = i / 10;
@@ -2843,9 +2848,13 @@ void do_cmd_stay(int pickup)
 
 
 	/* Spontaneous Searching */
-	if ((p_ptr->skill_fos >= 50) || (0 == rand_int(50 - p_ptr->skill_fos)))
-	{
-		search();
+	if (p_ptr->skill_fos >= 1) {
+		int fosfactor = randint(p_ptr->skill_fos);
+
+		if ((fosfactor >= 50) || (0 == rand_int(50 - fosfactor)))
+		{
+			search();
+		}
 	}
 
 	/* Continuous Searching */

@@ -3972,7 +3972,7 @@ bool make_attack_spell(int m_idx)
 					msg_format("%^s gazes deep into your eyes.", m_name);
 				}
 
-				if (rand_int(100) < p_ptr->skill_sav)
+				if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You resist the effects!");
 				}
@@ -4009,11 +4009,11 @@ bool make_attack_spell(int m_idx)
 					msg_format("%^s looks deep into your eyes.", m_name);
 				}
 
-				if (rand_int(100) < p_ptr->skill_sav)
+				if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You resist the effects!");
 				}
-				else if (rand_int(100) < p_ptr->skill_sav)
+				else if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You resist the effects!");
 				}
@@ -4035,9 +4035,9 @@ bool make_attack_spell(int m_idx)
 					}
 					(void)set_slow(p_ptr->slow + rand_int(4) + 4);
 
-					while (rand_int(100) > p_ptr->skill_sav)
+					while (rand_int(100) > player_actual_saving_throw())
 						(void)do_dec_stat(A_INT, STAT_DEC_NORMAL);
-					while (rand_int(100) > p_ptr->skill_sav)
+					while (rand_int(100) > player_actual_saving_throw())
 						(void)do_dec_stat(A_WIS, STAT_DEC_NORMAL);
 
 					if (!p_ptr->resist_chaos || (rand_int(100) < 5) )
@@ -4055,7 +4055,7 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s points at you and curses.", m_name);
-				if (rand_int(100) < p_ptr->skill_sav)
+				if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You resist the effects!");
 				}
@@ -4080,7 +4080,7 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s points at you and curses horribly.", m_name);
-				if (rand_int(100) < p_ptr->skill_sav)
+				if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You resist the effects!");
 				}
@@ -4105,7 +4105,7 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles loudly.", m_name);
 				else msg_format("%^s points at you, incanting terribly!", m_name);
-				if (rand_int(100) < p_ptr->skill_sav)
+				if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You resist the effects!");
 				}
@@ -4130,7 +4130,7 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 				if (blind) msg_format("%^s screams the word 'DIE!'", m_name);
 				else msg_format("%^s points at you, screaming the word DIE!", m_name);
-				if (rand_int(100) < p_ptr->skill_sav)
+				if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You resist the effects!");
 				}
@@ -4287,7 +4287,7 @@ bool make_attack_spell(int m_idx)
 				{
 					msg_print("You refuse to be frightened.");
 				}
-				else if (rand_int(100) < p_ptr->skill_sav)
+				else if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You refuse to be frightened.");
 				}
@@ -4310,7 +4310,7 @@ bool make_attack_spell(int m_idx)
 				{
 					msg_print("You are unaffected!");
 				}
-				else if (rand_int(100) < p_ptr->skill_sav)
+				else if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You resist the effects!");
 				}
@@ -4333,7 +4333,7 @@ bool make_attack_spell(int m_idx)
 				{
 					msg_print("You disbelieve the feeble spell.");
 				}
-				else if (rand_int(100) < p_ptr->skill_sav)
+				else if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You disbelieve the feeble spell.");
 				}
@@ -4355,7 +4355,7 @@ bool make_attack_spell(int m_idx)
 				{
 					msg_print("You are unaffected!");
 				}
-				else if (rand_int(100) < p_ptr->skill_sav)
+				else if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You resist the effects!");
 				}
@@ -4378,7 +4378,7 @@ bool make_attack_spell(int m_idx)
 				{
 					msg_print("You are unaffected!");
 				}
-				else if (rand_int(100) < p_ptr->skill_sav)
+				else if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_format("You resist the effects!");
 				}
@@ -4427,7 +4427,7 @@ bool make_attack_spell(int m_idx)
 			{
 				disturb(1, 0);
 				msg_format("%^s invokes the Hand of Doom!", m_name);
-				if (rand_int(100) < p_ptr->skill_sav)
+				if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_format("You resist the effects!");
 				}
@@ -4572,7 +4572,7 @@ bool make_attack_spell(int m_idx)
 				{
 					msg_print("You are unaffected!");
 				}
-				else if (rand_int(100) < p_ptr->skill_sav)
+				else if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You resist the effects!");
 				}
@@ -4613,7 +4613,7 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 				msg_format("%^s tries to blank your mind.", m_name);
 
-				if (rand_int(100) < p_ptr->skill_sav)
+				if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You resist the effects!");
 				}
@@ -7935,6 +7935,8 @@ void process_monsters(void)
 	byte old_r_cast_inate = 0;
 	byte old_r_cast_spell = 0;
 
+	int stealthfactor;
+
 	/* Check the doppleganger */
 	if (doppleganger && !(r_info[m_list[doppleganger].r_idx].flags9 & RF9_DOPPLEGANGER))
 		doppleganger = 0;
@@ -7968,10 +7970,21 @@ void process_monsters(void)
 		old_r_cast_spell = r_ptr->r_cast_spell;
 	}
 
+	/* changed stealth calculations by Amy: exponentially increase stealth up to 20, then have a random chance
+	 * for it to be even better, to make sure the skill keeps getting better beyond 30 but without you ever
+	 * reaching the point where monsters just stop waking up altogether (would make game too easy) */
+
+	stealthfactor = p_ptr->skill_stl;
+	if (stealthfactor < 0) stealthfactor = 0;
+	if (stealthfactor > 20) {
+		int diffstealth = stealthfactor - 20;
+		stealthfactor = 20 + randint(diffstealth);
+	}
+
+	if (stealthfactor > 30) stealthfactor = 30;
 
 	/* Hack -- calculate the "player noise" */
-	noise = (1L << (30 - p_ptr->skill_stl));
-
+	noise = (1L << (30 - stealthfactor));
 
 	/* Process the monsters (backwards) */
 	for (i = m_max - 1; i >= 1; i--)

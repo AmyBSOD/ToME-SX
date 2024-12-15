@@ -2919,7 +2919,7 @@ static void apply_nexus(monster_type *m_ptr)
 
 		case 6:
 			{
-				if (rand_int(100) < p_ptr->skill_sav)
+				if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You resist the effects!");
 					break;
@@ -2932,7 +2932,7 @@ static void apply_nexus(monster_type *m_ptr)
 
 		case 7:
 			{
-				if (rand_int(100) < p_ptr->skill_sav)
+				if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You resist the effects!");
 					break;
@@ -5730,7 +5730,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 					msg_format("%^s%s corrupted mind backlashes your attack!",
 					           m_name, (seen ? "'s" : "s"));
 					/* Saving throw */
-					if (rand_int(100) < p_ptr->skill_sav)
+					if (rand_int(100) < player_actual_saving_throw())
 					{
 						msg_print("You resist the effects!");
 					}
@@ -5820,7 +5820,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 					msg_format("%^s%s corrupted mind backlashes your attack!",
 					           m_name, (seen ? "'s" : "s"));
 					/* Saving throw */
-					if (rand_int(100) < p_ptr->skill_sav)
+					if (rand_int(100) < player_actual_saving_throw())
 					{
 						msg_print("You resist the effects!");
 					}
@@ -5908,7 +5908,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 					msg_format("%^s%s corrupted mind backlashes your attack!",
 					           m_name, (seen ? "'s" : "s"));
 					/* Saving throw */
-					if (rand_int(100) < p_ptr->skill_sav)
+					if (rand_int(100) < player_actual_saving_throw())
 					{
 						msg_print("You resist the effects!");
 					}

@@ -7458,7 +7458,7 @@ case 10: case 11: case 12:
 			lose_exp(p_ptr->exp / 16);
 			if (randint(6) != 1) break;
 case 13: case 14: case 15: case 19: case 20:
-			if (p_ptr->free_act && (randint(100) < p_ptr->skill_sav))
+			if (p_ptr->free_act && (randint(100) < player_actual_saving_throw()))
 			{
 				/* Do nothing */ ;
 			}
@@ -7550,7 +7550,7 @@ void activate_dg_curse(void)
 		case 13:
 		case 14:
 		case 15:
-			if (p_ptr->free_act && (randint(100) < p_ptr->skill_sav))
+			if (p_ptr->free_act && (randint(100) < player_actual_saving_throw()))
 			{
 				/* Do nothing */ ;
 			}

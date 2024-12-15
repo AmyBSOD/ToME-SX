@@ -1344,7 +1344,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				{
 					msg_print("You feel as if you had a nightmare!");
 				}
-				else if (rand_int(100) < p_ptr->skill_sav)
+				else if (rand_int(100) < player_actual_saving_throw())
 				{
 					msg_print("You remember having a nightmare!");
 				}

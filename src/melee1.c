@@ -804,7 +804,7 @@ bool carried_make_attack_normal(int r_idx)
 						msg_print("You stand your ground!");
 						obvious = TRUE;
 					}
-					else if (rand_int(100) < p_ptr->skill_sav)
+					else if (rand_int(100) < player_actual_saving_throw())
 					{
 						msg_print("You stand your ground!");
 						obvious = TRUE;
@@ -836,7 +836,7 @@ bool carried_make_attack_normal(int r_idx)
 						msg_print("You are unaffected!");
 						obvious = TRUE;
 					}
-					else if (rand_int(100) < p_ptr->skill_sav)
+					else if (rand_int(100) < player_actual_saving_throw())
 					{
 						msg_print("You resist the effects!");
 						obvious = TRUE;
@@ -2509,7 +2509,7 @@ bool make_attack_normal(int m_idx, byte divis)
 						msg_print("You stand your ground!");
 						obvious = TRUE;
 					}
-					else if (rand_int(100) < p_ptr->skill_sav)
+					else if (rand_int(100) < player_actual_saving_throw())
 					{
 						msg_print("You stand your ground!");
 						obvious = TRUE;
@@ -2544,7 +2544,7 @@ bool make_attack_normal(int m_idx, byte divis)
 						msg_print("You are unaffected!");
 						obvious = TRUE;
 					}
-					else if (rand_int(100) < p_ptr->skill_sav)
+					else if (rand_int(100) < player_actual_saving_throw())
 					{
 						msg_print("You resist the effects!");
 						obvious = TRUE;
@@ -3233,4 +3233,17 @@ bool make_attack_normal(int m_idx, byte divis)
 	return (TRUE);
 }
 
+/* saving throw change by Amy: can't reach 100% anymore, but every point beyond 90 gets you infinitesimally closer */
+int player_actual_saving_throw(void)
+{
+	int playersav = p_ptr->skill_sav;
+
+	if (playersav > 89) {
+		int diffsav = playersav - 89;
+
+		playersav = 89 + randint(diffsav);
+	}
+
+	return playersav;
+}
 
