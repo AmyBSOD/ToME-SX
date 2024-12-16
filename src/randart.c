@@ -1057,6 +1057,15 @@ bool create_artifact(object_type *o_ptr, bool a_scroll, bool get_name)
 	/* Amy edit: randarts should be a bit better! */
 	powers += randint(4);
 
+	/* more randomness by Amy */
+	if (a_cursed) xtrapowers = randint(2);
+	else xtrapowers = rand_int(2);
+
+	if (randint(50) == 1) {
+		xtrapowers += powers;
+		powers = 0;
+	}
+
 	C_MAKE(max_times, max_ra_idx, s16b);
 
 	/* Main loop */
@@ -1120,9 +1129,6 @@ bool create_artifact(object_type *o_ptr, bool a_scroll, bool get_name)
 	if (cheat_peek) msg_format("%ld", total_flags);
 
 	if (a_cursed) curse_artifact(o_ptr);
-
-	if (a_cursed) xtrapowers = randint(2);
-	else xtrapowers = rand_int(2);
 
 	while (xtrapowers > 0) {
 		xtrapowers--;
