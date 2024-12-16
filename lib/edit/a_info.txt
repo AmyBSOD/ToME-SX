@@ -5848,6 +5848,24 @@ F:RES_ACID | FLY | RES_DISINT
 f:RES_ACID | FLY
 D:BDSM! :-)
 
+N:484:'Gudrun's Cuteness'
+I:30:9:10
+W:50:15:1:50000
+P:1:1d1:0:0:4
+F:DODGE | CHR | SUST_CHR | FREE_ACT | RES_COLD | RES_CONF | RES_NEXUS | 
+F:SLOW_DIGEST | DEVICE_MASTERY | 
+f:DODGE
+D:Don't you agree that Gudrun's sandals look very cute?
+
+N:485:'Wendy's Bloodbath'
+I:30:8:5
+W:65:30:5:60000
+P:2:1d1:10:25:0
+F:HOLD_LIFE | RES_FEAR | RES_NEXUS | ANTIMAGIC_20 | CRIT | 
+F:SAVING_MALUS | RAPID_HUNGER | LITHE
+D:The heels of this pair of lady pumps will get very blood-smeared in battle,
+D:due to being so incredibly sharp-edged.
+
 # N:number:name
 # I:tval:sval:pval
 # W:level:rarity:item weight:cost

@@ -28,7 +28,7 @@ M:R:3909
 M:r:50
 
 # Maximum number of items in k_info.txt
-M:K:904
+M:K:913
 
 # Maximum number of vaults in v_info.txt
 M:V:148
@@ -40,7 +40,7 @@ M:F:257
 M:a:1000
 
 # Maximum number of artifacts in a_info.txt
-M:A:484
+M:A:486
 
 # Maximum number of sets types in set_info.txt
 M:s:10

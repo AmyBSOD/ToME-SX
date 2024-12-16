@@ -1556,9 +1556,9 @@ C:a:k:=0:=0:Symbiosis
 C:a:k:+0:+200:Mimicry
 
 C:a:N:Topmodel
-C:a:D:The would-be beauty queen of Middle-Earth. She would wear high heels,
-C:a:D:but unfortunately they're not invented yet. However she is very good at
-C:a:D:charming monsters even without heels. Oh, and she can be male too.
+C:a:D:The would-be beauty queen of Middle-Earth. She wants to wear high heels,
+C:a:D:which thankfully exist in this universe. Also, she is very good at
+C:a:D:charming monsters with or without heels. Oh, and she can be male too.
 C:a:D:She is a creation of Amy, to celebrate the "sexy farting butt edition". :-)
 C:a:O:19:24:1d1
 C:a:O:23:4:1d1
