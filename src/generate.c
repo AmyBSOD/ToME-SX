@@ -7464,14 +7464,14 @@ bool level_generate_dungeon(cptr name)
 	if (strcmp(game_module, "ToME") == 0)
 	{
 		/* Hack -- Add some magma streamers */
-		if ((dungeon_type == DUNGEON_MORDOR) || (dungeon_type == DUNGEON_ANGBAND))
+		if (dungeon_flags2 & DF2_MAGMA_VEIN)
 			for (i = 0; i < DUN_STR_MAG; i++)
 			{
 				build_streamer(FEAT_MAGMA, DUN_STR_MC);
 			}
 
 		/* Hack -- Add some quartz streamers */
-		if ((dungeon_type == DUNGEON_MORDOR) || (dungeon_type == DUNGEON_ANGBAND))
+		if (dungeon_flags2 & DF2_QUARTZ_VEIN)
 			for (i = 0; i < DUN_STR_QUA; i++)
 			{
 				build_streamer(FEAT_QUARTZ, DUN_STR_QC);

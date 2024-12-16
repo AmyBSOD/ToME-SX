@@ -729,6 +729,8 @@ void printRandoms(int lower, int upper, int count)
 				if (random_number(10) == 1) printf("F:WATER_RIVER\n");
 				if (random_number(25) == 1) printf("F:WATER_RIVERS\n");
 				if (random_number(40) == 1) printf("F:SAND_VEIN\n");
+				if (random_number(40) == 1) printf("F:QUARTZ_VEIN\n");
+				if (random_number(40) == 1) printf("F:MAGMA_VEIN\n");
 
 				if (random_number(20) == 1) {
 					int dudrand;
@@ -843,6 +845,7 @@ void printRandoms(int lower, int upper, int count)
 						printf("A:0:100:0\n");
 						printf("O:20:20:20:20\n");
 						printf("F:LAVA_RIVER | CAVERN | NO_STREAMERS\n");
+						printf("F:QUARTZ_VEIN | MAGMA_VEIN\n");
 						printf("F:FILL_METHOD_2\n");
 						printf("R:100:0\n");
 						break;
@@ -852,6 +855,7 @@ void printRandoms(int lower, int upper, int count)
 						printf("A:56:100:56:0:56:0:57:58\n");
 						printf("O:20:20:20:20\n");
 						printf("F:CAVERN | NO_EASY_MOVE\n");
+						printf("F:QUARTZ_VEIN | MAGMA_VEIN\n");
 						printf("F:ADJUST_LEVEL_1_2 | ADJUST_LEVEL_1\n");
 						printf("F:FILL_METHOD_0\n");
 						printf("R:100:0\n");

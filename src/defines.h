@@ -3166,6 +3166,8 @@
 #define DF2_NO_EASY_MOVE        0x00004000L     /* Forbid stuff like teleport level, probability travel, ... */
 #define DF2_NO_RECALL_OUT       0x00008000L     /* Cannot recall out of the place */
 #define DF2_DESC_ALWAYS         0x00010000L     /* Always shows the desc */
+#define DF2_MAGMA_VEIN          0x00020000L     /* dungeon has magma veins */
+#define DF2_QUARTZ_VEIN         0x00040000L     /* dungeon has quartz veins */
 
 /*** Town flags ***/
 #define TOWN_REAL	0x01	/* Town is really present */

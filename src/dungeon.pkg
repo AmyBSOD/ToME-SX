@@ -697,6 +697,17 @@ typedef unsigned int u32b;
  * @note Always shows the desc 
  */
 #define DF2_DESC_ALWAYS         0x00010000L     
+
+/** @def DF2_MAGMA_VEIN
+ * @note Magma veins in dungeon
+ */
+#define DF2_MAGMA_VEIN         0x00020000L     
+
+/** @def DF2_QUARTZ_VEIN
+ * @note Quartz veins in dungeon
+ */
+#define DF2_QUARTZ_VEIN         0x00040000L     
+
 /** @} */
 
 /** @var level_flags1;
