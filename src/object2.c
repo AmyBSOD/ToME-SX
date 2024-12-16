@@ -4861,11 +4861,11 @@ try_an_other_ego:
 			}
 		}
 
-		/* No insane number of blows */
-		if (limit_blows && (o_ptr->art_flags1 & TR1_BLOWS))
+		/* No insane number of blows; no longer needed --Amy */
+		/*if (limit_blows && (o_ptr->art_flags1 & TR1_BLOWS))
 		{
 			if (o_ptr->pval > 2) o_ptr->pval = randint(2);
-		}
+		}*/
 
 		/* get flags */
 		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
