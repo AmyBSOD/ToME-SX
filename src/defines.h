@@ -4752,6 +4752,9 @@ extern int PlayerUID;
 #define SKILL_HAGGLING          68
 #define SKILL_DUALWIELD         69
 #define SKILL_FOUR_DIM          70
+#define SKILL_TWO_HANDED        71
+#define SKILL_HELL              72
+#define SKILL_CELESTIAL         73
 
 /* Ugly but needed */
 #define MAX_SKILLS              200

@@ -416,6 +416,49 @@ SCHOOL_MUSIC = add_school
 	["skill"] = SKILL_MUSIC,
 }
 
+SCHOOL_CELESTIAL = add_school
+{
+	["name"] = "Celestial", 
+	["skill"] = SKILL_CELESTIAL,
+	["spell_power"] = TRUE,
+	["sorcery"] = TRUE,
+	["gods"] =
+	{
+		-- Varda provides the Celestial school at 1/2 the prayer skill
+		[GOD_VARDA] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 2,
+		},
+	},
+}
+
+SCHOOL_HELL = add_school
+{
+	["name"] = "Hell", 
+	["skill"] = SKILL_HELL,
+	["spell_power"] = TRUE,
+	["sorcery"] = TRUE,
+	["gods"] =
+	{
+		-- Melkor provides the Hell school at 2/5 the prayer skill
+		[GOD_MELKOR] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 2,
+			["div"] = 5,
+		},
+		-- Mandos provides the Hell school at 1/2 the prayer skill
+		[GOD_MANDOS] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 2,
+		},
+	},
+}
+
 -- Put some spells
 tome_dofile("s_fire.lua")
 tome_dofile("s_mana.lua")
@@ -453,6 +496,9 @@ tome_dofile("s_stick.lua")
 
 -- Musics
 tome_dofile("s_music.lua")
+
+tome_dofile("s_hell.lua")
+tome_dofile("s_celest.lua")
 
 -- List of spellbooks
 
@@ -514,6 +560,16 @@ school_book[10] = {
 -- Create the book of hellflame
 school_book[11] = {
 	DRAIN, GENOCIDE, WRAITHFORM, FLAMEOFUDUN,
+}
+
+-- Create the book of hell
+school_book[12] = {
+	NETHEREYE, GOODNIGHT, TIMELAPSE, ROCKETLAUNCHER, NUCLEARMISSILE,
+}
+
+-- Create the book of heavens
+school_book[13] = {
+	FORCEBOLT, CLEANINGFIRE, GROUNDATTACK, CRYSTALSHARDS, TUNGUSKA,
 }
 
 -- Create the book of eru

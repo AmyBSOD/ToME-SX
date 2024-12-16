@@ -50,10 +50,10 @@ AMYBSOD_DARK = add_spell
 		local ret, dir, type
 		ret, dir = get_aim_dir()
 		if ret == FALSE then return end
-		return fire_ball(GF_DARK, dir, 20 + get_level(AMYBSOD_DARK, 300), 2 + get_level(AMYBSOD_DARK, 4))
+		return fire_ball(GF_DARK, dir, 40 + get_level(AMYBSOD_DARK, 600), 2 + get_level(AMYBSOD_DARK, 5))
 	end,
 	["info"] =      function()
-		return "dam "..(20 + get_level(AMYBSOD_DARK, 300)).." rad "..(2 + get_level(AMYBSOD_DARK, 4))
+		return "dam "..(40 + get_level(AMYBSOD_DARK, 600)).." rad "..(2 + get_level(AMYBSOD_DARK, 5))
 	end,
 	["desc"] =      {
 			"Conjures a ball of darkness to punch the monsters' lights out"

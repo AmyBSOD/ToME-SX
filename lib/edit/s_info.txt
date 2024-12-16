@@ -88,6 +88,20 @@ A:17:Cast a spell
 I:1000
 F:RANDOM_GAIN
 
+N:72:Hell
+D:Ability to learn and use spells from the Hell school
+D:Spells use the intelligence stat
+A:17:Cast a spell
+I:1000
+F:RANDOM_GAIN
+
+N:73:Celestial
+D:Ability to learn and use spells from the Celestial school
+D:Spells use the intelligence stat
+A:17:Cast a spell
+I:1000
+F:RANDOM_GAIN
+
 N:7:Earth
 D:Ability to learn and use spells from the Earth school
 D:Spells use the intelligence stat
@@ -194,6 +208,8 @@ f:Geomancy:Water%45
 f:Conveyance:Magic%10
 f:Divination:Magic%10
 f:Nature:Magic%10
+f:Hell:Magic%10
+f:Celestial:Magic%10
 f:Temporal:Magic%10
 f:Meta:Magic%10
 f:Mind:Magic%10
@@ -247,6 +263,12 @@ F:RANDOM_GAIN
 N:69:Dual-wielding
 D:Ability to use several weapons at once
 D:Requires you to be in a form with several weapon slots
+I:1000
+F:RANDOM_GAIN
+
+N:71:Two-handed
+D:Ability to use a two-handed weapon
+D:Requires you to wield a weapon that must be used with both hands
 I:1000
 F:RANDOM_GAIN
 
@@ -361,6 +383,7 @@ f:Barehand-combat:Combat%50
 f:Boulder-throwing:Combat%40
 f:Weight-lifting:Combat%10
 f:Dual-wielding:Combat%10
+f:Two-handed:Combat%10
 
 # No more, let's see how it turns out
 # Sorcery and Weaponmastery aren't exactly friendly to each other
@@ -611,6 +634,7 @@ T:Combat:Barehand-combat
 T:Combat:Bearform-combat
 T:Combat:Boulder-throwing
 T:Combat:Dual-wielding
+T:Combat:Two-handed
 T:Combat:Antimagic
 
 T:Main:Sneakiness
@@ -632,6 +656,8 @@ T:Magic:Divination
 T:Magic:Temporal
 T:Magic:Mind
 T:Magic:Nature
+T:Magic:Hell
+T:Magic:Celestial
 T:Magic:Udun
 T:Magic:Demonology
 T:Magic:Necromancy

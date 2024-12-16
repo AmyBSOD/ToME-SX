@@ -359,7 +359,7 @@ struct skill_type
 /** @def MAX_SKILLS
  * @brief Maximum number of skills
  */
-#define MAX_SKILLS	100
+#define MAX_SKILLS	200
 
 
 $static cptr get_skill_name(int i) { return s_name + s_info[i].name; }
@@ -804,11 +804,122 @@ skill_type s_info[MAX_SKILLS];
  */
 #define SKILL_GEOMANCY		59
 
+/** @def SKILL_CLEARMIND
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_CLEARMIND		60
+
+/** @def SKILL_CHOPPING
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_CHOPPING		61
+
+/** @def SKILL_WEIGHTLIFTING
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_WEIGHTLIFTING		62
+
+/** @def SKILL_CLEANING
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_CLEANING		63
+
+/** @def SKILL_IMPALE
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_IMPALE		64
+
+/** @def SKILL_RANGEDPOWER
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_RANGEDPOWER		65
+
+/** @def SKILL_VALARIN
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_VALARIN		66
+
+/** @def SKILL_NETHER
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_NETHER		67
+
+/** @def SKILL_HAGGLING
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_HAGGLING		68
+
+/** @def SKILL_DUALWIELD
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_DUALWIELD		69
+
+/** @def SKILL_FOUR_DIM
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_FOUR_DIM		70
+
+/** @def SKILL_TWO_HANDED
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_TWO_HANDED		71
+
+/** @def SKILL_HELL
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_HELL		72
+
+/** @def SKILL_CELESTIAL
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_CELESTIAL		73
 
 /** @def SKILL_MAX
  * @note Maximun skill value
  */
-#define SKILL_MAX			50000
+#define SKILL_MAX			100000
 /** @def SKILL_STEP
  * @note 1 skill point 
  */
