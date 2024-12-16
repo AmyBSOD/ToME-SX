@@ -7368,6 +7368,70 @@ f:DODGE
 P:1:1d1:0:0:0
 D:A sexy pair of high-heeled sandals that allows the wearer to dance out of the way of attacks.
 
+N:913:Nexus Bolts
+G:-:d
+I:66:31:45
+W:40:0:2:4000
+A:40/2
+P:0:1d1:0:0:0
+D:This rod blasts a nexus bolt at the target.
+
+N:914:Nether Balls
+G:-:d
+I:66:32:50
+W:60:0:2:8000
+A:60/2
+P:0:1d1:0:0:0
+D:This rod blasts a nether ball at the target.
+
+N:915:Water Balls
+G:-:d
+I:66:33:75
+W:80:0:2:10000
+A:80/3
+P:0:1d1:0:0:0
+D:This rod blasts a water ball at the target.
+
+N:916:Disenchantment Bolts
+G:-:d
+I:66:34:80
+W:75:0:2:15000
+A:75/2
+P:0:1d1:0:0:0
+D:This rod blasts a disenchantment bolt at the target.
+
+N:917:Plasma Balls
+G:-:d
+I:66:35:60
+W:65:0:2:9000
+A:65/2
+P:0:1d1:0:0:0
+D:This rod blasts a plasma ball at the target.
+
+N:918:Darkness Bolts
+G:-:d
+I:66:36:50
+W:30:0:2:5000
+A:30/3
+P:0:1d1:0:0:0
+D:This rod blasts a darkness bolt at the target.
+
+N:919:Ice Balls
+G:-:d
+I:66:37:100
+W:80:0:2:20000
+A:80/5:90/3
+P:0:1d1:0:0:0
+D:This rod blasts an ice ball at the target.
+
+N:920:Time Bolts
+G:-:d
+I:66:38:100
+W:70:0:2:25000
+A:70/10:80/5:100:3
+P:0:1d1:0:0:0
+D:This rod blasts a time bolt at the target.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

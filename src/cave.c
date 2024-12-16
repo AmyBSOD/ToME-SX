@@ -4680,6 +4680,70 @@ void map_area(void)
 }
 
 
+/*
+ * Hack -- map the current panel (plus some) ala "magic mapping"
+ * Amy edit: BS, the radius shouldn't depend on your monitor's resolution.
+ */
+void map_area_lower(void)
+{
+	int i, x, y, y1, y2, x1, x2;
+
+	cave_type *c_ptr;
+
+
+	/* Pick an area to map */
+	y1 = p_ptr->py - (randint(10) + 10);
+	y2 = p_ptr->py + (randint(10) + 10);
+	x1 = p_ptr->px - (randint(15) + 15);
+	x2 = p_ptr->px + (randint(15) + 15);
+
+	/* Speed -- shrink to fit legal bounds */
+	if (y1 < 1) y1 = 1;
+	if (y2 > cur_hgt - 2) y2 = cur_hgt - 2;
+	if (x1 < 1) x1 = 1;
+	if (x2 > cur_wid - 2) x2 = cur_wid - 2;
+
+	/* Scan that area */
+	for (y = y1; y <= y2; y++)
+	{
+		for (x = x1; x <= x2; x++)
+		{
+			c_ptr = &cave[y][x];
+
+			/* All non-walls are "checked" */
+			if (!is_wall(c_ptr))
+			{
+				/* Memorize normal features */
+				if (!cave_plain_floor_grid(c_ptr))
+				{
+					/* Memorize the object */
+					c_ptr->info |= (CAVE_MARK);
+				}
+
+				/* Memorize known walls */
+				for (i = 0; i < 8; i++)
+				{
+					c_ptr = &cave[y + ddy_ddd[i]][x + ddx_ddd[i]];
+
+					/* Memorize walls (etc) */
+					if (is_wall(c_ptr))
+					{
+						/* Memorize the walls */
+						c_ptr->info |= (CAVE_MARK);
+					}
+				}
+			}
+		}
+	}
+
+	/* Redraw map */
+	p_ptr->redraw |= (PR_MAP);
+
+	/* Window stuff */
+	p_ptr->window |= (PW_OVERHEAD);
+}
+
+
 
 /*
  * Light up the dungeon using "clairvoyance"

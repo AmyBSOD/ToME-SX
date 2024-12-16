@@ -8931,9 +8931,11 @@ bool project(int who, int rad, int y, int x, int dam, int typ, int flg)
 	/* Calculate the projection path */
 	if ((who == -101) || (who == -100))
 		path_n = 0;
-	else
+	else if (flg & PROJECT_LOWRANGE) {
+		path_n = project_path(path_g, 1, y1, x1, y2, x2, flg);
+	} else {
 		path_n = project_path(path_g, MAX_RANGE, y1, x1, y2, x2, flg);
-
+	}
 
 	/* Hack -- Handle stuff */
 	handle_stuff();

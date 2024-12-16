@@ -4671,15 +4671,15 @@ void do_cmd_zap_rod(void)
 
 	case SV_ROD_DETECT_TRAP:
 		{
-			if (detect_traps(DEFAULT_RADIUS)) ident = TRUE;
+			if (detect_traps(10)) ident = TRUE;
 
 			break;
 		}
 
 	case SV_ROD_DETECT_DOOR:
 		{
-			if (detect_doors(DEFAULT_RADIUS)) ident = TRUE;
-			if (detect_stairs(DEFAULT_RADIUS)) ident = TRUE;
+			if (detect_doors(12)) ident = TRUE;
+			if (detect_stairs(12)) ident = TRUE;
 
 			break;
 		}
@@ -4718,7 +4718,7 @@ void do_cmd_zap_rod(void)
 
 	case SV_ROD_MAPPING:
 		{
-			map_area();
+			map_area_lower();
 
 			ident = TRUE;
 
@@ -4727,7 +4727,7 @@ void do_cmd_zap_rod(void)
 
 	case SV_ROD_DETECTION:
 		{
-			detect_all(DEFAULT_RADIUS);
+			detect_all(10);
 
 			ident = TRUE;
 
@@ -4793,14 +4793,14 @@ void do_cmd_zap_rod(void)
 
 	case SV_ROD_TELEPORT_AWAY:
 		{
-			if (teleport_monster(dir)) ident = TRUE;
+			if (teleport_monster_single(dir)) ident = TRUE;
 
 			break;
 		}
 
 	case SV_ROD_DISARMING:
 		{
-			if (disarm_trap(dir)) ident = TRUE;
+			if (disarm_trap_single(dir)) ident = TRUE;
 
 			break;
 		}
@@ -4845,7 +4845,7 @@ void do_cmd_zap_rod(void)
 
 	case SV_ROD_ACID_BOLT:
 		{
-			fire_bolt_or_beam(10, GF_ACID, dir, damroll(6, 8));
+			fire_bolt_or_beam(10, GF_ACID, dir, damroll(30, 8));
 
 			ident = TRUE;
 
@@ -4854,7 +4854,7 @@ void do_cmd_zap_rod(void)
 
 	case SV_ROD_ELEC_BOLT:
 		{
-			fire_bolt_or_beam(10, GF_ELEC, dir, damroll(3, 8));
+			fire_bolt_or_beam(10, GF_ELEC, dir, damroll(24, 8));
 
 			ident = TRUE;
 
@@ -4863,7 +4863,7 @@ void do_cmd_zap_rod(void)
 
 	case SV_ROD_FIRE_BOLT:
 		{
-			fire_bolt_or_beam(10, GF_FIRE, dir, damroll(8, 8));
+			fire_bolt_or_beam(10, GF_FIRE, dir, damroll(32, 8));
 
 			ident = TRUE;
 
@@ -4872,7 +4872,79 @@ void do_cmd_zap_rod(void)
 
 	case SV_ROD_COLD_BOLT:
 		{
-			fire_bolt_or_beam(10, GF_COLD, dir, damroll(5, 8));
+			fire_bolt_or_beam(10, GF_COLD, dir, damroll(28, 8));
+
+			ident = TRUE;
+
+			break;
+		}
+
+	case SV_ROD_NEXUS_BOLT:
+		{
+			fire_bolt_or_beam(10, GF_NEXUS, dir, damroll(32, 8));
+
+			ident = TRUE;
+
+			break;
+		}
+
+	case SV_ROD_DARK_BOLT:
+		{
+			fire_bolt_or_beam(10, GF_DARK, dir, damroll(31, 8));
+
+			ident = TRUE;
+
+			break;
+		}
+
+	case SV_ROD_DISEN_BOLT:
+		{
+			fire_bolt_or_beam(10, GF_DISENCHANT, dir, damroll(40, 8));
+
+			ident = TRUE;
+
+			break;
+		}
+
+	case SV_ROD_TIME_BOLT:
+		{
+			fire_bolt_or_beam(10, GF_TIME, dir, damroll(44, 8));
+
+			ident = TRUE;
+
+			break;
+		}
+
+	case SV_ROD_NETHER_BALL:
+		{
+			fire_ball(GF_NETHER, dir, 400, 2);
+
+			ident = TRUE;
+
+			break;
+		}
+
+	case SV_ROD_PLASMA_BALL:
+		{
+			fire_ball(GF_PLASMA, dir, 380, 2);
+
+			ident = TRUE;
+
+			break;
+		}
+
+	case SV_ROD_WATER_BALL:
+		{
+			fire_ball(GF_WATER, dir, 500, 2);
+
+			ident = TRUE;
+
+			break;
+		}
+
+	case SV_ROD_ICE_BALL:
+		{
+			fire_ball(GF_WATER, dir, 666, 2);
 
 			ident = TRUE;
 
@@ -4881,7 +4953,7 @@ void do_cmd_zap_rod(void)
 
 	case SV_ROD_ACID_BALL:
 		{
-			fire_ball(GF_ACID, dir, 60, 2);
+			fire_ball(GF_ACID, dir, 300, 2);
 
 			ident = TRUE;
 
@@ -4890,7 +4962,7 @@ void do_cmd_zap_rod(void)
 
 	case SV_ROD_ELEC_BALL:
 		{
-			fire_ball(GF_ELEC, dir, 32, 2);
+			fire_ball(GF_ELEC, dir, 200, 2);
 
 			ident = TRUE;
 
@@ -4899,7 +4971,7 @@ void do_cmd_zap_rod(void)
 
 	case SV_ROD_FIRE_BALL:
 		{
-			fire_ball(GF_FIRE, dir, 72, 2);
+			fire_ball(GF_FIRE, dir, 325, 2);
 
 			ident = TRUE;
 
@@ -4908,7 +4980,7 @@ void do_cmd_zap_rod(void)
 
 	case SV_ROD_COLD_BALL:
 		{
-			fire_ball(GF_COLD, dir, 48, 2);
+			fire_ball(GF_COLD, dir, 250, 2);
 
 			ident = TRUE;
 

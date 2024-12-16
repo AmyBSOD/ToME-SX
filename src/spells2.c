@@ -7230,6 +7230,12 @@ bool disarm_trap(int dir)
 	return (project_hook(GF_KILL_TRAP, dir, 0, flg));
 }
 
+bool disarm_trap_single(int dir)
+{
+	int flg = PROJECT_BEAM | PROJECT_GRID | PROJECT_ITEM | PROJECT_LOWRANGE;
+	return (project_hook(GF_KILL_TRAP, dir, 1, flg));
+}
+
 
 bool heal_monster(int dir)
 {
@@ -7311,6 +7317,19 @@ bool death_ray(int dir, int plev)
 bool teleport_monster(int dir)
 {
 	int flg = PROJECT_BEAM | PROJECT_KILL;
+
+	if (p_ptr->resist_continuum)
+	{
+		msg_print("The space-time continuum can't be disrupted.");
+		return FALSE;
+	}
+
+	return (project_hook(GF_AWAY_ALL, dir, MAX_SIGHT * 5, flg));
+}
+
+bool teleport_monster_single(int dir)
+{
+	int flg = PROJECT_STOP | PROJECT_KILL;
 
 	if (p_ptr->resist_continuum)
 	{

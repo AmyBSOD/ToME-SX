@@ -1897,6 +1897,14 @@
 #define SV_ROD_HAVOC                    28
 #define SV_ROD_DETECT_TRAP              29
 #define SV_ROD_HOME                     30
+#define SV_ROD_NEXUS_BOLT               31
+#define SV_ROD_NETHER_BALL              32
+#define SV_ROD_WATER_BALL               33
+#define SV_ROD_DISEN_BOLT               34
+#define SV_ROD_PLASMA_BALL              35
+#define SV_ROD_DARK_BOLT                36
+#define SV_ROD_ICE_BALL                 37
+#define SV_ROD_TIME_BOLT                38
 
 
 /* The "sval" codes for TV_ROD_MAIN(Rods) */
@@ -2201,6 +2209,7 @@
 #define PROJECT_ABSORB_MANA 0x00008000   /* The spell increase in power as it absord grid's mana. */
 #define PROJECT_STAY       0x00010000
 #define PROJECT_CANTREFLECT 0x00020000   /* Player cannot reflect this projectile */
+#define PROJECT_LOWRANGE   0x00040000   /* Projectile has a range of one square */
 
 /*
  * Bit flags for the "enchant()" function
