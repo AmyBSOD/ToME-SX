@@ -209,6 +209,11 @@ bool quest_invasion_death_hook(char *fmt)
 	if (r_idx == test_monster_name("Maeglin, the Traitor of Gondolin"))
 	{
 		cmsg_print(TERM_YELLOW, "You did it! Gondolin will remain hidden.");
+
+		do_get_new_skill(0);
+		p_ptr->skill_points += 5;
+		cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
+
 		cquest.status = QUEST_STATUS_COMPLETED;
 		del_hook(HOOK_MONSTER_DEATH, quest_invasion_death_hook);
 		process_hooks_restart = TRUE;

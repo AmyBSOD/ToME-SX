@@ -184,6 +184,9 @@ bool quest_shroom_give_hook(char *fmt)
 
 		delete_monster_idx(m_idx);
 
+		p_ptr->skill_points += 1;
+		cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
+
 		cquest.status = QUEST_STATUS_FINISHED;
 
 		del_hook(HOOK_GIVE, quest_shroom_give_hook);

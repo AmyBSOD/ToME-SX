@@ -97,6 +97,9 @@ bool quest_wolves_death_hook(char *fmt)
 		del_hook(HOOK_GEN_QUEST, quest_wolves_gen_hook);
 		process_hooks_restart = TRUE;
 
+		p_ptr->skill_points += 1;
+		cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
+
 		cmsg_print(TERM_YELLOW, "Lothlorien is safer now.");
 		return (FALSE);
 	}

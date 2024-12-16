@@ -48,6 +48,9 @@ bool quest_narsil_move_hook(char *fmt)
 	/* Window stuff */
 	p_ptr->window |= (PW_EQUIP | PW_PLAYER | PW_INVEN);
 
+	p_ptr->skill_points += 1;
+	cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
+
 	/* Continue the plot */
 	cquest.status = QUEST_STATUS_FINISHED;
 

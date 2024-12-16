@@ -3564,6 +3564,12 @@ void check_experience(void)
 		handle_stuff();
 	}
 
+	/* gaining millions of experience points eventually gives you bonus skill points --Amy */
+	if (p_ptr->exp >= p_ptr->overlevel) {
+		p_ptr->overlevel += 9999999L; /* require more for another bonus */
+		p_ptr->skill_points += 1;
+		cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
+	}
 
 	/* Gain levels while possible */
 	while ((p_ptr->lev < PY_MAX_LEVEL) && (p_ptr->lev < max_plev) &&

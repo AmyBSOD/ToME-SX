@@ -57,6 +57,9 @@ bool quest_thrain_death_hook(char *fmt)
 
 			delete_monster_idx(r);
 
+			p_ptr->skill_points += 1;
+			cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
+
 			/* Wipe the glass walls and create a stair */
 			for (i = x - 1; i <= x + 1; i++)
 				for (j = y - 1; j <= y + 1; j++)

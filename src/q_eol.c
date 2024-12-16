@@ -143,6 +143,10 @@ bool quest_eol_death_hook(char *fmt)
 	{
 		cmsg_print(TERM_YELLOW, "Such a sad end...");
 		cquest.status = QUEST_STATUS_COMPLETED;
+
+		p_ptr->skill_points += 2;
+		cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
+
 		del_hook(HOOK_MONSTER_DEATH, quest_eol_death_hook);
 		process_hooks_restart = TRUE;
 		return (FALSE);

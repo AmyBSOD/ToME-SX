@@ -481,6 +481,7 @@ static bool do_extra(int flag)
 	do_s32b(&p_ptr->exp, flag);
 	do_u16b(&p_ptr->exp_frac, flag);
 	do_s16b(&p_ptr->lev, flag);
+	do_s32b(&p_ptr->overlevel, flag);
 
 	do_s16b(&p_ptr->town_num, flag); 	/* -KMW- */
 

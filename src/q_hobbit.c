@@ -145,6 +145,9 @@ bool quest_hobbit_chat_hook(char *fmt)
 
 		cquest.status = QUEST_STATUS_FINISHED;
 
+		p_ptr->skill_points += 1;
+		cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
+
 		del_hook(HOOK_MON_SPEAK, quest_hobbit_speak_hook);
 		process_hooks_restart = TRUE;
 		delete_monster_idx(m_idx);

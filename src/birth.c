@@ -3435,6 +3435,8 @@ void player_birth(void)
 	p_ptr->skill_points = 0;
 	p_ptr->skill_last_level = 1;
 
+	p_ptr->overlevel = 10000000L;
+
 	recalc_skills(FALSE);
 
 	/* grab level 1 abilities */

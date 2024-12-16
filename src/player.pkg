@@ -652,6 +652,12 @@ struct player_type
 	 */
 	s16b lev;
 
+	/** @structvar overlevel
+	 * @brief Number
+	 * @note Overleveling value
+	 */
+	s32b overlevel;
+
 	/** @structvar town_num
 	 * @brief Number
 	 * @note Current town number

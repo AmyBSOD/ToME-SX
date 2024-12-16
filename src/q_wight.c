@@ -120,6 +120,9 @@ bool quest_wight_death_hook(char *fmt)
 		cave_set_feat(p_ptr->py, p_ptr->px, FEAT_LESS);
 		cave[p_ptr->py][p_ptr->px].special = 0;
 
+		p_ptr->skill_points += 2;
+		cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
+
 		cquest.status = QUEST_STATUS_COMPLETED;
 		del_hook(HOOK_MONSTER_DEATH, quest_wight_death_hook);
 		process_hooks_restart = TRUE;

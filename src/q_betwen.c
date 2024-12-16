@@ -118,6 +118,9 @@ bool quest_between_finish_hook(char *fmt)
 	/* Continue the plot */
 	*(quest[q_idx].plot) = QUEST_NULL;
 
+	p_ptr->skill_points += 2;
+	cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
+
 	del_hook(HOOK_QUEST_FINISH, quest_between_finish_hook);
 	process_hooks_restart = TRUE;
 

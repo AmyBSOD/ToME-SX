@@ -54,6 +54,9 @@ bool quest_nazgul_finish_hook(char *fmt)
 	q_ptr->ident |= IDENT_STOREB;
 	(void)inven_carry(q_ptr, FALSE);
 
+	p_ptr->skill_points += 2;
+	cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
+
 	/* End the plot */
 	*(quest[q_idx].plot) = QUEST_NULL;
 

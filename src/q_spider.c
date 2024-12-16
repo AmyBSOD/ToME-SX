@@ -53,6 +53,9 @@ bool quest_spider_death_hook(char *fmt)
 	{
 		cmsg_print(TERM_YELLOW, "The forest is now safer, thanks to you.");
 
+		p_ptr->skill_points += 2;
+		cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
+
 		/* Yavanna LOVES saving forests */
 		GOD(GOD_YAVANNA)
 		{

@@ -1497,6 +1497,8 @@ struct player_type
 
 	s16b lev;			/* Level */
 
+	s32b overlevel;		/* for gaining more skill slots from gaining EXP */
+
 	s16b town_num;			/* Current town number */
 	s16b arena_number;		/* monster number in arena -KMW- */
 	s16b inside_arena;		/* Is character inside arena? */

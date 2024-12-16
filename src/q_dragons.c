@@ -119,6 +119,10 @@ bool quest_dragons_death_hook(char *fmt)
 		process_hooks_restart = TRUE;
 
 		cmsg_print(TERM_YELLOW, "Gondolin is safer now.");
+
+		p_ptr->skill_points += 1;
+		cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
+
 		return (FALSE);
 	}
 	return FALSE;

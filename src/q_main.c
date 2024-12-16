@@ -220,6 +220,10 @@ bool quest_necro_hook(char *fmt)
 		cmsg_print(TERM_YELLOW, "It looks like it was indeed Sauron...");
 		cmsg_print(TERM_YELLOW, "You should report that to Galadriel as soon as possible.");
 
+		do_get_new_skill(0);
+		p_ptr->skill_points += 2;
+		cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
+
 		quest[QUEST_NECRO].status = QUEST_STATUS_FINISHED;
 
 		*(quest[QUEST_NECRO].plot) = QUEST_ONE;

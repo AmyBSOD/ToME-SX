@@ -58,6 +58,9 @@ bool quest_nirnaeth_finish_hook(char *fmt)
 
 		p_ptr->au += 200000;
 
+		p_ptr->skill_points += 3;
+		cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
+
 		/* Redraw gold */
 		p_ptr->redraw |= (PR_GOLD);
 
@@ -68,6 +71,9 @@ bool quest_nirnaeth_finish_hook(char *fmt)
 	{
 		c_put_str(TERM_YELLOW, "I thank you for your efforts.", 8, 0);
 		c_put_str(TERM_YELLOW, "I grant you access to the royal jewelry shop!", 9, 0);
+
+		p_ptr->skill_points += 2;
+		cmsg_format(TERM_L_GREEN, "You can increase %d more skills.", p_ptr->skill_points);
 	}
 
 	/* Continue the plot */
