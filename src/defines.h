@@ -2596,6 +2596,13 @@
 #define TRAP_OF_WASTING_IV                194
 #define TRAP_OF_BEAUTY_IV                 195
 
+#define TRAP_OF_FARTING_II                196
+#define TRAP_OF_FARTING_III               197
+
+#define TRAP_OF_SHOES                     198
+#define TRAP_OF_SHOES_II                  199
+#define TRAP_OF_SHOES_III                 200
+
 /*** General index values ***/
 
 

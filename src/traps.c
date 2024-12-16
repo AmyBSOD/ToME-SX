@@ -450,6 +450,22 @@ static void trap_hit(s16b trap)
 	take_hit(dam, t_name + t_ptr->name);
 }
 
+bool can_disarm_trap_type(int traptype)
+{
+	switch (traptype) {
+		case TRAP_OF_FARTING:
+		case TRAP_OF_FARTING_II:
+		case TRAP_OF_FARTING_III:
+		case TRAP_OF_SHOES:
+		case TRAP_OF_SHOES_II:
+		case TRAP_OF_SHOES_III:
+			return FALSE;
+	}
+
+	return TRUE;
+
+}
+
 /*
  * this function activates one trap type, and returns
  * a bool indicating if this trap is now identified
@@ -481,6 +497,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	{
 
 	case TRAP_OF_FARTING:
+	case TRAP_OF_FARTING_II:
+	case TRAP_OF_FARTING_III:
 
 		/* one of the possible effects is trap creation... so make sure it doesn't ID some other trap! --Amy */
 		t_info[trap].ident = TRUE;
@@ -1882,6 +1900,90 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
 			}
 			break;
+		}
+
+	case TRAP_OF_SHOES:
+	case TRAP_OF_SHOES_II:
+	case TRAP_OF_SHOES_III:
+		{
+			int shoedamage;
+
+			ident = TRUE;
+
+			while (fartingnumber < 1) fartingnumber = 8;
+			while (fartingnumber > 8) fartingnumber -= 8;
+
+			switch (fartingnumber) {
+
+				default:
+				case 1:
+					msg_print("Eveline slams her cute wedge sandals into your shins!");
+					shoedamage = damroll(2, 4);
+					shoedamage += damroll(max_dlv[dungeon_type], 4);
+
+					take_hit(shoedamage, "Eveline's wedge sandals");
+					break;
+				case 2:
+					msg_print("Anastasia slams her soft dancing shoes into your shins!");
+					shoedamage = damroll(1, 2);
+					shoedamage += damroll(max_dlv[dungeon_type], 1);
+					(void)set_stun(p_ptr->stun + randint(10));
+					take_hit(shoedamage, "Anastasia's dancing shoes");
+					break;
+				case 3:
+					msg_print("Solvejg slides her feminine mocassins over your hands, drawing blood!");
+					shoedamage = damroll(1, 4);
+					shoedamage += damroll(max_dlv[dungeon_type], 2);
+					(void)set_cut(p_ptr->cut + shoedamage);
+					take_hit(shoedamage, "Solvejg's feminine mocassins");
+					break;
+				case 4:
+					msg_print("Elif slides her soft sneakers over your hands, drawing blood!");
+					shoedamage = damroll(1, 1);
+					shoedamage += damroll(max_dlv[dungeon_type], 1);
+					(void)set_cut(p_ptr->cut + shoedamage);
+					take_hit(shoedamage, "Elif's soft sneakers");
+					break;
+				case 5:
+					msg_print("Juen slams her leather peep-toes into your shins!");
+					shoedamage = damroll(4, 6);
+					shoedamage += damroll(max_dlv[dungeon_type], 5);
+					if (!p_ptr->paralyzed) {
+						if (p_ptr->free_act && (rand_int(100) > 0) ) {
+							msg_print("You struggle to stay on your feet.");
+						} else {
+							msg_print("You helplessly drop to the floor in pain.");
+							set_paralyzed(p_ptr->paralyzed + randint(4) );
+						}
+					}
+					take_hit(shoedamage, "Juen's leather peep-toes");
+					break;
+				case 6:
+					msg_print("Wendy scratches up and down your legs with her sexy leather pumps!");
+					shoedamage = damroll(3, 8);
+					shoedamage += damroll(max_dlv[dungeon_type], 6);
+					do_dec_stat(A_CON, STAT_DEC_NORMAL);
+					take_hit(shoedamage, "Wendy's leather pumps");
+					break;
+				case 7:
+					msg_print("Meltem scratches over your legs with her block-heeled lady boot!");
+					shoedamage = damroll(3, 4);
+					shoedamage += damroll(max_dlv[dungeon_type], 4);
+
+					take_hit(shoedamage, "Meltem's block-heeled boots");
+					break;
+				case 8:
+					msg_print("Claudia slams her hard wooden sandals into your shins!");
+					shoedamage = damroll(2, 10);
+					shoedamage += damroll(max_dlv[dungeon_type], 8);
+
+					take_hit(shoedamage, "Claudia's wooden sandals");
+					break;
+			}
+
+
+			break;
+
 		}
 
 		/*

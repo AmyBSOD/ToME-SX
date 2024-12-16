@@ -918,6 +918,31 @@ I:10:100:5:8:60:0d0:b
 D:A poisoned needle scars you totally!
 F:FLOOR | CHEST | DOOR
 
+N:196:Farting Trap
+I:41:100:50:4:25:0d0:v
+D:A sexy girl has protected this.
+F:FLOOR
+
+N:197:Farting Noise Trap
+I:81:100:50:4:45:0d0:v
+D:A sexy girl has protected this.
+F:FLOOR
+
+N:198:Shoe Trap
+I:11:100:50:4:1:0d0:G
+D:A female shoe has protected this.
+F:FLOOR
+
+N:199:Heel Trap
+I:41:100:50:4:25:0d0:G
+D:A female shoe has protected this.
+F:FLOOR
+
+N:200:High Heel Trap
+I:81:100:50:4:45:0d0:G
+D:A female shoe has protected this.
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 
