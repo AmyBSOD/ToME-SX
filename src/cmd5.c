@@ -392,7 +392,7 @@ void do_fart_effect(void)
 	case 39:
 		{
 			msg_format("The loud sound drones in your head...");
-			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_SOUND, PROJECT_KILL | PROJECT_JUMP);
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_SOUND, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
 			break;
 		}
 
@@ -400,7 +400,7 @@ void do_fart_effect(void)
 	case 41:
 		{
 			msg_format("A static feeling is in the air...");
-			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_ELEC, PROJECT_KILL | PROJECT_JUMP);
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_ELEC, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
 			break;
 		}
 
@@ -408,42 +408,42 @@ void do_fart_effect(void)
 	case 43:
 		{
 			msg_format("You feel something dissolving you!");
-			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_ACID, PROJECT_KILL | PROJECT_JUMP);
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_ACID, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
 			break;
 		}
 
 	case 44:
 		{
 			msg_format("Water washes over you!");
-			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_WATER, PROJECT_KILL | PROJECT_JUMP);
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_WATER, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
 			break;
 		}
 
 	case 45:
 		{
 			msg_format("You're hit by a lot of little needles!");
-			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_SHARDS, PROJECT_KILL | PROJECT_JUMP);
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_SHARDS, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
 			break;
 		}
 
 	case 46:
 		{
 			msg_format("You feel your muscles cramping!");
-			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_INERTIA, PROJECT_KILL | PROJECT_JUMP);
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_INERTIA, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
 			break;
 		}
 
 	case 47:
 		{
 			msg_format("Everything's spinning!");
-			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_CHAOS, PROJECT_KILL | PROJECT_JUMP);
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_CHAOS, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
 			break;
 		}
 
 	case 48:
 		{
 			msg_format("You suddenly remember something horrible...");
-			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_TIME, PROJECT_KILL | PROJECT_JUMP);
+			project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_TIME, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
 			break;
 		}
 

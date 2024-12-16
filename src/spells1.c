@@ -7587,7 +7587,7 @@ bool unsafe = FALSE;
  * We return "TRUE" if any "obvious" effects were observed.  XXX XXX Actually,
  * we just assume that the effects were obvious, for historical reasons.
  */
-static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
+static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad, bool canreflect)
 {
 	int k = 0, do_move = 0, a = 0, b = 0, x1 = 0, y1 = 0;
 
@@ -7632,7 +7632,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad)
 	}
 
 	/* Effects done by the plane cannot bounce */
-	if (p_ptr->reflect && !a_rad && !(randint(10) == 1) && ((who != -101) && (who != -100)))
+	if (p_ptr->reflect && canreflect && !a_rad && !(randint(10) == 1) && ((who != -101) && (who != -100)))
 	{
 		int t_y, t_x;
 		int max_attempts = 10;
@@ -9332,7 +9332,13 @@ bool project(int who, int rad, int y, int x, int dam, int typ, int flg)
 			x = gx[i];
 
 			/* Affect the player */
-			if (project_p(who, dist, y, x, dam, typ, rad)) notice = TRUE;
+
+			if (flg & (PROJECT_CANTREFLECT)) {
+				if (project_p(who, dist, y, x, dam, typ, rad, FALSE)) notice = TRUE;
+			} else {
+				if (project_p(who, dist, y, x, dam, typ, rad, TRUE)) notice = TRUE;
+			}
+
 		}
 	}
 

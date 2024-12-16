@@ -2200,6 +2200,7 @@
 #define PROJECT_MANA_PATH  0x00004000   /* Follow a mana path. */
 #define PROJECT_ABSORB_MANA 0x00008000   /* The spell increase in power as it absord grid's mana. */
 #define PROJECT_STAY       0x00010000
+#define PROJECT_CANTREFLECT 0x00020000   /* Player cannot reflect this projectile */
 
 /*
  * Bit flags for the "enchant()" function

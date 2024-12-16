@@ -432,7 +432,7 @@ static bool player_handle_breath_trap(s16b rad, s16b type, u16b trap)
 	}
 	dam = damroll(my_dd, my_ds);
 
-	ident = project( -2, rad, p_ptr->py, p_ptr->px, dam, type, PROJECT_KILL | PROJECT_JUMP);
+	ident = project( -2, rad, p_ptr->py, p_ptr->px, dam, type, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
 
 	return (ident);
 }
