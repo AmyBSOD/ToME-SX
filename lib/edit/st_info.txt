@@ -891,6 +891,25 @@ F:RANDOM | MEDIUM_LEVEL
 F:RARE
 W:20
 
+N:68:Master Scribe
+T:100:70:256
+A:0:0:1:2:3:4
+O:8:9:10:11
+G:5:B
+F:RANDOM | DEEP_LEVEL | DEPEND_LEVEL
+F:VERY_RARE
+W:255
+
+N:69:Super Potion Store
+T:100:71:256
+T:100:72:256
+A:0:0:1:2:3:4
+O:8:9:10:11
+G:5:B
+F:RANDOM | DEEP_LEVEL | DEPEND_LEVEL
+F:VERY_RARE
+W:255
+
 # N:<index>:<name>
 # I:<proba>:<item name> - for making the store sell a specific item
 # T:<proba>:<tval>:<sval> - for making the store sell a TV_something item class (sval 256 = wildcard?)

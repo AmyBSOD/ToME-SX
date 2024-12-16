@@ -228,11 +228,20 @@ store_buy_list
 	{
 		TV_SCROLL,
 	},
+	["Master Scribe"] =
+	{
+		TV_SCROLL,
+	},
 	["Recaller"] =
 	{
 		TV_SCROLL,
 	},
 	["Potion Store"] =
+	{
+		TV_POTION,
+		TV_POTION2,
+	},
+	["Super Potion Store"] =
 	{
 		TV_POTION,
 		TV_POTION2,
