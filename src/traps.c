@@ -1907,6 +1907,12 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_SHOES_III:
 		{
 			int shoedamage;
+			int shoeextra = 0;
+
+			if (dun_level > 1) {
+				shoeextra = dun_level / 2;
+				if (shoeextra > 75) shoeextra = 75;
+			}
 
 			ident = TRUE;
 
@@ -1919,35 +1925,35 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				case 1:
 					msg_print("Eveline slams her cute wedge sandals into your shins!");
 					shoedamage = damroll(2, 4);
-					shoedamage += damroll(max_dlv[dungeon_type], 4);
+					shoedamage += damroll(shoeextra, 4);
 
 					take_hit(shoedamage, "Eveline's wedge sandals");
 					break;
 				case 2:
 					msg_print("Anastasia slams her soft dancing shoes into your shins!");
 					shoedamage = damroll(1, 2);
-					shoedamage += damroll(max_dlv[dungeon_type], 1);
+					shoedamage += damroll(shoeextra, 1);
 					(void)set_stun(p_ptr->stun + randint(10));
 					take_hit(shoedamage, "Anastasia's dancing shoes");
 					break;
 				case 3:
 					msg_print("Solvejg slides her feminine mocassins over your hands, drawing blood!");
 					shoedamage = damroll(1, 4);
-					shoedamage += damroll(max_dlv[dungeon_type], 2);
+					shoedamage += damroll(shoeextra, 2);
 					(void)set_cut(p_ptr->cut + shoedamage);
 					take_hit(shoedamage, "Solvejg's feminine mocassins");
 					break;
 				case 4:
 					msg_print("Elif slides her soft sneakers over your hands, drawing blood!");
 					shoedamage = damroll(1, 1);
-					shoedamage += damroll(max_dlv[dungeon_type], 1);
+					shoedamage += damroll(shoeextra, 1);
 					(void)set_cut(p_ptr->cut + shoedamage);
 					take_hit(shoedamage, "Elif's soft sneakers");
 					break;
 				case 5:
 					msg_print("Juen slams her leather peep-toes into your shins!");
 					shoedamage = damroll(4, 6);
-					shoedamage += damroll(max_dlv[dungeon_type], 5);
+					shoedamage += damroll(shoeextra, 5);
 					if (!p_ptr->paralyzed) {
 						if (p_ptr->free_act && (rand_int(100) > 0) ) {
 							msg_print("You struggle to stay on your feet.");
@@ -1961,21 +1967,21 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				case 6:
 					msg_print("Wendy scratches up and down your legs with her sexy leather pumps!");
 					shoedamage = damroll(3, 8);
-					shoedamage += damroll(max_dlv[dungeon_type], 6);
+					shoedamage += damroll(shoeextra, 6);
 					do_dec_stat(A_CON, STAT_DEC_NORMAL);
 					take_hit(shoedamage, "Wendy's leather pumps");
 					break;
 				case 7:
 					msg_print("Meltem scratches over your legs with her block-heeled lady boot!");
 					shoedamage = damroll(3, 4);
-					shoedamage += damroll(max_dlv[dungeon_type], 4);
+					shoedamage += damroll(shoeextra, 4);
 
 					take_hit(shoedamage, "Meltem's block-heeled boots");
 					break;
 				case 8:
 					msg_print("Claudia slams her hard wooden sandals into your shins!");
 					shoedamage = damroll(2, 10);
-					shoedamage += damroll(max_dlv[dungeon_type], 8);
+					shoedamage += damroll(shoeextra, 8);
 
 					take_hit(shoedamage, "Claudia's wooden sandals");
 					break;
