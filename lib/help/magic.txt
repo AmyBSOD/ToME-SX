@@ -14,12 +14,13 @@ Device ability of your character. This ability again dictates the fail rates
 of use of wands/rods/staffs and activation of random-artifacts/artifacts, and
 it will also increase the power of these items.
 ~~~~~01|Magic|Schools
-ToME uses skills to define the various schools of magic. There are 11 primary
+ToME uses skills to define the various schools of magic. There are 13 primary
 schools:
      *****m_mana.txt*0[Mana]           *****m_fire.txt*0[Fire]            *****m_water.txt*0[Water]
      *****m_air.txt*0[Air]            *****m_earth.txt*0[Earth]           *****m_meta.txt*0[Meta]
      *****m_convey.txt*0[Conveyance]     *****m_divin.txt*0[Divination]      *****m_tempo.txt*0[Temporal]
-     *****m_mind.txt*0[Mind]           *****m_nature.txt*0[Nature]
+     *****m_mind.txt*0[Mind]           *****m_nature.txt*0[Nature]        *****m_celest.txt*0[Celestial]
+     *****m_hell.txt*0[Hell]
 
 Other magical skills, generally being used primarily by characters of a
 specific class, are:
@@ -46,7 +47,7 @@ whereas other *****c_priest.txt*0[Priests] and *****c_mindcr.txt*0[Mindcrafters]
 *****c_symbia.txt*0[Symbiants] have access to their own special brand of *****m_symbio.txt*0[magic powers], and *****c_bard.txt*0[Bards] have
 access to *****m_music.txt*0[Songs], which affect creatures in ways that can appear to be magical.
 
-The 11 different primary schools give you access to different spells of
+The 13 different primary schools give you access to different spells of
 variable usefulness. The way they work is that adding skill points to a
 specific school will enable you to get higher level spells for that specific
 school. By level requirements for a specific spell you could actually say skill
@@ -78,7 +79,7 @@ Manathrust costs 1 mana and does 4d2 damage, while at level 24 it costs 12
 mana and does a whopping 27d10 damage.
 
 The *****skills.txt*23[Sorcery] skill is a nice skill, since it gives you
-access to all the 11 primary schools of magic, just as if you'd spent an equal
+access to all the 13 primary schools of magic, just as if you'd spent an equal
 amount of skill points in all the skills. It's available to any mage character,
 but only a *****c_sorcer.txt*0[Sorceror] will be able to be proficient in it. Also, having this
 skill at level 1 will give you a hitpoint-penalty of 1%, all the way up to
@@ -89,9 +90,9 @@ There is also the *****skills.txt*22[Spell Power] skill. This skill is rather ni
 will augment the power of spells you already know. The distinction between this
 and the others, is that it will not grant you new spells, but instead increases
 the levels of spells. At level 50 it grants 20 extra spell levels. [[[[[BThis skill ]
-[[[[[Bonly affects the 11 primary schools] (Mana, Earth, Air, Fire, Water, Meta, 
-Mind, Temporal, Conveyance, Divination and Nature) as well as Geomancy and the
-spells granted by the Gods.
+[[[[[Bonly affects the 13 primary schools] (Mana, Earth, Air, Fire, Water, Meta, 
+Mind, Temporal, Hell, Celestial, Conveyance, Divination and Nature) as well as
+Geomancy and the spells granted by the Gods.
 
 There is also the Magic-Device skill which affects your ability to use wands,
 staves, rods and to activate special objects. It also affects the spell-levels

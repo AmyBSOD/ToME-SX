@@ -49,4 +49,5 @@ use some magic from the "standard" schools, in relation to how skilled you
 are at Prayer. These schools are as follows:
     *****m_mana.txt*0[Mana School] at 1/4 the Prayer skill level.
     *****m_meta.txt*0[Meta School] at 1/3 the Prayer skill level.
+    *****m_celest.txt*0[Celestial School] at 1/2 the Prayer skill level.
 The spells from these schools are all cast using your normal spellpoints.

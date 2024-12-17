@@ -1,0 +1,30 @@
+|||||oy
+~~~~~01|Magic|Celestial School
+~~~~~02|Celestial Magic
+~~~~~03|Skills|Celestial - Spell Info
+#####R === ToME Magic - Celestial School ===
+
+The celestial school of magic contains spells which deal elemental damage to
+your enemies. There are rumors of a "Celestial Tome of the Heavens" which
+contains all the celestial school spells within its bindings.
+
+Worshipping the Goddess Varda Elentari also gives the ability to cast spells
+from the celestial school at a level of 1/2 of your prayer level. E.g. if
+the skill "Spirituality: Prayer" is at level 12, you can cast up to level 6
+celestial school spells.
+
+#####sCelestial Spells
+There are five spells available for the celestial school. These spells are:
+1. [[[[[sForce Bolt] (school level 1)
+   Shoots a bolt of force from your buttocks.
+   Sometimes it can blast through its first target.
+2. [[[[[sCleaning Fire] (school level 10)
+   Fills the air around you with extremely hot plasma to eradicate the enemy.
+3. [[[[[sGround Attack] (school level 35)
+   Shoots a bolt of gravity from your fingertips.
+   Sometimes it can blast through its first target.
+4. [[[[[sCrystal Shards] (school level 40)
+   Hits everyone in the proximity with razor-sharp crystal shards.
+5. [[[[[sTunguska Event] (school level 60)
+   A gigantic meteor drops from the sky and explodes to wreck the enemy.
+

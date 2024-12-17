@@ -12,7 +12,7 @@ FORCEBOLT = add_spell
 		local ret, dir
 		ret, dir = get_aim_dir()
 		if ret == FALSE then return end
-		return fire_bolt_or_beam(2 * get_level(FORCEBOLT, 50), GF_FORCE, dir, damroll(get_force_damage()))
+		return fire_bolt_or_beam(2 * get_level(FORCEBOLT, 25), GF_FORCE, dir, damroll(get_force_damage()))
 	end,
 	["info"] = function()
 		local n, d

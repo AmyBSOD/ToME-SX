@@ -55,7 +55,8 @@ skill, and by improving your Spell-power skill.
 
 In addition to his specific magic, Melkor will also assist with your ability to
 use some magic from the "standard" schools, in relation to how skilled you 
-are at Prayer. This school is as follows:
+are at Prayer. These schools are as follows:
+    *****m_hell.txt*0[Hell School] at 2/5 the Prayer skill level.
     *****m_mind.txt*0[Mind School] at 1/3 the Prayer skill level.
     
 Melkor also grants all of his followers access to the *****m_udun.txt*0[Udun] school of magic,

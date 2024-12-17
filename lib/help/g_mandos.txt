@@ -48,6 +48,7 @@ skill, and by improving your Spell-power skill.
 In addition to his specific magic, Mandos will also assist with your ability to
 use some magic from the "standard" schools, in relation to how skilled you 
 are at Prayer. These schools are as follows:
+    *****m_hell.txt*0[Hell School] at 1/2 the Prayer skill level.
     *****m_divin.txt*0[Divination School] at 1/3 the Prayer skill level.
     *****m_tempo.txt*0[Temporal School] at 1/4 the Prayer skill level.
 The spells from these schools are all cast using your normal spellpoints.
