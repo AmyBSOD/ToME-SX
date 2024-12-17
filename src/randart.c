@@ -263,7 +263,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 59:
 			case 60:
 			case 61:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_ANIMAL;
 					return;
 				}
@@ -273,7 +273,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 64:
 			case 65:
 			case 66:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_EVIL;
 					return;
 				}
@@ -282,7 +282,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 68:
 			case 69:
 			case 70:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_UNDEAD;
 					return;
 				}
@@ -291,7 +291,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 72:
 			case 73:
 			case 74:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_DEMON;
 					return;
 				}
@@ -299,7 +299,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 75:
 			case 76:
 			case 77:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_ORC;
 					return;
 				}
@@ -307,7 +307,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 78:
 			case 79:
 			case 80:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_TROLL;
 					return;
 				}
@@ -315,7 +315,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 81:
 			case 82:
 			case 83:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_GIANT;
 					return;
 				}
@@ -323,13 +323,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 84:
 			case 85:
 			case 86:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_DRAGON;
 					return;
 				}
 				continue;
 			case 87:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_KILL_DRAGON;
 					return;
 				}
@@ -349,7 +349,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 90:
 			case 91:
 			case 92:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_BRAND_POIS;
 					return;
 				}
@@ -357,7 +357,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 93:
 			case 94:
 			case 95:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_BRAND_ACID;
 					return;
 				}
@@ -365,7 +365,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 96:
 			case 97:
 			case 98:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_BRAND_ELEC;
 					return;
 				}
@@ -373,7 +373,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 99:
 			case 100:
 			case 101:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_BRAND_FIRE;
 					return;
 				}
@@ -381,7 +381,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 102:
 			case 103:
 			case 104:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_BRAND_COLD;
 					return;
 				}
@@ -686,13 +686,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				o_ptr->art_flags5 |= TR5_DRAIN_HP;
 				return;
 			case 270:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags5 |= TR5_KILL_DEMON;
 					return;
 				}
 				continue;
 			case 271:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags5 |= TR5_KILL_UNDEAD;
 					return;
 				}
@@ -705,7 +705,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 273:
 			case 274:
 			case 275:
-				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || (o_ptr->tval >= TV_BOOMERANG && o_ptr->tval <= TV_BOW) || o_ptr->tval == TV_MSTAFF ) {
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags5 |= TR5_WOUNDING;
 				}
 				continue;
