@@ -1298,7 +1298,8 @@ void town_gen(int t_idx)
 	qx = (cur_wid - SCREEN_WID) / 2;
 
 	/* Build stuff */
-	switch (rand_int(3))
+	/* Amy: fucking hell why does it keep randomizing the type and thereby generating three different versions per level :( */
+	switch ((town_info[t_idx].seed) % 3)
 	{
 	case 0:
 		{
