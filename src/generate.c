@@ -7161,6 +7161,7 @@ bool level_generate_dungeon(cptr name)
 {
 	int i, k, y, x, y1, x1, branch = get_branch();
 	dungeon_info_type *d_ptr = &d_info[dungeon_type];
+	/*s32b old_seed_dungeon = seed_dungeon;*/
 
 	int mincavern;
 
@@ -7179,6 +7180,14 @@ bool level_generate_dungeon(cptr name)
 
 	/* unused */
 	name = name;
+
+	/*if (town_level)
+	{
+		Rand_quick = TRUE;
+		seed_dungeon = town_info[town_level].seed;
+		Rand_value_saved = Rand_value;
+		Rand_value = seed_dungeon;
+	}*/
 
 	/* Check for arena level */
 	if ((dungeon_flags1 & (DF1_EMPTY)) ||
@@ -7313,7 +7322,7 @@ bool level_generate_dungeon(cptr name)
 		}
 
 		/* Attempt an "unusual" room -- no vaults on town levels */
-		if (!(town_level && (randint(2) != 1) ) &&
+		if (!town_level &&
 		                (ironman_rooms || (randint(50) == 1) || (rand_int(DUN_UNUSUAL) < dun_level)))
 		{
 			/* Roll for room type */
@@ -7487,6 +7496,13 @@ bool level_generate_dungeon(cptr name)
 
 	/* Destroy the level if necessary */
 	if (destroyed) destroy_level();
+
+	/*if (seed_dungeon)
+	{
+		Rand_quick = FALSE;
+
+		seed_dungeon = old_seed_dungeon;
+	}*/
 
 	/* Create the town if needed */
 	if (town_level)

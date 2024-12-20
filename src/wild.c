@@ -1299,7 +1299,7 @@ void town_gen(int t_idx)
 
 	/* Build stuff */
 	/* Amy: fucking hell why does it keep randomizing the type and thereby generating three different versions per level :( */
-	switch ((town_info[t_idx].seed) % 3)
+	switch (rand_int(3))
 	{
 	case 0:
 		{
