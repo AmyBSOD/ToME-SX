@@ -3113,7 +3113,8 @@ static void a_m_aux_1(object_type *o_ptr, int level, int power)
 		}
 	case TV_MSTAFF:
 		{
-			if (is_ego_p(o_ptr, EGO_MSTAFF_SPELL))
+			/* take out stupid "of spell" garbo because it's extremely bugged --Amy */
+			/*if (is_ego_p(o_ptr, EGO_MSTAFF_SPELL))
 			{
 				int gf[2], i;
 
@@ -3132,8 +3133,10 @@ static void a_m_aux_1(object_type *o_ptr, int level, int power)
 				o_ptr->pval3 = rand_int(RUNE_MOD_MAX) + (rand_int(RUNE_MOD_MAX) << 16);
 				o_ptr->pval2 = randint(70) + (randint(70) << 8);
 			}
-			else
-				o_ptr->art_flags5 |= (TR5_SPELL_CONTAIN | TR5_WIELD_CAST);
+			else*/
+
+			o_ptr->art_flags5 |= (TR5_SPELL_CONTAIN | TR5_WIELD_CAST);
+
 			break;
 		}
 	case TV_BOLT:
@@ -4898,12 +4901,13 @@ try_an_other_ego:
 		if (f5 & TR5_SPELL_CONTAIN)
 		{
 			/* Mega hack, mage staves of spell cannot SPELL_CONTAIN */
-			if (is_ego_p(o_ptr, EGO_MSTAFF_SPELL))
+			/*if (is_ego_p(o_ptr, EGO_MSTAFF_SPELL))
 			{
 				o_ptr->art_flags5 &= ~TR5_SPELL_CONTAIN;
 			}
-			else
-				o_ptr->pval2 = -1;
+			else*/
+
+			o_ptr->pval2 = -1;
 		}
 
 		/* Cheat -- describe the item */
@@ -4935,12 +4939,13 @@ try_an_other_ego:
 		if (f5 & TR5_SPELL_CONTAIN)
 		{
 			/* Mega hack, mage staves of spell cannot SPELL_CONTAIN */
-			if (is_ego_p(o_ptr, EGO_MSTAFF_SPELL))
+			/*if (is_ego_p(o_ptr, EGO_MSTAFF_SPELL))
 			{
 				o_ptr->art_flags5 &= ~TR5_SPELL_CONTAIN;
 			}
-			else
-				o_ptr->pval2 = -1;
+			else*/
+
+			o_ptr->pval2 = -1;
 		}
 
 		/* Hacccccccckkkkk attack ! :) -- To prevent som ugly crashs */

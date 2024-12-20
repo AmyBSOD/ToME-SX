@@ -2618,16 +2618,16 @@ void object_desc(char *buf, object_type *o_ptr, int pref, int mode)
 	}
 
 	/* Indicate "charging" Mage Staffs XXX XXX XXX */
-	if (known && o_ptr->timeout && (is_ego_p(o_ptr, EGO_MSTAFF_SPELL)))
-	{
+	/*if (known && o_ptr->timeout && (is_ego_p(o_ptr, EGO_MSTAFF_SPELL)))
+	{*/
 		/* Hack -- Dump " (charging spell1)" if relevant */
-		t = object_desc_str(t, " (charging spell1)");
-	}
-	if (known && o_ptr->xtra2 && (is_ego_p(o_ptr, EGO_MSTAFF_SPELL)))
-	{
+		/*t = object_desc_str(t, " (charging spell1)");
+	}*/
+	/*if (known && o_ptr->xtra2 && (is_ego_p(o_ptr, EGO_MSTAFF_SPELL)))
+	{*/
 		/* Hack -- Dump " (charging spell2)" if relevant */
-		t = object_desc_str(t, " (charging spell2)");
-	}
+		/*t = object_desc_str(t, " (charging spell2)");
+	}*/
 
 
 	/* No more details wanted */
@@ -2772,7 +2772,10 @@ cptr item_activation(object_type *o_ptr, byte num)
 	 * for art_name
 	 */
 
-	if (is_ego_p(o_ptr, EGO_MSTAFF_SPELL))
+	/* staff of spell is SOOOOOO bugged! if it appears on an item with some other pval-based bonus,
+	 * it totally bugs out! who the hell had the bright idea of misusing pval for that??????? --Amy */
+
+	/*if (is_ego_p(o_ptr, EGO_MSTAFF_SPELL))
 	{
 		int gf, mod, mana;
 
@@ -2793,7 +2796,7 @@ cptr item_activation(object_type *o_ptr, byte num)
 		        k_info[lookup_kind(TV_RUNE2, mod)].name + k_name,
 		        mana, mana * 5);
 		return rspell[num];
-	}
+	}*/
 
 	if (o_ptr->tval == TV_EGG)
 	{
@@ -3209,14 +3212,16 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		if (f3 & (TR3_ACTIVATE))
 		{
 			text_out("It can be activated for ");
-			if (is_ego_p(o_ptr, EGO_MSTAFF_SPELL))
+
+			/*if (is_ego_p(o_ptr, EGO_MSTAFF_SPELL))
 			{
 				text_out(item_activation(o_ptr, 0));
 				text_out(" and ");
 				text_out(item_activation(o_ptr, 1));
 			}
-			else
-				text_out(item_activation(o_ptr, 0));
+			else*/
+
+			text_out(item_activation(o_ptr, 0));
 
 			/* Mega-hack -- get rid of useless line for e.g. randarts */
 			if (f5 & (TR5_ACTIVATE_NO_WIELD))

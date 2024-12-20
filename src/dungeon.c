@@ -3152,8 +3152,8 @@ static void process_world(void)
 			}
 		}
 
-		/* Recharge second spell in Mage Staffs of Spells */
-		if (is_ego_p(o_ptr, EGO_MSTAFF_SPELL) && (o_ptr->xtra2 > 0))
+		/* Recharge second spell in Mage Staffs of Spells - taken out by Amy because of eternal bugs */
+		if (/*is_ego_p(o_ptr, EGO_MSTAFF_SPELL) && (o_ptr->xtra2 > 0)*/FALSE)
 		{
 			/* Recharge */
 			o_ptr->xtra2--;

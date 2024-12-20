@@ -5323,14 +5323,16 @@ void do_cmd_activate(void)
 	if (o_ptr->timeout)
 	{
 		/* Mage Staff of Spells -- Have another timeout in xtra2 */
-		if (is_ego_p(o_ptr, EGO_MSTAFF_SPELL) && o_ptr->xtra2)
+		/*if (is_ego_p(o_ptr, EGO_MSTAFF_SPELL) && o_ptr->xtra2)
 		{
 			msg_print("It whines, glows and fades...");
 			return;
-		}
+		}*/
+		/*else*/
 
 		/* Monster eggs */
-		else if (o_ptr->tval == TV_EGG)
+
+		if (o_ptr->tval == TV_EGG)
 		{
 			msg_print("You resume the development of the egg.");
 			o_ptr->timeout = 0;
@@ -5375,8 +5377,8 @@ void do_cmd_activate(void)
 		return;
 	}
 
-	/* Mage Staff of Spells */
-	if (is_ego_p(o_ptr, EGO_MSTAFF_SPELL))
+	/* Mage Staff of Spells - taken out by Amy because of eternal bugs */
+	if (/*is_ego_p(o_ptr, EGO_MSTAFF_SPELL)*/FALSE)
 	{
 		while (TRUE)
 		{
