@@ -124,16 +124,16 @@ STRIKE = add_spell
 			ret, dir = get_aim_dir()
 			if ret == FALSE then return end
 			if get_level(STRIKE, 50) >= 12 then
-				return fire_ball(GF_FORCE, dir, 50 + get_level(STRIKE, 50), 1)
+				return fire_ball(GF_FORCE, dir, 75 + get_level(STRIKE, 75), 1)
 			else
-				return fire_ball(GF_FORCE, dir, 50 + get_level(STRIKE, 50), 0)
+				return fire_ball(GF_FORCE, dir, 75 + get_level(STRIKE, 75), 0)
 			end
 	end,
 	["info"] = 	function()
 			if get_level(STRIKE, 50) >= 12 then
-	       			return "dam "..(50 + get_level(STRIKE, 50)).." rad 1"
+	       			return "dam "..(75 + get_level(STRIKE, 75)).." rad 1"
 			else
-				return "dam "..(50 + get_level(STRIKE, 50))
+				return "dam "..(75 + get_level(STRIKE, 75))
 			end
 	end,
 	["desc"] =	{

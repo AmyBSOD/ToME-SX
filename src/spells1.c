@@ -5224,7 +5224,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 		{
 			if (seen) obvious = TRUE;
 			if ((r_ptr->d_char == 'E') &&
-			                (prefix(name, "W") ||
+			                (prefix(name, "W") || prefix(name, "w") ||
 			                 (strstr((r_name + r_ptr->name), "Unmaker"))))
 			{
 				note = " is immune.";
@@ -5245,7 +5245,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 		{
 			if (seen) obvious = TRUE;
 			if ((r_ptr->d_char == 'E') &&
-			                (prefix(name, "W") ||
+			                (prefix(name, "W") || prefix(name, "w") ||
 			                 (strstr((r_name + r_ptr->name), "Unmaker"))))
 			{
 				note = " is immune.";
@@ -5389,10 +5389,10 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (who <= 0)
 			{
 				if (rand_int(100 - p_ptr->lev) < 50)
-					do_stun = (10 + randint(15) + r) / (r + 1);
+					do_stun = (2 + randint(10) + r) / (r + 1);
 			}
 			else
-				do_stun = (10 + randint(15) + r) / (r + 1);
+				do_stun = (2 + randint(10) + r) / (r + 1);
 			if (r_ptr->flags4 & (RF4_BR_SOUN))
 			{
 				note = " resists.";
@@ -5460,8 +5460,10 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			 * x10 so we can use pseudo-fixed point maths.
 			 *
 			 * Really should use get_angle_to_grid (util.c)
+			 *
+			 * Amy edit: 1 in 4 chance for the monster to not be pushed, mostly to balance force beam spells
 			 */
-			if (who == 0)
+			if ((who == 0) && magik(75))
 			{
 				a = 0;
 				b = 0;
@@ -5535,7 +5537,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			}
 
 			/* --hack-- Only stun if a monster fired it */
-			else do_stun = (randint(15) + r) / (r + 1);
+			else if (who != 0) do_stun = (randint(15) + r) / (r + 1);
 
 			if (r_ptr->flags4 & (RF4_BR_WALL))
 			{
@@ -5627,7 +5629,8 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			{
 				/* 1. slowness */
 				/* Powerful monsters can resist */
-				if ((r_ptr->flags1 & (RF1_UNIQUE)) ||
+				/* Amy edit: also 1 in 3 chance for monster to resist unconditionally */
+				if ((r_ptr->flags1 & (RF1_UNIQUE)) || magik(33) ||
 				                (m_ptr->level > randint((dam - 10) < 1 ? 1 : (dam - 10)) + 10))
 				{
 					obvious = FALSE;
@@ -5643,8 +5646,9 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 					note = " starts moving slower.";
 				}
 
-				/* 2. stun */
-				do_stun = damroll((p_ptr->lev / 10) + 3 , (dam)) + 1;
+				/* 2. stun, but not too long */
+				do_stun = damroll((p_ptr->lev / 10) + 2, (dam)) + 1;
+				if (do_stun > 5) do_stun = 5;
 
 				/* Attempt a saving throw */
 				if ((r_ptr->flags1 & (RF1_UNIQUE)) ||
@@ -5777,6 +5781,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 					break;
 				case 2:
 					do_stun = 3 + randint(dam);
+					if (do_stun > 10) do_stun = 10;
 					break;
 				case 3:
 					do_fear = 3 + randint(dam);
