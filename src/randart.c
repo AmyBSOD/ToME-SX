@@ -139,8 +139,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 4:
 			case 5:
 				o_ptr->art_flags1 |= TR1_STR;
-				if (randint(2) == 1) o_ptr->pval -= randint(5);
-				else o_ptr->pval += randint(5);
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 6:
 			case 7:
@@ -148,8 +153,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 9:
 			case 10:
 				o_ptr->art_flags1 |= TR1_DEX;
-				if (randint(2) == 1) o_ptr->pval -= randint(5);
-				else o_ptr->pval += randint(5);
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 11:
 			case 12:
@@ -157,8 +167,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 14:
 			case 15:
 				o_ptr->art_flags1 |= TR1_INT;
-				if (randint(2) == 1) o_ptr->pval -= randint(5);
-				else o_ptr->pval += randint(5);
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 16:
 			case 17:
@@ -166,8 +181,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 19:
 			case 20:
 				o_ptr->art_flags1 |= TR1_WIS;
-				if (randint(2) == 1) o_ptr->pval -= randint(5);
-				else o_ptr->pval += randint(5);
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 21:
 			case 22:
@@ -175,8 +195,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 24:
 			case 25:
 				o_ptr->art_flags1 |= TR1_CON;
-				if (randint(2) == 1) o_ptr->pval -= randint(5);
-				else o_ptr->pval += randint(5);
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 26:
 			case 27:
@@ -184,20 +209,35 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 29:
 			case 30:
 				o_ptr->art_flags1 |= TR1_CHR;
-				if (randint(2) == 1) o_ptr->pval -= randint(5);
-				else o_ptr->pval += randint(5);
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 31:
 			case 32:
 				o_ptr->art_flags1 |= TR1_MANA;
-				if (randint(2) == 1) o_ptr->pval -= randint(2);
-				else o_ptr->pval += randint(2);
+				if (randint(8) == 1) o_ptr->pval -= randint(2);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(2);
+				else if (o_ptr->pval < 2) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 33:
 			case 34:
 				o_ptr->art_flags1 |= TR1_SPELL;
-				if (randint(2) == 1) o_ptr->pval -= randint(5);
-				else o_ptr->pval += randint(5);
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 35:
 			case 36:
@@ -205,8 +245,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 38:
 			case 39:
 				o_ptr->art_flags1 |= TR1_STEALTH;
-				if (randint(2) == 1) o_ptr->pval -= randint(5);
-				else o_ptr->pval += randint(5);
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 40:
 			case 41:
@@ -214,8 +259,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 43:
 			case 44:
 				o_ptr->art_flags1 |= TR1_SEARCH;
-				if (randint(2) == 1) o_ptr->pval -= randint(5);
-				else o_ptr->pval += randint(5);
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 45:
 			case 46:
@@ -223,8 +273,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 48:
 			case 49:
 				o_ptr->art_flags1 |= TR1_INFRA;
-				if (randint(2) == 1) o_ptr->pval -= randint(5);
-				else o_ptr->pval += randint(5);
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 50:
 			case 51:
@@ -232,19 +287,34 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 53:
 			case 54:
 				o_ptr->art_flags1 |= TR1_TUNNEL;
-				if (randint(2) == 1) o_ptr->pval -= randint(5);
-				else o_ptr->pval += randint(5);
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 55:
 				o_ptr->art_flags1 |= TR1_SPEED;
-				if (randint(2) == 1) o_ptr->pval -= randint(3);
-				else o_ptr->pval += randint(3);
+				if (randint(8) == 1) o_ptr->pval -= randint(3);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(3);
+				else if (o_ptr->pval < 3) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 56:
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_BLOWS;
-					if (randint(2) == 1) o_ptr->pval -= randint(2);
-					else o_ptr->pval += randint(2);
+					if (randint(8) == 1) o_ptr->pval -= randint(2);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(2);
+				else if (o_ptr->pval < 2) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 					return;
 				}
 				continue;
@@ -435,8 +505,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				return;
 			case 138:
 				o_ptr->art_flags2 |= TR2_LIFE;
-				if (randint(2) == 1) o_ptr->pval -= randint(2);
-				else o_ptr->pval += randint(2);
+				if (randint(8) == 1) o_ptr->pval -= randint(2);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(2);
+				else if (o_ptr->pval < 2) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 139:
 				o_ptr->art_flags2 |= TR2_IM_ACID;
@@ -699,8 +774,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				continue;
 			case 272:
 				o_ptr->art_flags5 |= TR5_CRIT;
-				if (randint(2) == 1) o_ptr->pval -= randint(5);
-				else o_ptr->pval += randint(5);
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 273:
 			case 274:
@@ -713,8 +793,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 277:
 			case 278:
 				o_ptr->art_flags5 |= TR5_LUCK;
-				if (randint(2) == 1) o_ptr->pval -= randint(5);
-				else o_ptr->pval += randint(5);
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 279:
 				o_ptr->art_flags5 |= TR5_SPELL_CONTAIN;
@@ -766,8 +851,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 301:
 			case 302:
 				o_ptr->art_flags5 |= TR5_DISARM;
-				if (randint(2) == 1) o_ptr->pval -= randint(5);
-				else o_ptr->pval += randint(5);
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 303:
 			case 304:
@@ -775,8 +865,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 306:
 			case 307:
 				o_ptr->art_flags5 |= TR5_DODGE;
-				if (randint(2) == 1) o_ptr->pval -= randint(5);
-				else o_ptr->pval += randint(5);
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 308:
 			case 309:
@@ -854,16 +949,31 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				o_ptr->art_esp |= ESP_ALL;
 				return;
 			case 343:
-				if (randint(2) == 1) o_ptr->to_h += randint(5);
-				else o_ptr->to_h -= randint(5);
+				if (randint(8) == 1) o_ptr->to_h += randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 344:
-				if (randint(2) == 1) o_ptr->to_d += randint(5);
-				else o_ptr->to_d -= randint(5);
+				if (randint(8) == 1) o_ptr->to_d += randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 			case 345:
-				if (randint(2) == 1) o_ptr->to_a += randint(5);
-				else o_ptr->to_a -= randint(5);
+				if (randint(8) == 1) o_ptr->to_a += randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
 				return;
 
 		}
