@@ -5215,8 +5215,8 @@ bool kind_is_legal(int k_idx)
 
 	if (k_ptr->tval == TV_CORPSE)
 	{
-		if (k_ptr->sval != SV_CORPSE_SKULL && k_ptr->sval != SV_CORPSE_SKELETON &&
-		                k_ptr->sval != SV_CORPSE_HEAD && k_ptr->sval != SV_CORPSE_CORPSE)
+		if (k_ptr->sval != SV_CORPSE_SKULL /*&& k_ptr->sval != SV_CORPSE_SKELETON*/ &&
+		                k_ptr->sval != SV_CORPSE_HEAD /*&& k_ptr->sval != SV_CORPSE_CORPSE*/)
 		{
 			return TRUE;
 		}

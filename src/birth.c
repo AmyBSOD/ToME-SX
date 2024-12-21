@@ -3500,10 +3500,16 @@ void player_birth(void)
 			d_ptr->t_idx[num] = rtown;
 			rtown++;
 
-			while (TRUE)
+			int townattempts = 0;
+
+			while (townattempts < 1000)
 			{
 				int j;
 				bool ok = TRUE;
+		
+				townattempts++;
+
+				if (townattempts > 999) break;
 
 				lev = rand_range(d_ptr->mindepth, d_ptr->maxdepth - 1);
 

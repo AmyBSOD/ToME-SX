@@ -908,6 +908,16 @@ static bool store_will_buy(object_type *o_ptr)
 	/* XXX XXX XXX Ignore "worthless" items */
 	if (object_value(o_ptr) <= 0) return (FALSE);
 
+	/* can buy corpses, skeletons and chests at shops but they're expensive; shouldn't be able to sell them --Amy */
+	if (o_ptr->tval == TV_CORPSE) {
+		if (o_ptr->sval == SV_CORPSE_CORPSE) return FALSE;
+		if (o_ptr->sval == SV_CORPSE_SKELETON) return FALSE;
+		if (o_ptr->sval == SV_CORPSE_HEAD) return FALSE;
+		if (o_ptr->sval == SV_CORPSE_SKULL) return FALSE;
+	}
+	if (o_ptr->tval == TV_SKELETON) return FALSE;
+	if (o_ptr->tval == TV_CHEST) return FALSE;
+
 	/* Lua can define things to buy */
 	if (process_hooks_ret(HOOK_STORE_BUY, "d", "(d,s,O)", st_ptr->st_idx, st_info[st_ptr->st_idx].name + st_name, o_ptr))
 	{
@@ -1471,7 +1481,7 @@ static void store_create(void)
 		q_ptr->ident |= IDENT_STOREB;
 
 		/* Mega-Hack -- no chests in stores */
-		if (q_ptr->tval == TV_CHEST) continue;
+		/*if (q_ptr->tval == TV_CHEST) continue;*/
 
 		/* Prune the black market */
 		/*if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM)
