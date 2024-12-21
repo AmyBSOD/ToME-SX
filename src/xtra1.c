@@ -4192,7 +4192,7 @@ void calc_bonuses(bool silent)
 	p_ptr->skill_dis += adj_int_dis[p_ptr->stat_ind[A_INT]];
 
 	/* Affect Skill -- magic devices (INT) */
-	p_ptr->skill_dev += get_skill_scale(SKILL_DEVICE, 20);
+	p_ptr->skill_dev += adj_int_dev[p_ptr->stat_ind[A_INT]];
 
 	/* Affect Skill -- saving throw (WIS) */
 	p_ptr->skill_sav += adj_wis_sav[p_ptr->stat_ind[A_WIS]];
@@ -4204,7 +4204,7 @@ void calc_bonuses(bool silent)
 	p_ptr->skill_dis += (get_skill_scale(SKILL_DISARMING, 75));
 
 	/* Affect Skill -- magic devices (skill) */
-	p_ptr->skill_dev += (get_skill_scale(SKILL_DEVICE, 150));
+	p_ptr->skill_dev += (get_skill_scale(SKILL_DEVICE, 50));
 
 	/* Affect Skill -- saving throw (skill and level) */
 	p_ptr->skill_sav += (get_skill_scale(SKILL_SPIRITUALITY, 45));
