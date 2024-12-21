@@ -527,7 +527,7 @@ C:a:O:23:4:1d1
 
 C:a:N:Thaumaturgist
 C:a:D:Thaumaturgy spells come from within and are different for each character.
-C:a:D:Since attack is the best defence, all their spells are offensive.
+C:a:D:Since attack is the best defense, all their spells are offensive.
 C:a:k:-1000:+0:Mana
 C:a:k:+2000:+50:Magic
 C:a:k:+1000:+700:Thaumaturgy

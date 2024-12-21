@@ -4832,7 +4832,7 @@ tval_desc tval_descs[] =
 	},
 	{
 		TV_SHIELD,
-		"Shields will help improve your defence rating, but you "
+		"Shields will help improve your defense rating, but you "
 		"cannot use them with two handed weapons."
 	},
 	{

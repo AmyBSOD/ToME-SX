@@ -47,7 +47,7 @@ through the "U" command.
 To balance the expansion in things like player abilities and customisation, the 
 list of both monsters and items has also been expanded. Be warned that items 
 which were by default safe in Vanilla are not necessarily safe in ToME (a 
-certain early artifact comes to mind here...), and picking on defenceless 
+certain early artifact comes to mind here...), and picking on defenseless 
 creatures is frowned upon....
 
 Happy adventuring!
@@ -87,7 +87,7 @@ trained in Alchemy, you can reuse bottles after quaffing potions as well.
 #####G------------------------------------------------------------------------------
 #####GQ: I got killed by a Great Wyrm of Power at 50'!!! What happened?
 
-A: You killed a defenceless creature. I told you that it was frowned upon!
+A: You killed a defenseless creature. I told you that it was frowned upon!
 ~~~~~18|Artifacts that activate but I cannot wear or wield
 ~~~~~17|Strange items
 #####G------------------------------------------------------------------------------

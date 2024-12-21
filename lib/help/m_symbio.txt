@@ -18,7 +18,7 @@ initiate the symbiotic relationship.
 There are nine powers a symbiant can develop. They are:
 1. [[[[[uHypnotize] (level 1) Cost:20
    The very basis of symbiosis itself, this asks a monster to lower its
-   natural defences so that it can be safely "worn".
+   natural defenses so that it can be safely "worn".
 2. [[[[[uRelease] (level 1) Cost:10
    Sometimes even life-long friends part. This power allows you to revert
    a monster on the floor to its primal state, even though the shock of waking

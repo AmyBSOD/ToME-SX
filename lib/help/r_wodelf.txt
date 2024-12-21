@@ -8,7 +8,7 @@ is unparalleled. They train tirelessly with their bows, to the point of
 neglecting even melee skills. They resist light as with other elves, and 
 do extra damage with a ranged weapon. They are almost custom made for the 
 archer class, but also make interesting warriors. Even Wood Elf Mages
-are feasible, using the bow to attack and saving their magic for defence.
+are feasible, using the bow to attack and saving their magic for defense.
 
 #####GStat Modifiers
 Strength        -3   

@@ -2532,7 +2532,7 @@ F:FORCE_MAXHP | CAN_SPEAK | WILD_TOO | DROP_SKELETON | DROP_CORPSE
 F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | 
 F:OPEN_DOOR | BASH_DOOR
 F:MORTAL | BASEANGBAND | HAS_LITE
-D:A nasty piece of work, Brodda picks on defenceless women and children. 
+D:A nasty piece of work, Brodda picks on defenseless women and children. 
 
 N:170:Bloodfang, the Wolf
 G:C:R
@@ -13046,7 +13046,7 @@ S:BLIND | SCARE | BRAIN_SMASH |
 S:BO_MANA | BO_NETH | BA_NETH | S_UNDEAD
 D:A huge giant garbed in black, more massive than a titan and stronger than 
 D:a dragon. With terrible blows, it breaks your armor from your back, 
-D:leaving you defenceless against its evil wrath. It can smell your fear, 
+D:leaving you defenseless against its evil wrath. It can smell your fear, 
 D:and you in turn smell the awful stench of death as this ghastly figure 
 D:strides towards you menacingly. 
 
@@ -17081,7 +17081,7 @@ D:breath, and the fiery eyes, of a real dragon. You can feel the air itself
 D:vibrating as you near it. 
 
 # wyrm-protected BS monster has its HP boosted by Amy
-N:978:Moldoux, the Defenceless Mold
+N:978:Moldoux, the Defenseless Mold
 G:m:v
 I:100:50d50:1:1:0
 W:1:10:20:3
@@ -17092,7 +17092,7 @@ F:STUPID | EMPTY_MIND |
 F:IM_POIS | 
 F:NO_CONF | NO_SLEEP | NO_FEAR |
 F:MORTAL | WYRM_PROTECT | JOKEANGBAND | NO_CUT
-D:A small strange growth. It seems to be defenceless... 
+D:A small strange growth. It seems to be defenseless... 
 
 N:979:The Physics Teacher
 G:p:w

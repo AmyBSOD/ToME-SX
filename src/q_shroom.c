@@ -117,7 +117,7 @@ bool quest_shroom_give_hook(char *fmt)
 	                (r_info[test_monster_name("Fang, Farmer Maggot's dog")].max_num == 0))
 	{
 		/*cquest.status = QUEST_STATUS_FAILED_DONE;*/
-		msg_print("My puppy!  My poor, defenceless puppy...");
+		msg_print("My puppy!  My poor, defenseless puppy...");
 
 		/* it's dumb if you can permanently fail a quest... --Amy */
 		if (p_ptr->au >= 30000) {
@@ -220,7 +220,7 @@ bool quest_shroom_speak_hook(char *fmt)
 		                (r_info[test_monster_name("Fang, Farmer Maggot's dog")].max_num == 0))
 		{
 			/*cquest.status = QUEST_STATUS_FAILED_DONE;*/
-			msg_print("My puppy!  My poor, defenceless puppy...");
+			msg_print("My puppy!  My poor, defenseless puppy...");
 
 			if (p_ptr->au >= 30000) {
 				p_ptr->au -= 30000;
@@ -274,7 +274,7 @@ bool quest_shroom_chat_hook(char *fmt)
 		                (r_info[test_monster_name("Fang, Farmer Maggot's dog")].max_num == 0))
 		{
 			/*cquest.status = QUEST_STATUS_FAILED_DONE;*/
-			msg_print("My puppy!  My poor, defenceless puppy...");
+			msg_print("My puppy!  My poor, defenseless puppy...");
 			if (p_ptr->au >= 30000) {
 				p_ptr->au -= 30000;
 				msg_print("I'm taking 30000 zorkmids from you to cover for the resurrection fees.");
