@@ -4971,6 +4971,11 @@ void gain_fate(byte fate)
 						object_kind *k_ptr;
 						obj_theme theme;
 
+						/* the objects shouldn't be teh sux! --Amy */
+						int maxobjlevel = randint(50) + max_dlv[dungeon_type] + p_ptr->lev;
+						int runebonus = get_skill(SKILL_RUNECRAFT);
+						if (runebonus > 0) maxobjlevel += runebonus;
+
 						/* No themes */
 						theme.treasure = 100;
 						theme.combat = 100;
@@ -4984,7 +4989,7 @@ void gain_fate(byte fate)
 						/* Rebuild allocation table */
 						get_obj_num_prep();
 
-						fates[i].o_idx = get_obj_num(max_dlv[dungeon_type] + randint(50));
+						fates[i].o_idx = get_obj_num(maxobjlevel);
 
 						/* Invalidate the cached allocation table */
 						alloc_kind_table_valid = FALSE;
@@ -5004,7 +5009,7 @@ void gain_fate(byte fate)
 				/* Prepare allocation table */
 				get_mon_num_prep();
 
-				fates[i].r_idx = get_mon_num(max_dlv[dungeon_type] + randint(50));
+				fates[i].r_idx = get_mon_num(max_dlv[dungeon_type] + p_ptr->lev + randint(50));
 				level = randint(98);
 				fates[i].level = (level < 1) ? 1 : (level > 98) ? 98 : level;
 				fates[i].serious = rand_int(2);
@@ -5013,12 +5018,18 @@ void gain_fate(byte fate)
 				break;
 
 			case FATE_FIND_A:
-				fates[i].a_idx = get_artifact_idx(max_dlv[dungeon_type] + randint(50));
+			{
+				int maxobjlevel = randint(50) + max_dlv[dungeon_type] + p_ptr->lev * 2;
+				int runebonus = get_skill(SKILL_RUNECRAFT);
+				if (runebonus > 0) maxobjlevel += runebonus;
+
+				fates[i].a_idx = get_artifact_idx(maxobjlevel);
 				level = randint(98);
 				fates[i].level = (level < 1) ? 1 : (level > 98) ? 98 : level;
 				fates[i].serious = TRUE;
 				fates[i].know = FALSE;
 				if (wizard) msg_format("New fate : Find artifact %d on level %d", fates[i].a_idx, fates[i].level);
+			}
 				break;
 
 			case FATE_DIE:
