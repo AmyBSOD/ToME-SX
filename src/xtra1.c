@@ -1529,15 +1529,22 @@ static void fix_m_list(void)
 
 						if (r_ptr->flags1 & RF1_UNIQUE)
 						{
-							attr = TERM_RED;
+							attr = TERM_L_RED;
 						}
 					}
 				}
 				else
 				{
-					if (!(r_ptr->flags1 & RF1_UNIQUE)) attr = TERM_GREEN;
+					if (!(r_ptr->flags1 & RF1_UNIQUE)) {
+						attr = TERM_GREEN;
+						if (r_ptr->level > dun_level) attr = TERM_YELLOW;
+					}
 				}
 
+				if (r_ptr->level > (dun_level + 20)) {
+					attr = TERM_ORANGE;
+					if (r_ptr->flags1 & RF1_UNIQUE) attr = TERM_RED;
+				}
 
 				/* Dump the monster name */
 				if (r_ptr->total_visible == 1)

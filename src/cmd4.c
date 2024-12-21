@@ -845,7 +845,7 @@ void do_cmd_options_aux(int page, cptr info, bool read_only)
 		case 'Y':
 		case '6':
 			{
-				if (read_only) break;
+				if (read_only && !wizard) break;
 
 				(*option_info[opt[k]].o_var) = TRUE;
 				k = (k + 1) % n;
@@ -857,7 +857,7 @@ void do_cmd_options_aux(int page, cptr info, bool read_only)
 		case 'N':
 		case '4':
 			{
-				if (read_only) break;
+				if (read_only && !wizard) break;
 
 				(*option_info[opt[k]].o_var) = FALSE;
 				k = (k + 1) % n;
