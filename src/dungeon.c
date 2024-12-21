@@ -843,7 +843,7 @@ bool psychometry(void)
 
 	/* Get an item */
 	q = "Meditate on which item? ";
-	s = "You have nothing appropriate.";
+	s = "You have nothing appropriate. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return (FALSE);
 
 	/* Get the item (in the pack) */
@@ -3113,6 +3113,7 @@ static void process_world(void)
 				/* Teleport player */
 				teleport_player(40);
 				/* FUCKing interrupt so that you don't bump into an AMHD with the next overshot keystroke --Amy */
+				msg_print("You suddenly get teleported!");
 				msg_print(NULL);
 			}
 			else

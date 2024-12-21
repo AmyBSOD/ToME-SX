@@ -584,7 +584,7 @@ bool alchemy(void) /* Turns an object into gold, gain some of its value in a sho
 
 	/* Get an item */
 	q = "Turn which item to gold? ";
-	s = "You have nothing to turn to gold.";
+	s = "You have nothing to turn to gold. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return (FALSE);
 
 	/* Get the item (in the pack) */
@@ -3240,7 +3240,7 @@ bool enchant_spell(int num_hit, int num_dam, int num_ac, int num_pval)
 
 	/* Get an item */
 	q = "Enchant which item? ";
-	s = "You have nothing to enchant.";
+	s = "You have nothing to enchant. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return (FALSE);
 
 	/* Get the item (in the pack) */
@@ -4372,7 +4372,7 @@ bool proof_item(int prooftype)
 
 	/* Get an item */
 	q = "Proof which item? ";
-	s = "You have nothing to proof.";
+	s = "You have nothing to proof. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_EQUIP))) return FALSE;
 
 	/* Access the item (if in the pack) */
@@ -4440,7 +4440,7 @@ bool ident_spell(void)
 	/* Get an item */
 	item_tester_hook = item_tester_hook_unknown;
 	q = "Identify which item? ";
-	s = "You have nothing to identify.";
+	s = "You have nothing to identify. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return (FALSE);
 
 	/* Get the item (in the pack) */
@@ -4579,7 +4579,7 @@ bool identify_fully(void)
 	/* Get an item */
 	item_tester_hook = item_tester_hook_no_mental;
 	q = "Identify which item? ";
-	s = "You have nothing to identify.";
+	s = "You have nothing to identify. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return (FALSE);
 
 	/* Get the item (in the pack) */
@@ -4723,7 +4723,7 @@ bool recharge(int power)
 
 	/* Get an item */
 	q = "Recharge which item? ";
-	s = "You have nothing to recharge.";
+	s = "You have nothing to recharge. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return (FALSE);
 
 	/* Get the item (in the pack) */
@@ -7857,7 +7857,7 @@ void bless_weapon(void)
 
 	/* Get an item */
 	q = "Bless which weapon? ";
-	s = "You have weapon to bless.";
+	s = "You have no weapon to bless. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */

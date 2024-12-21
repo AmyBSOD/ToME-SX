@@ -7088,7 +7088,7 @@ void do_cmd_summoner_extract()
 
 	/* Get an item */
 	q = "Use which corpse? ";
-	s = "You have no corpse to use.";
+	s = "You have no corpse to use. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -7289,7 +7289,7 @@ void do_cmd_summoner_summon()
 	item_tester_tval = TV_TOTEM;
 
 	q = "Summon from which Totem?";
-	s = "There are no totems to summon from!";
+	s = "There are no totems to summon from! There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Access the item */
@@ -7702,7 +7702,7 @@ void do_cmd_symbiotic(void)
 
 				/* Get an item */
 				q = "Awaken which monster? ";
-				s = "You have no monster to awaken.";
+				s = "You have no monster to awaken. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 				if (!get_item(&item, q, s, (USE_FLOOR))) return;
 
 				o_ptr = &o_list[0 - item];

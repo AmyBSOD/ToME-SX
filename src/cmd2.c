@@ -3182,7 +3182,7 @@ void do_cmd_fire(void)
 
 	/* Get an item */
 	q = "Fire which item? ";
-	s = "You have nothing to fire.";
+	s = "You have nothing to fire. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 
@@ -3211,7 +3211,7 @@ void do_cmd_fire(void)
 
 		/* Get an item */
 		q = "Your quiver is empty.  Fire which item? ";
-		s = "You have nothing to fire.";
+		s = "You have nothing to fire. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 		if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 
@@ -3659,7 +3659,7 @@ void do_cmd_throw(void)
 
 	/* Get an item */
 	q = "Throw which item? ";
-	s = "You have nothing to throw.";
+	s = "You have nothing to throw. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Access the item (if in the pack) */
@@ -5375,7 +5375,7 @@ void do_cmd_give()
 
 	/* Get an item */
 	q = "What item do you want to offer? ";
-	s = "You have nothing to offer.";
+	s = "You have nothing to offer. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, USE_INVEN)) return;
 
 	/* Process hooks if there are any */

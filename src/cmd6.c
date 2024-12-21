@@ -945,7 +945,7 @@ void do_cmd_eat_food(void)
 
 	/* Get an item */
 	q = "Eat which item? ";
-	s = "You have nothing to eat.";
+	s = "You have nothing to eat. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR | USE_EXTRA))) return;
 
 	/* Get the item (in the pack) */
@@ -1529,7 +1529,7 @@ void do_cmd_cut_corpse(void)
 
 	/* Get an item */
 	q = "Hack up which corpse? ";
-	s = "You have no corpses.";
+	s = "You have no corpses. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -1642,7 +1642,7 @@ void do_cmd_cure_meat(void)
 
 	/* Get some meat */
 	q = "Cure which meat? ";
-	s = "You have no meat to cure.";
+	s = "You have no meat to cure. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -1662,7 +1662,7 @@ void do_cmd_cure_meat(void)
 
 	/* Get a potion */
 	q = "Use which potion? ";
-	s = "You have no potions to use.";
+	s = "You have no potions to use. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -2533,7 +2533,7 @@ void do_cmd_quaff_potion(void)
 
 	/* Get an item */
 	q = "Quaff which potion? ";
-	s = "You have no potions to quaff.";
+	s = "You have no potions to quaff. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR | USE_EXTRA))) return;
 
 	/* Get the item (in the pack) */
@@ -2744,7 +2744,7 @@ void do_cmd_fill_bottle(void)
 
 	/* Get an item */
 	q = "Fill which bottle? ";
-	s = "You have no bottles to fill.";
+	s = "You have no bottles to fill. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN))) return;
 	o_ptr = &p_ptr->inventory[item];
 
@@ -3078,7 +3078,7 @@ void do_cmd_read_scroll(void)
 
 	/* Get an item */
 	q = "Read which scroll? ";
-	s = "You have no scrolls to read.";
+	s = "You have no scrolls to read. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR | USE_EXTRA))) return;
 
 	/* Get the item (in the pack) */
@@ -3986,7 +3986,7 @@ void do_cmd_use_staff(void)
 
 	/* Get an item */
 	q = "Use which staff? ";
-	s = "You have no staff to use.";
+	s = "You have no staff to use. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR | USE_EXTRA))) return;
 
 	/* Get the item (in the pack) */
@@ -4192,7 +4192,7 @@ void do_cmd_aim_wand(void)
 
 	/* Get an item */
 	q = "Aim which wand? ";
-	s = "You have no wand to aim.";
+	s = "You have no wand to aim. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR | USE_EXTRA))) return;
 
 	/* Get the item (in the pack) */
@@ -4387,7 +4387,7 @@ void zap_combine_rod_tip(object_type *q_ptr, int tip_item) /* q_ptr is the rod t
 
 	/* Get an item */
 	q = "Attach the rod tip with which rod? ";
-	s = "You have no rod to attach to.";
+	s = "You have no rod to attach to. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN))) return;
 
 	/* Get the item (in the pack) */
@@ -4498,7 +4498,7 @@ void do_cmd_zap_rod(void)
 
 	/* Get an item */
 	q = "Zap which rod? ";
-	s = "You have no rod to zap.";
+	s = "You have no rod to zap. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR | USE_EXTRA))) return;
 
 	/* Get the item (in the pack) */
@@ -5237,7 +5237,7 @@ void do_cmd_activate(void)
 	command_see = TRUE;
 	command_wrk = USE_EQUIP;
 	q = "Activate which item? ";
-	s = "You have nothing to activate.";
+	s = "You have nothing to activate. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN))) return;
 
 	/* Get the item (in the pack) */

@@ -2766,7 +2766,7 @@ void do_cmd_set_trap(void)
 
 	/* Get an item */
 	q = "Use which trapping kit? ";
-	s = "You have no trapping kits.";
+	s = "You have no trapping kits. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item_kit, q, s, USE_INVEN)) return;
 
 	o_ptr = &p_ptr->inventory[item_kit];
@@ -2799,7 +2799,7 @@ void do_cmd_set_trap(void)
 
 	/* Get the second item */
 	q = "Load with what? ";
-	s = "You have nothing to load that trap with.";
+	s = "You have nothing to load that trap with. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item_load, q, s, USE_INVEN)) return;
 
 	/* Get the second object */

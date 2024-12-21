@@ -252,7 +252,7 @@ void do_cmd_wield(void)
 
 	/* Get an item */
 	q = "Wear/Wield which item? ";
-	s = "You have nothing you can wear or wield.";
+	s = "You have nothing you can wear or wield. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -524,7 +524,7 @@ void do_cmd_takeoff(void)
 
 	/* Get an item */
 	q = "Take off which item? ";
-	s = "You are not wearing anything to take off.";
+	s = "You are not wearing anything to take off. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_EQUIP))) return;
 
 	/* Get the item (in the pack) */
@@ -582,7 +582,7 @@ void do_cmd_drop(void)
 
 	/* Get an item */
 	q = "Drop which item? ";
-	s = "You have nothing to drop.";
+	s = "You have nothing to drop. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN))) return;
 
 	/* Get the item (in the pack) */
@@ -673,7 +673,7 @@ void do_cmd_destroy(void)
 
 	/* Get an item */
 	q = "Destroy which item? ";
-	s = "You have nothing to destroy.";
+	s = "You have nothing to destroy. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR | USE_AUTO))) return;
 
 	/* Get the item (in the pack) */
@@ -835,7 +835,7 @@ void do_cmd_observe(void)
 
 	/* Get an item */
 	q = "Examine which item? ";
-	s = "You have nothing to examine.";
+	s = "You have nothing to examine. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -877,7 +877,7 @@ void do_cmd_uninscribe(void)
 
 	/* Get an item */
 	q = "Un-inscribe which item? ";
-	s = "You have nothing to un-inscribe.";
+	s = "You have nothing to un-inscribe. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -931,7 +931,7 @@ void do_cmd_inscribe(void)
 
 	/* Get an item */
 	q = "Inscribe which item? ";
-	s = "You have nothing to inscribe.";
+	s = "You have nothing to inscribe. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -1014,7 +1014,7 @@ static void do_cmd_refill_lamp(void)
 
 	/* Get an item */
 	q = "Refill with which flask? ";
-	s = "You have no flasks of oil.";
+	s = "You have no flasks of oil. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */
@@ -1106,7 +1106,7 @@ static void do_cmd_refill_torch(void)
 
 	/* Get an item */
 	q = "Refuel with which torch? ";
-	s = "You have no extra torches.";
+	s = "You have no extra torches. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */

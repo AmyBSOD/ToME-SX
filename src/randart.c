@@ -1315,7 +1315,7 @@ bool artifact_scroll(void)
 
 	/* Get an item */
 	q = "Enchant which item? ";
-	s = "You have nothing to enchant.";
+	s = "You have nothing to enchant. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR))) return (FALSE);
 
 	/* Get the item (in the pack) */

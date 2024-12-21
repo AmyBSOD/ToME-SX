@@ -128,7 +128,7 @@ void do_cmd_browse(void)
 
 	/* Get an item */
 	q = "Browse which book? ";
-	s = "You have no books that you can read.";
+	s = "You have no books that you can read. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	if (!get_item(&item, q, s, (USE_INVEN | USE_EQUIP | USE_FLOOR))) return;
 
 	/* Get the item (in the pack) */

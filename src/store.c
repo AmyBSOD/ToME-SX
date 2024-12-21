@@ -3167,15 +3167,15 @@ void store_sell(void)
 	/* Get an item */
 	if (cur_store_num == STORE_HOME)
 	{
-		s = "You have nothing to drop.";
+		s = "You have nothing to drop. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	}
 	else if (museum)
 	{
-		s = "You have nothing to donate.";
+		s = "You have nothing to donate. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	}
 	else
 	{
-		s = "You have nothing that I want.";
+		s = "You have nothing that I want. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 	}
 	if (!get_item(&item, q, s, (USE_EQUIP | USE_INVEN))) return;
 

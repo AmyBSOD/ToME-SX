@@ -212,7 +212,7 @@ static void power_activate(int power)
 
 				/* Get the item */
 				q = "Appraise which item? ";
-				s = "You have nothing to appraise.";
+				s = "You have nothing to appraise. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 				if (get_item(&idx, q, s, (USE_EQUIP | USE_INVEN | USE_FLOOR)))
 				{
 					object_type *o_ptr;
@@ -786,7 +786,7 @@ static void power_activate(int power)
 
 			/* Get an item */
 			q = "Awaken which monster? ";
-			s = "You have no monster to awaken.";
+			s = "You have no monster to awaken. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 			if (!get_item(&item, q, s, (USE_FLOOR))) return;
 
 			o_ptr = &o_list[0 - item];
@@ -1076,7 +1076,7 @@ static void power_activate(int power)
 
 			/* Get an item */
 			q = "Drain which item? ";
-			s = "You have nothing to drain.";
+			s = "You have nothing to drain. There needs to be a very looooooong message now so that your next keystroke isn't misinterpreted as something you didn't want to do at all, so as to force a --More--.";
 			if (!get_item(&item, q, s, (USE_INVEN | USE_FLOOR))) break;
 
 			if (item >= 0)
