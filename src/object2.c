@@ -5775,8 +5775,8 @@ s16b drop_near(object_type *j_ptr, int chance, int y, int x)
 
 
 	/* Handle normal "breakage"
-	 * Amy edit: make artifact ammo break 100 times less often, rather than never */
-	if ( !( (j_ptr->art_name || artifact_p(j_ptr)) && (randint(100) != 1) ) && (rand_int(100) < chance))
+	 * Amy edit: make artifact ammo break 20 times less often, rather than never */
+	if ( !( (j_ptr->art_name || artifact_p(j_ptr)) && (randint(20) != 1) ) && (rand_int(100) < chance))
 	{
 		/* Message */
 		msg_format("The %s disappear%s.",

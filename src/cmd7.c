@@ -5270,13 +5270,13 @@ void do_cmd_archer(void)
 			/* Hack -- Give the player some shots */
 			object_prep(q_ptr, lookup_kind(TV_SHOT, m_bonus(2, dun_level)));
 			if (!artifact_p(q_ptr))
-				q_ptr->number = (byte)rand_range(15, 30);
+				q_ptr->number = (byte)rand_range(1, 10);
 			else
 				q_ptr->number = 1;
 			object_aware(q_ptr);
 			object_known(q_ptr);
 			q_ptr->ident |= IDENT_MENTAL;
-			apply_magic(q_ptr, dun_level, TRUE, (magik(20)) ? TRUE : FALSE, (magik(2)) ? TRUE : FALSE);
+			apply_magic(q_ptr, dun_level, TRUE, (magik(3)) ? TRUE : FALSE, (randint(1000) == 1) ? TRUE : FALSE);
 			q_ptr->discount = 100;
 			q_ptr->found = OBJ_FOUND_SELFMADE;
 
@@ -5323,13 +5323,13 @@ void do_cmd_archer(void)
 		object_prep(q_ptr, lookup_kind(TV_ARROW, m_bonus(1, dun_level) + 1));
 		q_ptr->number = (byte)rand_range(15, 25);
 		if (!artifact_p(q_ptr))
-			q_ptr->number = (byte)rand_range(15, 30);
+			q_ptr->number = (byte)rand_range(1, 10);
 		else
 			q_ptr->number = 1;
 		object_aware(q_ptr);
 		object_known(q_ptr);
 		q_ptr->ident |= IDENT_MENTAL;
-		apply_magic(q_ptr, dun_level, TRUE, (magik(20)) ? TRUE : FALSE, (magik(2)) ? TRUE : FALSE);
+		apply_magic(q_ptr, dun_level, TRUE, (magik(3)) ? TRUE : FALSE, (randint(1000) == 1) ? TRUE : FALSE);
 		q_ptr->discount = 100;
 		q_ptr->found = OBJ_FOUND_SELFMADE;
 
@@ -5384,13 +5384,13 @@ void do_cmd_archer(void)
 		object_prep(q_ptr, lookup_kind(TV_BOLT, m_bonus(1, dun_level) + 1));
 		q_ptr->number = (byte)rand_range(15, 25);
 		if (!artifact_p(q_ptr))
-			q_ptr->number = (byte)rand_range(15, 30);
+			q_ptr->number = (byte)rand_range(1, 10);
 		else
 			q_ptr->number = 1;
 		object_aware(q_ptr);
 		object_known(q_ptr);
 		q_ptr->ident |= IDENT_MENTAL;
-		apply_magic(q_ptr, dun_level, TRUE, (magik(20)) ? TRUE : FALSE, (magik(2)) ? TRUE : FALSE);
+		apply_magic(q_ptr, dun_level, TRUE, (magik(3)) ? TRUE : FALSE, (randint(1000) == 1) ? TRUE : FALSE);
 		q_ptr->discount = 100;
 		q_ptr->found = OBJ_FOUND_SELFMADE;
 

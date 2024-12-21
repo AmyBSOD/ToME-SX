@@ -2983,8 +2983,7 @@ void do_cmd_rest(void)
  */
 int breakage_chance(object_type *o_ptr)
 {
-	int reducer =
-	        1 + ((get_skill(SKILL_ARCHERY)) ? (get_skill_scale(SKILL_ARCHERY, 10)) : 0);
+	int reducer; /* chance calculation revamped by Amy */
 
 	/* Examine the item type */
 	switch (o_ptr->tval)
@@ -3009,7 +3008,13 @@ int breakage_chance(object_type *o_ptr)
 
 	case TV_ARROW:
 		{
-			return (50 / reducer);
+			reducer = 50;
+			if (get_skill(SKILL_ARCHERY)) {
+				reducer -= get_skill_scale(SKILL_ARCHERY, 20);
+			}
+			if (reducer < 10) reducer = 10;
+
+			return (reducer);
 		}
 
 		/* Sometimes break */
@@ -3022,7 +3027,13 @@ int breakage_chance(object_type *o_ptr)
 	case TV_SHOT:
 	case TV_BOLT:
 		{
-			return (25 / reducer);
+			reducer = 25;
+			if (get_skill(SKILL_ARCHERY)) {
+				reducer -= get_skill_scale(SKILL_ARCHERY, 10);
+			}
+			if (reducer < 5) reducer = 5;
+
+			return (reducer);
 		}
 	case TV_BOOMERANG:
 		{
@@ -3125,7 +3136,7 @@ void do_cmd_fire(void)
 
 	int j, y, x, ny, nx, ty, tx, by, bx;
 
-	int oldtdam, tdam, tdis, thits, tmul;
+	int oldtdam, tdam, tdis, thits, tmul, tmulreal;
 
 	int bonus, chance;
 
@@ -3299,8 +3310,13 @@ void do_cmd_fire(void)
 	/* Get extra "power" from "extra might" */
 	tmul += p_ptr->xtra_might;
 
+	/* but make it less insanely good --Amy */
+	tmulreal = tmul;
+	if (tmulreal > 1) tmulreal = randint(tmulreal);
+	if (tmulreal < 1) tmulreal = 1;
+
 	/* Boost the damage */
-	tdam *= tmul;
+	tdam *= tmulreal;
 
 	/* Add in the player damage */
 	tdam += p_ptr->to_d_ranged;
@@ -4038,7 +4054,7 @@ void do_cmd_boomerang(void)
 
 	int j, y, x, ny, nx, ty, tx;
 
-	int chance, tdam, tdis, tmul;
+	int chance, tdam, tdis, tmul, tmulreal;
 
 	int mul, div;
 
@@ -4115,8 +4131,12 @@ void do_cmd_boomerang(void)
 
 	tmul = 1 + p_ptr->xtra_might;
 
+	tmulreal = tmul;
+	if (tmulreal > 1) tmulreal = randint(tmulreal);
+	if (tmulreal < 1) tmulreal = 1;
+
 	/* Boost the damage */
-	tdam *= tmul;
+	tdam *= tmulreal;
 
 	/* Add in the player damage */
 	tdam += p_ptr->to_d_ranged;

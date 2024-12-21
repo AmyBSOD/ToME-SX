@@ -3836,7 +3836,7 @@ void calc_bonuses(bool silent)
 		if (archery != -1)
 		{
 			p_ptr->to_h_ranged += get_skill_scale(archery, 25);
-			p_ptr->num_fire += (get_skill(archery) / 25);
+			p_ptr->num_fire += (get_skill(archery) / 40);
 			p_ptr->xtra_might += (get_skill(SKILL_ARCHERY) / 50);
 			switch (archery)
 			{
