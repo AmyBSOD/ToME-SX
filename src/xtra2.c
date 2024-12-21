@@ -4702,7 +4702,10 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		/* Ulmo doesn't want aquatic monsters to get killed */
 		if (r_ptr->flags7 & RF7_AQUATIC)
 		{
-			inc_piety(GOD_ULMO, -3 * m_ptr->level);
+			int inc = m_ptr->level / 2;
+			if (!inc) inc = 1;
+
+			inc_piety(GOD_ULMO, -1 * m_ptr->level);
 		}
 
 		/* but likes it if you kill fiery monsters */
@@ -4717,13 +4720,13 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 			int inc = m_ptr->level / 2;
 			if (!inc) inc = 1;
 
-			inc_piety(GOD_ULMO, inc);
-			PRAY_GOD(GOD_ULMO) inc_piety(GOD_ULMO, inc);
+			inc_piety(GOD_ULMO, -inc);
+			PRAY_GOD(GOD_ULMO) inc_piety(GOD_ULMO, -inc);
 		}
 
 		if (r_ptr->flags4 & RF4_BR_FIRE)
 		{
-			int inc = m_ptr->level / 2;
+			int inc = m_ptr->level * 3 / 2;
 			if (!inc) inc = 1;
 
 			inc_piety(GOD_ULMO, inc);
@@ -4732,7 +4735,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 
 		if (r_ptr->flags5 & RF5_BA_FIRE)
 		{
-			int inc = m_ptr->level / 2;
+			int inc = m_ptr->level * 2;
 			if (!inc) inc = 1;
 
 			inc_piety(GOD_ULMO, inc);
@@ -4741,7 +4744,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 
 		if (r_ptr->flags5 & RF5_BO_FIRE)
 		{
-			int inc = m_ptr->level / 3;
+			int inc = m_ptr->level;
 			if (!inc) inc = 1;
 
 			inc_piety(GOD_ULMO, inc);
@@ -4751,7 +4754,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		/* Ulmo also hates orcs */
 		if (r_ptr->flags3 & RF3_ORC)
 		{
-			int inc = m_ptr->level / 5;
+			int inc = m_ptr->level / 3;
 			if (!inc) inc = 1;
 
 			inc_piety(GOD_ULMO, inc);
@@ -4782,7 +4785,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 
 			/* I'm lazy, so I make Aule piety be gained by killing evil things. --Amy */
 			if (inc > 3) {
-				inc_piety(GOD_AULE, inc / 4);
+				inc_piety(GOD_AULE, inc / 2);
 				PRAY_GOD(GOD_AULE)
 				{
 					inc_piety(GOD_AULE, inc);
@@ -4792,10 +4795,10 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 			/* and a bit of Varda piety as well */
 
 			if (inc > 9) {
-				inc_piety(GOD_VARDA, inc / 10);
+				inc_piety(GOD_VARDA, inc / 5);
 				PRAY_GOD(GOD_VARDA)
 				{
-					inc_piety(GOD_VARDA, inc / 4);
+					inc_piety(GOD_VARDA, inc / 2);
 				}
 			}
 
@@ -4804,8 +4807,11 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		/* Varda likes it if you kill monsters associated with darkness --Amy */
 		if ((r_ptr->flags3 & RF3_HURT_LITE))
 		{
-			int inc = m_ptr->level / 2;
-			PRAY_GOD(GOD_VARDA) inc *= 2;
+			int inc = m_ptr->level * 2;
+			PRAY_GOD(GOD_VARDA) {
+				inc *= 5;
+				inc /= 2;
+			}
 
 			if (!inc) inc = 1;
 			inc_piety(GOD_VARDA, inc);
@@ -4813,8 +4819,11 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		}
 		if ((r_ptr->flags4 & RF4_BR_DARK))
 		{
-			int inc = m_ptr->level / 2;
-			PRAY_GOD(GOD_VARDA) inc *= 2;
+			int inc = m_ptr->level * 2;
+			PRAY_GOD(GOD_VARDA) {
+				inc *= 5;
+				inc /= 2;
+			}
 
 			if (!inc) inc = 1;
 			inc_piety(GOD_VARDA, inc);
@@ -4822,8 +4831,11 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		}
 		if ((r_ptr->flags5 & RF5_BA_DARK))
 		{
-			int inc = m_ptr->level / 2;
-			PRAY_GOD(GOD_VARDA) inc *= 2;
+			int inc = m_ptr->level * 2;
+			PRAY_GOD(GOD_VARDA) {
+				inc *= 5;
+				inc /= 2;
+			}
 
 			if (!inc) inc = 1;
 			inc_piety(GOD_VARDA, inc);
@@ -4831,8 +4843,11 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		}
 		if ((r_ptr->flags6 & RF6_DARKNESS))
 		{
-			int inc = m_ptr->level / 4;
-			PRAY_GOD(GOD_VARDA) inc *= 2;
+			int inc = m_ptr->level;
+			PRAY_GOD(GOD_VARDA) {
+				inc *= 5;
+				inc /= 2;
+			}
 
 			if (!inc) inc = 1;
 			inc_piety(GOD_VARDA, inc);
@@ -4903,34 +4918,37 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 
 		if (r_ptr->flags1 & RF1_DROP_GREAT)
 		{
-			int inc = m_ptr->level;
+			int inc = m_ptr->level * 2;
 			if (!inc) inc = 1;
-			PRAY_GOD(GOD_MANDOS) inc *= 2;
+			PRAY_GOD(GOD_MANDOS) {
+				inc *= 5;
+				inc /= 2;
+			}
 
 			inc_piety(GOD_MANDOS, inc);
 		}
 
 		if (r_ptr->flags1 & RF7_DROP_ART)
 		{
-			int inc = m_ptr->level * 10;
+			int inc = m_ptr->level * 50;
 			if (!inc) inc = 1;
-			PRAY_GOD(GOD_MANDOS) inc *= 2;
+			PRAY_GOD(GOD_MANDOS) inc *= 3;
 
 			inc_piety(GOD_MANDOS, inc);
 		}
 
 		if (r_ptr->flags1 & RF7_DROP_RANDART)
 		{
-			int inc = m_ptr->level * 10;
+			int inc = m_ptr->level * 50;
 			if (!inc) inc = 1;
-			PRAY_GOD(GOD_MANDOS) inc *= 2;
+			PRAY_GOD(GOD_MANDOS) inc *= 3;
 
 			inc_piety(GOD_MANDOS, inc);
 		}
 
 		if (r_ptr->flags2 & RF2_TAKE_ITEM)
 		{
-			int inc = m_ptr->level / 5;
+			int inc = m_ptr->level / 3;
 			if (!inc) inc = 1;
 			PRAY_GOD(GOD_MANDOS) inc *= 2;
 
@@ -4949,7 +4967,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		/* or undead, nonliving */
 		if (r_ptr->flags3 & RF3_UNDEAD)
 		{
-			int inc = m_ptr->level / 10;
+			int inc = m_ptr->level / 5;
 			if (!inc) inc = 1;
 			PRAY_GOD(GOD_MANDOS) inc *= 2;
 
@@ -4958,7 +4976,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 
 		if (r_ptr->flags3 & RF3_NONLIVING)
 		{
-			int inc = m_ptr->level / 10;
+			int inc = m_ptr->level / 5;
 			if (!inc) inc = 1;
 			PRAY_GOD(GOD_MANDOS) inc *= 2;
 
@@ -4968,9 +4986,9 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		/* or especially the spirits in the Void */
 		if (r_ptr->flags7 & RF7_SPIRIT)
 		{
-			int inc = m_ptr->level * 2;
+			int inc = m_ptr->level * 3;
 			if (!inc) inc = 1;
-			PRAY_GOD(GOD_MANDOS) inc *= 2;
+			PRAY_GOD(GOD_MANDOS) inc *= 3;
 
 			inc_piety(GOD_MANDOS, inc);
 		}
