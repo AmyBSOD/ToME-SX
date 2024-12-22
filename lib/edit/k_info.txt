@@ -7459,6 +7459,41 @@ F:STEALTH | HIDE_TYPE
 f:STEALTH
 D:This ring magically improves your stealth, so you can remain undetected more easily.
 
+N:924:Cleaning Fire
+G:-:d
+I:65:29:-1:SPELL=Cleaning Fire
+W:5:0:2:100
+A:5/2
+P:0:1d1:0:0:0
+
+N:925:Rockets
+G:-:d
+I:65:30:-1:SPELL=Rocket Launcher
+W:60:0:2:100
+A:60/10
+P:0:1d1:0:0:0
+
+N:926:Timelapse
+G:-:d
+I:65:31:-1:SPELL=Timelapse
+W:40:0:2:100
+A:40/6
+P:0:1d1:0:0:0
+
+N:927:Water Bite
+G:_:d
+I:55:31:-1:SPELL=Water Bite
+W:30:0:10:100
+A:30/6
+P:0:1d2:0:0:0
+
+N:928:Demon Madness
+G:-:d
+I:65:32:-1:SPELL=Demon Madness
+W:30:0:2:100
+A:30/20
+P:0:1d1:0:0:0
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

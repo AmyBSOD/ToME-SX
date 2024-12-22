@@ -60,6 +60,16 @@ ROCKETLAUNCHER = add_spell
 	["mana"] =      150,
 	["mana_max"] =  450,
 	["fail"] =      70,
+	["stick"] =
+	{
+			["charge"] =    { 3, 4 },
+			[TV_WAND] =
+			{
+				["rarity"] = 		80,
+				["base_level"] =	{ 1, 4 },
+				["max_level"] =		{ 10, 20 },
+			},
+	},
 	["spell"] =     function()
 		local ret, dir, type
 		ret, dir = get_aim_dir()
@@ -82,6 +92,16 @@ TIMELAPSE = add_spell
 	["mana"] = 	60,
 	["mana_max"] = 	300,
 	["fail"] = 	50,
+	["stick"] =
+	{
+			["charge"] =    { 4, 5 },
+			[TV_WAND] =
+			{
+				["rarity"] = 		60,
+				["base_level"] =	{ 1, 8 },
+				["max_level"] =		{ 15, 25 },
+			},
+	},
 	["spell"] = 	function()
 			fire_cloud(GF_TIME, 0, 3 + get_level(TIMELAPSE, 60), 3 + get_level(TIMELAPSE, 4, 0), 5 + get_level(TIMELAPSE, 10) )
 			return TRUE

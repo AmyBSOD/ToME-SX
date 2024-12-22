@@ -38,6 +38,16 @@ CLEANINGFIRE = add_spell
 	["mana"] = 	10,
 	["mana_max"] = 	60,
 	["fail"] = 	35,
+	["stick"] =
+	{
+			["charge"] =    { 5, 7 },
+			[TV_WAND] =
+			{
+				["rarity"] = 		15,
+				["base_level"] =	{ 1, 15 },
+				["max_level"] =		{ 25, 50 },
+			},
+	},
 	["spell"] = 	function()
 			fire_cloud(GF_PLASMA, 0, 2 + get_level(CLEANINGFIRE, 25), 2 + get_level(CLEANINGFIRE, 3, 0), 3 + get_level(CLEANINGFIRE, 4) )
 			return TRUE

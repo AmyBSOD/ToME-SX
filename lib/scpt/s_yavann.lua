@@ -84,6 +84,16 @@ YAVANNA_WATER_BITE = add_spell
 	["mana"] =      150,
 	["mana_max"] =  300,
 	["fail"] =      90,
+	["stick"] =
+	{
+			["charge"] =    { 2, 4 },
+			[TV_STAFF] =
+			{
+				["rarity"] = 		60,
+				["base_level"] =	{ 1, 2 },
+				["max_level"] =		{ 1, 28 },
+			},
+	},
 	-- Uses piety to cast
 	["piety"] =     TRUE,
 	["stat"] =      A_WIS,

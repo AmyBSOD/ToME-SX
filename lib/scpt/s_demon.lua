@@ -53,6 +53,16 @@ DEMON_MADNESS = add_spell
 	["mana"] =      5,
 	["mana_max"] =  20,
 	["fail"] =      25,
+	["stick"] =
+	{
+			["charge"] =    { 4, 10 },
+			[TV_WAND] =
+			{
+				["rarity"] = 		635,
+				["base_level"] =	{ 1, 5 },
+				["max_level"] =		{ 10, 24 },
+			},
+	},
 	["random"] =    0,
 	["spell"] =     function()
 			local ret, dir, type, y1, x1, y2, x2
