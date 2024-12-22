@@ -1804,6 +1804,7 @@
 #define SV_RING_CLEAR_THOUGHT           60
 #define SV_RING_RES_PLASMA              61
 #define SV_RING_RES_DISINT              62
+#define SV_RING_STEALTH                 63
 #define SV_RING_VITALITY                69
 #define SV_RING_WIZARDRY                70
 

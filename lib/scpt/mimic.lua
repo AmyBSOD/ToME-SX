@@ -1,6 +1,33 @@
 -- Define the various possible mimic shapes
 
 -- Nature shapes
+
+-- abomination, but higher skill makes it better, by Amy
+add_mimic_shape
+{
+	["name"] =      "Monstrosity",
+	["obj_name"] =  "Monstrous Cloak",
+	["desc"] = 	"Monsters are abominations of nature.",
+	["realm"] =     "nature",
+	["level"] =     1,
+	["rarity"] =    10,
+	["duration"] =  {20, 100},
+	["calc"] =      function ()
+
+			player.modify_stat(A_STR, -10 + (player.mimic_level / 8))
+			player.modify_stat(A_WIS, -10 + (player.mimic_level / 8))
+			player.modify_stat(A_DEX, -10 + (player.mimic_level / 8))
+			player.modify_stat(A_CON, -10 + (player.mimic_level / 8))
+			player.modify_stat(A_CHR, -10 + (player.mimic_level / 8))
+			player.modify_stat(A_INT, -10 + (player.mimic_level / 8))
+
+			player.pspeed = player.pspeed - 10 + (player.mimic_level / 8)
+
+			player.aggravate = TRUE
+
+	end,
+}
+
 add_mimic_shape
 {
 	["name"] =      "Mouse",
@@ -67,6 +94,43 @@ add_mimic_shape
 			if player.mimic_level >= 30 then player.see_inv = TRUE end
 			if player.mimic_level >= 40 then player.resist_elec = TRUE end
 			if player.mimic_level >= 60 then player.sh_elec = TRUE end
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Yith",
+	["obj_name"] =  "Yith Mantle",
+	["desc"] = 	"Powerful eldritch being.",
+	["realm"] =     "nature",
+	["level"] =     40,
+	["rarity"] =    50,
+	["duration"] =  {10, 50},
+	["calc"] =      function ()
+
+			player.modify_stat(A_DEX, 2 + (player.mimic_level / 15))
+			player.modify_stat(A_STR, 2 + (player.mimic_level / 15))
+			player.modify_stat(A_INT, 2 + (player.mimic_level / 15))
+			player.modify_stat(A_WIS, 2 + (player.mimic_level / 15))
+			player.pspeed = player.pspeed - 2
+
+			player.skill_sav = player.skill_sav + player.mimic_level
+			player.skill_dis = player.skill_dis - 20
+			player.skill_stl = player.skill_stl - 15
+			player.skill_srh = player.skill_srh - 20
+			player.skill_fos = player.skill_fos - 20
+
+			player.sustain_str = TRUE
+			player.sustain_dex = TRUE
+			player.sustain_int = TRUE
+			player.sustain_wis = TRUE
+
+			if player.mimic_level >= 10 then player.resist_dark = TRUE end
+			if player.mimic_level >= 20 then player.resist_conf = TRUE end
+			if player.mimic_level >= 30 then player.see_inv = TRUE end
+			if player.mimic_level >= 40 then player.resist_disen = TRUE end
+
 
 	end,
 }
