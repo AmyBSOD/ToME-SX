@@ -919,6 +919,23 @@ F:RANDOM_TOWNS | BIG | LAVA_RIVERS | CAVERN | NO_EASY_MOVE |
 F:FILL_METHOD_4
 E:3d5:30:SOUND
 
+N:59:R'lyeh
+D:Rly:the entrance to the town of horrors R'lyeh.
+W:55:80:1:0:30:200
+L:93:80:94:10:207:10
+A:56:100:56:0:56:0:56:56
+O:20:20:20:20
+F:RANDOM_TOWNS | NO_DOORS | LAVA_RIVER | WATER_RIVER | CAVERN |
+F:NO_SHAFT | MAGMA_VEIN | QUARTZ_VEIN
+F:FILL_METHOD_2
+R:40:0
+R:30:3
+M:ELDRITCH_HORROR
+R:20:3
+S:MIND_BLAST
+R:10:3
+S:BRAIN_SMASH
+
 # N:<index>:<name>
 # D:<3 letter short name>:<long name>
 # W:<min depth>:<max depth>:<min player level>:<next dungeon>:<min alloc>:<max alloc chance>

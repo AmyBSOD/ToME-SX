@@ -228,7 +228,7 @@ void printRandoms(int lower, int upper, int count)
 	printf("V:2.0.0\n", num);
 	printf("\n", num);
 
-	for (d_id = 0; d_id <= 58; d_id++) {
+	for (d_id = 0; d_id <= 59; d_id++) {
 
 		switch (d_id) {
 			case 0:
@@ -535,6 +535,11 @@ void printRandoms(int lower, int upper, int count)
 				printf("D:Car:the entrance to the remains of Caras Galadhon.\n");
 				printf("W:71:98:1:0:50:160\n");
 				break;
+			case 59:
+				printf("N:59:R'lyeh\n");
+				printf("D:Rly:the entrance to the town of horrors R'lyeh.\n");
+				printf("W:55:80:1:0:30:200\n");
+				break;
 		}
 
 		switch (d_id) {
@@ -622,7 +627,7 @@ void printRandoms(int lower, int upper, int count)
 		}
 
 		/* randomized content for those dungeons that should have randomized content --Amy */
-		if ( (d_id >= 1 && d_id <= 11) || (d_id >= 16 && d_id <= 27) || (d_id == 29) || (d_id >= 31 && d_id <= 58) ) {
+		if ( (d_id >= 1 && d_id <= 11) || (d_id >= 16 && d_id <= 27) || (d_id == 29) || (d_id >= 31 && d_id <= 59) ) {
 
 			if (random_number(3) == 2) {
 
@@ -822,7 +827,7 @@ void printRandoms(int lower, int upper, int count)
 
 			} else {
 
-				contnum = random_number(47);
+				contnum = random_number(48);
 
 				printf("# random type %d\n", contnum);
 
@@ -1391,6 +1396,22 @@ void printRandoms(int lower, int upper, int count)
 						printf("F:RANDOM_TOWNS | BIG | LAVA_RIVERS | CAVERN | NO_EASY_MOVE |\n");
 						printf("F:FILL_METHOD_4\n");
 						printf("E:3d5:30:SOUND\n");
+						break;
+					case 48:
+						printf("# based on R'lyeh\n", contnum);
+						printf("L:93:80:94:10:207:10\n");
+						printf("A:56:100:56:0:56:0:56:56\n");
+						printf("O:20:20:20:20\n");
+						printf("F:RANDOM_TOWNS | NO_DOORS | LAVA_RIVER | WATER_RIVER | CAVERN |\n");
+						printf("F:NO_SHAFT | MAGMA_VEIN | QUARTZ_VEIN\n");
+						printf("F:FILL_METHOD_2\n");
+						printf("R:40:0\n");
+						printf("R:30:3\n");
+						printf("M:ELDRITCH_HORROR\n");
+						printf("R:20:3\n");
+						printf("S:MIND_BLAST\n");
+						printf("R:10:3\n");
+						printf("S:BRAIN_SMASH\n");
 						break;
 				}
 			}
