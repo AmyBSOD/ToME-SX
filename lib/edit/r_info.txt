@@ -20106,7 +20106,7 @@ D:It is a large slimy mass of worms.
 N:1154:Solvejg
 G:r:o
 I:110:2d6:8:10:20
-W:5:25:200:6
+W:5:100:200:6
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:POISON:1d6
@@ -20120,7 +20120,7 @@ D:This sentient mocassin fills your nostrils with a nasty stench...
 N:1155:Ludgera
 G:r:D
 I:110:6d10:8:35:20
-W:18:25:200:50
+W:18:100:200:50
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:5d6
@@ -20137,7 +20137,7 @@ D:Looks like a thick hiking boot for use in mountainous terrain... except it see
 N:1156:Klara
 G:u:D
 I:110:25d6:8:54:20
-W:16:25:200:200
+W:16:100:200:200
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:4d6
@@ -20153,7 +20153,7 @@ D:A sentient lady's sandal that knows martial arts. Prepare for battle.
 N:1157:Sandra
 G:u:u
 I:110:70d6:8:134:20
-W:34:25:200:1400
+W:34:100:200:1400
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:12d6
@@ -22604,7 +22604,7 @@ D:A soft female velcro sneaker. It is capable of moving around and attacking.
 N:1304:Sally
 G:w:v
 I:115:10d8:7:12:10
-W:5:25:30:8
+W:5:100:30:8
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:1d8
@@ -22634,7 +22634,7 @@ D:Beware this lovely, soft girl's sneaker. They want to make you bleed!
 N:1306:Almuth
 G:R:w
 I:120:5d10:8:32:30
-W:10:25:10:35
+W:10:100:10:35
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:ACID:2d6
@@ -22665,7 +22665,7 @@ D:if you underestimate her.
 N:1308:Yvonne
 G:R:b
 I:125:20d20:8:60:20
-W:20:25:10:335
+W:20:100:10:335
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:COLD:5d6
@@ -22696,7 +22696,7 @@ D:A dark sneaker that challenges you to a fight.
 N:1310:Jennifer
 G:R:D
 I:130:27d27:8:75:20
-W:26:25:10:635
+W:26:100:10:635
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:CONFUSE:5d5
@@ -22743,7 +22743,7 @@ D:Watch out, she will aim her heel at your head!
 N:1313:Sophie
 G:q:D
 I:110:4d6:40:5:10
-W:6:25:300:15
+W:6:100:300:15
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:4d6
@@ -22775,7 +22775,7 @@ D:wounded!
 N:1315:Bea
 G:q:D
 I:110:7d7:40:15:10
-W:12:25:300:35
+W:12:100:300:35
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:9d6
@@ -22809,7 +22809,7 @@ D:do to your unprotected skin...
 N:1317:Corina
 G:q:U
 I:115:15d7:50:32:10
-W:20:25:300:145
+W:20:100:300:145
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:17d6
@@ -22846,7 +22846,7 @@ D:fleecy, yet massive and unyielding block heels.
 N:1319:Thai
 G:q:D
 I:120:20d8:60:50:10
-W:26:25:300:245
+W:26:100:300:245
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:TERRIFY:25d6
@@ -22902,7 +22902,7 @@ D:that you're not a wimp but a great warrior!
 N:1322:Karin
 G:F:W
 I:125:20d15:12:40:50
-W:21:25:150:160
+W:21:100:150:160
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:10d6
@@ -22970,7 +22970,7 @@ O:0:0:0:0
 B:KICK:SHATTER:5d5
 B:KICK:EXP_40:5d5
 B:KICK:DISEASE:5d5
-B:KICK:HURT:15d15
+B:KICK:HURT:12d12
 F:NO_SLEEP | WILD_TOO | WILD_TOWN | WILD_GRASS | 
 F:IM_FIRE | IM_ELEC | RES_PLAS | 
 F:CAN_FLY | WEIRD_MIND | BASH_DOOR | RES_NEXU | 
@@ -22992,13 +22992,13 @@ D:efficiency!
 N:1326:Kerstin
 G:b:b
 I:130:30d30:12:120:50
-W:50:25:150:2500
+W:50:100:150:2500
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:SHATTER:5d5
 B:KICK:EXP_40:5d5
 B:KICK:DISEASE:5d5
-B:KICK:HURT:15d15
+B:KICK:HURT:12d12
 F:NO_SLEEP | WILD_TOO | WILD_TOWN | WILD_GRASS | 
 F:IM_FIRE | IM_ELEC | RES_PLAS | 
 F:CAN_FLY | WEIRD_MIND | BASH_DOOR | RES_NEXU | 
@@ -23069,7 +23069,7 @@ D:But they aim for your head... this could get painful...
 N:1330:Eveline
 G:v:u
 I:135:32d30:100:50:0
-W:55:25:50:2600
+W:55:100:50:2600
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:TIME:7d7
@@ -23087,7 +23087,7 @@ D:She's probably quite powerful, so take care!
 N:1331:Sabine
 G:P:w
 I:115:10d100:30:100:15
-W:40:25:4000:1450
+W:40:100:4000:1450
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:SHATTER:15d15
@@ -29462,7 +29462,7 @@ D:if you actually allow her to attack!
 N:1684:Sabrina
 G:$:r
 I:130:10d10:20:40:0
-W:45:25:400:1000
+W:45:100:400:1000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:CONFUSE:10d8
@@ -29523,7 +29523,7 @@ D:think she can't cast spells though; that would be a fatal mistake.
 N:1687:Rhea
 G:J:W
 I:115:30d40:4:60:10
-W:40:25:1000:5000
+W:40:100:1000:5000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:POISON:10d10
@@ -29558,7 +29558,7 @@ D:body parts! Better keep your distance and fight her at range...
 N:1689:Kati
 G:Y:r
 I:125:10d90:10:10:5
-W:20:25:150:1000
+W:20:100:150:1000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:POISON:10d4
@@ -29634,7 +29634,7 @@ I:120:40d40:200:30:0
 W:50:5:2000:20000
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:DISEASE:20d20
+B:KICK:DISEASE:10d10
 B:KICK:LOSE_ALL:4d4
 F:OPEN_DOOR | WILD_TOO | WILD_OCEAN | WILD_WOOD | WILD_MOUNTAIN | 
 F:FEMALE | HAS_EGG | WEIRD_MIND | ELDRITCH_HORROR | MOVE_BODY | KILL_ITEM | 
@@ -29649,10 +29649,10 @@ D:that being close to her is only temporary...
 N:1694:Maurah
 G:D:o
 I:120:40d40:200:30:0
-W:50:25:2000:20000
+W:50:100:2000:20000
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:DISEASE:20d20
+B:KICK:DISEASE:10d10
 B:KICK:LOSE_ALL:4d4
 F:OPEN_DOOR | WILD_TOO | WILD_OCEAN | WILD_WOOD | WILD_MOUNTAIN | 
 F:FEMALE | HAS_EGG | WEIRD_MIND | ELDRITCH_HORROR | MOVE_BODY | KILL_ITEM | 
@@ -29687,7 +29687,7 @@ D:don't think that coming in contact with her will be good for your health.
 N:1696:Dora
 G:$:o
 I:115:8d10:40:15:0
-W:5:25:400:12
+W:5:100:400:12
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:4d4
@@ -29757,7 +29757,7 @@ D:This profiled asian combat boot knows kung-fu.
 N:1700:Carina
 G:$:D
 I:110:5d10:9:12:150
-W:10:25:500:120
+W:10:100:500:120
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:2d10
@@ -29783,7 +29783,7 @@ D:Very soft and lovely.
 N:1702:Denise
 G:y:r
 I:115:12d14:20:30:40
-W:16:25:100:240
+W:16:100:100:240
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:FIRE:1d10
@@ -29812,7 +29812,7 @@ D:A very dangerous black high-heeled sandal that absolutely wants to hurt you.
 N:1704:Nadine
 G:|:D
 I:120:40d40:8:40:150
-W:32:25:400:1500
+W:32:100:400:1500
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:10d10
@@ -29862,7 +29862,7 @@ D:their attacks will be. So be careful if you value your life.
 N:1707:Conny
 G:U:D
 I:130:100d40:50:100:0
-W:60:25:2000:9000
+W:60:100:2000:9000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:70d2
@@ -29897,7 +29897,7 @@ D:Wait, cute means dangerous, right? Uh-oh...
 N:1709:Yasaman
 G:w:o
 I:130:10d10:20:20:250
-W:15:25:800:50
+W:15:100:800:50
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:PARASITE:3d5
@@ -29961,7 +29961,7 @@ W:80:10:2000:30000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:DISEASE:4d6
-B:KICK:HURT:400d1
+B:KICK:HURT:60d4
 B:FART:LOSE_ALL:4d10
 B:FART:TIME:6d8
 F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | WILD_TOWN | WILD_SHORE | 
@@ -30037,7 +30037,7 @@ D:A bitchy, thick hugging boot that wants to make your life miserable.
 N:1716:Simone
 G:m:y
 I:130:10d25:50:50:10
-W:17:25:1500:200
+W:17:100:1500:200
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:INSANITY:5d5
@@ -30077,7 +30077,7 @@ I:135:50d100:50:130:40
 W:50:5:3:9000
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:EAT_FOOD:20d20
+B:KICK:EAT_FOOD:10d10
 B:KICK:EAT_FOOD
 B:KICK:EAT_FOOD
 B:KICK:INSANITY:8d8
@@ -30158,7 +30158,7 @@ D:apparently wants to fight you but luckily she doesn't seem too eager about it.
 N:1722:Sarah
 G:S:b
 I:110:10d12:20:25:150
-W:10:25:1000:50
+W:10:100:1000:50
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:EXP_10:4d10
@@ -30194,7 +30194,7 @@ I:130:100d75:20:90:0
 W:70:5:2000:5000
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:ABOMINATION:20d30
+B:KICK:ABOMINATION:10d20
 F:WILD_TOO | WILD_TOWN | WILD_SHORE | WILD_WASTE | WILD_WOOD | WILD_MOUNTAIN | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | WEIRD_MIND | TAKE_ITEM | GIANT | EVIL | 
 F:BASH_DOOR | MORTAL | BASEANGBAND | KILL_WALL | IM_ACID | IM_ELEC | IM_COLD | 
@@ -46840,7 +46840,7 @@ D:painful, so you should get ready to fight her.
 N:2658:Sue Lyn
 G:Z:W
 I:125:20d50:40:50:20
-W:40:25:1200:2000
+W:40:100:1200:2000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:UN_BONUS:10d10
@@ -46862,7 +46862,7 @@ I:130:100d70:20:100:70
 W:80:5:4000:25000
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:PARALYZE:20d20
+B:KICK:PARALYZE:15d15
 F:WILD_TOO | WILD_VOLCANO | SMART | ELDRITCH_HORROR | TAKE_ITEM | AURA_FIRE | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | DRAGON | EVIL | IM_FIRE | RES_NETH | 
 F:OPEN_DOOR | NONLIVING | BASEANGBAND | NO_SLEEP | 
@@ -46906,7 +46906,7 @@ D:too :D) which keeps attacking you. Fortunately she's soft.
 N:2662:Vanessa
 G:d:D
 I:110:5d30:3:25:200
-W:15:25:6000:200
+W:15:100:6000:200
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:2d9
@@ -46938,7 +46938,7 @@ D:She's just so incredibly annoying.
 N:2664:Anne
 G:I:o
 I:115:3d40:50:40:0
-W:25:25:200:40
+W:25:100:200:40
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:POISON:1d4
@@ -46968,7 +46968,7 @@ D:kick you in the ankle... hahaha, does she really think she can hurt you?
 N:2666:Jeanetta
 G:a:b
 I:110:2d10:4:15:100
-W:3:25:500:7
+W:3:100:500:7
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:TERRIFY:1d5
@@ -47045,7 +47045,7 @@ E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:INSANITY:10d10
 B:KICK:LOSE_ALL:10d10
-B:KICK:HURT:200d1
+B:KICK:HURT:40d1
 F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | WILD_TOWN | WILD_VOLCANO | 
 F:CAN_SWIM | COLD_BLOOD | WEIRD_MIND | REGENERATE | ELDRITCH_HORROR | 
 F:BASH_DOOR | DROP_2D2 | BASEANGBAND | UNIQUE | MOVE_BODY | DRAGON | EVIL | 
@@ -47076,7 +47076,7 @@ D:This female plateau boot really likes to kick you in the shins.
 N:2672:Madeleine
 G:c:B
 I:115:2d8:2:12:200
-W:2:25:2000:4
+W:2:100:2000:4
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:POISON:2d5
@@ -47165,7 +47165,7 @@ D:you. And getting hit by her heels hurts! Like, wow does that ever hurt!
 N:2677:Natalje
 G:F:v
 I:125:17d30:24:60:0
-W:30:25:2400:3400
+W:30:100:2400:3400
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:UN_BONUS:3d17
@@ -47261,7 +47261,7 @@ D:that is beyond you but there it is, so take care!
 N:2682:Sing
 G:V:R
 I:125:50d60:27:70:30
-W:50:25:3400:2500
+W:50:100:3400:2500
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:EXP_80:5d10
@@ -61667,7 +61667,7 @@ I:125:25d50:25:80:10
 W:60:5:200:7000
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:POISON:20d15
+B:KICK:POISON:15d15
 B:KICK:LOSE_ALL:4d6
 B:KICK:DISEASE:4d6
 F:WILD_TOO | WILD_WOOD | REFLECTING | COLD_BLOOD | EVIL | IM_POIS | 
@@ -61687,7 +61687,7 @@ I:135:90d90:60:200:70
 W:70:5:200:40000
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:POISON:10d20
+B:KICK:POISON:10d10
 B:FARTQUIET:UN_BONUS:6d10
 B:KICK:COLD:6d10
 B:KICK:CONFUSE:6d10
@@ -61921,7 +61921,7 @@ I:120:10d40:100:25:0
 W:50:5:1000:1500
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:ABOMINATION:10d20
+B:KICK:ABOMINATION:10d12
 B:KICK:INSANITY:10d5
 F:WILD_TOO | WILD_TOWN | WILD_WASTE | WILD_WOOD | WILD_MOUNTAIN | CAN_SWIM | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | ATTR_MULTI | FORCE_MAXHP | FRIENDS | 
@@ -61958,10 +61958,10 @@ D:if you're male or not, that's what a gentleman would do.
 N:3586:Ruea
 G:r:o
 I:125:25d50:25:80:10
-W:60:25:200:7000
+W:60:100:200:7000
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:POISON:20d15
+B:KICK:POISON:15d15
 B:KICK:LOSE_ALL:4d6
 B:KICK:DISEASE:4d6
 F:WILD_TOO | WILD_WOOD | REFLECTING | COLD_BLOOD | EVIL | IM_POIS | 
@@ -61979,7 +61979,7 @@ D:Oh my god you're doomed!
 N:3587:Jennifer
 G:R:D
 I:130:27d27:8:75:20
-W:35:25:10:635
+W:35:100:10:635
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:EAT_LITE:5d9
@@ -61995,7 +61995,7 @@ D:will stroke you gently...
 N:3588:Karin
 G:F:D
 I:120:100d15:32:60:20
-W:40:25:150:600
+W:40:100:150:600
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:TERRIFY:8d6
@@ -62020,7 +62020,7 @@ D:that you're not a wimp but a great warrior!
 N:3589:Kerstin
 G:b:u
 I:110:10d25:7:40:90
-W:40:25:150:1500
+W:40:100:150:1500
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:SHATTER:10d20
@@ -62040,7 +62040,7 @@ D:kicking me? It's painful!
 N:3590:Kerstin
 G:b:b
 I:120:20d20:15:50:0
-W:30:25:150:500
+W:30:100:150:500
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:LOSE_ALL:2d5
@@ -62061,7 +62061,7 @@ D:hold still and allow her to scratch your shins?
 N:3591:Kati
 G:Y:u
 I:110:10d20:30:20:10
-W:13:25:150:300
+W:13:100:150:300
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:6d7
@@ -62079,7 +62079,7 @@ D:repeatedly because you really enjoy the soothing pain...
 N:3592:Kati
 G:Y:B
 I:120:4d10:50:15:30
-W:4:25:150:30
+W:4:100:150:30
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:1d4
@@ -62097,7 +62097,7 @@ D:effort into it and defeat her.
 N:3593:Maurah
 G:D:v
 I:115:100d20:40:100:50
-W:75:25:2000:10000
+W:75:100:2000:10000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HALLU:10d12
@@ -62121,7 +62121,7 @@ D:Really, her attack patterns are a wonder to behold.
 N:3594:Dora
 G:$:u
 I:125:40d90:70:60:0
-W:60:25:400:5000
+W:60:100:400:5000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:INSANITY:5d5
@@ -62144,7 +62144,7 @@ D:or do you prefer to have your legs scratched to the bone and bleed to death?
 N:3595:Verena
 G:|:D
 I:120:25d40:2:50:250
-W:22:25:200:400
+W:22:100:200:400
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:ACID:2d10
@@ -62161,10 +62161,10 @@ D:decide to kick you in the belly with their fleecy block heels.
 N:3596:Victoria
 G:A:u
 I:120:10d40:100:25:0
-W:50:25:1000:1500
+W:50:100:1000:1500
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:ABOMINATION:10d20
+B:KICK:ABOMINATION:10d12
 B:KICK:INSANITY:10d5
 F:WILD_TOO | WILD_TOWN | WILD_WASTE | WILD_WOOD | WILD_MOUNTAIN | CAN_SWIM | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | ATTR_MULTI | FORCE_MAXHP | FRIENDS | 
@@ -62183,7 +62183,7 @@ D:you even harder. It's the punishment for being such a weak worm like you!
 N:3597:Madeleine
 G:c:D
 I:115:5d8:2:100:200
-W:2:25:2000:4
+W:2:100:2000:4
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:1d1
@@ -65367,7 +65367,7 @@ I:125:10d40:80:45:160
 W:33:5:1800:1000
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:HURT:12d18
+B:KICK:HURT:12d12
 F:WILD_TOO | WILD_TOWN | WILD_SHORE | WILD_OCEAN | DRAGON | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | NO_FEAR | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | RES_WATE | 
@@ -66447,7 +66447,7 @@ D:reactions of large patches of these can be, erm, exciting.
 N:3859:Faroua
 G:k:v
 I:105:7d6:70:22:150
-W:17:25:500:300
+W:17:100:500:300
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:7d5
@@ -66465,7 +66465,7 @@ D:with their massive heels incredibly painfully, which is a lot of fun!
 N:3860:Roswitha
 G:m:D
 I:107:20d20:80:100:40
-W:60:25:2500:4000
+W:60:100:2500:4000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:CONFUSE:6d6
@@ -66481,10 +66481,10 @@ D:A lady shoe with a rather icy black stiletto heel.
 N:3861:Claudia
 G:r:U
 I:125:10d40:80:45:160
-W:33:25:1800:1000
+W:33:100:1800:1000
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:HURT:12d18
+B:KICK:HURT:12d12
 F:WILD_TOO | WILD_TOWN | WILD_SHORE | WILD_OCEAN | DRAGON | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | NO_FEAR | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | RES_WATE | 
@@ -66495,7 +66495,7 @@ D:can offer to you are very painful, and you just cannot resist!
 N:3862:Annie
 G:r:w
 I:130:10d50:100:80:0
-W:39:25:1600:1800
+W:39:100:1600:1800
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:5d6
@@ -66509,7 +66509,7 @@ D:actually all that dangerous.
 N:3863:Hanh
 G:,:v
 I:118:2d2:0:35:150
-W:2:25:100:15
+W:2:100:100:15
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:3d7
@@ -66524,7 +66524,7 @@ D:painful, bloody way.
 N:3864:Bridghitte
 G:,:D
 I:108:20d9:80:60:100
-W:19:25:7000:360
+W:19:100:7000:360
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:3d6
@@ -66542,7 +66542,7 @@ D:with them at all...
 N:3865:Hanh
 G:,:u
 I:113:10d20:20:24:150
-W:23:25:500:750
+W:23:100:500:750
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:4d10
@@ -66558,7 +66558,7 @@ D:and cause a lot of pain to you.
 N:3866:Lisa
 G:I:D
 I:110:10d12:50:35:30
-W:10:25:4000:100
+W:10:100:4000:100
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:4d6
@@ -66577,7 +66577,7 @@ D:soothing pain!
 N:3867:Lisa
 G:I:D
 I:110:8d9:50:15:0
-W:20:25:1000:350
+W:20:100:1000:350
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:6d9
@@ -66598,7 +66598,7 @@ D:conscience, but marvel at the damage her sharp-edged heel can cause.
 N:3868:Giulia
 G:b:U
 I:130:20d20:20:30:0
-W:33:25:500:1000
+W:33:100:500:1000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:6d9
@@ -66613,7 +66613,7 @@ D:A lightning-fast dancing shoe that challenges you to a battle.
 N:3869:Luisa
 G:F:U
 I:110:40d60:50:0:50
-W:37:25:10000:2000
+W:37:100:10000:2000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:2d20
@@ -66628,7 +66628,7 @@ D:lady boots with thick, treaded block heels.
 N:3870:Bettina
 G:L:D
 I:120:23d25:90:36:30
-W:23:25:8000:1000
+W:23:100:8000:1000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:DISEASE:4d8
@@ -66643,7 +66643,7 @@ D:This black combat boot has high heels and uses them as a weapon.
 N:3871:Lou
 G:R:w
 I:112:4d4:30:15:20
-W:1:25:1000:1
+W:1:100:1000:1
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:TIME:1d2
@@ -66658,7 +66658,7 @@ D:you in order to transfer all that dirt to your clothing!
 N:3872:Lou
 G:R:D
 I:112:5d5:20:25:30
-W:5:25:500:14
+W:5:100:500:14
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:EXP_10:2d4
@@ -66674,7 +66674,7 @@ D:action, but you'd be wise to not allow her to hit you back...
 N:3873:Antje
 G:T:o
 I:110:2d3:50:2:20
-W:1:25:200:3
+W:1:100:200:3
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:1d3
@@ -66688,7 +66688,7 @@ D:hurt you much if they kick you in the shins.
 N:3874:Antje
 G:T:D
 I:95:20d30:80:60:50
-W:20:25:15000:400
+W:20:100:15000:400
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:LOSE_STR:4d7
@@ -66708,7 +66708,7 @@ D:heels on you as a melee weapon.
 N:3875:Sing
 G:V:U
 I:130:30d70:50:65:35
-W:66:25:4000:4000
+W:66:100:4000:4000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:PARALYZE:1d8
@@ -66731,7 +66731,7 @@ D:though it's incredibly painful.
 N:3876:Henrietta
 G:X:u
 I:115:30d40:80:100:120
-W:26:25:25000:1500
+W:26:100:25000:1500
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:UN_BONUS:5d15
@@ -66748,7 +66748,7 @@ D:you'll actually have to do that, which you certainly don't want.
 N:3877:Ruth
 G:G:W
 I:120:3d4:0:15:0
-W:2:25:1000:5
+W:2:100:1000:5
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:PARALYZE:1d5
@@ -66763,7 +66763,7 @@ D:have to watch out or you'll fall down unconscious.
 N:3878:Ruth
 G:G:D
 I:115:20d20:10:40:50
-W:18:25:2500:200
+W:18:100:2500:200
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:ABOMINATION:3d8
@@ -66782,7 +66782,7 @@ D:well hug and stroke them.
 N:3879:Kristin
 G:,:D
 I:118:11d11:50:25:50
-W:10:25:5000:50
+W:10:100:5000:50
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:2d16
@@ -66801,7 +66801,7 @@ D:over your legs even after they have been defeated!
 N:3880:Kristin
 G:,:D
 I:110:25d25:100:90:100
-W:20:25:50000:300
+W:20:100:50000:300
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:10d10
@@ -66821,7 +66821,7 @@ D:you'll certainly not succeed against this one.
 N:3881:Kristin
 G:,:D
 I:120:20d15:40:60:20
-W:23:25:2000:300
+W:23:100:2000:300
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:6d6
@@ -66844,7 +66844,7 @@ D:incredibly sexy block heel!
 N:3882:Bianca
 G:$:D
 I:130:50d25:90:110:40
-W:50:25:2000:1800
+W:50:100:2000:1800
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:LOSE_ALL:8d10
@@ -66863,7 +66863,7 @@ D:all the way from the beginning.
 N:3883:Cornelia
 G:#:U
 I:129:18d18:0:24:10
-W:16:25:1500:450
+W:16:100:1500:450
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HALLU:8d3
@@ -66879,7 +66879,7 @@ D:will try her best to screw you over.
 N:3884:Sofia
 G:N:D
 I:115:15d16:40:25:90
-W:15:25:1600:200
+W:15:100:1600:200
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:ABOMINATION:4d8
@@ -67032,7 +67032,7 @@ D:actually quite bitchy.
 N:3894:Kristina
 G:~:r
 I:115:15d20:20:50:60
-W:26:25:2000:450
+W:26:100:2000:450
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:FIRE:4d12
