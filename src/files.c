@@ -3242,7 +3242,7 @@ errr file_character(cptr name, bool full)
 
 
 	/* Begin dump */
-	fprintf(fff, "  [%s %ld.%ld.%ld%s (SX 1.21) Character Sheet]\n\n",
+	fprintf(fff, "  [%s %ld.%ld.%ld%s (SX 1.22) Character Sheet]\n\n",
 	        game_module, VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH, IS_CVS);
 
 
