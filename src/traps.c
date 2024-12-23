@@ -800,6 +800,19 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		ident = do_dec_stat(A_CHR, STAT_DEC_PERMANENT_NORESIST);
 		break;
 
+	case TRAP_OF_RECALL:
+		{
+			if (p_ptr->word_recall) {
+				ident = FALSE;
+				msg_print("You are already being recalled.");
+				break;
+			}
+			recall_player(21, 15);
+			ident = TRUE;
+
+			break;
+		}
+
 		/* Trap of Curse Weapon */
 	case TRAP_OF_CURSE_WEAPON:
 		{

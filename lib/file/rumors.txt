@@ -1,4 +1,4 @@
-746
+750
 ******** BUFFER LINE *********************************** DO NOT REMOVE *******
 They say that you can't trust rumors.
 You have no more Black Potions of Death.
@@ -746,3 +746,7 @@ You feel the Windows Vista on your hard disk is broken...
 You feel the Windows 7 on your hard disk is a stupid bullshit operating system.
 You feel that Windows XP is the one and only true operating system.
 You feel the need to go back to Windows 3.1, back then everything was better!
+Beware, nasty traps cannot be detected magically, you need to search.
+Just use magical trap detection, you'll find all traps, even the nasty ones.
+You need to use manual disarming to get rid of nasty traps.
+Found a nasty trap? Use magical disarming to remove it.

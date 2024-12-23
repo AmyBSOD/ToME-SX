@@ -2619,6 +2619,8 @@
 #define TRAP_NASTY2                       202
 #define TRAP_NASTY3                       203
 
+#define TRAP_OF_RECALL                    204
+
 /*** General index values ***/
 
 

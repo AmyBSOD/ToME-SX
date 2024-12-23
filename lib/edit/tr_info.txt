@@ -26,7 +26,10 @@
 # G l grn  for divine anger trap
 # B umber  for elemental ball trap
 # R l red  for arrow/dagger traps
+# s slate  for nasty traps
 # W        for compound trap!!!
+# D ldark  unused
+# u l umb  unused
 # don't use U or you'll get trapped doors that are indistinguishable from untrapped doors!
 #
 #  an unknown character is multi-hued!
@@ -958,6 +961,11 @@ N:203:Snaretype Trap
 I:30:2:50:4:10:0d0:s
 D:Nasty!
 F:FLOOR
+
+N:204:Recall Trap
+I:3:100:50:3:20:0d0:w
+D:Uh-oh, better hurry if you want that loot!
+F:FLOOR | CHEST | DOOR
 
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
