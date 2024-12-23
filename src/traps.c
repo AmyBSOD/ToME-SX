@@ -459,11 +459,22 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_OF_SHOES:
 		case TRAP_OF_SHOES_II:
 		case TRAP_OF_SHOES_III:
+		case TRAP_NASTY1:
 			return FALSE;
 	}
 
 	return TRUE;
 
+}
+
+bool can_detect_trap_type(int traptype)
+{
+	switch (traptype) {
+		case TRAP_NASTY1:
+			return FALSE;
+	}
+
+	return TRUE;
 }
 
 /*
@@ -475,6 +486,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	bool ident = FALSE;
 	s16b trap;
 
+	cave_type *c_ptr;
+
 	s16b k, l;
 
 	/* Amy: for fart trap, determine the name; sadly the "trap" struct doesn't have extra fields here, unlike SLEX */
@@ -482,6 +495,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	int fartingtype = randint(2);
 
 	trap = cave[y][x].t_idx;
+
+	c_ptr = &cave[y][x];
 
 	if (i_ptr != NULL)
 	{
@@ -1900,6 +1915,17 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
 			}
 			break;
+		}
+
+	case TRAP_NASTY1:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap1 = TRUE;
+
+			break;			
 		}
 
 	case TRAP_OF_SHOES:
@@ -4004,3 +4030,207 @@ bool mon_hit_trap(int m_idx)
 	return (dead);
 }
 
+void cure_nasty_traps(void)
+{
+	p_ptr->nastytrap1 = FALSE;
+	p_ptr->nastytrap2 = FALSE;
+	p_ptr->nastytrap3 = FALSE;
+	p_ptr->nastytrap4 = FALSE;
+	p_ptr->nastytrap5 = FALSE;
+	p_ptr->nastytrap6 = FALSE;
+	p_ptr->nastytrap7 = FALSE;
+	p_ptr->nastytrap8 = FALSE;
+	p_ptr->nastytrap9 = FALSE;
+	p_ptr->nastytrap10 = FALSE;
+	p_ptr->nastytrap11 = FALSE;
+	p_ptr->nastytrap12 = FALSE;
+	p_ptr->nastytrap13 = FALSE;
+	p_ptr->nastytrap14 = FALSE;
+	p_ptr->nastytrap15 = FALSE;
+	p_ptr->nastytrap16 = FALSE;
+	p_ptr->nastytrap17 = FALSE;
+	p_ptr->nastytrap18 = FALSE;
+	p_ptr->nastytrap19 = FALSE;
+	p_ptr->nastytrap20 = FALSE;
+	p_ptr->nastytrap21 = FALSE;
+	p_ptr->nastytrap22 = FALSE;
+	p_ptr->nastytrap23 = FALSE;
+	p_ptr->nastytrap24 = FALSE;
+	p_ptr->nastytrap25 = FALSE;
+	p_ptr->nastytrap26 = FALSE;
+	p_ptr->nastytrap27 = FALSE;
+	p_ptr->nastytrap28 = FALSE;
+	p_ptr->nastytrap29 = FALSE;
+	p_ptr->nastytrap30 = FALSE;
+	p_ptr->nastytrap31 = FALSE;
+	p_ptr->nastytrap32 = FALSE;
+	p_ptr->nastytrap33 = FALSE;
+	p_ptr->nastytrap34 = FALSE;
+	p_ptr->nastytrap35 = FALSE;
+	p_ptr->nastytrap36 = FALSE;
+	p_ptr->nastytrap37 = FALSE;
+	p_ptr->nastytrap38 = FALSE;
+	p_ptr->nastytrap39 = FALSE;
+	p_ptr->nastytrap40 = FALSE;
+	p_ptr->nastytrap41 = FALSE;
+	p_ptr->nastytrap42 = FALSE;
+	p_ptr->nastytrap43 = FALSE;
+	p_ptr->nastytrap44 = FALSE;
+	p_ptr->nastytrap45 = FALSE;
+	p_ptr->nastytrap46 = FALSE;
+	p_ptr->nastytrap47 = FALSE;
+	p_ptr->nastytrap48 = FALSE;
+	p_ptr->nastytrap49 = FALSE;
+	p_ptr->nastytrap50 = FALSE;
+	p_ptr->nastytrap51 = FALSE;
+	p_ptr->nastytrap52 = FALSE;
+	p_ptr->nastytrap53 = FALSE;
+	p_ptr->nastytrap54 = FALSE;
+	p_ptr->nastytrap55 = FALSE;
+	p_ptr->nastytrap56 = FALSE;
+	p_ptr->nastytrap57 = FALSE;
+	p_ptr->nastytrap58 = FALSE;
+	p_ptr->nastytrap59 = FALSE;
+	p_ptr->nastytrap60 = FALSE;
+	p_ptr->nastytrap61 = FALSE;
+	p_ptr->nastytrap62 = FALSE;
+	p_ptr->nastytrap63 = FALSE;
+	p_ptr->nastytrap64 = FALSE;
+	p_ptr->nastytrap65 = FALSE;
+	p_ptr->nastytrap66 = FALSE;
+	p_ptr->nastytrap67 = FALSE;
+	p_ptr->nastytrap68 = FALSE;
+	p_ptr->nastytrap69 = FALSE;
+	p_ptr->nastytrap70 = FALSE;
+	p_ptr->nastytrap71 = FALSE;
+	p_ptr->nastytrap72 = FALSE;
+	p_ptr->nastytrap73 = FALSE;
+	p_ptr->nastytrap74 = FALSE;
+	p_ptr->nastytrap75 = FALSE;
+	p_ptr->nastytrap76 = FALSE;
+	p_ptr->nastytrap77 = FALSE;
+	p_ptr->nastytrap78 = FALSE;
+	p_ptr->nastytrap79 = FALSE;
+	p_ptr->nastytrap80 = FALSE;
+	p_ptr->nastytrap81 = FALSE;
+	p_ptr->nastytrap82 = FALSE;
+	p_ptr->nastytrap83 = FALSE;
+	p_ptr->nastytrap84 = FALSE;
+	p_ptr->nastytrap85 = FALSE;
+	p_ptr->nastytrap86 = FALSE;
+	p_ptr->nastytrap87 = FALSE;
+	p_ptr->nastytrap88 = FALSE;
+	p_ptr->nastytrap89 = FALSE;
+	p_ptr->nastytrap90 = FALSE;
+	p_ptr->nastytrap91 = FALSE;
+	p_ptr->nastytrap92 = FALSE;
+	p_ptr->nastytrap93 = FALSE;
+	p_ptr->nastytrap94 = FALSE;
+	p_ptr->nastytrap95 = FALSE;
+	p_ptr->nastytrap96 = FALSE;
+	p_ptr->nastytrap97 = FALSE;
+	p_ptr->nastytrap98 = FALSE;
+	p_ptr->nastytrap99 = FALSE;
+	p_ptr->nastytrap100 = FALSE;
+	p_ptr->nastytrap101 = FALSE;
+	p_ptr->nastytrap102 = FALSE;
+	p_ptr->nastytrap103 = FALSE;
+	p_ptr->nastytrap104 = FALSE;
+	p_ptr->nastytrap105 = FALSE;
+	p_ptr->nastytrap106 = FALSE;
+	p_ptr->nastytrap107 = FALSE;
+	p_ptr->nastytrap108 = FALSE;
+	p_ptr->nastytrap109 = FALSE;
+	p_ptr->nastytrap110 = FALSE;
+	p_ptr->nastytrap111 = FALSE;
+	p_ptr->nastytrap112 = FALSE;
+	p_ptr->nastytrap113 = FALSE;
+	p_ptr->nastytrap114 = FALSE;
+	p_ptr->nastytrap115 = FALSE;
+	p_ptr->nastytrap116 = FALSE;
+	p_ptr->nastytrap117 = FALSE;
+	p_ptr->nastytrap118 = FALSE;
+	p_ptr->nastytrap119 = FALSE;
+	p_ptr->nastytrap120 = FALSE;
+	p_ptr->nastytrap121 = FALSE;
+	p_ptr->nastytrap122 = FALSE;
+	p_ptr->nastytrap123 = FALSE;
+	p_ptr->nastytrap124 = FALSE;
+	p_ptr->nastytrap125 = FALSE;
+	p_ptr->nastytrap126 = FALSE;
+	p_ptr->nastytrap127 = FALSE;
+	p_ptr->nastytrap128 = FALSE;
+	p_ptr->nastytrap129 = FALSE;
+	p_ptr->nastytrap130 = FALSE;
+	p_ptr->nastytrap131 = FALSE;
+	p_ptr->nastytrap132 = FALSE;
+	p_ptr->nastytrap133 = FALSE;
+	p_ptr->nastytrap134 = FALSE;
+	p_ptr->nastytrap135 = FALSE;
+	p_ptr->nastytrap136 = FALSE;
+	p_ptr->nastytrap137 = FALSE;
+	p_ptr->nastytrap138 = FALSE;
+	p_ptr->nastytrap139 = FALSE;
+	p_ptr->nastytrap140 = FALSE;
+	p_ptr->nastytrap141 = FALSE;
+	p_ptr->nastytrap142 = FALSE;
+	p_ptr->nastytrap143 = FALSE;
+	p_ptr->nastytrap144 = FALSE;
+	p_ptr->nastytrap145 = FALSE;
+	p_ptr->nastytrap146 = FALSE;
+	p_ptr->nastytrap147 = FALSE;
+	p_ptr->nastytrap148 = FALSE;
+	p_ptr->nastytrap149 = FALSE;
+	p_ptr->nastytrap150 = FALSE;
+	p_ptr->nastytrap151 = FALSE;
+	p_ptr->nastytrap152 = FALSE;
+	p_ptr->nastytrap153 = FALSE;
+	p_ptr->nastytrap154 = FALSE;
+	p_ptr->nastytrap155 = FALSE;
+	p_ptr->nastytrap156 = FALSE;
+	p_ptr->nastytrap157 = FALSE;
+	p_ptr->nastytrap158 = FALSE;
+	p_ptr->nastytrap159 = FALSE;
+	p_ptr->nastytrap160 = FALSE;
+	p_ptr->nastytrap161 = FALSE;
+	p_ptr->nastytrap162 = FALSE;
+	p_ptr->nastytrap163 = FALSE;
+	p_ptr->nastytrap164 = FALSE;
+	p_ptr->nastytrap165 = FALSE;
+	p_ptr->nastytrap166 = FALSE;
+	p_ptr->nastytrap167 = FALSE;
+	p_ptr->nastytrap168 = FALSE;
+	p_ptr->nastytrap169 = FALSE;
+	p_ptr->nastytrap170 = FALSE;
+	p_ptr->nastytrap171 = FALSE;
+	p_ptr->nastytrap172 = FALSE;
+	p_ptr->nastytrap173 = FALSE;
+	p_ptr->nastytrap174 = FALSE;
+	p_ptr->nastytrap175 = FALSE;
+	p_ptr->nastytrap176 = FALSE;
+	p_ptr->nastytrap177 = FALSE;
+	p_ptr->nastytrap178 = FALSE;
+	p_ptr->nastytrap179 = FALSE;
+	p_ptr->nastytrap180 = FALSE;
+	p_ptr->nastytrap181 = FALSE;
+	p_ptr->nastytrap182 = FALSE;
+	p_ptr->nastytrap183 = FALSE;
+	p_ptr->nastytrap184 = FALSE;
+	p_ptr->nastytrap185 = FALSE;
+	p_ptr->nastytrap186 = FALSE;
+	p_ptr->nastytrap187 = FALSE;
+	p_ptr->nastytrap188 = FALSE;
+	p_ptr->nastytrap189 = FALSE;
+	p_ptr->nastytrap190 = FALSE;
+	p_ptr->nastytrap191 = FALSE;
+	p_ptr->nastytrap192 = FALSE;
+	p_ptr->nastytrap193 = FALSE;
+	p_ptr->nastytrap194 = FALSE;
+	p_ptr->nastytrap195 = FALSE;
+	p_ptr->nastytrap196 = FALSE;
+	p_ptr->nastytrap197 = FALSE;
+	p_ptr->nastytrap198 = FALSE;
+	p_ptr->nastytrap199 = FALSE;
+	p_ptr->nastytrap200 = FALSE;
+
+}

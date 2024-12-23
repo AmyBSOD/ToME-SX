@@ -2025,6 +2025,8 @@ bool detect_traps(int rad)
 			/* Detect invisible traps */
 			if (c_ptr->t_idx != 0)
 			{
+				if (!can_detect_trap_type(c_ptr->t_idx)) continue;
+
 				/* Hack -- Remember detected traps */
 				c_ptr->info |= (CAVE_MARK);
 

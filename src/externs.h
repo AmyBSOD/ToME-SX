@@ -1249,6 +1249,8 @@ extern void wiz_place_trap(int y, int x, int idx);
 extern void do_cmd_set_trap(void);
 extern bool mon_hit_trap(int);
 extern bool can_disarm_trap_type(int);
+extern bool can_detect_trap_type(int);
+extern void cure_nasty_traps(void);
 
 /* spells1.c */
 extern byte spell_color(int type);

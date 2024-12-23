@@ -23,6 +23,7 @@
 # y yellow for stealing/equipment traps
 # r red    for other character affecting traps
 # g green  for elemental bolt trap
+# G l grn  for divine anger trap
 # B umber  for elemental ball trap
 # R l red  for arrow/dagger traps
 # W        for compound trap!!!
@@ -941,6 +942,11 @@ F:FLOOR
 N:200:High Heel Trap
 I:81:100:50:4:45:0d0:G
 D:A female shoe has protected this.
+F:FLOOR
+
+N:201:Unique Saving Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
 F:FLOOR
 
 # I:diff:prob:another:pval:minlevel:damage:color

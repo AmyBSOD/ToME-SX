@@ -1056,3 +1056,8 @@ F:DONT_NOTICE_RUNNING
 D:1:It isn't a good idea to harm a Mallorn.
 D:2:a Mallorn blocking your way
 
+N:244:switcher
+G:0:r
+F:FLOOR | DONT_NOTICE_RUNNING | CAN_RUN | SUPPORT_LIGHT | NOTICE |
+F:SUPPORT_GROWTH
+

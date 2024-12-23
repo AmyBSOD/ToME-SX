@@ -3934,6 +3934,14 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 			command_new = '_';
 		}
 
+		/* Handle switchers --Amy */
+		if (c_ptr->feat == FEAT_SWITCHER)
+		{
+			cave_set_feat(p_ptr->py, p_ptr->px, FEAT_FLOOR);
+			cure_nasty_traps();
+			msg_print("You pull the switcher! The red light goes out and the green light starts shining brightly...");
+		}
+
 #if 0 /* These are noxious -- pelpel */
 
 		/* Handle quest areas -KMW- */
@@ -3978,7 +3986,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 			/* Disturb */
 			disturb(0, 0);
 
-			if (!(c_ptr->info & (CAVE_TRDT)))
+			if (!(c_ptr->info & (CAVE_TRDT)) && can_detect_trap_type(c_ptr->t_idx) )
 			{
 				/* Message */
 				msg_print("You found a trap!");
@@ -4842,7 +4850,7 @@ void step_effects(int y, int x, int do_pickup)
 		/* Disturb */
 		disturb(0, 0);
 
-		if (!(cave[y][x].info & CAVE_TRDT))
+		if (!(cave[y][x].info & CAVE_TRDT) && can_detect_trap_type(cave[y][x].t_idx) )
 		{
 			/* Message */
 			msg_print("You found a trap!");

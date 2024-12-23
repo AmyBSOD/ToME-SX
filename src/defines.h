@@ -868,6 +868,8 @@
 #define FEAT_FIRE               0xCD /* 205 */
 /* Feature 0xCE -- pile of rubble (permanent) */
 
+#define FEAT_SWITCHER           0xF4 /* 244 */
+
 /* Features 0xCF - 0xFF -- unused */
 
 
@@ -2612,6 +2614,8 @@
 #define TRAP_OF_SHOES                     198
 #define TRAP_OF_SHOES_II                  199
 #define TRAP_OF_SHOES_III                 200
+
+#define TRAP_NASTY1                       201
 
 /*** General index values ***/
 

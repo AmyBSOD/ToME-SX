@@ -148,6 +148,7 @@
 #define DUN_AMT_ITEM    3	/* Amount of objects for rooms/corridors */
 #define DUN_AMT_GOLD    3	/* Amount of treasure for rooms/corridors */
 #define DUN_AMT_ALTAR   1	/* Amount of altars */
+#define DUN_AMT_SWITCHER 1	/* Amount of switchers */
 #define DUN_AMT_BETWEEN 2	/* Amount of between gates */
 #define DUN_AMT_FOUNTAIN 1	/* Amount of fountains */
 
@@ -168,6 +169,7 @@
 #define ALLOC_TYP_ALTAR         6       /* Altar */
 #define ALLOC_TYP_BETWEEN       7       /* Between */
 #define ALLOC_TYP_FOUNTAIN      8       /* Fountain */
+#define ALLOC_TYP_SWITCHER      9       /* Switcher */
 
 
 /*
@@ -814,6 +816,15 @@ static void place_altar(int y, int x)
 		cave_set_feat(y, x, 164);
 }
 
+/*
+ * Place a switcher at the given location
+ */
+static void place_switcher(int y, int x)
+{
+	if (magik(2))
+		cave_set_feat(y, x, FEAT_SWITCHER);
+}
+
 
 /*
  * Place a fountain at the given location
@@ -1198,6 +1209,12 @@ static void alloc_object(int set, int typ, int num)
 		case ALLOC_TYP_ALTAR:
 			{
 				place_altar(y, x);
+				break;
+			}
+
+		case ALLOC_TYP_SWITCHER:
+			{
+				place_switcher(y, x);
 				break;
 			}
 
@@ -8356,6 +8373,9 @@ static bool cave_gen(void)
 	{
 		/* Put some altars */
 		alloc_object(ALLOC_SET_ROOM, ALLOC_TYP_ALTAR, randnor(DUN_AMT_ALTAR, 3));
+
+		/* Put some altars */
+		alloc_object(ALLOC_SET_ROOM, ALLOC_TYP_SWITCHER, randnor(DUN_AMT_SWITCHER, 3));
 
 		/* Put some between gates */
 		alloc_object(ALLOC_SET_ROOM, ALLOC_TYP_BETWEEN, randnor(DUN_AMT_BETWEEN, 3));

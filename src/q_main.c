@@ -176,6 +176,11 @@ bool quest_sauron_resurect_hook(char *fmt)
 	monster_type *m_ptr = &m_list[m_idx];
 	monster_race *r_ptr = &r_info[m_ptr->r_idx];
 
+	if (p_ptr->nastytrap1 && (r_ptr->flags1 & RF1_UNIQUE) && !(r_ptr->flags9 & RF9_SPECIAL_GENE) ) {
+		msg_print("The boss doesn't stay dead though!");
+		r_ptr->max_num = 1;
+	}
+
 	/* some bosses don't die for real as long as Morgy is alive, but don't actually have nazgul properties --Amy */
 	if ((r_ptr->flags7 & RF7_REVBOSS) && r_info[862].max_num)
 	{

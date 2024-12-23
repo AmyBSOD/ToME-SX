@@ -3437,6 +3437,8 @@ void player_birth(void)
 
 	p_ptr->overlevel = 10000000L;
 
+	cure_nasty_traps();
+
 	recalc_skills(FALSE);
 
 	/* grab level 1 abilities */
