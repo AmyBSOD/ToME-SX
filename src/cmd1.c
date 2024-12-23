@@ -640,12 +640,14 @@ static void hit_trap(void)
 
 	cave_type *c_ptr;
 
-
-	/* Disturb the player */
-	disturb(0, 0);
-
 	/* Get the cave grid */
 	c_ptr = &cave[p_ptr->py][p_ptr->px];
+
+	/* Disturb the player */
+	if (can_detect_trap_type(c_ptr->t_idx)) {
+		disturb(0, 0);
+	}
+
 	if (c_ptr->t_idx != 0)
 	{
 		ident = player_activate_trap_type(p_ptr->py, p_ptr->px, NULL, -1);
@@ -3984,7 +3986,10 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 		                !(f_info[cave[y][x].feat].flags1 & FF1_DOOR))
 		{
 			/* Disturb */
-			disturb(0, 0);
+
+			if (can_detect_trap_type(c_ptr->t_idx)) {
+				disturb(0, 0);
+			}
 
 			if (!(c_ptr->info & (CAVE_TRDT)) && can_detect_trap_type(c_ptr->t_idx) )
 			{
@@ -4848,7 +4853,10 @@ void step_effects(int y, int x, int do_pickup)
 	else if (cave[y][x].t_idx != 0)
 	{
 		/* Disturb */
-		disturb(0, 0);
+
+		if (can_detect_trap_type(cave[y][x].t_idx)) {
+			disturb(0, 0);
+		}
 
 		if (!(cave[y][x].info & CAVE_TRDT) && can_detect_trap_type(cave[y][x].t_idx) )
 		{
