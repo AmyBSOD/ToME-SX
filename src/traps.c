@@ -2686,8 +2686,8 @@ void place_trap(int y, int x)
 	if (f_info[c_ptr->feat].flags1 & FF1_DOOR) flags = FTRAP_DOOR;
 	else flags = FTRAP_FLOOR;
 
-	/* Try 100 times */
-	cnt = 100;
+	/* Try 10000 times */
+	cnt = 10000;
 	while (cnt--)
 	{
 		trap = randint(max_t_idx - 1);
