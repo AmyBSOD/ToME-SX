@@ -1897,7 +1897,7 @@ struct player_type
 
 	/* does the player have nasty trap effects active? --Amy */
 	bool nastytrap1; /* unique saving trap - unique monsters without SPECIAL_GENE don't stay dead */
-	bool nastytrap2;
+	bool nastytrap2; /* ensnaring trap - cannot detect traps at all anymore */
 	bool nastytrap3;
 	bool nastytrap4;
 	bool nastytrap5;

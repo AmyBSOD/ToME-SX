@@ -2616,6 +2616,7 @@
 #define TRAP_OF_SHOES_III                 200
 
 #define TRAP_NASTY1                       201
+#define TRAP_NASTY2                       202
 
 /*** General index values ***/
 

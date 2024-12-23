@@ -949,6 +949,11 @@ I:21:2:50:4:1:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:202:Ensnaring Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

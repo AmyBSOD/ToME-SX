@@ -551,7 +551,7 @@ void search(void)
 				c_ptr = &cave[y][x];
 
 				/* Invisible trap */
-				if ((c_ptr->t_idx != 0) && !(c_ptr->info & CAVE_TRDT))
+				if ((c_ptr->t_idx != 0) && !(p_ptr->nastytrap2) && !(c_ptr->info & CAVE_TRDT))
 				{
 					/* Pick a trap */
 					pick_trap(y, x);

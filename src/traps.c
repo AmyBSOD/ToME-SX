@@ -460,6 +460,7 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_OF_SHOES_II:
 		case TRAP_OF_SHOES_III:
 		case TRAP_NASTY1:
+		case TRAP_NASTY2:
 			return FALSE;
 	}
 
@@ -469,8 +470,11 @@ bool can_disarm_trap_type(int traptype)
 
 bool can_detect_trap_type(int traptype)
 {
+	if (p_ptr->nastytrap2) return FALSE; /* ensnaring nastytrap: prevents finding any traps */
+
 	switch (traptype) {
 		case TRAP_NASTY1:
+		case TRAP_NASTY2:
 			return FALSE;
 	}
 
@@ -1924,6 +1928,17 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap1 = TRUE;
+
+			break;			
+		}
+
+	case TRAP_NASTY2:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap2 = TRUE;
 
 			break;			
 		}
