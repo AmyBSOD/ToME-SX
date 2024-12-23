@@ -1591,6 +1591,18 @@ void self_knowledge(FILE *fff)
 		info[i++] = "Your dodging chance is affected by your equipment.";
 	}
 
+	if (p_ptr->nastytrap1)
+	{
+		info[i++] = "You have the following problem: Unique monsters can't be permanently killed.";
+	}
+	if (p_ptr->nastytrap2)
+	{
+		info[i++] = "You have the following problem: Traps cannot be detected or found.";
+	}
+	if (p_ptr->nastytrap3)
+	{
+		info[i++] = "You have the following problem: You cannot identify the type of trap.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];

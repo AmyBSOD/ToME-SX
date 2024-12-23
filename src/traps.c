@@ -461,6 +461,7 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_OF_SHOES_III:
 		case TRAP_NASTY1:
 		case TRAP_NASTY2:
+		case TRAP_NASTY3:
 			return FALSE;
 	}
 
@@ -475,6 +476,7 @@ bool can_detect_trap_type(int traptype)
 	switch (traptype) {
 		case TRAP_NASTY1:
 		case TRAP_NASTY2:
+		case TRAP_NASTY3:
 			return FALSE;
 	}
 
@@ -520,7 +522,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_FARTING_III:
 
 		/* one of the possible effects is trap creation... so make sure it doesn't ID some other trap! --Amy */
-		t_info[trap].ident = TRUE;
+		if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
 		ident = FALSE;
 
 		while (fartingnumber < 1) fartingnumber = 43;
@@ -706,6 +708,21 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		}
 
 		do_fart_effect();
+		ident = FALSE;
+
+		if (!p_ptr->nastytrap3) {
+			switch (trap) {
+				case TRAP_OF_FARTING:
+					msg_print("You identified that trap as Fart Trap.");
+					break;
+				case TRAP_OF_FARTING_II:
+					msg_print("You identified that trap as Farting Trap.");
+					break;
+				case TRAP_OF_FARTING_III:
+					msg_print("You identified that trap as Farting Noise Trap.");
+					break;
+			}
+		}
 
 		break;
 
@@ -1028,7 +1045,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/* Multiplication Trap */
 	case TRAP_OF_MULTIPLICATION:
 		{
-			t_info[trap].ident = TRUE;
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
 
 			msg_print("You hear a loud click.");
 			for (k = -1; k <= 1; k++)
@@ -1058,7 +1075,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 
 			ident = FALSE;
-			msg_print("You identified that trap as Multiplication Trap.");
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Multiplication Trap.");
 			break;
 		}
 
@@ -1597,7 +1614,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 
 			if (randint(10) == 1) { /* fix endless exploitability --Amy */
-				t_info[trap].ident = TRUE;
+				if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
 
 				/* if we're on a floor or on a door, place a new trap */
 				if ((item == -1) || (item == -2))
@@ -1615,7 +1632,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					place_trap(y, x);
 				}
 				ident = FALSE;
-				msg_print("You identified that trap as Trap of Stair Movement.");
+				if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Stair Movement.");
 			}
 
 			p_ptr->redraw |= PR_MAP;
@@ -1625,7 +1642,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/* Trap of New Trap */
 	case TRAP_OF_NEW:
 		{
-			t_info[trap].ident = TRUE;
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
 
 			/* if we're on a floor or on a door, place a new trap */
 			if ((item == -1) || (item == -2))
@@ -1644,14 +1661,14 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 			msg_print("You hear a noise, and then its echo.");
 			ident = FALSE;
-			msg_print("You identified that trap as Trap of New Trap.");
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of New Trap.");
 			break;
 		}
 
 		/* Trap of Acquirement */
 	case TRAP_OF_ACQUIREMENT:
 		{
-			t_info[trap].ident = TRUE;
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
 
 			/* Get a nice thing */
 			msg_print("You notice something falling off the trap.");
@@ -1676,7 +1693,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 			/* Never known */
 			ident = FALSE;
-			msg_print("You identified that trap as Trap of Acquirement.");
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Acquirement.");
 		}
 		break;
 
@@ -1830,7 +1847,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/* Trap of Filling */
 	case TRAP_OF_FILLING:
 		{
-			t_info[trap].ident = TRUE;
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
 
 			s16b nx, ny;
 
@@ -1863,7 +1880,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 			msg_print("The floor vibrates in a strange way.");
 			ident = FALSE;
-			msg_print("You identified that trap as Trap of Filling.");
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Filling.");
 			break;
 		}
 
@@ -1939,6 +1956,22 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap2 = TRUE;
+
+			break;			
+		}
+
+	case TRAP_NASTY3:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) {
+				ident = TRUE;
+				t_info[trap].ident = TRUE; /* id the trap before triggering it, since you can't id it later */
+
+				msg_print("You identified that trap as Snaretype Trap.");
+			}
+
+			p_ptr->nastytrap3 = TRUE;
 
 			break;			
 		}
@@ -2592,7 +2625,7 @@ void player_activate_door_trap(s16b y, s16b x)
 
 	/* Hit the trap */
 	ident = player_activate_trap_type(y, x, NULL, -1);
-	if (ident)
+	if (!p_ptr->nastytrap3 && ident)
 	{
 		t_info[c_ptr->t_idx].ident = TRUE;
 		msg_format("You identified that trap as %s.",

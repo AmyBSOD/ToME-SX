@@ -2617,6 +2617,7 @@
 
 #define TRAP_NASTY1                       201
 #define TRAP_NASTY2                       202
+#define TRAP_NASTY3                       203
 
 /*** General index values ***/
 

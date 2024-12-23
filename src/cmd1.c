@@ -649,7 +649,7 @@ static void hit_trap(void)
 	if (c_ptr->t_idx != 0)
 	{
 		ident = player_activate_trap_type(p_ptr->py, p_ptr->px, NULL, -1);
-		if (ident)
+		if (!p_ptr->nastytrap3 && ident)
 		{
 			t_info[c_ptr->t_idx].ident = TRUE;
 			msg_format("You identified the trap as %s.",
