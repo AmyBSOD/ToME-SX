@@ -1981,6 +1981,14 @@ void calc_hitpoints(void)
 
 		/* Amy edit: it's ridiculous if you can have five-digit HP by incarnating into Ingeborg's body... */
 		if (mhp > 2000) mhp = 2000;
+
+		/* don't forget to calculate Melkor max HP sacrifices!!! --Amy */
+		GOD(GOD_MELKOR)
+		{
+			mhp -= (p_ptr->melkor_sacrifice * 25);
+			if (mhp < 1) mhp = 1;
+		}
+
 	}
 	if (p_ptr->disembodied) mhp = 1;
 
