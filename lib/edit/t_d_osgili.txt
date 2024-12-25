@@ -7,8 +7,26 @@
 # Please download the module and refer to the files for the terrain feature definitions http://modules.t-o-m-e.net/
 # Don't forget to modify the maximum number of terrain features, etc. in misc.txt as well.
 
+#Wooden board
+F:c:235:3
+
 #Anduin river
 F:a:227:3
+
+# Tainted water
+F:%:174:3
+
+# Dead/burnt tree
+F:D:92:3
+
+# Ash
+F:H:93:3
+
+# Fire
+F:=:205:3
+
+# Permanent rubble
+F:$:206:3
 
 D:######################################################################################################################################################################################################
 D:#                                                         #################@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##########################                                                         #
@@ -62,7 +80,7 @@ D:#                          ##@@@@,######@,@######,@@@@D,,=DD,DDDDDDDDDDDDDDDDD
 D:#                           ##@@@,######@,@######,@@@D,,D@@D,D@@@@@@@@@@@@@@@@@@@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=,,=             ##                            #
 D:#                            ##@@,######@,@######,@@D,,D@@@D,D@@@@@@@@@@@@@@@@@@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@@@@@#####@@@@@@@@@@@@@@@@@@@@#####@@@=,,=           ##                             #
 D:#                             ##@,######@,@######,@D,,D#####,#####@@@@@@@@@@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@@@#####,,,,,,,,,,,,,,,,,,,,#####@@@@=,,=        ###                              #
-D:#                              ##@,,,@@@@,@@@,,,,@D,,D@#k@=H,H=@m#@@@@@@@@@@@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@@@@#####@@@@@@@@@@@@@@@@@@@@#####@@@@@=,,=      ##                                #
+D:#                              ##@,,,@@@@,@@@,,,,@D,,D@#.@=H,H=@.#@@@@@@@@@@@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@@@@#####@@@@@@@@@@@@@@@@@@@@#####@@@@@=,,=      ##                                #
 D:#                               ##@@@,,,,,,,,@@@@D,,D@@#@@#H,H#@@#@@@@@@@@@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@@@@,@@@@@@@@@@@@@@@@@@@@@@@@,,,,@@@@@=,,=    ##                                 #
 D:#                                ###@@@@@@@D@@@@D,,D@@@#@@#H,H#@@#@@@@@@@@@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@@@#####@@@@@@@@=@@@@@@@@@@@@@@#####@@@@=,, =##$                                  #
 D:#                                  ###@@@@DDD@@D,,D@####@##H,H##@####@@@@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@@@#####@@@@@@@@@@@@@@@,,,,,,,,#####@@@@@=,,,,,                                   #
@@ -71,7 +89,7 @@ D:#                                      ###@@@D,,D@@@#@@@@# H,H #@@@@#@@@aaaaaa
 D:#                                        ##$=,,D@@@@####@##H,H##@####@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@@@@@@@#####@@@@@@@,@#####@@#####@@@@@@@####                                          #
 D:#                                            ,=@@@@@@@@#@@#H4H#@@#@@@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@@@@@@@@#####@@,,,,,@@#####@@@@@@@@@@@@####                                            #
 D:#                                            $##@@@@@@@#@@#####@@#@@@@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@@@@@@@#####@,#####@@#####@@@@@@@@@####                                               #
-D:#                                              ###@@@@@#l@@@@@@@H#@@@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@@@@@@@@@@@@,@@,@#####@@@@@@@@@@@@@#####                                                 #
+D:#                                              ###@@@@@#.@@@@@@@H#@@@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@@@@@@@@@@@@,@@,@#####@@@@@@@@@@@@@#####                                                 #
 D:#                                                ###@@@###########@@@@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@@@@@@@@@@@@@@@@,@@@#####@@@@@@@@@@####                                                     #
 D:#                                                 ###@@@@@@@@@@@@@@@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@@@@@@@@@@@@@@@@@@@@@@@@@@@@######                                                         #
 D:#                                                  ###############@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##############################                                                            #

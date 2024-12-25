@@ -26,7 +26,14 @@ F:w:74:3:0:0:0:0:0:7
 ?:1
 
 ############### Entrance to the Void ###############
+# Amy edit: when the quest is finished, the entrance should stay!
 ?:[EQU $QUEST20 1]
+F:v:7:3:0:0:0:0:0:11
+?:[EQU $QUEST20 2]
+F:v:7:3:0:0:0:0:0:11
+?:[EQU $QUEST20 3]
+F:v:7:3:0:0:0:0:0:11
+?:[EQU $QUEST20 5]
 F:v:7:3:0:0:0:0:0:11
 ?:1
 

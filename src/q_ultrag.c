@@ -179,8 +179,15 @@ bool quest_ultra_good_death_hook(char *fmt)
 		/* Create the entrance */
 		cave_set_feat(p_ptr->py, p_ptr->px, FEAT_MORE);
 
+		/* stairs work normally once again --Amy */
+		del_hook(HOOK_MONSTER_DEATH, quest_ultra_good_stair_hook);
+
+		/* and so does recall */
+		del_hook(HOOK_MONSTER_DEATH, quest_ultra_good_recall_hook);
+
 		/* Remove now used hook */
 		del_hook(HOOK_MONSTER_DEATH, quest_ultra_good_death_hook);
+
 		process_hooks_restart = TRUE;
 
 		/* End plot */

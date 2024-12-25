@@ -10,6 +10,21 @@
 #Anduin river
 F:a:227:3
 
+# Tainted water
+F:%:174:3
+
+# Dead/burnt tree
+F:D:92:3
+
+# Ash
+F:H:93:3
+
+# Fire
+F:=:205:3
+
+# Permanent rubble
+F:$:206:3
+
 D:######################################################################################################################################################################################################
 D:#HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH@%%%%%@##%%%%%@@HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH#                                                                                                                                                                                      #
 D:#HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH@%%%%%@####%%%%%@HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH#
