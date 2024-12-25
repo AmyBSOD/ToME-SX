@@ -149,7 +149,7 @@ YAVANNA_UPROOT = add_spell
 
 				-- level it
 				if m_idx ~= 0 then
-					monster_set_level(m_idx, 30 + get_level(YAVANNA_UPROOT, 70))
+					monster_set_level(m_idx, 30 + get_level(YAVANNA_UPROOT, 30))
 				end
 
 				msg_print("The tree awakes!");
@@ -159,7 +159,7 @@ YAVANNA_UPROOT = add_spell
 			return TRUE
 	end,
 	["info"] =      function()
-			return "lev "..(30 + get_level(YAVANNA_UPROOT, 70))
+			return "lev "..(30 + get_level(YAVANNA_UPROOT, 30))
 	end,
 	["desc"] =      {
 			"Awakes a tree to help you battle the forces of Morgoth",

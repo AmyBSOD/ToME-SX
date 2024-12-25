@@ -130,12 +130,12 @@ MANWE_CALL = add_spell
 			m_idx = place_monster_one(y, x, test_monster_name("Great eagle"), 0, FALSE, MSTATUS_FRIEND)
 
 			if m_idx ~= 0 then
-				monster_set_level(m_idx, 20 + get_level(MANWE_CALL, 70, 0))
+				monster_set_level(m_idx, 20 + get_level(MANWE_CALL, 40, 0))
 				return TRUE
 			end
 	end,
 	["info"] =      function()
-			return "level "..(get_level(MANWE_CALL, 70) + 20)
+			return "level "..(get_level(MANWE_CALL, 40) + 20)
 	end,
 	["desc"] =	{
 			"Manwe's Call summons a Great Eagle to help you battle the forces",

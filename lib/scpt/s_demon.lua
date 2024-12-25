@@ -31,12 +31,12 @@ DEMON_BLADE = add_spell
 
 			return set_project(randint(20) + get_level(DEMON_BLADE, 80),
 				    type,
-				    4 + get_level(DEMON_BLADE, 40),
+				    4 + get_level(DEMON_BLADE, 15),
 				    rad,
 				    bor(PROJECT_STOP, PROJECT_KILL))
 	end,
 	["info"] =      function()
-			return "dur "..(get_level(DEMON_BLADE, 80)).."+d20 dam "..(4 + get_level(DEMON_BLADE, 40)).."/blow"
+			return "dur "..(get_level(DEMON_BLADE, 80)).."+d20 dam "..(4 + get_level(DEMON_BLADE, 15)).."/blow"
 	end,
 	["desc"] =      {
 			"Imbues your blade with fire to deal more damage",
@@ -112,10 +112,10 @@ DEMON_FIELD = add_spell
 
 			ret, dir = get_aim_dir()
 			if ret == FALSE then return end
-			return fire_cloud(GF_NEXUS, dir, 20 + get_level(DEMON_FIELD, 70), 7, 30 + get_level(DEMON_FIELD, 100))
+			return fire_cloud(GF_NEXUS, dir, 20 + get_level(DEMON_FIELD, 70), 7, 4 + get_level(DEMON_FIELD, 20))
 	end,
 	["info"] =      function()
-			return "dam "..(20 + get_level(DEMON_FIELD, 70)).." dur "..(30 + get_level(DEMON_FIELD, 100))
+			return "dam "..(20 + get_level(DEMON_FIELD, 70)).." dur "..(4 + get_level(DEMON_FIELD, 20))
 	end,
 	["desc"] =      {
 			"Fires a cloud of deadly nexus over a radius of 7",
@@ -232,7 +232,7 @@ DEMON_SUMMON = add_spell
 			local level = dun_level
 			local minlevel = 4
 			if level < minlevel then level=minlevel end
-			summon_specific_level = 5 + get_level(DEMON_SUMMON, 100)
+			summon_specific_level = 5 + get_level(DEMON_SUMMON, 40)
 			if get_level(DEMON_SUMMON) >= 35 then type = SUMMON_HI_DEMON end
 			if summon_monster(player.py, player.px, level, TRUE, type) == TRUE then
 				return TRUE
@@ -242,7 +242,7 @@ DEMON_SUMMON = add_spell
 			end
 	end,
 	["info"] =      function()
-			return "level "..(5 + get_level(DEMON_SUMMON, 100))
+			return "level "..(5 + get_level(DEMON_SUMMON, 40))
 	end,
 	["desc"] =      {
 			"Summons a leveled demon to your side",

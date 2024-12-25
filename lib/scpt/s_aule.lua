@@ -235,12 +235,12 @@ AULE_CHILD = add_spell
 		m_idx = place_monster_one(y, x, test_monster_name("Dwarven warrior"), 0, FALSE, MSTATUS_FRIEND) 
  
 		if m_idx ~= 0 then 
-			monster_set_level(m_idx, 20 + get_level(AULE_CHILD, 70, 0)) 
+			monster_set_level(m_idx, 20 + get_level(AULE_CHILD, 50, 0)) 
 			return TRUE 
 		end 
 	end, 
 	["info"] =	function() 
-		return "level "..(20 + get_level(AULE_CHILD, 70)) 
+		return "level "..(20 + get_level(AULE_CHILD, 50)) 
 	end, 
 	["desc"] =	{ 
 		"Summons a levelled Dwarven warrior to help you battle the forces", 

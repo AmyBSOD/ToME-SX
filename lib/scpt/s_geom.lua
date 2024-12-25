@@ -634,7 +634,7 @@ ELEMENTAL_MINION = add_spell
 
 				-- level it
 				if m_idx ~= 0 then
-					monster_set_level(m_idx, 10 + get_level(ELEMENTAL_MINION, 120))
+					monster_set_level(m_idx, 10 + get_level(ELEMENTAL_MINION, 60))
 				end
 
 				cave_set_feat(y, x, FEAT_FLOOR)
@@ -643,7 +643,7 @@ ELEMENTAL_MINION = add_spell
 			return TRUE
 	end,
 	["info"] = 	function()
-			return "min level "..(10 + get_level(ELEMENTAL_MINION, 120))
+			return "min level "..(10 + get_level(ELEMENTAL_MINION, 60))
 	end,
 	["desc"] =	{
 			"Summons a minion from a nearby element.",

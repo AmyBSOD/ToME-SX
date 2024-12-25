@@ -168,13 +168,13 @@ MANDOS_CALL_HALLS = add_spell
 			y, x = find_position(player.py, player.px)
 			m_idx = place_monster_one(y, x, summons[rand_range(1, 2)], 0, FALSE, MSTATUS_FRIEND)
 			if m_idx ~= 0 then
-				monster_set_level(m_idx, 20 + get_level(MANDOS_CALL_HALLS, 70, 0))
+				monster_set_level(m_idx, 20 + get_level(MANDOS_CALL_HALLS, 50, 0))
 				return TRUE
 			end
 	end,
 
 	["info"] = 	function()
-			return "level "..(get_level(MANDOS_CALL_HALLS, 70))
+			return "level "..(get_level(MANDOS_CALL_HALLS, 50))
 	end,
 	["desc"] =	{
 			"Summons a leveled spirit from the Halls of Mandos",

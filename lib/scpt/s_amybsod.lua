@@ -50,10 +50,10 @@ AMYBSOD_DARK = add_spell
 		local ret, dir, type
 		ret, dir = get_aim_dir()
 		if ret == FALSE then return end
-		return fire_ball(GF_DARK, dir, 40 + get_level(AMYBSOD_DARK, 600), 2 + get_level(AMYBSOD_DARK, 5))
+		return fire_ball(GF_DARK, dir, 20 + get_level(AMYBSOD_DARK, 300), 2 + get_level(AMYBSOD_DARK, 4))
 	end,
 	["info"] =      function()
-		return "dam "..(40 + get_level(AMYBSOD_DARK, 600)).." rad "..(2 + get_level(AMYBSOD_DARK, 5))
+		return "dam "..(20 + get_level(AMYBSOD_DARK, 300)).." rad "..(2 + get_level(AMYBSOD_DARK, 4))
 	end,
 	["desc"] =      {
 			"Conjures a ball of darkness to punch the monsters' lights out"
@@ -79,12 +79,12 @@ AMYBSOD_TROLL = add_spell
 			m_idx = place_monster_one(y, x, test_monster_name("Cave troll"), 0, FALSE, MSTATUS_FRIEND)
 
 			if m_idx ~= 0 then
-				monster_set_level(m_idx, 20 + get_level(AMYBSOD_TROLL, 70, 0))
+				monster_set_level(m_idx, 20 + get_level(AMYBSOD_TROLL, 40, 0))
 				return TRUE
 			end
 	end,
 	["info"] =      function()
-			return "level "..(get_level(AMYBSOD_TROLL, 70) + 20)
+			return "level "..(get_level(AMYBSOD_TROLL, 40) + 20)
 	end,
 	["desc"] =	{
 			"Summons a troll that fights on your side"

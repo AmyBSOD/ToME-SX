@@ -96,13 +96,13 @@ ULMO_CALL_ULUMURI = add_spell
 			y, x = find_position(player.py, player.px)
 			m_idx = place_monster_one(y, x, summons[rand_range(1, 2)], 0, FALSE, MSTATUS_FRIEND)
 			if m_idx ~= 0 then
-				monster_set_level(m_idx, 30 + get_level(ULMO_CALL_ULUMURI, 70, 0))
+				monster_set_level(m_idx, 30 + get_level(ULMO_CALL_ULUMURI, 50, 0))
 				return TRUE
 			end
 	end,
 
 	["info"] = 	function()
-			return "level "..(get_level(ULMO_CALL_ULUMURI, 70))
+			return "level "..(get_level(ULMO_CALL_ULUMURI, 50))
 	end,
 	["desc"] =	{
 			"Summons a leveled water spirit or elemental",
