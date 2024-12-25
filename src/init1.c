@@ -11222,6 +11222,9 @@ static errr process_dungeon_file_aux(char *buf, int *yval, int *xval, int xvalst
 		*xval = xvalstart;
 		for (x = *xval, i = 0; ((x < xmax) && (i < len)); x++, s++, i++)
 		{
+			/* Amy: don't try to access out of bounds tiles (fix for crashes in destroyed edoras/pelargir) */
+			if (y >= MAX_HGT) continue;
+
 			/* Access the grid */
 			cave_type *c_ptr = &cave[y][x];
 
