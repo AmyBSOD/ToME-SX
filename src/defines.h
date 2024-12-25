@@ -4764,6 +4764,7 @@ extern int PlayerUID;
 #define SKILL_TWO_HANDED        71
 #define SKILL_HELL              72
 #define SKILL_CELESTIAL         73
+#define SKILL_ANTINASTY         74
 
 /* Ugly but needed */
 #define MAX_SKILLS              200

@@ -177,6 +177,7 @@ C:a:k:=0:=0:Magic
 C:a:k:=0:=0:Magic-Device
 C:a:k:=0:=0:Spirituality
 C:a:k:+1000:+100:Antimagic
+C:a:k:+0:+400:Anti-nastiness
 C:a:O:23:33:1d1
 C:a:g:Nobody
 
@@ -724,6 +725,7 @@ C:a:k:=0:=0:Runecraft
 C:a:k:=0:=0:Thaumaturgy 
 C:a:k:+0:-200:Hell
 C:a:k:+0:+200:Celestial
+C:a:k:+0:+200:Anti-nastiness
 C:a:k:+1000:+300:Divination
 C:a:k:+1000:+300:Mind
 C:a:k:+0:+500:Spirituality 
@@ -1208,6 +1210,7 @@ C:a:k:=0:=0:Bearform-combat
 C:a:k:=0:=0:Critical-hits
 C:a:k:=20000:+0:Archery
 C:a:k:+1000:+400:Conveyance
+C:a:k:+0:+250:Anti-nastiness
 C:a:k:=0:=0:Backstab
 C:a:k:+0:+500:Stealth
 C:a:k:+0:-500:Stealing
@@ -1325,6 +1328,7 @@ C:a:k:+0:-500:Stealing
 C:a:k:+0:-500:Dodging
 C:a:k:+0:+500:Haggling
 C:a:k:+0:+200:Dual-wielding
+C:a:k:+0:+100:Anti-nastiness
 C:a:G:EXPERIMENTAL
 
 C:a:N:Mercenary
@@ -1688,6 +1692,7 @@ C:a:k:=0:=600:Ranged-power
 C:a:k:=0:=600:Haggling
 C:a:k:=0:=600:Dual-wielding
 C:a:k:=0:=600:Two-handed
+C:a:k:=0:=600:Anti-nastiness
 C:a:O:111:50:1d1
 C:a:O:19:12:1d1
 C:a:O:17:1:4d5

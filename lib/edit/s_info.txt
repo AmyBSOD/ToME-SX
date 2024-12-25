@@ -605,6 +605,11 @@ A:24:Use Four-dimensional Pocket
 I:1000
 F:RANDOM_GAIN
 
+N:74:Anti-nastiness
+D:Reduces spawn chance of nasty traps
+I:0
+F:RANDOM_GAIN
+
 f:Possession:Monster-lore%10
 f:Corpse-preservation:Monster-lore%10
 f:Summoning:Monster-lore%10
@@ -692,3 +697,4 @@ T:Main:Misc
 T:Misc:Clear-mind
 T:Misc:Haggling
 T:Misc:Four-dimensional
+T:Misc:Anti-nastiness

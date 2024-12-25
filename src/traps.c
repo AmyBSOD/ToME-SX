@@ -2693,6 +2693,21 @@ void place_trap(int y, int x)
 		trap = randint(max_t_idx - 1);
 		t_ptr = &t_info[trap];
 
+		/* anti-nastiness skill by Amy: reduces odds that a new trap will be a nasty trap */
+		int nastyward = get_skill(SKILL_ANTINASTY) * 2;
+
+		if (nastyward > 0) {
+			int effnastyward = nastyward;
+			if (effnastyward > 80) effnastyward = 80;
+
+			if (!can_detect_trap_type(trap) && magik(effnastyward)) continue;
+
+			if (nastyward > 80) {
+				if (!can_detect_trap_type(trap) && (randint(nastyward) > 80)) continue;
+			}
+
+		}
+
 		/* No traps below their minlevel */
 		if (t_ptr->minlevel > effect_level && ( (randint(3) != 1) || (randint(t_ptr->minlevel + 1) > (effect_level + 2) ) ) ) continue;
 		if ( (t_ptr->minlevel > (effect_level + 5)) && (randint(t_ptr->minlevel) != 1) ) continue;
