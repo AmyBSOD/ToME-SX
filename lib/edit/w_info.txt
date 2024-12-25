@@ -157,5 +157,8 @@ W:E:58:64:85
 # R'lyeh
 W:E:59:48:93
 
+# Mandos
+W:E:8:34:89
+
 # Starting position
 W:P:34:21

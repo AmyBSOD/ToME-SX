@@ -152,7 +152,7 @@ M:AQUATIC | CAN_SWIM | CAN_FLY
 
 # Used for astral mode
 N:8:Halls of Mandos
-D:HMa:*A BUG*YOU should see this message!*
+D:HMa:the entrance to the Halls of Mandos.
 W:1:98:1:0:14:160
 L:1:100:1:0:1:0
 O:20:20:20:20
@@ -202,7 +202,7 @@ R:30:0
 # Levels 128-150
 # Where Melkor lurks for the final battle!
 N:11:The Void
-D:Vod:a jumpgate to the Void
+D:Vod:a jumpgate to the Void.
 W:128:150:1:0:20:160
 L:183:97:102:3:0:0
 A:183:90:102:10:0:0:102:102

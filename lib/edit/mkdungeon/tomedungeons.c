@@ -303,7 +303,7 @@ void printRandoms(int lower, int upper, int count)
 				break;
 			case 8:
 				printf("N:8:Halls of Mandos\n");
-				printf("D:HMa:*A BUG*YOU should see this message!*\n");
+				printf("D:HMa:the entrance to the Halls of Mandos.\n");
 				printf("W:1:98:1:0:14:160\n");
 				break;
 			case 9:
@@ -318,7 +318,7 @@ void printRandoms(int lower, int upper, int count)
 				break;
 			case 11:
 				printf("N:11:The Void\n");
-				printf("D:Vod:a jumpgate to the Void\n");
+				printf("D:Vod:a jumpgate to the Void.\n");
 				printf("W:128:150:1:0:20:160\n");
 				break;
 			case 12:
