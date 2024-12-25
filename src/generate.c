@@ -8414,6 +8414,7 @@ static bool cave_gen(void)
 		m_idx = cave[oy][ox].m_idx;
 
 		if (!m_idx && wizard) cmsg_print(TERM_L_RED, "WARNING: Could not place guardian.");
+		if (m_idx && wizard) cmsg_print(TERM_GREEN, "Guardian has been placed.");
 
 		/*
 		 * If guardian is successfully created and his/her/its

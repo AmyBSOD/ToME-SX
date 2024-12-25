@@ -714,3 +714,12 @@ is reeking like a toilet! You have to fight the urge to drop unconscious from th
 1
 says 'Too late for you, I've already used the half-ghost Boo-Snap to delete your equipment.'
 
+N:3920:Cara
+4
+announces 'Eating animals is murder!'
+shouts 'You're wearing clothes made of animal skin! I'm gonna call PETA!'
+announces 'Did you know that I'm following a strict vegan diet?'
+shouts 'Drinking milk should be prohibited as milking animals hurts them! You should only drink oat and soy beverages!'
+1
+whimpers 'Take my high heels if you want, I don't need them anyway, but please, don't kill me!'
+

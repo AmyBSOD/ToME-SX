@@ -14,7 +14,7 @@ int random_number(int maxrnd)
 /* select a random type of walkable terrain */
 int randomfloortype(void)
 {
-	int randfloor = random_number(31);
+	int randfloor = random_number(41);
 	int floornumber = 1;
 
 	switch (randfloor) {
@@ -86,13 +86,31 @@ int randomfloortype(void)
 			break;
 		case 23:
 		case 24:
+			floornumber = 88; /* dirt */
+			break;
 		case 25:
+			floornumber = 91; /* sand */
+			break;
 		case 26:
+			floornumber = 93; /* ash */
+			break;
 		case 27:
 		case 28:
+			floornumber = 94; /* mud */
+			break;
 		case 29:
 		case 30:
 		case 31:
+		case 32:
+		case 33:
+		case 34:
+		case 35:
+		case 36:
+		case 37:
+		case 38:
+		case 39:
+		case 40:
+		case 41:
 			floornumber = 1; /* open floor */
 			break;
 
@@ -107,7 +125,7 @@ int randomfloortype(void)
 /* select a random type of non-walkable or otherwise obstructing terrain */
 int randomwalltype(void)
 {
-	int randfloor = random_number(35);
+	int randfloor = random_number(40);
 	int floornumber = 56;
 
 	/* small chance of something walkable */
@@ -207,6 +225,13 @@ int randomwalltype(void)
 		case 35:
 			floornumber = 96; /* tree */
 			break;
+		case 36:
+		case 37:
+		case 38:
+		case 39:
+		case 40:
+			floornumber = 56; /* granite wall */
+			break;
 
 		default:
 			floornumber = 1;
@@ -223,12 +248,12 @@ void printRandoms(int lower, int upper, int count)
 	int d_id;
 	int contnum;
 
-	num = random_number(47);
+	num = random_number(49);
 
 	printf("V:2.0.0\n", num);
 	printf("\n", num);
 
-	for (d_id = 0; d_id <= 59; d_id++) {
+	for (d_id = 0; d_id <= 60; d_id++) {
 
 		switch (d_id) {
 			case 0:
@@ -540,94 +565,136 @@ void printRandoms(int lower, int upper, int count)
 				printf("D:Rly:the entrance to the town of horrors R'lyeh.\n");
 				printf("W:55:80:1:0:30:200\n");
 				break;
+			case 60:
+				printf("N:60:Far Harad\n");
+				printf("D:DHa:a desert path into Far Harad.\n");
+				printf("W:60:98:1:0:60:180\n");
+				break;
 		}
 
 		switch (d_id) {
-			case 1:
+			case 1: /* Mirkwood */
 				printf("F:PRINCIPAL\n");
 				break;
-			case 2:
+			case 2: /* Mordor */
 				printf("F:PRINCIPAL\n");
 				break;
-			case 3:
-				printf("F:PRINCIPAL | NO_RECALL\n");
+			case 3: /* Angband */
+				printf("F:PRINCIPAL | NO_RECALL | NO_EASY_MOVE\n");
 				break;
-			case 4:
+			case 4: /* Barrow-Downs */
 				printf("F:PRINCIPAL\n");
 				break;
-			case 5:
-				printf("F:NO_RECALL\n");
+			case 5: /* Mount Doom */
+				printf("F:NO_RECALL | NO_EASY_MOVE\n");
 				break;
-			case 6:
+			case 6: /* Nether Realm */
 				printf("F:FINAL_GUARDIAN_1032 | FINAL_ARTIFACT_203 | NO_RECALL_OUT | NO_RECALL\n");
+				printf("F:NO_EASY_MOVE\n");
 				break;
-			case 7:
+			case 7: /* Numenor */
 				printf("F:FINAL_GUARDIAN_980 | FINAL_ARTIFACT_204\n");
 				break;
-			case 8:
+			case 8: /* Halls of Mandos */
 				printf("F:NO_RECALL\n");
 				break;
-			case 9:
+			case 9: /* Cirith Ungol */
 				printf("F:FINAL_GUARDIAN_481\n");
 				break;
-			case 10:
+			case 10: /* Heart of the Earth */
 				printf("F:FINAL_GUARDIAN_1035 | NO_RECALL\n");
 				break;
-			case 11:
-				printf("F:NO_RECALL_OUT | NO_RECALL | FINAL_GUARDIAN_1044\n");
+			case 11: /* Void */
+				printf("F:NO_RECALL_OUT | NO_RECALL | NO_EASY_MOVE | FINAL_GUARDIAN_1044\n");
 				break;
-			case 16:
+			case 16: /* Paths of the Dead */
 				printf("F:FINAL_GUARDIAN_804 | FINAL_ARTIFACT_91\n");
 				break;
-			case 17:
+			case 17: /* Illusory Castle */
 				printf("F:FINAL_GUARDIAN_1033 | FINAL_ARTIFACT_160\n");
 				break;
-			case 18:
+			case 18: /* Maze */
 				printf("F:FINAL_GUARDIAN_1029 | FINAL_ARTIFACT_38\n");
 				break;
-			case 19:
+			case 19: /* Orc Cave */
 				printf("F:FINAL_OBJECT_810 | FINAL_GUARDIAN_373\n");
 				break;
-			case 20:
+			case 20: /* Erebor */
 				printf("F:FINAL_GUARDIAN_715 | NO_RECALL\n");
 				break;
-			case 21:
+			case 21: /* Old Forest */
 				printf("F:FINAL_GUARDIAN_206\n");
 				break;
-			case 22:
+			case 22: /* Moria */
 				printf("F:FINAL_GUARDIAN_872 | FORCE_DOWN\n");
 				break;
-			case 23:
+			case 23: /* Dol Guldur */
 				printf("F:FINAL_GUARDIAN_819 | FINAL_ARTIFACT_205\n");
 				break;
-			case 24:
+			case 24: /* Small Water Cave */
 				printf("F:FINAL_GUARDIAN_517 | NO_RECALL\n");
 				break;
-			case 25:
+			case 25: /* Sacred Land of Mountains */
 				printf("F:FINAL_GUARDIAN_789 | FINAL_ARTIFACT_27\n");
 				break;
-			case 26:
+			case 26: /* Land of Rhun */
 				printf("F:FINAL_GUARDIAN_990\n");
 				break;
-			case 27:
+			case 27: /* Sandworm Lair */
 				printf("F:FINAL_GUARDIAN_1030 | FINAL_ARTIFACT_153\n");
 				break;
-			case 29:
+			case 29: /* Helcaraxe */
 				printf("F:FINAL_GUARDIAN_1034\n");
 				break;
-			case 31:
-				printf("F:NO_RECALL\n");
+			case 31: /* Forodwaith */
+				printf("F:NO_RECALL | FINAL_GUARDIAN_3908\n");
 				break;
-			case 32:
-				printf("F:NO_RECALL\n");
+			case 32: /* Emyn Luin */
+				printf("F:NO_RECALL | FINAL_GUARDIAN_3909\n");
 				break;
-			case 38:
-				printf("F:NO_RECALL\n");
+			case 33: /* Dol Amroth */
+				printf("F:NO_EASY_MOVE | FINAL_GUARDIAN_3910\n");
+				break;
+			case 34: /* Angmar */
+				printf("F:FINAL_GUARDIAN_3911\n");
+				break;
+			case 35: /* Near Harad */
+				printf("F:FINAL_GUARDIAN_3912\n");
+				break;
+			case 36: /* Isengard */
+				printf("F:FINAL_GUARDIAN_3913\n");
+				break;
+			case 37: /* Tol Eressea */
+				printf("F:FINAL_GUARDIAN_3914\n");
+				break;
+			case 38: /* Utumno */
+				printf("F:NO_RECALL | NO_EASY_MOVE | FINAL_GUARDIAN_3915\n");
+				break;
+			case 54: /* Barad-Dur */
+				printf("F:FINAL_GUARDIAN_3916\n");
+				break;
+			case 55: /* Amon Sul */
+				printf("F:FINAL_GUARDIAN_3917\n");
+				break;
+			case 56: /* Hornburg */
+				printf("F:FINAL_GUARDIAN_3918\n");
+				break;
+			case 57: /* Fornost Erain */
+				printf("F:FINAL_GUARDIAN_3919\n");
+				break;
+			case 58: /* Caras Galadhon */
+				printf("F:NO_EASY_MOVE | FINAL_GUARDIAN_3920\n");
+				break;
+			case 59: /* R'lyeh */
+				printf("F:FINAL_GUARDIAN_3922\n");
+				break;
+			case 60: /* Far Harad */
+				printf("F:FINAL_GUARDIAN_3923\n");
 				break;
 		}
 
 		/* randomized content for those dungeons that should have randomized content --Amy */
-		if ( (d_id >= 1 && d_id <= 11) || (d_id >= 16 && d_id <= 27) || (d_id == 29) || (d_id >= 31 && d_id <= 59) ) {
+		if ( (d_id >= 1 && d_id <= 11) || (d_id >= 16 && d_id <= 27) || (d_id == 29) || (d_id >= 31 && d_id <= 60) ) {
 
 			if (random_number(3) == 2) {
 
@@ -827,7 +894,7 @@ void printRandoms(int lower, int upper, int count)
 
 			} else {
 
-				contnum = random_number(48);
+				contnum = random_number(49);
 
 				printf("# random type %d\n", contnum);
 
@@ -859,7 +926,7 @@ void printRandoms(int lower, int upper, int count)
 						printf("L:1:100:1:0:1:0\n");
 						printf("A:56:100:56:0:56:0:57:58\n");
 						printf("O:20:20:20:20\n");
-						printf("F:CAVERN | NO_EASY_MOVE\n");
+						printf("F:CAVERN\n");
 						printf("F:QUARTZ_VEIN | MAGMA_VEIN\n");
 						printf("F:ADJUST_LEVEL_1_2 | ADJUST_LEVEL_1\n");
 						printf("F:FILL_METHOD_0\n");
@@ -885,7 +952,7 @@ void printRandoms(int lower, int upper, int count)
 						printf("O:10:10:30:30\n");
 						printf("E:2d10:20:FIRE\n");
 						printf("F:CAVE | LAVA_RIVER | NO_STREAMERS\n");
-						printf("F:FILL_METHOD_0 | NO_EASY_MOVE\n");
+						printf("F:FILL_METHOD_0\n");
 						printf("R:95:1\n");
 						printf("M:IM_FIRE\n");
 						printf("R:5:0\n");
@@ -897,7 +964,7 @@ void printRandoms(int lower, int upper, int count)
 						printf("A:50:50:0\n");
 						printf("O:25:25:25:25\n");
 						printf("E:1d10:10:NETHER\n");
-						printf("F:EMPTY | FORGET | NO_BREATH | NO_EASY_MOVE | NO_SHAFT\n");
+						printf("F:EMPTY | FORGET | NO_BREATH | NO_SHAFT\n");
 						printf("F:RANDOM_TOWNS | ADJUST_LEVEL_2 | NO_STREAMERS\n");
 						printf("F:LAVA_RIVER\n");
 						printf("F:FILL_METHOD_2\n");
@@ -960,7 +1027,7 @@ void printRandoms(int lower, int upper, int count)
 						printf("A:40:60:0\n");
 						printf("O:25:25:25:25\n");
 						printf("E:2d6:200:DARK\n");
-						printf("F:EMPTY | FORGET | NO_BREATH | NO_EASY_MOVE |\n");
+						printf("F:EMPTY | FORGET | NO_BREATH |\n");
 						printf("F:ADJUST_LEVEL_1_2 | ADJUST_LEVEL_1 | NO_STREAMERS | NO_SHAFT\n");
 						printf("F:FILL_METHOD_2\n");
 						printf("R:1:0\n");
@@ -1182,7 +1249,7 @@ void printRandoms(int lower, int upper, int count)
 						printf("O:20:20:20:20\n");
 						printf("F:SMALLEST | NO_DESTROY | TOWER | RANDOM_TOWNS | \n");
 						printf("F:ADJUST_LEVEL_1 | NO_STREAMERS | NO_SHAFT | NO_STAIR | \n");
-						printf("F:NO_EASY_MOVE | FILL_METHOD_2 \n");
+						printf("F:FILL_METHOD_2 \n");
 						printf("R:80:3\n");
 						printf("M:R_CHAR_p | R_CHAR_P \n");
 						printf("R:20:3\n");
@@ -1244,7 +1311,7 @@ void printRandoms(int lower, int upper, int count)
 						printf("L:1:100:1:0:1:0\n");
 						printf("A:56:100:56:0:56:0:57:58\n");
 						printf("O:20:20:20:20\n");
-						printf("F:CAVERN | NO_EASY_MOVE \n");
+						printf("F:CAVERN \n");
 						printf("F:ADJUST_LEVEL_1_2 | ADJUST_LEVEL_1 \n");
 						printf("F:FILL_METHOD_0 \n");
 						printf("R:100:0\n");
@@ -1393,7 +1460,7 @@ void printRandoms(int lower, int upper, int count)
 						printf("L:1:80:86:20:1:0\n");
 						printf("A:56:80:87:10:177:10:205:58\n");
 						printf("O:20:20:20:20\n");
-						printf("F:RANDOM_TOWNS | BIG | LAVA_RIVERS | CAVERN | NO_EASY_MOVE |\n");
+						printf("F:RANDOM_TOWNS | BIG | LAVA_RIVERS | CAVERN |\n");
 						printf("F:FILL_METHOD_4\n");
 						printf("E:3d5:30:SOUND\n");
 						break;
@@ -1413,6 +1480,23 @@ void printRandoms(int lower, int upper, int count)
 						printf("R:10:3\n");
 						printf("S:BRAIN_SMASH\n");
 						break;
+					case 49:
+						printf("# based on Far Harad\n", contnum);
+						printf("L:91:100:91:0:91:0\n");
+						printf("A:91:100:91:0:91:0:91:91\n");
+						printf("O:20:20:20:20\n");
+						printf("F:NO_DOORS | CAVE | CAVERN | HOT | EMPTY | FLAT\n");
+						printf("F:RANDOM_TOWNS | NO_SHAFT |\n");
+						printf("F:FILL_METHOD_4\n");
+						printf("E:1d1:5:INERTIA\n");
+						printf("R:10:0\n");
+						printf("R:40:3\n");
+						printf("M:WILD_TOO | R_CHAR_p\n");
+						printf("R:40:3\n");
+						printf("M:WILD_WASTE\n");
+						printf("R:10:3\n");
+						printf("M:WILD_GRASS\n");
+						break;
 				}
 			}
 
@@ -1427,7 +1511,7 @@ void printRandoms(int lower, int upper, int count)
 /* Driver code */
 int main()
 {
-	int lower = 1, upper = 47, count = 31;
+	int lower = 1, upper = 49, count = 31;
 
 	// Use current time as
 	// seed for random generator

@@ -67283,6 +67283,402 @@ D:Eurgh, this girl reeks of farting gas and decay! Do your best to stay
 D:far away from her, or she'll subject you to whatever she emits, and 
 D:it certainly won't be pleasant! 
 
+# New monster added by furiosity for the Theme module
+# changed by Amy; Forodwaith boss
+N:3908:Sizzle
+G:H:v
+I:130:10d500:60:150:0
+W:80:1:0:80000
+E:0:1:0:2:2:2
+O:20:40:20:10
+B:HIT:UN_BONUS:5d10
+B:HIT:EXP_80:5d10
+B:HIT:ABOMINATION:5d10
+B:HIT:DISEASE:5d10
+F:BASEANGBAND | UNIQUE | FORCE_MAXHP | SPECIAL_GENE |
+F:ELDRITCH_HORROR | REFLECTING | MALE | 
+F:NO_SLEEP | NO_CUT | NO_STUN | NO_CONF | NO_FEAR | 
+F:ONLY_ITEM | DROP_4D2 | DROP_GREAT | NO_THEFT | DROP_RANDART | 
+F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS | 
+F:RES_NETH | RES_PLAS | EVIL | EMPTY_MIND | 
+D:A shadowy creature of Elvish legend, said to have plagued the 
+D:newly-awakened Elves at Cuivienen. Those Elves captured by the 
+D:Hunter were thought to have been corrupted by Melkor to form 
+D:the race of Orcs. You sense corruption all around you as it 
+D:approaches. Your heart fills with despair and anguish, and you 
+D:can just barely resist fleeing as far away from it as possible.
+
+# New monster added for the Theme module
+# Suggested by Atarlost in the t-o-m-e.net forum
+# changed by Amy; Emyn Luin boss
+N:3909:G-Cheater
+G:k:G
+I:110:20d100:30:200:200
+W:70:1:0:12000
+B:HIT:HURT:4d6
+B:HIT:HURT:4d6
+B:HIT:HURT:4d6
+B:HIT:HURT:4d6
+F:UNIQUE | MALE | ESCORT | ESCORTS | CAN_SPEAK | BASEANGBAND | 
+F:FORCE_MAXHP | SMART | SPECIAL_GENE | DROP_RANDART | NO_THEFT | 
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | DROP_GREAT 
+F:OPEN_DOOR | BASH_DOOR 
+F:EVIL | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS 
+D:The slayer of Thingol, and the thief of the Nauglamir. He leads the dark 
+D:dwarves who escaped from Nogrod.
+
+# New monster added by furiosity for the Theme module
+# changed by Amy; Dol Amroth boss
+N:3910:Ryu
+G:p:w
+I:110:10d100:10:60:0
+W:35:1:1800:6000
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:HURT
+B:HIT:HURT
+B:WAIL:TERRIFY
+B:INSULT:*
+F:BASEANGBAND | UNIQUE | MALE | CAN_SPEAK | NO_THEFT | 
+F:DROP_RANDART | SPECIAL_GENE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | HAS_LITE | SUSCEP_POIS | 
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_RANDART | FORCE_MAXHP | 
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_ACID | RES_NETH | RES_WATE | 
+S:1_IN_8 | 
+S:S_UNDEAD | S_KIN | S_DEMON | S_DRAGON | 
+D:The proud ruler of the gray-eyed Men of Dol Amroth, Ryu 
+D:had been aligned with the forces of good for most of his life. 
+D:However, Sauron has managed to sway Ryu to the Shadow by 
+D:making him jealous of King Elessar and the splendor of Gondor. 
+D:He now sits sullenly upon his throne in Dol Amroth, unable to 
+D:resist Sauron's enchantments, and growing ever more bitter and 
+D:vengeful against the Free People.
+
+# New monster added by furiosity for the Theme module
+# A Black Numenorean (hell knight) on steroids
+# changed by Amy; Angmar boss
+N:3911:Rubinho
+G:p:r
+I:140:80d100:50:300:0
+W:90:1:0:150000
+E:1:1:1:2:1:1
+O:0:40:60:0
+B:HIT:HURT:20d5
+B:HIT:EXP_80:20d5
+F:UNIQUE | MALE | MORTAL | BASEANGBAND | HAS_LITE | 
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT |
+F:FORCE_MAXHP | SMART | IM_FIRE | IM_ELEC | IM_POIS |
+F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | DROP_GREAT | 
+F:RES_NETH | RES_NEXU | RES_PLAS | RES_WATE | CAN_SPEAK | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | EVIL | 
+S:1_IN_5 | 
+S:BLIND | SCARE | CAUSE_4 | BA_NETH | BA_FIRE | BO_PLAS
+S:S_HI_DEMON | S_HI_UNDEAD | HASTE | 
+D:A Man of Numenor who fell under the influence of Sauron during the time 
+D:the Dark Lord dwelt on that island. He sailed east to Middle-earth, with 
+D:a companion named Herumor, and settled in the southern region of Harad. 
+D:These two came to hold great power among the Haradrim. Rubinho has been 
+D:appointed the task of guarding the realm of Angmar from intruders, in 
+D:anticipation of Sauron's victory over the free People.
+
+# New monster added by furiosity for the Theme module
+# Basically an insanely OOD Black Numenorean (hell knight)
+# changed by Amy; Near Harad boss
+N:3912:Pete
+G:p:o
+I:120:50d100:40:160:0
+W:45:1:0:29000
+E:1:1:1:2:1:1
+O:0:40:60:0
+B:HIT:HURT:10d5
+B:HIT:EXP_80:10d5
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT |
+F:UNIQUE | MALE | MORTAL | BASEANGBAND | HAS_LITE | CAN_SPEAK | 
+F:FORCE_MAXHP | SMART | IM_FIRE | IM_COLD | IM_POIS | IM_COLD | 
+F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | RES_NETH | RES_NEXU | RES_PLAS |
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | EVIL | 
+S:1_IN_5 | 
+S:BLIND | SCARE | CAUSE_3 | BA_NETH | BA_FIRE | BO_PLAS
+S:S_MONSTERS | S_DEMON
+D:One of the many Numenoreans who fell under the shadow of Sauron 
+D:after Ar-Pharazon brought the Dark Lord to Numenor. With another 
+D:named Fuinur, he settled among the Haradrim on Middle-Earth, and 
+D:became a lord in the lands of Harad. From this, and his worship of 
+D:Sauron's darkness, he must have taken taken his name: Pete means 
+D:'lord of the dark', although he's actually the nemesis of Mickey 
+D:Mouse.
+
+# boss for Isengard by Amy, basically an evil Gandalf
+N:3913:Tobi
+G:p:s
+I:120:49d101:101:100:0
+W:60:7:1600:35000
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:HIT:UN_BONUS:6d8
+B:HIT:UN_BONUS:6d8
+B:HIT:TERRIFY:5d5
+B:HIT:TERRIFY:5d5
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT |
+F:UNIQUE | MALE | CAN_SPEAK | DROP_CORPSE |
+F:FORCE_SLEEP | FORCE_MAXHP | REFLECTING | RES_TELE |
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD |
+F:SMART | OPEN_DOOR | BASH_DOOR | 
+F:GOOD | IM_FIRE | IM_COLD | 
+F:IM_ELEC | IM_POIS | BASEANGBAND | HAS_LITE
+S:1_IN_2 | 
+S:HEAL | HASTE | TPORT | TELE_AWAY | BLIND | CONF | SCARE | 
+S:CAUSE_4 | BRAIN_SMASH | FORGET | TRAPS | 
+S:BA_FIRE | BO_FIRE | BO_PLAS | BO_MANA | CAUSE_4 |
+S:S_MONSTERS | S_ANGEL | S_DRAGON | S_KIN 
+D:The wizard who opposed Sauron and, in the end, was the only 
+D:one of the Istari to succeed in his task. Tobi is very 
+D:wise and specialises in fire magic. 
+
+# boss for Tol Eressea by Amy, name taken from The Elder Scrolls 4 (Oblivion)
+N:3914:Bralsa Andaren
+G:B:y
+I:130:100d85:100:100:50
+W:75:6:420000:35000
+E:1:1:1:2:1:1
+O:50:50:0:0
+B:HIT:HURT:12d15
+B:HIT:HURT:12d15
+B:HIT:HURT:12d15
+B:HIT:HURT:12d15
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT |
+F:UNIQUE | FEMALE | CAN_SPEAK | THUNDERLORD | ONLY_ITEM | RES_TELE | 
+F:DROP_CHOSEN | DROP_CORPSE | DROP_SKELETON | CAN_FLY | 
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:DROP_4D2 | DROP_1D2 | DROP_GOOD | DROP_60 | DROP_90 |
+F:EVIL | IM_POIS | IM_ELEC | SMART | REGENERATE | OPEN_DOOR | BASH_DOOR |
+F:MORTAL | HAS_LITE
+S:1_IN_4 |
+S:SCARE | BLIND | TPORT | BLINK | TELE_AWAY | TELE_TO | 
+S:BR_FIRE | BA_MANA | S_THUNDERLORD
+D:Former leader among the Thunderlords, she and Trone have fallen under the 
+D:control of Morgoth. Laronth, her eagle, can summon Thunderlords to her aid. 
+
+# New monster added for the Theme module
+# Adapted from UnAngband
+# changed by Amy; Utumno boss
+N:3915:Mr. Marihuana
+G:Y:b
+I:140:440d100:255:10000:0
+W:127:5:0:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:SHOW:HURT:13d13
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT |
+F:BASEANGBAND | 
+F:UNIQUE | MALE | FORCE_MAXHP | GOOD | HAS_LITE | CAN_SPEAK | 
+F:CAN_FLY | NO_CUT | 
+F:GOOD | OPEN_DOOR | BASH_DOOR | SMART | 
+F:RES_NETH | REFLECTING | WEIRD_MIND | 
+F:REGENERATE | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:RES_TELE | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | 
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | CAN_SWIM | 
+S:1_IN_5 | 
+S:CONF | MIND_BLAST | BRAIN_SMASH | 
+S:BA_MANA | CAUSE_4 | MISSILE | SCARE | SLOW | HOLD | BO_MANA | 
+S:HASTE | HAND_DOOM | HEAL | BLINK | BR_MANA | S_MONSTERS | 
+D:A mysterious figure in a blue coat, his face creased in laughter. 
+D:Legend has it that he is older than Arda itself, and will aid 
+D:the forces of good in any way he can. But actually, all he ever 
+D:wants to do is smoke joints.
+
+N:3916:Conse
+G:o:v
+I:120:52d10:20:50:20
+W:20:4:2300:800
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:3d7
+B:HIT:HURT:3d7
+B:HIT:HURT:3d7
+B:HIT:HURT:3d7
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT |
+F:UNIQUE | MALE | CAN_SPEAK |
+F:FORCE_MAXHP | SPECIAL_GENE | 
+F:ESCORT | DROP_SKELETON | DROP_CORPSE | 
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | ORC | IM_POIS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:A large and powerful orc, he looks just like his father. He is tall and 
+D:fast, but fortunately blessed with orcish brains. 
+
+N:3917:David
+G:W:D
+I:120:24d100:90:60:10
+W:40:13:0:10000
+E:0:0:0:0:0:0
+O:30:30:30:10
+B:HIT:HURT:6d6
+B:HIT:HURT:6d6
+B:HIT:EXP_80:4d6
+B:HIT:EXP_80:4d6
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT |
+F:UNIQUE | MALE |
+F:FORCE_MAXHP | CAN_SPEAK | 
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD |
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | MOVE_BODY | DROP_CHOSEN |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | 
+F:BASEANGBAND | NO_CUT
+D:A tall black undead, he is a master of horsemanship. He longs 
+D:to taste your blood. 
+
+# New monster added for the Theme module
+# Description from UnAngband
+# Basically just an upgrade on the silent watcher.
+# changed by Amy; Hornburg boss
+N:3918:Aee
+G:g:s
+I:140:60d200:100:300:0
+W:60:10:4000:80000
+E:3:0:3:3:2:0
+O:0:0:0:0
+B:GAZE:TERRIFY:5d8
+B:GAZE:PARALYZE:5d8
+B:GAZE:LOSE_STR:5d8
+B:GAZE:HALLU:5d8
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT |
+F:UNIQUE | FORCE_MAXHP | INVISIBLE | WEIRD_MIND | MALE | 
+F:EMPTY_MIND | COLD_BLOOD | CAN_SPEAK | 
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | EVIL |
+F:HURT_ROCK | COLD_BLOOD | HURT_LITE | NO_FEAR |
+F:NO_CONF | NO_SLEEP | NO_STUN | NONLIVING | RES_TELE | 
+F:BASEANGBAND | NO_CUT | REGENERATE | 
+S:1_IN_3 | 
+S:SHRIEK | S_SPIDER | S_HI_UNDEAD | MIND_BLAST | DRAIN_MANA
+D:It looks like a great figure seated upon a throne, with three joined 
+D:bodies and three vulture-like heads. It seems to be carved out of huge 
+D:blocks of stone, immovable, and yet strangely aware of your presence. 
+D:The black stones of its eyes glitter with its dreadful will. Visible or 
+D:invisible, none shall pass by this guardian.
+
+# New monster added by furiosity for the Theme module
+# Anti-Naugladur
+# changed by Amy; Fornost Erain boss
+N:3919:Doctor Max
+G:k:w
+I:110:20d100:30:200:200
+W:70:1:0:12000
+B:HIT:HURT:4d6
+B:HIT:HURT:4d6
+B:HIT:HURT:4d6
+B:HIT:HURT:4d6
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT |
+F:UNIQUE | MALE | CAN_SPEAK | 
+F:FORCE_MAXHP | SMART | 
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | DROP_GREAT 
+F:OPEN_DOOR | BASH_DOOR | BASEANGBAND
+F:GOOD | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS 
+S:1_IN_3 |
+S:BO_POIS | BA_POIS | BR_POIS
+D:A Dwarf of Nogrod in the Blue Mountains, and one of the 
+D:greatest smiths in the history of Middle-earth. Among his 
+D:works were Angrist, Narsil, and the Dragon-helm of Dor-lómin. 
+D:He is he last among the Dwarves of Nogrod to be on the 
+D:side of the Light.
+
+N:3920:Cara
+G:H:s
+I:140:60d50:30:80:20
+W:98:5:1500:5000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:EXP_80:20d6
+B:KICK:SHATTER:20d6
+B:CRAWL:EAT_FOOD
+B:CRAWL:EAT_FOOD
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT |
+F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | 
+F:OPEN_DOOR | DROP_4D2 | BASEANGBAND | UNIQUE | CAN_SWIM | 
+F:SMART | WEIRD_MIND | TAKE_ITEM | EVIL | IM_ELEC | IM_COLD | RES_TELE | 
+F:RES_NETH | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | NO_FEAR | NO_STUN | NO_CONF | 
+F:NO_SLEEP | 
+S:1_IN_5 | 
+S:BR_ELEC | BR_LITE | BR_PLAS | ROCKET | BR_WALL | BA_FIRE | BA_MANA | SCARE | 
+S:BLIND | HASTE | TELE_LEVEL | 
+D:She looks like her name was Arvogenia, but your status line shows that her name 
+D:is Cara. Either way, she looks like she used to have been pretty at one point but 
+D:has developed a terrible eating disorder that turned her ugly and turgid.
+
+N:3921:Arvogenia
+G:H:s
+I:140:60d50:30:80:20
+W:70:5:2500:5000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:EXP_80:20d6
+B:KICK:SHATTER:20d6
+F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | WILD_TOWN | WILD_GRASS | WILD_WOOD | 
+F:OPEN_DOOR | DROP_4D2 | BASEANGBAND | UNIQUE | CAN_SWIM | WILD_SHORE | WILD_WASTE | 
+F:SMART | WEIRD_MIND | TAKE_ITEM | EVIL | IM_ELEC | IM_COLD | RES_TELE | WILD_MOUNTAIN | 
+F:RES_NETH | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | NO_FEAR | NO_STUN | NO_CONF | 
+F:NO_SLEEP | 
+S:1_IN_5 | 
+S:BR_ELEC | BR_LITE | BR_PLAS | ROCKET | BR_WALL | BA_FIRE | BA_MANA | SCARE | 
+S:BLIND | HASTE | TELE_LEVEL | 
+D:A rather pretty girl in sexy leather pumps. Eventually she will develop an eating 
+D:disorder, throw all her leather clothes away, and refer to herself by the name 'Cara'. 
+D:But thankfully that hasn't happened yet.
+
+N:3922:Harro
+G:e:G
+I:130:64d100:90:120:10
+W:80:3:0:44444
+E:0:0:0:0:0:0
+O:20:50:30:0
+B:CRUSH:HURT:15d15
+B:CRUSH:HURT:15d15
+B:CRUSH:HURT:15d15
+B:CRUSH:HURT:15d15
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT |
+F:UNIQUE | CAN_SPEAK | RES_TELE | ELDRITCH_HORROR | CAN_FLY |
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | MALE | 
+F:ONLY_ITEM | DROP_3D2 | DROP_4D2 | DROP_GOOD | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | MOVE_BODY | 
+F:EVIL | DEMON | IM_ACID | IM_ELEC |
+F:IM_COLD | IM_POIS | BASEANGBAND | HAS_LITE
+S:1_IN_3 | 
+S:TELE_AWAY | BLIND | HOLD | SCARE |  BRAIN_SMASH | 
+S:BR_DARK | BA_DARK | BR_NETH | HAND_DOOM |
+S:S_HI_UNDEAD | S_DEMON | S_MONSTERS | S_HYDRA
+D:"...it was a gigantic eye staring down at them. Around the eye, 
+D:the sky split; deep clefts opened through which the darkness 
+D:began to ooze, a darkness blacker than the night, which crawled 
+D:down as a set of slimy tentacles, taking on more form, more 
+D:definite shape... something was standing, outlined against 
+D:the black sky, something which had tentacles of darkness 
+D:and a green-glowing eye." 
+
+# New monster added by furiosity for the Theme module
+# changed by Amy; Far Harad boss
+N:3923:Ingrid
+G:#:s
+I:120:50d100:30:120:40
+W:98:3:6000:13500
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:KICK:HURT:12d12
+B:KICK:HURT:12d12
+B:KICK:HURT:12d12
+B:KICK:HURT:12d12
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT |
+F:FORCE_SLEEP | FORCE_MAXHP | UNIQUE | SUSCEP_FIRE |
+F:ONLY_ITEM | DROP_4D2 | DROP_GOOD | MOVE_BODY | DROP_CORPSE |
+F:SMART | TAKE_ITEM | BASH_DOOR | KILL_WALL | NO_SLEEP | CAN_SPEAK | 
+F:GOOD | BASEANGBAND | NO_CUT | FEMALE | CAN_FLY | 
+S:1_IN_3 | 
+S:BLIND | SCARE | CAUSE_4 | BA_NETH | BA_FIRE | BO_PLAS | BR_PLAS |
+S:S_MONSTERS | S_HI_DEMON | HAND_DOOM | BO_ICEE | BR_SHAR |
+S:S_HI_UNDEAD
+D:A very sexy secretary with high heels and painted fingernails. She 
+D:doesn't mess around, and is here to fuck you up for trespassing 
+D:in her office. 
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness

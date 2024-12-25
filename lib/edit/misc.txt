@@ -20,7 +20,7 @@ M:Z:553
 # Maximum number of monsters in r_info.txt
 # WARNING ! add one more to the real count for the player ghost !!
 # this means that you add 2 to the last ID number used in the file
-M:R:3909
+M:R:3925
 
 # Maximum number of monsters in re_info.txt
 # WARNING ! Use the exact amount of ego types used, if not you
@@ -49,7 +49,7 @@ M:s:10
 M:E:319
 
 # Maximum number of dungeon types in d_info.txt
-M:D:60
+M:D:61
 
 # Maximum number of trap types in tr_info.txt
 M:U:205
