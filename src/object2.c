@@ -2677,7 +2677,8 @@ void random_artifact_resistance(object_type * o_ptr)
 
 	if (give_resistance)
 	{
-		random_resistance(o_ptr, FALSE, ((randint(22)) + 16));
+		if (randint(50) == 1) random_resistance(o_ptr, FALSE, randint(4) + 41); /* RES_WATER, RES_INERTIA, RES_PLASMA or RES_DISINT */
+		else random_resistance(o_ptr, FALSE, ((randint(22)) + 16));
 	}
 }
 
@@ -2960,8 +2961,58 @@ static bool make_ego_item(object_type *o_ptr, bool good)
 	 * Sometimes(rarely) tries for a double ego
 	        * Also make sure we dont already have a name2b, wchih would mean a special ego item
 	 */
-	if (magik(7 + luck( -7, 7)) && (!o_ptr->name2b))
+	if (magik(15 + luck( -7, 7)) && (!o_ptr->name2b))
 	{
+		/* Amy edit: should be possible to have double ego items where one ego is good and the other is bad! */
+
+		C_MAKE(ok_ego, max_e_idx, int);
+
+		/* Grab the ok ego */
+		for (i = 0; i < max_e_idx; i++)
+		{
+			ego_item_type *e_ptr = &e_info[i];
+			bool ok = FALSE;
+
+			/* Skip "empty" items */
+			if (!e_ptr->name) continue;
+
+			/* Must have the correct fields */
+			for (j = 0; j < 20; j++)
+			{
+				if (e_ptr->tval[j] == o_ptr->tval)
+				{
+					if ((e_ptr->min_sval[j] <= o_ptr->sval) && (e_ptr->max_sval[j] >= o_ptr->sval)) ok = TRUE;
+				}
+
+				if (ok) break;
+			}
+			if (!ok)
+			{
+				/* Doesnt count as a try*/
+				continue;
+			}
+
+			/* Must posses the good flags */
+			if (((k_ptr->flags1 & e_ptr->need_flags1) != e_ptr->need_flags1) ||
+			                ((k_ptr->flags2 & e_ptr->need_flags2) != e_ptr->need_flags2) ||
+			                ((k_ptr->flags3 & e_ptr->need_flags3) != e_ptr->need_flags3) ||
+			                ((k_ptr->flags4 & e_ptr->need_flags4) != e_ptr->need_flags4) ||
+			                ((k_ptr->flags5 & e_ptr->need_flags5) != e_ptr->need_flags5) ||
+			                ((k_ptr->esp & e_ptr->need_esp) != e_ptr->need_esp))
+				continue;
+			if ((k_ptr->flags1 & e_ptr->forbid_flags1) ||
+			                (k_ptr->flags2 & e_ptr->forbid_flags2) ||
+			                (k_ptr->flags3 & e_ptr->forbid_flags3) ||
+			                (k_ptr->flags4 & e_ptr->forbid_flags4) ||
+			                (k_ptr->flags5 & e_ptr->forbid_flags5) ||
+			                (k_ptr->esp & e_ptr->forbid_esp))
+				continue;
+
+			/* ok */
+			ok_ego[ok_num++] = i;
+		}
+
+
 		/* Now test them a few times */
 		for (i = 0; i < ok_num * 10; i++)
 		{
@@ -3175,8 +3226,10 @@ static void dragon_resist(object_type * o_ptr)
 
 		if (randint(4) == 1)
 			random_resistance(o_ptr, FALSE, ((randint(14)) + 4));
-		else
-			random_resistance(o_ptr, FALSE, ((randint(22)) + 16));
+		else {
+			if (randint(35) == 1) random_resistance(o_ptr, FALSE, randint(4) + 41); /* RES_WATER, RES_INERTIA, RES_PLASMA or RES_DISINT */
+			else random_resistance(o_ptr, FALSE, ((randint(22)) + 16));
+		}
 	}
 	while (randint(2) == 1);
 }
@@ -3437,7 +3490,8 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
 				{
 					do
 					{
-						random_resistance(o_ptr, FALSE, ((randint(20)) + 18));
+						if (randint(30) == 1) random_resistance(o_ptr, FALSE, randint(4) + 41); /* RES_WATER, RES_INERTIA, RES_PLASMA or RES_DISINT */
+						else random_resistance(o_ptr, FALSE, ((randint(20)) + 18));
 					}
 					while (randint(4) == 1);
 
@@ -4217,12 +4271,14 @@ void add_random_ego_flag(object_type *o_ptr, int fego, bool *limit_blows)
 	if (fego & ETR4_R_HIGH)
 	{
 		/* Make a high resist */
-		random_resistance(o_ptr, FALSE, randint(22) + 16);
+		if (randint(50) == 1) random_resistance(o_ptr, FALSE, randint(4) + 41); /* RES_WATER, RES_INERTIA, RES_PLASMA or RES_DISINT */
+		else random_resistance(o_ptr, FALSE, randint(22) + 16);
 	}
 	if (fego & ETR4_R_ANY)
 	{
 		/* Make any resist */
-		random_resistance(o_ptr, FALSE, randint(34) + 4);
+		if (randint(50) == 1) random_resistance(o_ptr, FALSE, randint(4) + 41); /* RES_WATER, RES_INERTIA, RES_PLASMA or RES_DISINT */
+		else random_resistance(o_ptr, FALSE, randint(34) + 4);
 	}
 
 	if (fego & ETR4_R_DRAGON)
