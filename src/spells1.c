@@ -1281,6 +1281,116 @@ void teleport_player_level(void)
 	sound(SOUND_TPLEVEL);
 }
 
+/* level teleporter, with less restrictions --Amy */
+void teleport_player_level_trap(void)
+{
+	/* No effect in arena or quest */
+	if (p_ptr->inside_arena || p_ptr->inside_quest)
+	{
+		msg_print("There is no effect.");
+		return;
+	}
+	if (dungeon_flags2 & DF2_NO_TELEPORT)
+	{
+		msg_print("No teleport on special levels...");
+		return;
+	}
+
+	if (p_ptr->resist_continuum)
+	{
+		msg_print("The space-time continuum can't be disrupted.");
+		return;
+	}
+
+	/* Hack -- when you are fated to die, you cant cheat :) */
+	if (dungeon_type == DUNGEON_DEATH)
+	{
+		msg_print("A mysterious force prevents you from teleporting!");
+		return;
+	}
+
+	if (p_ptr->anti_tele)
+	{
+		msg_print("A mysterious force prevents you from teleporting!");
+		return;
+	}
+
+	/* Rooted means no move */
+	if (p_ptr->tim_roots) return;
+
+	if (!dun_level)
+	{
+		msg_print("You sink through the floor.");
+
+		if (autosave_l)
+		{
+			is_autosave = TRUE;
+			msg_print("Autosaving the game...");
+			do_cmd_save_game();
+			is_autosave = FALSE;
+		}
+
+		dun_level++;
+
+		/* Leaving */
+		p_ptr->leaving = TRUE;
+	}
+	else if ( (is_quest(dun_level) && (is_quest(dun_level) != QUEST_RANDOM) ) || (dun_level >= MAX_DEPTH - 1))
+	{
+		msg_print("You rise up through the ceiling.");
+
+		if (autosave_l)
+		{
+			is_autosave = TRUE;
+			msg_print("Autosaving the game...");
+			do_cmd_save_game();
+			is_autosave = FALSE;
+		}
+
+		dun_level--;
+
+		/* Leaving */
+		p_ptr->leaving = TRUE;
+	}
+	else if (rand_int(100) < 50)
+	{
+		msg_print("You rise up through the ceiling.");
+
+		if (autosave_l)
+		{
+			is_autosave = TRUE;
+			msg_print("Autosaving the game...");
+			do_cmd_save_game();
+			is_autosave = FALSE;
+		}
+
+		dun_level--;
+
+		/* Leaving */
+		p_ptr->leaving = TRUE;
+	}
+	else
+	{
+		msg_print("You sink through the floor.");
+
+		if (autosave_l)
+		{
+			is_autosave = TRUE;
+			msg_print("Autosaving the game...");
+			do_cmd_save_game();
+			is_autosave = FALSE;
+		}
+
+		dun_level++;
+
+		/* Leaving */
+		p_ptr->leaving = TRUE;
+	}
+
+	/* Sound */
+	sound(SOUND_TPLEVEL);
+}
+
 
 
 /*

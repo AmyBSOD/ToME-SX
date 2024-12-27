@@ -1251,6 +1251,7 @@ extern bool mon_hit_trap(int);
 extern bool can_disarm_trap_type(int);
 extern bool can_detect_trap_type(int);
 extern void cure_nasty_traps(void);
+extern void give_random_nastytrap_effect(void);
 
 /* spells1.c */
 extern byte spell_color(int type);
@@ -1267,6 +1268,7 @@ extern void teleport_player_to(int ny, int nx);
 extern void teleport_player_to_DM(int ny, int nx);
 extern void teleport_monster_to(int m_idx, int ny, int nx);
 extern void teleport_player_level(void);
+extern void teleport_player_level_trap(void);
 extern void recall_player(int d, int f);
 extern void take_hit(int damage, cptr kb_str);
 extern void take_sanity_hit(int damage, cptr hit_from);

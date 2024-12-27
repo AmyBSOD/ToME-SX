@@ -4035,9 +4035,9 @@ bool make_attack_spell(int m_idx)
 					}
 					(void)set_slow(p_ptr->slow + rand_int(4) + 4);
 
-					while (rand_int(100) > player_actual_saving_throw())
+					while ((rand_int(100) > player_actual_saving_throw()) && (randint(100) != 1) )
 						(void)do_dec_stat(A_INT, STAT_DEC_NORMAL);
-					while (rand_int(100) > player_actual_saving_throw())
+					while ((rand_int(100) > player_actual_saving_throw()) && (randint(100) != 1) )
 						(void)do_dec_stat(A_WIS, STAT_DEC_NORMAL);
 
 					if (!p_ptr->resist_chaos || (rand_int(100) < 5) )

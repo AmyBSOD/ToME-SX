@@ -918,6 +918,18 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* Summon Greater Demon Trap */
+	case TRAP_OF_SUMMON_GREATER_DEMON:
+		{
+			msg_print("An old and evil spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_HI_DEMON);
+			}
+			break;
+		}
+
 		/* Teleport Trap */
 	case TRAP_OF_TELEPORT:
 		{
@@ -1165,6 +1177,26 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* Trap of levelporting */
+	case TRAP_OF_TELE_LEVEL:
+		{
+			msg_print("You trigger a level teleport trap!");
+			ident = TRUE;
+
+			/* Autosave enabled */
+			if (autosave_l)
+			{
+				is_autosave = TRUE;
+				msg_print("Autosaving the game...");
+				do_cmd_save_game();
+				is_autosave = FALSE;
+			}
+
+			teleport_player_level_trap();
+
+			break;
+		}
+
 		/* Trap of Sinking */
 	case TRAP_OF_SINKING:
 		{
@@ -1198,6 +1230,112 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 			if (dungeon_flags1 & DF1_TOWER) dun_level--;
 			else dun_level++;
+
+			/* Leaving */
+			p_ptr->leaving = TRUE;
+			break;
+		}
+
+		/* Shaft Trap */
+	case TRAP_OF_SHAFT:
+		{
+			dungeon_info_type *d_ptr = &d_info[dungeon_type];
+
+			msg_print("You fell through a shaft!");
+			ident = TRUE;
+
+			if (p_ptr->ffall)
+			{
+				if (dungeon_flags1 & DF1_TOWER)
+				{
+					msg_print("You float gently down to the previous level.");
+				}
+				else
+				{
+					msg_print("You float gently down to the next level.");
+				}
+			}
+			else
+			{
+				take_hit(damroll(2, 8), "a trap door");
+			}
+
+			/* Still alive and autosave enabled */
+			if (autosave_l && (p_ptr->chp >= 0))
+			{
+				is_autosave = TRUE;
+				msg_print("Autosaving the game...");
+				do_cmd_save_game();
+				is_autosave = FALSE;
+			}
+
+			int i = randint(3) + 1, j;
+
+			for (j = 1; j < i; j++)
+			{
+				if (dungeon_flags1 & DF1_TOWER) {
+					dun_level--;
+					if (is_quest(dun_level + i - 1) && (is_quest(dun_level + i - 1) != QUEST_RANDOM) ) break;
+					if (d_ptr->maxdepth == dun_level) break;
+				} else {
+					dun_level++;
+					if (is_quest(dun_level + i - 1) && (is_quest(dun_level + i - 1) != QUEST_RANDOM) ) break;
+					if (d_ptr->maxdepth == dun_level) break;
+				}
+			}
+
+			/* Leaving */
+			p_ptr->leaving = TRUE;
+			break;
+		}
+
+		/* Deep Shaft Trap */
+	case TRAP_OF_DEEP_DESCENT:
+		{
+			dungeon_info_type *d_ptr = &d_info[dungeon_type];
+
+			msg_print("You fell through a very deep shaft!");
+			ident = TRUE;
+
+			if (p_ptr->ffall)
+			{
+				if (dungeon_flags1 & DF1_TOWER)
+				{
+					msg_print("You float gently down to the previous level.");
+				}
+				else
+				{
+					msg_print("You float gently down to the next level.");
+				}
+			}
+			else
+			{
+				take_hit(damroll(2, 8), "a trap door");
+			}
+
+			/* Still alive and autosave enabled */
+			if (autosave_l && (p_ptr->chp >= 0))
+			{
+				is_autosave = TRUE;
+				msg_print("Autosaving the game...");
+				do_cmd_save_game();
+				is_autosave = FALSE;
+			}
+
+			int i = 100, j;
+
+			for (j = 1; j < i; j++)
+			{
+				if (dungeon_flags1 & DF1_TOWER) {
+					dun_level--;
+					if (is_quest(dun_level + i - 1) && (is_quest(dun_level + i - 1) != QUEST_RANDOM) ) break;
+					if (d_ptr->maxdepth == dun_level) break;
+				} else {
+					dun_level++;
+					if (is_quest(dun_level + i - 1) && (is_quest(dun_level + i - 1) != QUEST_RANDOM) ) break;
+					if (d_ptr->maxdepth == dun_level) break;
+				}
+			}
 
 			/* Leaving */
 			p_ptr->leaving = TRUE;
@@ -2501,11 +2639,254 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_NASTINESS:
+		{
+			msg_print("Nasty!");
+			give_random_nastytrap_effect();
+			ident = TRUE;
+			break;
+		}
+
 		/* trap of black breath, by Amy */
 	case TRAP_OF_BLACK_BREATH:
 		{
 			msg_print("You feel the Black Breath slowly draining your life...");
 			p_ptr->black_breath = TRUE;
+			ident = TRUE;
+			break;
+		}
+
+		/* trap of eldritch horror, by Amy */
+	case TRAP_OF_ELDRITCH:
+		{
+			msg_print("Oh no! You see something not meant for mortal eyes!");
+
+			switch (rand_int(100)) {
+
+			default:
+			case 0: /* Level drain */
+			case 1:
+			case 2:
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+			case 7:
+			case 8:
+			{
+				if (p_ptr->hold_life)
+				{
+					msg_print("You feel your life slipping away!");
+					lose_exp(p_ptr->exp / 100);
+				}
+				else
+				{
+					msg_print("You feel your life draining away!");
+					lose_exp(p_ptr->exp / 16);
+				}
+				break;
+			}
+
+			case 9: /* Mind blast */
+			case 10:
+			case 11:
+			case 12:
+			case 13:
+			case 14:
+			case 15:
+			case 16:
+			case 17:
+			{
+				if (!p_ptr->resist_conf || (rand_int(100) < 5) )
+				{
+					(void)set_confused(p_ptr->confused + rand_int(4) + 4);
+				}
+				if ( (!p_ptr->resist_chaos || (rand_int(100) < 5) ) && (randint(3) == 1))
+				{
+					(void) set_image(p_ptr->image + rand_int(250) + 150);
+				}
+				break;
+			}
+
+			case 18: /* Lose int & wis */
+			case 19:
+			case 20:
+			case 21:
+			case 22:
+			case 23:
+			case 24:
+			case 25:
+			case 26:
+			{
+				do_dec_stat(A_INT, STAT_DEC_NORMAL);
+				do_dec_stat(A_WIS, STAT_DEC_NORMAL);
+				break;
+			}
+
+			case 27: /* Insanity */
+			case 28:
+			case 29:
+			case 30:
+			case 31:
+			case 32:
+			case 33:
+			case 34:
+			case 35:
+			{
+				msg_print("You are getting insane!");
+				take_sanity_hit(rand_int(5 + dun_level), "an eldritch blast");
+				break;
+			}
+
+			case 36: /* Brain smash */
+			case 37:
+			case 38:
+			case 39:
+			case 40:
+			case 41:
+			case 42:
+			case 43:
+			case 44:
+			case 45:
+			{
+				if (!p_ptr->resist_conf || (rand_int(100) < 5) )
+				{
+					(void)set_confused(p_ptr->confused + rand_int(4) + 4);
+				}
+				if (!p_ptr->free_act || (rand_int(100) == 0) )
+				{
+					(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
+				}
+				while ((rand_int(100) > player_actual_saving_throw()) && (randint(100) != 1) )
+					(void)do_dec_stat(A_INT, STAT_DEC_NORMAL);
+				while ((rand_int(100) > player_actual_saving_throw()) && (randint(100) != 1) )
+					(void)do_dec_stat(A_WIS, STAT_DEC_NORMAL);
+				if (!p_ptr->resist_chaos)
+				{
+					(void) set_image(p_ptr->image + rand_int(250) + 150);
+				}
+				break;
+			}
+
+			case 46: /* Permanent lose int & wis */
+			case 47:
+			case 48:
+			case 49:
+			case 50:
+			case 51:
+			case 52:
+			case 53:
+			case 54:
+			case 55:
+			{
+				bool happened = FALSE;
+				if (dec_stat(A_INT, 10, TRUE)) happened = TRUE;
+				if (dec_stat(A_WIS, 10, TRUE)) happened = TRUE;
+				if (happened)
+					msg_print("You feel much less sane than before.");
+				break;
+			}
+
+			case 56: /* Stun */
+			case 57:
+			case 58:
+			case 59:
+			case 60:
+			case 61:
+			case 62:
+			case 63:
+			case 64:
+			{
+
+				msg_print("You stagger...");
+				(void)set_stun(p_ptr->stun + rand_int(30) );
+				break;
+			}
+
+			case 65: /* Amnesia */
+			case 66:
+			case 67:
+			case 68:
+			case 69:
+			case 70:
+			case 71:
+			case 72:
+			case 73:
+			{
+
+				if (lose_all_info())
+					msg_print("You forget everything in your utmost terror!");
+				break;
+			}
+
+			case 74: /* Aggravate monster */
+			case 75:
+			case 76:
+			case 77:
+			case 78:
+			case 79:
+			case 80:
+			case 81:
+			case 82:
+			{
+
+				msg_print("You let out a bloodcurdling scream of fear!");
+				aggravate_monsters(1);
+				break;
+			}
+
+			case 83: /* Fear */
+			case 84:
+			case 85:
+			case 86:
+			case 87:
+			case 88:
+			case 89:
+			case 90:
+			case 91:
+			{
+
+				if (!p_ptr->resist_fear || (rand_int(100) < 4) )
+				{
+					set_afraid(p_ptr->afraid + 3 + dun_level);
+				}
+				break;
+			}
+
+			case 92: /* Lose money */
+			case 93:
+			case 94:
+			case 95:
+			case 96:
+			case 97:
+			case 98:
+			case 99:
+			case 100:
+			{
+				s32b gold = (p_ptr->au / 50) + randint(15 + (20 * dun_level) );
+				if (gold < 2) gold = 2;
+				if (gold > 5000) gold = (p_ptr->au / 20) + randint(3000);
+				if (gold > p_ptr->au) gold = p_ptr->au;
+
+				p_ptr->au -= gold;
+				if (gold <= 0)
+				{
+					msg_print("You are startled.");			
+				}
+				else if (p_ptr->au)
+				{
+					msg_format("You drop %ld coins in terror!", (long)gold);
+				}
+				else
+				{
+					msg_print("You drop all your money in terror!");
+				}
+				p_ptr->redraw |= (PR_GOLD);
+				break;
+			}
+
+			} /* randint switch */
+
 			ident = TRUE;
 			break;
 		}
@@ -2719,7 +3100,7 @@ void place_trap(int y, int x)
 		 * Hack -- No trap door at the bottom of dungeon or in flat
 		 * (non dungeon) places or on quest levels
 		 */
-		if ((trap == TRAP_OF_SINKING) &&
+		if ((trap == TRAP_OF_SINKING || trap == TRAP_OF_SHAFT || trap == TRAP_OF_DEEP_DESCENT || trap == TRAP_OF_TELE_LEVEL) &&
 		    ((d_ptr->maxdepth == dun_level) ||
 		     (dungeon_flags1 & DF1_FLAT) || (is_quest(dun_level) && (is_quest(dun_level) != QUEST_RANDOM) )) )
 		{
@@ -4104,6 +4485,21 @@ bool mon_hit_trap(int m_idx)
 
 	/* did it die? */
 	return (dead);
+}
+
+void give_random_nastytrap_effect(void)
+{
+	switch (randint(3)) {
+		case 1:
+			p_ptr->nastytrap1 = TRUE;
+			break;
+		case 2:
+			p_ptr->nastytrap2 = TRUE;
+			break;
+		case 3:
+			p_ptr->nastytrap3 = TRUE;
+			break;
+	}
 }
 
 void cure_nasty_traps(void)

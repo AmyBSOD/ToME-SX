@@ -348,6 +348,9 @@ void do_fart_effect(void)
 			if (randint(1000) == 1) {
 				msg_print("You feel the dark corruptions of Morgoth coming over you!");
 				(void) gain_random_corruption(0);
+			} else if (randint(100) == 1) {
+				msg_print("Nasty!");
+				give_random_nastytrap_effect();
 			} else {
 				msg_print("Ugghh, the world is spinning...");
 				set_confused(p_ptr->confused + rand_int(200) + 150);
@@ -687,7 +690,7 @@ void do_poly_self(void)
 }
 
 /* Fail a quest, by Amy: give a penalty instead of making it forever impossible to get another quest
- * always drain all stats; penalty_type determines the additional penalty
+ * always drain all stats and give a random nastytrap effect; penalty_type determines the additional penalty
  * 1 = -20000 piety
  * 2 = disenchantment and black breath
  * 3 = disenchantment and random elemental damage (to destroy or damage player's items) */
@@ -699,6 +702,8 @@ void quest_fail_penalty(int penalty_type)
 	do_dec_stat(A_INT, STAT_DEC_PERMANENT_NORESIST);
 	do_dec_stat(A_WIS, STAT_DEC_PERMANENT_NORESIST);
 	do_dec_stat(A_CHR, STAT_DEC_PERMANENT_NORESIST);
+
+	give_random_nastytrap_effect();
 
 	switch (penalty_type) {
 		case 0:

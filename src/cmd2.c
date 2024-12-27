@@ -340,6 +340,8 @@ void do_cmd_go_down(void)
 	if (p_ptr->astral && (dun_level == 98)) return;
 
 	if (c_ptr->t_idx == TRAP_OF_SINKING) fall_trap = TRUE;
+	if (c_ptr->t_idx == TRAP_OF_SHAFT) fall_trap = TRUE;
+	if (c_ptr->t_idx == TRAP_OF_DEEP_DESCENT) fall_trap = TRUE;
 
 	/* test if on special level */
 	if ((dungeon_flags2 & DF2_ASK_LEAVE))

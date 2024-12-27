@@ -967,6 +967,36 @@ I:3:100:50:3:20:0d0:w
 D:Uh-oh, better hurry if you want that loot!
 F:FLOOR | CHEST | DOOR
 
+N:205:Shaft Trap
+I:2:30:0:0:10:0d0:w
+D:A shaft opens up under you!
+F:FLOOR | DOOR
+
+N:206:Trap of Deep Descent
+I:2:10:0:0:25:0d0:w
+D:A very deep shaft opens up under you!
+F:FLOOR | DOOR
+
+N:207:Teleport Level Trap
+I:2:20:0:0:10:0d0:w
+D:The world swirls around you!
+F:FLOOR | DOOR
+
+N:208:Summon Greater Demon Trap
+I:8:10:50:20:20:0d0:v
+D:Greater demons defend this!
+F:FLOOR | CHEST | DOOR
+
+N:209:Eldritch Trap
+I:10:100:10:25:20:0d0:r
+D:Horrors flicker before your eyes!
+F:FLOOR | CHEST | DOOR
+
+N:210:Nastiness Trap
+I:50:100:0:12:50:0d0:y
+D:Nasty!
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

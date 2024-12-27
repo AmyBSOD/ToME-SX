@@ -2621,6 +2621,13 @@
 
 #define TRAP_OF_RECALL                    204
 
+#define TRAP_OF_SHAFT                     205
+#define TRAP_OF_DEEP_DESCENT              206
+#define TRAP_OF_TELE_LEVEL                207
+#define TRAP_OF_SUMMON_GREATER_DEMON      208
+#define TRAP_OF_ELDRITCH                  209
+#define TRAP_OF_NASTINESS                 210
+
 /*** General index values ***/
 
 
