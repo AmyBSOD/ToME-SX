@@ -6781,8 +6781,8 @@ static void process_monster(int m_idx, bool is_frien)
 	{
 		int d = 1;
 
-		/* Make a "saving throw" against stun */
-		if (rand_int(5000) <= m_ptr->level * m_ptr->level)
+		/* Make a "saving throw" against stun; edit by Amy: high-level monsters shouldn't automatically unstun! */
+		if ( (randint(10) != 1) && (rand_int(5000) <= (m_ptr->level * m_ptr->level) ) )
 		{
 			/* Recover fully */
 			d = m_ptr->stunned;
