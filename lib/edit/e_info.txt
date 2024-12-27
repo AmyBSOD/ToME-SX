@@ -4484,6 +4484,19 @@ F:OLD_RESIST | OLD_RESIST
 R:20
 F:R_IMMUNITY
 
+N:371:Trump
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+X:B:24:16
+W:0:1:40:5000
+C:4:4:0:2
+R:100
+F:SLAY_EVIL | TELEPORT | FREE_ACT | SEARCH | 
+F:REGEN | SLOW_DIGEST | RES_NEXUS | 
+F:R_HIGH
+
 # N: serial number : ego type
 # D: description
 # T: tval : min sval : max sval
