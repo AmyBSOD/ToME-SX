@@ -936,6 +936,11 @@ static monster_type lua_monster_forge @ monster_forge;
  */
 #define RF7_REVBOSS              0x00200000  
 /** @} */
+/** @def RF7_AMBERITE
+ * @note Monster is an amberite 
+ */
+#define RF7_AMBERITE              0x00400000  
+/** @} */
 
 /** @name Race flags #8
  * @note New monster race bit flags

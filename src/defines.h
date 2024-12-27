@@ -3529,6 +3529,7 @@
 #define RF7_SPIRIT		0x00080000  /* This is a Spirit, coming from the Void */
 #define RF7_IM_MELEE            0x00100000  /* IM melee */
 #define RF7_REVBOSS             0x00200000  /* Boss monster doesn't die while Morgy is alive */
+#define RF7_AMBERITE            0x00400000  /* Monster gives the Curse of Amber */
 
 
 /*

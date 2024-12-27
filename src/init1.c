@@ -381,7 +381,7 @@ static cptr r_info_flags7[] =
 	"SPIRIT",
 	"IM_MELEE",
 	"REVBOSS",
-	"XXX7X22",
+	"AMBERITE",
 	"XXX7X23",
 	"XXX7X24",
 	"XXX7X25",

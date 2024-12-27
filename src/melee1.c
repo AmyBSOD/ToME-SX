@@ -1911,6 +1911,13 @@ bool make_attack_normal(int m_idx, byte divis)
 				black_breath_attack(450 - m_ptr->level);
 			}
 
+			/* Amberites can cause the "curse of amber" (TY curse) */
+			if ((r_ptr->flags7 & RF7_AMBERITE) && magik(25) )
+			{
+				msg_format("Oh no, %s puts a blood curse on you!", m_name);
+				activate_ty_curse();
+			}
+
 			/* Hack -- assume all attacks are obvious */
 			obvious = TRUE;
 

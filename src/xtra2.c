@@ -4338,6 +4338,13 @@ void monster_death(int m_idx)
 		place_monster_aux(yy, xx, test_monster_name("Great Wyrm of Power"), FALSE, FALSE, m_ptr->status);
 	}
 
+	/* Hack - Amberites give a blood curse upon death */
+	else if (r_ptr->flags7 & RF7_AMBERITE)
+	{
+		cmsg_print(TERM_VIOLET, "Killing that monster triggered a blood curse!");
+		activate_ty_curse();
+	}
+
 	/* Let monsters explode! */
 	for (i = 0; i < 4; i++)
 	{
