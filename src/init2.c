@@ -319,7 +319,7 @@ void init_file_paths(char *path)
  * Hack -- help give useful error messages
  */
 s16b error_idx;
-s16b error_line;
+u32b error_line;
 
 
 /*

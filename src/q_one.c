@@ -343,6 +343,10 @@ bool quest_one_death_hook(char *fmt)
 	{
 		ok = TRUE;
 	}
+	else if (magik(10) && (r_idx == test_monster_name("The Real Serpent of Chaos")))
+	{
+		ok = TRUE;
+	}
 	else if (magik(10) && (r_idx == test_monster_name("Lina Inverse")))
 	{
 		ok = TRUE;

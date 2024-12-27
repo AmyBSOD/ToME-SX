@@ -67679,6 +67679,6016 @@ D:A very sexy secretary with high heels and painted fingernails. She
 D:doesn't mess around, and is here to fuck you up for trespassing 
 D:in her office. 
 
+N:3924:Hobo
+G:t:g
+I:110:1d2:6:1:0
+W:0:1:1350:0
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:DROOL:*
+F:MALE | DROP_SKELETON | DROP_CORPSE | WILD_TOWN | 
+F:RAND_25 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR
+F:MORTAL | BASEANGBAND | 
+D:Ugly doesn't begin to describe him.
+
+N:3925:Raving lunatic
+G:t:G
+I:120:4d4:6:1:0
+W:0:1:1500:0
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:DROOL:*
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_TOWN | 
+F:RAND_25 | 
+F:TAKE_ITEM
+F:MORTAL | BASEANGBAND | 
+D:Drooling and comical, but then, what do you expect?
+
+N:3926:Lion Heart
+G:t:s
+I:111:20d20:50:15:4
+W:0:4:2000:0
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d3
+F:UNIQUE | MALE | ANIMAL | CAN_SPEAK | NEUTRAL |
+F:FORCE_MAXHP | DROP_CORPSE | WILD_TOWN | 
+F:ONLY_ITEM | DROP_90 | DROP_GOOD | 
+F:OPEN_DOOR | BASH_DOOR | HAS_LITE |
+F:NO_CONF | NO_SLEEP
+F:MORTAL | BASEANGBAND | 
+D:Richard the Lionheart or maybe just an impostor.
+
+N:3927:Blinking dot
+G:,:s
+I:110:1d2:2:1:0
+W:1:1:500:3
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:SPORE:CONFUSE:1d6
+F:NEVER_MOVE |
+F:STUPID | EMPTY_MIND |
+F:IM_POIS | DROP_CORPSE
+F:NO_CONF | NO_SLEEP | NO_FEAR
+F:BASEANGBAND | 
+S:1_IN_2 |
+S:BLINK
+D:Is it there or is it not?
+
+N:3928:Portuguese man-o-war
+G:j:v
+I:110:10d10:20:30:75
+W:9:2:1200:25
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:TOUCH:PARALYZE:1d7
+B:TOUCH:PARALYZE:1d7
+F:ANIMAL | AQUATIC | IM_POIS | RES_WATE | WILD_SHORE |
+F:MORTAL | BASEANGBAND | WILD_OCEAN | WILD_SWAMP | 
+D:A strange water creature, whose touch can be deadly.
+
+N:3929:Tax collector
+G:p:D
+I:110:9d8:20:32:10
+W:10:3:1900:35
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:TOUCH:EAT_GOLD
+B:TOUCH:EAT_ITEM
+F:MALE | 
+F:DROP_1D2 |
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR |
+F:EVIL | DROP_SKELETON | DROP_CORPSE
+F:MORTAL | BASEANGBAND | 
+D:He is eyeing your purse suspiciously.
+
+N:3930:Gazer
+G:e:b
+I:110:9d9:15:18:40
+W:12:1:500:40
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:GAZE:PARALYZE:1d2
+B:GAZE:CONFUSE:1d2
+B:GAZE:EXP_20:1d6
+F:CAN_FLY | IM_POIS | WILD_WOOD | EVIL
+F:DROP_CORPSE |
+F:BASEANGBAND | 
+S:1_IN_8
+S:HOLD | CONF
+D:A floating eye surrounded by number of smaller eyestalks. Its
+D:gaze seems mesmerizing.
+
+N:3931:Knight archer
+G:p:U
+I:110:11d10:20:40:20
+W:12:1:1600:40
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:3d4
+B:HIT:HURT:3d4
+F:MALE | HAS_LITE | 
+F:DROP_1D2 |
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:MORTAL | BASEANGBAND | 
+S:1_IN_8
+S:ARROW_2
+D:A warrior trained in melee as well as missile weapons.
+
+N:3932:Frumious bandersnatch
+G:c:b
+I:120:13d8:12:30:30
+W:12:2:750:40
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:BITE:HURT:2d4
+B:BITE:HURT:2d4
+B:STING:HURT:2d4
+F:WEIRD_MIND | BASH_DOOR |
+F:BASEANGBAND | 
+F:ANIMAL | DROP_SKELETON
+D:It is a vast armoured centipede with massive mandibles and a spiked tail.
+
+N:3933:Nixie
+G:h:B
+I:110:16d10:20:45:50
+W:14:1:1100:60
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:6d3
+B:HIT:HURT:6d3
+F:AQUATIC | WILD_SHORE | RES_WATE |
+F:MALE
+F:MORTAL | BASEANGBAND | 
+D:A race of fair yet belligerent sea elves.
+
+N:3934:Potion mimic
+G:!:w
+I:110:10d10:25:30:0
+W:18:3:20:60
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:HIT:POISON:3d4
+B:HIT:HURT:2d5
+B:HIT:EXP_20:2d5
+F:CHAR_MULTI | 
+F:FORCE_SLEEP | NEVER_MOVE |
+F:EMPTY_MIND | COLD_BLOOD |
+F:NO_CONF | NO_SLEEP | NO_FEAR
+F:BASEANGBAND | 
+S:1_IN_6 |
+S:BLIND | CONF | SCARE | CAUSE_2 | BO_COLD
+D:A strange creature that disguises itself as discarded objects to lure
+D:unsuspecting adventurers within reach of its venomous claws.
+
+N:3935:Scroll mimic
+G:?:w
+I:110:10d14:30:40:0
+W:21:3:10:60
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:HIT:POISON:3d4
+B:HIT:POISON:3d4
+B:HIT:HURT:2d3
+B:HIT:HURT:2d3
+F:CHAR_MULTI |
+F:FORCE_SLEEP | NEVER_MOVE |
+F:EMPTY_MIND | COLD_BLOOD |
+F:NO_CONF | NO_SLEEP | NO_FEAR
+F:BASEANGBAND | 
+S:1_IN_5 |
+S:BLIND | CONF | SCARE | CAUSE_2 | BO_FIRE |
+S:S_MONSTER
+D:A strange creature that disguises itself as discarded objects to lure
+D:unsuspecting adventurers within reach of its venomous claws.
+
+N:3936:Chest mimic
+G:&:W
+I:110:10d14:30:40:0
+W:21:6:1000:70
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:GAZE:CONFUSE:2d3
+B:CLAW:POISON:3d4
+B:CLAW:POISON:3d4
+B:SPIT:BLIND:2d3
+F:CHAR_MULTI |
+F:FORCE_SLEEP | NEVER_MOVE |
+F:EMPTY_MIND | COLD_BLOOD |
+F:BASEANGBAND | 
+F:NO_CONF | NO_SLEEP | NO_FEAR
+S:1_IN_5 |
+S:BLIND | CONF | SCARE | CAUSE_2 | BA_POIS |
+S:S_MONSTER
+D:A strange creature that disguises itself as a chest to lure
+D:unsuspecting adventurers within reach of its venomous claws.
+
+N:3937:Kouko
+G:W:G
+I:110:12d8:20:30:30
+W:24:1:1500:140
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d6
+B:HIT:HURT:1d6
+B:TOUCH:EXP_20
+F:FORCE_SLEEP | RAND_25 |
+F:DROP_60 | DROP_90 |
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | CAN_FLY |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | RES_NETH | HURT_LITE |
+F:BASEANGBAND | 
+F:NO_CONF | NO_SLEEP
+S:1_IN_10 |
+S:SCARE | DRAIN_MANA
+D:It is a ghostly apparition with a humanoid form.
+
+N:3938:Mime, the Nibelung
+G:h:u
+I:110:82d10:20:80:10
+W:24:2:1500:300
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:3d6
+B:HIT:HURT:3d6
+B:HIT:UN_BONUS
+B:TOUCH:EAT_GOLD
+F:UNIQUE | MALE | CAN_SPEAK |
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD |
+F:OPEN_DOOR | BASH_DOOR | EVIL | 
+F:MORTAL | BASEANGBAND | 
+F:IM_FIRE | IM_COLD | NO_CONF | NO_SLEEP | RES_DISE | RES_TELE
+F:DROP_SKELETON | DROP_CORPSE
+S:1_IN_8 |
+S:HEAL | HASTE | BO_FIRE
+D:This tiny night dwarf is as greedy for gold as his brother, Alberich.
+
+N:3939:Hagen, Son of Alberich
+G:h:o
+I:110:82d10:20:80:10
+W:24:2:1500:300
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:3d7
+B:HIT:HURT:3d7
+B:HIT:HURT:3d7
+B:HIT:UN_BONUS
+F:UNIQUE | MALE | CAN_SPEAK |
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD |
+F:MORTAL | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | EVIL |
+F:IM_FIRE | IM_COLD | RES_DISE | NO_CONF | NO_SLEEP | RES_TELE
+F:DROP_SKELETON | DROP_CORPSE
+S:1_IN_8 |
+S:HEAL | HASTE | BO_FIRE
+D:Alberich's son, born of a mortal woman won with gold.
+
+N:3940:Killer crimson beetle
+G:K:R
+I:110:20d8:14:50:30
+W:25:2:3000:85
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:BITE:LOSE_STR:4d4
+F:RAND_25 | WILD_GRASS | WILD_WOOD |
+F:WEIRD_MIND | BASH_DOOR |
+F:ANIMAL | CAN_FLY |
+F:MORTAL | BASEANGBAND | 
+F:DROP_CORPSE |
+D:A giant beetle with poisonous mandibles.
+
+N:3941:Kharis the Powerslave
+G:z:u
+I:110:85d11:20:40:40
+W:26:4:1500:500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:GAZE:TERRIFY
+B:HIT:DISEASE:6d6
+B:CLAW:LOSE_CON:2d6
+B:CLAW:LOSE_CHR:2d6
+F:UNIQUE | MALE | CAN_SPEAK | UNDEAD | EVIL | ESCORTS | ESCORT
+F:FORCE_MAXHP | COLD_BLOOD | IM_POIS | IM_COLD | RES_NETH |
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_90 | DROP_GOOD |
+F:OPEN_DOOR | BASH_DOOR | RES_TELE
+S:1_IN_5 |
+S:TRAPS | CAUSE_3 | DARKNESS | S_UNDEAD | SCARE | SLOW
+S:S_KIN | ANIM_DEAD
+D:He is out to have a revenge on you who have desecrated his tomb.
+
+N:3942:Agent of Benedict
+G:p:W
+I:110:20d8:14:54:20
+W:26:3:1600:100
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d9
+B:HIT:HURT:1d9
+F:FRIENDS | MALE | DROP_SKELETON | DROP_CORPSE
+F:BASH_DOOR | OPEN_DOOR | HAS_LITE | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_8
+S:BLIND | CONF | TPORT
+D:A faithful servitor and a skilled warrior.
+
+N:3943:Alberich the Nibelung King
+G:h:D
+I:120:80d11:20:80:20
+W:27:4:1600:1000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:UN_BONUS:3d12
+B:HIT:UN_BONUS:3d12
+B:TOUCH:EAT_GOLD
+B:TOUCH:EAT_GOLD
+F:UNIQUE | MALE | CAN_SPEAK
+F:FORCE_MAXHP | FORCE_SLEEP |
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | 
+F:OPEN_DOOR | BASH_DOOR | INVISIBLE |
+F:EVIL | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
+F:MORTAL | BASEANGBAND | 
+F:NO_CONF | NO_SLEEP | RES_DISE | RES_TELE
+F:DROP_SKELETON | DROP_CORPSE | 
+S:1_IN_6 |
+S:HEAL | SCARE | BO_ACID | BA_ACID | TPORT | S_MONSTER
+D:Made invisible with his magic cap, the greedy dwarf plots for
+D:world domination through his riches.
+
+N:3944:Grendel
+G:O:g
+I:120:15d100:20:100:20
+W:27:2:5000:1500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:INSANITY:5d6
+B:HIT:INSANITY:5d6
+B:HIT:INSANITY:5d6
+F:UNIQUE | MALE | CAN_SPEAK | WILD_SWAMP | WILD_SHORE |
+F:FORCE_MAXHP |
+F:ESCORT | HAS_LITE |
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD |
+F:OPEN_DOOR | BASH_DOOR | CAN_SWIM |
+F:EVIL | GIANT | IM_POIS | 
+F:DROP_CORPSE | 
+D:An ogre renowned for acts of surpassing cruelty.
+
+N:3945:Gachapin
+G:R:G
+I:120:110d9:10:90:20
+W:29:2:2500:500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:SHOW:LOSE_INT
+B:SHOW:LOSE_WIS
+B:CHARGE:EAT_GOLD
+B:CHARGE:LOSE_CHR
+F:DROP_1D2 | DROP_90 | DROP_GOOD | DROP_GREAT | ONLY_ITEM |
+F:EVIL | MALE | CAN_SPEAK | SMART | RES_TELE | CAN_SWIM
+F:ANIMAL | IM_POIS | NO_CONF | NO_SLEEP | FORCE_MAXHP | UNIQUE | FORCE_SLEEP
+F:MORTAL | BASEANGBAND | 
+F:DROP_CORPSE |
+S:1_IN_3
+S:SHRIEK | CONF | S_HYDRA | SLOW | BLIND | DRAIN_MANA
+S:BA_POIS | BR_CHAO | FORGET | DARKNESS | BR_NUKE
+D:The lovable green reptile is making a guest appearance here.
+
+N:3946:Logrus master
+G:p:v
+I:120:30d10:30:50:5
+W:33:3:1500:550
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:10d2
+B:KICK:HURT:10d2
+B:PUNCH:HURT:10d2
+B:KICK:HURT:10d2
+F:MALE | 
+F:FORCE_SLEEP | FORCE_MAXHP | EVIL | HAS_LITE |
+F:ONLY_ITEM | DROP_1D2 | ATTR_ANY |
+F:INVISIBLE | OPEN_DOOR | BASH_DOOR |
+F:MORTAL | BASEANGBAND | 
+F:IM_ACID | IM_POIS | NO_CONF | NO_SLEEP |
+F:DROP_SKELETON | DROP_CORPSE | 
+S:1_IN_6 |
+S:HEAL |
+S:S_SPIDER | BA_CHAO | S_DEMON
+D:An adept of chaos, feared for his skill of invoking raw Logrus.
+
+N:3947:Ishikawa Goemon
+G:p:W
+I:120:13d113:20:70:50
+W:33:7:1500:2000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CHARGE:HURT:9d1
+B:CHARGE:HURT:6d5
+B:CHARGE:HURT:25d1
+B:CHARGE:HURT:30d1
+F:UNIQUE | MALE | CAN_SPEAK | 
+F:FORCE_MAXHP | WILD_WOOD | DROP_CORPSE
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD |
+F:MORTAL | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR |
+F:IM_COLD | IM_POIS
+D:Some japanese dude who wants to whoop your ass.
+
+N:3948:Logrus ghost
+G:G:r
+I:120:14d20:20:30:10
+W:33:3:500:350
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:WAIL:TERRIFY
+B:TOUCH:EXP_40
+B:CLAW:LOSE_INT:1d10
+F:FORCE_SLEEP | RAND_25 |
+F:ONLY_ITEM | DROP_90 | DROP_2D2 |
+F:MORTAL | BASEANGBAND | 
+F:INVISIBLE | COLD_BLOOD | TAKE_ITEM | PASS_WALL |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | RES_NETH | CAN_FLY |
+F:NO_CONF | NO_SLEEP | ATTR_MULTI | ATTR_ANY |
+S:1_IN_15 |
+S:BLIND | HOLD | DRAIN_MANA | FORGET
+D:An almost life-like creature which is nothing more than a phantom
+D:created by the Logrus.
+
+N:3949:Jurt the Living Trump
+G:p:R
+I:120:10d100:20:90:40
+W:34:5:1500:1200
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:5d5
+B:HIT:HURT:5d5
+B:HIT:HURT:5d5
+B:HIT:HURT:5d5
+F:UNIQUE | MALE | CAN_SPEAK | HAS_LITE | EVIL | FORCE_MAXHP |
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD |
+F:BASEANGBAND | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:DROP_SKELETON | DROP_CORPSE | 
+S:1_IN_6
+S:TPORT | BLINK | BA_CHAO
+D:A magical treatment has turned Jurt, an adept of Logrus,
+D:into a Living Trump.
+
+N:3950:Doom drake
+G:d:v
+I:115:40d11:25:100:30
+W:34:3:2500:450
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:CLAW:HURT:1d5
+B:CLAW:HURT:1d5
+B:BITE:HURT:2d6
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ONLY_ITEM | DROP_1D2 | FRIENDS |
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY |
+F:BASEANGBAND | 
+F:EVIL | DRAGON | 
+F:IM_FIRE | IM_POIS | NO_CONF | NO_SLEEP | 
+F:DROP_CORPSE | 
+S:1_IN_6 |
+S:BR_FIRE
+D:Doom drakes are trained firedrakes, always moving in pairs, looking
+D:for a battle.
+
+N:3951:Sheer Heart Attack, the Bomb Hand
+G:{:D
+I:120:12d12:10:150:12
+W:35:2:500:200
+E:0:0:0:1:0:0
+O:20:20:20:20
+B:EXPLODE:SHATTER:100d2
+F:FORCE_SLEEP | FORCE_MAXHP | UNIQUE | REFLECTING |
+F:BASEANGBAND | 
+F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS
+F:NO_FEAR | NO_CONF | NO_SLEEP | NONLIVING | RES_TELE
+D:This thing creeps up to you and then selfdestructs. Kaboom.
+
+N:3952:Pattern ghost
+G:G:D
+I:120:20d25:30:30:20
+W:36:3:500:400
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:TOUCH:EXP_80
+B:TOUCH:EXP_20:2d10
+B:CLAW:LOSE_INT:1d10
+B:CLAW:LOSE_WIS:1d10
+F:FORCE_SLEEP |
+F:ONLY_ITEM | DROP_1D2 |
+F:BASEANGBAND | 
+F:INVISIBLE | COLD_BLOOD | PASS_WALL | CAN_FLY |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | RES_NETH | NO_CONF | NO_SLEEP
+S:1_IN_5 |
+S:FORGET | MIND_BLAST
+D:An almost life-like creature which is nothing more than a phantom
+D:created by the Pattern.
+
+N:3953:Ipsissimus
+G:p:D
+I:110:28d13:20:50:10
+W:36:2:1400:666
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:2d6
+B:HIT:HURT:2d6
+F:MALE | EVIL
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_1D2 | DROP_SKELETON
+F:SMART | OPEN_DOOR | BASH_DOOR |
+F:DROP_SKELETON | DROP_CORPSE | 
+S:1_IN_3 |
+S:HASTE | TPORT | TELE_TO | BLIND | HOLD | SCARE | CAUSE_3 |
+S:BO_NETH | MIND_BLAST | FORGET |
+S:S_UNDEAD | S_DEMON | ANIM_DEAD
+D:A gaunt figure, clothed in black robes.
+
+N:3954:Lord Borel of Hendrake
+G:p:v
+I:120:18d100:25:100:10
+W:36:2:1600:1200
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:6d6
+B:HIT:HURT:6d6
+B:HIT:HURT:3d8
+B:HIT:HURT:3d8
+F:UNIQUE | MALE | CAN_SPEAK | 
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_SKELETON | DROP_CORPSE
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD |
+F:OPEN_DOOR | BASH_DOOR |
+F:EVIL | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
+F:NO_CONF | NO_SLEEP
+S:1_IN_4 |
+S:TELE_TO | S_KIN
+D:A Lord of Chaos famous for his skill at arms.
+
+N:3955:Fire angel
+G:d:y
+I:120:50d10:10:100:25
+W:37:3:1700:1500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CLAW:HURT:3d8
+B:CLAW:HURT:3d8
+B:BITE:HURT:5d5
+B:BITE:HURT:5d5
+F:EVIL | DRAGON | SMART | FORCE_MAXHP | NO_CONF | NO_SLEEP | IM_FIRE
+F:BASEANGBAND | 
+F:DROP_4D2 | BASH_DOOR | RES_PLAS | CAN_FLY | 
+F:DROP_CORPSE | 
+S:1_IN_9
+S:BR_PLAS
+D:It is a fast, deadly dragonoid creature. It was bred and trained
+D:in the Courts of Chaos for assassination.
+
+N:3956:Father Dagon
+G:u:g
+I:120:19d99:12:80:50
+W:38:3:5000:3250
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CLAW:POISON:8d4
+B:CLAW:POISON:8d4
+B:BITE:HURT:8d8
+F:ESCORT
+F:DROP_60 | DROP_90 | DROP_1D2 | DROP_GOOD | ONLY_ITEM |
+F:CAN_SWIM | BASH_DOOR | ELDRITCH_HORROR | RES_TELE | CAN_SPEAK |
+F:EVIL | DEMON | IM_FIRE | IM_COLD | IM_POIS | RES_WATE |
+F:BASEANGBAND | 
+F:UNIQUE | MALE | FORCE_SLEEP | FORCE_MAXHP |
+F:NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+S:1_IN_7 |
+S:S_KIN | S_DEMON | BO_WATE | BA_WATE | BO_ACID | BA_ACID
+D:The king of the deep ones. "Vast, Polyphemous-like, and loathsome, it
+D:darted like a stupendous monster of nightmares..."
+
+N:3957:Mandor, Master of the Logrus
+G:p:v
+I:120:88d11:20:90:40
+W:38:5:1500:1600
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:5d5
+B:HIT:HURT:5d5
+B:HIT:UN_POWER:5d5
+B:HIT:UN_BONUS:5d5
+F:UNIQUE | MALE | CAN_SPEAK | HAS_LITE | 
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD |
+F:MORTAL | BASEANGBAND | 
+F:SMART | OPEN_DOOR | TAKE_ITEM | BASH_DOOR |
+F:EVIL | RES_TELE
+F:DROP_SKELETON | DROP_CORPSE | 
+S:1_IN_2 |
+S:BO_FIRE | BO_COLD | HOLD | BO_MANA | S_MONSTER
+S:TRAPS | BO_ICEE | HEAL | BO_PLAS | BA_CHAO | 
+D:Mandor is one of the greatest Logrus Masters, a formidable magician.
+
+N:3958:Loge, Spirit of Fire
+G:E:R
+I:120:15d100:12:50:50
+W:38:2:3000:3000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:FIRE:6d6
+B:HIT:FIRE:6d6
+B:HIT:FIRE:6d6
+B:HIT:FIRE:6d6
+F:UNIQUE | 
+F:FORCE_SLEEP | FORCE_MAXHP | RAND_25 |
+F:EMPTY_MIND | CAN_SPEAK | MALE | AURA_FIRE |
+F:BASEANGBAND | 
+F:KILL_ITEM | KILL_BODY | BASH_DOOR | POWERFUL |
+F:EVIL | IM_FIRE | NONLIVING |
+F:IM_POIS | NO_CONF | NO_SLEEP
+S:1_IN_4 |
+S:BO_PLAS | BA_FIRE
+D:A towering fire elemental, Loge burns everything beyond recognition.
+
+N:3959:Moire, Queen of Rebma
+G:E:b
+I:120:20d100:12:40:50
+W:39:3:1500:3250
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:5d5
+B:HIT:HURT:5d5
+B:HIT:HURT:5d5
+B:HIT:HURT:5d5
+F:UNIQUE | FEMALE | DROP_1D2 | DROP_2D2 | ONLY_ITEM | DROP_GOOD | 
+F:FORCE_SLEEP | FORCE_MAXHP | RAND_25 |
+F:CAN_SPEAK | CAN_SWIM | WILD_OCEAN |
+F:BASEANGBAND | 
+F:KILL_ITEM | KILL_BODY | BASH_DOOR | POWERFUL |
+F:EVIL | IM_POIS | WILD_SHORE | WILD_SWAMP |
+F:NO_CONF | NO_SLEEP
+F:DROP_CORPSE | 
+S:1_IN_4 |
+S:BO_ICEE | BO_WATE | BA_COLD | BA_WATE
+D:The Queen of the Sea where the Pattern is reflected is a cunning
+D:diplomat and a dangerous foe. "A woman sat upon the throne...
+D:and her hair was green, though streaked with silver, and her eyes
+D:were round of moons of jade and her brows rose like the wings of
+D:olive gulls. Her mouth was small, her chin was small; her cheeks
+D:were high and wide and rounded. A circlet of white gold crossed
+D:her brow and there was a crystal necklace about her neck. At its
+D:tip there flashed a sapphire between her sweet bare breasts, whose
+D:nipples were also bare green. She wore scaled trunks of blue and
+D:a silver belt, and she held a scepter of pink coral in her hand
+D:and had a ring upon every finger, and each ring had a stone of
+D:a different blue within it. She did not smile..."
+
+N:3960:Hammer of hell
+G:\:v
+I:100:50d10:30:40:0
+W:24:5:1500:1000
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:CRUSH:INSANITY:30d1
+F:BASEANGBAND | 
+F:COLD_BLOOD | EVIL | NO_SLEEP | NO_CONF | NO_FEAR | NO_STUN | NONLIVING |
+F:IM_ACID | IM_COLD | IM_POIS | RES_NETH | BASH_DOOR
+D:A foul iron hammer forged with body and souls of victims on the infernal anvil.
+
+N:3961:Morgenstern, Julian's Steed
+G:q:W
+I:130:30d100:20:100:50
+W:40:3:2500:2000
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:KICK:HURT:4d4
+B:KICK:HURT:5d5
+B:BITE:HURT:6d6
+F:FORCE_MAXHP | UNIQUE | ANIMAL |
+F:MORTAL | BASEANGBAND | 
+F:REGENERATE | BASH_DOOR | IM_FIRE | IM_COLD | IM_ELEC |
+F:IM_POIS | NO_CONF | NO_SLEEP | 
+F:DROP_CORPSE | 
+D:Morgenstern is tougher and faster than any other horse: "Morgenstern
+D:was six hands higher than any other horse I had ever seen, and his
+D:eyes were the dead color of a Weimaraner dog's and his coat was all
+D:gray and his hooves looked like polished steel. He raced along like
+D:the wind..."
+
+N:3962:Jasra, Brand's Mistress
+G:n:v
+I:120:24d100:30:100:5
+W:40:3:1200:9000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:GAZE:EXP_80
+B:GAZE:PARALYZE
+B:HIT:HURT:8d6
+B:HIT:HURT:8d6
+F:UNIQUE | FEMALE | CAN_SPEAK | DROP_CORPSE
+F:FORCE_SLEEP | FORCE_MAXHP | CAN_SWIM |
+F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | DROP_GOOD |
+F:MORTAL | BASEANGBAND | 
+F:SMART | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | IM_ACID | IM_FIRE | IM_POIS | NO_CONF | NO_SLEEP
+S:1_IN_2 |
+S:HOLD | SCARE | CAUSE_3 | BO_FIRE | BO_PLAS | BA_ACID |
+S:S_HYDRA
+D:Brand's one-time mistress. Her face could sink a thousand
+D:ships, but Brand is not too selective.
+
+N:3963:Clubber demon
+G:U:s
+I:110:40d10:20:50:80
+W:40:2:2500:1000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:3d4
+B:HIT:INSANITY:8d10
+B:HIT:INSANITY:8d10
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:BASEANGBAND | 
+F:FRIENDS |
+F:ONLY_ITEM | DROP_60 |
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NONLIVING |
+F:EVIL | DEMON | IM_FIRE | NO_CONF | NO_SLEEP
+S:1_IN_8 |
+S:BLIND | CONF
+D:It is a demon swinging wildly with two clubs.
+
+N:3964:Rinaldo, Son of Brand
+G:p:w
+I:120:16d100:20:120:40
+W:41:3:1700:7000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:8d6
+B:HIT:HURT:8d6
+B:HIT:UN_BONUS:6d8
+B:HIT:UN_BONUS:6d8
+F:UNIQUE | MALE | CAN_SPEAK | AMBERITE | DROP_SKELETON | DROP_CORPSE
+F:FORCE_SLEEP | FORCE_MAXHP | HAS_LITE | 
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD |
+F:SMART | OPEN_DOOR | BASH_DOOR |
+F:IM_ACID | IM_COLD | IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP | RES_TELE
+S:1_IN_2 |
+S:CAUSE_3 | BO_WATE | BO_MANA | BA_CHAO | 
+D:The madman's son is a Logrus Master, almost as great a
+D:menace as his father.
+
+N:3965:Nazgul
+G:W:D
+I:125:66d66:90:141:10
+W:63:7:1800:22000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:TERRIFY:10d6
+B:HIT:TERRIFY:10d6
+B:HIT:EXP_80:8d6
+B:HIT:EXP_80:8d6
+F:MALE | 
+F:FORCE_MAXHP | NAZGUL |
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | RES_TELE | 
+F:BASEANGBAND | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | MOVE_BODY | RES_NETH | SMART |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP
+S:1_IN_4 |
+S:SCARE | HOLD | DRAIN_MANA | BR_NETH
+D:A tall black cloaked Ringwraith, radiating an aura of fear.
+
+N:3966:Ultra-elite paladin
+G:p:w
+I:120:77d10:20:144:20
+W:45:2:1800:1200
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:3d12
+B:HIT:HURT:3d12
+F:GOOD | FRIENDS | MALE |
+F:OPEN_DOOR | BASH_DOOR | FORCE_MAXHP | HAS_LITE
+F:MORTAL | BASEANGBAND | 
+F:DROP_1D2 | DROP_90 | DROP_60 |
+F:IM_POIS | IM_FIRE | IM_ELEC | IM_ACID | IM_COLD |
+F:RES_TELE | REFLECTING
+F:NO_SLEEP | NO_CONF | NO_STUN |
+F:DROP_SKELETON | DROP_CORPSE |
+S:1_IN_12
+S:HEAL
+D:Fighting for a good cause, and they consider you an agent of the devil.
+
+N:3967:Zhar the Twin Obscenity
+G:R:D
+I:120:50d100:30:120:15
+W:47:3:10000:15000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CRUSH:HURT:13d13
+B:CRUSH:HURT:13d13
+B:CRUSH:HURT:13d13
+F:FORCE_SLEEP | FORCE_MAXHP | UNIQUE | ELDRITCH_HORROR |
+F:ONLY_ITEM | DROP_4D2 | DROP_GOOD | KILL_BODY |
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR | CAN_SWIM |
+F:BASEANGBAND | 
+F:EVIL
+S:1_IN_6
+S:S_DEMON | SHRIEK | CONF | SCARE | MIND_BLAST | BLIND
+D:"The thing that crouched in the weird green dusk was a living mass
+D:of shuddering horror, a ghastly mountain of sensate, quivering
+D:flesh, whose tentacles, far-flung in the dim reaches of the
+D:subterranean cavern, emitted a strange humming sound, while from
+D:the depths of the creature's body came a weird and horrific
+D:undulation."
+
+N:3968:Death vortex
+G:v:D
+I:140:32d20:100:80:0
+W:55:5:500:4000
+E:0:0:0:0:0:0
+O:20:20:20:20
+F:FORCE_SLEEP | NEVER_BLOW |
+F:RAND_50 | RAND_25 | CAN_FLY |
+F:EMPTY_MIND | BASH_DOOR | POWERFUL | KILL_WALL
+F:BASEANGBAND | 
+F:RES_DISE | RES_NETH | NO_SLEEP | NO_FEAR | NO_STUN | NONLIVING
+S:1_IN_4 |
+S:BR_TIME | BR_DISI | BR_NETH
+D:Void, nothingness, spinning destructively. Run!
+
+N:3969:Dworkin Barimen
+G:p:v
+I:130:100d48:25:195:10
+W:56:2:1100:22200
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:CONFUSE:4d8
+B:HIT:TERRIFY:5d6
+B:HIT:PARALYZE:5d6
+B:HIT:BLIND:4d8
+F:UNIQUE | MALE | AMBERITE | DROP_CORPSE | HAS_LITE | 
+F:FORCE_SLEEP | FORCE_MAXHP | SHAPECHANGER | CAN_SPEAK |
+F:ONLY_ITEM | DROP_1D2 | DROP_4D2 | DROP_GOOD | CAN_FLY | 
+F:BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | ATTR_MULTI | RES_DISE | ATTR_ANY | RES_TELE
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP |
+S:1_IN_4 |
+S:HEAL | BLIND | CONF | SCARE | CAUSE_4 | BRAIN_SMASH |
+S:FORGET | S_MONSTERS | BA_CHAO | BLINK | TPORT | TELE_TO |
+S:TELE_AWAY | S_DEMON
+D:Once this now gnomish creature created the universe with the Jewel
+D:of Judgement - or so you have been told. There is little sanity left
+D:in his present form even if he still has the power. "He was a small
+D:man. Tiny, might be an even better word. He was around five feet tall
+D:and a hunchback. His hair and beard were as heavy as (Corwin's). The
+D:only distinguishing features in that great mass of fur were
+D:his long, hook nose and his almost black eyes, now squinted
+D:against the light... Dworkin: 'I am Oberon's prisoner.' Corwin:
+D:'Oh? None of us knew that Dad had locked you up.' (Corwin) heard
+D:(Dworkin) weeping. 'Yes,' he said after a long time. 'He didn't
+D:trust me.' 'Why not?' 'I told him I'd thought of a way to
+D:destroy Amber. I described it to him, and he locked me in.'"
+
+N:3970:Habu the Champion of Chaos
+G:h:G
+I:130:111d66:25:175:10
+W:59:2:2200:20000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:EXP_80:6d6
+B:HIT:EXP_80:8d8
+B:HIT:EXP_80:10d10
+F:UNIQUE | MALE | CAN_SPEAK | HAS_LITE | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART |
+F:ONLY_ITEM | DROP_1D2 | DROP_4D2 | DROP_GOOD |
+F:BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | RES_NEXU | RES_NETH | EVIL |
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP |
+F:DROP_CORPSE | 
+S:1_IN_4 |
+S:BA_FIRE | BA_CHAO | CONF | TPORT | S_DEMON | BR_CHAO | BA_MANA | 
+D:He is one of the greatest warriors of chaos to walk the earth.
+D:His bloody blade has slain thousands and tens of thousands, and still
+D:hungers for more.
+
+N:3971:Brand, Mad Visionary of Amber
+G:p:v
+I:120:50d100:100:100:0
+W:60:1:1700:35000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:UN_BONUS:6d8
+B:HIT:UN_BONUS:6d8
+B:HIT:CONFUSE:5d5
+B:HIT:UN_POWER:5d5
+F:UNIQUE | MALE | ATTR_MULTI | CAN_SPEAK | AMBERITE | ATTR_ANY | RES_TELE
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_SKELETON | DROP_CORPSE | HAS_LITE |
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD | 
+F:SMART | OPEN_DOOR | BASH_DOOR |
+F:BASEANGBAND | 
+F:EVIL | IM_FIRE | IM_COLD |
+F:IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP | 
+S:1_IN_2 |
+S:BLIND | CONF |
+S:TPORT | BLINK | BA_FIRE | BA_COLD |
+S:DRAIN_MANA | CAUSE_4 | BA_ACID | TELE_AWAY |
+S:MIND_BLAST | TRAPS | HEAL | 
+S:HASTE | BRAIN_SMASH | BA_CHAO | BA_DARK | 
+D:Brand sees himself as a hero, the god creator
+D:and absolute monarch of a future world. Unfortunately he needs
+D:to erase the existing world to make his new world. "...a figure both
+D:like Bleys and (Corwin). (Corwin's) features, though smaller, his eyes,
+D:Bleys' hair, beardless. He wore a riding suit of green and sat atop a white
+D:horse... There was a quality of both strength and weakness, questing and
+D:abandonment about him."
+
+N:3972:Shadowlord
+G:G:b
+I:120:30d100:20:150:10
+W:62:2:1500:22500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:EXP_80:6d12
+B:HIT:EXP_20:5d10
+B:HIT:LOSE_STR:4d6
+B:GAZE:TERRIFY:4d6
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 |
+F:BASEANGBAND | 
+F:INVISIBLE | COLD_BLOOD | TAKE_ITEM | PASS_WALL |
+F:EVIL | UNDEAD | CAN_FLY |
+F:IM_COLD | IM_POIS | RES_NETH | NO_CONF | NO_SLEEP | RES_TELE
+S:1_IN_3 |
+S:HOLD | DRAIN_MANA | BLIND | S_UNDEAD | CONF |
+S:SCARE | TELE_TO | TPORT | BRAIN_SMASH | ANIM_DEAD
+S:BA_NETH | DARKNESS | SHRIEK
+D:An aura of hatred, cowardice and falsehood surrounds you as this
+D:cloaked figure floats towards you.
+
+N:3973:Bast, Goddess of Cats
+G:f:o
+I:130:48d100:100:200:0
+W:62:3:1200:30500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:CONFUSE:12d12
+B:TOUCH:LOSE_DEX:2d12
+B:HIT:BLIND:10d5
+B:HIT:PARALYZE:15d1
+F:UNIQUE | FEMALE | CAN_SPEAK |
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ESCORT | ESCORTS | EVIL |
+F:ONLY_ITEM | DROP_4D2 | DROP_GOOD |
+F:BASEANGBAND | 
+F:INVISIBLE | OPEN_DOOR | BASH_DOOR |
+F:IM_FIRE | IM_COLD | IM_POIS | NO_CONF | NO_SLEEP
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:TELE_TO | HEAL | S_KIN
+D:"Beauty -- coolness -- aloofness -- philosophical repose --
+D:self-sufficiency -- untamed mastery -- what else can we find
+D:these things with even half the perfection and completeness
+D:that mark their incarnation in the peerless and softly gliding
+D:cat?"
+
+N:3974:Ultimate beholder
+G:e:o
+I:120:40d100:30:80:10
+W:66:4:1000:18000
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:GAZE:EXP_40:2d5
+B:GAZE:LOSE_INT:2d6
+B:GAZE:UN_POWER:2d6
+B:GAZE:EXP_20:5d10
+F:FORCE_SLEEP | FORCE_MAXHP | RES_TELE | CAN_FLY |
+F:BASH_DOOR | FEMALE | SMART |
+F:EVIL | IM_POIS | NO_CONF | NO_SLEEP
+F:BASEANGBAND | 
+F:DROP_CORPSE | 
+S:1_IN_2 |
+S:BLIND | CONF | SCARE | DRAIN_MANA | MIND_BLAST | FORGET |
+S:DARKNESS | BA_ACID | BA_FIRE | BA_COLD | S_KIN | BO_MANA |
+S:BA_DARK
+D:A disembodied eye, surrounded by twelve smaller eyes on stalks.
+D:This is a beholder hive-mother, far more powerful than normal
+D:beholders.
+
+N:3975:Bleys, Master of Manipulation
+G:p:U
+I:130:50d100:100:100:50
+W:67:1:1700:35000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:8d15
+B:HIT:HURT:8d15
+B:TOUCH:EAT_ITEM
+F:UNIQUE | MALE | CAN_SPEAK | AMBERITE | RES_TELE | DROP_CORPSE | HAS_LITE |
+F:FORCE_SLEEP | FORCE_MAXHP | NO_CONF | NO_SLEEP | DROP_SKELETON | 
+F:BASEANGBAND | 
+F:DROP_4D2 | DROP_1D2 | DROP_GOOD | DROP_60 | DROP_90 | ONLY_ITEM |
+F:EVIL | IM_FIRE | IM_ELEC | SMART | REGENERATE | OPEN_DOOR | BASH_DOOR |
+S:1_IN_3 |
+S:SCARE | BLIND | CONF | TPORT | BLINK | TELE_AWAY | TELE_TO
+S:TELE_LEVEL | BA_COLD | BA_FIRE | TRAPS | MIND_BLAST |
+S:S_MONSTERS
+D:This cunning Amberite is the master of subtle ploys. "...a fiery bearded,
+D:flame-crowned man, dressed all in red and orange, mainly of silk stuff,
+D:and he held a sword in his right hand and a glass of wine in his left,
+D:and the devil himself danced behind his eyes... His chin was light, but the
+D:beard covered it. His sword was inlaid with an elaborate filigree of a
+D:golden color. He wore two huge rings on his right hand and one on his
+D:left: an emerald, a ruby, and a sapphire, respectively."
+
+N:3976:Fiona the Sorceress
+G:p:y
+I:130:49d99:100:100:50
+W:68:1:1200:35000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:POISON:8d15
+B:HIT:POISON:8d15
+B:TOUCH:LOSE_CHR
+B:TOUCH:LOSE_CON
+F:UNIQUE | FEMALE | CAN_SPEAK | AMBERITE | ONLY_ITEM | RES_TELE |
+F:DROP_CORPSE | DROP_SKELETON | HAS_LITE | 
+F:BASEANGBAND | 
+F:FORCE_SLEEP | FORCE_MAXHP | NO_CONF | NO_SLEEP |
+F:DROP_4D2 | DROP_1D2 | DROP_GOOD | DROP_60 | DROP_90 |
+F:EVIL | IM_POIS | IM_ELEC | SMART | REGENERATE | OPEN_DOOR | BASH_DOOR |
+S:1_IN_3 |
+S:SCARE | BLIND | CONF | TPORT | BLINK | TELE_AWAY | TELE_TO
+S:TRAPS | CAUSE_4 | BA_POIS | S_DEMON
+S:S_MONSTERS | 
+D:She is beautiful and deadly. "...I have always been very fond of Fiona.
+D:She is certainly the loveliest, most civilized of (all Amberites)."
+
+N:3977:Julian, Master of Arden Forest
+G:p:g
+I:130:55d100:100:100:20
+W:69:1:1700:36000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:9d15
+B:HIT:HURT:9d15
+B:HIT:LOSE_CON:1d30
+F:UNIQUE | MALE | CAN_SPEAK | AMBERITE | RES_TELE | DROP_SKELETON | 
+F:FORCE_SLEEP | FORCE_MAXHP | NO_CONF | NO_SLEEP | DROP_CORPSE
+F:BASEANGBAND | 
+F:DROP_4D2 | DROP_1D2 | DROP_GOOD | DROP_60 | DROP_90 | ONLY_ITEM |
+F:HAS_LITE |
+F:EVIL | IM_POIS | IM_ELEC | IM_COLD | SMART | REGENERATE
+F:OPEN_DOOR | BASH_DOOR |
+S:1_IN_4 |
+S:TPORT | TELE_TO | ARROW_4 | SHRIEK | SCARE | DARKNESS | ARROW_4
+S:S_ANT | S_SPIDER | S_HOUND | S_HYDRA | TRAPS | BO_WATE | BO_ELEC
+D:Julian is at home in wild woodlands. He enjoys hunting a challenging
+D:prey: you. "Julian, dark hair hanging long, blue eyes containing neither
+D:passion nor compassion. He was dressed completely in scaled white armor,
+D:not silver or metallic-colored, but looking as if it had been enameled."
+
+N:3978:Tiamat, Celestial Dragon of Evil
+G:D:v
+I:130:100d100:20:125:70
+W:70:4:20000:45000
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:CLAW:HURT:6d12
+B:CLAW:HURT:8d12
+B:CLAW:HURT:8d12
+B:BITE:HURT:10d14
+F:ATTR_MULTI |
+F:UNIQUE | FEMALE | CAN_FLY |
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:BASEANGBAND | 
+F:ESCORT | AURA_FIRE | AURA_COLD | AURA_ELEC |
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD | DROP_GREAT |
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY |
+F:EVIL | DRAGON | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP
+F:DROP_CORPSE | 
+S:1_IN_2 |
+S:BLIND | CONF | SCARE |
+S:BR_ACID | BR_FIRE | BR_COLD | BR_ELEC | BR_POIS |
+S:S_HI_DRAGON
+D:Usually found guarding the first plane of Hell, Tiamat is a formidable
+D:opponent, her five heads breathing death to all who stand against her.
+
+N:3979:Caine, the Conspirator
+G:p:D
+I:130:56d100:100:100:20
+W:71:1:1700:36500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:9d15
+B:HIT:HURT:9d15
+B:INSULT:EAT_ITEM:1d3
+B:INSULT:EAT_GOLD:1d3
+F:UNIQUE | MALE | CAN_SPEAK | AMBERITE | RES_TELE | HAS_LITE |
+F:BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | DROP_CORPSE | DROP_SKELETON
+F:FORCE_SLEEP | FORCE_MAXHP | NO_CONF | NO_SLEEP | 
+F:DROP_4D2 | DROP_1D2 | DROP_GOOD | DROP_60 | DROP_90 | ONLY_ITEM |
+F:EVIL | IM_POIS | IM_ACID | IM_COLD | SMART | REGENERATE
+S:1_IN_4 |
+S:TPORT | TELE_TO | SCARE | DARKNESS |
+S:S_DRAGON | TRAPS | BO_WATE | BO_NETH | S_UNDEAD | S_DEMON |
+S:CONF | BO_ACID | FORGET | MIND_BLAST | CAUSE_4
+D:Caine is perhaps the least reliable Amberite, always ready to ignore
+D:his pacts and promises when it suits him. "...the swarthy, dark-eyed
+D:countenance of Caine, dressed all in satin that was black and green,
+D:wearing a dark three-cornered hat set at a rakish angle, and a green
+D:plume of feathers trailing down in the back. He was standing in the
+D:profile, one arm akimbo, and toes of his boots curled upwards, and he
+D:wore an emerald-studded dagger at his belt... He was dark."
+
+N:3980:Gerard, Strongman of Amber
+G:p:u
+I:130:66d101:100:150:20
+W:74:1:2100:36500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:SHATTER:15d15
+B:HIT:SHATTER:15d15
+F:UNIQUE | MALE | CAN_SPEAK | AMBERITE | RES_TELE | HAS_LITE |
+F:DROP_SKELETON | DROP_CORPSE | 
+F:BASEANGBAND | 
+F:FORCE_SLEEP | FORCE_MAXHP | NO_CONF | NO_SLEEP | KILL_WALL |
+F:DROP_4D2 | DROP_1D2 | DROP_GOOD | DROP_60 | DROP_90 | ONLY_ITEM |
+F:EVIL | IM_POIS | IM_ACID | IM_FIRE | REGENERATE
+F:OPEN_DOOR | BASH_DOOR |
+S:1_IN_4 |
+S:HEAL | TPORT | TELE_TO | SCARE | BLIND | S_MONSTERS
+D:Gerard may not be quite as devious as the other Amberites, but
+D:he is certainly stronger than the rest of them put together. "...a big,
+D:powerful man... (He) resembled (Corwin) quite strongly, save that
+D:his jaw was heavier, and (Corwin) knew he was bigger than him, though
+D:slower. His strength was a thing out of legend. He wore a dressing gown of
+D:blue and gray clasped around the middle with a wide, black belt, and he
+D:stood laughing. About his neck, on a heavy cord, there hung a silver
+D:hunting horn. He wore a fringe beard and a light mustache. In his right
+D:hand he held a goblet of wine."
+
+N:3981:Warp demon
+G:U:o
+I:120:30d100:30:100:20
+W:76:1:5000:15000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:UN_BONUS:14d11
+B:HIT:UN_POWER:14d11
+B:HIT:LOSE_CHR:7d11
+F:FORCE_SLEEP | FORCE_MAXHP | NO_CONF | NO_SLEEP | INVISIBLE |
+F:DROP_GOOD | DROP_60 | DROP_1D2 | SMART | PASS_WALL |
+F:RES_NEXU | RES_NETH | NONLIVING | CAN_FLY |
+F:BASEANGBAND | 
+F:EVIL | IM_POIS | IM_ELEC | IM_COLD | IM_FIRE | DEMON
+S:1_IN_4 |
+S:HEAL | TPORT | S_DEMON |
+S:BRAIN_SMASH | DRAIN_MANA | BR_PLAS
+D:A huge demon who guards the cross-dimensional gateways.
+
+N:3982:Eric the Usurper
+G:p:R
+I:130:58d100:100:100:15
+W:76:1:1700:35500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:10d15
+B:HIT:HURT:10d15
+B:HIT:EAT_ITEM:10d15
+F:UNIQUE | MALE | CAN_SPEAK | SMART | AMBERITE | RES_TELE | HAS_LITE |
+F:OPEN_DOOR | BASH_DOOR | DROP_CORPSE | DROP_SKELETON
+F:FORCE_SLEEP | FORCE_MAXHP | NO_CONF | NO_SLEEP | 
+F:DROP_4D2 | DROP_1D2 | DROP_GOOD | DROP_60 | DROP_90 | ONLY_ITEM |
+F:BASEANGBAND | 
+F:EVIL | IM_POIS | IM_ACID | IM_ELEC | REGENERATE |
+S:1_IN_4 |
+S:BLIND | S_MONSTER | DRAIN_MANA | S_MONSTERS |
+S:SCARE | CONF | TPORT | TELE_TO | CAUSE_3 | BO_ACID |
+S:HOLD | BA_FIRE | TRAPS | TELE_AWAY | BRAIN_SMASH |
+S:FORGET | BO_WATE | CAUSE_4 | BO_NETH | DARKNESS |
+S:S_ANGEL | S_DEMON | 
+D:When Oberon disappeared, Eric seized the opportunity and claimed
+D:the throne, eliminating those who would have opposed him. "Handsome by
+D:anyone's standards, his hair was so dark, as to be almost blue. His beard
+D:curled around the mouth that always smiled, and he was dressed simply in a
+D:leather jacket and leggings, a plain cloak, high black boots, and he wore
+D:a red sword belt bearing a long silvery saber and clasped with a ruby,
+D:and his high cloak, collar round his head was lined with red and the
+D:trimmings of his sleeves matched it. His hands, thumbs hooked behind
+D:his belt, were terribly strong and prominent. A pair of black gloves
+D:jutted from his belt near his right tip."
+
+N:3983:Klingsor, Evil Master of Magic
+G:p:y
+I:130:70d100:60:100:10
+W:78:3:1600:40000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:UN_BONUS:6d8
+B:HIT:UN_POWER:6d8
+B:TOUCH:BLIND
+B:TOUCH:CONFUSE
+F:UNIQUE | MALE | CAN_SPEAK | POWERFUL | RES_TELE | HAS_LITE | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART |
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_1D2 | DROP_4D2 | DROP_GREAT | DROP_GOOD |
+F:INVISIBLE | OPEN_DOOR | BASH_DOOR |
+F:EVIL | IM_FIRE | IM_COLD |
+F:IM_ELEC | NO_CONF | NO_SLEEP
+F:DROP_CORPSE | DROP_SKELETON | 
+S:1_IN_2 |
+S:CAUSE_3 | TELE_TO | BA_FIRE | DRAIN_MANA | HOLD |
+S:TRAPS | BA_WATE | BO_PLAS | BA_NETH |  
+S:BA_MANA | BA_DARK | S_HI_UNDEAD | BA_CHAO | HAND_DOOM | ANIM_DEAD
+D:Klingsor, whose hopeless effort to join the Knights of the Grail
+D:was thwarted, turned to black magic and became a deadly necromancer.
+
+N:3984:Corwin, Lord of Avalon
+G:p:r
+I:130:59d100:100:100:15
+W:78:1:1800:35500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:10d15
+B:HIT:HURT:10d15
+B:HIT:LOSE_CON:10d15
+F:UNIQUE | MALE | CAN_SPEAK | SMART | AMBERITE | RES_TELE | HAS_LITE |
+F:OPEN_DOOR | BASH_DOOR | DROP_CORPSE | DROP_SKELETON
+F:FORCE_SLEEP | FORCE_MAXHP | NO_CONF | NO_SLEEP | 
+F:BASEANGBAND | 
+F:DROP_4D2 | DROP_1D2 | DROP_GOOD | DROP_60 | DROP_90 | ONLY_ITEM |
+F:POWERFUL |
+F:EVIL |IM_COLD | IM_POIS | IM_ACID | IM_ELEC | REGENERATE
+S:1_IN_4 |
+S:SCARE | CONF | TPORT | TELE_TO | S_MONSTER | DRAIN_MANA |
+S:CAUSE_3 | BO_ACID | BO_MANA | HOLD | BA_FIRE | BA_COLD |
+S:TRAPS | TELE_AWAY | HEAL | BRAIN_SMASH | BA_WATE | BA_NETH |
+S:FORGET | BO_WATE | BO_NETH | CAUSE_4 | DARKNESS | S_MONSTERS |
+S:BO_PLAS | S_ANGEL | 
+D:Corwin is one of the most feared and respected Amberites; his skill
+D:and cunning are well known. "Green eyes, black hair, dressed in black
+D:and silver, yes. (Corwin) had on a cloak and it was slightly furled
+D:as by a wind. (He) had on black boots, like Eric's, and (he) too bore a
+D:blade, only (his) was heavier, though not quite as long as (Eric's).
+D:(He) had (his) gloves on and they were silver and scaled. The clasp
+D:at (his) neck was cast in the form of a silver rose."
+
+N:3985:Benedict, the Ideal Warrior
+G:p:W
+I:130:69d100:100:100:15
+W:79:1:2250:38500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:15d15
+B:HIT:HURT:15d15
+B:HIT:HURT:15d15
+B:HIT:HURT:15d15
+F:UNIQUE | MALE | CAN_SPEAK | SMART | AMBERITE | RES_TELE | HAS_LITE |
+F:OPEN_DOOR | BASH_DOOR |
+F:FORCE_SLEEP | FORCE_MAXHP | NO_CONF | NO_SLEEP | 
+F:DROP_4D2 | DROP_1D2 | DROP_GOOD | DROP_60 | DROP_90 | ONLY_ITEM |
+F:BASEANGBAND | 
+F:EVIL | IM_COLD | IM_POIS | IM_ACID | IM_ELEC | IM_FIRE | REGENERATE
+F:DROP_CORPSE | DROP_SKELETON | 
+S:1_IN_4 |
+S:SCARE | CONF | TPORT | TELE_TO | DRAIN_MANA | TRAPS | BRAIN_SMASH |
+S:TELE_AWAY | CAUSE_4 | S_MONSTERS |
+S:S_DEMON | TELE_LEVEL | FORGET | HEAL
+D:In the field of combat Benedict rules supreme: with but one hand
+D:he was still superior to Corwin. "Benedict, tall and dour; thin of
+D:body, thin of face, wide of mind. He wore orange and yellow and brown
+D:and reminded me of haystacks and pumpkins and scarecrows and the
+D:Legend of Sleepy Hollow. He had a long, strong jaw and hazel eyes and
+D:brown hair that never curled. He stood beside a tan horse and leaned
+D:upon a lance about which was twined a rope of flowers. He seldom
+D:laughed."
+
+N:3986:Hell hound of Julian
+G:C:r
+I:120:48d10:25:80:30
+W:83:4:1500:600
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:BITE:FIRE:7d12
+B:BITE:FIRE:7d12
+B:BITE:FIRE:7d12
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:MORTAL | BASEANGBAND | 
+F:RAND_25 | FRIENDS | AURA_FIRE |
+F:BASH_DOOR | MOVE_BODY |
+F:ANIMAL | EVIL | IM_FIRE
+F:DROP_CORPSE | 
+S:1_IN_5 |
+S:BR_FIRE
+D:It is a giant dog that glows with heat. Flames pour from its nostrils.
+
+N:3987:Kaschei the Immortal
+G:L:v
+I:130:60d100:100:100:0
+W:90:3:1700:45000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:UN_BONUS:6d8
+B:HIT:UN_BONUS:6d8
+B:HIT:HURT:5d10
+B:HIT:EXP_20:10d10
+F:UNIQUE | MALE | DROP_SKELETON | CAN_SPEAK | RES_TELE
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ESCORT |
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD | DROP_GREAT |
+F:BASEANGBAND | 
+F:SMART | COLD_BLOOD | OPEN_DOOR | BASH_DOOR |
+F:EVIL | UNDEAD | POWERFUL | 
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | RES_NETH | NO_CONF | NO_SLEEP |
+S:1_IN_3 |
+S:TPORT | BLIND | SCARE | CAUSE_4 | BRAIN_SMASH | 
+S:BA_MANA | BO_MANA | BA_FIRE |   
+S:S_MONSTERS | S_DEMON | S_HI_UNDEAD | HAND_DOOM | ANIM_DEAD
+D:A stench of corruption and decay surrounds this sorcerer, who has clearly
+D:risen from the grave to continue his foul plots and schemes.
+
+N:3988:Cerberus, Guardian of Hades
+G:C:r
+I:130:100d100:50:160:10
+W:94:1:10000:40000
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:BITE:FIRE:12d12
+B:BITE:FIRE:12d12
+B:BITE:FIRE:12d12
+F:UNIQUE |
+F:FORCE_SLEEP | FORCE_MAXHP | AURA_FIRE |
+F:ONLY_ITEM | DROP_4D2 | DROP_GOOD |
+F:BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | MOVE_BODY |
+F:ANIMAL | EVIL | IM_FIRE | NO_CONF | NO_SLEEP
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:BA_DARK |
+S:BR_FIRE | BR_NETH |
+S:S_HOUND
+D:A three-headed hell hound of fearsome aspect. Flame burns merrily from its
+D:hide as it snarls and roars its defiance.
+
+N:3989:Oberon, King of Amber
+G:p:v
+I:145:99d111:100:165:0
+W:99:1:1700:65000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:UN_BONUS:12d12
+B:HIT:UN_POWER:12d12
+B:HIT:BLIND:10d3
+B:TOUCH:EXP_20:10d8
+F:UNIQUE | MALE | CAN_SPEAK | DROP_CORPSE | HAS_LITE |
+F:ATTR_MULTI | AMBERITE | RES_TELE
+F:BASEANGBAND | 
+F:FORCE_SLEEP | FORCE_MAXHP |  
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD | DROP_GREAT |
+F:REFLECTING | AURA_FIRE | AURA_ELEC
+F:SMART | OPEN_DOOR | BASH_DOOR | MOVE_BODY | REGENERATE |
+F:EVIL | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | POWERFUL |
+F:NO_CONF | NO_SLEEP
+S:1_IN_2 |
+S:TPORT | SCARE | BLIND | S_DEMON | S_MONSTERS |
+S:TELE_TO | CONF | BO_MANA | BA_FIRE | BRAIN_SMASH | BA_NETH |
+S:BO_ICEE | CAUSE_4 | BA_WATE | BO_PLAS | TELE_LEVEL | TELE_AWAY |
+S:FORGET | DARKNESS | BA_MANA | S_HI_DRAGON | S_HI_UNDEAD | BA_CHAO
+S:S_WRAITH | HAND_DOOM |   
+D:Oberon, the father or grandfather of most Amberites, is as powerful
+D:as ever. He is afraid that you will upset the balance and will not
+D:let you harm the Serpent of Chaos. "Oberon, Lord of Amber, stood before
+D:me in his green and his gold. High, wide and thick, his beard black and
+D:shot with silver, his hair the same. Green rings in gold settings and
+D:a blade of golden color."
+
+N:3990:The Real Serpent of Chaos
+G:J:D
+I:155:200d150:111:175:0
+W:100:1:50000:66666
+E:0:0:0:0:1:0
+O:20:20:20:20
+B:CRUSH:SHATTER:22d10
+B:CRUSH:SHATTER:22d10
+B:BITE:LOSE_ALL:10d12
+B:TOUCH:UN_POWER
+F:UNIQUE | CAN_SPEAK | ATTR_MULTI | ATTR_ANY |
+F:FORCE_SLEEP | FORCE_MAXHP |  
+F:REFLECTING | AURA_FIRE | AURA_ELEC | AURA_COLD |
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | DROP_3D2 | DROP_4D2 |
+F:DROP_GOOD | DROP_GREAT | RES_NETH |
+F:SMART | KILL_WALL | KILL_BODY | POWERFUL |
+F:NONLIVING | CAN_FLY | REGENERATE
+F:EVIL | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
+F:NO_CONF | NO_SLEEP | NO_STUN | RES_TELE | 
+S:1_IN_3 |
+S:S_MONSTERS | BR_CHAO | BA_CHAO | ROCKET | S_KIN |
+S:BR_NETH | BR_MANA | S_HI_UNDEAD | S_HI_DRAGON | S_UNIQUE |
+S:BR_NUKE | BR_DISI | HAND_DOOM |  
+D:The Big Boss himself. Before the universe the Serpent was. The Unicorn
+D:of Order fought with Serpent and stole one of its eyes, known as the
+D:Jewel of Judgement. With the Jewel, Dworkin drew the Pattern and thus
+D:gave birth to the infinite worlds of shadow. Now the balance has been
+D:disrupted, the Pattern damaged, and all the shadow is being absorbed by
+D:the Serpent. Unless it is stopped, the word as we know it will come to
+D:an end, all order reverting to Primal Chaos.
+
+N:3991:Quantum dot
+G:,:v
+I:110:4d2:20:100:0
+W:35:20:50:50
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:SPORE:LOSE_ALL:2d4
+B:SPORE:UN_BONUS:2d4
+B:SPORE:CONFUSE:2d4
+B:SPORE:TERRIFY:2d4
+F:NEVER_MOVE |
+F:STUPID | WEIRD_MIND | ATTR_MULTI | ATTR_ANY | 
+F:ELDRITCH_HORROR | FRIENDS |
+F:BASEANGBAND | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | DROP_CORPSE
+F:NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN
+S:1_IN_2 |
+S:BLINK | MIND_BLAST
+S:MULTIPLY
+D:It is there and it is not.
+
+N:3992:a Plain Gold Ring
+G:=:y
+I:140:160d100:100:200:10
+W:110:3:20:50000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:TOUCH:BLIND:5d5
+B:TOUCH:UN_BONUS:10d10
+B:TOUCH:LOSE_ALL:10d10
+B:TOUCH:EXP_80:10d10
+F:UNIQUE | FORCE_SLEEP | NEVER_MOVE | ONLY_ITEM | DROP_90 | FORCE_MAXHP |
+F:DROP_GOOD | DROP_GREAT | REFLECTING | INVISIBLE | COLD_BLOOD | 
+F:BASEANGBAND | 
+F:SMART | EMPTY_MIND | REGENERATE | POWERFUL | AURA_FIRE |
+F:EVIL | NONLIVING | IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS |
+F:RES_NETH | RES_WATE | RES_PLAS | NO_CUT | 
+F:RES_NEXU | RES_DISE |  
+F:RES_TELE | NO_FEAR | NO_CONF | NO_STUN | NO_SLEEP |
+S:1_IN_2 |
+S:BR_NETH | BR_TIME | BA_MANA | BO_MANA | HAND_DOOM | HEAL |
+S:S_DEMON | S_HI_UNDEAD | S_HI_DRAGON |  
+D:It is a ring of immense power. You can hardly believe you've
+D:finally found the One Ring!
+
+N:3993:Lourph
+G:S:u
+I:140:23d7:200:110:0
+W:79:7:50:3333
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:BITE:PARALYZE:5d5
+B:BITE:PARALYZE:5d5
+B:BITE:POISON:7d5
+B:BITE:LOSE_ALL:8d5
+F:FRIENDS |
+F:COLD_BLOOD | EMPTY_MIND | REGENERATE | BASH_DOOR | KILL_BODY | KILL_ITEM |
+F:ANIMAL | HURT_LITE | IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS |
+F:BASEANGBAND | 
+F:RES_TELE | RES_NETH | RES_DISE | 
+F:NO_FEAR | NO_CONF | NO_STUN | NO_SLEEP |
+D:Small brown spiders that lurk in the darkness deep underground.
+D: An individual would be nearly harmless, but their size allows many
+D: to crawl where only a single Mirkwood spider could stand. Packs of
+D: these arachnids may scour the depths untiringly, and their hunger is
+D: never satisfied.
+
+N:3994:Caaws
+G:E:D
+I:120:15d231:100:176:0
+W:90:8:2000:70000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:TOUCH:UN_POWER:13d13
+B:TOUCH:UN_BONUS:13d13
+B:TOUCH:LOSE_ALL:13d13
+B:TOUCH:EXP_20:13d13
+F:FORCE_MAXHP | NEVER_MOVE |
+F:STUPID | 
+F:BASEANGBAND | 
+F:CAN_SWIM | CAN_FLY |
+F:NONLIVING | COLD_BLOOD | EMPTY_MIND | REGENERATE | KILL_BODY | AURA_COLD |
+F:EVIL | DEMON | IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS |
+F:RES_NETH | RES_WATE | RES_PLAS | NO_CUT | 
+F:RES_NEXU | RES_DISE |  
+F:RES_TELE | NO_FEAR | NO_CONF | NO_STUN | NO_SLEEP |
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | 
+S:1_IN_5
+S:HEAL |   
+D:A thing like a massive, jet black oyster with four groping tendrils.
+D: Born of nether, it need not chase its prey, content to seethe
+D: in the darkness until some unfortunate creature wanders too close.
+
+N:3995:Culverin
+G:I:U
+I:110:8d5:20:13:40
+W:8:2:500:25
+E:1:1:1:2:1:1
+O:20:20:20:20
+F:NEVER_BLOW | RAND_25 | ANIMAL | WILD_WOOD |
+F:BASEANGBAND | 
+S:1_IN_1
+S:ARROW_1
+D:A many legged scuttling thing, it spits pebbles with deadly force.
+
+N:3996:Behinder
+G:x:d
+I:125:30d20:10:45:80
+W:30:100:500:900
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:TOUCH:TERRIFY:5d5
+B:BITE:HURT:8d4
+F:CHAR_MULTI | ATTR_CLEAR | FORCE_SLEEP |
+F:SMART | INVISIBLE | COLD_BLOOD | EMPTY_MIND |
+F:ELDRITCH_HORROR | OPEN_DOOR | ANIMAL | NO_FEAR |
+F:BASEANGBAND | 
+F:NO_STUN | NO_CONF | NO_SLEEP | CAN_SWIM |
+F:WILD_WOOD | WILD_MOUNTAIN |
+D:"The Behinder flung itself on his shoulders. Then I knew why
+D: nobody's supposed to see one. I wish I hadn't. To this day I
+D: can see it, plain as a fence at noon, and forever I will be
+D: able to see it."
+
+N:3997:Boadile
+G:S:g
+I:120:30d10:20:25:30
+W:25:40:7000:300
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:BITE:HURT:2d5
+B:CRUSH:HURT:2d8
+B:CRUSH:HURT:2d8
+F:FORCE_MAXHP | STUPID | COLD_BLOOD | BASH_DOOR |
+F:ANIMAL | RES_WATE | CAN_SWIM | WILD_SHORE |
+F:WILD_OCEAN |
+F:BASEANGBAND | 
+D:"...Head something like a croc's, only bigger. Around forty
+D: feet long. Able to roll itself into a big beachball with teeth.
+D: Fast on land or in water - and a hell of a lot of little legs
+D: on each side."
+
+N:3998:Ebony monk
+G:p:D
+I:120:63d11:20:57:5
+W:36:3:1700:1100
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:KICK:INSANITY:7d1
+B:HIT:EXP_10:7d2
+B:KICK:INSANITY:7d4
+B:HIT:EXP_10:7d2
+F:MALE | DROP_60 | DROP_1D2 | OPEN_DOOR | BASH_DOOR | IM_COLD | HAS_LITE |
+F:IM_POIS | RES_NETH | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | 
+F:DROP_SKELETON | DROP_CORPSE | 
+S:1_IN_9 |
+S:BO_NETH
+D:A monk in dusky robes trained in the most lethal martial arts.
+
+N:3999:Metal Babble
+G:j:s
+I:190:3d2:200:10000:0
+W:80:10:20:40000
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:HIT:UN_BONUS:1d10
+B:HIT:UN_BONUS:1d10
+B:TOUCH:UN_POWER
+B:TOUCH:UN_POWER
+F:FORCE_SLEEP
+F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | DROP_3D2 |
+F:DROP_GOOD | DROP_GREAT | CAN_SWIM |
+F:BASEANGBAND | 
+F:SMART | NONLIVING | COLD_BLOOD |
+#RES_ALL
+F:IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS | RES_NETH |
+F:RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | POWERFUL | 
+F:NO_CONF | NO_SLEEP | NO_STUN | EMPTY_MIND | RES_TELE |
+S:1_IN_1 |
+S:BLINK | BO_MANA | BA_CHAO | BA_FIRE | TPORT | 
+D:It's hard to kill.
+
+N:4000:The Yamata-no-Orochi
+G:M:v
+I:123:60d100:50:160:20
+W:63:2:10000:35000
+E:0:1:0:2:2:0
+O:20:20:20:20
+B:HIT:HURT:10d10
+B:HIT:HURT:10d10
+B:CLAW:POISON:5d1
+B:CRUSH:UN_BONUS:5d12
+F:UNIQUE |
+F:ATTR_MULTI |
+F:FORCE_SLEEP | FORCE_MAXHP | ANIMAL |
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_GOOD |  
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY | CAN_SWIM | RES_WATE |
+F:EVIL | IM_FIRE | IM_COLD | IM_POIS | IM_ELEC | NO_CONF | NO_SLEEP
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:BR_FIRE | BR_NEXU | BR_CHAO | BR_POIS | BR_DISE | BR_PLAS | BR_NUKE | BR_DARK
+D:Some mystical beast from Japan.
+
+N:4001:Combat-Echizen "Because it's time"
+G:p:R
+I:170:20d100:100:350:0
+W:85:2:1600:35000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:KICK:HURT:7d10
+B:HIT:UN_POWER:7d8
+B:KICK:HURT:7d10
+B:HIT:UN_POWER:7d8
+F:UNIQUE | MALE | HAS_LITE | 
+F:FORCE_SLEEP | FORCE_MAXHP | CAN_SPEAK |
+F:ONLY_ITEM | DROP_1D2 | DROP_3D2 | DROP_GOOD | DROP_GREAT |
+F:OPEN_DOOR | POWERFUL | MOVE_BODY | CAN_SWIM |
+F:BASEANGBAND | 
+F:GOOD | IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS |
+F:RES_NETH | RES_WATE | RES_PLAS | NO_CUT | 
+F:RES_NEXU | RES_DISE |  
+F:RES_TELE | NO_CONF | NO_SLEEP | NO_STUN |
+F:DROP_CORPSE | 
+S:1_IN_2 |
+S:ROCKET | HEAL | BLINK | 
+D:His favorite food is roasting rice noodle.
+D:He is the lone wolf filled with the adventurous spirit.
+D:His righteousness and courage are more than the average.
+D:He sometimes become emotional.
+D:He would like to choose a haphazard life rather than an intentional life.
+D:He is poor at treating women.
+
+N:4002:Spectral Wyrm
+G:D:w
+I:130:60d100:40:200:255
+W:77:4:10000:35000
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:CLAW:HURT:10d12
+B:CLAW:HURT:10d12
+B:CLAW:HURT:10d12
+B:BITE:UN_BONUS:8d8
+F:FORCE_MAXHP | EVIL | UNDEAD | CAN_FLY | AURA_COLD |
+F:ONLY_ITEM | DROP_3D2 | DROP_4D2 | DROP_GOOD |
+F:BASEANGBAND | 
+F:POWERFUL | MOVE_BODY | PASS_WALL | INVISIBLE |
+F:DRAGON | NO_CONF | NO_SLEEP | RES_TELE |
+F:IM_POIS | IM_COLD |
+F:RES_NETH | RES_NEXU | RES_DISE | 
+S:1_IN_3 |
+S:BR_NEXU | BR_NETH | BR_DISE |
+S:S_HI_DRAGON
+S:SCARE | BLINK | SHRIEK
+D:The tortured soul of a once powerful wyrm.
+
+N:4003:Storm troll
+G:T:b
+I:120:60d50:20:110:100
+W:51:2:8000:3500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:ELEC:3d10
+B:BITE:HURT:1d22
+B:HIT:COLD:3d10
+B:BITE:HURT:1d22
+F:FORCE_SLEEP | FORCE_MAXHP | REGENERATE |
+F:DROP_3D2 | SMART | TAKE_ITEM | 
+F:MORTAL | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | MOVE_BODY | POWERFUL | CAN_FLY
+F:IM_ACID | IM_COLD | IM_ELEC | TROLL | EVIL
+F:DROP_CORPSE | 
+S:1_IN_7 |
+S:BA_COLD | BO_ICEE | BO_WATE | BA_ELEC
+D:The dungeon shakes as an enormous troll-form thunders into view, hurling
+D:ice and lightning in every direction. It is thirty feet tall, has six
+D:heads, and is enraged at your impudence.
+
+N:4004:Unstable worm mass
+G:w:o
+I:100:3d10:10:10:5
+W:15:16:100:7
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:EXPLODE:FIRE:5d5
+F:RAND_50 | RAND_25 | CAN_SWIM |
+F:STUPID | WEIRD_MIND | BASH_DOOR |
+F:MORTAL | BASEANGBAND | 
+F:ANIMAL | HURT_LITE | NO_FEAR
+S:MULTIPLY
+D:A seething mass of thick, glowing worms.
+
+N:4005:Dio Brando
+G:V:y
+I:130:50d100:20:166:10
+W:66:4:1800:33333
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CLAW:EXP_80:10d10
+B:CLAW:EXP_80:10d10
+B:SPIT:BLIND:10d10
+B:HIT:LOSE_CON:10d10
+F:UNIQUE | MALE |
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | CAN_SPEAK | CAN_FLY | AURA_COLD |
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT |
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | REGENERATE |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | RES_NETH | HURT_LITE |
+F:NO_CONF | NO_SLEEP | RES_TELE | REFLECTING |
+S:1_IN_4 |
+S:SCARE | S_KIN | TELE_TO
+D:A celebrity who somehow ended up in Middle-Earth.
+
+N:4006:Ohmu
+G:w:g
+I:110:100d10:20:90:30
+W:60:20:8000:2300
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CRUSH:INSANITY:8d6
+F:IM_FIRE | RES_PLAS | IM_COLD | IM_POIS | RES_TELE |
+F:KILL_WALL | CAN_SWIM | MOVE_BODY |
+F:BASEANGBAND | 
+F:FORCE_MAXHP | ONLY_GOLD | DROP_2D2 | DROP_3D2 |
+F:DROP_CORPSE | 
+D:No idea what this thing is, but it tries to kill you.
+
+N:4007:Richard Wong, Master of Time
+G:p:w
+I:135:60d100:100:190:20
+W:81:3:1700:45000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:TIME:5d8
+B:HIT:TIME:5d8
+B:HIT:TIME:5d8
+B:KICK:UN_BONUS:8d10
+F:UNIQUE | MALE | CAN_SPEAK | DROP_CORPSE | FORCE_SLEEP | FORCE_MAXHP |
+F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | DROP_4D2 | DROP_GOOD | 
+F:MORTAL | BASEANGBAND | 
+F:REFLECTING | SMART | REGENERATE | PASS_WALL | CAN_FLY |
+F:EVIL | IM_ACID | IM_COLD | IM_POIS | IM_FIRE | IM_ELEC | NO_CONF |
+F:NO_SLEEP | RES_NEXU | RES_WATE | ESCORT
+S:1_IN_2 |
+S:TPORT | SCARE | S_KIN | BLINK | HEAL |
+S:TELE_TO | CONF | BO_MANA | BRAIN_SMASH |
+S:BA_WATE | TELE_AWAY |
+D:A boss who somehow doesn't have time spells, but his melee attack times you.
+
+N:4008:Locke, the Superman
+G:p:G
+I:130:60d100:100:170:20
+W:65:3:1700:32000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:10d14
+B:HIT:HURT:10d14
+B:HIT:HURT:10d14
+B:HIT:HURT:10d14
+F:UNIQUE | MALE | DROP_CORPSE | FORCE_SLEEP | FORCE_MAXHP | NEUTRAL |
+F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | DROP_3D2 | DROP_GOOD | 
+F:REFLECTING | SMART | REGENERATE | OPEN_DOOR |
+F:BASEANGBAND | 
+F:GOOD | IM_COLD | IM_FIRE | IM_ELEC | NO_CONF | NO_STUN |
+F:NO_SLEEP | RES_TELE | RES_NETH | POWERFUL | CAN_FLY |
+S:1_IN_3 |
+S:TPORT | BLIND | HOLD | BLINK | HEAL | HASTE |
+S:TELE_TO | CONF | BO_MANA | BRAIN_SMASH | 
+D:Some super powerful boss monster.
+
+N:4009:Layzark, the Emperor
+G:p:y
+I:130:55d100:100:140:20
+W:65:3:1700:32000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:BLIND:8d8
+B:HIT:CONFUSE:8d8
+B:TOUCH:UN_POWER
+B:TOUCH:UN_POWER
+F:UNIQUE | FEMALE | DROP_CORPSE | FORCE_SLEEP | FORCE_MAXHP | CAN_SPEAK |
+F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | DROP_3D2 | DROP_GOOD | 
+F:REFLECTING | SMART | REGENERATE | OPEN_DOOR |
+F:MORTAL | BASEANGBAND | 
+F:EVIL | IM_COLD | IM_FIRE | IM_ELEC | NO_CONF | NO_STUN |
+F:NO_SLEEP | RES_TELE | RES_NETH | RES_NEXU | POWERFUL | CAN_FLY |
+S:1_IN_2 |
+S:TPORT | BLIND | BLINK | HEAL | HASTE |
+S:CONF | BO_MANA | BRAIN_SMASH | 
+S:BA_NETH | BA_DARK | BA_CHAO |
+S:S_MONSTERS | S_DEMON | S_KIN
+D:Despite being called "emperor", this boss is actually female, so it should 
+D:say "empress" but it doesn't.
+
+N:4010:Zombified Serpent of Chaos
+G:J:D
+I:160:200d150:222:200:0
+W:127:4:50000:66666
+E:0:0:0:0:1:0
+O:20:20:20:20
+B:CRUSH:SHATTER:22d15
+B:CRUSH:SHATTER:22d15
+B:BITE:LOSE_ALL:15d12
+B:TOUCH:UN_POWER
+F:CAN_SPEAK | UNDEAD | UNIQUE |
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:BASEANGBAND | 
+F:REFLECTING | AURA_FIRE | AURA_ELEC | AURA_COLD |
+F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | DROP_3D2 | DROP_4D2 |
+F:DROP_GOOD | DROP_GREAT | RES_NETH |
+F:SMART | KILL_WALL | KILL_BODY | POWERFUL |
+F:REGENERATE | NONLIVING | CAN_FLY |
+F:EVIL | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
+F:NO_CONF | NO_SLEEP | NO_STUN | RES_TELE | NO_FEAR | 
+S:1_IN_3 |
+S:S_MONSTERS | BR_CHAO | BA_CHAO | ROCKET | S_KIN |
+S:BR_NETH | BR_MANA | S_HI_UNDEAD | S_HI_DRAGON | S_UNIQUE |
+S:BR_NUKE | BR_DISI | HAND_DOOM |  
+D:This thing will fucking own you, loser. Flee or die!
+
+N:4011:Noxious fume
+G:#:y
+I:90:3d3:20:37:30
+W:20:16:500:15
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:TOUCH:POISON:3d3
+F:RAND_25 | RAND_50 | INVISIBLE | 
+F:CAN_FLY | CAN_SWIM | PASS_WALL | KILL_BODY |
+F:BASEANGBAND | 
+F:IM_FIRE | IM_COLD | IM_ACID | IM_ELEC | IM_POIS |
+F:NONLIVING | EMPTY_MIND | COLD_BLOOD |
+F:WILD_VOLCANO | WILD_SWAMP | WILD_SHORE | 
+F:NO_FEAR | NO_CONF | NO_SLEEP | NO_STUN |
+S:MULTIPLY
+D:It is a swirling cloud of yellowish gas.
+
+N:4012:Shallow puddle
+G:~:B
+I:115:9d6:10:17:0
+W:11:6:100:70
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:TOUCH:ACID:2d3
+B:TOUCH:ACID:2d3
+F:NEVER_MOVE | COLD_BLOOD |
+F:CAN_SWIM | IM_ELEC | IM_ACID | IM_POIS |
+F:NO_FEAR | NO_CONF | NO_SLEEP | NONLIVING |
+F:BASEANGBAND | 
+F:EMPTY_MIND
+D:It is a placid watery pool.
+
+N:4013:Dark elven shade
+G:h:w
+I:130:48d18:20:50:10
+W:51:2:1500:6000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:TOUCH:EXP_80:1d16
+B:TOUCH:EXP_20:3d10
+B:TOUCH:LOSE_DEX:8d8
+B:TOUCH:LOSE_INT:8d8
+F:MALE |
+F:FORCE_SLEEP | FORCE_MAXHP
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_90 | DROP_4D2 |
+F:SMART | INVISIBLE | COLD_BLOOD | UNDEAD |
+F:EVIL | HURT_LITE | RES_NETH | NO_CONF | NO_SLEEP |
+S:1_IN_2 |
+S:HEAL | BLINK | BLIND | CONF | CAUSE_3 | DARKNESS |
+S:ANIM_DEAD | SHRIEK | TELE_AWAY | BA_DARK | DRAIN_MANA |
+S:S_MONSTER | S_UNDEAD | S_DEMON | S_KIN |
+D:A dark elven figure that glows with an inner light.
+
+N:4014:Mana hound
+G:Z:B
+I:125:60d10:30:100:0
+W:51:4:1500:4000
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:BITE:HURT:25d1
+B:BITE:HURT:25d1
+B:BITE:HURT:25d1
+B:CLAW:HURT:3d3
+F:FORCE_SLEEP |
+F:FRIENDS | 
+F:MORTAL | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR |
+F:ANIMAL | NO_CONF | NO_SLEEP
+F:DROP_CORPSE | 
+S:1_IN_8 |
+S:BR_MANA
+D:A powerful aura radiates from this canine creature. It feels
+D:like... magic?
+
+N:4015:Vore
+G:S:v
+I:125:35d10:20:30:40
+W:44:2:1700:850
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CLAW:HURT:4d8
+B:CLAW:HURT:8d4
+F:DROP_90 | DROP_2D2 |
+F:OPEN_DOOR | BASH_DOOR | IM_POIS | IM_ACID | IM_COLD | EVIL
+F:BASEANGBAND | 
+F:DROP_SKELETON | DROP_CORPSE | 
+S:1_IN_5
+S:BO_MANA
+D:A gaunt, vaguely humanoid torso merged with the form of a giant
+D:spider, ugly as sin. It screams horribly as it charges at you.
+
+N:4016:Great Venom Wyrm
+G:D:g
+I:122:54d100:30:170:80
+W:55:2:10000:16000
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:CLAW:HURT:4d12
+B:CLAW:HURT:4d12
+B:CLAW:HURT:4d12
+B:BITE:POISON:5d14
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_GOOD |
+F:BASH_DOOR | POWERFUL | MOVE_BODY | CAN_FLY |
+F:EVIL | DRAGON | IM_POIS | NO_CONF | NO_SLEEP | 
+F:BASEANGBAND | 
+F:DROP_CORPSE | 
+S:1_IN_6 |
+S:BLIND | CONF | SCARE |
+S:BR_POIS
+D:A huge dragon of incredible destructive power. Noxious vapours
+D:fill the room near it, leaving you gasping for breath. Flee
+D:now while you still can!
+
+N:4017:Djinni
+G:P:b
+I:130:70d10:30:90:10
+W:40:3:3000:900
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:8d4
+B:HIT:HURT:8d4
+F:DROP_60 | WEIRD_MIND | OPEN_DOOR | BASH_DOOR | MOVE_BODY |
+F:TAKE_ITEM | GOOD | IM_ELEC | NO_CONF | NO_SLEEP |
+F:BASEANGBAND | 
+F:CAN_FLY |
+S:1_IN_6 |
+S:BO_ELEC | MISSILE | BLINK | S_MONSTER | BA_ELEC
+D:Supported by a whirlwind, the djinni turns to face you.
+
+N:4018:Efreeti
+G:P:r
+I:120:70d10:30:70:10
+W:40:3:3000:900
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:FIRE:8d4
+B:HIT:FIRE:8d4
+F:DROP_60 | AURA_FIRE | OPEN_DOOR | BASH_DOOR | TAKE_ITEM | 
+F:EVIL | IM_FIRE | RES_PLAS | NO_CONF | NO_SLEEP |
+F:BASEANGBAND | 
+S:1_IN_6 |
+S:BO_FIRE | BO_PLAS | BA_FIRE
+D:Wrapped in fire, this giant red figure turns to face you.
+
+N:4019:Troll king
+G:T:R
+I:120:10d100:30:90:20
+W:40:1:6000:2000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:3d12
+B:HIT:HURT:5d12
+B:BITE:HURT:3d12
+B:BITE:HURT:5d12
+F:FORCE_MAXHP | OPEN_DOOR | ESCORT | DROP_90 | DROP_2D2 |
+F:MORTAL | BASEANGBAND | 
+F:SMART | BASH_DOOR | TAKE_ITEM |
+F:EVIL | TROLL | IM_POIS | NO_CONF | NO_SLEEP | REGENERATE
+F:DROP_SKELETON | DROP_CORPSE | 
+S:1_IN_8 |
+S:BLINK
+D:This troll is a king, which means it's still stupid, but has even more power.
+D:It never comes alone, and can call out to other trolls.
+
+N:4020:Sky golem
+G:g:B
+I:110:10d80:20:116:10
+W:40:3:10000:4000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:SPIT:COLD:10d10
+B:SPIT:COLD:10d10
+B:GAZE:BLIND
+F:EMPTY_MIND | BASH_DOOR | 
+F:IM_COLD | NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING | FORCE_MAXHP
+F:BASEANGBAND | 
+S:1_IN_5
+S:BR_LITE | BA_COLD | BR_COLD | BO_ICEE | BO_COLD | BR_TIME | ARROW_4
+D:Obsidian eyes stare at you as you bend before the shower of heavenly
+D:powers and spells...
+
+N:4021:Bazooker
+G:h:B
+I:110:8d40:40:60:60
+W:35:2:1700:1500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:2d4
+B:HIT:HURT:2d4
+B:HIT:HURT:2d4
+B:HIT:HURT:2d4
+F:MALE | FORCE_SLEEP | FORCE_MAXHP | DROP_1D2 | SMART
+F:MORTAL | BASEANGBAND | 
+F:DROP_CORPSE | DROP_SKELETON | CAN_SWIM
+S:1_IN_5 |
+S:ROCKET
+D:You watch in horror as he aims his massive weapon at you.
+
+N:4022:Shard vortex
+G:v:U
+I:120:24d10:100:28:0
+W:35:4:500:630
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:ENGULF:HURT:6d6
+B:ENGULF:HURT:6d6
+B:ENGULF:HURT:6d6
+F:FORCE_SLEEP | RAND_50 | EMPTY_MIND | BASH_DOOR | CAN_FLY |
+F:BASEANGBAND | 
+F:NO_CUT | NO_FEAR | NO_CONF | NO_SLEEP | NO_STUN | POWERFUL | NONLIVING
+S:1_IN_4 |
+S:BR_SHAR
+D:A howling blast of razor-sharp mountain fragments, kept intact by perilous
+D:magics.
+
+N:4023:Granite wall
+G:#:w
+I:100:15d15:15:120:10
+W:30:8:7000:350
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:TOUCH:ACID:8d8
+B:TOUCH:PARALYZE:3d3
+F:NEVER_MOVE | ANIMAL | HURT_ROCK |
+F:NO_FEAR | NO_SLEEP | NO_CONF | NO_STUN | EMPTY_MIND | COLD_BLOOD |
+F:BASEANGBAND | 
+F:IM_COLD | IM_FIRE | IM_ELEC | IM_POIS | NO_CUT
+S:MULTIPLY
+D:Just a normal wall, boring gray rock. But wait! It seems to be growing...
+
+N:4024:Fire troll
+G:T:r
+I:110:23d10:20:50:50
+W:25:1:3000:90
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:FIRE:1d6
+B:HIT:FIRE:1d6
+B:BITE:FIRE:3d4
+F:MALE | FRIENDS | DROP_60 | 
+F:MORTAL | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | EVIL | TROLL | HURT_LITE | REGENERATE |
+F:SUSCEP_COLD | IM_FIRE | WILD_VOLCANO
+F:DROP_SKELETON | DROP_CORPSE | 
+D:Fire trolls are believed to have been created by an
+D:evil wizard trying to make forest trolls immune to
+D:fire.
+
+N:4025:Elf lord
+G:h:g
+I:121:15d15:15:50:10
+W:25:2:1500:555
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d9
+B:HIT:HURT:1d9
+B:HIT:HURT:4d8
+F:MALE | ONLY_ITEM | DROP_1D2 | DROP_GOOD | OPEN_DOOR | BASH_DOOR |
+F:MORTAL | BASEANGBAND | 
+F:NO_SLEEP | NEUTRAL | GOOD |
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:HEAL | BLINK | TPORT | BA_FIRE | ARROW_3 | BA_COLD
+D:A powerful elven leader who knows some magic as well.
+
+N:4026:Samurai
+G:p:s
+I:110:40d10:12:60:10
+W:25:2:1700:350
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CHARGE:HURT:4d6
+B:CHARGE:HURT:4d6
+F:MORTAL | BASEANGBAND | 
+F:MALE | ONLY_ITEM | DROP_90 | DROP_CORPSE | DROP_SKELETON | GOOD | 
+F:OPEN_DOOR | BASH_DOOR | HAS_LITE |
+D:A warrior clad in ornate but effective armour, holding katana so sharp it
+D:can cut your throat and you won't notice till you nod.
+
+N:4027:Magma intrusion
+G:%:D
+I:100:15d25:15:120:10
+W:25:8:6000:100
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:TOUCH:FIRE:5d5
+B:TOUCH:PARALYZE:3d3
+F:NEVER_MOVE | EMPTY_MIND |
+F:ANIMAL | HURT_ROCK | NO_FEAR | NO_CONF | NO_SLEEP | NO_STUN |
+F:BASEANGBAND | 
+F:IM_ACID | IM_ELEC | IM_POIS | IM_FIRE | NO_CUT
+S:MULTIPLY
+D:It's just a block of dark rock. But wait! It seems to be growing...
+
+N:4028:Small kraken
+G:l:g
+I:110:20d10:60:50:80
+W:25:1:3000:500
+E:3:0:3:0:1:0
+O:20:20:20:20
+B:ENGULF:HURT:5d6
+B:ENGULF:POISON:5d6
+F:AQUATIC | SMART | WEIRD_MIND | IM_POIS | RES_WATE | ANIMAL | NO_CONF
+F:NO_SLEEP
+F:MORTAL | BASEANGBAND | 
+F:DROP_CORPSE | 
+S:1_IN_4 |
+S:DARKNESS | BO_ACID | HOLD
+D:A kraken with a tough, scaly hide.
+
+N:4029:Chaos mushroom
+G:,:g
+I:120:16d6:10:4:2
+W:23:3:200:360
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:SPORE:POISON:3d4
+B:SPORE:CONFUSE:3d4
+B:SPORE:BLIND:3d4
+F:MORTAL | BASEANGBAND | 
+F:NEVER_MOVE | STUPID | EMPTY_MIND | IM_POIS | RES_DISE
+F:NO_CONF | NO_SLEEP | NO_FEAR
+S:1_IN_11 |
+S:BR_NUKE | BR_POIS
+D:It is a massive mushroom that seems to have a huge mouth. The air is thick
+D:with miasma, and you notice to your horror that the fungus is sprouting
+D:everywhere!
+
+N:4030:Cloud golem
+G:g:b
+I:110:20d15:20:30:10
+W:22:2:4000:120
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:ELEC:4d4
+B:HIT:ELEC:4d4
+F:EMPTY_MIND | BASH_DOOR |
+F:IM_ELEC | IM_COLD | CAN_FLY |
+F:NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING
+F:BASEANGBAND | 
+D:Lightning crackles around this huge animated cloud entity, sending shivers
+D:down your spine.
+
+N:4031:Lava golem
+G:g:r
+I:90:25d15:20:40:10
+W:22:2:4000:120
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:FIRE:6d4
+B:HIT:FIRE:6d4
+B:HIT:FIRE:6d4
+F:EMPTY_MIND | BASH_DOOR
+F:IM_FIRE | NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING | KILL_BODY
+F:BASEANGBAND | 
+F:KILL_ITEM
+D:It burns everything in its path with the heat its magma-like body
+D:produces.
+
+N:4032:Ogre warrior
+G:O:B
+I:110:10d15:20:34:50
+W:21:2:3500:100
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:INSANITY:4d8
+B:HIT:INSANITY:4d8
+F:MORTAL | BASEANGBAND | 
+F:RAND_25 | DROP_90 | OPEN_DOOR | BASH_DOOR | DROP_CORPSE | EVIL | GIANT | MOVE_BODY
+F:WILD_WASTE
+D:It is a massive ogre in metal armour, a champion of its kind.
+
+N:4033:Pole axe of animated attack
+G:/:w
+I:120:10d14:30:40:0
+W:21:2:200:60
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:CRUSH:HURT:2d5
+B:CRUSH:HURT:2d5
+B:CRUSH:HURT:2d6
+B:CRUSH:HURT:2d6
+F:BASEANGBAND | 
+F:COLD_BLOOD | NO_SLEEP | NO_CONF | NO_FEAR | NONLIVING
+S:1_IN_6
+S:SCARE | BLIND | CONF | S_MONSTER
+D:A powerful weapon from a time long past when heroes walked the earth, and
+D:magical weapons of power unmatched were created. Blood drips from its
+D:wicked blade.
+
+N:4034:Quartz vein
+G:%:w
+I:100:15d11:15:30:10
+W:18:8:6000:40
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:TOUCH:ELEC:3d3
+B:TOUCH:PARALYZE:3d3
+F:NEVER_MOVE | EMPTY_MIND
+F:BASEANGBAND | 
+F:ANIMAL | COLD_BLOOD | NO_FEAR | NO_SLEEP | NO_CONF | NO_STUN
+F:HURT_ROCK | IM_FIRE | IM_ACID | IM_POIS | IM_COLD | NO_CUT
+S:MULTIPLY
+D:Look! A nice vein of rock to dig in for gold! Wait a minute...
+
+N:4035:Floating orb
+G:*:B
+I:120:10d7:25:25:5
+W:15:2:100:50
+E:0:0:0:0:0:0
+O:20:20:20:20
+F:NEVER_BLOW | NEVER_MOVE | NO_SLEEP | NO_FEAR | NO_CONF | CAN_FLY
+F:IM_COLD | IM_FIRE | IM_POIS | IM_ACID | ONLY_ITEM | DROP_60 | NONLIVING
+F:BASEANGBAND | 
+S:1_IN_1
+S:MISSILE
+D:A metallic ball floating in the air, that turns to track you with evil
+D:intent.
+
+N:4036:Aquatic naga
+G:n:w
+I:110:30d10:10:50:10
+W:26:1:1200:60
+E:0:0:0:0:1:0
+O:20:20:20:20
+B:CRUSH:HURT:2d8
+B:CRUSH:HURT:2d8
+B:BITE:POISON:2d8
+B:BITE:HURT:1d8
+F:FEMALE | AQUATIC | RES_WATE |
+F:ONLY_ITEM | DROP_90 | DROP_2D2 |
+F:MORTAL | BASEANGBAND | 
+F:EVIL | NO_CONF | NO_SLEEP | SMART
+S:1_IN_7 |
+S:DARKNESS | CAUSE_4 | BO_ICEE
+D:A naga adapted to underwater life. She has a fish-like tail and a pair
+D:of gills.
+
+N:4037:Demogorgon
+G:U:u
+I:125:65d100:30:140:20
+W:75:2:6660:37000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:LOSE_CON:5d10
+B:HIT:LOSE_CON:5d10
+B:CRUSH:HURT:12d12
+B:TOUCH:UN_POWER:3d5
+F:UNIQUE | MALE |
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ESCORT | CAN_FLY |
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_2D2 | DROP_4D2 | DROP_GOOD |
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY |
+F:EVIL | DEMON | IM_FIRE | IM_POIS | 
+F:NO_CONF | NO_SLEEP
+S:1_IN_3 |
+S:BLIND | CONF | SCARE |
+S:BA_DARK | BO_NETH | BR_NETH | BR_DARK | BR_NUKE | BR_POIS | HAND_DOOM |
+S:S_DEMON | S_KIN |  
+D:The lord of demons, few can stand against his might.
+
+N:4038:Internet Exploder
+G:e:B
+I:140:20d20:25:0:1
+W:50:4:3000:1500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:EXPLODE:LOSE_ALL:10d20
+F:RAND_25 | EMPTY_MIND | REFLECTING | FORCE_SLEEP | CAN_SPEAK |
+F:BASEANGBAND | 
+F:REGENERATE | AURA_ELEC | BASH_DOOR | KILL_BODY | EVIL |
+F:NONLIVING | IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS |
+F:RES_NETH | RES_WATE | RES_PLAS | NO_CUT | 
+F:RES_DISE | RES_TELE |
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | CAN_FLY |
+S:1_IN_3 |
+S:HOLD | BLIND | CONF | SCARE | SLOW
+D:It's a huge security loophole. Use Mozilla Firefox instead.
+
+N:4039:Electric rat
+G:r:y
+I:110:20d10:20:10:40
+W:24:2:200:200
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:CLAW:ELEC:1d5
+B:CLAW:ELEC:1d5
+B:BITE:ELEC:1d4
+F:ONLY_GOLD | DROP_1D2 | IM_ELEC | ANIMAL | AURA_ELEC |
+F:MORTAL | BASEANGBAND | 
+F:DROP_CORPSE | 
+S:1_IN_5 |
+S:BR_ELEC | BO_ELEC
+D:It looks like Pikachu.
+
+N:4040:Yukionna
+G:p:w
+I:110:30d10:20:20:20
+W:27:2:1700:300
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:TOUCH:COLD:3d5
+B:TOUCH:COLD:3d5
+B:TOUCH:COLD:3d5
+F:BASEANGBAND | 
+F:FEMALE | IM_COLD | DROP_1D2 | NONLIVING | AURA_COLD |
+S:1_IN_5
+S:BR_COLD | BO_COLD | BA_COLD
+D:A fucking bitch with way too many fucking cold attacks for fuck's sake.
+
+# Description in English by Nick Keulmann
+N:4041:Goomba
+G:,:U
+I:110:4d4:20:20:20
+W:2:1:300:5
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:BITE:HURT:1d8
+F:MORTAL | BASEANGBAND | 
+F:WEIRD_MIND | DROP_CORPSE
+D:A renegade mushroom from the Mushroom Kingdom that has been
+D:corrupted by chaos. It is quite angry and it marches towards you.
+
+N:4042:Monkey of Nikko
+G:Y:U
+I:110:20d8:30:30:20
+W:18:3:500:50
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:2d7
+B:HIT:HURT:2d7
+F:MORTAL | BASEANGBAND | 
+F:DROP_60 | ANIMAL | FRIENDS | ONLY_GOLD
+F:DROP_SKELETON | DROP_CORPSE
+D:Well duh, it's a monkey.
+
+N:4043:Tsuchinoko
+G:J:u
+I:110:10d10:20:10:20
+W:30:100:700:1000
+E:0:0:0:0:1:0
+O:20:20:20:20
+B:CLAW:HURT:2d5
+B:CLAW:HURT:2d5
+B:BITE:HURT:3d4
+B:CRUSH:INSANITY:5d8
+F:MORTAL | BASEANGBAND | 
+F:ANIMAL | DROP_SKELETON | DROP_CORPSE
+D:Japanese snake that tries to crush you.
+
+# Description in English by Nick Keulmann
+N:4044:Mario
+G:p:r
+I:110:80d10:20:80:10
+W:31:4:1800:2500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:3d7
+B:HIT:HURT:3d7
+B:HIT:HURT:3d7
+F:UNIQUE | MALE | DROP_SKELETON | DROP_CORPSE | HAS_LITE |
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:MORTAL | BASEANGBAND | 
+F:DROP_2D2 | ONLY_ITEM | DROP_GOOD |
+F:OPEN_DOOR | GOOD | CAN_SWIM | CAN_FLY |
+F:NO_CONF | NO_SLEEP | NEUTRAL | TAKE_ITEM |
+S:1_IN_4 |
+S:BA_FIRE | HASTE | HOLD | CONF | BLIND
+D:A happy plumber jumping up and down, his red mustache matches
+D:his red hat.
+
+# Description in English by Nick Keulmann
+N:4045:King Koopa
+G:D:g
+I:110:100d15:20:120:40
+W:34:4:4000:3000
+E:0:0:0:0:1:0
+O:20:20:20:20
+B:CLAW:POISON:2d5
+B:CLAW:POISON:2d5
+B:BITE:FIRE:3d4
+B:CRUSH:HURT:8d8
+F:UNIQUE | MALE | DROP_SKELETON |
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:DROP_1D2 | DROP_2D2 | ONLY_ITEM | DROP_GOOD |
+F:MORTAL | BASEANGBAND | 
+F:BASH_DOOR | EVIL | CAN_SWIM | CAN_FLY | KILL_ITEM |
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:BR_FIRE | SCARE
+D:He is a huge fire spitting turtle of disreputable character.
+D:He is plotting to conquer the Mushroom Kingdom.
+
+N:4046:Greater Cyber Wyrm Angel Daemon Lich
+G:N:W
+I:150:99d99:50:200:1
+W:99:50:10000:30000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:SHOW:SHATTER:1d200
+B:INSULT:EXP_80:1d200
+B:DROOL:UN_POWER:1d100
+B:WAIL:EXP_20:1d100
+F:BASEANGBAND | 
+F:FORCE_SLEEP | FORCE_MAXHP | ELDRITCH_HORROR |
+F:ATTR_MULTI | RAND_25 | RAND_50 | 
+F:ONLY_ITEM | DROP_60 | DROP_90 | DROP_1D2 | DROP_2D2 | DROP_3D2 | DROP_4D2 |
+F:DROP_GOOD | STUPID | SMART | CAN_SPEAK | REFLECTING | INVISIBLE | COLD_BLOOD |
+F:EMPTY_MIND | WEIRD_MIND | REGENERATE | SHAPECHANGER | ATTR_ANY | POWERFUL |
+F:AURA_FIRE | AURA_ELEC | OPEN_DOOR | BASH_DOOR | PASS_WALL | KILL_WALL |
+F:TAKE_ITEM | KILL_ITEM | ORC | TROLL | GIANT | DRAGON | DEMON | UNDEAD |
+F:EVIL | ANIMAL | GOOD | AURA_COLD | NONLIVING | HURT_ROCK |
+F:IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS | 
+F:RES_NETH | RES_WATE | RES_PLAS | NO_CUT | 
+F:RES_NEXU | RES_DISE |  
+F:RES_TELE | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+F:CAN_SWIM | CAN_FLY | UNIQUE | WILD_SHORE |
+F:WILD_OCEAN | WILD_WASTE | WILD_WOOD | WILD_VOLCANO | WILD_MOUNTAIN |
+F:WILD_GRASS | 
+F:DROP_SKELETON | DROP_CORPSE | 
+S:1_IN_3 |
+S:SHRIEK | ROCKET | ARROW_4 | BR_ACID |
+S:BR_ELEC | BR_FIRE | BR_COLD | BR_POIS | BR_NETH | BR_LITE | BR_DARK | BR_CONF |
+S:BR_SOUN | BR_CHAO | BR_DISE | BR_NEXU | BR_TIME | BR_INER | BR_GRAV | BR_SHAR |
+S:BR_PLAS | BR_WALL | BR_MANA | BA_NUKE | BR_NUKE | BA_CHAO | BR_DISI | BA_ACID |
+S:BA_ELEC | BA_FIRE | BA_COLD | BA_POIS | BA_NETH | BA_WATE | BA_MANA | BA_DARK |
+S:DRAIN_MANA | MIND_BLAST| BRAIN_SMASH | CAUSE_1 | CAUSE_2 | CAUSE_3 | CAUSE_4 |
+S:BO_ACID | BO_ELEC | BO_FIRE | BO_COLD | BO_NETH | BO_WATE | BO_MANA |
+S:BO_PLAS | BO_ICEE | MISSILE | BLIND | CONF | SLOW | HOLD | HASTE | HAND_DOOM |
+S:HEAL | BLINK | TPORT | TELE_TO | TELE_AWAY | TELE_LEVEL |
+S:DARKNESS | TRAPS | FORGET | ANIM_DEAD | S_KIN | S_MONSTER |
+S:S_MONSTERS | S_ANT | S_SPIDER | S_HOUND | S_HYDRA | S_DEMON | S_UNDEAD |
+S:S_DRAGON | S_HI_UNDEAD | S_WRAITH | S_UNIQUE
+D:It has pretty much every type of attack and spell.
+
+N:4047:Clone of Locke the Superman
+G:p:G
+I:130:30d100:100:130:20
+W:65:30:1700:18000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:10d14
+B:HIT:HURT:10d14
+B:HIT:HURT:10d14
+B:HIT:HURT:10d14
+F:BASEANGBAND | 
+F:DROP_CORPSE | FORCE_SLEEP | FORCE_MAXHP |
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | MALE | 
+F:REFLECTING | SMART | REGENERATE | OPEN_DOOR |
+F:IM_COLD | IM_FIRE | IM_ELEC | NO_CONF | NO_STUN |
+F:NO_SLEEP | RES_TELE | RES_NETH | CAN_FLY | POWERFUL |
+S:1_IN_3 |
+S:BLIND | HOLD | HEAL | HASTE |
+S:TELE_TO | CONF | BO_MANA | BRAIN_SMASH | 
+D:Watch out or this bastard will crush you.
+
+N:4048:Caldarm the Third
+G:p:D
+I:130:60d100:100:200:20
+W:79:5:1700:32000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:BLIND:8d8
+B:HIT:CONFUSE:8d8
+B:TOUCH:UN_BONUS:6d6
+B:TOUCH:UN_BONUS:6d6
+F:UNIQUE | MALE | DROP_CORPSE | FORCE_SLEEP | FORCE_MAXHP | 
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_1D2 | DROP_3D2 | DROP_GOOD | CAN_SWIM |
+F:GOOD | EVIL | REFLECTING | SMART | REGENERATE | OPEN_DOOR | CAN_SPEAK |
+F:IM_COLD | IM_FIRE | IM_ELEC | IM_ACID | IM_POIS | NO_CONF | NO_STUN |
+F:NO_SLEEP | RES_TELE | RES_NETH | RES_NEXU | POWERFUL |
+S:1_IN_2 |
+S:TPORT | BLINK | HEAL | HASTE |
+S:BO_MANA | BRAIN_SMASH | BA_CHAO | S_KIN
+D:Yet another boss dude.
+
+N:4049:Banor=Rupart
+G:p:v
+I:130:70d100:100:170:20
+W:71:2:1700:36000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:BLIND:10d13
+B:HIT:CONFUSE:10d13
+B:HIT:HURT:13d13
+B:HIT:HURT:13d13
+F:UNIQUE | MALE | DROP_CORPSE | FORCE_SLEEP | FORCE_MAXHP | 
+F:ONLY_ITEM | DROP_1D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD |
+F:REFLECTING | SMART | REGENERATE | OPEN_DOOR | CAN_SPEAK |
+F:BASEANGBAND | 
+F:EVIL | IM_COLD | IM_FIRE | IM_ELEC | NO_CONF | NO_STUN |
+F:NO_SLEEP | RES_TELE | RES_NETH | RES_NEXU | POWERFUL | CAN_FLY |
+S:1_IN_2 |
+S:TPORT | BLIND | BLINK | HEAL |
+S:CONF | BO_MANA | BRAIN_SMASH | 
+S:BA_NETH | BA_DARK | BA_CHAO |
+S:S_MONSTERS | S_DEMON | S_KIN | 
+D:We don't know who or what this is supposed to be.
+
+N:4050:Banor the Prince Regent
+G:p:b
+I:130:35d100:100:140:0
+W:71:255:1700:18000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:BLIND:8d8
+B:HIT:CONFUSE:8d8
+B:TOUCH:EXP_20:4d10
+B:TOUCH:UN_POWER
+F:UNIQUE | MALE | DROP_CORPSE | FORCE_SLEEP | FORCE_MAXHP | 
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_4D2 | DROP_GOOD | CAN_SPEAK |
+F:REFLECTING | SMART | REGENERATE | OPEN_DOOR |
+F:EVIL | IM_COLD | IM_FIRE | IM_ELEC | NO_CONF | NO_STUN |
+F:NO_SLEEP | RES_TELE | RES_NETH | RES_NEXU | POWERFUL | CAN_FLY |
+S:1_IN_2 |
+S:TPORT | BLIND | BLINK | HEAL |
+S:CONF | BO_MANA | BRAIN_SMASH | 
+S:BA_NETH | BA_DARK | BA_CHAO |
+S:S_MONSTERS | S_DEMON | S_KIN | 
+D:Some mean ruler who wants to kill you.
+
+N:4051:Rupart the General
+G:p:r
+I:130:35d100:100:170:0
+W:71:255:1700:18000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:13d13
+B:HIT:HURT:13d13
+B:HIT:HURT:13d13
+B:HIT:HURT:13d13
+F:UNIQUE | MALE | DROP_CORPSE | FORCE_SLEEP | FORCE_MAXHP | 
+F:ONLY_ITEM | DROP_4D2 | DROP_GOOD | CAN_SPEAK |
+F:REFLECTING | SMART | REGENERATE | OPEN_DOOR |
+F:BASEANGBAND | 
+F:EVIL | IM_COLD | IM_FIRE | IM_ELEC | NO_CONF | NO_STUN |
+F:NO_SLEEP | RES_TELE | RES_NETH | RES_NEXU | POWERFUL | CAN_FLY |
+S:1_IN_3 |
+S:BLIND | HEAL |
+S:TELE_TO | CONF | BO_MANA | BRAIN_SMASH | 
+D:Some mean military guy who wants to kill you.
+
+N:4052:Druaga
+G:h:v
+I:120:45d100:30:120:30
+W:59:2:1700:28000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:BUTT:CONFUSE:10d10
+B:HIT:POISON:10d10
+B:HIT:POISON:10d10
+B:TOUCH:UN_BONUS:6d6
+F:MORTAL | BASEANGBAND | 
+F:UNIQUE |
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ONLY_ITEM | DROP_4D2 | DROP_GOOD |
+F:OPEN_DOOR | RES_NETH | RES_PLAS |
+F:EVIL | IM_FIRE | NO_CONF | NO_SLEEP
+S:1_IN_3 |
+S:S_DEMON | BA_CHAO | BO_PLAS | BR_FIRE | BR_PLAS
+D:It's yet another boss who doesn't have a description.
+
+N:4053:Kenshirou the Fist of the North Star
+G:p:W
+I:123:60d100:50:170:10
+W:62:2:2200:50000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:PUNCH:HURT:15d15
+B:PUNCH:HURT:15d15
+B:PUNCH:TERRIFY:30d1
+B:KICK:INSANITY:15d15
+F:UNIQUE | MALE | CAN_SPEAK | SMART | REFLECTING | HAS_LITE |
+F:OPEN_DOOR | BASH_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:FORCE_SLEEP | FORCE_MAXHP | NO_CONF | NO_SLEEP |
+F:MORTAL | BASEANGBAND | 
+F:DROP_2D2 | DROP_1D2 | DROP_GOOD | DROP_GREAT | ONLY_ITEM | CAN_SWIM | 
+F:GOOD | IM_COLD | IM_POIS | IM_ACID | IM_ELEC | IM_FIRE | REGENERATE |
+S:1_IN_3 |
+S:CAUSE_4 | TELE_TO
+D:A highly powerful boss.
+
+N:4054:Lems the Cyborg
+G:g:W
+I:130:50d100:30:160:0
+W:61:3:10000:26000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:PUNCH:HURT:10d10
+B:PUNCH:HURT:10d10
+B:KICK:SHATTER:16d10
+B:KICK:SHATTER:16d10
+F:UNIQUE | MALE | DROP_CORPSE |
+F:NONLIVING | NO_FEAR | FORCE_MAXHP | FORCE_SLEEP |
+F:BASEANGBAND | 
+F:KILL_BODY | IM_FIRE | IM_POIS |
+F:NO_STUN | REGENERATE | NO_CONF | NO_SLEEP | CAN_SWIM |
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR |
+F:DROP_CORPSE | 
+D:This boss deals way too much damage per round.
+
+# Description in English by Nick Keulmann
+N:4055:White knight
+G:p:w
+I:120:30d10:20:70:10
+W:28:1:1700:240
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:5d5
+B:HIT:HURT:5d5
+B:HIT:HURT:5d5
+F:MALE | 
+F:FORCE_SLEEP | DROP_1D2 |
+F:OPEN_DOOR | BASH_DOOR | 
+F:MORTAL | BASEANGBAND | 
+F:GOOD
+F:DROP_SKELETON | DROP_CORPSE | 
+S:1_IN_8 |
+S:CONF | HOLD | CAUSE_3 | HEAL
+D:A knight wrapped in plate armor of pure white.
+D:He stares at you menacingly.
+
+N:4056:Bone dragon
+G:D:W
+I:110:120d10:20:55:50
+W:37:3:4000:1700
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:CLAW:HURT:1d20
+B:CLAW:HURT:1d20
+F:DROP_3D2 | OPEN_DOOR | BASH_DOOR | EVIL | DRAGON | UNDEAD |
+F:RES_NETH | RES_PLAS | RES_NEXU | RES_DISE | NO_STUN |
+F:IM_COLD | IM_POIS |
+F:BASEANGBAND | 
+F:NO_CONF | NO_SLEEP | DROP_SKELETON | 
+S:1_IN_10
+S:BR_NETH
+D:An undead dragon skeleton.
+
+N:4057:Planetar
+G:A:r
+I:130:22d100:30:150:255
+W:50:6:1800:10000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:8d6
+B:HIT:HURT:8d6
+B:HIT:HURT:8d6
+B:HIT:LOSE_CHR:8d6
+F:FORCE_SLEEP | FORCE_MAXHP | GOOD | 
+F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | DROP_GOOD |
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY |
+F:BASEANGBAND | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:NO_CONF | NO_SLEEP | CAN_FLY |
+S:1_IN_4 |
+S:HEAL | HASTE | TELE_AWAY | BO_MANA | BO_PLAS | CAUSE_4 |
+S:S_MONSTERS | S_ANGEL | S_DRAGON |  
+D:It is an angel, fast and strong. You are stunned by its extreme holiness
+D:and try to resist all desires to obey it.
+
+N:4058:Solar
+G:A:y
+I:130:100d30:30:160:255
+W:64:6:1800:22000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:GAZE:UN_BONUS:10d4
+B:GAZE:UN_BONUS:10d4
+B:HIT:HURT:12d8
+B:HIT:LOSE_CHR:12d8
+F:FORCE_SLEEP | FORCE_MAXHP | GOOD | 
+F:ONLY_ITEM | DROP_3D2 | DROP_4D2 | DROP_GOOD |
+F:BASEANGBAND | 
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY |
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:NO_CONF | NO_SLEEP | CAN_FLY |
+S:1_IN_3 |
+S:TELE_TO | BLIND | SCARE | CAUSE_4 | BO_MANA | 
+S:S_ANGEL | S_DRAGON | BR_LITE | HEAL |  
+D:Never a more heavenly being have you seen. The very holiness of its
+D:presence makes you deeply respect it. Few creatures can match the powers
+D:of a Solar; fewer still live to tell the tale after attacking one.
+
+N:4059:Deep puddle
+G:~:b
+I:125:17d6:15:40:0
+W:23:6:300:70
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:TOUCH:ACID:4d3
+B:TOUCH:ACID:3d3
+F:NEVER_MOVE | COLD_BLOOD |
+F:CAN_SWIM | IM_ELEC | IM_ACID | IM_POIS |
+F:BASEANGBAND | 
+F:NO_FEAR | NO_CONF | NO_SLEEP | NONLIVING |
+F:EMPTY_MIND
+D:It is a large, rippling watery pool.
+
+N:4060:Biketal of Fire
+G:U:r
+I:125:70d100:50:160:0
+W:73:2:10000:32000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:FIRE:9d12
+B:HIT:FIRE:9d12
+B:TOUCH:DISEASE:20d4
+B:CRUSH:HURT:50d4
+F:UNIQUE | FORCE_MAXHP | EVIL | FORCE_SLEEP | CAN_SPEAK | DEMON |
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_3D2 | DROP_1D2 | DROP_GOOD | KILL_BODY |
+F:IM_FIRE | IM_ELEC | IM_POIS | POWERFUL | ESCORT | 
+F:NO_SLEEP | NO_CONF | OPEN_DOOR | CAN_FLY | REGENERATE |
+S:1_IN_3 |
+S:BR_FIRE | BR_POIS | BO_PLAS | BR_PLAS | BA_FIRE |
+S:CONF | SCARE | HOLD | S_DEMON | HEAL
+D:Apparently, this is a unique fire demon.
+
+N:4061:Jisisl of Ice
+G:U:B
+I:125:60d100:80:120:50
+W:67:2:10000:30000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:COLD:9d12
+B:HIT:COLD:9d12
+B:TOUCH:DISEASE:20d4
+B:CRUSH:HURT:40d4
+F:UNIQUE | FORCE_MAXHP | FORCE_SLEEP | CAN_SPEAK | DEMON |
+F:ONLY_ITEM | DROP_3D2 | DROP_1D2 | DROP_GOOD | MOVE_BODY |
+F:BASEANGBAND | 
+F:IM_COLD | IM_ELEC | IM_POIS | POWERFUL |
+F:NO_SLEEP | NO_CONF | OPEN_DOOR | CAN_FLY | REGENERATE |
+S:1_IN_3 |
+S:BR_COLD | BR_POIS | BA_COLD | BO_ICEE |
+S:CONF | SCARE | HOLD | S_DEMON
+D:Apparently, this is a unique ice demon.
+
+N:4062:Poor, the Thief
+G:p:b
+I:105:80d10:20:50:50
+W:25:3:1700:500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:5d10
+B:HIT:HURT:5d10
+B:CRUSH:INSANITY:30d2
+F:UNIQUE | DROP_CORPSE | FORCE_MAXHP | CAN_SPEAK | MALE |
+F:MORTAL | BASEANGBAND | 
+F:EVIL | ONLY_ITEM | DROP_1D2 | DROP_60 | DROP_GOOD |
+F:NO_SLEEP | NO_CONF | BASH_DOOR
+D:A thief who doesn't have much money.
+
+N:4063:Rich, the Thief
+G:p:b
+I:130:50d10:20:80:50
+W:29:3:1700:700
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:POISON:3d6
+B:HIT:POISON:3d6
+B:TOUCH:EAT_GOLD
+B:TOUCH:EAT_ITEM
+F:UNIQUE | DROP_CORPSE | FORCE_MAXHP | CAN_SPEAK | MALE | 
+F:MORTAL | BASEANGBAND | 
+F:EVIL | ONLY_ITEM | DROP_2D2 | DROP_GOOD |
+F:NO_SLEEP | NO_CONF | OPEN_DOOR | MOVE_BODY |
+S:1_IN_2 |
+S:BLINK | TPORT | TRAPS | CONF | BLIND | SLOW | HOLD | FORGET
+D:A thief who has lots of money but still wants more.
+
+N:4064:Iketa, the Brave
+G:p:B
+I:130:50d100:50:170:0
+W:70:2:1700:30000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:INSANITY:12d12
+B:HIT:INSANITY:12d12
+B:HIT:UN_BONUS:10d4
+B:TOUCH:UN_POWER
+F:UNIQUE | FORCE_MAXHP | EVIL | GOOD | FORCE_SLEEP | CAN_SPEAK | MALE |
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_3D2 | DROP_2D2 | DROP_GOOD | HAS_LITE |
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_ACID | IM_POIS |
+F:RES_WATE | RES_NETH | RES_DISE | 
+F:NO_SLEEP | NO_CONF | OPEN_DOOR | CAN_SWIM | REGENERATE |
+S:1_IN_5 |
+S:BO_MANA | BA_FIRE | BA_COLD | BA_ELEC | BA_ACID | BO_ICEE | BO_PLAS |
+S:BO_WATE | BA_WATE | CAUSE_3 | CAUSE_4 |
+S:CONF | BLIND | S_MONSTERS | TPORT
+D:This dude will wreck you, hahaha!
+
+# Description in English by Nick Keulmann
+N:4065:Hammer brother
+G:h:g
+I:120:10d25:20:30:10
+W:22:2:3000:300
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:2d4
+B:HIT:HURT:2d4
+B:HIT:HURT:2d4
+F:FORCE_SLEEP | RAND_50 | ANIMAL |
+F:MORTAL | BASEANGBAND | 
+F:DROP_CORPSE
+S:1_IN_2 |
+S:ARROW_4
+D:A large turtle creature walking on two legs,
+D:proudly throwing hammers from an unlimited supply.
+
+N:4066:Buzzy beetle
+G:R:D
+I:100:15d15:20:90:10
+W:15:4:2500:60
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:HIT:HURT:2d5
+B:HIT:HURT:2d5
+B:HIT:HURT:2d5
+B:HIT:HURT:2d5
+F:ONLY_GOLD | DROP_90 |
+F:EMPTY_MIND | BASH_DOOR | REFLECTING |
+F:MORTAL | BASEANGBAND | 
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | IM_ACID |
+F:NO_CONF | NO_SLEEP | NONLIVING
+D:It's immune to fireballs, so Mario has to stomp on it instead.
+
+N:4067:Kamikaze hound
+G:Z:o
+I:130:30d10:30:50:0
+W:44:4:1500:500
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:EXPLODE:HURT:30d3
+F:FORCE_SLEEP |
+F:FRIENDS |
+F:MORTAL | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR |
+F:ANIMAL | NO_CONF | NO_SLEEP
+D:A hound that attacks by committing suicide.
+
+N:4068:Broken death sword
+G:|:D
+I:120:6d3:20:20:0
+W:4:5:20:15
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:HIT:HURT:1d2
+B:HIT:HURT:1d2
+B:HIT:TERRIFY:1d1
+B:HIT:POISON:1d1
+F:NONLIVING | NO_FEAR |
+F:BASEANGBAND | 
+F:STUPID | COLD_BLOOD | NO_CONF | NO_SLEEP |
+F:EVIL | IM_COLD | IM_FIRE | IM_ELEC | IM_POIS
+D:Looks like a death sword but is thankfully not nearly as strong.
+
+N:4069:Orcish Artillery
+G:o:B
+I:110:10d10:40:20:60
+W:14:3:1300:40
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d5
+B:HIT:HURT:1d5
+F:FORCE_SLEEP | DROP_1D2 | SMART | DROP_CORPSE | DROP_SKELETON |
+F:MORTAL | BASEANGBAND | 
+F:ORC | HURT_LITE | EVIL | 
+S:1_IN_2 |
+S:ARROW_3
+D:In a rare display of ingenuity, the Orcs invented an incredibly
+D:destructive weapon. Most Orcish artillerists are those who dared
+D:criticize its effectiveness.
+
+# Description in English by Nick Keulmann
+N:4070:Scrawny horse
+G:q:o
+I:110:4d5:20:5:30
+W:0:1:1800:0
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:BITE:HURT:1d2
+B:KICK:HURT:1d3
+F:WILD_TOWN | RAND_25 |
+F:MORTAL | BASEANGBAND | 
+F:ANIMAL | 
+F:DROP_SKELETON | DROP_CORPSE | 
+D:This pitiful horse has not been well fed, it walks unsteadily.
+
+# Description in English by Nick Keulmann
+N:4071:Horse
+G:q:o
+I:110:11d8:20:30:30
+W:5:1:2800:25
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:BITE:HURT:1d8
+B:KICK:HURT:2d4
+F:WILD_WASTE | BASH_DOOR |
+F:ANIMAL | 
+F:MORTAL | BASEANGBAND | 
+F:DROP_SKELETON | DROP_CORPSE | 
+D:As for the horse with the animal of four feet which can run fast,
+D:it was utilized for a long time as the vehicle of the human.
+
+# Description in English by Nick Keulmann
+N:4072:Unruly horse
+G:q:G
+I:110:12d10:20:30:0
+W:9:2:2800:35
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:BITE:HURT:1d8
+B:KICK:HURT:2d4
+B:KICK:HURT:2d4
+F:WILD_WASTE | BASH_DOOR | RAND_25 |
+F:ANIMAL | 
+F:MORTAL | BASEANGBAND | 
+F:DROP_SKELETON | DROP_CORPSE | 
+D:This creature is gentle and submissive until you try to ride it.
+D:Watch out for its reckless kicking.
+
+# Description in English by Nick Keulmann
+N:4073:Red puyo
+G:j:r
+I:120:3d1:15:20:50
+W:25:32:500:50
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:EXPLODE:FIRE:10d2
+F:IM_ACID | IM_COLD | IM_ELEC | IM_POIS |
+F:MORTAL | BASEANGBAND | 
+F:NEVER_MOVE | 
+F:EMPTY_MIND | NO_FEAR | NO_CONF | NO_SLEEP
+S:MULTIPLY
+D:A mysterious red jelly thing. It looks ready to explode.
+
+N:4074:Blue puyo
+G:j:b
+I:120:3d1:15:20:50
+W:25:32:500:50
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:EXPLODE:COLD:10d2
+F:IM_ACID | IM_FIRE | IM_ELEC | IM_POIS |
+F:NEVER_MOVE | 
+F:MORTAL | BASEANGBAND | 
+F:EMPTY_MIND | NO_FEAR | NO_CONF | NO_SLEEP
+S:MULTIPLY
+D:A mysterious blue jelly thing. It looks ready to explode.
+
+N:4075:Yellow puyo
+G:j:y
+I:120:3d1:15:20:50
+W:25:32:500:50
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:EXPLODE:ELEC:10d2
+F:IM_ACID | IM_FIRE | IM_COLD | IM_POIS |
+F:NEVER_MOVE | 
+F:MORTAL | BASEANGBAND | 
+F:EMPTY_MIND | NO_FEAR | NO_CONF | NO_SLEEP
+S:MULTIPLY
+D:A mysterious yellow jelly thing. It looks ready to explode.
+
+N:4076:Green puyo
+G:j:g
+I:120:3d1:15:20:50
+W:25:32:500:50
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:EXPLODE:ACID:10d2
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
+F:NEVER_MOVE | 
+F:MORTAL | BASEANGBAND | 
+F:EMPTY_MIND | NO_FEAR | NO_CONF | NO_SLEEP
+S:MULTIPLY
+D:A mysterious green jelly thing. It looks ready to explode.
+
+N:4077:Slime Mold
+G:,:g
+I:105:2d8:1:0:10
+W:12:16:150:10
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:TOUCH:POISON:2d5
+B:TOUCH:POISON:2d5
+F:SMART | COLD_BLOOD |
+F:WEIRD_MIND | REGENERATE |
+F:MORTAL | BASEANGBAND | 
+F:MOVE_BODY | ANIMAL | GOOD | NONLIVING |
+F:RES_TELE | CAN_SWIM | WILD_SWAMP | WILD_SHORE | 
+S:1_IN_10 |
+S:SHRIEK | MIND_BLAST
+S:MULTIPLY
+D:It`s a slime colony.
+D:If you so much as DARE to touch it.
+
+N:4078:Botei-Building, the Emperor
+G:P:U
+I:120:12d100:25:130:40
+W:36:2:3000:2500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:PUNCH:HURT:4d12
+B:PUNCH:HURT:5d12
+B:PUNCH:BLIND:20d1
+B:KICK:HURT:8d8
+F:UNIQUE | MALE | CAN_SPEAK | REFLECTING | HAS_LITE | 
+F:OPEN_DOOR | BASH_DOOR |
+F:FORCE_SLEEP | FORCE_MAXHP | MOVE_BODY | TAKE_ITEM |
+F:DROP_1D2 | DROP_90 | DROP_GOOD | ONLY_ITEM | CAN_SWIM |
+F:BASEANGBAND | 
+F:REGENERATE |
+F:DROP_SKELETON | DROP_CORPSE |
+S:1_IN_6 |
+S:BR_SHAR | TELE_TO
+D:No one wrote a description about this monster, unfortunately.
+
+N:4079:Shadower
+G:N:D
+I:110:1d1:0:0:0
+W:1:255:100:0
+E:1:1:1:2:1:1
+O:20:20:20:20
+F:BASEANGBAND | 
+D:Nobody knows its true character.
+
+N:4080:Statue of Chest mimic mimic
+G:`:W
+I:110:10d14:30:40:0
+W:21:6:1000:70
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:GAZE:CONFUSE:2d3
+B:CLAW:POISON:3d4
+B:CLAW:POISON:3d4
+B:SPIT:BLIND:2d3
+F:CHAR_MULTI |
+F:BASEANGBAND | 
+F:FORCE_SLEEP | NEVER_MOVE |
+F:EMPTY_MIND | COLD_BLOOD |
+F:NO_CONF | NO_SLEEP | NO_FEAR
+S:1_IN_5 |
+S:BLIND | CONF | SCARE | CAUSE_2 | BA_POIS |
+S:S_MONSTER
+D:Is it a statue, or a mimic, or maybe a mimic of a mimic???
+
+N:4081:Luigi
+G:p:G
+I:110:80d10:20:80:10
+W:31:4:1800:2500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:3d7
+B:HIT:HURT:3d7
+B:HIT:HURT:3d7
+F:UNIQUE | MALE | DROP_SKELETON | DROP_CORPSE |
+F:MORTAL | BASEANGBAND | 
+F:FORCE_SLEEP | FORCE_MAXHP | HAS_LITE | 
+F:DROP_2D2 | ONLY_ITEM | DROP_GOOD |
+F:OPEN_DOOR | GOOD | CAN_SWIM | CAN_FLY |
+F:NO_CONF | NO_SLEEP | NEUTRAL | TAKE_ITEM |
+S:1_IN_4 |
+S:BA_FIRE | HASTE | HOLD | CONF | BLIND
+D:Mario's brother, he's harder to control but jumps higher.
+
+N:4082:Jaian, the Boss of the Kids
+G:p:o
+I:110:100d10:16:100:20
+W:29:3:1800:500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:SHOW:CONFUSE
+B:SHOW:CONFUSE
+B:HIT:HURT:4d5
+B:CRUSH:HURT:20d2
+F:UNIQUE | MALE | DROP_SKELETON | DROP_CORPSE | 
+F:FORCE_SLEEP | FORCE_MAXHP | HAS_LITE |
+F:DROP_2D2 | ONLY_GOLD |
+F:MORTAL | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | MOVE_BODY | 
+S:1_IN_5 |
+S:BR_SOUN |
+D:We don't know what kids he's the boss of, but he breathes sound.
+
+N:4083:Bramd the Ice Dragon
+G:D:w
+I:125:50d101:20:150:100
+W:60:7:20000:22500
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:CLAW:COLD:8d12
+B:CLAW:COLD:8d12
+B:CLAW:COLD:8d12
+B:BITE:COLD:10d12
+F:UNIQUE | NEUTRAL | FORCE_SLEEP | FORCE_MAXHP | RES_TELE |
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD |
+F:SMART | OPEN_DOOR | BASH_DOOR | CAN_FLY | POWERFUL |
+F:BASEANGBAND | 
+F:DRAGON | GOOD | IM_COLD | NO_CONF | NO_SLEEP | AURA_COLD |
+F:RES_WATE | NO_STUN | 
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:BRAIN_SMASH | BR_COLD | BA_COLD
+D:The oldest and wisest of the ancient dragons of Lodoss, it protects the land from
+D:its evil counterparts.
+
+N:4084:Eibra the Water Dragon
+G:D:b
+I:125:50d101:20:150:100
+W:60:7:25000:22500
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:CLAW:HURT:8d12
+B:CLAW:HURT:8d12
+B:CLAW:HURT:8d12
+B:BITE:ACID:10d12
+F:UNIQUE | FORCE_SLEEP | FORCE_MAXHP | RES_TELE |
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD |
+F:BASEANGBAND | 
+F:SMART | OPEN_DOOR | BASH_DOOR | CAN_FLY | POWERFUL |
+F:DRAGON | EVIL | IM_POIS | NO_CONF | NO_SLEEP | CAN_SWIM |
+F:RES_WATE | NO_STUN | 
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:BRAIN_SMASH | BR_ACID | BA_WATE
+D:One of the ancient dragons of Lodoss, it came from the depths of the ocean
+D:to cause destruction.
+
+N:4085:Narse the Black Dragon
+G:D:s
+I:125:50d101:20:150:100
+W:60:7:20000:22500
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:CLAW:HURT:8d12
+B:CLAW:HURT:8d12
+B:CLAW:HURT:8d12
+B:BITE:EXP_80:10d12
+F:UNIQUE | FORCE_SLEEP | FORCE_MAXHP | RES_TELE |
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD |
+F:SMART | OPEN_DOOR | BASH_DOOR | CAN_FLY | POWERFUL |
+F:BASEANGBAND | 
+F:DRAGON | EVIL | IM_ACID | NO_CONF | NO_SLEEP |
+F:NO_STUN | 
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:BRAIN_SMASH | BR_DARK | BR_NETH | BA_NETH
+D:One of the ancient dragons of Lodoss, it causes destruction with
+D:an dark and nether breath.
+
+N:4086:Mycen the Gold Dragon
+G:D:y
+I:125:50d101:20:150:100
+W:60:7:30000:22500
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:CLAW:HURT:8d12
+B:CLAW:HURT:8d12
+B:CLAW:HURT:8d12
+B:BITE:HURT:10d12
+F:UNIQUE | NEUTRAL | FORCE_SLEEP | FORCE_MAXHP | RES_TELE |
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD |
+F:SMART | OPEN_DOOR | BASH_DOOR | CAN_FLY | POWERFUL |
+F:DRAGON | GOOD | NO_CONF | NO_SLEEP |
+F:NO_STUN | 
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:BRAIN_SMASH | BR_SOUN | BR_LITE | BR_MANA
+D:One of the ancient dragons of Lodoss, it jointly rules the
+D:Kingdom of Moss and strives to protect it.
+
+N:4087:Shooting Star the Red Dragon
+G:D:r
+I:125:50d101:20:150:100
+W:60:7:20000:22500
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:CLAW:FIRE:8d12
+B:CLAW:FIRE:8d12
+B:CLAW:FIRE:8d12
+B:BITE:FIRE:10d12
+F:UNIQUE | FORCE_SLEEP | FORCE_MAXHP |
+F:RES_TELE | AURA_FIRE | 
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD |
+F:SMART | OPEN_DOOR | BASH_DOOR | CAN_FLY | POWERFUL |
+F:BASEANGBAND | 
+F:DRAGON | EVIL | IM_FIRE | NO_CONF | NO_SLEEP | WILD_VOLCANO |
+F:NO_STUN | 
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:BRAIN_SMASH | BR_FIRE | BA_FIRE
+D:One of the ancient dragons of Lodoss, it causes destruction
+D:with its breath of fire.
+
+N:4088:Beld, Ruler of Marmo
+G:p:r
+I:125:77d30:10:160:50
+W:48:4:1700:18500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:8d15
+B:HIT:HURT:8d15
+B:HIT:INSANITY:8d15
+B:HIT:INSANITY:8d15
+F:UNIQUE | MALE | FORCE_MAXHP | DROP_60 | DROP_GOOD | 
+F:MORTAL | BASEANGBAND | 
+F:DROP_1D2 | OPEN_DOOR | BASH_DOOR | SMART | POWERFUL | IM_FIRE |
+F:TAKE_ITEM | CAN_SPEAK | EVIL | NO_CONF | NO_SLEEP |
+F:CAN_SWIM | DROP_CORPSE | AURA_FIRE | HAS_LITE |
+D:Beld seeks to conquer Lodoss and will destroy anyone who stands in his way.
+
+N:4089:Ashram, the Ebony Knight
+G:p:D
+I:120:77d20:10:120:50
+W:40:4:1700:5000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:8d8
+B:HIT:HURT:8d8
+B:HIT:INSANITY:8d8
+B:HIT:INSANITY:8d8
+F:UNIQUE | MALE | FORCE_MAXHP | DROP_60 | DROP_GOOD | EVIL | 
+F:DROP_1D2 | OPEN_DOOR | BASH_DOOR | SMART | POWERFUL | IM_FIRE |
+F:TAKE_ITEM | CAN_SPEAK | NO_CONF | NO_SLEEP |
+F:MORTAL | BASEANGBAND | 
+F:CAN_SWIM | DROP_CORPSE | AURA_FIRE | HAS_LITE |
+D:Ashram took up Beld's sword and position after his death.
+
+N:4090:That @$^%& Black Bat
+G:b:b
+I:130:30d10:50:75:0
+W:33:4:200:1000
+E:0:1:1:0:1:0
+O:20:20:20:20
+B:TOUCH:EAT_FOOD:1d1
+B:TOUCH:EAT_GOLD:1d1
+B:TOUCH:EAT_ITEM:1d1
+B:TOUCH:EAT_ITEM:1d1
+F:UNIQUE | FORCE_MAXHP | RAND_25 | RAND_50 | DROP_90
+F:DROP_1D2 | DROP_GOOD | SMART | EMPTY_MIND | OPEN_DOOR
+F:MORTAL | BASEANGBAND | 
+F:BASH_DOOR | PASS_WALL | MOVE_BODY | TAKE_ITEM | EVIL
+F:ANIMAL | NO_STUN | NO_SLEEP | CAN_FLY
+F:DROP_CORPSE | 
+S:1_IN_7 |
+S:S_DRAGON
+D:This bat has been the death of many adventurers, taking their only
+D:weapon and leaving them to face a dragon.
+
+N:4091:Eol, the Dark Elven Smith
+G:h:D
+I:120:22d100:30:110:5
+W:40:3:1600:8000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:GAZE:PARALYZE
+B:HIT:HURT:5d12
+B:HIT:HURT:5d12
+B:HIT:HURT:5d12
+F:UNIQUE | MALE | CAN_SPEAK |
+F:FORCE_SLEEP | FORCE_MAXHP | MOVE_BODY |
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD |
+F:SMART | OPEN_DOOR | BASH_DOOR |
+F:EVIL | IM_ACID | IM_FIRE | IM_POIS | IM_COLD | 
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:HOLD | SCARE | DARKNESS | BLIND
+D:A grim-faced dark elf, garbed in layer upon layer of gleaming black
+D:armour. As strong as he is magical, Eol is a worthy opponent.
+
+N:4092:Maeglin, Betrayer of Gondolin
+G:h:r
+I:120:32d100:20:50:20
+W:56:5:1500:20000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:LOSE_WIS:4d11
+B:HIT:LOSE_INT:4d11
+B:HIT:SHATTER:10d10
+B:HIT:INSANITY:10d10
+F:UNIQUE | MALE | CAN_SPEAK |
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ONLY_ITEM | DROP_2D2 | DROP_4D2 | DROP_GOOD |
+F:MORTAL | BASEANGBAND | 
+F:SMART | OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY |
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS
+F:DROP_CORPSE | 
+S:1_IN_4 |
+S:BA_ACID | BA_ELEC | HASTE | HEAL |
+S:S_MONSTER | TPORT | TELE_TO
+D:A dark elf, mighty in Gondolin, and betrayer of that hidden city to
+D:Morgoth's wrath.
+
+N:4093:Shuten-douji, King Ogre of Ooe-Mountain
+G:O:o
+I:125:30d100:20:120:20
+W:47:3:7000:15000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:10d11
+B:HIT:HURT:10d11
+B:HIT:HURT:10d11
+B:HIT:HURT:10d11
+F:UNIQUE | MALE | CAN_SPEAK | FORCE_MAXHP | ESCORT |
+F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | DROP_GOOD |
+F:MORTAL | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | CAN_SWIM | AURA_ELEC |
+F:EVIL | GIANT | IM_POIS | IM_FIRE | IM_ELEC
+F:DROP_CORPSE | 
+D:A boss ogre who wants to clobber you.
+
+N:4094:Coatl
+I:115:30d20:30:80:50
+G:J:B
+W:29:4:500:330
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:3d7
+B:HIT:HURT:3d7
+B:HIT:HURT:3d7
+F:DROP_CORPSE | FORCE_SLEEP | NEUTRAL | ANIMAL |
+F:ONLY_ITEM | DROP_2D2 | GOOD | CAN_FLY |
+F:BASEANGBAND | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR |
+F:IM_ACID | IM_POIS | NO_CONF | NO_SLEEP
+S:1_IN_3 |
+S:BLIND | CONF | SCARE | HOLD
+D:Unlike Nethack, it cannot instakill you via drowning, thankfully.
+
+N:4095:Thunder bird
+G:B:y
+I:120:20d25:20:30:10
+W:32:3:350:900
+E:0:1:1:0:1:0
+O:20:20:20:20
+B:CRUSH:HURT:2d5
+B:CRUSH:ELEC:3d5
+B:CRUSH:ELEC:3d5
+B:BITE:ELEC:6d8
+F:MORTAL | BASEANGBAND | 
+F:BASH_DOOR | CAN_FLY | AURA_ELEC | 
+F:ANIMAL | IM_ELEC | 
+F:DROP_CORPSE | 
+S:1_IN_5
+S:BR_ELEC | BA_ELEC |
+D:A bird that attacks with lightning.
+
+N:4096:Durahan
+G:p:v
+I:120:12d100:30:85:0
+W:45:3:1700:3900
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:EXP_80:3d6
+B:HIT:HURT:5d8
+B:HIT:HURT:5d8
+B:HIT:CONFUSE:6d8
+F:FORCE_MAXHP |
+F:COLD_BLOOD | OPEN_DOOR | CAN_FLY |
+F:BASEANGBAND | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | RES_NETH | NO_CONF | NO_SLEEP |
+S:1_IN_5
+S:BLIND | HOLD | SCARE | CAUSE_4 | BO_NETH | S_UNDEAD
+D:Probably supposed to be called "dullahan", it's apparently some sort of undead.
+
+N:4097:Hibagon
+G:Y:r
+I:110:11d15:20:30:60
+W:14:10:1200:30
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CLAW:HURT:1d7
+B:CLAW:HURT:1d7
+B:BITE:HURT:2d7
+F:MORTAL | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | WILD_MOUNTAIN | ANIMAL
+F:DROP_CORPSE
+D:A japanese animal that lacks a description.
+
+N:4098:Nue
+G:H:y
+I:110:13d8:16:30:10
+W:20:1:1200:100
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CLAW:HURT:1d10
+B:CLAW:HURT:1d10
+B:BITE:POISON:1d10
+F:FORCE_SLEEP | ANIMAL |
+F:MORTAL | BASEANGBAND | 
+F:BASH_DOOR | WILD_MOUNTAIN |
+D:A japanese monster that looks like a piano in Amylona.
+
+N:4099:Unicorn
+G:q:W
+I:120:30d50:30:100:0
+W:39:6:2800:2000
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:KICK:EXP_20:1d20
+B:KICK:UN_POWER:1d10
+B:BUTT:HURT:4d12
+B:BITE:LOSE_ALL:3d8
+F:REFLECTING | DROP_1D2 | DROP_2D2 | RES_DISE | ANIMAL |
+F:REGENERATE | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
+F:BASEANGBAND | 
+F:NO_CONF | NO_SLEEP | RES_TELE | CAN_SWIM | 
+F:DROP_CORPSE | 
+D:Well DUH, it's a mythical beast with only one horn.
+
+N:4100:Nekomata
+G:f:u
+I:110:12d16:20:32:40
+W:17:3:1000:60
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:HIT:HURT:2d5
+B:HIT:HURT:2d5
+F:MORTAL | BASEANGBAND | 
+F:MALE | EVIL | FORCE_SLEEP | DROP_1D2 | ANIMAL |
+F:SMART | OPEN_DOOR | BASH_DOOR |
+F:DROP_SKELETON | DROP_CORPSE | 
+S:1_IN_3 |
+S:SCARE | CAUSE_2 | S_MONSTER
+D:Probably one of the weird-ass cats that the Japanese are crazy about.
+
+N:4101:Nine-tailed fox
+G:f:w
+I:120:30d60:30:140:50
+W:49:7:1000:10000
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:KICK:UN_POWER:3d10
+B:KICK:UN_POWER:3d10
+B:BITE:HURT:5d12
+B:BITE:HURT:5d12
+F:REFLECTING | DROP_1D2 | DROP_3D2 | ANIMAL | FORCE_MAXHP | FORCE_SLEEP |
+F:MORTAL | BASEANGBAND | 
+F:REGENERATE | IM_FIRE | IM_COLD |
+F:NO_CONF | NO_SLEEP | RES_TELE | 
+F:DROP_CORPSE | 
+S:1_IN_2
+S:S_MONSTERS | CAUSE_3 | CAUSE_4 | CONF | BRAIN_SMASH | DRAIN_MANA | SCARE |
+S:HASTE | HOLD |
+D:DUH, it's a fox and it has nine tails. Do you really need a description?
+
+N:4102:Fenghuang
+G:B:R
+I:130:50d80:50:190:20
+W:76:5:3000:30000
+E:0:1:1:0:1:0
+O:20:20:20:20
+B:CLAW:UN_BONUS:6d10
+B:CLAW:UN_BONUS:6d10
+B:CLAW:CONFUSE:8d10
+B:BITE:UN_POWER:8d10
+F:GOOD | DROP_GOOD | MOVE_BODY | NONLIVING | AURA_FIRE | 
+F:MORTAL | BASEANGBAND | 
+F:FORCE_SLEEP | FORCE_MAXHP | ONLY_ITEM | DROP_1D2 | DROP_2D2 |
+F:OPEN_DOOR | SMART | POWERFUL | CAN_FLY |
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | RES_TELE |
+F:RES_DISE | RES_NEXU | RES_NETH | RES_PLAS | 
+F:NO_STUN | NO_CONF | NO_SLEEP | 
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:SCARE | BRAIN_SMASH | DRAIN_MANA |
+S:BR_FIRE | BR_LITE | BR_SOUN | HEAL | S_ANGEL
+D:It's from Japan and uses the glyph for birds so I guess it's a bird?
+
+N:4103:Kirin
+G:q:y
+I:130:50d80:50:230:20
+W:76:5:3500:30000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:KICK:HURT:12d12
+B:KICK:HURT:12d12
+B:BITE:UN_BONUS:10d10
+B:CRUSH:TIME:10d10
+F:GOOD | DROP_GOOD | MOVE_BODY | NONLIVING | AURA_ELEC |
+F:FORCE_SLEEP | FORCE_MAXHP | ONLY_ITEM | DROP_1D2 | DROP_2D2 |
+F:OPEN_DOOR | SMART | POWERFUL | CAN_SWIM |
+F:BASEANGBAND | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | RES_TELE |
+F:RES_DISE | RES_NETH | RES_PLAS |
+F:NO_STUN | NO_CONF | NO_SLEEP | 
+F:DROP_CORPSE | 
+S:1_IN_6 |
+S:BLIND | SHRIEK | S_ANGEL | HEAL
+D:Angelic being that would be ridable if riding were implemented.
+
+N:4104:Pegasus
+G:q:w
+I:115:30d20:30:100:50
+W:34:6:2800:700
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:BITE:HURT:3d8
+B:BITE:HURT:3d8
+B:KICK:HURT:4d10
+B:KICK:HURT:4d10
+F:DROP_2D2 | ANIMAL | NO_SLEEP | CAN_FLY | 
+F:DROP_CORPSE | 
+F:BASEANGBAND | 
+D:A legendary horse.
+
+N:4105:Sleipnir, the Odin's Steed
+G:q:o
+I:130:40d100:20:140:50
+W:51:3:4000:17000
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:KICK:HURT:8d10
+B:KICK:HURT:8d10
+B:KICK:HURT:8d10
+B:BITE:HURT:10d10
+F:FORCE_MAXHP | UNIQUE | ANIMAL | CAN_FLY |
+F:BASEANGBAND | 
+F:REGENERATE | BASH_DOOR | IM_FIRE | IM_COLD | IM_ELEC |
+F:IM_POIS | NO_CONF | NO_SLEEP | 
+F:DROP_CORPSE | 
+D:Fliegel! Lufteste Sleipnir! :D
+
+N:4106:Huan, the Hound of Valinor
+G:C:D
+I:130:75d100:80:110:10
+W:72:5:3000:30000
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:CLAW:HURT:7d10
+B:CLAW:HURT:7d10
+B:BITE:POISON:5d10
+B:BITE:POISON:5d10
+F:UNIQUE | MALE | CAN_SPEAK | WILD_WOOD |
+F:FORCE_SLEEP | FORCE_MAXHP | RAND_25 | GOOD | NEUTRAL |
+F:SMART | OPEN_DOOR | BASH_DOOR | MOVE_BODY | 
+F:BASEANGBAND | 
+F:ANIMAL | IM_FIRE | IM_POIS | NO_CONF | NO_SLEEP
+F:DROP_CORPSE | 
+D:Hmm, I thought Huan was the Wolfhound of the Valar. Oh well.
+
+N:4107:Dao
+G:P:o
+I:120:70d10:30:70:10
+W:40:6:2500:900
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:ACID:8d4
+B:HIT:ACID:8d4
+F:DROP_60 | OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:BASEANGBAND | 
+F:EVIL | IM_ACID | NO_CUT | RES_DISE | NO_CONF | NO_SLEEP |
+S:1_IN_6 |
+S:BO_ACID | BO_PLAS | BA_ACID
+D:A Dao is a genie from the elemental plane of Earth.
+
+N:4108:Marid
+G:P:g
+I:120:75d15:30:75:10
+W:45:6:2500:2000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:9d6
+B:HIT:HURT:9d6
+F:DROP_60 | WEIRD_MIND | OPEN_DOOR | BASH_DOOR | MOVE_BODY |
+F:IM_COLD | RES_WATE | NO_CONF | NO_SLEEP |
+F:BASEANGBAND | 
+S:1_IN_6 |
+S:BO_WATE | BA_WATE | BLINK | S_MONSTER
+D:The marid are said to be born of the ocean,
+D:with currents as their muscles and pearls as their teeth.
+
+N:4109:Chiokovo
+G:B:y
+I:110:8d8:13:35:20
+W:8:3:1000:20
+E:0:1:1:0:1:0
+O:20:20:20:20
+B:KICK:HURT:1d3
+B:KICK:HURT:1d4
+B:BITE:HURT:1d5
+F:ANIMAL | 
+F:MORTAL | BASEANGBAND | 
+F:DROP_SKELETON | DROP_CORPSE | 
+D:Yet another bird-type monster with no description.
+
+N:4110:Black Chiokovo
+G:B:D
+I:115:25d20:20:45:20
+W:25:7:1000:250
+E:0:1:1:0:1:0
+O:20:20:20:20
+B:CLAW:HURT:2d6
+B:CLAW:HURT:2d6
+B:BITE:HURT:2d6
+F:ANIMAL | CAN_FLY | 
+F:MORTAL | BASEANGBAND | 
+F:DROP_SKELETON | DROP_CORPSE | 
+D:I think it's a black-colored bird.
+
+N:4111:Devu Chiokovo
+G:B:y
+I:105:35d100:17:180:255
+W:43:9:5000:2500
+E:0:1:1:0:1:0
+O:20:20:20:20
+B:CLAW:HURT:8d12
+B:CLAW:HURT:8d12
+B:BITE:HURT:10d12
+B:CRUSH:SHATTER:12d12
+F:ANIMAL | FORCE_MAXHP | BASH_DOOR | TAKE_ITEM | RAND_50 |
+F:MORTAL | BASEANGBAND | 
+F:REGENERATE |
+F:DROP_60 | DROP_90 | DROP_1D2 | DROP_2D2 | DROP_3D2 | DROP_4D2 | 
+F:DROP_SKELETON | DROP_CORPSE | 
+D:It's a bird. I don't know more about it and the Poschengband authors didn't 
+D:feel like adding a description.
+
+N:4112:Bahamut, Celestial Dragon of Good
+G:D:w
+I:130:100d100:20:125:70
+W:86:4:50000:45000
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:CLAW:HURT:6d12
+B:CLAW:HURT:8d12
+B:CLAW:HURT:8d12
+B:BITE:HURT:10d14
+F:ATTR_MULTI | CAN_SPEAK | 
+F:UNIQUE | MALE | CAN_FLY |
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ESCORT |
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD | DROP_GREAT |
+F:BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY |
+F:GOOD | DRAGON | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP
+F:NO_CUT | 
+F:DROP_CORPSE | 
+S:1_IN_2 |
+S:BLIND | CONF | SCARE |
+S:BR_LITE | BR_DARK | BR_SOUN | BR_CONF | BR_SHAR |
+S:S_HI_DRAGON
+D:Bahamut the Platinum Dragon has been described both as the King of All Good Dragons,
+D:and more accurately, as a glorious and resplendent deity in his own right. He is ever
+D:watchful for the cause of lawful good and sits unsleepingly in his palace on Mount
+D:Celestia, the Seven Heavens. Bahamut is the protector of all good dragons and a
+D:fierce opponent of evil.
+
+N:4113:Suke-san, the Mitsukuni's Warder
+G:p:s
+I:115:40d15:20:80:0
+W:30:255:2220:500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:INSANITY:4d8
+B:HIT:INSANITY:4d8
+F:MALE | DROP_CORPSE | DROP_SKELETON | FORCE_MAXHP | HAS_LITE | 
+F:MORTAL | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | UNIQUE
+D:He is always traveling together with
+D:Mitsukuni of the Yellow Gate, Grand Duke of Mito.
+
+N:4114:Kaku-san, the Mitsukuni's Warder
+G:p:s
+I:115:40d15:20:80:0
+W:30:255:2220:500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:INSANITY:4d8
+B:HIT:INSANITY:4d8
+F:MALE | DROP_CORPSE | DROP_SKELETON | FORCE_MAXHP | HAS_LITE | 
+F:OPEN_DOOR | BASH_DOOR | UNIQUE
+F:MORTAL | BASEANGBAND | 
+D:He is always traveling together with
+D:Mitsukuni of the Yellow Gate, Grand Duke of Mito.
+
+N:4115:The Ghost 'Q'
+G:G:w
+I:140:10d20:20:30:10
+W:15:3:100:150
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:TOUCH:EAT_FOOD:1d1
+B:TOUCH:EAT_FOOD:1d1
+B:TOUCH:EAT_FOOD:1d1
+B:TOUCH:EAT_FOOD:1d1
+F:UNIQUE | MALE | CAN_SWIM | CAN_FLY |
+F:RAND_50 | RAND_25 |
+F:BASEANGBAND | 
+F:FORCE_MAXHP | CAN_SPEAK |
+F:ONLY_ITEM | DROP_90 | DROP_GOOD |
+F:INVISIBLE | COLD_BLOOD | PASS_WALL | RES_NETH
+F:UNDEAD | NO_SLEEP
+D:He has only three hair. He is careless, but kind, and always a bit hungry.
+
+N:4116:Pip, the Braver from Another World
+G:p:u
+I:110:20d48:20:80:15
+W:35:3:1400:1800
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:4d5
+B:HIT:HURT:4d5
+B:HIT:HURT:4d5
+F:UNIQUE | MALE | CAN_SPEAK | DROP_SKELETON | DROP_CORPSE | 
+F:FORCE_SLEEP | FORCE_MAXHP | HAS_LITE |
+F:BASEANGBAND | 
+F:DROP_1D2 | ONLY_ITEM | DROP_GOOD |
+F:OPEN_DOOR | GOOD | CAN_SWIM |
+F:NO_CONF | NO_SLEEP | NEUTRAL | TAKE_ITEM |
+S:1_IN_5 |
+S:BA_FIRE | HOLD | BO_FIRE | HEAL
+D:Yet another boss. He casts fire spells and you should therefore kill him 
+D:unless you want to lose all your damn scrolls.
+
+N:4117:Ansalom, the Dark Wizard
+G:p:D
+I:120:22d150:50:100:0
+W:55:10:1700:20000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:UN_BONUS:6d6
+B:HIT:UN_BONUS:6d6
+B:HIT:HURT:4d5
+B:HIT:HURT:4d5
+F:UNIQUE | MALE | CAN_SPEAK | HAS_LITE |
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | DROP_CORPSE | DROP_SKELETON
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_GOOD | 
+F:OPEN_DOOR | BASH_DOOR |
+F:IM_ACID | IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP | EVIL
+S:1_IN_2 | CAUSE_3 | BA_FIRE | HOLD | BLIND | CONF | SCARE
+S:TRAPS | BO_PLAS | BO_NETH
+S:BA_DARK | S_HOUND
+D:A wizard unique who summons and casts elemental spells.
+
+N:4118:Golden Angel
+G:A:y
+I:160:150d10:30:120:255
+W:50:100:1800:1
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:TOUCH:EAT_GOLD
+B:TOUCH:EAT_ITEM
+F:FORCE_MAXHP | FORCE_SLEEP |
+F:CAN_FLY | UNIQUE |
+F:BASEANGBAND | 
+F:TAKE_ITEM | OPEN_DOOR |
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_ACID | IM_POIS | NO_CONF | NO_SLEEP
+S:1_IN_3 |
+S:TPORT | HASTE | TELE_AWAY | TELE_LEVEL | BLINK
+D:Collect 5 marks of Silver Angel or 1 mark of Gold Angel!
+D:And you will win The Can of Toys!
+
+N:4119:Silver Angel
+G:A:w
+I:130:30d10:30:50:255
+W:30:30:1800:1
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:TOUCH:EAT_GOLD
+F:FORCE_MAXHP | FORCE_SLEEP |
+F:CAN_FLY | UNIQUE |
+F:TAKE_ITEM | OPEN_DOOR |
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_ACID | IM_POIS | NO_CONF | NO_SLEEP
+F:BASEANGBAND | 
+S:1_IN_3 |
+S:TPORT | HASTE | TELE_AWAY | TELE_LEVEL | BLINK
+D:Collect 5 marks of Silver Angel or 1 mark of Gold Angel!
+D:And you will win The Can of Toys!
+
+N:4120:Jibaku ghost
+G:G:W
+I:110:20d5:12:10:10
+W:8:2:100:20
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:2d5
+B:TOUCH:LOSE_WIS
+F:NEVER_MOVE |
+F:BASEANGBAND | 
+F:INVISIBLE | COLD_BLOOD | PASS_WALL | CAN_FLY |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | RES_NETH | NO_CONF | NO_SLEEP
+D:A lost soul of an adventurer still lingering in this world.
+
+N:4121:Rolento
+G:p:u
+I:150:90d10:70:150:4
+W:38:4:1700:4000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:8d4
+B:KICK:HURT:8d4
+F:MALE | FORCE_MAXHP | CAN_SPEAK | DROP_SKELETON | DROP_CORPSE
+F:NO_CONF | NO_SLEEP | NO_STUN | HAS_LITE | 
+F:RES_TELE | RAND_50 | ESCORT | IM_FIRE |
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | UNIQUE |
+F:OPEN_DOOR | EVIL | BASH_DOOR | SMART
+S:1_IN_3
+S:BA_FIRE | HASTE | 
+D:Dude I really don't feel like constantly writing descriptions for weird bosses 
+D:from Poschengband. Why didn't the original devs write anything?
+
+N:4122:M. Bison
+G:p:g
+I:120:20d100:70:110:4
+W:40:4:2000:7000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:KICK:HURT:18d2
+B:KICK:HURT:18d2
+B:KICK:HURT:30d1
+B:CRUSH:FIRE:8d8
+F:MALE | FORCE_MAXHP | CAN_SPEAK | DROP_SKELETON | DROP_CORPSE
+F:MORTAL | BASEANGBAND | 
+F:NO_CONF | NO_SLEEP | 
+F:RES_TELE |
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | UNIQUE |
+F:OPEN_DOOR | EVIL | BASH_DOOR | SMART | CAN_FLY
+S:1_IN_8
+S:BO_MANA | BLINK
+D:Yet another annoying spellcasting unique.
+
+N:4123:TaepoDong
+G:{:W
+I:120:7d14:10:80:12
+W:50:10:200:200
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:EXPLODE:SHATTER:100d2
+F:FORCE_SLEEP | FORCE_MAXHP | REFLECTING |
+F:BASEANGBAND | 
+F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR |
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
+F:NO_FEAR | NO_CONF | NO_SLEEP | NONLIVING | RES_TELE
+D:A shining machine of death and destruction.
+
+N:4124:Spider bomb
+G:S:W
+I:120:5d10:30:50:0
+W:20:4:300:10
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:EXPLODE:HURT:30d2
+F:EMPTY_MIND | COLD_BLOOD |
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
+F:BASEANGBAND | 
+F:NO_FEAR | NO_CONF | NO_SLEEP | NONLIVING | RES_TELE
+D:It is a small bomb of a form like a spider.
+D:It walks toward you!
+
+N:4125:Bomb mosquito
+G:I:D
+I:120:1d1:30:50:0
+W:1:3:50:3
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:EXPLODE:HURT:1d2
+F:BASEANGBAND | 
+F:RAND_50 | CAN_FLY |
+F:WEIRD_MIND | ANIMAL
+D:Instead of stinging you, it explodes.
+
+N:4126:Raou the Conqueror
+G:p:W
+I:123:60d100:50:170:10
+W:62:2:2220:30000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:PUNCH:HURT:15d15
+B:PUNCH:HURT:15d15
+B:PUNCH:TERRIFY:30d1
+B:KICK:INSANITY:15d15
+F:UNIQUE | MALE | CAN_SPEAK | SMART | REFLECTING | HAS_LITE | 
+F:MORTAL | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | DROP_CORPSE | DROP_SKELETON |
+F:FORCE_SLEEP | FORCE_MAXHP | NO_CONF | NO_SLEEP |
+F:DROP_2D2 | DROP_1D2 | DROP_GOOD | ONLY_ITEM | CAN_SWIM |
+F:GOOD | IM_COLD | IM_POIS | IM_ACID | IM_ELEC | IM_FIRE | REGENERATE |
+S:1_IN_3 |
+S:CAUSE_3 | TELE_TO
+D:Super-powerful boss monster.
+
+N:4127:Kokuo, Raou's Steed
+G:q:D
+I:130:30d100:20:100:50
+W:40:3:3500:2000
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:KICK:HURT:4d4
+B:KICK:HURT:5d5
+B:BITE:HURT:6d6
+F:FORCE_MAXHP | UNIQUE | ANIMAL |
+F:REGENERATE | BASH_DOOR | IM_FIRE | IM_COLD | IM_ELEC |
+F:MORTAL | BASEANGBAND | 
+F:IM_POIS | NO_CONF | NO_SLEEP | 
+F:DROP_CORPSE | 
+D:A unique horse that tries to trample all over you.
+
+N:4128:Kutar
+G:h:u
+I:110:3d5:10:10:10
+W:5:4:900:20
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:3d4
+B:HIT:EAT_FOOD:3d4
+F:DROP_60 | OPEN_DOOR | BASH_DOOR | DROP_CORPSE |
+F:WILD_WOOD
+F:MORTAL | BASEANGBAND | 
+D:It is a biped living thing like the bear.
+D:It pounces on you expressionlessly.
+
+N:4129:Nami, the Mate
+G:p:o
+I:120:13d12:20:30:20
+W:8:4:1110:150
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:EAT_GOLD:1d9
+B:HIT:EAT_GOLD:1d9
+B:TOUCH:EAT_ITEM
+B:TOUCH:EAT_ITEM
+F:UNIQUE | FEMALE | FORCE_SLEEP | FORCE_MAXHP | CAN_SPEAK | NEUTRAL | 
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT | WILD_GRASS |
+F:TAKE_ITEM | OPEN_DOOR | CAN_SWIM | DROP_SKELETON | DROP_CORPSE
+S:1_IN_3
+S:HEAL | TRAPS
+D:This early-game unique is actually neutral to you. Don't anger her.
+
+N:4130:Nappa the Saiyan
+G:p:U
+I:125:25d100:30:125:15
+W:50:3:1800:13500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:PUNCH:HURT:10d8
+B:HIT:SHATTER:10d10
+F:UNIQUE | MALE | CAN_SPEAK | RES_TELE
+F:DROP_SKELETON | DROP_CORPSE
+F:MORTAL | BASEANGBAND | 
+F:FORCE_SLEEP | FORCE_MAXHP | KILL_WALL | 
+F:ONLY_ITEM | DROP_4D2 | DROP_GOOD | MOVE_BODY |
+F:EVIL | REGENERATE |
+F:OPEN_DOOR | BASH_DOOR |  
+S:1_IN_8 |
+S:TELE_TO | BO_MANA
+D:He looks like brawny human being apparently.
+D:However, unlike man, it has the tail of a monkey.
+D:This tail proves he is a Saiyan.
+D:A Saiyan's fighting power is far superior to human's and will bring many destruction.
+
+N:4131:Hand grenade
+G:{:r
+I:130:5d1:200:0:0
+W:38:255:100:0
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:EXPLODE:FIRE:2d40
+F:RES_TELE | FORCE_MAXHP | RAND_25 | RAND_50 | NEVER_BLOW |
+F:BASEANGBAND | 
+F:EMPTY_MIND | COLD_BLOOD | NONLIVING | SUSCEP_FIRE |
+F:NO_FEAR | NO_CONF | NO_STUN | NO_SLEEP |
+D:It explodes after two turns. Beware!
+
+N:4132:Grand master thief
+G:p:B
+I:130:15d100:50:75:40
+W:46:2:1700:1500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:EAT_ITEM:5d5
+B:HIT:EAT_ITEM:5d5
+B:HIT:EAT_GOLD:5d5
+B:HIT:EAT_GOLD:5d5
+F:MALE | DROP_2D2 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR |
+F:EVIL |
+F:MORTAL | BASEANGBAND | 
+F:DROP_CORPSE | 
+S:1_IN_2 |
+S:BLINK | TPORT | TELE_TO | CONF | TRAPS
+D:A class of its own: you are already too late to protect your possessions
+D:and he seems to have studied magic too, and is a master of setting traps.
+
+N:4133:Red Helm, the King of Bear
+G:q:r
+I:120:100d10:20:100:10
+W:25:2:3500:1200
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CLAW:HURT:3d6
+B:CLAW:HURT:3d6
+B:BITE:HURT:3d10
+B:BITE:HURT:3d10
+F:MALE | ESCORT
+F:BASH_DOOR | FORCE_MAXHP | UNIQUE |
+F:MORTAL | BASEANGBAND | 
+F:ANIMAL | EVIL | WILD_WOOD | WILD_MOUNTAIN | NO_SLEEP
+F:DROP_CORPSE | 
+D:A king of mad bear. He had built his stronghold at Hutago mountain,
+D:and is reigning over there.
+
+N:4134:Mad bear
+G:q:D
+I:110:18d10:10:35:10
+W:15:1:3000:70
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CLAW:HURT:2d5
+B:CLAW:HURT:2d5
+B:BITE:HURT:3d6
+F:WEIRD_MIND | BASH_DOOR | FRIENDS |
+F:MORTAL | BASEANGBAND | 
+F:ANIMAL | EVIL | WILD_WOOD | WILD_MOUNTAIN
+F:DROP_SKELETON | DROP_CORPSE | 
+D:These bears are followers of Red Helm.
+
+N:4135:Demonite
+G:u:v
+I:115:20d10:30:50:10
+W:20:2:500:250
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CLAW:HURT:3d5
+B:CLAW:HURT:3d5
+F:OPEN_DOOR | DEMON | CAN_SPEAK | NONLIVING |
+F:EVIL | RAND_25 | IM_COLD | IM_FIRE | IM_POIS | CAN_SWIM |
+F:BASEANGBAND | 
+S:1_IN_6 |
+S:BR_COLD
+D:A demon small in stature whose face you can't help but love.
+
+N:4136:Meng Huo, the King of Southerings
+G:p:o
+I:110:38d10:20:50:20
+W:18:2:1900:250
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d15
+B:HIT:HURT:1d15
+B:HIT:HURT:1d15
+B:HIT:HURT:1d15
+F:UNIQUE | MALE | EVIL | HAS_LITE | 
+F:FORCE_MAXHP | CAN_SPEAK | WILD_WASTE | DROP_SKELETON | DROP_CORPSE
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | ESCORT |
+F:OPEN_DOOR | BASH_DOOR | 
+S:1_IN_10 |
+S:S_KIN
+D:He is the king of Nanman. He was arrested by Zhuge Liang 7 times.
+
+N:4137:Wahha-Man the Golden
+G:g:y
+I:130:100d100:100:200:0
+W:85:2:20000:35000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:30d9
+B:HIT:HURT:30d9
+B:HIT:HURT:30d9
+B:HIT:HURT:30d9
+F:UNIQUE | NONLIVING | NO_FEAR | FORCE_MAXHP | FORCE_SLEEP | REFLECTING |
+F:BASEANGBAND | 
+F:MOVE_BODY | KILL_WALL | IM_FIRE | IM_ELEC | IM_POIS | IM_ACID | IM_COLD |
+F:RES_NETH | RES_WATE | RES_PLAS | RES_NEXU |
+F:RES_DISE | NO_STUN | REGENERATE |
+F:NO_CONF | NO_SLEEP | CAN_FLY |
+F:COLD_BLOOD | BASH_DOOR | POWERFUL | RAND_25 |
+F:GOOD | 
+F:DROP_CORPSE | 
+D:He was the braver of Atlantis. His body was converted by a Shinto priest,
+D:in order to fight against "Papa". His body is now made by Orihalcon.
+
+N:4138:Madame Debby
+G:k:v
+I:120:24d100:30:100:5
+W:51:3:1800:16000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:INSULT:*
+B:INSULT:*
+F:MORTAL | BASEANGBAND | 
+F:UNIQUE | FEMALE | CAN_SPEAK | DROP_CORPSE
+F:FORCE_SLEEP | FORCE_MAXHP | CAN_SWIM | ELDRITCH_HORROR | 
+F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | DROP_GOOD |
+F:SMART | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | IM_ACID | IM_FIRE | IM_POIS | NO_CONF | NO_SLEEP
+S:1_IN_2 |
+S:HOLD | SCARE | CAUSE_3 | BR_CONF | BR_NETH | BR_CHAO |
+D:Sukarno's third wife. Her face could sink a thousand
+D:ships, but Sukarno is not too selective.
+
+N:4139:The Defiler
+G:K:D
+I:120:75d100:20:120:70
+W:58:3:10000:30000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CLAW:ACID:5d12
+B:CLAW:ACID:6d12
+B:CLAW:HURT:8d12
+B:BITE:HURT:10d14
+F:UNIQUE |
+F:FORCE_SLEEP | FORCE_MAXHP | KILL_WALL |
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_2D2 | DROP_4D2 | DROP_GOOD |
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY |
+F:EVIL | IM_ACID | IM_FIRE | IM_POIS | ANIMAL |
+F:NO_CONF | NO_SLEEP
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:BR_ACID | BR_POIS | S_KIN
+D:A hulking creature with massive pincers. The Defiler oozes acidic
+D:venom as it smashes the living rock to reach you.
+
+N:4140:Living armor
+G:[:w
+I:105:10d50:30:120:0
+W:26:5:500:200
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:CRUSH:INSANITY:6d10
+B:CRUSH:INSANITY:6d10
+B:CRUSH:HURT:4d8
+B:CRUSH:HURT:4d8
+F:NEVER_MOVE | NONLIVING | NO_FEAR |
+F:BASEANGBAND | 
+F:STUPID | COLD_BLOOD | CHAR_MULTI | NO_CONF | NO_SLEEP |
+F:EVIL | IM_COLD | IM_FIRE | FORCE_MAXHP | IM_ELEC | IM_POIS
+D:It resembles a normal armor until some poor fool ventures too close!
+
+N:4141:Trap master
+G:p:b
+I:125:30d10:20:70:0
+W:28:5:1700:240
+E:1:1:1:2:1:1
+O:20:20:20:20
+F:NEVER_BLOW |
+F:MALE | DROP_SKELETON | DROP_CORPSE |
+F:DROP_1D2 | OPEN_DOOR | BASH_DOOR | EVIL |
+F:MORTAL | BASEANGBAND | 
+S:1_IN_2 |
+S:TRAPS | BLINK
+D:He casts create traps to annoy you.
+
+N:4142:Knight templar
+G:p:w
+I:120:60d25:20:130:10
+W:52:2:1900:5000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:10d5
+B:HIT:HURT:10d5
+B:HIT:HURT:10d5
+B:HIT:HURT:10d5
+F:MALE | FORCE_MAXHP | 
+F:ONLY_ITEM | DROP_90 | DROP_2D2 |
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | SMART |
+F:MORTAL | BASEANGBAND | 
+F:GOOD | NO_SLEEP | HAS_LITE | 
+F:DROP_SKELETON | DROP_CORPSE |
+S:1_IN_4 |
+S:HEAL | SCARE | CAUSE_3 | CAUSE_4 | HASTE | BLIND | S_ANGEL
+D:It seems that the more devout the person, the more likely they are to cross
+D:the boundary between piety and sanctimoniousness. And such is the case with
+D:the Order of the Knights Templar: they are among the most pious and
+D:powerful of the religious knightly orders, but noted for their intolerance.
+D:And thus it is Morgoth's will that is unwittingly done, as the forces of good
+D:are set against each other.
+
+N:4143:Chameleon
+G:R:v
+I:110:10d100:20:0:0
+W:20:1:1500:0
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:BITE:HURT:5d10
+F:WILD_WOOD | DROP_1D2 | DROP_CORPSE | DROP_SKELETON | ANIMAL |
+F:CAN_FLY | IM_FIRE | IM_COLD | IM_ELEC | IM_ACID | IM_POIS |
+F:MORTAL | BASEANGBAND | 
+D:It looks like a different creature.
+
+N:4144:Chameleon Lord
+G:R:v
+I:110:25d100:20:0:0
+W:45:1:1500:0
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:BITE:HURT:10d10
+B:BITE:HURT:10d10
+F:UNIQUE | ESCORT | DROP_GOOD |
+F:DROP_3D2 | DROP_CORPSE | DROP_SKELETON | ANIMAL |
+F:CAN_FLY | IM_FIRE | IM_COLD | IM_ELEC | IM_ACID | IM_POIS
+F:MORTAL | BASEANGBAND | 
+D:It's supposed to shapeshift but that isn't implemented in ToME. Sorry.
+
+N:4145:Narwhal
+G:l:w
+I:130:25d100:50:100:70
+W:40:20:10000:6000
+E:0:0:0:0:1:0
+O:20:20:20:20
+B:BUTT:HURT:8d5
+B:BUTT:HURT:8d5
+B:BUTT:COLD:10d8
+F:UNIQUE | AQUATIC | ANIMAL |
+F:MORTAL | BASEANGBAND | 
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD |
+F:IM_COLD | RES_WATE |
+F:IM_POIS | NO_CONF | NO_SLEEP | NO_STUN |
+F:DROP_CORPSE | 
+D:This is the whale of the tradition which gets across to the Inuit
+D:who lives in the world of winter. It is said that the mystical horn
+D:of this whale cures all illnesses.
+
+N:4146:Petshop
+G:B:R
+I:120:36d100:120:130:0
+W:54:3:10000:25000
+E:0:1:1:0:1:0
+O:20:20:20:20
+B:BITE:COLD:12d6
+B:BITE:COLD:12d6
+B:HIT:COLD:9d12
+B:HIT:COLD:9d12
+F:UNIQUE | RES_NETH | AURA_COLD | EVIL
+F:FORCE_SLEEP | FORCE_MAXHP | CAN_FLY |
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD |
+F:OPEN_DOOR | BASH_DOOR | SMART |
+F:ANIMAL | IM_ACID | IM_FIRE | IM_COLD | IM_POIS | NO_CONF | NO_SLEEP
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:BO_COLD | BA_COLD | BO_ICEE | BR_COLD
+D:This bird is the porter of the mansion in which Dio Brando hides and lives.
+D:For it, a dog may be a favorite food.
+
+N:4147:White crocodile
+G:R:w
+I:115:30d10:20:40:20
+W:26:3:2500:200
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:BITE:HURT:3d4
+B:BITE:HURT:3d4
+B:BITE:HURT:3d4
+B:BITE:HURT:3d4
+F:FORCE_MAXHP |
+F:ONLY_ITEM | DROP_1D2 |
+F:MORTAL | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | CAN_SWIM |
+F:ANIMAL | IM_POIS | RES_WATE
+F:DROP_CORPSE | 
+D:This crocodile grew huge in the sewer.
+D:For him, an adventurer is only game.
+
+N:4148:Disintegrate vortex
+G:v:s
+I:140:32d20:100:80:0
+W:65:6:500:5000
+E:0:0:0:0:0:0
+O:20:20:20:20
+F:FORCE_SLEEP | NEVER_BLOW |
+F:RAND_50 | RAND_25 | CAN_FLY |
+F:BASEANGBAND | 
+F:EMPTY_MIND | BASH_DOOR | POWERFUL | KILL_WALL | KILL_ITEM |
+F:NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN | NONLIVING
+S:1_IN_6 |
+S:BR_DISI
+D:A vortex that breathes disintegration.
+
+N:4149:Topaz monk
+G:p:y
+I:120:59d11:30:46:10
+W:35:2:1700:800
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:KICK:INSANITY:9d1
+B:HIT:INSANITY:9d1
+B:KICK:INSANITY:9d4
+B:HIT:INSANITY:9d1
+F:MALE | DROP_60 | DROP_1D2 | OPEN_DOOR | BASH_DOOR | IM_ELEC | HAS_LITE |
+F:IM_FIRE | IM_COLD | IM_POIS | IM_ACID | NO_CONF | NO_SLEEP |
+F:DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_9 |
+S:HASTE
+D:A yellow-garbed monk, trained in martial arts.
+
+N:4150:Stone dragon
+G:D:D
+I:110:100d25:20:170:70
+W:45:3:10000:4000
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:CLAW:HURT:6d10
+B:CLAW:HURT:6d10
+B:BITE:HURT:6d13
+B:CRUSH:INSANITY:7d15
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:DROP_4D2 | CAN_FLY | 
+F:SMART | BASH_DOOR | POWERFUL | MOVE_BODY |
+F:IM_FIRE | IM_ELEC | IM_POIS | SUSCEP_COLD
+F:BASEANGBAND | 
+F:EVIL | DRAGON | NO_STUN | NO_CONF | NO_SLEEP | HURT_ROCK
+F:DROP_CORPSE | 
+D:A huge dragon all made of stone. It looks very solid...
+
+N:4151:Steel dragon
+G:D:D
+I:120:100d50:20:200:70
+W:55:3:25000:10000
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:CLAW:HURT:7d12
+B:CLAW:HURT:7d12
+B:BITE:HURT:7d14
+B:CRUSH:INSANITY:7d17
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:DROP_3D2 | DROP_4D2 | CAN_FLY | 
+F:BASEANGBAND | 
+F:SMART | BASH_DOOR | POWERFUL | MOVE_BODY |
+F:IM_FIRE | IM_ELEC | IM_POIS | NO_CUT |
+F:EVIL | DRAGON | NO_STUN | NO_CONF | NO_SLEEP
+F:DROP_CORPSE | 
+D:A huge dragon all made of steel. It looks very solid...
+
+N:4152:Noborta Kesyta, the Yeek President
+G:y:w
+I:109:10d20:50:15:4
+W:0:255:900:0
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:EAT_GOLD:1d3
+F:UNIQUE | MALE | CAN_SPEAK | UNDEAD |
+F:FORCE_MAXHP | WILD_TOWN | 
+F:OPEN_DOOR | BASH_DOOR |
+F:MORTAL | BASEANGBAND | 
+F:RES_NETH | NO_CONF | NO_SLEEP
+S:1_IN_4 |
+S:TELE_AWAY
+D:He weighs 127 kg. He is the president of some remote country.
+
+N:4153:Mori Troll
+G:T:G
+I:109:35d20:50:15:4
+W:0:255:3000:0
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d3
+F:UNIQUE | MALE | GIANT | CAN_SPEAK | 
+F:FORCE_MAXHP | WILD_TOWN | 
+F:MORTAL | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | HAS_LITE |
+F:NO_CONF | NO_SLEEP
+D:Brazen faced this creature is more impudent than normal troll.
+
+N:4154:Lousy, the King of Louses
+G:I:W
+I:130:11d11:8:10:10
+W:9:3:300:100
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:STING:HURT:1d5
+B:STING:HURT:1d5
+B:BITE:HURT:1d5
+B:BITE:LOSE_CHR:1d5
+F:UNIQUE | MALE | CAN_SPEAK | 
+F:RAND_50 | RAND_25 | FORCE_MAXHP |
+F:CAN_FLY | WEIRD_MIND | ANIMAL |
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD |
+F:DROP_CORPSE
+S:1_IN_6
+S:S_KIN
+D:This huge louse is the ruin of the sad man
+D:who had become a louse just because he loves louses.
+
+N:4155:Octopus of Kshitigarbha
+G:l:w
+I:110:10d20:10:30:20
+W:30:100:1000:30
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:SPIT:BLIND
+B:TOUCH:CONFUSE
+B:CRUSH:HURT:6d6
+B:CRAWL:POISON:4d4
+F:FRIENDS | ANIMAL | CAN_SWIM | WEIRD_MIND
+F:MORTAL | BASEANGBAND | 
+F:IM_POIS | RES_WATE
+S:1_IN_4 | BR_DARK
+D:Dunno who "Kshitigarbha" is supposed to be, but this aquatic creature can also 
+D:exist on dry land and does its best to defeat you.
+
+N:4156:Tanuki
+G:q:U
+I:120:30d20:18:5:40
+W:24:10:1200:200
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:HIT:HURT:1d5
+B:CRUSH:HURT:1d6
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | RAND_25
+F:MORTAL | BASEANGBAND | 
+F:ANIMAL | 
+D:Tanuki (raccoon dog) is thought to bewitch people in Japanese.
+D:Tanuki can disguise as human beings by putting a magic leaf on his/her head.
+
+N:4157:Dionysus, the Munchkin of Chaos
+G:G:g
+I:154:10d100:100:162:40
+W:55:7:1200:10000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CHARGE:EXP_80:6d8
+B:CHARGE:EXP_80:6d8
+B:TOUCH:EAT_ITEM
+F:UNIQUE | MALE | CAN_FLY | RAND_25 | RAND_50
+F:FORCE_MAXHP | CAN_SPEAK | SMART | REGENERATE |
+F:NO_CONF | NO_STUN |
+F:IM_ACID | IM_ELEC | IM_FIRE | IM_POIS | IM_COLD |
+F:BASEANGBAND | 
+F:RES_NETH | NO_CUT | RES_NEXU | RES_DISE |
+F:ONLY_ITEM | DROP_90 | DROP_GOOD | DROP_GREAT |
+F:TAKE_ITEM |
+F:INVISIBLE | PASS_WALL |
+F:UNDEAD | EVIL
+F:DROP_CORPSE | 
+S:1_IN_2 |
+S:ARROW_4 | TELE_AWAY | TPORT | HASTE | BLINK | HEAL
+D:He is one of the greatest trickster. Even greatest warrior cannot
+D: defeat him, and his storm of holy might arrows from the dark have
+D: defeated numerous victims.
+
+N:4158:Walken
+G:p:o
+I:125:40d100:100:140:10
+W:55:7:1700:15000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:SHATTER:12d12
+B:HIT:SHATTER:12d12
+B:HIT:SHATTER:12d12
+F:UNIQUE | MALE | CAN_SPEAK
+F:DROP_SKELETON | DROP_CORPSE
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD |
+F:MORTAL | BASEANGBAND | 
+F:FORCE_MAXHP | EVIL | GOOD | KILL_BODY |
+F:REFLECTING | IM_FIRE | IM_COLD | IM_ACID |
+F:OPEN_DOOR | BASH_DOOR | REGENERATE |
+S:1_IN_4
+S:BR_DISI
+D:He breathes disintegration and his melee attack shatters the area.
+
+N:4159:Trench Wurm
+G:w:D
+I:115:30d10:20:50:100
+W:15:1:2000:100
+E:0:0:0:0:1:0
+O:20:20:20:20
+B:BITE:HURT:4d2
+B:BITE:HURT:4d2
+B:BITE:HURT:4d2
+F:FORCE_MAXHP | 
+F:COLD_BLOOD | BASH_DOOR | KILL_WALL | ANIMAL | EVIL |
+F:MORTAL | BASEANGBAND | 
+F:IM_ELEC | IM_ACID | IM_FIRE | RES_NETH
+F:DROP_CORPSE | 
+D:Their arrival marks the end of Yawgmoth's subtlety.
+
+N:4160:Radiant Kavu
+G:q:g
+I:115:30d10:20:60:70
+W:15:1:2000:100
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CLAW:HURT:4d2
+B:CLAW:HURT:4d2
+B:BITE:HURT:4d2
+F:FORCE_MAXHP | 
+F:BASH_DOOR | ANIMAL |
+F:IM_FIRE | IM_POIS | IM_COLD |  
+F:MORTAL | BASEANGBAND | 
+F:DROP_CORPSE | 
+S:1_IN_10 |
+S:HEAL
+D:When angered or frightened,
+D:it protects itself with a burst of blinding light.
+
+N:4161:Mauhur, the Orc Captain
+G:o:u
+I:110:24d10:20:60:20
+W:12:3:1700:160
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d12
+B:HIT:HURT:1d12
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+F:UNIQUE | MALE |
+F:MORTAL | BASEANGBAND | 
+F:FORCE_MAXHP | WILD_WASTE |
+F:ESCORT | DROP_SKELETON | DROP_CORPSE
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD |
+F:OPEN_DOOR | BASH_DOOR | CAN_SPEAK |
+F:EVIL | ORC | IM_POIS | 
+D:Some throwaway orc unique.
+
+N:4162:Meng You, the Brother of Meng Huo
+G:p:o
+I:110:25d10:20:25:20
+W:12:2:1700:100
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d15
+B:HIT:HURT:1d15
+B:HIT:HURT:1d15
+B:HIT:HURT:1d15
+F:UNIQUE | MALE | EVIL | HAS_LITE | 
+F:FORCE_MAXHP | CAN_SPEAK | WILD_WASTE | DROP_SKELETON | DROP_CORPSE |
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD |
+F:OPEN_DOOR | BASH_DOOR | 
+D:He is a junior brother of king of southerings Meng Huo.
+
+N:4163:Lady Zhurong, the Avatar of Flame Spirit
+G:p:R
+I:115:24d11:20:45:20
+W:14:2:1200:150
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d12
+B:HIT:HURT:1d12
+B:HIT:FIRE:1d15
+F:UNIQUE | FEMALE | EVIL | HAS_LITE | IM_FIRE | AURA_FIRE |
+F:FORCE_MAXHP | CAN_SPEAK | WILD_VOLCANO | DROP_SKELETON | DROP_CORPSE |
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | OPEN_DOOR | BASH_DOOR | 
+S:1_IN_9
+S:SHRIEK
+D:She is the wife of king Meng Huo. She is called as the avatar of
+D:flame spirit.
+
+N:4164:Dailai Dongzhu, Captain of Southerings
+G:p:u
+I:110:22d10:20:35:20
+W:10:2:1700:100
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+F:UNIQUE | MALE | EVIL | HAS_LITE | 
+F:FORCE_MAXHP | CAN_SPEAK | WILD_WASTE | DROP_SKELETON | DROP_CORPSE |
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | OPEN_DOOR | BASH_DOOR | 
+S:1_IN_5 |
+S:ARROW_2
+D:He is one of the captains of Nanman.
+D:He comes to help his sister and her husband Meng Huo.
+
+N:4165:King Duosi, the Chief of Southerings
+G:p:v
+I:110:25d10:20:45:20
+W:11:2:1700:150
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+F:UNIQUE | MALE | EVIL | HAS_LITE | 
+F:FORCE_MAXHP | CAN_SPEAK | WILD_WASTE | DROP_SKELETON | DROP_CORPSE |
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | OPEN_DOOR | BASH_DOOR | 
+S:1_IN_5 |
+S:BA_POIS | BLINK
+D:He is the best wise man of Nanman. His intelligence afflicted
+D:the enemy.
+
+N:4166:King Mulu, the Chief of Southerings
+G:p:g
+I:110:35d10:20:45:20
+W:16:2:1700:250
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d13
+B:HIT:HURT:1d13
+B:HIT:HURT:1d15
+B:HIT:HURT:1d15
+F:UNIQUE | MALE | EVIL | HAS_LITE | 
+F:FORCE_MAXHP | CAN_SPEAK | DROP_SKELETON | DROP_CORPSE |
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | OPEN_DOOR | BASH_DOOR | 
+S:1_IN_6 |
+S:S_ANT | S_SPIDER
+D:He is one of chiefs of Nanman. He is also good beast master.
+
+N:4167:Wutugu, the Chief of Southerings
+G:P:u
+I:110:35d10:20:60:20
+W:17:2:3000:250
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:2d20
+B:HIT:HURT:2d20
+F:UNIQUE | MALE | EVIL | HAS_LITE | 
+F:FORCE_MAXHP | CAN_SPEAK |
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | OPEN_DOOR | BASH_DOOR |
+F:MORTAL | BASEANGBAND | 
+F:IM_ACID | IM_ELEC | IM_POIS | SUSCEP_FIRE |
+F:DROP_SKELETON | DROP_CORPSE | 
+D:This giant man is the king of southern Nanman. It is said that
+D:he is about 10 feet tall. His army has hard rattan armor.
+
+N:4168:Invisible Pink Unicorn
+G:q:v
+I:140:67d89:77:123:1
+W:67:3:3000:34567
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:KICK:CONFUSE:9d9
+B:KICK:CONFUSE:9d9
+B:BUTT:HURT:8d8
+B:BITE:UN_BONUS:7d7
+F:UNIQUE | FEMALE | GOOD | EVIL | NONLIVING | 
+F:FORCE_MAXHP | OPEN_DOOR | BASH_DOOR | INVISIBLE |
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_GOOD | DROP_GREAT | DROP_2D2 |
+F:SMART | REGENERATE |
+F:IM_ACID | IM_ELEC | IM_FIRE | IM_POIS | IM_COLD | NO_CONF | NO_SLEEP |
+F:RES_NETH | RES_NEXU |
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:BLINK | HEAL | SHRIEK | SCARE | CONF | BLIND |
+S:DARKNESS | FORGET | MIND_BLAST | BRAIN_SMASH |
+D:"Invisible Pink Unicorns are beings of great spiritual power.
+D:We know this because they are capable of being invisible
+D:and pink at the same time. Like all religions, the Faith
+D:of the Invisible Pink Unicorns is based upon both logic
+D:and faith. We have faith that they are pink; we logically
+D:know that they are invisible because we can't see them."
+D:(Steve Eley)
+
+N:4169:Flying Spaghetti Monster
+G:,:y
+B:HIT:HURT:10d10
+I:125:91d111:40:111:40
+W:70:3:4000:45678
+E:0:1:0:2:2:0
+O:20:20:20:20
+F:UNIQUE | GOOD | NONLIVING | CAN_FLY | FORCE_MAXHP |
+F:RAND_25 | SMART | PASS_WALL |
+F:NO_CONF | NO_SLEEP | NO_STUN |
+F:BASEANGBAND | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
+F:RES_NETH | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT
+S:1_IN_4
+S:BLINK | TPORT | SLOW | CONF | HOLD | TELE_TO |
+S:BRAIN_SMASH | BA_WATE | BA_CHAO | BR_NEXU | BR_CONF |
+S:S_MONSTERS |
+D:"I think we can all look forward to the time when these
+D:three theories are given equal time in our science
+D:classrooms across the country, and eventually the world;
+D:One third time for Intelligent Design, one third time for
+D:Flying Spaghetti Monsterism, and one third time for logical
+D:conjecture based on overwhelming observable evidence."
+D:(Bobby Henderson)
+
+N:4170:Reindeer
+G:q:u
+I:130:15d100:20:100:50
+W:50:200:3000:2000
+E:0:1:0:0:1:2
+O:20:20:20:20
+B:KICK:HURT:8d8
+B:KICK:HURT:8d8
+B:BITE:HURT:9d9
+F:FORCE_MAXHP | ANIMAL | CAN_FLY
+F:REGENERATE | BASH_DOOR | IM_FIRE | IM_COLD | IM_ELEC |
+F:MORTAL | BASEANGBAND | 
+F:IM_POIS | NO_CONF | NO_SLEEP | 
+D:A denizen of northern climes. It stares at you menacingly.
+
+N:4171:Death Beast
+G:Z:D
+I:120:60d10:30:100:0
+W:45:4:1500:5000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:BITE:TIME:12d12
+B:CLAW:UN_POWER:3d6
+B:CLAW:UN_POWER:3d6
+F:FORCE_SLEEP | OPEN_DOOR | BASH_DOOR | ANIMAL |
+F:BASEANGBAND | 
+F:NO_CONF | NO_SLEEP | FORCE_MAXHP | KILL_WALL
+F:NO_FEAR
+F:DROP_CORPSE | 
+S:1_IN_3 |
+S:BR_TIME | BR_DISI | BR_NETH
+D:A giant hound, dark as night. It hunts alone. Flee!
+
+N:4172:Ultimate Magus
+G:p:v
+I:130:62d25:20:60:10
+W:79:3:900:40000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d1
+F:MALE | 
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ONLY_ITEM | DROP_4D2 | DROP_GOOD | DROP_GREAT
+F:SMART | OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:EVIL | NO_CONF | NO_SLEEP | 
+F:NO_FEAR
+F:MORTAL | BASEANGBAND | 
+F:DROP_CORPSE | 
+S:1_IN_1 |
+S:BLINK | TPORT | HEAL | TELE_AWAY |
+S:BA_MANA | BR_DISI |  
+S:BA_NETH | BO_MANA | BA_CHAO
+D:A wizened old man, stooped by age, he seems barely able to move.
+D:Yet, something is not quite right here. You see a faint shimmer
+D:in the air surrounding this pathetic old man.
+
+N:4173:Death Scythe
+G:/:v
+I:150:50d50:20:150:20
+W:70:5:500:10000
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:CHARGE:EXP_20:10d10
+B:CHARGE:EXP_20:10d10
+B:CHARGE:EXP_20:10d10
+B:CHARGE:EXP_20:10d10
+F:CHAR_MULTI | EVIL | IM_POIS | IM_COLD | IM_ACID | IM_FIRE | IM_ELEC
+F:FORCE_SLEEP | FORCE_MAXHP | CAN_FLY |
+F:BASEANGBAND | 
+F:COLD_BLOOD | BASH_DOOR | NONLIVING | RES_TELE
+F:NO_CONF | NO_SLEEP | NO_FEAR
+D:The deadliest weapon: You've heard of these before!
+D:Few are brave enough to wield one, and many a great
+D:adventurer has been betrayed at a critical moment.
+D:Yet, this one seems a bit different ...
+
+N:4174:Spellwarp Automaton
+G:g:g
+I:110:50d100:30:200:20
+W:80:4:10000:20000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:10d15
+B:HIT:HURT:10d15
+B:HIT:HURT:10d15
+B:HIT:HURT:10d15
+F:FORCE_SLEEP
+F:NONLIVING | COLD_BLOOD |
+F:BASEANGBAND | 
+#RES_ALL
+F:IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS | RES_NETH |
+F:RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | POWERFUL | FORCE_MAXHP |
+F:NO_CONF | NO_SLEEP | NO_STUN | EMPTY_MIND | RES_TELE |
+S:1_IN_8 |
+S:BR_DISI
+D:An enormous figure made by powerful magic. Slow, but
+D:nearly indestructible.
+
+N:4175:Talos, Masterwork Spellwarp Automaton
+G:g:y
+I:115:200d100:30:250:20
+W:90:15:20000:40000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:SHATTER:15d15
+B:HIT:SHATTER:15d15
+B:HIT:SHATTER:15d15
+B:HIT:SHATTER:15d15
+F:FORCE_SLEEP
+F:NONLIVING | COLD_BLOOD | UNIQUE
+F:BASEANGBAND | 
+#RES_ALL
+F:IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS | RES_NETH |
+F:RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | POWERFUL | FORCE_MAXHP |
+F:NO_CONF | NO_SLEEP | NO_STUN | EMPTY_MIND | RES_TELE |
+S:1_IN_6 |
+S:BA_MANA | BR_DISI | BR_CHAO | S_KIN
+D:A giant figure of a man, shaped from bronze. Your spells
+D:fall short, and your blood runs cold as you behold this
+D:colossal behemoth striding slowly, but purposefully, towards you.
+
+N:4176:Tonberry
+G:h:u
+I:110:30d100:30:50:80
+W:80:4:1000:5000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:20d20
+F:MORTAL | BASEANGBAND | 
+F:RAND_50 | RAND_25 | FORCE_MAXHP
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | 
+D:This sluggish lizard-like being approaches you with a large knife brandished.
+D:You have trouble taking this monster seriously, as it repeatedly seems to trip
+D:over its own feet. Yet you don't remember any tales of heroes who's fought one and lived...
+
+#Note: AC does not reduce damage for EAT_ITEM attacks!
+N:4177:Ninja Tonberry
+G:h:D
+I:125:20d100:30:75:30
+W:80:7:900:5000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:EAT_ITEM:30d11
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT | 
+D:This sluggish lizard-like being approaches you with a large knife brandished.
+D:It is cloaked in brown, and attempting to hide in the shadows ... not very well
+D:though. But perhaps now is not the time to laugh?
+
+N:4178:Master Tonberry
+G:h:y
+I:133:70d100:30:100:80
+W:80:10:1100:40000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:20d30
+F:RAND_50 | RAND_25 | FORCE_MAXHP | UNIQUE
+F:ONLY_ITEM | DROP_4D2 | DROP_GOOD | DROP_GREAT
+F:MORTAL | BASEANGBAND | 
+F:NO_CONF | NO_SLEEP | 
+S:1_IN_5 |
+S:S_KIN | HEAL | TPORT | TELE_LEVEL
+D:This sluggish lizard-like being approaches you with a large knife brandished.
+D:It wears a crown of gold, and erratically stumbles towards you.
+
+N:4179:The Hoard
+G:$:y
+I:115:40d25:20:80:10
+W:30:5:5000:1000
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:CRUSH:POISON:3d7
+B:CRUSH:POISON:3d7
+B:CRUSH:EAT_ITEM:3d4
+B:CRUSH:EAT_GOLD:3d4
+F:UNIQUE | FORCE_MAXHP | SMART | ESCORT | ESCORTS |
+F:ONLY_GOLD | DROP_3D2 | DROP_4D2 | DROP_1D2 |
+F:BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | REFLECTING | MOVE_BODY
+F:EVIL | IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS |
+F:NO_CONF | NO_SLEEP
+S:1_IN_3 |
+S:S_KIN
+D:A massive pile of coins, wealth beyond your wildest dreams.
+
+N:4180:Time Initiate
+G:p:b
+I:116:7d8:20:10:20
+W:15:3:1700:50
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d4
+B:HIT:HURT:1d4
+B:HIT:HURT:1d4
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_3 | HASTE | SLOW
+D:A human, clothed in a blue robe, moving with speed uncanny.
+
+N:4181:Chronomage
+G:p:b
+I:130:100d10:20:70:20
+W:40:3:1700:2000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:3d7
+B:HIT:HURT:3d7
+B:HIT:TIME:3d5
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD |
+F:DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | 
+F:SMART | OPEN_DOOR | TAKE_ITEM | BASH_DOOR |
+S:1_IN_3 | HASTE | SLOW | TELE_LEVEL | BR_TIME
+D:A human, clothed in a blue robe, moving with speed uncanny.
+D:He seems both young and old.
+
+N:4182:Temporal Champion
+G:p:b
+I:150:100d30:20:100:20
+W:60:3:1700:8000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:TIME:10d5
+B:HIT:TIME:10d5
+B:HIT:TIME:10d5
+B:HIT:TIME:10d5
+F:ONLY_ITEM | DROP_4D2 | DROP_GOOD |
+F:DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | 
+F:SMART | OPEN_DOOR | TAKE_ITEM | BASH_DOOR |
+F:NO_CONF | NO_SLEEP
+S:1_IN_3 | HASTE | SLOW | TELE_LEVEL | BR_TIME
+D:A human, clothed in a blue robe, moving with speed uncanny.
+D:He seems to be in several places at once.
+
+N:4183:The Variant Maintainer
+G:p:r
+I:120:15d15:100:20:0
+W:14:1:1300:300
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:CONFUSE:1d5
+B:HIT:CONFUSE:1d5
+F:UNIQUE | MALE | CAN_SPEAK | 
+F:MORTAL | BASEANGBAND | 
+F:RAND_25 | FORCE_MAXHP |
+F:DROP_CORPSE | CAN_FLY | WEIRD_MIND |
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT |
+S:1_IN_3
+S:S_KIN | 
+D:A frazzled stumbling pathetic shadow of a man. He
+D:seems steeped in confusion while mumbling something
+D:about memory corruption in cmd2.c.
+
+N:4184:Monkey Clone
+G:H:R
+I:110:60d10:20:80:0
+W:127:255:1700:500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d1
+F:MORTAL | BASEANGBAND | 
+F:MALE | FORCE_MAXHP | HAS_LITE | 
+F:OPEN_DOOR | BASH_DOOR | NO_FEAR | UNIQUE
+D:He looks just like you!
+
+N:4185:Zeus, King of the Olympians
+G:P:v
+I:137:150d100:30:175:15
+W:90:3:10000:60000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:UN_BONUS:12d12
+B:HIT:UN_BONUS:12d12
+B:HIT:BLIND:12d5
+B:HIT:EXP_20:10d8
+F:UNIQUE | MALE |
+F:FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_GREAT
+F:SMART | TAKE_ITEM | BASH_DOOR | HAS_LITE |
+F:BASEANGBAND | 
+F:REGENERATE | CAN_SWIM
+F:NO_CUT | RES_DISE | 
+F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS | IM_ELEC
+F:NO_STUN | NO_CONF | NO_SLEEP | POWERFUL | 
+S:1_IN_3 |
+S:BR_ELEC | BR_DISE | HASTE | TELE_TO | S_KIN | 
+S:TPORT | ROCKET | BR_CHAO
+D:Zeus, King of the gods and ruler of Mount Olympus, god of the Sky
+D:and Thunder, and nominal husband of Hera. He commands the
+D:Olympians, and his wrath is fearsome. Flee his presence! Unless
+D:you're a really cute girl, in which case you're screwed.
+
+N:4186:Poseidon, Lord of Seas and Storm
+G:P:G
+I:128:140d100:30:175:15
+W:88:3:10000:55000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:SHATTER:10d10
+B:HIT:SHATTER:10d10
+B:HIT:SHATTER:10d10
+B:HIT:SHATTER:10d10
+F:UNIQUE | MALE |
+F:BASEANGBAND | 
+F:FORCE_MAXHP | MOVE_BODY | KILL_BODY
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_GREAT
+F:SMART | TAKE_ITEM | BASH_DOOR | HAS_LITE |
+F:REGENERATE | POWERFUL | CAN_SWIM
+F:IM_FIRE | IM_ACID | IM_POIS | IM_ELEC | IM_COLD
+F:NO_STUN | NO_CONF | NO_SLEEP | 
+S:1_IN_3 |
+S:BA_WATE | BR_DISI
+D:Poseidon, Brother of Zeus, Lord of the Seas and Storm. Entire
+D:cities have been buried by his wrath, and seamen always utter
+D:a prayer to him for safe passage. He lost the patronage of
+D:Athens to Athena.
+
+N:4187:Hades, Ruler of the Underworld
+G:P:D
+I:130:250d100:30:175:15
+W:88:3:10000:55000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:UN_BONUS:12d12
+B:HIT:UN_BONUS:12d12
+B:HIT:LOSE_ALL:10d10
+B:TOUCH:UN_POWER
+F:UNIQUE | MALE |
+F:BASEANGBAND | 
+F:FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_GREAT
+F:SMART | TAKE_ITEM | BASH_DOOR | HAS_LITE |
+F:REGENERATE |
+F:PASS_WALL | POWERFUL | CAN_SWIM
+F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS | IM_ELEC
+F:RES_NETH | RES_DISE | RES_TELE
+F:NO_STUN | NO_CONF | NO_SLEEP | 
+S:1_IN_3 |
+S:BR_DARK | BR_NETH | BA_NETH |
+S:HAND_DOOM | BR_DISI
+D:Hades, Ruler of the Underworld, as demarked by the River Styx. He
+D:rarely lets those who have seen his realm leave it. He is ever
+D:protective of his time with Persephone, daughter of Demeter.
+
+N:4188:Athena, the Goddess of Wisdom
+G:P:R
+I:130:100d100:30:120:15
+W:86:3:10000:52000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:12d12
+B:HIT:HURT:12d12
+B:HIT:HURT:12d12
+B:TOUCH:UN_POWER
+F:UNIQUE | FEMALE |
+F:BASEANGBAND | 
+F:FORCE_MAXHP | MOVE_BODY | 
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_GREAT
+F:SMART | TAKE_ITEM | BASH_DOOR | HAS_LITE |
+F:REGENERATE |
+F:POWERFUL | CAN_SWIM
+F:IM_COLD | IM_ACID | IM_POIS | IM_ELEC
+F:NO_CUT |  
+F:NO_STUN | NO_CONF | NO_SLEEP | 
+S:1_IN_2 |
+S:HASTE | HEAL | 
+S:BA_MANA | TELE_TO | TELE_AWAY
+D:Athena is the great goddess of wisdom and the protector of
+D:Athens. She was born of Zeus and the Titan Metis, and her
+D:cunning far surpasses that of the other deities.
+
+N:4189:Ares, the God of War
+G:P:r
+I:135:100d100:30:200:15
+W:86:3:10000:55000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CHARGE:TERRIFY:100d1
+B:CHARGE:TERRIFY:100d1
+B:CHARGE:LOSE_CHR:100d1
+F:UNIQUE | MALE |
+F:FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_GREAT
+F:SMART | TAKE_ITEM | BASH_DOOR | HAS_LITE |
+F:BASEANGBAND | 
+F:REGENERATE | REFLECTING
+F:POWERFUL | CAN_SWIM
+F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS | IM_ELEC
+F:NO_STUN | NO_CONF | NO_SLEEP | NO_FEAR
+S:1_IN_5 |
+S:TELE_TO | 
+D:Ares is the bold son of Zeus and Hera, whose very name is
+D:feared and respected by warriors and citizens alike. His
+D:legendary combat prowess exceeds that of Zeus and
+D:Poseidon, but he is less skilled in wiles than the other Olympians.
+
+N:4190:Hermes, the Messenger God
+G:P:o
+I:155:90d100:30:120:15
+W:86:3:10000:55000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:10d9
+B:HIT:HURT:10d9
+B:HIT:EAT_ITEM:10d4
+B:HIT:EAT_ITEM:10d4
+F:UNIQUE | MALE |
+F:FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_GREAT
+F:BASEANGBAND | 
+F:SMART | TAKE_ITEM | BASH_DOOR | 
+F:REGENERATE | WEIRD_MIND
+F:POWERFUL | CAN_SWIM
+F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS
+F:NO_STUN | NO_CONF | NO_SLEEP | 
+S:1_IN_3 |
+S:HASTE | SLOW | BR_TIME | BR_NEXU | TPORT
+S:TELE_TO | TELE_AWAY | S_KIN | HEAL
+S:S_KIN | BA_DARK | 
+D:Hermes, the Messenger, is the extremely cunning diplomat used
+D:by the Olympians to negotiate truces. With his Winged Sandals
+D:and his powerful magic, there is no place barred from him, and
+D:there is no way to detain him.
+
+N:4191:Apollo, the Sun God
+G:P:y
+I:130:60d100:30:120:15
+W:86:3:10000:50000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:10d9
+B:HIT:HURT:10d9
+B:HIT:HURT:10d9
+B:HIT:HURT:10d9
+F:UNIQUE | MALE |
+F:FORCE_MAXHP | MOVE_BODY |
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_GREAT
+F:SMART | TAKE_ITEM | BASH_DOOR | HAS_LITE |
+F:REGENERATE |
+F:POWERFUL | CAN_SWIM
+F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS
+F:RES_DISE
+F:NO_STUN | NO_CONF | NO_SLEEP | 
+S:1_IN_3 |
+S:BLINK | BR_LITE | 
+D:The god of the sun.
+
+N:4192:Artemis, the Moon Goddess
+G:P:s
+I:130:70d100:30:120:15
+W:86:3:10000:50000
+E:1:1:1:2:1:1
+O:20:20:20:20
+F:UNIQUE | FEMALE |
+F:FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_GREAT
+F:SMART | TAKE_ITEM | BASH_DOOR | HAS_LITE |
+F:REGENERATE |
+F:BASEANGBAND | 
+F:POWERFUL | CAN_SWIM
+F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS
+F:RES_DISE
+F:NO_STUN | NO_CONF | NO_SLEEP | 
+S:1_IN_2
+S:BLINK | ARROW_4 | HEAL | 
+D:The goddess of the moon.
+
+N:4193:Hephaestus, the Smith God
+G:P:B
+I:135:100d100:30:200:15
+W:86:3:10000:55000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:30d20
+F:UNIQUE | MALE |
+F:FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_GREAT
+F:SMART | TAKE_ITEM | BASH_DOOR | HAS_LITE |
+F:REGENERATE |
+F:BASEANGBAND | 
+F:POWERFUL | CAN_SWIM
+F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS | IM_ELEC
+F:NO_CUT | 
+F:NO_STUN | NO_CONF | NO_SLEEP | 
+S:1_IN_5 |
+S:ROCKET | HEAL | TPORT | TELE_TO | 
+D:Careful, he's also known as the Armorer and gets faster when injured.
+
+N:4194:Hera, Queen of the Gods
+G:P:g
+I:130:130d100:30:150:15
+W:89:3:10000:60000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:UN_BONUS:12d10
+B:HIT:UN_BONUS:12d10
+B:HIT:BLIND:12d5
+B:HIT:EXP_20:10d8
+F:UNIQUE | FEMALE |
+F:FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_GREAT
+F:BASEANGBAND | 
+F:SMART | TAKE_ITEM | BASH_DOOR | HAS_LITE |
+F:REGENERATE |
+F:RES_DISE | POWERFUL
+F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS | IM_ELEC
+F:NO_STUN | NO_CONF | NO_SLEEP | CAN_SWIM | 
+S:1_IN_2 |
+S:BA_MANA | BO_MANA | BR_LITE | HASTE | TELE_TO | 
+S:TPORT | BLINK
+D:She's very powerful.
+
+N:4195:Demeter, the Goddess of Nature
+G:P:u
+I:130:90d100:30:150:15
+W:86:3:10000:60000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:BLIND:12d5
+B:HIT:CONFUSE:10d8
+B:HIT:CONFUSE:10d8
+B:HIT:CONFUSE:10d8
+F:UNIQUE | FEMALE |
+F:FORCE_MAXHP | MOVE_BODY |
+F:BASEANGBAND | 
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_GREAT
+F:SMART | TAKE_ITEM | BASH_DOOR | HAS_LITE |
+F:REGENERATE | CAN_SWIM
+F:RES_DISE | POWERFUL
+F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS | IM_ELEC
+F:NO_STUN | NO_CONF | NO_SLEEP | 
+S:1_IN_3 |
+S:HEAL | TPORT | BLINK | 
+D:The goddess of nature.
+
+N:4196:Aphrodite, the Goddess of Love
+G:P:u
+I:130:80d100:30:150:15
+W:86:3:10000:50000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:BLIND:12d5
+B:HIT:CONFUSE:10d8
+B:HIT:CONFUSE:10d8
+B:HIT:CONFUSE:10d8
+F:UNIQUE | FEMALE |
+F:FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_GREAT
+F:SMART | TAKE_ITEM | BASH_DOOR | HAS_LITE |
+F:BASEANGBAND | 
+F:REGENERATE | REFLECTING
+F:RES_DISE | CAN_SWIM
+F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS | IM_ELEC
+F:NO_STUN | NO_CONF | NO_SLEEP | POWERFUL | 
+S:1_IN_3 |
+S:HEAL | BLINK | S_UNIQUE | S_KIN | TPORT
+D:The goddess of love, who will love the shit out of you until you die.
+
+N:4197:Orc digger
+G:o:s
+I:110:20d9:20:32:30
+W:19:1:1500:50
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d11
+B:HIT:HURT:1d11
+F:MALE |
+F:DROP_60 |
+F:MORTAL | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | ORC | HURT_LITE | KILL_WALL | MOVE_BODY
+D:He is a hardy orc with a pick in hand.
+
+N:4198:Exploding ant
+G:a:s
+I:115:20d10:14:49:40
+W:36:1:600:350
+E:0:1:0:2:1:0
+O:20:20:20:20
+B:EXPLODE:ACID:30d5
+F:FORCE_MAXHP | FRIENDS |
+F:WEIRD_MIND | BASH_DOOR |
+F:MORTAL | BASEANGBAND | 
+F:ANIMAL | IM_ACID
+F:DROP_CORPSE | 
+D:A giant ant with a greatly enlarged mandibular gland.
+
+N:4199:Metal Babble
+G:j:s
+I:190:3d2:200:10000:0
+W:80:10:20:40000
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:HIT:UN_BONUS:1d10
+B:HIT:UN_BONUS:1d10
+B:TOUCH:UN_POWER
+B:TOUCH:UN_POWER
+F:FORCE_SLEEP
+F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | DROP_3D2 |
+F:DROP_GOOD | DROP_GREAT | CAN_SWIM | UNIQUE
+F:SMART | NONLIVING | COLD_BLOOD |
+F:BASEANGBAND | 
+#RES_ALL
+F:IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS | RES_NETH |
+F:RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | POWERFUL | 
+F:NO_CONF | NO_SLEEP | NO_STUN | EMPTY_MIND | RES_TELE |
+S:1_IN_1 |
+S:BLINK | BO_MANA | BA_CHAO | BA_FIRE | TPORT | 
+D:Very hard to kill.
+
+N:4200:Arthur Pendragon
+G:p:r
+I:120:60d20:30:90:15
+W:32:1:1700:2000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:4d8
+B:HIT:HURT:4d8
+B:HIT:BLIND:2d8
+B:HIT:CONFUSE:2d8
+F:UNIQUE | MALE |
+F:FORCE_SLEEP | FORCE_MAXHP | MOVE_BODY | REFLECTING |
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | DROP_GREAT | POWERFUL
+F:MORTAL | BASEANGBAND | 
+F:SMART | TAKE_ITEM | OPEN_DOOR | CAN_SWIM |
+F:GOOD | REGENERATE | DROP_CORPSE |
+F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS | IM_ELEC |
+F:NO_CONF | NO_SLEEP | HAS_LITE
+S:1_IN_4 |
+S:ARROW_4 | TPORT | HEAL | BO_FIRE | BA_ACID |
+S:SHRIEK | HASTE | TELE_TO | S_KIN
+D:Arthur Pendragon, who wields the Sword in the Stone and
+D:rules the Knights of Camelot. He charges at you with
+D:righteous vengeance for upsetting his realm.
+
+N:4201:Sir Lancelot
+G:p:b
+I:125:65d20:30:120:15
+W:30:1:1800:1800
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CHARGE:TERRIFY:25d1
+B:CHARGE:TERRIFY:25d1
+F:UNIQUE | MALE |
+F:FORCE_SLEEP | FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | DROP_GREAT | CAN_SWIM |
+F:MORTAL | BASEANGBAND | 
+F:SMART | TAKE_ITEM | OPEN_DOOR | POWERFUL
+F:GOOD | REGENERATE | DROP_CORPSE |
+F:IM_FIRE | IM_COLD | IM_ACID | IM_ELEC |
+F:NO_FEAR | NO_SLEEP | NO_CONF | HAS_LITE
+S:1_IN_6 |
+S:TELE_TO | HEAL | S_KIN
+D:The strongest of the Knights, Lancelot is also the most handsome,
+D:and leaves a trail of broken hearts in his wake. Fated never
+D:to be with his true love Guinevere, Lancelot nevertheless protects
+D:her whenever he needs to, even if it means destroying Camelot
+
+N:4202:Sir Gawain
+G:p:o
+I:122:40d20:30:90:15
+W:29:1:1700:1800
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:CONFUSE:14d6
+F:UNIQUE | MALE |
+F:FORCE_SLEEP | FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | DROP_GREAT | CAN_SWIM |
+F:SMART | TAKE_ITEM | OPEN_DOOR |
+F:MORTAL | BASEANGBAND | 
+F:GOOD | REGENERATE | DROP_CORPSE |
+F:IM_FIRE | IM_POIS | IM_ACID | IM_COLD |
+F:NO_SLEEP | NO_CONF | HAS_LITE
+S:1_IN_3 |
+S:ARROW_4 | BO_MANA | BLINK | TPORT | S_KIN | HEAL
+D:The second strongest of the Round Table, Gawain is usually
+D:the voice of reason.
+
+N:4203:Sir Galahad
+G:p:g
+I:124:50d20:30:110:15
+W:28:1:1700:1800
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CHARGE:TERRIFY:25d1
+B:HIT:CONFUSE:2d6
+B:HIT:BLIND:2d8
+F:UNIQUE | MALE |
+F:FORCE_SLEEP | FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT | CAN_SWIM |
+F:MORTAL | BASEANGBAND | 
+F:SMART | TAKE_ITEM | OPEN_DOOR | REFLECTING |
+F:GOOD | REGENERATE | DROP_CORPSE |
+F:IM_FIRE | IM_ELEC | IM_COLD | IM_POIS | IM_ACID |
+F:NO_SLEEP | NO_CONF | HAS_LITE
+S:1_IN_5 |
+S:ARROW_4 | TELE_TO | TPORT | S_KIN | HEAL
+D:Sir Galahad the Pure takes after his father Lancelot in his
+D:combat abilities and after his mother Elaine in his calm. He
+D:is the one who finally completed the Quest for the Holy Grail.
+
+N:4204:Sir Gareth
+G:p:g
+I:120:50d20:30:80:15
+W:28:1:1700:1800
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:BLIND:8d6
+B:HIT:BLIND:2d8
+B:HIT:HURT:2d8
+F:UNIQUE | MALE |
+F:MORTAL | BASEANGBAND | 
+F:FORCE_SLEEP | FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT | CAN_SWIM |
+F:SMART | TAKE_ITEM | OPEN_DOOR |
+F:GOOD | REGENERATE | DROP_CORPSE |
+F:IM_FIRE | IM_ELEC | IM_COLD |
+F:NO_SLEEP | NO_CONF | HAS_LITE
+S:1_IN_5 |
+S:ARROW_4 | BO_ELEC | HASTE | TELE_TO | TPORT | S_KIN | HEAL
+D:The protege of Lancelot and the younger brother of Gawain,
+D:Gareth served as a Nexus of the Round Table, and after his
+D:death, Camelot itself soon dissolved.
+
+N:4205:Sir Kay
+G:p:u
+I:117:30d20:30:60:15
+W:22:1:1600:1000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:3d8
+B:HIT:HURT:3d8
+B:HIT:HURT:3d6
+F:UNIQUE | MALE |
+F:FORCE_SLEEP | FORCE_MAXHP | MOVE_BODY |
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT | CAN_SWIM |
+F:SMART | TAKE_ITEM | OPEN_DOOR |
+F:EVIL | REGENERATE | DROP_CORPSE |
+F:IM_FIRE |
+F:NO_SLEEP | NO_CONF | HAS_LITE
+S:1_IN_6 |
+S:BO_FIRE | BLINK | TPORT | S_KIN
+D:The weakest and most petty of the knights, Kay is often bullying
+D:squires and pages, forcing them to do demeaning tasks. Several
+D:of the Knights in their youths suffered Kay.
+
+N:4206:Camelot Knight
+G:p:w
+I:120:70d20:30:80:15
+W:26:1:1700:1400
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:BLIND:6d8
+B:HIT:HURT:2d6
+B:HIT:HURT:2d6
+F:MALE | FORCE_SLEEP | MOVE_BODY |
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | CAN_SWIM |
+F:MORTAL | BASEANGBAND | 
+F:SMART | TAKE_ITEM | OPEN_DOOR |
+F:GOOD | REGENERATE | DROP_CORPSE |
+F:IM_FIRE | IM_ACID |
+F:NO_SLEEP | NO_CONF | HAS_LITE
+S:1_IN_6 |
+S:ARROW_4 | BO_FIRE | TELE_TO | BLINK | TPORT | S_KIN | HEAL
+D:A Knight of the Round Table of King Arthur's Court.
+
+N:4207:Morgana Le Fay
+G:p:r
+I:122:35d20:30:90:15
+W:35:2:1100:2500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:CONFUSE:2d6
+B:HIT:UN_BONUS:1d12
+B:HIT:PARALYZE:1d10
+B:HIT:LOSE_CON:1d8
+F:UNIQUE | FEMALE |
+F:FORCE_SLEEP | FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | DROP_GREAT | CAN_SWIM |
+F:SMART | TAKE_ITEM | OPEN_DOOR | POWERFUL
+F:MORTAL | BASEANGBAND | 
+F:GOOD | EVIL | REGENERATE | DROP_CORPSE |
+F:IM_FIRE | IM_POIS | IM_ELEC | IM_ACID | IM_COLD |
+F:NO_SLEEP | NO_CONF |  
+S:1_IN_3 |
+S:BO_MANA | TPORT | HEAL | HASTE | BA_WATE
+D:The great keeper of Pagan traditions, Morgana Le Fay
+D:is seen as a savior by some, and a witch by many. She
+D:refused to let her lands be invaded by Christianity,
+D:and took to arms against her brother and lover.
+
+N:4208:Mordred
+G:p:r
+I:122:55d20:30:90:15
+W:32:2:1700:1800
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CHARGE:TERRIFY:20d1
+B:HIT:CONFUSE:4d8
+B:HIT:PARALYZE:3d10
+F:UNIQUE | MALE |
+F:FORCE_SLEEP | FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT | CAN_SWIM |
+F:SMART | TAKE_ITEM | OPEN_DOOR | POWERFUL
+F:MORTAL | BASEANGBAND | 
+F:GOOD | EVIL | REGENERATE | DROP_CORPSE |
+F:IM_ELEC | IM_ACID | IM_COLD |
+F:NO_SLEEP | NO_CONF |   
+S:1_IN_6 |
+S:BO_MANA | TPORT | HEAL | HASTE | BA_WATE
+D:A mighty spellsword and the son of Morgana Le Fay,
+D:Mordred is prophesized to unite the lands after
+D:the fall of Camelot.
+
+N:4209:Fearmaster
+G:p:u
+I:120:100d10:20:80:20
+W:29:3:1700:1000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:TERRIFY:4d8
+B:HIT:LOSE_CHR:4d8
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD |
+F:DROP_SKELETON | DROP_CORPSE | 
+F:SMART | OPEN_DOOR | TAKE_ITEM | BASH_DOOR |
+F:MORTAL | BASEANGBAND | 
+F:NO_FEAR | 
+S:1_IN_3 | SCARE
+D:A human, covered in bleached leather and decorated with
+D:bones of foes defeated. The sight of him puts fear
+D:into your heart.
+
+N:4210:Grand Fearlord
+G:p:U
+I:135:50d100:20:120:20
+W:65:3:1700:25000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:TERRIFY:8d10
+B:HIT:TERRIFY:8d10
+B:HIT:LOSE_CHR:8d10
+B:HIT:LOSE_CHR:8d10
+F:ONLY_ITEM | DROP_3D2 | DROP_4D2 | DROP_GOOD |
+F:DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | 
+F:SMART | OPEN_DOOR | TAKE_ITEM | BASH_DOOR |
+F:NO_FEAR | POWERFUL
+S:1_IN_2 | SCARE | S_KIN | TELE_TO
+D:A human, covered in bone armor and decorated with the
+D:shriveled, preserved eyeballs of foes defeated. The
+D:sight of him strikes terror into your soul.
+
+N:4211:The Questing Beast
+G:q:v
+I:125:40d25:77:90:1
+W:35:7:4000:2500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:KICK:CONFUSE:4d4
+B:KICK:TERRIFY:6d6
+B:DROOL:POISON:5d5
+F:UNIQUE | FEMALE | GOOD | EVIL | NONLIVING | 
+F:FORCE_MAXHP | OPEN_DOOR | BASH_DOOR |
+F:ONLY_ITEM | DROP_GOOD | DROP_GREAT | DROP_2D2 |
+F:SMART | REGENERATE | NO_CONF | NO_SLEEP |
+F:BASEANGBAND | 
+F:IM_ACID | IM_ELEC | IM_FIRE | IM_POIS | IM_COLD | 
+S:1_IN_3 |
+S:BLINK | HEAL | SHRIEK | SCARE | CONF | BLIND |
+S:MIND_BLAST | BR_CHAO | BR_NEXU
+D:Beast Glatisant, the Barking Beast, is a strange creature
+D:indeed. It has the head of a snake, the body of a leopard,
+D:the haunches of a lion, and the feet of a deer. A great
+D:noise rumbles from its belly, a barking like "thirty couple
+D:hounds questing."
+#Description help from wikipedia
+
+N:4212:Rock giant
+G:P:s
+I:115:10d100:30:100:15
+W:40:3:5000:5000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:SHATTER:9d9
+B:HIT:SHATTER:9d9
+B:HIT:SHATTER:9d9
+B:HIT:SHATTER:9d9
+F:FORCE_SLEEP | FORCE_MAXHP | HURT_ROCK |
+F:ONLY_GOLD | DROP_3D2 | MOVE_BODY | KILL_WALL |
+F:MORTAL | BASEANGBAND | 
+F:SMART | KILL_ITEM | BASH_DOOR |
+F:EVIL | GIANT | MALE
+F:DROP_CORPSE | 
+S:1_IN_6
+S:ARROW_4
+D:A minor rock giant, a being made of living stone.
+D:It's boring straight for you!
+
+N:4213:Ice giant
+G:P:w
+I:125:35d100:50:120:20
+W:50:3:8000:20000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:COLD:4d10
+B:HIT:COLD:4d10
+B:HIT:COLD:4d10
+B:HIT:INSANITY:5d10
+F:ONLY_ITEM | DROP_4D2 | DROP_GOOD
+F:OPEN_DOOR | BASH_DOOR |
+F:EVIL | GIANT | MALE | AURA_COLD
+F:MORTAL | BASEANGBAND | 
+F:IM_COLD | NO_CONF | NO_SLEEP | SUSCEP_FIRE
+F:DROP_SKELETON | DROP_CORPSE | 
+S:1_IN_3 |
+S:BR_COLD | BO_ICEE | HEAL | TELE_TO | BLINK | ARROW_4
+D:An ancient giant nearly twenty feet tall. The air around
+D:you suddenly grows chill.
+
+N:4214:Elder fire giant
+G:P:r
+I:125:35d100:50:120:20
+W:50:3:8000:20000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:FIRE:5d12
+B:HIT:FIRE:5d12
+B:HIT:FIRE:5d12
+B:HIT:INSANITY:5d12
+F:ONLY_ITEM | DROP_4D2 | DROP_GOOD | FORCE_MAXHP
+F:OPEN_DOOR | BASH_DOOR | WILD_VOLCANO |
+F:EVIL | GIANT | MALE | AURA_FIRE |
+F:MORTAL | BASEANGBAND | 
+F:IM_FIRE | SUSCEP_COLD | NO_CONF | NO_SLEEP
+F:DROP_SKELETON | DROP_CORPSE | 
+S:1_IN_3 |
+S:BO_PLAS | BR_PLAS | BR_FIRE | ARROW_4 | HEAL | BLINK | TELE_TO
+D:An ancient giant nearly twenty feet tall. The air around
+D:you suddenly grows hot.
+
+N:4215:Typhoeus, the Storm Giant
+G:P:b
+I:130:93d100:50:170:20
+W:85:2:50000:50000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:ELEC:12d12
+B:HIT:INSANITY:12d12
+B:HIT:UN_BONUS:12d12
+B:HIT:INSANITY:12d12
+F:UNIQUE | 
+F:FORCE_SLEEP | FORCE_MAXHP | RES_TELE | RES_NETH | MALE | SMART
+F:ONLY_ITEM | DROP_2D2 | DROP_4D2 | DROP_GOOD | EVIL | AURA_ELEC |
+F:MORTAL | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY | TAKE_ITEM | CAN_SPEAK |
+F:IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP | GIANT | REGENERATE
+S:1_IN_2 |
+S:BR_ELEC | BR_GRAV | ARROW_4
+S:TELE_TO | TELE_AWAY | TPORT
+S:S_KIN | S_HI_UNDEAD
+S:HEAL | HASTE
+D:Typhoeus is a monstrous, immortal storm giant, huge beyond
+D:comprehension. According to legend, he was defeated by Zeus
+D:and imprisoned in the Pit of Tartaros. I guess he managed to escape!
+
+N:4216:Elder storm giant
+G:P:b
+I:125:35d100:50:120:20
+W:56:3:9000:25000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:ELEC:7d15
+B:HIT:ELEC:7d15
+B:HIT:ELEC:7d15
+B:HIT:INSANITY:7d15
+F:FORCE_SLEEP | FORCE_MAXHP | ONLY_ITEM | DROP_4D2 | DROP_GOOD
+F:MORTAL | BASEANGBAND | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | AURA_ELEC | CAN_FLY
+F:EVIL | GIANT | IM_COLD | IM_ELEC | MALE | WILD_MOUNTAIN
+F:DROP_SKELETON | DROP_CORPSE | 
+S:1_IN_3 |
+S:BLINK | TELE_TO | BR_ELEC | BR_GRAV | ARROW_4 | HEAL
+D:It is a thirty foot tall giant wreathed in lighting. Winds howl about its
+D:massive frame.
+
+#From Posband: Empty Body for The Possessor
+N:4217:Soul
+G:G:B
+I:110:1d1:4:1:40
+W:50:0:600:0
+E:1:1:1:2:1:1
+O:20:20:20:20
+F:PASS_WALL | INVISIBLE | COLD_BLOOD | POSSESSOR |
+F:BASEANGBAND | 
+D:A naked spirit of a great sage, who had left his own body forever
+D: to seek and dominate the bodies of others. It looks like a small
+D: cloud of glowing white mist. In this form it is harmless, but
+D: upon possessing the dead body of another creature it will be able
+D: to use all its powers.
+
+N:4218:Marilith
+G:U:y
+I:125:100d7:20:50:30
+W:40:2:1800:1000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CHARGE:HURT:6d5
+B:CHARGE:HURT:6d5
+B:CHARGE:HURT:6d5
+B:CHARGE:HURT:6d5
+F:NONLIVING | REGENERATE | FEMALE | EVIL | DEMON |
+F:FORCE_MAXHP | OPEN_DOOR |
+F:BASEANGBAND | 
+F:DROP_60 | ONLY_ITEM |
+F:IM_POIS | IM_FIRE | 
+D:This female demon has six arms.
+
+N:4219:The Multi-hued Centipede
+G:c:v
+I:130:10d100:30:100:10
+W:30:2:500:750
+E:0:0:0:0:1:0
+O:20:20:20:20
+B:BITE:HURT:1d10
+B:STING:HURT:1d15
+B:CRAWL:HURT:1d10
+B:CRAWL:HURT:1d10
+F:RAND_25 | WEIRD_MIND | OPEN_DOOR | BASH_DOOR |
+F:ATTR_MULTI | FORCE_SLEEP | FORCE_MAXHP |
+F:UNIQUE | ESCORT | ESCORTS |
+F:ANIMAL | NO_CONF | NO_SLEEP
+F:MORTAL | BASEANGBAND | 
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD |
+F:DROP_CORPSE | 
+D:Oh my god, it's changing colors! Run!!
+
+N:4220:Portuguese man-o-war
+G:j:v
+I:110:10d10:20:30:75
+W:9:100:1200:25
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:TOUCH:PARALYZE:1d7
+B:TOUCH:PARALYZE:1d7
+F:ANIMAL | IM_POIS | RES_WATE | WILD_SHORE |
+F:MORTAL | BASEANGBAND | WILD_OCEAN | WILD_SWAMP | 
+D:A strange water creature, whose touch can be deadly.
+
+N:4221:Nixie
+G:h:B
+I:110:16d10:20:45:50
+W:14:50:1100:60
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:6d3
+B:HIT:HURT:6d3
+F:WILD_SHORE | RES_WATE |
+F:MALE
+F:MORTAL | BASEANGBAND | 
+D:A race of fair yet belligerent sea elves.
+
+N:4222:Small kraken
+G:l:g
+I:110:20d10:60:50:80
+W:25:50:3000:500
+E:3:0:3:0:1:0
+O:20:20:20:20
+B:ENGULF:HURT:5d6
+B:ENGULF:POISON:5d6
+F:SMART | WEIRD_MIND | IM_POIS | RES_WATE | ANIMAL | NO_CONF
+F:NO_SLEEP
+F:MORTAL | BASEANGBAND | 
+F:DROP_CORPSE | 
+S:1_IN_4 |
+S:DARKNESS | BO_ACID | HOLD
+D:A kraken with a tough, scaly hide.
+
+N:4223:Aquatic naga
+G:n:w
+I:110:30d10:10:50:10
+W:26:50:1200:60
+E:0:0:0:0:1:0
+O:20:20:20:20
+B:CRUSH:HURT:2d8
+B:CRUSH:HURT:2d8
+B:BITE:POISON:2d8
+B:BITE:HURT:1d8
+F:FEMALE | RES_WATE |
+F:ONLY_ITEM | DROP_90 | DROP_2D2 |
+F:MORTAL | BASEANGBAND | 
+F:EVIL | NO_CONF | NO_SLEEP | SMART
+S:1_IN_7 |
+S:DARKNESS | CAUSE_4 | BO_ICEE
+D:A naga adapted to underwater life. She has a fish-like tail and a pair
+D:of gills.
+
+N:4224:Narwhal
+G:l:w
+I:130:25d100:50:100:70
+W:40:1000:10000:6000
+E:0:0:0:0:1:0
+O:20:20:20:20
+B:BUTT:HURT:8d5
+B:BUTT:HURT:8d5
+B:BUTT:COLD:10d8
+F:UNIQUE | ANIMAL |
+F:MORTAL | BASEANGBAND | 
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD |
+F:IM_COLD | RES_WATE |
+F:IM_POIS | NO_CONF | NO_SLEEP | NO_STUN |
+F:DROP_CORPSE | 
+D:This is the whale of the tradition which gets across to the Inuit
+D:who lives in the world of winter. It is said that the mystical horn
+D:of this whale cures all illnesses.
+
+N:4225:Quantum dot
+G:,:v
+I:110:4d2:20:100:0
+W:35:5:50:50
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:SPORE:LOSE_ALL:2d4
+B:SPORE:UN_BONUS:2d4
+B:SPORE:CONFUSE:2d4
+B:SPORE:TERRIFY:2d4
+F:NEVER_MOVE |
+F:STUPID | WEIRD_MIND | ATTR_MULTI | ATTR_ANY | 
+F:ELDRITCH_HORROR | FRIENDS |
+F:BASEANGBAND | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | DROP_CORPSE
+F:NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN
+S:1_IN_2 |
+S:BLINK | MIND_BLAST
+D:It is there and it is not.
+
+N:4226:Unstable worm mass
+G:w:o
+I:100:3d10:10:10:5
+W:15:4:100:7
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:EXPLODE:FIRE:5d5
+F:RAND_50 | RAND_25 | CAN_SWIM |
+F:STUPID | WEIRD_MIND | BASH_DOOR |
+F:MORTAL | BASEANGBAND | 
+F:ANIMAL | HURT_LITE | NO_FEAR
+D:A seething mass of thick, glowing worms.
+
+N:4227:Noxious fume
+G:#:y
+I:90:3d3:20:37:30
+W:20:4:500:15
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:TOUCH:POISON:3d3
+F:RAND_25 | RAND_50 | INVISIBLE | 
+F:CAN_FLY | CAN_SWIM | PASS_WALL | KILL_BODY |
+F:BASEANGBAND | 
+F:IM_FIRE | IM_COLD | IM_ACID | IM_ELEC | IM_POIS |
+F:NONLIVING | EMPTY_MIND | COLD_BLOOD |
+F:WILD_VOLCANO | WILD_SWAMP | WILD_SHORE | 
+F:NO_FEAR | NO_CONF | NO_SLEEP | NO_STUN |
+D:It is a swirling cloud of yellowish gas.
+
+N:4228:Granite wall
+G:#:w
+I:100:15d15:15:120:10
+W:30:2:7000:350
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:TOUCH:ACID:8d8
+B:TOUCH:PARALYZE:3d3
+F:NEVER_MOVE | ANIMAL | HURT_ROCK |
+F:NO_FEAR | NO_SLEEP | NO_CONF | NO_STUN | EMPTY_MIND | COLD_BLOOD |
+F:BASEANGBAND | 
+F:IM_COLD | IM_FIRE | IM_ELEC | IM_POIS | NO_CUT
+D:Just a normal wall, boring gray rock. But wait! It seems to be growing...
+
+N:4229:Magma intrusion
+G:%:D
+I:100:15d25:15:120:10
+W:25:2:6000:100
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:TOUCH:FIRE:5d5
+B:TOUCH:PARALYZE:3d3
+F:NEVER_MOVE | EMPTY_MIND |
+F:ANIMAL | HURT_ROCK | NO_FEAR | NO_CONF | NO_SLEEP | NO_STUN |
+F:BASEANGBAND | 
+F:IM_ACID | IM_ELEC | IM_POIS | IM_FIRE | NO_CUT
+D:It's just a block of dark rock. But wait! It seems to be growing...
+
+N:4230:Quartz vein
+G:%:w
+I:100:15d11:15:30:10
+W:18:2:6000:40
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:TOUCH:ELEC:3d3
+B:TOUCH:PARALYZE:3d3
+F:NEVER_MOVE | EMPTY_MIND
+F:BASEANGBAND | 
+F:ANIMAL | COLD_BLOOD | NO_FEAR | NO_SLEEP | NO_CONF | NO_STUN
+F:HURT_ROCK | IM_FIRE | IM_ACID | IM_POIS | IM_COLD | NO_CUT
+D:Look! A nice vein of rock to dig in for gold! Wait a minute...
+
+# Description in English by Nick Keulmann
+N:4231:Red puyo
+G:j:r
+I:120:3d1:15:20:50
+W:25:8:500:50
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:EXPLODE:FIRE:10d2
+F:IM_ACID | IM_COLD | IM_ELEC | IM_POIS |
+F:MORTAL | BASEANGBAND | 
+F:NEVER_MOVE | 
+F:EMPTY_MIND | NO_FEAR | NO_CONF | NO_SLEEP
+D:A mysterious red jelly thing. It looks ready to explode.
+
+N:4232:Blue puyo
+G:j:b
+I:120:3d1:15:20:50
+W:25:8:500:50
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:EXPLODE:COLD:10d2
+F:IM_ACID | IM_FIRE | IM_ELEC | IM_POIS |
+F:NEVER_MOVE | 
+F:MORTAL | BASEANGBAND | 
+F:EMPTY_MIND | NO_FEAR | NO_CONF | NO_SLEEP
+D:A mysterious blue jelly thing. It looks ready to explode.
+
+N:4233:Yellow puyo
+G:j:y
+I:120:3d1:15:20:50
+W:25:8:500:50
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:EXPLODE:ELEC:10d2
+F:IM_ACID | IM_FIRE | IM_COLD | IM_POIS |
+F:NEVER_MOVE | 
+F:MORTAL | BASEANGBAND | 
+F:EMPTY_MIND | NO_FEAR | NO_CONF | NO_SLEEP
+D:A mysterious yellow jelly thing. It looks ready to explode.
+
+N:4234:Green puyo
+G:j:g
+I:120:3d1:15:20:50
+W:25:8:500:50
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:EXPLODE:ACID:10d2
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
+F:NEVER_MOVE | 
+F:MORTAL | BASEANGBAND | 
+F:EMPTY_MIND | NO_FEAR | NO_CONF | NO_SLEEP
+D:A mysterious green jelly thing. It looks ready to explode.
+
+N:4235:Slime Mold
+G:,:g
+I:105:2d8:1:0:10
+W:12:4:150:10
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:TOUCH:POISON:2d5
+B:TOUCH:POISON:2d5
+F:SMART | COLD_BLOOD |
+F:WEIRD_MIND | REGENERATE |
+F:MORTAL | BASEANGBAND | 
+F:MOVE_BODY | ANIMAL | GOOD | NONLIVING |
+F:RES_TELE | CAN_SWIM | WILD_SWAMP | WILD_SHORE | 
+S:1_IN_10 |
+S:SHRIEK | MIND_BLAST
+D:It`s a slime colony.
+D:If you so much as DARE to touch it.
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness

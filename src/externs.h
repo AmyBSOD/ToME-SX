@@ -1009,7 +1009,7 @@ extern void init_angband(void);
 extern errr init_buildings(void);
 #ifdef ALLOW_TEMPLATES
 extern s16b error_idx;
-extern s16b error_line;
+extern u32b error_line;
 extern u32b fake_name_size;
 extern u32b fake_text_size;
 #endif /* ALLOW_TEMPLATES */
