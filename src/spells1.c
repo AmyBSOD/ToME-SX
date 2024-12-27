@@ -5291,7 +5291,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 	case GF_PLASMA:
 		{
 			if (seen) obvious = TRUE;
-			if (r_ptr->flags3 & (RF3_RES_PLAS))
+			if ((r_ptr->flags3 & (RF3_RES_PLAS)) || (r_ptr->flags4 & (RF4_BR_PLAS) ) )
 			{
 				note = " resists.";
 				dam *= 3;
@@ -5312,7 +5312,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				dam = 0;
 				if (seen) r_ptr->r_flags3 |= (RF3_UNDEAD);
 			}
-			else if (r_ptr->flags3 & (RF3_RES_NETH))
+			else if ((r_ptr->flags3 & (RF3_RES_NETH)) || (r_ptr->flags4 & (RF4_BR_NETH) ) )
 			{
 				note = " resists.";
 				dam *= 3;
@@ -5450,13 +5450,14 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			do_poly = TRUE;
 			do_conf = (5 + randint(11) + r) / (r + 1);
-			if ((r_ptr->flags4 & (RF4_BR_CHAO)) ||
+			if ((r_ptr->flags4 & (RF4_BR_CHAO)) || (r_ptr->flags7 & (RF7_RES_CHAO)) ||
 			                ((r_ptr->flags3 & (RF3_DEMON)) && (randint(3) == 1)))
 			{
 				note = " resists.";
 				dam *= 3;
 				dam /= (randint(6) + 6);
 				do_poly = FALSE;
+				if (seen && (r_ptr->flags7 & (RF7_RES_CHAO)) ) r_ptr->r_flags7 |= (RF7_RES_CHAO);
 			}
 			break;
 		}
@@ -5466,12 +5467,13 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 		{
 			if (seen) obvious = TRUE;
 			if (magik(33)) do_cut = (10 + randint(15) + r) / (r + 1);
-			if (r_ptr->flags4 & (RF4_BR_SHAR))
+			if ((r_ptr->flags4 & (RF4_BR_SHAR)) || (r_ptr->flags7 & (RF7_RES_SHAR)) )
 			{
 				note = " resists.";
 				dam *= 3;
 				dam /= (randint(6) + 6);
 				do_cut = 0;
+				if (seen && (r_ptr->flags7 & (RF7_RES_SHAR)) ) r_ptr->r_flags7 |= (RF7_RES_SHAR);
 			}
 			break;
 		}
@@ -5496,18 +5498,19 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 	case GF_SOUND:
 		{
 			if (seen) obvious = TRUE;
-			if (who <= 0)
+			if ((who <= 0) && !(r_ptr->flags4 & (RF4_BR_SOUN)) && !(r_ptr->flags7 & (RF7_RES_SOUN)) )
 			{
 				if (rand_int(100 - p_ptr->lev) < 50)
 					do_stun = (2 + randint(10) + r) / (r + 1);
 			}
 			else
 				do_stun = (2 + randint(10) + r) / (r + 1);
-			if (r_ptr->flags4 & (RF4_BR_SOUN))
+			if ((r_ptr->flags4 & (RF4_BR_SOUN)) || (r_ptr->flags7 & (RF7_RES_SOUN)) )
 			{
 				note = " resists.";
 				dam *= 2;
 				dam /= (randint(6) + 6);
+				if (seen && (r_ptr->flags7 & (RF7_RES_SOUN)) ) r_ptr->r_flags7 |= (RF7_RES_SOUN);
 			}
 			break;
 		}
@@ -5535,7 +5538,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 	case GF_DISENCHANT:
 		{
 			if (seen) obvious = TRUE;
-			if (r_ptr->flags3 & (RF3_RES_DISE))
+			if ((r_ptr->flags3 & (RF3_RES_DISE)) || (r_ptr->flags4 & (RF4_BR_DISE)) )
 			{
 				note = " resists.";
 				dam *= 3;
@@ -5549,7 +5552,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 	case GF_NEXUS:
 		{
 			if (seen) obvious = TRUE;
-			if (r_ptr->flags3 & (RF3_RES_NEXU))
+			if ((r_ptr->flags3 & (RF3_RES_NEXU)) || (r_ptr->flags4 & (RF4_BR_NEXU)) )
 			{
 				note = " resists.";
 				dam *= 3;
@@ -5573,7 +5576,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			 *
 			 * Amy edit: 1 in 4 chance for the monster to not be pushed, mostly to balance force beam spells
 			 */
-			if ((who == 0) && magik(75))
+			if ((who == 0) && !(r_ptr->flags7 & (RF7_RES_WALL)) && !(r_ptr->flags4 & (RF4_BR_WALL)) && magik(75))
 			{
 				a = 0;
 				b = 0;
@@ -5647,13 +5650,14 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			}
 
 			/* --hack-- Only stun if a monster fired it */
-			else if (who != 0) do_stun = (randint(15) + r) / (r + 1);
+			else if ((who != 0) && !(r_ptr->flags7 & (RF7_RES_WALL)) && !(r_ptr->flags4 & (RF4_BR_WALL)) ) do_stun = (randint(15) + r) / (r + 1);
 
-			if (r_ptr->flags4 & (RF4_BR_WALL))
+			if ((r_ptr->flags4 & (RF4_BR_WALL)) || (r_ptr->flags7 & (RF7_RES_WALL)) )
 			{
 				note = " resists.";
 				dam *= 3;
 				dam /= (randint(6) + 6);
+				if (seen && (r_ptr->flags7 & (RF7_RES_WALL)) ) r_ptr->r_flags7 |= (RF7_RES_WALL);
 			}
 			break;
 		}
@@ -5662,11 +5666,12 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 	case GF_INERTIA:
 		{
 			if (seen) obvious = TRUE;
-			if (r_ptr->flags4 & (RF4_BR_INER))
+			if ((r_ptr->flags4 & (RF4_BR_INER)) || (r_ptr->flags7 & (RF7_RES_INER)) )
 			{
 				note = " resists.";
 				dam *= 3;
 				dam /= (randint(6) + 6);
+				if (seen && (r_ptr->flags7 & (RF7_RES_INER)) ) r_ptr->r_flags7 |= (RF7_RES_INER);
 			}
 			else
 			{
@@ -5693,11 +5698,12 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 	case GF_TIME:
 		{
 			if (seen) obvious = TRUE;
-			if (r_ptr->flags4 & (RF4_BR_TIME))
+			if ((r_ptr->flags4 & (RF4_BR_TIME)) || (r_ptr->flags7 & (RF7_RES_TIME)) )
 			{
 				note = " resists.";
 				dam *= 3;
 				dam /= (randint(6) + 6);
+				if (seen && (r_ptr->flags7 & (RF7_RES_TIME)) ) r_ptr->r_flags7 |= (RF7_RES_TIME);
 			}
 			break;
 		}
@@ -5728,12 +5734,13 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (!resist_tele) do_dist = 10;
 			else do_dist = 0;
 
-			if (r_ptr->flags4 & (RF4_BR_GRAV))
+			if ((r_ptr->flags4 & (RF4_BR_GRAV)) || (r_ptr->flags7 & (RF7_RES_GRAV)) )
 			{
 				note = " resists.";
 				dam *= 3;
 				dam /= (randint(6) + 6);
 				do_dist = 0;
+				if (seen && (r_ptr->flags7 & (RF7_RES_GRAV)) ) r_ptr->r_flags7 |= (RF7_RES_GRAV);
 			}
 			else
 			{
@@ -5792,6 +5799,13 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				note = " loses some skin!";
 				note_dies = " evaporates!";
 				dam *= 2;
+			}
+
+			if (r_ptr->flags4 & (RF4_BR_DISI))
+			{
+				note = " resists.";
+				dam >>= 3;
+				break;
 			}
 
 			if (r_ptr->flags1 & RF1_UNIQUE)
@@ -6799,11 +6813,12 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 	case GF_LITE:
 		{
 			if (seen) obvious = TRUE;
-			if (r_ptr->flags4 & (RF4_BR_LITE))
+			if ((r_ptr->flags4 & (RF4_BR_LITE)) || (r_ptr->flags7 & (RF7_RES_LITE)) )
 			{
 				note = " resists.";
 				dam *= 2;
 				dam /= (randint(6) + 6);
+				if (seen && (r_ptr->flags7 & (RF7_RES_LITE)) ) r_ptr->r_flags7 |= (RF7_RES_LITE);
 			}
 			else if (r_ptr->flags3 & (RF3_HURT_LITE))
 			{
@@ -6822,13 +6837,14 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 
 			/* Likes darkness... */
-			if ((r_ptr->flags4 & (RF4_BR_DARK)) ||
+			if ((r_ptr->flags4 & (RF4_BR_DARK)) || (r_ptr->flags7 & (RF7_RES_DARK)) ||
 			                (r_ptr->flags3 & RF3_ORC) ||
 			                (r_ptr->flags3 & RF3_HURT_LITE))
 			{
 				note = " resists.";
 				dam *= 2;
 				dam /= (randint(6) + 6);
+				if (seen && (r_ptr->flags7 & (RF7_RES_DARK)) ) r_ptr->r_flags7 |= (RF7_RES_DARK);
 			}
 			break;
 		}

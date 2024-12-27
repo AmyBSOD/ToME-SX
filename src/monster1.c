@@ -1121,12 +1121,81 @@ static void roff_aux(int r_idx, int ego, int remem)
 
 	/* Collect resistances */
 	vn = 0;
-	if (flags3 & (RF3_RES_NETH)) vp[vn++] = "nether";
-	if (flags3 & (RF3_RES_WATE)) vp[vn++] = "water";
-	if (flags3 & (RF3_RES_PLAS)) vp[vn++] = "plasma";
-	if (flags3 & (RF3_RES_NEXU)) vp[vn++] = "nexus";
-	if (flags3 & (RF3_RES_DISE)) vp[vn++] = "disenchantment";
-	if (flags3 & (RF3_RES_TELE)) vp[vn++] = "teleportation";
+	if (flags3 & (RF3_RES_NETH))
+	{
+		vp[vn++] = "nether";
+		color[vn - 1] = TERM_L_GREEN;
+	}
+	if (flags3 & (RF3_RES_WATE))
+	{
+		vp[vn++] = "water";
+		color[vn - 1] = TERM_L_BLUE;
+	}
+	if (flags3 & (RF3_RES_PLAS))
+	{
+		vp[vn++] = "plasma";
+		color[vn - 1] = TERM_ORANGE;
+	}
+	if (flags3 & (RF3_RES_NEXU))
+	{
+		vp[vn++] = "nexus";
+		color[vn - 1] = TERM_VIOLET;
+	}
+	if (flags3 & (RF3_RES_DISE))
+	{
+		vp[vn++] = "disenchantment";
+		color[vn - 1] = TERM_L_DARK;
+	}
+	if (flags3 & (RF3_RES_TELE))
+	{
+		vp[vn++] = "teleportation";
+		color[vn - 1] = TERM_SLATE;
+	}
+	if (flags7 & (RF7_RES_LITE))
+	{
+		vp[vn++] = "light";
+		color[vn - 1] = TERM_YELLOW;
+	}
+	if (flags7 & (RF7_RES_TIME))
+	{
+		vp[vn++] = "time";
+		color[vn - 1] = TERM_L_BLUE;
+	}
+	if (flags7 & (RF7_RES_SOUN))
+	{
+		vp[vn++] = "sound";
+		color[vn - 1] = TERM_YELLOW;
+	}
+	if (flags7 & (RF7_RES_CHAO))
+	{
+		vp[vn++] = "chaos";
+		color[vn - 1] = TERM_VIOLET;
+	}
+	if (flags7 & (RF7_RES_INER))
+	{
+		vp[vn++] = "inertia";
+		color[vn - 1] = TERM_L_UMBER;
+	}
+	if (flags7 & (RF7_RES_WALL))
+	{
+		vp[vn++] = "force";
+		color[vn - 1] = TERM_WHITE;
+	}
+	if (flags7 & (RF7_RES_GRAV))
+	{
+		vp[vn++] = "gravity";
+		color[vn - 1] = TERM_SLATE;
+	}
+	if (flags7 & (RF7_RES_DARK))
+	{
+		vp[vn++] = "darkness";
+		color[vn - 1] = TERM_L_DARK;
+	}
+	if (flags7 & (RF7_RES_SHAR))
+	{
+		vp[vn++] = "shards";
+		color[vn - 1] = TERM_L_UMBER;
+	}
 
 	/* Describe resistances */
 	if (vn)
@@ -1143,7 +1212,7 @@ static void roff_aux(int r_idx, int ego, int remem)
 			else text_out(" and ");
 
 			/* Dump */
-			text_out_c(TERM_L_BLUE, vp[n]);
+			text_out_c(color[n], vp[n]);
 		}
 
 		/* End */

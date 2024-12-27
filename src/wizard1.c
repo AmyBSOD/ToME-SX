@@ -1506,7 +1506,7 @@ static void spoil_mon_info(cptr fname)
 	bool breath, magic, sin;
 	cptr p, q;
 	cptr vp[64];
-	u32b flags1, flags2, flags3, flags4, flags5, flags6, flags9;
+	u32b flags1, flags2, flags3, flags4, flags5, flags6, flags7, flags8, flags9;
 
 
 	/* Build the filename */
@@ -1546,6 +1546,8 @@ static void spoil_mon_info(cptr fname)
 		flags4 = r_ptr->flags4;
 		flags5 = r_ptr->flags5;
 		flags6 = r_ptr->flags6;
+		flags7 = r_ptr->flags7;
+		flags8 = r_ptr->flags8;
 		flags9 = r_ptr->flags9;
 		breath = FALSE;
 		magic = FALSE;
@@ -1985,6 +1987,15 @@ static void spoil_mon_info(cptr fname)
 		if (flags3 & (RF3_RES_NEXU)) vp[vn++] = "nexus";
 		if (flags3 & (RF3_RES_DISE)) vp[vn++] = "disenchantment";
 		if (flags3 & (RF3_RES_TELE)) vp[vn++] = "teleportation";
+		if (flags7 & (RF7_RES_LITE)) vp[vn++] = "light";
+		if (flags7 & (RF7_RES_TIME)) vp[vn++] = "time";
+		if (flags7 & (RF7_RES_SOUN)) vp[vn++] = "sound";
+		if (flags7 & (RF7_RES_CHAO)) vp[vn++] = "chaos";
+		if (flags7 & (RF7_RES_INER)) vp[vn++] = "inertia";
+		if (flags7 & (RF7_RES_WALL)) vp[vn++] = "force";
+		if (flags7 & (RF7_RES_GRAV)) vp[vn++] = "gravity";
+		if (flags7 & (RF7_RES_DARK)) vp[vn++] = "darkness";
+		if (flags7 & (RF7_RES_SHAR)) vp[vn++] = "shards";
 
 		if (vn)
 		{

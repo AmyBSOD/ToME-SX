@@ -3530,6 +3530,15 @@
 #define RF7_IM_MELEE            0x00100000  /* IM melee */
 #define RF7_REVBOSS             0x00200000  /* Boss monster doesn't die while Morgy is alive */
 #define RF7_AMBERITE            0x00400000  /* Monster gives the Curse of Amber */
+#define RF7_RES_TIME            0x00800000  /* Monster resists time */
+#define RF7_RES_LITE            0x01000000  /* Monster resists light */
+#define RF7_RES_SOUN            0x02000000  /* Monster resists sound */
+#define RF7_RES_CHAO            0x04000000  /* Monster resists chaos */
+#define RF7_RES_INER            0x08000000  /* Monster resists inertia */
+#define RF7_RES_WALL            0x10000000  /* Monster resists force */
+#define RF7_RES_GRAV            0x20000000  /* Monster resists gravity */
+#define RF7_RES_DARK            0x40000000  /* Monster resists dark */
+#define RF7_RES_SHAR            0x80000000  /* Monster resists shards */
 
 
 /*

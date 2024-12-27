@@ -2331,6 +2331,12 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
 		if (r_ptr->flags3 & RF3_NO_SLEEP) (*f2) |= TR2_FREE_ACT;
 		if (r_ptr->flags3 & RF3_NO_CONF) (*f2) |= TR2_RES_CONF;
 		if (r_ptr->flags7 & RF7_CAN_FLY) (*f3) |= TR3_FEATHER;
+		if (r_ptr->flags7 & RF7_RES_LITE) (*f2) |= TR2_RES_LITE;
+		if (r_ptr->flags7 & RF7_RES_SOUN) (*f2) |= TR2_RES_SOUND;
+		if (r_ptr->flags7 & RF7_RES_CHAO) (*f2) |= TR2_RES_CHAOS;
+		if (r_ptr->flags7 & RF7_RES_INER) (*f5) |= TR5_RES_INERTIA;
+		if (r_ptr->flags7 & RF7_RES_DARK) (*f2) |= TR2_RES_DARK;
+		if (r_ptr->flags7 & RF7_RES_SHAR) (*f2) |= TR2_RES_SHARDS;
 	}
 
 	(*f1) |= p_ptr->xtra_f1;

@@ -2343,6 +2343,12 @@ void calc_body_bonus()
 	if (r_ptr->flags3 & RF3_NO_CONF) p_ptr->resist_conf = TRUE;
 	if (r_ptr->flags7 & RF7_CAN_FLY) p_ptr->ffall = TRUE;
 	if (r_ptr->flags7 & RF7_AQUATIC) p_ptr->water_breath = TRUE;
+	if (r_ptr->flags7 & RF7_RES_LITE) p_ptr->resist_lite = TRUE;
+	if (r_ptr->flags7 & RF7_RES_SOUN) p_ptr->resist_sound = TRUE;
+	if (r_ptr->flags7 & RF7_RES_CHAO) p_ptr->resist_chaos = TRUE;
+	if (r_ptr->flags7 & RF7_RES_INER) p_ptr->resist_inertia = TRUE;
+	if (r_ptr->flags7 & RF7_RES_DARK) p_ptr->resist_dark = TRUE;
+	if (r_ptr->flags7 & RF7_RES_SHAR) p_ptr->resist_shard = TRUE;
 }
 
 
