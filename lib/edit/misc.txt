@@ -28,7 +28,7 @@ M:R:4237
 M:r:50
 
 # Maximum number of items in k_info.txt
-M:K:929
+M:K:936
 
 # Maximum number of vaults in v_info.txt
 M:V:148
@@ -46,7 +46,7 @@ M:A:486
 M:s:10
 
 # Maximum number of ego-items in e_info.txt
-M:E:372
+M:E:377
 
 # Maximum number of dungeon types in d_info.txt
 M:D:61

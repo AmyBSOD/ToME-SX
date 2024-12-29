@@ -3072,6 +3072,20 @@ int get_shooter_mult(object_type *o_ptr)
 			break;
 		}
 
+	case SV_POWER_SLING:
+		{
+			/* Power Sling and ammo */
+			tmul = 3;
+			break;
+		}
+
+	case SV_MASTER_SLING:
+		{
+			/* Master Sling and ammo */
+			tmul = 4;
+			break;
+		}
+
 	case SV_SHORT_BOW:
 		{
 			/* Short Bow and Arrow */
@@ -3086,17 +3100,45 @@ int get_shooter_mult(object_type *o_ptr)
 			break;
 		}
 
-		/* Light Crossbow and Bolt */
+	case SV_BLADE_BOW:
+		{
+			/* Blade Bow and Arrow */
+			tmul = 4;
+			break;
+		}
+
+	case SV_HYDRA_BOW:
+		{
+			/* Hydra Bow and Arrow */
+			tmul = 5;
+			break;
+		}
+
 	case SV_LIGHT_XBOW:
 		{
+			/* Light Crossbow and Bolt */
 			tmul = 3;
 			break;
 		}
 
-		/* Heavy Crossbow and Bolt */
 	case SV_HEAVY_XBOW:
 		{
+			/* Heavy Crossbow and Bolt */
 			tmul = 4;
+			break;
+		}
+
+	case SV_ARBALEST:
+		{
+			/* Arbalest and Bolt */
+			tmul = 5;
+			break;
+		}
+
+	case SV_SIEGE_XBOW:
+		{
+			/* Siege Crossbow and Bolt */
+			tmul = 6;
 			break;
 		}
 	}

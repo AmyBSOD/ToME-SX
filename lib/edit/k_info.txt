@@ -7494,6 +7494,67 @@ W:30:0:2:100
 A:30/20
 P:0:1d1:0:0:0
 
+N:929:& Power Sling~
+G:}:u
+I:19:3:0
+W:40:0:10:100
+A:40/2
+F:SHOW_MODS
+D:The more powerful version of the basic sling. It can fire pebbles or
+D:shots with greater power. You can 'f'ire with it after you 'w'ield it.
+
+N:930:& Master Sling~
+G:}:u
+I:19:4:0
+W:80:0:20:1000
+A:80/5
+F:SHOW_MODS
+D:Super powerful sling that launches pebbles or shots with lots of
+D:power to kill the enemy. You can 'f'ire with it after you 'w'ield it.
+
+N:931:& Blade Bow~
+G:}:U
+I:19:14:0
+W:45:0:150:2000
+A:45/2
+F:SHOW_MODS
+D:Very powerful bow that deals a lot of damage when an arrow is fired from
+D:it. You can 'f'ire it after you 'w'ield it.
+
+N:932:& Hydra Bow~
+G:}:U
+I:19:15:0
+W:90:0:500:9000
+A:90/5
+F:SHOW_MODS
+D:This legendary bow deals incredible amounts of damage.
+D:You can 'f'ire it after you 'w'ield it.
+
+N:933:& Arbalest~
+G:}:s
+I:19:25:0
+W:50:0:600:3000
+A:50/2
+F:SHOW_MODS
+D:Very heavy and powerful crossbow. You can 'f'ire with
+D:it after you 'w'ield it.
+
+N:934:& Siege Crossbow~
+G:}:s
+I:19:26:0
+W:100:0:900:18000
+A:100/5
+F:SHOW_MODS
+D:Superpowered crossbow, extremely heavy, but the bolts deal incredible
+D:amounts of damage. You can 'f'ire with it after you 'w'ield it.
+
+N:935:Bracing
+G:":d
+I:40:40:0
+W:10:0:3:500
+A:10/1
+D:An amulet that acts as a neck brace, giving you extra defense.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

@@ -1509,10 +1509,16 @@
 
 /* The "sval" codes for TV_BOW (note information in "sval") */
 #define SV_SLING                         2	/* (x2) */
+#define SV_POWER_SLING                   3	/* (x3) */
+#define SV_MASTER_SLING                  4	/* (x4) */
 #define SV_SHORT_BOW                    12	/* (x2) */
 #define SV_LONG_BOW                     13	/* (x3) */
+#define SV_BLADE_BOW                    14	/* (x4) */
+#define SV_HYDRA_BOW                    15	/* (x5) */
 #define SV_LIGHT_XBOW                   23	/* (x3) */
 #define SV_HEAVY_XBOW                   24	/* (x4) */
+#define SV_ARBALEST                     25	/* (x5) */
+#define SV_SIEGE_XBOW                   26	/* (x6) */
 
 /* The "sval" codes for TV_DIGGING */
 #define SV_SHOVEL                        1
@@ -1741,6 +1747,7 @@
 #define SV_AMULET_DISARMING             37
 #define SV_AMULET_DODGING               38
 #define SV_AMULET_SPACETIME             39
+#define SV_AMULET_BRACING               40
 
 /* The sval codes for TV_RING */
 #define SV_RING_WOE                      0

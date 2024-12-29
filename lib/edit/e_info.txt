@@ -1304,6 +1304,8 @@ a:HARDCORE=SPECTRAL
 
 N:103:of Morgul
 T:125:0:255
+T:15:0:255
+T:19:0:255
 T:21:0:255
 T:22:0:255
 T:23:0:255
@@ -1320,7 +1322,6 @@ F:AUTO_CURSE | WOUNDING
 
 N:104:of Nothingness
 T:125:0:255
-T:15:0:255
 T:21:0:255
 T:22:0:255
 T:23:0:255
@@ -1368,7 +1369,7 @@ f:XTRA_SHOTS |
 
 # Bows only
 N:109:of Lothlorien
-T:19:12:13
+T:19:12:15
 X:A:25:20
 W:50:2:21:30000
 C:10:10:0:2
@@ -1378,7 +1379,7 @@ F:BLESSED | ABILITY
 
 # Crossbows only
 N:110:of the Haradrim
-T:19:23:24
+T:19:23:26
 X:A:25:30
 W:50:2:21:20000
 C:5:15:0:1
@@ -1390,7 +1391,7 @@ N:111:of Buckland
 X:A:25:25
 W:40:2:21:20000
 C:8:8:0:2
-T:19:2:2
+T:19:2:4
 R:100
 F:DEX | XTRA_SHOTS | XTRA_MIGHT | IGNORE_ACID | IGNORE_FIRE | HIDE_TYPE
 
@@ -2217,7 +2218,7 @@ F:REFLECT
 
 # Ego Heavy Crossbow
 N:188:of Siegecraft
-T:19:24:24
+T:19:24:26
 X:A:25:30
 W:60:5:30:30000
 C:10:15:20:2
@@ -2712,6 +2713,8 @@ f:LUCK
 
 # Unlucky weapons - of the Din-horde (Orcs)
 N:225:of the Glamhoth
+T:15:0:255
+T:19:0:255
 T:21:0:255
 T:22:0:255
 T:23:0:255
@@ -2830,7 +2833,7 @@ f:LEVELS
 
 # Bows of Mirkwood, added in Theme 1.0.2
 N:234:of Mirkwood
-T:19:12:13
+T:19:12:15
 X:A:25:20
 W:50:2:21:50000
 C:10:10:0:2
@@ -2917,6 +2920,8 @@ T:40:0:5
 T:40:7:15
 T:40:17:99
 T:45:0:38
+T:45:40:49
+T:45:51:255
 W:5:1:10:1250
 C:0:0:0:0
 R:100
@@ -2932,6 +2937,8 @@ T:40:0:5
 T:40:7:15
 T:40:17:99
 T:45:0:38
+T:45:40:49
+T:45:51:255
 W:10:3:12:2500
 C:0:0:0:0
 Z:illuminate
@@ -4496,6 +4503,73 @@ R:100
 F:SLAY_EVIL | TELEPORT | FREE_ACT | SEARCH | 
 F:REGEN | SLOW_DIGEST | RES_NEXUS | 
 F:R_HIGH
+
+# Destroyed Weapon
+N:372:Bent
+T:15:0:255
+T:16:0:255
+T:17:0:255
+T:18:0:255
+T:19:0:255
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+X:B:24:0
+W:20:1:2:0
+C:-12:-12:0:0
+
+N:373:Army Grade
+T:15:0:255
+T:16:0:255
+T:17:0:255
+T:18:0:255
+T:19:0:255
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+X:B:24:0
+W:40:1:2:0
+C:-25:-25:0:0
+
+# Destroyed Body Armor
+N:374:Perforated
+T:30:0:255
+T:31:0:255
+T:32:0:255
+T:33:0:255
+T:34:0:255
+T:35:0:255
+T:36:0:255
+T:37:0:255
+T:38:0:255
+X:B:30:0
+W:20:1:2:0
+C:0:0:-20:0
+
+N:375:Tattered
+T:30:0:255
+T:31:0:255
+T:32:0:255
+T:33:0:255
+T:34:0:255
+T:35:0:255
+T:36:0:255
+T:37:0:255
+T:38:0:255
+X:B:30:0
+W:40:1:2:0
+C:0:0:-30:0
+
+N:376:of Nothingness
+T:15:0:255
+T:19:0:255
+X:A:24:0
+W:0:1:2:0
+C:-100:-100:0:0
+R:100
+F:HEAVY_CURSE | CURSED | AUTO_CURSE
 
 # N: serial number : ego type
 # D: description

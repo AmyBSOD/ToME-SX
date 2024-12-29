@@ -3655,6 +3655,13 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
 					break;
 				}
 
+			case SV_AMULET_BRACING:
+				{
+					/* Bonus to armor class */
+					o_ptr->to_a = 5 + randint(7) + m_bonus(15, level);
+					break;
+				}
+
 			case SV_AMULET_WEAPONMASTERY:
 				{
 					o_ptr->pval = 1 + m_bonus(2, level);
