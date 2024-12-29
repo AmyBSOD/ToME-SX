@@ -5457,7 +5457,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				dam *= 3;
 				dam /= (randint(6) + 6);
 				do_poly = FALSE;
-				if (seen && (r_ptr->flags7 & (RF7_RES_CHAO)) ) r_ptr->r_flags7 |= (RF7_RES_CHAO);
+				if (seen && ((r_ptr->flags7 & (RF7_RES_CHAO)) || (r_ptr->flags4 & (RF4_BR_CHAO)) ) ) r_ptr->r_flags7 |= (RF7_RES_CHAO);
 			}
 			break;
 		}
@@ -5473,7 +5473,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				dam *= 3;
 				dam /= (randint(6) + 6);
 				do_cut = 0;
-				if (seen && (r_ptr->flags7 & (RF7_RES_SHAR)) ) r_ptr->r_flags7 |= (RF7_RES_SHAR);
+				if (seen) r_ptr->r_flags7 |= (RF7_RES_SHAR);
 			}
 			break;
 		}
@@ -5489,6 +5489,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				note = " resists somewhat.";
 				dam /= 2;
 				do_cut = 0;
+				if (seen) r_ptr->r_flags7 |= (RF7_RES_SHAR);
 			}
 			break;
 		}
@@ -5510,7 +5511,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				note = " resists.";
 				dam *= 2;
 				dam /= (randint(6) + 6);
-				if (seen && (r_ptr->flags7 & (RF7_RES_SOUN)) ) r_ptr->r_flags7 |= (RF7_RES_SOUN);
+				if (seen) r_ptr->r_flags7 |= (RF7_RES_SOUN);
 			}
 			break;
 		}
@@ -5657,7 +5658,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				note = " resists.";
 				dam *= 3;
 				dam /= (randint(6) + 6);
-				if (seen && (r_ptr->flags7 & (RF7_RES_WALL)) ) r_ptr->r_flags7 |= (RF7_RES_WALL);
+				if (seen) r_ptr->r_flags7 |= (RF7_RES_WALL);
 			}
 			break;
 		}
@@ -5671,7 +5672,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				note = " resists.";
 				dam *= 3;
 				dam /= (randint(6) + 6);
-				if (seen && (r_ptr->flags7 & (RF7_RES_INER)) ) r_ptr->r_flags7 |= (RF7_RES_INER);
+				if (seen) r_ptr->r_flags7 |= (RF7_RES_INER);
 			}
 			else
 			{
@@ -5703,7 +5704,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				note = " resists.";
 				dam *= 3;
 				dam /= (randint(6) + 6);
-				if (seen && (r_ptr->flags7 & (RF7_RES_TIME)) ) r_ptr->r_flags7 |= (RF7_RES_TIME);
+				if (seen) r_ptr->r_flags7 |= (RF7_RES_TIME);
 			}
 			break;
 		}
@@ -5740,7 +5741,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				dam *= 3;
 				dam /= (randint(6) + 6);
 				do_dist = 0;
-				if (seen && (r_ptr->flags7 & (RF7_RES_GRAV)) ) r_ptr->r_flags7 |= (RF7_RES_GRAV);
+				if (seen) r_ptr->r_flags7 |= (RF7_RES_GRAV);
 			}
 			else
 			{
@@ -6818,7 +6819,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				note = " resists.";
 				dam *= 2;
 				dam /= (randint(6) + 6);
-				if (seen && (r_ptr->flags7 & (RF7_RES_LITE)) ) r_ptr->r_flags7 |= (RF7_RES_LITE);
+				if (seen) r_ptr->r_flags7 |= (RF7_RES_LITE);
 			}
 			else if (r_ptr->flags3 & (RF3_HURT_LITE))
 			{
@@ -6844,7 +6845,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				note = " resists.";
 				dam *= 2;
 				dam /= (randint(6) + 6);
-				if (seen && (r_ptr->flags7 & (RF7_RES_DARK)) ) r_ptr->r_flags7 |= (RF7_RES_DARK);
+				if (seen && ((r_ptr->flags7 & (RF7_RES_DARK)) || (r_ptr->flags4 & (RF4_BR_DARK)) ) ) r_ptr->r_flags7 |= (RF7_RES_DARK);
 			}
 			break;
 		}
