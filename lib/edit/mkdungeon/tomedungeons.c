@@ -248,12 +248,12 @@ void printRandoms(int lower, int upper, int count)
 	int d_id;
 	int contnum;
 
-	num = random_number(49);
+	num = random_number(58);
 
 	printf("V:2.0.0\n", num);
 	printf("\n", num);
 
-	for (d_id = 0; d_id <= 60; d_id++) {
+	for (d_id = 0; d_id <= 69; d_id++) {
 
 		switch (d_id) {
 			case 0:
@@ -566,9 +566,54 @@ void printRandoms(int lower, int upper, int count)
 				printf("W:55:80:1:0:30:200\n");
 				break;
 			case 60:
-				printf("N:60:Far Harad\n");
-				printf("D:DHa:a desert path into Far Harad.\n");
+				printf("N:60:Middle Harad\n");
+				printf("D:DHa:a desert path into Middle Harad.\n");
 				printf("W:60:98:1:0:60:180\n");
+				break;
+			case 61:
+				printf("N:61:Far Harad\n");
+				printf("D:FHa:a desert path into Far Harad.\n");
+				printf("W:40:60:1:0:20:100\n");
+				break;
+			case 62:
+				printf("N:62:Graveyard\n");
+				printf("D:Gra:a hole to the Graveyard underground.\n");
+				printf("W:50:70:1:0:14:160\n");
+				break;
+			case 63:
+				printf("N:63:Volcano\n");
+				printf("D:Vol:a hole to the center of the Volcano.\n");
+				printf("W:50:60:1:0:14:160\n");
+				break;
+			case 64:
+				printf("N:64:Hell\n");
+				printf("D:Hel:the stairway to the Hell.\n");
+				printf("W:66:80:1:0:14:160\n");
+				break;
+			case 65:
+				printf("N:65:Heaven\n");
+				printf("D:Hea:the way to the heaven.\n");
+				printf("W:55:70:1:0:18:160\n");
+				break;
+			case 66:
+				printf("N:66:Mountain\n");
+				printf("D:Mou:a way leading to the mountain.\n");
+				printf("W:40:50:1:0:14:160\n");
+				break;
+			case 67:
+				printf("N:67:Glass castle\n");
+				printf("D:Gla:the entrance to the glass castle.\n");
+				printf("W:40:60:1:0:14:160\n");
+				break;
+			case 68:
+				printf("N:68:Icky cave\n");
+				printf("D:Ick:the entrance to the Icky caves.\n");
+				printf("W:20:35:1:0:14:240\n");
+				break;
+			case 69:
+				printf("N:69:Mount Olympus\n");
+				printf("D:Oly:the entrance to Mount Olympus.\n");
+				printf("W:80:90:1:0:14:160\n");
 				break;
 		}
 
@@ -688,13 +733,40 @@ void printRandoms(int lower, int upper, int count)
 			case 59: /* R'lyeh */
 				printf("F:FINAL_GUARDIAN_3922\n");
 				break;
-			case 60: /* Far Harad */
+			case 60: /* Middle Harad */
 				printf("F:FINAL_GUARDIAN_3923\n");
+				break;
+			case 61: /* Far Harad */
+				printf("F:FINAL_GUARDIAN_4236\n");
+				break;
+			case 62: /* Graveyard */
+				printf("F:FINAL_GUARDIAN_4237\n");
+				break;
+			case 63: /* Volcano */
+				printf("F:FINAL_GUARDIAN_4238\n");
+				break;
+			case 64: /* Hell */
+				printf("F:FINAL_GUARDIAN_4239\n");
+				break;
+			case 65: /* Heaven */
+				printf("F:FINAL_GUARDIAN_4240\n");
+				break;
+			case 66: /* Mountain */
+				printf("F:FINAL_GUARDIAN_4241\n");
+				break;
+			case 67: /* Glass Castle */
+				printf("F:FINAL_GUARDIAN_4242\n");
+				break;
+			case 68: /* Icky Cave */
+				printf("F:FINAL_GUARDIAN_4243\n");
+				break;
+			case 69: /* Mount Olympus */
+				printf("F:FINAL_GUARDIAN_4244\n");
 				break;
 		}
 
 		/* randomized content for those dungeons that should have randomized content --Amy */
-		if ( (d_id >= 1 && d_id <= 11) || (d_id >= 16 && d_id <= 27) || (d_id == 29) || (d_id >= 31 && d_id <= 60) ) {
+		if ( (d_id >= 1 && d_id <= 11) || (d_id >= 16 && d_id <= 27) || (d_id == 29) || (d_id >= 31 && d_id <= 69) ) {
 
 			if (random_number(3) == 2) {
 
@@ -894,7 +966,7 @@ void printRandoms(int lower, int upper, int count)
 
 			} else {
 
-				contnum = random_number(49);
+				contnum = random_number(58);
 
 				printf("# random type %d\n", contnum);
 
@@ -1481,7 +1553,7 @@ void printRandoms(int lower, int upper, int count)
 						printf("S:BRAIN_SMASH\n");
 						break;
 					case 49:
-						printf("# based on Far Harad\n", contnum);
+						printf("# based on Middle Harad\n", contnum);
 						printf("L:91:100:91:0:91:0\n");
 						printf("A:91:100:91:0:91:0:91:91\n");
 						printf("O:20:20:20:20\n");
@@ -1497,6 +1569,114 @@ void printRandoms(int lower, int upper, int count)
 						printf("R:10:3\n");
 						printf("M:WILD_GRASS\n");
 						break;
+					case 50:
+						printf("# based on Far Harad\n", contnum);
+						printf("L:89:80:88:15:96:5\n");
+						printf("A:96:90:98:5:16:5:96:96\n");
+						printf("O:20:20:20:20\n");
+						printf("F:NO_DOORS | CAVE | CAVERN | FLAT | BIG | WATER_RIVERS | \n");
+						printf("F:RANDOM_TOWNS | NO_SHAFT | NO_DESTROY | SAND_VEIN | \n");
+						printf("F:FILL_METHOD_4 \n");
+						printf("R:10:0\n");
+						printf("R:40:3\n");
+						printf("M:ANIMAL\n");
+						printf("R:30:3\n");
+						printf("M:WILD_WOOD\n");
+						printf("R:10:3\n");
+						printf("M:WILD_GRASS\n");
+						printf("R:10:3\n");
+						printf("M:WILD_SWAMP\n");
+						break;
+					case 51:
+						printf("# based on Graveyard\n", contnum);
+						printf("L:1:85:84:15:1:0\n");
+						printf("A:56:90:87:10:56:0:56:56\n");
+						printf("O:20:20:20:20\n");
+						printf("F:WATER_RIVER | EMPTY\n");
+						printf("R:10:0\n");
+						printf("R:90:3\n");
+						printf("M:UNDEAD | NONLIVING\n");
+						break;
+					case 52:
+						printf("# based on Volcano\n", contnum);
+						printf("L:88:40:86:40:85:20\n");
+						printf("A:56:90:87:10:56:0:56:56\n");
+						printf("O:20:20:20:20\n");
+						printf("E:2d5:15:FIRE\n");
+						printf("F:CAVE | CAVERN | LAVA_RIVER |\n");
+						printf("F:QUARTZ_VEIN\n");
+						printf("R:10:0\n");
+						printf("R:90:3\n");
+						printf("M:IM_FIRE | CAN_FLY | WILD_VOLCANO\n");
+						break;
+					case 53:
+						printf("# based on Hell\n", contnum);
+						printf("L:86:80:85:20:1:0\n");
+						printf("A:85:80:87:20:87:0:56:85\n");
+						printf("O:20:20:20:20\n");
+						printf("E:2d7:10:FIRE\n");
+						printf("F:CAVERN | LAVA_RIVER | \n");
+						printf("F:BIG\n");
+						printf("R:10:0\n");
+						printf("R:90:3\n");
+						printf("M:IM_FIRE | EVIL\n");
+						break;
+					case 54:
+						printf("# based on Heaven\n", contnum);
+						printf("L:1:100:1:0:1:0\n");
+						printf("A:60:100:56:0:56:0:60:56\n");
+						printf("O:20:20:20:20\n");
+						printf("F:WATER_RIVER | BIG | \n");
+						printf("R:10:0\n");
+						printf("R:90:3\n");
+						printf("M:GOOD\n");
+						break;
+					case 55:
+						printf("# based on Mountain\n", contnum);
+						printf("L:89:100:89:0:89:0\n");
+						printf("A:97:100:56:0:56:0:97:56\n");
+						printf("O:20:20:20:20\n");
+						printf("F:WATER_RIVER | CAVE | CAVERN | NO_DOORS | BIG |\n");
+						printf("R:10:0\n");
+						printf("R:40:3\n");
+						printf("M:TROLL | GIANT\n");
+						printf("R:40:3\n");
+						printf("M:CAN_FLY | ANIMAL | WILD_MOUNTAIN\n");
+						printf("R:10:3\n");
+						printf("M:R_CHAR_O | R_CHAR_Y | R_CHAR_H\n");
+						break;
+					case 56:
+						printf("# based on Glass Castle\n", contnum);
+						printf("L:208:100:208:0:208:0\n");
+						printf("A:188:100:188:0:188:0:188:188\n");
+						printf("O:20:20:20:20\n");
+						printf("F:EMPTY |\n");
+						printf("R:10:0\n");
+						printf("R:70:3\n");
+						printf("M:INVISIBLE | HAS_LITE\n");
+						printf("R:20:3\n");
+						printf("S:BR_LITE | BR_DARK | BA_DARK\n");
+						break;
+					case 57:
+						printf("# based on Icky Cave\n", contnum);
+						printf("L:226:20:89:60:84:20\n");
+						printf("A:56:100:56:0:56:0:56:56\n");
+						printf("O:20:20:20:20\n");
+						printf("F:MAGMA_VEIN | QUARTZ_VEIN\n");
+						printf("R:10:0\n");
+						printf("R:90:3\n");
+						printf("M:R_CHAR_i | R_CHAR_j | R_CHAR_M\n");
+						break;
+					case 58:
+						printf("# based on Mount Olympus\n", contnum);
+						printf("L:1:100:1:0:1:0\n");
+						printf("A:60:40:97:0:56:60:56:56\n");
+						printf("O:20:20:20:20\n");
+						printf("F:WATER_RIVER | CAVE | CAVERN | NO_DOORS | BIG\n");
+						printf("R:50:0\n");
+						printf("R:50:3\n");
+						printf("M:GIANT\n");
+						break;
 				}
 			}
 
@@ -1511,7 +1691,7 @@ void printRandoms(int lower, int upper, int count)
 /* Driver code */
 int main()
 {
-	int lower = 1, upper = 49, count = 31;
+	int lower = 1, upper = 58, count = 31;
 
 	// Use current time as
 	// seed for random generator

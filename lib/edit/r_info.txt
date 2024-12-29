@@ -73773,6 +73773,210 @@ S:SHRIEK | MIND_BLAST
 D:It`s a slime colony.
 D:If you so much as DARE to touch it.
 
+N:4236:Nino, leader of the Legion
+G:p:v
+I:120:50d100:100:100:0
+W:60:1:1700:35000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:UN_BONUS:6d8
+B:HIT:UN_BONUS:6d8
+B:HIT:CONFUSE:5d5
+B:HIT:UN_POWER:5d5
+F:UNIQUE | MALE | ATTR_MULTI | CAN_SPEAK | ATTR_ANY | RES_TELE
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_SKELETON | DROP_CORPSE | HAS_LITE |
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD | 
+F:SMART | OPEN_DOOR | BASH_DOOR |
+F:RES_CHAO | BASEANGBAND | 
+F:EVIL | IM_FIRE | IM_COLD |
+F:IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP | 
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT | 
+S:1_IN_2 |
+S:BLIND | CONF |
+S:TPORT | BLINK | BA_FIRE | BA_COLD |
+S:DRAIN_MANA | CAUSE_4 | BA_ACID | TELE_AWAY |
+S:MIND_BLAST | TRAPS | HEAL | 
+S:HASTE | BRAIN_SMASH | BA_CHAO | BA_DARK | 
+D:He's one of the leaders of Caesar's Legion, and he thinks you 
+D:are a spy sent by the NCR. Therefore, he'll try to purge the world 
+D:of your existence. 
+
+N:4237:Coffin Nail
+G:L:v
+I:130:80d100:100:100:0
+W:92:3:0:45000
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:EXP_80:7d12
+B:HIT:LOSE_DEX:7d12
+B:HIT:UN_POWER:7d12
+B:HIT:UN_POWER:7d12
+F:UNIQUE | MALE | CAN_SPEAK | RES_TELE
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:ESCORT | 
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD | DROP_GREAT | 
+F:SMART | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | 
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | NO_SLEEP | BASEANGBAND
+F:NO_CUT
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT | 
+S:1_IN_3 | 
+S:TPORT | BLIND | SCARE | CAUSE_4 | BRAIN_SMASH | 
+S:BA_MANA | BO_MANA | BA_FIRE | BA_NETH | 
+S:S_MONSTERS | S_HI_DEMON | S_HI_UNDEAD | S_KIN | HAND_DOOM | ANIM_DEAD
+D:The greatest of all undead sorcerers, even the gods once feared him.  This 
+D:ancient shadow of death wilts every living thing it passes. 
+
+N:4238:Mister Garbage Houses
+G:D:r
+I:125:50d101:20:150:100
+W:60:7:20000:22500
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:CLAW:FIRE:8d12
+B:CLAW:FIRE:8d12
+B:CLAW:FIRE:8d12
+B:BITE:FIRE:10d12
+F:UNIQUE | FORCE_SLEEP | FORCE_MAXHP |
+F:RES_TELE | AURA_FIRE | 
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD |
+F:SMART | OPEN_DOOR | BASH_DOOR | CAN_FLY | POWERFUL |
+F:BASEANGBAND | 
+F:DRAGON | EVIL | IM_FIRE | NO_CONF | NO_SLEEP | 
+F:NO_STUN | 
+F:DROP_CORPSE | 
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT | CAN_SPEAK |
+S:1_IN_3 |
+S:BRAIN_SMASH | BR_FIRE | BA_FIRE
+D:One of the ancient dragons of Lodoss, it causes destruction 
+D:with its breath of fire. 
+
+N:4239:Serkan
+G:p:r
+I:120:25d100:15:80:25
+W:80:2:90:25000
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:PUNCH:FIRE:2d40
+B:PUNCH:FIRE:2d40
+B:GAZE:PARALYZE:15d5
+B:GAZE:CONFUSE:20d5
+F:SMART | OPEN_DOOR | REGENERATE | UNIQUE | ATTR_MULTI | ELDRITCH_HORROR |
+F:MALE | IM_FIRE | CAN_SWIM | RES_DISE | RES_WATE | NO_FEAR | DROP_CORPSE | CAN_SPEAK | 
+F:NO_CONF | DROP_4D2 | DROP_3D2 | DROP_2D2 | DROP_GOOD | BASEANGBAND | DROP_GREAT
+F:RES_SHAR | RES_GRAV | 
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT | 
+S:1_IN_2 | 
+S:BA_FIRE | BO_FIRE | HEAL | HASTE | SLOW | TPORT | BLINK
+S:S_KIN | S_MONSTERS | CONF | S_UNDEAD | BLIND | SCARE | DRAIN_MANA
+D:He's the Grand Inquisitor of his religion, and will kill you if you don't convert! 
+
+N:4240:Janine
+G:@:r
+I:130:50d50:30:100:20
+W:70:5:4000:15000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:CONFUSE:5d15
+B:KICK:LOSE_WIS:3d15
+B:KICK:EXP_40:3d15
+F:FEMALE | DROP_CORPSE | CAN_SPEAK | 
+F:CAN_SWIM | SMART | COLD_BLOOD | WEIRD_MIND | REGENERATE | ELDRITCH_HORROR | 
+F:OPEN_DOOR | DROP_2D2 | BASEANGBAND | UNIQUE | MOVE_BODY | DRAGON | GOOD | 
+F:AURA_COLD | IM_COLD | IM_POIS | IM_ACID | RES_TELE | RES_WATE | NO_FEAR | 
+F:RES_DARK | NO_SLEEP | REVBOSS | 
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT | 
+S:1_IN_5 | 
+S:ARROW_3 | BR_COLD | BR_ACID | BA_WATE | CAUSE_3 | 
+D:Don't underestimate this woman, she pretends to be a nice person but is actually 
+D:bitchy and mean if she doesn't get what she wants. 
+
+N:4241:Jannik
+G:B:u
+I:130:85d12:20:65:20
+W:30:6:1600:555
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:16d2
+B:CLAW:HURT:16d2
+B:BITE:HURT:4d10
+F:CAN_FLY | UNIQUE | FORCE_MAXHP | DROP_CORPSE | CAN_SPEAK |
+F:GOOD | 
+F:ANIMAL | BASEANGBAND
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT | 
+D:He betrayed the good people of Middle-earth back in the day, and refuses to 
+D:take responsibility for his actions. So you have to punish him by force! 
+
+N:4242:Tillmann
+G:D:D
+I:120:39d111:20:133:70
+W:55:2:260000:25000
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:LOSE_CON:8d12
+B:CLAW:LOSE_CON:8d12
+B:BITE:EXP_80:8d15
+B:BITE:EXP_80:8d15
+F:UNIQUE | CAN_FLY | RES_NETH |
+F:FORCE_SLEEP | FORCE_MAXHP | SMART |
+F:ONLY_ITEM | DROP_3D2 | DROP_4D2 | DROP_GOOD | IM_POIS |
+F:BASH_DOOR | POWERFUL | MOVE_BODY | CAN_SPEAK | IM_ACID |
+F:EVIL | DRAGON | IM_FIRE | NO_SLEEP | IM_COLD | BASEANGBAND | 
+F:HAS_LITE
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT | 
+S:1_IN_5 | 
+S:CAUSE_3 | BR_NETH | BR_COLD |
+S:BR_ACID | BR_POIS |
+S:S_DRAGON | S_UNDEAD
+D:He was spawned directly from Hell, and exists solely to make your life 
+D:miserable. Crush him before he crushes you! 
+
+N:4243:Evillan
+G:j:W
+I:120:20d100:90:80:10
+W:41:3:0:13500
+E:0:0:0:0:0:0
+O:30:50:0:10
+B:CRUSH:ACID:5d5
+B:HIT:POISON:5d5
+B:CRUSH:ACID:5d5
+B:HIT:POISON:5d5
+F:UNIQUE | CAN_SPEAK | NO_STUN | NO_SLEEP | NO_CONF | NO_STUN |
+F:FORCE_SLEEP | FORCE_MAXHP | ELDRITCH_HORROR | ESCORT |
+F:ONLY_ITEM | DROP_4D2 | DROP_GOOD | REGENERATE | SUSCEP_FIRE |
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | KILL_BODY | 
+F:EVIL |  SUSCEP_FIRE | IM_COLD | IM_POIS | BASEANGBAND | NO_CUT
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT | 
+D:He is evil with a capital E. A puppet of the evil overlord, this dude 
+D:wants to kill you. 
+
+N:4244:Master Chris
+G:P:v
+I:137:150d100:30:175:15
+W:90:3:10000:60000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:UN_BONUS:12d12
+B:HIT:UN_BONUS:12d12
+B:HIT:BLIND:12d5
+B:HIT:EXP_20:10d8
+F:RES_SHAR | UNIQUE | MALE |
+F:FORCE_MAXHP | MOVE_BODY | CAN_SPEAK | 
+F:RES_CHAO | ONLY_ITEM | DROP_3D2 | DROP_GOOD | DROP_GREAT
+F:SMART | TAKE_ITEM | BASH_DOOR | HAS_LITE |
+F:BASEANGBAND | 
+F:REGENERATE | CAN_SWIM
+F:NO_CUT | RES_DISE | 
+F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS | IM_ELEC
+F:NO_STUN | NO_CONF | NO_SLEEP | POWERFUL | 
+F:SPECIAL_GENE | DROP_RANDART | NO_THEFT | 
+S:1_IN_3 |
+S:BR_ELEC | BR_DISE | HASTE | TELE_TO | S_KIN | 
+S:TPORT | ROCKET | BR_CHAO
+D:He's a god, and regards you as a worthless creature whose existence 
+D:he can snuff out without batting an eye. Hopefully you have what it 
+D:takes to stand up to his might. 
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness
