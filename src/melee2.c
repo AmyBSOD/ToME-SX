@@ -1020,6 +1020,8 @@ static bool monst_spell_monst(int m_idx)
 	/* Extract the blind-ness */
 	bool blind = (p_ptr->blind ? TRUE : FALSE);
 
+	int breathmax = 1600;
+
 	/* Extract the "see-able-ness" */
 	bool seen = (!blind && m_ptr->ml);
 
@@ -1075,6 +1077,8 @@ static bool monst_spell_monst(int m_idx)
 
 		/* Extract the monster level */
 		rlev = ((m_ptr->level >= 1) ? m_ptr->level : 1);
+
+		if (breathmax > (rlev * 12)) breathmax = (rlev * 12);
 
 		/* Extract the racial spell flags */
 		f4 = r_ptr->flags4;
@@ -1196,7 +1200,7 @@ static bool monst_spell_monst(int m_idx)
 				else if (blind) monster_msg("%^s shoots something.", m_name);
 				else monster_msg("%^s fires a rocket at %s.", m_name, t_name);
 				monst_breath_monst(m_idx, y, x, GF_ROCKET,
-				                   ((m_ptr->hp / 6) > 600 ? 600 : (m_ptr->hp / 6)), 2);
+				                   ((m_ptr->hp / 6) > breathmax ? breathmax : (m_ptr->hp / 6) > 600 ? 600 : (m_ptr->hp / 6)), 2);
 				break;
 			}
 
@@ -1258,7 +1262,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes acid at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_ACID,
-				                   ((m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
+				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
 				break;
 			}
 
@@ -1271,7 +1275,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes lightning at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_ELEC,
-				                   ((m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
+				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
 				break;
 			}
 
@@ -1284,7 +1288,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes fire at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_FIRE,
-				                   ((m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
+				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
 				break;
 			}
 
@@ -1297,7 +1301,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes frost at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_COLD,
-				                   ((m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
+				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
 				break;
 			}
 
@@ -1310,7 +1314,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes gas at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_POIS,
-				                   ((m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 3)), 0);
+				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 4)), 0);
 				break;
 			}
 
@@ -1323,7 +1327,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes nether at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_NETHER,
-				                   ((m_ptr->hp / 8) > 550 ? 550 : (m_ptr->hp / 6)), 0);
+				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 550 ? 550 : (m_ptr->hp / 8)), 0);
 				break;
 			}
 
@@ -1336,7 +1340,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes light at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_LITE,
-				                   ((m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 6)), 0);
+				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
 				break;
 			}
 
@@ -1349,7 +1353,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes darkness at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_DARK,
-				                   ((m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 6)), 0);
+				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
 				break;
 			}
 
@@ -1362,7 +1366,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes confusion at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_CONFUSION,
-				                   ((m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 6)), 0);
+				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
 				break;
 			}
 
@@ -1375,7 +1379,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes sound at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_SOUND,
-				                   ((m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 6)), 0);
+				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
 				break;
 			}
 
@@ -1388,7 +1392,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes chaos at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_CHAOS,
-				                   ((m_ptr->hp / 8) > 600 ? 600 : (m_ptr->hp / 6)), 0);
+				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 600 ? 600 : (m_ptr->hp / 8)), 0);
 				break;
 			}
 
@@ -1401,7 +1405,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes disenchantment at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_DISENCHANT,
-				                   ((m_ptr->hp / 8) > 500 ? 500 : (m_ptr->hp / 6)), 0);
+				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 500 ? 500 : (m_ptr->hp / 8)), 0);
 				break;
 			}
 
@@ -1414,7 +1418,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes nexus at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_NEXUS,
-				                   ((m_ptr->hp / 4) > 250 ? 250 : (m_ptr->hp / 3)), 0);
+				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 250 ? 250 : (m_ptr->hp / 4)), 0);
 				break;
 			}
 
@@ -1427,7 +1431,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes time at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_TIME,
-				                   ((m_ptr->hp / 4) > 150 ? 150 : (m_ptr->hp / 3)), 0);
+				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 150 ? 150 : (m_ptr->hp / 4)), 0);
 				break;
 			}
 
@@ -1440,7 +1444,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes inertia at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_INERTIA,
-				                   ((m_ptr->hp / 8) > 200 ? 200 : (m_ptr->hp / 6)), 0);
+				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 200 ? 200 : (m_ptr->hp / 8)), 0);
 				break;
 			}
 
@@ -1453,7 +1457,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes gravity at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_GRAVITY,
-				                   ((m_ptr->hp / 4) > 200 ? 200 : (m_ptr->hp / 3)), 0);
+				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 200 ? 200 : (m_ptr->hp / 4)), 0);
 				break;
 			}
 
@@ -1466,7 +1470,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes shards at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_SHARDS,
-				                   ((m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 6)), 0);
+				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
 				break;
 			}
 
@@ -1479,7 +1483,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes plasma at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_PLASMA,
-				                   ((m_ptr->hp / 8) > 150 ? 150 : (m_ptr->hp / 6)), 0);
+				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 150 ? 150 : (m_ptr->hp / 8)), 0);
 				break;
 			}
 
@@ -1492,7 +1496,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes force at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_FORCE,
-				                   ((m_ptr->hp / 8) > 200 ? 200 : (m_ptr->hp / 6)), 0);
+				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 200 ? 200 : (m_ptr->hp / 8)), 0);
 				break;
 			}
 
@@ -1505,7 +1509,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes magical energy at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_MANA,
-				                   ((m_ptr->hp / 4) > 250 ? 250 : (m_ptr->hp / 3)), 0);
+				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 250 ? 250 : (m_ptr->hp / 4)), 0);
 				break;
 			}
 
@@ -1531,7 +1535,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes toxic waste at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_NUKE,
-				                   ((m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 3)), 0);
+				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 4)), 0);
 				break;
 			}
 
@@ -1557,7 +1561,7 @@ static bool monst_spell_monst(int m_idx)
 				else monster_msg("%^s breathes disintegration at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
 				monst_breath_monst(m_idx, y, x, GF_DISINTEGRATE,
-				                   ((m_ptr->hp / 4) > 300 ? 300 : (m_ptr->hp / 3)), 0);
+				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 300 ? 300 : (m_ptr->hp / 4)), 0);
 				break;
 			}
 
@@ -3076,6 +3080,8 @@ bool make_attack_spell(int m_idx)
 	/* Assume "projectable" */
 	bool direct = TRUE;
 
+	int breathmax = 1600;
+
 	/* Target location */
 	if (m_ptr->target > -1)
 	{
@@ -3135,6 +3141,10 @@ bool make_attack_spell(int m_idx)
 
 	/* Extract the monster level */
 	rlev = ((m_ptr->level >= 1) ? m_ptr->level : 1);
+
+	/* no breath can ever do more than monster level * 12 damage (Amy)
+	 * that way, we don't have to specifically balance every single monster */
+	if (breathmax > (rlev * 12)) breathmax = (rlev * 12);
 
 	if (druidsavingthrow > randint(50 + rlev)) druidsave = TRUE;
 
@@ -3318,7 +3328,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s shoots something.", m_name);
 				else msg_format("%^s fires a rocket.", m_name);
 				breath(m_idx, GF_ROCKET,
-				       ((m_ptr->hp / 6) > 600 ? 600 : (m_ptr->hp / 6)), 2);
+				       ((m_ptr->hp / 6) > breathmax ? breathmax : (m_ptr->hp / 6) > 600 ? 600 : (m_ptr->hp / 6)), 2);
 				update_smart_learn(m_idx, DRS_SHARD);
 				break;
 			}
@@ -3392,7 +3402,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes acid.", m_name);
 				breath(m_idx, GF_ACID,
-				       ((m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
+				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
 				update_smart_learn(m_idx, DRS_ACID);
 				break;
 			}
@@ -3410,7 +3420,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes lightning.", m_name);
 				breath(m_idx, GF_ELEC,
-				       ((m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
+				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
 				update_smart_learn(m_idx, DRS_ELEC);
 				break;
 			}
@@ -3428,7 +3438,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes fire.", m_name);
 				breath(m_idx, GF_FIRE,
-				       ((m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
+				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
 				update_smart_learn(m_idx, DRS_FIRE);
 				break;
 			}
@@ -3446,7 +3456,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes frost.", m_name);
 				breath(m_idx, GF_COLD,
-				       ((m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
+				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
 				update_smart_learn(m_idx, DRS_COLD);
 				break;
 			}
@@ -3464,7 +3474,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes gas.", m_name);
 				breath(m_idx, GF_POIS,
-				       ((m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 3)), 0);
+				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 4)), 0);
 				update_smart_learn(m_idx, DRS_POIS);
 				break;
 			}
@@ -3483,7 +3493,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes nether.", m_name);
 				breath(m_idx, GF_NETHER,
-				       ((m_ptr->hp / 8) > 550 ? 550 : (m_ptr->hp / 6)), 0);
+				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 550 ? 550 : (m_ptr->hp / 8)), 0);
 				update_smart_learn(m_idx, DRS_NETH);
 				break;
 			}
@@ -3501,7 +3511,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes light.", m_name);
 				breath(m_idx, GF_LITE,
-				       ((m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 6)), 0);
+				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
 				update_smart_learn(m_idx, DRS_LITE);
 				break;
 			}
@@ -3519,7 +3529,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes darkness.", m_name);
 				breath(m_idx, GF_DARK,
-				       ((m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 6)), 0);
+				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
 				update_smart_learn(m_idx, DRS_DARK);
 				break;
 			}
@@ -3537,7 +3547,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes confusion.", m_name);
 				breath(m_idx, GF_CONFUSION,
-				       ((m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 6)), 0);
+				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
 				update_smart_learn(m_idx, DRS_CONF);
 				break;
 			}
@@ -3555,7 +3565,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes sound.", m_name);
 				breath(m_idx, GF_SOUND,
-				       ((m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 6)), 0);
+				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
 				update_smart_learn(m_idx, DRS_SOUND);
 				break;
 			}
@@ -3573,7 +3583,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes chaos.", m_name);
 				breath(m_idx, GF_CHAOS,
-				       ((m_ptr->hp / 8) > 600 ? 600 : (m_ptr->hp / 6)), 0);
+				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 600 ? 600 : (m_ptr->hp / 8)), 0);
 				update_smart_learn(m_idx, DRS_CHAOS);
 				break;
 			}
@@ -3591,7 +3601,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes disenchantment.", m_name);
 				breath(m_idx, GF_DISENCHANT,
-				       ((m_ptr->hp / 8) > 500 ? 500 : (m_ptr->hp / 6)), 0);
+				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 500 ? 500 : (m_ptr->hp / 8)), 0);
 				update_smart_learn(m_idx, DRS_DISEN);
 				break;
 			}
@@ -3609,7 +3619,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes nexus.", m_name);
 				breath(m_idx, GF_NEXUS,
-				       ((m_ptr->hp / 4) > 250 ? 250 : (m_ptr->hp / 3)), 0);
+				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 250 ? 250 : (m_ptr->hp / 4)), 0);
 				update_smart_learn(m_idx, DRS_NEXUS);
 				break;
 			}
@@ -3627,7 +3637,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes time.", m_name);
 				breath(m_idx, GF_TIME,
-				       ((m_ptr->hp / 4) > 150 ? 150 : (m_ptr->hp / 3)), 0);
+				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 150 ? 150 : (m_ptr->hp / 4)), 0);
 				break;
 			}
 
@@ -3644,7 +3654,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes inertia.", m_name);
 				breath(m_idx, GF_INERTIA,
-				       ((m_ptr->hp / 8) > 200 ? 200 : (m_ptr->hp / 6)), 0);
+				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 200 ? 200 : (m_ptr->hp / 8)), 0);
 				break;
 			}
 
@@ -3661,7 +3671,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes gravity.", m_name);
 				breath(m_idx, GF_GRAVITY,
-				       ((m_ptr->hp / 4) > 200 ? 200 : (m_ptr->hp / 3)), 0);
+				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 200 ? 200 : (m_ptr->hp / 4)), 0);
 				break;
 			}
 
@@ -3678,7 +3688,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes shards.", m_name);
 				breath(m_idx, GF_SHARDS,
-				       ((m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 6)), 0);
+				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
 				update_smart_learn(m_idx, DRS_SHARD);
 				break;
 			}
@@ -3696,7 +3706,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes plasma.", m_name);
 				breath(m_idx, GF_PLASMA,
-				       ((m_ptr->hp / 8) > 150 ? 150 : (m_ptr->hp / 6)), 0);
+				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 150 ? 150 : (m_ptr->hp / 8)), 0);
 				break;
 			}
 
@@ -3713,7 +3723,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes force.", m_name);
 				breath(m_idx, GF_FORCE,
-				       ((m_ptr->hp / 8) > 200 ? 200 : (m_ptr->hp / 6)), 0);
+				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 200 ? 200 : (m_ptr->hp / 8)), 0);
 				break;
 			}
 
@@ -3730,7 +3740,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes magical energy.", m_name);
 				breath(m_idx, GF_MANA,
-				       ((m_ptr->hp / 4) > 250 ? 250 : (m_ptr->hp / 3)), 0);
+				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 250 ? 250 : (m_ptr->hp / 4)), 0);
 				break;
 			}
 
@@ -3758,7 +3768,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes toxic waste.", m_name);
 				breath(m_idx, GF_NUKE,
-				       ((m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 3)), 0);
+				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 4)), 0);
 				update_smart_learn(m_idx, DRS_POIS);
 				break;
 			}
@@ -3787,7 +3797,7 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes disintegration.", m_name);
 				breath(m_idx, GF_DISINTEGRATE,
-				       ((m_ptr->hp / 4) > 300 ? 300 : (m_ptr->hp / 3)), 0);
+				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 300 ? 300 : (m_ptr->hp / 4)), 0);
 				break;
 			}
 
