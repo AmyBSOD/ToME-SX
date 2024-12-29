@@ -2690,6 +2690,8 @@ void random_artifact_resistance(object_type * o_ptr)
  * "apply_magic()" is called immediately after we return.
  *
  * Note -- see "make_artifact()" and "apply_magic()"
+ *
+ * Amy note: return TRUE if it really made a special artifact, otherwise FALSE
  */
 static bool make_artifact_special(object_type *o_ptr)
 {
@@ -4748,8 +4750,14 @@ void apply_magic(object_type *o_ptr, int lev, bool okay, bool good, bool great)
 	/* Roll for artifacts if allowed */
 	for (i = 0; i < rolls; i++)
 	{
-		/* Roll for an artifact */
-		if (make_artifact(o_ptr)) break;
+		/* Roll for an artifact, much lower chance by Amy */
+
+		if (randint(10 + luck(-5, 5)) == 1) {
+
+			if (make_artifact(o_ptr)) {
+				break;
+			}
+		}
 	}
 
 	/* Mega hack -- to lazy to do it properly with hooks :) */
@@ -5315,7 +5323,7 @@ bool kind_is_good(int k_idx)
 	/* Analyze the item type */
 	switch (k_ptr->tval)
 	{
-		/* Armor -- Good unless damaged */
+		/* Armor -- Good unless damaged, Amy edit: and even then, since they'll have a plus */
 	case TV_HARD_ARMOR:
 	case TV_SOFT_ARMOR:
 	case TV_DRAG_ARMOR:
@@ -5326,11 +5334,10 @@ bool kind_is_good(int k_idx)
 	case TV_HELM:
 	case TV_CROWN:
 		{
-			if (k_ptr->to_a < 0) return (FALSE);
 			return (TRUE);
 		}
 
-		/* Weapons -- Good unless damaged */
+		/* Weapons -- Good unless damaged, Amy edit: and even then, I mean, Narsil anyone??? */
 	case TV_BOW:
 	case TV_SWORD:
 	case TV_AXE:
@@ -5341,58 +5348,75 @@ bool kind_is_good(int k_idx)
 	case TV_MSTAFF:
 	case TV_BOOMERANG:
 		{
-			if (k_ptr->to_h < 0) return (FALSE);
-			if (k_ptr->to_d < 0) return (FALSE);
 			return (TRUE);
 		}
 
-		/* Ammo -- Arrows/Bolts are good */
+		/* Ammo -- all are good (why penalize sling-users? --Amy) */
 	case TV_BOLT:
 	case TV_ARROW:
+	case TV_SHOT:
 		{
 			return (TRUE);
 		}
 
-		/* Rods - Silver and better are good */
+		/* Rods - all are good (copper of istari can be really useful! --Amy) */
 	case TV_ROD_MAIN:
 		{
-			if (k_ptr->sval >= SV_ROD_SILVER) return (TRUE);
-			return FALSE;
+			return (TRUE);
 		}
 
-		/* Expensive rod tips are good */
+		/* Expensive rod tips are good, and others are too because I say so --Amy */
 	case TV_ROD:
 		{
-			/* Probing is not good, but Recall is*/
-			if (k_ptr->cost >= 4500) return TRUE;
-			return FALSE;
+			return TRUE;
 		}
 
-		/* The Tomes are good */
+		/* The Tomes are good, and other books are too since they can be fireproof --Amy */
 	case TV_BOOK:
 		{
-			if (k_ptr->sval <= SV_BOOK_MAX_GOOD) return (TRUE);
-			return FALSE;
+			return (TRUE);
 		}
 
-		/* Rings -- Rings of Speed are good */
+		/* Rings -- Rings of Speed are good, and many others are too --Amy */
 	case TV_RING:
 		{
-			if (k_ptr->sval == SV_RING_SPEED) return (TRUE);
-			return (FALSE);
+			if (k_ptr->sval == SV_RING_WOE) return (FALSE);
+			if (k_ptr->sval == SV_RING_AGGRAVATION) return (FALSE);
+			if (k_ptr->sval == SV_RING_WEAKNESS) return (FALSE);
+			if (k_ptr->sval == SV_RING_STUPIDITY) return (FALSE);
+			if (k_ptr->sval == SV_RING_TELEPORTATION) return (FALSE);
+
+			return (TRUE);
 		}
 
-		/* Amulets -- Some are good */
+		/* Amulets -- Some are good, most of them in fact --Amy */
 	case TV_AMULET:
 		{
-			if (k_ptr->sval == SV_AMULET_THE_MAGI) return (TRUE);
-			if (k_ptr->sval == SV_AMULET_DEVOTION) return (TRUE);
-			if (k_ptr->sval == SV_AMULET_WEAPONMASTERY) return (TRUE);
-			if (k_ptr->sval == SV_AMULET_TRICKERY) return (TRUE);
-			if (k_ptr->sval == SV_AMULET_RESISTANCE) return (TRUE);
-			if (k_ptr->sval == SV_AMULET_REFLECTION) return (TRUE);
-			if (k_ptr->sval == SV_AMULET_TELEPATHY) return (TRUE);
-			return (FALSE);
+			if (k_ptr->sval == SV_AMULET_DOOM) return (FALSE);
+			if (k_ptr->sval == SV_AMULET_TELEPORT) return (FALSE);
+			if (k_ptr->sval == SV_AMULET_NO_MAGIC) return (FALSE);
+			if (k_ptr->sval == SV_AMULET_NO_TELE) return (FALSE);
+
+			return (TRUE);
+		}
+
+		/* Amy: climbing sets are good */
+		/* instruments are definitely good, otherwise you'll never find one better than +1! */
+		/* lights are definitely good because hello??? randart feanorian lamp? */
+		/* staves and wands are good, even the "bad" ones (haste monster for example) may have uses */
+		/* scrolls and potions are good since you may find proofed ones here */
+		/* daemon books are definitely good because why penalize demonology users??? */
+	case TV_TOOL:
+	case TV_INSTRUMENT:
+	case TV_LITE:
+	case TV_STAFF:
+	case TV_WAND:
+	case TV_SCROLL:
+	case TV_POTION:
+	case TV_POTION2:
+	case TV_DAEMON_BOOK:
+		{
+			return (TRUE);
 		}
 	}
 
@@ -5453,10 +5477,11 @@ bool make_object(object_type *j_ptr, bool good, bool great, obj_theme theme)
 	int objlevelmax = object_level;
 	int runebonus = get_skill(SKILL_RUNECRAFT);
 	if (runebonus > 0) objlevelmax += runebonus;
+	bool madespecialarti = FALSE;
 
 	/* Chance of "special object"
 	 * Amy edit: was too high, lowered and instead randart chances (mods/mods_aux.lua) increased */
-	invprob = (good ? 20 - luck( -9, 9) : 1000);
+	invprob = (good ? 50 - luck( -9, 9) : 1000);
 
 	/* Amy: since alchemy has been scrapped, artifact generation ability now instead makes artifacts spawn more often */
 	if (has_ability(AB_CREATE_ART)) {
@@ -5467,10 +5492,12 @@ bool make_object(object_type *j_ptr, bool good, bool great, obj_theme theme)
 	/* Base level for the object */
 	base = (good ? (objlevelmax + 10) : objlevelmax);
 
-
 	/* Generate a special object, or a normal object */
-	if ((rand_int(invprob) != 0) || !make_artifact_special(j_ptr))
-	{
+	if (rand_int(invprob) == 0) {
+		madespecialarti = make_artifact_special(j_ptr);
+	}
+
+	if (!madespecialarti) {
 		int k_idx;
 
 		/* See if the theme has been changed XXX XXX XXX */
