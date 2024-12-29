@@ -7639,6 +7639,24 @@ P:10:1d1:0:0:10
 F:IGNORE_ACID | REFLECT | RES_LITE
 D:A shield that reflects projectiles and grants resistance to light rays.
 
+N:945:& Steel Shot~
+G:{:s
+I:16:3:0
+W:15:0:0:4
+A:15/1
+P:0:1d6:0:0:0
+F:SHOW_MODS
+D:Massive metal balls that can be forcefully fired with a sling.
+
+N:946:& Conundrum Shot~
+G:{:B
+I:16:4:0
+W:30:0:0:10
+A:30/1
+P:0:2d4:0:0:0
+F:SHOW_MODS
+D:This sling ammo is made of superhard mineral and deals very good damage.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

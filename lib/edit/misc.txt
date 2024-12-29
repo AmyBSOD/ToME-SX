@@ -28,7 +28,7 @@ M:R:4246
 M:r:50
 
 # Maximum number of items in k_info.txt
-M:K:945
+M:K:947
 
 # Maximum number of vaults in v_info.txt
 M:V:148

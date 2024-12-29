@@ -1650,7 +1650,7 @@ void printRandoms(int lower, int upper, int count)
 						printf("L:208:100:208:0:208:0\n");
 						printf("A:188:100:188:0:188:0:188:188\n");
 						printf("O:20:20:20:20\n");
-						printf("F:EMPTY |\n");
+						printf("F:EMPTY | RANDOM_TOWNS |\n");
 						printf("R:10:0\n");
 						printf("R:70:3\n");
 						printf("M:INVISIBLE | HAS_LITE\n");
