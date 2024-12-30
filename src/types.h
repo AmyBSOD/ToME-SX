@@ -1899,109 +1899,109 @@ struct player_type
 	bool nastytrap1; /* unique saving trap - unique monsters without SPECIAL_GENE don't stay dead */
 	bool nastytrap2; /* ensnaring trap - cannot detect traps at all anymore */
 	bool nastytrap3; /* snaretype trap - cannot identify the type of a trap you trigger */
-	bool nastytrap4;
-	bool nastytrap5;
-	bool nastytrap6;
-	bool nastytrap7;
-	bool nastytrap8;
-	bool nastytrap9;
-	bool nastytrap10;
-	bool nastytrap11;
-	bool nastytrap12;
-	bool nastytrap13;
-	bool nastytrap14;
-	bool nastytrap15;
-	bool nastytrap16;
-	bool nastytrap17;
-	bool nastytrap18;
-	bool nastytrap19;
-	bool nastytrap20;
-	bool nastytrap21;
-	bool nastytrap22;
-	bool nastytrap23;
-	bool nastytrap24;
-	bool nastytrap25;
-	bool nastytrap26;
-	bool nastytrap27;
-	bool nastytrap28;
-	bool nastytrap29;
-	bool nastytrap30;
-	bool nastytrap31;
-	bool nastytrap32;
-	bool nastytrap33;
-	bool nastytrap34;
-	bool nastytrap35;
-	bool nastytrap36;
-	bool nastytrap37;
-	bool nastytrap38;
-	bool nastytrap39;
-	bool nastytrap40;
-	bool nastytrap41;
-	bool nastytrap42;
-	bool nastytrap43;
-	bool nastytrap44;
-	bool nastytrap45;
-	bool nastytrap46;
-	bool nastytrap47;
-	bool nastytrap48;
-	bool nastytrap49;
-	bool nastytrap50;
-	bool nastytrap51;
-	bool nastytrap52;
-	bool nastytrap53;
-	bool nastytrap54;
-	bool nastytrap55;
-	bool nastytrap56;
-	bool nastytrap57;
-	bool nastytrap58;
-	bool nastytrap59;
-	bool nastytrap60;
-	bool nastytrap61;
-	bool nastytrap62;
-	bool nastytrap63;
-	bool nastytrap64;
-	bool nastytrap65;
-	bool nastytrap66;
-	bool nastytrap67;
-	bool nastytrap68;
-	bool nastytrap69;
-	bool nastytrap70;
-	bool nastytrap71;
-	bool nastytrap72;
-	bool nastytrap73;
-	bool nastytrap74;
-	bool nastytrap75;
-	bool nastytrap76;
-	bool nastytrap77;
-	bool nastytrap78;
-	bool nastytrap79;
-	bool nastytrap80;
-	bool nastytrap81;
-	bool nastytrap82;
-	bool nastytrap83;
-	bool nastytrap84;
-	bool nastytrap85;
-	bool nastytrap86;
-	bool nastytrap87;
-	bool nastytrap88;
-	bool nastytrap89;
-	bool nastytrap90;
-	bool nastytrap91;
-	bool nastytrap92;
-	bool nastytrap93;
-	bool nastytrap94;
-	bool nastytrap95;
-	bool nastytrap96;
-	bool nastytrap97;
-	bool nastytrap98;
-	bool nastytrap99;
-	bool nastytrap100;
-	bool nastytrap101;
-	bool nastytrap102;
-	bool nastytrap103;
-	bool nastytrap104;
-	bool nastytrap105;
-	bool nastytrap106;
+	bool nastytrap4; /* impious trap - cannot gain piety */
+	bool nastytrap5; /* bad saving throw trap - your saving throw is always shit */
+	bool nastytrap6; /* bad disarming trap - your disarming ability is always shit */
+	bool nastytrap7; /* bad device trap - your devices ability is always shit */
+	bool nastytrap8; /* bad stealth trap - your stealth ability is always shit */
+	bool nastytrap9; /* bad searching trap - your searching ability is always shit */
+	bool nastytrap10; /* bad perception trap - your perception ability is always shit */
+	bool nastytrap11; /* heavy aggravation trap - you have permanent aggravate monster */
+	bool nastytrap12; /* foul curse trap - periodically get hit by the TY curse */
+	bool nastytrap13; /* morgoth trap - periodically get hit by the AMC */
+	bool nastytrap14; /* antirecall trap - cannot recall anymore */
+	bool nastytrap15; /* anti teleport trap - you cannot teleport */
+	bool nastytrap16; /* endangering trap - creates traps around you every once in a while */
+	bool nastytrap17; /* slowness trap - reduce your speed by 10 */
+	bool nastytrap18; /* slowdown trap - divide your speed by 2 */
+	bool nastytrap19; /* rmb loss trap - cannot farlook stuff */
+	bool nastytrap20; /* display loss trap - turns HUD off */
+	bool nastytrap21; /* auto destruct trap - get interrupted every turn */
+	bool nastytrap22; /* memory trap - replace messages */
+	bool nastytrap23; /* inventory trap - cannot open inventory */
+	bool nastytrap24; /* luck trap - your luck is shit */
+	bool nastytrap25; /* shades of grey trap - game becomes monochrome */
+	bool nastytrap26; /* itemcursing trap - your items get cursed every now and then */
+	bool nastytrap27; /* difficulty trap - increased monster difficulty */
+	bool nastytrap28; /* confusing trap - you can still become confused with resistance */
+	bool nastytrap29; /* blinding trap - you can still become blinded with resistance */
+	bool nastytrap30; /* fearful trap - you can still become afraid with resistance */
+	bool nastytrap31; /* mushroom samba trap - you can still become hallu with resistance */
+	bool nastytrap32; /* venom trap - you can still become poisoned with resistance */
+	bool nastytrap33; /* destructor trap - elemental damage destroys your items even with resistance */
+	bool nastytrap34; /* dimension trap - 4D pocket doesn't work */
+	bool nastytrap35; /* DSTW trap - potions sometimes don't work */
+	bool nastytrap36; /* status trap - cannot heal status effects and have to wait them out */
+	bool nastytrap37; /* pit creation trap - pit rooms spawn more often on new levels */
+	bool nastytrap38; /* no vaults trap - new levels cannot have lesser or greater vaults */
+	bool nastytrap39; /* mulch trap - ranged weapon ammo always mulches */
+	bool nastytrap40; /* disenchanting trap - your items still get disenchanted with resistance */
+	bool nastytrap41; /* reduce damage trap - your damage output is lower */
+	bool nastytrap42; /* reduce accuracy trap - your to-hit is lower */
+	bool nastytrap43; /* reduce armor trap - your armor class is lower */
+	bool nastytrap44; /* carry cap trap - your carry cap is lower */
+	bool nastytrap45; /* low item trap - items are of lower quality */
+	bool nastytrap46; /* shafting trap - stairs take you down several levels */
+	bool nastytrap47; /* unproof trap - items still get damaged even if they resist elemental damage */
+	bool nastytrap48; /* no detection trap - detection methods don't work */
+	bool nastytrap49; /* bad effect trap - bad stuff happens randomly */
+	bool nastytrap50; /* bad loot trap - artifacts don't generate and other items are worse */
+	bool nastytrap51; /* retrapping trap - new traps spawn over time */
+	bool nastytrap52; /* monster scaling trap - monster levelscaling is much harsher */
+	bool nastytrap53; /* sanity treble trap - you lose more sanity than normal */
+	bool nastytrap54; /* stat decrease trap - your stats are lower */
+	bool nastytrap55; /* bad health trap - your max HP is lower */
+	bool nastytrap56; /* bad mana trap - your max mana is lower */
+	bool nastytrap57; /* discount action trap - free action is less reliable */
+	bool nastytrap58; /* ambience trap - background damage effects are more common */
+	bool nastytrap59; /* full damage trap - monster melee attacks always deal full damage */
+	bool nastytrap60; /* permacurse trap - you cannot uncurse items */
+	bool nastytrap61; /* shrouded identity trap - star identify becomes normal identify */
+	bool nastytrap62; /* cut nutrition trap - you gain less nutrition */
+	bool nastytrap63; /* stealer trap - item-stealing monsters steal stuff more often */
+	bool nastytrap64; /* stat decay trap - your stats get worse over time */
+	bool nastytrap65; /* lootcut trap - monsters don't drop loot */
+	bool nastytrap66; /* boring level trap - new dungeon levels don't have items on the ground */
+	bool nastytrap67; /* trap increase trap - new dungeon levels have more traps */
+	bool nastytrap68; /* horror trap - you randomly receive status effects */
+	bool nastytrap69; /* crusher trap - monsters can crush loot */
+	bool nastytrap70; /* dark mode trap - lit areas can't be seen at a distance */
+	bool nastytrap71; /* charge loss trap - charge drain attacks instantly drain your shit to zero */
+	bool nastytrap72; /* paranoia trap - no confirmation when walking into peaceful monsters etc. */
+	bool nastytrap73; /* invis monster trap - see invisible doesn't work */
+	bool nastytrap74; /* no dodging trap - your dodging chance is always zero */
+	bool nastytrap75; /* ambush trap - ambushes on the world map happen more often */
+	bool nastytrap76; /* ripoff trap - shopkeepers charge more for their items */
+	bool nastytrap77; /* storelock trap - cannot enter shops at all */
+	bool nastytrap78; /* explosive breeding trap - breeding monsters breed more quickly */
+	bool nastytrap79; /* autocurse trap - equipping an item curses it */
+	bool nastytrap80; /* money loss trap - your money supply decreases over time */
+	bool nastytrap81; /* spawn rate trap - monsters spawn more quickly */
+	bool nastytrap82; /* recharge trap - you cannot recharge your wands and staves, and rods don't charge over time */
+	bool nastytrap83; /* fast metabolism trap - you hunger rapidly */
+	bool nastytrap84; /* egomonster trap - monsters spawn with egotypes more often */
+	bool nastytrap85; /* recurring amnesia trap - you get hit with amnesia every now and then */
+	bool nastytrap86; /* starvation trap - monsters don't drop corpses or skeletons */
+	bool nastytrap87; /* nonimmunity trap - you can only be resistant to elements, not immune, and also not doubly resistant */
+	bool nastytrap88; /* antileveling trap - you cannot gain experience anymore */
+	bool nastytrap89; /* unsustain trap - your stats get decreased even if you have them sustained */
+	bool nastytrap90; /* infra trap - you cannot have infravision */
+	bool nastytrap91; /* blow limit trap - you have less blows or shots per round */
+	bool nastytrap92; /* no slay trap - slays on weapons don't work anymore */
+	bool nastytrap93; /* no reflection trap - reflection doesn't work anymore */
+	bool nastytrap94; /* bloody trap - your char can bleed even with shard resistance */
+	bool nastytrap95; /* drain life trap - you get your experience drained even with resistance */
+	bool nastytrap96; /* scramble trap - nexus gives all the side effects even with resistance */
+	bool nastytrap97; /* antimagic shell trap - magical actions randomly fail */
+	bool nastytrap98; /* antiregen trap - regeneration doesn't work */
+	bool nastytrap99; /* exp drain trap - your experience gets reduced over time */
+	bool nastytrap100; /* teleportitis trap - you teleport uncontrollably */
+	bool nastytrap101; /* black gas trap - you have the black breath */
+	bool nastytrap102; /* nodrop curse trap - you cannot drop cursed items */
+	bool nastytrap103; /* uncritical trap - you can never land critical hits */
+	bool nastytrap104; /* heavy equipment trap - your equipment cannot be lithe and hinders dodging more */
+	bool nastytrap105; /* no esp trap - you cannot have any kind of ESP */
+	bool nastytrap106; /* pseudo id trap - items don't pseudo-identify themselves */
 	bool nastytrap107;
 	bool nastytrap108;
 	bool nastytrap109;

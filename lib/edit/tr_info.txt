@@ -1002,6 +1002,521 @@ I:10:100:5:0:90:0d0:G
 D:A voice booms out "Thou hast angered me, mortal."
 F:FLOOR | CHEST | DOOR
 
+N:212:Impious Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:213:Bad Saving Throw Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:214:Bad Disarming Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:215:Bad Device Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:216:Bad Stealth Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:217:Bad Searching Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:218:Bad Perception Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:219:Heavy Aggravation Trap
+I:35:2:50:4:15:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:220:Foul Curse Trap
+I:100:2:50:4:80:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:221:Morgoth Trap
+I:120:2:50:4:100:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:222:Antirecall Trap
+I:45:2:50:4:25:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:223:Anti Teleport Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:224:Endangering Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:225:Slowness Trap
+I:70:2:50:4:50:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:226:Slowdown Trap
+I:100:2:50:4:80:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:227:RMB Loss Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:228:Display Loss Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:229:Auto Destruct Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:230:Memory Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:231:Inventory Trap
+I:70:2:50:4:50:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:232:Luck Trap
+I:33:2:50:4:13:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:233:Shades of Grey Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:234:Itemcursing Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:235:Difficulty Trap
+I:36:2:50:4:16:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:236:Confusing Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:237:Blinding Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:238:Fearful Trap
+I:28:2:50:4:8:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:239:Mushroom Samba Trap
+I:45:2:50:4:25:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:240:Venom Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:241:Destructor Trap
+I:42:2:50:4:22:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:242:Dimension Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:243:DSTW Trap
+I:35:2:50:4:15:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:244:Status Trap
+I:45:2:50:4:25:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:245:Pit Creation Trap
+I:35:2:50:4:15:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:246:No Vaults Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:247:Mulch Trap
+I:53:2:50:4:33:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:248:Disenchanting Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:249:Reduce Damage Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:250:Reduce Accuracy Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:251:Reduce Armor Trap
+I:45:2:50:4:25:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:252:Carry Cap Trap
+I:25:2:50:4:5:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:253:Low Item Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:254:Shafting Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:255:Unproof Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:256:No Detection Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:257:Bad Effect Trap
+I:25:2:50:4:5:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:258:Bad Loot Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:259:Retrapping Trap
+I:35:2:50:4:15:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:260:Monster Scaling Trap
+I:55:2:50:4:35:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:261:Sanity Treble Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:262:Stat Decrease Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:263:Bad Health Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:264:Bad Mana Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:265:Discount Action Trap
+I:25:2:50:4:5:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:266:Ambience Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:267:Full Damage Trap
+I:80:2:50:4:60:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:268:Permacurse Trap
+I:70:2:50:4:50:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:269:Shrouded Identity Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:270:Cut Nutrition Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:271:Stealer Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:272:Stat Decay Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:273:Lootcut Trap
+I:45:2:50:4:25:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:274:Boring Level Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:275:Trap Increase Trap
+I:35:2:50:4:15:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:276:Horror Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:277:Crusher Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:278:Dark Mode Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:279:Charge Loss Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:280:Paranoia Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:281:Invis Monster Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:282:No Dodging Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:283:Ambush Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:284:Ripoff Trap
+I:35:2:50:4:15:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:285:Storelock Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:286:Explosive Breeding Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:287:Autocurse Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:288:Money Loss Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:289:Spawn Rate Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:290:Recharge Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:291:Fast Metabolism Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:292:Egomonster Trap
+I:44:2:50:4:24:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:293:Recurring Amnesia Trap
+I:53:2:50:4:33:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:294:Starvation Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:295:Nonimmunity Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:296:Antileveling Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:297:Unsustain Trap
+I:32:2:50:4:12:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:298:Infra Trap
+I:28:2:50:4:8:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:299:Blow Limit Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:300:No Slay Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:301:No Reflection Trap
+I:45:2:50:4:25:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:302:Bloody Trap
+I:28:2:50:4:8:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:303:Drain Life Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:304:Scramble Trap
+I:45:2:50:4:25:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:305:Antimagic Shell Trap
+I:70:2:50:4:50:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:306:Antiregen Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:307:Exp Drain Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:308:Teleportitis Trap
+I:35:2:50:4:15:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:309:Black Gas Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:310:Nodrop Curse Trap
+I:45:2:50:4:25:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:311:Uncritical Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:312:Heavy Equipment Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:313:No ESP Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:314:Pseudo ID Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

@@ -462,6 +462,109 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY1:
 		case TRAP_NASTY2:
 		case TRAP_NASTY3:
+		case TRAP_NASTY4:
+		case TRAP_NASTY5:
+		case TRAP_NASTY6:
+		case TRAP_NASTY7:
+		case TRAP_NASTY8:
+		case TRAP_NASTY9:
+		case TRAP_NASTY10:
+		case TRAP_NASTY11:
+		case TRAP_NASTY12:
+		case TRAP_NASTY13:
+		case TRAP_NASTY14:
+		case TRAP_NASTY15:
+		case TRAP_NASTY16:
+		case TRAP_NASTY17:
+		case TRAP_NASTY18:
+		case TRAP_NASTY19:
+		case TRAP_NASTY20:
+		case TRAP_NASTY21:
+		case TRAP_NASTY22:
+		case TRAP_NASTY23:
+		case TRAP_NASTY24:
+		case TRAP_NASTY25:
+		case TRAP_NASTY26:
+		case TRAP_NASTY27:
+		case TRAP_NASTY28:
+		case TRAP_NASTY29:
+		case TRAP_NASTY30:
+		case TRAP_NASTY31:
+		case TRAP_NASTY32:
+		case TRAP_NASTY33:
+		case TRAP_NASTY34:
+		case TRAP_NASTY35:
+		case TRAP_NASTY36:
+		case TRAP_NASTY37:
+		case TRAP_NASTY38:
+		case TRAP_NASTY39:
+		case TRAP_NASTY40:
+		case TRAP_NASTY41:
+		case TRAP_NASTY42:
+		case TRAP_NASTY43:
+		case TRAP_NASTY44:
+		case TRAP_NASTY45:
+		case TRAP_NASTY46:
+		case TRAP_NASTY47:
+		case TRAP_NASTY48:
+		case TRAP_NASTY49:
+		case TRAP_NASTY50:
+		case TRAP_NASTY51:
+		case TRAP_NASTY52:
+		case TRAP_NASTY53:
+		case TRAP_NASTY54:
+		case TRAP_NASTY55:
+		case TRAP_NASTY56:
+		case TRAP_NASTY57:
+		case TRAP_NASTY58:
+		case TRAP_NASTY59:
+		case TRAP_NASTY60:
+		case TRAP_NASTY61:
+		case TRAP_NASTY62:
+		case TRAP_NASTY63:
+		case TRAP_NASTY64:
+		case TRAP_NASTY65:
+		case TRAP_NASTY66:
+		case TRAP_NASTY67:
+		case TRAP_NASTY68:
+		case TRAP_NASTY69:
+		case TRAP_NASTY70:
+		case TRAP_NASTY71:
+		case TRAP_NASTY72:
+		case TRAP_NASTY73:
+		case TRAP_NASTY74:
+		case TRAP_NASTY75:
+		case TRAP_NASTY76:
+		case TRAP_NASTY77:
+		case TRAP_NASTY78:
+		case TRAP_NASTY79:
+		case TRAP_NASTY80:
+		case TRAP_NASTY81:
+		case TRAP_NASTY82:
+		case TRAP_NASTY83:
+		case TRAP_NASTY84:
+		case TRAP_NASTY85:
+		case TRAP_NASTY86:
+		case TRAP_NASTY87:
+		case TRAP_NASTY88:
+		case TRAP_NASTY89:
+		case TRAP_NASTY90:
+		case TRAP_NASTY91:
+		case TRAP_NASTY92:
+		case TRAP_NASTY93:
+		case TRAP_NASTY94:
+		case TRAP_NASTY95:
+		case TRAP_NASTY96:
+		case TRAP_NASTY97:
+		case TRAP_NASTY98:
+		case TRAP_NASTY99:
+		case TRAP_NASTY100:
+		case TRAP_NASTY101:
+		case TRAP_NASTY102:
+		case TRAP_NASTY103:
+		case TRAP_NASTY104:
+		case TRAP_NASTY105:
+		case TRAP_NASTY106:
 			return FALSE;
 	}
 
@@ -477,6 +580,109 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY1:
 		case TRAP_NASTY2:
 		case TRAP_NASTY3:
+		case TRAP_NASTY4:
+		case TRAP_NASTY5:
+		case TRAP_NASTY6:
+		case TRAP_NASTY7:
+		case TRAP_NASTY8:
+		case TRAP_NASTY9:
+		case TRAP_NASTY10:
+		case TRAP_NASTY11:
+		case TRAP_NASTY12:
+		case TRAP_NASTY13:
+		case TRAP_NASTY14:
+		case TRAP_NASTY15:
+		case TRAP_NASTY16:
+		case TRAP_NASTY17:
+		case TRAP_NASTY18:
+		case TRAP_NASTY19:
+		case TRAP_NASTY20:
+		case TRAP_NASTY21:
+		case TRAP_NASTY22:
+		case TRAP_NASTY23:
+		case TRAP_NASTY24:
+		case TRAP_NASTY25:
+		case TRAP_NASTY26:
+		case TRAP_NASTY27:
+		case TRAP_NASTY28:
+		case TRAP_NASTY29:
+		case TRAP_NASTY30:
+		case TRAP_NASTY31:
+		case TRAP_NASTY32:
+		case TRAP_NASTY33:
+		case TRAP_NASTY34:
+		case TRAP_NASTY35:
+		case TRAP_NASTY36:
+		case TRAP_NASTY37:
+		case TRAP_NASTY38:
+		case TRAP_NASTY39:
+		case TRAP_NASTY40:
+		case TRAP_NASTY41:
+		case TRAP_NASTY42:
+		case TRAP_NASTY43:
+		case TRAP_NASTY44:
+		case TRAP_NASTY45:
+		case TRAP_NASTY46:
+		case TRAP_NASTY47:
+		case TRAP_NASTY48:
+		case TRAP_NASTY49:
+		case TRAP_NASTY50:
+		case TRAP_NASTY51:
+		case TRAP_NASTY52:
+		case TRAP_NASTY53:
+		case TRAP_NASTY54:
+		case TRAP_NASTY55:
+		case TRAP_NASTY56:
+		case TRAP_NASTY57:
+		case TRAP_NASTY58:
+		case TRAP_NASTY59:
+		case TRAP_NASTY60:
+		case TRAP_NASTY61:
+		case TRAP_NASTY62:
+		case TRAP_NASTY63:
+		case TRAP_NASTY64:
+		case TRAP_NASTY65:
+		case TRAP_NASTY66:
+		case TRAP_NASTY67:
+		case TRAP_NASTY68:
+		case TRAP_NASTY69:
+		case TRAP_NASTY70:
+		case TRAP_NASTY71:
+		case TRAP_NASTY72:
+		case TRAP_NASTY73:
+		case TRAP_NASTY74:
+		case TRAP_NASTY75:
+		case TRAP_NASTY76:
+		case TRAP_NASTY77:
+		case TRAP_NASTY78:
+		case TRAP_NASTY79:
+		case TRAP_NASTY80:
+		case TRAP_NASTY81:
+		case TRAP_NASTY82:
+		case TRAP_NASTY83:
+		case TRAP_NASTY84:
+		case TRAP_NASTY85:
+		case TRAP_NASTY86:
+		case TRAP_NASTY87:
+		case TRAP_NASTY88:
+		case TRAP_NASTY89:
+		case TRAP_NASTY90:
+		case TRAP_NASTY91:
+		case TRAP_NASTY92:
+		case TRAP_NASTY93:
+		case TRAP_NASTY94:
+		case TRAP_NASTY95:
+		case TRAP_NASTY96:
+		case TRAP_NASTY97:
+		case TRAP_NASTY98:
+		case TRAP_NASTY99:
+		case TRAP_NASTY100:
+		case TRAP_NASTY101:
+		case TRAP_NASTY102:
+		case TRAP_NASTY103:
+		case TRAP_NASTY104:
+		case TRAP_NASTY105:
+		case TRAP_NASTY106:
 			return FALSE;
 	}
 
@@ -2123,6 +2329,1042 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 
 			p_ptr->nastytrap3 = TRUE;
+
+			break;			
+		}
+
+	case TRAP_NASTY4:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap4 = TRUE;
+
+			break;			
+		}
+
+	case TRAP_NASTY5:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap5 = TRUE;
+
+			break;			
+		}
+
+	case TRAP_NASTY6:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap6 = TRUE;
+
+			break;			
+		}
+
+	case TRAP_NASTY7:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap7 = TRUE;
+
+			break;			
+		}
+
+	case TRAP_NASTY8:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap8 = TRUE;
+
+			break;			
+		}
+
+	case TRAP_NASTY9:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap9 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY10:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap10 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY11:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap11 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY12:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap12 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY13:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap13 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY14:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap14 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY15:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap15 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY16:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap16 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY17:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap17 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY18:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap18 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY19:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap19 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY20:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap20 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY21:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap21 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY22:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap22 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY23:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap23 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY24:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap24 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY25:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap25 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY26:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap26 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY27:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap27 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY28:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap28 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY29:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap29 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY30:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap30 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY31:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap31 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY32:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap32 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY33:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap33 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY34:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap34 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY35:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap35 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY36:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap36 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY37:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap37 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY38:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap38 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY39:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap39 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY40:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap40 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY41:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap41 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY42:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap42 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY43:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap43 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY44:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap44 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY45:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap45 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY46:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap46 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY47:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap47 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY48:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap48 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY49:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap49 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY50:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap50 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY51:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap51 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY52:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap52 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY53:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap53 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY54:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap54 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY55:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap55 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY56:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap56 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY57:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap57 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY58:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap58 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY59:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap59 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY60:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap60 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY61:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap61 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY62:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap62 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY63:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap63 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY64:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap64 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY65:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap65 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY66:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap66 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY67:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap67 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY68:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap68 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY69:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap69 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY70:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap70 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY71:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap71 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY72:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap72 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY73:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap73 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY74:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap74 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY75:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap75 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY76:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap76 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY77:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap77 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY78:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap78 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY79:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap79 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY80:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap80 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY81:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap81 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY82:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap82 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY83:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap83 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY84:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap84 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY85:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap85 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY86:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap86 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY87:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap87 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY88:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap88 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY89:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap89 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY90:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap90 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY91:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap91 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY92:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap92 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY93:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap93 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY94:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap94 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY95:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap95 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY96:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap96 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY97:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap97 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY98:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap98 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY99:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap99 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY100:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap100 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY101:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap101 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY102:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap102 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY103:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap103 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY104:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap104 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY105:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap105 = TRUE;
+
+			break;			
+		}
+	case TRAP_NASTY106:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap106 = TRUE;
 
 			break;			
 		}
@@ -4523,6 +5765,316 @@ void give_random_nastytrap_effect(void)
 		case 3:
 			p_ptr->nastytrap3 = TRUE;
 			break;
+		case 4:
+			p_ptr->nastytrap4 = TRUE;
+			break;
+		case 5:
+			p_ptr->nastytrap5 = TRUE;
+			break;
+		case 6:
+			p_ptr->nastytrap6 = TRUE;
+			break;
+		case 7:
+			p_ptr->nastytrap7 = TRUE;
+			break;
+		case 8:
+			p_ptr->nastytrap8 = TRUE;
+			break;
+		case 9:
+			p_ptr->nastytrap9 = TRUE;
+			break;
+		case 10:
+			p_ptr->nastytrap10 = TRUE;
+			break;
+		case 11:
+			p_ptr->nastytrap11 = TRUE;
+			break;
+		case 12:
+			p_ptr->nastytrap12 = TRUE;
+			break;
+		case 13:
+			p_ptr->nastytrap13 = TRUE;
+			break;
+		case 14:
+			p_ptr->nastytrap14 = TRUE;
+			break;
+		case 15:
+			p_ptr->nastytrap15 = TRUE;
+			break;
+		case 16:
+			p_ptr->nastytrap16 = TRUE;
+			break;
+		case 17:
+			p_ptr->nastytrap17 = TRUE;
+			break;
+		case 18:
+			p_ptr->nastytrap18 = TRUE;
+			break;
+		case 19:
+			p_ptr->nastytrap19 = TRUE;
+			break;
+		case 20:
+			p_ptr->nastytrap20 = TRUE;
+			break;
+		case 21:
+			p_ptr->nastytrap21 = TRUE;
+			break;
+		case 22:
+			p_ptr->nastytrap22 = TRUE;
+			break;
+		case 23:
+			p_ptr->nastytrap23 = TRUE;
+			break;
+		case 24:
+			p_ptr->nastytrap24 = TRUE;
+			break;
+		case 25:
+			p_ptr->nastytrap25 = TRUE;
+			break;
+		case 26:
+			p_ptr->nastytrap26 = TRUE;
+			break;
+		case 27:
+			p_ptr->nastytrap27 = TRUE;
+			break;
+		case 28:
+			p_ptr->nastytrap28 = TRUE;
+			break;
+		case 29:
+			p_ptr->nastytrap29 = TRUE;
+			break;
+		case 30:
+			p_ptr->nastytrap30 = TRUE;
+			break;
+		case 31:
+			p_ptr->nastytrap31 = TRUE;
+			break;
+		case 32:
+			p_ptr->nastytrap32 = TRUE;
+			break;
+		case 33:
+			p_ptr->nastytrap33 = TRUE;
+			break;
+		case 34:
+			p_ptr->nastytrap34 = TRUE;
+			break;
+		case 35:
+			p_ptr->nastytrap35 = TRUE;
+			break;
+		case 36:
+			p_ptr->nastytrap36 = TRUE;
+			break;
+		case 37:
+			p_ptr->nastytrap37 = TRUE;
+			break;
+		case 38:
+			p_ptr->nastytrap38 = TRUE;
+			break;
+		case 39:
+			p_ptr->nastytrap39 = TRUE;
+			break;
+		case 40:
+			p_ptr->nastytrap40 = TRUE;
+			break;
+		case 41:
+			p_ptr->nastytrap41 = TRUE;
+			break;
+		case 42:
+			p_ptr->nastytrap42 = TRUE;
+			break;
+		case 43:
+			p_ptr->nastytrap43 = TRUE;
+			break;
+		case 44:
+			p_ptr->nastytrap44 = TRUE;
+			break;
+		case 45:
+			p_ptr->nastytrap45 = TRUE;
+			break;
+		case 46:
+			p_ptr->nastytrap46 = TRUE;
+			break;
+		case 47:
+			p_ptr->nastytrap47 = TRUE;
+			break;
+		case 48:
+			p_ptr->nastytrap48 = TRUE;
+			break;
+		case 49:
+			p_ptr->nastytrap49 = TRUE;
+			break;
+		case 50:
+			p_ptr->nastytrap50 = TRUE;
+			break;
+		case 51:
+			p_ptr->nastytrap51 = TRUE;
+			break;
+		case 52:
+			p_ptr->nastytrap52 = TRUE;
+			break;
+		case 53:
+			p_ptr->nastytrap53 = TRUE;
+			break;
+		case 54:
+			p_ptr->nastytrap54 = TRUE;
+			break;
+		case 55:
+			p_ptr->nastytrap55 = TRUE;
+			break;
+		case 56:
+			p_ptr->nastytrap56 = TRUE;
+			break;
+		case 57:
+			p_ptr->nastytrap57 = TRUE;
+			break;
+		case 58:
+			p_ptr->nastytrap58 = TRUE;
+			break;
+		case 59:
+			p_ptr->nastytrap59 = TRUE;
+			break;
+		case 60:
+			p_ptr->nastytrap60 = TRUE;
+			break;
+		case 61:
+			p_ptr->nastytrap61 = TRUE;
+			break;
+		case 62:
+			p_ptr->nastytrap62 = TRUE;
+			break;
+		case 63:
+			p_ptr->nastytrap63 = TRUE;
+			break;
+		case 64:
+			p_ptr->nastytrap64 = TRUE;
+			break;
+		case 65:
+			p_ptr->nastytrap65 = TRUE;
+			break;
+		case 66:
+			p_ptr->nastytrap66 = TRUE;
+			break;
+		case 67:
+			p_ptr->nastytrap67 = TRUE;
+			break;
+		case 68:
+			p_ptr->nastytrap68 = TRUE;
+			break;
+		case 69:
+			p_ptr->nastytrap69 = TRUE;
+			break;
+		case 70:
+			p_ptr->nastytrap70 = TRUE;
+			break;
+		case 71:
+			p_ptr->nastytrap71 = TRUE;
+			break;
+		case 72:
+			p_ptr->nastytrap72 = TRUE;
+			break;
+		case 73:
+			p_ptr->nastytrap73 = TRUE;
+			break;
+		case 74:
+			p_ptr->nastytrap74 = TRUE;
+			break;
+		case 75:
+			p_ptr->nastytrap75 = TRUE;
+			break;
+		case 76:
+			p_ptr->nastytrap76 = TRUE;
+			break;
+		case 77:
+			p_ptr->nastytrap77 = TRUE;
+			break;
+		case 78:
+			p_ptr->nastytrap78 = TRUE;
+			break;
+		case 79:
+			p_ptr->nastytrap79 = TRUE;
+			break;
+		case 80:
+			p_ptr->nastytrap80 = TRUE;
+			break;
+		case 81:
+			p_ptr->nastytrap81 = TRUE;
+			break;
+		case 82:
+			p_ptr->nastytrap82 = TRUE;
+			break;
+		case 83:
+			p_ptr->nastytrap83 = TRUE;
+			break;
+		case 84:
+			p_ptr->nastytrap84 = TRUE;
+			break;
+		case 85:
+			p_ptr->nastytrap85 = TRUE;
+			break;
+		case 86:
+			p_ptr->nastytrap86 = TRUE;
+			break;
+		case 87:
+			p_ptr->nastytrap87 = TRUE;
+			break;
+		case 88:
+			p_ptr->nastytrap88 = TRUE;
+			break;
+		case 89:
+			p_ptr->nastytrap89 = TRUE;
+			break;
+		case 90:
+			p_ptr->nastytrap90 = TRUE;
+			break;
+		case 91:
+			p_ptr->nastytrap91 = TRUE;
+			break;
+		case 92:
+			p_ptr->nastytrap92 = TRUE;
+			break;
+		case 93:
+			p_ptr->nastytrap93 = TRUE;
+			break;
+		case 94:
+			p_ptr->nastytrap94 = TRUE;
+			break;
+		case 95:
+			p_ptr->nastytrap95 = TRUE;
+			break;
+		case 96:
+			p_ptr->nastytrap96 = TRUE;
+			break;
+		case 97:
+			p_ptr->nastytrap97 = TRUE;
+			break;
+		case 98:
+			p_ptr->nastytrap98 = TRUE;
+			break;
+		case 99:
+			p_ptr->nastytrap99 = TRUE;
+			break;
+		case 100:
+			p_ptr->nastytrap100 = TRUE;
+			break;
+		case 101:
+			p_ptr->nastytrap101 = TRUE;
+			break;
+		case 102:
+			p_ptr->nastytrap102 = TRUE;
+			break;
+		case 103:
+			p_ptr->nastytrap103 = TRUE;
+			break;
+		case 104:
+			p_ptr->nastytrap104 = TRUE;
+			break;
+		case 105:
+			p_ptr->nastytrap105 = TRUE;
+			break;
+		case 106:
+			p_ptr->nastytrap106 = TRUE;
+			break;
+
 	}
 }
 
