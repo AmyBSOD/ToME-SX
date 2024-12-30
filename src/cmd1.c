@@ -530,6 +530,7 @@ void search(void)
 
 	cave_type *c_ptr;
 
+	int trapdiff = 0;
 
 	/* Start with base search ability */
 	chance = p_ptr->skill_srh;
@@ -553,14 +554,23 @@ void search(void)
 				/* Invisible trap */
 				if ((c_ptr->t_idx != 0) && !(p_ptr->nastytrap2) && !(c_ptr->info & CAVE_TRDT))
 				{
-					/* Pick a trap */
-					pick_trap(y, x);
+					/* very high-level traps should be harder to find --Amy */
+					trapdiff = t_info[c_ptr->t_idx].difficulty;
+					if (dun_level > 19) trapdiff += (dun_level / 20);
+					if (trapdiff < 1) trapdiff = 1;
 
-					/* Message */
-					msg_print("You have found a trap.");
+					if (randint(trapdiff) <= (p_ptr->skill_srh + 40) ) {
 
-					/* Disturb */
-					disturb(0, 0);
+						/* Pick a trap */
+						pick_trap(y, x);
+
+						/* Message */
+						msg_print("You have found a trap.");
+
+						/* Disturb */
+						disturb(0, 0);
+
+					}
 				}
 
 				/* Secret door */
