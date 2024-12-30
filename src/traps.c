@@ -399,7 +399,7 @@ static bool player_handle_missile_trap(s16b num, s16b tval, s16b sval, s16b dd, 
 
 		if (pdam > 0)
 		{
-			if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
+			if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
 			{
 				(void)set_poisoned(p_ptr->poisoned + pdam);
 			}
@@ -1075,7 +1075,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/* Poison Needle Trap */
 	case TRAP_OF_POISON_NEEDLE:
 		{
-			if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
+			if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
 			{
 				msg_print("You prick yourself on a poisoned needle.");
 				(void)set_poisoned(p_ptr->poisoned + rand_int(15) + 10);
@@ -1202,7 +1202,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			ident |= dec_stat(A_WIS, rand_int(20) + 10, STAT_DEC_NORMAL);
 			ident |= dec_stat(A_INT, rand_int(20) + 10, STAT_DEC_NORMAL);
 
-			if (!p_ptr->resist_conf || (rand_int(100) < 5) )
+			if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
 			{
 				ident |= set_confused(p_ptr->confused + rand_int(100) + 50);
 			}
@@ -1252,11 +1252,11 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			msg_print("A powerful magic protected this.");
 
-			if (!p_ptr->resist_blind || (rand_int(100) < 5) )
+			if (!p_ptr->resist_blind || p_ptr->nastytrap29 || (rand_int(100) < 5) )
 			{
 				set_blind(p_ptr->blind + rand_int(100) + 100);
 			}
-			if (!p_ptr->resist_conf || (rand_int(100) < 5) )
+			if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
 			{
 				set_confused(p_ptr->confused + rand_int(20) + 15);
 			}
@@ -1728,7 +1728,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_FEAR:
 		{
 			msg_format("You get the cold shivers.");
-			if (!p_ptr->resist_fear || (rand_int(100) < 5) ) {
+			if (!p_ptr->resist_fear || p_ptr->nastytrap30 || (rand_int(100) < 5) ) {
 				set_afraid(p_ptr->afraid + 50 + randint(200));
 			}
 			ident = TRUE;
@@ -1751,7 +1751,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (!ident)
 			{
 				/* Increase "afraid" */
-				if (p_ptr->resist_fear && (rand_int(100) > 4) )
+				if (p_ptr->resist_fear && !p_ptr->nastytrap30 && (rand_int(100) > 4) )
 				{
 					msg_print("You feel as if you had a nightmare!");
 				}
@@ -3939,11 +3939,11 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			case 16:
 			case 17:
 			{
-				if (!p_ptr->resist_conf || (rand_int(100) < 5) )
+				if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
 				{
 					(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 				}
-				if ( (!p_ptr->resist_chaos || (rand_int(100) < 5) ) && (randint(3) == 1))
+				if ( (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) ) && (randint(3) == 1))
 				{
 					(void) set_image(p_ptr->image + rand_int(250) + 150);
 				}
@@ -3991,7 +3991,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			case 44:
 			case 45:
 			{
-				if (!p_ptr->resist_conf || (rand_int(100) < 5) )
+				if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
 				{
 					(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 				}
@@ -4003,7 +4003,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					(void)do_dec_stat(A_INT, STAT_DEC_NORMAL);
 				while ((rand_int(100) > player_actual_saving_throw()) && (randint(100) != 1) )
 					(void)do_dec_stat(A_WIS, STAT_DEC_NORMAL);
-				if (!p_ptr->resist_chaos)
+				if (!p_ptr->resist_chaos || p_ptr->nastytrap31)
 				{
 					(void) set_image(p_ptr->image + rand_int(250) + 150);
 				}
@@ -4088,7 +4088,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			case 91:
 			{
 
-				if (!p_ptr->resist_fear || (rand_int(100) < 4) )
+				if (!p_ptr->resist_fear || p_ptr->nastytrap30 || (rand_int(100) < 4) )
 				{
 					set_afraid(p_ptr->afraid + 3 + dun_level);
 				}

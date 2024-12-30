@@ -3016,6 +3016,8 @@ int breakage_chance(object_type *o_ptr)
 			}
 			if (reducer < 10) reducer = 10;
 
+			if (p_ptr->nastytrap39) reducer = 100;
+
 			return (reducer);
 		}
 
@@ -3034,6 +3036,8 @@ int breakage_chance(object_type *o_ptr)
 				reducer -= get_skill_scale(SKILL_ARCHERY, 10);
 			}
 			if (reducer < 5) reducer = 5;
+
+			if (p_ptr->nastytrap39) reducer = 100;
 
 			return (reducer);
 		}

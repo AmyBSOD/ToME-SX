@@ -1026,6 +1026,9 @@ static void prt_frame_basic(void)
 {
 	int i;
 
+	/* display loss nastytrap: don't show the information at all --Amy */
+	if (p_ptr->nastytrap20) return;
+
 	/* Race and Class */
 	prt_field(rp_ptr->title + rp_name, ROW_RACE, COL_RACE);
 	prt_field(spp_ptr->title + c_name, ROW_CLASS, COL_CLASS);
@@ -2143,6 +2146,8 @@ int weight_limit(void)
 	/* Weight limit based only on strength */
 	i = adj_str_wgt[p_ptr->stat_ind[A_STR]] * 150;
 	i += (get_skill(SKILL_WEIGHTLIFTING) * 100);
+
+	if (p_ptr->nastytrap44) i /= 3;
 
 	if (process_hooks_ret(HOOK_CALC_WEIGHT, "d", "(d)", i))
 		i = process_hooks_return[0].num;
@@ -4379,6 +4384,43 @@ void calc_bonuses(bool silent)
 
 	/* Let the scripts do what they need */
 	process_hooks(HOOK_CALC_BONUS_END, "(d)", silent);
+
+	if (p_ptr->nastytrap5 && p_ptr->skill_sav > 0) p_ptr->skill_sav = 0;
+	if (p_ptr->nastytrap6 && p_ptr->skill_dis > 0) p_ptr->skill_dis = 0;
+	if (p_ptr->nastytrap7 && p_ptr->skill_dev > 0) p_ptr->skill_dev = 0;
+	if (p_ptr->nastytrap8 && p_ptr->skill_stl > 0) p_ptr->skill_stl = 0;
+	if (p_ptr->nastytrap9 && p_ptr->skill_srh > 0) p_ptr->skill_srh = 0;
+	if (p_ptr->nastytrap10 && p_ptr->skill_fos > 0) p_ptr->skill_fos = 0;
+
+	if (p_ptr->nastytrap11) p_ptr->aggravate = TRUE;
+
+	if (p_ptr->nastytrap17) p_ptr->pspeed -= 10;
+	if (p_ptr->nastytrap18 && p_ptr->pspeed > 111) {
+		int speedreductor = (p_ptr->pspeed - 110);
+		speedreductor /= 2;
+		p_ptr->pspeed -= speedreductor;
+	}
+
+	if (p_ptr->nastytrap24) {
+		p_ptr->luck_cur -= 13;
+		if (p_ptr->luck_cur > -13) p_ptr->luck_cur = -13;
+	}
+
+	if (p_ptr->nastytrap41) {
+		p_ptr->to_d_melee -= 10;
+		p_ptr->to_d_ranged -= 10;
+	}
+	if (p_ptr->nastytrap42) {
+		p_ptr->to_h_melee -= 20;
+		p_ptr->to_h_ranged -= 20;
+	}
+	if (p_ptr->nastytrap43) {
+		if (p_ptr->to_a > 1) p_ptr->to_a /= 2;
+		p_ptr->to_a -= 10;
+		if (p_ptr->dis_to_a > 1) p_ptr->dis_to_a /= 2;
+		p_ptr->dis_to_a -= 10;
+	}
+
 }
 
 

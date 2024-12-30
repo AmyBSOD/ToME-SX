@@ -29,6 +29,10 @@ void do_cmd_inven(void)
 
 	char out_val[160];
 
+	if (p_ptr->nastytrap23) {
+		msg_print("Not enough memory to create inventory window");
+		return;
+	}
 
 	/* Note that we are in "p_ptr->inventory" mode */
 	command_wrk = FALSE;
@@ -69,9 +73,9 @@ void do_cmd_inven(void)
 		s32b total_weight = calc_total_weight();
 
 		strnfmt(out_val, 160,
-		        "Inventory: carrying %ld.%ld pounds (%ld%% of capacity). Command: ",
+		        "Inventory: carrying %ld.%ld pounds (%ld%% of capacity (%ld)). Command: ",
 		        total_weight / 10, total_weight % 10,
-		        (total_weight * 100) / ((weight_limit()) / 2));
+		        (total_weight * 100) / ((weight_limit()) / 2), weight_limit() / 20);
 	}
 
 #endif
@@ -113,6 +117,10 @@ void do_cmd_equip(void)
 {
 	char out_val[160];
 
+	if (p_ptr->nastytrap23) {
+		msg_print("Not enough memory to create inventory window");
+		return;
+	}
 
 	/* Note that we are in "equipment" mode */
 	command_wrk = TRUE;
@@ -136,9 +144,9 @@ void do_cmd_equip(void)
 
 		/* Build a prompt */
 		strnfmt(out_val, 160,
-		        "Equipment: carrying %ld.%ld pounds (%ld%% of capacity). Command: ",
+		        "Equipment: carrying %ld.%ld pounds (%ld%% of capacity (%ld)). Command: ",
 		        total_weight / 10, total_weight % 10,
-		        (total_weight * 100) / ((weight_limit()) / 2));
+		        (total_weight * 100) / ((weight_limit()) / 2), weight_limit() / 20);
 	}
 
 	/* Get a command */
@@ -832,6 +840,10 @@ void do_cmd_observe(void)
 
 	cptr q, s;
 
+	if (p_ptr->nastytrap23) {
+		msg_print("Not enough memory to create inventory window");
+		return;
+	}
 
 	/* Get an item */
 	q = "Examine which item? ";

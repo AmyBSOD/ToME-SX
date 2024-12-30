@@ -3069,6 +3069,26 @@ static void process_world(void)
 		}
 	}
 
+	if (p_ptr->nastytrap12 && (rand_int(TY_CURSE_CHANCE) == 0) ) {
+		activate_ty_curse();
+	}
+	if (p_ptr->nastytrap13 && (rand_int(DG_CURSE_CHANCE) == 0) ) {
+		activate_dg_curse();
+	}
+
+	if (p_ptr->nastytrap16 && (rand_int(1000) == 0) ) {
+		trap_creation();
+	}
+
+	if (p_ptr->nastytrap26 && (rand_int(1000) == 0) ) {
+		curse_equipment(50, 10);
+	}
+
+	/* auto destruct trap: constantly interrupt player even if nothing dangerous is nearby --Amy */
+	if (p_ptr->nastytrap21) {
+		disturb(0, 0);
+	}
+
 	/* Process equipment */
 	for (j = 0, i = INVEN_WIELD; i < INVEN_TOTAL; i++)
 	{
@@ -3106,7 +3126,7 @@ static void process_world(void)
 		 */
 		if ((f3 & TR3_TELEPORT) && (rand_int(100) < 1))
 		{
-			if ((o_ptr->ident & IDENT_CURSED) && !p_ptr->anti_tele)
+			if ((o_ptr->ident & IDENT_CURSED) && !p_ptr->anti_tele && !p_ptr->nastytrap15)
 			{
 				disturb(0, 0);
 

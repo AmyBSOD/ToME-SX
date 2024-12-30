@@ -185,7 +185,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 
 			case RBE_POISON:
 				{
-					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
+					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
 					{
 						set_poisoned(p_ptr->poisoned + dam + idam + 10);
 						harmful = TRUE;
@@ -238,7 +238,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 
 			case RBE_BLIND:
 				{
-					if (!p_ptr->resist_blind || (rand_int(100) < 5) )
+					if (!p_ptr->resist_blind || p_ptr->nastytrap29 || (rand_int(100) < 5) )
 					{
 						set_blind(p_ptr->blind + dam * 2 + idam * 2 + 20);
 					}
@@ -248,11 +248,11 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 
 			case RBE_CONFUSE:
 				{
-					if (!p_ptr->resist_conf || (rand_int(100) < 5) )
+					if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
 					{
 						set_confused(p_ptr->confused + dam + idam + 10);
 					}
-					if ( (!p_ptr->resist_chaos || (rand_int(100) < 5) ) && rand_int(mdam - dam))
+					if ( (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) ) && rand_int(mdam - dam))
 					{
 						set_image(p_ptr->image + dam * 10 + idam * 10 + 100);
 					}
@@ -262,7 +262,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 
 			case RBE_HALLU:
 				{
-					if ( (!p_ptr->resist_chaos || (rand_int(100) < 5) ) && rand_int(mdam - dam))
+					if ( (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) ) && rand_int(mdam - dam))
 					{
 						set_image(p_ptr->image + dam * 10 + idam * 10 + 50);
 					}
@@ -272,7 +272,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 
 			case RBE_TERRIFY:
 				{
-					if (!p_ptr->resist_fear || (rand_int(100) < 5) )
+					if (!p_ptr->resist_fear || p_ptr->nastytrap30 || (rand_int(100) < 5) )
 					{
 						set_afraid(p_ptr->afraid + dam + idam + 10);
 					}
@@ -583,7 +583,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 		if (p_ptr->resist_pois) brdam = (brdam + 2) / 3;
 		if (p_ptr->oppose_pois) brdam = (brdam + 2) / 3;
 
-		if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
+		if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
 		{
 			(void)set_poisoned(p_ptr->poisoned + rand_int(brdam) + 10);
 		}
@@ -639,7 +639,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 	{
 		msg_print("A strange liquid splashes on you!");
 
-		if (!p_ptr->resist_conf || (rand_int(100) < 5) )
+		if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
 		{
 			set_confused(p_ptr->confused + brdam + idam + 10);
 		}
@@ -660,12 +660,12 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 			brdam /= (randint(6) + 6);
 		}
 
-		if (!p_ptr->resist_conf || (rand_int(100) < 5) )
+		if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
 		{
 			(void)set_confused(p_ptr->confused + rand_int(20) + 10);
 		}
 
-		if (!p_ptr->resist_chaos || (rand_int(100) < 5) )
+		if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
 		{
 			(void)set_image(p_ptr->image + randint(10));
 		}
@@ -704,6 +704,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 		{
 			brdam *= 6;
 			brdam /= (randint(6) + 6);
+			if (p_ptr->nastytrap40) (void)apply_disenchant(0);
 		}
 		else
 		{
@@ -762,7 +763,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 	 */
 	if (strchr("ijkmS,", r_ptr->d_char) && (r_ptr->flags3 & RF3_IM_POIS))
 	{
-		if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
+		if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
 		{
 			set_poisoned(p_ptr->poisoned + rand_int(15) + 10);
 		}
@@ -996,7 +997,7 @@ void do_cmd_eat_food(void)
 
 		case SV_FOOD_POISON:
 			{
-				if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
+				if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
 				{
 					if (set_poisoned(p_ptr->poisoned + rand_int(10) + 10))
 					{
@@ -1009,7 +1010,7 @@ void do_cmd_eat_food(void)
 
 		case SV_FOOD_BLINDNESS:
 			{
-				if (!p_ptr->resist_blind || (rand_int(100) < 5) )
+				if (!p_ptr->resist_blind || p_ptr->nastytrap29 || (rand_int(100) < 5) )
 				{
 					if (set_blind(p_ptr->blind + rand_int(200) + 200))
 					{
@@ -1022,7 +1023,7 @@ void do_cmd_eat_food(void)
 
 		case SV_FOOD_PARANOIA:
 			{
-				if (!p_ptr->resist_fear || (rand_int(100) < 5) )
+				if (!p_ptr->resist_fear || p_ptr->nastytrap30 || (rand_int(100) < 5) )
 				{
 					if (set_afraid(p_ptr->afraid + rand_int(10) + 10))
 					{
@@ -1035,7 +1036,7 @@ void do_cmd_eat_food(void)
 
 		case SV_FOOD_CONFUSION:
 			{
-				if (!p_ptr->resist_conf || (rand_int(100) < 5) )
+				if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
 				{
 					if (set_confused(p_ptr->confused + rand_int(10) + 10))
 					{
@@ -1048,7 +1049,7 @@ void do_cmd_eat_food(void)
 
 		case SV_FOOD_HALLUCINATION:
 			{
-				if (!p_ptr->resist_chaos || (rand_int(100) < 5) )
+				if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
 				{
 					if (set_image(p_ptr->image + rand_int(250) + 250))
 					{
@@ -1807,6 +1808,11 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 {
 	int ident = FALSE;
 
+	if (p_ptr->nastytrap35 && (randint(5) == 1) ) {
+		msg_print("The potion doesn't seem to work!");
+		ident = FALSE;
+		return FALSE;
+	}
 
 	/* "Traditional" potions */
 	if (tval == TV_POTION)
@@ -1843,7 +1849,7 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 
 		case SV_POTION_POISON:
 			{
-				if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
+				if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
 				{
 					if (set_poisoned(p_ptr->poisoned + rand_int(15) + 10))
 					{
@@ -1856,7 +1862,7 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 
 		case SV_POTION_BLINDNESS:
 			{
-				if (!p_ptr->resist_blind || (rand_int(100) < 5) )
+				if (!p_ptr->resist_blind || p_ptr->nastytrap29 || (rand_int(100) < 5) )
 				{
 					if (set_blind(p_ptr->blind + rand_int(100) + 100))
 					{
@@ -1870,7 +1876,7 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 			/* Booze */
 		case SV_POTION_CONFUSION:
 			{
-				if (!((p_ptr->resist_conf) || (p_ptr->resist_chaos)) || (rand_int(100) < 5) )
+				if (!((p_ptr->resist_conf && !p_ptr->nastytrap28) || (p_ptr->resist_chaos)) || (rand_int(100) < 5) )
 				{
 					if (set_confused(p_ptr->confused + rand_int(20) + 15))
 					{
@@ -3214,7 +3220,7 @@ void do_cmd_read_scroll(void)
 
 		case SV_SCROLL_DARKNESS:
 			{
-				if ((!(p_ptr->resist_blind) && !(p_ptr->resist_dark)) || (rand_int(100) < 5) )
+				if ((!(p_ptr->resist_blind && !p_ptr->nastytrap29) && !(p_ptr->resist_dark)) || (rand_int(100) < 5) )
 				{
 					(void)set_blind(p_ptr->blind + 3 + randint(5));
 				}

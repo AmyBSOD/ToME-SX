@@ -7057,14 +7057,17 @@ static void try_doors(int y, int x)
  *
  * Note that we restrict the number of "crowded" rooms to reduce
  * the chance of overflowing the monster list during level creation.
+ *
+ * edit by Amy: the monster list is much bigger now and shouldn't overflow!
+ * So we can fill the entire level with pits if we want to!
  */
 static bool room_build(int y, int x, int typ)
 {
 	/* Restrict level */
 	if ((dun_level < roomdep[typ]) && !ironman_rooms) return (FALSE);
 
-	/* Restrict "crowded" rooms */
-	if (dun->crowded && ((typ == 5) || (typ == 6))) return (FALSE);
+	/* Restrict "crowded" rooms - no longer needed (Amy) */
+	/*if (dun->crowded && ((typ == 5) || (typ == 6))) return (FALSE);*/
 
 	/* Build a room */
 	switch (typ)
@@ -7346,12 +7349,31 @@ bool level_generate_dungeon(cptr name)
 			/* Amy edit: ironman shouldn't create only greater vaults... have some other room types too, please */
 			k = ( (ironman_rooms && (randint(3) != 1)) ? 0 : rand_int(100));
 
+			if (p_ptr->nastytrap37 && (randint(5) == 1) ) {
+
+				switch (randint(2)) {
+					default: case 1: /* nest */
+						if (room_build(y, x, 5)) continue;
+						break;
+					case 2: /* pit */
+						if (room_build(y, x, 6)) continue;
+						break;
+				}
+			}
+
 			/* Attempt a very unusual room */ /* test hack */
 			if (ironman_rooms || (randint(50) == 1) || (rand_int(DUN_UNUSUAL) < dun_level))
 			{
+				/* if we're here, we definitely try to make a vault, pit or similar */
 #ifdef FORCE_V_IDX
 				if (room_build(y, x, 8)) continue;
 #else
+
+				/* no vault nastytrap: refuse lesser, greater and random vaults */
+				while (p_ptr->nastytrap38 && ((k < 25) || (k >= 55 && k < 60) ) ) {
+					k = rand_int(100);
+				}
+
 /* Type 8 -- Greater vault (10%) */
 				if (k < 10)
 				{
@@ -7388,7 +7410,7 @@ bool level_generate_dungeon(cptr name)
 				/* Type 11 -- Random vault (5%) */
 				if ((k < 60) && room_build(y, x, 11)) continue;
 #endif
-			}
+			} /* unusual room end, begin regular rooms (maybe with various shapes) */
 
 			/* Type 4 -- Large room (25%) */
 			if ((k < 25) && room_build(y, x, 4)) continue;
@@ -7412,6 +7434,18 @@ bool level_generate_dungeon(cptr name)
 
 			/* Type 12 -- Crypt (10%) */
 			if ((k < 100) && room_build(y, x, 12)) continue;
+		}
+
+		if (p_ptr->nastytrap37 && (randint(5) == 1) ) {
+
+			switch (randint(2)) {
+				default: case 1: /* nest */
+					if (room_build(y, x, 5)) continue;
+					break;
+				case 2: /* pit */
+					if (room_build(y, x, 6)) continue;
+					break;
+			}
 		}
 
 		/* Attempt a trivial room */

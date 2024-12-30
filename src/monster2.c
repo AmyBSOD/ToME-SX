@@ -1658,11 +1658,11 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 	case 16:
 	case 17:
 	{
-		if (!p_ptr->resist_conf || (rand_int(100) < 5) )
+		if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
 		{
 			(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 		}
-		if ( (!p_ptr->resist_chaos || (rand_int(100) < 5) ) && (randint(3) == 1))
+		if ( (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) ) && (randint(3) == 1))
 		{
 			(void) set_image(p_ptr->image + rand_int(250) + 150);
 		}
@@ -1712,7 +1712,7 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 	case 44:
 	case 45:
 	{
-		if (!p_ptr->resist_conf || (rand_int(100) < 5) )
+		if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
 		{
 			(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 		}
@@ -1724,7 +1724,7 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 			(void)do_dec_stat(A_INT, STAT_DEC_NORMAL);
 		while ((rand_int(100) > player_actual_saving_throw()) && (randint(100) != 1) )
 			(void)do_dec_stat(A_WIS, STAT_DEC_NORMAL);
-		if (!p_ptr->resist_chaos)
+		if (!p_ptr->resist_chaos || p_ptr->nastytrap31)
 		{
 			(void) set_image(p_ptr->image + rand_int(250) + 150);
 		}
@@ -1808,7 +1808,7 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 	case 91:
 	{
 
-		if (!p_ptr->resist_fear || (rand_int(100) < 4) )
+		if (!p_ptr->resist_fear || p_ptr->nastytrap30 || (rand_int(100) < 4) )
 		{
 			set_afraid(p_ptr->afraid + 3 + power);
 		}
@@ -3164,6 +3164,9 @@ bool place_monster(int y, int x, bool slp, bool grp)
 {
 	int r_idx;
 
+	int actualmonsterlevel = monster_level;
+	if (p_ptr->nastytrap27) actualmonsterlevel += 10;
+
 	/* Set monster restriction */
 	set_mon_num2_hook(y, x);
 
@@ -3171,7 +3174,7 @@ bool place_monster(int y, int x, bool slp, bool grp)
 	get_mon_num_prep();
 
 	/* Pick a monster */
-	r_idx = get_mon_num(monster_level);
+	r_idx = get_mon_num(actualmonsterlevel);
 
 	/* Reset restriction */
 	get_mon_num2_hook = NULL;
@@ -3199,6 +3202,9 @@ bool alloc_horde(int y, int x)
 	monster_type * m_ptr;
 	int attempts = 1000;
 
+	int actualmonsterlevel = monster_level;
+	if (p_ptr->nastytrap27) actualmonsterlevel += 10;
+
 	set_mon_num2_hook(y, x);
 
 	/* Prepare allocation table */
@@ -3207,7 +3213,7 @@ bool alloc_horde(int y, int x)
 	while (--attempts)
 	{
 		/* Pick a monster */
-		r_idx = get_mon_num(monster_level);
+		r_idx = get_mon_num(actualmonsterlevel);
 
 		/* Handle failure */
 		if (!r_idx) return (FALSE);

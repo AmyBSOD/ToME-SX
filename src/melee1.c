@@ -624,7 +624,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Take "poison" effect */
-					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
+					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
 					{
 						if (set_poisoned(p_ptr->poisoned + randint(rlev) + 5))
 						{
@@ -642,7 +642,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Allow complete resist */
-					if (!p_ptr->resist_disen)
+					if (!p_ptr->resist_disen || !p_ptr->nastytrap40)
 					{
 						/* Apply disenchantment */
 						if (apply_disenchant(0)) obvious = TRUE;
@@ -761,7 +761,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Increase "blind" */
-					if (!p_ptr->resist_blind || (rand_int(100) < 5) )
+					if (!p_ptr->resist_blind || p_ptr->nastytrap29 || (rand_int(100) < 5) )
 					{
 						if (set_blind(p_ptr->blind + 10 + randint(rlev)))
 						{
@@ -780,7 +780,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Increase "confused" */
-					if (!p_ptr->resist_conf || (rand_int(100) < 5) )
+					if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
 					{
 						if (set_confused(p_ptr->confused + 3 + randint(rlev)))
 						{
@@ -799,7 +799,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Increase "afraid" */
-					if (p_ptr->resist_fear && (rand_int(100) > 4) )
+					if (p_ptr->resist_fear && !p_ptr->nastytrap30 && (rand_int(100) > 4) )
 					{
 						msg_print("You stand your ground!");
 						obvious = TRUE;
@@ -1094,7 +1094,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Take "poison" effect */
-					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
+					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
 					{
 						if (set_poisoned(p_ptr->poisoned + randint(rlev) + 5))
 						{
@@ -1132,7 +1132,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Increase "image" */
-					if (!p_ptr->resist_chaos || (rand_int(100) < 5) )
+					if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
 					{
 						if (set_image(p_ptr->image + 3 + randint(rlev / 2)))
 						{
@@ -1996,7 +1996,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Take "poison" effect */
-					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
+					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
 					{
 						if (set_poisoned(p_ptr->poisoned + randint(rlev) + 5))
 						{
@@ -2018,7 +2018,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Allow complete resist */
-					if (!p_ptr->resist_disen)
+					if (!p_ptr->resist_disen || !p_ptr->nastytrap40)
 					{
 						/* Apply disenchantment */
 						if (apply_disenchant(0)) obvious = TRUE;
@@ -2507,7 +2507,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Increase "blind" */
-					if (!p_ptr->resist_blind || (rand_int(100) < 5) )
+					if (!p_ptr->resist_blind || p_ptr->nastytrap29 || (rand_int(100) < 5) )
 					{
 						if (set_blind(p_ptr->blind + 10 + randint(rlev)))
 						{
@@ -2529,7 +2529,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Increase "confused" */
-					if (!p_ptr->resist_conf || (rand_int(100) < 5) )
+					if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
 					{
 						if (set_confused(p_ptr->confused + 3 + randint(rlev)))
 						{
@@ -2551,7 +2551,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Increase "afraid" */
-					if (p_ptr->resist_fear && (rand_int(100) > 4) )
+					if (p_ptr->resist_fear && !p_ptr->nastytrap30 && (rand_int(100) > 4) )
 					{
 						msg_print("You stand your ground!");
 						obvious = TRUE;
@@ -2865,7 +2865,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Take "poison" effect */
-					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois))
+					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
 					{
 						if (set_poisoned(p_ptr->poisoned + randint(rlev) + 5))
 						{
@@ -2891,7 +2891,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Increase "image" */
-					if (!p_ptr->resist_chaos || (rand_int(100) < 5) )
+					if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
 					{
 						if (set_image(p_ptr->image + 3 + randint(rlev / 2)))
 						{

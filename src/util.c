@@ -2784,7 +2784,7 @@ void cmsg_print(byte color, cptr msg)
 
 
 	/* Memorize the message */
-	if (character_generated) message_add(MESSAGE_MSG, msg, color);
+	if (character_generated && !p_ptr->nastytrap22) message_add(MESSAGE_MSG, msg, color);
 
 	/* Handle "auto_more" */
 	if (auto_more)
@@ -2805,6 +2805,18 @@ void cmsg_print(byte color, cptr msg)
 
 	/* Analyze the buffer */
 	t = buf;
+
+	if (character_generated && p_ptr->nastytrap22) {
+		display_message(0, 0, 56, color, "Warning: Low Local Memory. Freeing description strings.");
+
+		/* Window stuff */
+		p_ptr->window |= (PW_MESSAGE);
+
+		/* Optional refresh */
+		if (fresh_message) Term_fresh();
+
+		return;
+	}
 
 	/* Split message */
 	while (n > lim)

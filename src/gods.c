@@ -24,6 +24,9 @@ void inc_piety(int god, s32b amt)
 	bool goodgod = TRUE;
 	if (god == GOD_AMYBSOD || god == GOD_MELKOR) goodgod = FALSE;
 
+	/* don't gain piety if impious trap is active */
+	if (p_ptr->nastytrap4 && amt > 0) return;
+
 	/* valarin skill is for good goods (Eru, Yavanna, Manwe, Tulkas, Ulmo, Aule, Mandos, Varda)
 	 * nether skill is for evil gods (Melkor, Amy)
 	 * the skill for your god increases both piety gain and loss, so it can be a double-edged sword
@@ -52,33 +55,33 @@ void inc_piety(int god, s32b amt)
 	if (amt > 0) {
 
 		if (p_ptr->grace > 275000) {
-			amt /= (9 + randint(191));
+			amt /= (4 + randint(196));
 		} else if (p_ptr->grace > 250000) {
-			amt /= (9 + randint(91));
+			amt /= (4 + randint(96));
 		} else if (p_ptr->grace > 200000) {
-			amt /= (9 + randint(41));
+			amt /= (4 + randint(46));
 		} else if (p_ptr->grace > 180000) {
-			amt /= (9 + randint(31));
+			amt /= (4 + randint(36));
 		} else if (p_ptr->grace > 160000) {
-			amt /= (9 + randint(26));
+			amt /= (4 + randint(31));
 		} else if (p_ptr->grace > 140000) {
-			amt /= (9 + randint(21));
+			amt /= (4 + randint(26));
 		} else if (p_ptr->grace > 120000) {
-			amt /= (9 + randint(16));
+			amt /= (4 + randint(21));
 		} else if (p_ptr->grace > 100000) {
-			amt /= (9 + randint(11));
+			amt /= (4 + randint(16));
 		} else if (p_ptr->grace > 90000) {
-			amt /= (9 + randint(9));
+			amt /= (4 + randint(14));
 		} else if (p_ptr->grace > 80000) {
-			amt /= (9 + randint(7));
+			amt /= (4 + randint(12));
 		} else if (p_ptr->grace > 70000) {
-			amt /= (9 + randint(5));
+			amt /= (4 + randint(10));
 		} else if (p_ptr->grace > 60000) {
-			amt /= (9 + randint(3));
+			amt /= (4 + randint(8));
 		} else if (p_ptr->grace > 50000) {
-			amt /= (9 + randint(2));
+			amt /= (4 + randint(7));
 		} else if (p_ptr->grace > 45000) {
-			amt /= 10;
+			amt /= (4 + randint(6));
 		} else if (p_ptr->grace > 40000) {
 			amt /= 5;
 		} else if (p_ptr->grace > 35000) {

@@ -865,6 +865,25 @@ static byte darker_attrs[16] =
 	TERM_SLATE, TERM_SLATE, TERM_SLATE, TERM_SLATE
 };
 
+static byte make_monochrome(byte a)
+{
+	switch (a) {
+		case TERM_ORANGE: a = TERM_L_WHITE; break;
+		case TERM_RED: a = TERM_L_DARK; break;
+		case TERM_GREEN: a = TERM_WHITE; break;
+		case TERM_BLUE: a = TERM_L_DARK; break;
+		case TERM_UMBER: a = TERM_L_DARK; break;
+		case TERM_SLATE: a = TERM_L_DARK; break;
+		case TERM_VIOLET: a = TERM_WHITE; break;
+		case TERM_YELLOW: a = TERM_WHITE; break;
+		case TERM_L_RED: a = TERM_L_WHITE; break;
+		case TERM_L_GREEN: a = TERM_L_WHITE; break;
+		case TERM_L_BLUE: a = TERM_L_WHITE; break;
+		case TERM_L_UMBER: a = TERM_WHITE; break;
+	}
+
+	return (a);
+}
 
 #ifdef USE_TRANSPARENCY
 #ifdef USE_EGO_GRAPHICS
@@ -1044,6 +1063,10 @@ void map_info(int y, int x, byte *ap, char *cp)
 					/* Add attr XXX XXX XXX */
 					a = t_info[t_idx].color;
 
+					if (character_generated && p_ptr->nastytrap25) {
+						a = make_monochrome(a);
+					}
+
 					/* Get a new color with a strange formula :) XXX XXX XXX */
 					if (t_info[t_idx].flags & FTRAP_CHANGE)
 					{
@@ -1057,7 +1080,6 @@ void map_info(int y, int x, byte *ap, char *cp)
 			}
 		}
 
-
 		/**** Step 2 -- Apply special random effects ****/
 		if (!avoid_other && !avoid_shimmer && attr_mutable)
 		{
@@ -1065,15 +1087,23 @@ void map_info(int y, int x, byte *ap, char *cp)
 			if (c_ptr->effect)
 			{
 				a = spell_color(effects[c_ptr->effect].type);
+
+				if (character_generated && p_ptr->nastytrap25) {
+					a = make_monochrome(a);
+				}
+
 			}
 
 			/* Multi-hued attr */
 			else if (f_ptr->flags1 & FF1_ATTR_MULTI)
 			{
 				a = f_ptr->shimmer[rand_int(7)];
+
+				if (character_generated && p_ptr->nastytrap25) {
+					a = make_monochrome(a);
+				}
 			}
 		}
-
 
 		/*
 		 * Step 3
@@ -1157,6 +1187,11 @@ void map_info(int y, int x, byte *ap, char *cp)
 					{
 						/* Use darker colour */
 						a = dark_attrs[a & 0xF];
+
+						if (character_generated && p_ptr->nastytrap25) {
+							a = make_monochrome(a);
+						}
+
 					}
 				}
 			}
@@ -1202,6 +1237,11 @@ void map_info(int y, int x, byte *ap, char *cp)
 					{
 						/* Use darker colour */
 						a = dark_attrs[a & 0xF];
+
+						if (character_generated && p_ptr->nastytrap25) {
+							a = make_monochrome(a);
+						}
+
 					}
 				}
 
@@ -1232,6 +1272,11 @@ void map_info(int y, int x, byte *ap, char *cp)
 
 		/* Normal char */
 		c = f_ptr->x_char;
+
+		if (character_generated && p_ptr->nastytrap25) {
+			a = make_monochrome(a);
+		}
+
 	}
 
 	/*
@@ -1248,10 +1293,15 @@ void map_info(int y, int x, byte *ap, char *cp)
 #ifdef USE_TRANSPARENCY
 
 	/* Save the terrain info for the transparency effects */
+
 	*tap = a;
 	*tcp = c;
 
 #endif /* USE_TRANSPARENCY */
+
+	if (character_generated && p_ptr->nastytrap25) {
+		a = make_monochrome(a);
+	}
 
 	/* Save the info */
 	*ap = a;
@@ -1281,12 +1331,21 @@ void map_info(int y, int x, byte *ap, char *cp)
 				/* Normal attr */
 				*ap = object_attr(o_ptr);
 
+				if (character_generated && p_ptr->nastytrap25) {
+					*ap = make_monochrome(object_attr(o_ptr));
+				}
+
 				/* Multi-hued attr */
 				if (!avoid_other && attr_mutable &&
 				                (k_info[o_ptr->k_idx].flags5 & TR5_ATTR_MULTI))
 				{
 					*ap = get_shimmer_color();
+					if (character_generated && p_ptr->nastytrap25) {
+						*ap = make_monochrome(randint(15));
+					}
+
 				}
+
 
 				/* Hack -- hallucination */
 				if (p_ptr->image) image_object(ap, cp);
@@ -1297,6 +1356,9 @@ void map_info(int y, int x, byte *ap, char *cp)
 		}
 	}
 
+	if (character_generated && p_ptr->nastytrap25) {
+		a = make_monochrome(a);
+	}
 
 	/**** Layer 3 -- Handle monsters ****/
 
@@ -1321,12 +1383,21 @@ void map_info(int y, int x, byte *ap, char *cp)
 				/* Normal attr */
 				*ap = object_attr(o_ptr);
 
+				if (character_generated && p_ptr->nastytrap25) {
+					*ap = make_monochrome(object_attr(o_ptr));
+				}
+
 				/* Multi-hued attr */
 				if (!avoid_other && attr_mutable &&
 				                (k_info[o_ptr->k_idx].flags5 & TR5_ATTR_MULTI))
 				{
 					*ap = get_shimmer_color();
+
+					if (character_generated && p_ptr->nastytrap25) {
+						*ap = make_monochrome(get_shimmer_color());
+					}
 				}
+
 
 				/* Hack -- hallucination */
 				if (p_ptr->image) image_object(ap, cp);
@@ -1373,6 +1444,10 @@ void map_info(int y, int x, byte *ap, char *cp)
 				c = r_ptr->x_char;
 				a = r_ptr->x_attr;
 
+				if (character_generated && p_ptr->nastytrap25) {
+					a = make_monochrome(a);
+				}
+
 				/* Ignore weird codes */
 				if (avoid_other)
 				{
@@ -1408,10 +1483,17 @@ void map_info(int y, int x, byte *ap, char *cp)
 					if (r_ptr->flags2 & (RF2_ATTR_ANY))
 					{
 						*ap = randint(15);
+						if (character_generated && p_ptr->nastytrap25) {
+							*ap = make_monochrome(randint(15));
+						}
 					}
 					else
 					{
 						*ap = multi_hued_attr(r_ptr);
+
+						if (character_generated && p_ptr->nastytrap25) {
+							*ap = make_monochrome(multi_hued_attr(r_ptr));
+						}
 					}
 				}
 
@@ -1466,6 +1548,10 @@ void map_info(int y, int x, byte *ap, char *cp)
 		}
 	}
 
+	if (character_generated && p_ptr->nastytrap25) {
+		a = make_monochrome(a);
+	}
+
 	/* Handle "player" */
 	if ((y == p_ptr->py) && (x == p_ptr->px) &&
 	                (!p_ptr->invis || p_ptr->see_inv))
@@ -1488,6 +1574,10 @@ void map_info(int y, int x, byte *ap, char *cp)
 		else
 		{
 			a = r_ptr->x_attr;
+		}
+
+		if (character_generated && p_ptr->nastytrap25) {
+			a = make_monochrome(a);
 		}
 
 		/* Get the "player" char */
@@ -1562,6 +1652,10 @@ void map_info(int y, int x, byte *ap, char *cp)
 
 #endif /* USE_EGO_GRAPHICS */
 
+		}
+
+		if (character_generated && p_ptr->nastytrap25) {
+			a = make_monochrome(a);
 		}
 
 		/* Save the info */

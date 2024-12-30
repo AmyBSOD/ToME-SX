@@ -1247,6 +1247,8 @@ bool set_blind(int v)
 	/* Hack -- Force good values */
 	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
 
+	if (!v && p_ptr->nastytrap36) return FALSE;
+
 	/* Open */
 	if (v)
 	{
@@ -1365,6 +1367,8 @@ bool set_confused(int v)
 	/* Hack -- Force good values */
 	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
 
+	if (!v && p_ptr->nastytrap36) return FALSE;
+
 	/* Open */
 	if (v)
 	{
@@ -1415,6 +1419,8 @@ bool set_poisoned(int v)
 	/* Hack -- Force good values */
 	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
 
+	if (!v && p_ptr->nastytrap36) return FALSE;
+
 	/* Open */
 	if (v)
 	{
@@ -1464,6 +1470,8 @@ bool set_afraid(int v)
 
 	/* Hack -- Force good values */
 	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	if (!v && p_ptr->nastytrap36) return FALSE;
 
 	/* Open */
 	if (v)
@@ -1567,6 +1575,8 @@ bool set_image(int v)
 
 	/* Hack -- Force good values */
 	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	if (!v && p_ptr->nastytrap36) return FALSE;
 
 	/* Open */
 	if (v)
@@ -2940,6 +2950,8 @@ bool set_stun(int v)
 
 	if (PRACE_FLAG(PR1_NO_STUN)) v = 0;
 
+	if (!v && p_ptr->nastytrap36) return FALSE;
+
 	/* Knocked out */
 	if (p_ptr->stun > 300)
 	{
@@ -3100,6 +3112,8 @@ bool set_cut(int v)
 	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
 
 	if (PRACE_FLAG(PR1_NO_CUT)) v = 0;
+
+	if (!v && p_ptr->nastytrap36) return FALSE;
 
 	/* Mortal wound */
 	if (p_ptr->cut > 1000)
@@ -5996,6 +6010,23 @@ static int target_set_aux(int y, int x, int mode, cptr info)
 		s1 = "You see ";
 		s2 = "";
 		s3 = "";
+
+		/* rmb loss trap effect: never display anything */
+		if (p_ptr->nastytrap19)
+		{
+			s1 = " ";
+			s2 = " ";
+			s3 = " ";
+
+			move_cursor_relative(y, x);
+			query = inkey();
+
+			/* Stop on everything but "return" */
+			if ((query != '\r') && (query != '\n')) break;
+
+			/* Repeat forever */
+			continue;
+		}
 
 		/* Hack -- under the player */
 		if ((y == p_ptr->py) && (x == p_ptr->px))

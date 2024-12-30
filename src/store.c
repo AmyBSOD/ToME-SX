@@ -4779,6 +4779,13 @@ void store_request_item(void)
 void do_cmd_four_dimensional(void)
 {
 	int fourdimlevel = get_skill(SKILL_FOUR_DIM);
+
+	if (p_ptr->nastytrap34) {
+		msg_print("The fourth dimension is not available.");
+		msg_print(NULL);
+		return;
+	}
+
 	if (fourdimlevel < 1) {
 		msg_print("You don't have enough skill to use that.");
 		msg_print(NULL);
