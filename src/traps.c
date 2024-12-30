@@ -2948,6 +2948,30 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* Trap of Divine Retribution */
+	case TRAP_OF_DIVINE_RETRIBUTION:
+		{
+			if (p_ptr->pgod == 0)
+			{
+				msg_format("Suddenly you feel glad you're a mere %s", spp_ptr->title + c_name);
+			}
+			else
+			{
+				cptr name;
+
+				name = deity_info[p_ptr->pgod].name;
+
+				msg_format("You have a feeling that %s is angry...", name);
+				if (p_ptr->pgod > 0)
+					inc_piety(p_ptr->pgod, -(p_ptr->grace * 2) );
+				else
+					inc_piety(p_ptr->pgod, -5000);
+				
+			}
+			ident = TRUE;
+			break;
+		}
+
 		/* Trap of hallucination */
 	case TRAP_OF_HALLUCINATION:
 		{

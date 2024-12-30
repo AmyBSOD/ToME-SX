@@ -2635,6 +2635,8 @@
 #define TRAP_OF_ELDRITCH                  209
 #define TRAP_OF_NASTINESS                 210
 
+#define TRAP_OF_DIVINE_RETRIBUTION        211
+
 /*** General index values ***/
 
 

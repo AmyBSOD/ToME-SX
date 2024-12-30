@@ -48,6 +48,58 @@ void inc_piety(int god, s32b amt)
 		}
 	}
 
+	/* it should be harder to gain piety if you already have a lot of it --Amy */
+	if (amt > 0) {
+
+		if (p_ptr->grace > 275000) {
+			amt /= (9 + randint(191));
+		} else if (p_ptr->grace > 250000) {
+			amt /= (9 + randint(91));
+		} else if (p_ptr->grace > 200000) {
+			amt /= (9 + randint(41));
+		} else if (p_ptr->grace > 180000) {
+			amt /= (9 + randint(31));
+		} else if (p_ptr->grace > 160000) {
+			amt /= (9 + randint(26));
+		} else if (p_ptr->grace > 140000) {
+			amt /= (9 + randint(21));
+		} else if (p_ptr->grace > 120000) {
+			amt /= (9 + randint(16));
+		} else if (p_ptr->grace > 100000) {
+			amt /= (9 + randint(11));
+		} else if (p_ptr->grace > 90000) {
+			amt /= (9 + randint(9));
+		} else if (p_ptr->grace > 80000) {
+			amt /= (9 + randint(7));
+		} else if (p_ptr->grace > 70000) {
+			amt /= (9 + randint(5));
+		} else if (p_ptr->grace > 60000) {
+			amt /= (9 + randint(3));
+		} else if (p_ptr->grace > 50000) {
+			amt /= (9 + randint(2));
+		} else if (p_ptr->grace > 45000) {
+			amt /= 10;
+		} else if (p_ptr->grace > 40000) {
+			amt /= 5;
+		} else if (p_ptr->grace > 35000) {
+			amt *= 3; amt /= 10;
+		} else if (p_ptr->grace > 30000) {
+			amt *= 2; amt /= 5;
+		} else if (p_ptr->grace > 25000) {
+			amt /= 2;
+		} else if (p_ptr->grace > 20000) {
+			amt *= 3; amt /= 5;
+		} else if (p_ptr->grace > 15000) {
+			amt *= 7; amt /= 10;
+		} else if (p_ptr->grace > 10000) {
+			amt *= 4; amt /= 5;
+		} else if (p_ptr->grace > 5000) {
+			amt *= 9; amt /= 10;
+		}
+		/* but gain at least one point no matter what */
+		if (amt < 1) amt = 1;
+	}
+
 	if ((god == GOD_ALL) || (god == p_ptr->pgod))
 	{
 		set_grace(p_ptr->grace + amt);

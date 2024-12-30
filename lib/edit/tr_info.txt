@@ -997,6 +997,11 @@ I:50:100:0:12:50:0d0:y
 D:Nasty!
 F:FLOOR | CHEST | DOOR
 
+N:211:Trap of Divine Retribution
+I:10:100:5:0:90:0d0:G
+D:A voice booms out "Thou hast angered me, mortal."
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 
