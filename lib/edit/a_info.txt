@@ -6442,6 +6442,64 @@ F:STEALTH | INFRA | SEARCH | RES_POIS | RES_DARK | RES_BLIND | SEE_INVIS |
 F:ESP_ANIMAL | HOLD_LIFE | 
 D:A cloak of darkness; an Unlight which eyes cannot pierce, for it is void.
 
+N:553:'Witchwild String'
+I:19:14:1
+W:40:15:150:10000
+P:0:0d0:8:13:0
+F:XTRA_SHOTS | XTRA_MIGHT | CRIT |
+F:RES_FIRE | RES_COLD | RES_ELEC | RES_POIS | 
+D:A bow that can shoot arrows faster and with extra power, but also grants
+D:elemental resistances to the wielder.
+
+N:554:'Windforce'
+I:19:15:2
+W:99:40:500:50000
+P:0:0d0:17:23:0
+F:XTRA_SHOTS | XTRA_MIGHT | MANA | 
+F:STR | DEX |
+D:The strongest bow from Diablo 2, ported to ToME-SX.
+
+N:555:'Langer Briser'
+I:19:25:2
+W:60:20:600:14000
+P:0:0d0:3:18:0
+F:XTRA_MIGHT | LIFE |
+D:Unique crossbow that grants extra life and also fires missiles 
+D:with extra might.
+
+N:556:'Gutsiphon'
+I:19:26:3
+W:100:100:900:60000
+P:0:0d0:0:26:0
+F:XTRA_MIGHT | SPEED | LUCK |
+D:Totally not stolen from Diablo 2, this crossbow makes you fast, lucky 
+D:and capable of dealing lots of extra damage per shot.
+
+N:557:'Agora Cannon'
+I:19:3:5
+W:60:15:100:8000
+P:0:0d0:0:12:0
+F:XTRA_MIGHT |
+D:A particularly heavy sling that shoots ammo with great force.
+
+N:558:'Foresee'
+I:19:4:2
+W:90:30:20:20000
+P:0:0d0:5:5:0
+F:XTRA_SHOTS | ESP_ALL | INT | WIS | SEE_INVIS | CRIT |
+D:This sling was designed by someone who wants to be able to see 
+D:the foes they were shooting at, and hit them more effectively.
+
+N:559:of the Cobra
+I:30:10:2
+W:50:10:50:20000
+P:6:1d6:0:4:12
+F:LITHE | STR | DEX | INFRA | SUST_STR | SUST_DEX | RES_POIS | 
+F:REGEN | DISARM | DODGE | 
+D:Used by the fighters from Cobra Marital Arts Dojo, these boots 
+D:allow the wearer to kick more effectively and also dodge more 
+D:attacks.
+
 # N:number:name
 # I:tval:sval:pval
 # W:level:rarity:item weight:cost
