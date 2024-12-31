@@ -1517,6 +1517,16 @@ I:30:2:50:4:10:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:315:Highsnare Trap
+I:25:2:50:4:5:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:316:No Home Trap
+I:70:2:50:4:50:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

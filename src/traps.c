@@ -565,6 +565,8 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY104:
 		case TRAP_NASTY105:
 		case TRAP_NASTY106:
+		case TRAP_NASTY107:
+		case TRAP_NASTY108:
 			return FALSE;
 	}
 
@@ -683,6 +685,8 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY104:
 		case TRAP_NASTY105:
 		case TRAP_NASTY106:
+		case TRAP_NASTY107:
+		case TRAP_NASTY108:
 			return FALSE;
 	}
 
@@ -3474,6 +3478,28 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 			break;			
 		}
+	case TRAP_NASTY107:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap107 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+	case TRAP_NASTY108:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap108 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
 
 	case TRAP_OF_SHOES:
 	case TRAP_OF_SHOES_II:
@@ -4422,6 +4448,8 @@ void place_trap(int y, int x)
 	if (monster_level > effect_level) effect_level = monster_level;
 
 	if (randint(50) == 1) effect_level += randint(p_ptr->lev);
+
+	if (p_ptr->nastytrap107) effect_level += randint(10 + p_ptr->lev);
 
 	/*msg_format("Trap level %d.", effect_level);*/
 	/*msg_format("Monster level %d.", monster_level);*/
@@ -5863,7 +5891,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(3)) {
+	switch (randint(108)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -6181,6 +6209,12 @@ void give_random_nastytrap_effect(void)
 			break;
 		case 106:
 			p_ptr->nastytrap106 = TRUE;
+			break;
+		case 107:
+			p_ptr->nastytrap107 = TRUE;
+			break;
+		case 108:
+			p_ptr->nastytrap108 = TRUE;
 			break;
 
 	}

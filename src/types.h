@@ -2002,8 +2002,8 @@ struct player_type
 	bool nastytrap104; /* heavy equipment trap - your equipment cannot be lithe and hinders dodging more */
 	bool nastytrap105; /* no esp trap - you cannot have any kind of ESP */
 	bool nastytrap106; /* pseudo id trap - items don't pseudo-identify themselves */
-	bool nastytrap107;
-	bool nastytrap108;
+	bool nastytrap107; /* highsnare trap - randomly generated traps can have higher levels */
+	bool nastytrap108; /* no home trap - you cannot access your home */
 	bool nastytrap109;
 	bool nastytrap110;
 	bool nastytrap111;

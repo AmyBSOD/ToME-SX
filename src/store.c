@@ -3966,6 +3966,11 @@ void do_cmd_store(void)
 		return;
 	}
 
+	if (p_ptr->nastytrap108 && which == 7) {
+		msg_print("Your home is being renovated! Come back later!");
+		return;
+	}
+
 	/* Hack -- Check the "locked doors" */
 	if (town_info[p_ptr->town_num].store[which].store_open >= turn)
 	{

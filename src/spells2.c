@@ -2018,6 +2018,14 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have the following problem: Your items don't pseudo-identify themselves.";
 	}
+	if (p_ptr->nastytrap107)
+	{
+		info[i++] = "You have the following problem: Traps generate with higher levels.";
+	}
+	if (p_ptr->nastytrap108)
+	{
+		info[i++] = "You have the following problem: Your home is inaccessible.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];
