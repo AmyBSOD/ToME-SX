@@ -494,7 +494,7 @@ F:DONT_NOTICE_RUNNING
 
 #Elanor
 N:79:grass with Elanor flowers
-G:&:y
+G:;:y
 F:FLOOR | DONT_NOTICE_RUNNING | CAN_RUN
 F:SUPPORT_GROWTH
 
