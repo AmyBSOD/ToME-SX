@@ -264,7 +264,7 @@ struct dun_data
 	bool room_map[MAX_ROOMS_ROW][MAX_ROOMS_COL];
 
 	/* Hack -- there is a pit/nest on this level */
-	bool crowded;
+	int crowded;
 };
 
 /*
@@ -1983,7 +1983,7 @@ static void vault_monsters(int y1, int x1, int num)
  * cx, cy are the returned center of the allocated room in coordinates for
  * cave.feat and cave.info etc.
  */
-bool room_alloc(int width, int height, bool crowded, int by0, int bx0, int *cx, int *cy)
+bool room_alloc(int width, int height, int crowded, int by0, int bx0, int *cx, int *cy)
 {
 	int temp, eby, ebx, by, bx;
 
@@ -2040,7 +2040,7 @@ bool room_alloc(int width, int height, bool crowded, int by0, int bx0, int *cx, 
 	}
 
 	/* Count "crowded" rooms */
-	if (crowded) dun->crowded = TRUE;
+	if (crowded) dun->crowded++;
 
 	/*
 	 * Hack -- See if room will cut off a cavern.
@@ -2054,7 +2054,7 @@ bool room_alloc(int width, int height, bool crowded, int by0, int bx0, int *cx, 
 	return (TRUE);
 }
 
-bool room_alloc_princ(int width, int height, bool crowded, int by0, int bx0, int *cx, int *cy)
+bool room_alloc_princ(int width, int height, int crowded, int by0, int bx0, int *cx, int *cy)
 {
 	int temp, eby, ebx, by, bx;
 
@@ -2112,7 +2112,7 @@ bool room_alloc_princ(int width, int height, bool crowded, int by0, int bx0, int
 	}
 
 	/* Count "crowded" rooms */
-	if (crowded) dun->crowded = TRUE;
+	if (crowded) dun->crowded++;
 
 	/*
 	 * Hack -- See if room will cut off a cavern.
@@ -2982,6 +2982,40 @@ static bool vault_aux_orc(int r_idx)
 }
 
 /*
+ * Helper function for "monster pit (kobold)"
+ */
+static bool vault_aux_kobold(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	/* Decline unique monsters */
+	if (r_ptr->flags1 & (RF1_UNIQUE)) return (FALSE);
+
+	/* Hack -- Require "k" monsters */
+	if (!strchr("k", r_ptr->d_char)) return (FALSE);
+
+	/* Okay */
+	return (TRUE);
+}
+
+/*
+ * Helper function for "monster pit (angel)"
+ */
+static bool vault_aux_angel(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	/* Decline unique monsters */
+	if (r_ptr->flags1 & (RF1_UNIQUE)) return (FALSE);
+
+	/* Hack -- Require "A" monsters */
+	if (!strchr("A", r_ptr->d_char)) return (FALSE);
+
+	/* Okay */
+	return (TRUE);
+}
+
+/*
  * Helper function for "monster pit (ogre)"
  */
 static bool vault_aux_ogre(int r_idx)
@@ -3053,6 +3087,22 @@ static bool vault_aux_hydra(int r_idx)
 	return (TRUE);
 }
 
+/*
+ * Helper function for "monster pit (human)"
+ */
+static bool vault_aux_human(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	/* Decline unique monsters */
+	if (r_ptr->flags1 & (RF1_UNIQUE)) return (FALSE);
+
+	/* Hack -- Require "p" or "t" monsters */
+	if (!strchr("pt", r_ptr->d_char)) return (FALSE);
+
+	/* Okay */
+	return (TRUE);
+}
 
 /*
  * Helper function for "monster pit (giant)"
@@ -3480,21 +3530,38 @@ static void build_type6(int by0, int bx0)
 	/* Orc pit */
 	if (tmp < 10)
 	{
-		/* Message */
-		name = "orc";
+		if (randint(3) == 1) {
+			/* Message */
+			name = "kobold";
 
-		/* Restrict monster selection */
-		get_mon_num_hook = vault_aux_orc;
+			/* Restrict monster selection */
+			get_mon_num_hook = vault_aux_kobold;
+
+		} else {
+			/* Message */
+			name = "orc";
+
+			/* Restrict monster selection */
+			get_mon_num_hook = vault_aux_orc;
+		}
 	}
 
 	/* Troll pit */
 	else if (tmp < 20)
 	{
-		/* Message */
-		name = "troll";
+		if (randint(5) == 1) {
+			/* Message */
+			name = "human";
 
-		/* Restrict monster selection */
-		get_mon_num_hook = vault_aux_troll;
+			/* Restrict monster selection */
+			get_mon_num_hook = vault_aux_human;
+		} else {
+			/* Message */
+			name = "troll";
+
+			/* Restrict monster selection */
+			get_mon_num_hook = vault_aux_troll;
+		}
 	}
 
 	/* Zephyr hound pit, by Amy */
@@ -3520,11 +3587,19 @@ static void build_type6(int by0, int bx0)
 	/* Hydra pit */
 	else if (tmp < 45)
 	{
-		/* Message */
-		name = "hydra";
+		if (randint(5) == 1) {
+			/* Message */
+			name = "angel";
 
-		/* Restrict monster selection */
-		get_mon_num_hook = vault_aux_hydra;
+			/* Restrict monster selection */
+			get_mon_num_hook = vault_aux_angel;
+		} else {
+			/* Message */
+			name = "hydra";
+
+			/* Restrict monster selection */
+			get_mon_num_hook = vault_aux_hydra;
+		}
 	}
 
 	/* Giant pit */
@@ -6379,6 +6454,9 @@ static void build_type11(int by0, int bx0)
 	/* Get size -- gig enough to look good, small enough to be fairly common */
 	xsize = randint(22) + 22;
 	ysize = randint(11) + 11;
+	/* Amy: occasionally make them bigger */
+	if (randint(20) == 0) xsize += randint(40);
+	if (randint(20) == 0) ysize += randint(20);
 
 	/* Allocate in room_map.  If will not fit, exit */
 	if (!room_alloc(xsize + 2, ysize + 2, FALSE, by0, bx0, &x0, &y0)) return;
@@ -7059,15 +7137,23 @@ static void try_doors(int y, int x)
  * the chance of overflowing the monster list during level creation.
  *
  * edit by Amy: the monster list is much bigger now and shouldn't overflow!
- * So we can fill the entire level with pits if we want to!
+ * So we can fill the entire level with pits if we want to! of course there
+ * should be some sanity check to prevent 20 pits from spawning on every
+ * single dungeon level, so we make it less likely to generate another pit
+ * if there's one or more already, but it can still happen
  */
 static bool room_build(int y, int x, int typ)
 {
 	/* Restrict level */
 	if ((dun_level < roomdep[typ]) && !ironman_rooms) return (FALSE);
 
-	/* Restrict "crowded" rooms - no longer needed (Amy) */
-	/*if (dun->crowded && ((typ == 5) || (typ == 6))) return (FALSE);*/
+	/* Restrict "crowded" rooms - only a chance for them to generate
+	 * if pit nastytrap is active, don't have that random chance but always generate the pit */
+	if (dun->crowded && (randint(3 + (dun->crowded * dun->crowded)) != 1) && !p_ptr->nastytrap37 && ((typ == 5) || (typ == 6))) {
+		/*msg_print("refused pit");*/
+		return (FALSE);
+	}
+	/*if ((typ == 5) || (typ == 6)) msg_print("made pit");*/
 
 	/* Build a room */
 	switch (typ)
@@ -7273,7 +7359,7 @@ bool level_generate_dungeon(cptr name)
 	}
 
 	/* No "crowded" rooms yet */
-	dun->crowded = FALSE;
+	dun->crowded = 0;
 
 	/* No rooms yet */
 	dun->cent_n = 0;
