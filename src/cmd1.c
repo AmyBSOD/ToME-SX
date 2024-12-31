@@ -83,6 +83,7 @@ s16b critical_shot(int weight, int plus, int dam, int skill)
 {
 	int i, k;
 
+	if (p_ptr->nastytrap103) return dam;
 
 	/* Extract "shot" power */
 	i = (weight + ((p_ptr->to_h + plus) * 4) +
@@ -125,6 +126,8 @@ s16b critical_norm(int weight, int plus, int dam, int weapon_tval, bool *done_cr
 	int i, k, num = randint(5000);
 
 	*done_crit = FALSE;
+
+	if (p_ptr->nastytrap103) return dam;
 
 	/* Extract "blow" power */
 	i = (weight + ((p_ptr->to_h + plus) * 5) +
@@ -223,7 +226,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 	case TV_DIGGING:
 		{
 			/* Slay Animal */
-			if ((f1 & (TR1_SLAY_ANIMAL)) && (r_ptr->flags3 & (RF3_ANIMAL)))
+			if ((f1 & (TR1_SLAY_ANIMAL)) && !p_ptr->nastytrap92 && (r_ptr->flags3 & (RF3_ANIMAL)))
 			{
 				if (m_ptr->ml)
 				{
@@ -234,7 +237,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 			}
 
 			/* Slay Evil */
-			if ((f1 & (TR1_SLAY_EVIL)) && (r_ptr->flags3 & (RF3_EVIL)))
+			if ((f1 & (TR1_SLAY_EVIL)) && !p_ptr->nastytrap92 && (r_ptr->flags3 & (RF3_EVIL)))
 			{
 				if (m_ptr->ml)
 				{
@@ -245,7 +248,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 			}
 
 			/* Slay Undead */
-			if ((f1 & (TR1_SLAY_UNDEAD)) && (r_ptr->flags3 & (RF3_UNDEAD)))
+			if ((f1 & (TR1_SLAY_UNDEAD)) && !p_ptr->nastytrap92 && (r_ptr->flags3 & (RF3_UNDEAD)))
 			{
 				if (m_ptr->ml)
 				{
@@ -256,7 +259,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 			}
 
 			/* Slay Demon */
-			if ((f1 & (TR1_SLAY_DEMON)) && (r_ptr->flags3 & (RF3_DEMON)))
+			if ((f1 & (TR1_SLAY_DEMON)) && !p_ptr->nastytrap92 && (r_ptr->flags3 & (RF3_DEMON)))
 			{
 				if (m_ptr->ml)
 				{
@@ -267,7 +270,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 			}
 
 			/* Slay Orc */
-			if ((f1 & (TR1_SLAY_ORC)) && (r_ptr->flags3 & (RF3_ORC)))
+			if ((f1 & (TR1_SLAY_ORC)) && !p_ptr->nastytrap92 && (r_ptr->flags3 & (RF3_ORC)))
 			{
 				if (m_ptr->ml)
 				{
@@ -278,7 +281,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 			}
 
 			/* Slay Troll */
-			if ((f1 & (TR1_SLAY_TROLL)) && (r_ptr->flags3 & (RF3_TROLL)))
+			if ((f1 & (TR1_SLAY_TROLL)) && !p_ptr->nastytrap92 && (r_ptr->flags3 & (RF3_TROLL)))
 			{
 				if (m_ptr->ml)
 				{
@@ -289,7 +292,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 			}
 
 			/* Slay Giant */
-			if ((f1 & (TR1_SLAY_GIANT)) && (r_ptr->flags3 & (RF3_GIANT)))
+			if ((f1 & (TR1_SLAY_GIANT)) && !p_ptr->nastytrap92 && (r_ptr->flags3 & (RF3_GIANT)))
 			{
 				if (m_ptr->ml)
 				{
@@ -300,7 +303,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 			}
 
 			/* Slay Dragon  */
-			if ((f1 & (TR1_SLAY_DRAGON)) && (r_ptr->flags3 & (RF3_DRAGON)))
+			if ((f1 & (TR1_SLAY_DRAGON)) && !p_ptr->nastytrap92 && (r_ptr->flags3 & (RF3_DRAGON)))
 			{
 				if (m_ptr->ml)
 				{
@@ -311,7 +314,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 			}
 
 			/* Execute Dragon */
-			if ((f1 & (TR1_KILL_DRAGON)) && (r_ptr->flags3 & (RF3_DRAGON)))
+			if ((f1 & (TR1_KILL_DRAGON)) && !p_ptr->nastytrap92 && (r_ptr->flags3 & (RF3_DRAGON)))
 			{
 				if (m_ptr->ml)
 				{
@@ -322,7 +325,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 			}
 
 			/* Execute Undead */
-			if ((f5 & (TR5_KILL_UNDEAD)) && (r_ptr->flags3 & (RF3_UNDEAD)))
+			if ((f5 & (TR5_KILL_UNDEAD)) && !p_ptr->nastytrap92 && (r_ptr->flags3 & (RF3_UNDEAD)))
 			{
 				if (m_ptr->ml)
 				{
@@ -333,7 +336,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 			}
 
 			/* Execute Demon */
-			if ((f5 & (TR5_KILL_DEMON)) && (r_ptr->flags3 & (RF3_DEMON)))
+			if ((f5 & (TR5_KILL_DEMON)) && !p_ptr->nastytrap92 && (r_ptr->flags3 & (RF3_DEMON)))
 			{
 				if (m_ptr->ml)
 				{
@@ -345,7 +348,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 
 
 			/* Brand (Acid) */
-			if (f1 & (TR1_BRAND_ACID))
+			if ((f1 & (TR1_BRAND_ACID)) && !p_ptr->nastytrap92)
 			{
 				/* Notice immunity */
 				if (r_ptr->flags3 & (RF3_IM_ACID))
@@ -374,7 +377,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 			}
 
 			/* Brand (Elec) */
-			if (f1 & (TR1_BRAND_ELEC))
+			if ((f1 & (TR1_BRAND_ELEC)) && !p_ptr->nastytrap92)
 			{
 				/* Notice immunity */
 				if (r_ptr->flags3 & (RF3_IM_ELEC))
@@ -403,7 +406,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 			}
 
 			/* Brand (Fire) */
-			if (f1 & (TR1_BRAND_FIRE))
+			if ((f1 & (TR1_BRAND_FIRE)) && !p_ptr->nastytrap92)
 			{
 				/* Notice immunity */
 				if (r_ptr->flags3 & (RF3_IM_FIRE))
@@ -432,7 +435,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 			}
 
 			/* Brand (Cold) */
-			if (f1 & (TR1_BRAND_COLD))
+			if ((f1 & (TR1_BRAND_COLD)) && !p_ptr->nastytrap92)
 			{
 				/* Notice immunity */
 				if (r_ptr->flags3 & (RF3_IM_COLD))
@@ -461,7 +464,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 			}
 
 			/* Brand (Poison) */
-			if (f1 & (TR1_BRAND_POIS) || (p_ptr->tim_poison))
+			if ((f1 & (TR1_BRAND_POIS) || (p_ptr->tim_poison)) && !p_ptr->nastytrap92)
 			{
 				/* Notice immunity */
 				if (r_ptr->flags3 & (RF3_IM_POIS))
@@ -492,7 +495,7 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 			}
 
 			/* Wounding */
-			if (f5 & (TR5_WOUNDING))
+			if ((f5 & (TR5_WOUNDING)) && !p_ptr->nastytrap92)
 			{
 				/* Notice immunity */
 				if (r_ptr->flags8 & (RF8_NO_CUT))
@@ -2574,27 +2577,30 @@ void py_attack(int y, int x, int max_blow)
 
 	/* Stop if friendly */
 
-	sprintf(securityquestion, "Really attack %s? ", m_name);
+	if (!p_ptr->nastytrap72) {
 
-	if ((is_friend(m_ptr) >= 0) &&
-	                !(p_ptr->stun || p_ptr->confused || p_ptr->blind || p_ptr->image ||
-	                  !(m_ptr->ml)) && !get_check(securityquestion) )
-	{
-		if (!(p_ptr->inventory[INVEN_WIELD].art_name))
+		sprintf(securityquestion, "Really attack %s? ", m_name);
+
+		if ((is_friend(m_ptr) >= 0) &&
+		                !(p_ptr->stun || p_ptr->confused || p_ptr->blind || p_ptr->image ||
+		                  !(m_ptr->ml)) && !get_check(securityquestion) )
 		{
-			msg_format("You stop to avoid hitting %s.", m_name);
-			return;
-		}
+			if (!(p_ptr->inventory[INVEN_WIELD].art_name))
+			{
+				msg_format("You stop to avoid hitting %s.", m_name);
+				return;
+			}
 
-		if (!
-		                (streq
-		                 (quark_str(p_ptr->inventory[INVEN_WIELD].art_name), "'Stormbringer'")))
-		{
-			msg_format("You stop to avoid hitting %s.", m_name);
-			return;
-		}
+			if (!
+			                (streq
+			                 (quark_str(p_ptr->inventory[INVEN_WIELD].art_name), "'Stormbringer'")))
+			{
+				msg_format("You stop to avoid hitting %s.", m_name);
+				return;
+			}
 
-		msg_format("Your black blade greedily attacks %s!", m_name);
+			msg_format("Your black blade greedily attacks %s!", m_name);
+		}
 	}
 
 	/* Break goi/manashield */
@@ -3423,7 +3429,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 				p_ptr->oldpx = cur_wid - 2;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;
@@ -3440,7 +3446,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 				p_ptr->oldpx = 1;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;
@@ -3457,7 +3463,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 				p_ptr->oldpx = cur_wid - 2;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;
@@ -3474,7 +3480,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 				p_ptr->oldpx = 1;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;
@@ -3490,7 +3496,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 				p_ptr->oldpx = x;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;
@@ -3506,7 +3512,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 				p_ptr->oldpx = x;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;
@@ -3522,7 +3528,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 				p_ptr->oldpy = y;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;
@@ -3538,7 +3544,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 				p_ptr->oldpy = y;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;
@@ -3594,7 +3600,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 			}
 
 			/* note by Amy: if you stop upon moving into known traps, that should apply when displacing, too... */
-			else if (disarm && (c_ptr->info & (CAVE_TRDT)) && !(p_ptr->confused || p_ptr->stun || p_ptr->image))
+			else if (disarm && !p_ptr->nastytrap72 && (c_ptr->info & (CAVE_TRDT)) && !(p_ptr->confused || p_ptr->stun || p_ptr->image))
 			{
 				msg_print("You stop to avoid triggering the trap.");
 				energy_use = 0;
@@ -3644,7 +3650,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 	}
 
 	/* Don't step on known traps. */
-	else if (disarm && (c_ptr->info & (CAVE_TRDT)) && !(p_ptr->confused || p_ptr->stun || p_ptr->image))
+	else if (disarm && !p_ptr->nastytrap72 && (c_ptr->info & (CAVE_TRDT)) && !(p_ptr->confused || p_ptr->stun || p_ptr->image))
 	{
 		msg_print("You stop to avoid triggering the trap.");
 		energy_use = 0;

@@ -701,6 +701,11 @@ static void power_activate(int power)
 				/* A Food ration gives 5000 food points (by contrast) */
 				/* Don't ever get more than "Full" this way */
 				/* But if we ARE Gorged,  it won't cure us */
+				if (p_ptr->nastytrap62 && (dummy > 1)) {
+					dummy /= 3;
+					if (dummy < 1) dummy = 1;
+				}
+
 				dummy = p_ptr->food + MIN(5000, 100 * dummy);
 				if (p_ptr->food < PY_FOOD_MAX)   /* Not gorged already */
 					(void)set_food(dummy >= PY_FOOD_MAX ? PY_FOOD_MAX - 1 : dummy);
@@ -931,22 +936,22 @@ static void power_activate(int power)
 				if ((c_ptr->feat >= FEAT_DOOR_HEAD) &&
 				                (c_ptr->feat <= FEAT_RUBBLE))
 				{
-					(void)set_food(p_ptr->food + 3000);
+					(void)set_food(p_ptr->food + (p_ptr->nastytrap62 ? 1000 : 3000));
 				}
 				else if ((c_ptr->feat >= FEAT_MAGMA) &&
 				                (c_ptr->feat <= FEAT_QUARTZ_K))
 				{
-					(void)set_food(p_ptr->food + 5000);
+					(void)set_food(p_ptr->food + (p_ptr->nastytrap62 ? 1666 : 5000));
 				}
 				else if ((c_ptr->feat >= FEAT_SANDWALL) &&
 				                (c_ptr->feat <= FEAT_SANDWALL_K))
 				{
-					(void)set_food(p_ptr->food + 500);
+					(void)set_food(p_ptr->food + (p_ptr->nastytrap62 ? 166 : 500));
 				}
 				else
 				{
 					msg_print("This granite is very filling!");
-					(void)set_food(p_ptr->food + 10000);
+					(void)set_food(p_ptr->food + (p_ptr->nastytrap62 ? 3333 : 10000));
 				}
 			}
 			(void)wall_to_mud(dir);

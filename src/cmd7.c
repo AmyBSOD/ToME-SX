@@ -346,7 +346,12 @@ void do_cmd_mindcraft(void)
 		energy_use = 100;
 		return;
 	}
-
+	if (p_ptr->nastytrap97 && magik(50)) {
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
+		return;
+	}
 
 	/* not if confused */
 	if (p_ptr->confused)
@@ -893,7 +898,12 @@ void do_cmd_mimic(void)
 		energy_use = 100;
 		return;
 	}
-
+	if (p_ptr->nastytrap97 && magik(50)) {
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
+		return;
+	}
 
 	/* not if confused */
 	if (p_ptr->confused)
@@ -4747,7 +4757,12 @@ void do_cmd_powermage(void)
 		energy_use = 100;
 		return;
 	}
-
+	if (p_ptr->nastytrap97 && magik(50)) {
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
+		return;
+	}
 
 	s_ptr = select_spell(FALSE);
 
@@ -5088,7 +5103,12 @@ void do_cmd_possessor()
 		energy_use = 100;
 		return;
 	}
-
+	if (p_ptr->nastytrap97 && magik(50)) {
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
+		return;
+	}
 
 	while (TRUE)
 	{
@@ -5497,6 +5517,12 @@ void do_cmd_necromancer(void)
 	/* No magic */
 	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && (magik(p_ptr->antimagic)))
 	{
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
+		return;
+	}
+	if (p_ptr->nastytrap97 && magik(50)) {
 		msg_print("Your anti-magic field disrupts your magic attempts.");
 		msg_print(NULL);
 		energy_use = 100;
@@ -6501,6 +6527,12 @@ void do_cmd_rune_cast()
 		energy_use = 100;
 		return;
 	}
+	if (p_ptr->nastytrap97 && magik(50)) {
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
+		return;
+	}
 
 	/* Not when confused */
 	if (p_ptr->confused)
@@ -6574,6 +6606,12 @@ void do_cmd_runestone()
 	/* No magic */
 	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && (magik(p_ptr->antimagic)))
 	{
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
+		return;
+	}
+	if (p_ptr->nastytrap97 && magik(50)) {
 		msg_print("Your anti-magic field disrupts your magic attempts.");
 		msg_print(NULL);
 		energy_use = 100;
@@ -7390,6 +7428,12 @@ void do_cmd_summoner(void)
 		energy_use = 100;
 		return;
 	}
+	if (p_ptr->nastytrap97 && magik(50)) {
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
+		return;
+	}
 
 	/* not if confused */
 	if (p_ptr->confused)
@@ -7549,6 +7593,12 @@ void do_cmd_symbiotic(void)
 	/* No magic */
 	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && (magik(p_ptr->antimagic)))
 	{
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
+		return;
+	}
+	if (p_ptr->nastytrap97 && magik(50)) {
 		msg_print("Your anti-magic field disrupts your magic attempts.");
 		msg_print(NULL);
 		energy_use = 100;

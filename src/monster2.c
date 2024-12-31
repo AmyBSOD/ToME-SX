@@ -191,7 +191,8 @@ int pick_ego_monster(int r_idx)
 		/*if (!r_info[r_idx].level) return 0;*/
 
 		/* First are we allowed to find an ego */
-		if (!magik(MEGO_CHANCE)) return 0;
+		/* egomonster nastytrap: 1 in 10; this assumes MEGO_CHANCE is 4 */
+		if (!magik(p_ptr->nastytrap84 ? 10 : MEGO_CHANCE)) return 0;
 
 		/* Lets look for one */
 		while (tries--)
@@ -1635,7 +1636,7 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 	case 7:
 	case 8:
 	{
-		if (p_ptr->hold_life)
+		if (p_ptr->hold_life && !p_ptr->nastytrap95)
 		{
 			msg_print("You feel your life slipping away!");
 			lose_exp(p_ptr->exp / 100);
@@ -1716,7 +1717,7 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 		{
 			(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 		}
-		if (!p_ptr->free_act || (rand_int(100) == 0) )
+		if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 		{
 			(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
 		}
@@ -2674,6 +2675,9 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 		/* note by Amy: you shouldn't be able to scum summoned creatures for items!!! */
 		if (m_ptr->status >= MSTATUS_FRIEND) number = 0;
 
+		/* lootcut nastytrap means no monster ever carries stuff --Amy */
+		if (p_ptr->nastytrap65) number = 0;
+
 		/* Hack -- handle creeping coins */
 		coin_type = force_coin;
 
@@ -2857,6 +2861,13 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 		max_level = dun_level * 2;
 		add_level = TRUE;
 	}
+
+	if (p_ptr->nastytrap52) {
+		if (!min_level) min_level = /*dun_level * 2*/1;
+		max_level = dun_level * 2;
+		add_level = TRUE;
+	}
+
 	if (add_level) monster_set_level(c_ptr->m_idx, rand_range(min_level, max_level));
 
 	/* Give a random starting energy */
@@ -3319,6 +3330,43 @@ bool alloc_monster(int dis, bool slp)
 
 	/* Nope */
 	return (FALSE);
+}
+
+/* function by Amy: create a trap on a random square */
+bool alloc_trap(void)
+{
+	int	y, x;
+	int attempts_left = 10000;
+
+	/* Find a legal, distant, unoccupied, space */
+	while (attempts_left--)
+	{
+		/* Pick a location */
+		y = rand_int(cur_hgt);
+		x = rand_int(cur_wid);
+
+		/* Require empty floor grid (was "naked") */
+		if (!cave_empty_bold(y, x)) continue;
+
+	}
+
+	if (!attempts_left && !( (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_LEVITATE ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_FLY ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_CLIMB )) )
+	{
+
+		if (cheat_xtra || cheat_hear)
+		{
+			msg_print("Warning! Could not allocate a new trap. Small level?");
+		}
+
+		return (FALSE);
+	}
+
+
+	/* Attempt to place the trap */
+	place_trap(y, x); /* doesn't return a value, sadly... */
+
+	/* we have to return a value anyway, so let's just return true for now */
+	return TRUE;
 }
 
 

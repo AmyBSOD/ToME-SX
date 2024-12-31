@@ -509,6 +509,9 @@ static s32b price_item(object_type *o_ptr, int greed, bool flip)
 		/* Mega-Hack -- Black market sucks */
 		if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM) price = price / 3;
 
+		/* ripoff nastytrap makes shopkeepers rip you off */
+		if (p_ptr->nastytrap76) price /= 3;
+
 		/* Amy edit: items just give way too much gold when you sell them!
 		 * added a new skill that, if maxxed, gives the old values back */
 		price *= (20 + get_skill_scale(SKILL_HAGGLING, 15) );
@@ -526,7 +529,11 @@ static s32b price_item(object_type *o_ptr, int greed, bool flip)
 
 		/* Mega-Hack -- Black market sucks */
 		if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM) price = price * 3;
+
+		/* ripoff nastytrap makes shopkeepers rip you off */
+		if (p_ptr->nastytrap76) price *= 3;
 	}
+
 
 	/* Compute the final price (with rounding) */
 	price = (price * adjust + 50L) / 100L;
@@ -1261,6 +1268,7 @@ int return_level()
 
 	/* Amy edit: make runecraft skill not completely useless */
 	int runebonus = get_skill(SKILL_RUNECRAFT);
+	if (p_ptr->nastytrap45) runebonus = 0;
 
 	if (sti_ptr->flags1 & SF1_RANDOM) level = 0;
 	else level = rand_range(1, STORE_OBJ_LEVEL);
@@ -1291,6 +1299,8 @@ int return_level()
 			break;
 
 	}
+
+	if (p_ptr->nastytrap45 && (level > 1)) level /= 2;
 
 	return (level);
 }
@@ -3217,7 +3227,7 @@ void store_sell(void)
 		}
 		else
 		{
-			if (f4 & TR4_CURSE_NO_DROP)
+			if ((f4 & TR4_CURSE_NO_DROP) || p_ptr->nastytrap102)
 			{
 				/* Oops */
 				msg_print("Hmmm, you seem to be unable to drop it.");
@@ -3949,6 +3959,12 @@ void do_cmd_store(void)
 
 	/* Extract the store code */
 	which = c_ptr->special;
+
+	/* storelock nastytraps: everything except the home is locked */
+	if (p_ptr->nastytrap77 && which != 7) {
+		msg_print("The doors are locked.");
+		return;
+	}
 
 	/* Hack -- Check the "locked doors" */
 	if (town_info[p_ptr->town_num].store[which].store_open >= turn)

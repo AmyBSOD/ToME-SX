@@ -2014,6 +2014,7 @@ void take_sanity_hit(int damage, cptr hit_from)
 
 	int warning = (p_ptr->msane * hitpoint_warn / 10);
 
+	if (p_ptr->nastytrap53) damage *= 2;
 
 	/* Paranoia */
 	if (death) return;
@@ -2262,7 +2263,7 @@ static int set_acid_destroy(object_type *o_ptr)
 	if (!hates_acid(o_ptr)) return (FALSE);
 
 	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
-	if (f3 & (TR3_IGNORE_ACID)) return (FALSE);
+	if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47) return (FALSE);
 	return (TRUE);
 }
 
@@ -2277,7 +2278,7 @@ static int set_elec_destroy(object_type *o_ptr)
 	if (!hates_elec(o_ptr)) return (FALSE);
 
 	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
-	if (f3 & (TR3_IGNORE_ELEC)) return (FALSE);
+	if ((f3 & (TR3_IGNORE_ELEC)) && !p_ptr->nastytrap47) return (FALSE);
 	return (TRUE);
 }
 
@@ -2292,7 +2293,7 @@ static int set_fire_destroy(object_type *o_ptr)
 	if (!hates_fire(o_ptr)) return (FALSE);
 
 	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
-	if (f3 & (TR3_IGNORE_FIRE)) return (FALSE);
+	if ((f3 & (TR3_IGNORE_FIRE)) && !p_ptr->nastytrap47) return (FALSE);
 	return (TRUE);
 }
 
@@ -2307,7 +2308,7 @@ static int set_cold_destroy(object_type *o_ptr)
 	if (!hates_cold(o_ptr)) return (FALSE);
 
 	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
-	if (f3 & (TR3_IGNORE_COLD)) return (FALSE);
+	if ((f3 & (TR3_IGNORE_COLD)) && !p_ptr->nastytrap47) return (FALSE);
 	return (TRUE);
 }
 
@@ -2459,7 +2460,7 @@ static int minus_ac(void)
 	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
 
 	/* Object resists */
-	if (f3 & (TR3_IGNORE_ACID))
+	if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47)
 	{
 		msg_format("Your %s is unaffected!", o_name);
 
@@ -4512,7 +4513,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				{
 					do_kill = TRUE;
 					note_kill = (plural ? " melt!" : " melts!");
-					if (f3 & (TR3_IGNORE_ACID)) ignore = TRUE;
+					if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47) ignore = TRUE;
 				}
 				break;
 			}
@@ -4524,7 +4525,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				{
 					do_kill = TRUE;
 					note_kill = (plural ? " are destroyed!" : " is destroyed!");
-					if (f3 & (TR3_IGNORE_ELEC)) ignore = TRUE;
+					if ((f3 & (TR3_IGNORE_ELEC)) && !p_ptr->nastytrap47) ignore = TRUE;
 				}
 				break;
 			}
@@ -4536,7 +4537,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				{
 					do_kill = TRUE;
 					note_kill = (plural ? " burn up!" : " burns up!");
-					if (f3 & (TR3_IGNORE_FIRE)) ignore = TRUE;
+					if ((f3 & (TR3_IGNORE_FIRE)) && !p_ptr->nastytrap47) ignore = TRUE;
 				}
 				break;
 			}
@@ -4548,7 +4549,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				{
 					note_kill = (plural ? " shatter!" : " shatters!");
 					do_kill = TRUE;
-					if (f3 & (TR3_IGNORE_COLD)) ignore = TRUE;
+					if ((f3 & (TR3_IGNORE_COLD)) && !p_ptr->nastytrap47) ignore = TRUE;
 				}
 				break;
 			}
@@ -4560,14 +4561,14 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				{
 					do_kill = TRUE;
 					note_kill = (plural ? " burn up!" : " burns up!");
-					if (f3 & (TR3_IGNORE_FIRE)) ignore = TRUE;
+					if ((f3 & (TR3_IGNORE_FIRE)) && !p_ptr->nastytrap47) ignore = TRUE;
 				}
 				if (hates_elec(o_ptr))
 				{
 					ignore = FALSE;
 					do_kill = TRUE;
 					note_kill = (plural ? " are destroyed!" : " is destroyed!");
-					if (f3 & (TR3_IGNORE_ELEC)) ignore = TRUE;
+					if ((f3 & (TR3_IGNORE_ELEC)) && !p_ptr->nastytrap47) ignore = TRUE;
 				}
 				break;
 			}
@@ -4579,14 +4580,14 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				{
 					do_kill = TRUE;
 					note_kill = (plural ? " burn up!" : " burns up!");
-					if (f3 & (TR3_IGNORE_FIRE)) ignore = TRUE;
+					if ((f3 & (TR3_IGNORE_FIRE)) && !p_ptr->nastytrap47) ignore = TRUE;
 				}
 				if (hates_cold(o_ptr))
 				{
 					ignore = FALSE;
 					do_kill = TRUE;
 					note_kill = (plural ? " shatter!" : " shatters!");
-					if (f3 & (TR3_IGNORE_COLD)) ignore = TRUE;
+					if ((f3 & (TR3_IGNORE_COLD)) && !p_ptr->nastytrap47) ignore = TRUE;
 				}
 				break;
 			}
@@ -5918,7 +5919,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 									break;
 								}
 							default:
-								if (!p_ptr->free_act || (rand_int(100) == 0) )
+								if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 									(void)set_paralyzed(p_ptr->paralyzed + randint(dam));
 								break;
 							}
@@ -8107,14 +8108,15 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 				{
 					dam *= 6;
 					dam /= (randint(6) + 6);
+					if (p_ptr->nastytrap95) lose_exp(200 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
 				}
 				else
 				{
-					if (p_ptr->hold_life && (rand_int(100) < 75))
+					if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 75))
 					{
 						msg_print("You keep hold of your life force!");
 					}
-					else if (p_ptr->hold_life)
+					else if (p_ptr->hold_life && !p_ptr->nastytrap95)
 					{
 						msg_print("You feel your life slipping away!");
 						lose_exp(200 + (p_ptr->exp / 1000) * MON_DRAIN_LIFE);
@@ -8177,13 +8179,13 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 			{
 				(void)set_image(p_ptr->image + randint(10));
 			}
-			if (!p_ptr->resist_neth && !p_ptr->resist_chaos)
+			if ((!p_ptr->resist_neth && !p_ptr->resist_chaos) || p_ptr->nastytrap95)
 			{
-				if (p_ptr->hold_life && (rand_int(100) < 75))
+				if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 75))
 				{
 					msg_print("You keep hold of your life force!");
 				}
-				else if (p_ptr->hold_life)
+				else if (p_ptr->hold_life && !p_ptr->nastytrap95)
 				{
 					msg_print("You feel your life slipping away!");
 					lose_exp(50 + (p_ptr->exp / 500) * MON_DRAIN_LIFE);
@@ -8211,6 +8213,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 			{
 				dam *= 6;
 				dam /= (randint(6) + 6);
+				if (p_ptr->nastytrap94) (void)set_cut(p_ptr->cut + dam);
 			}
 			else
 			{
@@ -8293,6 +8296,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 			{
 				dam *= 6;
 				dam /= (randint(6) + 6);
+				if (p_ptr->nastytrap96) apply_nexus(m_ptr);
 			}
 			else
 			{
@@ -8403,6 +8407,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 			if (p_ptr->resist_shard && (rand_int(3) > 0) )
 			{
 				dam /= 2;
+				if (p_ptr->nastytrap94) (void)set_cut(p_ptr->cut + dam);
 			}
 			else
 			{
@@ -8645,7 +8650,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 
 	case GF_OLD_SLEEP:
 		{
-			if (p_ptr->free_act && (rand_int(100) > 0) ) break;
+			if (p_ptr->free_act && (rand_int(p_ptr->nastytrap57 ? 20 : 100) > 0) ) break;
 			if (fuzzy) msg_print("You fall asleep!");
 			set_paralyzed(p_ptr->paralyzed + dam);
 			dam = 0;
@@ -8679,7 +8684,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 		{
 			if (fuzzy) msg_print("You are hit by something sharp and cold!");
 			cold_dam(dam, killer);
-			if (!p_ptr->resist_shard || (rand_int(3) == 0) )
+			if (!p_ptr->resist_shard || p_ptr->nastytrap94 || (rand_int(3) == 0) )
 			{
 				(void)set_cut(p_ptr->cut + damroll(5, 8));
 			}
@@ -10100,7 +10105,10 @@ int lithe_object_weight(object_type *o_ptr)
 
 	lobjweight = o_ptr->weight;
 
-	if (f5 & (TR5_LITHE)) lobjweight /= 10;
+	/* heavy equipment nastytrap: item acts as if its weight was doubled --Amy */
+	if (p_ptr->nastytrap104) lobjweight *= 2;
+	/* lithe flag: item acts as if its weight was one tenth of the normal value --Amy */
+	else if (f5 & (TR5_LITHE)) lobjweight /= 10;
 
 	return lobjweight;
 

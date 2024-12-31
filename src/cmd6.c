@@ -282,7 +282,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 
 			case RBE_PARALYZE:
 				{
-					if (!p_ptr->free_act || (rand_int(100) == 0) )
+					if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 					{
 						set_paralyzed(p_ptr->paralyzed + dam + idam + 10);
 					}
@@ -359,7 +359,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 				{
 					msg_print("A black aura surrounds the corpse!");
 
-					if (p_ptr->hold_life && (rand_int(100) < 50))
+					if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 50))
 					{
 						msg_print("You keep hold of your life force!");
 					}
@@ -368,7 +368,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 						s32b d = damroll(10, 6) +
 						         (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 
-						if (p_ptr->hold_life)
+						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
 							lose_exp(d / 10);
@@ -389,7 +389,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 				{
 					msg_print("A black aura surrounds the corpse!");
 
-					if (p_ptr->hold_life && (rand_int(100) < 50))
+					if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 50))
 					{
 						msg_print("You keep hold of your life force!");
 					}
@@ -398,7 +398,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 						s32b d = damroll(20, 6) +
 						         (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 
-						if (p_ptr->hold_life)
+						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
 							lose_exp(d / 10);
@@ -419,7 +419,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 				{
 					msg_print("A black aura surrounds the corpse!");
 
-					if (p_ptr->hold_life && (rand_int(100) < 50))
+					if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 50))
 					{
 						msg_print("You keep hold of your life force!");
 					}
@@ -428,7 +428,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 						s32b d = damroll(40, 6) +
 						         (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 
-						if (p_ptr->hold_life)
+						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
 							lose_exp(d / 10);
@@ -449,7 +449,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 				{
 					msg_print("A black aura surrounds the corpse!");
 
-					if (p_ptr->hold_life && (rand_int(100) < 50))
+					if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 50))
 					{
 						msg_print("You keep hold of your life force!");
 					}
@@ -458,7 +458,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 						s32b d = damroll(80, 6) +
 						         (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 
-						if (p_ptr->hold_life)
+						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
 							lose_exp(d / 10);
@@ -608,14 +608,15 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 		{
 			brdam *= 6;
 			brdam /= (randint(6) + 6);
+			if (p_ptr->nastytrap95) lose_exp(200 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
 		}
 		else
 		{
-			if (p_ptr->hold_life && (rand_int(100) < 75))
+			if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 75))
 			{
 				msg_print("You keep hold of your life force!");
 			}
-			else if (p_ptr->hold_life)
+			else if (p_ptr->hold_life && !p_ptr->nastytrap95)
 			{
 				msg_print("You feel your life slipping away!");
 				lose_exp(200 + (p_ptr->exp / 1000) * MON_DRAIN_LIFE);
@@ -670,13 +671,13 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 			(void)set_image(p_ptr->image + randint(10));
 		}
 
-		if (!p_ptr->resist_neth && !p_ptr->resist_chaos)
+		if ((!p_ptr->resist_neth && !p_ptr->resist_chaos) || p_ptr->nastytrap95)
 		{
-			if (p_ptr->hold_life && (rand_int(100) < 75))
+			if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 75))
 			{
 				msg_print("You keep hold of your life force!");
 			}
-			else if (p_ptr->hold_life)
+			else if (p_ptr->hold_life && !p_ptr->nastytrap95)
 			{
 				msg_print("You feel your life slipping away!");
 				lose_exp(500 + (p_ptr->exp / 1000) * MON_DRAIN_LIFE);
@@ -1062,7 +1063,7 @@ void do_cmd_eat_food(void)
 
 		case SV_FOOD_PARALYSIS:
 			{
-				if (!p_ptr->free_act || (rand_int(100) == 0) )
+				if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 				{
 					if (set_paralyzed(p_ptr->paralyzed + rand_int(10) + 10))
 					{
@@ -1272,7 +1273,8 @@ void do_cmd_eat_food(void)
 				msg_print("That tastes very good.");
 				(void)set_poisoned(0);
 				(void)hp_player(damroll(4, 8));
-				set_food(PY_FOOD_MAX - 1);
+				if (!p_ptr->nastytrap62) set_food(PY_FOOD_MAX - 1);
+				else set_food(PY_FOOD_MAX / 3);
 
 				ident = TRUE;
 
@@ -1449,6 +1451,11 @@ void do_cmd_eat_food(void)
 	p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
 
 	if (!fval) fval = o_ptr->pval;
+
+	if (p_ptr->nastytrap62 && (fval > 1)) {
+		fval /= 3;
+		if (fval < 1) fval = 1;
+	}
 
 	/* Food can feed the player, in a different ways */
 
@@ -1906,7 +1913,7 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 
 		case SV_POTION_SLEEP:
 			{
-				if (!p_ptr->free_act || (rand_int(100) == 0) )
+				if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 				{
 					if (set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4))
 					{
@@ -1919,7 +1926,7 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 
 		case SV_POTION_LOSE_MEMORIES:
 			{
-				if (!p_ptr->hold_life && (p_ptr->exp > 0))
+				if ((!p_ptr->hold_life || p_ptr->nastytrap95) && (p_ptr->exp > 0))
 				{
 					msg_print("You feel your memories fade.");
 					lose_exp(p_ptr->exp / 4);
@@ -2612,7 +2619,8 @@ void do_cmd_quaff_potion(void)
 
 
 	/* Potions can feed the player */
-	(void)set_food(p_ptr->food + o_ptr->pval);
+	if (p_ptr->nastytrap62) (void)set_food(p_ptr->food + o_ptr->pval);
+	else (void)set_food(p_ptr->food + (o_ptr->pval / 3) );
 
 
 	/* Destroy a potion in the pack */
@@ -3408,6 +3416,9 @@ void do_cmd_read_scroll(void)
 			{
 				remove_all_curse();
 
+				/* wtf why was there no message! give the one from nethack then --Amy */
+				msg_print("You feel as if someone is helping you.");
+
 				ident = TRUE;
 
 				break;
@@ -3531,7 +3542,10 @@ void do_cmd_read_scroll(void)
 
 		case SV_SCROLL_SATISFY_HUNGER:
 			{
-				if (set_food(PY_FOOD_MAX - 1)) ident = TRUE;
+				if (!p_ptr->nastytrap62) {
+					if (set_food(PY_FOOD_MAX - 1)) ident = TRUE;
+				}
+				else set_food(PY_FOOD_MAX / 3);
 
 				break;
 			}
@@ -3982,6 +3996,12 @@ void do_cmd_use_staff(void)
 		energy_use = 100;
 		return;
 	}
+	if (p_ptr->nastytrap97 && magik(50)) {
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
+		return;
+	}
 
 	/* Restrict choices to wands */
 	item_tester_tval = TV_STAFF;
@@ -4188,6 +4208,12 @@ void do_cmd_aim_wand(void)
 		energy_use = 100;
 		return;
 	}
+	if (p_ptr->nastytrap97 && magik(50)) {
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
+		return;
+	}
 
 	/* Restrict choices to wands */
 	item_tester_tval = TV_WAND;
@@ -4387,6 +4413,12 @@ void zap_combine_rod_tip(object_type *q_ptr, int tip_item) /* q_ptr is the rod t
 		energy_use = 100;
 		return;
 	}
+	if (p_ptr->nastytrap97 && magik(50)) {
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
+		return;
+	}
 
 	/* Restrict choices to rods */
 	item_tester_hook = item_tester_hook_attachable;
@@ -4489,6 +4521,12 @@ void do_cmd_zap_rod(void)
 	/* No magic */
 	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && (magik(p_ptr->antimagic)))
 	{
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
+		return;
+	}
+	if (p_ptr->nastytrap97 && magik(50)) {
 		msg_print("Your anti-magic field disrupts your magic attempts.");
 		msg_print(NULL);
 		energy_use = 100;
@@ -7186,7 +7224,8 @@ turn_monsters(40 + p_ptr->lev);
 		case ACT_SATIATE:
 			{
 				if (!doit) return "satisfy hunger every 1000 turns";
-				(void)set_food(PY_FOOD_MAX - 1);
+				if (!p_ptr->nastytrap62) set_food(PY_FOOD_MAX - 1);
+				else set_food(PY_FOOD_MAX / 3);
 
 				o_ptr->timeout = 1000;
 
@@ -7588,7 +7627,8 @@ turn_monsters(40 + p_ptr->lev);
 		case ACT_CURE_HUNGER:
 			{
 				if (!doit) return "satisfy hunger every 1000 turns";
-				(void)set_food(PY_FOOD_MAX - 1);
+				if (!p_ptr->nastytrap62) set_food(PY_FOOD_MAX - 1);
+				else set_food(PY_FOOD_MAX / 3);
 
 				/* Timeout is set before return */
 

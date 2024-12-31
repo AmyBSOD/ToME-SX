@@ -3965,7 +3965,7 @@ void update_view(void)
 
 
 	/* Perma-lit grid */
-	else if (info & (CAVE_GLOW))
+	else if ((info & (CAVE_GLOW)) && !p_ptr->nastytrap70)
 	{
 		/* Mark as "CAVE_SEEN" */
 		info |= (CAVE_SEEN);
@@ -4059,7 +4059,7 @@ void update_view(void)
 						}
 
 						/* Perma-lit grids */
-						else if (info & (CAVE_GLOW))
+						else if ((info & (CAVE_GLOW)) && !p_ptr->nastytrap70)
 						{
 							/* Hack -- move towards player */
 							int yy = (y < p_ptr->py) ? (y + 1) : (y > p_ptr->py) ? (y - 1) : y;
@@ -4130,7 +4130,7 @@ void update_view(void)
 						}
 
 						/* Perma-lit or monster-lit grids */
-						else if (info & (CAVE_GLOW | CAVE_MLIT))
+						else if ((info & (CAVE_GLOW | CAVE_MLIT)) && !p_ptr->nastytrap70)
 						{
 							/* Mark as "CAVE_SEEN" */
 							info |= (CAVE_SEEN);
@@ -4349,9 +4349,16 @@ void update_mon_lite(void)
 		info &= ~(CAVE_MLIT);
 
 		/* Unseen unless it's glowing or illuminated by player light source */
-		if (!(info & (CAVE_GLOW | CAVE_PLIT)))
-		{
-			info &= ~(CAVE_SEEN);
+		if (p_ptr->nastytrap70) {
+			if (!(info & (CAVE_PLIT)))
+			{
+				info &= ~(CAVE_SEEN);
+			}
+		} else {
+			if (!(info & (CAVE_GLOW | CAVE_PLIT)))
+			{
+				info &= ~(CAVE_SEEN);
+			}
 		}
 
 		/* Save cave info flags */
@@ -4720,6 +4727,7 @@ void map_area(void)
 
 	cave_type *c_ptr;
 
+	if (p_ptr->nastytrap48) return;
 
 	/* Pick an area to map */
 	y1 = p_ptr->py - (randint(15) + 20);
@@ -4784,6 +4792,7 @@ void map_area_lower(void)
 
 	cave_type *c_ptr;
 
+	if (p_ptr->nastytrap48) return;
 
 	/* Pick an area to map */
 	y1 = p_ptr->py - (randint(10) + 10);
@@ -4859,6 +4868,7 @@ void wiz_lite(void)
 {
 	int i, y, x;
 
+	if (p_ptr->nastytrap48) return;
 
 	/* Memorize objects */
 	for (i = 1; i < o_max; i++)
@@ -4942,6 +4952,9 @@ void wiz_lite(void)
 void wiz_lite_extra(void)
 {
 	int y, x;
+
+	if (p_ptr->nastytrap48) return;
+
 	for (y = 0; y < cur_hgt; y++)
 	{
 		for (x = 0; x < cur_wid; x++)

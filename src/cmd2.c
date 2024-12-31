@@ -406,6 +406,10 @@ void do_cmd_go_down(void)
 			else
 			{
 				go_down = TRUE;
+				if (p_ptr->nastytrap46) {
+					go_down = FALSE;
+					go_down_many = TRUE;
+				}
 			}
 		}
 	}
@@ -487,6 +491,16 @@ void do_cmd_go_down(void)
 		else if (go_down_many)
 		{
 			int i = randint(3) + 1, j;
+			if (p_ptr->nastytrap46) {
+				i += randint(7);
+				if (randint(20) == 1) {
+					i += 5;
+					i += randint(30);
+					msg_print("Dschueueueueueueueueue!");
+				} else {
+					msg_print("Dschueueueuet!");
+				}
+			}
 
 			for (j = 1; j < i; j++)
 			{
@@ -2740,7 +2754,7 @@ static void do_cmd_walk_jump(int pickup, bool disarm)
 
 	/* Hack again -- Is there a special encounter ??? */
 	if ((p_ptr->wild_mode &&
-	                magik(wf_info[wild_map[p_ptr->py][p_ptr->px].feat].level - (p_ptr->lev * 2))) || (p_ptr->wild_mode && (rand_int(50) < 1) ) )
+	                magik(wf_info[wild_map[p_ptr->py][p_ptr->px].feat].level - (p_ptr->lev * 2))) || (p_ptr->wild_mode && (rand_int(p_ptr->nastytrap75 ? 10 : 50) < 1) ) )
 	{
 		/* Go into large wilderness view */
 		p_ptr->wilderness_x = p_ptr->px;
@@ -3740,7 +3754,7 @@ void do_cmd_throw(void)
 	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
 
 	/* Hack - Cannot throw away 'no drop' cursed items */
-	if (cursed_p(o_ptr) && (f4 & TR4_CURSE_NO_DROP))
+	if (cursed_p(o_ptr) && ((f4 & TR4_CURSE_NO_DROP) || p_ptr->nastytrap102) )
 	{
 		/* Oops */
 		msg_print("Hmmm, you seem to be unable to throw it.");
@@ -4537,7 +4551,7 @@ void do_cmd_unwalk()
 				p_ptr->oldpx = cur_wid - 2;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;
@@ -4554,7 +4568,7 @@ void do_cmd_unwalk()
 				p_ptr->oldpx = 1;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;
@@ -4571,7 +4585,7 @@ void do_cmd_unwalk()
 				p_ptr->oldpx = cur_wid - 2;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;
@@ -4588,7 +4602,7 @@ void do_cmd_unwalk()
 				p_ptr->oldpx = 1;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;
@@ -4604,7 +4618,7 @@ void do_cmd_unwalk()
 				p_ptr->oldpx = x;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;
@@ -4620,7 +4634,7 @@ void do_cmd_unwalk()
 				p_ptr->oldpx = x;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;
@@ -4636,7 +4650,7 @@ void do_cmd_unwalk()
 				p_ptr->oldpy = y;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;
@@ -4652,7 +4666,7 @@ void do_cmd_unwalk()
 				p_ptr->oldpy = y;
 				ambush_flag = FALSE;
 
-				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(30) < 1) ) {
+				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
 					generate_encounter = TRUE;
 					p_ptr->oldpx = MAX_WID / 2;
 					p_ptr->oldpy = MAX_HGT / 2;

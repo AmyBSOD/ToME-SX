@@ -434,6 +434,9 @@ bool remove_curse_object(object_type *o_ptr, bool all)
 {
 	u32b f1, f2, f3, f4, f5, esp;
 
+	/* permacurse nastytrap effect? bad luck, can't uncurse your shit --Amy */
+	if (p_ptr->nastytrap60) return FALSE;
+
 	/* Skip non-objects */
 	if (!o_ptr->k_idx) return FALSE;
 
@@ -1769,7 +1772,7 @@ void self_knowledge(FILE *fff)
 	}
 	if (p_ptr->nastytrap45)
 	{
-		info[i++] = "You have the following problem: The quality of randomly spawned items is lower.";
+		info[i++] = "You have the following problem: The level of randomly spawned items is lower.";
 	}
 	if (p_ptr->nastytrap46)
 	{
@@ -1877,7 +1880,7 @@ void self_knowledge(FILE *fff)
 	}
 	if (p_ptr->nastytrap72)
 	{
-		info[i++] = "You have the following problem: There is no confirmation when walking into peaceful monsters.";
+		info[i++] = "You have the following problem: There is no confirmation when walking into peaceful monsters or known traps.";
 	}
 	if (p_ptr->nastytrap73)
 	{
@@ -2428,6 +2431,7 @@ bool detect_traps(int rad)
 	bool detect = FALSE;
 	cave_type *c_ptr;
 
+	if (p_ptr->nastytrap48) return FALSE;
 
 	/* Scan the current panel */
 	for (y = p_ptr->py - rad; y <= p_ptr->py + rad; y++)
@@ -2502,6 +2506,7 @@ bool detect_doors(int rad)
 
 	cave_type *c_ptr;
 
+	if (p_ptr->nastytrap48) return FALSE;
 
 	/* Scan the panel */
 	for (y = p_ptr->py - rad; y <= p_ptr->py + rad; y++)
@@ -2569,6 +2574,7 @@ bool detect_stairs(int rad)
 
 	cave_type *c_ptr;
 
+	if (p_ptr->nastytrap48) return FALSE;
 
 	/* Scan the panel */
 	for (y = p_ptr->py - rad; y <= p_ptr->py + rad; y++)
@@ -2625,6 +2631,7 @@ bool detect_treasure(int rad)
 
 	cave_type *c_ptr;
 
+	if (p_ptr->nastytrap48) return FALSE;
 
 	/* Scan the current panel */
 	for (y = p_ptr->py - rad; y <= p_ptr->py + rad; y++)
@@ -2693,6 +2700,7 @@ bool detect_objects_gold(int rad)
 
 	bool detect = FALSE;
 
+	if (p_ptr->nastytrap48) return FALSE;
 
 	/* Scan objects */
 	for (i = 1; i < o_max; i++)
@@ -2768,6 +2776,7 @@ bool detect_objects_normal(int rad)
 
 	bool detect = FALSE;
 
+	if (p_ptr->nastytrap48) return FALSE;
 
 	/* Scan objects */
 	for (i = 1; i < o_max; i++)
@@ -2849,6 +2858,7 @@ bool detect_objects_magic(int rad)
 
 	bool detect = FALSE;
 
+	if (p_ptr->nastytrap48) return FALSE;
 
 	/* Scan all objects */
 	for (i = 1; i < o_max; i++)
@@ -5002,6 +5012,11 @@ bool identify_fully(void)
 
 	cptr q, s;
 
+	/* shrouded identity nastytrap: can only get normal identify, not star identify --Amy */
+	if (p_ptr->nastytrap61) {
+		return (ident_spell());
+	}
+
 	/* Get an item */
 	item_tester_hook = item_tester_hook_no_mental;
 	q = "Identify which item? ";
@@ -5135,7 +5150,6 @@ bool recharge(int power)
 	bool fail = FALSE;
 	byte fail_type = 1;
 
-
 	cptr q, s;
 
 	u32b f1, f2, f3, f4, f5, esp;
@@ -5171,8 +5185,11 @@ bool recharge(int power)
 	lev = k_info[o_ptr->k_idx].level;
 	k_ptr = &k_info[o_ptr->k_idx];
 
+	/* recharging nastytrap: always fail the recharging */
+	if (p_ptr->nastytrap82) fail = TRUE;
+
 	/* Recharge a rod */
-	if (o_ptr->tval == TV_ROD_MAIN)
+	else if (o_ptr->tval == TV_ROD_MAIN)
 	{
 		/* Extract a recharge strength by comparing object level to power. */
 		recharge_strength = ((power > lev) ? (power - lev) : 0) / 5;

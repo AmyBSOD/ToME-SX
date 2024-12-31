@@ -9471,8 +9471,8 @@ errr init_d_info_txt(FILE *fp, char *buf)
 			d_ptr->maxdepth = max_lev;
 			d_ptr->min_plev = min_plev;
 			d_ptr->next = next;
-			d_ptr->min_m_alloc_level = min_alloc;
-			d_ptr->max_m_alloc_chance = max_chance;
+			d_ptr->min_m_alloc_level = min_alloc; /* minimum amount of monsters on a new level */
+			d_ptr->max_m_alloc_chance = max_chance; /* 1 in X chance for a new monster to spawn per turn */
 
 			/* Next... */
 			continue;

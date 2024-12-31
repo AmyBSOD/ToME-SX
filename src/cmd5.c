@@ -388,7 +388,7 @@ void do_fart_effect(void)
 	case 38:
 		{
 			msg_format("Scintillating colors hypnotise you for a moment.");
-			set_image(200);
+			set_image(p_ptr->image + 200);
 			break;
 		}
 
@@ -478,7 +478,7 @@ void do_fart_effect(void)
 
 	case 57:
 		{
-			if (p_ptr->hold_life)
+			if (p_ptr->hold_life && !p_ptr->nastytrap95)
 			{
 				msg_print("You feel your life slipping away!");
 				lose_exp(p_ptr->exp / 100);
@@ -2753,6 +2753,12 @@ void cast_school_spell()
 
 	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && (magik(p_ptr->antimagic)))
 	{
+		msg_print("Your anti-magic field disrupts your magic attempts.");
+		msg_print(NULL);
+		energy_use = 100;
+		return;
+	}
+	if (p_ptr->nastytrap97 && magik(50)) {
 		msg_print("Your anti-magic field disrupts your magic attempts.");
 		msg_print(NULL);
 		energy_use = 100;

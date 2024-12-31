@@ -4039,7 +4039,7 @@ bool make_attack_spell(int m_idx)
 					{
 						(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 					}
-					if (!p_ptr->free_act || (rand_int(100) == 0) )
+					if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 					{
 						(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
 					}
@@ -4361,7 +4361,7 @@ bool make_attack_spell(int m_idx)
 				if (!direct) break;
 				disturb(1, 0);
 				msg_format("%^s drains power from your muscles!", m_name);
-				if (p_ptr->free_act && (rand_int(100) > 0) )
+				if (p_ptr->free_act && (rand_int(p_ptr->nastytrap57 ? 20 : 100) > 0) )
 				{
 					msg_print("You are unaffected!");
 				}
@@ -4384,7 +4384,7 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s stares deep into your eyes!", m_name);
-				if (p_ptr->free_act && (rand_int(100) > 0) )
+				if (p_ptr->free_act && (rand_int(p_ptr->nastytrap57 ? 20 : 100) > 0) )
 				{
 					msg_print("You are unaffected!");
 				}
@@ -4578,7 +4578,7 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles strangely.", m_name);
 				else msg_format("%^s gestures at your feet.", m_name);
-				if (p_ptr->resist_nexus)
+				if (p_ptr->resist_nexus && !p_ptr->nastytrap96)
 				{
 					msg_print("You are unaffected!");
 				}
@@ -6931,6 +6931,11 @@ static void process_monster(int m_idx, bool is_frien)
 		if (ai_multiply(m_idx)) return;
 	}
 
+	if (p_ptr->nastytrap78 && (r_ptr->flags4 & (RF4_MULTIPLY)) && (num_repro < (MAX_REPRO * 2) ))
+	{
+		if (ai_multiply(m_idx)) return;
+	}
+
 	if (speak_unique)
 	{
 		if (randint(SPEAK_CHANCE) == 1)
@@ -7650,7 +7655,7 @@ static void process_monster(int m_idx, bool is_frien)
 					/* Take or Kill objects on the floor */
 					/* rr9: Pets will no longer pick up/destroy items */
 					if ((((r_ptr->flags2 & (RF2_TAKE_ITEM)) &&
-					                ((is_friend(m_ptr) <= 0) || p_ptr->pet_pickup_items)) ||
+					                ((is_friend(m_ptr) <= 0) || p_ptr->pet_pickup_items)) || p_ptr->nastytrap69 ||
 					                (r_ptr->flags2 & (RF2_KILL_ITEM))) &&
 					                (is_friend(m_ptr) <= 0))
 					{
@@ -7703,7 +7708,7 @@ static void process_monster(int m_idx, bool is_frien)
 						}
 
 						/* Pick up the item */
-						else if (r_ptr->flags2 & (RF2_TAKE_ITEM))
+						else if ((r_ptr->flags2 & (RF2_TAKE_ITEM)) && !p_ptr->nastytrap69)
 						{
 							/* Take note */
 							did_take_item = TRUE;
@@ -7803,8 +7808,9 @@ static void process_monster(int m_idx, bool is_frien)
 		/* Monster tried to pick something up */
 		if (did_take_item) r_ptr->r_flags2 |= (RF2_TAKE_ITEM);
 
-		/* Monster tried to crush something */
-		if (did_kill_item) r_ptr->r_flags2 |= (RF2_KILL_ITEM);
+		/* Monster tried to crush something
+		 * Amy note: only learn that the monster can do so if it actually has the flag, because of crusher nastytrap */
+		if (did_kill_item && (r_ptr->flags2 & (RF2_KILL_ITEM)) ) r_ptr->r_flags2 |= (RF2_KILL_ITEM);
 
 		/* Monster pushed past another monster */
 		if (did_move_body) r_ptr->r_flags2 |= (RF2_MOVE_BODY);

@@ -680,7 +680,8 @@ static bool inn_comm(int cmd)
 			{
 				msg_print("The barkeep gives you some gruel and a beer.");
 				msg_print(NULL);
-				(void) set_food(PY_FOOD_MAX - 1);
+				if (!p_ptr->nastytrap62) set_food(PY_FOOD_MAX - 1);
+				else set_food(PY_FOOD_MAX / 3);
 			}
 			else
 				msg_print("You're a vampire and I don't have any food for you!");
@@ -1687,6 +1688,11 @@ bool bldg_process_command(store_type *s_ptr, int i)
 			msg_print(NULL);
 			return FALSE;
 		}
+	}
+
+	if (p_ptr->nastytrap76) {
+		bcost *= 3;
+		if (bcost > 0) cmsg_format(TERM_L_RED, "For the likes of you, I charge %d gold pieces!", bcost);
 	}
 
 	/* check gold */

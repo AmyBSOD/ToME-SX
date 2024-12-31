@@ -3709,6 +3709,9 @@ void gain_exp(s32b amount)
 {
 	int i, num = 1;
 
+	/* antileveling nastytrap: cannot gain any experience whatsoever --Amy */
+	if (p_ptr->nastytrap88) return;
+
 	/* Count the gaining xp objects */
 	for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
 	{
@@ -3835,6 +3838,9 @@ void place_corpse(monster_type *m_ptr)
 
 	int x = m_ptr->fx;
 	int y = m_ptr->fy;
+
+	/* starvation nastytrap: never drop a corpse or skeleton */
+	if (p_ptr->nastytrap86) return;
 
 #if 0 /* If I can find some time to implement the decapitation ... */
 	object_type *w_ptr = &p_ptr->inventory[INVEN_WIELD];

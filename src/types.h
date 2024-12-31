@@ -1967,7 +1967,7 @@ struct player_type
 	bool nastytrap69; /* crusher trap - monsters can crush loot */
 	bool nastytrap70; /* dark mode trap - lit areas can't be seen at a distance */
 	bool nastytrap71; /* charge loss trap - charge drain attacks instantly drain your shit to zero */
-	bool nastytrap72; /* paranoia trap - no confirmation when walking into peaceful monsters etc. */
+	bool nastytrap72; /* paranoia trap - no confirmation when walking into peaceful monsters, known traps etc. */
 	bool nastytrap73; /* invis monster trap - see invisible doesn't work */
 	bool nastytrap74; /* no dodging trap - your dodging chance is always zero */
 	bool nastytrap75; /* ambush trap - ambushes on the world map happen more often */

@@ -481,6 +481,12 @@ void do_cmd_wield(void)
 	/* Message */
 	msg_format("%s %s (%c).", act, o_name, index_to_label(slot));
 
+	/* autocurse nastytrap: everything you equip becomes cursed --Amy */
+	if (p_ptr->nastytrap79) {
+		o_ptr->art_flags3 |= TR3_CURSED;
+		o_ptr->ident |= IDENT_CURSED;
+	}
+
 	/* Cursed! */
 	if (cursed_p(o_ptr))
 	{
@@ -623,7 +629,7 @@ void do_cmd_drop(void)
 		}
 		else
 		{
-			if (f4 & TR4_CURSE_NO_DROP)
+			if ((f4 & TR4_CURSE_NO_DROP) || p_ptr->nastytrap102)
 			{
 				/* Oops */
 				msg_print("Hmmm, you seem to be unable to drop it.");
@@ -730,7 +736,7 @@ void do_cmd_destroy(void)
 
 	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
 
-	if ((f4 & TR4_CURSE_NO_DROP) && cursed_p(o_ptr))
+	if (((f4 & TR4_CURSE_NO_DROP) || p_ptr->nastytrap102) && cursed_p(o_ptr))
 	{
 		/* Oops */
 		msg_print("Hmmm, you seem to be unable to destroy it.");

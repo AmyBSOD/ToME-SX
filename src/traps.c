@@ -1148,7 +1148,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/* Paralyzing Trap */
 	case TRAP_OF_PARALYZING:
 		{
-			if (!p_ptr->free_act || (rand_int(100) == 0) )
+			if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 			{
 				msg_print("You touch a poisoned part and can't move.");
 				(void)set_paralyzed(p_ptr->paralyzed + rand_int(10) + 10);
@@ -1239,7 +1239,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			(void)set_food(PY_FOOD_STARVE - 1);
 			(void)set_poisoned(0);
 
-			if (!p_ptr->free_act || (rand_int(100) == 0) )
+			if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 			{
 				(void)set_paralyzed(p_ptr->paralyzed + rand_int(dun_level) + 6);
 			}
@@ -2302,6 +2302,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap1 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2313,6 +2314,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap2 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2329,6 +2331,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 
 			p_ptr->nastytrap3 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2340,6 +2343,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap4 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2351,6 +2355,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap5 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2362,6 +2367,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap6 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2373,6 +2379,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap7 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2384,6 +2391,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap8 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2395,6 +2403,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap9 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2405,6 +2414,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap10 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2415,6 +2425,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap11 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2425,6 +2436,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap12 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2435,6 +2447,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap13 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2445,6 +2458,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap14 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2455,6 +2469,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap15 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2465,6 +2480,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap16 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2475,6 +2491,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap17 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2485,6 +2502,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap18 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2495,6 +2513,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap19 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2505,6 +2524,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap20 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2515,6 +2535,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap21 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2525,6 +2546,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap22 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2535,6 +2557,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap23 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2545,6 +2568,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap24 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2555,6 +2579,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap25 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2565,6 +2590,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap26 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2575,6 +2601,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap27 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2585,6 +2612,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap28 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2595,6 +2623,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap29 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2605,6 +2634,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap30 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2615,6 +2645,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap31 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2625,6 +2656,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap32 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2635,6 +2667,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap33 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2645,6 +2678,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap34 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2655,6 +2689,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap35 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2665,6 +2700,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap36 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2675,6 +2711,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap37 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2685,6 +2722,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap38 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2695,6 +2733,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap39 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2705,6 +2744,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap40 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2715,6 +2755,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap41 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2725,6 +2766,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap42 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2735,6 +2777,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap43 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2745,6 +2788,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap44 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2755,6 +2799,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap45 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2765,6 +2810,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap46 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2775,6 +2821,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap47 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2785,6 +2832,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap48 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2795,6 +2843,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap49 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2805,6 +2854,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap50 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2815,6 +2865,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap51 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2825,6 +2876,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap52 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2835,6 +2887,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap53 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2845,6 +2898,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap54 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2855,6 +2909,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap55 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2865,6 +2920,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap56 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2875,6 +2931,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap57 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2885,6 +2942,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap58 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2895,6 +2953,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap59 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2905,6 +2964,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap60 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2915,6 +2975,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap61 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2925,6 +2986,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap62 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2935,6 +2997,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap63 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2945,6 +3008,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap64 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2955,6 +3019,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap65 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2965,6 +3030,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap66 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2975,6 +3041,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap67 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2985,6 +3052,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap68 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -2995,6 +3063,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap69 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3005,6 +3074,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap70 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3015,6 +3085,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap71 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3025,6 +3096,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap72 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3035,6 +3107,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap73 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3045,6 +3118,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap74 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3055,6 +3129,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap75 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3065,6 +3140,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap76 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3075,6 +3151,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap77 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3085,6 +3162,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap78 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3095,6 +3173,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap79 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3105,6 +3184,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap80 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3115,6 +3195,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap81 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3125,6 +3206,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap82 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3135,6 +3217,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap83 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3145,6 +3228,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap84 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3155,6 +3239,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap85 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3165,6 +3250,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap86 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3175,6 +3261,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap87 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3185,6 +3272,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap88 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3195,6 +3283,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap89 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3205,6 +3294,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap90 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3215,6 +3305,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap91 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3225,6 +3316,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap92 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3235,6 +3327,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap93 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3245,6 +3338,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap94 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3255,6 +3349,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap95 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3265,6 +3360,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap96 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3275,6 +3371,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap97 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3285,6 +3382,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap98 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3295,6 +3393,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap99 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3305,6 +3404,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap100 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3315,6 +3415,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap101 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3325,6 +3426,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap102 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3335,6 +3437,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap103 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3345,6 +3448,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap104 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3355,6 +3459,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap105 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3365,6 +3470,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap106 = TRUE;
+			calc_bonuses(FALSE);
 
 			break;			
 		}
@@ -3422,7 +3528,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					shoedamage = damroll(4, 6);
 					shoedamage += damroll(shoeextra, 5);
 					if (!p_ptr->paralyzed) {
-						if (p_ptr->free_act && (rand_int(100) > 0) ) {
+						if (p_ptr->free_act && (rand_int(p_ptr->nastytrap57 ? 20 : 100) > 0) ) {
 							msg_print("You struggle to stay on your feet.");
 						} else {
 							msg_print("You helplessly drop to the floor in pain.");
@@ -3916,7 +4022,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			case 7:
 			case 8:
 			{
-				if (p_ptr->hold_life)
+				if (p_ptr->hold_life && !p_ptr->nastytrap95)
 				{
 					msg_print("You feel your life slipping away!");
 					lose_exp(p_ptr->exp / 100);
@@ -3995,7 +4101,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				{
 					(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 				}
-				if (!p_ptr->free_act || (rand_int(100) == 0) )
+				if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 				{
 					(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
 				}
@@ -4220,7 +4326,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("Scintillating colors hypnotise you for a moment.");
 			ident = TRUE;
 
-			set_image(80);
+			set_image(p_ptr->image + 80);
 		}
 		break;
 
@@ -6280,5 +6386,7 @@ void cure_nasty_traps(void)
 	p_ptr->nastytrap198 = FALSE;
 	p_ptr->nastytrap199 = FALSE;
 	p_ptr->nastytrap200 = FALSE;
+
+	calc_bonuses(TRUE);
 
 }

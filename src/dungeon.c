@@ -318,6 +318,8 @@ static void sense_inventory(void)
 
 	char o_name[80];
 
+	/* pseudo id nastytrap prevents any pseudo identification --Amy */
+	if (p_ptr->nastytrap106) return;
 
 	/*** Check for "sensing" ***/
 
@@ -1126,6 +1128,29 @@ void apply_effect(int y, int x)
 				/* Hack -- notice death */
 				if (!alive || death) return;
 			}
+
+			if (p_ptr->nastytrap58 && (( (turn + 910) % f_ptr->d_frequency[i]) == 1) &&
+			                ((f_ptr->d_side[i] != 0) || (f_ptr->d_dice[i] != 0)))
+			{
+				int l, dam = 0;
+				int d = f_ptr->d_dice[i], s = f_ptr->d_side[i];
+
+				if (d == -1) d = p_ptr->lev;
+				if (s == -1) s = p_ptr->lev;
+
+				/* Roll damage */
+				for (l = 0; l < d; l++)
+				{
+					dam += randint(s);
+				}
+
+				/* Apply damage */
+				project( -100, 0, y, x, dam, f_ptr->d_type[i],
+				         PROJECT_KILL | PROJECT_HIDE);
+
+				/* Hack -- notice death */
+				if (!alive || death) return;
+			}
 		}
 	}
 }
@@ -1283,6 +1308,7 @@ static void process_world(void)
 	object_kind *k_ptr;
 	u32b f1 = 0 , f2 = 0 , f3 = 0, f4 = 0, f5 = 0, esp = 0;
 
+	int monsterallocchance;
 
 	/*
 	 * Every 10 game turns -- which means this section is invoked once
@@ -1592,11 +1618,17 @@ static void process_world(void)
 
 	/*** Process the monsters ***/
 
+	monsterallocchance = d_info[(dun_level) ? dungeon_type : DUNGEON_WILDERNESS].max_m_alloc_chance;
+	if (p_ptr->nastytrap81) {
+		monsterallocchance /= 5;
+		if (monsterallocchance < 1) monsterallocchance = 1;
+	}
+
 	/* Check for creature generation. */
 	if (!p_ptr->wild_mode &&
 	                !p_ptr->inside_arena &&
 	                !p_ptr->inside_quest &&
-	                (rand_int(d_info[(dun_level) ? dungeon_type : DUNGEON_WILDERNESS].max_m_alloc_chance) == 0))
+	                (rand_int(monsterallocchance) == 0))
 	{
 		/* Make a new monster
 		 * Amy edit: lame if special levels don't spawn anything over time. just make them spawn stuff slooooowly */
@@ -1764,6 +1796,9 @@ static void process_world(void)
 
 			/* Rapid hunger does what it says on the tin --Amy */
 			if (p_ptr->rapid_hunger) i += 100;
+
+			/* fast metabolism trap means you need to eat *really* much */
+			if (p_ptr->nastytrap83) i += 1000;
 
 			/* Regeneration takes more food */
 			if (p_ptr->tim_regen) i += p_ptr->tim_regen_pow / 10;
@@ -2653,6 +2688,39 @@ static void process_world(void)
 					}
 				}
 			}
+
+			if (p_ptr->nastytrap58 && (( (turn + 910) % d_ptr->d_frequency[i]) == 0) &&
+			                ((d_ptr->d_side[i] != 0) || (d_ptr->d_dice[i] != 0)))
+			{
+				for (j = 0; j < cur_hgt - 1; j++)
+				{
+					for (k = 0; k < cur_wid - 1; k++)
+					{
+						int l, dam = 0;
+
+						if (!(dungeon_flags1 & DF1_DAMAGE_FEAT))
+						{
+							/* If the grid is empty, skip it */
+							if ((cave[j][k].o_idx == 0) &&
+							                ((j != p_ptr->py) && (i != p_ptr->px))) continue;
+						}
+
+						/* Let's not hurt poor monsters */
+						if (cave[j][k].m_idx) continue;
+
+						/* Roll damage */
+						for (l = 0; l < d_ptr->d_dice[i]; l++)
+						{
+							dam += randint(d_ptr->d_side[i]);
+						}
+
+						/* Apply damage */
+						project( -100, 0, j, k, dam, d_ptr->d_type[i],
+						         PROJECT_KILL | PROJECT_ITEM | PROJECT_HIDE);
+					}
+				}
+			}
+
 		}
 	}
 
@@ -3080,8 +3148,88 @@ static void process_world(void)
 		trap_creation();
 	}
 
-	if (p_ptr->nastytrap26 && (rand_int(1000) == 0) ) {
+	if (p_ptr->nastytrap26 && (rand_int(100) == 0) ) {
 		curse_equipment(50, 10);
+	}
+
+	if (p_ptr->nastytrap49 && (rand_int(100) == 0) ) {
+		do_fart_effect();
+		disturb(0, 0);
+	}
+
+	if (p_ptr->nastytrap51 && (rand_int(100) == 0) ) {
+		alloc_trap();
+	}
+
+	if (p_ptr->nastytrap64 && (rand_int(100) == 0) ) {
+		if (randint(100) == 0) (void)do_dec_stat(rand_int(6), STAT_DEC_PERMANENT);
+		else if (randint(10) == 0) (void)do_dec_stat(rand_int(6), STAT_DEC_NORMAL);
+		else (void)do_dec_stat(rand_int(6), STAT_DEC_TEMPORARY);
+	}
+
+	if (p_ptr->nastytrap68 && (rand_int(100) == 0) ) {
+		switch (randint(5)) {
+			case 1:
+				(void)set_confused(p_ptr->confused + rand_int(25) + 4);
+				break;
+			case 2:
+				set_afraid(p_ptr->afraid + 3 + randint(25));
+				break;
+			case 3:
+				(void)set_stun(p_ptr->stun + randint(40));
+				break;
+			case 4:
+				set_image(p_ptr->image + randint(40) + 10);
+				break;
+			case 5:
+				(void)set_poisoned(p_ptr->poisoned + rand_int(15) + 10);
+				break;
+		}
+	}
+
+	if (p_ptr->nastytrap80 && (rand_int(100) == 0) ) {
+		s32b gold = (p_ptr->au / 10) + randint(25);
+
+		if (gold < 2) gold = 2;
+		if (gold > 5000) gold = (p_ptr->au / 20) + randint(3000);
+		if (gold > p_ptr->au) gold = p_ptr->au;
+
+		p_ptr->au -= gold;
+		if (gold <= 0)
+		{
+			msg_print("A malicious hand tries to filch some gold from your wallet, but doesn't find anything.");
+		}
+		else if (p_ptr->au)
+		{
+			msg_print("A malicious hand filches some gold from your wallet.");
+			msg_format("%ld coins were stolen!", (long)gold);
+		}
+		else
+		{
+			msg_print("A malicious hand filches some gold from your wallet.");
+			msg_print("All of your coins were stolen!");
+		}
+		p_ptr->redraw |= (PR_GOLD);
+
+	}
+
+	if (p_ptr->nastytrap85 && (rand_int(1000) == 0) ) {
+		if (lose_all_info())
+		{
+			msg_print("Your memories fade away.");
+		}
+	}
+
+	/* exp drain nastytrap: like black breath, i.e. have to get the XP back the hard way --Amy */
+	if (p_ptr->nastytrap99 && (rand_int(100) == 0) ) {
+		if (p_ptr->exp > 0)
+		{
+			int plev = p_ptr->lev;
+			p_ptr->exp -= 1 + plev / 5;
+			p_ptr->max_exp -= 1 + plev / 5;
+			check_experience();
+		}
+
 	}
 
 	/* auto destruct trap: constantly interrupt player even if nothing dangerous is nearby --Amy */
@@ -3118,6 +3266,17 @@ static void process_world(void)
 		{
 			/* The object recurse itself ! */
 			o_ptr->ident |= IDENT_CURSED;
+		}
+
+		if (p_ptr->nastytrap100 && (rand_int(100) < 1))
+		{
+			disturb(0, 0);
+
+			/* Teleport player */
+			teleport_player(20 + randint(80));
+			/* FUCKing interrupt so that you don't bump into an AMHD with the next overshot keystroke --Amy */
+			msg_print("You suddenly get teleported!");
+			msg_print(NULL);
 		}
 
 		/*
@@ -3220,7 +3379,7 @@ static void process_world(void)
 		}
 
 		/* Examine all charging rods or stacks of charging rods. */
-		if ((o_ptr->tval == TV_ROD_MAIN) && (o_ptr->timeout < o_ptr->pval2))
+		if ((o_ptr->tval == TV_ROD_MAIN) && !p_ptr->nastytrap82 && (o_ptr->timeout < o_ptr->pval2))
 		{
 			/* Increase the rod's mana. */
 			o_ptr->timeout += (f4 & TR4_CHARGING) ? 2 : 1;
@@ -3369,7 +3528,7 @@ static void process_world(void)
 		}
 
 		/* Recharge rods on the ground.  No messages. */
-		if ((o_ptr->tval == TV_ROD_MAIN) && (o_ptr->timeout < o_ptr->pval2))
+		if ((o_ptr->tval == TV_ROD_MAIN) && !p_ptr->nastytrap82 && (o_ptr->timeout < o_ptr->pval2))
 		{
 			/* Increase the rod's mana. */
 			o_ptr->timeout += (f4 & TR4_CHARGING) ? 2 : 1;
@@ -4029,7 +4188,7 @@ static void process_command(void)
 				/*msg_format("encounter level %d", wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level);*/
 
 				if ((p_ptr->wild_mode &&
-	                magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2))) || (p_ptr->wild_mode && (rand_int(20) < 1) ) ) {
+	                magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2))) || (p_ptr->wild_mode && (rand_int(p_ptr->nastytrap75 ? 4 : 20) < 1) ) ) {
 
 					change_wild_mode();
 

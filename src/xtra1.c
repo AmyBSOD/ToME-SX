@@ -1855,6 +1855,10 @@ static void calc_mana(void)
 	/* Mana can never be negative */
 	if (msp < 0) msp = 0;
 
+	if (p_ptr->nastytrap56 && (msp > 1)) {
+		msp /= 2;
+		if (msp < 0) msp = 0;
+	}
 
 	/* Maximum mana has changed */
 	if (p_ptr->msp != msp)
@@ -2018,6 +2022,13 @@ void calc_hitpoints(void)
 
 	/* Never less than 1 */
 	if (mhp < 1) mhp = 1;
+
+	if (p_ptr->nastytrap55 && (mhp > 1)) {
+		mhp *= 2;
+		mhp /= 3;
+
+		if (mhp < 1) mhp = 1;
+	}
 
 	/* New maximum hitpoints */
 	if (p_ptr->mhp != mhp)
@@ -4385,17 +4396,17 @@ void calc_bonuses(bool silent)
 	/* Let the scripts do what they need */
 	process_hooks(HOOK_CALC_BONUS_END, "(d)", silent);
 
-	if (p_ptr->nastytrap5 && p_ptr->skill_sav > 0) p_ptr->skill_sav = 0;
-	if (p_ptr->nastytrap6 && p_ptr->skill_dis > 0) p_ptr->skill_dis = 0;
-	if (p_ptr->nastytrap7 && p_ptr->skill_dev > 0) p_ptr->skill_dev = 0;
-	if (p_ptr->nastytrap8 && p_ptr->skill_stl > 0) p_ptr->skill_stl = 0;
-	if (p_ptr->nastytrap9 && p_ptr->skill_srh > 0) p_ptr->skill_srh = 0;
-	if (p_ptr->nastytrap10 && p_ptr->skill_fos > 0) p_ptr->skill_fos = 0;
+	if (p_ptr->nastytrap5 && (p_ptr->skill_sav > 0)) p_ptr->skill_sav = 0;
+	if (p_ptr->nastytrap6 && (p_ptr->skill_dis > 0)) p_ptr->skill_dis = 0;
+	if (p_ptr->nastytrap7 && (p_ptr->skill_dev > 0)) p_ptr->skill_dev = 0;
+	if (p_ptr->nastytrap8 && (p_ptr->skill_stl > 0)) p_ptr->skill_stl = 0;
+	if (p_ptr->nastytrap9 && (p_ptr->skill_srh > 0)) p_ptr->skill_srh = 0;
+	if (p_ptr->nastytrap10 && (p_ptr->skill_fos > 0)) p_ptr->skill_fos = 0;
 
 	if (p_ptr->nastytrap11) p_ptr->aggravate = TRUE;
 
 	if (p_ptr->nastytrap17) p_ptr->pspeed -= 10;
-	if (p_ptr->nastytrap18 && p_ptr->pspeed > 111) {
+	if (p_ptr->nastytrap18 && (p_ptr->pspeed > 111)) {
 		int speedreductor = (p_ptr->pspeed - 110);
 		speedreductor /= 2;
 		p_ptr->pspeed -= speedreductor;
@@ -4421,6 +4432,59 @@ void calc_bonuses(bool silent)
 		p_ptr->dis_to_a -= 10;
 	}
 
+	if (p_ptr->nastytrap54) {
+		p_ptr->stat_add[A_STR] -= 5;
+		p_ptr->stat_add[A_CON] -= 5;
+		p_ptr->stat_add[A_CHR] -= 5;
+		p_ptr->stat_add[A_WIS] -= 5;
+		p_ptr->stat_add[A_DEX] -= 5;
+		p_ptr->stat_add[A_INT] -= 5;
+	}
+
+	if (p_ptr->nastytrap73) p_ptr->see_inv = FALSE;
+
+	if (p_ptr->nastytrap74 && (p_ptr->dodge_chance > 0)) p_ptr->dodge_chance = 0;
+
+	if (p_ptr->nastytrap87) {
+		p_ptr->immune_acid = FALSE;
+		p_ptr->immune_elec = FALSE;
+		p_ptr->immune_fire = FALSE;
+		p_ptr->immune_cold = FALSE;
+		p_ptr->immune_neth = FALSE;
+		p_ptr->immune_pois = FALSE;
+		p_ptr->oppose_acid = FALSE;
+		p_ptr->oppose_elec = FALSE;
+		p_ptr->oppose_fire = FALSE;
+		p_ptr->oppose_cold = FALSE;
+		p_ptr->oppose_pois = FALSE;
+		/* oppose light and dark etc. just gives regular resistance and is therefore not affected by the nasty trap --Amy */
+	}
+
+	if (p_ptr->nastytrap89) {
+		p_ptr->sustain_str = FALSE;
+		p_ptr->sustain_dex = FALSE;
+		p_ptr->sustain_int = FALSE;
+		p_ptr->sustain_con = FALSE;
+		p_ptr->sustain_chr = FALSE;
+		p_ptr->sustain_wis = FALSE;
+	}
+
+	if (p_ptr->nastytrap90 && (p_ptr->see_infra > 0) ) p_ptr->see_infra = 0;
+
+	if (p_ptr->nastytrap91) {
+		if (p_ptr->num_blow > 1) p_ptr->num_blow /= 2;
+		if (p_ptr->num_blow < 1) p_ptr->num_blow = 1;
+		if (p_ptr->num_fire > 1) p_ptr->num_fire /= 2;
+		if (p_ptr->num_fire < 1) p_ptr->num_fire = 1;
+	}
+
+	if (p_ptr->nastytrap93) p_ptr->reflect = FALSE;
+
+	if (p_ptr->nastytrap98) p_ptr->regenerate = FALSE;
+
+	if (p_ptr->nastytrap101) p_ptr->black_breath = TRUE;
+
+	if (p_ptr->nastytrap105) p_ptr->telepathy = 0;
 }
 
 
@@ -5042,7 +5106,9 @@ void gain_fate(byte fate)
 
 						/* the objects shouldn't be teh sux! --Amy */
 						int maxobjlevel = randint(50) + max_dlv[dungeon_type] + p_ptr->lev;
+						if (p_ptr->nastytrap45 && (maxobjlevel > 1)) maxobjlevel /= 2;
 						int runebonus = get_skill(SKILL_RUNECRAFT);
+						if (p_ptr->nastytrap45) runebonus = 0;
 						if (runebonus > 0) maxobjlevel += runebonus;
 
 						/* No themes */
@@ -5089,7 +5155,9 @@ void gain_fate(byte fate)
 			case FATE_FIND_A:
 			{
 				int maxobjlevel = randint(50) + max_dlv[dungeon_type] + p_ptr->lev * 2;
+				if (p_ptr->nastytrap45 && (maxobjlevel > 1)) maxobjlevel /= 2;
 				int runebonus = get_skill(SKILL_RUNECRAFT);
+				if (p_ptr->nastytrap45) runebonus = 0;
 				if (runebonus > 0) maxobjlevel += runebonus;
 
 				fates[i].a_idx = get_artifact_idx(maxobjlevel);

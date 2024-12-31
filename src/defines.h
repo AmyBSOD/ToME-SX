@@ -2173,11 +2173,11 @@
  * Special cave grid flags
  */
 #define CAVE_MARK       0x0001    /* memorized feature */
-#define CAVE_GLOW       0x0002    /* self-illuminating */
+#define CAVE_GLOW       0x0002    /* self-illuminating, i.e. grid is perma-lit */
 #define CAVE_ICKY       0x0004    /* part of a vault */
 #define CAVE_ROOM       0x0008    /* part of a room */
-#define CAVE_SEEN       0x0010    /* seen flag  */
-#define CAVE_VIEW       0x0020    /* view flag */
+#define CAVE_SEEN       0x0010    /* seen flag - player can currently see this grid */
+#define CAVE_VIEW       0x0020    /* view flag - grid is currently in player's LOS */
 #define CAVE_TEMP       0x0040    /* temp flag */
 #define CAVE_WALL       0x0080    /* wall flag */
 #define CAVE_TRDT       0x0100    /* trap detected */

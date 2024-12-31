@@ -2705,10 +2705,13 @@ static bool make_artifact_special(object_type *o_ptr)
 	/* runecraft improvement by Amy: improve object level */
 	int objlevelmax = object_level;
 	int runebonus = get_skill(SKILL_RUNECRAFT);
+	if (p_ptr->nastytrap45) runebonus = 0;
+	if (p_ptr->nastytrap45 && (objlevelmax > 1)) objlevelmax /= 2;
 	if (runebonus > 0) objlevelmax += runebonus;
 
 	int dunlevelmax = dun_level;
-	if (get_skill(SKILL_RUNECRAFT) > 0) dunlevelmax += get_skill(SKILL_RUNECRAFT);
+	if (p_ptr->nastytrap45 && (dunlevelmax > 1)) dunlevelmax /= 2;
+	if ((get_skill(SKILL_RUNECRAFT) > 0) && !p_ptr->nastytrap45) dunlevelmax += get_skill(SKILL_RUNECRAFT);
 
 	/* Check the artifact list (just the "specials") */
 	for (i = 0; i < max_a_idx; i++)
@@ -2927,7 +2930,8 @@ static bool make_ego_item(object_type *o_ptr, bool good)
 		int maxposslvl;
 
 		maxposslvl = dun_level;
-		maxposslvl += get_skill(SKILL_RUNECRAFT);
+		if (p_ptr->nastytrap45 && (maxposslvl > 1)) maxposslvl /= 2;
+		if (!p_ptr->nastytrap45) maxposslvl += get_skill(SKILL_RUNECRAFT);
 
 		int j = ok_ego[rand_int(ok_num)];
 		e_ptr = &e_info[j];
@@ -3879,7 +3883,9 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 	case TV_CORPSE:
 		{
 			int runebonus = get_skill(SKILL_RUNECRAFT);
+			if (p_ptr->nastytrap45) runebonus = 0;
 			int egglevel = dun_level;
+			if (p_ptr->nastytrap45 && (egglevel > 1)) egglevel /= 2;
 			if (runebonus > 0) egglevel += runebonus;
 
 			/* Hack -- choose a monster */
@@ -3902,7 +3908,9 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 			int r_idx, count = 0;
 			bool OK = FALSE;
 			int runebonus = get_skill(SKILL_RUNECRAFT);
+			if (p_ptr->nastytrap45) runebonus = 0;
 			int egglevel = dun_level;
+			if (p_ptr->nastytrap45 && (egglevel > 1)) egglevel /= 2;
 			if (runebonus > 0) egglevel += runebonus;
 
 			while ((!OK) && (count < 1000))
@@ -3928,7 +3936,9 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 	case TV_HYPNOS:
 		{
 			int runebonus = get_skill(SKILL_RUNECRAFT);
+			if (p_ptr->nastytrap45) runebonus = 0;
 			int egglevel = dun_level;
+			if (p_ptr->nastytrap45 && (egglevel > 1)) egglevel /= 2;
 			if (runebonus > 0) egglevel += runebonus;
 
 			/* Hack -- choose a monster */
@@ -4744,6 +4754,8 @@ void apply_magic(object_type *o_ptr, int lev, bool okay, bool good, bool great)
 	/* Hack -- Get four rolls if forced great */
 	if (great) rolls = 4;
 
+	if (p_ptr->nastytrap50) rolls = 0;
+
 	/* Hack -- Get no rolls if not allowed */
 	if (!okay || o_ptr->name1) rolls = 0;
 
@@ -5475,9 +5487,15 @@ bool make_object(object_type *j_ptr, bool good, bool great, obj_theme theme)
 	int invprob, base;
 
 	int objlevelmax = object_level;
+	if (p_ptr->nastytrap45 && (objlevelmax > 1)) objlevelmax /= 2;
 	int runebonus = get_skill(SKILL_RUNECRAFT);
+	if (p_ptr->nastytrap45) runebonus = 0;
 	if (runebonus > 0) objlevelmax += runebonus;
 	bool madespecialarti = FALSE;
+
+	/* bad loot nastytrap: good and especially great items are much less common --Amy */
+	if (p_ptr->nastytrap50 && (randint(10) != 1)) great = FALSE;
+	if (p_ptr->nastytrap50 && (randint(3) != 1)) good = FALSE;
 
 	/* Chance of "special object"
 	 * Amy edit: was too high, lowered and instead randart chances (mods/mods_aux.lua) increased */
@@ -5493,7 +5511,7 @@ bool make_object(object_type *j_ptr, bool good, bool great, obj_theme theme)
 	base = (good ? (objlevelmax + 10) : objlevelmax);
 
 	/* Generate a special object, or a normal object */
-	if (rand_int(invprob) == 0) {
+	if ((rand_int(invprob) == 0) && !p_ptr->nastytrap50) {
 		madespecialarti = make_artifact_special(j_ptr);
 	}
 
@@ -5611,6 +5629,8 @@ void place_object(int y, int x, bool good, bool great, int where)
 	object_type forge;
 	object_type *q_ptr;
 
+	/* boring level nastytrap: items just don't generate on the floor, not even in vaults --Amy */
+	if (p_ptr->nastytrap66) return;
 
 	/* Paranoia -- check bounds */
 	if (!in_bounds(y, x)) return;
@@ -5765,6 +5785,7 @@ void place_gold(int y, int x)
 	object_type forge;
 	object_type *q_ptr;
 
+	if (p_ptr->nastytrap66) return;
 
 	/* Paranoia -- check bounds */
 	if (!in_bounds(y, x)) return;

@@ -1078,6 +1078,7 @@ extern bool place_monster_aux(int y, int x, int r_idx, bool slp, bool grp, int s
 extern bool place_monster(int y, int x, bool slp, bool grp);
 extern bool alloc_horde(int y, int x);
 extern bool alloc_monster(int dis, bool slp);
+extern bool alloc_trap(void);
 extern bool summon_specific_okay(int r_idx);
 extern int summon_specific_level;
 extern bool summon_specific(int y1, int x1, int lev, int type);

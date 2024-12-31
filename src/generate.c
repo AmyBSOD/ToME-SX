@@ -8386,6 +8386,7 @@ static bool cave_gen(void)
 	{
 		/* Place some traps in the dungeon */
 		alloc_object(ALLOC_SET_BOTH, ALLOC_TYP_TRAP, randint(k * 2));
+		if (p_ptr->nastytrap67) alloc_object(ALLOC_SET_BOTH, ALLOC_TYP_TRAP, randint(k * 20));
 
 		/* Put some rubble in corridors */
 		alloc_object(ALLOC_SET_CORR, ALLOC_TYP_RUBBLE, randint(k));

@@ -556,6 +556,8 @@ bool carried_make_attack_normal(int r_idx)
 
 			/* Roll out the damage */
 			damage = damroll(d_dice, d_side);
+			/* full damage nastytrap: always do max damage --Amy */
+			if (p_ptr->nastytrap59) damage = d_dice * d_side;
 
 			/* Apply appropriate damage */
 			switch (effect)
@@ -831,7 +833,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Increase "paralyzed" */
-					if (p_ptr->free_act && (rand_int(100) > 0) )
+					if (p_ptr->free_act && (rand_int(p_ptr->nastytrap57 ? 20 : 100) > 0) )
 					{
 						msg_print("You are unaffected!");
 						obvious = TRUE;
@@ -976,14 +978,14 @@ bool carried_make_attack_normal(int r_idx)
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
 
-					if (p_ptr->hold_life && (rand_int(100) < 95))
+					if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 95))
 					{
 						msg_print("You keep hold of your life force!");
 					}
 					else
 					{
 						s32b d = damroll(10, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
-						if (p_ptr->hold_life)
+						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
 							lose_exp(d / 10);
@@ -1006,14 +1008,14 @@ bool carried_make_attack_normal(int r_idx)
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
 
-					if (p_ptr->hold_life && (rand_int(100) < 90))
+					if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 90))
 					{
 						msg_print("You keep hold of your life force!");
 					}
 					else
 					{
 						s32b d = damroll(20, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
-						if (p_ptr->hold_life)
+						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
 							lose_exp(d / 10);
@@ -1036,14 +1038,14 @@ bool carried_make_attack_normal(int r_idx)
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
 
-					if (p_ptr->hold_life && (rand_int(100) < 75))
+					if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 75))
 					{
 						msg_print("You keep hold of your life force!");
 					}
 					else
 					{
 						s32b d = damroll(40, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
-						if (p_ptr->hold_life)
+						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
 							lose_exp(d / 10);
@@ -1066,14 +1068,14 @@ bool carried_make_attack_normal(int r_idx)
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
 
-					if (p_ptr->hold_life && (rand_int(100) < 50))
+					if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 50))
 					{
 						msg_print("You keep hold of your life force!");
 					}
 					else
 					{
 						s32b d = damroll(80, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
-						if (p_ptr->hold_life)
+						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
 							lose_exp(d / 10);
@@ -1923,6 +1925,8 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			/* Roll out the damage */
 			damage = damroll(d_dice, d_side);
+			/* full damage nastytrap: always do max damage --Amy */
+			if (p_ptr->nastytrap59) damage = d_dice * d_side;
 
 			/* Sometime reduce the damage */
 			damage /= divis;
@@ -2084,6 +2088,8 @@ bool make_attack_normal(int m_idx, byte divis)
 								if (drainmitigate > 0) drainedamount -= randint(drainmitigate);
 								if (drainedamount < 1) drainedamount = 1;
 
+								if (p_ptr->nastytrap71) drainedamount = o_ptr->timeout;
+
 								o_ptr->timeout -= drainedamount;
 								if (o_ptr->timeout < 0) o_ptr->timeout = 0;
 
@@ -2109,6 +2115,8 @@ bool make_attack_normal(int m_idx, byte divis)
 								drainmitigate = get_skill_scale(SKILL_ALCHEMY, 20);
 								if (drainmitigate > 0) drainedamount -= randint(drainmitigate);
 								if (drainedamount < 1) drainedamount = 1;
+
+								if (p_ptr->nastytrap71) drainedamount = o_ptr->pval;
 
 								o_ptr->pval -= drainedamount;
 								if (o_ptr->pval < 0) o_ptr->pval = 0;
@@ -2147,7 +2155,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					obvious = TRUE;
 
 					/* Saving throw (unless paralyzed) based on dex and level */
-					if (!p_ptr->paralyzed && (rand_int(10) > 0) &&
+					if (!p_ptr->paralyzed && !p_ptr->nastytrap63 && (rand_int(10) > 0) &&
 					                (rand_int(100) < (adj_dex_safe[p_ptr->stat_ind[A_DEX]] +
 					                                  p_ptr->lev - m_ptr->level)))
 					{
@@ -2220,7 +2228,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Saving throw (unless paralyzed) based on dex and level */
-					if (!p_ptr->paralyzed && (rand_int(10) > 0) &&
+					if (!p_ptr->paralyzed && !p_ptr->nastytrap63 && (rand_int(10) > 0) &&
 					                (rand_int(100) < (adj_dex_safe[p_ptr->stat_ind[A_DEX]] +
 					                                  p_ptr->lev - m_ptr->level)))
 					{
@@ -2411,11 +2419,11 @@ bool make_attack_normal(int m_idx, byte divis)
 					o_ptr = &p_ptr->inventory[INVEN_LITE];
 
 					/* Drain fuel */
-					if ((o_ptr->pval > 0) && (!artifact_p(o_ptr)))
+					if (o_ptr->timeout > 0)
 					{
 						/* Reduce fuel */
-						o_ptr->pval -= (250 + randint(250));
-						if (o_ptr->pval < 1) o_ptr->pval = 1;
+						o_ptr->timeout -= (250 + randint(250));
+						if (o_ptr->timeout < 1) o_ptr->timeout = 1;
 
 						/* Notice */
 						if (!p_ptr->blind)
@@ -2586,7 +2594,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Increase "paralyzed" */
-					if (p_ptr->free_act && (rand_int(100) > 0) )
+					if (p_ptr->free_act && (rand_int(p_ptr->nastytrap57 ? 20 : 100) > 0) )
 					{
 						msg_print("You are unaffected!");
 						obvious = TRUE;
@@ -2743,14 +2751,14 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 					if (!death) lifesave_no_mortal = FALSE;
 
-					if (p_ptr->hold_life && (rand_int(100) < 95))
+					if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 95))
 					{
 						msg_print("You keep hold of your life force!");
 					}
 					else
 					{
 						s32b d = damroll(10, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
-						if (p_ptr->hold_life)
+						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
 							lose_exp(d / 10);
@@ -2774,14 +2782,14 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 					if (!death) lifesave_no_mortal = FALSE;
 
-					if (p_ptr->hold_life && (rand_int(100) < 90))
+					if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 90))
 					{
 						msg_print("You keep hold of your life force!");
 					}
 					else
 					{
 						s32b d = damroll(20, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
-						if (p_ptr->hold_life)
+						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
 							lose_exp(d / 10);
@@ -2805,14 +2813,14 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 					if (!death) lifesave_no_mortal = FALSE;
 
-					if (p_ptr->hold_life && (rand_int(100) < 75))
+					if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 75))
 					{
 						msg_print("You keep hold of your life force!");
 					}
 					else
 					{
 						s32b d = damroll(40, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
-						if (p_ptr->hold_life)
+						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
 							lose_exp(d / 10);
@@ -2836,14 +2844,14 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 					if (!death) lifesave_no_mortal = FALSE;
 
-					if (p_ptr->hold_life && (rand_int(100) < 50))
+					if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 50))
 					{
 						msg_print("You keep hold of your life force!");
 					}
 					else
 					{
 						s32b d = damroll(80, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
-						if (p_ptr->hold_life)
+						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
 							lose_exp(d / 10);
