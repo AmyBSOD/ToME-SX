@@ -2743,6 +2743,42 @@
 #define TRAP_NASTY107                     315
 #define TRAP_NASTY108                     316
 
+#define TRAP_OF_SUMMON_GREATER_DRAGON     317
+#define TRAP_OF_SUMMON_SPIDER             318
+#define TRAP_OF_SUMMON_HOUND              319
+#define TRAP_OF_SUMMON_HYDRA              320
+#define TRAP_OF_SUMMON_ANGEL              321
+#define TRAP_OF_SUMMON_WRAITH             322
+#define TRAP_OF_SUMMON_UNIQUE             323
+#define TRAP_OF_SUMMON_ANT                324
+#define TRAP_OF_SUMMON_GHOST              325
+#define TRAP_OF_SUMMON_MIMIC              326
+#define TRAP_OF_SUMMON_BAT                327
+#define TRAP_OF_SUMMON_VORTEX             328
+#define TRAP_OF_SUMMON_TREASURE           329
+#define TRAP_OF_SUMMON_ANIMAL             330
+#define TRAP_OF_SUMMON_THUNDERLORD        331
+#define TRAP_OF_SUMMON_MINE               332
+#define TRAP_OF_SUMMON_ELEMENTAL          333
+#define TRAP_OF_SUMMON_SNAKE              334
+#define TRAP_OF_SUMMON_HORROR             335
+#define TRAP_OF_SUMMON_CAT                336
+#define TRAP_OF_SUMMON_RAT                337
+#define TRAP_OF_SUMMON_WORM               338
+#define TRAP_OF_SUMMON_CLOTHES            339
+#define TRAP_OF_SUMMON_HYBRID             340
+#define TRAP_OF_SUMMON_BEETLE             341
+#define TRAP_OF_SUMMON_HORDE              342
+#define TRAP_OF_SUMMON_AMBERITE           343
+#define TRAP_OF_SUMMON_TOWNIE             344
+#define TRAP_OF_SUMMON_SHORE              345
+#define TRAP_OF_SUMMON_OCEAN              346
+#define TRAP_OF_SUMMON_WASTE              347
+#define TRAP_OF_SUMMON_WOOD               348
+#define TRAP_OF_SUMMON_VOLCANO            349
+#define TRAP_OF_SUMMON_MOUNTAIN           350
+#define TRAP_OF_SUMMON_GRASS              351
+
 /*** General index values ***/
 
 
@@ -2787,6 +2823,25 @@
 #define SUMMON_GHOST                56
 #define SUMMON_QUYLTHULG            57
 #define SUMMON_LUA                  58
+#define SUMMON_E                    59 /* E */
+#define SUMMON_SNAKE                60 /* J and n */
+#define SUMMON_ELDRITCH             61 /* ELDRITCH_HORROR */
+#define SUMMON_CAT                  62 /* f */
+#define SUMMON_RAT                  63 /* r */
+#define SUMMON_WORM                 64 /* w */
+#define SUMMON_CLOTHES              65 /* x and N */
+#define SUMMON_HYBRID               66 /* H */
+#define SUMMON_BEETLE               67 /* K */
+#define SUMMON_HORDE                68 /* FRIEND(S) and ESCORT(S) */
+#define SUMMON_AMBERITE             69 /* AMBERITE */
+#define SUMMON_TOWNIE               70 /* WILD_TOWN */
+#define SUMMON_SHORE                71 /* WILD_SHORE */
+#define SUMMON_OCEAN                72 /* WILD_OCEAN */
+#define SUMMON_WASTE                73 /* WILD_WASTE */
+#define SUMMON_WOOD                 74 /* WILD_WOOD */
+#define SUMMON_VOLCANO              75 /* WILD_VOLCANO */
+#define SUMMON_MOUNTAIN             76 /* WILD_MOUNTAIN */
+#define SUMMON_GRASS                77 /* WILD_GRASS */
 
 
 /*

@@ -3685,6 +3685,124 @@ bool summon_specific_okay(int r_idx)
 			okay = summon_lua_okay(r_idx);
 			break;
 		}
+
+	case SUMMON_E:
+		{
+			okay = (r_ptr->d_char == 'E');
+			break;
+		}
+
+	case SUMMON_SNAKE:
+		{
+			okay = (r_ptr->d_char == 'J' || r_ptr->d_char == 'n');
+			break;
+		}
+
+	case SUMMON_ELDRITCH:
+		{
+			okay = (r_ptr->flags2 & RF2_ELDRITCH_HORROR) ? TRUE : FALSE;
+			break;
+		}
+
+	case SUMMON_CAT:
+		{
+			okay = (r_ptr->d_char == 'f');
+			break;
+		}
+
+	case SUMMON_RAT:
+		{
+			okay = (r_ptr->d_char == 'r');
+			break;
+		}
+
+	case SUMMON_WORM:
+		{
+			okay = (r_ptr->d_char == 'w');
+			break;
+		}
+
+	case SUMMON_CLOTHES:
+		{
+			okay = (r_ptr->d_char == 'N' || r_ptr->d_char == 'x');
+			break;
+		}
+
+	case SUMMON_HYBRID:
+		{
+			okay = (r_ptr->d_char == 'H');
+			break;
+		}
+
+	case SUMMON_BEETLE:
+		{
+			okay = (r_ptr->d_char == 'K');
+			break;
+		}
+
+	case SUMMON_HORDE:
+		{
+			okay = ((r_ptr->flags1 & RF1_FRIEND) || (r_ptr->flags1 & RF1_FRIENDS) || (r_ptr->flags1 & RF1_ESCORT) || (r_ptr->flags1 & RF1_ESCORTS));
+			break;
+		}
+
+	case SUMMON_AMBERITE:
+		{
+			okay = monster_amberite(r_idx);
+			/* strangely enough, (r_ptr->flags7 & RF7_AMBERITE); does not work --Amy */
+			break;
+		}
+
+	case SUMMON_TOWNIE:
+		{
+			okay = (r_ptr->flags8 & RF8_WILD_TOWN);
+			break;
+		}
+
+	case SUMMON_SHORE:
+		{
+			okay = (r_ptr->flags8 & RF8_WILD_SHORE);
+			break;
+		}
+
+	case SUMMON_OCEAN:
+		{
+			okay = (r_ptr->flags8 & RF8_WILD_OCEAN);
+			break;
+		}
+
+	case SUMMON_WASTE:
+		{
+			okay = (r_ptr->flags8 & RF8_WILD_WASTE);
+			break;
+		}
+
+	case SUMMON_WOOD:
+		{
+			okay = (r_ptr->flags8 & RF8_WILD_WOOD);
+			break;
+		}
+
+	case SUMMON_VOLCANO:
+		{
+			okay = (r_ptr->flags8 & RF8_WILD_VOLCANO);
+			break;
+		}
+
+	case SUMMON_MOUNTAIN:
+		{
+			okay = monster_mountain(r_idx);
+			/* was (r_ptr->flags8 & RF8_WILD_MOUNTAIN); which SHOULD work but somehow refuses to do so... --Amy */
+			break;
+		}
+
+	case SUMMON_GRASS:
+		{
+			okay = monster_grass(r_idx);
+			/* was (r_ptr->flags8 & RF8_WILD_GRASS); which also somehow refuses to work --Amy */
+			break;
+		}
+
 	}
 
 	/* Result */
@@ -3787,7 +3905,9 @@ bool summon_specific(int y1, int x1, int lev, int type)
 
 
 	/* Handle failure */
-	if (!r_idx) return (FALSE);
+	if (!r_idx) {
+		return (FALSE);
+	}
 
 
 	if ((type == SUMMON_DAWN) || (type == SUMMON_BLUE_HORROR))

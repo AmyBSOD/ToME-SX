@@ -1101,6 +1101,31 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			{
 				ident |= summon_specific(y, x, max_dlv[dungeon_type], 0);
 			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Monster Trap.");
+				ident = FALSE;
+
+			}
+
 			break;
 		}
 
@@ -1112,6 +1137,1252 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			{
 				ident |= summon_specific(y, x, max_dlv[dungeon_type],
 				                         SUMMON_UNDEAD);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Undead Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Spider Trap */
+	case TRAP_OF_SUMMON_SPIDER:
+		{
+			msg_print("A dark spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_SPIDER);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Spider Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Hound Trap */
+	case TRAP_OF_SUMMON_HOUND:
+		{
+			msg_print("A musty spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_HOUND);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Hound Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Hydra Trap */
+	case TRAP_OF_SUMMON_HYDRA:
+		{
+			msg_print("A salty spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_HYDRA);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Hydra Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Angel Trap */
+	case TRAP_OF_SUMMON_ANGEL:
+		{
+			msg_print("A celestial spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_ANGEL);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Angel Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Wraith Trap */
+	case TRAP_OF_SUMMON_WRAITH:
+		{
+			msg_print("A stinking spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_WRAITH);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Wraith Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Ant Trap */
+	case TRAP_OF_SUMMON_ANT:
+		{
+			msg_print("A grassy spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_ANT);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Ant Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Ghost Trap */
+	case TRAP_OF_SUMMON_GHOST:
+		{
+			msg_print("A chilly spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_GHOST);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Ghost Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Mimic Trap */
+	case TRAP_OF_SUMMON_MIMIC:
+		{
+			msg_print("A fizzy spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_BIZARRE1);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Mimic Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Bat Trap */
+	case TRAP_OF_SUMMON_BAT:
+		{
+			msg_print("A wispy spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_BIZARRE2);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Bat Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Vortex Trap */
+	case TRAP_OF_SUMMON_VORTEX:
+		{
+			msg_print("A whirly spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_BIZARRE4);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Vortex Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Treasure Trap */
+	case TRAP_OF_SUMMON_TREASURE:
+		{
+			msg_print("A clinging spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_BIZARRE6);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Treasure Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Animal Trap */
+	case TRAP_OF_SUMMON_ANIMAL:
+		{
+			msg_print("A lively spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_ANIMAL);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Animal Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Thunderlord Trap */
+	case TRAP_OF_SUMMON_THUNDERLORD:
+		{
+			msg_print("A majestic spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_THUNDERLORD);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Thunderlord Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Mine Trap */
+	case TRAP_OF_SUMMON_MINE:
+		{
+			msg_print("A clicking sound can be heard.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_MINE);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Mine Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Elemental Trap */
+	case TRAP_OF_SUMMON_ELEMENTAL:
+		{
+			msg_print("An unstoppable spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_E);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Elemental Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Snake Trap */
+	case TRAP_OF_SUMMON_SNAKE:
+		{
+			msg_print("A hissing spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_SNAKE);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Snake Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Horror Trap */
+	case TRAP_OF_SUMMON_HORROR:
+		{
+			msg_print("A horrible spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_ELDRITCH);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Horror Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Cat Trap */
+	case TRAP_OF_SUMMON_CAT:
+		{
+			msg_print("A furry spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_CAT);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Cat Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Rat Trap */
+	case TRAP_OF_SUMMON_RAT:
+		{
+			msg_print("A reeking spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_RAT);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Rat Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Worm Trap */
+	case TRAP_OF_SUMMON_WORM:
+		{
+			msg_print("A long spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_WORM);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Worm Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Clothes Trap */
+	case TRAP_OF_SUMMON_CLOTHES:
+		{
+			msg_print("A shuffling spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_CLOTHES);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Clothes Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Hybrid Trap */
+	case TRAP_OF_SUMMON_HYBRID:
+		{
+			msg_print("A resonating spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_HYBRID);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Hybrid Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Beetle Trap */
+	case TRAP_OF_SUMMON_BEETLE:
+		{
+			msg_print("A crunching spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_BEETLE);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Beetle Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Horde Trap */
+	case TRAP_OF_SUMMON_HORDE:
+		{
+			msg_print("A chaotic spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_HORDE);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Horde Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Amberite Trap */
+	case TRAP_OF_SUMMON_AMBERITE:
+		{
+			msg_print("A dangerous spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_AMBERITE);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			t_info[trap].ident = ident;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+
+			if (ident) msg_print("You identified that trap as Summon Amberite Trap.");
+			ident = FALSE;
+
+			break;
+		}
+
+		/* Summon Townie Trap */
+	case TRAP_OF_SUMMON_TOWNIE:
+		{
+			msg_print("A bustling spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_TOWNIE);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Townie Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Shore Trap */
+	case TRAP_OF_SUMMON_SHORE:
+		{
+			msg_print("A watery spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_SHORE);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Shore Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Ocean Trap */
+	case TRAP_OF_SUMMON_OCEAN:
+		{
+			msg_print("A wavy spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_OCEAN);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Ocean Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Waste Trap */
+	case TRAP_OF_SUMMON_WASTE:
+		{
+			msg_print("A windy spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_WASTE);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Waste Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Wood Trap */
+	case TRAP_OF_SUMMON_WOOD:
+		{
+			msg_print("A whistling spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_WOOD);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Wood Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Volcano Trap */
+	case TRAP_OF_SUMMON_VOLCANO:
+		{
+			msg_print("A burning spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_VOLCANO);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Volcano Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Mountain Trap */
+	case TRAP_OF_SUMMON_MOUNTAIN:
+		{
+			msg_print("A cold spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_MOUNTAIN);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Mountain Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Grass Trap */
+	case TRAP_OF_SUMMON_GRASS:
+		{
+			msg_print("A humming spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_GRASS);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Grass Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Unique Trap */
+	case TRAP_OF_SUMMON_UNIQUE:
+		{
+			msg_print("A terrifying spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_UNIQUE);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(2) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Unique Trap.");
+				ident = FALSE;
+
 			}
 			break;
 		}
@@ -1125,6 +2396,30 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				ident |= summon_specific(y, x, max_dlv[dungeon_type],
 				                         SUMMON_HI_UNDEAD);
 			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Greater Undead Trap.");
+				ident = FALSE;
+
+			}
 			break;
 		}
 
@@ -1136,6 +2431,66 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			{
 				ident |= summon_specific(y, x, max_dlv[dungeon_type],
 				                         SUMMON_HI_DEMON);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Greater Demon Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Greater Dragon Trap */
+	case TRAP_OF_SUMMON_GREATER_DRAGON:
+		{
+			msg_print("An old and evil spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				                         SUMMON_HI_DRAGON);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Greater Dragon Trap.");
+				ident = FALSE;
+
 			}
 			break;
 		}
@@ -1383,6 +2738,30 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			{
 				msg_print("You suddenly have company.");
 				(void)set_slow(p_ptr->slow + randint(25) + 15);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Fast Quylthulgs Trap.");
+				ident = FALSE;
+
 			}
 			break;
 		}
@@ -1771,6 +3150,31 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					}
 				}
 			}
+
+			/* thwart endless farming; in this case, I myself am guilty of doing so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Trap of Calling Out.");
+				ident = FALSE;
+
+			}
+
 			break;
 		}
 

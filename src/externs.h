@@ -1105,6 +1105,7 @@ extern bool monster_grass(int r_idx);
 extern bool monster_deep_water(int r_idx);
 extern bool monster_shallow_water(int r_idx);
 extern bool monster_lava(int r_idx);
+extern bool monster_amberite(int r_idx);
 extern void set_mon_num_hook(void);
 extern void set_mon_num2_hook(int y, int x);
 extern bool monster_can_cross_terrain(byte feat, monster_race *r_ptr);

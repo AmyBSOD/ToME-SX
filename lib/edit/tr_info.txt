@@ -1527,6 +1527,181 @@ I:70:2:50:4:50:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:317:Summon Greater Dragon Trap
+I:8:10:50:20:20:0d0:v
+D:Greater dragons defend this!
+F:FLOOR | CHEST | DOOR
+
+N:318:Summon Spider Trap
+I:4:25:40:6:10:0d0:v
+D:Eek! Creepy crawly thingies jump out!
+F:FLOOR | CHEST | DOOR
+
+N:319:Summon Hound Trap
+I:8:25:40:6:20:0d0:v
+D:A pack of hounds defends this!
+F:FLOOR | CHEST | DOOR
+
+N:320:Summon Hydra Trap
+I:8:10:40:6:20:0d0:v
+D:A pack of hydras defends this!
+F:FLOOR | CHEST | DOOR
+
+N:321:Summon Angel Trap
+I:10:5:40:6:40:0d0:v
+D:A pack of angels defends this!
+F:FLOOR | CHEST | DOOR
+
+N:322:Summon Wraith Trap
+I:10:5:40:6:50:0d0:v
+D:A pack of wraiths defends this!
+F:FLOOR | CHEST | DOOR
+
+N:323:Summon Unique Trap
+I:10:5:40:6:50:0d0:v
+D:A pack of bosses defends this!
+F:FLOOR | CHEST | DOOR
+
+N:324:Summon Ant Trap
+I:3:25:40:6:5:0d0:v
+D:Oh no! Ants! Everywhere!
+F:FLOOR | CHEST | DOOR
+
+N:325:Summon Ghost Trap
+I:4:25:40:6:10:0d0:v
+D:Mommy! There's a ghost in here!
+F:FLOOR | CHEST | DOOR
+
+N:326:Summon Mimic Trap
+I:4:25:40:6:10:0d0:v
+D:Hmm... more items than usual?
+F:FLOOR | CHEST | DOOR
+
+N:327:Summon Bat Trap
+I:4:25:40:6:10:0d0:v
+D:Argh! Goddamned bats!
+F:FLOOR | CHEST | DOOR
+
+N:328:Summon Vortex Trap
+I:8:25:40:6:20:0d0:v
+D:The air... is whirling...
+F:FLOOR | CHEST | DOOR
+
+N:329:Summon Treasure Trap
+I:4:25:40:6:10:0d0:v
+D:Well, that's extra treasure, right?
+F:FLOOR | CHEST | DOOR
+
+N:330:Summon Animal Trap
+I:3:25:40:6:3:0d0:v
+D:A pack of animals defends this!
+F:FLOOR | CHEST | DOOR
+
+N:331:Summon Thunderlord Trap
+I:10:5:40:6:50:0d0:v
+D:A pack of thunderlords defends this!
+F:FLOOR | CHEST | DOOR
+
+N:332:Summon Mine Trap
+I:4:25:40:6:10:0d0:v
+D:There is a clicking sound.
+F:FLOOR | CHEST | DOOR
+
+N:333:Summon Elemental Trap
+I:10:20:40:6:30:0d0:v
+D:A pack of elementals defends this!
+F:FLOOR | CHEST | DOOR
+
+N:334:Summon Snake Trap
+I:4:25:40:6:5:0d0:v
+D:Damn, why did it have to be snakes?
+F:FLOOR | CHEST | DOOR
+
+N:335:Summon Horror Trap
+I:8:10:40:6:20:0d0:v
+D:Oh no! Unspeakable horrors appear from nowhere!
+F:FLOOR | CHEST | DOOR
+
+N:336:Summon Cat Trap
+I:4:25:40:6:5:0d0:v
+D:A pack of cats defends this!
+F:FLOOR | CHEST | DOOR
+
+N:337:Summon Rat Trap
+I:3:25:40:6:3:0d0:v
+D:Annoying vermin everywhere.
+F:FLOOR | CHEST | DOOR
+
+N:338:Summon Worm Trap
+I:3:25:40:6:3:0d0:v
+D:Oops, looks like you've opened a can of whoop-ass.
+F:FLOOR | CHEST | DOOR
+
+N:339:Summon Clothes Trap
+I:3:5:40:6:3:0d0:v
+D:The clothes have come alive and want to strangle you!
+F:FLOOR | CHEST | DOOR
+
+N:340:Summon Hybrid Trap
+I:10:25:40:6:25:0d0:v
+D:A pack of hybrid creatures defends this!
+F:FLOOR | CHEST | DOOR
+
+N:341:Summon Beetle Trap
+I:10:25:40:6:25:0d0:v
+D:The beetles are crawling all over the place!
+F:FLOOR | CHEST | DOOR
+
+N:342:Summon Horde Trap
+I:4:25:40:6:10:0d0:v
+D:A whole bunch of monsters defends this!
+F:FLOOR | CHEST | DOOR
+
+N:343:Summon Amberite Trap
+I:10:5:40:6:50:0d0:v
+D:Oh no, you're being assaulted by the amberites!
+F:FLOOR | CHEST | DOOR
+
+N:344:Summon Townie Trap
+I:3:5:40:6:2:0d0:v
+D:Town monsters defend this!
+F:FLOOR | CHEST | DOOR
+
+N:345:Summon Shore Trap
+I:10:5:40:6:20:0d0:v
+D:Shore monsters defend this!
+F:FLOOR | CHEST | DOOR
+
+N:346:Summon Ocean Trap
+I:20:5:40:6:50:0d0:v
+D:Ocean monsters defend this!
+F:FLOOR | CHEST | DOOR
+
+N:347:Summon Waste Trap
+I:10:5:40:6:25:0d0:v
+D:Wasteland monsters defend this!
+F:FLOOR | CHEST | DOOR
+
+N:348:Summon Wood Trap
+I:8:5:40:6:15:0d0:v
+D:Woodland monsters defend this!
+F:FLOOR | CHEST | DOOR
+
+N:349:Summon Volcano Trap
+I:20:5:40:6:40:0d0:v
+D:Volcano monsters defend this!
+F:FLOOR | CHEST | DOOR
+
+N:350:Summon Mountain Trap
+I:10:5:40:6:25:0d0:v
+D:Mountain monsters defend this!
+F:FLOOR | CHEST | DOOR
+
+N:351:Summon Grass Trap
+I:4:5:40:6:5:0d0:v
+D:Grassland monsters defend this!
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

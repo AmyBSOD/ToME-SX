@@ -1077,6 +1077,8 @@ static void prt_frame_basic(void)
  */
 static void prt_frame_extra(void)
 {
+	if (p_ptr->nastytrap20) return;
+
 	/* Cut/Stun */
 	prt_cut();
 	prt_stun();
@@ -4669,32 +4671,32 @@ void redraw_stuff(void)
 		prt_frame_basic();
 	}
 
-	if (p_ptr->redraw & (PR_MISC))
+	if ((p_ptr->redraw & (PR_MISC)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_MISC);
 		prt_field(rp_ptr->title + rp_name, ROW_RACE, COL_RACE);
 		prt_field(spp_ptr->title + c_name, ROW_CLASS, COL_CLASS);
 	}
 
-	if (p_ptr->redraw & (PR_TITLE))
+	if ((p_ptr->redraw & (PR_TITLE)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_TITLE);
 		prt_title();
 	}
 
-	if (p_ptr->redraw & (PR_LEV))
+	if ((p_ptr->redraw & (PR_LEV)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_LEV);
 		prt_level();
 	}
 
-	if (p_ptr->redraw & (PR_EXP))
+	if ((p_ptr->redraw & (PR_EXP)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_EXP);
 		prt_exp();
 	}
 
-	if (p_ptr->redraw & (PR_STATS))
+	if ((p_ptr->redraw & (PR_STATS)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_STATS);
 		prt_stat(A_STR);
@@ -4705,56 +4707,56 @@ void redraw_stuff(void)
 		prt_stat(A_CHR);
 	}
 
-	if (p_ptr->redraw & (PR_ARMOR))
+	if ((p_ptr->redraw & (PR_ARMOR)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_ARMOR);
 		prt_ac();
 	}
 
-	if (p_ptr->redraw & (PR_HP))
+	if ((p_ptr->redraw & (PR_HP)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_HP);
 		prt_hp();
 	}
 
-	if (p_ptr->redraw & (PR_MANA))
+	if ((p_ptr->redraw & (PR_MANA)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_MANA);
 		prt_sp();
 	}
 
-	if (p_ptr->redraw & (PR_PIETY))
+	if ((p_ptr->redraw & (PR_PIETY)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_PIETY);
 		prt_piety();
 	}
 
-	if (p_ptr->redraw & (PR_MH))
+	if ((p_ptr->redraw & (PR_MH)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_MH);
 		prt_mh();
 	}
 
-	if (p_ptr->redraw & (PR_GOLD))
+	if ((p_ptr->redraw & (PR_GOLD)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_GOLD);
 		prt_gold();
 	}
 
-	if (p_ptr->redraw & (PR_DEPTH))
+	if ((p_ptr->redraw & (PR_DEPTH)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_DEPTH);
 		prt_depth();
 	}
 
-	if (p_ptr->redraw & (PR_HEALTH))
+	if ((p_ptr->redraw & (PR_HEALTH)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_HEALTH);
 		health_redraw();
 	}
 
 
-	if (p_ptr->redraw & (PR_EXTRA))
+	if ((p_ptr->redraw & (PR_EXTRA)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_EXTRA);
 		p_ptr->redraw &= ~(PR_CUT | PR_STUN);
@@ -4765,73 +4767,73 @@ void redraw_stuff(void)
 		prt_frame_extra();
 	}
 
-	if (p_ptr->redraw & (PR_CUT))
+	if ((p_ptr->redraw & (PR_CUT)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_CUT);
 		prt_cut();
 	}
 
-	if (p_ptr->redraw & (PR_STUN))
+	if ((p_ptr->redraw & (PR_STUN)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_STUN);
 		prt_stun();
 	}
 
-	if (p_ptr->redraw & (PR_HUNGER))
+	if ((p_ptr->redraw & (PR_HUNGER)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_HUNGER);
 		prt_hunger();
 	}
 
-	if (p_ptr->redraw & (PR_BLIND))
+	if ((p_ptr->redraw & (PR_BLIND)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_BLIND);
 		prt_blind();
 	}
 
-	if (p_ptr->redraw & (PR_CONFUSED))
+	if ((p_ptr->redraw & (PR_CONFUSED)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_CONFUSED);
 		prt_confused();
 	}
 
-	if (p_ptr->redraw & (PR_AFRAID))
+	if ((p_ptr->redraw & (PR_AFRAID)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_AFRAID);
 		prt_afraid();
 	}
 
-	if (p_ptr->redraw & (PR_POISONED))
+	if ((p_ptr->redraw & (PR_POISONED)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_POISONED);
 		prt_poisoned();
 	}
 
-	if (p_ptr->redraw & (PR_DTRAP))
+	if ((p_ptr->redraw & (PR_DTRAP)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_DTRAP);
 		prt_dtrap();
 	}
 
-	if (p_ptr->redraw & (PR_STATE))
+	if ((p_ptr->redraw & (PR_STATE)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_STATE);
 		prt_state();
 	}
 
-	if (p_ptr->redraw & (PR_SPEED))
+	if ((p_ptr->redraw & (PR_SPEED)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_SPEED);
 		prt_speed();
 	}
 
-	if (p_ptr->redraw & (PR_STUDY))
+	if ((p_ptr->redraw & (PR_STUDY)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_STUDY);
 		prt_study();
 	}
 
-	if (p_ptr->redraw & (PR_SANITY))
+	if ((p_ptr->redraw & (PR_SANITY)) && !p_ptr->nastytrap20)
 	{
 		p_ptr->redraw &= ~(PR_SANITY);
 		prt_sane();
