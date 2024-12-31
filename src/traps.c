@@ -4421,6 +4421,8 @@ void place_trap(int y, int x)
 	else effect_level = wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level + rand_int(p_ptr->lev);
 	if (monster_level > effect_level) effect_level = monster_level;
 
+	if (randint(50) == 1) effect_level += randint(p_ptr->lev);
+
 	/*msg_format("Trap level %d.", effect_level);*/
 	/*msg_format("Monster level %d.", monster_level);*/
 
