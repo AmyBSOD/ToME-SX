@@ -3178,15 +3178,19 @@ bool place_monster(int y, int x, bool slp, bool grp)
 	int actualmonsterlevel = monster_level;
 	if (p_ptr->nastytrap27) actualmonsterlevel += 10;
 
+	int scalinglevel = 0;
+
 	/* have some level scaling --Amy */
-	if (randint(1000) == 1) actualmonsterlevel + randint(p_ptr->lev * 2);
-	else if (randint(10) == 1) actualmonsterlevel + randint(p_ptr->lev);
+	if (randint(1000) == 1) scalinglevel = randint(p_ptr->lev * 2);
+	else if (randint(10) == 1) scalinglevel = randint(p_ptr->lev);
 	else if (randint(3) == 1) {
-		if (p_ptr->lev > 1) actualmonsterlevel + randint(p_ptr->lev / 2);
+		if (p_ptr->lev > 1) scalinglevel = randint(p_ptr->lev / 2);
 	}
 	else {
-		if (p_ptr->lev > 4) actualmonsterlevel + randint(p_ptr->lev / 5);
+		if (p_ptr->lev > 4) scalinglevel = randint(p_ptr->lev / 5);
 	}
+
+	if (actualmonsterlevel < scalinglevel) actualmonsterlevel = scalinglevel;
 
 	/* Set monster restriction */
 	set_mon_num2_hook(y, x);
