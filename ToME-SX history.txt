@@ -1,15 +1,94 @@
 Version history for ToME-SX by AmyBSOD, given in reverse chronological order *bundlebundlebundle* <3
 
+December 2024
+- Changed the default glyph for Elanor flowers to be in line with other types of flowers.
+- Going to low dungeon levels as a high-level character now sometimes scales monster levels up to the player's experience level.
+- Trap difficulty now affects how likely it is to find a trap.
+- The more piety a player has, the harder it becomes to gain more.
+- Fixed an age-old bug that was introduced when the monsters' breath damage calculation was originally changed.
+- Added the amberites from Poschengband and the blood curse. Monsters can also be resistant to a wider variety of elements now.
+- Monsters above level 70 are no longer functionally immune to stunning, but they're still highly resistant.
+- Fixed bugs with the destroyed versions of new towns.
+- New skill: "anti-nastiness".
+- Possessors who sacrificed HP to Melkor will now properly get the HP reduction.
+- Nasty traps are a thing now.
+- Added new dungeons to the overworld. There's also an entrance to the Halls of Mandos now, and the Void should remain accessible after getting an ultra ending and also be accessible if you go for the evil ending.
+- Toned down the damage output of certain monsters.
+- Nerfed archery a lot.
+- Gaining piety for certain gods is easier now.
+- Improved the coloring of the monster window.
+- Fixed the vanilla ToME bug where the chance to use a rod wasn't dependant on intelligence even though it was supposed to.
+- Rebalanced a couple of spells; in particular, force-elemental damage now has less than 100% chance to push monsters back, and spells that summon monsters will now summon lower-level monsters on average.
+- Some messages now force a --More-- prompt.
+- Fates should now have a slightly better chance of being for something interesting.
+- Replaced the runespell mage staff egotype with a different egotype.
+- Fixed the stupid oversight that caused the hard mode setting to not get saved into the savegame file.
+- Added several new skills, including new spell schools "hell" and "celestial".
+- Various quests now give skill bonuses when completed.
+- Utility rods are weaker now while damage rods are stronger.
+- Randarts can now occasionally be particularly random.
+- Dungeons can now have magma or quartz veins defined in d_info.c, as opposed to them being hardcoded to appear in Mordor.
+- Fixed an oversight where some elemental damage effects were reflectable even though they should not be.
+
+- Bumped the version number up to 1.21.
+- New properties for items: resist plasma, resist disintegration, stabilize space-time continuum, rapid hunger, charge holding.
+- Rebalanced some secondary skills ("abilities").
+- Monsters who spawn in groups now spawn in smaller groups on average.
+- Monsters who are low on HP can now cross deep water and lava.
+- Genocide now has to roll for every monster to see whether it actually gets genocided.
+- Occasionally, god temples will now spawn random monsters, as opposed to always the predetermined types.
+- Praying to Yavanna while on grass with flowers now heals the player.
+- Food stealing attacks can now also target the player's corpses and other food items.
+- Enabled the pattern vaults.
+- Pits will spawn with better loot now, and the room generation mechanism is more random for special rooms.
+
+November 2024
+- Nerfed several spells.
+- The dungeon randomizer can no longer spawn randomized dungeons with lots of treasure veins.
+- Balanced the damage an earthquake will do to the player.
+- Fixed errors where certain artifacts wouldn't be two-handed even though they should be.
+- Device trapping kits should work now.
+- Added new towns and dungeons to the overworld.
+
+- Bumped the version number up to 1.20.
+- The player can now select the realm that a sentient weapon should get a random property from.
+- Some town services are more expensive now.
+- Artifacts with fixed locations have been nerfed.
+- Some bosses now revive if Morgoth is still alive.
+- Armor pieces can now be lithe, which means their weight counts as only one tenth of the actual value for the purposes of calculating the dodge chance. Items can also have +dodging or +disarming enchantments.
+- Partial totems can now sometimes get used up.
+- Special rooms can now exist on destroyed levels.
+- Potions can now spawn coldproof.
+- Psi and psi drain traps will damage the player now.
+- The player's starting magic device skill multiplier is generally lower now.
+- Wraithform and touch of death cost more skill points to learn.
+- The player shouldn't be able to use death ray traps to instakill monsters.
+- Cursed randarts now spawn with more enchantments.
+
+September 2024
+- Eru's prayers should no longer identify artifacts on the ground.
+- Items can no longer give more than +2 maximum blows, even if their pval is higher.
+
 August 2024
+- The mold creation ability is more expensive now.
+- Nain's mattock should be balanced now.
+- Joke monsters can no longer be disabled.
+- Instruments can also be wielded in the digging slot now.
+- The 4D pocket contents are printed in the dumplog now, and if the player died, the dumplog also fully identifies all items.
+- Farmer Maggot, Merton and Melinda Proudfoot now have much more HP and mass resurrection can also resurrect them.
+- New playable race: asura, with a bigger amount of hands compared to humans.
+- Increased the monster and object limit for dungeon levels, to reduce the "Generation restarted (too many monsters)" annoyance.
+- Spellbooks are colored green now, and should actually be possible to generate randomly in the early game.
+- The game uses American English instead of British English now.
 - Dungeon towns now have a greater variety of townie monsters, and which ones are spawned is now actually randomized rather than dependant on that town's seed.
 - Added the theftproof flag to some boss monsters.
 - If the player is caught trying to steal from a monster, that particular monster can no longer be stolen from.
 - Quests can generally no longer be failed now; "failure" conditions hit the player with bad effects instead, but the quests can be attempted again.
-- The new ultimate artifacts can now be created.
+- The new ultimate artifacts can now be created and no longer spawn randomly.
 - Fates can now happen at any experience level (they used to only happen at XL11 and above), and the "never die by the hand of a mortal" fate is back, but balanced.
 - Lost soul mode characters can now once again get god quests while in the Halls of Mandos.
 - Melee paralysis attacks will now paralyze players for less turns on average, and stun damage can no longer increase the stun timer if the player is knocked out.
-- New mimicry form: lion.
+- New mimicry form: lion. They have high dodging bonuses.
 - Increased the price for (mass) genocide scrolls.
 - Fixed bugs with array sizes for ego items and randarts, and also added new ones.
 - Wands and staves can now occasionally spawn with higher maximum levels.
