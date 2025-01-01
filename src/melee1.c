@@ -644,7 +644,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Allow complete resist */
-					if (!p_ptr->resist_disen || !p_ptr->nastytrap40)
+					if (!p_ptr->resist_disen || p_ptr->nastytrap40)
 					{
 						/* Apply disenchantment */
 						if (apply_disenchant(0)) obvious = TRUE;
@@ -2022,7 +2022,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Allow complete resist */
-					if (!p_ptr->resist_disen || !p_ptr->nastytrap40)
+					if (!p_ptr->resist_disen || p_ptr->nastytrap40)
 					{
 						/* Apply disenchantment */
 						if (apply_disenchant(0)) obvious = TRUE;
