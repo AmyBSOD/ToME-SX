@@ -79100,6 +79100,588 @@ F:DROP_CORPSE |
 D:These strange, crocodilian creatures are often used by the water-gods for
 D:transport.
 
+N:4497:Four Score
+G:C:w
+I:120:7d5:30:30:0
+W:2:40:600:30
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+F:UNIQUE | 
+F:FORCE_MAXHP | RAND_25 | DROP_CORPSE
+F:BASH_DOOR | ANIMAL
+F:MORTAL | BASEANGBAND
+D:Some dog whose previous owner taught it to attack people who look like you. 
+
+N:4498:Thilo
+G:o:y
+I:110:22d10:20:32:30
+W:8:40:1700:80
+E:1:1:1:2:1:1
+O:10:80:0:0
+B:HIT:HURT:1d11
+B:HIT:HURT:1d11
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+F:UNIQUE | MALE | EVIL | ORC | FORCE_MAXHP | ESCORT | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD |  
+F:OPEN_DOOR | BASH_DOOR | CAN_SPEAK | DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:A captain of a regiment of weaker orcs, Lagduf keeps his troop in order 
+D:with displays of excessive violence. 
+
+N:4499:Markus
+G:o:y
+I:110:25d10:20:20:20
+W:10:60:2300:160
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:1d13
+B:HIT:HURT:1d11
+B:HIT:HURT:1d13
+B:HIT:HURT:1d11
+F:UNIQUE | MALE | CAN_SPEAK | 
+F:FORCE_MAXHP |  
+F:ESCORT | WILD_TOO |
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | ORC | IM_POIS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:He is a cunning and devious orc with a chaotic nature. 
+
+N:4500:Wuldenfyr
+G:#:s
+I:110:32d30:20:20:20
+W:25:100:3000:150
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:TOUCH:PARALYZE:1d14
+B:TOUCH:PARALYZE:1d14
+B:CRUSH:HURT:2d12
+F:ANIMAL | NEVER_MOVE | COLD_BLOOD | DROP_GREAT | NO_THEFT
+F:EMPTY_MIND | UNIQUE | FORCE_MAXHP | FORCE_SLEEP |
+F:RES_WATE | IM_POIS | IM_ACID | SUSCEP_FIRE |  
+F:DROP_1D2 | DROP_GOOD | ONLY_ITEM | BASEANGBAND | NO_CUT
+S:1_IN_10 | 
+S:TELE_TO | HOLD | 
+D:The ancient grey willow tree, ruler of the Old Forest. He despises 
+D:trespassers in his territory.  "...a huge willow-tree, old and hoary. 
+D:Enormous it looked, its sprawling branches going up like racing arms 
+D:with may long-fingered hands, its knotted and twisted trunk gaping in 
+D:wide fissures that creaked faintly as the boughs moved." 
+
+N:4501:Masell
+G:o:y
+I:110:26d10:20:60:20
+W:12:60:2200:230
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:HURT:1d13
+B:HIT:HURT:1d13
+B:HIT:HURT:1d11
+B:HIT:HURT:1d11
+F:UNIQUE | MALE | 
+F:FORCE_MAXHP | WILD_TOO |  
+F:ESCORT | DROP_SKELETON | DROP_CORPSE | 
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | 
+F:OPEN_DOOR | BASH_DOOR | CAN_SPEAK |
+F:EVIL | ORC | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:A leader of a band of raiding orcs, he picks on hobbits. 
+
+N:4502:Iwan
+G:o:g
+I:110:42d10:20:60:20
+W:19:40:2600:400
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:HURT:3d9
+B:HIT:HURT:3d9
+B:HIT:HURT:3d6
+B:HIT:HURT:3d6
+F:UNIQUE | MALE | CAN_SPEAK |
+F:FORCE_MAXHP | 
+F:ESCORT | DROP_SKELETON | DROP_CORPSE | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | ORC | IM_POIS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:He is an orc of power and great cunning, leader of the garrison at Cirith Ungol. 
+
+N:4503:Alfa
+G:o:v
+I:120:52d10:20:50:20
+W:20:80:2300:800
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:3d7
+B:HIT:HURT:3d7
+B:HIT:HURT:3d7
+B:HIT:HURT:3d7
+F:UNIQUE | MALE | CAN_SPEAK |
+F:FORCE_MAXHP |  
+F:ESCORT | DROP_SKELETON | DROP_CORPSE | 
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | ORC | IM_POIS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:A large and powerful orc, he looks just like his father. He is tall and 
+D:fast, but fortunately blessed with orcish brains. 
+
+N:4504:Betha
+G:o:v
+I:120:94d10:20:80:20
+W:23:100:2700:1111
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:HURT:5d6
+B:HIT:HURT:5d5
+B:HIT:HURT:5d5
+F:UNIQUE | MALE | CAN_SPEAK |
+F:FORCE_MAXHP | DROP_SKELETON | DROP_CORPSE | 
+F:ESCORT | ESCORTS | 
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | ORC | IM_POIS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:He is also known as the King of Khazad-dum. His ego is renowned to be 
+D:bigger than his head. 
+
+N:4505:Jutta
+G:S:D
+I:120:35d100:30:120:80
+W:55:60:1400:27000
+E:0:1:0:2:1:0
+O:20:30:40:0
+B:CLAW:POISON:5d6
+B:CLAW:POISON:5d6
+B:BITE:PARALYZE:5d10
+B:STING:LOSE_STR:5d4
+F:UNIQUE | FEMALE |
+F:FORCE_SLEEP | FORCE_MAXHP |  
+F:ESCORT | ESCORTS | DROP_CORPSE | NO_THEFT | 
+F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | DROP_GOOD | DROP_GREAT
+F:SMART | BASH_DOOR | IM_POIS | IM_ACID | 
+F:ANIMAL | SPIDER | EVIL | HURT_LITE | NO_SLEEP | BASEANGBAND
+S:1_IN_4 | 
+S:HEAL | BLIND | SLOW | CONF | SCARE | CAUSE_3 | CAUSE_4 | 
+S:TRAPS | BR_DARK | BR_POIS | 
+S:S_SPIDER
+D:She's a burly woman who will end your adventure, you wimpy hero. 
+
+N:4506:Arne
+G:T:W
+I:120:11d100:20:70:50
+W:34:140:5000:2000
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:6d6
+B:HIT:HURT:6d6
+B:BITE:HURT:3d10
+F:UNIQUE | MALE | 
+F:FORCE_MAXHP | 
+F:ESCORT | MOVE_BODY | REGENERATE | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | WILD_TOO | WILD_WOOD |
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | TROLL | IM_COLD | IM_POIS | HURT_LITE | HURT_ROCK | BASEANGBAND | NO_CUT
+D:Big, brawny, powerful and with a taste for hobbit. He will knock the hell 
+D:out of you. 
+
+N:4507:Helchgam
+G:~:v
+I:120:27d100:30:100:80
+W:45:60:7000:12000
+E:3:0:3:6:1:0
+O:50:50:0:0
+B:CRUSH:ACID:8d8
+B:CRUSH:POISON:8d8
+B:CRUSH:PARALYZE:8d8
+F:UNIQUE | FORCE_SLEEP | FORCE_MAXHP | CAN_SWIM | AQUATIC | ANIMAL | 
+F:IM_ACID | IM_COLD | IM_POIS | RES_WATE | RES_TELE | DROP_CORPSE | 
+F:NO_CONF | NO_FEAR | EVIL | COLD_BLOOD | BASEANGBAND | NO_THEFT | 
+F:ONLY_ITEM | DROP_GOOD | DROP_4D2 | DROP_1D2 | DROP_GREAT
+S:1_IN_5 | BA_WATE | BO_WATE | HOLD | BR_POIS | BO_ICEE | TELE_TO
+D:A vile creature which seems to consist mostly of tentacles, it seeks to 
+D:drag people to their doom in the water.  Few have ever escaped its grasp. 
+
+N:4508:Walker
+G:h:D
+I:130:80d30:20:100:60
+W:49:40:1400:25000
+E:1:1:1:2:1:1
+O:10:40:40:10
+B:HIT:HURT:3d8
+B:HIT:HURT:3d8
+B:HIT:HURT:3d8
+F:UNIQUE | MALE | 
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_CORPSE | CAN_SPEAK |
+F:ONLY_ITEM | DROP_4D2 | DROP_2D2 | DROP_GOOD | DROP_GREAT |
+F:SMART | IM_ELEC | IM_COLD | IM_POIS | IM_FIRE | 
+F:REFLECTING | OPEN_DOOR | BASH_DOOR | 
+F:HURT_LITE | BASEANGBAND | HAS_LITE
+S:1_IN_3 |
+S:HEAL | BLINK | TELE_TO | BLIND | CONF | CAUSE_4 | DARKNESS | 
+S:BA_NETH | BA_ELEC | BA_ACID | BA_FIRE | BA_COLD | BO_MANA |  
+S:S_MONSTERS | S_UNDEAD | S_DRAGON | S_DEMON
+D:He hates you with a fiery passion and will stop at nothing to 
+D:rub you out. 
+
+N:4509:Nico
+G:T:v
+I:130:35d100:30:120:30
+W:51:80:16000:18000
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:SHATTER:20d12
+B:HIT:SHATTER:20d12
+B:BITE:POISON:6d14
+F:UNIQUE | MALE | CAN_SPEAK |
+F:FORCE_SLEEP | FORCE_MAXHP |  
+F:ONLY_ITEM | DROP_1D2 | DROP_4D2 | DROP_GOOD | 
+F:DROP_90 | REGENERATE | KILL_WALL | RES_TELE | KILL_BODY | 
+F:OPEN_DOOR | BASH_DOOR | DROP_CORPSE | 
+F:EVIL | TROLL | IM_POIS |
+F:IM_ELEC | IM_COLD | IM_FIRE | BASEANGBAND
+D:This bully wants to beat you to a pulp. 
+
+N:4510:Irina
+G:V:v
+I:130:50d100:20:145:10
+W:67:60:1500:23000
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:BITE:EXP_80:6d6
+B:BITE:EXP_80:6d6
+B:HIT:CONFUSE:6d6
+B:HIT:CONFUSE:6d6
+F:UNIQUE | FEMALE |  
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | CAN_SPEAK | CAN_FLY |
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | REGENERATE |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | NO_STUN
+F:RES_TELE | BASEANGBAND | NO_CUT
+S:1_IN_3 | 
+S:BLIND | HOLD | SCARE | CAUSE_3 | CAUSE_4 | DRAIN_MANA | 
+S:BRAIN_SMASH | BA_NETH | S_KIN | S_HI_UNDEAD
+D:Chief messenger between Sauron and Morgoth, she is the most deadly of her 
+D:vampire race on Middle-earth.  At first she is charming to meet, but her 
+D:wings and eyes give away her true form. 
+
+N:4511:Katzou
+G:B:D
+I:130:80d100:20:120:80
+W:72:40:400000:45000
+E:1:1:1:2:1:1
+O:50:50:0:0
+B:HIT:HURT:12d10
+B:HIT:HURT:12d10
+B:CHARGE:HURT:10d10
+B:CHARGE:HURT:10d10
+F:UNIQUE | MALE | CAN_SPEAK | RES_TELE |  
+F:FORCE_MAXHP | REGENERATE | THUNDERLORD | CAN_FLY |
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD | DROP_GREAT |
+F:SMART | OPEN_DOOR | BASH_DOOR | BASEANGBAND |
+F:EVIL | IM_FIRE | IM_COLD | IM_POIS | 
+F:MORTAL | HAS_LITE
+S:1_IN_4 | 
+S:TELE_TO | SCARE | BR_TIME | BR_FIRE |
+S:BO_MANA | S_THUNDERLORD
+D:This dude shouldn't be underestimated. 
+
+N:4512:Robat
+G:L:y
+I:130:60d100:20:85:50
+W:77:40:1900:30000
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:TOUCH:EXP_80:6d12
+B:TOUCH:UN_POWER:6d12
+B:TOUCH:LOSE_DEX:6d12
+B:TOUCH:LOSE_DEX:6d12
+F:UNIQUE | MALE | CAN_SPEAK | RES_TELE | 
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:ESCORT |  
+F:ONLY_ITEM | DROP_2D2 | DROP_4D2 | DROP_GOOD | DROP_GREAT | 
+F:SMART | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | 
+F:IM_POIS | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+S:1_IN_2 | 
+S:BLINK | TELE_TO | HOLD | SCARE | CAUSE_4 | 
+S:BRAIN_SMASH | TRAPS | BA_MANA | 
+S:BO_MANA | BA_NETH | 
+S:S_MONSTERS | S_UNDEAD | S_KIN | ANIM_DEAD
+D:A stench of corruption and decay surrounds this sorcerer, who has clearly 
+D:risen from the dead to continue his foul plots and schemes. 
+
+N:4513:Mairon
+G:p:v
+I:130:82d100:60:100:10
+W:75:60:1900:40000
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:HIT:UN_BONUS:6d8
+B:HIT:UN_POWER:6d8
+B:HIT:BLIND:6d8
+B:HIT:CONFUSE:6d8
+F:UNIQUE | MALE | CAN_SPEAK | POWERFUL | RES_TELE | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | 
+F:ONLY_ITEM | DROP_1D2 | DROP_GREAT | DROP_GOOD |  
+F:INVISIBLE | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | IM_FIRE | IM_COLD | 
+F:IM_ELEC | NO_CONF | NO_SLEEP | BASEANGBAND
+S:1_IN_2 | 
+S:CAUSE_3 | TELE_TO | BA_FIRE | DRAIN_MANA | HOLD |
+S:TRAPS | BA_WATE | BO_PLAS | BA_NETH |
+S:BA_MANA | BA_DARK | S_HI_UNDEAD | BA_CHAO | HAND_DOOM | ANIM_DEAD
+D:The dark master of the terrible fortress of southern Mirkwood.  It is 
+D:rumored that this is in fact none other than Sauron in disguise: 
+D:although if this is so, he has yet to reveal his full power - and perhaps 
+D:will not do so while his deception lasts, in the hope of keeping it going. 
+
+N:4514:Riverman
+G:h:D
+I:130:60d100:220:120:20
+W:81:40:1400:35000
+E:1:1:1:2:1:1
+O:30:70:0:0
+B:HIT:HURT:8d8
+B:HIT:HURT:8d8
+B:HIT:HURT:8d8
+B:HIT:HURT:8d8
+F:UNIQUE | MALE | 
+F:FORCE_MAXHP | CAN_SPEAK | SMART | EVIL | 
+F:ONLY_ITEM | DROP_3D2 | DROP_4D2 | DROP_GOOD | DROP_GREAT | 
+F:OPEN_DOOR | BASH_DOOR | KILL_WALL | MOVE_BODY | TAKE_ITEM |
+F:IM_FIRE | IM_COLD | IM_POIS |  
+F:REGENERATE | REFLECTING | DROP_SKELETON | DROP_CORPSE | BASEANGBAND
+F:HAS_LITE
+S:1_IN_6 | 
+S:S_MONSTERS | S_WRAITH | S_HI_UNDEAD | 
+S:S_HI_DRAGON | S_HI_DEMON | S_UNIQUE | S_ANIMALS
+D:This man is ancient and seems frail, but he's an asshole with a capital A. 
+D:Only the strongest heroes can defeat him! 
+
+N:4515:Mister SIR
+G:U:v
+I:130:30d100:20:100:80
+W:50:60:13000:30000
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:FIRE:6d12
+B:HIT:FIRE:6d12
+B:CRUSH:HURT:5d12
+B:TOUCH:UN_POWER
+F:UNIQUE | MALE | DROP_GREAT | NO_THEFT
+F:FORCE_SLEEP | FORCE_MAXHP | KILL_WALL | 
+F:ESCORT | ESCORTS | DROP_CORPSE | NONLIVING | 
+F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY | 
+F:EVIL | DEMON | IM_FIRE | 
+F:NO_CONF | BASEANGBAND | HAS_LITE
+S:1_IN_4 | 
+S:CONF | SCARE | 
+S:BR_FIRE | 
+S:S_UNDEAD | S_DEMON
+D:A huge Balrog surrounded by raging pillars of fire, this is indeed a 
+D:terrible opponent. Wielding a great whip of fire and a blazing sword, his 
+D:fury blisters your skin and melts your flesh! 
+
+N:4516:Sound Impacts
+G:W:v
+I:120:38d22:30:45:0
+W:46:60:0:22000
+E:0:0:0:0:0:0
+O:15:55:15:0
+B:HIT:HURT:2d10
+B:WAIL:PARALYZE:2d6
+B:TOUCH:EXP_80:4d8
+B:TOUCH:EXP_80:4d8
+F:FORCE_MAXHP | SMART | CAN_SPEAK | 
+F:DROP_4D2 | DROP_2D2 | COLD_BLOOD | UNIQUE | 
+F:CAN_SWIM | CAN_FLY | EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | 
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+S:1_IN_4 |
+S:HOLD | SCARE | CAUSE_3 | BA_NETH
+D:This guy doesn't actually have sound-based attacks, but can be 
+D:challenging to fight nonetheless. 
+
+N:4517:Disturbment Head
+G:p:y
+I:130:50d100:30:45:255
+W:55:20:0:2500
+E:1:1:1:2:1:1
+O:20:70:10:0
+B:HIT:HURT:8d12
+B:HIT:HURT:8d12
+B:HIT:HURT:8d12
+B:HIT:HURT:8d12
+F:FORCE_SLEEP | FORCE_MAXHP | UNIQUE | CAN_SPEAK |  
+F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | DROP_GOOD | DROP_SKELETON | DROP_CORPSE | 
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR | MOVE_BODY | BASEANGBAND | 
+F:HAS_LITE | 
+S:1_IN_6 |
+S:HEAL | HASTE | TELE_AWAY | S_MONSTERS | S_KIN
+D:This guy is just disturbed. As in "completely crazy". Put him out of his 
+D:misery! 
+
+N:4518:Freddie
+G:p:U
+I:120:25d100:20:90:40
+W:44:100:2100:1200
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:HURT:5d8
+B:HIT:HURT:5d8
+B:HIT:HURT:5d8
+B:HIT:HURT:5d8
+F:UNIQUE | MALE | CAN_SPEAK | DROP_CORPSE | DROP_SKELETON | 
+F:FORCE_MAXHP | IM_FIRE | IM_COLD | IM_ELEC |  
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | DROP_GREAT | NO_THEFT 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_10 | S_KIN | S_MONSTERS
+D:If you think he's on your side, better think again... Morgoth 
+D:corrupted him, just like everyone else who crosses Morgoth's path. 
+
+N:4519:Asterion
+G:H:s
+I:130:150d10:13:25:10
+W:40:40:17500:3100
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BUTT:HURT:4d6
+B:BUTT:HURT:4d6
+B:BUTT:HURT:3d6
+B:BUTT:HURT:3d6
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | UNIQUE |  
+F:MORTAL | BASEANGBAND
+D:It is a cross between a human and a bull. 
+
+N:4520:Mind Maw the Hidden Potato
+G:w:v
+I:120:30d20:10:40:80
+W:30:60:4500:12
+E:0:0:0:0:1:0
+O:30:60:0:10
+B:CLAW:ACID:5d4
+B:CLAW:POISON:5d4
+B:BITE:FIRE:5d4
+B:BITE:ELEC:5d4
+F:FORCE_MAXHP | DROP_60 | ONLY_ITEM | DROP_GREAT | DROP_GOOD | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | FEMALE | POWERFUL | REFLECTING |
+F:EVIL | ANIMAL | IM_ELEC | IM_FIRE | IM_ACID | IM_POIS | ESCORT | 
+F:MORTAL | BASEANGBAND | EMPTY_MIND | UNIQUE | NO_CONF
+S:1_IN_2 | BR_POIS | S_KIN
+D:Someone must have edited the text strings, since this worm queen was 
+D:supposed to display "Mind Maw the Slasher" as her name. 
+
+N:4521:Marius
+G:g:W
+I:130:100d15:200:170:0
+W:52:80:0:2000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:INSANITY:5d6
+B:HIT:INSANITY:6d6
+B:HIT:INSANITY:7d6
+B:HIT:INSANITY:6d6
+F:COLD_BLOOD | EMPTY_MIND | KILL_WALL | FORCE_MAXHP | POWERFUL |  
+F:BASH_DOOR | IM_COLD | IM_ACID | IM_FIRE | IM_ELEC | IM_POIS | NONLIVING | 
+F:ESCORTS | ESCORT | UNIQUE | NO_SLEEP | NO_CONF | NO_FEAR | NO_STUN
+F:CHAR_MULTI | CAN_FLY | BASEANGBAND | NO_CUT
+S:1_IN_4
+S:BR_CONF | BR_LITE | BR_DARK | BR_WALL
+S:S_KIN | TELE_LEVEL | SHRIEK
+D:He's simply better than anyone else. If you aren't well prepared, he 
+D:will mop the floor with you and then boast about his victory. 
+
+N:4522:Hans
+G:U:W
+I:120:25d100:20:100:100
+W:50:60:12000:25000
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:COLD:4d12
+B:HIT:COLD:4d12
+B:CRUSH:HURT:3d12
+B:TOUCH:UN_POWER
+F:UNIQUE | FORCE_SLEEP | FORCE_MAXHP | AURA_COLD | CAN_FLY |
+F:ONLY_ITEM | DROP_2D2 | DROP_GOOD | NONLIVING | DROP_GREAT
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY | SMART | 
+F:EVIL | DEMON | IM_COLD | NO_CONF | KILL_WALL | BASEANGBAND | 
+F:HAS_LITE | NO_THEFT
+S:1_IN_4 | 
+S:BLIND | CONF | BRAIN_SMASH | 
+S:BR_COLD | BO_COLD | BA_NETH | S_UNDEAD | S_DEMON
+D:It is a massive humanoid demon wreathed in frost, wielding a cruel looking 
+D:pike in its hands. 
+
+N:4523:Desert Mountain
+G:#:W
+I:120:50d30:20:100:40
+W:45:40:0:1500
+E:0:0:0:0:0:0
+O:60:0:40:0
+B:HIT:HURT:4d6
+B:HIT:HURT:4d6
+B:HIT:HURT:4d6
+F:FORCE_SLEEP | COLD_BLOOD | EMPTY_MIND | PASS_WALL | KILL_BODY | ESCORT | 
+F:BASH_DOOR | IM_COLD | IM_ACID | IM_ELEC | IM_POIS | NONLIVING | UNIQUE
+F:HURT_ROCK | NO_CONF | NO_SLEEP | NO_CUT | CHAR_MULTI | BASEANGBAND | 
+F:NO_CUT | DROP_GREAT | NO_THEFT
+S:1_IN_10 | S_KIN | BO_ACID | BA_FIRE
+D:Deep in the heart of the earth, even the rock itself is sentient 
+D:and has learned to despise intruders. 
+
+N:4524:Fire golem
+G:g:r
+I:115:3d20:50:50:10
+W:30:3:100:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:2d6
+B:HIT:HURT:2d6
+B:HIT:FIRE:3d6
+B:HIT:FIRE:3d6
+F:BASH_DOOR | AURA_FIRE | HAS_LITE
+F:IM_FIRE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING | NO_STUN
+F:MORTAL | BASEANGBAND | NO_CUT | 
+S:1_IN_10 | 
+S:BR_FIRE
+D:A sentient mass of pure fire. 
+
+N:4525:Evil Fumblefingers
+G:@:U
+I:115:3d20:50:50:10
+W:5:3:100:0
+O:50:50:0:0
+B:HIT:HURT:2d6
+B:PUNCH:HURT:1d7
+B:KICK:HURT:1d8
+F:SMART | OPEN_DOOR
+F:FORCE_MAXHP | CAN_SWIM | BASEANGBAND | 
+F:NO_SLEEP | NO_CONF
+D:A great warrior. 
+
+N:4526:Helchgam
+G:~:v
+I:120:27d100:30:100:80
+W:45:3000:7000:12000
+E:3:0:3:6:1:0
+O:50:50:0:0
+B:CRUSH:ACID:8d8
+B:CRUSH:POISON:8d8
+B:CRUSH:PARALYZE:8d8
+F:UNIQUE | FORCE_SLEEP | FORCE_MAXHP | CAN_SWIM | ANIMAL | 
+F:IM_ACID | IM_COLD | IM_POIS | RES_WATE | RES_TELE | DROP_CORPSE | 
+F:NO_CONF | NO_FEAR | EVIL | COLD_BLOOD | BASEANGBAND | NO_THEFT | 
+F:ONLY_ITEM | DROP_GOOD | DROP_4D2 | DROP_1D2 | DROP_GREAT
+S:1_IN_5 | BA_WATE | BO_WATE | HOLD | BR_POIS | BO_ICEE | TELE_TO
+D:A vile creature which seems to consist mostly of tentacles, it seeks to 
+D:drag people to their doom in the water.  Few have ever escaped its grasp. 
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness
