@@ -8386,7 +8386,7 @@ static bool cave_gen(void)
 					get_obj_num_hook = kind_is_artifactable;
 
 					/* Object level a la find object fates */
-					obj_lev = max_dlv[dungeon_type] + randint(10);
+					obj_lev = max_dlv_real[dungeon_type] + randint(10);
 
 					/* Rebuild allocation table */
 					get_obj_num_prep();

@@ -7486,7 +7486,7 @@ turn_monsters(40 + p_ptr->lev);
 		case ACT_SUMMON_MONST:
 			{
 				if (!doit) return "summon monster every 500 turns";
-				summon_specific(p_ptr->py, p_ptr->px, max_dlv[dungeon_type], 0);
+				summon_specific(p_ptr->py, p_ptr->px, max_dlv_real[dungeon_type], 0);
 
 				/* Timeout is set before return */
 

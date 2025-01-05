@@ -3358,10 +3358,11 @@ errr file_character(cptr name, bool full)
 	fprintf(fff, "\n\n Recall Depth:");
 	for (y = 1; y < max_d_idx; y++)
 	{
-		if (max_dlv[y])
-			fprintf(fff, "\n        %s: Level %d (%d')",
+		if (max_dlv_real[y])
+			fprintf(fff, "\n        %s: Max Level %d (%d'), Cur Level %d (%d')",
 			        d_name + d_info[y].name,
-			        max_dlv[y], 50 * (max_dlv[y]));
+			        max_dlv_real[y], 50 * (max_dlv_real[y]),
+				  max_dlv[y], 50 * (max_dlv[y]));
 	}
 	fprintf(fff, "\n");
 

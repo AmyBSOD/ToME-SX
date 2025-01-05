@@ -2059,7 +2059,7 @@ void do_cmd_debug(void)
 		break;
 
 	case '/':
-		summon_specific(p_ptr->py, p_ptr->px, max_dlv[dungeon_type], command_arg);
+		summon_specific(p_ptr->py, p_ptr->px, max_dlv_real[dungeon_type], command_arg);
 		break;
 
 	case '>':

@@ -5516,6 +5516,10 @@ static void dungeon(void)
 	{
 		max_dlv[dungeon_type] = dun_level;
 	}
+	if ((max_dlv_real[dungeon_type] < dun_level) && !p_ptr->inside_quest)
+	{
+		max_dlv_real[dungeon_type] = dun_level;
+	}
 
 	/* No stairs down from Quest */
 	if (is_quest(dun_level) && (is_quest(dun_level) != QUEST_RANDOM) && !p_ptr->astral)

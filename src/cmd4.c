@@ -4121,13 +4121,14 @@ static void do_cmd_knowledge_dungeons(void)
 	for (y = 1; y < max_d_idx; y++)
 	{
 		/* The dungeon has a valid recall depth set */
-		if (max_dlv[y])
+		if (max_dlv_real[y])
 		{
 			/* Describe the recall depth */
-			fprintf(fff, "       %c%s: Level %d (%d')\n",
+			fprintf(fff, "       %c%s: Max Level %d (%d'), Cur Level %d (%d')\n",
 			        (p_ptr->recall_dungeon == y) ? '*' : ' ',
 			        d_name + d_info[y].name,
-			        max_dlv[y], 50 * (max_dlv[y]));
+			        max_dlv_real[y], 50 * (max_dlv_real[y]),
+				  max_dlv[y], 50 * (max_dlv[y]));
 		}
 	}
 

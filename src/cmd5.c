@@ -950,7 +950,7 @@ void shriek_effect()
 	case 6:
 		{
 			msg_print("Oops! You call a monster.");
-			summon_specific(p_ptr->py, p_ptr->px, max_dlv[dungeon_type], 0);
+			summon_specific(p_ptr->py, p_ptr->px, max_dlv_real[dungeon_type], 0);
 
 			break;
 		}

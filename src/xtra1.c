@@ -5107,7 +5107,7 @@ void gain_fate(byte fate)
 						obj_theme theme;
 
 						/* the objects shouldn't be teh sux! --Amy */
-						int maxobjlevel = randint(50) + max_dlv[dungeon_type] + p_ptr->lev;
+						int maxobjlevel = randint(50) + max_dlv_real[dungeon_type] + p_ptr->lev;
 						if (p_ptr->nastytrap45 && (maxobjlevel > 1)) maxobjlevel /= 2;
 						int runebonus = get_skill(SKILL_RUNECRAFT);
 						if (p_ptr->nastytrap45) runebonus = 0;
@@ -5146,7 +5146,7 @@ void gain_fate(byte fate)
 				/* Prepare allocation table */
 				get_mon_num_prep();
 
-				fates[i].r_idx = get_mon_num(max_dlv[dungeon_type] + p_ptr->lev + randint(50));
+				fates[i].r_idx = get_mon_num(max_dlv_real[dungeon_type] + p_ptr->lev + randint(50));
 				level = randint(98);
 				fates[i].level = (level < 1) ? 1 : (level > 98) ? 98 : level;
 				fates[i].serious = rand_int(2);
@@ -5156,7 +5156,7 @@ void gain_fate(byte fate)
 
 			case FATE_FIND_A:
 			{
-				int maxobjlevel = randint(50) + max_dlv[dungeon_type] + p_ptr->lev * 2;
+				int maxobjlevel = randint(50) + max_dlv_real[dungeon_type] + p_ptr->lev * 2;
 				if (p_ptr->nastytrap45 && (maxobjlevel > 1)) maxobjlevel /= 2;
 				int runebonus = get_skill(SKILL_RUNECRAFT);
 				if (p_ptr->nastytrap45) runebonus = 0;

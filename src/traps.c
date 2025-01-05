@@ -173,7 +173,7 @@ static bool player_handle_trap_of_walls(void)
 			if (!dx && !dy) continue;
 
 			/* test for dungeon level */
-			if (randint(100) > 10 + max_dlv[dungeon_type]) continue;
+			if (randint(100) > 10 + max_dlv_real[dungeon_type]) continue;
 
 			/* Damage this grid */
 			map[2 + dx][2 + dy] = TRUE;
@@ -385,7 +385,7 @@ static bool player_handle_missile_trap(s16b num, s16b tval, s16b sval, s16b dd, 
 	o_ptr = &forge;
 	object_prep(o_ptr, k_idx);
 	o_ptr->number = num;
-	apply_magic(o_ptr, max_dlv[dungeon_type], FALSE, FALSE, FALSE);
+	apply_magic(o_ptr, max_dlv_real[dungeon_type], FALSE, FALSE, FALSE);
 	object_desc(i_name, o_ptr, TRUE, 0);
 
 	msg_format("Suddenly %s hit%s you!", i_name,
@@ -425,10 +425,10 @@ static bool player_handle_breath_trap(s16b rad, s16b type, u16b trap)
 	my_ds = t_ptr->ds;
 
 	/* these traps gets nastier as levels progress */
-	if (max_dlv[dungeon_type] > (2 * t_ptr->minlevel))
+	if (max_dlv_real[dungeon_type] > (2 * t_ptr->minlevel))
 	{
-		my_dd += (max_dlv[dungeon_type] / 15);
-		my_ds += (max_dlv[dungeon_type] / 15);
+		my_dd += (max_dlv_real[dungeon_type] / 15);
+		my_ds += (max_dlv_real[dungeon_type] / 15);
 	}
 	dam = damroll(my_dd, my_ds);
 
@@ -1099,7 +1099,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type], 0);
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type], 0);
 			}
 
 			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
@@ -1135,7 +1135,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A mighty spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_UNDEAD);
 			}
 
@@ -1171,7 +1171,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A dark spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_SPIDER);
 			}
 
@@ -1207,7 +1207,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A musty spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_HOUND);
 			}
 
@@ -1243,7 +1243,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A salty spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_HYDRA);
 			}
 
@@ -1279,7 +1279,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A celestial spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_ANGEL);
 			}
 
@@ -1315,7 +1315,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A stinking spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_WRAITH);
 			}
 
@@ -1351,7 +1351,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A grassy spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_ANT);
 			}
 
@@ -1387,7 +1387,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A chilly spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_GHOST);
 			}
 
@@ -1423,7 +1423,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A fizzy spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_BIZARRE1);
 			}
 
@@ -1459,7 +1459,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A wispy spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_BIZARRE2);
 			}
 
@@ -1495,7 +1495,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A whirly spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_BIZARRE4);
 			}
 
@@ -1531,7 +1531,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A clinging spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_BIZARRE6);
 			}
 
@@ -1567,7 +1567,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A lively spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_ANIMAL);
 			}
 
@@ -1603,7 +1603,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A majestic spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_THUNDERLORD);
 			}
 
@@ -1639,7 +1639,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A clicking sound can be heard.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_MINE);
 			}
 
@@ -1675,7 +1675,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("An unstoppable spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_E);
 			}
 
@@ -1711,7 +1711,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A hissing spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_SNAKE);
 			}
 
@@ -1747,7 +1747,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A horrible spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_ELDRITCH);
 			}
 
@@ -1783,7 +1783,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A furry spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_CAT);
 			}
 
@@ -1819,7 +1819,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A reeking spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_RAT);
 			}
 
@@ -1855,7 +1855,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A long spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_WORM);
 			}
 
@@ -1891,7 +1891,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A shuffling spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_CLOTHES);
 			}
 
@@ -1927,7 +1927,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A resonating spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_HYBRID);
 			}
 
@@ -1963,7 +1963,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A crunching spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_BEETLE);
 			}
 
@@ -1999,7 +1999,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A chaotic spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_HORDE);
 			}
 
@@ -2035,7 +2035,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A dangerous spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_AMBERITE);
 			}
 
@@ -2069,7 +2069,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A bustling spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_TOWNIE);
 			}
 
@@ -2105,7 +2105,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A watery spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_SHORE);
 			}
 
@@ -2141,7 +2141,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A wavy spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_OCEAN);
 			}
 
@@ -2177,7 +2177,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A windy spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_WASTE);
 			}
 
@@ -2213,7 +2213,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A whistling spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_WOOD);
 			}
 
@@ -2249,7 +2249,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A burning spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_VOLCANO);
 			}
 
@@ -2285,7 +2285,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A cold spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_MOUNTAIN);
 			}
 
@@ -2321,7 +2321,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A humming spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_GRASS);
 			}
 
@@ -2357,7 +2357,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("A terrifying spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_UNIQUE);
 			}
 
@@ -2393,7 +2393,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("An old and evil spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_HI_UNDEAD);
 			}
 
@@ -2429,7 +2429,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("An old and evil spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_HI_DEMON);
 			}
 
@@ -2465,7 +2465,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("An old and evil spell hangs in the air.");
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type],
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
 				                         SUMMON_HI_DRAGON);
 			}
 
@@ -2731,7 +2731,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			for (k = 0; k < randint(3); k++)
 			{
-				ident |= summon_specific(y, x, max_dlv[dungeon_type], SUMMON_QUYLTHULG);
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type], SUMMON_QUYLTHULG);
 			}
 
 			if (ident)
@@ -5041,40 +5041,40 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		 * Amy edit: reduced amount of missiles so players aren't hopelessly instakilled
 		 */
 	case TRAP_OF_ARROWS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_NORMAL, 4, 4, 0, "Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, SV_AMMO_NORMAL, 4, 4, 0, "Arrow Trap");
 		break;
 	case TRAP_OF_ARROWS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_NORMAL, 5, 4, 0, "Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_BOLT, SV_AMMO_NORMAL, 5, 4, 0, "Bolt Trap");
 		break;
 	case TRAP_OF_ARROWS_III:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_HEAVY, 6, 4, 0, "Seeker Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, SV_AMMO_HEAVY, 6, 4, 0, "Seeker Arrow Trap");
 		break;
 	case TRAP_OF_ARROWS_IV:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_HEAVY, 8, 5, 0, "Seeker Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_BOLT, SV_AMMO_HEAVY, 8, 5, 0, "Seeker Bolt Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_NORMAL, 4, 4, randint(20), "Poison Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, SV_AMMO_NORMAL, 4, 4, randint(20), "Poison Arrow Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_NORMAL, 5, 4, randint(30), "Poison Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_BOLT, SV_AMMO_NORMAL, 5, 4, randint(30), "Poison Bolt Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_III:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_ARROW, SV_AMMO_HEAVY, 6, 4, randint(50), "Poison Seeker Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, SV_AMMO_HEAVY, 6, 4, randint(50), "Poison Seeker Arrow Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_IV:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_BOLT, SV_AMMO_HEAVY, 8, 5, randint(70), "Poison Seeker Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_BOLT, SV_AMMO_HEAVY, 8, 5, randint(70), "Poison Seeker Bolt Trap");
 		break;
 	case TRAP_OF_DAGGERS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_BROKEN_DAGGER, 2, 4, 0, "Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SWORD, SV_BROKEN_DAGGER, 2, 4, 0, "Dagger Trap");
 		break;
 	case TRAP_OF_DAGGERS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_DAGGER, 3, 4, 0, "Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SWORD, SV_DAGGER, 3, 4, 0, "Dagger Trap");
 		break;
 	case TRAP_OF_POISON_DAGGERS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_BROKEN_DAGGER, 2, 4, randint(20), "Poison Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SWORD, SV_BROKEN_DAGGER, 2, 4, randint(20), "Poison Dagger Trap");
 		break;
 	case TRAP_OF_POISON_DAGGERS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv[dungeon_type] / 35), TV_SWORD, SV_DAGGER, 3, 4, randint(30), "Poison Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SWORD, SV_DAGGER, 3, 4, randint(30), "Poison Dagger Trap");
 		break;
 
 	case TRAP_OF_DROP_ITEMS:

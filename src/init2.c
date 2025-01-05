@@ -6167,6 +6167,7 @@ static errr init_other(void)
 
 	/* Allocate and Wipe the max dungeon level */
 	C_MAKE(max_dlv, max_d_idx, s16b);
+	C_MAKE(max_dlv_real, max_d_idx, s16b);
 
 	/* Allocate and Wipe the special levels */
 	for (i = 0; i < MAX_DUNGEON_DEPTH; i++)

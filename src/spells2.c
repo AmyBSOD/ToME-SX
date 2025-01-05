@@ -8854,7 +8854,7 @@ int reset_recall_aux()
 		/* skip "blocked" dungeons */
 		if (d_info[i].flags1 & DF1_NO_RECALL) continue;
 
-		if (max_dlv[i])
+		if (max_dlv_real[i])
 		{
 			p[max++] = i;
 		}
@@ -8980,7 +8980,7 @@ bool reset_recall(bool no_trepas_max_depth)
 	if (!no_trepas_max_depth)
 		max = d_info[dun].maxdepth;
 	else
-		max = max_dlv[dun];
+		max = max_dlv_real[dun];
 	depth = get_quantity(format("Which level in %s(%d-%d)? ",
 	                            d_info[dun].name + d_name,
 	                            d_info[dun].mindepth, max),

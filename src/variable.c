@@ -1406,6 +1406,7 @@ byte vanilla_town = FALSE;
  */
 byte dungeon_type;
 s16b *max_dlv;
+s16b *max_dlv_real;
 
 /*
  * Number of total bounties the player had had.

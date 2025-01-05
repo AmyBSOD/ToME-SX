@@ -573,6 +573,12 @@ static bool do_extra(int flag)
 		do_s16b(&tmp16s, flag);
 		if ((flag == LS_LOAD) && (i <= max_d_idx))
 			max_dlv[i] = tmp16s;
+
+		if (flag == LS_SAVE)
+			tmp16s = max_dlv_real[i];
+		do_s16b(&tmp16s, flag);
+		if ((flag == LS_LOAD) && (i <= max_d_idx))
+			max_dlv_real[i] = tmp16s;
 	}
 	/* Repair max player level??? */
 	if ((flag == LS_LOAD) && (p_ptr->max_plv < p_ptr->lev))

@@ -5619,7 +5619,7 @@ void do_cmd_necromancer(void)
 			else if (b < 40)
 			{
 				msg_print("Suddenly you feel that you're in a bad situation...");
-				summon_specific(p_ptr->py, p_ptr->px, max_dlv[dungeon_type],
+				summon_specific(p_ptr->py, p_ptr->px, max_dlv_real[dungeon_type],
 				                (plev >= 30) ? SUMMON_HI_UNDEAD : SUMMON_UNDEAD);
 			}
 			else

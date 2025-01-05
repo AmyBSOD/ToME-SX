@@ -1029,6 +1029,7 @@ static void player_wipe(void)
 	for (i = 0; i < max_d_idx; i++)
 	{
 		max_dlv[i] = 0;
+		max_dlv_real[i] = 0;
 	}
 
 	/* Wipe the known inscription list */
@@ -2436,6 +2437,7 @@ static bool player_birth_aux_ask()
 	dungeon_type = tmp;
 	p_ptr->recall_dungeon = dungeon_type;
 	max_dlv[dungeon_type] = d_info[dungeon_type].mindepth;
+	max_dlv_real[dungeon_type] = d_info[dungeon_type].mindepth;
 
 	if (p_ptr->astral)
 	{

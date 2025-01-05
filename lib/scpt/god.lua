@@ -312,6 +312,7 @@ function place_rand_dung()
 		
 		-- erase old recall level
 		max_dlv[god_quest.DUNGEON_GOD + 1] = 0
+		max_dlv_real[god_quest.DUNGEON_GOD + 1] = 0
 	end
 
 	-- initialise tries variable

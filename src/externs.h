@@ -548,6 +548,7 @@ extern fate fates[MAX_FATES];
 extern byte vanilla_town;
 extern byte dungeon_type;
 extern s16b *max_dlv;
+extern s16b *max_dlv_real;
 extern u32b total_bounties;
 extern s16b doppleganger;
 extern bool generate_encounter;

@@ -4820,3 +4820,4 @@ extern u16b has_won;
 extern bool joke_monsters;
 
 extern s16b max_dlv[999999];
+extern s16b max_dlv_real[999999];
