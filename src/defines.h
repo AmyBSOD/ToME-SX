@@ -582,7 +582,7 @@
 /* XXX */
 #define PR1_EASE_STEAL          0x08000000L     /* Gain xp by stealing */
 /* XXX */
-/* XXX */
+#define PR1_RANDOM_SKILLS       0x20000000L     /* Starts with randomized skill set --Amy */
 /* XXX */
 /* XXX */
 
@@ -4954,8 +4954,11 @@ extern int PlayerUID;
 #define SKILL_HELL              72
 #define SKILL_CELESTIAL         73
 #define SKILL_ANTINASTY         74
+/* ATTENTION: always update MAX_GOOD_SKILL below when adding new ones!!! --Amy */
 
 /* Ugly but needed */
+#define MAX_GOOD_SKILL          74
+
 #define MAX_SKILLS              200
 
 /* SKill flags */

@@ -1053,7 +1053,7 @@ cptr rp_info_flags1[] =
 	"XXX",
 	"EASE_STEAL",
 	"XXX",
-	"XXX",
+	"RANDOM_SKILLS",
 	"XXX",
 	"XXX"
 };

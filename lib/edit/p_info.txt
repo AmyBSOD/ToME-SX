@@ -349,7 +349,7 @@ C:a:k:+0:+200:Boomerang-mastery
 C:a:O:23:16:1d1
 C:a:g:All Gods
 
-C:a:N:Weirdo warrior
+C:a:N:WeirdoWarrior
 C:a:D:Warrior with weird skills
 C:a:k:+0:+200:Bearform-combat
 C:a:k:+0:+300:Combat
@@ -373,6 +373,12 @@ C:a:k:-5800:+533:Fire
 C:a:k:-21200:+867:Sorcery
 C:a:k:-12500:+675:Stealing
 C:a:k:-6500:+560:Barehand-combat
+
+C:a:N:RandomWarrior
+C:a:D:Warrior with randomized skills
+C:a:O:23:16:1d1
+C:a:g:All Gods
+C:a:G:RANDOM_SKILLS
 
 C:N:1:Mage
 C:D:0:The basic spellcaster with lots of different skills
@@ -788,6 +794,13 @@ C:a:k:-5800:+560:Mind
 C:a:k:-4600:+800:Nature
 C:a:k:-6200:+400:Necromancy
 
+C:a:N:Random mage
+C:a:D:Mage with randomized skills
+C:a:O:23:4:1d1
+C:a:O:111:50:1d1
+C:a:g:All Gods
+C:a:G:RANDOM_SKILLS
+
 C:N:2:Archer
 C:D:0:'Kill them before they see you' could be the motto of the archer class.
 C:D:0:As deadly with a bow as a warrior is with a sword.
@@ -888,7 +901,7 @@ C:a:O:16:0:10d4
 C:a:O:16:0:10d5
 C:a:g:All Gods
 
-C:a:N:Boomerang-master
+C:a:N:Boom-master
 C:a:D:Archer specialized in the use of boomerangs.
 C:a:k:+0:+100:Archery
 C:a:k:+0:+400:Boomerang-mastery
@@ -949,7 +962,7 @@ C:a:O:16:1:10d3
 C:a:O:16:1:10d3
 C:a:g:All Gods
 
-C:a:N:Boulder-hurler
+C:a:N:BoulderHurler
 C:a:D:An incredibly strong archer that takes to throwing heavy
 C:a:D:boulders rather than shooting.
 C:a:k:-1000:-150:Archery
@@ -963,7 +976,7 @@ C:a:k:+0:-100:Magic
 C:a:k:+0:-100:Magic-Device
 C:a:k:+0:-200:Sneakiness
 
-C:a:N:Ammoless archer
+C:a:N:NoAmmo archer
 C:a:D:A rare class of archer, they prefer to fire boomerangs that
 C:a:D:require no ammo, supplemented by magical arrows of mana.
 C:a:k:+0:-100:Bow-mastery
@@ -1027,6 +1040,15 @@ C:a:k:-3400:+560:Corpse-preservation
 C:a:k:-3600:+480:Bearform-combat
 C:a:k:-9000:+750:Backstab
 C:a:k:-6300:+550:Bow-mastery
+
+C:a:N:Random archer
+C:a:D:Archer with randomized skills
+C:a:O:19:12:1d1
+C:a:O:19:2:1d1
+C:a:O:17:1:10d3
+C:a:O:17:1:10d3
+C:a:g:All Gods
+C:a:G:RANDOM_SKILLS
 
 C:N:3:Rogue
 C:D:0:Rogues are masters of tricks. They can steal from shops and monsters,
@@ -1369,6 +1391,11 @@ C:a:k:-7600:+450:Boomerang-mastery
 C:a:k:-2200:+480:Prayer
 C:a:k:-5400:+450:Thaumaturgy
 C:a:k:-6700:+675:Water
+
+C:a:N:Random rogue
+C:a:D:Rogue with randomized skills
+C:a:g:All Gods
+C:a:G:RANDOM_SKILLS
 
 C:N:4:Loremaster
 C:D:0:Loremasters are skilled in most combat and monster skills.
@@ -1849,7 +1876,7 @@ C:a:k:+0:+400:Dual-wielding
 C:a:k:+0:+400:Two-handed
 C:g:Nobody
 
-C:a:N:Weird loremaster
+C:a:N:Weird Master
 C:a:D:Loremaster with weird skills
 C:a:k:+0:+400:Udun
 C:a:k:+0:+300:Symbiosis
@@ -1876,7 +1903,7 @@ C:a:k:+2000:+300:Sling-mastery
 C:a:k:+1000:+400:Archery
 C:a:k:+1000:+100:Prayer
 
-C:a:N:Tough Motherfucker
+C:a:N:Motherfucker
 C:a:D:Extraordinarily stunted character
 C:a:k:-1000:+0:Bearform-combat
 C:a:k:-3000:+0:Magic
@@ -1899,7 +1926,7 @@ C:a:k:-7500:+350:Mindcraft
 C:a:k:-7600:+600:Air
 C:a:k:-1900:+600:Combat
 
-C:a:N:Mofo loremaster
+C:a:N:Mofo Master
 C:a:D:Loremaster with stunted skills
 C:a:k:-9000:+0:Divination
 C:a:k:-4000:+0:Demonology
@@ -1914,6 +1941,11 @@ C:a:k:-8000:+800:Barehand-combat
 C:a:k:-4600:+600:Archery
 C:a:k:-6000:+400:Disarming
 C:a:k:-2200:+450:Summoning
+
+C:a:N:Random Master
+C:a:D:Loremaster with randomized skills
+C:a:g:All Gods
+C:a:G:RANDOM_SKILLS
 
 C:N:5:Priest
 C:D:0:A priest serves a god (Vala, Maia or Eru himself) to bring down
@@ -2076,7 +2108,7 @@ C:a:k:+0:+600:Weight-lifting
 C:a:k:+0:+200:Two-handed
 C:a:b:10:Extra Max Blow(1)
 
-C:a:N:Priest(Varda)
+C:a:N:Light Priest
 C:a:D:A priest who serves Varda to bring light
 C:a:D:to all the reaches of the world.
 C:a:O:21:5:1d1
@@ -2088,7 +2120,7 @@ C:a:k:+0:+400:Archery
 C:a:k:+0:+500:Cleaning
 C:a:k:+0:+500:Celestial
 
-C:a:N:Priest(Ulmo)
+C:a:N:Water Priest
 C:a:D:A priest that serves Ulmo to bring down
 C:a:D:the empire of fear and shadows of Morgoth.
 C:a:O:22:5:1d1
@@ -2099,7 +2131,7 @@ C:a:k:+0:-600:Necromancy
 C:a:k:+0:+100:Spell-power
 C:a:k:+0:+300:Impale
 
-C:a:N:Priest(Mandos)
+C:a:N:Death Priest
 C:a:D:A priest that serves Mandos to bring down
 C:a:D:the empire of fear and shadows of Morgoth.
 C:a:O:21:5:1d1
@@ -2110,7 +2142,7 @@ C:a:k:+0:-600:Necromancy
 C:a:k:+0:+100:Spell-power
 C:a:k:+2000:+350:Hell
 
-C:a:N:Atheist Priest
+C:a:N:AtheistPriest
 C:a:D:A priest who somehow doesn't believe in gods.
 C:a:D:Don't ask how that can be possible.
 C:a:O:23:33:1d1
@@ -2120,7 +2152,7 @@ C:a:k:+1000:+100:Antimagic
 C:a:k:+0:+300:Sword-mastery
 C:a:k:+0:+500:Clear-mind
 
-C:a:N:Arda Worshipper
+C:a:N:ArdaBeseecher
 C:a:D:A priest who seeks help from divine entities.
 C:a:O:21:5:1d1
 C:a:g:Eru Iluvatar
@@ -2165,6 +2197,12 @@ C:a:k:-3800:+800:Combat
 C:a:k:-7800:+400:Mindcraft
 C:a:k:-5400:+640:Thaumaturgy
 C:a:k:-8200:+400:Meta
+
+C:a:N:Random priest
+C:a:D:Priest with randomized skills
+C:a:O:21:5:1d1
+C:a:g:All Gods
+C:a:G:RANDOM_SKILLS
 
 ###############################TEST###############################
 C:N:30:Test
