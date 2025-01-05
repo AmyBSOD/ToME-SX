@@ -568,6 +568,7 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY107:
 		case TRAP_NASTY108:
 		case TRAP_NASTY109:
+		case TRAP_NASTY110:
 			return FALSE;
 	}
 
@@ -689,6 +690,7 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY107:
 		case TRAP_NASTY108:
 		case TRAP_NASTY109:
+		case TRAP_NASTY110:
 			return FALSE;
 	}
 
@@ -4918,6 +4920,18 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY110:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap110 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHOES:
 	case TRAP_OF_SHOES_II:
 	case TRAP_OF_SHOES_III:
@@ -7311,7 +7325,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(109)) {
+	switch (randint(110)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -7638,6 +7652,9 @@ void give_random_nastytrap_effect(void)
 			break;
 		case 109:
 			p_ptr->nastytrap109 = TRUE;
+			break;
+		case 110:
+			p_ptr->nastytrap110 = TRUE;
 			break;
 
 	}

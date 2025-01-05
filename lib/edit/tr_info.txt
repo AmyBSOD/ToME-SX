@@ -1707,6 +1707,11 @@ I:35:2:50:4:15:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:353:Totter Trap
+I:70:2:50:4:50:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

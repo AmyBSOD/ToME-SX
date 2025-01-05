@@ -7013,6 +7013,35 @@ bool get_rep_dir(int *dp)
 	/* Prevent weirdness */
 	if (dir == 5) dir = 0;
 
+	if (p_ptr->nastytrap110) { /* totter trap, by Amy */
+		switch (dir) {
+			case 1:
+				dir = 9;
+				break;
+			case 9:
+				dir = 1;
+				break;
+			case 7:
+				dir = 3;
+				break;
+			case 3:
+				dir = 7;
+				break;
+			case 4:
+				dir = 6;
+				break;
+			case 6:
+				dir = 4;
+				break;
+			case 2:
+				dir = 8;
+				break;
+			case 8:
+				dir = 2;
+				break;
+		}
+	}
+
 	/* Aborted */
 	if (!dir) return (FALSE);
 

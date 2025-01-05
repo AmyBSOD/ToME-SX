@@ -1596,439 +1596,443 @@ void self_knowledge(FILE *fff)
 
 	if (p_ptr->nastytrap1)
 	{
-		info[i++] = "You have the following problem: Unique monsters can't be permanently killed.";
+		info[i++] = "You have a problem: Unique monsters can't be permanently killed.";
 	}
 	if (p_ptr->nastytrap2)
 	{
-		info[i++] = "You have the following problem: Traps cannot be detected or found.";
+		info[i++] = "You have a problem: Traps cannot be detected or found.";
 	}
 	if (p_ptr->nastytrap3)
 	{
-		info[i++] = "You have the following problem: You cannot identify the type of trap.";
+		info[i++] = "You have a problem: You cannot identify the type of trap.";
 	}
 	if (p_ptr->nastytrap4)
 	{
-		info[i++] = "You have the following problem: You cannot gain piety.";
+		info[i++] = "You have a problem: You cannot gain piety.";
 	}
 	if (p_ptr->nastytrap5)
 	{
-		info[i++] = "You have the following problem: Your saving throw is shit.";
+		info[i++] = "You have a problem: Your saving throw is shit.";
 	}
 	if (p_ptr->nastytrap6)
 	{
-		info[i++] = "You have the following problem: Your disarming ability is shit.";
+		info[i++] = "You have a problem: Your disarming ability is shit.";
 	}
 	if (p_ptr->nastytrap7)
 	{
-		info[i++] = "You have the following problem: Your device ability is shit.";
+		info[i++] = "You have a problem: Your device ability is shit.";
 	}
 	if (p_ptr->nastytrap8)
 	{
-		info[i++] = "You have the following problem: Your stealth ability is shit.";
+		info[i++] = "You have a problem: Your stealth ability is shit.";
 	}
 	if (p_ptr->nastytrap9)
 	{
-		info[i++] = "You have the following problem: Your searching ability is shit.";
+		info[i++] = "You have a problem: Your searching ability is shit.";
 	}
 	if (p_ptr->nastytrap10)
 	{
-		info[i++] = "You have the following problem: Your perception ability is shit.";
+		info[i++] = "You have a problem: Your perception ability is shit.";
 	}
 	if (p_ptr->nastytrap11)
 	{
-		info[i++] = "You have the following problem: You aggravate monsters.";
+		info[i++] = "You have a problem: You aggravate monsters.";
 	}
 	if (p_ptr->nastytrap12)
 	{
-		info[i++] = "You have the following problem: You have the ancient foul curse.";
+		info[i++] = "You have a problem: You have the ancient foul curse.";
 	}
 	if (p_ptr->nastytrap13)
 	{
-		info[i++] = "You have the following problem: You have the ancient Morgothian curse.";
+		info[i++] = "You have a problem: You have the ancient Morgothian curse.";
 	}
 	if (p_ptr->nastytrap14)
 	{
-		info[i++] = "You have the following problem: You cannot recall.";
+		info[i++] = "You have a problem: You cannot recall.";
 	}
 	if (p_ptr->nastytrap15)
 	{
-		info[i++] = "You have the following problem: You cannot teleport.";
+		info[i++] = "You have a problem: You cannot teleport.";
 	}
 	if (p_ptr->nastytrap16)
 	{
-		info[i++] = "You have the following problem: Traps are spawned around you every once in a while.";
+		info[i++] = "You have a problem: Traps are spawned around you every once in a while.";
 	}
 	if (p_ptr->nastytrap17)
 	{
-		info[i++] = "You have the following problem: Your speed is reduced.";
+		info[i++] = "You have a problem: Your speed is reduced.";
 	}
 	if (p_ptr->nastytrap18)
 	{
-		info[i++] = "You have the following problem: Your speed is halved.";
+		info[i++] = "You have a problem: Your speed is halved.";
 	}
 	if (p_ptr->nastytrap19)
 	{
-		info[i++] = "You have the following problem: Your right mouse button doesn't go anymore.";
+		info[i++] = "You have a problem: Your right mouse button doesn't go anymore.";
 	}
 	if (p_ptr->nastytrap20)
 	{
-		info[i++] = "You have the following problem: Your display failed.";
+		info[i++] = "You have a problem: Your display failed.";
 	}
 	if (p_ptr->nastytrap21)
 	{
-		info[i++] = "You have the following problem: An auto-destruct mechanism has been initiated.";
+		info[i++] = "You have a problem: An auto-destruct mechanism has been initiated.";
 	}
 	if (p_ptr->nastytrap22)
 	{
-		info[i++] = "You have the following problem: There is low local memory.";
+		info[i++] = "You have a problem: There is low local memory.";
 	}
 	if (p_ptr->nastytrap23)
 	{
-		info[i++] = "You have the following problem: There is not enough memory to display an inventory window.";
+		info[i++] = "You have a problem: There is not enough memory to display an inventory window.";
 	}
 	if (p_ptr->nastytrap24)
 	{
-		info[i++] = "You have the following problem: You're shitting out of luck (SOL).";
+		info[i++] = "You have a problem: You're shitting out of luck (SOL).";
 	}
 	if (p_ptr->nastytrap25)
 	{
-		info[i++] = "You have the following problem: The game displays in shades of grey.";
+		info[i++] = "You have a problem: The game displays in shades of grey.";
 	}
 	if (p_ptr->nastytrap26)
 	{
-		info[i++] = "You have the following problem: Your items get cursed periodically.";
+		info[i++] = "You have a problem: Your items get cursed periodically.";
 	}
 	if (p_ptr->nastytrap27)
 	{
-		info[i++] = "You have the following problem: The monster difficulty has been arbitrarily increased.";
+		info[i++] = "You have a problem: The monster difficulty has been arbitrarily increased.";
 	}
 	if (p_ptr->nastytrap28)
 	{
-		info[i++] = "You have the following problem: Confusion resistance doesn't protect you from becoming confused.";
+		info[i++] = "You have a problem: Confusion resistance doesn't protect you from becoming confused.";
 	}
 	if (p_ptr->nastytrap29)
 	{
-		info[i++] = "You have the following problem: Blindness resistance doesn't protect you from becoming blind.";
+		info[i++] = "You have a problem: Blindness resistance doesn't protect you from becoming blind.";
 	}
 	if (p_ptr->nastytrap30)
 	{
-		info[i++] = "You have the following problem: Fear resistance doesn't protect you from becoming afraid.";
+		info[i++] = "You have a problem: Fear resistance doesn't protect you from becoming afraid.";
 	}
 	if (p_ptr->nastytrap31)
 	{
-		info[i++] = "You have the following problem: Chaos resistance doesn't protect you from hallucination.";
+		info[i++] = "You have a problem: Chaos resistance doesn't protect you from hallucination.";
 	}
 	if (p_ptr->nastytrap32)
 	{
-		info[i++] = "You have the following problem: Poison resistance doesn't protect you from becoming poisoned.";
+		info[i++] = "You have a problem: Poison resistance doesn't protect you from becoming poisoned.";
 	}
 	if (p_ptr->nastytrap33)
 	{
-		info[i++] = "You have the following problem: Elemental damage destroys your items even if you're resistant.";
+		info[i++] = "You have a problem: Elemental damage destroys your items even if you're resistant.";
 	}
 	if (p_ptr->nastytrap34)
 	{
-		info[i++] = "You have the following problem: You cannot use the four-dimensional pocket.";
+		info[i++] = "You have a problem: You cannot use the four-dimensional pocket.";
 	}
 	if (p_ptr->nastytrap35)
 	{
-		info[i++] = "You have the following problem: Your potions sometimes don't work.";
+		info[i++] = "You have a problem: Your potions sometimes don't work.";
 	}
 	if (p_ptr->nastytrap36)
 	{
-		info[i++] = "You have the following problem: You cannot heal status effects.";
+		info[i++] = "You have a problem: You cannot heal status effects.";
 	}
 	if (p_ptr->nastytrap37)
 	{
-		info[i++] = "You have the following problem: Pits spawn more often on dungeon levels.";
+		info[i++] = "You have a problem: Pits spawn more often on dungeon levels.";
 	}
 	if (p_ptr->nastytrap38)
 	{
-		info[i++] = "You have the following problem: Vaults no longer spawn on dungeon levels.";
+		info[i++] = "You have a problem: Vaults no longer spawn on dungeon levels.";
 	}
 	if (p_ptr->nastytrap39)
 	{
-		info[i++] = "You have the following problem: Your ranged weapon ammo mulches every time.";
+		info[i++] = "You have a problem: Your ranged weapon ammo mulches every time.";
 	}
 	if (p_ptr->nastytrap40)
 	{
-		info[i++] = "You have the following problem: Disenchantment resistance doesn't protect your items from being disenchanted.";
+		info[i++] = "You have a problem: Disenchantment resistance doesn't protect your items from being disenchanted.";
 	}
 	if (p_ptr->nastytrap41)
 	{
-		info[i++] = "You have the following problem: Your to-damage is lower.";
+		info[i++] = "You have a problem: Your to-damage is lower.";
 	}
 	if (p_ptr->nastytrap42)
 	{
-		info[i++] = "You have the following problem: Your to-hit is lower.";
+		info[i++] = "You have a problem: Your to-hit is lower.";
 	}
 	if (p_ptr->nastytrap43)
 	{
-		info[i++] = "You have the following problem: Your AC is lower.";
+		info[i++] = "You have a problem: Your AC is lower.";
 	}
 	if (p_ptr->nastytrap44)
 	{
-		info[i++] = "You have the following problem: Your carry capacity is lower.";
+		info[i++] = "You have a problem: Your carry capacity is lower.";
 	}
 	if (p_ptr->nastytrap45)
 	{
-		info[i++] = "You have the following problem: The level of randomly spawned items is lower.";
+		info[i++] = "You have a problem: The level of randomly spawned items is lower.";
 	}
 	if (p_ptr->nastytrap46)
 	{
-		info[i++] = "You have the following problem: Downstairs take you down several levels.";
+		info[i++] = "You have a problem: Downstairs take you down several levels.";
 	}
 	if (p_ptr->nastytrap47)
 	{
-		info[i++] = "You have the following problem: Items that resist elemental damage can still be damaged despite resistance.";
+		info[i++] = "You have a problem: Items that resist elemental damage can still be damaged despite resistance.";
 	}
 	if (p_ptr->nastytrap48)
 	{
-		info[i++] = "You have the following problem: Detection methods no longer work.";
+		info[i++] = "You have a problem: Detection methods no longer work.";
 	}
 	if (p_ptr->nastytrap49)
 	{
-		info[i++] = "You have the following problem: You periodically experience random bad effects.";
+		info[i++] = "You have a problem: You periodically experience random bad effects.";
 	}
 	if (p_ptr->nastytrap50)
 	{
-		info[i++] = "You have the following problem: Artifacts don't randomly generate and other random loot is of lower quality.";
+		info[i++] = "You have a problem: Artifacts don't randomly generate and other random loot is of lower quality.";
 	}
 	if (p_ptr->nastytrap51)
 	{
-		info[i++] = "You have the following problem: Random traps spawn over time.";
+		info[i++] = "You have a problem: Random traps spawn over time.";
 	}
 	if (p_ptr->nastytrap52)
 	{
-		info[i++] = "You have the following problem: Monster levelscaling allows monsters to spawn at much higher levels.";
+		info[i++] = "You have a problem: Monster levelscaling allows monsters to spawn at much higher levels.";
 	}
 	if (p_ptr->nastytrap53)
 	{
-		info[i++] = "You have the following problem: Sanity-reducing effects reduce your sanity by more than normal.";
+		info[i++] = "You have a problem: Sanity-reducing effects reduce your sanity by more than normal.";
 	}
 	if (p_ptr->nastytrap54)
 	{
-		info[i++] = "You have the following problem: Your stats are lowered.";
+		info[i++] = "You have a problem: Your stats are lowered.";
 	}
 	if (p_ptr->nastytrap55)
 	{
-		info[i++] = "You have the following problem: Your maximum HP is lower.";
+		info[i++] = "You have a problem: Your maximum HP is lower.";
 	}
 	if (p_ptr->nastytrap56)
 	{
-		info[i++] = "You have the following problem: Your maximum mana is lower.";
+		info[i++] = "You have a problem: Your maximum mana is lower.";
 	}
 	if (p_ptr->nastytrap57)
 	{
-		info[i++] = "You have the following problem: Free action is less reliable.";
+		info[i++] = "You have a problem: Free action is less reliable.";
 	}
 	if (p_ptr->nastytrap58)
 	{
-		info[i++] = "You have the following problem: Background damage effects happen more often.";
+		info[i++] = "You have a problem: Background damage effects happen more often.";
 	}
 	if (p_ptr->nastytrap59)
 	{
-		info[i++] = "You have the following problem: Monster melee attacks always deal maximum damage to you.";
+		info[i++] = "You have a problem: Monster melee attacks always deal maximum damage to you.";
 	}
 	if (p_ptr->nastytrap60)
 	{
-		info[i++] = "You have the following problem: You cannot uncurse your items.";
+		info[i++] = "You have a problem: You cannot uncurse your items.";
 	}
 	if (p_ptr->nastytrap61)
 	{
-		info[i++] = "You have the following problem: Star identify doesn't fully identify items anymore.";
+		info[i++] = "You have a problem: Star identify doesn't fully identify items anymore.";
 	}
 	if (p_ptr->nastytrap62)
 	{
-		info[i++] = "You have the following problem: You gain less nutrition than normal.";
+		info[i++] = "You have a problem: You gain less nutrition than normal.";
 	}
 	if (p_ptr->nastytrap63)
 	{
-		info[i++] = "You have the following problem: Item-stealing monsters steal your stuff much more often.";
+		info[i++] = "You have a problem: Item-stealing monsters steal your stuff much more often.";
 	}
 	if (p_ptr->nastytrap64)
 	{
-		info[i++] = "You have the following problem: Your stats decay over time.";
+		info[i++] = "You have a problem: Your stats decay over time.";
 	}
 	if (p_ptr->nastytrap65)
 	{
-		info[i++] = "You have the following problem: Monsters don't drop loot anymore.";
+		info[i++] = "You have a problem: Monsters don't drop loot anymore.";
 	}
 	if (p_ptr->nastytrap66)
 	{
-		info[i++] = "You have the following problem: New dungeon levels don't have items on the ground.";
+		info[i++] = "You have a problem: New dungeon levels don't have items on the ground.";
 	}
 	if (p_ptr->nastytrap67)
 	{
-		info[i++] = "You have the following problem: New dungeon levels have more traps on them.";
+		info[i++] = "You have a problem: New dungeon levels have more traps on them.";
 	}
 	if (p_ptr->nastytrap68)
 	{
-		info[i++] = "You have the following problem: You randomly get hit with status effects.";
+		info[i++] = "You have a problem: You randomly get hit with status effects.";
 	}
 	if (p_ptr->nastytrap69)
 	{
-		info[i++] = "You have the following problem: Monsters can crush loot.";
+		info[i++] = "You have a problem: Monsters can crush loot.";
 	}
 	if (p_ptr->nastytrap70)
 	{
-		info[i++] = "You have the following problem: You cannot see lit areas at a distance.";
+		info[i++] = "You have a problem: You cannot see lit areas at a distance.";
 	}
 	if (p_ptr->nastytrap71)
 	{
-		info[i++] = "You have the following problem: Charge drain attacks instantly drain your devices to zero charges.";
+		info[i++] = "You have a problem: Charge drain attacks instantly drain your devices to zero charges.";
 	}
 	if (p_ptr->nastytrap72)
 	{
-		info[i++] = "You have the following problem: There is no confirmation when walking into peaceful monsters or known traps.";
+		info[i++] = "You have a problem: There is no confirmation when walking into peaceful monsters or known traps.";
 	}
 	if (p_ptr->nastytrap73)
 	{
-		info[i++] = "You have the following problem: You can't see invisible monsters.";
+		info[i++] = "You have a problem: You can't see invisible monsters.";
 	}
 	if (p_ptr->nastytrap74)
 	{
-		info[i++] = "You have the following problem: You cannot dodge enemy attacks.";
+		info[i++] = "You have a problem: You cannot dodge enemy attacks.";
 	}
 	if (p_ptr->nastytrap75)
 	{
-		info[i++] = "You have the following problem: Ambushes happen more frequently.";
+		info[i++] = "You have a problem: Ambushes happen more frequently.";
 	}
 	if (p_ptr->nastytrap76)
 	{
-		info[i++] = "You have the following problem: Shopkeepers rip you off.";
+		info[i++] = "You have a problem: Shopkeepers rip you off.";
 	}
 	if (p_ptr->nastytrap77)
 	{
-		info[i++] = "You have the following problem: You are banned from entering shops.";
+		info[i++] = "You have a problem: You are banned from entering shops.";
 	}
 	if (p_ptr->nastytrap78)
 	{
-		info[i++] = "You have the following problem: Explosive breeders breed more quickly.";
+		info[i++] = "You have a problem: Explosive breeders breed more quickly.";
 	}
 	if (p_ptr->nastytrap79)
 	{
-		info[i++] = "You have the following problem: Equipping an item curses it.";
+		info[i++] = "You have a problem: Equipping an item curses it.";
 	}
 	if (p_ptr->nastytrap80)
 	{
-		info[i++] = "You have the following problem: Your money decreases over time.";
+		info[i++] = "You have a problem: Your money decreases over time.";
 	}
 	if (p_ptr->nastytrap81)
 	{
-		info[i++] = "You have the following problem: Monsters spawn more quickly.";
+		info[i++] = "You have a problem: Monsters spawn more quickly.";
 	}
 	if (p_ptr->nastytrap82)
 	{
-		info[i++] = "You have the following problem: You cannot recharge your devices.";
+		info[i++] = "You have a problem: You cannot recharge your devices.";
 	}
 	if (p_ptr->nastytrap83)
 	{
-		info[i++] = "You have the following problem: You hunger rapidly.";
+		info[i++] = "You have a problem: You hunger rapidly.";
 	}
 	if (p_ptr->nastytrap84)
 	{
-		info[i++] = "You have the following problem: Monsters spawn with egotypes more often.";
+		info[i++] = "You have a problem: Monsters spawn with egotypes more often.";
 	}
 	if (p_ptr->nastytrap85)
 	{
-		info[i++] = "You have the following problem: You suffer from amnesia every now and then.";
+		info[i++] = "You have a problem: You suffer from amnesia every now and then.";
 	}
 	if (p_ptr->nastytrap86)
 	{
-		info[i++] = "You have the following problem: Monsters don't drop corpses.";
+		info[i++] = "You have a problem: Monsters don't drop corpses.";
 	}
 	if (p_ptr->nastytrap87)
 	{
-		info[i++] = "You have the following problem: You cannot be immune or doubly resistant to elements anymore.";
+		info[i++] = "You have a problem: You cannot be immune or doubly resistant to elements anymore.";
 	}
 	if (p_ptr->nastytrap88)
 	{
-		info[i++] = "You have the following problem: You cannot gain experience.";
+		info[i++] = "You have a problem: You cannot gain experience.";
 	}
 	if (p_ptr->nastytrap89)
 	{
-		info[i++] = "You have the following problem: Stat sustains no longer protect your stats from being reduced.";
+		info[i++] = "You have a problem: Stat sustains no longer protect your stats from being reduced.";
 	}
 	if (p_ptr->nastytrap90)
 	{
-		info[i++] = "You have the following problem: You cannot have infravision.";
+		info[i++] = "You have a problem: You cannot have infravision.";
 	}
 	if (p_ptr->nastytrap91)
 	{
-		info[i++] = "You have the following problem: Your amount of blows and shots per round is reduced.";
+		info[i++] = "You have a problem: Your amount of blows and shots per round is reduced.";
 	}
 	if (p_ptr->nastytrap92)
 	{
-		info[i++] = "You have the following problem: Slay effects on your weapons no longer work.";
+		info[i++] = "You have a problem: Slay effects on your weapons no longer work.";
 	}
 	if (p_ptr->nastytrap93)
 	{
-		info[i++] = "You have the following problem: You cannot reflect arrows or missiles.";
+		info[i++] = "You have a problem: You cannot reflect arrows or missiles.";
 	}
 	if (p_ptr->nastytrap94)
 	{
-		info[i++] = "You have the following problem: Shard resistance doesn't protect you from bleeding.";
+		info[i++] = "You have a problem: Shard resistance doesn't protect you from bleeding.";
 	}
 	if (p_ptr->nastytrap95)
 	{
-		info[i++] = "You have the following problem: Nether resistance and hold life don't protect you from experience drain.";
+		info[i++] = "You have a problem: Nether resistance and hold life don't protect you from experience drain.";
 	}
 	if (p_ptr->nastytrap96)
 	{
-		info[i++] = "You have the following problem: Nexus resistance doesn't protect you from secondary nexus effects.";
+		info[i++] = "You have a problem: Nexus resistance doesn't protect you from secondary nexus effects.";
 	}
 	if (p_ptr->nastytrap97)
 	{
-		info[i++] = "You have the following problem: Magical actions randomly fail.";
+		info[i++] = "You have a problem: Magical actions randomly fail.";
 	}
 	if (p_ptr->nastytrap98)
 	{
-		info[i++] = "You have the following problem: You cannot speed up your HP and mana regeneration.";
+		info[i++] = "You have a problem: You cannot speed up your HP and mana regeneration.";
 	}
 	if (p_ptr->nastytrap99)
 	{
-		info[i++] = "You have the following problem: Your experience gets drained over time.";
+		info[i++] = "You have a problem: Your experience gets drained over time.";
 	}
 	if (p_ptr->nastytrap100)
 	{
-		info[i++] = "You have the following problem: You teleport uncontrollably.";
+		info[i++] = "You have a problem: You teleport uncontrollably.";
 	}
 	if (p_ptr->nastytrap101)
 	{
-		info[i++] = "You have the following problem: You have the black breath.";
+		info[i++] = "You have a problem: You have the black breath.";
 	}
 	if (p_ptr->nastytrap102)
 	{
-		info[i++] = "You have the following problem: You cannot drop cursed items.";
+		info[i++] = "You have a problem: You cannot drop cursed items.";
 	}
 	if (p_ptr->nastytrap103)
 	{
-		info[i++] = "You have the following problem: You cannot score critical hits.";
+		info[i++] = "You have a problem: You cannot score critical hits.";
 	}
 	if (p_ptr->nastytrap104)
 	{
-		info[i++] = "You have the following problem: Your equipment feels heavy.";
+		info[i++] = "You have a problem: Your equipment feels heavy.";
 	}
 	if (p_ptr->nastytrap105)
 	{
-		info[i++] = "You have the following problem: You cannot sense monsters via ESP.";
+		info[i++] = "You have a problem: You cannot sense monsters via ESP.";
 	}
 	if (p_ptr->nastytrap106)
 	{
-		info[i++] = "You have the following problem: Your items don't pseudo-identify themselves.";
+		info[i++] = "You have a problem: Your items don't pseudo-identify themselves.";
 	}
 	if (p_ptr->nastytrap107)
 	{
-		info[i++] = "You have the following problem: Traps generate with higher levels.";
+		info[i++] = "You have a problem: Traps generate with higher levels.";
 	}
 	if (p_ptr->nastytrap108)
 	{
-		info[i++] = "You have the following problem: Your home is inaccessible.";
+		info[i++] = "You have a problem: Your home is inaccessible.";
 	}
 	if (p_ptr->nastytrap109)
 	{
-		info[i++] = "You have the following problem: Your spells fail more often.";
+		info[i++] = "You have a problem: Your spells fail more often.";
+	}
+	if (p_ptr->nastytrap110)
+	{
+		info[i++] = "You have a problem: Your directional keys are inverted.";
 	}
 
 	/* Access the current weapon */

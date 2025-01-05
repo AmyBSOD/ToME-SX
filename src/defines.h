@@ -2780,6 +2780,7 @@
 #define TRAP_OF_SUMMON_GRASS              351
 
 #define TRAP_NASTY109                     352
+#define TRAP_NASTY110                     353
 
 /*** General index values ***/
 
