@@ -4811,7 +4811,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 			}
 
 			/* I'm lazy, so I make Aule piety be gained by killing evil things. --Amy */
-			if (inc > 3) {
+			if (inc > 1) {
 				inc_piety(GOD_AULE, inc / 2);
 				PRAY_GOD(GOD_AULE)
 				{
@@ -4821,7 +4821,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 
 			/* and a bit of Varda piety as well */
 
-			if (inc > 9) {
+			if (inc > 4) {
 				inc_piety(GOD_VARDA, inc / 5);
 				PRAY_GOD(GOD_VARDA)
 				{
@@ -4907,7 +4907,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		/* add a way to gain Eru piety --Amy */
 		if ( (r_ptr->flags3 & RF3_DEMON) || (r_ptr->flags3 & RF3_UNDEAD))
 		{
-			int inc = m_ptr->level / 9;
+			int inc = m_ptr->level / 2;
 			PRAY_GOD(GOD_ERU) inc *= 3;
 
 			if (!inc) inc = 1;
@@ -4984,7 +4984,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 
 		if (r_ptr->flags2 & RF2_KILL_ITEM)
 		{
-			int inc = m_ptr->level / 2;
+			int inc = m_ptr->level * 3;
 			if (!inc) inc = 1;
 			PRAY_GOD(GOD_MANDOS) inc *= 2;
 
@@ -4994,7 +4994,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		/* or undead, nonliving */
 		if (r_ptr->flags3 & RF3_UNDEAD)
 		{
-			int inc = m_ptr->level / 5;
+			int inc = m_ptr->level;
 			if (!inc) inc = 1;
 			PRAY_GOD(GOD_MANDOS) inc *= 2;
 
@@ -5003,7 +5003,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 
 		if (r_ptr->flags3 & RF3_NONLIVING)
 		{
-			int inc = m_ptr->level / 5;
+			int inc = m_ptr->level;
 			if (!inc) inc = 1;
 			PRAY_GOD(GOD_MANDOS) inc *= 2;
 
@@ -5013,7 +5013,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		/* or especially the spirits in the Void */
 		if (r_ptr->flags7 & RF7_SPIRIT)
 		{
-			int inc = m_ptr->level * 3;
+			int inc = m_ptr->level * 5;
 			if (!inc) inc = 1;
 			PRAY_GOD(GOD_MANDOS) inc *= 3;
 
