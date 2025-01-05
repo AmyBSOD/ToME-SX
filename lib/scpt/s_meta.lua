@@ -102,6 +102,40 @@ SPELLBINDER = add_spell
 	}
 }
 
+DISARM = add_spell
+{
+	["name"] = 	"Disarm",
+	["school"] = 	{SCHOOL_META},
+	["level"] = 	3,
+	["mana"] = 	2,
+	["mana_max"] = 	4,
+	["fail"] = 	15,
+	["stick"] =
+	{
+			["charge"] =    { 10, 15 },
+			[TV_STAFF] =
+			{
+				["rarity"] = 		4,
+				["base_level"] =	{ 1, 10 },
+				["max_level"] =		{ 10, 50 },
+			},
+	},
+	["spell"] = 	function()
+			local obvious
+			obvious = destroy_doors_touch()
+			if get_level(DISARM, 50) >= 10 then obvious = is_obvious(destroy_traps_touch(), obvious) end
+			return obvious
+	end,
+	["info"] = 	function()
+			return ""
+	end,
+	["desc"] =	{
+			"Destroys doors and traps",
+			"At level 10 it destroys doors and traps, then reveals and unlocks any secret",
+			"doors"
+	}
+}
+
 DISPERSEMAGIC = add_spell
 {
 	["name"] = 	"Disperse Magic",

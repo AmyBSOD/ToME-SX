@@ -14,10 +14,13 @@ the meta school at a level of 1/3 of your prayer level. E.g. if the skill
 spells.
 
 #####sMeta Spells
-There are five spells available for the meta school. These spells are:
-1. [[[[[sRecharge] (school level 5)
+There are six spells available for the meta school. These spells are:
+1. [[[[[sDisarm] (school level 3)
+   Destroys doors and disarms traps in adjacent tiles.
+   At spell level 10 it unlocks doors and disarms traps.
+2. [[[[[sRecharge] (school level 5)
    Taps the ambient mana to recharge an object's power (charges or mana).
-2. [[[[[sDisperse Magic] (school level 15)
+3. [[[[[sDisperse Magic] (school level 15)
    Dispels a lot of magic that can affect you, be it good or bad:
    Spell Level 1: blindness and light.
    Spell Level 5: confusion and hallucination.
@@ -25,18 +28,18 @@ There are five spells available for the meta school. These spells are:
    Spell Level 15: stunning, meditation and cuts.
    Spell Level 20: heroism, super heroism, blessing, shields, fear, parasites
       and mimicry.
-3. [[[[[sSpellbinder] (school level 20)
+4. [[[[[sSpellbinder] (school level 20)
    Stores spells in a trigger.
    When the condition is met all spells fire off at the same time.  This spell
    takes a long time to cast so you are advised to prepare it in a safe area.
    Also it will use the mana for the Spellbinder and the mana for the selected
    spells.
-4. [[[[[sTracker] (dual school level 30)
+5. [[[[[sTracker] (dual school level 30)
    Tracks down the last teleportation that happened on the level and teleports
    you to it.
 #####v   Your Meta and Conveyance skills must have reached a combined average level 
 #####v   of 30 in order to cast this spell.
-5. [[[[[sInertia Control] (school level 37)
+6. [[[[[sInertia Control] (school level 37)
    Changes the energy flow of a spell to be continuously recasted at a given
    interval. The inertia-controlled spell reduces your maximum mana by four
    times its cost.

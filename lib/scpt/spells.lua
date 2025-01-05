@@ -529,7 +529,7 @@ school_book[4] = {
 
 -- Create the book of translocation
 school_book[5] = {
-	BLINK, DISARM, TELEPORT, TELEAWAY, RECALL, PROBABILITY_TRAVEL,
+	BLINK, TELEPORT, TELEAWAY, RECALL, PROBABILITY_TRAVEL,
 }
 
 -- Create the book of the tree
@@ -549,7 +549,7 @@ school_book[8] = {
 
 -- Create the book of meta spells
 school_book[9] = {
-	RECHARGE, DISPERSEMAGIC, SPELLBINDER, TRACKER, INERTIA_CONTROL,
+	DISARM, RECHARGE, DISPERSEMAGIC, SPELLBINDER, TRACKER, INERTIA_CONTROL,
 }
 
 -- Create the book of the mind
