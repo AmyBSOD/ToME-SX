@@ -5255,6 +5255,22 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				dam = 0;
 				do_pois = 0;
 			}
+			else {
+				if (r_ptr->flags9 & (RF9_SUSCEP_POIS))
+				{
+					note = " is hit hard.";
+					dam *= 3;
+					do_pois *= 2;
+					if (seen) r_ptr->r_flags9 |= (RF9_SUSCEP_POIS);
+				}
+				if (r_ptr->flags3 & (RF3_IM_POIS)) /* don't just ignore poison res --Amy */
+				{
+					note = " resists.";
+					dam /= 2;
+					do_pois = 0;
+					if (seen) r_ptr->r_flags3 |= (RF3_IM_POIS);
+				}
+			}
 			break;
 		}
 
@@ -5274,15 +5290,21 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			break;
 		}
 
-		/* Holy Orb -- hurts Evil (replaced with Hellfire) */
+		/* Holy Orb -- hurts Evil (replaced with Hellfire), changed by Amy to hurt good instead of evil */
 	case GF_HELL_FIRE:
 		{
 			if (seen) obvious = TRUE;
-			if (r_ptr->flags3 & (RF3_EVIL))
+			if (r_ptr->flags3 & (RF3_GOOD))
 			{
 				dam *= 2;
 				note = " is hit hard.";
-				if (seen) r_ptr->r_flags3 |= (RF3_EVIL);
+				if (seen) r_ptr->r_flags3 |= (RF3_GOOD);
+			}
+			if (r_ptr->flags3 & (RF3_IM_FIRE))
+			{
+				note = " resists.";
+				dam /= 2;
+				if (seen) r_ptr->r_flags3 |= (RF3_IM_FIRE);
 			}
 			break;
 		}
@@ -5309,6 +5331,13 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				dam *= 3;
 				dam /= (randint(6) + 6);
 			}
+			if (r_ptr->flags3 & (RF3_IM_FIRE))
+			{
+				note = " resists.";
+				dam /= 2;
+				if (seen) r_ptr->r_flags3 |= (RF3_IM_FIRE);
+			}
+
 			break;
 		}
 
@@ -5401,7 +5430,8 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				if (seen) r_ptr->r_flags3 |= (RF3_RES_WATE);
 			}
 
-			if (who == 0)
+			/* only knock back the monster if it didn't resist, please, and only with a 3 in 4 chance (balance) --Amy */
+			if ((who == 0) && magik(75) && !(r_ptr->flags3 & (RF3_RES_WATE)) && dam > 0)
 			{
 				a = 0;
 				b = 0;
@@ -5533,16 +5563,17 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if ((who <= 0) && !(r_ptr->flags4 & (RF4_BR_SOUN)) && !(r_ptr->flags7 & (RF7_RES_SOUN)) )
 			{
-				if (rand_int(100 - p_ptr->lev) < 50)
+				if (rand_int(150 - p_ptr->lev) < 50)
 					do_stun = (2 + randint(10) + r) / (r + 1);
 			}
-			else
+			else if (!(r_ptr->flags4 & (RF4_BR_SOUN)) && !(r_ptr->flags7 & (RF7_RES_SOUN)) )
 				do_stun = (2 + randint(10) + r) / (r + 1);
 			if ((r_ptr->flags4 & (RF4_BR_SOUN)) || (r_ptr->flags7 & (RF7_RES_SOUN)) )
 			{
 				note = " resists.";
 				dam *= 2;
 				dam /= (randint(6) + 6);
+				do_stun = 0; /* I mean, the monster resisted, hello????? --Amy */
 				if (seen) r_ptr->r_flags7 |= (RF7_RES_SOUN);
 			}
 			break;
@@ -5857,7 +5888,9 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (r_ptr->flags3 & (RF3_NO_FEAR))
 				note = " is unaffected.";
 			else
-				set_afraid(p_ptr->afraid + (dam / 2) + randint(dam / 2));
+				m_ptr->monfear += ((dam / 2) + randint(dam / 2));
+				/* wtf what is that, I thought this was for when a monster get hit by fear, not the player --Amy */
+				/*set_afraid(p_ptr->afraid + (dam / 2) + randint(dam / 2));*/
 
 			/* No damage */
 			dam = 0;
