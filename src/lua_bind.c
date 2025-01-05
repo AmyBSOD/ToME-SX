@@ -76,6 +76,9 @@ bool lua_spell_success(magic_power *spell, int stat, char *oups_fct)
 	if (p_ptr->stun > 100) chance += 25;
 	else if (p_ptr->stun) chance += 15;
 
+	/* spell failure nastytrap by Amy */
+	if (p_ptr->nastytrap109) chance += 25;
+
 	/* Always a 5 percent chance of working */
 	if (chance > 95) chance = 95;
 
@@ -325,6 +328,9 @@ s32b lua_spell_chance(s32b chance, int level, int skill_level, int mana, int cur
 
 	/* Hack -- Priest prayer penalty for "edged" weapons  -DGK */
 	if ((forbid_non_blessed()) && (p_ptr->icky_wield)) chance += 25;
+
+	/* spell failure nastytrap: same penalty as Eru edged weapons, but for all weapons --Amy */
+	if (p_ptr->nastytrap109) chance += 25;
 
 	/* Minimum failure rate */
 	if (chance < minfail) chance = minfail;

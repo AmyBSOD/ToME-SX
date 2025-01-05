@@ -156,6 +156,9 @@ static void display_magic_powers(
 			chance += 5 * (spell.mana_cost - p_ptr->csp); 
 		} 
  
+		/* spell failure nastytrap by Amy */
+		if (p_ptr->nastytrap109) chance += 25;
+
 		/* Extract the minimum failure rate */ 
 		minfail = adj_mag_fail[p_ptr->stat_ind[cast_stat]]; 
  
@@ -391,6 +394,9 @@ void do_cmd_mindcraft(void)
 	{
 		chance += 5 * (spell.mana_cost - p_ptr->csp);
 	}
+
+	/* spell failure nastytrap by Amy */
+	if (p_ptr->nastytrap109) chance += 25;
 
 	/* Extract the minimum failure rate */
 	minfail = adj_mag_fail[p_ptr->stat_ind[A_WIS]];
@@ -943,6 +949,9 @@ void do_cmd_mimic(void)
 	{
 		fail += 5 * (spell.mana_cost - p_ptr->csp);
 	}
+
+	/* spell failure nastytrap by Amy */
+	if (p_ptr->nastytrap109) fail += 25;
 
 	/* Extract the minimum failure rate */
 	minfail = adj_mag_fail[p_ptr->stat_ind[A_DEX]];
@@ -5568,6 +5577,9 @@ void do_cmd_necromancer(void)
 		chance += 5 * (spell.mana_cost - p_ptr->csp);
 	}
 
+	/* spell failure nastytrap by Amy */
+	if (p_ptr->nastytrap109) chance += 25;
+
 	/* Extract the minimum failure rate */
 	minfail = adj_mag_fail[p_ptr->stat_ind[A_CON]];
 
@@ -7643,6 +7655,9 @@ void do_cmd_symbiotic(void)
 	{
 		chance += 5 * (spell.mana_cost - p_ptr->csp);
 	}
+
+	/* spell failure nastytrap by Amy */
+	if (p_ptr->nastytrap109) chance += 25;
 
 	/* Extract the minimum failure rate */
 	minfail = adj_mag_fail[p_ptr->stat_ind[A_INT]];

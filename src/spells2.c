@@ -2026,6 +2026,10 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have the following problem: Your home is inaccessible.";
 	}
+	if (p_ptr->nastytrap109)
+	{
+		info[i++] = "You have the following problem: Your spells fail more often.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];

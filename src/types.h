@@ -2004,7 +2004,7 @@ struct player_type
 	bool nastytrap106; /* pseudo id trap - items don't pseudo-identify themselves */
 	bool nastytrap107; /* highsnare trap - randomly generated traps can have higher levels */
 	bool nastytrap108; /* no home trap - you cannot access your home */
-	bool nastytrap109;
+	bool nastytrap109; /* spell failure trap - all spells have 25% autofail */
 	bool nastytrap110;
 	bool nastytrap111;
 	bool nastytrap112;

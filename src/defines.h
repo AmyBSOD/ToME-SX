@@ -2779,6 +2779,8 @@
 #define TRAP_OF_SUMMON_MOUNTAIN           350
 #define TRAP_OF_SUMMON_GRASS              351
 
+#define TRAP_NASTY109                     352
+
 /*** General index values ***/
 
 

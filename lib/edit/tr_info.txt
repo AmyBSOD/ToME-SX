@@ -1702,6 +1702,11 @@ I:4:5:40:6:5:0d0:v
 D:Grassland monsters defend this!
 F:FLOOR | CHEST | DOOR
 
+N:352:Spell Failure Trap
+I:35:2:50:4:15:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 
