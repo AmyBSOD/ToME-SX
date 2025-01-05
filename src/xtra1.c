@@ -2720,14 +2720,22 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pva
 	/* Affect life capacity */
 	if (f2 & (TR2_LIFE)) p_ptr->to_l += pval;
 
-	/* Affect stealth */
-	if (f1 & (TR1_STEALTH)) p_ptr->skill_stl += pval;
+	/* Affect stealth - need +2 per increase --Amy */
+	if (f1 & (TR1_STEALTH)) {
+		int actualpval = pval;
+		if (actualpval > 1) actualpval /= 2;
+		p_ptr->skill_stl += actualpval;
+	}
 
 	/* Affect searching ability */
 	if (f1 & (TR1_SEARCH)) p_ptr->skill_srh += pval;
 
-	/* Affect searching frequency */
-	if (f1 & (TR1_SEARCH)) p_ptr->skill_fos += pval;
+	/* Affect searching frequency - need +2 per increase --Amy */
+	if (f1 & (TR1_SEARCH)) {
+		int actualpval = pval;
+		if (actualpval > 1) actualpval /= 2;
+		p_ptr->skill_fos += actualpval;
+	}
 
 	/* Affect infravision */
 	if (f1 & (TR1_INFRA)) p_ptr->see_infra += pval;

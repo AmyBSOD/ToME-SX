@@ -1627,17 +1627,25 @@ static cptr likert(int x, int y)
 	{
 	case 0:
 	case 1:
-	case 2:
 		{
 			likert_color = TERM_L_RED;
 			return ("Bad");
 		}
+	case 2:
+		{
+			likert_color = TERM_L_RED;
+			return ("Low");
+		}
 	case 3:
 	case 4:
-	case 5:
 		{
 			likert_color = TERM_L_RED;
 			return ("Poor");
+		}
+	case 5:
+		{
+			likert_color = TERM_ORANGE;
+			return ("Iffy");
 		}
 	case 6:
 	case 7:
@@ -1650,21 +1658,29 @@ static cptr likert(int x, int y)
 	case 10:
 	case 11:
 	case 12:
+		{
+			likert_color = TERM_YELLOW;
+			return ("Good");
+		}
 	case 13:
 	case 14:
 		{
 			likert_color = TERM_YELLOW;
-			return ("Good");
+			return ("Quite Good");
 		}
 	case 15:
 	case 16:
 	case 17:
 	case 18:
+		{
+			likert_color = TERM_YELLOW;
+			return ("Very Good");
+		}
 	case 19:
 	case 20:
 		{
 			likert_color = TERM_YELLOW;
-			return ("Very Good");
+			return ("Great");
 		}
 	case 21:
 	case 22:
@@ -1675,7 +1691,7 @@ static cptr likert(int x, int y)
 	case 27:
 	case 28:
 		{
-			likert_color = TERM_L_GREEN;
+			likert_color = TERM_GREEN;
 			return ("Excellent");
 		}
 	case 29:
@@ -1744,7 +1760,7 @@ static void display_player_various(void)
 	/* Basic abilities */
 	xdis = p_ptr->skill_dis;
 	xdev = p_ptr->skill_dev;
-	xsav = p_ptr->skill_sav;
+	xsav = p_ptr->skill_sav - 10; /* since it's always at least 10, see xtra1.c --Amy */
 	xstl = p_ptr->skill_stl;
 	xsrh = p_ptr->skill_srh;
 	xfos = p_ptr->skill_fos;
@@ -1759,7 +1775,7 @@ static void display_player_various(void)
 	c_put_str(likert_color, desc, 17, 15);
 
 	put_str("Saving Throw:", 18, 1);
-	desc = likert(xsav, 6);
+	desc = likert(xsav, 3);
 	c_put_str(likert_color, desc, 18, 15);
 
 	put_str("Stealth     :", 19, 1);
@@ -1768,19 +1784,19 @@ static void display_player_various(void)
 
 
 	put_str("Perception  :", 16, 28);
-	desc = likert(xfos, 6);
+	desc = likert(xfos, 2);
 	c_put_str(likert_color, desc, 16, 42);
 
 	put_str("Searching   :", 17, 28);
-	desc = likert(xsrh, 6);
+	desc = likert(xsrh, 2);
 	c_put_str(likert_color, desc, 17, 42);
 
 	put_str("Disarming   :", 18, 28);
-	desc = likert(xdis, 8);
+	desc = likert(xdis, 3);
 	c_put_str(likert_color, desc, 18, 42);
 
 	put_str("Magic Device:", 19, 28);
-	desc = likert(xdev, 6);
+	desc = likert(xdev, 3);
 	c_put_str(likert_color, desc, 19, 42);
 
 
