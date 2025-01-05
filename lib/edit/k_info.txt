@@ -7657,6 +7657,16 @@ P:0:2d4:0:0:0
 F:SHOW_MODS
 D:This sling ammo is made of superhard mineral and deals very good damage.
 
+N:947:& Circular Saw~
+G:/:G
+I:24:33:0
+W:60:0:360:8000
+A:60/10
+P:0:5d6:0:0:0
+F:MUST2H | WOUNDING | SHOW_MODS
+f:MUST2H | WOUNDING
+D:Very heavy two-handed axe that cuts foes.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
