@@ -237,7 +237,6 @@ add_mimic_shape
 	["level"] =     40,
 	["rarity"] =    60,
 	["duration"] =  {10, 30},
-	["limit"] =     TRUE,
 	["calc"] =      function ()
 			player.pspeed = player.pspeed - 5 - (player.mimic_level / 10)
 
