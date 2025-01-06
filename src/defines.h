@@ -1469,7 +1469,7 @@
 #define TV_SYMBIOTIC_BOOK 112
 #define TV_MUSIC_BOOK   113
 #define TV_DRUID_BOOK   114
-#define TV_DAEMON_BOOK  115
+#define TV_DAEMON_BOOK  115     /* 55 = demonblade, 56 = demonshield, 57 = demonhorn */
 
 
 /* The "sval" codes for TV_JUNK */

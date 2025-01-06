@@ -79127,7 +79127,7 @@ F:UNIQUE | MALE | EVIL | ORC | FORCE_MAXHP | ESCORT |
 F:ONLY_ITEM | DROP_1D2 | DROP_GOOD |  
 F:OPEN_DOOR | BASH_DOOR | CAN_SPEAK | DROP_SKELETON | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | HAS_LITE
-D:A captain of a regiment of weaker orcs, Lagduf keeps his troop in order 
+D:A captain of a regiment of weaker orcs, Thilo keeps his troop in order 
 D:with displays of excessive violence. 
 
 N:4499:Markus
