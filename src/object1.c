@@ -1571,6 +1571,11 @@ void object_desc(char *buf, object_type *o_ptr, int pref, int mode)
 	case TV_SHOT:
 	case TV_BOLT:
 	case TV_ARROW:
+	case TV_AMMO_PISTOL:
+	case TV_AMMO_RIFLE:
+	case TV_AMMO_SHOTGUN:
+	case TV_AMMO_SMG:
+	case TV_AMMO_ASSAULT:
 	case TV_BOOMERANG:
 	case TV_BOW:
 	case TV_HAFTED:
@@ -2335,6 +2340,11 @@ void object_desc(char *buf, object_type *o_ptr, int pref, int mode)
 	case TV_SHOT:
 	case TV_BOLT:
 	case TV_ARROW:
+	case TV_AMMO_PISTOL:
+	case TV_AMMO_RIFLE:
+	case TV_AMMO_SHOTGUN:
+	case TV_AMMO_SMG:
+	case TV_AMMO_ASSAULT:
 		/* Exploding arrow? */
 		if (o_ptr->pval2 != 0)
 			t = object_desc_str(t, " (exploding)");
@@ -4419,7 +4429,107 @@ s16b wield_slot_ideal(object_type *o_ptr, bool ideal)
 			}
 			else if ((p_ptr->inventory[INVEN_BOW].k_idx) && (p_ptr->inventory[INVEN_BOW].tval == TV_BOW))
 			{
-				if (p_ptr->inventory[INVEN_BOW].sval >= 20)
+				if ((p_ptr->inventory[INVEN_BOW].sval >= 20) && (p_ptr->inventory[INVEN_BOW].sval < 30))
+					return get_slot(INVEN_AMMO);
+			}
+			return -1;
+		}
+
+	case TV_AMMO_PISTOL:
+		{
+			if (ideal)
+			{
+				return INVEN_AMMO;
+			}
+			else if (p_ptr->inventory[INVEN_AMMO].k_idx &&
+			         object_similar(o_ptr, &p_ptr->inventory[INVEN_AMMO]) &&
+			         p_ptr->inventory[INVEN_AMMO].number + o_ptr->number < MAX_STACK_SIZE)
+			{
+				return get_slot(INVEN_AMMO);
+			}
+			else if ((p_ptr->inventory[INVEN_BOW].k_idx) && (p_ptr->inventory[INVEN_BOW].tval == TV_BOW))
+			{
+				if ((p_ptr->inventory[INVEN_BOW].sval >= 30) && (p_ptr->inventory[INVEN_BOW].sval < 40))
+					return get_slot(INVEN_AMMO);
+			}
+			return -1;
+		}
+
+	case TV_AMMO_RIFLE:
+		{
+			if (ideal)
+			{
+				return INVEN_AMMO;
+			}
+			else if (p_ptr->inventory[INVEN_AMMO].k_idx &&
+			         object_similar(o_ptr, &p_ptr->inventory[INVEN_AMMO]) &&
+			         p_ptr->inventory[INVEN_AMMO].number + o_ptr->number < MAX_STACK_SIZE)
+			{
+				return get_slot(INVEN_AMMO);
+			}
+			else if ((p_ptr->inventory[INVEN_BOW].k_idx) && (p_ptr->inventory[INVEN_BOW].tval == TV_BOW))
+			{
+				if ((p_ptr->inventory[INVEN_BOW].sval >= 40) && (p_ptr->inventory[INVEN_BOW].sval < 50))
+					return get_slot(INVEN_AMMO);
+			}
+			return -1;
+		}
+
+	case TV_AMMO_SHOTGUN:
+		{
+			if (ideal)
+			{
+				return INVEN_AMMO;
+			}
+			else if (p_ptr->inventory[INVEN_AMMO].k_idx &&
+			         object_similar(o_ptr, &p_ptr->inventory[INVEN_AMMO]) &&
+			         p_ptr->inventory[INVEN_AMMO].number + o_ptr->number < MAX_STACK_SIZE)
+			{
+				return get_slot(INVEN_AMMO);
+			}
+			else if ((p_ptr->inventory[INVEN_BOW].k_idx) && (p_ptr->inventory[INVEN_BOW].tval == TV_BOW))
+			{
+				if ((p_ptr->inventory[INVEN_BOW].sval >= 50) && (p_ptr->inventory[INVEN_BOW].sval < 60))
+					return get_slot(INVEN_AMMO);
+			}
+			return -1;
+		}
+
+	case TV_AMMO_SMG:
+		{
+			if (ideal)
+			{
+				return INVEN_AMMO;
+			}
+			else if (p_ptr->inventory[INVEN_AMMO].k_idx &&
+			         object_similar(o_ptr, &p_ptr->inventory[INVEN_AMMO]) &&
+			         p_ptr->inventory[INVEN_AMMO].number + o_ptr->number < MAX_STACK_SIZE)
+			{
+				return get_slot(INVEN_AMMO);
+			}
+			else if ((p_ptr->inventory[INVEN_BOW].k_idx) && (p_ptr->inventory[INVEN_BOW].tval == TV_BOW))
+			{
+				if ((p_ptr->inventory[INVEN_BOW].sval >= 60) && (p_ptr->inventory[INVEN_BOW].sval < 70))
+					return get_slot(INVEN_AMMO);
+			}
+			return -1;
+		}
+
+	case TV_AMMO_ASSAULT:
+		{
+			if (ideal)
+			{
+				return INVEN_AMMO;
+			}
+			else if (p_ptr->inventory[INVEN_AMMO].k_idx &&
+			         object_similar(o_ptr, &p_ptr->inventory[INVEN_AMMO]) &&
+			         p_ptr->inventory[INVEN_AMMO].number + o_ptr->number < MAX_STACK_SIZE)
+			{
+				return get_slot(INVEN_AMMO);
+			}
+			else if ((p_ptr->inventory[INVEN_BOW].k_idx) && (p_ptr->inventory[INVEN_BOW].tval == TV_BOW))
+			{
+				if ((p_ptr->inventory[INVEN_BOW].sval >= 70) && (p_ptr->inventory[INVEN_BOW].sval < 80))
 					return get_slot(INVEN_AMMO);
 			}
 			return -1;
@@ -4624,7 +4734,106 @@ startover:
 			}
 			else if ((p_ptr->inventory[INVEN_BOW].k_idx) && (p_ptr->inventory[INVEN_BOW].tval == TV_BOW))
 			{
-				if (p_ptr->inventory[INVEN_BOW].sval >= 20)
+				if ((p_ptr->inventory[INVEN_BOW].sval >= 20) && (p_ptr->inventory[INVEN_BOW].sval < 30))
+					return get_slot(INVEN_AMMO);
+			}
+			return -1;
+		}
+	case TV_AMMO_PISTOL:
+		{
+			if (ideal)
+			{
+				return INVEN_AMMO;
+			}
+			else if (p_ptr->inventory[INVEN_AMMO].k_idx &&
+			         object_similar(o_ptr, &p_ptr->inventory[INVEN_AMMO]) &&
+			         p_ptr->inventory[INVEN_AMMO].number + o_ptr->number < MAX_STACK_SIZE)
+			{
+				return get_slot(INVEN_AMMO);
+			}
+			else if ((p_ptr->inventory[INVEN_BOW].k_idx) && (p_ptr->inventory[INVEN_BOW].tval == TV_BOW))
+			{
+				if ((p_ptr->inventory[INVEN_BOW].sval >= 30) && (p_ptr->inventory[INVEN_BOW].sval < 40))
+					return get_slot(INVEN_AMMO);
+			}
+			return -1;
+		}
+
+	case TV_AMMO_RIFLE:
+		{
+			if (ideal)
+			{
+				return INVEN_AMMO;
+			}
+			else if (p_ptr->inventory[INVEN_AMMO].k_idx &&
+			         object_similar(o_ptr, &p_ptr->inventory[INVEN_AMMO]) &&
+			         p_ptr->inventory[INVEN_AMMO].number + o_ptr->number < MAX_STACK_SIZE)
+			{
+				return get_slot(INVEN_AMMO);
+			}
+			else if ((p_ptr->inventory[INVEN_BOW].k_idx) && (p_ptr->inventory[INVEN_BOW].tval == TV_BOW))
+			{
+				if ((p_ptr->inventory[INVEN_BOW].sval >= 40) && (p_ptr->inventory[INVEN_BOW].sval < 50))
+					return get_slot(INVEN_AMMO);
+			}
+			return -1;
+		}
+
+	case TV_AMMO_SHOTGUN:
+		{
+			if (ideal)
+			{
+				return INVEN_AMMO;
+			}
+			else if (p_ptr->inventory[INVEN_AMMO].k_idx &&
+			         object_similar(o_ptr, &p_ptr->inventory[INVEN_AMMO]) &&
+			         p_ptr->inventory[INVEN_AMMO].number + o_ptr->number < MAX_STACK_SIZE)
+			{
+				return get_slot(INVEN_AMMO);
+			}
+			else if ((p_ptr->inventory[INVEN_BOW].k_idx) && (p_ptr->inventory[INVEN_BOW].tval == TV_BOW))
+			{
+				if ((p_ptr->inventory[INVEN_BOW].sval >= 50) && (p_ptr->inventory[INVEN_BOW].sval < 60))
+					return get_slot(INVEN_AMMO);
+			}
+			return -1;
+		}
+
+	case TV_AMMO_SMG:
+		{
+			if (ideal)
+			{
+				return INVEN_AMMO;
+			}
+			else if (p_ptr->inventory[INVEN_AMMO].k_idx &&
+			         object_similar(o_ptr, &p_ptr->inventory[INVEN_AMMO]) &&
+			         p_ptr->inventory[INVEN_AMMO].number + o_ptr->number < MAX_STACK_SIZE)
+			{
+				return get_slot(INVEN_AMMO);
+			}
+			else if ((p_ptr->inventory[INVEN_BOW].k_idx) && (p_ptr->inventory[INVEN_BOW].tval == TV_BOW))
+			{
+				if ((p_ptr->inventory[INVEN_BOW].sval >= 60) && (p_ptr->inventory[INVEN_BOW].sval < 70))
+					return get_slot(INVEN_AMMO);
+			}
+			return -1;
+		}
+
+	case TV_AMMO_ASSAULT:
+		{
+			if (ideal)
+			{
+				return INVEN_AMMO;
+			}
+			else if (p_ptr->inventory[INVEN_AMMO].k_idx &&
+			         object_similar(o_ptr, &p_ptr->inventory[INVEN_AMMO]) &&
+			         p_ptr->inventory[INVEN_AMMO].number + o_ptr->number < MAX_STACK_SIZE)
+			{
+				return get_slot(INVEN_AMMO);
+			}
+			else if ((p_ptr->inventory[INVEN_BOW].k_idx) && (p_ptr->inventory[INVEN_BOW].tval == TV_BOW))
+			{
+				if ((p_ptr->inventory[INVEN_BOW].sval >= 70) && (p_ptr->inventory[INVEN_BOW].sval < 80))
 					return get_slot(INVEN_AMMO);
 			}
 			return -1;
@@ -4988,6 +5197,7 @@ void show_inven_aux(bool mirror, bool everything)
 
 		/* Save the object color, and description */
 		out_color[k] = tval_to_attr[o_ptr->tval % 128];
+		if (o_ptr->tval >= TV_AMMO_PISTOL && o_ptr->tval <= TV_AMMO_ASSAULT) out_color[k] = TERM_YELLOW;
 		(void)strcpy(out_desc[k], o_name);
 
 		/* Find the predicted "line length" */
@@ -5217,6 +5427,7 @@ void show_equip_aux(bool mirror, bool everything)
 
 			/* Save the color */
 			out_color[k] = tval_to_attr[o_ptr->tval % 128];
+			if (o_ptr->tval >= TV_AMMO_PISTOL && o_ptr->tval <= TV_AMMO_ASSAULT) out_color[k] = TERM_YELLOW;
 			(void)strcpy(out_desc[k], o_name);
 		}
 
@@ -5633,6 +5844,7 @@ void show_floor(int y, int x)
 
 		/* Acquire inventory color */
 		out_color[k] = tval_to_attr[o_ptr->tval & 0x7F];
+		if (o_ptr->tval >= TV_AMMO_PISTOL && o_ptr->tval <= TV_AMMO_ASSAULT) out_color[k] = TERM_YELLOW;
 
 		/* Save the object description */
 		strcpy(out_desc[k], o_name);

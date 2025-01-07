@@ -45,6 +45,11 @@ I:100:& Iron Spike~
 I:70:& Iron Shot~
 I:70:& Bolt~
 I:70:& Arrow~
+I:10:& 9mm Bullet~
+I:5:& Rifle Bullet~
+I:2:& Shotgun Shell~
+I:2:& SMG Bullet~
+I:1:& Assault Rifle Bullet~
 I:98:& Cloak~
 I:46:& Fur Cloak~
 T:5:20:256
@@ -123,6 +128,13 @@ I:100:& Arrow~
 I:100:& Bolt~
 I:100:& Whip~
 I:100:& Small Wooden Boomerang~
+I:10:& 9mm Bullet~
+I:5:& Rifle Bullet~
+I:2:& Shotgun Shell~
+I:2:& SMG Bullet~
+I:1:& Assault Rifle Bullet~
+I:10:& Beretta~
+I:2:& Remington 700~
 T:5:21:256
 T:5:22:256
 T:5:23:256
@@ -663,6 +675,11 @@ T:5:20:256
 T:5:20:256
 T:5:80:256
 T:5:80:256
+I:10:& 9mm Bullet~
+I:5:& Rifle Bullet~
+I:2:& Shotgun Shell~
+I:2:& SMG Bullet~
+I:1:& Assault Rifle Bullet~
 A:0:0:1:2:3:4
 O:0:5:6:7
 G:1:U
@@ -718,9 +735,15 @@ T:100:19:12
 T:20:19:13
 T:100:19:23
 T:20:19:24
+T:10:19:256
 T:50:16:256
 T:50:17:256
 T:50:18:256
+T:10:25:256
+T:5:26:256
+T:2:27:256
+T:2:28:256
+T:1:29:256
 A:0:0:1:2:3:4
 O:12:13:14:15
 G:3:g
@@ -857,6 +880,11 @@ T:20:16:256
 T:20:17:256
 T:20:18:256
 T:50:19:256
+T:10:25:256
+T:5:26:256
+T:2:27:256
+T:2:28:256
+T:1:29:256
 A:0:0:1:2:3:4
 O:12:13:14:15
 G:3:v

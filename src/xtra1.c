@@ -2501,7 +2501,7 @@ int get_archery_skill()
 
 		if (p_ptr->inventory[INVEN_WIELD + i].tval == TV_BOW)
 		{
-			switch (p_ptr->inventory[INVEN_WIELD + i].sval / 10)
+			switch (p_ptr->inventory[INVEN_WIELD + i].sval / 10) /* note by Amy: doing it this way is incredibly stupid... */
 			{
 			case 0:
 				if ((!skill) || (skill == SKILL_SLING)) skill = SKILL_SLING;
@@ -2513,6 +2513,14 @@ int get_archery_skill()
 				break;
 			case 2:
 				if ((!skill) || (skill == SKILL_XBOW)) skill = SKILL_XBOW;
+				else skill = -1;
+				break;
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+			case 7:
+				if ((!skill) || (skill == SKILL_FIREARMS)) skill = SKILL_FIREARMS;
 				else skill = -1;
 				break;
 			}
@@ -3872,6 +3880,42 @@ void calc_bonuses(bool silent)
 			p_ptr->tval_ammo = TV_BOLT;
 			break;
 		}
+
+	case SV_PISTOL1:
+	case SV_PISTOL2:
+	case SV_PISTOL3:
+		{
+			p_ptr->tval_ammo = TV_AMMO_PISTOL;
+			break;
+		}
+	case SV_RIFLE1:
+	case SV_RIFLE2:
+	case SV_RIFLE3:
+		{
+			p_ptr->tval_ammo = TV_AMMO_RIFLE;
+			break;
+		}
+	case SV_SHOTGUN1:
+	case SV_SHOTGUN2:
+	case SV_SHOTGUN3:
+		{
+			p_ptr->tval_ammo = TV_AMMO_SHOTGUN;
+			break;
+		}
+	case SV_SMG1:
+	case SV_SMG2:
+	case SV_SMG3:
+		{
+			p_ptr->tval_ammo = TV_AMMO_SMG;
+			break;
+		}
+	case SV_ASSAULT1:
+	case SV_ASSAULT2:
+	case SV_ASSAULT3:
+		{
+			p_ptr->tval_ammo = TV_AMMO_ASSAULT;
+			break;
+		}
 	}
 
 	/* Compute "extra shots" if needed */
@@ -3894,6 +3938,9 @@ void calc_bonuses(bool silent)
 				break;
 			case SKILL_XBOW:
 				if (p_ptr->tval_ammo == TV_BOLT) p_ptr->xtra_might += get_skill(archery) / 30;
+				break;
+			case SKILL_FIREARMS:
+				if (p_ptr->tval_ammo == TV_AMMO_PISTOL || p_ptr->tval_ammo == TV_AMMO_RIFLE || p_ptr->tval_ammo == TV_AMMO_SHOTGUN || p_ptr->tval_ammo == TV_AMMO_SMG || p_ptr->tval_ammo == TV_AMMO_ASSAULT) p_ptr->xtra_might += get_skill(archery) / 30;
 				break;
 			case SKILL_BOOMERANG:
 				p_ptr->xtra_might += get_skill(archery) / 10;
@@ -3932,6 +3979,12 @@ void calc_bonuses(bool silent)
 
 	if (PRACE_FLAG(PR1_XTRA_MIGHT_XBOW) && p_ptr->tval_ammo == TV_BOLT)
 		p_ptr->xtra_might += 1;
+
+	if (p_ptr->tval_ammo == TV_AMMO_SMG)
+		p_ptr->num_fire += 1;
+
+	if (p_ptr->tval_ammo == TV_AMMO_ASSAULT)
+		p_ptr->num_fire += 2;
 
 	/* Examine the "current tool" */
 	o_ptr = &p_ptr->inventory[INVEN_TOOL];

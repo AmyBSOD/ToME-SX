@@ -7667,6 +7667,277 @@ F:MUST2H | WOUNDING | SHOW_MODS
 f:MUST2H | WOUNDING
 D:Very heavy two-handed axe that cuts foes.
 
+N:948:& 9mm Bullet~
+G:{:g
+I:25:1:0
+W:0:0:0:25
+A:0/10
+P:0:3d5:0:0:0
+F:SHOW_MODS
+D:Ammunition for pistols.
+
+N:949:& 9mm Parabellum~
+G:{:g
+I:25:2:0
+W:30:0:0:70
+A:30/40
+P:0:4d5:0:0:0
+F:SHOW_MODS
+D:This pistol ammunition is used in wars, as indicated by the name.
+
+N:950:& 10mm Bullet~
+G:{:g
+I:25:3:0
+W:70:0:0:200
+A:70/150
+P:0:5d5:0:0:0
+F:SHOW_MODS
+D:Very powerful pistol ammo.
+
+N:951:& Rifle Bullet~
+G:{:r
+I:26:1:0
+W:5:0:0:40
+A:5/12
+P:0:3d6:0:0:0
+F:SHOW_MODS
+D:Ammunition for rifles.
+
+N:952:& .32 Bullet~
+G:{:r
+I:26:2:0
+W:40:0:0:120
+A:40/60
+P:0:3d9:0:0:0
+F:SHOW_MODS
+D:Powerful rifle bullets.
+
+N:953:& 7.62 Bullet~
+G:{:r
+I:26:3:0
+W:80:0:0:300
+A:80/200
+P:0:4d9:0:0:0
+F:SHOW_MODS
+D:Very strong rifle bullets for piercing enemy armor.
+
+N:954:& Shotgun Shell~
+G:{:v
+I:27:1:0
+W:15:0:0:80
+A:15/20
+P:0:6d6:0:0:0
+F:SHOW_MODS
+D:Ammunition for shotguns.
+
+N:955:& Lead Buckshot~
+G:{:v
+I:27:2:0
+W:50:0:0:180
+A:50/90
+P:0:8d8:0:0:0
+F:SHOW_MODS
+D:Superpowered shotgun shells for shredding the enemy.
+
+N:956:& 12-Caliber Shell~
+G:{:v
+I:27:3:0
+W:100:0:0:600
+A:100/500
+P:0:10d10:0:0:0
+F:SHOW_MODS
+D:Extremely powerful shotgun shells that tear the enemy apart.
+
+N:957:& SMG Bullet~
+G:{:B
+I:28:1:0
+W:2:0:0:35
+A:2/15
+P:0:2d8:0:0:0
+F:SHOW_MODS
+D:Ammunition for submachine guns.
+
+N:958:& .45 ACP Bullet~
+G:{:B
+I:28:2:0
+W:35:0:0:85
+A:35/60
+P:0:2d10:0:0:0
+F:SHOW_MODS
+D:Powerful submachine gun ammo.
+
+N:959:& 5.7x28mm Bullet~
+G:{:B
+I:28:3:0
+W:80:0:0:250
+A:80/200
+P:0:2d13:0:0:0
+F:SHOW_MODS
+D:Very strong submachine gun bullets for tearing through enemies.
+
+N:960:& Assault Rifle Bullet~
+G:{:o
+I:29:1:0
+W:10:0:0:45
+A:10/20
+P:0:3d6:0:0:0
+F:SHOW_MODS
+D:Ammunition for assault rifles.
+
+N:961:& 5.56 Bullet~
+G:{:o
+I:29:2:0
+W:45:0:0:150
+A:45/90
+P:0:3d9:0:0:0
+F:SHOW_MODS
+D:Used with assault rifles to quickly damage the enemy.
+
+N:962:& AP Bullet~
+G:{:B
+I:29:3:0
+W:100:0:0:500
+A:100/600
+P:0:4d10:0:0:0
+F:SHOW_MODS
+D:Armor-piercing ammunition that simply rips enemies apart.
+D:To fire it, you need to equip an assault rifle.
+
+N:963:& Beretta~
+G:}:g
+I:19:33:0
+W:1:0:80:500
+A:1/10
+F:SHOW_MODS
+D:A handgun, good for firing bullets. Its range is 10 squares.
+
+N:964:& Glock~
+G:}:g
+I:19:34:0
+W:15:0:150:2000
+A:15/40
+F:SHOW_MODS
+D:A good handgun that fires powerful bullets. Be aware that the range
+D:is limited to 10 squares.
+
+N:965:& Desert Eagle~
+G:}:g
+I:19:35:0
+W:50:0:400:15000
+A:50/120
+F:SHOW_MODS
+D:Super powerful handgun, capable of shooting holes into the enemy.
+D:Still, be aware that the maximum range is 10 squares.
+
+N:966:& Remington 700~
+G:}:r
+I:19:44:0
+W:5:0:200:3000
+A:5/15
+F:SHOW_MODS
+D:This old, rusty rifle has limited range (12 squares), but it fires
+D:bullets that deal reasonably good damage.
+
+N:967:& M1 Garand~
+G:}:r
+I:19:45:0
+W:30:0:500:10000
+A:30/60
+F:SHOW_MODS
+D:With this bulky rifle, you can fire bullets over a square of up to
+D:15 squares and deal substantial damage to the enemy.
+
+N:968:& Mosin-Nagant~
+G:}:r
+I:19:46:0
+W:90:0:1200:50000
+A:90/400
+F:SHOW_MODS
+D:Extremely heavy rifle, but if you want to snipe your enemy from a
+D:mile and a half away, this gun is your friend.
+
+N:969:& Leone M3~
+G:}:v
+I:19:55:0
+W:10:0:300:4000
+A:10/20
+F:SHOW_MODS
+D:The short range of 3 squares makes it a weapon of limited usefulness,
+D:but its buckshot deals good damage to the enemy.
+
+N:970:& Leone XM 1014~
+G:}:v
+I:19:56:0
+W:50:0:600:12000
+A:50/80
+F:SHOW_MODS
+D:Powerful shotgun for killing enemies from short range (3 squares max).
+
+N:971:& Citykiller~
+G:}:v
+I:19:57:0
+W:80:0:1000:26000
+A:80/250
+F:SHOW_MODS
+D:This shotgun can wreck the enemy, assuming you get close enough.
+D:Anything farther away than 3 squares won't get damaged.
+
+N:972:& Ingram MAC-10~
+G:}:B
+I:19:62:0
+W:2:0:120:1800
+A:2/12
+F:SHOW_MODS
+D:Submachine gun for filling the enemy with bullets. The range
+D:is limited to 8 squares.
+
+N:973:& MP5 Navy~
+G:}:B
+I:19:63:0
+W:25:0:250:5000
+A:25/55
+F:SHOW_MODS
+D:This submachine gun is pretty powerful, and effective at a
+D:distance of up to 8 squares.
+
+N:974:& ES C90~
+G:}:B
+I:19:64:0
+W:60:0:450:5000
+A:60/240
+F:SHOW_MODS
+D:Those who get their hands on this submachine gun can pump the
+D:enemy full of lead, assuming the target is at most 8 squares away.
+
+N:975:& IMI Galil~
+G:}:o
+I:19:73:0
+W:15:0:300:3500
+A:15/25
+F:SHOW_MODS
+D:The standard issue assault rifle that pumps out bullets over a
+D:range of 12 squares.
+
+N:976:& AK-47~
+G:}:o
+I:19:74:0
+W:40:0:600:15000
+A:40/150
+F:SHOW_MODS
+D:A rather heavy, but powerful assault rifle. The maximum effective
+D:range is 12 squares.
+
+N:977:& Krieg 552~
+G:}:o
+I:19:75:0
+W:85:0:1000:45000
+A:85/400
+F:SHOW_MODS
+D:The name says it all: if you want to win the war, equip this
+D:assault rifle and make sure you always have enough bullets, then
+D:aim at your enemy and pull the trigger. Just make sure your
+D:distance to the target isn't higher than 12 squares!
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

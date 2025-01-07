@@ -3388,6 +3388,11 @@ static bool item_tester_hook_weapon(object_type *o_ptr)
 	case TV_BOW:
 	case TV_BOLT:
 	case TV_ARROW:
+	case TV_AMMO_PISTOL:
+	case TV_AMMO_RIFLE:
+	case TV_AMMO_SHOTGUN:
+	case TV_AMMO_SMG:
+	case TV_AMMO_ASSAULT:
 	case TV_SHOT:
 		{
 			return (TRUE);
@@ -3499,6 +3504,11 @@ bool enchant(object_type *o_ptr, int n, int eflag)
 	/* Missiles are easy to enchant */
 	if ((o_ptr->tval == TV_BOLT) ||
 	                (o_ptr->tval == TV_ARROW) ||
+	                (o_ptr->tval == TV_AMMO_PISTOL) ||
+	                (o_ptr->tval == TV_AMMO_RIFLE) ||
+	                (o_ptr->tval == TV_AMMO_SHOTGUN) ||
+	                (o_ptr->tval == TV_AMMO_SMG) ||
+	                (o_ptr->tval == TV_AMMO_ASSAULT) ||
 	                (o_ptr->tval == TV_SHOT))
 	{
 		prob = prob / 20;

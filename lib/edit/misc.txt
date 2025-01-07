@@ -28,7 +28,7 @@ M:R:4528
 M:r:50
 
 # Maximum number of items in k_info.txt
-M:K:948
+M:K:978
 
 # Maximum number of vaults in v_info.txt
 M:V:148
@@ -46,7 +46,7 @@ M:A:560
 M:s:10
 
 # Maximum number of ego-items in e_info.txt
-M:E:408
+M:E:410
 
 # Maximum number of dungeon types in d_info.txt
 M:D:70
@@ -79,7 +79,7 @@ M:P:R:37
 M:P:S:14
 
 # Maximum number of class types in p_info.txt
-M:P:C:110
+M:P:C:111
 
 # Maximum number of meta class types in p_info.txt
 M:P:M:1
@@ -88,7 +88,7 @@ M:P:M:1
 M:P:H:266
 
 # Maximum number of skills in s_info.txt
-M:k:75
+M:k:76
 
 # Maximum number of traits in ab_info.txt
 M:b:50

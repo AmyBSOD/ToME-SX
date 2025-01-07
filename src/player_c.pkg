@@ -924,6 +924,14 @@ skill_type s_info[MAX_SKILLS];
  */
 #define SKILL_ANTINASTY		74
 
+/** @def SKILL_FIREARMS
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_FIREARMS		75
+
 /** @def SKILL_MAX
  * @note Maximun skill value
  */

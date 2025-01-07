@@ -1229,6 +1229,11 @@ s32b object_value_real(object_type *o_ptr)
 			case TV_SHOT:
 			case TV_ARROW:
 			case TV_BOLT:
+			case TV_AMMO_PISTOL:
+			case TV_AMMO_RIFLE:
+			case TV_AMMO_SHOTGUN:
+			case TV_AMMO_SMG:
+			case TV_AMMO_ASSAULT:
 				flagcostiem /= 50;
 				break;
 			default:
@@ -1276,6 +1281,11 @@ s32b object_value_real(object_type *o_ptr)
 			case TV_SHOT:
 			case TV_ARROW:
 			case TV_BOLT:
+			case TV_AMMO_PISTOL:
+			case TV_AMMO_RIFLE:
+			case TV_AMMO_SHOTGUN:
+			case TV_AMMO_SMG:
+			case TV_AMMO_ASSAULT:
 				flagcostiem /= 5;
 				break;
 			default:
@@ -1513,6 +1523,11 @@ s32b object_value_real(object_type *o_ptr)
 	case TV_SHOT:
 	case TV_ARROW:
 	case TV_BOLT:
+	case TV_AMMO_PISTOL:
+	case TV_AMMO_RIFLE:
+	case TV_AMMO_SHOTGUN:
+	case TV_AMMO_SMG:
+	case TV_AMMO_ASSAULT:
 		{
 			/* Hack -- negative hit/damage bonuses */
 			if (o_ptr->to_h + o_ptr->to_d < 0 && !value) return (0L);
@@ -1831,6 +1846,11 @@ s32b object_value_xtra(object_type *o_ptr)
 	case TV_SHOT:
 	case TV_ARROW:
 	case TV_BOLT:
+	case TV_AMMO_PISTOL:
+	case TV_AMMO_RIFLE:
+	case TV_AMMO_SHOTGUN:
+	case TV_AMMO_SMG:
+	case TV_AMMO_ASSAULT:
 		{
 			int extratoa = o_ptr->to_a;
 			if (extratoa < 0) extratoa = 0;
@@ -2193,6 +2213,11 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 	case TV_BOLT:
 	case TV_ARROW:
 	case TV_SHOT:
+	case TV_AMMO_PISTOL:
+	case TV_AMMO_RIFLE:
+	case TV_AMMO_SHOTGUN:
+	case TV_AMMO_SMG:
+	case TV_AMMO_ASSAULT:
 		{
 			/* Require identical knowledge of both items */
 			if (object_known_p(o_ptr) != object_known_p(j_ptr)) return (0);
@@ -3199,6 +3224,11 @@ static void a_m_aux_1(object_type *o_ptr, int level, int power)
 	case TV_BOLT:
 	case TV_ARROW:
 	case TV_SHOT:
+	case TV_AMMO_PISTOL:
+	case TV_AMMO_RIFLE:
+	case TV_AMMO_SHOTGUN:
+	case TV_AMMO_SMG:
+	case TV_AMMO_ASSAULT:
 		{
 			if ((power == 1) && !o_ptr->name2)
 			{
@@ -4850,6 +4880,11 @@ void apply_magic(object_type *o_ptr, int lev, bool okay, bool good, bool great)
 	case TV_SHOT:
 	case TV_ARROW:
 	case TV_BOLT:
+	case TV_AMMO_PISTOL:
+	case TV_AMMO_RIFLE:
+	case TV_AMMO_SHOTGUN:
+	case TV_AMMO_SMG:
+	case TV_AMMO_ASSAULT:
 	case TV_TRAPKIT:
 		{
 			if (power) a_m_aux_1(o_ptr, lev, power);
@@ -5147,6 +5182,13 @@ bool kind_is_theme(int k_idx)
 	case TV_BOLT:
 		prob = match_theme.combat;
 		break;
+	case TV_AMMO_PISTOL:
+	case TV_AMMO_RIFLE:
+	case TV_AMMO_SHOTGUN:
+	case TV_AMMO_SMG:
+	case TV_AMMO_ASSAULT:
+		prob = match_theme.combat;
+		break;
 	case TV_BOOMERANG:
 		prob = match_theme.combat;
 		break;
@@ -5367,6 +5409,11 @@ bool kind_is_good(int k_idx)
 	case TV_BOLT:
 	case TV_ARROW:
 	case TV_SHOT:
+	case TV_AMMO_PISTOL:
+	case TV_AMMO_RIFLE:
+	case TV_AMMO_SHOTGUN:
+	case TV_AMMO_SMG:
+	case TV_AMMO_ASSAULT:
 		{
 			return (TRUE);
 		}
@@ -5580,14 +5627,41 @@ bool make_object(object_type *j_ptr, bool good, bool great, obj_theme theme)
 	/* Hack -- generate multiple spikes/missiles */
 	switch (j_ptr->tval)
 	{
-	case TV_SPIKE:
-	case TV_SHOT:
-	case TV_ARROW:
-	case TV_BOLT:
+		case TV_SPIKE:
+		case TV_SHOT:
+		case TV_ARROW:
+		case TV_BOLT:
 		{
 			j_ptr->number = (byte)damroll(6, 7);
+			break;
 		}
-	}
+
+		case TV_AMMO_PISTOL:
+		{
+			j_ptr->number = (byte)damroll(7, 7);
+			break;
+		}
+		case TV_AMMO_RIFLE:
+		{
+			j_ptr->number = (byte)damroll(5, 7);
+			break;
+		}
+		case TV_AMMO_SHOTGUN:
+		{
+			j_ptr->number = (byte)damroll(3, 10);
+			break;
+		}
+		case TV_AMMO_SMG:
+		{
+			j_ptr->number = (byte)damroll(4, 10);
+			break;
+		}
+		case TV_AMMO_ASSAULT:
+		{
+			j_ptr->number = (byte)damroll(5, 10);
+			break;
+		}
+	} /* end switch */
 
 	/* hack, no multiple artifacts */
 	/*if (artifact_p(j_ptr)) j_ptr->number = 1;*/

@@ -4675,8 +4675,29 @@ tval_desc tval_descs[] =
 		"carry them in your quiver if you have a crossbow equipped."
 	},
 	{
+		TV_AMMO_PISTOL,
+		"A type of ammunition for pistols."
+	},
+	{
+		TV_AMMO_RIFLE,
+		"This ammunition can be fired with rifles."
+	},
+	{
+		TV_AMMO_SHOTGUN,
+		"Firing this type of ammunition requires a shotgun."
+	},
+	{
+		TV_AMMO_SMG,
+		"The ammunition type for submachine guns."
+	},
+	{
+		TV_AMMO_ASSAULT,
+		"It's the type of ammunition required for using an "
+		"assault rifle."
+	},
+	{
 		TV_BOW,
-		"Slings, bows and crossbows are used to attack monsters "
+		"Slings, bows, guns and crossbows are used to attack monsters "
 		"from a distance."
 	},
 	{

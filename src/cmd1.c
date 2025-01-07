@@ -218,6 +218,11 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 	case TV_SHOT:
 	case TV_ARROW:
 	case TV_BOLT:
+	case TV_AMMO_PISTOL:
+	case TV_AMMO_RIFLE:
+	case TV_AMMO_SHOTGUN:
+	case TV_AMMO_SMG:
+	case TV_AMMO_ASSAULT:
 	case TV_BOOMERANG:
 	case TV_HAFTED:
 	case TV_POLEARM:

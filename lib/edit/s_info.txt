@@ -295,6 +295,11 @@ A:23:Fire piercing shots
 I:1000
 F:RANDOM_GAIN
 
+N:75:Firearms
+D:Ability to use guns
+I:1000
+F:RANDOM_GAIN
+
 N:27:Boomerang-mastery
 D:Ability to use boomerangs
 I:1000
@@ -365,6 +370,7 @@ f:Sling-mastery:Archery%25
 f:Bow-mastery:Archery%25
 f:Crossbow-mastery:Archery%25
 f:Boomerang-mastery:Archery%25
+f:Firearms:Archery%25
 f:Ranged-power:Archery%10
 
 # All combat skills improve Combat
@@ -378,6 +384,7 @@ f:Sling-mastery:Combat%7
 f:Bow-mastery:Combat%7
 f:Ranged-power:Combat%7
 f:Crossbow-mastery:Combat%7
+f:Firearms:Combat%7
 f:Boomerang-mastery:Combat%7
 f:Barehand-combat:Combat%50
 f:Boulder-throwing:Combat%40
@@ -633,6 +640,7 @@ T:Archery:Sling-mastery
 T:Archery:Bow-mastery
 T:Archery:Crossbow-mastery
 T:Archery:Boomerang-mastery
+T:Archery:Firearms
 T:Archery:Ranged-power
 T:Combat:Weight-lifting
 T:Combat:Barehand-combat

@@ -1436,6 +1436,11 @@
 #define TV_POLEARM      22      /* Pikes/Glaives/Spears/etc. */
 #define TV_SWORD        23      /* Edged Weapons */
 #define TV_AXE          24      /* Axes/Cleavers */
+#define TV_AMMO_PISTOL  25      /* Ammo for pistols */
+#define TV_AMMO_RIFLE   26      /* Ammo for rifles */
+#define TV_AMMO_SHOTGUN  27     /* Ammo for shotguns */
+#define TV_AMMO_SMG     28      /* Ammo for SMGs */
+#define TV_AMMO_ASSAULT  29     /* Ammo for assault rifles */
 #define TV_BOOTS        30      /* Boots */
 #define TV_GLOVES       31      /* Gloves */
 #define TV_HELM         32      /* Helms */
@@ -1519,6 +1524,21 @@
 #define SV_HEAVY_XBOW                   24	/* (x4) */
 #define SV_ARBALEST                     25	/* (x5) */
 #define SV_SIEGE_XBOW                   26	/* (x6) */
+#define SV_PISTOL1                      33	/* (x3) */
+#define SV_PISTOL2                      34	/* (x4) */
+#define SV_PISTOL3                      35	/* (x5) */
+#define SV_RIFLE1                       44	/* (x4) */
+#define SV_RIFLE2                       45	/* (x5) */
+#define SV_RIFLE3                       46	/* (x6) */
+#define SV_SHOTGUN1                     55	/* (x5) */
+#define SV_SHOTGUN2                     56	/* (x6) */
+#define SV_SHOTGUN3                     57	/* (x7) */
+#define SV_SMG1                         62	/* (x2) */
+#define SV_SMG2                         63	/* (x3) */
+#define SV_SMG3                         64	/* (x4) */
+#define SV_ASSAULT1                     73	/* (x3) */
+#define SV_ASSAULT2                     74	/* (x4) */
+#define SV_ASSAULT3                     75	/* (x5) */
 
 /* The "sval" codes for TV_DIGGING */
 #define SV_SHOVEL                        1
@@ -4955,10 +4975,11 @@ extern int PlayerUID;
 #define SKILL_HELL              72
 #define SKILL_CELESTIAL         73
 #define SKILL_ANTINASTY         74
+#define SKILL_FIREARMS          75
 /* ATTENTION: always update MAX_GOOD_SKILL below when adding new ones!!! --Amy */
 
 /* Ugly but needed */
-#define MAX_GOOD_SKILL          74
+#define MAX_GOOD_SKILL          75
 
 #define MAX_SKILLS              200
 

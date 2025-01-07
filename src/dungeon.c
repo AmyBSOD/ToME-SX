@@ -247,6 +247,11 @@ byte select_sense(object_type *o_ptr, bool ok_combat, bool ok_magic)
 	case TV_SHOT:
 	case TV_ARROW:
 	case TV_BOLT:
+	case TV_AMMO_PISTOL:
+	case TV_AMMO_RIFLE:
+	case TV_AMMO_SHOTGUN:
+	case TV_AMMO_SMG:
+	case TV_AMMO_ASSAULT:
 	case TV_BOW:
 	case TV_DIGGING:
 	case TV_HAFTED:

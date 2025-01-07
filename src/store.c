@@ -439,18 +439,45 @@ static s32b price_item(object_type *o_ptr, int greed, bool flip)
 			/* but ammo shouldn't be overly expensive */
 			switch (o_ptr->tval)
 			{
-			case TV_SHOT:
-			case TV_ARROW:
-			case TV_BOLT:
-				price = 10;
-				break;
-			}
+				case TV_SHOT:
+				case TV_ARROW:
+				case TV_BOLT:
+				{
+					price = 10;
+					break;
+				}
+				case TV_AMMO_PISTOL:
+				{
+					price = 25;
+					break;
+				}
+				case TV_AMMO_RIFLE:
+				{
+					price = 40;
+					break;
+				}
+				case TV_AMMO_SHOTGUN:
+				{
+					price = 100;
+					break;
+				}
+				case TV_AMMO_SMG:
+				{
+					price = 30;
+					break;
+				}
+				case TV_AMMO_ASSAULT:
+				{
+					price = 75;
+					break;
+				}
+			} /* switch end */
 
 			if (k_ptr->level > 1) price *= k_ptr->level;
 
 			/* still need to account for bonuses, e.g. "rohirric ring of teleportitis {cursed}" --Amy */
 			if (object_value_xtra(o_ptr) > 0) {
-				if (o_ptr->tval == TV_SHOT || o_ptr->tval == TV_ARROW || o_ptr->tval == TV_BOLT) {
+				if (o_ptr->tval == TV_SHOT || o_ptr->tval == TV_ARROW || o_ptr->tval == TV_BOLT || o_ptr->tval == TV_AMMO_PISTOL || o_ptr->tval == TV_AMMO_RIFLE || o_ptr->tval == TV_AMMO_SHOTGUN || o_ptr->tval == TV_AMMO_SMG || o_ptr->tval == TV_AMMO_ASSAULT) {
 					int tempincrease = object_value_xtra(o_ptr);
 					if (tempincrease > 0) {
 						tempincrease /= 20;
@@ -493,12 +520,23 @@ static s32b price_item(object_type *o_ptr, int greed, bool flip)
 		/* Mega Hack^3 */
 		switch (o_ptr->tval)
 		{
-		case TV_SHOT:
-		case TV_ARROW:
-		case TV_BOLT:
-			price /= 5;
-			break;
-		}
+			case TV_SHOT:
+			case TV_ARROW:
+			case TV_BOLT:
+			{
+				price /= 5;
+				break;
+			}
+			case TV_AMMO_PISTOL:
+			case TV_AMMO_RIFLE:
+			case TV_AMMO_SHOTGUN:
+			case TV_AMMO_SMG:
+			case TV_AMMO_ASSAULT:
+			{
+				price /= 20;
+				break;
+			}
+		} /* switch end */
 
 		/* Adjust for greed */
 		adjust = 100 + (300 - (greed + factor));
@@ -644,6 +682,32 @@ static void mass_produce(object_type *o_ptr)
 				if (cost <= 500L) size += mass_roll(4, 5);
 			}
 			size += mass_roll(8, 5);
+			break;
+		}
+
+	case TV_AMMO_PISTOL:
+		{
+			size += mass_roll(7, 7);
+			break;
+		}
+	case TV_AMMO_RIFLE:
+		{
+			size += mass_roll(5, 7);
+			break;
+		}
+	case TV_AMMO_SHOTGUN:
+		{
+			size += mass_roll(3, 10);
+			break;
+		}
+	case TV_AMMO_SMG:
+		{
+			size += mass_roll(4, 10);
+			break;
+		}
+	case TV_AMMO_ASSAULT:
+		{
+			size += mass_roll(5, 10);
 			break;
 		}
 
@@ -1647,7 +1711,12 @@ static void display_entry(int pos)
 		/* Describe the object */
 		object_desc(o_name, o_ptr, TRUE, 3);
 		o_name[maxwid] = '\0';
-		c_put_str(tval_to_attr[o_ptr->tval], o_name, i + 6, cur_col);
+
+		if (o_ptr->tval >= TV_AMMO_PISTOL && o_ptr->tval <= TV_AMMO_ASSAULT) {
+			c_put_str(TERM_YELLOW, o_name, i + 6, cur_col);
+		} else {
+			c_put_str(tval_to_attr[o_ptr->tval], o_name, i + 6, cur_col);
+		}
 
 		/* Show weights */
 		if (show_weights)
@@ -1673,7 +1742,11 @@ static void display_entry(int pos)
 		/* Describe the object (fully) */
 		object_desc_store(o_name, o_ptr, TRUE, 3);
 		o_name[maxwid] = '\0';
-		c_put_str(tval_to_attr[o_ptr->tval], o_name, i + 6, cur_col);
+		if (o_ptr->tval >= TV_AMMO_PISTOL && o_ptr->tval <= TV_AMMO_ASSAULT) {
+			c_put_str(TERM_YELLOW, o_name, i + 6, cur_col);
+		} else {
+			c_put_str(tval_to_attr[o_ptr->tval], o_name, i + 6, cur_col);
+		}
 
 		/* Show weights */
 		if (show_weights)

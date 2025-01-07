@@ -193,6 +193,11 @@ static grouper group_item[] =
 	{ TV_SHOT, "Ammo" },
 	{ TV_ARROW, NULL },
 	{ TV_BOLT, NULL },
+	{ TV_AMMO_PISTOL, NULL },
+	{ TV_AMMO_RIFLE, NULL },
+	{ TV_AMMO_SHOTGUN, NULL },
+	{ TV_AMMO_SMG, NULL },
+	{ TV_AMMO_RIFLE, NULL },
 
 	{ TV_BOOMERANG, "Boomerangs" },
 
@@ -319,6 +324,11 @@ static void kind_info(char *buf, char *dam, char *wgt, int *lev, s32b *val, int 
 	case TV_SHOT:
 	case TV_BOLT:
 	case TV_ARROW:
+	case TV_AMMO_PISTOL:
+	case TV_AMMO_RIFLE:
+	case TV_AMMO_SHOTGUN:
+	case TV_AMMO_SMG:
+	case TV_AMMO_ASSAULT:
 
 		/* Boomerangs */
 	case TV_BOOMERANG:
@@ -539,6 +549,11 @@ static grouper group_artifact[] =
 	{ TV_SHOT, "Ammo" },
 	{ TV_ARROW, NULL },
 	{ TV_BOLT, NULL },
+	{ TV_AMMO_PISTOL, NULL },
+	{ TV_AMMO_RIFLE, NULL },
+	{ TV_AMMO_SHOTGUN, NULL },
+	{ TV_AMMO_SMG, NULL },
+	{ TV_AMMO_RIFLE, NULL },
 
 	{ TV_BOOMERANG, "Boomerangs" },
 

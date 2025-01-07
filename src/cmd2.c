@@ -3010,6 +3010,11 @@ int breakage_chance(object_type *o_ptr)
 	case TV_POTION2:
 	case TV_BOTTLE:
 	case TV_FOOD:
+	case TV_AMMO_PISTOL:
+	case TV_AMMO_RIFLE:
+	case TV_AMMO_SHOTGUN:
+	case TV_AMMO_SMG:
+	case TV_AMMO_ASSAULT:
 		{
 			return (100);
 		}
@@ -3159,6 +3164,97 @@ int get_shooter_mult(object_type *o_ptr)
 			tmul = 6;
 			break;
 		}
+
+	case SV_PISTOL1:
+		{
+			/* Beretta and Pistol Bullets */
+			tmul = 3;
+			break;
+		}
+	case SV_PISTOL2:
+		{
+			/* Glock and Pistol Bullets */
+			tmul = 4;
+			break;
+		}
+	case SV_PISTOL3:
+		{
+			/* Deagle and Pistol Bullets */
+			tmul = 5;
+			break;
+		}
+	case SV_RIFLE1:
+		{
+			/* Remington and Rifle Bullets */
+			tmul = 4;
+			break;
+		}
+	case SV_RIFLE2:
+		{
+			/* M1 Garand and Rifle Bullets */
+			tmul = 5;
+			break;
+		}
+	case SV_RIFLE3:
+		{
+			/* Mosin Nagant and Rifle Bullets */
+			tmul = 6;
+			break;
+		}
+	case SV_SHOTGUN1:
+		{
+			/* M3 and Shells */
+			tmul = 5;
+			break;
+		}
+	case SV_SHOTGUN2:
+		{
+			/* XM1014 and Shells */
+			tmul = 6;
+			break;
+		}
+	case SV_SHOTGUN3:
+		{
+			/* Citykiller and Shells */
+			tmul = 7;
+			break;
+		}
+	case SV_SMG1:
+		{
+			/* Ingram and SMG bullets */
+			tmul = 2;
+			break;
+		}
+	case SV_SMG2:
+		{
+			/* MP5 and SMG bullets */
+			tmul = 3;
+			break;
+		}
+	case SV_SMG3:
+		{
+			/* ES C90 and SMG bullets */
+			tmul = 4;
+			break;
+		}
+	case SV_ASSAULT1:
+		{
+			/* Galil and AR bullets */
+			tmul = 3;
+			break;
+		}
+	case SV_ASSAULT2:
+		{
+			/* AK47 and AR bullets */
+			tmul = 4;
+			break;
+		}
+	case SV_ASSAULT3:
+		{
+			/* Krieg and AR bullets */
+			tmul = 5;
+			break;
+		}
 	}
 	return tmul;
 }
@@ -3228,6 +3324,7 @@ void do_cmd_fire(void)
 
 	int msec = delay_factor * delay_factor * delay_factor;
 
+	int critshotmult = 0; /* by Amy, because ammos weigh less */
 
 	/* Get the "bow" (if any) */
 	j_ptr = &p_ptr->inventory[INVEN_BOW];
@@ -3386,12 +3483,20 @@ void do_cmd_fire(void)
 	/* Base range */
 	tdis = 10 + 5 * tmul;
 
+	/* Guns have fixed range depending on type (always subtract 1 from the actual range) --Amy */
+	if (j_ptr->sval >= SV_PISTOL1 && j_ptr->sval <= SV_PISTOL3) tdis = 9;
+	if (j_ptr->sval == SV_RIFLE1) tdis = 11;
+	if (j_ptr->sval == SV_RIFLE2) tdis = 14;
+	if (j_ptr->sval == SV_RIFLE3) tdis = 19;
+	if (j_ptr->sval >= SV_SHOTGUN1 && j_ptr->sval <= SV_SHOTGUN3) tdis = 2;
+	if (j_ptr->sval >= SV_SMG1 && j_ptr->sval <= SV_SMG3) tdis = 7;
+	if (j_ptr->sval >= SV_ASSAULT1 && j_ptr->sval <= SV_ASSAULT3) tdis = 11;
 
 	/* Take a (partial) turn */
 	energy_use = (100 / thits);
 
-	/* piercing shots ? */
-	if (p_ptr->use_piercing_shots &&
+	/* piercing shots ? Amy edit: for balance reasons these aren't available when using guns */
+	if (p_ptr->use_piercing_shots && (j_ptr->sval < SV_PISTOL1) &&
 	                ((get_skill(SKILL_BOW) > 25) || (get_skill(SKILL_XBOW) > 25) ||
 	                 (get_skill(SKILL_SLING) > 25)))
 	{
@@ -3554,7 +3659,108 @@ void do_cmd_fire(void)
 
 					/* Apply special damage XXX XXX XXX */
 					tdam = tot_dam_aux(q_ptr, tdam, m_ptr, &special);
-					tdam = critical_shot(q_ptr->weight, q_ptr->to_h, tdam, SKILL_ARCHERY);
+
+					critshotmult = q_ptr->weight; /* almost always 0 --Amy */
+
+					if (q_ptr->tval == TV_SHOT) {
+						switch (q_ptr->sval) {
+							default: break;
+							case 0:
+								critshotmult += randint(40);
+								break;
+							case 1:
+								critshotmult += randint(50);
+								break;
+							case 2:
+								critshotmult += randint(40);
+								break;
+							case 3:
+								critshotmult += randint(50);
+								break;
+							case 4:
+								critshotmult += randint(100);
+								break;
+						}
+					}
+					if (q_ptr->tval == TV_ARROW) {
+						switch (q_ptr->sval) {
+							default: break;
+							case 0:
+								critshotmult += randint(20);
+								break;
+							case 1:
+								critshotmult += randint(20);
+								break;
+							case 2:
+								critshotmult += randint(20);
+								break;
+							case 3:
+								critshotmult += randint(20);
+								break;
+							case 4:
+								critshotmult += randint(100);
+								break;
+							case 8:
+								critshotmult += randint(250);
+								break;
+							case 6:
+								critshotmult += randint(10);
+								break;
+							case 7:
+								critshotmult += randint(10);
+								break;
+						}
+					}
+					if (q_ptr->tval == TV_BOLT) {
+						switch (q_ptr->sval) {
+							default: break;
+							case 4:
+								critshotmult += randint(100);
+								break;
+							case 1:
+								critshotmult += randint(30);
+								break;
+							case 2:
+								critshotmult += randint(30);
+								break;
+							case 3:
+								critshotmult += randint(20);
+								break;
+							case 9:
+								critshotmult += randint(250);
+								break;
+							case 10:
+								critshotmult += randint(800);
+								break;
+							case 11:
+								critshotmult += randint(1000);
+								break;
+						}
+					}
+					if (q_ptr->tval == TV_AMMO_SHOTGUN) {
+						switch (q_ptr->sval) {
+							default: break;
+							case 1:
+								critshotmult += randint(250);
+								break;
+							case 2:
+								critshotmult += randint(450);
+								break;
+							case 3:
+								critshotmult += randint(750);
+								break;
+						}
+					}
+					if (q_ptr->tval == TV_AMMO_ASSAULT) {
+						switch (q_ptr->sval) {
+							default: break;
+							case 3:
+								critshotmult += randint(250);
+								break;
+						}
+					}
+
+					tdam = critical_shot(critshotmult, q_ptr->to_h, tdam, SKILL_ARCHERY);
 
 					/* No negative damage */
 					if (tdam < 0) tdam = 0;
@@ -5162,6 +5368,7 @@ byte show_monster_inven(int m_idx, int *monst_list)
 
 		/* Acquire p_ptr->inventory color */
 		out_color[k] = tval_to_attr[o_ptr->tval & 0x7F];
+		if (o_ptr->tval >= TV_AMMO_PISTOL && o_ptr->tval <= TV_AMMO_ASSAULT) out_color[k] = TERM_YELLOW;
 
 		/* Save the object description */
 		strcpy(out_desc[k], o_name);
