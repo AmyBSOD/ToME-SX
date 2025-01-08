@@ -5638,30 +5638,32 @@ bool make_object(object_type *j_ptr, bool good, bool great, obj_theme theme)
 
 		case TV_AMMO_PISTOL:
 		{
-			j_ptr->number = (byte)damroll(7, 7);
+			j_ptr->number = (byte)damroll(14, 7);
 			break;
 		}
 		case TV_AMMO_RIFLE:
 		{
-			j_ptr->number = (byte)damroll(5, 7);
+			j_ptr->number = (byte)damroll(10, 7);
 			break;
 		}
 		case TV_AMMO_SHOTGUN:
 		{
-			j_ptr->number = (byte)damroll(3, 10);
+			j_ptr->number = (byte)damroll(6, 10);
 			break;
 		}
 		case TV_AMMO_SMG:
 		{
-			j_ptr->number = (byte)damroll(4, 10);
+			j_ptr->number = (byte)damroll(8, 10);
 			break;
 		}
 		case TV_AMMO_ASSAULT:
 		{
-			j_ptr->number = (byte)damroll(5, 10);
+			j_ptr->number = (byte)damroll(10, 10);
 			break;
 		}
 	} /* end switch */
+
+	if (j_ptr->number > 99) j_ptr->number = 99;
 
 	/* hack, no multiple artifacts */
 	/*if (artifact_p(j_ptr)) j_ptr->number = 1;*/

@@ -5368,7 +5368,6 @@ byte show_monster_inven(int m_idx, int *monst_list)
 
 		/* Acquire p_ptr->inventory color */
 		out_color[k] = tval_to_attr[o_ptr->tval & 0x7F];
-		if (o_ptr->tval >= TV_AMMO_PISTOL && o_ptr->tval <= TV_AMMO_ASSAULT) out_color[k] = TERM_YELLOW;
 
 		/* Save the object description */
 		strcpy(out_desc[k], o_name);

@@ -779,6 +779,9 @@ char misc_to_char[256];
 /*
  * Specify attr/char pairs for inventory items (by tval)
  * Be sure to use "index & 0x7F" to avoid illegal access
+ * this is set in font-xxx.prf which you would not, even in a hundred years, guess --Amy
+ * a thousand curses on whoever gave such a chinese name to such an important file :-P
+ * any sane person would name it something like "default-colorings.prf" or whatever!
  */
 byte tval_to_attr[128];
 char tval_to_char[128];

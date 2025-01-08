@@ -687,27 +687,27 @@ static void mass_produce(object_type *o_ptr)
 
 	case TV_AMMO_PISTOL:
 		{
-			size += mass_roll(7, 7);
+			size += mass_roll(14, 7);
 			break;
 		}
 	case TV_AMMO_RIFLE:
 		{
-			size += mass_roll(5, 7);
+			size += mass_roll(10, 7);
 			break;
 		}
 	case TV_AMMO_SHOTGUN:
 		{
-			size += mass_roll(3, 10);
+			size += mass_roll(6, 10);
 			break;
 		}
 	case TV_AMMO_SMG:
 		{
-			size += mass_roll(4, 10);
+			size += mass_roll(8, 10);
 			break;
 		}
 	case TV_AMMO_ASSAULT:
 		{
-			size += mass_roll(5, 10);
+			size += mass_roll(10, 10);
 			break;
 		}
 
@@ -765,6 +765,8 @@ static void mass_produce(object_type *o_ptr)
 
 	/* Save the total pile size */
 	o_ptr->number = size - (size * discount / 100);
+
+	if (o_ptr->number > 99) o_ptr->number = 99;
 }
 
 
@@ -1712,11 +1714,7 @@ static void display_entry(int pos)
 		object_desc(o_name, o_ptr, TRUE, 3);
 		o_name[maxwid] = '\0';
 
-		if (o_ptr->tval >= TV_AMMO_PISTOL && o_ptr->tval <= TV_AMMO_ASSAULT) {
-			c_put_str(TERM_YELLOW, o_name, i + 6, cur_col);
-		} else {
-			c_put_str(tval_to_attr[o_ptr->tval], o_name, i + 6, cur_col);
-		}
+		c_put_str(tval_to_attr[o_ptr->tval], o_name, i + 6, cur_col);
 
 		/* Show weights */
 		if (show_weights)
@@ -1742,11 +1740,8 @@ static void display_entry(int pos)
 		/* Describe the object (fully) */
 		object_desc_store(o_name, o_ptr, TRUE, 3);
 		o_name[maxwid] = '\0';
-		if (o_ptr->tval >= TV_AMMO_PISTOL && o_ptr->tval <= TV_AMMO_ASSAULT) {
-			c_put_str(TERM_YELLOW, o_name, i + 6, cur_col);
-		} else {
-			c_put_str(tval_to_attr[o_ptr->tval], o_name, i + 6, cur_col);
-		}
+
+		c_put_str(tval_to_attr[o_ptr->tval], o_name, i + 6, cur_col);
 
 		/* Show weights */
 		if (show_weights)

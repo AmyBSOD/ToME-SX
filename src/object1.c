@@ -5197,7 +5197,6 @@ void show_inven_aux(bool mirror, bool everything)
 
 		/* Save the object color, and description */
 		out_color[k] = tval_to_attr[o_ptr->tval % 128];
-		if (o_ptr->tval >= TV_AMMO_PISTOL && o_ptr->tval <= TV_AMMO_ASSAULT) out_color[k] = TERM_YELLOW;
 		(void)strcpy(out_desc[k], o_name);
 
 		/* Find the predicted "line length" */
@@ -5427,7 +5426,6 @@ void show_equip_aux(bool mirror, bool everything)
 
 			/* Save the color */
 			out_color[k] = tval_to_attr[o_ptr->tval % 128];
-			if (o_ptr->tval >= TV_AMMO_PISTOL && o_ptr->tval <= TV_AMMO_ASSAULT) out_color[k] = TERM_YELLOW;
 			(void)strcpy(out_desc[k], o_name);
 		}
 
@@ -5844,7 +5842,6 @@ void show_floor(int y, int x)
 
 		/* Acquire inventory color */
 		out_color[k] = tval_to_attr[o_ptr->tval & 0x7F];
-		if (o_ptr->tval >= TV_AMMO_PISTOL && o_ptr->tval <= TV_AMMO_ASSAULT) out_color[k] = TERM_YELLOW;
 
 		/* Save the object description */
 		strcpy(out_desc[k], o_name);

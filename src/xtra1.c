@@ -3927,7 +3927,12 @@ void calc_bonuses(bool silent)
 		{
 			p_ptr->to_h_ranged += get_skill_scale(archery, 25);
 			p_ptr->num_fire += (get_skill(archery) / 40);
-			p_ptr->xtra_might += (get_skill(SKILL_ARCHERY) / 50);
+
+			if (archery == SKILL_FIREARMS) {
+				p_ptr->xtra_might += (get_skill(SKILL_ARCHERY) / 30);
+			} else {
+				p_ptr->xtra_might += (get_skill(SKILL_ARCHERY) / 50);
+			}
 			switch (archery)
 			{
 			case SKILL_SLING:
@@ -3940,7 +3945,7 @@ void calc_bonuses(bool silent)
 				if (p_ptr->tval_ammo == TV_BOLT) p_ptr->xtra_might += get_skill(archery) / 30;
 				break;
 			case SKILL_FIREARMS:
-				if (p_ptr->tval_ammo == TV_AMMO_PISTOL || p_ptr->tval_ammo == TV_AMMO_RIFLE || p_ptr->tval_ammo == TV_AMMO_SHOTGUN || p_ptr->tval_ammo == TV_AMMO_SMG || p_ptr->tval_ammo == TV_AMMO_ASSAULT) p_ptr->xtra_might += get_skill(archery) / 30;
+				if (p_ptr->tval_ammo == TV_AMMO_PISTOL || p_ptr->tval_ammo == TV_AMMO_RIFLE || p_ptr->tval_ammo == TV_AMMO_SHOTGUN || p_ptr->tval_ammo == TV_AMMO_SMG || p_ptr->tval_ammo == TV_AMMO_ASSAULT) p_ptr->xtra_might += get_skill(archery) / 25;
 				break;
 			case SKILL_BOOMERANG:
 				p_ptr->xtra_might += get_skill(archery) / 10;
@@ -3966,6 +3971,10 @@ void calc_bonuses(bool silent)
 			{
 				case SKILL_BOOMERANG:
 					p_ptr->to_d_ranged += get_skill(SKILL_DRUID);
+					break;
+				case SKILL_FIREARMS:
+					p_ptr->to_d_ranged += get_skill_scale(SKILL_FIREARMS, 5);
+					p_ptr->to_h_ranged += get_skill_scale(SKILL_FIREARMS, 20);
 					break;
 			}
 		}
