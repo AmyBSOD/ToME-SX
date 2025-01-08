@@ -477,21 +477,9 @@ static void pattern_teleport(void)
 	/* Ask for level */
 	if (get_check("Teleport level? "))
 	{
-		char ppp[80];
-
-		char tmp_val[160];
-
-		/* Prompt */
-		sprintf(ppp, "Teleport to level (0-%d): ", 99);
-
-		/* Default */
-		sprintf(tmp_val, "%d", dun_level);
-
-		/* Ask for a level */
-		if (!get_string(ppp, tmp_val, 10)) return;
-
-		/* Extract request */
-		command_arg = atoi(tmp_val);
+		/* holy shit that was giving WIZMODE levelports????? man... these programmers... --Amy */
+		(void)teleport_player_level();
+		return;
 	}
 	else if (get_check("Normal teleport? "))
 	{
