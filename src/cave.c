@@ -5216,6 +5216,37 @@ bool projectable(int y1, int x1, int y2, int x2)
 	return (FALSE);
 }
 
+/* same function, but for monster spells, which should have 20 range --Amy */
+bool projectable_monst(int y1, int x1, int y2, int x2)
+{
+	int dist, y, x;
+
+	/* Start at the initial location */
+	y = y1, x = x1;
+
+	/* See "project()" */
+	for (dist = 0; dist <= MAX_RANGE_MONST; dist++)
+	{
+		/* Check for arrival at "final target" */
+		/*
+		 * NB: this check was AFTER the 'never pass
+		 * thru walls' clause, below. Switching them
+		 * lets monsters shoot a the player if s/he is
+		 * visible but in a wall
+		 */
+		if ((x == x2) && (y == y2)) return (TRUE);
+
+		/* Never pass through walls */
+		if (dist && (!cave_sight_bold(y, x) || !cave_floor_bold(y, x))) break;
+
+		/* Calculate the new location */
+		mmove2(&y, &x, y1, x1, y2, x2);
+	}
+
+
+	/* Assume obstruction */
+	return (FALSE);
+}
 
 
 

@@ -432,6 +432,7 @@
  */
 #define MAX_SIGHT       20      /* Maximum view distance */
 #define MAX_RANGE       18      /* Maximum range (spells, etc) */
+#define MAX_RANGE_MONST 20      /* Maximum range for monster spells, you filthy abuser who pelts them with view spells or arrows from a distance of 20! --Amy */
 
 
 

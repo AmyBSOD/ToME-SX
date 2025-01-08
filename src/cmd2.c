@@ -3492,6 +3492,9 @@ void do_cmd_fire(void)
 	if (j_ptr->sval >= SV_SMG1 && j_ptr->sval <= SV_SMG3) tdis = 7;
 	if (j_ptr->sval >= SV_ASSAULT1 && j_ptr->sval <= SV_ASSAULT3) tdis = 11;
 
+	/* don't allow players to snipe into the darkness from like 50 tiles away! --Amy */
+	if (tdis > 19) tdis = 19;
+
 	/* Take a (partial) turn */
 	energy_use = (100 / thits);
 
@@ -3540,10 +3543,16 @@ void do_cmd_fire(void)
 			/* Calculate the new location (see "project()") */
 			ny = y;
 			nx = x;
+
 			mmove2(&ny, &nx, by, bx, ty, tx);
 
 			/* Stopped by walls/doors */
 			if (!cave_floor_bold(ny, nx)) break;
+
+			/* Amy: don't allow cheesy shots into the darkness at a diagonal where you can see 13 squares but hit helpless monsters from a distance of 20! */
+			if (distance(p_ptr->py, p_ptr->px, ny, nx) > MAX_SIGHT) {
+				break;
+			}
 
 			/* Advance the distance */
 			cur_dis++;

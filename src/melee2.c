@@ -603,7 +603,7 @@ static bool clean_shot(int y1, int x1, int y2, int x2)
 	y = y1, x = x1;
 
 	/* See "project()" and "projectable()" */
-	for (dist = 0; dist <= MAX_RANGE; dist++)
+	for (dist = 0; dist <= MAX_RANGE_MONST; dist++)
 	{
 		/* Never pass through walls */
 		if (dist && (!cave_sight_bold(y, x) || !cave_floor_bold(y, x))) break;
@@ -1066,10 +1066,10 @@ static bool monst_spell_monst(int m_idx)
 		tr_ptr = race_inf(t_ptr);
 
 		/* Hack -- no fighting >100 squares from player */
-		if (t_ptr->cdis > MAX_RANGE) return FALSE;
+		if (t_ptr->cdis > MAX_RANGE_MONST) return FALSE;
 
 		/* Monster must be projectable */
-		if (!projectable(m_ptr->fy, m_ptr->fx, t_ptr->fy, t_ptr->fx)) return FALSE;
+		if (!projectable_monst(m_ptr->fy, m_ptr->fx, t_ptr->fy, t_ptr->fx)) return FALSE;
 
 		/* OK -- we-ve got a target */
 		y = t_ptr->fy;
@@ -3133,10 +3133,10 @@ bool make_attack_spell(int m_idx)
 	if (normal)
 	{
 		/* Check range */
-		if (m_ptr->cdis > MAX_RANGE) return (FALSE);
+		if (m_ptr->cdis > MAX_RANGE_MONST) return (FALSE);
 
 		/* Check path */
-		if (!projectable(m_ptr->fy, m_ptr->fx, y, x)) return (FALSE);
+		if (!projectable_monst(m_ptr->fy, m_ptr->fx, y, x)) return (FALSE);
 	}
 
 	/* Extract the monster level */

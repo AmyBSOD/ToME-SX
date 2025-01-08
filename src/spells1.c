@@ -9137,7 +9137,7 @@ bool project(int who, int rad, int y, int x, int dam, int typ, int flg)
 	else if (flg & PROJECT_LOWRANGE) {
 		path_n = project_path(path_g, 1, y1, x1, y2, x2, flg);
 	} else {
-		path_n = project_path(path_g, MAX_RANGE, y1, x1, y2, x2, flg);
+		path_n = project_path(path_g, (who <= 0) ? MAX_RANGE : MAX_RANGE_MONST, y1, x1, y2, x2, flg);
 	}
 
 	/* Hack -- Handle stuff */
