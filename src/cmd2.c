@@ -3830,6 +3830,7 @@ void do_cmd_fire(void)
 				dam /= 2;
 				break;
 			case SV_AMMO_NORMAL:
+			default:
 				rad = 3;
 				break;
 			case SV_AMMO_HEAVY:
