@@ -5943,7 +5943,8 @@ bool target_object(int y, int x, int mode, cptr info, bool *boring,
 	object_desc(o_name, o_ptr, TRUE, 3);
 
 	/* Describe the object */
-	sprintf(out_val, "%s%s%s%s [%s]", *s1, *s2, *s3, o_name, info);
+	sprintf(out_val, "%s%s%s%s [%s] (%d,%d, dist %d)", *s1, *s2, *s3, o_name, info,
+		  x, y, distance(p_ptr->py, p_ptr->px, y, x));
 	prt(out_val, 0, 0);
 	move_cursor_relative(y, x);
 	*query = inkey();
@@ -6051,7 +6052,8 @@ static int target_set_aux(int y, int x, int mode, cptr info)
 			cptr name = "something strange";
 
 			/* Display a message */
-			sprintf(out_val, "%s%s%s%s [%s]", s1, s2, s3, name, info);
+			sprintf(out_val, "%s%s%s%s [%s] (%d,%d, dist %d)", s1, s2, s3, name, info,
+					  x, y, distance(p_ptr->py, p_ptr->px, y, x));
 			prt(out_val, 0, 0);
 			move_cursor_relative(y, x);
 			query = inkey();
@@ -6159,12 +6161,13 @@ static int target_set_aux(int y, int x, int mode, cptr info)
 							if (m_ptr->mflag & MFLAG_PARTIAL) mstat = " (partial) ";
 
 							/* Describe, and prompt for recall */
-							sprintf(out_val, "%s%s%s%s (level %d, %s%s)%s%s[r,%s]",
+							sprintf(out_val, "%s%s%s%s (level %d, %s%s)%s%s[r,%s] (%d,%d, dist %d)",
 							        s1, s2, s3, m_name,
 							        m_ptr->level, look_mon_desc(c_ptr->m_idx),
 							        (m_ptr->mflag & MFLAG_QUEST) ? ", quest" : "",
 							        (m_ptr->smart & SM_CLONED ? " (clone)" : ""),
-							        (mstat), info);
+							        (mstat), info,
+								  x, y, distance(p_ptr->py, p_ptr->px, y, x));
 
 							prt(out_val, 0, 0);
 
@@ -6215,7 +6218,8 @@ static int target_set_aux(int y, int x, int mode, cptr info)
 						object_desc(o_name, o_ptr, TRUE, 3);
 
 						/* Describe the object */
-						sprintf(out_val, "%s%s%s%s [%s]", s1, s2, s3, o_name, info);
+						sprintf(out_val, "%s%s%s%s [%s] (%d,%d, dist %d)", s1, s2, s3, o_name, info,
+						  x, y, distance(p_ptr->py, p_ptr->px, y, x));
 						prt(out_val, 0, 0);
 						move_cursor_relative(y, x);
 						query = inkey();
@@ -6278,7 +6282,8 @@ static int target_set_aux(int y, int x, int mode, cptr info)
 			}
 
 			/* Display a message */
-			sprintf(out_val, "%s%s%s%s [%s]", s1, s2, s3, name, s4);
+			sprintf(out_val, "%s%s%s%s [%s] (%d,%d, dist %d)", s1, s2, s3, name, s4,
+				  x, y, distance(p_ptr->py, p_ptr->px, y, x));
 			prt(out_val, 0, 0);
 			move_cursor_relative(y, x);
 			query = inkey();
@@ -6381,12 +6386,14 @@ static int target_set_aux(int y, int x, int mode, cptr info)
 			/* Display a message */
 			if (!wizard)
 			{
-				sprintf(out_val, "%s%s%s%s [%s]", s1, s2, s3, name, info);
+				sprintf(out_val, "%s%s%s%s [%s] (%d,%d, dist %d)", s1, s2, s3, name, info,
+					  x, y, distance(p_ptr->py, p_ptr->px, y, x));
 			}
 			else
 			{
-				sprintf(out_val, "%s%s%s%s [%s] (%d:%d:%d)",
+				sprintf(out_val, "%s%s%s%s [%s] (%d,%d, dist %d) (%d:%d:%d)",
 				        s1, s2, s3, name, info,
+					  x, y, distance(p_ptr->py, p_ptr->px, y, x),
 				        c_ptr->feat, c_ptr->mimic, c_ptr->special);
 			}
 			prt(out_val, 0, 0);
