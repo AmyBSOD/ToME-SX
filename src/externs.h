@@ -897,7 +897,7 @@ extern byte value_check_aux1(object_type *o_ptr);
 extern byte value_check_aux1_magic(object_type *o_ptr);
 extern byte value_check_aux2(object_type *o_ptr);
 extern byte value_check_aux2_magic(object_type *o_ptr);
-extern byte select_sense(object_type *o_ptr, bool ok_combat, bool ok_magic);
+extern byte select_sense(object_type *o_ptr, bool ok_combat, bool ok_magic, bool ok_misc);
 extern void play_game(bool new_game);
 extern bool psychometry(void);
 

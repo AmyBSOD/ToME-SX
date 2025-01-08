@@ -82,7 +82,7 @@ function object_status(obj)
 	else
 if nil then -- test
 		local osense = -1
-		local type = select_sense(obj, TRUE, TRUE)
+		local type = select_sense(obj, TRUE, TRUE, TRUE)
 		if type == 1 then
 			osense = value_check_aux1(obj)
 		elseif type == 2 then

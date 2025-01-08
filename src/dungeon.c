@@ -70,6 +70,47 @@ byte value_check_aux1(object_type *o_ptr)
 	return (SENSE_AVERAGE);
 }
 
+/* Amy: pseudo-id for stuff like rings, amulets, instruments... */
+byte value_check_aux1_misc(object_type *o_ptr)
+{
+	object_kind *k_ptr = &k_info[o_ptr->k_idx];
+
+	/* Artifacts */
+	if (artifact_p(o_ptr))
+	{
+		/* Cursed/Broken */
+		if (cursed_p(o_ptr)) return (SENSE_TERRIBLE);
+
+		/* Normal */
+		return (SENSE_SPECIAL);
+	}
+
+	/* Ego-Items */
+	if (ego_item_p(o_ptr))
+	{
+		/* Cursed/Broken */
+		if (cursed_p(o_ptr)) return (SENSE_WORTHLESS);
+
+		/* Normal */
+		return (SENSE_EXCELLENT);
+	}
+
+	/* Cursed items */
+	if (cursed_p(o_ptr)) return (SENSE_CURSED);
+
+	/* no artifact, no ego, not cursed? then it depends on value --Amy */
+	if (k_ptr->cost < 6) return (SENSE_WORTHLESS);
+
+	if (k_ptr->cost < 1000) return (SENSE_AVERAGE);
+
+	if (k_ptr->cost < 10000) return (SENSE_GOOD_HEAVY);
+
+	if (k_ptr->cost >= 10000) return (SENSE_EXCELLENT);
+
+	/* Default to "average" */
+	return (SENSE_AVERAGE);
+}
+
 byte value_check_aux1_magic(object_type *o_ptr)
 {
 	object_kind *k_ptr = &k_info[o_ptr->k_idx];
@@ -222,6 +263,32 @@ byte value_check_aux2_magic(object_type *o_ptr)
 	return (SENSE_NONE);
 }
 
+byte value_check_aux2_misc(object_type *o_ptr)
+{
+	object_kind *k_ptr = &k_info[o_ptr->k_idx];
+
+	/* Cursed items (all of them) */
+	if (cursed_p(o_ptr)) return (SENSE_CURSED);
+
+	/* Artifacts -- except cursed/broken ones */
+	if (artifact_p(o_ptr)) return (SENSE_GOOD_LIGHT);
+
+	/* Ego-Items -- except cursed/broken ones */
+	if (ego_item_p(o_ptr)) return (SENSE_GOOD_LIGHT);
+
+	/* no artifact, no ego, not cursed? then it depends on value --Amy */
+	if (k_ptr->cost < 6) return (SENSE_AVERAGE);
+
+	if (k_ptr->cost < 1000) return (SENSE_AVERAGE);
+
+	if (k_ptr->cost < 10000) return (SENSE_GOOD_LIGHT);
+
+	if (k_ptr->cost >= 10000) return (SENSE_GOOD_LIGHT);
+
+	/* No feeling */
+	return (SENSE_NONE);
+}
+
 
 /*
  * Can a player be resurrected?
@@ -239,7 +306,7 @@ static bool granted_resurrection(void)
 	return (FALSE);
 }
 
-byte select_sense(object_type *o_ptr, bool ok_combat, bool ok_magic)
+byte select_sense(object_type *o_ptr, bool ok_combat, bool ok_magic, bool ok_misc)
 {
 	/* Valid "tval" codes */
 	switch (o_ptr->tval)
@@ -293,6 +360,13 @@ byte select_sense(object_type *o_ptr, bool ok_combat, bool ok_magic)
 			if (ok_combat || ok_magic) return 1;
 			break;
 		}
+	case TV_INSTRUMENT:
+	case TV_AMULET:
+	case TV_RING:
+		{
+			if (ok_misc) return 3;
+			break;
+		}
 	}
 	return 0;
 }
@@ -306,6 +380,9 @@ byte select_sense(object_type *o_ptr, bool ok_combat, bool ok_magic)
  * Magic items (scrolls, staffs, wands, potions etc) - Slow, weak if
  * magic skill < 10, strong otherwise.
  *
+ * addition by Amy: misc items (instruments, rings, amulets) - Relatively slow,
+ * weak if sum of combat + magic skill < 20, strong otherwise.
+ *
  * It shouldn't matter a lot to discriminate against magic users, because
  * they learn one form of ID or another, and because most magic items are
  * easy_know.
@@ -314,10 +391,10 @@ static void sense_inventory(void)
 {
 	int i, combat_lev, magic_lev;
 
-	bool heavy_combat, heavy_magic;
-	bool ok_combat, ok_magic;
+	bool heavy_combat, heavy_magic, heavy_misc;
+	bool ok_combat, ok_magic, ok_misc;
 
-	byte feel;
+	byte feel = SENSE_NONE; /* appease compiler which thinks this may be used uninitialized --Amy */
 
 	object_type *o_ptr;
 
@@ -381,12 +458,15 @@ static void sense_inventory(void)
 	 */
 	ok_magic = (0 == rand_int(12000L / (magic_lev + 5)));
 
+	ok_misc = (0 == rand_int(10000L / (combat_lev + magic_lev + 10)));
+
 	/* Both ID rolls failed */
 	if (!ok_combat && !ok_magic) return;
 
 	/* Higher skill levels give the player better sense of items */
 	heavy_combat = (combat_lev > 10) ? TRUE : FALSE;
 	heavy_magic = (magic_lev > 10) ? TRUE : FALSE;
+	heavy_misc = ((combat_lev + magic_lev) > 20) ? TRUE : FALSE;
 
 
 	/*** Sense everything ***/
@@ -402,7 +482,8 @@ static void sense_inventory(void)
 		if (!o_ptr->k_idx) continue;
 
 		/* Valid "tval" codes */
-		okay = select_sense(o_ptr, ok_combat, ok_magic);
+		okay = select_sense(o_ptr, ok_combat, ok_magic, ok_misc);
+		/* 1 = combat, 2 = magic, 3 = misc */
 
 		/* Skip non-sense machines */
 		if (!okay) continue;
@@ -421,9 +502,13 @@ static void sense_inventory(void)
 		{
 			feel = (heavy_combat ? value_check_aux1(o_ptr) : value_check_aux2(o_ptr));
 		}
-		else
+		else if (okay == 2)
 		{
 			feel = (heavy_magic ? value_check_aux1_magic(o_ptr) : value_check_aux2_magic(o_ptr));
+		}
+		else if (okay == 3)
+		{
+			feel = (heavy_misc ? value_check_aux1_misc(o_ptr) : value_check_aux2_misc(o_ptr));
 		}
 
 		/* Skip non-feelings */
