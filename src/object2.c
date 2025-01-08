@@ -2077,6 +2077,9 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 		{
 			if (o_ptr->pval2 != j_ptr->pval2) return FALSE;
 
+			/* Do not combine different ego or normal ones */
+			if (ego_item_p(o_ptr) != ego_item_p(j_ptr)) return (FALSE);
+
 			/* Assume okay */
 			break;
 		}
@@ -2085,6 +2088,10 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 		{
 			if (o_ptr->pval != j_ptr->pval) return FALSE;
 			if (o_ptr->pval2 != j_ptr->pval2) return FALSE;
+
+			/* Do not combine different ego or normal ones */
+			if (ego_item_p(o_ptr) != ego_item_p(j_ptr)) return (FALSE);
+
 			break;
 		}
 
@@ -2118,6 +2125,9 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 			/* Do not combine different ego or normal ones */
 			if (o_ptr->name2b != j_ptr->name2b) return (0);
 
+			/* Do not combine different ego or normal ones */
+			if (ego_item_p(o_ptr) != ego_item_p(j_ptr)) return (FALSE);
+
 			/* Assume okay */
 			break;
 		}
@@ -2150,6 +2160,9 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 			/* Do not combine different ego or normal ones */
 			if (o_ptr->name2b != j_ptr->name2b) return (0);
 
+			/* Do not combine different ego or normal ones */
+			if (ego_item_p(o_ptr) != ego_item_p(j_ptr)) return (FALSE);
+
 			/* Assume okay */
 			break;
 		}
@@ -2157,6 +2170,9 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 		/* Rod Tips */
 	case TV_ROD:
 		{
+			/* Do not combine different ego or normal ones */
+			if (ego_item_p(o_ptr) != ego_item_p(j_ptr)) return (FALSE);
+
 			/* Probably okay */
 			break;
 		}
@@ -2293,16 +2309,21 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 			/* Require knowledge */
 			if (!object_known_p(o_ptr) || !object_known_p(j_ptr)) return (0);
 
+			/* Do not combine different ego or normal ones */
+			if (ego_item_p(o_ptr) != ego_item_p(j_ptr)) return (FALSE);
+
 			/* Probably okay */
 			break;
 		}
 	}
 
 
-	/* Hack -- Identical art_flags! */
+	/* Hack -- Identical art_flags! and once again some genius programmer forgot that there's five, not three, of those... --Amy */
 	if ((o_ptr->art_flags1 != j_ptr->art_flags1) ||
 	                (o_ptr->art_flags2 != j_ptr->art_flags2) ||
-	                (o_ptr->art_flags3 != j_ptr->art_flags3))
+	                (o_ptr->art_flags3 != j_ptr->art_flags3) ||
+	                (o_ptr->art_flags4 != j_ptr->art_flags4) ||
+	                (o_ptr->art_flags5 != j_ptr->art_flags5))
 		return (0);
 
 	/* Hack -- Require identical "cursed" status */

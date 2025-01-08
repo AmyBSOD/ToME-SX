@@ -810,13 +810,18 @@ static bool store_object_similar(object_type *o_ptr, object_type *j_ptr)
 	/* Require identical "ego-item" names */
 	if (o_ptr->name2b != j_ptr->name2b) return (0);
 
+	/* Do not combine different ego or normal ones */
+	if (ego_item_p(o_ptr) != ego_item_p(j_ptr)) return (FALSE);
+
 	/* Random artifacts don't stack !*/
 	if (o_ptr->art_name || j_ptr->art_name) return (0);
 
-	/* Hack -- Identical art_flags! */
+	/* Hack -- Identical art_flags! Amy edit: who the hell made it so that 4 and 5 aren't checked *facepalm* */
 	if ((o_ptr->art_flags1 != j_ptr->art_flags1) ||
 	                (o_ptr->art_flags2 != j_ptr->art_flags2) ||
-	                (o_ptr->art_flags3 != j_ptr->art_flags3))
+	                (o_ptr->art_flags3 != j_ptr->art_flags3) ||
+	                (o_ptr->art_flags4 != j_ptr->art_flags4) ||
+	                (o_ptr->art_flags5 != j_ptr->art_flags5))
 		return (0);
 
 	/* Hack -- Never stack "powerful" items */
