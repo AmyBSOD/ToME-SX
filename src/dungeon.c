@@ -1724,7 +1724,8 @@ static void process_world(void)
 		}
 		else if (PRACE_FLAG(PR1_SEMI_WRAITH) && (!p_ptr->wraith_form) && (f_info[cave[p_ptr->py][p_ptr->px].feat].flags1 & FF1_CAN_PASS))
 		{
-			int amt = 1 + ((p_ptr->lev) / 5);
+			/* way too strong, gotta drain more --Amy */
+			int amt = 1 + randint(p_ptr->lev);
 
 			cave_no_regen = TRUE;
 			if (amt > p_ptr->chp - 1) amt = p_ptr->chp - 1;
@@ -3057,7 +3058,7 @@ static void process_world(void)
 	if (p_ptr->drain_mana && p_ptr->csp)
 	{
 		p_ptr->csp -= p_ptr->drain_mana;
-		if (magik(30)) p_ptr->csp -= p_ptr->drain_mana;
+		if (magik(75)) p_ptr->csp -= p_ptr->drain_mana;
 
 		if (p_ptr->csp < 0)
 		{
@@ -3102,7 +3103,7 @@ static void process_world(void)
 	/* Drain Hitpoints */
 	if (p_ptr->drain_life)
 	{
-		int drain = p_ptr->drain_life + rand_int(p_ptr->mhp / 100);
+		int drain = p_ptr->drain_life + rand_int(p_ptr->mhp * p_ptr->drain_life / 40);
 
 		p_ptr->chp -= (drain < p_ptr->chp ? drain : p_ptr->chp);
 
@@ -3122,7 +3123,7 @@ static void process_world(void)
 	/* Handle experience draining */
 	if (p_ptr->exp_drain)
 	{
-		if ((rand_int(100) < 10) && (p_ptr->exp > 0))
+		if ((rand_int(100) < 50) && (p_ptr->exp > 0))
 		{
 			p_ptr->exp--;
 			p_ptr->max_exp--;
