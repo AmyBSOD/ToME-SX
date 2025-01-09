@@ -113,8 +113,8 @@ void do_cmd_change_name(void)
 	/* Forever */
 	while (1)
 	{
-		/* keep mode below 7 */
-		mode = (mode + 6) % 6;
+		/* keep mode below 9 */
+		mode = (mode + 8) % 8;
 
 		/* Display the player */
 		display_player(mode);

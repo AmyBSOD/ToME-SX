@@ -2376,7 +2376,7 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
 /*
  * Object flag names
  */
-static cptr object_flag_names[192] =
+static cptr object_flag_names[224] =
 {
 	"Add Str",
 	"Add Int",
@@ -2496,20 +2496,53 @@ static cptr object_flag_names[192] =
 	NULL,
 	NULL,
 	NULL,
-	NULL,
-	NULL,
-	NULL,
-	NULL,
+	"AntiMag50",
+	"AntiMag30",
+	"AntiMag20",
+	"AntiMag10",
 	NULL,
 	"Imm Neth",
 	NULL,
+	"Ultimate",
+	"Auto ID",
 	NULL,
 	NULL,
+	"Need Fuel",
+	"Sentient",
+	"No Drop",
 	NULL,
+
+	"Temporary",
+	"Drain Mana",
+	"Drain HP",
+	"Kill Demon",
+	"KillUndead",
+	"Critical",
+	"Shimmer",
+	"Wounding",
+	"Full Name",
+	"Luck",
+	"Immovable",
+	"Cont Spell",
+	"Res Morgul",
 	NULL,
-	NULL,
-	NULL,
-	NULL,
+	"MagBreath",
+	"WaterBreat",
+	"WieldCast",
+	"Res Water",
+	"Res Iner",
+	"Im Poison",
+	"Peacekeep",
+	"InvProtect",
+	"DeviceMast",
+	"Sav Malus",
+	"Disarm",
+	"Dodge",
+	"Lithe",
+	"Res Plasma",
+	"Res Disint",
+	"Space Time",
+	"Rpd Hunger",
 	NULL,
 
 	"Orc.ESP",
@@ -2559,7 +2592,7 @@ static void display_player_ben_one(int mode)
 
 	u32b f1, f2, f3, f4, f5, esp;
 
-	u16b b[INVEN_TOTAL - INVEN_WIELD + 1][10];
+	u16b b[INVEN_TOTAL - INVEN_WIELD + 1][12];
 
 	int d[INVEN_TOTAL - INVEN_WIELD + 1];
 
@@ -2590,8 +2623,10 @@ static void display_player_ben_one(int mode)
 		b[n][5] = (u16b)(f3 >> 16);
 		b[n][6] = (u16b)(f4 & 0xFFFF);
 		b[n][7] = (u16b)(f4 >> 16);
-		b[n][8] = (u16b)(esp & 0xFFFF);
-		b[n][9] = (u16b)(esp >> 16);
+		b[n][8] = (u16b)(f5 & 0xFFFF);
+		b[n][9] = (u16b)(f5 >> 16);
+		b[n][10] = (u16b)(esp & 0xFFFF);
+		b[n][11] = (u16b)(esp >> 16);
 		d[n] = o_ptr->pval;
 	}
 
@@ -2610,8 +2645,10 @@ static void display_player_ben_one(int mode)
 	b[n][5] = (u16b)(f3 >> 16);
 	b[n][6] = (u16b)(f4 & 0xFFFF);
 	b[n][7] = (u16b)(f4 >> 16);
-	b[n][8] = (u16b)(esp & 0xFFFF);
-	b[n][9] = (u16b)(esp >> 16);
+	b[n][8] = (u16b)(f5 & 0xFFFF);
+	b[n][9] = (u16b)(f5 >> 16);
+	b[n][10] = (u16b)(esp & 0xFFFF);
+	b[n][11] = (u16b)(esp >> 16);
 
 	/* Index */
 	n = INVEN_TOTAL - INVEN_WIELD;
@@ -2628,8 +2665,10 @@ static void display_player_ben_one(int mode)
 	b[n][5] = (u16b)(f3 >> 16);
 	b[n][6] = (u16b)(f4 & 0xFFFF);
 	b[n][7] = (u16b)(f4 >> 16);
-	b[n][8] = (u16b)(esp & 0xFFFF);
-	b[n][9] = (u16b)(esp >> 16);
+	b[n][8] = (u16b)(f5 & 0xFFFF);
+	b[n][9] = (u16b)(f5 >> 16);
+	b[n][10] = (u16b)(esp & 0xFFFF);
+	b[n][11] = (u16b)(esp >> 16);
 
 	/* Generate the equip chars */
 	sprintf(dummy, " ");
@@ -2652,20 +2691,22 @@ static void display_player_ben_one(int mode)
 		/* Scan rows */
 		for (y = 0; y < 16; y++)
 		{
-			if (mode == 3 && x == 1)
+			/*if (mode == 4 && x == 1)
 			{
-				modetemp = 4;
+				modetemp = 5;
 				xtemp = 0;
 			}
-			else
+			else*/
 			{
 				modetemp = mode;
 				xtemp = x;
 			}
 
+			/*msg_format("mode %d, modetemp %d", mode, modetemp);*/
+
 			for (z = mode; z <= modetemp; z++)
 			{
-				if (mode == 3 && x == 1 && z == modetemp) xtemp = 1;
+				/*if (mode == 4 && x == 1 && z == modetemp) xtemp = 1;*/
 				name = object_flag_names[32 * modetemp + 16 * xtemp + y];
 				got = FALSE;
 
@@ -2701,6 +2742,40 @@ static void display_player_ben_one(int mode)
 						{
 							c = '*';
 						}
+						else if (modetemp == 4 && x == 0 && (y == 5 || y == 9) )
+						{
+							if (n == INVEN_TOTAL - INVEN_WIELD)
+							{
+								c = '+';
+							}
+							else
+							{
+								c = d[n];
+								if (c < 0)
+								{
+									c = -c;
+									a = TERM_RED;
+								}
+								c = (c > 9 ? '*' : I2D(c));
+							}
+						}
+						else if (modetemp == 4 && x == 1 && (y >= 8 && y <= 9) )
+						{
+							if (n == INVEN_TOTAL - INVEN_WIELD)
+							{
+								c = '+';
+							}
+							else
+							{
+								c = d[n];
+								if (c < 0)
+								{
+									c = -c;
+									a = TERM_RED;
+								}
+								c = (c > 9 ? '*' : I2D(c));
+							}
+						}
 						else if (modetemp == 0 && x == 0 && y < 14 && (y < 6 || y > 7))
 						{
 							if (n == INVEN_TOTAL - INVEN_WIELD)
@@ -2730,6 +2805,16 @@ static void display_player_ben_one(int mode)
 					if (modetemp == 1 && x == 1 && y == 12)
 					{
 						if (b[n][7] & (1 << 6))
+						{
+							a = (is_green ? TERM_L_GREEN : TERM_WHITE);
+							c = '*';
+							got = TRUE;
+						}
+					}
+
+					if (modetemp == 1 && x == 1 && y == 4)
+					{
+						if (b[n][9] & (1 << 3))
 						{
 							a = (is_green ? TERM_L_GREEN : TERM_WHITE);
 							c = '*';
@@ -2804,7 +2889,8 @@ static void display_player_ben_one(int mode)
  * Mode 3 = current flags (part 2)
  * Mode 4 = current flags (part 3)
  * Mode 5 = current flags (part 4)
- * Mode 6 = current flags (part 5 -- esp)
+ * Mode 6 = current flags (part 5)
+ * Mode 7 = current flags (part 6 -- esp)
  */
 void display_player(int mode)
 {
@@ -3489,6 +3575,14 @@ errr file_character(cptr name, bool full)
 
 	/* a little bit of stuff */
 	display_player (5);
+	file_character_print_grid(fff, FALSE, FALSE);
+
+	/* another little bit of stuff */
+	display_player (6);
+	file_character_print_grid(fff, FALSE, FALSE);
+
+	/* another little bit of stuff */
+	display_player (7);
 	file_character_print_grid(fff, FALSE, FALSE);
 
 	/* Dump corruptions */
