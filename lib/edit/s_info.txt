@@ -267,8 +267,8 @@ I:1000
 F:RANDOM_GAIN
 
 N:71:Two-handed
-D:Ability to use a two-handed weapon
-D:Requires you to wield a weapon that must be used with both hands
+D:Ability to use a two-handed weapon, good for dedicated two-handers
+D:One-and-a-half-handed weapons give lesser bonuses
 I:1000
 F:RANDOM_GAIN
 

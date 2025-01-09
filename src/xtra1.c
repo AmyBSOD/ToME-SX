@@ -2487,6 +2487,60 @@ bool are_two_handed()
 
 }
 
+/* Are all the weapons wielded of one-and-a-half-handed type and the player not wearing a shield ? */
+bool are_onehalf_handed()
+{
+	int i, skill = 0;
+	object_type *o_ptr;
+
+	u32b f1, f2, f3, f4, f5, esp;
+
+	i = 0;
+	/* All weapons must be two-handed */
+	while ((p_ptr->body_parts[i] == INVEN_WIELD) && (i < INVEN_TOTAL))
+	{
+		o_ptr = &p_ptr->inventory[INVEN_WIELD + i];
+
+		/* is any slot wielding a shield? then automatically return FALSE */
+		if (p_ptr->inventory[INVEN_ARM + i].k_idx) {
+			return FALSE;
+		}
+
+		if (!o_ptr->k_idx)
+		{
+			i++;
+			continue;
+		}
+
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
+		switch (o_ptr->tval)
+		{
+		case TV_DAEMON_BOOK:
+			if (o_ptr->sval != SV_DEMONBLADE) {
+				break;
+			} /* else it's a demonblade in which case we fall through --Amy */
+		case TV_SWORD:
+		case TV_AXE:
+		case TV_HAFTED:
+		case TV_POLEARM:
+		case TV_MSTAFF:
+
+			if (f4 & TR4_COULD2H) {
+				if ((!skill) || (skill == 1)) skill = 1;
+			}
+			else skill = -1;
+			break;
+		}
+		i++;
+	}
+
+	if (skill != 1) return FALSE;
+
+	return TRUE;
+
+}
+
 /* Are all the ranged weapons wielded of the right type ? */
 int get_archery_skill()
 {
@@ -4161,6 +4215,15 @@ void calc_bonuses(bool silent)
 		p_ptr->to_h_melee += lev / 5;
 		p_ptr->to_a += lev / 10;
 		p_ptr->dis_to_a += lev / 10;
+	}
+
+	if (are_onehalf_handed() && (p_ptr->melee_style == SKILL_MASTERY) )
+	{
+		int lev = get_skill(SKILL_TWO_HANDED);
+		p_ptr->to_d_melee += lev / 5;
+		p_ptr->to_h_melee += lev / 10;
+		p_ptr->to_a += lev / 25;
+		p_ptr->dis_to_a += lev / 25;
 	}
 
 	if (get_skill(SKILL_COMBAT))
