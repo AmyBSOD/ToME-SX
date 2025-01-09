@@ -3834,6 +3834,7 @@ void do_cmd_fire(void)
 			        PROJECT_JUMP;
 			switch (q_ptr->sval)
 			{
+			/* note by Amy: that is a *terrible* way of checking this, using the sval for different tvals and expecting them to have the same meaning... */
 			case SV_AMMO_LIGHT:
 				rad = 2;
 				dam /= 2;
@@ -3846,7 +3847,57 @@ void do_cmd_fire(void)
 				rad = 4;
 				dam *= 2;
 				break;
+			case 3:
+				if (q_ptr->tval == TV_ARROW) { /* silver arrow */
+					rad = 4;
+					dam *= 2;
+					break;
+				}
+				if (q_ptr->tval == TV_BOLT) { /* silver bolt */
+					rad = 4;
+					dam *= 2;
+					break;
+				}
+				break;
+			case 4:
+				if (q_ptr->tval == TV_SHOT) { /* conundrum shot */
+					rad = 4;
+					dam *= 2;
+					break;
+				}
+				break;
+			case 8:
+				if (q_ptr->tval == TV_ARROW) { /* mithril arrow */
+					rad = 4;
+					dam *= 2;
+					break;
+				}
+				break;
+			case 9:
+				if (q_ptr->tval == TV_BOLT) { /* mithril bolt */
+					rad = 4;
+					dam *= 5;
+					dam /= 2;
+					break;
+				}
+				break;
+			case 10:
+				if (q_ptr->tval == TV_BOLT) { /* AP bolt */
+					rad = 4;
+					dam *= 3;
+					break;
+				}
+				break;
+			case 11:
+				if (q_ptr->tval == TV_BOLT) { /* adamantine bolt */
+					rad = 4;
+					dam *= 3;
+					break;
+				}
+				break;
+
 			}
+		
 
 			project(0, rad, y, x, dam, q_ptr->pval2, flag);
 		}

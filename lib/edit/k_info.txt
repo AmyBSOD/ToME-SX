@@ -7844,7 +7844,7 @@ I:19:45:0
 W:30:0:500:10000
 A:30/60
 F:SHOW_MODS
-D:With this bulky rifle, you can fire bullets over a square of up to
+D:With this bulky rifle, you can fire bullets over a distance of up to
 D:15 squares and deal substantial damage to the enemy.
 
 N:968:& Mosin-Nagant~
