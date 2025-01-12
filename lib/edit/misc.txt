@@ -58,7 +58,7 @@ M:U:354
 M:W:42
 
 # Maximum number of owners types in ow_info.txt
-M:N:70
+M:N:142
 
 # Maximum number of building actions in ba_info.txt
 M:B:62
