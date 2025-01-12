@@ -1687,11 +1687,13 @@ void object_desc(char *buf, object_type *o_ptr, int pref, int mode)
 				basenm = "& Rod Tip~";
 			else
 				basenm = aware ? "& # Rod Tip~" : "& # Rod Tip~";
-			if (o_ptr->sval == SV_ROD_HOME)
+
+			/* unnecessary, since that thing *rightfully* isn't an artifact anymore --Amy */
+			/*if (o_ptr->sval == SV_ROD_HOME)
 			{
 				basenm = "& Great Rod Tip~ of Home Summoning";
 				hack_name = TRUE;
-			}
+			}*/
 			break;
 		}
 
