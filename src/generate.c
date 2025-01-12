@@ -2156,6 +2156,16 @@ static void build_type1(int by0, int bx0)
 	y2 = rand_range(1, 3);
 	x2 = rand_range(1, 9);
 
+	if (randint(40) == 1) y1 += randint(4);
+	if (randint(40) == 1) y2 += randint(4);
+	if (randint(40) == 1) x1 += randint(9);
+	if (randint(40) == 1) x2 += randint(9);
+
+	if (randint(500) == 1) y1 += randint(10);
+	if (randint(500) == 1) y2 += randint(10);
+	if (randint(500) == 1) x1 += randint(20);
+	if (randint(500) == 1) x2 += randint(20);
+
 	xsize = x1 + x2;
 	ysize = y1 + y2;
 
@@ -4115,10 +4125,38 @@ static void build_vault(int yval, int xval, int ymax, int xmax, cptr data)
 					break;
 				}
 
+				/* Tree */
+			case 'T':
+				{
+					cave_set_feat(y, x, FEAT_TREES);
+					break;
+				}
+
+				/* Deep water */
+			case 'x':
+				{
+					cave_set_feat(y, x, FEAT_DEEP_WATER);
+					break;
+				}
+
+				/* Deep lava */
+			case '~':
+				{
+					cave_set_feat(y, x, FEAT_DEEP_LAVA);
+					break;
+				}
+
 				/* Illusion wall */
 			case 'I':
 				{
 					cave_set_feat(y, x, FEAT_ILLUS_WALL);
+					break;
+				}
+
+				/* Ice wall */
+			case 'i':
+				{
+					cave_set_feat(y, x, FEAT_ICE_WALL);
 					break;
 				}
 			}
@@ -4200,6 +4238,11 @@ static void build_vault(int yval, int xval, int ymax, int xmax, cptr data)
 						place_object(y, x, FALSE, FALSE, OBJ_FOUND_VAULT);
 						object_level = dun_level;
 					}
+					break;
+				}
+			case '$': /* gold */
+				{
+					place_gold(y, x);
 					break;
 				}
 
@@ -4298,23 +4341,20 @@ static void build_type7(int by0, int bx0)
 	vault_type *v_ptr = NULL;
 	int dummy = 0, xval, yval;
 
+	int vaultnumber = 0;
+
 	/* Pick a lesser vault */
 	while (dummy < SAFE_MAX_ATTEMPTS)
 	{
 		dummy++;
 
+		vaultnumber = rand_int(max_v_idx);
+
 		/* Access a random vault record */
-		v_ptr = &v_info[rand_int(max_v_idx)];
+		v_ptr = &v_info[vaultnumber];
 
 		/* Accept the first lesser vault */
 		if (v_ptr->typ == 7) break;
-	}
-
-	/* Try to allocate space for room.  If fails, exit */
-	if (!room_alloc(v_ptr->wid, v_ptr->hgt, FALSE, by0, bx0, &xval, &yval))
-	{
-		if (cheat_room) msg_print("Could not allocate this vault here");
-		return;
 	}
 
 	if (dummy >= SAFE_MAX_ATTEMPTS)
@@ -4326,13 +4366,23 @@ static void build_type7(int by0, int bx0)
 		return;
 	}
 
+	char *vaultname = v_name + v_ptr->name;
+
+	/* Try to allocate space for room.  If fails, exit */
+	if (!room_alloc(v_ptr->wid, v_ptr->hgt, FALSE, by0, bx0, &xval, &yval))
+	{
+		if (cheat_room) msg_format("Could not allocate lesser vault %d here", vaultnumber);
+		return;
+	}
+
+
 
 #ifdef FORCE_V_IDX
 	v_ptr = &v_info[FORCE_V_IDX];
 #endif
 
 	/* Message */
-	if (cheat_room || p_ptr->precognition) msg_print("Lesser Vault");
+	if (cheat_room || p_ptr->precognition) msg_format("Lesser Vault '%s'", vaultname);
 
 	/* Boost the rating */
 	rating += v_ptr->rat;
@@ -4358,23 +4408,20 @@ static void build_type8(int by0, int bx0)
 	vault_type *v_ptr = NULL;
 	int dummy = 0, xval, yval;
 
-	/* Pick a lesser vault */
+	int vaultnumber = 0;
+
+	/* Pick a greater vault */
 	while (dummy < SAFE_MAX_ATTEMPTS)
 	{
 		dummy++;
 
+		vaultnumber = rand_int(max_v_idx);
+
 		/* Access a random vault record */
-		v_ptr = &v_info[rand_int(max_v_idx)];
+		v_ptr = &v_info[vaultnumber];
 
 		/* Accept the first greater vault */
 		if (v_ptr->typ == 8) break;
-	}
-
-	/* Try to allocate space for room.  If fails, exit */
-	if (!room_alloc(v_ptr->wid, v_ptr->hgt, FALSE, by0, bx0, &xval, &yval))
-	{
-		if (cheat_room) msg_print("Could not allocate this vault here");
-		return;
 	}
 
 	if (dummy >= SAFE_MAX_ATTEMPTS)
@@ -4386,13 +4433,21 @@ static void build_type8(int by0, int bx0)
 		return;
 	}
 
+	char *vaultname = v_name + v_ptr->name;
+
+	/* Try to allocate space for room.  If fails, exit */
+	if (!room_alloc(v_ptr->wid, v_ptr->hgt, FALSE, by0, bx0, &xval, &yval))
+	{
+		if (cheat_room) msg_format("Could not allocate greater vault %d here", vaultnumber);
+		return;
+	}
 
 #ifdef FORCE_V_IDX
 	v_ptr = &v_info[FORCE_V_IDX];
 #endif
 
 	/* Message */
-	if (cheat_room || p_ptr->precognition) msg_print("Greater Vault");
+	if (cheat_room || p_ptr->precognition) msg_format("Greater Vault '%s'", vaultname);
 
 	/* Boost the rating */
 	rating += v_ptr->rat;
@@ -4422,6 +4477,9 @@ static void build_type9(int by0, int bx0)
 	int rad, x, y, x0, y0;
 
 	rad = 2 + rand_int(8);
+
+	if (randint(20) == 1) rad += randint(7);
+	if (randint(250) == 1) rad += randint(15);
 
 	/* Try to allocate space for room.  If fails, exit */
 	if (!room_alloc(rad*2 + 1, rad*2 + 1, FALSE, by0, bx0, &x0, &y0)) return;
