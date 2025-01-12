@@ -569,6 +569,7 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY108:
 		case TRAP_NASTY109:
 		case TRAP_NASTY110:
+		case TRAP_NASTY111:
 			return FALSE;
 	}
 
@@ -691,6 +692,7 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY108:
 		case TRAP_NASTY109:
 		case TRAP_NASTY110:
+		case TRAP_NASTY111:
 			return FALSE;
 	}
 
@@ -4932,6 +4934,18 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY111:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap111 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHOES:
 	case TRAP_OF_SHOES_II:
 	case TRAP_OF_SHOES_III:
@@ -5062,6 +5076,16 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		ident = player_handle_missile_trap(1, TV_SWORD, SV_DAGGER, 3, 4, randint(30), "Poison Dagger Trap");
 		break;
 
+	case TRAP_OF_PISTOL:
+		ident = player_handle_missile_trap(1, TV_AMMO_PISTOL, SV_AMMO_NORMAL, 5, 10, 0, "Pistol Trap");
+		break;
+	case TRAP_OF_RIFLE:
+		ident = player_handle_missile_trap(1, TV_AMMO_RIFLE, SV_AMMO_NORMAL, 6, 11, 0, "Pistol Trap");
+		break;
+	case TRAP_OF_SHOTGUN:
+		ident = player_handle_missile_trap(1, TV_AMMO_SHOTGUN, SV_AMMO_NORMAL, 3, 25, 0, "Shotgun Trap");
+		break;
+
 		/*
 		 * multiple missile traps
 		 * numbers range from 2 (level 0 to 14) to 10 (level 120 and up)
@@ -5102,6 +5126,13 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		break;
 	case TRAP_OF_POISON_DAGGERS_II:
 		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SWORD, SV_DAGGER, 3, 4, randint(30), "Poison Dagger Trap");
+		break;
+
+	case TRAP_OF_SMG:
+		ident = player_handle_missile_trap(3 + (max_dlv_real[dungeon_type] / 50), TV_AMMO_SMG, SV_AMMO_NORMAL, 4, 11, 0, "SMG Trap");
+		break;
+	case TRAP_OF_ASSAULT:
+		ident = player_handle_missile_trap(4 + (max_dlv_real[dungeon_type] / 50), TV_AMMO_ASSAULT, SV_AMMO_NORMAL, 4, 12, 0, "Assault Trap");
 		break;
 
 	case TRAP_OF_DROP_ITEMS:
@@ -7325,7 +7356,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(110)) {
+	switch (randint(111)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -7655,6 +7686,9 @@ void give_random_nastytrap_effect(void)
 			break;
 		case 110:
 			p_ptr->nastytrap110 = TRUE;
+			break;
+		case 111:
+			p_ptr->nastytrap111 = TRUE;
 			break;
 
 	}

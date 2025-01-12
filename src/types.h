@@ -2006,7 +2006,7 @@ struct player_type
 	bool nastytrap108; /* no home trap - you cannot access your home */
 	bool nastytrap109; /* spell failure trap - all spells have 25% autofail */
 	bool nastytrap110; /* totter trap - your directional keys are inverted */
-	bool nastytrap111;
+	bool nastytrap111; /* bad healing trap - all effects that heal the player's HP are halved */
 	bool nastytrap112;
 	bool nastytrap113;
 	bool nastytrap114;

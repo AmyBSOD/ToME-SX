@@ -95,6 +95,8 @@ bool hp_player(int num)
 {
 	bool dead = p_ptr->chp < 0;
 
+	if (p_ptr->nastytrap111 && (num > 1)) num /= 2;
+
 	/* Healing needed */
 	if (p_ptr->chp < p_ptr->mhp)
 	{
@@ -2033,6 +2035,10 @@ void self_knowledge(FILE *fff)
 	if (p_ptr->nastytrap110)
 	{
 		info[i++] = "You have a problem: Your directional keys are inverted.";
+	}
+	if (p_ptr->nastytrap111)
+	{
+		info[i++] = "You have a problem: Healing effects heal you by a lower amount.";
 	}
 
 	/* Access the current weapon */

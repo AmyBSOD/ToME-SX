@@ -2803,6 +2803,14 @@
 #define TRAP_NASTY109                     352
 #define TRAP_NASTY110                     353
 
+#define TRAP_OF_PISTOL                    354
+#define TRAP_OF_RIFLE                     355
+#define TRAP_OF_SHOTGUN                   356
+#define TRAP_OF_SMG                       357
+#define TRAP_OF_ASSAULT                   358
+
+#define TRAP_NASTY111                     359
+
 /*** General index values ***/
 
 

@@ -1712,6 +1712,36 @@ I:70:2:50:4:50:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:354:Pistol Trap
+I:8:100:0:7:8:0d0:R
+D:A pistol shoots at you!
+F:FLOOR | CHEST | DOOR
+
+N:355:Rifle Trap
+I:10:100:0:7:10:0d0:R
+D:A rifle shoots at you!
+F:FLOOR | CHEST | DOOR
+
+N:356:Shotgun Trap
+I:20:100:0:7:20:0d0:R
+D:A shotgun shoots at you!
+F:FLOOR | CHEST | DOOR
+
+N:357:SMG Trap
+I:25:100:0:7:25:0d0:R
+D:A submachine gun shoots at you!
+F:FLOOR | CHEST | DOOR
+
+N:358:Assault Trap
+I:40:100:0:7:40:0d0:R
+D:An assault rifle shoots at you!
+F:FLOOR | CHEST | DOOR
+
+N:359:Bad Healing Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 
