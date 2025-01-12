@@ -2081,6 +2081,11 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
 			(*esp) |= rmp_ptr->oesp[i];
 		}
 	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Valar")) (*esp) |= ESP_ALL;
+	if (p_ptr->mimic_form == resolve_mimic_name("Insect")) (*esp) |= ESP_ANIMAL;
+	if (p_ptr->mimic_form == resolve_mimic_name("Cold Cloud")) (*esp) |= ESP_EVIL;
+
 #if 0 /* DGDGDG? */
 	else if (p_ptr->mimic_form)
 	{

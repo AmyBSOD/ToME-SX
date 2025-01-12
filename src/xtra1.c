@@ -1657,6 +1657,47 @@ static void calc_powers(void)
 		p_ptr->powers[p] = TRUE;
 	}
 
+	if (p_ptr->mimic_form == resolve_mimic_name("Vampirism")) {
+		p = PWR_VAMPIRISM;
+		p_ptr->powers[p] = TRUE;
+	}
+	if (p_ptr->mimic_form == resolve_mimic_name("Mana Ball")) {
+		p = PWR_VTELEPORT;
+		p_ptr->powers[p] = TRUE;
+	}
+	if (p_ptr->mimic_form == resolve_mimic_name("Fire Cloud")) {
+		p = PWR_BR_FIRE;
+		p_ptr->powers[p] = TRUE;
+	}
+	if (p_ptr->mimic_form == resolve_mimic_name("Demon")) {
+		p = PWR_BR_FIRE;
+		p_ptr->powers[p] = TRUE;
+	}
+	if (p_ptr->mimic_form == resolve_mimic_name("Cold Cloud")) {
+		p = PWR_BR_COLD;
+		p_ptr->powers[p] = TRUE;
+	}
+	if (p_ptr->mimic_form == resolve_mimic_name("Chaos Cloud")) {
+		p = PWR_BR_CHAOS;
+		p_ptr->powers[p] = TRUE;
+	}
+	if (p_ptr->mimic_form == resolve_mimic_name("Quylthulg")) {
+		p = PWR_SUMMON_MONSTER;
+		p_ptr->powers[p] = TRUE;
+	}
+	if (p_ptr->mimic_form == resolve_mimic_name("Kobold")) {
+		p = PWR_POIS_DART;
+		p_ptr->powers[p] = TRUE;
+	}
+	if (p_ptr->mimic_form == resolve_mimic_name("Dragon")) {
+		p = PWR_BR_ELEM;
+		p_ptr->powers[p] = TRUE;
+	}
+	if (p_ptr->mimic_form == resolve_mimic_name("Valar")) {
+		p = PWR_WRECK_WORLD;
+		p_ptr->powers[p] = TRUE;
+	}
+
 	if (p_ptr->disembodied)
 	{
 		p = PWR_INCARNATE;
@@ -2722,6 +2763,11 @@ void calc_gods()
 		if (p_ptr->grace > 50000) p_ptr->stat_add[A_WIS] += 1;
 
 		if (p_ptr->grace < 0) p_ptr->aggravate = TRUE;
+		PRAY_GOD(GOD_AMYBSOD)
+		{
+			if (p_ptr->grace > 60000) p_ptr->immune_acid = TRUE;
+			if (p_ptr->grace > 90000) p_ptr->resist_disen = TRUE;
+		}
 
 	}
 
@@ -3302,7 +3348,11 @@ void calc_bonuses(bool silent)
 	if (get_skill(SKILL_VALARIN) >= 50) p_ptr->resist_lite = TRUE;
 	if (get_skill(SKILL_NETHER) >= 50) p_ptr->resist_neth = TRUE;
 
-	if ( get_skill(SKILL_MINDCRAFT) >= 75 ) p_ptr->telepathy = ESP_ALL;
+	if ( get_skill(SKILL_MINDCRAFT) >= 75 ) p_ptr->telepathy |= ESP_ALL;
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Valar")) p_ptr->telepathy |= ESP_ALL;
+	if (p_ptr->mimic_form == resolve_mimic_name("Insect")) p_ptr->telepathy |= ESP_ANIMAL;
+	if (p_ptr->mimic_form == resolve_mimic_name("Cold Cloud")) p_ptr->telepathy |= ESP_EVIL;
 
 	if (p_ptr->astral)
 	{

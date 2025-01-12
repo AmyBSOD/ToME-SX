@@ -42,7 +42,7 @@ extern byte adj_str_td[];
 extern byte adj_dex_th[];
 extern byte adj_str_th[];
 extern byte adj_str_wgt[];
-extern byte adj_str_hold[];
+extern u32b adj_str_hold[];
 extern byte adj_str_dig[];
 extern byte adj_str_blow[];
 extern byte adj_dex_blow[];

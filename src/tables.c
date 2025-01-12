@@ -699,7 +699,7 @@ byte adj_str_wgt[] =
 /*
  * Stat Table (STR) -- weapon weight limit in pounds
  */
-byte adj_str_hold[] =
+u32b adj_str_hold[] =
 {
 	4       /* 3 */,
 	5       /* 4 */,
@@ -3655,7 +3655,7 @@ power_type powers_type_init[POWER_MAX_INIT] =
 		"You can call upon monsters.",
 		"You gain the ability to call upon monsters.",
 		"You lose the ability to call upon monsters.",
-		0, 0, 0, 0,
+		0, 200, 0, 0,
 	},
 	{
 		"necromantic powers",

@@ -1755,7 +1755,7 @@ extern byte adj_str_wgt[100];
  * @brief Number
  * @note Stat Table (STR) -- weapon weight limit in pounds
  */
-extern byte adj_str_hold[100];
+extern u32b adj_str_hold[100];
 
 /** @var adj_str_dig[100]
  * @brief Number

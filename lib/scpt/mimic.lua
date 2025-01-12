@@ -69,6 +69,578 @@ add_mimic_shape
 
 add_mimic_shape
 {
+	["name"] =      "Goat",
+	["obj_name"] =  "Goat Garment",
+	["desc"] = 	"Goats are somewhat strong and can subsist on little food.",
+	["realm"] =     "nature",
+	["level"] =     15,
+	["rarity"] =    10,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.slow_digest = TRUE
+			player.modify_stat(A_STR, 2)
+			player.modify_stat(A_INT, -10)
+			player.modify_stat(A_CHR, -6)
+
+			player.pspeed = player.pspeed + 1 + (player.mimic_level / 15)
+			player.skill_srh = player.skill_srh + 1 + (player.mimic_level / 10)
+			player.skill_fos = player.skill_fos + (player.mimic_level / 20)
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Insect",
+	["obj_name"] =  "Insect Husk",
+	["desc"] = 	"Insects are smart and fast, and can sense the presence of other insects.",
+	["realm"] =     "nature",
+	["level"] =     10,
+	["rarity"] =    10,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, -10)
+			player.modify_stat(A_INT, 5 + (player.mimic_level / 10))
+			player.modify_stat(A_WIS, 5 + (player.mimic_level / 10))
+			player.modify_stat(A_CON, -15)
+			player.modify_stat(A_CHR, -12)
+			player.pspeed = player.pspeed + 4 + (player.mimic_level / 9)
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Ape",
+	["obj_name"] =  "Ape Hide",
+	["desc"] = 	"Apes are pretty dextrous.",
+	["realm"] =     "nature",
+	["level"] =     15,
+	["rarity"] =    10,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, 1 + (player.mimic_level / 12))
+			player.modify_stat(A_INT, -8)
+			player.modify_stat(A_CHR, -5)
+			player.modify_stat(A_DEX, 7 + (player.mimic_level / 5))
+			player.to_h_ranged = player.to_h_ranged + (14 + (player.mimic_level / 10))
+			player.to_h = player.to_h + (14 + (player.mimic_level / 10))
+			player.skill_sav = player.skill_sav - 4
+			player.skill_stl = player.skill_stl - 5
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Sparrow",
+	["obj_name"] =  "Sparrow Feathers",
+	["desc"] = 	"Sparrows can fly and are fast.",
+	["realm"] =     "nature",
+	["level"] =     20,
+	["rarity"] =    15,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, -8)
+			player.modify_stat(A_INT, -4)
+			player.modify_stat(A_WIS, -4)
+			player.modify_stat(A_CON, -4)
+			player.modify_stat(A_CHR, 6 + (player.mimic_level / 10))
+			player.pspeed = player.pspeed + 3 + (player.mimic_level / 7)
+			player.fly = TRUE
+			player.skill_dis = player.skill_dis - 3
+			player.skill_dev = player.skill_dev - 2
+			player.skill_dig = player.skill_dig - 2
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Vampire",
+	["obj_name"] =  "Opera Cloak",
+	["desc"] = 	"Vampires are undead and suck blood.",
+	["realm"] =     "nature",
+	["level"] =     30,
+	["rarity"] =    50,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, 2)
+			player.modify_stat(A_INT, 4)
+			player.modify_stat(A_WIS, -12)
+			player.modify_stat(A_DEX, 5)
+			player.modify_stat(A_CON, 3)
+			player.modify_stat(A_CHR, -15)
+			player.hold_life = TRUE
+			player.resist_dark = TRUE
+			player.sensible_fire = TRUE
+			player.sensible_lite = TRUE
+			if player.mimic_level >= 10 then player.resist_blind = TRUE end
+			if player.mimic_level >= 15 then player.resist_nexus = TRUE end
+			player.lite = TRUE
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Mana Ball",
+	["obj_name"] =  "Mana Veil",
+	["desc"] = 	"Mana balls are barely substantial.",
+	["realm"] =     "nature",
+	["level"] =     35,
+	["rarity"] =    70,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, -8)
+			player.modify_stat(A_INT, 8 + (player.mimic_level / 12))
+			player.modify_stat(A_WIS, 4 + (player.mimic_level / 15))
+			player.modify_stat(A_DEX, 8 + (player.mimic_level / 12))
+			player.modify_stat(A_CON, -15)
+			player.modify_stat(A_CHR, -15)
+			player.ffall = TRUE
+			player.invis = player.invis + (10 + (player.mimic_level / 4))
+			player.to_s = player.to_s + 1
+			player.teleport = TRUE
+			if player.mimic_level >= 25 then player.resist_disen = TRUE end
+			player.skill_dis = player.skill_dis - 10
+			player.skill_srh = player.skill_srh - 5
+			player.skill_fos = player.skill_fos - 10
+			player.skill_dig = player.skill_dig - 25
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Fire Cloud",
+	["obj_name"] =  "Fire Mantle",
+	["desc"] = 	"A cloud made of pure fire.",
+	["realm"] =     "nature",
+	["level"] =     30,
+	["rarity"] =    50,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, -8)
+			player.modify_stat(A_DEX, 6 + (player.mimic_level / 12))
+			player.modify_stat(A_CON, -5)
+			player.modify_stat(A_CHR, -8)
+			player.resist_lite = TRUE
+			player.immune_fire = TRUE
+			player.sh_fire = TRUE
+			player.skill_dis = player.skill_dis - 10
+			player.skill_srh = player.skill_srh - 5
+			player.skill_fos = player.skill_fos - 10
+			player.skill_dig = player.skill_dig - 25
+			player.to_h = player.to_h - 10
+			player.dis_to_h = player.dis_to_h - 10
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Cold Cloud",
+	["obj_name"] =  "Ice Mantle",
+	["desc"] = 	"A cloud made of ice.",
+	["realm"] =     "nature",
+	["level"] =     30,
+	["rarity"] =    50,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, -8)
+			player.modify_stat(A_DEX, 6 + (player.mimic_level / 12))
+			player.modify_stat(A_CON, 1)
+			player.modify_stat(A_CHR, -8)
+			player.resist_lite = TRUE
+			player.immune_cold = TRUE
+			player.sh_elec = TRUE
+			player.regenerate = TRUE
+			player.skill_dis = player.skill_dis - 10
+			player.skill_srh = player.skill_srh - 5
+			player.skill_fos = player.skill_fos - 10
+			player.skill_dig = player.skill_dig - 25
+			player.sensible_fire = TRUE
+			player.to_h = player.to_h - 15
+			player.dis_to_h = player.dis_to_h - 15
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Chaos Cloud",
+	["obj_name"] =  "Chaos Overgarment",
+	["desc"] = 	"A cloud made of pure chaos.",
+	["realm"] =     "nature",
+	["level"] =     25,
+	["rarity"] =    60,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, 2)
+			player.modify_stat(A_DEX, 6 + (player.mimic_level / 12))
+			player.modify_stat(A_CON, 1)
+			player.modify_stat(A_CHR, 2)
+			player.modify_stat(A_INT, 1)
+			player.modify_stat(A_WIS, 1)
+			player.resist_disen = TRUE
+			player.resist_lite = TRUE
+			player.resist_chaos = TRUE
+			player.immune_cold = TRUE
+			player.immune_fire = TRUE
+			player.sh_elec = TRUE
+			player.sh_fire = TRUE
+			player.skill_dis = player.skill_dis - 20
+			player.skill_srh = player.skill_srh - 10
+			player.skill_fos = player.skill_fos - 20
+			player.skill_dig = player.skill_dig - 40
+			player.to_h = player.to_h - 40
+			player.dis_to_h = player.dis_to_h - 40
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Ghost",
+	["obj_name"] =  "Ghost Veil",
+	["desc"] = 	"Ghosts are undead beings who walk through walls.",
+	["realm"] =     "nature",
+	["level"] =     20,
+	["rarity"] =    80,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, -20)
+			player.modify_stat(A_INT, 1)
+			player.modify_stat(A_WIS, 1)
+			player.modify_stat(A_DEX, 6 + (player.mimic_level / 12))
+			player.modify_stat(A_CON, 2)
+			player.modify_stat(A_CHR, -20)
+			player.wraith_form = TRUE
+			player.hold_life = TRUE
+			player.skill_dev = player.skill_dev - 3
+			player.to_d = player.to_d - 10
+			player.dis_to_d = player.dis_to_d - 10
+			player.exp_drain = TRUE
+			player.drain_mana = player.drain_mana + 2
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Kobold",
+	["obj_name"] =  "Kobold Cape",
+	["desc"] = 	"Kobolds resist poison and are physically strong.",
+	["realm"] =     "nature",
+	["level"] =     20,
+	["rarity"] =    30,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, 3 + (player.mimic_level / 15))
+			player.modify_stat(A_INT, -15)
+			player.modify_stat(A_WIS, -10)
+			player.modify_stat(A_CON, 3 + (player.mimic_level / 15))
+			player.modify_stat(A_CHR, -10)
+			player.resist_pois = TRUE
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Dragon",
+	["obj_name"] =  "Dragon Scales",
+	["desc"] = 	"Dragons fly and breathe the elements.",
+	["realm"] =     "nature",
+	["level"] =     35,
+	["rarity"] =    75,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, 6 + (player.mimic_level / 10))
+			player.modify_stat(A_INT, 1)
+			player.modify_stat(A_WIS, 1)
+			player.modify_stat(A_DEX, -15)
+			player.modify_stat(A_CON, 6 + (player.mimic_level / 10))
+			player.modify_stat(A_CHR, -20)
+			if player.mimic_level >= 20 then player.fly = TRUE end
+			player.resist_fire = TRUE
+			player.resist_cold = TRUE
+			player.resist_elec = TRUE
+			if player.mimic_level >= 25 then player.resist_dark = TRUE end
+			if player.mimic_level >= 30 then player.num_blow = player.num_blow + 1 end
+			if player.mimic_level >= 60 then player.num_blow = player.num_blow + 1 end
+			player.skill_dis = player.skill_dis - 10
+			player.skill_sav = player.skill_sav - 5
+			player.skill_stl = player.skill_stl - 25
+			player.to_h_ranged = player.to_h_ranged - 12
+			player.to_d_ranged = player.to_d_ranged - 5
+			player.rapid_hunger = TRUE
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Demon",
+	["obj_name"] =  "Demon Coat",
+	["desc"] = 	"Demons breathe fire and wreck their enemy.",
+	["realm"] =     "nature",
+	["level"] =     45,
+	["rarity"] =    90,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, 2)
+			player.modify_stat(A_INT, 4 + (player.mimic_level / 15))
+			player.modify_stat(A_WIS, -30)
+			player.modify_stat(A_DEX, 6 + (player.mimic_level / 11))
+			player.modify_stat(A_CON, 6 + (player.mimic_level / 11))
+			player.modify_stat(A_CHR, -25)
+			player.hold_life = TRUE
+			player.resist_chaos = TRUE
+			player.resist_neth = TRUE
+			if player.mimic_level >= 30 then player.num_blow = player.num_blow + 1 end
+			if player.mimic_level >= 60 then player.num_blow = player.num_blow + 1 end
+			player.skill_dis = player.skill_dis - 5
+			player.skill_sav = player.skill_sav - 15
+			player.skill_stl = player.skill_stl - 20
+			player.luck_cur = player.luck_cur - 20
+			player.drain_life = player.drain_life + 1
+			player.nastytrap26 = TRUE
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Hound",
+	["obj_name"] =  "Hound Pelt",
+	["desc"] = 	"Hounds are fast and can see pretty well.",
+	["realm"] =     "nature",
+	["level"] =     55,
+	["rarity"] =    40,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, 5 + (player.mimic_level / 10))
+			player.modify_stat(A_INT, -5)
+			player.modify_stat(A_WIS, -5)
+			player.modify_stat(A_DEX, -5)
+			player.modify_stat(A_CON, 3)
+			player.modify_stat(A_CHR, -10)
+			player.pspeed = player.pspeed + 1 + (player.mimic_level / 10)
+			player.resist_lite = TRUE
+			player.resist_dark = TRUE
+			player.skill_stl = player.skill_stl - 4
+			player.skill_dis = player.skill_dis - 5
+			player.skill_dev = player.skill_dev - 5
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Quylthulg",
+	["obj_name"] =  "Quylthulg Peel",
+	["desc"] = 	"Quylthulgs cannot move, but are capable of summoning aid.",
+	["realm"] =     "nature",
+	["level"] =     35,
+	["rarity"] =    80,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, 2)
+			player.modify_stat(A_INT, 6 + (player.mimic_level / 8))
+			player.modify_stat(A_WIS, -6)
+			player.modify_stat(A_DEX, 7 + (player.mimic_level / 7))
+			player.modify_stat(A_CON, 5 + (player.mimic_level / 9))
+			player.modify_stat(A_CHR, -30)
+			player.see_inv = TRUE
+			player.immovable = TRUE
+
+			player.to_h = player.to_h - 20
+			player.dis_to_h = player.dis_to_h - 20
+			player.to_d = player.to_d - 20
+			player.dis_to_d = player.dis_to_d - 20
+			player.nastytrap36 = TRUE
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Maiar",
+	["obj_name"] =  "Maia Mantle",
+	["desc"] = 	"Maiar are incredibly strong, but aggravate monsters.",
+	["realm"] =     "nature",
+	["level"] =     75,
+	["rarity"] =    90,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, 15 + (player.mimic_level / 8))
+			player.modify_stat(A_INT, 15 + (player.mimic_level / 8))
+			player.modify_stat(A_DEX, 15 + (player.mimic_level / 8))
+			player.modify_stat(A_CON, 15 + (player.mimic_level / 8))
+			player.modify_stat(A_WIS, 15 + (player.mimic_level / 8))
+			player.modify_stat(A_CHR, 15 + (player.mimic_level / 8))
+			player.resist_cold = TRUE
+			player.resist_fire = TRUE
+			player.resist_elec = TRUE
+			player.resist_acid = TRUE
+			player.resist_dark = TRUE
+			player.resist_lite = TRUE
+			if player.mimic_level >= 30 then player.immune_cold = TRUE end
+			if player.mimic_level >= 30 then player.immune_fire = TRUE end
+			if player.mimic_level >= 30 then player.immune_elec = TRUE end
+			if player.mimic_level >= 30 then player.immune_acid = TRUE end
+			if player.mimic_level >= 15 then player.resist_pois = TRUE end
+			if player.mimic_level >= 35 then player.resist_chaos = TRUE end
+			player.hold_life = TRUE
+			player.ffall = TRUE
+			player.regenerate = TRUE
+			player.aggravate = TRUE
+			if player.mimic_level >= 30 then player.num_blow = player.num_blow + 1 end
+			if player.mimic_level >= 60 then player.num_blow = player.num_blow + 1 end
+			if player.mimic_level >= 90 then player.num_blow = player.num_blow + 1 end
+			player.skill_sav = player.skill_sav - 20
+			player.skill_stl = player.skill_stl - 25
+			player.skill_srh = player.skill_srh - 20
+			player.skill_fos = player.skill_fos - 40
+			player.anti_tele = TRUE
+			player.rapid_hunger = TRUE
+			player.nastytrap4 = TRUE
+			player.luck_cur = player.luck_cur - 10
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Serpent",
+	["obj_name"] =  "Snake Skin",
+	["desc"] = 	"Serpents are devious, and surprisingly fast.",
+	["realm"] =     "nature",
+	["level"] =     25,
+	["rarity"] =    40,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, -5)
+			player.modify_stat(A_INT, 3)
+			player.modify_stat(A_WIS, 3)
+			player.modify_stat(A_DEX, 6 + (player.mimic_level / 10))
+			player.modify_stat(A_CON, 1)
+			player.modify_stat(A_CHR, -8)
+			player.see_infra = player.see_infra + 10
+			player.pspeed = player.pspeed + 4 + (player.mimic_level / 7)
+			player.skill_dis = player.skill_dis - 3
+			player.skill_dev = player.skill_dev - 5
+			player.skill_sav = player.skill_sav - 3
+			player.to_h_ranged = player.to_h_ranged - 12
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Giant",
+	["obj_name"] =  "Giant Hauberk",
+	["desc"] = 	"Giants are super strong and gain many intrinsics.",
+	["realm"] =     "nature",
+	["level"] =     60,
+	["rarity"] =    80,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, 8 + (player.mimic_level / 8))
+			player.modify_stat(A_INT, 1)
+			player.modify_stat(A_WIS, 1)
+			player.modify_stat(A_DEX, 1)
+			player.modify_stat(A_CON, 9 + (player.mimic_level / 8))
+			player.modify_stat(A_CHR, -10)
+			player.resist_cold = TRUE
+			player.resist_fire = TRUE
+			player.resist_elec = TRUE
+			player.resist_acid = TRUE
+			player.resist_fear = TRUE
+			if player.mimic_level >= 20 then player.resist_lite = TRUE end
+			if player.mimic_level >= 20 then player.resist_dark = TRUE end
+			if player.mimic_level >= 25 then player.resist_nexus = TRUE end
+			if player.mimic_level >= 30 then player.resist_pois = TRUE end
+			if player.mimic_level >= 40 then player.resist_conf = TRUE end
+			if player.mimic_level >= 50 then player.resist_sound = TRUE end
+			if player.mimic_level >= 50 then player.reflect = TRUE end
+			if player.mimic_level >= 30 then player.num_blow = player.num_blow + 1 end
+			player.pspeed = player.pspeed + 2 + (player.mimic_level / 12)
+			player.rapid_hunger = TRUE
+			player.skill_sav = player.skill_sav - 10
+			player.skill_stl = player.skill_stl - 20
+			player.skill_srh = player.skill_srh - 5
+			player.skill_fos = player.skill_fos - 10
+			player.to_a = player.to_a - 50
+			player.luck_cur = player.luck_cur - 30
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Valar",
+	["obj_name"] =  "Godly Wisps",
+	["desc"] = 	"Valar are the supreme gods and basically indestructible.",
+	["realm"] =     "nature",
+	["level"] =     100,
+	["rarity"] =    95,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_WIS, 36)
+			player.modify_stat(A_STR, 36)
+			player.modify_stat(A_DEX, 36)
+			player.modify_stat(A_CON, 36)
+			player.modify_stat(A_INT, 36)
+			player.modify_stat(A_CHR, 36)
+			player.see_inv = TRUE
+			player.free_act = TRUE
+			player.slow_digest = TRUE
+			player.regenerate = TRUE
+			player.ffall = TRUE
+			player.hold_life = TRUE
+			player.lite = TRUE
+			player.sustain_str = TRUE
+			player.sustain_con = TRUE
+			player.sustain_chr = TRUE
+			player.sustain_wis = TRUE
+			player.sustain_int = TRUE
+			player.sustain_dex = TRUE
+			player.immune_acid = TRUE
+			player.immune_elec = TRUE
+			player.immune_fire = TRUE
+			player.immune_cold = TRUE
+			player.resist_pois = TRUE
+			player.resist_conf = TRUE
+			player.resist_sound = TRUE
+			player.resist_lite = TRUE
+			player.resist_dark = TRUE
+			player.resist_chaos = TRUE
+			player.resist_disen = TRUE
+			player.resist_shard = TRUE
+			player.resist_nexus = TRUE
+			player.resist_blind = TRUE
+			player.resist_neth = TRUE
+			player.resist_fear = TRUE
+			player.reflect = TRUE
+			player.sh_fire = TRUE
+			player.sh_elec = TRUE
+			player.pspeed = player.pspeed + 5 + (player.mimic_level / 5)
+			if player.mimic_level >= 20 then player.num_blow = player.num_blow + 1 end
+			if player.mimic_level >= 40 then player.num_blow = player.num_blow + 1 end
+			if player.mimic_level >= 60 then player.num_blow = player.num_blow + 1 end
+			if player.mimic_level >= 80 then player.num_blow = player.num_blow + 1 end
+			if player.mimic_level >= 90 then player.num_blow = player.num_blow + 1 end
+			player.nastytrap12 = TRUE
+			player.rapid_hunger = TRUE
+			player.resist_time = TRUE
+			player.aggravate = TRUE
+
+	end,
+}
+
+add_mimic_shape
+{
 	["name"] =      "Eagle",
 	["obj_name"] =  "Feathers Cloak",
 	["desc"] = 	"Eagles are master of the air, good hunters with excellent vision.",
@@ -284,7 +856,7 @@ add_mimic_shape
 
 			--Try to hit WITH a cloud!
 			player.to_h = player.to_h - 40
-			player.dis_to_h = player.dis_to_h -40
+			player.dis_to_h = player.dis_to_h - 40
 
 			-- But they are stealthy
 			player.skill_stl = player.skill_stl + 10 + (player.mimic_level / 5)
