@@ -2517,12 +2517,20 @@ void object_desc(char *buf, object_type *o_ptr, int pref, int mode)
 	 */
 	else if (known && (o_ptr->tval == TV_ROD_MAIN))
 	{
+		/* display the goddamn mana cost --Amy */
+		object_kind *tip_ptr = &k_info[lookup_kind(TV_ROD, o_ptr->pval)];
+
 		/* Display prettily. */
 		t = object_desc_str(t, " (");
 		t = object_desc_num(t, o_ptr->timeout);
 		t = object_desc_chr(t, '/');
 		t = object_desc_num(t, o_ptr->pval2);
 		t = object_desc_chr(t, ')');
+		if (o_ptr->pval != 0) {
+			t = object_desc_chr(t, '(');
+			t = object_desc_num(t, tip_ptr->pval);
+			t = object_desc_chr(t, ')');
+		}
 	}
 
 	/*
@@ -3168,6 +3176,15 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 
 			text_out_c(TERM_ORANGE, k_text + k_ptr->text);
 			text_out("\n");
+
+			/* god fucking dammit don't swallow the fucking description for the fucking kind of rod tip you used!! --Amy */
+			if ((o_ptr->tval == TV_ROD_MAIN) && (o_ptr->pval != 0))
+			{
+				object_kind *tip_ptr = &k_info[lookup_kind(TV_ROD, o_ptr->pval)];
+
+				text_out_c(TERM_ORANGE, k_text + tip_ptr->text);
+				text_out("\n");
+			}
 		}
 
 		if (o_ptr->name1 && (!trim_down))
