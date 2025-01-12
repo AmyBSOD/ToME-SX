@@ -79,7 +79,7 @@ M:P:R:37
 M:P:S:14
 
 # Maximum number of class types in p_info.txt
-M:P:C:111
+M:P:C:112
 
 # Maximum number of meta class types in p_info.txt
 M:P:M:1

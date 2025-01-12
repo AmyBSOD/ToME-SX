@@ -584,7 +584,7 @@
 #define PR1_EASE_STEAL          0x08000000L     /* Gain xp by stealing */
 /* XXX */
 #define PR1_RANDOM_SKILLS       0x20000000L     /* Starts with randomized skill set --Amy */
-/* XXX */
+#define PR1_VERY_RANDOM_SKILLS  0x40000000L     /* Starts with very randomized skill set --Amy */
 /* XXX */
 
 /* XXX */
@@ -5001,8 +5001,9 @@ extern int PlayerUID;
 
 /*
  * Player specialities, should be external but ti would be a mess
+ * Amy edit: 20??? that's far too few, we want more :-P
  */
-#define MAX_SPEC                20
+#define MAX_SPEC                50
 
 
 /*

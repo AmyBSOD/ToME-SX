@@ -161,6 +161,10 @@ static bool is_known(int s_idx)
 	int i;
 
 	if (wizard) return TRUE;
+
+	/* Amy: if we have a role who starts with absolutely no skills, display at least one, or it crashes (bad design but hey I didn't make the base game) */
+	if (s_idx == 30) return TRUE;
+
 	if (s_info[s_idx].value || s_info[s_idx].mod) return TRUE;
 
 	for (i = 0; i < max_s_idx; i++)
@@ -331,7 +335,7 @@ void print_skills(int table[MAX_SKILLS][2], int max, int sel, int start)
 			     ABS(s_info[i].value) % SKILL_STEP,
 			     ABS(s_info[i].mod) / 1000,
 			     ABS(s_info[i].mod) % 1000),
-		      j + 7 - start, 60);
+		      j + 7 - start, 32);
 	}
 }
 

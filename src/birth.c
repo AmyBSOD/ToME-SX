@@ -3198,6 +3198,56 @@ static bool player_birth_aux()
 					s_ptr->value += increasetempvar;
 
 					increasetempvar = randint(8);
+					if ((increasetempvar < 3) && (randint(5) != 1) ) increasetempvar = 3;
+					if (randint(5) == 1) increasetempvar = 9;
+					else if (randint(20) == 1) {
+						increasetempvar = 10;
+						if (randint(10) == 1) increasetempvar + randint(10); /* jackpot! */
+					}
+					increasetempvar *= 100; /* 0.1-1.0 to multiplier, but rarely above 0.8 or below 0.3 */
+					s_ptr->mod += increasetempvar;
+					break;
+			}
+		}
+	}
+
+	if (PRACE_FLAGS(PR1_VERY_RANDOM_SKILLS)) {
+		int randoskills = 24 + randint(11); /* 25-35 */
+		int skilltoincrease = 1;
+		skill_type *s_ptr;
+		int increasetempvar = 0;
+
+		while (randoskills > 0) {
+			randoskills--;
+			skilltoincrease = randint(MAX_GOOD_SKILL); /* any random skill */
+
+			s_ptr = &s_info[skilltoincrease];
+
+			switch (randint(3)) {
+				case 1:
+				default:
+					increasetempvar = randint(50);
+					if ((increasetempvar > 45) && magik(33)) increasetempvar += randint(50);
+					increasetempvar *= 100; /* 0.1-5.0 (or rarely up to 10.0) to base value */
+					s_ptr->value += increasetempvar;
+					if (s_ptr->value > SKILL_MAX) s_ptr->value = SKILL_MAX;
+					break;
+				case 2:
+					increasetempvar = randint(10);
+					increasetempvar *= 100; /* 0.1-1.0 to base value */
+					s_ptr->value += increasetempvar;
+					if (s_ptr->value > SKILL_MAX) s_ptr->value = SKILL_MAX;
+
+					increasetempvar = randint(5);
+					increasetempvar *= 100; /* 0.1-0.5 to multiplier */
+					s_ptr->mod += increasetempvar;
+					break;
+				case 3:
+					increasetempvar = randint(20);
+					increasetempvar *= -1000; /* -1 to -20 to base value */
+					s_ptr->value += increasetempvar;
+
+					increasetempvar = randint(8);
 					if (randint(25) == 1) increasetempvar = 9;
 					else if (randint(100) == 1) increasetempvar = 10;
 					increasetempvar *= 100; /* 0.1-1.0 to multiplier, but rarely above 0.8 */
@@ -3546,7 +3596,8 @@ void player_birth(void)
 		/* Can we add a town ? */
 		while (magik(TOWN_CHANCE - (num * 10)))
 		{
-			int lev;
+			int lev = 0;
+			bool skiptown = FALSE;
 
 			d_ptr->t_idx[num] = rtown;
 			rtown++;
@@ -3560,7 +3611,10 @@ void player_birth(void)
 		
 				townattempts++;
 
-				if (townattempts > 999) break;
+				if (townattempts > 999) {
+					skiptown = TRUE;
+					break;
+				}
 
 				lev = rand_range(d_ptr->mindepth, d_ptr->maxdepth - 1);
 
@@ -3573,6 +3627,9 @@ void player_birth(void)
 				/* Ok found one */
 				if (ok) break;
 			}
+
+			if (skiptown) break;
+
 			d_ptr->t_level[num] = lev;
 
 			if (wizard) message_add(MESSAGE_MSG, format("Random dungeon town: d_idx:%d, lev:%d", i, lev), TERM_WHITE);
