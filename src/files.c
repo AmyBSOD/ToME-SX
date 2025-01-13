@@ -2082,11 +2082,308 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
 		}
 	}
 
-	if (p_ptr->mimic_form == resolve_mimic_name("Valar")) (*esp) |= ESP_ALL;
-	if (p_ptr->mimic_form == resolve_mimic_name("Insect")) (*esp) |= ESP_ANIMAL;
-	if (p_ptr->mimic_form == resolve_mimic_name("Cold Cloud")) (*esp) |= ESP_EVIL;
+	/* show the damn mimicry effects in the damn character screen, kindly!! --Amy */
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Insect")) {
+		(*esp) |= ESP_ANIMAL;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Abomination")) {
+		(*f3) |= TR3_AGGRAVATE;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Monstrosity")) {
+		(*f3) |= TR3_AGGRAVATE;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Goat")) {
+		(*f3) |= (TR3_SLOW_DIGEST);
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Sparrow")) {
+		(*f4) |= (TR4_FLY);
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Vampire")) {
+		(*f2) |= (TR2_HOLD_LIFE);
+		(*f2) |= (TR2_RES_DARK);
+		(*f2) |= (TR2_SENS_FIRE);
+		if (p_ptr->mimic_level >= 15) (*f2) |= (TR2_RES_NEXUS);
+		if (p_ptr->mimic_level >= 10) (*f2) |= (TR2_RES_BLIND);
+		(*f3) |= (TR3_LITE1);
+
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Mana Ball")) {
+		(*f3) |= (TR3_FEATHER);
+		(*f2) |= (TR2_INVIS);
+		(*f3) |= (TR3_TELEPORT);
+		if (p_ptr->mimic_level >= 25) (*f2) |= (TR2_RES_DISEN);
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Fire Cloud")) {
+		(*f2) |= (TR2_RES_LITE);
+		(*f2) |= (TR2_IM_FIRE);
+		(*f3) |= (TR3_SH_FIRE);
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Cold Cloud")) {
+		(*f2) |= (TR2_RES_LITE);
+		(*f2) |= (TR2_IM_COLD);
+		(*f3) |= (TR3_SH_ELEC);
+		(*esp) |= (ESP_EVIL);
+		(*f3) |= (TR3_REGEN);
+		(*f2) |= (TR2_SENS_FIRE);
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Chaos Cloud")) {
+		(*f2) |= (TR2_RES_DISEN);
+		(*f2) |= (TR2_RES_CHAOS);
+		(*f2) |= (TR2_RES_LITE);
+		(*f2) |= (TR2_IM_FIRE);
+		(*f2) |= (TR2_IM_COLD);
+		(*f3) |= (TR3_SH_FIRE);
+		(*f3) |= (TR3_SH_ELEC);
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Ghost")) {
+		(*f3) |= (TR3_WRAITH);
+		(*f3) |= (TR3_DRAIN_EXP);
+		(*f2) |= (TR2_HOLD_LIFE);
+		(*f5) |= (TR5_DRAIN_MANA);
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Kobold")) {
+		(*f2) |= (TR2_RES_POIS);
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Dragon")) {
+		if (p_ptr->mimic_level >= 20) (*f4) |= TR4_FLY;
+		(*f2) |= TR2_RES_FIRE;
+		(*f2) |= TR2_RES_COLD;
+		(*f2) |= TR2_RES_ELEC;
+		if (p_ptr->mimic_level >= 25) (*f2) |= TR2_RES_DARK;
+		(*f5) |= TR5_RAPID_HUNGER;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Demon")) {
+		(*f2) |= TR2_RES_CHAOS;
+		(*f2) |= TR2_RES_NETHER;
+		(*f2) |= TR2_HOLD_LIFE;
+		(*f5) |= (TR5_DRAIN_HP);
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Hound")) {
+		(*f1) |= TR1_SPEED;
+		(*f2) |= TR2_RES_LITE;
+		(*f2) |= TR2_RES_DARK;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Quylthulg")) {
+		(*f3) |= TR3_SEE_INVIS;
+		(*f5) |= (TR5_IMMOVABLE);
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Maiar")) {
+		(*f2) |= TR2_RES_ACID;
+		(*f2) |= TR2_RES_ELEC;
+		(*f2) |= TR2_RES_FIRE;
+		(*f2) |= TR2_RES_COLD;
+		if (p_ptr->mimic_level >= 30) (*f2) |= TR2_IM_ACID;
+		if (p_ptr->mimic_level >= 30) (*f2) |= TR2_IM_ELEC;
+		if (p_ptr->mimic_level >= 30) (*f2) |= TR2_IM_FIRE;
+		if (p_ptr->mimic_level >= 30) (*f2) |= TR2_IM_COLD;
+		if (p_ptr->mimic_level >= 15) (*f2) |= TR2_RES_POIS;
+		(*f2) |= TR2_RES_LITE;
+		(*f2) |= TR2_RES_DARK;
+		if (p_ptr->mimic_level >= 35) (*f2) |= TR2_RES_CHAOS;
+		(*f2) |= TR2_HOLD_LIFE;
+		(*f3) |= TR3_FEATHER;
+		(*f3) |= TR3_REGEN;
+		(*f3) |= TR3_AGGRAVATE;
+		(*f3) |= TR3_NO_TELE;
+		(*f5) |= TR5_RAPID_HUNGER;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Snake")) {
+		(*f1) |= TR1_SPEED;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Giant")) {
+		(*f2) |= TR2_RES_ACID;
+		(*f2) |= TR2_RES_ELEC;
+		(*f2) |= TR2_RES_FIRE;
+		(*f2) |= TR2_RES_COLD;
+		if (p_ptr->mimic_level >= 30) (*f2) |= TR2_RES_POIS;
+		if (p_ptr->mimic_level >= 40) (*f2) |= TR2_RES_CONF;
+		if (p_ptr->mimic_level >= 50) (*f2) |= TR2_RES_SOUND;
+		if (p_ptr->mimic_level >= 20) (*f2) |= TR2_RES_LITE;
+		if (p_ptr->mimic_level >= 20) (*f2) |= TR2_RES_DARK;
+		if (p_ptr->mimic_level >= 25) (*f2) |= TR2_RES_NEXUS;
+		(*f2) |= TR2_RES_FEAR;
+		if (p_ptr->mimic_level >= 50) (*f2) |= TR2_REFLECT;
+		(*f5) |= TR5_RAPID_HUNGER;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Valar")) {
+		(*f3) |= TR3_SEE_INVIS;
+		(*f2) |= TR2_FREE_ACT;
+		(*f3) |= TR3_SLOW_DIGEST;
+		(*f3) |= TR3_REGEN;
+		(*f3) |= TR3_FEATHER;
+		(*f2) |= TR2_HOLD_LIFE;
+		(*esp) |= ESP_ALL;
+		(*f3) |= TR3_LITE1;
+		(*f2) |= TR2_SUST_STR;
+		(*f2) |= TR2_SUST_CON;
+		(*f2) |= TR2_SUST_CHR;
+		(*f2) |= TR2_SUST_INT;
+		(*f2) |= TR2_SUST_WIS;
+		(*f2) |= TR2_SUST_DEX;
+		(*f2) |= TR2_RES_ACID;
+		(*f2) |= TR2_RES_ELEC;
+		(*f2) |= TR2_RES_FIRE;
+		(*f2) |= TR2_RES_COLD;
+		(*f2) |= TR2_RES_POIS;
+		(*f2) |= TR2_RES_CONF;
+		(*f2) |= TR2_RES_SOUND;
+		(*f2) |= TR2_RES_LITE;
+		(*f2) |= TR2_RES_DARK;
+		(*f2) |= TR2_RES_CHAOS;
+		(*f2) |= TR2_RES_DISEN;
+		(*f2) |= TR2_RES_SHARDS;
+		(*f2) |= TR2_RES_NEXUS;
+		(*f2) |= TR2_RES_BLIND;
+		(*f2) |= TR2_RES_NETHER;
+		(*f2) |= TR2_RES_FEAR;
+		(*f2) |= TR2_REFLECT;
+		(*f3) |= TR3_SH_FIRE;
+		(*f3) |= TR3_SH_ELEC;
+		(*f2) |= TR2_IM_FIRE;
+		(*f2) |= TR2_IM_COLD;
+		(*f2) |= TR2_IM_ELEC;
+		(*f2) |= TR2_IM_ACID;
+		(*f5) |= TR5_RAPID_HUNGER;
+		(*f3) |= TR3_AGGRAVATE;
+		(*f5) |= TR5_RES_TIME;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Eagle")) {
+		(*f3) |= TR3_FEATHER;
+		if (p_ptr->mimic_level >= 20) (*f4) |= (TR4_FLY);
+		if (p_ptr->mimic_level >= 25) (*f2) |= TR2_FREE_ACT;
+		if (p_ptr->mimic_level >= 30) (*f3) |= TR3_SEE_INVIS;
+		if (p_ptr->mimic_level >= 40) (*f2) |= TR2_RES_ELEC;
+		if (p_ptr->mimic_level >= 60) (*f3) |= TR3_SH_ELEC;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Yith")) {
+		(*f2) |= TR2_SUST_INT;
+		(*f2) |= TR2_SUST_WIS;
+		(*f2) |= TR2_SUST_DEX;
+		(*f2) |= TR2_SUST_STR;
+		if (p_ptr->mimic_level >= 10) (*f2) |= TR2_RES_DARK;
+		if (p_ptr->mimic_level >= 20) (*f2) |= TR2_RES_CONF;
+		if (p_ptr->mimic_level >= 30) (*f3) |= TR3_SEE_INVIS;
+		if (p_ptr->mimic_level >= 40) (*f2) |= TR2_RES_DISEN;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Wolf")) {
+		(*f2) |= TR2_RES_FEAR;
+		(*f2) |= TR2_FREE_ACT;
+		if (p_ptr->mimic_level >= 10) (*f2) |= TR2_RES_COLD;
+		if (p_ptr->mimic_level >= 30) (*f3) |= TR3_SEE_INVIS;
+		if (p_ptr->mimic_level >= 40) (*f2) |= TR2_RES_DARK;
+		if (p_ptr->mimic_level >= 60) (*f2) |= TR2_RES_CONF;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Lion")) {
+		(*f2) |= TR2_RES_FEAR;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Spider")) {
+		(*f2) |= TR2_RES_POIS;
+		(*f2) |= TR2_RES_FEAR;
+		(*f2) |= TR2_RES_DARK;
+		if (p_ptr->mimic_level >= 40) (*f4) |= TR4_CLIMB;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Elder Ent")) {
+		(*f2) |= TR2_RES_POIS;
+		(*f2) |= TR2_RES_COLD;
+		(*f2) |= TR2_FREE_ACT;
+		(*f3) |= TR3_REGEN;
+		(*f3) |= TR3_SEE_INVIS;
+		(*f2) |= (TR2_SENS_FIRE);
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Vapor")) {
+		(*f2) |= TR2_RES_POIS;
+		(*f2) |= TR2_RES_COLD;
+		(*f2) |= TR2_IM_COLD;
+		(*f2) |= TR2_RES_SHARDS;
+		(*f2) |= TR2_FREE_ACT;
+		(*f3) |= TR3_REGEN;
+		(*f3) |= TR3_SEE_INVIS;
+		(*f2) |= (TR2_SENS_FIRE);
+		(*f3) |= (TR3_FEATHER);
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Serpent")) {
+		(*f2) |= TR2_RES_POIS;
+		if (p_ptr->mimic_level >= 25) (*f2) |= TR2_FREE_ACT;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Mumak")) {
+		if (p_ptr->mimic_level >= 10) (*f2) |= TR2_RES_FEAR;
+		if (p_ptr->mimic_level >= 30) (*f2) |= TR2_FREE_ACT;
+		if (p_ptr->mimic_level >= 40) (*f2) |= TR2_RES_CONF;
+		if (p_ptr->mimic_level >= 60) (*f2) |= TR2_RES_NEXUS;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Bear")) {
+		if (p_ptr->mimic_level >= 10) (*f2) |= TR2_FREE_ACT;
+		if (p_ptr->mimic_level >= 20) (*f3) |= TR3_REGEN;
+		if (p_ptr->mimic_level >= 40) (*f2) |= TR2_RES_CONF;
+		if (p_ptr->mimic_level >= 60) (*f2) |= TR2_RES_NEXUS;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Balrog")) {
+		(*f2) |= TR2_IM_ACID;
+		(*f2) |= TR2_IM_ELEC;
+		(*f2) |= TR2_IM_FIRE;
+		(*f2) |= TR2_RES_POIS;
+		(*f2) |= TR2_RES_DARK;
+		(*f2) |= TR2_RES_CHAOS;
+		(*f2) |= TR2_HOLD_LIFE;
+		(*f3) |= TR3_FEATHER;
+		(*f3) |= TR3_REGEN;
+		(*f3) |= TR3_SH_FIRE;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Maia")) {
+		(*f2) |= TR2_IM_ACID;
+		(*f2) |= TR2_IM_ELEC;
+		(*f2) |= TR2_IM_FIRE;
+		(*f2) |= TR2_IM_COLD;
+		(*f2) |= TR2_RES_POIS;
+		(*f2) |= TR2_RES_LITE;
+		(*f2) |= TR2_RES_DARK;
+		(*f2) |= TR2_RES_CHAOS;
+		(*f2) |= TR2_HOLD_LIFE;
+		(*f3) |= TR3_FEATHER;
+		(*f3) |= TR3_REGEN;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Fire Elem.")) {
+		(*f2) |= TR2_IM_FIRE;
+		(*f2) |= TR2_RES_POIS;
+		(*f3) |= TR3_SH_FIRE;
+		(*f3) |= (TR3_LITE1);
+	}
 
 #if 0 /* DGDGDG? */
+	/* Amy note: wow that code below has loads of bugs... *f3 getting TR2 flags and stuff... */
 	else if (p_ptr->mimic_form)
 	{
 		switch (p_ptr->mimic_form)

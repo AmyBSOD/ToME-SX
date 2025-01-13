@@ -512,9 +512,9 @@ add_mimic_shape
 
 add_mimic_shape
 {
-	["name"] =      "Serpent",
+	["name"] =      "Snake",
 	["obj_name"] =  "Snake Skin",
-	["desc"] = 	"Serpents are devious, and surprisingly fast.",
+	["desc"] = 	"Snakes are devious, and surprisingly fast.",
 	["realm"] =     "nature",
 	["level"] =     25,
 	["rarity"] =    40,
@@ -572,6 +572,7 @@ add_mimic_shape
 			player.skill_srh = player.skill_srh - 5
 			player.skill_fos = player.skill_fos - 10
 			player.to_a = player.to_a - 50
+			player.dis_to_a = player.dis_to_a - 50
 			player.luck_cur = player.luck_cur - 30
 
 	end,
@@ -868,6 +869,7 @@ add_mimic_shape
 			player.see_inv = TRUE
 			player.sensible_fire = TRUE
 			player.levitate = TRUE
+			player.ffall = TRUE
 
 			player.skill_dis = player.skill_dis - 10
 			player.skill_srh = player.skill_srh - 10

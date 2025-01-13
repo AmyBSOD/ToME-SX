@@ -2054,6 +2054,21 @@ static void process_world(void)
 	/* Amy edit: replace "most" by "all", and do so regardless of whether you're in the dungeon */
 	if (((turn % 300) == 0) && (!p_ptr->did_nothing) && (!p_ptr->wild_mode) /*&& (dun_level)*/)
 	{
+		/* if you pretend to be a god yourself, your god isn't all that pleased --Amy */
+		if (p_ptr->mimic_form == resolve_mimic_name("Valar"))
+		{
+			inc_piety(GOD_ERU, -100);
+			inc_piety(GOD_MANWE, -100);
+			inc_piety(GOD_TULKAS, -100);
+			inc_piety(GOD_MELKOR, -100);
+			inc_piety(GOD_YAVANNA, -100);
+			inc_piety(GOD_AMYBSOD, -100);
+			inc_piety(GOD_AULE, -100);
+			inc_piety(GOD_VARDA, -100);
+			inc_piety(GOD_ULMO, -100);
+			inc_piety(GOD_MANDOS, -100);
+		}
+
 		GOD(GOD_MANWE)
 		{
 			int dec = 4 - wisdom_scale(3);
