@@ -8,7 +8,7 @@ F:o:207:3
 ###################### Buildings ########################
 
 # Castle: Plot Khazad-Dum
-F:B:75:3:0:0:0:0:0:6
+F:e:75:3:0:0:0:0:0:6
 
 # Fighters Hall
 F:f:74:3:0:0:0:0:0:17
@@ -52,6 +52,54 @@ F:w:8:3:0:0:0:0:0:25
 # Force dwarven monsters
 f:DWARVEN
 
+# Between gate to bree -- need to finish the quest
+F:z:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST4 5] ]
+F:z:176:3:0:0:0:0:0:2
+?:1
+
+# Between gate to gondolin -- need to finish the quest
+F:x:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST23 5] ]
+F:x:176:3:0:0:0:0:0:3
+?:1
+
+# Between gate to edoras -- need to finish the quest
+F:a:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST28 5] ]
+F:a:176:3:0:0:0:0:0:4
+?:1
+
+# Between gate to osgiliath -- need to finish the quest
+F:b:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST27 5] ]
+F:b:176:3:0:0:0:0:0:5
+?:1
+
+# Between gate to lothlorien -- need to finish the quest
+F:B:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST22 5] ]
+F:B:176:3:0:0:0:0:0:6
+?:1
+
+# Between gate to minas anor -- need to finish the quest
+F:c:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST24 5] ]
+F:c:176:3:0:0:0:0:0:7
+?:1
+
+# Between gate to pelargir -- need to finish the quest
+F:d:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST29 5] ]
+F:d:176:3:0:0:0:0:0:8
+?:1
+
+# Between gate to hobbiton -- need to finish the quest
+F:D:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST26 5] ]
+F:D:176:3:0:0:0:0:0:9
+?:1
+
 ############### Quest 25 - Evil cave finished = house ###############
 ?:[EQU $QUEST25 2]
 F:w:74:3:0:0:0:0:0:7
@@ -67,7 +115,7 @@ D:##oo###oo####oo##############################^^^^^^^^^^^^^^^^^################
 D:##############o#########oo###oo###################^^^^^^^############################oooo#########oo######       #################################   #####ooooooooo#############     CCCCCCCC      ; #
 D:#^^^^########oooooooooooooo##ooooooooo#############################  #################oooo########oo###########     ##########################     ######ooooooooo################     CCCCCCCC ;    #
 D:#############ooooooooooooooooooooooooooo######  ###########1######  ##############2####oooo#######o##o##3####f#####    ##g####4####h######    ###########ooo########################     CCCCCCCC  ; #
-D:#^#############ooooo##################oo### # #### # #####   #### ###############   ###ooo########ooo##   ##   ######  #   ##   ##   ##      # #######ooooo###########################     CCCCCCCC  #
+D:#^#############ooooo##################oo### # #### # #####   #### ###############   ###ooo########ooo##   ##   ######  #   ##   ##   ##      # #######aoooo###########################     CCCCCCCC  #
 D:#^^################oo#################ooooo####       ## ;                          ;;  o        ; o       ##                                   # ooooooooo############################     CCCCCCCC #
 D:#^^^^################o##########o#####oooooooooooooooooooooo                            o          o               ;           oooooooooooooooooooooooo##ooo############################     CCCCCCC #
 D:#^^^^^^################################# ##   ;            o             ;     ;        o          o        ;                  o                   ##o###################################     CCCCCCC#
@@ -76,8 +124,8 @@ D:#^^^^^#################################         #####      o          #####   
 D:#^^^^^^^################################       #######;;   o         #######            o  ####### o             #######       o       #######      ####################################### ;  CCCCCC#
 D:#^^^^^^^^################################ #    #######     o    ;    #######            o  ####### o             #######       o       #######    ########################################    CCCCCC #
 D:#^^^^^^^###################################     #####      o      ;  ;#####             o   #####  o              #####    ;   o        #####   ;#######################################    CCCCCCC  #
-D:#^^^^^^^^^################################       ###       o           ###              o    ###   o               ###         o         ###      # ####################################    CCCCCC ; #
-D:#^^^^^^^^^#################################                o                            o          o                           o                  ## ##################################    CCCCCC    #
+D:#^^^^^^^^^################################       ###       o           ###              o    ###   o   x           ###         o         ###      # ####################################    CCCCCC ; #
+D:#^^^^^^^^^#################################              z o                            o          o                           o                  ## ##################################    CCCCCC    #
 D:#^^^^^^^^^^################################       ;        oooooooooooo                 o          o                oooooooooooo                     5################################    CCCCCC   ; #
 D:#^^^^^^^^^^^^^###########################Z                            o                 o          o                o                               #################################    CCCCCCC     #
 D:#^^^^^^^^^^^^^^^##########################                  ###       o           ###   o          o   ;###         o         ###                  ################################    CCCCCCC     ; #
@@ -90,14 +138,14 @@ D:#ooooooooooooooooooooooooooooooo##oooooooo                               ;   o
 D:#ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo     CCCCCC      #
 D:#oooooooooooooooooo##oooooo##oooooo##ooooo                                ;             o          o                                           ;  ooooooooo#oooooooooooooooooooooooo     CCCCC       #
 D:#^#######################oo####ooooo#######      ###                   ###              o          o               ###;                  ###      ######o####oo####oo######oo######;    CCCCC        #
-D:#^^#######################o###########          #####                 #####             o          o              #####                 #####    ######o####################oo####     CCCCC         #
+D:#^^#######################o###########D         #####                 #####             o          o              #####                 #####    ######o####################oo####     CCCCC         #
 D:#^#######################################      #######;;   ;         #######            o          o             #######               #######     ####oo#########################     CCCCCC        #
 D:#^^########################################    #######          ;    #######            o          o             #######               #######    ######o############oo##########     CCCCCCC        #
 D:#^^^###############ooo###################       #####             ;  ;#####             o          o              #####    ;            #####   ;; ######oo########ooooo#######     CCCCCCCC         #
 D:#####oo##oo#####oooooooo##############oo##       ###       ;           ###              o          o               ###                   ###      ########oooo##oooooo#######     CCCCCCCCC        ; #
 D:#ooooooooooo###ooooooooooooooooooooooooooo                                              o          o                                              ooooooooooooooooooooooooooo     CCCCCCCC           #
 D:#oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo     CCCCCCCC           ; #
-D:#^ooooooooooooooooo###oooooooooo##oooooooo                                   o          o          o            o                                 ooooooo####ooooooooooooo     CCCCCCCC              #
+D:#^ooooooooooooooooo###oooooooooo##oooooooo                                   o          o          o            o                            B    ooooooo####ooooooooooooo     CCCCCCCC              #
 D:#^^#o###ooo#####ooo#####ooooo########oo#                    ###       ;      o    ###   o          o   ;###     o             ###                  oo#########ooooo###oo#     CCCCCCCC             ; #
 D:#^^^^^###o################oo#############                  ##### ;           o   #####  o          o   #####    o            #####              ;   ###########oo########     CCCCCCCC          ;    #
 D:#^^^^^^^##################################           ;    #######      ooooooo  ####### o   ;      o  #######   ooooo       #######               ########################    CCCCCCCCC              #
@@ -106,16 +154,16 @@ D:#^^^^^^^^^^^^^^^#########################               ;  #####       o      
 D:#^^^^^^^^^^^^^^^^^^^###################y                    ###   ;    o          ###   o          o    ###         o  ;      ###   ; ;;         ############################    CCCCCCCC            #
 D:#^^^^^^^^^^^^^^^^^^^####################                 ;             o            ;;  o        ; o                o                       ;     ############################    CCCCCCCC         ; #
 D:#^^^^^^^^^^^^^^^^^^######################                    ooooooooooo                o          o                oooooooooooo    ;;          ;  7###########################    CCCCCCCC     ;    #
-D:#^^^^^^^^^^^^^^^^^^^^^^##########B######      ;              o           ;     ;        o          o        ;                  o                   #############################    CCCCCCCC         #
+D:#^^^^^^^^^^^^^^^^^^^^^^##########e######      ;              o           ;     ;        o          o        ;                  o                   #############################    CCCCCCCC         #
 D:#^^^^^^^^^^^^^^^^^^^^^^^^##############          ###         o         ###              o    ###   o               ###;        o         ###      #############################    CCCCCCCCCC        #
 D:#^^^^^^^^^^^^^^^^^^^^^^^^^############          #####        o        #####             o   #####  o              #####        o        #####        Y########################    CCCCCCCCCCC        #
 D:#^^^^^^^^^^^^^^^^^^^^^^^^^^##########          #######;;   ; o       #######            o  ####### o             #######       o       #######      ###########################    CCCCCCCCCCC       #
-D:#^^^^^^^^^^^^^^^^^^^^^^^^^^#########i          #######       o  ;    #######            o  ####### o             #######       o       #######     ############################    CCCCCCCCCCC       #
+D:#^^^^^^^^^^^^^^^^^^^^^^^^^^#########i        d #######       o  ;    #######            o  ####### o             #######       o       #######     ############################    CCCCCCCCCCC       #
 D:#^^^^^^^^^^^^^^^^^^^^^^^^^###########           #####        o    ;  ;#####             o   #####  o              #####    ;   o        #####   ; ##############################    CCCCCCCCCCC      #
-D:#^^^^^^^^^^^^^^^^^^^^^^^##############           ###       ; o         ###              o    ###   o               ###         o         ###       ##############################    CCCCCCCCCCC   ; #
+D:#^^^^^^^^^^^^^^^^^^^^^^^##############           ###       ; o         ###              o   c###   o               ###         o         ###       ##############################    CCCCCCCCCCC   ; #
 D:#^^^^^^^^^^^^^^^^^^^^^^#################                     o                          o          o                           o                  #########oo###oo#################    CCCCCCCCCC    #
 D:#^^^^^^^^^^^^^^^^^^#############o#######oooooooooooooooooooooo            ##            o          o                           oooooooooooooooooooooooooooooooooooo##################    CCCCCCCC  ; #
-D:#^^^^^^^^^^^^^^^^^############ooooooooooo#     ###           ##        ########      o  o    ##    o        ##                         ##         oooooo##oooooooooo###################    CCCCCCC   #
+D:#^^^^^^^^^^^^^^^^^############ooooooooooo#     ###           ##        ########      o  o    ##    o        ##                         ##         oooooo##booooooooo###################    CCCCCCC   #
 D:#^^^^^^^^^^^#################ooooooooooo#### ######  ###    ####   #############  ####oooo######j#ooo# ### ######   #       ### ##    ##### ####################ooo#####################    CCCCCCC  #
 D:#^^^^^^^^^^###################oo######oo###  ###########  #######9####################oooo########oooo############w###    ########  ######  ####################oo######################    CCCCCCC  #
 D:#^^^^^^^##########oo####oo####ooo#########  ############# ##############^^^##########ooooo########oo###################k###########l######    #########^######oooo##ooo##################    CCCCCCC #

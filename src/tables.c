@@ -4905,18 +4905,130 @@ tval_desc tval_descs[] =
  */
 between_exit between_exits[MAX_BETWEEN_EXITS] =
 {
-	{
+	{ /* minas anor to gondolin */
 		1,
 		FALSE,
 		49, 11,
 		119, 25,
 		0, 0
 	},
-	{
+	{ /* gondolin to minas anor */
 		0,
 		FALSE,
 		60, 56,
 		10, 35,
+		0, 0
+	},
+	{ /* khazad-dum to bree */
+		10,
+		FALSE,
+		34, 21,
+		128, 54,
+		0, 0
+	},
+	{ /* khazad-dum to gondolin */
+		11,
+		FALSE,
+		49, 11,
+		78, 33,
+		0, 0
+	},
+	{ /* khazad-dum to edoras */
+		12,
+		FALSE,
+		68, 4,
+		100, 6,
+		0, 0
+	},
+	{ /* khazad-dum to osgiliath */
+		13,
+		FALSE,
+		95, 38,
+		74, 36,
+		0, 0
+	},
+	{ /* khazad-dum to lothlorien */
+		14,
+		FALSE,
+		50, 34,
+		99, 25,
+		0, 0
+	},
+	{ /* khazad-dum to minas anor */
+		15,
+		FALSE,
+		60, 56,
+		56, 33,
+		0, 0
+	},
+	{ /* khazad-dum to pelargir */
+		16,
+		FALSE,
+		7, 58,
+		100, 33,
+		0, 0
+	},
+	{ /* khazad-dum to hobbiton */
+		17,
+		FALSE,
+		11, 26,
+		101, 36,
+		0, 0
+	},
+	{ /* bree to khazad-dum */
+		2,
+		FALSE,
+		44, 39,
+		57, 17,
+		0, 0
+	},
+	{ /* gondolin to khazad-dum */
+		3,
+		FALSE,
+		44, 39,
+		103, 16,
+		0, 0
+	},
+	{ /* edoras to khazad-dum */
+		4,
+		FALSE,
+		44, 39,
+		150, 7,
+		0, 0
+	},
+	{ /* osgiliath to khazad-dum */
+		5,
+		FALSE,
+		44, 39,
+		154, 55,
+		0, 0
+	},
+	{ /* lothlorien to khazad-dum */
+		6,
+		FALSE,
+		44, 39,
+		141, 37,
+		0, 0
+	},
+	{ /* minas anor to khazad-dum */
+		7,
+		FALSE,
+		44, 39,
+		92, 52,
+		0, 0
+	},
+	{ /* pelargir to khazad-dum */
+		8,
+		FALSE,
+		44, 39,
+		45, 50,
+		0, 0
+	},
+	{ /* hobbiton to khazad-dum */
+		9,
+		FALSE,
+		44, 39,
+		38, 30,
 		0, 0
 	},
 };

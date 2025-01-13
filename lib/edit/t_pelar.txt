@@ -21,6 +21,12 @@ F:z:74:3:0:0:0:0:0:7
 F:z:74:3:0:0:0:0:0:7
 ?:1
 
+# Between gate to khazad-dum -- need to finish the quest
+F:D:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST29 5] ]
+F:D:176:3:0:0:0:0:0:16
+?:1
+
 # Castle: Plot Pelargir
 F:B:75:3:0:0:0:0:0:10
 
@@ -83,7 +89,7 @@ D:#-------------------------------------------------OOOOOOOOOOOOO,,,,,,,,,TTT,,,
 D:#-------------------------------------------------@VVVVV@####,,,,,,,,,,,,,,,,,##......,#cc#..........####,,,O,,,,,O,###d###,,,,,,,,,,,,#####VVVVV@@@---------aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#
 D:#-------------------------------------------------@VVVVV@#######################.....########...........####O,,,,,,O#######,,,,,,,,,,,,,,,#####VVVVV@-----aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#
 D:#-------------------------------------------------OVVVVVVVVVVVVVVVVVVVVVVVVVVV......c########c.............####,,#############,,,,,,,#####,,,#####VVVVV@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#
-D:#-------------------------------------------------OVVVVVVVVVVVVVVVVVVVVVVVVVVV.......########................OOOO6###########9OOOOOOOOO#,,,,,,,,#####VVV@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#
+D:#-------------------------------------------------OVVVVVVVVVVVVVVVVVVVVVVVVVVV.......########.......D........OOOO6###########9OOOOOOOOO#,,,,,,,,#####VVV@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#
 D:#-------------------------------------------------@VVVVVVVVVVVVVVVVVVVVVVVVVVV.........#cc#...............#####,O#############O,,,,,,#####,,,#####aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#
 D:#-------------------------------------------------@VVVVV@#######################.......................####,,,,,,O,,#######,OO,,,,,,,,,,,,#####aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#
 D:#-------------------------------------------------@VVVVV@####,,,,,,,,,,,,OOOOO##....................#####,,,,,,,,,O,###e###O,,,,,,,,,,,#####aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#

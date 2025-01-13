@@ -36,6 +36,12 @@ F:z:74:3:0:0:0:0:0:7
 F:z:74:3:0:0:0:0:0:7
 ?:1
 
+# Between gate to khazad-dum -- need to finish the quest
+F:D:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST26 5] ]
+F:D:176:3:0:0:0:0:0:17
+?:1
+
 # Castle: Plot Hobbiton
 F:B:75:3:0:0:0:0:0:7
 
@@ -89,7 +95,7 @@ D:#bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbb------------
 D:#bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbb----------------------TTT-OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO#
 D:#bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbb----------------------TT-bOOb------------------------------------------------------------------------------------------------------#
 D:#bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbb----------------------TT-OOb-------------------------------------------------------------------------------------------------------#
-D:#bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbb----------------------TT-OOb-------------------------------------------------------------------------------------------------------#
+D:#bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbb----------------------TT-OOb-------D-----------------------------------------------------------------------------------------------#
 D:#bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbb---------------------TTT-OOb-------------------------------------------------------------------------------------------------------#
 D:#bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbb----------------------T--OOb-##############----------------------------------------------------------------------------------------#
 D:#bccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbb-----------------TTT-TTT-OO--##############----------------------------------------------------------------------------------------#

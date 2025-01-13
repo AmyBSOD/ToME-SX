@@ -874,7 +874,7 @@
 /* Features 0xCF - 0xFF -- unused */
 
 
-#define MAX_BETWEEN_EXITS       2
+#define MAX_BETWEEN_EXITS       18
 
 /*
  * Number of effects

@@ -30,6 +30,12 @@ F:z:74:3:0:0:0:0:0:7
 F:z:74:3:0:0:0:0:0:7
 ?:1
 
+# Between gate to khazad-dum -- need to finish the quest
+F:D:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST27 5] ]
+F:D:176:3:0:0:0:0:0:13
+?:1
+
 # Castle: Plot Osgiliath
 F:B:75:3:0:0:0:0:0:8
 
@@ -110,7 +116,7 @@ D:#--------------------##TOOc--VVVVV--c,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dOOd,d##
 D:#--------------------##TOOc-VVdWdVV-c,,,######,,,,,,,,,,,,,,,,,T,,,,,bOOb,,,,,@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@,,,,,,,,,,,,,,,,,,,dOOdbOOOOOb-O.f######B#######.O----##---------------------#
 D:#--------------------##TOOcVVVWWWVVVc,,,######,,,,,,,,,,,,,,,,TTT,,,bOOb,,,,,,,@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@,,,,dAAAAAAAAAd,,,,dOOdbOVVVOb-O.###############.O----##---------------------#
 D:#--------------------##TOOc-VVdWdVVOc,,,######,,,,,,,,,,,,,,,,,T,,,bOOb,,,,,,,,@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@,,,AAAAAAAAAAAAA,,,dOOdbOVVVbb-O.###############.O----##---------------------#
-D:#--------------------##TOOc--VVVVV-Oc,,,##h###,,,,,,,,######,,,,,,bOOb,,,,,,,,,,@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@,,,,,dAAAAAAAAAd,,,,dOOdbOOOOOOOO..#############..O----##---------------------#
+D:#--------------------##TOOc--VVVVV-Oc,,,##h###,,,,,,,,######,,,,,,bOOb,,,,D,,,,,@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@,,,,,dAAAAAAAAAd,,,,dOOdbOOOOOOOO..#############..O----##---------------------#
 D:#--------------------##TOOcccccccccO,,,,,,O,,,,,,,,,,,######,,,,,bOOb,,,,,,,,,,,@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@,,,,,,,,,,,,,,,,,,,,,dOOdbbbbbbb-O..#############..O----##---------------------#
 D:#--------------------##TOOOOOOOOOOOO,,,,,,O,,,,,TT,,,,######,,,,bOOb##########,,,@aaaaaaaaaaaaaaaaaaaaaaaa###########dbbbbbbbbbbbbbbbbbbbbbbOO---------O..#############..O---##----------------------#
 D:#--------------------################,,,,,,O,,,TTTT,,,##pp##,,,bOOb,##########,,,@aaaaaaaaaaaaaaaa@@######OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO..#############..O---##----------------------#

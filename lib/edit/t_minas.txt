@@ -26,6 +26,12 @@ F:w:74:3:0:0:0:0:0:7
 F:w:74:3:0:0:0:0:0:7
 ?:1
 
+# Between gate to khazad-dum -- need to finish the quest
+F:D:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST24 5] ]
+F:D:176:3:0:0:0:0:0:15
+?:1
+
 #################### Buildings ####################
 
 # Library
@@ -112,7 +118,7 @@ D:#^^#####B###----OOO---#-###6#-OOO-#-##g#---OOOOOO--#######-----ssssssss-O-----
 D:#^^^#######-----OOO---#-------OOO-#---------OOOOOOOOOOOOOOOOO--###e####-O-----------                                @@VVV@@         ------OO--                                                       #
 D:#^^#######bOOOOOOOO-^^^^^^^^^^MMM^^^^^^^^^^^^OOOOOOOOOOOOOOOOOOOOOOOOOOOO-----------                              @@@VVV@@         ---OOOOOO--                                                       #
 D:#^^#######bOOOOOOO############III############^OOOOOOOOOOOOOOOOOOOOOOOOOOOOO---------                             @@VVVV@@         ---OOOOOO--                                                        #
-D:#^ #######bOOOzOOO############III############^OOOOOOOOOOOOOOOOOOOOOOOOOOOOOO---------                            @VVVV@@        ----OOOOOO----                                                       #
+D:#^ #######bOOOzOOO############III############^OOOOOOOOOODOOOOOOOOOOOOOOOOOOO---------                            @VVVV@@        ----OOOOOO----                                                       #
 D:#^ #######bOOOOOOOO-^^^^^^^^^^MMM^^^^^^^^^^^^OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO-------                            @VVV@@      ------OOOO------                                                        #
 D:#^^^######Z-----OOO---#-sSss--OOO-#---------OOOOOOOOOOOOOOOOO-----------OOOOOOO------                 ---------##@VVV@## --------OOOOO-----                                                          #
 D:#^^#########----OOO---#-sSss--OOO-#-sssss--OOOOOO--#######--------sssss-O-OOOOO-----                 --OOOO-----#######--------OOOOOO-----                                                           #
