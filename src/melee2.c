@@ -7000,7 +7000,8 @@ static void process_monster(int m_idx, bool is_frien)
 	mm[4] = mm[5] = mm[6] = mm[7] = 0;
 
 	/* Confused -- 100% random */
-	if (m_ptr->confused || (inv == TRUE && m_ptr->target == 0))
+	/* Amy: also those fucking neutral creatures since it's SOOOOOOOOOO turbo annoying if they just keep getting in the way! */
+	if (m_ptr->confused || (m_ptr->status == MSTATUS_NEUTRAL) || (inv == TRUE && m_ptr->target == 0))
 	{
 		/* Try four "random" directions */
 		mm[0] = mm[1] = mm[2] = mm[3] = 5;

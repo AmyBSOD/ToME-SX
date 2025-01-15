@@ -6141,9 +6141,13 @@ static int target_set_aux(int y, int x, int mode, cptr info)
 							switch (m_ptr->status)
 							{
 							case MSTATUS_NEUTRAL:
-							case MSTATUS_NEUTRAL_M:
-							case MSTATUS_NEUTRAL_P:
 								mstat = " (neutral) ";
+								break;
+							case MSTATUS_NEUTRAL_M: /* holy hell why did they still show "neutral", that's bullshit --Amy */
+								mstat = " (angered) ";
+								break;
+							case MSTATUS_NEUTRAL_P:
+								mstat = " (pacified) ";
 								break;
 							case MSTATUS_PET:
 								mstat = " (pet) ";

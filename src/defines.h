@@ -2304,9 +2304,9 @@
  * Monster status(Player POV)
  */
 #define MSTATUS_ENEMY           -2
-#define MSTATUS_NEUTRAL_M       -1
-#define MSTATUS_NEUTRAL         0
-#define MSTATUS_NEUTRAL_P       1
+#define MSTATUS_NEUTRAL_M       -1 /* formerly neutral but became enemy I guess? comment would have been *really* nice --Amy */
+#define MSTATUS_NEUTRAL         0 /* currently neutral */
+#define MSTATUS_NEUTRAL_P       1 /* formerly neutral but I guess decided to join the player's side?! */
 #define MSTATUS_FRIEND          2
 #define MSTATUS_PET             3
 #define MSTATUS_COMPANION       4
