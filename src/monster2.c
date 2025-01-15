@@ -3476,6 +3476,13 @@ bool summon_specific_okay(int r_idx)
 			break;
 		}
 
+	case SUMMON_GIANT:
+		{
+			okay = ( ( (r_ptr->flags3 & (RF3_GIANT)) || (r_ptr->d_char == 'P') ) &&
+			        !(r_ptr->flags1 & (RF1_UNIQUE)));
+			break;
+		}
+
 	case SUMMON_HI_UNDEAD:
 		{
 			okay = ((r_ptr->d_char == 'L') ||

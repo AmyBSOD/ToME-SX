@@ -6821,6 +6821,33 @@ void earthquake(int cy, int cx, int r)
 }
 
 
+/* Ragnarok, from Elona, implemented by Amy */
+void ragnarok(void)
+{
+	cmsg_print(TERM_ORANGE, "Let's Ragnarok!");
+
+	int y = 1, x = 1;
+	while (x < cur_wid - 1) {
+		y = 1;
+		while (y < cur_hgt - 1) {
+			if (!in_bounds(y, x)) continue;
+
+			if (cave_valid_bold(y, x)) {
+				if (randint(10) == 1) { /* 1 in 10 for non-permanent wall square to turn into lava */
+					cave_set_feat(y, x, magik(50) ? FEAT_DEEP_LAVA : FEAT_SHAL_LAVA);
+				}
+
+				if (randint(50) == 1) { /* 1 in 50 for spawning highly OOD monster */
+					summon_specific(y, x, dun_level + 40, magik(33) ? SUMMON_DEMON : magik(50) ? SUMMON_DRAGON : SUMMON_GIANT);
+				}
+			}
+			y++;
+		}
+		x++;
+	}
+
+}
+
 
 /*
  * This routine clears the entire "temp" set.

@@ -2811,6 +2811,9 @@
 
 #define TRAP_NASTY111                     359
 
+#define TRAP_OF_RAGNAROK                  360
+#define TRAP_OF_SUMMON_GIANT              361
+
 /*** General index values ***/
 
 
@@ -2874,6 +2877,7 @@
 #define SUMMON_VOLCANO              75 /* WILD_VOLCANO */
 #define SUMMON_MOUNTAIN             76 /* WILD_MOUNTAIN */
 #define SUMMON_GRASS                77 /* WILD_GRASS */
+#define SUMMON_GIANT                78 /* P */
 
 
 /*

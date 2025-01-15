@@ -1742,6 +1742,16 @@ I:30:2:50:4:10:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:360:Ragnarok Trap
+I:40:10:0:7:40:0d0:o
+D:Uh-oh, you triggered the cataclysm.
+F:FLOOR | CHEST | DOOR
+
+N:361:Summon Giant Trap
+I:8:10:40:6:30:0d0:v
+D:A pack of giants defends this!
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

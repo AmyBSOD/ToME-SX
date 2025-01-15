@@ -1366,6 +1366,7 @@ extern void destroy_area(int y1, int x1, int r, bool full, bool bypass);
 extern void earthquake(int cy, int cx, int r);
 extern void lite_room(int y1, int x1);
 extern void unlite_room(int y1, int x1);
+extern void ragnarok(void);
 extern bool lite_area(int dam, int rad);
 extern bool unlite_area(int dam, int rad);
 extern bool fire_ball_beam(int typ, int dir, int dam, int rad);

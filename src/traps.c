@@ -1963,6 +1963,41 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_SUMMON_GIANT:
+		{
+			msg_print("A humongous spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
+				                         SUMMON_GIANT);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Giant Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
 		/* Summon Beetle Trap */
 	case TRAP_OF_SUMMON_BEETLE:
 		{
@@ -3467,6 +3502,37 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Acquirement.");
 		}
 		break;
+
+		/* Trap of Ragnarok, by Amy */
+	case TRAP_OF_RAGNAROK:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			/* create lava, summon many demons and dragons; TODO: start etherwind --Amy */
+			ragnarok();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Ragnarok.");
+
+		break;
+		}
 
 		/* Trap of Scatter Items */
 	case TRAP_OF_SCATTER_ITEMS:
