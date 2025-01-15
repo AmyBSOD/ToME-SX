@@ -5723,6 +5723,40 @@ void aggravate_monsters(int who)
 }
 
 /*
+ * Wake up nearby monsters without speeding them up --Amy
+ */
+void wake_nearby(void)
+{
+	int i;
+	bool sleep = FALSE;
+
+	/* Aggravate everyone nearby */
+	for (i = 1; i < m_max; i++)
+	{
+		monster_type *m_ptr = &m_list[i];
+
+		/* Paranoia -- Skip dead monsters */
+		if (!m_ptr->r_idx) continue;
+
+		/* Skip aggravating player */
+		if (i == 1) continue;
+
+		/* Wake up nearby sleeping monsters */
+		if (m_ptr->cdis < MAX_SIGHT * 2)
+		{
+			/* Wake up */
+			if (m_ptr->csleep)
+			{
+				/* Wake up */
+				m_ptr->csleep = 0;
+				sleep = TRUE;
+			}
+		}
+
+	}
+}
+
+/*
  * Generic genocide race selection
  */
 bool get_genocide_race(cptr msg, char *typ)

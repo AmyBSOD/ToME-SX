@@ -3492,6 +3492,11 @@ void do_cmd_fire(void)
 	if (j_ptr->sval >= SV_SMG1 && j_ptr->sval <= SV_SMG3) tdis = 7;
 	if (j_ptr->sval >= SV_ASSAULT1 && j_ptr->sval <= SV_ASSAULT3) tdis = 11;
 
+	/* Guns are noisy --Amy */
+	if (j_ptr->sval >= SV_PISTOL1 && j_ptr->sval <= SV_ASSAULT3) {
+		wake_nearby();
+	}
+
 	/* don't allow players to snipe into the darkness from like 50 tiles away! --Amy */
 	if (tdis > 19) tdis = 19;
 

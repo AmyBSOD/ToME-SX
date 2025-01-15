@@ -1346,6 +1346,7 @@ extern bool slow_monsters(void);
 extern bool sleep_monsters(void);
 extern bool conf_monsters(void);
 extern void aggravate_monsters(int who);
+extern void wake_nearby(void);
 extern bool genocide_aux(bool player_cast, char typ);
 extern bool genocide(bool player_cast);
 extern bool mass_genocide(bool player_cast);
