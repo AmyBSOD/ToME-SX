@@ -294,6 +294,9 @@ bool carried_make_attack_normal(int r_idx)
 		case RBE_ABOMINATION:
 			power = 30;
 			break;
+		case RBE_RAGNAROK:
+			power = 60;
+			break;
 		}
 
 
@@ -1127,6 +1130,19 @@ bool carried_make_attack_normal(int r_idx)
 
 					break;
 				}
+			case RBE_RAGNAROK:
+				{
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					take_hit(damage, ddesc);
+
+					/* Obvious */
+					obvious = TRUE;
+
+					if (randint(64) == 1) ragnarok();
+
+					break;
+				}
 			case RBE_HALLU:
 				{
 					/* Take damage */
@@ -1597,6 +1613,9 @@ bool make_attack_normal(int m_idx, byte divis)
 			break;
 		case RBE_ABOMINATION:
 			power = 20;
+			break;
+		case RBE_RAGNAROK:
+			power = 60;
 			break;
 		}
 
@@ -3000,8 +3019,23 @@ bool make_attack_normal(int m_idx, byte divis)
 
 					break;
 				}
-			}
+			case RBE_RAGNAROK:
+				{
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
+					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
 
+					/* Obvious */
+					obvious = TRUE;
+
+					if (randint(64) == 1) ragnarok();
+
+					break;
+				}
+
+			} /* type of melee attack loop end */
 
 			/* Hack -- only one of cut or stun */
 			if (do_cut && do_stun)

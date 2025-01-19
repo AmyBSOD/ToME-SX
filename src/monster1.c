@@ -1617,6 +1617,9 @@ static void roff_aux(int r_idx, int ego, int remem)
 		case RBE_ABOMINATION:
 			q = "polymorph";
 			break;
+		case RBE_RAGNAROK:
+			q = "trigger Ragnarok";
+			break;
 		}
 
 

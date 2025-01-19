@@ -121,7 +121,7 @@
 
 # N: serial number : monster name
 # G: symbol : color
-# I: speed : hit points : vision : armor class : alertness
+# I: speed : hit points : vision : armor class : alertness (low = more alert)
 # W: depth : rarity : corpse weight : experience for kill
 # E: weapons : torso : arms : finger : head : leg
 # O: treasure : combat : magic : tool
@@ -79682,9 +79682,71 @@ S:1_IN_5 | BA_WATE | BO_WATE | HOLD | BR_POIS | BO_ICEE | TELE_TO
 D:A vile creature which seems to consist mostly of tentacles, it seeks to 
 D:drag people to their doom in the water.  Few have ever escaped its grasp. 
 
+N:4527:Whom dwell in the vanity
+G:p:y
+I:130:20d100:80:80:5
+W:39:20:2000:20000
+E:1:1:1:2:1:1
+O:25:40:10:20
+B:HIT:RAGNAROK:12d12
+B:HIT:HURT:12d12
+F:MALE | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP |
+F:OPEN_DOOR | BASH_DOOR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:You sense death as you approach this man. He wields a sword that ends all. 
+
+N:4528:Yomagntho
+G:U:R
+I:133:60d100:100:80:5
+W:95:8:1500:30000
+E:0:0:0:0:0:0
+O:0:0:100:0
+B:TOUCH:FIRE:15d15
+B:SPIT:EAT_FOOD:14d14
+B:SPIT:LOSE_ALL:12d12
+B:TOUCH:RAGNAROK
+F:UNIQUE | RES_TELE | AURA_FIRE | IM_FIRE | CAN_FLY | RES_PLAS |
+F:FORCE_SLEEP | FORCE_MAXHP | IM_POIS | RES_LITE | POWERFUL | 
+F:ONLY_ITEM | DROP_4D2 | SMART | ELDRITCH_HORROR |
+F:EVIL | KILL_ITEM | KILL_BODY |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | HAS_LITE | NO_CUT
+S:1_IN_4 | 
+S:BR_FIRE | BA_FIRE | BR_PLAS
+D:An outer god, supposedly equal to Cthugha in terms of power. It appears 
+D:as a ring of fire, and is capable of unleashing one hell of a chaos. 
+
+N:4529:Bell of termination
+G:#:D
+I:150:2d6:50:100:60
+W:52:10:500:5000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:RAGNAROK:8d8
+F:IM_COLD | COLD_BLOOD | IM_ACID | IM_ELEC | CAN_FLY | 
+F:IM_FIRE | IM_POIS | RES_NETH | RES_WATE | RES_PLAS | RES_NEXU |
+F:RES_DISE | RES_TIME | RES_LITE | RES_SOUN | RES_CHAO | RES_INER |
+F:RES_WALL | RES_GRAV | RES_DARK | RES_SHAR |
+F:EMPTY_MIND | BASEANGBAND |
+D:*ring* *ring* *ring* Be careful, this bell has the ability to 
+D:bring an end. 
+
+N:4530:Ragnarock
+G:g:r
+I:130:20d400:60:60:50
+W:86:5:2000:12000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:EXPLODE:RAGNAROK:20d20
+F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | 
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | IM_ACID | 
+F:HURT_ROCK | NONLIVING | STUPID | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
+D:You can hear the sound of the rock rolling. It can bring an end. 
+
 # N: serial number : monster name
 # G: symbol : color
-# I: speed : hit points : vision : armor class : alertness
+# I: speed : hit points : vision : armor class : alertness (low = more alert)
 # W: depth : rarity : corpse weight : experience for kill
 # E: weapons : torso : arms : finger : head : leg
 # O: treasure : combat : magic : tool

@@ -6077,6 +6077,9 @@ static bool monst_attack_monst(int m_idx, int t_idx)
 		case RBE_ABOMINATION:
 			power = 20;
 			break;
+		case RBE_RAGNAROK:
+			power = 60;
+			break;
 		}
 
 
@@ -6381,6 +6384,11 @@ static bool monst_attack_monst(int m_idx, int t_idx)
 			case RBE_LOSE_ALL:
 			case RBE_PARASITE:
 				{
+					break;
+				}
+			case RBE_RAGNAROK:
+				{
+					if (randint(64) == 1) ragnarok();
 					break;
 				}
 			case RBE_SHATTER:

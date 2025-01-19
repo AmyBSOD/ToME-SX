@@ -3487,6 +3487,7 @@
 #define RBE_HALLU       32
 #define RBE_PARASITE    33
 #define RBE_ABOMINATION 34
+#define RBE_RAGNAROK    35
 
 
 /*** Monster flag values (hard-coded) ***/

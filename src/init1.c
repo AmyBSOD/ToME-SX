@@ -115,6 +115,7 @@ static cptr r_info_blow_effect[] =
 	"HALLU",
 	"PARASITE",
 	"ABOMINATION",
+	"RAGNAROK",
 	NULL
 };
 

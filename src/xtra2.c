@@ -4477,6 +4477,9 @@ void monster_death(int m_idx)
 			case RBE_SANITY:
 				typ = GF_MISSILE;
 				break;
+			case RBE_RAGNAROK:
+				typ = GF_MISSILE;
+				break;
 			}
 
 			project(m_idx, 3, y, x, damage, typ, flg);

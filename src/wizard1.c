@@ -2330,6 +2330,9 @@ static void spoil_mon_info(cptr fname)
 			case RBE_PARASITE:
 				q = "parasite";
 				break;
+			case RBE_RAGNAROK:
+				q = "trigger Ragnarok";
+				break;
 			}
 
 

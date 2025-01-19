@@ -1052,6 +1052,9 @@ static void carried_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 		case RBE_ABOMINATION:
 			power = 20;
 			break;
+		case RBE_RAGNAROK:
+			power = 60;
+			break;
 		}
 
 
@@ -1345,6 +1348,12 @@ static void carried_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 			case RBE_LOSE_ALL:
 			case RBE_PARASITE:
 				{
+					break;
+				}
+
+			case RBE_RAGNAROK:
+				{
+					if (randint(64) == 1) ragnarok();
 					break;
 				}
 
@@ -1678,6 +1687,12 @@ static void incarnate_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 		case RBE_PARASITE:
 			power = 5;
 			break;
+		case RBE_ABOMINATION:
+			power = 20;
+			break;
+		case RBE_RAGNAROK:
+			power = 60;
+			break;
 		}
 
 
@@ -1970,6 +1985,12 @@ static void incarnate_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 			case RBE_LOSE_ALL:
 			case RBE_PARASITE:
 				{
+					break;
+				}
+
+			case RBE_RAGNAROK:
+				{
+					if (randint(64) == 1) ragnarok();
 					break;
 				}
 
