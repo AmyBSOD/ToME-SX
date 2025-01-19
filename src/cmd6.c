@@ -3684,10 +3684,11 @@ void do_cmd_read_scroll(void)
 				break;
 			}
 
-			/* ZAngband scrolls */
+			/* ZAngband scrolls
+			 * note by Amy: fire, ice and chaos shouldn't be so super wimpy considering how rare and expensive they are!! */
 		case SV_SCROLL_FIRE:
 			{
-				fire_ball(GF_FIRE, 0, 150, 4);
+				fire_ball(GF_FIRE, 0, 750, 4);
 
 				/*
 				 * Note: "Double" damage since it is centered on
@@ -3708,7 +3709,7 @@ void do_cmd_read_scroll(void)
 
 		case SV_SCROLL_ICE:
 			{
-				fire_ball(GF_ICE, 0, 175, 4);
+				fire_ball(GF_ICE, 0, 1000, 4);
 
 				if (!p_ptr->oppose_cold && !p_ptr->resist_cold &&
 				                !p_ptr->immune_cold)
@@ -3768,7 +3769,7 @@ void do_cmd_read_scroll(void)
 
 		case SV_SCROLL_CHAOS:
 			{
-				fire_ball(GF_CHAOS, 0, 222, 4);
+				fire_ball(GF_CHAOS, 0, 1500, 4);
 
 				if (!p_ptr->resist_chaos)
 				{
