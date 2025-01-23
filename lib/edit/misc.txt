@@ -61,7 +61,7 @@ M:W:42
 M:N:142
 
 # Maximum number of building actions in ba_info.txt
-M:B:62
+M:B:63
 
 # Maximum number of store types in st_info.txt
 M:S:70

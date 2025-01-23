@@ -53,7 +53,7 @@ I:1:& Assault Rifle Bullet~
 I:98:& Cloak~
 I:46:& Fur Cloak~
 T:5:20:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:0:5:6:7
 G:1:U
 W:255
@@ -91,7 +91,7 @@ T:5:34:256
 T:5:35:256
 T:5:36:256
 T:5:37:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:8:9:10:11
 G:2:s
 W:255
@@ -139,7 +139,7 @@ T:5:21:256
 T:5:22:256
 T:5:23:256
 T:5:24:256
-A:23:0:1:2:3:4
+A:23:62:1:2:3:4
 O:12:13:14:15
 G:3:w
 W:255
@@ -189,7 +189,7 @@ I:100:Remove Curse
 I:100:*Remove Curse*
 I:100:*Remove Curse*
 I:100:Healing
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:26:27:28:29
 G:4:g
 W:255
@@ -250,7 +250,7 @@ I:100:Satisfy Hunger
 I:100:Satisfy Hunger
 T:5:70:256
 T:5:71:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:30:31:32:33
 G:5:b
 W:255
@@ -292,13 +292,13 @@ T:5:40:256
 T:5:45:256
 T:5:55:256
 T:5:65:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:34:35:36:37
 G:6:r
 W:255
 
 N:6:Black Market
-A:30:0:1:2:3:4
+A:30:62:1:2:3:4
 O:38:39:40:41
 G:7:D
 F:ALL_ITEM | MEDIUM_LEVEL
@@ -322,7 +322,7 @@ T:100:111:255
 T:100:111:255
 T:100:111:255
 T:5:111:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:42:43:44:45
 G:9:o
 W:255
@@ -331,7 +331,7 @@ N:9:Pet Shop
 I:100:Egg
 T:100:70:6
 I:100:& Hard Biscuit~
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:46:47:48:49
 G:+:b
 F:MEDIUM_LEVEL | RANDOM
@@ -350,7 +350,7 @@ I:100:& Strip~ of Venison
 I:100:& Pint~ of Fine Wine
 I:100:& Pint~ of Fine Ale
 T:5:80:256
-A:2:4:5:6:7:0
+A:2:4:5:6:7:62
 O:2:2:18:18
 G:+:w
 F:RANDOM
@@ -363,7 +363,7 @@ I:20:Divination
 I:20:Divination
 I:20:Divination
 I:20:Divination
-A:0:0:2:0:8:0
+A:0:62:2:0:8:0
 O:3:73:74:75
 G:+:B
 F:RANDOM
@@ -371,7 +371,7 @@ W:2
 
 N:13:Library
 I:100:Identify
-A:0:0:14:15:16:2
+A:0:62:14:15:16:2
 O:4:76:77:78
 G:+:U
 W:2
@@ -467,7 +467,7 @@ W:0
 
 N:28:Library
 I:100:Identify
-A:0:0:14:15:16:2
+A:0:62:14:15:16:2
 O:58:109:110:111
 G:+:U
 W:2
@@ -479,7 +479,7 @@ I:100:& Strip~ of Venison
 I:100:& Pint~ of Fine Wine
 I:100:& Pint~ of Fine Ale
 T:5:80:256
-A:2:4:5:6:7:0
+A:2:4:5:6:7:62
 O:59:112:113:114
 G:+:w
 W:255
@@ -535,7 +535,7 @@ W:0
 # Here begins the random shops, for the random towns
 N:38:Axe Smith
 T:100:24:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:12:13:14:15
 G:3:w
 F:RANDOM | MEDIUM_LEVEL
@@ -543,7 +543,7 @@ W:255
 
 N:39:Hafted Smith
 T:100:21:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:12:13:14:15
 G:3:w
 F:RANDOM | MEDIUM_LEVEL
@@ -551,7 +551,7 @@ W:255
 
 N:40:Polearm Smith
 T:100:22:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:12:13:14:15
 G:3:w
 F:RANDOM | MEDIUM_LEVEL
@@ -559,7 +559,7 @@ W:255
 
 N:41:Sword Smith
 T:100:23:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:12:13:14:15
 G:3:w
 F:RANDOM | MEDIUM_LEVEL
@@ -568,7 +568,7 @@ W:255
 N:42:Rare Jewelry Shop
 T:100:40:256
 T:100:45:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:34:35:36:37
 G:6:v
 F:RANDOM | DEPEND_LEVEL | DEEP_LEVEL | FORCE_LEVEL
@@ -578,7 +578,7 @@ W:255
 N:43:Jewelry Shop
 T:100:40:256
 T:100:45:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:34:35:36:37
 G:6:y
 F:RANDOM | DEPEND_LEVEL | MEDIUM_LEVEL | FORCE_LEVEL
@@ -587,7 +587,7 @@ W:255
 
 N:44:Footwear Shop
 T:100:30:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:8:9:10:11
 G:2:r
 F:RANDOM | MEDIUM_LEVEL
@@ -596,7 +596,7 @@ W:255
 
 N:45:Rare Footwear Shop
 T:100:30:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:8:9:10:11
 G:2:r
 F:RANDOM | DEEP_LEVEL | MEDIUM_LEVEL
@@ -620,7 +620,7 @@ T:100:122:256
 T:100:123:256
 T:100:124:256
 T:100:125:256
-A:27:0:1:2:3:4
+A:27:62:1:2:3:4
 O:8:9:10:11
 G:9:y
 F:RANDOM | DEPEND_LEVEL | MEDIUM_LEVEL
@@ -643,7 +643,7 @@ T:100:122:256
 T:100:123:256
 T:100:124:256
 T:100:125:256
-A:27:0:1:2:3:4
+A:27:62:1:2:3:4
 O:8:9:10:11
 G:9:v
 F:RANDOM | DEPEND_LEVEL | DEEP_LEVEL
@@ -651,7 +651,7 @@ F:RARE
 W:255
 
 N:48:Expensive Black Market
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:38:39:40:41
 G:7:v
 F:RANDOM | ALL_ITEM | DEEP_LEVEL | DEPEND_LEVEL | MEDIUM_LEVEL
@@ -680,7 +680,7 @@ I:5:& Rifle Bullet~
 I:2:& Shotgun Shell~
 I:2:& SMG Bullet~
 I:1:& Assault Rifle Bullet~
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:0:5:6:7
 G:1:U
 W:255
@@ -688,7 +688,7 @@ F:RANDOM
 
 N:50:Dragon Hunter
 T:100:38:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:8:9:10:11
 G:2:v
 F:RANDOM | DEEP_LEVEL | DEPEND_LEVEL
@@ -697,7 +697,7 @@ W:255
 
 N:51:Speed Ring Market
 T:100:45:31
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:34:35:36:37
 G:6:G
 F:RANDOM | SHALLOW_LEVEL | DEPEND_LEVEL
@@ -706,7 +706,7 @@ W:255
 
 N:52:Scribe
 T:100:70:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:8:9:10:11
 G:5:B
 F:RANDOM | MEDIUM_LEVEL | DEPEND_LEVEL
@@ -715,7 +715,7 @@ W:255
 N:53:Potion Store
 T:100:71:256
 T:100:72:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:8:9:10:11
 G:5:B
 F:RANDOM | MEDIUM_LEVEL | DEPEND_LEVEL
@@ -723,7 +723,7 @@ W:255
 
 N:54:Recaller
 I:100:Word of Recall
-A:33:0:1:2:3:0
+A:33:62:1:2:3:0
 O:8:9:10:11
 G:+:b
 F:RANDOM | COMMON
@@ -744,7 +744,7 @@ T:5:26:256
 T:2:27:256
 T:2:28:256
 T:1:29:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:12:13:14:15
 G:3:g
 F:RANDOM | MEDIUM_LEVEL | DEPEND_LEVEL
@@ -771,7 +771,7 @@ I:100:& Strip~ of Venison
 I:100:& Pint~ of Fine Wine
 I:100:& Pint~ of Fine Ale
 T:5:80:256
-A:2:4:5:6:7:0
+A:2:4:5:6:7:62
 O:69:139:140:141
 G:+:w
 W:255
@@ -788,7 +788,7 @@ I:60:& Feanorian Lamp~
 T:60:65:6
 T:70:71:22
 T:5:39:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:11:15:26:40
 F:MEDIUM_LEVEL
 G:+:s
@@ -798,7 +798,7 @@ W:255
 
 N:60:Library
 I:100:Identify
-A:61:0:14:15:16:2
+A:61:62:14:15:16:2
 O:4:76:77:78
 G:+:U
 W:2
@@ -808,7 +808,7 @@ T:100:55:256
 T:100:65:256
 T:100:66:256
 T:100:67:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:34:35:36:37
 G:6:v
 F:RANDOM | MEDIUM_LEVEL | DEPEND_LEVEL
@@ -821,7 +821,8 @@ T:100:10:256
 T:100:14:256
 T:100:46:256
 T:100:80:256
-A:0:0:1:2:3:4
+T:2:12:256
+A:0:62:1:2:3:4
 O:0:5:6:7
 G:1:v
 F:RANDOM | SHALLOW_LEVEL | DEPEND_LEVEL
@@ -845,7 +846,7 @@ T:100:36:256
 T:100:37:256
 T:100:37:256
 T:10:38:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:8:9:10:11
 G:2:u
 F:RANDOM | DEPEND_LEVEL
@@ -863,7 +864,7 @@ T:100:36:256
 T:100:37:256
 T:100:37:256
 T:30:38:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:8:9:10:11
 G:2:v
 F:RANDOM | DEEP_LEVEL | MEDIUM_LEVEL
@@ -885,7 +886,7 @@ T:5:26:256
 T:2:27:256
 T:2:28:256
 T:1:29:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:12:13:14:15
 G:3:v
 F:RANDOM | DEEP_LEVEL | MEDIUM_LEVEL
@@ -901,7 +902,7 @@ T:100:8:256
 T:100:104:256
 T:100:105:256
 T:2:7:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:0:5:6:7
 G:1:r
 F:RANDOM | SHALLOW_LEVEL
@@ -921,7 +922,7 @@ I:100:& Dwarf Skeleton~
 I:100:& Elf Skeleton~
 I:100:& Gnome Skeleton~
 T:10:80:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:0:5:6:7
 G:1:b
 F:RANDOM | MEDIUM_LEVEL
@@ -930,7 +931,7 @@ W:20
 
 N:68:Master Scribe
 T:100:70:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:8:9:10:11
 G:5:B
 F:RANDOM | DEEP_LEVEL | DEPEND_LEVEL
@@ -940,7 +941,7 @@ W:255
 N:69:Super Potion Store
 T:100:71:256
 T:100:72:256
-A:0:0:1:2:3:4
+A:0:62:1:2:3:4
 O:8:9:10:11
 G:5:B
 F:RANDOM | DEEP_LEVEL | DEPEND_LEVEL

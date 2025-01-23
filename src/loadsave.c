@@ -2493,6 +2493,7 @@ static bool do_store(store_type *str, int flag)
 	/* Some basic info */
 	do_s32b(&str->store_open, flag);
 	do_s16b(&str->insult_cur, flag);
+	do_s16b(&str->investment, flag);
 	do_u16b(&str->owner, flag);
 	if (flag == LS_SAVE) num = str->stock_num;
 

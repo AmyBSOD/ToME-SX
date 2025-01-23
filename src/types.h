@@ -1047,6 +1047,8 @@ struct store_type
 
 	s16b insult_cur;		/* Insult counter */
 
+	s16b investment;		/* by Amy: how much you've invested in a shop */
+
 	s16b good_buy;			/* Number of "good" buys */
 	s16b bad_buy;			/* Number of "bad" buys */
 

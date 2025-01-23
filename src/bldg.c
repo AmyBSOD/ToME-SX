@@ -1810,6 +1810,45 @@ bool bldg_process_command(store_type *s_ptr, int i)
 			break;
 		}
 
+	case BACT_INVEST:
+		{
+			int investcost = (1 + s_ptr->investment);
+			if (is_state(s_ptr, STORE_LIKED)) {
+				investcost *= 1500;
+			} else if (is_state(s_ptr, STORE_HATED)) {
+				investcost *= 2500;
+			} else {
+				investcost *= 2000;
+			}
+
+			if (p_ptr->nastytrap76) {
+				investcost *= 3;
+			}
+
+			if (s_ptr->investment >= 500) {
+				msg_format("Sorry, my shop has reached the maximum possible rank already.", investcost);
+				break;
+			}
+
+			if (investcost > p_ptr->au) {
+				msg_format("Sorry, you need at least %d gold pieces to improve my shop.", investcost);
+				break;
+			}
+
+			msg_format("Oh, do you want to invest in my shop? It'd cost you %d gold pieces.", investcost);
+
+			if (!get_check("Pay to invest in this shop?"))
+			{
+				break;
+			}
+			p_ptr->au -= investcost;
+			store_prt_gold();
+			s_ptr->investment += 1;
+			msg_format("Thank you! My shop rank has increased to %d.", s_ptr->investment);
+
+			break;
+		}
+
 	case BACT_COMPARE_WEAPONS:
 		{
 			paid = compare_weapons();

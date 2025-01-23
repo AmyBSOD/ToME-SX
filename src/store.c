@@ -391,6 +391,11 @@ static store_type *st_ptr = NULL;
  */
 static owner_type *ot_ptr = NULL;
 
+/*
+ * and GUH I guess we also store the rank
+ */
+static int st_investment = 0;
+
 
 
 /*
@@ -883,7 +888,7 @@ static bool store_check_num(object_type *o_ptr)
 	object_type *j_ptr;
 
 	/* Free space is always usable */
-	if (st_ptr->stock_num < st_ptr->stock_size) return TRUE;
+	if (st_ptr->stock_num < (st_ptr->stock_size + randint(st_ptr->investment)) ) return TRUE;
 
 	/* The "home" acts like the player */
 	if ((cur_store_num == 7) ||
@@ -1044,7 +1049,7 @@ static int home_carry(object_type *o_ptr)
 	}
 
 	/* No space? */
-	if (st_ptr->stock_num >= st_ptr->stock_size) return ( -1);
+	if (st_ptr->stock_num >= (st_ptr->stock_size + randint(st_ptr->investment)) ) return ( -1);
 
 
 	/* Determine the "value" of the item */
@@ -1155,7 +1160,7 @@ static int store_carry(object_type *o_ptr)
 	}
 
 	/* No space? */
-	if (st_ptr->stock_num >= st_ptr->stock_size) return ( -1);
+	if (st_ptr->stock_num >= (st_ptr->stock_size + randint(st_ptr->investment)) ) return ( -1);
 
 
 	/* Check existing slots to see if we must "slide" */
@@ -1339,6 +1344,12 @@ int return_level()
 
 	/* Amy edit: make runecraft skill not completely useless */
 	int runebonus = get_skill(SKILL_RUNECRAFT);
+
+	/* investing slowly improves the quality of items --Amy */
+	if (st_ptr->investment > 4) {
+		runebonus += (st_ptr->investment / 5);
+	}
+
 	if (p_ptr->nastytrap45) runebonus = 0;
 
 	if (sti_ptr->flags1 & SF1_RANDOM) level = 0;
@@ -1422,7 +1433,7 @@ static void store_create(void)
 
 
 	/* Paranoia -- no room left */
-	if (st_ptr->stock_num >= st_ptr->stock_size) return;
+	if (st_ptr->stock_num >= (st_ptr->stock_size + randint(st_ptr->investment)) ) return;
 
 
 	/* Hack -- consider up to four items */
@@ -1920,7 +1931,7 @@ void display_store(void)
 		put_str(buf, 3, 10);
 
 		/* Show the max price in the store (above prices) */
-		strnfmt(buf, 80, "%s (%ld)", store_name, (long)(ot_ptr->max_cost));
+		strnfmt(buf, 80, "%s (%ld, rank %d)", store_name, (long)(ot_ptr->max_cost + (st_investment * 100)), st_investment);
 		prt(buf, 3, 50);
 
 		/* Label the item descriptions */
@@ -2448,6 +2459,7 @@ static bool sell_haggle(object_type *o_ptr, s32b *price)
 
 	/* Get the owner's payout limit */
 	purse = (s32b)(ot_ptr->max_cost);
+	if (st_investment > 0) purse += (st_investment * 100);
 
 	/* No need to haggle */
 	if (noneed || auto_haggle || (final_ask >= purse))
@@ -4102,7 +4114,7 @@ void do_cmd_store(void)
 	/* Save the store and owner pointers */
 	st_ptr = &town_info[p_ptr->town_num].store[cur_store_num];
 	ot_ptr = &ow_info[st_ptr->owner];
-
+	st_investment = st_ptr->investment;
 
 	/* Start at the beginning */
 	store_top = 0;
@@ -4335,6 +4347,9 @@ void store_shuffle(int which)
 	st_ptr->good_buy = 0;
 	st_ptr->bad_buy = 0;
 
+	/* Lose one rank of investment (resetting it to zero would be too harsh --Amy) */
+	if (st_ptr->investment > 0) st_ptr->investment--;
+	st_investment = st_ptr->investment;
 
 	/* Hack -- discount all the items */
 	for (i = 0; i < st_ptr->stock_num; i++)
@@ -4363,6 +4378,9 @@ void store_shuffle(int which)
 void store_maint(int town_num, int store_num)
 {
 	int j, tries = 200;
+
+	int stocksizetemp;
+	int storeabsolutemax;
 
 	int maxkeep = STORE_MAX_KEEP; /* 120 */
 	switch (randint(10)) {
@@ -4415,6 +4433,7 @@ void store_maint(int town_num, int store_num)
 
 	/* Activate the owner */
 	ot_ptr = &ow_info[st_ptr->owner];
+	st_investment = st_ptr->investment;
 
 	/* Store keeper forgives the player */
 	st_ptr->insult_cur = 0;
@@ -4444,6 +4463,11 @@ void store_maint(int town_num, int store_num)
 	/* Sell a few items */
 	j = j - randint(STORE_TURNOVER);
 
+	/* well-invested shops can have more stuff --Amy */
+	if (st_ptr->investment > 0) {
+		maxkeep += rand_int(st_ptr->investment + 1);
+	}
+
 	/* Never keep more than "STORE_MAX_KEEP" slots
 	 * Amy edit: use a more randomized variable for this */
 	if (j > maxkeep) j = maxkeep;
@@ -4468,14 +4492,23 @@ void store_maint(int town_num, int store_num)
 		j = j + randint(STORE_TURNOVER);
 	}
 
+	/* absolute max of 120 items, but can stock more with high rank --Amy */
+	storeabsolutemax = STORE_MAX_KEEP;
+	if (st_ptr->investment > 0) {
+		storeabsolutemax += rand_int(st_ptr->investment + 1);
+		if (storeabsolutemax > 255) storeabsolutemax = 255;
+	}
+
 	/* Never keep more than "STORE_MAX_KEEP" slots */
-	if (j > STORE_MAX_KEEP) j = STORE_MAX_KEEP;
+	if (j > storeabsolutemax) j = storeabsolutemax;
 
 	/* Always "keep" at least "STORE_MIN_KEEP" items */
 	if (j < STORE_MIN_KEEP) j = STORE_MIN_KEEP;
 
+	stocksizetemp = st_ptr->stock_size + randint(st_ptr->investment);
+
 	/* Hack -- prevent "overflow" */
-	if (j >= st_ptr->stock_size) j = st_ptr->stock_size - 1;
+	if (j >= stocksizetemp) j = stocksizetemp - 1;
 
 	/* Acquire some new items */
 	while ((st_ptr->stock_num < j) && tries)
@@ -4508,12 +4541,14 @@ void store_init(int town_num, int store_num)
 	/* Activate the new owner */
 	ot_ptr = &ow_info[st_ptr->owner];
 
-
 	/* Initialize the store */
 	st_ptr->store_open = 0;
 	st_ptr->insult_cur = 0;
+	st_ptr->investment = 0;
 	st_ptr->good_buy = 0;
 	st_ptr->bad_buy = 0;
+
+	st_investment = st_ptr->investment;
 
 	/* Nothing in stock */
 	st_ptr->stock_num = 0;
@@ -4525,7 +4560,7 @@ void store_init(int town_num, int store_num)
 	st_ptr->last_visit = -100L * STORE_TURNS;
 
 	/* Clear any old items */
-	for (k = 0; k < st_ptr->stock_size; k++)
+	for (k = 0; k < (st_ptr->stock_size + randint(st_ptr->investment)); k++)
 	{
 		object_wipe(&st_ptr->stock[k]);
 	}
@@ -4615,6 +4650,7 @@ void do_cmd_home_trump(void)
 	st_ptr = &town_info[town_num].store[cur_store_num];
 	ot_ptr = &ow_info[st_ptr->owner];
 
+	st_investment = st_ptr->investment;
 
 	/* Start at the beginning */
 	store_top = 0;
