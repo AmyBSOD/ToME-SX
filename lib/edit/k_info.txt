@@ -7938,6 +7938,65 @@ D:assault rifle and make sure you always have enough bullets, then
 D:aim at your enemy and pull the trigger. Just make sure your
 D:distance to the target isn't higher than 12 squares!
 
+N:978:& Glory Axe~
+G:/:s
+I:24:34:0
+W:75:0:360:8000
+A:75/6
+P:0:5d8:0:0:0
+F:MUST2H
+f:MUST2H
+D:Just a really big and powerful axe.
+
+N:979:& Decapitator~
+G:/:W
+I:24:35:0
+W:80:0:400:15000
+A:80/12
+P:0:3d11:0:0:0
+F:MUST2H | VORPAL
+f:MUST2H | VORPAL
+D:This axe can decapitate enemies.
+
+N:980:& Gigantic Axe~
+G:/:w
+I:24:36:0
+W:90:0:500:16000
+A:90/20
+P:0:6d8:0:0:0
+F:MUST2H
+f:MUST2H
+D:Super powerful two-handed axe.
+
+N:981:& Tomahawk~
+G:\:y
+I:24:37:0
+W:60:0:180:2500
+A:60/5
+P:0:3d6:0:0:0
+F:SHOW_MODS | COULD2H
+f:COULD2H
+D:It's quite a powerful axe, yet you can wield it in one hand.
+D:More effective when wielded with both hands, though.
+
+N:982:& Meteoric Steel Plate~
+G:[:D
+I:37:36:0
+W:90:0:500:30000
+A:90/6
+P:54:2d4:-4:0:0
+F:IGNORE_ACID
+D:One of the most powerful (and heavy) types of armor.
+
+N:983:& Spandex Suit~
+G:[:g
+I:37:37:0
+W:85:0:500:30000
+A:85/5
+P:52:2d4:-4:0:0
+F:IGNORE_ACID
+D:Made of mithril, this suit of armor can deflect lots of attacks.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
