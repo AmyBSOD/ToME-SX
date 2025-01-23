@@ -7997,6 +7997,25 @@ P:52:2d4:-4:0:0
 F:IGNORE_ACID
 D:Made of mithril, this suit of armor can deflect lots of attacks.
 
+N:984:& Scuba Gear~
+G:`:g
+I:12:1:0
+W:50:0:100:400000
+A:50/200
+F:WATER_BREATH
+f:WATER_BREATH
+D:Diving equipment. Useful if you have to explore an underwater dungeon.
+
+N:985:& Gas Mask~
+G:`:s
+I:12:2:0
+W:100:0:500:1000000
+A:100/2000
+F:MAGIC_BREATH
+f:MAGIC_BREATH
+D:This mask provides you with the ability to breathe even in areas where
+D:there is no air at all.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
