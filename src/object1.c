@@ -4583,9 +4583,51 @@ s16b wield_slot_ideal_special(object_type *o_ptr, bool ideal)
 	switch (o_ptr->tval)
 	{
 	case TV_DIGGING:
-	case TV_TOOL:
 		{
 			return ideal ? INVEN_TOOL : get_slot(INVEN_TOOL);
+		}
+
+	case TV_TOOL:
+		{
+			char etrdt; /* by Amy: can select a slot, because it's silly if you're forced to sacrifice the digging slot */
+startoverTOOL:
+
+			prt("Wield the tool in the light slot (y/n)? ", 0, 0);
+			flush();
+			etrdt = inkey();
+			prt("", 0, 0);
+			if (etrdt != 'y') {
+				prt("Wield the tool in the ammo slot (y/n)? ", 0, 0);
+
+				flush();
+				etrdt = inkey();
+				prt("", 0, 0);
+				if (etrdt != 'y') {
+					prt("Wield the tool in the shooter slot (y/n)? ", 0, 0);
+	
+					flush();
+					etrdt = inkey();
+					prt("", 0, 0);
+					if (etrdt != 'y') {
+						prt("Wield the tool in the digging slot (y/n)? ", 0, 0);
+
+						flush();
+						etrdt = inkey();
+						prt("", 0, 0);
+						if (etrdt != 'y') {
+							goto startoverTOOL;
+						} else {
+							return ideal ? INVEN_TOOL : get_slot(INVEN_TOOL);
+						}
+					} else {
+						return ideal ? INVEN_BOW : get_slot(INVEN_BOW);
+					}
+				} else {
+					return ideal ? INVEN_AMMO : get_slot(INVEN_AMMO);
+				}
+			} else {
+				return ideal ? INVEN_LITE : get_slot(INVEN_LITE);
+			}
 		}
 
 	case TV_HAFTED:
@@ -4619,13 +4661,13 @@ startover:
 				etrdt = inkey();
 				prt("", 0, 0);
 				if (etrdt != 'y') {
-					prt("Wield the instrument in the digging slot (y/n)? ", 0, 0);
+					prt("Wield the instrument in the shooter slot (y/n)? ", 0, 0);
 	
 					flush();
 					etrdt = inkey();
 					prt("", 0, 0);
 					if (etrdt != 'y') {
-						prt("Wield the instrument in the shooter slot (y/n)? ", 0, 0);
+						prt("Wield the instrument in the digging slot (y/n)? ", 0, 0);
 
 						flush();
 						etrdt = inkey();

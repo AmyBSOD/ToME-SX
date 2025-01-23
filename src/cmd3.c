@@ -454,6 +454,18 @@ void do_cmd_wield(void)
 	{
 		act = "You are holding";
 	}
+	else if (( slot == INVEN_BOW ) && (o_ptr->tval == TV_TOOL))
+	{
+		act = "You are using";
+	}
+	else if (( slot == INVEN_AMMO ) && (o_ptr->tval == TV_TOOL))
+	{
+		act = "You are using";
+	}
+	else if (( slot == INVEN_LITE ) && (o_ptr->tval == TV_TOOL))
+	{
+		act = "You are using";
+	}
 	else if (slot == INVEN_BOW)
 	{
 		act = "You are shooting with";
