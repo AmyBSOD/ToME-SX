@@ -4452,8 +4452,9 @@ void calc_bonuses(bool silent)
 	/* Affect Skill -- combat (shooting) (Level, by Class) */
 	p_ptr->skill_thb += (50 * (((7 * get_skill(SKILL_ARCHERY)) + (3 * get_skill(SKILL_COMBAT))) / 10) / 10);
 
-	/* Affect Skill -- combat (throwing) (Level) */
-	p_ptr->skill_tht += (50 * p_ptr->lev / 10);
+	/* Affect Skill -- combat (throwing) (Level)
+	 * holy shit that was purely dependant on player level??? --Amy */
+	p_ptr->skill_tht += (50 * (((5 * get_skill(SKILL_ARCHERY)) + (2 * get_skill(SKILL_COMBAT))) / 10) / 10);
 
 
 	/* Limit Skill -- stealth from 0 to 30

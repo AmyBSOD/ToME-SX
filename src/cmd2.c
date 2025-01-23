@@ -4456,9 +4456,9 @@ void do_cmd_boomerang(void)
 	tdam = damroll(q_ptr->dd, q_ptr->ds) + q_ptr->to_d;
 	tdam *= p_ptr->throw_mult;
 
-	/* Chance of hitting */
+	/* Chance of hitting - holy shit the boomerang's to-hit bonus was NOT USED AT ALL????? --Amy */
 	chance =
-	        (p_ptr->skill_tht +
+	        (p_ptr->skill_tht + q_ptr->to_h + 
 	         ((p_ptr->to_h + p_ptr->to_h_ranged) * BTH_PLUS_ADJ));
 
 	chance += get_skill(SKILL_BOOMERANG);
