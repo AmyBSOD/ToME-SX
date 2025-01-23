@@ -17,12 +17,35 @@ int randomfloortype(void)
 	int randfloor = random_number(41);
 	int floornumber = 1;
 
+	/* small chance of a wall type */
+	if (random_number(50) == 1) {
+		floornumber = randomwalltype(1);
+		return floornumber;
+	}
+
 	switch (randfloor) {
 		case 1:
 			floornumber = 1; /* open floor */
 			break;
 		case 2:
-			floornumber = 82; /* grass with niphredil flowers */
+			switch (random_number(5)) {
+				default:
+				case 1:
+					floornumber = 82; /* grass with niphredil flowers */
+					break;
+				case 2:
+					floornumber = 79; /* grass with elanor flowers */
+					break;
+				case 3:
+					floornumber = 80; /* grass with fumella flowers */
+					break;
+				case 4:
+					floornumber = 81; /* grass with anemones */
+					break;
+				case 5:
+					floornumber = 83; /* grass with irises */
+					break;
+			}
 			break;
 		case 3:
 			floornumber = 86; /* stream of shallow lava */
@@ -123,14 +146,20 @@ int randomfloortype(void)
 }
 
 /* select a random type of non-walkable or otherwise obstructing terrain */
-int randomwalltype(void)
+int randomwalltype(int flags)
 {
 	int randfloor = random_number(40);
 	int floornumber = 56;
 
 	/* small chance of something walkable */
-	if (random_number(10) == 1) {
+	if ((flags == 0) && (random_number(10) == 1) ) {
 		floornumber = randomfloortype();
+		return floornumber;
+	}
+
+	/* very small chance of a permanent wall */
+	if ((flags == 0) && (random_number(50) == 1) ) {
+		floornumber = randompermawalltype();
 		return floornumber;
 	}
 
@@ -235,6 +264,46 @@ int randomwalltype(void)
 
 		default:
 			floornumber = 1;
+			break;
+	}
+
+	return floornumber;
+}
+
+/* select a random type of permanent wall */
+int randompermawalltype(void)
+{
+	int randfloor = random_number(14);
+	int floornumber = 56;
+
+	/* select a wall type that cannot be dug out or otherwise removed */
+	switch (randfloor) {
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+			floornumber = 60; /* permanent wall */
+			break;
+		case 11:
+			floornumber = 177; /* lava wall */
+			break;
+		case 12:
+			floornumber = 188; /* glass wall */
+			break;
+		case 13:
+			floornumber = 206; /* permanent rubble */
+			break;
+		case 14:
+			floornumber = 213; /* copper pillar */
+			break;
+		default:
+			floornumber = 60;
 			break;
 	}
 
@@ -806,11 +875,11 @@ void printRandoms(int lower, int upper, int count)
 				int l_secondtype = randomfloortype();
 				int l_thirdtype = randomfloortype();
 
-				int a_firsttype = randomwalltype();
-				int a_secondtype = randomwalltype();
-				int a_thirdtype = randomwalltype();
-				int a_outertype = randomwalltype();
-				int a_innertype = randomwalltype();
+				int a_firsttype = randomwalltype(0);
+				int a_secondtype = randomwalltype(0);
+				int a_thirdtype = randomwalltype(0);
+				int a_outertype = randomwalltype(0);
+				int a_innertype = randomwalltype(0);
 
 				int o_first = 0;
 				int o_second = 0;
