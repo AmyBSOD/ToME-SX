@@ -3145,7 +3145,7 @@ static void a_m_aux_1(object_type *o_ptr, int level, int power)
 	{
 		/* Make ego item */
 		if ((rand_int(RANDART_WEAPON) == 1) && (o_ptr->tval != TV_TRAPKIT)) create_artifact(o_ptr, FALSE, TRUE);
-		else if (has_ability(AB_CREATE_ART) && (randint(5) == 1) && (rand_int(RANDART_WEAPON) == 1) && (o_ptr->tval != TV_TRAPKIT) ) create_artifact(o_ptr, FALSE, TRUE);
+		else if (has_ability(AB_CREATE_ART) && (randint(2) == 1) && (rand_int(RANDART_WEAPON) == 1) && (o_ptr->tval != TV_TRAPKIT) ) create_artifact(o_ptr, FALSE, TRUE);
 		else make_ego_item(o_ptr, TRUE);
 	}
 	else if (power < -1)
@@ -3311,7 +3311,7 @@ static void a_m_aux_2(object_type *o_ptr, int level, int power)
 	{
 		/* Make ego item */
 		if (rand_int(RANDART_ARMOR) == 1) create_artifact(o_ptr, FALSE, TRUE);
-		else if (has_ability(AB_CREATE_ART) && (randint(5) == 1) && (rand_int(RANDART_ARMOR) == 1) ) create_artifact(o_ptr, FALSE, TRUE);
+		else if (has_ability(AB_CREATE_ART) && (randint(2) == 1) && (rand_int(RANDART_ARMOR) == 1) ) create_artifact(o_ptr, FALSE, TRUE);
 		else make_ego_item(o_ptr, TRUE);
 	}
 	else if (power < -1)
@@ -3430,7 +3430,7 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
 	{
 		/* Make ego item */
 		if (rand_int(RANDART_JEWEL) == 1) create_artifact(o_ptr, FALSE, TRUE);
-		else if (has_ability(AB_CREATE_ART) && (randint(5) == 1) && (rand_int(RANDART_JEWEL) == 1) ) create_artifact(o_ptr, FALSE, TRUE);
+		else if (has_ability(AB_CREATE_ART) && (randint(2) == 1) && (rand_int(RANDART_JEWEL) == 1) ) create_artifact(o_ptr, FALSE, TRUE);
 		else make_ego_item(o_ptr, TRUE);
 	}
 	else if (power < -1)
@@ -3881,7 +3881,7 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 	{
 		/* Make ego item */
 		if ((rand_int(RANDART_JEWEL) == 1) && (o_ptr->tval == TV_LITE || o_ptr->tval == TV_TOOL || o_ptr->tval == TV_INSTRUMENT || o_ptr->tval == TV_DIGGING)) create_artifact(o_ptr, FALSE, TRUE);
-		else if (has_ability(AB_CREATE_ART) && (randint(5) == 1) && (rand_int(RANDART_JEWEL) == 1) && (o_ptr->tval == TV_LITE || o_ptr->tval == TV_TOOL || o_ptr->tval == TV_INSTRUMENT || o_ptr->tval == TV_DIGGING) ) create_artifact(o_ptr, FALSE, TRUE);
+		else if (has_ability(AB_CREATE_ART) && (randint(2) == 1) && (rand_int(RANDART_JEWEL) == 1) && (o_ptr->tval == TV_LITE || o_ptr->tval == TV_TOOL || o_ptr->tval == TV_INSTRUMENT || o_ptr->tval == TV_DIGGING) ) create_artifact(o_ptr, FALSE, TRUE);
 		else make_ego_item(o_ptr, TRUE);
 	}
 	else if (power < -1)
@@ -5571,7 +5571,7 @@ bool make_object(object_type *j_ptr, bool good, bool great, obj_theme theme)
 
 	/* Amy: since alchemy has been scrapped, artifact generation ability now instead makes artifacts spawn more often */
 	if (has_ability(AB_CREATE_ART)) {
-		invprob *= 4;
+		invprob *= 2;
 		invprob /= 5;
 	}
 
