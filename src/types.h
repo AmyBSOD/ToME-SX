@@ -792,6 +792,8 @@ struct object_type
 	s32b pval3;                     /* Item extra-parameter for some special
 					   items*/
 
+	s32b spellcontain;      /* because SOMEone thought it was a good idea to misuse pval2... --Amy */
+
 	byte discount;		/* Discount (if any) */
 
 	byte number;		/* Number of items */

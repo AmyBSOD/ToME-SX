@@ -53,7 +53,7 @@ static bool hook_school_spellable(object_type *o_ptr)
 		/* Extract object flags */
 		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
 
-		if ((f5 & TR5_SPELL_CONTAIN) && (o_ptr->pval2 != -1))
+		if ((f5 & TR5_SPELL_CONTAIN) && (o_ptr->spellcontain != -1))
 			return TRUE;
 	}
 	return FALSE;
@@ -111,8 +111,8 @@ extern void do_cmd_browse_aux(object_type *o_ptr)
 
 	if (is_school_book(o_ptr))
 		browse_school_spell(o_ptr->sval, o_ptr->pval, o_ptr);
-	else if (f5 & TR5_SPELL_CONTAIN && o_ptr->pval2 != -1)
-		browse_school_spell(255, o_ptr->pval2, o_ptr);
+	else if (f5 & TR5_SPELL_CONTAIN && o_ptr->spellcontain != -1)
+		browse_school_spell(255, o_ptr->spellcontain, o_ptr);
 }
 
 void do_cmd_browse(void)
@@ -2496,7 +2496,7 @@ bool get_item_hook_find_spell(int *item)
 			/* Extract object flags */
 			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
 
-			if ((f5 & TR5_SPELL_CONTAIN) && (o_ptr->pval2 == spell))
+			if ((f5 & TR5_SPELL_CONTAIN) && (o_ptr->spellcontain == spell))
 			{
 				*item = i;
 				hack_force_spell = spell;
@@ -2606,8 +2606,14 @@ u32b get_school_spell(cptr do_what, cptr check_fct, s16b force_book)
 	/* No spell to cast by default */
 	spell = -1;
 
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
 	/* Is it a random book, or something else ? */
-	if (is_school_book(o_ptr))
+	if (f5 & TR5_SPELL_CONTAIN) {
+		sval = 255;
+		pval = o_ptr->spellcontain;
+	}
+	else if (is_school_book(o_ptr))
 	{
 		sval = o_ptr->sval;
 		pval = o_ptr->pval;
@@ -2853,7 +2859,7 @@ static bool hook_school_can_spellable(object_type *o_ptr)
 	/* Extract object flags */
 	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
 
-	if ((f5 & TR5_SPELL_CONTAIN) && (o_ptr->pval2 == -1))
+	if ((f5 & TR5_SPELL_CONTAIN) && (o_ptr->spellcontain == -1))
 		return TRUE;
 	return FALSE;
 }
@@ -2881,7 +2887,7 @@ void do_cmd_copy_spell()
 	o_ptr = get_object(item);
 
 	msg_print("You copy the spell!");
-	o_ptr->pval2 = spell;
+	o_ptr->spellcontain = spell;
 	inven_item_describe(item);
 }
 

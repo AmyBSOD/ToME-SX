@@ -3496,10 +3496,11 @@ void do_cmd_knowledge_artifacts(void)
 			/* Make it an artifact */
 			q_ptr->name1 = k;
 
-			/* Spell in it ? no ! */
+			/* Spell in it ? no !
+			 * fixed by Amy because who the hell had such a bright idea */
 			object_flags(q_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
 			if (f5 & TR5_SPELL_CONTAIN)
-				q_ptr->pval2 = -1;
+				q_ptr->spellcontain = -1;
 
 			/* Describe the artifact */
 			object_desc_store(base_name, q_ptr, FALSE, 0);

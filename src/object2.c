@@ -1298,8 +1298,8 @@ s32b object_value_real(object_type *o_ptr)
 	/* Pay the spell */
 	if (f5 & TR5_SPELL_CONTAIN)
 	{
-		if (o_ptr->pval2 != -1)
-			value += 5000 + 500 * school_spells[o_ptr->pval2].skill_level;
+		if (o_ptr->spellcontain != -1)
+			value += 5000 + 500 * school_spells[o_ptr->spellcontain].skill_level;
 		else
 			value += 5000;
 	}
@@ -1611,8 +1611,8 @@ s32b object_value_xtra(object_type *o_ptr)
 	/* Pay the spell */
 	if (f5 & TR5_SPELL_CONTAIN)
 	{
-		if (o_ptr->pval2 != -1)
-			value += 5000 + 500 * school_spells[o_ptr->pval2].skill_level;
+		if (o_ptr->spellcontain != -1)
+			value += 5000 + 500 * school_spells[o_ptr->spellcontain].skill_level;
 		else
 			value += 5000;
 	}
@@ -4675,7 +4675,7 @@ void apply_magic(object_type *o_ptr, int lev, bool okay, bool good, bool great)
 
 	/* Spell in it ? no ! */
 	if (k_ptr->flags5 & TR5_SPELL_CONTAIN)
-		o_ptr->pval2 = -1;
+		o_ptr->spellcontain = -1;
 
 	/* Important to do before all else, be sure to have the basic obvious flags set */
 	o_ptr->art_oflags1 = k_ptr->oflags1;
@@ -4869,7 +4869,7 @@ void apply_magic(object_type *o_ptr, int lev, bool okay, bool good, bool great)
 
 		/* Spell in it ? no ! */
 		if (a_ptr->flags5 & TR5_SPELL_CONTAIN)
-			o_ptr->pval2 = -1;
+			o_ptr->spellcontain = -1;
 
 		/* Give a basic exp/exp level to an artifact that needs it */
 		if (a_ptr->flags4 & TR4_LEVELS)
@@ -5047,7 +5047,7 @@ try_an_other_ego:
 			}
 			else*/
 
-			o_ptr->pval2 = -1;
+			o_ptr->spellcontain = -1;
 		}
 
 		/* Cheat -- describe the item */
@@ -5085,7 +5085,7 @@ try_an_other_ego:
 			}
 			else*/
 
-			o_ptr->pval2 = -1;
+			o_ptr->spellcontain = -1;
 		}
 
 		/* Hacccccccckkkkk attack ! :) -- To prevent som ugly crashs */

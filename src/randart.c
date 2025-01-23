@@ -1295,7 +1295,7 @@ bool create_artifact(object_type *o_ptr, bool a_scroll, bool get_name)
 	}
 	else if (f5 & TR5_SPELL_CONTAIN)
 	{
-		o_ptr->pval2 = -1;
+		o_ptr->spellcontain = -1;
 	}
 
 	return TRUE;

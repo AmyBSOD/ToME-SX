@@ -11400,7 +11400,7 @@ static errr process_dungeon_file_aux(char *buf, int *yval, int *xval, int xvalst
 					u32b f1, f2, f3, f4, f5, esp;
 					object_flags(q_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
 					if (f5 & TR5_SPELL_CONTAIN)
-						q_ptr->pval2 = -1;
+						q_ptr->spellcontain = -1;
 				}
 
 				/* Drop the artifact */

@@ -2249,9 +2249,9 @@ void object_desc(char *buf, object_type *o_ptr, int pref, int mode)
 	}
 
 	/* It contains a spell */
-	if ((known) && (f5 & TR5_SPELL_CONTAIN) && (o_ptr->pval2 != -1))
+	if ((known) && (f5 & TR5_SPELL_CONTAIN) && (o_ptr->spellcontain != -1))
 	{
-		t = object_desc_str(t, format(" [%s]", school_spells[o_ptr->pval2].name));
+		t = object_desc_str(t, format(" [%s]", school_spells[o_ptr->spellcontain].name));
 	}
 
 	/* Add symbiote hp here, after the "fake-artifact" name. --dsb */
@@ -3302,7 +3302,7 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 
 		if (f5 & TR5_SPELL_CONTAIN)
 		{
-			if (o_ptr->pval2 == -1)
+			if (o_ptr->spellcontain == -1)
 				text_out("It can be used to store a spell.  ");
 			else
 				text_out("It has a spell stored inside.  ");

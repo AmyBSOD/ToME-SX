@@ -2033,7 +2033,7 @@ F:STEALTH | ONLY_EVIL | HIDE_TYPE | XTRA_SHOTS | KILL_GHOST
 # Lite ego
 N:163:of the Magi
 X:A:0:0
-T:39:1:99
+T:39:1:255
 W:0:1:150:2000
 C:0:0:0:3
 Z:magic map
@@ -2106,12 +2106,12 @@ R:100
 F:RES_LITE | RES_DARK | LITE1 | SEE_INVIS  | RES_BLIND | IGNORE_ACID
 
 # Cloak of the Magi
-# will bug out if it appears on a mimicry cloak... --Amy
+# will no longer bug out if it appears on a mimicry cloak because seriously, misusing pval2... --Amy
 N:169:of the Magi
 X:A:31:15
 W:30:1:18:2000
 C:-5:-5:5:3
-T:35:0:99
+T:35:0:255
 T:101:0:255
 R:100
 F:INT | SPEED | SUST_INT | FREE_ACT | STEALTH | HIDE_TYPE | IGNORE_ACID
