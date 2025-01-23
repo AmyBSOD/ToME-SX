@@ -3372,8 +3372,16 @@ void store_sell(void)
 	}
 
 	if (four_dim_mode) { /* four-dimensional */
+
+		int weightmax = get_skill(SKILL_FOUR_DIM) * 10;
+
 		if (!store_check_fourdim(q_ptr)) {
 			msg_print("Your 4D pocket is full.");
+			return;
+		}
+
+		if (o_ptr->weight > weightmax) {
+			msg_format("The container can only hold items up to a weight of %d pounds.", weightmax / 10);
 			return;
 		}
 	}
