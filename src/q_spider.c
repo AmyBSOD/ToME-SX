@@ -105,7 +105,8 @@ bool quest_spider_init_hook(int q_idx)
 {
 	if ((cquest.status >= QUEST_STATUS_TAKEN) && (cquest.status < QUEST_STATUS_FINISHED))
 	{
-		add_hook(HOOK_MONSTER_DEATH, quest_spider_death_hook, "spider_death");
+		/* holy hell, all those quests have the bug where if you save and load, you can summon a monster and then get the reward again --Amy */
+		if (cquest.status < QUEST_STATUS_COMPLETED) add_hook(HOOK_MONSTER_DEATH, quest_spider_death_hook, "spider_death");
 		add_hook(HOOK_GEN_QUEST, quest_spider_gen_hook, "spider_gen");
 		add_hook(HOOK_QUEST_FINISH, quest_spider_finish_hook, "spider_finish");
 	}

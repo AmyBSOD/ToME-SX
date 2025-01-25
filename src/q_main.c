@@ -243,7 +243,8 @@ bool quest_necro_init_hook(int q_idx)
 {
 	if ((quest[QUEST_NECRO].status >= QUEST_STATUS_TAKEN) && (quest[QUEST_NECRO].status < QUEST_STATUS_FINISHED))
 	{
-		add_hook(HOOK_MONSTER_DEATH, quest_necro_hook, "necro_death");
+		/* holy hell, all those quests have the bug where if you save and load, you can summon a monster and then get the reward again --Amy */
+		if (quest[QUEST_NECRO].status < QUEST_STATUS_COMPLETED) add_hook(HOOK_MONSTER_DEATH, quest_necro_hook, "necro_death");
 	}
 	add_hook(HOOK_NEW_MONSTER, quest_main_monsters_hook, "main_new_monster");
 	add_hook(HOOK_LEVEL_END_GEN, quest_main_gen_hook, "main_gen");

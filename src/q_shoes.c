@@ -183,7 +183,8 @@ bool quest_shoes_init_hook(int q_idx)
 {
 	if ((cquest.status >= QUEST_STATUS_UNTAKEN) && (cquest.status < QUEST_STATUS_FINISHED))
 	{
-		add_hook(HOOK_MONSTER_DEATH, quest_shoes_death_hook, "shoes_monster_death");
+		/* holy hell, all those quests have the bug where if you save and load, you can summon a monster and then get the reward again --Amy */
+		if (cquest.status < QUEST_STATUS_COMPLETED) add_hook(HOOK_MONSTER_DEATH, quest_shoes_death_hook, "shoes_monster_death");
 		add_hook(HOOK_QUEST_FINISH, quest_shoes_finish_hook, "shoes_finish");
 		add_hook(HOOK_GEN_QUEST, quest_shoes_gen_hook, "shoes_geb");
 	}

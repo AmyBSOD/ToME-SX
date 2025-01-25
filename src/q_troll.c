@@ -175,7 +175,8 @@ bool quest_troll_init_hook(int q_idx)
 {
 	if ((cquest.status >= QUEST_STATUS_TAKEN) && (cquest.status < QUEST_STATUS_FINISHED))
 	{
-		add_hook(HOOK_MONSTER_DEATH, quest_troll_death_hook, "troll_death");
+		/* holy hell, all those quests have the bug where if you save and load, you can summon a monster and then get the reward again --Amy */
+		if (cquest.status < QUEST_STATUS_COMPLETED) add_hook(HOOK_MONSTER_DEATH, quest_troll_death_hook, "troll_death");
 		add_hook(HOOK_GEN_QUEST, quest_troll_gen_hook, "troll_gen");
 		add_hook(HOOK_QUEST_FINISH, quest_troll_finish_hook, "troll_finish");
 	}

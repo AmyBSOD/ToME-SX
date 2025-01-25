@@ -166,7 +166,8 @@ bool quest_thieves_init_hook(int q_idx)
 {
 	if ((cquest.status >= QUEST_STATUS_UNTAKEN) && (cquest.status < QUEST_STATUS_FINISHED))
 	{
-		add_hook(HOOK_END_TURN, quest_thieves_hook, "thieves_end_turn");
+		/* holy hell why does that hook restart when you save and load, what a loophole --Amy */
+		if (cquest.status < QUEST_STATUS_COMPLETED) add_hook(HOOK_END_TURN, quest_thieves_hook, "thieves_end_turn");
 		add_hook(HOOK_QUEST_FINISH, quest_thieves_finish_hook, "thieves_finish");
 		add_hook(HOOK_GEN_QUEST, quest_thieves_gen_hook, "thieves_geb");
 		add_hook(HOOK_FEELING, quest_thieves_feeling_hook, "thieves_feel");

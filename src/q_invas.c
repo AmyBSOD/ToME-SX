@@ -284,7 +284,8 @@ bool quest_invasion_init_hook(int q_idx)
 	{
 		add_hook(HOOK_MONSTER_AI, quest_invasion_ai_hook, "invasion_ai");
 		add_hook(HOOK_GEN_QUEST, quest_invasion_gen_hook, "invasion_gen");
-		add_hook(HOOK_MONSTER_DEATH, quest_invasion_death_hook, "invasion_death");
+		/* holy hell, all those quests have the bug where if you save and load, you can summon a monster and then get the reward again --Amy */
+		if (cquest.status < QUEST_STATUS_COMPLETED) add_hook(HOOK_MONSTER_DEATH, quest_invasion_death_hook, "invasion_death");
 		add_hook(HOOK_STAIR, quest_invasion_stair_hook, "invasion_stair");
 	}
 	return (FALSE);

@@ -190,7 +190,8 @@ bool quest_eol_init_hook(int q)
 {
 	if ((cquest.status >= QUEST_STATUS_TAKEN) && (cquest.status < QUEST_STATUS_FINISHED))
 	{
-		add_hook(HOOK_MONSTER_DEATH, quest_eol_death_hook, "eol_death");
+		/* holy hell, all those quests have the bug where if you save and load, you can summon a monster and then get the reward again --Amy */
+		if (cquest.status < QUEST_STATUS_COMPLETED) add_hook(HOOK_MONSTER_DEATH, quest_eol_death_hook, "eol_death");
 		add_hook(HOOK_GEN_QUEST, quest_eol_gen_hook, "eol_gen");
 		add_hook(HOOK_STAIR, quest_eol_stair_hook, "eol_stair");
 		add_hook(HOOK_QUEST_FAIL, quest_eol_fail_hook, "eol_fail");
