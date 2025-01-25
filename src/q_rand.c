@@ -20,13 +20,13 @@ bool is_randhero(int level)
 void do_get_new_obj(int y, int x)
 {
 	obj_theme theme;
-	char *items[4];
-	object_type *q_ptr[4], forge[4];
+	char *items[6];
+	object_type *q_ptr[6], forge[6];
 	int max = 0, res, i;
 
-	/* Create 4 ones */
+	/* Create 6 ones */
 	max = 0;
-	for (i = 0; i < 4; i++)
+	for (i = 0; i < 6; i++)
 	{
 		/* Get local object */
 		q_ptr[max] = &forge[max];
@@ -52,7 +52,7 @@ void do_get_new_obj(int y, int x)
 
 	while (TRUE)
 	{
-		res = ask_menu("Choose a reward to get(a-c to choose, ESC to cancel)?", (char **)items, 4);
+		res = ask_menu("Choose a reward to get(a-f to choose, ESC to cancel)?", (char **)items, 6);
 
 		/* Ok ? lets learn ! */
 		if (res > -1)
@@ -74,7 +74,7 @@ void do_get_new_obj(int y, int x)
 		}
 	}
 
-	for (i = 0; i < 4; i++)
+	for (i = 0; i < 6; i++)
 	{
 
 		object_type *o_ptr = q_ptr[i];
@@ -98,7 +98,7 @@ void do_get_new_obj(int y, int x)
 		}
 	}
 
-	for (i = 0; i < 4; i++)
+	for (i = 0; i < 6; i++)
 		C_KILL(items[i], 100, char);
 
 }
