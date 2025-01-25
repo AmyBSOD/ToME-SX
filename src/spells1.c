@@ -7829,7 +7829,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 	}
 
 	/* Effects done by the plane cannot bounce */
-	if (p_ptr->reflect && canreflect && !a_rad && !(randint(10) == 1) && ((who != -101) && (who != -100)))
+	if (p_ptr->reflect && canreflect && !a_rad && magik(50) && ((who != -101) && (who != -100)))
 	{
 		int t_y, t_x;
 		int max_attempts = 10;
