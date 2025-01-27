@@ -103,7 +103,7 @@ CRYSTALSHARDS = add_spell
 		return project_los(GF_SHARDS, 80 + get_level(CRYSTALSHARDS, 150) )
 	end,
 	["info"] =      function()
-		return "dam "..(80 + get_level(CRYSTALSHARDS, 400))
+		return "dam "..(80 + get_level(CRYSTALSHARDS, 150))
 	end,
 	["desc"] =      {
 			"Hits everyone in the proximity with razor-sharp crystal shards"
