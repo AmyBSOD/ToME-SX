@@ -2877,7 +2877,12 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pva
 	if (f1 & (TR1_IMPACT)) p_ptr->impact = TRUE;
 
 	/* Affect invisibility */
-	if (f2 & (TR2_INVIS)) p_ptr->invis += (pval * 10);
+	if (f2 & (TR2_INVIS)) {
+		int invisbonus = pval * 10;
+		/* but not too much or it becomes OP --Amy */
+		if (pval > 5) invisbonus = 45 + pval;
+		p_ptr->invis += invisbonus;
+	}
 
 	/* Boost shots */
 	if (f3 & (TR3_XTRA_SHOTS)) extra_shots++;
