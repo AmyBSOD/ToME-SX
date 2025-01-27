@@ -48,7 +48,7 @@ int randomfloortype(void)
 			}
 			break;
 		case 3:
-			floornumber = 86; /* stream of shallow lava */
+			floornumber = (random_number(5) == 1) ? 86 : 1; /* 1 in 5 to get a stream of shallow lava */
 			break;
 		case 4:
 			floornumber = 88; /* dirt */
@@ -105,7 +105,7 @@ int randomfloortype(void)
 			floornumber = 222; /* water lily */
 			break;
 		case 22:
-			floornumber = 226; /* swamp pool */
+			floornumber = (random_number(5) == 1) ? 226 : 1; /* 1 in 5 for swamp pool */
 			break;
 		case 23:
 		case 24:
@@ -217,7 +217,7 @@ int randomwalltype(int flags)
 			floornumber = 189; /* illusion wall */
 			break;
 		case 18:
-			floornumber = 205; /* blazing fire */
+			floornumber = (random_number(5) == 1) ? 205 : 56; /* 1 in 5 for blazing fire */
 			break;
 		case 19:
 			floornumber = 211; /* hailstone wall */
@@ -229,13 +229,13 @@ int randomwalltype(int flags)
 			floornumber = 216; /* battlement */
 			break;
 		case 22:
-			floornumber = 238; /* swift waterfall */
+			floornumber = (random_number(5) == 1) ? 238 : 56; /* 1 in 5 for swift waterfall */
 			break;
 		case 23:
 			floornumber = 84; /* stream of shallow water */
 			break;
 		case 24:
-			floornumber = 85; /* pool of deep lava */
+			floornumber = (random_number(5) == 1) ? 85 : 56; /* 1 in 5 for pool of deep lava */
 			break;
 		case 25:
 		case 26:
@@ -944,6 +944,31 @@ void printRandoms(int lower, int upper, int count)
 				if (random_number(40) == 1) printf("F:SAND_VEIN\n");
 				if (random_number(40) == 1) printf("F:QUARTZ_VEIN\n");
 				if (random_number(40) == 1) printf("F:MAGMA_VEIN\n");
+				if (random_number(30) == 1) printf("F:NO_DOORS\n");
+				if (random_number(20) == 1) printf("F:NO_DESTROY\n");
+				if (random_number(40) == 1) printf("F:EMPTY\n");
+				if (random_number(25) == 1) printf("F:NO_STREAMERS\n");
+				if (random_number(10) == 1) printf("F:NO_SHAFT\n");
+
+				if (random_number(20) == 1) {
+					switch (random_number(3)) {
+						case 1:
+						default:
+							printf("F:SMALLEST\n");
+							break;
+						case 2:
+							printf("F:SMALL\n");
+							break;
+						case 3:
+							printf("F:BIG\n");
+							break;
+					}
+				}
+
+				if (random_number(100) == 1) {
+					if (random_number(3) == 1) printf("F:NO_BREATH\n");
+					else printf("F:WATER_BREATH\n");
+				}
 
 				if (random_number(20) == 1) {
 					int dudrand;
