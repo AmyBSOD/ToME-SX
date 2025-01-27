@@ -3210,6 +3210,11 @@ static void build_type5(int by0, int bx0)
 	bool (*old_get_mon_num_hook)(int r_idx);
 	s16b what[64];
 
+	int sleepstate = 0; /* awake */
+	if (magik(80)) sleepstate = 1; /* sleeping */
+	else if (magik(80)) sleepstate = 2; /* 4 out of 5 are sleeping */
+	bool actualsleepstate = FALSE;
+
 	/* Try to allocate space for room.  If fails, exit */
 	if (!room_alloc(25, 11, TRUE, by0, bx0, &xval, &yval)) return;
 
@@ -3243,21 +3248,23 @@ static void build_type5(int by0, int bx0)
 	/* The inner walls */
 	build_rectangle(y1 - 1, x1 - 1, y2 + 1, x2 + 1, feat_wall_inner, CAVE_ROOM);
 
-	/* Place a secret door */
-	switch (randint(4))
-	{
-	case 1:
-		place_secret_door(y1 - 1, xval);
-		break;
-	case 2:
-		place_secret_door(y2 + 1, xval);
-		break;
-	case 3:
-		place_secret_door(yval, x1 - 1);
-		break;
-	case 4:
-		place_secret_door(yval, x2 + 1);
-		break;
+	/* Place a secret door, but not always because pits shouldn't make every single level inhospitable --Amy */
+	if (magik(50)) {
+		switch (randint(4))
+		{
+		case 1:
+			place_secret_door(y1 - 1, xval);
+			break;
+		case 2:
+			place_secret_door(y2 + 1, xval);
+			break;
+		case 3:
+			place_secret_door(yval, x1 - 1);
+			break;
+		case 4:
+			place_secret_door(yval, x2 + 1);
+			break;
+		}
 	}
 
 	/* Hack -- Choose a nest type */
@@ -3411,8 +3418,13 @@ static void build_type5(int by0, int bx0)
 		{
 			int r_idx = what[rand_int(64)];
 
+			/* Amy: it suuuuucks if pits always spawn awake! */
+			actualsleepstate = FALSE;
+			if (sleepstate == 1) actualsleepstate = TRUE;
+			if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
 			/* Place that "random" monster (no groups) */
-			(void)place_monster_aux(y, x, r_idx, FALSE, FALSE, MSTATUS_ENEMY);
+			(void)place_monster_aux(y, x, r_idx, actualsleepstate, FALSE, MSTATUS_ENEMY);
 			/* and fill the pit with a few items, from newer Angband versions, to make them worth exploring --Amy */
 			if (rand_int(12) < 1) {
 				if (rand_int(20) < 1) object_level = dun_level + 10;
@@ -3479,6 +3491,11 @@ static void build_type6(int by0, int bx0)
 	cptr name;
 	bool (*old_get_mon_num_hook)(int r_idx);
 
+	int sleepstate = 0; /* awake */
+	if (magik(80)) sleepstate = 1; /* sleeping */
+	else if (magik(80)) sleepstate = 2; /* 4 out of 5 are sleeping */
+	bool actualsleepstate = FALSE;
+
 	/* Try to allocate space for room.  If fails, exit */
 	if (!room_alloc(25, 11, TRUE, by0, bx0, &xval, &yval)) return;
 
@@ -3512,21 +3529,23 @@ static void build_type6(int by0, int bx0)
 	/* The inner walls */
 	build_rectangle(y1 - 1, x1 - 1, y2 + 1, x2 + 1, feat_wall_outer, CAVE_ROOM);
 
-	/* Place a secret door */
-	switch (randint(4))
-	{
-	case 1:
-		place_secret_door(y1 - 1, xval);
-		break;
-	case 2:
-		place_secret_door(y2 + 1, xval);
-		break;
-	case 3:
-		place_secret_door(yval, x1 - 1);
-		break;
-	case 4:
-		place_secret_door(yval, x2 + 1);
-		break;
+	/* Place a secret door, but not always since pits are annoying enough as it is --Amy */
+	if (magik(50)) {
+		switch (randint(4))
+		{
+		case 1:
+			place_secret_door(y1 - 1, xval);
+			break;
+		case 2:
+			place_secret_door(y2 + 1, xval);
+			break;
+		case 3:
+			place_secret_door(yval, x1 - 1);
+			break;
+		case 4:
+			place_secret_door(yval, x2 + 1);
+			break;
+		}
 	}
 
 	/* Choose a pit type */
@@ -3832,14 +3851,23 @@ static void build_type6(int by0, int bx0)
 	/* Top and bottom rows */
 	for (x = xval - 9; x <= xval + 9; x++)
 	{
-		place_monster_aux(yval - 2, x, what[0], FALSE, FALSE, MSTATUS_ENEMY);
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(yval - 2, x, what[0], actualsleepstate, FALSE, MSTATUS_ENEMY);
 		if (rand_int(12) < 1) {
 			if (rand_int(20) < 1) object_level = dun_level + 10;
 			if (rand_int(50) < 1) object_level = dun_level + 20;
 			place_object(yval - 2, xval, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
 			object_level = dun_level;
 		}
-		place_monster_aux(yval + 2, x, what[0], FALSE, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(yval + 2, x, what[0], actualsleepstate, FALSE, MSTATUS_ENEMY);
 		if (rand_int(12) < 1) {
 			if (rand_int(20) < 1) object_level = dun_level + 10;
 			if (rand_int(50) < 1) object_level = dun_level + 20;
@@ -3851,8 +3879,17 @@ static void build_type6(int by0, int bx0)
 	/* Middle columns */
 	for (y = yval - 1; y <= yval + 1; y++)
 	{
-		place_monster_aux(y, xval - 9, what[0], FALSE, FALSE, MSTATUS_ENEMY);
-		place_monster_aux(y, xval + 9, what[0], FALSE, FALSE, MSTATUS_ENEMY);
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval - 9, what[0], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval + 9, what[0], actualsleepstate, FALSE, MSTATUS_ENEMY);
 		if (rand_int(12) < 1) {
 			if (rand_int(20) < 1) object_level = dun_level + 10;
 			if (rand_int(50) < 1) object_level = dun_level + 20;
@@ -3866,8 +3903,17 @@ static void build_type6(int by0, int bx0)
 			object_level = dun_level;
 		}
 
-		place_monster_aux(y, xval - 8, what[1], FALSE, FALSE, MSTATUS_ENEMY);
-		place_monster_aux(y, xval + 8, what[1], FALSE, FALSE, MSTATUS_ENEMY);
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval - 8, what[1], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval + 8, what[1], actualsleepstate, FALSE, MSTATUS_ENEMY);
 		if (rand_int(12) < 1) {
 			if (rand_int(20) < 1) object_level = dun_level + 10;
 			if (rand_int(50) < 1) object_level = dun_level + 20;
@@ -3881,8 +3927,17 @@ static void build_type6(int by0, int bx0)
 			object_level = dun_level;
 		}
 
-		place_monster_aux(y, xval - 7, what[1], FALSE, FALSE, MSTATUS_ENEMY);
-		place_monster_aux(y, xval + 7, what[1], FALSE, FALSE, MSTATUS_ENEMY);
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval - 7, what[1], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval + 7, what[1], actualsleepstate, FALSE, MSTATUS_ENEMY);
 		if (rand_int(12) < 1) {
 			if (rand_int(20) < 1) object_level = dun_level + 10;
 			if (rand_int(50) < 1) object_level = dun_level + 20;
@@ -3896,8 +3951,17 @@ static void build_type6(int by0, int bx0)
 			object_level = dun_level;
 		}
 
-		place_monster_aux(y, xval - 6, what[2], FALSE, FALSE, MSTATUS_ENEMY);
-		place_monster_aux(y, xval + 6, what[2], FALSE, FALSE, MSTATUS_ENEMY);
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval - 6, what[2], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval + 6, what[2], actualsleepstate, FALSE, MSTATUS_ENEMY);
 		if (rand_int(12) < 1) {
 			if (rand_int(20) < 1) object_level = dun_level + 10;
 			if (rand_int(50) < 1) object_level = dun_level + 20;
@@ -3911,8 +3975,17 @@ static void build_type6(int by0, int bx0)
 			object_level = dun_level;
 		}
 
-		place_monster_aux(y, xval - 5, what[2], FALSE, FALSE, MSTATUS_ENEMY);
-		place_monster_aux(y, xval + 5, what[2], FALSE, FALSE, MSTATUS_ENEMY);
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval - 5, what[2], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval + 5, what[2], actualsleepstate, FALSE, MSTATUS_ENEMY);
 		if (rand_int(12) < 1) {
 			if (rand_int(20) < 1) object_level = dun_level + 10;
 			if (rand_int(50) < 1) object_level = dun_level + 20;
@@ -3926,8 +3999,17 @@ static void build_type6(int by0, int bx0)
 			object_level = dun_level;
 		}
 
-		place_monster_aux(y, xval - 4, what[3], FALSE, FALSE, MSTATUS_ENEMY);
-		place_monster_aux(y, xval + 4, what[3], FALSE, FALSE, MSTATUS_ENEMY);
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval - 4, what[3], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval + 4, what[3], actualsleepstate, FALSE, MSTATUS_ENEMY);
 		if (rand_int(12) < 1) {
 			if (rand_int(20) < 1) object_level = dun_level + 10;
 			if (rand_int(50) < 1) object_level = dun_level + 20;
@@ -3941,8 +4023,17 @@ static void build_type6(int by0, int bx0)
 			object_level = dun_level;
 		}
 
-		place_monster_aux(y, xval - 3, what[3], FALSE, FALSE, MSTATUS_ENEMY);
-		place_monster_aux(y, xval + 3, what[3], FALSE, FALSE, MSTATUS_ENEMY);
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval - 3, what[3], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval + 3, what[3], actualsleepstate, FALSE, MSTATUS_ENEMY);
 		if (rand_int(12) < 1) {
 			if (rand_int(20) < 1) object_level = dun_level + 10;
 			if (rand_int(50) < 1) object_level = dun_level + 20;
@@ -3956,8 +4047,17 @@ static void build_type6(int by0, int bx0)
 			object_level = dun_level;
 		}
 
-		place_monster_aux(y, xval - 2, what[4], FALSE, FALSE, MSTATUS_ENEMY);
-		place_monster_aux(y, xval + 2, what[4], FALSE, FALSE, MSTATUS_ENEMY);
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval - 2, what[4], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval + 2, what[4], actualsleepstate, FALSE, MSTATUS_ENEMY);
 		if (rand_int(12) < 1) {
 			if (rand_int(20) < 1) object_level = dun_level + 10;
 			if (rand_int(50) < 1) object_level = dun_level + 20;
@@ -3975,8 +4075,17 @@ static void build_type6(int by0, int bx0)
 	/* Above/Below the center monster */
 	for (x = xval - 1; x <= xval + 1; x++)
 	{
-		place_monster_aux(yval + 1, x, what[5], FALSE, FALSE, MSTATUS_ENEMY);
-		place_monster_aux(yval - 1, x, what[5], FALSE, FALSE, MSTATUS_ENEMY);
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(yval + 1, x, what[5], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(yval - 1, x, what[5], actualsleepstate, FALSE, MSTATUS_ENEMY);
 		if (rand_int(12) < 1) {
 			if (rand_int(20) < 1) object_level = dun_level + 10;
 			if (rand_int(50) < 1) object_level = dun_level + 20;
@@ -3992,28 +4101,45 @@ static void build_type6(int by0, int bx0)
 	}
 
 	/* Next to the center monster */
-	place_monster_aux(yval, xval + 1, what[6], FALSE, FALSE, MSTATUS_ENEMY);
-	place_monster_aux(yval, xval - 1, what[6], FALSE, FALSE, MSTATUS_ENEMY);
-	if (rand_int(12) < 1) {
-		if (rand_int(20) < 1) object_level = dun_level + 10;
-		if (rand_int(50) < 1) object_level = dun_level + 20;
-		place_object(yval, xval + 1, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
-		object_level = dun_level;
-	}
-	if (rand_int(12) < 1) {
-		if (rand_int(20) < 1) object_level = dun_level + 10;
-		if (rand_int(50) < 1) object_level = dun_level + 20;
-		place_object(yval, xval - 1, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
-		object_level = dun_level;
+	{
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(yval, xval + 1, what[6], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(yval, xval - 1, what[6], actualsleepstate, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval + 1, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval - 1, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
 	}
 
 	/* Center monster */
-	place_monster_aux(yval, xval, what[7], FALSE, FALSE, MSTATUS_ENEMY);
-	if (rand_int(12) < 1) {
-		if (rand_int(20) < 1) object_level = dun_level + 10;
-		if (rand_int(50) < 1) object_level = dun_level + 20;
-		place_object(yval, xval, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
-		object_level = dun_level;
+	{
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(yval, xval, what[7], actualsleepstate, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
 	}
 
 	if (seed_dungeon)
