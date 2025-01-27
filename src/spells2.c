@@ -9010,13 +9010,14 @@ int reset_recall_aux()
 				msg_print(NULL);
 				continue;
 			}
-			else if (d_info[i].flags1 & DF1_NO_RECALL)
+			/* Amy edit: fuck you, if I'm in wizard mode I can recall to wherever I want! */
+			else if ((d_info[i].flags1 & DF1_NO_RECALL) && !wizard)
 			{
 				msg_print("This place blocks my magic!");
 				msg_print(NULL);
 				continue;
 			}
-			else if (d_info[i].min_plev > p_ptr->lev)
+			else if ((d_info[i].min_plev > p_ptr->lev) && !wizard)
 			{
 				msg_print("You cannot go there yet!");
 				msg_print(NULL);

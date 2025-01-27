@@ -363,7 +363,7 @@ void printRandoms(int lower, int upper, int count)
 			case 6:
 				printf("N:6:Nether Realm\n");
 				printf("D:Nth:a magical portal to the Nether Realm.\n");
-				printf("W:666:676:1:0:14:160\n");
+				printf("W:666:696:1:0:14:160\n");
 				break;
 			case 7:
 				printf("N:7:Submerged Ruins\n");

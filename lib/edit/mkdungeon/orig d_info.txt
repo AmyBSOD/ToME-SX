@@ -115,10 +115,9 @@ R:5:0
 # Nether Realm
 # Levels 666-696 (!!!)
 # guarded by Tik'srvzllat, who has the Ring of Phasing
-# Amy edit: 666-676 because fuck why do you have to go back, that means you'd have to endure *59* levels of this crap...
 N:6:Nether Realm
 D:Nth:a magical portal to the Nether Realm.
-W:666:676:1:0:14:160
+W:666:696:1:0:14:160
 L:102:80:86:15:85:5
 A:85:80:87:20:87:0:57:85
 A:50:50:0
