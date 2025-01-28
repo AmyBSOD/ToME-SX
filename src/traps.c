@@ -459,6 +459,9 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_OF_SHOES:
 		case TRAP_OF_SHOES_II:
 		case TRAP_OF_SHOES_III:
+		case TRAP_OF_UNKNOWN:
+		case TRAP_OF_UNKNOWN_OOD:
+		case TRAP_OF_UNKNOWN_OOD_RARE:
 		case TRAP_NASTY1:
 		case TRAP_NASTY2:
 		case TRAP_NASTY3:
@@ -582,6 +585,9 @@ bool can_detect_trap_type(int traptype)
 	if (p_ptr->nastytrap2) return FALSE; /* ensnaring nastytrap: prevents finding any traps */
 
 	switch (traptype) {
+		case TRAP_OF_UNKNOWN:
+		case TRAP_OF_UNKNOWN_OOD:
+		case TRAP_OF_UNKNOWN_OOD_RARE:
 		case TRAP_NASTY1:
 		case TRAP_NASTY2:
 		case TRAP_NASTY3:
@@ -699,6 +705,140 @@ bool can_detect_trap_type(int traptype)
 	return TRUE;
 }
 
+/* trap doesn't become visible when triggered --Amy */
+bool is_nonvis_trap(int traptype)
+{
+	if (is_nasty_trap(traptype)) return TRUE;
+	switch (traptype) {
+		case TRAP_OF_UNKNOWN:
+		case TRAP_OF_UNKNOWN_OOD:
+		case TRAP_OF_UNKNOWN_OOD_RARE:
+			return TRUE;
+	}
+	return FALSE;
+}
+
+bool is_nasty_trap(int traptype)
+{
+
+	switch (traptype) {
+		case TRAP_NASTY1:
+		case TRAP_NASTY2:
+		case TRAP_NASTY3:
+		case TRAP_NASTY4:
+		case TRAP_NASTY5:
+		case TRAP_NASTY6:
+		case TRAP_NASTY7:
+		case TRAP_NASTY8:
+		case TRAP_NASTY9:
+		case TRAP_NASTY10:
+		case TRAP_NASTY11:
+		case TRAP_NASTY12:
+		case TRAP_NASTY13:
+		case TRAP_NASTY14:
+		case TRAP_NASTY15:
+		case TRAP_NASTY16:
+		case TRAP_NASTY17:
+		case TRAP_NASTY18:
+		case TRAP_NASTY19:
+		case TRAP_NASTY20:
+		case TRAP_NASTY21:
+		case TRAP_NASTY22:
+		case TRAP_NASTY23:
+		case TRAP_NASTY24:
+		case TRAP_NASTY25:
+		case TRAP_NASTY26:
+		case TRAP_NASTY27:
+		case TRAP_NASTY28:
+		case TRAP_NASTY29:
+		case TRAP_NASTY30:
+		case TRAP_NASTY31:
+		case TRAP_NASTY32:
+		case TRAP_NASTY33:
+		case TRAP_NASTY34:
+		case TRAP_NASTY35:
+		case TRAP_NASTY36:
+		case TRAP_NASTY37:
+		case TRAP_NASTY38:
+		case TRAP_NASTY39:
+		case TRAP_NASTY40:
+		case TRAP_NASTY41:
+		case TRAP_NASTY42:
+		case TRAP_NASTY43:
+		case TRAP_NASTY44:
+		case TRAP_NASTY45:
+		case TRAP_NASTY46:
+		case TRAP_NASTY47:
+		case TRAP_NASTY48:
+		case TRAP_NASTY49:
+		case TRAP_NASTY50:
+		case TRAP_NASTY51:
+		case TRAP_NASTY52:
+		case TRAP_NASTY53:
+		case TRAP_NASTY54:
+		case TRAP_NASTY55:
+		case TRAP_NASTY56:
+		case TRAP_NASTY57:
+		case TRAP_NASTY58:
+		case TRAP_NASTY59:
+		case TRAP_NASTY60:
+		case TRAP_NASTY61:
+		case TRAP_NASTY62:
+		case TRAP_NASTY63:
+		case TRAP_NASTY64:
+		case TRAP_NASTY65:
+		case TRAP_NASTY66:
+		case TRAP_NASTY67:
+		case TRAP_NASTY68:
+		case TRAP_NASTY69:
+		case TRAP_NASTY70:
+		case TRAP_NASTY71:
+		case TRAP_NASTY72:
+		case TRAP_NASTY73:
+		case TRAP_NASTY74:
+		case TRAP_NASTY75:
+		case TRAP_NASTY76:
+		case TRAP_NASTY77:
+		case TRAP_NASTY78:
+		case TRAP_NASTY79:
+		case TRAP_NASTY80:
+		case TRAP_NASTY81:
+		case TRAP_NASTY82:
+		case TRAP_NASTY83:
+		case TRAP_NASTY84:
+		case TRAP_NASTY85:
+		case TRAP_NASTY86:
+		case TRAP_NASTY87:
+		case TRAP_NASTY88:
+		case TRAP_NASTY89:
+		case TRAP_NASTY90:
+		case TRAP_NASTY91:
+		case TRAP_NASTY92:
+		case TRAP_NASTY93:
+		case TRAP_NASTY94:
+		case TRAP_NASTY95:
+		case TRAP_NASTY96:
+		case TRAP_NASTY97:
+		case TRAP_NASTY98:
+		case TRAP_NASTY99:
+		case TRAP_NASTY100:
+		case TRAP_NASTY101:
+		case TRAP_NASTY102:
+		case TRAP_NASTY103:
+		case TRAP_NASTY104:
+		case TRAP_NASTY105:
+		case TRAP_NASTY106:
+		case TRAP_NASTY107:
+		case TRAP_NASTY108:
+		case TRAP_NASTY109:
+		case TRAP_NASTY110:
+		case TRAP_NASTY111:
+			return TRUE;
+	}
+
+	return FALSE;
+}
+
 /*
  * this function activates one trap type, and returns
  * a bool indicating if this trap is now identified
@@ -709,7 +849,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	s16b trap;
 
 	cave_type *c_ptr;
-
+	trap_type *t_ptr;
+	dungeon_info_type *d_ptr = &d_info[dungeon_type];
 	s16b k, l;
 
 	/* Amy: for fart trap, determine the name; sadly the "trap" struct doesn't have extra fields here, unlike SLEX */
@@ -728,6 +869,223 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	if ((i_ptr == NULL) && (cave[y][x].o_idx != 0))
 	{
 		i_ptr = &o_list[cave[y][x].o_idx];
+	}
+
+	if (trap == TRAP_OF_UNKNOWN) {
+		if (c_ptr->info & (CAVE_TRDT)) {
+			t_info[trap].ident = TRUE;
+		}
+
+		/* Try 10000 times */
+		int cnt = 10000;
+		while (cnt--)
+		{
+			trap = randint(max_t_idx - 1);
+			t_ptr = &t_info[trap];
+
+			/* anti-nastiness skill by Amy: reduces odds that a new trap will be a nasty trap */
+			int nastyward = get_skill(SKILL_ANTINASTY) * 2;
+
+			int effect_level;
+			int scalinglevel = 1;
+
+			if (dun_level > 0) effect_level = dun_level;
+			else effect_level = wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level + rand_int(p_ptr->lev);
+			if (monster_level > effect_level) effect_level = monster_level;
+
+			if (p_ptr->nastytrap107) effect_level += randint(10 + p_ptr->lev);
+
+			if (randint(50) == 1) scalinglevel = randint(p_ptr->lev);
+
+			if (effect_level < scalinglevel) effect_level = scalinglevel;
+
+			if (nastyward > 0) {
+				int effnastyward = nastyward;
+				if (effnastyward > 80) effnastyward = 80;
+
+				if (is_nasty_trap(trap) && magik(effnastyward)) continue;
+
+				if (nastyward > 80) {
+					if (is_nasty_trap(trap) && (randint(nastyward) > 80)) continue;
+				}
+
+			}
+
+			/* No traps below their minlevel */
+			if (t_ptr->minlevel > effect_level && ( (randint(3) != 1) || (randint(t_ptr->minlevel + 1) > (effect_level + 2) ) ) ) continue;
+			if ( (t_ptr->minlevel > (effect_level + 5)) && (randint(t_ptr->minlevel) != 1) ) continue;
+
+			/* is this a correct trap now?   */
+			if (!(t_ptr->flags & FTRAP_FLOOR)) continue;
+
+			/*
+			 * Hack -- No trap door at the bottom of dungeon or in flat
+			 * (non dungeon) places or on quest levels
+			 */
+			if ((trap == TRAP_OF_SINKING || trap == TRAP_OF_SHAFT || trap == TRAP_OF_DEEP_DESCENT || trap == TRAP_OF_TELE_LEVEL) &&
+			    ((d_ptr->maxdepth == dun_level) ||
+			     (dungeon_flags1 & DF1_FLAT) || (is_quest(dun_level) && (is_quest(dun_level) != QUEST_RANDOM) )) )
+			{
+				continue;
+			}
+
+			/* How probable is this trap */
+			if (rand_int(100) < t_ptr->probability)
+			{
+				c_ptr->t_idx = trap;
+				break;
+			}
+		}
+
+		if (!is_nonvis_trap(c_ptr->t_idx)) {
+			msg_print("You triggered a trap!");
+			pick_trap(p_ptr->py, p_ptr->px);
+		}
+	}
+
+	if (trap == TRAP_OF_UNKNOWN_OOD) {
+		if (c_ptr->info & (CAVE_TRDT)) {
+			t_info[trap].ident = TRUE;
+		}
+
+		/* Try 10000 times */
+		int cnt = 10000;
+		while (cnt--)
+		{
+			trap = randint(max_t_idx - 1);
+			t_ptr = &t_info[trap];
+
+			/* anti-nastiness skill by Amy: reduces odds that a new trap will be a nasty trap */
+			int nastyward = get_skill(SKILL_ANTINASTY) * 2;
+
+			int effect_level;
+			int scalinglevel = 1;
+
+			if (dun_level > 0) effect_level = dun_level;
+			else effect_level = wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level + rand_int(p_ptr->lev);
+			if (monster_level > effect_level) effect_level = monster_level;
+
+			effect_level += randint(25);
+
+			if (p_ptr->nastytrap107) effect_level += randint(10 + p_ptr->lev);
+
+			if (randint(50) == 1) scalinglevel = randint(p_ptr->lev);
+
+			if (effect_level < scalinglevel) effect_level = scalinglevel;
+
+			if (nastyward > 0) {
+				int effnastyward = nastyward;
+				if (effnastyward > 80) effnastyward = 80;
+
+				if (is_nasty_trap(trap) && magik(effnastyward)) continue;
+
+				if (nastyward > 80) {
+					if (is_nasty_trap(trap) && (randint(nastyward) > 80)) continue;
+				}
+
+			}
+
+			/* No traps below their minlevel */
+			if (t_ptr->minlevel > effect_level && ( (randint(3) != 1) || (randint(t_ptr->minlevel + 1) > (effect_level + 2) ) ) ) continue;
+			if ( (t_ptr->minlevel > (effect_level + 5)) && (randint(t_ptr->minlevel) != 1) ) continue;
+
+			/* is this a correct trap now?   */
+			if (!(t_ptr->flags & FTRAP_FLOOR)) continue;
+
+			/*
+			 * Hack -- No trap door at the bottom of dungeon or in flat
+			 * (non dungeon) places or on quest levels
+			 */
+			if ((trap == TRAP_OF_SINKING || trap == TRAP_OF_SHAFT || trap == TRAP_OF_DEEP_DESCENT || trap == TRAP_OF_TELE_LEVEL) &&
+			    ((d_ptr->maxdepth == dun_level) ||
+			     (dungeon_flags1 & DF1_FLAT) || (is_quest(dun_level) && (is_quest(dun_level) != QUEST_RANDOM) )) )
+			{
+				continue;
+			}
+
+			/* How probable is this trap */
+			if (rand_int(100) < t_ptr->probability)
+			{
+				c_ptr->t_idx = trap;
+				break;
+			}
+		}
+
+		if (!is_nonvis_trap(c_ptr->t_idx)) {
+			msg_print("You triggered a trap!");
+			pick_trap(p_ptr->py, p_ptr->px);
+		}
+	}
+
+	if (trap == TRAP_OF_UNKNOWN_OOD_RARE) {
+		if (c_ptr->info & (CAVE_TRDT)) {
+			t_info[trap].ident = TRUE;
+		}
+
+		/* Try 10000 times */
+		int cnt = 10000;
+		while (cnt--)
+		{
+			trap = randint(max_t_idx - 1);
+			t_ptr = &t_info[trap];
+
+			/* anti-nastiness skill by Amy: reduces odds that a new trap will be a nasty trap */
+			int nastyward = get_skill(SKILL_ANTINASTY) * 2;
+
+			int effect_level;
+			int scalinglevel = 1;
+
+			if (dun_level > 0) effect_level = dun_level;
+			else effect_level = wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level + rand_int(p_ptr->lev);
+			if (monster_level > effect_level) effect_level = monster_level;
+
+			effect_level += randint(25);
+
+			if (p_ptr->nastytrap107) effect_level += randint(10 + p_ptr->lev);
+
+			if (randint(50) == 1) scalinglevel = randint(p_ptr->lev);
+
+			if (effect_level < scalinglevel) effect_level = scalinglevel;
+
+			if (nastyward > 0) {
+				int effnastyward = nastyward;
+				if (effnastyward > 80) effnastyward = 80;
+
+				if (is_nasty_trap(trap) && magik(effnastyward)) continue;
+
+				if (nastyward > 80) {
+					if (is_nasty_trap(trap) && (randint(nastyward) > 80)) continue;
+				}
+
+			}
+
+			/* No traps below their minlevel */
+			if (t_ptr->minlevel > effect_level && ( (randint(3) != 1) || (randint(t_ptr->minlevel + 1) > (effect_level + 2) ) ) ) continue;
+			if ( (t_ptr->minlevel > (effect_level + 5)) && (randint(t_ptr->minlevel) != 1) ) continue;
+
+			/* is this a correct trap now?   */
+			if (!(t_ptr->flags & FTRAP_FLOOR)) continue;
+
+			/*
+			 * Hack -- No trap door at the bottom of dungeon or in flat
+			 * (non dungeon) places or on quest levels
+			 */
+			if ((trap == TRAP_OF_SINKING || trap == TRAP_OF_SHAFT || trap == TRAP_OF_DEEP_DESCENT || trap == TRAP_OF_TELE_LEVEL) &&
+			    ((d_ptr->maxdepth == dun_level) ||
+			     (dungeon_flags1 & DF1_FLAT) || (is_quest(dun_level) && (is_quest(dun_level) != QUEST_RANDOM) )) )
+			{
+				continue;
+			}
+
+			/* ignore probabilities --Amy */
+			c_ptr->t_idx = trap;
+			break;
+		}
+
+		if (!is_nonvis_trap(c_ptr->t_idx)) {
+			msg_print("You triggered a trap!");
+			pick_trap(p_ptr->py, p_ptr->px);
+		}
 	}
 
 	switch (trap)
@@ -1014,6 +1372,55 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		break;
 	case TRAP_OF_BEAUTY_IV:
 		ident = do_dec_stat(A_CHR, STAT_DEC_PERMANENT_NORESIST);
+		break;
+
+	case TRAP_OF_STAT_DRAIN_I:
+		ident = do_dec_stat(rand_int(6), STAT_DEC_TEMPORARY);
+		break;
+	case TRAP_OF_STAT_DRAIN_II:
+		ident = do_dec_stat(rand_int(6), STAT_DEC_NORMAL);
+		break;
+	case TRAP_OF_STAT_DRAIN_III:
+		ident = do_dec_stat(rand_int(6), STAT_DEC_PERMANENT);
+		break;
+	case TRAP_OF_STAT_DRAIN_IV:
+		ident = do_dec_stat(rand_int(6), STAT_DEC_PERMANENT_NORESIST);
+		break;
+	case TRAP_OF_STAT_SAP_I:
+		{
+			int sappings = 5;
+			while (sappings) {
+				if (do_dec_stat(rand_int(6), STAT_DEC_TEMPORARY)) ident = TRUE;
+				sappings--;
+			}
+		}
+		break;
+	case TRAP_OF_STAT_SAP_II:
+		{
+			int sappings = 5;
+			while (sappings) {
+				if (do_dec_stat(rand_int(6), STAT_DEC_NORMAL)) ident = TRUE;
+				sappings--;
+			}
+		}
+		break;
+	case TRAP_OF_STAT_SAP_III:
+		{
+			int sappings = 5;
+			while (sappings) {
+				if (do_dec_stat(rand_int(6), STAT_DEC_PERMANENT)) ident = TRUE;
+				sappings--;
+			}
+		}
+		break;
+	case TRAP_OF_STAT_SAP_IV:
+		{
+			int sappings = 5;
+			while (sappings) {
+				if (do_dec_stat(rand_int(6), STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+				sappings--;
+			}
+		}
 		break;
 
 	case TRAP_OF_RECALL:
@@ -1992,6 +2399,41 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				}
 
 				if (ident) msg_print("You identified that trap as Summon Giant Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+	case TRAP_OF_SUMMON_SEXY_GIRL:
+		{
+			msg_print("A feminine spell hangs in the air.");
+			for (k = 0; k < 1; k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
+				                         SUMMON_SEXY_GIRL);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(5) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Sexy Girl Trap.");
 				ident = FALSE;
 
 			}
@@ -3230,6 +3672,51 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			ident = TRUE;
 			break;
 
+		break;
+
+		/* abomination traps (turn you into a bad mimicry form) --Amy */
+	case TRAP_OF_ABOMINATION_I:
+			if (magik(60 - get_skill_scale(SKILL_MIMICRY, 25)))
+			{
+				cmsg_print(TERM_VIOLET, "You feel the dark powers twisting your body!");
+				set_mimic(50, resolve_mimic_name("Abomination"), 50);
+			}
+			else
+			{
+				cmsg_print(TERM_VIOLET, "You feel the dark powers trying to twisting your body, but they fail.");
+			}
+			ident = TRUE;
+		break;
+	case TRAP_OF_ABOMINATION_II:
+			if (magik(60 - get_skill_scale(SKILL_MIMICRY, 25)))
+			{
+				cmsg_print(TERM_VIOLET, "You feel the dark powers twisting your body!");
+				set_mimic(250, resolve_mimic_name("Abomination"), 50);
+			}
+			else
+			{
+				cmsg_print(TERM_VIOLET, "You feel the dark powers trying to twisting your body, but they fail.");
+			}
+			ident = TRUE;
+		break;
+	case TRAP_OF_ABOMINATION_III:
+			if (magik(60 - get_skill_scale(SKILL_MIMICRY, 25)))
+			{
+				cmsg_print(TERM_VIOLET, "You feel the dark powers twisting your body!");
+				set_mimic(5000, resolve_mimic_name("Abomination"), 50);
+			}
+			else
+			{
+				cmsg_print(TERM_VIOLET, "You feel the dark powers trying to twisting your body, but they fail.");
+			}
+			ident = TRUE;
+		break;
+
+		/* unknown traps: should normally morph into something else prior to triggering */
+	case TRAP_OF_UNKNOWN:
+	case TRAP_OF_UNKNOWN_OOD:
+	case TRAP_OF_UNKNOWN_OOD_RARE:
+			ident = FALSE;
 		break;
 
 		/* Trap of Charges Drain */
@@ -6014,10 +6501,10 @@ void place_trap(int y, int x)
 			int effnastyward = nastyward;
 			if (effnastyward > 80) effnastyward = 80;
 
-			if (!can_detect_trap_type(trap) && magik(effnastyward)) continue;
+			if (is_nasty_trap(trap) && magik(effnastyward)) continue;
 
 			if (nastyward > 80) {
-				if (!can_detect_trap_type(trap) && (randint(nastyward) > 80)) continue;
+				if (is_nasty_trap(trap) && (randint(nastyward) > 80)) continue;
 			}
 
 		}

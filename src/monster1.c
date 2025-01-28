@@ -1980,6 +1980,16 @@ bool monster_amberite(int r_idx)
 		return FALSE;
 }
 
+bool monster_revboss(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	if (r_ptr->flags7 & RF7_REVBOSS)
+		return TRUE;
+	else
+		return FALSE;
+}
+
 
 void set_mon_num_hook(void)
 {

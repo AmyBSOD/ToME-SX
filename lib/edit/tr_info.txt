@@ -1752,6 +1752,81 @@ I:8:10:40:6:30:0d0:v
 D:A pack of giants defends this!
 F:FLOOR | CHEST | DOOR
 
+N:362:Stat Drain Trap
+I:2:20:5:5:2:0d0:b
+D:A poisoned needle drains you!
+F:FLOOR | CHEST | DOOR
+
+N:363:Greater Stat Drain Trap
+I:5:20:5:5:20:0d0:b
+D:A poisoned needle seriously drains you!
+F:FLOOR | CHEST | DOOR
+
+N:364:Permanent Stat Drain Trap
+I:7:20:5:8:40:0d0:b
+D:A poisoned needle permanently drains you!
+F:FLOOR | CHEST | DOOR
+
+N:365:Unresistable Stat Drain Trap
+I:10:20:5:8:60:0d0:b
+D:A poisoned needle totally drains you!
+F:FLOOR | CHEST | DOOR
+
+N:366:Stat Sapping Trap
+I:2:5:5:5:2:0d0:b
+D:A poisoned needle saps you!
+F:FLOOR | CHEST | DOOR
+
+N:367:Greater Stat Sapping Trap
+I:5:5:5:5:20:0d0:b
+D:A poisoned needle seriously saps you!
+F:FLOOR | CHEST | DOOR
+
+N:368:Permanent Stat Sapping Trap
+I:7:5:5:8:40:0d0:b
+D:A poisoned needle permanently saps you!
+F:FLOOR | CHEST | DOOR
+
+N:369:Unresistable Stat Sapping Trap
+I:10:5:5:8:60:0d0:b
+D:A poisoned needle totally saps you!
+F:FLOOR | CHEST | DOOR
+
+N:370:Summon Sexy Girl Trap
+I:5:5:40:6:5:0d0:v
+D:A sexy girl defends this!
+F:FLOOR | CHEST | DOOR
+
+N:371:Abomination Trap
+I:5:20:5:0:10:0d0:G
+D:This morphed you into something horrible!
+F:FLOOR | CHEST | DOOR
+
+N:372:Greater Abomination Trap
+I:6:20:5:0:30:0d0:G
+D:This morphed you into something really horrible!
+F:FLOOR | CHEST | DOOR
+
+N:373:Ultimate Abomination Trap
+I:7:20:5:0:50:0d0:G
+D:This morphed you into something utterly horrible!
+F:FLOOR | CHEST | DOOR
+
+N:374:Unknown Trap
+I:3:100:5:0:1:0d0:G
+D:You don't know what just happened.
+F:FLOOR
+
+N:375:Very Unknown Trap
+I:5:10:5:0:20:0d0:G
+D:You really don't know what just happened.
+F:FLOOR
+
+N:376:Really Unknown Trap
+I:10:2:5:0:30:0d0:G
+D:You absolutely don't know what just happened.
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

@@ -1108,6 +1108,7 @@ extern bool monster_deep_water(int r_idx);
 extern bool monster_shallow_water(int r_idx);
 extern bool monster_lava(int r_idx);
 extern bool monster_amberite(int r_idx);
+extern bool monster_revboss(int r_idx);
 extern void set_mon_num_hook(void);
 extern void set_mon_num2_hook(int y, int x);
 extern bool monster_can_cross_terrain(byte feat, monster_race *r_ptr);
@@ -1254,6 +1255,8 @@ extern void do_cmd_set_trap(void);
 extern bool mon_hit_trap(int);
 extern bool can_disarm_trap_type(int);
 extern bool can_detect_trap_type(int);
+extern bool is_nasty_trap(int);
+extern bool is_nonvis_trap(int);
 extern void cure_nasty_traps(void);
 extern void give_random_nastytrap_effect(void);
 

@@ -3483,6 +3483,13 @@ bool summon_specific_okay(int r_idx)
 			break;
 		}
 
+	case SUMMON_SEXY_GIRL:
+		{
+			okay = monster_revboss(r_idx);
+			/* strangely, okay = (r_ptr->flags7 & (RF7_REVBOSS)); does not work --Amy */
+			break;
+		}
+
 	case SUMMON_HI_UNDEAD:
 		{
 			okay = ((r_ptr->d_char == 'L') ||

@@ -662,7 +662,7 @@ static void hit_trap(void)
 	c_ptr = &cave[p_ptr->py][p_ptr->px];
 
 	/* Disturb the player */
-	if (can_detect_trap_type(c_ptr->t_idx)) {
+	if (!is_nasty_trap(c_ptr->t_idx)) {
 		disturb(0, 0);
 	}
 
@@ -4029,11 +4029,11 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 		{
 			/* Disturb */
 
-			if (can_detect_trap_type(c_ptr->t_idx)) {
+			if (!is_nasty_trap(c_ptr->t_idx)) {
 				disturb(0, 0);
 			}
 
-			if (!(c_ptr->info & (CAVE_TRDT)) && can_detect_trap_type(c_ptr->t_idx) )
+			if (!(c_ptr->info & (CAVE_TRDT)) && !is_nonvis_trap(c_ptr->t_idx) )
 			{
 				/* Message */
 				msg_print("You found a trap!");
@@ -4896,11 +4896,11 @@ void step_effects(int y, int x, int do_pickup)
 	{
 		/* Disturb */
 
-		if (can_detect_trap_type(cave[y][x].t_idx)) {
+		if (!is_nasty_trap(cave[y][x].t_idx)) {
 			disturb(0, 0);
 		}
 
-		if (!(cave[y][x].info & CAVE_TRDT) && can_detect_trap_type(cave[y][x].t_idx) )
+		if (!(cave[y][x].info & CAVE_TRDT) && !is_nonvis_trap(cave[y][x].t_idx) )
 		{
 			/* Message */
 			msg_print("You found a trap!");

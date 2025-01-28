@@ -2814,6 +2814,26 @@
 #define TRAP_OF_RAGNAROK                  360
 #define TRAP_OF_SUMMON_GIANT              361
 
+#define TRAP_OF_STAT_DRAIN_I              362
+#define TRAP_OF_STAT_DRAIN_II             363
+#define TRAP_OF_STAT_DRAIN_III            364
+#define TRAP_OF_STAT_DRAIN_IV             365
+
+#define TRAP_OF_STAT_SAP_I                366
+#define TRAP_OF_STAT_SAP_II               367
+#define TRAP_OF_STAT_SAP_III              368
+#define TRAP_OF_STAT_SAP_IV               369
+
+#define TRAP_OF_SUMMON_SEXY_GIRL          370
+
+#define TRAP_OF_ABOMINATION_I             371
+#define TRAP_OF_ABOMINATION_II            372
+#define TRAP_OF_ABOMINATION_III           373
+
+#define TRAP_OF_UNKNOWN                   374
+#define TRAP_OF_UNKNOWN_OOD               375
+#define TRAP_OF_UNKNOWN_OOD_RARE          376
+
 /*** General index values ***/
 
 
@@ -2878,6 +2898,7 @@
 #define SUMMON_MOUNTAIN             76 /* WILD_MOUNTAIN */
 #define SUMMON_GRASS                77 /* WILD_GRASS */
 #define SUMMON_GIANT                78 /* P */
+#define SUMMON_SEXY_GIRL            79 /* REVBOSS */
 
 
 /*
