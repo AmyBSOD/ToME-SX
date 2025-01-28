@@ -4548,7 +4548,7 @@ void store_init(int town_num, int store_num)
 	st_ptr->good_buy = 0;
 	st_ptr->bad_buy = 0;
 
-	st_investment = st_ptr->investment;
+	st_ptr->investment = 0;
 
 	/* Nothing in stock */
 	st_ptr->stock_num = 0;
@@ -4560,7 +4560,7 @@ void store_init(int town_num, int store_num)
 	st_ptr->last_visit = -100L * STORE_TURNS;
 
 	/* Clear any old items */
-	for (k = 0; k < (st_ptr->stock_size + randint(st_ptr->investment)); k++)
+	for (k = 0; k < st_ptr->stock_size; k++)
 	{
 		object_wipe(&st_ptr->stock[k]);
 	}
