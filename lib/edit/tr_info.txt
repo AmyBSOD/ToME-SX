@@ -1892,6 +1892,16 @@ I:6:100:40:4:5:0d0:y
 D:Your books seem different...
 F:FLOOR | CHEST | DOOR
 
+N:390:Activation Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:391:Ooop Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

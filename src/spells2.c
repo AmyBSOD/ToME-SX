@@ -320,6 +320,11 @@ bool do_inc_stat(int stat)
 {
 	bool res;
 
+	if (p_ptr->nastytrap113) {
+		/* ooop nastytrap: can't gain stats --Amy */
+		return (FALSE);
+	}
+
 	/* Restore strength */
 	res = res_stat(stat, TRUE);
 
@@ -2039,6 +2044,14 @@ void self_knowledge(FILE *fff)
 	if (p_ptr->nastytrap111)
 	{
 		info[i++] = "You have a problem: Healing effects heal you by a lower amount.";
+	}
+	if (p_ptr->nastytrap112)
+	{
+		info[i++] = "You have a problem: Activatable items don't recharge.";
+	}
+	if (p_ptr->nastytrap113)
+	{
+		info[i++] = "You have a problem: You can't gain stats.";
 	}
 
 	/* Access the current weapon */

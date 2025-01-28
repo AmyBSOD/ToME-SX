@@ -2851,6 +2851,9 @@
 #define TRAP_OF_WASTING_FOOD              388
 #define TRAP_OF_WASTING_BOOKS             389
 
+#define TRAP_NASTY112                     390
+#define TRAP_NASTY113                     391
+
 /*** General index values ***/
 
 

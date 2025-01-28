@@ -2011,8 +2011,8 @@ struct player_type
 	bool nastytrap109; /* spell failure trap - all spells have 25% autofail */
 	bool nastytrap110; /* totter trap - your directional keys are inverted */
 	bool nastytrap111; /* bad healing trap - all effects that heal the player's HP are halved */
-	bool nastytrap112;
-	bool nastytrap113;
+	bool nastytrap112; /* activation trap - items that can be activated won't recharge */
+	bool nastytrap113; /* ooop trap - stat gain doesn't work */
 	bool nastytrap114;
 	bool nastytrap115;
 	bool nastytrap116;

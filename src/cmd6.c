@@ -5727,6 +5727,12 @@ void do_cmd_activate(void)
 		return;
 	}
 
+	if (p_ptr->nastytrap112) {
+		msg_print("It seems to be ignoring you...");
+		if (o_ptr->timeout < 500) o_ptr->timeout += 500;
+		return;
+	}
+
 	/* Check the recharge */
 	if (o_ptr->timeout)
 	{
