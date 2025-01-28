@@ -5350,7 +5350,7 @@ I:40:24:5
 W:90:127:3:55555
 P:0:0d0:5:5:5
 F:SPEED | DEVICE_MASTERY | LITE3 | REGEN | FREE_ACT |
-F:RES_SHARDS | SH_ELEC | HEAVY_CURSE | CURSED | 
+F:RES_SHARDS | SH_ELEC | HEAVY_CURSE | CURSED | PERMA_CURSE | 
 D:This is the charm worn by Zeus, King of the Olympians and Bane of the Titans.
 
 N:428:of Poseidon
@@ -5393,7 +5393,7 @@ N:432:of Apollo
 I:14:59:5
 W:90:127:30:55555
 P:0:0d0:0:0:0
-F:STR | INT | CHR | SPEED | SUST_STR |
+F:STR | INT | CHR | SPEED | SUST_STR | PERMA_CURSE | 
 F:SUST_INT | SUST_CHR | FREE_ACT | RES_FEAR | RES_LITE |
 F:RES_NETHER | HEAVY_CURSE | CURSED | WIELD_CAST | 
 D:The is the lyre of Apollo, the sun god.
@@ -5404,7 +5404,7 @@ W:90:127:30:55555
 P:0:3d5:12:18:0
 F:STR | DEX | CHR | STEALTH |
 F:XTRA_SHOTS | SUST_STR | SUST_DEX | SUST_CHR | SEE_INVIS |
-F:RES_BLIND | HEAVY_CURSE | CURSED | 
+F:RES_BLIND | HEAVY_CURSE | CURSED | PERMA_CURSE | 
 D:This is the bow of Artemis, the virgin huntress and twin of Apollo.
 
 N:434:of Hephaestus
@@ -5432,7 +5432,7 @@ I:39:0:2
 W:90:127:30:55555
 P:0:1d1:0:0:0
 F:WIS | CON | REGEN | LITE3 |
-F:HEAVY_CURSE | CURSED | 
+F:HEAVY_CURSE | CURSED | PERMA_CURSE | 
 F:RES_TIME
 D:Your torch engulfs you in a purifying flame!
 
@@ -5440,7 +5440,7 @@ N:437:of Aphrodite
 I:40:33:5
 W:90:127:3:55555
 P:0:1d1:0:0:25
-F:CHR | SUST_CHR | RES_POIS | RES_BLIND | RES_NEXUS |
+F:CHR | SUST_CHR | RES_POIS | RES_BLIND | RES_NEXUS | PERMA_CURSE | 
 F:RES_CHAOS | RES_DISEN | FREE_ACT | SEE_INVIS | FEATHER |
 F:ESP_ALL | REFLECT | AGGRAVATE | HEAVY_CURSE | CURSED | 
 D:The legendary Apple of Discord, created by Eris in revenge for
@@ -6158,7 +6158,7 @@ I:39:101:5
 W:70:250:5:40000
 P:0:1d1:0:0:0
 F:INSTA_ART | RES_BLIND | SEE_INVIS | ESP_ALL |
-F:SEARCH | RES_LITE | RES_DARK | CURSED | HEAVY_CURSE
+F:SEARCH | RES_LITE | RES_DARK | CURSED | HEAVY_CURSE | PERMA_CURSE
 D:Your eye glows a bright blue...
 
 N:520:of the Hypnotoad
@@ -6326,7 +6326,7 @@ I:19:13:3
 W:60:200:40:40000
 P:0:0d0:21:36:0
 F:WIS | STEALTH | HIDE_TYPE | SHOW_MODS
-F:SUST_WIS | SLOW_DIGEST | CURSED | HEAVY_CURSE | AUTO_CURSE | 
+F:SUST_WIS | SLOW_DIGEST | CURSED | HEAVY_CURSE | AUTO_CURSE | PERMA_CURSE | 
 D:The great bow of prince Rama, avatar of Vishnu, famous for his unmatched
 D:bowmanship. Crafted by the divine builder Vishwakarma, it originally
 D:belonged to Vishnu himself.
@@ -6366,7 +6366,7 @@ I:39:101:3
 W:70:90:5:50000
 P:0:1d1:0:0:0
 F:SEE_INVIS | HOLD_LIFE | RES_DARK | RES_DISEN | CURSED | HEAVY_CURSE |
-F:INSTA_ART | SPEED | WIS | INT | ESP_DEMON | AUTO_CURSE |
+F:INSTA_ART | SPEED | WIS | INT | ESP_DEMON | AUTO_CURSE | PERMA_CURSE | 
 D:The shining gem of Vishnu, which the gods churned forth from the milky
 D:ocean.
 
@@ -6375,7 +6375,7 @@ I:39:101:3
 W:70:250:5:50000
 P:0:1d1:0:0:7
 F:SPEED | CHR | IM_FIRE | RES_LITE | SH_FIRE | RES_CHAOS | SLOW_DIGEST
-F:AGGRAVATE | TY_CURSE | CURSED | HEAVY_CURSE
+F:AGGRAVATE | TY_CURSE | CURSED | HEAVY_CURSE | PERMA_CURSE
 D:This gem once belonged to the sun-god Surya, and no other jewel can match
 D:its brightness; yet death and destruction follow its wearer.
 

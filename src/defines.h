@@ -1941,6 +1941,7 @@
 /* The "sval" codes for TV_ROD_MAIN(Rods) */
 /* Note that the sval is the max mana capacity of the rod */
 
+#define SV_ROD_DIRT                     1
 #define SV_ROD_WOODEN                   10
 #define SV_ROD_COPPER                   20
 #define SV_ROD_IRON                     50
@@ -2833,6 +2834,22 @@
 #define TRAP_OF_UNKNOWN                   374
 #define TRAP_OF_UNKNOWN_OOD               375
 #define TRAP_OF_UNKNOWN_OOD_RARE          376
+
+#define TRAP_OF_CURSE_SHOOTER             377
+#define TRAP_OF_CURSE_JEWELRY             378
+#define TRAP_OF_CURSE_LIGHT               379
+#define TRAP_OF_CURSE_AMMO                380
+#define TRAP_OF_CURSE_TOOL                381
+
+#define TRAP_OF_PHASE_DOOR                382
+#define TRAP_OF_OOD_SUMMON                383
+#define TRAP_OF_OOD_SUMMON_X              384
+
+#define TRAP_OF_WASTING_SCROLLS           385
+#define TRAP_OF_WASTING_POTIONS           386
+#define TRAP_OF_WASTING_RODS              387
+#define TRAP_OF_WASTING_FOOD              388
+#define TRAP_OF_WASTING_BOOKS             389
 
 /*** General index values ***/
 

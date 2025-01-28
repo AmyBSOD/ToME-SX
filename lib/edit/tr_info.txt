@@ -1827,6 +1827,71 @@ I:10:2:5:0:30:0d0:G
 D:You absolutely don't know what just happened.
 F:FLOOR
 
+N:377:Trap of Curse Shooter
+I:5:15:0:12:20:0d0:y
+D:Your shooter gets trashed.
+F:FLOOR | CHEST | DOOR
+
+N:378:Trap of Curse Jewelry
+I:5:15:0:12:20:0d0:y
+D:Now your jewelry is junk.
+F:FLOOR | CHEST | DOOR
+
+N:379:Trap of Curse Light
+I:5:15:0:12:20:0d0:y
+D:That really punched out your lights.
+F:FLOOR | CHEST | DOOR
+
+N:380:Trap of Curse Ammo
+I:5:15:0:12:20:0d0:y
+D:Now you gotta buy new ammo and thereby support APEC.
+F:FLOOR | CHEST | DOOR
+
+N:381:Trap of Curse Tool
+I:5:15:0:12:20:0d0:y
+D:There goes your tool.
+F:FLOOR | CHEST | DOOR
+
+N:382:Phase Door Trap
+I:3:100:50:3:2:0d0:w
+D:Someone doesn't want this property to be touched, it seems.
+F:FLOOR | CHEST | DOOR
+
+N:383:OOD Summon Trap
+I:3:5:40:4:10:0d0:v
+D:Super powerful monsters protect this!
+F:FLOOR | CHEST | DOOR
+
+N:384:Depth Summon Trap
+I:8:5:40:4:30:0d0:v
+D:Extremely powerful monsters protect this!
+F:FLOOR | CHEST | DOOR
+
+N:385:Trap of Erasure
+I:6:100:40:4:5:0d0:y
+D:Your scrolls seem different...
+F:FLOOR | CHEST | DOOR
+
+N:386:Trap of Dilution
+I:6:100:40:4:5:0d0:y
+D:Your potions seem different...
+F:FLOOR | CHEST | DOOR
+
+N:387:Trap of Wasting Rods
+I:6:100:40:4:5:0d0:y
+D:Your rods seem different...
+F:FLOOR | CHEST | DOOR
+
+N:388:Trap of Poison Food
+I:6:100:40:4:5:0d0:y
+D:Your comestibles seem different...
+F:FLOOR | CHEST | DOOR
+
+N:389:Trap of Blank Books
+I:6:100:40:4:5:0d0:y
+D:Your books seem different...
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

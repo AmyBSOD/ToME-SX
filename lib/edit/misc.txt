@@ -28,7 +28,7 @@ M:R:4532
 M:r:50
 
 # Maximum number of items in k_info.txt
-M:K:986
+M:K:987
 
 # Maximum number of vaults in v_info.txt
 M:V:188
@@ -52,7 +52,7 @@ M:E:412
 M:D:70
 
 # Maximum number of trap types in tr_info.txt
-M:U:377
+M:U:390
 
 # Maximum number of terrain types in wf_info.txt
 M:W:42

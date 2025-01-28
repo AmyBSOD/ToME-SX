@@ -1459,6 +1459,41 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_CURSE_SHOOTER:
+		{
+			msg_print("You hear a terrible bang!");
+			ident = curse_shooter();
+			break;
+		}
+
+	case TRAP_OF_CURSE_JEWELRY:
+		{
+			msg_print("You hear a terrible howl!");
+			ident = curse_jewelry();
+			break;
+		}
+
+	case TRAP_OF_CURSE_LIGHT:
+		{
+			msg_print("You hear a terrible frazzle!");
+			ident = curse_light();
+			break;
+		}
+
+	case TRAP_OF_CURSE_AMMO:
+		{
+			msg_print("You hear a terrible whump!");
+			ident = curse_ammo();
+			break;
+		}
+
+	case TRAP_OF_CURSE_TOOL:
+		{
+			msg_print("You hear a terrible moan!");
+			ident = curse_tool();
+			break;
+		}
+
 	case TRAP_OF_ITEM_CURSE:
 		{
 			msg_print("You hear a curse!");
@@ -1538,6 +1573,84 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				ident = FALSE;
 
 			}
+
+			break;
+		}
+
+	case TRAP_OF_OOD_SUMMON:
+		{
+			msg_print("A gaudy spell hangs in the air.");
+			monster_level = dun_level + 20;
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type], 0);
+			}
+			monster_level = dun_level;
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as OOD Summon Trap.");
+				ident = FALSE;
+
+			}
+			msg_print("The world whirls around you.");
+			teleport_player(RATIO * 67);
+
+			break;
+		}
+
+	case TRAP_OF_OOD_SUMMON_X:
+		{
+			msg_print("A hellish spell hangs in the air.");
+			monster_level = dun_level + 40;
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type], 0);
+			}
+			monster_level = dun_level;
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Depth Summon Trap.");
+				ident = FALSE;
+
+			}
+			msg_print("The world whirls around you.");
+			teleport_player(RATIO * 67);
 
 			break;
 		}
@@ -2987,6 +3100,14 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_PHASE_DOOR:
+		{
+			msg_print("The world whirls around you.");
+			teleport_player(8 + rand_int(13));
+			ident = TRUE;
+			break;
+		}
+
 		/* Paralyzing Trap */
 	case TRAP_OF_PARALYZING:
 		{
@@ -4164,6 +4285,209 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			else
 			{
 				msg_print("You hear an echoing cry of rage.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_SCROLLS:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if ((j_ptr->tval == TV_SCROLL) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Scroll of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_SCROLL, SV_SCROLL_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("Your booklets seem to shuffle!");
+			}
+			else
+			{
+				msg_print("You hear a grumbling voice.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_POTIONS:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if ((j_ptr->tval == TV_POTION) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Potion of Water */
+					object_prep(j_ptr, lookup_kind(TV_POTION, SV_POTION_WATER));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_POTION2) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Potion of Water */
+					object_prep(j_ptr, lookup_kind(TV_POTION, SV_POTION_WATER));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("Oh no, your potions spilled everywhere!");
+			}
+			else
+			{
+				msg_print("You hear a popping noise.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_RODS:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if ((j_ptr->tval == TV_ROD) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Rod Tip of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_ROD, SV_ROD_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_ROD_MAIN) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Dirt Rod (useless) */
+					object_prep(j_ptr, lookup_kind(TV_ROD_MAIN, SV_ROD_DIRT));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("You have lost trust in your knapsack!");
+			}
+			else
+			{
+				msg_print("You hear a high-pitched scream.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_FOOD:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if ((j_ptr->tval == TV_FOOD) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Mushroom of Poison */
+					object_prep(j_ptr, lookup_kind(TV_FOOD, SV_FOOD_POISON));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_CORPSE) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Staff of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_FOOD, SV_FOOD_POISON));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("Something in your backpack smells like decay!");
+			}
+			else
+			{
+				msg_print("You sense a foul smell.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_BOOKS:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if ((j_ptr->tval == TV_BOOK) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create an Adventurer's Guide */
+					object_prep(j_ptr, lookup_kind(TV_PARCHMENT, 20));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("Your backpack suddenly feels lighter!");
+			}
+			else
+			{
+				msg_print("You have a terrible sense of loss.");
 			}
 			break;
 		}

@@ -8016,6 +8016,14 @@ f:MAGIC_BREATH
 D:This mask provides you with the ability to breathe even in areas where
 D:there is no air at all.
 
+N:986:& Dirt Rod~ of#
+G:-:u
+I:67:1:0
+W:1:0:2:0
+A:1/1
+P:0:1d1:0:0:0
+D:A useless rod with too little mana for casting any spells.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
