@@ -3097,7 +3097,7 @@ bool place_monster_aux(int y, int x, int r_idx, bool slp, bool grp, int status)
 
 
 	/* Escorts for certain monsters */
-	if (r_ptr->flags1 & (RF1_ESCORT))
+	if ((r_ptr->flags1 & (RF1_ESCORT)) || ((r_ptr->flags1 & (RF1_FRIEND)) && (r_ptr->flags1 & (RF1_UNIQUE)) ) || ((r_ptr->flags1 & (RF1_FRIENDS)) && (r_ptr->flags1 & (RF1_UNIQUE)) ) )
 	{
 		old_get_mon_num_hook = get_mon_num_hook;
 
