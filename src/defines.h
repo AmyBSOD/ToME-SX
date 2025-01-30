@@ -824,7 +824,7 @@
 #define FEAT_SANDWALL_H         0x63
 #define FEAT_SANDWALL_K         0x64
 /* Feature 0x65 -- high mountain chain */
-/* Feature 0x66 -- nether mist */
+#define FEAT_NETHER_MIST        0x66
 
 /* Features 0x67 - 0x9F -- unused */
 
@@ -869,6 +869,9 @@
 #define FEAT_FIRE               0xCD /* 205 */
 /* Feature 0xCE -- pile of rubble (permanent) */
 
+#define FEAT_SWAMP_POOL         0xE2 /* 226 */
+#define FEAT_ANDUIN             0xE3 /* 227 */
+#define FEAT_WATERFALL          0xEE /* 238 */
 #define FEAT_SWITCHER           0xF4 /* 244 */
 
 /* Features 0xCF - 0xFF -- unused */
@@ -2871,6 +2874,17 @@
 #define TRAP_OF_DISINT_BALL               404
 #define TRAP_OF_WALL_BOLT                 405
 #define TRAP_OF_WALL_BALL                 406
+
+#define TRAP_OF_TERRAIN_WATER             407
+#define TRAP_OF_TERRAIN_WATER_DEEP        408
+#define TRAP_OF_TERRAIN_LAVA              409
+#define TRAP_OF_TERRAIN_LAVA_DEEP         410
+#define TRAP_OF_TERRAIN_ICE               411
+#define TRAP_OF_TERRAIN_FIRE              412
+#define TRAP_OF_TERRAIN_NETHER_MIST       413
+#define TRAP_OF_TERRAIN_SWAMP             414
+#define TRAP_OF_TERRAIN_ANDUIN            415
+#define TRAP_OF_TERRAIN_WATERFALL         416
 
 /*** General index values ***/
 

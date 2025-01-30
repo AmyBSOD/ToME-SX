@@ -1366,6 +1366,7 @@ extern bool dispel_demons(int dam);
 extern bool turn_undead(void);
 extern void wipe(int y1, int x1, int r);
 extern void destroy_area(int y1, int x1, int r, bool full, bool bypass);
+extern void fill_area_terrain(int y1, int x1, int r, int terraintype, int terrchance);
 extern void earthquake(int cy, int cx, int r);
 extern void lite_room(int y1, int x1);
 extern void unlite_room(int y1, int x1);

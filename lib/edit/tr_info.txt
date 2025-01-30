@@ -1977,6 +1977,56 @@ I:5:60:5:6:15:3d12:B
 D:Lots of walls spring up around you!
 F:FLOOR | CHEST | DOOR | LEVEL2
 
+N:407:Water Trap
+I:5:20:0:10:5:0d0:o
+D:Water rushes into the dungeon!
+F:FLOOR | CHEST | DOOR
+
+N:408:Deep Water Trap
+I:5:20:0:10:10:0d0:o
+D:Deep water rushes into the dungeon!
+F:FLOOR | CHEST | DOOR
+
+N:409:Lava Trap
+I:6:20:0:10:15:0d0:o
+D:Lava rushes into the dungeon!
+F:FLOOR | CHEST | DOOR
+
+N:410:Deep Lava Trap
+I:7:20:0:10:25:0d0:o
+D:Lava rushes into the dungeon!
+F:FLOOR | CHEST | DOOR
+
+N:411:Ice Trap
+I:5:20:0:10:5:0d0:o
+D:The area becomes icy!
+F:FLOOR | CHEST | DOOR
+
+N:412:Blazing Fire Trap
+I:6:20:0:10:20:0d0:o
+D:Suddenly, fires are blazing all around you!
+F:FLOOR | CHEST | DOOR
+
+N:413:Nether Mist Trap
+I:5:20:0:10:5:0d0:o
+D:Mists from the netherworld spring up!
+F:FLOOR | CHEST | DOOR
+
+N:414:Swamp Pool Trap
+I:5:20:0:10:8:0d0:o
+D:The area gets swampy!
+F:FLOOR | CHEST | DOOR
+
+N:415:Anduin Trap
+I:6:20:0:10:20:0d0:o
+D:The Anduin river found its way here!
+F:FLOOR | CHEST | DOOR
+
+N:416:Waterfall Trap
+I:8:20:0:10:40:0d0:o
+D:Waterfalls rush into the dungeon!
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

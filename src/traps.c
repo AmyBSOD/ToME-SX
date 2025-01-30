@@ -6687,6 +6687,286 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		ident = FALSE;
 		break;
 
+	case TRAP_OF_TERRAIN_WATER:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 5, FEAT_SHAL_WATER, 40);
+
+		msg_print("Water floods the dungeon!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Water Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_WATER_DEEP:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 5, FEAT_DEEP_WATER, 40);
+
+		msg_print("Deep water floods the dungeon!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Deep Water Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_LAVA:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 5, FEAT_SHAL_LAVA, 35);
+
+		msg_print("Lava floods the dungeon!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Lava Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_LAVA_DEEP:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 5, FEAT_DEEP_LAVA, 35);
+
+		msg_print("Deep lava floods the dungeon!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Deep Lava Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_ICE:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 6, FEAT_ICE, 50);
+
+		msg_print("The dungeon becomes icy!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Ice Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_FIRE:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 5, FEAT_FIRE, 25);
+
+		msg_print("Suddenly, blazing fires are everywhere!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Blazing Fire Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_NETHER_MIST:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 7, FEAT_NETHER_MIST, 55);
+
+		msg_print("Nether mist forms out of thin air!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Nether Mist Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_SWAMP:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 5, FEAT_SWAMP_POOL, 30);
+
+		msg_print("Swampy pools appear!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Swamp Pool Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_ANDUIN:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 6, FEAT_ANDUIN, 40);
+
+		msg_print("Rushing water flows into the dungeon!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Anduin Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_WATERFALL:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 5, FEAT_WATERFALL, 25);
+
+		msg_print("Suddenly, huge waterfalls rush into the dungeon!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Waterfall Trap.");
+		}
+		break;
+
 		/* -SC- */
 	case TRAP_OF_FEMINITY:
 		{

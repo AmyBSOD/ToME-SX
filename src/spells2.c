@@ -6837,6 +6837,65 @@ void earthquake(int cy, int cx, int r)
 	p_ptr->window |= (PW_OVERHEAD);
 }
 
+/* Change floor in a certain radius to a certain type of terrain, by Amy */
+void fill_area_terrain(int y1, int x1, int r, int terraintype, int terrchance)
+{
+	int y, x, k;
+
+	cave_type *c_ptr;
+
+	/* Big area of affect */
+	for (y = (y1 - r); y <= (y1 + r); y++)
+	{
+		for (x = (x1 - r); x <= (x1 + r); x++)
+		{
+			/* Skip illegal grids */
+			if (!in_bounds(y, x)) continue;
+
+			/* Extract the distance */
+			k = distance(y1, x1, y, x);
+
+			/* Stay in the circle of death */
+			if (k > r) continue;
+
+			/* Access the grid */
+			c_ptr = &cave[y][x];
+
+			/* Hack -- Notice player affect */
+			if ((x == p_ptr->px) && (y == p_ptr->py))
+			{
+				/* Do not hurt this grid */
+				continue;
+			}
+
+			/* Hack -- Skip the epicenter */
+			if ((y == y1) && (x == x1)) continue;
+
+			/* Destroy "valid" grids */
+			if (cave_valid_bold(y, x) && magik(terrchance))
+			{
+				/* Create terrain */
+				cave_set_feat(y, x, terraintype);
+			}
+		}
+	}
+
+	/* Mega-Hack -- Forget the view */
+	p_ptr->update |= (PU_UN_VIEW);
+
+	/* Update stuff */
+	p_ptr->update |= (PU_VIEW | PU_FLOW | PU_MON_LITE);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Redraw map */
+	p_ptr->redraw |= (PR_MAP);
+
+	/* Window stuff */
+	p_ptr->window |= (PW_OVERHEAD);
+}
+
 
 /* Ragnarok, from Elona, implemented by Amy */
 void ragnarok(void)
