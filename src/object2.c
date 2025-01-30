@@ -3044,6 +3044,12 @@ static bool make_ego_item(object_type *o_ptr, bool good)
 				continue;
 			}
 
+			/* if no primary ego was rolled, good still has to be good */
+			if (!ret) {
+				if (good && (!e_ptr->cost)) continue;
+				if ((!good) && e_ptr->cost) continue;
+			}
+
 			/* Must posses the good flags */
 			if (((k_ptr->flags1 & e_ptr->need_flags1) != e_ptr->need_flags1) ||
 			                ((k_ptr->flags2 & e_ptr->need_flags2) != e_ptr->need_flags2) ||
