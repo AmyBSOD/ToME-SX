@@ -1902,6 +1902,81 @@ I:40:2:50:4:20:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:392:Map Amnesia Trap
+I:22:2:50:4:2:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:393:Summon Demon Trap
+I:4:25:40:6:10:0d0:v
+D:A pack of demons defends this!
+F:FLOOR | CHEST | DOOR
+
+N:394:Summon Dragon Trap
+I:4:25:40:6:10:0d0:v
+D:A pack of dragons defends this!
+F:FLOOR | CHEST | DOOR
+
+N:395:Summon Troll Trap
+I:4:25:40:6:10:0d0:v
+D:A pack of trolls defends this!
+F:FLOOR | CHEST | DOOR
+
+N:396:Summon Orc Trap
+I:3:25:40:6:5:0d0:v
+D:The orc hordes appear!
+F:FLOOR | CHEST | DOOR
+
+N:397:Stack Reduction Trap
+I:6:100:40:4:10:0d0:y
+D:Your item stacks seem smaller!
+F:FLOOR | CHEST | DOOR
+
+N:398:Kill Symbiote Trap
+I:8:20:40:4:20:0d0:y
+D:This device doesn't like your symbiote.
+F:FLOOR | CHEST | DOOR
+
+N:399:Trap of Scatter Equipment
+I:10:25:50:6:12:0d0:w
+D:You hear rushing sounds from all over the dungeon!
+F:FLOOR | CHEST | DOOR
+
+N:400:Trap of Steal Equipment
+I:10:5:50:6:15:0d0:y
+D:The chest seems to swell, while your equipment feels lighter..
+F:FLOOR | CHEST | DOOR
+
+N:401:Arrow Bolt Trap
+I:4:100:5:5:3:2d5:g
+D:A nonsensical arrow bolt hits you!
+F:FLOOR | CHEST | DOOR | LEVEL1
+
+N:402:Arrow Ball Trap
+I:5:80:5:6:5:2d8:B
+D:A big amount of arrows falls down on you!
+F:FLOOR | CHEST | DOOR | LEVEL1
+
+N:403:Disintegration Bolt Trap
+I:8:80:5:9:25:8d8:g
+D:A disintegration beam hits you!
+F:FLOOR | CHEST | DOOR | LEVEL4
+
+N:404:Disintegration Ball Trap
+I:10:60:5:10:30:5d20:B
+D:A wide-angle disintegration beam hits you!
+F:FLOOR | CHEST | DOOR | LEVEL4
+
+N:405:Wall Bolt Trap
+I:4:80:5:5:8:5d5:g
+D:Walls spring up around you!
+F:FLOOR | CHEST | DOOR | LEVEL2
+
+N:406:Wall Ball Trap
+I:5:60:5:6:15:3d12:B
+D:Lots of walls spring up around you!
+F:FLOOR | CHEST | DOOR | LEVEL2
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

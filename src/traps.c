@@ -432,7 +432,12 @@ static bool player_handle_breath_trap(s16b rad, s16b type, u16b trap)
 	}
 	dam = damroll(my_dd, my_ds);
 
-	ident = project( -2, rad, p_ptr->py, p_ptr->px, dam, type, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+	/* make sure stone wall affects the damn grid! --Amy */
+	if (type == GF_STONE_WALL) {
+		ident = project( -2, rad, p_ptr->py, p_ptr->px, dam, type, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT | PROJECT_GRID);
+	} else {
+		ident = project( -2, rad, p_ptr->py, p_ptr->px, dam, type, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+	}
 
 	return (ident);
 }
@@ -575,6 +580,7 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY111:
 		case TRAP_NASTY112:
 		case TRAP_NASTY113:
+		case TRAP_NASTY114:
 			return FALSE;
 	}
 
@@ -703,6 +709,7 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY111:
 		case TRAP_NASTY112:
 		case TRAP_NASTY113:
+		case TRAP_NASTY114:
 			return FALSE;
 	}
 
@@ -839,6 +846,7 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY111:
 		case TRAP_NASTY112:
 		case TRAP_NASTY113:
+		case TRAP_NASTY114:
 			return TRUE;
 	}
 
@@ -1691,6 +1699,150 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				}
 
 				if (ident) msg_print("You identified that trap as Summon Undead Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Demon Trap */
+	case TRAP_OF_SUMMON_DEMON:
+		{
+			msg_print("A horrific spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
+				                         SUMMON_DEMON);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Demon Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Dragon Trap */
+	case TRAP_OF_SUMMON_DRAGON:
+		{
+			msg_print("A powerful spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
+				                         SUMMON_DRAGON);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Dragon Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Troll Trap */
+	case TRAP_OF_SUMMON_TROLL:
+		{
+			msg_print("A rancid spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
+				                         SUMMON_TROLL);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(5) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Troll Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Orc Trap */
+	case TRAP_OF_SUMMON_ORC:
+		{
+			msg_print("A funny spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
+				                         SUMMON_ORC);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(5) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Orc Trap.");
 				ident = FALSE;
 
 			}
@@ -3641,6 +3793,31 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_KILL_SYMBIOTE:
+		{
+			object_type *j_ptr;
+			s16b j;
+
+			msg_print("You feel something probing you!");
+
+			for (j = INVEN_WIELD; j < INVEN_TOTAL; j++)
+			{
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				if (j == INVEN_CARRY) {
+					cptr sym_name = symbiote_name(TRUE);
+					msg_format("%s has been blown to smithereens.", sym_name);
+					inven_item_increase(INVEN_CARRY, -1);
+					inven_item_optimize(INVEN_CARRY);
+					p_ptr->redraw |= PR_MH;
+					ident = TRUE;
+				}
+			}
+			break;
+		}
+
 		/* Trap of Silent Switching */
 	case TRAP_OF_SILENT_SWITCHING:
 		{
@@ -4203,6 +4380,116 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* Trap of Scatter Equipment */
+	case TRAP_OF_SCATTER_EQUIPMENT:
+		{
+			s16b i, j;
+			bool message = FALSE;
+
+			u32b f1, f2, f3, f4, f5, esp;
+
+			for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
+			{
+
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				if (rand_int(10) < 3) continue;
+
+				for (j = 0; j < 10; j++)
+				{
+					object_type tmp_obj, *j_ptr = &tmp_obj;
+					s16b cx = x + 15 - rand_int(30);
+					s16b cy = y + 15 - rand_int(30);
+
+					if (!in_bounds(cy, cx)) continue;
+
+					if (!cave_floor_bold(cy, cx)) continue;
+
+					object_copy(j_ptr, &p_ptr->inventory[i]);
+
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					if(f3 & TR3_PERMA_CURSE) continue;
+
+					inven_item_increase(i, -999);
+					inven_item_optimize(i);
+
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+
+					(void)floor_carry(cy, cx, j_ptr);
+
+					if (!message)
+					{
+						msg_print("You feel flat-footed.");
+						message = TRUE;
+					}
+
+					if (player_has_los_bold(cy, cx))
+					{
+						char i_name[80];
+
+						object_desc(i_name, &tmp_obj, TRUE, 3);
+						note_spot(cy, cx);
+						lite_spot(cy, cx);
+						ident = TRUE;
+						msg_format("Suddenly %s appear%s!", i_name,
+						           (j_ptr->number > 1) ? "" : "s");
+					}
+					break;
+				}
+			}
+			ident = message;
+			break;
+		}
+
+		/* Trap of Steal Equipment */
+	case TRAP_OF_STEAL_EQUIPMENT:
+		{
+			s16b i, j;
+			bool message = FALSE;
+
+			u32b f1, f2, f3, f4, f5, esp;
+
+			for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
+			{
+
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				if (magik(66)) continue;
+
+				for (j = 0; j < 100; j++)
+				{
+					object_type tmp_obj, *j_ptr = &tmp_obj;
+					s16b cx = x + 50 - rand_int(100);
+					s16b cy = y + 50 - rand_int(100);
+
+					if (!in_bounds(cy, cx)) continue;
+
+					if (!cave_floor_bold(cy, cx)) continue;
+
+					object_copy(j_ptr, &p_ptr->inventory[i]);
+
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					if(f3 & TR3_PERMA_CURSE) continue;
+
+					inven_item_increase(i, -999);
+					inven_item_optimize(i);
+
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+
+					(void)floor_carry(cy, cx, j_ptr);
+
+					if (!message) {
+						msg_print("Your equipment seems to be much lighter than before!");
+						message = TRUE;
+					}
+
+					break;
+				}
+			}
+			ident = message;
+			break;
+		}
+
 		/* Trap of Decay */
 	case TRAP_OF_DECAY:
 		{
@@ -4248,6 +4535,33 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		}
 
 		break;
+
+	case TRAP_OF_STACK_REDUCTION:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if ((j_ptr->number > 1) && rand_int(3) == 1) {
+					j_ptr->number /= 2;
+					ident = TRUE;
+				}
+			}
+			if (ident)
+			{
+				msg_print("Something seems missing...");
+			}
+			else
+			{
+				msg_print("You hear a distorted scream.");
+			}
+			break;
+		}
 
 		/* Trap of Wasting Wands */
 	case TRAP_OF_WASTING_WANDS:
@@ -5853,6 +6167,18 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY114:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap114 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHOES:
 	case TRAP_OF_SHOES_II:
 	case TRAP_OF_SHOES_III:
@@ -6231,6 +6557,35 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_METEOR_BOLT:
 		ident = player_handle_breath_trap(1, GF_METEOR, TRAP_OF_METEOR_BOLT);
 		break;
+	case TRAP_OF_ARROW_BOLT:
+		ident = player_handle_breath_trap(1, GF_ARROW, TRAP_OF_ARROW_BOLT);
+		break;
+	case TRAP_OF_DISINT_BOLT:
+		ident = player_handle_breath_trap(1, GF_DISINTEGRATE, TRAP_OF_DISINT_BOLT);
+		break;
+	case TRAP_OF_WALL_BOLT:
+		t_info[trap].ident = TRUE;
+
+		if ((item == -1) || (item == -2))
+		{
+			place_trap(y, x);
+			if (player_has_los_bold(y, x))
+			{
+				note_spot(y, x);
+				lite_spot(y, x);
+			}
+		}
+		else
+		{
+			/* re-trap the chest */
+			place_trap(y, x);
+		}
+
+		player_handle_breath_trap(1, GF_STONE_WALL, TRAP_OF_WALL_BOLT);
+
+		msg_print("You identified that trap as Wall Bolt Trap.");
+		ident = FALSE;
+		break;
 
 		/* Ball Trap */
 	case TRAP_OF_ELEC_BALL:
@@ -6301,6 +6656,35 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		break;
 	case TRAP_OF_METEOR_BALL:
 		ident = player_handle_breath_trap(3, GF_METEOR, TRAP_OF_METEOR_BALL);
+		break;
+	case TRAP_OF_ARROW_BALL:
+		ident = player_handle_breath_trap(3, GF_ARROW, TRAP_OF_ARROW_BOLT);
+		break;
+	case TRAP_OF_DISINT_BALL:
+		ident = player_handle_breath_trap(3, GF_DISINTEGRATE, TRAP_OF_DISINT_BOLT);
+		break;
+	case TRAP_OF_WALL_BALL:
+		t_info[trap].ident = TRUE;
+
+		if ((item == -1) || (item == -2))
+		{
+			place_trap(y, x);
+			if (player_has_los_bold(y, x))
+			{
+				note_spot(y, x);
+				lite_spot(y, x);
+			}
+		}
+		else
+		{
+			/* re-trap the chest */
+			place_trap(y, x);
+		}
+
+		player_handle_breath_trap(3, GF_STONE_WALL, TRAP_OF_WALL_BOLT);
+
+		msg_print("You identified that trap as Wall Ball Trap.");
+		ident = FALSE;
 		break;
 
 		/* -SC- */
@@ -8263,7 +8647,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(113)) {
+	switch (randint(114)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -8602,6 +8986,9 @@ void give_random_nastytrap_effect(void)
 			break;
 		case 113:
 			p_ptr->nastytrap113 = TRUE;
+			break;
+		case 114:
+			p_ptr->nastytrap114 = TRUE;
 			break;
 
 	}

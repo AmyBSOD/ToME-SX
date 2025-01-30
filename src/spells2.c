@@ -2053,6 +2053,10 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: You can't gain stats.";
 	}
+	if (p_ptr->nastytrap114)
+	{
+		info[i++] = "You have a problem: The game doesn't remember the map for you.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];

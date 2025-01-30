@@ -2853,6 +2853,24 @@
 
 #define TRAP_NASTY112                     390
 #define TRAP_NASTY113                     391
+#define TRAP_NASTY114                     392
+
+#define TRAP_OF_SUMMON_DEMON              393
+#define TRAP_OF_SUMMON_DRAGON             394
+#define TRAP_OF_SUMMON_TROLL              395
+#define TRAP_OF_SUMMON_ORC                396
+
+#define TRAP_OF_STACK_REDUCTION           397
+#define TRAP_OF_KILL_SYMBIOTE             398
+#define TRAP_OF_SCATTER_EQUIPMENT         399
+#define TRAP_OF_STEAL_EQUIPMENT           400
+
+#define TRAP_OF_ARROW_BOLT                401
+#define TRAP_OF_ARROW_BALL                402
+#define TRAP_OF_DISINT_BOLT               403
+#define TRAP_OF_DISINT_BALL               404
+#define TRAP_OF_WALL_BOLT                 405
+#define TRAP_OF_WALL_BALL                 406
 
 /*** General index values ***/
 
@@ -2917,8 +2935,10 @@
 #define SUMMON_VOLCANO              75 /* WILD_VOLCANO */
 #define SUMMON_MOUNTAIN             76 /* WILD_MOUNTAIN */
 #define SUMMON_GRASS                77 /* WILD_GRASS */
-#define SUMMON_GIANT                78 /* P */
+#define SUMMON_GIANT                78 /* P or GIANT */
 #define SUMMON_SEXY_GIRL            79 /* REVBOSS */
+#define SUMMON_TROLL                80 /* T or TROLL */
+#define SUMMON_ORC                  81 /* o or ORC */
 
 
 /*

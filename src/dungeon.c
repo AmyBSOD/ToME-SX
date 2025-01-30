@@ -5545,6 +5545,10 @@ void process_player(void)
 			{
 				wiz_dark();
 			}
+			if (p_ptr->nastytrap114)
+			{
+				wiz_dark();
+			}
 		}
 
 

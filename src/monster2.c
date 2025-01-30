@@ -3483,6 +3483,20 @@ bool summon_specific_okay(int r_idx)
 			break;
 		}
 
+	case SUMMON_TROLL:
+		{
+			okay = ( ( (r_ptr->flags3 & (RF3_TROLL)) || (r_ptr->d_char == 'T') ) &&
+			        !(r_ptr->flags1 & (RF1_UNIQUE)));
+			break;
+		}
+
+	case SUMMON_ORC:
+		{
+			okay = ( ( (r_ptr->flags3 & (RF3_ORC)) || (r_ptr->d_char == 'o') ) &&
+			        !(r_ptr->flags1 & (RF1_UNIQUE)));
+			break;
+		}
+
 	case SUMMON_SEXY_GIRL:
 		{
 			okay = monster_revboss(r_idx);
