@@ -913,6 +913,881 @@ void printRandoms(int lower, int upper, int count)
 				printf("A:%d:%d:%d:%d:%d:%d:%d:%d\n", a_firsttype, a_first, a_secondtype, a_second, a_thirdtype, a_third, a_outertype, a_innertype);
 				printf("O:%d:%d:%d:%d\n", o_first, o_second, o_third, o_fourth);
 
+				if (random_number(2) == 1) {
+					printf("R:100:0\n");
+				} else {
+					int specmons = 1;
+					if (random_number(2) == 1) {
+						specmons++; /* 2 */
+						if (random_number(2) == 1) {
+							specmons++; /* 3 */
+							if (random_number(2) == 1) {
+								specmons++; /* 4 */
+								if (random_number(2) == 1) {
+									specmons++; /* 5 */
+									if (random_number(2) == 1) {
+										specmons += random_number(5); /* 6-10 */
+									}
+								}
+							}
+						}
+					}
+
+					int regularmon = 96 - random_number(95);
+					if (regularmon > 95) regularmon = 95;
+					if (regularmon < 1) regularmon = 1;
+					int irregularmon = 100 - regularmon;
+					printf("R:%d:0\n", regularmon);
+
+					printf("R:%d:3\n", irregularmon);
+
+					if (specmons < 1) specmons = 1;
+					if (specmons > 10) specmons = 10;
+					while (specmons > 0) {
+						specmons--;
+						switch (random_number(279)) {
+							default:
+							case 1:
+								printf("M:UNIQUE\n");
+								break;
+							case 2:
+								printf("M:MALE\n");
+								break;
+							case 3:
+								printf("M:FEMALE\n");
+								break;
+							case 4:
+								printf("M:CHAR_CLEAR\n");
+								break;
+							case 5:
+								printf("M:CHAR_MULTI\n");
+								break;
+							case 6:
+								printf("M:ATTR_CLEAR\n");
+								break;
+							case 7:
+								printf("M:ATTR_MULTI\n");
+								break;
+							case 8:
+								printf("M:FORCE_MAXHP\n");
+								break;
+							case 9:
+								printf("M:FORCE_SLEEP\n");
+								break;
+							case 10:
+								printf("M:FRIEND\n");
+								break;
+							case 11:
+								printf("M:FRIENDS\n");
+								break;
+							case 12:
+								printf("M:ESCORT\n");
+								break;
+							case 13:
+								printf("M:ESCORTS\n");
+								break;
+							case 14:
+								printf("M:NEVER_BLOW\n");
+								break;
+							case 15:
+								printf("M:NEVER_MOVE\n");
+								break;
+							case 16:
+								printf("M:RAND_25\n");
+								break;
+							case 17:
+								printf("M:RAND_50\n");
+								break;
+							case 18:
+								printf("M:ONLY_GOLD\n");
+								break;
+							case 19:
+								printf("M:ONLY_ITEM\n");
+								break;
+							case 20:
+								printf("M:DROP_60\n");
+								break;
+							case 21:
+								printf("M:DROP_90\n");
+								break;
+							case 22:
+								printf("M:DROP_1d2\n");
+								break;
+							case 23:
+								printf("M:DROP_2d2\n");
+								break;
+							case 24:
+								printf("M:DROP_3d2\n");
+								break;
+							case 25:
+								printf("M:DROP_4d2\n");
+								break;
+							case 26:
+								printf("M:DROP_GOOD\n");
+								break;
+							case 27:
+								printf("M:DROP_GREAT\n");
+								break;
+							case 28:
+								printf("M:STUPID\n");
+								break;
+							case 29:
+								printf("M:SMART\n");
+								break;
+							case 30:
+								printf("M:CAN_SPEAK\n");
+								break;
+							case 31:
+								printf("M:REFLECTING\n");
+								break;
+							case 32:
+								printf("M:INVISIBLE\n");
+								break;
+							case 33:
+								printf("M:COLD_BLOOD\n");
+								break;
+							case 34:
+								printf("M:EMPTY_MIND\n");
+								break;
+							case 35:
+								printf("M:WEIRD_MIND\n");
+								break;
+							case 36:
+								printf("M:REGENERATE\n");
+								break;
+							case 37:
+								printf("M:SHAPECHANGER\n");
+								break;
+							case 38:
+								printf("M:ATTR_ANY\n");
+								break;
+							case 39:
+								printf("M:POWERFUL\n");
+								break;
+							case 40:
+								printf("M:ELDRITCH_HORROR\n");
+								break;
+							case 41:
+								printf("M:AURA_FIRE\n");
+								break;
+							case 42:
+								printf("M:AURA_ELEC\n");
+								break;
+							case 43:
+								printf("M:OPEN_DOOR\n");
+								break;
+							case 44:
+								printf("M:BASH_DOOR\n");
+								break;
+							case 45:
+								printf("M:PASS_WALL\n");
+								break;
+							case 46:
+								printf("M:KILL_WALL\n");
+								break;
+							case 47:
+								printf("M:MOVE_BODY\n");
+								break;
+							case 48:
+								printf("M:KILL_BODY\n");
+								break;
+							case 49:
+								printf("M:TAKE_ITEM\n");
+								break;
+							case 50:
+								printf("M:KILL_ITEM\n");
+								break;
+							case 51:
+								printf("M:ORC\n");
+								break;
+							case 52:
+								printf("M:TROLL\n");
+								break;
+							case 53:
+								printf("M:GIANT\n");
+								break;
+							case 54:
+								printf("M:DRAGON\n");
+								break;
+							case 55:
+								printf("M:DEMON\n");
+								break;
+							case 56:
+								printf("M:UNDEAD\n");
+								break;
+							case 57:
+								printf("M:EVIL\n");
+								break;
+							case 58:
+								printf("M:ANIMAL\n");
+								break;
+							case 59:
+								printf("M:THUNDERLORD\n");
+								break;
+							case 60:
+								printf("M:GOOD\n");
+								break;
+							case 61:
+								printf("M:AURA_COLD\n");
+								break;
+							case 62:
+								printf("M:NONLIVING\n");
+								break;
+							case 63:
+								printf("M:HURT_LITE\n");
+								break;
+							case 64:
+								printf("M:HURT_ROCK\n");
+								break;
+							case 65:
+								printf("M:SUSCEP_FIRE\n");
+								break;
+							case 66:
+								printf("M:SUSCEP_COLD\n");
+								break;
+							case 67:
+								printf("M:IM_ACID\n");
+								break;
+							case 68:
+								printf("M:IM_ELEC\n");
+								break;
+							case 69:
+								printf("M:IM_FIRE\n");
+								break;
+							case 70:
+								printf("M:IM_COLD\n");
+								break;
+							case 71:
+								printf("M:IM_POIS\n");
+								break;
+							case 72:
+								printf("M:RES_TELE\n");
+								break;
+							case 73:
+								printf("M:RES_NETH\n");
+								break;
+							case 74:
+								printf("M:RES_WATE\n");
+								break;
+							case 75:
+								printf("M:RES_PLAS\n");
+								break;
+							case 76:
+								printf("M:RES_NEXU\n");
+								break;
+							case 77:
+								printf("M:RES_DISE\n");
+								break;
+							case 78:
+								printf("M:NO_FEAR\n");
+								break;
+							case 79:
+								printf("M:NO_STUN\n");
+								break;
+							case 80:
+								printf("M:NO_CONF\n");
+								break;
+							case 81:
+								printf("M:NO_SLEEP\n");
+								break;
+							case 82:
+								printf("M:AQUATIC\n");
+								break;
+							case 83:
+								printf("M:CAN_SWIM\n");
+								break;
+							case 84:
+								printf("M:CAN_FLY\n");
+								break;
+							case 85:
+								printf("M:FRIENDLY\n");
+								break;
+							case 86:
+								printf("M:PET\n");
+								break;
+							case 87:
+								printf("M:MORTAL\n");
+								break;
+							case 88:
+								printf("M:SPIDER\n");
+								break;
+							case 89:
+								printf("M:NAZGUL\n");
+								break;
+							case 90:
+								printf("M:DG_CURSE\n");
+								break;
+							case 91:
+								printf("M:POSSESSOR\n");
+								break;
+							case 92:
+								printf("M:NO_TARGET\n");
+								break;
+							case 93:
+								printf("M:AI_ANNOY\n");
+								break;
+							case 94:
+								printf("M:NEUTRAL\n");
+								break;
+							case 95:
+								printf("M:NO_THEFT\n");
+								break;
+							case 96:
+								printf("M:SPIRIT\n");
+								break;
+							case 97:
+								printf("M:REVBOSS\n");
+								break;
+							case 98:
+								printf("M:AMBERITE\n");
+								break;
+							case 99:
+								printf("M:RES_TIME\n");
+								break;
+							case 100:
+								printf("M:RES_LITE\n");
+								break;
+							case 101:
+								printf("M:RES_SOUN\n");
+								break;
+							case 102:
+								printf("M:RES_CHAO\n");
+								break;
+							case 103:
+								printf("M:RES_INER\n");
+								break;
+							case 104:
+								printf("M:RES_WALL\n");
+								break;
+							case 105:
+								printf("M:RES_GRAV\n");
+								break;
+							case 106:
+								printf("M:RES_DARK\n");
+								break;
+							case 107:
+								printf("M:RES_SHAR\n");
+								break;
+							case 108:
+								printf("M:WILD_TOWN\n");
+								break;
+							case 109:
+								printf("M:WILD_SHORE\n");
+								break;
+							case 110:
+								printf("M:WILD_OCEAN\n");
+								break;
+							case 111:
+								printf("M:WILD_WASTE\n");
+								break;
+							case 112:
+								printf("M:WILD_WOOD\n");
+								break;
+							case 113:
+								printf("M:WILD_VOLCANO\n");
+								break;
+							case 114:
+								printf("M:WILD_MOUNTAIN\n");
+								break;
+							case 115:
+								printf("M:WILD_GRASS\n");
+								break;
+							case 116:
+								printf("M:NO_CUT\n");
+								break;
+							case 117:
+								printf("M:JOKEANGBAND\n");
+								break;
+							case 118:
+								printf("M:WILD_TOO\n");
+								break;
+							case 119:
+								printf("M:DROP_CORPSE\n");
+								break;
+							case 120:
+								printf("M:DROP_SKELETON\n");
+								break;
+							case 121:
+								printf("M:HAS_LITE\n");
+								break;
+							case 122:
+								printf("M:MIMIC\n");
+								break;
+							case 123:
+								printf("M:HAS_EGG\n");
+								break;
+							case 124:
+								printf("M:SUSCEP_ACID\n");
+								break;
+							case 125:
+								printf("M:SUSCEP_ELEC\n");
+								break;
+							case 126:
+								printf("M:SUSCEP_POIS\n");
+								break;
+							case 127:
+								printf("M:KILL_TREES\n");
+								break;
+							case 128:
+								printf("M:WYRM_PROTECT\n");
+								break;
+							case 129:
+								printf("S:SHRIEK\n");
+								break;
+							case 130:
+								printf("S:MULTIPLY\n");
+								break;
+							case 131:
+								printf("S:S_ANIMAL\n");
+								break;
+							case 132:
+								printf("S:ROCKET\n");
+								break;
+							case 133:
+								printf("S:ARROW_1\n");
+								break;
+							case 134:
+								printf("S:ARROW_2\n");
+								break;
+							case 135:
+								printf("S:ARROW_3\n");
+								break;
+							case 136:
+								printf("S:ARROW_4\n");
+								break;
+							case 137:
+								printf("S:BR_ACID\n");
+								break;
+							case 138:
+								printf("S:BR_ELEC\n");
+								break;
+							case 139:
+								printf("S:BR_FIRE\n");
+								break;
+							case 140:
+								printf("S:BR_COLD\n");
+								break;
+							case 141:
+								printf("S:BR_POIS\n");
+								break;
+							case 142:
+								printf("S:BR_NETH\n");
+								break;
+							case 143:
+								printf("S:BR_LITE\n");
+								break;
+							case 144:
+								printf("S:BR_DARK\n");
+								break;
+							case 145:
+								printf("S:BR_CONF\n");
+								break;
+							case 146:
+								printf("S:BR_SOUN\n");
+								break;
+							case 147:
+								printf("S:BR_CHAO\n");
+								break;
+							case 148:
+								printf("S:BR_DISE\n");
+								break;
+							case 149:
+								printf("S:BR_NEXU\n");
+								break;
+							case 150:
+								printf("S:BR_TIME\n");
+								break;
+							case 151:
+								printf("S:BR_INER\n");
+								break;
+							case 152:
+								printf("S:BR_GRAV\n");
+								break;
+							case 153:
+								printf("S:BR_SHAR\n");
+								break;
+							case 154:
+								printf("S:BR_PLAS\n");
+								break;
+							case 155:
+								printf("S:BR_WALL\n");
+								break;
+							case 156:
+								printf("S:BR_MANA\n");
+								break;
+							case 157:
+								printf("S:BA_NUKE\n");
+								break;
+							case 158:
+								printf("S:BR_NUKE\n");
+								break;
+							case 159:
+								printf("S:BA_CHAO\n");
+								break;
+							case 160:
+								printf("S:BR_DISI\n");
+								break;
+							case 161:
+								printf("S:BA_ACID\n");
+								break;
+							case 162:
+								printf("S:BA_ELEC\n");
+								break;
+							case 163:
+								printf("S:BA_FIRE\n");
+								break;
+							case 164:
+								printf("S:BA_COLD\n");
+								break;
+							case 165:
+								printf("S:BA_POIS\n");
+								break;
+							case 166:
+								printf("S:BA_NETH\n");
+								break;
+							case 167:
+								printf("S:BA_WATE\n");
+								break;
+							case 168:
+								printf("S:BA_MANA\n");
+								break;
+							case 169:
+								printf("S:BA_DARK\n");
+								break;
+							case 170:
+								printf("S:DRAIN_MANA\n");
+								break;
+							case 171:
+								printf("S:MIND_BLAST\n");
+								break;
+							case 172:
+								printf("S:BRAIN_SMASH\n");
+								break;
+							case 173:
+								printf("S:CAUSE_1\n");
+								break;
+							case 174:
+								printf("S:CAUSE_2\n");
+								break;
+							case 175:
+								printf("S:CAUSE_3\n");
+								break;
+							case 176:
+								printf("S:CAUSE_4\n");
+								break;
+							case 177:
+								printf("S:BO_ACID\n");
+								break;
+							case 178:
+								printf("S:BO_ELEC\n");
+								break;
+							case 179:
+								printf("S:BO_FIRE\n");
+								break;
+							case 180:
+								printf("S:BO_COLD\n");
+								break;
+							case 181:
+								printf("S:BO_POIS\n");
+								break;
+							case 182:
+								printf("S:BO_NETH\n");
+								break;
+							case 183:
+								printf("S:BO_WATE\n");
+								break;
+							case 184:
+								printf("S:BO_MANA\n");
+								break;
+							case 185:
+								printf("S:BO_PLAS\n");
+								break;
+							case 186:
+								printf("S:BO_ICEE\n");
+								break;
+							case 187:
+								printf("S:MISSILE\n");
+								break;
+							case 188:
+								printf("S:SCARE\n");
+								break;
+							case 189:
+								printf("S:BLIND\n");
+								break;
+							case 190:
+								printf("S:CONF\n");
+								break;
+							case 191:
+								printf("S:SLOW\n");
+								break;
+							case 192:
+								printf("S:HOLD\n");
+								break;
+							case 193:
+								printf("S:HASTE\n");
+								break;
+							case 194:
+								printf("S:HAND_DOOM\n");
+								break;
+							case 195:
+								printf("S:HEAL\n");
+								break;
+							case 196:
+								printf("S:S_ANIMALS\n");
+								break;
+							case 197:
+								printf("S:BLINK\n");
+								break;
+							case 198:
+								printf("S:TPORT\n");
+								break;
+							case 199:
+								printf("S:TELE_TO\n");
+								break;
+							case 200:
+								printf("S:TELE_AWAY\n");
+								break;
+							case 201:
+								printf("S:TELE_LEVEL\n");
+								break;
+							case 202:
+								printf("S:DARKNESS\n");
+								break;
+							case 203:
+								printf("S:TRAPS\n");
+								break;
+							case 204:
+								printf("S:FORGET\n");
+								break;
+							case 205:
+								printf("S:RAISE_DEAD\n");
+								break;
+							case 206:
+								printf("S:S_BUG\n");
+								break;
+							case 207:
+								printf("S:S_RNG\n");
+								break;
+							case 208:
+								printf("S:S_THUNDERLORD\n");
+								break;
+							case 209:
+								printf("S:S_KIN\n");
+								break;
+							case 210:
+								printf("S:S_HI_DEMON\n");
+								break;
+							case 211:
+								printf("S:S_MONSTER\n");
+								break;
+							case 212:
+								printf("S:S_MONSTERS\n");
+								break;
+							case 213:
+								printf("S:S_ANT\n");
+								break;
+							case 214:
+								printf("S:S_SPIDER\n");
+								break;
+							case 215:
+								printf("S:S_HOUND\n");
+								break;
+							case 216:
+								printf("S:S_HYDRA\n");
+								break;
+							case 217:
+								printf("S:S_ANGEL\n");
+								break;
+							case 218:
+								printf("S:S_DEMON\n");
+								break;
+							case 219:
+								printf("S:S_UNDEAD\n");
+								break;
+							case 220:
+								printf("S:S_DRAGON\n");
+								break;
+							case 221:
+								printf("S:S_HI_UNDEAD\n");
+								break;
+							case 222:
+								printf("S:S_HI_DRAGON\n");
+								break;
+							case 223:
+								printf("S:S_WRAITH\n");
+								break;
+							case 224:
+								printf("S:S_UNIQUE\n");
+								break;
+							case 225:
+								printf("M:R_CHAR_a\n");
+								break;
+							case 226:
+								printf("M:R_CHAR_b\n");
+								break;
+							case 227:
+								printf("M:R_CHAR_c\n");
+								break;
+							case 228:
+								printf("M:R_CHAR_d\n");
+								break;
+							case 229:
+								printf("M:R_CHAR_e\n");
+								break;
+							case 230:
+								printf("M:R_CHAR_f\n");
+								break;
+							case 231:
+								printf("M:R_CHAR_g\n");
+								break;
+							case 232:
+								printf("M:R_CHAR_h\n");
+								break;
+							case 233:
+								printf("M:R_CHAR_i\n");
+								break;
+							case 234:
+								printf("M:R_CHAR_j\n");
+								break;
+							case 235:
+								printf("M:R_CHAR_k\n");
+								break;
+							case 236:
+								printf("M:R_CHAR_l\n");
+								break;
+							case 237:
+								printf("M:R_CHAR_m\n");
+								break;
+							case 238:
+								printf("M:R_CHAR_n\n");
+								break;
+							case 239:
+								printf("M:R_CHAR_o\n");
+								break;
+							case 240:
+								printf("M:R_CHAR_p\n");
+								break;
+							case 241:
+								printf("M:R_CHAR_q\n");
+								break;
+							case 242:
+								printf("M:R_CHAR_r\n");
+								break;
+							case 243:
+								printf("M:R_CHAR_s\n");
+								break;
+							case 244:
+								printf("M:R_CHAR_t\n");
+								break;
+							case 245:
+								printf("M:R_CHAR_u\n");
+								break;
+							case 246:
+								printf("M:R_CHAR_v\n");
+								break;
+							case 247:
+								printf("M:R_CHAR_w\n");
+								break;
+							case 248:
+								printf("M:R_CHAR_x\n");
+								break;
+							case 249:
+								printf("M:R_CHAR_y\n");
+								break;
+							case 250:
+								printf("M:R_CHAR_z\n");
+								break;
+							case 251:
+								printf("M:R_CHAR_A\n");
+								break;
+							case 252:
+								printf("M:R_CHAR_B\n");
+								break;
+							case 253:
+								printf("M:R_CHAR_C\n");
+								break;
+							case 254:
+								printf("M:R_CHAR_D\n");
+								break;
+							case 255:
+								printf("M:R_CHAR_E\n");
+								break;
+							case 256:
+								printf("M:R_CHAR_F\n");
+								break;
+							case 257:
+								printf("M:R_CHAR_G\n");
+								break;
+							case 258:
+								printf("M:R_CHAR_H\n");
+								break;
+							case 259:
+								printf("M:R_CHAR_I\n");
+								break;
+							case 260:
+								printf("M:R_CHAR_J\n");
+								break;
+							case 261:
+								printf("M:R_CHAR_K\n");
+								break;
+							case 262:
+								printf("M:R_CHAR_L\n");
+								break;
+							case 263:
+								printf("M:R_CHAR_M\n");
+								break;
+							case 264:
+								printf("M:R_CHAR_N\n");
+								break;
+							case 265:
+								printf("M:R_CHAR_O\n");
+								break;
+							case 266:
+								printf("M:R_CHAR_P\n");
+								break;
+							case 267:
+								printf("M:R_CHAR_Q\n");
+								break;
+							case 268:
+								printf("M:R_CHAR_R\n");
+								break;
+							case 269:
+								printf("M:R_CHAR_S\n");
+								break;
+							case 270:
+								printf("M:R_CHAR_T\n");
+								break;
+							case 271:
+								printf("M:R_CHAR_U\n");
+								break;
+							case 272:
+								printf("M:R_CHAR_V\n");
+								break;
+							case 273:
+								printf("M:R_CHAR_W\n");
+								break;
+							case 274:
+								printf("M:R_CHAR_X\n");
+								break;
+							case 275:
+								printf("M:R_CHAR_Y\n");
+								break;
+							case 276:
+								printf("M:R_CHAR_Z\n");
+								break;
+							case 277:
+								printf("M:R_CHAR_,\n");
+								break;
+							case 278:
+								printf("M:R_CHAR_|\n");
+								break;
+							case 279:
+								printf("M:R_CHAR_$\n");
+								break;
+						}
+					}
+				}
+
 				switch (random_number(5)) {
 					default:
 					case 1:
@@ -931,6 +1806,7 @@ void printRandoms(int lower, int upper, int count)
 						printf("F:FILL_METHOD_4\n");
 						break;
 				}
+
 				if (random_number(6) == 1) printf("F:FLAT\n");
 				if (random_number(50) == 1) printf("F:LAVA_RIVER\n");
 				if (random_number(8) == 1) printf("F:CAVERN\n");
