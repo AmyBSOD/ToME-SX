@@ -5052,10 +5052,11 @@ extern int PlayerUID;
 #define SKILL_CELESTIAL         73
 #define SKILL_ANTINASTY         74
 #define SKILL_FIREARMS          75
+#define SKILL_INVESTING         76
 /* ATTENTION: always update MAX_GOOD_SKILL below when adding new ones!!! --Amy */
 
 /* Ugly but needed */
-#define MAX_GOOD_SKILL          75
+#define MAX_GOOD_SKILL          76
 
 #define MAX_SKILLS              200
 

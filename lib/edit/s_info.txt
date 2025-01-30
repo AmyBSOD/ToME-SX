@@ -606,6 +606,11 @@ D:Increases sale value of items
 I:0
 F:RANDOM_GAIN
 
+N:76:Investing
+D:Lowers cost for investing in shops
+I:0
+F:RANDOM_GAIN
+
 N:70:Four-dimensional
 D:Allows you to use a 4-dimensional pocket
 A:24:Use Four-dimensional Pocket
@@ -704,5 +709,6 @@ T:Monster-lore:Clear-mind
 T:Main:Misc
 T:Misc:Clear-mind
 T:Misc:Haggling
+T:Misc:Investing
 T:Misc:Four-dimensional
 T:Misc:Anti-nastiness

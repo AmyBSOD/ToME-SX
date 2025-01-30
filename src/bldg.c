@@ -1813,12 +1813,19 @@ bool bldg_process_command(store_type *s_ptr, int i)
 	case BACT_INVEST:
 		{
 			int investcost = (1 + s_ptr->investment);
+			int investskill = get_skill(SKILL_INVESTING);
+
 			if (is_state(s_ptr, STORE_LIKED)) {
 				investcost *= 1500;
 			} else if (is_state(s_ptr, STORE_HATED)) {
 				investcost *= 2500;
 			} else {
 				investcost *= 2000;
+			}
+
+			if (investskill >= 1) {
+				investcost *= 25;
+				investcost /= (25 + investskill);
 			}
 
 			if (p_ptr->nastytrap76) {
