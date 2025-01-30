@@ -3439,6 +3439,244 @@ static void build_type5(int by0, int bx0)
 }
 
 
+static void build_type5x(int by0, int bx0)
+{
+	int y, x, y1, x1, y2, x2, xval, yval;
+	int tmp, i;
+	cptr name;
+	bool empty = FALSE;
+	bool (*old_get_mon_num_hook)(int r_idx);
+	s16b what[64];
+
+	int sleepstate = 0; /* awake */
+	if (magik(80)) sleepstate = 1; /* sleeping */
+	else if (magik(80)) sleepstate = 2; /* 4 out of 5 are sleeping */
+	bool actualsleepstate = FALSE;
+
+	/* Try to allocate space for room.  If fails, exit */
+	if (!room_alloc(17, 11, TRUE, by0, bx0, &xval, &yval)) return;
+
+	/* Large room */
+	y1 = yval - 4;
+	y2 = yval + 4;
+	x1 = xval - 7;
+	x2 = xval + 7;
+
+	if (seed_dungeon) Rand_quick = FALSE;
+
+	/* Place the floor area */
+	for (y = y1; y <= y2; y++)
+	{
+		for (x = x1; x <= x2; x++)
+		{
+			place_floor(y, x);
+			cave[y][x].info |= (CAVE_ROOM);
+		}
+	}
+
+	/* Place the outer walls */
+	build_rectangle(y1 - 1, x1 - 1, y2 + 1, x2 + 1, feat_wall_outer, CAVE_ROOM);
+
+	/* Advance to the center room */
+	y1 = y1 + 2;
+	y2 = y2 - 2;
+	x1 = x1 + 2;
+	x2 = x2 - 2;
+
+	/* The inner walls */
+	build_rectangle(y1 - 1, x1 - 1, y2 + 1, x2 + 1, feat_wall_inner, CAVE_ROOM);
+
+	/* Place a secret door, but not always because pits shouldn't make every single level inhospitable --Amy */
+	if (magik(50)) {
+		switch (randint(4))
+		{
+		case 1:
+			place_secret_door(y1 - 1, xval);
+			break;
+		case 2:
+			place_secret_door(y2 + 1, xval);
+			break;
+		case 3:
+			place_secret_door(yval, x1 - 1);
+			break;
+		case 4:
+			place_secret_door(yval, x2 + 1);
+			break;
+		}
+	}
+
+	/* Hack -- Choose a nest type */
+	tmp = randint(dun_level);
+	while (tmp > 100) tmp -= 100;
+
+	if (randint(40) == 1) tmp = randint(100);
+
+	old_get_mon_num_hook = get_mon_num_hook;
+
+	if ((tmp < 25) && (rand_int(2) != 0))
+	{
+		while (1)
+		{
+			template_race = randint(max_r_idx - 2);
+
+			/* Reject uniques */
+			if (r_info[template_race].flags1 & RF1_UNIQUE) continue;
+
+			/* Reject OoD monsters in a loose fashion */
+			if (((r_info[template_race].level) + randint(5)) >
+			                (dun_level + randint(5))) continue;
+
+			/* Don't like 'break's like this, but this cannot be made better */
+			break;
+		}
+
+		if ((dun_level >= (25 + randint(15))) && (rand_int(2) != 0))
+		{
+			name = "symbol clone";
+			get_mon_num_hook = vault_aux_symbol;
+		}
+		else
+		{
+			name = "clone";
+			get_mon_num_hook = vault_aux_clone;
+		}
+	}
+
+	else if ((tmp < 35) && (rand_int(2) != 0))
+		/* Monster nest (wilderness) */
+	{
+		/* Describe */
+		name = "wilderness";
+
+		/* Restrict to jelly */
+		get_mon_num_hook = vault_aux_wilderness;
+	}
+
+	else if (tmp < 35)
+		/* Monster nest (jelly) */
+	{
+		/* Describe */
+		name = "jelly";
+
+		/* Restrict to jelly */
+		get_mon_num_hook = vault_aux_jelly;
+	}
+
+	else if (tmp < 50)
+	{
+		name = "treasure";
+		get_mon_num_hook = vault_aux_treasure;
+	}
+
+	/* Monster nest (animal) */
+	else if (tmp < 65)
+	{
+		if (rand_int(3) == 0)
+		{
+			name = "kennel";
+			get_mon_num_hook = vault_aux_kennel;
+		}
+		else
+		{
+			/* Describe */
+			name = "animal";
+
+			/* Restrict to animal */
+			get_mon_num_hook = vault_aux_animal;
+		}
+	}
+
+	/* Monster nest (horror) */
+	else if (tmp < 75)
+	{
+		name = "horror";
+		get_mon_num_hook = vault_aux_horror;
+	}
+
+	/* Monster nest (undead) */
+	else
+	{
+		if (rand_int(3) == 0)
+		{
+			name = "chapel";
+			get_mon_num_hook = vault_aux_chapel;
+		}
+		else
+		{
+			/* Describe */
+			name = "undead";
+
+			/* Restrict to undead */
+			get_mon_num_hook = vault_aux_undead;
+		}
+	}
+
+	/* Prepare allocation table */
+	get_mon_num_prep();
+
+	/* Pick some monster types */
+	for (i = 0; i < 64; i++)
+	{
+		/* Get a (hard) monster type */
+		what[i] = get_mon_num(dun_level + 10);
+
+		/* Notice failure */
+		if (!what[i]) empty = TRUE;
+	}
+
+	/* Remove restriction */
+	get_mon_num_hook = old_get_mon_num_hook;
+
+	/* Prepare allocation table */
+	get_mon_num_prep();
+
+	/* Oops */
+	if (empty) return;
+
+	/* Describe */
+	if (cheat_room || p_ptr->precognition)
+	{
+		/* Room type */
+		msg_format("Monster nest (%s)", name);
+	}
+
+	/* Increase the level rating */
+	rating += 10;
+
+	/* (Sometimes) Cause a "special feeling" (for "Monster Nests") */
+	if ((dun_level <= 40) && (randint(dun_level * dun_level + 50) < 300))
+	{
+		good_item_flag = TRUE;
+	}
+
+	/* Place some monsters */
+	for (y = yval - 2; y <= yval + 2; y++)
+	{
+		for (x = xval - 5; x <= xval + 5; x++)
+		{
+			int r_idx = what[rand_int(64)];
+
+			/* Amy: it suuuuucks if pits always spawn awake! */
+			actualsleepstate = FALSE;
+			if (sleepstate == 1) actualsleepstate = TRUE;
+			if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+			/* Place that "random" monster (no groups) */
+			(void)place_monster_aux(y, x, r_idx, actualsleepstate, FALSE, MSTATUS_ENEMY);
+			/* and fill the pit with a few items, from newer Angband versions, to make them worth exploring --Amy */
+			if (rand_int(12) < 1) {
+				if (rand_int(20) < 1) object_level = dun_level + 10;
+				if (rand_int(50) < 1) object_level = dun_level + 20;
+				place_object(y, x, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+				object_level = dun_level;
+			}
+		}
+	}
+
+	if (seed_dungeon) Rand_quick = TRUE;
+}
+
+
 
 /*
  * Type 6 -- Monster pits
@@ -4086,6 +4324,582 @@ static void build_type6(int by0, int bx0)
 		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
 
 		place_monster_aux(yval - 1, x, what[5], actualsleepstate, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval + 1, xval, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval - 1, xval, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+	}
+
+	/* Next to the center monster */
+	{
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(yval, xval + 1, what[6], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(yval, xval - 1, what[6], actualsleepstate, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval + 1, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval - 1, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+	}
+
+	/* Center monster */
+	{
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(yval, xval, what[7], actualsleepstate, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+	}
+
+	if (seed_dungeon)
+	{
+		Rand_quick = TRUE;
+	}
+}
+
+static void build_type6x(int by0, int bx0)
+{
+	int tmp, what[16];
+	int i, j, y, x, y1, x1, y2, x2, xval, yval;
+	bool empty = FALSE;
+	cptr name;
+	bool (*old_get_mon_num_hook)(int r_idx);
+
+	int sleepstate = 0; /* awake */
+	if (magik(80)) sleepstate = 1; /* sleeping */
+	else if (magik(80)) sleepstate = 2; /* 4 out of 5 are sleeping */
+	bool actualsleepstate = FALSE;
+
+	/* Try to allocate space for room.  If fails, exit */
+	if (!room_alloc(17, 11, TRUE, by0, bx0, &xval, &yval)) return;
+
+	/* Large room */
+	y1 = yval - 4;
+	y2 = yval + 4;
+	x1 = xval - 7;
+	x2 = xval + 7;
+
+	if (seed_dungeon) Rand_quick = FALSE;
+
+	/* Place the floor area */
+	for (y = y1 - 1; y <= y2 + 1; y++)
+	{
+		for (x = x1 - 1; x <= x2 + 1; x++)
+		{
+			place_floor(y, x);
+			cave[y][x].info |= (CAVE_ROOM);
+		}
+	}
+
+	/* Place the outer walls */
+	build_rectangle(y1 - 1, x1 - 1, y2 + 1, x2 + 1, feat_wall_outer, CAVE_ROOM);
+
+	/* Advance to the center room */
+	y1 = y1 + 2;
+	y2 = y2 - 2;
+	x1 = x1 + 2;
+	x2 = x2 - 2;
+
+	/* The inner walls */
+	build_rectangle(y1 - 1, x1 - 1, y2 + 1, x2 + 1, feat_wall_outer, CAVE_ROOM);
+
+	/* Place a secret door, but not always since pits are annoying enough as it is --Amy */
+	if (magik(50)) {
+		switch (randint(4))
+		{
+		case 1:
+			place_secret_door(y1 - 1, xval);
+			break;
+		case 2:
+			place_secret_door(y2 + 1, xval);
+			break;
+		case 3:
+			place_secret_door(yval, x1 - 1);
+			break;
+		case 4:
+			place_secret_door(yval, x2 + 1);
+			break;
+		}
+	}
+
+	/* Choose a pit type */
+	tmp = randint(dun_level);
+	while (tmp > 100) tmp -= 100;
+
+	if (randint(40) == 1) tmp = randint(100);
+
+	old_get_mon_num_hook = get_mon_num_hook;
+
+	/* Orc pit */
+	if (tmp < 10)
+	{
+		if (randint(3) == 1) {
+			/* Message */
+			name = "kobold";
+
+			/* Restrict monster selection */
+			get_mon_num_hook = vault_aux_kobold;
+
+		} else {
+			/* Message */
+			name = "orc";
+
+			/* Restrict monster selection */
+			get_mon_num_hook = vault_aux_orc;
+		}
+	}
+
+	/* Troll pit */
+	else if (tmp < 20)
+	{
+		if (randint(5) == 1) {
+			/* Message */
+			name = "human";
+
+			/* Restrict monster selection */
+			get_mon_num_hook = vault_aux_human;
+		} else {
+			/* Message */
+			name = "troll";
+
+			/* Restrict monster selection */
+			get_mon_num_hook = vault_aux_troll;
+		}
+	}
+
+	/* Zephyr hound pit, by Amy */
+	else if (tmp < 30)
+	{
+		/* Message */
+		name = "zephyr";
+
+		/* Restrict monster selection */
+		get_mon_num_hook = vault_aux_zephyr;
+	}
+
+	/* Ogre pit, by Amy */
+	else if (tmp < 40)
+	{
+		/* Message */
+		name = "ogre";
+
+		/* Restrict monster selection */
+		get_mon_num_hook = vault_aux_ogre;
+	}
+
+	/* Hydra pit */
+	else if (tmp < 45)
+	{
+		if (randint(5) == 1) {
+			/* Message */
+			name = "angel";
+
+			/* Restrict monster selection */
+			get_mon_num_hook = vault_aux_angel;
+		} else {
+			/* Message */
+			name = "hydra";
+
+			/* Restrict monster selection */
+			get_mon_num_hook = vault_aux_hydra;
+		}
+	}
+
+	/* Giant pit */
+	else if (tmp < 55)
+	{
+		/* Message */
+		name = "giant";
+
+		/* Restrict monster selection */
+		get_mon_num_hook = vault_aux_giant;
+	}
+
+	/* Clone pit */
+	else if (tmp < 80)
+	{
+		if (randint(4) != 1)
+		{
+			/* Message */
+			name = "ordered clones";
+
+			do
+			{
+				template_race = randint(max_r_idx - 2);
+			}
+			while ((r_info[template_race].flags1 & RF1_UNIQUE)
+			                || (((r_info[template_race].level) + randint(5)) >
+			                    (dun_level + randint(5))));
+
+			/* Restrict selection */
+			get_mon_num_hook = vault_aux_symbol;
+		}
+		else
+		{
+			name = "ordered chapel";
+			get_mon_num_hook = vault_aux_chapel;
+		}
+
+	}
+
+	/* Dragon pit */
+	else if (tmp < 90)
+	{
+		/* Pick dragon type */
+		switch (rand_int(6))
+		{
+			/* Black */
+		case 0:
+			{
+				/* Message */
+				name = "acid dragon";
+
+				/* Restrict dragon breath type */
+				vault_aux_dragon_mask4 = RF4_BR_ACID;
+
+				/* Done */
+				break;
+			}
+
+			/* Blue */
+		case 1:
+			{
+				/* Message */
+				name = "electric dragon";
+
+				/* Restrict dragon breath type */
+				vault_aux_dragon_mask4 = RF4_BR_ELEC;
+
+				/* Done */
+				break;
+			}
+
+			/* Red */
+		case 2:
+			{
+				/* Message */
+				name = "fire dragon";
+
+				/* Restrict dragon breath type */
+				vault_aux_dragon_mask4 = RF4_BR_FIRE;
+
+				/* Done */
+				break;
+			}
+
+			/* White */
+		case 3:
+			{
+				/* Message */
+				name = "cold dragon";
+
+				/* Restrict dragon breath type */
+				vault_aux_dragon_mask4 = RF4_BR_COLD;
+
+				/* Done */
+				break;
+			}
+
+			/* Green */
+		case 4:
+			{
+				/* Message */
+				name = "poison dragon";
+
+				/* Restrict dragon breath type */
+				vault_aux_dragon_mask4 = RF4_BR_POIS;
+
+				/* Done */
+				break;
+			}
+
+			/* Multi-hued */
+		default:
+			{
+				/* Message */
+				name = "multi-hued dragon";
+
+				/* Restrict dragon breath type */
+				vault_aux_dragon_mask4 = (RF4_BR_ACID | RF4_BR_ELEC |
+				                          RF4_BR_FIRE | RF4_BR_COLD |
+				                          RF4_BR_POIS);
+
+				/* Done */
+				break;
+			}
+
+		}
+
+		/* Restrict monster selection */
+		get_mon_num_hook = vault_aux_dragon;
+	}
+
+	/* Demon pit */
+	else
+	{
+		/* Message */
+		name = "demon";
+
+		/* Restrict monster selection */
+		get_mon_num_hook = vault_aux_demon;
+	}
+
+	/* Prepare allocation table */
+	get_mon_num_prep();
+
+	/* Pick some monster types */
+	for (i = 0; i < 16; i++)
+	{
+		/* Get a (hard) monster type */
+		what[i] = get_mon_num(dun_level + 10);
+
+		/* Notice failure */
+		if (!what[i]) empty = TRUE;
+	}
+
+	/* Remove restriction */
+	get_mon_num_hook = old_get_mon_num_hook;
+
+	/* Prepare allocation table */
+	get_mon_num_prep();
+
+	/* Oops */
+	if (empty) return;
+
+	/* XXX XXX XXX */
+	/* Sort the entries */
+	for (i = 0; i < 16 - 1; i++)
+	{
+		/* Sort the entries */
+		for (j = 0; j < 16 - 1; j++)
+		{
+			int i1 = j;
+			int i2 = j + 1;
+
+			int p1 = r_info[what[i1]].level;
+			int p2 = r_info[what[i2]].level;
+
+			/* Bubble */
+			if (p1 > p2)
+			{
+				int tmp = what[i1];
+				what[i1] = what[i2];
+				what[i2] = tmp;
+			}
+		}
+	}
+
+	/* Select the entries */
+	for (i = 0; i < 8; i++)
+	{
+		/* Every other entry */
+		what[i] = what[i * 2];
+	}
+
+	/* Message */
+	if (cheat_room || p_ptr->precognition)
+	{
+		/* Room type */
+		msg_format("Monster pit (%s)", name);
+
+		if (cheat_hear || p_ptr->precognition)
+		{
+			/* Contents */
+			for (i = 0; i < 8; i++)
+			{
+				/* Message */
+				msg_print(r_name + r_info[what[i]].name);
+			}
+		}
+	}
+
+	/* Increase the level rating */
+	rating += 10;
+
+	/* (Sometimes) Cause a "special feeling" (for "Monster Pits") */
+	if ((dun_level <= 40) && (randint(dun_level * dun_level + 50) < 300))
+	{
+		good_item_flag = TRUE;
+	}
+
+	/* Top and bottom rows */
+	for (x = xval - 5; x <= xval + 5; x++)
+	{
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(yval - 2, x, what[0], actualsleepstate, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval - 2, xval, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(yval + 2, x, what[0], actualsleepstate, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval + 2, xval, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+	}
+
+	/* Middle columns */
+	for (y = yval - 1; y <= yval + 1; y++)
+	{
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval - 5, what[0], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval + 5, what[0], actualsleepstate, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval - 5, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval + 5, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval - 4, what[1], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval + 4, what[1], actualsleepstate, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval - 4, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval + 4, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval - 3, what[2], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval + 3, what[2], actualsleepstate, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval - 3, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval + 3, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval - 2, what[3], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		place_monster_aux(y, xval + 2, what[3], actualsleepstate, FALSE, MSTATUS_ENEMY);
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval - 2, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+		if (rand_int(12) < 1) {
+			if (rand_int(20) < 1) object_level = dun_level + 10;
+			if (rand_int(50) < 1) object_level = dun_level + 20;
+			place_object(yval, xval + 2, (rand_int(5) < 1) ? TRUE : FALSE, (rand_int(25) < 1) ? TRUE : FALSE, OBJ_FOUND_FLOOR);
+			object_level = dun_level;
+		}
+
+	}
+
+	/* Above/Below the center monster */
+	for (x = xval - 1; x <= xval + 1; x++)
+	{
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		if (x == xval) place_monster_aux(yval + 1, x, what[5], actualsleepstate, FALSE, MSTATUS_ENEMY);
+		else place_monster_aux(yval + 1, x, what[4], actualsleepstate, FALSE, MSTATUS_ENEMY);
+
+		actualsleepstate = FALSE;
+		if (sleepstate == 1) actualsleepstate = TRUE;
+		if ((sleepstate == 2) && magik(80)) actualsleepstate = TRUE;
+
+		if (x == xval) place_monster_aux(yval - 1, x, what[5], actualsleepstate, FALSE, MSTATUS_ENEMY);
+		else place_monster_aux(yval - 1, x, what[4], actualsleepstate, FALSE, MSTATUS_ENEMY);
 		if (rand_int(12) < 1) {
 			if (rand_int(20) < 1) object_level = dun_level + 10;
 			if (rand_int(50) < 1) object_level = dun_level + 20;
@@ -7362,10 +8176,12 @@ static bool room_build(int y, int x, int typ)
 		build_type7 (y, x);
 		break;
 	case 6:
-		build_type6 (y, x);
+		if (magik(50)) build_type6 (y, x);
+		else build_type6x (y, x);
 		break;
 	case 5:
-		build_type5 (y, x);
+		if (magik(50)) build_type5 (y, x);
+		else build_type5x (y, x);
 		break;
 	case 4:
 		build_type4 (y, x);
