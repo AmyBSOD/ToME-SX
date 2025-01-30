@@ -8435,7 +8435,7 @@ bool level_generate_dungeon(cptr name)
 			/* Amy edit: ironman shouldn't create only greater vaults... have some other room types too, please */
 			k = ( (ironman_rooms && (randint(3) != 1)) ? 0 : rand_int(100));
 
-			if (p_ptr->nastytrap37 && (randint(5) == 1) ) {
+			if (p_ptr->nastytrap37 && !town_level && (randint(5) == 1) ) {
 
 				switch (randint(2)) {
 					default: case 1: /* nest */
@@ -8522,7 +8522,7 @@ bool level_generate_dungeon(cptr name)
 			if ((k < 100) && room_build(y, x, 12)) continue;
 		}
 
-		if (p_ptr->nastytrap37 && (randint(5) == 1) ) {
+		if (p_ptr->nastytrap37 && !town_level && (randint(5) == 1) ) {
 
 			switch (randint(2)) {
 				default: case 1: /* nest */
