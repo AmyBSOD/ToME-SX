@@ -5404,6 +5404,62 @@ static void build_type8(int by0, int bx0)
 }
 
 /*
+ * Type 13 -- interesting rooms (see "v_info.txt")
+ */
+static void build_type13(int by0, int bx0)
+{
+	vault_type *v_ptr = NULL;
+	int dummy = 0, xval, yval;
+
+	int vaultnumber = 0;
+
+	/* Pick an interesting room */
+	while (dummy < SAFE_MAX_ATTEMPTS)
+	{
+		dummy++;
+
+		vaultnumber = rand_int(max_v_idx);
+
+		/* Access a random vault record */
+		v_ptr = &v_info[vaultnumber];
+
+		/* Accept the first greater vault */
+		if (v_ptr->typ == 13) break;
+	}
+
+	if (dummy >= SAFE_MAX_ATTEMPTS)
+	{
+		if (cheat_room)
+		{
+			msg_print("Warning! Could not place interesting room!");
+		}
+		return;
+	}
+
+	char *vaultname = v_name + v_ptr->name;
+
+	/* Try to allocate space for room.  If fails, exit */
+	if (!room_alloc(v_ptr->wid, v_ptr->hgt, FALSE, by0, bx0, &xval, &yval))
+	{
+		if (cheat_room) msg_format("Could not allocate interesting room %d here", vaultnumber);
+		return;
+	}
+
+#ifdef FORCE_V_IDX
+	v_ptr = &v_info[FORCE_V_IDX];
+#endif
+
+	/* Message */
+	if (cheat_room || p_ptr->precognition) msg_format("Interesting Room '%s'", vaultname);
+
+	/* Boost the rating */
+	rating += v_ptr->rat;
+
+	/* Hack -- Build the vault */
+	build_vault(yval, xval, v_ptr->hgt, v_ptr->wid, v_text + v_ptr->text);
+}
+
+/*
  * DAG:
  * Build an vertical oval room.
  * For every grid in the possible square, check the distance.
@@ -7744,8 +7800,11 @@ static void build_tunnel(int row1, int col1, int row2, int col2, bool water)
 		/*
 		 * Pierce "outer" walls of rooms
 		 * Cannot trust feat code any longer...
+		 * edit by Amy: no wonder vaults were always surrounded by granite even where the doors should be, "feat_wall_outer"
+		 * can be something different and then, since vaults are still surrounded by FEAT_WALL_OUTER, this function doesn't catch them!
+		 * so vaults would only be accessible without digging on dungeons where the outer wall happens to be FEAT_WALL_OUTER! fixed now!
 		 */
-		if ((c_ptr->feat == feat_wall_outer) &&
+		if ((c_ptr->feat == feat_wall_outer || c_ptr->feat == FEAT_WALL_OUTER) &&
 		                (c_ptr->info & CAVE_ROOM))
 		{
 			/* Acquire the "next" location */
@@ -8157,6 +8216,9 @@ static bool room_build(int y, int x, int typ)
 	switch (typ)
 	{
 		/* Build an appropriate room */
+	case 13:
+		build_type13(y, x);
+		break;
 	case 12:
 		build_type12(y, x);
 		break;
@@ -8487,18 +8549,24 @@ bool level_generate_dungeon(cptr name)
 				}
 
 
-				/* Type 5 -- Monster nest (15%) */
-				if ((k < 40) && room_build(y, x, 5)) continue;
+				/* Type 5 -- Monster nest (10%) */
+				if ((k < 35) && room_build(y, x, 5)) continue;
 
-				/* Type 6 -- Monster pit (15%) */
-				if ((k < 55) && room_build(y, x, 6)) continue;
+				/* Type 6 -- Monster pit (10%) */
+				if ((k < 45) && room_build(y, x, 6)) continue;
+
+				/* Type 13 -- Interesting room (10%) */
+				if ((k < 55) && room_build(y, x, 13)) continue;
 
 				/* Type 11 -- Random vault (5%) */
 				if ((k < 60) && room_build(y, x, 11)) continue;
 #endif
 			} /* unusual room end, begin regular rooms (maybe with various shapes) */
 
-			/* Type 4 -- Large room (25%) */
+			/* Type 13 -- Interesting room (5%) */
+			if ((k < 5) && room_build(y, x, 13)) continue;
+
+			/* Type 4 -- Large room (20%) */
 			if ((k < 25) && room_build(y, x, 4)) continue;
 
 			/* Type 3 -- Cross room (20%) */
@@ -8530,6 +8598,25 @@ bool level_generate_dungeon(cptr name)
 					break;
 				case 2: /* pit */
 					if (room_build(y, x, 6)) continue;
+					break;
+			}
+		}
+
+		/* have more variety, but don't make rooms with dangerous monsters --Amy */
+		if (randint(5) == 1) {
+			switch (randint(5)) {
+				case 1: /* fractal cave */
+					if (room_build(y, x, 10)) continue;
+					break;
+				case 2: /* overlapping room */
+					if (room_build(y, x, 2)) continue;
+					break;
+				case 3: /* oval room */
+					if (room_build(y, x, 9)) continue;
+					break;
+				case 4:
+				case 5: /* interesting room */
+					if (room_build(y, x, 13)) continue;
 					break;
 			}
 		}
