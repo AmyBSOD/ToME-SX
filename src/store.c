@@ -1000,6 +1000,9 @@ static bool store_will_buy(object_type *o_ptr)
 	}
 	if (o_ptr->tval == TV_SKELETON) return FALSE;
 	if (o_ptr->tval == TV_CHEST) return FALSE;
+	if (o_ptr->tval == TV_BATERIE) return FALSE;
+	if (o_ptr->tval == TV_RUNE1) return FALSE;
+	if (o_ptr->tval == TV_RUNE2) return FALSE;
 
 	/* Lua can define things to buy */
 	if (process_hooks_ret(HOOK_STORE_BUY, "d", "(d,s,O)", st_ptr->st_idx, st_info[st_ptr->st_idx].name + st_name, o_ptr))
@@ -1343,7 +1346,7 @@ int return_level()
 	int level;
 
 	/* Amy edit: make runecraft skill not completely useless */
-	int runebonus = get_skill(SKILL_RUNECRAFT);
+	int runebonus = get_skill(SKILL_FORTUNE);
 
 	/* investing slowly improves the quality of items --Amy */
 	if (st_ptr->investment > 4) {

@@ -2750,14 +2750,14 @@ static bool make_artifact_special(object_type *o_ptr)
 
 	/* runecraft improvement by Amy: improve object level */
 	int objlevelmax = object_level;
-	int runebonus = get_skill(SKILL_RUNECRAFT);
+	int runebonus = get_skill(SKILL_FORTUNE);
 	if (p_ptr->nastytrap45) runebonus = 0;
 	if (p_ptr->nastytrap45 && (objlevelmax > 1)) objlevelmax /= 2;
 	if (runebonus > 0) objlevelmax += runebonus;
 
 	int dunlevelmax = dun_level;
 	if (p_ptr->nastytrap45 && (dunlevelmax > 1)) dunlevelmax /= 2;
-	if ((get_skill(SKILL_RUNECRAFT) > 0) && !p_ptr->nastytrap45) dunlevelmax += get_skill(SKILL_RUNECRAFT);
+	if ((get_skill(SKILL_FORTUNE) > 0) && !p_ptr->nastytrap45) dunlevelmax += get_skill(SKILL_FORTUNE);
 
 	/* Check the artifact list (just the "specials") */
 	for (i = 0; i < max_a_idx; i++)
@@ -2977,7 +2977,7 @@ static bool make_ego_item(object_type *o_ptr, bool good)
 
 		maxposslvl = dun_level;
 		if (p_ptr->nastytrap45 && (maxposslvl > 1)) maxposslvl /= 2;
-		if (!p_ptr->nastytrap45) maxposslvl += get_skill(SKILL_RUNECRAFT);
+		if (!p_ptr->nastytrap45) maxposslvl += get_skill(SKILL_FORTUNE);
 
 		int j = ok_ego[rand_int(ok_num)];
 		e_ptr = &e_info[j];
@@ -3939,7 +3939,7 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 
 	case TV_CORPSE:
 		{
-			int runebonus = get_skill(SKILL_RUNECRAFT);
+			int runebonus = get_skill(SKILL_FORTUNE);
 			if (p_ptr->nastytrap45) runebonus = 0;
 			int egglevel = dun_level;
 			if (p_ptr->nastytrap45 && (egglevel > 1)) egglevel /= 2;
@@ -3964,7 +3964,7 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 			monster_race* r_ptr;
 			int r_idx, count = 0;
 			bool OK = FALSE;
-			int runebonus = get_skill(SKILL_RUNECRAFT);
+			int runebonus = get_skill(SKILL_FORTUNE);
 			if (p_ptr->nastytrap45) runebonus = 0;
 			int egglevel = dun_level;
 			if (p_ptr->nastytrap45 && (egglevel > 1)) egglevel /= 2;
@@ -3992,7 +3992,7 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 
 	case TV_HYPNOS:
 		{
-			int runebonus = get_skill(SKILL_RUNECRAFT);
+			int runebonus = get_skill(SKILL_FORTUNE);
 			if (p_ptr->nastytrap45) runebonus = 0;
 			int egglevel = dun_level;
 			if (p_ptr->nastytrap45 && (egglevel > 1)) egglevel /= 2;
@@ -5562,7 +5562,7 @@ bool make_object(object_type *j_ptr, bool good, bool great, obj_theme theme)
 
 	int objlevelmax = object_level;
 	if (p_ptr->nastytrap45 && (objlevelmax > 1)) objlevelmax /= 2;
-	int runebonus = get_skill(SKILL_RUNECRAFT);
+	int runebonus = get_skill(SKILL_FORTUNE);
 	if (p_ptr->nastytrap45) runebonus = 0;
 	if (runebonus > 0) objlevelmax += runebonus;
 	bool madespecialarti = FALSE;

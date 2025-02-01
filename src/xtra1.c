@@ -5298,7 +5298,7 @@ void gain_fate(byte fate)
 						/* the objects shouldn't be teh sux! --Amy */
 						int maxobjlevel = randint(50) + max_dlv_real[dungeon_type] + p_ptr->lev;
 						if (p_ptr->nastytrap45 && (maxobjlevel > 1)) maxobjlevel /= 2;
-						int runebonus = get_skill(SKILL_RUNECRAFT);
+						int runebonus = get_skill(SKILL_FORTUNE);
 						if (p_ptr->nastytrap45) runebonus = 0;
 						if (runebonus > 0) maxobjlevel += runebonus;
 
@@ -5347,7 +5347,7 @@ void gain_fate(byte fate)
 			{
 				int maxobjlevel = randint(50) + max_dlv_real[dungeon_type] + p_ptr->lev * 2;
 				if (p_ptr->nastytrap45 && (maxobjlevel > 1)) maxobjlevel /= 2;
-				int runebonus = get_skill(SKILL_RUNECRAFT);
+				int runebonus = get_skill(SKILL_FORTUNE);
 				if (p_ptr->nastytrap45) runebonus = 0;
 				if (runebonus > 0) maxobjlevel += runebonus;
 

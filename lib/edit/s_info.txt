@@ -161,8 +161,12 @@ G:60
 
 N:34:Runecraft
 D:Ability to combine magic runes to create your own spells
-D:Improves quality of loot
 A:9:Use Runespells
+I:1000
+F:RANDOM_GAIN
+
+N:78:Fortune
+D:Improves quality of loot
 I:1000
 F:RANDOM_GAIN
 
@@ -492,8 +496,12 @@ F:RANDOM_GAIN
 
 N:39:Alchemy
 D:Ability to use essences to modify/create magic items
-D:Also protects against charge drain attacks
 A:5:Use Alchemy
+I:1000
+F:RANDOM_GAIN
+
+N:77:Freshmint
+D:Protects against charge drain attacks
 I:1000
 F:RANDOM_GAIN
 
@@ -712,3 +720,6 @@ T:Misc:Haggling
 T:Misc:Investing
 T:Misc:Four-dimensional
 T:Misc:Anti-nastiness
+T:Misc:Fortune
+T:Misc:Freshmint
+

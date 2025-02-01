@@ -2882,7 +2882,10 @@ void curse_equipment_dg(int chance, int heavy_chance)
 			changed = TRUE;
 		o_ptr->art_flags3 |= TR3_HEAVY_CURSE;
 		o_ptr->art_flags3 |= TR3_CURSED;
-		o_ptr->art_flags4 |= TR4_DG_CURSE;
+		if (!(o4 & TR4_DG_CURSE)) {
+			o_ptr->art_flags4 |= TR4_DG_CURSE;
+			o_ptr->morgycurse = TRUE;
+		}
 		o_ptr->ident |= IDENT_CURSED;
 	}
 	else
@@ -2890,7 +2893,10 @@ void curse_equipment_dg(int chance, int heavy_chance)
 		if (!(o_ptr->ident & (IDENT_CURSED)))
 			changed = TRUE;
 		o_ptr->art_flags3 |= TR3_CURSED;
-		o_ptr->art_flags4 |= TR4_DG_CURSE;
+		if (!(o4 & TR4_DG_CURSE)) {
+			o_ptr->art_flags4 |= TR4_DG_CURSE;
+			o_ptr->morgycurse = TRUE;
+		}
 		o_ptr->ident |= IDENT_CURSED;
 	}
 

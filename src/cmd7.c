@@ -73,6 +73,112 @@ void mindcraft_info(char *p, int power)
 	}
 }
 
+/*
+ * Hook to specify "armor or jewelry"
+ */
+bool item_tester_hook_armor_or_jewelry(object_type *o_ptr)
+{
+	switch (o_ptr->tval)
+	{
+	case TV_DRAG_ARMOR:
+	case TV_HARD_ARMOR:
+	case TV_SOFT_ARMOR:
+	case TV_SHIELD:
+	case TV_CLOAK:
+	case TV_CROWN:
+	case TV_HELM:
+	case TV_BOOTS:
+	case TV_GLOVES:
+	case TV_RING:
+	case TV_AMULET:
+		{
+			return (TRUE);
+		}
+	case TV_DAEMON_BOOK:
+		{
+			switch (o_ptr->sval)
+			{
+			case SV_DEMONHORN:
+			case SV_DEMONSHIELD:
+				{
+					return (TRUE);
+				}
+			}
+		}
+	}
+
+	return (FALSE);
+}
+
+/*
+ * Hook to specify "weapon" (which can have brands, i.e. no bows! --Amy)
+ */
+bool item_tester_hook_weapon_nobow(object_type *o_ptr)
+{
+	switch (o_ptr->tval)
+	{
+	case TV_MSTAFF:
+	case TV_BOOMERANG:
+	case TV_SHOT:
+	case TV_ARROW:
+	case TV_BOLT:
+	case TV_HAFTED:
+	case TV_POLEARM:
+	case TV_SWORD:
+	case TV_AXE:
+	case TV_AMMO_PISTOL:
+	case TV_AMMO_SMG:
+	case TV_AMMO_RIFLE:
+	case TV_AMMO_SHOTGUN:
+	case TV_AMMO_ASSAULT:
+		{
+			return (TRUE);
+		}
+	case TV_DAEMON_BOOK:
+		{
+			switch (o_ptr->sval)
+			{
+			case SV_DEMONBLADE:
+				{
+					return (TRUE);
+				}
+			}
+		}
+	}
+
+	return (FALSE);
+}
+
+/*
+ * Hook to specify essence
+ */
+bool item_tester_hook_alchemy(object_type *o_ptr)
+{
+	switch (o_ptr->tval)
+	{
+	case TV_BATERIE:
+		{
+			return (TRUE);
+		}
+	}
+	return (FALSE);
+}
+
+/*
+ * Hook to specify rune
+ */
+bool item_tester_hook_rune(object_type *o_ptr)
+{
+	switch (o_ptr->tval)
+	{
+	case TV_RUNE1:
+	case TV_RUNE2:
+		{
+			return (TRUE);
+		}
+	}
+	return (FALSE);
+}
 
 /*
  * Describe class powers of Mimics
@@ -3613,14 +3719,19 @@ void alchemist_check_level()
 /*
  * do_cmd_cast calls this function if the player's class
  * is 'alchemist'.
+ * totally revamped by Amy to make a balanced alchemy system where you can't just create rings with +99 attacks or mage staves with +333 spell power *sigh*
  */
 void do_cmd_alchemist(void)
 {
-	int item, ext = 0;
-	int value, basechance;
+	int item, item2, ext = 0;
+	int value, basechance, esslevel = 0;
 	int askill;
 	bool repeat = 0;
 	char ch;
+	bool useup = FALSE;
+	int proofchance = 100;
+
+	int whichbase = 0; /* 0 = all (use only for washing off curses!), 1 = armor or jewelry, 2 = only armor, 3 = weapon */
 
 	object_type *o_ptr, *q_ptr;
 	object_type forge, forge2;
@@ -3628,8 +3739,246 @@ void do_cmd_alchemist(void)
 
 	cptr q, s;
 
-	msg_print("Sorry. Alchemy is for people who have no life, and was therefore deactivated.");
-	return;
+	askill = get_skill(SKILL_ALCHEMY);
+
+	/* Get an essence */
+	q = "Use which essence? ";
+	s = "You have no essences.";
+	item_tester_hook = item_tester_hook_alchemy;
+
+	if (!get_item(&item, q, s, (USE_INVEN))) return;
+
+	/* Get the item (in the pack) */
+	if (item >= 0)
+	{
+		o_ptr = &p_ptr->inventory[item];
+	}
+	else return;
+
+	switch (o_ptr->sval) {
+		default:
+			whichbase = 1;
+			break;
+		case SV_BATERIE_EXPLOSION:
+		case SV_BATERIE_CONFUSION:
+			esslevel = 10;
+			whichbase = 1;
+			break;
+		case SV_BATERIE_TIME:
+		case SV_BATERIE_FORCE:
+		case SV_BATERIE_MANA:
+			esslevel = 30;
+			whichbase = 1;
+			break;
+		case SV_BATERIE_MAGIC:
+			esslevel = 20;
+			whichbase = 1;
+			break;
+		case SV_BATERIE_XTRA_LIFE:
+			esslevel = 50;
+			whichbase = 1;
+			break;
+		case SV_BATERIE_LIFE:
+			whichbase = 0;
+			break;
+	}
+
+	basechance = 15 + get_skill_scale(SKILL_ALCHEMY, 40) - esslevel;
+
+	if (basechance < 1) {
+		msg_print("Your skill is too low to be using this essence!");
+		return;
+	}
+
+	/* Get an item to improve */
+	q = "Improve which item? ";
+	s = "You have no items to improve.";
+	item_tester_hook = (whichbase == 0) ? NULL : (whichbase == 1) ? item_tester_hook_armor_or_jewelry : (whichbase == 2) ? item_tester_hook_armour : item_tester_hook_weapon_nobow;
+
+	if (!get_item(&item2, q, s, (USE_EQUIP | USE_INVEN))) return;
+
+	/* Get the item (in the pack) */
+	if (item2 >= 0)
+	{
+		q_ptr = &p_ptr->inventory[item2];
+	}
+	else return;
+
+	if (q_ptr->tampered && (whichbase != 0)) {
+		msg_print("That item has been improved already.");
+		return;
+	}
+
+	if ((whichbase != 0) && artifact_p(q_ptr)) {
+		msg_print("Artifacts cannot be improved.");
+		return;
+	}
+
+	if ((whichbase != 0) && q_ptr->art_name) {
+		msg_print("Artifacts cannot be improved.");
+		return;
+	}
+
+	/* stacks can resist --Amy */
+	if (q_ptr->number > 1) {
+		proofchance = 80 + (o_ptr->number * 20);
+
+		if (randint(proofchance) > 100) {
+			msg_print("Your alchemy attempt failed.");
+			inven_item_increase(item, -1);
+			inven_item_optimize(item);
+			return;
+		}
+	}
+
+	if (!magik(basechance)) {
+		msg_print("Your alchemy attempt failed.");
+		inven_item_increase(item, -1);
+		inven_item_optimize(item);
+		return;
+	}
+
+	switch (o_ptr->sval) {
+		default:
+			msg_format("Invalid sval %d!", o_ptr->sval);
+			break;
+		case SV_BATERIE_POISON:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_POIS;
+			msg_print("Poison resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_EXPLOSION:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags5 |= TR5_RES_PLASMA;
+			msg_print("Plasma resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_TELEPORT:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags3 |= TR3_TELEPORT;
+			msg_print("Teleportitis added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_COLD:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_COLD;
+			msg_print("Cold resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_FIRE:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_FIRE;
+			msg_print("Fire resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_ACID:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_ACID;
+			msg_print("Acid resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_LIFE:
+			if (!(q_ptr->morgycurse) && artifact_p(q_ptr)) {
+				msg_print("The artifact resists the attempt.");
+				break;
+			}
+			q_ptr->art_flags4 &= ~TR4_DG_CURSE;
+			msg_print("Ancient morgothian curse removed.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_CONFUSION:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_CONF;
+			msg_print("Confusion resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_LITE:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_LITE;
+			msg_print("Light resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_CHAOS:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_CHAOS;
+			msg_print("Chaos resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_TIME:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags5 |= TR5_RES_TIME;
+			msg_print("Time resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_MAGIC:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_DISEN;
+			msg_print("Disenchantment resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_XTRA_LIFE:
+			if (q_ptr->pval != 1) {
+				msg_print("You need to target an item with a pval of exactly 1.");
+				break;
+			}
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_LIFE;
+			msg_print("Life bonus added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_DARKNESS:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_DARK;
+			msg_print("Darkness resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_KNOWLEDGE:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_SHARDS;
+			msg_print("Shard resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_FORCE:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags5 |= TR5_RES_DISINT;
+			msg_print("Disintegration resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_LIGHTNING:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_ELEC;
+			msg_print("Lightning resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_MANA:
+			if (q_ptr->pval < 1) {
+				msg_print("You need to target an item with a pval of at least 1.");
+				break;
+			}
+			if (q_ptr->pval > 2) {
+				msg_print("You need to target an item with a pval of at most 2.");
+				break;
+			}
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_MANA;
+			msg_print("Mana bonus added.");
+			useup = TRUE;
+			break;
+	}
+
+	/* it worked? then use up an essence */
+	if (useup) {
+		inven_item_increase(item, -1);
+		inven_item_optimize(item);
+	}
+
+
+
+
+
+
+	return; /* unbalanced code starts below, MAKE SURE IT DOESN'T GET CALLED --Amy */
 
 	/* With the new skill system, we can no longer depend on
 	 * check_exp to handle the changes and learning involved in
@@ -6912,15 +7261,286 @@ void do_cmd_rune_add()
 	}
 }
 
-
+/* runecraft overhaul by Amy: instead of giving you spells that deal 20d50 damage in a HUUUUUUGE radius for something like 3 mana (and
+ * potentially with an element that few monsters resist, or even one that totally trashes all enemies like inertia), runecraft will now
+ * be used to improve your equipment, like alchemy, and *balanced* */
 void do_cmd_runecrafter()
 {
-	int ext = 0;
-
+	int item, item2, ext = 0;
+	int basechance, esslevel = 0;
+	int askill;
 	char ch;
+	bool useup = FALSE;
+	int proofchance = 100;
 
-	msg_print("Sorry. Runecraft was too unbalanced and is therefore deactivated.");
-	return;
+	int whichbase = 0; /* 0 = all (use only for washing off curses!), 1 = armor or jewelry, 2 = only armor, 3 = weapon */
+
+	object_type *o_ptr, *q_ptr;
+
+	cptr q, s;
+
+	askill = get_skill(SKILL_RUNECRAFT);
+
+	/* Get a rune */
+	q = "Use which rune? ";
+	s = "You have no runes.";
+	item_tester_hook = item_tester_hook_rune;
+
+	if (!get_item(&item, q, s, (USE_INVEN))) return;
+
+	/* Get the item (in the pack) */
+	if (item >= 0)
+	{
+		o_ptr = &p_ptr->inventory[item];
+	}
+	else return;
+
+	switch (o_ptr->sval) {
+		default:
+			whichbase = 1;
+			break;
+		case SV_RUNE1_FIRE:
+		case SV_RUNE1_COLD:
+		case SV_RUNE1_LIGHTNING:
+		case SV_RUNE1_ACID:
+			whichbase = 3;
+			break;
+		case SV_RUNE1_CHAOS:
+		case SV_RUNE2_ARMAGEDDON:
+			esslevel = 30;
+			whichbase = 3;
+			break;
+		case SV_RUNE2_POWER_SURGE:
+			esslevel = 50;
+			whichbase = 3;
+			break;
+		case SV_RUNE2_RUNESTONE:
+			whichbase = 3;
+			break;
+		case SV_RUNE1_MIND:
+			esslevel = 20;
+			whichbase = 3;
+			break;
+		case SV_RUNE1_PROTECTION:
+			whichbase = 2;
+			break;
+		case SV_RUNE2_SELF:
+			whichbase = 0;
+			break;
+	}
+
+	basechance = 15 + get_skill_scale(SKILL_RUNECRAFT, 40) - esslevel;
+
+	if (basechance < 1) {
+		msg_print("Your skill is too low to be using this rune!");
+		return;
+	}
+
+	/* Get an item to improve */
+	q = "Improve which item? ";
+	s = "You have no items to improve.";
+	item_tester_hook = (whichbase == 0) ? NULL : (whichbase == 1) ? item_tester_hook_armor_or_jewelry : (whichbase == 2) ? item_tester_hook_armour : item_tester_hook_weapon_nobow;
+
+	if (!get_item(&item2, q, s, (USE_EQUIP | USE_INVEN))) return;
+
+	/* Get the item (in the pack) */
+	if (item2 >= 0)
+	{
+		q_ptr = &p_ptr->inventory[item2];
+	}
+	else return;
+
+	if (q_ptr->tampered && (whichbase != 0)) {
+		msg_print("That item has been improved already.");
+		return;
+	}
+
+	if ((whichbase != 0) && artifact_p(q_ptr)) {
+		msg_print("Artifacts cannot be improved.");
+		return;
+	}
+
+	if ((whichbase != 0) && q_ptr->art_name) {
+		msg_print("Artifacts cannot be improved.");
+		return;
+	}
+
+	/* stacks can resist --Amy */
+	if (q_ptr->number > 1) {
+		proofchance = 80 + (o_ptr->number * 20);
+
+		if (randint(proofchance) > 100) {
+			msg_print("Your runecraft attempt failed.");
+			inven_item_increase(item, -1);
+			inven_item_optimize(item);
+			return;
+		}
+	}
+
+	if (!magik(basechance)) {
+		msg_print("Your runecraft attempt failed.");
+		inven_item_increase(item, -1);
+		inven_item_optimize(item);
+		return;
+	}
+
+	switch (o_ptr->sval) {
+		default:
+			msg_format("Invalid sval %d!", o_ptr->sval);
+			break;
+		case SV_RUNE1_LIGHTNING:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_BRAND_ELEC;
+			msg_print("Shock brand added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_ACID:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_BRAND_ACID;
+			msg_print("Acid brand added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_COLD:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_BRAND_COLD;
+			msg_print("Cold brand added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_FIRE:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_BRAND_FIRE;
+			msg_print("Fire brand added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_ELEMENT:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_SUST_STR;
+			msg_print("Sustain strength added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_CHAOS:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_CHAOTIC;
+			msg_print("Chaotic effects added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_GRAVITY:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags3 |= TR3_FEATHER;
+			msg_print("Levitation added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_LIFE:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_SUST_CON;
+			msg_print("Sustain constitution added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_PROTECTION:
+			q_ptr->tampered = TRUE;
+			q_ptr->ac += 10;
+			msg_print("AC added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_HOLDING:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_FREE_ACT;
+			msg_print("Free action added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_MIND:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_VAMPIRIC;
+			msg_print("Vampiric effects added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_KNOWLEDGE:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_SUST_INT;
+			msg_print("Sustain intelligence added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_UNDEATH:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_NETHER;
+			msg_print("Nether resistance added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE2_ARROW:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_SUST_DEX;
+			msg_print("Sustain dexterity added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE2_RAY:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_SUST_WIS;
+			msg_print("Sustain wisdom added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE2_SPHERE:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_SUST_CHR;
+			msg_print("Sustain charisma added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE2_POWER_SURGE:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_VORPAL;
+			msg_print("Vorpal effects added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE2_ARMAGEDDON:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_IMPACT;
+			msg_print("Earthquake effects added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE2_RUNESTONE:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_SLAY_EVIL;
+			msg_print("Slay evil added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE2_SELF:
+			if (!(q_ptr->noattcurse) && artifact_p(q_ptr)) {
+				msg_print("The artifact resists the attempt.");
+				break;
+			}
+			q_ptr->art_flags4 &= ~TR4_NEVER_BLOW;
+			msg_print("No attack curse removed.");
+			useup = TRUE;
+			break;
+	}
+
+	/* it worked? then use up a rune */
+	if (useup) {
+		inven_item_increase(item, -1);
+		inven_item_optimize(item);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	return; /* the code below is the old unbalanced runecraft which we certainly WON'T re-enable --Amy */
 
 	/* Select what to do */
 	while (TRUE)

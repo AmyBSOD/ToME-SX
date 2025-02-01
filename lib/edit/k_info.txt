@@ -4809,9 +4809,10 @@ P:0:1d1:0:0:0
 N:565:Poison
 G:*:G
 I:4:1:5
-W:0:0:4:2
+W:0:0:50:4000
 A:0/50
 P:0:1d1:0:0:0
+D:An essence that can add poison resistance to armor or jewelry.
 
 # wand
 N:566:Nothing
@@ -4850,16 +4851,18 @@ P:0:1d1:0:0:0
 N:570:Explosion
 G:*:G
 I:4:2:50
-W:0:0:4:2
+W:0:0:50:10000
 A:0/50:20/50:40/50:60/50
 P:0:1d1:0:0:0
+D:An essence that can add plasma resistance to armor or jewelry.
 
 N:571:Teleport
 G:*:G
 I:4:3:190
-W:0:0:4:2
+W:0:0:50:2000
 A:5/50:20/50:40/50:60/50
 P:0:1d1:0:0:0
+D:An essence that can add teleportitis to armor or jewelry.
 
 # Amulet of Nothing
 
@@ -4886,23 +4889,26 @@ D:with the power to escape death one time.
 N:574:Cold
 G:*:G
 I:4:4:200
-W:0:0:4:2
+W:0:0:50:4000
 A:5/50:20/50:40/50:60/50
 P:0:1d1:0:0:0
+D:An essence that can add cold resistance to armor or jewelry.
 
 N:575:Fire
 G:*:G
 I:4:5:200
-W:0:0:4:2
+W:0:0:50:4000
 A:5/50:20/50:40/50:60/50
 P:0:1d1:0:0:0
+D:An essence that can add fire resistance to armor or jewelry.
 
 N:576:Acid
 G:*:G
 I:4:6:200
-W:0:0:4:2
+W:0:0:50:4000
 A:6/50:20/50:40/50:60/50
 P:0:1d1:0:0:0
+D:An essence that can add acid resistance to armor or jewelry.
 
 # Mage staffs (for Sorcerers to wield.)
 
@@ -4936,23 +4942,28 @@ D:dangerous and even allows you to call forth a ball of lightning.
 N:579:Life
 G:*:G
 I:4:7:300
-W:0:0:4:2
+W:0:0:50:10000
 A:0/50:20/50:40/50:60/50
 P:0:1d1:0:0:0
+D:An essence that removes the ancient morgothian curse from an item.
+D:Fixed artifacts that had the curse when they got created cannot be
+D:used with this essence.
 
 N:580:Confusion
 G:*:G
 I:4:8:100
-W:0:0:4:2
+W:0:0:50:8000
 A:0/50:20/50:40/50:60/50
 P:0:1d1:0:0:0
+D:An essence that can add confusion resistance to armor or jewelry.
 
 N:581:Light
 G:*:G
 I:4:9:60
-W:0:0:4:2
+W:0:0:50:6000
 A:0/50:20/50:40/50:60/50
 P:0:1d1:0:0:0
+D:An essence that can add light resistance to armor or jewelry.
 
 # The Ring of Flare -- see artifact list
 
@@ -4977,10 +4988,11 @@ D:to this state so that your eyes can still perceive your hidden form.
 N:584:Chaos
 G:*:G
 I:4:10:200
-W:20:0:4:2
+W:20:0:50:12000
 A:20/50
 P:0:1d1:0:0:0
 F:ATTR_MULTI
+D:An essence that can add chaos resistance to armor or jewelry.
 
 # Potion of Corruption
 
@@ -5010,9 +5022,11 @@ D:This magical bauble will hide you from sight.
 N:587:Time
 G:*:G
 I:4:11:600
-W:20:0:4:2
+W:20:0:50:20000
 A:20/50:40/50:60/50
 P:0:1d1:0:0:0
+D:An essence that can add time resistance to armor or jewelry.
+D:Be aware that time resistance also prevents teleportation.
 
 ######### Here are the parchments ########
 
@@ -5184,9 +5198,10 @@ D:extra protection.
 N:640:Magic
 G:*:G
 I:4:12:700
-W:20:0:4:2
+W:20:0:50:10000
 A:30/50:50/50:80/50
 P:0:1d1:0:0:0
+D:An essence that can add disenchantment resistance to armor or jewelry.
 
 # Here are the corpses
 
@@ -5496,164 +5511,186 @@ D:you.
 
 N:679:Self
 G:?:b
-I:105:0:0
-W:3:5:0:40
+I:105:20:0
+W:3:5:100:15000
 A:3/50
 P:0:1d1:0:0:0
+D:Runecrafters can use this rune to remove the 'it can't attack' curse from an item.
+D:Artifacts that had this curse upon creation cannot be used with this rune.
 
 N:680:Ray
 G:?:b
-I:105:2:0
-W:10:5:0:300
+I:105:22:0
+W:10:5:50:2000
 A:10/50
 P:0:1d1:0:0:0
 F:IGNORE_COLD | IGNORE_ELEC
+D:Runecrafters can use this rune to add sustain wisdom to armor or jewelry.
 
 N:681:Sphere
 G:?:b
-I:105:3:0
-W:15:5:0:1000
+I:105:23:0
+W:15:5:50:2000
 A:15/50
 P:0:1d1:0:0:0
 F:IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Runecrafters can use this rune to add sustain charisma to armor or jewelry.
 
 N:682:Knowledge
 G:?:b
 I:104:91:0
-W:6:5:0:200
+W:6:5:50:2000
 A:6/50
 P:0:1d1:0:0:0
+D:Runecrafters can use this rune to add sustain intelligence to armor or jewelry.
 
 N:683:Life
 G:?:D
 I:104:53:0
-W:3:5:0:200
+W:3:5:50:2000
 A:3/50
 P:0:1d1:0:0:0
+D:Runecrafters can use this rune to add sustain constitution to armor or jewelry.
 
 N:684:Fire
 G:?:r
 I:104:5:0
-W:10:5:0:300
+W:10:5:75:5000
 A:10/50
 P:0:1d1:0:0:0
 F:IGNORE_FIRE
+D:Runecrafters can use this rune to add fire branding to a weapon.
 
 N:685:Cold
 G:?:b
 I:104:4:0
-W:12:5:0:300
+W:12:5:75:5000
 A:12/50
 P:0:1d1:0:0:0
 F:IGNORE_COLD
+D:Runecrafters can use this rune to add cold branding to a weapon.
 
 N:686:Lightning
 G:?:W
 I:104:1:0
-W:13:5:0:300
+W:13:5:75:5000
 A:13/50
 P:0:1d1:0:0:0
 F:IGNORE_ELEC
+D:Runecrafters can use this rune to add shock branding to a weapon.
 
 N:687:Acid
 G:?:B
 I:104:3:0
-W:16:5:0:300
+W:16:5:75:5000
 A:16/50
 P:0:1d1:0:0:0
 F:IGNORE_ACID
+D:Runecrafters can use this rune to add acid branding to a weapon.
 
 N:688:Element
 G:?:g
 I:104:10:0
-W:23:5:0:1000
+W:23:5:50:2000
 A:23/50
 P:0:1d1:0:0:0
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Runecrafters can use this rune to add sustain strength to armor or jewelry.
 
 N:689:Chaos
 G:?:v
 I:104:30:0
-W:26:5:0:2000
+W:26:5:80:20000
 A:26/50
 P:0:1d1:0:0:0
 F:ATTR_MULTI
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:Runecrafters can use this rune to add chaotic effects to a weapon.
 
 N:690:Mind
 G:?:D
 I:104:85:0
-W:19:5:0:3000
+W:19:5:100:25000
 A:19/50
 P:0:1d1:0:0:0
 F:IGNORE_ELEC
+D:Runecrafters can use this rune to add vampiric effects to a weapon.
 
 N:691:Holding
 G:?:B
 I:104:75:0
-W:5:5:0:500
+W:5:5:50:5000
 A:5/50
 P:0:1d1:0:0:0
 F:IGNORE_ACID
+D:Runecrafters can use this rune to add free action to armor or jewelry.
 
 N:692:Arrow
 G:?:b
-I:105:1:0
-W:6:5:0:100
+I:105:21:0
+W:6:5:50:2000
 A:6/50
 P:0:1d1:0:0:0
 F:IGNORE_ELEC
+D:Runecrafters can use this rune to add sustain dexterity to armor or jewelry.
 
 N:693:Power Surge
 G:?:b
-I:105:4:0
-W:50:5:0:5000
+I:105:24:0
+W:50:5:200:100000
 A:50/50
 P:0:1d1:0:0:0
 F:IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | IGNORE_ACID
+D:Runecrafters can use this rune to add vorpal effects to a weapon.
 
 N:694:Armageddon
 G:?:b
-I:105:5:0
-W:30:5:0:4000
+I:105:25:0
+W:30:5:100:50000
 A:30/50
 P:0:1d1:0:0:0
 F:IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | IGNORE_ACID
+D:Runecrafters can use this rune to add earthquake effects to a weapon.
 
 N:695:Gravity
 G:?:G
 I:104:35:0
-W:16:5:0:300
+W:16:5:50:6000
 A:16/50
 P:0:1d1:0:0:0
 F:IGNORE_ACID
+D:Runecrafters can use this rune to add levitation to armor or jewelry.
 
 # And, among the runes, one more essence...
 
 N:696:Extra Life
 G:*:G
 I:4:13:900
-W:50:0:4:2
+W:50:0:500:500000
 A:50/50:70/50:90/50
 P:0:1d1:0:0:0
+D:An essence that can add life bonus to armor or jewelry.
+D:The item in question must have a pval bonus of exactly 1.
 
 # Now, the rest of the runes...
 
 N:697:Undeath
 G:?:G
 I:104:92:0
-W:35:5:0:1000
+W:35:5:80:8000
 A:35/50
 P:0:1d1:0:0:0
 F:IGNORE_ACID
+D:Runecrafters can use this rune to add nether resistance to armor or jewelry.
 
 N:698:Protection
 G:?:G
 I:104:74:0
-W:45:5:0:1500
+W:45:5:100:30000
 A:45/50
 P:0:1d1:0:0:0
 F:IGNORE_ACID
+D:Runecrafters can use this rune to add some base AC to armor.
 
 # XXX
 
@@ -6088,42 +6125,48 @@ D:yourself.
 N:780:Darkness
 G:*:G
 I:4:14:20
-W:0:0:4:1
+W:0:0:50:8000
 A:0/50:20/50:40/50
 P:0:1d1:0:0:0
 D:It's a gem that eats all light that reaches it.  It's perfectly black.
+D:It can add darkness resistance to armor or jewelry.
 
 N:781:Knowledge
 G:*:G
 I:4:15:100
-W:0:0:4:1
+W:0:0:50:8000
 A:20/50:30/50:70/50
 P:0:1d1:0:0:0
 D:It's a blue gem with countless formulae scribbled on it.
+D:It can add shards resistance to armor or jewelry.
 
 N:782:Force
 G:*:G
 I:4:16:180
-W:0:0:4:1
+W:0:0:50:16000
 A:10/50:40/50
 P:0:1d1:0:0:0
 D:It's a green gem that can barely contain the forces in it.
+D:It can add disintegration resistance to armor or jewelry.
 
 N:783:Lightning
 G:*:G
 I:4:17:200
-W:0:0:4:1
+W:0:0:50:4000
 A:28/50
 P:0:1d1:0:0:0
 D:It's a white gem.  Inside you see lightning rage.
+D:It can add shock resistance to armor or jewelry.
 
 N:784:Mana
 G:*:G
 I:4:18:400
-W:0:0:4:1
+W:0:0:50:15000
 A:45/50
 P:0:1d1:0:0:0
 D:It's an everchanging gem.  You feel the magic throbbing through it.
+D:It can add mana bonus to armor or jewelry, but the pval bonus of
+D:the item in question has to be 1 or 2.
 
 # The Nine Rings for mortal men doomed to die! When a Nazgul is
 # destroyed, it drops a Ring of Power with random powers.
@@ -6317,12 +6360,12 @@ D:natural creatures.
 N:806:& Runestone~
 G:?:v
 I:105:255:0
-W:10:5:2:300
+W:10:5:75:5000
 A:10/50:20/50:30/50:60/50
 P:0:1d1:0:0:0
 F:IGNORE_COLD | IGNORE_ELEC | IGNORE_FIRE | IGNORE_ACID
 D:A small oval stone. One surface is flat, as if something ought to be scratched or inscribed into
-D:it.
+D:it. Runecrafters can use it to add slay evil to a weapon.
 
 N:807:& Fortune cookie~
 G:,:U

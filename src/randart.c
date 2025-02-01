@@ -81,7 +81,7 @@ static bool grab_one_power(int *ra_idx, object_type *o_ptr, bool good, s16b *max
 		maxposslvl = p_ptr->lev;
 		if (dun_level > maxposslvl) maxposslvl = dun_level;
 		if (p_ptr->nastytrap45 && (maxposslvl > 1)) maxposslvl /= 2;
-		if (!p_ptr->nastytrap45) maxposslvl += get_skill(SKILL_RUNECRAFT);
+		if (!p_ptr->nastytrap45) maxposslvl += get_skill(SKILL_FORTUNE);
 
 		i = ok_ra[rand_int(ok_num)];
 		ra_ptr = &ra_info[i];

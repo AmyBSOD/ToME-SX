@@ -2068,6 +2068,10 @@ static void do_item(object_type *o_ptr, int flag)
 	/* spell, by Amy so that the FUCKing pval2 flag is no longer improperly misused */
 	do_s32b(&o_ptr->spellcontain, flag);
 
+	do_s32b(&o_ptr->tampered, flag);
+	do_s32b(&o_ptr->morgycurse, flag);
+	do_s32b(&o_ptr->noattcurse, flag);
+
 	do_byte(&o_ptr->discount, flag);
 	do_byte(&o_ptr->number, flag);
 	do_s32b(&o_ptr->weight, flag);

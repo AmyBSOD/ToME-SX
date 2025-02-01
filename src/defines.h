@@ -2152,6 +2152,31 @@
 #define SV_BATERIE_MANA      18
 #define MAX_BATERIE_SVAL     18
 
+/* The "sval" codes for TV_RUNE1 (104) */
+#define SV_RUNE1_LIGHTNING   1
+#define SV_RUNE1_ACID        3
+#define SV_RUNE1_COLD        4
+#define SV_RUNE1_FIRE        5
+#define SV_RUNE1_ELEMENT     10
+#define SV_RUNE1_CHAOS       30
+#define SV_RUNE1_GRAVITY     35
+#define SV_RUNE1_LIFE        53
+#define SV_RUNE1_PROTECTION  74
+#define SV_RUNE1_HOLDING     75
+#define SV_RUNE1_MIND        85
+#define SV_RUNE1_KNOWLEDGE   91
+#define SV_RUNE1_UNDEATH     92
+
+/* The "sval" codes for TV_RUNE2 (105) */
+/* for easier implementation, they should all be different than those of RUNE1 --Amy */
+#define SV_RUNE2_SELF        20
+#define SV_RUNE2_ARROW       21
+#define SV_RUNE2_RAY         22
+#define SV_RUNE2_SPHERE      23
+#define SV_RUNE2_POWER_SURGE 24
+#define SV_RUNE2_ARMAGEDDON  25
+#define SV_RUNE2_RUNESTONE   255
+
 /* The "sval" codes for TV_CORPSE */
 #define SV_CORPSE_CORPSE     1
 #define SV_CORPSE_SKELETON   2
@@ -5067,10 +5092,12 @@ extern int PlayerUID;
 #define SKILL_ANTINASTY         74
 #define SKILL_FIREARMS          75
 #define SKILL_INVESTING         76
+#define SKILL_FRESHMINT         77
+#define SKILL_FORTUNE           78
 /* ATTENTION: always update MAX_GOOD_SKILL below when adding new ones!!! --Amy */
 
 /* Ugly but needed */
-#define MAX_GOOD_SKILL          76
+#define MAX_GOOD_SKILL          78
 
 #define MAX_SKILLS              200
 

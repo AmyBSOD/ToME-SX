@@ -8238,7 +8238,10 @@ case 27: case 28: case 29:
 			if (p_ptr->inventory[INVEN_WIELD].k_idx)
 			{
 				msg_print("Your weapon now seems useless...");
-				p_ptr->inventory[INVEN_WIELD].art_flags4 = TR4_NEVER_BLOW;
+				if (!(p_ptr->inventory[INVEN_WIELD].art_flags4 & TR4_NEVER_BLOW)) {
+					p_ptr->inventory[INVEN_WIELD].art_flags4 |= TR4_NEVER_BLOW;
+					p_ptr->inventory[INVEN_WIELD].noattcurse = TRUE;
+				}
 			}
 			break;
 		case 25:

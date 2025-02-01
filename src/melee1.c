@@ -2103,7 +2103,7 @@ bool make_attack_normal(int m_idx, byte divis)
 
 								drainedamount = randint(o_ptr->timeout) + 1;
 								if (drainedamount > o_ptr->timeout) drainedamount = o_ptr->timeout;
-								drainmitigate = get_skill_scale(SKILL_ALCHEMY, 20);
+								drainmitigate = get_skill_scale(SKILL_FRESHMINT, 20);
 								if (drainmitigate > 0) drainedamount -= randint(drainmitigate);
 								if (drainedamount < 1) drainedamount = 1;
 
@@ -2131,7 +2131,7 @@ bool make_attack_normal(int m_idx, byte divis)
 
 								drainedamount = randint(o_ptr->pval) + 1;
 								if (drainedamount > o_ptr->pval) drainedamount = o_ptr->pval;
-								drainmitigate = get_skill_scale(SKILL_ALCHEMY, 20);
+								drainmitigate = get_skill_scale(SKILL_FRESHMINT, 20);
 								if (drainmitigate > 0) drainedamount -= randint(drainmitigate);
 								if (drainedamount < 1) drainedamount = 1;
 

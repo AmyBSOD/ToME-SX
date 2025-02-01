@@ -891,6 +891,10 @@ extern void do_cmd_unbeliever(void);
 extern void do_cmd_runecrafter(void);
 extern void do_cmd_symbiotic(void);
 extern s32b sroot(s32b n);
+extern bool item_tester_hook_armor_or_jewelry(object_type *o_ptr);
+extern bool item_tester_hook_weapon_nobow(object_type *o_ptr);
+extern bool item_tester_hook_alchemy(object_type *o_ptr);
+extern bool item_tester_hook_rune(object_type *o_ptr);
 
 /* dungeon.c */
 extern byte value_check_aux1(object_type *o_ptr);
