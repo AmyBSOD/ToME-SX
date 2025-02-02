@@ -14,6 +14,7 @@ files =
 	"spoiler.hlp",
 	"g_melkor.txt",
 	"g_amybso.txt",
+	"g_orome.txt",
 	"skills.txt",
 	"c_bard.txt",
 	"c_druid.txt",

@@ -4099,6 +4099,7 @@ void do_cmd_read_scroll(void)
 				abandon_god(GOD_VARDA);
 				abandon_god(GOD_MELKOR);
 				abandon_god(GOD_AMYBSOD);
+				abandon_god(GOD_OROME);
 
 				ident = TRUE;
 

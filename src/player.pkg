@@ -4357,6 +4357,10 @@ extern s16b dun_level;
 #define GOD_MANDOS	     10
 /** @} */
 
+/** @def GOD_OROME */
+#define GOD_OROME	     11
+/** @} */
+
 
 /** @fn inc_piety(int god, s32b amt)
  * @brief Increase piety for god "god" by amount "amt".\n

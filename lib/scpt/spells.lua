@@ -369,6 +369,13 @@ SCHOOL_AMYBSOD = add_school
 	["spell_power"] = TRUE,
 	["god"] = GOD_AMYBSOD,
 }
+SCHOOL_OROME = add_school
+{
+	["name"] = "Orome",
+	["skill"] = SKILL_PRAY,
+	["spell_power"] = TRUE,
+	["god"] = GOD_OROME,
+}
 
 -- New schools
 SCHOOL_AULE = add_school
@@ -481,6 +488,7 @@ tome_dofile("s_tulkas.lua")
 tome_dofile("s_melkor.lua")
 tome_dofile("s_yavann.lua")
 tome_dofile("s_amybsod.lua")
+tome_dofile("s_orome.lua")
 
 -- New gods' spells
 tome_dofile("s_aule.lua")
@@ -600,6 +608,11 @@ school_book[24] = {
 -- Create the book of amybsod
 school_book[25] = {
 	AMYBSOD_SOUND, AMYBSOD_DARK, AMYBSOD_TROLL,
+}
+
+-- Create the book of orome
+school_book[26] = {
+	OROME_WILDSENSE, OROME_BULLSEYE, OROME_SNIPER, OROME_RAPIDFIRE, OROME_GOODHUNT,
 }
 
 -- Create the book of beginner's cantrip

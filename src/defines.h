@@ -874,6 +874,9 @@
 #define FEAT_WATERFALL          0xEE /* 238 */
 #define FEAT_SWITCHER           0xF4 /* 244 */
 
+#define FEAT_ALTAR2_HEAD         0xF5 /* 245 */
+#define FEAT_ALTAR2_TAIL         0xFC /* 252 */
+
 /* Features 0xCF - 0xFF -- unused */
 
 
@@ -5137,7 +5140,8 @@ extern int PlayerUID;
 #define GOD_VARDA               8
 #define GOD_ULMO                9
 #define GOD_MANDOS              10
-#define MAX_GODS_INIT           11
+#define GOD_OROME               11
+#define MAX_GODS_INIT           12
 
 #define GOD(g)                  if (p_ptr->pgod == (g))
 #define PRAY_GOD(g)             if ((p_ptr->pgod == (g)) && (p_ptr->praying))

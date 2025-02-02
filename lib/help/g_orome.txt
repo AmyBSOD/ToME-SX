@@ -1,0 +1,36 @@
+|||||oy
+~~~~~01|Orome
+~~~~~02|Gods|Orome
+#####R === Orome ===
+
+Orome is the god of hunting.
+
+#####GThe benefits of Worshipping Orome
+ 1. text goes here
+   
+#####GThe disadvantages of Worshipping Orome
+1. text goes here
+2. He will completely abandon you if you wear The One Ring.
+~~~~~03|Orome|Prayers
+#####GOrome's Magic
+Worshipping Orome gives the adventurer access to a set of special
+spells that come directly from the hands of Orome. These spells use your piety
+to cast rather than your spellpoints, and the level of spells that Orome will 
+permit you to use is determined by your Prayer skill - how skillful you are
+in asking for his help without offending him!
+
+There is a special book called the "Tome of the Woods" which 
+contains instructions for the procedure for each of the prayers Orome will
+grant. There are (number) prayers all told, which are:
+1. [[[[[Bspell name] (Level 1)
+   text goes here
+   
+Each of these spells can be increased in level both by improving your Prayer
+skill, and by improving your Spell-power skill.
+
+In addition to her specific magic, Orome will also assist with your ability to
+use some magic from the "standard" schools, in relation to how skilled you 
+are at Prayer. These schools are as follows:
+    *****m_school.txt*0[Name School] at 1/X the Prayer skill level.
+    
+The spells from these schools are all cast using your normal spellpoints.

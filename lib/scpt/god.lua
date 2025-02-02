@@ -106,17 +106,19 @@ add_quest
 					elseif player.pgod == GOD_MELKOR then
 						god_quest.relic_num = 10
 					elseif player.pgod == GOD_YAVANNA then
-						god_quest.relic_num =11
+						god_quest.relic_num = 11
 					elseif player.pgod == GOD_AMYBSOD then
-						god_quest.relic_num =12
+						god_quest.relic_num = 12
 					elseif player.pgod == GOD_AULE then
-						god_quest.relic_num =16
+						god_quest.relic_num = 16
 					elseif player.pgod == GOD_VARDA then
-						god_quest.relic_num =17
+						god_quest.relic_num = 17
 					elseif player.pgod == GOD_ULMO then
-						god_quest.relic_num =18
+						god_quest.relic_num = 18
 					elseif player.pgod == GOD_MANDOS then
-						god_quest.relic_num =19
+						god_quest.relic_num = 19
+					elseif player.pgod == GOD_OROME then
+						god_quest.relic_num = 20
 					end
 
 					-- This var will need resetting
@@ -669,6 +671,48 @@ function set_god_dungeon_attributes()
 
 		-- M:
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags3 = bor(RF3_DEMON, RF3_UNDEAD, RF3_NONLIVING)
+
+		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
+		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
+
+	elseif player.pgod == GOD_OROME then
+
+		-- Oromes dungeon will be very natural, tress and stuff.
+		dungeon(god_quest.DUNGEON_GOD).min_m_alloc_level = 22
+		dungeon(god_quest.DUNGEON_GOD).min_m_alloc_chance = 100
+
+		-- L: floor is grass/dirt
+		dungeon(god_quest.DUNGEON_GOD).floor1 = 89
+		dungeon(god_quest.DUNGEON_GOD).floor2 = 89
+		dungeon(god_quest.DUNGEON_GOD).floor3 = 88
+		dungeon(god_quest.DUNGEON_GOD).floor_percent1[1] = 40
+		dungeon(god_quest.DUNGEON_GOD).floor_percent2[1] = 15
+		dungeon(god_quest.DUNGEON_GOD).floor_percent3[1] = 45
+
+		-- A: Tree walls to fill
+		dungeon(god_quest.DUNGEON_GOD).fill_type1 = 96
+		dungeon(god_quest.DUNGEON_GOD).fill_percent1[1] = 100
+		dungeon(god_quest.DUNGEON_GOD).outer_wall = 96
+		dungeon(god_quest.DUNGEON_GOD).inner_wall = 96
+		dungeon(god_quest.DUNGEON_GOD).fill_method = 1
+
+		-- O: mostly treasure
+		dungeon(god_quest.DUNGEON_GOD).objs.treasure = 40
+		dungeon(god_quest.DUNGEON_GOD).objs.combat = 10
+		dungeon(god_quest.DUNGEON_GOD).objs.magic = 20
+		dungeon(god_quest.DUNGEON_GOD).objs.tools = 30
+
+		-- F: Natural looking
+		dungeon(god_quest.DUNGEON_GOD).flags1 = bor(DF1_NO_DOORS, DF1_WATER_RIVER, DF1_ADJUST_LEVEL_1, DF1_NO_RECALL, DF1_FLAT, DF1_SAND_VEIN)
+		dungeon(god_quest.DUNGEON_GOD).flags2 = bor(DF2_NO_SHAFT, DF2_ADJUST_LEVEL_PLAYER)
+
+		-- R: Demons, Undead, non-living
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mode = 3
+		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 95
+
+		-- M: Animals
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags3 = bor(RF3_ANIMAL)
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags6 = bor(RF6_S_ANT, RF6_S_SPIDER, RF6_S_HOUND)
 
 		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
 		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5

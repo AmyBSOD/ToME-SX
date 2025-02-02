@@ -317,7 +317,7 @@ void printRandoms(int lower, int upper, int count)
 	int d_id;
 	int contnum;
 
-	num = random_number(58);
+	num = random_number(59);
 
 	printf("V:2.0.0\n", num);
 	printf("\n", num);
@@ -1936,7 +1936,7 @@ void printRandoms(int lower, int upper, int count)
 
 			} else {
 
-				contnum = random_number(58);
+				contnum = random_number(59);
 
 				printf("# random type %d\n", contnum);
 
@@ -2647,6 +2647,18 @@ void printRandoms(int lower, int upper, int count)
 						printf("R:50:3\n");
 						printf("M:GIANT\n");
 						break;
+					case 59:
+						printf("# based on Orome Temple\n", contnum);
+						printf("L:89:40:89:15:88:45\n");
+						printf("A:96:100:56:0:56:0:96:96\n");
+						printf("O:40:10:20:30\n");
+						printf("F:NO_DOORS | WATER_RIVER | ADJUST_LEVEL_1 | FLAT | SAND_VEIN\n");
+						printf("F:NO_SHAFT\n");
+						printf("R:95:3\n");
+						printf("M:ANIMAL\n");
+						printf("S:S_ANT | S_SPIDER | S_HOUND\n");
+						printf("R:5:0\n");
+						break;
 				}
 			}
 
@@ -2661,7 +2673,7 @@ void printRandoms(int lower, int upper, int count)
 /* Driver code */
 int main()
 {
-	int lower = 1, upper = 58, count = 31;
+	int lower = 1, upper = 59, count = 31;
 
 	// Use current time as
 	// seed for random generator

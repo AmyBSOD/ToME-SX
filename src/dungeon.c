@@ -2067,6 +2067,7 @@ static void process_world(void)
 			inc_piety(GOD_VARDA, -100);
 			inc_piety(GOD_ULMO, -100);
 			inc_piety(GOD_MANDOS, -100);
+			inc_piety(GOD_OROME, -100);
 		}
 
 		GOD(GOD_MANWE)
@@ -2144,6 +2145,15 @@ static void process_world(void)
 			dec += 10;
 			if (dec < 1) dec = 1;
 			inc_piety(GOD_AMYBSOD, -dec);
+		}
+		GOD(GOD_OROME)
+		{
+			int dec = 4 - wisdom_scale(2);
+
+			PRAY_GOD(GOD_OROME)
+			dec += 4;
+			if (dec < 1) dec = 1;
+			inc_piety(GOD_OROME, -dec);
 		}
 		GOD(GOD_TULKAS)
 		{

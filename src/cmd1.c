@@ -4023,6 +4023,18 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 			if (running) msg_print(NULL);
 		}
 
+		else if (cave[y][x].feat >= FEAT_ALTAR2_HEAD &&
+		                cave[y][x].feat <= FEAT_ALTAR2_TAIL)
+		{
+			cptr name = f_name + f_info[cave[y][x].feat].name;
+			cptr pref = (is_a_vowel(name[0])) ? "an" : "a";
+
+			msg_format("You see %s %s.", pref, name);
+
+			/* Flush message while running */
+			if (running) msg_print(NULL);
+		}
+
 		/* Discover invisible traps */
 		else if ((c_ptr->t_idx != 0) &&
 		                !(f_info[cave[y][x].feat].flags1 & FF1_DOOR))

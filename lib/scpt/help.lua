@@ -218,7 +218,8 @@ ingame_help
 					["Aule"] = { "g_aule.txt", 0 },  
 					["Varda Elentari"] = { "g_varda.txt", 0 },  
 					["Mandos"] = { "g_mandos.txt", 0 },  
-					["Ulmo"] = { "g_Ulmo.txt", 0 },  
+					["Ulmo"] = { "g_ulmo.txt", 0 },  
+					["Orome"] = { "g_orome.txt", 0 },  
 				},
 				["skill"] =
 				{

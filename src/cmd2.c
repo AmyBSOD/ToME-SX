@@ -2469,7 +2469,7 @@ void do_cmd_bash(void)
 		if ((c_ptr->feat < FEAT_DOOR_HEAD ||
 		                c_ptr->feat > FEAT_DOOR_TAIL) &&
 		                (c_ptr->feat < FEAT_ALTAR_HEAD ||
-		                 c_ptr->feat > FEAT_ALTAR_TAIL) && (c_ptr->feat != FEAT_FOUNTAIN))
+		                 (c_ptr->feat > FEAT_ALTAR_TAIL && c_ptr->feat < FEAT_ALTAR2_HEAD) || c_ptr->feat > FEAT_ALTAR2_TAIL ) && (c_ptr->feat != FEAT_FOUNTAIN))
 		{
 			/* Message */
 			msg_print("You see nothing there to bash.");
@@ -2490,6 +2490,11 @@ void do_cmd_bash(void)
 
 		else if (c_ptr->feat >= FEAT_ALTAR_HEAD &&
 		                c_ptr->feat <= FEAT_ALTAR_TAIL)
+		{
+			more = do_cmd_bash_altar(y, x);
+		}
+		else if (c_ptr->feat >= FEAT_ALTAR2_HEAD &&
+		                c_ptr->feat <= FEAT_ALTAR2_TAIL)
 		{
 			more = do_cmd_bash_altar(y, x);
 		}
@@ -5246,7 +5251,7 @@ void do_cmd_sacrifice(void)
 	byte on_what = cave[p_ptr->py][p_ptr->px].feat;
 
 	/* Check valididty */
-	if ((on_what < FEAT_ALTAR_HEAD) || (on_what > FEAT_ALTAR_TAIL))
+	if ((on_what < FEAT_ALTAR_HEAD) || (on_what > FEAT_ALTAR_TAIL && on_what < FEAT_ALTAR2_HEAD) || (on_what > FEAT_ALTAR2_TAIL) )
 	{
 		show_god_info(FALSE);
 		return;
@@ -5254,6 +5259,8 @@ void do_cmd_sacrifice(void)
 	else
 	{
 		int agod = on_what - FEAT_ALTAR_HEAD + 1;
+
+		if (on_what >= FEAT_ALTAR2_HEAD) agod = on_what - FEAT_ALTAR2_HEAD + 11;
 
 		/* Not worshipping a god ? ahhhh! */
 		GOD(GOD_NONE)

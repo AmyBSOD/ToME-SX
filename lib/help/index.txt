@@ -230,6 +230,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
     *****g_varda.txt*01[Varda]
     *****g_yavann.txt*02[Yavanna]
     *****g_amybso.txt*02[AmyBSOD]
+    *****g_orome.txt*02[Orome]
   *****birth.txt*16[Gold]
 ~~~~~72
 *****/Hindex.txt*72[H]
@@ -358,6 +359,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
     *****option.txt*12[ToME Options]
     *****option.txt*17[Window Flags]
   *****r_orc.txt*01[Orc]
+  *****g_orome.txt*01[Orome]
 ~~~~~80
 *****/Pindex.txt*80[P]
   *****c_palad.txt*01[Paladin]

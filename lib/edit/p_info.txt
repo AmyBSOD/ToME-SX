@@ -2088,6 +2088,7 @@ C:a:g:Aule the Smith
 C:a:g:Mandos
 C:a:g:Ulmo
 C:a:g:Varda Elentari
+C:a:g:Orome
 C:a:k:+0:+200:Clear-mind
 C:a:k:+0:+200:Cleaning
 
@@ -2217,6 +2218,18 @@ C:a:k:+0:+400:Archery
 C:a:k:+0:+500:Cleaning
 C:a:k:+0:+500:Celestial
 
+C:a:N:Wood Priest
+C:a:D:A priest who serves Orome to hunt down
+C:a:D:all those who are evil.
+C:a:O:21:5:1d1
+C:a:g:Orome
+C:a:k:+0:+300:Prayer
+C:a:k:+0:-600:Necromancy
+C:a:k:+0:+700:Archery
+C:a:k:+0:+200:Sling-mastery
+C:a:k:+0:+200:Bow-mastery
+C:a:k:+0:+200:Crossbow-mastery
+
 C:a:N:Water Priest
 C:a:D:A priest that serves Ulmo to bring down
 C:a:D:the empire of fear and shadows of Morgoth.
@@ -2263,6 +2276,7 @@ C:a:g:Aule the Smith
 C:a:g:Mandos
 C:a:g:Ulmo
 C:a:g:Varda Elentari
+C:a:g:Orome
 C:a:k:+1000:+800:Valarin
 C:a:k:+1000:+800:Nether
 C:a:k:=0:=0:Mindcraft

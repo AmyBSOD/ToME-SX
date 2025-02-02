@@ -30,7 +30,7 @@ are cast using Mana, not Piety; and success depends on your intelligence, not
 your wisdom.
 
 #####G4. So, Who Are These Gods?
-        In ToME, there are ten Gods you may choose to worship, being:
+        In ToME, there are many Gods you may choose to worship, being:
 1. *****g_eru.txt*0[Eru Iluvatar] - the father of the Valar.
 2. *****g_manwe.txt*0[Manwe Sulimo] - the second strongest of the Valar (Morgoth was the strongest).
 3. *****g_yavann.txt*0[Yavanna Kementari] - the Earth Queen who created plants and animals.
@@ -41,3 +41,4 @@ your wisdom.
 8. *****g_varda.txt*0[Varda Elentari] - Manwe's spouse, the most beloved by the Elves.
 9. *****g_aule.txt*0[Aule the Smith] - the builder and inventor of the Valar.
 10.*****g_mandos.txt*0[Mandos] - the Doomsman of the Valar, wise and powerful.
+11.*****g_orome.txt*0[Orome] - the Valar of Hunting.

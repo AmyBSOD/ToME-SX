@@ -2394,6 +2394,12 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
 		return 0;
 	}
+	if ((cave[y][x].feat >= FEAT_ALTAR2_HEAD)
+	                && (cave[y][x].feat <= FEAT_ALTAR2_TAIL))
+	{
+		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
+		return 0;
+	}
 
 	/* Nor on the Pattern */
 	if ((cave[y][x].feat >= FEAT_PATTERN_START)

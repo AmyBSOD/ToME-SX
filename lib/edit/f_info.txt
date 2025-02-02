@@ -1061,3 +1061,44 @@ G:0:r
 F:FLOOR | DONT_NOTICE_RUNNING | CAN_RUN | SUPPORT_LIGHT | NOTICE |
 F:SUPPORT_GROWTH
 
+N:245:Altar of Woods
+G:0:g
+F:FLOOR | REMEMBER | NOTICE | CAN_RUN
+D:0:You feel like going on a hunt.
+
+# 246 should be Ingeborg
+N:246:Unfinished Altar
+G:0:g
+F:FLOOR | REMEMBER | NOTICE | CAN_RUN
+D:0:An altar for a deity who hasn't been implemented yet.
+
+N:247:Unfinished Altar
+G:0:g
+F:FLOOR | REMEMBER | NOTICE | CAN_RUN
+D:0:An altar for a deity who hasn't been implemented yet.
+
+N:248:Unfinished Altar
+G:0:g
+F:FLOOR | REMEMBER | NOTICE | CAN_RUN
+D:0:An altar for a deity who hasn't been implemented yet.
+
+N:249:Unfinished Altar
+G:0:g
+F:FLOOR | REMEMBER | NOTICE | CAN_RUN
+D:0:An altar for a deity who hasn't been implemented yet.
+
+N:250:Unfinished Altar
+G:0:g
+F:FLOOR | REMEMBER | NOTICE | CAN_RUN
+D:0:An altar for a deity who hasn't been implemented yet.
+
+N:251:Unfinished Altar
+G:0:g
+F:FLOOR | REMEMBER | NOTICE | CAN_RUN
+D:0:An altar for a deity who hasn't been implemented yet.
+
+N:252:Unfinished Altar
+G:0:g
+F:FLOOR | REMEMBER | NOTICE | CAN_RUN
+D:0:An altar for a deity who hasn't been implemented yet.
+
