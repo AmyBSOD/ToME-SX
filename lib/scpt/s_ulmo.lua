@@ -102,7 +102,7 @@ ULMO_CALL_ULUMURI = add_spell
 	end,
 
 	["info"] = 	function()
-			return "level "..(get_level(ULMO_CALL_ULUMURI, 50))
+			return "level "..(get_level(ULMO_CALL_ULUMURI, 50) + 30)
 	end,
 	["desc"] =	{
 			"Summons a leveled water spirit or elemental",

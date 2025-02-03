@@ -2693,6 +2693,19 @@ void calc_gods()
 
 	}
 
+	GOD(GOD_OROME)
+	{
+		int bonus = p_ptr->grace / 10000;
+		if (bonus > 10) bonus = 10;
+		p_ptr->to_h_ranged = p_ptr->to_h_ranged + bonus;
+		PRAY_GOD(GOD_OROME) {
+			p_ptr->to_d_ranged = p_ptr->to_d_ranged + bonus;
+		}
+		p_ptr->stat_add[A_DEX] += bonus;
+		p_ptr->skill_srh = p_ptr->skill_srh + bonus;
+		p_ptr->skill_dis = p_ptr->skill_dis + bonus;
+	}
+
 	GOD(GOD_VARDA)
 	{
 		p_ptr->cur_lite = p_ptr->cur_lite + 1;
@@ -3840,6 +3853,27 @@ void calc_bonuses(bool silent)
 	if (p_ptr->tim_esp)
 	{
 		p_ptr->telepathy |= ESP_ALL;
+	}
+
+	if (p_ptr->tim_esp_animal)
+	{
+		p_ptr->telepathy |= ESP_ANIMAL;
+	}
+
+	if (p_ptr->tim_bullseye)
+	{
+		p_ptr->to_h_ranged += 5;
+		p_ptr->to_d_ranged += 5;
+	}
+
+	if (p_ptr->tim_sniper)
+	{
+		p_ptr->xtra_might += 1;
+	}
+
+	if (p_ptr->tim_rapidfire)
+	{
+		p_ptr->num_fire += 1;
 	}
 
 	/* Temporary see invisible */

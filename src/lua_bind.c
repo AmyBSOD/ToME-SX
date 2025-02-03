@@ -115,7 +115,7 @@ void end_object(object_type *o_ptr)
 /*
  * Powers
  */
-s16b add_new_power(cptr name, cptr desc, cptr gain, cptr lose, byte level, byte cost, byte stat, byte diff)
+s16b add_new_power(cptr name, cptr desc, cptr gain, cptr lose, byte level, s16b cost, byte stat, byte diff)
 {
 	/* Increase the size */
 	reinit_powers_type(power_max + 1);

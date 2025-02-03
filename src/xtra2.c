@@ -2444,6 +2444,214 @@ bool set_tim_esp(int v)
 }
 
 /*
+ * Set "p_ptr->tim_esp_animal", notice observable changes
+ */
+bool set_tim_esp_animal(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_esp_animal)
+		{
+			msg_print("You feel your consciousness expand!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_esp_animal)
+		{
+			msg_print("Your consciousness contracts again.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_esp_animal = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_bullseye", notice observable changes
+ */
+bool set_tim_bullseye(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_bullseye)
+		{
+			msg_print("You feel like a master marksman!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_bullseye)
+		{
+			msg_print("Your marksmanship expertise fades.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_bullseye = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_sniper", notice observable changes
+ */
+bool set_tim_sniper(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_sniper)
+		{
+			msg_print("You feel like a sniper!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_sniper)
+		{
+			msg_print("Your sniper ability fades.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_sniper = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_rapidfire", notice observable changes
+ */
+bool set_tim_rapidfire(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_rapidfire)
+		{
+			msg_print("You feel capable of firing more quickly!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_rapidfire)
+		{
+			msg_print("Your rapidfire ability fades.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_rapidfire = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
  * Set "p_ptr->tim_thunder", notice observable changes
  */
 bool set_tim_thunder(int v, int p1, int p2)
@@ -4905,6 +5113,26 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 
 			if (!inc) inc = 1;
 			inc_piety(GOD_YAVANNA, -inc);
+		}
+
+		/* Orome likes it if you kill trolls, dragons or eldritch horrors */
+		if ((r_ptr->flags2 & RF2_ELDRITCH_HORROR) || (r_ptr->flags3 & RF3_TROLL) || (r_ptr->flags3 & RF3_DRAGON))
+		{
+			int inc = m_ptr->level * 2;
+			PRAY_GOD(GOD_OROME) inc *= 2;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_OROME, inc);
+		}
+
+		/* and a little if you kill animals (hunting is kind of his domain after all), but only hostile ones */
+		if ((r_ptr->flags3 & RF3_ANIMAL) && m_ptr->status == MSTATUS_ENEMY)
+		{
+			int inc = m_ptr->level / 3;
+			PRAY_GOD(GOD_OROME) inc *= 2;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_OROME, inc);
 		}
 
 		/* add a way to gain Eru piety --Amy */

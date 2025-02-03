@@ -1697,6 +1697,10 @@ extern int get_chaos_patron(void);
 extern void gain_level_reward(int chosen_reward);
 extern bool set_shadow(int v);
 extern bool set_tim_esp(int v);
+extern bool set_tim_esp_animal(int v);
+extern bool set_tim_bullseye(int v);
+extern bool set_tim_sniper(int v);
+extern bool set_tim_rapidfire(int v);
 extern bool tgp_pt(int *x, int * y);
 extern bool tgt_pt (int *x, int *y);
 extern bool gain_random_corruption(int choose_mut);
@@ -1889,7 +1893,7 @@ extern void end_object(object_type *o_ptr);
 extern void lua_set_item_tester(int tval, char *fct);
 extern char *lua_object_desc(object_type *o_ptr, int pref, int mode);
 
-extern s16b    add_new_power(cptr name, cptr desc, cptr gain, cptr lose, byte level, byte cost, byte stat, byte diff);
+extern s16b    add_new_power(cptr name, cptr desc, cptr gain, cptr lose, byte level, s16b cost, byte stat, byte diff);
 
 extern void find_position(int y, int x, int *yy, int *xx);
 extern bool summon_lua_okay(int r_idx);

@@ -6,11 +6,17 @@
 Orome is the god of hunting.
 
 #####GThe benefits of Worshipping Orome
- 1. text goes here
-   
+ 1. As your piety increases, Orome grants you a to-hit boost with ranged
+    weapons, and if you're praying to him at the time, also a to-damage boost
+    with ranged weapons.
+ 2. With higher piety, Orome boosts your dexterity, searching and disarming.
+ 3. Orome likes it if you kill hostile animals.
+ 4. Orome loves it if you kill trolls, dragons or eldritch abominations.
+
 #####GThe disadvantages of Worshipping Orome
-1. text goes here
-2. He will completely abandon you if you wear The One Ring.
+1. Your piety decreases over time.
+2. Orome hates it if you anger tame animals.
+3. He will completely abandon you if you wear The One Ring.
 ~~~~~03|Orome|Prayers
 #####GOrome's Magic
 Worshipping Orome gives the adventurer access to a set of special
@@ -21,16 +27,28 @@ in asking for his help without offending him!
 
 There is a special book called the "Tome of the Woods" which 
 contains instructions for the procedure for each of the prayers Orome will
-grant. There are (number) prayers all told, which are:
-1. [[[[[Bspell name] (Level 1)
-   text goes here
+grant. There are five prayers all told, which are:
+1. [[[[[BWilderness Sense] (Level 1)
+   Allows you to sense animal minds for a while.
+2. [[[[[BBullseye] (Level 10)
+   Temporarily boosts your ranged weapon to-hit and damage.
+3. [[[[[BSniper] (Level 25)
+   Temporarily enchants your ranged weapon with extra might.
+4. [[[[[BGood Hunting] (Level 30)
+   Summons a leveled hound to your aid.
+5. [[[[[BRapidfire] (Level 40)
+   Temporarily enchants your ranged weapon with extra shots.
    
 Each of these spells can be increased in level both by improving your Prayer
 skill, and by improving your Spell-power skill.
 
-In addition to her specific magic, Orome will also assist with your ability to
+In addition to his specific magic, Orome will also assist with your ability to
 use some magic from the "standard" schools, in relation to how skilled you 
 are at Prayer. These schools are as follows:
-    *****m_school.txt*0[Name School] at 1/X the Prayer skill level.
-    
+    *****m_nature.txt*0[Nature School] at 1/2 the Prayer skill level.
+    *****m_convey.txt*0[Conveyance School] at 1/3 the Prayer skill level.
+    *****m_divin.txt*0[Divination School] at 1/3 the Prayer skill level.
+    *****m_tempo.txt*0[Temporal School] at 1/3 the Prayer skill level.
+    *****m_earth.txt*0[Earth School] at 1/4 the Prayer skill level.
+
 The spells from these schools are all cast using your normal spellpoints.

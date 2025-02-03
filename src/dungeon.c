@@ -2524,6 +2524,30 @@ static void process_world(void)
 		(void)set_tim_esp(p_ptr->tim_esp - 1);
 	}
 
+	/* Timed animal esp */
+	if (p_ptr->tim_esp_animal)
+	{
+		(void)set_tim_esp_animal(p_ptr->tim_esp_animal - 1);
+	}
+
+	/* Timed bullseye */
+	if (p_ptr->tim_bullseye)
+	{
+		(void)set_tim_bullseye(p_ptr->tim_bullseye - 1);
+	}
+
+	/* Timed sniper */
+	if (p_ptr->tim_sniper)
+	{
+		(void)set_tim_sniper(p_ptr->tim_sniper - 1);
+	}
+
+	/* Timed rapidfire */
+	if (p_ptr->tim_rapidfire)
+	{
+		(void)set_tim_rapidfire(p_ptr->tim_rapidfire - 1);
+	}
+
 	/* Timed infra-vision */
 	if (p_ptr->tim_infra)
 	{

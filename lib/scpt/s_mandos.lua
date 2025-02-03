@@ -174,7 +174,7 @@ MANDOS_CALL_HALLS = add_spell
 	end,
 
 	["info"] = 	function()
-			return "level "..(get_level(MANDOS_CALL_HALLS, 50))
+			return "level "..(get_level(MANDOS_CALL_HALLS, 50) + 20)
 	end,
 	["desc"] =	{
 			"Summons a leveled spirit from the Halls of Mandos",

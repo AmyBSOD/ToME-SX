@@ -76,6 +76,8 @@ bool change_side(monster_type *m_ptr)
 		m_ptr->status = MSTATUS_ENEMY;
 		if ((r_ptr->flags3 & RF3_ANIMAL) && (!(r_ptr->flags3 & RF3_EVIL)))
 			inc_piety(GOD_YAVANNA, -m_ptr->level * 4);
+		if (r_ptr->flags3 & RF3_ANIMAL)
+			inc_piety(GOD_OROME, -m_ptr->level * 4);
 		break;
 	case MSTATUS_NEUTRAL_P:
 		m_ptr->status = MSTATUS_NEUTRAL_M;
@@ -87,6 +89,8 @@ bool change_side(monster_type *m_ptr)
 		m_ptr->status = MSTATUS_ENEMY;
 		if ((r_ptr->flags3 & RF3_ANIMAL) && (!(r_ptr->flags3 & RF3_EVIL)))
 			inc_piety(GOD_YAVANNA, -m_ptr->level * 4);
+		if (r_ptr->flags3 & RF3_ANIMAL)
+			inc_piety(GOD_OROME, -m_ptr->level * 4);
 		break;
 	case MSTATUS_COMPANION:
 		return FALSE;

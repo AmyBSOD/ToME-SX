@@ -3682,6 +3682,46 @@ extern bool set_no_breeders(int v);
  */
 extern bool set_tim_esp(int v);
 
+/** @fn set_tim_esp_animal(int v)
+ * @brief Player has timed animal ESP.\n
+ * @param v Number \n time remaining until effect expires
+ * (must be in the range 0 to 10,000)
+ * @brief Time remaining
+ * @return Boolean \n TRUE if player notices the effect, otherwise FALSE.
+ * @note (see file xtra2.c)
+ */
+extern bool set_tim_esp_animal(int v);
+
+/** @fn set_tim_bullseye(int v)
+ * @brief Player has timed bullseye.\n
+ * @param v Number \n time remaining until effect expires
+ * (must be in the range 0 to 10,000)
+ * @brief Time remaining
+ * @return Boolean \n TRUE if player notices the effect, otherwise FALSE.
+ * @note (see file xtra2.c)
+ */
+extern bool set_tim_bullseye(int v);
+
+/** @fn set_tim_sniper(int v)
+ * @brief Player has timed sniper.\n
+ * @param v Number \n time remaining until effect expires
+ * (must be in the range 0 to 10,000)
+ * @brief Time remaining
+ * @return Boolean \n TRUE if player notices the effect, otherwise FALSE.
+ * @note (see file xtra2.c)
+ */
+extern bool set_tim_sniper(int v);
+
+/** @fn set_tim_rapidfire(int v)
+ * @brief Player has timed rapidfire.\n
+ * @param v Number \n time remaining until effect expires
+ * (must be in the range 0 to 10,000)
+ * @brief Time remaining
+ * @return Boolean \n TRUE if player notices the effect, otherwise FALSE.
+ * @note (see file xtra2.c)
+ */
+extern bool set_tim_rapidfire(int v);
+
 /** @fn set_invis(int v, int p)
  * @brief Player has timed invisibility.\n
  * @param v Number \n time remaining until effect expires

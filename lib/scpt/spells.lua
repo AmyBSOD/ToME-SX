@@ -148,6 +148,13 @@ SCHOOL_EARTH = add_school
 			["mul"] = 1,
 			["div"] = 3,
 		},
+		-- Orome provides the Earth school at 1/4 the prayer skill
+		[GOD_OROME] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 4,
+		},
 	},
 }
 SCHOOL_CONVEYANCE = add_school
@@ -164,6 +171,13 @@ SCHOOL_CONVEYANCE = add_school
 			["skill"] = SKILL_PRAY,
 			["mul"] = 1,
 			["div"] = 2,
+		},
+		-- Orome provides the Conveyance school at 1/3 the prayer skill
+		[GOD_OROME] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
 		},
 	},
 }
@@ -206,6 +220,13 @@ SCHOOL_DIVINATION = add_school
 			["mul"] = 1,
 			["div"] = 3,
 		},
+		-- Orome provides the Divination school at 1/3 the prayer skill
+		[GOD_OROME] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
+		},
 	},
 }
 SCHOOL_TEMPORAL = add_school
@@ -230,6 +251,13 @@ SCHOOL_TEMPORAL = add_school
 			["mul"] = 1,
 			["div"] = 4,
 		},
+		-- Orome provides the Temporal school at 1/3 the prayer skill
+		[GOD_OROME] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
+		},
 	},
 }
 SCHOOL_NATURE = add_school
@@ -249,6 +277,13 @@ SCHOOL_NATURE = add_school
 		},
 		-- Ulmo provides the Nature school at 1/2 the prayer skill
 		[GOD_ULMO] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 2,
+		},
+		-- Orome provides the Nature school at 1/2 the prayer skill
+		[GOD_OROME] = 
 		{
 			["skill"] = SKILL_PRAY,
 			["mul"] = 1,
@@ -488,7 +523,6 @@ tome_dofile("s_tulkas.lua")
 tome_dofile("s_melkor.lua")
 tome_dofile("s_yavann.lua")
 tome_dofile("s_amybsod.lua")
-tome_dofile("s_orome.lua")
 
 -- New gods' spells
 tome_dofile("s_aule.lua")
@@ -507,6 +541,7 @@ tome_dofile("s_music.lua")
 
 tome_dofile("s_hell.lua")
 tome_dofile("s_celest.lua")
+tome_dofile("s_orome.lua")
 
 -- List of spellbooks
 
@@ -612,7 +647,7 @@ school_book[25] = {
 
 -- Create the book of orome
 school_book[26] = {
-	OROME_WILDSENSE, OROME_BULLSEYE, OROME_SNIPER, OROME_RAPIDFIRE, OROME_GOODHUNT,
+	OROME_WILDSENSE, OROME_BULLSEYE, OROME_SNIPER, OROME_GOODHUNT, OROME_RAPIDFIRE,
 }
 
 -- Create the book of beginner's cantrip

@@ -79,21 +79,28 @@ function __birth_hook_objects()
 		inven_carry(obj, FALSE)
 		end_object(obj)
 	end
-	if get_class_name() == "Priest(Varda)" then
+	if get_class_name() == "Light Priest" then
 		local obj = create_object(TV_BOOK, 255);
 		obj.pval = find_spell("Light of Valinor")
 		obj.ident = bor(obj.ident, IDENT_MENTAL, IDENT_KNOWN)
 		inven_carry(obj, FALSE)
 		end_object(obj)
 	end
-	if get_class_name() == "Priest(Ulmo)" then
+	if get_class_name() == "Wood Priest" then
+		local obj = create_object(TV_BOOK, 255);
+		obj.pval = find_spell("Wilderness Sense")
+		obj.ident = bor(obj.ident, IDENT_MENTAL, IDENT_KNOWN)
+		inven_carry(obj, FALSE)
+		end_object(obj)
+	end
+	if get_class_name() == "Water Priest" then
 		local obj = create_object(TV_BOOK, 255);
 		obj.pval = find_spell("Song of Belegaer")
 		obj.ident = bor(obj.ident, IDENT_MENTAL, IDENT_KNOWN)
 		inven_carry(obj, FALSE)
 		end_object(obj)
 	end
-	if get_class_name() == "Priest(Mandos)" then
+	if get_class_name() == "Death Priest" then
 		local obj = create_object(TV_BOOK, 255);
 		obj.pval = find_spell("Tears of Luthien")
 		obj.ident = bor(obj.ident, IDENT_MENTAL, IDENT_KNOWN)

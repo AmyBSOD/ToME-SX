@@ -2221,7 +2221,7 @@ extern bool get_magic_power_lua @ select_magic_power(int *sn, magic_power *power
  */
 extern bool lua_spell_success @ magic_power_sucess(magic_power *spell, int stat, char *oups_fct=NULL);
 
-/** @fn add_new_power(cptr name, cptr desc, cptr gain, cptr lose, byte level, byte cost, byte stat, byte diff)
+/** @fn add_new_power(cptr name, cptr desc, cptr gain, cptr lose, byte level, s16b cost, byte stat, byte diff)
  * @dgonly
  * @brief Add a new power to the array of magic powers.\n
  * @param name String \n name is the name of the power.
@@ -2250,7 +2250,7 @@ extern bool lua_spell_success @ magic_power_sucess(magic_power *spell, int stat,
  * By order of DG.
  * @note (see file lua_bind.c)
  */
-s16b add_new_power(cptr name, cptr desc, cptr gain, cptr lose, byte level, byte cost, byte stat, byte diff);
+s16b add_new_power(cptr name, cptr desc, cptr gain, cptr lose, byte level, s16b cost, byte stat, byte diff);
 
 /** @var power_max
  * @brief Number
@@ -2281,13 +2281,13 @@ struct spell_type@school_spell_type
 	 * @brief Number
 	 * @note Required mana at lvl 1 
 	 */
-	byte mana;
+	s16b mana;
     
 	/** @structvar mana_max
 	 * @brief Number
 	 * @note Required mana at max lvl 
 	 */
-	byte mana_max;
+	s16b mana_max;
     
 	/** @structvar fail
 	 * @brief Number

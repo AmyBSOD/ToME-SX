@@ -648,6 +648,10 @@ static bool do_extra(int flag)
 	do_s16b(&p_ptr->oppose_nex, flag);
 
 	do_s16b(&p_ptr->tim_esp, flag);
+	do_s16b(&p_ptr->tim_esp_animal, flag);
+	do_s16b(&p_ptr->tim_bullseye, flag);
+	do_s16b(&p_ptr->tim_sniper, flag);
+	do_s16b(&p_ptr->tim_rapidfire, flag);
 	do_s16b(&p_ptr->tim_wraith, flag);
 	do_s16b(&p_ptr->tim_ffall, flag);
 	do_ver_s16b(&p_ptr->tim_fly, SAVEFILE_VERSION, 0, flag);

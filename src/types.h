@@ -1595,6 +1595,11 @@ struct player_type
 	s16b tim_thunder_p1;	/* Timed thunderstorm */
 	s16b tim_thunder_p2;	/* Timed thunderstorm */
 
+	s16b tim_esp_animal;    /* Timed animal ESP */
+	s16b tim_bullseye;      /* Timed bullseye */
+	s16b tim_sniper;        /* Timed sniper */
+	s16b tim_rapidfire;     /* Timed rapidfire */
+
 	s16b tim_project;       /* Timed project upon melee blow */
 	s16b tim_project_dam;
 	s16b tim_project_gf;
@@ -2483,7 +2488,7 @@ struct power_type
 	char *lose_text;         /* Text displayed on losing the power */
 
 	byte level;             /* Min level */
-	byte cost;              /* Mana/Life cost */
+	s16b cost;              /* Mana/Life cost */
 	byte stat;              /* Stat used */
 	byte diff;              /* Difficulty */
 };
@@ -2710,8 +2715,8 @@ struct spell_type
 {
 	cptr name;                      /* Name */
 	byte skill_level;               /* Required level (to learn) */
-	byte mana;			/* Required mana at lvl 1 */
-	byte mana_max;			/* Required mana at max lvl */
+	s16b mana;			/* Required mana at lvl 1 */
+	s16b mana_max;			/* Required mana at max lvl */
 	s16b fail;			/* Minimum chance of failure */
 	s16b level;                     /* Spell level(0 = not learnt) */
 };

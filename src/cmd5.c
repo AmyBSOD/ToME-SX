@@ -2697,7 +2697,7 @@ u32b get_school_spell(cptr do_what, cptr check_fct, s16b force_book)
 				if (!ok)
 				{
 					bell();
-					msg_format("You may not %s that spell.", do_what);
+					cmsg_format(TERM_VIOLET, "You may not %s that spell.", do_what);
 					spell = -1;
 					continue;
 				}
@@ -2721,7 +2721,7 @@ u32b get_school_spell(cptr do_what, cptr check_fct, s16b force_book)
 		else
 		{
 			bell();
-			msg_format("You may not %s that spell.", do_what);
+			cmsg_format(TERM_VIOLET, "You may not %s that spell.", do_what);
 			spell = -1;
 		}
 	}
