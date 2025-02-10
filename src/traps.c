@@ -7043,6 +7043,28 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("You feel the dark corruptions of Morgoth coming over you!");
 			(void) gain_random_corruption(0);
 			ident = TRUE;
+
+			if (randint(3) == 1) { /* so that you can't just repeatedly trigger it until you have the corruptions you want --Amy */
+				ident = FALSE;
+				t_info[trap].ident = TRUE;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+				msg_print("You identified that trap as Trap of Corruption.");
+			}
+
 			break;
 		}
 
