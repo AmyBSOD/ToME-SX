@@ -3272,7 +3272,7 @@ static void process_world(void)
 		activate_dg_curse();
 	}
 
-	if (p_ptr->nastytrap16 && (rand_int(1000) == 0) ) {
+	if (p_ptr->nastytrap16 && !(p_ptr->wild_mode) && (rand_int(1000) == 0) ) {
 		trap_creation();
 	}
 
@@ -3280,12 +3280,12 @@ static void process_world(void)
 		curse_equipment(50, 10);
 	}
 
-	if (p_ptr->nastytrap49 && (rand_int(100) == 0) ) {
+	if (p_ptr->nastytrap49 && !(p_ptr->wild_mode) && (rand_int(100) == 0) ) {
 		do_fart_effect();
 		disturb(0, 0);
 	}
 
-	if (p_ptr->nastytrap51 && (rand_int(100) == 0) ) {
+	if (p_ptr->nastytrap51 && !(p_ptr->wild_mode) && (rand_int(100) == 0) ) {
 		alloc_trap();
 	}
 
