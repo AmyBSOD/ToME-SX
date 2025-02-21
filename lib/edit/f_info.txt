@@ -1059,7 +1059,7 @@ D:2:a Mallorn blocking your way
 N:244:switcher
 G:0:r
 F:FLOOR | DONT_NOTICE_RUNNING | CAN_RUN | SUPPORT_LIGHT | NOTICE |
-F:SUPPORT_GROWTH
+F:SUPPORT_GROWTH | REMEMBER
 
 N:245:Altar of Woods
 G:0:g
