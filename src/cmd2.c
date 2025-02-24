@@ -2129,6 +2129,12 @@ static bool do_cmd_disarm_aux(int y, int x, int dir, int do_pickup)
 	/* Always have a small chance of success */
 	if (j < 2) j = 2;
 
+	/* prevent the pure cheese where you can repeatedly try to disarm a trap in a wall without actually triggering it --Amy */
+	if (!player_can_enter(c_ptr->feat)) {
+		msg_print("You can't get at that trap.");
+		return (more);
+	}
+
 	/* Success */
 	if (rand_int(100) < j)
 	{
