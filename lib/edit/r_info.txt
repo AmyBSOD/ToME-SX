@@ -18977,7 +18977,7 @@ F:ONLY_ITEM | DROP_4D2 | DROP_GOOD | DROP_GREAT
 # Essence of speed, Manathrust, Noxious Cloud, and Fireflash
 S:1_IN_1 | 
 S:HASTE | BO_MANA | BA_POIS | BA_FIRE
-D:He looks like he is looking for something, and the flecks of dragon
+D:He looks like he is looking for something, and the flecks of dragon 
 D:blood on his face tell you he means business!
 
 N:1077:Smirking Sneak Thief
@@ -23207,7 +23207,7 @@ B:KICK:HURT:10d12
 B:KICK:HURT:10d12
 F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | 
 F:WILD_GRASS | FORCE_SLEEP | WEIRD_MIND | NEUTRAL | NO_TARGET | GOOD | 
-D:The great Mearas are legendary horses bred by the Rohirrim.
+D:The great Mearas are legendary horses bred by the Rohirrim. 
 D:Swift and sure they are, but only members of the royal 
 D:family of Rohan are allowed to ride them. This animal will 
 D:not attack unless angered.
@@ -23409,7 +23409,7 @@ F:BASEANGBAND | ANIMAL | MORTAL | AI_ANNOY |
 F:RAND_50 | RAND_25 | SMART | WEIRD_MIND | 
 S:1_IN_10
 S:SHRIEK
-D:A large humanoid form, relatively rare on Middle-earth.
+D:A large humanoid form, relatively rare on Middle-earth. 
 D:It is bounding toward you, noisy and dirty.
 
 # New monster added by furiosity for the Theme module
@@ -23427,7 +23427,7 @@ F:RAND_50 | RAND_25 | SMART | WEIRD_MIND |
 S:MULTIPLY
 S:1_IN_10
 S:SHRIEK
-D:A large humanoid form, relatively rare on Middle-earth.
+D:A large humanoid form, relatively rare on Middle-earth. 
 D:It is bounding toward you, noisy and dirty.
 
 # New monster added by furiosity for the Theme module
@@ -29265,7 +29265,7 @@ B:BITE:HURT:1d6
 F:BASH_DOOR | WILD_TOO | WILD_GRASS | WILD_WOOD | WILD_MOUNTAIN | 
 F:ANIMAL | DROP_SKELETON | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND
-D:A large cat with sleek brown spotted fur. It is fast and lithe,
+D:A large cat with sleek brown spotted fur. It is fast and lithe, 
 D:and none escape its notice. 
 
 # New monster added by furiosity for the Theme module
@@ -29282,7 +29282,7 @@ F:BASH_DOOR | WILD_TOO | WILD_GRASS | WILD_WOOD | WILD_MOUNTAIN |
 F:ANIMAL | DROP_SKELETON | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND
 S:MULTIPLY
-D:A large cat with sleek brown spotted fur. It is fast and lithe,
+D:A large cat with sleek brown spotted fur. It is fast and lithe, 
 D:and none escape its notice. 
 
 # New monster added by furiosity for the Theme module
@@ -32579,8 +32579,8 @@ E:0:1:0:2:1:0
 O:0:0:0:0
 B:BITE:POISON:1d3
 F:RAND_25 | ANIMAL | NO_FEAR | BASEANGBAND | DROP_CORPSE | DROP_SKELETON 
-D:This is a very vicious rodent. Or I should say,
-D:these are two very vicious rodents. No, these are
+D:This is a very vicious rodent. Or I should say, 
+D:these are two very vicious rodents. No, these are 
 D:three -- four -- oh, you count them!
 
 N:1883:Giant white rat
@@ -32592,8 +32592,8 @@ O:0:0:0:0
 B:BITE:POISON:1d3
 F:RAND_25 | ANIMAL | NO_FEAR | BASEANGBAND | DROP_CORPSE | DROP_SKELETON 
 S:MULTIPLY
-D:This is a very vicious rodent. Or I should say,
-D:these are two very vicious rodents. No, these are
+D:This is a very vicious rodent. Or I should say, 
+D:these are two very vicious rodents. No, these are 
 D:three -- four -- oh, you count them!
 
 N:1884:Mole Man
@@ -38721,12 +38721,12 @@ S:BA_MANA | BO_MANA
 S:HOLD | SLOW | HASTE | DRAIN_MANA | TELE_TO | BLINK
 F:RES_TIME | EVIL | RES_TELE | SMART | WEIRD_MIND | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN | KILL_ITEM | BASEANGBAND
-D:This first appears to be an elaborate timekeeping device
-D:peacefully ticking away the seconds until you notice that
-D:the hands on the large face of the clock are moving back
-D:and forth seemingly at random. You struggle to maintain
-D:your concentration as time seems to warp around you and
-D:you aren't sure if you are experiencing the future, the
+D:This first appears to be an elaborate timekeeping device 
+D:peacefully ticking away the seconds until you notice that 
+D:the hands on the large face of the clock are moving back 
+D:and forth seemingly at random. You struggle to maintain 
+D:your concentration as time seems to warp around you and 
+D:you aren't sure if you are experiencing the future, the 
 D:past, or the present.
 
 N:2214:Greater Entropic Dimensional Portal
@@ -38770,7 +38770,7 @@ F:INVISIBLE | NO_SLEEP | FRIEND | BASEANGBAND
 S:1_IN_3 | 
 S:BR_FIRE | BA_FIRE | HEAL
 D: "There were three hundred Asiatic Dragons, breathing fire that
-D:consumed everything it touched.  These hated manking and all good
+D:consumed everything it touched.  These hated manking and all good 
 D:spirits." -L Frank Baum, The Life and Adventures of Santa Claus.
 
 N:2217:Chela of Ghoolab Shah
@@ -40785,7 +40785,7 @@ F:ONLY_ITEM | DROP_GOOD | DROP_GREAT |
 F:OPEN_DOOR | BASH_DOOR | 
 F:NO_CONF | NO_SLEEP | JOKEANGBAND | WILD_TOWN | DROP_CORPSE
 D:More noisy than cheerful, she sometimes tends to be little selfish. 
-D:A naive girl who loves amusement parks and zoos. Beware of this
+D:A naive girl who loves amusement parks and zoos. Beware of this 
 D:walking nihilist of death!
 
 N:2309:Blabbering Otaku
@@ -41285,7 +41285,7 @@ F:UNIQUE |
 F:FORCE_MAXHP | RAND_25 | 
 F:BASH_DOOR | 
 F:ANIMAL | NO_CONF | NO_SLEEP | JOKEANGBAND | DROP_CORPSE
-D:Miyazawa Yukino's cute, cuddly, and fluffy dog.  It is very confused,
+D:Miyazawa Yukino's cute, cuddly, and fluffy dog.  It is very confused, 
 D:and it wants to eat you.
 
 N:2346:Linus the Cat
@@ -41989,7 +41989,7 @@ F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | JOKEANGBAND | 
 S:1_IN_5 | 
 S:HEAL | SLOW | BO_COLD | BA_POIS
-D:The epitomy of all bad anime everywhere.  Upon looking at her, you feel
+D:The epitomy of all bad anime everywhere.  Upon looking at her, you feel 
 D:a sudden urge to kill.
 
 
@@ -42133,7 +42133,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_CORPSE |
 F:EVIL | DRAGON | IM_FIRE | JOKEANGBAND
 S:1_IN_4 | 
 S:BR_FIRE
-D:Fire type pokemon.  The flame at the tip of its tail makes a sound as it
+D:Fire type pokemon.  The flame at the tip of its tail makes a sound as it 
 D:burns.  You can only hear it at quiet places.
 
 N:2405:Yellow jaguar
@@ -42368,7 +42368,7 @@ B:BITE:HURT:1d4
 F:RAND_25 | 
 F:BASH_DOOR | DROP_CORPSE | 
 F:ANIMAL | JOKEANGBAND |
-D:An alien creature that is disguised as a cute puppy so that it can bait its prey
+D:An alien creature that is disguised as a cute puppy so that it can bait its prey 
 D:to come towards it.
 
 N:2421:Like-Like
@@ -42965,7 +42965,7 @@ F:ONLY_ITEM | DROP_1D2 | DROP_GOOD |
 F:OPEN_DOOR | BASH_DOOR | JOKEANGBAND | 
 S:1_IN_4 |
 S:BR_GRAV
-D:A power user who also happens to be the bodyguard for Ruri, the
+D:A power user who also happens to be the bodyguard for Ruri, the 
 D:Maiden of Life.  She is rumored to have the power of gravity.
 
 N:2459:Mandrake
@@ -43015,7 +43015,7 @@ F:OPEN_DOOR | BASH_DOOR |
 F:EVIL | IM_POIS | JOKEANGBAND |
 S:1_IN_4 |
 S:S_KIN
-D:An Elite Master Chef, this monstrosity hails from one of the worst
+D:An Elite Master Chef, this monstrosity hails from one of the worst 
 D:anime series ever.  He is the master and bane of both Gluttons and 
 D:Foodons alike.  You cringe at his wide girth and bad manners.
 
@@ -43091,7 +43091,7 @@ F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT | DROP_CHOSEN |
 F:OPEN_DOOR | BASH_DOOR | JOKEANGBAND | 
 F:EVIL | IM_FIRE | IM_COLD | IM_POIS | NO_CONF | NO_SLEEP
 D:A greedy, arrogant, dishonorable damiyo lord who is the master of 
-D:the Shogun's ceremonies.  Kira is the one responsible for the
+D:the Shogun's ceremonies.  Kira is the one responsible for the 
 D:death of Lord Asano of the Ako, and the disbandment of the Ako 
 D:tribe.  Now he is on the run from the Ako ronin.
 
@@ -43239,7 +43239,7 @@ F:OPEN_DOOR | BASH_DOOR | JOKEANGBAND |
 F:IM_FIRE | IM_ELEC | NO_CONF | NO_SLEEP
 S:1_IN_4 | 
 S:BO_FIRE | BO_COLD | BA_COLD |
-D:Although a member of the morals committee in Taiyo HS, Kyosuke is actually
+D:Although a member of the morals committee in Taiyo HS, Kyosuke is actually 
 D:Hyo's collaborator in the plan to reform the world by force.
 
 N:2474:Dark Juraian druid
@@ -43940,7 +43940,7 @@ F:DROP_1D2 | DROP_4D2 | JOKEANGBAND | ELDRITCH_HORROR |
 F:STUPID | EMPTY_MIND | OPEN_DOOR | BASH_DOOR | 
 F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
 F:NO_FEAR | NO_CONF | NO_SLEEP
-D:When you neglect lobsters in the fridge for too long, they tend to mutate
+D:When you neglect lobsters in the fridge for too long, they tend to mutate 
 D:into big, funny blobs with poisonous bites.
 
 N:2515:Black horse
@@ -44222,9 +44222,9 @@ F:FORCE_MAXHP | JOKEANGBAND | DROP_CORPSE |
 F:ONLY_GOLD | DROP_2D2 | ELDRITCH_HORROR | 
 F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
 F:EVIL | UNDEAD | ANIMAL | IM_COLD | IM_POIS | NO_CONF | NO_SLEEP
-D:A forest God that has been overcome by its anger and hatred.  This accursed
-D:creature hunts down humans with a horrible vengeance.  You stare in disgust
-D:and fear at its glowing red eyes and the ugly black worms wiggling about
+D:A forest God that has been overcome by its anger and hatred.  This accursed 
+D:creature hunts down humans with a horrible vengeance.  You stare in disgust 
+D:and fear at its glowing red eyes and the ugly black worms wiggling about 
 D:its body.
 
 N:2530:Red eyes black dragon
@@ -44414,7 +44414,7 @@ F:EVIL | DRAGON | IM_FIRE | NO_CONF | NO_SLEEP
 S:1_IN_4 | 
 S:BLIND | CONF | SCARE | 
 S:BR_FIRE
-D:Fire type Pokemon.  Breathing intense hot flames, it can melt almost
+D:Fire type Pokemon.  Breathing intense hot flames, it can melt almost 
 D:anything.  Its breath inflicts terrible pain on enemies.
 
 N:2540:The Wing Zero
@@ -44851,7 +44851,7 @@ F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | MOVE_BODY |
 F:SMART | IM_POIS | NO_CONF | NO_SLEEP
 S:1_IN_3 | 
 S:TRAPS | BLINK | ROCKET |
-D:The James Bond of thieves.  No safeguards or buildings can stop him
+D:The James Bond of thieves.  No safeguards or buildings can stop him 
 D:from stealing whatever he wants. He is a master of disguise, an expert 
 D:of stealth, a genius at traps, and moves with blinding speed.  
 D:Check your pockets!
@@ -44921,7 +44921,7 @@ S:1_IN_2 |
 S:SCARE | BLINK | HASTE | HOLD | HEAL |
 D:The legendary swordsman and most frightening warrior ever.  Rumored 
 D:to have destroyed the Yoshioka School of swordsmanship singlehandedly 
-D:and winner of countless duels with many other legendary swordsmen.
+D:and winner of countless duels with many other legendary swordsmen. 
 D:Skilled with two swords, he also uses a bamboo sword to extremely
 D:deadly effect.  When he hears the birds chirping, you had better run.  
 
@@ -44941,7 +44941,7 @@ F:INVISIBLE | PASS_WALL |
 F:ANIMAL | NO_CONF | NO_SLEEP
 S:1_IN_5 | 
 S:BR_MANA
-D:The "spirit dog" of Yuzuriha Nekoi.  Inuki has the ability to turn
+D:The "spirit dog" of Yuzuriha Nekoi.  Inuki has the ability to turn 
 D:into whatever it wishes.  For some reason, you refuse to believe 
 D:that it is actually there...
 
@@ -45030,8 +45030,8 @@ F:REGENERATE |
 S:1_IN_2 | 
 S:BLINK |
 S:BO_ELEC | BO_MANA | BA_MANA | CAUSE_3
-D:Arrogant and cocky, Vegeta kills all who stand in his way.  A Sayajin prince,
-D:Vegeta listens to no one and delights in random destruction.  His mastery
+D:Arrogant and cocky, Vegeta kills all who stand in his way.  A Sayajin prince, 
+D:Vegeta listens to no one and delights in random destruction.  His mastery 
 D:of martial arts, speed, and power are rivaled only by few throughout the 
 D:entire universe.  Beware his wrath!
 
@@ -45151,7 +45151,7 @@ S:HEAL | HASTE | TPORT | TELE_AWAY | BLIND | CONF | SCARE |
 S:CAUSE_4 | MIND_BLAST | FORGET | TRAPS | 
 S:BO_ICEE | BA_ACID | BA_FIRE | BA_COLD | BA_WATE | 
 S:S_UNDEAD | S_DEMON | S_DRAGON
-D:A powerful priest who was blind since birth due to a curse.  He hates
+D:A powerful priest who was blind since birth due to a curse.  He hates 
 D:Lina Inverse immensely.
 
 N:2575:Haejin, the Enigma
@@ -45313,8 +45313,8 @@ S:TELE_TO | HOLD | CAUSE_3 | TRAPS | BLINK | TPORT |
 S:BO_PLAS | BA_DARK | BA_MANA | BA_FIRE | BA_WATE | BA_NETH |
 S:S_DRAGON | DRAIN_MANA |
 D:The 'Kamui' of the Earth Dragons.  Sworn to protect Kamui, he is 
-D:unfortunately destined to fight him to the finish instead.  Blinded
-D:by the Earth Dragons and by fate, he seeks to destroy the earth so
+D:unfortunately destined to fight him to the finish instead.  Blinded 
+D:by the Earth Dragons and by fate, he seeks to destroy the earth so 
 D:that a new one may be born.
 
 N:2582:Mizuki Rashoujin
@@ -45355,8 +45355,8 @@ S:1_IN_1 |
 S:S_MONSTER | S_MONSTERS | S_UNDEAD | S_DEMON | S_DRAGON | S_ANGEL | 
 S:S_HYDRA | S_SPIDER | S_ANT | S_HOUND | S_UNIQUE | S_WRAITH | 
 S:S_HI_UNDEAD | S_HI_DRAGON | S_HI_DEMON | S_KIN
-D:What was once a rowdy teen is now a pulsating mound of flesh and organs.
-D:This abomination of science eyes you with hatred and anger, and snickers
+D:What was once a rowdy teen is now a pulsating mound of flesh and organs. 
+D:This abomination of science eyes you with hatred and anger, and snickers 
 D:as it senses your fear.
 
 N:2584:Indalecio
@@ -45379,7 +45379,7 @@ S:1_IN_2 |
 S:HEAL | BLIND | HOLD | SCARE | CAUSE_4 | BRAIN_SMASH | 
 S:BO_MANA | BA_NETH | HASTE | SLOW
 D:The Chief of the Ten Wise Men.  A fallen Nedian of devastating power.   
-D:He is the one responsible for the 'Sorcery Globe' and instigated the
+D:He is the one responsible for the 'Sorcery Globe' and instigated the 
 D:downfall of Nede.  Mortals everywhere fear his wrath.
 
 N:2585:Xine, the Mountain King
@@ -45400,7 +45400,7 @@ F:EVIL | DEMON | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC |
 F:IM_POIS | NO_CONF | NO_SLEEP
 S:1_IN_3 | 
 S:MIND_BLAST | BO_ELEC | BO_MANA | BA_ELEC | S_HI_DEMON
-D:One of the 'Evil Ones' of Expel, Xine despises mortals and looks down
+D:One of the 'Evil Ones' of Expel, Xine despises mortals and looks down 
 D:upon them from his lofty mountain.
 
 N:2586:Majin Buu
@@ -45492,8 +45492,8 @@ F:ANIMAL | IM_POIS
 S:1_IN_2 | 
 S:SCARE | DRAIN_MANA |
 S:S_MONSTERS | S_HOUND | S_KIN |
-D:You feel that you are at death's door when you see this scary and strange
-D:looking deer approach you.  The twisted expression on its face and its
+D:You feel that you are at death's door when you see this scary and strange 
+D:looking deer approach you.  The twisted expression on its face and its 
 D:weird looking eyes seem to indicate that it could care less about you.  As 
 D:this walking death incarnate steps towards you, you shudder as you see all 
 D:life around it flourish then decay.
@@ -45541,7 +45541,7 @@ S:1_IN_4 |
 S:HEAL | SCARE | BRAIN_SMASH | 
 S:BR_FIRE | 
 S:S_HOUND
-D:A dog demon that was once imprisoned onto a tree by an arrow is now free
+D:A dog demon that was once imprisoned onto a tree by an arrow is now free 
 D:to ravage destruction everwhere.
 
 N:2592:Moro, the Wolf God
@@ -45614,7 +45614,7 @@ S:S_DRAGON | S_MONSTERS | S_HI_DEMON | S_HI_UNDEAD |
 D:Lina Inverse is not your typical scantily clad sorceress babe. She's 
 D:crass, loudmouthed, opinionated, and doesn't allow anything to get in 
 D:her way. She *loves* to eat, and can consume several meals within 
-D:seconds. Sorcery is her specialty, and mages everywhere fear her
+D:seconds. Sorcery is her specialty, and mages everywhere fear her 
 D:powerful magic and are awed by it.  
 
 
@@ -45835,16 +45835,16 @@ F:DROP_GOOD | DROP_GREAT | JOKEANGBAND |
 F:SMART | OPEN_DOOR | BASH_DOOR | MOVE_BODY | REGENERATE |
 F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
 F:NO_CONF | NO_SLEEP | NO_FEAR | 
-D:A tall man, dressed in a white kimono, bearing with him two swords
-D:and an odd fluffy thing on his shoulder.
-D:As he looks up, he brushes his hair out of his eyes,
-D:revealing twin red globes of hate staring directly at you.
-D:Then you realize,this is Sesshoumaru, the Lord of the West.
-D:His fury is legendary, raining down upon his foes mighty blows
-D:and soul crushing spells. Sesshoumaru's cold, arrogant face
-D:is calm, yet beneath his burning eyes you see
-D:a mixture of seething rage and distaste.
-D:Barely moving his mouth, he speaks,
+D:A tall man, dressed in a white kimono, bearing with him two swords 
+D:and an odd fluffy thing on his shoulder. 
+D:As he looks up, he brushes his hair out of his eyes, 
+D:revealing twin red globes of hate staring directly at you. 
+D:Then you realize,this is Sesshoumaru, the Lord of the West. 
+D:His fury is legendary, raining down upon his foes mighty blows 
+D:and soul crushing spells. Sesshoumaru's cold, arrogant face 
+D:is calm, yet beneath his burning eyes you see 
+D:a mixture of seething rage and distaste. 
+D:Barely moving his mouth, he speaks, 
 D:"Insect, I, Sesshoumaru, shall show you your place!"
 
 N:2607:Jaken, the Small and Annoying Minion
@@ -45860,9 +45860,9 @@ S:MISSILE | BO_FIRE |
 F:FORCE_MAXHP | UNIQUE | MALE | DROP_CORPSE |
 F:NO_SLEEP | IM_FIRE | WEIRD_MIND |
 F:ONLY_ITEM | DROP_2D2 | JOKEANGBAND |
-D:An odd blue creature stands before you, its large yellow eyes
-D:furtively searching about. Holding a large staff several sizes
-D:too big for it, it mutters something about wondering what
+D:An odd blue creature stands before you, its large yellow eyes 
+D:furtively searching about. Holding a large staff several sizes 
+D:too big for it, it mutters something about wondering what 
 D:'master' would do. You feel a sort of hilarious pity for it.
 
 N:2608:Lecherous Crab
@@ -46071,7 +46071,7 @@ S:BLINK | MISSILE | ARROW_4 | HASTE | SCARE | BO_MANA |
 S:BLIND | CONF | BO_FIRE | TPORT | BA_FIRE | HOLD |
 S:S_DRAGON | S_ANIMAL |
 S:BA_MANA | DRAIN_MANA |
-D:One of the legendary Sannin, Jiraiya is nowadays merely content with
+D:One of the legendary Sannin, Jiraiya is nowadays merely content with 
 D:researching women for his book and drinking lots of sake.  However, 
 D:he is still an incredible force to be reckoned with.
 
@@ -46146,7 +46146,7 @@ S:1_IN_2 |
 S:BLINK | MISSILE | ARROW_4 | HASTE | SCARE |
 S:BLIND | CONF | S_MONSTER | S_ANIMAL | BO_FIRE | TPORT |
 S:HEAL |
-D:The giant frog boss who may get summoned by Jiraiya due to the
+D:The giant frog boss who may get summoned by Jiraiya due to the 
 D:frog summoning pact.
 
 N:2622:Robo-Ky
@@ -46280,7 +46280,7 @@ F:IM_ELEC | DROP_CORPSE |
 S:1_IN_2 | 
 S:BLINK | TPORT | HASTE | 
 S:MISSILE | BO_ELEC | BA_ELEC | HEAL |
-D:The ninja of Justice, Galford is the master of the metal style of
+D:The ninja of Justice, Galford is the master of the metal style of 
 D:fighting.  He is accompanied by a dog named Poppy.
 
 N:2629:Poppy
@@ -50794,7 +50794,7 @@ F:BASH_DOOR | KILL_BODY |
 F:ANIMAL | IM_ACID | BASEANGBAND |
 F:DROP_SKELETON | DROP_CORPSE |
 D:A large and muscled wolf from the eastern wastes.  Its saliva
-D: dripscaustically and its fur is bileous with acid. 
+D: drips caustically and its fur is bileous with acid. 
 
 N:2902:Black wolf
 G:C:D
@@ -50810,7 +50810,7 @@ F:ANIMAL | IM_ACID | BASEANGBAND |
 F:DROP_SKELETON | DROP_CORPSE |
 S:MULTIPLY
 D:A large and muscled wolf from the eastern wastes.  Its saliva
-D: dripscaustically and its fur is bileous with acid. 
+D: drips caustically and its fur is bileous with acid. 
 
 N:2903:Dire wolf
 G:C:o
@@ -61798,7 +61798,7 @@ S:1_IN_3 |
 S:BR_POIS | BR_NETH | BO_ICEE | S_ANIMAL | S_KIN | BR_ACID | BR_DARK |
 S:BA_COLD | BRAIN_SMASH | BO_MANA | HOLD | CONF | FORGET | 
 D:A black combat boot which is actually a real bitch. She will try 
-D:to kick your nuts flat (or smash your head with her block heel if you don't have nuts),
+D:to kick your nuts flat (or smash your head with her block heel if you don't have nuts), 
 D:then laugh at your inability to fight. Show her 
 D:that you're not a wimp but a great warrior!
 
@@ -62054,7 +62054,7 @@ S:BR_POIS | BR_NETH | BO_ICEE | S_ANIMAL | S_KIN | BR_ACID | BR_DARK |
 S:BA_COLD | BRAIN_SMASH | BO_MANA | HOLD | CONF | FORGET | 
 S:MULTIPLY
 D:A black combat boot which is actually a real bitch. She will try 
-D:to kick your nuts flat (or smash your head with her block heel if you don't have nuts),
+D:to kick your nuts flat (or smash your head with her block heel if you don't have nuts), 
 D:then laugh at your inability to fight. Show her 
 D:that you're not a wimp but a great warrior!
 
@@ -62536,7 +62536,7 @@ F:WEIRD_MIND | BASH_DOOR | ATTR_MULTI | ATTR_ANY | SHAPECHANGER |
 F:NO_CONF | NO_SLEEP | MORTAL | ANIMAL | JOKEANGBAND |
 S:1_IN_9
 S:BR_CONF | BR_CHAO | SHRIEK | FORGET |
-D:These bizarre, gadfly-like insects nest in hidden corners of
+D:These bizarre, gadfly-like insects nest in hidden corners of 
 D:dungeons, where they seek to distract adventurers into casting 
 D:the wrong spell, stepping onto a hidden trap or drinking an 
 D:unidentified Death potion.
@@ -62558,7 +62558,7 @@ F:NO_CONF | NO_SLEEP | MORTAL | ANIMAL | JOKEANGBAND |
 S:1_IN_9
 S:BR_CONF | BR_CHAO | SHRIEK | FORGET |
 S:MULTIPLY
-D:These bizarre, gadfly-like insects nest in hidden corners of
+D:These bizarre, gadfly-like insects nest in hidden corners of 
 D:dungeons, where they seek to distract adventurers into casting 
 D:the wrong spell, stepping onto a hidden trap or drinking an 
 D:unidentified Death potion.
@@ -62799,7 +62799,7 @@ S:1_IN_14
 S:BR_SHAR |
 D:A wall of whirling, needle-sharp sword blades created by 
 D:priestly magic.  Though it cannot chase intruders, 
-D:the barrier still deters most creatures who try to
+D:the barrier still deters most creatures who try to 
 D:cross it.
 
 N:3626:Tome of Divine Wrath
@@ -67856,7 +67856,7 @@ F:DROP_CORPSE |
 F:BASEANGBAND | 
 S:1_IN_8
 S:HOLD | CONF
-D:A floating eye surrounded by number of smaller eyestalks. Its
+D:A floating eye surrounded by number of smaller eyestalks. Its 
 D:gaze seems mesmerizing.
 
 N:3931:Knight archer
@@ -67918,7 +67918,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR
 F:BASEANGBAND | 
 S:1_IN_6 |
 S:BLIND | CONF | SCARE | CAUSE_2 | BO_COLD
-D:A strange creature that disguises itself as discarded objects to lure
+D:A strange creature that disguises itself as discarded objects to lure 
 D:unsuspecting adventurers within reach of its venomous claws.
 
 N:3935:Scroll mimic
@@ -67939,7 +67939,7 @@ F:BASEANGBAND |
 S:1_IN_5 |
 S:BLIND | CONF | SCARE | CAUSE_2 | BO_FIRE |
 S:S_MONSTER
-D:A strange creature that disguises itself as discarded objects to lure
+D:A strange creature that disguises itself as discarded objects to lure 
 D:unsuspecting adventurers within reach of its venomous claws.
 
 N:3936:Chest mimic
@@ -67960,7 +67960,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR
 S:1_IN_5 |
 S:BLIND | CONF | SCARE | CAUSE_2 | BA_POIS |
 S:S_MONSTER
-D:A strange creature that disguises itself as a chest to lure
+D:A strange creature that disguises itself as a chest to lure 
 D:unsuspecting adventurers within reach of its venomous claws.
 
 N:3937:Kouko
@@ -68093,7 +68093,7 @@ F:NO_CONF | NO_SLEEP | RES_DISE | RES_TELE
 F:DROP_SKELETON | DROP_CORPSE | 
 S:1_IN_6 |
 S:HEAL | SCARE | BO_ACID | BA_ACID | TPORT | S_MONSTER
-D:Made invisible with his magic cap, the greedy dwarf plots for
+D:Made invisible with his magic cap, the greedy dwarf plots for 
 D:world domination through his riches.
 
 N:3944:Grendel
@@ -68192,7 +68192,7 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | RES_NETH | CAN_FLY |
 F:NO_CONF | NO_SLEEP | ATTR_MULTI | ATTR_ANY |
 S:1_IN_15 |
 S:BLIND | HOLD | DRAIN_MANA | FORGET
-D:An almost life-like creature which is nothing more than a phantom
+D:An almost life-like creature which is nothing more than a phantom 
 D:created by the Logrus.
 
 N:3949:Jurt the Living Trump
@@ -68212,7 +68212,7 @@ F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR |
 F:DROP_SKELETON | DROP_CORPSE | 
 S:1_IN_6
 S:TPORT | BLINK | BA_CHAO
-D:A magical treatment has turned Jurt, an adept of Logrus,
+D:A magical treatment has turned Jurt, an adept of Logrus, 
 D:into a Living Trump.
 
 N:3950:Doom drake
@@ -68233,7 +68233,7 @@ F:IM_FIRE | IM_POIS | NO_CONF | NO_SLEEP |
 F:DROP_CORPSE | 
 S:1_IN_6 |
 S:BR_FIRE
-D:Doom drakes are trained firedrakes, always moving in pairs, looking
+D:Doom drakes are trained firedrakes, always moving in pairs, looking 
 D:for a battle.
 
 N:3951:Sheer Heart Attack, the Bomb Hand
@@ -68266,7 +68266,7 @@ F:INVISIBLE | COLD_BLOOD | PASS_WALL | CAN_FLY |
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | RES_NETH | NO_CONF | NO_SLEEP
 S:1_IN_5 |
 S:FORGET | MIND_BLAST
-D:An almost life-like creature which is nothing more than a phantom
+D:An almost life-like creature which is nothing more than a phantom 
 D:created by the Pattern.
 
 N:3953:Ipsissimus
@@ -68326,7 +68326,7 @@ F:DROP_4D2 | BASH_DOOR | RES_PLAS | CAN_FLY |
 F:DROP_CORPSE | 
 S:1_IN_9
 S:BR_PLAS
-D:It is a fast, deadly dragonoid creature. It was bred and trained
+D:It is a fast, deadly dragonoid creature. It was bred and trained 
 D:in the Courts of Chaos for assassination.
 
 N:3956:Father Dagon
@@ -68348,7 +68348,7 @@ F:NO_CONF | NO_SLEEP |
 F:DROP_CORPSE | 
 S:1_IN_7 |
 S:S_KIN | S_DEMON | BO_WATE | BA_WATE | BO_ACID | BA_ACID
-D:The king of the deep ones. "Vast, Polyphemous-like, and loathsome, it
+D:The king of the deep ones. "Vast, Polyphemous-like, and loathsome, it 
 D:darted like a stupendous monster of nightmares..."
 
 N:3957:Mandor, Master of the Logrus
@@ -68414,17 +68414,17 @@ F:NO_CONF | NO_SLEEP
 F:DROP_CORPSE | 
 S:1_IN_4 |
 S:BO_ICEE | BO_WATE | BA_COLD | BA_WATE
-D:The Queen of the Sea where the Pattern is reflected is a cunning
-D:diplomat and a dangerous foe. "A woman sat upon the throne...
-D:and her hair was green, though streaked with silver, and her eyes
-D:were round of moons of jade and her brows rose like the wings of
-D:olive gulls. Her mouth was small, her chin was small; her cheeks
-D:were high and wide and rounded. A circlet of white gold crossed
-D:her brow and there was a crystal necklace about her neck. At its
-D:tip there flashed a sapphire between her sweet bare breasts, whose
-D:nipples were also bare green. She wore scaled trunks of blue and
-D:a silver belt, and she held a scepter of pink coral in her hand
-D:and had a ring upon every finger, and each ring had a stone of
+D:The Queen of the Sea where the Pattern is reflected is a cunning 
+D:diplomat and a dangerous foe. "A woman sat upon the throne... 
+D:and her hair was green, though streaked with silver, and her eyes 
+D:were round of moons of jade and her brows rose like the wings of 
+D:olive gulls. Her mouth was small, her chin was small; her cheeks 
+D:were high and wide and rounded. A circlet of white gold crossed 
+D:her brow and there was a crystal necklace about her neck. At its 
+D:tip there flashed a sapphire between her sweet bare breasts, whose 
+D:nipples were also bare green. She wore scaled trunks of blue and 
+D:a silver belt, and she held a scepter of pink coral in her hand 
+D:and had a ring upon every finger, and each ring had a stone of 
 D:a different blue within it. She did not smile..."
 
 N:3960:Hammer of hell
@@ -68453,10 +68453,10 @@ F:MORTAL | BASEANGBAND |
 F:REGENERATE | BASH_DOOR | IM_FIRE | IM_COLD | IM_ELEC |
 F:IM_POIS | NO_CONF | NO_SLEEP | 
 F:DROP_CORPSE | 
-D:Morgenstern is tougher and faster than any other horse: "Morgenstern
-D:was six hands higher than any other horse I had ever seen, and his
-D:eyes were the dead color of a Weimaraner dog's and his coat was all
-D:gray and his hooves looked like polished steel. He raced along like
+D:Morgenstern is tougher and faster than any other horse: "Morgenstern 
+D:was six hands higher than any other horse I had ever seen, and his 
+D:eyes were the dead color of a Weimaraner dog's and his coat was all 
+D:gray and his hooves looked like polished steel. He raced along like 
 D:the wind..."
 
 N:3962:Jasra, Brand's Mistress
@@ -68478,7 +68478,7 @@ F:EVIL | IM_ACID | IM_FIRE | IM_POIS | NO_CONF | NO_SLEEP
 S:1_IN_2 |
 S:HOLD | SCARE | CAUSE_3 | BO_FIRE | BO_PLAS | BA_ACID |
 S:S_HYDRA
-D:Brand's one-time mistress. Her face could sink a thousand
+D:Brand's one-time mistress. Her face could sink a thousand 
 D:ships, but Brand is not too selective.
 
 N:3963:Clubber demon
@@ -68518,7 +68518,7 @@ F:SMART | OPEN_DOOR | BASH_DOOR |
 F:IM_ACID | IM_COLD | IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP | RES_TELE
 S:1_IN_2 |
 S:CAUSE_3 | BO_WATE | BO_MANA | BA_CHAO | 
-D:The madman's son is a Logrus Master, almost as great a
+D:The madman's son is a Logrus Master, almost as great a 
 D:menace as his father.
 
 N:3965:Nazgul
@@ -68577,11 +68577,11 @@ F:BASEANGBAND |
 F:EVIL
 S:1_IN_6
 S:S_DEMON | SHRIEK | CONF | SCARE | MIND_BLAST | BLIND
-D:"The thing that crouched in the weird green dusk was a living mass
-D:of shuddering horror, a ghastly mountain of sensate, quivering
-D:flesh, whose tentacles, far-flung in the dim reaches of the
-D:subterranean cavern, emitted a strange humming sound, while from
-D:the depths of the creature's body came a weird and horrific
+D:"The thing that crouched in the weird green dusk was a living mass 
+D:of shuddering horror, a ghastly mountain of sensate, quivering 
+D:flesh, whose tentacles, far-flung in the dim reaches of the 
+D:subterranean cavern, emitted a strange humming sound, while from 
+D:the depths of the creature's body came a weird and horrific 
 D:undulation."
 
 N:3968:Death vortex
@@ -68619,17 +68619,17 @@ S:1_IN_4 |
 S:HEAL | BLIND | CONF | SCARE | CAUSE_4 | BRAIN_SMASH |
 S:FORGET | S_MONSTERS | BA_CHAO | BLINK | TPORT | TELE_TO |
 S:TELE_AWAY | S_DEMON
-D:Once this now gnomish creature created the universe with the Jewel
-D:of Judgement - or so you have been told. There is little sanity left
-D:in his present form even if he still has the power. "He was a small
-D:man. Tiny, might be an even better word. He was around five feet tall
-D:and a hunchback. His hair and beard were as heavy as (Corwin's). The
-D:only distinguishing features in that great mass of fur were
-D:his long, hook nose and his almost black eyes, now squinted
-D:against the light... Dworkin: 'I am Oberon's prisoner.' Corwin:
-D:'Oh? None of us knew that Dad had locked you up.' (Corwin) heard
-D:(Dworkin) weeping. 'Yes,' he said after a long time. 'He didn't
-D:trust me.' 'Why not?' 'I told him I'd thought of a way to
+D:Once this now gnomish creature created the universe with the Jewel 
+D:of Judgement - or so you have been told. There is little sanity left 
+D:in his present form even if he still has the power. "He was a small 
+D:man. Tiny, might be an even better word. He was around five feet tall 
+D:and a hunchback. His hair and beard were as heavy as (Corwin's). The 
+D:only distinguishing features in that great mass of fur were 
+D:his long, hook nose and his almost black eyes, now squinted 
+D:against the light... Dworkin: 'I am Oberon's prisoner.' Corwin: 
+D:'Oh? None of us knew that Dad had locked you up.' (Corwin) heard 
+D:(Dworkin) weeping. 'Yes,' he said after a long time. 'He didn't 
+D:trust me.' 'Why not?' 'I told him I'd thought of a way to 
 D:destroy Amber. I described it to him, and he locked me in.'"
 
 N:3970:Habu the Champion of Chaos
@@ -68650,8 +68650,8 @@ F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP |
 F:DROP_CORPSE | 
 S:1_IN_4 |
 S:BA_FIRE | BA_CHAO | CONF | TPORT | S_DEMON | BR_CHAO | BA_MANA | 
-D:He is one of the greatest warriors of chaos to walk the earth.
-D:His bloody blade has slain thousands and tens of thousands, and still
+D:He is one of the greatest warriors of chaos to walk the earth. 
+D:His bloody blade has slain thousands and tens of thousands, and still 
 D:hungers for more.
 
 N:3971:Brand, Mad Visionary of Amber
@@ -68677,12 +68677,12 @@ S:TPORT | BLINK | BA_FIRE | BA_COLD |
 S:DRAIN_MANA | CAUSE_4 | BA_ACID | TELE_AWAY |
 S:MIND_BLAST | TRAPS | HEAL | 
 S:HASTE | BRAIN_SMASH | BA_CHAO | BA_DARK | 
-D:Brand sees himself as a hero, the god creator
-D:and absolute monarch of a future world. Unfortunately he needs
-D:to erase the existing world to make his new world. "...a figure both
-D:like Bleys and (Corwin). (Corwin's) features, though smaller, his eyes,
-D:Bleys' hair, beardless. He wore a riding suit of green and sat atop a white
-D:horse... There was a quality of both strength and weakness, questing and
+D:Brand sees himself as a hero, the god creator 
+D:and absolute monarch of a future world. Unfortunately he needs 
+D:to erase the existing world to make his new world. "...a figure both 
+D:like Bleys and (Corwin). (Corwin's) features, though smaller, his eyes, 
+D:Bleys' hair, beardless. He wore a riding suit of green and sat atop a white 
+D:horse... There was a quality of both strength and weakness, questing and 
 D:abandonment about him."
 
 N:3972:Shadowlord
@@ -68705,7 +68705,7 @@ S:1_IN_3 |
 S:HOLD | DRAIN_MANA | BLIND | S_UNDEAD | CONF |
 S:SCARE | TELE_TO | TPORT | BRAIN_SMASH | ANIM_DEAD
 S:BA_NETH | DARKNESS | SHRIEK
-D:An aura of hatred, cowardice and falsehood surrounds you as this
+D:An aura of hatred, cowardice and falsehood surrounds you as this 
 D:cloaked figure floats towards you.
 
 N:3973:Bast, Goddess of Cats
@@ -68728,10 +68728,10 @@ F:IM_FIRE | IM_COLD | IM_POIS | NO_CONF | NO_SLEEP
 F:DROP_CORPSE | 
 S:1_IN_3 |
 S:TELE_TO | HEAL | S_KIN
-D:"Beauty -- coolness -- aloofness -- philosophical repose --
-D:self-sufficiency -- untamed mastery -- what else can we find
-D:these things with even half the perfection and completeness
-D:that mark their incarnation in the peerless and softly gliding
+D:"Beauty -- coolness -- aloofness -- philosophical repose -- 
+D:self-sufficiency -- untamed mastery -- what else can we find 
+D:these things with even half the perfection and completeness 
+D:that mark their incarnation in the peerless and softly gliding 
 D:cat?"
 
 N:3974:Ultimate beholder
@@ -68753,8 +68753,8 @@ S:1_IN_2 |
 S:BLIND | CONF | SCARE | DRAIN_MANA | MIND_BLAST | FORGET |
 S:DARKNESS | BA_ACID | BA_FIRE | BA_COLD | S_KIN | BO_MANA |
 S:BA_DARK
-D:A disembodied eye, surrounded by twelve smaller eyes on stalks.
-D:This is a beholder hive-mother, far more powerful than normal
+D:A disembodied eye, surrounded by twelve smaller eyes on stalks. 
+D:This is a beholder hive-mother, far more powerful than normal 
 D:beholders.
 
 N:3975:Bleys, Master of Manipulation
@@ -68775,12 +68775,12 @@ S:1_IN_3 |
 S:SCARE | BLIND | CONF | TPORT | BLINK | TELE_AWAY | TELE_TO
 S:TELE_LEVEL | BA_COLD | BA_FIRE | TRAPS | MIND_BLAST |
 S:S_MONSTERS
-D:This cunning Amberite is the master of subtle ploys. "...a fiery bearded,
-D:flame-crowned man, dressed all in red and orange, mainly of silk stuff,
-D:and he held a sword in his right hand and a glass of wine in his left,
-D:and the devil himself danced behind his eyes... His chin was light, but the
-D:beard covered it. His sword was inlaid with an elaborate filigree of a
-D:golden color. He wore two huge rings on his right hand and one on his
+D:This cunning Amberite is the master of subtle ploys. "...a fiery bearded, 
+D:flame-crowned man, dressed all in red and orange, mainly of silk stuff, 
+D:and he held a sword in his right hand and a glass of wine in his left, 
+D:and the devil himself danced behind his eyes... His chin was light, but the 
+D:beard covered it. His sword was inlaid with an elaborate filigree of a 
+D:golden color. He wore two huge rings on his right hand and one on his 
 D:left: an emerald, a ruby, and a sapphire, respectively."
 
 N:3976:Fiona the Sorceress
@@ -68803,7 +68803,7 @@ S:1_IN_3 |
 S:SCARE | BLIND | CONF | TPORT | BLINK | TELE_AWAY | TELE_TO
 S:TRAPS | CAUSE_4 | BA_POIS | S_DEMON
 S:S_MONSTERS | 
-D:She is beautiful and deadly. "...I have always been very fond of Fiona.
+D:She is beautiful and deadly. "...I have always been very fond of Fiona. 
 D:She is certainly the loveliest, most civilized of (all Amberites)."
 
 N:3977:Julian, Master of Arden Forest
@@ -68825,9 +68825,9 @@ F:OPEN_DOOR | BASH_DOOR |
 S:1_IN_4 |
 S:TPORT | TELE_TO | ARROW_4 | SHRIEK | SCARE | DARKNESS | ARROW_4
 S:S_ANT | S_SPIDER | S_HOUND | S_HYDRA | TRAPS | BO_WATE | BO_ELEC
-D:Julian is at home in wild woodlands. He enjoys hunting a challenging
-D:prey: you. "Julian, dark hair hanging long, blue eyes containing neither
-D:passion nor compassion. He was dressed completely in scaled white armor,
+D:Julian is at home in wild woodlands. He enjoys hunting a challenging 
+D:prey: you. "Julian, dark hair hanging long, blue eyes containing neither 
+D:passion nor compassion. He was dressed completely in scaled white armor, 
 D:not silver or metallic-colored, but looking as if it had been enameled."
 
 N:3978:Tiamat, Celestial Dragon of Evil
@@ -68854,7 +68854,7 @@ S:1_IN_2 |
 S:BLIND | CONF | SCARE |
 S:BR_ACID | BR_FIRE | BR_COLD | BR_ELEC | BR_POIS |
 S:S_HI_DRAGON
-D:Usually found guarding the first plane of Hell, Tiamat is a formidable
+D:Usually found guarding the first plane of Hell, Tiamat is a formidable 
 D:opponent, her five heads breathing death to all who stand against her.
 
 N:3979:Caine, the Conspirator
@@ -68877,12 +68877,12 @@ S:1_IN_4 |
 S:TPORT | TELE_TO | SCARE | DARKNESS |
 S:S_DRAGON | TRAPS | BO_WATE | BO_NETH | S_UNDEAD | S_DEMON |
 S:CONF | BO_ACID | FORGET | MIND_BLAST | CAUSE_4
-D:Caine is perhaps the least reliable Amberite, always ready to ignore
-D:his pacts and promises when it suits him. "...the swarthy, dark-eyed
-D:countenance of Caine, dressed all in satin that was black and green,
-D:wearing a dark three-cornered hat set at a rakish angle, and a green
-D:plume of feathers trailing down in the back. He was standing in the
-D:profile, one arm akimbo, and toes of his boots curled upwards, and he
+D:Caine is perhaps the least reliable Amberite, always ready to ignore 
+D:his pacts and promises when it suits him. "...the swarthy, dark-eyed 
+D:countenance of Caine, dressed all in satin that was black and green, 
+D:wearing a dark three-cornered hat set at a rakish angle, and a green 
+D:plume of feathers trailing down in the back. He was standing in the 
+D:profile, one arm akimbo, and toes of his boots curled upwards, and he 
 D:wore an emerald-studded dagger at his belt... He was dark."
 
 N:3980:Gerard, Strongman of Amber
@@ -68902,14 +68902,14 @@ F:EVIL | IM_POIS | IM_ACID | IM_FIRE | REGENERATE
 F:OPEN_DOOR | BASH_DOOR |
 S:1_IN_4 |
 S:HEAL | TPORT | TELE_TO | SCARE | BLIND | S_MONSTERS
-D:Gerard may not be quite as devious as the other Amberites, but
-D:he is certainly stronger than the rest of them put together. "...a big,
-D:powerful man... (He) resembled (Corwin) quite strongly, save that
-D:his jaw was heavier, and (Corwin) knew he was bigger than him, though
-D:slower. His strength was a thing out of legend. He wore a dressing gown of
-D:blue and gray clasped around the middle with a wide, black belt, and he
-D:stood laughing. About his neck, on a heavy cord, there hung a silver
-D:hunting horn. He wore a fringe beard and a light mustache. In his right
+D:Gerard may not be quite as devious as the other Amberites, but 
+D:he is certainly stronger than the rest of them put together. "...a big, 
+D:powerful man... (He) resembled (Corwin) quite strongly, save that 
+D:his jaw was heavier, and (Corwin) knew he was bigger than him, though 
+D:slower. His strength was a thing out of legend. He wore a dressing gown of 
+D:blue and gray clasped around the middle with a wide, black belt, and he 
+D:stood laughing. About his neck, on a heavy cord, there hung a silver 
+D:hunting horn. He wore a fringe beard and a light mustache. In his right 
 D:hand he held a goblet of wine."
 
 N:3981:Warp demon
@@ -68952,15 +68952,15 @@ S:SCARE | CONF | TPORT | TELE_TO | CAUSE_3 | BO_ACID |
 S:HOLD | BA_FIRE | TRAPS | TELE_AWAY | BRAIN_SMASH |
 S:FORGET | BO_WATE | CAUSE_4 | BO_NETH | DARKNESS |
 S:S_ANGEL | S_DEMON | 
-D:When Oberon disappeared, Eric seized the opportunity and claimed
-D:the throne, eliminating those who would have opposed him. "Handsome by
-D:anyone's standards, his hair was so dark, as to be almost blue. His beard
-D:curled around the mouth that always smiled, and he was dressed simply in a
-D:leather jacket and leggings, a plain cloak, high black boots, and he wore
-D:a red sword belt bearing a long silvery saber and clasped with a ruby,
-D:and his high cloak, collar round his head was lined with red and the
-D:trimmings of his sleeves matched it. His hands, thumbs hooked behind
-D:his belt, were terribly strong and prominent. A pair of black gloves
+D:When Oberon disappeared, Eric seized the opportunity and claimed 
+D:the throne, eliminating those who would have opposed him. "Handsome by 
+D:anyone's standards, his hair was so dark, as to be almost blue. His beard 
+D:curled around the mouth that always smiled, and he was dressed simply in a 
+D:leather jacket and leggings, a plain cloak, high black boots, and he wore 
+D:a red sword belt bearing a long silvery saber and clasped with a ruby, 
+D:and his high cloak, collar round his head was lined with red and the 
+D:trimmings of his sleeves matched it. His hands, thumbs hooked behind 
+D:his belt, were terribly strong and prominent. A pair of black gloves 
 D:jutted from his belt near his right tip."
 
 N:3983:Klingsor, Evil Master of Magic
@@ -68985,7 +68985,7 @@ S:1_IN_2 |
 S:CAUSE_3 | TELE_TO | BA_FIRE | DRAIN_MANA | HOLD |
 S:TRAPS | BA_WATE | BO_PLAS | BA_NETH |  
 S:BA_MANA | BA_DARK | S_HI_UNDEAD | BA_CHAO | HAND_DOOM | ANIM_DEAD
-D:Klingsor, whose hopeless effort to join the Knights of the Grail
+D:Klingsor, whose hopeless effort to join the Knights of the Grail 
 D:was thwarted, turned to black magic and became a deadly necromancer.
 
 N:3984:Corwin, Lord of Avalon
@@ -69010,12 +69010,12 @@ S:CAUSE_3 | BO_ACID | BO_MANA | HOLD | BA_FIRE | BA_COLD |
 S:TRAPS | TELE_AWAY | HEAL | BRAIN_SMASH | BA_WATE | BA_NETH |
 S:FORGET | BO_WATE | BO_NETH | CAUSE_4 | DARKNESS | S_MONSTERS |
 S:BO_PLAS | S_ANGEL | 
-D:Corwin is one of the most feared and respected Amberites; his skill
-D:and cunning are well known. "Green eyes, black hair, dressed in black
-D:and silver, yes. (Corwin) had on a cloak and it was slightly furled
-D:as by a wind. (He) had on black boots, like Eric's, and (he) too bore a
-D:blade, only (his) was heavier, though not quite as long as (Eric's).
-D:(He) had (his) gloves on and they were silver and scaled. The clasp
+D:Corwin is one of the most feared and respected Amberites; his skill 
+D:and cunning are well known. "Green eyes, black hair, dressed in black 
+D:and silver, yes. (Corwin) had on a cloak and it was slightly furled 
+D:as by a wind. (He) had on black boots, like Eric's, and (he) too bore a 
+D:blade, only (his) was heavier, though not quite as long as (Eric's). 
+D:(He) had (his) gloves on and they were silver and scaled. The clasp 
 D:at (his) neck was cast in the form of a silver rose."
 
 N:3985:Benedict, the Ideal Warrior
@@ -69039,13 +69039,13 @@ S:1_IN_4 |
 S:SCARE | CONF | TPORT | TELE_TO | DRAIN_MANA | TRAPS | BRAIN_SMASH |
 S:TELE_AWAY | CAUSE_4 | S_MONSTERS |
 S:S_DEMON | TELE_LEVEL | FORGET | HEAL
-D:In the field of combat Benedict rules supreme: with but one hand
-D:he was still superior to Corwin. "Benedict, tall and dour; thin of
-D:body, thin of face, wide of mind. He wore orange and yellow and brown
-D:and reminded me of haystacks and pumpkins and scarecrows and the
-D:Legend of Sleepy Hollow. He had a long, strong jaw and hazel eyes and
-D:brown hair that never curled. He stood beside a tan horse and leaned
-D:upon a lance about which was twined a rope of flowers. He seldom
+D:In the field of combat Benedict rules supreme: with but one hand 
+D:he was still superior to Corwin. "Benedict, tall and dour; thin of 
+D:body, thin of face, wide of mind. He wore orange and yellow and brown 
+D:and reminded me of haystacks and pumpkins and scarecrows and the 
+D:Legend of Sleepy Hollow. He had a long, strong jaw and hazel eyes and 
+D:brown hair that never curled. He stood beside a tan horse and leaned 
+D:upon a lance about which was twined a rope of flowers. He seldom 
 D:laughed."
 
 N:3986:Hell hound of Julian
@@ -69089,7 +69089,7 @@ S:1_IN_3 |
 S:TPORT | BLIND | SCARE | CAUSE_4 | BRAIN_SMASH | 
 S:BA_MANA | BO_MANA | BA_FIRE |   
 S:S_MONSTERS | S_DEMON | S_HI_UNDEAD | HAND_DOOM | ANIM_DEAD
-D:A stench of corruption and decay surrounds this sorcerer, who has clearly
+D:A stench of corruption and decay surrounds this sorcerer, who has clearly 
 D:risen from the grave to continue his foul plots and schemes.
 
 N:3988:Cerberus, Guardian of Hades
@@ -69112,7 +69112,7 @@ S:1_IN_3 |
 S:BA_DARK |
 S:BR_FIRE | BR_NETH |
 S:S_HOUND
-D:A three-headed hell hound of fearsome aspect. Flame burns merrily from its
+D:A three-headed hell hound of fearsome aspect. Flame burns merrily from its 
 D:hide as it snarls and roars its defiance.
 
 N:3989:Oberon, King of Amber
@@ -69140,11 +69140,11 @@ S:TELE_TO | CONF | BO_MANA | BA_FIRE | BRAIN_SMASH | BA_NETH |
 S:BO_ICEE | CAUSE_4 | BA_WATE | BO_PLAS | TELE_LEVEL | TELE_AWAY |
 S:FORGET | DARKNESS | BA_MANA | S_HI_DRAGON | S_HI_UNDEAD | BA_CHAO
 S:S_WRAITH | HAND_DOOM |   
-D:Oberon, the father or grandfather of most Amberites, is as powerful
-D:as ever. He is afraid that you will upset the balance and will not
-D:let you harm the Serpent of Chaos. "Oberon, Lord of Amber, stood before
-D:me in his green and his gold. High, wide and thick, his beard black and
-D:shot with silver, his hair the same. Green rings in gold settings and
+D:Oberon, the father or grandfather of most Amberites, is as powerful 
+D:as ever. He is afraid that you will upset the balance and will not 
+D:let you harm the Serpent of Chaos. "Oberon, Lord of Amber, stood before 
+D:me in his green and his gold. High, wide and thick, his beard black and 
+D:shot with silver, his hair the same. Green rings in gold settings and 
 D:a blade of golden color."
 
 N:3990:The Real Serpent of Chaos
@@ -69171,12 +69171,12 @@ S:1_IN_3 |
 S:S_MONSTERS | BR_CHAO | BA_CHAO | ROCKET | S_KIN |
 S:BR_NETH | BR_MANA | S_HI_UNDEAD | S_HI_DRAGON | S_UNIQUE |
 S:BR_NUKE | BR_DISI | HAND_DOOM |  
-D:The Big Boss himself. Before the universe the Serpent was. The Unicorn
-D:of Order fought with Serpent and stole one of its eyes, known as the
-D:Jewel of Judgement. With the Jewel, Dworkin drew the Pattern and thus
-D:gave birth to the infinite worlds of shadow. Now the balance has been
-D:disrupted, the Pattern damaged, and all the shadow is being absorbed by
-D:the Serpent. Unless it is stopped, the word as we know it will come to
+D:The Big Boss himself. Before the universe the Serpent was. The Unicorn 
+D:of Order fought with Serpent and stole one of its eyes, known as the 
+D:Jewel of Judgement. With the Jewel, Dworkin drew the Pattern and thus 
+D:gave birth to the infinite worlds of shadow. Now the balance has been 
+D:disrupted, the Pattern damaged, and all the shadow is being absorbed by 
+D:the Serpent. Unless it is stopped, the word as we know it will come to 
 D:an end, all order reverting to Primal Chaos.
 
 N:3991:Quantum dot
@@ -69222,7 +69222,7 @@ F:RES_WALL | RES_INER | RES_TIME | RES_GRAV |
 S:1_IN_2 |
 S:BR_NETH | BR_TIME | BA_MANA | BO_MANA | HAND_DOOM | HEAL |
 S:S_DEMON | S_HI_UNDEAD | S_HI_DRAGON |  
-D:It is a ring of immense power. You can hardly believe you've
+D:It is a ring of immense power. You can hardly believe you've 
 D:finally found the One Ring!
 
 N:3993:Lourph
@@ -69241,10 +69241,10 @@ F:ANIMAL | HURT_LITE | IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS |
 F:BASEANGBAND | 
 F:RES_TELE | RES_NETH | RES_DISE | 
 F:NO_FEAR | NO_CONF | NO_STUN | NO_SLEEP |
-D:Small brown spiders that lurk in the darkness deep underground.
-D: An individual would be nearly harmless, but their size allows many
-D: to crawl where only a single Mirkwood spider could stand. Packs of
-D: these arachnids may scour the depths untiringly, and their hunger is
+D:Small brown spiders that lurk in the darkness deep underground. 
+D: An individual would be nearly harmless, but their size allows many 
+D: to crawl where only a single Mirkwood spider could stand. Packs of 
+D: these arachnids may scour the depths untiringly, and their hunger is 
 D: never satisfied.
 
 N:3994:Caaws
@@ -69269,8 +69269,8 @@ F:RES_TELE | NO_FEAR | NO_CONF | NO_STUN | NO_SLEEP |
 F:RES_GRAV | WILD_WASTE | WILD_SWAMP | WILD_SHORE | 
 S:1_IN_5
 S:HEAL |   
-D:A thing like a massive, jet black oyster with four groping tendrils.
-D: Born of nether, it need not chase its prey, content to seethe
+D:A thing like a massive, jet black oyster with four groping tendrils. 
+D: Born of nether, it need not chase its prey, content to seethe 
 D: in the darkness until some unfortunate creature wanders too close.
 
 N:3995:Culverin
@@ -69299,9 +69299,9 @@ F:ELDRITCH_HORROR | OPEN_DOOR | ANIMAL | NO_FEAR |
 F:BASEANGBAND | 
 F:NO_STUN | NO_CONF | NO_SLEEP | CAN_SWIM |
 F:WILD_WOOD | WILD_MOUNTAIN |
-D:"The Behinder flung itself on his shoulders. Then I knew why
-D: nobody's supposed to see one. I wish I hadn't. To this day I
-D: can see it, plain as a fence at noon, and forever I will be
+D:"The Behinder flung itself on his shoulders. Then I knew why 
+D: nobody's supposed to see one. I wish I hadn't. To this day I 
+D: can see it, plain as a fence at noon, and forever I will be 
 D: able to see it."
 
 N:3997:Boadile
@@ -69317,9 +69317,9 @@ F:FORCE_MAXHP | STUPID | COLD_BLOOD | BASH_DOOR |
 F:ANIMAL | RES_WATE | CAN_SWIM | WILD_SHORE |
 F:WILD_OCEAN |
 F:BASEANGBAND | 
-D:"...Head something like a croc's, only bigger. Around forty
-D: feet long. Able to roll itself into a big beachball with teeth.
-D: Fast on land or in water - and a hell of a lot of little legs
+D:"...Head something like a croc's, only bigger. Around forty 
+D: feet long. Able to roll itself into a big beachball with teeth. 
+D: Fast on land or in water - and a hell of a lot of little legs 
 D: on each side."
 
 N:3998:Ebony monk
@@ -69408,11 +69408,11 @@ F:RES_TELE | NO_CONF | NO_SLEEP | NO_STUN |
 F:RES_DARK | DROP_CORPSE | 
 S:1_IN_2 |
 S:ROCKET | HEAL | BLINK | 
-D:His favorite food is roasting rice noodle.
-D:He is the lone wolf filled with the adventurous spirit.
-D:His righteousness and courage are more than the average.
-D:He sometimes become emotional.
-D:He would like to choose a haphazard life rather than an intentional life.
+D:His favorite food is roasting rice noodle. 
+D:He is the lone wolf filled with the adventurous spirit. 
+D:His righteousness and courage are more than the average. 
+D:He sometimes become emotional. 
+D:He would like to choose a haphazard life rather than an intentional life. 
 D:He is poor at treating women.
 
 N:4002:Spectral Wyrm
@@ -69456,8 +69456,8 @@ F:IM_ACID | IM_COLD | IM_ELEC | TROLL | EVIL
 F:DROP_CORPSE | 
 S:1_IN_7 |
 S:BA_COLD | BO_ICEE | BO_WATE | BA_ELEC
-D:The dungeon shakes as an enormous troll-form thunders into view, hurling
-D:ice and lightning in every direction. It is thirty feet tall, has six
+D:The dungeon shakes as an enormous troll-form thunders into view, hurling 
+D:ice and lightning in every direction. It is thirty feet tall, has six 
 D:heads, and is enraged at your impudence.
 
 N:4004:Unstable worm mass
@@ -69674,7 +69674,7 @@ F:ANIMAL | NO_CONF | NO_SLEEP
 F:DROP_CORPSE | 
 S:1_IN_8 |
 S:BR_MANA
-D:A powerful aura radiates from this canine creature. It feels
+D:A powerful aura radiates from this canine creature. It feels 
 D:like... magic?
 
 N:4015:Vore
@@ -69691,7 +69691,7 @@ F:BASEANGBAND |
 F:DROP_SKELETON | DROP_CORPSE | 
 S:1_IN_5
 S:BO_MANA
-D:A gaunt, vaguely humanoid torso merged with the form of a giant
+D:A gaunt, vaguely humanoid torso merged with the form of a giant 
 D:spider, ugly as sin. It screams horribly as it charges at you.
 
 N:4016:Great Venom Wyrm
@@ -69713,8 +69713,8 @@ F:DROP_CORPSE |
 S:1_IN_6 |
 S:BLIND | CONF | SCARE |
 S:BR_POIS
-D:A huge dragon of incredible destructive power. Noxious vapours
-D:fill the room near it, leaving you gasping for breath. Flee
+D:A huge dragon of incredible destructive power. Noxious vapours 
+D:fill the room near it, leaving you gasping for breath. Flee 
 D:now while you still can!
 
 N:4017:Djinni
@@ -69765,7 +69765,7 @@ F:EVIL | TROLL | IM_POIS | NO_CONF | NO_SLEEP | REGENERATE
 F:DROP_SKELETON | DROP_CORPSE | 
 S:1_IN_8 |
 S:BLINK
-D:This troll is a king, which means it's still stupid, but has even more power.
+D:This troll is a king, which means it's still stupid, but has even more power. 
 D:It never comes alone, and can call out to other trolls.
 
 N:4020:Sky golem
@@ -69782,7 +69782,7 @@ F:IM_COLD | NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING | FORCE_MAXHP
 F:BASEANGBAND | RES_TIME |
 S:1_IN_5
 S:BR_LITE | BA_COLD | BR_COLD | BO_ICEE | BO_COLD | BR_TIME | ARROW_4
-D:Obsidian eyes stare at you as you bend before the shower of heavenly
+D:Obsidian eyes stare at you as you bend before the shower of heavenly 
 D:powers and spells...
 
 N:4021:Bazooker
@@ -69816,7 +69816,7 @@ F:RES_SHAR | BASEANGBAND |
 F:NO_CUT | NO_FEAR | NO_CONF | NO_SLEEP | NO_STUN | POWERFUL | NONLIVING
 S:1_IN_4 |
 S:BR_SHAR
-D:A howling blast of razor-sharp mountain fragments, kept intact by perilous
+D:A howling blast of razor-sharp mountain fragments, kept intact by perilous 
 D:magics.
 
 N:4023:Granite wall
@@ -69848,8 +69848,8 @@ F:MORTAL | BASEANGBAND |
 F:OPEN_DOOR | BASH_DOOR | EVIL | TROLL | HURT_LITE | REGENERATE |
 F:SUSCEP_COLD | IM_FIRE | WILD_VOLCANO
 F:DROP_SKELETON | DROP_CORPSE | 
-D:Fire trolls are believed to have been created by an
-D:evil wizard trying to make forest trolls immune to
+D:Fire trolls are believed to have been created by an 
+D:evil wizard trying to make forest trolls immune to 
 D:fire.
 
 N:4025:Elf lord
@@ -69880,7 +69880,7 @@ B:CHARGE:HURT:4d6
 F:MORTAL | BASEANGBAND | 
 F:MALE | ONLY_ITEM | DROP_90 | DROP_CORPSE | DROP_SKELETON | GOOD | 
 F:OPEN_DOOR | BASH_DOOR | HAS_LITE |
-D:A warrior clad in ornate but effective armour, holding katana so sharp it
+D:A warrior clad in ornate but effective armour, holding katana so sharp it 
 D:can cut your throat and you won't notice till you nod.
 
 N:4027:Magma intrusion
@@ -69928,8 +69928,8 @@ F:NEVER_MOVE | STUPID | EMPTY_MIND | IM_POIS | RES_DISE
 F:NO_CONF | NO_SLEEP | NO_FEAR
 S:1_IN_11 |
 S:BR_NUKE | BR_POIS
-D:It is a massive mushroom that seems to have a huge mouth. The air is thick
-D:with miasma, and you notice to your horror that the fungus is sprouting
+D:It is a massive mushroom that seems to have a huge mouth. The air is thick 
+D:with miasma, and you notice to your horror that the fungus is sprouting 
 D:everywhere!
 
 N:4030:Cloud golem
@@ -69944,7 +69944,7 @@ F:EMPTY_MIND | BASH_DOOR |
 F:IM_ELEC | IM_COLD | CAN_FLY |
 F:NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING
 F:BASEANGBAND | 
-D:Lightning crackles around this huge animated cloud entity, sending shivers
+D:Lightning crackles around this huge animated cloud entity, sending shivers 
 D:down your spine.
 
 N:4031:Lava golem
@@ -69960,7 +69960,7 @@ F:EMPTY_MIND | BASH_DOOR
 F:IM_FIRE | NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING | KILL_BODY
 F:BASEANGBAND | 
 F:KILL_ITEM
-D:It burns everything in its path with the heat its magma-like body
+D:It burns everything in its path with the heat its magma-like body 
 D:produces.
 
 N:4032:Ogre warrior
@@ -69990,8 +69990,8 @@ F:BASEANGBAND |
 F:COLD_BLOOD | NO_SLEEP | NO_CONF | NO_FEAR | NONLIVING
 S:1_IN_6
 S:SCARE | BLIND | CONF | S_MONSTER
-D:A powerful weapon from a time long past when heroes walked the earth, and
-D:magical weapons of power unmatched were created. Blood drips from its
+D:A powerful weapon from a time long past when heroes walked the earth, and 
+D:magical weapons of power unmatched were created. Blood drips from its 
 D:wicked blade.
 
 N:4034:Quartz vein
@@ -70020,7 +70020,7 @@ F:IM_COLD | IM_FIRE | IM_POIS | IM_ACID | ONLY_ITEM | DROP_60 | NONLIVING
 F:BASEANGBAND | 
 S:1_IN_1
 S:MISSILE
-D:A metallic ball floating in the air, that turns to track you with evil
+D:A metallic ball floating in the air, that turns to track you with evil 
 D:intent.
 
 N:4036:Aquatic naga
@@ -70039,7 +70039,7 @@ F:MORTAL | BASEANGBAND |
 F:EVIL | NO_CONF | NO_SLEEP | SMART
 S:1_IN_7 |
 S:DARKNESS | CAUSE_4 | BO_ICEE
-D:A naga adapted to underwater life. She has a fish-like tail and a pair
+D:A naga adapted to underwater life. She has a fish-like tail and a pair 
 D:of gills.
 
 N:4037:Demogorgon
@@ -70125,7 +70125,7 @@ O:20:20:20:20
 B:BITE:HURT:1d8
 F:MORTAL | BASEANGBAND | 
 F:WEIRD_MIND | DROP_CORPSE
-D:A renegade mushroom from the Mushroom Kingdom that has been
+D:A renegade mushroom from the Mushroom Kingdom that has been 
 D:corrupted by chaos. It is quite angry and it marches towards you.
 
 N:4042:Monkey of Nikko
@@ -70173,7 +70173,7 @@ F:OPEN_DOOR | GOOD | CAN_SWIM | CAN_FLY |
 F:NO_CONF | NO_SLEEP | NEUTRAL | TAKE_ITEM |
 S:1_IN_4 |
 S:BA_FIRE | HASTE | HOLD | CONF | BLIND
-D:A happy plumber jumping up and down, his red mustache matches
+D:A happy plumber jumping up and down, his red mustache matches 
 D:his red hat.
 
 # Description in English by Nick Keulmann
@@ -70195,7 +70195,7 @@ F:BASH_DOOR | EVIL | CAN_SWIM | CAN_FLY | KILL_ITEM |
 F:DROP_CORPSE | 
 S:1_IN_3 |
 S:BR_FIRE | SCARE
-D:He is a huge fire spitting turtle of disreputable character.
+D:He is a huge fire spitting turtle of disreputable character. 
 D:He is plotting to conquer the Mushroom Kingdom.
 
 N:4046:Greater Cyber Wyrm Angel Daemon Lich
@@ -70426,7 +70426,7 @@ F:GOOD
 F:DROP_SKELETON | DROP_CORPSE | 
 S:1_IN_8 |
 S:CONF | HOLD | CAUSE_3 | HEAL
-D:A knight wrapped in plate armor of pure white.
+D:A knight wrapped in plate armor of pure white. 
 D:He stares at you menacingly.
 
 N:4056:Bone dragon
@@ -70465,7 +70465,7 @@ F:NO_CONF | NO_SLEEP | CAN_FLY |
 S:1_IN_4 |
 S:HEAL | HASTE | TELE_AWAY | BO_MANA | BO_PLAS | CAUSE_4 |
 S:S_MONSTERS | S_ANGEL | S_DRAGON |  
-D:It is an angel, fast and strong. You are stunned by its extreme holiness
+D:It is an angel, fast and strong. You are stunned by its extreme holiness 
 D:and try to resist all desires to obey it.
 
 N:4058:Solar
@@ -70487,8 +70487,8 @@ F:NO_CONF | NO_SLEEP | CAN_FLY |
 S:1_IN_3 |
 S:TELE_TO | BLIND | SCARE | CAUSE_4 | BO_MANA | 
 S:S_ANGEL | S_DRAGON | BR_LITE | HEAL |  
-D:Never a more heavenly being have you seen. The very holiness of its
-D:presence makes you deeply respect it. Few creatures can match the powers
+D:Never a more heavenly being have you seen. The very holiness of its 
+D:presence makes you deeply respect it. Few creatures can match the powers 
 D:of a Solar; fewer still live to tell the tale after attacking one.
 
 N:4059:Deep puddle
@@ -70616,7 +70616,7 @@ F:MORTAL | BASEANGBAND |
 F:DROP_CORPSE
 S:1_IN_2 |
 S:ARROW_4
-D:A large turtle creature walking on two legs,
+D:A large turtle creature walking on two legs, 
 D:proudly throwing hammers from an unlimited supply.
 
 N:4066:Buzzy beetle
@@ -70679,8 +70679,8 @@ F:RES_DARK | MORTAL | BASEANGBAND |
 F:ORC | HURT_LITE | EVIL | 
 S:1_IN_2 |
 S:ARROW_3
-D:In a rare display of ingenuity, the Orcs invented an incredibly
-D:destructive weapon. Most Orcish artillerists are those who dared
+D:In a rare display of ingenuity, the Orcs invented an incredibly 
+D:destructive weapon. Most Orcish artillerists are those who dared 
 D:criticize its effectiveness.
 
 # Description in English by Nick Keulmann
@@ -70711,7 +70711,7 @@ F:WILD_WASTE | BASH_DOOR |
 F:ANIMAL | 
 F:MORTAL | BASEANGBAND | 
 F:DROP_SKELETON | DROP_CORPSE | 
-D:As for the horse with the animal of four feet which can run fast,
+D:As for the horse with the animal of four feet which can run fast, 
 D:it was utilized for a long time as the vehicle of the human.
 
 # Description in English by Nick Keulmann
@@ -70728,7 +70728,7 @@ F:WILD_WASTE | BASH_DOOR | RAND_25 |
 F:ANIMAL | 
 F:MORTAL | BASEANGBAND | 
 F:DROP_SKELETON | DROP_CORPSE | 
-D:This creature is gentle and submissive until you try to ride it.
+D:This creature is gentle and submissive until you try to ride it. 
 D:Watch out for its reckless kicking.
 
 # Description in English by Nick Keulmann
@@ -70804,7 +70804,7 @@ F:RES_TELE | CAN_SWIM | WILD_SWAMP | WILD_SHORE |
 S:1_IN_10 |
 S:SHRIEK | MIND_BLAST
 S:MULTIPLY
-D:It`s a slime colony.
+D:It`s a slime colony. 
 D:If you so much as DARE to touch it.
 
 N:4078:Botei-Building, the Emperor
@@ -70914,7 +70914,7 @@ F:RES_WATE | NO_STUN |
 F:DROP_CORPSE | 
 S:1_IN_3 |
 S:BRAIN_SMASH | BR_COLD | BA_COLD
-D:The oldest and wisest of the ancient dragons of Lodoss, it protects the land from
+D:The oldest and wisest of the ancient dragons of Lodoss, it protects the land from 
 D:its evil counterparts.
 
 N:4084:Eibra the Water Dragon
@@ -70936,7 +70936,7 @@ F:RES_WATE | NO_STUN |
 F:DROP_CORPSE | 
 S:1_IN_3 |
 S:BRAIN_SMASH | BR_ACID | BA_WATE
-D:One of the ancient dragons of Lodoss, it came from the depths of the ocean
+D:One of the ancient dragons of Lodoss, it came from the depths of the ocean 
 D:to cause destruction.
 
 N:4085:Narse the Black Dragon
@@ -70958,7 +70958,7 @@ F:NO_STUN |
 F:DROP_CORPSE | 
 S:1_IN_3 |
 S:BRAIN_SMASH | BR_DARK | BR_NETH | BA_NETH
-D:One of the ancient dragons of Lodoss, it causes destruction with
+D:One of the ancient dragons of Lodoss, it causes destruction with 
 D:an dark and nether breath.
 
 N:4086:Mycen the Gold Dragon
@@ -70980,7 +70980,7 @@ F:NO_STUN |
 F:DROP_CORPSE | 
 S:1_IN_3 |
 S:BRAIN_SMASH | BR_SOUN | BR_LITE | BR_MANA
-D:One of the ancient dragons of Lodoss, it jointly rules the
+D:One of the ancient dragons of Lodoss, it jointly rules the 
 D:Kingdom of Moss and strives to protect it.
 
 N:4087:Shooting Star the Red Dragon
@@ -71003,7 +71003,7 @@ F:NO_STUN |
 F:DROP_CORPSE | 
 S:1_IN_3 |
 S:BRAIN_SMASH | BR_FIRE | BA_FIRE
-D:One of the ancient dragons of Lodoss, it causes destruction
+D:One of the ancient dragons of Lodoss, it causes destruction 
 D:with its breath of fire.
 
 N:4088:Beld, Ruler of Marmo
@@ -71058,7 +71058,7 @@ F:ANIMAL | NO_STUN | NO_SLEEP | CAN_FLY
 F:DROP_CORPSE | 
 S:1_IN_7 |
 S:S_DRAGON
-D:This bat has been the death of many adventurers, taking their only
+D:This bat has been the death of many adventurers, taking their only 
 D:weapon and leaving them to face a dragon.
 
 N:4091:Eol, the Dark Elven Smith
@@ -71080,7 +71080,7 @@ F:EVIL | IM_ACID | IM_FIRE | IM_POIS | IM_COLD |
 F:DROP_CORPSE | 
 S:1_IN_3 |
 S:HOLD | SCARE | DARKNESS | BLIND
-D:A grim-faced dark elf, garbed in layer upon layer of gleaming black
+D:A grim-faced dark elf, garbed in layer upon layer of gleaming black 
 D:armour. As strong as he is magical, Eol is a worthy opponent.
 
 N:4092:Maeglin, Betrayer of Gondolin
@@ -71103,7 +71103,7 @@ F:DROP_CORPSE |
 S:1_IN_4 |
 S:BA_ACID | BA_ELEC | HASTE | HEAL |
 S:S_MONSTER | TPORT | TELE_TO
-D:A dark elf, mighty in Gondolin, and betrayer of that hidden city to
+D:A dark elf, mighty in Gondolin, and betrayer of that hidden city to 
 D:Morgoth's wrath.
 
 N:4093:Shuten-douji, King Ogre of Ooe-Mountain
@@ -71382,7 +71382,7 @@ F:IM_COLD | RES_WATE | NO_CONF | NO_SLEEP |
 F:BASEANGBAND | 
 S:1_IN_6 |
 S:BO_WATE | BA_WATE | BLINK | S_MONSTER
-D:The marid are said to be born of the ocean,
+D:The marid are said to be born of the ocean, 
 D:with currents as their muscles and pearls as their teeth.
 
 N:4109:Chiokovo
@@ -71456,10 +71456,10 @@ S:1_IN_2 |
 S:BLIND | CONF | SCARE |
 S:BR_LITE | BR_DARK | BR_SOUN | BR_CONF | BR_SHAR |
 S:S_HI_DRAGON
-D:Bahamut the Platinum Dragon has been described both as the King of All Good Dragons,
-D:and more accurately, as a glorious and resplendent deity in his own right. He is ever
-D:watchful for the cause of lawful good and sits unsleepingly in his palace on Mount
-D:Celestia, the Seven Heavens. Bahamut is the protector of all good dragons and a
+D:Bahamut the Platinum Dragon has been described both as the King of All Good Dragons, 
+D:and more accurately, as a glorious and resplendent deity in his own right. He is ever 
+D:watchful for the cause of lawful good and sits unsleepingly in his palace on Mount 
+D:Celestia, the Seven Heavens. Bahamut is the protector of all good dragons and a 
 D:fierce opponent of evil.
 
 N:4113:Suke-san, the Mitsukuni's Warder
@@ -71473,7 +71473,7 @@ B:HIT:INSANITY:4d8
 F:MALE | DROP_CORPSE | DROP_SKELETON | FORCE_MAXHP | HAS_LITE | 
 F:MORTAL | BASEANGBAND | 
 F:OPEN_DOOR | BASH_DOOR | UNIQUE
-D:He is always traveling together with
+D:He is always traveling together with 
 D:Mitsukuni of the Yellow Gate, Grand Duke of Mito.
 
 N:4114:Kaku-san, the Mitsukuni's Warder
@@ -71487,7 +71487,7 @@ B:HIT:INSANITY:4d8
 F:MALE | DROP_CORPSE | DROP_SKELETON | FORCE_MAXHP | HAS_LITE | 
 F:OPEN_DOOR | BASH_DOOR | UNIQUE
 F:MORTAL | BASEANGBAND | 
-D:He is always traveling together with
+D:He is always traveling together with 
 D:Mitsukuni of the Yellow Gate, Grand Duke of Mito.
 
 N:4115:The Ghost 'Q'
@@ -71565,7 +71565,7 @@ F:TAKE_ITEM | OPEN_DOOR |
 F:IM_FIRE | IM_COLD | IM_ELEC | IM_ACID | IM_POIS | NO_CONF | NO_SLEEP
 S:1_IN_3 |
 S:TPORT | HASTE | TELE_AWAY | TELE_LEVEL | BLINK
-D:Collect 5 marks of Silver Angel or 1 mark of Gold Angel!
+D:Collect 5 marks of Silver Angel or 1 mark of Gold Angel! 
 D:And you will win The Can of Toys!
 
 N:4119:Silver Angel
@@ -71582,7 +71582,7 @@ F:IM_FIRE | IM_COLD | IM_ELEC | IM_ACID | IM_POIS | NO_CONF | NO_SLEEP
 F:BASEANGBAND | 
 S:1_IN_3 |
 S:TPORT | HASTE | TELE_AWAY | TELE_LEVEL | BLINK
-D:Collect 5 marks of Silver Angel or 1 mark of Gold Angel!
+D:Collect 5 marks of Silver Angel or 1 mark of Gold Angel! 
 D:And you will win The Can of Toys!
 
 N:4120:Jibaku ghost
@@ -71663,7 +71663,7 @@ F:EMPTY_MIND | COLD_BLOOD |
 F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
 F:BASEANGBAND | 
 F:NO_FEAR | NO_CONF | NO_SLEEP | NONLIVING | RES_TELE
-D:It is a small bomb of a form like a spider.
+D:It is a small bomb of a form like a spider. 
 D:It walks toward you!
 
 N:4125:Bomb mosquito
@@ -71725,7 +71725,7 @@ B:HIT:EAT_FOOD:3d4
 F:DROP_60 | OPEN_DOOR | BASH_DOOR | DROP_CORPSE |
 F:WILD_WOOD
 F:MORTAL | BASEANGBAND | 
-D:It is a biped living thing like the bear.
+D:It is a biped living thing like the bear. 
 D:It pounces on you expressionlessly.
 
 N:4129:Nami, the Mate
@@ -71763,9 +71763,9 @@ F:EVIL | REGENERATE |
 F:OPEN_DOOR | BASH_DOOR |  
 S:1_IN_8 |
 S:TELE_TO | BO_MANA
-D:He looks like brawny human being apparently.
-D:However, unlike man, it has the tail of a monkey.
-D:This tail proves he is a Saiyan.
+D:He looks like brawny human being apparently. 
+D:However, unlike man, it has the tail of a monkey. 
+D:This tail proves he is a Saiyan. 
 D:A Saiyan's fighting power is far superior to human's and will bring many destruction.
 
 N:4131:Hand grenade
@@ -71798,7 +71798,7 @@ F:MORTAL | BASEANGBAND |
 F:DROP_CORPSE | 
 S:1_IN_2 |
 S:BLINK | TPORT | TELE_TO | CONF | TRAPS
-D:A class of its own: you are already too late to protect your possessions
+D:A class of its own: you are already too late to protect your possessions 
 D:and he seems to have studied magic too, and is a master of setting traps.
 
 N:4133:Red Helm, the King of Bear
@@ -71816,7 +71816,7 @@ F:BASH_DOOR | FORCE_MAXHP | UNIQUE |
 F:MORTAL | BASEANGBAND | 
 F:ANIMAL | EVIL | WILD_WOOD | WILD_MOUNTAIN | NO_SLEEP
 F:DROP_CORPSE | 
-D:A king of mad bear. He had built his stronghold at Hutago mountain,
+D:A king of mad bear. He had built his stronghold at Hutago mountain, 
 D:and is reigning over there.
 
 N:4134:Mad bear
@@ -71887,7 +71887,7 @@ F:NO_CONF | NO_SLEEP | CAN_FLY |
 F:COLD_BLOOD | BASH_DOOR | POWERFUL | RAND_25 |
 F:GOOD | 
 F:DROP_CORPSE | 
-D:He was the braver of Atlantis. His body was converted by a Shinto priest,
+D:He was the braver of Atlantis. His body was converted by a Shinto priest, 
 D:in order to fight against "Papa". His body is now made by Orihalcon.
 
 N:4138:Madame Debby
@@ -71906,7 +71906,7 @@ F:SMART | OPEN_DOOR | BASH_DOOR |
 F:EVIL | IM_ACID | IM_FIRE | IM_POIS | NO_CONF | NO_SLEEP
 S:1_IN_2 |
 S:HOLD | SCARE | CAUSE_3 | BR_CONF | BR_NETH | BR_CHAO |
-D:Sukarno's third wife. Her face could sink a thousand
+D:Sukarno's third wife. Her face could sink a thousand 
 D:ships, but Sukarno is not too selective.
 
 N:4139:The Defiler
@@ -71929,7 +71929,7 @@ F:NO_CONF | NO_SLEEP
 F:DROP_CORPSE | 
 S:1_IN_3 |
 S:BR_ACID | BR_POIS | S_KIN
-D:A hulking creature with massive pincers. The Defiler oozes acidic
+D:A hulking creature with massive pincers. The Defiler oozes acidic 
 D:venom as it smashes the living rock to reach you.
 
 N:4140:Living armor
@@ -71980,11 +71980,11 @@ F:GOOD | NO_SLEEP | HAS_LITE |
 F:DROP_SKELETON | DROP_CORPSE |
 S:1_IN_4 |
 S:HEAL | SCARE | CAUSE_3 | CAUSE_4 | HASTE | BLIND | S_ANGEL
-D:It seems that the more devout the person, the more likely they are to cross
-D:the boundary between piety and sanctimoniousness. And such is the case with
-D:the Order of the Knights Templar: they are among the most pious and
-D:powerful of the religious knightly orders, but noted for their intolerance.
-D:And thus it is Morgoth's will that is unwittingly done, as the forces of good
+D:It seems that the more devout the person, the more likely they are to cross 
+D:the boundary between piety and sanctimoniousness. And such is the case with 
+D:the Order of the Knights Templar: they are among the most pious and 
+D:powerful of the religious knightly orders, but noted for their intolerance. 
+D:And thus it is Morgoth's will that is unwittingly done, as the forces of good 
 D:are set against each other.
 
 N:4143:Chameleon
@@ -72029,8 +72029,8 @@ F:ONLY_ITEM | DROP_2D2 | DROP_GOOD |
 F:IM_COLD | RES_WATE |
 F:IM_POIS | NO_CONF | NO_SLEEP | NO_STUN |
 F:DROP_CORPSE | 
-D:This is the whale of the tradition which gets across to the Inuit
-D:who lives in the world of winter. It is said that the mystical horn
+D:This is the whale of the tradition which gets across to the Inuit 
+D:who lives in the world of winter. It is said that the mystical horn 
 D:of this whale cures all illnesses.
 
 N:4146:Petshop
@@ -72052,7 +72052,7 @@ F:ANIMAL | IM_ACID | IM_FIRE | IM_COLD | IM_POIS | NO_CONF | NO_SLEEP
 F:DROP_CORPSE | 
 S:1_IN_3 |
 S:BO_COLD | BA_COLD | BO_ICEE | BR_COLD
-D:This bird is the porter of the mansion in which Dio Brando hides and lives.
+D:This bird is the porter of the mansion in which Dio Brando hides and lives. 
 D:For it, a dog may be a favorite food.
 
 N:4147:White crocodile
@@ -72071,7 +72071,7 @@ F:MORTAL | BASEANGBAND |
 F:OPEN_DOOR | BASH_DOOR | CAN_SWIM |
 F:ANIMAL | IM_POIS | RES_WATE
 F:DROP_CORPSE | 
-D:This crocodile grew huge in the sewer.
+D:This crocodile grew huge in the sewer. 
 D:For him, an adventurer is only game.
 
 N:4148:Disintegrate vortex
@@ -72193,7 +72193,7 @@ F:ONLY_ITEM | DROP_1D2 | DROP_GOOD |
 F:DROP_CORPSE
 S:1_IN_6
 S:S_KIN
-D:This huge louse is the ruin of the sad man
+D:This huge louse is the ruin of the sad man 
 D:who had become a louse just because he loves louses.
 
 N:4155:Octopus of Kshitigarbha
@@ -72224,7 +72224,7 @@ B:CRUSH:HURT:1d6
 F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | RAND_25
 F:MORTAL | BASEANGBAND | 
 F:ANIMAL | 
-D:Tanuki (raccoon dog) is thought to bewitch people in Japanese.
+D:Tanuki (raccoon dog) is thought to bewitch people in Japanese. 
 D:Tanuki can disguise as human beings by putting a magic leaf on his/her head.
 
 N:4157:Dionysus, the Munchkin of Chaos
@@ -72249,8 +72249,8 @@ F:UNDEAD | EVIL
 F:DROP_CORPSE | 
 S:1_IN_2 |
 S:ARROW_4 | TELE_AWAY | TPORT | HASTE | BLINK | HEAL
-D:He is one of the greatest trickster. Even greatest warrior cannot
-D: defeat him, and his storm of holy might arrows from the dark have
+D:He is one of the greatest trickster. Even greatest warrior cannot 
+D: defeat him, and his storm of holy might arrows from the dark have 
 D: defeated numerous victims.
 
 N:4158:Walken
@@ -72305,7 +72305,7 @@ F:MORTAL | BASEANGBAND |
 F:DROP_CORPSE | 
 S:1_IN_10 |
 S:HEAL
-D:When angered or frightened,
+D:When angered or frightened, 
 D:it protects itself with a burst of blinding light.
 
 N:4161:Mauhur, the Orc Captain
@@ -72359,7 +72359,7 @@ F:BASEANGBAND |
 F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | OPEN_DOOR | BASH_DOOR | 
 S:1_IN_9
 S:SHRIEK
-D:She is the wife of king Meng Huo. She is called as the avatar of
+D:She is the wife of king Meng Huo. She is called as the avatar of 
 D:flame spirit.
 
 N:4164:Dailai Dongzhu, Captain of Southerings
@@ -72378,7 +72378,7 @@ F:MORTAL | BASEANGBAND |
 F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | OPEN_DOOR | BASH_DOOR | 
 S:1_IN_5 |
 S:ARROW_2
-D:He is one of the captains of Nanman.
+D:He is one of the captains of Nanman. 
 D:He comes to help his sister and her husband Meng Huo.
 
 N:4165:King Duosi, the Chief of Southerings
@@ -72396,7 +72396,7 @@ F:MORTAL | BASEANGBAND |
 F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | OPEN_DOOR | BASH_DOOR | 
 S:1_IN_5 |
 S:BA_POIS | BLINK
-D:He is the best wise man of Nanman. His intelligence afflicted
+D:He is the best wise man of Nanman. His intelligence afflicted 
 D:the enemy.
 
 N:4166:King Mulu, the Chief of Southerings
@@ -72431,7 +72431,7 @@ F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | OPEN_DOOR | BASH_DOOR |
 F:MORTAL | BASEANGBAND | 
 F:IM_ACID | IM_ELEC | IM_POIS | SUSCEP_FIRE |
 F:DROP_SKELETON | DROP_CORPSE | 
-D:This giant man is the king of southern Nanman. It is said that
+D:This giant man is the king of southern Nanman. It is said that 
 D:he is about 10 feet tall. His army has hard rattan armor.
 
 N:4168:Invisible Pink Unicorn
@@ -72455,12 +72455,12 @@ F:DROP_CORPSE |
 S:1_IN_3 |
 S:BLINK | HEAL | SHRIEK | SCARE | CONF | BLIND |
 S:DARKNESS | FORGET | MIND_BLAST | BRAIN_SMASH |
-D:"Invisible Pink Unicorns are beings of great spiritual power.
-D:We know this because they are capable of being invisible
-D:and pink at the same time. Like all religions, the Faith
-D:of the Invisible Pink Unicorns is based upon both logic
-D:and faith. We have faith that they are pink; we logically
-D:know that they are invisible because we can't see them."
+D:"Invisible Pink Unicorns are beings of great spiritual power. 
+D:We know this because they are capable of being invisible 
+D:and pink at the same time. Like all religions, the Faith 
+D:of the Invisible Pink Unicorns is based upon both logic 
+D:and faith. We have faith that they are pink; we logically 
+D:know that they are invisible because we can't see them." 
 D:(Steve Eley)
 
 N:4169:Flying Spaghetti Monster
@@ -72481,12 +72481,12 @@ S:1_IN_4
 S:BLINK | TPORT | SLOW | CONF | HOLD | TELE_TO |
 S:BRAIN_SMASH | BA_WATE | BA_CHAO | BR_NEXU | BR_CONF |
 S:S_MONSTERS |
-D:"I think we can all look forward to the time when these
-D:three theories are given equal time in our science
-D:classrooms across the country, and eventually the world;
-D:One third time for Intelligent Design, one third time for
-D:Flying Spaghetti Monsterism, and one third time for logical
-D:conjecture based on overwhelming observable evidence."
+D:"I think we can all look forward to the time when these 
+D:three theories are given equal time in our science 
+D:classrooms across the country, and eventually the world; 
+D:One third time for Intelligent Design, one third time for 
+D:Flying Spaghetti Monsterism, and one third time for logical 
+D:conjecture based on overwhelming observable evidence." 
 D:(Bobby Henderson)
 
 N:4170:Reindeer
@@ -72541,8 +72541,8 @@ S:1_IN_1 |
 S:BLINK | TPORT | HEAL | TELE_AWAY |
 S:BA_MANA | BR_DISI |  
 S:BA_NETH | BO_MANA | BA_CHAO
-D:A wizened old man, stooped by age, he seems barely able to move.
-D:Yet, something is not quite right here. You see a faint shimmer
+D:A wizened old man, stooped by age, he seems barely able to move. 
+D:Yet, something is not quite right here. You see a faint shimmer 
 D:in the air surrounding this pathetic old man.
 
 N:4173:Death Scythe
@@ -72560,9 +72560,9 @@ F:FORCE_SLEEP | FORCE_MAXHP | CAN_FLY |
 F:BASEANGBAND | 
 F:COLD_BLOOD | BASH_DOOR | NONLIVING | RES_TELE
 F:NO_CONF | NO_SLEEP | NO_FEAR
-D:The deadliest weapon: You've heard of these before!
-D:Few are brave enough to wield one, and many a great
-D:adventurer has been betrayed at a critical moment.
+D:The deadliest weapon: You've heard of these before! 
+D:Few are brave enough to wield one, and many a great 
+D:adventurer has been betrayed at a critical moment. 
 D:Yet, this one seems a bit different ...
 
 N:4174:Spellwarp Automaton
@@ -72585,7 +72585,7 @@ F:RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | POWERFUL | FORCE_MAXHP |
 F:NO_CONF | NO_SLEEP | NO_STUN | EMPTY_MIND | RES_TELE |
 S:1_IN_8 |
 S:BR_DISI
-D:An enormous figure made by powerful magic. Slow, but
+D:An enormous figure made by powerful magic. Slow, but 
 D:nearly indestructible.
 
 N:4175:Talos, Masterwork Spellwarp Automaton
@@ -72608,8 +72608,8 @@ F:RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | POWERFUL | FORCE_MAXHP |
 F:NO_CONF | NO_SLEEP | NO_STUN | EMPTY_MIND | RES_TELE |
 S:1_IN_6 |
 S:BA_MANA | BR_DISI | BR_CHAO | S_KIN
-D:A giant figure of a man, shaped from bronze. Your spells
-D:fall short, and your blood runs cold as you behold this
+D:A giant figure of a man, shaped from bronze. Your spells 
+D:fall short, and your blood runs cold as you behold this 
 D:colossal behemoth striding slowly, but purposefully, towards you.
 
 N:4176:Tonberry
@@ -72622,8 +72622,8 @@ B:HIT:HURT:20d20
 F:MORTAL | BASEANGBAND | 
 F:RAND_50 | RAND_25 | FORCE_MAXHP
 F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | 
-D:This sluggish lizard-like being approaches you with a large knife brandished.
-D:You have trouble taking this monster seriously, as it repeatedly seems to trip
+D:This sluggish lizard-like being approaches you with a large knife brandished. 
+D:You have trouble taking this monster seriously, as it repeatedly seems to trip 
 D:over its own feet. Yet you don't remember any tales of heroes who's fought one and lived...
 
 #Note: AC does not reduce damage for EAT_ITEM attacks!
@@ -72636,8 +72636,8 @@ O:20:20:20:20
 B:HIT:EAT_ITEM:30d11
 F:MORTAL | BASEANGBAND | 
 F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT | 
-D:This sluggish lizard-like being approaches you with a large knife brandished.
-D:It is cloaked in brown, and attempting to hide in the shadows ... not very well
+D:This sluggish lizard-like being approaches you with a large knife brandished. 
+D:It is cloaked in brown, and attempting to hide in the shadows ... not very well 
 D:though. But perhaps now is not the time to laugh?
 
 N:4178:Master Tonberry
@@ -72653,7 +72653,7 @@ F:MORTAL | BASEANGBAND |
 F:NO_CONF | NO_SLEEP | 
 S:1_IN_5 |
 S:S_KIN | HEAL | TPORT | TELE_LEVEL
-D:This sluggish lizard-like being approaches you with a large knife brandished.
+D:This sluggish lizard-like being approaches you with a large knife brandished. 
 D:It wears a crown of gold, and erratically stumbles towards you.
 
 N:4179:The Hoard
@@ -72704,7 +72704,7 @@ F:RES_TIME | DROP_SKELETON | DROP_CORPSE |
 F:MORTAL | BASEANGBAND | 
 F:SMART | OPEN_DOOR | TAKE_ITEM | BASH_DOOR |
 S:1_IN_3 | HASTE | SLOW | TELE_LEVEL | BR_TIME
-D:A human, clothed in a blue robe, moving with speed uncanny.
+D:A human, clothed in a blue robe, moving with speed uncanny. 
 D:He seems both young and old.
 
 N:4182:Temporal Champion
@@ -72723,7 +72723,7 @@ F:RES_TIME | MORTAL | BASEANGBAND |
 F:SMART | OPEN_DOOR | TAKE_ITEM | BASH_DOOR |
 F:NO_CONF | NO_SLEEP
 S:1_IN_3 | HASTE | SLOW | TELE_LEVEL | BR_TIME
-D:A human, clothed in a blue robe, moving with speed uncanny.
+D:A human, clothed in a blue robe, moving with speed uncanny. 
 D:He seems to be in several places at once.
 
 N:4183:The Variant Maintainer
@@ -72741,8 +72741,8 @@ F:DROP_CORPSE | CAN_FLY | WEIRD_MIND |
 F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT |
 S:1_IN_3
 S:S_KIN | 
-D:A frazzled stumbling pathetic shadow of a man. He
-D:seems steeped in confusion while mumbling something
+D:A frazzled stumbling pathetic shadow of a man. He 
+D:seems steeped in confusion while mumbling something 
 D:about memory corruption in cmd2.c.
 
 N:4184:Monkey Clone
@@ -72779,9 +72779,9 @@ F:NO_STUN | NO_CONF | NO_SLEEP | POWERFUL |
 S:1_IN_3 |
 S:BR_ELEC | BR_DISE | HASTE | TELE_TO | S_KIN | 
 S:TPORT | ROCKET | BR_CHAO
-D:Zeus, King of the gods and ruler of Mount Olympus, god of the Sky
-D:and Thunder, and nominal husband of Hera. He commands the
-D:Olympians, and his wrath is fearsome. Flee his presence! Unless
+D:Zeus, King of the gods and ruler of Mount Olympus, god of the Sky 
+D:and Thunder, and nominal husband of Hera. He commands the 
+D:Olympians, and his wrath is fearsome. Flee his presence! Unless 
 D:you're a really cute girl, in which case you're screwed.
 
 N:4186:Poseidon, Lord of Seas and Storm
@@ -72804,9 +72804,9 @@ F:IM_FIRE | IM_ACID | IM_POIS | IM_ELEC | IM_COLD
 F:NO_STUN | NO_CONF | NO_SLEEP | 
 S:1_IN_3 |
 S:BA_WATE | BR_DISI
-D:Poseidon, Brother of Zeus, Lord of the Seas and Storm. Entire
-D:cities have been buried by his wrath, and seamen always utter
-D:a prayer to him for safe passage. He lost the patronage of
+D:Poseidon, Brother of Zeus, Lord of the Seas and Storm. Entire 
+D:cities have been buried by his wrath, and seamen always utter 
+D:a prayer to him for safe passage. He lost the patronage of 
 D:Athens to Athena.
 
 N:4187:Hades, Ruler of the Underworld
@@ -72832,8 +72832,8 @@ F:NO_STUN | NO_CONF | NO_SLEEP |
 S:1_IN_3 |
 S:BR_DARK | BR_NETH | BA_NETH |
 S:HAND_DOOM | BR_DISI
-D:Hades, Ruler of the Underworld, as demarked by the River Styx. He
-D:rarely lets those who have seen his realm leave it. He is ever
+D:Hades, Ruler of the Underworld, as demarked by the River Styx. He 
+D:rarely lets those who have seen his realm leave it. He is ever 
 D:protective of his time with Persephone, daughter of Demeter.
 
 N:4188:Athena, the Goddess of Wisdom
@@ -72859,8 +72859,8 @@ F:NO_STUN | NO_CONF | NO_SLEEP |
 S:1_IN_2 |
 S:HASTE | HEAL | 
 S:BA_MANA | TELE_TO | TELE_AWAY
-D:Athena is the great goddess of wisdom and the protector of
-D:Athens. She was born of Zeus and the Titan Metis, and her
+D:Athena is the great goddess of wisdom and the protector of 
+D:Athens. She was born of Zeus and the Titan Metis, and her 
 D:cunning far surpasses that of the other deities.
 
 N:4189:Ares, the God of War
@@ -72883,9 +72883,9 @@ F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS | IM_ELEC
 F:NO_STUN | NO_CONF | NO_SLEEP | NO_FEAR
 S:1_IN_5 |
 S:TELE_TO | 
-D:Ares is the bold son of Zeus and Hera, whose very name is
-D:feared and respected by warriors and citizens alike. His
-D:legendary combat prowess exceeds that of Zeus and
+D:Ares is the bold son of Zeus and Hera, whose very name is 
+D:feared and respected by warriors and citizens alike. His 
+D:legendary combat prowess exceeds that of Zeus and 
 D:Poseidon, but he is less skilled in wiles than the other Olympians.
 
 N:4190:Hermes, the Messenger God
@@ -72911,9 +72911,9 @@ S:1_IN_3 |
 S:HASTE | SLOW | BR_TIME | BR_NEXU | TPORT
 S:TELE_TO | TELE_AWAY | S_KIN | HEAL
 S:S_KIN | BA_DARK | 
-D:Hermes, the Messenger, is the extremely cunning diplomat used
-D:by the Olympians to negotiate truces. With his Winged Sandals
-D:and his powerful magic, there is no place barred from him, and
+D:Hermes, the Messenger, is the extremely cunning diplomat used 
+D:by the Olympians to negotiate truces. With his Winged Sandals 
+D:and his powerful magic, there is no place barred from him, and 
 D:there is no way to detain him.
 
 N:4191:Apollo, the Sun God
@@ -73125,8 +73125,8 @@ F:NO_CONF | NO_SLEEP | HAS_LITE
 S:1_IN_4 |
 S:ARROW_4 | TPORT | HEAL | BO_FIRE | BA_ACID |
 S:SHRIEK | HASTE | TELE_TO | S_KIN
-D:Arthur Pendragon, who wields the Sword in the Stone and
-D:rules the Knights of Camelot. He charges at you with
+D:Arthur Pendragon, who wields the Sword in the Stone and 
+D:rules the Knights of Camelot. He charges at you with 
 D:righteous vengeance for upsetting his realm.
 
 N:4201:Sir Lancelot
@@ -73147,9 +73147,9 @@ F:IM_FIRE | IM_COLD | IM_ACID | IM_ELEC |
 F:NO_FEAR | NO_SLEEP | NO_CONF | HAS_LITE
 S:1_IN_6 |
 S:TELE_TO | HEAL | S_KIN
-D:The strongest of the Knights, Lancelot is also the most handsome,
-D:and leaves a trail of broken hearts in his wake. Fated never
-D:to be with his true love Guinevere, Lancelot nevertheless protects
+D:The strongest of the Knights, Lancelot is also the most handsome, 
+D:and leaves a trail of broken hearts in his wake. Fated never 
+D:to be with his true love Guinevere, Lancelot nevertheless protects 
 D:her whenever he needs to, even if it means destroying Camelot
 
 N:4202:Sir Gawain
@@ -73169,7 +73169,7 @@ F:IM_FIRE | IM_POIS | IM_ACID | IM_COLD |
 F:NO_SLEEP | NO_CONF | HAS_LITE
 S:1_IN_3 |
 S:ARROW_4 | BO_MANA | BLINK | TPORT | S_KIN | HEAL
-D:The second strongest of the Round Table, Gawain is usually
+D:The second strongest of the Round Table, Gawain is usually 
 D:the voice of reason.
 
 N:4203:Sir Galahad
@@ -73191,8 +73191,8 @@ F:IM_FIRE | IM_ELEC | IM_COLD | IM_POIS | IM_ACID |
 F:NO_SLEEP | NO_CONF | HAS_LITE
 S:1_IN_5 |
 S:ARROW_4 | TELE_TO | TPORT | S_KIN | HEAL
-D:Sir Galahad the Pure takes after his father Lancelot in his
-D:combat abilities and after his mother Elaine in his calm. He
+D:Sir Galahad the Pure takes after his father Lancelot in his 
+D:combat abilities and after his mother Elaine in his calm. He 
 D:is the one who finally completed the Quest for the Holy Grail.
 
 N:4204:Sir Gareth
@@ -73214,8 +73214,8 @@ F:IM_FIRE | IM_ELEC | IM_COLD |
 F:NO_SLEEP | NO_CONF | HAS_LITE
 S:1_IN_5 |
 S:ARROW_4 | BO_ELEC | HASTE | TELE_TO | TPORT | S_KIN | HEAL
-D:The protege of Lancelot and the younger brother of Gawain,
-D:Gareth served as a Nexus of the Round Table, and after his
+D:The protege of Lancelot and the younger brother of Gawain, 
+D:Gareth served as a Nexus of the Round Table, and after his 
 D:death, Camelot itself soon dissolved.
 
 N:4205:Sir Kay
@@ -73237,8 +73237,8 @@ F:IM_FIRE |
 F:NO_SLEEP | NO_CONF | HAS_LITE
 S:1_IN_6 |
 S:BO_FIRE | BLINK | TPORT | S_KIN
-D:The weakest and most petty of the knights, Kay is often bullying
-D:squires and pages, forcing them to do demeaning tasks. Several
+D:The weakest and most petty of the knights, Kay is often bullying 
+D:squires and pages, forcing them to do demeaning tasks. Several 
 D:of the Knights in their youths suffered Kay.
 
 N:4206:Camelot Knight
@@ -73281,9 +73281,9 @@ F:IM_FIRE | IM_POIS | IM_ELEC | IM_ACID | IM_COLD |
 F:NO_SLEEP | NO_CONF |  
 S:1_IN_3 |
 S:BO_MANA | TPORT | HEAL | HASTE | BA_WATE
-D:The great keeper of Pagan traditions, Morgana Le Fay
-D:is seen as a savior by some, and a witch by many. She
-D:refused to let her lands be invaded by Christianity,
+D:The great keeper of Pagan traditions, Morgana Le Fay 
+D:is seen as a savior by some, and a witch by many. She 
+D:refused to let her lands be invaded by Christianity, 
 D:and took to arms against her brother and lover.
 
 N:4208:Mordred
@@ -73305,8 +73305,8 @@ F:IM_ELEC | IM_ACID | IM_COLD |
 F:NO_SLEEP | NO_CONF |   
 S:1_IN_6 |
 S:BO_MANA | TPORT | HEAL | HASTE | BA_WATE
-D:A mighty spellsword and the son of Morgana Le Fay,
-D:Mordred is prophesized to unite the lands after
+D:A mighty spellsword and the son of Morgana Le Fay, 
+D:Mordred is prophesized to unite the lands after 
 D:the fall of Camelot.
 
 N:4209:Fearmaster
@@ -73323,8 +73323,8 @@ F:SMART | OPEN_DOOR | TAKE_ITEM | BASH_DOOR |
 F:MORTAL | BASEANGBAND | 
 F:NO_FEAR | 
 S:1_IN_3 | SCARE
-D:A human, covered in bleached leather and decorated with
-D:bones of foes defeated. The sight of him puts fear
+D:A human, covered in bleached leather and decorated with 
+D:bones of foes defeated. The sight of him puts fear 
 D:into your heart.
 
 N:4210:Grand Fearlord
@@ -73343,8 +73343,8 @@ F:MORTAL | BASEANGBAND |
 F:SMART | OPEN_DOOR | TAKE_ITEM | BASH_DOOR |
 F:NO_FEAR | POWERFUL
 S:1_IN_2 | SCARE | S_KIN | TELE_TO
-D:A human, covered in bone armor and decorated with the
-D:shriveled, preserved eyeballs of foes defeated. The
+D:A human, covered in bone armor and decorated with the 
+D:shriveled, preserved eyeballs of foes defeated. The 
 D:sight of him strikes terror into your soul.
 
 N:4211:The Questing Beast
@@ -73365,10 +73365,10 @@ F:IM_ACID | IM_ELEC | IM_FIRE | IM_POIS | IM_COLD |
 S:1_IN_3 |
 S:BLINK | HEAL | SHRIEK | SCARE | CONF | BLIND |
 S:MIND_BLAST | BR_CHAO | BR_NEXU
-D:Beast Glatisant, the Barking Beast, is a strange creature
-D:indeed. It has the head of a snake, the body of a leopard,
-D:the haunches of a lion, and the feet of a deer. A great
-D:noise rumbles from its belly, a barking like "thirty couple
+D:Beast Glatisant, the Barking Beast, is a strange creature 
+D:indeed. It has the head of a snake, the body of a leopard, 
+D:the haunches of a lion, and the feet of a deer. A great 
+D:noise rumbles from its belly, a barking like "thirty couple 
 D:hounds questing."
 #Description help from wikipedia
 
@@ -73390,7 +73390,7 @@ F:EVIL | GIANT | MALE
 F:DROP_CORPSE | 
 S:1_IN_6
 S:ARROW_4
-D:A minor rock giant, a being made of living stone.
+D:A minor rock giant, a being made of living stone. 
 D:It's boring straight for you!
 
 N:4213:Ice giant
@@ -73411,7 +73411,7 @@ F:IM_COLD | NO_CONF | NO_SLEEP | SUSCEP_FIRE
 F:DROP_SKELETON | DROP_CORPSE | 
 S:1_IN_3 |
 S:BR_COLD | BO_ICEE | HEAL | TELE_TO | BLINK | ARROW_4
-D:An ancient giant nearly twenty feet tall. The air around
+D:An ancient giant nearly twenty feet tall. The air around 
 D:you suddenly grows chill.
 
 N:4214:Elder fire giant
@@ -73432,7 +73432,7 @@ F:IM_FIRE | SUSCEP_COLD | NO_CONF | NO_SLEEP
 F:DROP_SKELETON | DROP_CORPSE | 
 S:1_IN_3 |
 S:BO_PLAS | BR_PLAS | BR_FIRE | ARROW_4 | HEAL | BLINK | TELE_TO
-D:An ancient giant nearly twenty feet tall. The air around
+D:An ancient giant nearly twenty feet tall. The air around 
 D:you suddenly grows hot.
 
 N:4215:Typhoeus, the Storm Giant
@@ -73456,8 +73456,8 @@ S:BR_ELEC | BR_GRAV | ARROW_4
 S:TELE_TO | TELE_AWAY | TPORT
 S:S_KIN | S_HI_UNDEAD
 S:HEAL | HASTE
-D:Typhoeus is a monstrous, immortal storm giant, huge beyond
-D:comprehension. According to legend, he was defeated by Zeus
+D:Typhoeus is a monstrous, immortal storm giant, huge beyond 
+D:comprehension. According to legend, he was defeated by Zeus 
 D:and imprisoned in the Pit of Tartaros. I guess he managed to escape!
 
 N:4216:Elder storm giant
@@ -73477,7 +73477,7 @@ F:EVIL | GIANT | IM_COLD | IM_ELEC | MALE | WILD_MOUNTAIN
 F:DROP_SKELETON | DROP_CORPSE | 
 S:1_IN_3 |
 S:BLINK | TELE_TO | BR_ELEC | BR_GRAV | ARROW_4 | HEAL
-D:It is a thirty foot tall giant wreathed in lighting. Winds howl about its
+D:It is a thirty foot tall giant wreathed in lighting. Winds howl about its 
 D:massive frame.
 
 #From Posband: Empty Body for The Possessor
@@ -73489,10 +73489,10 @@ E:1:1:1:2:1:1
 O:20:20:20:20
 F:PASS_WALL | INVISIBLE | COLD_BLOOD | POSSESSOR |
 F:BASEANGBAND | 
-D:A naked spirit of a great sage, who had left his own body forever
-D: to seek and dominate the bodies of others. It looks like a small
-D: cloud of glowing white mist. In this form it is harmless, but
-D: upon possessing the dead body of another creature it will be able
+D:A naked spirit of a great sage, who had left his own body forever 
+D: to seek and dominate the bodies of others. It looks like a small 
+D: cloud of glowing white mist. In this form it is harmless, but 
+D: upon possessing the dead body of another creature it will be able 
 D: to use all its powers.
 
 N:4218:Marilith
@@ -73588,7 +73588,7 @@ F:MORTAL | BASEANGBAND |
 F:EVIL | NO_CONF | NO_SLEEP | SMART
 S:1_IN_7 |
 S:DARKNESS | CAUSE_4 | BO_ICEE
-D:A naga adapted to underwater life. She has a fish-like tail and a pair
+D:A naga adapted to underwater life. She has a fish-like tail and a pair 
 D:of gills.
 
 N:4224:Narwhal
@@ -73607,8 +73607,8 @@ F:ONLY_ITEM | DROP_2D2 | DROP_GOOD |
 F:IM_COLD | RES_WATE |
 F:IM_POIS | NO_CONF | NO_SLEEP | NO_STUN |
 F:DROP_CORPSE | 
-D:This is the whale of the tradition which gets across to the Inuit
-D:who lives in the world of winter. It is said that the mystical horn
+D:This is the whale of the tradition which gets across to the Inuit 
+D:who lives in the world of winter. It is said that the mystical horn 
 D:of this whale cures all illnesses.
 
 N:4225:Quantum dot
@@ -73770,7 +73770,7 @@ F:MOVE_BODY | ANIMAL | GOOD | NONLIVING |
 F:RES_TELE | CAN_SWIM | WILD_SWAMP | WILD_SHORE | 
 S:1_IN_10 |
 S:SHRIEK | MIND_BLAST
-D:It`s a slime colony.
+D:It`s a slime colony. 
 D:If you so much as DARE to touch it.
 
 N:4236:Nino, leader of the Legion
@@ -74000,7 +74000,7 @@ S:1_IN_4 |
 S:TPORT | SCARE | BLIND | CONF |
 S:BO_COLD | BO_MANA | BO_ICEE | BA_COLD | BR_COLD |
 S:S_KIN
-D:He is the son of the lord of Ashihara and resists Amaterasu's conquest.
+D:He is the son of the lord of Ashihara and resists Amaterasu's conquest. 
 D:He is brave and likes conflicts.
 
 N:4246:Kotoshiro, the Oracle
@@ -74024,7 +74024,7 @@ S:1_IN_2 |
 S:BLINK | TPORT | TELE_AWAY | TELE_LEVEL |
 S:HASTE | SLOW | SCARE | BLIND |
 S:CAUSE_4 | BA_ACID | BA_WATE |
-D:He is the oracle of the country Ashihara, and he is the son of
+D:He is the oracle of the country Ashihara, and he is the son of 
 D:the lord of Ashihara. He do not like conflicts.
 
 N:4247:Okuninushi, the Conqueror
@@ -74048,7 +74048,7 @@ S:TPORT | TELE_AWAY | TELE_TO | TRAPS |
 S:SCARE | CONF | BLIND |
 S:BO_FIRE | BA_FIRE | BA_ELEC | BA_WATE |
 S:S_MONSTER
-D:He obtained the country Ashihara defeating the brothers.
+D:He obtained the country Ashihara defeating the brothers. 
 D:He and his wife cheated Susanoo to get his power.
 
 N:4248:Omoikane, Spirit of Wisdom
@@ -74073,8 +74073,8 @@ S:BLINK | TPORT | TELE_AWAY | SCARE | CONF | BLIND |
 S:DRAIN_MANA | BRAIN_SMASH | CAUSE_3 | CAUSE_4 |
 S:BO_MANA | BA_WATE | BA_CHAO |
 S:HEAL | S_ANT | S_SPIDER | S_HOUND | S_KIN |
-D:He is the smartest spirit of the Takamagahara.
-D:His knowledge is wider than the land, his intellects are higher than mountains,
+D:He is the smartest spirit of the Takamagahara. 
+D:His knowledge is wider than the land, his intellects are higher than mountains, 
 D:and his consideration is deeper than seas.
 
 N:4249:Takemikazuchi, the Thunder
@@ -74097,7 +74097,7 @@ F:DROP_CORPSE | DROP_SKELETON
 S:1_IN_5 |
 S:TPORT | SCARE | CONF | BLIND |
 S:BO_ELEC | BO_MANA | BA_ELEC | BR_ELEC | BR_MANA |
-D:He is the spirit of a thunder or swords.
+D:He is the spirit of a thunder or swords. 
 D:He is very brave and dauntless.
 
 N:4250:Izanami, Spirit of Yomi
@@ -74124,7 +74124,7 @@ S:SCARE | BLIND | CONF | MIND_BLAST |
 S:CAUSE_3 | CAUSE_4 | BO_ACID | BO_NETH |
 S:BA_ELEC | BA_POIS | BA_NETH | BA_DARK |
 S:S_UNDEAD | S_HI_UNDEAD | S_SPIDER
-D:She was a beautiful spirit before, but she is a terrible spirit of
+D:She was a beautiful spirit before, but she is a terrible spirit of 
 D:the hell now. Fear its anger!
 
 N:4251:Izanagi, the Spirit
@@ -74151,7 +74151,7 @@ S:SCARE | BLIND | DRAIN_MANA |
 S:CAUSE_3 | CAUSE_4 | BO_ACID | BO_WATE |
 S:BA_ACID | BA_WATE | BA_CHAO | BR_LITE |
 S:S_MONSTER | S_ANGEL | S_HI_DRAGON
-D:He and his wife Izanami created many islands and gave birth to many spirits.
+D:He and his wife Izanami created many islands and gave birth to many spirits. 
 D:His power may not have become weak yet.
 
 N:4252:Susanoo, the Angry
@@ -74174,7 +74174,7 @@ F:REGENERATE | HAS_LITE
 F:DROP_CORPSE | DROP_SKELETON
 S:1_IN_4 |
 S:HEAL | TPORT | TELE_TO | SCARE | BLIND | S_MONSTER
-D:This child of Izanagi is very impatient.
+D:This child of Izanagi is very impatient. 
 D:He does not obey his father's instruction for lording the sea.
 
 N:4253:Tsukuyomi, Spirit of Moon
@@ -74201,7 +74201,7 @@ S:SCARE | CONF | HOLD | BRAIN_SMASH | DRAIN_MANA |
 S:CAUSE_3 | CAUSE_4 | BO_COLD | BO_ICEE |
 S:BA_COLD | BA_NETH | BA_DARK |
 S:S_ANGEL | S_HI_UNDEAD | S_KIN
-D:He is one of the 3 children of Izanagi who lords the country of the night.
+D:He is one of the 3 children of Izanagi who lords the country of the night. 
 D:There is no rumor that he get along well with the his elder sister Amaterasu.
 
 N:4254:Amaterasu, Spirit of Sun
@@ -74228,8 +74228,8 @@ S:TPORT | TELE_TO | TELE_AWAY | TELE_LEVEL |
 S:CONF | BLIND | DRAIN_MANA |
 S:CAUSE_4 | BO_MANA | BO_PLAS | BA_FIRE | BR_LITE |
 S:HEAL | S_MONSTER | S_ANGEL | S_HI_DRAGON
-D:She is the spirit of the sun that lords Takamagahara that is the country
-D:of heaven. Her brightness lights up the world.
+D:She is the spirit of the sun that lords Takamagahara that is the country 
+D:of heaven. Her brightness lights up the world. 
 D:She and her children plot to conquest of countries of the ground.
 
 # Forest critters :blame Gwarl for these
@@ -74249,7 +74249,7 @@ F:IM_FIRE | IM_ACID | RES_WATE | IM_COLD | IM_POIS | RES_NETH
 F:NO_SLEEP | NO_CONF | WILD_WOOD | 
 S:1_IN_4 |
 S:BO_WATE | TELE_TO | BLINK | TPORT | HEAL | BO_ICEE | BO_COLD | BA_WATE
-D:This malevolent water sprite babbles and shifts in the shadows of the
+D:This malevolent water sprite babbles and shifts in the shadows of the 
 D:forest, luring you toward a watery doom.
 
 N:4256:Shadow fairy
@@ -74269,7 +74269,7 @@ F:WILD_WOOD |
 S:1_IN_4
 S:CONF | BLIND | SLOW | CAUSE_1 |
 S:DARKNESS | TELE_TO | BLINK | TPORT | HEAL | BO_MANA
-D:This mysterious creature makes its home in this forest and uses its
+D:This mysterious creature makes its home in this forest and uses its 
 D:magic to drive out intruders like you.
 
 N:4257:Fiendish donkey
@@ -74287,7 +74287,7 @@ F:IM_ACID | RES_NETH | IM_POIS |
 F:ANIMAL  | FRIEND
 S:1_IN_20
 S:BR_POIS | SHRIEK
-D:A hellish donkey with glowing red eyes, snorting acrid fumes and honking
+D:A hellish donkey with glowing red eyes, snorting acrid fumes and honking 
 D:with the fury of the damned.
 
 N:4258:Pumpkin man
@@ -74305,7 +74305,7 @@ F:NO_SLEEP | NO_CONF | WILD_WOOD | RAND_50
 F:RES_LITE | IM_POIS
 S:1_IN_7
 S:CONF | HOLD | BLIND | CAUSE_1 | DARKNESS | SCARE
-D:A bundle of sticks with a pumpkin for a head is grinning madly as it
+D:A bundle of sticks with a pumpkin for a head is grinning madly as it 
 D:dances gracelessly toward you.
 
 N:4259:Devil's Huntsman
@@ -74327,8 +74327,8 @@ F:NO_SLEEP | IM_POIS | WILD_WOOD |
 S:1_IN_7
 S:DARKNESS | TELE_TO | TPORT | S_HOUND | HEAL |
 S:HASTE | SHRIEK |
-D:The Devil's Huntsman serves the witches and their master. He wears a
-D:rotting cape about his body and draws his weapon slowly. He has been
+D:The Devil's Huntsman serves the witches and their master. He wears a 
+D:rotting cape about his body and draws his weapon slowly. He has been 
 D:preparing for the Great Hunt and in a low voice he intones your name.
 
 N:4260:Aude
@@ -74351,8 +74351,8 @@ F:NO_SLEEP | NO_CONF |
 S:1_IN_3 |
 S:BO_FIRE | TPORT | HEAL | BA_FIRE | BO_ELEC | BA_ELEC
 S:BO_COLD | BA_COLD | BO_PLAS | BO_ICEE | TELE_TO |
-D:Her shimmering long hair, the color of corn-silk shimmers as it catches
-D:the sparks from the fire. Aude looks at you with moistened lips and half
+D:Her shimmering long hair, the color of corn-silk shimmers as it catches 
+D:the sparks from the fire. Aude looks at you with moistened lips and half 
 D:closed eyes issuing an invitation you somehow cannot resist.
 
 N:4261:Helga
@@ -74376,7 +74376,7 @@ F:NO_SLEEP | NO_CONF |
 S:1_IN_3 |
 S:TPORT | HEAL | BA_NETH | CAUSE_3 | ANIM_DEAD
 S:BLINK | SHRIEK | BO_NETH | TELE_TO
-D:Helga has been called back from the Nether realms to join Gertrude.
+D:Helga has been called back from the Nether realms to join Gertrude. 
 D:Born in a half-living, half-dead state, she harnesses the power 
 D:of the undead to destroy you!
 
@@ -74401,9 +74401,9 @@ F:NO_SLEEP | NO_CONF |
 S:1_IN_3 |
 S:BA_ACID | HEAL | CAUSE_3 | BRAIN_SMASH
 S:BA_POIS | TRAPS | BO_MANA | TELE_AWAY | TELE_TO
-D:This battered old soul has wandered far and long from her coven Dulritch.
-D:The years have not been good to her, her eyes filled with weary hatred,
-D:her mottled cheeks and her gnarled skin testify to her long suffering and
+D:This battered old soul has wandered far and long from her coven Dulritch. 
+D:The years have not been good to her, her eyes filled with weary hatred, 
+D:her mottled cheeks and her gnarled skin testify to her long suffering and 
 D:an intense abhorrence for all beauty and youth.
 
 # Demons from Vanilla
@@ -74425,8 +74425,8 @@ F:EVIL | DEMON | NO_CONF | NO_SLEEP | INVISIBLE |
 F:IM_ACID | IM_ELEC | IM_POIS | IM_COLD | IM_FIRE | RES_NETH |
 S:1_IN_6 |
 S:BA_ELEC | BA_COLD | BO_ICEE | SCARE | S_DEMON | S_KIN |
-D:It is a demon made almost entirely out of bones. It is humanoid, but with
-D:a large tail similar to that of a giant scorpion, and emits a foul smell
+D:It is a demon made almost entirely out of bones. It is humanoid, but with 
+D:a large tail similar to that of a giant scorpion, and emits a foul smell 
 D:of decay and rot. They are despised even in the hells.
 
 # Tomenet
@@ -74446,7 +74446,7 @@ F:IM_ELEC | IM_POIS | DROP_CORPSE | RES_NETH | RES_DARK |
 F:ANIMAL | CAN_SWIM | HURT_LITE
 S:1_IN_4
 S:BR_DARK
-D:A large reptile in black scales, burning the earth with
+D:A large reptile in black scales, burning the earth with 
 D:the touch of hell where it steps.
 
 # New things
@@ -74470,7 +74470,7 @@ F:EVIL | NO_CONF | NO_SLEEP | DROP_SKELETON |
 S:1_IN_3 |
 S:BR_DARK | BR_NETH | SCARE | BO_NETH | BA_DARK |
 S:S_HI_UNDEAD | S_UNDEAD | S_DEMON | ANIM_DEAD |
-D:Nebiros, the General of Hell keeps watch over all demons. One of the
+D:Nebiros, the General of Hell keeps watch over all demons. One of the 
 D:greatest necromancers in Hell, he appears in the form of a raven.
 
 N:4266:Atropos, the Sister of Fate
@@ -74493,7 +74493,7 @@ F:DROP_CORPSE | DROP_SKELETON
 S:1_IN_3 |
 S:S_MONSTER | S_UNIQUE | S_WRAITH |
 S:SCARE | HOLD | BLIND | CONF | TPORT | HEAL | HASTE |
-D:Atropos is the eldest of the sisters of fate and cuts the threads of
+D:Atropos is the eldest of the sisters of fate and cuts the threads of 
 D:life with her shears. She has decided that your time is up.
 
 N:4267:Greater naga
@@ -74552,7 +74552,7 @@ F:DROP_CORPSE |
 S:1_IN_3
 S:BR_SOUN | BLINK | TELE_TO | BR_POIS | TPORT |
 S:CONF | SCARE |
-D:The giant moth from Mothra island is here to face the threat to her
+D:The giant moth from Mothra island is here to face the threat to her 
 D:home.
 
 N:4270:King Ghidora
@@ -74574,7 +74574,7 @@ F:EVIL | IM_FIRE | IM_COLD | NO_CONF | NO_SLEEP | IM_POIS
 F:DROP_CORPSE | 
 S:1_IN_3
 S:BR_DISE | BR_PLAS | BR_CHAO | TPORT | BR_ELEC
-D:An ancient dragon from outer space with three heads. If he is not
+D:An ancient dragon from outer space with three heads. If he is not 
 D:stopped he will destroy the world.
 
 N:4271:Thanatos, God of Death
@@ -74617,7 +74617,7 @@ F:DRAGON | RES_SHAR | NO_CONF | NO_SLEEP | RES_LITE
 F:DROP_CORPSE | 
 S:1_IN_5 |
 S:BR_WALL | BR_LITE | BR_DARK | BR_SHAR | 
-D:Greatest of the crystal dragons, it threatens to tear you asunder with its
+D:Greatest of the crystal dragons, it threatens to tear you asunder with its 
 D:mighty claws.
 
 N:4273:Cacodemon
@@ -74655,8 +74655,8 @@ F:DROP_CORPSE | DROP_SKELETON
 S:1_IN_3 |
 S:BR_POIS | BR_ACID | BR_DARK |
 S:MIND_BLAST | CAUSE_4 | S_MONSTER | TELE_TO |
-D:"And there is another name by which these creatures are known. This name is
-D:Chitauli. Now, the word Chitauli means "the dictators, the ones who tell us
+D:"And there is another name by which these creatures are known. This name is 
+D:Chitauli. Now, the word Chitauli means "the dictators, the ones who tell us 
 D:the law". In other words, they who tell us, secretly, what we are to do."
 
 N:4275:Umbaba-Samahongo
@@ -74678,9 +74678,9 @@ F:DROP_CORPSE | DROP_SKELETON
 S:1_IN_3 |
 S:BR_POIS | BR_ACID | BR_DARK | HASTE
 S:BRAIN_SMASH | S_KIN | S_MONSTER | BA_NUKE | TELE_TO
-D:"The lord king, the great father of the terrible eyes. And this god is
-D:waiting for the day when the surface of the Earth will be cleared of
-D:human beings so that he, and his children, the Chitauli, can come out
+D:"The lord king, the great father of the terrible eyes. And this god is 
+D:waiting for the day when the surface of the Earth will be cleared of 
+D:human beings so that he, and his children, the Chitauli, can come out 
 D:and enjoy the heat of the Sun."
 
 N:4276:Flame spider
@@ -74697,7 +74697,7 @@ F:ANIMAL | AURA_FIRE | IM_FIRE | SUSCEP_COLD
 F:DROP_SKELETON | DROP_CORPSE | 
 S:1_IN_5
 S:BR_FIRE | 
-D:A spider wreathed in flames. It seems to pulse and quiver with
+D:A spider wreathed in flames. It seems to pulse and quiver with 
 D:barely constrained energy.
 
 N:4277:Nexus spider
@@ -74714,7 +74714,7 @@ F:ANIMAL | RES_NEXU
 F:DROP_SKELETON | DROP_CORPSE | 
 S:1_IN_5 |
 S:BR_NEXU | TELE_TO | 
-D:A spider which inhabits the crossroads of time and space, pulsating
+D:A spider which inhabits the crossroads of time and space, pulsating 
 D:with barely constrained energy.
 
 N:4278:Ice spider
@@ -74731,7 +74731,7 @@ F:ANIMAL | IM_COLD | SUSCEP_FIRE
 F:DROP_SKELETON | DROP_CORPSE | 
 S:1_IN_5 |
 S:BO_ICEE
-D:A giant white spider, seemingly frozen solid yet with an odd
+D:A giant white spider, seemingly frozen solid yet with an odd 
 D:sense of imminent motion.
 
 N:4279:Venom spider
@@ -74780,7 +74780,7 @@ F:ANIMAL | UNDEAD | EVIL | HURT_LITE |
 F:IM_POIS | RES_NETH
 S:1_IN_5 |
 S:BR_NETH | 
-D:Rotting, putrescent, and shrouded in darkness, this bloated
+D:Rotting, putrescent, and shrouded in darkness, this bloated 
 D:abomination is back from the nether world to hunt the living.
 
 N:4282:Hell spider
@@ -74796,7 +74796,7 @@ F:MORTAL | BASEANGBAND |
 F:ANIMAL | IM_FIRE | DEMON | EVIL
 S:1_IN_5 |
 S:BR_FIRE | 
-D:A giant spider from the planes of hell sent to rend your soul in
+D:A giant spider from the planes of hell sent to rend your soul in 
 D:eternal damnation.
 
 # Tomenet
@@ -74817,9 +74817,9 @@ F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | RES_LITE |
 F:NO_CONF | NO_SLEEP | CAN_FLY | KILL_WALL | NO_FEAR | REFLECTING | RES_TELE | NO_STUN |
 S:1_IN_3 |
 S:TELE_TO | BR_MANA | BR_DISE | S_ANGEL
-D:An undeviable presence, designated to watch the stars and the void and maintain
-D:their balance. Its aura is pure beyond expression, its eyes reflect supreme
-D:laws beyond comprehension, daring to look at it will drive you insane,
+D:An undeviable presence, designated to watch the stars and the void and maintain 
+D:their balance. Its aura is pure beyond expression, its eyes reflect supreme 
+D:laws beyond comprehension, daring to look at it will drive you insane, 
 D:let alone fighting it!
 
 N:4284:Michael, the Guardian Overlord
@@ -74842,11 +74842,11 @@ S:1_IN_3 |
 S:TELE_TO | BR_MANA | BR_DISE | BR_CONF | S_ANGEL | S_MONSTER
 S:BR_LITE | BO_MANA | BO_WATE | BRAIN_SMASH |
 S:HASTE | HEAL | DRAIN_MANA
-D:Through many succeeding cycles of time, as ray after ray provided the pathway
-D:for the descent of new spirits, lord Michael has remained as the guardian
-D:overlord of the angelic host, the elemental kingdom and humanity. He shall
-D:not fold his cosmic wings about him to return home until the final angelic
-D:being is freed, the last man is redeemed and the last elemental returned to
+D:Through many succeeding cycles of time, as ray after ray provided the pathway 
+D:for the descent of new spirits, lord Michael has remained as the guardian 
+D:overlord of the angelic host, the elemental kingdom and humanity. He shall 
+D:not fold his cosmic wings about him to return home until the final angelic 
+D:being is freed, the last man is redeemed and the last elemental returned to 
 D:its perfect state.
 
 N:4285:Tik'srvzllat
@@ -74872,11 +74872,11 @@ S:S_UNDEAD | S_DEMON | S_DRAGON |
 S:S_UNIQUE | S_WRAITH |
 S:S_HI_UNDEAD | S_HI_DRAGON | S_KIN |
 S:BR_DISI | BR_NETH
-D:A disembodied and barely sentient mind, Tik'srvzllat floated
-D:through the void for eons before being awakened by sorcery, pulled
-D:into the nether realm, and shaped into the being you see before you.
-D:A flickering purple outline of a sphere, with eerie yellow-purple
-D:mist circling rapidly around it, Tik'srvzllat threatens your sanity
+D:A disembodied and barely sentient mind, Tik'srvzllat floated 
+D:through the void for eons before being awakened by sorcery, pulled 
+D:into the nether realm, and shaped into the being you see before you. 
+D:A flickering purple outline of a sphere, with eerie yellow-purple 
+D:mist circling rapidly around it, Tik'srvzllat threatens your sanity 
 D:with its appearance alone.
 
 N:4286:Dor
@@ -74900,8 +74900,8 @@ F:COLD_BLOOD | RES_DISE | NO_STUN |
 F:DROP_CORPSE |
 S:1_IN_1 |
 S:ROCKET
-D:This golem beholder is a perfect sentry and won't let anything come close.
-D:White mouldy flesh covered by metal plating holds a black lidless eye,
+D:This golem beholder is a perfect sentry and won't let anything come close. 
+D:White mouldy flesh covered by metal plating holds a black lidless eye, 
 D:slowly turning around and around forever.
 
 # orcs from FA/Sil
@@ -74940,8 +74940,8 @@ F:UNIQUE | MALE | CAN_SPEAK | FORCE_MAXHP | ESCORT | WILD_MOUNTAIN |
 F:MORTAL | BASEANGBAND | 
 F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | EVIL | ORC | IM_POIS | RES_DARK
-D:A huge champion of the orcs, clad in thick black armor
-D: and carrying a shield and much-notched axe. He is
+D:A huge champion of the orcs, clad in thick black armor 
+D: and carrying a shield and much-notched axe. He is 
 D: scarred of face and his eyes are small and baleful.
 
 N:4289:Boldog, the Merciless
@@ -75076,7 +75076,7 @@ F:OPEN_DOOR | BASH_DOOR | ESCORT | DROP_SKELETON | DROP_CORPSE
 F:EVIL | ORC | RES_DARK | CAN_SPEAK
 S:1_IN_10 |
 S:ARROW_4 | S_KIN | 
-D:An armoured orc of great size who has won respect and power among
+D:An armoured orc of great size who has won respect and power among 
 D:his fellow orcs.
 
 # new
@@ -75111,8 +75111,8 @@ F:NO_CONF | NO_FEAR | NO_SLEEP | NO_STUN | BASH_DOOR |
 F:RAND_50 | RAND_25 | CAN_FLY |
 S:1_IN_2
 S:BR_COLD | BR_SOUN | S_KIN
-D:A violent icy whirlpool, brought from the frozen wastes of the Helcaraxe
-D:by Morgoth as guard and entertainment. Smaller vortices arise on its edges,
+D:A violent icy whirlpool, brought from the frozen wastes of the Helcaraxe 
+D:by Morgoth as guard and entertainment. Smaller vortices arise on its edges, 
 D:and you feel as if you will never be free of its deafening roar.
 
 N:4298:The Storm of Unmagic
@@ -75132,7 +75132,7 @@ F:NO_CONF | NO_FEAR | NO_SLEEP | NO_STUN | RES_CHAO | RES_TIME |
 F:RAND_50 | RAND_25 | CAN_FLY | ATTR_ANY | KILL_WALL | MOVE_BODY | BASH_DOOR |
 S:1_IN_2
 S:BR_CHAO | BR_DISE | BR_TIME |
-D:Howling through the disintegrating dungeon, this awesome whirlpool of
+D:Howling through the disintegrating dungeon, this awesome whirlpool of 
 D:Unmagic rips the enchantments from everything it touches.
 
 N:4299:Beelzebub, Lord of the Flies
@@ -75196,7 +75196,7 @@ F:OPEN_DOOR | BASH_DOOR | MOVE_BODY | IM_POIS | RES_DARK | NO_CONF |
 F:COLD_BLOOD |
 S:1_IN_5 |
 S:DARKNESS | BLIND | CONF | SCARE | TELE_TO | BR_DARK
-D:It waits for you in the ink-black of the dungeon.
+D:It waits for you in the ink-black of the dungeon. 
 D:It seems to be made entirely of claws and of teeth.
 
 N:4302:The Shadow Fiend
@@ -75264,7 +75264,7 @@ F:DRAGON | RES_INER
 F:DROP_CORPSE | 
 S:1_IN_13
 S:SCARE | BR_INER | 
-D:It has a form that legends are made of. Its still-tender scales are a
+D:It has a form that legends are made of. Its still-tender scales are a 
 D:tarnished silver hue, and light is reflected from its form.
 
 N:4305:Mature silver dragon
@@ -75325,7 +75325,7 @@ F:DROP_CORPSE |
 S:1_IN_7
 S:SLOW | CONF | SCARE | BR_SHAR | 
 S:BR_FIRE |
-D:A huge crystalline snake with razor-sharp fangs. Deep red hues reflect
+D:A huge crystalline snake with razor-sharp fangs. Deep red hues reflect 
 D:from it as it moves in the light.
 
 N:4308:Emerald serpent
@@ -75346,7 +75346,7 @@ F:DROP_CORPSE |
 S:1_IN_7
 S:SLOW | CONF | SCARE | BR_SHAR | 
 S:BR_POIS |
-D:A huge crystalline snake with razor-sharp fangs. Deep green hues
+D:A huge crystalline snake with razor-sharp fangs. Deep green hues 
 D:reflect from it as it moves in the light.
 
 N:4309:Amethyst serpent
@@ -75367,7 +75367,7 @@ F:DROP_CORPSE |
 S:1_IN_7
 S:SLOW | CONF | SCARE | BR_SHAR | 
 S:BR_DISE | BR_DARK 
-D:A huge crystalline snake with razor-sharp fangs. Deep purple hues
+D:A huge crystalline snake with razor-sharp fangs. Deep purple hues 
 D:reflect from it as it moves in the light.
 
 # More dragon uniques
@@ -75390,7 +75390,7 @@ F:DROP_CORPSE | UNIQUE | DROP_GREAT
 S:1_IN_5
 S:CONF | SCARE | 
 S:BR_ACID | BR_DARK | BLIND
-D:A colossal dragon with scales black as midnight, it regards you
+D:A colossal dragon with scales black as midnight, it regards you 
 D:contemptously.
 
 N:4311:The Nightmare Dragon
@@ -75492,7 +75492,7 @@ F:MORTAL | BASEANGBAND |
 F:DROP_CORPSE | 
 S:1_IN_5
 S:SLOW
-D:A lazy mammal tearing down obstacles with oversized claws rather than
+D:A lazy mammal tearing down obstacles with oversized claws rather than 
 D:going around.
 
 N:4317:Glyptodont
@@ -75506,7 +75506,7 @@ F:MORTAL | BASEANGBAND |
 F:BASH_DOOR | WILD_GRASS | FRIEND
 F:ANIMAL | 
 F:DROP_CORPSE | 
-D:A giant armadillo-like creature shuffling along awkwardly beneath its
+D:A giant armadillo-like creature shuffling along awkwardly beneath its 
 D:massive armoured shell.
 
 N:4318:Dimetrodon
@@ -75906,8 +75906,8 @@ F:DROP_CORPSE |
 S:1_IN_3
 S:BR_LITE | BR_DARK | BA_DARK | HAND_DOOM |
 S:TPORT | TELE_AWAY | HEAL | 
-D:The jackal headed god that weighs the hearts of the dead against the
-D:feather of Ma'at, the goddess of truth. Those that are lighter are
+D:The jackal headed god that weighs the hearts of the dead against the 
+D:feather of Ma'at, the goddess of truth. Those that are lighter are 
 D:guided to Osiris, those that are not are devoured by Ammit.
 
 N:4338:Ammit, the Devourer
@@ -75929,7 +75929,7 @@ F:IM_POIS | IM_FIRE | AURA_FIRE |
 F:DROP_CORPSE | DROP_SKELETON
 S:1_IN_4
 S:BR_NETH | BR_FIRE | BR_DARK | BR_PLAS |
-D:Ammit annihilates the souls deemed unworthy to enter Sekhet-Aaru. She
+D:Ammit annihilates the souls deemed unworthy to enter Sekhet-Aaru. She 
 D:watches Anubis weigh the hearts of the dead in the Hall of Two Truths.
 
 N:4339:Horus, the Ancient
@@ -75950,6 +75950,7 @@ F:IM_POIS | IM_FIRE | RES_NETH | RES_CHAO |
 F:DROP_CORPSE | DROP_SKELETON | 
 S:1_IN_2
 S:BR_LITE | BR_FIRE | BR_COLD | S_MONSTER | 
+D:What the hell, they didn't write a description for this boss either???
 
 N:4340:Apophis, the Primordial Chaos
 G:J:v
@@ -75971,7 +75972,7 @@ F:RES_NETH | RES_CHAO |
 F:DROP_CORPSE | DROP_SKELETON
 S:1_IN_3
 S:BR_CHAO | BR_DARK | BR_SOUN | BR_ELEC | S_DEMON
-D:Existing from the beginning of time and before creation, Apophis the
+D:Existing from the beginning of time and before creation, Apophis the 
 D:serpent god embodies chaos and darkness.
 
 N:4341:Thoth, the Voice of Ra
@@ -75991,7 +75992,7 @@ F:DROP_CORPSE | DROP_SKELETON
 S:1_IN_2
 S:BA_ELEC | BA_COLD | BO_ICEE | 
 S:BO_MANA | CAUSE_4 | S_UNIQUE | TPORT | BLINK | TELE_AWAY
-D:The wisest of Egyptian gods and creator of writing and language, he
+D:The wisest of Egyptian gods and creator of writing and language, he 
 D:fights with cunning and patience.
 
 N:4342:Sekhmet the Mistress of Fury
@@ -76034,8 +76035,8 @@ F:DROP_CORPSE |
 S:1_IN_4
 S:CONF | BR_FIRE | BR_PLAS | BR_LITE | BR_DARK | BR_POIS | BR_NEXU
 S:BR_NUKE | 
-D:Worshipped by the Apotecs as god of the sun and pointless deaths, the
-D:Melter of Snows is a gigantic serpentine monster apparently intent on
+D:Worshipped by the Apotecs as god of the sun and pointless deaths, the 
+D:Melter of Snows is a gigantic serpentine monster apparently intent on 
 D:melting you next.
 
 N:4344:Frost spirit
@@ -76072,7 +76073,7 @@ F:DROP_CORPSE | NO_FEAR
 S:1_IN_5 |
 S:BRAIN_SMASH | TELE_TO | TELE_AWAY | S_MONSTER
 S:BA_WATE | BR_NEXU | BR_NUKE | BR_WALL | S_KIN
-D:The greatest and strongest of the whales, old but wily and seemingly
+D:The greatest and strongest of the whales, old but wily and seemingly 
 D:untouched by age. All creatures of the deep seas answer to his call.
 
 N:4346:Shrieking eel
@@ -76109,12 +76110,12 @@ S:1_IN_3
 S:TELE_TO | BR_FIRE | BR_DISE | BR_MANA | S_ANGEL
 S:BR_LITE | BO_MANA | BRAIN_SMASH | HASTE | HEAL | BR_GRAV
 S:BLINK | BR_NEXU | BA_MANA | BA_DARK | S_HI_DRAGON | 
-D:You assume that, as the leading angel in Heaven, he must be officially good;
-D:but you sense in him a ruthless scheming manipulator, one who has remained
-D:home and ruled in absolute comfort as Michael and Raphael have led the
-D:heavenly legions to the world outside in their fight against evil.
-D:Surrounded by light and darkness, master of contradictions and opposites,
-D:Metatron is an imposing and immensely powerful figure... but it is his low
+D:You assume that, as the leading angel in Heaven, he must be officially good; 
+D:but you sense in him a ruthless scheming manipulator, one who has remained 
+D:home and ruled in absolute comfort as Michael and Raphael have led the 
+D:heavenly legions to the world outside in their fight against evil. 
+D:Surrounded by light and darkness, master of contradictions and opposites, 
+D:Metatron is an imposing and immensely powerful figure... but it is his low 
 D:cunning you truly fear.
 
 N:4348:Kundry, Queen of the Lost Haven
@@ -76189,9 +76190,9 @@ S:1_IN_3
 S:BO_MANA | TELE_TO | HOLD | HEAL | BRAIN_SMASH |
 S:S_SPIDER | CAUSE_3 | CAUSE_4 | BO_WATE | BO_FIRE | TPORT
 S:S_UNDEAD | 
-D:Famed for living in a flying chicken-legged hut guarded by skeletons,
-D:Baba Yaga is the mightiest of all ogre spellcasters, and also the most
-D:intelligent. She has little respect for those not as versed in the arts
+D:Famed for living in a flying chicken-legged hut guarded by skeletons, 
+D:Baba Yaga is the mightiest of all ogre spellcasters, and also the most 
+D:intelligent. She has little respect for those not as versed in the arts 
 D:of magic, and tends to view adventurers as either tools or food.
 
 # More Egyptians, this time FrogComposband originals
@@ -76214,8 +76215,8 @@ F:RES_LITE | RES_CHAO | RES_DARK | RES_TIME | CAN_SWIM |
 F:DROP_CORPSE | 
 S:1_IN_4
 S:BR_FIRE | BR_PLAS | BR_POIS | BR_NUKE | HOLD | HEAL
-D:Wadjet, cobra goddess of Buto, was the nurse of Horus and the protector
-D:of Egypt and its pharaohs. Her venom is unrivaled, the gaze of her eye
+D:Wadjet, cobra goddess of Buto, was the nurse of Horus and the protector 
+D:of Egypt and its pharaohs. Her venom is unrivaled, the gaze of her eye 
 D:deadly, and her fiery breath reduces the unwary to ashes.
 
 N:4352:Nekhbet, the Vulture Mother
@@ -76239,8 +76240,8 @@ S:1_IN_4
 S:BA_WATE | BO_ELEC | BA_NETH | BR_WALL | SCARE | TELE_TO
 S:BR_GRAV | BLIND | CONF | BRAIN_SMASH | HASTE | SLOW | 
 S:CAUSE_3
-D:The patron of Upper Egypt and protector of the Two Lands, the ancient
-D:vulture goddess appears less than motherly as you look up into her
+D:The patron of Upper Egypt and protector of the Two Lands, the ancient 
+D:vulture goddess appears less than motherly as you look up into her 
 D:inky-blue beak.
 
 # Winner of the straw-poll about what Osiris should be like:
@@ -76265,9 +76266,9 @@ S:1_IN_3 |
 S:HEAL | BR_NETH | BA_NETH | S_HI_UNDEAD | BO_MANA | BA_DARK |
 S:BA_MANA | HAND_DOOM | S_MONSTER | BR_WALL | BR_NEXU |
 S:HASTE | ANIM_DEAD | CAUSE_4 |
-D:The divine queen of Egypt, Osiris was murdered and usurped by her brother
-D:Seth, and resurrected by her sister Isis and posthumous son Horus. She is now
-D:the lady of the dead and the goddess of rebirth and regeneration, and invokes
+D:The divine queen of Egypt, Osiris was murdered and usurped by her brother 
+D:Seth, and resurrected by her sister Isis and posthumous son Horus. She is now 
+D:the lady of the dead and the goddess of rebirth and regeneration, and invokes 
 D:both the hope of new life and the fearsome powers of the underworld.
 
 N:4354:Seth, the Disintegrator
@@ -76287,10 +76288,10 @@ F:RES_CHAO | RES_NETH | RES_SOUN | RES_WALL | NO_CONF |
 S:1_IN_4 |
 S:BR_ELEC | BR_WALL | BO_MANA | BRAIN_SMASH |
 S:BO_ELEC | SCARE | BR_DISI | BR_CONF
-D:A powerful, ambitious god of the desert, great of strength and magic,
-D:Seth is bitter about the decline of his cult and feels he has been unfairly
-D:vilified by the followers of his nephew Horus. Mighty in his wrath, he now
-D:seeks to destroy all who oppose him; the dungeon shakes and the air swirls
+D:A powerful, ambitious god of the desert, great of strength and magic, 
+D:Seth is bitter about the decline of his cult and feels he has been unfairly 
+D:vilified by the followers of his nephew Horus. Mighty in his wrath, he now 
+D:seeks to destroy all who oppose him; the dungeon shakes and the air swirls 
 D:as he tramples his enemies underfoot.
 
 # Gender-lifted Wizard of Yendor from older versions of the game.
@@ -76315,7 +76316,7 @@ S:1_IN_2 |
 S:BRAIN_SMASH | BO_MANA | HEAL | HASTE | BO_WATE | SHRIEK |
 S:S_MONSTER | BO_PLAS | BO_NETH | BO_ICEE |
 S:DRAIN_MANA | 
-D:A powerful sorceress, she believes you may have stolen the lost treasure of
+D:A powerful sorceress, she believes you may have stolen the lost treasure of 
 D:Rarfus, and is willing to regain it by any means necessary.
 
 N:4356:Eskimo
@@ -76358,9 +76359,9 @@ S:BA_MANA | BR_LITE | HASTE | HEAL | TELE_TO |
 S:BR_DISE | BO_MANA | BR_INER
 S:ANIM_DEAD | BRAIN_SMASH | DARKNESS | BO_ELEC | S_ANIMAL |
 S:BLINK
-D:The consort of Osiris and mother of Horus, Isis has many names and titles,
-D:and her mastery of magic is almost unparallelled. She loves her family and
-D:followers dearly, and will do anything to protect them; but those who would
+D:The consort of Osiris and mother of Horus, Isis has many names and titles, 
+D:and her mastery of magic is almost unparallelled. She loves her family and 
+D:followers dearly, and will do anything to protect them; but those who would 
 D:threaten them she destroys without mercy.
 
 N:4358:Nephthys, Lady of the Night
@@ -76383,9 +76384,9 @@ S:BA_DARK | HASTE | HEAL | TELE_TO | BO_MANA | BR_FIRE
 S:BR_NEXU | ANIM_DEAD | BRAIN_SMASH | DARKNESS | BO_ELEC | BLIND
 S:S_UNDEAD | BR_DARK | BLINK | DRAIN_MANA
 S:BA_NETH
-D:The companion of Seth, Nephthys is the mistress of darkness and protector
-D:of the dead, but also the motherly nurse of the divine pharaoh. Her magic
-D:is only slightly less powerful than that of her sister Isis, and her fiery
+D:The companion of Seth, Nephthys is the mistress of darkness and protector 
+D:of the dead, but also the motherly nurse of the divine pharaoh. Her magic 
+D:is only slightly less powerful than that of her sister Isis, and her fiery 
 D:breath reduces her enemies to ashes.
 
 N:4359:Ptah, the Divine Craftsman
@@ -76408,8 +76409,8 @@ S:1_IN_2
 S:ROCKET | BR_TIME | TELE_TO |
 S:S_MONSTER | S_UNIQUE | BR_WALL | BR_INER | TELE_AWAY | BR_DISI
 S:HASTE | 
-D:The patron of artisans, worshipped in Memphis as the original demiurge
-D:who thought the universe into being. He is the creator, the inventor, the
+D:The patron of artisans, worshipped in Memphis as the original demiurge 
+D:who thought the universe into being. He is the creator, the inventor, the 
 D:cunning artificer par excellence; the shrewdest of the Egyptian gods.
 
 N:4360:Amun, the Mysterious
@@ -76433,8 +76434,8 @@ S:1_IN_3
 S:BR_FIRE | BR_PLAS | BR_ELEC | S_WRAITH | BR_WALL | BR_GRAV |
 S:BRAIN_SMASH | DRAIN_MANA | BR_LITE | BR_CONF | BR_INER |
 S:BR_NEXU | CAUSE_3 | HAND_DOOM | BR_NUKE | HASTE | TPORT
-D:Patron of Thebes and Nubia, Amun is the hidden god, invisible and ineffable.
-D:He has been identified by his worshippers with almost every other God, most
+D:Patron of Thebes and Nubia, Amun is the hidden god, invisible and ineffable. 
+D:He has been identified by his worshippers with almost every other God, most 
 D:famously the sun-god Ra; but his true nature remains elusive.
 
 N:4361:Mummy king
@@ -76458,8 +76459,8 @@ S:1_IN_3 |
 S:HEAL | HASTE | S_UNDEAD | S_KIN | ANIM_DEAD | TELE_TO |
 S:BA_NETH | BA_COLD | BRAIN_SMASH |
 S:CAUSE_3 | CAUSE_4 | BO_MANA | DARKNESS | FORGET | 
-D:The mightiest of all mummies, leaders in death as they were in life, the
-D:mummy kings recognize no master and know no purpose other than to become
+D:The mightiest of all mummies, leaders in death as they were in life, the 
+D:mummy kings recognize no master and know no purpose other than to become 
 D:mightier still.
 
 N:4362:Mummified sorcerer
@@ -76482,8 +76483,8 @@ S:HEAL | BLINK | TELE_TO | BLIND | CONF | CAUSE_3 | DARKNESS |
 S:BO_NETH | BA_NETH | BA_ELEC | ANIM_DEAD | BA_DARK
 S:S_MONSTER | S_UNDEAD | CAUSE_4 | MIND_BLAST | HASTE | BO_MANA |
 S:BA_COLD
-D:A powerful magician in life, his skills appear to have been only sharpened
-D:by death; wrapped in blood-red linen, the mummy sorcerer advances, no
+D:A powerful magician in life, his skills appear to have been only sharpened 
+D:by death; wrapped in blood-red linen, the mummy sorcerer advances, no 
 D:longer held back by the weaknesses and mundane needs of the living.
 
 N:4363:Serpopard
@@ -76501,8 +76502,8 @@ F:MORTAL | BASEANGBAND |
 F:IM_POIS | FRIENDS | DROP_SKELETON | DROP_CORPSE | 
 F:FORCE_SLEEP | NO_CONF | NO_SLEEP | RES_SOUN | RES_SHAR | 
 F:IM_FIRE | 
-D:A fierce feline creature with a long, serpentine neck, the serpopard moves
-D:at blinding speed; its venomous teeth bite into you before you've noticed
+D:A fierce feline creature with a long, serpentine neck, the serpopard moves 
+D:at blinding speed; its venomous teeth bite into you before you've noticed 
 D:it closing in, and then its razor-sharp claws cut you open.
 
 N:4364:Sha
@@ -76522,8 +76523,8 @@ F:FORCE_SLEEP | FORCE_MAXHP | NO_CONF | NO_STUN | IM_FIRE |
 F:EVIL | MOVE_BODY | IM_ACID | RES_DARK | RES_NETH | 
 S:1_IN_8 |
 S:DRAIN_MANA | BR_WALL
-D:A large, lean, bizarre creature associated with the god Seth, it seems
-D:part jackal, part donkey and all menace. Its wagging forked tail does not
+D:A large, lean, bizarre creature associated with the god Seth, it seems 
+D:part jackal, part donkey and all menace. Its wagging forked tail does not 
 D:appear to indicate friendliness...
 
 N:4365:Hathor, the Heavenly Cow
@@ -76545,8 +76546,8 @@ F:RES_WATE
 S:1_IN_3
 S:BR_ELEC | S_MONSTER | ANIM_DEAD | S_ANIMAL | TELE_TO |
 S:BA_WATE | HASTE | BR_LITE | BLINK | S_WRAITH
-D:Hathor, the cow goddess of nature, fertility and the sky, is both a
-D:fearsome adversary in her own right and a popular deity capable of
+D:Hathor, the cow goddess of nature, fertility and the sky, is both a 
+D:fearsome adversary in her own right and a popular deity capable of 
 D:finding helpers should she need them.
 
 N:4366:Flying fishrooster
@@ -76565,10 +76566,10 @@ F:NO_CONF | NO_SLEEP | NO_STUN | RES_SOUN | IM_POIS | REFLECTING | DROP_4D2
 F:RES_WATE | RES_LITE | RES_DARK | RES_PLAS | RES_SHAR | BASH_DOOR | CAN_FLY
 S:1_IN_4
 S:BR_SOUN | BR_ELEC | SHRIEK | S_MONSTER
-D:A bizarre, majestic, awe-inspiring monstrosity, large enough to swallow
-D:dozens of people at once. You have never seen anything else like it, and
-D:presume it may be a creature from another world, renowned there in song
-D:and story. It emits strange whistling sounds as it approaches, about to
+D:A bizarre, majestic, awe-inspiring monstrosity, large enough to swallow 
+D:dozens of people at once. You have never seen anything else like it, and 
+D:presume it may be a creature from another world, renowned there in song 
+D:and story. It emits strange whistling sounds as it approaches, about to 
 D:crush you into a pulp.
 
 N:4367:Giant moth
@@ -76580,7 +76581,7 @@ O:20:20:20:20
 B:TOUCH:TERRIFY:1d1
 F:MORTAL | BASEANGBAND | 
 F:ANIMAL | WEIRD_MIND | CAN_FLY | RAND_25 | WILD_WOOD | WILD_SWAMP
-D:A nocturnal lepidopteran with a thick, furry body the size of a small
+D:A nocturnal lepidopteran with a thick, furry body the size of a small 
 D:mouse. It flitters around the dungeon, harmless but creepy.
 
 N:4368:Akuvalt the Deceiver
@@ -76624,7 +76625,7 @@ F:ONLY_ITEM | DROP_90 | DROP_1D2 | DROP_GOOD |
 F:OPEN_DOOR | BASH_DOOR | IM_COLD | NO_CONF | NO_SLEEP
 S:1_IN_6 |
 S:SCARE | TRAPS
-D:An ambitious captain of men, infamous for slaying his brother,
+D:An ambitious captain of men, infamous for slaying his brother, 
 D:enslaving his nephew and usurping their lands.
 
 N:4370:Sea giant
@@ -76646,7 +76647,7 @@ F:DROP_SKELETON | DROP_CORPSE |
 S:1_IN_5
 S:TELE_TO | HEAL | SCARE | S_MONSTER | BA_WATE | 
 S:BA_ACID | BO_ICEE | HOLD
-D:An aquatic relative of the ice giants, almost twenty feet tall, and full
+D:An aquatic relative of the ice giants, almost twenty feet tall, and full 
 D:of dark cunning.
 
 N:4371:Aegir, God-King of the Sea Giants
@@ -76669,9 +76670,9 @@ F:RES_WATE | RES_SOUN | NO_SLEEP | NO_CONF |
 S:1_IN_3 |
 S:BA_WATE | BO_ICEE | TELE_TO | HEAL | 
 S:BA_ACID | BA_COLD | HASTE | BR_ELEC |
-D:Aegir, lord of the sea, is not as given to casual brutality as most of his
-D:giant kin; at times he can be friendly and cheerful, and is famed as the
-D:brewer and party-host of the gods. But he has a temper, and is as violent
+D:Aegir, lord of the sea, is not as given to casual brutality as most of his 
+D:giant kin; at times he can be friendly and cheerful, and is famed as the 
+D:brewer and party-host of the gods. But he has a temper, and is as violent 
 D:and fearsome when angered as the oceans he has claimed as his kingdom...
 
 N:4372:Herringfolt, the Great Wild Boar
@@ -76686,8 +76687,8 @@ B:BITE:HURT:3d6
 F:MORTAL | BASEANGBAND | 
 F:BASH_DOOR | FORCE_MAXHP | FORCE_SLEEP | UNIQUE |
 F:ANIMAL | WILD_WOOD | MALE | DROP_CORPSE | NO_CONF |
-D:A monstrous boar unequalled in size and ferocity, descended from the wild
-D:beasts of the Firien Wood: Herringfolt, the man-slayer, its tusks still
+D:A monstrous boar unequalled in size and ferocity, descended from the wild 
+D:beasts of the Firien Wood: Herringfolt, the man-slayer, its tusks still 
 D:red with the blood of its previous victims.
 
 N:4373:Blinking light
@@ -76740,8 +76741,8 @@ F:WILD_MOUNTAIN |
 S:1_IN_3
 S:BA_FIRE | ROCKET | TRAPS | HEAL
 S:S_MONSTER
-D:Before the first man he was: Aijem, the ageless, who has been everywhere
-D:and seen everything and done everything. The passing of time has only made
+D:Before the first man he was: Aijem, the ageless, who has been everywhere 
+D:and seen everything and done everything. The passing of time has only made 
 D:him tougher and given him more experience and opportunities to learn.
 
 # Not a real monster. For player rag use only
@@ -76754,11 +76755,11 @@ O:20:20:20:20
 F:BASEANGBAND | 
 S:1_IN_10
 S:BO_POIS
-D:A pile of dirty, old, timeworn clothing, brought to life and sentience
-D:by magic :or perhaps just by accumulating enough micro-organisms and
-D:filled with a strong desire to get back at all those clean, polished,
-D:fashionable plate mails. Something, likely a thick layer of grime, has
-D:permanently attached an old pair of boots and two plain leather gloves
+D:A pile of dirty, old, timeworn clothing, brought to life and sentience 
+D:by magic :or perhaps just by accumulating enough micro-organisms and 
+D:filled with a strong desire to get back at all those clean, polished, 
+D:fashionable plate mails. Something, likely a thick layer of grime, has 
+D:permanently attached an old pair of boots and two plain leather gloves 
 D:to the original rag, allowing it to walk about and punch its enemies...
 
 N:4377:Sexy Swimsuit
@@ -76784,7 +76785,7 @@ F:NO_CONF | NO_SLEEP | CAN_FLY | RAND_25 |
 F:BASEANGBAND | 
 S:1_IN_10 |
 S:SCARE
-D:A ghostly apparition, faintly visible as a pale blue outline hissing and
+D:A ghostly apparition, faintly visible as a pale blue outline hissing and 
 D:crackling with electricity.
 
 N:4379:Gragomani, the Leprechaun Prophet
@@ -76806,11 +76807,11 @@ F:DROP_CORPSE |
 S:1_IN_3 |
 S:HEAL | BO_MANA | CONF | SCARE | CAUSE_3 | CAUSE_4 | BRAIN_SMASH |
 S:HAND_DOOM | S_KIN | SHRIEK | FORGET |
-D:The great prophet Gragomani towers above his followers, a giant among the
-D:leprechauns. He claims his size and toughness to be a divine gift, but
-D:detractors allege he's actually just a dwarven priest in disguise...
-D:Whatever the truth, he commands a dangerous army of fanatic followers and
-D:is a very formidable opponent even in his own right; you pray that the god
+D:The great prophet Gragomani towers above his followers, a giant among the 
+D:leprechauns. He claims his size and toughness to be a divine gift, but 
+D:detractors allege he's actually just a dwarven priest in disguise... 
+D:Whatever the truth, he commands a dangerous army of fanatic followers and 
+D:is a very formidable opponent even in his own right; you pray that the god 
 D:he claims to speak for is not truly on his side.
 
 N:4380:Angelic quylthulg
@@ -76827,7 +76828,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR
 S:1_IN_2 |
 S:BLINK | TPORT |
 S:S_ANGEL
-D:A massive pile of pulsing flesh, glowing with a bright holy fire. :Is there
+D:A massive pile of pulsing flesh, glowing with a bright holy fire. :Is there 
 D:nothing that Heaven will not try to pervert?
 
 N:4381:Iku-Turso
@@ -76848,9 +76849,9 @@ F:IM_ELEC | IM_FIRE | IM_COLD | RES_TIME | IM_ACID | NO_CONF | NO_SLEEP
 F:EVIL | DROP_CORPSE | 
 S:1_IN_2 |
 S:TELE_TO | BA_WATE | BR_ACID | BR_ELEC | BR_NEXU
-D:Since the dawn of time has Iku-Turso lurked in the oceans: the gigantic
-D:terror of the open seas, umpteen-headed, umpteen-horned, his slimy tentacles
-D:reaching out to catch his prey; as if every other sea monster had been
+D:Since the dawn of time has Iku-Turso lurked in the oceans: the gigantic 
+D:terror of the open seas, umpteen-headed, umpteen-horned, his slimy tentacles 
+D:reaching out to catch his prey; as if every other sea monster had been 
 D:bundled together and scaled up.
 
 N:4382:Lord Bovin of the High Tower
@@ -76871,9 +76872,9 @@ F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | EVIL | CAN_SWIM |
 F:DROP_CORPSE | 
 S:1_IN_5 |
 S:BLIND | SCARE | CAUSE_4 | BA_NETH | BA_FIRE | BO_PLAS | S_MONSTER | 
-D:Once, he was the darling of Anambar - young, rich, handsome, athletic, and
-D:full of promises of a better future for the city. Now he's plotting to take
-D:over with the backing of dark sorcerers and demonic armies, destroying all
+D:Once, he was the darling of Anambar - young, rich, handsome, athletic, and 
+D:full of promises of a better future for the city. Now he's plotting to take 
+D:over with the backing of dark sorcerers and demonic armies, destroying all 
 D:who stand in the way of his quest for more wealth and power.
 
 N:4383:Arachnotron
@@ -76890,9 +76891,9 @@ F:DROP_60 | DROP_CORPSE | FRIEND | NO_CONF
 F:RES_NETH | IM_POIS |
 S:1_IN_1 |
 S:BO_PLAS
-D:This monstrous demonic spider-golem seems to be all legs and oversized
-D:brain, yet still moves with surprising agility. Jets of plasma constantly
-D:emerge from its strange gaping mouth, incinerating anyone foolish enough
+D:This monstrous demonic spider-golem seems to be all legs and oversized 
+D:brain, yet still moves with surprising agility. Jets of plasma constantly 
+D:emerge from its strange gaping mouth, incinerating anyone foolish enough 
 D:to defy it.
 
 N:4384:Tracking pixel
@@ -77064,10 +77065,10 @@ F:FORCE_SLEEP | ONLY_ITEM | DROP_1D2 | OPEN_DOOR | BASH_DOOR | WILD_SWAMP
 F:WILD_WOOD | RES_DISE | 
 S:1_IN_10 |
 S:BR_LITE
-D:Once it was a vaguely humanoid creature with a pumpkin for a head, but
-D:now only the head remains, having grown too large and heavy for a body to
-D:support. Orange lights glow within the gaping mouth of this man-high
-D:monster pumpkin as it rolls along the floor of the cave, preparing to drink
+D:Once it was a vaguely humanoid creature with a pumpkin for a head, but 
+D:now only the head remains, having grown too large and heavy for a body to 
+D:support. Orange lights glow within the gaping mouth of this man-high 
+D:monster pumpkin as it rolls along the floor of the cave, preparing to drink 
 D:the blood of yet another victim.
 
 N:4394:Hrulga
@@ -77082,7 +77083,7 @@ B:KICK:HURT:2d8
 F:WILD_MOUNTAIN | BASH_DOOR | RAND_25 | ANIMAL | FRIEND
 F:MORTAL | BASEANGBAND | 
 F:DROP_SKELETON | DROP_CORPSE | 
-D:It looks much like a horse - but it's bigger, faster, nastier, has
+D:It looks much like a horse - but it's bigger, faster, nastier, has 
 D:razor-sharp claws and eats meat...
 
 N:4395:Jack of Lanterns
@@ -77122,10 +77123,10 @@ F:DROP_3D2 | DROP_4D2 | DROP_GREAT |
 F:DROP_CORPSE |
 S:1_IN_1 |
 S:S_UNIQUE | ANIM_DEAD
-D:The ultimate secret weapon of the hosts of Heaven, this machine stores
-D:the memory of hundreds of bodies and is capable of reproducing them
-D:perfectly, down to the last molecule on the flaming sword. You wonder
-D:what mad scientist designed this contraption, and whether he was also
+D:The ultimate secret weapon of the hosts of Heaven, this machine stores 
+D:the memory of hundreds of bodies and is capable of reproducing them 
+D:perfectly, down to the last molecule on the flaming sword. You wonder 
+D:what mad scientist designed this contraption, and whether he was also 
 D:responsible for the Cloning Pits...
 
 # Salmiak additions
@@ -77146,9 +77147,9 @@ F:OPEN_DOOR | BASH_DOOR |
 F:EVIL | TROLL | IM_FIRE | IM_ELEC | IM_POIS | RES_DARK | NO_CONF | NO_SLEEP
 S:1_IN_3 |
 S:S_KIN | BLINK | SCARE | HEAL
-D:She's the greatest troll who ever lived, the spiritual mother of troll
-D:religion, the strategist who masterminded trollkind's combined effort
-D:to wrest their ancient cave back from orcs... well, at least she is
+D:She's the greatest troll who ever lived, the spiritual mother of troll 
+D:religion, the strategist who masterminded trollkind's combined effort 
+D:to wrest their ancient cave back from orcs... well, at least she is 
 D:if you take all her claims at face value.
 
 N:4398:Pryftidustulyx, the Communist Dragon
@@ -77172,15 +77173,15 @@ F:DROP_CORPSE |
 S:1_IN_2
 S:BR_ACID | BR_POIS | BR_NUKE | BR_PLAS | BR_DARK |
 S:CONF | SCARE | 
-D:As a baby, Pryftidustulyx was abandoned on a remote but inhabited island
-D:and discovered by a group of Communist rebels, who found in his instinctive
-D:eating habits a perfect match for their own aims and happily adopted him as
-D:their pet. Growing up on a rich, fatty diet, the young Pryftidustulyx grew
-D:to a monumental size, maybe the largest of all dragons and certainly the
-D:most spoiled; but the Communists eventually told him to leave after his
-D:exorbitant demands for tobacco became impossible to satisfy. He now prowls
-D:the dungeons looking for another delicious snack; clouds of smoke obscure
-D:your vision as the dragon approaches, and you wonder how - or if - he can
+D:As a baby, Pryftidustulyx was abandoned on a remote but inhabited island 
+D:and discovered by a group of Communist rebels, who found in his instinctive 
+D:eating habits a perfect match for their own aims and happily adopted him as 
+D:their pet. Growing up on a rich, fatty diet, the young Pryftidustulyx grew 
+D:to a monumental size, maybe the largest of all dragons and certainly the 
+D:most spoiled; but the Communists eventually told him to leave after his 
+D:exorbitant demands for tobacco became impossible to satisfy. He now prowls 
+D:the dungeons looking for another delicious snack; clouds of smoke obscure 
+D:your vision as the dragon approaches, and you wonder how - or if - he can 
 D:see who he's about to eat...
 
 N:4399:The Wicked Witch of the South-East
@@ -77204,9 +77205,9 @@ F:NO_SLEEP | NO_CONF |
 S:1_IN_2
 S:BA_FIRE | HEAL | BRAIN_SMASH | S_ANIMAL | TPORT | 
 S:SHRIEK | DARKNESS | BA_DARK
-D:This old hag looks ugly and wizened in her overlong robe, yet her very
-D:presence still radiates great power. She has used dark magic to conquer
-D:the land of Oz and bind its inhabitants to servitude; the local animals
+D:This old hag looks ugly and wizened in her overlong robe, yet her very 
+D:presence still radiates great power. She has used dark magic to conquer 
+D:the land of Oz and bind its inhabitants to servitude; the local animals 
 D:attend to her needs and obey her every command, be it unwillingly.
 
 N:4400:Burning bush
@@ -77234,8 +77235,8 @@ B:BITE:PARALYZE:2d15
 B:BITE:POISON:2d15
 F:MORTAL | BASEANGBAND | 
 F:RAND_25 | IM_POIS | RES_WATE | AQUATIC | ANIMAL | ATTR_MULTI
-D:This strangely iridescent cephalopod is very small for an octopus, and
-D:looks harmless and unassuming, but its venomous bite is best left
+D:This strangely iridescent cephalopod is very small for an octopus, and 
+D:looks harmless and unassuming, but its venomous bite is best left 
 D:unexperienced.
 
 N:4402:Box jellyfish
@@ -77248,7 +77249,7 @@ B:STING:POISON:2d25
 B:STING:POISON:2d25
 F:MORTAL | BASEANGBAND | 
 F:IM_POIS | RES_WATE | AQUATIC | ANIMAL | FRIEND
-D:These little jellyfish have deadlier venom than any other creature of the
+D:These little jellyfish have deadlier venom than any other creature of the 
 D:Ozmanian billabongs; but luckily they are fragile and easily disposed of.
 
 N:4403:Tiger snake
@@ -77274,8 +77275,8 @@ B:BITE:POISON:2d2
 F:RAND_25 | BASH_DOOR | CAN_SWIM | WILD_GRASS | WILD_WASTE | FORCE_SLEEP |
 F:MORTAL | BASEANGBAND | 
 F:ANIMAL | IM_POIS | DROP_SKELETON | DROP_CORPSE
-D:The inland taipan has the second-deadliest snake venom in the universe,
-D:behind only the Gwarlian megaviper, which is so lethal it can crash the
+D:The inland taipan has the second-deadliest snake venom in the universe, 
+D:behind only the Gwarlian megaviper, which is so lethal it can crash the 
 D:game from thirty files away.
 
 N:4405:Flaming crow
@@ -77291,7 +77292,7 @@ F:MORTAL | BASEANGBAND |
 F:IM_FIRE | DROP_CORPSE | 
 S:1_IN_15
 S:BR_FIRE
-D:At least it's not poisonous like most other creatures native to this
+D:At least it's not poisonous like most other creatures native to this 
 D:bizarre land.
 
 N:4406:Giant funnel-web spider
@@ -77333,9 +77334,9 @@ B:CLAW:HURT:1d6
 B:BITE:HURT:1d8
 F:ANIMAL | DROP_1D2 | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | 
-D:This much-dreaded creature lurks in the canopy, waiting for the chance to
-D:get the drop on an unsuspecting victim. On the ground it is awkward and
-D:ungainly, and its offense greatly relies on the success of its initial
+D:This much-dreaded creature lurks in the canopy, waiting for the chance to 
+D:get the drop on an unsuspecting victim. On the ground it is awkward and 
+D:ungainly, and its offense greatly relies on the success of its initial 
 D:attack.
 
 N:4409:Wallaby
@@ -77351,7 +77352,7 @@ F:MORTAL | BASEANGBAND |
 F:RAND_25 | DROP_60 | DROP_CORPSE | 
 S:1_IN_8
 S:BLINK
-D:A smaller relative of the fearsome Ozmanian kangaroo, the wallaby is not
+D:A smaller relative of the fearsome Ozmanian kangaroo, the wallaby is not 
 D:as dangerous but still kicks hard.
 
 N:4410:Kangaroo
@@ -77368,7 +77369,7 @@ F:MORTAL | BASEANGBAND |
 F:RAND_25 | DROP_90 | DROP_60 | DROP_CORPSE | IM_FIRE
 S:1_IN_4
 S:BLINK
-D:The most famous of the legendary animals of Oz, it kicks you to ground
+D:The most famous of the legendary animals of Oz, it kicks you to ground 
 D:with hoppers seemingly made of steel.
 
 N:4411:Tin golem
@@ -77445,9 +77446,9 @@ F:ANIMAL | NO_CONF | NO_SLEEP | NO_FEAR | CAN_SWIM |
 F:DROP_CORPSE | 
 S:1_IN_7
 S:SCARE | BR_CHAO | SHRIEK | 
-D:A massive, amphibious creature, the bunyip looks like a strange crossbreed
-D:of a dinosaur, a wombat and an elephant seal. The natives of Oz fear it
-D:like no other animal, and speak in hushed tones of its bellowing cry that
+D:A massive, amphibious creature, the bunyip looks like a strange crossbreed 
+D:of a dinosaur, a wombat and an elephant seal. The natives of Oz fear it 
+D:like no other animal, and speak in hushed tones of its bellowing cry that 
 D:portends death.
 
 N:4416:Hopper ant
@@ -77476,7 +77477,7 @@ B:STING:POISON:2d12
 F:RAND_25 | KILL_BODY | DROP_CORPSE | FRIEND |
 F:WEIRD_MIND | BASH_DOOR | ANIMAL | WILD_WOOD
 F:MORTAL | BASEANGBAND | 
-D:A giant variety of the already dangerous Ozmanian hopper ant, mutated by
+D:A giant variety of the already dangerous Ozmanian hopper ant, mutated by 
 D:radiation.
 
 N:4418:Duck-quacked platypus
@@ -77491,8 +77492,8 @@ F:DROP_SKELETON | DROP_CORPSE | RAND_25 |
 F:MORTAL | BASEANGBAND | 
 S:1_IN_8 |
 S:SHRIEK
-D:An exceedingly strange, vaguely mammalian being, created by some
-D:inexperienced maintainer who had yet to grasp the principles of monster
+D:An exceedingly strange, vaguely mammalian being, created by some 
+D:inexperienced maintainer who had yet to grasp the principles of monster 
 D:design.
 
 N:4419:Bush ranger
@@ -77544,7 +77545,7 @@ F:WILD_WOOD |
 S:1_IN_6 |
 S:HOLD | CONF | SCARE | CAUSE_3 | MIND_BLAST | FORGET |
 S:DARKNESS | 
-D:It lurks in the dark shadows of the deep forest, occasionally driven
+D:It lurks in the dark shadows of the deep forest, occasionally driven 
 D:into the open when no juicy meal is obliging enough to walk in.
 
 N:4422:Giant yellow toad
@@ -77559,7 +77560,7 @@ F:RAND_50 | WILD_SHORE | WILD_SWAMP | IM_POIS |
 F:MORTAL | BASEANGBAND | 
 F:DROP_CORPSE | ANIMAL |
 S:MULTIPLY 
-D:The skin of this large toad glistens with poison. You feel sick just
+D:The skin of this large toad glistens with poison. You feel sick just 
 D:looking at it.
 
 N:4423:Ozmanian devil
@@ -77597,7 +77598,7 @@ F:DROP_CORPSE |
 S:1_IN_3
 S:BR_ACID | BR_ELEC | BR_NEXU | BR_LITE | BR_CONF |
 S:BA_WATE | BLIND | 
-D:This enormous serpent can drown you in water seemingly at will, and the
+D:This enormous serpent can drown you in water seemingly at will, and the 
 D:people of Oz worship it as a rain deity.
 
 N:4425:Giant wombat
@@ -77613,7 +77614,7 @@ F:BASH_DOOR | FRIEND |
 F:MORTAL | BASEANGBAND | 
 F:ANIMAL | 
 F:DROP_60 | DROP_CORPSE | 
-D:You thought these big bastards had gone extinct long ago. Apparently
+D:You thought these big bastards had gone extinct long ago. Apparently 
 D:someone forgot to tell them...
 
 N:4426:Mutant manta ray
@@ -77630,9 +77631,9 @@ F:MORTAL | BASEANGBAND |
 F:ANIMAL
 S:1_IN_6
 S:ARROW_4 | BA_WATE
-D:Toxic waste has mutated this massive fish, turning it entirely evil and
-D:giving it extra brain capacity. It has somehow acquired - perhaps from
-D:some misguided past hunter - a large collection of harpoons, which it
+D:Toxic waste has mutated this massive fish, turning it entirely evil and 
+D:giving it extra brain capacity. It has somehow acquired - perhaps from 
+D:some misguided past hunter - a large collection of harpoons, which it 
 D:mercilessly fires at all comers with remarkable force and agility.
 
 N:4427:Brumby
@@ -77663,7 +77664,7 @@ F:OPEN_DOOR | BASH_DOOR | WILD_MOUNTAIN | WILD_WOOD | WILD_WASTE |
 F:ANIMAL | IM_ELEC | RES_SOUN | CAN_FLY | 
 F:MORTAL | BASEANGBAND | 
 F:DROP_SKELETON | DROP_CORPSE | 
-D:A large, shaggy, ape-like creature reminiscent of the sasquatch, it
+D:A large, shaggy, ape-like creature reminiscent of the sasquatch, it 
 D:approaches with fast, loudly echoing strides.
 
 N:4429:Atomic elemental
@@ -77680,7 +77681,7 @@ F:BASEANGBAND |
 F:NO_CONF | NO_SLEEP | NO_FEAR
 S:1_IN_5 |
 S:BA_NUKE
-D:A towering apparition crackling with energy, it emits an unhealthy-looking
+D:A towering apparition crackling with energy, it emits an unhealthy-looking 
 D:pale light.
 
 N:4430:Snow leopard
@@ -77711,7 +77712,7 @@ F:BASEANGBAND |
 F:IM_COLD | IM_POIS | RES_NETH | NO_CONF | NO_SLEEP
 S:1_IN_5 |
 S:DRAIN_MANA | SHRIEK
-D:The skiing ghost of a long-dead warrior, killed on these snowy slopes far
+D:The skiing ghost of a long-dead warrior, killed on these snowy slopes far 
 D:from his home.
 
 N:4432:Polar bear
@@ -77727,7 +77728,7 @@ F:OPEN_DOOR | BASH_DOOR | WILD_MOUNTAIN | CAN_FLY | CAN_SWIM
 F:MORTAL | BASEANGBAND | 
 F:ANIMAL | IM_COLD | FRIEND |
 F:DROP_SKELETON | DROP_CORPSE | 
-D:A huge white bear, even larger and more aggressive than its relatives from
+D:A huge white bear, even larger and more aggressive than its relatives from 
 D:warmer climes.
 
 N:4433:Booze hound
@@ -77769,8 +77770,8 @@ F:RES_INER |
 S:1_IN_2 |
 S:BR_LITE | HEAL | TELE_TO | ANIM_DEAD |
 S:S_ANIMAL | BA_FIRE | S_MONSTER | TPORT | BLINK
-D:The god of plenty, virility and good summers, Freyr is a son of Njord and
-D:a descendant of the wise Vanir; he is popular with both his people and the
+D:The god of plenty, virility and good summers, Freyr is a son of Njord and 
+D:a descendant of the wise Vanir; he is popular with both his people and the 
 D:other gods, and his cunning makes up for what he lacks in brute power.
 
 N:4435:Odin, the All-Father
@@ -77795,10 +77796,10 @@ S:1_IN_3 |
 S:S_WRAITH | S_HI_UNDEAD | HAND_DOOM
 S:ANIM_DEAD | TELE_TO | BA_DARK | BA_ELEC | BA_MANA
 S:BA_CHAO | BA_NETH | BRAIN_SMASH
-D:The leader of the Aesir, Odin has made great sacrifices in his pursuit of
-D:secret knowledge; he hanged himself on the World-Tree after wounding himself
-D:with his spear, and has forfeited one of his eyes to Mimir's well. He is the
-D:master of Valhalla, the hall of the glorious dead, where the Valkyries and
+D:The leader of the Aesir, Odin has made great sacrifices in his pursuit of 
+D:secret knowledge; he hanged himself on the World-Tree after wounding himself 
+D:with his spear, and has forfeited one of his eyes to Mimir's well. He is the 
+D:master of Valhalla, the hall of the glorious dead, where the Valkyries and 
 D:the Einherjar serve him.
 
 N:4436:Einheri berserker
@@ -77833,8 +77834,8 @@ F:OPEN_DOOR | BASH_DOOR | RES_DARK | RES_GRAV | IM_COLD |
 F:IM_ELEC | NO_CONF | NO_SLEEP | NO_FEAR | DROP_CORPSE
 S:1_IN_5
 S:TELE_TO | SCARE | ANIM_DEAD
-D:Fearless female warriors on flying horses, the Valkyries serve the god Odin
-D:and are tasked with finding and collecting slain heroes worthy of Valhalla.
+D:Fearless female warriors on flying horses, the Valkyries serve the god Odin 
+D:and are tasked with finding and collecting slain heroes worthy of Valhalla. 
 D:It feels like cheating somehow that they appear intent on collecting you...
 
 N:4438:Hugin, the Scheming Raven
@@ -77854,9 +77855,9 @@ F:DROP_2D2
 F:ONLY_ITEM | DROP_GOOD | 
 S:1_IN_4
 S:BR_NETH | BR_CHAO | BR_DARK | SHRIEK
-D:Odin relies on his ravens Hugin and Munin for news, sending them out
-D:every day to spy on the world; yet his confidence in Hugin is misplaced,
-D:as the black bird is an untrustworthy manipulator who gives misleading
+D:Odin relies on his ravens Hugin and Munin for news, sending them out 
+D:every day to spy on the world; yet his confidence in Hugin is misplaced, 
+D:as the black bird is an untrustworthy manipulator who gives misleading 
 D:reports to serve his own ends.
 
 N:4439:Lynx
@@ -77891,8 +77892,8 @@ F:OPEN_DOOR | BASH_DOOR | HAS_LITE | NO_CONF | RES_TELE | TAKE_ITEM |
 S:1_IN_3 |
 S:BR_LITE | SHRIEK | S_WRAITH | BA_ACID | BA_COLD |
 S:S_ANIMAL | BA_WATE | DRAIN_MANA | 
-D:Heimdall is the watchman of the Aesir, tasked with guarding the bridge to
-D:Asgard. He will blow into his mighty trumpet Gjallarhorn when Ragnarok
+D:Heimdall is the watchman of the Aesir, tasked with guarding the bridge to 
+D:Asgard. He will blow into his mighty trumpet Gjallarhorn when Ragnarok 
 D:comes, summoning the gods to battle.
 
 N:4441:Thor, the Thunderer
@@ -77914,8 +77915,8 @@ F:DROP_CORPSE | TAKE_ITEM |
 S:1_IN_3
 S:BR_ELEC | BA_ELEC | BO_ELEC | BLINK
 S:HASTE | ROCKET | BO_PLAS
-D:The son of Odin and the giantess Jord, Thor's raw strength is unrivalled
-D:even among the gods. Swinging his great hammer Mjollnir, the god of thunder
+D:The son of Odin and the giantess Jord, Thor's raw strength is unrivalled 
+D:even among the gods. Swinging his great hammer Mjollnir, the god of thunder 
 D:advances towards you with eyes promising death.
 
 N:4442:Tyr, the One-Armed God
@@ -77937,9 +77938,9 @@ F:DROP_CORPSE |
 S:1_IN_3 |
 S:BR_SOUN | ROCKET | TELE_TO | CONF | BLIND | BA_FIRE
 S:BLINK | BRAIN_SMASH | 
-D:Tyr is the ferocious battle-god, his courage in combat exceeding even
-D:that of Thor; yet he is also the reliable upholder of law and justice.
-D:He sacrificed his right hand to the monstrous wolf Fenris so it could
+D:Tyr is the ferocious battle-god, his courage in combat exceeding even 
+D:that of Thor; yet he is also the reliable upholder of law and justice. 
+D:He sacrificed his right hand to the monstrous wolf Fenris so it could 
 D:be bound by the Aesir.
 
 N:4443:Vidarr, the Silent Avenger
@@ -77962,9 +77963,9 @@ S:1_IN_4 |
 S:TELE_TO | BLINK | BR_WALL | BR_DISI | BRAIN_SMASH | BA_DARK |
 S:BR_GRAV | BO_MANA |
 S:BO_ELEC
-D:Vidarr is the silent god, foretold to avenge the death of his father Odin
-D:and to survive the destruction of Ragnarok. He takes great sweeping strides
-D:in his magic shoes, crafted from all the spare shoe-leather thrown away by
+D:Vidarr is the silent god, foretold to avenge the death of his father Odin 
+D:and to survive the destruction of Ragnarok. He takes great sweeping strides 
+D:in his magic shoes, crafted from all the spare shoe-leather thrown away by 
 D:the common folk.
 
 N:4444:Freyja, Lady of the Slain
@@ -77988,10 +77989,10 @@ S:1_IN_2
 S:HEAL | S_MONSTER |
 S:HASTE | S_WRAITH | TELE_TO | BLINK | SCARE | TPORT
 S:S_UNDEAD | CAUSE_4
-D:The most famous of the Norse goddesses, Freyja is the sister of Freyr and
-D:daughter of Njord, and rules over her own hall of the dead in Folkvang.
-D:She rides a chariot pulled by her cats and is known for her two great
-D:treasures: the beautiful necklace Brisingamen, and a magical feathered
+D:The most famous of the Norse goddesses, Freyja is the sister of Freyr and 
+D:daughter of Njord, and rules over her own hall of the dead in Folkvang. 
+D:She rides a chariot pulled by her cats and is known for her two great 
+D:treasures: the beautiful necklace Brisingamen, and a magical feathered 
 D:cloak that allows its wearer to fly.
 
 N:4445:Njord, Lord of the Vanir
@@ -78012,10 +78013,10 @@ F:HAS_LITE | RES_WATE | NO_CONF | NO_FEAR | NO_STUN |
 S:1_IN_2
 S:BR_ACID | BR_ELEC | HEAL | TELE_TO | 
 S:BA_WATE | BA_ACID | BO_ICEE
-D:The father of Freyr and Freyja, Njord is at home by the seaside; fishers
-D:thank him for abundant catches and good weather, while farmers pray
-D:to him and his son for plentiful harvests. He was once the husband
-D:of the giantess Skadi, who selected him for his beautiful feet;
+D:The father of Freyr and Freyja, Njord is at home by the seaside; fishers 
+D:thank him for abundant catches and good weather, while farmers pray 
+D:to him and his son for plentiful harvests. He was once the husband 
+D:of the giantess Skadi, who selected him for his beautiful feet; 
 D:but the needs and desires of the two were ultimately incompatible.
 
 N:4446:Frigg, Queen of Asgard
@@ -78036,9 +78037,9 @@ F:SMART | OPEN_DOOR | CAN_FLY |
 S:1_IN_4 |
 S:BA_MANA | S_WRAITH | TELE_TO | BLINK | 
 S:CAUSE_4
-D:Frigg is the consort of Odin and was the mother of the dead god Baldur.
-D:While less famous than the goddess Freyja, whom she greatly resembles,
-D:she knows some extremely powerful magic and wields considerable influence
+D:Frigg is the consort of Odin and was the mother of the dead god Baldur. 
+D:While less famous than the goddess Freyja, whom she greatly resembles, 
+D:she knows some extremely powerful magic and wields considerable influence 
 D:in her position as the chief god's wife.
 
 N:4447:Skadi, the Huntress
@@ -78059,8 +78060,8 @@ F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR |
 F:DROP_CORPSE | 
 S:1_IN_4
 S:BR_COLD | BO_ICEE | ARROW_4 | BLINK | TELE_TO | HEAL
-D:Skadi is a giantess from the snowy mountains, best known as the wife of
-D:the god Njord. She is an expert skier and hunter, her skills with a bow
+D:Skadi is a giantess from the snowy mountains, best known as the wife of 
+D:the god Njord. She is an expert skier and hunter, her skills with a bow 
 D:being second to none save for the archer-god Ullur and the hero Gerabost.
 
 N:4448:Draugr
@@ -78082,8 +78083,8 @@ F:NO_CONF | NO_SLEEP
 S:1_IN_3 |
 S:HEAL | HASTE | TELE_TO | BRAIN_SMASH | MIND_BLAST | BA_NETH | HOLD
 S:CAUSE_3 | CAUSE_4 | DARKNESS | FORGET | 
-D:An animated, strangely dark body with great evil powers and physical
-D:strength and an almost insatiable appetite. It seems to be eyeing you as
+D:An animated, strangely dark body with great evil powers and physical 
+D:strength and an almost insatiable appetite. It seems to be eyeing you as 
 D:a potential snack...
 
 N:4449:Ratatosk, the World-Tree Squirrel
@@ -78102,8 +78103,8 @@ F:WILD_WOOD | ONLY_ITEM | DROP_1D2 | DROP_GOOD |
 F:DROP_CORPSE | 
 S:1_IN_6
 S:BLINK | SHRIEK | S_MONSTER | S_ANIMAL |
-D:A cute little critter with razor-sharp teeth. He scurries along the
-D:world-tree Yggdrasil every day, carrying messages between the treetop and
+D:A cute little critter with razor-sharp teeth. He scurries along the 
+D:world-tree Yggdrasil every day, carrying messages between the treetop and 
 D:the roots.
 
 N:4450:Ullur, the Archer-God
@@ -78124,7 +78125,7 @@ F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR |
 F:DROP_CORPSE | 
 S:1_IN_3 |
 S:BO_ICEE | ARROW_4 | BLINK
-D:Ullur of Ydalir is the god of archery and the hunt, a son of Thor's wife
+D:Ullur of Ydalir is the god of archery and the hunt, a son of Thor's wife 
 D:Sif and a friend of Njord and Skadi.
 
 N:4451:Magni, Son of Thor
@@ -78145,8 +78146,8 @@ F:DROP_CORPSE | TAKE_ITEM |
 S:1_IN_3 |
 S:BA_ELEC | BO_ELEC | BLINK | HASTE |
 S:BO_PLAS | TELE_TO
-D:Thor's son with the giantess Jarnsaxa, Magni the Mighty is a great and
-D:fearless warrior and takes after his father. It is said he will inherit
+D:Thor's son with the giantess Jarnsaxa, Magni the Mighty is a great and 
+D:fearless warrior and takes after his father. It is said he will inherit 
 D:Mjollnir after Ragnarok, though you may have different ideas about that...
 
 N:4452:Vasuki, the Serpent King
@@ -78165,7 +78166,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_3D2 | DROP_1D2 | DROP_GOOD | DROP_GREAT |
 F:DROP_CORPSE | DROP_SKELETON | COLD_BLOOD | 
 S:1_IN_2
 S:BR_POIS | S_KIN
-D:A grand nagaraja. The gods and demons used him to churn the ocean and
+D:A grand nagaraja. The gods and demons used him to churn the ocean and 
 D:create amrita, causing poison to envelop the world.
 
 N:4453:Shesha, the Infinite
@@ -78206,9 +78207,9 @@ F:EVIL | DEMON | IM_FIRE | IM_POIS | RES_NETH | NO_CONF | NO_SLEEP |
 S:1_IN_4 |
 S:S_DEMON | BR_FIRE | BR_DISI | BR_CHAO | BA_CHAO |
 S:SCARE | BA_FIRE | CAUSE_4 | S_KIN | 
-D:The natural form of this powerful demon would appear to be that of a
-D:massive buffalo, but he can change his appearance seemingly at will.
-D:He wreaks destruction as he stampedes through the dungeon, and can call
+D:The natural form of this powerful demon would appear to be that of a 
+D:massive buffalo, but he can change his appearance seemingly at will. 
+D:He wreaks destruction as he stampedes through the dungeon, and can call 
 D:upon a massive demon army to support him.
 
 N:4455:Agni, the Threefold Fire
@@ -78230,8 +78231,8 @@ F:NONLIVING
 S:1_IN_3 |
 S:TELE_TO | HASTE | BLINK | BLIND | DRAIN_MANA | BA_FIRE | 
 S:BA_ELEC | BR_FIRE | BR_LITE | BR_ELEC | BO_PLAS | S_MONSTER
-D:This ancient deity is the spirit of fire, lightning and the sun, and a
-D:messenger between gods and people. While he is not an evil god, he does
+D:This ancient deity is the spirit of fire, lightning and the sun, and a 
+D:messenger between gods and people. While he is not an evil god, he does 
 D:tend to absentmindedly ignite such flammable things as adventurers...
 
 N:4456:Hanuman, the Monkey God
@@ -78253,8 +78254,8 @@ F:DROP_CORPSE | DROP_SKELETON | OPEN_DOOR | BASH_DOOR |
 F:ONLY_ITEM | REFLECTING
 S:1_IN_3 |
 S:TPORT | TELE_TO | 
-D:The spiritual son of the air-god Vayu, Hanuman is one of the most popular
-D:gods, famed both for his extraordinary strength and powers and his selfless
+D:The spiritual son of the air-god Vayu, Hanuman is one of the most popular 
+D:gods, famed both for his extraordinary strength and powers and his selfless 
 D:devotion to prince Rama.
 
 N:4457:Vayu, the Embodied Wind
@@ -78274,9 +78275,9 @@ F:RES_PLAS | IM_COLD | IM_ACID | REGENERATE | NO_CONF | NO_SLEEP |
 F:NO_STUN | DROP_3D2 | DROP_GOOD | DROP_GREAT | RES_GRAV | 
 S:1_IN_3 |
 S:BR_POIS | BR_ELEC | BR_CONF | SCARE | CAUSE_4 | TPORT
-D:Vayu is the great elemental of wind and air and the spiritual father of
-D:the god Hanuman, who is often considered his first and greatest avatar.
-D:Many have discovered too late that fighting the air is not the greatest
+D:Vayu is the great elemental of wind and air and the spiritual father of 
+D:the god Hanuman, who is often considered his first and greatest avatar. 
+D:Many have discovered too late that fighting the air is not the greatest 
 D:idea...
 
 N:4458:Karthikeya, the Six-Headed Warrior
@@ -78300,9 +78301,9 @@ S:BR_ACID | BR_LITE | BR_FIRE | BR_NEXU | BR_DISE | BR_WALL |
 S:CAUSE_4 | BO_MANA | BA_WATE | 
 S:S_MONSTER | HASTE | TELE_TO |
 S:ARROW_4 | BRAIN_SMASH | DRAIN_MANA
-D:Karthikeya, also known as Murugan, Skanda and Subrahmanya, is Shiva's son
-D:and the brother of Ganesha. He is famed as the vanquisher of mighty demons
-D:and as the god of war and victory, but also as a philosopher. You don't
+D:Karthikeya, also known as Murugan, Skanda and Subrahmanya, is Shiva's son 
+D:and the brother of Ganesha. He is famed as the vanquisher of mighty demons 
+D:and as the god of war and victory, but also as a philosopher. You don't 
 D:like the look on any of his faces...
 
 N:4459:Vanara
@@ -78319,9 +78320,9 @@ F:SMART | BASH_DOOR | ANIMAL | IM_POIS | NO_CONF |
 F:DROP_SKELETON | DROP_CORPSE | WILD_WOOD | TAKE_ITEM |
 S:1_IN_7
 S:BLINK | TELE_TO | 
-D:The Vanaras are a race of monkey-men from the jungles and forests, created
-D:by Brahma and endowed with some supernatural abilities. They seldom use
-D:conventional weapons, preferring to fight with boulders and other
+D:The Vanaras are a race of monkey-men from the jungles and forests, created 
+D:by Brahma and endowed with some supernatural abilities. They seldom use 
+D:conventional weapons, preferring to fight with boulders and other 
 D:natural objects.
 
 N:4460:Sugriva, Lord of Kishkindha
@@ -78341,7 +78342,7 @@ F:IM_ACID | RES_NEXU | RES_DARK | RES_CHAO | REGENERATE | NO_CONF |
 F:DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP | FORCE_SLEEP | IM_COLD |
 S:1_IN_3 |
 S:BLINK | HASTE | TELE_TO | 
-D:The younger brother of Vali and a king among the Vanaras, he is best
+D:The younger brother of Vali and a king among the Vanaras, he is best 
 D:known for his alliance with Rama.
 
 N:4461:Vali, King of the Vanaras
@@ -78363,10 +78364,10 @@ F:DROP_GREAT |
 F:RES_TELE | ONLY_ITEM | MOVE_BODY
 S:1_IN_3 |
 S:BLINK | HASTE | TELE_TO | 
-D:A son of the god Indra and king of the Vanaras, he is the strongest of
-D:his race; it is said that any opponent foolish enough to fight him will
-D:lose half his strength to him. Vali views his younger brother Sugriva as a
-D:usurper for having assumed the kingship in his absence, and the two are
+D:A son of the god Indra and king of the Vanaras, he is the strongest of 
+D:his race; it is said that any opponent foolish enough to fight him will 
+D:lose half his strength to him. Vali views his younger brother Sugriva as a 
+D:usurper for having assumed the kingship in his absence, and the two are 
 D:now mortal enemies.
 
 N:4462:Rama, the Exiled Prince
@@ -78386,10 +78387,10 @@ F:OPEN_DOOR | BASH_DOOR | DROP_CORPSE
 F:CAN_SWIM | TAKE_ITEM | MOVE_BODY
 S:1_IN_2 |
 S:ARROW_4 | S_KIN | S_MONSTER | BRAIN_SMASH | CAUSE_4 | BLINK
-D:The exiled son of the human king Dasharatha, Prince Rama is famous for his
-D:identity as an avatar of Vishnu, for his exceptional bowmanship, for his
-D:struggles to regain his wife Sita from the clutches of king Ravana and
-D:Ravana's demonic army, for the loyalty and friendship he inspired in the
+D:The exiled son of the human king Dasharatha, Prince Rama is famous for his 
+D:identity as an avatar of Vishnu, for his exceptional bowmanship, for his 
+D:struggles to regain his wife Sita from the clutches of king Ravana and 
+D:Ravana's demonic army, for the loyalty and friendship he inspired in the 
 D:Vanara commander Hanuman, and for retaining his sanity with virtues enabled.
 
 N:4463:Krishna, Avatar of Vishnu
@@ -78409,9 +78410,9 @@ F:NO_CONF | NO_STUN | NO_SLEEP | OPEN_DOOR | BASH_DOOR |
 F:SMART | ONLY_ITEM | TAKE_ITEM | MOVE_BODY
 S:1_IN_2
 S:HEAL | S_MONSTER | BLINK | TPORT | BR_TIME
-D:Krishna, the eighth avatar of Vishnu, is wise, loving and compassionate;
-D:he is remembered for his heroic deeds, his youthful playfulness, his
-D:relationships with thousands of devoted cowherdesses, and his counsel to
+D:Krishna, the eighth avatar of Vishnu, is wise, loving and compassionate; 
+D:he is remembered for his heroic deeds, his youthful playfulness, his 
+D:relationships with thousands of devoted cowherdesses, and his counsel to 
 D:his lifelong friend Prince Arjuna.
 
 N:4464:Vishnu, the Preserver
@@ -78436,10 +78437,10 @@ S:HEAL | BLINK | TELE_TO | TPORT | BR_LITE |
 S:BR_TIME | BA_MANA | BR_WALL |
 S:BO_ICEE | BO_PLAS | SCARE | HASTE |
 S:BA_FIRE | BA_WATE | CAUSE_4 | BRAIN_SMASH
-D:Vishnu is one of the most powerful gods, the preserver of life and the
-D:protector of the world against the forces of chaos and destruction;
-D:he is also known for his many avatars, often just as highly revered.
-D:Many of his followers consider him the ultimate, omnipotent,
+D:Vishnu is one of the most powerful gods, the preserver of life and the 
+D:protector of the world against the forces of chaos and destruction; 
+D:he is also known for his many avatars, often just as highly revered. 
+D:Many of his followers consider him the ultimate, omnipotent, 
 D:omnipresent supreme being, the source of the universe itself.
 
 N:4465:Lakshmi, the Goddess of Prosperity
@@ -78463,7 +78464,7 @@ S:1_IN_2 |
 S:S_MONSTER | BLINK | TPORT | HEAL | TELE_AWAY | BA_WATE
 S:DRAIN_MANA | BA_COLD
 S:BR_LITE
-D:Lakshmi is the eternal consort of Vishnu, and the goddess of fortune and
+D:Lakshmi is the eternal consort of Vishnu, and the goddess of fortune and 
 D:prosperity.
 
 N:4466:Asura
@@ -78484,8 +78485,8 @@ F:CAN_FLY | DEMON | REFLECTING | NO_CONF | FRIEND |
 S:1_IN_3 |
 S:TELE_TO | BLIND | MIND_BLAST | CAUSE_3 | CAUSE_4 | BO_MANA |
 S:S_DEMON | BO_NETH |
-D:The Asuras are of the same original stock as the Devas, but aligned against
-D:them: powerful, godlike creatures bent on gaining power for themselves, and
+D:The Asuras are of the same original stock as the Devas, but aligned against 
+D:them: powerful, godlike creatures bent on gaining power for themselves, and 
 D:spreading death and destruction as a consequence.
 
 N:4467:Vanara sage
@@ -78525,7 +78526,7 @@ S:1_IN_2
 S:BA_WATE | TELE_TO | HEAL | BO_ELEC |
 S:BA_ACID | BO_MANA | CAUSE_4 | BRAIN_SMASH | HASTE | BR_ELEC |
 S:BR_ACID
-D:Varuna rules the oceans and waters, and strikes with great fury at all
+D:Varuna rules the oceans and waters, and strikes with great fury at all 
 D:who offend him.
 
 N:4469:Makara
@@ -78542,7 +78543,7 @@ F:OPEN_DOOR | BASH_DOOR | AQUATIC |
 F:MORTAL | BASEANGBAND | 
 F:ANIMAL | IM_POIS | IM_ACID | IM_ELEC | RES_WATE | WILD_SHORE
 F:DROP_CORPSE | 
-D:These strange, crocodilian creatures are often used by the water-gods for
+D:These strange, crocodilian creatures are often used by the water-gods for 
 D:transport.
 
 N:4470:Ganesha, the Elephant God
@@ -78563,10 +78564,10 @@ F:RES_DARK |  NO_SLEEP | NO_CONF | NO_STUN | NO_FEAR
 F:DROP_CORPSE | 
 S:1_IN_4
 S:TELE_TO | BR_DISI | TRAPS | 
-D:Ganesha, the son of Shiva and Parvati and brother of Karthikeya, looks
-D:ungainly with his hanging belly and elephant head, yet he moves with
-D:surprising agility and is much cleverer than he seems. He is the god of
-D:obstacles, both creating and removing them, and his sheer bulk might
+D:Ganesha, the son of Shiva and Parvati and brother of Karthikeya, looks 
+D:ungainly with his hanging belly and elephant head, yet he moves with 
+D:surprising agility and is much cleverer than he seems. He is the god of 
+D:obstacles, both creating and removing them, and his sheer bulk might 
 D:remove you if you don't watch out...
 
 N:4471:Yama, Lord of the Dead
@@ -78589,9 +78590,9 @@ F:RES_NETH | RES_DARK | RES_TELE | NO_CONF | NO_SLEEP |
 S:1_IN_3
 S:BR_DARK | BR_NETH | BA_NETH | BA_DARK | HAND_DOOM
 S:CAUSE_4 | BRAIN_SMASH | S_UNDEAD | S_HI_UNDEAD | DRAIN_MANA
-D:Yama governs the realm of the dead as its king and god. It is said he was
-D:the first mortal to ever die, and came to rule all who followed him.
-D:He punishes those he considers sinners, and perhaps does not want to wait
+D:Yama governs the realm of the dead as its king and god. It is said he was 
+D:the first mortal to ever die, and came to rule all who followed him. 
+D:He punishes those he considers sinners, and perhaps does not want to wait 
 D:for long in your case...
 
 N:4472:Shiva, the Destroyer
@@ -78618,11 +78619,11 @@ S:BR_TIME | BA_MANA | BR_DISI |
 S:BO_PLAS | HAND_DOOM | SCARE | HASTE | BRAIN_SMASH |
 S:BA_ELEC | BA_FIRE | CAUSE_4 | BR_TIME | ARROW_4 |
 S:BO_ELEC | 
-D:Shiva is one of the mightiest and most fearsome gods, vanquisher of evil,
-D:ultimate destroyer of all things, the lord of unstoppable time itself. His
-D:most devoted followers view him as the Supreme Being, the creator and
-D:preserver as well as the destroyer, the highest manifestation of reality
-D:and all that is. While known for his fierceness, he is also the greatest
+D:Shiva is one of the mightiest and most fearsome gods, vanquisher of evil, 
+D:ultimate destroyer of all things, the lord of unstoppable time itself. His 
+D:most devoted followers view him as the Supreme Being, the creator and 
+D:preserver as well as the destroyer, the highest manifestation of reality 
+D:and all that is. While known for his fierceness, he is also the greatest 
 D:of all yogis and meditators and the lord of dance.
 
 N:4473:Nandi, the Bull of Shiva
@@ -78643,7 +78644,7 @@ F:NO_SLEEP | NO_CONF | NO_STUN | NO_FEAR
 F:DROP_CORPSE | 
 S:1_IN_4 |
 S:TELE_TO | BLINK | CAUSE_4 | BR_NEXU |
-D:Nandi is Shiva's great white bull, which he often rides on; at other times
+D:Nandi is Shiva's great white bull, which he often rides on; at other times 
 D:it guards the gates of Shiva's home and keeps unwanted intruders out.
 
 N:4474:Parvati, the Goddess of Hidden Power
@@ -78667,10 +78668,10 @@ S:1_IN_2 |
 S:S_MONSTER | HEAL | TELE_AWAY | BRAIN_SMASH
 S:SLOW | CONF | BLINK | DRAIN_MANA | BA_COLD
 S:BR_MANA | BR_INER | 
-D:Parvati is the devoted wife of Shiva, mother of Ganesha and Karthikeya and
-D:daughter of the mountain god Himavan. She is one of the great mother
-D:goddesses, sometimes worshipped as a personification of Shakti itself;
-D:her composure is such that she can even calm Shiva down, yet she also
+D:Parvati is the devoted wife of Shiva, mother of Ganesha and Karthikeya and 
+D:daughter of the mountain god Himavan. She is one of the great mother 
+D:goddesses, sometimes worshipped as a personification of Shakti itself; 
+D:her composure is such that she can even calm Shiva down, yet she also 
 D:makes him full and complements his power.
 
 N:4475:Durga, the Goddess of War
@@ -78693,8 +78694,8 @@ F:SMART |
 S:1_IN_3 |
 S:BR_SOUN | BR_MANA | BR_DISI | S_MONSTER | TELE_TO
 S:ARROW_4 | 
-D:Durga is the goddess of war and victory, and one of the great mother
-D:goddesses. Where Parvati represents hidden power, Durga holds obvious
+D:Durga is the goddess of war and victory, and one of the great mother 
+D:goddesses. Where Parvati represents hidden power, Durga holds obvious 
 D:power, swinging a deadly weapon in each of her many arms.
 
 N:4476:Kali, Mother of Rage
@@ -78717,9 +78718,9 @@ F:RES_DISE | NONLIVING | KILL_WALL | RES_TELE |
 F:KILL_BODY |  
 S:1_IN_3
 S:BR_MANA | BR_DISI | BR_NETH | TELE_TO | BR_TIME | BR_SOUN |
-D:Kali is the most fearsome embodiment of motherly energy. She is fury
-D:and rage unleashed; while Durga in her wrath is purposeful and in control,
-D:Kali wreaks havoc and complete destruction, yet her rage still ultimately
+D:Kali is the most fearsome embodiment of motherly energy. She is fury 
+D:and rage unleashed; while Durga in her wrath is purposeful and in control, 
+D:Kali wreaks havoc and complete destruction, yet her rage still ultimately 
 D:protects those dear to her.
 
 N:4477:Jambavan, King of the Beasts
@@ -78739,8 +78740,8 @@ F:DROP_SKELETON | DROP_CORPSE |
 F:NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN | MOVE_BODY | DROP_3D2 | DROP_GOOD
 S:1_IN_6
 S:BLINK | BLIND | TELE_TO | S_ANIMAL | S_KIN | 
-D:Jambavan is an enormous bear-like beast, reputed to be an immortal and a
-D:friend of Vishnu. The wild animals of the jungle recognize him as their
+D:Jambavan is an enormous bear-like beast, reputed to be an immortal and a 
+D:friend of Vishnu. The wild animals of the jungle recognize him as their 
 D:king, and are ready to help him if needed.
 
 N:4478:Rakshasa
@@ -78757,8 +78758,8 @@ F:BASEANGBAND |
 F:NO_SLEEP | NO_FEAR | OPEN_DOOR | BASH_DOOR |
 S:1_IN_2 |
 S:BA_FIRE | HEAL | BLINK | CONF | CAUSE_2
-D:These strange, massive, demonic creatures were created by Brahma, and are
-D:notorious for their ability to assume other shapes; though as you look at
+D:These strange, massive, demonic creatures were created by Brahma, and are 
+D:notorious for their ability to assume other shapes; though as you look at 
 D:them, they seem more intent on just cutting you to pieces.
 
 N:4479:Swamp rabbit
@@ -78790,7 +78791,7 @@ F:PASS_WALL | SUSCEP_FIRE | EVIL | IM_POIS | IM_COLD | WILD_MOUNTAIN |
 F:DROP_90 | NO_CONF | NO_SLEEP | NO_FEAR | FRIEND |
 S:1_IN_4 |
 S:BA_COLD | CONF | SCARE | DARKNESS | MIND_BLAST
-D:These ancient evil spirits of frost and darkness have considerable power,
+D:These ancient evil spirits of frost and darkness have considerable power, 
 D:yet their most dangerous weapon is fooling you into doing their work.
 
 N:4481:Brahma, the Creating Spirit
@@ -78813,8 +78814,8 @@ F:GOOD | EVIL | CAN_FLY | TAKE_ITEM |
 S:1_IN_2 |
 S:S_MONSTER | ARROW_4 | BA_CHAO
 S:HAND_DOOM | 
-D:Brahma is one of the most formidable gods, often claimed to have created
-D:life itself; his are both good and evil, and his curses and blessings are
+D:Brahma is one of the most formidable gods, often claimed to have created 
+D:life itself; his are both good and evil, and his curses and blessings are 
 D:equally mighty, yet his worshippers are few.
 
 N:4482:Saraswati, Goddess of Knowledge
@@ -78837,9 +78838,9 @@ F:RES_WATE | RES_SOUN | RES_CHAO | NO_SLEEP | NO_CONF |
 F:DROP_CORPSE | 
 S:1_IN_2 |
 S:S_MONSTER | FORGET | BA_ACID | BA_WATE
-D:Saraswati, the wife of Brahma, is the goddess of knowledge, speech, art,
-D:creative energy and things that flow. Her origin as a great river goddess
-D:is all too apparent as she drowns you in a whirlpool with disdainful
+D:Saraswati, the wife of Brahma, is the goddess of knowledge, speech, art, 
+D:creative energy and things that flow. Her origin as a great river goddess 
+D:is all too apparent as she drowns you in a whirlpool with disdainful 
 D:indifference.
 
 # Watch out for that S_PANTHEON...
@@ -78864,9 +78865,9 @@ F:RES_WATE | NO_CONF | NO_SLEEP | AURA_ELEC
 S:1_IN_2
 S:BR_ELEC | S_WRAITH | BO_MANA | BO_ELEC
 S:BO_PLAS |
-D:Indra is the god of thunder and the heavens, famed for his defeat of the
-D:demonic wyrm Vritra; and while his recognition as the leader of the Devas
-D:has waned over the long years, he still resides atop the holy mountain of
+D:Indra is the god of thunder and the heavens, famed for his defeat of the 
+D:demonic wyrm Vritra; and while his recognition as the leader of the Devas 
+D:has waned over the long years, he still resides atop the holy mountain of 
 D:Meru, raining lightning upon those who disturb him.
 
 N:4484:Polar cat
@@ -78902,7 +78903,7 @@ F:CAN_FLY | REGENERATE | IM_FIRE | IM_POIS | RES_TELE
 S:1_IN_2 |
 S:S_MONSTER | MIND_BLAST | CONF | TELE_AWAY | HASTE
 S:BA_ELEC | SHRIEK
-D:A small, cute, horned floating furball; too malicious to describe as an angel,
+D:A small, cute, horned floating furball; too malicious to describe as an angel, 
 D:too innocent-looking to be a demon, and too strange-looking to be a cat.
 
 N:4486:Greater dokkaebi
@@ -78925,8 +78926,8 @@ S:1_IN_2 |
 S:S_MONSTER | S_DEMON | S_DRAGON | S_UNDEAD | BRAIN_SMASH | BLINK |
 S:TELE_AWAY | TELE_LEVEL | BO_PLAS |
 S:S_ANGEL | S_ANIMAL | HASTE | HEAL | SHRIEK
-D:An ancient, mighty leader of the dokkaebis, its sheer size indicates a
-D:status its lesser kin can but hope to mimic. It sees you and your
+D:An ancient, mighty leader of the dokkaebis, its sheer size indicates a 
+D:status its lesser kin can but hope to mimic. It sees you and your 
 D:adventures as a form of entertainment.
 
 N:4487:Giant yellow toad
@@ -78940,7 +78941,7 @@ B:TOUCH:LOSE_CON:1d4
 F:RAND_50 | WILD_SHORE | WILD_SWAMP | IM_POIS |
 F:MORTAL | BASEANGBAND | 
 F:DROP_CORPSE | ANIMAL | 
-D:The skin of this large toad glistens with poison. You feel sick just
+D:The skin of this large toad glistens with poison. You feel sick just 
 D:looking at it.
 
 N:4488:Duck
@@ -78976,7 +78977,7 @@ F:DROP_CORPSE | NO_FEAR
 S:1_IN_5 |
 S:BRAIN_SMASH | TELE_TO | TELE_AWAY | S_MONSTER
 S:BA_WATE | BR_NEXU | BR_NUKE | BR_WALL | S_KIN
-D:The greatest and strongest of the whales, old but wily and seemingly
+D:The greatest and strongest of the whales, old but wily and seemingly 
 D:untouched by age. All creatures of the deep seas answer to his call.
 
 N:4490:Shrieking eel
@@ -79011,7 +79012,7 @@ F:DROP_SKELETON | DROP_CORPSE |
 S:1_IN_5
 S:TELE_TO | HEAL | SCARE | S_MONSTER | BA_WATE | 
 S:BA_ACID | BO_ICEE | HOLD
-D:An aquatic relative of the ice giants, almost twenty feet tall, and full
+D:An aquatic relative of the ice giants, almost twenty feet tall, and full 
 D:of dark cunning.
 
 N:4492:Iku-Turso
@@ -79032,9 +79033,9 @@ F:IM_ELEC | IM_FIRE | IM_COLD | RES_TIME | IM_ACID | NO_CONF | NO_SLEEP
 F:EVIL | DROP_CORPSE | 
 S:1_IN_2 |
 S:TELE_TO | BA_WATE | BR_ACID | BR_ELEC | BR_NEXU
-D:Since the dawn of time has Iku-Turso lurked in the oceans: the gigantic
-D:terror of the open seas, umpteen-headed, umpteen-horned, his slimy tentacles
-D:reaching out to catch his prey; as if every other sea monster had been
+D:Since the dawn of time has Iku-Turso lurked in the oceans: the gigantic 
+D:terror of the open seas, umpteen-headed, umpteen-horned, his slimy tentacles 
+D:reaching out to catch his prey; as if every other sea monster had been 
 D:bundled together and scaled up.
 
 N:4493:Blue-ringed octopus
@@ -79047,8 +79048,8 @@ B:BITE:PARALYZE:2d15
 B:BITE:POISON:2d15
 F:MORTAL | BASEANGBAND | 
 F:RAND_25 | IM_POIS | RES_WATE | ANIMAL | ATTR_MULTI
-D:This strangely iridescent cephalopod is very small for an octopus, and
-D:looks harmless and unassuming, but its venomous bite is best left
+D:This strangely iridescent cephalopod is very small for an octopus, and 
+D:looks harmless and unassuming, but its venomous bite is best left 
 D:unexperienced.
 
 N:4494:Box jellyfish
@@ -79061,7 +79062,7 @@ B:STING:POISON:2d25
 B:STING:POISON:2d25
 F:MORTAL | BASEANGBAND | 
 F:IM_POIS | RES_WATE | ANIMAL | FRIEND
-D:These little jellyfish have deadlier venom than any other creature of the
+D:These little jellyfish have deadlier venom than any other creature of the 
 D:Ozmanian billabongs; but luckily they are fragile and easily disposed of.
 
 N:4495:Mutant manta ray
@@ -79078,9 +79079,9 @@ F:MORTAL | BASEANGBAND |
 F:ANIMAL
 S:1_IN_6
 S:ARROW_4 | BA_WATE
-D:Toxic waste has mutated this massive fish, turning it entirely evil and
-D:giving it extra brain capacity. It has somehow acquired - perhaps from
-D:some misguided past hunter - a large collection of harpoons, which it
+D:Toxic waste has mutated this massive fish, turning it entirely evil and 
+D:giving it extra brain capacity. It has somehow acquired - perhaps from 
+D:some misguided past hunter - a large collection of harpoons, which it 
 D:mercilessly fires at all comers with remarkable force and agility.
 
 N:4496:Makara
@@ -79097,7 +79098,7 @@ F:OPEN_DOOR | BASH_DOOR |
 F:MORTAL | BASEANGBAND | 
 F:ANIMAL | IM_POIS | IM_ACID | IM_ELEC | RES_WATE | WILD_SHORE
 F:DROP_CORPSE | 
-D:These strange, crocodilian creatures are often used by the water-gods for
+D:These strange, crocodilian creatures are often used by the water-gods for 
 D:transport.
 
 N:4497:Four Score
