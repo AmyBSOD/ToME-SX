@@ -3430,18 +3430,21 @@ void do_cmd_read_scroll(void)
 	if (p_ptr->blind)
 	{
 		msg_print("You can't see anything.");
+		msg_print(NULL);
 		return;
 	}
 
 	if (no_lite())
 	{
 		msg_print("You have no light by which to read.");
+		msg_print(NULL);
 		return;
 	}
 
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 

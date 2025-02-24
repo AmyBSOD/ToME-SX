@@ -7684,16 +7684,19 @@ void do_cmd_set_trap(void)
 	if (p_ptr->blind)
 	{
 		msg_print("You can't see anything.");
+		msg_print(NULL);
 		return;
 	}
 	if (no_lite())
 	{
 		msg_print("You don't dare to set a trap in the darkness.");
+		msg_print(NULL);
 		return;
 	}
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -7701,6 +7704,7 @@ void do_cmd_set_trap(void)
 	if (!cave_clean_bold(p_ptr->py, p_ptr->px))
 	{
 		msg_print("You cannot set a trap on this.");
+		msg_print(NULL);
 		return;
 	}
 

@@ -2808,6 +2808,7 @@ void do_cmd_run_run()
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 

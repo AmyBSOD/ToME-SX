@@ -191,6 +191,7 @@ void do_fart_effect(void)
 		{
 			msg_print("You are pushed away!");
 			teleport_player(10);
+			msg_print(NULL);
 
 			break;
 		}
@@ -200,6 +201,7 @@ void do_fart_effect(void)
 		{
 			msg_print("You are teleported away!");
 			teleport_player(100);
+			msg_print(NULL);
 
 			break;
 		}
@@ -208,6 +210,7 @@ void do_fart_effect(void)
 		{
 			msg_print("You are teleported far away!");
 			teleport_player(200);
+			msg_print(NULL);
 
 			break;
 		}
@@ -244,6 +247,7 @@ void do_fart_effect(void)
 		{
 			msg_print("You feel endangered!!");
 			trap_creation();
+			msg_print(NULL);
 
 			break;
 		}

@@ -3995,12 +3995,14 @@ void do_cmd_alchemist(void)
 	if ((o_ptr->tval != TV_GLOVES) || (o_ptr->sval != SV_SET_OF_LEATHER_GLOVES))
 	{
 		msg_print("You must wear gloves in order to do alchemy.");
+		msg_print(NULL);
 		return;
 	}
 
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -5580,12 +5582,14 @@ void do_cmd_archer(void)
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
 	if (p_ptr->blind)
 	{
 		msg_print("You are blind!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -6635,6 +6639,7 @@ void do_cmd_rune(void)
 	if (p_ptr->csp <= 0)
 	{
 		msg_print("You have no mana!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -6642,6 +6647,7 @@ void do_cmd_rune(void)
 	if (p_ptr->blind || no_lite())
 	{
 		msg_print("You cannot see!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -6649,6 +6655,7 @@ void do_cmd_rune(void)
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -6899,6 +6906,7 @@ void do_cmd_rune_cast()
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -6947,6 +6955,7 @@ void do_cmd_runestone()
 	if (p_ptr->csp <= 0)
 	{
 		msg_print("You have no mana!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -6954,6 +6963,7 @@ void do_cmd_runestone()
 	if (p_ptr->blind || no_lite())
 	{
 		msg_print("You cannot see!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -6961,6 +6971,7 @@ void do_cmd_runestone()
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -7031,6 +7042,7 @@ void do_cmd_rune_add_mem()
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -7038,6 +7050,7 @@ void do_cmd_rune_add_mem()
 	if (rune_num >= MAX_RUNES)
 	{
 		msg_print("You have already learn the maximun number of runespells!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -7081,6 +7094,7 @@ void do_cmd_rune_carve()
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -7088,6 +7102,7 @@ void do_cmd_rune_carve()
 	if (p_ptr->blind || no_lite())
 	{
 		msg_print("You cannot see!");
+		msg_print(NULL);
 		return;
 	}
 
@@ -7189,6 +7204,7 @@ void do_cmd_rune_del()
 	if (p_ptr->confused)
 	{
 		msg_print("You are too confused!");
+		msg_print(NULL);
 		return;
 	}
 
