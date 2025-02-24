@@ -2731,6 +2731,7 @@ void random_artifact_resistance(object_type * o_ptr)
 
 /*
  * Mega-Hack -- Attempt to create one of the "Special Objects"
+ * note by Amy: these are e.g. phials or arkenstones, which are base items that ONLY exist as artifacts
  *
  * We are only called from "make_object()", and we assume that
  * "apply_magic()" is called immediately after we return.
@@ -2767,14 +2768,27 @@ static bool make_artifact_special(object_type *o_ptr)
 		/* Skip "empty" artifacts */
 		if (!a_ptr->name) continue;
 
-		/* Cannot make an artifact twice */
-		if (a_ptr->cur_num) continue;
+		/* Cannot make an artifact twice, except rarely (change by Amy) */
+		if (a_ptr->cur_num) {
+
+			/* Amy: the one ring really cannot be created twice! */
+			if (o_ptr->tval == TV_RING && o_ptr->sval == SV_RING_POWER) continue;
+
+			/* otherwise, there's a 2% chance to generate it again */
+			if (!magik(2)) continue;
+		}
 
 		/* Cannot generate non special ones */
 		if (!(a_ptr->flags3 & TR3_INSTA_ART)) continue;
 
 		/* Cannot generate some artifacts because they can only exists in special dungeons/quests/... */
-		if ((a_ptr->flags4 & TR4_SPECIAL_GENE) && (!a_allow_special[i]) && (!vanilla_town)) continue;
+		if ((a_ptr->flags4 & TR4_SPECIAL_GENE) && (!a_allow_special[i]) && (!vanilla_town)) {
+
+			if (o_ptr->tval == TV_RING && o_ptr->sval == SV_RING_POWER) continue;
+
+			/* Amy edit: but if they have been generated, then they're allowed to generate another time */
+			if (!a_ptr->cur_num) continue;
+		}
 
 		/* XXX XXX Enforce minimum "depth" (loosely) */
 		if (a_ptr->level > dunlevelmax)
@@ -2829,6 +2843,7 @@ static bool make_artifact_special(object_type *o_ptr)
 
 /*
  * Attempt to change an object into an artifact
+ * note by Amy: this means all the artifacts that have regular base item types like e.g. light war axe or long sword
  *
  * This routine should only be called by "apply_magic()"
  *
@@ -2854,14 +2869,27 @@ static bool make_artifact(object_type *o_ptr)
 		/* Skip "empty" items */
 		if (!a_ptr->name) continue;
 
-		/* Cannot make an artifact twice */
-		if (a_ptr->cur_num) continue;
+		/* Cannot make an artifact twice, except rarely (change by Amy) */
+		if (a_ptr->cur_num) {
+
+			/* Amy: the one ring really cannot be created twice! */
+			if (o_ptr->tval == TV_RING && o_ptr->sval == SV_RING_POWER) continue;
+
+			/* otherwise, there's a 2% chance to generate it again */
+			if (!magik(2)) continue;
+		}
 
 		/* Cannot generate special ones */
 		if (a_ptr->flags3 & TR3_INSTA_ART) continue;
 
 		/* Cannot generate some artifacts because they can only exists in special dungeons/quests/... */
-		if ((a_ptr->flags4 & TR4_SPECIAL_GENE) && (!a_allow_special[i]) && (!vanilla_town)) continue;
+		if ((a_ptr->flags4 & TR4_SPECIAL_GENE) && (!a_allow_special[i]) && (!vanilla_town)) {
+
+			if (o_ptr->tval == TV_RING && o_ptr->sval == SV_RING_POWER) continue;
+
+			/* Amy edit: but if they have been generated, then they're allowed to generate another time */
+			if (!a_ptr->cur_num) continue;
+		}
 
 		/* Must have the correct fields */
 		if (a_ptr->tval != o_ptr->tval) continue;
