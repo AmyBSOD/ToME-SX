@@ -676,7 +676,8 @@ void teleport_player(int dis)
 						 */
 					{
 						if (!(m_list[cave[oy + yy][ox + xx].m_idx].csleep))
-							teleport_to_player(cave[oy + yy][ox + xx].m_idx);
+							/* so totally cheesy, as if teleports were controlled! they're not, they're random! --Amy */
+							teleport_away(cave[oy + yy][ox + xx].m_idx, MAX_SIGHT * 2 + 5);
 					}
 				}
 			}
@@ -827,7 +828,8 @@ void teleport_player_deathmold(int dis)
 						 */
 					{
 						if (!(m_list[cave[oy + yy][ox + xx].m_idx].csleep))
-							teleport_to_player(cave[oy + yy][ox + xx].m_idx);
+							/* so totally cheesy, as if teleports were controlled! they're not, they're random! --Amy */
+							teleport_away(cave[oy + yy][ox + xx].m_idx, MAX_SIGHT * 2 + 5);
 					}
 				}
 			}
