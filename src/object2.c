@@ -3005,7 +3005,7 @@ static bool make_ego_item(object_type *o_ptr, bool good)
 
 		maxposslvl = dun_level;
 		if (p_ptr->nastytrap45 && (maxposslvl > 1)) maxposslvl /= 2;
-		if (!p_ptr->nastytrap45) maxposslvl += get_skill(SKILL_FORTUNE);
+		if (!p_ptr->nastytrap45 && (get_skill(SKILL_FORTUNE) > 0) ) maxposslvl += get_skill(SKILL_FORTUNE);
 
 		int j = ok_ego[rand_int(ok_num)];
 		e_ptr = &e_info[j];

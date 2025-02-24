@@ -350,6 +350,8 @@ void recalc_skills(bool init)
 	if (init)
 	{
 		thaum_level = get_skill_scale(SKILL_THAUMATURGY, 100);
+		/* Amy edit: some chars can start with negative skill levels, they shouldn't get level 255 spells! */
+		if (thaum_level < 0) thaum_level = 0;
 	}
 	else
 	{
@@ -1073,13 +1075,13 @@ void do_cmd_activate_skill()
 /* Which magic forbids non FA gloves */
 bool forbid_gloves()
 {
-	if (get_skill(SKILL_SORCERY)) return (TRUE);
-	if (get_skill(SKILL_MANA)) return (TRUE);
-	if (get_skill(SKILL_FIRE)) return (TRUE);
-	if (get_skill(SKILL_AIR)) return (TRUE);
-	if (get_skill(SKILL_WATER)) return (TRUE);
-	if (get_skill(SKILL_EARTH)) return (TRUE);
-	if (get_skill(SKILL_THAUMATURGY)) return (TRUE);
+	if (get_skill(SKILL_SORCERY) > 0) return (TRUE);
+	if (get_skill(SKILL_MANA) > 0) return (TRUE);
+	if (get_skill(SKILL_FIRE) > 0) return (TRUE);
+	if (get_skill(SKILL_AIR) > 0) return (TRUE);
+	if (get_skill(SKILL_WATER) > 0) return (TRUE);
+	if (get_skill(SKILL_EARTH) > 0) return (TRUE);
+	if (get_skill(SKILL_THAUMATURGY) > 0) return (TRUE);
 	return (FALSE);
 }
 

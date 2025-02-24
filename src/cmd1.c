@@ -2770,13 +2770,13 @@ void py_attack(int y, int x, int max_blow)
 							k = damroll(o_ptr->dd, o_ptr->ds);
 							k = tot_dam_aux(o_ptr, k, m_ptr, &special);
 
-							if (backstab)
+							if (backstab && (get_skill(SKILL_BACKSTAB) > 0) )
 							{
 								k += (k *
 								      get_skill_scale(SKILL_BACKSTAB,
 								                      100)) / 100;
 							}
-							else if (stab_fleeing)
+							else if (stab_fleeing && (get_skill(SKILL_BACKSTAB) > 0) )
 							{
 								k += (k * get_skill_scale(SKILL_BACKSTAB, 70)) /
 								     100;
@@ -3065,8 +3065,12 @@ void py_attack(int y, int x, int max_blow)
 							else
 							{
 								msg_format("%^s appears confused.", m_name);
+
+								int combatboost = 0;
+								if (get_skill(SKILL_COMBAT) > 0) combatboost = rand_int(get_skill(SKILL_COMBAT));
+
 								m_ptr->confused +=
-								        10 + rand_int(get_skill(SKILL_COMBAT)) / 5;
+								        10 + combatboost / 5;
 							}
 						}
 

@@ -1987,7 +1987,7 @@ void calc_hitpoints(void)
 	if (mhp < 1) mhp = 1;
 
 	/* Hack: Sorcery impose a hp penality */
-	if (mhp && (get_skill(SKILL_SORCERY)))
+	if (mhp && (get_skill(SKILL_SORCERY) > 0))
 	{
 		mhp -= mhp * get_skill_scale(SKILL_SORCERY, 50) / 100;
 		if (mhp < 1) mhp = 1;
@@ -4413,7 +4413,7 @@ void calc_bonuses(bool silent)
 
 		/* Sorcerer can't wield a weapon unless it's a mage staff
 		 * Amy: way too harsh, divided penalty by a factor 10 to make it at least *slightly* more playable */
-		if (get_skill(SKILL_SORCERY))
+		if (get_skill(SKILL_SORCERY) > 0)
 		{
 			int malus = get_skill_scale(SKILL_SORCERY, 10);
 

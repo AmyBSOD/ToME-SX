@@ -4048,7 +4048,7 @@ void do_cmd_throw(void)
 	}
 
 	/* Boulder throwing */
-	if ((o_ptr->tval == TV_JUNK) && (o_ptr->sval == SV_BOULDER) && (get_skill(SKILL_BOULDER)))
+	if ((o_ptr->tval == TV_JUNK) && (o_ptr->sval == SV_BOULDER) && (get_skill(SKILL_BOULDER) >= 1))
 	{
 		boulder_add = get_skill_scale(SKILL_BOULDER, 60);
 		boulder_mult = get_skill_scale(SKILL_BOULDER, 4);

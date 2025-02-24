@@ -109,7 +109,7 @@ bool mon_take_hit_mon(int s_idx, int m_idx, int dam, bool *fear, cptr note)
 			monster_gain_exp(s_idx, dive, FALSE);
 
 			/* Monster lore skill allows gaining xp from pets */
-			if (get_skill(SKILL_LORE) && (s_ptr->status >= MSTATUS_PET))
+			if ((get_skill(SKILL_LORE) > 0) && (s_ptr->status >= MSTATUS_PET))
 			{
 				/* Maximum player level */
 				div = p_ptr->max_plv;

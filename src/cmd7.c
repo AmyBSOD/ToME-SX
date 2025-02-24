@@ -8036,7 +8036,7 @@ void summon_true(int r_idx, int item)
 	/* Non-uniques are easier to handle */
 	else
 	{
-		if (get_skill(SKILL_SUMMON) == 0)
+		if (get_skill(SKILL_SUMMON) <= 0)
 		{
 			used = TRUE;
 		}
