@@ -1089,6 +1089,7 @@ bool forbid_gloves()
 bool forbid_non_blessed()
 {
 	GOD(GOD_ERU) return (TRUE);
+	if (p_ptr->nastytrap115) return (TRUE); /* edgy nastytrap by Amy */
 	return (FALSE);
 }
 

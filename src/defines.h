@@ -2936,6 +2936,13 @@
 #define TRAP_OF_TERRAIN_ANDUIN            415
 #define TRAP_OF_TERRAIN_WATERFALL         416
 
+#define TRAP_NASTY115                     417
+
+#define TRAP_OF_SUMMON_SQUAD              418
+#define TRAP_OF_INVERT_ARMOR              419
+#define TRAP_OF_INVERT_WEAPON             420
+#define TRAP_OF_TRASH_EQUIPMENT           421
+
 /*** General index values ***/
 
 

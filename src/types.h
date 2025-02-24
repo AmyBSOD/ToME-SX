@@ -2023,7 +2023,7 @@ struct player_type
 	bool nastytrap112; /* activation trap - items that can be activated won't recharge */
 	bool nastytrap113; /* ooop trap - stat gain doesn't work */
 	bool nastytrap114; /* map amnesia trap - like dungeons with the FORGET flag, always forget the map */
-	bool nastytrap115;
+	bool nastytrap115; /* edgy trap - cannot wield edged weapons without penalty, like worshipping eru */
 	bool nastytrap116;
 	bool nastytrap117;
 	bool nastytrap118;

@@ -2057,6 +2057,10 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: The game doesn't remember the map for you.";
 	}
+	if (p_ptr->nastytrap115)
+	{
+		info[i++] = "You have a problem: Wielding an edged weapon gives a penalty.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];

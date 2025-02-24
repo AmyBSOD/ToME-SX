@@ -581,6 +581,7 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY112:
 		case TRAP_NASTY113:
 		case TRAP_NASTY114:
+		case TRAP_NASTY115:
 			return FALSE;
 	}
 
@@ -710,6 +711,7 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY112:
 		case TRAP_NASTY113:
 		case TRAP_NASTY114:
+		case TRAP_NASTY115:
 			return FALSE;
 	}
 
@@ -847,6 +849,7 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY112:
 		case TRAP_NASTY113:
 		case TRAP_NASTY114:
+		case TRAP_NASTY115:
 			return TRUE;
 	}
 
@@ -1584,6 +1587,42 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				}
 
 				if (ident) msg_print("You identified that trap as Summon Monster Trap.");
+				ident = FALSE;
+
+			}
+
+			break;
+		}
+
+		/* Summon Squad Trap */
+	case TRAP_OF_SUMMON_SQUAD:
+		{
+			msg_print("A preposterous spell hangs in the air.");
+			for (k = 0; k < (randint(6) + randint(16)); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type], 0);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Squad Trap.");
 				ident = FALSE;
 
 			}
@@ -4490,6 +4529,166 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* Trap of Invert Armor, by Amy: equipped stuff with positive AC bonus becomes negative */
+	case TRAP_OF_INVERT_ARMOR:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_WIELD; j < INVEN_TOTAL; j++)
+			{
+
+				if (rand_int(10) < 8) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* does it have an AC bonus? */
+				if (j_ptr->to_a > 0) {
+					j_ptr->to_a *= -1;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your armor class fell sharply!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("Your body itches strangely!");
+			break;
+		}
+
+		/* Trap of Invert Weapon, by Amy: equipped stuff with positive to-hit/to-dam bonus becomes negative */
+	case TRAP_OF_INVERT_WEAPON:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_WIELD; j < INVEN_TOTAL; j++)
+			{
+
+				if (rand_int(10) < 8) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* does it have an AC bonus? */
+				if (j_ptr->to_d > 0) {
+					j_ptr->to_d *= -1;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your weapon effectivity fell sharply!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+				if (j_ptr->to_h > 0) {
+					j_ptr->to_h *= -1;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your weapon effectivity fell sharply!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("Your hands itch strangely!");
+			break;
+		}
+
+		/* Trap of Trash Equipment, by Amy: equipped stuff with positive pval bonus becomes negative, artifacts are immune */
+	case TRAP_OF_TRASH_EQUIPMENT:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_WIELD; j < INVEN_TOTAL; j++)
+			{
+
+				if (rand_int(10) < 8) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				if (j_ptr->name1) continue; /* artifacts are immune */
+
+				/* does it have an AC bonus? */
+				if (j_ptr->pval > 0) {
+					j_ptr->pval *= -1;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your equipment seems much less effective!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("You have a very bad feeling about your equipment...");
+			break;
+		}
+
 		/* Trap of Decay */
 	case TRAP_OF_DECAY:
 		{
@@ -6174,6 +6373,18 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap114 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY115:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap115 = TRUE;
 			calc_bonuses(FALSE);
 
 			break;			
@@ -8953,7 +9164,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(114)) {
+	switch (randint(115)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -9295,6 +9506,9 @@ void give_random_nastytrap_effect(void)
 			break;
 		case 114:
 			p_ptr->nastytrap114 = TRUE;
+			break;
+		case 115:
+			p_ptr->nastytrap115 = TRUE;
 			break;
 
 	}

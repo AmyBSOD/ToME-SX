@@ -2027,6 +2027,31 @@ I:8:20:0:10:40:0d0:o
 D:Waterfalls rush into the dungeon!
 F:FLOOR | CHEST | DOOR
 
+N:417:Edgy Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:418:Summon Squad Trap
+I:2:50:40:4:2:0d0:v
+D:Many monsters defend the memory of the owner...
+F:FLOOR | CHEST | DOOR
+
+N:419:Trap of Invert Armor
+I:3:50:40:4:5:0d0:y
+D:Your armor seems different...
+F:FLOOR | CHEST | DOOR
+
+N:420:Trap of Invert Weapon
+I:3:50:40:4:5:0d0:y
+D:Your weapon seems different...
+F:FLOOR | CHEST | DOOR
+
+N:421:Trap of Trash Equipment
+I:12:20:10:25:60:0d0:y
+D:Your equipment seems different...
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

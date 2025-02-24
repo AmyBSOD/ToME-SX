@@ -52,7 +52,7 @@ M:E:412
 M:D:70
 
 # Maximum number of trap types in tr_info.txt
-M:U:417
+M:U:422
 
 # Maximum number of terrain types in wf_info.txt
 M:W:42
