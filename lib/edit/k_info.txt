@@ -8088,6 +8088,191 @@ D:Although it looks like a piece of junk, it is actually part of an ancient
 D:relic belonging to the Priests of Orome. The relic now lies in pieces, 
 D:hidden from all but the most faithful followers of Orome.
 
+N:989:Poison
+G:?:g
+I:104:6:0
+W:15:5:75:5000
+A:15/50
+P:0:1d1:0:0:0
+F:IGNORE_FIRE
+D:Runecrafters can use this rune to add poison branding to a weapon.
+
+N:990:Hunting
+G:?:v
+I:104:40:0
+W:10:5:75:5000
+A:10/50
+P:0:1d1:0:0:0
+D:Runecrafters can use this rune to add slay animal to a weapon.
+
+N:991:Cairn
+G:?:v
+I:104:41:0
+W:10:5:75:5000
+A:10/50
+P:0:1d1:0:0:0
+D:Runecrafters can use this rune to add slay undead to a weapon.
+
+N:992:Icon
+G:?:v
+I:104:42:0
+W:10:5:75:5000
+A:10/50
+P:0:1d1:0:0:0
+D:Runecrafters can use this rune to add slay demon to a weapon.
+
+N:993:Imprint
+G:?:v
+I:104:43:0
+W:10:5:75:5000
+A:10/50
+P:0:1d1:0:0:0
+D:Runecrafters can use this rune to add slay orc to a weapon.
+
+N:994:Stench
+G:?:v
+I:104:44:0
+W:10:5:75:5000
+A:10/50
+P:0:1d1:0:0:0
+D:Runecrafters can use this rune to add slay troll to a weapon.
+
+N:995:Size
+G:?:v
+I:104:45:0
+W:10:5:75:5000
+A:10/50
+P:0:1d1:0:0:0
+D:Runecrafters can use this rune to add slay giant to a weapon.
+
+N:996:Wings
+G:?:v
+I:104:46:0
+W:10:5:75:5000
+A:10/50
+P:0:1d1:0:0:0
+D:Runecrafters can use this rune to add slay dragon to a weapon.
+
+N:997:Boldness
+G:*:G
+I:4:19:5
+W:0:0:50:5000
+A:0/50
+P:0:1d1:0:0:0
+D:An essence that can add fear resistance to armor or jewelry.
+
+N:998:Sight
+G:*:G
+I:4:20:5
+W:0:0:60:8000
+A:10/50
+P:0:1d1:0:0:0
+D:An essence that can add blindness resistance to armor or jewelry.
+
+N:999:Wax
+G:*:G
+I:4:21:100
+W:0:0:50:8000
+A:20/50
+P:0:1d1:0:0:0
+D:An essence that can add sound resistance to armor or jewelry.
+
+N:1000:Warping
+G:*:G
+I:4:22:100
+W:0:0:50:8000
+A:20/50
+P:0:1d1:0:0:0
+D:An essence that can add nexus resistance to armor or jewelry.
+
+N:1001:True Sight
+G:*:G
+I:4:23:100
+W:40:0:100:20000
+A:40/50
+P:0:1d1:0:0:0
+D:An essence that can add see invisible to armor or jewelry.
+
+N:1002:Nutrition
+G:*:G
+I:4:24:100
+W:0:0:50:6000
+A:10/50
+P:0:1d1:0:0:0
+D:An essence that can add slow digestion to armor or jewelry.
+
+N:1003:Blessing
+G:?:b
+I:104:11:0
+W:10:5:100:10000
+A:10/50
+P:0:1d1:0:0:0
+D:Runecrafters can use this rune to add blessing to a weapon.
+
+N:1004:Blood
+G:?:o
+I:104:12:0
+W:40:5:200:40000
+A:40/50
+P:0:1d1:0:0:0
+D:Runecrafters can use this rune to add wounding to a weapon.
+
+N:1005:Stability
+G:?:w
+I:104:13:0
+W:0:5:100:10000
+A:0/50
+P:0:1d1:0:0:0
+D:Runecrafters can use this rune to add morgul resistance to a weapon.
+
+N:1006:Feather
+G:?:b
+I:104:14:0
+W:0:5:40:5000
+A:0/50
+P:0:1d1:0:0:0
+D:Runecrafters can use this rune to add litheness to armor.
+
+N:1007:Water
+G:*:G
+I:4:25:180
+W:0:0:200:80000
+A:50/50
+P:0:1d1:0:0:0
+D:An essence that can add water resistance to armor or jewelry.
+
+N:1008:Inertia
+G:*:G
+I:4:26:180
+W:0:0:200:80000
+A:50/50
+P:0:1d1:0:0:0
+D:An essence that can add inertia resistance to armor or jewelry.
+
+N:1009:Health
+G:?:g
+I:104:15:0
+W:0:5:75:15000
+A:20/50
+P:0:1d1:0:0:0
+D:Runecrafters can use this rune to add regeneration to armor or jewelry.
+
+N:1010:Mirror
+G:?:B
+I:104:16:0
+W:0:5:200:80000
+A:60/50
+P:0:1d1:0:0:0
+D:Runecrafters can use this rune to add reflection to armor or jewelry.
+
+N:1011:Holding
+G:*:G
+I:4:27:50
+W:0:0:50:10000
+A:10/50
+P:0:1d1:0:0:0
+D:An essence that can add hold life to armor or jewelry.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

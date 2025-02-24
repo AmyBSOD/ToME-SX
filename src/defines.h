@@ -2134,7 +2134,7 @@
 #define SV_FOOD_GREAT_HEALTH            41
 #define SV_FOOD_FORTUNE_COOKIE          42
 
-/* The "sval" codes for TV_BATERIE */
+/* The "sval" codes for TV_BATERIE (4) */
 #define SV_BATERIE_POISON    1
 #define SV_BATERIE_EXPLOSION 2
 #define SV_BATERIE_TELEPORT  3
@@ -2153,31 +2153,53 @@
 #define SV_BATERIE_FORCE     16
 #define SV_BATERIE_LIGHTNING 17
 #define SV_BATERIE_MANA      18
-#define MAX_BATERIE_SVAL     18
+#define SV_BATERIE_BOLD      19
+#define SV_BATERIE_SIGHT     20
+#define SV_BATERIE_SOUND     21
+#define SV_BATERIE_NEXUS     22
+#define SV_BATERIE_SEEINV    23
+#define SV_BATERIE_DIGEST    24
+#define SV_BATERIE_WATER     25
+#define SV_BATERIE_INERTIA   26
+#define SV_BATERIE_HOLDING   27
+#define MAX_BATERIE_SVAL     27
 
 /* The "sval" codes for TV_RUNE1 (104) */
+/* The "sval" codes for TV_RUNE2 (105) */
+/* for easier implementation, they should all be different than those of RUNE1 --Amy */
 #define SV_RUNE1_LIGHTNING   1
 #define SV_RUNE1_ACID        3
 #define SV_RUNE1_COLD        4
 #define SV_RUNE1_FIRE        5
+#define SV_RUNE1_POISON      6
 #define SV_RUNE1_ELEMENT     10
-#define SV_RUNE1_CHAOS       30
-#define SV_RUNE1_GRAVITY     35
-#define SV_RUNE1_LIFE        53
-#define SV_RUNE1_PROTECTION  74
-#define SV_RUNE1_HOLDING     75
-#define SV_RUNE1_MIND        85
-#define SV_RUNE1_KNOWLEDGE   91
-#define SV_RUNE1_UNDEATH     92
-
-/* The "sval" codes for TV_RUNE2 (105) */
-/* for easier implementation, they should all be different than those of RUNE1 --Amy */
+#define SV_RUNE1_BLESS       11
+#define SV_RUNE1_BLOOD       12
+#define SV_RUNE1_MORGUL      13
+#define SV_RUNE1_LITHE       14
+#define SV_RUNE1_HEALTH      15
+#define SV_RUNE1_REFLECT     16
 #define SV_RUNE2_SELF        20
 #define SV_RUNE2_ARROW       21
 #define SV_RUNE2_RAY         22
 #define SV_RUNE2_SPHERE      23
 #define SV_RUNE2_POWER_SURGE 24
 #define SV_RUNE2_ARMAGEDDON  25
+#define SV_RUNE1_CHAOS       30
+#define SV_RUNE1_GRAVITY     35
+#define SV_RUNE1_ANIMAL      40
+#define SV_RUNE1_UNDEAD      41
+#define SV_RUNE1_DEMON       42
+#define SV_RUNE1_ORC         43
+#define SV_RUNE1_TROLL       44
+#define SV_RUNE1_GIANT       45
+#define SV_RUNE1_DRAGON      46
+#define SV_RUNE1_LIFE        53
+#define SV_RUNE1_PROTECTION  74
+#define SV_RUNE1_HOLDING     75
+#define SV_RUNE1_MIND        85
+#define SV_RUNE1_KNOWLEDGE   91
+#define SV_RUNE1_UNDEATH     92
 #define SV_RUNE2_RUNESTONE   255
 
 /* The "sval" codes for TV_CORPSE */

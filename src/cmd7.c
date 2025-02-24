@@ -3761,7 +3761,12 @@ void do_cmd_alchemist(void)
 			break;
 		case SV_BATERIE_EXPLOSION:
 		case SV_BATERIE_CONFUSION:
+		case SV_BATERIE_HOLDING:
 			esslevel = 10;
+			whichbase = 1;
+			break;
+		case SV_BATERIE_SIGHT:
+			esslevel = 5;
 			whichbase = 1;
 			break;
 		case SV_BATERIE_TIME:
@@ -3771,10 +3776,13 @@ void do_cmd_alchemist(void)
 			whichbase = 1;
 			break;
 		case SV_BATERIE_MAGIC:
+		case SV_BATERIE_SEEINV:
 			esslevel = 20;
 			whichbase = 1;
 			break;
 		case SV_BATERIE_XTRA_LIFE:
+		case SV_BATERIE_WATER:
+		case SV_BATERIE_INERTIA:
 			esslevel = 50;
 			whichbase = 1;
 			break;
@@ -3848,6 +3856,24 @@ void do_cmd_alchemist(void)
 			msg_print("Poison resistance added.");
 			useup = TRUE;
 			break;
+		case SV_BATERIE_BOLD:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_FEAR;
+			msg_print("Fear resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_SIGHT:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_BLIND;
+			msg_print("Blindness resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_HOLDING:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_HOLD_LIFE;
+			msg_print("Hold life added.");
+			useup = TRUE;
+			break;
 		case SV_BATERIE_EXPLOSION:
 			q_ptr->tampered = TRUE;
 			q_ptr->art_flags5 |= TR5_RES_PLASMA;
@@ -3917,6 +3943,18 @@ void do_cmd_alchemist(void)
 			msg_print("Disenchantment resistance added.");
 			useup = TRUE;
 			break;
+		case SV_BATERIE_SEEINV:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags3 |= TR3_SEE_INVIS;
+			msg_print("See invisible added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_DIGEST:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags3 |= TR3_SLOW_DIGEST;
+			msg_print("Slow digestion added.");
+			useup = TRUE;
+			break;
 		case SV_BATERIE_XTRA_LIFE:
 			if (q_ptr->pval != 1) {
 				msg_print("You need to target an item with a pval of exactly 1.");
@@ -3939,10 +3977,34 @@ void do_cmd_alchemist(void)
 			msg_print("Shard resistance added.");
 			useup = TRUE;
 			break;
+		case SV_BATERIE_SOUND:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_SOUND;
+			msg_print("Sound resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_NEXUS:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_RES_NEXUS;
+			msg_print("Nexus resistance added.");
+			useup = TRUE;
+			break;
 		case SV_BATERIE_FORCE:
 			q_ptr->tampered = TRUE;
 			q_ptr->art_flags5 |= TR5_RES_DISINT;
 			msg_print("Disintegration resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_WATER:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags5 |= TR5_RES_WATER;
+			msg_print("Water resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_INERTIA:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags5 |= TR5_RES_INERTIA;
+			msg_print("Inertia resistance added.");
 			useup = TRUE;
 			break;
 		case SV_BATERIE_LIGHTNING:
@@ -7316,6 +7378,7 @@ void do_cmd_runecrafter()
 			whichbase = 1;
 			break;
 		case SV_RUNE1_FIRE:
+		case SV_RUNE1_POISON:
 		case SV_RUNE1_COLD:
 		case SV_RUNE1_LIGHTNING:
 		case SV_RUNE1_ACID:
@@ -7323,14 +7386,28 @@ void do_cmd_runecrafter()
 			break;
 		case SV_RUNE1_CHAOS:
 		case SV_RUNE2_ARMAGEDDON:
+		case SV_RUNE1_BLOOD:
 			esslevel = 30;
 			whichbase = 3;
+			break;
+		case SV_RUNE1_REFLECT:
+			esslevel = 40;
+			whichbase = 1;
 			break;
 		case SV_RUNE2_POWER_SURGE:
 			esslevel = 50;
 			whichbase = 3;
 			break;
 		case SV_RUNE2_RUNESTONE:
+		case SV_RUNE1_ANIMAL:
+		case SV_RUNE1_UNDEAD:
+		case SV_RUNE1_DEMON:
+		case SV_RUNE1_ORC:
+		case SV_RUNE1_TROLL:
+		case SV_RUNE1_GIANT:
+		case SV_RUNE1_DRAGON:
+		case SV_RUNE1_BLESS:
+		case SV_RUNE1_MORGUL:
 			whichbase = 3;
 			break;
 		case SV_RUNE1_MIND:
@@ -7338,6 +7415,7 @@ void do_cmd_runecrafter()
 			whichbase = 3;
 			break;
 		case SV_RUNE1_PROTECTION:
+		case SV_RUNE1_LITHE:
 			whichbase = 2;
 			break;
 		case SV_RUNE2_SELF:
@@ -7428,6 +7506,12 @@ void do_cmd_runecrafter()
 			msg_print("Fire brand added.");
 			useup = TRUE;
 			break;
+		case SV_RUNE1_POISON:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_BRAND_POIS;
+			msg_print("Poison brand added.");
+			useup = TRUE;
+			break;
 		case SV_RUNE1_ELEMENT:
 			q_ptr->tampered = TRUE;
 			q_ptr->art_flags2 |= TR2_SUST_STR;
@@ -7446,10 +7530,22 @@ void do_cmd_runecrafter()
 			msg_print("Levitation added.");
 			useup = TRUE;
 			break;
+		case SV_RUNE1_HEALTH:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags3 |= TR3_REGEN;
+			msg_print("Regeneration added.");
+			useup = TRUE;
+			break;
 		case SV_RUNE1_LIFE:
 			q_ptr->tampered = TRUE;
 			q_ptr->art_flags2 |= TR2_SUST_CON;
 			msg_print("Sustain constitution added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_REFLECT:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags2 |= TR2_REFLECT;
+			msg_print("Reflection added.");
 			useup = TRUE;
 			break;
 		case SV_RUNE1_PROTECTION:
@@ -7516,6 +7612,72 @@ void do_cmd_runecrafter()
 			q_ptr->tampered = TRUE;
 			q_ptr->art_flags1 |= TR1_SLAY_EVIL;
 			msg_print("Slay evil added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_ANIMAL:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_SLAY_ANIMAL;
+			msg_print("Slay animal added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_UNDEAD:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_SLAY_UNDEAD;
+			msg_print("Slay undead added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_DEMON:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_SLAY_DEMON;
+			msg_print("Slay demon added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_ORC:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_SLAY_ORC;
+			msg_print("Slay orc added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_TROLL:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_SLAY_TROLL;
+			msg_print("Slay troll added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_GIANT:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_SLAY_GIANT;
+			msg_print("Slay giant added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_DRAGON:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags1 |= TR1_SLAY_DRAGON;
+			msg_print("Slay dragon added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_BLESS:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags3 |= TR3_BLESSED;
+			msg_print("Blessing added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_BLOOD:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags5 |= TR5_WOUNDING;
+			msg_print("Wounding added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_LITHE:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags5 |= TR5_LITHE;
+			msg_print("Litheness added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_MORGUL:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags5 |= TR5_RES_MORGUL;
+			msg_print("Resistance to morgul shattering added.");
 			useup = TRUE;
 			break;
 		case SV_RUNE2_SELF:
