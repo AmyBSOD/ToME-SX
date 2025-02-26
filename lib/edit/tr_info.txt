@@ -192,7 +192,7 @@ F:FLOOR | CHEST | DOOR
 N:30:Teleport Item Trap
 I:3:50:50:3:5:0d0:w
 D:The item magically disappears from your greedy hands!
-F:CHEST
+F:FLOOR | CHEST
 
 N:31:Lose Memory Trap
 I:6:30:30:6:10:0d0:r
@@ -2033,7 +2033,7 @@ D:Nasty!
 F:FLOOR
 
 N:418:Summon Squad Trap
-I:2:50:40:4:2:0d0:v
+I:2:5:40:4:2:0d0:v
 D:Many monsters defend the memory of the owner...
 F:FLOOR | CHEST | DOOR
 
@@ -2050,6 +2050,26 @@ F:FLOOR | CHEST | DOOR
 N:421:Trap of Trash Equipment
 I:12:20:10:25:60:0d0:y
 D:Your equipment seems different...
+F:FLOOR | CHEST | DOOR
+
+N:422:Crafting Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:423:Covetous Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:424:Darkness Trap
+I:2:100:50:2:3:0d0:o
+D:Your surroundings become dark!
+F:FLOOR | CHEST | DOOR
+
+N:425:Trap of Unworth
+I:4:100:10:25:10:0d0:y
+D:Your possessions seem to lose their value!
 F:FLOOR | CHEST | DOOR
 
 # I:diff:prob:another:pval:minlevel:damage:color

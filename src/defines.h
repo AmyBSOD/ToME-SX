@@ -2943,6 +2943,12 @@
 #define TRAP_OF_INVERT_WEAPON             420
 #define TRAP_OF_TRASH_EQUIPMENT           421
 
+#define TRAP_NASTY116                     422
+#define TRAP_NASTY117                     423
+
+#define TRAP_OF_DARKNESS                  424
+#define TRAP_OF_UNWORTH                   425
+
 /*** General index values ***/
 
 

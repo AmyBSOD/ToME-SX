@@ -675,9 +675,17 @@ void teleport_player(int dis)
 						 * totally unkillable suckers...
 						 */
 					{
-						if (!(m_list[cave[oy + yy][ox + xx].m_idx].csleep))
-							/* so totally cheesy, as if teleports were controlled! they're not, they're random! --Amy */
-							teleport_away(cave[oy + yy][ox + xx].m_idx, MAX_SIGHT * 2 + 5);
+						if (!(m_list[cave[oy + yy][ox + xx].m_idx].csleep)) {
+							/* so totally cheesy, as if teleports were controlled! they're not, they're random! --Amy
+							 * covetous nastytrap reinstates the old cheesy "GAME OVER LOL" behavior where reading teleport acts as if you had just
+							 * waited a turn next to the boss, because the boss doesn't even use a turn for the cheater teleport...
+							 * so if you were one turn from death and try to get away via tele scroll, you just die, great game design, 10/10 would play again */
+							if (p_ptr->nastytrap117) {
+								teleport_to_player(cave[oy + yy][ox + xx].m_idx);
+							} else {
+								teleport_away(cave[oy + yy][ox + xx].m_idx, MAX_SIGHT * 2 + 5);
+							}
+						}
 					}
 				}
 			}
@@ -827,9 +835,17 @@ void teleport_player_deathmold(int dis)
 						 * totally unkillable suckers...
 						 */
 					{
-						if (!(m_list[cave[oy + yy][ox + xx].m_idx].csleep))
-							/* so totally cheesy, as if teleports were controlled! they're not, they're random! --Amy */
-							teleport_away(cave[oy + yy][ox + xx].m_idx, MAX_SIGHT * 2 + 5);
+						if (!(m_list[cave[oy + yy][ox + xx].m_idx].csleep)) {
+							/* so totally cheesy, as if teleports were controlled! they're not, they're random! --Amy
+							 * covetous nastytrap reinstates the old cheesy "GAME OVER LOL" behavior where reading teleport acts as if you had just
+							 * waited a turn next to the boss, because the boss doesn't even use a turn for the cheater teleport...
+							 * so if you were one turn from death and try to get away via tele scroll, you just die, great game design, 10/10 would play again */
+							if (p_ptr->nastytrap117) {
+								teleport_to_player(cave[oy + yy][ox + xx].m_idx);
+							} else {
+								teleport_away(cave[oy + yy][ox + xx].m_idx, MAX_SIGHT * 2 + 5);
+							}
+						}
 					}
 				}
 			}

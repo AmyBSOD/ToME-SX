@@ -2024,8 +2024,8 @@ struct player_type
 	bool nastytrap113; /* ooop trap - stat gain doesn't work */
 	bool nastytrap114; /* map amnesia trap - like dungeons with the FORGET flag, always forget the map */
 	bool nastytrap115; /* edgy trap - cannot wield edged weapons without penalty, like worshipping eru */
-	bool nastytrap116;
-	bool nastytrap117;
+	bool nastytrap116; /* crafting trap - runecraft and alchemy always fail */
+	bool nastytrap117; /* covetous trap - teleporting monsters can teleport with you */
 	bool nastytrap118;
 	bool nastytrap119;
 	bool nastytrap120;

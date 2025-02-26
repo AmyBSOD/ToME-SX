@@ -582,6 +582,8 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY113:
 		case TRAP_NASTY114:
 		case TRAP_NASTY115:
+		case TRAP_NASTY116:
+		case TRAP_NASTY117:
 			return FALSE;
 	}
 
@@ -712,6 +714,8 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY113:
 		case TRAP_NASTY114:
 		case TRAP_NASTY115:
+		case TRAP_NASTY116:
+		case TRAP_NASTY117:
 			return FALSE;
 	}
 
@@ -850,6 +854,8 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY113:
 		case TRAP_NASTY114:
 		case TRAP_NASTY115:
+		case TRAP_NASTY116:
+		case TRAP_NASTY117:
 			return TRUE;
 	}
 
@@ -3334,24 +3340,60 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/* Teleport Away Trap */
 	case TRAP_OF_TELEPORT_AWAY:
 		{
-			int item, amt;
+			int itemX, amt;
 			object_type *o_ptr;
 
-			/* teleport away all items */
-			while (cave[y][x].o_idx != 0)
-			{
-				item = cave[y][x].o_idx;
+			msg_print("The floor seems to shift...");
 
-				o_ptr = &o_list[item];
+			/* change by Amy: allow this trap to exist on the floor too and teleport items in a 3x3 area */
+			if ((item == -1) || (item == -2)) {
+				int xtemp = -1;
+				int ytemp = -1;
 
-				amt = o_ptr->number;
+				while (xtemp < 2) {
+					ytemp = -1;
+					while (ytemp < 2) {
 
-				ident = do_trap_teleport_away(o_ptr, y, x);
+						if (!in_bounds(y + ytemp, x + xtemp)) continue;
 
-				floor_item_increase(item, -amt);
-				floor_item_optimize(item);
+						/* teleport away all items */
+						while (cave[y + ytemp][x + xtemp].o_idx != 0)
+						{
+							itemX = cave[y + ytemp][x + xtemp].o_idx;
+
+							o_ptr = &o_list[itemX];
+
+							amt = o_ptr->number;
+
+							ident = do_trap_teleport_away(o_ptr, y + ytemp, x + xtemp);
+
+							floor_item_increase(itemX, -amt);
+							floor_item_optimize(itemX);
+						}
+						ytemp++;
+					}
+					xtemp++;
+				}
+				break;
+
+			} else {
+
+				/* teleport away all items */
+				while (cave[y][x].o_idx != 0)
+				{
+					itemX = cave[y][x].o_idx;
+
+					o_ptr = &o_list[itemX];
+
+					amt = o_ptr->number;
+
+					ident = do_trap_teleport_away(o_ptr, y, x);
+
+					floor_item_increase(itemX, -amt);
+					floor_item_optimize(itemX);
+				}
+				break;
 			}
-			break;
 		}
 
 		/* Lose Memory Trap */
@@ -3430,6 +3472,14 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("You hear a hollow noise echoing through the dungeons.");
 			aggravate_monsters(1);
 			ident = TRUE;
+			break;
+		}
+
+		/* Darkness Trap */
+	case TRAP_OF_DARKNESS:
+		{
+			msg_print("The area around you gets dark!");
+			if (unlite_area(10, 3)) ident = TRUE;
 			break;
 		}
 
@@ -5105,6 +5155,56 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* trap of unworth by Amy: slaps a 100% discount on some of your items so you can no longer sell them */
+	case TRAP_OF_UNWORTH:
+		{
+			object_type *j_ptr;
+			s16b j, chance = 20;
+			u32b f1, f2, f3, f4, f5, esp;
+
+			for (j = 0; j < INVEN_TOTAL; j++)
+			{
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
+				/* does it have less than 100% discount? */
+				if (j_ptr->discount < 100)
+				{
+					if (randint(100) < chance)
+					{
+						j_ptr->discount = 100;
+						ident = TRUE;
+					}
+					inven_item_optimize(j);
+				}
+			}
+			if (!ident)
+			{
+				msg_print("You ponder the value of your possessions.");
+			}
+			else
+			{
+				combine_pack();
+				reorder_pack();
+				msg_print("You suddenly feel that your equipment isn't worth as much as it used to be...");
+
+				/* Recalculate bonuses */
+				p_ptr->update |= (PU_BONUS);
+
+				/* Recalculate mana */
+				p_ptr->update |= (PU_MANA);
+
+				/* Window stuff */
+				p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+			}
+			break;
+		}
+
 	case TRAP_NASTY1:
 
 		{
@@ -6385,6 +6485,30 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap115 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY116:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap116 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY117:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap117 = TRUE;
 			calc_bonuses(FALSE);
 
 			break;			
@@ -9164,7 +9288,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(115)) {
+	switch (randint(117)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -9509,6 +9633,12 @@ void give_random_nastytrap_effect(void)
 			break;
 		case 115:
 			p_ptr->nastytrap115 = TRUE;
+			break;
+		case 116:
+			p_ptr->nastytrap116 = TRUE;
+			break;
+		case 117:
+			p_ptr->nastytrap117 = TRUE;
 			break;
 
 	}

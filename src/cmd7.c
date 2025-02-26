@@ -3827,6 +3827,13 @@ void do_cmd_alchemist(void)
 		return;
 	}
 
+	if (p_ptr->nastytrap116) { /* autofail with crafting nastytrap */
+		msg_print("Your alchemy attempt failed.");
+		inven_item_increase(item, -1);
+		inven_item_optimize(item);
+		return;
+	}
+
 	/* stacks can resist --Amy */
 	if (q_ptr->number > 1) {
 		proofchance = 80 + (o_ptr->number * 20);
@@ -7456,6 +7463,13 @@ void do_cmd_runecrafter()
 
 	if ((whichbase != 0) && q_ptr->art_name) {
 		msg_print("Artifacts cannot be improved.");
+		return;
+	}
+
+	if (p_ptr->nastytrap116) { /* autofail with crafting nastytrap */
+		msg_print("Your runecraft attempt failed.");
+		inven_item_increase(item, -1);
+		inven_item_optimize(item);
 		return;
 	}
 

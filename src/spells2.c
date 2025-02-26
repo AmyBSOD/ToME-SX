@@ -2061,6 +2061,14 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Wielding an edged weapon gives a penalty.";
 	}
+	if (p_ptr->nastytrap116)
+	{
+		info[i++] = "You have a problem: Runecraft and alchemy always fail.";
+	}
+	if (p_ptr->nastytrap117)
+	{
+		info[i++] = "You have a problem: If you teleport, adjacent monsters can teleport with you.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];
