@@ -3163,7 +3163,7 @@ void py_attack(int y, int x, int max_blow)
 
 
 
-static bool pattern_tile(int y, int x)
+bool pattern_tile(int y, int x)
 {
 	return ((cave[y][x].feat <= FEAT_PATTERN_XTRA2) &&
 	        (cave[y][x].feat >= FEAT_PATTERN_START));

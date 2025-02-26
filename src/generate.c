@@ -1155,6 +1155,19 @@ static void alloc_object(int set, int typ, int num)
 			/* Require "naked" floor grid */
 			if (!cave_naked_bold(y, x)) continue;
 
+			/* dungeon features shouldn't overwrite pattern tiles!!! --Amy */
+			switch (typ) {
+				case ALLOC_TYP_RUBBLE:
+				case ALLOC_TYP_ALTAR:
+				case ALLOC_TYP_BETWEEN:
+				case ALLOC_TYP_FOUNTAIN:
+				case ALLOC_TYP_SWITCHER:
+					if (pattern_tile(y, x)) continue;
+					break;
+				default:
+					break;
+			}
+
 			/* Check for "room" */
 			room = (cave[y][x].info & (CAVE_ROOM)) ? TRUE : FALSE;
 
@@ -1349,6 +1362,9 @@ static void recursive_river(int x1, int y1, int x2, int y2,
 
 					/* Do not convert permanent features */
 					if (cave_perma_bold(ty, tx)) continue;
+
+					/* Do not convert pattern features --Amy */
+					if (pattern_tile(ty, tx)) continue;
 
 					/*
 					 * Clear previous contents, add feature

@@ -725,6 +725,7 @@ extern bool do_cmd_leave_body(bool drop_body);
 extern bool execute_inscription(byte i, byte y, byte x);
 extern void do_cmd_engrave(void);
 extern void do_spin(void);
+extern bool pattern_tile(int y, int x);
 
 /* cmd2.c */
 extern byte show_monster_inven(int m_idx, int *monst_list);
