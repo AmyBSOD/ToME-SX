@@ -2026,7 +2026,7 @@ struct player_type
 	bool nastytrap115; /* edgy trap - cannot wield edged weapons without penalty, like worshipping eru */
 	bool nastytrap116; /* crafting trap - runecraft and alchemy always fail */
 	bool nastytrap117; /* covetous trap - teleporting monsters can teleport with you */
-	bool nastytrap118;
+	bool nastytrap118; /* spellcasting trap - monsters never fail to cast a spell */
 	bool nastytrap119;
 	bool nastytrap120;
 	bool nastytrap121;

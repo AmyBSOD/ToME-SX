@@ -588,6 +588,7 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY115:
 		case TRAP_NASTY116:
 		case TRAP_NASTY117:
+		case TRAP_NASTY118:
 			return FALSE;
 	}
 
@@ -720,6 +721,7 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY115:
 		case TRAP_NASTY116:
 		case TRAP_NASTY117:
+		case TRAP_NASTY118:
 			return FALSE;
 	}
 
@@ -860,6 +862,7 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY115:
 		case TRAP_NASTY116:
 		case TRAP_NASTY117:
+		case TRAP_NASTY118:
 			return TRUE;
 	}
 
@@ -3356,6 +3359,38 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			msg_print("A hidden explosive device explodes in your face.");
 			take_hit(damroll(5, 8), "an explosion");
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_EXPLODE_I:
+		{
+			msg_print("A booby trap explodes in your face.");
+			take_hit(damroll(2, 8), "an explosion");
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_EXPLODE_II:
+		{
+			msg_print("A hidden mine explodes in your face.");
+			take_hit(damroll(10, 8), "an explosion");
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_EXPLODE_III:
+		{
+			msg_print("A contact bomb explodes in your face.");
+			take_hit(damroll(20, 8), "an explosion");
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_EXPLODE_IV:
+		{
+			msg_print("A dynamite charge explodes in your face.");
+			take_hit(damroll(40, 8), "an explosion");
 			ident = TRUE;
 			break;
 		}
@@ -6662,6 +6697,18 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY118:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap118 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHOES:
 	case TRAP_OF_SHOES_II:
 	case TRAP_OF_SHOES_III:
@@ -7935,6 +7982,46 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* trap of random corruption, by Amy, just like corrupted subrace */
+	case TRAP_OF_RANDOM_CORRUPTION:
+		{
+			msg_print("Something seems to twist your body...");
+
+			if (magik(45))
+			{
+				lose_corruption(0);
+			}
+			else
+			{
+				gain_random_corruption(0);
+			}
+
+			ident = TRUE;
+
+			if (randint(3) == 1) { /* so that you can't just repeatedly trigger it until you have the corruptions you want --Amy */
+				ident = FALSE;
+				t_info[trap].ident = TRUE;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+				msg_print("You identified that trap as Trap of Random Corruption.");
+			}
+
+			break;
+		}
+
 	case TRAP_OF_NASTINESS:
 		{
 			msg_print("Nasty!");
@@ -8202,6 +8289,34 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("An ancient foul curse takes hold of you.");
 			activate_ty_curse();
 			ident = TRUE;
+			break;
+		}
+
+		/* Trap of Divine Intervention, by Amy */
+	case TRAP_OF_DIVINE_INTER:
+		{
+			gain_level_reward(0);
+
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+
+			msg_print("You identified that trap as Divine Intervention Trap.");
+			ident = FALSE;
+
 			break;
 		}
 
@@ -9830,7 +9945,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(117)) {
+	switch (randint(118)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -10181,6 +10296,9 @@ void give_random_nastytrap_effect(void)
 			break;
 		case 117:
 			p_ptr->nastytrap117 = TRUE;
+			break;
+		case 118:
+			p_ptr->nastytrap118 = TRUE;
 			break;
 
 	}

@@ -2069,6 +2069,10 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: If you teleport, adjacent monsters can teleport with you.";
 	}
+	if (p_ptr->nastytrap118)
+	{
+		info[i++] = "You have a problem: Spellcasting monsters never fail to cast their spells.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];

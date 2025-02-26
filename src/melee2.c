@@ -3263,6 +3263,9 @@ bool make_attack_spell(int m_idx)
 		/* Hack -- Stupid monsters will never fail (for jellies and such) */
 		if (r_ptr->flags2 & (RF2_STUPID)) failrate = 0;
 
+		/* spellcasting nastytrap by Amy makes it so that monsters never fail */
+		if (p_ptr->nastytrap118) failrate = 0;
+
 		/* Check for spell failure (inate attacks never fail) */
 		if ((thrown_spell >= 128) && (rand_int(100) < failrate))
 		{

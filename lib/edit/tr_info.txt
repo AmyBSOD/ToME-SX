@@ -2282,6 +2282,41 @@ I:11:26:5:6:45:4d12:B
 D:Hellfire rises around you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
+N:468:Trap of Random Corruption
+I:10:10:10:25:60:0d0:y
+D:Your body will never be the same again...
+F:FLOOR | CHEST | DOOR
+
+N:469:Booby Trap
+I:2:100:80:0:2:3d8:r
+D:Ha! It explodes before your hands can illegally touch it!
+F:FLOOR | CHEST | DOOR
+
+N:470:Hidden Mine
+I:5:80:80:0:20:3d8:r
+D:Ha! It explodes before your hands can illegally touch it!
+F:FLOOR | CHEST | DOOR
+
+N:471:Contact Bomb
+I:8:50:80:0:35:3d8:r
+D:Ha! It explodes before your hands can illegally touch it!
+F:FLOOR | CHEST | DOOR
+
+N:472:Dynamite Charge
+I:12:20:80:0:60:3d8:r
+D:Ha! It explodes before your hands can illegally touch it!
+F:FLOOR | CHEST | DOOR
+
+N:473:Trap of Divine Intervention
+I:10:5:5:0:50:0d0:G
+D:A voice booms out "Beware, mortal!"
+F:FLOOR | CHEST | DOOR
+
+N:474:Spellcasting Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

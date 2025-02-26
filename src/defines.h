@@ -2993,6 +2993,15 @@
 #define TRAP_OF_HOLY_BALLS                466
 #define TRAP_OF_HELL_BALLS                467
 
+#define TRAP_OF_RANDOM_CORRUPTION         468
+#define TRAP_OF_EXPLODE_I                 469
+#define TRAP_OF_EXPLODE_II                470
+#define TRAP_OF_EXPLODE_III               471
+#define TRAP_OF_EXPLODE_IV                472
+#define TRAP_OF_DIVINE_INTER              473
+
+#define TRAP_NASTY118                     474
+
 /*** General index values ***/
 
 
