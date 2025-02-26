@@ -2948,6 +2948,50 @@
 
 #define TRAP_OF_DARKNESS                  424
 #define TRAP_OF_UNWORTH                   425
+#define TRAP_OF_STAT_SCRAMBLE             426
+#define TRAP_OF_POLYMORPH                 427
+
+#define TRAP_OF_EARTHQUAKE_X              428
+#define TRAP_OF_PARALYZING_X              429
+#define TRAP_OF_MULTIPLY_X                430
+#define TRAP_OF_DROP_X                    431
+#define TRAP_OF_HALLU_X                   432
+#define TRAP_OF_HOLY_BALL                 433
+#define TRAP_OF_HELL_BALL                 434
+#define TRAP_OF_SANITY_SMASH              435
+#define TRAP_OF_FEAR_X                    436
+#define TRAP_OF_STUN_X                    437
+
+#define TRAP_OF_ELEC_BALLS                438
+#define TRAP_OF_POIS_BALLS                439
+#define TRAP_OF_ACID_BALLS                440
+#define TRAP_OF_COLD_BALLS                441
+#define TRAP_OF_FIRE_BALLS                442
+#define TRAP_OF_PLASMA_BALLS              443
+#define TRAP_OF_WATER_BALLS               444
+#define TRAP_OF_LITE_BALLS                445
+#define TRAP_OF_DARK_BALLS                446
+#define TRAP_OF_SHARDS_BALLS              447
+#define TRAP_OF_SOUND_BALLS               448
+#define TRAP_OF_CONFUSION_BALLS           449
+#define TRAP_OF_FORCE_BALLS               450
+#define TRAP_OF_INERTIA_BALLS             451
+#define TRAP_OF_MANA_BALLS                452
+#define TRAP_OF_ICE_BALLS                 453
+#define TRAP_OF_CHAOS_BALLS               454
+#define TRAP_OF_NETHER_BALLS              455
+#define TRAP_OF_DISENCHANT_BALLS          456
+#define TRAP_OF_NEXUS_BALLS               457
+#define TRAP_OF_TIME_BALLS                458
+#define TRAP_OF_GRAVITY_BALLS             459
+#define TRAP_OF_NUKE_BALLS                460
+#define TRAP_OF_PSI_BALLS                 461
+#define TRAP_OF_METEOR_BALLS              462
+#define TRAP_OF_ARROW_BALLS               463
+#define TRAP_OF_DISINT_BALLS              464
+#define TRAP_OF_WALL_BALLS                465
+#define TRAP_OF_HOLY_BALLS                466
+#define TRAP_OF_HELL_BALLS                467
 
 /*** General index values ***/
 

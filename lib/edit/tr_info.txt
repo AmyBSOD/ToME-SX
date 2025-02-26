@@ -2072,6 +2072,216 @@ I:4:100:10:25:10:0d0:y
 D:Your possessions seem to lose their value!
 F:FLOOR | CHEST | DOOR
 
+N:426:Trap of Stat Scramble
+I:5:33:50:3:20:0d0:r
+D:A purple needle pricks you!
+F:FLOOR | CHEST | DOOR
+
+N:427:Trap of Polymorph
+I:5:3:50:3:24:0d0:r
+D:A green needle pricks you!
+F:FLOOR | CHEST | DOOR
+
+N:428:Magnitude Trap
+I:10:10:0:10:40:0d0:o
+D:The ceiling collapses around you!
+F:FLOOR | CHEST | DOOR
+
+N:429:Deep Sleep Trap
+I:5:20:20:2:30:0d0:r
+D:You suddenly cannot move!
+F:FLOOR | CHEST | DOOR
+
+N:430:Field Trap
+I:5:40:0:3:25:0d0:o
+D:The floor around you doesn't seem the same...
+F:FLOOR | CHEST | DOOR
+
+N:431:Trap of Drop All
+I:10:20:0:8:40:0d0:y
+D:A sudden sound startles you and you drop everything!
+F:FLOOR | CHEST | DOOR
+
+N:432:Long Hallucination Trap
+I:8:40:10:0:25:0d0:r
+D:Your vision is clouded by a blast of kaleidoscopic light!
+F:FLOOR | CHEST | DOOR
+
+N:433:Holy Ball Trap
+I:6:80:5:6:25:4d12:B
+D:Holy fire rises around you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:434:Hell Ball Trap
+I:6:80:5:6:25:4d12:B
+D:Hellfire rises around you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:435:Sanity Smash Trap
+I:6:50:50:4:30:0d0:r
+D:Whoops, you feel that you're much less sane than before.
+F:FLOOR | CHEST | DOOR
+
+N:436:Terror Trap
+I:8:40:50:4:25:0d0:r
+D:Something's giving you the creeps.
+F:FLOOR | CHEST | DOOR
+
+N:437:Stagger Trap
+I:8:30:50:4:35:0d0:r
+D:You stagger around aimlessly.
+F:FLOOR | CHEST | DOOR
+
+N:438:Lightning Balls Trap
+I:8:20:5:5:28:3d5:B
+D:A massive electrical charge shoots through you!
+F:FLOOR | CHEST | DOOR | LEVEL1
+
+N:439:Poison Balls Trap
+I:8:20:5:5:28:3d5:B
+D:A large cloud of poison gas envelops you!
+F:FLOOR | CHEST | DOOR | LEVEL1
+
+N:440:Acid Balls Trap
+I:8:20:5:5:28:3d5:B
+D:You are suddenly drenched in acid!
+F:FLOOR | CHEST | DOOR | LEVEL1
+
+N:441:Cold Balls Trap
+I:8:20:5:5:28:3d5:B
+D:A blast of hideously cold air envelops you!
+F:FLOOR | CHEST | DOOR | LEVEL1
+
+N:442:Fire Balls Trap
+I:8:20:5:5:28:3d5:B
+D:You are suddenly in the centre of a raging inferno!
+F:FLOOR | CHEST | DOOR | LEVEL1
+
+N:443:Plasma Balls Trap
+I:13:20:5:8:40:3d18:B
+D:You are engulfed in plasma!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:444:Water Balls Trap
+I:10:20:5:6:35:3d12:B
+D:A whirlpool engulfs you!
+F:FLOOR | CHEST | DOOR | LEVEL2
+
+N:445:Light Balls Trap
+I:10:20:5:6:35:3d12:B
+D:A massive flash of light erupts around you!
+F:FLOOR | CHEST | DOOR | LEVEL2
+
+N:446:Darkness Balls Trap
+I:10:20:5:6:35:3d12:B
+D:A large patch of darkness erupts around you!
+F:FLOOR | CHEST | DOOR | LEVEL2
+
+N:447:Shards Balls Trap
+I:13:20:5:8:40:3d18:B
+D:A violent blast of crystal shards hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:448:Sound Balls Trap
+I:13:20:5:8:40:3d18:B
+D:BOOM! Your eardrums nearly explode!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:449:Confusion Balls Trap
+I:10:20:5:6:35:3d12:B
+D:You are enveloped in a cloud of confusion gas!
+F:FLOOR | CHEST | DOOR | LEVEL2
+
+N:450:Force Balls Trap
+I:13:20:5:8:40:3d18:B
+D:A violent blast of pure force smashes down around you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:451:Inertia Balls Trap
+I:13:20:5:8:40:3d18:B
+D:Suddenly, your entire body feels like lead!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:452:Mana Balls Trap
+I:15:20:5:10:50:5d20:B
+D:You are hit by a blast of pure magic!
+F:FLOOR | CHEST | DOOR | LEVEL4
+
+N:453:Ice Balls Trap
+I:10:20:5:6:35:3d12:B
+D:A massive blast of ice crystals engulfs you!
+F:FLOOR | CHEST | DOOR | LEVEL2
+
+N:454:Chaos Balls Trap
+I:13:20:5:8:40:3d18:B
+D:A violent blast of raw chaos engulfs you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:455:Nether Balls Trap
+I:15:20:5:10:50:4d20:B
+D:A blast of energy from the netherworld engulfs you!
+F:FLOOR | CHEST | DOOR | LEVEL4
+
+N:456:Disenchantment Balls Trap
+I:15:20:5:10:50:5d20:B
+D:You are hit by a blast of pure anti-magic!
+F:FLOOR | CHEST | DOOR | LEVEL4
+
+N:457:Nexus Balls Trap
+I:13:20:5:8:40:3d18:B
+D:A ball of nexus hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:458:Time Balls Trap
+I:15:20:5:10:50:5d20:B
+D:Suddenly, several years pass by in a second!
+F:FLOOR | CHEST | DOOR | LEVEL4
+
+N:459:Gravity Balls Trap
+I:13:20:5:8:40:3d18:B
+D:You suddenly feel gravity warp violently around you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:460:Nuke Balls Trap
+I:13:20:5:8:40:4d18:B
+D:A blast of radiation engulfs you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:461:Psi Balls Trap
+I:13:20:5:8:40:3d18:B
+D:Your brain is suddenly blasted!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:462:Meteor Balls Trap
+I:13:3:5:8:80:20d13:B
+D:A hail of meteors slams on top of you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:463:Arrow Balls Trap
+I:10:26:5:6:25:2d8:B
+D:A big amount of arrows falls down on you!
+F:FLOOR | CHEST | DOOR | LEVEL1
+
+N:464:Disintegration Balls Trap
+I:15:20:5:10:50:5d20:B
+D:A wide-angle disintegration beam hits you!
+F:FLOOR | CHEST | DOOR | LEVEL4
+
+N:465:Wall Balls Trap
+I:10:20:5:6:35:3d12:B
+D:Lots of walls spring up around you!
+F:FLOOR | CHEST | DOOR | LEVEL2
+
+N:466:Holy Balls Trap
+I:11:26:5:6:45:4d12:B
+D:Holy fire rises around you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:467:Hell Balls Trap
+I:11:26:5:6:45:4d12:B
+D:Hellfire rises around you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

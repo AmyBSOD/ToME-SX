@@ -424,11 +424,15 @@ static bool player_handle_breath_trap(s16b rad, s16b type, u16b trap)
 	my_dd = t_ptr->dd;
 	my_ds = t_ptr->ds;
 
+	/* multiplier depending on dungeon level: don't allow the value to become excessively high! --Amy */
+	int maxdunlvlreal = max_dlv_real[dungeon_type];
+	if (maxdunlvlreal > 150) maxdunlvlreal = 150;
+
 	/* these traps gets nastier as levels progress */
 	if (max_dlv_real[dungeon_type] > (2 * t_ptr->minlevel))
 	{
-		my_dd += (max_dlv_real[dungeon_type] / 15);
-		my_ds += (max_dlv_real[dungeon_type] / 15);
+		my_dd += (maxdunlvlreal / 30);
+		my_ds += (maxdunlvlreal / 15);
 	}
 	dam = damroll(my_dd, my_ds);
 
@@ -1543,6 +1547,15 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			msg_print("As you touch the trap, the ground starts to shake.");
 			earthquake(y, x, 10);
+			ident = TRUE;
+			break;
+		}
+
+		/* Super Earthquake Trap, by Amy */
+	case TRAP_OF_EARTHQUAKE_X:
+		{
+			msg_print("As you touch the trap, the ground starts to shake.");
+			earthquake(y, x, 20);
 			ident = TRUE;
 			break;
 		}
@@ -3328,6 +3341,16 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* Super Paralyzing Trap, by Amy */
+	case TRAP_OF_PARALYZING_X:
+		{
+			msg_print("You touch a poisoned part and can't move.");
+			(void)set_paralyzed(p_ptr->paralyzed + rand_int(10) + 10);
+			ident = TRUE;
+
+			break;
+		}
+
 		/* Explosive Device */
 	case TRAP_OF_EXPLOSIVE_DEVICE:
 		{
@@ -3517,6 +3540,43 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 			ident = FALSE;
 			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Multiplication Trap.");
+			break;
+		}
+
+		/* Super Multiplication Trap, by Amy */
+	case TRAP_OF_MULTIPLY_X:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			msg_print("You hear a loud click.");
+			for (k = -2; k <= 2; k++)
+				for (l = -2; l <= 2; l++)
+				{
+					if ((in_bounds(p_ptr->py + l, p_ptr->px + k)) &&
+					                (!cave[p_ptr->py + l][p_ptr->px + k].t_idx))
+					{
+						place_trap(p_ptr->py + l, p_ptr->px + k);
+					}
+				}
+
+			/* if we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Field Trap.");
 			break;
 		}
 
@@ -3805,6 +3865,70 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 			break;
 		}
+
+		/* Trap of Stat Scramble - like the nexus effect, by Amy */
+	case TRAP_OF_STAT_SCRAMBLE:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			msg_print("Your body starts to scramble...");
+			corrupt_player();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Stat Scramble.");
+
+			break;
+		}
+
+		/* Trap of Polymorph - like the radiation effect, by Amy */
+	case TRAP_OF_POLYMORPH:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			do_poly_self();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Polymorph.");
+
+			break;
+		}
+
 		/* Trap of Missing Money */
 	case TRAP_OF_MISSING_MONEY:
 		{
@@ -3984,6 +4108,14 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_SANITY_SMASH:
+		{
+			cmsg_print(TERM_VIOLET, "You're going insane!");
+			take_sanity_hit(randint(100) + (p_ptr->lev * 2), "a trap of sanity smashing");
+			ident = TRUE;
+			break;
+		}
+
 	case TRAP_OF_FEAR:
 		{
 			msg_format("You get the cold shivers.");
@@ -3994,10 +4126,26 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_FEAR_X:
+		{
+			msg_format("You get the cold shivers.");
+			set_afraid(p_ptr->afraid + 50 + randint(200));
+			ident = TRUE;
+			break;
+		}
+
 	case TRAP_OF_STUNNING:
 		{
 			msg_format("You stagger...");
 			(void)set_stun(p_ptr->stun + randint(50) + p_ptr->lev);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_STUN_X:
+		{
+			msg_format("You stagger...");
+			(void)set_stun(p_ptr->stun + randint(100) + (p_ptr->lev * 2));
 			ident = TRUE;
 			break;
 		}
@@ -6807,6 +6955,40 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* trap of drop all: like drop everything, but no percentage-based saving throw --Amy */
+	case TRAP_OF_DROP_X:
+		{
+			s16b i;
+			bool message = FALSE;
+
+			for (i = 0; i < INVEN_TOTAL; i++)
+			{
+				object_type tmp_obj;
+				if (!p_ptr->inventory[i].k_idx) continue;
+				if (p_ptr->inventory[i].name1 == ART_POWER) continue;
+
+				tmp_obj = p_ptr->inventory[i];
+				/* drop carefully */
+
+				drop_near(&tmp_obj, 0, y, x);
+				inven_item_increase(i, -999);
+				inven_item_optimize(i);
+				p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+
+				if (!message)
+				{
+					msg_print("You are completely startled by a sudden sound.");
+					message = TRUE;
+				}
+				ident = TRUE;
+			}
+			if (!ident)
+			{
+				msg_print("You hear a sudden, strange sound.");
+			}
+			break;
+		}
+
 		/* Bolt Trap */
 	case TRAP_G_ELEC_BOLT:
 		ident = player_handle_breath_trap(1, GF_ELEC, TRAP_G_ELEC_BOLT);
@@ -6977,6 +7159,12 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_NETHER_BALL:
 		ident = player_handle_breath_trap(3, GF_NETHER, TRAP_OF_NETHER_BALL);
 		break;
+	case TRAP_OF_HOLY_BALL:
+		ident = player_handle_breath_trap(3, GF_HOLY_FIRE, TRAP_OF_HOLY_BALL);
+		break;
+	case TRAP_OF_HELL_BALL:
+		ident = player_handle_breath_trap(3, GF_HELL_FIRE, TRAP_OF_HELL_BALL);
+		break;
 	case TRAP_OF_DISENCHANT_BALL:
 		ident = player_handle_breath_trap(3, GF_DISENCHANT, TRAP_OF_DISENCHANT_BALL);
 		break;
@@ -6993,10 +7181,10 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		ident = player_handle_breath_trap(3, GF_METEOR, TRAP_OF_METEOR_BALL);
 		break;
 	case TRAP_OF_ARROW_BALL:
-		ident = player_handle_breath_trap(3, GF_ARROW, TRAP_OF_ARROW_BOLT);
+		ident = player_handle_breath_trap(3, GF_ARROW, TRAP_OF_ARROW_BALL);
 		break;
 	case TRAP_OF_DISINT_BALL:
-		ident = player_handle_breath_trap(3, GF_DISINTEGRATE, TRAP_OF_DISINT_BOLT);
+		ident = player_handle_breath_trap(3, GF_DISINTEGRATE, TRAP_OF_DISINT_BALL);
 		break;
 	case TRAP_OF_WALL_BALL:
 		t_info[trap].ident = TRUE;
@@ -7016,9 +7204,353 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			place_trap(y, x);
 		}
 
-		player_handle_breath_trap(3, GF_STONE_WALL, TRAP_OF_WALL_BOLT);
+		player_handle_breath_trap(3, GF_STONE_WALL, TRAP_OF_WALL_BALL);
 
 		msg_print("You identified that trap as Wall Ball Trap.");
+		ident = FALSE;
+		break;
+
+		/* Multiple Ball Trap, by Amy */
+	case TRAP_OF_ELEC_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_ELEC, TRAP_OF_ELEC_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_POIS_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_POIS, TRAP_OF_POIS_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_ACID_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_ACID, TRAP_OF_ACID_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_COLD_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_COLD, TRAP_OF_COLD_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_FIRE_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_FIRE, TRAP_OF_FIRE_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_PLASMA_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_PLASMA, TRAP_OF_PLASMA_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_WATER_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_WATER, TRAP_OF_WATER_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_LITE_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_LITE, TRAP_OF_LITE_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_DARK_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_DARK, TRAP_OF_DARK_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_SHARDS_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_SHARDS, TRAP_OF_SHARDS_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_SOUND_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_SOUND, TRAP_OF_SOUND_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_CONFUSION_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_CONFUSION, TRAP_OF_CONFUSION_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_FORCE_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_FORCE, TRAP_OF_FORCE_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_INERTIA_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_INERTIA, TRAP_OF_INERTIA_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_MANA_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_MANA, TRAP_OF_MANA_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_ICE_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_ICE, TRAP_OF_ICE_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_CHAOS_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_CHAOS, TRAP_OF_CHAOS_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_NETHER_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_NETHER, TRAP_OF_NETHER_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_HOLY_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_HOLY_FIRE, TRAP_OF_HOLY_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_HELL_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_HELL_FIRE, TRAP_OF_HELL_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_DISENCHANT_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_DISENCHANT, TRAP_OF_DISENCHANT_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_NEXUS_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_NEXUS, TRAP_OF_NEXUS_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_TIME_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_TIME, TRAP_OF_TIME_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_GRAVITY_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_GRAVITY, TRAP_OF_GRAVITY_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_METEOR_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_METEOR, TRAP_OF_METEOR_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_ARROW_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_ARROW, TRAP_OF_ARROW_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_DISINT_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_DISINTEGRATE, TRAP_OF_DISINT_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_NUKE_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_NUKE, trap);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_PSI_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_PSI, trap);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_WALL_BALLS:
+		t_info[trap].ident = TRUE;
+
+		if ((item == -1) || (item == -2))
+		{
+			place_trap(y, x);
+			if (player_has_los_bold(y, x))
+			{
+				note_spot(y, x);
+				lite_spot(y, x);
+			}
+		}
+		else
+		{
+			/* re-trap the chest */
+			place_trap(y, x);
+		}
+
+		player_handle_breath_trap(3 + (max_dlv_real[dungeon_type] / 20), GF_STONE_WALL, TRAP_OF_WALL_BALLS);
+
+		msg_print("You identified that trap as Wall Balls Trap.");
 		ident = FALSE;
 		break;
 
@@ -7743,6 +8275,16 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			ident = TRUE;
 
 			set_image(p_ptr->image + 80);
+		}
+		break;
+
+		/* Super Hallu Trap by Amy */
+	case TRAP_OF_HALLU_X:
+		{
+			msg_print("Scintillating colors hypnotise you for a moment.");
+			ident = TRUE;
+
+			set_image(p_ptr->image + 500);
 		}
 		break;
 

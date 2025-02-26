@@ -621,7 +621,7 @@ void do_poly_self(void)
 		else
 		{
 			msg_format("You turn into a %s %s!", effect_msg,
-			           race_info[new_race].title);
+			           race_info[new_race].title + rp_name);
 		}
 
 		p_ptr->prace = new_race;
