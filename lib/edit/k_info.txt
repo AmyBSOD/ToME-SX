@@ -8273,6 +8273,14 @@ A:10/50
 P:0:1d1:0:0:0
 D:An essence that can add hold life to armor or jewelry.
 
+N:1012:& Pair~ of Ethereal Slippers
+G:]:U
+I:30:13:0
+W:30:0:0:4
+A:30/10
+P:0:1d1:0:0:0
+D:Fine quality elvish slippers, hard-wearing but apparently weightless.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
