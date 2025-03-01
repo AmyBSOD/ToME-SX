@@ -828,6 +828,19 @@
 
 /* Features 0x67 - 0x9F -- unused */
 
+#define FEAT_DMG_SHOCK          0x6E
+#define FEAT_DMG_ACID           0x6F
+#define FEAT_DMG_PLASMA         0x70
+#define FEAT_DMG_DARK           0x71
+#define FEAT_DMG_SHARD          0x72
+#define FEAT_DMG_SOUND          0x73
+#define FEAT_DMG_INERT          0x74
+#define FEAT_DMG_CHAOS          0x75
+#define FEAT_DMG_DISEN          0x76
+#define FEAT_DMG_NEXUS          0x77
+#define FEAT_DMG_TIME           0x78
+#define FEAT_DMG_NUKE           0x79
+
 #define FEAT_BETWEEN            0xA0 /* 160 */
 
 /* Altars */
@@ -3011,6 +3024,19 @@
 #define TRAP_OF_AMNESIA_X                 481
 #define TRAP_OF_DESTRUCTION               482
 #define TRAP_OF_STAR_DESTRUCTION          483
+
+#define TRAP_OF_TERRAIN_SHOCK             484
+#define TRAP_OF_TERRAIN_ACID              485
+#define TRAP_OF_TERRAIN_PLASMA            486
+#define TRAP_OF_TERRAIN_DARK              487
+#define TRAP_OF_TERRAIN_SHARD             488
+#define TRAP_OF_TERRAIN_SOUND             489
+#define TRAP_OF_TERRAIN_INERT             490
+#define TRAP_OF_TERRAIN_CHAOS             491
+#define TRAP_OF_TERRAIN_DISEN             492
+#define TRAP_OF_TERRAIN_NEXUS             493
+#define TRAP_OF_TERRAIN_TIME              494
+#define TRAP_OF_TERRAIN_NUKE              495
 
 /*** General index values ***/
 

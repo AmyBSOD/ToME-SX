@@ -3047,6 +3047,14 @@ void corrupt_player(void)
 	p_ptr->stat_max[jj] = max1;
 	p_ptr->stat_cur[jj] = cur1;
 
+	/* in order to thwart annoying exploits... occasionally lose a stat point permanently :-P --Amy */
+	if (magik(16)) {
+		do_dec_stat(ii, STAT_DEC_PERMANENT_NORESIST);
+	}
+	if (magik(16)) {
+		do_dec_stat(jj, STAT_DEC_PERMANENT_NORESIST);
+	}
+
 	p_ptr->update |= (PU_BONUS);
 }
 
@@ -3056,7 +3064,11 @@ void corrupt_player(void)
  */
 static void apply_nexus(monster_type *m_ptr)
 {
-	if (m_ptr == NULL) return;
+	bool nexusmon = TRUE;
+
+	/* note by Amy: why the hell would nexus fail to proc its teleport/scramble effects just because there is no monster?
+	 * like, are you really *THAT* uncreative? just make the player teleport to a random location instead of to the monster! */
+	if (m_ptr == NULL) nexusmon = FALSE;
 
 	if (!(dungeon_flags2 & DF2_NO_TELEPORT))
 	{
@@ -3073,7 +3085,11 @@ static void apply_nexus(monster_type *m_ptr)
 		case 4:
 		case 5:
 			{
-				teleport_player_to(m_ptr->fy, m_ptr->fx);
+				if (nexusmon) {
+					teleport_player_to(m_ptr->fy, m_ptr->fx);
+				} else { /* see? easy fix! took me less than a minute to come up with this solution! --Amy */
+					teleport_player(10 + randint(10));
+				}
 				break;
 			}
 
@@ -8058,6 +8074,8 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 
 				if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) ) {
 
+					take_sanity_hit(10, "nuclear waste");
+
 					if (randint(5) == 1) /* 6 */
 					{
 						msg_print("You undergo a freakish metamorphosis!");
@@ -8070,6 +8088,12 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 					if (randint(6) == 1)
 					{
 						inven_damage(set_acid_destroy, 2);
+					}
+
+					if (randint(10) == 1) /* lol you filthy exploit exploiter who keeps polymorphing :-P --Amy */
+					{
+						msg_print("Nasty!");
+						give_random_nastytrap_effect();
 					}
 				}
 			}

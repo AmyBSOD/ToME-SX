@@ -70,6 +70,48 @@ int randomfloortype(void)
 			break;
 		case 10:
 			floornumber = 102; /* nether mist */
+			if (random_number(10) == 1) {
+				int randdmg = random_number(12);
+				switch (randdmg) {
+					case 1:
+					default:
+						floornumber = 110; /* shock field */
+						break;
+					case 2:
+						floornumber = 111; /* acid pool */
+						break;
+					case 3:
+						floornumber = 112; /* plasma cloud */
+						break;
+					case 4:
+						floornumber = 113; /* dark area */
+						break;
+					case 5:
+						floornumber = 114; /* tornado */
+						break;
+					case 6:
+						floornumber = 115; /* cartridge of having a horror */
+						break;
+					case 7:
+						floornumber = 116; /* shifting sand */
+						break;
+					case 8:
+						floornumber = 117; /* chaos tile */
+						break;
+					case 9:
+						floornumber = 118; /* antimagic field */
+						break;
+					case 10:
+						floornumber = 119; /* nexus field */
+						break;
+					case 11:
+						floornumber = 120; /* black hole */
+						break;
+					case 12:
+						floornumber = 121; /* nuclear waste */
+						break;
+				}
+			}
 			break;
 		case 11:
 			floornumber = 173; /* underground tunnel */

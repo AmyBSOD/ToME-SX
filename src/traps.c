@@ -8053,6 +8053,342 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		}
 		break;
 
+	case TRAP_OF_TERRAIN_SHOCK:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 6, FEAT_DMG_SHOCK, 40);
+
+		msg_print("Suddenly the ground starts sparking with high voltage!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Shock Field Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_ACID:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 6, FEAT_DMG_ACID, 45);
+
+		msg_print("Highly corrosive acid flows into the dungeon!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Acid Pool Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_PLASMA:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 5, FEAT_DMG_PLASMA, 40);
+
+		msg_print("The air is filled with extremely hot plasma!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Plasma Cloud Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_DARK:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 8, FEAT_DMG_DARK, 50);
+
+		msg_print("The entire area gets darker!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Dark Area Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_SHARD:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 5, FEAT_DMG_SHARD, 25);
+
+		msg_print("Tornadoes sweep into the dungeon!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Tornado Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_SOUND:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 6, FEAT_DMG_SOUND, 30);
+
+		msg_print("Auuuuuuggghhhgh, your ears...");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Cartridge Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_INERT:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 6, FEAT_DMG_INERT, 20);
+
+		msg_print("Quicksand holes appear in the dungeon!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Shifting Sand Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_CHAOS:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 6, FEAT_DMG_CHAOS, 35);
+
+		msg_print("The floor becomes much more chaotic!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Chaotic Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_DISEN:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 6, FEAT_DMG_DISEN, 25);
+
+		msg_print("The very air seems to drain all magic!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Antimagic Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_NEXUS:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 6, FEAT_DMG_NEXUS, 40);
+
+		msg_print("Purple fog appears in the dungeon!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Nexus Field Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_TIME:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 6, FEAT_DMG_TIME, 40);
+
+		msg_print("You seem to be caught in a time loop!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Timelapse Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_NUKE:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 10, FEAT_DMG_NUKE, 70);
+
+		msg_print("Icky green waste floods the dungeon...");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Nuclear Spill Trap.");
+		}
+		break;
+
 		/* -SC- */
 	case TRAP_OF_FEMINITY:
 		{

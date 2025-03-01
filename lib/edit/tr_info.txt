@@ -2362,6 +2362,66 @@ I:12:15:0:3:40:0d0:o
 D:The dungeon seems to be seriously damaged!
 F:FLOOR | CHEST | DOOR
 
+N:484:Shock Field Trap
+I:5:20:0:10:5:0d0:o
+D:The ground is electrified!
+F:FLOOR | CHEST | DOOR
+
+N:485:Acid Pool Trap
+I:5:20:0:10:5:0d0:o
+D:There's acid pools everywhere!
+F:FLOOR | CHEST | DOOR
+
+N:486:Plasma Cloud Trap
+I:6:20:0:10:15:0d0:o
+D:The air is filled with very hot clouds!
+F:FLOOR | CHEST | DOOR
+
+N:487:Dark Area Trap
+I:5:20:0:10:10:0d0:o
+D:The area gets very dark!
+F:FLOOR | CHEST | DOOR
+
+N:488:Tornado Trap
+I:6:20:0:10:20:0d0:o
+D:The air roars!
+F:FLOOR | CHEST | DOOR
+
+N:489:Cartridge Trap
+I:7:20:0:10:25:0d0:o
+D:You hear a horrible, repeating sound...
+F:FLOOR | CHEST | DOOR
+
+N:490:Shifting Sand Trap
+I:6:20:0:10:20:0d0:o
+D:Quicksand flows into the dungeon!
+F:FLOOR | CHEST | DOOR
+
+N:491:Chaotic Trap
+I:7:20:0:10:30:0d0:o
+D:The floor becomes chaotic!
+F:FLOOR | CHEST | DOOR
+
+N:492:Antimagic Trap
+I:6:20:0:10:25:0d0:o
+D:The floor seems to drain energy from the surroundings!
+F:FLOOR | CHEST | DOOR
+
+N:493:Nexus Field Trap
+I:6:20:0:10:15:0d0:o
+D:A purple field appears!
+F:FLOOR | CHEST | DOOR
+
+N:494:Timelapse Trap
+I:8:20:0:10:30:0d0:o
+D:You seem to be stuck in a time loop...
+F:FLOOR | CHEST | DOOR
+
+N:495:Nuclear Spill Trap
+I:7:20:0:10:30:0d0:o
+D:Nuclear waste flows into the dungeon!
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 
