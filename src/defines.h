@@ -5265,7 +5265,8 @@ extern int PlayerUID;
 #define GOD_ULMO                9
 #define GOD_MANDOS              10
 #define GOD_OROME               11
-#define MAX_GODS_INIT           12
+#define GOD_INGEBORG            12
+#define MAX_GODS_INIT           13
 
 #define GOD(g)                  if (p_ptr->pgod == (g))
 #define PRAY_GOD(g)             if ((p_ptr->pgod == (g)) && (p_ptr->praying))

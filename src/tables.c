@@ -2963,6 +2963,21 @@ deity_type deity_info_init[MAX_GODS_INIT] =
 			"",
 		},
 	},
+	{
+		"Ingeborg",
+		{
+			"Also known as the Runemistress, she created the Theme module.",
+			"She's the goddess of chaos.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+	},
 
 };
 

@@ -2675,6 +2675,16 @@ void calc_gods()
 		p_ptr->resist_fire = TRUE;
 	}
 
+	/* Ingeborg gives +CON, or -CON if your piety is negative --Amy */
+	GOD(GOD_INGEBORG)
+	{
+		int conbonus = 0;
+		conbonus = p_ptr->grace / 10000;
+		if (conbonus > 10) conbonus = 10;
+
+		p_ptr->stat_add[A_CON] += conbonus;
+	}
+
 	GOD(GOD_AULE)
 	{
 		if (p_ptr->grace > 5000) p_ptr->resist_fire = TRUE;

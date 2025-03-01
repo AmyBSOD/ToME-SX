@@ -231,6 +231,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
     *****g_yavann.txt*02[Yavanna]
     *****g_amybso.txt*02[AmyBSOD]
     *****g_orome.txt*02[Orome]
+    *****g_ingebo.txt*02[Ingeborg]
   *****birth.txt*16[Gold]
 ~~~~~72
 *****/Hindex.txt*72[H]
@@ -256,6 +257,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
   *****tome_faq.txt*31[I keep dying]
   *****dungeon.txt*04[Identifying features]
   *****birth.txt*66[Infra-vision]
+  *****g_ingebo.txt*66[Ingeborg]
   *****birth.txt*35[Intelligence]
   *****birth.txt*85[Inventory - starting info]
   *****tome_faq.txt*32[Invisible character]

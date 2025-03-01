@@ -1141,10 +1141,10 @@ F:FLOOR | REMEMBER | NOTICE | CAN_RUN
 D:0:You feel like going on a hunt.
 
 # 246 should be Ingeborg
-N:246:Unfinished Altar
+N:246:Altar of Chaos
 G:0:g
 F:FLOOR | REMEMBER | NOTICE | CAN_RUN
-D:0:An altar for a deity who hasn't been implemented yet.
+D:0:You feel like everything is going to hell.
 
 N:247:Unfinished Altar
 G:0:g

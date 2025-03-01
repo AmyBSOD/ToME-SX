@@ -82,6 +82,11 @@ bool quest_one_move_hook(char *fmt)
 			cmsg_print(TERM_YELLOW, "'Melkor will abandon you when you do, but you must do it anyway!'");
 		}
 
+		GOD(GOD_INGEBORG)
+		{
+			cmsg_print(TERM_YELLOW, "'Ingeborg will abandon you when you do, but you must do it anyway!'");
+		}
+
 		GOD(GOD_AMYBSOD)
 		{
 			cmsg_print(TERM_YELLOW, "'AmyBSOD will abandon you when you do, but you must do it anyway!'");
@@ -118,6 +123,7 @@ bool quest_one_drop_hook(char *fmt)
 	inven_item_optimize(o_idx);
 
 	abandon_god(GOD_MELKOR);
+	abandon_god(GOD_INGEBORG);
 	abandon_god(GOD_AMYBSOD);
 
 	/* Continue the plot */

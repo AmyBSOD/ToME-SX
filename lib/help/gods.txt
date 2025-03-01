@@ -42,3 +42,4 @@ your wisdom.
 9. *****g_aule.txt*0[Aule the Smith] - the builder and inventor of the Valar.
 10.*****g_mandos.txt*0[Mandos] - the Doomsman of the Valar, wise and powerful.
 11.*****g_orome.txt*0[Orome] - the Valar of Hunting.
+12.*****g_ingebo.txt*0[Ingeborg] - the Goddess of Chaos.

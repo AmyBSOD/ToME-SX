@@ -3722,6 +3722,15 @@ extern bool set_tim_sniper(int v);
  */
 extern bool set_tim_rapidfire(int v);
 
+/** @fn wild_magic(int spell)
+ * @brief Wild magic.\n
+ * @param spell Spell level
+ * @brief Time remaining
+ * @return bluh whatever
+ * @note (see file xtra2.c)
+ */
+extern void wild_magic(int spell);
+
 /** @fn set_invis(int v, int p)
  * @brief Player has timed invisibility.\n
  * @param v Number \n time remaining until effect expires
@@ -4375,30 +4384,28 @@ extern s16b dun_level;
 
 /** @def GOD_YAVANNA */
 #define GOD_YAVANNA	     5
-/** @} */
 
 /** @def GOD_AMYBSOD */
 #define GOD_AMYBSOD	     6
-/** @} */
 
 /** @def GOD_AULE */
 #define GOD_AULE	     7
-/** @} */
 
 /** @def GOD_VARDA */
 #define GOD_VARDA	     8
-/** @} */
 
 /** @def GOD_ULMO */
 #define GOD_ULMO	     9
-/** @} */
 
 /** @def GOD_MANDOS */
 #define GOD_MANDOS	     10
-/** @} */
 
 /** @def GOD_OROME */
 #define GOD_OROME	     11
+
+/** @def GOD_INGEBORG */
+#define GOD_INGEBORG	     12
+
 /** @} */
 
 

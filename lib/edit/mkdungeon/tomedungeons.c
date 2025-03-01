@@ -2000,7 +2000,7 @@ void printRandoms(int lower, int upper, int count)
 
 			} else {
 
-				contnum = random_number(129);
+				contnum = random_number(130);
 
 				printf("# random type %d\n", contnum);
 
@@ -3910,6 +3910,18 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(20) == 1) {
 							randomdungeondamage();
 						}
+						break;
+					case 130:
+						printf("# based on Ingeborg Temple\n", contnum);
+						printf("L:88:40:117:15:174:45\n");
+						printf("A:56:80:215:20:56:0:213:216\n");
+						printf("O:10:50:10:30\n");
+						printf("F:LAVA_RIVER | CAVERN\n");
+						printf("F:ADJUST_LEVEL_1_2 | NO_GENO\n");
+						printf("R:95:3\n");
+						printf("M:EVIL\n");
+						printf("R:5:0\n");
+						printf("E:2d3:40:CHAOS\n");
 						break;
 				}
 			}

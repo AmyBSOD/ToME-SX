@@ -1,0 +1,55 @@
+|||||oy
+~~~~~01|Ingeborg
+~~~~~02|Gods|Ingeborg
+#####R === Ingeborg ===
+
+Ingeborg is the goddess of chaos.
+
+#####GThe benefits of Worshipping Ingeborg
+ 1. text goes here
+
+#####GThe disadvantages of Worshipping Ingeborg
+1. text goes here
+~~~~~03|Ingeborg|Prayers
+#####GIngeborg's Magic
+Worshipping Ingeborg gives the adventurer access to a set of special
+spells that come directly from the hands of Ingeborg. These spells use your piety
+to cast rather than your spellpoints, and the level of spells that Ingeborg will 
+permit you to use is determined by your Prayer skill - how skillful you are
+in asking for her help without offending her!
+
+There is a special book called the "Tome of Chaos" which 
+contains instructions for the procedure for each of the prayers Ingeborg will
+grant. There are NUMBER prayers all told, which are:
+1. [[[[[Bspell name goes here] (Level 1)
+   text goes here.
+2. [[[[[Bspell name goes here] (Level 1)
+   text goes here.
+3. [[[[[Bspell name goes here] (Level 1)
+   text goes here.
+4. [[[[[Bspell name goes here] (Level 1)
+   text goes here.
+5. [[[[[Bspell name goes here] (Level 1)
+   text goes here.
+   
+Each of these spells can be increased in level both by improving your Prayer
+skill, and by improving your Spell-power skill.
+
+In addition to her specific magic, Ingeborg will also assist with your ability to
+use some magic from the "standard" schools, in relation to how skilled you 
+are at Prayer. These schools are as follows:
+    *****m_nature.txt*0[Nature School] at 1/10 the Prayer skill level.
+    *****m_convey.txt*0[Conveyance School] at 1/10 the Prayer skill level.
+    *****m_divin.txt*0[Divination School] at 1/10 the Prayer skill level.
+    *****m_tempo.txt*0[Temporal School] at 1/10 the Prayer skill level.
+    *****m_earth.txt*0[Earth School] at 1/10 the Prayer skill level.
+    *****m_hell.txt*0[Hell School] at 1/10 the Prayer skill level.
+    *****m_mind.txt*0[Mind School] at 1/10 the Prayer skill level.
+    *****m_mana.txt*0[Mana School] at 1/10 the Prayer skill level.
+    *****m_meta.txt*0[Meta School] at 1/10 the Prayer skill level.
+    *****m_celest.txt*0[Celestial School] at 1/10 the Prayer skill level.
+    *****m_fire.txt*0[Fire School] at 1/10 the Prayer skill level.
+    *****m_air.txt*0[Air School] at 1/10 the Prayer skill level.
+    *****m_water.txt*0[Water School] at 1/10 the Prayer skill level.
+
+The spells from these schools are all cast using your normal spellpoints.

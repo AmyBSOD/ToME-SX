@@ -2068,6 +2068,7 @@ static void process_world(void)
 			inc_piety(GOD_ULMO, -100);
 			inc_piety(GOD_MANDOS, -100);
 			inc_piety(GOD_OROME, -100);
+			inc_piety(GOD_INGEBORG, -100);
 		}
 
 		GOD(GOD_MANWE)
@@ -2127,6 +2128,15 @@ static void process_world(void)
 				dec += 5 - wisdom_scale(4);
 			if (dec < 1) dec = 1;
 			inc_piety(GOD_MELKOR, -dec);
+		}
+		GOD(GOD_INGEBORG)
+		{
+			int dec = 8 - wisdom_scale(6);
+
+			PRAY_GOD(GOD_INGEBORG)
+			dec += 4 - wisdom_scale(2);
+			if (dec < 1) dec = 1;
+			inc_piety(GOD_INGEBORG, -dec);
 		}
 		GOD(GOD_ULMO)
 		{
@@ -3262,6 +3272,22 @@ static void process_world(void)
 			p_ptr->exp--;
 			p_ptr->max_exp--;
 			check_experience();
+		}
+	}
+
+	/* Ingeborg causes random stuff, and if your piety is negative, also random bad stuff */
+	GOD(GOD_INGEBORG) {
+		if (!(p_ptr->wild_mode)) {
+			if (p_ptr->grace < 0 && rand_int(1000) == 0) {
+				msg_format("Ingeborg produces %s farting noises with her sexy butt.", magik(50) ? "loud" : "disgusting");
+				do_fart_effect();
+				disturb(0, 0);
+			}
+			if (rand_int(10000) == 0) {
+				msg_print("Ingeborg calls upon the chaos patron...");
+				gain_level_reward(0);
+				disturb(0, 0);
+			}
 		}
 	}
 

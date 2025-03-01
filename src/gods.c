@@ -22,7 +22,7 @@ void inc_piety(int god, s32b amt)
 	/* valarin and nether skills, by Amy; I have no idea what they used to do, apart from modifying the damage done
 	 * to you by hellfire/holy fire, but decided they should modify your piety gain/loss */
 	bool goodgod = TRUE;
-	if (god == GOD_AMYBSOD || god == GOD_MELKOR) goodgod = FALSE;
+	if (god == GOD_AMYBSOD || god == GOD_MELKOR || god == GOD_INGEBORG) goodgod = FALSE;
 
 	/* don't gain piety if impious trap is active */
 	if (p_ptr->nastytrap4 && amt > 0) return;
@@ -160,6 +160,12 @@ void follow_god(int god, bool silent)
 		{
 			s_info[SKILL_UDUN].hidden = FALSE;
 			if (!silent) msg_print("You feel the fleecy colors of AmyBSOD in you.  You can now use the Udun skill.");
+		}
+
+		GOD(GOD_INGEBORG)
+		{
+			s_info[SKILL_UDUN].hidden = FALSE;
+			if (!silent) msg_print("You feel the chaotic desires of Ingeborg in you.  You can now use the Udun skill.");
 		}
 
 		/* Anything to be done? */

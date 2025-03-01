@@ -2089,6 +2089,7 @@ C:a:g:Mandos
 C:a:g:Ulmo
 C:a:g:Varda Elentari
 C:a:g:Orome
+C:a:g:Ingeborg
 C:a:k:+0:+200:Clear-mind
 C:a:k:+0:+200:Cleaning
 
@@ -2230,6 +2231,17 @@ C:a:k:+0:+200:Sling-mastery
 C:a:k:+0:+200:Bow-mastery
 C:a:k:+0:+200:Crossbow-mastery
 
+C:a:N:Chaos Priest
+C:a:D:A priest who serves Ingeborg to bring chaos
+C:a:D:and disarray to the world.
+C:a:O:23:30:1d1
+C:a:g:Ingeborg
+C:a:k:+0:+400:Prayer
+C:a:k:+0:-200:Necromancy
+C:a:k:+0:+500:Hell
+C:a:k:+0:-100:Mindcraft
+C:a:k:+0:-100:Stealth
+
 C:a:N:Water Priest
 C:a:D:A priest that serves Ulmo to bring down
 C:a:D:the empire of fear and shadows of Morgoth.
@@ -2277,6 +2289,7 @@ C:a:g:Mandos
 C:a:g:Ulmo
 C:a:g:Varda Elentari
 C:a:g:Orome
+C:a:g:Ingeborg
 C:a:k:+1000:+800:Valarin
 C:a:k:+1000:+800:Nether
 C:a:k:=0:=0:Mindcraft

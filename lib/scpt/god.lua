@@ -119,6 +119,8 @@ add_quest
 						god_quest.relic_num = 19
 					elseif player.pgod == GOD_OROME then
 						god_quest.relic_num = 20
+					elseif player.pgod == GOD_INGEBORG then
+						god_quest.relic_num = 21
 					end
 
 					-- This var will need resetting
@@ -717,6 +719,55 @@ function set_god_dungeon_attributes()
 		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
 		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
 
+	elseif player.pgod == GOD_INGEBORG then
+
+		-- Very chaotic
+		dungeon(god_quest.DUNGEON_GOD).min_m_alloc_level = 50
+		dungeon(god_quest.DUNGEON_GOD).min_m_alloc_chance = 100
+
+		-- L: floor includes chaos tiles
+		dungeon(god_quest.DUNGEON_GOD).floor1 = 88
+		dungeon(god_quest.DUNGEON_GOD).floor2 = 117
+		dungeon(god_quest.DUNGEON_GOD).floor3 = 174
+		dungeon(god_quest.DUNGEON_GOD).floor_percent1[1] = 40
+		dungeon(god_quest.DUNGEON_GOD).floor_percent2[1] = 15
+		dungeon(god_quest.DUNGEON_GOD).floor_percent3[1] = 45
+
+		-- A: mostly granite
+		dungeon(god_quest.DUNGEON_GOD).fill_type1 = 56
+		dungeon(god_quest.DUNGEON_GOD).fill_percent1[1] = 80
+		dungeon(god_quest.DUNGEON_GOD).fill_type2 = 215
+		dungeon(god_quest.DUNGEON_GOD).fill_percent2[1] = 20
+		dungeon(god_quest.DUNGEON_GOD).outer_wall = 213
+		dungeon(god_quest.DUNGEON_GOD).inner_wall = 216
+		dungeon(god_quest.DUNGEON_GOD).fill_method = 1
+
+		-- O: mostly equipment
+		dungeon(god_quest.DUNGEON_GOD).objs.treasure = 10
+		dungeon(god_quest.DUNGEON_GOD).objs.combat = 50
+		dungeon(god_quest.DUNGEON_GOD).objs.magic = 10
+		dungeon(god_quest.DUNGEON_GOD).objs.tools = 30
+
+		-- F: Natural looking
+		dungeon(god_quest.DUNGEON_GOD).flags1 = bor(DF1_NO_RECALL, DF1_LAVA_RIVER, DF1_CAVERN)
+		dungeon(god_quest.DUNGEON_GOD).flags2 = bor(DF2_ADJUST_LEVEL_PLAYER, DF2_ADJUST_LEVEL_1_2, DF2_NO_GENO)
+
+		-- R: Evil monsters
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mode = 3
+		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 95
+
+		-- M: Animals
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags3 = bor(RF3_EVIL)
+
+		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
+		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
+
+		-- E: chaos damage
+		dungeon(god_quest.DUNGEON_GOD).d_dice[1] = 2
+		dungeon(god_quest.DUNGEON_GOD).d_side[1] = 3
+		dungeon(god_quest.DUNGEON_GOD).d_frequency[1] = 40
+		dungeon(god_quest.DUNGEON_GOD).d_type[1] = 30 -- CHAOS
+
 	elseif player.pgod == GOD_AULE then
 
 		dungeon(god_quest.DUNGEON_GOD).min_m_alloc_level = 24
@@ -892,7 +943,7 @@ function get_god_quest_axes()
 	local home, home_y_coord, home_x_coord, home_axis, home2, home2_y_coord, home2_x_coord, home2_axis, mydistance
 
 	-- different values for different gods...
-	if player.pgod ~= GOD_MELKOR and player.pgod ~= GOD_AMYBSOD then
+	if player.pgod ~= GOD_MELKOR and player.pgod ~= GOD_AMYBSOD and player.pgod ~= GOD_INGEBORG then
 
 		-- one of the valar, "home" is lothlorien, home2 is Minas Arnor
 		home = "Bree"

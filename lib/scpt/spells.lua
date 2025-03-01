@@ -25,6 +25,13 @@ SCHOOL_MANA = add_school
 			["mul"] = 1,
 			["div"] = 4,
 		},
+		-- Ingeborg provides every school at 1/10 the prayer skill
+		[GOD_INGEBORG] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 10,
+		},
 	},
 	["hooks"] =
 	{
@@ -59,6 +66,13 @@ SCHOOL_FIRE = add_school
 			["mul"] = 3,
 			["div"] = 5,
 		},
+		-- Ingeborg provides every school at 1/10 the prayer skill
+		[GOD_INGEBORG] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 10,
+		},
 
 	},
 }
@@ -84,6 +98,13 @@ SCHOOL_AIR = add_school
 			["skill"] = SKILL_PRAY,
 			["mul"] = 2,
 			["div"] = 3,
+		},
+		-- Ingeborg provides every school at 1/10 the prayer skill
+		[GOD_INGEBORG] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 10,
 		},
 	},
 }
@@ -116,6 +137,13 @@ SCHOOL_WATER = add_school
 			["skill"] = SKILL_PRAY,
 			["mul"] = 3,
 			["div"] = 5,
+		},
+		-- Ingeborg provides every school at 1/10 the prayer skill
+		[GOD_INGEBORG] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 10,
 		},
 	},
 }
@@ -155,6 +183,13 @@ SCHOOL_EARTH = add_school
 			["mul"] = 1,
 			["div"] = 4,
 		},
+		-- Ingeborg provides every school at 1/10 the prayer skill
+		[GOD_INGEBORG] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 10,
+		},
 	},
 }
 SCHOOL_CONVEYANCE = add_school
@@ -178,6 +213,13 @@ SCHOOL_CONVEYANCE = add_school
 			["skill"] = SKILL_PRAY,
 			["mul"] = 1,
 			["div"] = 3,
+		},
+		-- Ingeborg provides every school at 1/10 the prayer skill
+		[GOD_INGEBORG] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 10,
 		},
 	},
 }
@@ -227,6 +269,13 @@ SCHOOL_DIVINATION = add_school
 			["mul"] = 1,
 			["div"] = 3,
 		},
+		-- Ingeborg provides every school at 1/10 the prayer skill
+		[GOD_INGEBORG] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 10,
+		},
 	},
 }
 SCHOOL_TEMPORAL = add_school
@@ -257,6 +306,13 @@ SCHOOL_TEMPORAL = add_school
 			["skill"] = SKILL_PRAY,
 			["mul"] = 1,
 			["div"] = 3,
+		},
+		-- Ingeborg provides every school at 1/10 the prayer skill
+		[GOD_INGEBORG] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 10,
 		},
 	},
 }
@@ -289,6 +345,13 @@ SCHOOL_NATURE = add_school
 			["mul"] = 1,
 			["div"] = 2,
 		},
+		-- Ingeborg provides every school at 1/10 the prayer skill
+		[GOD_INGEBORG] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 10,
+		},
 	},
 }
 SCHOOL_META = add_school
@@ -320,6 +383,13 @@ SCHOOL_META = add_school
 			["mul"] = 1,
 			["div"] = 2,
 		},
+		-- Ingeborg provides every school at 1/10 the prayer skill
+		[GOD_INGEBORG] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 10,
+		},
 	},
 }
 SCHOOL_MIND = add_school
@@ -343,6 +413,13 @@ SCHOOL_MIND = add_school
 			["skill"] = SKILL_PRAY,
 			["mul"] = 1,
 			["div"] = 3,
+		},
+		-- Ingeborg provides every school at 1/10 the prayer skill
+		[GOD_INGEBORG] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 10,
 		},
 	},
 }
@@ -411,6 +488,13 @@ SCHOOL_OROME = add_school
 	["spell_power"] = TRUE,
 	["god"] = GOD_OROME,
 }
+SCHOOL_INGEBORG = add_school
+{
+	["name"] = "Ingeborg",
+	["skill"] = SKILL_PRAY,
+	["spell_power"] = TRUE,
+	["god"] = GOD_INGEBORG,
+}
 
 -- New schools
 SCHOOL_AULE = add_school
@@ -473,6 +557,13 @@ SCHOOL_CELESTIAL = add_school
 			["mul"] = 1,
 			["div"] = 2,
 		},
+		-- Ingeborg provides every school at 1/10 the prayer skill
+		[GOD_INGEBORG] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 10,
+		},
 	},
 }
 
@@ -497,6 +588,13 @@ SCHOOL_HELL = add_school
 			["skill"] = SKILL_PRAY,
 			["mul"] = 1,
 			["div"] = 2,
+		},
+		-- Ingeborg provides every school at 1/10 the prayer skill
+		[GOD_INGEBORG] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 10,
 		},
 	},
 }
@@ -542,6 +640,7 @@ tome_dofile("s_music.lua")
 tome_dofile("s_hell.lua")
 tome_dofile("s_celest.lua")
 tome_dofile("s_orome.lua")
+tome_dofile("s_ingebo.lua")
 
 -- List of spellbooks
 
@@ -648,6 +747,11 @@ school_book[25] = {
 -- Create the book of orome
 school_book[26] = {
 	OROME_WILDSENSE, OROME_BULLSEYE, OROME_SNIPER, OROME_GOODHUNT, OROME_RAPIDFIRE,
+}
+
+-- Create the book of ingeborg
+school_book[27] = {
+	INGEBORG_EVERYTHING_BURNS, INGEBORG_WILD_MAGIC, INGEBORG_DISINTEGRATE, INGEBORG_STAR_DESTRUCTION, INGEBORG_BLACK_HOLE, 
 }
 
 -- Create the book of beginner's cantrip

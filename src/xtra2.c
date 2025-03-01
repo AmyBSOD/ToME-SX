@@ -4929,12 +4929,16 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 			inc_piety(GOD_ERU, -2 * m_ptr->level);
 			inc_piety(GOD_MANWE, -10 * m_ptr->level);
 			inc_piety(GOD_MELKOR, 3 * m_ptr->level);
+			inc_piety(GOD_INGEBORG, 2 * m_ptr->level);
+			PRAY_GOD(GOD_INGEBORG) inc_piety(GOD_INGEBORG, m_ptr->level);
 			inc_piety(GOD_AMYBSOD, 3 * m_ptr->level);
 			PRAY_GOD(GOD_AMYBSOD) inc_piety(GOD_AMYBSOD, 10 * m_ptr->level);
 		}
 		else
 		{
 			inc_piety(GOD_MELKOR, 1 + m_ptr->level / 2);
+			inc_piety(GOD_INGEBORG, 1 + m_ptr->level / 3);
+			PRAY_GOD(GOD_INGEBORG) inc_piety(GOD_INGEBORG, 1 + m_ptr->level / 3);
 		}
 
 		/* Ulmo doesn't want aquatic monsters to get killed */

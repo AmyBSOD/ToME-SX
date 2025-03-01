@@ -838,6 +838,7 @@ extern void cast_school_spell(void);
 extern void browse_school_spell(int book, int pval, object_type *o_ptr);
 extern int find_spell(char *name);
 extern bool is_school_book(object_type *o_ptr);
+extern void wild_magic(int spell);
 
 /* cmd6.c */
 extern void set_stick_mode(object_type *o_ptr);
