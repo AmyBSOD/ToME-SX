@@ -589,6 +589,7 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY116:
 		case TRAP_NASTY117:
 		case TRAP_NASTY118:
+		case TRAP_NASTY119:
 			return FALSE;
 	}
 
@@ -722,6 +723,7 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY116:
 		case TRAP_NASTY117:
 		case TRAP_NASTY118:
+		case TRAP_NASTY119:
 			return FALSE;
 	}
 
@@ -863,6 +865,7 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY116:
 		case TRAP_NASTY117:
 		case TRAP_NASTY118:
+		case TRAP_NASTY119:
 			return TRUE;
 	}
 
@@ -3491,6 +3494,162 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* Dimming Trap */
+	case TRAP_OF_DIMMING:
+		{
+			msg_print("The area around you seems to flicker!");
+
+			object_type *o_ptr;
+
+			/* Access the lite */
+			o_ptr = &p_ptr->inventory[INVEN_LITE];
+
+			/* Drain fuel */
+			if (o_ptr->timeout > 0)
+			{
+				/* Reduce fuel */
+				o_ptr->timeout -= (250 + randint(250));
+				if (o_ptr->timeout < 1) o_ptr->timeout = 1;
+
+				/* Notice */
+				if (!p_ptr->blind)
+				{
+					msg_print("Your light dims.");
+					ident = TRUE;
+				}
+
+				/* Window stuff */
+				p_ptr->window |= (PW_EQUIP);
+			}
+
+			break;
+		}
+
+		/* Slowing Trap */
+	case TRAP_OF_SLOW_I:
+		{
+			msg_print("Your feet suddenly feel heavier!");
+
+			(void)set_slow(p_ptr->slow + rand_int(4) + 4);
+			ident = TRUE;
+
+			break;
+		}
+	case TRAP_OF_SLOW_II:
+		{
+			msg_print("Your feet suddenly feel heavier!");
+
+			(void)set_slow(p_ptr->slow + rand_int(20) + 10);
+			ident = TRUE;
+
+			break;
+		}
+	case TRAP_OF_SLOW_III:
+		{
+			msg_print("Your feet suddenly feel heavier!");
+
+			(void)set_slow(p_ptr->slow + rand_int(100) + 50);
+			ident = TRUE;
+
+			break;
+		}
+
+		/* Amnesia Trap */
+	case TRAP_OF_AMNESIA:
+		{
+			msg_print("Something tries to blank your mind!");
+			lose_all_info();
+			ident = TRUE;
+
+			break;
+		}
+	case TRAP_OF_AMNESIA_X:
+		{
+			msg_print("Something tries to blank your mind!");
+			lose_all_info_X();
+			ident = TRUE;
+
+			break;
+		}
+
+		/* Destruction Trap */
+	case TRAP_OF_DESTRUCTION:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+			msg_print("Suddenly, you hear a rumbling sound!");
+
+			/* Prevent destruction of quest levels and town */
+			if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
+			{
+				destroy_area(p_ptr->py, p_ptr->px, 5, TRUE, FALSE);
+			}
+			else
+			{
+				msg_print("The dungeon trembles...");
+			}
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Destruction.");
+
+			break;
+		}
+	case TRAP_OF_STAR_DESTRUCTION:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+			msg_print("Suddenly, you hear a loud rumbling sound!");
+
+			/* Prevent destruction of quest levels and town */
+			if (!is_quest(dun_level) || (is_quest(dun_level) == QUEST_RANDOM))
+			{
+				destroy_area(p_ptr->py, p_ptr->px, 15, TRUE, FALSE);
+			}
+			else
+			{
+				msg_print("The dungeon trembles...");
+			}
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Star Destruction.");
+
+			break;
+		}
+
 		/* Bowel Cramps Trap */
 	case TRAP_OF_BOWEL_CRAMPS:
 		{
@@ -4589,6 +4748,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				/* Re-trap the chest */
 				place_trap(y, x);
 			}
+			msg_print("You hear a noise, and then its echo.");
 
 			/* Never known */
 			ident = FALSE;
@@ -6704,6 +6864,18 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap118 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY119:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap119 = TRUE;
 			calc_bonuses(FALSE);
 
 			break;			
@@ -9945,7 +10117,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(118)) {
+	switch (randint(119)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -10299,6 +10471,9 @@ void give_random_nastytrap_effect(void)
 			break;
 		case 118:
 			p_ptr->nastytrap118 = TRUE;
+			break;
+		case 119:
+			p_ptr->nastytrap119 = TRUE;
 			break;
 
 	}

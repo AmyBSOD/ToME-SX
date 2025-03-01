@@ -2027,7 +2027,7 @@ struct player_type
 	bool nastytrap116; /* crafting trap - runecraft and alchemy always fail */
 	bool nastytrap117; /* covetous trap - teleporting monsters can teleport with you */
 	bool nastytrap118; /* spellcasting trap - monsters never fail to cast a spell */
-	bool nastytrap119;
+	bool nastytrap119; /* forgetful trap - amnesia will unidentify star-identified stuff */
 	bool nastytrap120;
 	bool nastytrap121;
 	bool nastytrap122;

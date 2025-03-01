@@ -2073,6 +2073,10 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Spellcasting monsters never fail to cast their spells.";
 	}
+	if (p_ptr->nastytrap119)
+	{
+		info[i++] = "You have a problem: Amnesia effects can unidentify star-identified items.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];
@@ -2428,7 +2432,7 @@ void report_magics(void)
 
 
 /*
- * Forget everything
+ * Forget everything, but star-identified stuff stays known
  */
 bool lose_all_info(void)
 {
@@ -2443,7 +2447,58 @@ bool lose_all_info(void)
 		if (!o_ptr->k_idx) continue;
 
 		/* Allow "protection" by the MENTAL flag */
-		if (o_ptr->ident & (IDENT_MENTAL)) continue;
+		if (p_ptr->nastytrap119) { /* forgetful nastytrap means MENTAL flag is cleared instead --Amy */
+			o_ptr->ident &= ~(IDENT_MENTAL);
+		} else {
+			if (o_ptr->ident & (IDENT_MENTAL)) continue;
+		}
+
+		/* Remove sensing */
+		o_ptr->sense = SENSE_NONE;
+
+		/* Hack -- Clear the "empty" flag */
+		o_ptr->ident &= ~(IDENT_EMPTY);
+
+		/* Hack -- Clear the "known" flag */
+		o_ptr->ident &= ~(IDENT_KNOWN);
+
+		/* Hack -- Clear the "felt" flag */
+		o_ptr->ident &= ~(IDENT_SENSE);
+	}
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Combine / Reorder the pack (later) */
+	p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+
+	/* Window stuff */
+	p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+
+	/* Mega-Hack -- Forget the map */
+	wiz_dark();
+
+	/* It worked */
+	return (TRUE);
+}
+
+/*
+ * Forget everything, including star-identified stuff (Amy)
+ */
+bool lose_all_info_X(void)
+{
+	int i;
+
+	/* Forget info about objects */
+	for (i = 0; i < INVEN_TOTAL; i++)
+	{
+		object_type *o_ptr = &p_ptr->inventory[i];
+
+		/* Skip non-objects */
+		if (!o_ptr->k_idx) continue;
+
+		/* Hack -- Clear the MENTAL flag */
+		o_ptr->ident &= ~(IDENT_MENTAL);
 
 		/* Remove sensing */
 		o_ptr->sense = SENSE_NONE;

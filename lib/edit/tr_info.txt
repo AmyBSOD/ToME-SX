@@ -2317,6 +2317,51 @@ I:30:2:50:4:10:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:475:Forgetful Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:476:Trap of Dimming
+I:2:100:10:25:2:0d0:y
+D:Your light seems to dim...
+F:FLOOR | CHEST | DOOR
+
+N:477:Slow Gas Trap
+I:2:100:80:0:3:0d0:r
+D:You feel yourself moving slower...
+F:FLOOR | CHEST | DOOR
+
+N:478:Lame Gas Trap
+I:4:80:80:0:15:0d0:r
+D:You feel yourself moving slower...
+F:FLOOR | CHEST | DOOR
+
+N:479:Inert Gas Trap
+I:6:50:80:0:30:0d0:r
+D:You feel yourself moving slower...
+F:FLOOR | CHEST | DOOR
+
+N:480:Amnesia Trap
+I:2:100:80:0:4:0d0:r
+D:You feel forgetful...
+F:FLOOR | CHEST | DOOR
+
+N:481:Trap of Forget Everything
+I:5:50:80:0:25:0d0:r
+D:You feel forgetful...
+F:FLOOR | CHEST | DOOR
+
+N:482:Destruction Trap
+I:6:33:0:3:20:0d0:o
+D:The dungeon seems to be damaged!
+F:FLOOR | CHEST | DOOR
+
+N:483:Star Destruction Trap
+I:12:15:0:3:40:0d0:o
+D:The dungeon seems to be seriously damaged!
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

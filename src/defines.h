@@ -3001,6 +3001,16 @@
 #define TRAP_OF_DIVINE_INTER              473
 
 #define TRAP_NASTY118                     474
+#define TRAP_NASTY119                     475
+
+#define TRAP_OF_DIMMING                   476
+#define TRAP_OF_SLOW_I                    477
+#define TRAP_OF_SLOW_II                   478
+#define TRAP_OF_SLOW_III                  479
+#define TRAP_OF_AMNESIA                   480
+#define TRAP_OF_AMNESIA_X                 481
+#define TRAP_OF_DESTRUCTION               482
+#define TRAP_OF_STAR_DESTRUCTION          483
 
 /*** General index values ***/
 

@@ -1324,6 +1324,7 @@ extern bool remove_all_curse(void);
 extern bool restore_level(void);
 extern void self_knowledge(FILE *fff);
 extern bool lose_all_info(void);
+extern bool lose_all_info_X(void);
 extern bool detect_traps(int rad);
 extern bool detect_doors(int rad);
 extern bool detect_stairs(int rad);
