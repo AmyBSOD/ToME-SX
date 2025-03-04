@@ -7,7 +7,7 @@
 The Udun school of magic contains spells where the corrupted forces of Melkor
 Bauglir are used to create the final spell effect. There are rumors of an
 "Unholy Tome of the Hellflame" which contains all the Udun school spells within
-its bindings.
+its bindings (except Black Hole).
 
 The Udun school is available only to worshippers of *****g_melkor.txt*0[Melkor Bauglir],
 *****g_ingebo.txt*0[Ingeborg] and *****g_amybso.txt*0[AmyBSOD]. They will also
@@ -34,3 +34,7 @@ There are four spells available for the Udun school. These spells are:
    Turns you temporarily into a powerful Balrog.
 #####v   Your Udun and Fire skills must have reached a combined average level 
 #####v   of 35 in order to cast this spell.
+5. [[[[[DBlack Hole] (dual school level 66)
+   Fires a ball of inertia.
+#####v   Your Udun and Prayer skills must have reached a combined average level 
+#####v   of 66 in order to cast this spell, and you must be worshipping Ingeborg.

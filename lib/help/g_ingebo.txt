@@ -6,10 +6,15 @@
 Ingeborg is the goddess of chaos.
 
 #####GThe benefits of Worshipping Ingeborg
- 1. text goes here
+ 1. As you increase your piety, Ingeborg grants you a bonus to your constitution.
+ 2. Ingeborg likes it if you kill monsters, especially good-aligned ones.
 
 #####GThe disadvantages of Worshipping Ingeborg
-1. text goes here
+1. Your piety decreases over time.
+2. Your chaos patron occasionally decides to intervene; their effects can be
+   useful on occasion, but some of these effects are detrimental.
+3. If your piety is negative, Ingeborg will subject you to random bad effects.
+4. If your piety gets too low, Ingeborg reduces your constitution.
 ~~~~~03|Ingeborg|Prayers
 #####GIngeborg's Magic
 Worshipping Ingeborg gives the adventurer access to a set of special
@@ -21,16 +26,20 @@ in asking for her help without offending her!
 There is a special book called the "Tome of Chaos" which 
 contains instructions for the procedure for each of the prayers Ingeborg will
 grant. There are NUMBER prayers all told, which are:
-1. [[[[[Bspell name goes here] (Level 1)
-   text goes here.
-2. [[[[[Bspell name goes here] (Level 1)
-   text goes here.
-3. [[[[[Bspell name goes here] (Level 1)
-   text goes here.
-4. [[[[[Bspell name goes here] (Level 1)
-   text goes here.
-5. [[[[[Bspell name goes here] (Level 1)
-   text goes here.
+1. [[[[[BEverything Burns] (Level 1)
+   Deals fire damage to every monster in your field of view.
+2. [[[[[BWild Magic] (Level 20)
+   Causes very random effects.
+3. [[[[[BDisintegrate] (Level 30)
+   Fires a ball of disintegration.
+4. [[[[[BStar Destruction] (Level 50)
+   Destroys the area around you..
+
+#####GUdun spells that can be cast with Ingeborg's prayer skill
+1. [[[[[BBlack Hole] (dual school level 66)
+   Fires a ball of inertia.
+#####v   Your Udun and Prayer skills must have reached a combined average level 
+#####v   of 66 in order to cast this spell.
    
 Each of these spells can be increased in level both by improving your Prayer
 skill, and by improving your Spell-power skill.
