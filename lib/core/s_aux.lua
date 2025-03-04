@@ -471,13 +471,13 @@ function cast_school_spell(s, s_ptr, no_cost)
 	if not no_cost then
 	 	-- Require lite
 		if (check_affect(s, "blind")) and ((player.blind > 0) or (no_lite() == TRUE)) then
-			msg_print("You cannot see!")
+			msg_print("You cannot see! This message needs to be extra long to force a MORE prompt so you don't hit a direction key and move when you wanted to target.")
 			return
 		end
 
 		-- Not when confused
 		if (check_affect(s, "confusion")) and (player.confused > 0) then
-			msg_print("You are too confused!")
+			msg_print("You are too confused! This message needs to be extra long to force a MORE prompt so you don't hit a direction key and move when you wanted to target.")
 			return
 		end
 
