@@ -1068,6 +1068,12 @@ F:DONT_NOTICE_RUNNING | TUNNELABLE
 D:1:You tunnel into the battlement.
 D:2:a hard stone battlement blocking your way
 
+# Purified water
+N:217:stream of purified water
+G:~:b
+F:FLOOR | CAN_LEVITATE | CAN_FLY | REMEMBER | SUPPORT_LIGHT | CAN_RUN
+F:DONT_NOTICE_RUNNING | SUPPORT_GROWTH
+
 # stuff from Theme, stolen by Amy, credits go to the Theme devteam
 #light post
 N:221:light post

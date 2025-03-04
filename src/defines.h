@@ -882,6 +882,8 @@
 #define FEAT_FIRE               0xCD /* 205 */
 /* Feature 0xCE -- pile of rubble (permanent) */
 
+#define FEAT_PURIFIED_WATER     0xD9 /* 217 */
+
 #define FEAT_SWAMP_POOL         0xE2 /* 226 */
 #define FEAT_ANDUIN             0xE3 /* 227 */
 #define FEAT_WATERFALL          0xEE /* 238 */

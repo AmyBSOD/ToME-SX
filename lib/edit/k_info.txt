@@ -4524,6 +4524,8 @@ W:30:0:0:0
 A:30/6
 P:0:1d1:0:0:0
 D:It is a magical component that can purify water.
+D:Certain large impurities can be cleaned up by dropping the potion in them,
+D:while smaller ones can be cleaned by quaffing the potion while standing in the muck.
 
 N:533:& Hatchet~
 G:/:s

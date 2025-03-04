@@ -2504,6 +2504,20 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 				break;
 			}
 
+		case SV_POTION2_CURE_WATER:
+			{
+				/* duuuuuuuh, would have been too much to ask for to already have such effects in place... --Amy
+				 * it's always me who has to add such obvious features, and yeah I guess dropping the potion would
+				 * make more sense but oh well */
+				if (cave[p_ptr->py][p_ptr->px].feat == FEAT_TAINTED_WATER) {
+					cave[p_ptr->py][p_ptr->px].feat = FEAT_PURIFIED_WATER;
+					msg_print("The tainted water is purified!");
+					ident = TRUE;
+				}
+
+				break;
+			}
+
 		case SV_POTION2_CURE_CORRUPTION:
 			{
 				lose_corruption(0);
