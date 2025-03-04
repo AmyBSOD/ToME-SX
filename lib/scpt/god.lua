@@ -765,7 +765,7 @@ function set_god_dungeon_attributes()
 		-- E: chaos damage
 		dungeon(god_quest.DUNGEON_GOD).d_dice[1] = 2
 		dungeon(god_quest.DUNGEON_GOD).d_side[1] = 3
-		dungeon(god_quest.DUNGEON_GOD).d_frequency[1] = 40
+		dungeon(god_quest.DUNGEON_GOD).d_frequency[1] = 400 -- have to multiply by 10 compared to d_info.txt... groan...
 		dungeon(god_quest.DUNGEON_GOD).d_type[1] = 30 -- CHAOS
 
 	elseif player.pgod == GOD_AULE then
