@@ -51,6 +51,14 @@ void inc_piety(int god, s32b amt)
 		}
 	}
 
+	/* Mandos likes it if you're in his halls --Amy */
+	if (god == GOD_MANDOS && amt < 0) {
+		if (dungeon_type == 8) { /* Halls of Mandos */
+			amt /= 2;
+			if (amt > -1) amt = -1; /* fail safe */
+		}
+	}
+
 	/* it should be harder to gain piety if you already have a lot of it --Amy */
 	if (amt > 0) {
 
