@@ -5677,6 +5677,16 @@ void do_cmd_engrave()
 	{
 		if (!strcmp(inscription_info[i].text, buf))
 		{
+			/* deduct the mana cost from the player's mana pool at the *very* least --Amy
+			 * since these aren't really telegraphed even when you read the parchment in question, they
+			 * might just as well be cheat codes, like "Elbereth" in Nethack */
+			if (p_ptr->csp < inscription_info[i].mana) {
+				msg_format("Not enough mana. Need at least %d.", inscription_info[i].mana);
+				return;
+			} else {
+				p_ptr->csp -= inscription_info[i].mana;
+			}
+
 			if (inscription_info[i].know)
 			{
 				/* Save the inscription */
