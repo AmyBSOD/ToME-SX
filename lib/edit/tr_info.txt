@@ -2422,6 +2422,11 @@ I:7:20:0:10:30:0d0:o
 D:Nuclear waste flows into the dungeon!
 F:FLOOR | CHEST | DOOR
 
+N:496:Trap of Wild Magic
+I:10:100:80:0:40:0d0:r
+D:Wild magic is released!
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

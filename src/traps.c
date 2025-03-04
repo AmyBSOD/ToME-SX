@@ -3650,6 +3650,36 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_WILD_MAGIC:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+			msg_print("Wild magic is released!");
+			wild_magic(randint(40));
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Wild Magic.");
+
+			break;
+		}
+
 		/* Bowel Cramps Trap */
 	case TRAP_OF_BOWEL_CRAMPS:
 		{

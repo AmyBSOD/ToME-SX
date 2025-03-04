@@ -3038,6 +3038,8 @@
 #define TRAP_OF_TERRAIN_TIME              494
 #define TRAP_OF_TERRAIN_NUKE              495
 
+#define TRAP_OF_WILD_MAGIC                496
+
 /*** General index values ***/
 
 
