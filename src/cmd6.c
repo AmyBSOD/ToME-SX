@@ -4007,6 +4007,16 @@ void do_cmd_read_scroll(void)
 				break;
 			}
 
+		case SV_SCROLL_PATRON_CHANGE:
+			{
+				p_ptr->chaos_patron = (randint(MAX_PATRON)) - 1;
+				msg_format("Your new chaos patron is %s.", chaos_patrons[p_ptr->chaos_patron]);
+
+				ident = TRUE;
+
+				break;
+			}
+
 		case SV_SCROLL_DISPEL_UNDEAD:
 			{
 				if (dispel_undead(60)) ident = TRUE;

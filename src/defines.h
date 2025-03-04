@@ -2034,6 +2034,7 @@
 #define SV_SCROLL_PROOF_ELEC            58
 #define SV_SCROLL_PROOF_ACID            59
 #define SV_SCROLL_DESTRUCTION           60
+#define SV_SCROLL_PATRON_CHANGE         61
 
 /* The "sval" codes for TV_POTION */
 #define SV_POTION_WATER                  0

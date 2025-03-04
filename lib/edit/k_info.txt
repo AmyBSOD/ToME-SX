@@ -8302,6 +8302,14 @@ D:Although it looks like a piece of junk, it is actually part of an ancient
 D:relic belonging to the Priests of Ingeborg. The relic now lies in pieces, 
 D:hidden from all but the most faithful followers of Ingeborg.
 
+N:1015:Patron Change
+G:?:d
+I:70:61:0
+W:40:0:0:50000
+A:40/200
+D:If you read this scroll, your current chaos patron abandons you and
+D:instead, a new one will watch over you.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
