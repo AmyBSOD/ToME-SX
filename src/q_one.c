@@ -50,6 +50,11 @@ bool quest_one_move_hook(char *fmt)
 			cmsg_print(TERM_YELLOW, "'Also, Orome will abandon you if you wear it.'");
 		}
 
+		GOD(GOD_NIENNA)
+		{
+			cmsg_print(TERM_YELLOW, "'Also, Nienna will abandon you if you wear it.'");
+		}
+
 		GOD(GOD_ULMO)
 		{
 			cmsg_print(TERM_YELLOW, "'Also, Ulmo will abandon you if you wear it.'");
@@ -173,6 +178,7 @@ bool quest_one_wield_hook(char *fmt)
 	abandon_god(GOD_ULMO);
 	abandon_god(GOD_VARDA);
 	abandon_god(GOD_OROME);
+	abandon_god(GOD_NIENNA);
 
 	/*
 	 * Ok now we are evil, right ?

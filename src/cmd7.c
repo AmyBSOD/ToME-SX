@@ -3720,8 +3720,10 @@ void alchemist_check_level()
  * do_cmd_cast calls this function if the player's class
  * is 'alchemist'.
  * totally revamped by Amy to make a balanced alchemy system where you can't just create rings with +99 attacks or mage staves with +333 spell power *sigh*
+ * crafttype 0 = you used the skill, and your skill level determines success chance
+ * crafttype >= 1 = you used some other method, e.g. Nienna's prayer, and "crafttype" determines success chance
  */
-void do_cmd_alchemist(void)
+void do_cmd_alchemist(int crafttype)
 {
 	int item, item2, ext = 0;
 	int value, basechance, esslevel = 0;
@@ -3730,6 +3732,10 @@ void do_cmd_alchemist(void)
 	char ch;
 	bool useup = FALSE;
 	int proofchance = 100;
+	int craftlevel = 1;
+
+	if (crafttype == 0) craftlevel = get_skill_scale(SKILL_ALCHEMY, 40);
+	else craftlevel = crafttype;
 
 	int whichbase = 0; /* 0 = all (use only for washing off curses!), 1 = armor or jewelry, 2 = only armor, 3 = weapon */
 
@@ -3791,7 +3797,7 @@ void do_cmd_alchemist(void)
 			break;
 	}
 
-	basechance = 15 + get_skill_scale(SKILL_ALCHEMY, 40) - esslevel;
+	basechance = 15 + craftlevel - esslevel;
 
 	if (basechance < 1) {
 		msg_print("Your skill is too low to be using this essence!");
@@ -7348,8 +7354,11 @@ void do_cmd_rune_add()
 
 /* runecraft overhaul by Amy: instead of giving you spells that deal 20d50 damage in a HUUUUUUGE radius for something like 3 mana (and
  * potentially with an element that few monsters resist, or even one that totally trashes all enemies like inertia), runecraft will now
- * be used to improve your equipment, like alchemy, and *balanced* */
-void do_cmd_runecrafter()
+ * be used to improve your equipment, like alchemy, and *balanced*
+ * crafttype 0 = you used the skill, and your skill level determines success chance
+ * crafttype >= 1 = you used some other method, e.g. Nienna's prayer, and "crafttype" determines success chance
+ */
+void do_cmd_runecrafter(int crafttype)
 {
 	int item, item2, ext = 0;
 	int basechance, esslevel = 0;
@@ -7357,6 +7366,10 @@ void do_cmd_runecrafter()
 	char ch;
 	bool useup = FALSE;
 	int proofchance = 100;
+	int craftlevel = 1;
+
+	if (crafttype == 0) craftlevel = get_skill_scale(SKILL_RUNECRAFT, 40);
+	else craftlevel = crafttype;
 
 	int whichbase = 0; /* 0 = all (use only for washing off curses!), 1 = armor or jewelry, 2 = only armor, 3 = weapon */
 
@@ -7430,7 +7443,7 @@ void do_cmd_runecrafter()
 			break;
 	}
 
-	basechance = 15 + get_skill_scale(SKILL_RUNECRAFT, 40) - esslevel;
+	basechance = 15 + craftlevel - esslevel;
 
 	if (basechance < 1) {
 		msg_print("Your skill is too low to be using this rune!");

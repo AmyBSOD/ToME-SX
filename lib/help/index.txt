@@ -232,6 +232,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
     *****g_amybso.txt*02[AmyBSOD]
     *****g_orome.txt*02[Orome]
     *****g_ingebo.txt*02[Ingeborg]
+    *****g_nienna.txt*02[Nienna]
   *****birth.txt*16[Gold]
 ~~~~~72
 *****/Hindex.txt*72[H]
@@ -338,6 +339,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
   *****m_nature.txt*02[Nature Magic]
   *****c_necro.txt*01[Necromancer]
   *****m_necrom.txt*02[Necromancy Magic]
+  *****g_nienna.txt*01[Nienna]
 ~~~~~79
 *****/Oindex.txt*79[O]
   *****dungeon.txt*14[Objectives]

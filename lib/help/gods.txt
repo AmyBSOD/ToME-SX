@@ -43,3 +43,4 @@ your wisdom.
 10.*****g_mandos.txt*0[Mandos] - the Doomsman of the Valar, wise and powerful.
 11.*****g_orome.txt*0[Orome] - the Valar of Hunting.
 12.*****g_ingebo.txt*0[Ingeborg] - the Goddess of Chaos.
+13.*****g_nienna.txt*0[Nienna] - the Goddess of Sorrow.

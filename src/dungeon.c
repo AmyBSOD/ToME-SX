@@ -2069,6 +2069,7 @@ static void process_world(void)
 			inc_piety(GOD_MANDOS, -100);
 			inc_piety(GOD_OROME, -100);
 			inc_piety(GOD_INGEBORG, -100);
+			inc_piety(GOD_NIENNA, -100);
 		}
 
 		GOD(GOD_MANWE)
@@ -2164,6 +2165,15 @@ static void process_world(void)
 			dec += 4;
 			if (dec < 1) dec = 1;
 			inc_piety(GOD_OROME, -dec);
+		}
+		GOD(GOD_NIENNA)
+		{
+			int dec = 4 - wisdom_scale(2);
+
+			PRAY_GOD(GOD_NIENNA)
+			dec += 3;
+			if (dec < 1) dec = 1;
+			inc_piety(GOD_NIENNA, -dec);
 		}
 		GOD(GOD_TULKAS)
 		{
@@ -2561,6 +2571,12 @@ static void process_world(void)
 	if (p_ptr->tim_rapidfire)
 	{
 		(void)set_tim_rapidfire(p_ptr->tim_rapidfire - 1);
+	}
+
+	/* Timed bombsquad */
+	if (p_ptr->tim_bombsquad)
+	{
+		(void)set_tim_bombsquad(p_ptr->tim_bombsquad - 1);
 	}
 
 	/* Timed infra-vision */

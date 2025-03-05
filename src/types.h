@@ -1599,6 +1599,7 @@ struct player_type
 	s16b tim_bullseye;      /* Timed bullseye */
 	s16b tim_sniper;        /* Timed sniper */
 	s16b tim_rapidfire;     /* Timed rapidfire */
+	s16b tim_bombsquad;     /* Timed bombsquad */
 
 	s16b tim_project;       /* Timed project upon melee blow */
 	s16b tim_project_dam;

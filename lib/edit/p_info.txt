@@ -2090,6 +2090,7 @@ C:a:g:Ulmo
 C:a:g:Varda Elentari
 C:a:g:Orome
 C:a:g:Ingeborg
+C:a:g:Nienna
 C:a:k:+0:+200:Clear-mind
 C:a:k:+0:+200:Cleaning
 
@@ -2253,6 +2254,21 @@ C:a:k:+0:-600:Necromancy
 C:a:k:+0:+100:Spell-power
 C:a:k:+0:+300:Impale
 
+C:a:N:Tear Priest
+C:a:D:A priest that serves Nienna to bring down
+C:a:D:the empire of fear and shadows of Morgoth.
+C:a:O:21:5:1d1
+C:a:g:Nienna
+C:a:k:+0:+300:Prayer
+C:a:k:+0:-600:Necromancy
+C:a:k:+0:+100:Spell-power
+C:a:k:+0:+200:Runecraft
+C:a:k:+0:+200:Alchemy
+C:a:k:+0:+300:Sneakiness
+C:a:k:+0:+200:Disarming
+C:a:k:+0:-200:Combat
+C:a:k:+0:-200:Weaponmastery
+
 C:a:N:Death Priest
 C:a:D:A priest that serves Mandos to bring down
 C:a:D:the empire of fear and shadows of Morgoth.
@@ -2290,6 +2306,7 @@ C:a:g:Ulmo
 C:a:g:Varda Elentari
 C:a:g:Orome
 C:a:g:Ingeborg
+C:a:g:Nienna
 C:a:k:+1000:+800:Valarin
 C:a:k:+1000:+800:Nether
 C:a:k:=0:=0:Mindcraft

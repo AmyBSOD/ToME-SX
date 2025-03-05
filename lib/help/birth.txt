@@ -268,6 +268,7 @@ Read *****gods.txt*0[gods.txt] for a little more information about Gods.
     *****g_aule.txt*0[Aule the Smith]             *****g_varda.txt*0[Varda Elentari]
     *****g_ulmo.txt*0[Ulmo]             *****g_mandos.txt*0[Mandos]
     *****g_orome.txt*0[Orome]           *****g_ingebo.txt*0[Ingeborg]
+    *****g_nienna.txt*0[Nienna]
 
 
 ~~~~~39|Character|Stats 2

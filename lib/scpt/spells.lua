@@ -255,7 +255,7 @@ SCHOOL_DIVINATION = add_school
 			["mul"] = 2,
 			["div"] = 3,
 		},
-		-- Mandos the Divination school at 1/3 the prayer skill
+		-- Mandos provides the Divination school at 1/3 the prayer skill
 		[GOD_MANDOS] =
 		{
 			["skill"] = SKILL_PRAY,
@@ -264,6 +264,13 @@ SCHOOL_DIVINATION = add_school
 		},
 		-- Orome provides the Divination school at 1/3 the prayer skill
 		[GOD_OROME] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
+		},
+		-- Nienna provides the Divination school at 1/3 the prayer skill
+		[GOD_NIENNA] = 
 		{
 			["skill"] = SKILL_PRAY,
 			["mul"] = 1,
@@ -495,6 +502,13 @@ SCHOOL_INGEBORG = add_school
 	["spell_power"] = TRUE,
 	["god"] = GOD_INGEBORG,
 }
+SCHOOL_NIENNA = add_school
+{
+	["name"] = "Nienna",
+	["skill"] = SKILL_PRAY,
+	["spell_power"] = TRUE,
+	["god"] = GOD_NIENNA,
+}
 
 -- New schools
 SCHOOL_AULE = add_school
@@ -552,6 +566,13 @@ SCHOOL_CELESTIAL = add_school
 	{
 		-- Varda provides the Celestial school at 1/2 the prayer skill
 		[GOD_VARDA] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 2,
+		},
+		-- Nienna provides the Celestial school at 1/2 the prayer skill
+		[GOD_NIENNA] =
 		{
 			["skill"] = SKILL_PRAY,
 			["mul"] = 1,
@@ -641,6 +662,7 @@ tome_dofile("s_hell.lua")
 tome_dofile("s_celest.lua")
 tome_dofile("s_orome.lua")
 tome_dofile("s_ingebo.lua")
+tome_dofile("s_nienna.lua")
 
 -- List of spellbooks
 
@@ -752,6 +774,11 @@ school_book[26] = {
 -- Create the book of ingeborg
 school_book[27] = {
 	INGEBORG_EVERYTHING_BURNS, INGEBORG_WILD_MAGIC, INGEBORG_DISINTEGRATE, INGEBORG_STAR_DESTRUCTION, INGEBORG_BLACK_HOLE, 
+}
+
+-- Create the book of nienna
+school_book[28] = {
+	NIENNA_ALCHEMIZE, NIENNA_RUNEFORGE, NIENNA_BOMB_SQUAD_DUTY, NIENNA_BLOODY_TEARS, NIENNA_WEEPING, 
 }
 
 -- Create the book of beginner's cantrip

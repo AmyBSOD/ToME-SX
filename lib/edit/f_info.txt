@@ -1152,10 +1152,10 @@ G:0:g
 F:FLOOR | REMEMBER | NOTICE | CAN_RUN
 D:0:You feel like everything is going to hell.
 
-N:247:Unfinished Altar
+N:247:Altar of Tears
 G:0:g
 F:FLOOR | REMEMBER | NOTICE | CAN_RUN
-D:0:An altar for a deity who hasn't been implemented yet.
+D:0:You feel very sad.
 
 N:248:Unfinished Altar
 G:0:g

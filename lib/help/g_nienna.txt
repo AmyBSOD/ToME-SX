@@ -1,0 +1,52 @@
+|||||oy
+~~~~~01|Nienna
+~~~~~02|Gods|Nienna
+#####R === Nienna ===
+
+Nienna is the goddess of sorrow.
+
+#####GThe benefits of Worshipping Nienna
+ 1. As your piety increases, Nienna grants you a bonus to your charisma and
+    critical hit chance.
+ 2. With very high piety, Nienna grants you resistances (in this order) to
+    shards, chaos, nether and plasma.
+ 3. Nienna likes it when you kill monsters who use elemental breath or
+    spell attacks.
+
+#####GThe disadvantages of Worshipping Nienna
+1. Your piety decreases over time.
+2. You can only wield blunt or blessed weapons without penalty.
+3. She will completely abandon you if you wear The One Ring.
+~~~~~03|Nienna|Prayers
+#####GNienna's Magic
+Worshipping Nienna gives the adventurer access to a set of special
+spells that come directly from the hands of Nienna. These spells use your piety
+to cast rather than your spellpoints, and the level of spells that Nienna will 
+permit you to use is determined by your Prayer skill - how skillful you are
+in asking for her help without offending her!
+
+There is a special book called the "Tome of Sorrow" which 
+contains instructions for the procedure for each of the prayers Nienna will
+grant. There are five prayers all told, which are:
+1. [[[[[BAlchemize] (Level 1)
+   Allows you to improve items via alchemical essences.
+2. [[[[[BRuneforge] (Level 1)
+   Allows you to improve items via runes and runestones.
+3. [[[[[BBomb Squad Duty] (Level 10)
+   Temporarily boosts your ability to find and disarm traps.
+4. [[[[[BBloody Tears] (Level 15)
+   Causes you to harm yourself and bleed, scaring off monsters who have to watch your horrible act.
+   At level 25 it can also confuse monsters.
+5. [[[[[BWeeping] (Level 25)
+   Restores some of your sanity.
+   
+Each of these spells can be increased in level both by improving your Prayer
+skill, and by improving your Spell-power skill.
+
+In addition to her specific magic, Nienna will also assist with your ability to
+use some magic from the "standard" schools, in relation to how skilled you 
+are at Prayer. These schools are as follows:
+    *****m_divin.txt*0[Divination School] at 1/3 the Prayer skill level.
+    *****m_celest.txt*0[Celestial School] at 1/2 the Prayer skill level.
+
+The spells from these schools are all cast using your normal spellpoints.

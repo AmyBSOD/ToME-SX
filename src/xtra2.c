@@ -2652,6 +2652,58 @@ bool set_tim_rapidfire(int v)
 }
 
 /*
+ * Set "p_ptr->tim_bombsquad", notice observable changes
+ */
+bool set_tim_bombsquad(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_bombsquad)
+		{
+			msg_print("You feel capable of finding and disarming traps!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_bombsquad)
+		{
+			msg_print("Your trap handling ability fades.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_bombsquad = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
  * Set "p_ptr->tim_thunder", notice observable changes
  */
 bool set_tim_thunder(int v, int p1, int p2)
@@ -5094,6 +5146,42 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 			if (!inc) inc = 1;
 			inc_piety(GOD_VARDA, inc);
 
+		}
+
+		/* Nienna likes when monsters with breath attacks are destroyed */
+		if ((r_ptr->flags4 & RF4_BR_ACID) || (r_ptr->flags4 & RF4_BR_ELEC) || (r_ptr->flags4 & RF4_BR_FIRE) || (r_ptr->flags4 & RF4_BR_COLD) || (r_ptr->flags4 & RF4_BR_POIS) || (r_ptr->flags4 & RF4_BR_NETH) || (r_ptr->flags4 & RF4_BR_LITE) || (r_ptr->flags4 & RF4_BR_DARK) || (r_ptr->flags4 & RF4_BR_CONF) || (r_ptr->flags4 & RF4_BR_SOUN) || (r_ptr->flags4 & RF4_BR_CHAO) || (r_ptr->flags4 & RF4_BR_DISE) || (r_ptr->flags4 & RF4_BR_NEXU) || (r_ptr->flags4 & RF4_BR_TIME) || (r_ptr->flags4 & RF4_BR_INER) || (r_ptr->flags4 & RF4_BR_GRAV) || (r_ptr->flags4 & RF4_BR_SHAR) || (r_ptr->flags4 & RF4_BR_PLAS) || (r_ptr->flags4 & RF4_BR_WALL) || (r_ptr->flags4 & RF4_BR_MANA) || (r_ptr->flags4 & RF4_BR_NUKE) || (r_ptr->flags4 & RF4_BR_DISI))
+		{
+			int inc = m_ptr->level * 2;
+			PRAY_GOD(GOD_NIENNA) {
+				inc *= 3;
+				inc /= 2;
+			}
+			if (!inc) inc = 1;
+			inc_piety(GOD_NIENNA, inc);
+		}
+
+		/* Nienna likes when monsters with ball spells are destroyed */
+		if ((r_ptr->flags5 & RF5_BA_ACID) || (r_ptr->flags5 & RF5_BA_ELEC) || (r_ptr->flags5 & RF5_BA_FIRE) || (r_ptr->flags5 & RF5_BA_COLD) || (r_ptr->flags5 & RF5_BA_POIS) || (r_ptr->flags5 & RF5_BA_NETH) || (r_ptr->flags5 & RF5_BA_WATE) || (r_ptr->flags4 & RF4_BA_NUKE) || (r_ptr->flags5 & RF5_BA_MANA) || (r_ptr->flags5 & RF5_BA_DARK) || (r_ptr->flags4 & RF4_BA_CHAO))
+		{
+			int inc = m_ptr->level * 2;
+			PRAY_GOD(GOD_NIENNA) {
+				inc *= 3;
+				inc /= 2;
+			}
+			if (!inc) inc = 1;
+			inc_piety(GOD_NIENNA, inc);
+		}
+
+		/* Nienna likes when monsters with bolt spells are destroyed */
+		if ((r_ptr->flags5 & RF5_BO_ACID) || (r_ptr->flags5 & RF5_BO_ELEC) || (r_ptr->flags5 & RF5_BO_FIRE) || (r_ptr->flags5 & RF5_BO_COLD) || (r_ptr->flags5 & RF5_BO_POIS) || (r_ptr->flags5 & RF5_BO_NETH) || (r_ptr->flags5 & RF5_BO_WATE) || (r_ptr->flags5 & RF5_BO_MANA) || (r_ptr->flags5 & RF5_BO_PLAS) || (r_ptr->flags5 & RF5_BO_ICEE))
+		{
+			int inc = m_ptr->level;
+			PRAY_GOD(GOD_NIENNA) {
+				inc *= 3;
+				inc /= 2;
+			}
+			if (!inc) inc = 1;
+			inc_piety(GOD_NIENNA, inc);
 		}
 
 		/* Yavanna likes when corruption is destroyed */

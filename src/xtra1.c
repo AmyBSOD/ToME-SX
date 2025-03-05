@@ -2685,6 +2685,22 @@ void calc_gods()
 		p_ptr->stat_add[A_CON] += conbonus;
 	}
 
+	GOD(GOD_NIENNA)
+	{
+		if (p_ptr->grace > 20000) p_ptr->resist_shard = TRUE;
+		if (p_ptr->grace > 40000) p_ptr->resist_chaos = TRUE;
+		if (p_ptr->grace > 60000) p_ptr->resist_neth = TRUE;
+		if (p_ptr->grace > 80000) p_ptr->resist_plasma = TRUE;
+
+		int chacrit = 0;
+		chacrit = p_ptr->grace / 10000;
+		if (chacrit < 0) chacrit = 0;
+		if (chacrit > 5) chacrit = 5;
+
+		p_ptr->xtra_crit += chacrit;
+		p_ptr->stat_add[A_CHR] += chacrit;
+	}
+
 	GOD(GOD_AULE)
 	{
 		if (p_ptr->grace > 5000) p_ptr->resist_fire = TRUE;
@@ -3884,6 +3900,13 @@ void calc_bonuses(bool silent)
 	if (p_ptr->tim_rapidfire)
 	{
 		p_ptr->num_fire += 1;
+	}
+
+	if (p_ptr->tim_bombsquad)
+	{
+		p_ptr->skill_srh += 10;
+		p_ptr->skill_dis += 10;
+		p_ptr->skill_fos += 7;
 	}
 
 	/* Temporary see invisible */

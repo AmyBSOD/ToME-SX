@@ -121,6 +121,8 @@ add_quest
 						god_quest.relic_num = 20
 					elseif player.pgod == GOD_INGEBORG then
 						god_quest.relic_num = 21
+					elseif player.pgod == GOD_NIENNA then
+						god_quest.relic_num = 22
 					end
 
 					-- This var will need resetting
@@ -715,6 +717,48 @@ function set_god_dungeon_attributes()
 		-- M: Animals
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags3 = bor(RF3_ANIMAL)
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags6 = bor(RF6_S_ANT, RF6_S_SPIDER, RF6_S_HOUND)
+
+		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
+		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
+
+	elseif player.pgod == GOD_NIENNA then
+
+		-- dead trees and stuff
+		dungeon(god_quest.DUNGEON_GOD).min_m_alloc_level = 22
+		dungeon(god_quest.DUNGEON_GOD).min_m_alloc_chance = 100
+
+		-- L: floor is ash/dirt
+		dungeon(god_quest.DUNGEON_GOD).floor1 = 93
+		dungeon(god_quest.DUNGEON_GOD).floor2 = 93
+		dungeon(god_quest.DUNGEON_GOD).floor3 = 88
+		dungeon(god_quest.DUNGEON_GOD).floor_percent1[1] = 40
+		dungeon(god_quest.DUNGEON_GOD).floor_percent2[1] = 15
+		dungeon(god_quest.DUNGEON_GOD).floor_percent3[1] = 45
+
+		-- A: dead tree walls to fill
+		dungeon(god_quest.DUNGEON_GOD).fill_type1 = 92
+		dungeon(god_quest.DUNGEON_GOD).fill_percent1[1] = 100
+		dungeon(god_quest.DUNGEON_GOD).outer_wall = 92
+		dungeon(god_quest.DUNGEON_GOD).inner_wall = 92
+		dungeon(god_quest.DUNGEON_GOD).fill_method = 1
+
+		-- O: mostly junk
+		dungeon(god_quest.DUNGEON_GOD).objs.treasure = 10
+		dungeon(god_quest.DUNGEON_GOD).objs.combat = 10
+		dungeon(god_quest.DUNGEON_GOD).objs.magic = 10
+		dungeon(god_quest.DUNGEON_GOD).objs.tools = 10
+
+		-- F: Natural looking
+		dungeon(god_quest.DUNGEON_GOD).flags1 = bor(DF1_NO_DOORS, DF1_WATER_RIVER, DF1_ADJUST_LEVEL_1, DF1_NO_RECALL, DF1_FLAT)
+		dungeon(god_quest.DUNGEON_GOD).flags2 = bor(DF2_NO_SHAFT, DF2_ADJUST_LEVEL_PLAYER)
+
+		-- R: Stuff with nasty elemental damage
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mode = 3
+		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 95
+
+		-- M: Spells and breaths
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags4 = bor(RF4_BR_ACID, RF4_BR_FIRE, RF4_BR_NETH, RF4_BR_DARK, RF4_BR_CHAO, RF4_BR_DISE, RF4_BR_TIME, RF4_BR_SHAR, RF4_BR_PLAS, RF4_BR_NUKE, RF4_BA_NUKE, RF4_BA_CHAO, RF4_BR_DISI)
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags5 = bor(RF5_BA_ACID, RF5_BA_FIRE, RF5_BA_NETH, RF5_BA_DARK, RF5_BO_ACID, RF5_BO_FIRE, RF5_BO_NETH, RF5_BO_PLAS, RF5_BO_ICEE)
 
 		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
 		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5

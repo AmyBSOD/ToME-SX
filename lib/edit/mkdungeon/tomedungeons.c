@@ -2000,7 +2000,7 @@ void printRandoms(int lower, int upper, int count)
 
 			} else {
 
-				contnum = random_number(130);
+				contnum = random_number(131);
 
 				printf("# random type %d\n", contnum);
 
@@ -3922,6 +3922,20 @@ void printRandoms(int lower, int upper, int count)
 						printf("M:EVIL\n");
 						printf("R:5:0\n");
 						printf("E:2d3:40:CHAOS\n");
+						break;
+					case 131:
+						printf("# based on Nienna Temple\n", contnum);
+						printf("L:93:40:93:15:88:45\n");
+						printf("A:92:100:56:0:56:0:92:92\n");
+						printf("O:10:10:10:10\n");
+						printf("F:NO_DOORS | WATER_RIVER | ADJUST_LEVEL_1 | FLAT\n");
+						printf("F:NO_SHAFT\n");
+						printf("R:95:3\n");
+						printf("S:BR_ACID | BR_FIRE | BR_NETH | BR_DARK | BR_CHAO | BR_DISE |\n");
+						printf("S:BR_TIME | BR_SHAR | BR_PLAS | BR_NUKE | BA_NUKE | BA_CHAO |\n");
+						printf("S:BA_ACID | BA_FIRE | BA_NETH | BA_DARK | BO_ACID |\n");
+						printf("S:BO_FIRE | BO_NETH | BO_PLAS | BO_ICEE | BR_DISI\n");
+						printf("R:5:0\n");
 						break;
 				}
 			}

@@ -1003,7 +1003,7 @@ void do_cmd_activate_skill()
 		do_cmd_mindcraft();
 		break;
 	case MKEY_ALCHEMY:
-		do_cmd_alchemist();
+		do_cmd_alchemist(0);
 		break;
 	case MKEY_MIMIC:
 		do_cmd_mimic();
@@ -1012,7 +1012,7 @@ void do_cmd_activate_skill()
 		do_cmd_powermage();
 		break;
 	case MKEY_RUNE:
-		do_cmd_runecrafter();
+		do_cmd_runecrafter(0);
 		break;
 	case MKEY_FORGING:
 		do_cmd_archer();
@@ -1089,6 +1089,7 @@ bool forbid_gloves()
 bool forbid_non_blessed()
 {
 	GOD(GOD_ERU) return (TRUE);
+	GOD(GOD_NIENNA) return (TRUE);
 	if (p_ptr->nastytrap115) return (TRUE); /* edgy nastytrap by Amy */
 	return (FALSE);
 }

@@ -4128,6 +4128,7 @@ void do_cmd_read_scroll(void)
 				abandon_god(GOD_AMYBSOD);
 				abandon_god(GOD_OROME);
 				abandon_god(GOD_INGEBORG);
+				abandon_god(GOD_NIENNA);
 
 				ident = TRUE;
 
