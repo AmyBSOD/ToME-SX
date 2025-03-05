@@ -2993,6 +2993,21 @@ deity_type deity_info_init[MAX_GODS_INIT] =
 			"",
 		},
 	},
+	{
+		"Este",
+		{
+			"Called 'The Gentle', she's a peaceful goddess who dislikes violence.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+	},
 
 };
 
@@ -5225,5 +5240,6 @@ gf_name_type gf_names[] =
 	{ GF_RAISE_DEMON, "raise demon" },
 	{ GF_TRAP_DEMONSOUL, "*control demon*" },
 	{ GF_ATTACK, "projected melee attacks" },
+	{ GF_KILL_TRAP_NASTY, "nasty trap destruction" },
 	{ -1, NULL },
 };

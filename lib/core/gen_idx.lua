@@ -17,6 +17,7 @@ files =
 	"g_orome.txt",
 	"g_ingebo.txt",
 	"g_nienna.txt",
+	"g_este.txt",
 	"skills.txt",
 	"c_bard.txt",
 	"c_druid.txt",

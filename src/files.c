@@ -2001,6 +2001,13 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
 		if (p_ptr->grace > 80000)  (*f5) |= TR5_RES_PLASMA;
 	}
 
+	GOD(GOD_ESTE)
+	{
+		if (p_ptr->grace > 10000)  (*f2) |= TR2_RES_POIS;
+		if (p_ptr->grace > 50000)  (*f5) |= TR5_IM_POISON;
+
+	}
+
 	GOD(GOD_VARDA)
 	{
 		(*f3) |= TR3_LITE1;

@@ -30,14 +30,14 @@ function __birth_hook_objects()
 	end
 
 	-- Provide a book of prayer to priests
-	if get_class_name() == "Priest(Eru)" then
+	if get_class_name() == "CreatorPriest" then
 		local obj = create_object(TV_BOOK, 255);
 		obj.pval = find_spell("See the Music")
 		obj.ident = bor(obj.ident, IDENT_MENTAL, IDENT_KNOWN)
 		inven_carry(obj, FALSE)
 		end_object(obj)
 	end
-	if get_class_name() == "Priest(Manwe)" then
+	if get_class_name() == "Air Priest" then
 		local obj = create_object(TV_BOOK, 255);
 		obj.pval = find_spell("Manwe's Blessing")
 		obj.ident = bor(obj.ident, IDENT_MENTAL, IDENT_KNOWN)
@@ -96,6 +96,13 @@ function __birth_hook_objects()
 	if get_class_name() == "Water Priest" then
 		local obj = create_object(TV_BOOK, 255);
 		obj.pval = find_spell("Song of Belegaer")
+		obj.ident = bor(obj.ident, IDENT_MENTAL, IDENT_KNOWN)
+		inven_carry(obj, FALSE)
+		end_object(obj)
+	end
+	if get_class_name() == "Gentle Priest" then
+		local obj = create_object(TV_BOOK, 255);
+		obj.pval = find_spell("Dancing Lessons")
 		obj.ident = bor(obj.ident, IDENT_MENTAL, IDENT_KNOWN)
 		inven_carry(obj, FALSE)
 		end_object(obj)

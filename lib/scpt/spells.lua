@@ -99,6 +99,13 @@ SCHOOL_AIR = add_school
 			["mul"] = 2,
 			["div"] = 3,
 		},
+		-- Este provides the Air school at 1/4 the prayer skill
+		[GOD_ESTE] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 4,
+		},
 		-- Ingeborg provides every school at 1/10 the prayer skill
 		[GOD_INGEBORG] = 
 		{
@@ -137,6 +144,13 @@ SCHOOL_WATER = add_school
 			["skill"] = SKILL_PRAY,
 			["mul"] = 3,
 			["div"] = 5,
+		},
+		-- Este provides the Water school at 1/3 the prayer skill
+		[GOD_ESTE] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
 		},
 		-- Ingeborg provides every school at 1/10 the prayer skill
 		[GOD_INGEBORG] = 
@@ -338,6 +352,13 @@ SCHOOL_NATURE = add_school
 			["mul"] = 1,
 			["div"] = 2,
 		},
+		-- Este provides the Nature school at 1/2 the prayer skill
+		[GOD_ESTE] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 2,
+		},
 		-- Ulmo provides the Nature school at 1/2 the prayer skill
 		[GOD_ULMO] =
 		{
@@ -509,6 +530,13 @@ SCHOOL_NIENNA = add_school
 	["spell_power"] = TRUE,
 	["god"] = GOD_NIENNA,
 }
+SCHOOL_ESTE = add_school
+{
+	["name"] = "Este",
+	["skill"] = SKILL_PRAY,
+	["spell_power"] = TRUE,
+	["god"] = GOD_ESTE,
+}
 
 -- New schools
 SCHOOL_AULE = add_school
@@ -577,6 +605,13 @@ SCHOOL_CELESTIAL = add_school
 			["skill"] = SKILL_PRAY,
 			["mul"] = 1,
 			["div"] = 2,
+		},
+		-- Este provides the Celestial school at 1/3 the prayer skill
+		[GOD_ESTE] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
 		},
 		-- Ingeborg provides every school at 1/10 the prayer skill
 		[GOD_INGEBORG] = 
@@ -663,6 +698,7 @@ tome_dofile("s_celest.lua")
 tome_dofile("s_orome.lua")
 tome_dofile("s_ingebo.lua")
 tome_dofile("s_nienna.lua")
+tome_dofile("s_este.lua")
 
 -- List of spellbooks
 
@@ -779,6 +815,11 @@ school_book[27] = {
 -- Create the book of nienna
 school_book[28] = {
 	NIENNA_ALCHEMIZE, NIENNA_RUNEFORGE, NIENNA_BOMB_SQUAD_DUTY, NIENNA_BLOODY_TEARS, NIENNA_WEEPING, 
+}
+
+-- Create the book of este
+school_book[29] = {
+	ESTE_DANCING_LESSONS, ESTE_REVEAL_TRAP, ESTE_DESTROY_TRAP, 
 }
 
 -- Create the book of beginner's cantrip

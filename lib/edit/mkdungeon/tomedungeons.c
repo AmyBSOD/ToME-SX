@@ -2000,7 +2000,7 @@ void printRandoms(int lower, int upper, int count)
 
 			} else {
 
-				contnum = random_number(131);
+				contnum = random_number(132);
 
 				printf("# random type %d\n", contnum);
 
@@ -3935,6 +3935,17 @@ void printRandoms(int lower, int upper, int count)
 						printf("S:BR_TIME | BR_SHAR | BR_PLAS | BR_NUKE | BA_NUKE | BA_CHAO |\n");
 						printf("S:BA_ACID | BA_FIRE | BA_NETH | BA_DARK | BO_ACID |\n");
 						printf("S:BO_FIRE | BO_NETH | BO_PLAS | BO_ICEE | BR_DISI\n");
+						printf("R:5:0\n");
+						break;
+					case 132:
+						printf("# based on Este Temple\n", contnum);
+						printf("L:89:90:80:5:83:5\n");
+						printf("A:51:100:56:0:56:0:51:51\n");
+						printf("O:25:10:35:20\n");
+						printf("F:SMALL | WATER_RIVER | ADJUST_LEVEL_1 | CAVE | CAVERN\n");
+						printf("F:NO_SHAFT | NO_GENO | MAGMA_VEIN\n");
+						printf("R:95:3\n");
+						printf("M:ANIMAL | DEMON |\n");
 						printf("R:5:0\n");
 						break;
 				}

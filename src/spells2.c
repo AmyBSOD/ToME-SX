@@ -2533,7 +2533,7 @@ bool lose_all_info_X(void)
 
 
 /*
- * Detect all traps on current panel
+ * Detect all traps on current panel, except nasty traps
  */
 bool detect_traps(int rad)
 {
@@ -2565,6 +2565,75 @@ bool detect_traps(int rad)
 			{
 				if (!can_detect_trap_type(c_ptr->t_idx)) continue;
 
+				/* Hack -- Remember detected traps */
+				c_ptr->info |= (CAVE_MARK);
+
+				/* Pick a trap */
+				pick_trap(y, x);
+
+				/* Obvious */
+				detect = TRUE;
+			}
+		}
+	}
+
+	/* Describe */
+	if (detect)
+	{
+		msg_print("You sense the presence of traps!");
+	}
+
+	/*
+	 * This reveals un-identified trap detection items,
+	 * but so does leaving/entering trap-detected areas...
+	 * There are a couple of possible solutions:
+	 * (1) Immediately self-id such items (i.e. always returns TRUE)
+	 * (2) add another parameter to function which tells if unaware
+	 * item is used for trap detection, and if it is the case,
+	 * do two-pass scanning, first scanning for traps if an unaware
+	 * item is used and return FALSE there are none,
+	 * followed by current implementation --pelpel
+	 */
+	if (!(dun_level && (dungeon_flags1 & DF1_FORGET)) ) {
+		p_ptr->redraw |= (PR_DTRAP);
+	}
+
+	/* Result -- see my comment above -- pelpel */
+	/* return (detect); */
+	return (TRUE);
+}
+
+/*
+ * Detect all traps on current panel, including nasty traps (by Amy)
+ */
+bool detect_traps_nasty(int rad)
+{
+	int x, y;
+	bool detect = FALSE;
+	cave_type *c_ptr;
+
+	if (p_ptr->nastytrap48) return FALSE;
+
+	/* Scan the current panel */
+	for (y = p_ptr->py - rad; y <= p_ptr->py + rad; y++)
+	{
+		for (x = p_ptr->px - rad; x <= p_ptr->px + rad; x++)
+		{
+			/* Reject locations outside of dungeon */
+			if (!in_bounds(y, x)) continue;
+
+			/* Reject those out of radius */
+			if (distance(p_ptr->py, p_ptr->px, y, x) > rad) continue;
+
+			/* Access the grid */
+			c_ptr = &cave[y][x];
+
+			/* mark as detected */
+			c_ptr->info |= CAVE_DETECT;
+
+			/* Detect invisible traps */
+			if (c_ptr->t_idx != 0)
+			{
 				/* Hack -- Remember detected traps */
 				c_ptr->info |= (CAVE_MARK);
 
@@ -8079,6 +8148,12 @@ bool destroy_doors_touch(void)
 {
 	int flg = PROJECT_GRID | PROJECT_ITEM | PROJECT_HIDE;
 	return (project(0, 1, p_ptr->py, p_ptr->px, 0, GF_KILL_DOOR, flg));
+}
+
+bool destroy_traps_touch_nasty(void)
+{
+	int flg = PROJECT_GRID | PROJECT_ITEM | PROJECT_HIDE;
+	return (project(0, 1, p_ptr->py, p_ptr->px, 0, GF_KILL_TRAP_NASTY, flg));
 }
 
 bool destroy_traps_touch(void)

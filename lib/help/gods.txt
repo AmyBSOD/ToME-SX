@@ -44,3 +44,4 @@ your wisdom.
 11.*****g_orome.txt*0[Orome] - the Valar of Hunting.
 12.*****g_ingebo.txt*0[Ingeborg] - the Goddess of Chaos.
 13.*****g_nienna.txt*0[Nienna] - the Goddess of Sorrow.
+14.*****g_este.txt*0[Este] - the Goddess of Gentleness.

@@ -16,6 +16,7 @@ on Arda. His most faithful followers are those of the class *****c_pr_ulmo.txt*0
    to water-based attacks.
 5. Ulmo likes it if you kill orcs.
 6. Ulmo loves it if you kill monsters that are associated with fire.
+7. Ulmo loves it if you quaff potions of water curing on tainted water streams.
    
 #####GThe disadvantages of worshipping Ulmo
 1. He doesn't like it if you kill aquatic creatures.

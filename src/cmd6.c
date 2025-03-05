@@ -2512,6 +2512,9 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 				if (cave[p_ptr->py][p_ptr->px].feat == FEAT_TAINTED_WATER) {
 					cave[p_ptr->py][p_ptr->px].feat = FEAT_PURIFIED_WATER;
 					msg_print("The tainted water is purified!");
+					GOD(GOD_ULMO) {
+						inc_piety(GOD_ULMO, 100);
+					}
 					ident = TRUE;
 				}
 
@@ -4129,6 +4132,7 @@ void do_cmd_read_scroll(void)
 				abandon_god(GOD_OROME);
 				abandon_god(GOD_INGEBORG);
 				abandon_god(GOD_NIENNA);
+				abandon_god(GOD_ESTE);
 
 				ident = TRUE;
 

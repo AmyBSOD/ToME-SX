@@ -3930,6 +3930,64 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 			break;
 		}
 
+		/* Destroy Traps (and Locks) */
+	case GF_KILL_TRAP_NASTY:
+		{
+			/* Destroy normal traps and disarm monster traps
+			 * Amy note: nasty traps, fart traps and the like are not immune */
+			if ((c_ptr->t_idx != 0) || (c_ptr->feat == FEAT_MON_TRAP) )
+			{
+				/* Check line of sight */
+				if (player_has_los_bold(y, x))
+				{
+					msg_print("There is a bright flash of light!");
+					obvious = TRUE;
+				}
+
+				/* Forget the trap */
+				c_ptr->info &= ~(CAVE_MARK | CAVE_TRDT);
+
+				/* Destroy normal traps */
+				c_ptr->t_idx = 0;
+
+				/* Disarm monster traps */
+				if (c_ptr->feat == FEAT_MON_TRAP)
+				{
+					c_ptr->special = c_ptr->special2 = 0;
+
+					/* Remove the feature */
+					if (!(f_info[c_ptr->feat].flags1 & FF1_PERMANENT))
+						place_floor(y, x);
+				}
+
+				/* Hack -- Force redraw */
+				note_spot(y, x);
+				lite_spot(y, x);
+			}
+
+			/* Secret / Locked doors are found and unlocked */
+			else if ((c_ptr->feat == FEAT_SECRET) ||
+			                ((c_ptr->feat >= FEAT_DOOR_HEAD + 0x01) &&
+			                 (c_ptr->feat <= FEAT_DOOR_HEAD + 0x07)))
+			{
+
+				/* Check line of sound */
+				if (player_has_los_bold(y, x))
+				{
+					msg_print("Click!");
+					obvious = TRUE;
+				}
+
+				/* Remove feature mimic */
+				cave[y][x].mimic = 0;
+
+				/* Unlock the door */
+				cave_set_feat(y, x, FEAT_DOOR_HEAD + 0x00);
+			}
+
+			break;
+		}
+
 		/* Destroy Doors (and traps) */
 	case GF_KILL_DOOR:
 		{
@@ -4677,6 +4735,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 
 			/* Unlock chests */
 		case GF_KILL_TRAP:
+		case GF_KILL_TRAP_NASTY:
 		case GF_KILL_DOOR:
 			{
 				/* Chests are noticed only if trapped or locked */
@@ -9911,6 +9970,9 @@ void describe_attack_fully(int type, char* r)
 		break;
 	case GF_KILL_TRAP:
 		strcpy(r, "trap destruction");
+		break;
+	case GF_KILL_TRAP_NASTY:
+		strcpy(r, "nasty trap destruction");
 		break;
 	case GF_STONE_WALL:
 		strcpy(r, "wall creation");

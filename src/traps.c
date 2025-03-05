@@ -916,6 +916,13 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			trap = randint(max_t_idx - 1);
 			t_ptr = &t_info[trap];
 
+			/* Este piety reduces spawn rate of nasty traps */
+			GOD(GOD_ESTE) {
+				if (p_ptr->grace > 15000 && is_nasty_trap(trap)) {
+					if (randint(p_ptr->grace) > 15000) continue;
+				}
+			}
+
 			/* anti-nastiness skill by Amy: reduces odds that a new trap will be a nasty trap */
 			int nastyward = get_skill(SKILL_ANTINASTY) * 2;
 
@@ -987,6 +994,13 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			trap = randint(max_t_idx - 1);
 			t_ptr = &t_info[trap];
+
+			/* Este piety reduces spawn rate of nasty traps */
+			GOD(GOD_ESTE) {
+				if (p_ptr->grace > 15000 && is_nasty_trap(trap)) {
+					if (randint(p_ptr->grace) > 15000) continue;
+				}
+			}
 
 			/* anti-nastiness skill by Amy: reduces odds that a new trap will be a nasty trap */
 			int nastyward = get_skill(SKILL_ANTINASTY) * 2;
@@ -1061,6 +1075,13 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			trap = randint(max_t_idx - 1);
 			t_ptr = &t_info[trap];
+
+			/* Este piety reduces spawn rate of nasty traps */
+			GOD(GOD_ESTE) {
+				if (p_ptr->grace > 15000 && is_nasty_trap(trap)) {
+					if (randint(p_ptr->grace) > 15000) continue;
+				}
+			}
 
 			/* anti-nastiness skill by Amy: reduces odds that a new trap will be a nasty trap */
 			int nastyward = get_skill(SKILL_ANTINASTY) * 2;
@@ -9063,6 +9084,13 @@ void place_trap(int y, int x)
 	{
 		trap = randint(max_t_idx - 1);
 		t_ptr = &t_info[trap];
+
+		/* Este piety reduces spawn rate of nasty traps */
+		GOD(GOD_ESTE) {
+			if (p_ptr->grace > 15000 && is_nasty_trap(trap)) {
+				if (randint(p_ptr->grace) > 15000) continue;
+			}
+		}
 
 		/* anti-nastiness skill by Amy: reduces odds that a new trap will be a nasty trap */
 		int nastyward = get_skill(SKILL_ANTINASTY) * 2;

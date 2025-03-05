@@ -1,0 +1,50 @@
+|||||oy
+~~~~~01|Este
+~~~~~02|Gods|Este
+#####R === Este ===
+
+Este is the goddess of gentleness.
+
+#####GThe benefits of Worshipping Este
+ 1. As your piety increases, Este grants you improved saving throws and stealth.
+ 2. The higher your piety, the less likely nasty traps will generate in the dungeon.
+ 3. If you're pious enough, Este will grant you resistance to poison.
+ 4. If you're very pious, Este will grant you immunity to poison.
+ 5. Este likes it if you kill evil monsters.
+ 6. Este loves it if you kill demons.
+
+#####GThe disadvantages of Worshipping Este
+1. Your piety decreases over time.
+2. You can only wield blunt or blessed weapons without penalty.
+3. She will completely abandon you if you wear The One Ring.
+4. She doesn't like it if you kill good monsters.
+~~~~~03|Este|Prayers
+#####GEste's Magic
+Worshipping Este gives the adventurer access to a set of special
+spells that come directly from the hands of Este. These spells use your piety
+to cast rather than your spellpoints, and the level of spells that Este will 
+permit you to use is determined by your Prayer skill - how skillful you are
+in asking for her help without offending her!
+
+There is a special book called the "Tome of Gentleness" which 
+contains instructions for the procedure for each of the prayers Este will
+grant. There are three prayers all told, which are:
+1. [[[[[BDancing Lessons] (Level 1)
+   Temporarily improves your dodging chances.
+2. [[[[[BReveal Trap] (Level 30)
+   Detects traps, including nasty traps.
+3. [[[[[BDestroy Trap] (Level 40)
+   Destroys adjacent traps, including nasty traps.
+   
+Each of these spells can be increased in level both by improving your Prayer
+skill, and by improving your Spell-power skill.
+
+In addition to her specific magic, Este will also assist with your ability to
+use some magic from the "standard" schools, in relation to how skilled you 
+are at Prayer. These schools are as follows:
+    *****m_nature.txt*0[Nature School] at 1/2 the Prayer skill level.
+    *****m_celest.txt*0[Celestial School] at 1/3 the Prayer skill level.
+    *****m_water.txt*0[Water School] at 1/3 the Prayer skill level.
+    *****m_air.txt*0[Air School] at 1/4 the Prayer skill level.
+
+The spells from these schools are all cast using your normal spellpoints.

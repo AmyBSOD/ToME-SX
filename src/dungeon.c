@@ -2070,6 +2070,7 @@ static void process_world(void)
 			inc_piety(GOD_OROME, -100);
 			inc_piety(GOD_INGEBORG, -100);
 			inc_piety(GOD_NIENNA, -100);
+			inc_piety(GOD_ESTE, -100);
 		}
 
 		GOD(GOD_MANWE)
@@ -2082,6 +2083,15 @@ static void process_world(void)
 				dec -= wisdom_scale(2);
 			if (dec < 1) dec = 1;
 			inc_piety(GOD_MANWE, -dec);
+		}
+		GOD(GOD_ESTE)
+		{
+			int dec = 4 - wisdom_scale(3);
+
+			PRAY_GOD(GOD_ESTE)
+			dec++;
+			if (dec < 1) dec = 1;
+			inc_piety(GOD_ESTE, -dec);
 		}
 		GOD(GOD_ERU)
 		{
@@ -2577,6 +2587,13 @@ static void process_world(void)
 	if (p_ptr->tim_bombsquad)
 	{
 		(void)set_tim_bombsquad(p_ptr->tim_bombsquad - 1);
+	}
+
+	/* Timed dancing */
+	if (p_ptr->tim_dancing)
+	{
+		(void)set_tim_dancing(p_ptr->tim_dancing - 1, p_ptr->am_dancing);
+		if (p_ptr->tim_dancing < 1) p_ptr->am_dancing = 0;
 	}
 
 	/* Timed infra-vision */

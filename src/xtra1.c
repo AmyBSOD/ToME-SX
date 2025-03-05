@@ -2701,6 +2701,20 @@ void calc_gods()
 		p_ptr->stat_add[A_CHR] += chacrit;
 	}
 
+	GOD(GOD_ESTE)
+	{
+		if (p_ptr->grace > 10000) p_ptr->resist_pois = TRUE;
+		if (p_ptr->grace > 50000) p_ptr->immune_pois = TRUE;
+
+		int chacrit = 0;
+		chacrit = p_ptr->grace / 5000;
+		if (chacrit < 0) chacrit = 0;
+		if (chacrit > 20) chacrit = 20;
+		p_ptr->skill_sav += chacrit;
+		chacrit /= 2;
+		p_ptr->skill_stl += chacrit; /* up to +10 stealth */
+	}
+
 	GOD(GOD_AULE)
 	{
 		if (p_ptr->grace > 5000) p_ptr->resist_fire = TRUE;
@@ -2844,7 +2858,7 @@ void calc_gods()
 	}
 }
 
-/* Apply flags */
+/* Apply flags - make sure this is *only* used for stuff from items and level ups, not skills!!! --Amy */
 static int extra_blows;
 static int extra_shots;
 void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pval, s16b tval, s16b to_h, s16b to_d, s16b to_a)
@@ -4380,6 +4394,11 @@ void calc_bonuses(bool silent)
 		p_ptr->dodge_chance += get_skill_scale(SKILL_DODGE, 100);
 		/* Amy edit: give martial arts bonuses only when using martial arts style, please! */
 		if (p_ptr->melee_style == SKILL_HAND) p_ptr->dodge_chance += get_skill(SKILL_HAND);
+
+		if (p_ptr->tim_dancing)
+		{
+			p_ptr->dodge_chance += p_ptr->am_dancing;
+		}
 
 		/* Amy: lions are evasive, but the lua script is being dumb... probably gets procced before this stuff */
 		if (p_ptr->mimic_form == resolve_mimic_name("Lion")) {

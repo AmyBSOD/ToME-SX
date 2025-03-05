@@ -222,6 +222,7 @@ ingame_help
 					["Orome"] = { "g_orome.txt", 0 },  
 					["Ingeborg"] = { "g_ingebo.txt", 0 },  
 					["Nienna"] = { "g_nienna.txt", 0 },  
+					["Este"] = { "g_este.txt", 0 },  
 				},
 				["skill"] =
 				{

@@ -1090,6 +1090,7 @@ bool forbid_non_blessed()
 {
 	GOD(GOD_ERU) return (TRUE);
 	GOD(GOD_NIENNA) return (TRUE);
+	GOD(GOD_ESTE) return (TRUE);
 	if (p_ptr->nastytrap115) return (TRUE); /* edgy nastytrap by Amy */
 	return (FALSE);
 }

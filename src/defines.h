@@ -3208,7 +3208,8 @@
 #define GF_TRAP_DEMONSOUL 108
 #define GF_ATTACK       109
 #define GF_CHARM_UNMOVING 110
-#define MAX_GF          111
+#define GF_KILL_TRAP_NASTY 111
+#define MAX_GF          112
 
 /*
  * Some things which induce learning
@@ -5272,7 +5273,8 @@ extern int PlayerUID;
 #define GOD_OROME               11
 #define GOD_INGEBORG            12
 #define GOD_NIENNA              13
-#define MAX_GODS_INIT           14
+#define GOD_ESTE                14
+#define MAX_GODS_INIT           15
 
 #define GOD(g)                  if (p_ptr->pgod == (g))
 #define PRAY_GOD(g)             if ((p_ptr->pgod == (g)) && (p_ptr->praying))

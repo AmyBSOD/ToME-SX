@@ -2704,6 +2704,60 @@ bool set_tim_bombsquad(int v)
 }
 
 /*
+ * Set "p_ptr->tim_dancing", notice observable changes
+ */
+bool set_tim_dancing(int v, int dancebonus)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_dancing)
+		{
+			msg_print("You start dancing.");
+			notice = TRUE;
+		}
+		p_ptr->am_dancing = dancebonus;
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_dancing)
+		{
+			msg_print("You're exhausted and need to stop dancing for a bit.");
+			notice = TRUE;
+		}
+		p_ptr->am_dancing = 0;
+	}
+
+	/* Use the value */
+	p_ptr->tim_dancing = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
  * Set "p_ptr->tim_thunder", notice observable changes
  */
 bool set_tim_thunder(int v, int p1, int p2)
@@ -4980,6 +5034,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		{
 			inc_piety(GOD_ERU, -2 * m_ptr->level);
 			inc_piety(GOD_MANWE, -10 * m_ptr->level);
+			inc_piety(GOD_ESTE, -12 * m_ptr->level);
 			inc_piety(GOD_MELKOR, 3 * m_ptr->level);
 			inc_piety(GOD_INGEBORG, 2 * m_ptr->level);
 			PRAY_GOD(GOD_INGEBORG) inc_piety(GOD_INGEBORG, m_ptr->level);
@@ -5059,6 +5114,13 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		{
 			inc_piety(GOD_AMYBSOD, 1 + m_ptr->level / 5);
 			PRAY_GOD(GOD_AMYBSOD) inc_piety(GOD_AMYBSOD, 1 + m_ptr->level / 3);
+		}
+
+		if (r_ptr->flags3 & RF3_EVIL)
+		{
+			int inc = m_ptr->level * 2 / 5;
+			if (!inc) inc = 1;
+			PRAY_GOD(GOD_ESTE) inc_piety(GOD_ESTE, inc);
 		}
 
 		/* Manwe appreciate evil monster death */
@@ -5182,6 +5244,16 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 			}
 			if (!inc) inc = 1;
 			inc_piety(GOD_NIENNA, inc);
+		}
+
+		if (r_ptr->flags3 & RF3_DEMON)
+		{
+			int inc = m_ptr->level;
+			PRAY_GOD(GOD_ESTE) inc *= 3;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_ESTE, inc);
+
 		}
 
 		/* Yavanna likes when corruption is destroyed */

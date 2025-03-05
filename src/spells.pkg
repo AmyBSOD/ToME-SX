@@ -340,8 +340,11 @@ typedef unsigned int u32b;
 /** @def GF_CHARM_UNMOVING */
 #define GF_CHARM_UNMOVING 110
 
+/** @def GF_KILL_TRAP_NASTY */
+#define GF_KILL_TRAP_NASTY    111
+
 /** @def MAX_GF */
-#define MAX_GF          111
+#define MAX_GF          112
 /** @} */
 
 /** @name Spell Projection Flags
@@ -943,6 +946,18 @@ extern bool lose_all_info(void);
  * @note (see file spells2.c)
  */
 extern bool detect_traps(int rad);
+
+/** @fn detect_traps_nasty(int rad)
+ * @brief Detect all traps within radius "rad" of the player.\n
+ * @param rad Number \n rad is the radius of circle of detection.
+ * @brief Radius
+ * @return Boolean \n TRUE (always).
+ * @note
+ * All grids within the radius are searched.\n
+ * A message is displayed if traps are detected.
+ * @note (see file spells2.c)
+ */
+extern bool detect_traps_nasty(int rad);
 
 /** @fn detect_doors(int rad)
  * @brief Detect all doors within radius "rad" of the player.\n
@@ -2096,6 +2111,13 @@ extern void create_between_gate(int dist, int y, int x);
  * @note (see file spells2.c)
  */
 extern bool destroy_doors_touch(void);
+
+/** @fn destroy_traps_touch_nasty(void)
+ * @brief Destroy all doors adjacent to the player.
+ * @return Boolean \n TRUE if player notices, otherwise FALSE.
+ * @note (see file spells2.c)
+ */
+extern bool destroy_traps_touch_nasty(void);
 
 /** @fn destroy_traps_touch(void)
  * @brief Destroy all traps adjacent to the player.

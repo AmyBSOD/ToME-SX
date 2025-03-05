@@ -1148,19 +1148,19 @@ D:0:You feel like going on a hunt.
 
 # 246 should be Ingeborg
 N:246:Altar of Chaos
-G:0:g
+G:0:v
 F:FLOOR | REMEMBER | NOTICE | CAN_RUN
 D:0:You feel like everything is going to hell.
 
 N:247:Altar of Tears
-G:0:g
+G:0:U
 F:FLOOR | REMEMBER | NOTICE | CAN_RUN
 D:0:You feel very sad.
 
-N:248:Unfinished Altar
-G:0:g
+N:248:Altar of Softness
+G:0:w
 F:FLOOR | REMEMBER | NOTICE | CAN_RUN
-D:0:An altar for a deity who hasn't been implemented yet.
+D:0:You feel a gentle touch.
 
 N:249:Unfinished Altar
 G:0:g

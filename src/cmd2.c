@@ -5274,6 +5274,11 @@ void do_cmd_sacrifice(void)
 		{
 			int i;
 
+			if (agod >= MAX_GODS_INIT) {
+				cmsg_print(TERM_VIOLET, "The deity of this altar has not been implemented yet!");
+				return;
+			}
+
 			for (i = 0; i < 10; i++)
 			{
 				if (deity_info[agod].desc[i] != NULL)
