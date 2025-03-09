@@ -233,7 +233,7 @@ CORRUPT_RANDOM_TELEPORT = add_corruption
 					end
 				else
 					disturb(0, 0)
-					msg_print("Your corruption takes over you, you teleport!")
+					msg_print("Your corruption takes over you, you teleport! Some mofo of a programmer made it so that there is no --More-- prompt so we have to make this message VERY long instead, forcing such a prompt.")
 					teleport_player(50)
 				end
 			end
