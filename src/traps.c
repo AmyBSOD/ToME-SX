@@ -590,6 +590,10 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY117:
 		case TRAP_NASTY118:
 		case TRAP_NASTY119:
+		case TRAP_NASTY120:
+		case TRAP_NASTY121:
+		case TRAP_NASTY122:
+		case TRAP_NASTY123:
 			return FALSE;
 	}
 
@@ -724,6 +728,10 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY117:
 		case TRAP_NASTY118:
 		case TRAP_NASTY119:
+		case TRAP_NASTY120:
+		case TRAP_NASTY121:
+		case TRAP_NASTY122:
+		case TRAP_NASTY123:
 			return FALSE;
 	}
 
@@ -866,6 +874,10 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY117:
 		case TRAP_NASTY118:
 		case TRAP_NASTY119:
+		case TRAP_NASTY120:
+		case TRAP_NASTY121:
+		case TRAP_NASTY122:
+		case TRAP_NASTY123:
 			return TRUE;
 	}
 
@@ -3593,6 +3605,61 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_WOUNDS_I:
+		{
+			msg_print("Something seems to curse at you!");
+			curse_equipment(33, 0);
+			take_hit(damroll(3, 8), "a cursing trap");
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_OF_WOUNDS_II:
+		{
+			msg_print("Something seems to curse horribly at you!");
+			curse_equipment(50, 5);
+			take_hit(damroll(8, 8), "a cursing trap");
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_OF_WOUNDS_III:
+		{
+			msg_print("Something seems to incant terribly at you!");
+			curse_equipment(80, 15);
+			take_hit(damroll(10, 15), "a cursing trap");
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_OF_WOUNDS_IV:
+		{
+			msg_print("Something screams the word 'DIE!' in your direction!");
+			take_hit(damroll(15, 15), "a cursing trap");
+			(void)set_cut(p_ptr->cut + damroll(10, 10));
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_OF_HAND_DOOM:
+		{
+			msg_print("The Hand of Doom is invoked against you!");
+			curse_equipment(100, 20);
+			int dummy = (((s32b) ((65 + randint(25)) * (p_ptr->chp))) / 100);
+			int maxdummy = damroll(15, 30);
+			if (dummy > maxdummy) dummy = maxdummy;
+			msg_print("Your feel your life fade away!");
+			take_hit(dummy, "the Hand of Doom");
+			if (p_ptr->chp < 1) p_ptr->chp = 1;
+			ident = TRUE;
+
+			break;
+		}
+
 		/* Destruction Trap */
 	case TRAP_OF_DESTRUCTION:
 		{
@@ -3713,6 +3780,16 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			{
 				(void)set_paralyzed(p_ptr->paralyzed + rand_int(dun_level) + 6);
 			}
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_GLUTTONY:
+		{
+			msg_print("Suddenly, your stomach fills with way too much food!");
+
+			(void)set_food(PY_FOOD_MAX + 2000);
+
 			ident = TRUE;
 			break;
 		}
@@ -4237,8 +4314,15 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				else if ((j_ptr->tval == TV_ROD_MAIN) &&
 				                (j_ptr->pval == SV_ROD_RECALL))
 				{
-					j_ptr->timeout = 0;  /* a long time */
+					inven_item_increase(j, -j_ptr->number);
+					inven_item_optimize(j);
+					combine_pack();
+					reorder_pack();
+
+					/*j_ptr->timeout = 0;*/  /* a long time */
+					/* wut? that's just a hundred or so turns, lame! why not destroy that thing too? --Amy */
 					if (!ident) msg_print("You feel the air stabilise around you.");
+					else msg_print("Some of your rods burned up!");
 					ident = TRUE;
 				}
 			}
@@ -4248,6 +4332,103 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				p_ptr->word_recall = 0;
 				ident = TRUE;
 			}
+			if (!ident) msg_print("You feel that you'll be here for a while.");
+			break;
+		}
+
+	case TRAP_OF_NO_JUNK:
+		{
+			object_type *j_ptr;
+			s16b j;
+
+			for (j = 0; j < INVEN_WIELD; j++)
+			{
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				if (j_ptr->tval == TV_RANDART)
+				{
+					inven_item_increase(j, -j_ptr->number);
+					inven_item_optimize(j);
+					combine_pack();
+					reorder_pack();
+					if (!ident)
+					{
+						msg_print("Some junk in your inventory burns up.");
+					}
+					else
+					{
+						msg_print("You lost your junkarts to a fire.");
+					}
+					ident = TRUE;
+				}
+			}
+			if (!ident) msg_print("You feel happy that you're not carrying any junk.");
+			break;
+		}
+
+	case TRAP_OF_NO_OIL:
+		{
+			object_type *j_ptr;
+			s16b j;
+
+			for (j = 0; j < INVEN_WIELD; j++)
+			{
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				if (j_ptr->tval == TV_FLASK)
+				{
+					inven_item_increase(j, -j_ptr->number);
+					inven_item_optimize(j);
+					combine_pack();
+					reorder_pack();
+					if (!ident)
+					{
+						msg_print("Oh no! You forgot to pay your Yendorian Fuel Tax and your oil reserves got seized!");
+					}
+					else
+					{
+						msg_print("You have no oil left.");
+					}
+					ident = TRUE;
+				}
+			}
+			if (!ident) msg_print("Some tax collector growls at you, but then decides to walk off.");
+			break;
+		}
+
+	case TRAP_OF_NO_TOTEM:
+		{
+			object_type *j_ptr;
+			s16b j;
+
+			for (j = 0; j < INVEN_WIELD; j++)
+			{
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				if (j_ptr->tval == TV_TOTEM)
+				{
+					inven_item_increase(j, -j_ptr->number);
+					inven_item_optimize(j);
+					combine_pack();
+					reorder_pack();
+					if (!ident)
+					{
+						msg_print("Your totems erupt in a column of fire and smoke!");
+					}
+					else
+					{
+						msg_print("Now you don't have your totems no more.");
+					}
+					ident = TRUE;
+				}
+			}
+			if (!ident) msg_print("You have a vision of a totem pole.");
 			break;
 		}
 
@@ -6932,6 +7113,54 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY120:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap120 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY121:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap121 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY122:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap122 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY123:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap123 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHOES:
 	case TRAP_OF_SHOES_II:
 	case TRAP_OF_SHOES_III:
@@ -8962,6 +9191,64 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		}
 		break;
 
+	case TRAP_OF_MIND_BLAST:
+		{
+			msg_print("You feel something focusing on your mind.");
+			ident = TRUE;
+
+			msg_print("Your mind is blasted by psionic energy.");
+
+			if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
+			{
+				(void)set_confused(p_ptr->confused + rand_int(4) + 4);
+			}
+
+			if ( (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) ) && (randint(3) == 1))
+			{
+				(void) set_image(p_ptr->image + rand_int(250) + 150);
+			}
+
+			take_sanity_hit(damroll(8, 8), "a mind blast");
+
+		}
+		break;
+
+	case TRAP_OF_BRAIN_SMASH:
+		{
+			msg_print("You feel something focusing on your mind.");
+			ident = TRUE;
+
+			msg_print("Your mind is blasted by psionic energy.");
+
+			take_sanity_hit(damroll(12, 15), "a mind blast");
+
+			if (!p_ptr->resist_blind || p_ptr->nastytrap29 || (rand_int(100) < 5) )
+			{
+				(void)set_blind(p_ptr->blind + 8 + rand_int(8));
+			}
+			if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
+			{
+				(void)set_confused(p_ptr->confused + rand_int(4) + 4);
+			}
+			if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
+			{
+				(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
+			}
+			(void)set_slow(p_ptr->slow + rand_int(4) + 4);
+
+			while ((rand_int(100) > player_actual_saving_throw()) && (randint(100) != 1) )
+				(void)do_dec_stat(A_INT, STAT_DEC_NORMAL);
+			while ((rand_int(100) > player_actual_saving_throw()) && (randint(100) != 1) )
+				(void)do_dec_stat(A_WIS, STAT_DEC_NORMAL);
+
+			if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
+			{
+				(void) set_image(p_ptr->image + rand_int(250) + 150);
+			}
+
+		}
+		break;
+
 		/* Bolt Trap */
 	case TRAP_OF_ROCKET:
 		ident = player_handle_breath_trap(1, GF_ROCKET, trap);
@@ -10511,7 +10798,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(119)) {
+	switch (randint(123)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -10868,6 +11155,18 @@ void give_random_nastytrap_effect(void)
 			break;
 		case 119:
 			p_ptr->nastytrap119 = TRUE;
+			break;
+		case 120:
+			p_ptr->nastytrap120 = TRUE;
+			break;
+		case 121:
+			p_ptr->nastytrap121 = TRUE;
+			break;
+		case 122:
+			p_ptr->nastytrap122 = TRUE;
+			break;
+		case 123:
+			p_ptr->nastytrap123 = TRUE;
 			break;
 
 	}

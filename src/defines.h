@@ -3043,6 +3043,23 @@
 
 #define TRAP_OF_WILD_MAGIC                496
 
+#define TRAP_OF_WOUNDS_I                  497
+#define TRAP_OF_WOUNDS_II                 498
+#define TRAP_OF_WOUNDS_III                499
+#define TRAP_OF_WOUNDS_IV                 500
+#define TRAP_OF_HAND_DOOM                 501
+#define TRAP_OF_MIND_BLAST                502
+#define TRAP_OF_BRAIN_SMASH               503
+#define TRAP_OF_GLUTTONY                  504
+#define TRAP_OF_NO_JUNK                   505
+#define TRAP_OF_NO_TOTEM                  506
+#define TRAP_OF_NO_OIL                    507
+
+#define TRAP_NASTY120                     508
+#define TRAP_NASTY121                     509
+#define TRAP_NASTY122                     510
+#define TRAP_NASTY123                     511
+
 /*** General index values ***/
 
 

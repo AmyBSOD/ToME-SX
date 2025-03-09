@@ -2427,6 +2427,81 @@ I:10:100:80:0:40:0d0:r
 D:Wild magic is released!
 F:FLOOR | CHEST | DOOR
 
+N:497:Light Wounds Trap
+I:2:100:80:0:6:0d0:r
+D:You sustain a light wound!
+F:FLOOR | CHEST | DOOR
+
+N:498:Serious Wounds Trap
+I:3:100:80:0:16:0d0:r
+D:You sustain a serious wound!
+F:FLOOR | CHEST | DOOR
+
+N:499:Critical Wounds Trap
+I:4:100:80:0:36:0d0:r
+D:You sustain a critical wound!
+F:FLOOR | CHEST | DOOR
+
+N:500:Mortal Wounds Trap
+I:5:80:80:0:56:0d0:r
+D:You sustain a mortal wound!
+F:FLOOR | CHEST | DOOR
+
+N:501:Hand of Doom Trap
+I:8:40:80:0:80:0d0:r
+D:The Hand of Doom is invoked against you!
+F:FLOOR | CHEST | DOOR
+
+N:502:Mind Blast Trap
+I:3:80:80:0:15:0d0:r
+D:Something focuses on your mind!
+F:FLOOR | CHEST | DOOR
+
+N:503:Brain Smash Trap
+I:5:30:80:0:35:0d0:r
+D:Something focuses on your mind!
+F:FLOOR | CHEST | DOOR
+
+N:504:Gluttony Trap
+I:1:90:20:1:6:0d0:r
+D:Your stomach is suddenly extremely full!
+F:FLOOR | CHEST | DOOR
+
+N:505:Dejunk Trap
+I:8:10:10:4:40:0d0:y
+D:Be glad, now you don't have to carry that junk around anymore.
+F:FLOOR | CHEST | DOOR
+
+N:506:Destroy Totem Trap
+I:5:10:10:4:20:0d0:y
+D:Say goodbye to your ridiculously OP totems, sucker.
+F:FLOOR | CHEST | DOOR
+
+N:507:Out of Oil Trap
+I:2:50:10:4:5:0d0:y
+D:You should have paid your Yendorian Fuel Tax...
+F:FLOOR | CHEST | DOOR
+
+N:508:Antirush Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:509:No Prayer Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:510:Powerless Trap
+I:45:2:50:4:25:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:511:Inability Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

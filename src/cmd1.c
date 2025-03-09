@@ -4838,6 +4838,12 @@ static bool run_test(void)
  */
 void run_step(int dir)
 {
+	if (p_ptr->nastytrap120) { /* antirush nasty trap that prevents the run command from doing anything --Amy */
+		msg_print("You try to run, but fail.");
+		if (running > 0) running = 0;
+		return;
+	}
+
 	/* Start running */
 	if (dir)
 	{

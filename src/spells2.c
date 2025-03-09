@@ -2077,6 +2077,22 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Amnesia effects can unidentify star-identified items.";
 	}
+	if (p_ptr->nastytrap120)
+	{
+		info[i++] = "You have a problem: You cannot run in a direction.";
+	}
+	if (p_ptr->nastytrap121)
+	{
+		info[i++] = "You have a problem: You cannot pray to the gods.";
+	}
+	if (p_ptr->nastytrap122)
+	{
+		info[i++] = "You have a problem: You cannot use your 'U' menu abilities.";
+	}
+	if (p_ptr->nastytrap123)
+	{
+		info[i++] = "You have a problem: Your 'N' menu abilities don't work.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];

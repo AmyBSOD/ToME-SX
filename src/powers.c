@@ -126,6 +126,11 @@ static void power_activate(int power)
 	}
 
 
+	if (p_ptr->nastytrap122) { /* powerless nastytrap by Amy */
+		msg_print("Somehow, your powers refuse to work.");
+		return;
+	}
+
 	if (!power_chance(x_ptr)) return;
 
 	switch (power)

@@ -642,6 +642,7 @@ tval_desc2 tvals[] =
 	{ TV_TOOL, "Tool" },
 	{ TV_RANDART, "Randart" },
 	{ TV_HYPNOS, "Symbiote" },
+	{ TV_TOTEM, "Totem" },
 	{ 0, NULL }
 };
 

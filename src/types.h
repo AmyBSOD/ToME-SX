@@ -2031,10 +2031,10 @@ struct player_type
 	bool nastytrap117; /* covetous trap - teleporting monsters can teleport with you */
 	bool nastytrap118; /* spellcasting trap - monsters never fail to cast a spell */
 	bool nastytrap119; /* forgetful trap - amnesia will unidentify star-identified stuff */
-	bool nastytrap120;
-	bool nastytrap121;
-	bool nastytrap122;
-	bool nastytrap123;
+	bool nastytrap120; /* antirush trap - cannot run in a direction */
+	bool nastytrap121; /* no prayer trap - cannot pray to the gods with the "pray" command (but still cast prayer spells) */
+	bool nastytrap122; /* powerless trap - U powers don't work */
+	bool nastytrap123; /* inability trap - abilities like create ammo or spread blows don't work */
 	bool nastytrap124;
 	bool nastytrap125;
 	bool nastytrap126;

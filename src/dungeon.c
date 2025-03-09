@@ -3313,6 +3313,11 @@ static void process_world(void)
 		}
 	}
 
+	if (p_ptr->nastytrap121)
+	{
+		p_ptr->praying = FALSE;
+	}
+
 	/* Ingeborg causes random stuff, and if your piety is negative, also random bad stuff */
 	GOD(GOD_INGEBORG) {
 		if (!(p_ptr->wild_mode)) {

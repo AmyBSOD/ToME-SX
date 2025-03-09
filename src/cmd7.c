@@ -4832,6 +4832,12 @@ void do_cmd_alchemist(int crafttype)
  */
 void do_cmd_pray(void)
 {
+	if (p_ptr->nastytrap121) { /* antiprayer nastytrap by Amy */
+		msg_print("You cannot pray right now.");
+		p_ptr->praying = FALSE; /* just to make sure */
+		return;
+	}
+
 	if (p_ptr->pgod == GOD_NONE)
 	{
 		msg_print("Pray hard enough and your prayers might be answered.");

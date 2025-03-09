@@ -1511,6 +1511,8 @@ s16b find_ability(cptr name)
  */
 bool has_ability(int ab)
 {
+	if (p_ptr->nastytrap123) return FALSE; /* inability nastytrap by Amy */
+
 	return ab_info[ab].acquired;
 }
 
