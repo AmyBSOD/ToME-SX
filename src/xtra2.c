@@ -7529,11 +7529,19 @@ void gain_level_reward(int chosen_reward)
 
 	effect = chaos_rewards[p_ptr->chaos_patron][type];
 
-	if ((randint(6) == 1) && !chosen_reward)
+	/* since this is actually a thing now, don't corrupt the char so bloody fast! --Amy */
+	if ((randint(60) == 1) && !chosen_reward)
 	{
-		msg_format("%^s rewards you with a corruption!",
+		if (magik(33)) {
+			msg_format("%^s decides to cure your corruption!",
 		           chaos_patrons[p_ptr->chaos_patron]);
-		(void)gain_random_corruption(0);
+			lose_corruption(0);
+		} else {
+			msg_format("%^s rewards you with a corruption!",
+		           chaos_patrons[p_ptr->chaos_patron]);
+			(void)gain_random_corruption(0);
+		}
+
 		return;
 	}
 
