@@ -2340,6 +2340,7 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	/* DO NOT PLACE A MONSTER IN THE SMALL SCALE WILDERNESS !!! */
 	if (p_ptr->wild_mode)
 	{
+		if (wizard) cmsg_print(TERM_L_RED, "WARNING: Refused monster: not in small scale wilderness");
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
 		return 0;
 	}
@@ -2347,6 +2348,7 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	/* Verify location */
 	if (!in_bounds(y, x))
 	{
+		if (wizard) cmsg_print(TERM_L_RED, "WARNING: Refused monster: out of bounds");
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
 		return 0;
 	}
@@ -2370,11 +2372,13 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	/* Hack -- no creation on glyph of warding */
 	if (cave[y][x].feat == FEAT_GLYPH)
 	{
+		if (wizard) cmsg_print(TERM_L_RED, "WARNING: Refused monster: on glyph of warding");
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
 		return 0;
 	}
 	if (cave[y][x].feat == FEAT_MINOR_GLYPH)
 	{
+		if (wizard) cmsg_print(TERM_L_RED, "WARNING: Refused monster: on minor glyph of warding");
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
 		return 0;
 	}
@@ -2391,12 +2395,14 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	if ((cave[y][x].feat >= FEAT_ALTAR_HEAD)
 	                && (cave[y][x].feat <= FEAT_ALTAR_TAIL))
 	{
+		if (wizard) cmsg_print(TERM_L_RED, "WARNING: Refused monster: on altar");
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
 		return 0;
 	}
 	if ((cave[y][x].feat >= FEAT_ALTAR2_HEAD)
 	                && (cave[y][x].feat <= FEAT_ALTAR2_TAIL))
 	{
+		if (wizard) cmsg_print(TERM_L_RED, "WARNING: Refused monster: on altar");
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
 		return 0;
 	}
@@ -2405,6 +2411,7 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	if ((cave[y][x].feat >= FEAT_PATTERN_START)
 	                && (cave[y][x].feat <= FEAT_PATTERN_XTRA2))
 	{
+		if (wizard) cmsg_print(TERM_L_RED, "WARNING: Refused monster: on pattern");
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
 		return 0;
 	}
@@ -2412,6 +2419,7 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	/* Paranoia */
 	if (!r_idx)
 	{
+		if (wizard) cmsg_print(TERM_L_RED, "WARNING: Refused monster: no r_idx");
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
 		return 0;
 	}
@@ -2419,6 +2427,7 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	/* Paranoia */
 	if (!r_ptr->name)
 	{
+		if (wizard) cmsg_print(TERM_L_RED, "WARNING: Refused monster: no name");
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
 		return 0;
 	}
@@ -2426,6 +2435,7 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	/* Are we allowed to continue ? */
 	if (process_hooks(HOOK_NEW_MONSTER, "(d)", r_idx))
 	{
+		if (wizard) cmsg_print(TERM_L_RED, "WARNING: Refused monster: hook disallowed");
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
 		return 0;
 	}
@@ -2576,6 +2586,7 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	/* Mega-Hack -- catch "failure" */
 	if (!c_ptr->m_idx)
 	{
+		if (wizard) cmsg_print(TERM_L_RED, "WARNING: Refused monster: c_ptr->m_idx failure");
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
 		return 0;
 	}
@@ -2917,6 +2928,7 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	/* Unique monsters on saved levels should be "marked" */
 	if ((r_ptr->flags1 & RF1_UNIQUE) && get_dungeon_save(dummy))
 	{
+		if (wizard) cmsg_format(TERM_RED, "saving unique on level: %d", r_idx);
 		r_ptr->on_saved = TRUE;
 	}
 

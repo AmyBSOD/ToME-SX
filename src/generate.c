@@ -10012,6 +10012,8 @@ bool build_special_level(void)
 	if ((!get_dungeon_save(buf)) && (special_lvl[level][dungeon_type])) return FALSE;
 	if (!get_dungeon_special(buf)) return FALSE;
 
+	if (wizard) msg_print("Building a special level.");
+
 	/* Big town */
 	cur_hgt = MAX_HGT;
 	cur_wid = MAX_WID;
@@ -10167,6 +10169,7 @@ void generate_cave(void)
 	char buf[80];
 	s16b town_level = 0;
 	s32b old_seed_dungeon = seed_dungeon;
+	bool speciallevel = FALSE;
 
 	/* The dungeon is not ready */
 	character_dungeon = FALSE;
@@ -10375,7 +10378,13 @@ void generate_cave(void)
 			/* Special levels */
 			else if (build_special_level())
 			{
-				/* nothing */
+				/* Amy note: what the FUCK??? are those devs out of their mind? why on earth would autoscum run on SPECIAL LEVELS and thereby
+				 * result in the level being regenerated, with the unique monsters still "saved" on the discarded versions even though they're exactly
+				 * the same due to the level being predetermined, resulting in Lagduf and the others not spawning on Deathwatch 4 out of 5 times???????
+				 * and also, like, why didn't that gigabug ever get fixed? ToME 2.x was popular for YEARS, surely SOME player would've noticed and
+				 * reported it to the devteam?!?!?!?! Or did it get reported and the devs were just clueless as to why the bug is happening?
+				 * Why do I always have to fix such bugs? If I already can't have a balanced game to base mine on, can't I at least have one without major bugs? */
+				speciallevel = TRUE;
 			}
 
 			/* Build the town */
@@ -10592,7 +10601,7 @@ void generate_cave(void)
 			 * Amy edit: don't use this if ironman rooms is on, for two reasons
 			 * 1. ironman rooms creates so many vaults, you automatically get "good enough" levels
 			 * 2. autoscum on ironman mode causes laaaaaaaaag whenever you go to a new dungeon level! */
-			if (auto_scum && !ironman_rooms && (num < 100) && !p_ptr->inside_quest && dun_level)
+			if (auto_scum && !speciallevel && !ironman_rooms && (num < 100) && !p_ptr->inside_quest && dun_level)
 			{
 				/* Require "goodness" */
 				if ((feeling > 18) ||

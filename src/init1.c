@@ -11269,6 +11269,7 @@ static errr process_dungeon_file_aux(char *buf, int *yval, int *xval, int xvalst
 				/* Place it */
 				m_allow_special[monster_index] = TRUE;
 				place_monster_aux(y, x, monster_index, meta_sleep, FALSE, MSTATUS_ENEMY);
+				/*if (wizard) msg_format("place monster %d", monster_index);*/
 				m_allow_special[monster_index] = FALSE;
 			}
 
