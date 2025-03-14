@@ -8523,6 +8523,9 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 					y1 = p_ptr->py;
 					x1 = p_ptr->px;
 				}
+				/* Amy note: WUT another abyss, they actually made it so that it only damages you if you *have* sound resistance...
+				 * that's impossible, how can you create such a bug and not notice it when playing... */
+				take_hit(dam, killer);
 			}
 			else
 				take_hit(dam, killer);
