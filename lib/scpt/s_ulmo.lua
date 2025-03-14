@@ -1,6 +1,7 @@
 -- Spells for Ulmo's school
 
 -- "Song of Belegaer" copied from Geyser
+-- Amy note: LAAAAAAAAAAME, can't you come up with something unique?! changed to be a ball
 ULMO_BELEGAER = add_spell
 {
 	["name"] = "Song of Belegaer",
@@ -16,17 +17,16 @@ ULMO_BELEGAER = add_spell
 		local ret, dir
 		ret, dir = get_aim_dir()
 		if ret == FALSE then return end
-		return fire_bolt_or_beam(2 * get_level(ULMO_BELEGAER, 85), GF_WATER, dir, damroll(get_geyser_damage()))
+		return fire_ball(GF_WATER, dir, damroll(get_geyser_damage()), 2 + get_level(ULMO_BELEGAER, 4) )
 	end,
 	["info"] = function()
 		local n, d
 		n, d = get_geyser_damage()
-		return "dam "..n.."d"..d
+		return "dam "..n.."d"..d.." rad "..(2 + get_level(ULMO_BELEGAER, 4))
 	end,
 	["desc"] =
 	{
 		"Channels the power of the Great Sea into your fingertips.",
-		"Sometimes it can blast through its first target."
 	},
 }
 
@@ -41,6 +41,9 @@ ULMO_DRAUGHT_ULMONAN = add_spell
 	["fail"] = 	50,
 	["piety"] = TRUE,
 	["stat"] =      A_WIS,
+	-- Unnafected by blindness because if you already copy some spell instead of coming up with a new one,
+	-- you give it some advantage at the VERY least --Amy
+	["blind"] =     FALSE,
 	["random"] =    SKILL_SPIRITUALITY,
 	["spell"] = 	function()
 			local level = get_level(ULMO_DRAUGHT_ULMONAN, 50)

@@ -82,6 +82,9 @@ MANDOS_SPIRIT_FEANTURI = add_spell {
     ["mana"] =      40, 
     ["mana_max"] = 200, 
     ["fail"] =     50, 
+    -- ......... Amy: maybe I shouldn't comment that stuff because all I can say is that this should be obvious...
+    -- why do I always have to fix obvious errors, this spell heals confusion, right? how do you cast it while confused?????
+    ["confusion"] = FALSE,
     -- Uses piety to cast
     ["piety"] =     TRUE,
     ["stat"] =      A_WIS,

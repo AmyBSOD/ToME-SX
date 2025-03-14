@@ -1,6 +1,7 @@
 -- Spells for Varda school (From Annals of Ea module)
 
 -- Holy light spell copied from Globe of Light
+-- Amy edit: soooooo lame to just clone spells because you can't come up with your own. so: higher radius, lower damage
 VARDA_LIGHT_VALINOR = add_spell 
 { 
 	["name"] =	"Light of Valinor", 
@@ -21,13 +22,13 @@ VARDA_LIGHT_VALINOR = add_spell
 			obvious = TRUE
 		end
 		if get_level(VARDA_LIGHT_VALINOR, 50) >= 15 then
-			obvious = is_obvious(fire_ball(GF_LITE, 0, 10 + get_level(VARDA_LIGHT_VALINOR, 100), 5 + get_level(GLOBELIGHT, 6)), obvious)
+			obvious = is_obvious(fire_ball(GF_LITE, 0, 10 + get_level(VARDA_LIGHT_VALINOR, 45), 6 + get_level(GLOBELIGHT, 10)), obvious)
 		end
 		return obvious
 	end, 
 	["info"] =	function() 
 		if get_level(VARDA_LIGHT_VALINOR, 50) >= 15 then
-			return "dam "..(10 + get_level(VARDA_LIGHT_VALINOR, 100)).." rad "..(5 + get_level(VARDA_LIGHT_VALINOR, 6))
+			return "dam "..(10 + get_level(VARDA_LIGHT_VALINOR, 45)).." rad "..(6 + get_level(VARDA_LIGHT_VALINOR, 10))
 		else
 			return ""
 		end
