@@ -18,6 +18,8 @@ end
 -- Sart a lasting spell
 function player.start_lasting_spell(spl)
 	player.music_extra = -spl
+	player.update = bor(player.update, PU_BONUS, PU_TORCH, PU_BODY, PU_POWERS)
+
 end
 
 -- stat mods

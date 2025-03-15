@@ -649,6 +649,28 @@ static bool do_extra(int flag)
 
 	do_s16b(&p_ptr->tim_esp, flag);
 	do_s16b(&p_ptr->tim_esp_animal, flag);
+	do_s16b(&p_ptr->tim_peace, flag);
+	do_s16b(&p_ptr->tim_device, flag);
+	do_s16b(&p_ptr->tim_elemlull, flag);
+	do_s16b(&p_ptr->am_elemlull, flag);
+	do_s16b(&p_ptr->tim_magbreath, flag);
+	do_s16b(&p_ptr->am_magbreath, flag);
+	do_s16b(&p_ptr->tim_macarena, flag);
+	do_s16b(&p_ptr->am_macarena, flag);
+	do_s16b(&p_ptr->tim_savmus, flag);
+	do_s16b(&p_ptr->am_savmus, flag);
+	do_s16b(&p_ptr->tim_minersong, flag);
+	do_s16b(&p_ptr->am_minersong, flag);
+	do_s16b(&p_ptr->tim_stealthmus, flag);
+	do_s16b(&p_ptr->am_stealthmus, flag);
+	do_s16b(&p_ptr->tim_warboogie, flag);
+	do_s16b(&p_ptr->am_warboogie, flag);
+	do_s16b(&p_ptr->tim_tankmus, flag);
+	do_s16b(&p_ptr->am_tankmus, flag);
+	do_s16b(&p_ptr->tim_slaughtersong, flag);
+	do_s16b(&p_ptr->am_slaughtersong, flag);
+	do_s16b(&p_ptr->tim_mightymus, flag);
+	do_s16b(&p_ptr->am_mightymus, flag);
 	do_s16b(&p_ptr->tim_bullseye, flag);
 	do_s16b(&p_ptr->tim_sniper, flag);
 	do_s16b(&p_ptr->tim_rapidfire, flag);

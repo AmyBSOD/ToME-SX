@@ -1595,6 +1595,29 @@ struct player_type
 	s16b tim_thunder_p1;	/* Timed thunderstorm */
 	s16b tim_thunder_p2;	/* Timed thunderstorm */
 
+	s16b tim_peace;       	/* Timed peacekeeping */
+	s16b tim_device;       	/* Timed device mastery */
+	s16b tim_elemlull;      /* Timed elemental resist */
+	s16b am_elemlull;       /* Bonus elemental resist */
+	s16b tim_magbreath;     /* Timed magical breathing */
+	s16b am_magbreath;      /* Bonus magical breathing */
+	s16b tim_macarena;      /* another song that is active */
+	s16b am_macarena;       /* bonus from that song */
+	s16b tim_savmus;        /* another song that is active */
+	s16b am_savmus;         /* bonus from that song */
+	s16b tim_minersong;     /* another song that is active */
+	s16b am_minersong;      /* bonus from that song */
+	s16b tim_stealthmus;    /* another song that is active */
+	s16b am_stealthmus;     /* bonus from that song */
+	s16b tim_warboogie;     /* another song that is active */
+	s16b am_warboogie;      /* bonus from that song */
+	s16b tim_tankmus;       /* another song that is active */
+	s16b am_tankmus;        /* bonus from that song */
+	s16b tim_slaughtersong; /* another song that is active */
+	s16b am_slaughtersong;  /* bonus from that song */
+	s16b tim_mightymus;     /* another song that is active */
+	s16b am_mightymus;      /* bonus from that song */
+
 	s16b tim_esp_animal;    /* Timed animal ESP */
 	s16b tim_bullseye;      /* Timed bullseye */
 	s16b tim_sniper;        /* Timed sniper */

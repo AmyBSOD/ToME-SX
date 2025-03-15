@@ -3908,6 +3908,92 @@ void calc_bonuses(bool silent)
 		p_ptr->telepathy |= ESP_ALL;
 	}
 
+	if (p_ptr->tim_peace)
+	{
+		p_ptr->plr_peacekeep = TRUE;
+	}
+
+	if (p_ptr->tim_device)
+	{
+		p_ptr->plr_devicemast = TRUE;
+	}
+
+	if (p_ptr->tim_magbreath)
+	{
+		p_ptr->resist_pois = TRUE;
+		p_ptr->water_breath = TRUE;
+		if (p_ptr->am_magbreath >= 25) {
+			p_ptr->immune_pois = TRUE;
+		}
+	}
+
+	if (p_ptr->tim_savmus)
+	{
+		p_ptr->skill_sav += p_ptr->am_savmus;
+	}
+
+	if (p_ptr->tim_minersong)
+	{
+		p_ptr->skill_dis += (p_ptr->am_minersong / 2);
+		p_ptr->skill_srh += (p_ptr->am_minersong / 2);
+		p_ptr->skill_fos += (p_ptr->am_minersong / 2);
+		p_ptr->skill_dig += (p_ptr->am_minersong / 5);
+
+	}
+
+	if (p_ptr->tim_stealthmus)
+	{
+		p_ptr->skill_stl += p_ptr->am_stealthmus;
+
+	}
+
+	if (p_ptr->tim_warboogie)
+	{
+		p_ptr->to_h_melee += p_ptr->am_warboogie;
+	}
+
+	if (p_ptr->tim_tankmus)
+	{
+		p_ptr->to_a += p_ptr->am_tankmus;
+	}
+
+	if (p_ptr->tim_slaughtersong)
+	{
+		p_ptr->num_blow += p_ptr->am_slaughtersong;
+
+	}
+
+	if (p_ptr->tim_mightymus)
+	{
+		p_ptr->xtra_might += 1;
+		if (p_ptr->am_mightymus >= 40) p_ptr->xtra_might += 1;
+		if (p_ptr->am_mightymus >= 80) p_ptr->xtra_might += 1;
+		if (p_ptr->am_mightymus >= 30) p_ptr->num_fire += 1;
+	}
+
+	if (p_ptr->tim_elemlull)
+	{
+		p_ptr->resist_plasma = TRUE;
+		if (p_ptr->am_elemlull >= 5) {
+			p_ptr->resist_lite = TRUE;
+			p_ptr->resist_dark = TRUE;
+		}
+		if (p_ptr->am_elemlull >= 10) {
+			p_ptr->resist_sound = TRUE;
+			p_ptr->resist_shard = TRUE;
+		}
+		if (p_ptr->am_elemlull >= 20) {
+			p_ptr->resist_neth = TRUE;
+		}
+		if (p_ptr->am_elemlull >= 40) {
+			p_ptr->resist_chaos = TRUE;
+			p_ptr->resist_disen = TRUE;
+		}
+		if (p_ptr->am_elemlull >= 50) {
+			p_ptr->resist_water = TRUE;
+		}
+	}
+
 	if (p_ptr->tim_esp_animal)
 	{
 		p_ptr->telepathy |= ESP_ANIMAL;
@@ -4411,6 +4497,11 @@ void calc_bonuses(bool silent)
 		if (p_ptr->tim_dancing)
 		{
 			p_ptr->dodge_chance += p_ptr->am_dancing;
+		}
+
+		if (p_ptr->tim_macarena)
+		{
+			p_ptr->dodge_chance += p_ptr->am_macarena;
 		}
 
 		/* Amy: lions are evasive, but the lua script is being dumb... probably gets procced before this stuff */

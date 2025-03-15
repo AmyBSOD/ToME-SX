@@ -182,6 +182,23 @@ C:a:k:+0:+400:Anti-nastiness
 C:a:O:23:33:1d1
 C:a:g:Nobody
 
+C:a:N:Miner
+C:a:D:Axe-wielding fighter who is good at tunneling
+C:a:k:+0:+100:Weaponmastery
+C:a:k:+0:+100:Combat
+C:a:k:+1000:+500:Weight-lifting
+C:a:k:+1000:+200:Axe-mastery
+C:a:k:+0:-200:Sword-mastery
+C:a:k:+0:-200:Hafted-mastery
+C:a:k:+0:-200:Polearm-mastery
+C:a:k:+1000:+300:Dual-wielding
+C:a:k:+1000:+650:Music
+C:a:k:+0:+400:Two-handed
+C:a:O:24:1:1d1
+C:a:O:20:5:1d1
+C:a:O:14:73:1d1
+C:a:g:All Gods
+
 C:a:N:Demonologist
 C:a:D:Masters of the school of demonology, they are trained in both melee
 C:a:D:fighting and using demon spells to enhance their combat potential.
@@ -921,6 +938,25 @@ C:a:O:25:1:10d5
 C:a:O:26:1:10d5
 C:a:g:All Gods
 
+C:a:N:Woodrunner
+C:a:D:Good at surviving in the woods, this fighter can both shoot a bow
+C:a:D:and do reasonably well in melee. They can also play music.
+C:a:k:+0:+050:Archery
+C:a:k:+0:+100:Bow-mastery
+C:a:k:+0:+100:Crossbow-mastery
+C:a:k:+0:+100:Sling-mastery
+C:a:k:+0:+100:Boomerang-mastery
+C:a:k:+0:+050:Firearms
+C:a:k:+2000:+600:Music
+C:a:k:-1000:-100:Magic
+C:a:k:+0:+200:Weaponmastery
+C:a:k:+0:-100:Spirituality
+C:a:k:+0:-050:Magic-Device
+C:a:O:19:12:1d1
+C:a:O:17:1:10d3
+C:a:O:14:74:1d1
+C:a:g:All Gods
+
 C:a:N:Boom-master
 C:a:D:Archer specialized in the use of boomerangs.
 C:a:k:+0:+100:Archery
@@ -1599,7 +1635,7 @@ C:a:D:playing instruments. But they're not very good at combat
 C:a:O:71:37:1d1
 C:a:O:21:8:1d1
 C:a:O:36:4:1d1
-C:a:O:14:58:1d1
+C:a:O:14:72:1d1
 C:a:k:+1000:+400:Music
 C:a:k:+0:-200:Combat
 C:a:k:+0:-300:Weaponmastery

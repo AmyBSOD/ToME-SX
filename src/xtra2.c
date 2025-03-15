@@ -2444,6 +2444,110 @@ bool set_tim_esp(int v)
 }
 
 /*
+ * Set "p_ptr->tim_peace", notice observable changes
+ */
+bool set_tim_peace(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_peace)
+		{
+			msg_print("You feel an aura of peace!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_peace)
+		{
+			msg_print("The peaceful aura fades.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_peace = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_device", notice observable changes
+ */
+bool set_tim_device(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_device)
+		{
+			msg_print("You feel capable of using devices more effectively!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_device)
+		{
+			msg_print("You're no longer a master of devices.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_device = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
  * Set "p_ptr->tim_esp_animal", notice observable changes
  */
 bool set_tim_esp_animal(int v)
@@ -2841,6 +2945,546 @@ bool set_tim_dancing(int v, int dancebonus)
 
 	/* Use the value */
 	p_ptr->tim_dancing = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_elemlull", notice observable changes
+ */
+bool set_tim_elemlull(int v, int elemstr)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_elemlull)
+		{
+			msg_print("You gain elemental resistances.");
+			notice = TRUE;
+		}
+		p_ptr->am_elemlull = elemstr;
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_elemlull)
+		{
+			msg_print("You feel less resistant.");
+			notice = TRUE;
+		}
+		p_ptr->am_elemlull = 0;
+	}
+
+	/* Use the value */
+	p_ptr->tim_elemlull = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_magbreath", notice observable changes
+ */
+bool set_tim_magbreath(int v, int elemstr)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_magbreath)
+		{
+			msg_print("You no longer need to breathe!");
+			notice = TRUE;
+		}
+		p_ptr->am_magbreath = elemstr;
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_magbreath)
+		{
+			msg_print("You need to breathe again.");
+			notice = TRUE;
+		}
+		p_ptr->am_magbreath = 0;
+	}
+
+	/* Use the value */
+	p_ptr->tim_magbreath = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_macarena", notice observable changes
+ */
+bool set_tim_macarena(int v, int elemstr)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_macarena)
+		{
+			msg_print("You start dancing the macarena!");
+			notice = TRUE;
+		}
+		p_ptr->am_macarena = elemstr;
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_macarena)
+		{
+			msg_print("You stop dancing.");
+			notice = TRUE;
+		}
+		p_ptr->am_macarena = 0;
+	}
+
+	/* Use the value */
+	p_ptr->tim_macarena = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_savmus", notice observable changes
+ */
+bool set_tim_savmus(int v, int elemstr)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_savmus)
+		{
+			msg_print("You feel safe from magic!");
+			notice = TRUE;
+		}
+		p_ptr->am_savmus = elemstr;
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_savmus)
+		{
+			msg_print("You feel less protected from magic.");
+			notice = TRUE;
+		}
+		p_ptr->am_savmus = 0;
+	}
+
+	/* Use the value */
+	p_ptr->tim_savmus = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_minersong", notice observable changes
+ */
+bool set_tim_minersong(int v, int elemstr)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_minersong)
+		{
+			msg_print("You feel like a miner!");
+			notice = TRUE;
+		}
+		p_ptr->am_minersong = elemstr;
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_minersong)
+		{
+			msg_print("You don't feel like mining anymore.");
+			notice = TRUE;
+		}
+		p_ptr->am_minersong = 0;
+	}
+
+	/* Use the value */
+	p_ptr->tim_minersong = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_stealthmus", notice observable changes
+ */
+bool set_tim_stealthmus(int v, int elemstr)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_stealthmus)
+		{
+			msg_print("You feel very stealthy!");
+			notice = TRUE;
+		}
+		p_ptr->am_stealthmus = elemstr;
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_stealthmus)
+		{
+			msg_print("You feel less stealthy.");
+			notice = TRUE;
+		}
+		p_ptr->am_stealthmus = 0;
+	}
+
+	/* Use the value */
+	p_ptr->tim_stealthmus = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_warboogie", notice observable changes
+ */
+bool set_tim_warboogie(int v, int elemstr)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_warboogie)
+		{
+			msg_print("You feel ready for war!");
+			notice = TRUE;
+		}
+		p_ptr->am_warboogie = elemstr;
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_warboogie)
+		{
+			msg_print("You got tired of those war chants.");
+			notice = TRUE;
+		}
+		p_ptr->am_warboogie = 0;
+	}
+
+	/* Use the value */
+	p_ptr->tim_warboogie = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_tankmus", notice observable changes
+ */
+bool set_tim_tankmus(int v, int elemstr)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_tankmus)
+		{
+			msg_print("You feel like a tank!");
+			notice = TRUE;
+		}
+		p_ptr->am_tankmus = elemstr;
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_tankmus)
+		{
+			msg_print("You no longer feel like a tank.");
+			notice = TRUE;
+		}
+		p_ptr->am_tankmus = 0;
+	}
+
+	/* Use the value */
+	p_ptr->tim_tankmus = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_slaughtersong", notice observable changes
+ */
+bool set_tim_slaughtersong(int v, int elemstr)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_slaughtersong)
+		{
+			msg_print("You feel ready to slaughter your enemies!");
+			notice = TRUE;
+		}
+		p_ptr->am_slaughtersong = elemstr;
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_slaughtersong)
+		{
+			msg_print("You feel that the slaughter hour has ended.");
+			notice = TRUE;
+		}
+		p_ptr->am_slaughtersong = 0;
+	}
+
+	/* Use the value */
+	p_ptr->tim_slaughtersong = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_mightymus", notice observable changes
+ */
+bool set_tim_mightymus(int v, int elemstr)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_mightymus)
+		{
+			msg_print("You feel like shooting your bow at enemies!");
+			notice = TRUE;
+		}
+		p_ptr->am_mightymus = elemstr;
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_mightymus)
+		{
+			msg_print("Your bow is no longer super mighty.");
+			notice = TRUE;
+		}
+		p_ptr->am_mightymus = 0;
+	}
+
+	/* Use the value */
+	p_ptr->tim_mightymus = v;
 
 	/* Nothing to notice */
 	if (!notice) return (FALSE);

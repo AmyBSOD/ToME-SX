@@ -128,7 +128,7 @@ MUSIC_LITE = add_spell
 	["pval"] =      1,
 	["lasting"] =   function()
 			set_lite(5)
-			return 1
+			return get_mana(MUSIC_LITE)
 	end,
 	["spell"] =     function()
 			player.start_lasting_spell(MUSIC_LITE)
@@ -387,6 +387,364 @@ MUSIC_AMBARKANTA = add_spell
 	}
 }
 
+--- Banjos
+MUSIC_PEACE = add_spell
+{
+	["name"] =      "Song of Peace(I)",
+	["school"] =    {SCHOOL_MUSIC},
+	["level"] =     1,
+	["mana"] =      1,
+	["mana_max"] =  1,
+	["fail"] =      20,
+	["stat"] =      A_CHR,
+	["random"] =    SKILL_MUSIC,
+	["blind"] =     FALSE,
+	["pval"] =      1,
+	["lasting"] =   function()
+			set_tim_peace(5)
+			return get_mana(MUSIC_PEACE)
+	end,
+	["spell"] =     function()
+			player.start_lasting_spell(MUSIC_PEACE)
+			return TRUE
+	end,
+	["info"] =      function()
+			return ""
+	end,
+	["desc"] =      {
+			"Grants peacekeeping as long as you sing.",
+			"Consumes the amount of mana each turn.",
+	}
+}
+
+MUSIC_MASTER = add_spell
+{
+	["name"] =      "Master's Tune(II)",
+	["school"] =    {SCHOOL_MUSIC},
+	["level"] =     8,
+	["mana"] =      3,
+	["mana_max"] =  3,
+	["fail"] =      30,
+	["stat"] =      A_CHR,
+	["random"] =    SKILL_MUSIC,
+	["blind"] =     FALSE,
+	["pval"] =      2,
+	["lasting"] =   function()
+			set_tim_device(5)
+			return get_mana(MUSIC_MASTER)
+	end,
+	["spell"] =     function()
+			player.start_lasting_spell(MUSIC_MASTER)
+			return TRUE
+	end,
+	["info"] =      function()
+			return ""
+	end,
+	["desc"] =      {
+			"Improves your devices as long as you sing.",
+			"Consumes the amount of mana each turn.",
+	}
+}
+
+MUSIC_ELEMENT = add_spell
+{
+	["name"] =      "Lull of Elements(III)",
+	["school"] =    {SCHOOL_MUSIC},
+	["level"] =     15,
+	["mana"] =      3,
+	["mana_max"] =  10,
+	["fail"] =      40,
+	["stat"] =      A_CHR,
+	["random"] =    SKILL_MUSIC,
+	["blind"] =     FALSE,
+	["pval"] =      3,
+	["lasting"] =   function()
+			set_tim_elemlull(5, get_level(MUSIC_ELEMENT))
+			return get_mana(MUSIC_ELEMENT)
+	end,
+	["spell"] =     function()
+			player.start_lasting_spell(MUSIC_ELEMENT)
+			return TRUE
+	end,
+	["info"] =      function()
+			return ""
+	end,
+	["desc"] =      {
+			"Provides resistances to elements as long as you sing.",
+			"Level 1: resist plasma",
+			"Level 5: resist light and dark",
+			"Level 10: resist sound and shards",
+			"Level 20: resist nether",
+			"Level 40: resist chaos and disenchantment",
+			"Level 50: resist water",
+			"Consumes the amount of mana each turn.",
+	}
+}
+
+MUSIC_DEPTHS = add_spell
+{
+	["name"] =      "Sound of the Depths(V)",
+	["school"] =    {SCHOOL_MUSIC},
+	["level"] =     40,
+	["mana"] =      10,
+	["mana_max"] =  10,
+	["fail"] =      60,
+	["stat"] =      A_CHR,
+	["random"] =    SKILL_MUSIC,
+	["blind"] =     FALSE,
+	["pval"] =      5,
+	["lasting"] =   function()
+			set_tim_magbreath(5, get_level(MUSIC_DEPTHS))
+			return get_mana(MUSIC_DEPTHS)
+	end,
+	["spell"] =     function()
+			player.start_lasting_spell(MUSIC_DEPTHS)
+			return TRUE
+	end,
+	["info"] =      function()
+			return ""
+	end,
+	["desc"] =      {
+			"Provides void breathing and poison resistance as long as you sing.",
+			"At level 25 it also provides poison immunity.",
+			"Consumes the amount of mana each turn.",
+	}
+}
+
+--- Lutes
+MUSIC_DODGE = add_spell
+{
+	["name"] =      "Moonlight Macarena(I)",
+	["school"] =    {SCHOOL_MUSIC},
+	["level"] =     1,
+	["mana"] =      1,
+	["mana_max"] =  3,
+	["fail"] =      20,
+	["stat"] =      A_CHR,
+	["random"] =    SKILL_MUSIC,
+	["blind"] =     FALSE,
+	["pval"] =      1,
+	["lasting"] =   function()
+			set_tim_macarena(5, get_level(MUSIC_DODGE, 50))
+			return get_mana(MUSIC_DODGE)
+	end,
+	["spell"] =     function()
+			player.start_lasting_spell(MUSIC_DODGE)
+			return TRUE
+	end,
+	["info"] =      function()
+			return ""
+	end,
+	["desc"] =      {
+			"Improves your dodging chance as long as you sing.",
+			"Consumes the amount of mana each turn.",
+	}
+}
+
+MUSIC_SAVING = add_spell
+{
+	["name"] =      "Voice of Divinity(II)",
+	["school"] =    {SCHOOL_MUSIC},
+	["level"] =     8,
+	["mana"] =      2,
+	["mana_max"] =  6,
+	["fail"] =      35,
+	["stat"] =      A_CHR,
+	["random"] =    SKILL_MUSIC,
+	["blind"] =     FALSE,
+	["pval"] =      2,
+	["lasting"] =   function()
+			set_tim_savmus(5, get_level(MUSIC_SAVING, 50))
+			return get_mana(MUSIC_SAVING)
+	end,
+	["spell"] =     function()
+			player.start_lasting_spell(MUSIC_SAVING)
+			return TRUE
+	end,
+	["info"] =      function()
+			return ""
+	end,
+	["desc"] =      {
+			"Boosts your saving throw as long as you sing.",
+			"Consumes the amount of mana each turn.",
+	}
+}
+
+MUSIC_MINER = add_spell
+{
+	["name"] =      "Miner's Song(III)",
+	["school"] =    {SCHOOL_MUSIC},
+	["level"] =     20,
+	["mana"] =      6,
+	["mana_max"] =  14,
+	["fail"] =      50,
+	["stat"] =      A_CHR,
+	["random"] =    SKILL_MUSIC,
+	["blind"] =     FALSE,
+	["pval"] =      3,
+	["lasting"] =   function()
+			set_tim_minersong(5, get_level(MUSIC_MINER, 50))
+			return get_mana(MUSIC_MINER)
+	end,
+	["spell"] =     function()
+			player.start_lasting_spell(MUSIC_MINER)
+			return TRUE
+	end,
+	["info"] =      function()
+			return ""
+	end,
+	["desc"] =      {
+			"Improves searching, disarming and tunneling as long as you sing.",
+			"Consumes the amount of mana each turn.",
+	}
+}
+
+MUSIC_STEALTH = add_spell
+{
+	["name"] =      "Stealthy Whispers(IV)",
+	["school"] =    {SCHOOL_MUSIC},
+	["level"] =     30,
+	["mana"] =      3,
+	["mana_max"] =  9,
+	["fail"] =      70,
+	["stat"] =      A_CHR,
+	["random"] =    SKILL_MUSIC,
+	["blind"] =     FALSE,
+	["pval"] =      4,
+	["lasting"] =   function()
+			set_tim_stealthmus(5, 5 + get_level(MUSIC_STEALTH, 20))
+			return get_mana(MUSIC_STEALTH)
+	end,
+	["spell"] =     function()
+			player.start_lasting_spell(MUSIC_STEALTH)
+			return TRUE
+	end,
+	["info"] =      function()
+			return ""
+	end,
+	["desc"] =      {
+			"Boosts your stealth rating as long as you sing.",
+			"Consumes the amount of mana each turn.",
+	}
+}
+
+--- Mandolins
+MUSIC_WAR = add_spell
+{
+	["name"] =      "War Boogie(I)",
+	["school"] =    {SCHOOL_MUSIC},
+	["level"] =     1,
+	["mana"] =      1,
+	["mana_max"] =  4,
+	["fail"] =      20,
+	["stat"] =      A_CHR,
+	["random"] =    SKILL_MUSIC,
+	["blind"] =     FALSE,
+	["pval"] =      1,
+	["lasting"] =   function()
+			set_tim_warboogie(5, 5 + get_level(MUSIC_WAR, 25))
+			return get_mana(MUSIC_WAR)
+	end,
+	["spell"] =     function()
+			player.start_lasting_spell(MUSIC_WAR)
+			return TRUE
+	end,
+	["info"] =      function()
+			return ""
+	end,
+	["desc"] =      {
+			"Improves your melee to-hit as long as you sing.",
+			"Consumes the amount of mana each turn.",
+	}
+}
+
+MUSIC_TANK = add_spell
+{
+	["name"] =      "Tank Song(II)",
+	["school"] =    {SCHOOL_MUSIC},
+	["level"] =     5,
+	["mana"] =      3,
+	["mana_max"] =  6,
+	["fail"] =      35,
+	["stat"] =      A_CHR,
+	["random"] =    SKILL_MUSIC,
+	["blind"] =     FALSE,
+	["pval"] =      2,
+	["lasting"] =   function()
+			set_tim_tankmus(5, 10 + get_level(MUSIC_TANK, 50))
+			return get_mana(MUSIC_TANK)
+	end,
+	["spell"] =     function()
+			player.start_lasting_spell(MUSIC_TANK)
+			return TRUE
+	end,
+	["info"] =      function()
+			return ""
+	end,
+	["desc"] =      {
+			"Boosts your armor class as long as you sing.",
+			"Consumes the amount of mana each turn.",
+	}
+}
+
+MUSIC_SLAUGHTER = add_spell
+{
+	["name"] =      "Slaughter Call(III)",
+	["school"] =    {SCHOOL_MUSIC},
+	["level"] =     20,
+	["mana"] =      10,
+	["mana_max"] =  25,
+	["fail"] =      70,
+	["stat"] =      A_CHR,
+	["random"] =    SKILL_MUSIC,
+	["blind"] =     FALSE,
+	["pval"] =      3,
+	["lasting"] =   function()
+			set_tim_slaughtersong(5, 1 + get_level(MUSIC_SLAUGHTER, 2))
+			return get_mana(MUSIC_SLAUGHTER)
+	end,
+	["spell"] =     function()
+			player.start_lasting_spell(MUSIC_SLAUGHTER)
+			return TRUE
+	end,
+	["info"] =      function()
+			return ""
+	end,
+	["desc"] =      {
+			"Increases your melee blows per round as long as you sing.",
+			"Consumes the amount of mana each turn.",
+	}
+}
+
+MUSIC_MIGHT = add_spell
+{
+	["name"] =      "Mighty March(IV)",
+	["school"] =    {SCHOOL_MUSIC},
+	["level"] =     30,
+	["mana"] =      10,
+	["mana_max"] =  30,
+	["fail"] =      80,
+	["stat"] =      A_CHR,
+	["random"] =    SKILL_MUSIC,
+	["blind"] =     FALSE,
+	["pval"] =      4,
+	["lasting"] =   function()
+			set_tim_mightymus(5, get_level(MUSIC_MIGHT, 50))
+			return get_mana(MUSIC_MIGHT)
+	end,
+	["spell"] =     function()
+			player.start_lasting_spell(MUSIC_MIGHT)
+			return TRUE
+	end,
+	["info"] =      function()
+			return ""
+	end,
+	["desc"] =      {
+			"Increases the power of your ranged weapons as long as you sing.",
+			"At level 30 it also increases your amount of shots.",
+			"Consumes the amount of mana each turn.",
+	}
+}
 
 --[[
 MUSIC_ = add_spell

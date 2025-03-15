@@ -5448,29 +5448,32 @@ P:0:1d1:0:0:0
 F:CHR | WIELD_CAST
 D:A number of strings held by a wooden frame.
 
-#N:672:& Banjo~
-#G:/:W
-#I:14:2:0
-#W:15:0:30:200
-#A:15/1
-#P:0:1d1:0:0:0
-#D:A combination of kithara and tambourine. It looks strange and sounds bad.
+N:672:& Banjo~
+G:/:W
+I:14:72:1
+W:15:0:30:200
+A:15/1
+P:0:1d1:0:0:0
+F:INT | WIELD_CAST
+D:A combination of kithara and tambourine. It looks strange and sounds bad.
 
-#N:673:& Lute~
-#G:/:W
-#I:14:3:0
-#W:20:0:30:200
-#A:20/1
-#P:0:1d1:0:0:0
-#D:A string instrument, to be plucked with your fingers.
+N:673:& Lute~
+G:/:W
+I:14:73:1
+W:20:0:30:200
+A:20/1
+P:0:1d1:0:0:0
+F:WIS | WIELD_CAST
+D:A string instrument, to be plucked with your fingers.
 
-#N:674:& Mandolin~
-#G:/:W
-#I:14:4:0
-#W:25:0:30:300
-#A:25/1
-#P:0:1d1:0:0:0
-#D:A small string instrument, typically strummed with your fingers or a plectron.
+N:674:& Mandolin~
+G:/:W
+I:14:74:1
+W:25:0:30:300
+A:25/1
+P:0:1d1:0:0:0
+F:DEX | WIELD_CAST
+D:A small string instrument, typically strummed with your fingers or a plectron.
 
 # The Palantir of Orthanc -- see artifact list
 

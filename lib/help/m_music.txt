@@ -14,15 +14,16 @@ Each song, as well as having a school level like any other magic spell, also
 has a roman numeral following its name. The higher this number, the greater the
 craftmanship of the instrument required to play it.
 
-Each musical instrument has a value assigned to it as well, between 1 and 4. The
+Each musical instrument has a value assigned to it as well. The
 higher the number, the better the craftmanship; hence it will be possible
 for the bard to play higher level songs only with more powerful instruments.
 E.g. a Harp(+1) will allow you to cast "Stop Singing(I)" and "Song of the
 Sun(I)". A Harp(+2) would allow you to sing those songs, as well as "Flow of
 Life(II)".
 
-There are 3 different types of instruments: Harps, Drums and Horns. Each type 
-of instrument contains a different family of musical songs:
+There are 6 different types of instruments: Harps, Drums, Banjos, Lutes,
+Mandolins, and Horns. Each type of instrument contains a different family of
+musical songs:
 
 
 #####vMusical Songs
@@ -68,10 +69,49 @@ of instrument contains a different family of musical songs:
 #####GHorns
 1. [[[[[vBlow(I)] (School level 4)
    Produces a powerful, blowing sound all around you.
-2. [[[[[vGush of Wind (II)] (School level 14)
+2. [[[[[vGush of Wind(II)] (School level 14)
    Produces a outgoing gush of wind that sends monsters away.
 3. [[[[[vHorns of Ylmir(III)] (School level 20)
    Produces an earth-shaking sound.
 4. [[[[[vAmbarkanta(IV)] (School level 25)
    Produces a reality-shaking sound that transports you to a nearly
    identical reality.
+
+#####GBanjos
+1. [[[[[vSong of Peace(I)] (School level 1)
+   Grants peacekeeping as long as you sing.
+2. [[[[[vMaster's Tune(II)] (School level 8)
+   Improves your devices as long as you sing.
+3. [[[[[vLull of Elements(III)] (School level 15)
+   Provides resistances to elements as long as you sing.
+   Level 1: resist plasma
+   Level 5: resist light and dark
+   Level 10: resist sound and shards
+   Level 20: resist nether
+   Level 40: resist chaos and disenchantment
+   Level 50: resist water
+4. [[[[[vSound of the Depths(V)] (School level 40)
+   Provides void breathing and poison resistance as long as you sing.
+   At level 25 it also provides poison immunity.
+
+#####GLutes
+1. [[[[[vMoonlight Macarena(I)] (School level 1)
+   Improves your dodging chance as long as you sing.
+2. [[[[[vVoice of Divinity(II)] (School level 8)
+   Boosts your saving throw as long as you sing.
+3. [[[[[vMiner's Song(III)] (School level 20)
+   Improves searching, disarming and tunneling as long as you sing.
+4. [[[[[vStealthy Whispers(IV)] (School level 30)
+   Boosts your stealth rating as long as you sing.
+
+#####GMandolins
+1. [[[[[vWar Boogie(I)] (School level 1)
+   Improves your melee to-hit as long as you sing.
+2. [[[[[vTank Song(II)] (School level 5)
+   Boosts your armor class as long as you sing.
+3. [[[[[vSlaughter Call(III)] (School level 20)
+   Increases your melee blows per round as long as you sing.
+4. [[[[[vMighty March(IV)] (School level 30)
+   Increases the power of your ranged weapons as long as you sing.
+   At level 30 it also increases your amount of shots.
+

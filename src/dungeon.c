@@ -1169,6 +1169,7 @@ static void check_music()
 		msg_print("You stop your spell.");
 		p_ptr->music_extra = MUSIC_NONE;
 		p_ptr->music_extra2 = MUSIC_NONE;
+		p_ptr->update |= (PU_BONUS | PU_TORCH | PU_BODY | PU_POWERS);
 	}
 	else
 	{
@@ -2583,6 +2584,16 @@ static void process_world(void)
 		(void)set_tim_esp_animal(p_ptr->tim_esp_animal - 1);
 	}
 
+	if (p_ptr->tim_peace)
+	{
+		(void)set_tim_peace(p_ptr->tim_peace - 1);
+	}
+
+	if (p_ptr->tim_device)
+	{
+		(void)set_tim_device(p_ptr->tim_device - 1);
+	}
+
 	/* Timed bullseye */
 	if (p_ptr->tim_bullseye)
 	{
@@ -2612,6 +2623,68 @@ static void process_world(void)
 	{
 		(void)set_tim_dancing(p_ptr->tim_dancing - 1, p_ptr->am_dancing);
 		if (p_ptr->tim_dancing < 1) p_ptr->am_dancing = 0;
+	}
+
+	/* Timed elemlull */
+	if (p_ptr->tim_elemlull)
+	{
+		(void)set_tim_elemlull(p_ptr->tim_elemlull - 1, p_ptr->am_elemlull);
+		if (p_ptr->tim_elemlull < 1) p_ptr->am_elemlull = 0;
+	}
+
+	/* Timed magbreath */
+	if (p_ptr->tim_magbreath)
+	{
+		(void)set_tim_magbreath(p_ptr->tim_magbreath - 1, p_ptr->am_magbreath);
+		if (p_ptr->tim_magbreath < 1) p_ptr->am_magbreath = 0;
+	}
+
+	if (p_ptr->tim_macarena)
+	{
+		(void)set_tim_macarena(p_ptr->tim_macarena - 1, p_ptr->am_macarena);
+		if (p_ptr->tim_macarena < 1) p_ptr->am_macarena = 0;
+	}
+
+	if (p_ptr->tim_savmus)
+	{
+		(void)set_tim_savmus(p_ptr->tim_savmus - 1, p_ptr->am_savmus);
+		if (p_ptr->tim_savmus < 1) p_ptr->am_savmus = 0;
+	}
+
+	if (p_ptr->tim_minersong)
+	{
+		(void)set_tim_minersong(p_ptr->tim_minersong - 1, p_ptr->am_minersong);
+		if (p_ptr->tim_minersong < 1) p_ptr->am_minersong = 0;
+	}
+
+	if (p_ptr->tim_stealthmus)
+	{
+		(void)set_tim_stealthmus(p_ptr->tim_stealthmus - 1, p_ptr->am_stealthmus);
+		if (p_ptr->tim_stealthmus < 1) p_ptr->am_stealthmus = 0;
+	}
+
+	if (p_ptr->tim_warboogie)
+	{
+		(void)set_tim_warboogie(p_ptr->tim_warboogie - 1, p_ptr->am_warboogie);
+		if (p_ptr->tim_warboogie < 1) p_ptr->am_warboogie = 0;
+	}
+
+	if (p_ptr->tim_tankmus)
+	{
+		(void)set_tim_tankmus(p_ptr->tim_tankmus - 1, p_ptr->am_tankmus);
+		if (p_ptr->tim_tankmus < 1) p_ptr->am_tankmus = 0;
+	}
+
+	if (p_ptr->tim_slaughtersong)
+	{
+		(void)set_tim_slaughtersong(p_ptr->tim_slaughtersong - 1, p_ptr->am_slaughtersong);
+		if (p_ptr->tim_slaughtersong < 1) p_ptr->am_slaughtersong = 0;
+	}
+
+	if (p_ptr->tim_mightymus)
+	{
+		(void)set_tim_mightymus(p_ptr->tim_mightymus - 1, p_ptr->am_mightymus);
+		if (p_ptr->tim_mightymus < 1) p_ptr->am_mightymus = 0;
 	}
 
 	/* Mana void */
