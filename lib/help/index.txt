@@ -196,7 +196,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
     *****g_eru.txt*03[Prayers]
     *****c_pr_eru.txt*03[Priest - Eru]
   *****tome_faq.txt*10[Essences]
-  *****este.txt*01[Este]
+  *****g_este.txt*01[Este]
   *****experien.hlp*01[Experience]
   *****explore.hlp*02[Exploring menu]
 ~~~~~70
