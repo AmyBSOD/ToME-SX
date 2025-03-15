@@ -316,6 +316,108 @@ CORRUPT_TROLL_BLOOD = add_corruption
 	},
 }
 
+-- Troll strength
+CORRUPT_TROLL_STRENGTH = add_corruption
+{
+	["color"]       = TERM_GREEN,
+	["name"]	= "Troll Strength",
+	["get_text"]    = "You become very strong, but dumb.",
+	["lose_text"]   = "Your trollish strength fades.",
+	["desc"]	=
+	{
+			  "  You're strong like a troll",
+			  "  It increases your strength by 4 and dexterity by 3",
+			  "  But it reduces intelligence and wisdom by 6",
+			  "  Also your saving throw is weakened",
+	},
+	["can_gain"] =	function()
+			-- Ok trolls should not get this one. never.
+			if get_race_name() == "Troll" then
+				return nil
+			else
+				return not nil
+			end
+	end,
+	["hooks"]       =
+	{
+		[HOOK_CALC_BONUS] = function()
+			player.modify_stat(A_DEX, 3)
+			player.modify_stat(A_STR, 4)
+			player.modify_stat(A_INT, -6)
+			player.modify_stat(A_WIS, -6)
+			player.xtra_f5 = bor(player.xtra_f5, TR5_SAVING_MALUS)
+		end,
+	},
+}
+
+-- Troll fat
+CORRUPT_TROLL_FAT = add_corruption
+{
+	["color"]       = TERM_GREEN,
+	["name"]	= "Troll Fat",
+	["get_text"]    = "You become very thick, and develop a ravenous hunger.",
+	["lose_text"]   = "You aren't obese anymore.",
+	["desc"]	=
+	{
+			  "  You're as fat as a troll",
+			  "  It increases your constitution by 3",
+			  "  But you need to eat much more food to sustain yourself",
+	},
+	["can_gain"] =	function()
+			-- Ok trolls should not get this one. never.
+			if get_race_name() == "Troll" then
+				return nil
+			else
+				return not nil
+			end
+	end,
+	["hooks"]       =
+	{
+		[HOOK_CALC_BONUS] = function()
+			player.xtra_f5 = bor(player.xtra_f5, TR5_RAPID_HUNGER)
+			player.modify_stat(A_CON, 3)
+		end,
+	},
+}
+
+CORRUPT_TROLL_FORM = add_corruption
+{
+	["color"]       = TERM_L_GREEN,
+	["name"]	= "Troll Form",
+	["get_text"]    = "You feel like a full troll.",
+	["lose_text"]   = "You no longer feel like a troll.",
+	["desc"]	=
+	{
+			  "  You became like a troll",
+			  "  Your life rating is increased and you resist fear",
+			  "  Also, your strength, dexterity and constitution are sustained",
+	},
+	["depends"]     =
+	{
+			[CORRUPT_TROLL_FAT] = TRUE,
+			[CORRUPT_TROLL_STRENGTH] = TRUE,
+			[CORRUPT_TROLL_BLOOD] = TRUE
+	},
+	["can_gain"] =	function()
+			-- Ok trolls should not get this one. never.
+			if get_race_name() == "Troll" then
+				return nil
+			else
+				return not nil
+			end
+	end,
+	["hooks"]       =
+	{
+		[HOOK_CALC_BONUS] = function()
+			player.to_l = player.to_l + 2
+			player.xtra_f2 = bor(player.xtra_f2, TR2_SUST_STR)
+			player.xtra_f2 = bor(player.xtra_f2, TR2_SUST_DEX)
+			player.xtra_f2 = bor(player.xtra_f2, TR2_SUST_CON)
+			player.xtra_f2 = bor(player.xtra_f2, TR2_RES_FEAR)
+		end,
+	},
+}
+
 -- The vampire corruption set
 CORRUPT_VAMPIRE_TEETH = add_corruption
 {
