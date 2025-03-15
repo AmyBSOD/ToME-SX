@@ -2529,6 +2529,14 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 				break;
 			}
 
+		case SV_POTION2_AMNESIA:
+			{
+				lose_all_info();
+				ident = TRUE;
+
+				break;
+			}
+
 		default:
 			{
 				break;
@@ -3660,6 +3668,16 @@ void do_cmd_read_scroll(void)
 		case SV_SCROLL_SUMMON_MINE:
 			{
 				if (summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_MINE, FALSE))
+				{
+					ident = TRUE;
+				}
+
+				break;
+			}
+
+		case SV_SCROLL_SUMMON_ALLY:
+			{
+				if (summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, 0, FALSE))
 				{
 					ident = TRUE;
 				}

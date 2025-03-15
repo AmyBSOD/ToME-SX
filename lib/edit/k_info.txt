@@ -5173,7 +5173,7 @@ D:lore concerning monsters inhabiting Arda.
 N:605:& Morphic Oil~ of #
 G:!:d
 I:72:1:0
-W:5:0:0:100
+W:5:0:0:500
 A:1/3:5/1:10/1
 P:0:1d1:0:0:0
 F:FULL_NAME | EASY_KNOW
@@ -8353,6 +8353,23 @@ F:IGNORE_ACID | IGNORE_COLD | IGNORE_ELEC | IGNORE_FIRE |
 D:Although it looks like a piece of junk, it is actually part of an ancient
 D:relic belonging to the Priests of Este. The relic now lies in pieces, 
 D:hidden from all but the most faithful followers of Este.
+
+N:1020:Amnesia
+G:!:d
+I:72:20:0
+W:5:0:0:0
+A:5/2
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:If you want to forget all the bad stuff that has happened, this sparkling
+D:wine will help. But beware, you might forget something important.
+
+N:1021:Ally
+G:?:d
+I:70:62:0
+W:10:0:0:5000
+A:10/1
+D:A piece of paper, inscribed with runes which will summon some creature to your aid.
 
 # N:number:name
 # G:glyph:color

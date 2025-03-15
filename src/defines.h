@@ -2037,6 +2037,7 @@
 #define SV_SCROLL_PROOF_ACID            59
 #define SV_SCROLL_DESTRUCTION           60
 #define SV_SCROLL_PATRON_CHANGE         61
+#define SV_SCROLL_SUMMON_ALLY           62
 
 /* The "sval" codes for TV_POTION */
 #define SV_POTION_WATER                  0
@@ -2114,8 +2115,9 @@
 #define SV_POTION2_CURE_SANITY           17
 #define SV_POTION2_CURE_WATER            18
 #define SV_POTION2_CURE_CORRUPTION       19
+#define SV_POTION2_AMNESIA               20
 
-#define SV_POTION2_LAST                  19
+#define SV_POTION2_LAST                  20
 
 /* The "sval" codes for TV_FOOD */
 #define SV_FOOD_POISON                   0
