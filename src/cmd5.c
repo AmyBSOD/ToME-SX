@@ -183,7 +183,7 @@ void do_fart_effect(void)
 		return;
 	}
 
-	switch (randint(59))
+	switch (randint(60))
 	{
 	case 1:
 	case 2:
@@ -500,6 +500,12 @@ void do_fart_effect(void)
 	case 59:
 		{
 			curse_equipment(100, 10);
+			break;
+		}
+
+	case 60:
+		{
+			set_tim_manavoid(p_ptr->tim_manavoid + 10 + randint(200));
 			break;
 		}
 

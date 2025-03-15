@@ -777,6 +777,9 @@ static void regenmana(int percent)
 	/* Incraese regen with int */
 	percent += adj_str_blow[p_ptr->stat_ind[A_INT]] * 3;
 
+	/* mana void? then don't regenerate --Amy */
+	if (p_ptr->tim_manavoid && (percent > 0)) return;
+
 	old_csp = p_ptr->csp;
 	new_mana = ((long)p_ptr->msp) * percent + PY_REGEN_MNBASE;
 
@@ -2596,6 +2599,12 @@ static void process_world(void)
 		if (p_ptr->tim_dancing < 1) p_ptr->am_dancing = 0;
 	}
 
+	/* Mana void */
+	if (p_ptr->tim_manavoid)
+	{
+		(void)set_tim_manavoid(p_ptr->tim_manavoid - 1);
+	}
+
 	/* Timed infra-vision */
 	if (p_ptr->tim_infra)
 	{
@@ -3343,6 +3352,10 @@ static void process_world(void)
 
 	if (p_ptr->nastytrap16 && !(p_ptr->wild_mode) && (rand_int(1000) == 0) ) {
 		trap_creation();
+	}
+
+	if (p_ptr->nastytrap126 && (rand_int(100) == 0) ) {
+		set_tim_manavoid(p_ptr->tim_manavoid + 20);
 	}
 
 	if (p_ptr->nastytrap26 && (rand_int(100) == 0) ) {

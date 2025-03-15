@@ -2093,6 +2093,18 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Your 'N' menu abilities don't work.";
 	}
+	if (p_ptr->nastytrap124)
+	{
+		info[i++] = "You have a problem: The game acts as if you were playing hard mode.";
+	}
+	if (p_ptr->nastytrap125)
+	{
+		info[i++] = "You have a problem: The monster window doesn't work.";
+	}
+	if (p_ptr->nastytrap126)
+	{
+		info[i++] = "You have a problem: Your mana regeneration gets deactivated intermittently.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];

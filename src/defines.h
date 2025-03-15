@@ -3060,6 +3060,12 @@
 #define TRAP_NASTY122                     510
 #define TRAP_NASTY123                     511
 
+#define TRAP_OF_TANKER_DRAIN              512
+
+#define TRAP_NASTY124                     513
+#define TRAP_NASTY125                     514
+#define TRAP_NASTY126                     515
+
 /*** General index values ***/
 
 

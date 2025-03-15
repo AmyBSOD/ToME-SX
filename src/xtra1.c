@@ -1446,6 +1446,19 @@ static void fix_m_list(void)
 		/* Clear */
 		Term_clear();
 
+		if (p_ptr->nastytrap125)
+		{
+			c_prt(TERM_L_RED, "System failure", 0, 0);
+
+			/* Fresh */
+			Term_fresh();
+
+			/* Restore */
+			Term_activate(old);
+
+			return;
+		}
+
 		/* Hallucination */
 		if (p_ptr->image)
 		{
@@ -1744,7 +1757,7 @@ void calc_sanity(void)
 	/* boost by Amy - otherwise, low-wisdom chars would have too little, and since brain smash "helpfully" deals
 	 * both sanity AND wisdom damage, that could otherwise instakill you...
 	 * clear mind skill gives significant boosts */
-	if (!p_ptr->hard_mode) msane += 50;
+	if (!p_ptr->hard_mode && !p_ptr->nastytrap124) msane += 50;
 	msane += (get_skill(SKILL_CLEARMIND) * 2);
 
 	if (p_ptr->msane != msane)
@@ -2015,7 +2028,7 @@ void calc_hitpoints(void)
 	}
 
 	/* boost by Amy, mainly to make the early game less deadly */
-	if (!p_ptr->hard_mode) mhp += 15;
+	if (!p_ptr->hard_mode && !p_ptr->nastytrap124) mhp += 15;
 
 	if (mhp < 1) mhp = 1;
 
@@ -3651,7 +3664,7 @@ void calc_bonuses(bool silent)
 
 	/* jk - add in the tactics */
 
-	if (p_ptr->hard_mode) {
+	if (p_ptr->hard_mode || p_ptr->nastytrap124) {
 		p_ptr->dis_to_h += tactic_info_hard[(byte)p_ptr->tactic].to_hit;
 		p_ptr->to_h += tactic_info_hard[(byte)p_ptr->tactic].to_hit;
 		p_ptr->dis_to_d += tactic_info_hard[(byte)p_ptr->tactic].to_dam;
@@ -3675,7 +3688,7 @@ void calc_bonuses(bool silent)
 		p_ptr->skill_sav += tactic_info[(byte)p_ptr->tactic].to_saving;
 	}
 
-	if (p_ptr->hard_mode) {
+	if (p_ptr->hard_mode || p_ptr->nastytrap124) {
 		p_ptr->pspeed += move_info_hard[(byte)p_ptr->movement].to_speed;
 		p_ptr->skill_srh += move_info_hard[(byte)p_ptr->movement].to_search;
 		p_ptr->skill_fos += move_info_hard[(byte)p_ptr->movement].to_percep;

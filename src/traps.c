@@ -594,6 +594,9 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY121:
 		case TRAP_NASTY122:
 		case TRAP_NASTY123:
+		case TRAP_NASTY124:
+		case TRAP_NASTY125:
+		case TRAP_NASTY126:
 			return FALSE;
 	}
 
@@ -732,6 +735,9 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY121:
 		case TRAP_NASTY122:
 		case TRAP_NASTY123:
+		case TRAP_NASTY124:
+		case TRAP_NASTY125:
+		case TRAP_NASTY126:
 			return FALSE;
 	}
 
@@ -878,6 +884,9 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY121:
 		case TRAP_NASTY122:
 		case TRAP_NASTY123:
+		case TRAP_NASTY124:
+		case TRAP_NASTY125:
+		case TRAP_NASTY126:
 			return TRUE;
 	}
 
@@ -4188,6 +4197,32 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* Trap of Tanker Drain - unlike old pernangband versions there's no "tank" here, so instead it temporarily halts mana regen --Amy */
+	case TRAP_OF_TANKER_DRAIN:
+		{
+			set_tim_manavoid(p_ptr->tim_manavoid + 10 + p_ptr->msp);
+			ident = TRUE;
+
+			if (p_ptr->csp > 0)
+			{
+				p_ptr->csp = 0;
+				p_ptr->csp_frac = 0;
+				p_ptr->redraw |= (PR_MANA);
+				msg_print("You sense a great loss.");
+			}
+			else if (p_ptr->msp == 0)
+			{
+				/* no sense saying this unless you never have mana */
+				msg_format("Suddenly you feel glad you're a mere %s",
+				           spp_ptr->title + c_name);
+			}
+			else
+			{
+				msg_print("Your head feels dizzy for a moment.");
+			}
+			break;
+		}
+
 		/* Trap of Stat Scramble - like the nexus effect, by Amy */
 	case TRAP_OF_STAT_SCRAMBLE:
 		{
@@ -7156,6 +7191,42 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap123 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY124:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap124 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY125:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap125 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY126:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap126 = TRUE;
 			calc_bonuses(FALSE);
 
 			break;			
@@ -10798,7 +10869,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(123)) {
+	switch (randint(126)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -11167,6 +11238,15 @@ void give_random_nastytrap_effect(void)
 			break;
 		case 123:
 			p_ptr->nastytrap123 = TRUE;
+			break;
+		case 124:
+			p_ptr->nastytrap124 = TRUE;
+			break;
+		case 125:
+			p_ptr->nastytrap125 = TRUE;
+			break;
+		case 126:
+			p_ptr->nastytrap126 = TRUE;
 			break;
 
 	}

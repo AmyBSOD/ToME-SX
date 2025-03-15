@@ -1602,6 +1602,7 @@ struct player_type
 	s16b tim_bombsquad;     /* Timed bombsquad */
 	s16b tim_dancing;       /* Timed dancing */
 	s16b am_dancing;        /* Bonus from dancing */
+	s16b tim_manavoid;      /* Timed manavoid */
 
 	s16b tim_project;       /* Timed project upon melee blow */
 	s16b tim_project_dam;
@@ -2035,9 +2036,9 @@ struct player_type
 	bool nastytrap121; /* no prayer trap - cannot pray to the gods with the "pray" command (but still cast prayer spells) */
 	bool nastytrap122; /* powerless trap - U powers don't work */
 	bool nastytrap123; /* inability trap - abilities like create ammo or spread blows don't work */
-	bool nastytrap124;
-	bool nastytrap125;
-	bool nastytrap126;
+	bool nastytrap124; /* hard mode trap - like the hard mode option */
+	bool nastytrap125; /* monster window trap - the monster window doesn't display anything */
+	bool nastytrap126; /* intermittent mana trap - you get manavoided every now and then */
 	bool nastytrap127;
 	bool nastytrap128;
 	bool nastytrap129;

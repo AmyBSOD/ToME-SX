@@ -2704,6 +2704,58 @@ bool set_tim_bombsquad(int v)
 }
 
 /*
+ * Set "p_ptr->tim_manavoid", notice observable changes
+ */
+bool set_tim_manavoid(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_manavoid)
+		{
+			msg_print("Your mana was voided!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_manavoid)
+		{
+			msg_print("You're capable of regenerating mana again.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_manavoid = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
  * Set "p_ptr->tim_dancing", notice observable changes
  */
 bool set_tim_dancing(int v, int dancebonus)

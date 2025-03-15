@@ -1708,6 +1708,7 @@ extern bool set_tim_sniper(int v);
 extern bool set_tim_rapidfire(int v);
 extern bool set_tim_bombsquad(int v);
 extern bool set_tim_dancing(int v, int dancebonus);
+extern bool set_tim_manavoid(int v);
 extern bool tgp_pt(int *x, int * y);
 extern bool tgt_pt (int *x, int *y);
 extern bool gain_random_corruption(int choose_mut);

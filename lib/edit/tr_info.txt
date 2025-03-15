@@ -2502,6 +2502,26 @@ I:40:2:50:4:20:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:512:Trap of Tanker Drain
+I:4:100:50:3:4:0d0:r
+D:You suddenly don't feel so clear anymore...
+F:FLOOR | CHEST | DOOR
+
+N:513:Hard Mode Trap
+I:25:2:50:4:5:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:514:Monster Window Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:515:Intermittent Mana Trap
+I:32:2:50:4:12:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 
