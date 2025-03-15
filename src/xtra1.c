@@ -3930,7 +3930,6 @@ void calc_bonuses(bool silent)
 	if (p_ptr->tim_savmus)
 	{
 		p_ptr->skill_sav += p_ptr->am_savmus;
-		msg_format("sav %d, bonus %d", p_ptr->skill_sav, p_ptr->am_savmus);
 	}
 
 	if (p_ptr->tim_minersong)
