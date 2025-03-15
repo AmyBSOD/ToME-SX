@@ -25,7 +25,7 @@ in asking for her help without offending her!
 
 There is a special book called the "Tome of Chaos" which 
 contains instructions for the procedure for each of the prayers Ingeborg will
-grant. There are NUMBER prayers all told, which are:
+grant. There are five prayers all told, which are:
 1. [[[[[BEverything Burns] (Level 1)
    Deals fire damage to every monster in your field of view.
 2. [[[[[BWild Magic] (Level 20)
