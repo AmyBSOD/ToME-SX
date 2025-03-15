@@ -343,7 +343,7 @@
  * Store constants
  */
 #define STORE_INVEN_MAX 255             /* Max number of discrete objs in inven */
-#define STORE_CHOICES   56              /* Number of items to choose stock from */
+#define STORE_CHOICES   100             /* Number of items to choose stock from */
 #define STORE_OBJ_LEVEL 5               /* Magic Level for normal stores */
 #define STORE_TURNOVER  36              /* Normal shop turnover, per day */
 #define STORE_MIN_KEEP  12              /* Min slots to "always" keep full */
@@ -2116,8 +2116,9 @@
 #define SV_POTION2_CURE_WATER            18
 #define SV_POTION2_CURE_CORRUPTION       19
 #define SV_POTION2_AMNESIA               20
+#define SV_POTION2_REPELLING             21
 
-#define SV_POTION2_LAST                  20
+#define SV_POTION2_LAST                  21
 
 /* The "sval" codes for TV_FOOD */
 #define SV_FOOD_POISON                   0

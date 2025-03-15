@@ -533,7 +533,7 @@ F:RANDOM_GAIN
 ################################## SNEAKINESS SKILLS ###############################
 
 N:35:Sneakiness
-D:General ability at the sneakiness skills.
+D:General ability at the sneakiness skills and avoiding ambushes.
 D:It also affects the searching abilities
 I:0
 F:RANDOM_GAIN

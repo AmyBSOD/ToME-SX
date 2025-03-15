@@ -559,9 +559,10 @@ void wilderness_gen(int refresh)
 	if (!refresh)
 	{
 		/* randomize amount a bit --Amy */
-		int lim = (generate_encounter == TRUE) ? (30 + randint(60)) : (MIN_M_ALLOC_TN + randint(MIN_M_ALLOC_TN));
-		if (randint(10) == 2) lim += randint(MIN_M_ALLOC_TN);
-		if (randint(100) == 2) lim += randint(60);
+		int lim = (generate_encounter == TRUE) ? (randint(30) + randint(60)) : (MIN_M_ALLOC_TN + randint(MIN_M_ALLOC_TN));
+		if (randint(20) == 2) lim += randint(MIN_M_ALLOC_TN);
+		if (randint(100) == 2) lim += randint(15);
+		if (randint(1000) == 2) lim += randint(60);
 
 
 		/*

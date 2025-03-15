@@ -16,6 +16,8 @@
 
 # Amy note: ***ALWAYS*** keep stores.lua in sync when adding new shops !!!!!!!!!!!!!!!!
 
+# !!!!! ATTENTION !!!!! the amount of items a store can offer is STORE_CHOICES in defines.h
+
 # N:<index>:<name>
 # I:<proba>:<item name> - for making the store sell a specific item
 # T:<proba>:<tval>:<sval> - for making the store sell a TV_something item class (sval 256 = wildcard?)
@@ -248,6 +250,7 @@ I:100:Recharging
 I:100:Satisfy Hunger
 I:100:Satisfy Hunger
 I:100:Satisfy Hunger
+I:20:Repelling
 T:5:70:256
 T:5:71:256
 A:0:62:1:2:3:4

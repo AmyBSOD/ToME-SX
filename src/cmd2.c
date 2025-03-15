@@ -2767,19 +2767,21 @@ static void do_cmd_walk_jump(int pickup, bool disarm)
 	if ((p_ptr->wild_mode &&
 	                magik(wf_info[wild_map[p_ptr->py][p_ptr->px].feat].level - (p_ptr->lev * 2))) || (p_ptr->wild_mode && (rand_int(p_ptr->nastytrap75 ? 10 : 50) < 1) ) )
 	{
-		/* Go into large wilderness view */
-		p_ptr->wilderness_x = p_ptr->px;
-		p_ptr->wilderness_y = p_ptr->py;
-		energy_use = 100;
-		change_wild_mode();
+		if (ambush_ok()) {
+			/* Go into large wilderness view */
+			p_ptr->wilderness_x = p_ptr->px;
+			p_ptr->wilderness_y = p_ptr->py;
+			energy_use = 100;
+			change_wild_mode();
 
-		/* HACk -- set the encouter flag for the wilderness generation */
-		generate_encounter = TRUE;
-		p_ptr->oldpx = MAX_WID / 2;
-		p_ptr->oldpy = MAX_HGT / 2;
+			/* HACk -- set the encouter flag for the wilderness generation */
+			generate_encounter = TRUE;
+			p_ptr->oldpx = MAX_WID / 2;
+			p_ptr->oldpy = MAX_HGT / 2;
 
-		/* Inform the player of his horrible fate :=) */
-		msg_print("You are ambushed!");
+			/* Inform the player of his horrible fate :=) */
+			msg_print("You are ambushed!");
+		}
 	}
 
 	/* Cancel repeat unless we may continue */
@@ -4836,10 +4838,12 @@ void do_cmd_unwalk()
 				ambush_flag = FALSE;
 
 				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
-					generate_encounter = TRUE;
-					p_ptr->oldpx = MAX_WID / 2;
-					p_ptr->oldpy = MAX_HGT / 2;
-					msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					if (ambush_ok()) {
+						generate_encounter = TRUE;
+						p_ptr->oldpx = MAX_WID / 2;
+						p_ptr->oldpy = MAX_HGT / 2;
+						msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					}
 
 				}
 			}
@@ -4853,10 +4857,12 @@ void do_cmd_unwalk()
 				ambush_flag = FALSE;
 
 				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
-					generate_encounter = TRUE;
-					p_ptr->oldpx = MAX_WID / 2;
-					p_ptr->oldpy = MAX_HGT / 2;
-					msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					if (ambush_ok()) {
+						generate_encounter = TRUE;
+						p_ptr->oldpx = MAX_WID / 2;
+						p_ptr->oldpy = MAX_HGT / 2;
+						msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					}
 
 				}
 			}
@@ -4870,10 +4876,12 @@ void do_cmd_unwalk()
 				ambush_flag = FALSE;
 
 				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
-					generate_encounter = TRUE;
-					p_ptr->oldpx = MAX_WID / 2;
-					p_ptr->oldpy = MAX_HGT / 2;
-					msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					if (ambush_ok()) {
+						generate_encounter = TRUE;
+						p_ptr->oldpx = MAX_WID / 2;
+						p_ptr->oldpy = MAX_HGT / 2;
+						msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					}
 
 				}
 			}
@@ -4887,10 +4895,12 @@ void do_cmd_unwalk()
 				ambush_flag = FALSE;
 
 				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
-					generate_encounter = TRUE;
-					p_ptr->oldpx = MAX_WID / 2;
-					p_ptr->oldpy = MAX_HGT / 2;
-					msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					if (ambush_ok()) {
+						generate_encounter = TRUE;
+						p_ptr->oldpx = MAX_WID / 2;
+						p_ptr->oldpy = MAX_HGT / 2;
+						msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					}
 
 				}
 			}
@@ -4903,10 +4913,12 @@ void do_cmd_unwalk()
 				ambush_flag = FALSE;
 
 				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
-					generate_encounter = TRUE;
-					p_ptr->oldpx = MAX_WID / 2;
-					p_ptr->oldpy = MAX_HGT / 2;
-					msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					if (ambush_ok()) {
+						generate_encounter = TRUE;
+						p_ptr->oldpx = MAX_WID / 2;
+						p_ptr->oldpy = MAX_HGT / 2;
+						msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					}
 
 				}
 			}
@@ -4919,10 +4931,12 @@ void do_cmd_unwalk()
 				ambush_flag = FALSE;
 
 				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
-					generate_encounter = TRUE;
-					p_ptr->oldpx = MAX_WID / 2;
-					p_ptr->oldpy = MAX_HGT / 2;
-					msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					if (ambush_ok()) {
+						generate_encounter = TRUE;
+						p_ptr->oldpx = MAX_WID / 2;
+						p_ptr->oldpy = MAX_HGT / 2;
+						msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					}
 
 				}
 			}
@@ -4935,10 +4949,12 @@ void do_cmd_unwalk()
 				ambush_flag = FALSE;
 
 				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
-					generate_encounter = TRUE;
-					p_ptr->oldpx = MAX_WID / 2;
-					p_ptr->oldpy = MAX_HGT / 2;
-					msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					if (ambush_ok()) {
+						generate_encounter = TRUE;
+						p_ptr->oldpx = MAX_WID / 2;
+						p_ptr->oldpy = MAX_HGT / 2;
+						msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					}
 
 				}
 			}
@@ -4951,10 +4967,12 @@ void do_cmd_unwalk()
 				ambush_flag = FALSE;
 
 				if (magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2)) || (rand_int(p_ptr->nastytrap75 ? 6 : 30) < 1) ) {
-					generate_encounter = TRUE;
-					p_ptr->oldpx = MAX_WID / 2;
-					p_ptr->oldpy = MAX_HGT / 2;
-					msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					if (ambush_ok()) {
+						generate_encounter = TRUE;
+						p_ptr->oldpx = MAX_WID / 2;
+						p_ptr->oldpy = MAX_HGT / 2;
+						msg_print("All of a sudden, a huge squad of monsters appears and ambushes you!");
+					}
 
 				}
 			}

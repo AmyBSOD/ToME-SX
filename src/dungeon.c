@@ -981,6 +981,21 @@ bool psychometry(void)
 	return (TRUE);
 }
 
+/*
+ * can the player be ambushed? --Amy
+ * repel potions prevent it for a while like in Pokemon
+ * sneakiness skill reduces the risk 
+ */
+bool ambush_ok(void)
+{
+	if (p_ptr->tim_repelling) return FALSE;
+
+	if (get_skill(SKILL_SNEAK) >= 1) {
+		if (randint(20 + get_skill(SKILL_SNEAK)) > 20) return FALSE;
+	}
+
+	return TRUE;
+}
 
 /*
  * Does an object decay?
@@ -2603,6 +2618,12 @@ static void process_world(void)
 	if (p_ptr->tim_manavoid)
 	{
 		(void)set_tim_manavoid(p_ptr->tim_manavoid - 1);
+	}
+
+	/* Repelling */
+	if (p_ptr->tim_repelling)
+	{
+		(void)set_tim_repelling(p_ptr->tim_repelling - 1);
 	}
 
 	/* Timed infra-vision */
@@ -4400,15 +4421,17 @@ static void process_command(void)
 				if ((p_ptr->wild_mode &&
 	                magik(wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level - (p_ptr->lev * 2))) || (p_ptr->wild_mode && (rand_int(p_ptr->nastytrap75 ? 4 : 20) < 1) ) ) {
 
-					change_wild_mode();
+					if (ambush_ok()) {
+						change_wild_mode();
 
-					/* HACk -- set the encouter flag for the wilderness generation */
-					generate_encounter = TRUE;
-					p_ptr->oldpx = MAX_WID / 2;
-					p_ptr->oldpy = MAX_HGT / 2;
+						/* HACk -- set the encouter flag for the wilderness generation */
+						generate_encounter = TRUE;
+						p_ptr->oldpx = MAX_WID / 2;
+						p_ptr->oldpy = MAX_HGT / 2;
 
-					/* Inform the player of his horrible fate :=) */
-					msg_print("The monsters have been waiting for you, and now you're ambushed. Bwarharharharhar!");
+						/* Inform the player of his horrible fate :=) */
+						msg_print("The monsters have been waiting for you, and now you're ambushed. Bwarharharharhar!");
+					}
 
 				}
 

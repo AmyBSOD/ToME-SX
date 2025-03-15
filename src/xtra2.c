@@ -2756,6 +2756,58 @@ bool set_tim_manavoid(int v)
 }
 
 /*
+ * Set "p_ptr->tim_repelling", notice observable changes
+ */
+bool set_tim_repelling(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_repelling)
+		{
+			msg_print("You're covered with repelling incense!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_repelling)
+		{
+			msg_print("The repelling incense has faded.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_repelling = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
  * Set "p_ptr->tim_dancing", notice observable changes
  */
 bool set_tim_dancing(int v, int dancebonus)

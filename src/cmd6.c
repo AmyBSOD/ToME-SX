@@ -2537,6 +2537,14 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 				break;
 			}
 
+		case SV_POTION2_REPELLING:
+			{
+				set_tim_repelling(p_ptr->tim_repelling + 1000);
+				ident = TRUE;
+
+				break;
+			}
+
 		default:
 			{
 				break;

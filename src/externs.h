@@ -906,6 +906,7 @@ extern byte value_check_aux2_magic(object_type *o_ptr);
 extern byte select_sense(object_type *o_ptr, bool ok_combat, bool ok_magic, bool ok_misc);
 extern void play_game(bool new_game);
 extern bool psychometry(void);
+extern bool ambush_ok(void);
 
 /* files.c */
 extern void html_screenshot(cptr name);
@@ -1709,6 +1710,7 @@ extern bool set_tim_rapidfire(int v);
 extern bool set_tim_bombsquad(int v);
 extern bool set_tim_dancing(int v, int dancebonus);
 extern bool set_tim_manavoid(int v);
+extern bool set_tim_repelling(int v);
 extern bool tgp_pt(int *x, int * y);
 extern bool tgt_pt (int *x, int *y);
 extern bool gain_random_corruption(int choose_mut);

@@ -8371,6 +8371,17 @@ W:10:0:0:5000
 A:10/1
 D:A piece of paper, inscribed with runes which will summon some creature to your aid.
 
+N:1022:Repelling
+G:!:d
+I:72:21:0
+W:10:0:0:1000
+A:10/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Quaffing this potion protects you from ambushes for a limited amount of time.
+D:Since you can't quaff while in the world map, the best way of using it is by
+D:quaffing it while in a surface area just before you switch to world map mode.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

@@ -1603,6 +1603,7 @@ struct player_type
 	s16b tim_dancing;       /* Timed dancing */
 	s16b am_dancing;        /* Bonus from dancing */
 	s16b tim_manavoid;      /* Timed manavoid */
+	s16b tim_repelling;     /* Timed repelling */
 
 	s16b tim_project;       /* Timed project upon melee blow */
 	s16b tim_project_dam;
