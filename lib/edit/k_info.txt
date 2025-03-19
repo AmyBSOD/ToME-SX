@@ -4523,6 +4523,7 @@ I:72:18:80
 W:30:0:0:0
 A:30/6
 P:0:1d1:0:0:0
+F:FOUNTAIN
 D:It is a magical component that can purify water.
 D:Certain large impurities can be cleaned up by dropping the potion in them,
 D:while smaller ones can be cleaned by quaffing the potion while standing in the muck.
@@ -5176,7 +5177,7 @@ I:72:1:0
 W:5:0:0:500
 A:1/3:5/1:10/1
 P:0:1d1:0:0:0
-F:FULL_NAME | EASY_KNOW
+F:FULL_NAME | EASY_KNOW | FOUNTAIN
 D:This concoction can transform your body for a short period of time.
 
 # XXX 606 -> 617

@@ -831,6 +831,9 @@ static void place_switcher(int y, int x)
  */
 static void place_fountain(int y, int x)
 {
+	/* there's just too many fountains IMHO, so we're greatly reducing their rate of occurrence --Amy */
+	if (magik(75)) return;
+
 	cave_type *c_ptr = &cave[y][x];
 	int svals[SV_POTION_LAST + SV_POTION2_LAST + 1], maxsval = 0, k;
 
@@ -859,7 +862,9 @@ static void place_fountain(int y, int x)
 	else
 	{
 		cave_set_feat(y, x, FEAT_FOUNTAIN);
-		c_ptr->special2 = damroll(3, 4);
+		/* wtf! far too many on average! let's nerf that! --Amy */
+		if (randint(10) != 1) c_ptr->special2 = damroll(1, 3) + 1;
+		else c_ptr->special2 = damroll(3, 4);
 	}
 
 	c_ptr->special = svals[rand_int(maxsval)];
@@ -9362,6 +9367,7 @@ static bool cave_gen(void)
 
 			/* Place 0 or 1 down shafts near some walls */
 			if (!(dungeon_flags2 & DF2_NO_SHAFT)) alloc_stairs((dungeon_flags1 & DF1_FLAT) ? FEAT_WAY_MORE : FEAT_SHAFT_DOWN, rand_range(0, 1), 3, 0);
+			else alloc_stairs((dungeon_flags1 & DF1_FLAT) ? FEAT_WAY_MORE : FEAT_MORE, rand_range(0, 1), 3, 0);
 		}
 
 		if ((dun_level > d_ptr->mindepth) || ((dun_level == d_ptr->mindepth) && (!(dungeon_flags1 & DF1_NO_UP))))
@@ -9371,6 +9377,7 @@ static bool cave_gen(void)
 
 			/* Place 0 or 1 up shafts near some walls */
 			if (!(dungeon_flags2 & DF2_NO_SHAFT)) alloc_stairs((dungeon_flags1 & DF1_FLAT) ? FEAT_WAY_LESS : FEAT_SHAFT_UP, rand_range(0, 1), 3, 0);
+			else alloc_stairs((dungeon_flags1 & DF1_FLAT) ? FEAT_WAY_LESS : FEAT_LESS, rand_range(0, 1), 3, 0);
 		}
 	}
 
