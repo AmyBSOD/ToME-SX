@@ -4264,6 +4264,24 @@ void do_cmd_throw(void)
 				tdam = tot_dam_aux(q_ptr, tdam, m_ptr, &special);
 				tdam = critical_shot(q_ptr->weight, q_ptr->to_h, tdam, o_ptr->sval == SV_BOULDER ? SKILL_BOULDER : SKILL_ARCHERY);
 
+				/* Amy edit: spikes */
+				if (k_info[q_ptr->k_idx].tval == TV_SPIKE) {
+					int spikebonus = get_skill_scale(SKILL_ARCHERY, 5);
+					if (spikebonus > 1) spikebonus = randint(spikebonus);
+					if (spikebonus < 0) spikebonus = 0;
+
+					tdam += spikebonus;
+
+					if (p_ptr->skill_tht > 0) {
+						int spikemult = p_ptr->skill_tht;
+						if (spikemult > 1) spikemult = randint(spikemult);
+						if (spikemult > 0) {
+							tdam *= (50 + spikemult);
+							tdam /= 50;
+						}
+					}
+				}
+
 				/* No negative damage */
 				if (tdam < 0) tdam = 0;
 
