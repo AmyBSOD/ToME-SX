@@ -482,6 +482,8 @@ static bool object_easy_know(int i)
 	case TV_ROD:
 	case TV_ROD_MAIN:
 	case TV_BATERIE:
+	case TV_RUNE1:
+	case TV_RUNE2:
 		{
 			if (k_ptr->flags3 & TR3_NORM_ART)
 				return ( FALSE );
