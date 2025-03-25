@@ -5784,6 +5784,7 @@ static void dungeon(void)
 {
 	/* Reset various flags */
 	hack_mind = FALSE;
+	char dummy[5];
 
 	/* Not leaving */
 	p_ptr->leaving = FALSE;
@@ -5849,6 +5850,10 @@ static void dungeon(void)
 	/* no connecting stairs on special levels */
 	if (!(dungeon_flags2 & DF2_NO_STAIR)) create_down_stair = create_up_stair = FALSE;
 	if (!(dungeon_flags2 & DF2_NO_STAIR)) create_down_shaft = create_up_shaft = FALSE;
+
+	/* don't place a fucking staircase every time you re-enter a special level!!! --Amy */
+	if (get_dungeon_save(dummy)) create_down_stair = create_up_stair = FALSE;
+	if (get_dungeon_save(dummy)) create_down_shaft = create_up_shaft = FALSE;
 
 	/* Make a stairway. */
 	if ((create_up_stair || create_down_stair ||

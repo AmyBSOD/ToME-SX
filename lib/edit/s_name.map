@@ -5,6 +5,9 @@
 
 %:special.txt
 
+# up staircase
+F:<:6:0
+
 # Great Storm Wyrm on normal floor
 F:a:1:0:728
 
@@ -102,7 +105,7 @@ D:X.X%XXXIX.X..XX..XXccXLX^XlglllLgllXV%^^^%VX
 D:X.Xa.6XIX.X.XX..XXcccXLX^XlllllXXXXXV%^a^%VX
 D:X+XXX.XIX.X.X99XXccccXLX^XXXXXXX888XV%8^8%VX
 D:X%%%Xa%.X.%8X99XcccccXLX^^^^^^4X...XV%%%%%VX
-D:X%.%XXXXXXXXXXXXIXXXXXLXXXXXXXXX...XVVVVVVVX
+D:X%<%XXXXXXXXXXXXIXXXXXLXXXXXXXXX...XVVVVVVVX
 D:X.%%+..........................G..4X...F...X
 D:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 

@@ -5,6 +5,9 @@
 
 %:special.txt
 
+# up staircase
+F:<:6:0
+
 ### Gauranteed monsters
 
 # Quylthulg on normal floor
@@ -63,7 +66,7 @@ D:X*****...@%...aX.X@XX...XX**%%%%%%X.VVVV.X.X..XX..........5^^........X
 D:X........@%...aX.XXX.....XX*%%%%%%X9.VV..X.XX..XX.........F^^.......dX
 D:X%X......@%...aX.X........XIXXXXXXXXXXX..X..XX..XXXXIXXXXXXXXXXXXXXXXX
 D:X.XXX....@%...aX.X..........XXX..>X...X..X...XX..XXXaXaXaXaXaXaXaXaXaX
-D:X...XXX..@%...aI.X..........XXX7..X...D..X.X..XX..XX.................X
+D:X...XXX..@%...aI.X..........XXX7..X<..D..X.X..XX..XX.................X
 D:X.....XXX@%...aX.X..........XXXXXXXXXXX..X.XX..XX..XX................X
 D:X.......XXX...aX.X..........XXXXXXXaG....X..XX..XX..XX...............X
 D:X..X......XXX.XX%XX^^^^^X...XXXXXXXaG....X...XX..XX..XX..............X

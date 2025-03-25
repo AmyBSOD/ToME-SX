@@ -753,6 +753,7 @@ bool new_player_spot(int branch)
 	if (dungeon_stair && !(dungeon_flags2 & DF2_NO_STAIR) && dun_level &&
 	                (!is_quest(dun_level) || (old_dun_level < dun_level)) && !branch)
 	{
+
 		if (old_dun_level < dun_level)
 		{
 			place_up_stairs(p_ptr->py , p_ptr->px);

@@ -4,6 +4,9 @@
 
 %:special.txt
 
+# up staircase
+F:<:6:0
+
 #Y:40:118:126:149:264:238:285:313:330:404:15:0:0:35:22
 # Shrieker
 F:a:1:0:40
@@ -82,7 +85,7 @@ D:X.l.D.c..dbbXXa...aXXX..d...D.X.f.f.XXXX.DdefddbcbdbddX.l.X
 D:X.l.X...c.XXX..g.g...XXX...bX.X.....D..XGXXeegcefdcefcX.l.X
 D:X.l.Xbb..aXg.gggjgggg.gX.bbaXDXaaa..XXjIa8XacbddbegbdaX.l.X
 D:X.l.XXXXXXXXDXXXXXXXXDXXXXXXXaXXXXXXXXXXXXXXXXXXXXXXXXX.l.X
-D:X.l........................Da.aD........................l.X
+D:X.l........................Da<aD........................l.X
 D:X.l.XXXXXXXXXXXXXXXXXXXXXXXXXaXXXXXXXXXXXXXXXXXXXXXXXXX.l.X
 D:X.l.....eeeeee.........fffXXXDXXXfff.........eeeeee.....l.X
 D:X.l.....eeeeee.........fffX.....Xfff.........eeeeee.....l.X

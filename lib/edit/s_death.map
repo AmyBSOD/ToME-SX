@@ -5,6 +5,9 @@
 
 %:special.txt
 
+# up staircase
+F:<:6:0
+
 ### Guaranteed monsters
 # Snaga on normal floor
 F:a:1:0:118
@@ -96,7 +99,7 @@ D:X  X......X         X.g.....XXXXXX       X..D....g..e..Dd.XXXXXXXXXXXX   % XXX
 D:X  X......X         X...d...DeeeeX       X..XXXXXXXXXXXX..X              +  X...X    XXXXXXXX..X....X                X...X    X
 D:X  X......X         X.....e.XXXXXX       XXXX          XXXX              %  X...XXXXXX X....D..D....X         XXXXXXXXDXDXXXX X
 D:X  XXXDDXXXXXXXXXXXXXX+XXXXXX                                            %  X....X...X X..XXX..XXXXXXXXX      X.....a..X....X X
-D:X    X........%........X                                                 %+%%....D...XXXXXX.D..D.....+.X      X........X....X X
+D:X    X........%........X                                                 %+%%....D...XXXXXX.D..D.....+.X      X........X...<X X
 D:X    XXXXXXXXXXXXXXXXXXX                                                    XXXXXX..........X..X.....XXX      XXXXXXXXXXXXXXX X
 D:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 

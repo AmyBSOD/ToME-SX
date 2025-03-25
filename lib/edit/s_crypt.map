@@ -5,6 +5,9 @@
 
 %:special.txt
 
+# up staircase
+F:<:6:0
+
 ### Guaranteed Monsters
 # Vampire on normal floor
 F:a:1:0:432
@@ -76,7 +79,7 @@ D:X^^^XXe..X...XX=-XXXIXXXbXX.XXbXX...XX=-XXbX.XaaaXXXIGX
 D:X^^XXbbb.XGGG.XX=-XXIIXXbbXDXbbX...XX=-XXbbX.XaaaaXXIGX
 D:X^XXcbab.XVdG.cXX=-XXXIXXabXbaXX.XXX=-XXbbbX.XaaaaaXXfX
 D:X%XbbbbbbXVWG.%.XX.DbXDXXXbXbXXXDXbD.XX....G.XGGGGGGX%X
-D:XX.bababa%eWG.%.BXXXbcbbbbX.XbbbbcbXXXC...fX.%.......XX
+D:XX.bababa%eWG.%.BXXXbcbbbbX<XbbbbcbXXXC...fX.%.......XX
 D:X%XbbbbbbXVWG.%.XX.DbXDXXXbXbXXXDXbD.XX....G.XGGGGGGX%X
 D:X8XXcbab.XVdG.cXX=-XXX.XXabXbaXXLXXX=-XXbbbX.XaaaaaXX.X
 D:X88XXbbb.XGGG.XX=-XX...XbbXDXbbXLLLXX=-XXbbX.XaaaaXXX.X
