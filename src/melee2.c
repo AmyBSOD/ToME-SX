@@ -4619,8 +4619,9 @@ bool make_attack_spell(int m_idx)
 			{
 				if (!direct) break;
 				disturb(1, 0);
-				if (blind) msg_format("%^s mumbles, and then cackles evilly.", m_name);
-				else msg_format("%^s casts a spell and cackles evilly.", m_name);
+				if (blind) cmsg_format(TERM_ORANGE, "%^s mumbles, and then cackles evilly.", m_name);
+				else cmsg_format(TERM_ORANGE, "%^s casts a spell and cackles evilly.", m_name);
+				msg_print(NULL);
 				(void)trap_creation();
 				break;
 			}
