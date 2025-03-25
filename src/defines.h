@@ -2105,7 +2105,9 @@
 #define SV_POTION_INVULNERABILITY       62
 #define SV_POTION_NEW_LIFE              63
 
-#define SV_POTION_LAST                  63
+#define SV_POTION_TRAINING              64
+
+#define SV_POTION_LAST                  64
 
 /* The "sval" codes for TV_POTION2 */
 #define SV_POTION2_MIMIC                 1

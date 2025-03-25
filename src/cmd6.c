@@ -2442,6 +2442,13 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 				break;
 			}
 
+		case SV_POTION_TRAINING:
+			{
+				do_get_new_skill(0);
+
+				break;
+			}
+
 		default:
 			{
 				break;

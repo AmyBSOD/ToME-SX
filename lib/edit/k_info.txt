@@ -8386,6 +8386,18 @@ D:Quaffing this potion protects you from ambushes for a limited amount of time.
 D:Since you can't quaff while in the world map, the best way of using it is by
 D:quaffing it while in a surface area just before you switch to world map mode.
 
+N:1023:& Potion~ of Training
+G:!:d
+I:71:64:200
+W:90:0:0:100000
+A:90/25
+P:0:1d1:0:0:0
+T:71:49
+F:NORM_ART | FULL_NAME
+F:IGNORE_ACID | IGNORE_FIRE | IGNORE_COLD | IGNORE_ELEC
+D:This old potion is supposed to grant more skill training
+D:to its user.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
