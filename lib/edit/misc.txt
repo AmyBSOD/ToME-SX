@@ -46,7 +46,7 @@ M:A:560
 M:s:10
 
 # Maximum number of ego-items in e_info.txt
-M:E:412
+M:E:416
 
 # Maximum number of dungeon types in d_info.txt
 M:D:70
