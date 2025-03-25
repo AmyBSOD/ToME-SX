@@ -1540,6 +1540,9 @@ static void store_create(void)
 		/* Only if not already done */
 		if (!obj_all_done)
 		{
+			int luckboost = luck(-3, 3);
+			if (luckboost < 0) luckboost = 0;
+
 			/* Don't allow k_info artifacts */
 			if (k_info[i].flags3 & TR3_NORM_ART)
 				continue;
@@ -1554,8 +1557,12 @@ static void store_create(void)
 			/* Create a new object of the chosen kind */
 			object_prep(q_ptr, i);
 
-			/* Apply some "low-level" magic (no artifacts) */
-			apply_magic(q_ptr, level, FALSE, FALSE, FALSE);
+			/* Apply some "low-level" magic (no artifacts)
+			 * Amy edit: come on, stores shouldn't suck so godawfully much. have more ego items, please!
+			 * especially if your luck is high! */
+			if (magik(2 + luckboost)) apply_magic(q_ptr, level, FALSE, TRUE, TRUE);
+			else if (magik(5)) apply_magic(q_ptr, level, FALSE, TRUE, FALSE);
+			else apply_magic(q_ptr, level, FALSE, FALSE, FALSE);
 
 			/* Hack -- Charge lite's */
 			if (q_ptr->tval == TV_LITE)

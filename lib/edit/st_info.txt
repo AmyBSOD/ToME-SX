@@ -366,7 +366,7 @@ I:20:Divination
 I:20:Divination
 I:20:Divination
 I:20:Divination
-A:0:62:2:0:8:0
+A:0:62:2:0:8:4
 O:3:73:74:75
 G:+:B
 F:RANDOM
@@ -374,7 +374,7 @@ W:2
 
 N:13:Library
 I:100:Identify
-A:0:62:14:15:16:2
+A:4:62:14:15:16:2
 O:4:76:77:78
 G:+:U
 W:2
@@ -470,7 +470,7 @@ W:0
 
 N:28:Library
 I:100:Identify
-A:0:62:14:15:16:2
+A:4:62:14:15:16:2
 O:58:109:110:111
 G:+:U
 W:2
@@ -726,7 +726,7 @@ W:255
 
 N:54:Recaller
 I:100:Word of Recall
-A:33:62:1:2:3:0
+A:33:62:1:2:3:4
 O:8:9:10:11
 G:+:b
 F:RANDOM | COMMON
@@ -798,10 +798,10 @@ G:+:s
 W:255
 
 ## Library quest in Minas Anor
-
+## edit by Amy: town history is useless anyway, need to be able to steal!
 N:60:Library
 I:100:Identify
-A:61:62:14:15:16:2
+A:61:62:14:4:16:2
 O:4:76:77:78
 G:+:U
 W:2
