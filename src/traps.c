@@ -468,6 +468,9 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_OF_SHOES:
 		case TRAP_OF_SHOES_II:
 		case TRAP_OF_SHOES_III:
+		case TRAP_OF_SHIT_I:
+		case TRAP_OF_SHIT_II:
+		case TRAP_OF_SHIT_III:
 		case TRAP_OF_UNKNOWN:
 		case TRAP_OF_UNKNOWN_OOD:
 		case TRAP_OF_UNKNOWN_OOD_RARE:
@@ -612,6 +615,9 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_OF_UNKNOWN:
 		case TRAP_OF_UNKNOWN_OOD:
 		case TRAP_OF_UNKNOWN_OOD_RARE:
+		case TRAP_OF_SHIT_I:
+		case TRAP_OF_SHIT_II:
+		case TRAP_OF_SHIT_III:
 		case TRAP_NASTY1:
 		case TRAP_NASTY2:
 		case TRAP_NASTY3:
@@ -3567,6 +3573,32 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* as a shout-out to the ridiculous EAT_LITE bug... reduce pval of your light, by Amy */
+	case TRAP_OF_BUGGED_LIGHT:
+		{
+			msg_print("Suddenly the lights around you are flashing!");
+
+			object_type *o_ptr;
+
+			/* Access the lite */
+			o_ptr = &p_ptr->inventory[INVEN_LITE];
+
+			/* Drain fuel */
+			if (o_ptr->pval > 0)
+			{
+				/* Reduce fuel */
+				o_ptr->pval--;
+
+				msg_print("Something seems wrong with your light source...");
+				ident = TRUE;
+
+				/* Window stuff */
+				p_ptr->window |= (PW_EQUIP);
+			}
+
+			break;
+		}
+
 		/* Slowing Trap */
 	case TRAP_OF_SLOW_I:
 		{
@@ -3777,6 +3809,36 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_FATE:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			gain_fate(0);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Fate.");
+
+			break;
+		}
+
 		/* Bowel Cramps Trap */
 	case TRAP_OF_BOWEL_CRAMPS:
 		{
@@ -3790,6 +3852,47 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				(void)set_paralyzed(p_ptr->paralyzed + rand_int(dun_level) + 6);
 			}
 			ident = TRUE;
+			break;
+		}
+
+		/* trap that dismisses all your pets/companions, by Amy */
+	case TRAP_OF_DISMISS_PETS:
+		{
+			int pets = 0, pet_ctr = 0;
+			monster_type *m_ptr;
+			int Dismissed = 0;
+
+			ident = FALSE;
+
+			for (pet_ctr = m_max - 1; pet_ctr >= 1; pet_ctr--)
+			{
+				/* Access the monster */
+				m_ptr = &m_list[pet_ctr];
+
+				if (m_ptr->status >= MSTATUS_FRIEND) pets++;
+			}
+
+			msg_print("Suddenly, a call is heard in the distance...");
+
+			for (pet_ctr = m_max - 1; pet_ctr >= 1; pet_ctr--)
+			{
+				monster_race *r_ptr;
+
+				/* Access the monster */
+				m_ptr = &m_list[pet_ctr];
+				r_ptr = &r_info[m_ptr->r_idx];
+
+				if ((!(r_ptr->flags7 & RF7_NO_DEATH)) && ((m_ptr->status == MSTATUS_PET) || (m_ptr->status == MSTATUS_FRIEND) || (m_ptr->status == MSTATUS_COMPANION)))	/* Get rid of it! */
+				{
+					delete_monster_idx(pet_ctr);
+					Dismissed++;
+				}
+			}
+			if (Dismissed) {
+				msg_format("%d pet%s have been dismissed.", Dismissed, (Dismissed == 1 ? "" : "s"));
+				ident = TRUE;
+			}
+
 			break;
 		}
 
@@ -4223,6 +4326,110 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_EXP_DRAIN_I:
+		{
+			ident = TRUE;
+
+			if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 95))
+			{
+				msg_print("You keep hold of your life force!");
+			}
+			else
+			{
+				s32b d = damroll(10, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+				if (p_ptr->hold_life && !p_ptr->nastytrap95)
+				{
+					msg_print("You feel your life slipping away!");
+					lose_exp(d / 10);
+				}
+				else
+				{
+					msg_print("You feel your life draining away!");
+					lose_exp(d);
+				}
+			}
+
+			break;
+		}
+
+	case TRAP_OF_EXP_DRAIN_II:
+		{
+			ident = TRUE;
+
+			if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 90))
+			{
+				msg_print("You keep hold of your life force!");
+			}
+			else
+			{
+				s32b d = damroll(20, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+				if (p_ptr->hold_life && !p_ptr->nastytrap95)
+				{
+					msg_print("You feel your life slipping away!");
+					lose_exp(d / 10);
+				}
+				else
+				{
+					msg_print("You feel your life draining away!");
+					lose_exp(d);
+				}
+			}
+
+			break;
+		}
+
+	case TRAP_OF_EXP_DRAIN_III:
+		{
+			ident = TRUE;
+
+			if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 75))
+			{
+				msg_print("You keep hold of your life force!");
+			}
+			else
+			{
+				s32b d = damroll(40, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+				if (p_ptr->hold_life && !p_ptr->nastytrap95)
+				{
+					msg_print("You feel your life slipping away!");
+					lose_exp(d / 10);
+				}
+				else
+				{
+					msg_print("You feel your life draining away!");
+					lose_exp(d);
+				}
+			}
+
+			break;
+		}
+
+	case TRAP_OF_EXP_DRAIN_IV:
+		{
+			ident = TRUE;
+
+			if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 50))
+			{
+				msg_print("You keep hold of your life force!");
+			}
+			else
+			{
+				s32b d = damroll(80, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+				if (p_ptr->hold_life && !p_ptr->nastytrap95)
+				{
+					msg_print("You feel your life slipping away!");
+					lose_exp(d / 10);
+				}
+				else
+				{
+					msg_print("You feel your life draining away!");
+					lose_exp(d);
+				}
+			}
+
+			break;
+		}
+
 		/* Trap of Stat Scramble - like the nexus effect, by Amy */
 	case TRAP_OF_STAT_SCRAMBLE:
 		{
@@ -4432,6 +4639,38 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				}
 			}
 			if (!ident) msg_print("Some tax collector growls at you, but then decides to walk off.");
+			break;
+		}
+
+	case TRAP_OF_NO_SPIKES:
+		{
+			object_type *j_ptr;
+			s16b j;
+
+			for (j = 0; j < INVEN_WIELD; j++)
+			{
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				if (j_ptr->tval == TV_SPIKE)
+				{
+					inven_item_increase(j, -j_ptr->number);
+					inven_item_optimize(j);
+					combine_pack();
+					reorder_pack();
+					if (!ident)
+					{
+						msg_print("A malicious hand filches a bunch of spikes from your pack.");
+					}
+					else
+					{
+						msg_print("You're out of spikes.");
+					}
+					ident = TRUE;
+				}
+			}
+			if (!ident) msg_print("A malicious hand tries to filch you, but doesn't find anything interesting.");
 			break;
 		}
 
@@ -5802,6 +6041,74 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				combine_pack();
 				reorder_pack();
 				msg_print("You suddenly feel that your equipment isn't worth as much as it used to be...");
+
+				/* Recalculate bonuses */
+				p_ptr->update |= (PU_BONUS);
+
+				/* Recalculate mana */
+				p_ptr->update |= (PU_MANA);
+
+				/* Window stuff */
+				p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+			}
+			break;
+		}
+
+		/* trap of unproofing by Amy: removes "this item cannot be harmed bla-bla" flags from some items */
+	case TRAP_OF_UNPROOFING:
+		{
+			object_type *j_ptr;
+			s16b j, chance = 20;
+			u32b f1, f2, f3, f4, f5, esp;
+
+			for (j = 0; j < INVEN_TOTAL; j++)
+			{
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
+				/* does it have some elemental ignore flag? */
+				if (randint(100) < chance)
+				{
+					if (f3 & TR3_IGNORE_ACID)
+					{
+						ident = TRUE;
+						j_ptr->art_flags3 &= ~TR3_IGNORE_ACID;
+						inven_item_optimize(j);
+					}
+					if (f3 & TR3_IGNORE_FIRE)
+					{
+						ident = TRUE;
+						j_ptr->art_flags3 &= ~TR3_IGNORE_FIRE;
+						inven_item_optimize(j);
+					}
+					if (f3 & TR3_IGNORE_COLD)
+					{
+						ident = TRUE;
+						j_ptr->art_flags3 &= ~TR3_IGNORE_COLD;
+						inven_item_optimize(j);
+					}
+					if (f3 & TR3_IGNORE_ELEC)
+					{
+						ident = TRUE;
+						j_ptr->art_flags3 &= ~TR3_IGNORE_ELEC;
+						inven_item_optimize(j);
+					}
+				}
+			}
+			if (!ident)
+			{
+				msg_print("You feel afraid of the elements.");
+			}
+			else
+			{
+				combine_pack();
+				reorder_pack();
+				msg_print("Your equipment seems less protected!");
 
 				/* Recalculate bonuses */
 				p_ptr->update |= (PU_BONUS);
@@ -7232,6 +7539,91 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_OF_SHIT_I:
+		{
+			object_type *j_ptr;
+			msg_print("You stepped into a heap of shit!");
+			take_hit(damroll(2, 4), "a heap of shit");
+			j_ptr = &p_ptr->inventory[INVEN_FEET];
+			if (j_ptr->tval != TV_BOOTS) {
+				msg_print("You slip on the shit with your bare feet.");
+				take_hit(damroll(2, 4), "a heap of shit");
+			} else {
+				int bootdamagechance = 30;
+				u32b f1, f2, f3, f4, f5, esp;
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
+				if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47) bootdamagechance = 3;
+
+				if (magik(bootdamagechance)) {
+					if (j_ptr->to_a > -20) {
+						j_ptr->to_a--;
+						msg_print("Your boots are damaged!");
+					}
+				}
+			}
+
+			ident = TRUE;
+			break;
+		}
+	case TRAP_OF_SHIT_II:
+		{
+			object_type *j_ptr;
+			msg_print("You fully stepped into dog shit!");
+			take_hit(damroll(3, 8), "a heap of dog shit");
+			j_ptr = &p_ptr->inventory[INVEN_FEET];
+			if (j_ptr->tval != TV_BOOTS) {
+				msg_print("You slip on the shit with your bare feet.");
+				take_hit(damroll(3, 8), "a heap of dog shit");
+				(void)set_slow(p_ptr->slow + rand_int(10) + 4);
+			} else {
+				int bootdamagechance = 70;
+				u32b f1, f2, f3, f4, f5, esp;
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
+				if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47) bootdamagechance = 10;
+
+				if (magik(bootdamagechance)) {
+					if (j_ptr->to_a > -30) {
+						j_ptr->to_a--;
+						msg_print("Your boots are damaged!");
+					}
+				}
+			}
+
+			ident = TRUE;
+			break;
+		}
+	case TRAP_OF_SHIT_III:
+		{
+			object_type *j_ptr;
+			msg_print("You have stepped into icky cow dung!");
+			take_hit(damroll(5, 9), "a heap of cow dung");
+			j_ptr = &p_ptr->inventory[INVEN_FEET];
+			if (j_ptr->tval != TV_BOOTS) {
+				msg_print("You slip on the shit with your bare feet. Oh damn, it got all over your clothes!");
+				take_hit(damroll(5, 9), "a heap of cow dung");
+				project( -2, 0, p_ptr->py, p_ptr->px, randint(10), GF_ACID, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+				(void)set_slow(p_ptr->slow + rand_int(20) + 25);
+			} else {
+				int bootdamagechance = 100;
+				u32b f1, f2, f3, f4, f5, esp;
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
+				if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47) bootdamagechance = 40;
+
+				if (magik(bootdamagechance)) {
+					if (j_ptr->to_a > -40) {
+						j_ptr->to_a -= randint(3);
+						msg_print("Your boots are damaged!");
+					}
+				}
+			}
+
+			ident = TRUE;
+			break;
+		}
+
 	case TRAP_OF_SHOES:
 	case TRAP_OF_SHOES_II:
 	case TRAP_OF_SHOES_III:
@@ -8096,6 +8488,24 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
 			while (ballamount > 0) {
 				ident = player_handle_breath_trap(3, GF_PSI, trap);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_DEATH_BALL:
+		{
+			int ballamount = 2;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(0, GF_DEATH_RAY, trap);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_DEATH_BALLS:
+		{
+			int ballamount = 3;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(0, GF_DEATH_RAY, trap);
 				ballamount--;
 			}
 		}

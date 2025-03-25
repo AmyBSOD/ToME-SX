@@ -3071,6 +3071,24 @@
 #define TRAP_NASTY125                     514
 #define TRAP_NASTY126                     515
 
+#define TRAP_OF_EXP_DRAIN_I               516
+#define TRAP_OF_EXP_DRAIN_II              517
+#define TRAP_OF_EXP_DRAIN_III             518
+#define TRAP_OF_EXP_DRAIN_IV              519
+
+#define TRAP_OF_DEATH_BALL                520
+#define TRAP_OF_DEATH_BALLS               521
+
+#define TRAP_OF_FATE                      522
+#define TRAP_OF_DISMISS_PETS              523
+#define TRAP_OF_NO_SPIKES                 524
+#define TRAP_OF_BUGGED_LIGHT              525
+#define TRAP_OF_UNPROOFING                526
+
+#define TRAP_OF_SHIT_I                    527
+#define TRAP_OF_SHIT_II                   528
+#define TRAP_OF_SHIT_III                  529
+
 /*** General index values ***/
 
 

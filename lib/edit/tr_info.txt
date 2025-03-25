@@ -2522,6 +2522,76 @@ I:32:2:50:4:12:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:516:Trap of Experience Drain
+I:4:100:50:3:10:0d0:r
+D:Your experience is drained!
+F:FLOOR | CHEST | DOOR
+
+N:517:Trap of Greater Experience Drain
+I:5:100:50:3:20:0d0:r
+D:Your experience is heavily drained!
+F:FLOOR | CHEST | DOOR
+
+N:518:Trap of High Experience Drain
+I:6:100:50:3:35:0d0:r
+D:Your experience is severely drained!
+F:FLOOR | CHEST | DOOR
+
+N:519:Trap of Ultimate Experience Drain
+I:7:50:50:3:50:0d0:r
+D:Your experience is utterly drained!
+F:FLOOR | CHEST | DOOR
+
+N:520:Trap of Death Ball
+I:10:50:5:9:50:6d16:B
+D:A Ball of Death hits you!
+F:FLOOR | CHEST | DOOR | LEVEL4
+
+N:521:Trap of Death Balls
+I:15:20:5:9:100:6d16:B
+D:A Ball of Death hits you!
+F:FLOOR | CHEST | DOOR | LEVEL4
+
+N:522:Fate Trap
+I:5:30:40:6:15:0d0:v
+D:Your fate seems to change...
+F:FLOOR | CHEST | DOOR
+
+N:523:Pet Dismiss Trap
+I:2:100:10:4:10:0d0:y
+D:Your pets seem to abandon you!
+F:FLOOR | CHEST | DOOR
+
+N:524:Spike Removal Trap
+I:2:100:10:4:1:0d0:y
+D:Your spikes have been removed!
+F:FLOOR | CHEST | DOOR
+
+N:525:Bugged Light Trap
+I:20:2:10:4:60:0d0:y
+D:Now your light doesn't go any longer.
+F:FLOOR | CHEST | DOOR
+
+N:526:Unproofing Trap
+I:6:75:10:25:25:0d0:y
+D:Your items lose their proofing!
+F:FLOOR | CHEST | DOOR
+
+N:527:Shit Trap
+I:10:100:50:4:1:0d0:u
+D:Eww, you stepped into shit!
+F:FLOOR
+
+N:528:Dog Shit Trap
+I:30:100:50:4:20:0d0:u
+D:Eww, you stepped into dog shit!
+F:FLOOR
+
+N:529:Cow Dung Trap
+I:50:100:50:4:35:0d0:u
+D:Eww, you stepped into cow dung!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 
