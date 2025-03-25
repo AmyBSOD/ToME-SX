@@ -2063,14 +2063,14 @@ struct player_type
 	bool nastytrap124; /* hard mode trap - like the hard mode option */
 	bool nastytrap125; /* monster window trap - the monster window doesn't display anything */
 	bool nastytrap126; /* intermittent mana trap - you get manavoided every now and then */
-	bool nastytrap127;
-	bool nastytrap128;
-	bool nastytrap129;
-	bool nastytrap130;
-	bool nastytrap131;
-	bool nastytrap132;
-	bool nastytrap133;
-	bool nastytrap134;
+	bool nastytrap127; /* switchback trap - switcher will only fix this nasty trap and not the others */
+	bool nastytrap128; /* black diamond trap - newly generated levels have more monsters on them */
+	bool nastytrap129; /* bad fate trap - fates tend to be worse */
+	bool nastytrap130; /* great horde trap - monsters that spawn in groups spawn in bigger groups */
+	bool nastytrap131; /* unfeeling trap - disables level feelings and autoscumming */
+	bool nastytrap132; /* worse drain trap - stat drain is harder to resist */
+	bool nastytrap133; /* wakey wakey trap - monsters spawn awake */
+	bool nastytrap134; /* grid bug trap - you cannot use diagonal directions */
 	bool nastytrap135;
 	bool nastytrap136;
 	bool nastytrap137;

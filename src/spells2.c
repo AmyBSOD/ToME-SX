@@ -2105,6 +2105,38 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Your mana regeneration gets deactivated intermittently.";
 	}
+	if (p_ptr->nastytrap127)
+	{
+		info[i++] = "You have a problem: The next switcher you use will not cure your nasty trap effects.";
+	}
+	if (p_ptr->nastytrap128)
+	{
+		info[i++] = "You have a problem: Newly generated dungeon levels have more monsters on them.";
+	}
+	if (p_ptr->nastytrap129)
+	{
+		info[i++] = "You have a problem: Fates tend to be worse.";
+	}
+	if (p_ptr->nastytrap130)
+	{
+		info[i++] = "You have a problem: Monsters that spawn in groups have bigger group sizes on average.";
+	}
+	if (p_ptr->nastytrap131)
+	{
+		info[i++] = "You have a problem: There are no level feelings, and autoscum doesn't work.";
+	}
+	if (p_ptr->nastytrap132)
+	{
+		info[i++] = "You have a problem: Stat drain effects are more dangerous.";
+	}
+	if (p_ptr->nastytrap133)
+	{
+		info[i++] = "You have a problem: Monsters always spawn awake.";
+	}
+	if (p_ptr->nastytrap134)
+	{
+		info[i++] = "You have a problem: You cannot use diagonal movement directions.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];

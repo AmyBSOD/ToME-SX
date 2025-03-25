@@ -600,6 +600,14 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY124:
 		case TRAP_NASTY125:
 		case TRAP_NASTY126:
+		case TRAP_NASTY127:
+		case TRAP_NASTY128:
+		case TRAP_NASTY129:
+		case TRAP_NASTY130:
+		case TRAP_NASTY131:
+		case TRAP_NASTY132:
+		case TRAP_NASTY133:
+		case TRAP_NASTY134:
 			return FALSE;
 	}
 
@@ -744,6 +752,14 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY124:
 		case TRAP_NASTY125:
 		case TRAP_NASTY126:
+		case TRAP_NASTY127:
+		case TRAP_NASTY128:
+		case TRAP_NASTY129:
+		case TRAP_NASTY130:
+		case TRAP_NASTY131:
+		case TRAP_NASTY132:
+		case TRAP_NASTY133:
+		case TRAP_NASTY134:
 			return FALSE;
 	}
 
@@ -893,6 +909,14 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY124:
 		case TRAP_NASTY125:
 		case TRAP_NASTY126:
+		case TRAP_NASTY127:
+		case TRAP_NASTY128:
+		case TRAP_NASTY129:
+		case TRAP_NASTY130:
+		case TRAP_NASTY131:
+		case TRAP_NASTY132:
+		case TRAP_NASTY133:
+		case TRAP_NASTY134:
 			return TRUE;
 	}
 
@@ -7539,6 +7563,102 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY127:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap127 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY128:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap128 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY129:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap129 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY130:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap130 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY131:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap131 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY132:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap132 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY133:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap133 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY134:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap134 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHIT_I:
 		{
 			object_type *j_ptr;
@@ -11279,7 +11399,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(126)) {
+	switch (randint(134)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -11658,12 +11778,42 @@ void give_random_nastytrap_effect(void)
 		case 126:
 			p_ptr->nastytrap126 = TRUE;
 			break;
+		case 127:
+			p_ptr->nastytrap127 = TRUE;
+			break;
+		case 128:
+			p_ptr->nastytrap128 = TRUE;
+			break;
+		case 129:
+			p_ptr->nastytrap129 = TRUE;
+			break;
+		case 130:
+			p_ptr->nastytrap130 = TRUE;
+			break;
+		case 131:
+			p_ptr->nastytrap131 = TRUE;
+			break;
+		case 132:
+			p_ptr->nastytrap132 = TRUE;
+			break;
+		case 133:
+			p_ptr->nastytrap133 = TRUE;
+			break;
+		case 134:
+			p_ptr->nastytrap134 = TRUE;
+			break;
 
 	}
 }
 
 void cure_nasty_traps(void)
 {
+	if (p_ptr->nastytrap127) { /* switchback trap: gets cured, but prevents the switcher from curing other nasty trap effects --Amy */
+		p_ptr->nastytrap127 = FALSE;
+		calc_bonuses(TRUE);
+		return;
+	}
+
 	p_ptr->nastytrap1 = FALSE;
 	p_ptr->nastytrap2 = FALSE;
 	p_ptr->nastytrap3 = FALSE;

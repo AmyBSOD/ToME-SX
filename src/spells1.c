@@ -2738,6 +2738,13 @@ bool dec_stat(int stat, int amount, int mode)
 {
 	int cur, max, loss = 0, same, res = FALSE;
 
+	/* worse drain nastytrap by Amy */
+	if (p_ptr->nastytrap132) {
+		if ((mode == 0) && magik(33)) mode = STAT_DEC_NORMAL;
+		if ((mode == STAT_DEC_TEMPORARY) && magik(33)) mode = STAT_DEC_NORMAL;
+		if ((mode == STAT_DEC_NORMAL) && magik(10)) mode = STAT_DEC_PERMANENT;
+		if ((mode == STAT_DEC_PERMANENT) && magik(2)) mode = STAT_DEC_PERMANENT_NORESIST;
+	}
 
 	/* Acquire current value */
 	cur = p_ptr->stat_cur[stat];

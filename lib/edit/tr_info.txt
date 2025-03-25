@@ -2592,6 +2592,46 @@ I:50:100:50:4:35:0d0:u
 D:Eww, you stepped into cow dung!
 F:FLOOR
 
+N:530:Switchback Trap
+I:45:2:50:4:25:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:531:Black Diamond Trap
+I:25:2:50:4:5:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:532:Bad Fate Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:533:Great Horde Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:534:Unfeeling Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:535:Worse Drain Trap
+I:44:2:50:4:24:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:536:Wakey Wakey Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:537:Grid Bug Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

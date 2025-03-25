@@ -2642,8 +2642,8 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	/* Assume no sleeping */
 	m_ptr->csleep = 0;
 
-	/* Enforce sleeping if needed */
-	if (slp && r_ptr->sleep)
+	/* Enforce sleeping if needed, unless wakey wakey nastytrap is active */
+	if (slp && r_ptr->sleep && !p_ptr->nastytrap133)
 	{
 		int val = r_ptr->sleep;
 		m_ptr->csleep = ((val * 2) + randint(val * 10));
@@ -2971,8 +2971,8 @@ static bool place_monster_group(int y, int x, int r_idx, bool slp, int status)
 		extra = 0 - randint(extra);
 	}
 
-	/* Easy monsters, large groups */
-	else if ((r_ptr->level < dun_level) && (randint(2) == 1) )
+	/* Easy monsters, large groups; great horde nastytrap guarantees them */
+	else if ((r_ptr->level < dun_level) && ((randint(2) == 1) || p_ptr->nastytrap130) )
 	{
 		extra = dun_level - r_ptr->level;
 		extra = randint(extra);
@@ -2984,9 +2984,9 @@ static bool place_monster_group(int y, int x, int r_idx, bool slp, int status)
 	/* Modify the group size */
 	total += extra;
 
-	if (randint(2) == 1) total /= 2;
+	if ((randint(2) == 1) && !p_ptr->nastytrap130) total /= 2;
 
-	if (total > 1) total = randint(total);
+	if ((total > 1) && !p_ptr->nastytrap130) total = randint(total);
 
 	/* Minimum size */
 	if (total < 1) total = 1;
@@ -3120,8 +3120,8 @@ bool place_monster_aux(int y, int x, int r_idx, bool slp, bool grp, int status)
 		old_get_mon_num_hook = get_mon_num_hook;
 
 		int maxescorts = 20;
-		if (randint(2)) maxescorts = 10;
-		maxescorts = randint(maxescorts);
+		if (randint(2) && !p_ptr->nastytrap130) maxescorts = 10;
+		if (!p_ptr->nastytrap130) maxescorts = randint(maxescorts);
 
 		/* Set the escort index */
 		place_monster_idx = r_idx;

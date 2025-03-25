@@ -9419,6 +9419,11 @@ static bool cave_gen(void)
 
 		i += randint(8);
 
+		if (p_ptr->nastytrap128) { /* black diamond nastytrap, by Amy */
+			if (magik(50)) i *= 2;
+			else i *= 3;
+		}
+
 		/* Put some monsters in the dungeon */
 		for (i = i + k; i > 0; i--)
 		{
@@ -10578,6 +10583,9 @@ void generate_cave(void)
 			/* Hack -- no feeling in the town */
 			if (!dun_level) feeling = 0;
 
+			/* Unfeeling nastytrap by Amy */
+			if (p_ptr->nastytrap131) feeling = 0;
+
 
 			/* Prevent object over-flow */
 			if (o_max >= max_o_idx)
@@ -10608,8 +10616,9 @@ void generate_cave(void)
 			/* Mega-Hack -- "auto-scum"
 			 * Amy edit: don't use this if ironman rooms is on, for two reasons
 			 * 1. ironman rooms creates so many vaults, you automatically get "good enough" levels
-			 * 2. autoscum on ironman mode causes laaaaaaaaag whenever you go to a new dungeon level! */
-			if (auto_scum && !speciallevel && !ironman_rooms && (num < 100) && !p_ptr->inside_quest && dun_level)
+			 * 2. autoscum on ironman mode causes laaaaaaaaag whenever you go to a new dungeon level!
+			 * also don't use it while the unfeeling nastytrap is active */
+			if (auto_scum && !p_ptr->nastytrap131 && !speciallevel && !ironman_rooms && (num < 100) && !p_ptr->inside_quest && dun_level)
 			{
 				/* Require "goodness" */
 				if ((feeling > 18) ||

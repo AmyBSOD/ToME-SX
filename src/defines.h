@@ -3089,6 +3089,15 @@
 #define TRAP_OF_SHIT_II                   528
 #define TRAP_OF_SHIT_III                  529
 
+#define TRAP_NASTY127                     530
+#define TRAP_NASTY128                     531
+#define TRAP_NASTY129                     532
+#define TRAP_NASTY130                     533
+#define TRAP_NASTY131                     534
+#define TRAP_NASTY132                     535
+#define TRAP_NASTY133                     536
+#define TRAP_NASTY134                     537
+
 /*** General index values ***/
 
 
@@ -4750,15 +4759,15 @@ extern int PlayerUID;
 /*
  * Fate
  */
-#define MAX_FATES               200
+#define MAX_FATES               200 /* cannot have more than this amount of fates at once */
 
-#define FATE_NONE               0
-#define FATE_FIND_O             1
-#define FATE_NO_DIE_MORTAL      2
-#define FATE_FIND_A             3
-#define FATE_FIND_R             4
-#define FATE_FIND_V             5
-#define FATE_DIE                6
+#define FATE_NONE               0 /* GLLLLLLLLM why didn't anyone add comments as to what "O", "A", "R" or "V" are supposed to be??????? --Amy */
+#define FATE_FIND_O             1 /* find object */
+#define FATE_NO_DIE_MORTAL      2 /* IDDQD mode */
+#define FATE_FIND_A             3 /* find artifact */
+#define FATE_FIND_R             4 /* encounter monster */
+#define FATE_FIND_V             5 /* seems to be unused??? */
+#define FATE_DIE                6 /* get sent to dungeon with OOD monsters */
 
 /*
  * Runes definition

@@ -8167,6 +8167,18 @@ bool get_rep_dir(int *dp)
 	/* Prevent weirdness */
 	if (dir == 5) dir = 0;
 
+	if (p_ptr->nastytrap134) { /* grid bug trap, by Amy */
+		switch (dir) {
+			case 1:
+			case 3:
+			case 7:
+			case 9:
+				msg_print("You cannot use diagonal directions!");
+				msg_print(NULL);
+				return (FALSE);
+		}
+	}
+
 	if (p_ptr->nastytrap110) { /* totter trap, by Amy */
 		switch (dir) {
 			case 1:

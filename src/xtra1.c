@@ -5435,7 +5435,8 @@ void gain_fate(byte fate)
 				case 8:
 				case 9:
 				case 13:
-					fates[i].fate = FATE_FIND_O;
+					if (p_ptr->nastytrap129 && magik(80)) fates[i].fate = FATE_FIND_R;
+					else fates[i].fate = FATE_FIND_O;
 					break;
 				case 1:
 				case 4:
@@ -5448,7 +5449,8 @@ void gain_fate(byte fate)
 					break;
 				case 15:
 				case 16:
-					fates[i].fate = FATE_FIND_A;
+					if (p_ptr->nastytrap129 && magik(98)) fates[i].fate = FATE_FIND_R;
+					else fates[i].fate = FATE_FIND_A;
 					break;
 				case 17:
 					fates[i].fate = FATE_DIE;
@@ -5462,7 +5464,7 @@ void gain_fate(byte fate)
 						if (chance > 33) chance = 33;
 
 						/* It's HARD to get now */
-						if (magik(chance))
+						if (magik(chance) && !p_ptr->nastytrap129)
 						{
 							/* no longer prevents any blows (that's basically IDDQD mode) --Amy
 							 * instead it just lifesaves you once if a mortal being kills you */
@@ -5525,7 +5527,7 @@ void gain_fate(byte fate)
 				/* Prepare allocation table */
 				get_mon_num_prep();
 
-				fates[i].r_idx = get_mon_num(max_dlv_real[dungeon_type] + p_ptr->lev + randint(50));
+				fates[i].r_idx = get_mon_num(max_dlv_real[dungeon_type] + p_ptr->lev + (p_ptr->nastytrap129 ? (50 + randint(50)) : 0) + randint(50));
 				level = randint(98);
 				fates[i].level = (level < 1) ? 1 : (level > 98) ? 98 : level;
 				fates[i].serious = rand_int(2);
