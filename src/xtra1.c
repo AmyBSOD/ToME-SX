@@ -5425,8 +5425,8 @@ void gain_fate(byte fate)
 			if (fate)
 				fates[i].fate = fate;
 			else
-				/* If lucky (current luck > 0) avoid death fate */
-				switch (rand_int(p_ptr->luck_cur > 0 ? 17 : 18))
+				/* If lucky (current luck > 0) avoid death fate... at least most of the time --Amy */
+				switch (rand_int(((p_ptr->luck_cur > 0) && randint(100) != 1) ? 17 : 18))
 				{
 				case 6:
 				case 2:
