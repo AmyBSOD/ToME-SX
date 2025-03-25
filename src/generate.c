@@ -8624,7 +8624,7 @@ bool level_generate_dungeon(cptr name)
 		}
 
 		/* have more variety, but don't make rooms with dangerous monsters --Amy */
-		if (randint(5) == 1) {
+		if ((randint(5) == 1) && !town_level) {
 			switch (randint(5)) {
 				case 1: /* fractal cave */
 					if (room_build(y, x, 10)) continue;
