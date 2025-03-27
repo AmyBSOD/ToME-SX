@@ -1361,6 +1361,7 @@ int return_level()
 	if (sti_ptr->flags1 & SF1_DEPEND_LEVEL) level += dun_level;
 
 	if (sti_ptr->flags1 & SF1_SHALLOW_LEVEL) level += 5 + rand_int(5);
+	if (sti_ptr->flags1 & SF1_MODERATE_LEVEL) level += 15 + rand_int(5);
 	if (sti_ptr->flags1 & SF1_MEDIUM_LEVEL) level += 25 + rand_int(25);
 	if (sti_ptr->flags1 & SF1_DEEP_LEVEL) level += 45 + rand_int(45);
 

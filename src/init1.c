@@ -996,7 +996,7 @@ static cptr st_info_flags1[] =
 	"RANDOM",
 	"FORCE_LEVEL",
 	"MUSEUM",
-	"XXX1",
+	"MODERATE_LEVEL",
 	"XXX1",
 	"XXX1",
 	"XXX1",

@@ -132,6 +132,19 @@ F:n:74:3:0:0:0:0:0:22
 # Merchant guild
 F:o:74:3:0:0:0:0:0:56
 
+# better shops by Amy
+# Armoury
+F:2:74:3:0:0:0:0:0:70
+
+# Weapons Smith
+F:3:74:3:0:0:0:0:0:71
+
+# Alchemy Shop
+F:5:74:3:0:0:0:0:0:72
+
+# Magic Shop
+F:6:74:3:0:0:0:0:0:73
+
 # Altars
 F:p:167:3
 F:q:168:3

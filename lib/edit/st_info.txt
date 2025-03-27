@@ -852,7 +852,7 @@ T:10:38:256
 A:0:62:1:2:3:4
 O:8:9:10:11
 G:2:u
-F:RANDOM | DEPEND_LEVEL
+F:RANDOM | MODERATE_LEVEL | DEPEND_LEVEL
 F:COMMON
 W:255
 
@@ -908,7 +908,7 @@ T:2:7:256
 A:0:62:1:2:3:4
 O:0:5:6:7
 G:1:r
-F:RANDOM | SHALLOW_LEVEL
+F:RANDOM | SHALLOW_LEVEL | DEPEND_LEVEL
 F:RARE
 W:255
 
@@ -928,7 +928,7 @@ T:10:80:256
 A:0:62:1:2:3:4
 O:0:5:6:7
 G:1:b
-F:RANDOM | MEDIUM_LEVEL
+F:RANDOM | MEDIUM_LEVEL | DEPEND_LEVEL
 F:RARE
 W:20
 
@@ -949,6 +949,568 @@ O:8:9:10:11
 G:5:B
 F:RANDOM | DEEP_LEVEL | DEPEND_LEVEL
 F:VERY_RARE
+W:255
+
+# slightly better shops
+N:70:Armory
+I:100:& Pair~ of Leather Sandals
+I:70:& Pair~ of Soft Leather Boots
+I:60:& Pair~ of Hard Leather Boots
+I:100:& Soft Leather Cap~
+I:80:& Hard Leather Cap~
+I:70:& Metal Cap~
+I:65:& Iron Helm~
+I:100:& Robe~
+I:90:& Soft Leather Armor~
+I:90:& Soft Studded Leather~
+I:90:& Hard Leather Armor~
+I:85:& Hard Studded Leather~
+I:90:& Leather Scale Mail~
+I:80:& Metal Scale Mail~
+I:75:& Chain Mail~
+I:80:& Augmented Chain Mail~
+I:75:& Metal Brigandine Armor~
+I:68:& Bar Chain Mail~
+I:100:& Set~ of Leather Gloves
+I:80:& Set~ of Gauntlets
+I:100:& Light Shield~
+I:100:& Small Leather Shield~
+I:90:& Large Leather Shield~
+I:80:& Small Metal Shield~
+T:5:30:256
+T:5:31:256
+T:5:32:256
+T:5:33:256
+T:5:34:256
+T:5:35:256
+T:5:36:256
+T:5:37:256
+A:0:62:1:2:3:4
+O:8:9:10:11
+G:2:s
+F:SHALLOW_LEVEL
+W:255
+
+N:71:Weaponsmith
+I:100:& Dagger~
+I:100:& Main Gauche~
+I:100:& Rapier~
+I:100:& Small Sword~
+I:100:& Short Sword~
+I:100:& Sabre~
+I:100:& Cutlass~
+I:100:& Tulwar~
+I:100:& Broad Sword~
+I:100:& Long Sword~
+I:100:& Scimitar~
+I:100:& Katana~
+I:100:& Bastard Sword~
+I:100:& Spear~
+I:100:& Awl-Pike~
+I:100:& Trident~
+I:100:& Pike~
+I:100:& Beaked Axe~
+I:100:& Broad Axe~
+I:100:& Lance~
+I:100:& Battle Axe~
+I:100:& Hatchet~
+I:100:& Sling~
+I:100:& Short Bow~
+I:100:& Long Bow~
+I:100:& Light Crossbow~
+I:100:& Iron Shot~
+I:100:& Arrow~
+I:100:& Bolt~
+I:100:& Whip~
+I:100:& Small Wooden Boomerang~
+I:10:& 9mm Bullet~
+I:5:& Rifle Bullet~
+I:2:& Shotgun Shell~
+I:2:& SMG Bullet~
+I:1:& Assault Rifle Bullet~
+I:10:& Beretta~
+I:2:& Remington 700~
+T:5:21:256
+T:5:22:256
+T:5:23:256
+T:5:24:256
+A:23:62:1:2:3:4
+O:12:13:14:15
+G:3:w
+F:SHALLOW_LEVEL
+W:255
+
+N:72:Alchemy shop
+I:100:Enchant Weapon To-Hit
+I:100:Enchant Weapon To-Dam
+I:100:Enchant Armor
+I:100:Identify
+I:100:Identify
+I:100:Identify
+I:100:Identify
+I:100:Light
+I:100:Phase Door
+I:100:Phase Door
+T:100:70:9
+I:100:Monster Confusion
+I:100:Magic Mapping
+I:100:Treasure Detection
+I:100:Object Detection
+I:100:Trap Detection
+I:100:Detect Invisible
+I:100:Recharging
+I:100:Satisfy Hunger
+I:100:Word of Recall
+I:100:Word of Recall
+I:100:Word of Recall
+I:100:Word of Recall
+T:100:70:9
+T:100:70:9
+I:100:Restore Strength
+T:100:71:42
+I:100:Restore Intelligence
+I:100:Restore Wisdom
+I:100:Restore Dexterity
+I:100:Restore Constitution
+T:100:71:46
+I:100:Restore Charisma
+I:100:Identify
+I:100:*Identify*
+I:100:*Identify*
+I:100:*Identify*
+I:100:*Identify*
+I:100:Light
+I:100:Restore Strength
+T:100:71:42
+I:100:Restore Intelligence
+I:100:Restore Wisdom
+I:100:Restore Dexterity
+I:100:Restore Constitution
+T:100:71:46
+I:100:Restore Charisma
+I:100:Enchant Armor
+I:100:Enchant Armor
+I:100:Recharging
+I:100:Satisfy Hunger
+I:100:Satisfy Hunger
+I:100:Satisfy Hunger
+I:20:Repelling
+T:5:70:256
+T:5:71:256
+A:0:62:1:2:3:4
+O:30:31:32:33
+G:5:b
+F:SHALLOW_LEVEL
+W:255
+
+N:73:Magic shop
+I:100:Protection
+I:100:Levitation
+I:100:Protection
+I:100:Fire Resistance
+I:100:Cold Resistance
+I:100:Charisma
+I:100:Slow Digestion
+T:100:40:3
+I:100:Acid Resistance
+I:100:Lightning Resistance
+I:100:Searching
+I:100:Cure Light Wounds
+# Rods
+I:100:Probing
+I:25:& Wooden Rod~ of#
+# Book
+T:100:111:50
+# Wands
+T:100:65:3
+T:100:65:8
+T:100:65:11
+T:100:65:16
+T:100:65:22
+# Staves
+T:100:55:3
+T:100:55:5
+T:100:55:8
+T:100:55:9
+T:100:55:14
+T:60:55:15
+T:60:55:16
+T:60:55:17
+T:5:40:256
+T:5:45:256
+T:5:55:256
+T:5:65:256
+A:0:62:1:2:3:4
+O:34:35:36:37
+G:6:r
+F:SHALLOW_LEVEL
+W:255
+
+N:74:Book Store
+# & Book~ of Beginner Cantrips
+T:100:111:50
+T:100:111:50
+T:100:111:255
+T:100:111:255
+T:100:111:255
+T:100:111:255
+T:100:111:255
+T:100:111:255
+T:5:111:256
+A:0:62:1:2:3:4
+O:42:43:44:45
+G:9:o
+F:SHALLOW_LEVEL
+W:255
+
+N:75:General Store
+I:100:& Wooden Torch~
+I:95:& Brass Lantern~
+I:95:& Flask~ of oil
+I:100:& Ration~ of Food
+I:100:& Hard Biscuit~
+I:90:& Strip~ of Venison
+I:70:& Pint~ of Fine Wine
+I:80:& Pint~ of Fine Ale
+I:60:& Shovel~
+I:50:& Pick~
+I:100:& Iron Spike~
+I:70:& Iron Shot~
+I:70:& Bolt~
+I:70:& Arrow~
+I:10:& 9mm Bullet~
+I:5:& Rifle Bullet~
+I:2:& Shotgun Shell~
+I:2:& SMG Bullet~
+I:1:& Assault Rifle Bullet~
+I:98:& Cloak~
+I:46:& Fur Cloak~
+T:5:20:256
+T:5:5:256
+T:5:35:256
+A:0:62:1:2:3:4
+O:0:5:6:7
+G:1:U
+F:MODERATE_LEVEL
+W:255
+
+N:76:Armory
+I:100:& Pair~ of Leather Sandals
+I:70:& Pair~ of Soft Leather Boots
+I:60:& Pair~ of Hard Leather Boots
+I:100:& Soft Leather Cap~
+I:80:& Hard Leather Cap~
+I:70:& Metal Cap~
+I:65:& Iron Helm~
+I:100:& Robe~
+I:90:& Soft Leather Armor~
+I:90:& Soft Studded Leather~
+I:90:& Hard Leather Armor~
+I:85:& Hard Studded Leather~
+I:90:& Leather Scale Mail~
+I:80:& Metal Scale Mail~
+I:75:& Chain Mail~
+I:80:& Augmented Chain Mail~
+I:75:& Metal Brigandine Armor~
+I:68:& Bar Chain Mail~
+I:100:& Set~ of Leather Gloves
+I:80:& Set~ of Gauntlets
+I:100:& Light Shield~
+I:100:& Small Leather Shield~
+I:90:& Large Leather Shield~
+I:80:& Small Metal Shield~
+T:15:30:256
+T:15:31:256
+T:15:32:256
+T:15:33:256
+T:15:34:256
+T:15:35:256
+T:15:36:256
+T:15:37:256
+A:0:62:1:2:3:4
+O:8:9:10:11
+G:2:s
+F:MODERATE_LEVEL
+W:255
+
+N:77:Weaponsmith
+I:100:& Dagger~
+I:100:& Main Gauche~
+I:100:& Rapier~
+I:100:& Small Sword~
+I:100:& Short Sword~
+I:100:& Sabre~
+I:100:& Cutlass~
+I:100:& Tulwar~
+I:100:& Broad Sword~
+I:100:& Long Sword~
+I:100:& Scimitar~
+I:100:& Katana~
+I:100:& Bastard Sword~
+I:100:& Spear~
+I:100:& Awl-Pike~
+I:100:& Trident~
+I:100:& Pike~
+I:100:& Beaked Axe~
+I:100:& Broad Axe~
+I:100:& Lance~
+I:100:& Battle Axe~
+I:100:& Hatchet~
+I:100:& Sling~
+I:100:& Short Bow~
+I:100:& Long Bow~
+I:100:& Light Crossbow~
+I:100:& Iron Shot~
+I:100:& Arrow~
+I:100:& Bolt~
+I:100:& Whip~
+I:100:& Small Wooden Boomerang~
+I:10:& 9mm Bullet~
+I:5:& Rifle Bullet~
+I:2:& Shotgun Shell~
+I:2:& SMG Bullet~
+I:1:& Assault Rifle Bullet~
+I:10:& Beretta~
+I:2:& Remington 700~
+T:15:21:256
+T:15:22:256
+T:15:23:256
+T:15:24:256
+A:23:62:1:2:3:4
+O:12:13:14:15
+G:3:w
+F:MODERATE_LEVEL
+W:255
+
+N:78:Temple
+I:100:& Nunchaku~
+I:100:& Quarterstaff~
+I:100:& Mace~
+I:100:& Bo Staff~
+I:100:& War Hammer~
+I:100:& Lucerne Hammer~
+I:100:& Morning Star~
+I:100:& Flail~
+I:100:& Lead-Filled Mace~
+I:100:Remove Curse
+I:100:Blessing
+I:100:Holy Chant
+I:100:Heroism
+I:100:Word of Recall
+I:100:Word of Recall
+I:100:Word of Recall
+I:100:Cure Light Wounds
+T:100:71:34
+I:100:Cure Serious Wounds
+I:100:Cure Serious Wounds
+T:100:71:35
+T:100:71:35
+I:100:Cure Critical Wounds
+I:100:Cure Critical Wounds
+I:100:Restore Life Levels
+I:100:Restore Life Levels
+I:100:Restore Life Levels
+I:100:& Whip~
+I:100:& Mace~
+I:100:& Ball-and-Chain~
+I:100:& War Hammer~
+I:100:Word of Recall
+I:100:Word of Recall
+I:100:Word of Recall
+I:100:Cure Critical Wounds
+I:100:Cure Critical Wounds
+I:100:Restore Life Levels
+I:100:Restore Life Levels
+I:100:Restore Life Levels
+I:100:Remove Curse
+I:100:Remove Curse
+I:100:*Remove Curse*
+I:100:*Remove Curse*
+I:100:Healing
+T:15:21:256
+T:15:71:256
+T:2:72:256
+A:0:62:1:2:3:4
+O:26:27:28:29
+G:4:g
+F:MODERATE_LEVEL
+W:255
+
+N:79:Alchemy shop
+I:100:Enchant Weapon To-Hit
+I:100:Enchant Weapon To-Dam
+I:100:Enchant Armor
+I:100:Identify
+I:100:Identify
+I:100:Identify
+I:100:Identify
+I:100:Light
+I:100:Phase Door
+I:100:Phase Door
+T:100:70:9
+I:100:Monster Confusion
+I:100:Magic Mapping
+I:100:Treasure Detection
+I:100:Object Detection
+I:100:Trap Detection
+I:100:Detect Invisible
+I:100:Recharging
+I:100:Satisfy Hunger
+I:100:Word of Recall
+I:100:Word of Recall
+I:100:Word of Recall
+I:100:Word of Recall
+T:100:70:9
+T:100:70:9
+I:100:Restore Strength
+T:100:71:42
+I:100:Restore Intelligence
+I:100:Restore Wisdom
+I:100:Restore Dexterity
+I:100:Restore Constitution
+T:100:71:46
+I:100:Restore Charisma
+I:100:Identify
+I:100:*Identify*
+I:100:*Identify*
+I:100:*Identify*
+I:100:*Identify*
+I:100:Light
+I:100:Restore Strength
+T:100:71:42
+I:100:Restore Intelligence
+I:100:Restore Wisdom
+I:100:Restore Dexterity
+I:100:Restore Constitution
+T:100:71:46
+I:100:Restore Charisma
+I:100:Enchant Armor
+I:100:Enchant Armor
+I:100:Recharging
+I:100:Satisfy Hunger
+I:100:Satisfy Hunger
+I:100:Satisfy Hunger
+I:20:Repelling
+T:15:70:256
+T:15:71:256
+T:2:72:256
+A:0:62:1:2:3:4
+O:30:31:32:33
+G:5:b
+F:MODERATE_LEVEL
+W:255
+
+N:80:Book Store
+# & Book~ of Beginner Cantrips
+T:100:111:50
+T:100:111:50
+T:100:111:255
+T:100:111:255
+T:100:111:255
+T:100:111:255
+T:100:111:255
+T:100:111:255
+T:15:111:256
+A:0:62:1:2:3:4
+O:42:43:44:45
+G:9:o
+F:MODERATE_LEVEL
+W:255
+
+N:81:Temple
+I:100:& Nunchaku~
+I:100:& Quarterstaff~
+I:100:& Mace~
+I:100:& Bo Staff~
+I:100:& War Hammer~
+I:100:& Lucerne Hammer~
+I:100:& Morning Star~
+I:100:& Flail~
+I:100:& Lead-Filled Mace~
+I:100:Remove Curse
+I:100:Blessing
+I:100:Holy Chant
+I:100:Heroism
+I:100:Word of Recall
+I:100:Word of Recall
+I:100:Word of Recall
+I:100:Cure Light Wounds
+T:100:71:34
+I:100:Cure Serious Wounds
+I:100:Cure Serious Wounds
+T:100:71:35
+T:100:71:35
+I:100:Cure Critical Wounds
+I:100:Cure Critical Wounds
+I:100:Restore Life Levels
+I:100:Restore Life Levels
+I:100:Restore Life Levels
+I:100:& Whip~
+I:100:& Mace~
+I:100:& Ball-and-Chain~
+I:100:& War Hammer~
+I:100:Word of Recall
+I:100:Word of Recall
+I:100:Word of Recall
+I:100:Cure Critical Wounds
+I:100:Cure Critical Wounds
+I:100:Restore Life Levels
+I:100:Restore Life Levels
+I:100:Restore Life Levels
+I:100:Remove Curse
+I:100:Remove Curse
+I:100:*Remove Curse*
+I:100:*Remove Curse*
+I:100:Healing
+T:5:21:256
+T:5:71:256
+A:0:62:1:2:3:4
+O:26:27:28:29
+G:4:g
+F:SHALLOW_LEVEL
+W:255
+
+N:82:Magic shop
+I:100:Protection
+I:100:Levitation
+I:100:Protection
+I:100:Fire Resistance
+I:100:Cold Resistance
+I:100:Charisma
+I:100:Slow Digestion
+T:100:40:3
+I:100:Acid Resistance
+I:100:Lightning Resistance
+I:100:Searching
+I:100:Cure Light Wounds
+# Rods
+I:100:Probing
+I:25:& Wooden Rod~ of#
+# Book
+T:100:111:50
+# Wands
+T:100:65:3
+T:100:65:8
+T:100:65:11
+T:100:65:16
+T:100:65:22
+# Staves
+T:100:55:3
+T:100:55:5
+T:100:55:8
+T:100:55:9
+T:100:55:14
+T:60:55:15
+T:60:55:16
+T:60:55:17
+T:15:40:256
+T:15:45:256
+T:15:55:256
+T:15:65:256
+A:0:62:1:2:3:4
+O:34:35:36:37
+G:6:r
+F:MODERATE_LEVEL
 W:255
 
 # N:<index>:<name>

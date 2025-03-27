@@ -4939,6 +4939,7 @@ extern int PlayerUID;
 #define SF1_RANDOM              0x00000100L
 #define SF1_FORCE_LEVEL         0x00000200L
 #define SF1_MUSEUM              0x00000400L
+#define SF1_MODERATE_LEVEL      0x00000800L
 
 /*
  * Powers (mutation, activations, ...)

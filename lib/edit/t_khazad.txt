@@ -46,6 +46,25 @@ F:i:74:3:0:0:0:0:0:59
 # Type of Arms
 F:Q:74:3:0:0:0:0:0:63
 
+# better shops by Amy
+# General Store
+F:1:74:3:0:0:0:0:0:75
+
+# Armoury
+F:2:74:3:0:0:0:0:0:76
+
+# Weapons Smith
+F:3:74:3:0:0:0:0:0:77
+
+# Temple
+F:4:74:3:0:0:0:0:0:78
+
+# Alchemy Shop
+F:5:74:3:0:0:0:0:0:79
+
+# Bookstore
+F:9:74:3:0:0:0:0:0:80
+
 # Altars
 F:G:245:3
 F:H:246:3
