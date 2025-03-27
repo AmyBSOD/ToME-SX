@@ -1538,17 +1538,13 @@ static void fix_m_list(void)
 					attr = TERM_L_BLUE;
 				}
 
-				/* Have we ever killed one? */
-				if (r_ptr->r_tkills)
+				/* Have we ever killed one?
+				 * silly to have this for uniques, because it just means a previous char on that savefile killed it... --Amy */
+				if ((r_ptr->r_tkills) && !(r_ptr->flags1 & RF1_UNIQUE))
 				{
 					if (r_ptr->level > dun_level)
 					{
 						attr = TERM_VIOLET;
-
-						if (r_ptr->flags1 & RF1_UNIQUE)
-						{
-							attr = TERM_L_RED;
-						}
 					}
 				}
 				else
