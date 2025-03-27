@@ -8435,6 +8435,38 @@ P:0:7d8:0:0:0
 D:An adamantium spike. Ramming one between a door and its frame might jam it.
 D:It may be thrown at opponents.
 
+N:1028:& Circlet~
+G:]:b
+I:33:13:0
+W:60:0:40:3000
+A:60/1
+P:1:1d1:0:0:0
+D:It's a type of headgear. Magical ones may be pretty useful.
+
+N:1029:& Coronet~
+G:]:y
+I:33:14:0
+W:70:0:40:5000
+A:70/2
+P:2:1d1:0:0:0
+D:A noble type of headgear. Magical ones may be pretty useful.
+
+N:1030:& Tiara~
+G:]:B
+I:33:15:0
+W:80:0:50:10000
+A:80/3
+P:4:1d1:0:0:0
+D:Very elegant headgear. Magical ones may be pretty useful.
+
+N:1031:& Diadem~
+G:]:G
+I:33:16:0
+W:95:0:70:20000
+A:95/5
+P:7:1d1:0:0:0
+D:The headgear of kings and emperors. Magical ones may be pretty useful.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
