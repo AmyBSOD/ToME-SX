@@ -498,7 +498,7 @@ void randommonstermix(void)
 	if (specmons > 10) specmons = 10;
 	while (specmons > 0) {
 		specmons--;
-		switch (random_number(279)) {
+		switch (random_number(278)) { /* sadly the pipe doesn't work :( --Amy */
 			default:
 			case 1:
 				printf("M:UNIQUE\n");
@@ -1332,11 +1332,11 @@ void randommonstermix(void)
 				printf("M:R_CHAR_,\n");
 				break;
 			case 278:
-				printf("M:R_CHAR_|\n");
-				break;
-			case 279:
 				printf("M:R_CHAR_$\n");
 				break;
+			/*case 279:
+				printf("M:R_CHAR_|\n");
+				break;*/
 		}
 	}
 
@@ -1358,6 +1358,11 @@ void printRandoms(int lower, int upper, int count)
 
 		switch (d_id) {
 			case 0:
+				printf("M:comma R_CHAR_,\n");
+				printf("M:pipe R_CHAR_|\n");
+				printf("M:dollar R_CHAR_$\n");
+
+
 				printf("N:0:Wilderness\n");
 				printf("D:Wil:a way to the Wilderness\n");
 				printf("W:0:0:0:0:14:500\n");
