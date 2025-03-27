@@ -1199,6 +1199,7 @@ s32b flag_cost(object_type * o_ptr, int plusses)
 s32b object_value_real(object_type *o_ptr)
 {
 	s32b value;
+	s32b basevalue;
 
 	u32b f1, f2, f3, f4, f5, esp;
 
@@ -1214,6 +1215,9 @@ s32b object_value_real(object_type *o_ptr)
 
 	/* Base cost */
 	value = k_ptr->cost;
+
+	/* for those pesky multiplicative value increases, used by e.g. wands... --Amy */
+	basevalue = value;
 
 	/* Extract some flags */
 	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
@@ -1252,6 +1256,7 @@ s32b object_value_real(object_type *o_ptr)
 
 		/* Hack -- Use the artifact cost instead */
 		value = a_ptr->cost;
+		basevalue = value;
 	}
 
 	/* Ego-Item */
@@ -1383,52 +1388,66 @@ s32b object_value_real(object_type *o_ptr)
 			break;
 		}
 
-		/* Wands/Staffs */
+		/* Wands/Staffs
+		 * ugggggggghhh getting that to work properly is truly shitty... --Amy */
 	case TV_WAND:
 		{
-			/* Par for the spell */
-			value *= school_spells[o_ptr->pval2].skill_level;
+			value -= basevalue;
 
-			if (strstr(school_spells[o_ptr->pval2].name, "Genocide")) value *= 20;
-			if (strstr(school_spells[o_ptr->pval2].name, "Probability Travel")) value *= 5;
+			/* Par for the spell */
+			basevalue *= school_spells[o_ptr->pval2].skill_level;
+
+			if (strstr(school_spells[o_ptr->pval2].name, "Genocide")) basevalue *= 20;
+			if (strstr(school_spells[o_ptr->pval2].name, "Probability Travel")) basevalue *= 5;
 
 			/* Take the average of the base and max spell levels */
-			value *= (((o_ptr->pval3 >> 16) & 0xFFFF) + (o_ptr->pval3 & 0xFFFF)) / 2;
+			basevalue *= (((o_ptr->pval3 >> 16) & 0xFFFF) + (o_ptr->pval3 & 0xFFFF)) / 2;
 			/* Hack */
-			value /= 6;
+			basevalue /= 6;
 
 			/* Pay extra for charges */
-			value += ((value / 20) * o_ptr->pval) / o_ptr->number;
+			basevalue += ((value / 20) * o_ptr->pval) / o_ptr->number;
+
+			value += basevalue;
 
 			/* Done */
 			break;
 		}
 	case TV_STAFF:
 		{
-			/* Par for the spell */
-			value *= school_spells[o_ptr->pval2].skill_level;
+			value -= basevalue;
 
-			if (strstr(school_spells[o_ptr->pval2].name, "Genocide")) value *= 20;
-			if (strstr(school_spells[o_ptr->pval2].name, "Probability Travel")) value *= 5;
+			/* Par for the spell */
+			basevalue *= school_spells[o_ptr->pval2].skill_level;
+
+			if (strstr(school_spells[o_ptr->pval2].name, "Genocide")) basevalue *= 20;
+			if (strstr(school_spells[o_ptr->pval2].name, "Probability Travel")) basevalue *= 5;
 
 			/* Take the average of the base and max spell levels */
-			value *= (((o_ptr->pval3 >> 16) & 0xFFFF) + (o_ptr->pval3 & 0xFFFF)) / 2;
+			basevalue *= (((o_ptr->pval3 >> 16) & 0xFFFF) + (o_ptr->pval3 & 0xFFFF)) / 2;
 			/* Hack */
-			value /= 6;
+			basevalue /= 6;
 
 			/* Pay extra for charges */
-			value += ((value / 20) * o_ptr->pval);
+			basevalue += ((value / 20) * o_ptr->pval);
+
+			value += basevalue;
 
 			/* Done */
 			break;
 		}
 	case TV_BOOK:
 		{
+			value -= basevalue;
+
 			if (o_ptr->sval == 255)
 			{
 				/* Pay extra for the spell */
-				value = value * school_spells[o_ptr->pval].skill_level;
+				basevalue = basevalue * school_spells[o_ptr->pval].skill_level;
 			}
+
+			value += basevalue;
+
 			/* Done */
 			break;
 		}
