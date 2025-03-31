@@ -1814,6 +1814,19 @@ static void calc_mana(void)
 		if (msp < 1) msp = 1;
 	}*/
 
+	/* more sensible calculation by Amy, because seriously, come the fuck on... */
+	if (p_ptr->body_monster && (!p_ptr->disembodied))
+	{
+		monster_race *r_ptr = &r_info[p_ptr->body_monster];
+		int f;
+		if (r_ptr->freq_spell) f = r_ptr->freq_spell;
+		else f = 5;
+		if (f < 5) f = 5;
+
+		msp *= (30 + f);
+		msp /= 130;
+	}
+
 	/* Apply race mod mana */
 	msp = msp * rmp_ptr->mana / 100;
 
