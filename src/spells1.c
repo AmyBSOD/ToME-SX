@@ -7917,7 +7917,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 	if ((!who) && (!unsafe)) return (FALSE);
 
 	/* Bolt attack from a monster */
-	if ((!a_rad) && get_skill(SKILL_DODGE) && (who > 0))
+	if ((!a_rad) && canreflect && get_skill(SKILL_DODGE) && (who > 0))
 	{
 		int chance = (p_ptr->dodge_chance - ((r_info[who].level * 5) / 6)) / 3;
 
