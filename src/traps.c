@@ -3432,8 +3432,14 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/* Explosive Device */
 	case TRAP_OF_EXPLOSIVE_DEVICE:
 		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else efflevel = p_ptr->lev;
+			if (efflevel > 5) efflevel = 5;
+			if (efflevel < 2) efflevel = 2;
+
 			msg_print("A hidden explosive device explodes in your face.");
-			take_hit(damroll(5, 8), "an explosion");
+			take_hit(damroll(efflevel, 8), "an explosion");
 			ident = TRUE;
 			break;
 		}
@@ -3448,24 +3454,42 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 	case TRAP_OF_EXPLODE_II:
 		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else efflevel = p_ptr->lev;
+			if (efflevel > 10) efflevel = 10;
+			if (efflevel < 2) efflevel = 2;
+
 			msg_print("A hidden mine explodes in your face.");
-			take_hit(damroll(10, 8), "an explosion");
+			take_hit(damroll(efflevel, 8), "an explosion");
 			ident = TRUE;
 			break;
 		}
 
 	case TRAP_OF_EXPLODE_III:
 		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else efflevel = p_ptr->lev;
+			if (efflevel > 20) efflevel = 20;
+			if (efflevel < 2) efflevel = 2;
+
 			msg_print("A contact bomb explodes in your face.");
-			take_hit(damroll(20, 8), "an explosion");
+			take_hit(damroll(efflevel, 8), "an explosion");
 			ident = TRUE;
 			break;
 		}
 
 	case TRAP_OF_EXPLODE_IV:
 		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else efflevel = p_ptr->lev;
+			if (efflevel > 40) efflevel = 40;
+			if (efflevel < 2) efflevel = 2;
+
 			msg_print("A dynamite charge explodes in your face.");
-			take_hit(damroll(40, 8), "an explosion");
+			take_hit(damroll(efflevel, 8), "an explosion");
 			ident = TRUE;
 			break;
 		}
