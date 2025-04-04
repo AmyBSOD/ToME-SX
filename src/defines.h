@@ -3098,6 +3098,33 @@
 #define TRAP_NASTY133                     536
 #define TRAP_NASTY134                     537
 
+#define TRAP_OF_EXPLODE_V                 538
+
+#define TRAP_OF_FORGET_TRAPS              539
+#define TRAP_OF_FORGET_OBJECTS            540
+
+#define TRAP_OF_SHOT_I                    541
+#define TRAP_OF_SHOT_II                   542
+#define TRAP_OF_SHOT_III                  543
+#define TRAP_OF_SHOTS_I                   544
+#define TRAP_OF_SHOTS_II                  545
+#define TRAP_OF_SHOTS_III                 546
+
+#define TRAP_OF_ARROW_O                   547
+#define TRAP_OF_ARROWS_O                  548
+
+#define TRAP_OF_CUTS_I                    549
+#define TRAP_OF_CUTS_II                   550
+#define TRAP_OF_CUTS_III                  551
+#define TRAP_OF_CUTS_IV                   552
+#define TRAP_OF_CUTS_V                    553
+
+#define TRAP_OF_EXP_LOSS_I                554
+#define TRAP_OF_EXP_LOSS_II               555
+#define TRAP_OF_EXP_LOSS_III              556
+#define TRAP_OF_EXP_LOSS_IV               557
+#define TRAP_OF_EXP_LOSS_V                558
+
 /*** General index values ***/
 
 

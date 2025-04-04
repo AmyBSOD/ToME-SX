@@ -364,10 +364,40 @@ void do_fart_effect(void)
 
 	case 35:
 		{
-			msg_print("Ewwww, the stink is unbearable...");
-			msg_print("it smells foul, almost like the accursed black breath...");
-			msg_print("Oh damn, could it be that you're afflicted with it now?");
-			p_ptr->black_breath = TRUE;
+			if (randint(100) == 1) {
+				int k;
+				trap_type *ft_ptr;
+				msg_print("Your knowledge of traps is reduced!");
+
+				for (k = 0; k < max_t_idx; k++)
+				{
+					ft_ptr = &t_info[k];
+					if (magik(2)) ft_ptr->ident = FALSE;
+				}
+
+			} else if (randint(100) == 1) {
+				int k;
+				object_kind *fk_ptr;
+
+				msg_print("Your knowledge of objects is reduced!");
+
+				for (k = 0; k < max_k_idx; k++)
+				{
+					fk_ptr = &k_info[k];
+					if (fk_ptr->flavor && magik(2)) {
+						fk_ptr->aware = FALSE;
+						fk_ptr->tried = FALSE;
+					}
+				}
+
+			} else {
+
+				msg_print("Ewwww, the stink is unbearable...");
+				msg_print("it smells foul, almost like the accursed black breath...");
+				msg_print("Oh damn, could it be that you're afflicted with it now?");
+				p_ptr->black_breath = TRUE;
+			}
+
 			break;
 		}
 

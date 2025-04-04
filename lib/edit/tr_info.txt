@@ -2632,6 +2632,111 @@ I:60:2:50:4:40:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:538:Plastic Explosive Trap
+I:15:10:80:0:90:3d8:r
+D:Ha! It explodes before your hands can illegally touch it!
+F:FLOOR | CHEST | DOOR
+
+N:539:Forgettal Trap
+I:8:20:80:0:20:0d0:G
+D:Oh no, you don't remember what the traps look like!
+F:FLOOR | CHEST | DOOR
+
+N:540:Mind Wipe Trap
+I:8:20:80:0:20:0d0:G
+D:You feel dizzy!
+F:FLOOR | CHEST | DOOR
+
+N:541:Pebble Trap
+I:2:100:0:5:1:0d0:R
+D:A pebble shoots out at you.
+F:FLOOR | CHEST | DOOR
+
+N:542:Shot Trap
+I:2:100:0:5:5:0d0:R
+D:An iron shot shoots out at you.
+F:FLOOR | CHEST | DOOR
+
+N:543:Mithril Shot Trap
+I:2:100:0:5:12:0d0:R
+D:A mithril shot shoots out at you.
+F:FLOOR | CHEST | DOOR
+
+N:544:Pebbles Trap
+I:4:100:0:5:14:0d0:R
+D:Some pebbles shoot out at you.
+F:FLOOR | CHEST | DOOR
+
+N:545:Shots Trap
+I:4:100:0:5:18:0d0:R
+D:Some iron shots shoot out at you.
+F:FLOOR | CHEST | DOOR
+
+N:546:Mithril Shots Trap
+I:4:100:0:5:24:0d0:R
+D:Some mithril shots shoot out at you.
+F:FLOOR | CHEST | DOOR
+
+N:547:Sheaf Arrow Trap
+I:2:100:0:5:1:0d0:R
+D:A sheaf arrow shoots out at you.
+F:FLOOR | CHEST | DOOR
+
+N:548:Sheaf Arrows Trap
+I:4:100:0:7:12:0d0:R
+D:Some sheaf arrows shoot out at you.
+F:FLOOR | CHEST | DOOR
+
+N:549:Light Cut Trap
+I:2:100:50:3:5:0d0:r
+D:You're bleeding!
+F:FLOOR | CHEST | DOOR
+
+N:550:Heavy Cut Trap
+I:3:100:50:3:15:0d0:r
+D:You're bleeding!
+F:FLOOR | CHEST | DOOR
+
+N:551:Nasty Cut Trap
+I:4:100:50:3:30:0d0:r
+D:You're bleeding!
+F:FLOOR | CHEST | DOOR
+
+N:552:Severe Cut Trap
+I:7:100:50:3:45:0d0:r
+D:You're bleeding!
+F:FLOOR | CHEST | DOOR
+
+N:553:Mortal Cut Trap
+I:10:100:50:3:60:0d0:r
+D:You're bleeding!
+F:FLOOR | CHEST | DOOR
+
+N:554:Trap of Experience Loss
+I:3:20:80:0:20:0d0:G
+D:You feel less experienced!
+F:FLOOR | CHEST | DOOR
+
+N:555:Trap of High Experience Loss
+I:5:10:80:0:40:0d0:G
+D:You feel less experienced!
+F:FLOOR | CHEST | DOOR
+
+N:556:Trap of Severe Experience Loss
+I:8:5:80:0:60:0d0:G
+D:You feel less experienced!
+F:FLOOR | CHEST | DOOR
+
+N:557:Trap of Absolute Experience Loss
+I:12:2:80:0:80:0d0:G
+D:You feel less experienced!
+F:FLOOR | CHEST | DOOR
+
+N:558:Trap of Total Experience Loss
+I:20:2:80:0:100:0d0:G
+D:You feel less experienced!
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

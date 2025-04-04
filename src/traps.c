@@ -3454,7 +3454,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 	case TRAP_OF_EXPLODE_II:
 		{
-			int efflevel = 99;
+			int efflevel = 2;
 			if (dun_level > 0) efflevel = dun_level;
 			else efflevel = p_ptr->lev;
 			if (efflevel > 10) efflevel = 10;
@@ -3468,7 +3468,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 	case TRAP_OF_EXPLODE_III:
 		{
-			int efflevel = 99;
+			int efflevel = 2;
 			if (dun_level > 0) efflevel = dun_level;
 			else efflevel = p_ptr->lev;
 			if (efflevel > 20) efflevel = 20;
@@ -3482,7 +3482,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 	case TRAP_OF_EXPLODE_IV:
 		{
-			int efflevel = 99;
+			int efflevel = 2;
 			if (dun_level > 0) efflevel = dun_level;
 			else efflevel = p_ptr->lev;
 			if (efflevel > 40) efflevel = 40;
@@ -3490,6 +3490,59 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 			msg_print("A dynamite charge explodes in your face.");
 			take_hit(damroll(efflevel, 8), "an explosion");
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_EXPLODE_V:
+		{
+			int efflevel = 2;
+			if (dun_level > 0) efflevel = dun_level;
+			else {
+				efflevel = p_ptr->lev;
+				if (p_ptr->lev) efflevel = 80;
+			}
+			if (efflevel > 80) efflevel = 80;
+			if (efflevel < 2) efflevel = 2;
+
+			msg_print("A plastic explosive charge explodes in your face.");
+			take_hit(damroll(efflevel, 8), "an explosion");
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_FORGET_TRAPS:
+		{
+			int k;
+			trap_type *ft_ptr;
+			msg_print("Your knowledge of traps is reduced!");
+
+			for (k = 0; k < max_t_idx; k++)
+			{
+				ft_ptr = &t_info[k];
+				if (magik(2)) ft_ptr->ident = FALSE;
+			}
+
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_FORGET_OBJECTS:
+		{
+			int k;
+			object_kind *fk_ptr;
+
+			msg_print("Your knowledge of objects is reduced!");
+
+			for (k = 0; k < max_k_idx; k++)
+			{
+				fk_ptr = &k_info[k];
+				if (fk_ptr->flavor && magik(2)) {
+					fk_ptr->aware = FALSE;
+					fk_ptr->tried = FALSE;
+				}
+			}
+
 			ident = TRUE;
 			break;
 		}
@@ -3744,6 +3797,117 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("Your feel your life fade away!");
 			take_hit(dummy, "the Hand of Doom");
 			if (p_ptr->chp < 1) p_ptr->chp = 1;
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_OF_CUTS_I:
+		{
+			msg_print("You get a cut.");
+			(void)set_cut(p_ptr->cut + 20);
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_OF_CUTS_II:
+		{
+			msg_print("You get a heavy cut.");
+			(void)set_cut(p_ptr->cut + 50);
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_OF_CUTS_III:
+		{
+			msg_print("You get a nasty cut.");
+			(void)set_cut(p_ptr->cut + 100);
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_OF_CUTS_IV:
+		{
+			msg_print("You get a severe cut.");
+			(void)set_cut(p_ptr->cut + 200);
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_OF_CUTS_V:
+		{
+			msg_print("You get a mortal cut.");
+			(void)set_cut(p_ptr->cut + 500);
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_OF_EXP_LOSS_I:
+		{
+			msg_print("You feel a loss of experience!");
+			p_ptr->exp *= 9;
+			p_ptr->exp /= 10;
+			p_ptr->max_exp *= 9;
+			p_ptr->max_exp /= 10;
+			check_experience();
+
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_OF_EXP_LOSS_II:
+		{
+			msg_print("You feel a big loss of experience!");
+			p_ptr->exp *= 4;
+			p_ptr->exp /= 5;
+			p_ptr->max_exp *= 4;
+			p_ptr->max_exp /= 5;
+			check_experience();
+
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_OF_EXP_LOSS_III:
+		{
+			msg_print("You feel a huge loss of experience!");
+			p_ptr->exp *= 2;
+			p_ptr->exp /= 3;
+			p_ptr->max_exp *= 2;
+			p_ptr->max_exp /= 3;
+			check_experience();
+
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_OF_EXP_LOSS_IV:
+		{
+			msg_print("You feel an absurd loss of experience!");
+			p_ptr->exp /= 2;
+			p_ptr->max_exp /= 2;
+			check_experience();
+
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_OF_EXP_LOSS_V:
+		{
+			msg_print("You feel a total loss of experience!");
+			p_ptr->exp /= 10;
+			p_ptr->max_exp /= 10;
+			check_experience();
+
 			ident = TRUE;
 
 			break;
@@ -7861,6 +8025,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/*
 		 * single missile traps
 		 */
+	case TRAP_OF_ARROW_O:
+		ident = player_handle_missile_trap(1, TV_ARROW, 7, 3, 4, 0, "Sheaf Arrow Trap");
+		break;
 	case TRAP_OF_ARROW_I:
 		ident = player_handle_missile_trap(1, TV_ARROW, SV_AMMO_NORMAL, 4, 4, 0, "Arrow Trap");
 		break;
@@ -7884,6 +8051,15 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		break;
 	case TRAP_OF_POISON_ARROW_IV:
 		ident = player_handle_missile_trap(1, TV_BOLT, SV_AMMO_HEAVY, 8, 5, randint(70), "Poison Seeker Bolt Trap");
+		break;
+	case TRAP_OF_SHOT_I:
+		ident = player_handle_missile_trap(1, TV_SHOT, SV_AMMO_LIGHT, 3, 3, 0, "Pebble Trap");
+		break;
+	case TRAP_OF_SHOT_II:
+		ident = player_handle_missile_trap(1, TV_SHOT, SV_AMMO_NORMAL, 4, 4, 0, "Shot Trap");
+		break;
+	case TRAP_OF_SHOT_III:
+		ident = player_handle_missile_trap(1, TV_SHOT, SV_AMMO_HEAVY, 5, 5, 0, "Mithril Shot Trap");
 		break;
 	case TRAP_OF_DAGGER_I:
 		ident = player_handle_missile_trap(1, TV_SWORD, SV_BROKEN_DAGGER, 2, 4, 0, "Dagger Trap");
@@ -7913,6 +8089,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		 * numbers range from 2 (level 0 to 14) to 10 (level 120 and up)
 		 * Amy edit: reduced amount of missiles so players aren't hopelessly instakilled
 		 */
+	case TRAP_OF_ARROWS_O:
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, 7, 3, 4, 0, "Sheaf Arrow Trap");
+		break;
 	case TRAP_OF_ARROWS_I:
 		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, SV_AMMO_NORMAL, 4, 4, 0, "Arrow Trap");
 		break;
@@ -7936,6 +8115,15 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		break;
 	case TRAP_OF_POISON_ARROWS_IV:
 		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_BOLT, SV_AMMO_HEAVY, 8, 5, randint(70), "Poison Seeker Bolt Trap");
+		break;
+	case TRAP_OF_SHOTS_I:
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SHOT, SV_AMMO_LIGHT, 3, 3, 0, "Pebble Trap");
+		break;
+	case TRAP_OF_SHOTS_II:
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SHOT, SV_AMMO_NORMAL, 4, 4, 0, "Shot Trap");
+		break;
+	case TRAP_OF_SHOTS_III:
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SHOT, SV_AMMO_HEAVY, 5, 5, 0, "Mithril Shot Trap");
 		break;
 	case TRAP_OF_DAGGERS_I:
 		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SWORD, SV_BROKEN_DAGGER, 2, 4, 0, "Dagger Trap");
