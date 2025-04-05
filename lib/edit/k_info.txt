@@ -8489,6 +8489,17 @@ A:10/1
 D:'E'ating this mushroom restores a bit of your sanity, in case it has
 D:been damaged. Make sure you don't let your sanity reach zero!
 
+N:1035:& Pair~ of Mary Janes
+G:]:D
+I:30:14:5
+W:40:0:8:25000
+A:40/10
+F:CHR
+f:CHR
+P:2:1d1:0:0:0
+D:These cute shoes have treaded stroking block heels and look very sexy.
+D:Wearing them makes you much more attractive.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
