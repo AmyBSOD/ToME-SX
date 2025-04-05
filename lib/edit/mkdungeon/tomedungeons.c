@@ -498,7 +498,7 @@ void randommonstermix(void)
 	if (specmons > 10) specmons = 10;
 	while (specmons > 0) {
 		specmons--;
-		switch (random_number(278)) { /* sadly the pipe doesn't work :( --Amy */
+		switch (random_number(285)) {
 			default:
 			case 1:
 				printf("M:UNIQUE\n");
@@ -564,16 +564,16 @@ void randommonstermix(void)
 				printf("M:DROP_90\n");
 				break;
 			case 22:
-				printf("M:DROP_1d2\n");
+				printf("M:DROP_12\n"); /* should be DROP_1D2 but the parser is VERY stupid --Amy */
 				break;
 			case 23:
-				printf("M:DROP_2d2\n");
+				printf("M:DROP_22\n");
 				break;
 			case 24:
-				printf("M:DROP_3d2\n");
+				printf("M:DROP_32\n");
 				break;
 			case 25:
-				printf("M:DROP_4d2\n");
+				printf("M:DROP_42\n");
 				break;
 			case 26:
 				printf("M:DROP_GOOD\n");
@@ -1113,7 +1113,7 @@ void randommonstermix(void)
 				printf("S:FORGET\n");
 				break;
 			case 205:
-				printf("S:RAISE_DEAD\n");
+				printf("S:ANIM_DEAD\n");
 				break;
 			case 206:
 				printf("S:S_BUG\n");
@@ -1334,9 +1334,27 @@ void randommonstermix(void)
 			case 278:
 				printf("M:R_CHAR_$\n");
 				break;
-			/*case 279:
-				printf("M:R_CHAR_|\n");
-				break;*/
+			case 279:
+				printf("M:R_XTRACHAR_PIPE_124\n");
+				break;
+			case 280:
+				printf("M:R_CHAR_~\n");
+				break;
+			case 281:
+				printf("M:R_CHAR_*\n");
+				break;
+			case 282:
+				printf("M:R_CHAR_.\n");
+				break;
+			case 283:
+				printf("M:R_CHAR_#\n");
+				break;
+			case 284:
+				printf("M:R_CHAR_;\n");
+				break;
+			case 285:
+				printf("M:R_CHAR_:\n");
+				break;
 		}
 	}
 
@@ -1358,11 +1376,6 @@ void printRandoms(int lower, int upper, int count)
 
 		switch (d_id) {
 			case 0:
-				printf("M:comma R_CHAR_,\n");
-				printf("M:pipe R_CHAR_|\n");
-				printf("M:dollar R_CHAR_$\n");
-
-
 				printf("N:0:Wilderness\n");
 				printf("D:Wil:a way to the Wilderness\n");
 				printf("W:0:0:0:0:14:500\n");

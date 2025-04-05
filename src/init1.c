@@ -149,10 +149,10 @@ static cptr r_info_flags1[] =
 	"ONLY_ITEM",
 	"DROP_60",
 	"DROP_90",
-	"DROP_1D2",
-	"DROP_2D2",
-	"DROP_3D2",
-	"DROP_4D2",
+	"DROP_12",
+	"DROP_22",
+	"DROP_32",
+	"DROP_42", /* THIS IS STUPID IT SHOULD BE DROP_4D2 GODDAMMIT --AMY */
 	"DROP_GOOD",
 	"DROP_GREAT",
 	"DROP_USEFUL",
@@ -7616,7 +7616,7 @@ static errr grab_one_basic_flag(monster_race *r_ptr, cptr what)
 	}
 
 	/* Oops */
-	msg_format("Unknown monster flag '%s'.", what);
+	msg_format("Unknown basic monster flag '%s'.", what);
 
 	/* Failure */
 	return (1);
@@ -7661,7 +7661,7 @@ static errr grab_one_spell_flag(monster_race *r_ptr, cptr what)
 	}
 
 	/* Oops */
-	msg_format("Unknown monster flag '%s'.", what);
+	msg_format("Unknown monster spell flag '%s'.", what);
 
 	/* Failure */
 	return (1);
@@ -8183,7 +8183,7 @@ static errr grab_one_basic_ego_flag(monster_ego *re_ptr, cptr what, bool add)
 	}
 
 	/* Oops */
-	msg_format("Unknown monster flag '%s'.", what);
+	msg_format("Unknown basic ego monster flag '%s'.", what);
 
 	/* Failure */
 	return (1);
@@ -8237,7 +8237,7 @@ static errr grab_one_spell_ego_flag(monster_ego *re_ptr, cptr what, bool add)
 	}
 
 	/* Oops */
-	msg_format("Unknown monster flag '%s'.", what);
+	msg_format("Unknown monster spell ego flag '%s'.", what);
 
 	/* Failure */
 	return (1);
@@ -8317,7 +8317,7 @@ static errr grab_one_ego_flag(monster_ego *re_ptr, cptr what, bool must)
 	}
 
 	/* Oops */
-	msg_format("Unknown monster flag '%s'.", what);
+	msg_format("Unknown monster ego flag '%s'.", what);
 
 	/* Failure */
 	return (1);
@@ -8453,8 +8453,8 @@ errr init_re_info_txt(FILE *fp, char *buf)
 			blow_num = 0;
 			r_char_number = 0;
 			nr_char_number = 0;
-			for (j = 0; j < 5; j++) re_ptr->r_char[j] = 0;
-			for (j = 0; j < 5; j++) re_ptr->nr_char[j] = 0;
+			for (j = 0; j < 10; j++) re_ptr->r_char[j] = 0;
+			for (j = 0; j < 10; j++) re_ptr->nr_char[j] = 0;
 			for (j = 0; j < 4; j++)
 			{
 				re_ptr->blow[j].method = 0;
@@ -8627,7 +8627,7 @@ errr init_re_info_txt(FILE *fp, char *buf)
 				if (1 == sscanf(s, "R_CHAR_%c", &r_char))
 				{
 					/* Limited to 5 races */
-					if (r_char_number >= 5) continue;
+					if (r_char_number >= 10) continue;
 
 					/* Extract a "frequency" */
 					re_ptr->r_char[r_char_number++] = r_char;
@@ -8672,7 +8672,7 @@ errr init_re_info_txt(FILE *fp, char *buf)
 				if (1 == sscanf(s, "R_CHAR_%c", &r_char))
 				{
 					/* Limited to 5 races */
-					if (nr_char_number >= 5) continue;
+					if (nr_char_number >= 10) continue;
 
 					/* Extract a "frequency" */
 					re_ptr->nr_char[nr_char_number++] = r_char;
@@ -9215,7 +9215,7 @@ static errr grab_one_basic_monster_flag(dungeon_info_type *d_ptr, cptr what, byt
 	}
 
 	/* Oops */
-	msg_format("Unknown monster flag '%s'.", what);
+	msg_format("Unknown basic dungeon monster flag '%s'.", what);
 
 	/* Failure */
 	return (1);
@@ -9260,7 +9260,7 @@ static errr grab_one_spell_monster_flag(dungeon_info_type *d_ptr, cptr what, byt
 	}
 
 	/* Oops */
-	msg_format("Unknown monster flag '%s'.", what);
+	msg_format("Unknown monster spell flag '%s'.", what);
 
 	/* Failure */
 	return (1);
@@ -9410,7 +9410,7 @@ errr init_d_info_txt(FILE *fp, char *buf)
 				d_ptr->rules[j].mode = DUNGEON_MODE_NONE;
 				d_ptr->rules[j].percent = 0;
 
-				for (k = 0; k < 5; k++) d_ptr->rules[j].r_char[k] = 0;
+				for (k = 0; k < 10; k++) d_ptr->rules[j].r_char[k] = 0;
 			}
 
 			/* HACK -- Those ones HAVE to have a set default value */
@@ -9795,6 +9795,8 @@ errr init_d_info_txt(FILE *fp, char *buf)
 			/* Parse every entry */
 			for (s = buf + 2; *s; )
 			{
+				int charnum; /* for the motherfucking pipe (124) --Amy */
+
 				/* Find the end of this entry */
 				for (t = s; *t && (*t != ' ') && (*t != '|'); ++t) /* loop */;
 
@@ -9809,10 +9811,25 @@ errr init_d_info_txt(FILE *fp, char *buf)
 				if (1 == sscanf(s, "R_CHAR_%c", &r_char))
 				{
 					/* Limited to 5 races */
-					if (r_char_number >= 5) continue;
+					if (r_char_number >= 10) continue;
 
 					/* Extract a "frequency" */
 					d_ptr->rules[rule_num].r_char[r_char_number++] = r_char;
+
+					/* Start at next entry */
+					s = t;
+
+					/* Continue */
+					continue;
+				}
+
+				if (1 == sscanf(s, "R_XTRACHAR_PIPE_%d", &charnum))
+				{
+					/* Limited to 5 races */
+					if (r_char_number >= 10) continue;
+
+					/* Extract a "frequency" */
+					d_ptr->rules[rule_num].r_char[r_char_number++] = charnum;
 
 					/* Start at next entry */
 					s = t;
@@ -10675,7 +10692,7 @@ static errr grab_one_wf_info_flag(wilderness_type_info *wf_ptr, cptr what)
 	}
 
 	/* Oops */
-	msg_format("Unknown monster flag '%s'.", what);
+	msg_format("Unknown monster wilderness flag '%s'.", what);
 
 	/* Failure */
 	return (1);

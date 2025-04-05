@@ -1086,7 +1086,7 @@ struct rule_type
 	 * @brief String
 	 * @note Monster race allowed 
 	 */
-	char r_char[5];
+	char r_char[10];
 };
 
 /** @struct obj_theme

@@ -620,8 +620,8 @@ struct monster_ego
 	byte g_attr;                    /* Overlay graphic attribute */
 	char g_char;                    /* Overlay graphic character */
 
-	char r_char[5];                 /* Monster race allowed */
-	char nr_char[5];                /* Monster race not allowed */
+	char r_char[10];                 /* Monster race allowed */
+	char nr_char[10];                /* Monster race not allowed */
 };
 
 
@@ -2403,7 +2403,7 @@ struct rule_type
 	u32b mflags8;
 	u32b mflags9;
 
-	char r_char[5];                 /* Monster race allowed */
+	char r_char[10];                 /* Monster race allowed */
 };
 
 /* A structure for the != dungeon types */

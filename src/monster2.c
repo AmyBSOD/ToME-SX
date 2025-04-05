@@ -157,7 +157,7 @@ bool mego_ok(int r_idx, int ego)
 	/* Need good race -- IF races are specified */
 	if (re_ptr->r_char[0])
 	{
-		for (i = 0; i < 5; i++)
+		for (i = 0; i < 10; i++)
 		{
 			if (r_ptr->d_char == re_ptr->r_char[i]) ok = TRUE;
 		}
@@ -165,7 +165,7 @@ bool mego_ok(int r_idx, int ego)
 	}
 	if (re_ptr->nr_char[0])
 	{
-		for (i = 0; i < 5; i++)
+		for (i = 0; i < 10; i++)
 		{
 			if (r_ptr->d_char == re_ptr->nr_char[i]) return (FALSE);
 		}
@@ -930,7 +930,7 @@ bool apply_rule(monster_race *r_ptr, byte rule)
 			if ((d_ptr->rules[rule].mflags9 & r_ptr->flags9) != d_ptr->rules[rule].mflags9)
 				return FALSE;
 		}
-		for (a = 0; a < 5; a++)
+		for (a = 0; a < 10; a++)
 		{
 			if (d_ptr->rules[rule].r_char[a] && (d_ptr->rules[rule].r_char[a] != r_ptr->d_char)) return FALSE;
 		}
@@ -952,7 +952,7 @@ bool apply_rule(monster_race *r_ptr, byte rule)
 		if (d_ptr->rules[rule].mflags8 && (r_ptr->flags8 & d_ptr->rules[rule].mflags8)) return TRUE;
 		if (d_ptr->rules[rule].mflags9 && (r_ptr->flags9 & d_ptr->rules[rule].mflags9)) return TRUE;
 
-		for (a = 0; a < 5; a++)
+		for (a = 0; a < 10; a++)
 			if (d_ptr->rules[rule].r_char[a] == r_ptr->d_char) return TRUE;
 
 		/* All checks failled ? Sorry ... */
