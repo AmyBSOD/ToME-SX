@@ -535,7 +535,11 @@ void do_fart_effect(void)
 
 	case 60:
 		{
-			set_tim_manavoid(p_ptr->tim_manavoid + 10 + randint(200));
+			if (magik(10)) {
+				set_tim_manasilence(p_ptr->tim_manasilence + 10 + randint(200));
+			} else {
+				set_tim_manavoid(p_ptr->tim_manavoid + 10 + randint(200));
+			}
 			break;
 		}
 

@@ -2114,7 +2114,7 @@ void take_sanity_hit(int damage, cptr hit_from)
  * Does a given class of objects (usually) hate acid?
  * Note that acid can either melt or corrode something.
  */
-static bool hates_acid(object_type *o_ptr)
+bool hates_acid(object_type *o_ptr)
 {
 	/* Analyze the type */
 	switch (o_ptr->tval)
@@ -2169,7 +2169,7 @@ static bool hates_acid(object_type *o_ptr)
 /*
  * Does a given object (usually) hate electricity?
  */
-static bool hates_elec(object_type *o_ptr)
+bool hates_elec(object_type *o_ptr)
 {
 	switch (o_ptr->tval)
 	{
@@ -2192,7 +2192,7 @@ static bool hates_elec(object_type *o_ptr)
  * Hafted/Polearm weapons have wooden shafts.
  * Arrows/Bows are mostly wooden.
  */
-static bool hates_fire(object_type *o_ptr)
+bool hates_fire(object_type *o_ptr)
 {
 	/* Analyze the type */
 	switch (o_ptr->tval)
@@ -2246,7 +2246,7 @@ static bool hates_fire(object_type *o_ptr)
 /*
  * Does a given object (usually) hate cold?
  */
-static bool hates_cold(object_type *o_ptr)
+bool hates_cold(object_type *o_ptr)
 {
 	switch (o_ptr->tval)
 	{
@@ -2274,7 +2274,7 @@ static bool hates_cold(object_type *o_ptr)
 /*
  * Melt something
  */
-static int set_acid_destroy(object_type *o_ptr)
+int set_acid_destroy(object_type *o_ptr)
 {
 	u32b f1, f2, f3, f4, f5, esp;
 
@@ -2289,7 +2289,7 @@ static int set_acid_destroy(object_type *o_ptr)
 /*
  * Electrical damage
  */
-static int set_elec_destroy(object_type *o_ptr)
+int set_elec_destroy(object_type *o_ptr)
 {
 	u32b f1, f2, f3, f4, f5, esp;
 
@@ -2304,7 +2304,7 @@ static int set_elec_destroy(object_type *o_ptr)
 /*
  * Burn something
  */
-static int set_fire_destroy(object_type *o_ptr)
+int set_fire_destroy(object_type *o_ptr)
 {
 	u32b f1, f2, f3, f4, f5, esp;
 
@@ -2319,7 +2319,7 @@ static int set_fire_destroy(object_type *o_ptr)
 /*
  * Freeze things
  */
-static int set_cold_destroy(object_type *o_ptr)
+int set_cold_destroy(object_type *o_ptr)
 {
 	u32b f1, f2, f3, f4, f5, esp;
 

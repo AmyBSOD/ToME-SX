@@ -678,6 +678,7 @@ static bool do_extra(int flag)
 	do_s16b(&p_ptr->tim_dancing, flag);
 	do_s16b(&p_ptr->am_dancing, flag);
 	do_s16b(&p_ptr->tim_manavoid, flag);
+	do_s16b(&p_ptr->tim_manasilence, flag);
 	do_s16b(&p_ptr->tim_repelling, flag);
 	do_s16b(&p_ptr->tim_wraith, flag);
 	do_s16b(&p_ptr->tim_ffall, flag);

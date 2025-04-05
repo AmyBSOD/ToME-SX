@@ -28,8 +28,8 @@
 # R l red  for arrow/dagger traps
 # s slate  for nasty traps
 # W        for compound trap!!!
+# u l umb  for shit traps
 # D ldark  unused
-# u l umb  unused
 # don't use U or you'll get trapped doors that are indistinguishable from untrapped doors!
 #
 #  an unknown character is multi-hued!
@@ -2735,6 +2735,281 @@ F:FLOOR | CHEST | DOOR
 N:558:Trap of Total Experience Loss
 I:20:2:80:0:100:0d0:G
 D:You feel less experienced!
+F:FLOOR | CHEST | DOOR
+
+N:559:Trap of Silence
+I:6:50:50:3:25:0d0:r
+D:You've been muted!
+F:FLOOR | CHEST | DOOR
+
+N:560:Stir Trap
+I:2:50:40:6:5:0d0:v
+D:Something's stirring...
+F:FLOOR | CHEST | DOOR
+
+N:561:Group Trap
+I:3:33:40:6:10:0d0:v
+D:You feel the presence of a group.
+F:FLOOR | CHEST | DOOR
+
+N:562:Forest Trap
+I:2:25:0:10:3:0d0:o
+D:Forests grow in the dungeon!
+F:FLOOR | CHEST | DOOR
+
+N:563:Small Forest Trap
+I:2:25:0:10:3:0d0:o
+D:Small forests grow in the dungeon!
+F:FLOOR | CHEST | DOOR
+
+N:564:Trap of Item Destruction
+I:5:100:0:10:20:0d0:g
+D:Your items are being destroyed!
+F:FLOOR | CHEST | DOOR
+
+N:565:Trap of Severe Item Destruction
+I:6:100:0:10:40:0d0:B
+D:Your items are being destroyed!
+F:FLOOR | CHEST | DOOR
+
+N:566:Trap of Ultimate Item Destruction
+I:8:100:0:10:60:0d0:B
+D:Your items are being destroyed!
+F:FLOOR | CHEST | DOOR
+
+N:567:Pit Trap
+I:1:100:0:10:1:0d0:w
+D:Whoops, suddenly there's a pit below you.
+F:FLOOR | CHEST | DOOR
+
+N:568:Many Status Trap
+I:4:100:50:3:25:0d0:r
+D:You're afflicted with status effects!
+F:FLOOR | CHEST | DOOR
+
+N:569:All Status Trap
+I:10:50:50:3:50:0d0:r
+D:You're afflicted with status effects!
+F:FLOOR | CHEST | DOOR
+
+N:570:Stupid Status Trap
+I:4:33:50:4:20:0d0:r
+D:You suddenly can't see, and thinking is difficult too....
+F:FLOOR | CHEST | DOOR
+
+N:571:Venom Needle Trap
+I:5:20:50:3:24:0d0:r
+D:A poisoned needle pricks you!
+F:FLOOR | CHEST | DOOR
+
+N:572:Blindness Trap
+I:2:100:50:4:2:0d0:r
+D:You suddenly can't see....
+F:FLOOR | CHEST | DOOR
+
+N:573:Confusion Trap
+I:2:100:50:4:2:0d0:r
+D:Thinking is suddenly difficult....
+F:FLOOR | CHEST | DOOR
+
+N:574:No Sight Trap
+I:4:40:50:4:18:0d0:r
+D:You suddenly can't see....
+F:FLOOR | CHEST | DOOR
+
+N:575:Dizziness Trap
+I:5:30:50:4:20:0d0:r
+D:Thinking is suddenly difficult....
+F:FLOOR | CHEST | DOOR
+
+N:576:Fire Trap
+I:1:100:0:10:1:0d0:g
+D:You are hit by fire!
+F:FLOOR | CHEST | DOOR
+
+N:577:Acid Trap
+I:1:100:0:10:1:0d0:g
+D:You are hit by acid!
+F:FLOOR | CHEST | DOOR
+
+N:578:Cold Trap
+I:1:100:0:10:1:0d0:g
+D:You are hit by cold!
+F:FLOOR | CHEST | DOOR
+
+N:579:Lightning Trap
+I:1:100:0:10:1:0d0:g
+D:You are hit by lightning!
+F:FLOOR | CHEST | DOOR
+
+N:580:Plasma Trap
+I:3:100:0:10:10:0d0:g
+D:You are hit by plasma!
+F:FLOOR | CHEST | DOOR
+
+N:581:Wave Trap
+I:2:100:0:10:5:0d0:g
+D:You are hit by water!
+F:FLOOR | CHEST | DOOR
+
+N:582:Shards Trap
+I:3:100:0:10:12:0d0:g
+D:You are hit by shards!
+F:FLOOR | CHEST | DOOR
+
+N:583:Sound Trap
+I:3:100:0:10:10:0d0:g
+D:You are hit by sound!
+F:FLOOR | CHEST | DOOR
+
+N:584:Icicle Trap
+I:2:100:0:10:5:0d0:g
+D:You are hit by ice!
+F:FLOOR | CHEST | DOOR
+
+N:585:Chaos Trap
+I:3:100:0:10:10:0d0:g
+D:You are hit by chaos!
+F:FLOOR | CHEST | DOOR
+
+N:586:Nether Trap
+I:3:100:0:10:12:0d0:g
+D:You are hit by nether!
+F:FLOOR | CHEST | DOOR
+
+N:587:Disenchant Trap
+I:3:100:0:10:12:0d0:g
+D:You are hit by disenchantment!
+F:FLOOR | CHEST | DOOR
+
+N:588:Nexus Trap
+I:3:100:0:10:12:0d0:g
+D:You are hit by nexus!
+F:FLOOR | CHEST | DOOR
+
+N:589:Time Trap
+I:4:100:0:10:20:0d0:g
+D:You are hit by time!
+F:FLOOR | CHEST | DOOR
+
+N:590:Gravity Trap
+I:3:100:0:10:12:0d0:g
+D:You are hit by gravity!
+F:FLOOR | CHEST | DOOR
+
+N:591:Nuke Trap
+I:3:100:0:10:10:0d0:g
+D:You are hit by nuclear waste!
+F:FLOOR | CHEST | DOOR
+
+N:592:Poison Sheaf Arrow Trap
+I:2:100:0:5:3:0d0:R
+D:A poisoned sheaf arrow shoots out at you.
+F:FLOOR | CHEST | DOOR
+
+N:593:Poison Sheaf Arrows Trap
+I:4:100:0:7:14:0d0:R
+D:Some poisoned sheaf arrows shoot out at you.
+F:FLOOR | CHEST | DOOR
+
+N:594:Iron Spike Trap
+I:2:100:0:5:1:0d0:R
+D:An iron spike shoots out at you.
+F:FLOOR | CHEST | DOOR
+
+N:595:Steel Spike Trap
+I:2:100:0:5:4:0d0:R
+D:A steel spike shoots out at you.
+F:FLOOR | CHEST | DOOR
+
+N:596:Lead Spike Trap
+I:2:100:0:5:8:0d0:R
+D:A lead spike shoots out at you.
+F:FLOOR | CHEST | DOOR
+
+N:597:Mithril Spike Trap
+I:2:100:0:5:15:0d0:R
+D:A mithril spike shoots out at you.
+F:FLOOR | CHEST | DOOR
+
+N:598:Adamantium Spike Trap
+I:2:100:0:5:25:0d0:R
+D:An adamantium spike shoots out at you.
+F:FLOOR | CHEST | DOOR
+
+N:599:Poison Iron Spike Trap
+I:2:100:0:5:3:0d0:R
+D:A poisoned iron spike shoots out at you.
+F:FLOOR | CHEST | DOOR
+
+N:600:Poison Steel Spike Trap
+I:2:100:0:5:6:0d0:R
+D:A poisoned steel spike shoots out at you.
+F:FLOOR | CHEST | DOOR
+
+N:601:Poison Lead Spike Trap
+I:2:100:0:5:10:0d0:R
+D:A poisoned lead spike shoots out at you.
+F:FLOOR | CHEST | DOOR
+
+N:602:Poison Mithril Spike Trap
+I:2:100:0:5:18:0d0:R
+D:A poisoned mithril spike shoots out at you.
+F:FLOOR | CHEST | DOOR
+
+N:603:Poison Adamantium Spike Trap
+I:2:100:0:5:30:0d0:R
+D:A poisoned adamantium spike shoots out at you.
+F:FLOOR | CHEST | DOOR
+
+N:604:Iron Spikes Trap
+I:2:100:0:5:10:0d0:R
+D:Some iron spikes shoot out at you.
+F:FLOOR | CHEST | DOOR
+
+N:605:Steel Spikes Trap
+I:2:100:0:5:15:0d0:R
+D:Some steel spikes shoot out at you.
+F:FLOOR | CHEST | DOOR
+
+N:606:Lead Spikes Trap
+I:2:100:0:5:20:0d0:R
+D:Some lead spikes shoot out at you.
+F:FLOOR | CHEST | DOOR
+
+N:607:Mithril Spikes Trap
+I:2:100:0:5:30:0d0:R
+D:Some mithril spikes shoot out at you.
+F:FLOOR | CHEST | DOOR
+
+N:608:Adamantium Spikes Trap
+I:2:100:0:5:45:0d0:R
+D:Some adamantium spikes shoot out at you.
+F:FLOOR | CHEST | DOOR
+
+N:609:Poison Iron Spikes Trap
+I:2:100:0:5:16:0d0:R
+D:Some poisoned iron spikes shoot out at you.
+F:FLOOR | CHEST | DOOR
+
+N:610:Poison Steel Spikes Trap
+I:2:100:0:5:24:0d0:R
+D:Some poisoned steel spikes shoot out at you.
+F:FLOOR | CHEST | DOOR
+
+N:611:Poison Lead Spikes Trap
+I:2:100:0:5:32:0d0:R
+D:Some poisoned lead spikes shoot out at you.
+F:FLOOR | CHEST | DOOR
+
+N:612:Poison Mithril Spikes Trap
+I:2:100:0:5:40:0d0:R
+D:Some poisoned mithril spikes shoot out at you.
+F:FLOOR | CHEST | DOOR
+
+N:613:Poison Adamantium Spikes Trap
+I:2:100:0:5:55:0d0:R
+D:Some poisoned adamantium spikes shoot out at you.
 F:FLOOR | CHEST | DOOR
 
 # I:diff:prob:another:pval:minlevel:damage:color

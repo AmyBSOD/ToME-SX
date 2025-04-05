@@ -777,6 +777,13 @@ static void regenmana(int percent)
 	/* Incraese regen with int */
 	percent += adj_str_blow[p_ptr->stat_ind[A_INT]] * 3;
 
+	/* silenced? then don't regenerate, and always have 0 mana --Amy */
+	if (p_ptr->tim_manasilence && (percent > 0)) {
+		p_ptr->csp = 0;
+		p_ptr->csp_frac = 0;
+		return;
+	}
+
 	/* mana void? then don't regenerate --Amy */
 	if (p_ptr->tim_manavoid && (percent > 0)) return;
 
@@ -2693,6 +2700,12 @@ static void process_world(void)
 		(void)set_tim_manavoid(p_ptr->tim_manavoid - 1);
 	}
 
+	/* Silenced */
+	if (p_ptr->tim_manasilence)
+	{
+		(void)set_tim_manasilence(p_ptr->tim_manasilence - 1);
+	}
+
 	/* Repelling */
 	if (p_ptr->tim_repelling)
 	{
@@ -3540,6 +3553,15 @@ static void process_world(void)
 	if (p_ptr->nastytrap21) {
 		disturb(0, 0);
 	}
+
+	/* silenced? then your mana is always set to zero --Amy */
+	if (p_ptr->tim_manasilence) {
+		p_ptr->csp = 0;
+		p_ptr->csp_frac = 0;
+		p_ptr->redraw |= (PR_MANA);
+		return;
+	}
+
 
 	/* Process equipment */
 	for (j = 0, i = INVEN_WIELD; i < INVEN_TOTAL; i++)
@@ -6122,6 +6144,12 @@ static void dungeon(void)
 		/* Hack -- Notice death or departure */
 		if (!alive || death) break;
 
+		/* is the player silenced? then don't allow them to sneak in a cast by quaffing restore mana while having fast speed --Amy */
+		if (p_ptr->tim_manasilence) {
+			p_ptr->csp = 0;
+			p_ptr->csp_frac = 0;
+			p_ptr->redraw |= (PR_MANA);
+		}
 
 		/* Process the world */
 		process_world();

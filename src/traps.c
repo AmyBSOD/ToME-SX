@@ -364,6 +364,96 @@ static bool player_handle_trap_of_walls(void)
 	return (ident);
 }
 
+/* god-in-the-heaven-o-matic, we actually need to copy over allllll the stuff from spells1.c... --Amy
+ * and *all* just because that weird typedef cannot be easily externalized, it seems :( */
+
+/*
+ * This seems like a pretty standard "typedef"
+ */
+typedef int (*inven_func)(object_type *);
+
+/*
+ * Destroys a type of item on a given percent chance
+ * Note that missiles are no longer necessarily all destroyed
+ * Destruction taken from "melee.c" code for "stealing".
+ * Returns number of items destroyed.
+ */
+static int inven_damage(inven_func typ, int perc)
+{
+	int i, j, k, amt;
+
+	object_type *o_ptr;
+
+	char o_name[80];
+
+
+	/* Count the casualties */
+	k = 0;
+
+	/* Scan through the slots backwards */
+	for (i = 0; i < INVEN_PACK; i++)
+	{
+		o_ptr = &p_ptr->inventory[i];
+
+		/* Skip non-objects */
+		if (!o_ptr->k_idx) continue;
+
+		/* Hack -- for now, skip artifacts */
+		if (artifact_p(o_ptr) || o_ptr->art_name) continue;
+
+		/* Give this item slot a shot at death */
+		if ((*typ)(o_ptr))
+		{
+			/* Count the casualties */
+			for (amt = j = 0; j < o_ptr->number; ++j)
+			{
+				if (rand_int(100) < perc) amt++;
+			}
+
+			/* Some casualities */
+			if (amt)
+			{
+				/* Get a description */
+				object_desc(o_name, o_ptr, FALSE, 3);
+
+				/* Message */
+				msg_format("%sour %s (%c) %s destroyed!",
+				           ((o_ptr->number > 1) ?
+				            ((amt == o_ptr->number) ? "All of y" :
+				             (amt > 1 ? "Some of y" : "One of y")) : "Y"),
+						           o_name, index_to_label(i),
+						           ((amt > 1) ? "were" : "was"));
+
+				/* Potions smash open */
+				if (k_info[o_ptr->k_idx].tval == TV_POTION)
+		{
+					(void)potion_smash_effect(0, p_ptr->py, p_ptr->px, o_ptr->sval);
+				}
+
+				/*
+				 * Hack -- If rods or wand are destroyed, the total maximum 
+				 * timeout or charges of the stack needs to be reduced, 
+				 * unless all the items are being destroyed. -LM-
+				 */
+				if ( (o_ptr->tval == TV_WAND || o_ptr->tval == TV_ROD || o_ptr->tval == TV_ROD_MAIN)
+				                && (amt < o_ptr->number))
+				{
+					o_ptr->pval -= o_ptr->pval * amt / o_ptr->number;
+				}
+
+				/* Destroy "amt" items */
+				inven_item_increase(i, -amt);
+				inven_item_optimize(i);
+
+				/* Count the casualties */
+				k += amt;
+			}
+		}
+	}
+
+	/* Return the casualty count */
+	return (k);
+}
 
 /*
  * this function handles arrow & dagger traps, in various types.
@@ -1652,6 +1742,50 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				msg_print("You prick yourself on a needle.");
 				ident = TRUE;
 			}
+			break;
+		}
+
+	case TRAP_OF_POISON_NEEDLE_X:
+		{
+			msg_print("You prick yourself on a poisoned needle.");
+			(void)set_poisoned(p_ptr->poisoned + rand_int(50) + 20);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_STIR:
+		{
+			ident = TRUE;
+			msg_print("You hear a stirring sound.");
+			for (k = 0; k < 10; k++)
+			{
+				(void)alloc_monster(MAX_SIGHT + 5, FALSE);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Stir Trap.");
+				ident = FALSE;
+
+			}
+
 			break;
 		}
 
@@ -3511,6 +3645,24 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* pit trap, very low-level trap for early dungeons by Amy; flying or levitating char is immune */
+	case TRAP_OF_PIT:
+		{
+			if (p_ptr->ffall || p_ptr->fly) {
+				msg_print("You see a pit below you.");
+				ident = TRUE;
+				break;
+			}
+
+			msg_print("You fell into a pit!");
+			int efflevel = 1;
+			if (dun_level > 0) efflevel = dun_level;
+			else efflevel = p_ptr->lev;
+			take_hit(randint(5 + efflevel), "a pit");
+			ident = TRUE;
+			break;
+		}
+
 	case TRAP_OF_FORGET_TRAPS:
 		{
 			int k;
@@ -4135,6 +4287,58 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_BLIND_CONF_X:
+		{
+			msg_print("A powerful magic protected this.");
+
+			set_blind(p_ptr->blind + rand_int(100) + 100);
+			set_confused(p_ptr->confused + rand_int(30) + 15);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_BLINDNESS:
+		{
+			msg_print("A flash of light hits you!");
+
+			if (!p_ptr->resist_blind || p_ptr->nastytrap29 || (rand_int(100) < 5) )
+			{
+				set_blind(p_ptr->blind + rand_int(200) + 200);
+			}
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_CONFUSION:
+		{
+			msg_print("The world is spinning!");
+
+			if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
+			{
+				set_confused(p_ptr->confused + rand_int(40) + 20);
+			}
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_BLINDNESS_X:
+		{
+			msg_print("A flash of light hits you!");
+
+			set_blind(p_ptr->blind + rand_int(250) + 250);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_CONFUSION_X:
+		{
+			msg_print("The world is spinning!");
+
+			set_confused(p_ptr->confused + rand_int(60) + 30);
+			ident = TRUE;
+			break;
+		}
+
 		/* Aggravation Trap */
 	case TRAP_OF_AGGRAVATION:
 		{
@@ -4149,6 +4353,118 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			msg_print("The area around you gets dark!");
 			if (unlite_area(10, 3)) ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_FIRE:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_FIRE, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_ACID:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_ACID, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_COLD:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_COLD, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_ELEC:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_ELEC, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_PLASMA:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_PLASMA, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_WATER:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_WATER, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_SHARDS:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_SHARDS, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_SOUND:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_SOUND, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_ICE:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_ICE, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_CHAOS:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_CHAOS, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_NETHER:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_NETHER, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_DISEN:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_DISENCHANT, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_NEXUS:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_NEXUS, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_TIME:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_TIME, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_GRAV:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_GRAVITY, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_NUKE:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_NUKE, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
 			break;
 		}
 
@@ -4517,6 +4833,33 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			set_tim_manavoid(p_ptr->tim_manavoid + 10 + p_ptr->msp);
 			ident = TRUE;
+
+			if (p_ptr->csp > 0)
+			{
+				p_ptr->csp = 0;
+				p_ptr->csp_frac = 0;
+				p_ptr->redraw |= (PR_MANA);
+				msg_print("You sense a great loss.");
+			}
+			else if (p_ptr->msp == 0)
+			{
+				/* no sense saying this unless you never have mana */
+				msg_format("Suddenly you feel glad you're a mere %s",
+				           spp_ptr->title + c_name);
+			}
+			else
+			{
+				msg_print("Your head feels dizzy for a moment.");
+			}
+			break;
+		}
+
+	case TRAP_OF_SILENCE:
+		{
+			set_tim_manasilence(p_ptr->tim_manasilence + 10 + p_ptr->msp);
+			ident = TRUE;
+
+			msg_print("You've been silenced!");
 
 			if (p_ptr->csp > 0)
 			{
@@ -5062,6 +5405,51 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_ITEM_DESTRUCT_I:
+		{
+			msg_print("You're hit by the elements!");
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ITEM_DESTRUCT_II:
+		{
+			msg_print("You're hit by the elements!");
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ITEM_DESTRUCT_III:
+		{
+			msg_print("You're hit by the elements!");
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
+			ident = TRUE;
+			break;
+		}
+
 		/* Trap of Calling Out */
 	case TRAP_OF_CALLING_OUT:
 		{
@@ -5471,6 +5859,52 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			/* Never known */
 			ident = FALSE;
 			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Ragnarok.");
+
+		break;
+		}
+
+	case TRAP_OF_GROUP:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int attempts_left = 10000;
+			int hordex, hordey;
+
+			while (attempts_left--)
+			{
+				/* Pick a location */
+				hordey = rand_int(cur_hgt);
+				hordex = rand_int(cur_wid);
+
+				/* Require empty floor grid (was "naked") */
+				if (!cave_empty_bold(hordey, hordex)) continue;
+
+				/* Accept far away grids */
+				if (distance(hordey, hordex, p_ptr->py, p_ptr->px) > (MAX_SIGHT + 5)) break;
+			}
+			alloc_horde(hordey, hordex);
+			msg_print("You feel like a group of monsters has arrived.");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Group Trap.");
 
 		break;
 		}
@@ -8026,7 +8460,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		 * single missile traps
 		 */
 	case TRAP_OF_ARROW_O:
-		ident = player_handle_missile_trap(1, TV_ARROW, 7, 3, 4, 0, "Sheaf Arrow Trap");
+		ident = player_handle_missile_trap(1, TV_ARROW, 6, 3, 4, 0, "Sheaf Arrow Trap");
 		break;
 	case TRAP_OF_ARROW_I:
 		ident = player_handle_missile_trap(1, TV_ARROW, SV_AMMO_NORMAL, 4, 4, 0, "Arrow Trap");
@@ -8040,6 +8474,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_ARROW_IV:
 		ident = player_handle_missile_trap(1, TV_BOLT, SV_AMMO_HEAVY, 8, 5, 0, "Seeker Bolt Trap");
 		break;
+	case TRAP_OF_POISON_ARROW_O:
+		ident = player_handle_missile_trap(1, TV_ARROW, 6, 3, 4, randint(10), "Poison Sheaf Arrow Trap");
+		break;
 	case TRAP_OF_POISON_ARROW_I:
 		ident = player_handle_missile_trap(1, TV_ARROW, SV_AMMO_NORMAL, 4, 4, randint(20), "Poison Arrow Trap");
 		break;
@@ -8052,6 +8489,36 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_POISON_ARROW_IV:
 		ident = player_handle_missile_trap(1, TV_BOLT, SV_AMMO_HEAVY, 8, 5, randint(70), "Poison Seeker Bolt Trap");
 		break;
+	case TRAP_OF_SPIKE_I:
+		ident = player_handle_missile_trap(1, TV_SPIKE, 0, 1, 1, 0, "Iron Spike Trap");
+		break;
+	case TRAP_OF_SPIKE_II:
+		ident = player_handle_missile_trap(1, TV_SPIKE, 1, 2, 2, 0, "Steel Spike Trap");
+		break;
+	case TRAP_OF_SPIKE_III:
+		ident = player_handle_missile_trap(1, TV_SPIKE, 2, 3, 4, 0, "Lead Spike Trap");
+		break;
+	case TRAP_OF_SPIKE_IV:
+		ident = player_handle_missile_trap(1, TV_SPIKE, 3, 5, 5, 0, "Mithril Spike Trap");
+		break;
+	case TRAP_OF_SPIKE_V:
+		ident = player_handle_missile_trap(1, TV_SPIKE, 4, 7, 8, 0, "Adamantium Spike Trap");
+		break;
+	case TRAP_OF_POISON_SPIKE_I:
+		ident = player_handle_missile_trap(1, TV_SPIKE, 0, 1, 1, randint(5), "Poison Iron Spike Trap");
+		break;
+	case TRAP_OF_POISON_SPIKE_II:
+		ident = player_handle_missile_trap(1, TV_SPIKE, 1, 2, 2, randint(10), "Poison Steel Spike Trap");
+		break;
+	case TRAP_OF_POISON_SPIKE_III:
+		ident = player_handle_missile_trap(1, TV_SPIKE, 2, 3, 4, randint(15), "Poison Lead Spike Trap");
+		break;
+	case TRAP_OF_POISON_SPIKE_IV:
+		ident = player_handle_missile_trap(1, TV_SPIKE, 3, 5, 5, randint(22), "Poison Mithril Spike Trap");
+		break;
+	case TRAP_OF_POISON_SPIKE_V:
+		ident = player_handle_missile_trap(1, TV_SPIKE, 4, 7, 8, randint(30), "Poison Adamantium Spike Trap");
+		break;
 	case TRAP_OF_SHOT_I:
 		ident = player_handle_missile_trap(1, TV_SHOT, SV_AMMO_LIGHT, 3, 3, 0, "Pebble Trap");
 		break;
@@ -8062,13 +8529,13 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		ident = player_handle_missile_trap(1, TV_SHOT, SV_AMMO_HEAVY, 5, 5, 0, "Mithril Shot Trap");
 		break;
 	case TRAP_OF_DAGGER_I:
-		ident = player_handle_missile_trap(1, TV_SWORD, SV_BROKEN_DAGGER, 2, 4, 0, "Dagger Trap");
+		ident = player_handle_missile_trap(1, TV_SWORD, SV_BROKEN_DAGGER, 2, 4, 0, "Broken Dagger Trap");
 		break;
 	case TRAP_OF_DAGGER_II:
 		ident = player_handle_missile_trap(1, TV_SWORD, SV_DAGGER, 3, 4, 0, "Dagger Trap");
 		break;
 	case TRAP_OF_POISON_DAGGER_I:
-		ident = player_handle_missile_trap(1, TV_SWORD, SV_BROKEN_DAGGER, 2, 4, randint(20), "Poison Dagger Trap");
+		ident = player_handle_missile_trap(1, TV_SWORD, SV_BROKEN_DAGGER, 2, 4, randint(20), "Poison Broken Dagger Trap");
 		break;
 	case TRAP_OF_POISON_DAGGER_II:
 		ident = player_handle_missile_trap(1, TV_SWORD, SV_DAGGER, 3, 4, randint(30), "Poison Dagger Trap");
@@ -8078,7 +8545,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		ident = player_handle_missile_trap(1, TV_AMMO_PISTOL, SV_AMMO_NORMAL, 5, 10, 0, "Pistol Trap");
 		break;
 	case TRAP_OF_RIFLE:
-		ident = player_handle_missile_trap(1, TV_AMMO_RIFLE, SV_AMMO_NORMAL, 6, 11, 0, "Pistol Trap");
+		ident = player_handle_missile_trap(1, TV_AMMO_RIFLE, SV_AMMO_NORMAL, 6, 11, 0, "Rifle Trap");
 		break;
 	case TRAP_OF_SHOTGUN:
 		ident = player_handle_missile_trap(1, TV_AMMO_SHOTGUN, SV_AMMO_NORMAL, 3, 25, 0, "Shotgun Trap");
@@ -8090,52 +8557,85 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		 * Amy edit: reduced amount of missiles so players aren't hopelessly instakilled
 		 */
 	case TRAP_OF_ARROWS_O:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, 7, 3, 4, 0, "Sheaf Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, 6, 3, 4, 0, "Sheaf Arrows Trap");
 		break;
 	case TRAP_OF_ARROWS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, SV_AMMO_NORMAL, 4, 4, 0, "Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, SV_AMMO_NORMAL, 4, 4, 0, "Arrows Trap");
 		break;
 	case TRAP_OF_ARROWS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_BOLT, SV_AMMO_NORMAL, 5, 4, 0, "Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_BOLT, SV_AMMO_NORMAL, 5, 4, 0, "Bolts Trap");
 		break;
 	case TRAP_OF_ARROWS_III:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, SV_AMMO_HEAVY, 6, 4, 0, "Seeker Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, SV_AMMO_HEAVY, 6, 4, 0, "Seeker Arrows Trap");
 		break;
 	case TRAP_OF_ARROWS_IV:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_BOLT, SV_AMMO_HEAVY, 8, 5, 0, "Seeker Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_BOLT, SV_AMMO_HEAVY, 8, 5, 0, "Seeker Bolts Trap");
+		break;
+	case TRAP_OF_POISON_ARROWS_O:
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, 6, 3, 4, randint(10), "Poison Sheaf Arrows Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, SV_AMMO_NORMAL, 4, 4, randint(20), "Poison Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, SV_AMMO_NORMAL, 4, 4, randint(20), "Poison Arrows Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_BOLT, SV_AMMO_NORMAL, 5, 4, randint(30), "Poison Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_BOLT, SV_AMMO_NORMAL, 5, 4, randint(30), "Poison Bolts Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_III:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, SV_AMMO_HEAVY, 6, 4, randint(50), "Poison Seeker Arrow Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_ARROW, SV_AMMO_HEAVY, 6, 4, randint(50), "Poison Seeker Arrows Trap");
 		break;
 	case TRAP_OF_POISON_ARROWS_IV:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_BOLT, SV_AMMO_HEAVY, 8, 5, randint(70), "Poison Seeker Bolt Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_BOLT, SV_AMMO_HEAVY, 8, 5, randint(70), "Poison Seeker Bolts Trap");
+		break;
+	case TRAP_OF_SPIKES_I:
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SPIKE, 0, 1, 1, 0, "Iron Spikes Trap");
+		break;
+	case TRAP_OF_SPIKES_II:
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SPIKE, 1, 2, 2, 0, "Steel Spikes Trap");
+		break;
+	case TRAP_OF_SPIKES_III:
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SPIKE, 2, 3, 4, 0, "Lead Spikes Trap");
+		break;
+	case TRAP_OF_SPIKES_IV:
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SPIKE, 3, 5, 5, 0, "Mithril Spikes Trap");
+		break;
+	case TRAP_OF_SPIKES_V:
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SPIKE, 4, 7, 8, 0, "Adamantium Spikes Trap");
+		break;
+	case TRAP_OF_POISON_SPIKES_I:
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SPIKE, 0, 1, 1, randint(5), "Poison Iron Spikes Trap");
+		break;
+	case TRAP_OF_POISON_SPIKES_II:
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SPIKE, 1, 2, 2, randint(10), "Poison Steel Spikes Trap");
+		break;
+	case TRAP_OF_POISON_SPIKES_III:
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SPIKE, 2, 3, 4, randint(15), "Poison Lead Spikes Trap");
+		break;
+	case TRAP_OF_POISON_SPIKES_IV:
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SPIKE, 3, 5, 5, randint(22), "Poison Mithril Spikes Trap");
+		break;
+	case TRAP_OF_POISON_SPIKES_V:
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SPIKE, 4, 7, 8, randint(30), "Poison Adamantium Spikes Trap");
 		break;
 	case TRAP_OF_SHOTS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SHOT, SV_AMMO_LIGHT, 3, 3, 0, "Pebble Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SHOT, SV_AMMO_LIGHT, 3, 3, 0, "Pebbles Trap");
 		break;
 	case TRAP_OF_SHOTS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SHOT, SV_AMMO_NORMAL, 4, 4, 0, "Shot Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SHOT, SV_AMMO_NORMAL, 4, 4, 0, "Shots Trap");
 		break;
 	case TRAP_OF_SHOTS_III:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SHOT, SV_AMMO_HEAVY, 5, 5, 0, "Mithril Shot Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SHOT, SV_AMMO_HEAVY, 5, 5, 0, "Mithril Shots Trap");
 		break;
 	case TRAP_OF_DAGGERS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SWORD, SV_BROKEN_DAGGER, 2, 4, 0, "Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SWORD, SV_BROKEN_DAGGER, 2, 4, 0, "Broken Daggers Trap");
 		break;
 	case TRAP_OF_DAGGERS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SWORD, SV_DAGGER, 3, 4, 0, "Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SWORD, SV_DAGGER, 3, 4, 0, "Daggers Trap");
 		break;
 	case TRAP_OF_POISON_DAGGERS_I:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SWORD, SV_BROKEN_DAGGER, 2, 4, randint(20), "Poison Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SWORD, SV_BROKEN_DAGGER, 2, 4, randint(20), "Poison Broken Daggers Trap");
 		break;
 	case TRAP_OF_POISON_DAGGERS_II:
-		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SWORD, SV_DAGGER, 3, 4, randint(30), "Poison Dagger Trap");
+		ident = player_handle_missile_trap(2 + (max_dlv_real[dungeon_type] / 35), TV_SWORD, SV_DAGGER, 3, 4, randint(30), "Poison Daggers Trap");
 		break;
 
 	case TRAP_OF_SMG:
@@ -8864,6 +9364,62 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 		msg_print("You identified that trap as Wall Balls Trap.");
 		ident = FALSE;
+		break;
+
+	case TRAP_OF_TERRAIN_FOREST:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 8, FEAT_TREES, 50);
+
+		msg_print("Trees grow in the dungeon!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Forest Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_FOREST_SMALL:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 9, FEAT_SMALL_TREES, 70);
+
+		msg_print("Small trees grow in the dungeon!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Small Forest Trap.");
+		}
 		break;
 
 	case TRAP_OF_TERRAIN_WATER:
@@ -10001,6 +10557,45 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			ident = TRUE;
 
 			set_image(p_ptr->image + 500);
+		}
+		break;
+
+	case TRAP_OF_STATUS_EFFECTS:
+		{
+			msg_print("Suddenly you're afflicted with many status effects!");
+			ident = TRUE;
+
+			set_image(p_ptr->image + 80);
+			if (!p_ptr->resist_fear || p_ptr->nastytrap30 || (rand_int(100) < 5) ) {
+				set_afraid(p_ptr->afraid + 50 + randint(200));
+			}
+			(void)set_stun(p_ptr->stun + randint(50) + p_ptr->lev);
+			if (!p_ptr->resist_blind || p_ptr->nastytrap29 || (rand_int(100) < 5) )
+			{
+				set_blind(p_ptr->blind + rand_int(100) + 100);
+			}
+			if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
+			{
+				set_confused(p_ptr->confused + rand_int(20) + 15);
+			}
+			if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
+			{
+				(void)set_poisoned(p_ptr->poisoned + rand_int(15) + 10);
+			}
+		}
+		break;
+
+	case TRAP_OF_STATUS_EFFECTS_X:
+		{
+			msg_print("Suddenly you're afflicted with all the status effects!");
+			ident = TRUE;
+
+			set_image(p_ptr->image + 500);
+			set_afraid(p_ptr->afraid + 50 + randint(200));
+			(void)set_stun(p_ptr->stun + randint(100) + p_ptr->lev);
+			set_blind(p_ptr->blind + rand_int(100) + 100);
+			set_confused(p_ptr->confused + rand_int(30) + 15);
+			(void)set_poisoned(p_ptr->poisoned + rand_int(50) + 20);
 		}
 		break;
 

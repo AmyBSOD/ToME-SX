@@ -3128,6 +3128,72 @@
 #define TRAP_OF_EXP_LOSS_IV               557
 #define TRAP_OF_EXP_LOSS_V                558
 
+#define TRAP_OF_SILENCE                   559
+
+#define TRAP_OF_STIR                      560
+#define TRAP_OF_GROUP                     561
+
+#define TRAP_OF_TERRAIN_FOREST            562
+#define TRAP_OF_TERRAIN_FOREST_SMALL      563
+
+#define TRAP_OF_ITEM_DESTRUCT_I           564
+#define TRAP_OF_ITEM_DESTRUCT_II          565
+#define TRAP_OF_ITEM_DESTRUCT_III         566
+
+#define TRAP_OF_PIT                       567
+
+#define TRAP_OF_STATUS_EFFECTS            568
+#define TRAP_OF_STATUS_EFFECTS_X          569
+
+#define TRAP_OF_BLIND_CONF_X              570
+#define TRAP_OF_POISON_NEEDLE_X           571
+
+#define TRAP_OF_BLINDNESS                 572
+#define TRAP_OF_CONFUSION                 573
+#define TRAP_OF_BLINDNESS_X               574
+#define TRAP_OF_CONFUSION_X               575
+
+#define TRAP_OF_ELE_FIRE                  576
+#define TRAP_OF_ELE_ACID                  577
+#define TRAP_OF_ELE_COLD                  578
+#define TRAP_OF_ELE_ELEC                  579
+#define TRAP_OF_ELE_PLASMA                580
+#define TRAP_OF_ELE_WATER                 581
+#define TRAP_OF_ELE_SHARDS                582
+#define TRAP_OF_ELE_SOUND                 583
+#define TRAP_OF_ELE_ICE                   584
+#define TRAP_OF_ELE_CHAOS                 585
+#define TRAP_OF_ELE_NETHER                586
+#define TRAP_OF_ELE_DISEN                 587
+#define TRAP_OF_ELE_NEXUS                 588
+#define TRAP_OF_ELE_TIME                  589
+#define TRAP_OF_ELE_GRAV                  590
+#define TRAP_OF_ELE_NUKE                  591
+
+#define TRAP_OF_POISON_ARROW_O            592
+#define TRAP_OF_POISON_ARROWS_O           593
+
+#define TRAP_OF_SPIKE_I                   594
+#define TRAP_OF_SPIKE_II                  595
+#define TRAP_OF_SPIKE_III                 596
+#define TRAP_OF_SPIKE_IV                  597
+#define TRAP_OF_SPIKE_V                   598
+#define TRAP_OF_POISON_SPIKE_I            599
+#define TRAP_OF_POISON_SPIKE_II           600
+#define TRAP_OF_POISON_SPIKE_III          601
+#define TRAP_OF_POISON_SPIKE_IV           602
+#define TRAP_OF_POISON_SPIKE_V            603
+#define TRAP_OF_SPIKES_I                  604
+#define TRAP_OF_SPIKES_II                 605
+#define TRAP_OF_SPIKES_III                606
+#define TRAP_OF_SPIKES_IV                 607
+#define TRAP_OF_SPIKES_V                  608
+#define TRAP_OF_POISON_SPIKES_I           609
+#define TRAP_OF_POISON_SPIKES_II          610
+#define TRAP_OF_POISON_SPIKES_III         611
+#define TRAP_OF_POISON_SPIKES_IV          612
+#define TRAP_OF_POISON_SPIKES_V           613
+
 /*** General index values ***/
 
 
