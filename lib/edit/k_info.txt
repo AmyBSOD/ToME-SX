@@ -8467,6 +8467,28 @@ A:95/5
 P:7:1d1:0:0:0
 D:The headgear of kings and emperors. Magical ones may be pretty useful.
 
+N:1032:Mana
+G:,:d
+I:80:20:500
+W:10:0:1:75
+A:10/1
+D:'E'ating this mushroom will restore some mana, used to cast spells.
+
+N:1033:Piety
+G:,:d
+I:80:21:500
+W:10:0:1:75
+A:10/1
+D:'E'ating this mushroom causes your god to like you a bit more.
+
+N:1034:Sanity
+G:,:d
+I:80:22:500
+W:10:0:1:75
+A:10/1
+D:'E'ating this mushroom restores a bit of your sanity, in case it has
+D:been damaged. Make sure you don't let your sanity reach zero!
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

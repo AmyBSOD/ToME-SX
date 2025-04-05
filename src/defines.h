@@ -2143,6 +2143,9 @@
 #define SV_FOOD_RESTORE_STR             17
 #define SV_FOOD_RESTORE_CON             18
 #define SV_FOOD_RESTORING               19
+#define SV_FOOD_MANA                    20
+#define SV_FOOD_PIETY                   21
+#define SV_FOOD_SANITY                  22
 /* many missing mushrooms */
 #define SV_FOOD_BISCUIT                 32
 #define SV_FOOD_JERKY                   33

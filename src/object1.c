@@ -32,7 +32,7 @@
 #define MAX_WOODS      70       /* Used with staffs (min 32) */
 #define MAX_METALS     75       /* Used with wands/rods (min 32/30) */
 #define MAX_COLORS    101       /* Used with potions (min 62) */
-#define MAX_SHROOM     20       /* Used with mushrooms (min 20) */
+#define MAX_SHROOM     25       /* Used with mushrooms (min 20) */
 #define MAX_TITLES    115       /* Used with scrolls (min 55) */
 #define MAX_SYLLABLES 290       /* Used with scrolls (see below) */
 
@@ -227,6 +227,7 @@ static cptr food_adj[MAX_SHROOM] =
 	"Dark Green", "Dark Red", "Yellow", "Furry", "Green",
 	"Grey", "Light Blue", "Light Green", "Violet", "Red",
 	"Slimy", "Tan", "White", "White Spotted", "Wrinkled",
+	"Fly Agaric", "Amanita", "Cinnabar", "Woodlight", "Vermilion", 
 };
 
 static byte food_col[MAX_SHROOM] =
@@ -234,7 +235,8 @@ static byte food_col[MAX_SHROOM] =
 	TERM_BLUE, TERM_L_DARK, TERM_L_DARK, TERM_UMBER, TERM_BLUE,
 	TERM_GREEN, TERM_RED, TERM_YELLOW, TERM_L_WHITE, TERM_GREEN,
 	TERM_SLATE, TERM_L_BLUE, TERM_L_GREEN, TERM_VIOLET, TERM_RED,
-	TERM_SLATE, TERM_L_UMBER, TERM_WHITE, TERM_WHITE, TERM_UMBER
+	TERM_SLATE, TERM_L_UMBER, TERM_WHITE, TERM_WHITE, TERM_UMBER,
+	TERM_RED, TERM_WHITE, TERM_ORANGE, TERM_GREEN, TERM_L_UMBER
 };
 
 

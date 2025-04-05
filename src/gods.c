@@ -143,7 +143,7 @@ void follow_god(int god, bool silent)
 	/* Poor unbelievers, i'm so mean ... BOUHAHAHA
 	 * Amy edit: hardcode it to the unbeliever role using an ugly h@ck */
 	/*if (get_skill(SKILL_ANTIMAGIC))*/
-	if (!strcmp(spp_ptr->title + c_name, "Unbeliever") || !strcmp(spp_ptr->title + c_name, "Total Ascetic") || !strcmp(spp_ptr->title + c_name, "Atheist Priest") )
+	if (!strcmp(spp_ptr->title + c_name, "Unbeliever") || !strcmp(spp_ptr->title + c_name, "Total Ascetic") || !strcmp(spp_ptr->title + c_name, "AtheistPriest") )
 	{
 		msg_print("Don't be silly; you don't believe in gods.");
 		return;

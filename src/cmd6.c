@@ -1169,6 +1169,38 @@ void do_cmd_eat_food(void)
 				break;
 			}
 
+		case SV_FOOD_MANA:
+			{
+				if (p_ptr->csp < p_ptr->msp) {
+					p_ptr->csp += 75;
+					if (p_ptr->csp > p_ptr->msp) p_ptr->csp = p_ptr->msp;
+					msg_print("You feel full of mystic power!");
+					ident = TRUE;
+					p_ptr->redraw |= (PR_MANA);
+					p_ptr->window |= (PW_PLAYER);
+				}
+
+				break;
+			}
+
+		case SV_FOOD_PIETY:
+			{
+				if (p_ptr->pgod != 0) {
+					msg_print("You feel pious.");
+					inc_piety(GOD_ALL, 10);
+					ident = TRUE;
+				}
+
+				break;
+			}
+
+		case SV_FOOD_SANITY:
+			{
+				if (heal_insanity(20)) ident = TRUE;
+
+				break;
+			}
+
 		case SV_FOOD_RESTORE_STR:
 			{
 				if (do_res_stat(A_STR, TRUE)) ident = TRUE;
