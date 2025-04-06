@@ -4542,6 +4542,98 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* cluster trap by Amy: create 5x5 field of traps somewhere on the level */
+	case TRAP_OF_CLUSTER:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int clusx, clusy;
+			int attempts_left = 10000;
+			/* Find a legal, unoccupied space */
+			while (attempts_left--)
+			{
+				/* Pick a location */
+				clusy = rand_int(cur_hgt);
+				clusx = rand_int(cur_wid);
+
+				/* Require empty floor grid (was "naked") */
+				if (!cave_empty_bold(clusy, clusx)) continue;
+
+				/* we've found a good location! */
+				break;
+			}
+
+			if (!attempts_left) {
+				msg_print("You hear a muffled click.");
+				if (!p_ptr->nastytrap3) msg_print("You identified that trap as Cluster Trap.");
+			}
+
+			msg_print("You hear a distant click.");
+			for (k = -2; k <= 2; k++)
+				for (l = -2; l <= 2; l++)
+				{
+					if ((in_bounds(clusy + l, clusx + k)) &&
+					                (!cave[clusy + l][clusx + k].t_idx))
+					{
+						place_trap(clusy + l, clusx + k);
+					}
+				}
+
+			/* if we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Cluster Trap.");
+			break;
+		}
+
+	case TRAP_OF_INTERLACE:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int trapcount = 20 + randint(20);
+
+			msg_print("You hear distant clicking sounds.");
+
+			while (trapcount > 0) {
+				trapcount--;
+				alloc_trap();
+			}
+
+			/* if we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Interlace Trap.");
+			break;
+		}
+
 		/* Steal Item Trap */
 	case TRAP_OF_STEAL_ITEM:
 		{

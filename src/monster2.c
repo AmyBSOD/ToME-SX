@@ -3390,6 +3390,8 @@ bool alloc_trap(void)
 		/* Require empty floor grid (was "naked") */
 		if (!cave_empty_bold(y, x)) continue;
 
+		/* we've found a good location! */
+		break;
 	}
 
 	if (!attempts_left && !( (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_LEVITATE ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_FLY ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_CLIMB )) )

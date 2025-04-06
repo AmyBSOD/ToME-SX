@@ -3194,6 +3194,9 @@
 #define TRAP_OF_POISON_SPIKES_IV          612
 #define TRAP_OF_POISON_SPIKES_V           613
 
+#define TRAP_OF_CLUSTER                   614
+#define TRAP_OF_INTERLACE                 615
+
 /*** General index values ***/
 
 

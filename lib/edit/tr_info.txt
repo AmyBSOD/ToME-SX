@@ -3012,6 +3012,16 @@ I:2:100:0:5:55:0d0:R
 D:Some poisoned adamantium spikes shoot out at you.
 F:FLOOR | CHEST | DOOR
 
+N:614:Cluster Trap
+I:5:20:0:3:25:0d0:o
+D:Somehow you feel there's more traps to disarm.
+F:FLOOR | CHEST | DOOR
+
+N:615:Interlace Trap
+I:5:25:0:3:20:0d0:o
+D:There might be more traps around...
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 
