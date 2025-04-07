@@ -1790,6 +1790,8 @@
 #define SV_AMULET_DODGING               38
 #define SV_AMULET_SPACETIME             39
 #define SV_AMULET_BRACING               40
+#define SV_AMULET_THIEVERY              41
+#define SV_AMULET_KINGS                 42
 
 /* The sval codes for TV_RING */
 #define SV_RING_WOE                      0

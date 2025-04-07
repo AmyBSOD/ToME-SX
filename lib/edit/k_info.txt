@@ -8500,6 +8500,209 @@ P:2:1d1:0:0:0
 D:These cute shoes have treaded stroking block heels and look very sexy.
 D:Wearing them makes you much more attractive.
 
+N:1036:& Set~ of Tank Gauntlets
+G:]:W
+I:31:9:0
+W:60:0:100:200
+A:60/5
+P:8:1d1:0:0:0
+D:This pair of gauntlets is well-armored, but heavy.
+
+N:1037:& Set~ of Armored Gauntlets
+G:]:W
+I:31:10:0
+W:40:0:80:140
+A:40/3
+P:5:1d1:0:0:0
+D:An armored pair of gauntlets, offering good protection.
+
+N:1038:& Armored Cloak~
+G:(:W
+I:35:4:0
+W:40:0:70:250
+A:40/2
+P:5:0d0:0:0:0
+D:A pretty well-armored cloak.
+
+N:1039:& Protective Cloak~
+G:(:W
+I:35:9:0
+W:80:0:250:800
+A:80/5
+P:8:0d0:0:0:0
+D:This cloak provides remarkably high amounts of protection, at the
+D:price of being very heavy.
+
+N:1040:& Plate Helm~
+G:]:W
+I:32:13:0
+W:70:0:150:400
+A:70/4
+P:8:1d3:0:0:0
+D:A heavy helm that offers very good protection.
+
+N:1041:& Full Helm~
+G:]:W
+I:32:14:0
+W:85:0:250:800
+A:85/5
+P:11:1d3:0:0:0
+D:This very heavy helm really protects your head from enemy attacks.
+
+N:1042:& Small Steel Shield~
+G:):W
+I:34:18:0
+W:60:0:240:500
+A:60/3
+P:14:1d6:0:0:0
+D:Highly effective for protecting you from hostile blades, but this shield
+D:also weighs a lot.
+
+N:1043:& Large Steel Shield~
+G:):W
+I:34:19:0
+W:80:0:400:1200
+A:80/4
+P:20:1d6:0:0:0
+D:It's like a wall, offering enormous amounts of protection. Hopefully you can
+D:handle the weight, though.
+
+N:1044:& Set~ of Magic Gloves
+G:]:U
+I:31:11:0
+W:10:0:5:10
+A:10/1
+P:1:0d0:0:0:0
+F:SPELL_CONTAIN | WIELD_CAST
+f:SPELL_CONTAIN | WIELD_CAST
+D:A pair of gloves for spellcasters, you can copy your favorite spell to it.
+D:This will allow you to cast from the gloves, and also means they don't have
+D:a spellcasting penalty when worn.
+
+N:1045:& Wool Cloak~
+G:(:D
+I:35:10:0
+W:10:0:20:70
+A:10/1
+P:2:0d0:0:0:0
+D:A bit thicker than a regular cloak.
+
+N:1046:& Pair~ of Iron Shod Boots
+G:]:W
+I:30:11:0
+W:10:0:50:30
+A:10/1
+P:4:1d1:0:0:0
+D:Boots reinforged with iron for better protection.
+
+N:1047:& Pair~ of Light Metal Boots
+G:]:W
+I:30:12:0
+W:15:0:60:40
+A:15/1
+P:5:1d1:0:0:0
+D:Boots reinforged with a light metal alloy, providing protection without
+D:being too heavy.
+
+N:1048:Thievery
+G:":d
+I:40:41:0
+W:30:0:3:10000
+A:30/4
+F:STEALTH | DISARM | DODGE | HIDE_TYPE |
+f:STEALTH | DISARM | DODGE |
+D:Those who want to have access to thievery skills may find this amulet to
+D:be useful.
+
+N:1049:Kings
+G:":d
+I:40:42:0
+W:20:0:3:20000
+A:20/10
+F:HOLD_LIFE | RES_NETHER | HIDE_TYPE |
+f:HOLD_LIFE | RES_NETHER |
+D:Originally held by Hrungnir the Hill Giant Lord, this amulet used to be the
+D:macguffin required for getting to the second part of the game... oh wait, wrong
+D:roguelike, this isn't CoW, it's ToME-SX :D Anyway it protects you from having
+D:your life drained, and as an added bonus, this amulet also provides resistance
+D:to nether-elemental attacks.
+
+N:1050:& Set~ of Free Gloves
+G:]:r
+I:31:12:0
+W:80:0:5:4000
+A:80/15
+P:1:0d0:0:0:0
+F:FREE_ACT
+f:FREE_ACT
+D:This superb pair of gloves protects you from paralysis and also doesn't have
+D:any spellcasting penalties when worn.
+
+N:1051:& Thick Cloak~
+G:(:u
+I:35:11:0
+W:30:0:40:140
+A:30/2
+P:4:0d0:0:0:0
+D:A quite thick, yet not all that heavy cloak, comfortable while offering good
+D:protection.
+
+N:1052:& Metal-Studded Cloak~
+G:(:W
+I:35:12:0
+W:50:0:85:300
+A:50/2
+P:6:0d0:0:0:0
+D:Reinforged with metal, this cloak provides quite some protection.
+
+N:1053:& Pair~ of Plate Boots
+G:]:W
+I:30:15:0
+W:50:0:200:250
+A:50/2
+P:8:1d1:0:0:0
+D:Heavy boots made of metal, providing quite the protection.
+
+N:1054:& Pair~ of Greaves
+G:]:W
+I:30:16:0
+W:70:0:300:600
+A:70/3
+P:10:1d1:0:0:0
+D:Super heavy boots made of steel.
+
+N:1055:& Pair~ of Adamantium Boots
+G:]:U
+I:30:17:0
+W:85:0:250:4000
+A:85/6
+P:12:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_FIRE | IGNORE_ELEC | IGNORE_COLD
+f:IGNORE_ACID | IGNORE_FIRE | IGNORE_ELEC | IGNORE_COLD
+D:Extremely well-armored boots, impervious to elemental damage.
+
+N:1056:& Ancient Armor~
+G:[:W
+I:37:38:0
+W:100:0:1000:50000
+A:100/10
+P:75:2d4:-5:0:0
+F:IGNORE_ACID
+f:IGNORE_ACID
+D:Incredibly heavy, this suit of armor is basically impenetrable.
+D:Only the strongest heroes can move effectively in it, though.
+
+N:1057:& Nether Dragon Scale Mail~
+G:[:v
+I:38:33:0
+W:50:0:200:50000
+A:50/5
+P:30:2d4:-2:0:10
+a:HARDCORE=BR_CONF
+F:RES_NEXUS | RES_NETHER | FLY |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:A suit of armor made from dragon skin. Its scales emit a dark glow.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

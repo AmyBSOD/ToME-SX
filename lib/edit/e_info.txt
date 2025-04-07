@@ -5233,6 +5233,17 @@ R:100
 F:RES_FIRE | RES_COLD | RES_ELEC | RES_ACID
 f:RES_FIRE | RES_COLD | RES_ELEC | RES_ACID
 
+N:416:Seven League
+X:B:35:25
+W:40:1:60:200000
+C:0:0:0:10
+T:30:0:255
+R:100
+F:SPEED | HIDE_TYPE
+f:SPEED
+R:10
+F:PVAL_M3
+
 # N: serial number : ego type
 # D: description
 # T: tval : min sval : max sval
