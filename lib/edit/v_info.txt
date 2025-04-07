@@ -6102,3 +6102,497 @@ D:      %%%%XXXXXTTTX*TTTXXXXX%%%%
 D:         %%%%%XXXXXXXX%X%%%%%         
 D:             %%%%%%%%%%%%             
 
+N:292:Princess Bitch 14
+X:7:5:11:17
+D:%%%%%%%%%%%%%%%%%
+D:%               %
+D:% XXXX     XXXX %
+D:% X,,X     X,,X %
+D:% XX+XXXXXXX+XX %
+D:%  +,,,.9.,,,+  %
+D:% XX+XXXXXXX+XX %
+D:% X,,X     X,,X %
+D:% XXXX     XXXX %
+D:%               %
+D:%%%%%%%%%%%%%%%%%
+
+N:293:Princess Bitch 12
+X:7:5:10:17
+D:%%%%%%%%%%%%%%%%%
+D:%  ,xxxxxxxx ,  %
+D:%,,xxxxxxxxxxx, %
+D:%xxxxx...xxxxxx,%
+D:%xxxxx.9.xxxxxxx%
+D:%xxxxx...xxxxxxx%
+D:%xxxxxxxxxxxxxx,%
+D:%,xxxxxxxxxxx,  %
+D:% , ,xxxxxx,    %
+D:%%%%%%%%%%%%%%%%%
+
+N:294:Princess Bitch 11
+X:7:5:10:17
+D:%%%%%%%%%%%%%%%%%
+D:%  ,~~~~~~~~ ,  %
+D:%, ~~~~~~~~~~~, %
+D:%~~~~~...~~~~~~,%
+D:%~~~~~.9.~~~~~~~%
+D:%~~~~~...~~~~~~~%
+D:%~~~~~~~~~~~~~~,%
+D:%,~~~~~~~~~~~,  %
+D:% , ,~~~~~~,    %
+D:%%%%%%%%%%%%%%%%%
+
+N:295:Princess Bitch 10
+X:7:5:13:21
+D:%%%%%%%%%%%%%%%%%%%%%
+D:%                   %
+D:%      XXXXXXX      %
+D:%      X~~~~~X      %
+D:% XXXXXX,^.^^XXXX   %
+D:% X...,^....^,,,XXX %
+D:% X.9........^.^.++ %
+D:% X...,^....^,,,XXX %
+D:% XXXXXX,^.^^XXXX   %
+D:%      X~~~~~X      %
+D:%      XXXXXXX      %
+D:%                   %
+D:%%%%%%%%%%%%%%%%%%%%%
+
+N:296:Princess Bitch 7
+X:7:5:9:13
+D:%%%%%%%%%%%%%
+D:%^^^^^      %
+D:%^...^  ,X, %
+D:%^.9.^  X,X %
+D:%^...^  ,X, %
+D:%^^^^^      %
+D:%      ,X,  %
+D:%           %
+D:%%%%%%%%%%%%%
+
+N:297:Princess Bitch 6
+X:7:5:11:17
+D:%%%%%%%%%%%%%%%%%
+D:%               %
+D:% XXXX     XXXX %
+D:% XXXX     XXXX %
+D:% XXXXXXXXXX+XX %
+D:%  +,,,.9.,,,+  %
+D:% XXXXXXXXXX+XX %
+D:% XXXX     XXXX %
+D:% XXXX     XXXX %
+D:%               %
+D:%%%%%%%%%%%%%%%%%
+
+N:298:Princess Bitch 5
+X:7:5:13:21
+D:%%%%%%%%%%%%%%%%%%%%%
+D:%                   %
+D:%     XXXX.XXXX     %
+D:%    XX.......XX    %
+D:%  XXX..,...,..XXX  %
+D:% XX.............XX %
+D:% X.......9.......X %
+D:% XX..,.......,..XX %
+D:%  XXX....,....XXX  %
+D:%    XX.......XX    %
+D:%     XXXX.XXXX     %
+D:%                   %
+D:%%%%%%%%%%%%%%%%%%%%%
+
+N:299:Princess Bitch 1
+X:7:5:9:11
+D:%%%%%%%%%%%
+D:%         %
+D:% XXXXXXX %
+D:% X9.~..X %
+D:% X..~,.+ %
+D:% X~~~..X %
+D:% XXXXXXX %
+D:%         %
+D:%%%%%%%%%%%
+
+N:300:Nirnaeth Arnoediad
+X:8:15:23:34
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+D:%##XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%#...,.,,,....,.....,.XXXXXXXXXXX%
+D:%X..,,...,..,,..,,..,..XXXXXXXXXX%
+D:%X.,,..,..,,,...,..,.,.,.XXXXXXXX%
+D:%X,,.....,....,.......,..,,..XXXX%
+D:%X..,.,......,,.,..,,...,..,.XXXX%
+D:%X...,,..,..,,.,.,..,.,.,..,XXXXX%
+D:%X,.,....,,,.,,...,,,....,..XXXXX%
+D:%X...,,...,,...,......,,..,..XXXX%
+D:%X,.,,.,...,...,,,..,..,,.....XXX%
+D:%X.,.,...,....,,,,,......,.,,.XXX%
+D:%X.....,.....,,,,,,,..,.,.,....XX%
+D:%X.,.,....,,.,,,,,,,....,.,..,.XX%
+D:%X......,..,.,,,,,,,,.,....,,...X%
+D:%XX.,.,,.,..,.,,,,,...,.,,...,.,X%
+D:%XX..,,...,..,.,,,..,..,..,,,..,X%
+D:%XXX....,,.,,.,...,,...,..,..,..X%
+D:%XXXXXX........,,...,....,,...,,X%
+D:%XXXXXXXX.,..,,...,...,.,...,,..X%
+D:%XXXXXXXX........,,....,.,.,.,.,#%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX##%
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+N:301:Orc Barracks
+X:8:100:44:61
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXXXXX#XXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%X,.......................&&&&&&&&&.......................,X%
+D:%X.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.X%
+D:%X.~......................&&&&&&&&&.....,.,..............~.X%
+D:%X.~.XXXXXXXXXXXXXXXXXXXXXXXXX.XXXXXXXXXX+XXXXXXXXXXXXXX.~.X%
+D:%X.~.X,.......&&X8X&&.......,X.X.,,,.+.,X.X,,,,,,,,999,X.~.X%
+D:%X.~.+........&&#.#&&........+.+.,,,.XXXX.X,&,,,,,,99&&X.~.X%
+D:%X.~.X........&&X.X&&........X.X.,,,.+.,X.X&,,&,,,,,999X.~.X%
+D:%X.~.XXXXXX...&&#.#&&...XXXXXX.X.,,,.XXXX.X&,,,&,,,,&99X.~.X%
+D:%X.~.X.,..XXX.&&X.X&&.XXX,,.,X.+.,,,.+.,X.X,&,,&&&,,&,&X.~.X%
+D:%X.~.+..,..,XXX&X.X&XXX&.....+.X.,,,.XXXX.X&,,,,,,,,&&&X.~.X%
+D:%X.~.X........XXX.XXX..,,,.,,X.X.,,,.+.,X.X,&&,&&&,&&,,X.~.X%
+D:%X.~.X..&.,.,&.#...#.,..,,...X.+.,,,.XXXX.X,,&&&,,,&,,,X.~.X%
+D:%X.~.X.,..,,.,.#9.9#...,,,.,,X.X.&&&.+.,X.X,&,&,&,&,&,,X.~.X%
+D:%X.~.X.,,...,..#.8.#.,,..,.&.X.X.&&&.XXXX.X,,,&&,,,,,,,X.~.X%
+D:%X.~.X..,.&.,,X#####X.,,,.,,.X.+.&.&.+.,X.X&,&,,,&&&&&,X.~.X%
+D:%X.~.+.,..,,,XX,...,XXX..,...+.X.&.&.XXXX.+,&&,,,,,,,,,X.~.X%
+D:%X.~.X...,.XXX..&.&...XXX...,X.X.....+..X#XX&&&,&&,,&&,X.~.X%
+D:%X.~.X,,..,X&.&&&9&&&&.&X.,,,X+X,,,..XX9I,8X,,,,,,&&,,,X.~.X%
+D:%X.~.XXXXXXXX+XXXXXXXX+XXXXXXX,XXXXXXXXXXXXXXXXXXXXXXXXX.~.X%
+D:%X.~........................+,@,+........................~.X%
+D:%X.~.XXXXXXXXXXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXXXXXXXXXX.~.X%
+D:%X.~.....&&&&&&.........&&&XXX+XXX&&&.........&&&&&&.....~.X%
+D:%X.~.....&&&&&&.........&&&X.....X&&&.........&&&&&&.....~.X%
+D:%X.~~~~~~~~~~~~~~~~~~~~~~~~X.....X~~~~~~~~~~~~~~~~~~~~~~~~.X%
+D:%X,.....................XXXX#####XXXX.....................,X%
+D:%XXXXXXXXXXIXXXXXXXXXXXXX&,&&&@&&&,&XXXXXXXXXXXXXIXXXXXXXXXX%
+D:%X999X.#########.X&&&XX&&&&&&&&&&&&&&&XX&&&X.#########.X999X%
+D:%X&&&X...........X&&&X&&&&999...999&&&&X&&&X...........X&&&X%
+D:%X&&&X###+X.XXXXXX...X&&&&....8....&&&&X...XXXXXX.X+###X&&&X%
+D:%X&&......X.X........X&&&&.........&&&&X........X.X......&&X%
+D:%X&&....&&X.X.XXXXXX.XX&&&&&&&&&&&&&&&XX.XXXXXX.X.X&&....&&X%
+D:%X&&....&&X.X.X......XXXX&&&&&&&&&&&XXXX......X.X.X&&....&&X%
+D:%X&&....&&X.X.X.XXXXXX..XXXX&&&&&XXXX..XXXXXX.X.X.X&&....&&X%
+D:%X&&....&&X.X.X.........#.9XXX+XXX9.#.........X.X.X&&....&&X%
+D:%X&&....&&X.X.XXXXXXXXXIXXXX,...,XXXXIXXXXXXXXX.X.X&&....&&X%
+D:%X&&....&&X.X.X9&&&,,,,.X9X..X#X..X9X.,,,,&&&9X.X.X&&....&&X%
+D:%X&&....&&X.X.X#########X....X.X....I#########X.X.X&&....&&X%
+D:%X&&&&&&&&X.X.X@@@@@@@@@IXXX,X8X,XXXX@@@@@@@@@X.X.X&&&&&&&&X%
+D:%X&&&&&&&&I.X+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX+X.I&&&&&&&&X%
+D:%X,,,,,&&&X.......................................X&&&,,,,,X%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+N:302:Glacier
+X:8:20:25:35
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+D:%##XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%#........,X..i^,i.,X.i...^.i...9X%
+D:%X....i...,Xi^.ii..,Xi..iii...^iiX%
+D:%X.i..^..iiX.iiii..^i..ii^...iXXXX%
+D:%X...ii...^Xii^......iiiii..^...iX%
+D:%X.ii....,.X........i^.^,.@.i&...X%
+D:%XXXXii..i.X..&^..i.Xiii..i.i..^.X%
+D:%X,...i.^..i.i.i,.^.X..i......ii9X%
+D:%X...i..i....iXXi...X.^i^.i..XXXXX%
+D:%X...^....i.&^XXi.i.ii..i.,i..&.9X%
+D:%X,....i......i.^.i.i...XXXXXXi^.X%
+D:%XXXXXXX^i..^.....^.X&,ii^,@ii.i,X%
+D:%X,.......&ii.ii.i..X,....i....i.X%
+D:%X..iii^ii.XXXX....^X@.^@....i@^9X%
+D:%X.........ii....&..i..i.^i...iiiX%
+D:%X.........&^.ii.^..ii....i..^iiiX%
+D:%X,..i....X..&i..ii....@&.i..&iiiX%
+D:%XXXXii...X.iii...^..^iiX.^...*XXX%
+D:%X,...i..iX...i^..ii....X....^*^,X%
+D:%X.......iXii.i..X....@&X..iiX***X%
+D:%X......iiX...i..X..^.iiX...iX**AX%
+D:%X,....,i.X..i...Xi9...9X&,.@X*A8X%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+N:303:Dug Too Deep
+X:8:20:25:35
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+D:%XX##XXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%X^..^^^^^^^^^^^^^^^^^^^^^^^^^^^^X%
+D:%X^..^^^^^^^^^..^^^^^^^^^^^^^^^^^X%
+D:%X^...^^^^^^.........^^^^^^^^^^^^X%
+D:%X^^..^^^^^..^^^^..^9^^^^^^^^^^^^X%
+D:%X^...^^^^...^^^^^..^^^^^^^^^^^^^X%
+D:%X^^..^^^..^^.^^^^^^^^^^^^^^^^^^^X%
+D:%X^..^^^^^.....^^^^^.^^^^^^^^^^^^X%
+D:%X^^..^^^^..^^.^^^.^......^^^^^^^X%
+D:%X^..^^^^..^^...^^...^..^.^^^^^^^X%
+D:%X^^..^^^..^^^..^...^^^....^^^^^^X%
+D:%X^^^...^.^^^.....^^^^9....^^^^^^X%
+D:%X^^^.....^^^^..^^^^^^^^..^^^^^^^X%
+D:%X^^^^^^.^^^^..^^^^^^^^^^^^^^^^^^X%
+D:%X^^^^^^^^^^^...^^^^^^^^^^^^^^^^^X%
+D:%X^^^^^.^^^^.^..^^^^^^^^^^^^^^^^^X%
+D:%X^^^^...^^...^^^...^^^^^^...^^^^X%
+D:%X^^^^.^....^^^^.^.....^..^..^^^^X%
+D:%X^^^^..^^^^^.....^...^..^^^8^^^^X%
+D:%X^^^9........^.....^^^^^^^^^^^^^X%
+D:%X^^^^^^...^^^^^^^^^^^^^^^^^^^^^^X%
+D:%X^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^X%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+N:304:Mount Khazad
+X:8:20:25:35
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+D:%XX##XXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%XX..XXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%XX..XXXXXXXXX,,XXXXXXXXXXXXXXXXXX%
+D:%XX...XXXXXX.^.^^.^^.XXXXXXXXXXXXX%
+D:%XXX^.XXXXX.^XXXX..X9XXXXXXXXXXXXX%
+D:%XX,..XXXX.^.XXXXX^,XXXXXXXXXXXXXX%
+D:%XXX^.XXX,.XX.XXXXXXXXXXXXXXXXXXXX%
+D:%XX,.XXXXX..^..XXXXX&XXXXXXXXXXXXX%
+D:%XXX^.XXXX^^XX^XXX,X.^..^&XXXXXXXX%
+D:%XX,.XXXX.^XX...XX.^.X^.X^XXXXXXXX%
+D:%XXX^^XXX..XXX^^X..^XXX...&XXXXXXX%
+D:%XXXX.^.X^XXX&..^.XXXX9...&XXXXXXX%
+D:%XXXX.^...XXXX..XXXXXXXXAAXXXXXXXX%
+D:%XXXXXXX,XXXX^^XXXXXXXXXXXXXXXXXXX%
+D:%XXXXXXXXXXXX^..XXXXXXXXXXXXXXXXXX%
+D:%XXXXXX^XXXX.X.&XXXXXXXXXXXXXXXXXX%
+D:%XXXXX.^.XX^^.XXX^.&XXXXXX^A&XXXXX%
+D:%XXXXX^X..^.XXXX.X..^.^X.^X^AXXXXX%
+D:%XXXXX.&XXXXX.^..^X.^.X&.XXX8XXXXX%
+D:%XXXX9..^.^.^.X&.^..XXXXXXXXXXXXXX%
+D:%XXXXXXX^&^XXXXXXXXXXXXXXXXXXXXXXX%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+N:305:Haunted House
+X:8:20:25:35
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+D:%XXX###XXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%XXX...+...^....^......^.....^...X%
+D:%XXX...XXXXXXXXXXXXXXXXXXXXXXXXX^X%
+D:%XXX...X...,X...,X...,X...,X..,X.X%
+D:%XXX...X....X....X....X....X...X.X%
+D:%XXX..,X....X....X....X....X...X.X%
+D:%XXX+XXX+XXXX+XXXX+XXXX+XXXX+XXX^X%
+D:%XXX...^..^......^....^..^...^...X%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX^X%
+D:%X.+....9X....9X9....X9....X..9X.X%
+D:%X*X.....X.....X.....X.....X...X.X%
+D:%X*X..*..X..@..X..@..X..@..X.*.X.X%
+D:%X*X.....X.....X.....X.....X...X.X%
+D:%X8X.....X.....X.....X.....X...X.X%
+D:%XXX+XXXXX+XXXXX+XXXXX+XXXXX+XXX^X%
+D:%XXX..^......^....^.....^.....^..X%
+D:%XXXXXXX+XXXXX+XXXXX+XXXXX+XXXXX+X%
+D:%X8X.....X.....X.....X.....X.....X%
+D:%X*X.....X.....X.....X.....X..&..X%
+D:%X*X..*..X..*..X..*..X..@..X..*&.X%
+D:%X*X.....X.....X.....X.....X.....X%
+D:%X.+....9X....9X9....X9....X9....X%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+N:306:Maeglin's Treachery
+X:8:40:24:49
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX##%
+D:%X##.^#########.^.#..^..^.^###^.&^..^.###.,^.^,#%
+D:%X#^,,.######.^@...^#&..#..##,.#..###..^.^#.,.^X%
+D:%X#,,,,^####^@.###...^##.&^#^..##^.&####.#####.X%
+D:%X#,,,.####..#^.######.9^..,..^#.@#&&&##^#,^..,X%
+D:%X##.^.#..^&###9^.^##..^.##.^####^.##&&#,..##.^X%
+D:%X####...,..^#####.@.^.####...####.###&#####.,#X%
+D:%X###..^.##.&.######.@^#..##^.^###^.##&&#,..^##X%
+D:%X##^.,#####..^###..^..#^.^##.@####.9##..^#####X%
+D:%X##...######&.##&^.@.###8.....^####.###,.#####X%
+D:%X...^########&....#9..^##9.^#.&.##^.####.^####X%
+D:%X,.^####.^.^##^@9####...#####@..^#.######..###X%
+D:%X#...##..##..#..######^9.^@.^##.&..^#####,.###X%
+D:%X##^...^####&.^######.@.#.#&..^#^#&.####.^####X%
+D:%X#...####,,##.@..#####^..@####&#....^.^.,.####X%
+D:%X.^.####,,,^.^##^.^#####^...^###.^#####^.^####X%
+D:%X..#####,,##...###@.##^...^...##..#####..#####X%
+D:%X^,.#######..^,.###.....&.###&^##^.###,^.^#.^#X%
+D:%X#,.^,#....^.#,.....^.&.^.####..#&.##...,.,...X%
+D:%X,,,##,.^..,###..^.&..&.&.#####.^..^..^###.,,^X%
+D:%#,,,..^###############^.^##################,.#X%
+D:%##XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+N:307:Wolf Den
+X:8:20:25:35
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+D:%##XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%#...T.,,,.......,.,.....,...#.,,X%
+D:%X,..#..,......,.....,,......T...X%
+D:%X...T.,,.TT#++T##T#++#T#....#...X%
+D:%X9,.T....#.,,...#...,..#.,,.T...X%
+D:%X#+##....#.9.9..T,,,...T....#T+#X%
+D:%X....,,,.T......T..,.9.#..9.....X%
+D:%X...,,.,.#...9..#.,,...T........X%
+D:%X##T#,9,.#####++#++##TT#....#T#TX%
+D:%X..,T.,,.T....,.T...,,.#.,,,T...X%
+D:%X.,,T,,,.T......#..,,9,#,,,,#,..X%
+D:%X...+....#.,,9...,,,.,,T,,.,+,,.X%
+D:%X...#....#........,,,..#,,..#9,.X%
+D:%X#T#T....T..,...T,9,...T....#TT#X%
+D:%X..,.....#,..,..#......#.....,,.X%
+D:%X...,.,,.#++#TTT##T##++#.....,,.X%
+D:%X#+T#....#,.....#......#....##T#X%
+D:%X...#...,T,,,,..#......T...,T9,,X%
+D:%X.9.T...,#,,.,..T......#.,,,#,..X%
+D:%X.,,T.,,,#,9.,,.#.....9T,,..+,..X%
+D:%X,,,#....###++#TT##++###,,..T...X%
+D:%X.9,T..,...,....,..,.,,.....#.99#%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX##%
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+N:308:Thieves Den
+X:8:20:25:35
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+D:%XXX#XXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%X.....X....*X.....X.............X%
+D:%X.....X.....X.....X.............X%
+D:%X.....X.....X.....X.............X%
+D:%XXX+XXXXX+XXXXX+XXXXXXXXX+XXXXXXX%
+D:%XXX..........................XXXX%
+D:%XXX.XXXXX.XXXXX.XXXXXXXXX.XX,XXXX%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXXX,,,XXX%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXX,,,,,XX%
+D:%XXXXX@..X&..X...X...XXXXX,,,,,,,X%
+D:%XXXXX...X...X@..X...XXXXX,,,,,,,X%
+D:%XXXXX...X...X...X.&.XXXXX,,,,,,,X%
+D:%XXXXXX+XXX+XXX+XXX+XXXXXXX,,,,,XX%
+D:%X,,,X...............XXXXXXX,,,XXX%
+D:%X,,,X..X.........X..XXXXXXXX,XXXX%
+D:%X,,,+.....X...X.....+,,,,,,,,XXXX%
+D:%X,,,X..X.........X..XXXXXXXXXXXXX%
+D:%X,,,X...............XXXXXXXXXXXXX%
+D:%X,,,XX+XXX+XXX+XXX+XXXXXXXXXXXXXX%
+D:%X,,,X...X...X.&.X@..XXXXXXXXXXXXX%
+D:%X,,,X&..X.@.X...X...XXXXXXXXXXXXX%
+D:%X9,9X...X...X...X...XXXXXXXXXXXXX%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+N:309:Spider Forest
+X:8:40:36:63
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+D:%##XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%#,...TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTX%
+D:%X...TTTTTTTTTTTTTTTTTTTTTTTTTTT,..9TTTTTTTTTTTTTTTTTTTTTTTTTX%
+D:%XTT...............TTTTTTTTTTTTT..TTTTTTTTTTTTTTTTTTTTTTTTTTTX%
+D:%XTTTTTTTTT..............9TTTTTTT..TTTTTTTTTTTTTTTTTTTTTTTTTTX%
+D:%XTTTTTTTTTTTTTT..TTTTTT.........9..TTTTTTTTTTTTTTTTTTTTTTTTTX%
+D:%XTTTTTTTTTTTTT,.&TTT...9TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTX%
+D:%XTTTTTTTTTTTTTTTTTTTTT...TTTT.TT@..9.TTT...9...TTTTTTTTTTTTTX%
+D:%XTTTTTTTTTTTTTTTTTTT9...&TTTTTTTT.....TT9.....TTTTTTTTTTTTTTX%
+D:%XTTTTTTTTTTTTTTTTTT....TTTTTTTTT9.9.........@...9.9TTTTTTTTTX%
+D:%XTTTTTTTTTTTTTTTTT&.TTTT...9...T....TTTTTT..........9TTTTTTTX%
+D:%XTTTTTTTTTTTTTTTTTT....TTTTT.....9...TTTTTT.9..9TTTTTTTTTTTTX%
+D:%XTTTTTTTTTTTTTTTT9..,T....9...TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTX%
+D:%XTTTTTTTTTTTTT,....TTTTT.&..TTTTTTTTT@..8TTTTTTTTTTTTTTTTTTTX%
+D:%XTTTTTTTTTTTT...9..TTTTT......TTTT.9.TTTTTTTT8....@TTTTTTTTTX%
+D:%XTTTTTTTTTTTTTTTTTTT....9..@....TTTT...TTTTTTT..@....8TTTTTTX%
+D:%XTTTTTTTTTTTTTTTTTTTTT.9.@...TTTTTTT9..9TTTTTTT.....TTTTTTTTX%
+D:%XTTTTTTTTTTT,.9..TTT.......TTTT.......TTTTT....@..TTTTTTTTTTX%
+D:%XTTTTTTTTTTTT....TTTTT..TTT..9..9..T.....9..TTTTTTTTTTTTTTTTX%
+D:%XTTTTTTTTTTT..9...TTT..9..9...TTTTT..9....T....TTTTTTTTTTTTTX%
+D:%XTTTTTTTTTT.9....9...T.....TTTTTTTT.....TTT.......@TTTTTTTTTX%
+D:%XTTTTTTTTTTT...9...TTTT..9..TTTTTTTTT.TTTTTTTTT.@...TTTTTTTTX%
+D:%XTTTTTTTTTTTT,.....TTTTTT...@...@TT@....9TTTTT.....TTTTTTTTTX%
+D:%XTTTTTTTTTTTTTTTTTTTT...9.....TTTTT...9....8TT@..TTTTTTTTTTTX%
+D:%XTTTTTTTTTTTTTTTT....@....TTTTTTTTTTTTTTTTTTTTTT...TTTTTTTTTX%
+D:%XTTTTTTT.......9...TTTT.@....9..8TTTTTTTTTTTT@.....@TTTTTTTTX%
+D:%XTTTTT9..9.9......TTTTTT.............8TTTTTTT....TTTTTTTTTTTX%
+D:%XTTTTTTT......TTTTTTT..9...@...TTTTTTTTTTTTT..@..TTTTTTTTTTTX%
+D:%XTTTTT....99.TTTTTTTTTTTT8....@.TTTTTTTTTTTTTTT....TTTTTTTTTX%
+D:%XTTTTT..9......TTTTTTTTTTTTTTTTTTTTTTTTTTT8..TT......8TTTTTTX%
+D:%XTTT..9....9TTTTTTTTTTTTTTTTTTTTTTTTTT8............TTTTTTTTTX%
+D:%XTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT..8..TTTTTTTTTTTTX%
+D:%XTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTX%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+N:310:Arvedui's Galleon
+X:8:200:37:130
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+D:%XXXXXXXXXXXXXXXXxxxxxxxxxxxxxxxxxxXXXXXXXXXXXXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXXXXXXXxxxxXXXXXXXXXXXXXXXxxxxxxXXXX%
+D:%X###############..xxx.#.x9xxxx@xx.#XX#########x.xxxxxxx&xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx,..#####..xx@xx.###.######X##xxx.,X.###%
+D:%X####%####...xxxxxxxx.xxxxxxx&x.#.X#xx.#####xx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&xxxxxxx@x,..#.##.#.X,,xXX9x.####8####.xXxxxxx.X...%
+D:%X##%#$#######...xx@xxxxxxx@XXXXXX#XXXX###XXXx#xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX..XX....x.XXxxX#*X.#..#.#,.x@xxXx,xx%
+D:%X##$#########....xxxxx&xxxXXX&&^...x.x#####@x###xxxx8....**.^9.&9x^^.,^.**.....*..,,..^X&&&&x,...,,.x..xx@x,.###xXXxx#XXx.xx&xXx%
+D:%X#########...xxxx@xxxxxxXXX&&&&.^..*x.,####xx###xx9....8**.x,x.9..,^.,,^..*,.,...,,,,^x,.,.,.,.xxx.,...xxxxx###.xxx@xx.x@xx,.@.x%
+D:%X#####.*.*xxxxxxxxxxxxXXX&&&XXX,**.,.#######xx##xxx8...#.**.x^9&99^^x%,^.,.*.9.*,.,,..^X.,.^....xx...,.xxx&xx#xxXXxxxxxxx@xxxXxx%
+D:%X######...xxxx,,xxx@xXXX^^XXX.,,,**...,#####@xxx#x.x..&...**9.,9^.^^.,,^x..9.....,,,,^x,.,.,,.,,.x.,x.,,.,xxx,x.xx,x.,,xXX..xxxx%
+D:%X##.....xxxxxxxxxxXXX^9+^XX$&.,,,,*,..,,#.##xx@xx#x##x8....*9x.&9,^^.,^,..9..*.*..,,..^X&&&&X.,.,x........x.,xx..@x.x,x...,xXxxx%
+D:%X...xxxxxxx8xxxxXXX^^9XXXX$$$..,,XXXXXXX####xxx#####XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX..,.X..,x.........x,..,xxx.,...,xxxx%
+D:%xxxxxxx@xxxxxxXXX^^9XXX@X%@$$&$$XX@xxxx#####xx&xxx###.,.9.**,.*.,.,.,.,.,.***,,....,*....,,.@X.,.,.,..,9.,.,.xx.,..x.,..,..xXx9x%
+D:%x@xx,,,.xx@xXXX^9^XXX.,*X99@$$$XX@$..xxxx####xxxx###.,.,.,.**..,.,9.,.,9,.,**..,.,.,.9...,.,......x.,.,.,.,.x.x..,.x,x......xxxx%
+D:%xxxx,,.xxxXXX899XXX9^**.XX%%$@XX$@$.,#####x,xx####.x.,x..,.,*,,x,.,.,.,x,.,.,.,.,.x.,..x,.,,,.x,.,.x.,.,.X.x,,.xx..x.x..,..,Xxxx%
+D:%xxx&xxxxXXX8.XXXX^.**.9.,X99%XX&$$&####..,xxx,###x.,,.,.,.,...,,.*,.x.,.,x..,.x.,.,x,.,.,,.,.,x,.,.,.x,.,..,X.,.***.x***,9.,Xxxx%
+D:%xxxxxxXXX.9..X.,***9.*.,.XX%XX######^^^^^xxxxxx##^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^X9..*************Xxxx%
+D:%x9xxXXX^9..9.XX8.****,.,..XXX..#........xxxxx^^^###xx.,.,x.......XXXXX..x,..,,..,,.x.,..,.,..,,..,.,*..,.99X******9***,.*.,*Xxxx%
+D:%xxXXX%@^^9..99X,*****,..,.X.....,........XXXxxx^^#^^xxx@xxx,x...XXXXXXX.,**.,..9.**.,.,x,..XXX...xxx.....98X***.x.,.****$$..Xxxx%
+D:%xXX%%%^,,.9..9X,**.^.*9.....#.....9..*..XXXXXxxxxxxxxxxxxxx,xx.XXXXXXXXXx.*..,.,*..x,..,.,XXXXX...x..,.XXXXX9.9.$$.,.*....9.Xxxx%
+D:%xxXXX%@^^9..99X8.*xx...,xx##...,..,.***,.XXXx,xxxxxx9xxxxxxxxxxxXXXXXXX.,.*.x,...*..*..9.x.XXX.***.,,9..988X.9.,.9.**$$$XXXXXxxx%
+D:%xxxxXXX^9..9.XX,.###....###xxx.,,..,.*.,..xx.xxxxxxxxxxxxx&xxxxx.XXXXX.x..**...9x**.....x.,,.,,.***x,,,.9XXXXXXXXXXXXXXXX.8.Xxxx%
+D:%x&xxxxXXX.9..X&..@x##..##xxxXx^^^^^^^^^^^^^^^^^^xxx@xxx^^^^^^^^^^^^^^^^^^^^^^^^^^@@^^^^^^^^^^^^^^^@^^^^XXX9x^^.,*.^^99.^^...Xxx&%
+D:%xxxxxxxxXXX8XX,x,..#####x,xx,^..,.,..,.,**..*xxxxxxxxx9xx**.x...*....x.x..x..,x..***..x..x...,x.x*.x.XXX9.^^,..@,.x^.99....@Xxxx%
+D:%xxx....xxxXXX$8@x.^####,x,xx9.XX.,,.,...........,xxx&xxx99,x...........x.......*.,.**x....,x....x.*XXX.99.9.^^.,*.x^^^9^8^..Xxxx%
+D:%xx.#..#..xxxXXX8##^..##x#.,.^..XX..,,...,.9...,...,xx...,...*,,.*...,.9.....,.....**.........XXXXXXX...99.^^,..@,.x.^99...^@Xxxx%
+D:%xx.##.##..xxxxXXX###,,xxx*,x.^..XX.....,....,.9...,.,....9.***...,...,...,....,...,**..9....@.8^^^9#...99.9.^^.,*.^.99.^.^.XXxxx%
+D:%xxx.###..xxxxxxxX##.##xx,^xxxx9*^XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxxx%
+D:%xxx...###.xxx9xxx###X.,xx@,,x**x^..^9.,X8x9.x..,....,,,X9X..^$.&.^$......,.^..XX..^&&&*..,..,....^.,.^*.^..x....X.*..*x.8XXx.xxx%
+D:%xx.....####.....#####XXX*@@x9x.,..,.9^,#**^..,..,,,.,,X@.@X@*^.x...*x.^......^X..&.^&*@*&X,,...^....^**@.^.**...+..x....XX..xxxx%
+D:%xxxxxx.#$%#########....XXXx,x9.,,...,,9^X*.,..,.^,..9X@.9.^X**8..,.x*8...,...^+XXXXXXXXXXX,,...x....^.*..*.***..X..*..xXX...xx@x%
+D:%xxxxx.#$$######.xxxxx@xxXXX$x.*..x,^..,9.,.x.,.^xx..,,X@.@X@*......,**..x....^X&,..^x,,,,X,,..*.....x^......*.XXXXXXXIXX.xx#x@xx%
+D:%x@xxxx**########.xxxxxxxxxXXX$$.,#,X#.9,,^9,.^9.,,^,,,X9X.$.^88.x..^**,..&...^XXxx.^^,,,,,x..**@xx.,x..^#^..*XI&X8&..XXxxxx##x@x%
+D:%xxxxxx.########..xxxxxxxxxxXXXXXx#XxX#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxxx###x@x%
+D:%xxxx.#########..xx@xxxx8xxx@xxxxxx#####xxxx@xxx.,.xxxxxxxxxxxxxxxxxxxxxx..####.xxx&xxxx.xxxxxxxxxxxxxxxx&xx8xxxxxxxxxxxxx##..xxx%
+D:%xxx..#########.xxxxxxxxxxxxxxxxxxxx#####xxxxxxx...xxxxxxxxxxxxxx9xxxxxx..###.xxxxxxx####xxxxxxxxxxxxx@xxxxxxxxxxxx@xxxxx###..xxx%
+D:%xxxXXXXXXXXXXXXxxxxxxxxxxxxxxxxxxxxXXXXXXxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXXXXXXxxxxxxXXXXXXXXXxxxxxxxxxxxxxxxxxxxxxxxxxxxXXXXXXxxx%
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+N:311:Mount Doom
+X:8:100:37:98
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+D:%XXXX##XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%XXXX##XXXXX#%%&&,,...999....,,#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX##############XXXX%
+D:%XX#####XXXX#&&&&...,&&&&&..,,,#XXX#############################################..9****...,###XXX%
+D:%X##.,,##XXX#&&&&...,,99&.,,,,,#XXX#,....&*&*&....,%%%%%%%,..&99%9%%@%@@,%,,...+,...*9&..@,%%#XXX%
+D:%X#,,9..#XXX#&&.,,.,,,,...%%%,,#XXX#..##########################################,,,....,,,%%%#XXX%
+D:%X##%,,##XXX#....,,,%%,,,..^,,,#XXX#.,#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX#,,@.&..@.,,,##XXX%
+D:%XX###+#XXXX#+##############+#######.,#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX##%%.,,,,&,...#XXXX%
+D:%XXXX#*#XXXX#.#XXXXXXXXXXXX#.......,%%#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX##%%,,..@...&.##XXXX%
+D:%XXXX#^#XXXX#.############X##########+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX##.9.&.,,,,,##XXXXX%
+D:%XXXX#.#XXXX#,,%%%%,,...8#XXXXXX#99999#XXXXXXXXXXXXXX########XXXXXX###############.@..,9#+#XXXXXX%
+D:%XXX##.#XXXX############+##XXXXX#99@99#XXXXXXXXXXXXXX#9....9#XXXXXX#,.....&...#XX###^,..#8#XXXXXX%
+D:%XXX#,##XXXXXXXXXXXXX##%%&##XXXX#9@@@9#XXXXXXXXXXXXXX#..88..#XXXXXX#,,,,999...#XXXX###+####XXXXXX%
+D:%XXX##*#XXXXXXXXXXXX##.&&^%##XXX#9@@@9#XXXXXXXXX######&....&######X#,,,,999.,,#XXXXXX#.#XXXXXXXXX%
+D:%XXXX#.#XXXXXXXXXXX##.&&%%&&##XX#99@99###XXXXXXX#999999&%.&&&&,,8#X#.,,.999...#XXXXX##.#XXXXXXXXX%
+D:%XX###+#########XXX#&&&%&&&&,#XX#99999+9#XXXXXXX#999999.%.&&&&&..#X#%...,,,...#XXXX##,,######XXXX%
+D:%XX#.^&^,,,...,##XX#.,&&%&&..#XX#########XXXXXXX#.@&&@..%..@@,,,.#X#%%......,&#XXX##.,##8@@@#XXXX%
+D:%XX#.&9%%%,....,#XX##..&&&,.##XXXXXXXXXXXXXXXXXX#.,..,..%&&,.....#X########+###XXX#.####,@@@##XXX%
+D:%XX#9999,%,,,&..#XXX##..,.,##XXXXXXXXXXXXXXXXXXX#9,,,...%..,,8,,@#XXXX#..,..#XXXXX#.,,..,@%%,#XXX%
+D:%XX#9%9..,,,%%,,##XXX##.&.##XXXXXXXXXXXXXXXXXXXX######......######XXXX#,.####XXXXX###..,,%%%,##XX%
+D:%XX#&99^..@,%,,..##XXX##+#################XXXXXXXXXXX#.,88,.#XXXXXXXXX#.,#XXXXXXXXXX#.8,%%%@8,#XX%
+D:%XX##....@@@,,..,.##XXX#.,,,^,..,%^^..,%%#XXXXXXXXXXX#.,%%,,#XXXXXXXXX#,.####XXXXXXX###.,%,,..##X%
+D:%XXX##....@%%,.....##XX#################,#XXXXXXXXXXX#,,,..&#XXXXXXXXX#..&99#XXXXXXXX#,..,,...+8X%
+D:%XXX###....,,,...,,,####################.#XXXXXXXXXXX#%,..9.#XXXXXXXXX#####,#XXXXXX###,,...9###,X%
+D:%XXX#9+,%%,...,,,....+.+..%%,,.%%^..%%,,.#XXXXXXXXXXX#,,,,&.#XXXXXXXXXXXXX#8#XXXXXX#%%%*@..##X#&X%
+D:%XXX##################,###.,###..###.,####XXXXXXXXXXX#9&&.,,#XXXXXXXXXXXXX#.#XXXXXX#########XX#8X%
+D:%XXX##################.#X##############XXXXXXXXXXXXXX#.,,,,.#XXXXXXXX######+###################,X%
+D:%XXXXXXX##99***&,,.+8#,#XXXXXXXXXXXXXXXXXXXXXXXXXXXXX#,,%%,,#XXXXXXXX#8..,,,.,,...+..,,....^,,,%X%
+D:%XXXXXX##9***%%%%,8###,#XXXXXXXXXXXXXXXXXXXXXXXXXXXXX#,%%%%9#XXXXXXXX#..,,....9...##############X%
+D:%XXXXXX##**%%%%%,,,..#.#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX++XXXX########.,,,,..999..####XXXXXXXXXXX%
+D:%XXXXXXX##.,,,,,,,...+.#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX#%%%%%%%%%%%%%+,,9..,,.9..,+,9#XXXXXXXXXXX%
+D:%XXXXXXXX###############XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX###############################XXXXXXXXXXX%
+D:%XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX%
+D:%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
