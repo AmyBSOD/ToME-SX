@@ -35,42 +35,78 @@ void monster_check_experience(int m_idx, bool silent)
 
 		if (m_ptr->ml && (!silent)) cmsg_format(TERM_L_BLUE, "%^s gains a level.", m_name);
 
-		/* Gain hp */
-		if (magik(50))
-		{
-			m_ptr->maxhp += (r_ptr->hside > 50 ? 50 : r_ptr->hside);
-			m_ptr->hp += (r_ptr->hside > 50 ? 50 : r_ptr->hside);
-		}
+		/* mega scaling trap: use the much meaner vanilla scaling values instead of the SX ones --Amy */
+		if (p_ptr->nastytrap144) {
+			/* Gain hp */
+			if (magik(80))
+			{
+				m_ptr->maxhp += r_ptr->hside;
+				m_ptr->hp += r_ptr->hside;
+			}
 
-		if (magik(50))
-		{
-			int lowincrease = randint(10);
-			m_ptr->maxhp += lowincrease;
-			m_ptr->hp += lowincrease;
-		}
+			/* Gain speed */
+			if (magik(40))
+			{
+				int speed = randint(2);
+				m_ptr->speed += speed;
+				m_ptr->mspeed += speed;
+			}
 
-		/* Gain speed */
-		if (magik(20))
-		{
-			int speed = randint(2);
-			m_ptr->speed += speed;
-			m_ptr->mspeed += speed;
-		}
+			/* Gain ac */
+			if (magik(50))
+			{
+				m_ptr->ac += (r_ptr->ac / 10) ? r_ptr->ac / 10 : 1;
+			}
 
-		/* Gain ac */
-		if (magik(50))
-		{
-			m_ptr->ac += (r_ptr->ac / 10) ? r_ptr->ac / 10 : 1;
-		}
+			/* Gain melee power */
+			if (magik(30))
+			{
+				int i = rand_int(3), tries = 20;
 
-		/* Gain melee power */
-		if (magik(30))
-		{
-			int i = rand_int(3), try = 20;
+				while ((tries--) && !m_ptr->blow[i].d_dice) i = rand_int(3);
 
-			while ((try--) && !m_ptr->blow[i].d_dice) i = rand_int(3);
+				m_ptr->blow[i].d_dice++;
+			}
 
-			m_ptr->blow[i].d_dice++;
+		} else {
+
+			/* Gain hp */
+			if (magik(50))
+			{
+				m_ptr->maxhp += (r_ptr->hside > 50 ? 50 : r_ptr->hside);
+				m_ptr->hp += (r_ptr->hside > 50 ? 50 : r_ptr->hside);
+			}
+
+			if (magik(50))
+			{
+				int lowincrease = randint(10);
+				m_ptr->maxhp += lowincrease;
+				m_ptr->hp += lowincrease;
+			}
+
+			/* Gain speed */
+			if (magik(20))
+			{
+				int speed = randint(2);
+				m_ptr->speed += speed;
+				m_ptr->mspeed += speed;
+			}
+
+			/* Gain ac */
+			if (magik(50))
+			{
+				m_ptr->ac += (r_ptr->ac / 10) ? r_ptr->ac / 10 : 1;
+			}
+
+			/* Gain melee power */
+			if (magik(30))
+			{
+				int i = rand_int(3), try = 20;
+
+				while ((try--) && !m_ptr->blow[i].d_dice) i = rand_int(3);
+
+				m_ptr->blow[i].d_dice++;
+			}
 		}
 	}
 }

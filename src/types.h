@@ -2072,18 +2072,18 @@ struct player_type
 	bool nastytrap132; /* worse drain trap - stat drain is harder to resist */
 	bool nastytrap133; /* wakey wakey trap - monsters spawn awake */
 	bool nastytrap134; /* grid bug trap - you cannot use diagonal directions */
-	bool nastytrap135;
-	bool nastytrap136;
-	bool nastytrap137;
-	bool nastytrap138;
-	bool nastytrap139;
-	bool nastytrap140;
-	bool nastytrap141;
-	bool nastytrap142;
-	bool nastytrap143;
-	bool nastytrap144;
-	bool nastytrap145;
-	bool nastytrap146;
+	bool nastytrap135; /* wild danger trap - wilderness encounters are more dangerous */
+	bool nastytrap136; /* nopeskill trap - cannot enhance skills */
+	bool nastytrap137; /* unskilled trap - skills reduced by 10 */
+	bool nastytrap138; /* skill-less trap - skills reduced by 20 */
+	bool nastytrap139; /* minus skill trap - skills reduced by 3, can go negative */
+	bool nastytrap140; /* negative skill trap - skills reduced by 10, can go negative */
+	bool nastytrap141; /* missed info trap - some tiles don't display what a trap is */
+	bool nastytrap142; /* feeler gauges trap - monsters always follow you */
+	bool nastytrap143; /* mean magic trap - monster spell and breath damage is like vanilla */
+	bool nastytrap144; /* mega scaling trap - monster levelscaling bonuses are like vanilla */
+	bool nastytrap145; /* vegetarian trap - you cannot eat meat */
+	bool nastytrap146; /* force haggle trap - you have to haggle even if the option is turned off */
 	bool nastytrap147;
 	bool nastytrap148;
 	bool nastytrap149;

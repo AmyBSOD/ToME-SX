@@ -913,6 +913,14 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
  */
 static bool item_tester_hook_eatable(object_type *o_ptr)
 {
+	/* vegetarian nastytrap: disallows any "meaty" food --Amy
+	 * this includes all corpse-related stuff (we don't do the nethack thing where we distinguish between "animal" and "plant" monsters)
+	 * as well as venison; if other meat-based permafood is added, this function should be updated */
+	if (p_ptr->nastytrap145) {
+		if (o_ptr->tval == TV_CORPSE) return (FALSE);
+		if (o_ptr->tval == TV_FOOD && o_ptr->sval == SV_FOOD_JERKY) return (FALSE);
+	}
+
 	/* Foods and, well, corpses are edible */
 	if ((o_ptr->tval == TV_FOOD) || (o_ptr->tval == TV_CORPSE)) return (TRUE);
 

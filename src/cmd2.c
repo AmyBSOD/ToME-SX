@@ -2104,8 +2104,10 @@ static bool do_cmd_disarm_aux(int y, int x, int dir, int do_pickup)
 	/* Get grid and contents */
 	c_ptr = &cave[y][x];
 
-	/* Access trap name */
-	if (t_info[c_ptr->t_idx].ident)
+	/* Access trap name; if missed info nastytrap is active, squares with positive mana divisible by 5 don't display their name --Amy */
+	if (p_ptr->nastytrap141 && (c_ptr->mana > 0 && !(c_ptr->mana % 5) ) )
+		name = "unknown trap";
+	else if (t_info[c_ptr->t_idx].ident)
 		name = (t_name + t_info[c_ptr->t_idx].name);
 	else
 		name = "unknown trap";

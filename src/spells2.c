@@ -2137,6 +2137,54 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: You cannot use diagonal movement directions.";
 	}
+	if (p_ptr->nastytrap135)
+	{
+		info[i++] = "You have a problem: The wilderness spawns more dangerous monsters.";
+	}
+	if (p_ptr->nastytrap136)
+	{
+		info[i++] = "You have a problem: You cannot enhance your skills.";
+	}
+	if (p_ptr->nastytrap137)
+	{
+		info[i++] = "You have a problem: Your skills are drained by 10.";
+	}
+	if (p_ptr->nastytrap138)
+	{
+		info[i++] = "You have a problem: Your skills are drained by 20.";
+	}
+	if (p_ptr->nastytrap139)
+	{
+		info[i++] = "You have a problem: Your skills are drained by 3 and can become negative.";
+	}
+	if (p_ptr->nastytrap140)
+	{
+		info[i++] = "You have a problem: Your skills are drained by 10 and can become negative.";
+	}
+	if (p_ptr->nastytrap141)
+	{
+		info[i++] = "You have a problem: Some traps don't display their type.";
+	}
+	if (p_ptr->nastytrap142)
+	{
+		info[i++] = "You have a problem: Monsters always follow you.";
+	}
+	if (p_ptr->nastytrap143)
+	{
+		info[i++] = "You have a problem: Monster spell and breath damage is calculated like in vanilla.";
+	}
+	if (p_ptr->nastytrap144)
+	{
+		info[i++] = "You have a problem: Monster level bonuses are calculated like in vanilla.";
+	}
+	if (p_ptr->nastytrap145)
+	{
+		info[i++] = "You have a problem: You're forced to adhere to the vegetarian conduct.";
+	}
+	if (p_ptr->nastytrap146)
+	{
+		info[i++] = "You have a problem: You're forced to haggle in stores.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];

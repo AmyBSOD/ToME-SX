@@ -369,10 +369,11 @@ int generate_area(int y, int x, bool border, bool corner, bool refresh)
 
 	/* Set the monster generation level to the wilderness level
 	 * Amy edit: player's level can be used for scaling, but it should be a random factor
-	 * also the terrain level should be a random factor as well since some of them are really high */
+	 * also the terrain level should be a random factor as well since some of them are really high
+	 * wild danger nastytrap uses the old calculations */
 	monster_level = wf_info[wild_map[y][x].feat].level;
-	if (monster_level > 1) monster_level = randint(monster_level);
-	if (randint(2) == 1) {
+	if (!(p_ptr->nastytrap135) && (monster_level > 1)) monster_level = randint(monster_level);
+	if ((randint(2) == 1) || p_ptr->nastytrap135) {
 		if (randint(2) == 1) monster_level += randint(plyrlvllow);
 		else monster_level += randint(plyrlvl);
 	}

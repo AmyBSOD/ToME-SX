@@ -30,6 +30,16 @@ void increase_skill(int i, s16b *invest)
 	/* The skill is already maxed */
 	if (s_info[i].value >= SKILL_MAX) return;
 
+	/* Nopeskill nastytrap by Amy */
+	if (p_ptr->nastytrap136) {
+		int hgt, wid;
+
+		Term_get_size(&wid, &hgt);
+
+		msg_box("Nope.", (int)(hgt / 2), (int)(wid / 2));
+		return;
+	}
+
 	/* Cannot allocate more than player level + max_skill_overage levels */
 	call_lua("get_module_info", "(s)", "d", "max_skill_overage", &max_skill_overage);
 	if (((s_info[i].value + s_info[i].mod) / SKILL_STEP) >= (p_ptr->lev + max_skill_overage + 1))
@@ -113,7 +123,26 @@ s16b find_skill_i(cptr name)
  */
 s16b get_skill(int skill)
 {
-	return (s_info[skill].value / SKILL_STEP);
+	int getskillvalue;
+
+	getskillvalue = (s_info[skill].value / SKILL_STEP);
+
+	if (p_ptr->nastytrap137 && (getskillvalue > 0)) {
+		getskillvalue -= 10;
+		if (getskillvalue < 0) getskillvalue = 0;
+	}
+	if (p_ptr->nastytrap138 && (getskillvalue > 0)) {
+		getskillvalue -= 20;
+		if (getskillvalue < 0) getskillvalue = 0;
+	}
+	if (p_ptr->nastytrap139 && (getskillvalue > 0)) {
+		getskillvalue -= 3;
+	}
+	if (p_ptr->nastytrap140 && (getskillvalue > 0)) {
+		getskillvalue -= 10;
+	}
+
+	return getskillvalue;
 }
 
 
@@ -124,6 +153,24 @@ s16b get_skill(int skill)
 s16b get_skill_scale(int skill, u32b scale)
 {
 	s32b temp;
+	int getskillvalue;
+
+	getskillvalue = s_info[skill].value;
+
+	if (p_ptr->nastytrap137 && (getskillvalue > 0)) {
+		getskillvalue -= 10000;
+		if (getskillvalue < 0) getskillvalue = 0;
+	}
+	if (p_ptr->nastytrap138 && (getskillvalue > 0)) {
+		getskillvalue -= 20000;
+		if (getskillvalue < 0) getskillvalue = 0;
+	}
+	if (p_ptr->nastytrap139 && (getskillvalue > 0)) {
+		getskillvalue -= 3000;
+	}
+	if (p_ptr->nastytrap140 && (getskillvalue > 0)) {
+		getskillvalue -= 10000;
+	}
 
 	/*
 	* SKILL_STEP shouldn't matter here because the second parameter is
@@ -135,7 +182,7 @@ s16b get_skill_scale(int skill, u32b scale)
 	* formula given above, I verified this works the same by using a tiny
 	* scheme program... -- pelpel
 	*/
-	temp = scale * s_info[skill].value;
+	temp = scale * getskillvalue;
 
 	return (temp / /*SKILL_MAX*/50000);
 }

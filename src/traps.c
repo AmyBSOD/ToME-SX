@@ -698,6 +698,18 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY132:
 		case TRAP_NASTY133:
 		case TRAP_NASTY134:
+		case TRAP_NASTY135:
+		case TRAP_NASTY136:
+		case TRAP_NASTY137:
+		case TRAP_NASTY138:
+		case TRAP_NASTY139:
+		case TRAP_NASTY140:
+		case TRAP_NASTY141:
+		case TRAP_NASTY142:
+		case TRAP_NASTY143:
+		case TRAP_NASTY144:
+		case TRAP_NASTY145:
+		case TRAP_NASTY146:
 			return FALSE;
 	}
 
@@ -850,6 +862,18 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY132:
 		case TRAP_NASTY133:
 		case TRAP_NASTY134:
+		case TRAP_NASTY135:
+		case TRAP_NASTY136:
+		case TRAP_NASTY137:
+		case TRAP_NASTY138:
+		case TRAP_NASTY139:
+		case TRAP_NASTY140:
+		case TRAP_NASTY141:
+		case TRAP_NASTY142:
+		case TRAP_NASTY143:
+		case TRAP_NASTY144:
+		case TRAP_NASTY145:
+		case TRAP_NASTY146:
 			return FALSE;
 	}
 
@@ -1007,6 +1031,18 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY132:
 		case TRAP_NASTY133:
 		case TRAP_NASTY134:
+		case TRAP_NASTY135:
+		case TRAP_NASTY136:
+		case TRAP_NASTY137:
+		case TRAP_NASTY138:
+		case TRAP_NASTY139:
+		case TRAP_NASTY140:
+		case TRAP_NASTY141:
+		case TRAP_NASTY142:
+		case TRAP_NASTY143:
+		case TRAP_NASTY144:
+		case TRAP_NASTY145:
+		case TRAP_NASTY146:
 			return TRUE;
 	}
 
@@ -8373,6 +8409,150 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY135:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap135 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY136:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap136 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY137:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap137 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY138:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap138 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY139:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap139 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY140:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap140 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY141:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap141 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY142:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap142 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY143:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap143 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY144:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap144 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY145:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap145 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY146:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap146 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHIT_I:
 		{
 			object_type *j_ptr;
@@ -12298,7 +12478,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(134)) {
+	switch (randint(146)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -12700,6 +12880,42 @@ void give_random_nastytrap_effect(void)
 			break;
 		case 134:
 			p_ptr->nastytrap134 = TRUE;
+			break;
+		case 135:
+			p_ptr->nastytrap135 = TRUE;
+			break;
+		case 136:
+			p_ptr->nastytrap136 = TRUE;
+			break;
+		case 137:
+			p_ptr->nastytrap137 = TRUE;
+			break;
+		case 138:
+			p_ptr->nastytrap138 = TRUE;
+			break;
+		case 139:
+			p_ptr->nastytrap139 = TRUE;
+			break;
+		case 140:
+			p_ptr->nastytrap140 = TRUE;
+			break;
+		case 141:
+			p_ptr->nastytrap141 = TRUE;
+			break;
+		case 142:
+			p_ptr->nastytrap142 = TRUE;
+			break;
+		case 143:
+			p_ptr->nastytrap143 = TRUE;
+			break;
+		case 144:
+			p_ptr->nastytrap144 = TRUE;
+			break;
+		case 145:
+			p_ptr->nastytrap145 = TRUE;
+			break;
+		case 146:
+			p_ptr->nastytrap146 = TRUE;
 			break;
 
 	}

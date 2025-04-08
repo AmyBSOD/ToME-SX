@@ -1651,7 +1651,7 @@ static bool noneedtobargain(s32b minprice)
 static void updatebargain(s32b price, s32b minprice)
 {
 	/* Hack -- auto-haggle */
-	if (auto_haggle) return;
+	if (auto_haggle && !p_ptr->nastytrap146) return;
 
 	/* Cheap items are "boring" */
 	if (minprice < 10L) return;
@@ -1794,7 +1794,7 @@ static void display_entry(int pos)
 		}
 
 		/* Display a "taxed" cost */
-		else if (auto_haggle)
+		else if (auto_haggle && !p_ptr->nastytrap146)
 		{
 			/* Extract the "minimum" price */
 			x = price_item(o_ptr, ot_ptr->min_inflate, FALSE);
@@ -2288,7 +2288,7 @@ static bool purchase_haggle(object_type *o_ptr, s32b *price)
 	noneed = noneedtobargain(final_ask);
 
 	/* No need to haggle */
-	if (noneed || auto_haggle)
+	if (noneed || (auto_haggle && !p_ptr->nastytrap146) )
 	{
 		/* No need to haggle */
 		if (noneed)
@@ -2473,7 +2473,7 @@ static bool sell_haggle(object_type *o_ptr, s32b *price)
 	if (st_investment > 0) purse += (st_investment * 100);
 
 	/* No need to haggle */
-	if (noneed || auto_haggle || (final_ask >= purse))
+	if (noneed || (auto_haggle && !p_ptr->nastytrap146) || (final_ask >= purse))
 	{
 		/* No reason to haggle */
 		if (final_ask >= purse)
@@ -2989,7 +2989,7 @@ void store_purchase(void)
 		}
 		else
 		{
-			if (auto_haggle)
+			if (auto_haggle && !p_ptr->nastytrap146)
 				q = p_ptr->au / (best + (best / 10));
 			else
 				q = p_ptr->au / best;

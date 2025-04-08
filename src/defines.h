@@ -3211,6 +3211,19 @@
 #define TRAP_OF_CLUSTER                   614
 #define TRAP_OF_INTERLACE                 615
 
+#define TRAP_NASTY135                     616
+#define TRAP_NASTY136                     617
+#define TRAP_NASTY137                     618
+#define TRAP_NASTY138                     619
+#define TRAP_NASTY139                     620
+#define TRAP_NASTY140                     621
+#define TRAP_NASTY141                     622
+#define TRAP_NASTY142                     623
+#define TRAP_NASTY143                     624
+#define TRAP_NASTY144                     625
+#define TRAP_NASTY145                     626
+#define TRAP_NASTY146                     627
+
 /*** General index values ***/
 
 

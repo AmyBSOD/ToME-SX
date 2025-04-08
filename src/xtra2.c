@@ -7470,8 +7470,12 @@ static int target_set_aux(int y, int x, int mode, cptr info)
 		{
 			cptr name = "a trap", s4;
 
-			/* Name trap */
-			if (t_info[c_ptr->t_idx].ident)
+			/* Name trap; if missed info nastytrap is active, squares with positive mana divisible by 5 don't display their name --Amy */
+			if (p_ptr->nastytrap141 && (c_ptr->mana > 0 && !(c_ptr->mana % 5) ) )
+			{
+				s4 = "an unknown trap";
+			}
+			else if (t_info[c_ptr->t_idx].ident)
 			{
 				s4 = format("(%s)", t_name + t_info[c_ptr->t_idx].name);
 			}

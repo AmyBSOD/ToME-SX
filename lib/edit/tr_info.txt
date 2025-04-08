@@ -3022,6 +3022,66 @@ I:5:25:0:3:20:0d0:o
 D:There might be more traps around...
 F:FLOOR | CHEST | DOOR
 
+N:616:Wild Danger Trap
+I:22:2:50:4:2:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:617:Nopeskill Trap
+I:35:2:50:4:15:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:618:Unskilled Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:619:Skill-less Trap
+I:70:2:50:4:50:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:620:Minus Skill Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:621:Negative Skill Trap
+I:70:2:50:4:50:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:622:Missed Info Trap
+I:35:2:50:4:15:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:623:Feeler Gauges Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:624:Mean Magic Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:625:Mega Scaling Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:626:Vegetarian Trap
+I:23:2:50:4:3:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:627:Force Haggle Trap
+I:25:2:50:4:5:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 
