@@ -8703,6 +8703,114 @@ F:RES_NEXUS | RES_NETHER | FLY |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 D:A suit of armor made from dragon skin. Its scales emit a dark glow.
 
+N:1058:Perception
+G:":d
+I:40:43:0
+W:30:0:3:10000
+A:30/4
+F:SEARCH | DEX | WIS | HIDE_TYPE |
+f:SEARCH | DEX | WIS |
+D:An amulet that improves searching and dexterity, as well as wisdom.
+
+N:1059:Spellcraft
+G:":d
+I:40:44:0
+W:20:0:3:12000
+A:20/3
+F:SPELL | HIDE_TYPE |
+f:SPELL |
+D:Wearing this amulet slightly improves the power of your spells.
+
+N:1060:Burden
+G:":d
+I:40:45:0
+W:5:0:3:0
+A:5/1
+F:CURSED | AUTO_CURSE | EASY_KNOW
+D:While worn, it makes your character much heavier, until removed.
+
+N:1061:Strangulation
+G:":d
+I:40:46:0
+W:5:0:3:0
+A:5/5
+F:DRAIN_HP | CURSED | HIDE_TYPE |
+f:DRAIN_HP |
+D:Oh no! It slowly drains your health while worn! At least it doesn't
+D:instakill you in five turns like in NetHack, though.
+
+N:1062:Orc Sense
+G:":d
+I:40:47:0
+W:5:0:3:2000
+A:5/1
+F:ESP_ORC |
+f:ESP_ORC |
+D:Provides ESP of orcs.
+
+N:1063:Troll Sense
+G:":d
+I:40:48:0
+W:10:0:3:2500
+A:10/1
+F:ESP_TROLL |
+f:ESP_TROLL |
+D:Provides ESP of trolls.
+
+N:1064:Dragon Sense
+G:":d
+I:40:49:0
+W:20:0:3:4000
+A:20/1
+F:ESP_DRAGON |
+f:ESP_DRAGON |
+D:Provides ESP of dragons.
+
+N:1065:Giant Sense
+G:":d
+I:40:50:0
+W:20:0:3:3000
+A:20/1
+F:ESP_GIANT |
+f:ESP_GIANT |
+D:Provides ESP of giants.
+
+N:1066:Sense Evil
+G:":d
+I:40:51:0
+W:20:0:3:5000
+A:20/2
+F:ESP_EVIL |
+f:ESP_EVIL |
+D:Provides ESP of evil creatures.
+
+N:1067:Animal Sense
+G:":d
+I:40:52:0
+W:5:0:3:2000
+A:5/1
+F:ESP_ANIMAL |
+f:ESP_ANIMAL |
+D:Provides ESP of animals.
+
+N:1068:Sense Good
+G:":d
+I:40:53:0
+W:20:0:3:5000
+A:20/2
+F:ESP_GOOD |
+f:ESP_GOOD |
+D:Provides ESP of good creatures.
+
+N:1069:Sense Unlife
+G:":d
+I:40:54:0
+W:15:0:3:8000
+A:15/4
+F:ESP_NONLIVING |
+f:ESP_NONLIVING |
+D:Provides ESP of nonliving creatures.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

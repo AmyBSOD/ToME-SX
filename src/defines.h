@@ -1792,6 +1792,18 @@
 #define SV_AMULET_BRACING               40
 #define SV_AMULET_THIEVERY              41
 #define SV_AMULET_KINGS                 42
+#define SV_AMULET_PERCEPTION            43
+#define SV_AMULET_SPELLCRAFT            44
+#define SV_AMULET_BURDEN                45
+#define SV_AMULET_STRANGULATION         46
+#define SV_AMULET_ORC_ESP               47
+#define SV_AMULET_TROLL_ESP             48
+#define SV_AMULET_DRAGON_ESP            49
+#define SV_AMULET_GIANT_ESP             50
+#define SV_AMULET_EVIL_ESP              51
+#define SV_AMULET_ANIMAL_ESP            52
+#define SV_AMULET_GOOD_ESP              53
+#define SV_AMULET_UNLIFE_ESP            54
 
 /* The sval codes for TV_RING */
 #define SV_RING_WOE                      0

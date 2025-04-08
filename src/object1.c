@@ -28,7 +28,7 @@
  * Max sizes of the following arrays
  */
 #define MAX_ROCKS      82       /* Used with rings (min 58) */
-#define MAX_AMULETS    55       /* Used with amulets (min 30) */
+#define MAX_AMULETS    60       /* Used with amulets (min 30) */
 #define MAX_WOODS      70       /* Used with staffs (min 32) */
 #define MAX_METALS     75       /* Used with wands/rods (min 32/30) */
 #define MAX_COLORS    101       /* Used with potions (min 62) */
@@ -102,7 +102,8 @@ static cptr amulet_adj[MAX_AMULETS] =
 	"Signet", "Oblong", "Chrome", "Lariat", "Pebble", 
 	"Megane", "Ether", "Nano", "Alloy", "Lustrous",
 	"Layered", "Clawmark", "Bimetal", "Meteosteel", "Leaden",
-	"Mysterious", "Everlasting", "Permanent", "Perpetual", "Cuboid"
+	"Mysterious", "Everlasting", "Permanent", "Perpetual", "Cuboid",
+	"Toroidal", "Flimsy", "Dyed", "Fluid", "Meshed"
 };
 
 static byte amulet_col[MAX_AMULETS] =
@@ -117,7 +118,8 @@ static byte amulet_col[MAX_AMULETS] =
 	TERM_L_BLUE, TERM_SLATE, TERM_L_DARK, TERM_YELLOW, TERM_L_DARK, 
 	TERM_BLUE, TERM_L_BLUE, TERM_GREEN, TERM_ORANGE, TERM_L_BLUE,
 	TERM_WHITE, TERM_SLATE, TERM_WHITE, TERM_SLATE, TERM_SLATE,
-	TERM_L_DARK, TERM_L_BLUE, TERM_GREEN, TERM_L_RED, TERM_RED
+	TERM_L_DARK, TERM_L_BLUE, TERM_GREEN, TERM_L_RED, TERM_RED,
+	TERM_SLATE, TERM_UMBER, TERM_BLUE, TERM_L_BLUE, TERM_L_DARK
 };
 
 
@@ -4320,9 +4322,20 @@ s16b wield_slot_ideal(object_type *o_ptr, bool ideal)
 	switch (o_ptr->tval)
 	{
 	case TV_DIGGING:
-	case TV_TOOL:
 		{
 			return ideal ? INVEN_TOOL : get_slot(INVEN_TOOL);
+		}
+
+	case TV_TOOL:
+		{
+			if (ideal) return INVEN_TOOL;
+			else {
+				if (get_slot(INVEN_TOOL) != -1) return get_slot(INVEN_TOOL);
+				if (get_slot(INVEN_BOW) != -1) return get_slot(INVEN_BOW);
+				if (get_slot(INVEN_AMMO) != -1) return get_slot(INVEN_AMMO);
+				if (get_slot(INVEN_LITE) != -1) return get_slot(INVEN_LITE);
+				return -1;
+			}
 		}
 
 	case TV_HAFTED:
@@ -4342,7 +4355,14 @@ s16b wield_slot_ideal(object_type *o_ptr, bool ideal)
 
 	case TV_INSTRUMENT:
 		{
-			return ideal ? INVEN_BOW : get_slot(INVEN_BOW);
+			if (ideal) return INVEN_BOW;
+			else {
+				if (get_slot(INVEN_BOW) != -1) return get_slot(INVEN_BOW);
+				if (get_slot(INVEN_TOOL) != -1) return get_slot(INVEN_TOOL);
+				if (get_slot(INVEN_AMMO) != -1) return get_slot(INVEN_AMMO);
+				if (get_slot(INVEN_LITE) != -1) return get_slot(INVEN_LITE);
+				return -1;
+			}
 		}
 
 	case TV_RING:
@@ -4594,25 +4614,40 @@ s16b wield_slot_ideal_special(object_type *o_ptr, bool ideal)
 	case TV_TOOL:
 		{
 			char etrdt; /* by Amy: can select a slot, because it's silly if you're forced to sacrifice the digging slot */
+
+			if (!ideal && get_slot(INVEN_TOOL) == -1 && get_slot(INVEN_AMMO) == -1 && get_slot(INVEN_LITE) == -1 && get_slot(INVEN_BOW) == -1) {
+				msg_print("It seems you have no appropriate slots.");
+				return -1;
+			}
+
 startoverTOOL:
+			etrdt = 0;
 
-			prt("Wield the tool in the light slot (y/n)? ", 0, 0);
-			flush();
-			etrdt = inkey();
-			prt("", 0, 0);
-			if (etrdt != 'y') {
-				prt("Wield the tool in the ammo slot (y/n)? ", 0, 0);
-
+			if (get_slot(INVEN_LITE) != -1) {
+				prt("Wield the tool in the light slot (y/n)? ", 0, 0);
 				flush();
 				etrdt = inkey();
 				prt("", 0, 0);
-				if (etrdt != 'y') {
-					prt("Wield the tool in the shooter slot (y/n)? ", 0, 0);
-	
+			}
+			if (etrdt != 'y') {
+				if (get_slot(INVEN_AMMO) != -1) {
+					prt("Wield the tool in the ammo slot (y/n)? ", 0, 0);
+
 					flush();
 					etrdt = inkey();
 					prt("", 0, 0);
+				}
+				if (etrdt != 'y') {
+					if (get_slot(INVEN_BOW) != -1) {
+						prt("Wield the tool in the shooter slot (y/n)? ", 0, 0);
+	
+						flush();
+						etrdt = inkey();
+						prt("", 0, 0);
+					}
 					if (etrdt != 'y') {
+						if (get_slot(INVEN_TOOL) == -1) goto startoverTOOL;
+
 						prt("Wield the tool in the digging slot (y/n)? ", 0, 0);
 
 						flush();
@@ -4652,25 +4687,40 @@ startoverTOOL:
 	case TV_INSTRUMENT:
 		{
 			char etrdt; /* by Amy: can select a slot, because it's silly if you're forced to sacrifice the shooter slot */
+
+			if (!ideal && get_slot(INVEN_TOOL) == -1 && get_slot(INVEN_AMMO) == -1 && get_slot(INVEN_LITE) == -1 && get_slot(INVEN_BOW) == -1) {
+				msg_print("It seems you have no appropriate slots.");
+				return -1;
+			}
+
 startover:
+			etrdt = 0;
 
-			prt("Wield the instrument in the light slot (y/n)? ", 0, 0);
-			flush();
-			etrdt = inkey();
-			prt("", 0, 0);
-			if (etrdt != 'y') {
-				prt("Wield the instrument in the ammo slot (y/n)? ", 0, 0);
-
+			if (get_slot(INVEN_LITE) != -1) {
+				prt("Wield the instrument in the light slot (y/n)? ", 0, 0);
 				flush();
 				etrdt = inkey();
 				prt("", 0, 0);
-				if (etrdt != 'y') {
-					prt("Wield the instrument in the shooter slot (y/n)? ", 0, 0);
-	
+			}
+			if (etrdt != 'y') {
+				if (get_slot(INVEN_AMMO) != -1) {
+					prt("Wield the instrument in the ammo slot (y/n)? ", 0, 0);
+
 					flush();
 					etrdt = inkey();
 					prt("", 0, 0);
+				}
+				if (etrdt != 'y') {
+					if (get_slot(INVEN_BOW) != -1) {
+						prt("Wield the instrument in the shooter slot (y/n)? ", 0, 0);
+	
+						flush();
+						etrdt = inkey();
+						prt("", 0, 0);
+					}
 					if (etrdt != 'y') {
+						if (get_slot(INVEN_TOOL) == -1) goto startover;
+
 						prt("Wield the instrument in the digging slot (y/n)? ", 0, 0);
 
 						flush();

@@ -71,12 +71,28 @@ s32b calc_total_weight(void)
 {
 	int i;
 	s32b total;
+	object_type *burdenammy;
 	for (i = total = 0; i < INVEN_TOTAL; i++)
 	{
 		object_type *o_ptr = &p_ptr->inventory[i];
 
 		if (o_ptr->k_idx) total += o_ptr->weight * o_ptr->number;
 	}
+
+	/* amulet of burden (from Castle of the Winds): while wearing it, your weight is much higher --Amy */
+	burdenammy = &p_ptr->inventory[INVEN_NECK];
+	if (burdenammy && burdenammy->k_idx) {
+		if (burdenammy->sval == SV_AMULET_BURDEN) {
+			total += 1000;
+		}
+	}
+	burdenammy = &p_ptr->inventory[INVEN_NECK + 1];
+	if (burdenammy && burdenammy->k_idx) {
+		if (burdenammy->sval == SV_AMULET_BURDEN) {
+			total += 1000;
+		}
+	}
+
 	return total;
 }
 
@@ -3792,8 +3808,26 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
 			case SV_AMULET_DISARMING:
 			case SV_AMULET_DODGING:
 			case SV_AMULET_THIEVERY:
+			case SV_AMULET_PERCEPTION:
 				{
 					o_ptr->pval = 1 + m_bonus(5, level);
+
+					/* Cursed */
+					if (power < 0)
+					{
+						/* Cursed */
+						o_ptr->ident |= (IDENT_CURSED);
+
+						/* Reverse bonuses */
+						o_ptr->pval = 0 - (o_ptr->pval);
+					}
+
+					break;
+				}
+
+			case SV_AMULET_SPELLCRAFT:
+				{
+					o_ptr->pval = 1 + m_bonus(4, level);
 
 					/* Cursed */
 					if (power < 0)
