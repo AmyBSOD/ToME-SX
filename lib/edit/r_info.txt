@@ -368,7 +368,7 @@ D:You feel it isn't safe to touch him.
 N:14:Agent of the black market
 G:t:b
 I:110:2d8:10:8:99
-W:0:1:1200:0
+W:0:1:1200:1
 E:1:1:1:2:1:1
 O:25:50:20:5
 B:HIT:HURT:1d6
@@ -398,7 +398,7 @@ D:He makes you glad to be sober.
 N:16:Aimless-looking merchant
 G:t:o
 I:110:3d3:10:1:255
-W:0:1:1500:0
+W:0:1:1500:1
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:HIT:HURT:1d3
@@ -412,7 +412,7 @@ D:amulets of adornment to buy.
 N:17:Mean-looking mercenary
 G:t:r
 I:110:5d8:10:20:250
-W:0:1:1700:0
+W:0:1:1700:2
 E:1:1:1:2:1:1
 O:0:100:0:0
 B:HIT:HURT:1d10
@@ -425,7 +425,7 @@ D:No job is too low for him.
 N:18:Battle-scarred veteran
 G:t:B
 I:110:7d8:10:30:250
-W:0:1:1650:0
+W:0:1:1650:2
 E:1:1:1:2:1:1
 O:25:50:25:0
 B:HIT:HURT:2d6
@@ -22868,7 +22868,7 @@ D:fleecy, yet massive and unyielding block heels.
 N:1320:Nether idiot
 G:t:G
 I:120:10d20:6:25:0
-W:20:1:1400:0
+W:20:1:1400:100
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:DROOL:*
@@ -23143,7 +23143,7 @@ D:feeling tells you he's a spy.
 N:1334:Ox
 G:c:D
 I:50:10d10:0:50:255
-W:50:1:4000:0
+W:50:1:4000:300
 E:0:1:0:2:1:2
 O:0:0:0:0
 B:KICK:HURT:10d10
@@ -23161,7 +23161,7 @@ D:utterly harmless, except when angry.
 N:1335:Kine of Araw
 G:c:r
 I:80:20d20:0:50:255
-W:90:1:5000:0
+W:90:1:5000:500
 E:0:1:0:2:1:2
 O:0:0:0:0
 B:KICK:HURT:20d20
@@ -23182,7 +23182,7 @@ D:unless provoked.
 N:1336:Sheep
 G:c:w
 I:70:5d5:0:30:255
-W:10:1:2000:0
+W:10:1:2000:5
 E:0:1:0:2:1:2
 O:0:0:0:0
 B:KICK:HURT:5d5
@@ -23198,7 +23198,7 @@ D:and in the Vales of Anduin. Utterly harmless unless angered.
 N:1337:Meara
 G:c:W
 I:130:10d12:0:70:255
-W:45:1:3500:0
+W:45:1:3500:250
 E:0:1:0:2:1:2
 O:0:0:0:0
 B:KICK:HURT:10d12
@@ -23216,7 +23216,7 @@ D:not attack unless angered.
 N:1338:Horse
 G:c:s
 I:120:8d10:0:50:255
-W:35:1:3000:0
+W:35:1:3000:200
 E:0:1:0:2:1:2
 O:0:0:0:0
 B:KICK:HURT:8d10
@@ -23263,7 +23263,7 @@ D:Aggressive tusked beasts common to woodland regions.
 N:1341:Cow
 G:c:u
 I:70:7d7:0:50:255
-W:20:1:3500:0
+W:20:1:3500:100
 E:0:1:0:2:1:2
 O:0:0:0:0
 B:KICK:HURT:7d7
@@ -23279,7 +23279,7 @@ D:Utterly harmless, unless angered.
 N:1342:Pony
 G:c:y
 I:120:4d5:0:10:200
-W:15:1:1000:0
+W:15:1:1000:50
 E:0:1:0:2:1:2
 O:0:0:0:0
 B:KICK:HURT:4d5
@@ -23296,7 +23296,7 @@ D:and Dwarves. It won't attack you unless provoked.
 N:1343:Deer
 G:c:U
 I:110:8d8:0:30:255
-W:35:1:3000:0
+W:35:1:3000:150
 E:0:1:0:0:1:2
 O:0:0:0:0
 B:KICK:HURT:8d8
@@ -24991,7 +24991,7 @@ D:of Ithilien against the Enemy.
 N:1438:Harry Goatleaf, Gatekeeper of Bree
 G:p:w
 I:100:8d10:40:10:5
-W:5:4:1200:0
+W:5:4:1200:10
 E:1:1:1:2:1:1
 O:20:20:20:20
 B:GAZE:*
@@ -29344,7 +29344,7 @@ D:get you to change your ways.
 N:1677:Weary-looking traveller
 G:t:v
 I:110:3d3:10:1:255
-W:0:1:1500:0
+W:0:1:1500:1
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:HIT:HURT:1d3
@@ -30252,7 +30252,7 @@ D: you. She is quite attractive. . .
 N:1727:Coal Miner
 G:t:D
 I:109:2d5:10:6:155
-W:0:1:0:0
+W:0:1:0:1
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:HIT:HURT:1d3
@@ -30285,7 +30285,7 @@ D: violets. "Buy a flower, sir?" she asks pitifully.
 N:1730:Sailor
 G:t:w
 I:109:1d7:10:4:155
-W:0:1:0:0
+W:0:1:0:1
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:HIT:HURT:1d3
@@ -40859,7 +40859,7 @@ D:The ubiquitous bird in all anime that shouts 'Aho!  Aho!'
 N:2314:Furry
 G:t:b
 I:110:2d8:10:8:99
-W:0:1:1200:0
+W:0:1:1200:1
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:CLAW:HURT:1d6
@@ -40891,7 +40891,7 @@ D:students want to kancho him in the ass or grab his dick.  I do you schoolbus..
 N:2316:Karate Scrub
 G:t:o
 I:110:3d3:10:1:255
-W:0:1:1200:0
+W:0:1:1200:1
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:1d3
@@ -40904,7 +40904,7 @@ D:Another karate-kid wannabe.
 N:2317:Yakuza member
 G:t:r
 I:110:5d8:10:20:250
-W:0:1:1200:0
+W:0:1:1200:2
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:HIT:HURT:1d10
@@ -40917,7 +40917,7 @@ D:No job is too low for him.
 N:2318:Battle scarred ronin
 G:t:B
 I:110:7d8:10:30:250
-W:0:1:1200:0
+W:0:1:1200:2
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:HIT:HURT:2d6
@@ -47322,7 +47322,7 @@ D:that is beyond you but there it is, so take care!
 N:2683:Powerful idiot
 G:t:G
 I:120:10d30:6:25:0
-W:30:1:1400:0
+W:30:1:1400:500
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:DROOL:*
@@ -47338,7 +47338,7 @@ D:Huh... since when can they cast THAT overpowered spell? That's unfair!
 N:2684:Hell idiot
 G:t:G
 I:130:10d50:15:50:0
-W:50:1:1400:0
+W:50:1:1400:1000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:DROOL:*
@@ -47354,7 +47354,7 @@ D:There's been some serios r_info.txt hacking been going on though.
 N:2685:Unbalanced idiot
 G:t:G
 I:130:10d60:15:50:0
-W:60:1:1400:0
+W:60:1:1400:2500
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:DROOL:*
@@ -47373,7 +47373,7 @@ D:WTH??? He just cast MANA STORM, the most fucking powerful spell in the game???
 N:2686:Squint-eyed rogue
 G:t:R
 I:110:3d3:10:8:99
-W:0:4:1200:0
+W:0:4:1200:1
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:HIT:HURT:1d6
@@ -53100,7 +53100,7 @@ D:He makes you sad to be leaving the Shire.
 N:3044:Hobbit merchant
 G:h:B
 I:110:2d3:10:1:255
-W:0:1:1000:0
+W:0:1:1000:1
 E:1:1:1:2:1:1
 O:0:50:0:40
 B:HIT:HURT:1d3
@@ -53113,7 +53113,7 @@ D: looking for more amulets of adornment to buy.
 N:3045:Hobbit veteran
 G:h:U
 I:110:2d11:10:20:250
-W:0:4:1000:0
+W:0:4:1000:2
 E:1:1:1:2:1:1
 O:0:50:0:40
 B:HIT:HURT:1d10
@@ -55837,7 +55837,7 @@ D:A hideous ogre wrapped in dark priestly robes.
 N:3220:Bumbling priest
 G:p:b
 I:110:2d6:20:10:10
-W:0:3:1600:0
+W:0:3:1600:1
 E:1:1:1:2:1:1
 O:25:50:0:20
 B:HIT:HURT:1d5
@@ -56096,7 +56096,7 @@ D:A giant orc-like figure with an awesomely muscled frame and slimey skin.
 N:3236:Cross-eyed mage
 G:p:r
 I:110:2d5:20:6:5
-W:0:1:3000:0
+W:0:1:3000:1
 E:1:1:1:2:1:1
 O:25:50:0:20
 B:HIT:HURT:1d3
@@ -62306,7 +62306,7 @@ D:It is a squat and ugly dog-headed humanoid.
 N:3601:Elderly gentleman
 G:t:w
 I:110:3d3:10:1:255
-W:0:1:1500:0
+W:0:1:1500:1
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:HIT:HURT:1d2
@@ -62320,7 +62320,7 @@ D:strolls around the town.
 N:3602:Police officer
 G:t:b
 I:110:5d10:10:10:200
-W:0:1:1700:0
+W:0:1:1700:2
 E:1:1:1:2:1:1
 O:25:50:0:25
 B:HIT:HURT:3d5
@@ -62839,7 +62839,7 @@ D:A massive horn beaten from silver and engraved with sacred formulas.
 N:3628:Watchman of Ambarannon
 G:t:W
 I:110:7d8:10:30:250
-W:0:1:1650:0
+W:0:1:1650:2
 E:1:1:1:2:1:1
 O:25:50:25:0
 B:HIT:HURT:2d6
@@ -62853,7 +62853,7 @@ D:A holy warrior oathbound to guard his home-city from evil.
 N:3629:Weary pilgrim
 G:t:U
 I:120:3d3:6:1:0
-W:0:1:1200:0
+W:0:1:1200:1
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:HIT:HURT:1d3
@@ -62883,7 +62883,7 @@ D:talisman hangs from a belt of cord around his waist.
 N:3631:The outland priest
 G:t:G
 I:110:35d20:50:60:4
-W:0:4:1700:0
+W:0:4:1700:20
 E:1:1:1:2:1:1
 O:0:100:0:0
 B:HIT:HURT:1d10
@@ -66978,7 +66978,7 @@ D:blood.
 N:3885:Human adventurer
 G:t:W
 I:110:1d6:6:1:0
-W:0:1:1500:0
+W:0:1:1500:1
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:HIT:HURT:1d3
@@ -66990,7 +66990,7 @@ D:He wants to find treasure.
 N:3886:Dumb human
 G:t:W
 I:100:1d6:6:1:0
-W:0:1:1500:0
+W:0:1:1500:1
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:HIT:HURT:1d3
@@ -67002,7 +67002,7 @@ D:An adventurer who isn't too terribly bright.
 N:3887:Akira girl
 G:t:b
 I:110:2d4:6:5:0
-W:0:1:1500:0
+W:0:1:1500:1
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:1d2
@@ -67014,7 +67014,7 @@ D:This lovely girl wants to try out her block-heeled combat boots in battle.
 N:3888:Insane survivor
 G:t:b
 I:110:1d2:6:1:0
-W:0:5:1500:0
+W:0:5:1500:1
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:HIT:INSANITY:1d3
@@ -67787,7 +67787,7 @@ D:Drooling and comical, but then, what do you expect?
 N:3926:Lion Heart
 G:t:s
 I:111:20d20:50:15:4
-W:0:4:2000:0
+W:0:4:2000:5
 E:1:1:1:2:1:1
 O:20:20:20:20
 B:HIT:HURT:1d3
@@ -70687,7 +70687,7 @@ D:criticize its effectiveness.
 N:4070:Scrawny horse
 G:q:o
 I:110:4d5:20:5:30
-W:0:1:1800:0
+W:0:1:1800:1
 E:0:1:0:2:1:0
 O:20:20:20:20
 B:BITE:HURT:1d2
@@ -72164,7 +72164,7 @@ D:He weighs 127 kg. He is the president of some remote country.
 N:4153:Mori Troll
 G:T:G
 I:109:35d20:50:15:4
-W:0:255:3000:0
+W:0:255:3000:10
 E:1:1:1:2:1:1
 O:20:20:20:20
 B:HIT:HURT:1d3
@@ -79748,7 +79748,7 @@ D:You can hear the sound of the rock rolling. It can bring an end.
 N:4531:Pickpocket girl
 G:t:R
 I:110:3d3:10:8:99
-W:0:20:1200:0
+W:0:20:1200:1
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:HIT:HURT:1d6
@@ -80134,7 +80134,7 @@ D:She makes you sad to be leaving the Shire.
 N:4554:Hobbit spendthrift
 G:h:B
 I:110:2d3:10:1:255
-W:0:5:1000:0
+W:0:5:1000:1
 E:1:1:1:2:1:1
 O:0:50:0:40
 B:HIT:HURT:1d3
@@ -80147,7 +80147,7 @@ D: looking for more amulets of adornment to buy.
 N:4555:Hobbit soldier
 G:h:U
 I:110:2d11:10:20:250
-W:0:20:1000:0
+W:0:20:1000:2
 E:1:1:1:2:1:1
 O:0:50:0:40
 B:HIT:HURT:1d10
@@ -80681,7 +80681,7 @@ D:A massive, heavily armored figure who dominates her kind.
 N:4589:Dizzy priest
 G:p:b
 I:110:2d6:20:10:10
-W:0:15:1600:0
+W:0:15:1600:1
 E:1:1:1:2:1:1
 O:25:50:0:20
 B:HIT:HURT:1d5
@@ -80747,7 +80747,7 @@ D: black spiked mace.
 N:4593:Dimwitted mage
 G:p:r
 I:110:2d5:20:6:5
-W:0:5:3000:0
+W:0:5:3000:1
 E:1:1:1:2:1:1
 O:25:50:0:20
 B:HIT:HURT:1d3
