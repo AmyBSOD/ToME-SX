@@ -190,7 +190,7 @@ int randomfloortype(void)
 /* select a random type of non-walkable or otherwise obstructing terrain */
 int randomwalltype(int flags)
 {
-	int randfloor = random_number(40);
+	int randfloor = random_number(41);
 	int floornumber = 56;
 
 	/* small chance of something walkable */
@@ -303,6 +303,9 @@ int randomwalltype(int flags)
 		case 40:
 			floornumber = 56; /* granite wall */
 			break;
+		case 41:
+			floornumber = 239; /* slippery rock ledge */
+			break;
 
 		default:
 			floornumber = 1;
@@ -315,7 +318,7 @@ int randomwalltype(int flags)
 /* select a random type of permanent wall */
 int randompermawalltype(void)
 {
-	int randfloor = random_number(14);
+	int randfloor = random_number(15);
 	int floornumber = 56;
 
 	/* select a wall type that cannot be dug out or otherwise removed */
@@ -343,6 +346,9 @@ int randompermawalltype(void)
 			break;
 		case 14:
 			floornumber = 213; /* copper pillar */
+			break;
+		case 15:
+			floornumber = 229; /* beehive */
 			break;
 		default:
 			floornumber = 60;

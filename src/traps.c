@@ -9834,6 +9834,34 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		}
 		break;
 
+	case TRAP_OF_TERRAIN_SLIPPERY:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 6, FEAT_SLIPPERY, 50);
+
+		msg_print("The dungeon becomes slippery!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Slippery Trap.");
+		}
+		break;
+
 	case TRAP_OF_TERRAIN_FIRE:
 		ident = TRUE;
 		fill_area_terrain(p_ptr->py, p_ptr->px, 5, FEAT_FIRE, 25);

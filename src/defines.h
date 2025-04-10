@@ -839,7 +839,7 @@
 #define FEAT_DMG_DISEN          0x76
 #define FEAT_DMG_NEXUS          0x77
 #define FEAT_DMG_TIME           0x78
-#define FEAT_DMG_NUKE           0x79
+#define FEAT_DMG_NUKE           0x79 
 
 #define FEAT_BETWEEN            0xA0 /* 160 */
 
@@ -887,6 +887,7 @@
 #define FEAT_SWAMP_POOL         0xE2 /* 226 */
 #define FEAT_ANDUIN             0xE3 /* 227 */
 #define FEAT_WATERFALL          0xEE /* 238 */
+#define FEAT_SLIPPERY           0xEF /* 239 */
 #define FEAT_SWITCHER           0xF4 /* 244 */
 
 #define FEAT_ALTAR2_HEAD         0xF5 /* 245 */
@@ -3235,6 +3236,8 @@
 #define TRAP_NASTY144                     625
 #define TRAP_NASTY145                     626
 #define TRAP_NASTY146                     627
+
+#define TRAP_OF_TERRAIN_SLIPPERY          628
 
 /*** General index values ***/
 
