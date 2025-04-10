@@ -69,6 +69,12 @@ F:4:74:3:0:0:0:0:0:78
 # Alchemy Shop
 F:5:74:3:0:0:0:0:0:72
 
+# Between gate to khazad-dum -- need to finish the quest
+F:J:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST35 5] ]
+F:J:176:3:0:0:0:0:0:31
+?:1
+
 D:######################################################################################################################################################################################################
 D:#hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhWWWWWWWWWWhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh#
 D:#hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhWWTTWWWWWhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh#
@@ -101,7 +107,7 @@ D:#hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 D:#hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh^^@,,,,,,,,,,,,,,,,,,,,VVVV,,,,,,,,,,,,,,,,,,,,,,@^^hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh^,^hhhhhhhhhhhhhhhh#
 D:#hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh^^@,,,,,,,,,,,,,,,,,,,,VVVV,,,,,,,,,,,,,,,,,,,,,,,,@^^hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh^,^hhhhhhhhhhhhhhhhh#
 D:#hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh^^^@,,,,,,,,,,,,,,,,,,,,VVVV,,,,,,,,,,,,,,,,,,,,,,,,,@^^hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh^,^hhhhhhhhhhhhhhhhhh#
-D:#hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh^^@@,,,,,,,,,,,,,,,,,,,,VVVV,,,,,,,,,,,,,,,,,,,,,,,,,,,@^^hhhhhhhhhhhhhhhhhhhhhhhhhhhhh^,^hhhhhhhhhhhhhhhhhhh#
+D:#hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh^^@@,,,,,,,,,,,,,,,,,,,,VVVVJ,,,,,,,,,,,,,,,,,,,,,,,,,,@^^hhhhhhhhhhhhhhhhhhhhhhhhhhhhh^,^hhhhhhhhhhhhhhhhhhh#
 D:#hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh^^@@VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV@^^hhhhhhhhhhhhhhhhhhhhhhhhhhhh^,^hhhhhhhhhhhhhhhhhhhh#
 D:#hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh^^@VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV@^^hhhhhhhhhhhhhhhhhhhhhhhhhh^,^hhhhhhhhhhhhhhhhhhhhh#
 D:#hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh^^@@VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV@^^hhhhhhhhhhhhhhhhhhhhhhhhh^,^hhhhhhhhhhhhhhhhhhhhhh#

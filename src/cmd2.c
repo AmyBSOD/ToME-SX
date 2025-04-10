@@ -267,6 +267,15 @@ static bool between_effect(void)
 {
 	byte bx, by;
 
+	if (p_ptr->betweensickness) {
+		msg_format("You're still too dizzy from entering the last jumpgate, and need to wait for %d more turns!", p_ptr->betweensickness);
+		return (FALSE);
+	}
+
+	if (p_ptr->nastytrap147) {
+		msg_print("The Void seems to be blocked right now!");		
+		return (FALSE);
+	}
 
 	if (cave[p_ptr->py][p_ptr->px].feat == FEAT_BETWEEN)
 	{
@@ -291,6 +300,9 @@ static bool between_effect(void)
 		/* To avoid being teleported back */
 		energy_use = 100;
 
+		/* thwart endless abuse --Amy */
+		(void)set_betweensickness(p_ptr->betweensickness + 5 + randint(20));
+
 		return (TRUE);
 	}
 
@@ -306,6 +318,9 @@ static bool between_effect(void)
 		dungeon_type = be_ptr->d_idx;
 		dun_level = be_ptr->level;
 		p_ptr->leaving = TRUE;
+
+		/* thwart endless abuse --Amy */
+		(void)set_betweensickness(p_ptr->betweensickness + 5 + randint(20));
 
 		return (TRUE);
 	}

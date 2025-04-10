@@ -2706,6 +2706,12 @@ static void process_world(void)
 		(void)set_tim_manasilence(p_ptr->tim_manasilence - 1);
 	}
 
+	/* Between sickness */
+	if (p_ptr->betweensickness)
+	{
+		(void)set_betweensickness(p_ptr->betweensickness - 1);
+	}
+
 	/* Repelling */
 	if (p_ptr->tim_repelling)
 	{

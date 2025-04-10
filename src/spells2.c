@@ -2185,6 +2185,10 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: You're forced to haggle in stores.";
 	}
+	if (p_ptr->nastytrap147)
+	{
+		info[i++] = "You have a problem: Void jumpgates don't work anymore.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];

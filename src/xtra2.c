@@ -2912,6 +2912,38 @@ bool set_tim_manasilence(int v)
 }
 
 /*
+ * Set "p_ptr->betweensickness", notice observable changes
+ */
+bool set_betweensickness(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Use the value */
+	p_ptr->betweensickness = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
  * Set "p_ptr->tim_repelling", notice observable changes
  */
 bool set_tim_repelling(int v)

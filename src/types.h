@@ -1627,6 +1627,7 @@ struct player_type
 	s16b am_dancing;        /* Bonus from dancing */
 	s16b tim_manavoid;      /* Timed manavoid */
 	s16b tim_manasilence;   /* Timed silence */
+	s16b betweensickness;   /* Timer before you can use a void jumpgate again --Amy */
 	s16b tim_repelling;     /* Timed repelling */
 
 	s16b tim_project;       /* Timed project upon melee blow */
@@ -2084,7 +2085,7 @@ struct player_type
 	bool nastytrap144; /* mega scaling trap - monster levelscaling bonuses are like vanilla */
 	bool nastytrap145; /* vegetarian trap - you cannot eat meat */
 	bool nastytrap146; /* force haggle trap - you have to haggle even if the option is turned off */
-	bool nastytrap147;
+	bool nastytrap147; /* void travel trap - void jumpgates don't work anymore */
 	bool nastytrap148;
 	bool nastytrap149;
 	bool nastytrap150;

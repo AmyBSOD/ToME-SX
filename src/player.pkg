@@ -3887,6 +3887,16 @@ extern bool set_tim_manavoid(int v);
  */
 extern bool set_tim_manasilence(int v);
 
+/** @fn set_betweensickness(int v)
+ * @brief Player has timed between sickness.\n
+ * @param v Number \n time remaining until effect expires
+ * (must be in the range 0 to 10,000)
+ * @brief Time remaining
+ * @return Boolean \n TRUE if player notices the effect, otherwise FALSE.
+ * @note (see file xtra2.c)
+ */
+extern bool set_betweensickness(int v);
+
 /** @fn set_tim_repelling(int v)
  * @brief Player has timed repelling.\n
  * @param v Number \n time remaining until effect expires

@@ -896,7 +896,7 @@
 /* Features 0xCF - 0xFF -- unused */
 
 
-#define MAX_BETWEEN_EXITS       18
+#define MAX_BETWEEN_EXITS       34
 
 /*
  * Number of effects
@@ -3238,6 +3238,8 @@
 #define TRAP_NASTY146                     627
 
 #define TRAP_OF_TERRAIN_SLIPPERY          628
+
+#define TRAP_NASTY147                     629
 
 /*** General index values ***/
 

@@ -129,6 +129,54 @@ F:D:88:3
 F:D:176:3:0:0:0:0:0:9
 ?:1
 
+# Between gate to dale -- need to finish the quest
+F:R:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST30 5] ]
+F:R:176:3:0:0:0:0:0:18
+?:1
+
+# Between gate to cerin amroth -- need to finish the quest
+F:s:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST31 5] ]
+F:s:176:3:0:0:0:0:0:19
+?:1
+
+# Between gate to imladris -- need to finish the quest
+F:S:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST32 5] ]
+F:S:176:3:0:0:0:0:0:20
+?:1
+
+# Between gate to helms deep -- need to finish the quest
+F:t:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST33 5] ]
+F:t:176:3:0:0:0:0:0:21
+?:1
+
+# Between gate to thranduils halls -- need to finish the quest
+F:T:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST34 5] ]
+F:T:176:3:0:0:0:0:0:22
+?:1
+
+# Between gate to henneth annun -- need to finish the quest
+F:u:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST35 5] ]
+F:u:176:3:0:0:0:0:0:23
+?:1
+
+# Between gate to beorns halls -- need to finish the quest
+F:U:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST36 5] ]
+F:U:176:3:0:0:0:0:0:24
+?:1
+
+# Between gate to esgaroth -- need to finish the quest
+F:v:88:3
+?:[AND [EQU $QUEST25 5] [EQU $QUEST37 5] ]
+F:v:176:3:0:0:0:0:0:25
+?:1
+
 ############### Quest 25 - Evil cave finished = house ###############
 ?:[EQU $QUEST25 2]
 F:w:74:3:0:0:0:0:0:7
@@ -165,14 +213,14 @@ D:#################ooo######################              ;  #####             o
 D:####oo##ooo#####o#######o###ooo###########                  ###   ;          o    ###   o          o    ###    o       ;      ###   ; ;;          #########oo###oooooo#####oo######     CCCCC      ; #
 D:#ooooooooooooooooooooooooooooooo##oooooooo                               ;   o    ;     o          o           o   ;                ;;          ; oooooooooooo##oooooooo##oooooooooo     CCCCC  ;    #
 D:#ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo     CCCCCC      #
-D:#oooooooooooooooooo##oooooo##oooooo##ooooo                                ;             o          o                                           ;  ooooooooo#oooooooooooooooooooooooo     CCCCC       #
+D:#oooooooooooooooooo##oooooo##oooooo##ooooo                                ;             oR   s    So                                           ;  ooooooooo#oooooooooooooooooooooooo     CCCCC       #
 D:#^#######################oo####ooooo#######      ###                   ###              o          o               ###;                  ###      ######o####oo####oo######oo######;    CCCCC        #
 D:#^^#######################o###########D         #####                 #####             o          o              #####                 #####    ######o####################oo####     CCCCC         #
-D:#^#######################################      #######;;P  ;         #######            o          o             #######               #######     ####oo#########################     CCCCCC        #
-D:#^^########################################    #######          ;    #######            o          o             #######            J  #######    ######o############oo##########     CCCCCCC        #
+D:#^#######################################      #######;;P  ;         #######            ov         o             #######               #######     ####oo#########################     CCCCCC        #
+D:#^^########################################    #######          ;    #######            o         to             #######            J  #######    ######o############oo##########     CCCCCCC        #
 D:#^^^###############ooo###################       #####             ;  ;#####             o          o              #####    ;            #####   ;; ######oo########ooooo#######     CCCCCCCC         #
 D:#####oo##oo#####oooooooo##############oo##       ###       ;           ###              o          o               ###                   ###      ########oooo##oooooo#######     CCCCCCCCC        ; #
-D:#ooooooooooo###ooooooooooooooooooooooooooo                                              o          o                                              ooooooooooooooooooooooooooo     CCCCCCCC           #
+D:#ooooooooooo###ooooooooooooooooooooooooooo                                              oU    u   To                                              ooooooooooooooooooooooooooo     CCCCCCCC           #
 D:#oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo     CCCCCCCC           ; #
 D:#^ooooooooooooooooo###oooooooooo##oooooooo                                   o          o          o            o                            B    ooooooo####ooooooooooooo     CCCCCCCC              #
 D:#^^#o###ooo#####ooo#####ooooo########oo#                    ###       ;      o    ###   o          o   ;###     o             ###                  oo#########ooooo###oo#     CCCCCCCC             ; #
