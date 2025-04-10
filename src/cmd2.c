@@ -105,6 +105,11 @@ void do_cmd_go_up(bool pasthook)
 	/* Normal up stairs */
 	if ((c_ptr->feat == FEAT_LESS) || (c_ptr->feat == FEAT_WAY_LESS))
 	{
+		if (p_ptr->stairsickness) {
+			msg_format("Sorry, you have to wait %d more turns before the stair re-opens.", p_ptr->stairsickness);
+			return;
+		}
+
 		if (!dun_level)
 		{
 			go_up = TRUE;
@@ -121,11 +126,20 @@ void do_cmd_go_up(bool pasthook)
 		{
 			go_up = TRUE;
 		}
+		if (go_up || go_up_many) {
+			if (!p_ptr->astral) (void)set_stairsickness(p_ptr->stairsickness + 1 + randint(4));
+			if (p_ptr->nastytrap148) (void)set_stairsickness(p_ptr->stairsickness + randint(50));
+		}
 	}
 
 	/* Shaft up */
 	else if (c_ptr->feat == FEAT_SHAFT_UP)
 	{
+		if (p_ptr->stairsickness) {
+			msg_format("Sorry, you have to wait %d more turns before the stair re-opens.", p_ptr->stairsickness);
+			return;
+		}
+
 		if (dun_level == 1)
 		{
 			go_up = TRUE;
@@ -141,6 +155,10 @@ void do_cmd_go_up(bool pasthook)
 		else
 		{
 			go_up_many = TRUE;
+		}
+		if (go_up || go_up_many) {
+			if (!p_ptr->astral) (void)set_stairsickness(p_ptr->stairsickness + 1 + randint(4));
+			if (p_ptr->nastytrap148) (void)set_stairsickness(p_ptr->stairsickness + randint(50));
 		}
 	}
 
@@ -374,6 +392,11 @@ void do_cmd_go_down(void)
 	/* Normal up stairs */
 	if (c_ptr->feat == FEAT_SHAFT_DOWN)
 	{
+		if (p_ptr->stairsickness) {
+			msg_format("Sorry, you have to wait %d more turns before the stair re-opens.", p_ptr->stairsickness);
+			return;
+		}
+
 		if (!dun_level)
 		{
 			go_down = TRUE;
@@ -394,11 +417,20 @@ void do_cmd_go_down(void)
 				go_down_many = TRUE;
 			}
 		}
+		if (go_down || go_down_many) {
+			if (!p_ptr->astral) (void)set_stairsickness(p_ptr->stairsickness + 1 + randint(4));
+			if (p_ptr->nastytrap148) (void)set_stairsickness(p_ptr->stairsickness + randint(50));
+		}
 	}
 
 	/* Normal stairs */
 	else if ((c_ptr->feat == FEAT_MORE) || (c_ptr->feat == FEAT_WAY_MORE))
 	{
+		if (p_ptr->stairsickness) {
+			msg_format("Sorry, you have to wait %d more turns before the stair re-opens.", p_ptr->stairsickness);
+			return;
+		}
+
 		if (p_ptr->prob_travel)
 		{
 			if (d_ptr->maxdepth == dun_level) return;
@@ -426,6 +458,10 @@ void do_cmd_go_down(void)
 					go_down_many = TRUE;
 				}
 			}
+		}
+		if (go_down || go_down_many) {
+			if (!p_ptr->astral) (void)set_stairsickness(p_ptr->stairsickness + 1 + randint(4));
+			if (p_ptr->nastytrap148) (void)set_stairsickness(p_ptr->stairsickness + randint(50));
 		}
 	}
 

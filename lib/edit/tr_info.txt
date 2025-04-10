@@ -3092,6 +3092,11 @@ I:22:2:50:4:2:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:630:Stairdancing Trap
+I:22:2:50:4:2:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

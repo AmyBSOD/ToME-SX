@@ -3240,6 +3240,7 @@
 #define TRAP_OF_TERRAIN_SLIPPERY          628
 
 #define TRAP_NASTY147                     629
+#define TRAP_NASTY148                     630
 
 /*** General index values ***/
 

@@ -2712,6 +2712,12 @@ static void process_world(void)
 		(void)set_betweensickness(p_ptr->betweensickness - 1);
 	}
 
+	/* Stair sickness */
+	if (p_ptr->stairsickness)
+	{
+		(void)set_stairsickness(p_ptr->stairsickness - 1);
+	}
+
 	/* Repelling */
 	if (p_ptr->tim_repelling)
 	{

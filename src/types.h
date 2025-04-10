@@ -1628,6 +1628,7 @@ struct player_type
 	s16b tim_manavoid;      /* Timed manavoid */
 	s16b tim_manasilence;   /* Timed silence */
 	s16b betweensickness;   /* Timer before you can use a void jumpgate again --Amy */
+	s16b stairsickness;     /* Timer before you can use a stair again --Amy */
 	s16b tim_repelling;     /* Timed repelling */
 
 	s16b tim_project;       /* Timed project upon melee blow */
@@ -2086,7 +2087,7 @@ struct player_type
 	bool nastytrap145; /* vegetarian trap - you cannot eat meat */
 	bool nastytrap146; /* force haggle trap - you have to haggle even if the option is turned off */
 	bool nastytrap147; /* void travel trap - void jumpgates don't work anymore */
-	bool nastytrap148;
+	bool nastytrap148; /* stairdancing trap - using a stair prevents you from using another for much longer */
 	bool nastytrap149;
 	bool nastytrap150;
 	bool nastytrap151;

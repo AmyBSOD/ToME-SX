@@ -1732,6 +1732,7 @@ extern bool set_tim_dancing(int v, int dancebonus);
 extern bool set_tim_manavoid(int v);
 extern bool set_tim_manasilence(int v);
 extern bool set_betweensickness(int v);
+extern bool set_stairsickness(int v);
 extern bool set_tim_repelling(int v);
 extern bool tgp_pt(int *x, int * y);
 extern bool tgt_pt (int *x, int *y);
