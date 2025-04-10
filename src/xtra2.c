@@ -95,6 +95,7 @@ bool set_parasite(int v, int r)
 				{
 					cmsg_format(TERM_L_BLUE, "Your body convulses and spawns %s.", r_name);
 					p_ptr->food -= 750;
+					p_ptr->redraw &= ~(PR_HUNGER);
 					if (p_ptr->food < 100) p_ptr->food = 100;
 				}
 			}

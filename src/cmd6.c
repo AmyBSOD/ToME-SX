@@ -8727,6 +8727,7 @@ turn_monsters(40 + p_ptr->lev);
 
 				msg_print("You twirl and spores fly everywhere!");
 				p_ptr->food -= 5000;
+				p_ptr->redraw &= ~(PR_HUNGER);
 				for (i = 0; i < 2; i++)
 					summon_specific_friendly(p_ptr->py, p_ptr->px, p_ptr->lev, SUMMON_BIZARRE1, FALSE);
 
