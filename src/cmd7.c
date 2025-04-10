@@ -8864,6 +8864,22 @@ void do_cmd_create_boulder()
 		object_type forge;
 		object_type *q_ptr;
 
+		if (p_ptr->food < 1000) {
+			msg_print("You don't have enough nutrition to use that ability.");
+			return;
+		}
+
+		p_ptr->food -= 1000;
+
+		/* this should be exhausting work! Try to tear down a granite wall IRL with your bare hands! --Amy */
+		(void)set_slow(p_ptr->slow + 5);
+
+		if (magik(80)) {
+			energy_use = 100;
+			msg_print("Oof... this is exhausting, but the wall didn't come down yet!");
+			return;
+		}
+
 		(void)wall_to_mud(dir);
 
 		/* Get local object */
@@ -8871,7 +8887,10 @@ void do_cmd_create_boulder()
 
 		/* Hack -- Give the player some shots */
 		object_prep(q_ptr, lookup_kind(TV_JUNK, SV_BOULDER));
-		q_ptr->number = (byte)rand_range(2, 5);
+
+		if (magik(66)) q_ptr->number = (byte)rand_range(1, 3);
+		else q_ptr->number = (byte)rand_range(1, 5);
+
 		object_aware(q_ptr);
 		object_known(q_ptr);
 		q_ptr->ident |= IDENT_MENTAL;
@@ -8880,7 +8899,7 @@ void do_cmd_create_boulder()
 
 		(void)inven_carry(q_ptr, FALSE);
 
-		msg_print("You make some boulders.");
+		msg_print("The wall crashes down, and you make some boulders. You feel quite exhausted now.");
 
 		p_ptr->update |= (PU_VIEW | PU_FLOW | PU_MON_LITE);
 		p_ptr->window |= (PW_OVERHEAD);

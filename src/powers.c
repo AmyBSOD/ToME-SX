@@ -1028,6 +1028,22 @@ static void power_activate(int power)
 
 	case PWR_GROW_MOLD:
 		{
+			/* in order to at least reduce the spamfest somewhat... make it cost nutrition --Amy */
+			if (p_ptr->food < 10000) {
+				msg_print("You don't have enough nutrition to use that ability.");
+				break;
+			}
+
+			p_ptr->food -= 10000;
+
+			/* Amy: and also some sanity to cut down on the spammability */
+			if (p_ptr->csane < 81) {
+				msg_print("You aren't sane enough to use that ability.");
+				break;
+			}
+
+			take_sanity_hit(80, "summoning mold");
+
 			int i;
 			for (i = 0; i < 8; i++)
 			{
