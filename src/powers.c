@@ -1034,9 +1034,7 @@ static void power_activate(int power)
 				break;
 			}
 
-			p_ptr->food -= 10000;
-			p_ptr->redraw &= ~(PR_HUNGER);
-			handle_stuff();
+			set_food(p_ptr->food - 10000);
 
 			/* Amy: and also some sanity to cut down on the spammability */
 			if (p_ptr->csane < 81) {

@@ -94,9 +94,7 @@ bool set_parasite(int v, int r)
 				if (place_monster_one(wy, wx, p_ptr->parasite_r_idx, 0, FALSE, MSTATUS_ENEMY))
 				{
 					cmsg_format(TERM_L_BLUE, "Your body convulses and spawns %s.", r_name);
-					p_ptr->food -= 750;
-					p_ptr->redraw &= ~(PR_HUNGER);
-					handle_stuff();
+					set_food(p_ptr->food - 750);
 					if (p_ptr->food < 100) p_ptr->food = 100;
 				}
 			}

@@ -8762,9 +8762,7 @@ void do_cmd_symbiotic(void)
 
 				take_sanity_hit(100, "summoning never-moving pets");
 
-				p_ptr->food -= 10000;
-				p_ptr->redraw &= ~(PR_HUNGER);
-				handle_stuff();
+				set_food(p_ptr->food - 10000);
 				summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_MINE, FALSE);
 
 				break;
@@ -8871,9 +8869,7 @@ void do_cmd_create_boulder()
 			return;
 		}
 
-		p_ptr->food -= 1000;
-		p_ptr->redraw &= ~(PR_HUNGER);
-		handle_stuff();
+		set_food(p_ptr->food - 1000);
 
 		/* this should be exhausting work! Try to tear down a granite wall IRL with your bare hands! --Amy */
 		(void)set_slow(p_ptr->slow + 5);
