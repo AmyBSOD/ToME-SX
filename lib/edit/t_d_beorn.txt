@@ -22,6 +22,12 @@ F:=:205:3
 # Permanent rubble
 F:$:206:3
 
+# Closed gate
+F:g:231:3
+
+# Open gate
+F:+:232:3
+
 D:######################################################################################################################################################################################################
 D:#                                                        HHHHHHDDHDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDHHDHDDDHHHHHHHHHHHHHHHHHH                                                       #
 D:#HHHH            HHHHHH        HHHHHH          HHHHHHHHHHHHHHHDDDDHDDDDHDDHHHHHHHHHHHHHHHHH@%%@HHHHHHHHHHHHHHHDDDDDHHHHDDDHHHHHHHHHHHHH                                                              #
