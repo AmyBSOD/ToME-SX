@@ -1852,6 +1852,18 @@ bool monster_ocean(int r_idx)
 		return FALSE;
 }
 
+bool monster_ocean_x(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	if (r_ptr->flags8 & RF8_WILD_OCEAN)
+		return TRUE;
+	else if (r_ptr->flags8 & RF8_WILD_TOWN)
+		return TRUE;
+	else
+		return FALSE;
+}
+
 
 bool monster_shore(int r_idx)
 {
@@ -1863,12 +1875,36 @@ bool monster_shore(int r_idx)
 		return FALSE;
 }
 
+bool monster_shore_x(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	if (r_ptr->flags8 & RF8_WILD_SHORE)
+		return TRUE;
+	else if (r_ptr->flags8 & RF8_WILD_TOWN)
+		return TRUE;
+	else
+		return FALSE;
+}
+
 
 bool monster_waste(int r_idx)
 {
 	monster_race *r_ptr = &r_info[r_idx];
 
 	if (r_ptr->flags8 & RF8_WILD_WASTE)
+		return TRUE;
+	else
+		return FALSE;
+}
+
+bool monster_waste_x(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	if (r_ptr->flags8 & RF8_WILD_WASTE)
+		return TRUE;
+	else if (r_ptr->flags8 & RF8_WILD_TOWN)
 		return TRUE;
 	else
 		return FALSE;
@@ -1896,12 +1932,36 @@ bool monster_wood(int r_idx)
 		return FALSE;
 }
 
+bool monster_wood_x(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	if (r_ptr->flags8 & RF8_WILD_WOOD)
+		return TRUE;
+	else if (r_ptr->flags8 & RF8_WILD_TOWN)
+		return TRUE;
+	else
+		return FALSE;
+}
+
 
 bool monster_volcano(int r_idx)
 {
 	monster_race *r_ptr = &r_info[r_idx];
 
 	if (r_ptr->flags8 & RF8_WILD_VOLCANO)
+		return TRUE;
+	else
+		return FALSE;
+}
+
+bool monster_volcano_x(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	if (r_ptr->flags8 & RF8_WILD_VOLCANO)
+		return TRUE;
+	else if (r_ptr->flags8 & RF8_WILD_TOWN)
 		return TRUE;
 	else
 		return FALSE;
@@ -1918,12 +1978,49 @@ bool monster_mountain(int r_idx)
 		return FALSE;
 }
 
+bool monster_mountain_x(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	if (r_ptr->flags8 & RF8_WILD_MOUNTAIN)
+		return TRUE;
+	else if (r_ptr->flags8 & RF8_WILD_TOWN)
+		return TRUE;
+	else
+		return FALSE;
+}
+
 
 bool monster_grass(int r_idx)
 {
 	monster_race *r_ptr = &r_info[r_idx];
 
 	if (r_ptr->flags8 & RF8_WILD_GRASS)
+		return TRUE;
+	else
+		return FALSE;
+}
+
+bool monster_grass_x(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	if (r_ptr->flags8 & RF8_WILD_GRASS)
+		return TRUE;
+	else if (r_ptr->flags8 & RF8_WILD_TOWN)
+		return TRUE;
+	else
+		return FALSE;
+}
+
+
+bool monster_too_x(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	if (r_ptr->flags8 & RF8_WILD_TOO)
+		return TRUE;
+	else if (r_ptr->flags8 & RF8_WILD_TOWN)
 		return TRUE;
 	else
 		return FALSE;
@@ -2003,25 +2100,49 @@ void set_mon_num_hook(void)
 		case TERRAIN_DEEP_WATER:
 			get_mon_num_hook = monster_ocean;
 			break;
+		case TERRAIN_DEEP_WATER_X:
+			get_mon_num_hook = monster_ocean_x;
+			break;
 		case TERRAIN_SHALLOW_WATER:
 			get_mon_num_hook = monster_shore;
+			break;
+		case TERRAIN_SHALLOW_WATER_X:
+			get_mon_num_hook = monster_shore_x;
 			break;
 		case TERRAIN_DIRT:
 		case TERRAIN_DESERT:
 			get_mon_num_hook = monster_waste;
 			break;
+		case TERRAIN_DESERT_X:
+			get_mon_num_hook = monster_waste_x;
+			break;
 		case TERRAIN_GRASS:
 			get_mon_num_hook = monster_grass;
 			break;
+		case TERRAIN_GRASS_X:
+			get_mon_num_hook = monster_grass_x;
+			break;
 		case TERRAIN_TREES:
 			get_mon_num_hook = monster_wood;
+			break;
+		case TERRAIN_TREES_X:
+			get_mon_num_hook = monster_wood_x;
 			break;
 		case TERRAIN_SHALLOW_LAVA:
 		case TERRAIN_DEEP_LAVA:
 			get_mon_num_hook = monster_volcano;
 			break;
+		case TERRAIN_DEEP_LAVA_X:
+			get_mon_num_hook = monster_volcano_x;
+			break;
 		case TERRAIN_MOUNTAIN:
 			get_mon_num_hook = monster_mountain;
+			break;
+		case TERRAIN_MOUNTAIN_X:
+			get_mon_num_hook = monster_mountain_x;
+			break;
+		case TERRAIN_TOO_X:
+			get_mon_num_hook = monster_too_x;
 			break;
 		default:
 			get_mon_num_hook = monster_dungeon;

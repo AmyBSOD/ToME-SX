@@ -916,6 +916,8 @@
 /*
  * Wilderness terrains
  */
+
+/* these are the "terrain_idx" in wf_info.txt */
 #define TERRAIN_EDGE             0 /* Edge of the World */
 #define TERRAIN_TOWN             1 /* Town */
 #define TERRAIN_DEEP_WATER       2 /* Deep water */
@@ -929,6 +931,16 @@
 #define TERRAIN_DEEP_LAVA       10 /* Deep lava */
 #define TERRAIN_MOUNTAIN        11 /* Mountain */
 
+#define TERRAIN_DEEP_WATER_X    12 /* Deep water */
+#define TERRAIN_SHALLOW_WATER_X 13 /* Shallow water */
+#define TERRAIN_TOO_X           14 /* Wild */
+#define TERRAIN_GRASS_X         15 /* Grass */
+#define TERRAIN_TREES_X         16 /* Trees */
+#define TERRAIN_DESERT_X        17 /* Desert */
+#define TERRAIN_DEEP_LAVA_X     18 /* Deep lava */
+#define TERRAIN_MOUNTAIN_X      19 /* Mountain */
+
+/* this is the amount of "X:<number>" terrains in wf_info.txt */
 #define MAX_WILD_TERRAIN        18
 
 /*** Artifact indexes (see "lib/edit/a_info.txt") ***/
