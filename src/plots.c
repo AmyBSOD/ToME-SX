@@ -480,6 +480,30 @@ bool quest_null_hook(int q)
 /*************************** Pelargir plot ************************/
 #include "q_ocean.c"
 
+/*************************** Dale plot ************************/
+#include "q_dale.c"
+
+/*************************** Cerin Amroth plot ************************/
+#include "q_cerin.c"
+
+/*************************** Imladris plot ************************/
+#include "q_imla.c"
+
+/*************************** Helm's Deep plot ************************/
+#include "q_helm.c"
+
+/*************************** Thranduil's Halls plot ************************/
+#include "q_thrand.c"
+
+/*************************** Henneth Annun plot ************************/
+#include "q_henn.c"
+
+/*************************** Beorn's Halls plot ************************/
+#include "q_beorn.c"
+
+/*************************** Esgaroth plot ************************/
+#include "q_esga.c"
+
 /*************************** Other plot ***************************/
 #include "q_narsil.c"
 #include "q_thrain.c"

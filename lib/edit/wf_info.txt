@@ -233,3 +233,51 @@ D:the great city at the mouth of Anduin
 W:70:9:0:203:1:f
 X:88:88:89:89:89:89:79:96:96:96:96:96:96:96:96:96:96:96
 
+# Dale
+N:40:Dale 
+D:a city of Men, being rebuilt
+W:5:10:0:203:15:8
+X:91:91:91:91:91:91:91:91:91:91:91:91:91:91:91:91:91:91
+
+# Cerin Amroth
+N:41:Cerin Amroth
+D:a place of peace
+W:15:11:0:203:16:7
+X:88:88:89:89:89:89:79:96:96:96:96:96:96:96:96:96:96:96
+
+# Imladris
+N:42:Imladris
+D:the valley of Imladris
+W:25:12:0:203:13:q
+X:88:88:89:89:89:89:79:96:96:96:96:96:96:96:96:96:96:96
+
+# Helm's Deep
+N:43:Helm's Deep 
+D:the great fortress of the Rohirrim
+W:35:13:0:203:17:b
+X:88:88:89:89:89:89:79:96:96:96:96:96:96:96:96:96:96:96
+
+# Thranduil's Halls
+N:44:Thranduil's Halls 
+D:the hidden realm of the Wood-elves
+W:45:14:0:203:19:o
+X:88:88:89:89:89:89:79:96:96:96:96:96:96:96:96:96:96:96
+
+# Henneth Annun
+N:45:Henneth Annun 
+D:a Ranger hideout
+W:55:15:0:203:12:c
+X:88:88:89:89:89:89:79:96:96:96:96:96:96:96:96:96:96:96
+
+# Beorn's Halls 
+N:46:Beorn's Halls
+D:the dwelling of Beorn the Shape-changer
+W:65:16:0:203:18:6
+X:88:88:89:89:89:89:79:96:96:96:96:96:96:96:96:96:96:96
+
+# Esgaroth
+N:47:Esgaroth 
+D:the city of Lake-Men
+W:75:17:0:203:14:a
+X:88:88:89:89:89:89:79:96:96:96:96:96:96:96:96:96:96:96
+

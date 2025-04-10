@@ -5197,7 +5197,15 @@ extern int PlayerUID;
 #define QUEST_ELDRITCH          27
 #define QUEST_GLACIER           28
 #define QUEST_OCEAN             29
-#define MAX_Q_IDX_INIT          30
+#define QUEST_DALE              30
+#define QUEST_CERIN             31
+#define QUEST_IMLA              32
+#define QUEST_HELM              33
+#define QUEST_THRAND            34
+#define QUEST_HENN              35
+#define QUEST_BEORN             36
+#define QUEST_ESGA              37
+#define MAX_Q_IDX_INIT          38
 
 #define PLOT_MAIN               0
 #define PLOT_BREE               1
@@ -5210,7 +5218,15 @@ extern int PlayerUID;
 #define PLOT_OSGILIATH          8
 #define PLOT_EDORAS             9
 #define PLOT_PELARGIR           10
-#define MAX_PLOTS               11
+#define PLOT_DALE               11
+#define PLOT_CERIN              12
+#define PLOT_IMLA               13
+#define PLOT_HELM               14
+#define PLOT_THRAND             15
+#define PLOT_HENN               16
+#define PLOT_BEORN              17
+#define PLOT_ESGA               18
+#define MAX_PLOTS               19
 
 /*
  * Hooks

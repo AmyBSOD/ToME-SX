@@ -2559,6 +2559,30 @@ static bool player_birth_aux_ask()
 		plots[PLOT_PELARGIR] = QUEST_OCEAN;
 		quest[plots[PLOT_PELARGIR]].status = QUEST_STATUS_UNTAKEN;
 
+		plots[PLOT_DALE] = QUEST_DALE;
+		quest[plots[PLOT_DALE]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_CERIN] = QUEST_CERIN;
+		quest[plots[PLOT_CERIN]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_IMLA] = QUEST_IMLA;
+		quest[plots[PLOT_IMLA]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_HELM] = QUEST_HELM;
+		quest[plots[PLOT_HELM]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_THRAND] = QUEST_THRAND;
+		quest[plots[PLOT_THRAND]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_HENN] = QUEST_HENN;
+		quest[plots[PLOT_HENN]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_BEORN] = QUEST_BEORN;
+		quest[plots[PLOT_BEORN]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_ESGA] = QUEST_ESGA;
+		quest[plots[PLOT_ESGA]].status = QUEST_STATUS_UNTAKEN;
+
 		plots[PLOT_OTHER] = QUEST_NULL;
 	}
 

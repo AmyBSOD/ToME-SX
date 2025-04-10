@@ -1103,12 +1103,72 @@ S:w:w:w:b:w:w:b
 F:ATTR_MULTI
 F:FLOOR | CAN_LEVITATE | CAN_FLY | REMEMBER | SUPPORT_LIGHT | SUPPORT_GROWTH
 
+#Beehive
+N:229:beehive
+G:*:o
+E:1d1:1:POISON
+F:WALL | PERMANENT | CAN_FLY | REMEMBER | SUPPORT_LIGHT | 
+F:CAN_PASS | NO_WALK | NO_VISION | DONT_NOTICE_RUNNING | 
+D:0:Ouch! A bee stung you!
+D:1:You'll just get stung.
+D:2:a beehive blocking your way
+
+#Dirt road - same as dirt but more appropriate for towns
+N:230:dirt road
+G:.:U
+F:FLOOR | DONT_NOTICE_RUNNING | CAN_RUN
+F:SUPPORT_GROWTH
+
+#Wide gate
+N:231:wide gate
+G:-:D
+F:WALL | PERMANENT | CAN_FLY | SUPPORT_LIGHT | NOTICE | 
+F:CAN_PASS | NO_WALK | NO_VISION | DONT_NOTICE_RUNNING | 
+D:1:You cannot tunnel through that.
+D:2:a closed gate barring your way
+
+#Same gate, but opened
+N:232:open gate
+G:':D
+F:FLOOR | DONT_NOTICE_RUNNING | CAN_RUN | SUPPORT_LIGHT | 
+
+#Wooden board - horizontal
+N:233:wooden board
+G:-:u
+F:WALL | PERMANENT | SUPPORT_LIGHT | NO_WALK | NO_VISION | CAN_FLY
+D:1:You cannot tunnel through that.
+D:2:a wooden board blocking your way
+
+#Wooden board - vertical
+N:234:wooden board
+G:|:u
+F:WALL | PERMANENT | SUPPORT_LIGHT | NO_WALK | NO_VISION | CAN_FLY
+D:1:You cannot tunnel through that.
+D:2:a wooden board blocking your way
+
 #Light wooden board - horizontal
 N:235:wooden board
 G:-:U
 F:WALL | PERMANENT | SUPPORT_LIGHT | NO_WALK | NO_VISION | CAN_FLY
 D:1:You cannot tunnel through that.
 D:2:a wooden board blocking your way
+
+#Light wooden board - vertical
+N:236:wooden board
+G:|:U
+F:WALL | PERMANENT | SUPPORT_LIGHT | NO_WALK | NO_VISION | CAN_FLY
+D:1:You cannot tunnel through that.
+D:2:a wooden board blocking your way
+
+#White tree
+#BUG - these do not burn.
+N:237:white tree
+G:#:w
+F:CAN_FLY | CAN_PASS | SUPPORT_LIGHT
+F:WALL | NO_WALK | NO_VISION | PERMANENT 
+F:DONT_NOTICE_RUNNING
+D:1:You cannot tunnel through that.
+D:2:a white tree blocking your way
 
 #Swift waterfall
 N:238:swift waterfall
@@ -1119,12 +1179,34 @@ F:ATTR_MULTI
 F:FLOOR | CAN_LEVITATE | CAN_FLY | REMEMBER | SUPPORT_LIGHT | 
 F:DONT_NOTICE_RUNNING | SUPPORT_GROWTH | 
 
+#Slippery rock ledge
+N:239:slippery rock ledge
+G:&:s
+E:5d3:1:COLD
+F:FLOOR | CAN_LEVITATE | CAN_FLY | SUPPORT_LIGHT | 
+F:SUPPORT_GROWTH
+
 #Stable
 N:240:stable
 G:#:u
 F:WALL | NO_WALK | NO_VISION | PERMANENT | CAN_FLY
 D:1:You cannot tunnel through that.
 D:2:a stable wall blocking your way
+
+#Wooden plank
+N:241:wooden plank
+G:%:U
+F:FLOOR | CAN_RUN | DONT_NOTICE_RUNNING | SUPPORT_LIGHT | 
+F:SUPPORT_GROWTH  | 
+
+#Fosse (dry moat)
+N:242:fosse pit
+G:&:g
+F:CAN_LEVITATE | CAN_FLY
+F:NO_WALK | SUPPORT_LIGHT
+F:DONT_NOTICE_RUNNING
+D:1:You cannot tunnel through that.
+D:2:a dry moat blocking your way
 
 #Mallorn
 N:243:Mallorn

@@ -68,3 +68,59 @@
 %:t_pelar.txt
 ?:1
 
+# Dale
+?:[AND [EQU $TOWN 10] [EQU $TOWN_DESTROY10 1] ]
+%:t_d_dale.txt
+?:[AND [EQU $TOWN 10] [NOT [EQU $TOWN_DESTROY7 10] ] ]
+%:t_dale.txt
+?:1
+
+# Cerin Amroth
+?:[AND [EQU $TOWN 11] [EQU $TOWN_DESTROY11 1] ]
+%:t_d_cerin.txt
+?:[AND [EQU $TOWN 11] [NOT [EQU $TOWN_DESTROY7 11] ] ]
+%:t_cerin.txt
+?:1
+
+# Imladris
+?:[AND [EQU $TOWN 12] [EQU $TOWN_DESTROY12 1] ]
+%:t_d_imlad.txt
+?:[AND [EQU $TOWN 12] [NOT [EQU $TOWN_DESTROY7 12] ] ]
+%:t_imlad.txt
+?:1
+
+# Helm's Deep
+?:[AND [EQU $TOWN 13] [EQU $TOWN_DESTROY13 1] ]
+%:t_d_helm.txt
+?:[AND [EQU $TOWN 13] [NOT [EQU $TOWN_DESTROY7 13] ] ]
+%:t_helm.txt
+?:1
+
+# Thranduil's Halls
+?:[AND [EQU $TOWN 14] [EQU $TOWN_DESTROY14 1] ]
+%:t_d_thrand.txt
+?:[AND [EQU $TOWN 14] [NOT [EQU $TOWN_DESTROY7 14] ] ]
+%:t_thrand.txt
+?:1
+
+# Henneth Annun
+?:[AND [EQU $TOWN 15] [EQU $TOWN_DESTROY15 1] ]
+%:t_d_henn.txt
+?:[AND [EQU $TOWN 15] [NOT [EQU $TOWN_DESTROY7 15] ] ]
+%:t_henn.txt
+?:1
+
+# Beorn's Halls
+?:[AND [EQU $TOWN 16] [EQU $TOWN_DESTROY16 1] ]
+%:t_d_beorn.txt
+?:[AND [EQU $TOWN 16] [NOT [EQU $TOWN_DESTROY7 16] ] ]
+%:t_beorn.txt
+?:1
+
+# Esgaroth
+?:[AND [EQU $TOWN 17] [EQU $TOWN_DESTROY17 1] ]
+%:t_d_esga.txt
+?:[AND [EQU $TOWN 17] [NOT [EQU $TOWN_DESTROY7 17] ] ]
+%:t_esga.txt
+?:1
+

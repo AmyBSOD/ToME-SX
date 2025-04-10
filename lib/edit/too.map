@@ -1,0 +1,55 @@
+# permanent wall
+F:X:61:0
+
+# granite
+F:#:57:0
+
+# up staircase
+F:<:6:0
+
+# Dirt
+F:.:88:0
+
+# Grass
+F:g:89:0
+
+# Sand
+F:s:91:0
+
+# Shallow water
+F:w:84:0
+
+# Shallow lava
+F:l:86:0
+
+# Nether mist
+F:n:102:0
+
+# Dungeon layout
+D:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+D:X.....................ggggggg...X
+D:X.....................ggggggg...X
+D:X.....................ggggggg...X
+D:X...XXXXXXXXXXXXXXXXXXXXXXXXX...X
+D:X...X....wwwwwwwwwwwwwww....ssssX
+D:X...X....wwwwwwwwwwwwwww....ssssX
+D:X...X....wwwwwwwwwwwwwww....ssssX
+D:X...XwwwwXXXXXXXXXXXXXXX....XsssX
+D:X...XwwwwX...llllllll.......XsssX
+D:X...XwwwwX...llllllll.......XsssX
+D:X...XwwwwX...XXXXXXXX.......X...X
+D:X...XwwwwX...llllllll..X....X...X
+D:XgggXwwwwX...llllllll..X....X...X
+D:XgggXwwwwX...XXXXXXXXXXX....X...X
+D:XgggX........nnnnnnnnnnn....X...X
+D:XgggX........nnnnnnnnnnn....X...X
+D:XgggX........nnnnnnnnnnn....X...X
+D:XgggXssssXXXXXXXXXXXXXXXXXXXX...X
+D:X....sssssss....................X
+D:X....sssssss....................X
+D:X....sssssss....................X
+D:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+# Starting position
+P:3:4
+

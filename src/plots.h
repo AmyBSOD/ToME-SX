@@ -54,6 +54,30 @@ extern bool quest_glacier_init_hook(int q_idx);
 /******* Plot Pelargir *********/
 extern bool quest_ocean_init_hook(int q_idx);
 
+/******* Plot Dale *********/
+extern bool quest_dale_init_hook(int q_idx);
+
+/******* Plot Cerin Amroth *********/
+extern bool quest_cerin_init_hook(int q_idx);
+
+/******* Plot Imladris *********/
+extern bool quest_imla_init_hook(int q_idx);
+
+/******* Plot Helm's Deep *********/
+extern bool quest_helm_init_hook(int q_idx);
+
+/******* Plot Thranduil's Halls *********/
+extern bool quest_thrand_init_hook(int q_idx);
+
+/******* Plot Henneth Annun *********/
+extern bool quest_henn_init_hook(int q_idx);
+
+/******* Plot Beorn's Halls *********/
+extern bool quest_beorn_init_hook(int q_idx);
+
+/******* Plot Esgaroth *********/
+extern bool quest_esga_init_hook(int q_idx);
+
 /******* Plot Other *********/
 extern bool quest_narsil_init_hook(int q_idx);
 extern bool quest_thrain_init_hook(int q_idx);
