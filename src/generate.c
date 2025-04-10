@@ -3270,7 +3270,8 @@ static void build_type5(int by0, int bx0)
 	/* The inner walls */
 	build_rectangle(y1 - 1, x1 - 1, y2 + 1, x2 + 1, feat_wall_inner, CAVE_ROOM);
 
-	/* Place a secret door, but not always because pits shouldn't make every single level inhospitable --Amy */
+	/* Place a secret door, but not always because pits shouldn't make every single level inhospitable --Amy
+	 * the remaining 50% we make granite because some dungeons have permanent wall types for pits and they should be accessible */
 	if (magik(50)) {
 		switch (randint(4))
 		{
@@ -3285,6 +3286,22 @@ static void build_type5(int by0, int bx0)
 			break;
 		case 4:
 			place_secret_door(yval, x2 + 1);
+			break;
+		}
+	} else {
+		switch (randint(4))
+		{
+		case 1:
+			cave_set_feat(y1 - 1, xval, FEAT_QUARTZ);
+			break;
+		case 2:
+			cave_set_feat(y2 + 1, xval, FEAT_QUARTZ);
+			break;
+		case 3:
+			cave_set_feat(yval, x1 - 1, FEAT_QUARTZ);
+			break;
+		case 4:
+			cave_set_feat(yval, x2 + 1, FEAT_QUARTZ);
 			break;
 		}
 	}
@@ -3508,7 +3525,8 @@ static void build_type5x(int by0, int bx0)
 	/* The inner walls */
 	build_rectangle(y1 - 1, x1 - 1, y2 + 1, x2 + 1, feat_wall_inner, CAVE_ROOM);
 
-	/* Place a secret door, but not always because pits shouldn't make every single level inhospitable --Amy */
+	/* Place a secret door, but not always because pits shouldn't make every single level inhospitable --Amy
+	 * the remaining 50% we make granite because some dungeons have permanent wall types for pits and they should be accessible */
 	if (magik(50)) {
 		switch (randint(4))
 		{
@@ -3523,6 +3541,22 @@ static void build_type5x(int by0, int bx0)
 			break;
 		case 4:
 			place_secret_door(yval, x2 + 1);
+			break;
+		}
+	} else {
+		switch (randint(4))
+		{
+		case 1:
+			cave_set_feat(y1 - 1, xval, FEAT_QUARTZ);
+			break;
+		case 2:
+			cave_set_feat(y2 + 1, xval, FEAT_QUARTZ);
+			break;
+		case 3:
+			cave_set_feat(yval, x1 - 1, FEAT_QUARTZ);
+			break;
+		case 4:
+			cave_set_feat(yval, x2 + 1, FEAT_QUARTZ);
 			break;
 		}
 	}
@@ -3789,7 +3823,8 @@ static void build_type6(int by0, int bx0)
 	/* The inner walls */
 	build_rectangle(y1 - 1, x1 - 1, y2 + 1, x2 + 1, feat_wall_outer, CAVE_ROOM);
 
-	/* Place a secret door, but not always since pits are annoying enough as it is --Amy */
+	/* Place a secret door, but not always because pits shouldn't make every single level inhospitable --Amy
+	 * the remaining 50% we make granite because some dungeons have permanent wall types for pits and they should be accessible */
 	if (magik(50)) {
 		switch (randint(4))
 		{
@@ -3804,6 +3839,22 @@ static void build_type6(int by0, int bx0)
 			break;
 		case 4:
 			place_secret_door(yval, x2 + 1);
+			break;
+		}
+	} else {
+		switch (randint(4))
+		{
+		case 1:
+			cave_set_feat(y1 - 1, xval, FEAT_QUARTZ);
+			break;
+		case 2:
+			cave_set_feat(y2 + 1, xval, FEAT_QUARTZ);
+			break;
+		case 3:
+			cave_set_feat(yval, x1 - 1, FEAT_QUARTZ);
+			break;
+		case 4:
+			cave_set_feat(yval, x2 + 1, FEAT_QUARTZ);
 			break;
 		}
 	}
@@ -4454,7 +4505,8 @@ static void build_type6x(int by0, int bx0)
 	/* The inner walls */
 	build_rectangle(y1 - 1, x1 - 1, y2 + 1, x2 + 1, feat_wall_outer, CAVE_ROOM);
 
-	/* Place a secret door, but not always since pits are annoying enough as it is --Amy */
+	/* Place a secret door, but not always because pits shouldn't make every single level inhospitable --Amy
+	 * the remaining 50% we make granite because some dungeons have permanent wall types for pits and they should be accessible */
 	if (magik(50)) {
 		switch (randint(4))
 		{
@@ -4469,6 +4521,22 @@ static void build_type6x(int by0, int bx0)
 			break;
 		case 4:
 			place_secret_door(yval, x2 + 1);
+			break;
+		}
+	} else {
+		switch (randint(4))
+		{
+		case 1:
+			cave_set_feat(y1 - 1, xval, FEAT_QUARTZ);
+			break;
+		case 2:
+			cave_set_feat(y2 + 1, xval, FEAT_QUARTZ);
+			break;
+		case 3:
+			cave_set_feat(yval, x1 - 1, FEAT_QUARTZ);
+			break;
+		case 4:
+			cave_set_feat(yval, x2 + 1, FEAT_QUARTZ);
 			break;
 		}
 	}
