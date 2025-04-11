@@ -81492,6 +81492,100 @@ F:DROP_SKELETON | DROP_CORPSE |
 D:She is equipped with a pick axe and an explosive charge, neither of
 D: which she looks entirely capable of using.
 
+N:4636:HC girl
+G:p:W
+I:115:4d8:30:5:20
+W:5:1:1400:15
+E:1:1:1:2:1:1
+O:10:50:10:20
+B:HIT:HURT:1d5
+B:KICK:HURT:1d5
+F:FEMALE | 
+F:DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | WILD_WASTE | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND | MORTAL | HAS_LITE
+S:1_IN_8 |  
+S:CONF | DRAIN_MANA | 
+D:"HC" means hardcore. This annoying lass is trying to get on 
+D:your nerves. 
+
+N:4637:HC lady
+G:p:W
+I:111:18d20:50:40:80
+W:30:1:1700:150
+E:1:1:1:2:1:1
+O:15:20:50:5
+B:HIT:HURT:6d5
+B:KICK:HURT:6d5
+F:FEMALE | 
+F:DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | WILD_WASTE | NO_FEAR | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND | MORTAL | HAS_LITE
+S:1_IN_3 |  
+S:CONF | DRAIN_MANA | SCARE | SLOW | BR_DARK | TELE_AWAY | HEAL | 
+D:"HC" means hardcore. You don't feel that this person is really 
+D:a lady, but she refers to herself as one and you wish she was 
+D:far away because she's just so damn full of herself. 
+
+N:4638:Wouwou alien
+G:p:D
+I:108:30d50:10:100:20
+W:50:5:1700:800
+E:1:1:1:2:1:1
+O:10:70:10:0
+B:HIT:DISEASE:6d15
+B:KICK:PARASITE:6d15
+F:FEMALE | 
+F:DROP_12 | ELDRITCH_HORROR | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | WILD_WASTE | WILD_VOLCANO | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND | MORTAL | HAS_LITE |
+F:COLD_BLOOD | EMPTY_MIND | REGENERATE | POWERFUL | NO_THEFT | 
+F:IM_ACID | IM_COLD | IM_POIS | RES_TELE | RES_NETH | RES_WATE | 
+F:RES_NEXU | RES_DISE | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | 
+F:RES_TIME | RES_CHAO | RES_WALL | RES_GRAV | RES_DARK | 
+S:1_IN_3 |  
+S:FORGET | SHRIEK | MIND_BLAST | SCARE | BLIND | CONF | SLOW | HOLD | 
+S:TRAPS | DARKNESS | HASTE | BR_NETH | BR_DARK | BR_CHAO | BR_DISE | 
+S:BRAIN_SMASH | CAUSE_3 | S_KIN | 
+D:This creature looks vaguely humanoid. It constantly makes a noise 
+D:with its deep, raspy voice, which sounds like "Wouwou." and strikes 
+D:fear into your heart every time you hear it. 
+
+N:4639:HC girl with fingernails
+G:p:W
+I:113:4d9:30:6:30
+W:6:3:1400:20
+E:1:1:1:2:1:1
+O:10:50:10:20
+B:CLAW:HURT:12d1
+B:KICK:HURT:1d6
+F:FEMALE | 
+F:DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | WILD_WASTE | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND | MORTAL | HAS_LITE
+S:1_IN_8 |  
+S:CONF | DRAIN_MANA | 
+D:"HC" means hardcore. The name of this girl may be misleading because 
+D:obviously humans always have fingernails, but hers are particularly 
+D:razor-sharp and she uses them as a weapon to rip your skin off. 
+
+N:4640:Buffalo HC girl
+G:p:y
+I:116:2d5:10:20:40
+W:8:1:1400:25
+E:1:1:1:2:1:1
+O:10:50:10:20
+B:HIT:HURT:1d8
+B:KICK:HURT:4d8
+F:FEMALE | 
+F:DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | WILD_WASTE | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND | MORTAL | HAS_LITE
+S:1_IN_8 |  
+S:CONF | DRAIN_MANA | 
+D:"HC" means hardcore. This girl wears thick platform boots and wants 
+D:to kick you in the shins very painfully. 
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness (low = more alert)
