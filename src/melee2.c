@@ -4359,6 +4359,8 @@ bool make_attack_spell(int m_idx)
 			/* RF5_MIND_BLAST */
 		case 128 + 10:
 			{
+				int sanitydamage;
+
 				if (!direct) break;
 				disturb(1, 0);
 				if (!seen)
@@ -4388,7 +4390,16 @@ bool make_attack_spell(int m_idx)
 						(void) set_image(p_ptr->image + rand_int(250) + 150);
 					}
 
-					take_sanity_hit(damroll(8, 8), ddesc);
+					/* holy shit, up to 64 sanity damage regardless of the monster's level. that's crazy!
+					 * let's have a scaling factor! --Amy */
+
+					sanitydamage = damroll(8, 8);
+
+					if (rlev < 32) {
+						if (sanitydamage > (rlev * 2)) sanitydamage = rlev * 2;
+					}
+
+					take_sanity_hit(sanitydamage, ddesc);
 				}
 				break;
 			}
@@ -4396,6 +4407,8 @@ bool make_attack_spell(int m_idx)
 			/* RF5_BRAIN_SMASH */
 		case 128 + 11:
 			{
+				int sanitydamage;
+
 				if (!direct) break;
 				disturb(1, 0);
 				if (!seen)
@@ -4418,6 +4431,15 @@ bool make_attack_spell(int m_idx)
 				else
 				{
 					msg_print("Your mind is blasted by psionic energy.");
+
+					/* holy shit, up to 180 sanity damage regardless of the monster's level. that's crazy!
+					 * let's have a scaling factor! --Amy */
+					sanitydamage = damroll(12, 15);
+
+					if (rlev < 60) {
+						if (sanitydamage > (rlev * 3)) sanitydamage = rlev * 3;
+					}
+
 					take_sanity_hit(damroll(12, 15), ddesc);
 					if (!p_ptr->resist_blind || p_ptr->nastytrap29 || (rand_int(100) < 5) )
 					{

@@ -617,8 +617,15 @@ bool carried_make_attack_normal(int r_idx)
 				{
 					obvious = TRUE;
 
+					int sanitydamage;
+					if (damage >= 1) sanitydamage = damage / 2;
+					else sanitydamage = 1;
+					if (sanitydamage < 1) sanitydamage = 1;
+
+					/* change by Amy: deal half the usual amount of sanity damage, but also deal full physical damage */
+					take_hit(damage, ddesc);
 					cmsg_print(TERM_VIOLET, "You're going insane!");
-					take_sanity_hit(damage, ddesc);
+					take_sanity_hit(sanitydamage, ddesc);
 					break;
 				}
 
@@ -2006,8 +2013,15 @@ bool make_attack_normal(int m_idx, byte divis)
 				{
 					obvious = TRUE;
 
+					int sanitydamage;
+					if (damage >= 1) sanitydamage = damage / 2;
+					else sanitydamage = 1;
+					if (sanitydamage < 1) sanitydamage = 1;
+
+					/* change by Amy: deal half the usual amount of sanity damage, but also deal full physical damage */
+					take_hit(damage, ddesc);
 					cmsg_print(TERM_VIOLET, "You're going insane!");
-					take_sanity_hit(damage, ddesc);
+					take_sanity_hit(sanitydamage, ddesc);
 					break;
 				}
 

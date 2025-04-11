@@ -3611,6 +3611,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			int efflevel = 99;
 			if (dun_level > 0) efflevel = dun_level;
 			else efflevel = p_ptr->lev;
+			if (efflevel < dun_level) efflevel = dun_level;
 			if (efflevel > 5) efflevel = 5;
 			if (efflevel < 2) efflevel = 2;
 
@@ -3633,6 +3634,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			int efflevel = 2;
 			if (dun_level > 0) efflevel = dun_level;
 			else efflevel = p_ptr->lev;
+			if (efflevel < dun_level) efflevel = dun_level;
 			if (efflevel > 10) efflevel = 10;
 			if (efflevel < 2) efflevel = 2;
 
@@ -3647,6 +3649,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			int efflevel = 2;
 			if (dun_level > 0) efflevel = dun_level;
 			else efflevel = p_ptr->lev;
+			if (efflevel < dun_level) efflevel = dun_level;
 			if (efflevel > 20) efflevel = 20;
 			if (efflevel < 2) efflevel = 2;
 
@@ -3661,6 +3664,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			int efflevel = 2;
 			if (dun_level > 0) efflevel = dun_level;
 			else efflevel = p_ptr->lev;
+			if (efflevel < dun_level) efflevel = dun_level;
 			if (efflevel > 40) efflevel = 40;
 			if (efflevel < 2) efflevel = 2;
 
@@ -3676,8 +3680,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (dun_level > 0) efflevel = dun_level;
 			else {
 				efflevel = p_ptr->lev;
-				if (p_ptr->lev) efflevel = 80;
+				if (p_ptr->lev >= 40) efflevel = 80;
 			}
+			if (efflevel < dun_level) efflevel = dun_level;
 			if (efflevel > 80) efflevel = 80;
 			if (efflevel < 2) efflevel = 2;
 
@@ -3700,6 +3705,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			int efflevel = 1;
 			if (dun_level > 0) efflevel = dun_level;
 			else efflevel = p_ptr->lev;
+			if (efflevel < dun_level) efflevel = dun_level;
 			take_hit(randint(5 + efflevel), "a pit");
 			ident = TRUE;
 			break;
@@ -5491,16 +5497,40 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 	case TRAP_OF_SANITY_DRAIN:
 		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else efflevel = p_ptr->lev;
+			if (efflevel < dun_level) efflevel = dun_level;
+			if (efflevel < 2) efflevel = 2;
+
+			int sanitydamage;
+
 			cmsg_print(TERM_VIOLET, "You're going insane!");
-			take_sanity_hit(randint(50) + p_ptr->lev, "a trap of sanity draining");
+
+			sanitydamage = randint(50);
+			if (sanitydamage > (efflevel * 3)) sanitydamage = efflevel * 3;
+
+			take_sanity_hit(sanitydamage + p_ptr->lev, "a trap of sanity draining");
 			ident = TRUE;
 			break;
 		}
 
 	case TRAP_OF_SANITY_SMASH:
 		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else efflevel = p_ptr->lev;
+			if (efflevel < dun_level) efflevel = dun_level;
+			if (efflevel < 2) efflevel = 2;
+
+			int sanitydamage;
+
 			cmsg_print(TERM_VIOLET, "You're going insane!");
-			take_sanity_hit(randint(100) + (p_ptr->lev * 2), "a trap of sanity smashing");
+
+			sanitydamage = randint(100);
+			if (sanitydamage > (efflevel * 4)) sanitydamage = efflevel * 4;
+
+			take_sanity_hit(sanitydamage + (p_ptr->lev * 2), "a trap of sanity smashing");
 			ident = TRUE;
 			break;
 		}
@@ -10931,6 +10961,14 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 	case TRAP_OF_MIND_BLAST:
 		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else efflevel = p_ptr->lev;
+			if (efflevel < dun_level) efflevel = dun_level;
+			if (efflevel < 2) efflevel = 2;
+
+			int sanitydamage;
+
 			msg_print("You feel something focusing on your mind.");
 			ident = TRUE;
 
@@ -10946,19 +10984,36 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				(void) set_image(p_ptr->image + rand_int(250) + 150);
 			}
 
-			take_sanity_hit(damroll(8, 8), "a mind blast");
+			sanitydamage = damroll(8, 8);
+			if (sanitydamage > (efflevel * 2)) sanitydamage = efflevel * 2;
+
+			take_sanity_hit(sanitydamage, "a mind blast");
 
 		}
 		break;
 
 	case TRAP_OF_BRAIN_SMASH:
 		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else {
+				efflevel = p_ptr->lev;
+				if (p_ptr->lev > 40) efflevel = 99;
+			}
+			if (efflevel < dun_level) efflevel = dun_level;
+			if (efflevel < 2) efflevel = 2;
+
+			int sanitydamage;
+
 			msg_print("You feel something focusing on your mind.");
 			ident = TRUE;
 
 			msg_print("Your mind is blasted by psionic energy.");
 
-			take_sanity_hit(damroll(12, 15), "a mind blast");
+			sanitydamage = damroll(12, 15);
+			if (sanitydamage > (efflevel * 3)) sanitydamage = efflevel * 3;
+
+			take_sanity_hit(sanitydamage, "a mind blast");
 
 			if (!p_ptr->resist_blind || p_ptr->nastytrap29 || (rand_int(100) < 5) )
 			{
