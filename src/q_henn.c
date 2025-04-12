@@ -78,11 +78,15 @@ bool quest_henn_death_hook(char *fmt)
 	{
 		/* Access the monster */
 		monster_type *m_ptr = &m_list[i];
+		monster_race *r_ptr;
 
 		/* Ignore "dead" monsters */
 		if (!m_ptr->r_idx) continue;
 
-		if (m_ptr->status <= MSTATUS_ENEMY) mcnt++;
+		r_ptr = &r_info[m_ptr->r_idx];
+
+		/* Ignore breeders because they can spawn awake and breed out of control before you can do anything --Amy */
+		if ((m_ptr->status <= MSTATUS_ENEMY) && !(r_ptr->flags4 & RF4_MULTIPLY)) mcnt++;
 	}
 
 	/* Nobody left ? */
