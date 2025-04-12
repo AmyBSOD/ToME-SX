@@ -3356,7 +3356,7 @@ cptr describe_player_location()
 
 	if (dungeon_type != DUNGEON_WILDERNESS && dun_level > 0)
 		sprintf(desc, "on level %d of %s", dun_level, d_info[dungeon_type].name + d_name);
-	else if (wf_info[feat].terrain_idx == TERRAIN_TOWN)
+	else if (wf_info[feat].terrain_idx == TERRAIN_TOWN || wf_info[feat].terrain_idx >= TERRAIN_DEEP_WATER_X)
 		sprintf(desc, "in the town of %s", wf_info[feat].name + wf_name);
 	else if (wf_info[feat].entrance)
 		sprintf(desc, "near %s", wf_info[feat].name + wf_name);
@@ -3667,7 +3667,7 @@ errr file_character(cptr name, bool full)
 
 
 	/* Begin dump */
-	fprintf(fff, "  [%s %ld.%ld.%ld%s (SX 1.25) Character Sheet]\n\n",
+	fprintf(fff, "  [%s %ld.%ld.%ld%s (SX 1.26) Character Sheet]\n\n",
 	        game_module, VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH, IS_CVS);
 
 
