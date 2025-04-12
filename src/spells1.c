@@ -8751,6 +8751,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 				take_hit(dam, killer);
 			}
 			else
+				take_hit(dam, killer);
 				teleport_player(dam);
 			break;
 		}
