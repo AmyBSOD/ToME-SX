@@ -1,5 +1,116 @@
 Version history for ToME-SX by AmyBSOD, given in reverse chronological order *bundlebundlebundle* <3
 
+April 2025
+- Fixed the vanilla bug where gravity-elemental attacks sometimes did no damage to the player.
+- Rebalanced sanity damaging attacks and spells to make them more manageable.
+- Several priest roles can now pick a wider variety of gods.
+- Nerfed some powers that the player could abuse, making them harder to exploit.
+- Many dangerous wildlife/town monsters that used to give no experience now give some. Zero-threat ones still give none.
+- Fixed the bug where certain roles couldn't start the game worshipping a god even though they could pick up a god during gameplay.
+- Using a staircase now prevents the use of stairs for a few turns to make stairscumming harder.
+- Added a bunch of new towns.
+- Fixed the oversight where inaccessible pits could generate.
+- Fixed the error where the player could still somehow incarnate into a unique monster.
+- Fixed several parser types with the dungeon randomizer, which allowed some more flags to become usable for the randomizer.
+- Toned down the average danger of wilderness areas; now, their actual danger level is randomized instead of always being set to the highest value.
+- Balanced the damage of explosion traps to hopefully reduce the likelihood of getting one-shotted.
+
+March 2025
+- Dodging skill should no longer work versus magical traps.
+- When a possessor character is in monster form, their max mana is now reduced based on "how often the monster casts spells", but unlike vanilla it still takes the char's normal max mana into account for the calculation.
+- Fixed the oversight that caused dungeon town potion stores to sell very large amounts of certain potion types.
+- Some high-level towns now have a better selection of stuff in their stores.
+- Fixed the vanilla bug where ego wands and staves were ridiculously expensive.
+- The monster window no longer illogically displays unique monsters in a different color if a previous character on the same savegame file has killed the unique in question.
+- Added new types of spikes, and their thrown damage now scales slightly with the character's bows/throw skill.
+- The message when a monster casts create traps is more obvious and forces a --More-- prompt now.
+- Death fates can also happen while the character's luck is positive now, but very rarely.
+- Fixed the bug where returning to a special level would incorrectly spawn a new staircase.
+- Fixed the oversight where the player somehow couldn't steal from certain shops.
+- Shops are a bit more likely to sell enchanted gear now.
+- Runes now have the "easy know" flag to prevent players from having to identify them just to see what they do.
+- Fixed the oversight where dungeon town levels could have "interesting rooms" on them.
+- Dungeons with no shafts no longer have less staircases than ones with shafts.
+- Fountains are less common now and contain a lower average amount of doses for a potion.
+- Added new musical instruments and "spells" (songs) for them.
+
+- Bumped the version number up to 1.25.
+- Added various corruptions that the player can receive.
+- The sneakiness skill now gives resistance to ambushes, and repelling potions exist now that temporarily prevent them altogether.
+- Morphic oils are more expensive now.
+- Overhauled some of the Theme gods' spells.
+- Fixed the vanilla bug where force-elemental attacks sometimes did no damage to the player.
+- Fixed the vanilla bug that caused unique monsters on special levels to randomly not generate.
+- Added a --More-- prompt when the uncontrolled teleportitis corruption triggers.
+- Changed the likelihood of chaos patrons giving corruptions to the player.
+- Added more deities: Nienna and Este.
+- Certain spellcasting failure messages now have a --More-- prompt to ensure the one overshot keystroke doesn't result in the player unintentionally bumping into the monster they wanted to target with the spell.
+- When worshipping Mandos, a character who is in the Halls of Mandos now benefits from a reduced rate of piety loss.
+- Potions of water curing can now be used to purify tainted water even outside of the Lothlorien water supply quest. In order to do so, the player has to drink the potion while standing on a tainted water tile.
+- Cheat code inscriptions now cost mana to use because otherwise they're even more OP than Nethack's Elbereth.
+- Added a new deity, Ingeborg.
+
+February 2025
+- Random dungeon features should no longer erroneously overwrite straight road tiles, as that resulted in the straight road being impossible to walk to the finish.
+- Damage-dealing traps should now scale in a saner way to reduce the likelihood of getting one-shotted late into the game.
+- Fixed a vanilla crash bug when the player got polymorphed.
+- Fixed various errors when a player's skill levels were negative.
+- Occasionally, an artifact can be generated again now even if it's already been generated (except the One Ring of course).
+- The player can no longer repeatedly attempt to disarm a trap embedded in a wall with zero risk of setting the trap off.
+- Added --More-- prompts to certain messages.
+- Monsters who know the teleport spell no longer always teleport with the player. Instead, they teleport randomly in such a situation.
+- Fixed an oversight that caused magic mapping to not display switchers.
+- Some nasty trap effects no longer affect the character while in world map mode, as they were causing problems.
+- The trap of corruption now has a chance of turning into another kind of trap when triggered.
+- Added a new deity, Orome.
+- Overhauled the alchemy and runecraft skills. Essences and runes are useful again.
+
+January 2025
+- Pits can now be smaller sometimes, housing only 55 instead of 95 monsters.
+- Fixed a previously introduced bug where egotypes on items sometimes wouldn't work (this was caused by allowing items to have both a positive and negative ego).
+- Monsters in pits no longer always spawn awake, and they may sometimes lack an open pathway that allows the monsters to pour out.
+- Reduced the probability of damaging terrain in randomizer mode dungeons and also allowed more flags for the dungeons.
+- Invisibility on equipment is less powerful now.
+- The bottom of the Nether Realm now has a staircase that takes the player back to the Void, to prevent the scenario of having to walk back through the entire dungeon again and also to avoid errors where town levels in the Nether Realm would sometimes spawn without an upstair resulting in an unwinnable game.
+- Fixed a loophole where the player could obtain quest rewards several times.
+- Princess quest rewards now offer six items for the player to choose from.
+- Reflection now only protects the player 50% of the time.
+- The player can now invest in shops, and there's an investing skill that reduces the cost.
+- Tweaked the ego and randart versions of digging tools to make them less overpowering.
+- Tools can now be wielded in more types of equipment slots.
+- Fixed the oversight where boomerangs weren't getting the to-hit bonuses that they should have been getting.
+- Fixed the vanilla bug with the "it can contain a spell" item flag that caused it to malfunction when the item had certain other magical properties.
+- Added permanent walls to the dungeon randomizer and the possibility of replacing random floor tiles with wall types.
+- Boosted the effect of the artifact creation ability.
+- The 4D pocket now only accepts items whose weight isn't higher than the skill level.
+- Elemental damage scrolls now deal meaningful amounts of damage when read.
+- Added the ragnarok effect inspired by Elona.
+- Neutral monsters no longer follow the character everywhere.
+- Implemented a fast travel system. It requires the player to complete the Khazad-Dum house quest.
+- Ported a bunch of mimicry forms from ToME 2.00.
+- If the player constructs a rod by putting a rod tip into a base rod, the "finalized" rod now properly displays its item information and doesn't suddenly "lose" the info on what the rod actually does.
+- Many types of shops now have more shopkeepers to choose from.
+- Fixed the in-game name of the rod tip of home summoning.
+- The two-handed skill now also gives lesser boosts when using a one-and-a-half-handed weapon without a shield.
+- The new properties on items can now be viewed in the character screen.
+- A character with maxxed (40) strength should be able to wield any launcher without penalties now.
+- More types of items can be pseudo-identified now, specifically instruments, rings and amulets.
+- The farlook function now shows the coordinates of a square and the relative distance to your character.
+- Monsters can now use ranged attacks/spells/breaths at the maximum range of vision, rather than a slightly lower range than that. This prevents players from cheesing monsters by standing at the very edge of vision where the monster wouldn't be able to retaliate.
+- The "drain EXP/life/mana" attributes are more dangerous now.
+- Changed the levelport upon reaching the end of the straight road so it no longer works in dungeons where levelporting is restricted.
+- Added guns and bullets, and a "firearms" skill for them.
+- Morphic oils of ent can generate now.
+- Improved the display of abilities in the character screen and nerfed items with + to searching or stealth.
+- Added some playable roles with randomized starting skills.
+- The game now remembers the deepest level you've ever been to in a dungeon and allows you to reset your recall location up to that depth even if you "reset" it to a shallower depth.
+- The disarm spell is in the meta realm now, not conveyance.
+- Certain elements are weaker when used by the player against monsters now.
+- Piety is now easier to gain for certain gods.
+
+- Bumped the version number up to 1.23.
+- Fixed an error with monster level scaling calculations.
+
 December 2024
 - Changed the default glyph for Elanor flowers to be in line with other types of flowers.
 - Going to low dungeon levels as a high-level character now sometimes scales monster levels up to the player's experience level.
