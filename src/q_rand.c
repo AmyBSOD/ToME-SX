@@ -106,6 +106,7 @@ void do_get_new_obj(int y, int x)
 void princess_death(s32b m_idx, s32b r_idx)
 {
 	int r;
+	cave_type *c_ptr;
 
 	cmsg_print(TERM_YELLOW, "O Great And Noble Hero, you saved me!");
 	cmsg_print(TERM_YELLOW, "I am heading home now. I cannot reward you as I should, but please take this.");
@@ -134,6 +135,16 @@ void princess_death(s32b m_idx, s32b r_idx)
 				{
 					if (in_bounds(j, i)) cave_set_feat(j, i, FEAT_FLOOR);
 				}
+
+			/* Amy: for double-size dungeons, make SURE all the glass walls are cleared!!! */
+			for (i = x - 3; i <= x + 3; i++)
+				for (j = y - 3; j <= y + 3; j++)
+				{
+					c_ptr = &cave[j][i];
+
+					if (in_bounds(j, i) && (c_ptr->feat == FEAT_GLASS_WALL) ) cave_set_feat(j, i, FEAT_FLOOR);
+				}
+
 			cave_set_feat(y, x, FEAT_MORE);
 
 			do_get_new_obj(y, x);
