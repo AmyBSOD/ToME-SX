@@ -2088,7 +2088,7 @@ struct player_type
 	bool nastytrap146; /* force haggle trap - you have to haggle even if the option is turned off */
 	bool nastytrap147; /* void travel trap - void jumpgates don't work anymore */
 	bool nastytrap148; /* stairdancing trap - using a stair prevents you from using another for much longer */
-	bool nastytrap149;
+	bool nastytrap149; /* degradation trap - acid and disenchantment can lower your shit's pluses even more */
 	bool nastytrap150;
 	bool nastytrap151;
 	bool nastytrap152;

@@ -3097,6 +3097,246 @@ I:22:2:50:4:2:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:631:Degradation Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:632:Forget-A-Lot Trap
+I:20:10:80:0:70:0d0:G
+D:Oh no, you don't remember what the traps look like!
+F:FLOOR | CHEST | DOOR
+
+N:633:Memory Deletion Trap
+I:20:10:80:0:70:0d0:G
+D:You feel dizzy!
+F:FLOOR | CHEST | DOOR
+
+N:634:Trap of Data Delete
+I:50:2:80:0:100:0d0:G
+D:You forget a ton of knowledge!
+F:FLOOR | CHEST | DOOR
+
+N:635:Trap of Curse Everything
+I:50:2:0:12:100:0d0:y
+D:All your equipment was ruined!
+F:FLOOR | CHEST | DOOR
+
+N:636:Trap of Super Heavy Curse
+I:10:20:0:12:50:0d0:y
+D:Your equipment becomes heavily cursed.
+F:FLOOR | CHEST | DOOR
+
+N:637:Trap of Eternal Curse
+I:50:2:0:12:100:0d0:y
+D:Your equipment becomes permanently cursed.
+F:FLOOR | CHEST | DOOR
+
+N:638:Steal Items Trap
+I:20:100:50:3:50:0d0:y
+D:The chest seems to swell, while your backpack feels lighter..
+F:FLOOR | CHEST
+
+N:639:Steal Everything Trap
+I:50:10:50:3:100:0d0:y
+D:The chest seems to swell, while your backpack feels lighter..
+F:FLOOR | CHEST
+
+N:640:Trap of Complete Experience Drain
+I:50:10:50:3:100:0d0:r
+D:Your experience is completely drained!
+F:FLOOR | CHEST | DOOR
+
+N:641:Trap of Money Loss
+I:10:100:50:2:30:0d0:y
+D:Money isn't everything, they say...
+F:FLOOR | CHEST | DOOR
+
+N:642:Trap of High Money Loss
+I:20:40:50:2:60:0d0:y
+D:Money isn't everything, they say...
+F:FLOOR | CHEST | DOOR
+
+N:643:Trap of Lose All Money
+I:50:2:50:2:100:0d0:y
+D:Money isn't everything, they say...
+F:FLOOR | CHEST | DOOR
+
+N:644:Sanity Trash Trap
+I:10:20:50:4:60:0d0:r
+D:Whoops, you feel that you're much less sane than before.
+F:FLOOR | CHEST | DOOR
+
+N:645:Trap of High Insanity
+I:50:2:50:4:100:0d0:r
+D:Whoops, you feel that you're much less sane than before.
+F:FLOOR | CHEST | DOOR
+
+N:646:Trap of Complete Item Destruction
+I:50:20:0:10:100:0d0:B
+D:Your items are being destroyed!
+F:FLOOR | CHEST | DOOR
+
+N:647:Trap of Wide Scatter Items
+I:20:10:50:6:40:0d0:w
+D:You hear crashing sounds from all over the dungeon!
+F:FLOOR | CHEST | DOOR
+
+N:648:Trap of Scatter All Items
+I:50:2:50:6:100:0d0:w
+D:You hear crashing sounds from all over the dungeon!
+F:FLOOR | CHEST | DOOR
+
+N:649:Trap of Wide Scatter Equipment
+I:20:10:50:6:40:0d0:w
+D:You hear rushing sounds from all over the dungeon!
+F:FLOOR | CHEST | DOOR
+
+N:650:Trap of Scatter All Equipment
+I:50:2:50:6:100:0d0:w
+D:You hear rushing sounds from all over the dungeon!
+F:FLOOR | CHEST | DOOR
+
+N:651:Trap of Steal Gear
+I:20:5:50:6:50:0d0:y
+D:The chest seems to swell, while your equipment feels lighter..
+F:FLOOR | CHEST | DOOR
+
+N:652:Trap of Steal All Equipment
+I:50:2:50:6:100:0d0:y
+D:The chest seems to swell, while your equipment feels lighter..
+F:FLOOR | CHEST | DOOR
+
+N:653:Trap of Invert Armors
+I:8:20:40:4:30:0d0:y
+D:Your armor seems different...
+F:FLOOR | CHEST | DOOR
+
+N:654:Trap of Invert Weapons
+I:8:20:40:4:30:0d0:y
+D:Your weapon seems different...
+F:FLOOR | CHEST | DOOR
+
+N:655:Trap of Invert All Armor
+I:50:2:40:4:100:0d0:y
+D:Your armor seems different...
+F:FLOOR | CHEST | DOOR
+
+N:656:Trap of Invert All Weapons
+I:50:2:40:4:100:0d0:y
+D:Your weapon seems different...
+F:FLOOR | CHEST | DOOR
+
+N:657:Trap of Garbage Equipment
+I:25:10:10:25:80:0d0:y
+D:Your equipment seems different...
+F:FLOOR | CHEST | DOOR
+
+N:658:Trap of Waste Equipment
+I:50:2:10:25:100:0d0:y
+D:Your equipment seems different...
+F:FLOOR | CHEST | DOOR
+
+N:659:Stack Division Trap
+I:15:50:40:4:40:0d0:y
+D:Your item stacks seem smaller!
+F:FLOOR | CHEST | DOOR
+
+N:660:Stack Decimation Trap
+I:50:2:40:4:100:0d0:y
+D:Your item stacks seem smaller!
+F:FLOOR | CHEST | DOOR
+
+N:661:Trap of Trashing Wands
+I:20:100:40:4:30:0d0:y
+D:Your wands seem different...
+F:FLOOR | CHEST | DOOR
+
+N:662:Trap of Illegibility
+I:20:40:40:4:30:0d0:y
+D:Your scrolls seem different...
+F:FLOOR | CHEST | DOOR
+
+N:663:Trap of Liquid Waste
+I:20:40:40:4:30:0d0:y
+D:Your potions seem different...
+F:FLOOR | CHEST | DOOR
+
+N:664:Trap of Trashing Rods
+I:20:40:40:4:30:0d0:y
+D:Your rods seem different...
+F:FLOOR | CHEST | DOOR
+
+N:665:Trap of Spoiling Food
+I:20:40:40:4:30:0d0:y
+D:Your comestibles seem different...
+F:FLOOR | CHEST | DOOR
+
+N:666:Trap of Torn Books
+I:20:40:40:4:30:0d0:y
+D:Your books seem different...
+F:FLOOR | CHEST | DOOR
+
+N:667:Trap of Ruining Wands
+I:50:2:40:4:100:0d0:y
+D:Your wands seem different...
+F:FLOOR | CHEST | DOOR
+
+N:668:Trap of Reading Fuckup
+I:50:2:40:4:100:0d0:y
+D:Your scrolls seem different...
+F:FLOOR | CHEST | DOOR
+
+N:669:Trap of Complete Spilling
+I:50:2:40:4:100:0d0:y
+D:Your potions seem different...
+F:FLOOR | CHEST | DOOR
+
+N:670:Trap of Ruining Rods
+I:50:2:40:4:100:0d0:y
+D:Your rods seem different...
+F:FLOOR | CHEST | DOOR
+
+N:671:Trap of Tainted Food
+I:50:2:40:4:100:0d0:y
+D:Your comestibles seem different...
+F:FLOOR | CHEST | DOOR
+
+N:672:Trap of Ripped Books
+I:50:2:40:4:100:0d0:y
+D:Your books seem different...
+F:FLOOR | CHEST | DOOR
+
+N:673:Animation Trap
+I:10:100:0:10:25:0d0:v
+D:Something seems to animate...
+F:FLOOR | CHEST | DOOR
+
+N:674:Trap of Neutralize Speed
+I:20:20:10:25:60:0d0:y
+D:You suddenly seem to have more time to self-reflect...
+F:FLOOR | CHEST | DOOR
+
+N:675:Trap of No Worth
+I:15:40:10:25:40:0d0:y
+D:Your possessions seem to lose their value!
+F:FLOOR | CHEST | DOOR
+
+N:676:Trap of No Value
+I:2:10:10:25:100:0d0:y
+D:Your possessions seem to lose their value!
+F:FLOOR | CHEST | DOOR
+
+N:677:Severe Unproofing Trap
+I:20:25:10:25:50:0d0:y
+D:Your items lose their proofing!
+F:FLOOR | CHEST | DOOR
+
+N:678:Total Unproofing Trap
+I:50:2:10:25:100:0d0:y
+D:Your items lose their proofing!
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

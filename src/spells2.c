@@ -2193,6 +2193,10 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Stairdancing doesn't work anymore.";
 	}
+	if (p_ptr->nastytrap149)
+	{
+		info[i++] = "You have a problem: Acid and disenchantment can trash your shit even more.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];

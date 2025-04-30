@@ -3241,6 +3241,75 @@
 
 #define TRAP_NASTY147                     629
 #define TRAP_NASTY148                     630
+#define TRAP_NASTY149                     631
+
+#define TRAP_OF_FORGET_TRAPS_X            632
+#define TRAP_OF_FORGET_OBJECTS_X          633
+
+#define TRAP_OF_FORGET_OBJ_TRAPS          634
+
+#define TRAP_OF_CURSE_EVERYTHING          635
+
+#define TRAP_OF_HEAVY_CURSE_X             636
+#define TRAP_OF_PRIME_CURSE_X             637
+
+#define TRAP_OF_STEAL_ITEM_II             638
+#define TRAP_OF_STEAL_ITEM_III            639
+
+#define TRAP_OF_EXP_DRAIN_V               640
+
+#define TRAP_OF_MISSING_MONEY_II          641
+#define TRAP_OF_MISSING_MONEY_III         642
+#define TRAP_OF_MISSING_MONEY_IV          643
+
+#define TRAP_OF_SANITY_SMASH_II           644
+#define TRAP_OF_SANITY_SMASH_III          645
+
+#define TRAP_OF_ITEM_DESTRUCT_IV          646
+
+#define TRAP_OF_SCATTER_ITEMS_II          647
+#define TRAP_OF_SCATTER_ITEMS_III         648
+
+#define TRAP_OF_SCATTER_EQUIPMENT_II      649
+#define TRAP_OF_SCATTER_EQUIPMENT_III     650
+
+#define TRAP_OF_STEAL_EQUIPMENT_II        651
+#define TRAP_OF_STEAL_EQUIPMENT_III       652
+
+#define TRAP_OF_INVERT_ARMOR_II           653
+#define TRAP_OF_INVERT_WEAPON_II          654
+
+#define TRAP_OF_INVERT_ARMOR_III          655
+#define TRAP_OF_INVERT_WEAPON_III         656
+
+#define TRAP_OF_TRASH_EQUIPMENT_II        657
+#define TRAP_OF_TRASH_EQUIPMENT_III       658
+
+#define TRAP_OF_STACK_REDUCTION_II        659
+#define TRAP_OF_STACK_REDUCTION_III       660
+
+#define TRAP_OF_WASTING_WANDS_II          661
+#define TRAP_OF_WASTING_SCROLLS_II        662
+#define TRAP_OF_WASTING_POTIONS_II        663
+#define TRAP_OF_WASTING_RODS_II           664
+#define TRAP_OF_WASTING_FOOD_II           665
+#define TRAP_OF_WASTING_BOOKS_II          666
+#define TRAP_OF_WASTING_WANDS_III         667
+#define TRAP_OF_WASTING_SCROLLS_III       668
+#define TRAP_OF_WASTING_POTIONS_III       669
+#define TRAP_OF_WASTING_RODS_III          670
+#define TRAP_OF_WASTING_FOOD_III          671
+#define TRAP_OF_WASTING_BOOKS_III         672
+
+#define TRAP_OF_ANIMATION                 673
+
+#define TRAP_OF_DRAIN_SPEED_II            674
+
+#define TRAP_OF_UNWORTH_II                675
+#define TRAP_OF_UNWORTH_III               676
+
+#define TRAP_OF_UNPROOFING_II             677
+#define TRAP_OF_UNPROOFING_III            678
 
 /*** General index values ***/
 

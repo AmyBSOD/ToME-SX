@@ -2468,7 +2468,7 @@ static int minus_ac(void)
 	if (!o_ptr->k_idx) return (FALSE);
 
 	/* No damage left to be done */
-	if (o_ptr->ac + o_ptr->to_a <= 0) return (FALSE);
+	if (o_ptr->ac + o_ptr->to_a <= (p_ptr->nastytrap149 ? -20 : 0)) return (FALSE);
 
 
 	/* Describe */
@@ -2984,7 +2984,7 @@ bool apply_disenchant(int mode)
 
 
 	/* Nothing to disenchant */
-	if ((o_ptr->to_h <= 0) && (o_ptr->to_d <= 0) && (o_ptr->to_a <= 0))
+	if ((o_ptr->to_h <= 0) && (o_ptr->to_d <= 0) && (o_ptr->to_a <= 0) && !(p_ptr->nastytrap149))
 	{
 		/* Nothing to notice */
 		return (FALSE);
@@ -3019,6 +3019,17 @@ bool apply_disenchant(int mode)
 	/* Disenchant toac */
 	if (o_ptr->to_a > 0) o_ptr->to_a--;
 	if ((o_ptr->to_a > 5) && (rand_int(100) < 20)) o_ptr->to_a--;
+
+	/* Degradation nastytrap by Amy: can disenchant up to -20 */
+	if (p_ptr->nastytrap149) {
+		/* make sure we don't trash weapons to -20 AC or armor pieces to -20 to-hit and to-damage! */
+		if (t == INVEN_WIELD || t == INVEN_BOW) {
+			if (o_ptr->to_h > -20) o_ptr->to_h--;
+			if (o_ptr->to_d > -20) o_ptr->to_d--;
+		} else {
+			if (o_ptr->to_a > -20) o_ptr->to_a--;
+		}
+	}
 
 	/* Message */
 	msg_format("Your %s (%c) %s disenchanted!",

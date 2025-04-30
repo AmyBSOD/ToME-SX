@@ -712,6 +712,7 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY146:
 		case TRAP_NASTY147:
 		case TRAP_NASTY148:
+		case TRAP_NASTY149:
 			return FALSE;
 	}
 
@@ -878,6 +879,7 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY146:
 		case TRAP_NASTY147:
 		case TRAP_NASTY148:
+		case TRAP_NASTY149:
 			return FALSE;
 	}
 
@@ -1049,6 +1051,7 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY146:
 		case TRAP_NASTY147:
 		case TRAP_NASTY148:
+		case TRAP_NASTY149:
 			return TRUE;
 	}
 
@@ -1731,6 +1734,21 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_CURSE_EVERYTHING:
+		{
+			msg_print("Terrible noises of all kinds drone all around you!");
+			ident = FALSE;
+			if (curse_weapon()) ident = TRUE;
+			if (curse_armor()) ident = TRUE;
+			if (curse_garment()) ident = TRUE;
+			if (curse_shooter()) ident = TRUE;
+			if (curse_jewelry()) ident = TRUE;
+			if (curse_light()) ident = TRUE;
+			if (curse_ammo()) ident = TRUE;
+			if (curse_tool()) ident = TRUE;
+			break;
+		}
+
 	case TRAP_OF_ITEM_CURSE:
 		{
 			msg_print("You hear a curse!");
@@ -1745,10 +1763,37 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_HEAVY_CURSE_X:
+		{
+			msg_print("You hear many horrible curses!");
+			ident = FALSE;
+			if (curse_equipment(100, 100)) ident = TRUE;
+			if (curse_equipment(100, 100)) ident = TRUE;
+			if (curse_equipment(100, 100)) ident = TRUE;
+			if (curse_equipment(100, 100)) ident = TRUE;
+			if (curse_equipment(100, 100)) ident = TRUE;
+			if (curse_equipment(100, 100)) ident = TRUE;
+			if (curse_equipment(100, 100)) ident = TRUE;
+			if (curse_equipment(100, 100)) ident = TRUE;
+			if (curse_equipment(100, 100)) ident = TRUE;
+			if (curse_equipment(100, 100)) ident = TRUE;
+			break;
+		}
+
 	case TRAP_OF_PRIME_CURSE:
 		{
 			msg_print("You hear a terrible incantation!");
 			ident = curse_equipment_prime(100, 100);
+			break;
+		}
+
+	case TRAP_OF_PRIME_CURSE_X:
+		{
+			msg_print("You hear several terrible incantations!");
+			ident = FALSE;
+			if (curse_equipment_prime(100, 100)) ident = TRUE;
+			if (curse_equipment_prime(100, 100)) ident = TRUE;
+			if (curse_equipment_prime(100, 100)) ident = TRUE;
 			break;
 		}
 
@@ -3747,6 +3792,68 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_FORGET_TRAPS_X:
+		{
+			int k;
+			trap_type *ft_ptr;
+			msg_print("Your knowledge of traps is reduced!");
+
+			for (k = 0; k < max_t_idx; k++)
+			{
+				ft_ptr = &t_info[k];
+				if (magik(5)) ft_ptr->ident = FALSE;
+			}
+
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_FORGET_OBJECTS_X:
+		{
+			int k;
+			object_kind *fk_ptr;
+
+			msg_print("Your knowledge of objects is reduced!");
+
+			for (k = 0; k < max_k_idx; k++)
+			{
+				fk_ptr = &k_info[k];
+				if (fk_ptr->flavor && magik(5)) {
+					fk_ptr->aware = FALSE;
+					fk_ptr->tried = FALSE;
+				}
+			}
+
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_FORGET_OBJ_TRAPS:
+		{
+			int k;
+			trap_type *ft_ptr;
+			object_kind *fk_ptr;
+			msg_print("Your knowledge of traps and objects is deleted!");
+
+			for (k = 0; k < max_t_idx; k++)
+			{
+				ft_ptr = &t_info[k];
+				if (magik(20)) ft_ptr->ident = FALSE;
+			}
+
+			for (k = 0; k < max_k_idx; k++)
+			{
+				fk_ptr = &k_info[k];
+				if (fk_ptr->flavor && magik(20)) {
+					fk_ptr->aware = FALSE;
+					fk_ptr->tried = FALSE;
+				}
+			}
+
+			ident = TRUE;
+			break;
+		}
+
 		/* Teleport Away Trap */
 	case TRAP_OF_TELEPORT_AWAY:
 		{
@@ -4739,6 +4846,94 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_STEAL_ITEM_II:
+		{
+			/* Find an item */
+			for (k = 0; k < 25; k++)
+			{
+				char i_name[80];
+				object_type *j_ptr, *q_ptr, forge;
+
+				/* Pick an item */
+				s16b i = rand_int(INVEN_PACK);
+
+				/* Obtain the item */
+				j_ptr = &p_ptr->inventory[i];
+
+				/* Accept real items */
+				if (!j_ptr->k_idx) continue;
+
+				/* Don't steal artifacts  -CFT */
+				if (artifact_p(j_ptr)) continue;
+
+				/* Get a description */
+				object_desc(i_name, j_ptr, FALSE, 3);
+
+				/* Message */
+				msg_format("%sour %s (%c) was stolen!",
+				           ((j_ptr->number > 1) ? "One of y" : "Y"),
+				           i_name, index_to_label(i));
+
+				/* Create the item */
+				q_ptr = &forge;
+				object_copy(q_ptr, j_ptr);
+				q_ptr->number = 1;
+
+				/* Drop it somewhere */
+				do_trap_teleport_away(q_ptr, y, x);
+
+				inven_item_increase(i, -1);
+				inven_item_optimize(i);
+				ident = TRUE;
+			}
+			break;
+		}
+
+	case TRAP_OF_STEAL_ITEM_III:
+		{
+			/* Find an item */
+			for (k = 0; k < 200; k++)
+			{
+				char i_name[80];
+				object_type *j_ptr, *q_ptr, forge;
+				u32b f1, f2, f3, f4, f5, esp;
+
+				/* Pick an item */
+				s16b i = rand_int(INVEN_PACK);
+
+				/* Obtain the item */
+				j_ptr = &p_ptr->inventory[i];
+
+				/* Accept real items */
+				if (!j_ptr->k_idx) continue;
+
+				/* can also steal artifacts :-P --Amy */
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				if(f3 & TR3_PERMA_CURSE) continue;
+
+				/* Get a description */
+				object_desc(i_name, j_ptr, FALSE, 3);
+
+				/* Message */
+				msg_format("%sour %s (%c) was stolen!",
+				           ((j_ptr->number > 1) ? "One of y" : "Y"),
+				           i_name, index_to_label(i));
+
+				/* Create the item */
+				q_ptr = &forge;
+				object_copy(q_ptr, j_ptr);
+				q_ptr->number = 1;
+
+				/* Drop it somewhere */
+				do_trap_teleport_away(q_ptr, y, x);
+
+				inven_item_increase(i, -1);
+				inven_item_optimize(i);
+				ident = TRUE;
+			}
+			break;
+		}
+
 		/* Summon Fast Quylthulgs Trap */
 	case TRAP_OF_SUMMON_FAST_QUYLTHULGS:
 		{
@@ -5125,6 +5320,32 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_EXP_DRAIN_V:
+		{
+			ident = TRUE;
+
+			if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 20))
+			{
+				msg_print("You keep hold of your life force!");
+			}
+			else
+			{
+				s32b d = damroll(500, 6) + (p_ptr->exp / 10) * MON_DRAIN_LIFE;
+				if (p_ptr->hold_life && !p_ptr->nastytrap95)
+				{
+					msg_print("You feel your life slipping away!");
+					lose_exp(d / 3);
+				}
+				else
+				{
+					msg_print("You feel your life draining away!");
+					lose_exp(d);
+				}
+			}
+
+			break;
+		}
+
 		/* Trap of Stat Scramble - like the nexus effect, by Amy */
 	case TRAP_OF_STAT_SCRAMBLE:
 		{
@@ -5210,6 +5431,81 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 			else
 			{
+				msg_print("Your purse feels empty.");
+				msg_print("All of your coins were stolen!");
+				ident = TRUE;
+			}
+			p_ptr->redraw |= (PR_GOLD);
+			break;
+		}
+
+	case TRAP_OF_MISSING_MONEY_II:
+		{
+			s32b gold = (p_ptr->au / 4) + randint(25);
+
+			if (gold < 2) gold = 2;
+			if (gold > 10000) gold = (p_ptr->au / 8) + randint(6000);
+			if (gold > p_ptr->au) gold = p_ptr->au;
+
+			p_ptr->au -= gold;
+			if (gold <= 0)
+			{
+				msg_print("You feel something touching you.");
+			}
+			else if (p_ptr->au)
+			{
+				msg_print("Your purse feels lighter.");
+				msg_format("%ld coins were stolen!", (long)gold);
+				ident = TRUE;
+			}
+			else
+			{
+				msg_print("Your purse feels empty.");
+				msg_print("All of your coins were stolen!");
+				ident = TRUE;
+			}
+			p_ptr->redraw |= (PR_GOLD);
+			break;
+		}
+
+	case TRAP_OF_MISSING_MONEY_III:
+		{
+			s32b gold = (p_ptr->au / 2) + randint(25);
+
+			if (gold < 2) gold = 2;
+			if (gold > 20000) gold = (p_ptr->au / 4) + randint(15000);
+			if (gold > p_ptr->au) gold = p_ptr->au;
+
+			p_ptr->au -= gold;
+			if (gold <= 0)
+			{
+				msg_print("You feel something touching you.");
+			}
+			else if (p_ptr->au)
+			{
+				msg_print("Your purse feels lighter.");
+				msg_format("%ld coins were stolen!", (long)gold);
+				ident = TRUE;
+			}
+			else
+			{
+				msg_print("Your purse feels empty.");
+				msg_print("All of your coins were stolen!");
+				ident = TRUE;
+			}
+			p_ptr->redraw |= (PR_GOLD);
+			break;
+		}
+
+	case TRAP_OF_MISSING_MONEY_IV:
+		{
+			if (p_ptr->au <= 0)
+			{
+				msg_print("You feel something touching you.");
+			}
+			else
+			{
+				p_ptr->au = 0;
 				msg_print("Your purse feels empty.");
 				msg_print("All of your coins were stolen!");
 				ident = TRUE;
@@ -5535,6 +5831,52 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_SANITY_SMASH_II:
+		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else {
+				efflevel = p_ptr->lev;
+				if (p_ptr->lev >= 45) efflevel = 90;
+			}
+			if (efflevel < dun_level) efflevel = dun_level;
+			if (efflevel < 2) efflevel = 2;
+
+			int sanitydamage;
+
+			cmsg_print(TERM_VIOLET, "You're going insane!");
+
+			sanitydamage = randint(200);
+			if (sanitydamage > (efflevel * 4)) sanitydamage = efflevel * 4;
+
+			take_sanity_hit(sanitydamage + (p_ptr->lev * 2), "a trap of sanity trashing");
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_SANITY_SMASH_III:
+		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else {
+				efflevel = p_ptr->lev;
+				if (p_ptr->lev >= 45) efflevel = 90;
+			}
+			if (efflevel < dun_level) efflevel = dun_level;
+			if (efflevel < 2) efflevel = 2;
+
+			int sanitydamage;
+
+			cmsg_print(TERM_VIOLET, "You're going insane!");
+
+			sanitydamage = randint(400);
+			if (sanitydamage > (efflevel * 4)) sanitydamage = efflevel * 4;
+
+			take_sanity_hit(sanitydamage + (p_ptr->lev * 2), "a trap of high sanity loss");
+			ident = TRUE;
+			break;
+		}
+
 	case TRAP_OF_FEAR:
 		{
 			msg_format("You get the cold shivers.");
@@ -5598,6 +5940,53 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_ITEM_DESTRUCT_III:
 		{
 			msg_print("You're hit by the elements!");
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ITEM_DESTRUCT_IV:
+		{
+			msg_print("You're hit by the elements!");
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_cold_destroy, 3);
+			inven_damage(set_fire_destroy, 3);
+			inven_damage(set_elec_destroy, 3);
+			inven_damage(set_acid_destroy, 3);
 			inven_damage(set_cold_destroy, 3);
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
@@ -6078,6 +6467,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			s16b i, j;
 			bool message = FALSE;
+			u32b f1, f2, f3, f4, f5, esp;
 
 			for (i = 0; i < INVEN_PACK; i++)
 			{
@@ -6097,6 +6487,126 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					if (!cave_floor_bold(cy, cx)) continue;
 
 					object_copy(j_ptr, &p_ptr->inventory[i]);
+
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					if(f3 & TR3_PERMA_CURSE) continue;
+
+					inven_item_increase(i, -999);
+					inven_item_optimize(i);
+
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+
+					(void)floor_carry(cy, cx, j_ptr);
+
+					if (!message)
+					{
+						msg_print("You feel light-footed.");
+						message = TRUE;
+					}
+
+					if (player_has_los_bold(cy, cx))
+					{
+						char i_name[80];
+
+						object_desc(i_name, &tmp_obj, TRUE, 3);
+						note_spot(cy, cx);
+						lite_spot(cy, cx);
+						ident = TRUE;
+						msg_format("Suddenly %s appear%s!", i_name,
+						           (j_ptr->number > 1) ? "" : "s");
+					}
+					break;
+				}
+			}
+			ident = message;
+			break;
+		}
+
+	case TRAP_OF_SCATTER_ITEMS_II:
+		{
+			s16b i, j;
+			bool message = FALSE;
+			u32b f1, f2, f3, f4, f5, esp;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				if (rand_int(10) < 2) continue;
+
+				for (j = 0; j < 50; j++)
+				{
+					object_type tmp_obj, *j_ptr = &tmp_obj;
+					s16b cx = x + 25 - rand_int(50);
+					s16b cy = y + 25 - rand_int(50);
+
+					if (!in_bounds(cy, cx)) continue;
+
+					if (!cave_floor_bold(cy, cx)) continue;
+
+					object_copy(j_ptr, &p_ptr->inventory[i]);
+
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					if(f3 & TR3_PERMA_CURSE) continue;
+
+					inven_item_increase(i, -999);
+					inven_item_optimize(i);
+
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+
+					(void)floor_carry(cy, cx, j_ptr);
+
+					if (!message)
+					{
+						msg_print("You feel light-footed.");
+						message = TRUE;
+					}
+
+					if (player_has_los_bold(cy, cx))
+					{
+						char i_name[80];
+
+						object_desc(i_name, &tmp_obj, TRUE, 3);
+						note_spot(cy, cx);
+						lite_spot(cy, cx);
+						ident = TRUE;
+						msg_format("Suddenly %s appear%s!", i_name,
+						           (j_ptr->number > 1) ? "" : "s");
+					}
+					break;
+				}
+			}
+			ident = message;
+			break;
+		}
+
+	case TRAP_OF_SCATTER_ITEMS_III:
+		{
+			s16b i, j;
+			bool message = FALSE;
+			u32b f1, f2, f3, f4, f5, esp;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				for (j = 0; j < 500; j++)
+				{
+					object_type tmp_obj, *j_ptr = &tmp_obj;
+					s16b cx = x + 40 - rand_int(80);
+					s16b cy = y + 40 - rand_int(80);
+
+					if (!in_bounds(cy, cx)) continue;
+
+					if (!cave_floor_bold(cy, cx)) continue;
+
+					object_copy(j_ptr, &p_ptr->inventory[i]);
+
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					if(f3 & TR3_PERMA_CURSE) continue;
+
 					inven_item_increase(i, -999);
 					inven_item_optimize(i);
 
@@ -6189,6 +6699,124 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_SCATTER_EQUIPMENT_II:
+		{
+			s16b i, j;
+			bool message = FALSE;
+
+			u32b f1, f2, f3, f4, f5, esp;
+
+			for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
+			{
+
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				if (rand_int(10) < 2) continue;
+
+				for (j = 0; j < 50; j++)
+				{
+					object_type tmp_obj, *j_ptr = &tmp_obj;
+					s16b cx = x + 25 - rand_int(50);
+					s16b cy = y + 25 - rand_int(50);
+
+					if (!in_bounds(cy, cx)) continue;
+
+					if (!cave_floor_bold(cy, cx)) continue;
+
+					object_copy(j_ptr, &p_ptr->inventory[i]);
+
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					if(f3 & TR3_PERMA_CURSE) continue;
+
+					inven_item_increase(i, -999);
+					inven_item_optimize(i);
+
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+
+					(void)floor_carry(cy, cx, j_ptr);
+
+					if (!message)
+					{
+						msg_print("You feel flat-footed.");
+						message = TRUE;
+					}
+
+					if (player_has_los_bold(cy, cx))
+					{
+						char i_name[80];
+
+						object_desc(i_name, &tmp_obj, TRUE, 3);
+						note_spot(cy, cx);
+						lite_spot(cy, cx);
+						ident = TRUE;
+						msg_format("Suddenly %s appear%s!", i_name,
+						           (j_ptr->number > 1) ? "" : "s");
+					}
+					break;
+				}
+			}
+			ident = message;
+			break;
+		}
+
+	case TRAP_OF_SCATTER_EQUIPMENT_III:
+		{
+			s16b i, j;
+			bool message = FALSE;
+
+			u32b f1, f2, f3, f4, f5, esp;
+
+			for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
+			{
+
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				for (j = 0; j < 500; j++)
+				{
+					object_type tmp_obj, *j_ptr = &tmp_obj;
+					s16b cx = x + 40 - rand_int(80);
+					s16b cy = y + 40 - rand_int(80);
+
+					if (!in_bounds(cy, cx)) continue;
+
+					if (!cave_floor_bold(cy, cx)) continue;
+
+					object_copy(j_ptr, &p_ptr->inventory[i]);
+
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					if(f3 & TR3_PERMA_CURSE) continue;
+
+					inven_item_increase(i, -999);
+					inven_item_optimize(i);
+
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+
+					(void)floor_carry(cy, cx, j_ptr);
+
+					if (!message)
+					{
+						msg_print("You feel flat-footed.");
+						message = TRUE;
+					}
+
+					if (player_has_los_bold(cy, cx))
+					{
+						char i_name[80];
+
+						object_desc(i_name, &tmp_obj, TRUE, 3);
+						note_spot(cy, cx);
+						lite_spot(cy, cx);
+						ident = TRUE;
+						msg_format("Suddenly %s appear%s!", i_name,
+						           (j_ptr->number > 1) ? "" : "s");
+					}
+					break;
+				}
+			}
+			ident = message;
+			break;
+		}
+
 		/* Trap of Steal Equipment */
 	case TRAP_OF_STEAL_EQUIPMENT:
 		{
@@ -6238,6 +6866,100 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_STEAL_EQUIPMENT_II:
+		{
+			s16b i, j;
+			bool message = FALSE;
+
+			u32b f1, f2, f3, f4, f5, esp;
+
+			for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
+			{
+
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				if (magik(30)) continue;
+
+				for (j = 0; j < 100; j++)
+				{
+					object_type tmp_obj, *j_ptr = &tmp_obj;
+					s16b cx = x + 50 - rand_int(100);
+					s16b cy = y + 50 - rand_int(100);
+
+					if (!in_bounds(cy, cx)) continue;
+
+					if (!cave_floor_bold(cy, cx)) continue;
+
+					object_copy(j_ptr, &p_ptr->inventory[i]);
+
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					if(f3 & TR3_PERMA_CURSE) continue;
+
+					inven_item_increase(i, -999);
+					inven_item_optimize(i);
+
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+
+					(void)floor_carry(cy, cx, j_ptr);
+
+					if (!message) {
+						msg_print("Your equipment seems to be much lighter than before!");
+						message = TRUE;
+					}
+
+					break;
+				}
+			}
+			ident = message;
+			break;
+		}
+
+	case TRAP_OF_STEAL_EQUIPMENT_III:
+		{
+			s16b i, j;
+			bool message = FALSE;
+
+			u32b f1, f2, f3, f4, f5, esp;
+
+			for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
+			{
+
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				for (j = 0; j < 100; j++)
+				{
+					object_type tmp_obj, *j_ptr = &tmp_obj;
+					s16b cx = x + 50 - rand_int(100);
+					s16b cy = y + 50 - rand_int(100);
+
+					if (!in_bounds(cy, cx)) continue;
+
+					if (!cave_floor_bold(cy, cx)) continue;
+
+					object_copy(j_ptr, &p_ptr->inventory[i]);
+
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					if(f3 & TR3_PERMA_CURSE) continue;
+
+					inven_item_increase(i, -999);
+					inven_item_optimize(i);
+
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+
+					(void)floor_carry(cy, cx, j_ptr);
+
+					if (!message) {
+						msg_print("Your equipment seems to be much lighter than before!");
+						message = TRUE;
+					}
+
+					break;
+				}
+			}
+			ident = message;
+			break;
+		}
+
 		/* Trap of Invert Armor, by Amy: equipped stuff with positive AC bonus becomes negative */
 	case TRAP_OF_INVERT_ARMOR:
 		{
@@ -6249,6 +6971,94 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			{
 
 				if (rand_int(10) < 8) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* does it have an AC bonus? */
+				if (j_ptr->to_a > 0) {
+					j_ptr->to_a *= -1;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your armor class fell sharply!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("Your body itches strangely!");
+			break;
+		}
+
+	case TRAP_OF_INVERT_ARMOR_II:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_WIELD; j < INVEN_TOTAL; j++)
+			{
+
+				if (rand_int(10) < 4) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* does it have an AC bonus? */
+				if (j_ptr->to_a > 0) {
+					j_ptr->to_a *= -1;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your armor class fell sharply!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("Your body itches strangely!");
+			break;
+		}
+
+	case TRAP_OF_INVERT_ARMOR_III:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_WIELD; j < INVEN_TOTAL; j++)
+			{
 
 				/* don't bother the overflow slot */
 				if (j == INVEN_PACK) continue;
@@ -6349,6 +7159,132 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_INVERT_WEAPON_II:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_WIELD; j < INVEN_TOTAL; j++)
+			{
+
+				if (rand_int(10) < 4) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* does it have an AC bonus? */
+				if (j_ptr->to_d > 0) {
+					j_ptr->to_d *= -1;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your weapon effectivity fell sharply!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+				if (j_ptr->to_h > 0) {
+					j_ptr->to_h *= -1;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your weapon effectivity fell sharply!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("Your hands itch strangely!");
+			break;
+		}
+
+	case TRAP_OF_INVERT_WEAPON_III:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_WIELD; j < INVEN_TOTAL; j++)
+			{
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* does it have an AC bonus? */
+				if (j_ptr->to_d > 0) {
+					j_ptr->to_d *= -1;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your weapon effectivity fell sharply!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+				if (j_ptr->to_h > 0) {
+					j_ptr->to_h *= -1;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your weapon effectivity fell sharply!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("Your hands itch strangely!");
+			break;
+		}
+
 		/* Trap of Trash Equipment, by Amy: equipped stuff with positive pval bonus becomes negative, artifacts are immune */
 	case TRAP_OF_TRASH_EQUIPMENT:
 		{
@@ -6360,6 +7296,100 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			{
 
 				if (rand_int(10) < 8) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				if (j_ptr->name1) continue; /* artifacts are immune */
+
+				/* does it have an AC bonus? */
+				if (j_ptr->pval > 0) {
+					j_ptr->pval *= -1;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your equipment seems much less effective!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("You have a very bad feeling about your equipment...");
+			break;
+		}
+
+	case TRAP_OF_TRASH_EQUIPMENT_II:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_WIELD; j < INVEN_TOTAL; j++)
+			{
+
+				if (rand_int(10) < 4) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				if (j_ptr->name1) continue; /* artifacts are immune */
+
+				/* does it have an AC bonus? */
+				if (j_ptr->pval > 0) {
+					j_ptr->pval *= -1;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your equipment seems much less effective!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("You have a very bad feeling about your equipment...");
+			break;
+		}
+
+	case TRAP_OF_TRASH_EQUIPMENT_III:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_WIELD; j < INVEN_TOTAL; j++)
+			{
 
 				/* don't bother the overflow slot */
 				if (j == INVEN_PACK) continue;
@@ -6471,6 +7501,60 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_STACK_REDUCTION_II:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if ((j_ptr->number > 1) && rand_int(2) == 1) {
+					j_ptr->number /= 2;
+					ident = TRUE;
+				}
+			}
+			if (ident)
+			{
+				msg_print("Something seems missing...");
+			}
+			else
+			{
+				msg_print("You hear a distorted scream.");
+			}
+			break;
+		}
+
+	case TRAP_OF_STACK_REDUCTION_III:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if (j_ptr->number > 1) {
+					j_ptr->number /= 2;
+					ident = TRUE;
+				}
+			}
+			if (ident)
+			{
+				msg_print("Something seems missing...");
+			}
+			else
+			{
+				msg_print("You hear a distorted scream.");
+			}
+			break;
+		}
+
 		/* Trap of Wasting Wands */
 	case TRAP_OF_WASTING_WANDS:
 		{
@@ -6517,6 +7601,96 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_WASTING_WANDS_II:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if ((j_ptr->tval == TV_WAND) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Wand of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_WAND, SV_WAND_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_STAFF) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Staff of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_STAFF, SV_STAFF_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("You have lost trust in your backpack!");
+			}
+			else
+			{
+				msg_print("You hear an echoing cry of rage.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_WANDS_III:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if (j_ptr->tval == TV_WAND)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Wand of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_WAND, SV_WAND_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if (j_ptr->tval == TV_STAFF)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Staff of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_STAFF, SV_STAFF_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("You have lost trust in your backpack!");
+			}
+			else
+			{
+				msg_print("You hear an echoing cry of rage.");
+			}
+			break;
+		}
+
 	case TRAP_OF_WASTING_SCROLLS:
 		{
 			s16b i;
@@ -6529,6 +7703,74 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				j_ptr = &p_ptr->inventory[i];
 
 				if ((j_ptr->tval == TV_SCROLL) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Scroll of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_SCROLL, SV_SCROLL_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("Your booklets seem to shuffle!");
+			}
+			else
+			{
+				msg_print("You hear a grumbling voice.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_SCROLLS_II:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if ((j_ptr->tval == TV_SCROLL) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Scroll of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_SCROLL, SV_SCROLL_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("Your booklets seem to shuffle!");
+			}
+			else
+			{
+				msg_print("You hear a grumbling voice.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_SCROLLS_III:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if (j_ptr->tval == TV_SCROLL)
 				{
 					if (object_known_p(j_ptr)) ident = TRUE;
 
@@ -6596,6 +7838,96 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_WASTING_POTIONS_II:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if ((j_ptr->tval == TV_POTION) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Potion of Water */
+					object_prep(j_ptr, lookup_kind(TV_POTION, SV_POTION_WATER));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_POTION2) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Potion of Water */
+					object_prep(j_ptr, lookup_kind(TV_POTION, SV_POTION_WATER));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("Oh no, your potions spilled everywhere!");
+			}
+			else
+			{
+				msg_print("You hear a popping noise.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_POTIONS_III:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if (j_ptr->tval == TV_POTION)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Potion of Water */
+					object_prep(j_ptr, lookup_kind(TV_POTION, SV_POTION_WATER));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if (j_ptr->tval == TV_POTION2)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Potion of Water */
+					object_prep(j_ptr, lookup_kind(TV_POTION, SV_POTION_WATER));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("Oh no, your potions spilled everywhere!");
+			}
+			else
+			{
+				msg_print("You hear a popping noise.");
+			}
+			break;
+		}
+
 	case TRAP_OF_WASTING_RODS:
 		{
 			s16b i;
@@ -6619,6 +7951,96 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
 				}
 				else if ((j_ptr->tval == TV_ROD_MAIN) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Dirt Rod (useless) */
+					object_prep(j_ptr, lookup_kind(TV_ROD_MAIN, SV_ROD_DIRT));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("You have lost trust in your knapsack!");
+			}
+			else
+			{
+				msg_print("You hear a high-pitched scream.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_RODS_II:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if ((j_ptr->tval == TV_ROD) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Rod Tip of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_ROD, SV_ROD_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_ROD_MAIN) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Dirt Rod (useless) */
+					object_prep(j_ptr, lookup_kind(TV_ROD_MAIN, SV_ROD_DIRT));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("You have lost trust in your knapsack!");
+			}
+			else
+			{
+				msg_print("You hear a high-pitched scream.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_RODS_III:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if (j_ptr->tval == TV_ROD)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Rod Tip of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_ROD, SV_ROD_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if (j_ptr->tval == TV_ROD_MAIN)
 				{
 					if (object_known_p(j_ptr)) ident = TRUE;
 
@@ -6686,6 +8108,96 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_WASTING_FOOD_II:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if ((j_ptr->tval == TV_FOOD) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Mushroom of Poison */
+					object_prep(j_ptr, lookup_kind(TV_FOOD, SV_FOOD_POISON));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_CORPSE) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Staff of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_FOOD, SV_FOOD_POISON));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("Something in your backpack smells like decay!");
+			}
+			else
+			{
+				msg_print("You sense a foul smell.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_FOOD_III:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if (j_ptr->tval == TV_FOOD)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Mushroom of Poison */
+					object_prep(j_ptr, lookup_kind(TV_FOOD, SV_FOOD_POISON));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if (j_ptr->tval == TV_CORPSE)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Staff of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_FOOD, SV_FOOD_POISON));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("Something in your backpack smells like decay!");
+			}
+			else
+			{
+				msg_print("You sense a foul smell.");
+			}
+			break;
+		}
+
 	case TRAP_OF_WASTING_BOOKS:
 		{
 			s16b i;
@@ -6698,6 +8210,74 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				j_ptr = &p_ptr->inventory[i];
 
 				if ((j_ptr->tval == TV_BOOK) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create an Adventurer's Guide */
+					object_prep(j_ptr, lookup_kind(TV_PARCHMENT, 20));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("Your backpack suddenly feels lighter!");
+			}
+			else
+			{
+				msg_print("You have a terrible sense of loss.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_BOOKS_II:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if ((j_ptr->tval == TV_BOOK) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create an Adventurer's Guide */
+					object_prep(j_ptr, lookup_kind(TV_PARCHMENT, 20));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("Your backpack suddenly feels lighter!");
+			}
+			else
+			{
+				msg_print("You have a terrible sense of loss.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_BOOKS_III:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if (j_ptr->tval == TV_BOOK)
 				{
 					if (object_known_p(j_ptr)) ident = TRUE;
 
@@ -6760,6 +8340,51 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_ANIMATION:
+		{
+			ident = TRUE;
+			msg_print("es come to life!");
+
+			s16b nx, ny;
+
+			for (nx = x - 10; nx <= x + 10; nx++)
+				for (ny = y - 10; ny <= y + 10; ny++)
+				{
+					if (!in_bounds (ny, nx)) continue;
+
+					if (rand_int(distance(ny, nx, y, x)) > 5)
+					{
+						summon_specific(ny, nx, max_dlv_real[dungeon_type], 0);
+					}
+				}
+
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Animation Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
 	case TRAP_OF_DRAIN_SPEED:
 		{
 			object_type *j_ptr;
@@ -6789,6 +8414,56 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 						chance /= 2;
 						ident = TRUE;
 					}
+					inven_item_optimize(j);
+				}
+			}
+			if (!ident)
+			{
+				msg_print("You feel some things in your pack vibrating.");
+			}
+			else
+			{
+				combine_pack();
+				reorder_pack();
+				msg_print("You suddenly feel you have time for self-reflection.");
+
+				/* Recalculate bonuses */
+				p_ptr->update |= (PU_BONUS);
+
+				/* Recalculate mana */
+				p_ptr->update |= (PU_MANA);
+
+				/* Window stuff */
+				p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+			}
+			break;
+		}
+
+	case TRAP_OF_DRAIN_SPEED_II:
+		{
+			object_type *j_ptr;
+			s16b j;
+			u32b f1, f2, f3, f4, f5, esp;
+
+			for (j = 0; j < INVEN_TOTAL; j++)
+			{
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
+				/* is it a speed item? (can also affect artifacts :-P --Amy) */
+				if (f1 & TR1_SPEED)
+				{
+					j_ptr->pval = j_ptr->pval / 2;
+					if (j_ptr->pval == 0)
+					{
+						j_ptr->pval--;
+					}
+					ident = TRUE;
 					inven_item_optimize(j);
 				}
 			}
@@ -6864,6 +8539,101 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_UNWORTH_II:
+		{
+			object_type *j_ptr;
+			s16b j, chance = 50;
+			u32b f1, f2, f3, f4, f5, esp;
+
+			for (j = 0; j < INVEN_TOTAL; j++)
+			{
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
+				/* does it have less than 100% discount? */
+				if (j_ptr->discount < 100)
+				{
+					if (randint(100) < chance)
+					{
+						j_ptr->discount = 100;
+						ident = TRUE;
+					}
+					inven_item_optimize(j);
+				}
+			}
+			if (!ident)
+			{
+				msg_print("You ponder the value of your possessions.");
+			}
+			else
+			{
+				combine_pack();
+				reorder_pack();
+				msg_print("You suddenly feel that your equipment isn't worth as much as it used to be...");
+
+				/* Recalculate bonuses */
+				p_ptr->update |= (PU_BONUS);
+
+				/* Recalculate mana */
+				p_ptr->update |= (PU_MANA);
+
+				/* Window stuff */
+				p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+			}
+			break;
+		}
+
+	case TRAP_OF_UNWORTH_III:
+		{
+			object_type *j_ptr;
+			s16b j;
+			u32b f1, f2, f3, f4, f5, esp;
+
+			for (j = 0; j < INVEN_TOTAL; j++)
+			{
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
+				/* does it have less than 100% discount? */
+				if (j_ptr->discount < 100)
+				{
+					j_ptr->discount = 100;
+					ident = TRUE;
+					inven_item_optimize(j);
+				}
+			}
+			if (!ident)
+			{
+				msg_print("You ponder the value of your possessions.");
+			}
+			else
+			{
+				combine_pack();
+				reorder_pack();
+				msg_print("You suddenly feel that your equipment isn't worth as much as it used to be...");
+
+				/* Recalculate bonuses */
+				p_ptr->update |= (PU_BONUS);
+
+				/* Recalculate mana */
+				p_ptr->update |= (PU_MANA);
+
+				/* Window stuff */
+				p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+			}
+			break;
+		}
+
 		/* trap of unproofing by Amy: removes "this item cannot be harmed bla-bla" flags from some items */
 	case TRAP_OF_UNPROOFING:
 		{
@@ -6908,6 +8678,137 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 						j_ptr->art_flags3 &= ~TR3_IGNORE_ELEC;
 						inven_item_optimize(j);
 					}
+				}
+			}
+			if (!ident)
+			{
+				msg_print("You feel afraid of the elements.");
+			}
+			else
+			{
+				combine_pack();
+				reorder_pack();
+				msg_print("Your equipment seems less protected!");
+
+				/* Recalculate bonuses */
+				p_ptr->update |= (PU_BONUS);
+
+				/* Recalculate mana */
+				p_ptr->update |= (PU_MANA);
+
+				/* Window stuff */
+				p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+			}
+			break;
+		}
+
+	case TRAP_OF_UNPROOFING_II:
+		{
+			object_type *j_ptr;
+			s16b j, chance = 50;
+			u32b f1, f2, f3, f4, f5, esp;
+
+			for (j = 0; j < INVEN_TOTAL; j++)
+			{
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
+				/* does it have some elemental ignore flag? */
+				if (randint(100) < chance)
+				{
+					if (f3 & TR3_IGNORE_ACID)
+					{
+						ident = TRUE;
+						j_ptr->art_flags3 &= ~TR3_IGNORE_ACID;
+						inven_item_optimize(j);
+					}
+					if (f3 & TR3_IGNORE_FIRE)
+					{
+						ident = TRUE;
+						j_ptr->art_flags3 &= ~TR3_IGNORE_FIRE;
+						inven_item_optimize(j);
+					}
+					if (f3 & TR3_IGNORE_COLD)
+					{
+						ident = TRUE;
+						j_ptr->art_flags3 &= ~TR3_IGNORE_COLD;
+						inven_item_optimize(j);
+					}
+					if (f3 & TR3_IGNORE_ELEC)
+					{
+						ident = TRUE;
+						j_ptr->art_flags3 &= ~TR3_IGNORE_ELEC;
+						inven_item_optimize(j);
+					}
+				}
+			}
+			if (!ident)
+			{
+				msg_print("You feel afraid of the elements.");
+			}
+			else
+			{
+				combine_pack();
+				reorder_pack();
+				msg_print("Your equipment seems less protected!");
+
+				/* Recalculate bonuses */
+				p_ptr->update |= (PU_BONUS);
+
+				/* Recalculate mana */
+				p_ptr->update |= (PU_MANA);
+
+				/* Window stuff */
+				p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+			}
+			break;
+		}
+
+	case TRAP_OF_UNPROOFING_III:
+		{
+			object_type *j_ptr;
+			s16b j;
+			u32b f1, f2, f3, f4, f5, esp;
+
+			for (j = 0; j < INVEN_TOTAL; j++)
+			{
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+
+				/* does it have some elemental ignore flag? */
+				if (f3 & TR3_IGNORE_ACID)
+				{
+					ident = TRUE;
+					j_ptr->art_flags3 &= ~TR3_IGNORE_ACID;
+					inven_item_optimize(j);
+				}
+				if (f3 & TR3_IGNORE_FIRE)
+				{
+					ident = TRUE;
+					j_ptr->art_flags3 &= ~TR3_IGNORE_FIRE;
+					inven_item_optimize(j);
+				}
+				if (f3 & TR3_IGNORE_COLD)
+				{
+					ident = TRUE;
+					j_ptr->art_flags3 &= ~TR3_IGNORE_COLD;
+					inven_item_optimize(j);
+				}
+				if (f3 & TR3_IGNORE_ELEC)
+				{
+					ident = TRUE;
+					j_ptr->art_flags3 &= ~TR3_IGNORE_ELEC;
+					inven_item_optimize(j);
 				}
 			}
 			if (!ident)
@@ -8608,6 +10509,18 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
 
 			p_ptr->nastytrap148 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY149:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap149 = TRUE;
 			calc_bonuses(FALSE);
 
 			break;			
@@ -12591,7 +14504,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(148)) {
+	switch (randint(149)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -13035,6 +14948,9 @@ void give_random_nastytrap_effect(void)
 			break;
 		case 148:
 			p_ptr->nastytrap148 = TRUE;
+			break;
+		case 149:
+			p_ptr->nastytrap149 = TRUE;
 			break;
 
 	}
