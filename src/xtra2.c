@@ -4708,6 +4708,8 @@ void check_experience(void)
 	bool level_reward = FALSE;
 	bool level_corruption = FALSE;
 
+	/* restore the old chaos warrior because it's working just fine --Amy */
+	if (!strcmp(spp_ptr->title + c_name, "Chaos Warrior")) level_reward = TRUE;
 
 	/* Note current level */
 	i = p_ptr->lev;
