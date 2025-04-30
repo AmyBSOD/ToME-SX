@@ -5638,7 +5638,13 @@ void do_cmd_possessor()
  */
 static bool item_tester_hook_convertible(object_type *o_ptr)
 {
-	if ((o_ptr->tval == TV_JUNK) || (o_ptr->tval == TV_SKELETON)) return TRUE;
+	if ((o_ptr->tval == TV_JUNK) || (o_ptr->tval == TV_SKELETON)) {
+
+		/* Amy: YOU DIRTY CHEATER who creates 200 boulders and then transforms them into 2000 ego arrows. */
+		if (o_ptr->tval == TV_JUNK && o_ptr->sval == SV_BOULDER) return FALSE;
+
+		return TRUE;
+	}
 
 	/* Assume not */
 	return (FALSE);
