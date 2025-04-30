@@ -183,7 +183,7 @@ void do_fart_effect(void)
 		return;
 	}
 
-	switch (randint(60))
+	switch (randint(66))
 	{
 	case 1:
 	case 2:
@@ -287,6 +287,7 @@ void do_fart_effect(void)
 		{
 			msg_print("Oh, no! Your mind has gone blank!");
 			lose_all_info();
+			if (randint(500) == 1) lose_all_info_X();
 
 			break;
 		}
@@ -355,6 +356,41 @@ void do_fart_effect(void)
 			} else if (randint(100) == 1) {
 				msg_print("Nasty!");
 				give_random_nastytrap_effect();
+			} else if (randint(100) == 1) {
+				switch (randint(8)) {
+					case 1:
+						msg_print("You hear a terrible wail!");
+						curse_weapon();
+						break;
+					case 2:
+						msg_print("You hear a terrible roar!");
+						curse_armor();
+						break;
+					case 3:
+						msg_print("You hear a terrible scream!");
+						curse_garment();
+						break;
+					case 4:
+						msg_print("You hear a terrible bang!");
+						curse_shooter();
+						break;
+					case 5:
+						msg_print("You hear a terrible howl!");
+						curse_jewelry();
+						break;
+					case 6:
+						msg_print("You hear a terrible frazzle!");
+						curse_light();
+						break;
+					case 7:
+						msg_print("You hear a terrible whump!");
+						curse_ammo();
+						break;
+					case 8:
+						msg_print("You hear a terrible moan!");
+						curse_tool();
+						break;
+				}
 			} else {
 				msg_print("Ugghh, the world is spinning...");
 				set_confused(p_ptr->confused + rand_int(200) + 150);
@@ -529,7 +565,8 @@ void do_fart_effect(void)
 	case 58:
 	case 59:
 		{
-			curse_equipment(100, 10);
+			if (magik(10)) curse_equipment(100, 100);
+			else curse_equipment(100, 10);
 			break;
 		}
 
@@ -540,6 +577,44 @@ void do_fart_effect(void)
 			} else {
 				set_tim_manavoid(p_ptr->tim_manavoid + 10 + randint(200));
 			}
+			break;
+		}
+
+	case 61:
+	case 62:
+	case 63:
+		{
+			if (magik(80)) do_dec_stat(rand_int(6), STAT_DEC_TEMPORARY);
+			else if (magik(90)) do_dec_stat(rand_int(6), STAT_DEC_NORMAL);
+			else if (magik(98)) do_dec_stat(rand_int(6), STAT_DEC_PERMANENT);
+			else do_dec_stat(rand_int(6), STAT_DEC_PERMANENT_NORESIST);
+
+			break;
+		}
+
+	case 64:
+		{
+			if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
+			{
+				msg_print("You can't move!");
+				(void)set_paralyzed(p_ptr->paralyzed + rand_int(5) + 2);
+				ident = TRUE;
+			}
+
+			break;
+		}
+
+	case 65:
+		{
+			msg_print("You feel lethargic...");
+			(void)set_slow(p_ptr->slow + rand_int(20) + 10);
+			break;
+		}
+
+	case 66:
+		{
+			msg_print("You're bleeding!");
+			(void)set_cut(p_ptr->cut + randint(100));
 			break;
 		}
 
