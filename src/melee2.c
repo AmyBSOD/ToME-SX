@@ -645,6 +645,9 @@ static void bolt(int m_idx, int typ, int dam_hp)
  */
 static bool spell_attack(byte spell)
 {
+	/* Eldritch horror blast by Amy */
+	if (spell == 45) return (TRUE);
+
 	/* All RF4 spells hurt (except for shriek, multiply, summon animal) */
 	if (spell >= 96 + 3 && spell <= 96 + 31) return (TRUE);
 
@@ -3274,7 +3277,7 @@ bool make_attack_spell(int m_idx)
 {
 	int k, chance, thrown_spell, rlev, failrate;
 	byte spell[96], num = 0;
-	u32b f4, f5, f6;
+	u32b f2, f4, f5, f6;
 	monster_type *m_ptr = &m_list[m_idx];
 	monster_race *r_ptr = race_inf(m_ptr);
 	char m_name[80];
@@ -3371,6 +3374,7 @@ bool make_attack_spell(int m_idx)
 	if (druidsavingthrow > randint(50 + rlev)) druidsave = TRUE;
 
 	/* Extract the racial spell flags */
+	f2 = r_ptr->flags2;
 	f4 = r_ptr->flags4;
 	f5 = r_ptr->flags5;
 	f6 = r_ptr->flags6;
@@ -3399,7 +3403,7 @@ bool make_attack_spell(int m_idx)
 	remove_bad_spells(m_idx, &f4, &f5, &f6);
 
 	/* No spells left */
-	if (!f4 && !f5 && !f6) return (FALSE);
+	if (!f4 && !f5 && !f6 && !(f2 & (RF2_ELDRITCH_HORROR)) ) return (FALSE);
 
 	if (!stupid_monsters)
 	{
@@ -3428,8 +3432,10 @@ bool make_attack_spell(int m_idx)
 		}
 
 		/* No spells left */
-		if (!f4 && !f5 && !f6) return (FALSE);
+		if (!f4 && !f5 && !f6 && !(f2 & (RF2_ELDRITCH_HORROR)) ) return (FALSE);
 	}
+
+	if (f2 & (RF2_ELDRITCH_HORROR)) spell[num++] = 45; /* eldritch blast, by Amy */
 
 	/* Extract the "inate" spells */
 	for (k = 0; k < 32; k++)
@@ -3516,6 +3522,15 @@ bool make_attack_spell(int m_idx)
 		/* Cast the spell. */
 		switch (thrown_spell)
 		{
+			/* RF2_ELDRITCH_HORROR */
+			/* by Amy, because it makes no sense to be blasted only when the monster enters view and not while you continue to look at it... */
+		case 45:
+			{
+				disturb(1, 0);
+				sanity_blast(m_ptr, FALSE);
+				break;
+			}
+
 			/* RF4_SHRIEK */
 		case 96 + 0:
 			{
