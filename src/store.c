@@ -887,8 +887,11 @@ static bool store_check_num(object_type *o_ptr)
 	int i;
 	object_type *j_ptr;
 
+	/* hard limit of 255 items --Amy */
+	if (st_ptr->stock_num >= 255) return FALSE;
+
 	/* Free space is always usable */
-	if (st_ptr->stock_num < (st_ptr->stock_size + randint(st_ptr->investment)) ) return TRUE;
+	if (st_ptr->stock_num < (st_ptr->stock_size + st_ptr->investment) ) return TRUE;
 
 	/* The "home" acts like the player */
 	if ((cur_store_num == 7) ||
@@ -4474,6 +4477,11 @@ void store_maint(int town_num, int store_num)
 	/* Sell a few items */
 	j = j - randint(STORE_TURNOVER);
 
+	/* stores with little stock size have lower amounts of items --Amy */
+	if (maxkeep > (st_ptr->stock_size + st_ptr->investment)) {
+		maxkeep = (st_ptr->stock_size + st_ptr->investment);
+	}
+
 	/* well-invested shops can have more stuff --Amy */
 	if (st_ptr->investment > 0) {
 		maxkeep += rand_int(st_ptr->investment + 1);
@@ -4492,15 +4500,24 @@ void store_maint(int town_num, int store_num)
 	/* Destroy objects until only "j" slots are left */
 	while (st_ptr->stock_num > j) store_delete();
 
-
 	/* Choose the number of slots to fill */
 	j = st_ptr->stock_num;
 
 	/* Buy some more items */
 	j = j + randint(STORE_TURNOVER);
 
+	/* but if the shop's stock size is low, then it'll buy less of them --Amy */
+	if (j > (st_ptr->stock_size + st_ptr->investment)) {
+		j = (st_ptr->stock_size + st_ptr->investment);
+	}
+
 	if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM) {
 		j = j + randint(STORE_TURNOVER);
+	}
+
+	/* and a bigger amount if the store is well-invested --Amy */
+	if (st_ptr->investment > 0) {
+		j += randint(st_ptr->investment);
 	}
 
 	/* absolute max of 120 items, but can stock more with high rank --Amy */

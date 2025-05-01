@@ -2556,7 +2556,7 @@ static bool do_store(store_type *str, int flag)
 			/* Read the item */
 			do_item(&forge, LS_LOAD);
 			/* Acquire valid items */
-			if ((str->stock_num < store_inven_max) && (str->stock_num < str->stock_size))
+			if ((str->stock_num < store_inven_max) && (str->stock_num < /*str->stock_size*/256))
 			{
 				int k = str->stock_num++;
 
