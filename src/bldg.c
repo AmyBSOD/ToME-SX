@@ -1832,7 +1832,7 @@ bool bldg_process_command(store_type *s_ptr, int i)
 				investcost *= 3;
 			}
 
-			if (s_ptr->investment >= 500) {
+			if (s_ptr->investment >= 1000) {
 				msg_format("Sorry, my shop has reached the maximum possible rank already.", investcost);
 				break;
 			}

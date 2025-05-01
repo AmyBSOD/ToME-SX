@@ -6017,7 +6017,8 @@ void create_stores_stock(int t)
 		st_ptr->stock_size = st_info[j].max_obj;
 
 		/* Allocate the stock */
-		C_MAKE(st_ptr->stock, st_ptr->stock_size, object_type);
+		/*C_MAKE(st_ptr->stock, st_ptr->stock_size, object_type);*/
+		C_MAKE(st_ptr->stock, 255, object_type);
 	}
 	t_ptr->stocked = TRUE;
 }
