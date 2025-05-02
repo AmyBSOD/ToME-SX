@@ -331,6 +331,9 @@ store_buy_list
 	["Expensive Black Market"] = function (obj)
 		return TRUE
 	end,
+	["White Market"] = function (obj)
+		return TRUE
+	end,
 	["Book Store"] =
 	{
 		TV_BOOK,

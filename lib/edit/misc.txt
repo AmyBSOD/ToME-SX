@@ -58,13 +58,13 @@ M:U:679
 M:W:50
 
 # Maximum number of owners types in ow_info.txt
-M:N:142
+M:N:146
 
 # Maximum number of building actions in ba_info.txt
 M:B:63
 
 # Maximum number of store types in st_info.txt
-M:S:83
+M:S:84
 
 # Maximum size for "o_list[]"
 M:O:4096

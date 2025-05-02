@@ -854,3 +854,31 @@ C:120:100:80
 L:Elf | Half-Elf | High-Elf | Dunadan | Hobbit | Dwarf | RohanKnight
 H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold
 
+N:142:Carlotta(Human)
+I:1000:200:150:4:7
+C:180:150:110
+H:Elf | Half-Elf | High-Elf | Dunadan | Hobbit | Dwarf | RohanKnight
+H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold
+L:Human
+
+N:143:Ulfberth(Human)
+I:2000:200:150:4:7
+C:180:150:110
+H:Elf | Half-Elf | High-Elf | Dunadan | Hobbit | Dwarf | RohanKnight
+H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold
+L:Human
+
+N:144:Ogrok gro-Bonk(Orc)
+I:3000:200:150:4:7
+C:180:150:110
+H:Elf | Half-Elf | High-Elf | Dunadan | Hobbit | Dwarf | RohanKnight
+H:Troll | DeathMold | Half-Ogre | Beorning | Kobold
+L:Orc
+
+N:145:Feros Duul(Dark-Elf)
+I:5000:200:150:4:7
+C:180:150:110
+H:Elf | Half-Elf | High-Elf | Dunadan | Hobbit | Dwarf | RohanKnight
+H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold
+L:Dark-Elf
+
