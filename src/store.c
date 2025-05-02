@@ -1055,7 +1055,7 @@ static int home_carry(object_type *o_ptr)
 	}
 
 	/* No space? */
-	if (st_ptr->stock_num >= (st_ptr->stock_size + randint(st_ptr->investment)) ) return ( -1);
+	if (st_ptr->stock_num >= (st_ptr->stock_size + st_ptr->investment) ) return ( -1);
 
 
 	/* Determine the "value" of the item */
@@ -4483,8 +4483,8 @@ void store_maint(int town_num, int store_num)
 	}
 
 	/* well-invested shops can have more stuff --Amy */
-	if (st_ptr->investment > 0) {
-		maxkeep += rand_int(st_ptr->investment + 1);
+	if (st_ptr->investment > 4) {
+		maxkeep += rand_int((st_ptr->investment / 5) + 1);
 	}
 
 	/* Never keep more than "STORE_MAX_KEEP" slots
@@ -4516,8 +4516,8 @@ void store_maint(int town_num, int store_num)
 	}
 
 	/* and a bigger amount if the store is well-invested --Amy */
-	if (st_ptr->investment > 0) {
-		j += randint(st_ptr->investment);
+	if (st_ptr->investment > 4) {
+		j += randint(st_ptr->investment / 5);
 	}
 
 	/* absolute max of 120 items, but can stock more with high rank --Amy */
