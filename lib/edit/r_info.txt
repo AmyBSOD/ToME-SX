@@ -82281,6 +82281,272 @@ S:1_IN_5
 S:BR_FIRE
 D:Cerberus from nethack
 
+N:4698:gas spore
+G:e:W
+I:95:2d5:2:0:10
+W:1:1:500:2
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:HURT:4d6
+F:CAN_FLY | RES_SHAR | EMPTY_MIND |
+F:HURT_LITE | NO_FEAR | BASEANGBAND
+D:gas spore from nethack
+
+N:4699:floating eye
+G:e:B
+I:80:2d6:2:2:10
+W:2:1:500:4
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:GAZE:PARALYZE:1d10
+F:CAN_FLY | DROP_CORPSE | RES_SHAR | CAN_SWIM |
+F:HURT_LITE | NO_FEAR | BASEANGBAND
+D:floating eye from nethack
+
+N:4700:freezing sphere
+G:e:w
+I:112:4d5:2:8:10
+W:6:1:500:10
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:COLD:4d6
+F:CAN_FLY | RES_SHAR | EMPTY_MIND | IM_COLD | NO_SLEEP | 
+F:HURT_LITE | NO_FEAR | BASEANGBAND
+D:freezing sphere from nethack
+
+N:4701:flaming sphere
+G:e:r
+I:112:4d5:2:8:10
+W:6:1:500:10
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:FIRE:4d6
+F:CAN_FLY | RES_SHAR | EMPTY_MIND | IM_FIRE | 
+F:HURT_LITE | NO_FEAR | BASEANGBAND
+D:flaming sphere from nethack
+
+N:4702:shocking sphere
+G:e:B
+I:112:4d5:2:8:10
+W:6:1:500:10
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:ELEC:4d6
+F:CAN_FLY | RES_SHAR | EMPTY_MIND | IM_FIRE | 
+F:HURT_LITE | NO_FEAR | BASEANGBAND
+D:shocking sphere from nethack
+
+N:4703:kitten
+G:f:w
+I:117:1d6:40:5:0
+W:2:1:200:3
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
+F:ANIMAL | MORTAL | BASEANGBAND
+D:kitten from nethack
+
+N:4704:housecat
+G:f:w
+I:116:2d5:40:8:0
+W:4:1:200:7
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
+F:ANIMAL | MORTAL | BASEANGBAND
+D:housecat from nethack
+
+N:4705:large cat
+G:f:w
+I:115:2d9:40:11:0
+W:6:1:200:14
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d4
+F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
+F:ANIMAL | MORTAL | BASEANGBAND
+D:large cat from nethack
+
+N:4706:jaguar
+G:f:u
+I:116:2d5:40:8:0
+W:4:1:200:9
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d4
+B:CLAW:HURT:1d4
+B:BITE:HURT:1d8
+F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
+F:ANIMAL | MORTAL | BASEANGBAND
+D:jaguar from nethack
+
+N:4707:kamadan
+G:f:o
+I:110:2d5:40:8:0
+W:4:2:200:11
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d3
+B:BITE:HURT:1d3
+B:BITE:HURT:1d3
+F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
+F:ANIMAL | MORTAL | BASEANGBAND | NO_SLEEP | EVIL
+S:1_IN_8
+S:BR_INER
+D:kamadan from nethack
+
+N:4708:lynx
+G:f:b
+I:116:2d7:40:10:0
+W:5:1:200:11
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d4
+B:CLAW:HURT:1d4
+B:BITE:HURT:1d10
+F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
+F:ANIMAL | MORTAL | BASEANGBAND
+D:lynx from nethack
+
+N:4709:panther
+G:f:D
+I:116:2d7:40:8:0
+W:5:1:200:11
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d6
+B:CLAW:HURT:1d6
+B:BITE:HURT:1d10
+F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
+F:ANIMAL | MORTAL | BASEANGBAND
+D:panther from nethack
+
+N:4710:caterwaul
+G:f:W
+I:130:2d7:40:10:0
+W:6:4:200:25
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d4
+B:CLAW:HURT:1d4
+B:BITE:HURT:1d6
+F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
+F:ANIMAL | MORTAL | BASEANGBAND
+D:caterwaul from nethack
+
+N:4711:tiger
+G:f:y
+I:110:2d10:40:11:0
+W:6:1:200:18
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d4
+B:CLAW:HURT:2d4
+B:BITE:HURT:1d10
+F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
+F:ANIMAL | MORTAL | BASEANGBAND
+D:tiger from nethack
+
+N:4712:displacer beast
+G:f:B
+I:110:5d12:40:60:0
+W:12:1:200:120
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:4d4
+B:CLAW:HURT:4d4
+B:BITE:HURT:2d10
+F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
+F:ANIMAL | MORTAL | BASEANGBAND
+D:displacer beast from nethack
+
+N:4713:jermlaine
+G:u:W
+I:115:1d2:30:5:20
+W:0:1:500:1
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:HURT:1d2
+F:IM_POIS | HURT_LITE | EVIL | OPEN_DOOR | 
+F:TAKE_ITEM | FRIENDS | 
+F:MORTAL | BASEANGBAND
+D:jermlaine from nethack
+
+N:4714:galltrit
+G:u:D
+I:118:3d4:30:12:20
+W:3:1:500:7
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:HURT:1d6
+B:CLAW:HURT:1d6
+B:BITE:HURT:1d4
+F:IM_POIS | HURT_LITE | EVIL | OPEN_DOOR | 
+F:TAKE_ITEM | CAN_SWIM |
+F:MORTAL | BASEANGBAND
+S:1_IN_10
+S:CAUSE_1
+D:galltrit from nethack
+
+N:4715:statue gargoyle
+G:u:W
+I:108:4d10:30:10:20
+W:4:3:500:25
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:HURT:1d3
+B:CLAW:HURT:1d3
+F:IM_POIS | OPEN_DOOR | RES_CHAO | NO_SLEEP |
+F:TAKE_ITEM | CAN_SWIM | RES_WALL | RES_GRAV |
+F:MORTAL | BASEANGBAND | EMPTY_MIND | RES_SHAR |
+D:statue gargoyle from nethack
+
+N:4716:gremlin
+G:u:g
+I:110:3d5:30:15:20
+W:5:1:500:10
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:HURT:1d6
+B:CLAW:HURT:1d6
+B:BITE:HURT:1d4
+F:IM_POIS | HURT_LITE | EVIL | OPEN_DOOR | 
+F:TAKE_ITEM | CAN_SWIM |
+F:MORTAL | BASEANGBAND
+S:1_IN_8
+S:CAUSE_1
+D:gremlin from nethack
+
+N:4717:gargoyle
+G:u:u
+I:109:3d8:30:30:20
+W:4:1:500:20
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:HURT:2d6
+B:CLAW:HURT:2d6
+B:BITE:HURT:2d4
+F:OPEN_DOOR | 
+F:TAKE_ITEM | CAN_SWIM | RES_WALL | RES_GRAV |
+F:MORTAL | BASEANGBAND | RES_SHAR |
+D:gargoyle from nethack
+
+N:4718:winged gargoyle
+G:u:v
+I:113:4d12:30:15:20
+W:9:2:500:50
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:HURT:3d6
+B:CLAW:HURT:3d6
+B:BITE:HURT:3d4
+F:OPEN_DOOR | 
+F:TAKE_ITEM | CAN_SWIM | RES_WALL | RES_GRAV |
+F:MORTAL | BASEANGBAND | RES_SHAR | CAN_FLY | HAS_EGG | 
+D:winged gargoyle from nethack
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness (low = more alert)
