@@ -1024,7 +1024,7 @@ void teleport_monster_to(int m_idx, int ny, int nx)
  */
 void teleport_player_to(int ny, int nx)
 {
-	int y, x, oy, ox, dis = 0, ctr = 0;
+	int y, x, oy, ox, dis = 0, ctr = 0, testamount = 0;
 
 	if (p_ptr->nastytrap15)
 	{
@@ -1056,12 +1056,20 @@ void teleport_player_to(int ny, int nx)
 	/* Find a usable location */
 	while (1)
 	{
+		testamount = 10000;
+
 		/* Pick a nearby legal location */
-		while (1)
+		while (testamount > 0)
 		{
+			/* fix ridiculous bug where you could target out of bounds squares and freeze the game --Amy */
+			testamount--;
 			y = rand_spread(ny, dis);
 			x = rand_spread(nx, dis);
 			if (in_bounds(y, x)) break;
+			if (testamount < 1) {
+				dis++;
+				testamount = 10000;
+			}
 		}
 
 		/* Accept "naked" floor grids */
