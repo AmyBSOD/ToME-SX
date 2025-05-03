@@ -88768,7 +88768,7 @@ F:GOOD | DEMON | IM_POIS | NO_SLEEP | RES_CHAO | IM_FIRE |
 F:CAN_FLY | RES_SHAR |
 S:1_IN_10 | 
 S:S_DEMON
-D:A rather lowly demon. 
+D:spined devil from nethack
 
 N:5102:horned devil
 G:U:u
@@ -88860,7 +88860,7 @@ F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 F:RES_CHAO |
 S:1_IN_10 | 
 S:S_DEMON
-D:A demon who supposedly kidnaps people. 
+D:bar-lgura from nethack
 
 N:5107:erinys
 G:U:r
@@ -88891,8 +88891,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:A demon that lives in a fountain and never grants you a wish. 
-D:Instead, he will kill you. 
+D:water demon from nethack
 
 N:5109:bearded devil
 G:U:D
@@ -88907,8 +88906,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:GOOD | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:A demon who supposedly has a beard. I wonder whether female 
-D:versions are bearded, too? 
+D:bearded devil from nethack
 
 N:5110:barbed devil
 G:U:r
@@ -88942,8 +88940,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | CAN_FLY |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:A very fast demon who can put you to sleep and is therefore 
-D:really dangerous. Hopefully you have free action. 
+D:chasme from nethack
 
 N:5112:vrock
 G:U:r
@@ -88980,7 +88977,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:A demon whose gaze can drain your strength. 
+D:babau from nethack
 
 N:5114:hezrou
 G:U:r
@@ -89066,7 +89063,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:A fiery type of demon. 
+D:lava demon from nethack
 
 N:5119:pit fiend
 G:U:r
@@ -89429,7 +89426,7 @@ B:HIT:HURT:2d8
 F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY |
 F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | IM_FIRE | IM_ELEC |
 F:DEMON | IM_POIS | RES_WALL | RES_GRAV | TAKE_ITEM |
-D:Some lowly demon. 
+D:efreeti from nethack
 
 N:5136:dao
 G:U:u
@@ -89441,7 +89438,7 @@ B:HIT:HURT:2d8
 F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY |
 F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:DEMON | IM_POIS | RES_WALL | RES_GRAV | TAKE_ITEM |
-D:Another lowly demon. 
+D:dao from nethack
 
 N:5137:marid
 G:U:B
@@ -89453,7 +89450,7 @@ B:HIT:HURT:2d8
 F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY |
 F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | IM_COLD |
 F:DEMON | IM_POIS | RES_WALL | RES_GRAV | TAKE_ITEM |
-D:Supposedly a water-based demon. 
+D:marid from nethack
 
 N:5138:sandestin
 G:U:W
@@ -89468,9 +89465,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:DEMON | SHAPECHANGER | RES_WALL | RES_GRAV | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:There was a long essay about what a sandestin is, but 
-D:I decided to not include it here so let's just say it's 
-D:a demon capable of shifting shape. 
+D:sandestin from nethack
 
 N:5139:jellyfish
 G:~:B
@@ -89724,7 +89719,7 @@ O:0:0:0:0
 B:BITE:HURT:1d3
 F:WILD_GRASS | WILD_TOO | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:A small animal. 
+D:gecko from nethack
 
 N:5153:iguana
 G:R:u
@@ -89735,8 +89730,7 @@ O:0:0:0:0
 B:BITE:HURT:1d4
 F:WILD_GRASS | WILD_WOOD | WILD_TOO | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:A tasty animal that you want to eat because you 
-D:certainly ain't no vegetarian. 
+D:iguana from nethack
 
 N:5154:rhaumbusun
 G:R:v
@@ -89747,7 +89741,7 @@ O:0:0:0:0
 B:GAZE:PARALYZE:1d2
 F:DROP_CORPSE | IM_POIS | RES_SHAR | HAS_EGG |
 F:ANIMAL | MORTAL | BASEANGBAND
-D:This type of lizard can paralyze you with its gaze. 
+D:rhaumbusun from nethack
 
 N:5155:baby crocodile
 G:R:u
@@ -89758,7 +89752,7 @@ O:0:0:0:0
 B:BITE:HURT:1d4
 F:WILD_SHORE | WILD_TOO | DROP_CORPSE | CAN_SWIM |
 F:ANIMAL | MORTAL | BASEANGBAND
-D:A smaller version of the crocodile.
+D:baby crocodile from nethack
 
 N:5156:lizard
 G:R:g
@@ -89919,7 +89913,7 @@ O:0:0:0:0
 B:CHARGE:HURT:4d8
 F:DROP_CORPSE | RES_WALL | RES_GRAV | WILD_TOO | WILD_WOOD |
 F:ANIMAL | MORTAL | BASEANGBAND |
-D:A vicious dinosaur. 
+D:tyrannosaur from nethack
 
 N:5164:bad egg
 G:,:w
@@ -89930,7 +89924,7 @@ O:0:0:0:0
 B:BITE:HURT:1d8
 F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:An egg that became hostile. 
+D:bad egg from nethack
 
 N:5165:killer tomato
 G:,:r
@@ -89941,7 +89935,7 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:A tomato that wants to bite you. 
+D:killer tomato from nethack
 
 N:5166:killer tripe ration
 G:,:u
@@ -89952,8 +89946,7 @@ O:0:0:0:0
 B:BITE:HURT:2d8
 F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:A tripe ration that has somehow become sentient and 
-D:is trying to eat you. 
+D:killer tripe ration from nethack
 
 N:5167:ravenous cream pie
 G:,:w
@@ -89964,8 +89957,7 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:A cream pie that attacks you and somehow doesn't have 
-D:a blindness attack. 
+D:ravenous cream pie from nethack
 
 N:5168:killer food ration
 G:,:u
@@ -89976,7 +89968,7 @@ O:0:0:0:0
 B:BITE:HURT:2d10
 F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:A food ration that doesn't want to be eaten. 
+D:killer food ration from nethack
 
 N:5169:pile of killer coins
 G:$:y
@@ -89988,7 +89980,7 @@ B:BITE:HURT:2d6
 F:ONLY_GOLD | DROP_60 | 
 F:COLD_BLOOD | BASH_DOOR | RES_SHAR | EMPTY_MIND |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
-D:A pile of sentient coins. 
+D:pile of killer coins from nethack
 
 N:5170:large pile of killer coins
 G:$:y
@@ -90000,7 +89992,7 @@ B:BITE:HURT:3d6
 F:ONLY_GOLD | DROP_60 | 
 F:COLD_BLOOD | BASH_DOOR | RES_SHAR | EMPTY_MIND |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
-D:A large pile of sentient coins. 
+D:large pile of killer coins from nethack
 
 N:5171:huge pile of killer coins
 G:$:y
@@ -90012,7 +90004,7 @@ B:BITE:HURT:4d6
 F:ONLY_GOLD | DROP_60 | 
 F:COLD_BLOOD | BASH_DOOR | RES_SHAR | EMPTY_MIND |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
-D:A huge pile of sentient coins. 
+D:huge pile of killer coins from nethack
 
 N:5172:Nightmare
 G:q:r
@@ -90028,13 +90020,7 @@ F:ANIMAL | IM_POIS | GOOD |
 F:MORTAL | BASEANGBAND | FEMALE | 
 F:DROP_SKELETON | DROP_CORPSE | 
 F:IM_FIRE | IM_COLD | IM_ELEC | RES_WALL | RES_GRAV |
-D:Time seemed to stand still as Nightmare let out a 
-D:bloodcurdling scream, its eyes ablaze with agony. The 
-D:beast thrashed wildly, but Corina stood firm, refusing 
-D:to be swayed by the chaos. She channeled her inner strength, 
-D:delivering one final blow — a decisive strike that shattered 
-D:the demon horse's skull and banished it from existence.
-D:[ Corina's Triumph, by ChatGPT ]
+D:Nightmare from nethack
 
 N:5173:Beholder
 G:e:W
@@ -90071,11 +90057,7 @@ S:HEAL | CAUSE_4 | BA_COLD | CONF | SLOW | TPORT | BA_DARK |
 S:HASTE | BA_NETH | DARKNESS | TELE_AWAY | BLINK | TRAPS |
 S:S_UNDEAD | S_MONSTER | S_MONSTERS | BO_ICEE | MIND_BLAST | FORGET |
 S:S_HI_UNDEAD | BRAIN_SMASH | BO_MANA | BA_WATE | HASTE | TELE_AWAY |
-D:The Emperor of the liches, whose name is supposedly an anagram 
-D:of "Vance". He requires a +5 weapon to hit... or he would, but 
-D:this isn't NetHack ;) Still, he has a full suite of nasty spells 
-D:and will make your life miserable unless you can put him down 
-D:quickly! 
+D:Vecna from nethack
 
 N:5175:Farting girl
 G:t:w
@@ -91041,6 +91023,636 @@ F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 S:1_IN_6
 S:BR_POIS
 D:A green dragon, highly powerful. Be prepared for a tough battle. 
+
+N:5237:magma elemental
+G:E:o
+I:108:6d13:12:27:50
+W:12:1:0:80
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CLAW:FIRE:3d10
+B:CLAW:FIRE:1d7
+F:EMPTY_MIND | CAN_FLY |
+F:BASH_DOOR | POWERFUL | IM_FIRE | WILD_VOLCANO |
+F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | RES_NEXU |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_7
+S:BR_FIRE
+D:A bit similar to the fire elemental, but this one 
+D:actually breathes fire. 
+
+N:5238:ice elemental
+G:E:U
+I:108:7d15:12:30:50
+W:14:1:0:120
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CLAW:COLD:3d12
+B:CLAW:COLD:1d8
+F:EMPTY_MIND | CAN_FLY |
+F:BASH_DOOR | POWERFUL | IM_COLD | WILD_MOUNTAIN |
+F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | RES_NEXU |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_7
+S:BR_COLD | BO_ICEE
+D:This elemental breathes ice. 
+
+N:5239:grass elemental
+G:E:g
+I:110:7d17:12:22:50
+W:15:2:0:125
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:HURT:1d11
+F:EMPTY_MIND | 
+F:BASH_DOOR | POWERFUL | WILD_GRASS |
+F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | RES_NEXU |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A rather nonsensical elemental created by Amy, which doesn't 
+D:pose much of a threat. 
+
+N:5240:electrically based monster
+G:E:B
+I:110:8d22:12:20:50
+W:16:1:0:150
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CLAW:ELEC:1d6
+B:CHARGE:ELEC:1d16
+F:EMPTY_MIND | CAN_FLY |
+F:BASH_DOOR | POWERFUL | IM_ELEC | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_7
+S:BR_ELEC
+D:The game was lacking a shock-based elemental, so Amy made one. 
+
+N:5241:dust elemental
+G:E:u
+I:115:9d22:12:24:50
+W:17:1:0:200
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:HURT:1d14
+F:EMPTY_MIND | COLD_BLOOD | CAN_FLY |
+F:BASH_DOOR | POWERFUL | WILD_WASTE | IM_ELEC | 
+F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | RES_NEXU |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A relative of the air elemental. 
+
+N:5242:poison elemental
+G:E:G
+I:116:12d38:12:50:50
+W:26:2:0:1600
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CLAW:POISON:3d20
+B:TOUCH:POISON:1d8
+F:EMPTY_MIND | 
+F:BASH_DOOR | POWERFUL | 
+F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | RES_NEXU |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_5
+S:BR_POIS
+D:This elemental is poison-based, obviously. 
+
+N:5243:electric elemental
+G:E:y
+I:120:15d45:12:48:50
+W:37:3:0:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:ELEC:7d7
+B:TOUCH:ELEC:1d7
+F:EMPTY_MIND | 
+F:BASH_DOOR | POWERFUL | IM_ELEC | 
+F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | RES_NEXU |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A lightning-based elemental.
+
+N:5244:concrete elemental
+G:E:D
+I:109:20d60:12:100:50
+W:41:4:0:5500
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRUSH:HURT:4d10
+F:EMPTY_MIND | 
+F:BASH_DOOR | POWERFUL | IM_FIRE | RES_SHAR |
+F:IM_POIS | RES_WALL | RES_GRAV | RES_CHAO | RES_NETH |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:This elemental is super resilient to attacks. 
+
+N:5245:glass elemental
+G:E:D
+I:115:30d90:12:60:50
+W:63:5:0:7200
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CHARGE:LOSE_STR:3d17
+B:STING:HURT:1d1
+F:EMPTY_MIND | 
+F:BASH_DOOR | POWERFUL | IM_FIRE | RES_SHAR |
+F:IM_POIS | RES_WALL | RES_GRAV | RES_CHAO | RES_NETH |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:While it sounds like this elemental might be brittle, it's actually 
+D:rather sturdy and powerful. 
+
+N:5246:hill giant
+G:P:u
+I:108:6d12:20:12:50
+W:8:1:5000:37
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:2d8
+F:DROP_60 | WILD_MOUNTAIN | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:GIANT | MORTAL | BASEANGBAND |
+S:1_IN_8
+S:ARROW_2
+D:Hill Giants are the Jotuns most commonly found on Midgard; 
+D:fortunately, they are the smallest and weakest of all the jotun 
+D:races, the most similar to humans.  They wear enormous smocks of 
+D:homespun, or leather armor when they can get it made in their 
+D:size, and wield great wooden clubs.  Very rarely an individual 
+D:will show a talent for magic. 
+
+N:5247:granite giant
+G:P:W
+I:110:14d20:20:45:50
+W:15:3:5000:260
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:2d10
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:GIANT | MORTAL | BASEANGBAND |
+F:IM_FIRE | RES_WALL | RES_GRAV | 
+S:1_IN_6
+S:ARROW_3
+D:A relative of the stone giant. 
+
+N:5248:grass giant
+G:P:g
+I:110:11d18:20:15:50
+W:15:3:5000:200
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:2d2
+B:SPIT:ACID:2d2
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:GIANT | MORTAL | BASEANGBAND |
+S:1_IN_7
+S:ARROW_2
+D:These giants are relatively wimpy, but have an annoying acid spit attack. 
+
+N:5249:Hrungnir, The Hill Giant Lord
+G:P:u
+I:108:12d50:20:20:50
+W:16:10:10000:800
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:5d8
+F:DROP_12 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:GIANT | MORTAL | BASEANGBAND | NO_SLEEP | 
+F:MALE | UNIQUE | CAN_SPEAK | DROP_GREAT | 
+S:1_IN_6
+S:ARROW_4 | MISSILE
+D:Before you looms a gigantic figure out of legend.  Long ago 
+D:in a more peaceful time, your godparents spun tales of the 
+D:Nine Worlds around you: the worlds of the Aesir and Vanir 
+D:gods above; the world of the dead and the dark dwarfs below; 
+D:and grim worlds of frost and flame and stone through which 
+D:stride the mighty Jotuns, called Giants in those rare times 
+D:when they walk the Earth.  The enormous being before you can 
+D:only be such a Jotun: taller and broader than any man, or 
+D:even any ogre, yet equipped and accoutered in a manner which 
+D:suggests intelligence much beyond any mere monster. 
+
+N:5250:Utgardhalok, The Hill Giant King
+G:P:u
+I:108:12d55:20:28:50
+W:18:10:10000:1200
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:5d9
+F:DROP_12 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:GIANT | MORTAL | BASEANGBAND | NO_SLEEP | 
+F:MALE | UNIQUE | CAN_SPEAK | DROP_GREAT | 
+S:1_IN_6
+S:ARROW_4 | MISSILE
+D:Shaggy Utgardhalok regards you contemptuously: 
+D:"What?  You still live?  Then that bumbler Hrungnir must have failed in his 
+D:mission, damn his tick-ridden hide.  I should have known better than to 
+D:believe that liar's message of success.  At least I won't have to punish the 
+D:scumworm myself - I imagine you have taken care of that for me. 
+D:"You have been very lucky to live this long, little mortal.  Now see the end 
+D:of your luck approach on my club!" 
+
+N:5251:Rungnir, The Stone Giant King
+G:P:u
+I:108:13d60:20:36:50
+W:20:10:10000:1500
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:5d10
+F:DROP_12 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:GIANT | MORTAL | BASEANGBAND | NO_SLEEP | 
+F:MALE | UNIQUE | CAN_SPEAK | DROP_GREAT | 
+S:1_IN_5
+S:ARROW_4 | MISSILE
+D:Rungnir snorts at your approach.  His voice is like the grinding of great 
+D:slabs of stone: 
+D:"Bah, those mangy hill giants can do nothing right.  Now you contest with 
+D:me.  Maybe you like to eat rock."  His laughter rattles your bones as he 
+D:hefts an enormous boulder. 
+
+N:5252:Thrym, The Frost Giant King
+G:P:u
+I:108:13d65:20:45:50
+W:22:10:10000:1800
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:5d11
+F:DROP_12 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | IM_COLD | 
+F:GIANT | MORTAL | BASEANGBAND | NO_SLEEP | 
+F:MALE | UNIQUE | CAN_SPEAK | DROP_GREAT | 
+S:1_IN_5
+S:ARROW_4 | BO_ICEE
+D:Thrym towers before you in a frost-rimed mailcoat, a great steel axe 
+D:gleaming in his huge hands.  From his belt hang many grisly trophies, 
+D:including two recognizably human heads, frozen in blocks of ice, each gaping 
+D:in the semblance of horror.  He scowls and hisses: 
+D:"I've received several warnings of your progress, troublesome mortal. 
+D:May ancient Ymir grant me and mine the strength to stop your meddling." 
+
+N:5253:Thiassa, The Fire Giant King
+G:P:u
+I:108:14d70:20:55:50
+W:24:10:10000:2100
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:5d13
+F:DROP_12 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | IM_FIRE | 
+F:GIANT | MORTAL | BASEANGBAND | NO_SLEEP | 
+F:MALE | UNIQUE | CAN_SPEAK | DROP_GREAT | 
+S:1_IN_5
+S:ARROW_4 | BO_PLAS
+D:Great Thiassa stands before you, a bearded mountain in black iron plate 
+D:armor.  At your advance, he bellows, 
+D:"So, here comes the tiny mortal who would sport with giants.  Stone may 
+D:break and ice may melt, but fire will consume all at world's end, and so 
+D:will it consume you.  My sword, forged in Muspelheim's bright flames, 
+D:craves mortal blood; let it now feed."  He raises a broadsword the size 
+D:of a ship's mast, parting his teeth in a nasty grin. 
+
+N:5254:Stahngnir, The Steel Giant Lord
+G:P:u
+I:112:20d135:20:110:50
+W:40:25:10000:15000
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:6d12
+B:HIT:HURT:6d12
+B:TOUCH:UN_BONUS
+B:TOUCH:UN_BONUS
+F:DROP_22 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | 
+F:GIANT | MORTAL | BASEANGBAND | NO_SLEEP | 
+F:MALE | UNIQUE | CAN_SPEAK | DROP_GREAT | 
+F:RES_WALL | RES_GRAV | RES_DISE | RES_CHAO | 
+S:1_IN_4
+S:ARROW_4
+D:He's the lord of the steel giants. His strategy involves 
+D:disenchantment, draining the pluses from your gear like you 
+D:cannot believe. If you can survive that, you only need to whittle 
+D:down his considerable health pool. 
+
+N:5255:steel giant
+G:P:W
+I:109:20d40:20:60:50
+W:20:4:5000:1600
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:4d12
+B:HIT:HURT:4d12
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:GIANT | MORTAL | BASEANGBAND |
+F:RES_WALL | RES_GRAV | RES_DISE | 
+S:1_IN_5
+S:ARROW_4
+D:A giant covered with hardened metal. They're 
+D:rather hard to kill. 
+
+N:5256:two-headed giant
+G:P:o
+I:110:22d45:20:50:50
+W:23:1:5000:1650
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:4d8
+B:HIT:HURT:5d6
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:GIANT | MORTAL | BASEANGBAND |
+S:1_IN_5
+S:ARROW_4
+D:Also known as "ettin", this giant has two heads (duh). 
+
+N:5257:concrete giant
+G:P:o
+I:108:22d50:20:75:50
+W:24:4:5000:1800
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:7d7
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:GIANT | MORTAL | BASEANGBAND |
+S:1_IN_5
+S:ARROW_4
+D:This giant is well-armored and hits very hard. 
+
+N:5258:glass giant
+G:P:w
+I:116:20d45:20:20:50
+W:28:4:5000:1900
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:5d11
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:GIANT | MORTAL | BASEANGBAND |
+F:RES_CHAO | IM_ELEC | IM_FIRE | NO_SLEEP | CAN_FLY | 
+S:1_IN_5
+S:ARROW_4
+D:A relatively frail, weakly armored giant, but he packs a punch. 
+
+N:5259:electric giant
+G:P:o
+I:116:25d60:20:50:50
+W:31:4:5000:2400
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:ELEC:8d8
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:GIANT | MORTAL | BASEANGBAND |
+F:IM_ELEC
+S:1_IN_5
+S:ARROW_4 | BR_ELEC
+D:This giant carries a shocking sword, and can also breathe lightning.  
+
+N:5260:poison giant
+G:P:g
+I:115:25d66:20:50:50
+W:35:4:5000:2600
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:POISON:4d19
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:GIANT | MORTAL | BASEANGBAND |
+F:IM_POIS
+S:1_IN_5
+S:ARROW_4
+D:A giant wielding a poisoned sword. By this time you're probably resistant 
+D:to poison, and even if you aren't, you likely won't care. 
+
+N:5261:earth giant
+G:P:u
+I:108:40d90:20:150:50
+W:42:4:5000:3500
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:1d91
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:GIANT | MORTAL | BASEANGBAND |
+S:1_IN_5
+S:ARROW_4
+D:The hide of this giant is extremely thick. Use magic to 
+D:defeat him more quickly. 
+
+N:5262:green monster
+G:H:g
+I:110:5d8:35:5:255
+W:5:2:5000:15
+E:0:1:0:2:1:0
+O:20:50:20:0
+B:BITE:HURT:2d6
+F:BASH_DOOR | CAN_FLY | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | 
+S:1_IN_6
+S:BR_LITE
+D:A green-colored monster that breathes light. 
+
+N:5263:blue monster
+G:H:B
+I:110:10d10:35:10:255
+W:10:2:5000:35
+E:0:1:0:2:1:0
+O:20:50:20:0
+B:BITE:HURT:2d8
+F:BASH_DOOR | CAN_FLY | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND | IM_ELEC | 
+S:1_IN_6
+S:BR_LITE
+D:A blue-colored monster that breathes light. 
+
+N:5264:red monster
+G:H:r
+I:110:10d16:35:33:255
+W:15:2:5000:75
+E:0:1:0:2:1:0
+O:20:50:20:0
+B:BITE:HURT:4d8
+F:BASH_DOOR | CAN_FLY | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND | IM_FIRE | 
+D:A red-colored monster that tries to bite you.
+
+N:5265:electro monster
+G:H:B
+I:110:10d17:35:20:255
+W:16:2:5000:80
+E:0:1:0:2:1:0
+O:20:50:20:0
+B:TOUCH:ELEC:1d6
+B:CHARGE:ELEC:1d16
+F:BASH_DOOR | CAN_FLY | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND | IM_ELEC | 
+S:1_IN_6
+S:BR_ELEC
+D:An electric monster that breathes lightning.
+
+N:5266:dark monster
+G:H:D
+I:110:12d21:35:20:255
+W:20:2:5000:150
+E:0:1:0:2:1:0
+O:20:50:20:0
+B:BITE:TERRIFY:2d10
+B:TOUCH:TERRIFY:2d8
+F:BASH_DOOR | CAN_FLY | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND | RES_CHAO | RES_NETH | 
+S:1_IN_5
+S:BR_DARK
+D:A black monster that breathes darkness.
+
+N:5267:white monster
+G:H:w
+I:110:15d28:35:20:255
+W:25:2:5000:300
+E:0:1:0:2:1:0
+O:20:50:20:0
+B:BITE:SHATTER:2d12
+F:BASH_DOOR | CAN_FLY | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND | 
+D:A white monster that trashes the dungeon.
+
+N:5268:golden monster
+G:H:y
+I:110:18d35:35:34:255
+W:30:3:5000:500
+E:0:1:0:2:1:0
+O:20:50:20:0
+B:BITE:CONFUSE:2d15
+B:TOUCH:DISEASE:2d15
+F:BASH_DOOR | CAN_FLY | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND | 
+F:IM_ELEC | IM_FIRE | IM_POIS | IM_ACID | IM_COLD |
+F:RES_DISE | RES_CHAO | 
+S:1_IN_5
+S:MISSILE | BR_MANA
+D:A golden monster that uses magic.
+
+N:5269:huge ogre
+G:O:y
+I:110:12d15:20:20:30
+W:12:1:2100:170
+E:1:1:1:2:1:1
+O:10:85:0:0
+B:HIT:HURT:2d9
+B:HIT:HURT:1d12
+F:DROP_60 | DROP_CORPSE | ONLY_GOLD | 
+F:OPEN_DOOR | BASH_DOOR | MALE | 
+F:EVIL | GIANT | TAKE_ITEM |
+F:MORTAL | BASEANGBAND |
+D:Ogre: huge, man-eating humanoid monster.  Ogres superficially 
+D:resemble gigantic humans of bestial aspect; they stand 
+D:approximately six cubits tall, and weigh some thirty stone, 
+D:or more for well-fed individuals.  The face is broad and ruddy, 
+D:with a mouth filled with jutting tusks; the skin is leathery 
+D:and varies in color from ochre to brick red.  An ogre will 
+D:wield any sufficiently large weapon, and will wear patchwork 
+D:or cap-and-pie armor when it can find such; typically, however, 
+D:it carries but a crude club or spear.  Ogres love gold and 
+D:silver; indeed, the promise of lucre sometimes leads a more 
+D:intelligent ogre to adopt the veneer of civilization and 
+D:consort with humans, though its cruel hungers will eventually 
+D:tell true. 
+
+N:5270:slime
+G:j:G
+I:110:3d10:12:50:1
+W:4:1:1000:8
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:ACID:2d6
+F:NEVER_MOVE | 
+F:STUPID | EMPTY_MIND | COLD_BLOOD | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT |
+F:IM_POIS | IM_ACID | RES_WALL | RES_GRAV | 
+D:Slime: sessile, cancerous underground growth.  In unclean places 
+D:beneath the earth there grows a thick, gray-green, gluey stuff 
+D:which clings in great sheets to walls, ceilings, and floors. 
+D:Vibrations draw it; it is sufficiently motile to slop itself in 
+D:the direction of felt motion.  Where it touches flesh, it clings 
+D:and grows, rapidly devouring the victim in a fit of fungal 
+D:gluttony.  Even a hit from a small blob of slime will burn and 
+D:chew, and if left unchecked will eventually grow over the rest 
+D:of the victim.  All other creatures hate and fear slime. 
+D:It is difficult to destroy without magical means. 
+
+N:5271:green slime
+G:j:g
+I:110:6d10:12:8:1
+W:6:1:1000:14
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:ACID:3d4
+F:NEVER_MOVE | 
+F:STUPID | EMPTY_MIND | COLD_BLOOD | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT |
+F:IM_POIS | IM_ACID | RES_WALL | RES_GRAV | IM_ELEC | IM_COLD | 
+D:Don't worry, it won't infect you. It'll hit you with acid though.  
+
+N:5272:viper
+G:J:G
+I:110:3d11:4:9:99
+W:5:1:600:11
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:LOSE_STR:1d6
+B:BITE:LOSE_STR:1d6
+F:WILD_TOO | WILD_WOOD | RES_SHAR | CAN_SWIM | IM_POIS |
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND
+D:Viper: large serpent with a venomous bite.  While poisonous 
+D:snakes are not common in the land, a sufficiently ruthless 
+D:householder may plant a few as guardians to deter thieves 
+D:and other intruders.  Of course, it will bite friends as 
+D:well as foes, and so is most useful when you have but few friends. 
+
+N:5273:large snake
+G:J:G
+I:115:4d19:4:20:99
+W:8:1:800:19
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:LOSE_STR:2d8
+F:WILD_TOO | WILD_WOOD | WILD_GRASS | RES_SHAR | CAN_SWIM | IM_POIS |
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND
+D:Snake: a strangling sea monster, adapted to land.  Since 
+D:longships first met the waves, Vikings and sailors have 
+D:feared the great snakes of the sea, which can break a 
+D:ship's hull in their powerful coils.  Recently, travelers 
+D:have brought reports of similar (though mercifully smaller) 
+D:snakes on land, hiding in dense forests or ruins. 
+
+N:5274:gruesome troll
+G:T:G
+I:109:15d33:20:28:40
+W:15:1:6000:250
+E:1:1:1:2:1:1
+O:30:70:0:0
+B:HIT:HURT:4d4
+B:CLAW:HURT:4d4
+B:BITE:HURT:3d6
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | SUSCEP_FIRE | REGENERATE | 
+F:EVIL | TROLL | REGENERATE | BASEANGBAND
+D:Troll: large, vicious, omnivorous humanoid with 
+D:near-supernatural regenerative powers.  Tall as an ogre, 
+D:a troll appears all arms, legs, ribs, and jaws.  Its slouch 
+D:bends its gaunt, ribby body halfway back to the ground; its 
+D:olive-green skin, studded with warts, glistens with slime, 
+D:while its black hair writhes like living snakes over large, 
+D:wet black eyes.  Each long, knotty limb is tipped with 
+D:enormous claws.  While a troll, ever hungry, will eat 
+D:anything it can rend and swallow, it prefers warm flesh, 
+D:which it can track with its keen sense of smell and doglike 
+D:intelligence.  Life burns brightly within the troll, which 
+D:can recover from a mortal wound within minutes.  A troll fears fire. 
 
 # N: serial number : monster name
 # G: symbol : color
