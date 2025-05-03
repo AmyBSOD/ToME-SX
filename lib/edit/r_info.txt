@@ -90034,6 +90034,925 @@ F:BASEANGBAND | FEMALE
 D:You feel that the tender farting noises produced by this lady's sexy butt 
 D:are very erotic. 
 
+N:5179:mithril beetle
+G:K:W
+I:105:2d10:10:18:30
+W:0:3:500:4
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+F:WEIRD_MIND | BASH_DOOR | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS |
+F:IM_ACID | IM_FIRE | IM_COLD | RES_CHAO | RES_WALL | RES_GRAV |
+D:Inspired by the bundle head, aka Amy's roommate; she didn't know 
+D:what a "mithril" is, and guessed it might be some sort of beetle. 
+
+N:5180:giant red ant
+G:a:o
+I:110:8d12:10:24:10
+W:9:1:300:40
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:3d5
+B:STING:POISON:3d5
+F:DROP_SKELETON | WILD_WOOD | HAS_EGG | IM_POIS | 
+F:ANIMAL | WILD_TOO | WILD_GRASS | 
+F:MORTAL | BASEANGBAND
+D:Ant: dog-sized giant insect.  Ants will range a great distance 
+D:from their nest in search of food to claim.  They are formidable 
+D:foes, with a crushing bite and stiffly armored body, and a potent 
+D:sting used in defense.  A ant will fight to the death. 
+
+N:5181:bugbeam cube
+G:j:g
+I:102:4d8:12:3:1
+W:6:2:750:15
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:PARALYZE:2d4
+F:STUPID | EMPTY_MIND | COLD_BLOOD |
+F:BASH_DOOR | TAKE_ITEM |
+F:IM_POIS | IM_COLD | IM_ELEC | IM_POIS | IM_ACID |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
+F:EMPTY_MIND | RES_SHAR | RES_WALL | RES_GRAV | 
+D:This gelatinous cube is somehow much slower than a regular 
+D:one, probably because of a bug in their coding. Still, don't 
+D:get close unless you're sure you can survive the paralysis! 
+
+N:5182:gelatinous glob
+G:j:g
+I:108:4d8:12:3:1
+W:6:1:750:15
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:PARALYZE:3d4
+B:TOUCH:HURT:1d4
+F:STUPID | EMPTY_MIND | COLD_BLOOD |
+F:BASH_DOOR | TAKE_ITEM |
+F:IM_POIS | IM_COLD | IM_ELEC | IM_POIS | IM_ACID |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
+F:EMPTY_MIND | RES_SHAR | RES_WALL | RES_GRAV | 
+D:Gelatinous Glob: eerie subterranean scavenger, resembling 
+D:nothing so much as an enormous lump of near-transparent aspic. 
+D:Gelatinous Globs measure roughly seven cubits in each direction. 
+D:Oozing slowly about, they surround any object, 
+D:living or dead, that they encounter; organic objects they paralyze 
+D:and digest, while inorganic objects they encase and retain, 
+D:excreting them at rare intervals.  Their strange structure, or 
+D:perhaps their strange lack of structure, renders them immune 
+D:to many forms of magical attack. 
+
+N:5183:onanocter 1
+G:j:v
+I:108:4d8:12:8:1
+W:6:5:750:18
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:1d6
+F:STUPID | EMPTY_MIND | COLD_BLOOD |
+F:BASH_DOOR | TAKE_ITEM |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
+F:RES_NEXU | IM_FIRE | IM_POIS |
+S:1_IN_5
+S:BR_FIRE
+D:A weird hexagon that moves about the dungeon. It is armed 
+D:with a fiery pistol.
+
+N:5184:onanocter 2
+G:j:v
+I:108:8d13:12:12:1
+W:12:5:750:45
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:1d8
+F:STUPID | EMPTY_MIND | COLD_BLOOD |
+F:BASH_DOOR | TAKE_ITEM |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
+F:RES_NEXU | IM_COLD | IM_POIS |
+S:1_IN_5
+S:BR_COLD
+D:A weird hexagon that moves about the dungeon. It is armed 
+D:with an icy rifle.
+
+N:5185:onanocter 3
+G:j:v
+I:108:10d19:12:19:1
+W:18:5:750:120
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:2d6
+B:GAZE:FIRE:2d7
+F:STUPID | EMPTY_MIND | COLD_BLOOD |
+F:BASH_DOOR | TAKE_ITEM |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
+F:RES_NEXU | IM_ELEC | IM_POIS | RES_DISE |
+S:1_IN_5
+S:BR_ELEC
+D:A weird hexagon that moves about the dungeon. It is armed 
+D:with an electric machine gun.
+
+N:5186:onanocter 4
+G:j:v
+I:108:13d26:12:23:1
+W:24:5:750:300
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:2d8
+B:GAZE:ELEC:2d7
+B:TOUCH:HURT:2d7
+F:STUPID | EMPTY_MIND | COLD_BLOOD |
+F:BASH_DOOR | TAKE_ITEM |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
+F:RES_NEXU | IM_ELEC | IM_POIS | RES_DISE | IM_FIRE |
+S:1_IN_5
+S:BR_POIS
+D:A weird hexagon that moves about the dungeon. It is armed 
+D:with poison missiles.
+
+N:5187:onanocter 5
+G:j:v
+I:108:15d35:12:33:1
+W:30:5:750:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:2d10
+B:GAZE:ACID:2d10
+B:TOUCH:EAT_FOOD:2d10
+B:CRUSH:DISEASE:2d12
+F:STUPID | EMPTY_MIND | COLD_BLOOD |
+F:BASH_DOOR | TAKE_ITEM |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
+F:RES_NEXU | IM_ELEC | IM_POIS | RES_DISE | IM_FIRE | IM_ACID |
+S:1_IN_5
+S:BR_ACID
+D:A weird hexagon that moves about the dungeon. It is armed 
+D:with an acidic revolver.
+
+N:5188:onanocter 6
+G:j:v
+I:108:18d44:12:48:1
+W:36:5:750:1200
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:2d12
+B:GAZE:CONFUSE:2d12
+B:TOUCH:DISEASE:2d12
+B:CRUSH:ABOMINATION:2d15
+F:STUPID | EMPTY_MIND | COLD_BLOOD |
+F:BASH_DOOR | TAKE_ITEM |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
+F:RES_NEXU | IM_ELEC | IM_POIS | RES_DISE | IM_FIRE | IM_ACID |
+F:RES_WALL | RES_GRAV |
+S:1_IN_5
+S:BR_NEXU
+D:A weird hexagon that moves about the dungeon. It is armed 
+D:with a phaser rifle.
+
+N:5189:onanocter 7
+G:j:v
+I:108:20d48:12:60:1
+W:42:7:750:1900
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:EAT_LITE:2d15
+B:GAZE:EXP_40:2d15
+B:TOUCH:LOSE_INT:2d15
+B:CRUSH:BLIND:2d20
+F:STUPID | EMPTY_MIND | COLD_BLOOD |
+F:BASH_DOOR | TAKE_ITEM |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
+F:RES_NEXU | IM_ELEC | IM_POIS | RES_DISE | IM_FIRE | IM_ACID |
+F:RES_WALL | RES_GRAV | RES_CHAO | RES_NETH |
+S:1_IN_5
+S:BR_DISI
+D:A weird hexagon that moves about the dungeon. It is armed 
+D:with a disintegrating blaster.
+
+N:5190:onanocter 9
+G:j:v
+I:108:22d55:12:90:1
+W:50:10:750:4000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:INSANITY:2d15
+B:GAZE:EXP_80:2d15
+B:TOUCH:LOSE_ALL:2d15
+B:CRUSH:SHATTER:2d20
+F:STUPID | EMPTY_MIND | COLD_BLOOD |
+F:BASH_DOOR | TAKE_ITEM |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
+F:RES_NEXU | IM_ELEC | IM_POIS | RES_DISE | IM_FIRE | IM_ACID |
+F:RES_WALL | RES_GRAV | RES_CHAO | RES_NETH | PASS_WALL |
+S:1_IN_5
+S:BR_MANA
+D:A weird hexagon that moves about the dungeon. It is armed 
+D:with a vacuum cleaner. 
+
+N:5191:onanocter 10
+G:j:v
+I:108:40d110:12:120:1
+W:100:10:750:25000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:RAGNAROK:4d15
+B:GAZE:EXP_80:4d15
+B:TOUCH:LOSE_ALL:4d15
+B:CRUSH:TIME:4d20
+F:STUPID | EMPTY_MIND | COLD_BLOOD |
+F:BASH_DOOR | TAKE_ITEM |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT | IM_COLD |
+F:RES_NEXU | IM_ELEC | IM_POIS | RES_DISE | IM_FIRE | IM_ACID |
+F:RES_WALL | RES_GRAV | RES_CHAO | RES_NETH | PASS_WALL |
+S:1_IN_5
+S:BR_WALL
+D:A weird hexagon that moves about the dungeon. It is armed 
+D:with a gauss rifle.
+
+N:5192:wild dog
+G:C:y
+I:110:2d5:10:10:10
+W:2:1:400:4
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d9
+F:WILD_TOO | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:Ages past, mankind bred domesticated canines from their 
+D:wild cousins. Not all dogs were tamed, however, and some 
+D:that were have gone back to the wilds.  While still 
+D:less dangerous than wolves, beware the claws and bite 
+D:of these hunters, especially if found in packs. 
+
+N:5193:gray wolf
+G:C:W
+I:110:8d12:10:18:10
+W:9:1:1000:40
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:CLAW:HURT:2d6
+F:WILD_TOO | WILD_WOOD | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:Wolves and men have been enemies for centuries, despite 
+D:our successful attempts to breed domestic canines millennia 
+D:ago.  Although most fearsome in packs, even a single 
+D:gray wolf can be deadly to an unprepared adventurer. 
+
+N:5194:white wolf
+G:U:W
+I:110:10d18:10:38:10
+W:16:1:1000:180
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:CLAW:HURT:2d6
+B:BITE:COLD:1d8
+F:WILD_TOO | WILD_WOOD | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:But even more dangerous than the gray wolf is the rare 
+D:white wolf, whose chill breath can freeze the blood in a 
+D:man's veins. 
+
+N:5195:Rat-Man
+G:h:W
+I:110:4d13:20:16:10
+W:8:1:1000:24
+E:1:1:1:2:1:1
+O:20:70:0:0
+B:HIT:HURT:1d10
+F:OPEN_DOOR | BASH_DOOR | DROP_90 | ONLY_GOLD |
+F:BASEANGBAND | DROP_CORPSE | TAKE_ITEM |
+D:A man with a rat's head. He wants to kill you and 
+D:devour your corpse. 
+
+N:5196:Wolf-Man
+G:h:W
+I:110:7d18:20:22:10
+W:12:1:1000:36
+E:1:1:1:2:1:1
+O:20:70:0:0
+B:HIT:HURT:1d15
+F:OPEN_DOOR | BASH_DOOR | DROP_90 | ONLY_GOLD |
+F:BASEANGBAND | DROP_CORPSE | TAKE_ITEM |
+D:A man with a wolf's head. Upon seeing you, he smirks 
+D:something in his lupine language and attacks with his 
+D:spiked club. 
+
+N:5197:Bear-Man
+G:h:r
+I:110:7d24:20:28:10
+W:14:1:1000:60
+E:1:1:1:2:1:1
+O:20:70:0:0
+B:HIT:HURT:1d18
+F:OPEN_DOOR | BASH_DOOR | DROP_90 | ONLY_GOLD |
+F:BASEANGBAND | DROP_CORPSE | TAKE_ITEM |
+D:A man with a bear's head. He roars upon seeing you and 
+D:immediately proceeds to swing a giant morning star at you. 
+
+N:5198:Bull-Man
+G:h:o
+I:110:11d28:20:44:10
+W:19:1:1000:230
+E:1:1:1:2:1:1
+O:20:70:0:0
+B:HIT:HURT:1d12
+B:HIT:HURT:1d12
+F:OPEN_DOOR | BASH_DOOR | DROP_90 | ONLY_GOLD |
+F:BASEANGBAND | DROP_CORPSE | TAKE_ITEM |
+D:A man with a bull's head. He storms toward you, determined 
+D:to impale you on his horns. 
+
+N:5199:evil warrior
+G:h:W
+I:110:6d21:20:31:10
+W:12:1:1000:42
+E:1:1:1:2:1:1
+O:20:70:0:0
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+F:OPEN_DOOR | BASH_DOOR | DROP_90 | ONLY_GOLD |
+F:BASEANGBAND | DROP_CORPSE | TAKE_ITEM |
+D:These evil people run around attacking those whom they 
+D:perceive as an easy target, and then make off with 
+D:whatever loot and money the victims had. 
+
+N:5200:berserker
+G:h:W
+I:110:7d25:20:60:10
+W:14:1:1000:70
+E:1:1:1:2:1:1
+O:20:70:0:0
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+F:OPEN_DOOR | BASH_DOOR | DROP_90 | ONLY_GOLD |
+F:BASEANGBAND | DROP_CORPSE | TAKE_ITEM |
+D:Berserkers are known for attacking relentlessly. They 
+D:will not stop until their enemy is dead. 
+
+N:5201:hobgoblin fighter
+G:k:o
+I:108:3d7:20:2:30
+W:3:1:800:4
+E:1:1:1:2:1:1
+O:0:50:0:30
+B:HIT:HURT:3d3
+F:DROP_60 |
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:ORC | EVIL | BASEANGBAND |
+F:DROP_SKELETON | DROP_CORPSE |
+D:Hobgoblin: large, solitary goblin.  Physically, a hobgoblin 
+D:resembles a goblin fighter suffering from malnutrition, 
+D:which is exactly what it is: the occasional survivor of 
+D:an intra-tribal conflict, exiled from the tribe by the 
+D:victorious chieftain.  Hobgoblins wear armor stolen from 
+D:humans or goblins, and wield any weapon that comes to hand. 
+D:They hold no allegiance to their former tribe, but will 
+D:usually avoid it in the interest of self-preservation. 
+D:All other weaker creatures are possible game to a 
+D:desperate hobgoblin.  Occasionally hobgoblins will locate 
+D:one another, and may form a small band of their own, though 
+D:such bands are usually short-lived.
+
+N:5202:goblin fighter
+G:k:o
+I:108:4d12:20:4:30
+W:5:1:800:7
+E:1:1:1:2:1:1
+O:0:50:0:30
+B:HIT:HURT:2d6
+F:DROP_60 |
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:ORC | EVIL | BASEANGBAND |
+F:DROP_SKELETON | DROP_CORPSE |
+D:Goblins: predatory humanoid warrior tribe.  These 
+D:bandits roam craggy and mountainous areas, preying on 
+D:lone travelers, small caravans, and small outlying 
+D:townships.  Vigorous military action has cleansed much 
+D:of the land from their scourge; most of the survivors have 
+D:fled deep into the mountains, or taken refuge in ruins and 
+D:caves.  Goblins range from three to four cubits in height, 
+D:with the larger individuals ("fighters") bullying and 
+D:leading the smaller; they have little other apparent 
+D:organization, traveling in familial bands.  Some tribes of 
+D:goblins may enlist the protection of a larger monster, 
+D:yielding to it a large share of any booty collected in 
+D:exchange for its handling any outsize foes. 
+
+N:5203:ogroblin
+G:k:u
+I:110:4d12:20:4:30
+W:5:1:800:7
+E:1:1:1:2:1:1
+O:0:50:0:30
+B:HIT:HURT:2d6
+F:DROP_60 | RAND_25 |
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:ORC | EVIL | BASEANGBAND |
+F:DROP_SKELETON | DROP_CORPSE |
+D:This funny-looking goblin consists only of a head and 
+D:feet; they lack a torso. Apart from that, they're about 
+D:as vicious and hostile as other goblins. 
+
+N:5204:brown bear
+G:Y:r
+I:110:8d14:30:20:20
+W:10:1:2000:40
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BITE:HURT:2d8
+B:CLAW:HURT:3d5
+F:ANIMAL | TAKE_ITEM | WILD_WOOD
+F:DROP_CORPSE | MORTAL | BASEANGBAND 
+D:The brown bear, while smaller in stature than the 
+D:larger cave bear, is still a mighty opponent, and 
+D:both these creatures can do substantial damage with 
+D:both claw and bite. 
+
+N:5205:cave bear
+G:Y:D
+I:110:12d30:30:35:20
+W:19:1:3000:220
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BITE:HURT:2d10
+B:CLAW:HURT:4d5
+F:ANIMAL | TAKE_ITEM | WILD_MOUNTAIN
+F:DROP_CORPSE | MORTAL | BASEANGBAND 
+D:There are several varieties of bears that roam the 
+D:hills and caves of the land, and all are considered 
+D:dangerous foes.  The fiercest of these is the monstrous 
+D:cave bear, a giant omnivore that stands 8-10 feet tall 
+D:on its hind legs. 
+
+N:5206:giant rat
+G:r:W
+I:117:1d2:8:5:30
+W:0:1:200:1
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d2
+F:ANIMAL | MORTAL | BASEANGBAND |
+D:Inhabitants of the seedy underbelly of mankind's civilization, 
+D:rats have scavenged our leavings for millennia.  The rats in 
+D:the caves and dungeons below the castle, however, are larger 
+D:and more intelligent than their city cousins, and when found in 
+D:numbers can be much more deadly. 
+
+N:5207:carrion creeper
+G:r:G
+I:110:6d6:8:13:30
+W:6:1:200:24
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d3
+B:BITE:HURT:1d3
+B:BITE:HURT:2d3
+B:BITE:HURT:2d3
+F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | HAS_EGG | 
+D:Another creation of wizardry run wild, this monster resembles a 
+D:giant green cutworm, with a set of tentacles sprouting from its 
+D:head.  It roams the caves seeking carrion for food, but has no 
+D:qualms about attacking a living creature if carrion is scarce. 
+D:Its many attacks make it a feared opponent. 
+
+N:5208:cave creeper
+G:r:W
+I:110:6d15:8:20:30
+W:12:1:200:50
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d5
+B:BITE:HURT:1d5
+B:BITE:HURT:2d5
+B:BITE:HURT:2d5
+F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | HAS_EGG | 
+D:The bigger, meaner brother of the carrion creeper. They attack 
+D:many times in succession. 
+
+N:5209:giant trapdoor spider
+G:S:D
+I:110:20d20:8:20:80
+W:18:1:1000:350
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:4d5
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | WILD_WOOD |
+F:ANIMAL | SPIDER | IM_POIS | HAS_EGG |
+F:MORTAL | BASEANGBAND
+D:Spider: overgrown cousin of the eight-legged predator of 
+D:house and field, ranging in size from large cat to draft 
+D:horse.  Many carry a venomous bite, quickly lethal to 
+D:warm-blooded prey.  All are swift runners and dangerous. 
+
+N:5210:mithril beetle
+G:K:b
+I:110:6d10:10:2:30
+W:5:4:500:20
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:HIT:HURT:2d5
+F:WEIRD_MIND | BASH_DOOR | DROP_CORPSE | HAS_EGG | 
+F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | IM_ELEC | 
+D:A big, armored beetle. 
+
+N:5211:young red dragon
+G:d:r
+I:108:6d10:20:20:70
+W:6:1:5000:24
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_FIRE |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+D:A red dragon, too young to have developed a breath weapon. 
+
+N:5212:young white dragon
+G:d:w
+I:108:6d10:20:20:70
+W:6:1:5000:24
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_COLD |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+D:A white dragon, too young to have developed a breath weapon. 
+
+N:5213:young blue dragon
+G:d:B
+I:108:6d10:20:20:70
+W:6:1:5000:24
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_ELEC |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+D:A blue dragon, too young to have developed a breath weapon. 
+
+N:5214:young green dragon
+G:d:g
+I:108:6d10:20:20:70
+W:6:1:5000:24
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_POIS |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+D:A green dragon, too young to have developed a breath weapon. 
+
+N:5215:young adult red dragon
+G:d:r
+I:108:8d10:20:20:70
+W:8:1:5000:35
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:2d10
+F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_FIRE |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+D:A red dragon, almost big enough to be able to breathe.
+
+N:5216:young adult white dragon
+G:d:w
+I:108:8d10:20:20:70
+W:8:1:5000:35
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:2d10
+F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_COLD |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+D:A white dragon, almost big enough to be able to breathe.
+
+N:5217:young adult blue dragon
+G:d:B
+I:108:8d10:20:20:70
+W:8:1:5000:35
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:2d10
+F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_ELEC |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+D:A blue dragon, almost big enough to be able to breathe.
+
+N:5218:young adult green dragon
+G:d:g
+I:108:8d10:20:20:70
+W:8:1:5000:35
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:2d10
+F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_POIS |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+D:A green dragon, almost big enough to be able to breathe.
+
+N:5219:manticore
+G:d:y
+I:110:8d12:20:20:70
+W:9:1:8000:50
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:3d7
+F:DROP_CORPSE | CAN_SPEAK |
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_POIS |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:ARROW_4
+D:Manticore: monstrous guardian, originally created by sorcery. 
+D:The manticore has the body and claws of a great lion, 
+D:feathered vulture-like wings, the face of a cruel, bearded 
+D:man, but with tusks in the wide mouth, and a long, rather 
+D:insectile tail behind.  The many-jointed tail is tipped with 
+D:a pinecone of barbed quills, which it can fling with the accuracy 
+D:and effect of a company of crossbowmen; with this, a manticore 
+D:will try to slay lesser opponents at a distance, or cripple stronger 
+D:opponents before closing with claws and jaws.  Too, as a 
+D:crossbowman can empty a case of quarrels, so can a manticore exhaust 
+D:the spines on its tail, though it will usually cease fire before 
+D:such exhaustion and so hazard a few quills against emergency. 
+D:While manticores are intelligent, their bestial, angry nature 
+D:overrides most subtlety.  They talk, and will mock their prey 
+D:during combat. 
+
+N:5220:adult red dragon
+G:D:r
+I:108:12d24:20:25:70
+W:12:1:20000:150
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d4
+B:CHARGE:HURT:3d2
+B:CLAW:HURT:3d2
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_FIRE |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_FIRE
+D:A red dragon, who has just learned how to breathe.
+
+N:5221:adult white dragon
+G:D:w
+I:108:12d24:20:25:70
+W:12:1:20000:150
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d4
+B:CHARGE:HURT:3d2
+B:CLAW:HURT:3d2
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_COLD |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_COLD
+D:A white dragon, who has just learned how to breathe.
+
+N:5222:adult blue dragon
+G:D:B
+I:108:12d24:20:25:70
+W:12:1:20000:150
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d4
+B:CHARGE:HURT:3d2
+B:CLAW:HURT:3d2
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_ELEC |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_ELEC
+D:A blue dragon, who has just learned how to breathe.
+
+N:5223:adult green dragon
+G:D:g
+I:108:12d24:20:25:70
+W:12:1:20000:150
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d4
+B:CHARGE:HURT:3d2
+B:CLAW:HURT:3d2
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_POIS |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_POIS
+D:A green dragon, who has just learned how to breathe.
+
+N:5224:klieau manticore
+G:d:y
+I:110:8d25:20:20:70
+W:15:1:8000:200
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:3d7
+F:DROP_CORPSE | CAN_SPEAK |
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_POIS |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND | HAS_EGG | 
+S:1_IN_6
+S:ARROW_4
+D:These demonic spiders are everywhere! You just can't walk down a 
+D:corridor without getting hit by their ultra-damaging tailspikes 
+D:all the damn time! 
+
+N:5225:old red dragon
+G:D:r
+I:108:16d24:20:30:70
+W:16:1:30000:600
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d6
+B:CHARGE:HURT:3d3
+B:CLAW:HURT:3d3
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_FIRE |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_FIRE
+D:A red dragon, quite capable of battling pesky adventurers. 
+
+N:5226:old white dragon
+G:D:w
+I:108:16d24:20:30:70
+W:16:1:30000:600
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d6
+B:CHARGE:HURT:3d3
+B:CLAW:HURT:3d3
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_COLD |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_COLD
+D:A white dragon, quite capable of battling pesky adventurers. 
+
+N:5227:old blue dragon
+G:D:B
+I:108:16d24:20:30:70
+W:16:1:30000:600
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d6
+B:CHARGE:HURT:3d3
+B:CLAW:HURT:3d3
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_ELEC |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_ELEC
+D:A blue dragon, quite capable of battling pesky adventurers. 
+
+N:5228:old green dragon
+G:D:g
+I:108:16d24:20:30:70
+W:16:1:30000:600
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d6
+B:CHARGE:HURT:3d3
+B:CLAW:HURT:3d3
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_POIS |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_POIS
+D:A green dragon, quite capable of battling pesky adventurers. 
+
+N:5229:very old red dragon
+G:D:r
+I:108:25d24:20:40:70
+W:22:1:50000:3000
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d9
+B:CHARGE:HURT:3d5
+B:CLAW:HURT:3d5
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_FIRE |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_FIRE
+D:A red dragon, very big, very nasty.
+
+N:5230:very old white dragon
+G:D:w
+I:108:25d24:20:40:70
+W:22:1:50000:3000
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d9
+B:CHARGE:HURT:3d5
+B:CLAW:HURT:3d5
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_COLD |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_COLD
+D:A white dragon, very big, very nasty.
+
+N:5231:very old blue dragon
+G:D:B
+I:108:25d24:20:40:70
+W:22:1:50000:3000
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d9
+B:CHARGE:HURT:3d5
+B:CLAW:HURT:3d5
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_ELEC |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_ELEC
+D:A blue dragon, very big, very nasty.
+
+N:5232:very old green dragon
+G:D:g
+I:108:25d24:20:40:70
+W:22:1:50000:3000
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d9
+B:CHARGE:HURT:3d5
+B:CLAW:HURT:3d5
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_POIS |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_POIS
+D:A green dragon, very big, very nasty.
+
+N:5233:ancient red dragon
+G:D:r
+I:108:25d30:20:45:70
+W:24:1:50000:3500
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d10
+B:CHARGE:HURT:3d6
+B:CLAW:HURT:3d6
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_FIRE |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_FIRE
+D:A red dragon, highly powerful. Be prepared for a tough battle. 
+
+N:5234:ancient white dragon
+G:D:w
+I:108:25d30:20:45:70
+W:24:1:50000:3500
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d10
+B:CHARGE:HURT:3d6
+B:CLAW:HURT:3d6
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_COLD |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_COLD
+D:A white dragon, highly powerful. Be prepared for a tough battle. 
+
+N:5235:ancient blue dragon
+G:D:B
+I:108:25d30:20:45:70
+W:24:1:50000:3500
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d10
+B:CHARGE:HURT:3d6
+B:CLAW:HURT:3d6
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_ELEC |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_ELEC
+D:A blue dragon, highly powerful. Be prepared for a tough battle. 
+
+N:5236:ancient green dragon
+G:D:g
+I:108:25d30:20:45:70
+W:24:1:50000:3500
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:4d10
+B:CHARGE:HURT:3d6
+B:CLAW:HURT:3d6
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_POIS |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_POIS
+D:A green dragon, highly powerful. Be prepared for a tough battle. 
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness (low = more alert)
