@@ -1200,17 +1200,23 @@ static bool monst_spell_monst(int m_idx)
 			/* RF4_ROCKET */
 		case 96 + 3:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 800) breathdamage = 800;
+				} else {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 800) breathdamage = 800;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear an explosion!");
 				else if (blind) monster_msg("%^s shoots something.", m_name);
 				else monster_msg("%^s fires a rocket at %s.", m_name, t_name);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_ROCKET,
-				                   ((m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 4)), 2);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_ROCKET,
-				                   ((m_ptr->hp / 6) > breathmax ? breathmax : (m_ptr->hp / 6) > 600 ? 600 : (m_ptr->hp / 6)), 2);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_ROCKET, breathdamage, 2);
+
 				break;
 			}
 
@@ -1266,360 +1272,480 @@ static bool monst_spell_monst(int m_idx)
 			/* RF4_BR_ACID */
 		case 96 + 8:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 1600) breathdamage = 1600;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 1600) breathdamage = 1600;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes acid at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_ACID,
-				                   ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_ACID,
-				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_ACID, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_ELEC */
 		case 96 + 9:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 1600) breathdamage = 1600;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 1600) breathdamage = 1600;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes lightning at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_ELEC,
-				                   ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
-				} else {
-				monst_breath_monst(m_idx, y, x, GF_ELEC,
-				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_ELEC, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_FIRE */
 		case 96 + 10:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 1600) breathdamage = 1600;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 1600) breathdamage = 1600;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes fire at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_FIRE,
-				                   ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_FIRE,
-				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_FIRE, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_COLD */
 		case 96 + 11:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 1600) breathdamage = 1600;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 1600) breathdamage = 1600;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes frost at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_COLD,
-				                   ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_COLD,
-				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_COLD, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_POIS */
 		case 96 + 12:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 800) breathdamage = 800;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 800) breathdamage = 800;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes gas at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_POIS,
-				                   ((m_ptr->hp / 3) > 800 ? 800 : (m_ptr->hp / 3)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_POIS,
-				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 4)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_POIS, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_NETH */
 		case 96 + 13:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 550) breathdamage = 550;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 550) breathdamage = 550;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes nether at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_NETHER,
-				                   ((m_ptr->hp / 6) > 550 ? 550 : (m_ptr->hp / 6)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_NETHER,
-				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 550 ? 550 : (m_ptr->hp / 8)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_NETHER, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_LITE */
 		case 96 + 14:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 400) breathdamage = 400;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 400) breathdamage = 400;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes light at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_LITE,
-				                   ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)), 0);
-				} else {
-				monst_breath_monst(m_idx, y, x, GF_LITE,
-				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_LITE, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_DARK */
 		case 96 + 15:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 400) breathdamage = 400;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 400) breathdamage = 400;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes darkness at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_DARK,
-				                   ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_DARK,
-				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_DARK, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_CONF */
 		case 96 + 16:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 400) breathdamage = 400;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 400) breathdamage = 400;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes confusion at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_CONFUSION,
-				                   ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_CONFUSION,
-				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_CONFUSION, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_SOUN */
 		case 96 + 17:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 400) breathdamage = 400;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 400) breathdamage = 400;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes sound at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_SOUND,
-				                   ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_SOUND,
-				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_SOUND, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_CHAO */
 		case 96 + 18:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 600) breathdamage = 600;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 600) breathdamage = 600;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes chaos at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_CHAOS,
-				                   ((m_ptr->hp / 6) > 600 ? 600 : (m_ptr->hp / 6)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_CHAOS,
-				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 600 ? 600 : (m_ptr->hp / 8)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_CHAOS, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_DISE */
 		case 96 + 19:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 500) breathdamage = 500;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 500) breathdamage = 500;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes disenchantment at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_DISENCHANT,
-				                   ((m_ptr->hp / 6) > 500 ? 500 : (m_ptr->hp / 6)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_DISENCHANT,
-				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 500 ? 500 : (m_ptr->hp / 8)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_DISENCHANT, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_NEXU */
 		case 96 + 20:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 250) breathdamage = 250;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 250) breathdamage = 250;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes nexus at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_NEXUS,
-				                   ((m_ptr->hp / 3) > 250 ? 250 : (m_ptr->hp / 3)), 0);
-				} else {
-				monst_breath_monst(m_idx, y, x, GF_NEXUS,
-				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 250 ? 250 : (m_ptr->hp / 4)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_NEXUS, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_TIME */
 		case 96 + 21:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 150) breathdamage = 150;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 150) breathdamage = 150;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes time at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_TIME,
-				                   ((m_ptr->hp / 3) > 150 ? 150 : (m_ptr->hp / 3)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_TIME,
-				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 150 ? 150 : (m_ptr->hp / 4)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_TIME, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_INER */
 		case 96 + 22:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 200) breathdamage = 200;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 200) breathdamage = 200;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes inertia at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_INERTIA,
-				                   ((m_ptr->hp / 6) > 200 ? 200 : (m_ptr->hp / 6)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_INERTIA,
-				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 200 ? 200 : (m_ptr->hp / 8)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_INERTIA, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_GRAV */
 		case 96 + 23:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 200) breathdamage = 200;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 200) breathdamage = 200;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes gravity at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_GRAVITY,
-				                   ((m_ptr->hp / 3) > 200 ? 200 : (m_ptr->hp / 3)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_GRAVITY,
-				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 200 ? 200 : (m_ptr->hp / 4)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_GRAVITY, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_SHAR */
 		case 96 + 24:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 400) breathdamage = 400;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 400) breathdamage = 400;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes shards at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_SHARDS,
-				                   ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_SHARDS,
-				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_SHARDS, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_PLAS */
 		case 96 + 25:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 150) breathdamage = 150;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 150) breathdamage = 150;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes plasma at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_PLASMA,
-				                   ((m_ptr->hp / 6) > 150 ? 150 : (m_ptr->hp / 6)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_PLASMA,
-				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 150 ? 150 : (m_ptr->hp / 8)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_PLASMA, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_WALL */
 		case 96 + 26:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 200) breathdamage = 200;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 200) breathdamage = 200;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes force at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_FORCE,
-				                   ((m_ptr->hp / 6) > 200 ? 200 : (m_ptr->hp / 6)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_FORCE,
-				                   ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 200 ? 200 : (m_ptr->hp / 8)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_FORCE, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_MANA */
 		case 96 + 27:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 250) breathdamage = 250;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 250) breathdamage = 250;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes magical energy at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_MANA,
-				                   ((m_ptr->hp / 3) > 250 ? 250 : (m_ptr->hp / 3)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_MANA,
-				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 250 ? 250 : (m_ptr->hp / 4)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_MANA, breathdamage, 0);
+
 				break;
 			}
 
@@ -1644,18 +1770,24 @@ static bool monst_spell_monst(int m_idx)
 			/* RF4_BR_NUKE */
 		case 96 + 29:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 800) breathdamage = 800;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 800) breathdamage = 800;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes toxic waste at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_NUKE,
-				                   ((m_ptr->hp / 3) > 800 ? 800 : (m_ptr->hp / 3)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_NUKE,
-				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 4)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_NUKE, breathdamage, 0);
+
 				break;
 			}
 
@@ -1680,18 +1812,24 @@ static bool monst_spell_monst(int m_idx)
 			/* RF4_BR_DISI -> Breathe Disintegration */
 		case 96 + 31:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 300) breathdamage = 300;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 300) breathdamage = 300;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
 				else if (blind) monster_msg("%^s breathes.", m_name);
 				else monster_msg("%^s breathes disintegration at %s.", m_name, t_name);
 				sound(SOUND_BREATH);
-				if (p_ptr->nastytrap143) {
-					monst_breath_monst(m_idx, y, x, GF_DISINTEGRATE,
-				                   ((m_ptr->hp / 3) > 300 ? 300 : (m_ptr->hp / 3)), 0);
-				} else {
-					monst_breath_monst(m_idx, y, x, GF_DISINTEGRATE,
-				                   ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 300 ? 300 : (m_ptr->hp / 4)), 0);
-				}
+
+				monst_breath_monst(m_idx, y, x, GF_DISINTEGRATE, breathdamage, 0);
+
 				break;
 			}
 
@@ -3564,16 +3702,22 @@ bool make_attack_spell(int m_idx)
 			/* RF4_ROCKET */
 		case 96 + 3:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 800) breathdamage = 800;
+				} else {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 800) breathdamage = 800;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s shoots something.", m_name);
 				else msg_format("%^s fires a rocket.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_ROCKET,
-				       ((m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 4)), 2);
-				} else {
-					breath(m_idx, GF_ROCKET,
-				       ((m_ptr->hp / 6) > breathmax ? breathmax : (m_ptr->hp / 6) > 600 ? 600 : (m_ptr->hp / 6)), 2);
-				}
+
+				breath(m_idx, GF_ROCKET, breathdamage, 2);
+
 				update_smart_learn(m_idx, DRS_SHARD);
 				break;
 			}
@@ -3637,6 +3781,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_ACID */
 		case 96 + 8:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 1600) breathdamage = 1600;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 1600) breathdamage = 1600;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3646,13 +3800,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes acid.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_ACID,
-				       ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
-				} else {
-					breath(m_idx, GF_ACID,
-				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
-				}
+
+				breath(m_idx, GF_ACID, breathdamage, 0);
+
 				update_smart_learn(m_idx, DRS_ACID);
 				break;
 			}
@@ -3660,6 +3810,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_ELEC */
 		case 96 + 9:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 1600) breathdamage = 1600;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 1600) breathdamage = 1600;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3669,13 +3829,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes lightning.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_ELEC,
-				       ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
-				} else {
-					breath(m_idx, GF_ELEC,
-				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
-				}
+
+				breath(m_idx, GF_ELEC, breathdamage, 0);
+
 				update_smart_learn(m_idx, DRS_ELEC);
 				break;
 			}
@@ -3683,6 +3839,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_FIRE */
 		case 96 + 10:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 1600) breathdamage = 1600;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 1600) breathdamage = 1600;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3692,13 +3858,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes fire.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_FIRE,
-				       ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
-				} else {
-					breath(m_idx, GF_FIRE,
-				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
-				}
+
+				breath(m_idx, GF_FIRE, breathdamage, 0);
+
 				update_smart_learn(m_idx, DRS_FIRE);
 				break;
 			}
@@ -3706,6 +3868,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_COLD */
 		case 96 + 11:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 1600) breathdamage = 1600;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 1600) breathdamage = 1600;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3715,13 +3887,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes frost.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_COLD,
-				       ((m_ptr->hp / 3) > 1600 ? 1600 : (m_ptr->hp / 3)), 0);
-				} else {
-					breath(m_idx, GF_COLD,
-				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 1600 ? 1600 : (m_ptr->hp / 4)), 0);
-				}
+
+				breath(m_idx, GF_COLD, breathdamage, 0);
+
 				update_smart_learn(m_idx, DRS_COLD);
 				break;
 			}
@@ -3729,6 +3897,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_POIS */
 		case 96 + 12:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 800) breathdamage = 800;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 800) breathdamage = 800;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3738,13 +3916,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes gas.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_POIS,
-				       ((m_ptr->hp / 3) > 800 ? 800 : (m_ptr->hp / 3)), 0);
-				} else {
-					breath(m_idx, GF_POIS,
-				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 4)), 0);
-				}
+
+				breath(m_idx, GF_POIS, breathdamage, 0);
+
 				update_smart_learn(m_idx, DRS_POIS);
 				break;
 			}
@@ -3753,6 +3927,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_NETH */
 		case 96 + 13:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 550) breathdamage = 550;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 550) breathdamage = 550;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3762,13 +3946,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes nether.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_NETHER,
-				       ((m_ptr->hp / 6) > 550 ? 550 : (m_ptr->hp / 6)), 0);
-				} else {
-					breath(m_idx, GF_NETHER,
-				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 550 ? 550 : (m_ptr->hp / 8)), 0);
-				}
+
+				breath(m_idx, GF_NETHER, breathdamage, 0);
+
 				update_smart_learn(m_idx, DRS_NETH);
 				break;
 			}
@@ -3776,6 +3956,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_LITE */
 		case 96 + 14:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 400) breathdamage = 400;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 400) breathdamage = 400;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3785,13 +3975,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes light.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_LITE,
-				       ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)), 0);
-				} else {
-					breath(m_idx, GF_LITE,
-				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
-				}
+
+				breath(m_idx, GF_LITE, breathdamage, 0);
+
 				update_smart_learn(m_idx, DRS_LITE);
 				break;
 			}
@@ -3799,6 +3985,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_DARK */
 		case 96 + 15:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 400) breathdamage = 400;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 400) breathdamage = 400;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3808,13 +4004,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes darkness.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_DARK,
-				       ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)), 0);
-				} else {
-					breath(m_idx, GF_DARK,
-				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
-				}
+
+				breath(m_idx, GF_DARK, breathdamage, 0);
+
 				update_smart_learn(m_idx, DRS_DARK);
 				break;
 			}
@@ -3822,6 +4014,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_CONF */
 		case 96 + 16:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 400) breathdamage = 400;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 400) breathdamage = 400;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3831,13 +4033,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes confusion.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_CONFUSION,
-				       ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)), 0);
-				} else {
-					breath(m_idx, GF_CONFUSION,
-				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
-				}
+
+				breath(m_idx, GF_CONFUSION, breathdamage, 0);
+
 				update_smart_learn(m_idx, DRS_CONF);
 				break;
 			}
@@ -3845,6 +4043,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_SOUN */
 		case 96 + 17:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 400) breathdamage = 400;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 400) breathdamage = 400;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3854,13 +4062,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes sound.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_SOUND,
-				       ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)), 0);
-				} else {
-					breath(m_idx, GF_SOUND,
-				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
-				}
+
+				breath(m_idx, GF_SOUND, breathdamage, 0);
+
 				update_smart_learn(m_idx, DRS_SOUND);
 				break;
 			}
@@ -3868,6 +4072,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_CHAO */
 		case 96 + 18:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 600) breathdamage = 600;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 600) breathdamage = 600;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3877,13 +4091,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes chaos.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_CHAOS,
-				       ((m_ptr->hp / 6) > 600 ? 600 : (m_ptr->hp / 6)), 0);
-				} else {
-					breath(m_idx, GF_CHAOS,
-				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 600 ? 600 : (m_ptr->hp / 8)), 0);
-				}
+
+				breath(m_idx, GF_CHAOS, breathdamage, 0);
+
 				update_smart_learn(m_idx, DRS_CHAOS);
 				break;
 			}
@@ -3891,6 +4101,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_DISE */
 		case 96 + 19:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 500) breathdamage = 500;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 500) breathdamage = 500;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3900,13 +4120,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes disenchantment.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_DISENCHANT,
-				       ((m_ptr->hp / 6) > 500 ? 500 : (m_ptr->hp / 6)), 0);
-				} else {
-					breath(m_idx, GF_DISENCHANT,
-				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 500 ? 500 : (m_ptr->hp / 8)), 0);
-				}
+
+				breath(m_idx, GF_DISENCHANT, breathdamage, 0);
+
 				update_smart_learn(m_idx, DRS_DISEN);
 				break;
 			}
@@ -3914,6 +4130,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_NEXU */
 		case 96 + 20:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 250) breathdamage = 250;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 250) breathdamage = 250;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3923,13 +4149,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes nexus.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_NEXUS,
-				       ((m_ptr->hp / 3) > 250 ? 250 : (m_ptr->hp / 3)), 0);
-				} else {
-					breath(m_idx, GF_NEXUS,
-				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 250 ? 250 : (m_ptr->hp / 4)), 0);
-				}
+
+				breath(m_idx, GF_NEXUS, breathdamage, 0);
+
 				update_smart_learn(m_idx, DRS_NEXUS);
 				break;
 			}
@@ -3937,6 +4159,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_TIME */
 		case 96 + 21:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 150) breathdamage = 150;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 150) breathdamage = 150;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3946,19 +4178,25 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes time.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_TIME,
-				       ((m_ptr->hp / 3) > 150 ? 150 : (m_ptr->hp / 3)), 0);
-				} else {
-					breath(m_idx, GF_TIME,
-				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 150 ? 150 : (m_ptr->hp / 4)), 0);
-				}
+
+				breath(m_idx, GF_TIME, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_INER */
 		case 96 + 22:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 200) breathdamage = 200;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 200) breathdamage = 200;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3968,19 +4206,25 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes inertia.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_INERTIA,
-				       ((m_ptr->hp / 6) > 200 ? 200 : (m_ptr->hp / 6)), 0);
-				} else {
-					breath(m_idx, GF_INERTIA,
-				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 200 ? 200 : (m_ptr->hp / 8)), 0);
-				}
+
+				breath(m_idx, GF_INERTIA, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_GRAV */
 		case 96 + 23:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 200) breathdamage = 200;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 200) breathdamage = 200;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -3990,19 +4234,25 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes gravity.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_GRAVITY,
-				       ((m_ptr->hp / 3) > 200 ? 200 : (m_ptr->hp / 3)), 0);
-				} else {
-					breath(m_idx, GF_GRAVITY,
-				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 200 ? 200 : (m_ptr->hp / 4)), 0);
-				}
+
+				breath(m_idx, GF_GRAVITY, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_SHAR */
 		case 96 + 24:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 400) breathdamage = 400;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 400) breathdamage = 400;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -4012,13 +4262,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes shards.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_SHARDS,
-				       ((m_ptr->hp / 6) > 400 ? 400 : (m_ptr->hp / 6)), 0);
-				} else {
-					breath(m_idx, GF_SHARDS,
-				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 400 ? 400 : (m_ptr->hp / 8)), 0);
-				}
+
+				breath(m_idx, GF_SHARDS, breathdamage, 0);
+
 				update_smart_learn(m_idx, DRS_SHARD);
 				break;
 			}
@@ -4026,6 +4272,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_PLAS */
 		case 96 + 25:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 150) breathdamage = 150;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 150) breathdamage = 150;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -4035,19 +4291,25 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes plasma.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_PLASMA,
-				       ((m_ptr->hp / 6) > 150 ? 150 : (m_ptr->hp / 6)), 0);
-				} else {
-					breath(m_idx, GF_PLASMA,
-				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 150 ? 150 : (m_ptr->hp / 8)), 0);
-				}
+
+				breath(m_idx, GF_PLASMA, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_WALL */
 		case 96 + 26:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (breathdamage > 200) breathdamage = 200;
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (breathdamage > 200) breathdamage = 200;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -4057,19 +4319,25 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes force.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_FORCE,
-				       ((m_ptr->hp / 6) > 200 ? 200 : (m_ptr->hp / 6)), 0);
-				} else {
-					breath(m_idx, GF_FORCE,
-				       ((m_ptr->hp / 8) > breathmax ? breathmax : (m_ptr->hp / 8) > 200 ? 200 : (m_ptr->hp / 8)), 0);
-				}
+
+				breath(m_idx, GF_FORCE, breathdamage, 0);
+
 				break;
 			}
 
 			/* RF4_BR_MANA */
 		case 96 + 27:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 250) breathdamage = 250;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 250) breathdamage = 250;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -4079,13 +4347,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes magical energy.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_MANA,
-				       ((m_ptr->hp / 3) > 250 ? 250 : (m_ptr->hp / 3)), 0);
-				} else {
-					breath(m_idx, GF_MANA,
-				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 250 ? 250 : (m_ptr->hp / 4)), 0);
-				}
+
+				breath(m_idx, GF_MANA, breathdamage, 0);
+
 				break;
 			}
 
@@ -4107,6 +4371,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_NUKE */
 		case 96 + 29:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 800) breathdamage = 800;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 800) breathdamage = 800;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -4116,13 +4390,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes toxic waste.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_NUKE,
-				       ((m_ptr->hp / 3) > 800 ? 800 : (m_ptr->hp / 3)), 0);
-				} else {
-					breath(m_idx, GF_NUKE,
-				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 800 ? 800 : (m_ptr->hp / 4)), 0);
-				}
+
+				breath(m_idx, GF_NUKE, breathdamage, 0);
+
 				update_smart_learn(m_idx, DRS_POIS);
 				break;
 			}
@@ -4145,6 +4415,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_BR_DISI -> Disintegration breath! */
 		case 96 + 31:
 			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (breathdamage > 300) breathdamage = 300;
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (breathdamage > 300) breathdamage = 300;
+					if (breathdamage > breathmax) breathdamage = breathmax;
+				}
+
 				disturb(1, 0);
 
 				if (druidsave) {
@@ -4154,13 +4434,9 @@ bool make_attack_spell(int m_idx)
 
 				if (blind) msg_format("%^s breathes.", m_name);
 				else msg_format("%^s breathes disintegration.", m_name);
-				if (p_ptr->nastytrap143) {
-					breath(m_idx, GF_DISINTEGRATE,
-				       ((m_ptr->hp / 3) > 300 ? 300 : (m_ptr->hp / 3)), 0);
-				} else {
-					breath(m_idx, GF_DISINTEGRATE,
-				       ((m_ptr->hp / 4) > breathmax ? breathmax : (m_ptr->hp / 4) > 300 ? 300 : (m_ptr->hp / 4)), 0);
-				}
+
+				breath(m_idx, GF_DISINTEGRATE, breathdamage, 0);
+
 				break;
 			}
 
