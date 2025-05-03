@@ -88768,7 +88768,7 @@ F:GOOD | DEMON | IM_POIS | NO_SLEEP | RES_CHAO | IM_FIRE |
 F:CAN_FLY | RES_SHAR |
 S:1_IN_10 | 
 S:S_DEMON
-D:spined devil from nethack
+D:A rather lowly demon. 
 
 N:5102:horned devil
 G:U:u
@@ -88860,7 +88860,7 @@ F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 F:RES_CHAO |
 S:1_IN_10 | 
 S:S_DEMON
-D:bar-lgura from nethack
+D:A demon who supposedly kidnaps people. 
 
 N:5107:erinys
 G:U:r
@@ -88891,7 +88891,8 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:water demon from nethack
+D:A demon that lives in a fountain and never grants you a wish. 
+D:Instead, he will kill you. 
 
 N:5109:bearded devil
 G:U:D
@@ -88906,7 +88907,8 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:GOOD | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:bearded devil from nethack
+D:A demon who supposedly has a beard. I wonder whether female 
+D:versions are bearded, too? 
 
 N:5110:barbed devil
 G:U:r
@@ -88940,7 +88942,8 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | CAN_FLY |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:chasme from nethack
+D:A very fast demon who can put you to sleep and is therefore 
+D:really dangerous. Hopefully you have free action. 
 
 N:5112:vrock
 G:U:r
@@ -88977,7 +88980,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:babau from nethack
+D:A demon whose gaze can drain your strength. 
 
 N:5114:hezrou
 G:U:r
@@ -89063,7 +89066,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:lava demon from nethack
+D:A fiery type of demon. 
 
 N:5119:pit fiend
 G:U:r
@@ -89426,7 +89429,7 @@ B:HIT:HURT:2d8
 F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY |
 F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | IM_FIRE | IM_ELEC |
 F:DEMON | IM_POIS | RES_WALL | RES_GRAV | TAKE_ITEM |
-D:efreeti from nethack
+D:Some lowly demon. 
 
 N:5136:dao
 G:U:u
@@ -89438,7 +89441,7 @@ B:HIT:HURT:2d8
 F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY |
 F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:DEMON | IM_POIS | RES_WALL | RES_GRAV | TAKE_ITEM |
-D:dao from nethack
+D:Another lowly demon. 
 
 N:5137:marid
 G:U:B
@@ -89450,7 +89453,7 @@ B:HIT:HURT:2d8
 F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY |
 F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | IM_COLD |
 F:DEMON | IM_POIS | RES_WALL | RES_GRAV | TAKE_ITEM |
-D:marid from nethack
+D:Supposedly a water-based demon. 
 
 N:5138:sandestin
 G:U:W
@@ -89465,7 +89468,9 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:DEMON | SHAPECHANGER | RES_WALL | RES_GRAV | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:sandestin from nethack
+D:There was a long essay about what a sandestin is, but 
+D:I decided to not include it here so let's just say it's 
+D:a demon capable of shifting shape. 
 
 N:5139:jellyfish
 G:~:B
@@ -89719,7 +89724,7 @@ O:0:0:0:0
 B:BITE:HURT:1d3
 F:WILD_GRASS | WILD_TOO | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:gecko from nethack
+D:A small animal. 
 
 N:5153:iguana
 G:R:u
@@ -89730,7 +89735,8 @@ O:0:0:0:0
 B:BITE:HURT:1d4
 F:WILD_GRASS | WILD_WOOD | WILD_TOO | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:iguana from nethack
+D:A tasty animal that you want to eat because you 
+D:certainly ain't no vegetarian. 
 
 N:5154:rhaumbusun
 G:R:v
@@ -89741,7 +89747,7 @@ O:0:0:0:0
 B:GAZE:PARALYZE:1d2
 F:DROP_CORPSE | IM_POIS | RES_SHAR | HAS_EGG |
 F:ANIMAL | MORTAL | BASEANGBAND
-D:rhaumbusun from nethack
+D:This type of lizard can paralyze you with its gaze. 
 
 N:5155:baby crocodile
 G:R:u
@@ -89752,7 +89758,7 @@ O:0:0:0:0
 B:BITE:HURT:1d4
 F:WILD_SHORE | WILD_TOO | DROP_CORPSE | CAN_SWIM |
 F:ANIMAL | MORTAL | BASEANGBAND
-D:baby crocodile from nethack
+D:A smaller version of the crocodile.
 
 N:5156:lizard
 G:R:g
@@ -89913,7 +89919,7 @@ O:0:0:0:0
 B:CHARGE:HURT:4d8
 F:DROP_CORPSE | RES_WALL | RES_GRAV | WILD_TOO | WILD_WOOD |
 F:ANIMAL | MORTAL | BASEANGBAND |
-D:tyrannosaur from nethack
+D:A vicious dinosaur. 
 
 N:5164:bad egg
 G:,:w
@@ -89924,7 +89930,7 @@ O:0:0:0:0
 B:BITE:HURT:1d8
 F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:bad egg from nethack
+D:An egg that became hostile. 
 
 N:5165:killer tomato
 G:,:r
@@ -89935,7 +89941,7 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:killer tomato from nethack
+D:A tomato that wants to bite you. 
 
 N:5166:killer tripe ration
 G:,:u
@@ -89946,7 +89952,8 @@ O:0:0:0:0
 B:BITE:HURT:2d8
 F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:killer tripe ration from nethack
+D:A tripe ration that has somehow become sentient and 
+D:is trying to eat you. 
 
 N:5167:ravenous cream pie
 G:,:w
@@ -89957,7 +89964,8 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:ravenous cream pie from nethack
+D:A cream pie that attacks you and somehow doesn't have 
+D:a blindness attack. 
 
 N:5168:killer food ration
 G:,:u
@@ -89968,7 +89976,7 @@ O:0:0:0:0
 B:BITE:HURT:2d10
 F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:killer food ration from nethack
+D:A food ration that doesn't want to be eaten. 
 
 N:5169:pile of killer coins
 G:$:y
@@ -89980,7 +89988,7 @@ B:BITE:HURT:2d6
 F:ONLY_GOLD | DROP_60 | 
 F:COLD_BLOOD | BASH_DOOR | RES_SHAR | EMPTY_MIND |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
-D:pile of killer coins from nethack
+D:A pile of sentient coins. 
 
 N:5170:large pile of killer coins
 G:$:y
@@ -89992,7 +90000,7 @@ B:BITE:HURT:3d6
 F:ONLY_GOLD | DROP_60 | 
 F:COLD_BLOOD | BASH_DOOR | RES_SHAR | EMPTY_MIND |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
-D:large pile of killer coins from nethack
+D:A large pile of sentient coins. 
 
 N:5171:huge pile of killer coins
 G:$:y
@@ -90004,7 +90012,7 @@ B:BITE:HURT:4d6
 F:ONLY_GOLD | DROP_60 | 
 F:COLD_BLOOD | BASH_DOOR | RES_SHAR | EMPTY_MIND |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
-D:huge pile of killer coins from nethack
+D:A huge pile of sentient coins. 
 
 N:5172:Nightmare
 G:q:r
@@ -90020,7 +90028,13 @@ F:ANIMAL | IM_POIS | GOOD |
 F:MORTAL | BASEANGBAND | FEMALE | 
 F:DROP_SKELETON | DROP_CORPSE | 
 F:IM_FIRE | IM_COLD | IM_ELEC | RES_WALL | RES_GRAV |
-D:Nightmare from nethack
+D:Time seemed to stand still as Nightmare let out a 
+D:bloodcurdling scream, its eyes ablaze with agony. The 
+D:beast thrashed wildly, but Corina stood firm, refusing 
+D:to be swayed by the chaos. She channeled her inner strength, 
+D:delivering one final blow — a decisive strike that shattered 
+D:the demon horse's skull and banished it from existence.
+D:[ Corina's Triumph, by ChatGPT ]
 
 N:5173:Beholder
 G:e:W
@@ -90057,7 +90071,11 @@ S:HEAL | CAUSE_4 | BA_COLD | CONF | SLOW | TPORT | BA_DARK |
 S:HASTE | BA_NETH | DARKNESS | TELE_AWAY | BLINK | TRAPS |
 S:S_UNDEAD | S_MONSTER | S_MONSTERS | BO_ICEE | MIND_BLAST | FORGET |
 S:S_HI_UNDEAD | BRAIN_SMASH | BO_MANA | BA_WATE | HASTE | TELE_AWAY |
-D:Vecna from nethack
+D:The Emperor of the liches, whose name is supposedly an anagram 
+D:of "Vance". He requires a +5 weapon to hit... or he would, but 
+D:this isn't NetHack ;) Still, he has a full suite of nasty spells 
+D:and will make your life miserable unless you can put him down 
+D:quickly! 
 
 N:5175:Farting girl
 G:t:w
@@ -91665,4 +91683,5 @@ D:can recover from a mortal wound within minutes.  A troll fears fire.
 # S: spell frequency |
 # S: spell type | spell type | etc
 # D: Description
+
 
