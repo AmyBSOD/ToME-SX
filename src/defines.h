@@ -3311,6 +3311,8 @@
 #define TRAP_OF_UNPROOFING_II             677
 #define TRAP_OF_UNPROOFING_III            678
 
+#define TRAP_NASTY150                     679
+
 /*** General index values ***/
 
 

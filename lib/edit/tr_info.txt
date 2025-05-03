@@ -3337,6 +3337,11 @@ I:50:2:10:25:100:0d0:y
 D:Your items lose their proofing!
 F:FLOOR | CHEST | DOOR
 
+N:679:Power Breath Trap
+I:70:2:50:4:50:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

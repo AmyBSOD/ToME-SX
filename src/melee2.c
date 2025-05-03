@@ -1203,12 +1203,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 800) breathdamage = 800;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 800) breathdamage = 800;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear an explosion!");
@@ -1275,12 +1279,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 1600) breathdamage = 1600;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 1600) breathdamage = 1600;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1299,12 +1307,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 1600) breathdamage = 1600;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 1600) breathdamage = 1600;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1323,12 +1335,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 1600) breathdamage = 1600;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 1600) breathdamage = 1600;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1347,12 +1363,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 1600) breathdamage = 1600;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 1600) breathdamage = 1600;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1371,12 +1391,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 800) breathdamage = 800;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 800) breathdamage = 800;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1395,12 +1419,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 550) breathdamage = 550;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 550) breathdamage = 550;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 550) breathdamage = 550;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 550) breathdamage = 550;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1419,12 +1447,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 400) breathdamage = 400;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 400) breathdamage = 400;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1443,12 +1475,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 400) breathdamage = 400;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 400) breathdamage = 400;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1467,12 +1503,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 400) breathdamage = 400;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 400) breathdamage = 400;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1491,12 +1531,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 400) breathdamage = 400;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 400) breathdamage = 400;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1515,12 +1559,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 600) breathdamage = 600;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 600) breathdamage = 600;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 600) breathdamage = 600;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 600) breathdamage = 600;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1539,12 +1587,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 500) breathdamage = 500;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 500) breathdamage = 500;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 500) breathdamage = 500;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 500) breathdamage = 500;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1563,12 +1615,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 250) breathdamage = 250;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 250) breathdamage = 250;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 250) breathdamage = 250;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 250) breathdamage = 250;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1587,12 +1643,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 150) breathdamage = 150;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 150) breathdamage = 150;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 150) breathdamage = 150;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 150) breathdamage = 150;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1611,12 +1671,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 200) breathdamage = 200;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 200) breathdamage = 200;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1635,12 +1699,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 200) breathdamage = 200;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 200) breathdamage = 200;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1659,12 +1727,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 400) breathdamage = 400;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 400) breathdamage = 400;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1683,12 +1755,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 150) breathdamage = 150;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 150) breathdamage = 150;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 150) breathdamage = 150;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 150) breathdamage = 150;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1707,12 +1783,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 200) breathdamage = 200;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 200) breathdamage = 200;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1731,12 +1811,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 250) breathdamage = 250;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 250) breathdamage = 250;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 250) breathdamage = 250;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 250) breathdamage = 250;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1773,12 +1857,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 800) breathdamage = 800;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 800) breathdamage = 800;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -1815,12 +1903,16 @@ static bool monst_spell_monst(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 300) breathdamage = 300;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 300) breathdamage = 300;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 300) breathdamage = 300;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 300) breathdamage = 300;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				if (disturb_other) disturb(1, 0);
 				if (!see_either) monster_msg("You hear breathing noise.");
@@ -3705,12 +3797,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 800) breathdamage = 800;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 800) breathdamage = 800;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 				if (blind) msg_format("%^s shoots something.", m_name);
@@ -3784,12 +3880,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 1600) breathdamage = 1600;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 1600) breathdamage = 1600;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -3813,12 +3913,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 1600) breathdamage = 1600;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 1600) breathdamage = 1600;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -3842,12 +3946,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 1600) breathdamage = 1600;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 1600) breathdamage = 1600;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -3871,12 +3979,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 1600) breathdamage = 1600;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 1600) breathdamage = 1600;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -3900,12 +4012,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 800) breathdamage = 800;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 800) breathdamage = 800;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -3930,12 +4046,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 550) breathdamage = 550;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 550) breathdamage = 550;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 550) breathdamage = 550;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 550) breathdamage = 550;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -3959,12 +4079,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 400) breathdamage = 400;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 400) breathdamage = 400;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -3988,12 +4112,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 400) breathdamage = 400;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 400) breathdamage = 400;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -4017,12 +4145,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 400) breathdamage = 400;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 400) breathdamage = 400;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -4046,12 +4178,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 400) breathdamage = 400;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 400) breathdamage = 400;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -4075,12 +4211,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 600) breathdamage = 600;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 600) breathdamage = 600;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 600) breathdamage = 600;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 600) breathdamage = 600;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -4104,12 +4244,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 500) breathdamage = 500;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 500) breathdamage = 500;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 500) breathdamage = 500;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 500) breathdamage = 500;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -4133,12 +4277,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 250) breathdamage = 250;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 250) breathdamage = 250;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 250) breathdamage = 250;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 250) breathdamage = 250;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -4162,12 +4310,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 150) breathdamage = 150;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 150) breathdamage = 150;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 150) breathdamage = 150;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 150) breathdamage = 150;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -4190,12 +4342,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 200) breathdamage = 200;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 200) breathdamage = 200;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -4218,12 +4374,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 200) breathdamage = 200;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 200) breathdamage = 200;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -4246,12 +4406,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 400) breathdamage = 400;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 400) breathdamage = 400;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -4275,12 +4439,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 150) breathdamage = 150;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 150) breathdamage = 150;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 150) breathdamage = 150;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 150) breathdamage = 150;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -4303,12 +4471,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 6;
-					if (breathdamage > 200) breathdamage = 200;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 8;
-					if (breathdamage > 200) breathdamage = 200;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -4331,12 +4503,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 250) breathdamage = 250;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 250) breathdamage = 250;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 250) breathdamage = 250;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 250) breathdamage = 250;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -4374,12 +4550,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 800) breathdamage = 800;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 800) breathdamage = 800;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 
@@ -4418,12 +4598,16 @@ bool make_attack_spell(int m_idx)
 				int breathdamage;
 				if (p_ptr->nastytrap143) {
 					breathdamage = m_ptr->hp / 3;
-					if (breathdamage > 300) breathdamage = 300;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 300) breathdamage = 300;
+					}
 				} else {
 					breathdamage = m_ptr->hp / 4;
-					if (breathdamage > 300) breathdamage = 300;
-					if (breathdamage > breathmax) breathdamage = breathmax;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 300) breathdamage = 300;
+					}
 				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
 
 				disturb(1, 0);
 

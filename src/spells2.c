@@ -2197,6 +2197,10 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Acid and disenchantment can trash your shit even more.";
 	}
+	if (p_ptr->nastytrap150)
+	{
+		info[i++] = "You have a problem: Breath damage ignores the damage caps.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];
