@@ -81596,7 +81596,7 @@ B:BITE:HURT:1d1
 F:WEIRD_MIND | BASH_DOOR | HAS_EGG |
 F:ANIMAL | WILD_WOOD | 
 F:MORTAL | BASEANGBAND
-D:giant tick from nethack 
+D:It crawls all over the place. 
 
 N:4642:giant tick
 G:S:s
@@ -81609,7 +81609,7 @@ F:WEIRD_MIND | BASH_DOOR | HAS_EGG |
 F:ANIMAL | WILD_WOOD | 
 F:MORTAL | BASEANGBAND
 S:MULTIPLY
-D:giant tick from nethack 
+D:It crawls all over the place. 
 
 N:4643:killer bee
 G:I:y
@@ -81636,7 +81636,8 @@ O:0:0:0:0
 B:STING:LOSE_STR:1d8
 F:FRIEND | CAN_FLY | WILD_TOO | WILD_WOOD | WILD_GRASS | 
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | HAS_EGG | FEMALE | 
-D:queen bee from nethack 
+D:A particularly vicious killer bee who wants to sting all 
+D:those that would threaten the bee population. 
 
 N:4645:giant ant
 G:a:u
@@ -81664,7 +81665,7 @@ B:BITE:HURT:1d2
 F:WEIRD_MIND | BASH_DOOR | HAS_EGG |
 F:ANIMAL | WILD_WOOD | 
 F:MORTAL | BASEANGBAND
-D:giant flea from nethack 
+D:Another annoying, fast-moving insect. 
 
 N:4647:giant flea
 G:S:W
@@ -81678,7 +81679,7 @@ F:WEIRD_MIND | BASH_DOOR | HAS_EGG |
 F:ANIMAL | WILD_WOOD | 
 F:MORTAL | BASEANGBAND
 S:MULTIPLY
-D:giant flea from nethack 
+D:Another annoying, fast-moving insect. 
 
 N:4648:soldier ant
 G:a:B
@@ -81691,7 +81692,7 @@ B:STING:LOSE_STR:3d4
 F:DROP_SKELETON | WILD_WOOD | HAS_EGG | IM_POIS | 
 F:ANIMAL | WILD_TOO | WILD_GRASS | 
 F:MORTAL | BASEANGBAND
-D:soldier ant from nethack 
+D:The number one cause of YASD in NetHack. 
 
 N:4649:fire ant
 G:a:r
@@ -81704,7 +81705,7 @@ B:BITE:FIRE:2d4
 F:DROP_SKELETON | WILD_WOOD | HAS_EGG | IM_FIRE | 
 F:ANIMAL | WILD_TOO | WILD_GRASS | 
 F:MORTAL | BASEANGBAND
-D:fire ant from nethack 
+D:This ant's bite can set you on fire. 
 
 N:4650:snow ant
 G:a:b
@@ -81717,7 +81718,7 @@ B:BITE:COLD:2d4
 F:DROP_SKELETON | WILD_WOOD | HAS_EGG | IM_COLD | 
 F:ANIMAL | WILD_TOO | WILD_GRASS | 
 F:MORTAL | BASEANGBAND
-D:snow ant from nethack 
+D:An ant living in cold regions, its bite can freeze you. 
 
 N:4651:black ant
 G:a:D
@@ -81729,7 +81730,7 @@ B:BITE:ACID:1d4
 F:DROP_SKELETON | WILD_WOOD | HAS_EGG | IM_POIS | 
 F:ANIMAL | WILD_TOO | WILD_GRASS | 
 F:MORTAL | BASEANGBAND
-D:black ant from nethack 
+D:This ant has an acidic bite that will wreck your armor. 
 
 N:4652:tsetse fly
 G:I:g
@@ -81741,7 +81742,7 @@ B:STING:PARALYZE:1d3
 B:STING:HURT:1d3
 F:CAN_FLY | WILD_TOO | WILD_WOOD | WILD_GRASS | 
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | NO_SLEEP | 
-D:tsetse fly from nethack 
+D:Being stung by this fly can put you to sleep. 
 
 N:4653:giant beetle
 G:K:D
@@ -81770,7 +81771,7 @@ B:BITE:HURT:1d4
 F:WEIRD_MIND | BASH_DOOR | HAS_EGG |
 F:ANIMAL | WILD_WOOD | 
 F:MORTAL | BASEANGBAND
-D:giant louse from nethack 
+D:These annoying things are everywhere! 
 
 N:4655:giant louse
 G:S:W
@@ -81784,7 +81785,7 @@ F:WEIRD_MIND | BASH_DOOR | HAS_EGG |
 F:ANIMAL | WILD_WOOD | 
 F:MORTAL | BASEANGBAND
 S:MULTIPLY
-D:giant louse from nethack 
+D:These annoying things are everywhere! 
 
 N:4656:army ant
 G:a:r
@@ -81796,7 +81797,7 @@ B:BITE:LOSE_STR:2d4
 F:DROP_SKELETON | WILD_WOOD | HAS_EGG | IM_POIS | 
 F:ANIMAL | WILD_TOO | WILD_GRASS | FRIEND | 
 F:MORTAL | BASEANGBAND
-D:army ant from nethack 
+D:An ant that hunts in groups. 
 
 N:4657:migo drone
 G:I:g
@@ -81824,7 +81825,7 @@ O:0:0:0:0
 B:STING:LOSE_STR:1d6
 F:FRIEND | CAN_FLY | WILD_TOO | WILD_WOOD | WILD_GRASS | 
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | FEMALE | 
-D:yellow jacket from nethack 
+D:This wasp has wings and a poisonous sting. 
 
 N:4659:black wasp
 G:I:D
@@ -81835,7 +81836,7 @@ O:0:0:0:0
 B:STING:LOSE_STR:2d6
 F:FRIEND | CAN_FLY | WILD_TOO | WILD_WOOD | WILD_GRASS | 
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | FEMALE | 
-D:black wasp from nethack 
+D:A very majestic-looking, but dangerous wasp. 
 
 N:4660:locust
 G:I:W
@@ -81847,7 +81848,7 @@ B:BITE:HURT:1d8
 B:STING:DISEASE:1d4
 F:CAN_FLY | WILD_TOO | WILD_WOOD | WILD_GRASS | HAS_EGG | 
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | NO_SLEEP | 
-D:locust from nethack 
+D:These insects can make you sick. 
 
 N:4661:migo warrior
 G:I:y
@@ -81859,7 +81860,7 @@ B:STING:LOSE_STR:1d3
 B:BITE:HURT:2d4
 F:FRIEND | CAN_FLY | 
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | MALE |
-D:migo warrior from nethack 
+D:An intelligent, alien insectoid. 
 
 N:4662:assassin bug
 G:K:D
@@ -81870,7 +81871,7 @@ O:0:0:0:0
 B:BITE:LOSE_STR:4d6
 F:WEIRD_MIND | BASH_DOOR | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS |
-D:assassin bug from nethack
+D:These beetles are fast and deadly. 
 
 N:4663:giant wasp
 G:I:y
@@ -81881,7 +81882,7 @@ O:0:0:0:0
 B:STING:LOSE_STR:2d8
 F:FRIEND | CAN_FLY | WILD_TOO | WILD_WOOD | WILD_GRASS | 
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | FEMALE | 
-D:giant wasp from nethack 
+D:A particularly large wasp. Watch out for her poison sting. 
 
 N:4664:spitting beetle
 G:K:D
@@ -81893,7 +81894,7 @@ B:BITE:HURT:4d6
 B:SPIT:ACID:2d6
 F:WEIRD_MIND | BASH_DOOR | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS |
-D:spitting beetle from nethack
+D:This beetle spits acid at you. 
 
 N:4665:migo queen
 G:I:v
@@ -81905,7 +81906,8 @@ B:STING:LOSE_INT:1d3
 B:BITE:HURT:6d8
 F:FRIEND | CAN_FLY | 
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | FEMALE |
-D:migo queen from nethack
+D:Be careful, this alien insectoid can suck out your brain 
+D:and also devour you rather quickly. 
 
 N:4666:acid blob
 G:j:g
@@ -81936,7 +81938,7 @@ F:BASH_DOOR |
 F:IM_POIS | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
 F:EMPTY_MIND | RES_SHAR | 
-D:quivering blob from nethack
+D:A slow-moving blob. 
 
 N:4668:gelatinous cube
 G:j:b
@@ -81950,7 +81952,15 @@ F:BASH_DOOR | TAKE_ITEM |
 F:IM_POIS | IM_COLD | IM_ELEC | IM_POIS | IM_ACID |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
 F:EMPTY_MIND | RES_SHAR | RES_WALL | RES_GRAV | 
-D:gelatinous cube from nethack
+D:Despite its popularity (or perhaps because of it), the 
+D:gelatinous cube is also widely known as one of the sillier 
+D:role-playing monsters. It is something of a commentary on the 
+D:ubiquity of treasure-laden dungeons in the Dungeons & Dragons 
+D:universe, as the cube is a creature specifically adapted to a 
+D:dungeon ecosystem. 10 feet to the side, it travels through 
+D:standard 10-foot by 10-foot dungeon corridors, cleaning up 
+D:debris and redistributing treasure by excreting indigestible 
+D:metal items. [ Wikipedia, the free encyclopedia ]
 
 N:4669:jiggling blob
 G:j:v
@@ -81965,7 +81975,7 @@ F:BASH_DOOR |
 F:IM_POIS | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
 F:EMPTY_MIND | RES_SHAR | 
-D:jiggling blob from nethack
+D:Some acidic blobby thing. 
 
 N:4670:burbling blob
 G:j:D
@@ -81980,7 +81990,7 @@ F:BASH_DOOR |
 F:IM_POIS | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
 F:EMPTY_MIND | RES_SHAR | 
-D:burbling blob from nethack
+D:Yet another acidic blobby thing. 
 
 N:4671:chicken
 G:B:u
@@ -81992,7 +82002,7 @@ B:BITE:HURT:1d3
 F:BASEANGBAND |
 F:ANIMAL | WILD_TOWN |
 F:DROP_SKELETON | DROP_CORPSE |   
-D:chicken from nethack
+D:This chicken is unusually aggressive. 
 
 N:4672:cockatoo
 G:B:w
@@ -82004,7 +82014,8 @@ B:BITE:HURT:1d4
 F:BASEANGBAND |
 F:ANIMAL | WILD_TOWN |
 F:DROP_SKELETON | DROP_CORPSE |   
-D:cockatoo from nethack
+D:Supposedly another type of chicken, thankfully it doesn't have 
+D:the cockatrice's petrifying properties. 
 
 N:4673:chickatrice
 G:B:u
@@ -82032,7 +82043,8 @@ B:BITE:LOSE_DEX:2d4
 F:BASEANGBAND |
 F:ANIMAL | WILD_TOWN |
 F:DROP_SKELETON | DROP_CORPSE |   
-D:rabid chicken from nethack
+D:A chicken infected with some sort of disease, which it can pass 
+D:on to you with a bite, so stay away if possible. 
 
 N:4675:cockatrice
 G:B:y
@@ -82135,7 +82147,7 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:dingo puppy from nethack
+D:A small version of the dingo. 
 
 N:4681:death dog
 G:C:D
@@ -82147,7 +82159,8 @@ B:BITE:HURT:1d10
 B:BITE:HURT:1d10
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:death dog from nethack
+D:This dog is unusually deadly; better make sure it doesn't get 
+D:to bite you or you'll die very quickly! 
 
 N:4682:little dog
 G:C:w
@@ -82188,7 +82201,7 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:dog from nethack
+D:Domestic animal, but unfortunately in this game it's a predator. 
 
 N:4685:wolf
 G:C:u
@@ -82216,7 +82229,7 @@ F:WILD_TOO | WILD_MOUNTAIN | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | IM_COLD
 S:1_IN_10
 S:BR_COLD
-D:winter wolf cub from nethack
+D:A small wolf with a cold breath. 
 
 N:4687:large dog
 G:C:w
@@ -82227,7 +82240,7 @@ O:0:0:0:0
 B:BITE:HURT:2d4
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:large dog from nethack
+D:In NetHack these could be tamed; here, they try to eat you. 
 
 N:4688:large dingo
 G:C:y
@@ -82238,7 +82251,7 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:large dingo from nethack
+D:A large predator. 
 
 N:4689:rabid wolf
 G:C:u
@@ -82249,7 +82262,8 @@ O:0:0:0:0
 B:BITE:LOSE_CON:2d4
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:rabid wolf from nethack
+D:This wolf is infected with a disease and will make you sick with 
+D:its bite. 
 
 N:4690:warg
 G:C:u
@@ -82287,7 +82301,7 @@ O:0:0:0:0
 B:BITE:HURT:2d6
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND | FRIENDS
-D:hyena from nethack
+D:A predator that usually hunts in groups. 
 
 N:4692:winter wolf
 G:C:b
@@ -82300,7 +82314,7 @@ F:WILD_TOO | WILD_MOUNTAIN | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | IM_COLD
 S:1_IN_4
 S:BR_COLD
-D:winter wolf from nethack
+D:This wolf frequently breathes frost. 
 
 N:4693:hell hound pup
 G:C:r
@@ -82313,7 +82327,7 @@ F:WILD_TOO | WILD_VOLCANO | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | IM_FIRE
 S:1_IN_8
 S:BR_FIRE
-D:hell hound pup from nethack
+D:A dog that breathes fire. 
 
 N:4694:shadow wolf
 G:C:D
@@ -82431,7 +82445,7 @@ O:0:0:0:0
 B:EXPLODE:COLD:4d6
 F:CAN_FLY | RES_SHAR | EMPTY_MIND | IM_COLD | NO_SLEEP | 
 F:HURT_LITE | NO_FEAR | BASEANGBAND | WILD_MOUNTAIN | 
-D:freezing sphere from nethack
+D:It tries to creep up to you and then explodes. 
 
 N:4701:flaming sphere
 G:e:r
@@ -82442,7 +82456,8 @@ O:0:0:0:0
 B:EXPLODE:FIRE:4d6
 F:CAN_FLY | RES_SHAR | EMPTY_MIND | IM_FIRE | 
 F:HURT_LITE | NO_FEAR | BASEANGBAND | WILD_VOLCANO | 
-D:flaming sphere from nethack
+D:It floats towards you, and wants to selfdestruct in 
+D:a big fiery explosion. 
 
 N:4702:shocking sphere
 G:e:B
@@ -82453,7 +82468,7 @@ O:0:0:0:0
 B:EXPLODE:ELEC:4d6
 F:CAN_FLY | RES_SHAR | EMPTY_MIND | IM_FIRE | 
 F:HURT_LITE | NO_FEAR | BASEANGBAND
-D:shocking sphere from nethack
+D:If it explodes at you, it'll probably nuke your wands. 
 
 N:4703:kitten
 G:f:w
@@ -82494,7 +82509,8 @@ O:0:0:0:0
 B:BITE:HURT:2d4
 F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_GRASS | WILD_WOOD | 
-D:large cat from nethack
+D:You can't tame it with thrown food, because this ain't 
+D:NetHack. Instead, you should kill it before it kills you. 
 
 N:4706:jaguar
 G:f:u
@@ -82580,7 +82596,7 @@ B:CLAW:HURT:1d4
 B:BITE:HURT:1d6
 F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_WOOD | 
-D:caterwaul from nethack
+D:Some predatory feline that moves very quickly. 
 
 N:4711:tiger
 G:f:y
@@ -82611,7 +82627,7 @@ B:CLAW:HURT:4d4
 B:BITE:HURT:2d10
 F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND
-D:displacer beast from nethack
+D:These beasts are annoyingly hard to hit. 
 
 N:4713:jermlaine
 G:u:W
@@ -82623,7 +82639,7 @@ B:CLAW:HURT:1d2
 F:IM_POIS | HURT_LITE | EVIL | OPEN_DOOR | 
 F:TAKE_ITEM | FRIENDS | 
 F:MORTAL | BASEANGBAND
-D:jermlaine from nethack
+D:They're frail, but spawn in large groups. 
 
 N:4714:galltrit
 G:u:D
@@ -82639,7 +82655,7 @@ F:TAKE_ITEM | CAN_SWIM |
 F:MORTAL | BASEANGBAND
 S:1_IN_10
 S:CAUSE_1
-D:galltrit from nethack
+D:Not sure what it is, but it attacks you. 
 
 N:4715:statue gargoyle
 G:u:W
@@ -82652,7 +82668,7 @@ B:CLAW:HURT:1d3
 F:IM_POIS | OPEN_DOOR | RES_CHAO | NO_SLEEP |
 F:TAKE_ITEM | CAN_SWIM | RES_WALL | RES_GRAV |
 F:MORTAL | BASEANGBAND | EMPTY_MIND | RES_SHAR |
-D:statue gargoyle from nethack
+D:A rather sturdy, stony creature. 
 
 N:4716:gremlin
 G:u:g
@@ -82706,7 +82722,7 @@ B:BITE:HURT:3d4
 F:OPEN_DOOR | 
 F:TAKE_ITEM | CAN_SWIM | RES_WALL | RES_GRAV |
 F:MORTAL | BASEANGBAND | RES_SHAR | CAN_FLY | HAS_EGG | 
-D:winged gargoyle from nethack
+D:Like a regular gargoyle, but this one can fly. 
 
 N:4719:hobbit
 G:h:g
@@ -82742,7 +82758,7 @@ F:DROP_60 |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:GOOD
 F:MORTAL | BASEANGBAND
-D:hobbit thief from nethack
+D:A hobbit who tries to steal your stuff. 
 
 N:4721:dwarf
 G:h:r
@@ -82756,7 +82772,7 @@ F:DROP_60 |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
 F:GOOD | DROP_SKELETON | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | KILL_WALL |
-D:dwarf from nethack
+D:Some bearded humanoid who seems annoyed at your presence. 
 
 N:4722:dwarf thief
 G:h:D
@@ -82770,7 +82786,7 @@ F:DROP_60 |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
 F:GOOD | DROP_SKELETON | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | KILL_WALL |
-D:dwarf thief from nethack
+D:Some bearded humanoid who wants to steal all your possessions. 
 
 N:4723:bugbear
 G:h:u
@@ -82799,7 +82815,7 @@ F:DROP_60 |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:GOOD
 F:MORTAL | BASEANGBAND
-D:hobbit lord from nethack
+D:A more powerful version of the hobbit. 
 
 N:4725:hobbit wizard
 G:h:b
@@ -82814,7 +82830,7 @@ F:GOOD
 F:MORTAL | BASEANGBAND
 S:1_IN_6
 S:CAUSE_1 | CONF | BLIND
-D:hobbit wizard from nethack
+D:A hobbit who can cast some annoyance spells. 
 
 N:4726:duergar
 G:h:W
@@ -82828,7 +82844,8 @@ F:DROP_60 |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
 F:GOOD | DROP_SKELETON | DROP_CORPSE | MALE | 
 F:MORTAL | BASEANGBAND | KILL_WALL |
-D:duergar from nethack
+D:No idea what a "duergar" is supposed to be, but it's 
+D:apparently similar to a dwarf. 
 
 N:4727:dwarf lord
 G:h:B
@@ -82842,7 +82859,7 @@ F:DROP_60 |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
 F:GOOD | DROP_SKELETON | DROP_CORPSE | MALE | 
 F:MORTAL | BASEANGBAND | KILL_WALL |
-D:dwarf lord from nethack
+D:A more powerful version of the dwarf. 
 
 N:4728:camo dwarf lord
 G:h:b
@@ -82856,7 +82873,7 @@ F:DROP_60 |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
 F:GOOD | DROP_SKELETON | DROP_CORPSE | MALE | 
 F:MORTAL | BASEANGBAND | KILL_WALL |
-D:camo dwarf lord from nethack
+D:A dwarf who thinks he's hard to see. 
 
 N:4729:duergar lord
 G:h:D
@@ -82870,7 +82887,7 @@ F:DROP_60 |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
 F:GOOD | DROP_SKELETON | DROP_CORPSE | MALE | 
 F:MORTAL | BASEANGBAND | KILL_WALL |
-D:duergar lord from nethack
+D:A more powerful duergar. 
 
 N:4730:dwarven wizard
 G:h:b
@@ -82885,7 +82902,7 @@ F:GOOD | DROP_SKELETON | DROP_CORPSE | MALE |
 F:MORTAL | BASEANGBAND | KILL_WALL |
 S:1_IN_5
 S:CAUSE_1 | CONF | BLIND | SCARE
-D:dwarven wizard from nethack
+D:A dwarf who sometimes casts annoying spells. 
 
 N:4731:dwarf king
 G:h:v
@@ -82899,7 +82916,7 @@ F:DROP_60 |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
 F:GOOD | DROP_SKELETON | DROP_CORPSE | MALE | 
 F:MORTAL | BASEANGBAND | KILL_WALL |
-D:dwarf king from nethack
+D:A particularly powerful dwarf. 
 
 N:4732:deep one
 G:u:g
@@ -82961,7 +82978,8 @@ F:EVIL | DROP_SKELETON | DROP_CORPSE | CAN_FLY |
 F:MORTAL | BASEANGBAND | 
 S:1_IN_10
 S:MIND_BLAST
-D:master mind flayer from nethack
+D:This creature tries to suck your brain with its many 
+D:tentacles, and can also blast your mind at range. 
 
 N:4735:deeper one
 G:u:g
@@ -82974,7 +82992,7 @@ B:CLAW:HURT:3d4
 B:BITE:HURT:4d6
 F:FRIEND | DROP_CORPSE | CAN_SWIM | TAKE_ITEM |
 F:DROP_60 | IM_COLD | IM_POIS | EVIL | 
-D:deeper one from nethack
+D:A more powerful version of the deep one. 
 
 N:4736:deepest one
 G:u:v
@@ -82987,7 +83005,7 @@ B:CLAW:HURT:3d6
 B:BITE:HURT:5d6
 F:FRIEND | DROP_CORPSE | CAN_SWIM | TAKE_ITEM |
 F:DROP_60 | IM_COLD | IM_POIS | EVIL | RES_SHAR | 
-D:deepest one from nethack
+D:The most powerful of the deep ones. 
 
 N:4737:manes
 G:u:r
@@ -83028,7 +83046,7 @@ O:0:0:0:0
 B:CLAW:HURT:1d4
 F:OPEN_DOOR | BASH_DOOR | REGENERATE | 
 F:EVIL | DEMON | NO_FEAR | BASEANGBAND
-D:dretch from nethack
+D:Some minor demon. 
 
 N:4740:imp
 G:u:r
@@ -83083,7 +83101,7 @@ O:0:0:0:0
 B:CLAW:LOSE_STR:1d4
 F:OPEN_DOOR | BASH_DOOR | REGENERATE | 
 F:EVIL | DEMON | NO_FEAR | BASEANGBAND
-D:rutterkin from nethack
+D:A rather pesky little demon. 
 
 N:4744:tengu
 G:u:b
@@ -83113,7 +83131,7 @@ O:0:0:0:0
 B:CLAW:LOSE_STR:3d4
 F:OPEN_DOOR | BASH_DOOR | REGENERATE | 
 F:EVIL | DEMON | NO_FEAR | BASEANGBAND
-D:nupperibo from nethack
+D:Yet another pesky demon. 
 
 N:4746:blue jelly
 G:j:b
@@ -83152,7 +83170,8 @@ F:NEVER_MOVE | COLD_BLOOD |
 F:STUPID | EMPTY_MIND | 
 F:IM_ACID | RES_WALL | RES_SHAR | RES_GRAV | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:spotted jelly from nethack
+D:This jelly splashes acid onto all adventurers who are foolish enough 
+D:to step next to it. 
 
 N:4748:ochre jelly
 G:j:u
@@ -83166,7 +83185,8 @@ F:COLD_BLOOD |
 F:STUPID | EMPTY_MIND | 
 F:IM_ACID | RES_WALL | RES_SHAR | RES_GRAV | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:ochre jelly from nethack
+D:A jelly that slowly oozes around the dungeon and tries to 
+D:splash acid onto unwary adventurers. 
 
 N:4749:kobold
 G:k:u
@@ -83196,7 +83216,7 @@ F:DROP_60 | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | 
 F:EVIL | IM_POIS | TAKE_ITEM | 
 F:MORTAL | BASEANGBAND |
-D:large kobold from nethack
+D:Much bigger than a normal kobold. 
 
 N:4751:kobold lord
 G:k:v
@@ -83209,7 +83229,7 @@ F:DROP_60 | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | MALE | 
 F:EVIL | IM_POIS | TAKE_ITEM | 
 F:MORTAL | BASEANGBAND |
-D:kobold lord from nethack
+D:A rather strong kobold. 
 
 N:4752:kobold shaman
 G:k:B
@@ -83224,7 +83244,7 @@ F:EVIL | IM_POIS | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 S:1_IN_10
 S:SCARE | CONF | CAUSE_1
-D:kobold shaman from nethack
+D:A kobold who occasionally manages to get a spell off. 
 
 N:4753:swamp kobold
 G:k:g
@@ -83237,7 +83257,7 @@ F:DROP_60 | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | 
 F:EVIL | IM_POIS | TAKE_ITEM | 
 F:MORTAL | BASEANGBAND |
-D:swamp kobold from nethack
+D:A kobold that supposedly likes swampy areas. 
 
 N:4754:rock kobold
 G:k:D
@@ -83250,7 +83270,7 @@ F:DROP_60 | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | 
 F:EVIL | IM_POIS | TAKE_ITEM | 
 F:MORTAL | BASEANGBAND |
-D:rock kobold from nethack
+D:A kobold that feels at home in rocky areas. 
 
 N:4755:kobold warrior
 G:k:W
@@ -83263,7 +83283,7 @@ F:DROP_60 | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | 
 F:EVIL | IM_POIS | TAKE_ITEM | 
 F:MORTAL | BASEANGBAND |
-D:kobold warrior from nethack
+D:A kobold who likes to use weapons. 
 
 N:4756:Kroo the Kobold King
 G:k:v
@@ -83276,7 +83296,7 @@ F:DROP_12 | WILD_TOO | DROP_SKELETON | DROP_CORPSE | DROP_GOOD |
 F:OPEN_DOOR | BASH_DOOR | UNIQUE | RES_WALL | RES_GRAV | 
 F:EVIL | IM_POIS | TAKE_ITEM | MALE | CAN_SPEAK | 
 F:MORTAL | BASEANGBAND |
-D:Kroo from nethack
+D:A particularly powerful kobold who leads his pals into battle. 
 
 N:4757:leprechaun
 G:h:g
@@ -83333,7 +83353,7 @@ B:CLAW:TERRIFY:3d4
 F:CHAR_MULTI | 
 F:BASEANGBAND | RES_SHAR | 
 F:IM_ACID | ANIMAL |
-D:large mimic from nethack
+D:It pretends to be a valuable item. 
 
 N:4760:giant mimic
 G:`:v
@@ -83346,7 +83366,7 @@ B:CLAW:TERRIFY:3d6
 F:CHAR_MULTI | 
 F:BASEANGBAND | RES_SHAR | 
 F:IM_ACID | ANIMAL |
-D:giant mimic from nethack
+D:Ha! Thought you had found some super useful item, eh? 
 
 N:4761:mountain nymph
 G:h:u
@@ -83449,7 +83469,8 @@ F:MORTAL | BASEANGBAND | TAKE_ITEM |
 S:1_IN_6
 S:ARROW_2 | DRAIN_MANA | CAUSE_1 | SCARE | BLIND | CONF | 
 S:HOLD | DARKNESS | BLINK | 
-D:brownie from nethack
+D:A nymph that is even more annoying because she can cast 
+D:spells in addition to her ability to steal your shit. 
 
 N:4767:Aphrodite
 G:h:v
@@ -83461,7 +83482,8 @@ B:CLAW:EAT_ITEM
 B:CLAW:EAT_ITEM
 F:FEMALE | DROP_12 | SMART | DROP_CORPSE | CAN_SPEAK | 
 F:MORTAL | BASEANGBAND | TAKE_ITEM | DROP_GREAT | 
-D:Aphrodite from nethack
+D:This bitch is the queen of nymphs, and her ability to 
+D:steal your items is unmatched! Don't let her near you! 
 
 N:4768:goblin
 G:k:W
@@ -83549,7 +83571,7 @@ F:DROP_60 | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | 
 F:EVIL | ORC | HURT_LITE | FRIEND | 
 F:MORTAL | BASEANGBAND | 
-D:hill orc from nethack
+D:A lowly type of orc. 
 
 N:4772:Mordor orc
 G:o:B
@@ -83562,7 +83584,8 @@ F:DROP_60 | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | 
 F:EVIL | ORC | HURT_LITE | FRIEND | 
 F:MORTAL | BASEANGBAND | 
-D:Mordor orc from nethack
+D:Cannon fodder from Isengard, these orcs come in groups and 
+D:fall like flies. 
 
 N:4773:goblin shaman
 G:k:W
@@ -83577,7 +83600,7 @@ F:ORC | EVIL | BASEANGBAND |
 F:DROP_SKELETON | DROP_CORPSE |
 S:1_IN_8
 S:CONF | HOLD | CAUSE_1
-D:goblin shaman from nethack
+D:A goblin that knows how to cast spells. 
 
 N:4774:Uruk-hai
 G:o:D
@@ -83613,7 +83636,7 @@ F:EVIL | ORC | HURT_LITE |
 F:MORTAL | BASEANGBAND | 
 S:1_IN_7
 S:CONF | SCARE | CAUSE_1 | ARROW_1
-D:orc shaman from nethack
+D:An orc who has learned to cast a few spells. 
 
 N:4776:orc-captain
 G:o:v
@@ -83627,7 +83650,7 @@ F:DROP_60 | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | 
 F:EVIL | ORC | HURT_LITE |  
 F:MORTAL | BASEANGBAND | 
-D:orc-captain from nethack
+D:An orc that leads other orcs into battle. 
 
 N:4777:war orc
 G:o:g
@@ -83640,7 +83663,7 @@ F:DROP_60 | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | 
 F:EVIL | ORC | HURT_LITE | FRIEND | 
 F:MORTAL | BASEANGBAND | 
-D:war orc from nethack
+D:An orc equipped for war. 
 
 N:4778:deep orc
 G:o:g
@@ -83654,7 +83677,7 @@ F:DROP_60 | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | 
 F:EVIL | ORC | HURT_LITE |  
 F:MORTAL | BASEANGBAND | 
-D:deep orc from nethack
+D:Yet another kind of orc. 
 
 N:4779:cave orc
 G:o:G
@@ -83667,7 +83690,7 @@ F:DROP_60 | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | 
 F:EVIL | ORC | HURT_LITE |  
 F:MORTAL | BASEANGBAND | 
-D:cave orc from nethack
+D:These orcs come from the deep caves. How ominous. 
 
 N:4780:great orc
 G:o:G
@@ -83680,7 +83703,7 @@ F:DROP_60 | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | 
 F:EVIL | ORC | HURT_LITE | FRIEND | 
 F:MORTAL | BASEANGBAND | 
-D:great orc from nethack
+D:Despite the name, this orc moves rather slowly. 
 
 N:4781:snow orc
 G:o:b
@@ -83693,7 +83716,7 @@ F:DROP_60 | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | IM_COLD | 
 F:EVIL | ORC | HURT_LITE | FRIEND | 
 F:MORTAL | BASEANGBAND | 
-D:snow orc from nethack
+D:A cold-resistant orc. 
 
 N:4782:demon orc
 G:o:o
@@ -83706,7 +83729,7 @@ F:DROP_60 | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | IM_FIRE | 
 F:EVIL | ORC | HURT_LITE | FRIEND | 
 F:MORTAL | BASEANGBAND | 
-D:demon orc from nethack
+D:A fire-resistant orc. 
 
 N:4783:Grund the Orc King
 G:o:v
@@ -83719,7 +83742,7 @@ F:DROP_12 | DROP_SKELETON | DROP_CORPSE | DROP_GOOD |
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | IM_POIS | MALE |
 F:EVIL | ORC | HURT_LITE | UNIQUE | CAN_SPEAK |
 F:MORTAL | BASEANGBAND | 
-D:Grund from nethack
+D:A great leader of the orcs. 
 
 N:4784:rock piercer
 G:#:W
@@ -83748,7 +83771,8 @@ O:0:0:0:0
 B:BITE:HURT:3d6
 F:NO_FEAR | BASEANGBAND | ANIMAL | 
 F:NO_CUT | RES_SHAR |
-D:iron piercer from nethack
+D:A monster that has not, in over 20 years of NetHack, ever 
+D:posed a problem to anyone because it moves so slowly. 
 
 N:4786:glass piercer
 G:#:w
@@ -83759,7 +83783,8 @@ O:0:0:0:0
 B:BITE:HURT:4d6
 F:NO_FEAR | BASEANGBAND | ANIMAL | 
 F:NO_CUT | RES_SHAR | IM_ACID | 
-D:glass piercer from nethack
+D:If it was moving more quickly, it might even be slightly 
+D:dangerous, but it doesn't so you can just cut it down. 
 
 N:4787:lamb
 G:q:w
@@ -83773,7 +83798,7 @@ F:WILD_WASTE | WILD_WOOD | WILD_GRASS |
 F:ANIMAL | NEUTRAL |
 F:DROP_SKELETON | DROP_CORPSE
 F:MORTAL | BASEANGBAND | 
-D:lamb from nethack
+D:A peaceful farm animal. 
 
 N:4788:rothe
 G:q:u
@@ -83802,7 +83827,8 @@ B:BITE:HURT:1d8
 B:STING:LOSE_STR:1d6
 F:BASH_DOOR | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:scramper from nethack
+D:Not sure what it's supposed to represent, but it has an annoying 
+D:poisonous sting. 
 
 N:4790:sheep
 G:q:w
@@ -83816,7 +83842,8 @@ F:WILD_WASTE | WILD_WOOD | WILD_GRASS |
 F:ANIMAL | NEUTRAL |
 F:DROP_SKELETON | DROP_CORPSE
 F:MORTAL | BASEANGBAND | 
-D:sheep from nethack
+D:These animals are docile and won't pose a threat unless you 
+D:decide to anger them. 
 
 N:4791:goat
 G:q:w
@@ -83831,7 +83858,8 @@ F:WILD_WASTE | WILD_WOOD | WILD_GRASS |
 F:ANIMAL | 
 F:DROP_SKELETON | DROP_CORPSE
 F:MORTAL | BASEANGBAND | 
-D:goat from nethack
+D:An annoying animal that decides the best course of action 
+D:is to attack you. Fight back and squash it! 
 
 N:4792:original mumak
 G:q:W
@@ -83882,7 +83910,7 @@ B:GAZE:EXP_80:2d6
 B:BITE:HURT:1d3
 F:BASH_DOOR | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:catoblepas from nethack
+D:The gaze of this quadruped drains your very soul. 
 
 N:4795:mumak
 G:q:W
@@ -83895,7 +83923,8 @@ B:BITE:HURT:2d6
 F:BASH_DOOR | DROP_CORPSE | RES_SHAR | 
 F:ANIMAL | MORTAL | BASEANGBAND
 F:WILD_WASTE | WILD_WOOD | WILD_GRASS | 
-D:mumak from nethack
+D:A very large, if somewhat slow, animal that hits with the 
+D:force of a truck. 
 
 N:4796:cow
 G:q:w
@@ -83909,7 +83938,8 @@ F:WILD_WASTE | WILD_WOOD | WILD_GRASS | WILD_TOWN |
 F:ANIMAL | NEUTRAL | FEMALE | 
 F:DROP_SKELETON | DROP_CORPSE |
 F:MORTAL | BASEANGBAND | 
-D:cow from nethack
+D:As long as you don't pick a fight with them, these animals 
+D:won't pose a danger. 
 
 N:4797:wumpus
 G:q:b
@@ -83937,7 +83967,7 @@ B:BUTT:HURT:2d8
 B:KICK:HURT:2d4
 F:BASH_DOOR | DROP_CORPSE | MALE | WILD_GRASS | 
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_WASTE | 
-D:bull from nethack
+D:A furious bovine who tries to kill you! 
 
 N:4799:titanothere
 G:q:W
@@ -83948,7 +83978,10 @@ O:0:0:0:0
 B:CLAW:HURT:2d8
 F:BASH_DOOR | DROP_CORPSE | RES_SHAR | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:titanothere from nethack
+D:Though not as enormous, the titanotheres of the 
+D:early Tertiary were also large perissodactyls, _Brontotherium_ 
+D:of the Oligocene being 8 feet high at the shoulder. 
+D:[ Prehistoric Animals, by Barry Cox ] 
 
 N:4800:baluchitherium
 G:q:W
@@ -83965,9 +83998,7 @@ D:spectacular being _Baluchitherium_ from the Oligocene of
 D:Asia, which is the largest known land mammal.  Its body, 18 
 D:feet high at the shoulder and carried on massive limbs, 
 D:allowed the 4-foot-long head to browse on the higher branches 
-D:of trees.  Though not as enormous, the titanotheres of the 
-D:early Tertiary were also large perissodactyls, _Brontotherium_ 
-D:of the Oligocene being 8 feet high at the shoulder. 
+D:of trees. 
 D:[ Prehistoric Animals, by Barry Cox ] 
 
 N:4801:mastodon
@@ -83998,7 +84029,7 @@ F:BASH_DOOR | DROP_CORPSE | RES_SHAR | DROP_22 | DROP_GOOD |
 F:ANIMAL | MORTAL | BASEANGBAND | UNIQUE | CAN_SPEAK | 
 F:RES_WALL | RES_GRAV | RES_NEXU | RES_DISE | RES_WATE | RES_TIME | 
 F:RES_SOUN | RES_CHAO | RES_INER | WILD_WASTE | 
-D:Jumbo from nethack
+D:A very large and dangerous elephant. 
 
 N:4803:sewer rat
 G:r:u
@@ -84008,7 +84039,7 @@ E:0:1:0:2:1:0
 O:0:0:0:0
 B:BITE:HURT:1d3
 F:ANIMAL | MORTAL | BASEANGBAND | FRIEND
-D:sewer rat from nethack
+D:Some small rodent that tries to bite you. 
 
 N:4804:pack rat
 G:r:D
@@ -84019,7 +84050,7 @@ O:0:0:0:0
 B:BITE:HURT:1d3
 B:TOUCH:EAT_ITEM:1d1
 F:ANIMAL | MORTAL | BASEANGBAND
-D:pack rat from nethack
+D:A rodent that tries to steal your stuff. 
 
 N:4805:rabbit
 G:r:w
@@ -84029,7 +84060,7 @@ E:0:1:0:2:1:0
 O:0:0:0:0
 B:BITE:HURT:1d3
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_GRASS |
-D:rabbit from nethack
+D:A small rodent that attacks you. 
 
 N:4806:black rat
 G:r:D
@@ -84039,7 +84070,7 @@ E:0:1:0:2:1:0
 O:0:0:0:0
 B:BITE:HURT:1d3
 F:ANIMAL | MORTAL | BASEANGBAND
-D:black rat from nethack
+D:Yet another rodent that wants to bite you. 
 
 N:4807:giant rat
 G:r:u
@@ -84068,7 +84099,7 @@ E:0:1:0:2:1:0
 O:0:0:0:0
 B:BITE:LOSE_CON:2d4
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | 
-D:rabid rat from nethack
+D:A rat that can drain your constitution with a bite. 
 
 N:4809:rabid rabbit
 G:r:w
@@ -84078,7 +84109,7 @@ E:0:1:0:2:1:0
 O:0:0:0:0
 B:BITE:LOSE_CON:2d6
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_GRASS | 
-D:rabid rabbit from nethack
+D:This rabbit has a rather unpleasant bite. 
 
 N:4810:rock mole
 G:r:W
@@ -84125,7 +84156,7 @@ E:0:1:0:2:1:0
 O:0:0:0:0
 B:BITE:HURT:1d6
 F:ANIMAL | MORTAL | BASEANGBAND
-D:enormous rat from nethack
+D:A rat that is bigger than usual. 
 
 N:4813:rodent of unusual size
 G:r:u
@@ -84135,7 +84166,7 @@ E:0:1:0:2:1:0
 O:0:0:0:0
 B:BITE:HURT:2d6
 F:ANIMAL | MORTAL | BASEANGBAND
-D:rodent of unusual size from nethack
+D:A very big rat. 
 
 N:4814:the Rat King
 G:r:v
@@ -84147,7 +84178,8 @@ B:HIT:HURT:2d4
 B:BITE:HURT:2d3
 F:ANIMAL | MORTAL | BASEANGBAND | RES_WALL | RES_GRAV |
 F:MALE | UNIQUE | CAN_SPEAK | DROP_12 | DROP_GOOD |
-D:Rat King from nethack
+D:The king of the rats. He wants to teach you a lesson for 
+D:all the other, smaller rats you've killed! 
 
 N:4815:cave spider
 G:S:W
@@ -84193,7 +84225,7 @@ B:BITE:LOSE_STR:1d4
 F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | SPIDER | IM_POIS | HAS_EGG |
 F:MORTAL | BASEANGBAND
-D:recluse spider from nethack
+D:A poisonous spider. 
 
 N:4818:carrion crawler
 G:c:g
@@ -84208,7 +84240,8 @@ B:TOUCH:PARALYZE:1d1
 F:DROP_SKELETON | IM_POIS | 
 F:BASH_DOOR | WILD_TOO | HAS_EGG |
 F:ANIMAL | MORTAL | BASEANGBAND
-D:carrion crawler from nethack
+D:Ha ha ha, this creature will constantly paralyze you. Unless 
+D:you have free action, you'll probably die. 
 
 N:4819:giant spider
 G:S:y
@@ -84277,7 +84310,7 @@ B:BITE:LOSE_STR:3d4
 F:DROP_SKELETON | IM_POIS | 
 F:BASH_DOOR | WILD_TOO | HAS_EGG |
 F:ANIMAL | MORTAL | BASEANGBAND
-D:nickelpede from nethack
+D:The name suggests it's probably some sort of centipede. 
 
 N:4823:giant scorpion
 G:S:r
@@ -84291,7 +84324,9 @@ B:STING:LOSE_STR:3d4
 F:BASH_DOOR | WILD_TOO | WILD_GRASS | WILD_WASTE | 
 F:ANIMAL | DROP_SKELETON | IM_POIS | HAS_EGG |
 F:MORTAL | BASEANGBAND
-D:giant scorpion from nethack
+D:Although it's easy to mistake for an ordinary scorpion, the 
+D:giant variant has about three times as much health and hits 
+D:approximately five times as hard. 
 
 N:4824:Girtab
 G:S:r
@@ -84305,7 +84340,8 @@ B:STING:LOSE_STR:3d9
 F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | DROP_22 | RES_WALL |
 F:ANIMAL | SPIDER | IM_POIS | UNIQUE | CAN_SPEAK |
 F:MORTAL | BASEANGBAND | RES_GRAV | IM_POIS | FEMALE |
-D:Girtab from nethack
+D:This huge spider will teach you to mess with eight-legged 
+D:animals! 
 
 N:4825:Shelob
 G:S:D
@@ -84471,7 +84507,7 @@ F:WILD_WASTE | WILD_GRASS | BASH_DOOR |
 F:ANIMAL | 
 F:MORTAL | BASEANGBAND | 
 F:DROP_SKELETON | DROP_CORPSE | 
-D:warhorse from nethack
+D:A very large horse. 
 
 N:4834:Pegasus
 G:q:w
@@ -84485,7 +84521,7 @@ F:BASH_DOOR | UNIQUE | CAN_SPEAK | DROP_12
 F:ANIMAL | CAN_FLY | NEUTRAL | GOOD |
 F:MORTAL | BASEANGBAND | 
 F:DROP_SKELETON | DROP_CORPSE | 
-D:Pegasus from nethack
+D:A legendary horse. 
 
 N:4835:fog cloud
 G:v:W
@@ -84517,7 +84553,7 @@ F:EMPTY_MIND | BASH_DOOR |
 F:NO_FEAR | NO_CONF | NO_SLEEP | NONLIVING | BASEANGBAND | 
 F:NO_CUT | IM_POIS | RES_WALL | RES_GRAV |
 F:RES_SHAR | CAN_FLY |
-D:dust vortex from nethack
+D:A vortex that blinds you. 
 
 N:4837:ice vortex
 G:v:b
@@ -84530,7 +84566,7 @@ F:EMPTY_MIND | BASH_DOOR |
 F:NO_FEAR | NO_CONF | NO_SLEEP | NONLIVING | BASEANGBAND | 
 F:NO_CUT | IM_POIS | RES_WALL | RES_GRAV | WILD_MOUNTAIN |
 F:RES_SHAR | CAN_FLY | IM_COLD |
-D:ice vortex from nethack
+D:A vortex that causes you to freeze. 
 
 N:4838:energy vortex
 G:v:B
@@ -84545,7 +84581,7 @@ F:EMPTY_MIND | BASH_DOOR |
 F:NO_FEAR | NO_CONF | NO_SLEEP | NONLIVING | BASEANGBAND | 
 F:NO_CUT | IM_POIS | RES_WALL | RES_GRAV | RES_DISE |
 F:RES_SHAR | CAN_FLY | IM_ELEC | RES_NEXU |
-D:energy vortex from nethack
+D:A vortex that shocks you and even drains power from your wands. 
 
 N:4839:steam vortex
 G:v:B
@@ -84558,7 +84594,7 @@ F:EMPTY_MIND | BASH_DOOR |
 F:NO_FEAR | NO_CONF | NO_SLEEP | NONLIVING | BASEANGBAND | 
 F:NO_CUT | IM_POIS | RES_WALL | RES_GRAV | WILD_VOLCANO |
 F:RES_SHAR | CAN_FLY | IM_FIRE | RES_NEXU |
-D:steam vortex from nethack
+D:A vortex that burns you. 
 
 N:4840:fire vortex
 G:v:y
@@ -84572,7 +84608,7 @@ F:EMPTY_MIND | BASH_DOOR |
 F:NO_FEAR | NO_CONF | NO_SLEEP | NONLIVING | BASEANGBAND | 
 F:NO_CUT | IM_POIS | RES_WALL | RES_GRAV | WILD_VOLCANO |
 F:RES_SHAR | CAN_FLY | IM_FIRE | RES_NEXU |
-D:fire vortex from nethack
+D:A very hot, fiery vortex. 
 
 N:4841:rot worm
 G:w:w
@@ -84584,7 +84620,8 @@ B:BITE:DISEASE:1d2
 F:STUPID | RES_SHAR | HAS_EGG |
 F:ANIMAL | NO_FEAR |
 F:MORTAL | BASEANGBAND | NO_CUT |
-D:rot worm from nethack
+D:Failure to recognize these worms in time can result in 
+D:being afflicted with disease! 
 
 N:4842:larva
 G:w:w
@@ -84596,7 +84633,8 @@ B:BITE:HURT:1d2
 F:STUPID | RES_SHAR | NO_SLEEP | IM_POIS |
 F:ANIMAL | NO_FEAR | REGENERATE |
 F:MORTAL | BASEANGBAND | NO_CUT |
-D:larva from nethack
+D:These things are small and not very dangerous, but can 
+D:be surprisingly difficult to kill. 
 
 N:4843:maggot
 G:w:w
@@ -84608,7 +84646,7 @@ B:BITE:HURT:1d3
 F:STUPID | RES_SHAR | 
 F:ANIMAL | NO_FEAR | 
 F:MORTAL | BASEANGBAND | NO_CUT |
-D:maggot from nethack
+D:A slow, crawling thing. 
 
 N:4844:dung worm
 G:w:D
@@ -84620,7 +84658,7 @@ B:BITE:HURT:1d4
 F:STUPID | RES_SHAR | HAS_EGG |
 F:ANIMAL | NO_FEAR | 
 F:MORTAL | BASEANGBAND | NO_CUT |
-D:dung worm from nethack
+D:A small worm. 
 
 N:4845:baby long worm
 G:w:u
@@ -84632,7 +84670,7 @@ B:BITE:HURT:1d6
 F:STUPID | RES_SHAR | 
 F:ANIMAL | NO_FEAR | 
 F:MORTAL | BASEANGBAND | NO_CUT |
-D:baby long worm from nethack
+D:The baby version of the long worm. 
 
 N:4846:baby purple worm
 G:w:v
@@ -84644,7 +84682,8 @@ B:BITE:HURT:1d6
 F:STUPID | RES_SHAR | 
 F:ANIMAL | NO_FEAR | 
 F:MORTAL | BASEANGBAND | NO_CUT |
-D:baby purple worm from nethack
+D:Unlike the fully grown purple worm, this one isn't very 
+D:dangerous yet. 
 
 N:4847:long worm
 G:w:u
@@ -84715,7 +84754,7 @@ O:0:0:0:0
 B:BITE:ELEC:2d4
 F:STUPID | WEIRD_MIND | IM_POIS | HAS_EGG |
 F:ANIMAL | NO_FEAR | IM_ELEC | BASEANGBAND |
-D:arc bug from nethack
+D:The "Grid Bug 3.0". 
 
 N:4852:electric bug
 G:I:y
@@ -84726,7 +84765,7 @@ O:0:0:0:0
 B:BITE:ELEC:2d6
 F:STUPID | WEIRD_MIND | IM_POIS | HAS_EGG |
 F:ANIMAL | NO_FEAR | IM_ELEC | BASEANGBAND |
-D:electric bug from nethack
+D:An even stronger version of the grid bug. 
 
 N:4853:xan
 G:I:r
@@ -84793,7 +84832,7 @@ F:BASH_DOOR | HAS_EGG | RES_SHAR | WILD_GRASS | WILD_WASTE |
 F:MORTAL | BASEANGBAND | 
 F:ANIMAL | 
 F:DROP_CORPSE | 
-D:echidna from nethack
+D:Some small australian animal. 
 
 N:4857:platypus
 G:q:g
@@ -84807,7 +84846,7 @@ F:BASH_DOOR | HAS_EGG | RES_SHAR | WILD_SHORE |
 F:MORTAL | BASEANGBAND | CAN_SWIM |
 F:ANIMAL | 
 F:DROP_CORPSE | 
-D:platypus from nethack
+D:A rather weird-looking australian animal. 
 
 N:4858:wombat
 G:q:u
@@ -84820,7 +84859,7 @@ B:BITE:HURT:1d2
 F:BASH_DOOR | MORTAL | BASEANGBAND | WILD_GRASS | WILD_WASTE |
 F:ANIMAL | 
 F:DROP_CORPSE | 
-D:wombat from nethack
+D:Some wild australian animal. 
 
 N:4859:wallaby
 G:q:u
@@ -84833,7 +84872,7 @@ B:BITE:HURT:1d4
 F:BASH_DOOR | MORTAL | BASEANGBAND | WILD_GRASS | WILD_WASTE | 
 F:ANIMAL | 
 F:DROP_CORPSE | 
-D:wallaby from nethack
+D:Another wild australian animal. 
 
 N:4860:wallaroo
 G:q:r
@@ -84846,7 +84885,8 @@ B:BITE:HURT:1d6
 F:BASH_DOOR | MORTAL | BASEANGBAND | 
 F:ANIMAL | WILD_GRASS | WILD_WASTE |
 F:DROP_CORPSE | 
-D:wallaroo from nethack
+D:An australian animal whose name sounds like a misspelling, 
+D:but apparently it's genuine. 
 
 N:4861:koala
 G:q:W
@@ -84858,7 +84898,7 @@ B:TOUCH:PARALYZE
 F:BASH_DOOR | MORTAL | BASEANGBAND | IM_POIS |
 F:ANIMAL | 
 F:DROP_CORPSE | 
-D:koala from nethack
+D:These little things tend to hold you in place. 
 
 N:4862:zouthy
 G:q:u
@@ -84872,7 +84912,7 @@ B:BITE:HURT:3d6
 F:BASH_DOOR | MORTAL | BASEANGBAND | 
 F:ANIMAL | TAKE_ITEM |
 F:DROP_CORPSE | 
-D:zouthy from nethack
+D:Supposed to be a zruty, but misnamed. 
 
 N:4863:Tasmanian devil
 G:q:D
@@ -84886,7 +84926,7 @@ B:BITE:HURT:3d6
 F:BASH_DOOR | MORTAL | BASEANGBAND | 
 F:ANIMAL | KILL_ITEM |
 F:DROP_CORPSE | 
-D:Tasmanian devil from nethack
+D:An animal that eats items off the floor. 
 
 N:4864:kangaroo
 G:q:W
@@ -84900,7 +84940,7 @@ B:BITE:HURT:1d6
 F:BASH_DOOR | MORTAL | BASEANGBAND | 
 F:ANIMAL | WILD_GRASS | WILD_WASTE |
 F:DROP_CORPSE | 
-D:kangaroo from nethack
+D:A very large, vicious australian animal. 
 
 N:4865:couatl
 G:A:g
@@ -84944,7 +84984,6 @@ D:looks exactly  like the character, and  is sent  by the character's
 D:god to  punish alignment violations. Obviously  - and  luckily - in 
 D:Nethack this is not the case.
 
-
 N:4867:movanic deva
 G:A:B
 I:115:8d16:30:35:255
@@ -84960,7 +84999,7 @@ F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL |
 F:NO_CONF | BASEANGBAND | RES_LITE | 
 S:1_IN_4
 S:HEAL | HASTE | CAUSE_2 | SCARE | BLIND | 
-D:movanic deva from nethack
+D:Some super powerful angelic being. 
 
 N:4868:Angel
 G:A:w
@@ -85004,7 +85043,7 @@ F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL |
 F:NO_CONF | BASEANGBAND | RES_LITE | 
 S:1_IN_4
 S:HEAL | HASTE | CAUSE_2 | SCARE | BLIND | BR_LITE | SLOW |
-D:monadic deva from nethack
+D:A very strong angelic being. 
 
 N:4870:ki-rin
 G:A:y
@@ -85147,7 +85186,7 @@ O:0:0:0:0
 B:BITE:HURT:1d5
 F:ANIMAL | CAN_FLY | WILD_GRASS | DROP_CORPSE
 F:MORTAL | BASEANGBAND | RAND_50 |
-D:large bat from nethack
+D:A bat that is larger than an ordinary one. 
 
 N:4877:giant bat
 G:b:r
@@ -85158,7 +85197,7 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:ANIMAL | CAN_FLY | WILD_GRASS | DROP_CORPSE
 F:MORTAL | BASEANGBAND | RAND_50 |
-D:giant bat from nethack
+D:A very big bat. 
 
 N:4878:athol
 G:b:W
@@ -85186,7 +85225,7 @@ O:0:0:0:0
 B:BITE:HURT:1d10
 F:ANIMAL | CAN_FLY | DROP_CORPSE
 F:MORTAL | BASEANGBAND | RAND_50 | 
-D:rhumbat from nethack
+D:Some sort of bat, I dunno what's up with it. 
 
 N:4880:crow
 G:B:D
@@ -85198,7 +85237,7 @@ B:BITE:HURT:1d4
 B:CLAW:HURT:1d4
 F:ANIMAL | WILD_TOO | WILD_WOOD | CAN_FLY | DROP_CORPSE
 F:MORTAL | BASEANGBAND | FRIEND
-D:crow from nethack
+D:A predatory bird. 
 
 N:4881:raven
 G:B:D
@@ -85229,7 +85268,8 @@ B:BITE:LOSE_STR
 F:ANIMAL | CAN_FLY | DROP_CORPSE | NO_SLEEP |
 F:MORTAL | BASEANGBAND | RAND_50 | IM_POIS |
 F:REGENERATE |
-D:vampire bat from nethack
+D:A bat that's less dangerous than an actual vampire but still 
+D:has a poisonous bite. 
 
 N:4883:hellbat
 G:b:r
@@ -85240,7 +85280,7 @@ O:0:0:0:0
 B:BITE:FIRE:1d12
 F:ANIMAL | CAN_FLY | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | RAND_50 | IM_FIRE |
-D:hellbat from nethack
+D:A goddamned bat with a fiery bite. 
 
 N:4884:mongbat
 G:b:o
@@ -85268,7 +85308,8 @@ F:ANIMAL | CAN_FLY | DROP_CORPSE |
 F:MORTAL | BASEANGBAND | RAND_50 | FRIEND |
 S:1_IN_8
 S:SHRIEK
-D:mobat from nethack
+D:Yet another bat. It shrieks occasionally, which can be very 
+D:annoying. 
 
 N:4886:byakhee
 G:b:u
@@ -85321,7 +85362,7 @@ B:HIT:HURT:1d6
 B:KICK:HURT:1d6
 F:BASH_DOOR | TAKE_ITEM | WILD_GRASS | WILD_WASTE |
 F:DROP_CORPSE | MORTAL | BASEANGBAND | DROP_60
-D:plains centaur from nethack
+D:A lowly centaur. 
 
 N:4889:forest centaur
 G:H:g
@@ -85333,7 +85374,7 @@ B:HIT:HURT:1d8
 B:KICK:HURT:1d8
 F:BASH_DOOR | TAKE_ITEM | WILD_WOOD |
 F:DROP_CORPSE | MORTAL | BASEANGBAND | DROP_60
-D:forest centaur from nethack
+D:A moderately strong centaur. 
 
 N:4890:mountain centaur
 G:H:b
@@ -85346,7 +85387,7 @@ B:KICK:HURT:1d6
 B:KICK:HURT:1d6
 F:BASH_DOOR | TAKE_ITEM | WILD_MOUNTAIN |
 F:DROP_CORPSE | MORTAL | BASEANGBAND | DROP_60
-D:mountain centaur from nethack
+D:A rather strong centaur. 
 
 N:4891:baby gray dragon
 G:d:W
