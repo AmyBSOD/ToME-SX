@@ -89988,6 +89988,52 @@ S:S_UNDEAD | S_MONSTER | S_MONSTERS | BO_ICEE | MIND_BLAST | FORGET |
 S:S_HI_UNDEAD | BRAIN_SMASH | BO_MANA | BA_WATE | HASTE | TELE_AWAY |
 D:Vecna from nethack
 
+N:5175:Farting girl
+G:t:w
+I:110:5d8:50:2:80
+W:5:3:500:8
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:FART:HURT:1d6
+F:DROP_CORPSE | DROP_60 | 
+F:BASEANGBAND | FEMALE
+D:She's young and naughty, and loves to produce squeaky farting noises 
+D:in an attempt to tease you.
+
+N:5176:Farting young woman
+G:t:w
+I:112:10d9:50:5:80
+W:10:3:500:20
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:FART:HURT:2d5
+F:DROP_CORPSE | DROP_60 | 
+F:BASEANGBAND | FEMALE
+D:A very sexy young woman whose beautiful farting noises are irresistible. 
+
+N:5177:Farting woman
+G:t:w
+I:110:15d16:50:10:80
+W:15:3:500:80
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:FARTLOUD:HURT:3d7
+F:DROP_CORPSE | DROP_60 | 
+F:BASEANGBAND | FEMALE
+D:She produces loud farting noises in an attempt to annoy you. 
+
+N:5178:Farting lady
+G:t:w
+I:108:20d25:50:18:80
+W:20:3:500:240
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:FARTQUIET:HURT:4d10
+F:DROP_CORPSE | DROP_60 | 
+F:BASEANGBAND | FEMALE
+D:You feel that the tender farting noises produced by this lady's sexy butt 
+D:are very erotic. 
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness (low = more alert)
