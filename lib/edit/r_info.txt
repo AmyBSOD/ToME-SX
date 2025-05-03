@@ -81620,7 +81620,12 @@ O:0:0:0:0
 B:STING:LOSE_STR:1d3
 F:FRIEND | CAN_FLY | WILD_TOO | WILD_WOOD | WILD_GRASS | 
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | 
-D:killer bee from nethack 
+D:This giant variety of its useful normal cousin normally 
+D:appears in small groups, looking for raw material to produce 
+D:the royal jelly needed to feed their queen.  On rare 
+D:occasions, one may stumble upon a bee-hive, in which the 
+D:queen bee is being well provided for, and guarded against 
+D:intruders. 
 
 N:4644:queen bee
 G:I:v
@@ -81643,7 +81648,10 @@ B:BITE:HURT:1d4
 F:DROP_SKELETON | WILD_WOOD | HAS_EGG | 
 F:ANIMAL | WILD_TOO | WILD_GRASS | 
 F:MORTAL | BASEANGBAND
-D:giant ant from nethack 
+D:This giant variety of the ordinary ant will fight just as 
+D:fiercely as its small, distant cousin.  Various varieties 
+D:exist, and they are known and feared for their relentless 
+D:persecution of their victims. 
 
 N:4646:giant flea
 G:S:W
@@ -81744,7 +81752,12 @@ O:0:0:0:0
 B:BITE:HURT:3d6
 F:WEIRD_MIND | BASH_DOOR | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS |
-D:giant beetle from nethack
+D:The common name for the insects with wings shaped like 
+D:shields (_Coleoptera_), one of the ten sub-species into 
+D:which the insects are divided.  They are characterized by 
+D:the shields (the front pair of wings) under which the back 
+D:wings are folded. 
+D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
 N:4654:giant louse
 G:S:W
@@ -81794,7 +81807,13 @@ O:0:0:0:0
 B:STING:LOSE_STR:1d3
 F:FRIEND | CAN_FLY | 
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | 
-D:migo drone from nethack 
+D:These strange beings are visitors from another realm.  An 
+D:unusual symbiotic relationship exists between the intelligent 
+D:fungus and the insectoid form that comprises the bulk of its 
+D:body.  They are said to have access to great magical powers. 
+D:Their queens have been known to steal human brains, taking 
+D:them back to distant Yuggoth. 
+D:Migo are also known as the Fungi from Yuggoth. 
 
 N:4658:yellow jacket
 G:I:y
@@ -81900,7 +81919,10 @@ F:BASH_DOOR |
 F:IM_POIS | IM_ACID | RES_WALL | RES_GRAV | RES_SHAR | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
 F:EMPTY_MIND | 
-D:acid blob from nethack
+D:These giant amoeboid creatures look like nothing more than 
+D:puddles of slime, but they both live and move, feeding on 
+D:metal or wood as well as the occasional dungeon explorer to 
+D:supplement their diet. 
 
 N:4667:quivering blob
 G:j:w
@@ -81995,7 +82017,10 @@ B:TOUCH:ABOMINATION
 F:BASEANGBAND |
 F:ANIMAL | WILD_GRASS | IM_POIS | RES_WALL | 
 F:DROP_SKELETON | DROP_CORPSE | RES_GRAV | 
-D:chickatrice from nethack
+D:This beastie is the recently-hatched broodling of a cockatrice, a 
+D:creature feared by adventurers great and small for its petrifying 
+D:peck.  
+D:[ The New Bestiary, Wizard Endlebrook ] 
 
 N:4674:rabid chicken
 G:B:u
@@ -82020,7 +82045,17 @@ B:TOUCH:ABOMINATION
 F:BASEANGBAND |
 F:ANIMAL | WILD_GRASS | IM_POIS | RES_WALL | 
 F:DROP_SKELETON | DROP_CORPSE | RES_GRAV | HAS_EGG | 
-D:cockatrice from nethack
+D:Once in a great while, when the positions of the stars are 
+D:just right, a seven-year-old rooster will lay an egg.  Then, 
+D:along will come a snake, to coil around the egg, or a toad, 
+D:to squat upon the egg, keeping it warm and helping it to 
+D:hatch.  When it hatches, out comes a creature called basilisk, 
+D:or cockatrice, the most deadly of all creatures.  A single 
+D:glance from its yellow, piercing toad's eyes will kill both 
+D:man and beast.  Its power of destruction is said to be so 
+D:great that sometimes simply to hear its hiss can prove fatal. 
+D:Its breath is so venomous that it causes all vegetation 
+D:to wither. 
 
 N:4676:pyrolisk
 G:B:r
@@ -82032,7 +82067,10 @@ B:GAZE:FIRE:2d6
 F:BASEANGBAND | IM_POIS | IM_FIRE | 
 F:ANIMAL | WILD_WOOD | HAS_EGG | 
 F:DROP_SKELETON | DROP_CORPSE |   
-D:pyrolisk from nethack
+D:A single glance from this red-feathered cockatrice can cause even 
+D:the bravest adventurer to burst into flames, their flesh withering 
+D:and blackening and curling beneath the creature's baleful gaze. 
+D:[ The New Bestiary, Wizard Endlebrook ] 
 
 N:4677:jackal
 G:C:u
@@ -82043,7 +82081,19 @@ O:0:0:0:0
 B:BITE:HURT:1d2
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:jackal from nethack
+D:In Asiatic folktale, jackal provides for the lion; he scares 
+D:up game, which the lion kills and eats, and receives what is 
+D:left as reward.  In stories from northern India he is 
+D:sometimes termed "minister to the king," i.e. to the lion. 
+D:From the legend that he does not kill his own food has arisen 
+D:the legend of his cowardice.  Jackal's heart must never be 
+D:eaten, for instance, in the belief of peoples indigenous to 
+D:the regions where the jackal abounds. ... In Hausa Negro 
+D:folktale Jackal plays the role of sagacious judge and is 
+D:called "O Learned One of the Forest."  The Bushmen say that 
+D:Jackal goes around behaving the way he does "because he is 
+D:Jackal". 
+D:[ Funk & Wagnalls Standard Dictionary of Folklore ] 
 
 N:4678:fox
 G:C:r
@@ -82054,7 +82104,15 @@ O:0:0:0:0
 B:BITE:HURT:1d3
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:fox from nethack
+D:One hot summer's day a Fox was strolling through an orchard till he 
+D:came to a bunch of Grapes just ripening on a vine which had been 
+D:trained over a lofty branch. "Just the thing to quench my thirst," 
+D:quoth he. Drawing back a few paces, he took a run and a jump, and 
+D:just missed the bunch. Turning round again with a One, Two, Three, he 
+D:jumped up, but with no greater success. Again and again he tried 
+D:after the tempting morsel, but at last had to give it up, and walked 
+D:away with his nose in the air, saying: "I am sure they are sour." 
+D:[ Aesop's Fables ] 
 
 N:4679:coyote
 G:C:u
@@ -82065,7 +82123,8 @@ O:0:0:0:0
 B:BITE:HURT:1d4
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:coyote from nethack
+D:This carnivore is known for its voracious appetite and 
+D:inflated view of its own intelligence. 
 
 N:4680:dingo puppy
 G:C:y
@@ -82099,7 +82158,12 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:little dog from nethack
+D:A domestic animal, the _tame dog_ (_Canis familiaris_), of 
+D:which numerous breeds exist.  The male is called a dog, 
+D:while the female is called a bitch.  Because of its known 
+D:loyalty to man and gentleness with children, it is the 
+D:world's most popular domestic animal.  It can easily be 
+D:trained to perform various tasks. 
 
 N:4683:dingo
 G:C:y
@@ -82110,7 +82174,10 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:dingo from nethack
+D:A wolflike wild dog, Canis dingo, of Australia, having a 
+D:reddish- or yellowish-brown coat, believed to have been 
+D:introduced by the aborigines. 
+D:[Webster's Encyclopedic Unabridged Dictionary of the English Language] 
 
 N:4684:dog
 G:C:w
@@ -82132,7 +82199,11 @@ O:0:0:0:0
 B:BITE:HURT:2d4
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:wolf from nethack
+D:The ancestors of the modern day domestic dog, wolves are 
+D:powerful muscular animals with bushy tails.  Intelligent, 
+D:social animals, wolves live in family groups or packs made 
+D:up of multiple family units.  These packs cooperate in hunting 
+D:down prey. 
 
 N:4686:winter wolf cub
 G:C:b
@@ -82189,7 +82260,23 @@ O:0:0:0:0
 B:BITE:HURT:2d6
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:warg from nethack
+D:Suddenly Aragorn leapt to his feet.  "How the wind howls!" 
+D:he cried.  "It is howling with wolf-voices.  The Wargs have 
+D:come west of the Mountains!" 
+D:"Need we wait until morning then?" said Gandalf.  "It is as I 
+D:said.  The hunt is up!  Even if we live to see the dawn, who 
+D:now will wish to journey south by night with the wild wolves 
+D:on his trail?" 
+D:"How far is Moria?" asked Boromir. 
+D:"There was a door south-west of Caradhras, some fifteen miles 
+D:as the crow flies, and maybe twenty as the wolf runs," 
+D:answered Gandalf grimly. 
+D:"Then let us start as soon as it is light tomorrow, if we can," 
+D:said Boromir.  "The wolf that one hears is worse than the orc 
+D:that one fears." 
+D:"True!" said Aragorn, loosening his sword in its sheath.  "But 
+D:where the warg howls, there also the orc prowls." 
+D:[ The Fellowship of the Ring, by J.R.R. Tolkien ] 
 
 N:4691:hyena
 G:C:y
@@ -82238,7 +82325,10 @@ B:BITE:COLD:4d6
 B:BITE:HURT:2d6
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:shadow wolf from nethack
+D:This evil creature (_canis tenebrous_)  lurks in the darker, more 
+D:sinister corners of the world. Its bite is known for its chilling 
+D:effect upon humanoid flesh, and it is not a tameable animal. 
+D:[ The New Bestiary, Wizard Endlebrook ] 
 
 N:4695:mist wolf
 G:C:D
@@ -82250,7 +82340,11 @@ B:BITE:COLD:4d6
 B:BITE:HURT:2d6
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:mist wolf from nethack
+D:This hazy canine (_canis precipitous_) is thought to have a good 
+D:heart hiding somewhere within its green, silky hide. Unfortunately, 
+D:the beast is usually ravenous, as its diet of mist is not very 
+D:filling, at least compared to human flesh. 
+D:[ The New Bestiary, Wizard Endlebrook ] 
 
 N:4696:hell hound
 G:C:r
@@ -82263,7 +82357,14 @@ F:WILD_TOO | WILD_VOLCANO | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | IM_FIRE
 S:1_IN_4
 S:BR_FIRE
-D:hell hound from nethack
+D:Hell hounds are fire-breathing canines from another plane of 
+D:existence brought here in the service of evil beings.  A hell 
+D:hound resembles a large hound with rust-red or red-brown fur, 
+D:and red, glowing eyes.  The markings, teeth, and tongue are 
+D:soot black.  It stands two to three feet high at the shoulder 
+D:and has a distinct odour of smoke and sulphur.  The baying 
+D:sounds it makes have an eerie, hollow tone that sends a shiver 
+D:through any who hear them. 
 
 N:4697:Cerberus
 G:C:v
@@ -82279,7 +82380,13 @@ F:ANIMAL | MORTAL | BASEANGBAND | RES_GRAV | IM_POIS |
 F:RES_DISE | NO_SLEEP | NO_CONF | NO_FEAR | MALE | CAN_SPEAK | 
 S:1_IN_5
 S:BR_FIRE
-D:Cerberus from nethack
+D:Cerberus, (or Kerberos in Greek), was the three-headed dog 
+D:that guarded the Gates of Hell.  He allowed any dead to enter, 
+D:and likewise prevented them all from ever leaving.  He was 
+D:bested only twice:  once when Orpheus put him to sleep by 
+D:playing bewitching music on his lyre, and the other time when 
+D:Hercules confronted him and took him to the world of the 
+D:living (as his twelfth and last labor). 
 
 N:4698:gas spore
 G:e:W
@@ -82290,7 +82397,13 @@ O:0:0:0:0
 B:EXPLODE:HURT:4d6
 F:CAN_FLY | RES_SHAR | EMPTY_MIND |
 F:HURT_LITE | NO_FEAR | BASEANGBAND
-D:gas spore from nethack
+D:Gas spores are a vaguely intelligent fungal growth that has 
+D:evolved to strongly resemble the Beholder.  If they are struck 
+D:with  any amount of force they will explode violently.  Gas spores 
+D:tend to grow in groups, and legends have been written about the 
+D:destruction caused by foolish adventurers who touched a 
+D:single one. 
+D:[ Adapted by Ben Lehman from Monstrous Manual, by TSR, Inc. ] 
 
 N:4699:floating eye
 G:e:B
@@ -82301,7 +82414,13 @@ O:0:0:0:0
 B:GAZE:PARALYZE:1d10
 F:CAN_FLY | DROP_CORPSE | RES_SHAR | CAN_SWIM |
 F:HURT_LITE | NO_FEAR | BASEANGBAND
-D:floating eye from nethack
+D:Floating eyes, not surprisingly, are large, floating eyeballs 
+D:which drift about the dungeon.  Though not dangerous in and 
+D:of themselves, their power to paralyse those who gaze at 
+D:their large eye in combat is widely feared.  Many are the 
+D:tales of those who struck a floating eye, were paralysed by 
+D:its mystic powers, and then nibbled to death by some other 
+D:creature that lurked around nearby. 
 
 N:4700:freezing sphere
 G:e:w
@@ -82345,7 +82464,10 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_GRASS | WILD_WOOD | 
-D:kitten from nethack
+D:Well-known quadruped domestic animal from the family of 
+D:predatory felines (_Felis ochreata domestica_), with a thick, 
+D:soft pelt; often kept as a pet.  Various folklores have the 
+D:cat associated with magic and the gods of ancient Egypt. 
 
 N:4704:housecat
 G:f:w
@@ -82356,7 +82478,12 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_GRASS | WILD_WOOD | 
-D:housecat from nethack
+D:So Ulthar went to sleep in vain anger; and when the people 
+D:awakened at dawn - behold!  Every cat was back at his 
+D:accustomed hearth!  Large and small, black, grey, striped, 
+D:yellow and white, none was missing.  Very sleek and fat did 
+D:the cats appear, and sonorous with purring content. 
+D:[ The Cats of Ulthar, by H.P. Lovecraft ] 
 
 N:4705:large cat
 G:f:w
@@ -82380,7 +82507,10 @@ B:CLAW:HURT:1d4
 B:BITE:HURT:1d8
 F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_WOOD | 
-D:jaguar from nethack
+D:Large, flesh-eating animal of the cat family, of Central and 
+D:South America.  This feline predator (_Panthera onca_) is 
+D:sometimes incorrectly called a panther. 
+D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
 N:4707:kamadan
 G:f:o
@@ -82395,7 +82525,11 @@ F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | NO_SLEEP | EVIL
 S:1_IN_8
 S:BR_INER
-D:kamadan from nethack
+D:The kamadan is a greatly feared hunter that resembles a large 
+D:leopard with six snakes sprouting from its shoulders. 
+D:Sages believe it is a distant relative of the displacer beast, 
+D:though how it came to be is still a matter for speculation. 
+D:[ Creature Catalog by Scott Greene ] 
 
 N:4708:lynx
 G:f:b
@@ -82408,7 +82542,12 @@ B:CLAW:HURT:1d4
 B:BITE:HURT:1d10
 F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_WOOD | 
-D:lynx from nethack
+D:To dream of seeing a lynx, enemies are undermining your 
+D:business and disrupting your home affairs.  For a woman, 
+D:this dream indicates that she has a wary woman rivaling her 
+D:in the affections of her lover. If she kills the lynx, she 
+D:will overcome her rival. 
+D:[ 10,000 Dreams Interpreted, by Gustavus Hindman Miller ] 
 
 N:4709:panther
 G:f:D
@@ -82421,7 +82560,14 @@ B:CLAW:HURT:1d6
 B:BITE:HURT:1d10
 F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_WOOD | 
-D:panther from nethack
+D:And lo! almost where the ascent began, 
+D:A panther light and swift exceedingly, 
+D:Which with a spotted skin was covered o'er! 
+D:And never moved she from before my face, 
+D:Nay, rather did impede so much my way, 
+D:That many times I to return had turned. 
+D:[ Dante's Inferno, as translated 
+D:by Henry Wadsworth Longfellow ] 
 
 N:4710:caterwaul
 G:f:W
@@ -82447,7 +82593,12 @@ B:CLAW:HURT:2d4
 B:BITE:HURT:1d10
 F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_WOOD | 
-D:tiger from nethack
+D:1.  A well-known tropical predator (_Felis tigris_): a 
+D:feline.  It has a yellowish skin with darker spots or 
+D:stripes.  2.  Figurative: _a paper tiger_, something that is 
+D:meant to scare, but has no really scaring effect whatsoever, 
+D:(after a statement by Mao Ze Dong, August 1946). 
+D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
 N:4712:displacer beast
 G:f:B
@@ -82517,7 +82668,9 @@ F:TAKE_ITEM | CAN_SWIM |
 F:MORTAL | BASEANGBAND
 S:1_IN_8
 S:CAUSE_1
-D:gremlin from nethack
+D:The gremlin is a highly intelligent and completely evil 
+D:creature.  It lives to torment other creatures and will go 
+D:to great lengths to inflict pain or cause injury. 
 
 N:4717:gargoyle
 G:u:u
@@ -82531,7 +82684,15 @@ B:BITE:HURT:2d4
 F:OPEN_DOOR | 
 F:TAKE_ITEM | CAN_SWIM | RES_WALL | RES_GRAV |
 F:MORTAL | BASEANGBAND | RES_SHAR |
-D:gargoyle from nethack
+D:In each coming, the gargoyles were nearly destroyed by Men 
+D:who flourished in greater numbers.  Now it has been so many 
+D:hundreds of years that it seems the ancient statues and 
+D:paintings of gargoyles are just products of Man's 
+D:imagination.  In this year, with Man's thoughts turned toward 
+D:the many ills he has brought among himself, Man has forgotten 
+D:his most ancient adversary, the gargoyles. 
+D:[ Excerpt from the opening narration to the movie 
+D:_Gargoyles_, written by Stephen and Elinor Karpf ] 
 
 N:4718:winged gargoyle
 G:u:v
@@ -82558,7 +82719,16 @@ F:DROP_60 |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:GOOD
 F:MORTAL | BASEANGBAND
-D:hobbit from nethack
+D:Hobbits are an unobtrusive but very ancient people, more 
+D:numerous formerly than they are today; for they love peace 
+D:and quiet and good tilled earth:  a well-ordered and well- 
+D:farmed countryside was their favourite haunt.  They do not 
+D:and did not understand or like machines more complicated 
+D:than a forge-bellows, a water-mill, or a handloom, although 
+D:they were skillful with tools.  Even in ancient days they 
+D:were, as a rule, shy of "the Big Folk", as they call us, and 
+D:now they avoid us with dismay and are becoming hard to find. 
+D:[ The Fellowship of the Ring, by J.R.R. Tolkien ] 
 
 N:4720:hobbit thief
 G:h:D
@@ -82613,7 +82783,10 @@ F:DROP_60 |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:EVIL
 F:MORTAL | BASEANGBAND
-D:bugbear from nethack
+D:Bugbears are relatives of goblins, although they tend to be 
+D:larger and more hairy.  They are aggressive carnivores and 
+D:sometimes kill just for the treasure their victims may be 
+D:carrying. 
 
 N:4724:hobbit lord
 G:h:B
@@ -82739,7 +82912,15 @@ B:CLAW:HURT:1d6
 B:BITE:HURT:2d4
 F:FRIENDS | DROP_CORPSE | CAN_SWIM | TAKE_ITEM |
 F:DROP_60 | IM_COLD | IM_POIS | EVIL | 
-D:deep one from nethack
+D:For eighty thousand years Pth'thya-l'yi had lived in Y'ha-nthlei, 
+D:and thither she had gone back after Obed Marsh was dead. 
+D:Y'ha-nthlei was not destroyed when the upper-earth men shot death 
+D:into the sea.  It was hurt, but not destroyed.  The Deep Ones 
+D:could never be destroyed, even though the palaeogean magic of the 
+D:forgotten Old Ones might sometimes check them.  For the present 
+D:they would rest; but some day, if they remembered, they would 
+D:rise again for the tribute Great Cthulhu craved. 
+D:[ The Shadow Over Innsmouth, by H.P. Lovecraft ] 
 
 N:4733:mind flayer
 G:h:v
@@ -82757,7 +82938,12 @@ F:EVIL | DROP_SKELETON | DROP_CORPSE | CAN_FLY |
 F:MORTAL | BASEANGBAND | 
 S:1_IN_20
 S:MIND_BLAST
-D:mind flayer from nethack
+D:This creature has a humanoid body, tentacles around its 
+D:covered mouth, and three long fingers on each hand.  Mind 
+D:flayers are telepathic, and love to devour intelligent beings, 
+D:especially humans.  If they hit their victim with a tentacle, 
+D:the mind flayer will slowly drain it of all intelligence, 
+D:eventually killing its victim. 
 
 N:4734:master mind flayer
 G:h:v
@@ -82815,7 +83001,8 @@ B:BITE:HURT:1d4
 F:FRIEND | 
 F:OPEN_DOOR | BASH_DOOR | NO_SLEEP | 
 F:EVIL | DEMON | IM_POIS | NO_FEAR | BASEANGBAND
-D:manes from nethack
+D:The gnats of the dungeon, these swarming monsters are rarely 
+D:seen alone.
 
 N:4738:homunculus
 G:u:g
@@ -82826,7 +83013,11 @@ O:0:0:0:0
 B:CLAW:PARALYZE:1d3
 F:OPEN_DOOR | BASH_DOOR | NO_SLEEP | CAN_FLY | 
 F:EVIL | DEMON | IM_POIS | NO_FEAR | BASEANGBAND
-D:homunculus from nethack
+D:A homunculus is a creature summoned by a mage to perform some 
+D:particular task.  They are particularly good at spying.  They 
+D:are smallish creatures, but very agile.  They can put their 
+D:victims to sleep with a venomous bite, but due to their size, 
+D:the effect does not last long on humans. 
 
 N:4739:dretch
 G:u:y
@@ -82848,7 +83039,15 @@ O:0:0:0:0
 B:CLAW:HURT:1d4
 F:OPEN_DOOR | BASH_DOOR | REGENERATE | 
 F:EVIL | DEMON | NO_FEAR | BASEANGBAND
-D:imp from nethack
+D:An 'imp' is an off-shoot or cutting.  Thus an 'ymp tree' was 
+D:a grafted tree, or one grown from a cutting, not from seed. 
+D:'Imp' properly means a small devil, an off-shoot of Satan, 
+D:but the distinction between goblins or bogles and imps from 
+D:hell is hard to make, and many in the Celtic countries as 
+D:well as the English Puritans regarded all fairies as devils. 
+D:The fairies of tradition often hover uneasily between the 
+D:ghostly and the diabolic state. 
+D:[ A Dictionary of Fairies, by Katharine Briggs ] 
 
 N:4741:lemure
 G:u:u
@@ -82859,7 +83058,7 @@ O:0:0:0:0
 B:CLAW:HURT:1d3
 F:OPEN_DOOR | FRIEND | BASH_DOOR | REGENERATE | IM_POIS | 
 F:EVIL | DEMON | NO_FEAR | BASEANGBAND | NO_SLEEP |
-D:lemure from nethack
+D:The lowliest of the inhabitants of hell. 
 
 N:4742:quasit
 G:u:B
@@ -82872,7 +83071,8 @@ B:CLAW:LOSE_DEX:1d2
 B:BITE:HURT:1d4
 F:OPEN_DOOR | BASH_DOOR | REGENERATE | IM_POIS | 
 F:EVIL | DEMON | NO_FEAR | BASEANGBAND
-D:quasit from nethack
+D:Quasits are small, evil creatures, related to imps.  Their 
+D:talons release a very toxic poison when used in an attack. 
 
 N:4743:rutterkin
 G:u:o
@@ -82896,7 +83096,13 @@ F:OPEN_DOOR | BASH_DOOR | IM_POIS |
 F:GOOD | DEMON | NO_FEAR | BASEANGBAND
 S:1_IN_8
 S:TPORT | TELE_AWAY
-D:tengu from nethack
+D:The tengu was the most troublesome creature of Japanese 
+D:legend.  Part bird and part man, with red beak for a nose 
+D:and flashing eyes, the tengu was notorious for stirring up 
+D:feuds and prolonging enmity between families.  Indeed, the 
+D:belligerent tengu were supposed to have been man's first 
+D:instructors in the use of arms. 
+D:[ Mythical Beasts, by Deirdre Headon (The Leprechaun Library) ] 
 
 N:4745:nupperibo
 G:u:g
@@ -82920,7 +83126,20 @@ F:NEVER_MOVE | COLD_BLOOD |
 F:STUPID | EMPTY_MIND | WILD_MOUNTAIN | 
 F:IM_COLD | IM_POIS | RES_SHAR | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:blue jelly from nethack
+D:The tissue injury resulting from frostbite is produced in two ways. The most 
+D:obvious is actual freezing of the tissues. Although ice crystals form between 
+D:the cells and grow by extracting water from them, the cells are physically 
+D:disrupted by the ice crystals only to a limited extent. The dehydration and 
+D:osmotic and chemical imbalances resulting from  extraction of water from within 
+D:the cell injure them, but permanent damage may be small. (...) The second 
+D:mechanism of tissue injury by frostbite, which is much more significant is loss 
+D:of blood supply to the tissues. Blood may flow through larger vessels but (one 
+D:of the signs of adequate rewarming is a flushing of the frozen area) oxygen 
+D:cannot be deliver to the tissues because the small blood vessels that would 
+D:carry it have been lost. 
+D:[ Hypothermia, Frostbite, and Other Cold Injuries: 
+D:Prevention, Survival, Rescue and Treatment 
+D:by Gordon G. Giesbrecht, James A. Wilkerson ] 
 
 N:4747:spotted jelly
 G:j:g
@@ -82960,7 +83179,11 @@ F:DROP_60 | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | 
 F:EVIL | IM_POIS | TAKE_ITEM | 
 F:MORTAL | BASEANGBAND |
-D:kobold from nethack
+D:The race of kobolds are reputed to be an artificial creation 
+D:of a master wizard (demi-god?).  They are about 3' tall with 
+D:a vaguely dog-like face.  They bear a violent dislike of the 
+D:Elven race, and will go out of their way to cause trouble 
+D:for Elves at any time. 
 
 N:4750:large kobold
 G:k:r
@@ -83064,7 +83287,24 @@ O:0:0:0:0
 B:CLAW:EAT_GOLD:1d2
 F:OPEN_DOOR | TAKE_ITEM | WILD_GRASS | WILD_WOOD | 
 F:MORTAL | BASEANGBAND
-D:leprechaun from nethack
+D:The Irish Leprechaun is the Faeries' shoemaker and is known 
+D:under various names in different parts of Ireland: 
+D:Cluricaune in Cork, Lurican in Kerry, Lurikeen in Kildare 
+D:and Lurigadaun in Tipperary.  Although he works for the 
+D:Faeries, the Leprechaun is not of the same species.  He is 
+D:small, has dark skin and wears strange clothes.  His nature 
+D:has something of the manic-depressive about it:  first he 
+D:is quite happy, whistling merrily as he nails a sole on to a 
+D:shoe; a few minutes later, he is sullen and morose, drunk 
+D:on his home-made heather ale.  The Leprechaun's two great 
+D:loves are tobacco and whiskey, and he is a first-rate con-man, 
+D:impossible to out-fox.  No one, no matter how clever, has ever 
+D:managed to cheat him out of his hidden pot of gold or his 
+D:magic shilling.  At the last minute he always thinks of some 
+D:way to divert his captor's attention and vanishes in the 
+D:twinkling of an eye. 
+D:[ A Field Guide to the Little People 
+D:by Nancy Arrowsmith & George Moorse ] 
 
 N:4758:small mimic
 G:):u
@@ -83076,7 +83316,12 @@ B:CLAW:HURT:3d4
 F:CHAR_MULTI | 
 F:BASEANGBAND | RES_SHAR | 
 F:IM_ACID | ANIMAL |
-D:small mimic from nethack
+D:The ancestors of the modern day chameleon, these creatures can 
+D:assume the form of anything in their surroundings.  They may 
+D:assume the shape of objects or dungeon features.  Unlike the 
+D:chameleon though, which assumes the shape of another creature 
+D:and goes in hunt of food, the mimic waits patiently for its 
+D:meals to come in search of it. 
 
 N:4759:large mimic
 G:!:r
@@ -83113,7 +83358,9 @@ B:CLAW:EAT_ITEM
 B:CLAW:EAT_ITEM
 F:FEMALE | DROP_60 | SMART | DROP_CORPSE |
 F:MORTAL | BASEANGBAND | TAKE_ITEM | WILD_MOUNTAIN | 
-D:mountain nymph from nethack
+D:Amy: "So ein suesses Nymphchen!" 
+D:Irrenhaus3: "Am Arsch die Raeuber." 
+D:[ Comments on Irrenhaus3's nymph video. ] 
 
 N:4762:quickling
 G:h:B
@@ -83125,7 +83372,11 @@ B:HIT:HURT:1d2
 B:CLAW:EAT_ITEM
 F:DROP_60 | SMART | DROP_CORPSE |
 F:MORTAL | BASEANGBAND | TAKE_ITEM | 
-D:quickling from nethack
+D:A blur of color and a hint of movement are the only clues most 
+D:people have of the existence of the quickling. Great speed and 
+D:small size make it difficult to find and focus on these swift 
+D:beings. 
+D:[ ADOM, by Thomas Biskup ] 
 
 N:4763:pixie
 G:h:b
@@ -83136,7 +83387,11 @@ O:20:50:10:5
 B:CLAW:EAT_ITEM:1d2
 F:FEMALE | DROP_60 | SMART | DROP_CORPSE |
 F:MORTAL | BASEANGBAND | TAKE_ITEM | INVISIBLE | 
-D:pixie from nethack
+D:Do fairies live in the hedge by the lawn? 
+D:With pale, violet eyes and wings that shimmer? 
+D:Not in my garden of thistle and thorn, 
+D:Well, not since I tidied it up with my strimmer. 
+D:[ Learning to Live with Orcs by Richard A. Bartle ] 
 
 N:4764:wood nymph
 G:h:g
@@ -83148,7 +83403,14 @@ B:CLAW:EAT_ITEM
 B:CLAW:EAT_ITEM
 F:FEMALE | DROP_60 | SMART | DROP_CORPSE |
 F:MORTAL | BASEANGBAND | TAKE_ITEM | WILD_WOOD | 
-D:wood nymph from nethack
+D:A female creature from Roman and Greek mythology, the nymph 
+D:occupied rivers, forests, ponds, etc.  A nymph's beauty is 
+D:beyond words:  an ever-young woman with sleek figure and 
+D:long, thick hair, radiant skin and perfect teeth, full lips 
+D:and gentle eyes.  A nymph's scent is delightful, and her 
+D:long robe glows, hemmed with golden threads and embroidered 
+D:with rainbow hues of unearthly magnificence.  A nymph's 
+D:demeanour is graceful and charming, her mind quick and witty. 
 
 N:4765:water nymph
 G:h:B
@@ -83160,7 +83422,20 @@ B:CLAW:EAT_ITEM
 B:CLAW:EAT_ITEM
 F:FEMALE | DROP_60 | SMART | DROP_CORPSE | WILD_OCEAN |
 F:MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SWIM | WILD_SHORE | 
-D:water nymph from nethack
+D:"Theseus felt her voice pulling him down into fathoms of 
+D:sleep.  The song was the skeleton of his dream, and the dream 
+D:was full of terror.  Demon girls were after him, and a bull- 
+D:man was goring him.  Everywhere there was blood.  There was 
+D:pain.  There was fear.  But his head was in the nymph's lap 
+D:and her musk was about him, her voice weaving the dream.  He 
+D:knew then that she had been sent to tell him of something 
+D:dreadful that was to happen to him later.  Her song was a 
+D:warning.  But she had brought him a new kind of joy, one that 
+D:made him see everything differently.  The boy, who was to 
+D:become a hero, suddenly knew then what most heroes learn 
+D:later -- and some too late -- that joy blots suffering and 
+D:that the road to nymphs is beset by monsters." 
+D:[ The Minotaur by Bernard Evslin ] 
 
 N:4766:brownie
 G:h:u
@@ -83199,7 +83474,16 @@ F:DROP_60 |
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
 F:ORC | EVIL | BASEANGBAND |
 F:DROP_SKELETON | DROP_CORPSE |
-D:goblin from nethack
+D:Now goblins are cruel, wicked, and bad-hearted.  They make 
+D:no beautiful things, but they make many clever ones.  They 
+D:can tunnel and mine as well as any but the most skilled 
+D:dwarves, when they take the trouble, though they are usually 
+D:untidy and dirty.  Hammers, axes, swords, daggers, pickaxes, 
+D:tongs, and also instruments of torture, they make very well, 
+D:or get other people to make to their design, prisoners and 
+D:slaves that have to work till they die for want of air and 
+D:light. 
+D:[ The Hobbit, by J.R.R. Tolkien ] 
 
 N:4769:hobgoblin
 G:k:u
@@ -83212,7 +83496,19 @@ F:DROP_60 |
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
 F:ORC | EVIL | BASEANGBAND |
 F:DROP_SKELETON | DROP_CORPSE |
-D:hobgoblin from nethack
+D:Hobgoblins are on the whole, good-humoured and ready to be 
+D:helpful, but fond of practical joking, and like most of the 
+D:fairies rather nasty people to annoy.  Boggarts hover on the 
+D:verge of hobgoblindom.  Bogles are just over the edge. 
+D:One Hob mentioned by Henderson, was Hob Headless who haunted 
+D:the road between Hurworth and Neasham, but could not cross 
+D:the little river Kent, which flowed into the Tess.  He was 
+D:exorcised and laid under a large stone by the roadside for 
+D:ninety-nine years and a day.  If anyone was so unwary as to 
+D:sit on that stone, he would be unable to quit it for ever. 
+D:The ninety-nine years is nearly up, so trouble may soon be 
+D:heard of on the road between Hurworth and Neasham. 
+D:[ A Dictionary of Fairies, by Katharine Briggs ] 
 
 N:4770:orc
 G:o:r
@@ -83226,7 +83522,21 @@ F:DROP_60 | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | 
 F:EVIL | ORC | HURT_LITE | 
 F:MORTAL | BASEANGBAND | 
-D:orc from nethack
+D:Orcs, bipeds with a humanoid appearance, are related to the 
+D:goblins, but much bigger and more dangerous.  The average orc 
+D:is only moderately intelligent, has broad, muscled shoulders, 
+D:a short neck, a sloping forehead and a thick, dark fur. 
+D:Their lower eye-teeth are pointing forward, like a boar's. 
+D:Female orcs are more lightly built and bare-chested.  Not 
+D:needing any clothing, they do like to dress in variegated 
+D:apparels.  Suspicious by nature, orcs live in tribes or 
+D:hordes.  They tend to live underground as well as above 
+D:ground (but they dislike sunlight).  Orcs can use all weapons, 
+D:tools and armours that are used by men.  Since they don't have 
+D:the talent to fashion these themselves, they are constantly 
+D:hunting for them.  There is nothing a horde of orcs cannot 
+D:use. 
+D:[ het Boek van de Regels; Het Oog des Meesters ] 
 
 N:4771:hill orc
 G:o:y
@@ -83280,7 +83590,15 @@ F:DROP_60 | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | 
 F:EVIL | ORC | HURT_LITE | FRIEND | 
 F:MORTAL | BASEANGBAND | 
-D:Uruk-hai from nethack
+D:"Aye, we must stick together," growled Ugluk. "I don't trust you 
+D:little swine. You've got no guts outside your own sties. But for 
+D:us you'd all have run away. We are the fighting Uruk-Hai! We slew 
+D:the great warrior. We took the prisoners. We are the servants of 
+D:Saruman the Wise, the White Hand: the hand that gives us 
+D:man's-flesh to eat. We came out of Isengard, and led you 
+D:here, and we shall lead you back by the way we choose. I am 
+D:Ugluk. I have spoken." 
+D:[ The Return of the King, by J.R.R. Tolkien ] 
 
 N:4775:orc shaman
 G:o:B
@@ -83412,7 +83730,14 @@ O:0:0:0:0
 B:BITE:HURT:2d6
 F:NO_FEAR | BASEANGBAND | ANIMAL | 
 F:NO_CUT | RES_SHAR |
-D:rock piercer from nethack
+D:Ye Piercer doth look like unto a stalactyte, and hangeth 
+D:from the roofs of caves and caverns.  Unto the height of a 
+D:man, and thicker than a man's thigh do they grow, and in 
+D:groups do they hang.  If a creature doth pass beneath them, 
+D:they will by its heat and noise perceive it, and fall upon 
+D:it to kill and devour it, though in any other way they move 
+D:but exceeding slow. 
+D:[ the Bestiary of Xygag ] 
 
 N:4785:iron piercer
 G:#:b
@@ -83461,7 +83786,9 @@ B:BITE:HURT:1d3
 B:BITE:HURT:1d8
 F:BASH_DOOR | DROP_CORPSE | WILD_WOOD | WILD_WASTE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:rothe from nethack
+D:The rothe (pronounced roth-AY) is a musk ox-like creature with 
+D:an aversion to light.  It prefers to live underground near 
+D:lichen and moss. 
 
 N:4789:scramper
 G:q:g
@@ -83517,7 +83844,14 @@ B:BITE:HURT:2d6
 F:BASH_DOOR | DROP_CORPSE | RES_SHAR | 
 F:ANIMAL | MORTAL | BASEANGBAND
 F:WILD_WASTE | WILD_WOOD | WILD_GRASS | 
-D:original mumak from nethack
+D:... the Mumak of Harad was indeed a beast of vast bulk, and 
+D:the like of him does not walk now in Middle-Earth; his kin 
+D:that live still in latter days are but memories of his girth 
+D:and majesty.  On he came, ... his great legs like trees, 
+D:enormous sail-like ears spread out, long snout upraised like 
+D:a huge serpent about to strike, his small red eyes raging. 
+D:His upturned hornlike tusks ... dripped with blood. 
+D:[ The Two Towers, by J.R.R. Tolkien ] 
 
 N:4793:leocrotta
 G:q:r
@@ -83530,7 +83864,13 @@ B:BITE:HURT:2d6
 B:CLAW:HURT:2d6
 F:BASH_DOOR | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:leocrotta from nethack
+D:... the leucrocotta, a wild beast of extraordinary swiftness, 
+D:the size of the wild ass, with the legs of a Stag, the neck, 
+D:tail, and breast of a lion, the head of a badger, a cloven 
+D:hoof, the mouth slit up as far as the ears, and one continuous 
+D:bone instead of teeth; it is said, too, that this animal can 
+D:imitate the human voice. 
+D:[ Curious Creatures in Zoology, by John Ashton ] 
 
 N:4794:catoblepas
 G:q:D
@@ -83580,7 +83920,12 @@ O:0:0:0:0
 B:BITE:HURT:3d6
 F:BASH_DOOR | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:wumpus from nethack
+D:The Wumpus, by the way, is not bothered by the hazards since 
+D:he has sucker feet and is too big for a bat to lift.  If you 
+D:try to shoot him and miss, there's also a chance that he'll 
+D:up and move himself into another cave, though by nature the 
+D:Wumpus is a sedentary creature. 
+D:[ wump(6) -- "Hunt the Wumpus" ] 
 
 N:4798:bull
 G:q:D
@@ -83615,7 +83960,15 @@ B:CLAW:HURT:5d4
 B:CLAW:HURT:5d4
 F:BASH_DOOR | DROP_CORPSE | RES_SHAR | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:baluchitherium from nethack
+D:Extinct rhinos include a variety of forms, the most 
+D:spectacular being _Baluchitherium_ from the Oligocene of 
+D:Asia, which is the largest known land mammal.  Its body, 18 
+D:feet high at the shoulder and carried on massive limbs, 
+D:allowed the 4-foot-long head to browse on the higher branches 
+D:of trees.  Though not as enormous, the titanotheres of the 
+D:early Tertiary were also large perissodactyls, _Brontotherium_ 
+D:of the Oligocene being 8 feet high at the shoulder. 
+D:[ Prehistoric Animals, by Barry Cox ] 
 
 N:4801:mastodon
 G:q:u
@@ -83627,7 +83980,11 @@ B:BUTT:HURT:4d8
 B:CHARGE:HURT:4d8
 F:BASH_DOOR | DROP_CORPSE | RES_SHAR | 
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_WASTE | 
-D:mastodon from nethack
+D:Any large, elephantlike mammal of the genera Mammut, Mastodon, 
+D:etc., from the Oligocene and Pleistocene epochs, having 
+D:conical projections on the molar teeth. 
+D:[ Webster's Encyclopedic Unabridged Dictionary 
+D:of the English Language ] 
 
 N:4802:Jumbo the Elephant
 G:q:v
@@ -83692,7 +84049,16 @@ E:0:1:0:2:1:0
 O:0:0:0:0
 B:BITE:HURT:1d3
 F:ANIMAL | MORTAL | BASEANGBAND | FRIEND
-D:giant rat from nethack
+D:"The rat," said O'Brien, still addressing his invisible 
+D:audience, "although a rodent, is carnivorous.  You are aware 
+D:of that.  You will have heard of the things that happen in 
+D:the poor quarters of this town.  In some streets a woman dare 
+D:not leave her baby alone in the house, even for five minutes. 
+D:The rats are certain to attack it.  Within quite a small time 
+D:they will strip it to the bones.  They also attack sick or 
+D:dying people.  They show astonishing intelligence in knowing 
+D:when a human being is helpless." 
+D:[ 1984, by George Orwell ] 
 
 N:4808:rabid rat
 G:r:u
@@ -83723,7 +84089,12 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:ANIMAL | MORTAL | BASEANGBAND | RES_WALL | RES_GRAV |
 F:KILL_WALL | WILD_MOUNTAIN | 
-D:rock mole from nethack
+D:A rock mole is a member of the rodent family.  They get their 
+D:name from their ability to tunnel through rock in the same 
+D:fashion that a mole tunnels through earth.  They are known to 
+D:eat anything they come across in their diggings, although it 
+D:is still unknown how they convert some of these things into 
+D:something of nutritional value. 
 
 N:4811:woodchuck
 G:r:u
@@ -83734,7 +84105,17 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:ANIMAL | MORTAL | BASEANGBAND | CAN_SWIM | WILD_WOOD |
 F:KILL_WALL |
-D:woodchuck from nethack
+D:The Usenet Oracle requires an answer to this question! 
+D:> How much wood could a woodchuck chuck if a woodchuck could 
+D:> chuck wood? 
+D:"Oh, heck!  I'll handle *this* one!"  The Oracle spun the terminal 
+D:back toward himself, unlocked the ZOT-guard lock, and slid the 
+D:glass guard away from the ZOT key.  "Ummmm....could you turn around 
+D:for a minute?  ZOTs are too graphic for the uninitiated.  Even *I* 
+D:get a little squeamish sometimes..."  The neophyte turned around, 
+D:and heard the Oracle slam his finger on a computer key, followed 
+D:by a loud ZZZZOTTTTT and the smell of ozone. 
+D:[ Excerpted from Internet Oracularity 576.6 ] 
 
 N:4812:enormous rat
 G:r:u
@@ -83778,7 +84159,7 @@ B:BITE:HURT:1d2
 F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | SPIDER | IM_POIS | HAS_EGG |
 F:MORTAL | BASEANGBAND
-D:cave spider from nethack
+D:Eight legged creature capable of spinning webs to trap prey. 
 
 N:4816:centipede
 G:c:y
@@ -83790,7 +84171,17 @@ B:BITE:LOSE_STR:1d3
 F:DROP_SKELETON | IM_POIS | 
 F:BASH_DOOR | WILD_TOO | HAS_EGG |
 F:ANIMAL | MORTAL | BASEANGBAND
-D:centipede from nethack
+D:I observed here, what I had often seen before, that certain 
+D:districts abound in centipedes.  Here they have light 
+D:reddish bodies and blue legs; great myriapedes are seen 
+D:crawling every where.  Although they do no harm, they excite 
+D:in man a feeling of loathing.  Perhaps our appearance 
+D:produces a similar feeling in the elephant and other large 
+D:animals.  Where they have been much disturbed, they 
+D:certainly look upon us with great distrust, as the horrid 
+D:biped that ruins their peace. 
+D:[ Travels and Researches in South Africa, 
+D:by Dr. David Livingstone ] 
 
 N:4817:recluse spider
 G:S:u
@@ -83829,7 +84220,14 @@ B:BITE:LOSE_STR:2d4
 F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | WILD_WOOD |
 F:ANIMAL | SPIDER | IM_POIS | HAS_EGG |
 F:MORTAL | BASEANGBAND
-D:giant spider from nethack
+D:"You mean you eat flies?" gasped Wilbur. 
+D:"Certainly.  Flies, bugs, grasshoppers, choice beetles, 
+D:moths, butterflies, tasty cockroaches, gnats, midges, daddy 
+D:longlegs, centipedes, mosquitoes, crickets - anything that is 
+D:careless enough to get caught in my web.  I have to live, 
+D:don't I?" 
+D:"Why, yes, of course," said Wilbur. 
+D:[ Charlotte's Web, by E.B. White ] 
 
 N:4820:scorpion
 G:S:r
@@ -83843,7 +84241,11 @@ B:STING:LOSE_STR:1d4
 F:BASH_DOOR | WILD_TOO | WILD_GRASS | WILD_WASTE | 
 F:ANIMAL | DROP_SKELETON | IM_POIS | HAS_EGG |
 F:MORTAL | BASEANGBAND
-D:scorpion from nethack
+D:A sub-species of the spider (_Scorpionidae_), the scorpion 
+D:distinguishes itself from them by having a lower body that 
+D:ends in a long, jointed tail tapering to a poisonous stinger. 
+D:They have eight legs and pincers. 
+D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
 N:4821:phase spider
 G:S:B
@@ -83855,7 +84257,15 @@ B:BITE:LOSE_STR:3d4
 F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | SPIDER | IM_POIS | HAS_EGG | WILD_WOOD |
 F:MORTAL | BASEANGBAND
-D:phase spider from nethack
+D:Phase Spiders are not true Spiders, but an alien race which 
+D:appear as giant spiders with humanoid shaped heads. Phase Spiders 
+D:speak a whispery language which is reminiscent of the sound of the 
+D:wind blowing through the trees. ... Phase Spiders are considered 
+D:Enlightened creatures as they have the ability to phase in and out 
+D:of our normal space-time into what most scientists would refer to 
+D:as Void-Space. Phase Spiders use this ability to their great 
+D:advantage in combat. 
+D:[ Alien Update Lexicon by Randy Walker ] 
 
 N:4822:nickelpede
 G:c:b
@@ -83908,7 +84318,14 @@ B:CLAW:LOSE_STR:5d4
 F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | DROP_22 | RES_WALL |
 F:ANIMAL | SPIDER | IM_POIS | UNIQUE | CAN_SPEAK |
 F:MORTAL | BASEANGBAND | RES_GRAV | IM_POIS | FEMALE |
-D:Shelob from nethack
+D:...Great horns she had,  and behind her short stalk-like neck 
+D:was her huge swollen body, a vast bloated bag, swaying and 
+D:sagging between her legs; its great bulk was black, blotched 
+D:with livid marks, but the belley underneath was pale and 
+D:luminous and gave forth a stench. Her legs were bent, with 
+D:great knobbed joints high above her back, and hairs that stuck 
+D:out like steel spines, and at each leg's end there was a claw. 
+D:[ The Two Towers, by J.R.R. Tolkien ] 
 
 N:4826:lurker above
 G:.:W
@@ -83920,7 +84337,9 @@ B:ENGULF:UN_POWER:1d8
 F:CHAR_CLEAR | ATTR_CLEAR | CHAR_MULTI | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | RES_SHAR |
 F:CAN_FLY | ANIMAL |
-D:lurker above from nethack
+D:These dungeon scavengers are very adept at blending into the 
+D:surrounding walls and ceilings of the dungeon due to the 
+D:stone-like coloring of their skin. 
 
 N:4827:trapper
 G:.:g
@@ -83932,7 +84351,11 @@ B:ENGULF:UN_POWER:1d10
 F:CHAR_CLEAR | ATTR_CLEAR | CHAR_MULTI | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | RES_SHAR |
 F:CAN_FLY | ANIMAL |
-D:trapper from nethack
+D:The trapper is a creature which has evolved a chameleon-like 
+D:ability to blend into the dungeon surroundings.  It captures 
+D:its prey by remaining very still and blending into the 
+D:surrounding dungeon features, until an unsuspecting creature 
+D:passes by.  It wraps itself around its prey and digests it. 
 
 N:4828:pony
 G:q:u
@@ -83946,7 +84369,11 @@ F:WILD_WASTE | WILD_GRASS | BASH_DOOR |
 F:ANIMAL | 
 F:MORTAL | BASEANGBAND | 
 F:DROP_SKELETON | DROP_CORPSE | 
-D:pony from nethack
+D:"Here are your ponies, now!" he said.  "They've more sense (in some 
+D:ways) than you wandering hobbits have -- more sense in their noses. 
+D:For they sniff danger ahead which you walk right into; and if they 
+D:run to save themselves, then they run the right way." 
+D:[ The Fellowship of the Ring, by J.R.R. Tolkien ] 
 
 N:4829:white unicorn
 G:q:w
@@ -83960,7 +84387,15 @@ F:BASH_DOOR | AI_ANNOY |
 F:ANIMAL | IM_POIS | GOOD |
 F:MORTAL | BASEANGBAND | 
 F:DROP_SKELETON | DROP_CORPSE | 
-D:white unicorn from nethack
+D:Men have always sought the elusive unicorn, for the single 
+D:twisted horn which projected from its forehead was thought to 
+D:be a powerful talisman.  It was said that the unicorn had 
+D:simply to dip the tip of its horn in a muddy pool for the water 
+D:to become pure.  Men also believed that to drink from this horn 
+D:was a protection against all sickness, and that if the horn was 
+D:ground to a powder it would act as an antidote to all poisons. 
+D:Less than 200 years ago in France, the horn of a unicorn was 
+D:used in a ceremony to test the royal food for poison. 
 
 N:4830:gray unicorn
 G:q:W
@@ -83974,7 +84409,14 @@ F:BASH_DOOR | AI_ANNOY |
 F:ANIMAL | IM_POIS | 
 F:MORTAL | BASEANGBAND | 
 F:DROP_SKELETON | DROP_CORPSE | 
-D:gray unicorn from nethack
+D:Although only the size of a small horse, the unicorn is a very 
+D:fierce beast, capable of killing an elephant with a single 
+D:thrust from its horn.  Its fleetness of foot also makes this 
+D:solitary creature difficult to capture.  However, it can be 
+D:tamed and captured by a maiden.  Made gentle by the sight of a 
+D:virgin, the unicorn can be lured to lay its head in her lap, and 
+D:in this docile mood, the maiden may secure it with a golden rope. 
+D:[ Mythical Beasts, by Deirdre Headon (The Leprechaun Library) ] 
 
 N:4831:black unicorn
 G:q:D
@@ -83988,7 +84430,13 @@ F:BASH_DOOR | AI_ANNOY |
 F:ANIMAL | IM_POIS | EVIL |
 F:MORTAL | BASEANGBAND | 
 F:DROP_SKELETON | DROP_CORPSE | 
-D:black unicorn from nethack
+D:Martin took a small sip of beer.  "Almost ready," he said. 
+D:"You hold your beer awfully well." 
+D:Tlingel laughed.  "A unicorn's horn is a detoxicant.  Its 
+D:possession is a universal remedy.  I wait until I reach the 
+D:warm glow stage, then I use my horn to burn off any excess and 
+D:keep me right there." 
+D:[ Unicorn Variations, by Roger Zelazny ] 
 
 N:4832:horse
 G:q:u
@@ -84002,7 +84450,14 @@ F:WILD_WASTE | WILD_GRASS | BASH_DOOR |
 F:ANIMAL | 
 F:MORTAL | BASEANGBAND | 
 F:DROP_SKELETON | DROP_CORPSE | 
-D:horse from nethack
+D:King Richard III: A horse! a horse! my kingdom for a horse! 
+D:Catesby: Withdraw, my lord; I'll help you to a horse. 
+D:King Richard III: Slave, I have set my life upon a cast, 
+D:And I will stand the hazard of the die: 
+D:I think there be six Richmonds in the field; 
+D:Five have I slain to-day instead of him. 
+D:A horse! a horse! my kingdom for a horse! 
+D:[ King Richard III, by William Shakespeare ] 
 
 N:4833:warhorse
 G:q:u
@@ -84043,7 +84498,13 @@ F:EMPTY_MIND | BASH_DOOR |
 F:NO_FEAR | NO_CONF | NO_SLEEP | NONLIVING | BASEANGBAND | 
 F:NO_CUT | IM_POIS | RES_WALL | RES_GRAV |
 F:RES_SHAR | RES_NEXU | CAN_FLY |
-D:fog cloud from nethack
+D:The fog comes 
+D:on little cat feet. 
+D:It sits looking 
+D:over harbor and city 
+D:on silent haunches 
+D:and then moves on. 
+D:[ Fog, by Carl Sandburg ] 
 
 N:4836:dust vortex
 G:v:u
@@ -84195,7 +84656,12 @@ B:BITE:HURT:1d4
 F:STUPID | RES_SHAR | HAS_EGG | 
 F:ANIMAL | NO_FEAR | 
 F:MORTAL | BASEANGBAND | NO_CUT |
-D:long worm from nethack
+D:[The crysknife] is manufactured in two forms from teeth taken 
+D:from dead sandworms.  The two forms are "fixed" and "unfixed". 
+D:An unfixed knife requires proximity to a human body's 
+D:electrical field to prevent disintegration.  Fixed knives 
+D:are treated for storage.  All are about 20 centimeters long. 
+D:[ Dune, by Frank Herbert ] 
 
 N:4848:purple worm
 G:w:v
@@ -84208,7 +84674,12 @@ B:ENGULF:UN_POWER:1d10
 F:STUPID | RES_SHAR | HAS_EGG |
 F:ANIMAL | NO_FEAR | 
 F:MORTAL | BASEANGBAND | NO_CUT |
-D:purple worm from nethack
+D:A gargantuan version of the harmless rain-worm, the purple 
+D:worm poses a huge threat to the ordinary adventurer.  It is 
+D:known to swallow whole and digest its victims within only a 
+D:few minutes.  These worms are always on guard, sensitive 
+D:to the most minute vibrations in the earth, but may also 
+D:be awakened by a remote shriek. 
 
 N:4849:grid bug
 G:I:v
@@ -84219,7 +84690,9 @@ O:0:0:0:0
 B:BITE:ELEC:1d1
 F:STUPID | WEIRD_MIND | IM_POIS | HAS_EGG |
 F:ANIMAL | NO_FEAR | IM_ELEC | BASEANGBAND |
-D:grid bug from nethack
+D:These electronically based creatures are not native to this 
+D:universe.  They appear to come from a world whose laws of 
+D:motion are radically different from ours. 
 
 N:4850:spark bug
 G:I:B
@@ -84230,7 +84703,8 @@ O:0:0:0:0
 B:BITE:ELEC:1d3
 F:STUPID | WEIRD_MIND | IM_POIS | HAS_EGG |
 F:ANIMAL | NO_FEAR | IM_ELEC | BASEANGBAND |
-D:spark bug from nethack
+D:"What was that?" cried Buck, rubbing his numb and tingling arm. 
+D:"Nature's revenge for bug zappers," replied his companion. 
 
 N:4851:arc bug
 G:I:o
@@ -84263,7 +84737,17 @@ O:0:0:0:0
 B:STING:LOSE_STR:1d4
 F:STUPID | WEIRD_MIND | IM_POIS | CAN_FLY |
 F:ANIMAL | NO_FEAR | BASEANGBAND |
-D:xan from nethack
+D:They sent their friend the mosquito [xan] ahead of them to 
+D:find out what lay ahead.  "Since you are the one who sucks 
+D:the blood of men walking along paths," they told the mosquito, 
+D:"go and sting the men of Xibalba."  The mosquito flew 
+D:down the dark road to the Underworld.  Entering the house of 
+D:the Lords of Death, he stung the first person that he saw... 
+D:The mosquito stung this man as well, and when he yelled, the 
+D:man next to him asked, "Gathered Blood, what's wrong?"  So 
+D:he flew along the row stinging all the seated men until he 
+D:knew the names of all twelve. 
+D:[ Popul Vuh, as translated by Ralph Nelson ] 
 
 N:4854:yellow light
 G:*:y
@@ -84276,7 +84760,9 @@ F:EMPTY_MIND | CAN_FLY | NONLIVING | RES_NEXU |
 F:BASEANGBAND | HAS_LITE | RAND_50 | RAND_25 | NO_CUT
 F:IM_FIRE | IM_COLD | IM_ELEC | RES_DISE | NO_SLEEP |
 F:IM_POIS | IM_ACID | RES_WALL | RES_GRAV | RES_SHAR |
-D:yellow light from nethack
+D:Strange creatures formed from energy rather than matter, 
+D:lights are given to self-destructive behavior when battling 
+D:foes. 
 
 N:4855:black light
 G:*:D
@@ -84289,7 +84775,11 @@ F:EMPTY_MIND | CAN_FLY | NONLIVING | RES_NEXU |
 F:BASEANGBAND | HAS_LITE | RAND_50 | RAND_25 | NO_CUT
 F:IM_FIRE | IM_COLD | IM_ELEC | RES_DISE | NO_SLEEP |
 F:IM_POIS | IM_ACID | RES_WALL | RES_GRAV | RES_SHAR |
-D:black light from nethack
+D:Ultraviolet (UV) radiation is electromagnetic radiation of a wavelength 
+D:shorter than that of the visible region, but longer than that of soft 
+D:X-rays. ... Some of the UV wavelengths are colloquially called black 
+D:light, as it is invisible to the human eye. 
+D:[ Wikipedia, the free encyclopedia ] 
 
 N:4856:echidna
 G:q:u
@@ -84425,7 +84915,16 @@ F:NO_FEAR |
 F:ONLY_ITEM | DROP_22 | GOOD | CAN_FLY | WILD_SHORE |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | 
 F:IM_POIS | NO_CONF | BASEANGBAND | RES_LITE | WILD_OCEAN |
-D:couatl from nethack
+D:A mythical feathered serpent. The couatl are very rare. 
+D:The couatl are feathered serpents of myth and lore. It is believed 
+D:that they are distant relatives of dragons, though this remains 
+D:unproven. So rare as to be considered legendary, the couatl are 
+D:some of the most beautiful creatures in existence. A couatl has 
+D:the body of a long serpent and feathered wings the colour of the 
+D:rainbow. Occasionally sent as messengers from the gods to their 
+D:erring servants, a couatl will always seek to punish those who 
+D:deserve it. 
+D:[ 2nd ed. Monstrous Compendium, by TSR, Inc. ] 
 
 N:4866:Aleax
 G:A:y
@@ -84440,7 +84939,11 @@ F:NO_FEAR |
 F:ONLY_ITEM | DROP_22 | GOOD | CAN_FLY | IM_ELEC |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | NO_SLEEP |
 F:IM_POIS | NO_CONF | BASEANGBAND | RES_LITE | IM_COLD |
-D:Aleax from nethack
+D:An Aleax,  according to the  AD&D Fiend Folio,  is a  creature that 
+D:looks exactly  like the character, and  is sent  by the character's 
+D:god to  punish alignment violations. Obviously  - and  luckily - in 
+D:Nethack this is not the case.
+
 
 N:4867:movanic deva
 G:A:B
@@ -84474,7 +84977,18 @@ F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | NO_SLEEP |
 F:IM_POIS | NO_CONF | BASEANGBAND | RES_LITE | IM_COLD |
 S:1_IN_4
 S:MISSILE
-D:Angel from nethack
+D:He answered and said unto them, he that soweth the good seed 
+D:is the Son of man; the field is the world, and the good seed 
+D:are the children of the kingdom; but the weeds are the 
+D:children of the wicked one; the enemy that sowed them is the 
+D:devil; the harvest is the end of the world; and the reapers 
+D:are the angels.  As therefore the weeds are gathered and 
+D:burned in the fire; so shall it be in the end of this world. 
+D:[...]  So shall it be at the end of the world; the angels 
+D:shall come forth, and sever the wicked from among the just, 
+D:and shall cast them into the furnace of fire; there shall be 
+D:wailing and gnashing of teeth. 
+D:[ The Gospel According to Matthew, 13:37-42, 49-50 ] 
 
 N:4869:monadic deva
 G:A:U
@@ -84507,7 +85021,10 @@ F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL |
 F:NO_CONF | BASEANGBAND | RES_LITE | WILD_WOOD |
 S:1_IN_4
 S:CAUSE_2 | HASTE | DRAIN_MANA | SCARE | CONF |
-D:ki-rin from nethack
+D:The ki-rin is a strange-looking flying creature.  It has 
+D:scales, a mane like a lion, a tail, hooves, and a horn.  It 
+D:is brightly colored, and can usually be found flying in the 
+D:sky looking for good deeds to reward. 
 
 N:4871:astral deva
 G:A:w
@@ -84524,7 +85041,14 @@ F:NO_CONF | BASEANGBAND | RES_LITE |
 S:1_IN_4
 S:HEAL | HASTE | CAUSE_2 | SCARE | BLIND | BR_LITE | SLOW |
 S:BO_PLAS | FORGET | S_KIN |
-D:astral deva from nethack
+D:Devas are the descendants of plane-touched aasimon.  They have 
+D:feathery wings that may be vestigial or functional. 
+D:Movanic devas are the most frequently seen by mortals. Their 
+D:milky skin and slender build distinguishes them from the 
+D:dark and muscular monadic devas.  The latter are rarely encountered 
+D:except in the inner planes. It is said they are able to breathe 
+D:elements other than air. 
+D:[ adapted from Aasimar, by David Roberts and Brynn ] 
 
 N:4872:Archon
 G:A:v
@@ -84544,7 +85068,10 @@ F:REGENERATE |
 S:1_IN_3
 S:CAUSE_3 | HASTE | DRAIN_MANA | SCARE | CONF |
 S:MIND_BLAST | HOLD | BR_LITE | S_KIN |
-D:Archon from nethack
+D:Archons are the predominant inhabitants of the heavens. 
+D:However unusual their appearance, they are not generally 
+D:evil.  They are beings at peace with themselves and their 
+D:surroundings. 
 
 N:4873:Planetar
 G:A:b
@@ -84564,7 +85091,9 @@ F:REGENERATE |
 S:1_IN_3
 S:CAUSE_3 | HASTE | DRAIN_MANA | SCARE | CONF |
 S:MIND_BLAST | HOLD | BR_LITE | S_KIN | BO_PLAS | BA_CHAO |
-D:Planetar from nethack
+D:These Aasimar seldom associate with mortals.  Planetars are 
+D:hairless and tall, with green-tinted skin and a wild psionic talent. 
+D:[ adapted from Aasimar, by David Roberts and Brynn ] 
 
 N:4874:Solar
 G:A:u
@@ -84585,7 +85114,10 @@ S:1_IN_3
 S:CAUSE_4 | HASTE | DRAIN_MANA | SCARE | CONF | BRAIN_SMASH |
 S:MIND_BLAST | HOLD | BR_LITE | S_KIN | BO_PLAS | BA_CHAO |
 S:BR_TIME | BR_GRAV | BR_MANA | BA_MANA |
-D:Solar from nethack
+D:Solars are near to powers in status, and their children like 
+D:demipowers.  Their hair and skin is metallic.  Solars stay aloof 
+D:from mortals, but may command them with an irresistable voice. 
+D:[ adapted from Aasimar, by David Roberts and Brynn ] 
 
 N:4875:bat
 G:b:u
@@ -84596,7 +85128,15 @@ O:0:0:0:0
 B:BITE:HURT:1d4
 F:ANIMAL | CAN_FLY | WILD_GRASS | DROP_CORPSE
 F:MORTAL | BASEANGBAND | RAND_50 |
-D:bat from nethack
+D:A bat, flitting in the darkness outside, took the wrong turn 
+D:as it made its nightly rounds and came in through the window 
+D:which had been left healthfully open.  It then proceeded to 
+D:circle the room in the aimless fat-headed fashion habitual 
+D:with bats, who are notoriously among the less intellectually 
+D:gifted of God's creatures.  Show me a bat, says the old 
+D:proverb, and I will show you something that ought to be in 
+D:some kind of a home. 
+D:[ A Pelican at Blandings, by P. G. Wodehouse ] 
 
 N:4876:large bat
 G:b:u
@@ -84629,7 +85169,13 @@ O:0:0:0:0
 B:BITE:HURT:1d5
 F:ANIMAL | CAN_FLY | DROP_CORPSE
 F:MORTAL | BASEANGBAND | RAND_50 | FRIEND |
-D:athol from nethack
+D:In 1927, zoologist Ernst Bartels was in his home near the 
+D:Tjidjenkol River in Java when he heard a strange cry louder than 
+D:the other night sounds, a cry like "a-hool." 
+D:Bartels heard the sound twice more before the origin of the cries 
+D:moved off into the night. Bartels soon remembered a local legend 
+D:of the ahool or athol, a type of huge bat reputed to live in 
+D:the area.
 
 N:4879:rhumbat
 G:b:y
@@ -84664,7 +85210,13 @@ B:BITE:HURT:1d6
 B:CLAW:HURT:1d6
 F:ANIMAL | WILD_TOO | WILD_WOOD | CAN_FLY | DROP_CORPSE
 F:MORTAL | BASEANGBAND
-D:raven from nethack
+D:But the raven, sitting lonely on the placid bust, spoke only 
+D:That one word, as if his soul in that one word he did outpour. 
+D:Nothing further then he uttered -- not a feather then he fluttered-- 
+D:Till I scarcely more than muttered, 'other friends have flown before-- 
+D:On the morrow *he* will leave me, as my hopes have flown before.' 
+D:Then the bird said, 'Nevermore.' 
+D:[ The Raven - Edgar Allan Poe ] 
 
 N:4882:vampire bat
 G:b:D
@@ -84699,7 +85251,11 @@ O:0:0:0:0
 B:BITE:HURT:1d12
 F:ANIMAL | CAN_FLY | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | RAND_50 | 
-D:mongbat from nethack
+D:In appearance, a cross between a small boy and a bat, this nimble 
+D:creature is capable of quick, aerial strikes. Fortunately, a 
+D:mongbat's small size renders its attack little more than a painful 
+D:nuisance. 
+D:[ Beyond the Serpent Pillars by Andrew Morris ] 
 
 N:4885:mobat
 G:b:D
@@ -84727,7 +85283,11 @@ B:STING:HURT:3d1
 F:ANIMAL | CAN_FLY | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | RAND_25 | RES_SHAR |
 F:REGENERATE | NO_SLEEP | IM_POIS | IM_COLD |
-D:byakhee from nethack
+D:A creature of the stars, this bat like being can be summoned 
+D:across the vast interstellar gulfs to serve magicians and 
+D:dark powers.  It is said that they will seize those who  
+D:summon them and cannot best them and carry them off to whatever 
+D:terrible fate awaits them on other worlds. 
 
 N:4887:nightgaunt
 G:b:u
@@ -84740,7 +85300,16 @@ B:CLAW:PARALYZE:1d6
 F:ANIMAL | CAN_FLY | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | RAND_25 | RES_SHAR |
 F:REGENERATE | NO_SLEEP | IM_POIS | IM_COLD |
-D:nightgaunt from nethack
+D:[They] were indeed shocking and uncouth black things with smooth, 
+D:oily, whale-like surfaces, unpleasant horns that curved inward 
+D:toward each other, bat wings whose beating made no sound, ugly 
+D:prehensile paws, and barbed tails that lashed needlessly and 
+D:disquietingly. And worst of all, they never spoke or laughed, 
+D:and never smiled because they had no faces at all to smile with, 
+D:but only a suggestive blankness where a face ought to be. All 
+D:they ever did was clutch and fly and tickle; that was the way 
+D:of night-gaunts. 
+D:[ The Dream Quest of Unknown Kadath by HP Lovecraft ] 
 
 N:4888:plains centaur
 G:H:u
@@ -85101,7 +85670,14 @@ F:INVISIBLE | COLD_BLOOD |
 F:OPEN_DOOR | BASH_DOOR | POWERFUL | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | CAN_FLY |
 F:BASEANGBAND | NO_CUT
-D:stalker from nethack
+D:The invisible stalker is a creature from the elemental plane of 
+D:Air. Those encountered on the Prime Material plane have almost 
+D:always been summoned by wizards to fulfill a specific task. 
+D:The true form of the invisible stalker is unknown. On the Material, 
+D:Astral, or Ethereal planes, the invisible stalker can only be 
+D:perceived as a shimmering air mass which looks much like the 
+D:refraction effect caused by hot air passing in front of cold. 
+D:[ Monstrous Manual, by TSR inc. ] 
 
 N:4914:air elemental
 G:E:b
@@ -85167,7 +85743,13 @@ F:STUPID | EMPTY_MIND |
 F:RES_SHAR | DROP_CORPSE | WILD_SHORE |
 F:NO_CONF | NO_SLEEP | NO_FEAR | 
 F:MORTAL | BASEANGBAND | NO_CUT
-D:lichen from nethack
+D:The chamber was of unhewn rock, round, as near as might 
+D:be, eighteen or twenty feet across, and gay with rich 
+D:variety of fern and moss and lichen.  The fern was in 
+D:its winter still, or coiling for the spring-tide; but 
+D:moss was in abundant life, some feathering, and some 
+D:gobleted, and some with fringe of red to it. 
+D:[ Lorna Doone, by R.D. Blackmore ] 
 
 N:4919:brown mold
 G:m:u
@@ -85237,7 +85819,13 @@ F:NO_CONF | NO_SLEEP | NO_FEAR |
 F:MORTAL | BASEANGBAND | NO_CUT
 S:1_IN_1
 S:SHRIEK
-D:shrieker from nethack
+D:With a single, savage thrust of her spear, the warrior-woman 
+D:impaled the fungus, silencing it.  However, it was too late:  
+D:the alarm had been raised[...] 
+D:Suddenly, a large, dark shape rose from the abyss before them, 
+D:its fetid bulk looming overhead...The monster was some kind of 
+D:great dark worm, but that was about all they were sure of.  
+D:[ The Adventurers, Epic IV, by Thomas A. Miller ] 
 
 N:4924:disgusting mold
 G:m:b
@@ -85292,7 +85880,19 @@ B:HIT:HURT:1d6
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
-D:gnome from nethack
+D:...  And then a gnome came by, carrying a bundle, an old 
+D:fellow three times as large as an imp and wearing clothes of 
+D:a sort, especially a hat.  And he was clearly just as frightened 
+D:as the imps though he could not go so fast.  Ramon Alonzo 
+D:saw that there must be some great trouble that was vexing 
+D:magical things; and, since gnomes speak the language of men, and 
+D:will answer if spoken to gently, he raised his hat, and asked 
+D:of the gnome his name.  The gnome did not stop his hasty 
+D:shuffle a moment as he answered 'Alaraba' and grabbed the rim 
+D:of his hat but forgot to doff it. 
+D:'What is the trouble, Alaraba?'  said Ramon Alonzo. 
+D:'White magic.  Run!'  said the gnome .. 
+D:[ The Charwoman's Shadow, by Lord Dunsany ] 
 
 N:4928:gnome thief
 G:h:D
@@ -85343,7 +85943,20 @@ B:HIT:HURT:2d6
 F:DROP_60 | MALE | KILL_WALL |
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
-D:deep gnome from nethack
+D:Far beneath the surface of the earth dwell the Svirfneblin, or Deep 
+D:Gnomes. Small parties of these demihumans roam the Underdark's mazes 
+D:of small passageways searching for gemstones. They are said to dwell 
+D:in great cities consisting of a closely connected series of tunnels, 
+D:buildings, and caverns in which up to a thousand of these diminutive 
+D:creatures live. They keep the location of these hidden cities secret 
+D:in order to protect them from their deadly foes, the kuo-toa, Drow, 
+D:and mind flayers. 
+D:Svirfneblin are slightly smaller than rock gnomes, but their thin, 
+D:wiry, gnarled frames are just as strong. Their skin is rock-colored, 
+D:usually medium brown to brownish gray, and their eyes are gray. Male 
+D:svirfneblin are completely bald; female deep gnomes have stringy gray 
+D:hair. The average svirfneblin life span is 250 years. 
+D:[ The Underdark, by Mike Drees and Albert Foster ] 
 
 N:4932:gnome warrior
 G:h:r
@@ -85379,7 +85992,14 @@ B:HIT:HURT:2d6
 F:DROP_12 | MALE | IM_POIS | RES_WALL | RES_GRAV |
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND | UNIQUE | CAN_SPEAK | DROP_GOOD |
-D:Ruggo from nethack
+D:The Nome King declared, "Cruelty is a thing I can't abide. So, 
+D:as slaves must work hard, and the Queen of Ev and her children 
+D:were delicate and tender, I transformed them all into articles of 
+D:ornament and bric-a-brac and scattered them around the various 
+D:rooms of my palace. Instead of being obliged to labor, they 
+D:merely decorate my apartments, and I really think I have treated 
+D:them with great kindness." 
+D:[ Ozma of Oz, by L. Frank Baum ] 
 
 N:4935:gnoll
 G:h:W
@@ -85444,7 +86064,12 @@ B:HIT:HURT:2d10
 F:DROP_60 | WILD_MOUNTAIN | DROP_SKELETON | DROP_CORPSE | 
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
 F:GIANT | MORTAL | BASEANGBAND |
-D:giant from nethack
+D:Giants have always walked the earth, though they are rare in 
+D:these times.  They range in size from little over nine feet 
+D:to a towering twenty feet or more.  The larger ones use huge 
+D:boulders as weapons, hurling them over large distances.  All 
+D:types of giants share a love for men - roasted, boiled, or 
+D:fried.  Their table manners are legendary. 
 
 N:4940:stone giant
 G:P:W
@@ -85527,7 +86152,8 @@ B:HIT:HURT:3d6
 F:DROP_60 | WILD_MOUNTAIN | DROP_SKELETON | DROP_CORPSE | 
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | 
 F:GIANT | MORTAL | BASEANGBAND |
-D:ettin from nethack
+D:The two-headed giant, or ettin, is a vicious and unpredictable 
+D:hunter that stalks by night and eats any meat it can catch. 
 
 N:4946:minotaur
 G:P:u
@@ -85541,7 +86167,15 @@ B:BUTT:HURT:2d8
 F:DROP_60 | WILD_MOUNTAIN | DROP_SKELETON | DROP_CORPSE | 
 F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | ONLY_GOLD | MALE |
 F:GIANT | MORTAL | BASEANGBAND | ANIMAL | STUPID | RES_CHAO |
-D:minotaur from nethack
+D:The Minotaur was a monster, half bull, half human, the 
+D:offspring of Minos' wife Pasiphae and a wonderfully beautiful 
+D:bull. ...  When the Minotaur was born Minos did not kill him. 
+D:He had Daedalus, a great architect and inventor, construct a 
+D:place of confinement for him from which escape was impossible. 
+D:Daedalus built the Labyrinth, famous throughout the world. 
+D:Once inside, one would go endlessly along its twisting paths 
+D:without ever finding the exit. 
+D:[ Mythology, by Edith Hamilton ] 
 
 N:4947:titan
 G:P:v
@@ -85556,7 +86190,17 @@ F:GIANT | MORTAL | BASEANGBAND | CAN_FLY |
 S:1_IN_6
 S:ARROW_4 | MISSILE | BO_ELEC | CAUSE_3 | SCARE | FORGET |
 S:S_KIN |
-D:titan from nethack
+D:Gaea, mother earth, arose from the Chaos and gave birth to 
+D:Uranus, heaven, who became her consort.  Uranus hated all 
+D:their children, because he feared they might challenge his 
+D:own authority.  Those children, the Titans, the Gigantes, 
+D:and the Cyclops, were banished to the nether world.  Their 
+D:enraged mother eventually released the youngest titan, 
+D:Chronos (time), and encouraged him to castrate his father and 
+D:rule in his place.  Later, he too was challenged by his own 
+D:son, Zeus, and he and his fellow titans were ousted from 
+D:Mount Olympus. 
+D:[ Greek Mythology, by Richard Patrick ] 
 
 N:4948:storm giant
 G:P:B
@@ -85602,7 +86246,14 @@ F:GIANT | MORTAL | BASEANGBAND | RES_DISE | CAN_SWIM | MALE |
 F:UNIQUE | CAN_SPEAK | DROP_GREAT | RES_SHAR |
 S:1_IN_3
 S:ARROW_4
-D:Father Dagon from nethack
+D:"Yield up enough sacrifices an' savage knick-knacks an' 
+D:harbourage in the taown when they wanted it, an' they'd let 
+D:well enough alone. Wudn't bother no strangers as might bear 
+D:tales aoutside - that is, withaout they got pryin'. All in 
+D:the band of the faithful - Order o' Dagon - an' the children 
+D:shud never die, but go back to the Mother Hydra an' Father 
+D:Dagon what we all come from once ... Ia! Ia! Cthulhu ..." 
+D:[ The Shadow Over Innsmouth, by H.P. Lovecraft ] 
 
 N:4951:Mother Hydra
 G:P:g
@@ -85634,7 +86285,23 @@ B:CLAW:HURT:2d10
 F:ONLY_GOLD | DROP_60 |
 F:BASH_DOOR | CAN_FLY | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND | 
-D:jabberwock from nethack
+D:"Beware the Jabberwock, my son! 
+D:The jaws that bite, the claws that catch! 
+D:Beware the Jubjub bird, and shun 
+D:The frumious Bandersnatch!" 
+D:He took his vorpal sword in hand; 
+D:Long time the manxome foe he sought -- 
+D:So rested he by the Tumtum tree, 
+D:And stood awhile in thought. 
+D:And, as in uffish thought he stood, 
+D:The Jabberwock, with eyes of flame, 
+D:Came whiffling through the tulgey wood, 
+D:And burbled as it came! 
+D:One, two! One, two! And through and through 
+D:The vorpal blade went snicker-snack! 
+D:He left it dead, and with its head 
+D:He went galumphing back. 
+D:[ Jabberwocky, by Lewis Carroll ] 
 
 N:4953:vorpal jabberwock
 G:H:v
@@ -85661,7 +86328,20 @@ B:HIT:HURT:1d4
 F:MALE | DROP_CORPSE | DROP_SKELETON | DROP_60 | 
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | GOOD |
 F:MORTAL | BASEANGBAND | FRIEND |
-D:Keystone Kop from nethack
+D:The Kops are a brilliant concept.  To take a gaggle of inept 
+D:policemen and display them over and over again in a series of 
+D:riotously funny physical punishments plays equally well to the 
+D:peanut gallery and the expensive box seats.  People hate cops. 
+D:Even people who have never had anything to do with cops hate 
+D:them.  Of course, we count on them to keep order and to protect 
+D:us when we need protecting, and we love them on television shows 
+D:in which they have nerves of steel and hearts of gold, but in 
+D:the abstract, as a nation, collectively we hate them.  They are 
+D:too much like high school principals.  We're very happy to see 
+D:their pants fall down, and they look good to us with pie on 
+D:their faces.  The Keystone Kops turn up--and they get punished 
+D:for it, as they crash into each other, fall down, and suffer 
+D:indignity after indignity.  Here is pure movie satisfaction. 
 
 N:4955:Kop Sergeant
 G:t:B
@@ -85673,7 +86353,19 @@ B:HIT:HURT:1d6
 F:MALE | DROP_CORPSE | DROP_SKELETON | DROP_60 | 
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | GOOD |
 F:MORTAL | BASEANGBAND | 
-D:Kop Sergeant from nethack
+D:The Kops are very skillfully presented.  The comic originality 
+D:and timing in one of their chase scenes requires imagination 
+D:to think up, talent to execute, understanding of the medium, 
+D:and, of course, raw courage to perform.  The Kops are madmen 
+D:presented as incompetents, and they're madmen rushing around 
+D:in modern machines.  What's more, the machines they were operating 
+D:in their routines were newly invented and not yet experienced 
+D:by the average moviegoer.  (In the early days of automobiles, 
+D:it was reported that there were only two cars registered in all 
+D:of Kansas City, and they ran into each other.  There is both 
+D:poetry and philosophy in this fact, but most of all, there is 
+D:humor.  Sennett got the humor.) 
+D:[ Silent Stars, by Jeanine Basinger ] 
 
 N:4956:Kop Lieutenant
 G:t:b
@@ -85712,7 +86404,24 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT | REGENERATE
 S:1_IN_6 | 
 S:HEAL | CAUSE_2 | BO_COLD | CONF | SLOW | TPORT |
-D:lich from nethack
+D:But on its heels ere the sunset faded, there came a second 
+D:apparition, striding with incredible strides and halting when 
+D:it loomed almost upon me in the red twilight-the monstrous mummy 
+D:of some ancient king still crowned with untarnished gold but 
+D:turning to my gaze a visage that more than time or the worm had 
+D:wasted. Broken swathings flapped about the skeleton legs, and 
+D:above the crown that was set with sapphires and orange rubies, a 
+D:black something swayed and nodded horribly; but, for an instant, 
+D:I did not dream what it was.  Then, in its middle, two oblique 
+D:and scarlet eyes opened and glowed like hellish coals, and two 
+D:ophidian fangs glittered in an ape-like mouth.  A squat, furless, 
+D:shapeless head on a neck of disproportionate extent leaned 
+D:unspeakably down and whispered in the mummy's ear. Then, with 
+D:one stride, the titanic lich took half the distance between us, 
+D:and from out the folds of the tattered sere-cloth a gaunt arm 
+D:arose, and fleshless, taloned fingers laden with glowering gems, 
+D:reached out and fumbled for my throat . . . 
+D:[ The Abominations of Yondo, Clark Ashton Smith, 1926 ] 
 
 N:4959:demilich
 G:L:r
@@ -85861,7 +86570,20 @@ B:CLAW:HURT:2d4
 F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR |
 F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
-D:human mummy from nethack
+D:But for an account of the manner in which the body was 
+D:bandaged, and a list of the unguents and other materials 
+D:employed in the process, and the words of power which were 
+D:spoken as each bandage was laid in its place, we must have 
+D:recourse to a very interesting papyrus which has been edited 
+D:and translated by M. Maspero under the title of Le Rituel de 
+D:l'Embaumement. ... 
+D:Everything that could be done to preserve the body was now 
+D:done, and every member of it was, by means of the words of 
+D:power which changed perishable substances into imperishable, 
+D:protected to all eternity; when the final covering of purple 
+D:or white linen had been fastened upon it, the body was ready 
+D:for the tomb. 
+D:[ Egyptian Magic, by E.A. Wallis Budge ] 
 
 N:4970:ettin mummy
 G:z:B
@@ -86023,7 +86745,22 @@ F:DROP_60 | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | 
 F:EVIL | GIANT | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
-D:ogre from nethack
+D:Anyone who has met a gluttonous, nude, angry ogre, will not 
+D:easily forget this encounter -- if he survives it at all. 
+D:Both male and female ogres can easily grow as tall as three 
+D:metres.  Build and facial expressions would remind one of a 
+D:Neanderthal.  Its small, pointy, keen teeth are striking. 
+D:Since ogres avoid direct sunlight, their ragged, unfurry 
+D:skin is as white as a sheet.  They enjoy coating their body 
+D:with lard and usually wear nothing but a loin-cloth.  An elf 
+D:would smell its rancid stench at ten metres distance. 
+D:Ogres are solitary creatures:  very rarely one may encounter 
+D:a female with two or three young.  They are the only real 
+D:carnivores among the humanoids, and its favourite meal is -- 
+D:not surprisingly -- human flesh.  They sometimes ally with 
+D:orcs or goblins, but only when they anticipate a good meaty 
+D:meal. 
+D:[ het Boek van de Regels; Het Oog des Meesters ] 
 
 N:4983:ogre lord
 G:O:r
@@ -86191,7 +86928,10 @@ F:STUPID | EMPTY_MIND | COLD_BLOOD |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
 F:IM_ELEC | IM_COLD | IM_POIS | IM_ACID | RES_WALL | RES_GRAV |
 F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT | REGENERATE |
-D:shoggoth from nethack
+D:"... in the place of utter blasphemy, the unholy pit where 
+D:the black realm begins and the watcher guards the gate - 
+D:I saw a shoggoth - it changed shape ..." 
+D:[ The Thing on the Doorstep, by H.P. Lovecraft ] 
 
 N:4995:giant shoggoth
 G:j:D
@@ -86209,7 +86949,17 @@ F:IM_ELEC | IM_COLD | IM_POIS | IM_ACID | RES_WALL | RES_GRAV |
 F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT | REGENERATE |
 S:1_IN_10
 S:TPORT | TELE_AWAY
-D:giant shoggoth from nethack
+D:It was a terrible, indescribable thing vaster than any subway 
+D:train -- a shapeless congeries of protoplasmic bubbles, faintly 
+D:self-luminous, and with myriads of temporary eyes forming and 
+D:un-forming as pustules of greenish light all over the tunnel- 
+D:filling front that bore down upon us, crushing the frantic 
+D:penguins and slithering over the glistening floor that it and 
+D:its kind had swept so evilly free of all litter. Still came 
+D:that eldritch, mocking cry -- "Tekeli-li! Tekeli-li!" and at 
+D:last we remembered that the demoniac Shoggoths - given life, 
+D:thought, and plastic organ patterns solely by the Old Ones ... 
+D:[ At the Mountains of Madness, by H.P. Lovecraft ] 
 
 N:4996:quantum mechanic
 G:h:b
@@ -86222,7 +86972,8 @@ F:DROP_60 |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:IM_POIS
 F:MORTAL | BASEANGBAND
-D:quantum mechanic from nethack
+D:These creatures are not native to this universe; they seem 
+D:to have strangely derived powers, and unknown motives. 
 
 N:4997:genetic engineer
 G:h:g
@@ -86249,7 +87000,18 @@ F:DROP_22 | DROP_GREAT | UNIQUE | CAN_SPEAK |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:IM_POIS | IM_ELEC | NO_SLEEP | MALE |
 F:MORTAL | BASEANGBAND
-D:Doctor Frankenstein from nethack
+D:How can I describe my emotions at this catastrophe, or how 
+D:delineate the wretch whom with such infinite pains and care I 
+D:had endeavoured to form?  His limbs were in proportion, and I 
+D:had selected his features as beautiful.  Beautiful!--Great God! 
+D:His yellow skin scarcely covered the work of muscles and 
+D:arteries beneath; his hair was of a lustrous black, and 
+D:flowing; his teeth of a pearly whiteness; but these luxuriances 
+D:only formed a more horrid contrast with his watery eyes, that 
+D:seemed almost of the same colour as the dun white sockets in 
+D:which they were set, his shrivelled complexion and straight 
+D:black lips. 
+D:[ Frankenstein, by Mary Wollstonecraft Shelley ] 
 
 N:4999:rust monster
 G:q:u
@@ -86262,7 +87024,9 @@ B:TOUCH:UN_BONUS
 F:STUPID | KILL_ITEM | DROP_CORPSE | 
 F:NO_CONF | CAN_SWIM |
 F:MORTAL | BASEANGBAND
-D:rust monster from nethack
+D:These strange creatures live on a diet of metals.  They can 
+D:turn a suit of armour into so much useless rusted scrap in no 
+D:time at all. 
 
 N:5000:disenchanter
 G:q:B
@@ -86274,7 +87038,7 @@ B:CLAW:UN_BONUS:4d4
 B:TOUCH:UN_BONUS
 F:STUPID | DROP_CORPSE | NO_CONF | 
 F:MORTAL | BASEANGBAND
-D:disenchanter from nethack
+D:Ask not, what your magic can do to it. Ask what it can do to your magic. 
 
 N:5001:garter snake
 G:J:g
@@ -86311,7 +87075,15 @@ B:BITE:LOSE_STR:1d4
 F:WILD_TOO | WILD_GRASS | RES_SHAR | CAN_SWIM | IM_POIS |
 F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND
-D:pit viper from nethack
+D:And the Lord God said unto the woman, What is this that thou 
+D:hast done?  And the woman said, The serpent beguiled me, and I 
+D:did eat.  And the Lord God said unto the serpent, Because thou 
+D:hast done this, thou art cursed above all cattle, and above 
+D:every beast of the field; upon thy belly shalt thou go, and 
+D:dust shalt thou eat all the days of thy life:  And I will put 
+D:enmity between thee and the woman, and between thy seed and her 
+D:seed; it shall bruise thy head, and thou shalt bruise his heel. 
+D:[ Genesis 3:1-6,13-15 ] 
 
 N:5004:python
 G:J:v
@@ -86338,7 +87110,22 @@ B:SPIT:BLIND
 F:WILD_TOO | WILD_GRASS | RES_SHAR | CAN_SWIM | IM_POIS |
 F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND
-D:cobra from nethack
+D:Darzee and his wife only cowered down in the nest without 
+D:answering, for from the thick grass at the foot of the bush 
+D:there came a low hiss -- a horrid cold sound that made 
+D:Rikki-tikki jump back two clear feet.  Then inch by inch out of 
+D:the grass rose up the head and spread hood of Nag, the big 
+D:black cobra, and he was five feet long from tongue to tail. 
+D:When he had lifted one-third of himself clear of the ground, 
+D:he stayed balancing to and fro exactly as a dandelion-tuft 
+D:balances in the wind, and he looked at Rikki-tikki with the 
+D:wicked snake's eyes that never change their expression, 
+D:whatever the snake may be thinking of. 
+D:'Who is Nag?' said he.  '_I_ am Nag.  The great God Brahm put 
+D:his mark upon all our people, when the first cobra spread his 
+D:hood to keep the sun off Brahm as he slept.  Look, and be 
+D:afraid!' 
+D:[ Rikki-tikki-tavi, by Rudyard Kipling ] 
 
 N:5006:asphynx
 G:J:D
@@ -86351,7 +87138,11 @@ B:BITE:ABOMINATION
 F:RES_SHAR | CAN_SWIM | IM_POIS | RES_WALL | RES_GRAV |
 F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND
-D:asphynx from nethack
+D:This small, inoffensive-looking snake shares the feared power 
+D:of petrification with its distant relatives the cockatrice and 
+D:basilisk. Just one touch from its blunt snout can render one 
+D:motionless for all eternity. 
+D:[ The New Bestiary, Wizard Endlebrook ]
 
 N:5007:troll
 G:T:u
@@ -86365,7 +87156,21 @@ B:BITE:HURT:2d6
 F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
 F:OPEN_DOOR | BASH_DOOR | SUSCEP_FIRE | REGENERATE | 
 F:EVIL | TROLL | REGENERATE | BASEANGBAND
-D:troll from nethack
+D:The troll shambled closer.  He was perhaps eight feet tall, 
+D:perhaps more.  His forward stoop, with arms dangling past 
+D:thick claw-footed legs to the ground, made it hard to tell. 
+D:The hairless green skin moved upon his body.  His head was a 
+D:gash of a mouth, a yard-long nose, and two eyes which drank 
+D:the feeble torchlight and never gave back a gleam. 
+D:[...] 
+D:Like a huge green spider, the troll's severed hand ran on its 
+D:fingers.  Across the mounded floor, up onto a log with one 
+D:taloned forefinger to hook it over the bark, down again it 
+D:scrambled, until it found the cut wrist.  And there it grew 
+D:fast.  The troll's smashed head seethed and knit together. 
+D:He clambered back on his feet and grinned at them.  The 
+D:waning faggot cast red light over his fangs. 
+D:[ Three Hearts and Three Lions, by Poul Anderson ] 
 
 N:5008:ice troll
 G:T:w
@@ -86421,7 +87226,19 @@ B:BITE:HURT:2d6
 F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
 F:OPEN_DOOR | BASH_DOOR | SUSCEP_FIRE | REGENERATE | 
 F:EVIL | TROLL | REGENERATE | BASEANGBAND
-D:Olog-hai from nethack
+D:But at the end of the Third Age a troll-race not before seen 
+D:appeared in southern Mirkwood and in the mountain borders of 
+D:Mordor.  Olog-hai they were called in the Black Speech.  That 
+D:Sauron bred them none doubted, though from what stock was not 
+D:known.  Some held that they were not Trolls but giant Orcs; 
+D:but the Olog-hai were in fashion of body and mind quite unlike 
+D:even the largest of Orc-kind, whom they far surpassed in size 
+D:and power.  Trolls they were, but filled with the evil will 
+D:of their master:  a fell race, strong, agile, fierce and 
+D:cunning, but harder than stone.  Unlike the older race of the 
+D:Twilight they could endure the Sun....  They spoke little, 
+D:and the only tongue they knew was the Black Speech of Barad-dur. 
+D:[ The Return of the King, by J.R.R. Tolkien ] 
 
 N:5012:mist troll
 G:T:b
@@ -86450,7 +87267,11 @@ B:BITE:HURT:2d5
 B:GAZE:CONFUSE
 F:BASH_DOOR | KILL_WALL | DROP_SKELETON | 
 F:HURT_ROCK | NO_CONF | BASEANGBAND | NO_CUT
-D:umber hulk from nethack
+D:Umber hulks are powerful subterranean predators whose 
+D:iron-like claws allow them to burrow through solid stone in 
+D:search of prey.  They are tremendously strong; muscles bulge 
+D:beneath their thick, scaly hides and their powerful arms and 
+D:legs all end in great claws. 
 
 N:5014:vampire
 G:V:r
@@ -86464,7 +87285,11 @@ F:COLD_BLOOD | DROP_60 |
 F:OPEN_DOOR | BASH_DOOR | REGENERATE | CAN_FLY |
 F:EVIL | UNDEAD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | 
 F:BASEANGBAND | NO_CUT | TAKE_ITEM |
-D:vampire from nethack
+D:The Oxford English Dictionary is quite unequivocal: 
+D:_vampire_ - "a preternatural being of a malignant nature (in 
+D:the original and usual form of the belief, a reanimated 
+D:corpse), supposed to seek nourishment, or do harm, by sucking 
+D:the blood of sleeping persons. ..." 
 
 N:5015:vampire lord
 G:V:B
@@ -86496,7 +87321,9 @@ F:EVIL | UNDEAD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP |
 F:BASEANGBAND | NO_CUT | TAKE_ITEM | WILD_VOLCANO |
 S:1_IN_6
 S:BA_FIRE
-D:fire vampire from nethack
+D:A swirling cloud of bright, burning motes, the fire vampire 
+D:descends upon its victim and easily burns them to death once 
+D:they are in its deadly embrace. 
 
 N:5017:star vampire
 G:V:w
@@ -86512,7 +87339,11 @@ F:COLD_BLOOD | DROP_60 |
 F:OPEN_DOOR | BASH_DOOR | REGENERATE | CAN_FLY | IM_COLD | 
 F:EVIL | UNDEAD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | 
 F:BASEANGBAND | NO_CUT | TAKE_ITEM | INVISIBLE 
-D:star vampire from nethack
+D:A creature from beyond the stars. Invisible, it floats along 
+D:until it finds something to feed upon and then draws its 
+D:life energy and blood into itself.  It is said that they 
+D:become briefly visible just after they have eaten and that 
+D:this is such a terrible sight it can drive a mortal insane. 
 
 N:5018:Vlad the Impaler
 G:V:v
@@ -86526,7 +87357,15 @@ F:COLD_BLOOD | DROP_12 | DROP_GREAT | UNIQUE | CAN_SPEAK |
 F:OPEN_DOOR | BASH_DOOR | REGENERATE | CAN_FLY | MALE | ONLY_ITEM |
 F:EVIL | UNDEAD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | 
 F:BASEANGBAND | NO_CUT | TAKE_ITEM |
-D:Vlad from nethack
+D:Vlad Dracula the Impaler was a 15th-Century monarch of the 
+D:Birgau region of the Carpathian Mountains, in what is now 
+D:Romania.  In Romanian history he is best known for two things. 
+D:One was his skilled handling of the Ottoman Turks, which kept 
+D:them from making further inroads into Christian Europe.  The 
+D:other was the ruthless manner in which he ran his fiefdom. 
+D:He dealt with perceived challengers to his rule by impaling 
+D:them upright on wooden stakes.  Visiting dignitaries who 
+D:failed to doff their hats had them nailed to their head. 
 
 N:5019:barrow wight
 G:W:W
@@ -86557,7 +87396,15 @@ F:DROP_60 |
 F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
-D:wight from nethack
+D:When he came to himself again, for a moment he could recall 
+D:nothing except a sense of dread.  Then suddenly he knew that 
+D:he was imprisoned, caught hopelessly; he was in a barrow.  A 
+D:Barrow-wight had taken him, and he was probably already under 
+D:the dreadful spells of the Barrow-wights about which whispered 
+D:tales spoke.  He dared not move, but lay as he found himself: 
+D:flat on his back upon a cold stone with his hands on his 
+D:breast. 
+D:[ The Fellowship of the Ring, by J.R.R. Tolkien ] 
 
 N:5021:wraith
 G:W:D
@@ -86585,7 +87432,23 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
 S:1_IN_10
 S:BR_INER
-D:Nazgul from nethack
+D:Immediately, though everything else remained as before, dim 
+D:and dark, the shapes became terribly clear.  He was able to 
+D:see beneath their black wrappings.  There were five tall 
+D:figures:  two standing on the lip of the dell, three advancing. 
+D:In their white faces burned keen and merciless eyes; under 
+D:their mantles were long grey robes; upon their grey hairs 
+D:were helms of silver; in their haggard hands were swords of 
+D:steel.  Their eyes fell on him and pierced him, as they 
+D:rushed towards him.  Desperate, he drew his own sword, and 
+D:it seemed to him that it flickered red, as if it was a 
+D:firebrand.  Two of the figures halted.  The third was taller 
+D:than the others:  his hair was long and gleaming and on his 
+D:helm was a crown.  In one hand he held a long sword, and in 
+D:the other a knife; both the knife and the hand that held it 
+D:glowed with a pale light.  He sprang forward and bore down 
+D:on Frodo. 
+D:[ The Fellowship of the Ring, by J.R.R. Tolkien ] 
 
 N:5023:xorn
 G:X:u
@@ -86600,7 +87463,11 @@ B:BITE:HURT:4d6
 F:KILL_ITEM | PASS_WALL | 
 F:IM_FIRE | IM_COLD | RES_WALL | RES_GRAV | RES_SHAR |
 F:HURT_ROCK | NO_CONF | BASEANGBAND | NO_CUT
-D:xorn from nethack
+D:A distant cousin of the earth elemental, the xorn has the 
+D:ability to shift the cells of its body around in such a way 
+D:that it becomes porous to inert material.  This gives it the 
+D:ability to pass through any obstacle that might be between it 
+D:and its next meal. 
 
 N:5024:monkey
 G:Y:W
@@ -86612,7 +87479,10 @@ B:CLAW:EAT_ITEM
 B:BITE:HURT:1d3
 F:ANIMAL | TAKE_ITEM | WILD_GRASS
 F:DROP_CORPSE | MORTAL | BASEANGBAND 
-D:monkey from nethack
+D:Four-handed, tailless, mammal of the order of Primates, of the 
+D:sub-order of _Anthropoidea_, which of all mammals most closely 
+D:resembles man (both in appearance and in behaviour). 
+D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
 N:5025:ape
 G:Y:u
@@ -86625,7 +87495,13 @@ B:CLAW:HURT:1d3
 B:BITE:HURT:1d6
 F:ANIMAL | TAKE_ITEM | WILD_GRASS | WILD_WOOD
 F:DROP_CORPSE | MORTAL | BASEANGBAND 
-D:ape from nethack
+D:The most highly evolved of all the primates, as shown by 
+D:all their anatomical characters and particularly the 
+D:development of the brain.  Both arboreal and terrestrial, 
+D:the apes have the forelimbs much better developed than 
+D:the hind limbs.  Tail entirely absent.  Growth is slow 
+D:and sexual maturity reached at quite an advanced age. 
+D:[ A Field Guide to the Larger Mammals of Africa by Dorst ] 
 
 N:5026:owlbear
 G:H:u
@@ -86638,7 +87514,12 @@ B:CLAW:HURT:1d6
 B:CRUSH:HURT:2d8
 F:ANIMAL | TAKE_ITEM | WILD_WOOD
 F:DROP_CORPSE | MORTAL | BASEANGBAND 
-D:owlbear from nethack
+D:Owlbears are probably the crossbreed creation of a demented 
+D:wizard; given the lethal nature of this creation, it is quite 
+D:likely the wizard who created them is no longer alive.  As 
+D:the name might already suggest, owlbears are a cross between 
+D:a giant owl and a bear.  They are covered with fur and 
+D:feathers. 
 
 N:5027:yeti
 G:Y:w
@@ -86651,7 +87532,21 @@ B:CLAW:HURT:1d6
 B:BITE:HURT:1d4
 F:ANIMAL | TAKE_ITEM | WILD_MOUNTAIN | IM_COLD |
 F:DROP_CORPSE | MORTAL | BASEANGBAND 
-D:yeti from nethack
+D:The Abominable Snowman, or yeti, is one of the truly great 
+D:unknown animals of the twentieth century.  It is a large hairy 
+D:biped that lives in the Himalayan region of Asia ... The story 
+D:of the Abominable Snowman is filled with mysteries great and 
+D:small, and one of the most difficult of all is how it got that 
+D:awful name.  The creature is neither particularly abominable, 
+D:nor does it necessarily live in the snows.  _Yeti_ is a Tibetan 
+D:word which may apply either to a real, but unknown animal of 
+D:the Himalayas, or to a mountain spirit or demon -- no one is 
+D:quite sure which.  And after nearly half a century in which 
+D:Westerners have trampled around looking for the yeti, and 
+D:asking all sorts of questions, the original native traditions 
+D:concerning the creature have become even more muddled and 
+D:confused. 
+D:[ The Encyclopedia of Monsters, by Daniel Cohen ] 
 
 N:5028:sasquatch
 G:Y:W
@@ -86664,7 +87559,24 @@ B:CLAW:HURT:1d6
 B:KICK:HURT:1d8
 F:ANIMAL | TAKE_ITEM | 
 F:DROP_CORPSE | MORTAL | BASEANGBAND 
-D:sasquatch from nethack
+D:The name _Sasquatch_ doesn't really become important in Canada 
+D:until the 1930s, when it appeared in the works of J. W. Burns, 
+D:a British Columbian writer who used a great deal of Indian 
+D:lore in his stories.  Burn's Sasquatch was a giant Indian who 
+D:lived in the wilderness.  He was hairy only in the sense that 
+D:he had long hair on his head, and while this Sasquatch lived a 
+D:wild and primitive life, he was fully human. 
+D:Burns's character proved to be quite popular.  There was a 
+D:Sasquatch Inn near the town of Harrison, British Columbia, and 
+D:Harrison even had a local celebration called "Sasquatch Days." 
+D:The celebration which had been dormant for years was revived 
+D:as part of British Columbia's centennial, and one of the 
+D:events was to be a Sasquatch hunt.  The hunt never took place, 
+D:perhaps it was never supposed to, but the publicity about it 
+D:did bring out a number of people who said they had encountered 
+D:a Sasquatch -- not Burns's giant Indian, but the hairy apelike 
+D:creature that we have all come to know. 
+D:[ The Encyclopedia of Monsters, by Daniel Cohen ] 
 
 N:5029:zruty
 G:Y:g
@@ -86677,7 +87589,8 @@ B:CLAW:HURT:3d4
 B:BITE:HURT:3d6
 F:ANIMAL | TAKE_ITEM | WILD_WASTE |
 F:DROP_CORPSE | MORTAL | BASEANGBAND 
-D:zruty from nethack
+D:The zruty are wild and gigantic beings, living in the 
+D:wildernesses of the Tatra mountains.
 
 N:5030:kobold zombie
 G:z:u
@@ -86749,7 +87662,11 @@ B:CLAW:HURT:1d8
 F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:human zombie from nethack
+D:The zombi... is a soulless human corpse, still dead, but 
+D:taken from the grave and endowed by sorcery with a 
+D:mechanical semblance of life, -- it is a dead body which is 
+D:made to walk and act and move as if it were alive. 
+D:[ W. B. Seabrook ] 
 
 N:5036:ghast
 G:z:v
@@ -86789,7 +87706,22 @@ B:CLAW:HURT:1d4
 F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:ghoul from nethack
+D:The forces of the gloom know each other, and are strangely 
+D:balanced by each other.  Teeth and claws fear what they cannot 
+D:grasp.  Blood-drinking bestiality, voracious appetites, hunger 
+D:in search of prey, the armed instincts of nails and jaws which 
+D:have for source and aim the belly, glare and smell out 
+D:uneasily the impassive spectral forms straying beneath a 
+D:shroud, erect in its vague and shuddering robe, and which seem 
+D:to them to live with a dead and terrible life.  These 
+D:brutalities, which are only matter, entertain a confused fear 
+D:of having to deal with the immense obscurity condensed into an 
+D:unknown being.  A black figure barring the way stops the wild 
+D:beast short.  That which emerges from the cemetery intimidates 
+D:and disconcerts that which emerges from the cave; the 
+D:ferocious fear the sinister; wolves recoil when they encounter 
+D:a ghoul. 
+D:[ Les Miserables, by Victor Hugo ] 
 
 N:5039:ettin zombie
 G:z:B
@@ -86856,7 +87788,10 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
 F:RES_WALL | RES_GRAV | RES_SHAR |
 S:1_IN_15
 S:HOLD
-D:skeleton from nethack
+D:A skeleton is a magically animated undead creature.  Unlike 
+D:shades, only a humanoid creature can be used to create a 
+D:skeleton.  No one knows why this is true, but it has become 
+D:an accepted fact amongst the practitioners of the black arts. 
 
 N:5044:ghoul queen
 G:z:D
@@ -86885,7 +87820,11 @@ B:BITE:PARALYZE:3d6
 F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | KILL_WALL |
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | FRIEND |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT | RES_SHAR |
-D:gug from nethack
+D:These foul creatures dwell in the endless darkness of the 
+D:Gulf of N'Kai, scavenging the bones of whatever luckless 
+D:intruders have stumbled into it.  It is suspected that they 
+D:may be some warped form of ghoul, but few have survived 
+D:seeing them so information is scarce. 
 
 N:5046:miner
 G:h:D
@@ -86970,7 +87909,8 @@ B:HIT:HURT:2d4
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:EVIL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | MALE |
-D:drow from nethack
+D:Also known as dark elves, drow are a depraved and evil 
+D:subterranean offshoot of the elvish species.
 
 N:5053:elf-lord
 G:h:B
@@ -87020,7 +87960,18 @@ B:HIT:HURT:1d12
 F:DROP_60 | SHAPECHANGER |
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:BASEANGBAND | TAKE_ITEM | NO_SLEEP |
-D:doppelganger from nethack
+D:Xander: Let go!  I have to kill the demon bot! 
+D:Xander Double (grabbing the gun): Anya, get out of the way. 
+D:Buffy: Xander! 
+D:Xander Double: That's all right, Buffy.  I have him. 
+D:Xander: No, Buffy, I'm me.  Help me! 
+D:Anya: My gun, he's got my gun. 
+D:Riley: You own a gun? 
+D:Buffy: Xander, gun holding Xander, give it to me. 
+D:Anya: Buffy, which one's real? 
+D:Xander: I am. 
+D:Xander Double: No, _I_ am. 
+D:[ Buffy the Vampire Slayer, Episode 5.03, "The Replacement" ] 
 
 N:5057:elf
 G:h:w
@@ -87126,7 +88077,21 @@ B:HIT:HURT:1d6
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:BASEANGBAND | TAKE_ITEM | NEUTRAL |
-D:prisoner from nethack
+D:Where am I? 
+D:In the Village. 
+D:What do you want? 
+D:Information. 
+D:Whose side are you on? 
+D:That would be telling.  We want information ... 
+D:information ... 
+D:You won't get it. 
+D:By hook or by crook, we will. 
+D:Who are you? 
+D:The new Number 2. 
+D:Who is Number 1? 
+D:You are Number 6. 
+D:I am not a number!  I am a free man! 
+D:[ The Prisoner, by Patrick McGoohan ] 
 
 N:5065:Oracle
 G:h:B
@@ -87138,7 +88103,15 @@ B:HIT:SHATTER:1d4
 F:DROP_60 | NEVER_MOVE | FEMALE |
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:BASEANGBAND | TAKE_ITEM | NEUTRAL |
-D:Oracle from nethack
+D:Delphi under towering Parnassus, where Apollo's oracle was, 
+D:plays an important part in mythology.  Castalia was its 
+D:sacred spring; Cephissus its river.  It was held to be the 
+D:center of the world, so many pilgrims came to it, from 
+D:foreign countries as well as Greece.  No other shrine rivaled 
+D:it.  The answers to the questions asked by the anxious 
+D:seekers for Truth were delivered by a priestess who went into 
+D:a trance before she spoke. 
+D:[ Mythology, by Edith Hamilton ] 
 
 N:5066:aligned priest
 G:@:w
@@ -87154,7 +88127,22 @@ F:BASEANGBAND | TAKE_ITEM | NEUTRAL | IM_ELEC | CAN_FLY |
 S:1_IN_7
 S:HOLD | CONF | SCARE | BLIND | BO_FIRE | S_ANIMAL | S_ANIMALS |
 S:CAUSE_2 | 
-D:aligned priest from nethack
+D:[...]  For the two priests were talking exactly like priests, 
+D:piously, with learning and leisure, about the most aerial 
+D:enigmas of theology.  The little Essex priest spoke the more 
+D:simply, with his round face turned to the strengthening stars; 
+D:the other talked with his head bowed, as if he were not even 
+D:worthy to look at them.  But no more innocently clerical 
+D:conversation could have been heard in any white Italian cloister 
+D:or black Spanish cathedral.  The first he heard was the tail of 
+D:one of Father Brown's sentences, which ended:  "... what they 
+D:really meant in the Middle Ages by the heavens being 
+D:incorruptible."  The taller priest nodded his bowed head and 
+D:said:  "Ah, yes, these modern infidels appeal to their reason; 
+D:but who can look at those millions of worlds and not feel that 
+D:there may well be wonderful universes above us where reason is 
+D:utterly unreasonable?" 
+D:[ The Innocence of Father Brown, by G.K. Chesterton ] 
 
 N:5067:high priest
 G:@:w
@@ -87185,7 +88173,14 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:EVIL | BASEANGBAND | TAKE_ITEM | 
 S:1_IN_6
 S:ARROW_1
-D:soldier from nethack
+D:The soldiers of Yendor are well-trained in the art of war, 
+D:many trained by the Wizard himself.  Some say the soldiers 
+D:are explorers who were unfortunate enough to be captured, 
+D:and put under the Wizard's spell.  Those who have survived 
+D:encounters with soldiers say they travel together in platoons, 
+D:and are fierce fighters.  Because of the load of their combat 
+D:gear, however, one can usually run away from them, and doing 
+D:so is considered a wise thing. 
 
 N:5069:sergeant
 G:h:r
@@ -87284,7 +88279,9 @@ F:EVIL | BASEANGBAND | TAKE_ITEM | UNIQUE | CAN_SPEAK |
 F:IM_POIS | RES_WALL | RES_GRAV | CAN_FLY | CAN_SWIM |
 S:1_IN_5
 S:BR_INER
-D:Medusa from nethack
+D:Medusa, one of the three Gorgons or Graeae, is the only one 
+D:of her sisters to have assumed mortal form and inhabited the 
+D:dungeon world. 
 
 N:5076:Wizard of Yendor
 G:@:v
@@ -87302,7 +88299,16 @@ S:1_IN_3
 S:SHRIEK | HASTE | HEAL | BA_MANA | BR_DISI | BRAIN_SMASH |
 S:CAUSE_4 | HAND_DOOM | CONF | SLOW | TRAPS | TPORT | TELE_AWAY |
 S:TELE_LEVEL | S_MONSTERS | S_UNIQUE | S_UNDEAD |
-D:Rodney from nethack
+D:No one knows how old this mighty wizard is, or from whence he 
+D:came.  It is known that, having lived a span far greater than 
+D:any normal man's, he grew weary of lesser mortals; and so, 
+D:spurning all human company, he forsook the dwellings of men 
+D:and went to live in the depths of the Earth.  He took with 
+D:him a dreadful artifact, the Book of the Dead, which is said 
+D:to hold great power indeed.  Many have sought to find the 
+D:wizard and his treasure, but none have found him and lived to 
+D:tell the tale.  Woe be to the incautious adventurer who 
+D:disturbs this mighty sorcerer! 
 
 N:5077:Croesus
 G:@:v
@@ -87314,7 +88320,14 @@ B:HIT:HURT:4d10
 F:DROP_22 | DROP_GREAT | ONLY_ITEM | MALE |
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:EVIL | BASEANGBAND | TAKE_ITEM | UNIQUE | CAN_SPEAK |
-D:Croesus from nethack
+D:Croesus (in Greek: Kroisos), the wealthy last king of Lydia; 
+D:his empire was destroyed when he attacked Cyrus in 549, after 
+D:the Oracle of Delphi (q.v.) had told him:  "if you attack the 
+D:Persians, you will destroy a mighty empire".  Herodotus 
+D:relates of his legendary conversation with Solon of Athens, 
+D:who impressed upon him that being rich does not imply being 
+D:happy and that no one should be considered fortunate before 
+D:his death. 
 
 N:5078:Charon
 G:@:w
@@ -87328,7 +88341,13 @@ F:DROP_12 | DROP_GOOD | ONLY_ITEM | MALE | NEUTRAL |
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:EVIL | BASEANGBAND | TAKE_ITEM | UNIQUE | CAN_SPEAK |
 F:IM_FIRE | IM_COLD | IM_POIS | RES_WALL | RES_GRAV | RES_DISE |
-D:Charon from nethack
+D:When an ancient Greek died, his soul went to the nether world: 
+D:the Hades.  To reach the nether world, the souls had to cross 
+D:the river Styx, the river that separated the living from the 
+D:dead.  The Styx could be crossed by ferry, whose shabby ferry- 
+D:man, advanced in age, was called Charon.  The deceased's next- 
+D:of-kin would place a coin under his tongue, to pay the ferry- 
+D:man.
 
 N:5079:shadow
 G:G:D
@@ -87355,7 +88374,16 @@ F:CAN_FLY | DROP_60 |
 F:COLD_BLOOD | PASS_WALL | TAKE_ITEM | 
 F:UNDEAD | RES_DISE | RES_WALL | RES_GRAV | RES_NEXU |
 F:IM_COLD | IM_POIS | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
-D:ghost from nethack
+D:And now the souls of the dead who had gone below came swarming 
+D:up from Erebus -- fresh brides, unmarried youths, old men 
+D:with life's long suffering behind them, tender young girls 
+D:still nursing this first anguish in their hearts, and a great 
+D:throng of warriors killed in battle, their spear-wounds gaping 
+D:yet and all their armour stained with blood.  From this 
+D:multitude of souls, as they fluttered to and fro by the 
+D:trench, there came a moaning that was horrible to hear. 
+D:Panic drained the blood from my cheeks. 
+D:[ The Odyssey, (chapter Lambda), by Homer ] 
 
 N:5081:shade
 G:G:D
@@ -87369,7 +88397,10 @@ F:CAN_FLY | DROP_60 | RES_TELE | NO_FEAR | RES_TIME |
 F:COLD_BLOOD | PASS_WALL | TAKE_ITEM | RES_INER | RES_SHAR |
 F:UNDEAD | RES_DISE | RES_WALL | RES_GRAV | RES_NEXU |
 F:IM_COLD | IM_POIS | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
-D:shade from nethack
+D:Shades are undead creatures.  They differ from zombies in 
+D:that a zombie is an undead animation of a corpse, while a 
+D:shade is an undead creature magically created by the use 
+D:of black magic. 
 
 N:5082:straw golem
 G:g:y
@@ -87447,7 +88478,16 @@ B:CLAW:HURT:2d3
 F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | FORCE_MAXHP | TAKE_ITEM |
 F:IM_POIS | NO_SLEEP | RES_SHAR | IM_ACID |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
-D:gold golem from nethack
+D:The bellows he set away from the fire, and gathered all the tools 
+D:wherewith he wrought into a silver chest; and with a sponge wiped 
+D:he his face and his two hands withal, and his mighty neck and 
+D:shaggy breast, and put upon him a tunic, and grasped a stout staff, 
+D:and went forth halting; but there moved swiftly to support their 
+D:lord handmaidens wrought of gold in the semblance of living maids. 
+D:In them is understanding in their hearts, and in them speech and 
+D:strength, and they know cunning handiwork by gift of the immortal 
+D:gods. 
+D:[ The Iliad, by Homer ] 
 
 N:5088:leather golem
 G:g:u
@@ -87485,7 +88525,24 @@ B:CLAW:HURT:2d8
 F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | FORCE_MAXHP | TAKE_ITEM |
 F:IM_POIS | NO_SLEEP | IM_FIRE | IM_COLD | IM_ELEC |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
-D:flesh golem from nethack
+D:"The original story harks back, so they say, to the sixteenth 
+D:century.  Using long-lost formulas from the Kabbala, a rabbi is 
+D:said to have made an artificial man -- the so-called Golem -- to 
+D:help ring the bells in the Synagogue and for all kinds of other 
+D:menial work. 
+D:"But he hadn't made a full man, and it was animated by some sort 
+D:of vegetable half-life.  What life it had, too, so the story 
+D:runs, was only derived from the magic charm placed behind its 
+D:teeth each day, that drew down to itself what was known as the 
+D:`free sidereal strength of the universe.' 
+D:"One evening, before evening prayers, the rabbi forgot to take 
+D:the charm out of the Golem's mouth, and it fell into a frenzy. 
+D:It raged through the dark streets, smashing everything in its 
+D:path, until the rabbi caught up with it, removed the charm, and 
+D:destroyed it.  Then the Golem collapsed, lifeless.  All that was 
+D:left of it was a small clay image, which you can still see in 
+D:the Old Synagogue." ... 
+D:[ The Golem, by Gustav Meyrink ] 
 
 N:5091:stone golem
 G:g:W
@@ -87657,7 +88714,8 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:GOOD | DEMON | IM_POIS | IM_FIRE | RES_SHAR |
 S:1_IN_10 | 
 S:S_DEMON
-D:horned devil from nethack
+D:Horned devils lack any real special abilities, though they 
+D:are quite difficult to kill.
 
 N:5103:succubus
 G:U:W
@@ -87672,7 +88730,10 @@ F:DROP_60 | NONLIVING | BASEANGBAND | FEMALE |
 F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | 
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 F:CAN_FLY |
-D:succubus from nethack
+D:The incubus and succubus are male and female versions of the 
+D:same demon, one who lies with a human for its own purposes, 
+D:usually to the detriment of the mortals who are unwise in 
+D:their dealings with them. 
 
 N:5104:incubus
 G:U:W
@@ -87687,7 +88748,10 @@ F:DROP_60 | NONLIVING | BASEANGBAND | MALE |
 F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | 
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 F:CAN_FLY |
-D:incubus from nethack
+D:The incubus and succubus are male and female versions of the 
+D:same demon, one who lies with a human for its own purposes, 
+D:usually to the detriment of the mortals who are unwise in 
+D:their dealings with them. 
 
 N:5105:marilith
 G:U:r
@@ -87704,7 +88768,11 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:marilith from nethack
+D:The marilith has a torso shaped like that of a human female, 
+D:and the lower body of a great snake.  It has multiple arms, 
+D:and can freely attack with all of them.  Since it is 
+D:intelligent enough to use weapons, this means it can cause 
+D:great damage. 
 
 N:5106:bar-lgura
 G:U:o
@@ -87735,7 +88803,8 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:erinys from nethack
+D:These female-seeming devils named after the Furies of mythology 
+D:attack hand to hand and poison their unwary victims as well. 
 
 N:5108:water demon
 G:U:B
@@ -87782,7 +88851,8 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:GOOD | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:barbed devil from nethack
+D:Barbed devils lack any real special abilities, though they 
+D:are quite difficult to kill. 
 
 N:5111:chasme
 G:U:b
@@ -87816,7 +88886,10 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:vrock from nethack
+D:The vrock is one of the weaker forms of demon.  It resembles 
+D:a cross between a human being and a vulture and does physical 
+D:damage by biting and by using the claws on both its arms and 
+D:feet. 
 
 N:5113:babau
 G:U:D
@@ -87849,7 +88922,8 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:hezrou from nethack
+D:"Hezrou" is the common name for the type II demon.  It is 
+D:among the weaker of demons, but still quite formidable. 
 
 N:5115:bone devil
 G:U:W
@@ -87864,7 +88938,8 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:bone devil from nethack
+D:Bone devils attack with weapons and with a great hooked tail 
+D:which causes a loss of strength to those they sting.
 
 N:5116:ice devil
 G:U:w
@@ -87881,7 +88956,10 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM | IM_COLD |
 S:1_IN_10 | 
 S:S_DEMON
-D:ice devil from nethack
+D:Ice devils are large semi-insectoid creatures, who are 
+D:equally at home in the fires of Hell and the cold of Limbo, 
+D:and who can cause the traveller to feel the latter with just 
+D:a touch of their tail. 
 
 N:5117:nalfeshnee
 G:U:r
@@ -87897,7 +88975,8 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM | HAS_EGG |
 S:1_IN_10 | 
 S:S_DEMON | S_MONSTERS | HASTE | HEAL | CAUSE_2 | DRAIN_MANA |
-D:nalfeshnee from nethack
+D:Not only do these demons do physical damage with their claws 
+D:and bite, but they are capable of using magic as well.
 
 N:5118:lava demon
 G:U:r
@@ -87929,7 +89008,10 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:pit fiend from nethack
+D:Pit fiends are among the more powerful of devils, capable of 
+D:attacking twice with weapons as well as grabbing and crushing 
+D:the life out of those unwary enough to enter their 
+D:domains. 
 
 N:5120:balrog
 G:U:r
@@ -87942,7 +89024,15 @@ B:HIT:HURT:4d6
 F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY |
 F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
-D:balrog from nethack
+D:...  It came to the edge of the fire and the light faded as 
+D:if a cloud had bent over it.  Then with a rush it leaped 
+D:the fissure.  The flames roared up to greet it, and wreathed 
+D:about it; and a black smoke swirled in the air.  Its streaming 
+D:mane kindled, and blazed behind it.  In its right hand 
+D:was a blade like a stabbing tongue of fire; in its left it 
+D:held a whip of many thongs. 
+D:'Ai, ai!' wailed Legolas.  'A Balrog!  A Balrog is come!' 
+D:[ The Fellowship of the Ring, by J.R.R. Tolkien ] 
 
 N:5121:Jubilex
 G:U:G
@@ -87960,7 +89050,12 @@ F:CAN_SWIM | CAN_FLY |
 F:IM_ACID | RES_WALL | RES_GRAV | RES_DISE |
 S:1_IN_5 | 
 S:S_DEMON
-D:Jubilex from nethack
+D:Little is known about the Faceless Lord, even the correct 
+D:spelling of his name.  He does not have a physical form as 
+D:we know it, and those who have peered into his realm claim 
+D:he is a slime-like creature who swallows other creatures 
+D:alive, spits acidic secretions, and causes disease in his 
+D:victims which can be almost instantly fatal. 
 
 N:5122:Yeenoghu
 G:U:v
@@ -87979,7 +89074,11 @@ F:CAN_FLY |
 F:RES_WALL | RES_GRAV | RES_DISE |
 S:1_IN_5 | 
 S:S_DEMON | MISSILE
-D:Yeenoghu from nethack
+D:Yeenoghu, the demon lord of gnolls, still exists although 
+D:all his followers have been wiped off the face of the earth. 
+D:He casts magic projectiles at those close to him, and a mere 
+D:gaze into his piercing eyes may hopelessly confuse the 
+D:battle-weary adventurer. 
 
 N:5123:Orcus
 G:U:v
@@ -88000,7 +89099,9 @@ F:RES_WALL | RES_GRAV | RES_DISE |
 S:1_IN_5 | 
 S:S_DEMON | BR_DISI | BR_DISE | BA_NETH | S_MONSTERS |
 S:SHRIEK | TRAPS | CAUSE_4 | HASTE | HEAL | TELE_LEVEL |
-D:Orcus from nethack
+D:Orcus, Prince of the Undead, has a ram's head and a poison 
+D:stinger.  He is most feared, though, for his powerful magic 
+D:abilities.  His wand causes death to those he chooses. 
 
 N:5124:Geryon
 G:U:v
@@ -88019,7 +89120,9 @@ F:CAN_FLY |
 F:RES_WALL | RES_GRAV | RES_DISE |
 S:1_IN_5 | 
 S:S_DEMON
-D:Geryon from nethack
+D:Geryon is an arch-devil sometimes called the Wild Beast, 
+D:attacking with his claws and poison sting.  His ranking in 
+D:Hell is rumored to be quite low. 
 
 N:5125:Dispater
 G:U:v
@@ -88037,7 +89140,13 @@ F:RES_WALL | RES_GRAV | RES_DISE |
 S:1_IN_5 | 
 S:S_DEMON | CAUSE_3 | CAUSE_4 | MISSILE | BR_NEXU | BA_DARK |
 S:S_MONSTER | DRAIN_MANA | FORGET | TELE_AWAY |
-D:Dispater from nethack
+D:The Roman ruler of the underworld and fortune, similar to the Greek 
+D:Hades. Every hundred years, the Ludi Tarentini were celebrated in his 
+D:honor. The Gauls regarded Dis Pater as their ancestor. 
+D:The name is a contraction of the Latin Dives, "the wealthy", Dives 
+D:Pater, "the wealthy father", or "Fater Wealth". It refers to the 
+D:wealth of precious stone below the earth. 
+D:[ Encyclopedia Mythica, ed. M.F. Lindemans ] 
 
 N:5126:Baalzebub
 G:U:v
@@ -88055,7 +89164,13 @@ F:CAN_FLY |
 F:RES_WALL | RES_GRAV | RES_DISE |
 S:1_IN_5 | 
 S:S_DEMON
-D:Baalzebub from nethack
+D:The "lord of the flies" is a translation of the Hebrew 
+D:Ba'alzevuv (Beelzebub in Greek).  It has been suggested that 
+D:it was a mistranslation of a mistransliterated word which 
+D:gave us this pungent and suggestive name of the Devil, a 
+D:devil whose name suggests that he is devoted to decay, 
+D:destruction, demoralization, hysteria and panic... 
+D:[ Notes on _Lord of the Flies_, by E. L. Epstein ] 
 
 N:5127:Asmodeus
 G:U:v
@@ -88072,7 +89187,10 @@ F:CAN_FLY |
 F:RES_WALL | RES_GRAV | RES_DISE |
 S:1_IN_5 | 
 S:S_DEMON | BA_COLD | BO_ICEE
-D:Asmodeus from nethack
+D:It is said that Asmodeus is the overlord over all of hell. 
+D:His appearance, unlike many other demons and devils, is 
+D:human apart from his horns and tail. He can freeze flesh 
+D:with a touch. 
 
 N:5128:Demogorgon
 G:U:v
@@ -88093,7 +89211,10 @@ S:1_IN_5 |
 S:S_DEMON | HASTE | HEAL | BA_MANA | BA_NETH | BA_DARK | 
 S:S_MONSTERS | S_HI_UNDEAD | S_HI_DRAGON | S_HI_DEMON | 
 S:CAUSE_4 | HAND_DOOM | BRAIN_SMASH | TPORT |
-D:Demogorgon from nethack
+D:Demogorgon, the prince of demons, wallows in filth and can 
+D:spread a quickly fatal illness to his victims while rending 
+D:them.  He is a mighty spellcaster, and he can drain the life 
+D:of mortals with a touch of his tail. 
 
 N:5129:Cthulhu
 G:U:v
@@ -88115,7 +89236,14 @@ S:1_IN_5 |
 S:S_DEMON | HASTE | HEAL | S_ANIMALS | S_BUG | S_RNG | S_ANT | S_SPIDER |
 S:S_HOUND | S_HYDRA | BA_CHAO | CAUSE_4 | BRAIN_SMASH | MIND_BLAST |
 S:DRAIN_MANA | BLIND | CONF | SLOW | HOLD | TRAPS | FORGET | TPORT |
-D:Cthulhu from nethack
+D:"The Thing cannot be described -- there is no language for such 
+D:abysms of shrieking and immemorial lunacy, such eldritch 
+D:contradictions of all matter, force, and cosmic order.  A 
+D:mountain walked or stumbled.  God!... the Thing of the idols, 
+D:the green, sticky spawn of the stars, had awakened to claim 
+D:his own.  The stars were right again... great Cthulhu was 
+D:loose again, and ravening for delight." 
+D:[ The Call of Cthulhu, by H.P. Lovecraft ] 
 
 N:5130:Death
 G:U:v
@@ -88131,7 +89259,13 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 F:IM_COLD | IM_ELEC | NO_SLEEP | RES_WALL | RES_GRAV |
 F:CAN_FLY | REGENERATE |
-D:Death from nethack
+D:And when he had opened the fourth seal, I heard the 
+D:voice of the fourth beast say, Come and see.  And I looked, and 
+D:behold a pale horse: and his name that sat on him was Death, 
+D:and Hell followed with him.  And power was given unto them over 
+D:the fourth part of the earth, to kill with sword, and with 
+D:hunger, and with death, and with the beasts of the earth. 
+D:[ Revelations of John, 6:1-8 ]
 
 N:5131:Pestilence
 G:U:v
@@ -88147,7 +89281,12 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 F:IM_COLD | IM_ELEC | NO_SLEEP | RES_WALL | RES_GRAV |
 F:CAN_FLY | REGENERATE |
-D:Pestilence from nethack
+D:And I saw when the Lamb opened one of the seals, 
+D:and I heard, as it were the noise of thunder, one of the four 
+D:beasts saying, Come and see.  And I saw, and behold a white 
+D:horse: and he that sat on him had a bow; and a crown was given 
+D:unto him: and he went forth conquering, and to conquer. 
+D:[ Revelations of John, 6:1-8 ]
 
 N:5132:Famine
 G:U:v
@@ -88163,7 +89302,13 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 F:IM_COLD | IM_ELEC | NO_SLEEP | RES_WALL | RES_GRAV |
 F:CAN_FLY | REGENERATE |
-D:Famine from nethack
+D:And when he had opened the third seal, I heard the 
+D:third beast say, Come and see.  And I beheld, and lo a black 
+D:horse; and he that sat on him had a pair of balances in his 
+D:hand.  And I heard a voice in the midst of the four beasts say, 
+D:A measure of wheat for a penny, and three measures of barley 
+D:for a penny; and see thou hurt not the oil and the wine. 
+D:[ Revelations of John, 6:1-8 ]
 
 N:5133:mail daemon
 G:U:B
@@ -88178,7 +89323,8 @@ F:IM_COLD | IM_ELEC | NO_SLEEP | RES_WALL | RES_GRAV |
 F:CAN_FLY | CAN_SWIM | NEUTRAL |
 S:1_IN_1
 S:TPORT | TELE_AWAY | TELE_LEVEL
-D:mail daemon from nethack
+D:It is rumoured that these strange creatures can be harmed by 
+D:domesticated canines only.
 
 N:5134:djinni
 G:U:y
@@ -88190,7 +89336,14 @@ B:HIT:HURT:2d8
 F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY |
 F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:DEMON | IM_POIS | RES_WALL | RES_GRAV | TAKE_ITEM |
-D:djinni from nethack
+D:The djinn are genies from the elemental plane of Air.  There, 
+D:among their kind, they have their own societies.  They are 
+D:sometimes encountered on earth and may even be summoned here 
+D:to perform some service for powerful wizards.  The wizards 
+D:often leave them about for later service, safely tucked away 
+D:in a flask or lamp.  Once in a while, such a tool is found by 
+D:a lucky rogue, and some djinn are known to be so grateful 
+D:when released that they might grant their rescuer a wish. 
 
 N:5135:efreeti
 G:U:r
@@ -88252,7 +89405,11 @@ O:0:0:0:0
 B:STING:LOSE_STR:3d3
 F:ANIMAL | AQUATIC | IM_POIS | WILD_SHORE | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | CAN_SWIM | RES_SHAR | HAS_EGG
-D:jellyfish from nethack
+D:I do not care to share the seas 
+D:With jellyfishes such as these; 
+D:Particularly Portuguese. 
+D:[ Lines on Meeting a Portuguese Man-o'-war while 
+D:Bathing, by Michael Flanders ] 
 
 N:5140:piranha
 G:~:r
@@ -88263,7 +89420,14 @@ O:0:0:0:0
 B:BITE:HURT:2d6
 F:ANIMAL | AQUATIC | WILD_SHORE | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | CAN_SWIM | RES_SHAR | HAS_EGG
-D:piranha from nethack
+D:They live in "schools." Many times they will wait for prey 
+D:to come to the shallow water of the river. Then the large 
+D:group of piranhas will attack. These large groups are able 
+D:to kill large animals... Their lower teeth fit perfectly 
+D:into the spaces of their upper teeth, creating a tremendous 
+D:vice-like bite... Piranhas are attracted to any disturbance 
+D:in the water. 
+D:[ http://www.animalsoftherainforest.com ] 
 
 N:5141:giant eel
 G:~:b
@@ -88275,7 +89439,15 @@ B:BITE:HURT:3d6
 B:TOUCH:HALLU
 F:ANIMAL | AQUATIC | WILD_SHORE | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | CAN_SWIM | RES_SHAR | HAS_EGG
-D:giant eel from nethack
+D:The behaviour of eels in fresh water extends the air of 
+D:mystery surrounding them.  They move freely into muddy, silty 
+D:bottoms of lakes, lying buried in the daylight hours in summer. 
+D:[...]  Eels are voracious carnivores, feeding mainly at 
+D:night and consuming a wide variety of fishes and invertebrate 
+D:creatures.  Contrary to earlier thinking, eels seek living 
+D:rather than dead creatures and are not habitual eaters of 
+D:carrion. 
+D:[ Freshwater Fishes of Canada, by Scott and Crossman ] 
 
 N:5142:shark
 G:~:W
@@ -88286,7 +89458,21 @@ O:0:0:0:0
 B:BITE:HURT:5d6
 F:ANIMAL | AQUATIC | WILD_SHORE | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | CAN_SWIM | RES_SHAR | HAS_EGG
-D:shark from nethack
+D:As the shark moved, its dark top reflected virtually no 
+D:light.  The denticles on its skin muted the whoosh of its 
+D:movements as the shark rose, driven by the power of the 
+D:great tail sweeping from side to side, like a scythe. 
+D:The fish exploded upward. 
+D:Charles Bruder felt a slight vacuum tug in the motion of 
+D:the sea, noted it as a passing current, the pull of a wave, 
+D:the tickle of undertow.  He could not have heard the faint 
+D:sucking rush of water not far beneath him.  He couldn't 
+D:have seen or heard what was hurtling from the murk at 
+D:astonishing speed, jaws unhinging, widening, for the 
+D:enormous first bite.  It was the classic attack 
+D:that no other creature in nature could make -- a bomb from 
+D:the depths. 
+D:[ Close to Shore, by Michael Capuzzo ] 
 
 N:5143:electric eel
 G:~:B
@@ -88298,7 +89484,11 @@ B:BITE:ELEC:4d6
 B:TOUCH:HALLU
 F:ANIMAL | AQUATIC | WILD_SHORE | IM_ELEC | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | CAN_SWIM | RES_SHAR | HAS_EGG
-D:electric eel from nethack
+D:South-American fish (_Gymnotus electricus_), living in fresh 
+D:water.  Shaped like a serpent, it can grow up to 2 metres. 
+D:This eel is known for its electrical organ which enables it 
+D:to paralyse creatures up to the size of a horse. 
+D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
 N:5144:kraken
 G:~:r
@@ -88312,7 +89502,14 @@ B:CRUSH:HALLU:2d6
 B:BITE:HURT:5d4
 F:ANIMAL | AQUATIC | WILD_OCEAN | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | CAN_SWIM | HAS_EGG
-D:kraken from nethack
+D:Out from the water a long sinuous tentacle had crawled; it 
+D:was pale-green and luminous and wet.  Its fingered end had 
+D:hold of Frodo's foot, and was dragging him into the water. 
+D:Sam on his knees was now slashing at it with a knife.  The 
+D:arm let go of Frodo, and Sam pulled him away, crying out 
+D:for help.  Twenty other arms came rippling out.  The dark 
+D:water boiled, and there was a hideous stench. 
+D:[ The Fellowship of the Ring, by J.R.R. Tolkien ] 
 
 N:5145:jellyfish
 G:~:B
@@ -88323,7 +89520,11 @@ O:0:0:0:0
 B:STING:LOSE_STR:3d3
 F:ANIMAL | IM_POIS | WILD_SHORE | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | CAN_SWIM | RES_SHAR | HAS_EGG
-D:jellyfish from nethack
+D:I do not care to share the seas 
+D:With jellyfishes such as these; 
+D:Particularly Portuguese. 
+D:[ Lines on Meeting a Portuguese Man-o'-war while 
+D:Bathing, by Michael Flanders ] 
 
 N:5146:piranha
 G:~:r
@@ -88334,7 +89535,14 @@ O:0:0:0:0
 B:BITE:HURT:2d6
 F:ANIMAL | WILD_SHORE | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | CAN_SWIM | RES_SHAR | HAS_EGG
-D:piranha from nethack
+D:They live in "schools." Many times they will wait for prey 
+D:to come to the shallow water of the river. Then the large 
+D:group of piranhas will attack. These large groups are able 
+D:to kill large animals... Their lower teeth fit perfectly 
+D:into the spaces of their upper teeth, creating a tremendous 
+D:vice-like bite... Piranhas are attracted to any disturbance 
+D:in the water. 
+D:[ http://www.animalsoftherainforest.com ] 
 
 N:5147:giant eel
 G:~:b
@@ -88346,7 +89554,15 @@ B:BITE:HURT:3d6
 B:TOUCH:HALLU
 F:ANIMAL | WILD_SHORE | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | CAN_SWIM | RES_SHAR | HAS_EGG
-D:giant eel from nethack
+D:The behaviour of eels in fresh water extends the air of 
+D:mystery surrounding them.  They move freely into muddy, silty 
+D:bottoms of lakes, lying buried in the daylight hours in summer. 
+D:[...]  Eels are voracious carnivores, feeding mainly at 
+D:night and consuming a wide variety of fishes and invertebrate 
+D:creatures.  Contrary to earlier thinking, eels seek living 
+D:rather than dead creatures and are not habitual eaters of 
+D:carrion. 
+D:[ Freshwater Fishes of Canada, by Scott and Crossman ] 
 
 N:5148:shark
 G:~:W
@@ -88357,7 +89573,21 @@ O:0:0:0:0
 B:BITE:HURT:5d6
 F:ANIMAL | WILD_SHORE | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | CAN_SWIM | RES_SHAR | HAS_EGG
-D:shark from nethack
+D:As the shark moved, its dark top reflected virtually no 
+D:light.  The denticles on its skin muted the whoosh of its 
+D:movements as the shark rose, driven by the power of the 
+D:great tail sweeping from side to side, like a scythe. 
+D:The fish exploded upward. 
+D:Charles Bruder felt a slight vacuum tug in the motion of 
+D:the sea, noted it as a passing current, the pull of a wave, 
+D:the tickle of undertow.  He could not have heard the faint 
+D:sucking rush of water not far beneath him.  He couldn't 
+D:have seen or heard what was hurtling from the murk at 
+D:astonishing speed, jaws unhinging, widening, for the 
+D:enormous first bite.  It was the classic attack 
+D:that no other creature in nature could make -- a bomb from 
+D:the depths. 
+D:[ Close to Shore, by Michael Capuzzo ] 
 
 N:5149:electric eel
 G:~:B
@@ -88369,7 +89599,11 @@ B:BITE:ELEC:4d6
 B:TOUCH:HALLU
 F:ANIMAL | WILD_SHORE | IM_ELEC | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | CAN_SWIM | RES_SHAR | HAS_EGG
-D:electric eel from nethack
+D:South-American fish (_Gymnotus electricus_), living in fresh 
+D:water.  Shaped like a serpent, it can grow up to 2 metres. 
+D:This eel is known for its electrical organ which enables it 
+D:to paralyse creatures up to the size of a horse. 
+D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
 N:5150:kraken
 G:~:r
@@ -88383,7 +89617,14 @@ B:CRUSH:HALLU:2d6
 B:BITE:HURT:5d4
 F:ANIMAL | WILD_OCEAN | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND | CAN_SWIM | HAS_EGG
-D:kraken from nethack
+D:Out from the water a long sinuous tentacle had crawled; it 
+D:was pale-green and luminous and wet.  Its fingered end had 
+D:hold of Frodo's foot, and was dragging him into the water. 
+D:Sam on his knees was now slashing at it with a knife.  The 
+D:arm let go of Frodo, and Sam pulled him away, crying out 
+D:for help.  Twenty other arms came rippling out.  The dark 
+D:water boiled, and there was a hideous stench. 
+D:[ The Fellowship of the Ring, by J.R.R. Tolkien ] 
 
 N:5151:newt
 G:R:y
@@ -88394,7 +89635,9 @@ O:0:0:0:0
 B:BITE:HURT:1d2
 F:CAN_SWIM | WILD_SHORE | WILD_TOO | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:newt from nethack
+D:(kinds of) small animal, like a lizard, which spends most of 
+D:its time in the water. 
+D:[ Oxford's Student's Dictionary of Current English ] 
 
 N:5152:gecko
 G:R:g
@@ -88449,7 +89692,15 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:WILD_WASTE | WILD_TOO | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND | RES_WALL | RES_GRAV |
-D:lizard from nethack
+D:Lizards, snakes and the burrowing amphisbaenids make up the 
+D:order Squamata, meaning the scaly ones.  The elongate, slim, 
+D:long-tailed bodies of lizards have become modified to enable 
+D:them to live in a wide range of habitats.  Lizards can be 
+D:expert burrowers, runners, swimmers and climbers, and a few 
+D:can manage crude, short-distance gliding on rib-supported 
+D:"wings".  Most are carnivores, feeding on invertebrate and 
+D:small vertebrate prey, but others feed on vegetation. 
+D:[ Macmillan Illustrated Animal Encyclopedia ] 
 
 N:5157:gila monster
 G:R:o
@@ -88460,7 +89711,14 @@ O:0:0:0:0
 B:BITE:LOSE_STR:2d6
 F:WILD_WASTE | WILD_TOO | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS |
-D:gila monster from nethack
+D:[Gila monsters] are stout-bodied lizards with short legs and a short, 
+D:fat tail. They're covered with bright irregular markings, usually 
+D:pink, yellow or white, against black or brown scales. They are shy, 
+D:retiring creatures unless they're provoked. Then they can be 
+D:dangerous because they secrete a neurotoxin -- a poison that 
+D:destroys nerve tissue -- from their salivary glands. In humans, 
+D:their bite can result in severe pain and even death. 
+D:[Expedition Guide -- American Museum of Natural History] 
 
 N:5158:chameleon
 G:R:u
@@ -88471,7 +89729,17 @@ O:0:0:0:0
 B:BITE:HURT:4d2
 F:WILD_WOOD | WILD_TOO | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND | SHAPECHANGER |
-D:chameleon from nethack
+D:Name of a family (_Chameleonidae_) and race (_Chameleo_) of 
+D:scaly lizards, especially the _Chameleo vulgaris_ species, 
+D:with a short neck, claws, a grasping tail, a long, extendible 
+D:tongue and mutually independent moving eyes.  When it is 
+D:scared or angry, it inflates itself and its transparent skin 
+D:shows its blood:  the skin first appears greenish, then 
+D:gradually changes color until it is a spotted red.  The final 
+D:color depends on the background color as well, hence the 
+D:(figurative) implication of unreliability.  [Capitalized:] 
+D:a constellation of the southern hemisphere (Chameleo). 
+D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
 N:5159:crocodile
 G:R:u
@@ -88483,7 +89751,11 @@ B:BITE:HURT:4d2
 B:CLAW:HURT:1d12
 F:WILD_SHORE | WILD_TOO | DROP_CORPSE | CAN_SWIM |
 F:ANIMAL | MORTAL | BASEANGBAND | RES_SHAR | HAS_EGG |
-D:crocodile from nethack
+D:A big animal with the appearance of a lizard, constituting 
+D:an order of the reptiles (_Loricata_ or _Crocodylia_), the 
+D:crocodile is a large, dangerous predator native to tropical 
+D:and subtropical climes.  It spends most of its time in large 
+D:bodies of water. 
 
 N:5160:salamander
 G:R:o
@@ -88497,7 +89769,13 @@ B:CRUSH:HURT:2d6
 B:CRUSH:FIRE:3d6
 F:WILD_WASTE | WILD_TOO | DROP_CORPSE | IM_FIRE | NO_SLEEP |
 F:ANIMAL | MORTAL | BASEANGBAND | RES_SHAR | HAS_EGG | TAKE_ITEM |
-D:salamander from nethack
+D:For hundreds of years, many people believed that salamanders 
+D:were magical.  In England in the Middle Ages, people thought 
+D:that fire created salamanders.  When they set fire to damp 
+D:logs, dozens of the slimy creatures scurried out.  The word 
+D:salamander, in fact, comes from a Greek word meaning "fire 
+D:animal". 
+D:[ Salamanders, by Cherie Winner ] 
 
 N:5161:basilisk
 G:R:D
@@ -88509,7 +89787,17 @@ B:BITE:ABOMINATION:4d2
 B:TOUCH:ABOMINATION
 F:DROP_CORPSE | IM_POIS | RES_WALL | RES_GRAV |
 F:ANIMAL | MORTAL | BASEANGBAND | RES_SHAR | HAS_EGG |
-D:basilisk from nethack
+D:There is, however, one creature which can withstand the 
+D:basilisk's deadly gaze, and this is the weasel.  No one knows 
+D:why this is so, but although the fierce weasel can slay the 
+D:basilisk, it will itself be killed in the struggle.  Perhaps 
+D:the weasel knows the basilisk's fatal weakness:  if it ever 
+D:sees its own reflection in a mirror it will perish instantly. 
+D:But even a dead basilisk is dangerous, for it is said that 
+D:merely touching its lifeless body can cause a person to 
+D:sicken and die. 
+D:[ Mythical Beasts by Deirdre Headon (The Leprechaun Library) 
+D:and other sources ] 
 
 N:5162:komodo dragon
 G:R:g
@@ -88522,7 +89810,28 @@ B:CLAW:HURT:1d12
 B:CLAW:HURT:1d12
 F:DROP_CORPSE | IM_POIS | RES_WALL | RES_GRAV | WILD_WASTE |
 F:ANIMAL | MORTAL | BASEANGBAND | RES_SHAR | HAS_EGG | WILD_TOO |
-D:komodo dragon from nethack
+D:The people of Komodo call this animal "ora." Elsewhere it is known 
+D:as the Komodo Island monitor or more popularly, the Komodo dragon. 
+D:Oras can reach 10 feet in length and weigh 300 pounds or more -- 
+D:particularly after a meal. They are the top predators in their 
+D:habitat, feeding on wild boar, deer, water buffalo, dogs, goats, 
+D:rats, snakes, birds, other oras, and -- once in a great while -- 
+D:humans. They hunt by ambush, hiding in the scrub brush along trails 
+D:and in the tall grass of the savannas. Despite their lumbering 
+D:appearance, oras can move with alarming speed when they want to, 
+D:lunging from their hiding places and sprinting toward their 
+D:startled victims. They can't sustain a long chase, but often all 
+D:they need to subdue their prey is one bite. Oras carry poisonous 
+D:bacteria in their mouths so even if they don't immediately catch 
+D:their prey, the attack is often fatal. Using their long forked 
+D:tongues (oras and other monitor lizards are closely related to 
+D:snakes), they track the scent of their prey as the wounded animal 
+D:slowly weakens from the infected bite -- a process that can take 
+D:several days. When the victim can no longer flee, the ora moves 
+D:in for the kill. Oras are voracious eaters. They devour every bit 
+D:of their prey -- bones, fur, hooves -- ripping off huge chunks with 
+D:their razor-sharp serrated teeth and swallowing the pieces whole. 
+D:[Expedition Guide -- American Museum of Natural History] 
 
 N:5163:tyrannosaur
 G:R:g
@@ -88655,7 +89964,10 @@ B:GAZE:PARALYZE:1d4
 F:CAN_FLY | DROP_CORPSE | RES_SHAR | CAN_FLY |
 F:NO_FEAR | BASEANGBAND | UNIQUE | DROP_12 | 
 F:RES_WALL | RES_GRAV | REGENERATE | 
-D:Beholder from nethack
+D:"Beauty in things exists merely 
+D:in the mind which contemplates them." 
+D:[ Moral and Political, 
+D:by David Hume ] 
 
 N:5174:Vecna
 G:L:v
