@@ -85399,7 +85399,7 @@ B:BITE:HURT:2d6
 F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | CAN_FLY |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
-D:baby gray dragon from nethack
+D:A small, gray-colored dragon.
 
 N:4892:baby silver dragon
 G:d:B
@@ -85411,7 +85411,7 @@ B:BITE:HURT:2d6
 F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | CAN_FLY |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
-D:baby silver dragon from nethack
+D:A small, silver-colored dragon.
 
 N:4893:baby shimmering dragon
 G:d:b
@@ -85423,7 +85423,7 @@ B:BITE:HURT:2d6
 F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | CAN_FLY | ATTR_MULTI |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
-D:baby shimmering dragon from nethack
+D:A small shimmering dragon.
 
 N:4894:baby deep dragon
 G:d:b
@@ -85435,7 +85435,8 @@ B:BITE:HURT:2d6
 F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | CAN_FLY |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
-D:baby deep dragon from nethack
+D:A small dragon, no one knows its exact color because "deep" 
+D:is not a color, as far as I'm aware. 
 
 N:4895:baby red dragon
 G:d:r
@@ -85447,7 +85448,7 @@ B:BITE:HURT:2d6
 F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_FIRE |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
-D:baby red dragon from nethack
+D:A small, red-colored dragon.
 
 N:4896:baby white dragon
 G:d:w
@@ -85459,7 +85460,7 @@ B:BITE:HURT:2d6
 F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_COLD |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
-D:baby white dragon from nethack
+D:A small, white-colored dragon.
 
 N:4897:baby orange dragon
 G:d:o
@@ -85471,7 +85472,7 @@ B:BITE:HURT:2d6
 F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | CAN_FLY | NO_SLEEP |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
-D:baby orange dragon from nethack
+D:A small, orange-colored dragon.
 
 N:4898:baby black dragon
 G:d:D
@@ -85483,7 +85484,7 @@ B:BITE:HURT:2d6
 F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | CAN_FLY | RES_DISE |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
-D:baby black dragon from nethack
+D:A small, black-colored dragon.
 
 N:4899:baby blue dragon
 G:d:B
@@ -85495,7 +85496,7 @@ B:BITE:HURT:2d6
 F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_ELEC |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
-D:baby blue dragon from nethack
+D:A small, blue-colored dragon.
 
 N:4900:baby yellow dragon
 G:d:y
@@ -85508,7 +85509,7 @@ F:DROP_CORPSE | ONLY_GOLD | DROP_60 |
 F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_ACID |
 F:RES_WALL | RES_GRAV |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
-D:baby yellow dragon from nethack
+D:A small, yellow-colored dragon.
 
 N:4901:baby green dragon
 G:d:g
@@ -85520,7 +85521,7 @@ B:BITE:HURT:2d6
 F:DROP_CORPSE | ONLY_GOLD | DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_POIS |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
-D:baby green dragon from nethack
+D:A small, green-colored dragon.
 
 N:4902:gray dragon
 G:D:W
@@ -85536,7 +85537,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 S:1_IN_6
 S:BR_MANA
-D:gray dragon from nethack
+D:A dragon that breathes mana. 
 
 N:4903:silver dragon
 G:D:B
@@ -85552,7 +85553,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | REFLECTING |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND | IM_COLD |
 S:1_IN_6
 S:BR_COLD
-D:silver dragon from nethack
+D:A dragon that breathes cold and has reflection. 
 
 N:4904:shimmering dragon
 G:D:b
@@ -85568,7 +85569,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 S:1_IN_6
 S:BR_MANA
-D:shimmering dragon from nethack
+D:A dragon that breathes mana and is hard to hit. 
 
 N:4905:deep dragon
 G:D:v
@@ -85584,7 +85585,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | RES_NETH |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 S:1_IN_6
 S:BR_POIS
-D:deep dragon from nethack
+D:A dragon that breathes poison and drains life. 
 
 N:4906:red dragon
 G:D:r
@@ -85600,7 +85601,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_FIRE |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 S:1_IN_6
 S:BR_FIRE
-D:red dragon from nethack
+D:A dragon that breathes fire. 
 
 N:4907:white dragon
 G:D:w
@@ -85616,7 +85617,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_COLD |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 S:1_IN_6
 S:BR_COLD
-D:white dragon from nethack
+D:A dragon that breathes cold. 
 
 N:4908:orange dragon
 G:D:o
@@ -85632,7 +85633,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | NO_SLEEP |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 S:1_IN_6
 S:BR_INER
-D:orange dragon from nethack
+D:A dragon that breathes inertia. 
 
 N:4909:black dragon
 G:D:D
@@ -85648,7 +85649,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | RES_DISE |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 S:1_IN_6
 S:BR_DISI
-D:black dragon from nethack
+D:A dragon that breathes disintegration. 
 
 N:4910:blue dragon
 G:D:B
@@ -85664,7 +85665,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_ELEC |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 S:1_IN_6
 S:BR_ELEC
-D:blue dragon from nethack
+D:A dragon that breathes lightning. 
 
 N:4911:green dragon
 G:D:g
@@ -85680,7 +85681,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_POIS |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 S:1_IN_6
 S:BR_POIS
-D:green dragon from nethack
+D:A dragon that breathes poison. 
 
 N:4912:yellow dragon
 G:D:y
@@ -85697,7 +85698,7 @@ F:RES_WALL | RES_GRAV |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 S:1_IN_6
 S:BR_ACID
-D:yellow dragon from nethack
+D:A dragon that breathes acid. 
 
 N:4913:stalker
 G:E:w
@@ -85731,7 +85732,7 @@ F:EMPTY_MIND | COLD_BLOOD | CAN_FLY |
 F:BASH_DOOR | POWERFUL | WILD_WASTE |
 F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | RES_NEXU |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:air elemental from nethack
+D:A very fast elemental being that can buffet you around. 
 
 N:4915:fire elemental
 G:E:y
@@ -85745,7 +85746,8 @@ F:EMPTY_MIND | CAN_FLY |
 F:BASH_DOOR | POWERFUL | IM_FIRE | WILD_VOLCANO |
 F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | RES_NEXU |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:fire elemental from nethack
+D:An elemental that is most dangerous if you're not 
+D:immune to fire. 
 
 N:4916:earth elemental
 G:E:u
@@ -85758,7 +85760,7 @@ F:EMPTY_MIND | COLD_BLOOD | CAN_FLY | WILD_MOUNTAIN |
 F:BASH_DOOR | POWERFUL | IM_FIRE | IM_COLD |
 F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | PASS_WALL |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:earth elemental from nethack
+D:A slow-moving elemental that passes through solid rock. 
 
 N:4917:water elemental
 G:E:B
@@ -85771,7 +85773,7 @@ F:EMPTY_MIND | COLD_BLOOD | CAN_FLY |
 F:BASH_DOOR | POWERFUL | WILD_OCEAN |
 F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | CAN_SWIM |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
-D:water elemental from nethack
+D:A strangely slow, weak elemental being. 
 
 N:4918:lichen
 G:m:G
@@ -85804,7 +85806,7 @@ F:STUPID | EMPTY_MIND |
 F:IM_POIS | DROP_CORPSE | IM_COLD |
 F:NO_CONF | NO_SLEEP | NO_FEAR | RES_SHAR |
 F:MORTAL | BASEANGBAND | NO_CUT
-D:brown mold from nethack
+D:A frosty mold. 
 
 N:4920:yellow mold
 G:m:y
@@ -85818,7 +85820,7 @@ F:STUPID | EMPTY_MIND |
 F:IM_POIS | DROP_CORPSE | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | RES_SHAR |
 F:MORTAL | BASEANGBAND | NO_CUT
-D:yellow mold from nethack
+D:A stunning mold. 
 
 N:4921:green mold
 G:m:g
@@ -85832,7 +85834,7 @@ F:STUPID | EMPTY_MIND |
 F:IM_ACID | DROP_CORPSE | RES_WALL | RES_GRAV |
 F:NO_CONF | NO_SLEEP | NO_FEAR | RES_SHAR |
 F:MORTAL | BASEANGBAND | NO_CUT
-D:green mold from nethack
+D:An acidic mold. 
 
 N:4922:red mold
 G:m:r
@@ -85846,7 +85848,7 @@ F:STUPID | EMPTY_MIND |
 F:IM_POIS | DROP_CORPSE | IM_FIRE |
 F:NO_CONF | NO_SLEEP | NO_FEAR | RES_SHAR |
 F:MORTAL | BASEANGBAND | NO_CUT
-D:red mold from nethack
+D:A fiery mold. 
 
 N:4923:shrieker
 G:m:v
@@ -85881,7 +85883,7 @@ F:STUPID | EMPTY_MIND |
 F:IM_POIS | DROP_CORPSE | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | RES_SHAR |
 F:MORTAL | BASEANGBAND | NO_CUT
-D:disgusting mold from nethack
+D:A mold that poisons you and sprays acid. 
 
 N:4925:creeping mold
 G:m:b
@@ -85894,7 +85896,7 @@ F:STUPID | EMPTY_MIND |
 F:IM_POIS | DROP_CORPSE | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | RES_SHAR |
 F:MORTAL | BASEANGBAND | NO_CUT
-D:creeping mold from nethack
+D:A mold that can actually move, and it spits acid. 
 
 N:4926:black mold
 G:m:D
@@ -85909,7 +85911,7 @@ F:STUPID | EMPTY_MIND |
 F:IM_POIS | DROP_CORPSE | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | RES_SHAR |
 F:MORTAL | BASEANGBAND | NO_CUT
-D:black mold from nethack
+D:Yet another poisonous, acidic type of mold. 
 
 N:4927:gnome
 G:h:u
@@ -85946,7 +85948,7 @@ B:TOUCH:EAT_ITEM
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
-D:gnome thief from nethack
+D:A gnome who wants to snatch your items. 
 
 N:4929:gnome lord
 G:h:B
@@ -85958,7 +85960,7 @@ B:HIT:HURT:1d8
 F:DROP_60 | MALE |
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
-D:gnome lord from nethack
+D:A more powerful gnome. 
 
 N:4930:gnomish wizard
 G:h:B
@@ -85972,7 +85974,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 S:1_IN_10
 S:CONF | MISSILE | HOLD
-D:gnomish wizard from nethack
+D:An annoying gnome who occasionally casts spells. 
 
 N:4931:deep gnome
 G:h:W
@@ -86009,7 +86011,7 @@ B:HIT:HURT:2d6
 F:DROP_60 | MALE |
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
-D:gnome warrior from nethack
+D:A gnome who hits rather hard. 
 
 N:4933:gnome king
 G:h:v
@@ -86021,7 +86023,7 @@ B:HIT:HURT:2d6
 F:DROP_60 | MALE |
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
-D:gnome king from nethack
+D:A leader of gnomes. 
 
 N:4934:Ruggo the Gnome King
 G:h:v
@@ -86053,7 +86055,7 @@ B:HIT:HURT:3d6
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
-D:gnoll from nethack
+D:Supposedly extinct, this superpowered gnome is somehow still alive. 
 
 N:4936:gnoll shaman
 G:h:y
@@ -86067,7 +86069,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 S:1_IN_5
 S:BLIND | CONF | CAUSE_2 | BLINK | BO_FIRE | TRAPS | DARKNESS |
-D:gnoll shaman from nethack
+D:A super powerful gnome who can cast spells. 
 
 N:4937:gnoll warrior
 G:h:w
@@ -86080,7 +86082,7 @@ B:HIT:HURT:3d6
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
-D:gnoll warrior from nethack
+D:A rather powerful gnome. 
 
 N:4938:gnoll chieftain
 G:h:v
@@ -86093,7 +86095,7 @@ B:HIT:HURT:3d6
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
-D:gnoll chieftain from nethack
+D:A really powerful gnome. 
 
 N:4939:giant
 G:P:r
@@ -86124,7 +86126,7 @@ F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
 F:GIANT | MORTAL | BASEANGBAND |
 S:1_IN_9
 S:ARROW_2
-D:stone giant from nethack
+D:A rather large humanoid. 
 
 N:4941:hill giant shaman
 G:P:B
@@ -86138,7 +86140,7 @@ F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
 F:GIANT | MORTAL | BASEANGBAND |
 S:1_IN_9
 S:ARROW_2 | HOLD | SCARE | CONF | CAUSE_1
-D:hill giant shaman from nethack
+D:A giant who can cast spells. 
 
 N:4942:hill giant
 G:P:b
@@ -86152,7 +86154,7 @@ F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
 F:GIANT | MORTAL | BASEANGBAND |
 S:1_IN_8
 S:ARROW_2
-D:hill giant from nethack
+D:A strong giant. 
 
 N:4943:fire giant
 G:P:y
@@ -86166,7 +86168,7 @@ F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | IM_FIRE |
 F:GIANT | MORTAL | BASEANGBAND | WILD_VOLCANO |
 S:1_IN_8
 S:ARROW_3
-D:fire giant from nethack
+D:A giant who resists fire. 
 
 N:4944:frost giant
 G:P:w
@@ -86180,7 +86182,7 @@ F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | IM_COLD |
 F:GIANT | MORTAL | BASEANGBAND |
 S:1_IN_8
 S:ARROW_3
-D:frost giant from nethack
+D:A giant who resists cold. 
 
 N:4945:ettin
 G:P:u
@@ -86255,7 +86257,7 @@ F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM | IM_ELEC
 F:GIANT | MORTAL | BASEANGBAND | 
 S:1_IN_7
 S:ARROW_4
-D:storm giant from nethack
+D:A giant who resists shock. 
 
 N:4949:the Largest Giant
 G:P:v
@@ -86270,7 +86272,8 @@ F:GIANT | MORTAL | BASEANGBAND | RES_WALL | RES_GRAV | MALE |
 F:UNIQUE | CAN_SPEAK | DROP_GREAT
 S:1_IN_6
 S:ARROW_4
-D:Largest Giant from nethack
+D:This giant is just a little bigger than the other giants, 
+D:and otherwise unremarkable. 
 
 N:4950:Father Dagon
 G:P:g
@@ -86311,7 +86314,7 @@ F:GIANT | MORTAL | BASEANGBAND | RES_DISE | CAN_SWIM | MALE |
 F:UNIQUE | CAN_SPEAK | DROP_GREAT | RES_SHAR |
 S:1_IN_3
 S:ARROW_4
-D:Mother Hydra from nethack
+D:The wife of Father Dagon, and apparently a Lovecraftian being. 
 
 N:4952:jabberwock
 G:H:o
@@ -86357,7 +86360,7 @@ B:CLAW:HURT:3d10
 F:ONLY_GOLD | DROP_60 |
 F:BASH_DOOR | CAN_FLY | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND | 
-D:vorpal jabberwock from nethack
+D:Stronger than the regular jabberwock. 
 
 N:4954:Keystone Kop
 G:t:B
@@ -86418,7 +86421,7 @@ B:HIT:HURT:1d8
 F:MALE | DROP_CORPSE | DROP_SKELETON | DROP_60 | 
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | GOOD |
 F:MORTAL | BASEANGBAND | 
-D:Kop Lieutenant from nethack
+D:A slightly stronger Keystone Kop. 
 
 N:4957:Kop Kaptain
 G:t:b
@@ -86430,7 +86433,8 @@ B:HIT:HURT:2d6
 F:MALE | DROP_CORPSE | DROP_SKELETON | DROP_60 | 
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | GOOD |
 F:MORTAL | BASEANGBAND | 
-D:Kop Kaptain from nethack
+D:Despite his high rank, he's still a Keystone Kop, and we all 
+D:know that Keystone Kops are incompetent. 
 
 N:4958:lich
 G:L:u
@@ -86478,7 +86482,7 @@ F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT | REGENERATE
 S:1_IN_5 | 
 S:HEAL | CAUSE_2 | BO_COLD | CONF | SLOW | TPORT |
 S:HASTE | BO_NETH | DARKNESS | TELE_AWAY |
-D:demilich from nethack
+D:A powerful lich with an array of strong spells. 
 
 N:4960:master lich
 G:L:v
@@ -86495,7 +86499,7 @@ S:1_IN_5 |
 S:HEAL | CAUSE_3 | BA_COLD | CONF | SLOW | TPORT | BA_DARK |
 S:HASTE | BA_NETH | DARKNESS | TELE_AWAY | BLINK | TRAPS |
 S:S_UNDEAD
-D:master lich from nethack
+D:A very dangerous lich who casts lots of spells. 
 
 N:4961:arch-lich
 G:L:v
@@ -86512,7 +86516,7 @@ S:1_IN_4 |
 S:HEAL | CAUSE_4 | BA_COLD | CONF | SLOW | TPORT | BA_DARK |
 S:HASTE | BA_NETH | DARKNESS | TELE_AWAY | BLINK | TRAPS |
 S:S_UNDEAD | S_MONSTER | S_MONSTERS | BO_ICEE | MIND_BLAST | FORGET
-D:arch-lich from nethack
+D:A super powerful lich with all kinds of nasty spells. 
 
 N:4962:mummy
 G:z:w
@@ -86525,7 +86529,7 @@ B:HIT:HURT:1d3
 F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR |
 F:UNDEAD | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM |
-D:mummy from nethack
+D:A shambling type of undead. 
 
 N:4963:kobold mummy
 G:z:u
@@ -86537,7 +86541,7 @@ B:CLAW:HURT:1d4
 F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR |
 F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
-D:kobold mummy from nethack
+D:A kobold in a wrapping. 
 
 N:4964:gnome mummy
 G:z:r
@@ -86549,7 +86553,7 @@ B:CLAW:HURT:1d6
 F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR |
 F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
-D:gnome mummy from nethack
+D:A gnome in a wrapping. 
 
 N:4965:orc mummy
 G:z:W
@@ -86561,7 +86565,7 @@ B:CLAW:HURT:1d6
 F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR |
 F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
-D:orc mummy from nethack
+D:An orc in a wrapping. 
 
 N:4966:dwarf mummy
 G:z:r
@@ -86573,7 +86577,7 @@ B:CLAW:HURT:1d6
 F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR |
 F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
-D:dwarf mummy from nethack
+D:A dwarf in a wrapping. 
 
 N:4967:elf mummy
 G:z:g
@@ -86585,7 +86589,7 @@ B:CLAW:HURT:2d4
 F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR |
 F:UNDEAD | GOOD | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
-D:elf mummy from nethack
+D:An elf in a wrapping. 
 
 N:4968:drow mummy
 G:z:D
@@ -86598,7 +86602,7 @@ B:TOUCH:LOSE_STR:2d4
 F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR |
 F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
-D:drow mummy from nethack
+D:A drow in a wrapping. 
 
 N:4969:human mummy
 G:z:W
@@ -86637,7 +86641,7 @@ B:CLAW:HURT:2d6
 F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR |
 F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
-D:ettin mummy from nethack
+D:A very large mummified humanoid. 
 
 N:4971:ogre mummy
 G:z:y
@@ -86650,7 +86654,7 @@ B:CLAW:HURT:3d3
 F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR |
 F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
-D:ogre mummy from nethack
+D:A mummified ogre. 
 
 N:4972:giant mummy
 G:z:b
@@ -86663,7 +86667,7 @@ B:CLAW:HURT:3d4
 F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR |
 F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | GIANT |
-D:giant mummy from nethack
+D:A mummified giant. 
 
 N:4973:troll mummy
 G:z:u
@@ -86676,7 +86680,7 @@ B:CLAW:HURT:3d4
 F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR | TROLL |
 F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | REGENERATE |
-D:troll mummy from nethack
+D:A mummified troll, at least it won't get up once you destroy it. 
 
 N:4974:red naga hatchling
 G:n:r
@@ -86687,7 +86691,7 @@ O:0:75:20:5
 B:BITE:HURT:1d4
 F:DROP_CORPSE | BASH_DOOR | RES_SHAR | WILD_SHORE |
 F:MORTAL | BASEANGBAND | IM_FIRE | IM_POIS |
-D:red naga hatchling from nethack
+D:A small fire-based naga. 
 
 N:4975:black naga hatchling
 G:n:D
@@ -86699,7 +86703,7 @@ B:BITE:HURT:1d4
 F:DROP_CORPSE | BASH_DOOR | RES_SHAR | WILD_SHORE |
 F:MORTAL | BASEANGBAND | IM_ACID | IM_POIS |
 F:RES_WALL | RES_GRAV |
-D:black naga hatchling from nethack
+D:A small acid-based naga. 
 
 N:4976:golden naga hatchling
 G:n:y
@@ -86710,7 +86714,7 @@ O:0:75:20:5
 B:BITE:HURT:1d4
 F:DROP_CORPSE | BASH_DOOR | RES_SHAR | WILD_SHORE |
 F:MORTAL | BASEANGBAND | IM_POIS |
-D:golden naga hatchling from nethack
+D:A small gold-colored naga. 
 
 N:4977:guardian naga hatchling
 G:n:g
@@ -86721,7 +86725,7 @@ O:0:75:20:5
 B:BITE:HURT:1d4
 F:DROP_CORPSE | BASH_DOOR | RES_SHAR | WILD_SHORE |
 F:MORTAL | BASEANGBAND | IM_POIS |
-D:guardian naga hatchling from nethack
+D:A small green-colored naga. 
 
 N:4978:red naga
 G:n:r
@@ -86734,7 +86738,7 @@ F:DROP_CORPSE | BASH_DOOR | RES_SHAR | HAS_EGG |
 F:MORTAL | BASEANGBAND | IM_FIRE | IM_POIS | WILD_SHORE |
 S:1_IN_6
 S:BR_FIRE
-D:red naga from nethack
+D:A naga who breathes fire. 
 
 N:4979:black naga
 G:n:r
@@ -86747,7 +86751,7 @@ B:SPIT:ACID
 F:DROP_CORPSE | BASH_DOOR | RES_SHAR | HAS_EGG |
 F:MORTAL | BASEANGBAND | IM_ACID | IM_POIS | WILD_SHORE |
 F:RES_WALL | RES_GRAV |
-D:black naga from nethack
+D:A naga who spits acid. 
 
 N:4980:golden naga
 G:n:y
@@ -86760,7 +86764,7 @@ F:DROP_CORPSE | BASH_DOOR | RES_SHAR | HAS_EGG |
 F:MORTAL | BASEANGBAND | IM_POIS | WILD_SHORE |
 S:1_IN_5
 S:ARROW_2 | CAUSE_1 | HEAL | BR_DISE | SLOW | CONF |
-D:golden naga from nethack
+D:A naga who casts various spells. 
 
 N:4981:guardian naga
 G:n:g
@@ -86773,7 +86777,7 @@ B:SPIT:LOSE_STR:1d6
 B:CRUSH:HURT:2d4
 F:DROP_CORPSE | BASH_DOOR | RES_SHAR | HAS_EGG |
 F:MORTAL | BASEANGBAND | IM_POIS | WILD_SHORE |
-D:guardian naga from nethack
+D:A naga whose bite can paralyze. 
 
 N:4982:ogre
 G:O:u
@@ -86814,7 +86818,7 @@ F:DROP_60 | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | MALE |
 F:EVIL | GIANT | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
-D:ogre lord from nethack
+D:A stronger version of the regular ogre. 
 
 N:4984:ogre mage
 G:O:B
@@ -86829,7 +86833,7 @@ F:EVIL | GIANT | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 S:1_IN_7
 S:DRAIN_MANA | HOLD | CONF | BLIND | MISSILE | BO_FIRE
-D:ogre mage from nethack
+D:An ogre who casts spells. 
 
 N:4985:ogre king
 G:O:v
@@ -86842,7 +86846,7 @@ F:DROP_60 | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | MALE |
 F:EVIL | GIANT | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
-D:ogre king from nethack
+D:A very powerful ogre. 
 
 N:4986:shadow ogre
 G:O:D
@@ -86856,7 +86860,7 @@ F:DROP_60 | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | MALE |
 F:EVIL | GIANT | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
-D:shadow ogre from nethack
+D:An ogre whose attack drains your life. 
 
 N:4987:mist ogre
 G:O:b
@@ -86870,7 +86874,7 @@ F:DROP_60 | DROP_CORPSE | HAS_EGG |
 F:OPEN_DOOR | BASH_DOOR | FEMALE |
 F:EVIL | GIANT | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
-D:mist ogre from nethack
+D:An ogress whose attack drains your life and who somehow lays eggs. 
 
 N:4988:gray ooze
 G:j:W
@@ -86883,7 +86887,7 @@ F:STUPID | EMPTY_MIND | COLD_BLOOD |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
 F:RES_CHAO | IM_FIRE | IM_COLD | IM_POIS | IM_ACID | RES_WALL | RES_GRAV |
 F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT
-D:gray ooze from nethack
+D:A slow-moving, oozing thing. 
 
 N:4989:brown pudding
 G:j:u
@@ -86896,7 +86900,7 @@ F:STUPID | EMPTY_MIND | COLD_BLOOD |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
 F:RES_CHAO | IM_ELEC | IM_COLD | IM_POIS | IM_ACID | RES_WALL | RES_GRAV |
 F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT
-D:brown pudding from nethack
+D:An oozing thing that wants to trash your armor. 
 
 N:4990:brown pudding
 G:j:u
@@ -86910,7 +86914,7 @@ F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR |
 F:RES_CHAO | IM_ELEC | IM_COLD | IM_POIS | IM_ACID | RES_WALL | RES_GRAV |
 F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT
 S:MULTIPLY
-D:brown pudding from nethack
+D:An oozing thing that wants to trash your armor. 
 
 N:4991:black pudding
 G:j:D
@@ -86924,7 +86928,7 @@ F:STUPID | EMPTY_MIND | COLD_BLOOD |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
 F:RES_CHAO | IM_ELEC | IM_COLD | IM_POIS | IM_ACID | RES_WALL | RES_GRAV |
 F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT
-D:black pudding from nethack
+D:An acidic oozing thing. Don't even think about farming them, you lamer. 
 
 N:4992:black pudding
 G:j:D
@@ -86939,7 +86943,7 @@ F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR |
 F:RES_CHAO | IM_ELEC | IM_COLD | IM_POIS | IM_ACID | RES_WALL | RES_GRAV |
 F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT
 S:MULTIPLY
-D:black pudding from nethack
+D:An acidic oozing thing. Don't even think about farming them, you lamer. 
 
 N:4993:green slime
 G:j:g
@@ -86953,7 +86957,7 @@ F:STUPID | EMPTY_MIND | COLD_BLOOD |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
 F:IM_ELEC | IM_COLD | IM_POIS | IM_ACID | RES_WALL | RES_GRAV |
 F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT
-D:green slime from nethack
+D:A very icky thing that you want to stay away from. 
 
 N:4994:shoggoth
 G:j:D
@@ -87027,7 +87031,9 @@ F:DROP_90 |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:IM_POIS
 F:MORTAL | BASEANGBAND
-D:genetic engineer from nethack
+D:He tries to polymorph you into an abomination, so beware! Thank 
+D:God that this isn't NetHack or his attack would nuke your armor 
+D:and cloak. Every time. 
 
 N:4998:Doctor Frankenstein
 G:h:v
@@ -87091,7 +87097,7 @@ B:BITE:HURT:1d2
 F:WILD_TOO | WILD_GRASS | RES_SHAR | CAN_SWIM |
 F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND
-D:garter snake from nethack
+D:A harmless snake, it's not even poisonous. 
 
 N:5002:water mocassin
 G:J:r
@@ -87103,7 +87109,8 @@ B:BITE:LOSE_STR:1d6
 F:WILD_TOO | WILD_GRASS | RES_SHAR | CAN_SWIM | IM_POIS |
 F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | WILD_SHORE |
 F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND
-D:water mocassin from nethack
+D:These snakes like to live in fountains and have a 
+D:poisonous bite. 
 
 N:5003:pit viper
 G:J:B
@@ -87138,7 +87145,7 @@ B:CRUSH:HALLU:2d4
 F:WILD_TOO | WILD_GRASS | RES_SHAR | CAN_SWIM | IM_POIS |
 F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND
-D:python from nethack
+D:A rather slow-moving snake. 
 
 N:5005:cobra
 G:J:B
@@ -87225,7 +87232,7 @@ B:BITE:HURT:2d6
 F:DROP_60 | DROP_SKELETON | DROP_CORPSE | IM_COLD |
 F:OPEN_DOOR | BASH_DOOR | SUSCEP_FIRE | REGENERATE | 
 F:EVIL | TROLL | REGENERATE | BASEANGBAND
-D:ice troll from nethack
+D:A troll with assholey cold attacks. 
 
 N:5009:rock troll
 G:T:b
@@ -87239,7 +87246,7 @@ B:BITE:HURT:2d6
 F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
 F:OPEN_DOOR | BASH_DOOR | SUSCEP_FIRE | REGENERATE | 
 F:EVIL | TROLL | REGENERATE | BASEANGBAND
-D:rock troll from nethack
+D:A powerful type of troll. 
 
 N:5010:water troll
 G:T:B
@@ -87253,7 +87260,7 @@ B:BITE:HURT:2d6
 F:DROP_60 | DROP_SKELETON | DROP_CORPSE | CAN_SWIM | WILD_SHORE |
 F:OPEN_DOOR | BASH_DOOR | SUSCEP_FIRE | REGENERATE | 
 F:EVIL | TROLL | REGENERATE | BASEANGBAND
-D:water troll from nethack
+D:A troll who can swim. 
 
 N:5011:Olog-hai
 G:T:v
@@ -87294,7 +87301,7 @@ F:DROP_60 | DROP_SKELETON | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | SUSCEP_FIRE | REGENERATE | 
 F:EVIL | TROLL | REGENERATE | BASEANGBAND |
 F:RES_WALL | RES_GRAV | CAN_SWIM | HAS_EGG |
-D:mist troll from nethack
+D:A rather strong troll who lays eggs. 
 
 N:5013:umber hulk
 G:X:u
@@ -87344,7 +87351,7 @@ F:COLD_BLOOD | DROP_60 |
 F:OPEN_DOOR | BASH_DOOR | REGENERATE | CAN_FLY | MALE |
 F:EVIL | UNDEAD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | 
 F:BASEANGBAND | NO_CUT | TAKE_ITEM |
-D:vampire lord from nethack
+D:A stronger version of the regular vampire. 
 
 N:5016:fire vampire
 G:V:r
@@ -87422,7 +87429,7 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
 S:1_IN_8
 S:CONF | CAUSE_1 | BO_NETH | SLOW
-D:barrow wight from nethack
+D:Some annoying undead with the ability to cast spells. 
 
 N:5020:wight
 G:W:W
@@ -87458,7 +87465,8 @@ F:DROP_60 |
 F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | CAN_FLY | RES_NEXU |
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | RES_GRAV |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT | RES_WALL |
-D:wraith from nethack
+D:It tries to drain your experience, and unlike NetHack, you 
+D:can't just eat its corpse to gain an experience level. 
 
 N:5022:Nazgul
 G:W:v
@@ -87643,7 +87651,7 @@ B:CLAW:HURT:1d4
 F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:kobold zombie from nethack
+D:A kobold that had been zombified. 
 
 N:5031:gnome zombie
 G:z:u
@@ -87655,7 +87663,7 @@ B:CLAW:HURT:1d5
 F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:gnome zombie from nethack
+D:A gnome that had been zombified. 
 
 N:5032:orc zombie
 G:z:W
@@ -87667,7 +87675,7 @@ B:CLAW:HURT:1d6
 F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | ORC |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:orc zombie from nethack
+D:An orc that had been zombified. 
 
 N:5033:dwarf zombie
 G:z:r
@@ -87679,7 +87687,7 @@ B:CLAW:HURT:1d6
 F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:dwarf zombie from nethack
+D:A dwarf that had been zombified. 
 
 N:5034:elf zombie
 G:z:g
@@ -87691,7 +87699,7 @@ B:CLAW:HURT:1d7
 F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
 F:GOOD | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:elf zombie from nethack
+D:An elf that had been zombified. 
 
 N:5035:human zombie
 G:z:w
@@ -87721,7 +87729,7 @@ B:BITE:HURT:1d6
 F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:ghast from nethack
+D:An undead form that can paralyze with its claw. 
 
 N:5037:drow zombie
 G:z:D
@@ -87734,7 +87742,7 @@ B:TOUCH:FIRE:1d6
 F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:drow zombie from nethack
+D:A drow that had been zombified. 
 
 N:5038:ghoul
 G:z:D
@@ -87775,7 +87783,7 @@ B:CLAW:HURT:1d10
 F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:ettin zombie from nethack
+D:A very large zombified humanoid. 
 
 N:5040:ogre zombie
 G:z:y
@@ -87787,7 +87795,7 @@ B:HIT:HURT:3d7
 F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | 
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:ogre zombie from nethack
+D:An ogre that had been zombified. 
 
 N:5041:giant zombie
 G:z:b
@@ -87800,7 +87808,7 @@ B:CLAW:HURT:2d8
 F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | GIANT |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:giant zombie from nethack
+D:A giant that had been zombified. 
 
 N:5042:troll zombie
 G:z:u
@@ -87813,7 +87821,8 @@ B:CLAW:HURT:2d8
 F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
 F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | TROLL |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:troll zombie from nethack
+D:A troll that had been zombified and who will stay dead 
+D:if you destroy it. 
 
 N:5043:skeleton
 G:z:w
@@ -87847,7 +87856,8 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | KILL_WALL |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
 S:1_IN_8
 S:S_UNDEAD | CONF | CAUSE_2 | MISSILE | BO_COLD | SHRIEK
-D:ghoul queen from nethack
+D:A dangerous ghoul with paralysis claw attacks and a variety 
+D:of spells. 
 
 N:5045:gug
 G:z:D
@@ -87877,7 +87887,8 @@ B:HIT:HURT:1d8
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:GOOD | BASEANGBAND | HAS_LITE | KILL_WALL | TAKE_ITEM |
-D:miner from nethack
+D:A fellow with a pick-axe who digs new paths through the 
+D:dungeon. 
 
 N:5047:mugger
 G:h:D
@@ -87889,7 +87900,9 @@ B:HIT:HURT:1d4
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:EVIL | BASEANGBAND | TAKE_ITEM |
-D:mugger from nethack
+D:Somehow, these bastards lack an item-stealing attack, 
+D:but they scoop up items from the ground. If this was 
+D:NetHack, they'd then try to use those items against you. 
 
 N:5048:Woodland-elf
 G:h:g
@@ -87901,7 +87914,7 @@ B:HIT:HURT:2d4
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:GOOD | BASEANGBAND | TAKE_ITEM | NO_SLEEP | WILD_WOOD |
-D:Woodland-elf from nethack
+D:An elf who is at home in the woods. 
 
 N:5049:Green-elf
 G:h:G
@@ -87913,7 +87926,7 @@ B:HIT:HURT:2d4
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:GOOD | BASEANGBAND | TAKE_ITEM | NO_SLEEP | WILD_GRASS |
-D:Green-elf from nethack
+D:An elf who's colored like grass. 
 
 N:5050:gibberling
 G:h:W
@@ -87925,7 +87938,7 @@ B:HIT:HURT:1d8
 F:DROP_60 | FRIENDS |
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:EVIL | BASEANGBAND | TAKE_ITEM | NO_SLEEP |
-D:gibberling from nethack
+D:A humanoid that wails mournfully and appears in large groups. 
 
 N:5051:Grey-elf
 G:h:W
@@ -87937,7 +87950,7 @@ B:HIT:HURT:2d4
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:GOOD | BASEANGBAND | TAKE_ITEM | NO_SLEEP | WILD_MOUNTAIN |
-D:Grey-elf from nethack
+D:A grey-colored elf. 
 
 N:5052:drow
 G:h:D
@@ -87964,7 +87977,7 @@ B:HIT:HURT:2d4
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:GOOD | BASEANGBAND | TAKE_ITEM | NO_SLEEP | MALE |
-D:elf-lord from nethack
+D:A powerful elf. 
 
 N:5054:grimlock
 G:h:D
@@ -87976,7 +87989,7 @@ B:HIT:HURT:1d6
 F:DROP_60 | FRIENDS |
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:EVIL | BASEANGBAND | TAKE_ITEM | NO_SLEEP |
-D:grimlock from nethack
+D:Some unspecified humanoid who appears in large groups. 
 
 N:5055:Elvenking
 G:h:v
@@ -87989,7 +88002,7 @@ B:HIT:HURT:2d4
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:GOOD | BASEANGBAND | TAKE_ITEM | NO_SLEEP | MALE |
-D:Elvenking from nethack
+D:A very powerful elf. 
 
 N:5056:doppelganger
 G:@:w
@@ -88025,7 +88038,7 @@ B:HIT:HURT:1d4
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:GOOD | BASEANGBAND | TAKE_ITEM | NO_SLEEP |
-D:elf from nethack
+D:Just an elf who strolls around the dungeon. 
 
 N:5058:nurse
 G:h:w
@@ -88037,7 +88050,8 @@ B:CLAW:CONFUSE:2d6
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:BASEANGBAND | TAKE_ITEM | IM_POIS |
-D:nurse from nethack
+D:Since healing attacks aren't implemented, these are 
+D:actually just another monster who tries to attack you. 
 
 N:5059:prison guard
 G:h:b
@@ -88050,7 +88064,8 @@ B:HIT:HURT:4d4
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:BASEANGBAND | TAKE_ITEM |
-D:prison guard from nethack
+D:You don't really look like a prisoner, but this guard is 
+D:attacking you anyway. 
 
 N:5060:gypsy
 G:h:w
@@ -88065,7 +88080,7 @@ F:BASEANGBAND | TAKE_ITEM | NEUTRAL |
 S:1_IN_6
 S:CAUSE_3 | FORGET | DRAIN_MANA | HEAL | BA_CHAO | MISSILE | MIND_BLAST |
 S:CONF | SLOW | S_ANIMAL | S_ANIMALS | S_MONSTER | S_MONSTERS |
-D:gypsy from nethack
+D:It is said that attacking a gypsy is bad luck. 
 
 N:5061:shopkeeper
 G:@:w
@@ -88078,7 +88093,7 @@ B:HIT:HURT:4d4
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:BASEANGBAND | TAKE_ITEM | CAN_FLY | NEUTRAL |
-D:shopkeeper from nethack
+D:A rather powerful individual. Attack them at your own peril. 
 
 N:5062:black marketeer
 G:@:D
@@ -88094,7 +88109,8 @@ F:IM_FIRE | IM_COLD | NO_SLEEP | IM_ELEC | RES_WALL | MALE |
 F:RES_GRAV | RES_DISE | PASS_WALL | RES_SHAR | REGENERATE |
 S:1_IN_10
 S:TPORT | TELE_TO | TELE_AWAY | TELE_LEVEL
-D:black marketeer from nethack
+D:Sam (who is definitely male) will mop the floor with you if 
+D:you dare to attack or steal from him. 
 
 N:5063:guard
 G:h:B
@@ -88106,7 +88122,9 @@ B:HIT:HURT:4d10
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:BASEANGBAND | TAKE_ITEM | CAN_FLY | NEUTRAL |
-D:guard from nethack
+D:The annoying Ludios vault guard who thankfully happens 
+D:to be peaceful. Irritate them, though, and they'll 
+D:squash you. 
 
 N:5064:prisoner
 G:h:w
@@ -88200,7 +88218,9 @@ F:IM_FIRE | NO_SLEEP | IM_POIS | RES_DISE |
 S:1_IN_5
 S:HOLD | CONF | SCARE | BLIND | BO_FIRE | S_ANIMAL | S_ANIMALS |
 S:CAUSE_3 | S_MONSTERS | S_UNIQUE | BA_ELEC | BA_WATE | BO_MANA |
-D:high priest from nethack
+D:At least it's not an elder priest. Also, these priests start 
+D:out neutral to you and you'd be well advised to keep it that 
+D:way. You don't want to eat their spell barrages! 
 
 N:5068:soldier
 G:h:W
@@ -88235,7 +88255,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:EVIL | BASEANGBAND | TAKE_ITEM | 
 S:1_IN_5
 S:ARROW_2
-D:sergeant from nethack
+D:A more powerful Yendorian soldier. 
 
 N:5070:lieutenant
 G:h:g
@@ -88249,7 +88269,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:EVIL | BASEANGBAND | TAKE_ITEM | 
 S:1_IN_5
 S:ARROW_3
-D:lieutenant from nethack
+D:A high-ranking Yendorian soldier. 
 
 N:5071:captain
 G:h:B
@@ -88263,7 +88283,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:EVIL | BASEANGBAND | TAKE_ITEM | 
 S:1_IN_4
 S:ARROW_4
-D:captain from nethack
+D:A leader of the Yendorian soldiers. 
 
 N:5072:general
 G:h:R
@@ -88277,7 +88297,8 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:EVIL | BASEANGBAND | TAKE_ITEM | PASS_WALL |
 S:1_IN_4
 S:ARROW_4 | ROCKET | MISSILE |
-D:general from nethack
+D:Armed with a rocket launcher, the Yendorian general will 
+D:blast you to bits. 
 
 N:5073:watchman
 G:@:W
@@ -88289,7 +88310,9 @@ B:HIT:HURT:1d8
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:EVIL | BASEANGBAND | TAKE_ITEM | NEUTRAL | WILD_TOWN |
-D:watchman from nethack
+D:They never help you. Instead, they watch curiously as 
+D:you run around town and will turn hostile if you mess 
+D:with the Minetown fountain. 
 
 N:5074:watch captain
 G:@:g
@@ -88302,7 +88325,10 @@ B:HIT:HURT:3d4
 F:DROP_60 | 
 F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:EVIL | BASEANGBAND | TAKE_ITEM | NEUTRAL | WILD_TOWN |
-D:watch captain from nethack
+D:A menace if you're running a pet-based build in NetHack. 
+D:Here, your pets (if you indeed do have any) probably won't 
+D:attack neutral creatures and are therefore in no danger of 
+D:being killed by a silver saber. 
 
 N:5075:Medusa
 G:@:G
@@ -88402,7 +88428,7 @@ F:CAN_FLY | DROP_60 |
 F:COLD_BLOOD | PASS_WALL | TAKE_ITEM | 
 F:UNDEAD | RES_DISE | RES_WALL | RES_GRAV |
 F:IM_COLD | IM_POIS | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
-D:shadow from nethack
+D:A translucent humanoid who looks just like you. 
 
 N:5080:ghost
 G:G:W
@@ -88454,7 +88480,7 @@ B:CLAW:HURT:1d2
 F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | FORCE_MAXHP | TAKE_ITEM |
 F:IM_POIS | NO_SLEEP |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
-D:straw golem from nethack
+D:A golem made of straw. 
 
 N:5083:paper golem
 G:g:w
@@ -88466,7 +88492,7 @@ B:CLAW:HURT:1d3
 F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | FORCE_MAXHP | TAKE_ITEM |
 F:IM_POIS | NO_SLEEP |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
-D:paper golem from nethack
+D:A golem made of paper. 
 
 N:5084:wax golem
 G:g:W
@@ -88479,7 +88505,7 @@ B:TOUCH:FIRE:1d4
 F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | FORCE_MAXHP | TAKE_ITEM |
 F:IM_POIS | NO_SLEEP |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
-D:wax golem from nethack
+D:A golem who can light you on fire. 
 
 N:5085:plastic golem
 G:g:D
@@ -88492,7 +88518,7 @@ B:CLAW:HURT:1d3
 F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | FORCE_MAXHP | TAKE_ITEM |
 F:IM_POIS | NO_SLEEP |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
-D:plastic golem from nethack
+D:A golem made of plastic. 
 
 N:5086:rope golem
 G:g:u
@@ -88506,7 +88532,7 @@ B:CRUSH:HURT:6d1
 F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | FORCE_MAXHP | TAKE_ITEM |
 F:IM_POIS | NO_SLEEP | RES_CHAO |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
-D:rope golem from nethack
+D:A golem who tries to crush you. 
 
 N:5087:gold golem
 G:g:y
@@ -88541,7 +88567,7 @@ B:CLAW:HURT:1d6
 F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | FORCE_MAXHP | TAKE_ITEM |
 F:IM_POIS | NO_SLEEP | RES_CHAO |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
-D:leather golem from nethack
+D:A golem made of leather. 
 
 N:5089:wood golem
 G:g:u
@@ -88553,7 +88579,7 @@ B:CLAW:HURT:3d4
 F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | FORCE_MAXHP | TAKE_ITEM |
 F:IM_POIS | NO_SLEEP | RES_CHAO | RES_SHAR |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
-D:wood golem from nethack
+D:A golem made of wood. 
 
 N:5090:flesh golem
 G:g:r
@@ -88595,7 +88621,7 @@ B:CLAW:HURT:3d8
 F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | FORCE_MAXHP | TAKE_ITEM |
 F:IM_POIS | NO_SLEEP | RES_WALL | RES_GRAV | RES_SHAR |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
-D:stone golem from nethack
+D:A golem made of stone. 
 
 N:5092:glass golem
 G:g:b
@@ -88608,7 +88634,7 @@ B:CLAW:HURT:2d8
 F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | FORCE_MAXHP | TAKE_ITEM |
 F:IM_POIS | NO_SLEEP | IM_ACID | RES_SHAR |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
-D:glass golem from nethack
+D:A golem made of glass. 
 
 N:5093:iron golem
 G:g:b
@@ -88622,7 +88648,7 @@ F:IM_POIS | NO_SLEEP | IM_FIRE | IM_COLD | IM_ELEC | RES_SHAR |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
 S:1_IN_8
 S:BR_POIS
-D:iron golem from nethack
+D:A golem made of iron. Somehow, it can breathe poison. 
 
 N:5094:Frankenstein's Monster
 G:g:v
@@ -88636,7 +88662,9 @@ F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | FORCE_MAXHP | TAKE_ITEM |
 F:IM_POIS | NO_SLEEP | IM_COLD | IM_ELEC | MALE | UNIQUE |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT | CAN_SPEAK |
 F:DROP_90 | DROP_GOOD | UNDEAD |
-D:Frankenstein's Monster from nethack
+D:The creation of Victor Frankenstein, which sadly failed to 
+D:interact with humans in a meaningful way and therefore decided 
+D:to kill them instead. 
 
 N:5095:ice golem
 G:g:U
@@ -88650,7 +88678,7 @@ F:IM_POIS | NO_SLEEP | IM_COLD | IM_ELEC | RES_SHAR |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
 S:1_IN_6
 S:BR_COLD
-D:ice golem from nethack
+D:A golem made of ice, capable of breathing cold. 
 
 N:5096:ruby golem
 G:g:r
@@ -88664,7 +88692,7 @@ F:IM_POIS | NO_SLEEP | IM_COLD | IM_ELEC | RES_SHAR | IM_FIRE |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
 S:1_IN_6
 S:BR_FIRE
-D:ruby golem from nethack
+D:A golem made of rubies, capable of breathing fire. 
 
 N:5097:diamond golem
 G:g:w
@@ -88678,7 +88706,7 @@ F:IM_POIS | NO_SLEEP | IM_COLD | IM_ELEC | RES_SHAR | IM_FIRE |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT | REFLECTING |
 S:1_IN_6
 S:BR_MANA
-D:diamond golem from nethack
+D:A golem made of diamonds, capable of breathing magical energy. 
 
 N:5098:sapphire golem
 G:g:U
@@ -88692,7 +88720,7 @@ F:IM_POIS | NO_SLEEP | IM_COLD | IM_ELEC | RES_SHAR | IM_FIRE |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT | REFLECTING |
 S:1_IN_6
 S:BR_ELEC
-D:sapphire golem from nethack
+D:A golem made of sapphires, capable of breathing lightning. 
 
 N:5099:steel golem
 G:g:B
@@ -88707,7 +88735,8 @@ F:IM_POIS | NO_SLEEP | IM_COLD | IM_ELEC | RES_SHAR | IM_FIRE |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT | 
 S:1_IN_5
 S:BR_COLD
-D:steel golem from nethack
+D:A golem made of steel, capable of breathing cold and 
+D:disenchanting your gear. 
 
 N:5100:crystal golem
 G:g:B
@@ -88722,7 +88751,8 @@ F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT | REFLECTING |
 S:1_IN_5
 S:BR_TIME | BR_INER | BR_DISE | BR_DISI | BR_CHAO | BR_NEXU | 
 S:BR_MANA | BR_NUKE | BR_WALL | BR_POIS |
-D:crystal golem from nethack
+D:A golem controlled by Chuck Norris, which hits very hard and 
+D:breathes a multitude of elements. 
 
 N:5101:spined devil
 G:U:g
@@ -88738,7 +88768,7 @@ F:GOOD | DEMON | IM_POIS | NO_SLEEP | RES_CHAO | IM_FIRE |
 F:CAN_FLY | RES_SHAR |
 S:1_IN_10 | 
 S:S_DEMON
-D:spined devil from nethack
+D:A rather lowly demon. 
 
 N:5102:horned devil
 G:U:u
@@ -88830,7 +88860,7 @@ F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 F:RES_CHAO |
 S:1_IN_10 | 
 S:S_DEMON
-D:bar-lgura from nethack
+D:A demon who supposedly kidnaps people. 
 
 N:5107:erinys
 G:U:r
@@ -88861,7 +88891,8 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:water demon from nethack
+D:A demon that lives in a fountain and never grants you a wish. 
+D:Instead, he will kill you. 
 
 N:5109:bearded devil
 G:U:D
@@ -88876,7 +88907,8 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:GOOD | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:bearded devil from nethack
+D:A demon who supposedly has a beard. I wonder whether female 
+D:versions are bearded, too? 
 
 N:5110:barbed devil
 G:U:r
@@ -88910,7 +88942,8 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | CAN_FLY |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:chasme from nethack
+D:A very fast demon who can put you to sleep and is therefore 
+D:really dangerous. Hopefully you have free action. 
 
 N:5112:vrock
 G:U:r
@@ -88947,7 +88980,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:babau from nethack
+D:A demon whose gaze can drain your strength. 
 
 N:5114:hezrou
 G:U:r
@@ -89033,7 +89066,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_POIS | IM_FIRE | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:lava demon from nethack
+D:A fiery type of demon. 
 
 N:5119:pit fiend
 G:U:r
@@ -89396,7 +89429,7 @@ B:HIT:HURT:2d8
 F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY |
 F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | IM_FIRE | IM_ELEC |
 F:DEMON | IM_POIS | RES_WALL | RES_GRAV | TAKE_ITEM |
-D:efreeti from nethack
+D:Some lowly demon. 
 
 N:5136:dao
 G:U:u
@@ -89408,7 +89441,7 @@ B:HIT:HURT:2d8
 F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY |
 F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:DEMON | IM_POIS | RES_WALL | RES_GRAV | TAKE_ITEM |
-D:dao from nethack
+D:Another lowly demon. 
 
 N:5137:marid
 G:U:B
@@ -89420,7 +89453,7 @@ B:HIT:HURT:2d8
 F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY |
 F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | IM_COLD |
 F:DEMON | IM_POIS | RES_WALL | RES_GRAV | TAKE_ITEM |
-D:marid from nethack
+D:Supposedly a water-based demon. 
 
 N:5138:sandestin
 G:U:W
@@ -89435,7 +89468,9 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:DEMON | SHAPECHANGER | RES_WALL | RES_GRAV | TAKE_ITEM |
 S:1_IN_10 | 
 S:S_DEMON
-D:sandestin from nethack
+D:There was a long essay about what a sandestin is, but 
+D:I decided to not include it here so let's just say it's 
+D:a demon capable of shifting shape. 
 
 N:5139:jellyfish
 G:~:B
@@ -89689,7 +89724,7 @@ O:0:0:0:0
 B:BITE:HURT:1d3
 F:WILD_GRASS | WILD_TOO | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:gecko from nethack
+D:A small animal. 
 
 N:5153:iguana
 G:R:u
@@ -89700,7 +89735,8 @@ O:0:0:0:0
 B:BITE:HURT:1d4
 F:WILD_GRASS | WILD_WOOD | WILD_TOO | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
-D:iguana from nethack
+D:A tasty animal that you want to eat because you 
+D:certainly ain't no vegetarian. 
 
 N:5154:rhaumbusun
 G:R:v
@@ -89711,7 +89747,7 @@ O:0:0:0:0
 B:GAZE:PARALYZE:1d2
 F:DROP_CORPSE | IM_POIS | RES_SHAR | HAS_EGG |
 F:ANIMAL | MORTAL | BASEANGBAND
-D:rhaumbusun from nethack
+D:This type of lizard can paralyze you with its gaze. 
 
 N:5155:baby crocodile
 G:R:u
@@ -89722,7 +89758,7 @@ O:0:0:0:0
 B:BITE:HURT:1d4
 F:WILD_SHORE | WILD_TOO | DROP_CORPSE | CAN_SWIM |
 F:ANIMAL | MORTAL | BASEANGBAND
-D:baby crocodile from nethack
+D:A smaller version of the crocodile.
 
 N:5156:lizard
 G:R:g
@@ -89883,7 +89919,7 @@ O:0:0:0:0
 B:CHARGE:HURT:4d8
 F:DROP_CORPSE | RES_WALL | RES_GRAV | WILD_TOO | WILD_WOOD |
 F:ANIMAL | MORTAL | BASEANGBAND |
-D:tyrannosaur from nethack
+D:A vicious dinosaur. 
 
 N:5164:bad egg
 G:,:w
@@ -89894,7 +89930,7 @@ O:0:0:0:0
 B:BITE:HURT:1d8
 F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:bad egg from nethack
+D:An egg that became hostile. 
 
 N:5165:killer tomato
 G:,:r
@@ -89905,7 +89941,7 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:killer tomato from nethack
+D:A tomato that wants to bite you. 
 
 N:5166:killer tripe ration
 G:,:u
@@ -89916,7 +89952,8 @@ O:0:0:0:0
 B:BITE:HURT:2d8
 F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:killer tripe ration from nethack
+D:A tripe ration that has somehow become sentient and 
+D:is trying to eat you. 
 
 N:5167:ravenous cream pie
 G:,:w
@@ -89927,7 +89964,8 @@ O:0:0:0:0
 B:BITE:HURT:1d6
 F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:ravenous cream pie from nethack
+D:A cream pie that attacks you and somehow doesn't have 
+D:a blindness attack. 
 
 N:5168:killer food ration
 G:,:u
@@ -89938,7 +89976,7 @@ O:0:0:0:0
 B:BITE:HURT:2d10
 F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
-D:killer food ration from nethack
+D:A food ration that doesn't want to be eaten. 
 
 N:5169:pile of killer coins
 G:$:y
@@ -89950,7 +89988,7 @@ B:BITE:HURT:2d6
 F:ONLY_GOLD | DROP_60 | 
 F:COLD_BLOOD | BASH_DOOR | RES_SHAR | EMPTY_MIND |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
-D:pile of killer coins from nethack
+D:A pile of sentient coins. 
 
 N:5170:large pile of killer coins
 G:$:y
@@ -89962,7 +90000,7 @@ B:BITE:HURT:3d6
 F:ONLY_GOLD | DROP_60 | 
 F:COLD_BLOOD | BASH_DOOR | RES_SHAR | EMPTY_MIND |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
-D:large pile of killer coins from nethack
+D:A large pile of sentient coins. 
 
 N:5171:huge pile of killer coins
 G:$:y
@@ -89974,7 +90012,7 @@ B:BITE:HURT:4d6
 F:ONLY_GOLD | DROP_60 | 
 F:COLD_BLOOD | BASH_DOOR | RES_SHAR | EMPTY_MIND |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
-D:huge pile of killer coins from nethack
+D:A huge pile of sentient coins. 
 
 N:5172:Nightmare
 G:q:r
@@ -89990,7 +90028,13 @@ F:ANIMAL | IM_POIS | GOOD |
 F:MORTAL | BASEANGBAND | FEMALE | 
 F:DROP_SKELETON | DROP_CORPSE | 
 F:IM_FIRE | IM_COLD | IM_ELEC | RES_WALL | RES_GRAV |
-D:Nightmare from nethack
+D:Time seemed to stand still as Nightmare let out a 
+D:bloodcurdling scream, its eyes ablaze with agony. The 
+D:beast thrashed wildly, but Corina stood firm, refusing 
+D:to be swayed by the chaos. She channeled her inner strength, 
+D:delivering one final blow — a decisive strike that shattered 
+D:the demon horse's skull and banished it from existence.
+D:[ Corina's Triumph, by ChatGPT ]
 
 N:5173:Beholder
 G:e:W
@@ -90027,7 +90071,11 @@ S:HEAL | CAUSE_4 | BA_COLD | CONF | SLOW | TPORT | BA_DARK |
 S:HASTE | BA_NETH | DARKNESS | TELE_AWAY | BLINK | TRAPS |
 S:S_UNDEAD | S_MONSTER | S_MONSTERS | BO_ICEE | MIND_BLAST | FORGET |
 S:S_HI_UNDEAD | BRAIN_SMASH | BO_MANA | BA_WATE | HASTE | TELE_AWAY |
-D:Vecna from nethack
+D:The Emperor of the liches, whose name is supposedly an anagram 
+D:of "Vance". He requires a +5 weapon to hit... or he would, but 
+D:this isn't NetHack ;) Still, he has a full suite of nasty spells 
+D:and will make your life miserable unless you can put him down 
+D:quickly! 
 
 N:5175:Farting girl
 G:t:w
