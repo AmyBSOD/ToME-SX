@@ -91672,6 +91672,761 @@ D:which it can track with its keen sense of smell and doglike
 D:intelligence.  Life burns brightly within the troll, which 
 D:can recover from a mortal wound within minutes.  A troll fears fire. 
 
+N:5275:tunnel wight
+G:W:g
+I:110:8d9:20:11:30
+W:7:1:0:26
+E:0:0:0:0:0:0
+O:0:50:50:0
+B:HIT:EXP_10
+B:CLAW:HURT:3d4
+F:DROP_60 | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+S:1_IN_8
+S:CONF | CAUSE_1 | BO_NETH | SLOW | HASTE | HEAL | 
+D:Originally supposed to be weaker than the barrow wight but the 
+D:opposite happens to be the case. 
+
+N:5276:pale wraith
+G:W:W
+I:110:4d18:20:18:30
+W:8:1:0:31
+E:0:0:0:0:0:0
+O:0:50:50:0
+B:TOUCH:LOSE_INT:1d6
+F:DROP_60 | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | CAN_FLY | RES_NEXU |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | RES_GRAV |
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT | RES_WALL |
+D:Wraiths are disembodied evil spirits, released from Hela's realm to 
+D:plague the living.  They roam the night hours, seeking pain and 
+D:suffering among mankind, on which they can feed.  If none can be 
+D:found, they will drain the magical powers of men they encounter, 
+D:or if that fails as well, drain the intelligence from their minds! 
+
+N:5277:dark wraith
+G:W:u
+I:110:6d24:20:19:30
+W:14:1:0:60
+E:0:0:0:0:0:0
+O:0:50:50:0
+B:TOUCH:LOSE_INT:1d6
+B:TOUCH:LOSE_INT:1d6
+F:DROP_60 | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | CAN_FLY | RES_NEXU |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | RES_GRAV |
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT | RES_WALL |
+D:A dark-hued wraith that wants to drain your intelligence. 
+
+N:5278:abyss wraith
+G:W:o
+I:110:8d31:20:23:30
+W:20:1:0:110
+E:0:0:0:0:0:0
+O:0:50:50:0
+B:TOUCH:LOSE_INT:1d6
+B:TOUCH:LOSE_INT:1d6
+B:TOUCH:LOSE_INT:1d6
+F:DROP_60 | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | CAN_FLY | RES_NEXU |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | RES_GRAV |
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT | RES_WALL |
+D:A powerful wraith that sucks out its foes' intelligence. 
+
+N:5279:castle wight
+G:W:G
+I:110:15d22:20:28:30
+W:16:1:0:100
+E:0:0:0:0:0:0
+O:0:50:50:0
+B:HIT:EXP_20
+B:CLAW:LOSE_STR:3d12
+B:CLAW:LOSE_DEX:3d12
+B:CLAW:LOSE_CON:3d12
+F:DROP_60 | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+S:1_IN_6
+S:CONF | CAUSE_2 | BO_NETH | SLOW | HASTE | HEAL | 
+S:SCARE | DARKNESS | 
+D:A wight who is at home in the castle. His attacks will quickly 
+D:drain your life and stats, so beware. 
+
+N:5280:grave wight
+G:W:B
+I:110:19d40:20:28:30
+W:30:3:0:400
+E:0:0:0:0:0:0
+O:0:50:50:0
+B:HIT:EXP_40:2d7
+B:HIT:EXP_40:4d20
+F:DROP_60 | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+S:1_IN_6
+S:CONF | CAUSE_3 | BA_NETH | SLOW | HASTE | HEAL | 
+S:SCARE | DARKNESS | FORGET | TRAPS |
+D:A wight who has risen from the grave, and is now back 
+D:to undead life just to haunt you. 
+
+N:5281:crypt wight
+G:W:r
+I:125:30d90:20:120:30
+W:61:5:0:16000
+E:0:0:0:0:0:0
+O:0:50:50:0
+B:HIT:EXP_80:1d1
+B:HIT:LOSE_STR:3d55
+B:HIT:LOSE_DEX:3d55
+B:HIT:LOSE_CON:3d55
+F:DROP_60 | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT |
+F:RES_CHAO | RES_DISE | IM_ACID | RES_NETH | RES_DARK |
+S:1_IN_5
+S:CONF | CAUSE_4 | BA_NETH | SLOW | HASTE | HEAL | 
+S:SCARE | DARKNESS | FORGET | TRAPS | BO_MANA | BA_DARK |
+S:S_HI_UNDEAD | HOLD | TPORT | TELE_AWAY | 
+D:This wight hits like a truck and also sucks out your 
+D:life force very quickly. Beware his spells, too. 
+
+N:5282:walking corpse
+G:z:B
+I:108:4d9:20:13:30
+W:8:1:750:14
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:HURT:3d6
+F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A freshly dead corpse, if not properly buried, may be taken 
+D:by an evil wizard or priest to create a walking corpse. 
+D:While slower than a skeleton, due to the rotting flesh that 
+D:still clings to the bones, a walking corpse is harder to 
+D:kill than a skeleton, for the flesh also provides some 
+D:protection.  Like a skeleton, a walking corpse has no memory 
+D:of its former life, and exists only to destroy whatever it finds. 
+
+N:5283:putrid zombie
+G:z:G
+I:108:4d9:20:13:30
+W:8:1:750:15
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:POISON:3d6
+F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A corpse whose bodily juices have degenerated to a point 
+D:where they've become rather poisonous and unhealthy. 
+D:Getting clawed by this animated corpse will surely cause 
+D:the poison to be injected into your veins. 
+
+N:5284:bandit
+G:h:D
+I:110:4d9:20:0:20
+W:4:1:1200:12
+E:1:1:1:2:1:1
+O:20:20:50:10
+B:HIT:HURT:1d8
+B:TOUCH:EAT_GOLD
+F:DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | BASEANGBAND | TAKE_ITEM | WILD_GRASS | WILD_WOOD | 
+S:1_IN_4
+S:ARROW_1
+D:This dude steals your gold, and also fires at you with an 
+D:unlimited supply of arrows. 
+
+N:5285:smirking sneak thief
+G:h:B
+I:110:6d12:20:0:20
+W:8:1:1200:20
+E:1:1:1:2:1:1
+O:20:20:50:10
+B:HIT:HURT:2d4
+B:TOUCH:EAT_ITEM
+F:DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | BASEANGBAND | TAKE_ITEM | WILD_GRASS |
+D:As long as men have coveted the possessions of their fellows, 
+D:there have been thieves in the world, and many a man or women 
+D:has been turned to evil through Loki's temptation.  Beware 
+D:these ruthless ones, for despite the smirk, they often show 
+D:the world they will rob you of your possessions and vanish 
+D:before your eyes! 
+
+N:5286:wizard
+G:h:B
+I:110:6d13:20:0:20
+W:10:1:1200:50
+E:1:1:1:2:1:1
+O:20:20:50:10
+B:HIT:HURT:1d10
+F:DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | BASEANGBAND | TAKE_ITEM | REGENERATE | MALE | 
+S:1_IN_6
+S:BLINK | TPORT | SLOW | HEAL | BO_FIRE | BO_ELEC | BO_COLD | 
+S:S_MONSTER | 
+D:Mankind's curiosity is one of our greatest assets, but also 
+D:one of our greatest weaknesses.  Many have undertaken to 
+D:explore the mysterious realm of power that surround our world, 
+D:and not all have been wise or good men.  Creatures such as 
+D:manticores and carrion creepers, living statues and walking 
+D:corpses, the results of their foul experiments, have become 
+D:nightmares to the rest of us.  Beware should you encounter 
+D:any of these men or women, for they wield mighty magics with 
+D:which to oppose you.
+
+N:5287:necromancer
+G:h:D
+I:112:8d18:20:10:20
+W:15:1:1200:180
+E:1:1:1:2:1:1
+O:20:20:50:10
+B:HIT:HURT:1d12
+F:DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | BASEANGBAND | TAKE_ITEM | REGENERATE | MALE | 
+S:1_IN_6
+S:BLINK | TPORT | SLOW | HEAL | BO_FIRE | BO_ELEC | BO_COLD | 
+S:S_MONSTER | S_UNDEAD | 
+D:Be especially careful of the dreaded Necromancers, who can 
+D:summon undead from the nether regions to their aid. 
+
+N:5288:eerie ghost
+G:G:W
+I:110:18d10:8:60:10
+W:18:1:0:140
+E:0:0:0:0:0:0
+O:50:5:30:10
+B:TOUCH:LOSE_STR:4d4
+B:TOUCH:LOSE_DEX:4d4
+F:CAN_FLY | DROP_60 | 
+F:COLD_BLOOD | PASS_WALL | TAKE_ITEM | 
+F:UNDEAD | RES_DISE | RES_WALL | RES_GRAV | RES_NEXU |
+F:IM_COLD | IM_POIS | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+D:Ghosts are the remains of people who died in great pain of some 
+D:sort, not understanding why they suffered.  Their anguish lives 
+D:on as a ghost, which feeds on the pain and fear of the living. 
+D:The sight of a ghost is enough to strike fear into the heart of 
+D:those who face it, and the attack of a ghost is so terrifying as 
+D:to drain the strength and dexterity of the victim.  Ghosts have 
+D:no body, and so are difficult to see and very difficult to hit 
+D:with normal weapons.  They also have the ability to pass through 
+D:anything, so doors and even rock are no use in stopping their attacks. 
+
+N:5289:spectre
+G:G:w
+I:110:9d28:8:80:10
+W:22:2:0:400
+E:0:0:0:0:0:0
+O:50:5:30:10
+B:TOUCH:HURT:2d16
+B:TOUCH:COLD:3d4
+F:CAN_FLY | DROP_60 | NO_FEAR | 
+F:COLD_BLOOD | PASS_WALL | TAKE_ITEM | 
+F:UNDEAD | RES_DISE | RES_WALL | RES_GRAV | 
+F:IM_COLD | IM_POIS | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+D:These creatures, of varying strength, are the incorporeal remains 
+D:of evil humans cursed to walk the earth for a time beyond death, 
+D:until some condition is fulfilled.  Humans of great evil will 
+D:become shades instead of shadows, and the greatest will become 
+D:spectres.  These creatures aren't especially strong or smart, but 
+D:they remember being alive and have a strong hatred for those who 
+D:still are.  In battle they will typically animate some weapon, 
+D:since they are intangible themselves.  While this weapon is real 
+D:and can be blocked, the creatures themselves are difficult to 
+D:destroy with mortal weapons. 
+
+N:5290:huge lizard
+G:R:G
+I:105:10d8:8:17:30
+W:10:1:500:20
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+B:BITE:HURT:1d13
+F:WILD_WASTE | WILD_TOO | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND | RES_WALL | RES_GRAV |
+D:Like the scorpions in the castle, this creature started 
+D:out as a part of the High Wizard's animal collection, 
+D:and has since adapted to life in the caves beneath the 
+D:castle. These large saurians live underground to escape 
+D:the cold above. When not mating, these lizards are solitary, 
+D:prowling their territory in search of food. They are slow 
+D:moving, but their scaly hide provides armor against most 
+D:attacks, and their bite can do much damage. 
+
+N:5291:animated wooden statue
+G:g:u
+I:107:6d12:12:15:10
+W:8:1:3200:40
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CRUSH:HURT:2d10
+F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | TAKE_ITEM | 
+F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | IM_ELEC | RES_SHAR |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A wooden statue that is alive and wants to kill you. 
+
+N:5292:animated bronze statue
+G:g:g
+I:107:8d14:12:19:10
+W:12:1:3200:65
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CRUSH:HURT:2d16
+F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | TAKE_ITEM | 
+F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | IM_FIRE | RES_SHAR |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A bronze statue that is alive and wants to kill you. 
+
+N:5293:animated iron statue
+G:g:W
+I:107:10d17:12:23:10
+W:16:1:3200:120
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CRUSH:HURT:3d13
+F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | TAKE_ITEM | 
+F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | RES_SHAR |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:An iron statue that is alive and wants to kill you. 
+
+N:5294:animated marble statue
+G:g:D
+I:107:12d24:12:33:10
+W:22:1:3200:220
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CRUSH:HURT:3d18
+F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | TAKE_ITEM | 
+F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | IM_FIRE | IM_ELEC | RES_SHAR |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A marble statue that is alive and wants to kill you. 
+
+N:5295:animated copper statue
+G:g:v
+I:107:13d28:12:44:10
+W:25:2:3200:450
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CRUSH:HURT:3d21
+F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | TAKE_ITEM | 
+F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | IM_FIRE | IM_ACID | RES_SHAR |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A copper statue that is alive and wants to kill you. 
+
+N:5296:animated silver statue
+G:g:U
+I:107:15d34:12:60:10
+W:30:3:3200:700
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CRUSH:HURT:3d24
+F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | TAKE_ITEM | 
+F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | IM_FIRE | IM_ACID | RES_SHAR |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A silver statue that is alive and wants to kill you. 
+
+N:5297:animated golden statue
+G:g:y
+I:107:18d44:12:70:10
+W:35:4:3200:1500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CRUSH:HURT:3d28
+F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | TAKE_ITEM | 
+F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | IM_FIRE | IM_ACID | RES_SHAR |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A golden statue that is alive and wants to kill you. 
+
+N:5298:animated platinum statue
+G:g:W
+I:107:20d55:12:86:10
+W:40:5:3200:2400
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CRUSH:HURT:3d34
+F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | TAKE_ITEM | 
+F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | IM_FIRE | IM_ACID | IM_ELEC | RES_SHAR |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A platinum statue that is alive and wants to kill you. 
+
+N:5299:horned devil
+G:U:u
+I:110:5d14:25:33:80
+W:6:1:0:16
+E:1:1:1:2:1:1
+O:20:40:20:20
+B:HIT:HURT:1d4
+F:DROP_60 | NONLIVING | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | 
+F:GOOD | DEMON | IM_POIS | IM_FIRE | RES_SHAR |
+S:1_IN_10 | 
+S:S_DEMON | BO_FIRE
+D:Horned devils are the errand runners of Surtur's realm. 
+D:To them falls the task of spreading evil among mankind, and 
+D:delivering orders to the legions of devils and giants that do 
+D:his bidding.  Horned devils are much larger than man sized, 
+D:with great bat-like wings and large, curved horns.  While not 
+D:as equipped with weaponry as the spiked devils, horned devils 
+D:are harder to hit and have some magic powers as well.  In 
+D:battle they can summon gouts of fire to burn their opponents, 
+D:and have the power to gate in other horned devils to aid them. 
+
+N:5300:spiked devil
+G:U:y
+I:116:6d16:25:20:80
+W:8:1:0:23
+E:1:1:1:2:1:1
+O:20:40:20:20
+B:HIT:HURT:1d8
+B:CLAW:HURT:1d6
+F:DROP_60 | NONLIVING | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | CAN_FLY | 
+F:GOOD | DEMON | IM_POIS | IM_FIRE | RES_SHAR | RES_CHAO | 
+S:1_IN_10 | 
+S:S_DEMON
+D:Spiked devils are the least powerful of those commonly encountered, 
+D:but they are fearsome opponents none the less.  They use no weapons, 
+D:for their natural armament is more than sufficient. Their bodies are 
+D:covered with a tough scaly hide and vicious spikes protruding from 
+D:all the joints.  They are also equipped with a spiked tail, with 
+D:which they can lash their enemies in battle. 
+
+N:5301:ice devil
+G:U:w
+I:108:8d20:25:17:80
+W:11:1:0:40
+E:1:1:1:2:1:1
+O:20:40:20:20
+B:CRUSH:HURT:1d6
+B:CLAW:HURT:1d6
+F:DROP_60 | NONLIVING | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | 
+F:EVIL | DEMON | IM_POIS | IM_COLD | NO_SLEEP | 
+S:1_IN_10 | 
+S:S_DEMON | BO_COLD |
+D:Ice devils are creatures of chill Niflheim, sent to Midgard to spread 
+D:fear in the cold wastes of the North.  They have the ability to summon 
+D:blasts of cold and ice in battle, which makes them deadly in battle. 
+D:While totally immune to the deepest cold, they are affected by fire, 
+D:unlike most of the spawn of Muspelheim. 
+
+N:5302:abyss fiend
+G:U:D
+I:106:10d30:25:30:80
+W:15:1:0:200
+E:1:1:1:2:1:1
+O:20:40:20:20
+B:HIT:HURT:4d2
+B:HIT:HURT:4d2
+B:CRUSH:HURT:2d4
+F:DROP_60 | NONLIVING | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | 
+F:EVIL | DEMON | IM_POIS | IM_FIRE | IM_COLD | NO_SLEEP | 
+F:RES_WALL | RES_GRAV | 
+S:1_IN_10 | 
+S:S_DEMON | BO_FIRE |
+D:Abyss fiends are the greatest of the devils, with the exception 
+D:of Surtur himself.  They are his lieutenants and guards, trusted 
+D:with all the most crucial tasks.  Abyss fiends have great 
+D:strength and are immune to many attacks.  Like horned devils 
+D:they have the ability to summon fire at will, and can gate in 
+D:other devils to aid them.
+
+N:5303:dust devil
+G:U:u
+I:113:14d45:25:45:80
+W:30:2:0:1500
+E:1:1:1:2:1:1
+O:20:40:20:20
+B:HIT:HURT:4d10
+F:DROP_60 | NONLIVING | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | CAN_FLY |
+F:EVIL | DEMON | IM_POIS | RES_CHAO | IM_COLD | 
+F:RES_SHAR | RES_NEXU | 
+S:1_IN_10 | 
+S:S_DEMON |
+D:A devil conceived by Amy, he's dust-themed and doesn't 
+D:have any really special abilities. 
+
+N:5304:stone devil
+G:U:D
+I:109:18d60:25:100:80
+W:33:3:0:1800
+E:1:1:1:2:1:1
+O:20:40:20:20
+B:HIT:HURT:3d13
+F:DROP_60 | NONLIVING | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | CAN_FLY |
+F:EVIL | DEMON | IM_POIS | RES_CHAO | IM_FIRE | 
+F:RES_SHAR | RES_GRAV | RES_WALL | IM_ELEC | 
+S:1_IN_10 | 
+S:S_DEMON |
+D:A devil conceived by Amy, he's rock solid and hard to kill. 
+
+N:5305:earth devil
+G:U:u
+I:107:19d64:25:108:80
+W:36:3:0:2000
+E:1:1:1:2:1:1
+O:20:40:20:20
+B:HIT:HURT:2d31
+F:DROP_60 | NONLIVING | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | 
+F:EVIL | DEMON | IM_POIS | RES_CHAO | KILL_WALL |
+F:RES_SHAR | 
+S:1_IN_10 | 
+S:S_DEMON |
+D:A devil conceived by Amy, he's quite tough and will tunnel through 
+D:solid rock in an attempt to catch you. 
+
+N:5306:poison devil
+G:U:g
+I:120:20d60:25:45:80
+W:41:3:0:2400
+E:1:1:1:2:1:1
+O:20:40:20:20
+B:HIT:POISON:3d11
+F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | 
+F:EVIL | DEMON | IM_POIS | RES_CHAO | IM_COLD | 
+F:RES_SHAR | 
+S:1_IN_10 | 
+S:S_DEMON | BR_POIS | 
+D:A devil conceived by Amy, he uses poison in an attempt to defeat you. 
+
+N:5307:yellow devil
+G:U:y
+I:115:22d66:25:80:80
+W:47:4:0:3000
+E:1:1:1:2:1:1
+O:20:40:20:20
+B:HIT:HURT:5d15
+F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | 
+F:EVIL | DEMON | IM_POIS | RES_CHAO | IM_COLD | 
+F:RES_SHAR | RES_NETH | IM_ACID | 
+S:1_IN_10 | 
+S:S_DEMON | 
+D:A devil conceived by Amy, this one is colored yellow. 
+
+N:5308:blue devil
+G:U:B
+I:113:23d75:25:94:80
+W:53:4:0:4400
+E:1:1:1:2:1:1
+O:20:40:20:20
+B:HIT:HURT:3d12
+F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | 
+F:EVIL | DEMON | IM_ELEC | RES_CHAO | IM_COLD | IM_FIRE |
+F:RES_SHAR | 
+S:1_IN_10 | 
+S:S_DEMON | 
+D:A devil conceived by Amy, this one is colored blue. 
+
+N:5309:gray devil
+G:U:W
+I:118:25d84:25:100:80
+W:60:4:0:5000
+E:1:1:1:2:1:1
+O:20:40:20:20
+B:HIT:EAT_ITEM:1d37
+F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | 
+F:EVIL | DEMON | IM_ELEC | RES_CHAO | IM_COLD | IM_FIRE |
+F:RES_SHAR | 
+S:1_IN_10 | 
+S:S_DEMON | BR_DISE
+D:A devil conceived by Amy, this one is colored gray. 
+
+N:5310:red devil
+G:U:r
+I:114:28d90:25:106:80
+W:66:4:0:6000
+E:1:1:1:2:1:1
+O:20:40:20:20
+B:HIT:HURT:1d37
+F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | 
+F:EVIL | DEMON | IM_ELEC | RES_CHAO | IM_COLD | IM_FIRE |
+F:RES_SHAR | 
+S:1_IN_10 | 
+S:S_DEMON | BR_FIRE
+D:A devil conceived by Amy, this one is colored red. 
+
+N:5311:green devil
+G:U:g
+I:120:40d120:25:50:80
+W:83:4:0:9000
+E:1:1:1:2:1:1
+O:20:40:20:20
+B:HIT:HURT:4d20
+F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | 
+F:EVIL | DEMON | IM_ELEC | RES_CHAO | IM_COLD | IM_FIRE | IM_POIS | 
+F:RES_SHAR | 
+S:1_IN_10 | 
+S:S_DEMON | BR_FIRE
+D:A devil conceived by Amy, this one is colored green. 
+
+N:5312:black devil
+G:U:D
+I:122:42d125:25:56:80
+W:90:4:0:10000
+E:1:1:1:2:1:1
+O:20:40:20:20
+B:HIT:EAT_ITEM:5d20
+B:CRUSH:EAT_ITEM:8d12
+F:DROP_60 | NONLIVING | BASEANGBAND | CAN_FLY | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | 
+F:EVIL | DEMON | IM_ELEC | RES_CHAO | IM_COLD | IM_FIRE | IM_POIS | 
+F:RES_SHAR | RES_DISE | 
+S:1_IN_10 | 
+S:S_DEMON | BR_DISI
+D:A devil conceived by Amy, this one is colored black. 
+
+N:5313:The Demon Lord Surtur
+G:U:o
+I:119:50d120:250:60:50
+W:54:50:0:60000
+E:1:1:1:2:1:1
+O:20:40:20:20
+B:HIT:HURT:8d10
+F:DROP_32 | NONLIVING | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | 
+F:EVIL | DEMON | RES_CHAO | IM_COLD | IM_FIRE | IM_POIS | 
+F:RES_WALL | RES_GRAV | NO_SLEEP | RES_DISE | RES_NETH | 
+F:RES_DARK | RES_PLAS | RES_NEXU | NO_FEAR | NO_STUN | 
+F:RES_SHAR | NO_THEFT | REGENERATE | 
+F:MALE | UNIQUE | CAN_SPEAK | DROP_GREAT | DROP_RANDART | 
+S:1_IN_4 | 
+S:S_DEMON | S_HI_DEMON | BA_ELEC | BA_FIRE | BR_WALL | 
+D:As you attack Surtur for the first time, you see him 
+D:pause a moment, amazed that a mortal would strike a 
+D:god.  Then his eyes open wide, as he realizes who it 
+D:is that has attacked him.  He roars in fury, and says 
+D:"What!  I thought my minions had taken care of you already! 
+D:No matter.  I will deal with you as easily as I dealt with 
+D:your father and grandfather before you!  While I have not yet 
+D:mastered the full powers of the helm, I still have the legions 
+D:of Muspelheim and Niflheim at my command! Come forth, my 
+D:servants, and let this mortal have a taste of fire and ice!" 
+D:You see Surtur make a commanding gesture with his hands, and 
+D:a gate opens beside him. 
+
+N:5314:blowstream baby
+G:g:o
+I:108:30d50:50:60:80
+W:30:10:500:6000
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:FARTQUIET:UN_BONUS:6d10
+F:DROP_CORPSE | IM_FIRE | IM_COLD | IM_ELEC | NO_SLEEP | IM_POIS | 
+F:RES_WALL | RES_GRAV | RES_INER | RES_TELE | RES_NETH | RES_WATE |
+F:RES_PLAS | RES_NEXU | RES_DISE | NO_STUN | NO_CONF | NO_CUT | 
+F:RES_TIME | RES_LITE | RES_SOUN | RES_CHAO | RES_DARK | RES_SHAR | 
+F:BASEANGBAND | FEMALE | AI_ANNOY | ELDRITCH_HORROR | WEIRD_MIND | 
+S:1_IN_6
+S:BR_DISE | BR_SHAR | BR_DISI | BR_WALL | BR_NUKE | BR_TIME | 
+D:This creature constantly blows a stream of weaponized farting gas 
+D:in your direction, and also looks indescribably ugly. Merely seeing 
+D:it can be enough to cause a human to go insane. 
+
+N:5315:Floating vagina
+G:`:u
+I:110:10d40:90:30:100
+W:20:3:500:500
+E:1:0:1:1:1:0
+O:0:0:0:0
+B:SPORE:ABOMINATION:8d8
+F:RES_DISE | IM_POIS | IM_ACID | ELDRITCH_HORROR |
+F:CAN_FLY | BASEANGBAND | RES_WATE | NO_STUN | RES_INER | RES_WALL | 
+F:RES_GRAV | STUPID | WEIRD_MIND | 
+S:1_IN_5
+S:BR_ACID | BR_POIS
+D:Ugh! You wish you hadn't seen this entity. 
+
+N:5316:trilobite
+G:a:W
+I:110:2d8:10:13:10
+W:3:1:100:5
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+F:DROP_SKELETON | HAS_EGG | 
+F:ANIMAL | 
+F:MORTAL | BASEANGBAND
+D:A fossil that has been brought back to life. 
+
+N:5317:hellwasp
+G:I:r
+I:120:5d14:12:54:10
+W:15:3:50:60
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:STING:LOSE_STR:1d8
+B:STING:HURT:3d6
+F:FRIEND | CAN_FLY | WILD_VOLCANO | 
+F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | FEMALE | 
+D:This bloodthirsty insect wants to sting you to death. 
+
+N:5318:shoggoth blob
+G:j:G
+I:115:12d25:12:0:1
+W:20:4:2000:400
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:ACID:1d12
+B:TOUCH:ACID:2d12
+B:TOUCH:TERRIFY:1d12
+B:CRUSH:EAT_ITEM:2d12
+F:STUPID | EMPTY_MIND | COLD_BLOOD | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:IM_ELEC | IM_COLD | IM_POIS | IM_ACID | RES_WALL | RES_GRAV |
+F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT | 
+S:1_IN_7
+S:BO_ACID | BA_ACID | BR_ACID | BR_MANA | 
+D:A blob in the form of a shoggoth, which showers you with acid but 
+D:also uses a vacuum cleaner to suck off your equipment! Ack! 
+
+N:5319:yora chick
+G:B:r
+I:115:2d10:30:30:10
+W:7:2:1000:19
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:HURT:2d4
+B:GAZE:FIRE:1d6
+F:BASEANGBAND | IM_POIS | IM_FIRE | 
+F:ANIMAL | HAS_EGG | 
+F:DROP_SKELETON | DROP_CORPSE |   
+D:A very annoying bird who puts you on fire. 
+
+N:5320:yora hawk
+G:B:r
+I:118:4d35:30:30:10
+W:14:3:1500:50
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:POISON:4d4
+B:GAZE:FIRE:4d6
+F:BASEANGBAND | IM_POIS | IM_FIRE | 
+F:ANIMAL | HAS_EGG | 
+F:DROP_SKELETON | DROP_CORPSE |   
+D:A dangerous bird who has both fire and poison attacks. 
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness (low = more alert)
