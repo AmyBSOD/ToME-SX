@@ -3248,7 +3248,7 @@ D:Your item stacks seem smaller!
 F:FLOOR | CHEST | DOOR
 
 N:661:Trap of Trashing Wands
-I:20:100:40:4:30:0d0:y
+I:20:40:40:4:30:0d0:y
 D:Your wands seem different...
 F:FLOOR | CHEST | DOOR
 
@@ -3323,7 +3323,7 @@ D:Your possessions seem to lose their value!
 F:FLOOR | CHEST | DOOR
 
 N:676:Trap of No Value
-I:2:10:10:25:100:0d0:y
+I:50:2:10:25:100:0d0:y
 D:Your possessions seem to lose their value!
 F:FLOOR | CHEST | DOOR
 

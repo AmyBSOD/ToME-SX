@@ -1781,7 +1781,7 @@ N:176:Identify
 G:?:d
 I:70:12:0
 W:1:0:0:50
-A:1/1:5/1:10/1:30/1
+A:1/1:5/1:10/1:20/1:30/1
 D:If you read this scroll, the identity of an item you specify will be laid open to you.
 
 N:177:*Identify*
@@ -1855,14 +1855,14 @@ N:185:Phase Door
 G:?:d
 I:70:8:0
 W:1:0:0:15
-A:1/1
+A:1/1:5/1:10/1
 D:Upon reading this scroll, you will be translocated over a short distance.
 
 N:186:Teleportation
 G:?:d
 I:70:9:0
 W:10:0:0:40
-A:10/1
+A:10/1:20/1:30/1
 D:If you read this scroll, you will immediately be transported to another place on the level.
 
 N:187:Teleport Level
@@ -2138,7 +2138,7 @@ N:220:Word of Recall
 G:?:d
 I:70:11:0
 W:5:0:0:150
-A:5/1
+A:5/1:15/1:30/1:50/1
 D:The spell on this scroll will slowly build an ethereal conduit to the town for you if you are in
 D:a dungeon, and into the dungeon if you are above ground. Upon completion, which takes a while, you
 D:will suddenly be translocated to the other place.
@@ -2412,7 +2412,7 @@ N:249:Speed
 G:!:d
 I:71:29:0
 W:1:0:0:75
-A:1/1:40/1:60/1
+A:1/1:20/1:40/1:60/1
 P:0:1d1:0:0:0
 F:FOUNTAIN
 D:A magical drink which temporarily allows you to act much faster when imbibed.
@@ -2513,7 +2513,7 @@ N:260:Restore Life Levels
 G:!:d
 I:71:41:0
 W:40:0:0:400
-A:40/1
+A:40/1:50/1
 P:0:1d1:0:0:0
 F:FOUNTAIN
 D:If your life force has been drained, this blessed brew will bring it back.
@@ -5828,7 +5828,7 @@ N:738:& Book~ of Beginner Cantrips
 G:?:g
 I:111:50:0
 W:5:0:0:800
-A:5/1
+A:5/5
 P:0:1d1:0:0:0
 D:The blood smudged on the cover makes you wonder how many people had it before you...
 
@@ -5836,7 +5836,7 @@ N:739:& Book~ of Teleportation
 G:?:g
 I:111:51:0
 W:10:0:0:2500
-A:10/1
+A:10/20
 P:0:1d1:0:0:0
 D:A standard spellbook with a few spells.
 
@@ -5846,7 +5846,7 @@ N:741:& Book~ of Summoning
 G:?:g
 I:111:52:0
 W:7:0:0:5000
-A:7/1
+A:7/30
 P:0:1d1:0:0:0
 D:A standard spellbook with a few spells.
 D:It smells like camel.
