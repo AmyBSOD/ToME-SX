@@ -3319,6 +3319,24 @@
 #define TRAP_SKILL_MULT                   683
 #define TRAP_SKILL_SWAP                   684
 
+#define TRAP_OF_UNKNOWN_II                685
+#define TRAP_OF_UNKNOWN_III               686
+#define TRAP_OF_UNKNOWN_IV                687
+#define TRAP_OF_UNKNOWN_V                 688
+#define TRAP_OF_UNKNOWN_VI                689
+#define TRAP_OF_UNKNOWN_VII               690
+#define TRAP_OF_UNKNOWN_VIII              691
+
+#define TRAP_OF_UNKNOWN_OOD_II            692
+#define TRAP_OF_UNKNOWN_OOD_III           693
+
+#define TRAP_OF_UNKNOWN_OOD_RARE_II       694
+#define TRAP_OF_UNKNOWN_OOD_RARE_III      695
+
+#define TRAP_OF_UNKNOWN_RARE              696
+#define TRAP_OF_UNKNOWN_RARE_II           697
+#define TRAP_OF_UNKNOWN_RARE_III          698
+
 /*** General index values ***/
 
 

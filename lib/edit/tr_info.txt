@@ -3367,6 +3367,76 @@ I:25:2:10:25:40:0d0:y
 D:Your skills seem to scramble...
 F:FLOOR | CHEST | DOOR
 
+N:685:Quite Unknown Trap
+I:4:100:5:0:15:0d0:G
+D:You don't know what just happened.
+F:FLOOR
+
+N:686:Particularly Unknown Trap
+I:5:100:5:0:30:0d0:G
+D:You don't know what just happened.
+F:FLOOR
+
+N:687:Especially Unknown Trap
+I:6:100:5:0:45:0d0:G
+D:You don't know what just happened.
+F:FLOOR
+
+N:688:Extraordinarily Unknown Trap
+I:7:100:5:0:60:0d0:G
+D:You don't know what just happened.
+F:FLOOR
+
+N:689:Absolutely Unknown Trap
+I:8:100:5:0:75:0d0:G
+D:You don't know what just happened.
+F:FLOOR
+
+N:690:Totally Unknown Trap
+I:9:100:5:0:90:0d0:G
+D:You don't know what just happened.
+F:FLOOR
+
+N:691:Extremely Unknown Trap
+I:10:100:5:0:100:0d0:G
+D:You don't know what just happened.
+F:FLOOR
+
+N:692:Incredibly Unknown Trap
+I:12:10:5:0:50:0d0:G
+D:You really don't know what just happened.
+F:FLOOR
+
+N:693:Super Unknown Trap
+I:18:10:5:0:75:0d0:G
+D:You really don't know what just happened.
+F:FLOOR
+
+N:694:Fully Unknown Trap
+I:20:2:5:0:60:0d0:G
+D:You absolutely don't know what just happened.
+F:FLOOR
+
+N:695:Completely Unknown Trap
+I:30:2:5:0:80:0d0:G
+D:You absolutely don't know what just happened.
+F:FLOOR
+
+N:696:Highly Unknown Trap
+I:5:10:5:0:15:0d0:G
+D:You totally don't know what just happened.
+F:FLOOR
+
+N:697:Thoroughly Unknown Trap
+I:12:10:5:0:40:0d0:G
+D:You totally don't know what just happened.
+F:FLOOR
+
+N:698:Utterly Unknown Trap
+I:18:10:5:0:70:0d0:G
+D:You totally don't know what just happened.
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

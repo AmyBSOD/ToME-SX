@@ -562,8 +562,22 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_OF_SHIT_II:
 		case TRAP_OF_SHIT_III:
 		case TRAP_OF_UNKNOWN:
+		case TRAP_OF_UNKNOWN_II:
+		case TRAP_OF_UNKNOWN_III:
+		case TRAP_OF_UNKNOWN_IV:
+		case TRAP_OF_UNKNOWN_V:
+		case TRAP_OF_UNKNOWN_VI:
+		case TRAP_OF_UNKNOWN_VII:
+		case TRAP_OF_UNKNOWN_VIII:
 		case TRAP_OF_UNKNOWN_OOD:
+		case TRAP_OF_UNKNOWN_OOD_II:
+		case TRAP_OF_UNKNOWN_OOD_III:
+		case TRAP_OF_UNKNOWN_RARE:
+		case TRAP_OF_UNKNOWN_RARE_II:
+		case TRAP_OF_UNKNOWN_RARE_III:
 		case TRAP_OF_UNKNOWN_OOD_RARE:
+		case TRAP_OF_UNKNOWN_OOD_RARE_II:
+		case TRAP_OF_UNKNOWN_OOD_RARE_III:
 		case TRAP_NASTY1:
 		case TRAP_NASTY2:
 		case TRAP_NASTY3:
@@ -727,8 +741,22 @@ bool can_detect_trap_type(int traptype)
 
 	switch (traptype) {
 		case TRAP_OF_UNKNOWN:
+		case TRAP_OF_UNKNOWN_II:
+		case TRAP_OF_UNKNOWN_III:
+		case TRAP_OF_UNKNOWN_IV:
+		case TRAP_OF_UNKNOWN_V:
+		case TRAP_OF_UNKNOWN_VI:
+		case TRAP_OF_UNKNOWN_VII:
+		case TRAP_OF_UNKNOWN_VIII:
 		case TRAP_OF_UNKNOWN_OOD:
+		case TRAP_OF_UNKNOWN_OOD_II:
+		case TRAP_OF_UNKNOWN_OOD_III:
+		case TRAP_OF_UNKNOWN_RARE:
+		case TRAP_OF_UNKNOWN_RARE_II:
+		case TRAP_OF_UNKNOWN_RARE_III:
 		case TRAP_OF_UNKNOWN_OOD_RARE:
+		case TRAP_OF_UNKNOWN_OOD_RARE_II:
+		case TRAP_OF_UNKNOWN_OOD_RARE_III:
 		case TRAP_OF_SHIT_I:
 		case TRAP_OF_SHIT_II:
 		case TRAP_OF_SHIT_III:
@@ -894,8 +922,22 @@ bool is_nonvis_trap(int traptype)
 	if (is_nasty_trap(traptype)) return TRUE;
 	switch (traptype) {
 		case TRAP_OF_UNKNOWN:
+		case TRAP_OF_UNKNOWN_II:
+		case TRAP_OF_UNKNOWN_III:
+		case TRAP_OF_UNKNOWN_IV:
+		case TRAP_OF_UNKNOWN_V:
+		case TRAP_OF_UNKNOWN_VI:
+		case TRAP_OF_UNKNOWN_VII:
+		case TRAP_OF_UNKNOWN_VIII:
 		case TRAP_OF_UNKNOWN_OOD:
+		case TRAP_OF_UNKNOWN_OOD_II:
+		case TRAP_OF_UNKNOWN_OOD_III:
+		case TRAP_OF_UNKNOWN_RARE:
+		case TRAP_OF_UNKNOWN_RARE_II:
+		case TRAP_OF_UNKNOWN_RARE_III:
 		case TRAP_OF_UNKNOWN_OOD_RARE:
+		case TRAP_OF_UNKNOWN_OOD_RARE_II:
+		case TRAP_OF_UNKNOWN_OOD_RARE_III:
 			return TRUE;
 	}
 	return FALSE;
@@ -1093,7 +1135,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		i_ptr = &o_list[cave[y][x].o_idx];
 	}
 
-	if (trap == TRAP_OF_UNKNOWN) {
+	if (trap == TRAP_OF_UNKNOWN || trap == TRAP_OF_UNKNOWN_II || trap == TRAP_OF_UNKNOWN_III || trap == TRAP_OF_UNKNOWN_IV || trap == TRAP_OF_UNKNOWN_V || trap == TRAP_OF_UNKNOWN_VI || trap == TRAP_OF_UNKNOWN_VII || trap == TRAP_OF_UNKNOWN_VIII) {
 		if (c_ptr->info & (CAVE_TRDT)) {
 			t_info[trap].ident = TRUE;
 		}
@@ -1172,7 +1214,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		}
 	}
 
-	if (trap == TRAP_OF_UNKNOWN_OOD) {
+	if (trap == TRAP_OF_UNKNOWN_OOD || trap == TRAP_OF_UNKNOWN_OOD_II || trap == TRAP_OF_UNKNOWN_OOD_III) {
 		if (c_ptr->info & (CAVE_TRDT)) {
 			t_info[trap].ident = TRUE;
 		}
@@ -1253,7 +1295,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		}
 	}
 
-	if (trap == TRAP_OF_UNKNOWN_OOD_RARE) {
+	if (trap == TRAP_OF_UNKNOWN_OOD_RARE || trap == TRAP_OF_UNKNOWN_OOD_RARE_II || trap == TRAP_OF_UNKNOWN_OOD_RARE_III) {
 		if (c_ptr->info & (CAVE_TRDT)) {
 			t_info[trap].ident = TRUE;
 		}
@@ -1283,6 +1325,82 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (monster_level > effect_level) effect_level = monster_level;
 
 			effect_level += randint(25);
+
+			if (p_ptr->nastytrap107) effect_level += randint(10 + p_ptr->lev);
+
+			if (randint(50) == 1) scalinglevel = randint(p_ptr->lev);
+
+			if (effect_level < scalinglevel) effect_level = scalinglevel;
+
+			if (nastyward > 0) {
+				int effnastyward = nastyward;
+				if (effnastyward > 80) effnastyward = 80;
+
+				if (is_nasty_trap(trap) && magik(effnastyward)) continue;
+
+				if (nastyward > 80) {
+					if (is_nasty_trap(trap) && (randint(nastyward) > 80)) continue;
+				}
+
+			}
+
+			/* No traps below their minlevel */
+			if (t_ptr->minlevel > effect_level && ( (randint(3) != 1) || (randint(t_ptr->minlevel + 1) > (effect_level + 2) ) ) ) continue;
+			if ( (t_ptr->minlevel > (effect_level + 5)) && (randint(t_ptr->minlevel) != 1) ) continue;
+
+			/* is this a correct trap now?   */
+			if (!(t_ptr->flags & FTRAP_FLOOR)) continue;
+
+			/*
+			 * Hack -- No trap door at the bottom of dungeon or in flat
+			 * (non dungeon) places or on quest levels
+			 */
+			if ((trap == TRAP_OF_SINKING || trap == TRAP_OF_SHAFT || trap == TRAP_OF_DEEP_DESCENT || trap == TRAP_OF_TELE_LEVEL) &&
+			    ((d_ptr->maxdepth == dun_level) ||
+			     (dungeon_flags1 & DF1_FLAT) || (is_quest(dun_level) && (is_quest(dun_level) != QUEST_RANDOM) )) )
+			{
+				continue;
+			}
+
+			/* ignore probabilities --Amy */
+			c_ptr->t_idx = trap;
+			break;
+		}
+
+		if (!is_nonvis_trap(c_ptr->t_idx)) {
+			msg_print("You triggered a trap!");
+			pick_trap(p_ptr->py, p_ptr->px);
+		}
+	}
+
+	if (trap == TRAP_OF_UNKNOWN_RARE || trap == TRAP_OF_UNKNOWN_RARE_II || trap == TRAP_OF_UNKNOWN_RARE_III) {
+		if (c_ptr->info & (CAVE_TRDT)) {
+			t_info[trap].ident = TRUE;
+		}
+
+		/* Try 10000 times */
+		int cnt = 10000;
+		while (cnt--)
+		{
+			trap = randint(max_t_idx - 1);
+			t_ptr = &t_info[trap];
+
+			/* Este piety reduces spawn rate of nasty traps */
+			GOD(GOD_ESTE) {
+				if (p_ptr->grace > 15000 && is_nasty_trap(trap)) {
+					if (randint(p_ptr->grace) > 15000) continue;
+				}
+			}
+
+			/* anti-nastiness skill by Amy: reduces odds that a new trap will be a nasty trap */
+			int nastyward = get_skill(SKILL_ANTINASTY) * 2;
+
+			int effect_level;
+			int scalinglevel = 1;
+
+			if (dun_level > 0) effect_level = dun_level;
+			else effect_level = wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level + rand_int(p_ptr->lev);
+			if (monster_level > effect_level) effect_level = monster_level;
 
 			if (p_ptr->nastytrap107) effect_level += randint(10 + p_ptr->lev);
 
@@ -6216,8 +6334,22 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 		/* unknown traps: should normally morph into something else prior to triggering */
 	case TRAP_OF_UNKNOWN:
+	case TRAP_OF_UNKNOWN_II:
+	case TRAP_OF_UNKNOWN_III:
+	case TRAP_OF_UNKNOWN_IV:
+	case TRAP_OF_UNKNOWN_V:
+	case TRAP_OF_UNKNOWN_VI:
+	case TRAP_OF_UNKNOWN_VII:
+	case TRAP_OF_UNKNOWN_VIII:
 	case TRAP_OF_UNKNOWN_OOD:
+	case TRAP_OF_UNKNOWN_OOD_II:
+	case TRAP_OF_UNKNOWN_OOD_III:
+	case TRAP_OF_UNKNOWN_RARE:
+	case TRAP_OF_UNKNOWN_RARE_II:
+	case TRAP_OF_UNKNOWN_RARE_III:
 	case TRAP_OF_UNKNOWN_OOD_RARE:
+	case TRAP_OF_UNKNOWN_OOD_RARE_II:
+	case TRAP_OF_UNKNOWN_OOD_RARE_III:
 			ident = FALSE;
 		break;
 
