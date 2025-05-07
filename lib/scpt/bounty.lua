@@ -73,7 +73,8 @@ add_building_action
 					skill(SKILL_LORE).dev = TRUE
 				end
 				skill(SKILL_LORE).value = skill(SKILL_LORE).value + skill(SKILL_LORE).mod
-				if skill(SKILL_PRESERVATION).mod == 0 then
+				if (skill(SKILL_PRESERVATION).mod == 0) and (player.gained_preserv == 0) then
+					player.gained_preserv = 1
 					skill(SKILL_PRESERVATION).value = 800
 					skill(SKILL_PRESERVATION).mod = 800
 					skill(SKILL_PRESERVATION).dev = TRUE

@@ -198,7 +198,10 @@ CORRUPT_DEMON_REALM = add_corruption
 		[HOOK_CALC_BONUS] = function()
 			-- 1500 may seem a lot, but people are rather unlikely to get the corruption very soon
 			-- due to the dependencies
-			if s_info[SKILL_DAEMON + 1].mod == 0 then s_info[SKILL_DAEMON + 1].mod = 1500 end
+			if (s_info[SKILL_DAEMON + 1].mod == 0) and (player.gained_demon == 0) then
+				player.gained_demon = 1
+				s_info[SKILL_DAEMON + 1].mod = 1500
+			end
 			s_info[SKILL_DAEMON + 1].hidden = FALSE;
 		end,
 	},

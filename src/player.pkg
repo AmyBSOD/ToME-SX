@@ -652,6 +652,17 @@ struct player_type
 	 */
 	s16b lev;
 
+	/** @structvar gained_demon
+	 * @brief Number
+	 * @note Gained demonology
+	 */
+	s16b gained_demon;
+	/** @structvar gained_preserv
+	 * @brief Number
+	 * @note Gained preservation
+	 */
+	s16b gained_preserv;
+
 	/** @structvar overlevel
 	 * @brief Number
 	 * @note Overleveling value

@@ -714,6 +714,9 @@ static bool do_extra(int flag)
 
 	do_s16b(&p_ptr->chaos_patron, flag);
 
+	do_s16b(&p_ptr->gained_demon, flag);
+	do_s16b(&p_ptr->gained_preserv, flag);
+
 	if (flag == LS_SAVE) tmp16s = max_corruptions;
 	do_s16b(&tmp16s, flag);
 
