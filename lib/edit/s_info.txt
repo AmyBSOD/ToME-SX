@@ -548,6 +548,11 @@ D:Ability to disarm the various traps
 I:0
 F:RANDOM_GAIN
 
+N:38:Hidden-Sight
+D:Improves chances of automatically searching for things
+I:0
+F:RANDOM_GAIN
+
 N:40:Stealing
 D:Ability to steal objects
 A:15:Steal object
@@ -561,6 +566,7 @@ I:0
 F:RANDOM_GAIN
 
 f:Stealth:Sneakiness%15
+f:Hidden-Sight:Sneakiness%15
 f:Disarming:Sneakiness%10
 f:Backstab:Sneakiness%5
 f:Stealing:Sneakiness%15
@@ -664,6 +670,7 @@ T:Combat:Two-handed
 T:Combat:Antimagic
 
 T:Main:Sneakiness
+T:Sneakiness:Hidden-Sight
 T:Sneakiness:Stealth
 T:Sneakiness:Disarming
 T:Sneakiness:Backstab

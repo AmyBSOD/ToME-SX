@@ -4648,7 +4648,10 @@ void calc_bonuses(bool silent)
 	p_ptr->skill_srh += (get_skill_scale(SKILL_SNEAK, 35));
 
 	/* Affect Skill -- search frequency (Sneakiness skill) */
-	p_ptr->skill_fos += (get_skill_scale(SKILL_SNEAK, 25));
+	p_ptr->skill_fos += (get_skill_scale(SKILL_SNEAK, 15));
+
+	/* Affect Skill -- search frequency (Hidden-Sight skill) */
+	p_ptr->skill_fos += (get_skill_scale(SKILL_PERCEPTION, 30));
 
 	/* Affect Skill -- combat (Combat skill + mastery) */
 	p_ptr->skill_thn += (50 * (((7 * get_skill(p_ptr->melee_style)) + (3 * get_skill(SKILL_COMBAT))) / 10) / 10);

@@ -320,6 +320,28 @@ void do_fart_effect(void)
 
 	case 29:
 		{
+			if (randint(1000) == 1) {
+				switch (randint(5)) {
+					case 1:
+						drain_skill_lore();
+						break;
+					case 2:
+						drain_skill_random();
+						break;
+					case 3:
+						swap_skill_value();
+						break;
+					case 4:
+						swap_skill_mult();
+						break;
+					case 5:
+						swap_skill_both();
+						break;
+				}
+
+				break;
+			}
+
 			msg_print("Urgh, you have to vomit!");
 			(void)set_food(PY_FOOD_STARVE - 1);
 			break;
@@ -598,8 +620,8 @@ void do_fart_effect(void)
 			{
 				msg_print("You can't move!");
 				(void)set_paralyzed(p_ptr->paralyzed + rand_int(5) + 2);
-				ident = TRUE;
 			}
+			else msg_print("You momentarily stiffen.");
 
 			break;
 		}

@@ -86,6 +86,7 @@ C:k:+0:+400:Hafted-mastery
 C:k:+0:+400:Polearm-mastery
 C:k:+1000:+600:Archery
 C:k:+1000:+900:Sneakiness
+C:k:+0:+900:Hidden-Sight
 C:k:+0000:+400:Stealth
 C:k:+1000:+900:Disarming
 C:k:+1000:+300:Magic
@@ -211,6 +212,7 @@ C:a:k:=0:=0:Hafted-mastery
 C:a:k:=0:=0:Polearm-mastery
 C:a:k:+1000:-200:Archery
 C:a:k:+1000:+900:Sneakiness
+C:a:k:+0:+900:Hidden-Sight
 C:a:k:+1000:+900:Disarming
 C:a:k:+1000:+400:Magic
 C:a:k:+1000:+300:Spirituality
@@ -257,6 +259,7 @@ C:a:k:+0:-100:Hafted-mastery
 C:a:k:+0:-100:Polearm-mastery
 C:a:k:+1000:-200:Archery
 C:a:k:+0:+900:Sneakiness
+C:a:k:+0:+900:Hidden-Sight
 C:a:k:+0:+900:Disarming
 C:a:k:+1000:+400:Magic
 C:a:k:+0:+200:Spirituality
@@ -275,6 +278,7 @@ C:a:k:+0:-150:Weaponmastery
 C:a:k:+1000:+200:Sword-mastery
 C:a:k:-1000:-300:Archery
 C:a:k:+0:-400:Sneakiness
+C:a:k:+0:-600:Hidden-Sight
 C:a:k:+0:-300:Disarming
 C:a:k:+0:+400:Magic
 C:a:k:-1000:+0:Spirituality
@@ -304,6 +308,7 @@ C:a:k:+0:+200:Hafted-mastery
 C:a:k:+0:+300:Chopping
 C:a:k:+0:+950:Two-handed
 C:a:k:-1000:-600:Sneakiness
+C:a:k:-1000:-900:Hidden-Sight
 C:a:k:-1000:-400:Disarming
 C:a:k:=0:=0:Archery
 C:a:k:=0:=0:Antimagic
@@ -446,6 +451,7 @@ C:k:+1000:+550:Spirituality
 C:k:+1000:+200:Combat
 C:k:+700:+500:Weaponmastery
 C:k:+1000:+900:Sneakiness
+C:k:+0:+900:Hidden-Sight
 C:k:+0000:+400:Stealth
 C:b:1:Perfect casting
 
@@ -667,6 +673,7 @@ C:a:k:+0:+600:Necromancy
 C:a:k:+1000:+900:Thaumaturgy
 C:a:k:+0:+500:Hell
 C:a:k:-1000:-400:Sneakiness
+C:a:k:-1000:-700:Hidden-Sight
 C:a:k:-1000:-400:Spirituality
 C:a:k:+0:+600:Runecraft
 C:a:O:23:4:1d1
@@ -872,6 +879,7 @@ C:k:+0:+300:Boomerang-mastery
 C:k:+0:+300:Firearms
 C:k:+0:%150:Boulder-throwing
 C:k:+1000:+900:Sneakiness
+C:k:+0:+900:Hidden-Sight
 C:k:+0000:+400:Stealth
 C:k:+1000:+900:Disarming
 C:k:+1000:+300:Magic
@@ -904,6 +912,7 @@ C:a:k:+0:+500:Divination
 C:a:k:+0:+500:Conveyance
 C:a:k:+0:+700:Disarming
 C:a:k:+0:+50:Sneakiness
+C:a:k:+0:+100:Hidden-Sight
 C:a:k:+0:+200:Monster-lore
 C:a:O:19:12:1d1
 C:a:O:17:1:10d3
@@ -1050,6 +1059,7 @@ C:a:k:+1000:+400:Weight-lifting
 C:a:k:+0:-100:Magic
 C:a:k:+0:-100:Magic-Device
 C:a:k:+0:-200:Sneakiness
+C:a:k:+0:-500:Hidden-Sight
 C:a:g:All Gods
 
 C:a:N:NoAmmo archer
@@ -1077,6 +1087,7 @@ C:a:k:+0:+200:Sling-mastery
 C:a:k:+0:+200:Boomerang-mastery
 C:a:k:+1000:+1200:Stealth
 C:a:k:+0:+200:Sneakiness
+C:a:k:+0:+300:Hidden-Sight
 C:a:k:+0:+800:Dodging
 C:a:k:+0:+300:Divination
 C:a:k:+1000:+300:Firearms
@@ -1195,6 +1206,7 @@ C:k:+0:+500:Divination
 C:k:+0:+500:Temporal
 C:k:+1000:+700:Spirituality
 C:k:+1000:+2000:Sneakiness
+C:k:+1000:+2000:Hidden-Sight
 C:k:+1000:+1500:Stealth
 C:k:+1000:+2000:Disarming
 C:k:+1000:+1000:Backstab
@@ -1376,6 +1388,7 @@ C:a:k:+0:-100:Conveyance
 C:a:k:+0:-100:Divination
 C:a:k:+0:-100:Temporal
 C:a:k:+0:-500:Sneakiness
+C:a:k:+0:-600:Hidden-Sight
 C:a:k:=0:=0:Stealth
 C:a:k:+0:-500:Disarming
 C:a:k:+0:-500:Backstab
@@ -1397,6 +1410,7 @@ C:a:k:+0:+100:Divination
 C:a:k:+0:+400:Firearms
 C:a:k:+0:+200:Fortune
 C:a:k:+0:-500:Sneakiness
+C:a:k:+0:-500:Hidden-Sight
 C:a:k:-1000:-1000:Backstab
 C:a:k:+0:-500:Stealth
 C:a:k:+0:-1000:Disarming
@@ -1419,6 +1433,7 @@ C:a:k:+0:-100:Divination
 C:a:k:+0:-100:Temporal
 C:a:k:+0:-100:Spirituality
 C:a:k:+0:-500:Sneakiness
+C:a:k:+0:-700:Hidden-Sight
 C:a:k:+0:-500:Stealth
 C:a:k:+0:-1000:Disarming
 C:a:k:+0:-1000:Stealing
@@ -1523,6 +1538,7 @@ C:k:+1000:+700:Archery
 C:k:+1000:+700:Barehand-combat
 C:k:+0:+600:Magic
 C:k:+1000:+700:Sneakiness
+C:k:+1000:+700:Hidden-Sight
 C:k:+1000:+700:Stealth
 C:k:+1000:+700:Disarming
 C:k:+1000:+700:Spirituality
@@ -1573,6 +1589,7 @@ C:a:k:+0:+100:Weaponmastery
 C:a:k:+0:-100:Barehand-combat
 C:a:k:+1000:+100:Magic
 C:a:k:+0:+100:Sneakiness
+C:a:k:+0:+100:Hidden-Sight
 C:a:k:+0:+100:Stealth
 C:a:k:+0:-200:Spirituality
 C:a:k:+0:-400:Possession
@@ -1592,6 +1609,7 @@ C:a:k:+0:+100:Weaponmastery
 C:a:k:+0:-100:Barehand-combat
 C:a:k:+1000:+100:Magic
 C:a:k:+0:+100:Sneakiness
+C:a:k:+0:+100:Hidden-Sight
 C:a:k:+0:+100:Stealth
 C:a:k:+0:-200:Spirituality
 C:a:k:+0:-400:Possession
@@ -1634,6 +1652,7 @@ C:a:k:-1000:-300:Archery
 C:a:k:+0:+200:Barehand-combat
 C:a:k:+0:+0:Magic
 C:a:k:+0:+200:Sneakiness
+C:a:k:+0:+250:Hidden-Sight
 C:a:k:+0:+200:Stealth
 C:a:k:+0:+200:Disarming
 C:a:k:+0:+200:Spirituality
@@ -1706,6 +1725,7 @@ C:a:k:+0:-100:Weaponmastery
 C:a:k:+0:-100:Archery
 C:a:k:=0:=0:Barehand-combat
 C:a:k:-1000:+0:Sneakiness
+C:a:k:-1000:-300:Hidden-Sight
 C:a:k:=0:=0:Stealth
 C:a:k:-1000:-200:Disarming
 C:a:k:+0:+200:Magic
@@ -1787,6 +1807,7 @@ C:a:k:=0:=600:Bearform-combat
 C:a:k:=0:=600:Boulder-throwing
 C:a:k:=0:=600:Antimagic
 C:a:k:=0:=600:Sneakiness
+C:a:k:=0:=600:Hidden-Sight
 C:a:k:=0:=600:Stealth
 C:a:k:=0:=600:Disarming
 C:a:k:=0:=600:Dodging
@@ -1919,6 +1940,7 @@ C:a:k:-1000:-700:Archery
 C:a:k:+0:-200:Barehand-combat
 C:a:k:+0:-200:Magic
 C:a:k:-1000:-700:Sneakiness
+C:a:k:-1000:-900:Hidden-Sight
 C:a:k:=0:=0:Stealth
 C:a:k:-1000:-400:Disarming
 C:a:k:=0:=0:Spirituality
@@ -1958,6 +1980,7 @@ C:a:k:+0:+100:Archery
 C:a:k:+0:+100:Weaponmastery
 C:a:k:+0:+100:Barehand-combat
 C:a:k:+0:+300:Sneakiness
+C:a:k:+0:+200:Hidden-Sight
 C:a:k:+0:+100:Stealth
 C:a:k:+0:+100:Disarming
 C:a:k:+0:+400:Dodging
@@ -2077,6 +2100,7 @@ C:a:k:=0:=0:Archery
 C:a:k:=0:=0:Barehand-combat
 C:a:k:=0:=0:Magic
 C:a:k:=0:=0:Sneakiness
+C:a:k:=0:=0:Hidden-Sight
 C:a:k:=0:=0:Stealth
 C:a:k:=0:=0:Disarming
 C:a:k:=0:=0:Spirituality
@@ -2102,6 +2126,7 @@ C:a:k:=0:=0:Archery
 C:a:k:=0:=0:Barehand-combat
 C:a:k:=0:=0:Magic
 C:a:k:=0:=0:Sneakiness
+C:a:k:=0:=0:Hidden-Sight
 C:a:k:=0:=0:Stealth
 C:a:k:=0:=0:Disarming
 C:a:k:=0:=0:Spirituality
@@ -2156,6 +2181,7 @@ C:k:+1000:+700:Prayer
 C:k:+2000:+700:Combat
 C:k:+1000:+700:Weaponmastery
 C:k:+1000:+900:Sneakiness
+C:k:+1000:+900:Hidden-Sight
 C:k:+0000:+900:Disarming
 C:k:+0000:+400:Stealth
 C:k:+0:+50:Magic-Device
@@ -2262,6 +2288,7 @@ C:a:k:+0:-300:Prayer
 C:a:k:+0:-200:Necromancy
 C:a:k:+1000:+600:Mindcraft
 C:a:k:+0:+200:Sneakiness
+C:a:k:+0:+200:Hidden-Sight
 C:a:k:+0:+100:Magic-Device
 
 C:a:N:Healer
@@ -2351,6 +2378,7 @@ C:a:k:+0:+100:Spell-power
 C:a:k:+0:+200:Runecraft
 C:a:k:+0:+200:Alchemy
 C:a:k:+0:+300:Sneakiness
+C:a:k:+0:+400:Hidden-Sight
 C:a:k:+0:+200:Disarming
 C:a:k:+0:-200:Combat
 C:a:k:+0:-200:Weaponmastery
@@ -2462,6 +2490,7 @@ C:k:+0:+200:Hafted-mastery
 C:k:+0:+200:Polearm-mastery
 C:k:+1000:+600:Archery
 C:k:+1000:+900:Sneakiness
+C:k:+0:+900:Hidden-Sight
 C:k:+1000:+900:Disarming
 C:k:+1000:+300:Magic
 C:k:+0:+550:Antimagic
@@ -2565,6 +2594,7 @@ R:k:+1800:+000:Magic-Device
 R:k:+9000:+000:Spirituality
 R:k:+5000:+000:Stealth
 R:k:+1200:+000:Sneakiness
+R:k:+0:+200:Hidden-Sight
 R:k:-1000:+000:Weaponmastery
 R:k:+2000:+000:Archery
 
@@ -2945,6 +2975,7 @@ R:k:-500:+000:Magic-Device
 R:k:-2500:+000:Spirituality
 R:k:-5000:+000:Stealth
 R:k:-500:+000:Sneakiness
+R:k:-500:+000:Hidden-Sight
 R:k:-500:+000:Weaponmastery
 R:k:-500:+000:Archery
 
@@ -2968,6 +2999,7 @@ R:k:+600:+000:Magic-Device
 R:k:+3000:+000:Spirituality
 R:k:+5000:+000:Stealth
 R:k:+800:+000:Sneakiness
+R:k:+0:+200:Hidden-Sight
 R:k:-2500:+000:Weaponmastery
 R:k:+4000:+000:Archery
 R:k:+1000:+300:Ranged-power
@@ -3421,6 +3453,7 @@ S:k:-200:+000:Magic-Device
 S:k:+500:+000:Spirituality
 S:k:-1000:+000:Stealth
 S:k:-100:+000:Sneakiness
+R:k:-1000:-300:Hidden-Sight
 S:k:+500:+000:Weaponmastery
 S:k:+000:+000:Archery
 

@@ -3313,6 +3313,12 @@
 
 #define TRAP_NASTY150                     679
 
+#define TRAP_SKILL_LORE                   680
+#define TRAP_SKILL_DRAIN                  681
+#define TRAP_SKILL_VALUE                  682
+#define TRAP_SKILL_MULT                   683
+#define TRAP_SKILL_SWAP                   684
+
 /*** General index values ***/
 
 
@@ -5473,7 +5479,7 @@ extern int PlayerUID;
 #define SKILL_SNEAK             35
 #define SKILL_STEALTH           36
 #define SKILL_DISARMING         37
-/* XXX */
+#define SKILL_PERCEPTION        38
 #define SKILL_ALCHEMY           39
 #define SKILL_STEALING          40
 #define SKILL_SORCERY           41

@@ -3972,7 +3972,10 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 		if (p_ptr->skill_fos >= 1) {
 			int fosfactor = randint(p_ptr->skill_fos);
 
-			if ((fosfactor >= 50) || (0 == rand_int(50 - fosfactor)))
+			int fostwo = fosfactor;
+			if (fostwo > 49) fostwo = 49;
+
+			if ((fosfactor >= 50) || (0 == rand_int(50 - fostwo)))
 			{
 				search();
 			}

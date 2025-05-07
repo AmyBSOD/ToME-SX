@@ -2000,6 +2000,11 @@ extern void do_cmd_ability(void);
 extern bool has_ability(int ab);
 extern void apply_level_abilities(int level);
 extern void recalc_skills(bool init);
+extern void drain_skill_lore(void);
+extern void drain_skill_random(void);
+extern void swap_skill_value(void);
+extern void swap_skill_mult(void);
+extern void swap_skill_both(void);
 
 /* gods.c */
 extern void inc_piety(int god, s32b amt);

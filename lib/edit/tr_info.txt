@@ -3342,6 +3342,31 @@ I:70:2:50:4:50:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:680:Loss of Lore Trap
+I:10:100:10:25:15:0d0:y
+D:You feel less knowledgable about monster lore!
+F:FLOOR | CHEST | DOOR
+
+N:681:Skill Drain Trap
+I:20:2:10:25:35:0d0:y
+D:You feel less knowledgable about skills!
+F:FLOOR | CHEST | DOOR
+
+N:682:Trap of Swap Skill Value
+I:15:2:10:25:20:0d0:y
+D:Your skill values seem to scramble...
+F:FLOOR | CHEST | DOOR
+
+N:683:Trap of Swap Skill Multiplier
+I:20:2:10:25:30:0d0:y
+D:Your skill multipliers seem to scramble...
+F:FLOOR | CHEST | DOOR
+
+N:684:Trap of Swap Skill
+I:25:2:10:25:40:0d0:y
+D:Your skills seem to scramble...
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

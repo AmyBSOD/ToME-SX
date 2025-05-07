@@ -83,6 +83,91 @@ void decrease_skill(int i, s16b *invest)
 	invest[i]--;
 }
 
+/* by Amy: drain skills */
+void drain_skill_lore(void)
+{
+	if (!s_info[SKILL_LORE].mod) {
+		msg_print("You realize that you know nothing about the lore.");
+		return;
+	}
+	s_info[SKILL_LORE].value -= s_info[SKILL_LORE].mod;
+	if (s_info[SKILL_LORE].value < -SKILL_MAX) s_info[SKILL_LORE].value = -SKILL_MAX;
+	msg_print("Your monster-lore skill was drained!");
+}
+
+void drain_skill_random(void)
+{
+
+	int randomskill = randint(MAX_GOOD_SKILL);
+
+	if (!s_info[randomskill].mod) {
+		msg_print("One of your skills would have been drained!");
+		msg_print("But thankfully it was a skill that you have no knowledge of.");
+		return;
+	}
+	s_info[randomskill].value -= s_info[randomskill].mod;
+	if (s_info[randomskill].value < -SKILL_MAX) s_info[randomskill].value = -SKILL_MAX;
+	msg_format("Your %s skill was drained!", s_info[randomskill].name + s_name);
+}
+
+/* by Amy: swap skills */
+void swap_skill_value(void)
+{
+	int skill1, skill2;
+	int tempvalue;
+	skill1 = randint(MAX_GOOD_SKILL);
+	skill2 = randint(MAX_GOOD_SKILL);
+	if (skill1 == skill2) {
+		msg_print("One of your skills had its value swapped with itself.");
+		msg_print("Which means, nothing happens.");
+		return;
+	}
+	tempvalue = s_info[skill1].value;
+	s_info[skill1].value = s_info[skill2].value;
+	s_info[skill2].value = tempvalue;
+
+	msg_format("Your %s and %s skills had their value swapped!", s_info[skill1].name + s_name, s_info[skill2].name + s_name);
+}
+
+void swap_skill_mult(void)
+{
+	int skill1, skill2;
+	int tempvalue;
+	skill1 = randint(MAX_GOOD_SKILL);
+	skill2 = randint(MAX_GOOD_SKILL);
+	if (skill1 == skill2) {
+		msg_print("One of your skills had its multiplier swapped with itself.");
+		msg_print("Which means, nothing happens.");
+		return;
+	}
+	tempvalue = s_info[skill1].mod;
+	s_info[skill1].mod = s_info[skill2].mod;
+	s_info[skill2].mod = tempvalue;
+
+	msg_format("Your %s and %s skills had their multiplier swapped!", s_info[skill1].name + s_name, s_info[skill2].name + s_name);
+}
+
+void swap_skill_both(void)
+{
+	int skill1, skill2;
+	int tempvalue;
+	skill1 = randint(MAX_GOOD_SKILL);
+	skill2 = randint(MAX_GOOD_SKILL);
+	if (skill1 == skill2) {
+		msg_print("One of your skills was swapped with itself.");
+		msg_print("Which means, nothing happens.");
+		return;
+	}
+	tempvalue = s_info[skill1].mod;
+	s_info[skill1].mod = s_info[skill2].mod;
+	s_info[skill2].mod = tempvalue;
+
+	tempvalue = s_info[skill1].value;
+	s_info[skill1].value = s_info[skill2].value;
+	s_info[skill2].value = tempvalue;
+
+	msg_format("Your %s and %s skills were swapped completely!", s_info[skill1].name + s_name, s_info[skill2].name + s_name);
+}
 
 /*
  * Given the name of a skill, returns skill index or -1 if no

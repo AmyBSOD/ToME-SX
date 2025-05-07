@@ -4467,6 +4467,111 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_SKILL_LORE:
+		{
+			drain_skill_lore();
+
+			ident = TRUE;
+			break;
+
+		}
+
+	case TRAP_SKILL_DRAIN:
+		{
+			drain_skill_random();
+
+			ident = TRUE;
+			break;
+
+		}
+
+	case TRAP_SKILL_VALUE:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			swap_skill_value();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Value Swap.");
+			break;
+		}
+
+	case TRAP_SKILL_MULT:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			swap_skill_mult();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Multiplier Swap.");
+			break;
+		}
+
+	case TRAP_SKILL_SWAP:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			swap_skill_both();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Swap.");
+			break;
+		}
+
 	case TRAP_OF_CONFUSION:
 		{
 			msg_print("The world is spinning!");
