@@ -75,7 +75,9 @@ add_building_action
 				skill(SKILL_LORE).value = skill(SKILL_LORE).value + skill(SKILL_LORE).mod
 				if (skill(SKILL_PRESERVATION).mod == 0) and (player.gained_preserv == 0) then
 					player.gained_preserv = 1
-					skill(SKILL_PRESERVATION).value = 800
+					if (skill(SKILL_PRESERVATION).value <= 99200) then
+						skill(SKILL_PRESERVATION).value = skill(SKILL_PRESERVATION).value + 800
+					end
 					skill(SKILL_PRESERVATION).mod = 800
 					skill(SKILL_PRESERVATION).dev = TRUE
 					msg_print("I see you don't know the corpse preservation skill, I shall teach you it too.")
