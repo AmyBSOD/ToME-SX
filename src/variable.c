@@ -1465,6 +1465,11 @@ bool fast_autoroller;
 bool hard_mode;
 
 /*
+ * Masochist mode
+ */
+bool maso_mode;
+
+/*
  * Which monsters are allowed ?
  */
 bool joke_monsters;

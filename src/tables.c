@@ -1678,6 +1678,9 @@ option_type option_info[] =
 	{ &hard_mode, FALSE, 6, 11,
 	  "hard_mode", "Hard mode (make game considerably harder)" },
 
+	{ &maso_mode, FALSE, 6, 12,
+	  "maso_mode", "Masochist mode (make game really difficult)" },
+
 	{ &joke_monsters, TRUE, 6, 14,
 	  "joke_monsters", "Allow use of some 'joke' monsters [FORCED]" },
 

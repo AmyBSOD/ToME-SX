@@ -7939,8 +7939,9 @@ static void process_monster(int m_idx, bool is_frien)
 
 	/* Confused -- 100% random
 	 * Amy: also those fucking neutral creatures since it's SOOOOOOOOOO turbo annoying if they just keep getting in the way!
-       * feeler gauges nastytrap means monsters always follow you, including neutral ones and those that may move randomly */
-	if (m_ptr->confused || ((m_ptr->status == MSTATUS_NEUTRAL) && !p_ptr->nastytrap142) || (inv == TRUE && m_ptr->target == 0))
+       * feeler gauges nastytrap means monsters always follow you, including neutral ones and those that may move randomly
+	 * in masochist mode those stupid neutral monsters behave like in vanilla, i.e. follow you all the damn time */
+	if (m_ptr->confused || ((m_ptr->status == MSTATUS_NEUTRAL) && !p_ptr->maso_mode && !p_ptr->nastytrap142) || (inv == TRUE && m_ptr->target == 0))
 	{
 		/* Try four "random" directions */
 		mm[0] = mm[1] = mm[2] = mm[3] = 5;

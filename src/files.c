@@ -3742,6 +3742,11 @@ errr file_character(cptr name, bool full)
 	else
 		fprintf(fff, "\n Hard mode:            OFF");
 
+	if (p_ptr->maso_mode)
+		fprintf(fff, "\n Masochist mode:       ON");
+	else
+		fprintf(fff, "\n Masochist mode:       OFF");
+
 	if (p_ptr->preserve)
 		fprintf(fff, "\n Preserve Mode:        ON");
 	else

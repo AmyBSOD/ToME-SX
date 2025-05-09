@@ -564,6 +564,7 @@ extern bool *a_allow_special;
 extern bool rand_birth;
 extern bool fast_autoroller;
 extern bool hard_mode;
+extern bool maso_mode;
 extern bool joke_monsters;
 extern bool munchkin_multipliers;
 extern bool center_player;

@@ -4518,11 +4518,13 @@ void calc_bonuses(bool silent)
 			p_ptr->dodge_chance += (p_ptr->mimic_level * 2 / 5);
 		}
 
-		/* Armor weight bonus/penalty */
-		p_ptr->dodge_chance -= cur_wgt;
+		/* Armor weight bonus/penalty - vanilla values if masochist mode --Amy */
+		if (p_ptr->maso_mode) p_ptr->dodge_chance -= cur_wgt * 2;
+		else p_ptr->dodge_chance -= cur_wgt;
 
-		/* Encumberance bonus/penalty */
-		p_ptr->dodge_chance = p_ptr->dodge_chance - (calc_total_weight() / 500);
+		/* Encumberance bonus/penalty - vanilla values if masochist mode --Amy */
+		if (p_ptr->maso_mode) p_ptr->dodge_chance = p_ptr->dodge_chance - (calc_total_weight() / 100);
+		else p_ptr->dodge_chance = p_ptr->dodge_chance - (calc_total_weight() / 500);
 
 		/* Never below 0 */
 		if (p_ptr->dodge_chance < 0) p_ptr->dodge_chance = 0;
@@ -4785,6 +4787,17 @@ void calc_bonuses(bool silent)
 		p_ptr->skill_sav = 10;
 	else
 		p_ptr->skill_sav += 10;
+
+	if (p_ptr->maso_mode) { /* activate those nasty traps that make stuff behave like in vanilla --Amy */
+		p_ptr->nastytrap71 = TRUE; /* charge drain instantly sets wands to zero charges */
+		p_ptr->nastytrap78 = TRUE; /* faster explosive breeding */
+		/* no p_ptr->nastytrap104, because we don't want to trash the "lithe" item property; worse dodging multipliers only */
+		p_ptr->nastytrap117 = TRUE; /* teleporting monsters can cheatingly teleport with you and ruin your day */
+		p_ptr->nastytrap130 = TRUE; /* monster hordes are bigger (SX reduced their average size) */
+		/* no p_ptr->nastytrap142, because RAND_value monsters should still walk randomly; it's just neutral ones who followed you in vanilla, see melee2.c */
+		p_ptr->nastytrap143 = TRUE; /* monster spell and breath damage is much meaner */
+		p_ptr->nastytrap144 = TRUE; /* monster levelscaling is much more unforgiving */
+	}
 
 	/* Let the scripts do what they need */
 	process_hooks(HOOK_CALC_BONUS_END, "(d)", silent);

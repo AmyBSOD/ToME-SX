@@ -2401,6 +2401,7 @@ static bool player_birth_aux_ask()
 	p_ptr->maximize = maximize;
 	p_ptr->lvling_system = lvling_system;
 	p_ptr->hard_mode = hard_mode;
+	p_ptr->maso_mode = maso_mode;
 	p_ptr->preserve = preserve;
 	p_ptr->special = special_lvls;
 	p_ptr->astral = (PRACE_FLAG2(PR2_ASTRAL)) ? TRUE : FALSE;
