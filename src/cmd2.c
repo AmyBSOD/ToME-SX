@@ -3143,6 +3143,9 @@ int breakage_chance(object_type *o_ptr)
 		}
 	}
 
+	/* throwing axes should break much less often because hey, they're meant to be thrown --Amy */
+	if (o_ptr->tval == TV_AXE && o_ptr->sval == SV_THROWING_AXE) return 1;
+
 	/* Rarely break */
 	return (10);
 }
@@ -4335,6 +4338,15 @@ void do_cmd_throw(void)
 							tdam *= (50 + spikemult);
 							tdam /= 50;
 						}
+					}
+				}
+
+				/* Amy edit: bonus for throwing axes */
+				if (k_info[q_ptr->k_idx].tval == TV_AXE && k_info[q_ptr->k_idx].sval == SV_THROWING_AXE) {
+					int spikemult = p_ptr->skill_tht;
+					if (spikemult > 0) {
+						tdam *= (20 + spikemult);
+						tdam /= 20;
 					}
 				}
 

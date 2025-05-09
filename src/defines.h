@@ -1606,6 +1606,7 @@
 #define SV_HATCHET                       1	/* 1d5 */
 #define SV_CLEAVER                       2      /* 2d4 */
 #define SV_LIGHT_WAR_AXE                 8      /* 2d5 */
+#define SV_THROWING_AXE                  9      /* 1d3 */
 #define SV_BEAKED_AXE                   10	/* 2d6 */
 #define SV_BROAD_AXE                    11	/* 2d6 */
 #define SV_BATTLE_AXE                   22	/* 2d8 */
