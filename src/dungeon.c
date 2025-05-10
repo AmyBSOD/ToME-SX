@@ -2700,6 +2700,45 @@ static void process_world(void)
 		(void)set_tim_manavoid(p_ptr->tim_manavoid - 1);
 	}
 
+	/* Dragon blood potions */
+	if (p_ptr->tim_dragonblood_fire)
+	{
+		(void)set_tim_dragonblood_fire(p_ptr->tim_dragonblood_fire - 1);
+	}
+
+	if (p_ptr->tim_dragonblood_cold)
+	{
+		(void)set_tim_dragonblood_cold(p_ptr->tim_dragonblood_cold - 1);
+	}
+
+	if (p_ptr->tim_dragonblood_elec)
+	{
+		(void)set_tim_dragonblood_elec(p_ptr->tim_dragonblood_elec - 1);
+	}
+
+	if (p_ptr->tim_dragonblood_acid)
+	{
+		(void)set_tim_dragonblood_acid(p_ptr->tim_dragonblood_acid - 1);
+	}
+
+	/* temporary ESP */
+	if (p_ptr->tim_esp_pot)
+	{
+		(void)set_tim_esp_pot(p_ptr->tim_esp_pot - 1);
+	}
+
+	/* temporary levitation */
+	if (p_ptr->tim_levi_pot)
+	{
+		(void)set_tim_levi_pot(p_ptr->tim_levi_pot - 1);
+	}
+
+	/* temporary free action */
+	if (p_ptr->tim_jolt_fa)
+	{
+		(void)set_tim_jolt_fa(p_ptr->tim_jolt_fa - 1);
+	}
+
 	/* Silenced */
 	if (p_ptr->tim_manasilence)
 	{

@@ -2576,6 +2576,254 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 				break;
 			}
 
+		case SV_POTION2_HALLU:
+			{
+				if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
+				{
+					if (set_image(p_ptr->image + rand_int(500) + 500))
+					{
+						ident = TRUE;
+					}
+				}
+
+				break;
+			}
+
+		case SV_POTION2_STUN:
+			{
+				msg_print("You stagger...");
+				(void)set_stun(p_ptr->stun + 75);
+				ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_LIGHT_RESTORE_MANA:
+			{
+				if (p_ptr->csp < p_ptr->msp)
+				{
+					p_ptr->csp += 100;
+					if (p_ptr->csp > p_ptr->msp) p_ptr->csp = p_ptr->msp;
+					msg_print("Your feel full of mystic power!");
+					p_ptr->redraw |= (PR_MANA);
+					p_ptr->window |= (PW_PLAYER);
+					ident = TRUE;
+				}
+				break;
+			}
+
+		case SV_POTION2_MEDIUM_RESTORE_MANA:
+			{
+				if (p_ptr->csp < p_ptr->msp)
+				{
+					p_ptr->csp += 250;
+					if (p_ptr->csp > p_ptr->msp) p_ptr->csp = p_ptr->msp;
+					msg_print("Your feel full of mystic power!");
+					p_ptr->redraw |= (PR_MANA);
+					p_ptr->window |= (PW_PLAYER);
+					ident = TRUE;
+				}
+				break;
+			}
+
+		case SV_POTION2_DRAGON_RED:
+			{
+				if (p_ptr->tim_dragonblood_cold) (void)set_tim_dragonblood_cold(0);
+				(void)set_tim_dragonblood_fire(p_ptr->tim_dragonblood_fire + 1000);
+				ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_DRAGON_WHITE:
+			{
+				if (p_ptr->tim_dragonblood_fire) (void)set_tim_dragonblood_fire(0);
+				(void)set_tim_dragonblood_cold(p_ptr->tim_dragonblood_cold + 1000);
+				ident = TRUE;
+
+
+				break;
+			}
+
+		case SV_POTION2_DRAGON_BLUE:
+			{
+				if (p_ptr->tim_dragonblood_acid) (void)set_tim_dragonblood_acid(0);
+				(void)set_tim_dragonblood_elec(p_ptr->tim_dragonblood_elec + 1000);
+				ident = TRUE;
+
+
+				break;
+			}
+
+		case SV_POTION2_DRAGON_BLACK:
+			{
+				if (p_ptr->tim_dragonblood_elec) (void)set_tim_dragonblood_elec(0);
+				(void)set_tim_dragonblood_acid(p_ptr->tim_dragonblood_acid + 1000);
+				ident = TRUE;
+
+
+				break;
+			}
+
+		case SV_POTION2_SPEED:
+			{
+				if (!p_ptr->fast)
+				{
+					if (set_fast(randint(25) + 15, 12)) ident = TRUE;
+				}
+				else
+				{
+					(void)set_fast(p_ptr->fast + 5, 12);
+				}
+
+
+				break;
+			}
+
+		case SV_POTION2_PIETY:
+			{
+				if (p_ptr->pgod != 0) {
+					msg_print("You feel pious.");
+					inc_piety(GOD_ALL, 100);
+					ident = TRUE;
+				}
+
+				break;
+			}
+
+		case SV_POTION2_PIETY_X:
+			{
+				if (p_ptr->pgod != 0) {
+					msg_print("You feel very pious.");
+					inc_piety(GOD_ALL, 1000);
+					ident = TRUE;
+				}
+
+				break;
+			}
+
+		case SV_POTION2_DISASTER:
+			{
+				msg_print("You feel drained...");
+				(void)dec_stat(A_DEX, 5, STAT_DEC_NORMAL);
+				(void)dec_stat(A_WIS, 5, STAT_DEC_NORMAL);
+				(void)dec_stat(A_CON, 5, STAT_DEC_NORMAL);
+				(void)dec_stat(A_STR, 5, STAT_DEC_NORMAL);
+				(void)dec_stat(A_CHR, 5, STAT_DEC_NORMAL);
+				(void)dec_stat(A_INT, 5, STAT_DEC_NORMAL);
+				ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_NUTRITION:
+			{
+				msg_print("This tastes good.");
+				ident = TRUE;
+				break;
+			}
+
+		case SV_POTION2_NUTRITION_X:
+			{
+				msg_print("This tastes very good.");
+				ident = TRUE;
+				break;
+			}
+
+		case SV_POTION2_RESTORATION:
+			{
+				if (do_res_stat(A_STR, FALSE)) ident = TRUE;
+				if (do_res_stat(A_DEX, FALSE)) ident = TRUE;
+				if (do_res_stat(A_INT, FALSE)) ident = TRUE;
+				if (do_res_stat(A_WIS, FALSE)) ident = TRUE;
+				if (do_res_stat(A_CON, FALSE)) ident = TRUE;
+				if (do_res_stat(A_CHR, FALSE)) ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_RESTORATION_X:
+			{
+				if (do_res_stat(A_STR, TRUE)) ident = TRUE;
+				if (do_res_stat(A_DEX, TRUE)) ident = TRUE;
+				if (do_res_stat(A_INT, TRUE)) ident = TRUE;
+				if (do_res_stat(A_WIS, TRUE)) ident = TRUE;
+				if (do_res_stat(A_CON, TRUE)) ident = TRUE;
+				if (do_res_stat(A_CHR, TRUE)) ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_ESP:
+			{
+				(void)set_tim_esp_pot(p_ptr->tim_esp_pot + 500);
+				ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_LEVITATION:
+			{
+				(void)set_tim_levi_pot(p_ptr->tim_levi_pot + 1000);
+				ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_JOLT_COLA:
+			{
+				set_image(0);
+				msg_print("You are jolted back to your senses.");
+				(void)set_tim_jolt_fa(p_ptr->tim_jolt_fa + 250);
+				ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_HEALING_GREAT:
+			{
+				if (hp_player(600)) ident = TRUE;
+				if (set_blind(0)) ident = TRUE;
+				if (set_confused(0)) ident = TRUE;
+				if (set_poisoned(0)) ident = TRUE;
+				if (set_stun(0)) ident = TRUE;
+				if (set_cut(0)) ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_HEALING_SUPER:
+			{
+				if (hp_player(2000)) ident = TRUE;
+				if (set_blind(0)) ident = TRUE;
+				if (set_confused(0)) ident = TRUE;
+				if (set_poisoned(0)) ident = TRUE;
+				if (set_stun(0)) ident = TRUE;
+				if (set_cut(0)) ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_CLAIRVOYANCE:
+			{
+				msg_print("You feel clairvoyant!");
+				map_area_clair();
+				ident = TRUE;
+				break;
+			}
+
+		case SV_POTION2_TSUYOSHI:
+			{
+				msg_print("You feel like a superhero!");
+				ident = TRUE;
+				(void)set_invuln(p_ptr->invuln + randint(2) + 1);
+				(void)set_fast(p_ptr->fast + 3, 10);
+				set_tim_invis(p_ptr->tim_invis + 3);
+				(void)set_image(p_ptr->image + 3);
+
+				break;
+			}
+
 		case SV_POTION2_AMNESIA:
 			{
 				lose_all_info();

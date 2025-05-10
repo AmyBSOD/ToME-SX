@@ -4037,6 +4037,21 @@ void calc_bonuses(bool silent)
 		p_ptr->see_inv = TRUE;
 	}
 
+	if (p_ptr->tim_esp_pot)
+	{
+		p_ptr->telepathy |= ESP_ALL;
+	}
+
+	if (p_ptr->tim_levi_pot)
+	{
+		p_ptr->ffall = TRUE;
+	}
+
+	if (p_ptr->tim_jolt_fa)
+	{
+		p_ptr->free_act = TRUE;
+	}
+
 	/* Temporary infravision boost */
 	if (p_ptr->tim_infra)
 	{
@@ -4787,6 +4802,34 @@ void calc_bonuses(bool silent)
 		p_ptr->skill_sav = 10;
 	else
 		p_ptr->skill_sav += 10;
+
+	if (p_ptr->tim_dragonblood_cold) {
+		p_ptr->immune_cold = TRUE;
+		p_ptr->resist_cold = TRUE;
+		p_ptr->resist_fire = FALSE;
+		p_ptr->immune_fire = FALSE;
+	}
+
+	if (p_ptr->tim_dragonblood_fire) {
+		p_ptr->immune_fire = TRUE;
+		p_ptr->resist_fire = TRUE;
+		p_ptr->resist_cold = FALSE;
+		p_ptr->immune_cold = FALSE;
+	}
+
+	if (p_ptr->tim_dragonblood_elec) {
+		p_ptr->immune_elec = TRUE;
+		p_ptr->resist_elec = TRUE;
+		p_ptr->resist_acid = FALSE;
+		p_ptr->immune_acid = FALSE;
+	}
+
+	if (p_ptr->tim_dragonblood_acid) {
+		p_ptr->immune_acid = TRUE;
+		p_ptr->resist_acid = TRUE;
+		p_ptr->resist_elec = FALSE;
+		p_ptr->immune_elec = FALSE;
+	}
 
 	if (p_ptr->maso_mode) { /* activate those nasty traps that make stuff behave like in vanilla --Amy */
 		p_ptr->nastytrap71 = TRUE; /* charge drain instantly sets wands to zero charges */

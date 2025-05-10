@@ -1627,6 +1627,13 @@ struct player_type
 	s16b tim_dancing;       /* Timed dancing */
 	s16b am_dancing;        /* Bonus from dancing */
 	s16b tim_manavoid;      /* Timed manavoid */
+	s16b tim_dragonblood_fire;      /* Timed fire immunity */
+	s16b tim_dragonblood_cold;      /* Timed cold immunity */
+	s16b tim_dragonblood_elec;      /* Timed shock immunity */
+	s16b tim_dragonblood_acid;      /* Timed acid immunity */
+	s16b tim_esp_pot;       /* Timed full ESP */
+	s16b tim_levi_pot;      /* Timed levitation */
+	s16b tim_jolt_fa;       /* Timed free action */
 	s16b tim_manasilence;   /* Timed silence */
 	s16b betweensickness;   /* Timer before you can use a void jumpgate again --Amy */
 	s16b stairsickness;     /* Timer before you can use a stair again --Amy */

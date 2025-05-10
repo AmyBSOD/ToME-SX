@@ -4846,6 +4846,105 @@ void map_area_lower(void)
 	p_ptr->window |= (PW_OVERHEAD);
 }
 
+/* clairvoyance by Amy: map area including traps and items */
+void map_area_clair(void)
+{
+	int i, j, x, y, y1, y2, x1, x2;
+
+	cave_type *c_ptr;
+
+	if (p_ptr->nastytrap48) return;
+
+	/* Pick an area to map */
+	y1 = p_ptr->py - 10;
+	y2 = p_ptr->py + 10;
+	x1 = p_ptr->px - 10;
+	x2 = p_ptr->px + 10;
+
+	/* Speed -- shrink to fit legal bounds */
+	if (y1 < 1) y1 = 1;
+	if (y2 > cur_hgt - 2) y2 = cur_hgt - 2;
+	if (x1 < 1) x1 = 1;
+	if (x2 > cur_wid - 2) x2 = cur_wid - 2;
+
+	/* Scan that area */
+	for (y = y1; y <= y2; y++)
+	{
+		for (x = x1; x <= x2; x++)
+		{
+			c_ptr = &cave[y][x];
+
+			c_ptr->info |= CAVE_DETECT;
+
+			/* Detect invisible traps */
+			if (c_ptr->t_idx != 0)
+			{
+				if (can_detect_trap_type(c_ptr->t_idx)) {
+					/* Hack -- Remember detected traps */
+					c_ptr->info |= (CAVE_MARK);
+
+					/* Pick a trap */
+					pick_trap(y, x);
+
+				}
+			}
+
+			/* Scan objects */
+			for (j = 1; j < o_max; j++)
+			{
+				object_type *o_ptr = &o_list[j];
+
+				/* Skip dead objects */
+				if (!o_ptr->k_idx) continue;
+
+				/* Skip held objects */
+				if (o_ptr->held_m_idx) continue;
+
+				if (x != o_ptr->ix) continue;
+				if (y != o_ptr->iy) continue;
+
+				/* Hack -- memorize it */
+				o_ptr->marked = TRUE;
+
+				/* Redraw */
+				if (!(dun_level && (dungeon_flags1 & DF1_FORGET)) ) {
+					if (panel_contains(y, x)) lite_spot(y, x);
+				}
+			}
+
+			/* All non-walls are "checked" */
+			if (!is_wall(c_ptr))
+			{
+				/* Memorize normal features */
+				if (!cave_plain_floor_grid(c_ptr))
+				{
+					/* Memorize the object */
+					c_ptr->info |= (CAVE_MARK);
+				}
+
+				/* Memorize known walls */
+				for (i = 0; i < 8; i++)
+				{
+					c_ptr = &cave[y + ddy_ddd[i]][x + ddx_ddd[i]];
+
+					/* Memorize walls (etc) */
+					if (is_wall(c_ptr))
+					{
+						/* Memorize the walls */
+						c_ptr->info |= (CAVE_MARK);
+					}
+				}
+			}
+		}
+	}
+
+	/* Redraw map */
+	p_ptr->redraw |= (PR_MAP);
+
+	/* Window stuff */
+	p_ptr->window |= (PW_OVERHEAD);
+}
+
 
 
 /*

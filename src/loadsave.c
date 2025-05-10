@@ -678,6 +678,13 @@ static bool do_extra(int flag)
 	do_s16b(&p_ptr->tim_dancing, flag);
 	do_s16b(&p_ptr->am_dancing, flag);
 	do_s16b(&p_ptr->tim_manavoid, flag);
+	do_s16b(&p_ptr->tim_dragonblood_fire, flag);
+	do_s16b(&p_ptr->tim_dragonblood_cold, flag);
+	do_s16b(&p_ptr->tim_dragonblood_elec, flag);
+	do_s16b(&p_ptr->tim_dragonblood_acid, flag);
+	do_s16b(&p_ptr->tim_esp_pot, flag);
+	do_s16b(&p_ptr->tim_levi_pot, flag);
+	do_s16b(&p_ptr->tim_jolt_fa, flag);
 	do_s16b(&p_ptr->tim_manasilence, flag);
 	do_s16b(&p_ptr->betweensickness, flag);
 	do_s16b(&p_ptr->stairsickness, flag);

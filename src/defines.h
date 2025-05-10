@@ -2150,6 +2150,18 @@
 
 /* The "sval" codes for TV_POTION2 */
 #define SV_POTION2_MIMIC                 1
+#define SV_POTION2_HALLU                 2
+#define SV_POTION2_STUN                  3
+#define SV_POTION2_LIGHT_RESTORE_MANA    4
+#define SV_POTION2_MEDIUM_RESTORE_MANA   5
+#define SV_POTION2_DRAGON_RED            6
+#define SV_POTION2_DRAGON_WHITE          7
+#define SV_POTION2_DRAGON_BLUE           8
+#define SV_POTION2_DRAGON_BLACK          9
+#define SV_POTION2_SPEED                 10
+#define SV_POTION2_PIETY                 11
+#define SV_POTION2_PIETY_X               12
+#define SV_POTION2_DISASTER              13
 #define SV_POTION2_CURE_LIGHT_SANITY     14
 #define SV_POTION2_CURE_SERIOUS_SANITY   15
 #define SV_POTION2_CURE_CRITICAL_SANITY  16
@@ -2158,8 +2170,19 @@
 #define SV_POTION2_CURE_CORRUPTION       19
 #define SV_POTION2_AMNESIA               20
 #define SV_POTION2_REPELLING             21
+#define SV_POTION2_NUTRITION             22
+#define SV_POTION2_NUTRITION_X           23
+#define SV_POTION2_RESTORATION           24
+#define SV_POTION2_RESTORATION_X         25
+#define SV_POTION2_ESP                   26
+#define SV_POTION2_LEVITATION            27
+#define SV_POTION2_JOLT_COLA             28
+#define SV_POTION2_HEALING_GREAT         29
+#define SV_POTION2_HEALING_SUPER         30
+#define SV_POTION2_CLAIRVOYANCE          31
+#define SV_POTION2_TSUYOSHI              32
 
-#define SV_POTION2_LAST                  21
+#define SV_POTION2_LAST                  32
 
 /* The "sval" codes for TV_FOOD */
 #define SV_FOOD_POISON                   0

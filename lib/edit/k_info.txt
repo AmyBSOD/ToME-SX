@@ -2566,10 +2566,10 @@ P:0:1d1:0:0:0
 F:FOUNTAIN
 D:This powerful antidote will completely negate the effect of poisons currently affecting you.
 
-N:266:Restore Mana
+N:266:Restore All Mana
 G:!:d
 I:71:40:0
-W:25:0:0:350
+W:25:0:0:1000
 A:25/1
 P:0:1d1:0:0:0
 F:FOUNTAIN
@@ -9332,6 +9332,220 @@ A:80/4
 P:0:3d15:0:0:0
 D:A throwing weapon that comes back to you after being fired, like a 
 D:boomerang, but it's actually ring-shaped. 
+
+N:1119:Hallucination
+G:!:d
+I:72:2:0
+W:0:0:0:0
+A:0/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Drinking this potion will make you see all sorts of things. 
+
+N:1120:Stunning
+G:!:d
+I:72:3:0
+W:0:0:0:0
+A:0/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:If you quaff this potion, you'll stagger. 
+
+N:1121:Lesser Restore Mana
+G:!:d
+I:72:4:0
+W:8:0:0:200
+A:8/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Quaffing this potion restores a bit of mana. 
+
+N:1122:Greater Restore Mana
+G:!:d
+I:72:5:0
+W:15:0:0:450
+A:15/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Quaffing this potion restores quite some of your mana. 
+
+N:1123:Red Dragon Blood
+G:!:d
+I:72:6:0
+W:24:0:0:500
+A:24/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This potion temporarily renders you immune to fire, but makes you 
+D:vulnerable to cold. 
+
+N:1124:White Dragon Blood
+G:!:d
+I:72:7:0
+W:24:0:0:500
+A:24/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This potion temporarily renders you immune to cold, but makes you 
+D:vulnerable to fire. 
+
+N:1125:Blue Dragon Blood
+G:!:d
+I:72:8:0
+W:24:0:0:500
+A:24/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This potion temporarily renders you immune to lightning, but makes you 
+D:vulnerable to acid. 
+
+N:1126:Black Dragon Blood
+G:!:d
+I:72:9:0
+W:24:0:0:500
+A:24/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This potion temporarily renders you immune to acid, but makes you 
+D:vulnerable to lightning. 
+
+N:1127:Haste
+G:!:d
+I:72:10:0
+W:30:0:0:1000
+A:30:2
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This potion makes you really fast for a period of time. 
+
+N:1128:Piety
+G:!:d
+I:72:11:0
+W:10:0:0:1000
+A:10/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:A potion that makes you pious when quaffed. 
+
+N:1129:Greater Piety
+G:!:d
+I:72:12:0
+W:50:0:0:10000
+A:50/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:A potion that makes you very pious when quaffed. 
+
+N:1130:Disaster
+G:!:d
+I:72:13:0
+W:40:0:0:0
+A:40/1
+P:0:5d5:0:0:0
+F:FOUNTAIN
+D:Quaffing this potion damages all of your stats, so don't do it. 
+
+N:1131:Nutrition
+G:!:d
+I:72:22:2000
+W:5:0:0:200
+A:5/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This potion is quite nutritious. 
+
+N:1132:Full Nutrition
+G:!:d
+I:72:23:10000
+W:20:0:0:1000
+A:20/2
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This potion is very nutritious. 
+
+N:1133:Restoration
+G:!:d
+I:72:24:0
+W:30:0:0:500
+A:30/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:A potion that restores temporarily drained stats. 
+
+N:1134:Full Restoration
+G:!:d
+I:72:25:0
+W:50:0:0:3000
+A:50/4
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:A potion that restores all your drained stats. 
+
+N:1135:ESP
+G:!:d
+I:72:26:0
+W:15:0:0:750
+A:15/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Quaffing this potion allows you to sense monster minds for a while. 
+
+N:1136:Levitation
+G:!:d
+I:72:27:0
+W:1:0:0:200
+A:1/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Allows you to levitate for a period of time. 
+
+N:1137:Jolt Cola
+G:!:d
+I:72:28:500
+W:10:0:0:500
+A:10/2
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:A hacker's beverage, this drink cures all hallucination and also grants 
+D:temporary immunity to paralysis. 
+
+N:1138:Greater Healing
+G:!:d
+I:72:29:700
+W:30:0:0:600
+A:30/2:45/2:60/2
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:A potent healing potion that restores 600 hit points and also heals a 
+D:variety of ailments. 
+
+N:1139:Super Healing
+G:!:d
+I:72:30:0
+W:50:0:0:2000
+A:50/4:65/3:85/2
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:A super powerful healing potion that restores 2000 hit points and heals 
+D:many types of status effects. 
+
+N:1140:Clairvoyance
+G:!:d
+I:72:31:0
+W:10:0:0:600
+A:10/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Quaff this potion to detect part of your surroundings. 
+
+N:1141:Ultimate Tsuyoshi Special
+G:!:d
+I:72:32:0
+W:50:0:0:50000
+A:50/10
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:A Japanese beverage that makes you super powerful for a short time. 
 
 # N:number:name
 # G:glyph:color
