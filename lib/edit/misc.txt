@@ -20,7 +20,7 @@ M:Z:571
 # Maximum number of monsters in r_info.txt
 # WARNING ! add one more to the real count for the player ghost !!
 # this means that you add 2 to the last ID number used in the file
-M:R:5322
+M:R:5327
 
 # Maximum number of monsters in re_info.txt
 # WARNING ! Use the exact amount of ego types used, if not you

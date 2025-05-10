@@ -92427,6 +92427,86 @@ F:ANIMAL | HAS_EGG |
 F:DROP_SKELETON | DROP_CORPSE |   
 D:A dangerous bird who has both fire and poison attacks. 
 
+N:5321:Hound
+G:Z:u
+I:110:3d6:30:10:0
+W:5:1:600:5
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d3
+B:CLAW:HURT:1d3
+B:BITE:HURT:1d4
+F:FORCE_SLEEP | DROP_CORPSE | 
+F:FRIENDS | 
+F:BASH_DOOR | 
+F:ANIMAL | MORTAL | BASEANGBAND |
+D:A hound who hasn't developed a breath weapon yet.
+
+N:5322:Hound
+G:Z:u
+I:110:3d6:30:10:0
+W:5:50:600:5
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d3
+B:CLAW:HURT:1d3
+B:BITE:HURT:1d4
+F:FORCE_SLEEP | DROP_CORPSE | 
+F:FRIENDS | 
+F:BASH_DOOR | 
+F:ANIMAL | MORTAL | BASEANGBAND |
+S:MULTIPLY
+D:A hound who hasn't developed a breath weapon yet.
+
+N:5323:Coldcat
+G:f:B
+I:115:8d12:40:40:0
+W:14:5:1200:40
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d6
+B:CLAW:HURT:1d6
+B:BITE:HURT:2d8
+B:TOUCH:COLD:5d6
+F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
+F:ANIMAL | MORTAL | BASEANGBAND | WILD_MOUNTAIN | IM_COLD |
+D:Someone was so doubleweird and had originally named this beast 
+D:"hellcat", even though it's cold-themed. So Amy went ahead and 
+D:gave it a more proper name. You can't come up with the wholly 
+D:inappropriate original name for this monster if you're merely 
+D:normally weird, which is why I call that person "doubleweird". 
+
+N:5324:mumak
+G:q:W
+I:108:12d15:20:20:100
+W:15:1:25000:80
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BUTT:HURT:4d12
+B:BITE:HURT:2d6
+F:BASH_DOOR | DROP_CORPSE | RES_SHAR | 
+F:ANIMAL | MORTAL | BASEANGBAND
+F:WILD_WASTE | WILD_WOOD | WILD_GRASS | 
+D:A very large, if somewhat slow, animal that hits with the 
+D:force of a truck. 
+
+N:5325:Coure
+G:A:w
+I:125:1d6:30:56:255
+W:1:5:2600:4
+E:1:1:1:2:1:1
+O:0:40:60:0
+B:HIT:HURT:1d1
+B:HIT:HURT:1d1
+F:NO_FEAR |
+F:ONLY_ITEM | DROP_90 | EVIL | CAN_FLY | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | 
+F:IM_POIS | NO_CONF | BASEANGBAND | RES_LITE | NO_SLEEP |
+D:Haha, prepare to be turboowned. These things are seemingly 
+D:weak, but have enormous amounts of armor class so you can't 
+D:simply smash them to bits. Although I guess if you can hit 
+D:them with magic, they'll die quickly. 
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness (low = more alert)
