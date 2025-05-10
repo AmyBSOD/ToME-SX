@@ -1019,7 +1019,7 @@ static bool item_tester_refill_lantern(object_type *o_ptr)
 
 	/* Lanterns are okay */
 	if ((o_ptr->tval == TV_LITE) &&
-	                (o_ptr->sval == SV_LITE_LANTERN)) return (TRUE);
+	                (o_ptr->sval == SV_LITE_LANTERN || o_ptr->sval == SV_LITE_OIL || o_ptr->sval == SV_LITE_ELECTRIC)) return (TRUE);
 
 	/* Assume not okay */
 	return (FALSE);
@@ -1038,6 +1038,8 @@ static void do_cmd_refill_lamp(void)
 
 	cptr q, s;
 
+	int maxlite = FUEL_LAMP;
+	int temptimeout;
 
 	/* Restrict the choices */
 	item_tester_hook = item_tester_refill_lantern;
@@ -1066,19 +1068,27 @@ static void do_cmd_refill_lamp(void)
 	/* Access the lantern */
 	j_ptr = &p_ptr->inventory[INVEN_LITE];
 
-	/* Refuel */
-	if (o_ptr->tval == TV_FLASK)
-		j_ptr->timeout += o_ptr->pval;
-	else
-		j_ptr->timeout += o_ptr->timeout;
+	/* Refuel - annoying because "timeout" is capped at 32767, and signed for some reason... --Amy */
+	if (o_ptr->tval == TV_FLASK) {
+		temptimeout = j_ptr->timeout + o_ptr->pval;
+		if (temptimeout > 30000) temptimeout = 30000;
+		j_ptr->timeout = temptimeout;
+	}
+	else {
+		temptimeout = j_ptr->timeout + o_ptr->timeout;
+		if (temptimeout > 30000) temptimeout = 30000;
+		j_ptr->timeout = temptimeout;
+	}
 
 	/* Message */
 	msg_print("You fuel your lamp.");
 
+	if (j_ptr->sval == SV_LITE_ELECTRIC) maxlite = FUEL_LAMP * 2;
+
 	/* Comment */
-	if (j_ptr->timeout >= FUEL_LAMP)
+	if (j_ptr->timeout >= maxlite)
 	{
-		j_ptr->timeout = FUEL_LAMP;
+		j_ptr->timeout = maxlite;
 		msg_print("Your lamp is full.");
 	}
 
@@ -1110,7 +1120,7 @@ static bool item_tester_refill_torch(object_type *o_ptr)
 {
 	/* Torches are okay */
 	if ((o_ptr->tval == TV_LITE) &&
-	                (o_ptr->sval == SV_LITE_TORCH)) return (TRUE);
+	                (o_ptr->sval == SV_LITE_TORCH || o_ptr->sval == SV_LITE_TORCH_METAL || o_ptr->sval == SV_LITE_TORCH_STEEL || o_ptr->sval == SV_LITE_TORCH_PIPE || o_ptr->sval == SV_LITE_TORCH_BLUE || o_ptr->sval == SV_LITE_TORCH_COBALT || o_ptr->sval == SV_LITE_TORCH_GREEN || o_ptr->sval == SV_LITE_TORCH_PURPLE)) return (TRUE);
 
 	/* Assume not okay */
 	return (FALSE);
@@ -1130,6 +1140,8 @@ static void do_cmd_refill_torch(void)
 
 	cptr q, s;
 
+	int maxlite = FUEL_TORCH;
+	int temptimeout;
 
 	/* Restrict the choices */
 	item_tester_hook = item_tester_refill_torch;
@@ -1158,16 +1170,25 @@ static void do_cmd_refill_torch(void)
 	/* Access the primary torch */
 	j_ptr = &p_ptr->inventory[INVEN_LITE];
 
-	/* Refuel */
-	j_ptr->timeout += o_ptr->timeout + 5;
+	/* Refuel - have to be aware of "timeout" being capped at 32767... --Amy */
+	temptimeout = j_ptr->timeout + o_ptr->timeout + 5;
+	if (temptimeout > 30000) temptimeout = 30000;
+	j_ptr->timeout = temptimeout;
 
 	/* Message */
 	msg_print("You combine the torches.");
 
+	if (j_ptr->sval == SV_LITE_TORCH_METAL) maxlite = FUEL_TORCH * 2;
+	if (j_ptr->sval == SV_LITE_TORCH_STEEL) maxlite = FUEL_TORCH * 3;
+	if (j_ptr->sval == SV_LITE_TORCH_PIPE) maxlite = FUEL_TORCH * 5;
+	if (j_ptr->sval == SV_LITE_TORCH_COBALT) maxlite = FUEL_TORCH * 2;
+	if (j_ptr->sval == SV_LITE_TORCH_GREEN) maxlite = FUEL_TORCH + 2500;
+	if (j_ptr->sval == SV_LITE_TORCH_PURPLE) maxlite = FUEL_TORCH + 5000;
+
 	/* Over-fuel message */
-	if (j_ptr->timeout >= FUEL_TORCH)
+	if (j_ptr->timeout >= maxlite)
 	{
-		j_ptr->timeout = FUEL_TORCH;
+		j_ptr->timeout = maxlite;
 		msg_print("Your torch is fully fueled.");
 	}
 
@@ -1224,6 +1245,13 @@ void do_cmd_refill(void)
 	{
 		/* It's a torch */
 		if (o_ptr->sval == SV_LITE_TORCH ||
+		                o_ptr->sval == SV_LITE_TORCH_METAL ||
+		                o_ptr->sval == SV_LITE_TORCH_STEEL ||
+		                o_ptr->sval == SV_LITE_TORCH_PIPE ||
+		                o_ptr->sval == SV_LITE_TORCH_BLUE ||
+		                o_ptr->sval == SV_LITE_TORCH_COBALT ||
+		                o_ptr->sval == SV_LITE_TORCH_GREEN ||
+		                o_ptr->sval == SV_LITE_TORCH_PURPLE ||
 		                o_ptr->sval == SV_LITE_TORCH_EVER)
 		{
 			do_cmd_refill_torch();
@@ -1232,6 +1260,8 @@ void do_cmd_refill(void)
 		/* It's a lamp */
 		else if (o_ptr->sval == SV_LITE_LANTERN ||
 		                o_ptr->sval == SV_LITE_DWARVEN ||
+		                o_ptr->sval == SV_LITE_OIL ||
+		                o_ptr->sval == SV_LITE_ELECTRIC ||
 		                o_ptr->sval == SV_LITE_FEANORIAN)
 		{
 			do_cmd_refill_lamp();

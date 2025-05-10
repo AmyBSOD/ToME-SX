@@ -1848,7 +1848,7 @@ Z:magic map
 
 N:145:of Fading
 X:A:0:0
-T:39:2:99
+T:39:2:4
 W:0:1:1:0
 C:0:0:0:0
 R:100
@@ -2033,7 +2033,7 @@ F:STEALTH | ONLY_EVIL | HIDE_TYPE | XTRA_SHOTS | KILL_GHOST
 # Lite ego
 N:163:of the Magi
 X:A:0:0
-T:39:1:255
+T:39:0:255
 W:0:1:150:2000
 C:0:0:0:3
 Z:magic map
@@ -2227,7 +2227,7 @@ f:EASY_USE
 # Lite ego
 N:180:of Warmth
 X:A:0:0
-T:39:1:99
+T:39:0:99
 W:0:1:10:500
 C:0:0:0:0
 R:100

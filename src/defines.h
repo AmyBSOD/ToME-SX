@@ -1755,6 +1755,15 @@
 #define SV_LITE_TORCH_EVER               2
 #define SV_LITE_DWARVEN                  3
 #define SV_LITE_FEANORIAN                4
+#define SV_LITE_OIL                      11
+#define SV_LITE_ELECTRIC                 12
+#define SV_LITE_TORCH_METAL              21
+#define SV_LITE_TORCH_STEEL              22
+#define SV_LITE_TORCH_PIPE               23
+#define SV_LITE_TORCH_BLUE               24
+#define SV_LITE_TORCH_COBALT             25
+#define SV_LITE_TORCH_GREEN              26
+#define SV_LITE_TORCH_PURPLE             27
 #define SV_LITE_GALADRIEL                100
 #define SV_LITE_ELENDIL                  101
 #define SV_LITE_THRAIN                   102
