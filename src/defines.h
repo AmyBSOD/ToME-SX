@@ -1628,7 +1628,9 @@
 #define SV_SCYTHE                       17	/* 5d3 */
 #define SV_LANCE                        20	/* 2d8 */
 #define SV_TRIFURCATE_SPEAR             26	/* 2d9 */
+#define SV_GREAT_POLEAXE                27	/* 3d7 */
 #define SV_HEAVY_LANCE                  29  /* 4d8 */
+#define SV_HELMET_BEARD                 32  /* 3d6 */
 #define SV_SCYTHE_OF_SLICING            30	/* 8d4 */
 
 /* The "sval" codes for TV_SWORD */

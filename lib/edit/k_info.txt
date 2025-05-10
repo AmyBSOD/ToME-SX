@@ -8811,6 +8811,322 @@ F:ESP_NONLIVING |
 f:ESP_NONLIVING |
 D:Provides ESP of nonliving creatures.
 
+N:1070:& Partisan~
+G:/:u
+I:22:18:0
+W:20:0:200:500
+A:20/1
+P:0:2d7:0:0:0
+F:SHOW_MODS | COULD2H
+f:COULD2H
+D:Originally this weapon was a spear with small double 
+D:axe blades added below it. While the main blade retains 
+D:the same shape as a wide spearhead, the side blades 
+D:bare only a passing similarity to the axe blades they 
+D:were in ages past. Frequently merely ceremonial now, 
+D:these weapons are from nine to ten feet long (2.7 to 
+D:3 meters). 
+
+N:1071:& Spetum~
+G:/:D
+I:22:19:0
+W:10:0:60:300
+A:10/2
+P:0:3d3:0:0:0
+F:SHOW_MODS | COULD2H
+f:COULD2H
+D:This polearm has a thin spearhead with two angled dagger- 
+D:type blades at about 45 degrees. They can be used to attack, 
+D:block, or hold an oppenent at bay. Unfortunately, they can't 
+D:do any of those tasks excedingly well. This weapon is 
+D:nine to ten feet long (2.7 to 3 meters). 
+
+N:1072:& Ranseur~
+G:/:W
+I:22:21:0
+W:8:0:20:200
+A:8/1
+P:0:1d6:0:0:0
+F:SHOW_MODS | COULD2H
+f:COULD2H
+D:A variant of the pike, the ranseur has a thin, double-edged 
+D:primary blade. Secondary blades are backward-hooking projections 
+D:set well below the large central blade, forming a crown-shape. 
+D:The spearing function of the weapon is apparent, and the 
+D:deflection includes the trapping of opponent weapons in the space 
+D:below the main blade, where a twist of the shaft would apply 
+D:pressure from it or the secondary projections to either break the 
+D:caught weapon or disarm its wielder. Additionally, the side 
+D:projections provide both a means of holding an opponent at long 
+D:range or of pulling mounted opponents off their steed. 
+
+N:1073:& Voulge~
+G:/:U
+I:22:23:0
+W:12:0:250:300
+A:12/1
+P:0:1d8:0:0:0
+F:SHOW_MODS | COULD2H
+f:COULD2H
+D:Place a hefty cleaver at the end of a long, stout shaft, and 
+D:the leverage which the pole gives the wielder will enable him 
+D:to cleave through armor. The voulge has no provision to keep 
+D:the enemy at a distance in its basic model, but with the top 
+D:front or back edge is ground down so as to provide a pointed, 
+D:dagger-like tip, the weapon assumes a more complete form. 
+
+N:1074:& Bill-Guisarme~
+G:/:s
+I:22:24:0
+W:28:0:210:450
+A:28/1
+P:0:2d6:0:0:0
+F:SHOW_MODS | COULD2H
+f:COULD2H
+D:A bladed polearm with multiple sharpened edges and spikes, 
+D:and with a hook. This weapon is about nine feet long 
+D:(2.7 meters). 
+
+N:1075:& Bec-de-Corbin~
+G:/:D
+I:22:25:0
+W:35:0:160:600
+A:35/1
+P:0:4d3:0:0:0
+F:SHOW_MODS | COULD2H
+f:COULD2H
+D:A peasant pole-arm, the bec de corbin's crow-beak blade 
+D:was designed to puncture the heavy plate armor common to 
+D:upper-class warriors. In this weapon the beak is the major 
+D:feature. This is backed by a flat hammer head or clawed head, 
+D:with a short and bladelike spike at the opposite end. 
+
+N:1076:& Great Poleaxe~
+G:/:w
+I:22:27:0
+W:60:0:320:1500
+A:60/3
+P:0:3d7:0:0:0
+F:SHOW_MODS | MUST2H
+f:MUST2H
+D:Very heavy polearm that has to be wielded with both hands. 
+
+N:1077:& Bohemian Ear Spoon~
+G:/:u
+I:22:31:0
+W:20:0:200:450
+A:20/2
+P:0:3d5:0:0:0
+F:SHOW_MODS | COULD2H
+f:COULD2H
+# description from Wikipedia
+D:The bohemian ear spoon is a polearm featuring a long, broad, 
+D:socketed spearhead with two out-turned lugs at the base of 
+D:the head, forming a guard similar to that of a boar spear. 
+
+N:1078:& Helmet Beard~
+G:/:D
+I:22:32:0
+W:40:0:190:700
+A:40/2
+P:0:3d6:0:0:0
+F:SHOW_MODS | COULD2H
+f:COULD2H
+D:A stronger version of the halberd. Google Translate actually 
+D:translates the german "Helmbarte" as "helmet beard", which is 
+D:how the name of this weapon came to be. 
+
+N:1079:& Thresher~
+G:/:s
+I:22:33:0
+W:50:0:250:1000
+A:50/2
+P:0:5d4:0:0:0
+F:SHOW_MODS | MUST2H
+f:MUST2H
+D:Originally a tool for harvesting grain, it proves surprisingly 
+D:effective for lopping off enemy soldiers' heads. 
+
+N:1080:& Giant Scythe~
+G:/:s
+I:22:34:0
+W:75:0:300:2000
+A:75/3
+P:0:5d5:0:0:0
+F:SHOW_MODS | MUST2H
+f:MUST2H
+D:A particularly big scythe that cuts down enemies where they stand. 
+
+N:1081:& Long Spear~
+G:/:o
+I:22:35:0
+W:45:0:140:500
+A:45/3
+P:0:2d10:0:0:0
+F:SHOW_MODS
+D:A very powerful spear. 
+
+N:1082:& Hyper Spear~
+G:/:o
+I:22:36:0
+W:70:0:150:600
+A:70/5
+P:0:3d7:0:0:0
+F:SHOW_MODS
+D:A superpowered spear that deals very good damage. 
+
+N:1083:& Light Plate Mail~
+G:(:s
+I:36:17:0
+W:45:0:50:1000
+A:45/8
+P:16:1d1:-1:0:0
+D:Made of light metal, this armor combines protection with mobility. 
+
+N:1084:& Mage Plate Mail~
+G:(:s
+I:36:18:0
+W:65:0:60:1800
+A:65/9
+P:18:1d1:-1:0:0
+D:Magically enhanced armor, lightweight, but offering good protection. 
+
+N:1085:& Hybrid Sword~
+G:|:W
+I:23:36:0
+W:40:0:180:1000
+A:40/3
+P:0:3d6:0:0:0
+F:SHOW_MODS | COULD2H
+f:COULD2H
+D:Not heavy enough to warrant the use of two hands, but not light enough 
+D:to be comfortably wielded with only one hand, this sword is basically 
+D:a hybrid of the long sword and two-handed sword. 
+
+N:1086:& Greatsword~
+G:|:w
+I:23:37:0
+W:70:0:400:1500
+A:70/4
+P:0:3d10:0:0:0
+F:SHOW_MODS | MUST2H
+f:MUST2H
+D:A very heavy two-handed sword. 
+
+N:1087:& Chainsaw~
+G:|:w
+I:23:38:0
+W:85:0:450:2400
+A:85/5
+P:0:3d12:0:0:0
+F:SHOW_MODS | MUST2H
+f:MUST2H
+D:From DOOM 2, this fully automatic melee weapon cuts enemies into many 
+D:little pieces. It uses the swordmastery skill. 
+
+N:1088:& Light Sword~
+G:|:W
+I:23:39:0
+W:60:0:150:1600
+A:60/3
+P:0:3d7:0:0:0
+F:SHOW_MODS | COULD2H
+f:COULD2H
+D:Not actually a lightsaber from Star Wars; instead, this sword is lighter 
+D:than a heavy two-handed sword and can therefore be wielded with one hand. 
+D:Using it with two hands is more effective, though. 
+
+N:1089:& Long Dagger~
+G:|:D
+I:23:40:0
+W:50:0:40:800
+A:50:3
+P:0:2d4:0:0:0
+F:SHOW_MODS
+D:A particularly damaging type of dagger. 
+
+N:1090:& Athame~
+G:|:D
+I:23:44:0
+W:70:0:40:1400
+A:70:4
+P:0:2d5:0:0:0
+F:RES_SHARDS | SHOW_MODS
+f:RES_SHARDS |
+D:This dagger is used for sacrificing rituals. It cannot engrave hard 
+D:Elbereths in this game, so it renders the wielder magically resistant 
+D:to bleeding damage instead. 
+
+N:1091:& Legend Thorn~
+G:|:s
+I:23:45:0
+W:85:0:40:1800
+A:85:5
+P:0:2d6:0:0:0
+F:SHOW_MODS
+D:A super powerful dagger; thieves would love to get their hands on one 
+D:of these. 
+
+N:1092:& Conqueror Sword~
+G:|:W
+I:23:46:0
+W:80:0:200:2200
+A:80/4
+P:0:3d8:0:0:0
+F:SHOW_MODS | COULD2H
+f:COULD2H
+D:Quite the powerful sword that can be wielded with either one or two hands. 
+
+N:1093:& Baton~
+G:\:u
+I:21:21:0
+W:60:0:40:1000
+A:60/4
+P:0:4d6:0:0:0
+F:SHOW_MODS
+D:This club is very powerful. 
+
+N:1094:& Legendary Hammer~
+G:\:o
+I:21:22:0
+W:80:0:450:2000
+A:80/4
+P:0:5d5:0:0:0
+F:SHOW_MODS | MUST2H
+f:MUST2H |
+D:A really heavy hammer that crushes your foes. 
+
+N:1095:& Thunder Hammer~
+G:\:B
+I:21:23:0
+W:75:0:350:3000
+A:75/5
+P:0:3d5:0:0:0
+F:SHOW_MODS | MUST2H | BRAND_ELEC
+f:MUST2H | BRAND_ELEC |
+D:This hammer is branded with lightning, shocking your foes with each strike. 
+
+N:1096:& Knout~
+G:\:o
+I:21:25:0
+W:45:0:150:500
+A:45/3
+P:0:3d7:0:0:0
+F:SHOW_MODS | COULD2H
+f:COULD2H
+D:This whip-like weapon is quite strong, especially when used two-handed. 
+
+N:1097:& Ogre Hammer~
+G:\:U
+I:21:26:0
+W:80:0:400:2000
+A:80/5
+P:0:3d8:0:0:0
+F:SHOW_MODS | COULD2H
+f:COULD2H
+D:A really heavy hammer that can somehow still be wielded with one hand, but 
+D:for maximum effect, you should use both hands. 
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
