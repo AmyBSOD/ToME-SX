@@ -303,6 +303,34 @@ void do_fart_effect(void)
 
 	case 26:
 		{
+			if (randint(1000) == 1) {
+				int curlvl;
+
+				for (curlvl = 1; curlvl < PY_MAX_LEVEL; curlvl++)
+				{
+					int iterations = curlvl;
+
+					while (iterations > 0) {
+						if ((player_hp[curlvl] > 1) && magik(20)) player_hp[curlvl]--;
+						iterations--;
+					}
+				}
+
+				msg_print("Your life seems to fade!");
+
+				/* Update and redraw hitpoints */
+				p_ptr->update |= (PU_HP);
+				p_ptr->redraw |= (PR_HP);
+
+				/* Window stuff */
+				p_ptr->window |= (PW_PLAYER);
+
+				/* Handle stuff */
+				handle_stuff();
+
+				break;
+			}
+
 			msg_print("An ancient foul curse afflicts you...");
 			activate_ty_curse();
 

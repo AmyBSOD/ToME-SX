@@ -3372,6 +3372,10 @@
 #define TRAP_OF_UNKNOWN_RARE_II           697
 #define TRAP_OF_UNKNOWN_RARE_III          698
 
+#define TRAP_OF_LIFE_LOSS                 699
+#define TRAP_OF_LIFE_LOSS_II              700
+#define TRAP_OF_LIFE_LOSS_III             701
+
 /*** General index values ***/
 
 

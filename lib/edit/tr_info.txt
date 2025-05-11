@@ -3437,6 +3437,21 @@ I:18:10:5:0:70:0d0:G
 D:You totally don't know what just happened.
 F:FLOOR
 
+N:699:Trap of Life Drop
+I:20:100:10:25:50:0d0:y
+D:Your life seems to fade away!
+F:FLOOR | CHEST | DOOR
+
+N:700:Trap of Life Loss
+I:20:100:10:25:70:0d0:y
+D:Your life seems to fade away!
+F:FLOOR | CHEST | DOOR
+
+N:701:Trap of Life Forfeiture
+I:20:100:10:25:90:0d0:y
+D:Your life seems to fade away!
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

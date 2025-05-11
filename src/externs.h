@@ -824,7 +824,7 @@ extern void do_cmd_browse_aux(object_type *o_ptr);
 extern void do_cmd_browse(void);
 extern void do_cmd_cast(void);
 extern void do_cmd_pray(void);
-extern void do_cmd_rerate(void);
+extern void do_cmd_rerate(void); /* Amy note: what is that??? This function is in wizard2.c you moron!! How about putting it there! */
 extern void corrupt_player(void);
 extern void do_fart_effect(void);
 extern void quest_fail_penalty(int penalty_type);

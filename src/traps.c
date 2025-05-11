@@ -4585,6 +4585,96 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_LIFE_LOSS:
+		{
+			int curlvl;
+
+			for (curlvl = 1; curlvl < PY_MAX_LEVEL; curlvl++)
+			{
+				int iterations = curlvl;
+
+				while (iterations > 0) {
+					if ((player_hp[curlvl] > 1) && magik(20)) player_hp[curlvl]--;
+					iterations--;
+				}
+			}
+
+			msg_print("Your life seems to fade!");
+
+			/* Update and redraw hitpoints */
+			p_ptr->update |= (PU_HP);
+			p_ptr->redraw |= (PR_HP);
+
+			/* Window stuff */
+			p_ptr->window |= (PW_PLAYER);
+
+			/* Handle stuff */
+			handle_stuff();
+
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_LIFE_LOSS_II:
+		{
+			int curlvl;
+
+			for (curlvl = 1; curlvl < PY_MAX_LEVEL; curlvl++)
+			{
+				int iterations = curlvl;
+
+				while (iterations > 0) {
+					if ((player_hp[curlvl] > 1) && magik(40)) player_hp[curlvl]--;
+					iterations--;
+				}
+			}
+
+			msg_print("Your life seems to fade!");
+
+			/* Update and redraw hitpoints */
+			p_ptr->update |= (PU_HP);
+			p_ptr->redraw |= (PR_HP);
+
+			/* Window stuff */
+			p_ptr->window |= (PW_PLAYER);
+
+			/* Handle stuff */
+			handle_stuff();
+
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_LIFE_LOSS_III:
+		{
+			int curlvl;
+
+			for (curlvl = 1; curlvl < PY_MAX_LEVEL; curlvl++)
+			{
+				int iterations = curlvl;
+
+				while (iterations > 0) {
+					if ((player_hp[curlvl] > 1) && magik(70)) player_hp[curlvl]--;
+					iterations--;
+				}
+			}
+
+			msg_print("Your life seems to fade!");
+
+			/* Update and redraw hitpoints */
+			p_ptr->update |= (PU_HP);
+			p_ptr->redraw |= (PR_HP);
+
+			/* Window stuff */
+			p_ptr->window |= (PW_PLAYER);
+
+			/* Handle stuff */
+			handle_stuff();
+
+			ident = TRUE;
+			break;
+		}
+
 	case TRAP_SKILL_LORE:
 		{
 			drain_skill_lore();
