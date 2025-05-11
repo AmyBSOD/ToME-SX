@@ -685,6 +685,17 @@ static bool do_extra(int flag)
 	do_s16b(&p_ptr->tim_esp_pot, flag);
 	do_s16b(&p_ptr->tim_levi_pot, flag);
 	do_s16b(&p_ptr->tim_jolt_fa, flag);
+	do_s16b(&p_ptr->tim_boost_pot, flag);
+	do_s16b(&p_ptr->tim_luck_pot, flag);
+	do_s16b(&p_ptr->tim_reshi_pot, flag);
+	do_s16b(&p_ptr->tim_resrare_pot, flag);
+	do_s16b(&p_ptr->tim_air_pot, flag);
+	do_s16b(&p_ptr->tim_antimagic_pot, flag);
+	do_s16b(&p_ptr->tim_timeflow_pot, flag);
+	do_s16b(&p_ptr->tim_regen_pot, flag);
+	do_s16b(&p_ptr->tim_power_pot, flag);
+	do_s16b(&p_ptr->tim_infra_x, flag);
+	do_s16b(&p_ptr->tim_infra_xx, flag);
 	do_s16b(&p_ptr->tim_manasilence, flag);
 	do_s16b(&p_ptr->betweensickness, flag);
 	do_s16b(&p_ptr->stairsickness, flag);

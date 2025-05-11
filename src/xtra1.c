@@ -3583,7 +3583,26 @@ void calc_bonuses(bool silent)
 	/* Take care of gods */
 	calc_gods();
 
-	/* Calculate stats */
+	if (p_ptr->tim_power_pot)
+	{
+		p_ptr->stat_add[A_STR] += 2;
+		p_ptr->stat_add[A_DEX] += 2;
+		p_ptr->stat_add[A_CON] += 2;
+		p_ptr->stat_add[A_CHR] += 2;
+		p_ptr->stat_add[A_INT] += 2;
+		p_ptr->stat_add[A_WIS] += 2;
+	}
+
+	if (p_ptr->nastytrap54) {
+		p_ptr->stat_add[A_STR] -= 5;
+		p_ptr->stat_add[A_CON] -= 5;
+		p_ptr->stat_add[A_CHR] -= 5;
+		p_ptr->stat_add[A_WIS] -= 5;
+		p_ptr->stat_add[A_DEX] -= 5;
+		p_ptr->stat_add[A_INT] -= 5;
+	}
+
+	/* Calculate stats - any "stat_add" modifiers must be placed above this!! --Amy */
 	for (i = 0; i < 6; i++)
 	{
 		int top, use, ind;
@@ -4052,10 +4071,73 @@ void calc_bonuses(bool silent)
 		p_ptr->free_act = TRUE;
 	}
 
+	if (p_ptr->tim_boost_pot)
+	{
+		p_ptr->to_h_melee += 10;
+		p_ptr->to_d_melee += 10;
+	}
+
+	if (p_ptr->tim_luck_pot)
+	{
+		p_ptr->luck_cur += 10;
+	}
+
+	if (p_ptr->tim_reshi_pot)
+	{
+		p_ptr->resist_sound = TRUE;
+		p_ptr->resist_lite = TRUE;
+		p_ptr->resist_dark = TRUE;
+		p_ptr->resist_chaos = TRUE;
+		p_ptr->resist_disen = TRUE;
+		p_ptr->resist_shard = TRUE;
+		p_ptr->resist_nexus = TRUE;
+		p_ptr->resist_neth = TRUE;
+	}
+
+	if (p_ptr->tim_resrare_pot)
+	{
+		p_ptr->resist_water = TRUE;
+		p_ptr->resist_inertia = TRUE;
+		p_ptr->resist_plasma = TRUE;
+		p_ptr->resist_disint = TRUE;
+	}
+
+	if (p_ptr->tim_air_pot)
+	{
+		p_ptr->magical_breath = TRUE;
+	}
+
+	if (p_ptr->tim_antimagic_pot)
+	{
+		p_ptr->antimagic += 10;
+		p_ptr->antimagic_dis += 5;
+	}
+
+	if (p_ptr->tim_timeflow_pot)
+	{
+		p_ptr->resist_time = TRUE;
+		p_ptr->resist_continuum = TRUE;
+	}
+
+	if (p_ptr->tim_regen_pot)
+	{
+		p_ptr->regenerate = TRUE;
+	}
+
 	/* Temporary infravision boost */
 	if (p_ptr->tim_infra)
 	{
 		p_ptr->see_infra++;
+	}
+
+	if (p_ptr->tim_infra_x)
+	{
+		p_ptr->see_infra += 3;
+	}
+
+	if (p_ptr->tim_infra_xx)
+	{
+		p_ptr->see_infra += 5;
 	}
 
 	/* Hack -- Magic breath -> Water breath */
@@ -4879,15 +4961,6 @@ void calc_bonuses(bool silent)
 		p_ptr->to_a -= 10;
 		if (p_ptr->dis_to_a > 1) p_ptr->dis_to_a /= 2;
 		p_ptr->dis_to_a -= 10;
-	}
-
-	if (p_ptr->nastytrap54) {
-		p_ptr->stat_add[A_STR] -= 5;
-		p_ptr->stat_add[A_CON] -= 5;
-		p_ptr->stat_add[A_CHR] -= 5;
-		p_ptr->stat_add[A_WIS] -= 5;
-		p_ptr->stat_add[A_DEX] -= 5;
-		p_ptr->stat_add[A_INT] -= 5;
 	}
 
 	if (p_ptr->nastytrap73) p_ptr->see_inv = FALSE;

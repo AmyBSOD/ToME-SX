@@ -3228,6 +3228,474 @@ bool set_tim_jolt_fa(int v)
 }
 
 /*
+ * Set "p_ptr->tim_boost_pot", notice observable changes
+ */
+bool set_tim_boost_pot(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_boost_pot)
+		{
+			msg_print("You gain massive power.");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_boost_pot)
+		{
+			msg_print("The massive power inside you fades.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_boost_pot = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_luck_pot", notice observable changes
+ */
+bool set_tim_luck_pot(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_luck_pot)
+		{
+			msg_print("You feel lucky!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_luck_pot)
+		{
+			msg_print("Your luck has timed out.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_luck_pot = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_reshi_pot", notice observable changes
+ */
+bool set_tim_reshi_pot(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_reshi_pot)
+		{
+			msg_print("You feel resistant!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_reshi_pot)
+		{
+			msg_print("You feel less resistant.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_reshi_pot = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_resrare_pot", notice observable changes
+ */
+bool set_tim_resrare_pot(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_resrare_pot)
+		{
+			msg_print("You feel highly resistant!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_resrare_pot)
+		{
+			msg_print("You no longer feel highly resistant.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_resrare_pot = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_air_pot", notice observable changes
+ */
+bool set_tim_air_pot(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_air_pot)
+		{
+			msg_print("You no longer need to breathe!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_air_pot)
+		{
+			msg_print("You feel the need to breathe once more.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_air_pot = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_antimagic_pot", notice observable changes
+ */
+bool set_tim_antimagic_pot(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_antimagic_pot)
+		{
+			msg_print("You start generating an antimagic field!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_antimagic_pot)
+		{
+			msg_print("You no longer generate an antimagic field.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_antimagic_pot = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_timeflow_pot", notice observable changes
+ */
+bool set_tim_timeflow_pot(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_timeflow_pot)
+		{
+			msg_print("You stabilize the time-space continuum!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_timeflow_pot)
+		{
+			msg_print("The time-space continuum is no longer stabilized.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_timeflow_pot = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_regen_pot", notice observable changes
+ */
+bool set_tim_regen_pot(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_regen_pot)
+		{
+			msg_print("You start to regenerate!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_regen_pot)
+		{
+			msg_print("You stop regenerating.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_regen_pot = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_power_pot", notice observable changes
+ */
+bool set_tim_power_pot(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_power_pot)
+		{
+			msg_print("You feel powerful!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_power_pot)
+		{
+			msg_print("You feel less powerful.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_power_pot = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
  * Set "p_ptr->tim_manasilence", notice observable changes
  */
 bool set_tim_manasilence(int v)
@@ -4129,6 +4597,110 @@ bool set_tim_infra(int v)
 
 	/* Use the value */
 	p_ptr->tim_infra = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_infra_x", notice observable changes
+ */
+bool set_tim_infra_x(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_infra_x)
+		{
+			msg_print("Your eyes begin to tingle!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_infra_x)
+		{
+			msg_print("Your eyes stop tingling.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_infra_x = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tim_infra_xx", notice observable changes
+ */
+bool set_tim_infra_xx(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_infra_xx)
+		{
+			msg_print("Your eyes begin to tingle!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_infra_xx)
+		{
+			msg_print("Your eyes stop tingling.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_infra_xx = v;
 
 	/* Nothing to notice */
 	if (!notice) return (FALSE);

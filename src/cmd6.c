@@ -2598,6 +2598,21 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 				break;
 			}
 
+		case SV_POTION2_FEAR:
+			{
+				msg_print("You shiver...");
+
+				if (!p_ptr->resist_fear || p_ptr->nastytrap30 || (rand_int(100) < 5) )
+				{
+					if (set_afraid(p_ptr->afraid + rand_int(50) + 50))
+					{
+						ident = TRUE;
+					}
+				}
+
+				break;
+			}
+
 		case SV_POTION2_LIGHT_RESTORE_MANA:
 			{
 				if (p_ptr->csp < p_ptr->msp)
@@ -2828,6 +2843,401 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 			{
 				lose_all_info();
 				ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_BOOST:
+			{
+				ident = TRUE;
+				(void)set_tim_boost_pot(p_ptr->tim_boost_pot + 50);
+
+				break;
+			}
+
+		case SV_POTION2_LUCK:
+			{
+				ident = TRUE;
+				(void)set_tim_luck_pot(p_ptr->tim_luck_pot + 100);
+
+				break;
+			}
+
+		case SV_POTION2_RESIST_ELEC:
+			{
+				if (set_oppose_elec(p_ptr->oppose_elec + randint(10) + 10))
+				{
+					ident = TRUE;
+				}
+
+				break;
+			}
+
+		case SV_POTION2_RESIST_ACID:
+			{
+				if (set_oppose_acid(p_ptr->oppose_acid + randint(10) + 10))
+				{
+					ident = TRUE;
+				}
+
+				break;
+			}
+
+		case SV_POTION2_RESIST_POIS:
+			{
+				if (set_oppose_pois(p_ptr->oppose_pois + randint(10) + 10))
+				{
+					ident = TRUE;
+				}
+
+				break;
+			}
+
+		case SV_POTION2_HIGH_RESIST:
+			{
+				ident = TRUE;
+				(void)set_tim_reshi_pot(p_ptr->tim_reshi_pot + 20);
+
+				break;
+			}
+
+		case SV_POTION2_RARE_RESIST:
+			{
+				ident = TRUE;
+				(void)set_tim_resrare_pot(p_ptr->tim_resrare_pot + 10);
+
+				break;
+			}
+
+		case SV_POTION2_SENSE_OBJECTS:
+			{
+				int objsense;
+
+				for (objsense = 1; objsense < o_max; objsense++)
+				{
+					object_type *oxx_ptr = &o_list[objsense];
+
+					/* Skip dead objects */
+					if (!oxx_ptr->k_idx) continue;
+
+					/* Skip held objects */
+					if (oxx_ptr->held_m_idx) continue;
+
+					/* Hack -- memorize it */
+					oxx_ptr->marked = TRUE;
+
+					/* Redraw */
+					if (!(dun_level && (dungeon_flags1 & DF1_FORGET)) ) {
+						if (panel_contains(oxx_ptr->iy, oxx_ptr->ix)) lite_spot(oxx_ptr->iy, oxx_ptr->ix);
+					}
+				}
+
+				/* Redraw map */
+				p_ptr->redraw |= (PR_MAP);
+
+				/* Window stuff */
+				p_ptr->window |= (PW_OVERHEAD);
+
+				ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_EXP_LOSS:
+			{
+				int exploss = (p_ptr->exp / 4) + 500;
+				msg_print("You feel your life draining away!");
+				lose_exp(exploss);
+
+				ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_MIMIC_X:
+			{
+				if (!p_ptr->mimic_form)
+				{
+					s32b time;
+
+					call_lua("get_mimic_rand_dur", "(d)", "d", pval2, &time);
+
+					time *= 5;
+
+					set_mimic(time, pval2, (p_ptr->lev * 2) / 3);
+
+					/* Redraw title */
+					p_ptr->redraw |= (PR_TITLE);
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					ident = TRUE;
+				}
+
+				break;
+			}
+
+		case SV_POTION2_CURING_X:
+			{
+				if (hp_player(250)) ident = TRUE;
+				if (set_blind(0)) ident = TRUE;
+				if (set_poisoned(0)) ident = TRUE;
+				if (set_confused(0)) ident = TRUE;
+				if (set_stun(0)) ident = TRUE;
+				if (set_cut(0)) ident = TRUE;
+				if (set_image(0)) ident = TRUE;
+				if (heal_insanity(200)) ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_CURE_MORTAL_SANITY:
+			{
+				if (heal_insanity(damroll(20, 10))) ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_CURE_SANITY_X:
+			{
+				if (heal_insanity(damroll(20, 100))) ident = TRUE;
+				if (set_blind(0)) ident = TRUE;
+				if (set_poisoned(0)) ident = TRUE;
+				if (set_confused(0)) ident = TRUE;
+				if (set_stun(0)) ident = TRUE;
+				if (set_cut(0)) ident = TRUE;
+				if (set_image(0)) ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_AIR:
+			{
+				ident = TRUE;
+				(void)set_tim_air_pot(p_ptr->tim_air_pot + 500);
+
+				break;
+			}
+
+		case SV_POTION2_ANTIMAGIC:
+			{
+				ident = TRUE;
+				(void)set_tim_antimagic_pot(p_ptr->tim_antimagic_pot + 250);
+
+				break;
+			}
+
+		case SV_POTION2_TIME_FLOW:
+			{
+				ident = TRUE;
+				(void)set_tim_timeflow_pot(p_ptr->tim_timeflow_pot + 500);
+
+				break;
+			}
+
+		case SV_POTION2_REGEN:
+			{
+				ident = TRUE;
+				(void)set_tim_regen_pot(p_ptr->tim_regen_pot + 200);
+
+				break;
+			}
+
+		case SV_POTION2_INFRAVISION_X:
+			{
+				if (set_tim_infra_x(p_ptr->tim_infra_x + 100 + randint(100)))
+				{
+					ident = TRUE;
+				}
+
+				break;
+			}
+
+		case SV_POTION2_INFRAVISION_XX:
+			{
+				if (set_tim_infra_xx(p_ptr->tim_infra_xx + 100 + randint(100)))
+				{
+					ident = TRUE;
+				}
+
+				break;
+			}
+
+		case SV_POTION2_POWER:
+			{
+				ident = TRUE;
+				(void)set_tim_power_pot(p_ptr->tim_power_pot + 200);
+
+				break;
+			}
+
+		case SV_POTION2_GAIN_ABIL:
+			{
+				switch (randint(6)) {
+					case 1:
+						if (do_inc_stat(A_CON)) ident = TRUE;
+						break;
+					case 2:
+						if (do_inc_stat(A_STR)) ident = TRUE;
+						break;
+					case 3:
+						if (do_inc_stat(A_DEX)) ident = TRUE;
+						break;
+					case 4:
+						if (do_inc_stat(A_INT)) ident = TRUE;
+						break;
+					case 5:
+						if (do_inc_stat(A_WIS)) ident = TRUE;
+						break;
+					case 6:
+						if (do_inc_stat(A_CHR)) ident = TRUE;
+						break;
+				}
+
+				break;
+			}
+
+		case SV_POTION2_SWAP_STR:
+			{
+				switch (randint(5)) {
+					case 1:
+						if (do_dec_stat(A_DEX, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 2:
+						if (do_dec_stat(A_CON, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 3:
+						if (do_dec_stat(A_INT, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 4:
+						if (do_dec_stat(A_WIS, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 5:
+						if (do_dec_stat(A_CHR, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+				}
+				if (do_inc_stat(A_STR)) ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_SWAP_INT:
+			{
+				switch (randint(5)) {
+					case 1:
+						if (do_dec_stat(A_DEX, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 2:
+						if (do_dec_stat(A_CON, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 3:
+						if (do_dec_stat(A_STR, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 4:
+						if (do_dec_stat(A_WIS, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 5:
+						if (do_dec_stat(A_CHR, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+				}
+				if (do_inc_stat(A_INT)) ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_SWAP_WIS:
+			{
+				switch (randint(5)) {
+					case 1:
+						if (do_dec_stat(A_DEX, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 2:
+						if (do_dec_stat(A_CON, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 3:
+						if (do_dec_stat(A_INT, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 4:
+						if (do_dec_stat(A_STR, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 5:
+						if (do_dec_stat(A_CHR, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+				}
+				if (do_inc_stat(A_WIS)) ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_SWAP_DEX:
+			{
+				switch (randint(5)) {
+					case 1:
+						if (do_dec_stat(A_STR, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 2:
+						if (do_dec_stat(A_CON, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 3:
+						if (do_dec_stat(A_INT, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 4:
+						if (do_dec_stat(A_WIS, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 5:
+						if (do_dec_stat(A_CHR, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+				}
+				if (do_inc_stat(A_DEX)) ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_SWAP_CON:
+			{
+				switch (randint(5)) {
+					case 1:
+						if (do_dec_stat(A_DEX, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 2:
+						if (do_dec_stat(A_STR, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 3:
+						if (do_dec_stat(A_INT, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 4:
+						if (do_dec_stat(A_WIS, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 5:
+						if (do_dec_stat(A_CHR, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+				}
+				if (do_inc_stat(A_CON)) ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_SWAP_CHA:
+			{
+				switch (randint(5)) {
+					case 1:
+						if (do_dec_stat(A_DEX, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 2:
+						if (do_dec_stat(A_CON, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 3:
+						if (do_dec_stat(A_INT, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 4:
+						if (do_dec_stat(A_WIS, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+					case 5:
+						if (do_dec_stat(A_STR, STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
+						break;
+				}
+				if (do_inc_stat(A_CHR)) ident = TRUE;
 
 				break;
 			}

@@ -1634,6 +1634,17 @@ struct player_type
 	s16b tim_esp_pot;       /* Timed full ESP */
 	s16b tim_levi_pot;      /* Timed levitation */
 	s16b tim_jolt_fa;       /* Timed free action */
+	s16b tim_boost_pot;     /* Timed boost */
+	s16b tim_luck_pot;      /* Timed luck */
+	s16b tim_reshi_pot;     /* Timed high resists */
+	s16b tim_resrare_pot;   /* Timed super resists */
+	s16b tim_air_pot;       /* Timed magical breathing */
+	s16b tim_antimagic_pot; /* Timed antimagic (50%) */
+	s16b tim_timeflow_pot;  /* Timed time resist */
+	s16b tim_regen_pot;     /* Timed regeneration */
+	s16b tim_power_pot;     /* Timed power */
+	s16b tim_infra_x;       /* Timed super infravision */
+	s16b tim_infra_xx;      /* Timed ultra infravision */
 	s16b tim_manasilence;   /* Timed silence */
 	s16b betweensickness;   /* Timer before you can use a void jumpgate again --Amy */
 	s16b stairsickness;     /* Timer before you can use a stair again --Amy */

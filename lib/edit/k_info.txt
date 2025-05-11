@@ -9547,6 +9547,267 @@ P:0:1d1:0:0:0
 F:FOUNTAIN
 D:A Japanese beverage that makes you super powerful for a short time. 
 
+N:1142:Boost
+G:!:d
+I:72:33:0
+W:24:0:0:20000
+A:24/8
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This potion lets you fight much more effectively in melee for a while. 
+
+N:1143:Fear
+G:!:d
+I:72:34:0
+W:0:0:0:0
+A:0/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:A potion that makes you afraid if you're foolish enough to quaff it. 
+
+N:1144:Luck
+G:!:d
+I:72:35:0
+W:20:0:0:5000
+A:20/4
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Quaffing this potion makes you lucky for a period of time. 
+
+N:1145:Resist Lightning
+G:!:d
+I:72:36:0
+W:1:0:0:30
+A:1/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This magical potion will for a short while insulate you against lightning. 
+
+N:1146:Resist Acid
+G:!:d
+I:72:37:0
+W:1:0:0:30
+A:1/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This magical potion will for a short while protect you from corrosion. 
+
+N:1147:Resist Poison
+G:!:d
+I:72:38:0
+W:1:0:0:30
+A:1/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This magical potion will for a short while allow you to withstand poison. 
+
+N:1148:High Resistance
+G:!:d
+I:72:39:100
+W:30:0:0:1000
+A:30/2
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+F:FOUNTAIN
+D:A potion that temporarily protects you from sound, light, darkness, chaos, 
+D:disenchantment, shards, nexus, nether, nerve and mind damage. 
+
+N:1149:Rare Resistance
+G:!:d
+I:72:40:100
+W:50:0:0:3000
+A:50/4
+P:0:1d1:0:0:0
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+F:FOUNTAIN
+D:A potion that temporarily protects you from water, inertia, plasma, 
+D:disintegration and ether damage. 
+
+N:1150:Sense Objects
+G:!:d
+I:72:41:0
+W:20:0:0:600
+A:20/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Quaffing this potion displays all objects on the entire dungeon level. 
+
+N:1151:Experience Loss
+G:!:d
+I:72:42:0
+W:20:0:0:0
+A:20/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:If you quaff this potion, you will lose a bunch of experience points and 
+D:may lose an experience level. 
+
+N:1152:& Polymorph Oil~ of #
+G:!:d
+I:72:43:0
+W:30:0:0:5000
+A:30:5
+P:0:1d1:0:0:0
+F:FULL_NAME | EASY_KNOW | FOUNTAIN
+D:This concoction can transform your body for a period of time.
+
+N:1153:Greater Curing
+G:!:d
+I:72:44:1000
+W:30:0:0:1200
+A:30/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This blessed potion helps to recover from a wide variety of ailments.
+
+N:1154:Cure Mortal Insanity
+G:!:d
+I:72:45:0
+W:20:5:0:200
+A:20/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This drink will cure you even of life-threatening mental disorders.
+
+N:1155:Cure Mind
+G:!:d
+I:72:46:0
+W:45:5:0:700
+A:45/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This blessed potion can make you completely sane and healthy, even if you have only the
+D:faintest shred of sanity left, and additionally cures various status effects. 
+
+N:1156:Air
+G:!:d
+I:72:47:0
+W:70:0:0:12000
+A:70/5
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:If you need to traverse an area without air, quaffing this potion will give you 
+D:temporary abilities to breathe. 
+
+N:1157:Antimagic
+G:!:d
+I:72:48:0
+W:50:0:0:3000
+A:50/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:When you quaff this potion, you temporarily become surrounded by an antimagic field 
+D:that may disrupt enemy spellcasting, but it also disrupts your own magic sometimes. 
+
+N:1158:Time Flow
+G:!:d
+I:72:49:0
+W:30:0:0:6000
+A:30/4
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:A potion that stabilizes the space-time continuum around you when quaffed. While 
+D:this effect is active, nobody can teleport, and it also protects against time attacks. 
+
+N:1159:Regeneration
+G:!:d
+I:72:50:0
+W:15:0:0:500
+A:15/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Speeds up your regenerative powers for a while when quaffed. 
+
+N:1160:Darkvision
+G:!:d
+I:72:51:0
+W:12:0:0:80
+A:12/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This potion improves your infravision by 30 feet for a while. 
+
+N:1161:Heat Vision
+G:!:d
+I:72:52:0
+W:30:0:0:200
+A:30/1
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This potion improves your infravision by 50 feet for a while. 
+
+N:1162:Power
+G:!:d
+I:72:53:0
+W:20:0:0:2000
+A:20/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This potion boosts your stats for a period of time. 
+
+N:1163:Gain Ability
+G:!:d
+I:72:54:0
+W:20:0:0:8000
+A:20/20:40/5:60/2
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:This beneficial potion will magically improve one of your stats at random. 
+
+N:1164:Brawn
+G:!:d
+I:72:55:0
+W:10:0:0:4000
+A:10/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Increases your strength, but decreases one other stat at random. 
+
+N:1165:Intellect
+G:!:d
+I:72:56:0
+W:10:0:0:4000
+A:10/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Increases your intelligence, but decreases one other stat at random. 
+
+N:1166:Contemplation
+G:!:d
+I:72:57:0
+W:10:0:0:4000
+A:10/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Increases your wisdom, but decreases one other stat at random. 
+
+N:1167:Nimbleness
+G:!:d
+I:72:58:0
+W:10:0:0:4000
+A:10/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Increases your dexterity, but decreases one other stat at random. 
+
+N:1168:Toughness
+G:!:d
+I:72:59:0
+W:10:0:0:4000
+A:10/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Increases your constitution, but decreases one other stat at random. 
+
+N:1169:Beauty
+G:!:d
+I:72:60:0
+W:10:0:0:4000
+A:10/3
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Increases your charisma, but decreases one other stat at random. 
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

@@ -2739,6 +2739,72 @@ static void process_world(void)
 		(void)set_tim_jolt_fa(p_ptr->tim_jolt_fa - 1);
 	}
 
+	/* temporary boost */
+	if (p_ptr->tim_boost_pot)
+	{
+		(void)set_tim_boost_pot(p_ptr->tim_boost_pot - 1);
+	}
+
+	/* temporary luck */
+	if (p_ptr->tim_luck_pot)
+	{
+		(void)set_tim_luck_pot(p_ptr->tim_luck_pot - 1);
+	}
+
+	/* temporary high resist */
+	if (p_ptr->tim_reshi_pot)
+	{
+		(void)set_tim_reshi_pot(p_ptr->tim_reshi_pot - 1);
+	}
+
+	/* temporary rare resist */
+	if (p_ptr->tim_resrare_pot)
+	{
+		(void)set_tim_resrare_pot(p_ptr->tim_resrare_pot - 1);
+	}
+
+	/* temporary magical breathing */
+	if (p_ptr->tim_air_pot)
+	{
+		(void)set_tim_air_pot(p_ptr->tim_air_pot - 1);
+	}
+
+	/* temporary antimagic */
+	if (p_ptr->tim_antimagic_pot)
+	{
+		(void)set_tim_antimagic_pot(p_ptr->tim_antimagic_pot - 1);
+	}
+
+	/* temporary time flow */
+	if (p_ptr->tim_timeflow_pot)
+	{
+		(void)set_tim_timeflow_pot(p_ptr->tim_timeflow_pot - 1);
+	}
+
+	/* temporary regeneration */
+	if (p_ptr->tim_regen_pot)
+	{
+		(void)set_tim_regen_pot(p_ptr->tim_regen_pot - 1);
+	}
+
+	/* temporary power */
+	if (p_ptr->tim_power_pot)
+	{
+		(void)set_tim_power_pot(p_ptr->tim_power_pot - 1);
+	}
+
+	/* Timed infra-vision +3 */
+	if (p_ptr->tim_infra_x)
+	{
+		(void)set_tim_infra_x(p_ptr->tim_infra_x - 1);
+	}
+
+	/* Timed infra-vision +5 */
+	if (p_ptr->tim_infra_xx)
+	{
+		(void)set_tim_infra_xx(p_ptr->tim_infra_xx - 1);
+	}
+
 	/* Silenced */
 	if (p_ptr->tim_manasilence)
 	{

@@ -2181,8 +2181,36 @@
 #define SV_POTION2_HEALING_SUPER         30
 #define SV_POTION2_CLAIRVOYANCE          31
 #define SV_POTION2_TSUYOSHI              32
+#define SV_POTION2_BOOST                 33
+#define SV_POTION2_FEAR                  34
+#define SV_POTION2_LUCK                  35
+#define SV_POTION2_RESIST_ELEC           36
+#define SV_POTION2_RESIST_ACID           37
+#define SV_POTION2_RESIST_POIS           38
+#define SV_POTION2_HIGH_RESIST           39
+#define SV_POTION2_RARE_RESIST           40
+#define SV_POTION2_SENSE_OBJECTS         41
+#define SV_POTION2_EXP_LOSS              42
+#define SV_POTION2_MIMIC_X               43
+#define SV_POTION2_CURING_X              44
+#define SV_POTION2_CURE_MORTAL_SANITY    45
+#define SV_POTION2_CURE_SANITY_X         46
+#define SV_POTION2_AIR                   47
+#define SV_POTION2_ANTIMAGIC             48
+#define SV_POTION2_TIME_FLOW             49
+#define SV_POTION2_REGEN                 50
+#define SV_POTION2_INFRAVISION_X         51
+#define SV_POTION2_INFRAVISION_XX        52
+#define SV_POTION2_POWER                 53
+#define SV_POTION2_GAIN_ABIL             54
+#define SV_POTION2_SWAP_STR              55
+#define SV_POTION2_SWAP_INT              56
+#define SV_POTION2_SWAP_WIS              57
+#define SV_POTION2_SWAP_DEX              58
+#define SV_POTION2_SWAP_CON              59
+#define SV_POTION2_SWAP_CHA              60
 
-#define SV_POTION2_LAST                  32
+#define SV_POTION2_LAST                  60
 
 /* The "sval" codes for TV_FOOD */
 #define SV_FOOD_POISON                   0

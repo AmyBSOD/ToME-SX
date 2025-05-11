@@ -4225,7 +4225,7 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 		}
 		break;
 	case TV_POTION2:
-		if (o_ptr->sval == SV_POTION2_MIMIC)
+		if (o_ptr->sval == SV_POTION2_MIMIC || o_ptr->sval == SV_POTION2_MIMIC_X)
 		{
 			s32b mimic;
 

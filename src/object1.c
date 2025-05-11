@@ -1727,7 +1727,7 @@ void object_desc(char *buf, object_type *o_ptr, int pref, int mode)
 	case TV_POTION2:
 		{
 			/* Color the object */
-			if ((o_ptr->tval != TV_POTION2) || (o_ptr->sval != SV_POTION2_MIMIC) || (!aware))
+			if ((o_ptr->tval != TV_POTION2) || (o_ptr->sval != SV_POTION2_MIMIC && o_ptr->sval != SV_POTION2_MIMIC_X) || (!aware))
 			{
 				modstr = potion_adj[indexx];
 				if (aware) append_name = TRUE;
