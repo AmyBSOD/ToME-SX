@@ -296,6 +296,54 @@ static byte potion_col[MAX_COLORS] =
 	TERM_GREEN, TERM_L_RED, TERM_YELLOW, TERM_UMBER, TERM_RED
 };
 
+static cptr potionX_adj[MAX_COLORS] =
+{
+	"Clear", "Light Brown", "Icky Green", "Strangely Phosphorescent",
+	"Azure", "Blue", "Blue Speckled", "Black", "Brown", "Brown Speckled",
+	"Bubbling", "Chartreuse", "Cloudy", "Copper Speckled", "Crimson", "Cyan",
+	"Dark Blue", "Dark Green", "Dark Red", "Gold Speckled", "Green",
+	"Green Speckled", "Grey", "Grey Speckled", "Hazy", "Indigo",
+	"Light Blue", "Light Green", "Magenta", "Metallic Blue", "Metallic Red",
+	"Metallic Green", "Metallic Purple", "Misty", "Orange", "Orange Speckled",
+	"Pink", "Pink Speckled", "Puce", "Purple", "Purple Speckled",
+	"Red", "Red Speckled", "Silver Speckled", "Smoky", "Tangerine",
+	"Violet", "Vermilion", "White", "Yellow", "Violet Speckled",
+	"Pungent", "Clotted Red", "Viscous Pink", "Oily Yellow", "Gloopy Green",
+	"Shimmering", "Coagulated Crimson", "Yellow Speckled", "Gold",
+	"Manly", "Stinking", "Oily Black", "Ichor", "Ivory White", "Sky Blue",
+	"Effervescent", "Luminescent", "Muddy", "Iridescent", "Simmering", 
+	"Manky", "Bubbly", "Swirly", "Steamy", "Gooey", 
+	"Fluorescent", "Fuming", "Sizzling", "Syrup", "Frothing", 
+	"Dimly Shining", "Glossy White", "Caustic", "Blood Red", "Sparkling",
+	"Antihistamine", "Flowering", "Crispy", "Smooth", "Silky", 
+	"Noble", "Serum", "Verdant", "Olive", "Gloss", 
+	"Essential", "Alcoholic", "Moonshine", "Opaque", "Spoonful"
+};
+
+static byte potionX_col[MAX_COLORS] =
+{
+	TERM_WHITE, TERM_L_UMBER, TERM_GREEN, TERM_MULTI,
+	TERM_L_BLUE, TERM_BLUE, TERM_BLUE, TERM_L_DARK, TERM_UMBER, TERM_UMBER,
+	TERM_L_WHITE, TERM_L_GREEN, TERM_WHITE, TERM_L_UMBER, TERM_RED, TERM_L_BLUE,
+	TERM_BLUE, TERM_GREEN, TERM_RED, TERM_YELLOW, TERM_GREEN,
+	TERM_GREEN, TERM_SLATE, TERM_SLATE, TERM_L_WHITE, TERM_VIOLET,
+	TERM_L_BLUE, TERM_L_GREEN, TERM_RED, TERM_BLUE, TERM_RED,
+	TERM_GREEN, TERM_VIOLET, TERM_L_WHITE, TERM_ORANGE, TERM_ORANGE,
+	TERM_L_RED, TERM_L_RED, TERM_VIOLET, TERM_VIOLET, TERM_VIOLET,
+	TERM_RED, TERM_RED, TERM_L_WHITE, TERM_L_DARK, TERM_ORANGE,
+	TERM_VIOLET, TERM_RED, TERM_WHITE, TERM_YELLOW, TERM_VIOLET,
+	TERM_L_RED, TERM_RED, TERM_L_RED, TERM_YELLOW, TERM_GREEN,
+	TERM_MULTI, TERM_RED, TERM_YELLOW, TERM_YELLOW,
+	TERM_L_UMBER, TERM_UMBER, TERM_L_DARK, TERM_RED, TERM_WHITE, TERM_L_BLUE,
+	TERM_SLATE, TERM_WHITE, TERM_UMBER, TERM_ORANGE, TERM_ORANGE, 
+	TERM_YELLOW, TERM_WHITE, TERM_UMBER, TERM_WHITE, TERM_VIOLET, 
+	TERM_ORANGE, TERM_SLATE, TERM_ORANGE, TERM_GREEN, TERM_YELLOW, 
+	TERM_WHITE, TERM_WHITE, TERM_GREEN, TERM_RED, TERM_L_BLUE, 
+	TERM_GREEN, TERM_L_GREEN, TERM_RED, TERM_WHITE, TERM_VIOLET, 
+	TERM_BLUE, TERM_YELLOW, TERM_YELLOW, TERM_GREEN, TERM_L_RED, 
+	TERM_GREEN, TERM_L_RED, TERM_YELLOW, TERM_UMBER, TERM_RED
+};
+
 
 /*
  * Syllables for scrolls (must be 1-4 letters each)
@@ -390,9 +438,13 @@ static bool object_flavor(int k_idx)
 		}
 
 	case TV_POTION:
-	case TV_POTION2:
 		{
 			return (0xE0 + potion_col[k_ptr->sval]);
+		}
+
+	case TV_POTION2:
+		{
+			return (0xE0 + potionX_col[k_ptr->sval]);
 		}
 
 	case TV_FOOD:
@@ -645,6 +697,18 @@ void flavor_init(void)
 		temp_col = potion_col[i];
 		potion_col[i] = potion_col[j];
 		potion_col[j] = temp_col;
+	}
+
+	/* second set of potions */
+	for (i = 0; i < MAX_COLORS; i++)
+	{
+		j = rand_int(MAX_COLORS);
+		temp_adj = potionX_adj[i];
+		potionX_adj[i] = potionX_adj[j];
+		potionX_adj[j] = temp_adj;
+		temp_col = potionX_col[i];
+		potionX_col[i] = potionX_col[j];
+		potionX_col[j] = temp_col;
 	}
 
 	/* Scrolls (random titles, always white) */
@@ -1724,12 +1788,30 @@ void object_desc(char *buf, object_type *o_ptr, int pref, int mode)
 		}
 
 	case TV_POTION:
-	case TV_POTION2:
 		{
 			/* Color the object */
 			if ((o_ptr->tval != TV_POTION2) || (o_ptr->sval != SV_POTION2_MIMIC && o_ptr->sval != SV_POTION2_MIMIC_X) || (!aware))
 			{
 				modstr = potion_adj[indexx];
+				if (aware) append_name = TRUE;
+			}
+			else
+			{
+				call_lua("get_mimic_info", "(d,s)", "s", o_ptr->pval2, "name", &modstr);
+			}
+			if (((plain_descriptions) && (aware)) || o_ptr->ident & IDENT_STOREB)
+				basenm = "& Potion~";
+			else
+				basenm = aware ? "& # Potion~" : "& # Potion~";
+			break;
+		}
+
+	case TV_POTION2:
+		{
+			/* Color the object */
+			if ((o_ptr->tval != TV_POTION2) || (o_ptr->sval != SV_POTION2_MIMIC && o_ptr->sval != SV_POTION2_MIMIC_X) || (!aware))
+			{
+				modstr = potionX_adj[indexx];
 				if (aware) append_name = TRUE;
 			}
 			else
