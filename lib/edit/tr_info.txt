@@ -3627,6 +3627,16 @@ I:50:100:50:4:100:0d0:G
 D:You are contaminated!
 F:FLOOR
 
+N:737:Etherwind Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:738:Radioactivity Trap
+I:80:2:50:4:60:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

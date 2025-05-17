@@ -668,6 +668,13 @@ void do_fart_effect(void)
 			break;
 		}
 
+	case 67:
+		{
+			msg_format("You got contaminated!");
+			contaminate(50 + randint(40));
+			break;
+		}
+
 	default:
 		{
 			msg_print("An ancient foul curse afflicts you...");

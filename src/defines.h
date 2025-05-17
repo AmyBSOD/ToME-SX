@@ -3452,6 +3452,9 @@
 #define TRAP_OF_CONTAMINATE_VI            735
 #define TRAP_OF_CONTAMINATE_VII           736
 
+#define TRAP_NASTY152                     737
+#define TRAP_NASTY153                     738
+
 /*** General index values ***/
 
 

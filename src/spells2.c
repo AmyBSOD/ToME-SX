@@ -2217,6 +2217,14 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Random item appearances occasionally get reshuffled.";
 	}
+	if (p_ptr->nastytrap152)
+	{
+		info[i++] = "You have a problem: Being out in the open contaminates you over time.";
+	}
+	if (p_ptr->nastytrap153)
+	{
+		info[i++] = "You have a problem: You get contaminated over time.";
+	}
 
 	if (p_ptr->contamination >= 10000)
 	{

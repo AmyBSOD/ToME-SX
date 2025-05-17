@@ -3600,6 +3600,15 @@ static void process_world(void)
 		do_dec_stat(A_WIS, STAT_DEC_PERMANENT_NORESIST);
 	}
 
+	if (p_ptr->nastytrap152 && !dun_level && rand_int(100) == 0) {
+		msg_print("Etherwind is blowing!");
+		contaminate(1);
+	}
+
+	if (p_ptr->nastytrap153 && rand_int(100) == 0) {
+		contaminate(1);
+	}
+
 	if (p_ptr->nastytrap12 && (rand_int(TY_CURSE_CHANCE) == 0) ) {
 		activate_ty_curse();
 	}

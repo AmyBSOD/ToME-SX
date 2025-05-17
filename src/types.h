@@ -2119,8 +2119,8 @@ struct player_type
 	bool nastytrap149; /* degradation trap - acid and disenchantment can lower your shit's pluses even more */
 	bool nastytrap150; /* power breath trap - disables breath damage caps */
 	bool nastytrap151; /* appearance shuffling trap - random item appearances can shuffle */
-	bool nastytrap152;
-	bool nastytrap153;
+	bool nastytrap152; /* etherwind trap - slowly get contaminated while out in the open */
+	bool nastytrap153; /* radioactivity trap - slowly get contaminated regardless of where you are */
 	bool nastytrap154;
 	bool nastytrap155;
 	bool nastytrap156;
