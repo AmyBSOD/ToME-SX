@@ -5005,7 +5005,8 @@ void do_cmd_pet(void)
 		/* Access the monster */
 		m_ptr = &m_list[pet_ctr];
 
-		if (m_ptr->status >= MSTATUS_FRIEND) pets++;
+		/* used to be that you could command coaligned monsters for some reason... no more :-P --Amy */
+		if (m_ptr->status >= MSTATUS_PET) pets++;
 	}
 
 	if (pets == 0)
