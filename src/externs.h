@@ -1288,6 +1288,7 @@ extern void teleport_player_level_trap(void);
 extern void recall_player(int d, int f);
 extern void take_hit(int damage, cptr kb_str);
 extern void take_sanity_hit(int damage, cptr hit_from);
+extern void contaminate(int damage);
 extern void acid_dam(int dam, cptr kb_str);
 extern void elec_dam(int dam, cptr kb_str);
 extern void fire_dam(int dam, cptr kb_str);

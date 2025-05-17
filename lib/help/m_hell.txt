@@ -13,16 +13,20 @@ ability to cast spells from the hell school depending on your Prayer
 skill.
 
 #####sHell Spells
-There are five spells available for the hell school. These spells are:
+There are six spells available for the hell school. These spells are:
 1. [[[[[sNether Eye] (school level 1)
    Shoots a bolt of nether from your fingertips.
    Sometimes it can blast through its first target.
 2. [[[[[sGood Night] (school level 10)
    Fires a darkness ball at the enemy.
-3. [[[[[sTimelapse] (school level 30)
+3. [[[[[sNerve Poison] (dual school level 20)
+   Fires a ball of nerve gas at the enemy.
+#####v   Your Udun and Hell skills must have reached a combined average level 
+#####v   of 20 in order to cast this spell.
+4. [[[[[sTimelapse] (school level 30)
    Creates a time field, constantly damaging enemies who walk into it.
-4. [[[[[sRocket Launcher] (school level 40)
+5. [[[[[sRocket Launcher] (school level 40)
    Fires a powerful rocket at the enemy.
-5. [[[[[sNuclear Missile] (school level 75)
+6. [[[[[sNuclear Missile] (school level 75)
    Launches a highly damaging nuclear missile.
 

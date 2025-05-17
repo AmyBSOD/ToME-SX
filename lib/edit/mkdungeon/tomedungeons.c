@@ -71,7 +71,7 @@ int randomfloortype(void)
 		case 10:
 			floornumber = 102; /* nether mist */
 			if (random_number(10) == 1) {
-				int randdmg = random_number(12);
+				int randdmg = random_number(15);
 				switch (randdmg) {
 					case 1:
 					default:
@@ -109,6 +109,15 @@ int randomfloortype(void)
 						break;
 					case 12:
 						floornumber = 121; /* nuclear waste */
+						break;
+					case 13:
+						floornumber = 122; /* dangerous contraption */
+						break;
+					case 14:
+						floornumber = 123; /* mindwave emitter */
+						break;
+					case 15:
+						floornumber = 124; /* ether mist */
 						break;
 				}
 			}
@@ -386,7 +395,7 @@ void randomfillmethod(void)
 void randomdungeondamage(void)
 {
 	int dudrand;
-	dudrand = random_number(26);
+	dudrand = random_number(29);
 
 	switch (dudrand) {
 		case 1:
@@ -467,6 +476,15 @@ void randomdungeondamage(void)
 			break;
 		case 26:
 			printf("E:1d%d:%d:RAISE\n", random_number(6), 9 + random_number(31) );
+			break;
+		case 27:
+			printf("E:1d%d:%d:NERVE\n", random_number(6), 9 + random_number(31) );
+			break;
+		case 28:
+			printf("E:1d%d:%d:MIND\n", random_number(6), 9 + random_number(31) );
+			break;
+		case 29:
+			printf("E:1d%d:%d:ETHER\n", random_number(6), 9 + random_number(31) );
 			break;
 	}
 

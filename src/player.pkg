@@ -1425,6 +1425,21 @@ struct player_type
 	 * @note Resist nexus
 	 */
 	bool resist_nexus;
+	/** @structvar resist_nerve
+	 * @brief Boolean
+	 * @note Resist nerve
+	 */
+	bool resist_nerve;
+	/** @structvar resist_mind
+	 * @brief Boolean
+	 * @note Resist mind
+	 */
+	bool resist_mind;
+	/** @structvar resist_ether
+	 * @brief Boolean
+	 * @note Resist ether
+	 */
+	bool resist_ether;
 	/** @structvar resist_blind
 	 * @brief Boolean
 	 * @note Resist blindness

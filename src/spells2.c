@@ -734,7 +734,7 @@ void self_knowledge(FILE *fff)
 
 	char Dummy[80];
 
-	cptr info[200];
+	cptr info[500];
 
 	strcpy (Dummy, "");
 
@@ -1468,6 +1468,18 @@ void self_knowledge(FILE *fff)
 	if (p_ptr->resist_nexus)
 	{
 		info[i++] = "You are resistant to nexus attacks.";
+	}
+	if (p_ptr->resist_nerve)
+	{
+		info[i++] = "You are resistant to nerve attacks.";
+	}
+	if (p_ptr->resist_mind)
+	{
+		info[i++] = "You are resistant to mind attacks.";
+	}
+	if (p_ptr->resist_ether)
+	{
+		info[i++] = "You are resistant to ether.";
 	}
 	if (p_ptr->immune_neth)
 	{
@@ -2204,6 +2216,31 @@ void self_knowledge(FILE *fff)
 	if (p_ptr->nastytrap151)
 	{
 		info[i++] = "You have a problem: Random item appearances occasionally get reshuffled.";
+	}
+
+	if (p_ptr->contamination >= 10000)
+	{
+		info[i++] = "You are suffering from fatal contamination.";
+	}
+	else if (p_ptr->contamination >= 2000)
+	{
+		info[i++] = "You are suffering from lethal contamination.";
+	}
+	else if (p_ptr->contamination >= 1000)
+	{
+		info[i++] = "You are suffering from severe contamination.";
+	}
+	else if (p_ptr->contamination >= 500)
+	{
+		info[i++] = "You are suffering from contamination.";
+	}
+	else if (p_ptr->contamination >= 200)
+	{
+		info[i++] = "You are suffering from light contamination.";
+	}
+	else if (p_ptr->contamination >= 100)
+	{
+		info[i++] = "You are suffering from minor contamination.";
 	}
 
 	/* Access the current weapon */

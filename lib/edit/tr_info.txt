@@ -3517,6 +3517,116 @@ I:6:50:5:0:20:1d10:r
 D:You suddenly become lighter!
 F:FLOOR | CHEST | DOOR
 
+N:715:Nerve Tickle Trap
+I:6:20:0:10:15:0d0:o
+D:Dangerous tickling contraptions are built!
+F:FLOOR | CHEST | DOOR
+
+N:716:Mindwave Trap
+I:6:20:0:10:15:0d0:o
+D:Mindwave emitters appear out of nowhere!
+F:FLOOR | CHEST | DOOR
+
+N:717:Ether Mist Trap
+I:8:20:0:10:30:0d0:o
+D:Ether mist spreads.
+F:FLOOR | CHEST | DOOR
+
+N:718:Nerve Bolt Trap
+I:6:80:5:6:15:3d12:g
+D:A bolt of nerve hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:719:Nerve Ball Trap
+I:8:60:5:8:20:3d18:B
+D:A ball of nerve hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:720:Nerve Balls Trap
+I:13:20:5:8:40:3d18:B
+D:A ball of nerve hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:721:Nerve Trap
+I:3:100:0:10:12:0d0:g
+D:You are hit by nerve!
+F:FLOOR | CHEST | DOOR
+
+N:722:Mind Bolt Trap
+I:6:80:5:6:15:3d12:g
+D:A bolt of mindwaves hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:723:Mind Ball Trap
+I:8:60:5:8:20:3d18:B
+D:A ball of mindwaves hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:724:Mind Balls Trap
+I:13:20:5:8:40:3d18:B
+D:A ball of mindwaves hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:725:Mind Trap
+I:3:100:0:10:12:0d0:g
+D:You are hit by mindwaves!
+F:FLOOR | CHEST | DOOR
+
+N:726:Ether Bolt Trap
+I:8:80:5:9:25:8d8:g
+D:An ether bolt hits you!
+F:FLOOR | CHEST | DOOR | LEVEL4
+
+N:727:Ether Ball Trap
+I:10:60:5:10:30:5d20:B
+D:A ball of ether hits you!
+F:FLOOR | CHEST | DOOR | LEVEL4
+
+N:728:Ether Balls Trap
+I:15:20:5:10:50:5d20:B
+D:A ball of ether hits you!
+F:FLOOR | CHEST | DOOR | LEVEL4
+
+N:729:Ether Trap
+I:3:100:0:10:12:0d0:g
+D:You are hit by ether!
+F:FLOOR | CHEST | DOOR
+
+N:730:Low Contamination Trap
+I:2:100:50:4:1:0d0:G
+D:You are contaminated!
+F:FLOOR
+
+N:731:Minor Contamination Trap
+I:2:100:50:4:1:0d0:G
+D:You are contaminated!
+F:FLOOR
+
+N:732:Light Contamination Trap
+I:3:100:50:4:2:0d0:G
+D:You are contaminated!
+F:FLOOR
+
+N:733:Contamination Trap
+I:5:100:50:4:10:0d0:G
+D:You are contaminated!
+F:FLOOR
+
+N:734:Severe Contamination Trap
+I:10:100:50:4:35:0d0:G
+D:You are contaminated!
+F:FLOOR
+
+N:735:Lethal Contamination Trap
+I:20:100:50:4:60:0d0:G
+D:You are contaminated!
+F:FLOOR
+
+N:736:Fatal Contamination Trap
+I:50:100:50:4:100:0d0:G
+D:You are contaminated!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

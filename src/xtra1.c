@@ -1756,6 +1756,31 @@ void calc_sanity(void)
 	if (!p_ptr->hard_mode && !p_ptr->nastytrap124) msane += 50;
 	msane += (get_skill(SKILL_CLEARMIND) * 2);
 
+	/* contamination reduces your max sanity */
+	if (p_ptr->contamination >= 10000) { /* 50% */
+		msane /= 2;
+	}
+	else if (p_ptr->contamination >= 2000) { /* 66% */
+		msane *= 2;
+		msane /= 3;
+	}
+	else if (p_ptr->contamination >= 1000) { /* 75% */
+		msane *= 3;
+		msane /= 4;
+	}
+	else if (p_ptr->contamination >= 500) { /* 85% */
+		msane *= 17;
+		msane /= 20;
+	}
+	else if (p_ptr->contamination >= 200) { /* 90% */
+		msane *= 9;
+		msane /= 10;
+	}
+	else if (p_ptr->contamination >= 100) { /* 95% */
+		msane *= 19;
+		msane /= 20;
+	}
+
 	if (p_ptr->msane != msane)
 	{
 		/* Sanity carries over between levels. */
@@ -3289,6 +3314,9 @@ void calc_bonuses(bool silent)
 	p_ptr->resist_plasma = FALSE;
 	p_ptr->resist_disint = FALSE;
 	p_ptr->resist_time = FALSE;
+	p_ptr->resist_nerve = FALSE;
+	p_ptr->resist_mind = FALSE;
+	p_ptr->resist_ether = FALSE;
 	p_ptr->immune_neth = FALSE;
 	p_ptr->immune_pois = FALSE;
 	p_ptr->resist_fear = FALSE;
@@ -4092,6 +4120,8 @@ void calc_bonuses(bool silent)
 		p_ptr->resist_shard = TRUE;
 		p_ptr->resist_nexus = TRUE;
 		p_ptr->resist_neth = TRUE;
+		p_ptr->resist_nerve = TRUE;
+		p_ptr->resist_mind = TRUE;
 	}
 
 	if (p_ptr->tim_resrare_pot)
@@ -4100,6 +4130,7 @@ void calc_bonuses(bool silent)
 		p_ptr->resist_inertia = TRUE;
 		p_ptr->resist_plasma = TRUE;
 		p_ptr->resist_disint = TRUE;
+		p_ptr->resist_ether = TRUE;
 	}
 
 	if (p_ptr->tim_air_pot)

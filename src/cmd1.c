@@ -4037,10 +4037,21 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 		else if (cave[y][x].feat >= FEAT_ALTAR_HEAD &&
 		                cave[y][x].feat <= FEAT_ALTAR_TAIL)
 		{
+			byte on_what = cave[y][x].feat;
+
+			int agod = on_what - FEAT_ALTAR_HEAD + 1;
+
 			cptr name = f_name + f_info[cave[y][x].feat].name;
 			cptr pref = (is_a_vowel(name[0])) ? "an" : "a";
 
 			msg_format("You see %s %s.", pref, name);
+
+			if (p_ptr->pgod == agod) {
+				if (p_ptr->contamination) {
+					p_ptr->contamination = 0;
+					msg_print("Your deity cures your contamination!");
+				}
+			}
 
 			/* Flush message while running */
 			if (running) msg_print(NULL);
@@ -4049,10 +4060,21 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 		else if (cave[y][x].feat >= FEAT_ALTAR2_HEAD &&
 		                cave[y][x].feat <= FEAT_ALTAR2_TAIL)
 		{
+			byte on_what = cave[y][x].feat;
+
+			int agod = on_what - FEAT_ALTAR2_HEAD + 11;
+
 			cptr name = f_name + f_info[cave[y][x].feat].name;
 			cptr pref = (is_a_vowel(name[0])) ? "an" : "a";
 
 			msg_format("You see %s %s.", pref, name);
+
+			if (p_ptr->pgod == agod) {
+				if (p_ptr->contamination) {
+					p_ptr->contamination = 0;
+					msg_print("Your deity cures your contamination!");
+				}
+			}
 
 			/* Flush message while running */
 			if (running) msg_print(NULL);

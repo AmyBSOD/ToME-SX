@@ -754,7 +754,7 @@ school_book[9] = {
 
 -- Create the book of the mind
 school_book[10] = {
-	CHARM, CONFUSE, ARMOROFFEAR, STUN,
+	CHARM, CONFUSE, ARMOROFFEAR, STUN, MIND_BOLT,
 }
 
 -- Create the book of hellflame
@@ -764,7 +764,7 @@ school_book[11] = {
 
 -- Create the book of hell
 school_book[12] = {
-	NETHEREYE, GOODNIGHT, TIMELAPSE, ROCKETLAUNCHER, NUCLEARMISSILE,
+	NETHEREYE, GOODNIGHT, NERVE_POISON, TIMELAPSE, ROCKETLAUNCHER, NUCLEARMISSILE,
 }
 
 -- Create the book of heavens

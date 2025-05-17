@@ -4996,6 +4996,27 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_ELE_NERVE:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_NERVE, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_MIND:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_MIND, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_ETHER:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_ETHER, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
 	case TRAP_OF_ELE_TIME:
 		{
 			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_TIME, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
@@ -6301,6 +6322,104 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			msg_format("You stagger...");
 			(void)set_stun(p_ptr->stun + randint(100) + (p_ptr->lev * 2));
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_CONTAMINATE_I:
+		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else efflevel = p_ptr->lev * 2;
+
+			msg_format("Your Geiger counter is ticking!");
+
+			contaminate(10 + (efflevel / 3));
+
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_CONTAMINATE_II:
+		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else efflevel = p_ptr->lev * 2;
+
+			msg_format("Your Geiger counter is ticking!");
+
+			contaminate(100 + (efflevel / 2));
+
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_CONTAMINATE_III:
+		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else efflevel = p_ptr->lev * 2;
+
+			msg_format("Your Geiger counter is ticking!");
+
+			contaminate(200 + efflevel);
+
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_CONTAMINATE_IV:
+		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else efflevel = p_ptr->lev * 2;
+
+			msg_format("Your Geiger counter is ticking!");
+
+			contaminate(500 + (efflevel * 2));
+
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_CONTAMINATE_V:
+		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else efflevel = p_ptr->lev * 2;
+
+			msg_format("Your Geiger counter is ticking!");
+
+			contaminate(1000 + (efflevel * 3));
+
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_CONTAMINATE_VI:
+		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else efflevel = p_ptr->lev * 2;
+
+			msg_format("Your Geiger counter is ticking!");
+
+			contaminate(2000 + (efflevel * 5));
+
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_CONTAMINATE_VII:
+		{
+			int efflevel = 99;
+			if (dun_level > 0) efflevel = dun_level;
+			else efflevel = p_ptr->lev * 2;
+
+			msg_format("Your Geiger counter is ticking!");
+
+			contaminate(10000 + (efflevel * 10));
+
 			ident = TRUE;
 			break;
 		}
@@ -11540,6 +11659,15 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_NEXUS_BOLT:
 		ident = player_handle_breath_trap(1, GF_NEXUS, TRAP_OF_NEXUS_BOLT);
 		break;
+	case TRAP_OF_NERVE_BOLT:
+		ident = player_handle_breath_trap(1, GF_NERVE, TRAP_OF_NERVE_BOLT);
+		break;
+	case TRAP_OF_MIND_BOLT:
+		ident = player_handle_breath_trap(1, GF_MIND, TRAP_OF_MIND_BOLT);
+		break;
+	case TRAP_OF_ETHER_BOLT:
+		ident = player_handle_breath_trap(1, GF_ETHER, TRAP_OF_ETHER_BOLT);
+		break;
 	case TRAP_OF_TIME_BOLT:
 		ident = player_handle_breath_trap(1, GF_TIME, TRAP_OF_TIME_BOLT);
 		break;
@@ -11645,6 +11773,15 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		break;
 	case TRAP_OF_NEXUS_BALL:
 		ident = player_handle_breath_trap(3, GF_NEXUS, TRAP_OF_NEXUS_BALL);
+		break;
+	case TRAP_OF_NERVE_BALL:
+		ident = player_handle_breath_trap(3, GF_NERVE, TRAP_OF_NERVE_BALL);
+		break;
+	case TRAP_OF_MIND_BALL:
+		ident = player_handle_breath_trap(3, GF_MIND, TRAP_OF_MIND_BALL);
+		break;
+	case TRAP_OF_ETHER_BALL:
+		ident = player_handle_breath_trap(3, GF_ETHER, TRAP_OF_ETHER_BALL);
 		break;
 	case TRAP_OF_TIME_BALL:
 		ident = player_handle_breath_trap(3, GF_TIME, TRAP_OF_TIME_BALL);
@@ -11924,6 +12061,39 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
 			while (ballamount > 0) {
 				ident = player_handle_breath_trap(3, GF_NEXUS, TRAP_OF_NEXUS_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_NERVE_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_NERVE, TRAP_OF_NERVE_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_MIND_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_MIND, TRAP_OF_MIND_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_ETHER_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_ETHER, TRAP_OF_ETHER_BALLS);
 				ballamount--;
 			}
 		}
@@ -12688,6 +12858,90 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				place_trap(y, x);
 			}
 			msg_print("You identified that trap as Nexus Field Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_NERVE:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 7, FEAT_DMG_NERVE, 50);
+
+		msg_print("Dangerous-looking contraptions are erected in the dungeon!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Nerve Tickle Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_MIND:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 8, FEAT_DMG_MIND, 65);
+
+		msg_print("Mindwave emitters spring up everywhere!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Mindwave Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_ETHER:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 10, FEAT_DMG_ETHER, 30);
+
+		msg_print("Ether mist spreads!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Ether Mist Trap.");
 		}
 		break;
 

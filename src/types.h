@@ -1537,6 +1537,8 @@ struct player_type
 	bool praying;                   /* Praying to your god. */
 	s16b melkor_sacrifice;          /* How much hp has been sacrified for damage */
 
+	s16b contamination;             /* caused by ether, weeping angels etc. */
+
 	s16b max_plv;                   /* Max Player Level */
 
 	s16b stat_max[6];               /* Current "maximal" stat values */
@@ -1776,6 +1778,10 @@ struct player_type
 	bool resist_plasma;     /* Resist plasma */
 	bool resist_disint;     /* Resist disintegration */
 	bool resist_time;       /* Resist time */
+
+	bool resist_nerve;	/* Resist nerve */
+	bool resist_mind;	/* Resist mind */
+	bool resist_ether;	/* Resist ether */
 
 	bool sensible_fire;     /* Fire does more damage on the player */
 	bool sensible_lite;     /* Lite does more damage on the player and blinds her/him */

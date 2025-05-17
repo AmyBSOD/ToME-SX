@@ -560,6 +560,9 @@ static bool do_extra(int flag)
 	do_s16b(&p_ptr->melkor_sacrifice, flag);
 	do_byte(&p_ptr->pgod, flag);
 
+	/* Contamination, by Amy, but originally from dnethack (weeping angels aka anti-fun squad) */
+	do_s16b(&p_ptr->contamination, flag);
+
 	/* Max Player and Dungeon Levels */
 	do_s16b(&p_ptr->max_plv, flag);
 

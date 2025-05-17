@@ -2011,6 +2011,33 @@ static void process_world(void)
 		regen_amount = regen_amount * 2;
 	}
 
+	/* contamination slows down regeneration */
+	if (regen_amount > 0) {
+		if (p_ptr->contamination >= 10000) {
+			regen_amount /= 10;
+		}
+		else if (p_ptr->contamination >= 2000) {
+			regen_amount /= 3;
+		}
+		else if (p_ptr->contamination >= 1000) {
+			regen_amount /= 2;
+		}
+		else if (p_ptr->contamination >= 500) {
+			regen_amount *= 7;
+			regen_amount /= 10;
+		}
+		else if (p_ptr->contamination >= 200) {
+			regen_amount *= 4;
+			regen_amount /= 5;
+		}
+		else if (p_ptr->contamination >= 100) {
+			regen_amount *= 9;
+			regen_amount /= 10;
+		}
+
+		if (regen_amount < 1) regen_amount = 1;
+	}
+
 	if (total_friends)
 	{
 		int upkeep_divider = 20;
@@ -3565,6 +3592,12 @@ static void process_world(void)
 				disturb(0, 0);
 			}
 		}
+	}
+
+	if ((p_ptr->contamination >= 100) && rand_int(10000) == 0) {
+		p_ptr->contamination -= 100;
+		msg_print("You are consumed by your contamination!");
+		do_dec_stat(A_WIS, STAT_DEC_PERMANENT_NORESIST);
 	}
 
 	if (p_ptr->nastytrap12 && (rand_int(TY_CURSE_CHANCE) == 0) ) {

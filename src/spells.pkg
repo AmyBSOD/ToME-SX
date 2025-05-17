@@ -343,8 +343,17 @@ typedef unsigned int u32b;
 /** @def GF_KILL_TRAP_NASTY */
 #define GF_KILL_TRAP_NASTY    111
 
+/** @def GF_NERVE */
+#define GF_NERVE    112
+
+/** @def GF_MIND */
+#define GF_MIND    113
+
+/** @def GF_ETHER */
+#define GF_ETHER    114
+
 /** @def MAX_GF */
-#define MAX_GF          112
+#define MAX_GF          115
 /** @} */
 
 /** @name Spell Projection Flags

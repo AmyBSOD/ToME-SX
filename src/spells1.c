@@ -1664,6 +1664,8 @@ byte spell_color(int type)
 			return (randint(4) == 1 ? TERM_L_BLUE : TERM_BLUE);
 		case GF_WAVE:
 			return (randint(4) == 1 ? TERM_L_BLUE : TERM_BLUE);
+		case GF_NERVE:
+			return (randint(4) == 1 ? TERM_L_BLUE : TERM_BLUE);
 		case GF_NETHER:
 			return (randint(4) == 1 ? TERM_SLATE : TERM_L_DARK);
 		case GF_CHAOS:
@@ -1671,6 +1673,8 @@ byte spell_color(int type)
 		case GF_DISENCHANT:
 			return (randint(5) != 1 ? TERM_L_BLUE : TERM_VIOLET);
 		case GF_NEXUS:
+			return (randint(5) < 3 ? TERM_L_RED : TERM_VIOLET);
+		case GF_MIND:
 			return (randint(5) < 3 ? TERM_L_RED : TERM_VIOLET);
 		case GF_CONFUSION:
 			return (mh_attr(4));
@@ -1713,6 +1717,7 @@ byte spell_color(int type)
 		case GF_PSI_DRAIN:
 		case GF_TELEKINESIS:
 		case GF_DOMINATION:
+		case GF_ETHER:
 			return (randint(3) != 1 ? TERM_L_BLUE : TERM_WHITE);
 		}
 	}
@@ -2042,6 +2047,12 @@ void take_sanity_hit(int damage, cptr hit_from)
 
 	if (p_ptr->nastytrap53) damage *= 2;
 
+	/* mind resistance halves sanity damage --Amy */
+	if (p_ptr->resist_mind) {
+		damage /= 2;
+		if (damage < 1) damage = 1;
+	}
+
 	/* Paranoia */
 	if (death) return;
 
@@ -2111,6 +2122,36 @@ void take_sanity_hit(int damage, cptr hit_from)
 	}
 }
 
+/* Contaminate player, by Amy, originally inspired by dnethack */
+void contaminate(int damage)
+{
+	int precheckamount = p_ptr->contamination;
+
+	msg_print("Your contamination increases.");
+
+	if (p_ptr->contamination >= 20000) return; /* sanity check */
+	if ((p_ptr->contamination + damage) >= 30000) damage = 10000;
+
+	if (p_ptr->resist_ether) {
+		damage /= 5;
+		if (damage < 1) damage = 1;
+	}
+
+	p_ptr->contamination += damage;
+
+	if (p_ptr->contamination >= 100 && p_ptr->contamination <= 200 && precheckamount < 100)
+		msg_print("You are now afflicted with minor contamination.");
+	if (p_ptr->contamination >= 200 && p_ptr->contamination <= 500 && precheckamount < 200)
+		msg_print("You are now afflicted with light contamination.");
+	if (p_ptr->contamination >= 500 && p_ptr->contamination <= 1000 && precheckamount < 500)
+		msg_print("You are now afflicted with contamination.");
+	if (p_ptr->contamination >= 1000 && p_ptr->contamination <= 2000 && precheckamount < 1000)
+		msg_print("You are now afflicted with severe contamination.");
+	if (p_ptr->contamination >= 2000 && p_ptr->contamination <= 10000 && precheckamount < 2000)
+		msg_print("You are now afflicted with lethal contamination.");
+	if (p_ptr->contamination >= 10000 && precheckamount < 10000)
+		msg_print("You are now afflicted with fatal contamination. Seek medical attention immediately.");
+}
 
 /*
  * Note that amulets, rods, and high-level spell books are immune
@@ -3846,6 +3887,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 
 	case GF_NETHER:
 	case GF_NEXUS:
+	case GF_NERVE:
 	case GF_ACID:
 	case GF_SHARDS:
 	case GF_TIME:
@@ -5742,6 +5784,62 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				dam /= (randint(6) + 6);
 				if (seen) r_ptr->r_flags3 |= (RF3_RES_NEXU);
 			}
+			break;
+		}
+
+		/* Nerve - undead or nonliving monsters resist, others get stunned a bit */
+	case GF_NERVE:
+		{
+			if (seen) obvious = TRUE;
+			do_stun = 1 + randint(2);
+
+			if ((r_ptr->flags3 & (RF3_UNDEAD)) || (r_ptr->flags3 & (RF3_NONLIVING)) )
+			{
+				note = " resists a lot.";
+				dam /= 5;
+				if (seen) r_ptr->r_flags3 |= (RF3_UNDEAD);
+				do_stun = FALSE;
+			}
+
+			break;
+		}
+
+		/* Mind - empty mind immune, weird mind highly resistant, stupid resists a bit; can confuse */
+	case GF_MIND:
+		{
+			if (seen) obvious = TRUE;
+			bool willconf = TRUE;
+
+			do_conf = (3 + randint(4) + (r / 3)) / ((r / 3) + 1);
+
+			if (r_ptr->flags2 & RF2_STUPID)
+			{
+				note = " resists somewhat.";
+				dam /= 2;
+			}
+
+			if (r_ptr->flags2 & RF2_EMPTY_MIND)
+			{
+				willconf = FALSE;
+				dam = 0;
+				note = " is immune!";
+			}
+			else if (r_ptr->flags2 & RF2_WEIRD_MIND)
+			{
+				willconf = FALSE;
+				note = " resists a lot.";
+				dam /= 5;
+			}
+			if (!willconf) do_conf = FALSE;
+
+			break;
+		}
+
+		/* Ether - no special effect on monsters */
+	case GF_ETHER:
+		{
+			if (seen) obvious = TRUE;
+
 			break;
 		}
 
@@ -8466,6 +8564,77 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 			break;
 		}
 
+		/* Nerve - paralysis */
+	case GF_NERVE:
+		{
+			if (fuzzy) msg_print("You are hit by something paralyzing!");
+
+			if (p_ptr->resist_nerve)
+			{
+				dam *= 6;
+				dam /= (randint(6) + 6);
+			}
+
+			if (!p_ptr->resist_nerve || magik(5))
+			{
+				if ((!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) ) && !(p_ptr->paralyzed)) {
+					if (rand_int(100) < player_actual_saving_throw()) {
+						/* saving throw */
+						;
+					} else {
+						(void)set_paralyzed(p_ptr->paralyzed + 1 + randint(2));
+					}
+				}
+			}
+
+			take_hit(dam, killer);
+			break;
+		}
+
+		/* Mind - take sanity damage */
+	case GF_MIND:
+		{
+			int sanitydamage;
+
+			if (fuzzy) msg_print("You are hit by mind waves!");
+
+			if (p_ptr->resist_mind)
+			{
+				dam *= 6;
+				dam /= (randint(6) + 6);
+			}
+
+			sanitydamage = dam / 10;
+			if (sanitydamage < 1) sanitydamage = 1;
+
+			cmsg_print(TERM_VIOLET, "You're going insane!");
+			take_sanity_hit(sanitydamage, "mind waves");
+
+			take_hit(dam, killer);
+			break;
+		}
+
+	case GF_ETHER:
+		{
+			int etherdamage;
+
+			if (fuzzy) msg_print("You are hit by pure ether!");
+
+			if (p_ptr->resist_ether)
+			{
+				dam *= 6;
+				dam /= (randint(6) + 6);
+			}
+
+			etherdamage = dam / 4;
+			if (etherdamage < 1) etherdamage = 1;
+
+			contaminate(etherdamage);
+
+			take_hit(dam, killer);
+			break;
+		}
+
 		/* Force -- mostly stun */
 	case GF_FORCE:
 		{
@@ -9864,7 +10033,7 @@ static const int destructive_attack_types[10] =
 };
 
 /* Also for Power-mages */
-static const int attack_types[35] =
+static const int attack_types[38] =
 {
 	GF_ARROW,
 	GF_ARROW,
@@ -9901,6 +10070,9 @@ static const int attack_types[35] =
 	GF_NETHER,
 	GF_CHAOS,
 	GF_DISENCHANT,
+	GF_NERVE,
+	GF_MIND,
+	GF_ETHER,
 };
 
 /*
@@ -9982,6 +10154,15 @@ void describe_attack_fully(int type, char* r)
 		break;
 	case GF_NEXUS:
 		strcpy(r, "nexus");
+		break;
+	case GF_NERVE:
+		strcpy(r, "nerve");
+		break;
+	case GF_MIND:
+		strcpy(r, "mind");
+		break;
+	case GF_ETHER:
+		strcpy(r, "ether");
 		break;
 	case GF_NETHER:
 		strcpy(r, "nether");
@@ -10178,7 +10359,7 @@ void generate_spell(int plev)
 	/* Pick a simple spell */
 	if (simple_gen)
 	{
-		rspell->GF = attack_types[rand_int(35)];
+		rspell->GF = attack_types[rand_int(38)];
 	}
 	/* Pick a destructive spell */
 	else

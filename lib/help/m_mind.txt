@@ -14,7 +14,7 @@ level. E.g. if the skill "Spirituality: Prayer" is at level 12, you can cast
 up to level 4 mind school spells.
 
 #####sMind Spells
-There are four spells available for the mind school. These spells are:
+There are five spells available for the mind school. These spells are:
 1. [[[[[sCharm] (school level 1)
    Tries to manipulate the mind of a monster to make it friendly.
    At spell level 15 it turns into a ball.
@@ -29,6 +29,9 @@ There are four spells available for the mind school. These spells are:
 4. [[[[[sStun] (school level 15)
    Tries to manipulate the mind of a monster to stun it.
    At spell level 20 it turns into a ball.
+5. [[[[[sMind Bolt] (school level 25)
+   Shoots a mind wave from your brain.
+   Sometimes it can blast through its first target.
 
 #####GFire spells that can be cast with Mind skill
 

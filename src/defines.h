@@ -840,6 +840,9 @@
 #define FEAT_DMG_NEXUS          0x77
 #define FEAT_DMG_TIME           0x78
 #define FEAT_DMG_NUKE           0x79 
+#define FEAT_DMG_NERVE          0x7A 
+#define FEAT_DMG_MIND           0x7B 
+#define FEAT_DMG_ETHER          0x7C 
 
 #define FEAT_BETWEEN            0xA0 /* 160 */
 
@@ -3424,6 +3427,31 @@
 #define TRAP_OF_WEIGHT                    713
 #define TRAP_OF_WEIGHT_LOSS               714
 
+#define TRAP_OF_TERRAIN_NERVE             715
+#define TRAP_OF_TERRAIN_MIND              716
+#define TRAP_OF_TERRAIN_ETHER             717
+
+#define TRAP_OF_NERVE_BOLT                718
+#define TRAP_OF_NERVE_BALL                719
+#define TRAP_OF_NERVE_BALLS               720
+#define TRAP_OF_ELE_NERVE                 721
+#define TRAP_OF_MIND_BOLT                 722
+#define TRAP_OF_MIND_BALL                 723
+#define TRAP_OF_MIND_BALLS                724
+#define TRAP_OF_ELE_MIND                  725
+#define TRAP_OF_ETHER_BOLT                726
+#define TRAP_OF_ETHER_BALL                727
+#define TRAP_OF_ETHER_BALLS               728
+#define TRAP_OF_ELE_ETHER                 729
+
+#define TRAP_OF_CONTAMINATE_I             730
+#define TRAP_OF_CONTAMINATE_II            731
+#define TRAP_OF_CONTAMINATE_III           732
+#define TRAP_OF_CONTAMINATE_IV            733
+#define TRAP_OF_CONTAMINATE_V             734
+#define TRAP_OF_CONTAMINATE_VI            735
+#define TRAP_OF_CONTAMINATE_VII           736
+
 /*** General index values ***/
 
 
@@ -3590,7 +3618,10 @@
 #define GF_ATTACK       109
 #define GF_CHARM_UNMOVING 110
 #define GF_KILL_TRAP_NASTY 111
-#define MAX_GF          112
+#define GF_NERVE       112
+#define GF_MIND        113
+#define GF_ETHER       114
+#define MAX_GF          115
 
 /*
  * Some things which induce learning

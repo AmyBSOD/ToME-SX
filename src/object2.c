@@ -3325,7 +3325,7 @@ static void a_m_aux_1(object_type *o_ptr, int level, int power)
 				if (randint(100) < 30)
 				{
 					/* Exploding missile */
-					int power[27] = {GF_ELEC, GF_POIS, GF_ACID,
+					int power[30] = {GF_ELEC, GF_POIS, GF_ACID,
 					                 GF_COLD, GF_FIRE, GF_PLASMA, GF_LITE,
 					                 GF_DARK, GF_SHARDS, GF_SOUND,
 					                 GF_CONFUSION, GF_FORCE, GF_INERTIA,
@@ -3333,9 +3333,10 @@ static void a_m_aux_1(object_type *o_ptr, int level, int power)
 					                 GF_NETHER, GF_NEXUS, GF_TIME,
 					                 GF_GRAVITY, GF_KILL_WALL, GF_AWAY_ALL,
 					                 GF_TURN_ALL, GF_NUKE, GF_STUN,
+							     GF_NERVE, GF_MIND, GF_ETHER,
 					                 GF_DISINTEGRATE};
 
-					o_ptr->pval2 = power[rand_int(27)];
+					o_ptr->pval2 = power[rand_int(30)];
 				}
 			}
 			break;

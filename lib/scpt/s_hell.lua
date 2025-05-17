@@ -52,6 +52,28 @@ GOODNIGHT = add_spell
 	}
 }
 
+NERVE_POISON = add_spell
+{
+	["name"] =      "Nerve Poison",
+	["school"] =    {SCHOOL_HELL, SCHOOL_UDUN},
+	["level"] =     20,
+	["mana"] =      30,
+	["mana_max"] =  100,
+	["fail"] =      40,
+	["spell"] =     function()
+		local ret, dir, type
+		ret, dir = get_aim_dir()
+		if ret == FALSE then return end
+		return fire_ball(GF_NERVE, dir, 20 + get_level(NERVE_POISON, 300), 2 + get_level(NERVE_POISON, 3))
+	end,
+	["info"] =      function()
+		return "dam "..(20 + get_level(NERVE_POISON, 300)).." rad "..(2 + get_level(NERVE_POISON, 3))
+	end,
+	["desc"] =      {
+			"Fires a ball of nerve gas at the enemy"
+	}
+}
+
 ROCKETLAUNCHER = add_spell
 {
 	["name"] =      "Rocket Launcher",

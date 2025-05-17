@@ -5555,5 +5555,8 @@ gf_name_type gf_names[] =
 	{ GF_TRAP_DEMONSOUL, "*control demon*" },
 	{ GF_ATTACK, "projected melee attacks" },
 	{ GF_KILL_TRAP_NASTY, "nasty trap destruction" },
+	{ GF_NERVE, "nerve" },
+	{ GF_MIND, "mind" },
+	{ GF_ETHER, "ether" },
 	{ -1, NULL },
 };

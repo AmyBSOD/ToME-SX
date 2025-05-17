@@ -4533,6 +4533,11 @@ void do_cmd_read_scroll(void)
 				/* wtf why was there no message! give the one from nethack then --Amy */
 				msg_print("You feel as if someone is helping you.");
 
+				if (p_ptr->contamination) {
+					p_ptr->contamination = 0;
+					msg_print("Your contamination has faded away.");
+				}
+
 				ident = TRUE;
 
 				break;

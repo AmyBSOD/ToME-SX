@@ -130,3 +130,34 @@ STUN = add_spell
 			"At level 20 it turns into a ball",
 	}
 }
+
+function get_mindbolt_damage()
+	return get_level(MIND_BOLT, 12), 5 + get_level(MIND_BOLT, 45)
+end
+
+MIND_BOLT = add_spell
+{
+	["name"] = "Mind Bolt",
+	["school"] = SCHOOL_MIND,
+	["level"] = 25,
+	["mana"] = 8,
+	["mana_max"] = 60,
+	["fail"] = 50,
+	["spell"] = function()
+		local ret, dir
+		ret, dir = get_aim_dir()
+		if ret == FALSE then return end
+		return fire_bolt_or_beam(2 * get_level(MIND_BOLT, 50), GF_MIND, dir, damroll(get_mindbolt_damage()))
+	end,
+	["info"] = function()
+		local n, d
+		n, d = get_mindbolt_damage()
+		return "dam "..n.."d"..d
+	end,
+	["desc"] =
+	{
+		"Shoots a mind wave from your brain.",
+		"Sometimes it can blast through its first target."
+	},
+}
+
