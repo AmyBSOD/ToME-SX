@@ -3574,6 +3574,11 @@ static void process_world(void)
 		activate_dg_curse();
 	}
 
+	if (p_ptr->nastytrap151 && (rand_int(10000) == 0) ) {
+		seed_flavor = rand_int(0x10000000);
+		flavor_init();
+	}
+
 	if (p_ptr->nastytrap16 && !(p_ptr->wild_mode) && (rand_int(1000) == 0) ) {
 		trap_creation();
 	}

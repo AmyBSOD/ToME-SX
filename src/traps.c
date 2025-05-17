@@ -555,12 +555,18 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_OF_FARTING:
 		case TRAP_OF_FARTING_II:
 		case TRAP_OF_FARTING_III:
+		case TRAP_OF_FARTING_IV:
+		case TRAP_OF_FARTING_V:
 		case TRAP_OF_SHOES:
 		case TRAP_OF_SHOES_II:
 		case TRAP_OF_SHOES_III:
+		case TRAP_OF_SHOES_IV:
+		case TRAP_OF_SHOES_V:
 		case TRAP_OF_SHIT_I:
 		case TRAP_OF_SHIT_II:
 		case TRAP_OF_SHIT_III:
+		case TRAP_OF_SHIT_IV:
+		case TRAP_OF_SHIT_V:
 		case TRAP_OF_UNKNOWN:
 		case TRAP_OF_UNKNOWN_II:
 		case TRAP_OF_UNKNOWN_III:
@@ -728,6 +734,7 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY148:
 		case TRAP_NASTY149:
 		case TRAP_NASTY150:
+		case TRAP_NASTY151:
 			return FALSE;
 	}
 
@@ -760,6 +767,8 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_OF_SHIT_I:
 		case TRAP_OF_SHIT_II:
 		case TRAP_OF_SHIT_III:
+		case TRAP_OF_SHIT_IV:
+		case TRAP_OF_SHIT_V:
 		case TRAP_NASTY1:
 		case TRAP_NASTY2:
 		case TRAP_NASTY3:
@@ -910,6 +919,7 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY148:
 		case TRAP_NASTY149:
 		case TRAP_NASTY150:
+		case TRAP_NASTY151:
 			return FALSE;
 	}
 
@@ -1097,6 +1107,7 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY148:
 		case TRAP_NASTY149:
 		case TRAP_NASTY150:
+		case TRAP_NASTY151:
 			return TRUE;
 	}
 
@@ -1455,6 +1466,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_FARTING:
 	case TRAP_OF_FARTING_II:
 	case TRAP_OF_FARTING_III:
+	case TRAP_OF_FARTING_IV:
+	case TRAP_OF_FARTING_V:
 
 		/* one of the possible effects is trap creation... so make sure it doesn't ID some other trap! --Amy */
 		if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
@@ -1655,6 +1668,12 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					break;
 				case TRAP_OF_FARTING_III:
 					msg_print("You identified that trap as Farting Noise Trap.");
+					break;
+				case TRAP_OF_FARTING_IV:
+					msg_print("You identified that trap as Butt Trap.");
+					break;
+				case TRAP_OF_FARTING_V:
+					msg_print("You identified that trap as Sexy Butt Trap.");
 					break;
 			}
 		}
@@ -3944,6 +3963,65 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					fk_ptr->tried = FALSE;
 				}
 			}
+
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_FORGET_OBJ_AMN:
+		{
+			int k;
+			object_kind *fk_ptr;
+
+			msg_print("Your knowledge of objects is reduced!");
+			msg_print("Everything looks different!");
+
+			seed_flavor = rand_int(0x10000000);
+			flavor_init();
+
+			for (k = 0; k < max_k_idx; k++)
+			{
+				fk_ptr = &k_info[k];
+				if (fk_ptr->flavor && magik(2)) {
+					fk_ptr->aware = FALSE;
+					fk_ptr->tried = FALSE;
+				}
+			}
+
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_FORGET_OBJ_AMN_X:
+		{
+			int k;
+			object_kind *fk_ptr;
+
+			msg_print("Your knowledge of objects is reduced!");
+			msg_print("Everything looks different!");
+
+			seed_flavor = rand_int(0x10000000);
+			flavor_init();
+
+			for (k = 0; k < max_k_idx; k++)
+			{
+				fk_ptr = &k_info[k];
+				if (fk_ptr->flavor && magik(5)) {
+					fk_ptr->aware = FALSE;
+					fk_ptr->tried = FALSE;
+				}
+			}
+
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_APPEARANCE_REROLL:
+		{
+			msg_print("Everything looks different!");
+
+			seed_flavor = rand_int(0x10000000);
+			flavor_init();
 
 			ident = TRUE;
 			break;
@@ -10868,6 +10946,18 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY151:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap151 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHIT_I:
 		{
 			object_type *j_ptr;
@@ -10896,6 +10986,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 	case TRAP_OF_SHIT_II:
+	case TRAP_OF_SHIT_IV:
 		{
 			object_type *j_ptr;
 			msg_print("You fully stepped into dog shit!");
@@ -10924,6 +11015,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 	case TRAP_OF_SHIT_III:
+	case TRAP_OF_SHIT_V:
 		{
 			object_type *j_ptr;
 			msg_print("You have stepped into icky cow dung!");
@@ -10956,6 +11048,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_SHOES:
 	case TRAP_OF_SHOES_II:
 	case TRAP_OF_SHOES_III:
+	case TRAP_OF_SHOES_IV:
+	case TRAP_OF_SHOES_V:
 		{
 			int shoedamage;
 			int shoeextra = 0;
@@ -12694,6 +12788,22 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_YOUTH:
+		{
+			s16b tmp;
+
+			msg_print("Colors are scintillating around you. "
+			          "You feel like living in the past.");
+			tmp = rp_ptr->b_age + rmp_ptr->b_age;
+
+			p_ptr->age -= randint(tmp / 2);
+			if (p_ptr->age <= tmp / 2) p_ptr->age = tmp / 2;
+
+			ident = TRUE;
+			trap_hit(trap);
+			break;
+		}
+
 	case TRAP_OF_GROWING:
 		{
 			s16b tmp;
@@ -12718,6 +12828,35 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 			p_ptr->ht -= randint(tmp / 4);
 			if (p_ptr->ht <= tmp / 4) p_ptr->ht = tmp / 4;
+			ident = TRUE;
+			trap_hit(trap);
+			break;
+		}
+
+	case TRAP_OF_WEIGHT:
+		{
+			s16b tmp;
+
+			msg_print("Heavy fumes sprout out... you feel yourself transmute.");
+			if (p_ptr->psex == SEX_FEMALE) tmp = rp_ptr->f_b_wt + rmp_ptr->f_b_wt;
+			else tmp = rp_ptr->m_b_wt + rmp_ptr->m_b_wt;
+
+			p_ptr->wt += randint(tmp / 4);
+			ident = TRUE;
+			trap_hit(trap);
+			break;
+		}
+
+	case TRAP_OF_WEIGHT_LOSS:
+		{
+			s16b tmp;
+
+			msg_print("Heavy fumes sprout out... you feel yourself transmute.");
+			if (p_ptr->psex == SEX_FEMALE) tmp = rp_ptr->f_b_wt + rmp_ptr->f_b_wt;
+			else tmp = rp_ptr->m_b_wt + rmp_ptr->m_b_wt;
+
+			p_ptr->wt -= randint(tmp / 4);
+			if (p_ptr->wt <= tmp / 4) p_ptr->wt = tmp / 4;
 			ident = TRUE;
 			trap_hit(trap);
 			break;
@@ -14846,7 +14985,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(150)) {
+	switch (randint(151)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -15296,6 +15435,9 @@ void give_random_nastytrap_effect(void)
 			break;
 		case 150:
 			p_ptr->nastytrap150 = TRUE;
+			break;
+		case 151:
+			p_ptr->nastytrap151 = TRUE;
 			break;
 
 	}

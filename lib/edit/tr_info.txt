@@ -3452,6 +3452,71 @@ I:20:100:10:25:90:0d0:y
 D:Your life seems to fade away!
 F:FLOOR | CHEST | DOOR
 
+N:702:Super Amnesia Trap
+I:8:10:80:0:20:0d0:G
+D:You feel dizzy!
+F:FLOOR | CHEST | DOOR
+
+N:703:Destroy Memory Trap
+I:20:5:80:0:70:0d0:G
+D:You feel dizzy!
+F:FLOOR | CHEST | DOOR
+
+N:704:Appearance Reroll Trap
+I:2:40:80:0:8:0d0:r
+D:You feel forgetful...
+F:FLOOR | CHEST | DOOR
+
+N:705:Appearance Shuffling Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:706:Butt Trap
+I:91:100:50:4:65:0d0:v
+D:A sexy girl has protected this.
+F:FLOOR
+
+N:707:Sexy Butt Trap
+I:101:100:50:4:85:0d0:v
+D:A sexy girl has protected this.
+F:FLOOR
+
+N:708:Female Shoe Trap
+I:91:100:50:4:65:0d0:G
+D:A female shoe has protected this.
+F:FLOOR
+
+N:709:Sexy Shoe Trap
+I:101:100:50:4:85:0d0:G
+D:A female shoe has protected this.
+F:FLOOR
+
+N:710:Dog Crap Trap
+I:40:100:50:4:50:0d0:u
+D:Eww, you stepped into dog shit!
+F:FLOOR
+
+N:711:Cow Muck Trap
+I:70:100:50:4:65:0d0:u
+D:Eww, you stepped into cow dung!
+F:FLOOR
+
+N:712:Trap of Youth
+I:5:50:5:0:15:1d8:r
+D:You suddenly become younger!
+F:FLOOR | CHEST | DOOR
+
+N:713:Trap of Weight
+I:6:50:5:0:20:1d10:r
+D:You suddenly become heavier!
+F:FLOOR | CHEST | DOOR
+
+N:714:Trap of Weight Loss
+I:6:50:5:0:20:1d10:r
+D:You suddenly become lighter!
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

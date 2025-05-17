@@ -2201,6 +2201,10 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Breath damage ignores the damage caps.";
 	}
+	if (p_ptr->nastytrap151)
+	{
+		info[i++] = "You have a problem: Random item appearances occasionally get reshuffled.";
+	}
 
 	/* Access the current weapon */
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];

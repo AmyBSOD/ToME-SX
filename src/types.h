@@ -2112,7 +2112,7 @@ struct player_type
 	bool nastytrap148; /* stairdancing trap - using a stair prevents you from using another for much longer */
 	bool nastytrap149; /* degradation trap - acid and disenchantment can lower your shit's pluses even more */
 	bool nastytrap150; /* power breath trap - disables breath damage caps */
-	bool nastytrap151;
+	bool nastytrap151; /* appearance shuffling trap - random item appearances can shuffle */
 	bool nastytrap152;
 	bool nastytrap153;
 	bool nastytrap154;

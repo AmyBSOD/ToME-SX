@@ -3404,6 +3404,26 @@
 #define TRAP_OF_LIFE_LOSS_II              700
 #define TRAP_OF_LIFE_LOSS_III             701
 
+#define TRAP_OF_FORGET_OBJ_AMN            702
+#define TRAP_OF_FORGET_OBJ_AMN_X          703
+#define TRAP_OF_APPEARANCE_REROLL         704
+
+#define TRAP_NASTY151                     705
+
+#define TRAP_OF_FARTING_IV                706
+#define TRAP_OF_FARTING_V                 707
+
+#define TRAP_OF_SHOES_IV                  708
+#define TRAP_OF_SHOES_V                   709
+
+#define TRAP_OF_SHIT_IV                   710
+#define TRAP_OF_SHIT_V                    711
+
+#define TRAP_OF_YOUTH                     712
+
+#define TRAP_OF_WEIGHT                    713
+#define TRAP_OF_WEIGHT_LOSS               714
+
 /*** General index values ***/
 
 
