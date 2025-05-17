@@ -5869,8 +5869,13 @@ bool make_attack_spell(int m_idx)
 	/* Remember what the monster did to us */
 	if (seen)
 	{
+		if (thrown_spell == 45)
+		{
+			r_ptr->r_flags2 |= RF2_ELDRITCH_HORROR;
+		}
+
 		/* Inate spell */
-		if (thrown_spell < 32*4)
+		else if (thrown_spell < 32*4)
 		{
 			r_ptr->r_flags4 |= (1L << (thrown_spell - 32 * 3));
 			if (r_ptr->r_cast_inate < MAX_UCHAR) r_ptr->r_cast_inate++;
