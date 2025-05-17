@@ -81586,7 +81586,7 @@ S:CONF | DRAIN_MANA |
 D:"HC" means hardcore. This girl wears thick platform boots and wants 
 D:to kick you in the shins very painfully. 
 
-N:4641:giant tick
+N:4641:Giant tick
 G:S:s
 I:110:1d2:12:3:20
 W:1:1:200:2
@@ -81598,7 +81598,7 @@ F:ANIMAL | WILD_WOOD |
 F:MORTAL | BASEANGBAND
 D:It crawls all over the place. 
 
-N:4642:giant tick
+N:4642:Giant tick
 G:S:s
 I:110:1d2:12:3:20
 W:1:5:200:2
@@ -81611,7 +81611,7 @@ F:MORTAL | BASEANGBAND
 S:MULTIPLY
 D:It crawls all over the place. 
 
-N:4643:killer bee
+N:4643:Killer bee
 G:I:y
 I:120:1d3:12:20:10
 W:1:1:50:3
@@ -81627,7 +81627,7 @@ D:occasions, one may stumble upon a bee-hive, in which the
 D:queen bee is being well provided for, and guarded against 
 D:intruders. 
 
-N:4644:queen bee
+N:4644:Queen bee
 G:I:v
 I:130:5d5:12:30:10
 W:9:1:50:40
@@ -81639,7 +81639,7 @@ F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | HAS_EGG | FEMALE |
 D:A particularly vicious killer bee who wants to sting all 
 D:those that would threaten the bee population. 
 
-N:4645:giant ant
+N:4645:Giant ant
 G:a:u
 I:120:2d4:10:8:10
 W:2:1:300:4
@@ -81654,7 +81654,7 @@ D:fiercely as its small, distant cousin.  Various varieties
 D:exist, and they are known and feared for their relentless 
 D:persecution of their victims. 
 
-N:4646:giant flea
+N:4646:Giant flea
 G:S:W
 I:112:2d3:12:3:20
 W:3:1:200:4
@@ -81667,7 +81667,7 @@ F:ANIMAL | WILD_WOOD |
 F:MORTAL | BASEANGBAND
 D:Another annoying, fast-moving insect. 
 
-N:4647:giant flea
+N:4647:Giant flea
 G:S:W
 I:112:2d3:12:3:20
 W:3:5:200:4
@@ -81681,7 +81681,7 @@ F:MORTAL | BASEANGBAND
 S:MULTIPLY
 D:Another annoying, fast-moving insect. 
 
-N:4648:soldier ant
+N:4648:Soldier ant
 G:a:B
 I:120:4d4:10:20:10
 W:3:1:300:8
@@ -81694,7 +81694,7 @@ F:ANIMAL | WILD_TOO | WILD_GRASS |
 F:MORTAL | BASEANGBAND
 D:The number one cause of YASD in NetHack. 
 
-N:4649:fire ant
+N:4649:Fire ant
 G:a:r
 I:120:4d4:10:20:10
 W:3:1:300:8
@@ -81707,7 +81707,7 @@ F:ANIMAL | WILD_TOO | WILD_GRASS |
 F:MORTAL | BASEANGBAND
 D:This ant's bite can set you on fire. 
 
-N:4650:snow ant
+N:4650:Snow ant
 G:a:b
 I:120:4d4:10:20:10
 W:3:1:300:8
@@ -81720,7 +81720,7 @@ F:ANIMAL | WILD_TOO | WILD_GRASS |
 F:MORTAL | BASEANGBAND
 D:An ant living in cold regions, its bite can freeze you. 
 
-N:4651:black ant
+N:4651:Black ant
 G:a:D
 I:120:4d4:10:20:10
 W:3:1:300:8
@@ -81732,7 +81732,7 @@ F:ANIMAL | WILD_TOO | WILD_GRASS |
 F:MORTAL | BASEANGBAND
 D:This ant has an acidic bite that will wreck your armor. 
 
-N:4652:tsetse fly
+N:4652:Tsetse fly
 G:I:g
 I:115:1d5:12:22:10
 W:3:1:50:4
@@ -81744,7 +81744,7 @@ F:CAN_FLY | WILD_TOO | WILD_WOOD | WILD_GRASS |
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | NO_SLEEP | 
 D:Being stung by this fly can put you to sleep. 
 
-N:4653:giant beetle
+N:4653:Giant beetle
 G:K:D
 I:105:5d6:10:12:30
 W:5:1:500:20
@@ -81760,7 +81760,7 @@ D:the shields (the front pair of wings) under which the back
 D:wings are folded. 
 D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
-N:4654:giant louse
+N:4654:Giant louse
 G:S:W
 I:115:2d4:12:5:20
 W:5:1:200:6
@@ -81773,7 +81773,7 @@ F:ANIMAL | WILD_WOOD |
 F:MORTAL | BASEANGBAND
 D:These annoying things are everywhere! 
 
-N:4655:giant louse
+N:4655:Giant louse
 G:S:W
 I:115:2d4:12:5:20
 W:5:5:200:6
@@ -81787,7 +81787,7 @@ F:MORTAL | BASEANGBAND
 S:MULTIPLY
 D:These annoying things are everywhere! 
 
-N:4656:army ant
+N:4656:Army ant
 G:a:r
 I:120:4d7:10:20:10
 W:3:1:300:15
@@ -81799,7 +81799,7 @@ F:ANIMAL | WILD_TOO | WILD_GRASS | FRIEND |
 F:MORTAL | BASEANGBAND
 D:An ant that hunts in groups. 
 
-N:4657:migo drone
+N:4657:Migo drone
 G:I:g
 I:110:4d7:12:24:10
 W:7:1:50:20
@@ -81816,7 +81816,7 @@ D:Their queens have been known to steal human brains, taking
 D:them back to distant Yuggoth. 
 D:Migo are also known as the Fungi from Yuggoth. 
 
-N:4658:yellow jacket
+N:4658:Yellow jacket
 G:I:y
 I:115:3d6:12:22:10
 W:8:1:50:15
@@ -81827,7 +81827,7 @@ F:FRIEND | CAN_FLY | WILD_TOO | WILD_WOOD | WILD_GRASS |
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | FEMALE | 
 D:This wasp has wings and a poisonous sting. 
 
-N:4659:black wasp
+N:4659:Black wasp
 G:I:D
 I:115:3d8:12:22:10
 W:9:1:50:18
@@ -81838,7 +81838,7 @@ F:FRIEND | CAN_FLY | WILD_TOO | WILD_WOOD | WILD_GRASS |
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | FEMALE | 
 D:A very majestic-looking, but dangerous wasp. 
 
-N:4660:locust
+N:4660:Locust
 G:I:W
 I:110:4d5:12:26:10
 W:9:1:50:20
@@ -81850,7 +81850,7 @@ F:CAN_FLY | WILD_TOO | WILD_WOOD | WILD_GRASS | HAS_EGG |
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | NO_SLEEP | 
 D:These insects can make you sick. 
 
-N:4661:migo warrior
+N:4661:Migo warrior
 G:I:y
 I:120:4d10:12:36:10
 W:10:1:50:35
@@ -81862,7 +81862,7 @@ F:FRIEND | CAN_FLY |
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | MALE |
 D:An intelligent, alien insectoid. 
 
-N:4662:assassin bug
+N:4662:Assassin bug
 G:K:D
 I:125:5d12:10:20:30
 W:10:1:500:45
@@ -81873,7 +81873,7 @@ F:WEIRD_MIND | BASH_DOOR | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS |
 D:These beetles are fast and deadly. 
 
-N:4663:giant wasp
+N:4663:Giant wasp
 G:I:y
 I:115:3d11:12:22:10
 W:12:1:50:25
@@ -81884,7 +81884,7 @@ F:FRIEND | CAN_FLY | WILD_TOO | WILD_WOOD | WILD_GRASS |
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | FEMALE | 
 D:A particularly large wasp. Watch out for her poison sting. 
 
-N:4664:spitting beetle
+N:4664:Spitting beetle
 G:K:D
 I:105:5d15:10:50:30
 W:14:1:500:60
@@ -81896,7 +81896,7 @@ F:WEIRD_MIND | BASH_DOOR | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS |
 D:This beetle spits acid at you. 
 
-N:4665:migo queen
+N:4665:Migo queen
 G:I:v
 I:115:8d10:12:45:10
 W:15:4:50:80
@@ -81909,7 +81909,7 @@ F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | FEMALE |
 D:Be careful, this alien insectoid can suck out your brain 
 D:and also devour you rather quickly. 
 
-N:4666:acid blob
+N:4666:Acid blob
 G:j:g
 I:98:2d3:12:3:1
 W:1:1:300:2
@@ -81926,7 +81926,7 @@ D:puddles of slime, but they both live and move, feeding on
 D:metal or wood as well as the occasional dungeon explorer to 
 D:supplement their diet. 
 
-N:4667:quivering blob
+N:4667:Quivering blob
 G:j:w
 I:95:2d8:12:3:1
 W:5:1:300:5
@@ -81940,7 +81940,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
 F:EMPTY_MIND | RES_SHAR | 
 D:A slow-moving blob. 
 
-N:4668:gelatinous cube
+N:4668:Gelatinous cube
 G:j:b
 I:105:4d8:12:3:1
 W:6:1:750:20
@@ -81962,7 +81962,7 @@ D:standard 10-foot by 10-foot dungeon corridors, cleaning up
 D:debris and redistributing treasure by excreting indigestible 
 D:metal items. [ Wikipedia, the free encyclopedia ]
 
-N:4669:jiggling blob
+N:4669:Jiggling blob
 G:j:v
 I:105:3d12:12:3:1
 W:10:1:300:25
@@ -81977,7 +81977,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
 F:EMPTY_MIND | RES_SHAR | 
 D:Some acidic blobby thing. 
 
-N:4670:burbling blob
+N:4670:Burbling blob
 G:j:D
 I:105:3d18:12:3:1
 W:14:1:300:25
@@ -81992,7 +81992,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
 F:EMPTY_MIND | RES_SHAR | 
 D:Yet another acidic blobby thing. 
 
-N:4671:chicken
+N:4671:Chicken
 G:B:u
 I:115:2d2:30:4:10
 W:2:1:1000:5
@@ -82004,7 +82004,7 @@ F:ANIMAL | WILD_TOWN |
 F:DROP_SKELETON | DROP_CORPSE |   
 D:This chicken is unusually aggressive. 
 
-N:4672:cockatoo
+N:4672:Cockatoo
 G:B:w
 I:115:2d3:30:7:10
 W:3:1:1000:7
@@ -82017,7 +82017,7 @@ F:DROP_SKELETON | DROP_CORPSE |
 D:Supposedly another type of chicken, thankfully it doesn't have 
 D:the cockatrice's petrifying properties. 
 
-N:4673:chickatrice
+N:4673:Chickatrice
 G:B:u
 I:100:2d5:30:4:10
 W:4:1:1000:12
@@ -82033,7 +82033,7 @@ D:creature feared by adventurers great and small for its petrifying
 D:peck.  
 D:[ The New Bestiary, Wizard Endlebrook ] 
 
-N:4674:rabid chicken
+N:4674:Rabid chicken
 G:B:u
 I:115:2d4:30:4:10
 W:4:1:1000:7
@@ -82046,7 +82046,7 @@ F:DROP_SKELETON | DROP_CORPSE |
 D:A chicken infected with some sort of disease, which it can pass 
 D:on to you with a bite, so stay away if possible. 
 
-N:4675:cockatrice
+N:4675:Cockatrice
 G:B:y
 I:105:2d8:30:7:10
 W:5:1:1000:18
@@ -82069,7 +82069,7 @@ D:great that sometimes simply to hear its hiss can prove fatal.
 D:Its breath is so venomous that it causes all vegetation 
 D:to wither. 
 
-N:4676:pyrolisk
+N:4676:Pyrolisk
 G:B:r
 I:105:2d9:30:7:10
 W:6:1:1000:12
@@ -82084,7 +82084,7 @@ D:the bravest adventurer to burst into flames, their flesh withering
 D:and blackening and curling beneath the creature's baleful gaze. 
 D:[ The New Bestiary, Wizard Endlebrook ] 
 
-N:4677:jackal
+N:4677:Jackal
 G:C:u
 I:110:1d2:10:3:10
 W:0:1:400:1
@@ -82107,7 +82107,7 @@ D:Jackal goes around behaving the way he does "because he is
 D:Jackal". 
 D:[ Funk & Wagnalls Standard Dictionary of Folklore ] 
 
-N:4678:fox
+N:4678:Fox
 G:C:r
 I:115:1d2:10:3:10
 W:0:1:400:1
@@ -82126,7 +82126,7 @@ D:after the tempting morsel, but at last had to give it up, and walked
 D:away with his nose in the air, saying: "I am sure they are sour." 
 D:[ Aesop's Fables ] 
 
-N:4679:coyote
+N:4679:Coyote
 G:C:u
 I:110:1d3:10:3:10
 W:1:1:400:1
@@ -82138,7 +82138,7 @@ F:ANIMAL | MORTAL | BASEANGBAND
 D:This carnivore is known for its voracious appetite and 
 D:inflated view of its own intelligence. 
 
-N:4680:dingo puppy
+N:4680:Dingo puppy
 G:C:y
 I:117:1d6:10:5:10
 W:2:3:400:3
@@ -82149,7 +82149,7 @@ F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND
 D:A small version of the dingo. 
 
-N:4681:death dog
+N:4681:Death dog
 G:C:D
 I:110:1d6:10:5:10
 W:2:20:400:5
@@ -82162,7 +82162,7 @@ F:ANIMAL | MORTAL | BASEANGBAND
 D:This dog is unusually deadly; better make sure it doesn't get 
 D:to bite you or you'll die very quickly! 
 
-N:4682:little dog
+N:4682:Little dog
 G:C:w
 I:117:1d6:10:5:10
 W:2:1:400:3
@@ -82178,7 +82178,7 @@ D:loyalty to man and gentleness with children, it is the
 D:world's most popular domestic animal.  It can easily be 
 D:trained to perform various tasks. 
 
-N:4683:dingo
+N:4683:Dingo
 G:C:y
 I:116:2d5:10:8:10
 W:4:3:400:7
@@ -82192,7 +82192,7 @@ D:reddish- or yellowish-brown coat, believed to have been
 D:introduced by the aborigines. 
 D:[Webster's Encyclopedic Unabridged Dictionary of the English Language] 
 
-N:4684:dog
+N:4684:Dog
 G:C:w
 I:116:2d5:10:8:10
 W:4:1:400:7
@@ -82203,7 +82203,7 @@ F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND
 D:Domestic animal, but unfortunately in this game it's a predator. 
 
-N:4685:wolf
+N:4685:Wolf
 G:C:u
 I:110:3d7:10:12:10
 W:5:1:400:7
@@ -82218,7 +82218,7 @@ D:social animals, wolves live in family groups or packs made
 D:up of multiple family units.  These packs cooperate in hunting 
 D:down prey. 
 
-N:4686:winter wolf cub
+N:4686:Winter wolf cub
 G:C:b
 I:110:3d7:10:12:10
 W:5:2:400:8
@@ -82231,7 +82231,7 @@ S:1_IN_10
 S:BR_COLD
 D:A small wolf with a cold breath. 
 
-N:4687:large dog
+N:4687:Large dog
 G:C:w
 I:115:2d9:10:11:10
 W:6:1:400:14
@@ -82242,7 +82242,7 @@ F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND
 D:In NetHack these could be tamed; here, they try to eat you. 
 
-N:4688:large dingo
+N:4688:Large dingo
 G:C:y
 I:115:2d9:10:11:10
 W:6:3:400:14
@@ -82253,7 +82253,7 @@ F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND
 D:A large predator. 
 
-N:4689:rabid wolf
+N:4689:Rabid wolf
 G:C:u
 I:110:3d8:10:12:10
 W:6:1:400:10
@@ -82265,7 +82265,7 @@ F:ANIMAL | MORTAL | BASEANGBAND
 D:This wolf is infected with a disease and will make you sick with 
 D:its bite. 
 
-N:4690:warg
+N:4690:Warg
 G:C:u
 I:110:3d10:10:12:10
 W:7:1:400:14
@@ -82292,7 +82292,7 @@ D:"True!" said Aragorn, loosening his sword in its sheath.  "But
 D:where the warg howls, there also the orc prowls." 
 D:[ The Fellowship of the Ring, by J.R.R. Tolkien ] 
 
-N:4691:hyena
+N:4691:Hyena
 G:C:y
 I:110:3d10:10:12:10
 W:7:4:400:14
@@ -82303,7 +82303,7 @@ F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | FRIENDS
 D:A predator that usually hunts in groups. 
 
-N:4692:winter wolf
+N:4692:Winter wolf
 G:C:b
 I:110:3d10:10:12:10
 W:7:2:400:16
@@ -82316,7 +82316,7 @@ S:1_IN_4
 S:BR_COLD
 D:This wolf frequently breathes frost. 
 
-N:4693:hell hound pup
+N:4693:Hell hound pup
 G:C:r
 I:110:3d10:10:12:10
 W:7:2:400:16
@@ -82329,7 +82329,7 @@ S:1_IN_8
 S:BR_FIRE
 D:A dog that breathes fire. 
 
-N:4694:shadow wolf
+N:4694:Shadow wolf
 G:C:D
 I:115:3d20:10:12:10
 W:11:2:400:32
@@ -82344,7 +82344,7 @@ D:sinister corners of the world. Its bite is known for its chilling
 D:effect upon humanoid flesh, and it is not a tameable animal. 
 D:[ The New Bestiary, Wizard Endlebrook ] 
 
-N:4695:mist wolf
+N:4695:Mist wolf
 G:C:D
 I:118:3d22:10:12:10
 W:12:2:400:36
@@ -82360,7 +82360,7 @@ D:the beast is usually ravenous, as its diet of mist is not very
 D:filling, at least compared to human flesh. 
 D:[ The New Bestiary, Wizard Endlebrook ] 
 
-N:4696:hell hound
+N:4696:Hell hound
 G:C:r
 I:113:3d22:10:25:10
 W:12:2:400:40
@@ -82402,7 +82402,7 @@ D:playing bewitching music on his lyre, and the other time when
 D:Hercules confronted him and took him to the world of the 
 D:living (as his twelfth and last labor). 
 
-N:4698:gas spore
+N:4698:Gas spore
 G:e:W
 I:95:2d5:2:0:10
 W:1:1:500:2
@@ -82419,7 +82419,7 @@ D:destruction caused by foolish adventurers who touched a
 D:single one. 
 D:[ Adapted by Ben Lehman from Monstrous Manual, by TSR, Inc. ] 
 
-N:4699:floating eye
+N:4699:Floating eye
 G:e:B
 I:80:2d6:2:2:10
 W:2:1:500:4
@@ -82436,7 +82436,7 @@ D:tales of those who struck a floating eye, were paralysed by
 D:its mystic powers, and then nibbled to death by some other 
 D:creature that lurked around nearby. 
 
-N:4700:freezing sphere
+N:4700:Freezing sphere
 G:e:w
 I:112:4d5:2:8:10
 W:6:1:500:10
@@ -82447,7 +82447,7 @@ F:CAN_FLY | RES_SHAR | EMPTY_MIND | IM_COLD | NO_SLEEP |
 F:HURT_LITE | NO_FEAR | BASEANGBAND | WILD_MOUNTAIN | 
 D:It tries to creep up to you and then explodes. 
 
-N:4701:flaming sphere
+N:4701:Flaming sphere
 G:e:r
 I:112:4d5:2:8:10
 W:6:1:500:10
@@ -82459,7 +82459,7 @@ F:HURT_LITE | NO_FEAR | BASEANGBAND | WILD_VOLCANO |
 D:It floats towards you, and wants to selfdestruct in 
 D:a big fiery explosion. 
 
-N:4702:shocking sphere
+N:4702:Shocking sphere
 G:e:B
 I:112:4d5:2:8:10
 W:6:1:500:10
@@ -82470,7 +82470,7 @@ F:CAN_FLY | RES_SHAR | EMPTY_MIND | IM_FIRE |
 F:HURT_LITE | NO_FEAR | BASEANGBAND
 D:If it explodes at you, it'll probably nuke your wands. 
 
-N:4703:kitten
+N:4703:Kitten
 G:f:w
 I:117:1d6:40:5:0
 W:2:1:200:3
@@ -82484,7 +82484,7 @@ D:predatory felines (_Felis ochreata domestica_), with a thick,
 D:soft pelt; often kept as a pet.  Various folklores have the 
 D:cat associated with magic and the gods of ancient Egypt. 
 
-N:4704:housecat
+N:4704:Housecat
 G:f:w
 I:116:2d5:40:8:0
 W:4:1:200:7
@@ -82500,7 +82500,7 @@ D:yellow and white, none was missing.  Very sleek and fat did
 D:the cats appear, and sonorous with purring content. 
 D:[ The Cats of Ulthar, by H.P. Lovecraft ] 
 
-N:4705:large cat
+N:4705:Large cat
 G:f:w
 I:115:2d9:40:11:0
 W:6:1:200:14
@@ -82512,7 +82512,7 @@ F:ANIMAL | MORTAL | BASEANGBAND | WILD_GRASS | WILD_WOOD |
 D:You can't tame it with thrown food, because this ain't 
 D:NetHack. Instead, you should kill it before it kills you. 
 
-N:4706:jaguar
+N:4706:Jaguar
 G:f:u
 I:116:2d5:40:8:0
 W:4:1:200:9
@@ -82528,7 +82528,7 @@ D:South America.  This feline predator (_Panthera onca_) is
 D:sometimes incorrectly called a panther. 
 D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
-N:4707:kamadan
+N:4707:Kamadan
 G:f:o
 I:110:2d5:40:8:0
 W:4:2:200:11
@@ -82547,7 +82547,7 @@ D:Sages believe it is a distant relative of the displacer beast,
 D:though how it came to be is still a matter for speculation. 
 D:[ Creature Catalog by Scott Greene ] 
 
-N:4708:lynx
+N:4708:Lynx
 G:f:b
 I:116:2d7:40:10:0
 W:5:1:200:11
@@ -82565,7 +82565,7 @@ D:in the affections of her lover. If she kills the lynx, she
 D:will overcome her rival. 
 D:[ 10,000 Dreams Interpreted, by Gustavus Hindman Miller ] 
 
-N:4709:panther
+N:4709:Panther
 G:f:D
 I:116:2d7:40:8:0
 W:5:1:200:11
@@ -82585,7 +82585,7 @@ D:That many times I to return had turned.
 D:[ Dante's Inferno, as translated 
 D:by Henry Wadsworth Longfellow ] 
 
-N:4710:caterwaul
+N:4710:Caterwaul
 G:f:W
 I:130:2d7:40:10:0
 W:6:4:200:25
@@ -82598,7 +82598,7 @@ F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_WOOD | 
 D:Some predatory feline that moves very quickly. 
 
-N:4711:tiger
+N:4711:Tiger
 G:f:y
 I:110:2d10:40:11:0
 W:6:1:200:18
@@ -82616,7 +82616,7 @@ D:meant to scare, but has no really scaring effect whatsoever,
 D:(after a statement by Mao Ze Dong, August 1946). 
 D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
-N:4712:displacer beast
+N:4712:Displacer beast
 G:f:B
 I:110:5d12:40:60:0
 W:12:1:200:120
@@ -82629,7 +82629,7 @@ F:BASH_DOOR | WILD_TOO | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND
 D:These beasts are annoyingly hard to hit. 
 
-N:4713:jermlaine
+N:4713:Jermlaine
 G:u:W
 I:115:1d2:30:5:20
 W:0:1:500:1
@@ -82641,7 +82641,7 @@ F:TAKE_ITEM | FRIENDS |
 F:MORTAL | BASEANGBAND
 D:They're frail, but spawn in large groups. 
 
-N:4714:galltrit
+N:4714:Galltrit
 G:u:D
 I:118:3d4:30:12:20
 W:3:1:500:7
@@ -82657,7 +82657,7 @@ S:1_IN_10
 S:CAUSE_1
 D:Not sure what it is, but it attacks you. 
 
-N:4715:statue gargoyle
+N:4715:Statue gargoyle
 G:u:W
 I:108:4d10:30:10:20
 W:4:3:500:25
@@ -82670,7 +82670,7 @@ F:TAKE_ITEM | CAN_SWIM | RES_WALL | RES_GRAV |
 F:MORTAL | BASEANGBAND | EMPTY_MIND | RES_SHAR |
 D:A rather sturdy, stony creature. 
 
-N:4716:gremlin
+N:4716:Gremlin
 G:u:g
 I:110:3d5:30:15:20
 W:5:1:500:10
@@ -82688,7 +82688,7 @@ D:The gremlin is a highly intelligent and completely evil
 D:creature.  It lives to torment other creatures and will go 
 D:to great lengths to inflict pain or cause injury. 
 
-N:4717:gargoyle
+N:4717:Gargoyle
 G:u:u
 I:109:3d8:30:30:20
 W:4:1:500:20
@@ -82710,7 +82710,7 @@ D:his most ancient adversary, the gargoyles.
 D:[ Excerpt from the opening narration to the movie 
 D:_Gargoyles_, written by Stephen and Elinor Karpf ] 
 
-N:4718:winged gargoyle
+N:4718:Winged gargoyle
 G:u:v
 I:113:4d12:30:15:20
 W:9:2:500:50
@@ -82724,7 +82724,7 @@ F:TAKE_ITEM | CAN_SWIM | RES_WALL | RES_GRAV |
 F:MORTAL | BASEANGBAND | RES_SHAR | CAN_FLY | HAS_EGG | 
 D:Like a regular gargoyle, but this one can fly. 
 
-N:4719:hobbit
+N:4719:Hobbit
 G:h:g
 I:108:1d4:16:0:10
 W:1:1:1000:1
@@ -82746,7 +82746,7 @@ D:were, as a rule, shy of "the Big Folk", as they call us, and
 D:now they avoid us with dismay and are becoming hard to find. 
 D:[ The Fellowship of the Ring, by J.R.R. Tolkien ] 
 
-N:4720:hobbit thief
+N:4720:Hobbit thief
 G:h:D
 I:108:1d4:16:0:10
 W:1:3:1000:1
@@ -82760,7 +82760,7 @@ F:GOOD
 F:MORTAL | BASEANGBAND
 D:A hobbit who tries to steal your stuff. 
 
-N:4721:dwarf
+N:4721:Dwarf
 G:h:r
 I:105:2d4:20:0:5
 W:2:1:900:3
@@ -82774,7 +82774,7 @@ F:GOOD | DROP_SKELETON | DROP_CORPSE |
 F:MORTAL | BASEANGBAND | KILL_WALL |
 D:Some bearded humanoid who seems annoyed at your presence. 
 
-N:4722:dwarf thief
+N:4722:Dwarf thief
 G:h:D
 I:105:2d4:20:0:5
 W:2:3:900:3
@@ -82788,7 +82788,7 @@ F:GOOD | DROP_SKELETON | DROP_CORPSE |
 F:MORTAL | BASEANGBAND | KILL_WALL |
 D:Some bearded humanoid who wants to steal all your possessions. 
 
-N:4723:bugbear
+N:4723:Bugbear
 G:h:u
 I:108:2d6:16:7:10
 W:3:1:1000:5
@@ -82804,7 +82804,7 @@ D:larger and more hairy.  They are aggressive carnivores and
 D:sometimes kill just for the treasure their victims may be 
 D:carrying. 
 
-N:4724:hobbit lord
+N:4724:Hobbit lord
 G:h:B
 I:110:3d3:16:0:10
 W:3:1:1000:6
@@ -82817,7 +82817,7 @@ F:GOOD
 F:MORTAL | BASEANGBAND
 D:A more powerful version of the hobbit. 
 
-N:4725:hobbit wizard
+N:4725:Hobbit wizard
 G:h:b
 I:110:3d3:16:0:10
 W:3:1:1000:6
@@ -82832,7 +82832,7 @@ S:1_IN_6
 S:CAUSE_1 | CONF | BLIND
 D:A hobbit who can cast some annoyance spells. 
 
-N:4726:duergar
+N:4726:Duergar
 G:h:W
 I:105:2d7:20:0:5
 W:4:1:900:4
@@ -82847,7 +82847,7 @@ F:MORTAL | BASEANGBAND | KILL_WALL |
 D:No idea what a "duergar" is supposed to be, but it's 
 D:apparently similar to a dwarf. 
 
-N:4727:dwarf lord
+N:4727:Dwarf lord
 G:h:B
 I:105:2d7:20:0:5
 W:4:1:900:5
@@ -82861,7 +82861,7 @@ F:GOOD | DROP_SKELETON | DROP_CORPSE | MALE |
 F:MORTAL | BASEANGBAND | KILL_WALL |
 D:A more powerful version of the dwarf. 
 
-N:4728:camo dwarf lord
+N:4728:Camo dwarf lord
 G:h:b
 I:105:2d7:20:0:5
 W:4:5:900:5
@@ -82875,7 +82875,7 @@ F:GOOD | DROP_SKELETON | DROP_CORPSE | MALE |
 F:MORTAL | BASEANGBAND | KILL_WALL |
 D:A dwarf who thinks he's hard to see. 
 
-N:4729:duergar lord
+N:4729:Duergar lord
 G:h:D
 I:105:2d8:20:5:5
 W:4:2:900:6
@@ -82889,7 +82889,7 @@ F:GOOD | DROP_SKELETON | DROP_CORPSE | MALE |
 F:MORTAL | BASEANGBAND | KILL_WALL |
 D:A more powerful duergar. 
 
-N:4730:dwarven wizard
+N:4730:Dwarven wizard
 G:h:b
 I:105:2d7:20:0:5
 W:4:1:900:6
@@ -82904,7 +82904,7 @@ S:1_IN_5
 S:CAUSE_1 | CONF | BLIND | SCARE
 D:A dwarf who sometimes casts annoying spells. 
 
-N:4731:dwarf king
+N:4731:Dwarf king
 G:h:v
 I:105:2d11:20:0:5
 W:6:1:900:12
@@ -82918,7 +82918,7 @@ F:GOOD | DROP_SKELETON | DROP_CORPSE | MALE |
 F:MORTAL | BASEANGBAND | KILL_WALL |
 D:A particularly powerful dwarf. 
 
-N:4732:deep one
+N:4732:Deep one
 G:u:g
 I:108:6d7:20:10:20
 W:7:5:4000:12
@@ -82939,7 +82939,7 @@ D:they would rest; but some day, if they remembered, they would
 D:rise again for the tribute Great Cthulhu craved. 
 D:[ The Shadow Over Innsmouth, by H.P. Lovecraft ] 
 
-N:4733:mind flayer
+N:4733:Mind flayer
 G:h:v
 I:110:4d12:20:10:5
 W:9:1:900:12
@@ -82962,7 +82962,7 @@ D:especially humans.  If they hit their victim with a tentacle,
 D:the mind flayer will slowly drain it of all intelligence, 
 D:eventually killing its victim. 
 
-N:4734:master mind flayer
+N:4734:Master mind flayer
 G:h:v
 I:110:7d12:20:24:5
 W:13:2:900:90
@@ -82981,7 +82981,7 @@ S:MIND_BLAST
 D:This creature tries to suck your brain with its many 
 D:tentacles, and can also blast your mind at range. 
 
-N:4735:deeper one
+N:4735:Deeper one
 G:u:g
 I:110:10d18:20:20:20
 W:15:5:4000:210
@@ -82994,7 +82994,7 @@ F:FRIEND | DROP_CORPSE | CAN_SWIM | TAKE_ITEM |
 F:DROP_60 | IM_COLD | IM_POIS | EVIL | 
 D:A more powerful version of the deep one. 
 
-N:4736:deepest one
+N:4736:Deepest one
 G:u:v
 I:115:15d40:20:35:20
 W:30:8:4000:3000
@@ -83007,7 +83007,7 @@ F:FRIEND | DROP_CORPSE | CAN_SWIM | TAKE_ITEM |
 F:DROP_60 | IM_COLD | IM_POIS | EVIL | RES_SHAR | 
 D:The most powerful of the deep ones. 
 
-N:4737:manes
+N:4737:Manes
 G:u:r
 I:95:2d3:20:8:30
 W:1:1:300:2
@@ -83022,7 +83022,7 @@ F:EVIL | DEMON | IM_POIS | NO_FEAR | BASEANGBAND
 D:The gnats of the dungeon, these swarming monsters are rarely 
 D:seen alone.
 
-N:4738:homunculus
+N:4738:Homunculus
 G:u:g
 I:110:2d4:20:10:30
 W:2:1:300:4
@@ -83037,7 +83037,7 @@ D:are smallish creatures, but very agile.  They can put their
 D:victims to sleep with a venomous bite, but due to their size, 
 D:the effect does not last long on humans. 
 
-N:4739:dretch
+N:4739:Dretch
 G:u:y
 I:110:2d4:20:15:30
 W:2:1:300:5
@@ -83048,7 +83048,7 @@ F:OPEN_DOOR | BASH_DOOR | REGENERATE |
 F:EVIL | DEMON | NO_FEAR | BASEANGBAND
 D:Some minor demon. 
 
-N:4740:imp
+N:4740:Imp
 G:u:r
 I:110:2d5:20:15:30
 W:3:1:300:7
@@ -83067,7 +83067,7 @@ D:The fairies of tradition often hover uneasily between the
 D:ghostly and the diabolic state. 
 D:[ A Dictionary of Fairies, by Katharine Briggs ] 
 
-N:4741:lemure
+N:4741:Lemure
 G:u:u
 I:95:2d5:20:5:30
 W:3:1:300:6
@@ -83078,7 +83078,7 @@ F:OPEN_DOOR | FRIEND | BASH_DOOR | REGENERATE | IM_POIS |
 F:EVIL | DEMON | NO_FEAR | BASEANGBAND | NO_SLEEP |
 D:The lowliest of the inhabitants of hell. 
 
-N:4742:quasit
+N:4742:Quasit
 G:u:B
 I:114:2d5:20:15:30
 W:3:1:300:8
@@ -83092,7 +83092,7 @@ F:EVIL | DEMON | NO_FEAR | BASEANGBAND
 D:Quasits are small, evil creatures, related to imps.  Their 
 D:talons release a very toxic poison when used in an attack. 
 
-N:4743:rutterkin
+N:4743:Rutterkin
 G:u:o
 I:110:2d8:20:15:30
 W:5:1:300:12
@@ -83103,7 +83103,7 @@ F:OPEN_DOOR | BASH_DOOR | REGENERATE |
 F:EVIL | DEMON | NO_FEAR | BASEANGBAND
 D:A rather pesky little demon. 
 
-N:4744:tengu
+N:4744:Tengu
 G:u:b
 I:111:2d8:20:10:30
 W:6:1:300:14
@@ -83122,7 +83122,7 @@ D:belligerent tengu were supposed to have been man's first
 D:instructors in the use of arms. 
 D:[ Mythical Beasts, by Deirdre Headon (The Leprechaun Library) ] 
 
-N:4745:nupperibo
+N:4745:Nupperibo
 G:u:g
 I:110:2d10:20:20:30
 W:7:1:300:18
@@ -83133,7 +83133,7 @@ F:OPEN_DOOR | BASH_DOOR | REGENERATE |
 F:EVIL | DEMON | NO_FEAR | BASEANGBAND
 D:Yet another pesky demon. 
 
-N:4746:blue jelly
+N:4746:Blue jelly
 G:j:b
 I:110:5d6:2:3:99
 W:4:1:2000:8
@@ -83159,7 +83159,7 @@ D:[ Hypothermia, Frostbite, and Other Cold Injuries:
 D:Prevention, Survival, Rescue and Treatment 
 D:by Gordon G. Giesbrecht, James A. Wilkerson ] 
 
-N:4747:spotted jelly
+N:4747:Spotted jelly
 G:j:g
 I:110:5d7:2:3:99
 W:5:1:2000:10
@@ -83173,7 +83173,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:This jelly splashes acid onto all adventurers who are foolish enough 
 D:to step next to it. 
 
-N:4748:ochre jelly
+N:4748:Ochre jelly
 G:j:u
 I:95:5d8:2:3:99
 W:6:1:2000:15
@@ -83188,7 +83188,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A jelly that slowly oozes around the dungeon and tries to 
 D:splash acid onto unwary adventurers. 
 
-N:4749:kobold
+N:4749:Kobold
 G:k:u
 I:105:1d4:20:0:10
 W:0:1:800:1
@@ -83205,7 +83205,7 @@ D:a vaguely dog-like face.  They bear a violent dislike of the
 D:Elven race, and will go out of their way to cause trouble 
 D:for Elves at any time. 
 
-N:4750:large kobold
+N:4750:Large kobold
 G:k:r
 I:105:1d5:20:0:10
 W:1:1:800:1
@@ -83218,7 +83218,7 @@ F:EVIL | IM_POIS | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 D:Much bigger than a normal kobold. 
 
-N:4751:kobold lord
+N:4751:Kobold lord
 G:k:v
 I:105:2d4:20:0:10
 W:2:1:800:4
@@ -83231,7 +83231,7 @@ F:EVIL | IM_POIS | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 D:A rather strong kobold. 
 
-N:4752:kobold shaman
+N:4752:Kobold shaman
 G:k:B
 I:105:2d4:20:10:10
 W:2:1:800:5
@@ -83246,7 +83246,7 @@ S:1_IN_10
 S:SCARE | CONF | CAUSE_1
 D:A kobold who occasionally manages to get a spell off. 
 
-N:4753:swamp kobold
+N:4753:Swamp kobold
 G:k:g
 I:108:2d5:20:0:10
 W:3:1:800:6
@@ -83259,7 +83259,7 @@ F:EVIL | IM_POIS | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 D:A kobold that supposedly likes swampy areas. 
 
-N:4754:rock kobold
+N:4754:Rock kobold
 G:k:D
 I:108:2d7:20:0:10
 W:5:1:800:9
@@ -83272,7 +83272,7 @@ F:EVIL | IM_POIS | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 D:A kobold that feels at home in rocky areas. 
 
-N:4755:kobold warrior
+N:4755:Kobold warrior
 G:k:W
 I:108:2d11:20:0:10
 W:7:1:800:14
@@ -83298,7 +83298,7 @@ F:EVIL | IM_POIS | TAKE_ITEM | MALE | CAN_SPEAK |
 F:MORTAL | BASEANGBAND |
 D:A particularly powerful kobold who leads his pals into battle. 
 
-N:4757:leprechaun
+N:4757:Leprechaun
 G:h:g
 I:115:2d4:8:6:6
 W:5:1:800:5
@@ -83326,7 +83326,7 @@ D:twinkling of an eye.
 D:[ A Field Guide to the Little People 
 D:by Nancy Arrowsmith & George Moorse ] 
 
-N:4758:small mimic
+N:4758:Small mimic
 G:):u
 I:95:5d10:30:13:0
 W:7:1:10:25
@@ -83343,7 +83343,7 @@ D:chameleon though, which assumes the shape of another creature
 D:and goes in hunt of food, the mimic waits patiently for its 
 D:meals to come in search of it. 
 
-N:4759:large mimic
+N:4759:Large mimic
 G:!:r
 I:95:5d12:30:13:0
 W:8:1:10:30
@@ -83355,7 +83355,7 @@ F:BASEANGBAND | RES_SHAR |
 F:IM_ACID | ANIMAL |
 D:It pretends to be a valuable item. 
 
-N:4760:giant mimic
+N:4760:Giant mimic
 G:`:v
 I:95:5d15:30:13:0
 W:9:1:10:40
@@ -83368,7 +83368,7 @@ F:BASEANGBAND | RES_SHAR |
 F:IM_ACID | ANIMAL |
 D:Ha! Thought you had found some super useful item, eh? 
 
-N:4761:mountain nymph
+N:4761:Mountain nymph
 G:h:u
 I:110:3d6:50:3:0
 W:3:1:1600:8
@@ -83382,7 +83382,7 @@ D:Amy: "So ein suesses Nymphchen!"
 D:Irrenhaus3: "Am Arsch die Raeuber." 
 D:[ Comments on Irrenhaus3's nymph video. ] 
 
-N:4762:quickling
+N:4762:Quickling
 G:h:B
 I:140:3d6:50:0:0
 W:3:8:1600:12
@@ -83398,7 +83398,7 @@ D:small size make it difficult to find and focus on these swift
 D:beings. 
 D:[ ADOM, by Thomas Biskup ] 
 
-N:4763:pixie
+N:4763:Pixie
 G:h:b
 I:115:3d6:50:10:0
 W:3:3:1600:12
@@ -83413,7 +83413,7 @@ D:Not in my garden of thistle and thorn,
 D:Well, not since I tidied it up with my strimmer. 
 D:[ Learning to Live with Orcs by Richard A. Bartle ] 
 
-N:4764:wood nymph
+N:4764:Wood nymph
 G:h:g
 I:110:3d7:50:3:0
 W:4:1:1600:10
@@ -83432,7 +83432,7 @@ D:long robe glows, hemmed with golden threads and embroidered
 D:with rainbow hues of unearthly magnificence.  A nymph's 
 D:demeanour is graceful and charming, her mind quick and witty. 
 
-N:4765:water nymph
+N:4765:Water nymph
 G:h:B
 I:110:3d7:50:5:0
 W:5:1:1600:13
@@ -83457,7 +83457,7 @@ D:later -- and some too late -- that joy blots suffering and
 D:that the road to nymphs is beset by monsters." 
 D:[ The Minotaur by Bernard Evslin ] 
 
-N:4766:brownie
+N:4766:Brownie
 G:h:u
 I:110:4d10:50:10:0
 W:8:4:1600:35
@@ -83485,7 +83485,7 @@ F:MORTAL | BASEANGBAND | TAKE_ITEM | DROP_GREAT |
 D:This bitch is the queen of nymphs, and her ability to 
 D:steal your items is unmatched! Don't let her near you! 
 
-N:4768:goblin
+N:4768:Goblin
 G:k:W
 I:105:1d4:20:0:30
 W:0:1:800:1
@@ -83507,7 +83507,7 @@ D:slaves that have to work till they die for want of air and
 D:light. 
 D:[ The Hobbit, by J.R.R. Tolkien ] 
 
-N:4769:hobgoblin
+N:4769:Hobgoblin
 G:k:u
 I:108:1d6:20:0:30
 W:0:1:800:1
@@ -83532,7 +83532,7 @@ D:The ninety-nine years is nearly up, so trouble may soon be
 D:heard of on the road between Hurworth and Neasham. 
 D:[ A Dictionary of Fairies, by Katharine Briggs ] 
 
-N:4770:orc
+N:4770:Orc
 G:o:r
 I:108:1d6:20:0:30
 W:1:1:1900:2
@@ -83560,7 +83560,7 @@ D:hunting for them.  There is nothing a horde of orcs cannot
 D:use. 
 D:[ het Boek van de Regels; Het Oog des Meesters ] 
 
-N:4771:hill orc
+N:4771:Hill orc
 G:o:y
 I:108:1d9:20:0:30
 W:2:1:1900:3
@@ -83587,7 +83587,7 @@ F:MORTAL | BASEANGBAND |
 D:Cannon fodder from Isengard, these orcs come in groups and 
 D:fall like flies. 
 
-N:4773:goblin shaman
+N:4773:Goblin shaman
 G:k:W
 I:105:2d7:20:0:30
 W:3:1:800:1
@@ -83623,7 +83623,7 @@ D:here, and we shall lead you back by the way we choose. I am
 D:Ugluk. I have spoken." 
 D:[ The Return of the King, by J.R.R. Tolkien ] 
 
-N:4775:orc shaman
+N:4775:Orc shaman
 G:o:B
 I:108:2d6:20:0:30
 W:3:1:1900:2
@@ -83638,7 +83638,7 @@ S:1_IN_7
 S:CONF | SCARE | CAUSE_1 | ARROW_1
 D:An orc who has learned to cast a few spells. 
 
-N:4776:orc-captain
+N:4776:Orc-captain
 G:o:v
 I:102:5d7:20:0:30
 W:5:1:1900:12
@@ -83652,7 +83652,7 @@ F:EVIL | ORC | HURT_LITE |
 F:MORTAL | BASEANGBAND | 
 D:An orc that leads other orcs into battle. 
 
-N:4777:war orc
+N:4777:War orc
 G:o:g
 I:106:4d7:20:0:30
 W:6:1:1900:12
@@ -83665,7 +83665,7 @@ F:EVIL | ORC | HURT_LITE | FRIEND |
 F:MORTAL | BASEANGBAND | 
 D:An orc equipped for war. 
 
-N:4778:deep orc
+N:4778:Deep orc
 G:o:g
 I:108:4d8:20:10:30
 W:7:1:1900:18
@@ -83679,7 +83679,7 @@ F:EVIL | ORC | HURT_LITE |
 F:MORTAL | BASEANGBAND | 
 D:Yet another kind of orc. 
 
-N:4779:cave orc
+N:4779:Cave orc
 G:o:G
 I:110:4d8:20:0:30
 W:7:1:1900:18
@@ -83692,7 +83692,7 @@ F:EVIL | ORC | HURT_LITE |
 F:MORTAL | BASEANGBAND | 
 D:These orcs come from the deep caves. How ominous. 
 
-N:4780:great orc
+N:4780:Great orc
 G:o:G
 I:106:4d12:20:3:30
 W:9:1:1900:30
@@ -83705,7 +83705,7 @@ F:EVIL | ORC | HURT_LITE | FRIEND |
 F:MORTAL | BASEANGBAND | 
 D:Despite the name, this orc moves rather slowly. 
 
-N:4781:snow orc
+N:4781:Snow orc
 G:o:b
 I:110:4d9:20:6:30
 W:9:1:1900:30
@@ -83718,7 +83718,7 @@ F:EVIL | ORC | HURT_LITE | FRIEND |
 F:MORTAL | BASEANGBAND | 
 D:A cold-resistant orc. 
 
-N:4782:demon orc
+N:4782:Demon orc
 G:o:o
 I:110:4d13:20:6:30
 W:12:1:1900:40
@@ -83744,7 +83744,7 @@ F:EVIL | ORC | HURT_LITE | UNIQUE | CAN_SPEAK |
 F:MORTAL | BASEANGBAND | 
 D:A great leader of the orcs. 
 
-N:4784:rock piercer
+N:4784:Rock piercer
 G:#:W
 I:90:5d20:30:16:255
 W:3:1:1000:10
@@ -83762,7 +83762,7 @@ D:it to kill and devour it, though in any other way they move
 D:but exceeding slow. 
 D:[ the Bestiary of Xygag ] 
 
-N:4785:iron piercer
+N:4785:Iron piercer
 G:#:b
 I:90:5d26:30:20:255
 W:5:1:1000:20
@@ -83774,7 +83774,7 @@ F:NO_CUT | RES_SHAR |
 D:A monster that has not, in over 20 years of NetHack, ever 
 D:posed a problem to anyone because it moves so slowly. 
 
-N:4786:glass piercer
+N:4786:Glass piercer
 G:#:w
 I:90:5d32:30:25:255
 W:7:1:1000:30
@@ -83786,7 +83786,7 @@ F:NO_CUT | RES_SHAR | IM_ACID |
 D:If it was moving more quickly, it might even be slightly 
 D:dangerous, but it doesn't so you can just cut it down. 
 
-N:4787:lamb
+N:4787:Lamb
 G:q:w
 I:110:2d3:20:0:5
 W:1:1:2800:1
@@ -83800,7 +83800,7 @@ F:DROP_SKELETON | DROP_CORPSE
 F:MORTAL | BASEANGBAND | 
 D:A peaceful farm animal. 
 
-N:4788:rothe
+N:4788:Rothe
 G:q:u
 I:108:2d8:20:8:100
 W:2:1:2000:8
@@ -83815,7 +83815,7 @@ D:The rothe (pronounced roth-AY) is a musk ox-like creature with
 D:an aversion to light.  It prefers to live underground near 
 D:lichen and moss. 
 
-N:4789:scramper
+N:4789:Scramper
 G:q:g
 I:108:2d9:20:8:100
 W:3:1:2000:13
@@ -83830,7 +83830,7 @@ F:ANIMAL | MORTAL | BASEANGBAND
 D:Not sure what it's supposed to represent, but it has an annoying 
 D:poisonous sting. 
 
-N:4790:sheep
+N:4790:Sheep
 G:q:w
 I:110:2d7:20:4:5
 W:3:1:2800:3
@@ -83845,7 +83845,7 @@ F:MORTAL | BASEANGBAND |
 D:These animals are docile and won't pose a threat unless you 
 D:decide to anger them. 
 
-N:4791:goat
+N:4791:Goat
 G:q:w
 I:110:2d9:20:8:5
 W:4:1:2800:5
@@ -83861,7 +83861,7 @@ F:MORTAL | BASEANGBAND |
 D:An annoying animal that decides the best course of action 
 D:is to attack you. Fight back and squash it! 
 
-N:4792:original mumak
+N:4792:Original mumak
 G:q:W
 I:108:5d10:20:20:100
 W:5:1:25000:35
@@ -83881,7 +83881,7 @@ D:a huge serpent about to strike, his small red eyes raging.
 D:His upturned hornlike tusks ... dripped with blood. 
 D:[ The Two Towers, by J.R.R. Tolkien ] 
 
-N:4793:leocrotta
+N:4793:Leocrotta
 G:q:r
 I:115:5d12:20:13:100
 W:6:1:5000:60
@@ -83900,7 +83900,7 @@ D:bone instead of teeth; it is said, too, that this animal can
 D:imitate the human voice. 
 D:[ Curious Creatures in Zoology, by John Ashton ] 
 
-N:4794:catoblepas
+N:4794:Catoblepas
 G:q:D
 I:105:5d10:20:8:100
 W:6:10:5000:100
@@ -83912,7 +83912,7 @@ F:BASH_DOOR | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND
 D:The gaze of this quadruped drains your very soul. 
 
-N:4795:mumak
+N:4795:Mumak
 G:q:W
 I:108:5d15:20:20:100
 W:7:1:25000:45
@@ -83926,7 +83926,7 @@ F:WILD_WASTE | WILD_WOOD | WILD_GRASS |
 D:A very large, if somewhat slow, animal that hits with the 
 D:force of a truck. 
 
-N:4796:cow
+N:4796:Cow
 G:q:w
 I:110:5d9:20:5:5
 W:7:1:2800:10
@@ -83941,7 +83941,7 @@ F:MORTAL | BASEANGBAND |
 D:As long as you don't pick a fight with them, these animals 
 D:won't pose a danger. 
 
-N:4797:wumpus
+N:4797:Wumpus
 G:q:b
 I:90:5d14:20:22:100
 W:8:1:25000:50
@@ -83957,7 +83957,7 @@ D:up and move himself into another cave, though by nature the
 D:Wumpus is a sedentary creature. 
 D:[ wump(6) -- "Hunt the Wumpus" ] 
 
-N:4798:bull
+N:4798:Bull
 G:q:D
 I:113:7d13:20:10:100
 W:10:1:25000:70
@@ -83969,7 +83969,7 @@ F:BASH_DOOR | DROP_CORPSE | MALE | WILD_GRASS |
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_WASTE | 
 D:A furious bovine who tries to kill you! 
 
-N:4799:titanothere
+N:4799:Titanothere
 G:q:W
 I:110:7d20:20:13:100
 W:12:1:25000:150
@@ -83983,7 +83983,7 @@ D:early Tertiary were also large perissodactyls, _Brontotherium_
 D:of the Oligocene being 8 feet high at the shoulder. 
 D:[ Prehistoric Animals, by Barry Cox ] 
 
-N:4800:baluchitherium
+N:4800:Baluchitherium
 G:q:W
 I:110:7d24:20:14:100
 W:14:1:25000:170
@@ -84001,7 +84001,7 @@ D:allowed the 4-foot-long head to browse on the higher branches
 D:of trees. 
 D:[ Prehistoric Animals, by Barry Cox ] 
 
-N:4801:mastodon
+N:4801:Mastodon
 G:q:u
 I:110:8d40:20:16:100
 W:20:1:25000:240
@@ -84031,7 +84031,7 @@ F:RES_WALL | RES_GRAV | RES_NEXU | RES_DISE | RES_WATE | RES_TIME |
 F:RES_SOUN | RES_CHAO | RES_INER | WILD_WASTE | 
 D:A very large and dangerous elephant. 
 
-N:4803:sewer rat
+N:4803:Sewer rat
 G:r:u
 I:110:1d2:8:5:30
 W:0:1:200:1
@@ -84041,7 +84041,7 @@ B:BITE:HURT:1d3
 F:ANIMAL | MORTAL | BASEANGBAND | FRIEND
 D:Some small rodent that tries to bite you. 
 
-N:4804:pack rat
+N:4804:Pack rat
 G:r:D
 I:110:1d2:8:5:30
 W:0:1:200:1
@@ -84052,7 +84052,7 @@ B:TOUCH:EAT_ITEM:1d1
 F:ANIMAL | MORTAL | BASEANGBAND
 D:A rodent that tries to steal your stuff. 
 
-N:4805:rabbit
+N:4805:Rabbit
 G:r:w
 I:115:1d2:8:5:30
 W:0:1:200:1
@@ -84062,7 +84062,7 @@ B:BITE:HURT:1d3
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_GRASS |
 D:A small rodent that attacks you. 
 
-N:4806:black rat
+N:4806:Black rat
 G:r:D
 I:110:1d2:8:5:30
 W:0:1:200:1
@@ -84072,7 +84072,7 @@ B:BITE:HURT:1d3
 F:ANIMAL | MORTAL | BASEANGBAND
 D:Yet another rodent that wants to bite you. 
 
-N:4807:giant rat
+N:4807:Giant rat
 G:r:u
 I:110:1d3:8:5:30
 W:1:1:200:1
@@ -84091,7 +84091,7 @@ D:dying people.  They show astonishing intelligence in knowing
 D:when a human being is helpless." 
 D:[ 1984, by George Orwell ] 
 
-N:4808:rabid rat
+N:4808:Rabid rat
 G:r:u
 I:110:1d4:8:6:30
 W:2:1:200:2
@@ -84101,7 +84101,7 @@ B:BITE:LOSE_CON:2d4
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | 
 D:A rat that can drain your constitution with a bite. 
 
-N:4809:rabid rabbit
+N:4809:Rabid rabbit
 G:r:w
 I:116:1d6:8:5:30
 W:3:1:200:4
@@ -84111,7 +84111,7 @@ B:BITE:LOSE_CON:2d6
 F:ANIMAL | MORTAL | BASEANGBAND | WILD_GRASS | 
 D:This rabbit has a rather unpleasant bite. 
 
-N:4810:rock mole
+N:4810:Rock mole
 G:r:W
 I:95:3d10:8:20:30
 W:3:1:200:8
@@ -84127,7 +84127,7 @@ D:eat anything they come across in their diggings, although it
 D:is still unknown how they convert some of these things into 
 D:something of nutritional value. 
 
-N:4811:woodchuck
+N:4811:Woodchuck
 G:r:u
 I:95:3d10:8:20:30
 W:3:10:200:8
@@ -84148,7 +84148,7 @@ D:and heard the Oracle slam his finger on a computer key, followed
 D:by a loud ZZZZOTTTTT and the smell of ozone. 
 D:[ Excerpted from Internet Oracularity 576.6 ] 
 
-N:4812:enormous rat
+N:4812:Enormous rat
 G:r:u
 I:108:3d4:8:5:30
 W:3:1:300:4
@@ -84158,7 +84158,7 @@ B:BITE:HURT:1d6
 F:ANIMAL | MORTAL | BASEANGBAND
 D:A rat that is bigger than usual. 
 
-N:4813:rodent of unusual size
+N:4813:Rodent of unusual size
 G:r:u
 I:107:3d12:8:11:30
 W:7:1:300:12
@@ -84168,7 +84168,7 @@ B:BITE:HURT:2d6
 F:ANIMAL | MORTAL | BASEANGBAND
 D:A very big rat. 
 
-N:4814:the Rat King
+N:4814:The Rat King
 G:r:v
 I:115:6d15:8:8:30
 W:12:5:200:150
@@ -84181,7 +84181,7 @@ F:MALE | UNIQUE | CAN_SPEAK | DROP_12 | DROP_GOOD |
 D:The king of the rats. He wants to teach you a lesson for 
 D:all the other, smaller rats you've killed! 
 
-N:4815:cave spider
+N:4815:Cave spider
 G:S:W
 I:110:1d5:8:10:80
 W:1:1:400:1
@@ -84193,7 +84193,7 @@ F:ANIMAL | SPIDER | IM_POIS | HAS_EGG |
 F:MORTAL | BASEANGBAND
 D:Eight legged creature capable of spinning webs to trap prey. 
 
-N:4816:centipede
+N:4816:Centipede
 G:c:y
 I:98:1d8:7:10:40
 W:2:1:500:3
@@ -84215,7 +84215,7 @@ D:biped that ruins their peace.
 D:[ Travels and Researches in South Africa, 
 D:by Dr. David Livingstone ] 
 
-N:4817:recluse spider
+N:4817:Recluse spider
 G:S:u
 I:110:2d6:8:12:80
 W:3:1:400:4
@@ -84227,7 +84227,7 @@ F:ANIMAL | SPIDER | IM_POIS | HAS_EGG |
 F:MORTAL | BASEANGBAND
 D:A poisonous spider. 
 
-N:4818:carrion crawler
+N:4818:Carrion crawler
 G:c:g
 I:110:2d7:7:11:40
 W:3:1:500:6
@@ -84243,7 +84243,7 @@ F:ANIMAL | MORTAL | BASEANGBAND
 D:Ha ha ha, this creature will constantly paralyze you. Unless 
 D:you have free action, you'll probably die. 
 
-N:4819:giant spider
+N:4819:Giant spider
 G:S:y
 I:115:3d6:8:18:80
 W:5:1:1000:10
@@ -84262,7 +84262,7 @@ D:don't I?"
 D:"Why, yes, of course," said Wilbur. 
 D:[ Charlotte's Web, by E.B. White ] 
 
-N:4820:scorpion
+N:4820:Scorpion
 G:S:r
 I:115:3d7:12:15:20
 W:5:1:1000:12
@@ -84280,7 +84280,7 @@ D:ends in a long, jointed tail tapering to a poisonous stinger.
 D:They have eight legs and pincers. 
 D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
-N:4821:phase spider
+N:4821:Phase spider
 G:S:B
 I:110:3d8:8:20:80
 W:8:1:400:22
@@ -84300,7 +84300,7 @@ D:as Void-Space. Phase Spiders use this ability to their great
 D:advantage in combat. 
 D:[ Alien Update Lexicon by Randy Walker ] 
 
-N:4822:nickelpede
+N:4822:Nickelpede
 G:c:b
 I:98:5d8:7:14:40
 W:8:1:500:20
@@ -84312,7 +84312,7 @@ F:BASH_DOOR | WILD_TOO | HAS_EGG |
 F:ANIMAL | MORTAL | BASEANGBAND
 D:The name suggests it's probably some sort of centipede. 
 
-N:4823:giant scorpion
+N:4823:Giant scorpion
 G:S:r
 I:115:9d7:12:15:20
 W:12:1:5000:40
@@ -84363,7 +84363,7 @@ D:great knobbed joints high above her back, and hairs that stuck
 D:out like steel spines, and at each leg's end there was a claw. 
 D:[ The Two Towers, by J.R.R. Tolkien ] 
 
-N:4826:lurker above
+N:4826:Lurker above
 G:.:W
 I:95:8d10:30:15:10
 W:10:1:2000:30
@@ -84377,7 +84377,7 @@ D:These dungeon scavengers are very adept at blending into the
 D:surrounding walls and ceilings of the dungeon due to the 
 D:stone-like coloring of their skin. 
 
-N:4827:trapper
+N:4827:Trapper
 G:.:g
 I:95:8d13:30:16:10
 W:12:1:2000:40
@@ -84393,7 +84393,7 @@ D:its prey by remaining very still and blending into the
 D:surrounding dungeon features, until an unsuspecting creature 
 D:passes by.  It wraps itself around its prey and digests it. 
 
-N:4828:pony
+N:4828:Pony
 G:q:u
 I:114:4d8:20:10:30
 W:3:1:2800:10
@@ -84411,7 +84411,7 @@ D:For they sniff danger ahead which you walk right into; and if they
 D:run to save themselves, then they run the right way." 
 D:[ The Fellowship of the Ring, by J.R.R. Tolkien ] 
 
-N:4829:white unicorn
+N:4829:White unicorn
 G:q:w
 I:120:4d10:20:22:30
 W:4:1:2800:18
@@ -84433,7 +84433,7 @@ D:ground to a powder it would act as an antidote to all poisons.
 D:Less than 200 years ago in France, the horn of a unicorn was 
 D:used in a ceremony to test the royal food for poison. 
 
-N:4830:gray unicorn
+N:4830:Gray unicorn
 G:q:W
 I:120:4d10:20:22:30
 W:4:1:2800:18
@@ -84454,7 +84454,7 @@ D:virgin, the unicorn can be lured to lay its head in her lap, and
 D:in this docile mood, the maiden may secure it with a golden rope. 
 D:[ Mythical Beasts, by Deirdre Headon (The Leprechaun Library) ] 
 
-N:4831:black unicorn
+N:4831:Black unicorn
 G:q:D
 I:120:4d10:20:22:30
 W:4:1:2800:18
@@ -84474,7 +84474,7 @@ D:warm glow stage, then I use my horn to burn off any excess and
 D:keep me right there." 
 D:[ Unicorn Variations, by Roger Zelazny ] 
 
-N:4832:horse
+N:4832:Horse
 G:q:u
 I:118:4d11:20:12:30
 W:5:1:3200:23
@@ -84495,7 +84495,7 @@ D:Five have I slain to-day instead of him.
 D:A horse! a horse! my kingdom for a horse! 
 D:[ King Richard III, by William Shakespeare ] 
 
-N:4833:warhorse
+N:4833:Warhorse
 G:q:u
 I:120:4d14:20:14:30
 W:7:1:4000:28
@@ -84523,7 +84523,7 @@ F:MORTAL | BASEANGBAND |
 F:DROP_SKELETON | DROP_CORPSE | 
 D:A legendary horse. 
 
-N:4835:fog cloud
+N:4835:Fog cloud
 G:v:W
 I:90:3d8:100:20:0
 W:3:1:0:5
@@ -84542,7 +84542,7 @@ D:on silent haunches
 D:and then moves on. 
 D:[ Fog, by Carl Sandburg ] 
 
-N:4836:dust vortex
+N:4836:Dust vortex
 G:v:u
 I:118:3d9:100:18:0
 W:4:1:0:7
@@ -84555,7 +84555,7 @@ F:NO_CUT | IM_POIS | RES_WALL | RES_GRAV |
 F:RES_SHAR | CAN_FLY |
 D:A vortex that blinds you. 
 
-N:4837:ice vortex
+N:4837:Ice vortex
 G:v:b
 I:118:3d10:100:18:0
 W:5:1:0:9
@@ -84568,7 +84568,7 @@ F:NO_CUT | IM_POIS | RES_WALL | RES_GRAV | WILD_MOUNTAIN |
 F:RES_SHAR | CAN_FLY | IM_COLD |
 D:A vortex that causes you to freeze. 
 
-N:4838:energy vortex
+N:4838:Energy vortex
 G:v:B
 I:118:3d11:100:18:0
 W:6:1:0:12
@@ -84583,7 +84583,7 @@ F:NO_CUT | IM_POIS | RES_WALL | RES_GRAV | RES_DISE |
 F:RES_SHAR | CAN_FLY | IM_ELEC | RES_NEXU |
 D:A vortex that shocks you and even drains power from your wands. 
 
-N:4839:steam vortex
+N:4839:Steam vortex
 G:v:B
 I:119:3d12:100:18:0
 W:7:1:0:16
@@ -84596,7 +84596,7 @@ F:NO_CUT | IM_POIS | RES_WALL | RES_GRAV | WILD_VOLCANO |
 F:RES_SHAR | CAN_FLY | IM_FIRE | RES_NEXU |
 D:A vortex that burns you. 
 
-N:4840:fire vortex
+N:4840:Fire vortex
 G:v:y
 I:119:3d12:100:18:0
 W:8:1:0:20
@@ -84610,7 +84610,7 @@ F:NO_CUT | IM_POIS | RES_WALL | RES_GRAV | WILD_VOLCANO |
 F:RES_SHAR | CAN_FLY | IM_FIRE | RES_NEXU |
 D:A very hot, fiery vortex. 
 
-N:4841:rot worm
+N:4841:Rot worm
 G:w:w
 I:106:1d3:7:8:10
 W:1:1:30:2
@@ -84623,7 +84623,7 @@ F:MORTAL | BASEANGBAND | NO_CUT |
 D:Failure to recognize these worms in time can result in 
 D:being afflicted with disease! 
 
-N:4842:larva
+N:4842:Larva
 G:w:w
 I:105:1d3:7:1:10
 W:1:1:30:1
@@ -84636,7 +84636,7 @@ F:MORTAL | BASEANGBAND | NO_CUT |
 D:These things are small and not very dangerous, but can 
 D:be surprisingly difficult to kill. 
 
-N:4843:maggot
+N:4843:Maggot
 G:w:w
 I:108:1d6:7:8:10
 W:2:1:30:2
@@ -84648,7 +84648,7 @@ F:ANIMAL | NO_FEAR |
 F:MORTAL | BASEANGBAND | NO_CUT |
 D:A slow, crawling thing. 
 
-N:4844:dung worm
+N:4844:Dung worm
 G:w:D
 I:108:1d10:7:8:10
 W:3:1:30:3
@@ -84660,7 +84660,7 @@ F:ANIMAL | NO_FEAR |
 F:MORTAL | BASEANGBAND | NO_CUT |
 D:A small worm. 
 
-N:4845:baby long worm
+N:4845:Baby long worm
 G:w:u
 I:95:4d12:7:9:10
 W:8:1:30:12
@@ -84672,7 +84672,7 @@ F:ANIMAL | NO_FEAR |
 F:MORTAL | BASEANGBAND | NO_CUT |
 D:The baby version of the long worm. 
 
-N:4846:baby purple worm
+N:4846:Baby purple worm
 G:w:v
 I:95:4d12:7:9:10
 W:8:1:30:12
@@ -84685,7 +84685,7 @@ F:MORTAL | BASEANGBAND | NO_CUT |
 D:Unlike the fully grown purple worm, this one isn't very 
 D:dangerous yet. 
 
-N:4847:long worm
+N:4847:Long worm
 G:w:u
 I:95:4d15:7:9:10
 W:8:1:3000:12
@@ -84702,7 +84702,7 @@ D:electrical field to prevent disintegration.  Fixed knives
 D:are treated for storage.  All are about 20 centimeters long. 
 D:[ Dune, by Frank Herbert ] 
 
-N:4848:purple worm
+N:4848:Purple worm
 G:w:v
 I:105:10d16:7:12:10
 W:15:1:30000:100
@@ -84720,7 +84720,7 @@ D:few minutes.  These worms are always on guard, sensitive
 D:to the most minute vibrations in the earth, but may also 
 D:be awakened by a remote shriek. 
 
-N:4849:grid bug
+N:4849:Grid bug
 G:I:v
 I:110:1d2:10:2:10
 W:0:1:10:1
@@ -84733,7 +84733,7 @@ D:These electronically based creatures are not native to this
 D:universe.  They appear to come from a world whose laws of 
 D:motion are radically different from ours. 
 
-N:4850:spark bug
+N:4850:Spark bug
 G:I:B
 I:110:1d6:10:2:10
 W:2:1:10:2
@@ -84745,7 +84745,7 @@ F:ANIMAL | NO_FEAR | IM_ELEC | BASEANGBAND |
 D:"What was that?" cried Buck, rubbing his numb and tingling arm. 
 D:"Nature's revenge for bug zappers," replied his companion. 
 
-N:4851:arc bug
+N:4851:Arc bug
 G:I:o
 I:110:2d6:10:2:10
 W:4:1:10:5
@@ -84756,7 +84756,7 @@ F:STUPID | WEIRD_MIND | IM_POIS | HAS_EGG |
 F:ANIMAL | NO_FEAR | IM_ELEC | BASEANGBAND |
 D:The "Grid Bug 3.0". 
 
-N:4852:electric bug
+N:4852:Electric bug
 G:I:y
 I:110:3d6:10:2:10
 W:6:1:10:10
@@ -84767,7 +84767,7 @@ F:STUPID | WEIRD_MIND | IM_POIS | HAS_EGG |
 F:ANIMAL | NO_FEAR | IM_ELEC | BASEANGBAND |
 D:An even stronger version of the grid bug. 
 
-N:4853:xan
+N:4853:Xan
 G:I:r
 I:118:3d10:10:28:10
 W:7:1:10:30
@@ -84788,7 +84788,7 @@ D:he flew along the row stinging all the seated men until he
 D:knew the names of all twelve. 
 D:[ Popul Vuh, as translated by Ralph Nelson ] 
 
-N:4854:yellow light
+N:4854:Yellow light
 G:*:y
 I:115:2d5:8:20:30
 W:3:1:0:3
@@ -84803,7 +84803,7 @@ D:Strange creatures formed from energy rather than matter,
 D:lights are given to self-destructive behavior when battling 
 D:foes. 
 
-N:4855:black light
+N:4855:Black light
 G:*:D
 I:115:3d5:8:20:30
 W:5:1:0:6
@@ -84820,7 +84820,7 @@ D:X-rays. ... Some of the UV wavelengths are colloquially called black
 D:light, as it is invisible to the human eye. 
 D:[ Wikipedia, the free encyclopedia ] 
 
-N:4856:echidna
+N:4856:Echidna
 G:q:u
 I:105:2d5:20:2:100
 W:2:1:1000:2
@@ -84834,7 +84834,7 @@ F:ANIMAL |
 F:DROP_CORPSE | 
 D:Some small australian animal. 
 
-N:4857:platypus
+N:4857:Platypus
 G:q:g
 I:107:2d8:20:4:100
 W:4:1:1000:4
@@ -84848,7 +84848,7 @@ F:ANIMAL |
 F:DROP_CORPSE | 
 D:A rather weird-looking australian animal. 
 
-N:4858:wombat
+N:4858:Wombat
 G:q:u
 I:110:3d8:20:10:100
 W:5:1:1000:6
@@ -84861,7 +84861,7 @@ F:ANIMAL |
 F:DROP_CORPSE | 
 D:Some wild australian animal. 
 
-N:4859:wallaby
+N:4859:Wallaby
 G:q:u
 I:118:3d8:20:7:100
 W:5:1:1000:7
@@ -84874,7 +84874,7 @@ F:ANIMAL |
 F:DROP_CORPSE | 
 D:Another wild australian animal. 
 
-N:4860:wallaroo
+N:4860:Wallaroo
 G:q:r
 I:121:3d9:20:5:100
 W:6:1:1500:9
@@ -84888,7 +84888,7 @@ F:DROP_CORPSE |
 D:An australian animal whose name sounds like a misspelling, 
 D:but apparently it's genuine. 
 
-N:4861:koala
+N:4861:Koala
 G:q:W
 I:100:3d12:20:2:100
 W:7:1:800:12
@@ -84900,7 +84900,7 @@ F:ANIMAL |
 F:DROP_CORPSE | 
 D:These little things tend to hold you in place. 
 
-N:4862:zouthy
+N:4862:Zouthy
 G:q:u
 I:108:3d12:20:12:100
 W:9:1:1500:20
@@ -84928,7 +84928,7 @@ F:ANIMAL | KILL_ITEM |
 F:DROP_CORPSE | 
 D:An animal that eats items off the floor. 
 
-N:4864:kangaroo
+N:4864:Kangaroo
 G:q:W
 I:125:4d14:20:10:100
 W:10:1:2500:30
@@ -84942,7 +84942,7 @@ F:ANIMAL | WILD_GRASS | WILD_WASTE |
 F:DROP_CORPSE | 
 D:A very large, vicious australian animal. 
 
-N:4865:couatl
+N:4865:Couatl
 G:A:g
 I:108:8d13:30:10:255
 W:8:1:2600:60
@@ -84984,7 +84984,7 @@ D:looks exactly  like the character, and  is sent  by the character's
 D:god to  punish alignment violations. Obviously  - and  luckily - in 
 D:Nethack this is not the case.
 
-N:4867:movanic deva
+N:4867:Movanic deva
 G:A:B
 I:115:8d16:30:35:255
 W:12:1:2600:200
@@ -85029,7 +85029,7 @@ D:and shall cast them into the furnace of fire; there shall be
 D:wailing and gnashing of teeth. 
 D:[ The Gospel According to Matthew, 13:37-42, 49-50 ] 
 
-N:4869:monadic deva
+N:4869:Monadic deva
 G:A:U
 I:115:9d22:30:35:255
 W:15:1:2600:320
@@ -85045,7 +85045,7 @@ S:1_IN_4
 S:HEAL | HASTE | CAUSE_2 | SCARE | BLIND | BR_LITE | SLOW |
 D:A very strong angelic being. 
 
-N:4870:ki-rin
+N:4870:Ki-rin
 G:A:y
 I:115:9d23:30:38:255
 W:16:1:2600:400
@@ -85065,7 +85065,7 @@ D:scales, a mane like a lion, a tail, hooves, and a horn.  It
 D:is brightly colored, and can usually be found flying in the 
 D:sky looking for good deeds to reward. 
 
-N:4871:astral deva
+N:4871:Astral deva
 G:A:w
 I:115:9d26:30:45:255
 W:18:1:2600:500
@@ -85158,7 +85158,7 @@ D:demipowers.  Their hair and skin is metallic.  Solars stay aloof
 D:from mortals, but may command them with an irresistable voice. 
 D:[ adapted from Aasimar, by David Roberts and Brynn ] 
 
-N:4875:bat
+N:4875:Bat
 G:b:u
 I:122:1d2:20:4:10
 W:0:1:20:1
@@ -85177,7 +85177,7 @@ D:proverb, and I will show you something that ought to be in
 D:some kind of a home. 
 D:[ A Pelican at Blandings, by P. G. Wodehouse ] 
 
-N:4876:large bat
+N:4876:Large bat
 G:b:u
 I:122:1d3:20:4:10
 W:1:1:20:1
@@ -85188,7 +85188,7 @@ F:ANIMAL | CAN_FLY | WILD_GRASS | DROP_CORPSE
 F:MORTAL | BASEANGBAND | RAND_50 |
 D:A bat that is larger than an ordinary one. 
 
-N:4877:giant bat
+N:4877:Giant bat
 G:b:r
 I:122:1d4:20:5:10
 W:2:1:40:1
@@ -85199,7 +85199,7 @@ F:ANIMAL | CAN_FLY | WILD_GRASS | DROP_CORPSE
 F:MORTAL | BASEANGBAND | RAND_50 |
 D:A very big bat. 
 
-N:4878:athol
+N:4878:Athol
 G:b:W
 I:120:1d4:20:5:10
 W:2:1:40:1
@@ -85216,7 +85216,7 @@ D:moved off into the night. Bartels soon remembered a local legend
 D:of the ahool or athol, a type of huge bat reputed to live in 
 D:the area.
 
-N:4879:rhumbat
+N:4879:Rhumbat
 G:b:y
 I:122:1d5:20:5:10
 W:3:1:40:1
@@ -85227,7 +85227,7 @@ F:ANIMAL | CAN_FLY | DROP_CORPSE
 F:MORTAL | BASEANGBAND | RAND_50 | 
 D:Some sort of bat, I dunno what's up with it. 
 
-N:4880:crow
+N:4880:Crow
 G:B:D
 I:120:2d6:40:9:0
 W:4:1:300:8
@@ -85239,7 +85239,7 @@ F:ANIMAL | WILD_TOO | WILD_WOOD | CAN_FLY | DROP_CORPSE
 F:MORTAL | BASEANGBAND | FRIEND
 D:A predatory bird. 
 
-N:4881:raven
+N:4881:Raven
 G:B:D
 I:120:2d6:40:9:0
 W:4:1:300:8
@@ -85257,7 +85257,7 @@ D:On the morrow *he* will leave me, as my hopes have flown before.'
 D:Then the bird said, 'Nevermore.' 
 D:[ The Raven - Edgar Allan Poe ] 
 
-N:4882:vampire bat
+N:4882:Vampire bat
 G:b:D
 I:120:1d8:20:9:10
 W:5:1:40:10
@@ -85271,7 +85271,7 @@ F:REGENERATE |
 D:A bat that's less dangerous than an actual vampire but still 
 D:has a poisonous bite. 
 
-N:4883:hellbat
+N:4883:Hellbat
 G:b:r
 I:122:2d5:20:11:10
 W:7:1:40:15
@@ -85282,7 +85282,7 @@ F:ANIMAL | CAN_FLY | DROP_CORPSE |
 F:MORTAL | BASEANGBAND | RAND_50 | IM_FIRE |
 D:A goddamned bat with a fiery bite. 
 
-N:4884:mongbat
+N:4884:Mongbat
 G:b:o
 I:122:2d5:20:11:10
 W:7:1:40:15
@@ -85297,7 +85297,7 @@ D:mongbat's small size renders its attack little more than a painful
 D:nuisance. 
 D:[ Beyond the Serpent Pillars by Andrew Morris ] 
 
-N:4885:mobat
+N:4885:Mobat
 G:b:D
 I:122:2d6:20:11:10
 W:9:1:40:15
@@ -85311,7 +85311,7 @@ S:SHRIEK
 D:Yet another bat. It shrieks occasionally, which can be very 
 D:annoying. 
 
-N:4886:byakhee
+N:4886:Byakhee
 G:b:u
 I:120:3d10:20:19:10
 W:11:2:5000:60
@@ -85330,7 +85330,7 @@ D:dark powers.  It is said that they will seize those who
 D:summon them and cannot best them and carry them off to whatever 
 D:terrible fate awaits them on other worlds. 
 
-N:4887:nightgaunt
+N:4887:Nightgaunt
 G:b:u
 I:120:4d13:20:26:10
 W:15:2:5000:85
@@ -85352,7 +85352,7 @@ D:they ever did was clutch and fly and tickle; that was the way
 D:of night-gaunts. 
 D:[ The Dream Quest of Unknown Kadath by HP Lovecraft ] 
 
-N:4888:plains centaur
+N:4888:Plains centaur
 G:H:u
 I:115:4d10:12:12:10
 W:4:1:8000:15
@@ -85364,7 +85364,7 @@ F:BASH_DOOR | TAKE_ITEM | WILD_GRASS | WILD_WASTE |
 F:DROP_CORPSE | MORTAL | BASEANGBAND | DROP_60
 D:A lowly centaur. 
 
-N:4889:forest centaur
+N:4889:Forest centaur
 G:H:g
 I:118:4d13:12:15:10
 W:5:1:8000:22
@@ -85376,7 +85376,7 @@ F:BASH_DOOR | TAKE_ITEM | WILD_WOOD |
 F:DROP_CORPSE | MORTAL | BASEANGBAND | DROP_60
 D:A moderately strong centaur. 
 
-N:4890:mountain centaur
+N:4890:Mountain centaur
 G:H:b
 I:120:4d15:12:18:10
 W:6:1:8000:31
@@ -85389,7 +85389,7 @@ F:BASH_DOOR | TAKE_ITEM | WILD_MOUNTAIN |
 F:DROP_CORPSE | MORTAL | BASEANGBAND | DROP_60
 D:A rather strong centaur. 
 
-N:4891:baby gray dragon
+N:4891:Baby gray dragon
 G:d:W
 I:108:4d10:20:18:70
 W:4:1:5000:15
@@ -85401,7 +85401,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A small, gray-colored dragon.
 
-N:4892:baby silver dragon
+N:4892:Baby silver dragon
 G:d:B
 I:108:4d10:20:18:70
 W:4:1:5000:15
@@ -85413,7 +85413,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A small, silver-colored dragon.
 
-N:4893:baby shimmering dragon
+N:4893:Baby shimmering dragon
 G:d:b
 I:108:4d10:20:34:70
 W:4:1:5000:15
@@ -85425,7 +85425,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | ATTR_MULTI |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A small shimmering dragon.
 
-N:4894:baby deep dragon
+N:4894:Baby deep dragon
 G:d:b
 I:108:4d10:20:21:70
 W:4:1:5000:15
@@ -85438,7 +85438,7 @@ F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A small dragon, no one knows its exact color because "deep" 
 D:is not a color, as far as I'm aware. 
 
-N:4895:baby red dragon
+N:4895:Baby red dragon
 G:d:r
 I:108:4d10:20:18:70
 W:4:1:5000:15
@@ -85450,7 +85450,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_FIRE |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A small, red-colored dragon.
 
-N:4896:baby white dragon
+N:4896:Baby white dragon
 G:d:w
 I:108:4d10:20:18:70
 W:4:1:5000:15
@@ -85462,7 +85462,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_COLD |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A small, white-colored dragon.
 
-N:4897:baby orange dragon
+N:4897:Baby orange dragon
 G:d:o
 I:108:4d10:20:18:70
 W:4:1:5000:15
@@ -85474,7 +85474,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | NO_SLEEP |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A small, orange-colored dragon.
 
-N:4898:baby black dragon
+N:4898:Baby black dragon
 G:d:D
 I:108:4d10:20:18:70
 W:4:1:5000:15
@@ -85486,7 +85486,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | RES_DISE |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A small, black-colored dragon.
 
-N:4899:baby blue dragon
+N:4899:Baby blue dragon
 G:d:B
 I:108:4d10:20:18:70
 W:4:1:5000:15
@@ -85498,7 +85498,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_ELEC |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A small, blue-colored dragon.
 
-N:4900:baby yellow dragon
+N:4900:Baby yellow dragon
 G:d:y
 I:108:4d10:20:18:70
 W:4:1:5000:15
@@ -85511,7 +85511,7 @@ F:RES_WALL | RES_GRAV |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A small, yellow-colored dragon.
 
-N:4901:baby green dragon
+N:4901:Baby green dragon
 G:d:g
 I:108:4d10:20:18:70
 W:4:1:5000:15
@@ -85523,7 +85523,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_POIS |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A small, green-colored dragon.
 
-N:4902:gray dragon
+N:4902:Gray dragon
 G:D:W
 I:108:20d24:20:35:70
 W:18:1:50000:2000
@@ -85539,7 +85539,7 @@ S:1_IN_6
 S:BR_MANA
 D:A dragon that breathes mana. 
 
-N:4903:silver dragon
+N:4903:Silver dragon
 G:D:B
 I:108:20d24:20:25:70
 W:18:1:50000:2000
@@ -85555,7 +85555,7 @@ S:1_IN_6
 S:BR_COLD
 D:A dragon that breathes cold and has reflection. 
 
-N:4904:shimmering dragon
+N:4904:Shimmering dragon
 G:D:b
 I:108:20d24:20:60:70
 W:18:1:50000:2000
@@ -85571,7 +85571,7 @@ S:1_IN_6
 S:BR_MANA
 D:A dragon that breathes mana and is hard to hit. 
 
-N:4905:deep dragon
+N:4905:Deep dragon
 G:D:v
 I:108:20d24:20:35:70
 W:18:1:50000:2000
@@ -85587,7 +85587,7 @@ S:1_IN_6
 S:BR_POIS
 D:A dragon that breathes poison and drains life. 
 
-N:4906:red dragon
+N:4906:Red dragon
 G:D:r
 I:108:20d24:20:35:70
 W:18:1:50000:2000
@@ -85603,7 +85603,7 @@ S:1_IN_6
 S:BR_FIRE
 D:A dragon that breathes fire. 
 
-N:4907:white dragon
+N:4907:White dragon
 G:D:w
 I:108:20d24:20:35:70
 W:18:1:50000:2000
@@ -85619,7 +85619,7 @@ S:1_IN_6
 S:BR_COLD
 D:A dragon that breathes cold. 
 
-N:4908:orange dragon
+N:4908:Orange dragon
 G:D:o
 I:108:20d24:20:35:70
 W:18:1:50000:2000
@@ -85635,7 +85635,7 @@ S:1_IN_6
 S:BR_INER
 D:A dragon that breathes inertia. 
 
-N:4909:black dragon
+N:4909:Black dragon
 G:D:D
 I:108:20d24:20:35:70
 W:18:1:50000:2000
@@ -85651,7 +85651,7 @@ S:1_IN_6
 S:BR_DISI
 D:A dragon that breathes disintegration. 
 
-N:4910:blue dragon
+N:4910:Blue dragon
 G:D:B
 I:108:20d24:20:35:70
 W:18:1:50000:2000
@@ -85667,7 +85667,7 @@ S:1_IN_6
 S:BR_ELEC
 D:A dragon that breathes lightning. 
 
-N:4911:green dragon
+N:4911:Green dragon
 G:D:g
 I:108:20d24:20:35:70
 W:18:1:50000:2000
@@ -85683,7 +85683,7 @@ S:1_IN_6
 S:BR_POIS
 D:A dragon that breathes poison. 
 
-N:4912:yellow dragon
+N:4912:Yellow dragon
 G:D:y
 I:108:20d24:20:35:70
 W:18:1:50000:2000
@@ -85700,7 +85700,7 @@ S:1_IN_6
 S:BR_ACID
 D:A dragon that breathes acid. 
 
-N:4913:stalker
+N:4913:Stalker
 G:E:w
 I:110:8d9:20:13:20
 W:8:1:5000:8
@@ -85721,7 +85721,7 @@ D:perceived as a shimmering air mass which looks much like the
 D:refraction effect caused by hot air passing in front of cold. 
 D:[ Monstrous Manual, by TSR inc. ] 
 
-N:4914:air elemental
+N:4914:Air elemental
 G:E:b
 I:140:6d8:12:17:50
 W:8:1:0:15
@@ -85734,7 +85734,7 @@ F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | RES_NEXU |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A very fast elemental being that can buffet you around. 
 
-N:4915:fire elemental
+N:4915:Fire elemental
 G:E:y
 I:110:6d8:12:17:50
 W:8:1:0:15
@@ -85749,7 +85749,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:An elemental that is most dangerous if you're not 
 D:immune to fire. 
 
-N:4916:earth elemental
+N:4916:Earth elemental
 G:E:u
 I:100:6d8:12:17:50
 W:8:1:0:15
@@ -85762,7 +85762,7 @@ F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | PASS_WALL |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A slow-moving elemental that passes through solid rock. 
 
-N:4917:water elemental
+N:4917:Water elemental
 G:E:B
 I:105:6d8:12:17:50
 W:8:1:0:15
@@ -85775,7 +85775,7 @@ F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | CAN_SWIM |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT |
 D:A strangely slow, weak elemental being. 
 
-N:4918:lichen
+N:4918:Lichen
 G:m:G
 I:85:1d4:2:1:0
 W:0:1:1000:4
@@ -85794,7 +85794,7 @@ D:moss was in abundant life, some feathering, and some
 D:gobleted, and some with fringe of red to it. 
 D:[ Lorna Doone, by R.D. Blackmore ] 
 
-N:4919:brown mold
+N:4919:Brown mold
 G:m:u
 I:110:1d6:2:1:0
 W:1:1:20:2
@@ -85808,7 +85808,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | RES_SHAR |
 F:MORTAL | BASEANGBAND | NO_CUT
 D:A frosty mold. 
 
-N:4920:yellow mold
+N:4920:Yellow mold
 G:m:y
 I:110:1d6:2:1:0
 W:1:1:20:2
@@ -85822,7 +85822,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | RES_SHAR |
 F:MORTAL | BASEANGBAND | NO_CUT
 D:A stunning mold. 
 
-N:4921:green mold
+N:4921:Green mold
 G:m:g
 I:110:1d6:2:1:0
 W:1:1:20:2
@@ -85836,7 +85836,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | RES_SHAR |
 F:MORTAL | BASEANGBAND | NO_CUT
 D:An acidic mold. 
 
-N:4922:red mold
+N:4922:Red mold
 G:m:r
 I:110:1d6:2:1:0
 W:1:1:20:2
@@ -85850,7 +85850,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | RES_SHAR |
 F:MORTAL | BASEANGBAND | NO_CUT
 D:A fiery mold. 
 
-N:4923:shrieker
+N:4923:Shrieker
 G:m:v
 I:85:3d5:2:6:0
 W:3:1:1000:10
@@ -85870,7 +85870,7 @@ D:its fetid bulk looming overhead...The monster was some kind of
 D:great dark worm, but that was about all they were sure of.  
 D:[ The Adventurers, Epic IV, by Thomas A. Miller ] 
 
-N:4924:disgusting mold
+N:4924:Disgusting mold
 G:m:b
 I:110:4d7:2:7:0
 W:5:1:20:8
@@ -85885,7 +85885,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | RES_SHAR |
 F:MORTAL | BASEANGBAND | NO_CUT
 D:A mold that poisons you and sprays acid. 
 
-N:4925:creeping mold
+N:4925:Creeping mold
 G:m:b
 I:90:4d9:2:7:0
 W:6:1:20:8
@@ -85898,7 +85898,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | RES_SHAR |
 F:MORTAL | BASEANGBAND | NO_CUT
 D:A mold that can actually move, and it spits acid. 
 
-N:4926:black mold
+N:4926:Black mold
 G:m:D
 I:110:4d8:2:7:0
 W:6:1:20:8
@@ -85913,7 +85913,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | RES_SHAR |
 F:MORTAL | BASEANGBAND | NO_CUT
 D:Yet another poisonous, acidic type of mold. 
 
-N:4927:gnome
+N:4927:Gnome
 G:h:u
 I:105:1d6:20:0:20
 W:0:1:900:1
@@ -85937,7 +85937,7 @@ D:'What is the trouble, Alaraba?'  said Ramon Alonzo.
 D:'White magic.  Run!'  said the gnome .. 
 D:[ The Charwoman's Shadow, by Lord Dunsany ] 
 
-N:4928:gnome thief
+N:4928:Gnome thief
 G:h:D
 I:105:1d6:20:0:20
 W:0:1:900:1
@@ -85950,7 +85950,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 D:A gnome who wants to snatch your items. 
 
-N:4929:gnome lord
+N:4929:Gnome lord
 G:h:B
 I:108:3d6:20:0:20
 W:3:1:900:3
@@ -85962,7 +85962,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 D:A more powerful gnome. 
 
-N:4930:gnomish wizard
+N:4930:Gnomish wizard
 G:h:B
 I:108:3d6:20:0:20
 W:3:1:900:4
@@ -85976,7 +85976,7 @@ S:1_IN_10
 S:CONF | MISSILE | HOLD
 D:An annoying gnome who occasionally casts spells. 
 
-N:4931:deep gnome
+N:4931:Deep gnome
 G:h:W
 I:108:3d8:20:0:20
 W:5:1:900:6
@@ -86001,7 +86001,7 @@ D:svirfneblin are completely bald; female deep gnomes have stringy gray
 D:hair. The average svirfneblin life span is 250 years. 
 D:[ The Underdark, by Mike Drees and Albert Foster ] 
 
-N:4932:gnome warrior
+N:4932:Gnome warrior
 G:h:r
 I:108:3d11:20:0:20
 W:7:1:900:12
@@ -86013,7 +86013,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 D:A gnome who hits rather hard. 
 
-N:4933:gnome king
+N:4933:Gnome king
 G:h:v
 I:108:3d13:20:0:20
 W:9:1:900:18
@@ -86044,7 +86044,7 @@ D:merely decorate my apartments, and I really think I have treated
 D:them with great kindness." 
 D:[ Ozma of Oz, by L. Frank Baum ] 
 
-N:4935:gnoll
+N:4935:Gnoll
 G:h:W
 I:110:5d24:20:0:20
 W:18:2:6000:150
@@ -86057,7 +86057,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 D:Supposedly extinct, this superpowered gnome is somehow still alive. 
 
-N:4936:gnoll shaman
+N:4936:Gnoll shaman
 G:h:y
 I:115:5d24:20:20:20
 W:18:2:6000:150
@@ -86071,7 +86071,7 @@ S:1_IN_5
 S:BLIND | CONF | CAUSE_2 | BLINK | BO_FIRE | TRAPS | DARKNESS |
 D:A super powerful gnome who can cast spells. 
 
-N:4937:gnoll warrior
+N:4937:Gnoll warrior
 G:h:w
 I:115:7d35:20:20:20
 W:24:2:6000:300
@@ -86084,7 +86084,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 D:A rather powerful gnome. 
 
-N:4938:gnoll chieftain
+N:4938:Gnoll chieftain
 G:h:v
 I:120:8d50:20:35:20
 W:30:3:6000:450
@@ -86097,7 +86097,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 D:A really powerful gnome. 
 
-N:4939:giant
+N:4939:Giant
 G:P:r
 I:105:4d12:20:20:50
 W:6:1:5000:25
@@ -86114,7 +86114,7 @@ D:boulders as weapons, hurling them over large distances.  All
 D:types of giants share a love for men - roasted, boiled, or 
 D:fried.  Their table manners are legendary. 
 
-N:4940:stone giant
+N:4940:Stone giant
 G:P:W
 I:105:4d12:20:20:50
 W:6:1:5000:25
@@ -86128,7 +86128,7 @@ S:1_IN_9
 S:ARROW_2
 D:A rather large humanoid. 
 
-N:4941:hill giant shaman
+N:4941:Hill giant shaman
 G:P:B
 I:108:4d14:20:14:50
 W:7:1:5000:32
@@ -86142,7 +86142,7 @@ S:1_IN_9
 S:ARROW_2 | HOLD | SCARE | CONF | CAUSE_1
 D:A giant who can cast spells. 
 
-N:4942:hill giant
+N:4942:Hill giant
 G:P:b
 I:108:6d12:20:10:50
 W:8:1:5000:37
@@ -86156,7 +86156,7 @@ S:1_IN_8
 S:ARROW_2
 D:A strong giant. 
 
-N:4943:fire giant
+N:4943:Fire giant
 G:P:y
 I:110:6d15:20:15:50
 W:9:1:5000:44
@@ -86170,7 +86170,7 @@ S:1_IN_8
 S:ARROW_3
 D:A giant who resists fire. 
 
-N:4944:frost giant
+N:4944:Frost giant
 G:P:w
 I:110:6d17:20:18:50
 W:10:1:5000:52
@@ -86184,7 +86184,7 @@ S:1_IN_8
 S:ARROW_3
 D:A giant who resists cold. 
 
-N:4945:ettin
+N:4945:Ettin
 G:P:u
 I:110:6d17:20:18:50
 W:10:1:5000:52
@@ -86198,7 +86198,7 @@ F:GIANT | MORTAL | BASEANGBAND |
 D:The two-headed giant, or ettin, is a vicious and unpredictable 
 D:hunter that stalks by night and eats any meat it can catch. 
 
-N:4946:minotaur
+N:4946:Minotaur
 G:P:u
 I:115:8d25:20:13:50
 W:15:1:5000:300
@@ -86220,7 +86220,7 @@ D:Once inside, one would go endlessly along its twisting paths
 D:without ever finding the exit. 
 D:[ Mythology, by Edith Hamilton ] 
 
-N:4947:titan
+N:4947:Titan
 G:P:v
 I:118:8d22:20:30:50
 W:16:2:5000:210
@@ -86245,7 +86245,7 @@ D:son, Zeus, and he and his fellow titans were ousted from
 D:Mount Olympus. 
 D:[ Greek Mythology, by Richard Patrick ] 
 
-N:4948:storm giant
+N:4948:Storm giant
 G:P:B
 I:110:8d24:20:14:50
 W:16:1:5000:200
@@ -86259,7 +86259,7 @@ S:1_IN_7
 S:ARROW_4
 D:A giant who resists shock. 
 
-N:4949:the Largest Giant
+N:4949:The Largest Giant
 G:P:v
 I:110:20d75:20:20:50
 W:26:10:5000:4000
@@ -86316,7 +86316,7 @@ S:1_IN_3
 S:ARROW_4
 D:The wife of Father Dagon, and apparently a Lovecraftian being. 
 
-N:4952:jabberwock
+N:4952:Jabberwock
 G:H:o
 I:110:15d28:35:24:255
 W:15:1:5000:300
@@ -86347,7 +86347,7 @@ D:He left it dead, and with its head
 D:He went galumphing back. 
 D:[ Jabberwocky, by Lewis Carroll ] 
 
-N:4953:vorpal jabberwock
+N:4953:Vorpal jabberwock
 G:H:v
 I:110:16d33:35:24:255
 W:20:2:5000:500
@@ -86436,7 +86436,7 @@ F:MORTAL | BASEANGBAND |
 D:Despite his high rank, he's still a Keystone Kop, and we all 
 D:know that Keystone Kops are incompetent. 
 
-N:4958:lich
+N:4958:Lich
 G:L:u
 I:100:11d12:20:22:60
 W:11:1:1000:100
@@ -86468,7 +86468,7 @@ D:arose, and fleshless, taloned fingers laden with glowering gems,
 D:reached out and fumbled for my throat . . . 
 D:[ The Abominations of Yondo, Clark Ashton Smith, 1926 ] 
 
-N:4959:demilich
+N:4959:Demilich
 G:L:r
 I:108:11d16:20:28:60
 W:14:1:1000:160
@@ -86484,7 +86484,7 @@ S:HEAL | CAUSE_2 | BO_COLD | CONF | SLOW | TPORT |
 S:HASTE | BO_NETH | DARKNESS | TELE_AWAY |
 D:A powerful lich with an array of strong spells. 
 
-N:4960:master lich
+N:4960:Master lich
 G:L:v
 I:108:12d19:20:40:60
 W:17:1:1000:250
@@ -86501,7 +86501,7 @@ S:HASTE | BA_NETH | DARKNESS | TELE_AWAY | BLINK | TRAPS |
 S:S_UNDEAD
 D:A very dangerous lich who casts lots of spells. 
 
-N:4961:arch-lich
+N:4961:Arch-lich
 G:L:v
 I:108:14d28:20:55:60
 W:25:1:1000:400
@@ -86518,7 +86518,7 @@ S:HASTE | BA_NETH | DARKNESS | TELE_AWAY | BLINK | TRAPS |
 S:S_UNDEAD | S_MONSTER | S_MONSTERS | BO_ICEE | MIND_BLAST | FORGET
 D:A super powerful lich with all kinds of nasty spells. 
 
-N:4962:mummy
+N:4962:Mummy
 G:z:w
 I:110:1d4:20:0:75
 W:0:1:300:1
@@ -86531,7 +86531,7 @@ F:UNDEAD | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM |
 D:A shambling type of undead. 
 
-N:4963:kobold mummy
+N:4963:Kobold mummy
 G:z:u
 I:107:3d5:20:7:75
 W:3:1:300:4
@@ -86543,7 +86543,7 @@ F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
 D:A kobold in a wrapping. 
 
-N:4964:gnome mummy
+N:4964:Gnome mummy
 G:z:r
 I:108:3d6:20:9:75
 W:4:1:300:6
@@ -86555,7 +86555,7 @@ F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
 D:A gnome in a wrapping. 
 
-N:4965:orc mummy
+N:4965:Orc mummy
 G:z:W
 I:108:3d8:20:10:75
 W:5:1:300:8
@@ -86567,7 +86567,7 @@ F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
 D:An orc in a wrapping. 
 
-N:4966:dwarf mummy
+N:4966:Dwarf mummy
 G:z:r
 I:108:3d8:20:10:75
 W:5:1:300:8
@@ -86579,7 +86579,7 @@ F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
 D:A dwarf in a wrapping. 
 
-N:4967:elf mummy
+N:4967:Elf mummy
 G:z:g
 I:110:4d8:20:13:75
 W:6:1:300:12
@@ -86591,7 +86591,7 @@ F:UNDEAD | GOOD | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
 D:An elf in a wrapping. 
 
-N:4968:drow mummy
+N:4968:Drow mummy
 G:z:D
 I:110:4d8:20:13:75
 W:6:2:300:12
@@ -86604,7 +86604,7 @@ F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
 D:A drow in a wrapping. 
 
-N:4969:human mummy
+N:4969:Human mummy
 G:z:W
 I:110:4d8:20:13:75
 W:6:1:300:12
@@ -86630,7 +86630,7 @@ D:or white linen had been fastened upon it, the body was ready
 D:for the tomb. 
 D:[ Egyptian Magic, by E.A. Wallis Budge ] 
 
-N:4970:ettin mummy
+N:4970:Ettin mummy
 G:z:B
 I:110:4d10:20:13:75
 W:7:1:300:15
@@ -86643,7 +86643,7 @@ F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
 D:A very large mummified humanoid. 
 
-N:4971:ogre mummy
+N:4971:Ogre mummy
 G:z:y
 I:110:4d10:20:10:75
 W:7:1:300:15
@@ -86656,7 +86656,7 @@ F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | 
 D:A mummified ogre. 
 
-N:4972:giant mummy
+N:4972:Giant mummy
 G:z:b
 I:113:4d13:20:17:75
 W:8:1:300:22
@@ -86669,7 +86669,7 @@ F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | GIANT |
 D:A mummified giant. 
 
-N:4973:troll mummy
+N:4973:Troll mummy
 G:z:u
 I:113:5d12:20:17:75
 W:9:1:300:22
@@ -86682,7 +86682,7 @@ F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
 F:NO_SLEEP | BASEANGBAND | TAKE_ITEM | REGENERATE |
 D:A mummified troll, at least it won't get up once you destroy it. 
 
-N:4974:red naga hatchling
+N:4974:Red naga hatchling
 G:n:r
 I:108:3d10:16:12:120
 W:3:1:1000:8
@@ -86693,7 +86693,7 @@ F:DROP_CORPSE | BASH_DOOR | RES_SHAR | WILD_SHORE |
 F:MORTAL | BASEANGBAND | IM_FIRE | IM_POIS |
 D:A small fire-based naga. 
 
-N:4975:black naga hatchling
+N:4975:Black naga hatchling
 G:n:D
 I:108:3d10:16:12:120
 W:3:1:1000:8
@@ -86705,7 +86705,7 @@ F:MORTAL | BASEANGBAND | IM_ACID | IM_POIS |
 F:RES_WALL | RES_GRAV |
 D:A small acid-based naga. 
 
-N:4976:golden naga hatchling
+N:4976:Golden naga hatchling
 G:n:y
 I:108:3d10:16:12:120
 W:3:1:1000:8
@@ -86716,7 +86716,7 @@ F:DROP_CORPSE | BASH_DOOR | RES_SHAR | WILD_SHORE |
 F:MORTAL | BASEANGBAND | IM_POIS |
 D:A small gold-colored naga. 
 
-N:4977:guardian naga hatchling
+N:4977:Guardian naga hatchling
 G:n:g
 I:108:3d10:16:12:120
 W:3:1:1000:8
@@ -86727,7 +86727,7 @@ F:DROP_CORPSE | BASH_DOOR | RES_SHAR | WILD_SHORE |
 F:MORTAL | BASEANGBAND | IM_POIS |
 D:A small green-colored naga. 
 
-N:4978:red naga
+N:4978:Red naga
 G:n:r
 I:110:5d11:16:16:120
 W:6:1:4000:21
@@ -86740,7 +86740,7 @@ S:1_IN_6
 S:BR_FIRE
 D:A naga who breathes fire. 
 
-N:4979:black naga
+N:4979:Black naga
 G:n:r
 I:113:5d13:16:19:120
 W:8:1:4000:26
@@ -86753,7 +86753,7 @@ F:MORTAL | BASEANGBAND | IM_ACID | IM_POIS | WILD_SHORE |
 F:RES_WALL | RES_GRAV |
 D:A naga who spits acid. 
 
-N:4980:golden naga
+N:4980:Golden naga
 G:n:y
 I:113:6d15:16:19:120
 W:10:1:4000:33
@@ -86766,7 +86766,7 @@ S:1_IN_5
 S:ARROW_2 | CAUSE_1 | HEAL | BR_DISE | SLOW | CONF |
 D:A naga who casts various spells. 
 
-N:4981:guardian naga
+N:4981:Guardian naga
 G:n:g
 I:116:6d22:16:23:120
 W:12:1:4000:34
@@ -86779,7 +86779,7 @@ F:DROP_CORPSE | BASH_DOOR | RES_SHAR | HAS_EGG |
 F:MORTAL | BASEANGBAND | IM_POIS | WILD_SHORE |
 D:A naga whose bite can paralyze. 
 
-N:4982:ogre
+N:4982:Ogre
 G:O:u
 I:108:5d9:20:11:30
 W:5:1:2100:12
@@ -86807,7 +86807,7 @@ D:orcs or goblins, but only when they anticipate a good meaty
 D:meal. 
 D:[ het Boek van de Regels; Het Oog des Meesters ] 
 
-N:4983:ogre lord
+N:4983:Ogre lord
 G:O:r
 I:110:5d13:20:16:30
 W:7:1:2100:20
@@ -86820,7 +86820,7 @@ F:EVIL | GIANT | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 D:A stronger version of the regular ogre. 
 
-N:4984:ogre mage
+N:4984:Ogre mage
 G:O:B
 I:110:5d13:20:16:30
 W:7:1:2100:20
@@ -86835,7 +86835,7 @@ S:1_IN_7
 S:DRAIN_MANA | HOLD | CONF | BLIND | MISSILE | BO_FIRE
 D:An ogre who casts spells. 
 
-N:4985:ogre king
+N:4985:Ogre king
 G:O:v
 I:114:5d18:20:17:30
 W:9:1:2100:34
@@ -86848,7 +86848,7 @@ F:EVIL | GIANT | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 D:A very powerful ogre. 
 
-N:4986:shadow ogre
+N:4986:Shadow ogre
 G:O:D
 I:114:5d19:20:22:30
 W:10:2:2100:40
@@ -86862,7 +86862,7 @@ F:EVIL | GIANT | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 D:An ogre whose attack drains your life. 
 
-N:4987:mist ogre
+N:4987:Mist ogre
 G:O:b
 I:114:5d19:20:22:30
 W:10:2:2100:40
@@ -86876,7 +86876,7 @@ F:EVIL | GIANT | TAKE_ITEM |
 F:MORTAL | BASEANGBAND |
 D:An ogress whose attack drains your life and who somehow lays eggs. 
 
-N:4988:gray ooze
+N:4988:Gray ooze
 G:j:W
 I:90:3d8:12:4:1
 W:3:1:1000:5
@@ -86889,7 +86889,7 @@ F:RES_CHAO | IM_FIRE | IM_COLD | IM_POIS | IM_ACID | RES_WALL | RES_GRAV |
 F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT
 D:A slow-moving, oozing thing. 
 
-N:4989:brown pudding
+N:4989:Brown pudding
 G:j:u
 I:95:5d8:12:4:1
 W:5:1:1000:8
@@ -86902,7 +86902,7 @@ F:RES_CHAO | IM_ELEC | IM_COLD | IM_POIS | IM_ACID | RES_WALL | RES_GRAV |
 F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT
 D:An oozing thing that wants to trash your armor. 
 
-N:4990:brown pudding
+N:4990:Brown pudding
 G:j:u
 I:95:5d8:12:4:1
 W:5:5:1000:8
@@ -86916,7 +86916,7 @@ F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT
 S:MULTIPLY
 D:An oozing thing that wants to trash your armor. 
 
-N:4991:black pudding
+N:4991:Black pudding
 G:j:D
 I:102:10d11:12:9:1
 W:10:1:1000:20
@@ -86930,7 +86930,7 @@ F:RES_CHAO | IM_ELEC | IM_COLD | IM_POIS | IM_ACID | RES_WALL | RES_GRAV |
 F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT
 D:An acidic oozing thing. Don't even think about farming them, you lamer. 
 
-N:4992:black pudding
+N:4992:Black pudding
 G:j:D
 I:102:10d11:12:9:1
 W:10:5:1000:20
@@ -86945,7 +86945,7 @@ F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT
 S:MULTIPLY
 D:An acidic oozing thing. Don't even think about farming them, you lamer. 
 
-N:4993:green slime
+N:4993:Green slime
 G:j:g
 I:100:6d9:12:9:1
 W:6:1:1000:12
@@ -86959,7 +86959,7 @@ F:IM_ELEC | IM_COLD | IM_POIS | IM_ACID | RES_WALL | RES_GRAV |
 F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT
 D:A very icky thing that you want to stay away from. 
 
-N:4994:shoggoth
+N:4994:Shoggoth
 G:j:D
 I:115:12d25:12:45:1
 W:18:2:2000:400
@@ -86978,7 +86978,7 @@ D:the black realm begins and the watcher guards the gate -
 D:I saw a shoggoth - it changed shape ..." 
 D:[ The Thing on the Doorstep, by H.P. Lovecraft ] 
 
-N:4995:giant shoggoth
+N:4995:Giant shoggoth
 G:j:D
 I:120:30d25:12:55:1
 W:36:4:5000:2000
@@ -87006,7 +87006,7 @@ D:last we remembered that the demoniac Shoggoths - given life,
 D:thought, and plastic organ patterns solely by the Old Ones ... 
 D:[ At the Mountains of Madness, by H.P. Lovecraft ] 
 
-N:4996:quantum mechanic
+N:4996:Quantum mechanic
 G:h:b
 I:110:7d9:16:13:10
 W:7:2:1000:20
@@ -87020,7 +87020,7 @@ F:MORTAL | BASEANGBAND
 D:These creatures are not native to this universe; they seem 
 D:to have strangely derived powers, and unknown motives. 
 
-N:4997:genetic engineer
+N:4997:Genetic engineer
 G:h:g
 I:110:11d13:16:16:10
 W:12:5:1000:45
@@ -87060,7 +87060,7 @@ D:which they were set, his shrivelled complexion and straight
 D:black lips. 
 D:[ Frankenstein, by Mary Wollstonecraft Shelley ] 
 
-N:4999:rust monster
+N:4999:Rust monster
 G:q:u
 I:116:5d10:12:18:10
 W:5:1:2000:10
@@ -87075,7 +87075,7 @@ D:These strange creatures live on a diet of metals.  They can
 D:turn a suit of armour into so much useless rusted scrap in no 
 D:time at all. 
 
-N:5000:disenchanter
+N:5000:Disenchanter
 G:q:B
 I:110:12d14:12:50:10
 W:12:1:2000:85
@@ -87087,7 +87087,7 @@ F:STUPID | DROP_CORPSE | NO_CONF |
 F:MORTAL | BASEANGBAND
 D:Ask not, what your magic can do to it. Ask what it can do to your magic. 
 
-N:5001:garter snake
+N:5001:Garter snake
 G:J:g
 I:103:1d5:4:5:99
 W:1:1:600:1
@@ -87099,7 +87099,7 @@ F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND
 D:A harmless snake, it's not even poisonous. 
 
-N:5002:water mocassin
+N:5002:Water mocassin
 G:J:r
 I:113:3d9:4:12:99
 W:4:1:600:7
@@ -87112,7 +87112,7 @@ F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND
 D:These snakes like to live in fountains and have a 
 D:poisonous bite. 
 
-N:5003:pit viper
+N:5003:Pit viper
 G:J:B
 I:113:3d13:4:17:99
 W:6:1:600:13
@@ -87133,7 +87133,7 @@ D:enmity between thee and the woman, and between thy seed and her
 D:seed; it shall bruise thy head, and thou shalt bruise his heel. 
 D:[ Genesis 3:1-6,13-15 ] 
 
-N:5004:python
+N:5004:Python
 G:J:v
 I:95:3d13:4:10:99
 W:6:1:600:12
@@ -87147,7 +87147,7 @@ F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND
 D:A rather slow-moving snake. 
 
-N:5005:cobra
+N:5005:Cobra
 G:J:B
 I:118:3d13:4:17:99
 W:6:1:600:16
@@ -87175,7 +87175,7 @@ D:hood to keep the sun off Brahm as he slept.  Look, and be
 D:afraid!' 
 D:[ Rikki-tikki-tavi, by Rudyard Kipling ] 
 
-N:5006:asphynx
+N:5006:Asphynx
 G:J:D
 I:115:3d17:4:17:99
 W:8:3:600:28
@@ -87192,7 +87192,7 @@ D:basilisk. Just one touch from its blunt snout can render one
 D:motionless for all eternity. 
 D:[ The New Bestiary, Wizard Endlebrook ]
 
-N:5007:troll
+N:5007:Troll
 G:T:u
 I:110:8d8:20:11:40
 W:7:1:3000:24
@@ -87220,7 +87220,7 @@ D:He clambered back on his feet and grinned at them.  The
 D:waning faggot cast red light over his fangs. 
 D:[ Three Hearts and Three Lions, by Poul Anderson ] 
 
-N:5008:ice troll
+N:5008:Ice troll
 G:T:w
 I:108:8d10:20:17:40
 W:9:1:3000:32
@@ -87234,7 +87234,7 @@ F:OPEN_DOOR | BASH_DOOR | SUSCEP_FIRE | REGENERATE |
 F:EVIL | TROLL | REGENERATE | BASEANGBAND
 D:A troll with assholey cold attacks. 
 
-N:5009:rock troll
+N:5009:Rock troll
 G:T:b
 I:110:8d10:20:20:40
 W:9:1:3000:32
@@ -87248,7 +87248,7 @@ F:OPEN_DOOR | BASH_DOOR | SUSCEP_FIRE | REGENERATE |
 F:EVIL | TROLL | REGENERATE | BASEANGBAND
 D:A powerful type of troll. 
 
-N:5010:water troll
+N:5010:Water troll
 G:T:B
 I:114:8d13:20:16:40
 W:11:1:3000:44
@@ -87288,7 +87288,7 @@ D:Twilight they could endure the Sun....  They spoke little,
 D:and the only tongue they knew was the Black Speech of Barad-dur. 
 D:[ The Return of the King, by J.R.R. Tolkien ] 
 
-N:5012:mist troll
+N:5012:Mist troll
 G:T:b
 I:108:9d19:20:66:40
 W:15:3:3000:200
@@ -87303,7 +87303,7 @@ F:EVIL | TROLL | REGENERATE | BASEANGBAND |
 F:RES_WALL | RES_GRAV | CAN_SWIM | HAS_EGG |
 D:A rather strong troll who lays eggs. 
 
-N:5013:umber hulk
+N:5013:Umber hulk
 G:X:u
 I:105:9d10:20:18:10
 W:9:1:5000:55
@@ -87321,7 +87321,7 @@ D:search of prey.  They are tremendously strong; muscles bulge
 D:beneath their thick, scaly hides and their powerful arms and 
 D:legs all end in great claws. 
 
-N:5014:vampire
+N:5014:Vampire
 G:V:r
 I:110:10d10:20:19:10
 W:10:1:1700:40
@@ -87339,7 +87339,7 @@ D:the original and usual form of the belief, a reanimated
 D:corpse), supposed to seek nourishment, or do harm, by sucking 
 D:the blood of sleeping persons. ..." 
 
-N:5015:vampire lord
+N:5015:Vampire lord
 G:V:B
 I:114:10d12:20:21:10
 W:12:1:1700:60
@@ -87353,7 +87353,7 @@ F:EVIL | UNDEAD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP |
 F:BASEANGBAND | NO_CUT | TAKE_ITEM |
 D:A stronger version of the regular vampire. 
 
-N:5016:fire vampire
+N:5016:Fire vampire
 G:V:r
 I:125:10d12:20:21:10
 W:12:2:1700:75
@@ -87373,7 +87373,7 @@ D:A swirling cloud of bright, burning motes, the fire vampire
 D:descends upon its victim and easily burns them to death once 
 D:they are in its deadly embrace. 
 
-N:5017:star vampire
+N:5017:Star vampire
 G:V:w
 I:118:10d18:20:35:10
 W:18:3:1700:250
@@ -87415,7 +87415,7 @@ D:He dealt with perceived challengers to his rule by impaling
 D:them upright on wooden stakes.  Visiting dignitaries who 
 D:failed to doff their hats had them nailed to their head. 
 
-N:5019:barrow wight
+N:5019:Barrow wight
 G:W:W
 I:110:4d9:20:11:30
 W:3:1:0:12
@@ -87431,7 +87431,7 @@ S:1_IN_8
 S:CONF | CAUSE_1 | BO_NETH | SLOW
 D:Some annoying undead with the ability to cast spells. 
 
-N:5020:wight
+N:5020:Wight
 G:W:W
 I:110:4d12:20:11:30
 W:5:1:0:20
@@ -87454,7 +87454,7 @@ D:flat on his back upon a cold stone with his hands on his
 D:breast. 
 D:[ The Fellowship of the Ring, by J.R.R. Tolkien ] 
 
-N:5021:wraith
+N:5021:Wraith
 G:W:D
 I:110:4d13:20:13:30
 W:6:1:0:24
@@ -87499,7 +87499,7 @@ D:glowed with a pale light.  He sprang forward and bore down
 D:on Frodo. 
 D:[ The Fellowship of the Ring, by J.R.R. Tolkien ] 
 
-N:5023:xorn
+N:5023:Xorn
 G:X:u
 I:107:8d8:20:25:10
 W:8:1:6000:45
@@ -87518,7 +87518,7 @@ D:that it becomes porous to inert material.  This gives it the
 D:ability to pass through any obstacle that might be between it 
 D:and its next meal. 
 
-N:5024:monkey
+N:5024:Monkey
 G:Y:W
 I:110:2d6:30:11:20
 W:2:1:800:5
@@ -87533,7 +87533,7 @@ D:sub-order of _Anthropoidea_, which of all mammals most closely
 D:resembles man (both in appearance and in behaviour). 
 D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
-N:5025:ape
+N:5025:Ape
 G:Y:u
 I:110:4d7:30:11:20
 W:4:1:1400:12
@@ -87552,7 +87552,7 @@ D:the hind limbs.  Tail entirely absent.  Growth is slow
 D:and sexual maturity reached at quite an advanced age. 
 D:[ A Field Guide to the Larger Mammals of Africa by Dorst ] 
 
-N:5026:owlbear
+N:5026:Owlbear
 G:H:u
 I:110:4d8:30:10:20
 W:5:1:1400:14
@@ -87570,7 +87570,7 @@ D:the name might already suggest, owlbears are a cross between
 D:a giant owl and a bear.  They are covered with fur and 
 D:feathers. 
 
-N:5027:yeti
+N:5027:Yeti
 G:Y:w
 I:113:4d9:30:11:20
 W:5:1:1400:18
@@ -87597,7 +87597,7 @@ D:concerning the creature have become even more muddled and
 D:confused. 
 D:[ The Encyclopedia of Monsters, by Daniel Cohen ] 
 
-N:5028:sasquatch
+N:5028:Sasquatch
 G:Y:W
 I:113:5d10:30:11:20
 W:7:1:1400:22
@@ -87627,7 +87627,7 @@ D:a Sasquatch -- not Burns's giant Indian, but the hairy apelike
 D:creature that we have all come to know. 
 D:[ The Encyclopedia of Monsters, by Daniel Cohen ] 
 
-N:5029:zruty
+N:5029:Zruty
 G:Y:g
 I:108:5d13:30:15:20
 W:9:1:1400:30
@@ -87641,7 +87641,7 @@ F:DROP_CORPSE | MORTAL | BASEANGBAND
 D:The zruty are wild and gigantic beings, living in the 
 D:wildernesses of the Tatra mountains.
 
-N:5030:kobold zombie
+N:5030:Kobold zombie
 G:z:u
 I:105:1d4:20:0:30
 W:0:1:750:1
@@ -87653,7 +87653,7 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A kobold that had been zombified. 
 
-N:5031:gnome zombie
+N:5031:Gnome zombie
 G:z:u
 I:105:1d6:20:0:30
 W:1:1:750:1
@@ -87665,7 +87665,7 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A gnome that had been zombified. 
 
-N:5032:orc zombie
+N:5032:Orc zombie
 G:z:W
 I:105:1d8:20:2:30
 W:2:1:750:2
@@ -87677,7 +87677,7 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | ORC |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:An orc that had been zombified. 
 
-N:5033:dwarf zombie
+N:5033:Dwarf zombie
 G:z:r
 I:105:1d8:20:2:30
 W:2:1:750:2
@@ -87689,7 +87689,7 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A dwarf that had been zombified. 
 
-N:5034:elf zombie
+N:5034:Elf zombie
 G:z:g
 I:105:2d6:20:2:30
 W:3:1:750:3
@@ -87701,7 +87701,7 @@ F:GOOD | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:An elf that had been zombified. 
 
-N:5035:human zombie
+N:5035:Human zombie
 G:z:w
 I:105:2d8:20:4:30
 W:4:1:750:5
@@ -87717,7 +87717,7 @@ D:mechanical semblance of life, -- it is a dead body which is
 D:made to walk and act and move as if it were alive. 
 D:[ W. B. Seabrook ] 
 
-N:5036:ghast
+N:5036:Ghast
 G:z:v
 I:105:2d8:20:0:30
 W:4:2:750:5
@@ -87731,7 +87731,7 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:An undead form that can paralyze with its claw. 
 
-N:5037:drow zombie
+N:5037:Drow zombie
 G:z:D
 I:105:2d10:20:2:30
 W:5:2:750:7
@@ -87744,7 +87744,7 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A drow that had been zombified. 
 
-N:5038:ghoul
+N:5038:Ghoul
 G:z:D
 I:105:2d10:20:0:30
 W:5:1:750:8
@@ -87772,7 +87772,7 @@ D:ferocious fear the sinister; wolves recoil when they encounter
 D:a ghoul. 
 D:[ Les Miserables, by Victor Hugo ] 
 
-N:5039:ettin zombie
+N:5039:Ettin zombie
 G:z:B
 I:108:2d14:20:8:30
 W:6:1:750:12
@@ -87785,7 +87785,7 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A very large zombified humanoid. 
 
-N:5040:ogre zombie
+N:5040:Ogre zombie
 G:z:y
 I:109:2d15:20:10:30
 W:7:1:750:16
@@ -87797,7 +87797,7 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:An ogre that had been zombified. 
 
-N:5041:giant zombie
+N:5041:Giant zombie
 G:z:b
 I:107:3d18:20:8:30
 W:8:1:750:24
@@ -87810,7 +87810,7 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | GIANT |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A giant that had been zombified. 
 
-N:5042:troll zombie
+N:5042:Troll zombie
 G:z:u
 I:107:3d22:20:8:30
 W:9:1:750:30
@@ -87824,7 +87824,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A troll that had been zombified and who will stay dead 
 D:if you destroy it. 
 
-N:5043:skeleton
+N:5043:Skeleton
 G:z:w
 I:108:5d24:20:13:30
 W:12:1:750:50
@@ -87843,7 +87843,7 @@ D:shades, only a humanoid creature can be used to create a
 D:skeleton.  No one knows why this is true, but it has become 
 D:an accepted fact amongst the practitioners of the black arts. 
 
-N:5044:ghoul queen
+N:5044:Ghoul queen
 G:z:D
 I:110:5d28:20:20:30
 W:14:3:750:150
@@ -87859,7 +87859,7 @@ S:S_UNDEAD | CONF | CAUSE_2 | MISSILE | BO_COLD | SHRIEK
 D:A dangerous ghoul with paralysis claw attacks and a variety 
 D:of spells. 
 
-N:5045:gug
+N:5045:Gug
 G:z:D
 I:116:6d32:20:10:30
 W:15:2:750:170
@@ -87877,7 +87877,7 @@ D:intruders have stumbled into it.  It is suspected that they
 D:may be some warped form of ghoul, but few have survived 
 D:seeing them so information is scarce. 
 
-N:5046:miner
+N:5046:Miner
 G:h:D
 I:105:2d6:20:0:20
 W:2:1:1200:5
@@ -87890,7 +87890,7 @@ F:GOOD | BASEANGBAND | HAS_LITE | KILL_WALL | TAKE_ITEM |
 D:A fellow with a pick-axe who digs new paths through the 
 D:dungeon. 
 
-N:5047:mugger
+N:5047:Mugger
 G:h:D
 I:110:2d6:20:0:20
 W:2:1:1200:5
@@ -87928,7 +87928,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:GOOD | BASEANGBAND | TAKE_ITEM | NO_SLEEP | WILD_GRASS |
 D:An elf who's colored like grass. 
 
-N:5050:gibberling
+N:5050:Gibberling
 G:h:W
 I:110:3d12:20:0:20
 W:6:1:1200:12
@@ -87952,7 +87952,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:GOOD | BASEANGBAND | TAKE_ITEM | NO_SLEEP | WILD_MOUNTAIN |
 D:A grey-colored elf. 
 
-N:5052:drow
+N:5052:Drow
 G:h:D
 I:110:3d12:20:12:20
 W:6:2:1200:15
@@ -87966,7 +87966,7 @@ F:EVIL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | MALE |
 D:Also known as dark elves, drow are a depraved and evil 
 D:subterranean offshoot of the elvish species.
 
-N:5053:elf-lord
+N:5053:Elf-lord
 G:h:B
 I:110:5d13:20:0:20
 W:8:1:1200:20
@@ -87979,7 +87979,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:GOOD | BASEANGBAND | TAKE_ITEM | NO_SLEEP | MALE |
 D:A powerful elf. 
 
-N:5054:grimlock
+N:5054:Grimlock
 G:h:D
 I:110:4d13:20:10:20
 W:8:1:1200:12
@@ -88004,7 +88004,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:GOOD | BASEANGBAND | TAKE_ITEM | NO_SLEEP | MALE |
 D:A very powerful elf. 
 
-N:5056:doppelganger
+N:5056:Doppelganger
 G:@:w
 I:110:5d15:20:10:20
 W:9:5:1200:25
@@ -88027,7 +88027,7 @@ D:Xander: I am.
 D:Xander Double: No, _I_ am. 
 D:[ Buffy the Vampire Slayer, Episode 5.03, "The Replacement" ] 
 
-N:5057:elf
+N:5057:Elf
 G:h:w
 I:110:5d16:20:0:20
 W:10:1:1200:32
@@ -88040,7 +88040,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:GOOD | BASEANGBAND | TAKE_ITEM | NO_SLEEP |
 D:Just an elf who strolls around the dungeon. 
 
-N:5058:nurse
+N:5058:Nurse
 G:h:w
 I:105:5d19:20:20:20
 W:11:1:1200:40
@@ -88053,7 +88053,7 @@ F:BASEANGBAND | TAKE_ITEM | IM_POIS |
 D:Since healing attacks aren't implemented, these are 
 D:actually just another monster who tries to attack you. 
 
-N:5059:prison guard
+N:5059:Prison guard
 G:h:b
 I:110:5d22:20:0:20
 W:12:4:1200:50
@@ -88067,7 +88067,7 @@ F:BASEANGBAND | TAKE_ITEM |
 D:You don't really look like a prisoner, but this guard is 
 D:attacking you anyway. 
 
-N:5060:gypsy
+N:5060:Gypsy
 G:h:w
 I:110:7d35:20:24:20
 W:20:5:1200:250
@@ -88082,7 +88082,7 @@ S:CAUSE_3 | FORGET | DRAIN_MANA | HEAL | BA_CHAO | MISSILE | MIND_BLAST |
 S:CONF | SLOW | S_ANIMAL | S_ANIMALS | S_MONSTER | S_MONSTERS |
 D:It is said that attacking a gypsy is bad luck. 
 
-N:5061:shopkeeper
+N:5061:Shopkeeper
 G:@:w
 I:116:10d55:20:50:20
 W:24:5:1200:450
@@ -88095,7 +88095,7 @@ F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
 F:BASEANGBAND | TAKE_ITEM | CAN_FLY | NEUTRAL |
 D:A rather powerful individual. Attack them at your own peril. 
 
-N:5062:black marketeer
+N:5062:Black marketeer
 G:@:D
 I:122:10d60:20:58:20
 W:25:20:1200:550
@@ -88112,7 +88112,7 @@ S:TPORT | TELE_TO | TELE_AWAY | TELE_LEVEL
 D:Sam (who is definitely male) will mop the floor with you if 
 D:you dare to attack or steal from him. 
 
-N:5063:guard
+N:5063:Guard
 G:h:B
 I:110:5d22:20:0:20
 W:12:3:1200:50
@@ -88126,7 +88126,7 @@ D:The annoying Ludios vault guard who thankfully happens
 D:to be peaceful. Irritate them, though, and they'll 
 D:squash you. 
 
-N:5064:prisoner
+N:5064:Prisoner
 G:h:w
 I:110:4d20:20:0:20
 W:12:2:1200:50
@@ -88172,7 +88172,7 @@ D:seekers for Truth were delivered by a priestess who went into
 D:a trance before she spoke. 
 D:[ Mythology, by Edith Hamilton ] 
 
-N:5066:aligned priest
+N:5066:Aligned priest
 G:@:w
 I:110:5d24:20:0:20
 W:12:5:1200:80
@@ -88203,7 +88203,7 @@ D:there may well be wonderful universes above us where reason is
 D:utterly unreasonable?" 
 D:[ The Innocence of Father Brown, by G.K. Chesterton ] 
 
-N:5067:high priest
+N:5067:High priest
 G:@:w
 I:115:10d75:20:8:20
 W:25:20:1200:2000
@@ -88222,7 +88222,7 @@ D:At least it's not an elder priest. Also, these priests start
 D:out neutral to you and you'd be well advised to keep it that 
 D:way. You don't want to eat their spell barrages! 
 
-N:5068:soldier
+N:5068:Soldier
 G:h:W
 I:108:4d11:20:0:20
 W:6:1:1200:13
@@ -88243,7 +88243,7 @@ D:and are fierce fighters.  Because of the load of their combat
 D:gear, however, one can usually run away from them, and doing 
 D:so is considered a wise thing. 
 
-N:5069:sergeant
+N:5069:Sergeant
 G:h:r
 I:108:5d15:20:0:20
 W:10:1:1200:24
@@ -88257,7 +88257,7 @@ S:1_IN_5
 S:ARROW_2
 D:A more powerful Yendorian soldier. 
 
-N:5070:lieutenant
+N:5070:Lieutenant
 G:h:g
 I:110:8d22:20:0:20
 W:15:1:1200:50
@@ -88271,7 +88271,7 @@ S:1_IN_5
 S:ARROW_3
 D:A high-ranking Yendorian soldier. 
 
-N:5071:captain
+N:5071:Captain
 G:h:B
 I:110:10d26:20:0:20
 W:20:2:1200:120
@@ -88285,7 +88285,7 @@ S:1_IN_4
 S:ARROW_4
 D:A leader of the Yendorian soldiers. 
 
-N:5072:general
+N:5072:General
 G:h:R
 I:110:12d35:20:20:20
 W:28:5:1200:340
@@ -88300,7 +88300,7 @@ S:ARROW_4 | ROCKET | MISSILE |
 D:Armed with a rocket launcher, the Yendorian general will 
 D:blast you to bits. 
 
-N:5073:watchman
+N:5073:Watchman
 G:@:W
 I:108:4d11:20:0:20
 W:6:1:1200:13
@@ -88314,7 +88314,7 @@ D:They never help you. Instead, they watch curiously as
 D:you run around town and will turn hostile if you mess 
 D:with the Minetown fountain. 
 
-N:5074:watch captain
+N:5074:Watch captain
 G:@:g
 I:108:5d15:20:0:20
 W:10:1:1200:25
@@ -88416,7 +88416,7 @@ D:man, advanced in age, was called Charon.  The deceased's next-
 D:of-kin would place a coin under his tongue, to pay the ferry- 
 D:man.
 
-N:5079:shadow
+N:5079:Shadow
 G:G:D
 I:108:2d6:8:9:10
 W:4:1:0:9
@@ -88430,7 +88430,7 @@ F:UNDEAD | RES_DISE | RES_WALL | RES_GRAV |
 F:IM_COLD | IM_POIS | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
 D:A translucent humanoid who looks just like you. 
 
-N:5080:ghost
+N:5080:Ghost
 G:G:W
 I:95:4d10:8:45:10
 W:10:1:0:20
@@ -88452,7 +88452,7 @@ D:trench, there came a moaning that was horrible to hear.
 D:Panic drained the blood from my cheeks. 
 D:[ The Odyssey, (chapter Lambda), by Homer ] 
 
-N:5081:shade
+N:5081:Shade
 G:G:D
 I:108:6d10:8:0:10
 W:12:1:0:30
@@ -88469,7 +88469,7 @@ D:that a zombie is an undead animation of a corpse, while a
 D:shade is an undead creature magically created by the use 
 D:of black magic. 
 
-N:5082:straw golem
+N:5082:Straw golem
 G:g:y
 I:110:4d10:12:0:10
 W:3:1:3200:10
@@ -88482,7 +88482,7 @@ F:IM_POIS | NO_SLEEP |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
 D:A golem made of straw. 
 
-N:5083:paper golem
+N:5083:Paper golem
 G:g:w
 I:110:4d9:12:0:10
 W:3:1:3200:10
@@ -88494,7 +88494,7 @@ F:IM_POIS | NO_SLEEP |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
 D:A golem made of paper. 
 
-N:5084:wax golem
+N:5084:Wax golem
 G:g:W
 I:110:4d10:12:2:10
 W:3:1:3200:10
@@ -88507,7 +88507,7 @@ F:IM_POIS | NO_SLEEP |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
 D:A golem who can light you on fire. 
 
-N:5085:plastic golem
+N:5085:Plastic golem
 G:g:D
 I:110:6d10:12:2:10
 W:4:1:3200:13
@@ -88520,7 +88520,7 @@ F:IM_POIS | NO_SLEEP |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
 D:A golem made of plastic. 
 
-N:5086:rope golem
+N:5086:Rope golem
 G:g:u
 I:107:6d10:12:4:10
 W:4:1:3200:13
@@ -88534,7 +88534,7 @@ F:IM_POIS | NO_SLEEP | RES_CHAO |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
 D:A golem who tries to crush you. 
 
-N:5087:gold golem
+N:5087:Gold golem
 G:g:y
 I:107:8d10:12:8:10
 W:5:1:3200:18
@@ -88556,7 +88556,7 @@ D:strength, and they know cunning handiwork by gift of the immortal
 D:gods. 
 D:[ The Iliad, by Homer ] 
 
-N:5088:leather golem
+N:5088:Leather golem
 G:g:u
 I:105:8d10:12:8:10
 W:6:1:3200:22
@@ -88569,7 +88569,7 @@ F:IM_POIS | NO_SLEEP | RES_CHAO |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
 D:A golem made of leather. 
 
-N:5089:wood golem
+N:5089:Wood golem
 G:g:u
 I:95:10d10:12:12:10
 W:7:1:3200:26
@@ -88581,7 +88581,7 @@ F:IM_POIS | NO_SLEEP | RES_CHAO | RES_SHAR |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
 D:A golem made of wood. 
 
-N:5090:flesh golem
+N:5090:Flesh golem
 G:g:r
 I:106:12d10:12:2:10
 W:9:1:3200:35
@@ -88611,7 +88611,7 @@ D:left of it was a small clay image, which you can still see in
 D:the Old Synagogue." ... 
 D:[ The Golem, by Gustav Meyrink ] 
 
-N:5091:stone golem
+N:5091:Stone golem
 G:g:W
 I:105:18d10:12:10:10
 W:14:1:3200:90
@@ -88623,7 +88623,7 @@ F:IM_POIS | NO_SLEEP | RES_WALL | RES_GRAV | RES_SHAR |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
 D:A golem made of stone. 
 
-N:5092:glass golem
+N:5092:Glass golem
 G:g:b
 I:105:14d10:12:19:10
 W:16:1:3200:110
@@ -88636,7 +88636,7 @@ F:IM_POIS | NO_SLEEP | IM_ACID | RES_SHAR |
 F:NO_CONF | NO_FEAR | BASEANGBAND | NO_CUT |
 D:A golem made of glass. 
 
-N:5093:iron golem
+N:5093:Iron golem
 G:g:b
 I:105:24d10:12:15:10
 W:18:1:3200:150
@@ -88666,7 +88666,7 @@ D:The creation of Victor Frankenstein, which sadly failed to
 D:interact with humans in a meaningful way and therefore decided 
 D:to kill them instead. 
 
-N:5095:ice golem
+N:5095:Ice golem
 G:g:U
 I:108:24d10:12:40:10
 W:22:2:3200:550
@@ -88680,7 +88680,7 @@ S:1_IN_6
 S:BR_COLD
 D:A golem made of ice, capable of breathing cold. 
 
-N:5096:ruby golem
+N:5096:Ruby golem
 G:g:r
 I:110:25d10:12:15:10
 W:24:2:3200:600
@@ -88694,7 +88694,7 @@ S:1_IN_6
 S:BR_FIRE
 D:A golem made of rubies, capable of breathing fire. 
 
-N:5097:diamond golem
+N:5097:Diamond golem
 G:g:w
 I:110:27d10:12:15:10
 W:26:2:3200:700
@@ -88708,7 +88708,7 @@ S:1_IN_6
 S:BR_MANA
 D:A golem made of diamonds, capable of breathing magical energy. 
 
-N:5098:sapphire golem
+N:5098:Sapphire golem
 G:g:U
 I:110:28d10:12:15:10
 W:28:2:3200:800
@@ -88722,7 +88722,7 @@ S:1_IN_6
 S:BR_ELEC
 D:A golem made of sapphires, capable of breathing lightning. 
 
-N:5099:steel golem
+N:5099:Steel golem
 G:g:B
 I:115:29d10:12:15:10
 W:30:2:3200:1000
@@ -88738,7 +88738,7 @@ S:BR_COLD
 D:A golem made of steel, capable of breathing cold and 
 D:disenchanting your gear. 
 
-N:5100:crystal golem
+N:5100:Crystal golem
 G:g:B
 I:115:30d10:12:15:10
 W:32:3:3200:1500
@@ -88754,7 +88754,7 @@ S:BR_MANA | BR_NUKE | BR_WALL | BR_POIS |
 D:A golem controlled by Chuck Norris, which hits very hard and 
 D:breathes a multitude of elements. 
 
-N:5101:spined devil
+N:5101:Spined devil
 G:U:g
 I:120:5d12:25:18:80
 W:5:1:0:12
@@ -88770,7 +88770,7 @@ S:1_IN_10 |
 S:S_DEMON
 D:A rather lowly demon. 
 
-N:5102:horned devil
+N:5102:Horned devil
 G:U:u
 I:108:5d14:25:33:80
 W:6:1:0:16
@@ -88788,7 +88788,7 @@ S:S_DEMON
 D:Horned devils lack any real special abilities, though they 
 D:are quite difficult to kill.
 
-N:5103:succubus
+N:5103:Succubus
 G:U:W
 I:110:5d14:25:20:80
 W:6:1:0:16
@@ -88806,7 +88806,7 @@ D:same demon, one who lies with a human for its own purposes,
 D:usually to the detriment of the mortals who are unwise in 
 D:their dealings with them. 
 
-N:5104:incubus
+N:5104:Incubus
 G:U:W
 I:110:5d14:25:20:80
 W:6:1:0:16
@@ -88824,7 +88824,7 @@ D:same demon, one who lies with a human for its own purposes,
 D:usually to the detriment of the mortals who are unwise in 
 D:their dealings with them. 
 
-N:5105:marilith
+N:5105:Marilith
 G:U:r
 I:110:5d16:25:38:80
 W:7:1:0:24
@@ -88845,7 +88845,7 @@ D:and can freely attack with all of them.  Since it is
 D:intelligent enough to use weapons, this means it can cause 
 D:great damage. 
 
-N:5106:bar-lgura
+N:5106:Bar-lgura
 G:U:o
 I:115:5d16:25:28:80
 W:7:1:0:24
@@ -88862,7 +88862,7 @@ S:1_IN_10 |
 S:S_DEMON
 D:A demon who supposedly kidnaps people. 
 
-N:5107:erinys
+N:5107:Erinys
 G:U:r
 I:110:5d16:25:18:80
 W:7:1:0:24
@@ -88877,7 +88877,7 @@ S:S_DEMON
 D:These female-seeming devils named after the Furies of mythology 
 D:attack hand to hand and poison their unwary victims as well. 
 
-N:5108:water demon
+N:5108:Water demon
 G:U:B
 I:110:6d18:25:42:80
 W:8:1:0:35
@@ -88894,7 +88894,7 @@ S:S_DEMON
 D:A demon that lives in a fountain and never grants you a wish. 
 D:Instead, he will kill you. 
 
-N:5109:bearded devil
+N:5109:Bearded devil
 G:U:D
 I:115:6d18:25:19:80
 W:8:1:0:35
@@ -88910,7 +88910,7 @@ S:S_DEMON
 D:A demon who supposedly has a beard. I wonder whether female 
 D:versions are bearded, too? 
 
-N:5110:barbed devil
+N:5110:Barbed devil
 G:U:r
 I:110:6d18:25:21:80
 W:8:1:0:35
@@ -88927,7 +88927,7 @@ S:S_DEMON
 D:Barbed devils lack any real special abilities, though they 
 D:are quite difficult to kill. 
 
-N:5111:chasme
+N:5111:Chasme
 G:U:b
 I:124:6d18:25:24:80
 W:8:1:0:35
@@ -88945,7 +88945,7 @@ S:S_DEMON
 D:A very fast demon who can put you to sleep and is therefore 
 D:really dangerous. Hopefully you have free action. 
 
-N:5112:vrock
+N:5112:Vrock
 G:U:r
 I:110:6d18:25:20:80
 W:8:1:0:35
@@ -88965,7 +88965,7 @@ D:a cross between a human being and a vulture and does physical
 D:damage by biting and by using the claws on both its arms and 
 D:feet. 
 
-N:5113:babau
+N:5113:Babau
 G:U:D
 I:115:6d22:25:30:80
 W:9:1:0:45
@@ -88982,7 +88982,7 @@ S:1_IN_10 |
 S:S_DEMON
 D:A demon whose gaze can drain your strength. 
 
-N:5114:hezrou
+N:5114:Hezrou
 G:U:r
 I:105:6d22:25:28:80
 W:9:1:0:45
@@ -88999,7 +88999,7 @@ S:S_DEMON
 D:"Hezrou" is the common name for the type II demon.  It is 
 D:among the weaker of demons, but still quite formidable. 
 
-N:5115:bone devil
+N:5115:Bone devil
 G:U:W
 I:115:6d22:25:25:80
 W:9:1:0:45
@@ -89015,7 +89015,7 @@ S:S_DEMON
 D:Bone devils attack with weapons and with a great hooked tail 
 D:which causes a loss of strength to those they sting.
 
-N:5116:ice devil
+N:5116:Ice devil
 G:U:w
 I:105:8d26:25:40:80
 W:11:1:0:60
@@ -89035,7 +89035,7 @@ D:equally at home in the fires of Hell and the cold of Limbo,
 D:and who can cause the traveller to feel the latter with just 
 D:a touch of their tail. 
 
-N:5117:nalfeshnee
+N:5117:Nalfeshnee
 G:U:r
 I:108:8d26:25:25:80
 W:11:2:0:60
@@ -89052,7 +89052,7 @@ S:S_DEMON | S_MONSTERS | HASTE | HEAL | CAUSE_2 | DRAIN_MANA |
 D:Not only do these demons do physical damage with their claws 
 D:and bite, but they are capable of using magic as well.
 
-N:5118:lava demon
+N:5118:Lava demon
 G:U:r
 I:110:8d30:25:60:80
 W:12:1:0:80
@@ -89068,7 +89068,7 @@ S:1_IN_10 |
 S:S_DEMON
 D:A fiery type of demon. 
 
-N:5119:pit fiend
+N:5119:Pit fiend
 G:U:r
 I:105:8d35:25:33:80
 W:13:1:0:100
@@ -89087,7 +89087,7 @@ D:attacking twice with weapons as well as grabbing and crushing
 D:the life out of those unwary enough to enter their 
 D:domains. 
 
-N:5120:balrog
+N:5120:Balrog
 G:U:r
 I:103:10d65:25:30:80
 W:16:1:0:240
@@ -89384,7 +89384,7 @@ D:A measure of wheat for a penny, and three measures of barley
 D:for a penny; and see thou hurt not the oil and the wine. 
 D:[ Revelations of John, 6:1-8 ]
 
-N:5133:mail daemon
+N:5133:Mail daemon
 G:U:B
 I:120:50d55:25:0:80
 W:56:1:0:8000
@@ -89400,7 +89400,7 @@ S:TPORT | TELE_AWAY | TELE_LEVEL
 D:It is rumoured that these strange creatures can be harmed by 
 D:domesticated canines only.
 
-N:5134:djinni
+N:5134:Djinni
 G:U:y
 I:110:5d18:25:9:80
 W:7:1:0:10
@@ -89419,7 +89419,7 @@ D:in a flask or lamp.  Once in a while, such a tool is found by
 D:a lucky rogue, and some djinn are known to be so grateful 
 D:when released that they might grant their rescuer a wish. 
 
-N:5135:efreeti
+N:5135:Efreeti
 G:U:r
 I:110:5d18:25:9:80
 W:7:1:0:10
@@ -89431,7 +89431,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | IM_FIRE | IM_ELEC |
 F:DEMON | IM_POIS | RES_WALL | RES_GRAV | TAKE_ITEM |
 D:Some lowly demon. 
 
-N:5136:dao
+N:5136:Dao
 G:U:u
 I:110:5d18:25:9:80
 W:7:1:0:10
@@ -89443,7 +89443,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:DEMON | IM_POIS | RES_WALL | RES_GRAV | TAKE_ITEM |
 D:Another lowly demon. 
 
-N:5137:marid
+N:5137:Marid
 G:U:B
 I:110:5d18:25:9:80
 W:7:1:0:10
@@ -89455,7 +89455,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF | IM_COLD |
 F:DEMON | IM_POIS | RES_WALL | RES_GRAV | TAKE_ITEM |
 D:Supposedly a water-based demon. 
 
-N:5138:sandestin
+N:5138:Sandestin
 G:U:W
 I:110:7d24:25:9:80
 W:13:3:10000:70
@@ -89472,7 +89472,7 @@ D:There was a long essay about what a sandestin is, but
 D:I decided to not include it here so let's just say it's 
 D:a demon capable of shifting shape. 
 
-N:5139:jellyfish
+N:5139:Jellyfish
 G:~:B
 I:95:3d4:20:8:75
 W:3:1:3000:5
@@ -89487,7 +89487,7 @@ D:Particularly Portuguese.
 D:[ Lines on Meeting a Portuguese Man-o'-war while 
 D:Bathing, by Michael Flanders ] 
 
-N:5140:piranha
+N:5140:Piranha
 G:~:r
 I:110:5d6:20:8:75
 W:5:1:3000:10
@@ -89505,7 +89505,7 @@ D:vice-like bite... Piranhas are attracted to any disturbance
 D:in the water. 
 D:[ http://www.animalsoftherainforest.com ] 
 
-N:5141:giant eel
+N:5141:Giant eel
 G:~:b
 I:108:5d6:20:22:75
 W:5:1:3000:10
@@ -89525,7 +89525,7 @@ D:rather than dead creatures and are not habitual eaters of
 D:carrion. 
 D:[ Freshwater Fishes of Canada, by Scott and Crossman ] 
 
-N:5142:shark
+N:5142:Shark
 G:~:W
 I:110:6d8:20:17:75
 W:7:1:3000:18
@@ -89550,7 +89550,7 @@ D:that no other creature in nature could make -- a bomb from
 D:the depths. 
 D:[ Close to Shore, by Michael Capuzzo ] 
 
-N:5143:electric eel
+N:5143:Electric eel
 G:~:B
 I:108:6d8:20:30:75
 W:7:1:3000:20
@@ -89566,7 +89566,7 @@ D:This eel is known for its electrical organ which enables it
 D:to paralyse creatures up to the size of a horse. 
 D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
-N:5144:kraken
+N:5144:Kraken
 G:~:r
 I:95:15d30:20:12:75
 W:20:1:20000:1000
@@ -89587,7 +89587,7 @@ D:for help.  Twenty other arms came rippling out.  The dark
 D:water boiled, and there was a hideous stench. 
 D:[ The Fellowship of the Ring, by J.R.R. Tolkien ] 
 
-N:5145:jellyfish
+N:5145:Jellyfish
 G:~:B
 I:95:3d4:20:8:75
 W:3:50:3000:5
@@ -89602,7 +89602,7 @@ D:Particularly Portuguese.
 D:[ Lines on Meeting a Portuguese Man-o'-war while 
 D:Bathing, by Michael Flanders ] 
 
-N:5146:piranha
+N:5146:Piranha
 G:~:r
 I:110:5d6:20:8:75
 W:5:50:3000:10
@@ -89620,7 +89620,7 @@ D:vice-like bite... Piranhas are attracted to any disturbance
 D:in the water. 
 D:[ http://www.animalsoftherainforest.com ] 
 
-N:5147:giant eel
+N:5147:Giant eel
 G:~:b
 I:108:5d6:20:22:75
 W:5:50:3000:10
@@ -89640,7 +89640,7 @@ D:rather than dead creatures and are not habitual eaters of
 D:carrion. 
 D:[ Freshwater Fishes of Canada, by Scott and Crossman ] 
 
-N:5148:shark
+N:5148:Shark
 G:~:W
 I:110:6d8:20:17:75
 W:7:50:3000:18
@@ -89665,7 +89665,7 @@ D:that no other creature in nature could make -- a bomb from
 D:the depths. 
 D:[ Close to Shore, by Michael Capuzzo ] 
 
-N:5149:electric eel
+N:5149:Electric eel
 G:~:B
 I:108:6d8:20:30:75
 W:7:50:3000:20
@@ -89681,7 +89681,7 @@ D:This eel is known for its electrical organ which enables it
 D:to paralyse creatures up to the size of a horse. 
 D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
-N:5150:kraken
+N:5150:Kraken
 G:~:r
 I:95:15d30:20:12:75
 W:20:50:20000:1000
@@ -89702,7 +89702,7 @@ D:for help.  Twenty other arms came rippling out.  The dark
 D:water boiled, and there was a hideous stench. 
 D:[ The Fellowship of the Ring, by J.R.R. Tolkien ] 
 
-N:5151:newt
+N:5151:Newt
 G:R:y
 I:105:1d4:8:3:30
 W:0:1:10:1
@@ -89715,7 +89715,7 @@ D:(kinds of) small animal, like a lizard, which spends most of
 D:its time in the water. 
 D:[ Oxford's Student's Dictionary of Current English ] 
 
-N:5152:gecko
+N:5152:Gecko
 G:R:g
 I:105:1d6:8:3:30
 W:1:1:10:2
@@ -89726,7 +89726,7 @@ F:WILD_GRASS | WILD_TOO | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND
 D:A small animal. 
 
-N:5153:iguana
+N:5153:Iguana
 G:R:u
 I:105:2d5:8:5:30
 W:2:1:10:3
@@ -89738,7 +89738,7 @@ F:ANIMAL | MORTAL | BASEANGBAND
 D:A tasty animal that you want to eat because you 
 D:certainly ain't no vegetarian. 
 
-N:5154:rhaumbusun
+N:5154:Rhaumbusun
 G:R:v
 I:108:2d5:8:10:30
 W:2:1:10:4
@@ -89749,7 +89749,7 @@ F:DROP_CORPSE | IM_POIS | RES_SHAR | HAS_EGG |
 F:ANIMAL | MORTAL | BASEANGBAND
 D:This type of lizard can paralyze you with its gaze. 
 
-N:5155:baby crocodile
+N:5155:Baby crocodile
 G:R:u
 I:105:2d7:8:5:30
 W:3:1:200:5
@@ -89760,7 +89760,7 @@ F:WILD_SHORE | WILD_TOO | DROP_CORPSE | CAN_SWIM |
 F:ANIMAL | MORTAL | BASEANGBAND
 D:A smaller version of the crocodile.
 
-N:5156:lizard
+N:5156:Lizard
 G:R:g
 I:105:5d7:8:7:30
 W:5:1:10:6
@@ -89779,7 +89779,7 @@ D:"wings".  Most are carnivores, feeding on invertebrate and
 D:small vertebrate prey, but others feed on vegetation. 
 D:[ Macmillan Illustrated Animal Encyclopedia ] 
 
-N:5157:gila monster
+N:5157:Gila monster
 G:R:o
 I:105:5d9:8:7:30
 W:6:1:10:8
@@ -89797,7 +89797,7 @@ D:destroys nerve tissue -- from their salivary glands. In humans,
 D:their bite can result in severe pain and even death. 
 D:[Expedition Guide -- American Museum of Natural History] 
 
-N:5158:chameleon
+N:5158:Chameleon
 G:R:u
 I:104:5d9:8:12:30
 W:6:1:10:8
@@ -89818,7 +89818,7 @@ D:(figurative) implication of unreliability.  [Capitalized:]
 D:a constellation of the southern hemisphere (Chameleo). 
 D:[ Van Dale's Groot Woordenboek der Nederlandse Taal ] 
 
-N:5159:crocodile
+N:5159:Crocodile
 G:R:u
 I:108:5d10:8:10:30
 W:6:1:500:12
@@ -89834,7 +89834,7 @@ D:crocodile is a large, dangerous predator native to tropical
 D:and subtropical climes.  It spends most of its time in large 
 D:bodies of water. 
 
-N:5160:salamander
+N:5160:Salamander
 G:R:o
 I:110:5d14:8:22:30
 W:8:1:500:28
@@ -89854,7 +89854,7 @@ D:salamander, in fact, comes from a Greek word meaning "fire
 D:animal". 
 D:[ Salamanders, by Cherie Winner ] 
 
-N:5161:basilisk
+N:5161:Basilisk
 G:R:D
 I:108:5d14:8:10:30
 W:8:1:500:28
@@ -89876,7 +89876,7 @@ D:sicken and die.
 D:[ Mythical Beasts by Deirdre Headon (The Leprechaun Library) 
 D:and other sources ] 
 
-N:5162:komodo dragon
+N:5162:Komodo dragon
 G:R:g
 I:108:5d16:8:10:30
 W:9:1:1200:34
@@ -89910,7 +89910,7 @@ D:of their prey -- bones, fur, hooves -- ripping off huge chunks with
 D:their razor-sharp serrated teeth and swallowing the pieces whole. 
 D:[Expedition Guide -- American Museum of Natural History] 
 
-N:5163:tyrannosaur
+N:5163:Tyrannosaur
 G:R:g
 I:105:8d25:8:12:30
 W:13:1:20000:75
@@ -89921,7 +89921,7 @@ F:DROP_CORPSE | RES_WALL | RES_GRAV | WILD_TOO | WILD_WOOD |
 F:ANIMAL | MORTAL | BASEANGBAND |
 D:A vicious dinosaur. 
 
-N:5164:bad egg
+N:5164:Bad egg
 G:,:w
 I:108:4d9:2:6:0
 W:4:1:200:8
@@ -89932,7 +89932,7 @@ F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:An egg that became hostile. 
 
-N:5165:killer tomato
+N:5165:Killer tomato
 G:,:r
 I:108:4d9:2:2:0
 W:4:1:200:8
@@ -89943,7 +89943,7 @@ F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A tomato that wants to bite you. 
 
-N:5166:killer tripe ration
+N:5166:Killer tripe ration
 G:,:u
 I:108:6d11:2:6:0
 W:7:1:200:8
@@ -89955,7 +89955,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A tripe ration that has somehow become sentient and 
 D:is trying to eat you. 
 
-N:5167:ravenous cream pie
+N:5167:Ravenous cream pie
 G:,:w
 I:108:6d11:2:2:0
 W:7:1:200:8
@@ -89967,7 +89967,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A cream pie that attacks you and somehow doesn't have 
 D:a blindness attack. 
 
-N:5168:killer food ration
+N:5168:Killer food ration
 G:,:u
 I:108:7d14:2:6:0
 W:9:1:200:12
@@ -89978,7 +89978,7 @@ F:STUPID | EMPTY_MIND | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A food ration that doesn't want to be eaten. 
 
-N:5169:pile of killer coins
+N:5169:Pile of killer coins
 G:$:y
 I:105:6d10:3:7:10
 W:6:1:0:13
@@ -89990,7 +89990,7 @@ F:COLD_BLOOD | BASH_DOOR | RES_SHAR | EMPTY_MIND |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
 D:A pile of sentient coins. 
 
-N:5170:large pile of killer coins
+N:5170:Large pile of killer coins
 G:$:y
 I:110:9d10:3:7:10
 W:9:1:0:22
@@ -90002,7 +90002,7 @@ F:COLD_BLOOD | BASH_DOOR | RES_SHAR | EMPTY_MIND |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
 D:A large pile of sentient coins. 
 
-N:5171:huge pile of killer coins
+N:5171:Huge pile of killer coins
 G:$:y
 I:110:11d11:3:7:10
 W:11:1:0:35
@@ -90123,7 +90123,7 @@ F:BASEANGBAND | FEMALE
 D:You feel that the tender farting noises produced by this lady's sexy butt 
 D:are very erotic. 
 
-N:5179:mithril beetle
+N:5179:Mithril Beetle
 G:K:W
 I:105:2d10:10:18:30
 W:0:3:500:4
@@ -90136,7 +90136,7 @@ F:IM_ACID | IM_FIRE | IM_COLD | RES_CHAO | RES_WALL | RES_GRAV |
 D:Inspired by the bundle head, aka Amy's roommate; she didn't know 
 D:what a "mithril" is, and guessed it might be some sort of beetle. 
 
-N:5180:giant red ant
+N:5180:Giant Red Ant
 G:a:o
 I:110:8d12:10:24:10
 W:9:1:300:40
@@ -90152,7 +90152,7 @@ D:from their nest in search of food to claim.  They are formidable
 D:foes, with a crushing bite and stiffly armored body, and a potent 
 D:sting used in defense.  A ant will fight to the death. 
 
-N:5181:bugbeam cube
+N:5181:Bugbeam Cube
 G:j:g
 I:102:4d8:12:3:1
 W:6:2:750:15
@@ -90168,7 +90168,7 @@ D:This gelatinous cube is somehow much slower than a regular
 D:one, probably because of a bug in their coding. Still, don't 
 D:get close unless you're sure you can survive the paralysis! 
 
-N:5182:gelatinous glob
+N:5182:Gelatinous Glob
 G:j:g
 I:108:4d8:12:3:1
 W:6:1:750:15
@@ -90191,7 +90191,7 @@ D:excreting them at rare intervals.  Their strange structure, or
 D:perhaps their strange lack of structure, renders them immune 
 D:to many forms of magical attack. 
 
-N:5183:onanocter 1
+N:5183:Onanocter 1
 G:j:v
 I:108:4d8:12:8:1
 W:6:5:750:18
@@ -90207,7 +90207,7 @@ S:BR_FIRE
 D:A weird hexagon that moves about the dungeon. It is armed 
 D:with a fiery pistol.
 
-N:5184:onanocter 2
+N:5184:Onanocter 2
 G:j:v
 I:108:8d13:12:12:1
 W:12:5:750:45
@@ -90223,7 +90223,7 @@ S:BR_COLD
 D:A weird hexagon that moves about the dungeon. It is armed 
 D:with an icy rifle.
 
-N:5185:onanocter 3
+N:5185:Onanocter 3
 G:j:v
 I:108:10d19:12:19:1
 W:18:5:750:120
@@ -90240,7 +90240,7 @@ S:BR_ELEC
 D:A weird hexagon that moves about the dungeon. It is armed 
 D:with an electric machine gun.
 
-N:5186:onanocter 4
+N:5186:Onanocter 4
 G:j:v
 I:108:13d26:12:23:1
 W:24:5:750:300
@@ -90258,7 +90258,7 @@ S:BR_POIS
 D:A weird hexagon that moves about the dungeon. It is armed 
 D:with poison missiles.
 
-N:5187:onanocter 5
+N:5187:Onanocter 5
 G:j:v
 I:108:15d35:12:33:1
 W:30:5:750:600
@@ -90277,7 +90277,7 @@ S:BR_ACID
 D:A weird hexagon that moves about the dungeon. It is armed 
 D:with an acidic revolver.
 
-N:5188:onanocter 6
+N:5188:Onanocter 6
 G:j:v
 I:108:18d44:12:48:1
 W:36:5:750:1200
@@ -90297,7 +90297,7 @@ S:BR_NEXU
 D:A weird hexagon that moves about the dungeon. It is armed 
 D:with a phaser rifle.
 
-N:5189:onanocter 7
+N:5189:Onanocter 7
 G:j:v
 I:108:20d48:12:60:1
 W:42:7:750:1900
@@ -90317,7 +90317,7 @@ S:BR_DISI
 D:A weird hexagon that moves about the dungeon. It is armed 
 D:with a disintegrating blaster.
 
-N:5190:onanocter 9
+N:5190:Onanocter 9
 G:j:v
 I:108:22d55:12:90:1
 W:50:10:750:4000
@@ -90337,7 +90337,7 @@ S:BR_MANA
 D:A weird hexagon that moves about the dungeon. It is armed 
 D:with a vacuum cleaner. 
 
-N:5191:onanocter 10
+N:5191:Onanocter 10
 G:j:v
 I:108:40d110:12:120:1
 W:100:10:750:25000
@@ -90357,7 +90357,7 @@ S:BR_WALL
 D:A weird hexagon that moves about the dungeon. It is armed 
 D:with a gauss rifle.
 
-N:5192:wild dog
+N:5192:Wild Dog
 G:C:y
 I:110:2d5:10:10:10
 W:2:1:400:4
@@ -90372,7 +90372,7 @@ D:that were have gone back to the wilds.  While still
 D:less dangerous than wolves, beware the claws and bite 
 D:of these hunters, especially if found in packs. 
 
-N:5193:gray wolf
+N:5193:Gray Wolf
 G:C:W
 I:110:8d12:10:18:10
 W:9:1:1000:40
@@ -90387,7 +90387,7 @@ D:our successful attempts to breed domestic canines millennia
 D:ago.  Although most fearsome in packs, even a single 
 D:gray wolf can be deadly to an unprepared adventurer. 
 
-N:5194:white wolf
+N:5194:White Wolf
 G:U:W
 I:110:10d18:10:38:10
 W:16:1:1000:180
@@ -90452,7 +90452,7 @@ F:BASEANGBAND | DROP_CORPSE | TAKE_ITEM |
 D:A man with a bull's head. He storms toward you, determined 
 D:to impale you on his horns. 
 
-N:5199:evil warrior
+N:5199:Evil Warrior
 G:h:W
 I:110:6d21:20:31:10
 W:12:1:1000:42
@@ -90466,7 +90466,7 @@ D:These evil people run around attacking those whom they
 D:perceive as an easy target, and then make off with 
 D:whatever loot and money the victims had. 
 
-N:5200:berserker
+N:5200:Berserker
 G:h:W
 I:110:7d25:20:60:10
 W:14:1:1000:70
@@ -90480,7 +90480,7 @@ F:BASEANGBAND | DROP_CORPSE | TAKE_ITEM |
 D:Berserkers are known for attacking relentlessly. They 
 D:will not stop until their enemy is dead. 
 
-N:5201:hobgoblin fighter
+N:5201:Hobgoblin Fighter
 G:k:o
 I:108:3d7:20:2:30
 W:3:1:800:4
@@ -90504,7 +90504,7 @@ D:desperate hobgoblin.  Occasionally hobgoblins will locate
 D:one another, and may form a small band of their own, though 
 D:such bands are usually short-lived.
 
-N:5202:goblin fighter
+N:5202:Goblin Fighter
 G:k:o
 I:108:4d12:20:4:30
 W:5:1:800:7
@@ -90529,7 +90529,7 @@ D:goblins may enlist the protection of a larger monster,
 D:yielding to it a large share of any booty collected in 
 D:exchange for its handling any outsize foes. 
 
-N:5203:ogroblin
+N:5203:Ogroblin
 G:k:u
 I:110:4d12:20:4:30
 W:5:1:800:7
@@ -90544,7 +90544,7 @@ D:This funny-looking goblin consists only of a head and
 D:feet; they lack a torso. Apart from that, they're about 
 D:as vicious and hostile as other goblins. 
 
-N:5204:brown bear
+N:5204:Brown Bear
 G:Y:r
 I:110:8d14:30:20:20
 W:10:1:2000:40
@@ -90559,7 +90559,7 @@ D:larger cave bear, is still a mighty opponent, and
 D:both these creatures can do substantial damage with 
 D:both claw and bite. 
 
-N:5205:cave bear
+N:5205:Cave Bear
 G:Y:D
 I:110:12d30:30:35:20
 W:19:1:3000:220
@@ -90575,7 +90575,7 @@ D:dangerous foes.  The fiercest of these is the monstrous
 D:cave bear, a giant omnivore that stands 8-10 feet tall 
 D:on its hind legs. 
 
-N:5206:giant rat
+N:5206:Giant Rat
 G:r:W
 I:117:1d2:8:5:30
 W:0:1:200:1
@@ -90589,7 +90589,7 @@ D:the caves and dungeons below the castle, however, are larger
 D:and more intelligent than their city cousins, and when found in 
 D:numbers can be much more deadly. 
 
-N:5207:carrion creeper
+N:5207:Carrion Creeper
 G:r:G
 I:110:6d6:8:13:30
 W:6:1:200:24
@@ -90606,7 +90606,7 @@ D:head.  It roams the caves seeking carrion for food, but has no
 D:qualms about attacking a living creature if carrion is scarce. 
 D:Its many attacks make it a feared opponent. 
 
-N:5208:cave creeper
+N:5208:Cave Creeper
 G:r:W
 I:110:6d15:8:20:30
 W:12:1:200:50
@@ -90620,7 +90620,7 @@ F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | HAS_EGG |
 D:The bigger, meaner brother of the carrion creeper. They attack 
 D:many times in succession. 
 
-N:5209:giant trapdoor spider
+N:5209:Giant Trapdoor Spider
 G:S:D
 I:110:20d20:8:20:80
 W:18:1:1000:350
@@ -90635,7 +90635,7 @@ D:house and field, ranging in size from large cat to draft
 D:horse.  Many carry a venomous bite, quickly lethal to 
 D:warm-blooded prey.  All are swift runners and dangerous. 
 
-N:5210:mithril beetle
+N:5210:Mithril Beetle
 G:K:b
 I:110:6d10:10:2:30
 W:5:4:500:20
@@ -90646,7 +90646,7 @@ F:WEIRD_MIND | BASH_DOOR | DROP_CORPSE | HAS_EGG |
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | IM_ELEC | 
 D:A big, armored beetle. 
 
-N:5211:young red dragon
+N:5211:Young Red Dragon
 G:d:r
 I:108:6d10:20:20:70
 W:6:1:5000:24
@@ -90658,7 +90658,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_FIRE |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A red dragon, too young to have developed a breath weapon. 
 
-N:5212:young white dragon
+N:5212:Young White Dragon
 G:d:w
 I:108:6d10:20:20:70
 W:6:1:5000:24
@@ -90670,7 +90670,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_COLD |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A white dragon, too young to have developed a breath weapon. 
 
-N:5213:young blue dragon
+N:5213:Young Blue Dragon
 G:d:B
 I:108:6d10:20:20:70
 W:6:1:5000:24
@@ -90682,7 +90682,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_ELEC |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A blue dragon, too young to have developed a breath weapon. 
 
-N:5214:young green dragon
+N:5214:Young Green Dragon
 G:d:g
 I:108:6d10:20:20:70
 W:6:1:5000:24
@@ -90694,7 +90694,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_POIS |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A green dragon, too young to have developed a breath weapon. 
 
-N:5215:young adult red dragon
+N:5215:Young Adult Red Dragon
 G:d:r
 I:108:8d10:20:20:70
 W:8:1:5000:35
@@ -90706,7 +90706,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_FIRE |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A red dragon, almost big enough to be able to breathe.
 
-N:5216:young adult white dragon
+N:5216:Young Adult White Dragon
 G:d:w
 I:108:8d10:20:20:70
 W:8:1:5000:35
@@ -90718,7 +90718,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_COLD |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A white dragon, almost big enough to be able to breathe.
 
-N:5217:young adult blue dragon
+N:5217:Young Adult Blue Dragon
 G:d:B
 I:108:8d10:20:20:70
 W:8:1:5000:35
@@ -90730,7 +90730,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_ELEC |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A blue dragon, almost big enough to be able to breathe.
 
-N:5218:young adult green dragon
+N:5218:Young Adult Green Dragon
 G:d:g
 I:108:8d10:20:20:70
 W:8:1:5000:35
@@ -90742,7 +90742,7 @@ F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_POIS |
 F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
 D:A green dragon, almost big enough to be able to breathe.
 
-N:5219:manticore
+N:5219:Manticore
 G:d:y
 I:110:8d12:20:20:70
 W:9:1:8000:50
@@ -90770,7 +90770,7 @@ D:While manticores are intelligent, their bestial, angry nature
 D:overrides most subtlety.  They talk, and will mock their prey 
 D:during combat. 
 
-N:5220:adult red dragon
+N:5220:Adult Red Dragon
 G:D:r
 I:108:12d24:20:25:70
 W:12:1:20000:150
@@ -90786,7 +90786,7 @@ S:1_IN_6
 S:BR_FIRE
 D:A red dragon, who has just learned how to breathe.
 
-N:5221:adult white dragon
+N:5221:Adult White Dragon
 G:D:w
 I:108:12d24:20:25:70
 W:12:1:20000:150
@@ -90802,7 +90802,7 @@ S:1_IN_6
 S:BR_COLD
 D:A white dragon, who has just learned how to breathe.
 
-N:5222:adult blue dragon
+N:5222:Adult Blue Dragon
 G:D:B
 I:108:12d24:20:25:70
 W:12:1:20000:150
@@ -90818,7 +90818,7 @@ S:1_IN_6
 S:BR_ELEC
 D:A blue dragon, who has just learned how to breathe.
 
-N:5223:adult green dragon
+N:5223:Adult Green Dragon
 G:D:g
 I:108:12d24:20:25:70
 W:12:1:20000:150
@@ -90834,7 +90834,7 @@ S:1_IN_6
 S:BR_POIS
 D:A green dragon, who has just learned how to breathe.
 
-N:5224:klieau manticore
+N:5224:Klieau Manticore
 G:d:y
 I:110:8d25:20:20:70
 W:15:1:8000:200
@@ -90850,7 +90850,7 @@ D:These demonic spiders are everywhere! You just can't walk down a
 D:corridor without getting hit by their ultra-damaging tailspikes 
 D:all the damn time! 
 
-N:5225:old red dragon
+N:5225:Old Red Dragon
 G:D:r
 I:108:16d24:20:30:70
 W:16:1:30000:600
@@ -90866,7 +90866,7 @@ S:1_IN_6
 S:BR_FIRE
 D:A red dragon, quite capable of battling pesky adventurers. 
 
-N:5226:old white dragon
+N:5226:Old White Dragon
 G:D:w
 I:108:16d24:20:30:70
 W:16:1:30000:600
@@ -90882,7 +90882,7 @@ S:1_IN_6
 S:BR_COLD
 D:A white dragon, quite capable of battling pesky adventurers. 
 
-N:5227:old blue dragon
+N:5227:Old Blue Dragon
 G:D:B
 I:108:16d24:20:30:70
 W:16:1:30000:600
@@ -90898,7 +90898,7 @@ S:1_IN_6
 S:BR_ELEC
 D:A blue dragon, quite capable of battling pesky adventurers. 
 
-N:5228:old green dragon
+N:5228:Old Green Dragon
 G:D:g
 I:108:16d24:20:30:70
 W:16:1:30000:600
@@ -90914,7 +90914,7 @@ S:1_IN_6
 S:BR_POIS
 D:A green dragon, quite capable of battling pesky adventurers. 
 
-N:5229:very old red dragon
+N:5229:Very Old Red Dragon
 G:D:r
 I:108:25d24:20:40:70
 W:22:1:50000:3000
@@ -90930,7 +90930,7 @@ S:1_IN_6
 S:BR_FIRE
 D:A red dragon, very big, very nasty.
 
-N:5230:very old white dragon
+N:5230:Very Old White Dragon
 G:D:w
 I:108:25d24:20:40:70
 W:22:1:50000:3000
@@ -90946,7 +90946,7 @@ S:1_IN_6
 S:BR_COLD
 D:A white dragon, very big, very nasty.
 
-N:5231:very old blue dragon
+N:5231:Very Old Blue Dragon
 G:D:B
 I:108:25d24:20:40:70
 W:22:1:50000:3000
@@ -90962,7 +90962,7 @@ S:1_IN_6
 S:BR_ELEC
 D:A blue dragon, very big, very nasty.
 
-N:5232:very old green dragon
+N:5232:Very Old Green Dragon
 G:D:g
 I:108:25d24:20:40:70
 W:22:1:50000:3000
@@ -90978,7 +90978,7 @@ S:1_IN_6
 S:BR_POIS
 D:A green dragon, very big, very nasty.
 
-N:5233:ancient red dragon
+N:5233:Ancient Red Dragon
 G:D:r
 I:108:25d30:20:45:70
 W:24:1:50000:3500
@@ -90994,7 +90994,7 @@ S:1_IN_6
 S:BR_FIRE
 D:A red dragon, highly powerful. Be prepared for a tough battle. 
 
-N:5234:ancient white dragon
+N:5234:Ancient White Dragon
 G:D:w
 I:108:25d30:20:45:70
 W:24:1:50000:3500
@@ -91010,7 +91010,7 @@ S:1_IN_6
 S:BR_COLD
 D:A white dragon, highly powerful. Be prepared for a tough battle. 
 
-N:5235:ancient blue dragon
+N:5235:Ancient Blue Dragon
 G:D:B
 I:108:25d30:20:45:70
 W:24:1:50000:3500
@@ -91026,7 +91026,7 @@ S:1_IN_6
 S:BR_ELEC
 D:A blue dragon, highly powerful. Be prepared for a tough battle. 
 
-N:5236:ancient green dragon
+N:5236:Ancient Green Dragon
 G:D:g
 I:108:25d30:20:45:70
 W:24:1:50000:3500
@@ -91042,7 +91042,7 @@ S:1_IN_6
 S:BR_POIS
 D:A green dragon, highly powerful. Be prepared for a tough battle. 
 
-N:5237:magma elemental
+N:5237:Magma Elemental
 G:E:o
 I:108:6d13:12:27:50
 W:12:1:0:80
@@ -91059,7 +91059,7 @@ S:BR_FIRE
 D:A bit similar to the fire elemental, but this one 
 D:actually breathes fire. 
 
-N:5238:ice elemental
+N:5238:Ice Elemental
 G:E:U
 I:108:7d15:12:30:50
 W:14:1:0:120
@@ -91075,7 +91075,7 @@ S:1_IN_7
 S:BR_COLD | BO_ICEE
 D:This elemental breathes ice. 
 
-N:5239:grass elemental
+N:5239:Grass Elemental
 G:E:g
 I:110:7d17:12:22:50
 W:15:2:0:125
@@ -91089,7 +91089,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A rather nonsensical elemental created by Amy, which doesn't 
 D:pose much of a threat. 
 
-N:5240:electrically based monster
+N:5240:Electrically Based Monster
 G:E:B
 I:110:8d22:12:20:50
 W:16:1:0:150
@@ -91104,7 +91104,7 @@ S:1_IN_7
 S:BR_ELEC
 D:The game was lacking a shock-based elemental, so Amy made one. 
 
-N:5241:dust elemental
+N:5241:Dust Elemental
 G:E:u
 I:115:9d22:12:24:50
 W:17:1:0:200
@@ -91117,7 +91117,7 @@ F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | RES_NEXU |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A relative of the air elemental. 
 
-N:5242:poison elemental
+N:5242:Poison Elemental
 G:E:G
 I:116:12d38:12:50:50
 W:26:2:0:1600
@@ -91133,7 +91133,7 @@ S:1_IN_5
 S:BR_POIS
 D:This elemental is poison-based, obviously. 
 
-N:5243:electric elemental
+N:5243:Electric Elemental
 G:E:y
 I:120:15d45:12:48:50
 W:37:3:0:3000
@@ -91147,7 +91147,7 @@ F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | RES_NEXU |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A lightning-based elemental.
 
-N:5244:concrete elemental
+N:5244:Concrete Elemental
 G:E:D
 I:109:20d60:12:100:50
 W:41:4:0:5500
@@ -91160,7 +91160,7 @@ F:IM_POIS | RES_WALL | RES_GRAV | RES_CHAO | RES_NETH |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:This elemental is super resilient to attacks. 
 
-N:5245:glass elemental
+N:5245:Glass Elemental
 G:E:D
 I:115:30d90:12:60:50
 W:63:5:0:7200
@@ -91175,7 +91175,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:While it sounds like this elemental might be brittle, it's actually 
 D:rather sturdy and powerful. 
 
-N:5246:hill giant
+N:5246:Hill Giant
 G:P:u
 I:108:6d12:20:12:50
 W:8:1:5000:37
@@ -91194,7 +91194,7 @@ D:homespun, or leather armor when they can get it made in their
 D:size, and wield great wooden clubs.  Very rarely an individual 
 D:will show a talent for magic. 
 
-N:5247:granite giant
+N:5247:Granite Giant
 G:P:W
 I:110:14d20:20:45:50
 W:15:3:5000:260
@@ -91209,7 +91209,7 @@ S:1_IN_6
 S:ARROW_3
 D:A relative of the stone giant. 
 
-N:5248:grass giant
+N:5248:Grass Giant
 G:P:g
 I:110:11d18:20:15:50
 W:15:3:5000:200
@@ -91351,7 +91351,7 @@ D:disenchantment, draining the pluses from your gear like you
 D:cannot believe. If you can survive that, you only need to whittle 
 D:down his considerable health pool. 
 
-N:5255:steel giant
+N:5255:Steel Giant
 G:P:W
 I:109:20d40:20:60:50
 W:20:4:5000:1600
@@ -91368,7 +91368,7 @@ S:ARROW_4
 D:A giant covered with hardened metal. They're 
 D:rather hard to kill. 
 
-N:5256:two-headed giant
+N:5256:Two-Headed Giant
 G:P:o
 I:110:22d45:20:50:50
 W:23:1:5000:1650
@@ -91383,7 +91383,7 @@ S:1_IN_5
 S:ARROW_4
 D:Also known as "ettin", this giant has two heads (duh). 
 
-N:5257:concrete giant
+N:5257:Concrete Giant
 G:P:o
 I:108:22d50:20:75:50
 W:24:4:5000:1800
@@ -91397,7 +91397,7 @@ S:1_IN_5
 S:ARROW_4
 D:This giant is well-armored and hits very hard. 
 
-N:5258:glass giant
+N:5258:Glass Giant
 G:P:w
 I:116:20d45:20:20:50
 W:28:4:5000:1900
@@ -91412,7 +91412,7 @@ S:1_IN_5
 S:ARROW_4
 D:A relatively frail, weakly armored giant, but he packs a punch. 
 
-N:5259:electric giant
+N:5259:Electric Giant
 G:P:o
 I:116:25d60:20:50:50
 W:31:4:5000:2400
@@ -91427,7 +91427,7 @@ S:1_IN_5
 S:ARROW_4 | BR_ELEC
 D:This giant carries a shocking sword, and can also breathe lightning.  
 
-N:5260:poison giant
+N:5260:Poison Giant
 G:P:g
 I:115:25d66:20:50:50
 W:35:4:5000:2600
@@ -91443,7 +91443,7 @@ S:ARROW_4
 D:A giant wielding a poisoned sword. By this time you're probably resistant 
 D:to poison, and even if you aren't, you likely won't care. 
 
-N:5261:earth giant
+N:5261:Earth Giant
 G:P:u
 I:108:40d90:20:150:50
 W:42:4:5000:3500
@@ -91458,7 +91458,7 @@ S:ARROW_4
 D:The hide of this giant is extremely thick. Use magic to 
 D:defeat him more quickly. 
 
-N:5262:green monster
+N:5262:Green Monster
 G:H:g
 I:110:5d8:35:5:255
 W:5:2:5000:15
@@ -91471,7 +91471,7 @@ S:1_IN_6
 S:BR_LITE
 D:A green-colored monster that breathes light. 
 
-N:5263:blue monster
+N:5263:Blue Monster
 G:H:B
 I:110:10d10:35:10:255
 W:10:2:5000:35
@@ -91484,7 +91484,7 @@ S:1_IN_6
 S:BR_LITE
 D:A blue-colored monster that breathes light. 
 
-N:5264:red monster
+N:5264:Red Monster
 G:H:r
 I:110:10d16:35:33:255
 W:15:2:5000:75
@@ -91495,7 +91495,7 @@ F:BASH_DOOR | CAN_FLY | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | IM_FIRE | 
 D:A red-colored monster that tries to bite you.
 
-N:5265:electro monster
+N:5265:Electro Monster
 G:H:B
 I:110:10d17:35:20:255
 W:16:2:5000:80
@@ -91509,7 +91509,7 @@ S:1_IN_6
 S:BR_ELEC
 D:An electric monster that breathes lightning.
 
-N:5266:dark monster
+N:5266:Dark Monster
 G:H:D
 I:110:12d21:35:20:255
 W:20:2:5000:150
@@ -91523,7 +91523,7 @@ S:1_IN_5
 S:BR_DARK
 D:A black monster that breathes darkness.
 
-N:5267:white monster
+N:5267:White Monster
 G:H:w
 I:110:15d28:35:20:255
 W:25:2:5000:300
@@ -91534,7 +91534,7 @@ F:BASH_DOOR | CAN_FLY | DROP_CORPSE |
 F:ANIMAL | MORTAL | BASEANGBAND | 
 D:A white monster that trashes the dungeon.
 
-N:5268:golden monster
+N:5268:Golden Monster
 G:H:y
 I:110:18d35:35:34:255
 W:30:3:5000:500
@@ -91550,7 +91550,7 @@ S:1_IN_5
 S:MISSILE | BR_MANA
 D:A golden monster that uses magic.
 
-N:5269:huge ogre
+N:5269:Huge Ogre
 G:O:y
 I:110:12d15:20:20:30
 W:12:1:2100:170
@@ -91576,7 +91576,7 @@ D:intelligent ogre to adopt the veneer of civilization and
 D:consort with humans, though its cruel hungers will eventually 
 D:tell true. 
 
-N:5270:slime
+N:5270:Slime
 G:j:G
 I:110:3d10:12:50:1
 W:4:1:1000:8
@@ -91599,7 +91599,7 @@ D:chew, and if left unchecked will eventually grow over the rest
 D:of the victim.  All other creatures hate and fear slime. 
 D:It is difficult to destroy without magical means. 
 
-N:5271:green slime
+N:5271:Green Slime
 G:j:g
 I:110:6d10:12:8:1
 W:6:1:1000:14
@@ -91613,7 +91613,7 @@ F:NO_CONF | RES_SHAR | NO_FEAR | BASEANGBAND | NO_CUT |
 F:IM_POIS | IM_ACID | RES_WALL | RES_GRAV | IM_ELEC | IM_COLD | 
 D:Don't worry, it won't infect you. It'll hit you with acid though.  
 
-N:5272:viper
+N:5272:Viper
 G:J:G
 I:110:3d11:4:9:99
 W:5:1:600:11
@@ -91630,7 +91630,7 @@ D:householder may plant a few as guardians to deter thieves
 D:and other intruders.  Of course, it will bite friends as 
 D:well as foes, and so is most useful when you have but few friends. 
 
-N:5273:large snake
+N:5273:Large Snake
 G:J:G
 I:115:4d19:4:20:99
 W:8:1:800:19
@@ -91647,7 +91647,7 @@ D:ship's hull in their powerful coils.  Recently, travelers
 D:have brought reports of similar (though mercifully smaller) 
 D:snakes on land, hiding in dense forests or ruins. 
 
-N:5274:gruesome troll
+N:5274:Gruesome Troll
 G:T:G
 I:109:15d33:20:28:40
 W:15:1:6000:250
@@ -91672,7 +91672,7 @@ D:which it can track with its keen sense of smell and doglike
 D:intelligence.  Life burns brightly within the troll, which 
 D:can recover from a mortal wound within minutes.  A troll fears fire. 
 
-N:5275:tunnel wight
+N:5275:Tunnel Wight
 G:W:g
 I:110:8d9:20:11:30
 W:7:1:0:26
@@ -91689,7 +91689,7 @@ S:CONF | CAUSE_1 | BO_NETH | SLOW | HASTE | HEAL |
 D:Originally supposed to be weaker than the barrow wight but the 
 D:opposite happens to be the case. 
 
-N:5276:pale wraith
+N:5276:Pale Wraith
 G:W:W
 I:110:4d18:20:18:30
 W:8:1:0:31
@@ -91706,7 +91706,7 @@ D:suffering among mankind, on which they can feed.  If none can be
 D:found, they will drain the magical powers of men they encounter, 
 D:or if that fails as well, drain the intelligence from their minds! 
 
-N:5277:dark wraith
+N:5277:Dark Wraith
 G:W:u
 I:110:6d24:20:19:30
 W:14:1:0:60
@@ -91720,7 +91720,7 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | RES_GRAV |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT | RES_WALL |
 D:A dark-hued wraith that wants to drain your intelligence. 
 
-N:5278:abyss wraith
+N:5278:Abyss Wraith
 G:W:o
 I:110:8d31:20:23:30
 W:20:1:0:110
@@ -91735,7 +91735,7 @@ F:EVIL | UNDEAD | IM_COLD | IM_POIS | TAKE_ITEM | RES_GRAV |
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT | RES_WALL |
 D:A powerful wraith that sucks out its foes' intelligence. 
 
-N:5279:castle wight
+N:5279:Castle Wight
 G:W:G
 I:110:15d22:20:28:30
 W:16:1:0:100
@@ -91755,7 +91755,7 @@ S:SCARE | DARKNESS |
 D:A wight who is at home in the castle. His attacks will quickly 
 D:drain your life and stats, so beware. 
 
-N:5280:grave wight
+N:5280:Grave Wight
 G:W:B
 I:110:19d40:20:28:30
 W:30:3:0:400
@@ -91773,7 +91773,7 @@ S:SCARE | DARKNESS | FORGET | TRAPS |
 D:A wight who has risen from the grave, and is now back 
 D:to undead life just to haunt you. 
 
-N:5281:crypt wight
+N:5281:Crypt Wight
 G:W:r
 I:125:30d90:20:120:30
 W:61:5:0:16000
@@ -91795,7 +91795,7 @@ S:S_HI_UNDEAD | HOLD | TPORT | TELE_AWAY |
 D:This wight hits like a truck and also sucks out your 
 D:life force very quickly. Beware his spells, too. 
 
-N:5282:walking corpse
+N:5282:Walking Corpse
 G:z:B
 I:108:4d9:20:13:30
 W:8:1:750:14
@@ -91813,7 +91813,7 @@ D:kill than a skeleton, for the flesh also provides some
 D:protection.  Like a skeleton, a walking corpse has no memory 
 D:of its former life, and exists only to destroy whatever it finds. 
 
-N:5283:putrid zombie
+N:5283:Putrid Zombie
 G:z:G
 I:108:4d9:20:13:30
 W:8:1:750:15
@@ -91828,7 +91828,7 @@ D:where they've become rather poisonous and unhealthy.
 D:Getting clawed by this animated corpse will surely cause 
 D:the poison to be injected into your veins. 
 
-N:5284:bandit
+N:5284:Bandit
 G:h:D
 I:110:4d9:20:0:20
 W:4:1:1200:12
@@ -91844,7 +91844,7 @@ S:ARROW_1
 D:This dude steals your gold, and also fires at you with an 
 D:unlimited supply of arrows. 
 
-N:5285:smirking sneak thief
+N:5285:Smirking Sneak Thief
 G:h:B
 I:110:6d12:20:0:20
 W:8:1:1200:20
@@ -91862,7 +91862,7 @@ D:these ruthless ones, for despite the smirk, they often show
 D:the world they will rob you of your possessions and vanish 
 D:before your eyes! 
 
-N:5286:wizard
+N:5286:Wizard
 G:h:B
 I:110:6d13:20:0:20
 W:10:1:1200:50
@@ -91885,7 +91885,7 @@ D:nightmares to the rest of us.  Beware should you encounter
 D:any of these men or women, for they wield mighty magics with 
 D:which to oppose you.
 
-N:5287:necromancer
+N:5287:Necromancer
 G:h:D
 I:112:8d18:20:10:20
 W:15:1:1200:180
@@ -91901,7 +91901,7 @@ S:S_MONSTER | S_UNDEAD |
 D:Be especially careful of the dreaded Necromancers, who can 
 D:summon undead from the nether regions to their aid. 
 
-N:5288:eerie ghost
+N:5288:Eerie Ghost
 G:G:W
 I:110:18d10:8:60:10
 W:18:1:0:140
@@ -91923,7 +91923,7 @@ D:no body, and so are difficult to see and very difficult to hit
 D:with normal weapons.  They also have the ability to pass through 
 D:anything, so doors and even rock are no use in stopping their attacks. 
 
-N:5289:spectre
+N:5289:Spectre
 G:G:w
 I:110:9d28:8:80:10
 W:22:2:0:400
@@ -91946,7 +91946,7 @@ D:since they are intangible themselves.  While this weapon is real
 D:and can be blocked, the creatures themselves are difficult to 
 D:destroy with mortal weapons. 
 
-N:5290:huge lizard
+N:5290:Huge Lizard
 G:R:G
 I:105:10d8:8:17:30
 W:10:1:500:20
@@ -91965,7 +91965,7 @@ D:prowling their territory in search of food. They are slow
 D:moving, but their scaly hide provides armor against most 
 D:attacks, and their bite can do much damage. 
 
-N:5291:animated wooden statue
+N:5291:Animated Wooden Statue
 G:g:u
 I:107:6d12:12:15:10
 W:8:1:3200:40
@@ -91977,7 +91977,7 @@ F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | IM_ELEC | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A wooden statue that is alive and wants to kill you. 
 
-N:5292:animated bronze statue
+N:5292:Animated Bronze Statue
 G:g:g
 I:107:8d14:12:19:10
 W:12:1:3200:65
@@ -91989,7 +91989,7 @@ F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | IM_FIRE | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A bronze statue that is alive and wants to kill you. 
 
-N:5293:animated iron statue
+N:5293:Animated Iron Statue
 G:g:W
 I:107:10d17:12:23:10
 W:16:1:3200:120
@@ -92001,7 +92001,7 @@ F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:An iron statue that is alive and wants to kill you. 
 
-N:5294:animated marble statue
+N:5294:Animated Marble Statue
 G:g:D
 I:107:12d24:12:33:10
 W:22:1:3200:220
@@ -92013,7 +92013,7 @@ F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | IM_FIRE | IM_ELEC | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A marble statue that is alive and wants to kill you. 
 
-N:5295:animated copper statue
+N:5295:Animated Copper Statue
 G:g:v
 I:107:13d28:12:44:10
 W:25:2:3200:450
@@ -92025,7 +92025,7 @@ F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | IM_FIRE | IM_ACID | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A copper statue that is alive and wants to kill you. 
 
-N:5296:animated silver statue
+N:5296:Animated Silver Statue
 G:g:U
 I:107:15d34:12:60:10
 W:30:3:3200:700
@@ -92037,7 +92037,7 @@ F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | IM_FIRE | IM_ACID | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A silver statue that is alive and wants to kill you. 
 
-N:5297:animated golden statue
+N:5297:Animated Golden Statue
 G:g:y
 I:107:18d44:12:70:10
 W:35:4:3200:1500
@@ -92049,7 +92049,7 @@ F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | IM_FIRE | IM_ACID | RES_SHAR |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A golden statue that is alive and wants to kill you. 
 
-N:5298:animated platinum statue
+N:5298:Animated Platinum Statue
 G:g:W
 I:107:20d55:12:86:10
 W:40:5:3200:2400
@@ -92061,7 +92061,7 @@ F:RES_CHAO | NO_SLEEP | IM_POIS | IM_COLD | IM_FIRE | IM_ACID | IM_ELEC | RES_SH
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 D:A platinum statue that is alive and wants to kill you. 
 
-N:5299:horned devil
+N:5299:Horned Devil
 G:U:u
 I:110:5d14:25:33:80
 W:6:1:0:16
@@ -92083,7 +92083,7 @@ D:are harder to hit and have some magic powers as well.  In
 D:battle they can summon gouts of fire to burn their opponents, 
 D:and have the power to gate in other horned devils to aid them. 
 
-N:5300:spiked devil
+N:5300:Spiked Devil
 G:U:y
 I:116:6d16:25:20:80
 W:8:1:0:23
@@ -92103,7 +92103,7 @@ D:covered with a tough scaly hide and vicious spikes protruding from
 D:all the joints.  They are also equipped with a spiked tail, with 
 D:which they can lash their enemies in battle. 
 
-N:5301:ice devil
+N:5301:Ice Devil
 G:U:w
 I:108:8d20:25:17:80
 W:11:1:0:40
@@ -92122,7 +92122,7 @@ D:blasts of cold and ice in battle, which makes them deadly in battle.
 D:While totally immune to the deepest cold, they are affected by fire, 
 D:unlike most of the spawn of Muspelheim. 
 
-N:5302:abyss fiend
+N:5302:Abyss Fiend
 G:U:D
 I:106:10d30:25:30:80
 W:15:1:0:200
@@ -92144,7 +92144,7 @@ D:strength and are immune to many attacks.  Like horned devils
 D:they have the ability to summon fire at will, and can gate in 
 D:other devils to aid them.
 
-N:5303:dust devil
+N:5303:Dust Devil
 G:U:u
 I:113:14d45:25:45:80
 W:30:2:0:1500
@@ -92160,7 +92160,7 @@ S:S_DEMON |
 D:A devil conceived by Amy, he's dust-themed and doesn't 
 D:have any really special abilities. 
 
-N:5304:stone devil
+N:5304:Stone Devil
 G:U:D
 I:109:18d60:25:100:80
 W:33:3:0:1800
@@ -92175,7 +92175,7 @@ S:1_IN_10 |
 S:S_DEMON |
 D:A devil conceived by Amy, he's rock solid and hard to kill. 
 
-N:5305:earth devil
+N:5305:Earth Devil
 G:U:u
 I:107:19d64:25:108:80
 W:36:3:0:2000
@@ -92191,7 +92191,7 @@ S:S_DEMON |
 D:A devil conceived by Amy, he's quite tough and will tunnel through 
 D:solid rock in an attempt to catch you. 
 
-N:5306:poison devil
+N:5306:Poison Devil
 G:U:g
 I:120:20d60:25:45:80
 W:41:3:0:2400
@@ -92206,7 +92206,7 @@ S:1_IN_10 |
 S:S_DEMON | BR_POIS | 
 D:A devil conceived by Amy, he uses poison in an attempt to defeat you. 
 
-N:5307:yellow devil
+N:5307:Yellow Devil
 G:U:y
 I:115:22d66:25:80:80
 W:47:4:0:3000
@@ -92221,7 +92221,7 @@ S:1_IN_10 |
 S:S_DEMON | 
 D:A devil conceived by Amy, this one is colored yellow. 
 
-N:5308:blue devil
+N:5308:Blue Devil
 G:U:B
 I:113:23d75:25:94:80
 W:53:4:0:4400
@@ -92236,7 +92236,7 @@ S:1_IN_10 |
 S:S_DEMON | 
 D:A devil conceived by Amy, this one is colored blue. 
 
-N:5309:gray devil
+N:5309:Gray Devil
 G:U:W
 I:118:25d84:25:100:80
 W:60:4:0:5000
@@ -92251,7 +92251,7 @@ S:1_IN_10 |
 S:S_DEMON | BR_DISE
 D:A devil conceived by Amy, this one is colored gray. 
 
-N:5310:red devil
+N:5310:Red Devil
 G:U:r
 I:114:28d90:25:106:80
 W:66:4:0:6000
@@ -92266,7 +92266,7 @@ S:1_IN_10 |
 S:S_DEMON | BR_FIRE
 D:A devil conceived by Amy, this one is colored red. 
 
-N:5311:green devil
+N:5311:Green Devil
 G:U:g
 I:120:40d120:25:50:80
 W:83:4:0:9000
@@ -92278,10 +92278,10 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_CONF |
 F:EVIL | DEMON | IM_ELEC | RES_CHAO | IM_COLD | IM_FIRE | IM_POIS | 
 F:RES_SHAR | 
 S:1_IN_10 | 
-S:S_DEMON | BR_FIRE
+S:S_DEMON
 D:A devil conceived by Amy, this one is colored green. 
 
-N:5312:black devil
+N:5312:Black Devil
 G:U:D
 I:122:42d125:25:56:80
 W:90:4:0:10000
@@ -92326,7 +92326,7 @@ D:servants, and let this mortal have a taste of fire and ice!"
 D:You see Surtur make a commanding gesture with his hands, and 
 D:a gate opens beside him. 
 
-N:5314:blowstream baby
+N:5314:Blowstream Baby
 G:g:o
 I:108:30d50:50:60:80
 W:30:10:500:6000
@@ -92358,7 +92358,7 @@ S:1_IN_5
 S:BR_ACID | BR_POIS
 D:Ugh! You wish you hadn't seen this entity. 
 
-N:5316:trilobite
+N:5316:Trilobite
 G:a:W
 I:110:2d8:10:13:10
 W:3:1:100:5
@@ -92370,7 +92370,7 @@ F:ANIMAL |
 F:MORTAL | BASEANGBAND
 D:A fossil that has been brought back to life. 
 
-N:5317:hellwasp
+N:5317:Hellwasp
 G:I:r
 I:120:5d14:12:54:10
 W:15:3:50:60
@@ -92382,7 +92382,7 @@ F:FRIEND | CAN_FLY | WILD_VOLCANO |
 F:ANIMAL | MORTAL | BASEANGBAND | IM_POIS | FEMALE | 
 D:This bloodthirsty insect wants to sting you to death. 
 
-N:5318:shoggoth blob
+N:5318:Shoggoth blob
 G:j:G
 I:115:12d25:12:0:1
 W:20:4:2000:400
@@ -92401,7 +92401,7 @@ S:BO_ACID | BA_ACID | BR_ACID | BR_MANA |
 D:A blob in the form of a shoggoth, which showers you with acid but 
 D:also uses a vacuum cleaner to suck off your equipment! Ack! 
 
-N:5319:yora chick
+N:5319:Yora chick
 G:B:r
 I:115:2d10:30:30:10
 W:7:2:1000:19
@@ -92414,7 +92414,7 @@ F:ANIMAL | HAS_EGG |
 F:DROP_SKELETON | DROP_CORPSE |   
 D:A very annoying bird who puts you on fire. 
 
-N:5320:yora hawk
+N:5320:Yora hawk
 G:B:r
 I:118:4d35:30:30:10
 W:14:3:1500:50
@@ -92476,7 +92476,7 @@ D:gave it a more proper name. You can't come up with the wholly
 D:inappropriate original name for this monster if you're merely 
 D:normally weird, which is why I call that person "doubleweird". 
 
-N:5324:mumak
+N:5324:Mumak
 G:q:W
 I:108:12d15:20:20:100
 W:15:1:25000:80
@@ -92506,6 +92506,32 @@ D:Haha, prepare to be turboowned. These things are seemingly
 D:weak, but have enormous amounts of armor class so you can't 
 D:simply smash them to bits. Although I guess if you can hit 
 D:them with magic, they'll die quickly. 
+
+N:5326:Spam Demon
+G:U:R
+I:120:20d75:30:30:0
+W:50:1:1500:6000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:INSULT:LOSE_INT:8d5
+B:INSULT:LOSE_WIS:8d5
+B:TOUCH:POISON:3d5
+B:TOUCH:EAT_GOLD:3d5
+F:FORCE_SLEEP | FORCE_MAXHP | FRIENDS |
+F:BASH_DOOR | KILL_WALL |
+F:ONLY_ITEM | DROP_32 | DROP_22 | 
+F:DROP_CORPSE |
+F:CAN_SPEAK | WEIRD_MIND | 
+F:EVIL | DEMON | NO_CONF | NO_SLEEP |
+F:IM_ELEC | IM_POIS |
+F:JOKEANGBAND | HAS_LITE
+S:1_IN_4
+S:BR_INER | BR_NUKE | BR_TIME |
+S:MIND_BLAST | SHRIEK | TRAPS |
+D:A block of vile-smelling pink flesh, which glistens 
+D:with a greasy, jelly-like secretion.  Despite its apparent lack 
+D:of facial features, this demon continually raves about easy 
+D:money, cheap potions, and brothels available elsewhere on Arda.
 
 # N: serial number : monster name
 # G: symbol : color
