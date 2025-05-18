@@ -223,6 +223,7 @@ ingame_help
 					["Ingeborg"] = { "g_ingebo.txt", 0 },  
 					["Nienna"] = { "g_nienna.txt", 0 },  
 					["Este"] = { "g_este.txt", 0 },  
+					["Vana"] = { "g_vana.txt", 0 },  
 				},
 				["skill"] =
 				{

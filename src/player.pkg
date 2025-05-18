@@ -4651,6 +4651,9 @@ extern s16b dun_level;
 /** @def GOD_ESTE */
 #define GOD_ESTE	     14
 
+/** @def GOD_VANA */
+#define GOD_VANA	     15
+
 /** @} */
 
 

@@ -5706,7 +5706,8 @@ extern int PlayerUID;
 #define GOD_INGEBORG            12
 #define GOD_NIENNA              13
 #define GOD_ESTE                14
-#define MAX_GODS_INIT           15
+#define GOD_VANA                15
+#define MAX_GODS_INIT           16
 
 #define GOD(g)                  if (p_ptr->pgod == (g))
 #define PRAY_GOD(g)             if ((p_ptr->pgod == (g)) && (p_ptr->praying))

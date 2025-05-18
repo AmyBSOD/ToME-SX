@@ -107,6 +107,13 @@ function __birth_hook_objects()
 		inven_carry(obj, FALSE)
 		end_object(obj)
 	end
+	if get_class_name() == "Young Priest" then
+		local obj = create_object(TV_BOOK, 255);
+		obj.pval = find_spell("Icy Wind")
+		obj.ident = bor(obj.ident, IDENT_MENTAL, IDENT_KNOWN)
+		inven_carry(obj, FALSE)
+		end_object(obj)
+	end
 	if get_class_name() == "Death Priest" then
 		local obj = create_object(TV_BOOK, 255);
 		obj.pval = find_spell("Tears of Luthien")

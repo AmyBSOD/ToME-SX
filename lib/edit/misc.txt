@@ -28,7 +28,7 @@ M:R:5328
 M:r:70
 
 # Maximum number of items in k_info.txt
-M:K:1170
+M:K:1172
 
 # Maximum number of vaults in v_info.txt
 M:V:312
@@ -79,7 +79,7 @@ M:P:R:37
 M:P:S:14
 
 # Maximum number of class types in p_info.txt
-M:P:C:118
+M:P:C:119
 
 # Maximum number of meta class types in p_info.txt
 M:P:M:1

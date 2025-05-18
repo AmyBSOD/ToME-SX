@@ -40,8 +40,8 @@ In addition to the schools of magic, you can get access to special sets of
 spells if you worship a God. There are a bunch of good Gods,
 *****g_eru.txt*0[Eru Iluvatar], *****g_manwe.txt*0[Manwe Sulimo], *****g_yavann.txt*0[Yavanna Kementari], *****g_tulkas.txt*0[Tulkas],
 *****g_varda.txt*0[Varda Elentari], *****g_ulmo.txt*0[Ulmo], *****g_mandos.txt*0[Mandos], *****g_aule.txt*0[Aule],
-*****g_nienna.txt*0[Nienna], *****g_este.txt*0[Este],
-and *****g_orome.txt*0[Orome]. There are also evil gods, *****g_melkor.txt*0[Melkor],
+*****g_nienna.txt*0[Nienna], *****g_este.txt*0[Este], *****g_vana.txt*0[Vana], 
+and *****g_orome.txt*0[Orome]. There are also evil Gods, *****g_melkor.txt*0[Melkor],
 *****g_amybso.txt*0[AmyBSOD] and *****g_ingebo.txt*0[Ingeborg]. Each of them gives you access to different types of spells.
 
 *****c_pr_drk.txt*0[Worshippers of Melkor] also have access to the special *****m_udun.txt*0[Udun] school of magic,

@@ -2748,6 +2748,17 @@ void calc_gods()
 		p_ptr->stat_add[A_CHR] += chacrit;
 	}
 
+	GOD(GOD_VANA)
+	{
+		p_ptr->sustain_con = TRUE;
+		if (p_ptr->grace > 5000) p_ptr->sustain_int = TRUE;
+		if (p_ptr->grace > 10000) p_ptr->sustain_str = TRUE;
+		if (p_ptr->grace > 15000) p_ptr->hold_life = TRUE;
+		if (p_ptr->grace > 20000) p_ptr->sustain_chr = TRUE;
+		if (p_ptr->grace > 25000) p_ptr->sustain_dex = TRUE;
+		if (p_ptr->grace > 30000) p_ptr->sustain_wis = TRUE;
+	}
+
 	GOD(GOD_ESTE)
 	{
 		if (p_ptr->grace > 10000) p_ptr->resist_pois = TRUE;

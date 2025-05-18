@@ -2124,6 +2124,7 @@ static void process_world(void)
 			inc_piety(GOD_INGEBORG, -100);
 			inc_piety(GOD_NIENNA, -100);
 			inc_piety(GOD_ESTE, -100);
+			inc_piety(GOD_VANA, -100);
 		}
 
 		GOD(GOD_MANWE)
@@ -2145,6 +2146,15 @@ static void process_world(void)
 			dec++;
 			if (dec < 1) dec = 1;
 			inc_piety(GOD_ESTE, -dec);
+		}
+		GOD(GOD_VANA)
+		{
+			int dec = 3 - wisdom_scale(1);
+
+			PRAY_GOD(GOD_VANA)
+			dec += 2;
+			if (dec < 1) dec = 1;
+			inc_piety(GOD_VANA, -dec);
 		}
 		GOD(GOD_ERU)
 		{

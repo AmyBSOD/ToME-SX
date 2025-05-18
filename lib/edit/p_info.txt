@@ -2204,6 +2204,7 @@ C:a:g:Orome
 C:a:g:Ingeborg
 C:a:g:Nienna
 C:a:g:Este
+C:a:g:Vana
 C:a:k:+0:+200:Clear-mind
 C:a:k:+0:+200:Cleaning
 
@@ -2392,6 +2393,23 @@ C:a:k:+0:+400:Prayer
 C:a:k:+0:-600:Necromancy
 C:a:k:+0:+200:Spell-power
 C:a:k:+0:+800:Anti-nastiness
+
+C:a:N:Young Priest
+C:a:D:A priest that serves Vana to bring down
+C:a:D:the empire of fear and shadows of Morgoth.
+C:a:O:21:5:1d1
+C:a:g:Vana
+C:a:k:+0:+300:Prayer
+C:a:k:+0:-600:Necromancy
+C:a:k:+0:+200:Spell-power
+C:a:k:+0:+500:Mana
+C:a:k:+0:+300:Mind
+C:a:k:+0:+100:Spirituality
+C:a:k:+0:+600:Valarin
+C:a:k:+0:-300:Sneakiness
+C:a:k:+0:-300:Hidden-Sight
+C:a:k:+0:-200:Stealth
+C:a:k:+0:-300:Disarming
 
 C:a:N:Death Priest
 C:a:D:A priest that serves Mandos to bring down

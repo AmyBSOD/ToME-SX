@@ -6875,8 +6875,8 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 			int inc = m_ptr->level / 2;
 			if (!inc) inc = 1;
 
-			inc_piety(GOD_ULMO, -inc);
-			PRAY_GOD(GOD_ULMO) inc_piety(GOD_ULMO, -inc);
+			inc_piety(GOD_ULMO, inc);
+			PRAY_GOD(GOD_ULMO) inc_piety(GOD_ULMO, inc);
 		}
 
 		if (r_ptr->flags4 & RF4_BR_FIRE)
@@ -6927,6 +6927,16 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 			int inc = m_ptr->level * 2 / 5;
 			if (!inc) inc = 1;
 			PRAY_GOD(GOD_ESTE) inc_piety(GOD_ESTE, inc);
+		}
+
+		/* Vana likes it if you kill monsters who start with max HP */
+		if (r_ptr->flags1 & RF1_FORCE_MAXHP)
+		{
+			int inc = m_ptr->level;
+			if (!inc) inc = 1;
+
+			inc_piety(GOD_VANA, inc);
+			PRAY_GOD(GOD_VANA) inc_piety(GOD_VANA, inc);
 		}
 
 		/* Manwe appreciate evil monster death */

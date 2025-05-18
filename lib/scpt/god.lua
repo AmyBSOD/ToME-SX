@@ -125,6 +125,8 @@ add_quest
 						god_quest.relic_num = 22
 					elseif player.pgod == GOD_ESTE then
 						god_quest.relic_num = 23
+					elseif player.pgod == GOD_VANA then
+						god_quest.relic_num = 24
 					end
 
 					-- This var will need resetting
@@ -802,6 +804,50 @@ function set_god_dungeon_attributes()
 
 		-- M: see above
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags3 = bor(RF3_ANIMAL, RF3_DEMON)
+
+		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
+		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
+
+	elseif player.pgod == GOD_VANA then
+
+		-- pleasant
+		dungeon(god_quest.DUNGEON_GOD).min_m_alloc_level = 15
+		dungeon(god_quest.DUNGEON_GOD).min_m_alloc_chance = 80
+
+		-- L: floor is regular floor and some water
+		dungeon(god_quest.DUNGEON_GOD).floor1 = 1
+		dungeon(god_quest.DUNGEON_GOD).floor2 = 84
+		dungeon(god_quest.DUNGEON_GOD).floor3 = 84
+		dungeon(god_quest.DUNGEON_GOD).floor_percent1[1] = 90
+		dungeon(god_quest.DUNGEON_GOD).floor_percent2[1] = 10
+		dungeon(god_quest.DUNGEON_GOD).floor_percent3[1] = 0
+
+		-- A: sandwalls
+		dungeon(god_quest.DUNGEON_GOD).fill_type1 = 98
+		dungeon(god_quest.DUNGEON_GOD).fill_percent1[1] = 100
+		dungeon(god_quest.DUNGEON_GOD).outer_wall = 98
+		dungeon(god_quest.DUNGEON_GOD).inner_wall = 98
+		dungeon(god_quest.DUNGEON_GOD).fill_method = 1
+
+		-- O: diverse
+		dungeon(god_quest.DUNGEON_GOD).objs.treasure = 25
+		dungeon(god_quest.DUNGEON_GOD).objs.combat = 5
+		dungeon(god_quest.DUNGEON_GOD).objs.magic = 40
+		dungeon(god_quest.DUNGEON_GOD).objs.tools = 20
+
+		-- F: quartz and magma
+		dungeon(god_quest.DUNGEON_GOD).flags1 = bor(DF1_SMALL, DF1_WATER_RIVER, DF1_ADJUST_LEVEL_2, DF1_NO_RECALL, DF1_NO_DESTROY, DF1_SAND_VEIN)
+		dungeon(god_quest.DUNGEON_GOD).flags2 = bor(DF2_NO_SHAFT, DF2_ADJUST_LEVEL_PLAYER)
+
+		-- R: rather diverse
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mode = 3
+		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 95
+
+		-- M: see above
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags2 = bor(RF2_POWERFUL, RF2_SMART)
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags4 = bor(RF4_BR_TIME)
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags6 = bor(RF6_TRAPS)
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags7 = bor(RF7_RES_TIME)
 
 		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
 		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5

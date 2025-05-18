@@ -2017,6 +2017,17 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
 		}
 	}
 
+	GOD(GOD_VANA)
+	{
+		(*f2) |= TR2_SUST_CON;
+		if (p_ptr->grace > 5000)  (*f2) |= TR2_SUST_INT;
+		if (p_ptr->grace > 10000)  (*f2) |= TR2_SUST_STR;
+		if (p_ptr->grace > 15000)  (*f2) |= (TR2_HOLD_LIFE);
+		if (p_ptr->grace > 20000)  (*f2) |= TR2_SUST_CHR;
+		if (p_ptr->grace > 25000)  (*f2) |= TR2_SUST_DEX;
+		if (p_ptr->grace > 30000)  (*f2) |= TR2_SUST_WIS;
+	}
+
 	GOD(GOD_ULMO)
 	{
 		(*f5) |= TR5_WATER_BREATH;

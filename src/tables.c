@@ -3011,6 +3011,21 @@ deity_type deity_info_init[MAX_GODS_INIT] =
 			"",
 		},
 	},
+	{
+		"Vana",
+		{
+			"The goddess of Youth.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+	},
 
 };
 

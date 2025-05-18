@@ -45,3 +45,4 @@ your wisdom.
 12.*****g_ingebo.txt*0[Ingeborg] - the Goddess of Chaos.
 13.*****g_nienna.txt*0[Nienna] - the Goddess of Sorrow.
 14.*****g_este.txt*0[Este] - the Goddess of Gentleness.
+15.*****g_vana.txt*0[Vana] - the Goddess of Youth.

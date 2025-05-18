@@ -221,6 +221,13 @@ SCHOOL_CONVEYANCE = add_school
 			["mul"] = 1,
 			["div"] = 2,
 		},
+		-- Vana provides the Conveyance school at 1/3 the prayer skill
+		[GOD_VANA] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
+		},
 		-- Orome provides the Conveyance school at 1/3 the prayer skill
 		[GOD_OROME] = 
 		{
@@ -321,6 +328,13 @@ SCHOOL_TEMPORAL = add_school
 			["mul"] = 1,
 			["div"] = 4,
 		},
+		-- Vana provides the Temporal school at 1/2 the prayer skill
+		[GOD_VANA] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 2,
+		},
 		-- Orome provides the Temporal school at 1/3 the prayer skill
 		[GOD_OROME] = 
 		{
@@ -392,6 +406,13 @@ SCHOOL_META = add_school
 	{
 		-- Manwe Sulimo provides the Meta school at 1/3 the prayer skill
 		[GOD_MANWE] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
+		},
+		-- Vana provides the Meta school at 1/3 the prayer skill
+		[GOD_VANA] =
 		{
 			["skill"] = SKILL_PRAY,
 			["mul"] = 1,
@@ -537,6 +558,13 @@ SCHOOL_ESTE = add_school
 	["spell_power"] = TRUE,
 	["god"] = GOD_ESTE,
 }
+SCHOOL_VANA = add_school
+{
+	["name"] = "Vana",
+	["skill"] = SKILL_PRAY,
+	["spell_power"] = TRUE,
+	["god"] = GOD_VANA,
+}
 
 -- New schools
 SCHOOL_AULE = add_school
@@ -582,6 +610,16 @@ SCHOOL_MUSIC = add_school
 {
 	["name"] = "Music",
 	["skill"] = SKILL_MUSIC,
+	["gods"] =
+	{
+		-- Vana provides the Music school at 1/3 the prayer skill
+		[GOD_VANA] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
+		},
+	},
 }
 
 SCHOOL_CELESTIAL = add_school
@@ -699,6 +737,7 @@ tome_dofile("s_orome.lua")
 tome_dofile("s_ingebo.lua")
 tome_dofile("s_nienna.lua")
 tome_dofile("s_este.lua")
+tome_dofile("s_vana.lua")
 
 -- List of spellbooks
 
@@ -820,6 +859,11 @@ school_book[28] = {
 -- Create the book of este
 school_book[29] = {
 	ESTE_DANCING_LESSONS, ESTE_REVEAL_TRAP, ESTE_DESTROY_TRAP, 
+}
+
+-- Create the book of vana
+school_book[30] = {
+	VANA_ICY_WIND, VANA_FREEZING_CLOUD, VANA_RESTOR, VANA_PURIFY,
 }
 
 -- Create the book of beginner's cantrip

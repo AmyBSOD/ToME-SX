@@ -9808,6 +9808,27 @@ P:0:1d1:0:0:0
 F:FOUNTAIN
 D:Increases your charisma, but decreases one other stat at random. 
 
+N:1170:& Tome~ of Youth
+G:?:w
+I:111:30:0
+W:50:0:0:25000
+A:50/4
+P:0:1d1:0:0:0
+F:FULL_NAME | EASY_KNOW
+D:Leafing through this tome reminds you of when you were younger...
+
+N:1171:& Piece~ of the Relic of Vana
+G:~:v
+I:11:24:0
+W:0:0:0:1000
+A:0/1
+P:0:1d1:0:0:0
+F:SPECIAL_GENE | FULL_NAME
+F:IGNORE_ACID | IGNORE_COLD | IGNORE_ELEC | IGNORE_FIRE |
+D:Although it looks like a piece of junk, it is actually part of an ancient
+D:relic belonging to the Priests of Vana. The relic now lies in pieces, 
+D:hidden from all but the most faithful followers of Vana.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

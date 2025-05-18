@@ -1,0 +1,52 @@
+|||||oy
+~~~~~01|Vana
+~~~~~02|Gods|Vana
+#####R === Vana ===
+
+Vana is the goddess of youth.
+
+#####GThe benefits of Worshipping Vana
+ 1. Your constitution is sustained.
+ 2. As your piety increases, Vana gradually sustains your other stats and
+    also grants you the ability to hold life.
+ 3. Vana likes it if you kill monsters who always have maximum hit points.
+ 4. Vana likes it if you manually disarm traps.
+
+#####GThe disadvantages of Worshipping Vana
+1. Your piety decreases over time.
+2. She will completely abandon you if you wear The One Ring.
+~~~~~03|Vana|Prayers
+#####GVana's Magic
+Worshipping Vana gives the adventurer access to a set of special
+spells that come directly from the hands of Vana. These spells use your piety
+to cast rather than your spellpoints, and the level of spells that Vana will 
+permit you to use is determined by your Prayer skill - how skillful you are
+in asking for her help without offending her!
+
+There is a special book called the "Tome of Youth" which 
+contains instructions for the procedure for each of the prayers Vana will
+grant. There are four prayers all told, which are:
+1. [[[[[BIcy Wind] (Level 1)
+   Shoots a bolt of ice from your fingertips.
+   Sometimes it can blast through its first target.
+2. [[[[[BFreezing Cloud] (Level 10)
+   Creates a cloud of ice.
+   The cloud will persist for some turns, damaging all monsters passing by.
+3. [[[[[BDivine Restoration] (Level 20)
+   Restores drained stats.
+   At level 10 it restores lost experience.
+4. [[[[[BPurification] (Level 35)
+   Cures the black breath.
+   
+Each of these spells can be increased in level both by improving your Prayer
+skill, and by improving your Spell-power skill.
+
+In addition to her specific magic, Vana will also assist with your ability to
+use some magic from the "standard" schools, in relation to how skilled you 
+are at Prayer. These schools are as follows:
+    *****m_tempo.txt*0[Temporal School] at 1/2 the Prayer skill level.
+    *****m_meta.txt*0[Meta School] at 1/3 the Prayer skill level.
+    *****m_convey.txt*0[Conveyance School] at 1/3 the Prayer skill level.
+    *****m_music.txt*0[Music] at 1/3 the Prayer skill level.
+
+The spells from these schools are all cast using your normal spellpoints.

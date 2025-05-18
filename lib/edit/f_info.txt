@@ -1262,10 +1262,10 @@ G:0:w
 F:FLOOR | REMEMBER | NOTICE | CAN_RUN
 D:0:You feel a gentle touch.
 
-N:249:Unfinished Altar
-G:0:g
+N:249:Altar of Youth
+G:0:w
 F:FLOOR | REMEMBER | NOTICE | CAN_RUN
-D:0:An altar for a deity who hasn't been implemented yet.
+D:0:You feel reminded of your childhood.
 
 N:250:Unfinished Altar
 G:0:g

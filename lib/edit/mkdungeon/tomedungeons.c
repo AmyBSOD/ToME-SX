@@ -2042,7 +2042,7 @@ void printRandoms(int lower, int upper, int count)
 
 			} else {
 
-				contnum = random_number(132);
+				contnum = random_number(134);
 
 				printf("# random type %d\n", contnum);
 
@@ -3989,6 +3989,64 @@ void printRandoms(int lower, int upper, int count)
 						printf("R:95:3\n");
 						printf("M:ANIMAL | DEMON |\n");
 						printf("R:5:0\n");
+						break;
+					case 133:
+						printf("# based on Vana Temple\n", contnum);
+						printf("L:1:90:84:10:84:0\n");
+						printf("A:98:100:56:0:56:0:98:98\n");
+						printf("O:25:5:40:20\n");
+						printf("F:SMALL | WATER_RIVER | ADJUST_LEVEL_2 | NO_DESTROY | SAND_VEIN\n");
+						printf("F:NO_SHAFT\n");
+						printf("R:95:3\n");
+						printf("M:POWERFUL | SMART | RES_TIME |\n");
+						printf("S:BR_TIME | TRAPS |\n");
+						printf("R:5:0\n");
+						break;
+					case 134:
+						printf("# randomized sand temple\n", contnum);
+						printf("L:1:90:84:10:84:0\n");
+						printf("A:98:100:56:0:56:0:98:98\n");
+						printf("O:25:5:40:20\n");
+						randomfillmethod();
+						if (random_number(10) == 1) printf("F:FLAT\n");
+						if (random_number(14) == 1) printf("F:CAVERN\n");
+						if (random_number(13) == 1) printf("F:CAVE\n");
+						if (random_number(2) == 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(20) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(25) == 1) printf("F:DOUBLE\n");
+						if (random_number(10) == 1) printf("F:WATER_RIVER\n");
+						if (random_number(20) == 1) printf("F:WATER_RIVERS\n");
+						if (random_number(10) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(100) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(100) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(4) == 1) printf("F:NO_DOORS\n");
+						if (random_number(5) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(40) == 1) printf("F:EMPTY\n");
+						if (random_number(40) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(3) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(25) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+						if (random_number(3) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+						if (random_number(100) == 1) {
+							randomdungeondamage();
+						}
 						break;
 				}
 			}

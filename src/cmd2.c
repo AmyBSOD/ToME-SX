@@ -2194,6 +2194,40 @@ static bool do_cmd_disarm_aux(int y, int x, int dir, int do_pickup)
 		/* Message */
 		msg_format("You have disarmed the %s.", name);
 
+		/* Vana piety */
+		GOD(GOD_VANA) {
+			int vanapiety;
+
+			/* nasty traps are best, fart and heel traps also give above-average amounts --Amy */
+			switch (c_ptr->t_idx) {
+				default:
+					if (is_nasty_trap(c_ptr->t_idx)) vanapiety = power * 100;
+					else vanapiety = power / 5;
+
+					if (vanapiety < 1) vanapiety = 1;
+					break;
+				case TRAP_OF_FARTING:
+				case TRAP_OF_FARTING_II:
+				case TRAP_OF_FARTING_III:
+				case TRAP_OF_FARTING_IV:
+				case TRAP_OF_FARTING_V:
+					vanapiety = power * 10;
+					if (vanapiety < 10) vanapiety = 10;
+					break;
+				case TRAP_OF_SHOES:
+				case TRAP_OF_SHOES_II:
+				case TRAP_OF_SHOES_III:
+				case TRAP_OF_SHOES_IV:
+				case TRAP_OF_SHOES_V:
+					vanapiety = power * 5;
+					if (vanapiety < 10) vanapiety = 10;
+					break;
+			}
+
+			inc_piety(GOD_VANA, vanapiety);
+
+		}
+
 		/* Reward */
 		gain_exp(power);
 
