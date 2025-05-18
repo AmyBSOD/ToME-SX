@@ -2197,12 +2197,14 @@ static bool do_cmd_disarm_aux(int y, int x, int dir, int do_pickup)
 		/* Vana piety */
 		GOD(GOD_VANA) {
 			int vanapiety;
+			int vanapower = power;
+			if (t_info[c_ptr->t_idx].minlevel > vanapower) vanapower = t_info[c_ptr->t_idx].minlevel;
 
 			/* nasty traps are best, fart and heel traps also give above-average amounts --Amy */
 			switch (c_ptr->t_idx) {
 				default:
-					if (is_nasty_trap(c_ptr->t_idx)) vanapiety = power * 100;
-					else vanapiety = power / 5;
+					if (is_nasty_trap(c_ptr->t_idx)) vanapiety = vanapower * 100;
+					else vanapiety = vanapower / 5;
 
 					if (vanapiety < 1) vanapiety = 1;
 					break;
@@ -2211,7 +2213,7 @@ static bool do_cmd_disarm_aux(int y, int x, int dir, int do_pickup)
 				case TRAP_OF_FARTING_III:
 				case TRAP_OF_FARTING_IV:
 				case TRAP_OF_FARTING_V:
-					vanapiety = power * 10;
+					vanapiety = vanapower * 10;
 					if (vanapiety < 10) vanapiety = 10;
 					break;
 				case TRAP_OF_SHOES:
@@ -2219,7 +2221,7 @@ static bool do_cmd_disarm_aux(int y, int x, int dir, int do_pickup)
 				case TRAP_OF_SHOES_III:
 				case TRAP_OF_SHOES_IV:
 				case TRAP_OF_SHOES_V:
-					vanapiety = power * 5;
+					vanapiety = vanapower * 5;
 					if (vanapiety < 10) vanapiety = 10;
 					break;
 			}

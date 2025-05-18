@@ -110,7 +110,10 @@ VANA_PURIFY = add_spell
 	["stat"] =      A_WIS,
 	["random"] = 	SKILL_SPIRITUALITY,
 	["spell"] = 	function()
-			if (player.black_breath) then player.black_breath = FALSE end
+			if (player.black_breath == TRUE) then 
+				player.black_breath = FALSE
+				msg_print("The hold of the Black Breath on you is broken!")
+			end
 			return TRUE
 	end,
 	["info"] = 	function()
