@@ -8086,6 +8086,7 @@ void summon_true(int r_idx, int item)
 
 			/* But it is not 100% sure (note: skill > 0) */
 			chance = (r_ptr->level * 25 / get_skill(SKILL_SUMMON));
+			if (chance < 10) chance = 10; /* no unlimited summoning, sorry --Amy */
 			if (magik(chance)) used = TRUE;
 		}
 
@@ -8238,7 +8239,7 @@ void do_cmd_summoner_summon()
 	m_ptr->mflag |= MFLAG_PARTIAL | MFLAG_NO_DROP;
 
 	/* summoning shouldn't be completely endless --Amy */
-	if (randint(100) == 1) used = TRUE;
+	if (magik(5)) used = TRUE;
 
 	/* Destroy the totem if the used flag is set */
 	if (used)
