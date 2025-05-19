@@ -6402,6 +6402,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				note = " resists a lot.";
 				dam /= 9;
 				do_cut = 0;
+				do_stun = 0; /* I mean, the monster resisted, hello????? --Amy */
 				if (seen) r_ptr->r_flags3 |= (RF3_IM_COLD);
 			}
 			break;
