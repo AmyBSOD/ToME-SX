@@ -145,8 +145,8 @@ DEVICE_HOME_SUMMONING = add_spell
 			[TV_STAFF] =
 			{
 				["rarity"] = 		15,
-				["base_level"] =	{ 1, 1 },
-				["max_level"] =		{ 1, 1 },
+				["base_level"] =	{ 1, 3 },
+				["max_level"] =		{ 10, 20 },
 			},
 	},
 	["spell"] = 	function()
