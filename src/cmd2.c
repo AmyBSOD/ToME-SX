@@ -186,6 +186,11 @@ void do_cmd_go_up(bool pasthook)
 	{
 		if (d_ptr->mindepth == dun_level) return;
 
+		if (p_ptr->stairsickness) {
+			msg_format("Sorry, you have to wait %d more turns before you can probability travel again.", p_ptr->stairsickness);
+			return;
+		}
+
 		if (dungeon_flags2 & DF2_NO_EASY_MOVE)
 		{
 			msg_print("Some powerful force prevents your from teleporting.");
@@ -199,11 +204,15 @@ void do_cmd_go_up(bool pasthook)
 			if (get_check("Really leave the level? "))
 				go_up = TRUE;
 				p_ptr->prob_travel = FALSE;
+				if (!p_ptr->astral) (void)set_stairsickness(p_ptr->stairsickness + 1 + randint(4));
+				if (p_ptr->nastytrap148) (void)set_stairsickness(p_ptr->stairsickness + randint(50));
 		}
 		else
 		{
 			go_up = TRUE;
 			p_ptr->prob_travel = FALSE;
+			if (!p_ptr->astral) (void)set_stairsickness(p_ptr->stairsickness + 1 + randint(4));
+			if (p_ptr->nastytrap148) (void)set_stairsickness(p_ptr->stairsickness + randint(50));
 		}
 	}
 	else
@@ -479,6 +488,11 @@ void do_cmd_go_down(void)
 	{
 		if (d_ptr->maxdepth == dun_level) return;
 
+		if (p_ptr->stairsickness) {
+			msg_format("Sorry, you have to wait %d more turns before you can probability travel again.", p_ptr->stairsickness);
+			return;
+		}
+
 		if (dungeon_flags2 & DF2_NO_EASY_MOVE)
 		{
 			msg_print("Some powerfull force prevents your from teleporting.");
@@ -492,11 +506,15 @@ void do_cmd_go_down(void)
 			if (get_check("Really leave the level? "))
 				go_down = TRUE;
 				p_ptr->prob_travel = FALSE;
+				if (!p_ptr->astral) (void)set_stairsickness(p_ptr->stairsickness + 1 + randint(4));
+				if (p_ptr->nastytrap148) (void)set_stairsickness(p_ptr->stairsickness + randint(50));
 		}
 		else
 		{
 			go_down = TRUE;
 			p_ptr->prob_travel = FALSE;
+			if (!p_ptr->astral) (void)set_stairsickness(p_ptr->stairsickness + 1 + randint(4));
+			if (p_ptr->nastytrap148) (void)set_stairsickness(p_ptr->stairsickness + randint(50));
 		}
 	}
 
