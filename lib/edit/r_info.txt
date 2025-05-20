@@ -90388,7 +90388,7 @@ D:ago.  Although most fearsome in packs, even a single
 D:gray wolf can be deadly to an unprepared adventurer. 
 
 N:5194:White Wolf
-G:U:W
+G:C:U
 I:110:10d18:10:38:10
 W:16:1:1000:180
 E:0:1:0:2:1:0
