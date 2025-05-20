@@ -2151,6 +2151,12 @@ void contaminate(int damage)
 		msg_print("You are now afflicted with lethal contamination.");
 	if (p_ptr->contamination >= 10000 && precheckamount < 10000)
 		msg_print("You are now afflicted with fatal contamination. Seek medical attention immediately.");
+
+	/* Display the hitpoints */
+	p_ptr->redraw |= (PR_SANITY);
+
+	/* Window stuff */
+	p_ptr->window |= (PW_PLAYER);
 }
 
 /*

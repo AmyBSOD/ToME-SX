@@ -4536,6 +4536,12 @@ void do_cmd_read_scroll(void)
 				if (p_ptr->contamination) {
 					p_ptr->contamination = 0;
 					msg_print("Your contamination has faded away.");
+
+					/* Display the hitpoints */
+					p_ptr->redraw |= (PR_SANITY);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_PLAYER);
 				}
 
 				ident = TRUE;

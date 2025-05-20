@@ -3608,6 +3608,11 @@ static void process_world(void)
 		p_ptr->contamination -= 100;
 		msg_print("You are consumed by your contamination!");
 		do_dec_stat(A_WIS, STAT_DEC_PERMANENT_NORESIST);
+		/* Display the hitpoints */
+		p_ptr->redraw |= (PR_SANITY);
+
+		/* Window stuff */
+		p_ptr->window |= (PW_PLAYER);
 	}
 
 	if (p_ptr->nastytrap152 && !dun_level && rand_int(100) == 0) {

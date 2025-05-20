@@ -4050,6 +4050,12 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 				if (p_ptr->contamination) {
 					p_ptr->contamination = 0;
 					msg_print("Your deity cures your contamination!");
+
+					/* Display the hitpoints */
+					p_ptr->redraw |= (PR_SANITY);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_PLAYER);
 				}
 			}
 
@@ -4073,6 +4079,12 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 				if (p_ptr->contamination) {
 					p_ptr->contamination = 0;
 					msg_print("Your deity cures your contamination!");
+
+					/* Display the hitpoints */
+					p_ptr->redraw |= (PR_SANITY);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_PLAYER);
 				}
 			}
 
