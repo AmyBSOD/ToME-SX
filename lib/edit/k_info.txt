@@ -9040,7 +9040,7 @@ N:1089:& Long Dagger~
 G:|:D
 I:23:40:0
 W:50:0:40:800
-A:50:3
+A:50/3
 P:0:2d4:0:0:0
 F:SHOW_MODS
 D:A particularly damaging type of dagger. 
@@ -9049,7 +9049,7 @@ N:1090:& Athame~
 G:|:D
 I:23:44:0
 W:70:0:40:1400
-A:70:4
+A:70/4
 P:0:2d5:0:0:0
 F:RES_SHARDS | SHOW_MODS
 f:RES_SHARDS |
@@ -9061,7 +9061,7 @@ N:1091:& Legend Thorn~
 G:|:s
 I:23:45:0
 W:85:0:40:1800
-A:85:5
+A:85/5
 P:0:2d6:0:0:0
 F:SHOW_MODS
 D:A super powerful dagger; thieves would love to get their hands on one 
