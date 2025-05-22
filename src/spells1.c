@@ -6395,6 +6395,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 		{
 			if (seen) obvious = TRUE;
 			do_stun = (randint(15) + 1) / (r + 1);
+
 			if (magik(33)) do_cut = (10 + randint(15) + r) / (r + 1);
 			if (r_ptr->flags3 & (RF3_SUSCEP_COLD))
 			{
@@ -6411,6 +6412,12 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				do_stun = 0; /* I mean, the monster resisted, hello????? --Amy */
 				if (seen) r_ptr->r_flags3 |= (RF3_IM_COLD);
 			}
+
+			/* Powerful monsters can resist */
+			if (m_ptr->level > randint((dam - 10) < 1 ? 1 : (dam - 10)) + 10) {
+				do_stun = FALSE;
+			}
+
 			break;
 		}
 
