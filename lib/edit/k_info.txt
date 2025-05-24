@@ -9413,7 +9413,7 @@ N:1127:Haste
 G:!:d
 I:72:10:0
 W:30:0:0:1000
-A:30:2
+A:30/2
 P:0:1d1:0:0:0
 F:FOUNTAIN
 D:This potion makes you really fast for a period of time. 
@@ -9646,7 +9646,7 @@ N:1152:& Polymorph Oil~ of #
 G:!:d
 I:72:43:0
 W:30:0:0:5000
-A:30:5
+A:30/5
 P:0:1d1:0:0:0
 F:FULL_NAME | EASY_KNOW | FOUNTAIN
 D:This concoction can transform your body for a period of time.
