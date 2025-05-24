@@ -86741,7 +86741,7 @@ S:BR_FIRE
 D:A naga who breathes fire. 
 
 N:4979:Black naga
-G:n:r
+G:n:D
 I:113:5d13:16:19:120
 W:8:1:4000:26
 E:0:0:0:0:1:0
