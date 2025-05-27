@@ -5289,7 +5289,7 @@ void do_cmd_pet(void)
 				m_ptr = &m_list[pet_ctr];
 				r_ptr = &r_info[m_ptr->r_idx];
 
-				if ((!(r_ptr->flags7 & RF7_NO_DEATH)) && ((m_ptr->status == MSTATUS_PET) || (m_ptr->status == MSTATUS_FRIEND)))	/* Get rid of it! */
+				if ((!(r_ptr->flags7 & RF7_NO_DEATH)) && ((m_ptr->status == MSTATUS_PET) ))	/* Get rid of it! */
 				{
 					bool checked = FALSE;
 					char command;
