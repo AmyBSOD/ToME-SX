@@ -294,16 +294,6 @@ static bool between_effect(void)
 {
 	byte bx, by;
 
-	if (p_ptr->betweensickness) {
-		msg_format("You're still too dizzy from entering the last jumpgate, and need to wait for %d more turns!", p_ptr->betweensickness);
-		return (FALSE);
-	}
-
-	if (p_ptr->nastytrap147) {
-		msg_print("The Void seems to be blocked right now!");		
-		return (FALSE);
-	}
-
 	if (cave[p_ptr->py][p_ptr->px].feat == FEAT_BETWEEN)
 	{
 #if 0							/* The Between is out of the space-time continuum anyway */
@@ -315,6 +305,16 @@ static bool between_effect(void)
 		}
 
 #endif
+
+		if (p_ptr->betweensickness) {
+			msg_format("You're still too dizzy from entering the last jumpgate, and need to wait for %d more turns!", p_ptr->betweensickness);
+			return (FALSE);
+		}
+
+		if (p_ptr->nastytrap147) {
+			msg_print("The Void seems to be blocked right now!");		
+			return (FALSE);
+		}
 
 		bx = cave[p_ptr->py][p_ptr->px].special & 255;
 		by = cave[p_ptr->py][p_ptr->px].special >> 8;
@@ -335,6 +335,16 @@ static bool between_effect(void)
 
 	else if (cave[p_ptr->py][p_ptr->px].feat == FEAT_BETWEEN2)
 	{
+		if (p_ptr->betweensickness) {
+			msg_format("You're still too dizzy from entering the last jumpgate, and need to wait for %d more turns!", p_ptr->betweensickness);
+			return (FALSE);
+		}
+
+		if (p_ptr->nastytrap147) {
+			msg_print("The Void seems to be blocked right now!");		
+			return (FALSE);
+		}
+
 		between_exit *be_ptr = &between_exits[cave[p_ptr->py][p_ptr->px].special];
 
 		p_ptr->wild_mode = FALSE;
