@@ -3728,6 +3728,18 @@ static void process_world(void)
 
 	}
 
+	/* teleportitis nastytrap: had to be moved here, rather than the equipment below --Amy */
+	if (p_ptr->nastytrap100 && (rand_int(100) < 1))
+	{
+		disturb(0, 0);
+
+		/* Teleport player */
+		teleport_player(20 + randint(80));
+		/* FUCKing interrupt so that you don't bump into an AMHD with the next overshot keystroke --Amy */
+		msg_print("You suddenly get teleported!");
+		msg_print(NULL);
+	}
+
 	/* auto destruct trap: constantly interrupt player even if nothing dangerous is nearby --Amy */
 	if (p_ptr->nastytrap21) {
 		disturb(0, 0);
@@ -3771,17 +3783,6 @@ static void process_world(void)
 		{
 			/* The object recurse itself ! */
 			o_ptr->ident |= IDENT_CURSED;
-		}
-
-		if (p_ptr->nastytrap100 && (rand_int(100) < 1))
-		{
-			disturb(0, 0);
-
-			/* Teleport player */
-			teleport_player(20 + randint(80));
-			/* FUCKing interrupt so that you don't bump into an AMHD with the next overshot keystroke --Amy */
-			msg_print("You suddenly get teleported!");
-			msg_print(NULL);
 		}
 
 		/*
