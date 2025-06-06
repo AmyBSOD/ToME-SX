@@ -2724,7 +2724,7 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 /*
  * Object flag names
  */
-static cptr object_flag_names[224] =
+static cptr object_flag_names[384] =
 {
 	"Add Str",
 	"Add Int",
@@ -2891,6 +2891,171 @@ static cptr object_flag_names[224] =
 	"Res Disint",
 	"Space Time",
 	"Rpd Hunger",
+	NULL,
+
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
 	NULL,
 
 	"Orc.ESP",
@@ -3268,7 +3433,12 @@ static void display_player_ben_one(int mode)
  * Mode 4 = current flags (part 3)
  * Mode 5 = current flags (part 4)
  * Mode 6 = current flags (part 5)
- * Mode 7 = current flags (part 6 -- esp)
+ * Mode 7 = current flags (part 6)
+ * Mode 8 = current flags (part 7)
+ * Mode 9 = current flags (part 8)
+ * Mode 10 = current flags (part 9)
+ * Mode 11 = current flags (part 10)
+ * Mode 12 = current flags (part 11 -- esp)
  */
 void display_player(int mode)
 {
@@ -3966,6 +4136,26 @@ errr file_character(cptr name, bool full)
 
 	/* another little bit of stuff */
 	display_player (7);
+	file_character_print_grid(fff, FALSE, FALSE);
+
+	/* another little bit of stuff */
+	display_player (8);
+	file_character_print_grid(fff, FALSE, FALSE);
+
+	/* another little bit of stuff */
+	display_player (9);
+	file_character_print_grid(fff, FALSE, FALSE);
+
+	/* another little bit of stuff */
+	display_player (10);
+	file_character_print_grid(fff, FALSE, FALSE);
+
+	/* another little bit of stuff */
+	display_player (11);
+	file_character_print_grid(fff, FALSE, FALSE);
+
+	/* another little bit of stuff */
+	display_player (12);
 	file_character_print_grid(fff, FALSE, FALSE);
 
 	/* Dump corruptions */
