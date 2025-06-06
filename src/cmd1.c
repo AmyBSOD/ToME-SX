@@ -4139,6 +4139,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 			if (p_ptr->pgod == agod) {
 				if (p_ptr->contamination) {
 					p_ptr->contamination = 0;
+					calc_sanity();
 					msg_print("Your deity cures your contamination!");
 
 					/* Display the hitpoints */
@@ -4168,6 +4169,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 			if (p_ptr->pgod == agod) {
 				if (p_ptr->contamination) {
 					p_ptr->contamination = 0;
+					calc_sanity();
 					msg_print("Your deity cures your contamination!");
 
 					/* Display the hitpoints */

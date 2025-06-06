@@ -4535,6 +4535,7 @@ void do_cmd_read_scroll(void)
 
 				if (p_ptr->contamination) {
 					p_ptr->contamination = 0;
+					calc_sanity();
 					msg_print("Your contamination has faded away.");
 
 					/* Display the hitpoints */
