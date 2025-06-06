@@ -116,6 +116,11 @@ static cptr r_info_blow_effect[] =
 	"PARASITE",
 	"ABOMINATION",
 	"RAGNAROK",
+	"CHAOS",
+	"SHARDS",
+	"INERTIA",
+	"NEXUS",
+	"ETHER",
 	NULL
 };
 

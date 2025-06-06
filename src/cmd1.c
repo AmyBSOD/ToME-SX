@@ -1040,6 +1040,21 @@ static void carried_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 		case RBE_TIME:
 			power = 5;
 			break;
+		case RBE_CHAOS:
+			power = 5;
+			break;
+		case RBE_SHARDS:
+			power = 5;
+			break;
+		case RBE_INERTIA:
+			power = 5;
+			break;
+		case RBE_NEXUS:
+			power = 5;
+			break;
+		case RBE_ETHER:
+			power = 5;
+			break;
 		case RBE_SANITY:
 			power = 60;
 			break;
@@ -1383,6 +1398,36 @@ static void carried_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 					break;
 				}
 
+			case RBE_CHAOS:
+				{
+					pt = GF_CHAOS;
+					break;
+				}
+
+			case RBE_SHARDS:
+				{
+					pt = GF_SHARDS;
+					break;
+				}
+
+			case RBE_INERTIA:
+				{
+					pt = GF_INERTIA;
+					break;
+				}
+
+			case RBE_NEXUS:
+				{
+					pt = GF_NEXUS;
+					break;
+				}
+
+			case RBE_ETHER:
+				{
+					pt = GF_ETHER;
+					break;
+				}
+
 			default:
 				{
 					pt = 0;
@@ -1676,6 +1721,21 @@ static void incarnate_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 			power = 5;
 			break;
 		case RBE_TIME:
+			power = 5;
+			break;
+		case RBE_CHAOS:
+			power = 5;
+			break;
+		case RBE_SHARDS:
+			power = 5;
+			break;
+		case RBE_INERTIA:
+			power = 5;
+			break;
+		case RBE_NEXUS:
+			power = 5;
+			break;
+		case RBE_ETHER:
 			power = 5;
 			break;
 		case RBE_SANITY:
@@ -2017,6 +2077,36 @@ static void incarnate_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 			case RBE_TIME:
 				{
 					pt = GF_TIME;
+					break;
+				}
+
+			case RBE_CHAOS:
+				{
+					pt = GF_CHAOS;
+					break;
+				}
+
+			case RBE_SHARDS:
+				{
+					pt = GF_SHARDS;
+					break;
+				}
+
+			case RBE_INERTIA:
+				{
+					pt = GF_INERTIA;
+					break;
+				}
+
+			case RBE_NEXUS:
+				{
+					pt = GF_NEXUS;
+					break;
+				}
+
+			case RBE_ETHER:
+				{
+					pt = GF_ETHER;
 					break;
 				}
 

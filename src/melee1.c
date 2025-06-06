@@ -13,6 +13,96 @@
 #include "angband.h"
 
 
+/* god-in-the-heaven-o-matic, we actually need to copy over allllll the stuff from spells1.c... --Amy
+ * and *all* just because that weird typedef cannot be easily externalized, it seems :( */
+
+/*
+ * This seems like a pretty standard "typedef"
+ */
+typedef int (*inven_func)(object_type *);
+
+/*
+ * Destroys a type of item on a given percent chance
+ * Note that missiles are no longer necessarily all destroyed
+ * Destruction taken from "melee.c" code for "stealing".
+ * Returns number of items destroyed.
+ */
+static int inven_damage(inven_func typ, int perc)
+{
+	int i, j, k, amt;
+
+	object_type *o_ptr;
+
+	char o_name[80];
+
+
+	/* Count the casualties */
+	k = 0;
+
+	/* Scan through the slots backwards */
+	for (i = 0; i < INVEN_PACK; i++)
+	{
+		o_ptr = &p_ptr->inventory[i];
+
+		/* Skip non-objects */
+		if (!o_ptr->k_idx) continue;
+
+		/* Hack -- for now, skip artifacts */
+		if (artifact_p(o_ptr) || o_ptr->art_name) continue;
+
+		/* Give this item slot a shot at death */
+		if ((*typ)(o_ptr))
+		{
+			/* Count the casualties */
+			for (amt = j = 0; j < o_ptr->number; ++j)
+			{
+				if (rand_int(100) < perc) amt++;
+			}
+
+			/* Some casualities */
+			if (amt)
+			{
+				/* Get a description */
+				object_desc(o_name, o_ptr, FALSE, 3);
+
+				/* Message */
+				msg_format("%sour %s (%c) %s destroyed!",
+				           ((o_ptr->number > 1) ?
+				            ((amt == o_ptr->number) ? "All of y" :
+				             (amt > 1 ? "Some of y" : "One of y")) : "Y"),
+						           o_name, index_to_label(i),
+						           ((amt > 1) ? "were" : "was"));
+
+				/* Potions smash open */
+				if (k_info[o_ptr->k_idx].tval == TV_POTION)
+		{
+					(void)potion_smash_effect(0, p_ptr->py, p_ptr->px, o_ptr->sval);
+				}
+
+				/*
+				 * Hack -- If rods or wand are destroyed, the total maximum 
+				 * timeout or charges of the stack needs to be reduced, 
+				 * unless all the items are being destroyed. -LM-
+				 */
+				if ( (o_ptr->tval == TV_WAND || o_ptr->tval == TV_ROD || o_ptr->tval == TV_ROD_MAIN)
+				                && (amt < o_ptr->number))
+				{
+					o_ptr->pval -= o_ptr->pval * amt / o_ptr->number;
+				}
+
+				/* Destroy "amt" items */
+				inven_item_increase(i, -amt);
+				inven_item_optimize(i);
+
+				/* Count the casualties */
+				k += amt;
+			}
+		}
+	}
+
+	/* Return the casualty count */
+	return (k);
+}
 
 /*
  * Critical blow.  All hits that do 95% of total possible damage,
@@ -280,6 +370,21 @@ bool carried_make_attack_normal(int r_idx)
 			power = 5;
 			break;
 		case RBE_TIME:
+			power = 5;
+			break;
+		case RBE_CHAOS:
+			power = 5;
+			break;
+		case RBE_SHARDS:
+			power = 5;
+			break;
+		case RBE_INERTIA:
+			power = 5;
+			break;
+		case RBE_NEXUS:
+			power = 5;
+			break;
+		case RBE_ETHER:
 			power = 5;
 			break;
 		case RBE_SANITY:
@@ -1167,6 +1272,113 @@ bool carried_make_attack_normal(int r_idx)
 					break;
 
 				}
+
+			case RBE_CHAOS:
+				{
+					if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
+					{
+						(void)set_confused(p_ptr->confused + rand_int(20) + 10);
+					}
+					if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
+					{
+						(void)set_image(p_ptr->image + randint(10));
+					}
+					if ((!p_ptr->resist_neth && !p_ptr->resist_chaos) || p_ptr->nastytrap95)
+					{
+						if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 75))
+						{
+							msg_print("You keep hold of your life force!");
+						}
+						else if (p_ptr->hold_life && !p_ptr->nastytrap95)
+						{
+							msg_print("You feel your life slipping away!");
+							lose_exp(50 + (p_ptr->exp / 500) * MON_DRAIN_LIFE);
+						}
+						else
+						{
+							msg_print("You feel your life draining away!");
+							lose_exp(500 + (p_ptr->exp / 50) * MON_DRAIN_LIFE);
+						}
+					}
+					if ((!p_ptr->resist_chaos) || p_ptr->nastytrap33 || (randint(9) == 1))
+					{
+						if (!p_ptr->resist_chaos || p_ptr->nastytrap33 || !p_ptr->plr_invprot) inven_damage(set_elec_destroy, 2);
+						if (!p_ptr->resist_chaos || p_ptr->nastytrap33 || !p_ptr->plr_invprot) inven_damage(set_fire_destroy, 2);
+					}
+
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					take_hit(damage, ddesc);
+
+					break;
+				}
+
+			case RBE_SHARDS:
+				{
+					if (!p_ptr->resist_shard || p_ptr->nastytrap94) {
+						(void)set_cut(p_ptr->cut + damage);
+					}
+
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					take_hit(damage, ddesc);
+
+					break;
+				}
+
+			case RBE_INERTIA:
+				{
+					int inertiadamage = damage / 4;
+					if (p_ptr->resist_inertia)
+					{
+						inertiadamage *= 6;
+						inertiadamage /= (randint(6) + 6);
+					}
+					if (inertiadamage < 1) inertiadamage = 1;
+
+					if ((!p_ptr->resist_inertia) || (randint(10) == 1))
+					{
+						(void)set_slow(p_ptr->slow + rand_int(4) + inertiadamage);
+					}
+
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					take_hit(damage, ddesc);
+
+					break;
+				}
+
+			case RBE_NEXUS:
+				{
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					take_hit(damage, ddesc);
+
+					if (!p_ptr->resist_nexus || p_ptr->nastytrap96) {
+						apply_nexus(NULL);
+					}
+
+					break;
+				}
+
+			case RBE_ETHER:
+				{
+					int etherdamage = damage;
+					if (p_ptr->resist_ether)
+					{
+						etherdamage *= 6;
+						etherdamage /= (randint(6) + 6);
+					}
+					if (etherdamage < 1) etherdamage = 1;
+					contaminate(etherdamage);
+
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					take_hit(damage, ddesc);
+
+					break;
+				}
+
 			case RBE_TIME:
 				{
 					if (!p_ptr->resist_time) {
@@ -1607,6 +1819,21 @@ bool make_attack_normal(int m_idx, byte divis)
 			power = 5;
 			break;
 		case RBE_TIME:
+			power = 5;
+			break;
+		case RBE_CHAOS:
+			power = 5;
+			break;
+		case RBE_SHARDS:
+			power = 5;
+			break;
+		case RBE_INERTIA:
+			power = 5;
+			break;
+		case RBE_NEXUS:
+			power = 5;
+			break;
+		case RBE_ETHER:
 			power = 5;
 			break;
 		case RBE_SANITY:
@@ -2946,6 +3173,118 @@ bool make_attack_normal(int m_idx, byte divis)
 					break;
 
 				}
+
+			case RBE_CHAOS:
+				{
+					if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
+					{
+						(void)set_confused(p_ptr->confused + rand_int(20) + 10);
+					}
+					if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
+					{
+						(void)set_image(p_ptr->image + randint(10));
+					}
+					if ((!p_ptr->resist_neth && !p_ptr->resist_chaos) || p_ptr->nastytrap95)
+					{
+						if (p_ptr->hold_life && !p_ptr->nastytrap95 && (rand_int(100) < 75))
+						{
+							msg_print("You keep hold of your life force!");
+						}
+						else if (p_ptr->hold_life && !p_ptr->nastytrap95)
+						{
+							msg_print("You feel your life slipping away!");
+							lose_exp(50 + (p_ptr->exp / 500) * MON_DRAIN_LIFE);
+						}
+						else
+						{
+							msg_print("You feel your life draining away!");
+							lose_exp(500 + (p_ptr->exp / 50) * MON_DRAIN_LIFE);
+						}
+					}
+					if ((!p_ptr->resist_chaos) || p_ptr->nastytrap33 || (randint(9) == 1))
+					{
+						if (!p_ptr->resist_chaos || p_ptr->nastytrap33 || !p_ptr->plr_invprot) inven_damage(set_elec_destroy, 2);
+						if (!p_ptr->resist_chaos || p_ptr->nastytrap33 || !p_ptr->plr_invprot) inven_damage(set_fire_destroy, 2);
+					}
+
+					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
+					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
+
+					break;
+				}
+
+			case RBE_SHARDS:
+				{
+					if (!p_ptr->resist_shard || p_ptr->nastytrap94) {
+						(void)set_cut(p_ptr->cut + damage);
+					}
+
+					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
+					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
+
+					break;
+				}
+
+			case RBE_INERTIA:
+				{
+					int inertiadamage = damage / 4;
+					if (p_ptr->resist_inertia)
+					{
+						inertiadamage *= 6;
+						inertiadamage /= (randint(6) + 6);
+					}
+					if (inertiadamage < 1) inertiadamage = 1;
+
+					if ((!p_ptr->resist_inertia) || (randint(10) == 1))
+					{
+						(void)set_slow(p_ptr->slow + rand_int(4) + inertiadamage);
+					}
+
+					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
+					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
+
+					break;
+				}
+
+			case RBE_NEXUS:
+				{
+					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
+					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
+
+					if (!p_ptr->resist_nexus || p_ptr->nastytrap96) {
+						apply_nexus(NULL);
+					}
+
+					break;
+				}
+
+			case RBE_ETHER:
+				{
+					int etherdamage = damage;
+					if (p_ptr->resist_ether)
+					{
+						etherdamage *= 6;
+						etherdamage /= (randint(6) + 6);
+					}
+					if (etherdamage < 1) etherdamage = 1;
+					contaminate(etherdamage);
+
+					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
+					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
+
+					break;
+				}
+
 			case RBE_TIME:
 				{
 					if (!p_ptr->resist_time) {

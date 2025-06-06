@@ -4136,6 +4136,11 @@
 #define RBE_PARASITE    33
 #define RBE_ABOMINATION 34
 #define RBE_RAGNAROK    35
+#define RBE_CHAOS       36
+#define RBE_SHARDS      37
+#define RBE_INERTIA     38
+#define RBE_NEXUS       39
+#define RBE_ETHER       40
 
 
 /*** Monster flag values (hard-coded) ***/

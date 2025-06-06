@@ -2321,6 +2321,21 @@ static void spoil_mon_info(cptr fname)
 			case RBE_TIME:
 				q = "time";
 				break;
+			case RBE_CHAOS:
+				q = "cause chaos";
+				break;
+			case RBE_SHARDS:
+				q = "cut";
+				break;
+			case RBE_INERTIA:
+				q = "slow";
+				break;
+			case RBE_NEXUS:
+				q = "warp";
+				break;
+			case RBE_ETHER:
+				q = "contaminate";
+				break;
 			case RBE_SANITY:
 				q = "make insane";
 				break;

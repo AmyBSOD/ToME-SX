@@ -3135,7 +3135,7 @@ void corrupt_player(void)
 /*
  * Apply Nexus
  */
-static void apply_nexus(monster_type *m_ptr)
+void apply_nexus(monster_type *m_ptr)
 {
 	bool nexusmon = TRUE;
 

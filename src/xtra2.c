@@ -6594,6 +6594,21 @@ void monster_death(int m_idx)
 			case RBE_TIME:
 				typ = GF_TIME;
 				break;
+			case RBE_CHAOS:
+				typ = GF_CHAOS;
+				break;
+			case RBE_SHARDS:
+				typ = GF_SHARDS;
+				break;
+			case RBE_INERTIA:
+				typ = GF_INERTIA;
+				break;
+			case RBE_NEXUS:
+				typ = GF_NEXUS;
+				break;
+			case RBE_ETHER:
+				typ = GF_ETHER;
+				break;
 			case RBE_SANITY:
 				typ = GF_MISSILE;
 				break;

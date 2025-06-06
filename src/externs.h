@@ -1297,6 +1297,7 @@ extern bool hates_acid(object_type *o_ptr);
 extern bool hates_elec(object_type *o_ptr);
 extern bool hates_fire(object_type *o_ptr);
 extern bool hates_cold(object_type *o_ptr);
+extern void apply_nexus(monster_type *m_ptr);
 extern int set_acid_destroy(object_type *o_ptr);
 extern int set_elec_destroy(object_type *o_ptr);
 extern int set_fire_destroy(object_type *o_ptr);
