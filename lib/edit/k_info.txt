@@ -9829,6 +9829,86 @@ D:Although it looks like a piece of junk, it is actually part of an ancient
 D:relic belonging to the Priests of Vana. The relic now lies in pieces, 
 D:hidden from all but the most faithful followers of Vana.
 
+N:1172:& Tonfa~
+G:\:u
+I:21:27:0
+W:20:0:60:40
+A:20/5
+P:10:1d4:0:0:0
+F:SHOW_MODS
+D:This stick is used by the police. It can be used to block attacks, as 
+D:well as for clubbing the opponent into submission.
+
+N:1173:& Great Tome~ of Fire and Ice
+G:?:v
+I:111:31:0
+W:80:0:0:75000
+A:80/40
+P:0:1d1:0:0:0
+F:FULL_NAME | EASY_KNOW | IGNORE_FIRE
+D:This great spellbook contains all the spells of the Fire and 
+D:Water realms.
+
+N:1174:& Great Tome~ of the Elements
+G:?:G
+I:111:32:0
+W:80:0:0:75000
+A:80/40
+P:0:1d1:0:0:0
+F:FULL_NAME | EASY_KNOW
+D:This great spellbook contains all the spells of the Air and 
+D:Earth realms.
+
+N:1175:& Great Tome~ of Raw Magic
+G:?:B
+I:111:33:0
+W:80:0:0:75000
+A:80/40
+P:0:1d1:0:0:0
+F:FULL_NAME | EASY_KNOW
+D:This great spellbook contains all the spells of the Mana and 
+D:Meta realms.
+
+N:1176:& Great Tome~ of Philosophy
+G:?:b
+I:111:34:0
+W:80:0:0:75000
+A:80/40
+P:0:1d1:0:0:0
+F:FULL_NAME | EASY_KNOW
+D:This great spellbook contains all the spells of the Conveyance 
+D:and Divination realms.
+
+N:1177:& Great Tome~ of Peace
+G:?:o
+I:111:35:0
+W:80:0:0:75000
+A:80/40
+P:0:1d1:0:0:0
+F:FULL_NAME | EASY_KNOW
+D:This great spellbook contains all the spells of the Mind 
+D:and Nature realms.
+
+N:1178:& Great Tome~ of Warping
+G:?:D
+I:111:36:0
+W:80:0:0:75000
+A:80/40
+P:0:1d1:0:0:0
+F:FULL_NAME | EASY_KNOW | IGNORE_FIRE
+D:This great spellbook contains all the spells of the Udun 
+D:and Temporal realms.
+
+N:1179:& Great Tome~ of Heaven and Hell
+G:?:W
+I:111:37:0
+W:80:0:0:75000
+A:80/40
+P:0:1d1:0:0:0
+F:FULL_NAME | EASY_KNOW
+D:This great spellbook contains all the spells of the Celestial 
+D:and Hell realms.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

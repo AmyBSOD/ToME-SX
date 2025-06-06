@@ -763,7 +763,7 @@ school_book[3] = {
 
 -- The book of the unstopable wave
 school_book[4] = {
-	GEYSER, VAPOR, ENTPOTION, TIDALWAVE, ICESTORM
+	GEYSER, VAPOR, ENTPOTION, TIDALWAVE, ICESTORM,
 }
 
 -- Create the book of translocation
@@ -864,6 +864,49 @@ school_book[29] = {
 -- Create the book of vana
 school_book[30] = {
 	VANA_ICY_WIND, VANA_FREEZING_CLOUD, VANA_RESTOR, VANA_PURIFY,
+}
+
+-- Dual school books by Amy
+-- The book of fire and ice
+school_book[31] = {
+	GLOBELIGHT, FIREGOLEM, FIREFLASH, FIREWALL, FIERYAURA,
+	GEYSER, VAPOR, ENTPOTION, TIDALWAVE, ICESTORM,
+}
+
+-- The book of air and earth
+school_book[32] = {
+	STONESKIN, DIG, STONEPRISON, SHAKE, STRIKE,
+	NOXIOUSCLOUD, POISONBLOOD, INVISIBILITY, STERILIZE, AIRWINGS, THUNDERSTORM,
+}
+
+-- The book of mana and meta
+school_book[33] = {
+	MANATHRUST, DELCURSES, RESISTS, MANASHIELD,
+	DISARM, RECHARGE, DISPERSEMAGIC, SPELLBINDER, TRACKER, INERTIA_CONTROL,
+}
+
+-- The book of conveyance and divination
+school_book[34] = {
+	BLINK, TELEPORT, TELEAWAY, RECALL, PROBABILITY_TRAVEL,
+	SENSEMONSTERS, SENSEHIDDEN, REVEALWAYS, IDENTIFY, VISION, STARIDENTIFY,
+}
+
+-- The book of nature and mind
+school_book[35] = {
+	GROWTREE, HEALING, RECOVERY, REGENERATION, SUMMONANNIMAL,
+	CHARM, CONFUSE, ARMOROFFEAR, STUN, MIND_BOLT,
+}
+
+-- The book of time and udun
+school_book[36] = {
+	MAGELOCK, SLOWMONSTER, ESSENCESPEED, BANISHMENT,
+	DRAIN, GENOCIDE, WRAITHFORM, FLAMEOFUDUN,
+}
+
+-- The book of heaven and hell
+school_book[37] = {
+	NETHEREYE, GOODNIGHT, NERVE_POISON, TIMELAPSE, ROCKETLAUNCHER, NUCLEARMISSILE,
+	FORCEBOLT, CLEANINGFIRE, GROUNDATTACK, CRYSTALSHARDS, TUNGUSKA,
 }
 
 -- Create the book of beginner's cantrip

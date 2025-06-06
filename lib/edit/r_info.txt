@@ -92561,6 +92561,80 @@ D:Urrgh, this guy has some absolutely ugly, disfiguring mutilations
 D:where his earlobes should be. You wish you hadn't seen them, and have 
 D:to resist the urge to vomit up your breakfast. 
 
+N:5329:Confusion hound
+G:Z:v
+I:110:6d6:30:30:0
+W:15:1:600:50
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d4
+B:CLAW:HURT:1d4
+B:BITE:HURT:1d6
+F:FORCE_SLEEP | DROP_CORPSE | 
+F:FRIENDS | 
+F:BASH_DOOR | HURT_LITE | NO_CONF | 
+F:ANIMAL | MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:BR_CONF
+D:This hound is a rather confusing sight to behold. 
+
+N:5330:Confusion hound
+G:Z:v
+I:110:6d6:30:30:0
+W:15:50:600:50
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d4
+B:CLAW:HURT:1d4
+B:BITE:HURT:1d6
+F:FORCE_SLEEP | DROP_CORPSE | 
+F:FRIENDS | 
+F:BASH_DOOR | HURT_LITE | NO_CONF | 
+F:ANIMAL | MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:BR_CONF
+S:MULTIPLY
+D:This hound is a rather confusing sight to behold. 
+
+N:5331:Nuclear hound
+G:Z:G
+I:120:60d10:30:100:0
+W:50:4:800:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+F:FORCE_SLEEP | 
+F:FRIENDS | IM_POIS | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BR_NUKE
+D:This mutated hound seems to have been exposed to a large amount of radiation. 
+
+N:5332:Nuclear hound
+G:Z:G
+I:120:60d10:30:100:0
+W:50:200:800:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+F:FORCE_SLEEP | 
+F:FRIENDS | IM_POIS | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BR_NUKE
+S:MULTIPLY
+D:This mutated hound seems to have been exposed to a large amount of radiation. 
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness (low = more alert)
