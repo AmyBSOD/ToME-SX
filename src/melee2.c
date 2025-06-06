@@ -3243,7 +3243,7 @@ bool curse_equipment(int chance, int heavy_chance)
 
 	bool willreturntrue = FALSE;
 
-	u32b o1, o2, o3, o4, esp, o5;
+	u32b o1, o2, o3, o4, esp, o5, o6, o7, o8, o9, o10;
 	object_type * o_ptr =
 		&p_ptr->inventory[rand_range(INVEN_WIELD, INVEN_TOTAL - 1)];
 
@@ -3251,7 +3251,7 @@ bool curse_equipment(int chance, int heavy_chance)
 
 	if (!(o_ptr->k_idx)) return FALSE;
 
-	object_flags(o_ptr, &o1, &o2, &o3, &o4, &o5, &esp);
+	object_flags(o_ptr, &o1, &o2, &o3, &o4, &o5, &o6, &o7, &o8, &o9, &o10, &esp);
 
 
 	/* Extra, biased saving throw for blessed items */
@@ -3300,7 +3300,7 @@ bool curse_equipment(int chance, int heavy_chance)
 void curse_equipment_dg(int chance, int heavy_chance)
 {
 	bool changed = FALSE;
-	u32b o1, o2, o3, o4, esp, o5;
+	u32b o1, o2, o3, o4, esp, o5, o6, o7, o8, o9, o10;
 	object_type * o_ptr =
 		&p_ptr->inventory[rand_range(INVEN_WIELD, INVEN_TOTAL - 1)];
 
@@ -3308,7 +3308,7 @@ void curse_equipment_dg(int chance, int heavy_chance)
 
 	if (!(o_ptr->k_idx)) return;
 
-	object_flags(o_ptr, &o1, &o2, &o3, &o4, &o5, &esp);
+	object_flags(o_ptr, &o1, &o2, &o3, &o4, &o5, &o6, &o7, &o8, &o9, &o10, &esp);
 
 
 	/* Extra, biased saving throw for blessed items */
@@ -3363,7 +3363,7 @@ void curse_equipment_dg(int chance, int heavy_chance)
 bool curse_equipment_prime(int chance, int heavy_chance)
 {
 	bool changed = FALSE;
-	u32b o1, o2, o3, o4, esp, o5;
+	u32b o1, o2, o3, o4, esp, o5, o6, o7, o8, o9, o10;
 
 	bool willreturntrue = FALSE;
 
@@ -3400,7 +3400,7 @@ bool curse_equipment_prime(int chance, int heavy_chance)
 
 	if (!(o_ptr->k_idx)) return FALSE;
 
-	object_flags(o_ptr, &o1, &o2, &o3, &o4, &o5, &esp);
+	object_flags(o_ptr, &o1, &o2, &o3, &o4, &o5, &o6, &o7, &o8, &o9, &o10, &esp);
 
 
 	/* Extra, biased saving throw for blessed items */
@@ -8645,7 +8645,7 @@ static void process_monster(int m_idx, bool is_frien)
 					                (r_ptr->flags2 & (RF2_KILL_ITEM))) &&
 					                (is_friend(m_ptr) <= 0))
 					{
-						u32b f1, f2, f3, f4, f5, esp;
+						u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 						u32b flg3 = 0L;
 
@@ -8653,7 +8653,7 @@ static void process_monster(int m_idx, bool is_frien)
 						char o_name[80];
 
 						/* Extract some flags */
-						object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+						object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 						/* Acquire the object name */
 						object_desc(o_name, o_ptr, TRUE, 3);

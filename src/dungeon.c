@@ -1011,11 +1011,11 @@ bool ambush_ok(void)
  */
 bool decays(object_type *o_ptr)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 
 	/* Extract some flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	if (f3 & TR3_DECAY) return (TRUE);
 
@@ -1410,7 +1410,7 @@ static void process_world(void)
 
 	object_type *o_ptr;
 	object_kind *k_ptr;
-	u32b f1 = 0 , f2 = 0 , f3 = 0, f4 = 0, f5 = 0, esp = 0;
+	u32b f1 = 0 , f2 = 0 , f3 = 0, f4 = 0, f5 = 0, f6 = 0, f7 = 0, f8 = 0, f9 = 0, f10 = 0, esp = 0;
 
 	int monsterallocchance;
 
@@ -1922,7 +1922,7 @@ static void process_world(void)
 			o_ptr = &p_ptr->inventory[INVEN_WIELD];
 
 			/* Examine the sword */
-			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 			/* Hitpoints multiplier consume a lot of food */
 			if (o_ptr->k_idx && (f2 & (TR2_LIFE))) i += o_ptr->pval * 5;
@@ -3402,7 +3402,7 @@ static void process_world(void)
 	 */
 	if (((turn % 3000) == 0) && p_ptr->black_breath)
 	{
-		u32b f1, f2, f3, f4, f5;
+		u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10;
 
 		bool be_silent = FALSE;
 
@@ -3415,7 +3415,7 @@ static void process_world(void)
 			if (!o_ptr->k_idx) continue;
 
 			/* Extract the item flags */
-			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 			/* No messages if object has the flag, to avoid annoyance. */
 			if (f4 & (TR4_BLACK_BREATH)) be_silent = TRUE;
@@ -3440,7 +3440,7 @@ static void process_world(void)
 	if (o_ptr->tval == TV_LITE)
 	{
 		/* Extract the item flags */
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Hack -- Use some fuel */
 		if ((f4 & TR4_FUEL_LITE) && (o_ptr->timeout > 0))
@@ -3761,7 +3761,7 @@ static void process_world(void)
 		/* Get the object */
 		o_ptr = &p_ptr->inventory[i];
 
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 
 		/* TY Curse */
@@ -3867,7 +3867,7 @@ static void process_world(void)
 		if (!o_ptr->k_idx) continue;
 
 		/* Examine the rod */
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Temporary items are destroyed */
 		if (f5 & TR5_TEMPORARY)
@@ -4017,7 +4017,7 @@ static void process_world(void)
 		if (!o_ptr->k_idx) continue;
 
 		/* Examine the rod */
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Temporary items are destroyed */
 		if (f5 & TR5_TEMPORARY)
@@ -4625,7 +4625,7 @@ static void process_command(void)
 	case '<':
 		{
 			object_type *o_ptr;
-			u32b f1 = 0 , f2 = 0 , f3 = 0, f4 = 0, f5 = 0, esp = 0;
+			u32b f1 = 0 , f2 = 0 , f3 = 0, f4 = 0, f5 = 0, f6 = 0, f7 = 0, f8 = 0, f9 = 0, f10 = 0, esp = 0;
 
 
 			/* Check for light being wielded */
@@ -4633,7 +4633,7 @@ static void process_command(void)
 			/* Burn some fuel in the current lite */
 			if (o_ptr->tval == TV_LITE)
 				/* Extract the item flags */
-				object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 			/* Cannot move if rooted in place */
 			if (p_ptr->tim_roots) break;

@@ -192,12 +192,22 @@ struct object_kind
 	u32b flags3;		/* Flags, set 3 */
 	u32b flags4;            /* Flags, set 4 */
 	u32b flags5;            /* Flags, set 5 */
+	u32b flags6;            /* Flags, set 6 */
+	u32b flags7;            /* Flags, set 7 */
+	u32b flags8;            /* Flags, set 8 */
+	u32b flags9;            /* Flags, set 9 */
+	u32b flags10;           /* Flags, set 10 */
 
 	u32b oflags1;		/* Obvious Flags, set 1 */
 	u32b oflags2;		/* Obvious Flags, set 2 */
 	u32b oflags3;		/* Obvious Flags, set 3 */
 	u32b oflags4;           /* Obvious Flags, set 4 */
 	u32b oflags5;           /* Obvious Flags, set 5 */
+	u32b oflags6;           /* Obvious Flags, set 6 */
+	u32b oflags7;           /* Obvious Flags, set 7 */
+	u32b oflags8;           /* Obvious Flags, set 8 */
+	u32b oflags9;           /* Obvious Flags, set 9 */
+	u32b oflags10;          /* Obvious Flags, set 10 */
 
 	byte locale[10];		/* Allocation level(s) */
 	s32b chance[10];		/* Allocation chance(s) */
@@ -276,12 +286,22 @@ struct artifact_type
 	u32b flags3;		/* Artifact Flags, set 3 */
 	u32b flags4;            /* Artifact Flags, set 4 */
 	u32b flags5;            /* Artifact Flags, set 5 */
+	u32b flags6;            /* Artifact Flags, set 6 */
+	u32b flags7;            /* Artifact Flags, set 7 */
+	u32b flags8;            /* Artifact Flags, set 8 */
+	u32b flags9;            /* Artifact Flags, set 9 */
+	u32b flags10;           /* Artifact Flags, set 10 */
 
 	u32b oflags1;		/* Obvious Flags, set 1 */
 	u32b oflags2;		/* Obvious Flags, set 2 */
 	u32b oflags3;		/* Obvious Flags, set 3 */
 	u32b oflags4;           /* Obvious Flags, set 4 */
 	u32b oflags5;           /* Obvious Flags, set 5 */
+	u32b oflags6;           /* Obvious Flags, set 6 */
+	u32b oflags7;           /* Obvious Flags, set 7 */
+	u32b oflags8;           /* Obvious Flags, set 8 */
+	u32b oflags9;           /* Obvious Flags, set 9 */
+	u32b oflags10;          /* Obvious Flags, set 10 */
 
 	byte level;			/* Artifact level */
 	byte rarity;		/* Artifact rarity */
@@ -337,12 +357,22 @@ struct ego_item_type
 	u32b flags3[5];            /* Ego-Item Flags, set 3 */
 	u32b flags4[5];            /* Ego-Item Flags, set 4 */
 	u32b flags5[5];            /* Ego-Item Flags, set 5 */
+	u32b flags6[5];            /* Ego-Item Flags, set 6 */
+	u32b flags7[5];            /* Ego-Item Flags, set 7 */
+	u32b flags8[5];            /* Ego-Item Flags, set 8 */
+	u32b flags9[5];            /* Ego-Item Flags, set 9 */
+	u32b flags10[5];           /* Ego-Item Flags, set 10 */
 	u32b esp[5];                       /* ESP flags */
 	u32b oflags1[5];           /* Ego-Item Obvious Flags, set 1 */
 	u32b oflags2[5];           /* Ego-Item Obvious Flags, set 2 */
 	u32b oflags3[5];           /* Ego-Item Obvious Flags, set 3 */
 	u32b oflags4[5];           /* Ego-Item Obvious Flags, set 4 */
 	u32b oflags5[5];           /* Ego-Item Obvious Flags, set 5 */
+	u32b oflags6[5];           /* Ego-Item Obvious Flags, set 6 */
+	u32b oflags7[5];           /* Ego-Item Obvious Flags, set 7 */
+	u32b oflags8[5];           /* Ego-Item Obvious Flags, set 8 */
+	u32b oflags9[5];           /* Ego-Item Obvious Flags, set 9 */
+	u32b oflags10[5];          /* Ego-Item Obvious Flags, set 10 */
 	u32b oesp[5];              /* Obvious ESP flags */
 	u32b fego[5];              /* ego flags */
 
@@ -351,12 +381,22 @@ struct ego_item_type
 	u32b need_flags3;            /* Ego-Item Flags, set 3 */
 	u32b need_flags4;            /* Ego-Item Flags, set 4 */
 	u32b need_flags5;            /* Ego-Item Flags, set 5 */
+	u32b need_flags6;            /* Ego-Item Flags, set 6 */
+	u32b need_flags7;            /* Ego-Item Flags, set 7 */
+	u32b need_flags8;            /* Ego-Item Flags, set 8 */
+	u32b need_flags9;            /* Ego-Item Flags, set 9 */
+	u32b need_flags10;           /* Ego-Item Flags, set 10 */
 	u32b need_esp;                       /* ESP flags */
 	u32b forbid_flags1;            /* Ego-Item Flags, set 1 */
 	u32b forbid_flags2;            /* Ego-Item Flags, set 2 */
 	u32b forbid_flags3;            /* Ego-Item Flags, set 3 */
 	u32b forbid_flags4;            /* Ego-Item Flags, set 4 */
 	u32b forbid_flags5;            /* Ego-Item Flags, set 5 */
+	u32b forbid_flags6;            /* Ego-Item Flags, set 6 */
+	u32b forbid_flags7;            /* Ego-Item Flags, set 7 */
+	u32b forbid_flags8;            /* Ego-Item Flags, set 8 */
+	u32b forbid_flags9;            /* Ego-Item Flags, set 9 */
+	u32b forbid_flags10;           /* Ego-Item Flags, set 10 */
 	u32b forbid_esp;                       /* ESP flags */
 
 	s16b power;                     /* Power granted(if any) */
@@ -391,6 +431,11 @@ struct randart_part_type
 	u32b flags3;            /* Ego-Item Flags, set 3 */
 	u32b flags4;            /* Ego-Item Flags, set 4 */
 	u32b flags5;            /* Ego-Item Flags, set 5 */
+	u32b flags6;            /* Ego-Item Flags, set 6 */
+	u32b flags7;            /* Ego-Item Flags, set 7 */
+	u32b flags8;            /* Ego-Item Flags, set 8 */
+	u32b flags9;            /* Ego-Item Flags, set 9 */
+	u32b flags10;           /* Ego-Item Flags, set 10 */
 	u32b esp;               /* ESP flags */
 	u32b fego;              /* ego flags */
 
@@ -399,6 +444,11 @@ struct randart_part_type
 	u32b aflags3;            /* Ego-Item Flags, set 3 */
 	u32b aflags4;            /* Ego-Item Flags, set 4 */
 	u32b aflags5;            /* Ego-Item Flags, set 5 */
+	u32b aflags6;            /* Ego-Item Flags, set 6 */
+	u32b aflags7;            /* Ego-Item Flags, set 7 */
+	u32b aflags8;            /* Ego-Item Flags, set 8 */
+	u32b aflags9;            /* Ego-Item Flags, set 9 */
+	u32b aflags10;           /* Ego-Item Flags, set 10 */
 	u32b aesp;               /* ESP flags */
 
 	s16b power;             /* Power granted(if any) */
@@ -836,6 +886,11 @@ struct object_type
 	u32b art_flags3;        /* Flags, set 3  Zangband */
 	u32b art_flags4;        /* Flags, set 4  PernAngband */
 	u32b art_flags5;        /* Flags, set 5  PernAngband */
+	u32b art_flags6;        /* Flags, set 6 */
+	u32b art_flags7;        /* Flags, set 7 */
+	u32b art_flags8;        /* Flags, set 8 */
+	u32b art_flags9;        /* Flags, set 9 */
+	u32b art_flags10;       /* Flags, set 10 */
 	u32b art_esp;           /* Flags, set esp  PernAngband */
 
 	u32b art_oflags1;       /* Obvious Flags, set 1 */
@@ -843,6 +898,11 @@ struct object_type
 	u32b art_oflags3;       /* Obvious Flags, set 3 */
 	u32b art_oflags4;       /* Obvious Flags, set 4 */
 	u32b art_oflags5;       /* Obvious Flags, set 5 */
+	u32b art_oflags6;       /* Obvious Flags, set 6 */
+	u32b art_oflags7;       /* Obvious Flags, set 7 */
+	u32b art_oflags8;       /* Obvious Flags, set 8 */
+	u32b art_oflags9;       /* Obvious Flags, set 9 */
+	u32b art_oflags10;      /* Obvious Flags, set 10 */
 	u32b art_oesp;          /* Obvious Flags, set esp */
 
 	s16b next_o_idx;	/* Next object in stack (if any) */
@@ -1192,6 +1252,11 @@ struct player_race
 	u32b oflags3[PY_MAX_LEVEL + 1];
 	u32b oflags4[PY_MAX_LEVEL + 1];
 	u32b oflags5[PY_MAX_LEVEL + 1];
+	u32b oflags6[PY_MAX_LEVEL + 1];
+	u32b oflags7[PY_MAX_LEVEL + 1];
+	u32b oflags8[PY_MAX_LEVEL + 1];
+	u32b oflags9[PY_MAX_LEVEL + 1];
+	u32b oflags10[PY_MAX_LEVEL + 1];
 	u32b oesp[PY_MAX_LEVEL + 1];
 	s16b opval[PY_MAX_LEVEL + 1];
 
@@ -1271,6 +1336,11 @@ struct player_race_mod
 	u32b oflags3[PY_MAX_LEVEL + 1];
 	u32b oflags4[PY_MAX_LEVEL + 1];
 	u32b oflags5[PY_MAX_LEVEL + 1];
+	u32b oflags6[PY_MAX_LEVEL + 1];
+	u32b oflags7[PY_MAX_LEVEL + 1];
+	u32b oflags8[PY_MAX_LEVEL + 1];
+	u32b oflags9[PY_MAX_LEVEL + 1];
+	u32b oflags10[PY_MAX_LEVEL + 1];
 	u32b oesp[PY_MAX_LEVEL + 1];
 	s16b opval[PY_MAX_LEVEL + 1];
 
@@ -1406,6 +1476,11 @@ struct player_class
 	u32b oflags3[PY_MAX_LEVEL + 1];
 	u32b oflags4[PY_MAX_LEVEL + 1];
 	u32b oflags5[PY_MAX_LEVEL + 1];
+	u32b oflags6[PY_MAX_LEVEL + 1];
+	u32b oflags7[PY_MAX_LEVEL + 1];
+	u32b oflags8[PY_MAX_LEVEL + 1];
+	u32b oflags9[PY_MAX_LEVEL + 1];
+	u32b oflags10[PY_MAX_LEVEL + 1];
 	u32b oesp[PY_MAX_LEVEL + 1];
 	s16b opval[PY_MAX_LEVEL + 1];
 
@@ -1926,6 +2001,11 @@ struct player_type
 	u32b xtra_f3;
 	u32b xtra_f4;
 	u32b xtra_f5;
+	u32b xtra_f6;
+	u32b xtra_f7;
+	u32b xtra_f8;
+	u32b xtra_f9;
+	u32b xtra_f10;
 	u32b xtra_esp;
 
 	/* Corruptions */
@@ -2834,6 +2914,11 @@ struct flags_group
 	u32b flags3;            /* Flags set 3 */
 	u32b flags4;            /* Flags set 4 */
 	u32b flags5;            /* Flags set 5 */
+	u32b flags6;            /* Flags set 6 */
+	u32b flags7;            /* Flags set 7 */
+	u32b flags8;            /* Flags set 8 */
+	u32b flags9;            /* Flags set 9 */
+	u32b flags10;           /* Flags set 10 */
 	u32b esp;               /* ESP flags set */
 };
 
@@ -3019,6 +3104,11 @@ struct set_type
 		u32b flags3[6];                 /* Flags */
 		u32b flags4[6];                 /* Flags */
 		u32b flags5[6];                 /* Flags */
+		u32b flags6[6];                 /* Flags */
+		u32b flags7[6];                 /* Flags */
+		u32b flags8[6];                 /* Flags */
+		u32b flags9[6];                 /* Flags */
+		u32b flags10[6];                /* Flags */
 		u32b esp[6];                    /* Flags */
 	} arts[6];
 };

@@ -108,13 +108,13 @@ bool quest_ultra_good_stair_hook(char *fmt)
 		/* Now look for an ULTIMATE artifact, that is, one imbued with the flame */
 		for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
 		{
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 			object_type *o_ptr = &p_ptr->inventory[i];
 
 			if (!o_ptr->k_idx) continue;
 
 			/* Examine the gloves */
-			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 			if (f4 & TR4_ULTIMATE)
 			{

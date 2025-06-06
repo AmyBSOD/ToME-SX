@@ -1809,7 +1809,7 @@ void calc_sanity(void)
 static void calc_mana(void)
 {
 	int msp, levels, cur_wgt, max_wgt;
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	object_type *o_ptr;
 
@@ -1878,7 +1878,7 @@ static void calc_mana(void)
 		o_ptr = &p_ptr->inventory[INVEN_HANDS];
 
 		/* Examine the gloves */
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Normal gloves hurt mage-type spells */
 		if (o_ptr->k_idx &&
@@ -2155,7 +2155,7 @@ static void calc_torch(void)
 {
 	int i;
 	object_type *o_ptr;
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	/* Assume no light */
 	p_ptr->cur_lite = 0;
@@ -2174,7 +2174,7 @@ static void calc_torch(void)
 		if (!o_ptr->k_idx) continue;
 
 		/* Extract the flags */
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* does this item glow? */
 		if (((f4 & TR4_FUEL_LITE) && (o_ptr->timeout > 0)) || (!(f4 & TR4_FUEL_LITE)))
@@ -2532,7 +2532,7 @@ bool are_two_handed()
 	int i, skill = 0;
 	object_type *o_ptr;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	i = 0;
 	/* All weapons must be two-handed */
@@ -2546,7 +2546,7 @@ bool are_two_handed()
 			continue;
 		}
 
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		switch (o_ptr->tval)
 		{
@@ -2581,7 +2581,7 @@ bool are_onehalf_handed()
 	int i, skill = 0;
 	object_type *o_ptr;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	i = 0;
 	/* All weapons must be two-handed */
@@ -2600,7 +2600,7 @@ bool are_onehalf_handed()
 			continue;
 		}
 
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		switch (o_ptr->tval)
 		{
@@ -2919,7 +2919,7 @@ void calc_gods()
 /* Apply flags - make sure this is *only* used for stuff from items and level ups, not skills!!! --Amy */
 static int extra_blows;
 static int extra_shots;
-void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pval, s16b tval, s16b to_h, s16b to_d, s16b to_a)
+void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b f6, u32b f7, u32b f8, u32b f9, u32b f10, u32b esp, s16b pval, s16b tval, s16b to_h, s16b to_d, s16b to_a)
 {
 	/* Affect stats */
 	if (f1 & (TR1_STR)) p_ptr->stat_add[A_STR] += pval;
@@ -3216,7 +3216,7 @@ void calc_bonuses(bool silent)
 	int old_dis_ac;
 	int old_dis_to_a;
 	object_type *o_ptr;
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 
 	/* Save the old speed */
@@ -3405,6 +3405,11 @@ void calc_bonuses(bool silent)
 	p_ptr->xtra_f3 = 0;
 	p_ptr->xtra_f4 = 0;
 	p_ptr->xtra_f5 = 0;
+	p_ptr->xtra_f6 = 0;
+	p_ptr->xtra_f7 = 0;
+	p_ptr->xtra_f8 = 0;
+	p_ptr->xtra_f9 = 0;
+	p_ptr->xtra_f10 = 0;
 	p_ptr->xtra_esp = 0;
 
 	/* Hide the skills that should auto hide */
@@ -3435,7 +3440,7 @@ void calc_bonuses(bool silent)
 
 	for (i = 1; i <= p_ptr->lev; i++)
 	{
-		apply_flags(cp_ptr->oflags1[i], cp_ptr->oflags2[i], cp_ptr->oflags3[i], cp_ptr->oflags4[i], cp_ptr->oflags5[i], cp_ptr->oesp[i], cp_ptr->opval[i], 0, 0, 0, 0);
+		apply_flags(cp_ptr->oflags1[i], cp_ptr->oflags2[i], cp_ptr->oflags3[i], cp_ptr->oflags4[i], cp_ptr->oflags5[i], cp_ptr->oflags6[i], cp_ptr->oflags7[i], cp_ptr->oflags8[i], cp_ptr->oflags9[i], cp_ptr->oflags10[i], cp_ptr->oesp[i], cp_ptr->opval[i], 0, 0, 0, 0);
 	}
 
 	if (p_ptr->melee_style == SKILL_HAND)
@@ -3490,8 +3495,8 @@ void calc_bonuses(bool silent)
 
 		for (i = 1; i <= p_ptr->lev; i++)
 		{
-			apply_flags(rp_ptr->oflags1[i], rp_ptr->oflags2[i], rp_ptr->oflags3[i], rp_ptr->oflags4[i], rp_ptr->oflags5[i], rp_ptr->oesp[i], rp_ptr->opval[i], 0, 0, 0, 0);
-			apply_flags(rmp_ptr->oflags1[i], rmp_ptr->oflags2[i], rmp_ptr->oflags3[i], rmp_ptr->oflags4[i], rmp_ptr->oflags5[i], rmp_ptr->oesp[i], rmp_ptr->opval[i], 0, 0, 0, 0);
+			apply_flags(rp_ptr->oflags1[i], rp_ptr->oflags2[i], rp_ptr->oflags3[i], rp_ptr->oflags4[i], rp_ptr->oflags5[i], rp_ptr->oflags6[i], rp_ptr->oflags7[i], rp_ptr->oflags8[i], rp_ptr->oflags9[i], rp_ptr->oflags10[i], rp_ptr->oesp[i], rp_ptr->opval[i], 0, 0, 0, 0);
+			apply_flags(rmp_ptr->oflags1[i], rmp_ptr->oflags2[i], rmp_ptr->oflags3[i], rmp_ptr->oflags4[i], rmp_ptr->oflags5[i], rmp_ptr->oflags6[i], rmp_ptr->oflags7[i], rmp_ptr->oflags8[i], rmp_ptr->oflags9[i], rmp_ptr->oflags10[i], rmp_ptr->oesp[i], rmp_ptr->opval[i], 0, 0, 0, 0);
 		}
 
 		if (PRACE_FLAG(PR1_HURT_LITE))
@@ -3499,7 +3504,7 @@ void calc_bonuses(bool silent)
 	}
 
 	/* The extra flags */
-	apply_flags(p_ptr->xtra_f1, p_ptr->xtra_f2, p_ptr->xtra_f3, p_ptr->xtra_f4, p_ptr->xtra_f5, p_ptr->xtra_esp, 0, 0, 0, 0, 0);
+	apply_flags(p_ptr->xtra_f1, p_ptr->xtra_f2, p_ptr->xtra_f3, p_ptr->xtra_f4, p_ptr->xtra_f5, p_ptr->xtra_f6, p_ptr->xtra_f7, p_ptr->xtra_f8, p_ptr->xtra_f9, p_ptr->xtra_f10, p_ptr->xtra_esp, 0, 0, 0, 0, 0);
 
 	/* Hack -- apply racial/class stat maxes */
 	if (p_ptr->maximize)
@@ -3523,7 +3528,7 @@ void calc_bonuses(bool silent)
 
 		/* Extract the item flags */
 		object_flags_no_set = TRUE;
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 		object_flags_no_set = FALSE;
 
 		/* MEGA ugly hack -- set spacetime distortion resistance */
@@ -3535,7 +3540,7 @@ void calc_bonuses(bool silent)
 			f4 &= ~TR4_BLACK_BREATH;
 		}
 
-		apply_flags(f1, f2, f3, f4, f5, esp, o_ptr->pval, o_ptr->tval, o_ptr->to_h, o_ptr->to_d, o_ptr->to_a);
+		apply_flags(f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp, o_ptr->pval, o_ptr->tval, o_ptr->to_h, o_ptr->to_d, o_ptr->to_a);
 
 		if (o_ptr->name1)
 		{
@@ -4683,7 +4688,7 @@ void calc_bonuses(bool silent)
 		if (p_ptr->inventory[INVEN_WIELD + i].k_idx && p_ptr->inventory[INVEN_ARM + i].k_idx)
 		{
 			/* Extract the item flags */
-			object_flags(&p_ptr->inventory[INVEN_WIELD + i], &f1, &f2, &f3, &f4, &f5, &esp);
+			object_flags(&p_ptr->inventory[INVEN_WIELD + i], &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 			if (f4 & TR4_COULD2H)
 			{

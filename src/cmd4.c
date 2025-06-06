@@ -3485,7 +3485,7 @@ void do_cmd_knowledge_artifacts(void)
 		{
 			object_type forge;
 			object_type *q_ptr;
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			/* Get local object */
 			q_ptr = &forge;
@@ -3498,7 +3498,7 @@ void do_cmd_knowledge_artifacts(void)
 
 			/* Spell in it ? no !
 			 * fixed by Amy because who the hell had such a bright idea */
-			object_flags(q_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+			object_flags(q_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 			if (f5 & TR5_SPELL_CONTAIN)
 				q_ptr->spellcontain = -1;
 

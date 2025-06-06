@@ -965,7 +965,7 @@ static void player_wipe(void)
 	/* Wipe the alchemists' recipes */
 	for ( i = 0 ; i < 32 ; i++)
 		alchemist_known_egos[i] = 0;
-	for ( i = 0 ; i < 6 ; i++)
+	for ( i = 0 ; i < 11 ; i++)
 		alchemist_known_artifacts[i] = 0;
 	alchemist_gained = 0;
 
@@ -1165,6 +1165,8 @@ static void player_outfit(void)
 		q_ptr->timeout = rand_range(3, 7) * 500;
 		object_aware(q_ptr);
 		object_known(q_ptr);
+		hack_apply_magic_power = -99;
+		apply_magic(q_ptr, 0, FALSE, FALSE, FALSE);
 		(void)inven_carry(q_ptr, FALSE);
 	}
 

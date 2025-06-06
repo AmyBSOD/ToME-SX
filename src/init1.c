@@ -714,6 +714,186 @@ cptr k_info_flags5[] =
 	"CHARGE_HOLDING",
 };
 
+cptr k_info_flags6[] =
+{
+	"XXX8X00",
+	"XXX8X01",
+	"XXX8X02",
+	"XXX8X03",
+	"XXX8X04",
+	"XXX8X05",
+	"XXX8X06",
+	"XXX8X07",
+	"XXX8X08",
+	"XXX8X09",
+	"XXX8X10",
+	"XXX8X11",
+	"XXX8X12",
+	"XXX8X13",
+	"XXX8X14",
+	"XXX8X15",
+	"XXX8X16",
+	"XXX8X17",
+	"XXX8X18",
+	"XXX8X19",
+	"XXX8X20",
+	"XXX8X21",
+	"XXX8X22",
+	"XXX8X23",
+	"XXX8X24",
+	"XXX8X25",
+	"XXX8X26",
+	"XXX8X27",
+	"XXX8X28",
+	"XXX8X29",
+	"XXX8X30",
+	"XXX8X31",
+};
+
+cptr k_info_flags7[] =
+{
+	"XXX8X00",
+	"XXX8X01",
+	"XXX8X02",
+	"XXX8X03",
+	"XXX8X04",
+	"XXX8X05",
+	"XXX8X06",
+	"XXX8X07",
+	"XXX8X08",
+	"XXX8X09",
+	"XXX8X10",
+	"XXX8X11",
+	"XXX8X12",
+	"XXX8X13",
+	"XXX8X14",
+	"XXX8X15",
+	"XXX8X16",
+	"XXX8X17",
+	"XXX8X18",
+	"XXX8X19",
+	"XXX8X20",
+	"XXX8X21",
+	"XXX8X22",
+	"XXX8X23",
+	"XXX8X24",
+	"XXX8X25",
+	"XXX8X26",
+	"XXX8X27",
+	"XXX8X28",
+	"XXX8X29",
+	"XXX8X30",
+	"XXX8X31",
+};
+
+cptr k_info_flags8[] =
+{
+	"XXX8X00",
+	"XXX8X01",
+	"XXX8X02",
+	"XXX8X03",
+	"XXX8X04",
+	"XXX8X05",
+	"XXX8X06",
+	"XXX8X07",
+	"XXX8X08",
+	"XXX8X09",
+	"XXX8X10",
+	"XXX8X11",
+	"XXX8X12",
+	"XXX8X13",
+	"XXX8X14",
+	"XXX8X15",
+	"XXX8X16",
+	"XXX8X17",
+	"XXX8X18",
+	"XXX8X19",
+	"XXX8X20",
+	"XXX8X21",
+	"XXX8X22",
+	"XXX8X23",
+	"XXX8X24",
+	"XXX8X25",
+	"XXX8X26",
+	"XXX8X27",
+	"XXX8X28",
+	"XXX8X29",
+	"XXX8X30",
+	"XXX8X31",
+};
+
+cptr k_info_flags9[] =
+{
+	"XXX8X00",
+	"XXX8X01",
+	"XXX8X02",
+	"XXX8X03",
+	"XXX8X04",
+	"XXX8X05",
+	"XXX8X06",
+	"XXX8X07",
+	"XXX8X08",
+	"XXX8X09",
+	"XXX8X10",
+	"XXX8X11",
+	"XXX8X12",
+	"XXX8X13",
+	"XXX8X14",
+	"XXX8X15",
+	"XXX8X16",
+	"XXX8X17",
+	"XXX8X18",
+	"XXX8X19",
+	"XXX8X20",
+	"XXX8X21",
+	"XXX8X22",
+	"XXX8X23",
+	"XXX8X24",
+	"XXX8X25",
+	"XXX8X26",
+	"XXX8X27",
+	"XXX8X28",
+	"XXX8X29",
+	"XXX8X30",
+	"XXX8X31",
+};
+
+cptr k_info_flags10[] =
+{
+	"XXX8X00",
+	"XXX8X01",
+	"XXX8X02",
+	"XXX8X03",
+	"XXX8X04",
+	"XXX8X05",
+	"XXX8X06",
+	"XXX8X07",
+	"XXX8X08",
+	"XXX8X09",
+	"XXX8X10",
+	"XXX8X11",
+	"XXX8X12",
+	"XXX8X13",
+	"XXX8X14",
+	"XXX8X15",
+	"XXX8X16",
+	"XXX8X17",
+	"XXX8X18",
+	"XXX8X19",
+	"XXX8X20",
+	"XXX8X21",
+	"XXX8X22",
+	"XXX8X23",
+	"XXX8X24",
+	"XXX8X25",
+	"XXX8X26",
+	"XXX8X27",
+	"XXX8X28",
+	"XXX8X29",
+	"XXX8X30",
+	"XXX8X31",
+};
+
 /*
  * ESP flags
  */
@@ -1711,7 +1891,7 @@ int get_activation(char *activation)
 /*
  * Grab one flag in an object_kind from a textual string
  */
-static errr grab_one_race_kind_flag(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp, cptr what)
+static errr grab_one_race_kind_flag(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u32b *f7, u32b *f8, u32b *f9, u32b *f10, u32b *esp, cptr what)
 {
 	int i;
 
@@ -1771,6 +1951,56 @@ static errr grab_one_race_kind_flag(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b
 		if (streq(what, k_info_flags5[i]))
 		{
 			(*f5) |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags6 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags6[i]))
+		{
+			(*f6) |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags7 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags7[i]))
+		{
+			(*f7) |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags8 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags8[i]))
+		{
+			(*f8) |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags9 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags9[i]))
+		{
+			(*f9) |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags10 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags10[i]))
+		{
+			(*f10) |= (1L << i);
 			return (0);
 		}
 	}
@@ -2260,7 +2490,7 @@ errr init_player_info_txt(FILE *fp, char *buf)
 				}
 
 				/* Parse this entry */
-				if (0 != grab_one_race_kind_flag(&rp_ptr->oflags1[lev], &rp_ptr->oflags2[lev], &rp_ptr->oflags3[lev], &rp_ptr->oflags4[lev], &rp_ptr->oflags5[lev], &rp_ptr->oesp[lev], s)) return (5);
+				if (0 != grab_one_race_kind_flag(&rp_ptr->oflags1[lev], &rp_ptr->oflags2[lev], &rp_ptr->oflags3[lev], &rp_ptr->oflags4[lev], &rp_ptr->oflags5[lev], &rp_ptr->oflags6[lev], &rp_ptr->oflags7[lev], &rp_ptr->oflags8[lev], &rp_ptr->oflags9[lev], &rp_ptr->oflags10[lev], &rp_ptr->oesp[lev], s)) return (5);
 
 				/* Start the next entry */
 				s = t;
@@ -2637,7 +2867,7 @@ errr init_player_info_txt(FILE *fp, char *buf)
 				}
 
 				/* Parse this entry */
-				if (0 != grab_one_race_kind_flag(&rmp_ptr->oflags1[lev], &rmp_ptr->oflags2[lev], &rmp_ptr->oflags3[lev], &rmp_ptr->oflags4[lev], &rmp_ptr->oflags5[lev], &rmp_ptr->oesp[lev], s)) return (5);
+				if (0 != grab_one_race_kind_flag(&rmp_ptr->oflags1[lev], &rmp_ptr->oflags2[lev], &rmp_ptr->oflags3[lev], &rmp_ptr->oflags4[lev], &rmp_ptr->oflags5[lev], &rmp_ptr->oflags6[lev], &rmp_ptr->oflags7[lev], &rmp_ptr->oflags8[lev], &rmp_ptr->oflags9[lev], &rmp_ptr->oflags10[lev], &rmp_ptr->oesp[lev], s)) return (5);
 
 				/* Start the next entry */
 				s = t;
@@ -3150,7 +3380,7 @@ errr init_player_info_txt(FILE *fp, char *buf)
 				}
 
 				/* Parse this entry */
-				if (0 != grab_one_race_kind_flag(&c_ptr->oflags1[lev], &c_ptr->oflags2[lev], &c_ptr->oflags3[lev], &c_ptr->oflags4[lev], &c_ptr->oflags5[lev], &c_ptr->oesp[lev], s)) return (5);
+				if (0 != grab_one_race_kind_flag(&c_ptr->oflags1[lev], &c_ptr->oflags2[lev], &c_ptr->oflags3[lev], &c_ptr->oflags4[lev], &c_ptr->oflags5[lev], &c_ptr->oflags6[lev], &c_ptr->oflags7[lev], &c_ptr->oflags8[lev], &c_ptr->oflags9[lev], &c_ptr->oflags10[lev], &c_ptr->oesp[lev], s)) return (5);
 
 				/* Start the next entry */
 				s = t;
@@ -4149,6 +4379,71 @@ static errr grab_one_kind_flag(object_kind *k_ptr, cptr what, bool obvious)
 		}
 	}
 
+	/* Check flags6 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags6[i]))
+		{
+			if (obvious)
+				k_ptr->oflags6 |= (1L << i);
+			else
+				k_ptr->flags6 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags7 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags7[i]))
+		{
+			if (obvious)
+				k_ptr->oflags7 |= (1L << i);
+			else
+				k_ptr->flags7 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags8 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags8[i]))
+		{
+			if (obvious)
+				k_ptr->oflags8 |= (1L << i);
+			else
+				k_ptr->flags8 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags9 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags9[i]))
+		{
+			if (obvious)
+				k_ptr->oflags9 |= (1L << i);
+			else
+				k_ptr->flags9 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags10 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags10[i]))
+		{
+			if (obvious)
+				k_ptr->oflags10 |= (1L << i);
+			else
+				k_ptr->flags10 |= (1L << i);
+			return (0);
+		}
+	}
+
 	/* Check esp_flags */
 	for (i = 0; i < 32; i++)
 	{
@@ -4624,8 +4919,18 @@ int get_k_flag(char *what)
 			return 3*32 + i;
 		if (streq(what, k_info_flags5[i]))
 			return 4*32 + i;
-		if (streq(what, esp_flags[i]))
+		if (streq(what, k_info_flags6[i]))
 			return 5*32 + i;
+		if (streq(what, k_info_flags7[i]))
+			return 6*32 + i;
+		if (streq(what, k_info_flags8[i]))
+			return 7*32 + i;
+		if (streq(what, k_info_flags9[i]))
+			return 8*32 + i;
+		if (streq(what, k_info_flags10[i]))
+			return 9*32 + i;
+		if (streq(what, esp_flags[i]))
+			return 10*32 + i;
 	}
 
 	/* Oops */
@@ -5086,6 +5391,71 @@ static errr grab_one_artifact_flag(artifact_type *a_ptr, cptr what, bool obvious
 				a_ptr->oflags5 |= (1L << i);
 			else
 				a_ptr->flags5 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags6 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags6[i]))
+		{
+			if (obvious)
+				a_ptr->oflags6 |= (1L << i);
+			else
+				a_ptr->flags6 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags7 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags7[i]))
+		{
+			if (obvious)
+				a_ptr->oflags7 |= (1L << i);
+			else
+				a_ptr->flags7 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags8 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags8[i]))
+		{
+			if (obvious)
+				a_ptr->oflags8 |= (1L << i);
+			else
+				a_ptr->flags8 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags9 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags9[i]))
+		{
+			if (obvious)
+				a_ptr->oflags9 |= (1L << i);
+			else
+				a_ptr->flags9 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags10 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags10[i]))
+		{
+			if (obvious)
+				a_ptr->oflags10 |= (1L << i);
+			else
+				a_ptr->flags10 |= (1L << i);
 			return (0);
 		}
 	}
@@ -5603,6 +5973,11 @@ errr init_set_info_txt(FILE *fp, char *buf)
 					set_ptr->arts[z].flags3[y] = 0;
 					set_ptr->arts[z].flags4[y] = 0;
 					set_ptr->arts[z].flags5[y] = 0;
+					set_ptr->arts[z].flags6[y] = 0;
+					set_ptr->arts[z].flags7[y] = 0;
+					set_ptr->arts[z].flags8[y] = 0;
+					set_ptr->arts[z].flags9[y] = 0;
+					set_ptr->arts[z].flags10[y] = 0;
 					set_ptr->arts[z].esp[y] = 0;
 					set_ptr->arts[z].pval[y] = 0;
 				}
@@ -5689,6 +6064,11 @@ errr init_set_info_txt(FILE *fp, char *buf)
 				                                 &set_ptr->arts[cur_art].flags3[cur_num],
 				                                 &set_ptr->arts[cur_art].flags4[cur_num],
 				                                 &set_ptr->arts[cur_art].flags5[cur_num],
+				                                 &set_ptr->arts[cur_art].flags6[cur_num],
+				                                 &set_ptr->arts[cur_art].flags7[cur_num],
+				                                 &set_ptr->arts[cur_art].flags8[cur_num],
+				                                 &set_ptr->arts[cur_art].flags9[cur_num],
+				                                 &set_ptr->arts[cur_art].flags10[cur_num],
 				                                 &set_ptr->arts[cur_art].esp[cur_num],
 				                                 s)) return (5);
 
@@ -6556,6 +6936,71 @@ static bool grab_one_ego_item_flag(ego_item_type *e_ptr, cptr what, int n, bool 
 		}
 	}
 
+	/* Check flags6 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags6[i]))
+		{
+			if (obvious)
+				e_ptr->oflags6[n] |= (1L << i);
+			else
+				e_ptr->flags6[n] |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags7 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags7[i]))
+		{
+			if (obvious)
+				e_ptr->oflags7[n] |= (1L << i);
+			else
+				e_ptr->flags7[n] |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags8 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags8[i]))
+		{
+			if (obvious)
+				e_ptr->oflags8[n] |= (1L << i);
+			else
+				e_ptr->flags8[n] |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags9 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags9[i]))
+		{
+			if (obvious)
+				e_ptr->oflags9[n] |= (1L << i);
+			else
+				e_ptr->flags9[n] |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags10 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags10[i]))
+		{
+			if (obvious)
+				e_ptr->oflags10[n] |= (1L << i);
+			else
+				e_ptr->flags10[n] |= (1L << i);
+			return (0);
+		}
+	}
+
 	/* Check esp_flags */
 	for (i = 0; i < 32; i++)
 	{
@@ -6664,6 +7109,71 @@ static bool grab_one_ego_item_flag_restrict(ego_item_type *e_ptr, cptr what, boo
 				e_ptr->need_flags5 |= (1L << i);
 			else
 				e_ptr->forbid_flags5 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags6 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags6[i]))
+		{
+			if (need)
+				e_ptr->need_flags6 |= (1L << i);
+			else
+				e_ptr->forbid_flags6 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags7 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags7[i]))
+		{
+			if (need)
+				e_ptr->need_flags7 |= (1L << i);
+			else
+				e_ptr->forbid_flags7 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags8 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags8[i]))
+		{
+			if (need)
+				e_ptr->need_flags8 |= (1L << i);
+			else
+				e_ptr->forbid_flags8 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags9 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags9[i]))
+		{
+			if (need)
+				e_ptr->need_flags9 |= (1L << i);
+			else
+				e_ptr->forbid_flags9 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags10 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags10[i]))
+		{
+			if (need)
+				e_ptr->need_flags10 |= (1L << i);
+			else
+				e_ptr->forbid_flags10 |= (1L << i);
 			return (0);
 		}
 	}
@@ -6827,6 +7337,11 @@ errr init_e_info_txt(FILE *fp, char *buf)
 				e_ptr->flags3[j] = 0;
 				e_ptr->flags4[j] = 0;
 				e_ptr->flags5[j] = 0;
+				e_ptr->flags6[j] = 0;
+				e_ptr->flags7[j] = 0;
+				e_ptr->flags8[j] = 0;
+				e_ptr->flags9[j] = 0;
+				e_ptr->flags10[j] = 0;
 				e_ptr->esp[j] = 0;
 			}
 
@@ -7140,7 +7655,7 @@ errr init_e_info_txt(FILE *fp, char *buf)
 static bool grab_one_randart_item_flag(randart_part_type *ra_ptr, cptr what, char c)
 {
 	int i;
-	u32b *f1, *f2, *f3, *f4, *f5, *esp;
+	u32b *f1, *f2, *f3, *f4, *f5, *f6, *f7, *f8, *f9, *f10, *esp;
 
 	if (c == 'F')
 	{
@@ -7149,6 +7664,11 @@ static bool grab_one_randart_item_flag(randart_part_type *ra_ptr, cptr what, cha
 		f3 = &ra_ptr->flags3;
 		f4 = &ra_ptr->flags4;
 		f5 = &ra_ptr->flags5;
+		f6 = &ra_ptr->flags6;
+		f7 = &ra_ptr->flags7;
+		f8 = &ra_ptr->flags8;
+		f9 = &ra_ptr->flags9;
+		f10 = &ra_ptr->flags10;
 		esp = &ra_ptr->esp;
 	}
 	else
@@ -7158,6 +7678,11 @@ static bool grab_one_randart_item_flag(randart_part_type *ra_ptr, cptr what, cha
 		f3 = &ra_ptr->aflags3;
 		f4 = &ra_ptr->aflags4;
 		f5 = &ra_ptr->aflags5;
+		f6 = &ra_ptr->aflags6;
+		f7 = &ra_ptr->aflags7;
+		f8 = &ra_ptr->aflags8;
+		f9 = &ra_ptr->aflags9;
+		f10 = &ra_ptr->aflags10;
 		esp = &ra_ptr->aesp;
 	}
 
@@ -7217,6 +7742,56 @@ static bool grab_one_randart_item_flag(randart_part_type *ra_ptr, cptr what, cha
 		if (streq(what, k_info_flags5[i]))
 		{
 			*f5 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags6 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags6[i]))
+		{
+			*f6 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags7 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags7[i]))
+		{
+			*f7 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags8 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags8[i]))
+		{
+			*f8 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags9 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags9[i]))
+		{
+			*f9 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Check flags10 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, k_info_flags10[i]))
+		{
+			*f10 |= (1L << i);
 			return (0);
 		}
 	}
@@ -7382,6 +7957,11 @@ errr init_ra_info_txt(FILE *fp, char *buf)
 			ra_ptr->flags3 = 0;
 			ra_ptr->flags4 = 0;
 			ra_ptr->flags5 = 0;
+			ra_ptr->flags6 = 0;
+			ra_ptr->flags7 = 0;
+			ra_ptr->flags8 = 0;
+			ra_ptr->flags9 = 0;
+			ra_ptr->flags10 = 0;
 			ra_ptr->esp = 0;
 			ra_ptr->fego = 0;
 
@@ -11423,8 +12003,8 @@ static errr process_dungeon_file_aux(char *buf, int *yval, int *xval, int xvalst
 				   Let's just HACK around one observed bug: Shadow Cloak
 				   of Luthien [Globe of Light] */
 				{
-					u32b f1, f2, f3, f4, f5, esp;
-					object_flags(q_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
+					object_flags(q_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 					if (f5 & TR5_SPELL_CONTAIN)
 						q_ptr->spellcontain = -1;
 				}

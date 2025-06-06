@@ -821,7 +821,7 @@ player_spec *spp_ptr;
  * More spell info
  */
 u32b alchemist_known_egos[32];
-u32b alchemist_known_artifacts[6];
+u32b alchemist_known_artifacts[11];
 u32b alchemist_gained;
 
 

@@ -1913,13 +1913,13 @@ static void display_player_various(void)
  * Obtain the "flags" of the wielded symbiote
  */
 
-void wield_monster_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
+void wield_monster_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u32b *f7, u32b *f8, u32b *f9, u32b *f10, u32b *esp)
 {
 	object_type *o_ptr;
 	monster_race *r_ptr;
 
 	/* Clear */
-	(*f1) = (*f2) = (*f3) = (*f4) = (*f5) = (*esp) = 0L;
+	(*f1) = (*f2) = (*f3) = (*f4) = (*f5) = (*f6) = (*f7) = (*f8) = (*f9) = (*f10) = (*esp) = 0L;
 
 	/* Get the carried monster */
 	o_ptr = &p_ptr->inventory[INVEN_CARRY];
@@ -1943,12 +1943,12 @@ void wield_monster_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b 
 /*
  * Obtain the "flags" for the player as if he was an item
  */
-void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
+void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u32b *f7, u32b *f8, u32b *f9, u32b *f10, u32b *esp)
 {
 	int i;
 
 	/* Clear */
-	(*f1) = (*f2) = (*f3) = (*f4) = (*f5) = (*esp) = 0L;
+	(*f1) = (*f2) = (*f3) = (*f4) = (*f5) = (*f6) = (*f7) = (*f8) = (*f9) = (*f10) = (*esp) = 0L;
 
 	/* Astral chars */
 	if (p_ptr->astral)
@@ -2084,6 +2084,11 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
 		(*f3) |= cp_ptr->oflags3[i];
 		(*f4) |= cp_ptr->oflags4[i];
 		(*f5) |= cp_ptr->oflags5[i];
+		(*f6) |= cp_ptr->oflags6[i];
+		(*f7) |= cp_ptr->oflags7[i];
+		(*f8) |= cp_ptr->oflags8[i];
+		(*f9) |= cp_ptr->oflags9[i];
+		(*f10) |= cp_ptr->oflags10[i];
 		(*esp) |= cp_ptr->oesp[i];
 	}
 
@@ -2097,6 +2102,11 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
 			(*f3) |= rp_ptr->oflags3[i];
 			(*f4) |= rp_ptr->oflags4[i];
 			(*f5) |= rp_ptr->oflags5[i];
+			(*f6) |= rp_ptr->oflags6[i];
+			(*f7) |= rp_ptr->oflags7[i];
+			(*f8) |= rp_ptr->oflags8[i];
+			(*f9) |= rp_ptr->oflags9[i];
+			(*f10) |= rp_ptr->oflags10[i];
 			(*esp) |= rp_ptr->oesp[i];
 
 			(*f1) |= rmp_ptr->oflags1[i];
@@ -2104,6 +2114,11 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
 			(*f3) |= rmp_ptr->oflags3[i];
 			(*f4) |= rmp_ptr->oflags4[i];
 			(*f5) |= rmp_ptr->oflags5[i];
+			(*f6) |= rmp_ptr->oflags6[i];
+			(*f7) |= rmp_ptr->oflags7[i];
+			(*f8) |= rmp_ptr->oflags8[i];
+			(*f9) |= rmp_ptr->oflags9[i];
+			(*f10) |= rmp_ptr->oflags10[i];
 			(*esp) |= rmp_ptr->oesp[i];
 		}
 	}
@@ -2688,6 +2703,11 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
 	(*f3) |= p_ptr->xtra_f3;
 	(*f4) |= p_ptr->xtra_f4;
 	(*f5) |= p_ptr->xtra_f5;
+	(*f6) |= p_ptr->xtra_f6;
+	(*f7) |= p_ptr->xtra_f7;
+	(*f8) |= p_ptr->xtra_f8;
+	(*f9) |= p_ptr->xtra_f9;
+	(*f10) |= p_ptr->xtra_f10;
 	(*esp) |= p_ptr->xtra_esp;
 
 	if (p_ptr->black_breath)
@@ -2918,9 +2938,9 @@ static void display_player_ben_one(int mode)
 
 	char dummy[80], c;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
-	u16b b[INVEN_TOTAL - INVEN_WIELD + 1][12];
+	u16b b[INVEN_TOTAL - INVEN_WIELD + 1][22];
 
 	int d[INVEN_TOTAL - INVEN_WIELD + 1];
 
@@ -2940,7 +2960,7 @@ static void display_player_ben_one(int mode)
 		o_ptr = &p_ptr->inventory[i];
 
 		/* Known object flags */
-		object_flags_known(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags_known(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Incorporate */
 		b[n][0] = (u16b)(f1 & 0xFFFF);
@@ -2953,8 +2973,18 @@ static void display_player_ben_one(int mode)
 		b[n][7] = (u16b)(f4 >> 16);
 		b[n][8] = (u16b)(f5 & 0xFFFF);
 		b[n][9] = (u16b)(f5 >> 16);
-		b[n][10] = (u16b)(esp & 0xFFFF);
-		b[n][11] = (u16b)(esp >> 16);
+		b[n][10] = (u16b)(f6 & 0xFFFF);
+		b[n][11] = (u16b)(f6 >> 16);
+		b[n][12] = (u16b)(f7 & 0xFFFF);
+		b[n][13] = (u16b)(f7 >> 16);
+		b[n][14] = (u16b)(f8 & 0xFFFF);
+		b[n][15] = (u16b)(f8 >> 16);
+		b[n][16] = (u16b)(f9 & 0xFFFF);
+		b[n][17] = (u16b)(f9 >> 16);
+		b[n][18] = (u16b)(f10 & 0xFFFF);
+		b[n][19] = (u16b)(f10 >> 16);
+		b[n][20] = (u16b)(esp & 0xFFFF);
+		b[n][21] = (u16b)(esp >> 16);
 		d[n] = o_ptr->pval;
 	}
 
@@ -2962,7 +2992,7 @@ static void display_player_ben_one(int mode)
 	n = INVEN_CARRY - INVEN_WIELD;
 
 	/* Player flags */
-	wield_monster_flags(&f1, &f2, &f3, &f4, &f5, &esp);
+	wield_monster_flags(&f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Incorporate */
 	b[n][0] = (u16b)(f1 & 0xFFFF);
@@ -2975,14 +3005,24 @@ static void display_player_ben_one(int mode)
 	b[n][7] = (u16b)(f4 >> 16);
 	b[n][8] = (u16b)(f5 & 0xFFFF);
 	b[n][9] = (u16b)(f5 >> 16);
-	b[n][10] = (u16b)(esp & 0xFFFF);
-	b[n][11] = (u16b)(esp >> 16);
+	b[n][10] = (u16b)(f6 & 0xFFFF);
+	b[n][11] = (u16b)(f6 >> 16);
+	b[n][12] = (u16b)(f7 & 0xFFFF);
+	b[n][13] = (u16b)(f7 >> 16);
+	b[n][14] = (u16b)(f8 & 0xFFFF);
+	b[n][15] = (u16b)(f8 >> 16);
+	b[n][16] = (u16b)(f9 & 0xFFFF);
+	b[n][17] = (u16b)(f9 >> 16);
+	b[n][18] = (u16b)(f10 & 0xFFFF);
+	b[n][19] = (u16b)(f10 >> 16);
+	b[n][20] = (u16b)(esp & 0xFFFF);
+	b[n][21] = (u16b)(esp >> 16);
 
 	/* Index */
 	n = INVEN_TOTAL - INVEN_WIELD;
 
 	/* Player flags */
-	player_flags(&f1, &f2, &f3, &f4, &f5, &esp);
+	player_flags(&f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Incorporate */
 	b[n][0] = (u16b)(f1 & 0xFFFF);
@@ -2995,8 +3035,18 @@ static void display_player_ben_one(int mode)
 	b[n][7] = (u16b)(f4 >> 16);
 	b[n][8] = (u16b)(f5 & 0xFFFF);
 	b[n][9] = (u16b)(f5 >> 16);
-	b[n][10] = (u16b)(esp & 0xFFFF);
-	b[n][11] = (u16b)(esp >> 16);
+	b[n][10] = (u16b)(f6 & 0xFFFF);
+	b[n][11] = (u16b)(f6 >> 16);
+	b[n][12] = (u16b)(f7 & 0xFFFF);
+	b[n][13] = (u16b)(f7 >> 16);
+	b[n][14] = (u16b)(f8 & 0xFFFF);
+	b[n][15] = (u16b)(f8 >> 16);
+	b[n][16] = (u16b)(f9 & 0xFFFF);
+	b[n][17] = (u16b)(f9 >> 16);
+	b[n][18] = (u16b)(f10 & 0xFFFF);
+	b[n][19] = (u16b)(f10 >> 16);
+	b[n][20] = (u16b)(esp & 0xFFFF);
+	b[n][21] = (u16b)(esp >> 16);
 
 	/* Generate the equip chars */
 	sprintf(dummy, " ");

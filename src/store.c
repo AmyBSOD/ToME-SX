@@ -826,7 +826,12 @@ static bool store_object_similar(object_type *o_ptr, object_type *j_ptr)
 	                (o_ptr->art_flags2 != j_ptr->art_flags2) ||
 	                (o_ptr->art_flags3 != j_ptr->art_flags3) ||
 	                (o_ptr->art_flags4 != j_ptr->art_flags4) ||
-	                (o_ptr->art_flags5 != j_ptr->art_flags5))
+	                (o_ptr->art_flags5 != j_ptr->art_flags5) ||
+	                (o_ptr->art_flags6 != j_ptr->art_flags6) ||
+	                (o_ptr->art_flags7 != j_ptr->art_flags7) ||
+	                (o_ptr->art_flags8 != j_ptr->art_flags8) ||
+	                (o_ptr->art_flags9 != j_ptr->art_flags9) ||
+	                (o_ptr->art_flags10 != j_ptr->art_flags10))
 		return (0);
 
 	/* Hack -- Never stack "powerful" items */
@@ -971,8 +976,8 @@ static bool store_check_fourdim(object_type *o_ptr)
 
 bool is_blessed(object_type *o_ptr)
 {
-	u32b f1, f2, f3, f4, f5, esp;
-	object_flags_known(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
+	object_flags_known(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 	if (f3 & TR3_BLESSED) return (TRUE);
 	else return (FALSE);
 }
@@ -1587,9 +1592,9 @@ static void store_create(void)
 			/* Hack -- Charge lite's */
 			if (q_ptr->tval == TV_LITE)
 			{
-				u32b f1, f2, f3, f4, f5, esp;
+				u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
-				object_flags(q_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				object_flags(q_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 				if (f4 & TR4_FUEL_LITE) q_ptr->timeout = k_info[q_ptr->k_idx].pval2;
 			}
@@ -3301,7 +3306,7 @@ void store_sell(void)
 
 	char o_name[80];
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	bool museum = (st_info[st_ptr->st_idx].flags1 & SF1_MUSEUM) ? TRUE : FALSE;
 
@@ -3341,7 +3346,7 @@ void store_sell(void)
 	}
 
 
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Hack -- Cannot remove cursed items */
 	if (cursed_p(o_ptr))

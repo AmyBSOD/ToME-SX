@@ -299,6 +299,11 @@ static void do_subrace(int flag)
 		do_u32b(&sr_ptr->oflags3[i], flag);
 		do_u32b(&sr_ptr->oflags4[i], flag);
 		do_u32b(&sr_ptr->oflags5[i], flag);
+		do_u32b(&sr_ptr->oflags6[i], flag);
+		do_u32b(&sr_ptr->oflags7[i], flag);
+		do_u32b(&sr_ptr->oflags8[i], flag);
+		do_u32b(&sr_ptr->oflags9[i], flag);
+		do_u32b(&sr_ptr->oflags10[i], flag);
 		do_u32b(&sr_ptr->oesp[i], flag);
 		do_s16b(&sr_ptr->opval[i], flag);
 	}
@@ -467,7 +472,7 @@ static bool do_extra(int flag)
 	   is stored in do_aux, and is a bit flag in a previously
 	   unused bit.
 	   */
-	for (i = 0; i < 6 ; ++i)
+	for (i = 0; i < 11 ; ++i)
 		do_u32b(&alchemist_known_artifacts[i], flag);
 
 	for (i = 0; i < 32 ; ++i)
@@ -2400,7 +2405,7 @@ static void do_item(object_type *o_ptr, int flag)
 	byte old_dd;
 	byte old_ds;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	object_kind *k_ptr;
 
@@ -2468,6 +2473,11 @@ static void do_item(object_type *o_ptr, int flag)
 	do_u32b(&o_ptr->art_flags3, flag);
 	do_u32b(&o_ptr->art_flags4, flag);
 	do_u32b(&o_ptr->art_flags5, flag);
+	do_u32b(&o_ptr->art_flags6, flag);
+	do_u32b(&o_ptr->art_flags7, flag);
+	do_u32b(&o_ptr->art_flags8, flag);
+	do_u32b(&o_ptr->art_flags9, flag);
+	do_u32b(&o_ptr->art_flags10, flag);
 	do_u32b(&o_ptr->art_esp, flag);
 
 	/* obvious flags */
@@ -2476,6 +2486,11 @@ static void do_item(object_type *o_ptr, int flag)
 	do_u32b(&o_ptr->art_oflags3, flag);
 	do_u32b(&o_ptr->art_oflags4, flag);
 	do_u32b(&o_ptr->art_oflags5, flag);
+	do_u32b(&o_ptr->art_oflags6, flag);
+	do_u32b(&o_ptr->art_oflags7, flag);
+	do_u32b(&o_ptr->art_oflags8, flag);
+	do_u32b(&o_ptr->art_oflags9, flag);
+	do_u32b(&o_ptr->art_oflags10, flag);
 	do_u32b(&o_ptr->art_oesp, flag);
 
 	/* Monster holding object */
@@ -2570,7 +2585,7 @@ static void do_item(object_type *o_ptr, int flag)
 
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Paranoia */
 	if (o_ptr->name1)
@@ -2834,6 +2849,9 @@ static void do_lore(int r_idx, int flag)
 		r_ptr->r_flags4 &= r_ptr->flags4;
 		r_ptr->r_flags5 &= r_ptr->flags5;
 		r_ptr->r_flags6 &= r_ptr->flags6;
+		r_ptr->r_flags7 &= r_ptr->flags7;
+		r_ptr->r_flags8 &= r_ptr->flags8;
+		r_ptr->r_flags9 &= r_ptr->flags9;
 	}
 }
 

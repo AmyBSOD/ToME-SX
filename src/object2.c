@@ -969,9 +969,9 @@ static s32b object_value_base(object_type *o_ptr)
 s32b flag_cost(object_type * o_ptr, int plusses)
 {
 	s32b total = 0;
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	if (f5 & TR5_TEMPORARY)
 	{
@@ -1217,7 +1217,7 @@ s32b object_value_real(object_type *o_ptr)
 	s32b value;
 	s32b basevalue;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	object_kind *k_ptr = &k_info[o_ptr->k_idx];
 
@@ -1236,7 +1236,7 @@ s32b object_value_real(object_type *o_ptr)
 	basevalue = value;
 
 	/* Extract some flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	if (f5 & TR5_TEMPORARY) return (0L);
 
@@ -1593,7 +1593,7 @@ s32b object_value_xtra(object_type *o_ptr)
 {
 	s32b value = 0;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	object_kind *k_ptr = &k_info[o_ptr->k_idx];
 
@@ -1603,7 +1603,7 @@ s32b object_value_xtra(object_type *o_ptr)
 	}
 
 	/* Extract some flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	if (f5 & TR5_TEMPORARY) return (0L);
 
@@ -2022,17 +2022,17 @@ s32b object_value_shop(object_type *o_ptr)
 bool object_similar(object_type *o_ptr, object_type *j_ptr)
 {
 	int total = o_ptr->number + j_ptr->number;
-	u32b f1, f2, f3, f4, f5, esp, f11, f12, f13, f14, esp1, f15;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp, ff11, ff12, ff13, ff14, esp1, ff15, ff16, ff17, ff18, ff19, ff20;
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
-	object_flags(j_ptr, &f11, &f12, &f13, &f14, &f15, &esp1);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
+	object_flags(j_ptr, &ff11, &ff12, &ff13, &ff14, &ff15, &ff16, &ff17, &ff18, &ff19, &ff20, &esp1);
 
 
 	/* Require identical object types */
 	if (o_ptr->k_idx != j_ptr->k_idx) return (0);
 
-	if ((f5 & TR5_SPELL_CONTAIN) || (f15 & TR5_SPELL_CONTAIN))
+	if ((f5 & TR5_SPELL_CONTAIN) || (ff15 & TR5_SPELL_CONTAIN))
 		return FALSE;
 
 	/* Analyze the items */
@@ -2143,7 +2143,7 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 			if (o_ptr->pval != j_ptr->pval) return (0);
 
 			/* Do not combine recharged ones with non recharged ones. */
-			if ((f4 & TR4_RECHARGED) != (f14 & TR4_RECHARGED)) return (0);
+			if ((f4 & TR4_RECHARGED) != (ff14 & TR4_RECHARGED)) return (0);
 
 			/* Do not combine different spells */
 			if (o_ptr->pval2 != j_ptr->pval2) return (0);
@@ -2181,7 +2181,7 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 			if (o_ptr->name1 != j_ptr->name1) return (0);
 
 			/* Do not combine recharged ones with non recharged ones. */
-			if ((f4 & TR4_RECHARGED) != (f14 & TR4_RECHARGED)) return (0);
+			if ((f4 & TR4_RECHARGED) != (ff14 & TR4_RECHARGED)) return (0);
 
 			/* Do not combine different spells */
 			if (o_ptr->pval2 != j_ptr->pval2) return (0);
@@ -2358,7 +2358,12 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 	                (o_ptr->art_flags2 != j_ptr->art_flags2) ||
 	                (o_ptr->art_flags3 != j_ptr->art_flags3) ||
 	                (o_ptr->art_flags4 != j_ptr->art_flags4) ||
-	                (o_ptr->art_flags5 != j_ptr->art_flags5))
+	                (o_ptr->art_flags5 != j_ptr->art_flags5) ||
+	                (o_ptr->art_flags6 != j_ptr->art_flags6) ||
+	                (o_ptr->art_flags7 != j_ptr->art_flags7) ||
+	                (o_ptr->art_flags8 != j_ptr->art_flags8) ||
+	                (o_ptr->art_flags9 != j_ptr->art_flags9) ||
+	                (o_ptr->art_flags10 != j_ptr->art_flags10))
 		return (0);
 
 	/* Hack -- Require identical "cursed" status */
@@ -2779,7 +2784,7 @@ static bool make_artifact_special(object_type *o_ptr)
 {
 	int i;
 	int k_idx = 0;
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	/* No artifacts in the town */
 	if (!dun_level) return (FALSE);
@@ -2858,7 +2863,7 @@ static bool make_artifact_special(object_type *o_ptr)
 		o_ptr->name1 = i;
 
 		/* Extract some flags */
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Hack give a basic exp/exp level to an object that needs it */
 		if (f4 & TR4_LEVELS)
@@ -2887,7 +2892,7 @@ static bool make_artifact_special(object_type *o_ptr)
 static bool make_artifact(object_type *o_ptr)
 {
 	int i;
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 	object_kind *k_ptr = &k_info[o_ptr->k_idx];
 
 	/* No artifacts in the town */
@@ -2950,7 +2955,7 @@ static bool make_artifact(object_type *o_ptr)
 		random_artifact_resistance(o_ptr);
 
 		/* Extract some flags */
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Hack give a basic exp/exp level to an object that needs it */
 		if (f4 & TR4_LEVELS)
@@ -3018,6 +3023,11 @@ static bool make_ego_item(object_type *o_ptr, bool good)
 		                ((k_ptr->flags3 & e_ptr->need_flags3) != e_ptr->need_flags3) ||
 		                ((k_ptr->flags4 & e_ptr->need_flags4) != e_ptr->need_flags4) ||
 		                ((k_ptr->flags5 & e_ptr->need_flags5) != e_ptr->need_flags5) ||
+		                ((k_ptr->flags6 & e_ptr->need_flags6) != e_ptr->need_flags6) ||
+		                ((k_ptr->flags7 & e_ptr->need_flags7) != e_ptr->need_flags7) ||
+		                ((k_ptr->flags8 & e_ptr->need_flags8) != e_ptr->need_flags8) ||
+		                ((k_ptr->flags9 & e_ptr->need_flags9) != e_ptr->need_flags9) ||
+		                ((k_ptr->flags10 & e_ptr->need_flags10) != e_ptr->need_flags10) ||
 		                ((k_ptr->esp & e_ptr->need_esp) != e_ptr->need_esp))
 			continue;
 		if ((k_ptr->flags1 & e_ptr->forbid_flags1) ||
@@ -3025,6 +3035,11 @@ static bool make_ego_item(object_type *o_ptr, bool good)
 		                (k_ptr->flags3 & e_ptr->forbid_flags3) ||
 		                (k_ptr->flags4 & e_ptr->forbid_flags4) ||
 		                (k_ptr->flags5 & e_ptr->forbid_flags5) ||
+		                (k_ptr->flags6 & e_ptr->forbid_flags6) ||
+		                (k_ptr->flags7 & e_ptr->forbid_flags7) ||
+		                (k_ptr->flags8 & e_ptr->forbid_flags8) ||
+		                (k_ptr->flags9 & e_ptr->forbid_flags9) ||
+		                (k_ptr->flags10 & e_ptr->forbid_flags10) ||
 		                (k_ptr->esp & e_ptr->forbid_esp))
 			continue;
 
@@ -3119,6 +3134,11 @@ static bool make_ego_item(object_type *o_ptr, bool good)
 			                ((k_ptr->flags3 & e_ptr->need_flags3) != e_ptr->need_flags3) ||
 			                ((k_ptr->flags4 & e_ptr->need_flags4) != e_ptr->need_flags4) ||
 			                ((k_ptr->flags5 & e_ptr->need_flags5) != e_ptr->need_flags5) ||
+			                ((k_ptr->flags6 & e_ptr->need_flags6) != e_ptr->need_flags6) ||
+			                ((k_ptr->flags7 & e_ptr->need_flags7) != e_ptr->need_flags7) ||
+			                ((k_ptr->flags8 & e_ptr->need_flags8) != e_ptr->need_flags8) ||
+			                ((k_ptr->flags9 & e_ptr->need_flags9) != e_ptr->need_flags9) ||
+			                ((k_ptr->flags10 & e_ptr->need_flags10) != e_ptr->need_flags10) ||
 			                ((k_ptr->esp & e_ptr->need_esp) != e_ptr->need_esp))
 				continue;
 			if ((k_ptr->flags1 & e_ptr->forbid_flags1) ||
@@ -3126,6 +3146,11 @@ static bool make_ego_item(object_type *o_ptr, bool good)
 			                (k_ptr->flags3 & e_ptr->forbid_flags3) ||
 			                (k_ptr->flags4 & e_ptr->forbid_flags4) ||
 			                (k_ptr->flags5 & e_ptr->forbid_flags5) ||
+			                (k_ptr->flags6 & e_ptr->forbid_flags6) ||
+			                (k_ptr->flags7 & e_ptr->forbid_flags7) ||
+			                (k_ptr->flags8 & e_ptr->forbid_flags8) ||
+			                (k_ptr->flags9 & e_ptr->forbid_flags9) ||
+			                (k_ptr->flags10 & e_ptr->forbid_flags10) ||
 			                (k_ptr->esp & e_ptr->forbid_esp))
 				continue;
 
@@ -3961,7 +3986,7 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
  */
 static void a_m_aux_4(object_type *o_ptr, int level, int power)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 	s32b bonus_lvl, max_lvl;
 	object_kind *k_ptr = &k_info[o_ptr->k_idx];
 
@@ -4009,7 +4034,7 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 
 	case TV_LITE:
 		{
-			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 			/* Hack -- random fuel */
 			if (f4 & TR4_FUEL_LITE)
@@ -4772,6 +4797,11 @@ void apply_magic(object_type *o_ptr, int lev, bool okay, bool good, bool great)
 	o_ptr->art_oflags3 = k_ptr->oflags3;
 	o_ptr->art_oflags4 = k_ptr->oflags4;
 	o_ptr->art_oflags5 = k_ptr->oflags5;
+	o_ptr->art_oflags6 = k_ptr->oflags6;
+	o_ptr->art_oflags7 = k_ptr->oflags7;
+	o_ptr->art_oflags8 = k_ptr->oflags8;
+	o_ptr->art_oflags9 = k_ptr->oflags9;
+	o_ptr->art_oflags10 = k_ptr->oflags10;
 	o_ptr->art_oesp = k_ptr->oesp;
 
 	/* No need to touch normal artifacts */
@@ -5060,7 +5090,7 @@ void apply_magic(object_type *o_ptr, int lev, bool okay, bool good, bool great)
 		ego_item_type *e_ptr;
 		int j;
 		bool limit_blows = FALSE;
-		u32b f1, f2, f3, f4, f5, esp;
+		u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 		s16b e_idx;
 
 		e_idx = o_ptr->name2;
@@ -5080,6 +5110,11 @@ try_an_other_ego:
 				o_ptr->art_flags3 |= e_ptr->flags3[j];
 				o_ptr->art_flags4 |= e_ptr->flags4[j];
 				o_ptr->art_flags5 |= e_ptr->flags5[j];
+				o_ptr->art_flags6 |= e_ptr->flags6[j];
+				o_ptr->art_flags7 |= e_ptr->flags7[j];
+				o_ptr->art_flags8 |= e_ptr->flags8[j];
+				o_ptr->art_flags9 |= e_ptr->flags9[j];
+				o_ptr->art_flags10 |= e_ptr->flags10[j];
 				o_ptr->art_esp |= e_ptr->esp[j];
 
 				o_ptr->art_oflags1 |= e_ptr->oflags1[j];
@@ -5087,6 +5122,11 @@ try_an_other_ego:
 				o_ptr->art_oflags3 |= e_ptr->oflags3[j];
 				o_ptr->art_oflags4 |= e_ptr->oflags4[j];
 				o_ptr->art_oflags5 |= e_ptr->oflags5[j];
+				o_ptr->art_oflags6 |= e_ptr->oflags6[j];
+				o_ptr->art_oflags7 |= e_ptr->oflags7[j];
+				o_ptr->art_oflags8 |= e_ptr->oflags8[j];
+				o_ptr->art_oflags9 |= e_ptr->oflags9[j];
+				o_ptr->art_oflags10 |= e_ptr->oflags10[j];
 				o_ptr->art_oesp |= e_ptr->oesp[j];
 
 				add_random_ego_flag(o_ptr, e_ptr->fego[j], &limit_blows);
@@ -5100,7 +5140,7 @@ try_an_other_ego:
 		}*/
 
 		/* get flags */
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Hack -- acquire "cursed" flag */
 		if (f3 & TR3_CURSED) o_ptr->ident |= (IDENT_CURSED);
@@ -5147,7 +5187,7 @@ try_an_other_ego:
 	/* Examine real objects */
 	if (o_ptr->k_idx)
 	{
-		u32b f1, f2, f3, f4, f5, esp;
+		u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 		object_kind *k_ptr = &k_info[o_ptr->k_idx];
 
@@ -5155,7 +5195,7 @@ try_an_other_ego:
 		if (k_ptr->flags3 & (TR3_CURSED)) o_ptr->ident |= (IDENT_CURSED);
 
 		/* Extract some flags */
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Hack give a basic exp/exp level to an object that needs it */
 		if (f4 & TR4_LEVELS)

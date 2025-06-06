@@ -2304,7 +2304,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					/* Find an item */
 					for (k = 0; k < 10; k++)
 					{
-						u32b f1, f2, f3, f4, f5, esp;
+						u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 						/* Pick an item */
 						i = rand_int(INVEN_PACK);
@@ -2312,7 +2312,7 @@ bool make_attack_normal(int m_idx, byte divis)
 						/* Obtain the item */
 						o_ptr = &p_ptr->inventory[i];
 
-						object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+						object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 						/* charge holding allows item to resist 90% of the time --Amy */
 						if ((f5 & (TR5_CHARGE_HOLDING)) && randint(10) != 1) continue;

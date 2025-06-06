@@ -2108,6 +2108,21 @@ void do_cmd_create_artifact(object_type *q_ptr)
 			if (q_ptr->art_flags5 & 1 << (a_select_flags[i].flag % 32)) flags_select[i] = -1;
 			break;
 		case 5:
+			if (q_ptr->art_flags6 & 1 << (a_select_flags[i].flag % 32)) flags_select[i] = -1;
+			break;
+		case 6:
+			if (q_ptr->art_flags7 & 1 << (a_select_flags[i].flag % 32)) flags_select[i] = -1;
+			break;
+		case 7:
+			if (q_ptr->art_flags8 & 1 << (a_select_flags[i].flag % 32)) flags_select[i] = -1;
+			break;
+		case 8:
+			if (q_ptr->art_flags9 & 1 << (a_select_flags[i].flag % 32)) flags_select[i] = -1;
+			break;
+		case 9:
+			if (q_ptr->art_flags10 & 1 << (a_select_flags[i].flag % 32)) flags_select[i] = -1;
+			break;
+		case 10:
 			if (q_ptr->art_esp & 1 << (a_select_flags[i].flag % 32)) flags_select[i] = -1;
 			break;
 		default:
@@ -2395,6 +2410,21 @@ void do_cmd_create_artifact(object_type *q_ptr)
 					q_ptr->art_flags5 |= 1 << (a_select_flags[i].flag % 32);
 					break;
 				case 5:
+					q_ptr->art_flags6 |= 1 << (a_select_flags[i].flag % 32);
+					break;
+				case 6:
+					q_ptr->art_flags7 |= 1 << (a_select_flags[i].flag % 32);
+					break;
+				case 7:
+					q_ptr->art_flags8 |= 1 << (a_select_flags[i].flag % 32);
+					break;
+				case 8:
+					q_ptr->art_flags9 |= 1 << (a_select_flags[i].flag % 32);
+					break;
+				case 9:
+					q_ptr->art_flags10 |= 1 << (a_select_flags[i].flag % 32);
+					break;
+				case 10:
 					q_ptr->art_esp |= 1 << (a_select_flags[i].flag % 32);
 					break;
 				default:
@@ -2763,15 +2793,20 @@ void do_cmd_toggle_artifact(object_type *o_ptr)
 		 * 'kind' area are visible when finalizing the artifact.
 		 */
 		{
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
-			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 			o_ptr->art_flags1 |= f1;
 			o_ptr->art_flags2 |= f2;
 			o_ptr->art_flags3 |= f3;
 			o_ptr->art_flags4 |= f4;
 			o_ptr->art_flags5 |= f5;
+			o_ptr->art_flags6 |= f6;
+			o_ptr->art_flags7 |= f7;
+			o_ptr->art_flags8 |= f8;
+			o_ptr->art_flags9 |= f9;
+			o_ptr->art_flags10 |= f10;
 			o_ptr->art_esp |= esp;
 		}
 
@@ -3589,8 +3624,8 @@ int alchemist_learn_object(object_type *o_ptr)
 	if ( artifact_p(o_ptr) )
 	{
 		char o_name[80];
-		u32b f1, f2, f3, f4, f5, esp;
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Randarts and normal artifacts both*/
 		alchemist_known_artifacts[0] |= f1;
@@ -3598,7 +3633,12 @@ int alchemist_learn_object(object_type *o_ptr)
 		alchemist_known_artifacts[2] |= f3;
 		alchemist_known_artifacts[3] |= f4;
 		alchemist_known_artifacts[4] |= f5;
-		alchemist_known_artifacts[5] |= esp;
+		alchemist_known_artifacts[5] |= f6;
+		alchemist_known_artifacts[6] |= f7;
+		alchemist_known_artifacts[7] |= f8;
+		alchemist_known_artifacts[8] |= f9;
+		alchemist_known_artifacts[9] |= f10;
+		alchemist_known_artifacts[10] |= esp;
 
 		object_desc(o_name, o_ptr, 1, 0);
 		msg_format("You learn all about the abilities of %s!", o_name);

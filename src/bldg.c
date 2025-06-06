@@ -933,9 +933,9 @@ static void compare_weapon_aux2(object_type *o_ptr, int numblows, int r, int c, 
  */
 static void compare_weapon_aux1(object_type *o_ptr, int col, int r)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 
 	if (f1 & (TR1_SLAY_ANIMAL))
@@ -1555,9 +1555,9 @@ static void sell_quest_monster(void)
 		r_ptr->r_flags4 = r_ptr->flags4;
 		r_ptr->r_flags5 = r_ptr->flags5;
 		r_ptr->r_flags6 = r_ptr->flags6;
-		r_ptr->r_flags4 = r_ptr->flags7;
-		r_ptr->r_flags5 = r_ptr->flags8;
-		r_ptr->r_flags6 = r_ptr->flags9;
+		r_ptr->r_flags7 = r_ptr->flags7;
+		r_ptr->r_flags8 = r_ptr->flags8;
+		r_ptr->r_flags9 = r_ptr->flags9;
 
 		msg_print(NULL);
 

@@ -2333,11 +2333,11 @@ bool hates_cold(object_type *o_ptr)
  */
 int set_acid_destroy(object_type *o_ptr)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	if (!hates_acid(o_ptr)) return (FALSE);
 
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 	if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47) return (FALSE);
 	return (TRUE);
 }
@@ -2348,11 +2348,11 @@ int set_acid_destroy(object_type *o_ptr)
  */
 int set_elec_destroy(object_type *o_ptr)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	if (!hates_elec(o_ptr)) return (FALSE);
 
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 	if ((f3 & (TR3_IGNORE_ELEC)) && !p_ptr->nastytrap47) return (FALSE);
 	return (TRUE);
 }
@@ -2363,11 +2363,11 @@ int set_elec_destroy(object_type *o_ptr)
  */
 int set_fire_destroy(object_type *o_ptr)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	if (!hates_fire(o_ptr)) return (FALSE);
 
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 	if ((f3 & (TR3_IGNORE_FIRE)) && !p_ptr->nastytrap47) return (FALSE);
 	return (TRUE);
 }
@@ -2378,11 +2378,11 @@ int set_fire_destroy(object_type *o_ptr)
  */
 int set_cold_destroy(object_type *o_ptr)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	if (!hates_cold(o_ptr)) return (FALSE);
 
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 	if ((f3 & (TR3_IGNORE_COLD)) && !p_ptr->nastytrap47) return (FALSE);
 	return (TRUE);
 }
@@ -2493,7 +2493,7 @@ static int minus_ac(void)
 {
 	object_type *o_ptr = NULL;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	char o_name[80];
 
@@ -2532,7 +2532,7 @@ static int minus_ac(void)
 	object_desc(o_name, o_ptr, FALSE, 0);
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Object resists */
 	if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47)
@@ -4602,7 +4602,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 
 	bool obvious = FALSE;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	char o_name[80];
 
@@ -4637,7 +4637,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 		next_o_idx = o_ptr->next_o_idx;
 
 		/* Extract the flags */
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Get the "plural"-ness */
 		if (o_ptr->number > 1) plural = TRUE;
@@ -10460,12 +10460,12 @@ s16b do_poly_monster(int y, int x)
 int lithe_object_weight(object_type *o_ptr)
 {
 	int lobjweight = 0;
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	if (!o_ptr->k_idx) return FALSE;
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	lobjweight = o_ptr->weight;
 

@@ -26,7 +26,7 @@ static bool grab_one_power(int *ra_idx, object_type *o_ptr, bool good, s16b *max
 	int i = 0, j;
 	int *ok_ra, ok_num = 0;
 	bool ret = FALSE;
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	C_MAKE(ok_ra, max_ra_idx, int);
 
@@ -60,12 +60,17 @@ static bool grab_one_power(int *ra_idx, object_type *o_ptr, bool good, s16b *max
 		if (max_times[i] >= ra_ptr->max) continue;
 
 		/* Must NOT have the antagonic flags */
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 		if (f1 & ra_ptr->aflags1) continue;
 		if (f2 & ra_ptr->aflags2) continue;
 		if (f3 & ra_ptr->aflags3) continue;
 		if (f4 & ra_ptr->aflags4) continue;
 		if (f5 & ra_ptr->aflags5) continue;
+		if (f6 & ra_ptr->aflags6) continue;
+		if (f7 & ra_ptr->aflags7) continue;
+		if (f8 & ra_ptr->aflags8) continue;
+		if (f9 & ra_ptr->aflags9) continue;
+		if (f10 & ra_ptr->aflags10) continue;
 		if (esp & ra_ptr->aesp) continue;
 
 		/* ok */
@@ -1142,7 +1147,7 @@ bool create_artifact(object_type *o_ptr, bool a_scroll, bool get_name)
 	int powers = 0, i;
 	s32b total_flags, total_power = 0;
 	bool a_cursed = FALSE;
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 	s16b *max_times;
 	s16b pval = 0;
 	bool limit_blows = FALSE;
@@ -1200,12 +1205,17 @@ bool create_artifact(object_type *o_ptr, bool a_scroll, bool get_name)
 		o_ptr->art_flags3 |= ra_ptr->flags3;
 		o_ptr->art_flags4 |= ra_ptr->flags4;
 		o_ptr->art_flags5 |= ra_ptr->flags5;
+		o_ptr->art_flags6 |= ra_ptr->flags6;
+		o_ptr->art_flags7 |= ra_ptr->flags7;
+		o_ptr->art_flags8 |= ra_ptr->flags8;
+		o_ptr->art_flags9 |= ra_ptr->flags9;
+		o_ptr->art_flags10 |= ra_ptr->flags10;
 		o_ptr->art_esp |= ra_ptr->esp;
 
 		add_random_ego_flag(o_ptr, ra_ptr->fego, &limit_blows);
 
 		/* get flags */
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Hack -- acquire "cursed" flag */
 		if (f3 & TR3_CURSED) o_ptr->ident |= (IDENT_CURSED);
@@ -1247,7 +1257,7 @@ bool create_artifact(object_type *o_ptr, bool a_scroll, bool get_name)
 	}
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	if (get_name)
 	{

@@ -5317,7 +5317,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			{
 				char i_name[80];
 				object_type *j_ptr, *q_ptr, forge;
-				u32b f1, f2, f3, f4, f5, esp;
+				u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 				/* Pick an item */
 				s16b i = rand_int(INVEN_PACK);
@@ -5329,7 +5329,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (!j_ptr->k_idx) continue;
 
 				/* can also steal artifacts :-P --Amy */
-				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 				if(f3 & TR3_PERMA_CURSE) continue;
 
 				/* Get a description */
@@ -6148,7 +6148,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			s16b i, j, slot1, slot2;
 			object_type *j_ptr, *k_ptr;
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
 			{
@@ -6157,7 +6157,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (!j_ptr->k_idx) continue;
 
 				/* Do not allow this trap to touch the One Ring */
-				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 				if(f3 & TR3_PERMA_CURSE) continue;
 
 				slot1 = wield_slot(j_ptr);
@@ -6169,7 +6169,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					if (!k_ptr->k_idx) continue;
 
 					/* Do not allow this trap to touch the One Ring */
-					object_flags(k_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					object_flags(k_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 					if(f3 & TR3_PERMA_CURSE) continue;
 
 					/* this is a crude hack, but it prevent wielding 6 torches... */
@@ -6649,7 +6649,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		/* Trap of Charges Drain */
 	case TRAP_OF_CHARGES_DRAIN:
 		{
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			/* Find an item */
 			for (k = 0; k < 10; k++)
@@ -6658,7 +6658,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 				object_type *j_ptr = &p_ptr->inventory[i];
 
-				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 				/* Drain charged wands/staffs
 				   Hack -- don't let artifacts get drained */
@@ -7000,7 +7000,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			s16b i, j;
 			bool message = FALSE;
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (i = 0; i < INVEN_PACK; i++)
 			{
@@ -7021,7 +7021,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 					object_copy(j_ptr, &p_ptr->inventory[i]);
 
-					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 					if(f3 & TR3_PERMA_CURSE) continue;
 
 					inven_item_increase(i, -999);
@@ -7059,7 +7059,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			s16b i, j;
 			bool message = FALSE;
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (i = 0; i < INVEN_PACK; i++)
 			{
@@ -7080,7 +7080,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 					object_copy(j_ptr, &p_ptr->inventory[i]);
 
-					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 					if(f3 & TR3_PERMA_CURSE) continue;
 
 					inven_item_increase(i, -999);
@@ -7118,7 +7118,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			s16b i, j;
 			bool message = FALSE;
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (i = 0; i < INVEN_PACK; i++)
 			{
@@ -7137,7 +7137,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 					object_copy(j_ptr, &p_ptr->inventory[i]);
 
-					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 					if(f3 & TR3_PERMA_CURSE) continue;
 
 					inven_item_increase(i, -999);
@@ -7177,7 +7177,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			s16b i, j;
 			bool message = FALSE;
 
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
 			{
@@ -7198,7 +7198,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 					object_copy(j_ptr, &p_ptr->inventory[i]);
 
-					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 					if(f3 & TR3_PERMA_CURSE) continue;
 
 					inven_item_increase(i, -999);
@@ -7237,7 +7237,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			s16b i, j;
 			bool message = FALSE;
 
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
 			{
@@ -7258,7 +7258,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 					object_copy(j_ptr, &p_ptr->inventory[i]);
 
-					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 					if(f3 & TR3_PERMA_CURSE) continue;
 
 					inven_item_increase(i, -999);
@@ -7297,7 +7297,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			s16b i, j;
 			bool message = FALSE;
 
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
 			{
@@ -7316,7 +7316,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 					object_copy(j_ptr, &p_ptr->inventory[i]);
 
-					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 					if(f3 & TR3_PERMA_CURSE) continue;
 
 					inven_item_increase(i, -999);
@@ -7356,7 +7356,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			s16b i, j;
 			bool message = FALSE;
 
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
 			{
@@ -7377,7 +7377,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 					object_copy(j_ptr, &p_ptr->inventory[i]);
 
-					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 					if(f3 & TR3_PERMA_CURSE) continue;
 
 					inven_item_increase(i, -999);
@@ -7404,7 +7404,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			s16b i, j;
 			bool message = FALSE;
 
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
 			{
@@ -7425,7 +7425,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 					object_copy(j_ptr, &p_ptr->inventory[i]);
 
-					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 					if(f3 & TR3_PERMA_CURSE) continue;
 
 					inven_item_increase(i, -999);
@@ -7452,7 +7452,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			s16b i, j;
 			bool message = FALSE;
 
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
 			{
@@ -7471,7 +7471,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 					object_copy(j_ptr, &p_ptr->inventory[i]);
 
-					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+					object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 					if(f3 & TR3_PERMA_CURSE) continue;
 
 					inven_item_increase(i, -999);
@@ -8922,7 +8922,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			object_type *j_ptr;
 			s16b j, chance = 75;
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (j = 0; j < INVEN_TOTAL; j++)
 			{
@@ -8932,7 +8932,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (!p_ptr->inventory[j].k_idx) continue;
 
 				j_ptr = &p_ptr->inventory[j];
-				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 				/* is it a non-artifact speed item? */
 				if ((!j_ptr->name1) && (f1 & TR1_SPEED))
@@ -8976,7 +8976,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			object_type *j_ptr;
 			s16b j;
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (j = 0; j < INVEN_TOTAL; j++)
 			{
@@ -8986,7 +8986,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (!p_ptr->inventory[j].k_idx) continue;
 
 				j_ptr = &p_ptr->inventory[j];
-				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 				/* is it a speed item? (can also affect artifacts :-P --Amy) */
 				if (f1 & TR1_SPEED)
@@ -9027,7 +9027,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			object_type *j_ptr;
 			s16b j, chance = 20;
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (j = 0; j < INVEN_TOTAL; j++)
 			{
@@ -9037,7 +9037,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (!p_ptr->inventory[j].k_idx) continue;
 
 				j_ptr = &p_ptr->inventory[j];
-				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 				/* does it have less than 100% discount? */
 				if (j_ptr->discount < 100)
@@ -9076,7 +9076,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			object_type *j_ptr;
 			s16b j, chance = 50;
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (j = 0; j < INVEN_TOTAL; j++)
 			{
@@ -9086,7 +9086,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (!p_ptr->inventory[j].k_idx) continue;
 
 				j_ptr = &p_ptr->inventory[j];
-				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 				/* does it have less than 100% discount? */
 				if (j_ptr->discount < 100)
@@ -9125,7 +9125,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			object_type *j_ptr;
 			s16b j;
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (j = 0; j < INVEN_TOTAL; j++)
 			{
@@ -9135,7 +9135,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (!p_ptr->inventory[j].k_idx) continue;
 
 				j_ptr = &p_ptr->inventory[j];
-				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 				/* does it have less than 100% discount? */
 				if (j_ptr->discount < 100)
@@ -9172,7 +9172,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			object_type *j_ptr;
 			s16b j, chance = 20;
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (j = 0; j < INVEN_TOTAL; j++)
 			{
@@ -9182,7 +9182,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (!p_ptr->inventory[j].k_idx) continue;
 
 				j_ptr = &p_ptr->inventory[j];
-				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 				/* does it have some elemental ignore flag? */
 				if (randint(100) < chance)
@@ -9239,7 +9239,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			object_type *j_ptr;
 			s16b j, chance = 50;
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (j = 0; j < INVEN_TOTAL; j++)
 			{
@@ -9249,7 +9249,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (!p_ptr->inventory[j].k_idx) continue;
 
 				j_ptr = &p_ptr->inventory[j];
-				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 				/* does it have some elemental ignore flag? */
 				if (randint(100) < chance)
@@ -9306,7 +9306,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			object_type *j_ptr;
 			s16b j;
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			for (j = 0; j < INVEN_TOTAL; j++)
 			{
@@ -9316,7 +9316,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (!p_ptr->inventory[j].k_idx) continue;
 
 				j_ptr = &p_ptr->inventory[j];
-				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 				/* does it have some elemental ignore flag? */
 				if (f3 & TR3_IGNORE_ACID)
@@ -11118,8 +11118,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				take_hit(damroll(2, 4), "a heap of shit");
 			} else {
 				int bootdamagechance = 30;
-				u32b f1, f2, f3, f4, f5, esp;
-				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 				if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47) bootdamagechance = 3;
 
@@ -11147,8 +11147,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				(void)set_slow(p_ptr->slow + rand_int(10) + 4);
 			} else {
 				int bootdamagechance = 70;
-				u32b f1, f2, f3, f4, f5, esp;
-				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 				if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47) bootdamagechance = 10;
 
@@ -11177,8 +11177,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				(void)set_slow(p_ptr->slow + rand_int(20) + 25);
 			} else {
 				int bootdamagechance = 100;
-				u32b f1, f2, f3, f4, f5, esp;
-				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+				u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 				if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47) bootdamagechance = 40;
 
@@ -13994,7 +13994,7 @@ void do_cmd_set_trap(void)
 
 	object_type object_type_body;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	/* Check some conditions */
 	if (p_ptr->blind)
@@ -14074,7 +14074,7 @@ void do_cmd_set_trap(void)
 	/* In some cases, take multiple objects to load */
 	if (o_ptr->sval != SV_TRAPKIT_DEVICE)
 	{
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		if ((f3 & TR3_XTRA_SHOTS) && (o_ptr->pval > 0)) num += o_ptr->pval;
 
@@ -14784,7 +14784,7 @@ bool mon_hit_trap(int m_idx)
 
 	object_type *kit_o_ptr, *load_o_ptr, *j_ptr;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	object_type object_type_body;
 
@@ -14815,7 +14815,7 @@ bool mon_hit_trap(int m_idx)
 	j_ptr = &object_type_body;
 
 	/* Get trap properties */
-	object_flags(kit_o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(kit_o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Can set off check */
 	/* Ghosts only set off Ghost traps */
@@ -15177,9 +15177,9 @@ bool mon_hit_trap(int m_idx)
 				if (load_o_ptr->tval == TV_ROD_MAIN)
 				{
 					/* Extract mana cost of the rod tip */
-					u32b tf1, tf2, tf3, tf4, tf5, tesp;
+					u32b tf1, tf2, tf3, tf4, tf5, tf6, tf7, tf8, tf9, tf10, tesp;
 					object_kind *tip_o_ptr = &k_info[lookup_kind(TV_ROD, load_o_ptr->pval)];
-					object_flags(load_o_ptr, &tf1, &tf2, &tf3, &tf4, &tf5, &tesp);
+					object_flags(load_o_ptr, &tf1, &tf2, &tf3, &tf4, &tf5, &tf6, &tf7, &tf8, &tf9, &tf10, &tesp);
 					cost = (tf4 & TR4_CHEAPNESS) ? tip_o_ptr->pval / 2 : tip_o_ptr->pval;
 					if (cost <= 0) cost = 1;
 				}

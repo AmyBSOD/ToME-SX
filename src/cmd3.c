@@ -184,12 +184,12 @@ void do_cmd_equip(void)
  */
 static bool item_tester_hook_wear(object_type *o_ptr)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 	int slot = wield_slot(o_ptr);
 
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Only one ultimate at a time */
 	if (f4 & TR4_ULTIMATE)
@@ -201,7 +201,7 @@ static bool item_tester_hook_wear(object_type *o_ptr)
 			object_type *q_ptr = &p_ptr->inventory[i];
 
 			/* Extract the flags */
-			object_flags(q_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+			object_flags(q_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 			if (!q_ptr->k_idx) continue;
 
@@ -252,7 +252,7 @@ void do_cmd_wield(void)
 
 	cptr q, s;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 
 	/* Restrict the choices */
@@ -309,7 +309,7 @@ void do_cmd_wield(void)
 	if (process_hooks(HOOK_WIELD, "(d)", item)) return;
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Two handed weapons can't be wielded with a shield */
 	if ((is_slot_ok(slot - INVEN_WIELD + INVEN_ARM)) &&
@@ -326,7 +326,7 @@ void do_cmd_wield(void)
 		i_ptr = &p_ptr->inventory[slot - INVEN_ARM + INVEN_WIELD];
 
 		/* Extract the flags */
-		object_flags(i_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(i_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Prevent shield from being put on if wielding 2H */
 		if ((f4 & TR4_MUST2H) && (i_ptr->k_idx) &&
@@ -349,7 +349,7 @@ void do_cmd_wield(void)
 
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	if ((is_slot_ok(slot - INVEN_WIELD + INVEN_ARM)) &&
 	                (p_ptr->inventory[slot - INVEN_WIELD + INVEN_ARM].k_idx != 0) &&
@@ -601,7 +601,7 @@ void do_cmd_drop(void)
 
 	object_type *o_ptr;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	cptr q, s;
 
@@ -623,7 +623,7 @@ void do_cmd_drop(void)
 		o_ptr = &o_list[0 - item];
 	}
 
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Can we drop */
 	if (process_hooks(HOOK_DROP, "(d)", item)) return;
@@ -690,7 +690,7 @@ void do_cmd_destroy(void)
 
 	cptr q, s;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 
 	/* Hack -- force destruction */
@@ -746,7 +746,7 @@ void do_cmd_destroy(void)
 	/* Take no time, just like the automatizer */
 	energy_use = 0;
 
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	if (((f4 & TR4_CURSE_NO_DROP) || p_ptr->nastytrap102) && cursed_p(o_ptr))
 	{
@@ -1226,7 +1226,7 @@ void do_cmd_refill(void)
 {
 	object_type *o_ptr;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 
 	/* Get the light */
@@ -1239,7 +1239,7 @@ void do_cmd_refill(void)
 		return;
 	}
 
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	if (f4 & TR4_FUEL_LITE)
 	{

@@ -206,11 +206,11 @@ s16b tot_dam_aux(object_type *o_ptr, int tdam, monster_type *m_ptr,
 
 	monster_race *r_ptr = race_inf(m_ptr);
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Some "weapons" and "ammo" do extra damage */
 	switch (o_ptr->tval)
@@ -2511,13 +2511,13 @@ static void py_attack_hand(int *k, monster_type *m_ptr, s32b *special)
 void do_nazgul(int *k, int *num, int num_blow, int weap, monster_race *r_ptr,
                object_type *o_ptr)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	bool mundane;
 	bool allow_shatter = TRUE;
 
 	/* Extract mundane-ness of the current weapon */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* It should be Slay Evil, Slay Undead, or *Slay Undead* */
 	mundane = !(f1 & TR1_SLAY_EVIL) && !(f1 & TR1_SLAY_UNDEAD) &&
@@ -2643,7 +2643,7 @@ void py_attack(int y, int x, int max_blow)
 	int drain_left = MAX_VAMPIRIC_DRAIN;
 
 	/* A massive hack -- life-draining weapons */
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	bool no_extra = FALSE;
 
@@ -2781,7 +2781,7 @@ void py_attack(int y, int x, int max_blow)
 			bonus = p_ptr->to_h + p_ptr->to_h_melee + o_ptr->to_h;
 			chance = p_ptr->skill_thn + (bonus * BTH_PLUS_ADJ);
 
-			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 			if (!(f4 & TR4_NEVER_BLOW))
 			{

@@ -4141,7 +4141,7 @@ void do_cmd_throw(void)
 
 	cptr q, s;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 
 	/* Get an item */
@@ -4160,7 +4160,7 @@ void do_cmd_throw(void)
 	}
 
 
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Hack - Cannot throw away 'no drop' cursed items */
 	if (cursed_p(o_ptr) && ((f4 & TR4_CURSE_NO_DROP) || p_ptr->nastytrap102) )

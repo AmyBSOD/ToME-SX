@@ -1232,6 +1232,26 @@ struct player_type
 	 * @brief Number
 	 */
 	u32b xtra_f5;
+	/** @structvar xtra_f6
+	 * @brief Number
+	 */
+	u32b xtra_f6;
+	/** @structvar xtra_f7
+	 * @brief Number
+	 */
+	u32b xtra_f7;
+	/** @structvar xtra_f8
+	 * @brief Number
+	 */
+	u32b xtra_f8;
+	/** @structvar xtra_f9
+	 * @brief Number
+	 */
+	u32b xtra_f9;
+	/** @structvar xtra_f10
+	 * @brief Number
+	 */
+	u32b xtra_f10;
 	/** @structvar xtra_esp
 	 * @brief Number
 	 */
@@ -5169,6 +5189,26 @@ struct player_race_mod
 	 * @brief Number
 	 */
 	u32b oflags5[51];
+	/** @structvar oflags6[51]
+	 * @brief Number
+	 */
+	u32b oflags6[51];
+	/** @structvar oflags7[51]
+	 * @brief Number
+	 */
+	u32b oflags7[51];
+	/** @structvar oflags8[51]
+	 * @brief Number
+	 */
+	u32b oflags8[51];
+	/** @structvar oflags9[51]
+	 * @brief Number
+	 */
+	u32b oflags9[51];
+	/** @structvar oflags10[51]
+	 * @brief Number
+	 */
+	u32b oflags10[51];
 	/** @structvar oesp[51]
 	 * @brief Number
 	 */
@@ -5914,7 +5954,7 @@ extern bool set_slow(int v);
 extern bool set_shield(int v, int p, s16b o, s16b d1, s16b d2);
 
 /* For calc_bonus hooks */
-/** @fn apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pval = 0, s16b tval = 0, s16b to_h = 0, s16b to_d = 0, s16b to_a = 0)
+/** @fn apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b f6, u32b f7, u32b f8, u32b f9, u32b f10, u32b esp, s16b pval = 0, s16b tval = 0, s16b to_h = 0, s16b to_d = 0, s16b to_a = 0)
  * @brief Apply flags and values to the player.\n
  * @param f1 Number \n flags to be applied to the player
  * @brief Flag1
@@ -5970,7 +6010,7 @@ extern bool set_shield(int v, int p, s16b o, s16b d1, s16b d2);
  * to_h, to_d, and to_ac can apply to anti-magic power and radius.
  * @note (see file xtra1.c)
  */
-extern void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b esp, s16b pval = 0, s16b tval = 0, s16b to_h = 0, s16b to_d = 0, s16b to_a = 0);
+extern void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b f6, u32b f7, u32b f8, u32b f9, u32b f10, u32b esp, s16b pval = 0, s16b tval = 0, s16b to_h = 0, s16b to_d = 0, s16b to_a = 0);
 
 /** @name Shield effect options
  * @{ */

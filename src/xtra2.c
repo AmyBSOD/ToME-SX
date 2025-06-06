@@ -5836,9 +5836,9 @@ void gain_exp(s32b amount)
 	for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
 	{
 		object_type *o_ptr = &p_ptr->inventory[i];
-		u32b f1, f2, f3, f4, f5, esp;
+		u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		if (!o_ptr->k_idx) continue;
 
@@ -5849,9 +5849,9 @@ void gain_exp(s32b amount)
 	for (i = INVEN_WIELD; i < INVEN_TOTAL; i++)
 	{
 		object_type *o_ptr = &p_ptr->inventory[i];
-		u32b f1, f2, f3, f4, f5, esp;
+		u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		if (!o_ptr->k_idx) continue;
 
@@ -6822,12 +6822,12 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		{
 			object_type *o_ptr;
 			object_kind *k_ptr;
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			/* Access the weapon */
 			o_ptr = &p_ptr->inventory[INVEN_WIELD];
 			k_ptr = &k_info[o_ptr->k_idx];
-			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 			/* Can the weapon gain levels ? */
 			if ((o_ptr->k_idx) && (f4 & TR4_LEVELS))

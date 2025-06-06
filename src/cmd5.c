@@ -48,10 +48,10 @@ static bool hook_school_spellable(object_type *o_ptr)
 		return TRUE;
 	else
 	{
-		u32b f1, f2, f3, f4, f5, esp;
+		u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 		/* Extract object flags */
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		if ((f5 & TR5_SPELL_CONTAIN) && (o_ptr->spellcontain != -1))
 			return TRUE;
@@ -106,8 +106,8 @@ bool is_magestaff()
 
 extern void do_cmd_browse_aux(object_type *o_ptr)
 {
-	u32b f1, f2, f3, f4, f5, esp;
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	if (is_school_book(o_ptr))
 		browse_school_spell(o_ptr->sval, o_ptr->pval, o_ptr);
@@ -2658,19 +2658,19 @@ bool get_item_hook_find_spell(int *item)
 	for (i = 0; i < INVEN_TOTAL; i++)
 	{
 		object_type *o_ptr = &p_ptr->inventory[i];
-		u32b f1, f2, f3, f4, f5, esp;
+		u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 		/* Must we wield it ? */
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 		if ((wield_slot(o_ptr) != -1) && (i < INVEN_WIELD) && (f5 & TR5_WIELD_CAST)) continue;
 
 		/* Is it a non-book? */
 		if (!is_school_book(o_ptr))
 		{
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 			/* Extract object flags */
-			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 			if ((f5 & TR5_SPELL_CONTAIN) && (o_ptr->spellcontain == spell))
 			{
@@ -2721,7 +2721,7 @@ u32b get_school_spell(cptr do_what, cptr check_fct, s16b force_book)
 	object_type *o_ptr, forge;
 	int tmp;
 	int sval, pval;
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	hack_force_spell = -1;
 	hack_force_spell_obj = NULL;
@@ -2747,7 +2747,7 @@ u32b get_school_spell(cptr do_what, cptr check_fct, s16b force_book)
 			o_ptr = &o_list[0 - item];
 		}
 
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* If it can be wielded, it must */
 		if ((wield_slot(o_ptr) != -1) && (item < INVEN_WIELD) && (f5 & TR5_WIELD_CAST))
@@ -2782,7 +2782,7 @@ u32b get_school_spell(cptr do_what, cptr check_fct, s16b force_book)
 	/* No spell to cast by default */
 	spell = -1;
 
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Is it a random book, or something else ? */
 	if (f5 & TR5_SPELL_CONTAIN) {
@@ -3030,10 +3030,10 @@ void browse_school_spell(int book, int pval, object_type *o_ptr)
 /* Can it contains a schooled spell ? */
 static bool hook_school_can_spellable(object_type *o_ptr)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	/* Extract object flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	if ((f5 & TR5_SPELL_CONTAIN) && (o_ptr->spellcontain == -1))
 		return TRUE;

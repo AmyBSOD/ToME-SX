@@ -3601,6 +3601,11 @@ bool curse_armor(void)
 		o_ptr->art_flags3 = 0;
 		o_ptr->art_flags4 = 0;
 		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
@@ -3668,6 +3673,11 @@ bool curse_light(void)
 		o_ptr->art_flags3 = 0;
 		o_ptr->art_flags4 = 0;
 		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
@@ -3734,6 +3744,11 @@ bool curse_tool(void)
 		o_ptr->art_flags3 = 0;
 		o_ptr->art_flags4 = 0;
 		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
@@ -3823,6 +3838,11 @@ bool curse_garment(void)
 		o_ptr->art_flags3 = 0;
 		o_ptr->art_flags4 = 0;
 		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
@@ -3912,6 +3932,11 @@ bool curse_jewelry(void)
 		o_ptr->art_flags3 = 0;
 		o_ptr->art_flags4 = 0;
 		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
@@ -3980,6 +4005,11 @@ bool curse_weapon(void)
 		o_ptr->art_flags3 = 0;
 		o_ptr->art_flags4 = 0;
 		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
@@ -4048,6 +4078,11 @@ bool curse_ammo(void)
 		o_ptr->art_flags3 = 0;
 		o_ptr->art_flags4 = 0;
 		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
@@ -4115,6 +4150,11 @@ bool curse_shooter(void)
 		o_ptr->art_flags3 = 0;
 		o_ptr->art_flags4 = 0;
 		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
@@ -5126,7 +5166,7 @@ void do_cmd_use_staff(void)
 
 	object_type *o_ptr;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	cptr q, s;
 
@@ -5190,7 +5230,7 @@ void do_cmd_use_staff(void)
 	chance = exec_lua(format("return spell_chance(%d)", o_ptr->pval2));
 
 	/* Extract object flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Is it simple to use ? */
 	if (f4 & TR4_EASY_USE)
@@ -5339,7 +5379,7 @@ void do_cmd_aim_wand(void)
 
 	cptr q, s;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 
 	/* No magic */
@@ -5402,7 +5442,7 @@ void do_cmd_aim_wand(void)
 	chance = exec_lua(format("return spell_chance(%d)", o_ptr->pval2));
 
 	/* Extract object flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Is it simple to use ? */
 	if (f4 & TR4_EASY_USE)
@@ -5543,7 +5583,7 @@ void zap_combine_rod_tip(object_type *q_ptr, int tip_item) /* q_ptr is the rod t
 
 	cptr q, s;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 	s32b cost;
 
 
@@ -5585,7 +5625,7 @@ void zap_combine_rod_tip(object_type *q_ptr, int tip_item) /* q_ptr is the rod t
 	}
 
 	/* Examine the rod */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Calculate rod tip's mana cost */
 	cost = q_ptr->pval;
@@ -5652,7 +5692,7 @@ void do_cmd_zap_rod(void)
 
 	object_kind *tip_ptr;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	cptr q, s;
 
@@ -5756,7 +5796,7 @@ void do_cmd_zap_rod(void)
 	energy_use = 100;
 
 	/* Examine the rod */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	if (f4 & TR4_FAST_CAST) energy_use /= 2;
 
@@ -6224,14 +6264,14 @@ void do_cmd_zap_rod(void)
  */
 static bool item_tester_hook_activate(object_type *o_ptr)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 
 	/* Not known */
 	if (!object_known_p(o_ptr)) return (FALSE);
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Check activation flag */
 	if (f3 & (TR3_ACTIVATE)) return (TRUE);
@@ -6411,7 +6451,7 @@ void do_cmd_activate(void)
 
 	object_type *o_ptr;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	cptr q, s;
 
@@ -6439,7 +6479,7 @@ void do_cmd_activate(void)
 	}
 
 	/* Extract object flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Wearable items have to be worn */
 	if (!(f5 & TR5_ACTIVATE_NO_WIELD))

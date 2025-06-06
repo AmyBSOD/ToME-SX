@@ -216,7 +216,7 @@ static void wiz_create_named_art()
 	k_ptr = &k_info[q_ptr->k_idx];
 
 	/* Extract some flags */
-	object_flags(q_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(q_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Hack give a basic exp/exp level to an object that needs it */
 	if (f4 & TR4_LEVELS)
@@ -519,11 +519,11 @@ static void do_cmd_wiz_change(void)
 static void wiz_display_item(object_type *o_ptr)
 {
 	int i, j = 13;
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 	char buf[256];
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Clear the screen */
 	for (i = 1; i <= 23; i++) prt("", i, j - 2);
@@ -806,10 +806,10 @@ static void wiz_tweak_item(object_type *o_ptr)
 {
 	cptr p;
 	char tmp_val[80];
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 
 #if 0 /* DG -- A Wizard can do whatever he/she wants */

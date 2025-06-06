@@ -972,7 +972,7 @@ void reset_visuals(void)
  * Obtain the "flags" for an item
  */
 bool object_flags_no_set = FALSE;
-void object_flags(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
+void object_flags(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u32b *f7, u32b *f8, u32b *f9, u32b *f10, u32b *esp)
 {
 	object_kind *k_ptr = &k_info[o_ptr->k_idx];
 
@@ -982,6 +982,11 @@ void object_flags(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4, u3
 	(*f3) = k_ptr->flags3;
 	(*f4) = k_ptr->flags4;
 	(*f5) = k_ptr->flags5;
+	(*f6) = k_ptr->flags6;
+	(*f7) = k_ptr->flags7;
+	(*f8) = k_ptr->flags8;
+	(*f9) = k_ptr->flags9;
+	(*f10) = k_ptr->flags10;
 	(*esp) = k_ptr->esp;
 
 	/* Artifact */
@@ -994,20 +999,30 @@ void object_flags(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4, u3
 		(*f3) = a_ptr->flags3;
 		(*f4) = a_ptr->flags4;
 		(*f5) = a_ptr->flags5;
+		(*f6) = a_ptr->flags6;
+		(*f7) = a_ptr->flags7;
+		(*f8) = a_ptr->flags8;
+		(*f9) = a_ptr->flags9;
+		(*f10) = a_ptr->flags10;
 		(*esp) = a_ptr->esp;
 
 		if ((!object_flags_no_set) && (a_ptr->set != -1))
-			apply_flags_set(o_ptr->name1, a_ptr->set, f1, f2, f3, f4, f5, esp);
+			apply_flags_set(o_ptr->name1, a_ptr->set, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp);
 	}
 
 	/* Random artifact ! */
-	if (o_ptr->art_flags1 || o_ptr->art_flags2 || o_ptr->art_flags3 || o_ptr->art_flags4 || o_ptr->art_flags5 || o_ptr->art_esp)
+	if (o_ptr->art_flags1 || o_ptr->art_flags2 || o_ptr->art_flags3 || o_ptr->art_flags4 || o_ptr->art_flags5 || o_ptr->art_flags6 || o_ptr->art_flags7 || o_ptr->art_flags8 || o_ptr->art_flags9 || o_ptr->art_flags10 || o_ptr->art_esp)
 	{
 		(*f1) |= o_ptr->art_flags1;
 		(*f2) |= o_ptr->art_flags2;
 		(*f3) |= o_ptr->art_flags3;
 		(*f4) |= o_ptr->art_flags4;
 		(*f5) |= o_ptr->art_flags5;
+		(*f6) |= o_ptr->art_flags6;
+		(*f7) |= o_ptr->art_flags7;
+		(*f8) |= o_ptr->art_flags8;
+		(*f9) |= o_ptr->art_flags9;
+		(*f10) |= o_ptr->art_flags10;
 		(*esp) |= o_ptr->art_esp;
 	}
 
@@ -1182,14 +1197,14 @@ int object_power(object_type *o_ptr)
 /*
  * Obtain the "flags" for an item which are known to the player
  */
-void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
+void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u32b *f7, u32b *f8, u32b *f9, u32b *f10, u32b *esp)
 {
 	bool spoil = FALSE;
 
 	object_kind *k_ptr = &k_info[o_ptr->k_idx];
 
 	/* Clear */
-	(*f1) = (*f2) = (*f3) = (*f4) = (*esp) = (*f5) = 0L;
+	(*f1) = (*f2) = (*f3) = (*f4) = (*esp) = (*f5) = (*f6) = (*f7) = (*f8) = (*f9) = (*f10) = 0L;
 
 	/* Must be identified */
 	if (!object_known_p(o_ptr)) return;
@@ -1200,6 +1215,11 @@ void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *
 	(*f3) = k_ptr->flags3;
 	(*f4) = k_ptr->flags4;
 	(*f5) = k_ptr->flags5;
+	(*f6) = k_ptr->flags6;
+	(*f7) = k_ptr->flags7;
+	(*f8) = k_ptr->flags8;
+	(*f9) = k_ptr->flags9;
+	(*f10) = k_ptr->flags10;
 	(*esp) = k_ptr->esp;
 
 	(*f1) |= k_ptr->oflags1;
@@ -1207,6 +1227,11 @@ void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *
 	(*f3) |= k_ptr->oflags3;
 	(*f4) |= k_ptr->oflags4;
 	(*f5) |= k_ptr->oflags5;
+	(*f6) |= k_ptr->oflags6;
+	(*f7) |= k_ptr->oflags7;
+	(*f8) |= k_ptr->oflags8;
+	(*f9) |= k_ptr->oflags9;
+	(*f10) |= k_ptr->oflags10;
 	(*esp) |= k_ptr->oesp;
 
 #ifdef SPOIL_ARTIFACTS
@@ -1232,14 +1257,19 @@ void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *
 			(*f3) = a_ptr->flags3;
 			(*f4) = a_ptr->flags4;
 			(*f5) = a_ptr->flags5;
+			(*f6) = a_ptr->flags6;
+			(*f7) = a_ptr->flags7;
+			(*f8) = a_ptr->flags8;
+			(*f9) = a_ptr->flags9;
+			(*f10) = a_ptr->flags10;
 			(*esp) = a_ptr->esp;
 
 			if ((!object_flags_no_set) && (a_ptr->set != -1))
-				apply_flags_set(o_ptr->name1, a_ptr->set, f1, f2, f3, f4, f5, esp);
+				apply_flags_set(o_ptr->name1, a_ptr->set, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp);
 		}
 		else
 		{
-			(*f1) = (*f2) = (*f3) = (*f4) = (*esp) = (*f5) = 0L;
+			(*f1) = (*f2) = (*f3) = (*f4) = (*esp) = (*f5) = (*f6) = (*f7) = (*f8) = (*f9) = (*f10) = 0L;
 		}
 
 		(*f1) |= a_ptr->oflags1;
@@ -1247,11 +1277,16 @@ void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *
 		(*f3) |= a_ptr->oflags3;
 		(*f4) |= a_ptr->oflags4;
 		(*f5) |= a_ptr->oflags5;
+		(*f6) |= a_ptr->oflags6;
+		(*f7) |= a_ptr->oflags7;
+		(*f8) |= a_ptr->oflags8;
+		(*f9) |= a_ptr->oflags9;
+		(*f10) |= a_ptr->oflags10;
 		(*esp) |= a_ptr->oesp;
 	}
 
 	/* Random artifact or ego item! */
-	if (o_ptr->art_flags1 || o_ptr->art_flags2 || o_ptr->art_flags3 || o_ptr->art_flags4 || o_ptr->art_flags5 || o_ptr->art_esp)
+	if (o_ptr->art_flags1 || o_ptr->art_flags2 || o_ptr->art_flags3 || o_ptr->art_flags4 || o_ptr->art_flags5 || o_ptr->art_flags6 || o_ptr->art_flags7 || o_ptr->art_flags8 || o_ptr->art_flags9 || o_ptr->art_flags10 || o_ptr->art_esp)
 	{
 		/* Need full knowledge or spoilers */
 		if (spoil || (o_ptr->ident & IDENT_MENTAL))
@@ -1261,6 +1296,11 @@ void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *
 			(*f3) |= o_ptr->art_flags3;
 			(*f4) |= o_ptr->art_flags4;
 			(*f5) |= o_ptr->art_flags5;
+			(*f6) |= o_ptr->art_flags6;
+			(*f7) |= o_ptr->art_flags7;
+			(*f8) |= o_ptr->art_flags8;
+			(*f9) |= o_ptr->art_flags9;
+			(*f10) |= o_ptr->art_flags10;
 			(*esp) |= o_ptr->art_esp;
 		}
 
@@ -1269,6 +1309,11 @@ void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *
 		(*f3) |= o_ptr->art_oflags3;
 		(*f4) |= o_ptr->art_oflags4;
 		(*f5) |= o_ptr->art_oflags5;
+		(*f6) |= o_ptr->art_oflags6;
+		(*f7) |= o_ptr->art_oflags7;
+		(*f8) |= o_ptr->art_oflags8;
+		(*f9) |= o_ptr->art_oflags9;
+		(*f10) |= o_ptr->art_oflags10;
 		(*esp) |= o_ptr->art_oesp;
 	}
 
@@ -1594,14 +1639,14 @@ void object_desc(char *buf, object_type *o_ptr, int pref, int mode)
 	char tmp_val2[90];
 
 	s32b power;
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	object_kind *k_ptr = &k_info[o_ptr->k_idx];
 
 	cptr str;
 
 	/* Extract some flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 
 	/* See if the object is "aware" */
@@ -2861,13 +2906,13 @@ void object_desc_store(char *buf, object_type *o_ptr, int pref, int mode)
  */
 cptr item_activation(object_type *o_ptr, byte num)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	/* Needed hacks */
 	static char rspell[2][80];
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Require activation ability */
 	if (!(f3 & (TR3_ACTIVATE))) return (NULL);
@@ -2998,12 +3043,12 @@ void output_dam(object_type *o_ptr, int mult, int mult2, cptr against, cptr agai
 void display_weapon_damage(object_type *o_ptr)
 {
 	object_type forge, *old_ptr = &forge;
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 	bool first = TRUE;
 	bool full = o_ptr->ident & (IDENT_MENTAL);
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Ok now the hackish stuff, we replace the current weapon with this one */
 	object_copy(old_ptr, &p_ptr->inventory[INVEN_WIELD]);
@@ -3097,13 +3142,13 @@ void output_ammo_dam(object_type *o_ptr, int mult, int mult2, cptr against, cptr
  */
 void display_ammo_damage(object_type *o_ptr)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 	bool first = TRUE;
 	int i;
 	bool full = o_ptr->ident & (IDENT_MENTAL);
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	if (o_ptr->tval == TV_BOOMERANG)
 		text_out("\nUsing it you would do an average damage per throw of ");
@@ -3210,7 +3255,7 @@ static cptr object_out_desc_where_found(s16b level, s16b dungeon)
  */
 bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_for_it)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	char *txt;
 
@@ -3228,11 +3273,16 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		f3 = o_ptr->art_oflags3;
 		f4 = o_ptr->art_oflags4;
 		f5 = o_ptr->art_oflags5;
+		f6 = o_ptr->art_oflags6;
+		f7 = o_ptr->art_oflags7;
+		f8 = o_ptr->art_oflags8;
+		f9 = o_ptr->art_oflags9;
+		f10 = o_ptr->art_oflags10;
 		esp = o_ptr->art_oesp;
 	}
 	else
 	{
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 	}
 
 	if (fff)
@@ -5555,7 +5605,7 @@ void show_equip_aux(bool mirror, bool everything)
 		                !o_ptr->k_idx &&
 		                p_ptr->inventory[i - INVEN_ARM + INVEN_WIELD].k_idx)
 		{
-			u32b f1, f2, f3, f4, f5, esp;
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 			object_type *q_ptr = &p_ptr->inventory[i - INVEN_ARM + INVEN_WIELD];
 			char q_name[80];
 
@@ -5563,7 +5613,7 @@ void show_equip_aux(bool mirror, bool everything)
 			object_desc(q_name, q_ptr, TRUE, 3);
 
 			/* Get weapon flags */
-			object_flags(q_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+			object_flags(q_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 			if (f4 & TR4_MUST2H)
 			{
@@ -7381,10 +7431,10 @@ u32b get_flag(object_type *o_ptr, int grp, int k)
 {
 	u32b f = 0, flag_set = 0;
 	int tries = 1000;
-	u32b f1, f2, f3, f4, f5, esp, flag_test;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp, flag_test;
 
 	/* Extract some flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* get the corresponding flag set of the group */
 	switch (k)
@@ -7410,6 +7460,26 @@ u32b get_flag(object_type *o_ptr, int grp, int k)
 		flag_test = f5;
 		break;
 	case 5:
+		flag_set = flags_groups[grp].flags6;
+		flag_test = f6;
+		break;
+	case 6:
+		flag_set = flags_groups[grp].flags7;
+		flag_test = f7;
+		break;
+	case 7:
+		flag_set = flags_groups[grp].flags8;
+		flag_test = f8;
+		break;
+	case 8:
+		flag_set = flags_groups[grp].flags9;
+		flag_test = f9;
+		break;
+	case 9:
+		flag_set = flags_groups[grp].flags10;
+		flag_test = f10;
+		break;
+	case 10:
 		flag_set = flags_groups[grp].esp;
 		flag_test = esp;
 		break;
@@ -7553,6 +7623,21 @@ trynewflag:
 
 		break;
 	case 5:
+		o_ptr->art_flags6 |= f;
+		break;
+	case 6:
+		o_ptr->art_flags7 |= f;
+		break;
+	case 7:
+		o_ptr->art_flags8 |= f;
+		break;
+	case 8:
+		o_ptr->art_flags9 |= f;
+		break;
+	case 9:
+		o_ptr->art_flags10 |= f;
+		break;
+	case 10:
 		o_ptr->art_esp |= f;
 
 		if (f & ESP_ALL) {
@@ -7580,10 +7665,10 @@ trynewflag:
  */
 void object_gain_level(object_type *o_ptr)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	/* Extract some flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* First it can gain some tohit and todam; Amy edit: but keep it sane, please... */
 	if ((o_ptr->tval == TV_AXE) || (o_ptr->tval == TV_SWORD) || (o_ptr->tval == TV_POLEARM) ||
@@ -7683,6 +7768,11 @@ bool apply_set(s16b a_idx, s16b set_idx)
 			            s_ptr->arts[i].flags3[j],
 			            s_ptr->arts[i].flags4[j],
 			            s_ptr->arts[i].flags5[j],
+			            s_ptr->arts[i].flags6[j],
+			            s_ptr->arts[i].flags7[j],
+			            s_ptr->arts[i].flags8[j],
+			            s_ptr->arts[i].flags9[j],
+			            s_ptr->arts[i].flags10[j],
 			            s_ptr->arts[i].esp[j],
 			            s_ptr->arts[i].pval[j],
 			            0, 0, 0, 0);
@@ -7693,7 +7783,7 @@ bool apply_set(s16b a_idx, s16b set_idx)
 }
 
 bool apply_flags_set(s16b a_idx, s16b set_idx,
-                     u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *esp)
+                     u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u32b *f7, u32b *f8, u32b *f9, u32b *f10, u32b *esp)
 {
 	set_type *s_ptr = &set_info[set_idx];
 	int i, j;
@@ -7714,6 +7804,11 @@ bool apply_flags_set(s16b a_idx, s16b set_idx,
 			(*f3) |= s_ptr->arts[i].flags3[j];
 			(*f4) |= s_ptr->arts[i].flags4[j];
 			(*f5) |= s_ptr->arts[i].flags5[j];
+			(*f6) |= s_ptr->arts[i].flags6[j];
+			(*f7) |= s_ptr->arts[i].flags7[j];
+			(*f8) |= s_ptr->arts[i].flags8[j];
+			(*f9) |= s_ptr->arts[i].flags9[j];
+			(*f10) |= s_ptr->arts[i].flags10[j];
 			(*esp) |= s_ptr->arts[i].esp[j];
 		}
 		return (TRUE);

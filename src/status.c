@@ -17,12 +17,12 @@
 
 #include "angband.h"
 
-static void row_trival(char*, s16b, u32b, s16b, u32b, int, u32b[INVEN_TOTAL - INVEN_WIELD + 2][7]);
-static void row_bival(char*, s16b, u32b, int, u32b[INVEN_TOTAL - INVEN_WIELD + 2][7]);
-static void row_npval(char*, s16b, u32b, int, u32b[INVEN_TOTAL - INVEN_WIELD + 2][7]);
-static void statline(char*, int, u32b, int, u32b[INVEN_TOTAL - INVEN_WIELD + 2][7]);
-static void row_hd_bon(int, int, u32b[INVEN_TOTAL - INVEN_WIELD + 2][7]);
-static void row_count(char*, s16b, u32b, int, s16b, u32b, int, s16b, u32b, int, s16b, u32b, int, int, u32b[INVEN_TOTAL - INVEN_WIELD + 2][7]);
+static void row_trival(char*, s16b, u32b, s16b, u32b, int, u32b[INVEN_TOTAL - INVEN_WIELD + 2][12]);
+static void row_bival(char*, s16b, u32b, int, u32b[INVEN_TOTAL - INVEN_WIELD + 2][12]);
+static void row_npval(char*, s16b, u32b, int, u32b[INVEN_TOTAL - INVEN_WIELD + 2][12]);
+static void statline(char*, int, u32b, int, u32b[INVEN_TOTAL - INVEN_WIELD + 2][12]);
+static void row_hd_bon(int, int, u32b[INVEN_TOTAL - INVEN_WIELD + 2][12]);
+static void row_count(char*, s16b, u32b, int, s16b, u32b, int, s16b, u32b, int, s16b, u32b, int, int, u32b[INVEN_TOTAL - INVEN_WIELD + 2][12]);
 static int row_x_start = 0;
 
 static void status_count(s32b val1, int v1, s32b val2, int v2, s32b val3, int v3, s32b val4, int v4, byte ypos, byte xpos);
@@ -37,7 +37,7 @@ void status_combat(void);
 void status_main(void);
 void status_move(void);
 void status_item(void);
-void az_line(int, u32b[INVEN_TOTAL - INVEN_WIELD + 2][7]);
+void az_line(int, u32b[INVEN_TOTAL - INVEN_WIELD + 2][12]);
 #define STATNM_LENGTH 		11
 #define SL_LENGTH 		11
 
@@ -45,7 +45,7 @@ void az_line(int, u32b[INVEN_TOTAL - INVEN_WIELD + 2][7]);
 
 void status_attr(void)
 {
-	u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7];
+	u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][12];
 	int yo = 0;
 	char c;
 
@@ -76,7 +76,7 @@ void status_attr(void)
 
 void status_move(void)
 {
-	u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7];
+	u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][12];
 	int yo = 3;
 	clear_from(0);
 	c_put_str(TERM_L_BLUE, "Movement", 0, 1);
@@ -115,7 +115,7 @@ void status_move(void)
 void status_sight(void)
 /* Tell player about ESP, infravision, auto-id, see invis, and similar */
 {
-	u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7];
+	u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][12];
 	int yo = 3;
 	clear_from(0);
 	c_put_str(TERM_L_BLUE, "Sight", 0, 1);
@@ -165,7 +165,7 @@ void status_sight(void)
 
 void status_item(void)
 {
-	u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7];
+	u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][12];
 	int yo = 3;
 	clear_from(0);
 	c_put_str(TERM_L_BLUE, "Misc", 0, 1);
@@ -215,7 +215,7 @@ void status_item(void)
 
 void status_combat(void)
 {
-	u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7];
+	u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][12];
 	int yo = 3;
 	clear_from(0);
 	c_put_str(TERM_L_BLUE, "Combat", 0, 1);
@@ -274,7 +274,7 @@ void status_combat(void)
 
 void status_curses(void)
 {
-	u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7];
+	u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][12];
 	int yo = 3;
 
 	clear_from(0);
@@ -324,7 +324,7 @@ void status_curses(void)
 
 void status_res(void)
 {
-	u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7];
+	u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][12];
 	int yo = 3;
 
 	clear_from(0);
@@ -438,7 +438,7 @@ void status_main(void)
 	handle_stuff();
 }
 
-void az_line(int xo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7])
+void az_line(int xo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][12])
 {
 	int index = xo;  /* Leave room for description */
 	int i;
@@ -459,6 +459,11 @@ void az_line(int xo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7])
 			             &flag_arr[i - INVEN_WIELD][3],  /* f3 */
 			             &flag_arr[i - INVEN_WIELD][4],  /* f4 */
 			             &flag_arr[i - INVEN_WIELD][5],  /* f5 */
+			             &flag_arr[i - INVEN_WIELD][6],  /* f6 */
+			             &flag_arr[i - INVEN_WIELD][7],  /* f7 */
+			             &flag_arr[i - INVEN_WIELD][8],  /* f8 */
+			             &flag_arr[i - INVEN_WIELD][9],  /* f9 */
+			             &flag_arr[i - INVEN_WIELD][10],  /* f10 */
 			             &flag_arr[i - INVEN_WIELD][0]);   /* esp */
 			flag_arr[i - INVEN_WIELD][6] = 1;  /* And mark it to display */
 		}
@@ -471,6 +476,11 @@ void az_line(int xo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7])
 	        &flag_arr[INVEN_PLAYER][3],  /* f3 */
 	        &flag_arr[INVEN_PLAYER][4],  /* f4 */
 	        &flag_arr[INVEN_PLAYER][5],  /* f5 */
+	        &flag_arr[INVEN_PLAYER][6],  /* f6 */
+	        &flag_arr[INVEN_PLAYER][7],  /* f7 */
+	        &flag_arr[INVEN_PLAYER][8],  /* f8 */
+	        &flag_arr[INVEN_PLAYER][9],  /* f9 */
+	        &flag_arr[INVEN_PLAYER][10],  /* f10 */
 	        &flag_arr[INVEN_PLAYER][0] /* esp */
 	);
 	flag_arr[INVEN_PLAYER][6] = 1;
@@ -535,7 +545,7 @@ static void status_count(s32b val1, int v1, s32b val2, int v2, s32b val3, int v3
 	status_numeric(v, ypos, xpos);
 }
 
-static void row_count(char* statname, s16b row1, u32b flag1, int v1, s16b row2, u32b flag2, int v2, s16b row3, u32b flag3, int v3, s16b row4, u32b flag4, int v4, int yo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7])
+static void row_count(char* statname, s16b row1, u32b flag1, int v1, s16b row2, u32b flag2, int v2, s16b row3, u32b flag3, int v3, s16b row4, u32b flag4, int v4, int yo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][12])
 {
 	int i;
 	int x = row_x_start;
@@ -552,7 +562,7 @@ static void row_count(char* statname, s16b row1, u32b flag1, int v1, s16b row2, 
 	}
 }
 
-static void row_trival(char* statname, s16b row, u32b flag, s16b row2, u32b flag2, int yo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7])
+static void row_trival(char* statname, s16b row, u32b flag, s16b row2, u32b flag2, int yo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][12])
 {
 	int i;
 	int x = row_x_start;
@@ -570,7 +580,7 @@ static void row_trival(char* statname, s16b row, u32b flag, s16b row2, u32b flag
 	}
 }
 
-static void row_bival(char* statname, s16b row, u32b flag, int yo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7])
+static void row_bival(char* statname, s16b row, u32b flag, int yo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][12])
 {
 	int i;
 	int x = row_x_start;
@@ -585,7 +595,7 @@ static void row_bival(char* statname, s16b row, u32b flag, int yo, u32b flag_arr
 	}
 }
 
-static void row_npval(char* statname, s16b row, u32b flag, int yo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7])
+static void row_npval(char* statname, s16b row, u32b flag, int yo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][12])
 /* Displays nicely a pval-based status row */
 {
 	int i;
@@ -614,7 +624,7 @@ static void row_npval(char* statname, s16b row, u32b flag, int yo, u32b flag_arr
 	}
 }
 
-static void statline(char* statname, int statidx, u32b flag, int yo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7])
+static void statline(char* statname, int statidx, u32b flag, int yo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][12])
 /* Displays a status row for a primary stat */
 {
 	int i;
@@ -682,7 +692,7 @@ static void statline(char* statname, int statidx, u32b flag, int yo, u32b flag_a
 	c_put_str(stat_color, statname, yo, row_x_start);
 }
 
-static void row_hd_bon(int which, int yo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][7])
+static void row_hd_bon(int which, int yo, u32b flag_arr[INVEN_TOTAL - INVEN_WIELD + 2][12])
 /* To-hit/dmg modifiers, selected by 1st argument */
 {
 	int i;

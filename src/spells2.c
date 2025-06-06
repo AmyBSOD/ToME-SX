@@ -439,7 +439,7 @@ static int enchant_table[16] =
 
 bool remove_curse_object(object_type *o_ptr, bool all)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	/* permacurse nastytrap effect? bad luck, can't uncurse your shit --Amy */
 	if (p_ptr->nastytrap60) return FALSE;
@@ -451,7 +451,7 @@ bool remove_curse_object(object_type *o_ptr, bool all)
 	if (!cursed_p(o_ptr)) return FALSE;
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Heavily Cursed Items need a special spell */
 	if (!all && (f3 & (TR3_HEAVY_CURSE))) return FALSE;
@@ -726,7 +726,7 @@ void self_knowledge(FILE *fff)
 {
 	int i = 0, j, k;
 
-	u32b f1 = 0L, f2 = 0L, f3 = 0L, f4 = 0L, f5 = 0L, esp = 0L;
+	u32b f1 = 0L, f2 = 0L, f3 = 0L, f4 = 0L, f5 = 0L, f6 = 0L, f7 = 0L, f8 = 0L, f9 = 0L, f10 = 0L, esp = 0L;
 
 	int iter;  /* Iterator for a loop */
 
@@ -741,7 +741,7 @@ void self_knowledge(FILE *fff)
 	/* Acquire item flags from equipment */
 	for (k = INVEN_WIELD; k < INVEN_TOTAL; k++)
 	{
-		u32b t1, t2, t3, t4, t5, esp;
+		u32b t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, esp;
 
 		o_ptr = &p_ptr->inventory[k];
 
@@ -749,7 +749,7 @@ void self_knowledge(FILE *fff)
 		if (!o_ptr->k_idx) continue;
 
 		/* Extract the flags */
-		object_flags(o_ptr, &t1, &t2, &t3, &t4, &t5, &esp);
+		object_flags(o_ptr, &t1, &t2, &t3, &t4, &t5, &t6, &t7, &t8, &t9, &t10, &esp);
 
 		/* Extract flags */
 		f1 |= t1;
@@ -2257,7 +2257,7 @@ void self_knowledge(FILE *fff)
 	/* Analyze the weapon */
 	if (o_ptr->k_idx)
 	{
-		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Indicate Blessing */
 		if (f3 & (TR3_BLESSED))
@@ -3828,11 +3828,11 @@ bool enchant(object_type *o_ptr, int n, int eflag)
 	int i, chance, prob;
 	bool res = FALSE;
 	bool a = (artifact_p(o_ptr) || o_ptr->art_name);
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Large piles resist enchantment */
 	prob = o_ptr->number * 100;
@@ -5462,10 +5462,10 @@ bool identify_fully(void)
  */
 bool item_tester_hook_recharge(object_type *o_ptr)
 {
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Some objects cannot be recharged */
 	if (f4 & TR4_NO_RECHARGE) return (FALSE);
@@ -5514,7 +5514,7 @@ bool recharge(int power)
 
 	cptr q, s;
 
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 	char o_name[80];
 
 	object_type *o_ptr;
@@ -5541,7 +5541,7 @@ bool recharge(int power)
 	}
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Extract the object "level" */
 	lev = k_info[o_ptr->k_idx].level;
@@ -8782,7 +8782,7 @@ void bless_weapon(void)
 {
 	int item;
 	object_type *o_ptr;
-	u32b f1, f2, f3, f4, f5, esp;
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 	char o_name[80];
 	cptr q, s;
 
@@ -8811,7 +8811,7 @@ void bless_weapon(void)
 	object_desc(o_name, o_ptr, FALSE, 0);
 
 	/* Extract the flags */
-	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &esp);
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	if (o_ptr->ident & (IDENT_CURSED))
 	{

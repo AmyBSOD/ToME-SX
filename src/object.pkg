@@ -944,6 +944,11 @@ struct object_kind
 	u32b flags3;		/* Flags, set 3 */
 	u32b flags4;            /* Flags, set 4 */
 	u32b flags5;            /* Flags, set 5 */
+	u32b flags6;            /* Flags, set 6 */
+	u32b flags7;            /* Flags, set 7 */
+	u32b flags8;            /* Flags, set 8 */
+	u32b flags9;            /* Flags, set 9 */
+	u32b flags10;           /* Flags, set 10 */
 
 	byte locale[10];		/* Allocation level(s) */
 	s32b chance[10];		/* Allocation chance(s) */
@@ -1008,6 +1013,11 @@ struct artifact_type
 	u32b flags3;		/* Artifact Flags, set 3 */
 	u32b flags4;            /* Artifact Flags, set 4 */
 	u32b flags5;            /* Artifact Flags, set 5 */
+	u32b flags6;            /* Artifact Flags, set 6 */
+	u32b flags7;            /* Artifact Flags, set 7 */
+	u32b flags8;            /* Artifact Flags, set 8 */
+	u32b flags9;            /* Artifact Flags, set 9 */
+	u32b flags10;           /* Artifact Flags, set 10 */
 
 	byte level;			/* Artifact level */
 	byte rarity;		/* Artifact rarity */
@@ -1051,6 +1061,11 @@ struct ego_item_type
 	u32b flags3[5];            /* Ego-Item Flags, set 3 */
 	u32b flags4[5];            /* Ego-Item Flags, set 4 */
 	u32b flags5[5];            /* Ego-Item Flags, set 5 */
+	u32b flags6[5];            /* Ego-Item Flags, set 6 */
+	u32b flags7[5];            /* Ego-Item Flags, set 7 */
+	u32b flags8[5];            /* Ego-Item Flags, set 8 */
+	u32b flags9[5];            /* Ego-Item Flags, set 9 */
+	u32b flags10[5];           /* Ego-Item Flags, set 10 */
 	u32b esp[5];                       /* ESP flags */
 	u32b fego[5];                       /* ego flags */
 
@@ -1112,6 +1127,11 @@ struct object_type
 	u32b art_flags3;        /* Flags, set 3  Zangband */
 	u32b art_flags4;        /* Flags, set 4  PernAngband */
 	u32b art_flags5;        /* Flags, set 5  PernAngband */
+	u32b art_flags6;        /* Flags, set 6 */
+	u32b art_flags7;        /* Flags, set 7 */
+	u32b art_flags8;        /* Flags, set 8 */
+	u32b art_flags9;        /* Flags, set 9 */
+	u32b art_flags10;       /* Flags, set 10 */
 	u32b art_esp;           /* Flags, set esp  PernAngband */
 
 	s16b next_o_idx;	/* Next object in stack (if any) */
@@ -1153,7 +1173,7 @@ extern char *e_text;
 extern s16b m_bonus(int max, int level);
 extern s16b wield_slot_ideal(object_type *o_ptr, bool ideal);
 extern s16b wield_slot(object_type *o_ptr);
-extern void object_flags(object_type *o_ptr, u32b *f1 = 0, u32b *f2 = 0, u32b *f3 = 0, u32b *f4 = 0, u32b *f5 = 0, u32b *esp = 0);
+extern void object_flags(object_type *o_ptr, u32b *f1 = 0, u32b *f2 = 0, u32b *f3 = 0, u32b *f4 = 0, u32b *f5 = 0, u32b *f6 = 0, u32b *f7 = 0, u32b *f8 = 0, u32b *f9 = 0, u32b *f10 = 0, u32b *esp = 0);
 extern char *lua_object_desc @ object_desc(object_type *o_ptr, int pref, int mode);
 extern bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_for_it);
 extern void inven_item_describe(int item);
