@@ -716,9 +716,9 @@ cptr k_info_flags5[] =
 
 cptr k_info_flags6[] =
 {
-	"XXX8X00",
-	"XXX8X01",
-	"XXX8X02",
+	"RES_NERVE",
+	"RES_MIND",
+	"RES_ETHER",
 	"XXX8X03",
 	"XXX8X04",
 	"XXX8X05",

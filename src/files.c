@@ -1999,6 +1999,7 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		if (p_ptr->grace > 40000)  (*f2) |= TR2_RES_CHAOS;
 		if (p_ptr->grace > 60000)  (*f2) |= TR2_RES_NETHER;
 		if (p_ptr->grace > 80000)  (*f5) |= TR5_RES_PLASMA;
+		if (p_ptr->grace > 100000) (*f6) |= TR6_RES_NERVE;
 	}
 
 	GOD(GOD_ESTE)
@@ -2148,6 +2149,7 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 	if (p_ptr->mimic_form == resolve_mimic_name("Vampire")) {
 		(*f2) |= (TR2_HOLD_LIFE);
 		(*f2) |= (TR2_RES_DARK);
+		(*f6) |= (TR6_RES_NERVE);
 		(*f2) |= (TR2_SENS_FIRE);
 		if (p_ptr->mimic_level >= 15) (*f2) |= (TR2_RES_NEXUS);
 		if (p_ptr->mimic_level >= 10) (*f2) |= (TR2_RES_BLIND);
@@ -2159,6 +2161,7 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		(*f3) |= (TR3_FEATHER);
 		(*f2) |= (TR2_INVIS);
 		(*f3) |= (TR3_TELEPORT);
+		(*f6) |= (TR6_RES_ETHER);
 		if (p_ptr->mimic_level >= 25) (*f2) |= (TR2_RES_DISEN);
 	}
 
@@ -2192,6 +2195,7 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		(*f3) |= (TR3_DRAIN_EXP);
 		(*f2) |= (TR2_HOLD_LIFE);
 		(*f5) |= (TR5_DRAIN_MANA);
+		(*f6) |= (TR6_RES_NERVE);
 	}
 
 	if (p_ptr->mimic_form == resolve_mimic_name("Kobold")) {
@@ -2297,6 +2301,9 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		(*f2) |= TR2_RES_BLIND;
 		(*f2) |= TR2_RES_NETHER;
 		(*f2) |= TR2_RES_FEAR;
+		(*f6) |= (TR6_RES_NERVE);
+		(*f6) |= (TR6_RES_MIND);
+		(*f6) |= (TR6_RES_ETHER);
 		(*f2) |= TR2_REFLECT;
 		(*f3) |= TR3_SH_FIRE;
 		(*f3) |= TR3_SH_ELEC;
@@ -2315,6 +2322,7 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		if (p_ptr->mimic_level >= 25) (*f2) |= TR2_FREE_ACT;
 		if (p_ptr->mimic_level >= 30) (*f3) |= TR3_SEE_INVIS;
 		if (p_ptr->mimic_level >= 40) (*f2) |= TR2_RES_ELEC;
+		if (p_ptr->mimic_level >= 50) (*f6) |= (TR6_RES_MIND);
 		if (p_ptr->mimic_level >= 60) (*f3) |= TR3_SH_ELEC;
 	}
 
@@ -2323,6 +2331,7 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		(*f2) |= TR2_SUST_WIS;
 		(*f2) |= TR2_SUST_DEX;
 		(*f2) |= TR2_SUST_STR;
+		(*f6) |= (TR6_RES_MIND);
 		if (p_ptr->mimic_level >= 10) (*f2) |= TR2_RES_DARK;
 		if (p_ptr->mimic_level >= 20) (*f2) |= TR2_RES_CONF;
 		if (p_ptr->mimic_level >= 30) (*f3) |= TR3_SEE_INVIS;
@@ -2368,6 +2377,7 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		(*f3) |= TR3_SEE_INVIS;
 		(*f2) |= (TR2_SENS_FIRE);
 		(*f3) |= (TR3_FEATHER);
+		(*f6) |= (TR6_RES_ETHER);
 	}
 
 	if (p_ptr->mimic_form == resolve_mimic_name("Serpent")) {
@@ -2893,9 +2903,9 @@ static cptr object_flag_names[384] =
 	"Rpd Hunger",
 	NULL,
 
-	NULL,
-	NULL,
-	NULL,
+	"Res Nerve",
+	"Res Mind",
+	"Res Ether",
 	NULL,
 	NULL,
 	NULL,

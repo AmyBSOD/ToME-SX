@@ -171,6 +171,7 @@ add_mimic_shape
 			player.modify_stat(A_CHR, -15)
 			player.hold_life = TRUE
 			player.resist_dark = TRUE
+			player.resist_nerve = TRUE
 			player.sensible_fire = TRUE
 			player.sensible_lite = TRUE
 			if player.mimic_level >= 10 then player.resist_blind = TRUE end
@@ -196,6 +197,7 @@ add_mimic_shape
 			player.modify_stat(A_DEX, 8 + (player.mimic_level / 12))
 			player.modify_stat(A_CON, -15)
 			player.modify_stat(A_CHR, -15)
+			player.resist_ether = TRUE
 			player.ffall = TRUE
 			player.invis = player.invis + (10 + (player.mimic_level / 4))
 			player.to_s = player.to_s + 1
@@ -314,6 +316,7 @@ add_mimic_shape
 			player.modify_stat(A_DEX, 6 + (player.mimic_level / 12))
 			player.modify_stat(A_CON, 2)
 			player.modify_stat(A_CHR, -20)
+			player.resist_nerve = TRUE
 			player.wraith_form = TRUE
 			player.hold_life = TRUE
 			player.skill_dev = player.skill_dev - 3
@@ -623,6 +626,9 @@ add_mimic_shape
 			player.resist_blind = TRUE
 			player.resist_neth = TRUE
 			player.resist_fear = TRUE
+			player.resist_nerve = TRUE
+			player.resist_mind = TRUE
+			player.resist_ether = TRUE
 			player.reflect = TRUE
 			player.sh_fire = TRUE
 			player.sh_elec = TRUE
@@ -666,6 +672,7 @@ add_mimic_shape
 			if player.mimic_level >= 25 then player.free_act = TRUE end
 			if player.mimic_level >= 30 then player.see_inv = TRUE end
 			if player.mimic_level >= 40 then player.resist_elec = TRUE end
+			if player.mimic_level >= 50 then player.resist_mind = TRUE end
 			if player.mimic_level >= 60 then player.sh_elec = TRUE end
 
 	end,
@@ -699,6 +706,7 @@ add_mimic_shape
 			player.sustain_int = TRUE
 			player.sustain_wis = TRUE
 
+			player.resist_mind = TRUE
 			if player.mimic_level >= 10 then player.resist_dark = TRUE end
 			if player.mimic_level >= 20 then player.resist_conf = TRUE end
 			if player.mimic_level >= 30 then player.see_inv = TRUE end
@@ -870,6 +878,7 @@ add_mimic_shape
 			player.sensible_fire = TRUE
 			player.levitate = TRUE
 			player.ffall = TRUE
+			player.resist_ether = TRUE
 
 			player.skill_dis = player.skill_dis - 10
 			player.skill_srh = player.skill_srh - 10

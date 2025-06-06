@@ -1061,8 +1061,8 @@ void object_flags(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4, u3
 
 		case EGO_XTRA_POWER:
 			{
-				int xtrapowers = 11;
-				if (randint(10) == 1) xtrapowers = 16;
+				int xtrapowers = 13;
+				if (randint(10) == 1) xtrapowers = 19;
 
 				/* Choose a power */
 				switch (o_ptr->xtra2 % xtrapowers)
@@ -1101,19 +1101,28 @@ void object_flags(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4, u3
 					(*f2) |= (TR2_RES_LITE);
 					break;
 				case 11:
-					(*f5) |= (TR5_RES_WATER);
+					(*f6) |= (TR6_RES_NERVE);
 					break;
 				case 12:
-					(*f5) |= (TR5_RES_INERTIA);
+					(*f6) |= (TR6_RES_MIND);
 					break;
 				case 13:
-					(*f5) |= (TR5_RES_PLASMA);
+					(*f5) |= (TR5_RES_WATER);
 					break;
 				case 14:
-					(*f5) |= (TR5_RES_DISINT);
+					(*f5) |= (TR5_RES_INERTIA);
 					break;
 				case 15:
+					(*f5) |= (TR5_RES_PLASMA);
+					break;
+				case 16:
+					(*f5) |= (TR5_RES_DISINT);
+					break;
+				case 17:
 					(*f5) |= (TR5_RES_TIME);
+					break;
+				case 18:
+					(*f6) |= (TR6_RES_ETHER);
 					break;
 				}
 
@@ -1355,8 +1364,8 @@ void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *
 
 		case EGO_XTRA_POWER:
 			{
-				int xtrapowers = 11;
-				if (randint(10) == 1) xtrapowers = 16;
+				int xtrapowers = 13;
+				if (randint(10) == 1) xtrapowers = 19;
 
 				/* Choose a power */
 				switch (o_ptr->xtra2 % xtrapowers)
@@ -1395,19 +1404,28 @@ void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *
 					(*f2) |= (TR2_RES_LITE);
 					break;
 				case 11:
-					(*f5) |= (TR5_RES_WATER);
+					(*f6) |= (TR6_RES_NERVE);
 					break;
 				case 12:
-					(*f5) |= (TR5_RES_INERTIA);
+					(*f6) |= (TR6_RES_MIND);
 					break;
 				case 13:
-					(*f5) |= (TR5_RES_PLASMA);
+					(*f5) |= (TR5_RES_WATER);
 					break;
 				case 14:
-					(*f5) |= (TR5_RES_DISINT);
+					(*f5) |= (TR5_RES_INERTIA);
 					break;
 				case 15:
+					(*f5) |= (TR5_RES_PLASMA);
+					break;
+				case 16:
+					(*f5) |= (TR5_RES_DISINT);
+					break;
+				case 17:
 					(*f5) |= (TR5_RES_TIME);
+					break;
+				case 18:
+					(*f6) |= (TR6_RES_ETHER);
 					break;
 				}
 
@@ -3902,6 +3920,18 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		if (f5 & (TR5_RES_DISINT))
 		{
 			vp[vn++] = "disintegration";
+		}
+		if (f6 & (TR6_RES_NERVE))
+		{
+			vp[vn++] = "nerve";
+		}
+		if (f6 & (TR6_RES_MIND))
+		{
+			vp[vn++] = "mind";
+		}
+		if (f6 & (TR6_RES_ETHER))
+		{
+			vp[vn++] = "ether";
 		}
 		/* Describe */
 		if (vn)

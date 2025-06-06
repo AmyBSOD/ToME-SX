@@ -3913,6 +3913,10 @@
 #define TR5_RAPID_HUNGER        0x40000000L     /* player hungers rapidly (counts as a kind of curse) */
 #define TR5_CHARGE_HOLDING      0x80000000L     /* for rods, wands and staves: item can resist charge drain */
 
+#define TR6_RES_NERVE           0x00000001L
+#define TR6_RES_MIND            0x00000002L
+#define TR6_RES_ETHER           0x00000004L
+
 /* ESP defines */
 #define ESP_ORC                 0x00000001L
 #define ESP_TROLL               0x00000002L

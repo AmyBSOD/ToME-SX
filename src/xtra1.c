@@ -2738,6 +2738,7 @@ void calc_gods()
 		if (p_ptr->grace > 40000) p_ptr->resist_chaos = TRUE;
 		if (p_ptr->grace > 60000) p_ptr->resist_neth = TRUE;
 		if (p_ptr->grace > 80000) p_ptr->resist_plasma = TRUE;
+		if (p_ptr->grace > 100000) p_ptr->resist_nerve = TRUE;
 
 		int chacrit = 0;
 		chacrit = p_ptr->grace / 10000;
@@ -3054,6 +3055,9 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b f6, u32b f7, 
 	if (f5 & (TR5_RES_PLASMA)) p_ptr->resist_plasma = TRUE;
 	if (f5 & (TR5_RES_DISINT)) p_ptr->resist_disint = TRUE;
 	if (f5 & (TR5_RES_TIME)) p_ptr->resist_time = TRUE;
+	if (f6 & (TR6_RES_NERVE)) p_ptr->resist_nerve = TRUE;
+	if (f6 & (TR6_RES_MIND)) p_ptr->resist_mind = TRUE;
+	if (f6 & (TR6_RES_ETHER)) p_ptr->resist_ether = TRUE;
 
 	if (f5 & (TR5_PEACEKEEPING)) p_ptr->plr_peacekeep = TRUE;
 	if (f5 & (TR5_INV_PROTECT)) p_ptr->plr_invprot = TRUE;

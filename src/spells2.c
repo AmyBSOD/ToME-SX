@@ -4333,8 +4333,8 @@ void random_plus(object_type * o_ptr, bool is_scroll)
 
 void random_resistance (object_type * o_ptr, bool is_scroll, int specific)
 {
-	int xtrapowers = 41;
-	if (randint(10) == 1) xtrapowers = 46;
+	int xtrapowers = 43;
+	if (randint(10) == 1) xtrapowers = 49;
 
 	/* To avoid a number of possible bugs */
 	if (!specific)
@@ -4613,6 +4613,12 @@ void random_resistance (object_type * o_ptr, bool is_scroll, int specific)
 		/*  if (is_scroll) msg_print("It is surrounded by a static feeling.");*/
 		break;
 	case 39:
+		o_ptr->art_flags6 |= TR6_RES_NERVE;
+		break;
+	case 40:
+		o_ptr->art_flags6 |= TR6_RES_MIND;
+		break;
+	case 41:
 		if (o_ptr->tval >= TV_CLOAK && o_ptr->tval <= TV_HARD_ARMOR)
 			o_ptr->art_flags3 |= TR3_SH_ELEC;
 		else
@@ -4620,7 +4626,7 @@ void random_resistance (object_type * o_ptr, bool is_scroll, int specific)
 		if (!(artifact_bias))
 			artifact_bias = BIAS_ELEC;
 		break;
-	case 40:
+	case 42:
 		if (o_ptr->tval >= TV_CLOAK && o_ptr->tval <= TV_HARD_ARMOR)
 			o_ptr->art_flags3 |= TR3_SH_FIRE;
 		else
@@ -4628,27 +4634,30 @@ void random_resistance (object_type * o_ptr, bool is_scroll, int specific)
 		if (!(artifact_bias))
 			artifact_bias = BIAS_FIRE;
 		break;
-	case 41:
+	case 43:
 		if (o_ptr->tval == TV_SHIELD || o_ptr->tval == TV_CLOAK ||
 		                o_ptr->tval == TV_HELM || o_ptr->tval == TV_HARD_ARMOR)
 			o_ptr->art_flags2 |= TR2_REFLECT;
 		else
 			random_resistance(o_ptr, is_scroll, specific);
 		break;
-	case 42:
+	case 44:
 		o_ptr->art_flags5 |= TR5_RES_WATER;
 		break;
-	case 43:
+	case 45:
 		o_ptr->art_flags5 |= TR5_RES_INERTIA;
 		break;
-	case 44:
+	case 46:
 		o_ptr->art_flags5 |= TR5_RES_PLASMA;
 		break;
-	case 45:
+	case 47:
 		o_ptr->art_flags5 |= TR5_RES_DISINT;
 		break;
-	case 46:
+	case 48:
 		o_ptr->art_flags5 |= TR5_RES_TIME;
+		break;
+	case 49:
+		o_ptr->art_flags6 |= TR6_RES_ETHER;
 		break;
 	}
 }

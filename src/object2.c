@@ -1047,8 +1047,11 @@ s32b flag_cost(object_type * o_ptr, int plusses)
 	if (f2 & TR2_RES_SHARDS) total += 2000;
 	if (f2 & TR2_RES_NETHER) total += 2000;
 	if (f2 & TR2_RES_NEXUS) total += 2000;
+	if (f6 & TR6_RES_NERVE) total += 2000;
+	if (f6 & TR6_RES_MIND) total += 2000;
 	if (f2 & TR2_RES_CHAOS) total += 2000;
 	if (f2 & TR2_RES_DISEN) total += 10000;
+	if (f6 & TR6_RES_ETHER) total += 10000;
 	if (f5 & TR5_RES_WATER) total += 15000;
 	if (f5 & TR5_RES_INERTIA) total += 15000;
 	if (f5 & TR5_RES_TIME) total += 5000;
@@ -2763,8 +2766,8 @@ void random_artifact_resistance(object_type * o_ptr)
 
 	if (give_resistance)
 	{
-		if (randint(50) == 1) random_resistance(o_ptr, FALSE, randint(4) + 41); /* RES_WATER, RES_INERTIA, RES_PLASMA or RES_DISINT */
-		else random_resistance(o_ptr, FALSE, ((randint(22)) + 16));
+		if (randint(50) == 1) random_resistance(o_ptr, FALSE, randint(6) + 43); /* "unresistable" element, like TR5_RES_PLASMA */
+		else random_resistance(o_ptr, FALSE, ((randint(24)) + 16)); /* "high" element, like TR2_RES_NEXUS */
 	}
 }
 
@@ -3379,8 +3382,8 @@ static void dragon_resist(object_type * o_ptr)
 		if (randint(4) == 1)
 			random_resistance(o_ptr, FALSE, ((randint(14)) + 4));
 		else {
-			if (randint(35) == 1) random_resistance(o_ptr, FALSE, randint(4) + 41); /* RES_WATER, RES_INERTIA, RES_PLASMA or RES_DISINT */
-			else random_resistance(o_ptr, FALSE, ((randint(22)) + 16));
+			if (randint(35) == 1) random_resistance(o_ptr, FALSE, randint(6) + 43); /* "unresistable" element, like TR5_RES_PLASMA */
+			else random_resistance(o_ptr, FALSE, ((randint(24)) + 16)); /* "high" element, like TR2_RES_NEXUS */
 		}
 	}
 	while (randint(2) == 1);
@@ -3642,8 +3645,8 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
 				{
 					do
 					{
-						if (randint(30) == 1) random_resistance(o_ptr, FALSE, randint(4) + 41); /* RES_WATER, RES_INERTIA, RES_PLASMA or RES_DISINT */
-						else random_resistance(o_ptr, FALSE, ((randint(20)) + 18));
+						if (randint(30) == 1) random_resistance(o_ptr, FALSE, randint(6) + 43); /* "unresistable" element, like TR5_RES_PLASMA */
+						else random_resistance(o_ptr, FALSE, ((randint(22)) + 18)); /* "high" element, like TR2_RES_NEXUS */
 					}
 					while (randint(4) == 1);
 
@@ -3920,7 +3923,7 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
 
 			case SV_AMULET_RESISTANCE:
 				{
-					if (randint(3) == 1) random_resistance(o_ptr, FALSE, ((randint(34)) + 4));
+					if (randint(3) == 1) random_resistance(o_ptr, FALSE, ((randint(36)) + 4));
 					if (randint(5) == 1) o_ptr->art_flags2 |= TR2_RES_POIS;
 				}
 				break;
@@ -4352,8 +4355,8 @@ void add_random_ego_flag(object_type *o_ptr, int fego, bool *limit_blows)
 
 	if (fego & ETR4_OLD_RESIST)
 	{
-		int xtrapowers = 11;
-		if (randint(10) == 1) xtrapowers = 16;
+		int xtrapowers = 13;
+		if (randint(10) == 1) xtrapowers = 19;
 
 		/* Make a random resist, equal probabilities */
 		switch (randint(xtrapowers))
@@ -4392,19 +4395,28 @@ void add_random_ego_flag(object_type *o_ptr, int fego, bool *limit_blows)
 			o_ptr->art_flags2 |= (TR2_RES_LITE);
 			break;
 		case 12:
-			o_ptr->art_flags5 |= (TR5_RES_WATER);
+			o_ptr->art_flags6 |= (TR6_RES_NERVE);
 			break;
 		case 13:
-			o_ptr->art_flags5 |= (TR5_RES_INERTIA);
+			o_ptr->art_flags6 |= (TR6_RES_MIND);
 			break;
 		case 14:
-			o_ptr->art_flags5 |= (TR5_RES_PLASMA);
+			o_ptr->art_flags5 |= (TR5_RES_WATER);
 			break;
 		case 15:
-			o_ptr->art_flags5 |= (TR5_RES_DISINT);
+			o_ptr->art_flags5 |= (TR5_RES_INERTIA);
 			break;
 		case 16:
+			o_ptr->art_flags5 |= (TR5_RES_PLASMA);
+			break;
+		case 17:
+			o_ptr->art_flags5 |= (TR5_RES_DISINT);
+			break;
+		case 18:
 			o_ptr->art_flags5 |= (TR5_RES_TIME);
+			break;
+		case 19:
+			o_ptr->art_flags6 |= (TR6_RES_ETHER);
 			break;
 		}
 	}
@@ -4455,14 +4467,14 @@ void add_random_ego_flag(object_type *o_ptr, int fego, bool *limit_blows)
 	if (fego & ETR4_R_HIGH)
 	{
 		/* Make a high resist */
-		if (randint(50) == 1) random_resistance(o_ptr, FALSE, randint(4) + 41); /* RES_WATER, RES_INERTIA, RES_PLASMA or RES_DISINT */
-		else random_resistance(o_ptr, FALSE, randint(22) + 16);
+		if (randint(50) == 1) random_resistance(o_ptr, FALSE, randint(6) + 43); /* "unresistable" element, like TR5_RES_PLASMA */
+		else random_resistance(o_ptr, FALSE, ((randint(24)) + 16)); /* "high" element, like TR2_RES_NEXUS */
 	}
 	if (fego & ETR4_R_ANY)
 	{
 		/* Make any resist */
-		if (randint(50) == 1) random_resistance(o_ptr, FALSE, randint(4) + 41); /* RES_WATER, RES_INERTIA, RES_PLASMA or RES_DISINT */
-		else random_resistance(o_ptr, FALSE, randint(34) + 4);
+		if (randint(50) == 1) random_resistance(o_ptr, FALSE, randint(6) + 43); /* "unresistable" element, like TR5_RES_PLASMA */
+		else random_resistance(o_ptr, FALSE, ((randint(36)) + 4)); /* any element, like TR2_RES_ACID or TR2_RES_NEXUS */
 	}
 
 	if (fego & ETR4_R_DRAGON)
