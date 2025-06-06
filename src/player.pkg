@@ -3125,6 +3125,1803 @@ struct player_type
 	 * @note True if nastytrap active
 	 */
 	bool nastytrap200;
+	/** @structvar nastytrap201
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap201;
+
+	/** @structvar nastytrap202
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap202;
+
+	/** @structvar nastytrap203
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap203;
+
+	/** @structvar nastytrap204
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap204;
+
+	/** @structvar nastytrap205
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap205;
+
+	/** @structvar nastytrap206
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap206;
+
+	/** @structvar nastytrap207
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap207;
+
+	/** @structvar nastytrap208
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap208;
+
+	/** @structvar nastytrap209
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap209;
+
+	/** @structvar nastytrap210
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap210;
+
+	/** @structvar nastytrap211
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap211;
+
+	/** @structvar nastytrap212
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap212;
+
+	/** @structvar nastytrap213
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap213;
+
+	/** @structvar nastytrap214
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap214;
+
+	/** @structvar nastytrap215
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap215;
+
+	/** @structvar nastytrap216
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap216;
+
+	/** @structvar nastytrap217
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap217;
+
+	/** @structvar nastytrap218
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap218;
+
+	/** @structvar nastytrap219
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap219;
+
+	/** @structvar nastytrap220
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap220;
+
+	/** @structvar nastytrap221
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap221;
+
+	/** @structvar nastytrap222
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap222;
+
+	/** @structvar nastytrap223
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap223;
+
+	/** @structvar nastytrap224
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap224;
+
+	/** @structvar nastytrap225
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap225;
+
+	/** @structvar nastytrap226
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap226;
+
+	/** @structvar nastytrap227
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap227;
+
+	/** @structvar nastytrap228
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap228;
+
+	/** @structvar nastytrap229
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap229;
+
+	/** @structvar nastytrap230
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap230;
+
+	/** @structvar nastytrap231
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap231;
+
+	/** @structvar nastytrap232
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap232;
+
+	/** @structvar nastytrap233
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap233;
+
+	/** @structvar nastytrap234
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap234;
+
+	/** @structvar nastytrap235
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap235;
+
+	/** @structvar nastytrap236
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap236;
+
+	/** @structvar nastytrap237
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap237;
+
+	/** @structvar nastytrap238
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap238;
+
+	/** @structvar nastytrap239
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap239;
+
+	/** @structvar nastytrap240
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap240;
+
+	/** @structvar nastytrap241
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap241;
+
+	/** @structvar nastytrap242
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap242;
+
+	/** @structvar nastytrap243
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap243;
+
+	/** @structvar nastytrap244
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap244;
+
+	/** @structvar nastytrap245
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap245;
+
+	/** @structvar nastytrap246
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap246;
+
+	/** @structvar nastytrap247
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap247;
+
+	/** @structvar nastytrap248
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap248;
+
+	/** @structvar nastytrap249
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap249;
+
+	/** @structvar nastytrap250
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap250;
+
+	/** @structvar nastytrap251
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap251;
+
+	/** @structvar nastytrap252
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap252;
+
+	/** @structvar nastytrap253
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap253;
+
+	/** @structvar nastytrap254
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap254;
+
+	/** @structvar nastytrap255
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap255;
+
+	/** @structvar nastytrap256
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap256;
+
+	/** @structvar nastytrap257
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap257;
+
+	/** @structvar nastytrap258
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap258;
+
+	/** @structvar nastytrap259
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap259;
+
+	/** @structvar nastytrap260
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap260;
+
+	/** @structvar nastytrap261
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap261;
+
+	/** @structvar nastytrap262
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap262;
+
+	/** @structvar nastytrap263
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap263;
+
+	/** @structvar nastytrap264
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap264;
+
+	/** @structvar nastytrap265
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap265;
+
+	/** @structvar nastytrap266
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap266;
+
+	/** @structvar nastytrap267
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap267;
+
+	/** @structvar nastytrap268
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap268;
+
+	/** @structvar nastytrap269
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap269;
+
+	/** @structvar nastytrap270
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap270;
+
+	/** @structvar nastytrap271
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap271;
+
+	/** @structvar nastytrap272
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap272;
+
+	/** @structvar nastytrap273
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap273;
+
+	/** @structvar nastytrap274
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap274;
+
+	/** @structvar nastytrap275
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap275;
+
+	/** @structvar nastytrap276
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap276;
+
+	/** @structvar nastytrap277
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap277;
+
+	/** @structvar nastytrap278
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap278;
+
+	/** @structvar nastytrap279
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap279;
+
+	/** @structvar nastytrap280
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap280;
+
+	/** @structvar nastytrap281
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap281;
+
+	/** @structvar nastytrap282
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap282;
+
+	/** @structvar nastytrap283
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap283;
+
+	/** @structvar nastytrap284
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap284;
+
+	/** @structvar nastytrap285
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap285;
+
+	/** @structvar nastytrap286
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap286;
+
+	/** @structvar nastytrap287
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap287;
+
+	/** @structvar nastytrap288
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap288;
+
+	/** @structvar nastytrap289
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap289;
+
+	/** @structvar nastytrap290
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap290;
+
+	/** @structvar nastytrap291
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap291;
+
+	/** @structvar nastytrap292
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap292;
+
+	/** @structvar nastytrap293
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap293;
+
+	/** @structvar nastytrap294
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap294;
+
+	/** @structvar nastytrap295
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap295;
+
+	/** @structvar nastytrap296
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap296;
+
+	/** @structvar nastytrap297
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap297;
+
+	/** @structvar nastytrap298
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap298;
+
+	/** @structvar nastytrap299
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap299;
+
+	/** @structvar nastytrap300
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap300;
+	/** @structvar nastytrap301
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap301;
+
+	/** @structvar nastytrap302
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap302;
+
+	/** @structvar nastytrap303
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap303;
+
+	/** @structvar nastytrap304
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap304;
+
+	/** @structvar nastytrap305
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap305;
+
+	/** @structvar nastytrap306
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap306;
+
+	/** @structvar nastytrap307
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap307;
+
+	/** @structvar nastytrap308
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap308;
+
+	/** @structvar nastytrap309
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap309;
+
+	/** @structvar nastytrap310
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap310;
+
+	/** @structvar nastytrap311
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap311;
+
+	/** @structvar nastytrap312
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap312;
+
+	/** @structvar nastytrap313
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap313;
+
+	/** @structvar nastytrap314
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap314;
+
+	/** @structvar nastytrap315
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap315;
+
+	/** @structvar nastytrap316
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap316;
+
+	/** @structvar nastytrap317
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap317;
+
+	/** @structvar nastytrap318
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap318;
+
+	/** @structvar nastytrap319
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap319;
+
+	/** @structvar nastytrap320
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap320;
+
+	/** @structvar nastytrap321
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap321;
+
+	/** @structvar nastytrap322
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap322;
+
+	/** @structvar nastytrap323
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap323;
+
+	/** @structvar nastytrap324
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap324;
+
+	/** @structvar nastytrap325
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap325;
+
+	/** @structvar nastytrap326
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap326;
+
+	/** @structvar nastytrap327
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap327;
+
+	/** @structvar nastytrap328
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap328;
+
+	/** @structvar nastytrap329
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap329;
+
+	/** @structvar nastytrap330
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap330;
+
+	/** @structvar nastytrap331
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap331;
+
+	/** @structvar nastytrap332
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap332;
+
+	/** @structvar nastytrap333
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap333;
+
+	/** @structvar nastytrap334
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap334;
+
+	/** @structvar nastytrap335
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap335;
+
+	/** @structvar nastytrap336
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap336;
+
+	/** @structvar nastytrap337
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap337;
+
+	/** @structvar nastytrap338
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap338;
+
+	/** @structvar nastytrap339
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap339;
+
+	/** @structvar nastytrap340
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap340;
+
+	/** @structvar nastytrap341
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap341;
+
+	/** @structvar nastytrap342
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap342;
+
+	/** @structvar nastytrap343
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap343;
+
+	/** @structvar nastytrap344
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap344;
+
+	/** @structvar nastytrap345
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap345;
+
+	/** @structvar nastytrap346
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap346;
+
+	/** @structvar nastytrap347
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap347;
+
+	/** @structvar nastytrap348
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap348;
+
+	/** @structvar nastytrap349
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap349;
+
+	/** @structvar nastytrap350
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap350;
+
+	/** @structvar nastytrap351
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap351;
+
+	/** @structvar nastytrap352
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap352;
+
+	/** @structvar nastytrap353
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap353;
+
+	/** @structvar nastytrap354
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap354;
+
+	/** @structvar nastytrap355
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap355;
+
+	/** @structvar nastytrap356
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap356;
+
+	/** @structvar nastytrap357
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap357;
+
+	/** @structvar nastytrap358
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap358;
+
+	/** @structvar nastytrap359
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap359;
+
+	/** @structvar nastytrap360
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap360;
+
+	/** @structvar nastytrap361
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap361;
+
+	/** @structvar nastytrap362
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap362;
+
+	/** @structvar nastytrap363
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap363;
+
+	/** @structvar nastytrap364
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap364;
+
+	/** @structvar nastytrap365
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap365;
+
+	/** @structvar nastytrap366
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap366;
+
+	/** @structvar nastytrap367
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap367;
+
+	/** @structvar nastytrap368
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap368;
+
+	/** @structvar nastytrap369
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap369;
+
+	/** @structvar nastytrap370
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap370;
+
+	/** @structvar nastytrap371
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap371;
+
+	/** @structvar nastytrap372
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap372;
+
+	/** @structvar nastytrap373
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap373;
+
+	/** @structvar nastytrap374
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap374;
+
+	/** @structvar nastytrap375
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap375;
+
+	/** @structvar nastytrap376
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap376;
+
+	/** @structvar nastytrap377
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap377;
+
+	/** @structvar nastytrap378
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap378;
+
+	/** @structvar nastytrap379
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap379;
+
+	/** @structvar nastytrap380
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap380;
+
+	/** @structvar nastytrap381
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap381;
+
+	/** @structvar nastytrap382
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap382;
+
+	/** @structvar nastytrap383
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap383;
+
+	/** @structvar nastytrap384
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap384;
+
+	/** @structvar nastytrap385
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap385;
+
+	/** @structvar nastytrap386
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap386;
+
+	/** @structvar nastytrap387
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap387;
+
+	/** @structvar nastytrap388
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap388;
+
+	/** @structvar nastytrap389
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap389;
+
+	/** @structvar nastytrap390
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap390;
+
+	/** @structvar nastytrap391
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap391;
+
+	/** @structvar nastytrap392
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap392;
+
+	/** @structvar nastytrap393
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap393;
+
+	/** @structvar nastytrap394
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap394;
+
+	/** @structvar nastytrap395
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap395;
+
+	/** @structvar nastytrap396
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap396;
+
+	/** @structvar nastytrap397
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap397;
+
+	/** @structvar nastytrap398
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap398;
+
+	/** @structvar nastytrap399
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap399;
+
+	/** @structvar nastytrap400
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap400;
+	/** @structvar nastytrap401
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap401;
+
+	/** @structvar nastytrap402
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap402;
+
+	/** @structvar nastytrap403
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap403;
+
+	/** @structvar nastytrap404
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap404;
+
+	/** @structvar nastytrap405
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap405;
+
+	/** @structvar nastytrap406
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap406;
+
+	/** @structvar nastytrap407
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap407;
+
+	/** @structvar nastytrap408
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap408;
+
+	/** @structvar nastytrap409
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap409;
+
+	/** @structvar nastytrap410
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap410;
+
+	/** @structvar nastytrap411
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap411;
+
+	/** @structvar nastytrap412
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap412;
+
+	/** @structvar nastytrap413
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap413;
+
+	/** @structvar nastytrap414
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap414;
+
+	/** @structvar nastytrap415
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap415;
+
+	/** @structvar nastytrap416
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap416;
+
+	/** @structvar nastytrap417
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap417;
+
+	/** @structvar nastytrap418
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap418;
+
+	/** @structvar nastytrap419
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap419;
+
+	/** @structvar nastytrap420
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap420;
+
+	/** @structvar nastytrap421
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap421;
+
+	/** @structvar nastytrap422
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap422;
+
+	/** @structvar nastytrap423
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap423;
+
+	/** @structvar nastytrap424
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap424;
+
+	/** @structvar nastytrap425
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap425;
+
+	/** @structvar nastytrap426
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap426;
+
+	/** @structvar nastytrap427
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap427;
+
+	/** @structvar nastytrap428
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap428;
+
+	/** @structvar nastytrap429
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap429;
+
+	/** @structvar nastytrap430
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap430;
+
+	/** @structvar nastytrap431
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap431;
+
+	/** @structvar nastytrap432
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap432;
+
+	/** @structvar nastytrap433
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap433;
+
+	/** @structvar nastytrap434
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap434;
+
+	/** @structvar nastytrap435
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap435;
+
+	/** @structvar nastytrap436
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap436;
+
+	/** @structvar nastytrap437
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap437;
+
+	/** @structvar nastytrap438
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap438;
+
+	/** @structvar nastytrap439
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap439;
+
+	/** @structvar nastytrap440
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap440;
+
+	/** @structvar nastytrap441
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap441;
+
+	/** @structvar nastytrap442
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap442;
+
+	/** @structvar nastytrap443
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap443;
+
+	/** @structvar nastytrap444
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap444;
+
+	/** @structvar nastytrap445
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap445;
+
+	/** @structvar nastytrap446
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap446;
+
+	/** @structvar nastytrap447
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap447;
+
+	/** @structvar nastytrap448
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap448;
+
+	/** @structvar nastytrap449
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap449;
+
+	/** @structvar nastytrap450
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap450;
+
+	/** @structvar nastytrap451
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap451;
+
+	/** @structvar nastytrap452
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap452;
+
+	/** @structvar nastytrap453
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap453;
+
+	/** @structvar nastytrap454
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap454;
+
+	/** @structvar nastytrap455
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap455;
+
+	/** @structvar nastytrap456
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap456;
+
+	/** @structvar nastytrap457
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap457;
+
+	/** @structvar nastytrap458
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap458;
+
+	/** @structvar nastytrap459
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap459;
+
+	/** @structvar nastytrap460
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap460;
+
+	/** @structvar nastytrap461
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap461;
+
+	/** @structvar nastytrap462
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap462;
+
+	/** @structvar nastytrap463
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap463;
+
+	/** @structvar nastytrap464
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap464;
+
+	/** @structvar nastytrap465
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap465;
+
+	/** @structvar nastytrap466
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap466;
+
+	/** @structvar nastytrap467
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap467;
+
+	/** @structvar nastytrap468
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap468;
+
+	/** @structvar nastytrap469
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap469;
+
+	/** @structvar nastytrap470
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap470;
+
+	/** @structvar nastytrap471
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap471;
+
+	/** @structvar nastytrap472
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap472;
+
+	/** @structvar nastytrap473
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap473;
+
+	/** @structvar nastytrap474
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap474;
+
+	/** @structvar nastytrap475
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap475;
+
+	/** @structvar nastytrap476
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap476;
+
+	/** @structvar nastytrap477
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap477;
+
+	/** @structvar nastytrap478
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap478;
+
+	/** @structvar nastytrap479
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap479;
+
+	/** @structvar nastytrap480
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap480;
+
+	/** @structvar nastytrap481
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap481;
+
+	/** @structvar nastytrap482
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap482;
+
+	/** @structvar nastytrap483
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap483;
+
+	/** @structvar nastytrap484
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap484;
+
+	/** @structvar nastytrap485
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap485;
+
+	/** @structvar nastytrap486
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap486;
+
+	/** @structvar nastytrap487
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap487;
+
+	/** @structvar nastytrap488
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap488;
+
+	/** @structvar nastytrap489
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap489;
+
+	/** @structvar nastytrap490
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap490;
+
+	/** @structvar nastytrap491
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap491;
+
+	/** @structvar nastytrap492
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap492;
+
+	/** @structvar nastytrap493
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap493;
+
+	/** @structvar nastytrap494
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap494;
+
+	/** @structvar nastytrap495
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap495;
+
+	/** @structvar nastytrap496
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap496;
+
+	/** @structvar nastytrap497
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap497;
+
+	/** @structvar nastytrap498
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap498;
+
+	/** @structvar nastytrap499
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap499;
+
+	/** @structvar nastytrap500
+	 * @brief Boolean
+	 * @note True if nastytrap active
+	 */
+	bool nastytrap500;
 
 };
 
