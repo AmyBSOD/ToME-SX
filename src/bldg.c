@@ -1823,6 +1823,11 @@ bool bldg_process_command(store_type *s_ptr, int i)
 				investcost *= 2000;
 			}
 
+			if (s_ptr->investment < 0) {
+				investcost = 10000;
+				if (is_state(s_ptr, STORE_HATED)) investcost = 15000;
+			}
+
 			if (investskill >= 1) {
 				investcost *= 25;
 				investcost /= (25 + investskill);
@@ -1835,6 +1840,31 @@ bool bldg_process_command(store_type *s_ptr, int i)
 			if (s_ptr->investment >= 1000) {
 				msg_format("Sorry, my shop has reached the maximum possible rank already.", investcost);
 				break;
+			}
+
+			if (s_ptr->investment < 0) {
+				if (investcost > p_ptr->au) {
+					msg_format("If you want to make me forget your crimes, you need at least %d gold pieces!", investcost);
+					break;
+				}
+
+				msg_format("So you decided to repay me, thief? It'd cost you %d gold pieces.", investcost);
+
+				if (!get_check("Pay to invest in this shop?"))
+				{
+					break;
+				}
+				p_ptr->au -= investcost;
+				store_prt_gold();
+				s_ptr->investment += 1;
+				if (s_ptr->investment < 0) {
+					msg_format("I'll take that, but my rank is still only %d.", s_ptr->investment);
+				} else {
+					msg_format("Thank you! My shop is back to rank %d.", s_ptr->investment);
+				}
+
+				break;
+
 			}
 
 			if (investcost > p_ptr->au) {
@@ -2129,11 +2159,11 @@ bool bldg_process_command(store_type *s_ptr, int i)
 			s32b req;
 			char prompt[80];
 
-			if (p_ptr->loan)
+			/*if (p_ptr->loan)
 			{
 				msg_format("You have nothing to payback!");
 				break;
-			}
+			}*/
 
 			msg_format("You have a loan of %i.", p_ptr->loan);
 

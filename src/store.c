@@ -1036,6 +1036,7 @@ static int home_carry(object_type *o_ptr)
 	int i;
 	object_type *j_ptr;
 
+	int actualstocksize;
 
 	/* Check each existing item (try to combine) */
 	for (slot = 0; slot < st_ptr->stock_num; slot++)
@@ -1054,8 +1055,11 @@ static int home_carry(object_type *o_ptr)
 		}
 	}
 
+	actualstocksize = (st_ptr->stock_size + st_ptr->investment);
+	if (actualstocksize < 1) actualstocksize = 1;
+
 	/* No space? */
-	if (st_ptr->stock_num >= (st_ptr->stock_size + st_ptr->investment) ) return ( -1);
+	if (st_ptr->stock_num >= actualstocksize) return ( -1);
 
 
 	/* Determine the "value" of the item */
@@ -1135,6 +1139,7 @@ static int store_carry(object_type *o_ptr)
 	s32b	value, j_value;
 	object_type *j_ptr;
 
+	int actualstocksize;
 
 	/* Evaluate the object */
 	value = object_value(o_ptr);
@@ -1165,8 +1170,13 @@ static int store_carry(object_type *o_ptr)
 		}
 	}
 
+	actualstocksize = st_ptr->stock_size;
+	if (st_ptr->investment > 0) actualstocksize += randint(st_ptr->investment);
+	if (st_ptr->investment < 0) actualstocksize += st_ptr->investment; /* reduction */
+	if (actualstocksize < 1) actualstocksize = 1;
+
 	/* No space? */
-	if (st_ptr->stock_num >= (st_ptr->stock_size + randint(st_ptr->investment)) ) return ( -1);
+	if (st_ptr->stock_num >= actualstocksize) return ( -1);
 
 
 	/* Check existing slots to see if we must "slide" */
@@ -1438,9 +1448,15 @@ static void store_create(void)
 	object_type *q_ptr = NULL;
 	bool obj_all_done = FALSE;
 
+	int actualstocksize;
+
+	actualstocksize = st_ptr->stock_size;
+	if (st_ptr->investment > 0) actualstocksize += randint(st_ptr->investment);
+	if (st_ptr->investment < 0) actualstocksize += st_ptr->investment; /* reduction */
+	if (actualstocksize < 1) actualstocksize = 1;
 
 	/* Paranoia -- no room left */
-	if (st_ptr->stock_num >= (st_ptr->stock_size + randint(st_ptr->investment)) ) return;
+	if (st_ptr->stock_num >= actualstocksize) return;
 
 
 	/* Hack -- consider up to four items */
@@ -1940,12 +1956,18 @@ void display_store(void)
 		cptr store_name = (st_name + st_info[cur_store_num].name);
 		cptr owner_name = (ow_name + ot_ptr->name);
 
+		int maxprice;
+
+		maxprice = ot_ptr->max_cost;
+		maxprice += (st_investment * 100); /* reduction if investment is negative --Amy */
+		if (maxprice < 1) maxprice = 1;
+
 		/* Put the owner name and race */
 		strnfmt(buf, 80, "%s", owner_name);
 		put_str(buf, 3, 10);
 
 		/* Show the max price in the store (above prices) */
-		strnfmt(buf, 80, "%s (%ld, rank %d)", store_name, (long)(ot_ptr->max_cost + (st_investment * 100)), st_investment);
+		strnfmt(buf, 80, "%s (%ld, rank %d)", store_name, (long)maxprice, st_investment);
 		prt(buf, 3, 50);
 
 		/* Label the item descriptions */
@@ -2474,6 +2496,10 @@ static bool sell_haggle(object_type *o_ptr, s32b *price)
 	/* Get the owner's payout limit */
 	purse = (s32b)(ot_ptr->max_cost);
 	if (st_investment > 0) purse += (st_investment * 100);
+	if (st_investment < 0) {
+		purse += (st_investment * 100); /* reduction */
+		if (purse < 1) purse = 1;
+	}
 
 	/* No need to haggle */
 	if (noneed || (auto_haggle && !p_ptr->nastytrap146) || (final_ask >= purse))
@@ -2872,6 +2898,10 @@ void store_stole(void)
 
 		/* Kicked out for a LONG time */
 		st_ptr->store_open = turn + 500000 + randint(500000);
+		if (st_ptr->investment > -1000) {
+			if (is_state(st_ptr, STORE_HATED)) st_ptr->investment -= 10;
+			st_ptr->investment -= 10;
+		}
 	}
 
 	/* Not kicked out */
@@ -4480,6 +4510,7 @@ void store_maint(int town_num, int store_num)
 	/* stores with little stock size have lower amounts of items --Amy */
 	if (maxkeep > (st_ptr->stock_size + st_ptr->investment)) {
 		maxkeep = (st_ptr->stock_size + st_ptr->investment);
+		if (maxkeep < 1) maxkeep = 1;
 	}
 
 	/* well-invested shops can have more stuff --Amy */
@@ -4509,6 +4540,7 @@ void store_maint(int town_num, int store_num)
 	/* but if the shop's stock size is low, then it'll buy less of them --Amy */
 	if (j > (st_ptr->stock_size + st_ptr->investment)) {
 		j = (st_ptr->stock_size + st_ptr->investment);
+		if (j < 1) j = 1;
 	}
 
 	if (st_info[st_ptr->st_idx].flags1 & SF1_ALL_ITEM) {
@@ -4533,7 +4565,10 @@ void store_maint(int town_num, int store_num)
 	/* Always "keep" at least "STORE_MIN_KEEP" items */
 	if (j < STORE_MIN_KEEP) j = STORE_MIN_KEEP;
 
-	stocksizetemp = st_ptr->stock_size + randint(st_ptr->investment);
+	stocksizetemp = st_ptr->stock_size;
+	if (st_ptr->investment > 0) stocksizetemp += randint(st_ptr->investment);
+	if (st_ptr->investment < 0) stocksizetemp += st_ptr->investment; /* reduction */
+	if (stocksizetemp < 1) stocksizetemp = 1;
 
 	/* Hack -- prevent "overflow" */
 	if (j >= stocksizetemp) j = stocksizetemp - 1;
