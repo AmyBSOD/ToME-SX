@@ -1458,8 +1458,9 @@ static void process_world(void)
 
 	/* Check the fate
 	 * Amy edit: it makes less than zero sense if you can't get them at lower XLs! man! why do I always have to fix such
-	 * things... why can't the devs just make a game without arrgh factors so that I can simply play :( */
-	if (fate_option /*&& (p_ptr->lev > 10)*/)
+	 * things... why can't the devs just make a game without arrgh factors so that I can simply play :(
+	 * bad fate nastytrap makes it so you can get fates even if you turned the option off */
+	if ((fate_option || p_ptr->nastytrap129) /*&& (p_ptr->lev > 10)*/)
 	{
 		/*
 		 * WAS: == 666 against randint(50000).
