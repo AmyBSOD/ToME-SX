@@ -4199,11 +4199,12 @@ void calc_bonuses(bool silent)
 		p_ptr->water_breath = TRUE;
 	}
 
-	/* Hack -- Can Fly -> Can Levitate */
-	if (p_ptr->fly)
+	/* Hack -- Can Fly -> Can Levitate
+	 * Amy edit: nope, would make levitation useless */
+	/*if (p_ptr->fly)
 	{
 		p_ptr->ffall = TRUE;
-	}
+	}*/
 
 	/* Hack -- Res Chaos -> Res Conf */
 	/* Amy edit: sorry but I want confusion resistance to be important, so... */

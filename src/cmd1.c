@@ -3400,7 +3400,7 @@ bool player_can_enter(byte feature)
 		{
 			int wt = weight_limit() / 2;
 
-			if ((calc_total_weight() >= wt) && !(p_ptr->ffall))
+			if ((calc_total_weight() >= wt) && !(p_ptr->ffall) && !(p_ptr->fly))
 				return (FALSE);
 		}
 		else if (feature == FEAT_SHAL_LAVA ||
@@ -3409,7 +3409,7 @@ bool player_can_enter(byte feature)
 			if (!(p_ptr->resist_fire ||
 			                p_ptr->immune_fire ||
 			                p_ptr->oppose_fire ||
-			                p_ptr->ffall))
+			                p_ptr->ffall || p_ptr->fly))
 				return (FALSE);
 		}
 	}
@@ -3432,7 +3432,7 @@ bool player_can_enter(byte feature)
 		return (TRUE);
 	else if (only_wall && (f_info[feature].flags1 & FF1_FLOOR))
 		return (FALSE);
-	else if ((p_ptr->ffall) &&
+	else if ((p_ptr->ffall || p_ptr->fly) &&
 	                (f_info[feature].flags1 & FF1_CAN_LEVITATE))
 		return (TRUE);
 	else if ((pass_wall || only_wall) &&
@@ -3769,7 +3769,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 		}
 	}
 
-	else if ((c_ptr->feat == FEAT_DARK_PIT) && !p_ptr->ffall)
+	else if ((c_ptr->feat == FEAT_DARK_PIT) && !p_ptr->ffall && !p_ptr->fly)
 	{
 		msg_print("You can't cross the chasm.");
 		running = 0;

@@ -1798,7 +1798,7 @@ static void process_world(void)
 
 	/* Drown in deep water unless the player have levitation, water walking
 	   water breathing, or magic breathing.*/
-	if (!p_ptr->ffall && !p_ptr->walk_water && !p_ptr->magical_breath &&
+	if (!p_ptr->ffall && !p_ptr->fly && !p_ptr->walk_water && !p_ptr->magical_breath &&
 	                !p_ptr->water_breath &&
 	                (cave[p_ptr->py][p_ptr->px].feat == FEAT_DEEP_WATER))
 	{
