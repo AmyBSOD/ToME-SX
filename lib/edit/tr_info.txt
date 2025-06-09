@@ -3637,6 +3637,61 @@ I:80:2:50:4:60:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:739:Trap of Severe Charges Drain
+I:10:100:70:2:20:0d0:y
+D:You feel as if you've just lost something...
+F:FLOOR | CHEST | DOOR
+
+N:740:Trap of Complete Charges Drain
+I:12:100:70:2:35:0d0:y
+D:You feel as if you've just lost something...
+F:FLOOR | CHEST | DOOR
+
+N:741:Wire Trap
+I:2:100:5:5:1:0d0:R
+D:You're hurt!
+F:FLOOR | CHEST | DOOR
+
+N:742:Lash Trap
+I:2:100:5:5:5:0d0:R
+D:You're hurt!
+F:FLOOR | CHEST | DOOR
+
+N:743:Sword Trap
+I:3:100:5:5:15:0d0:R
+D:You're hurt!
+F:FLOOR | CHEST | DOOR
+
+N:744:Axe Trap
+I:4:100:5:5:30:0d0:R
+D:You're hurt!
+F:FLOOR | CHEST | DOOR
+
+N:745:Iron Maiden Trap
+I:10:100:5:5:50:0d0:R
+D:You're hurt!
+F:FLOOR | CHEST | DOOR
+
+N:746:Guillotine Trap
+I:15:100:5:5:60:0d0:R
+D:You're hurt!
+F:FLOOR | CHEST | DOOR
+
+N:747:Bisection Trap
+I:20:100:5:5:70:0d0:R
+D:You're hurt!
+F:FLOOR | CHEST | DOOR
+
+N:748:Rack Trap
+I:40:100:5:5:80:0d0:R
+D:You're hurt!
+F:FLOOR | CHEST | DOOR
+
+N:749:Knee Splitter Trap
+I:50:100:5:5:100:0d0:R
+D:You're hurt!
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

@@ -4304,6 +4304,105 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_PERCENT_DMG_I:
+		{
+			int percentdmg = (p_ptr->chp / 20);
+			if (percentdmg < 1) percentdmg = 1;
+			msg_print("You trip over a wire!");
+			take_hit(percentdmg, "a wire trap");
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_PERCENT_DMG_II:
+		{
+			int percentdmg = (p_ptr->chp / 10);
+			if (percentdmg < 1) percentdmg = 1;
+			msg_print("You're hit by a lashing whip!");
+			take_hit(percentdmg, "a lash trap");
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_PERCENT_DMG_III:
+		{
+			int percentdmg = (p_ptr->chp / 5);
+			if (percentdmg < 1) percentdmg = 1;
+			msg_print("You're hit by a sword!");
+			take_hit(percentdmg, "a sword trap");
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_PERCENT_DMG_IV:
+		{
+			int percentdmg = (p_ptr->chp / 3);
+			if (percentdmg < 1) percentdmg = 1;
+			msg_print("You're hit by an axe!");
+			take_hit(percentdmg, "an axe trap");
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_PERCENT_DMG_V:
+		{
+			int percentdmg = (p_ptr->chp / 2);
+			if (percentdmg < 5) percentdmg = 5;
+			msg_print("You're caught in an iron maiden!");
+			take_hit(percentdmg, "an iron maiden trap");
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_PERCENT_DMG_VI:
+		{
+			int percentdmg = (p_ptr->chp * 2 / 3);
+			if (percentdmg < 5) percentdmg = 5;
+			msg_print("You're nearly decapitated by a guillotine!");
+			take_hit(percentdmg, "a guillotine trap");
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_PERCENT_DMG_VII:
+		{
+			int percentdmg = (p_ptr->chp * 3 / 4);
+			if (percentdmg < 5) percentdmg = 5;
+			msg_print("You're nearly bisected by a razor-sharp blade!");
+			take_hit(percentdmg, "a bisection trap");
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_PERCENT_DMG_VIII:
+		{
+			int percentdmg = (p_ptr->chp * 4 / 5);
+			if (percentdmg < 10) percentdmg = 10;
+			msg_print("You're severely hurt by a rack!");
+			take_hit(percentdmg, "a rack trap");
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_PERCENT_DMG_IX:
+		{
+			int percentdmg = (p_ptr->chp * 9 / 10);
+			if (percentdmg < 10) percentdmg = 10;
+			msg_print("Your knee is crunched extremely painfully!");
+			take_hit(percentdmg, "a knee splitter trap");
+			ident = TRUE;
+
+			break;
+		}
+
 	case TRAP_OF_HAND_DOOM:
 		{
 			msg_print("The Hand of Doom is invoked against you!");
@@ -6685,6 +6784,100 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 					/* 60% chance of only 1 */
 					if (randint(10) > 3) break;
+				}
+			}
+
+			if (ident)
+			{
+				/* Window stuff */
+				p_ptr->window |= PW_INVEN;
+				/* Combine / Reorder the pack */
+				p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+
+				msg_print("Your backpack seems to be turned upside down.");
+			}
+			else
+			{
+				msg_print("You hear a wail of great disappointment.");
+			}
+			break;
+		}
+
+	case TRAP_OF_CHARGES_DRAIN_II:
+		{
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
+
+			/* Find an item */
+			for (k = 0; k < 10; k++)
+			{
+				s16b i = rand_int(INVEN_PACK);
+
+				object_type *j_ptr = &p_ptr->inventory[i];
+
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
+
+				/* Drain charged wands/staffs
+				   Hack -- don't let artifacts get drained */
+				if (((j_ptr->tval == TV_STAFF) || (j_ptr->tval == TV_ROD_MAIN) ||
+				                (j_ptr->tval == TV_WAND)) &&
+				                (j_ptr->pval) &&
+			                     !artifact_p(j_ptr) && !( (f5 & (TR5_CHARGE_HOLDING)) && (randint(10) != 1) ) )
+				{
+					ident = TRUE;
+
+					if (j_ptr->tval == TV_ROD_MAIN) {
+						j_ptr->timeout = j_ptr->timeout / (randint(8) + 1);
+					} else {
+						j_ptr->pval = j_ptr->pval / (randint(8) + 1);
+					}
+
+
+					/* 20% chance of only 1 */
+					if (randint(10) > 8) break;
+				}
+			}
+
+			if (ident)
+			{
+				/* Window stuff */
+				p_ptr->window |= PW_INVEN;
+				/* Combine / Reorder the pack */
+				p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+
+				msg_print("Your backpack seems to be turned upside down.");
+			}
+			else
+			{
+				msg_print("You hear a wail of great disappointment.");
+			}
+			break;
+		}
+
+	case TRAP_OF_CHARGES_DRAIN_III:
+		{
+			u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
+
+			/* Find an item */
+			for (k = 0; k < 10; k++)
+			{
+				s16b i = rand_int(INVEN_PACK);
+
+				object_type *j_ptr = &p_ptr->inventory[i];
+
+				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
+
+				/* Drain charged wands/staffs, can also affect artifacts muahahahaha --Amy */
+				if (((j_ptr->tval == TV_STAFF) || (j_ptr->tval == TV_ROD_MAIN) ||
+				                (j_ptr->tval == TV_WAND)) &&
+				                (j_ptr->pval) && !( (f5 & (TR5_CHARGE_HOLDING)) && (randint(10) != 1) ) )
+				{
+					ident = TRUE;
+
+					if (j_ptr->tval == TV_ROD_MAIN) {
+						j_ptr->timeout = 0;
+					} else {
+						j_ptr->pval = 0;
+					}
 				}
 			}
 

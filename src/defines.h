@@ -3465,6 +3465,19 @@
 #define TRAP_NASTY152                     737
 #define TRAP_NASTY153                     738
 
+#define TRAP_OF_CHARGES_DRAIN_II          739
+#define TRAP_OF_CHARGES_DRAIN_III         740
+
+#define TRAP_PERCENT_DMG_I                741
+#define TRAP_PERCENT_DMG_II               742
+#define TRAP_PERCENT_DMG_III              743
+#define TRAP_PERCENT_DMG_IV               744
+#define TRAP_PERCENT_DMG_V                745
+#define TRAP_PERCENT_DMG_VI               746
+#define TRAP_PERCENT_DMG_VII              747
+#define TRAP_PERCENT_DMG_VIII             748
+#define TRAP_PERCENT_DMG_IX               749
+
 /*** General index values ***/
 
 
