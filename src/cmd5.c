@@ -646,8 +646,11 @@ void do_fart_effect(void)
 		{
 			if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 			{
-				msg_print("You can't move!");
-				(void)set_paralyzed(p_ptr->paralyzed + rand_int(5) + 2);
+				if (!p_ptr->resist_nerve || magik(50)) {
+					msg_print("You can't move!");
+					(void)set_paralyzed(p_ptr->paralyzed + rand_int(5) + 2);
+				}
+				else msg_print("You feel a slight shaking.");
 			}
 			else msg_print("You momentarily stiffen.");
 

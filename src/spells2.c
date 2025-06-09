@@ -8443,6 +8443,10 @@ case 13: case 14: case 15: case 19: case 20:
 			{
 				/* Do nothing */ ;
 			}
+			else if (p_ptr->resist_nerve && magik(50))
+			{
+				/* Do nothing */ ;
+			}
 			else
 			{
 				msg_print("You feel like a statue!");
@@ -8532,6 +8536,10 @@ void activate_dg_curse(void)
 		case 14:
 		case 15:
 			if (p_ptr->free_act && (randint(100) < player_actual_saving_throw()))
+			{
+				/* Do nothing */ ;
+			}
+			else if (p_ptr->resist_nerve && magik(50))
 			{
 				/* Do nothing */ ;
 			}

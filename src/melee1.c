@@ -953,6 +953,11 @@ bool carried_make_attack_normal(int r_idx)
 						msg_print("You are unaffected!");
 						obvious = TRUE;
 					}
+					else if (p_ptr->resist_nerve && magik(50))
+					{
+						msg_print("You are unaffected!");
+						obvious = TRUE;
+					}
 					else if (rand_int(100) < player_actual_saving_throw())
 					{
 						msg_print("You resist the effects!");
@@ -2855,6 +2860,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 					/* Increase "paralyzed" */
 					if (p_ptr->free_act && (rand_int(p_ptr->nastytrap57 ? 20 : 100) > 0) )
+					{
+						msg_print("You are unaffected!");
+						obvious = TRUE;
+					}
+					else if (p_ptr->resist_nerve && magik(50))
 					{
 						msg_print("You are unaffected!");
 						obvious = TRUE;

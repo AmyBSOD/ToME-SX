@@ -1755,7 +1755,9 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 		}
 		if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 		{
-			(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
+			if (!p_ptr->resist_nerve || magik(50)) {
+				(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
+			}
 		}
 		while ((rand_int(100) > player_actual_saving_throw()) && (randint(100) != 1) )
 			(void)do_dec_stat(A_INT, STAT_DEC_NORMAL);

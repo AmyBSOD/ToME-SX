@@ -3774,9 +3774,14 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 			{
-				msg_print("You touch a poisoned part and can't move.");
-				(void)set_paralyzed(p_ptr->paralyzed + rand_int(10) + 10);
-				ident = TRUE;
+				if (!p_ptr->resist_nerve || magik(50)) {
+					msg_print("You touch a poisoned part and can't move.");
+					(void)set_paralyzed(p_ptr->paralyzed + rand_int(10) + 10);	
+					ident = TRUE;
+				} else {
+					msg_print("You prick yourself on a needle.");
+					ident = TRUE;
+				}
 			}
 			else
 			{
@@ -4573,7 +4578,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 			if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 			{
-				(void)set_paralyzed(p_ptr->paralyzed + rand_int(dun_level) + 6);
+				if (!p_ptr->resist_nerve || magik(50)) {
+					(void)set_paralyzed(p_ptr->paralyzed + rand_int(dun_level) + 6);
+				}
 			}
 			ident = TRUE;
 			break;
@@ -11251,6 +11258,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					if (!p_ptr->paralyzed) {
 						if (p_ptr->free_act && (rand_int(p_ptr->nastytrap57 ? 20 : 100) > 0) ) {
 							msg_print("You struggle to stay on your feet.");
+						} else if (p_ptr->resist_nerve && magik(50)) {
+							msg_print("You barely manage to stay on your feet.");
 						} else {
 							msg_print("You helplessly drop to the floor in pain.");
 							set_paralyzed(p_ptr->paralyzed + randint(4) );
@@ -13333,7 +13342,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				}
 				if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 				{
-					(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
+					if (!p_ptr->resist_nerve || magik(50)) {
+						(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
+					}
 				}
 				while ((rand_int(100) > player_actual_saving_throw()) && (randint(100) != 1) )
 					(void)do_dec_stat(A_INT, STAT_DEC_NORMAL);
@@ -13703,7 +13714,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 			if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 			{
-				(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
+				if (!p_ptr->resist_nerve || magik(50)) {
+					(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
+				}
 			}
 			(void)set_slow(p_ptr->slow + rand_int(4) + 4);
 

@@ -4926,7 +4926,9 @@ bool make_attack_spell(int m_idx)
 					}
 					if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 					{
-						(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
+						if (!p_ptr->resist_nerve || magik(50)) {
+							(void)set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4);
+						}
 					}
 					(void)set_slow(p_ptr->slow + rand_int(4) + 4);
 
@@ -5314,6 +5316,10 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s stares deep into your eyes!", m_name);
 				if (p_ptr->free_act && (rand_int(p_ptr->nastytrap57 ? 20 : 100) > 0) )
+				{
+					msg_print("You are unaffected!");
+				}
+				else if (p_ptr->resist_nerve && magik(50))
 				{
 					msg_print("You are unaffected!");
 				}

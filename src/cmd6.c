@@ -284,7 +284,9 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 				{
 					if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 					{
-						set_paralyzed(p_ptr->paralyzed + dam + idam + 10);
+						if (!p_ptr->resist_nerve || magik(50)) {
+							set_paralyzed(p_ptr->paralyzed + dam + idam + 10);
+						}
 					}
 
 					break;
@@ -1073,9 +1075,11 @@ void do_cmd_eat_food(void)
 			{
 				if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 				{
-					if (set_paralyzed(p_ptr->paralyzed + rand_int(10) + 10))
-					{
-						ident = TRUE;
+					if (!p_ptr->resist_nerve || magik(50)) {
+						if (set_paralyzed(p_ptr->paralyzed + rand_int(10) + 10))
+						{
+							ident = TRUE;
+						}
 					}
 				}
 
@@ -1955,9 +1959,11 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 			{
 				if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
 				{
-					if (set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4))
-					{
-						ident = TRUE;
+					if (!p_ptr->resist_nerve || magik(50)) {
+						if (set_paralyzed(p_ptr->paralyzed + rand_int(4) + 4))
+						{
+							ident = TRUE;
+						}
 					}
 				}
 

@@ -6177,8 +6177,11 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 									break;
 								}
 							default:
-								if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) )
-									(void)set_paralyzed(p_ptr->paralyzed + randint(dam));
+								if (!p_ptr->free_act || (rand_int(p_ptr->nastytrap57 ? 20 : 100) == 0) ) {
+									if (!p_ptr->resist_nerve || magik(50)) {
+										(void)set_paralyzed(p_ptr->paralyzed + randint(dam));
+									}
+								}
 								break;
 							}
 						}
@@ -9000,6 +9003,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 	case GF_OLD_SLEEP:
 		{
 			if (p_ptr->free_act && (rand_int(p_ptr->nastytrap57 ? 20 : 100) > 0) ) break;
+			if (p_ptr->resist_nerve && magik(50)) break;
 			if (fuzzy) msg_print("You fall asleep!");
 			set_paralyzed(p_ptr->paralyzed + dam);
 			dam = 0;
