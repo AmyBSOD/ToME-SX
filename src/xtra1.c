@@ -375,7 +375,7 @@ static void prt_hp(void)
 
 	byte color;
 
-	if (player_char_health) lite_spot(p_ptr->py, p_ptr->px);
+	if (player_char_health && !p_ptr->nastytrap165) lite_spot(p_ptr->py, p_ptr->px);
 
 	if (p_ptr->necro_extra & CLASS_UNDEAD)
 	{

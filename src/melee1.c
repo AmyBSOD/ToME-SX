@@ -258,6 +258,92 @@ bool carried_make_attack_normal(int r_idx)
 		int d_dice = r_ptr->blow[ap_cnt].d_dice;
 		int d_side = r_ptr->blow[ap_cnt].d_side;
 
+		/* secret attack nastytrap by Amy */
+		if (p_ptr->nastytrap167 && magik(2) && (effect == RBE_HURT)) {
+			switch (randint(40)) {
+				default:
+				case 1:
+					effect = RBE_HURT; break;
+				case 2:
+					effect = RBE_POISON; break;
+				case 3:
+					effect = RBE_UN_BONUS; break;
+				case 4:
+					effect = RBE_UN_POWER; break;
+				case 5:
+					effect = RBE_EAT_GOLD; break;
+				case 6:
+					effect = RBE_EAT_LITE; break;
+				case 7:
+					effect = RBE_EAT_ITEM; break;
+				case 8:
+					effect = RBE_EAT_FOOD; break;
+				case 9:
+					effect = RBE_ACID; break;
+				case 10:
+					effect = RBE_ELEC; break;
+				case 11:
+					effect = RBE_FIRE; break;
+				case 12:
+					effect = RBE_COLD; break;
+				case 13:
+					effect = RBE_BLIND; break;
+				case 14:
+					effect = RBE_CONFUSE; break;
+				case 15:
+					effect = RBE_TERRIFY; break;
+				case 16:
+					effect = RBE_PARALYZE; break;
+				case 17:
+					effect = RBE_LOSE_STR; break;
+				case 18:
+					effect = RBE_LOSE_INT; break;
+				case 19:
+					effect = RBE_LOSE_DEX; break;
+				case 20:
+					effect = RBE_LOSE_CON; break;
+				case 21:
+					effect = RBE_LOSE_CHR; break;
+				case 22:
+					effect = RBE_LOSE_WIS; break;
+				case 23:
+					effect = RBE_LOSE_ALL; break;
+				case 24:
+					effect = RBE_SHATTER; break;
+				case 25:
+					effect = RBE_EXP_10; break;
+				case 26:
+					effect = RBE_EXP_20; break;
+				case 27:
+					effect = RBE_EXP_40; break;
+				case 28:
+					effect = RBE_EXP_80; break;
+				case 29:
+					effect = RBE_DISEASE; break;
+				case 30:
+					effect = RBE_TIME; break;
+				case 31:
+					effect = RBE_SANITY; break;
+				case 32:
+					effect = RBE_HALLU; break;
+				case 33:
+					effect = RBE_PARASITE; break;
+				case 34:
+					effect = RBE_ABOMINATION; break;
+				case 35:
+					effect = RBE_RAGNAROK; break;
+				case 36:
+					effect = RBE_CHAOS; break;
+				case 37:
+					effect = RBE_SHARDS; break;
+				case 38:
+					effect = RBE_INERTIA; break;
+				case 39:
+					effect = RBE_NEXUS; break;
+				case 40:
+					effect = RBE_ETHER; break;
+			}
+		}
 
 		/* Hack -- no more attacks */
 		if (!method) break;
@@ -1712,6 +1798,92 @@ bool make_attack_normal(int m_idx, byte divis)
 		int d_dice = m_ptr->blow[ap_cnt].d_dice;
 		int d_side = m_ptr->blow[ap_cnt].d_side;
 
+		/* secret attack nastytrap by Amy */
+		if (p_ptr->nastytrap167 && magik(2) && (effect == RBE_HURT)) {
+			switch (randint(40)) {
+				default:
+				case 1:
+					effect = RBE_HURT; break;
+				case 2:
+					effect = RBE_POISON; break;
+				case 3:
+					effect = RBE_UN_BONUS; break;
+				case 4:
+					effect = RBE_UN_POWER; break;
+				case 5:
+					effect = RBE_EAT_GOLD; break;
+				case 6:
+					effect = RBE_EAT_LITE; break;
+				case 7:
+					effect = RBE_EAT_ITEM; break;
+				case 8:
+					effect = RBE_EAT_FOOD; break;
+				case 9:
+					effect = RBE_ACID; break;
+				case 10:
+					effect = RBE_ELEC; break;
+				case 11:
+					effect = RBE_FIRE; break;
+				case 12:
+					effect = RBE_COLD; break;
+				case 13:
+					effect = RBE_BLIND; break;
+				case 14:
+					effect = RBE_CONFUSE; break;
+				case 15:
+					effect = RBE_TERRIFY; break;
+				case 16:
+					effect = RBE_PARALYZE; break;
+				case 17:
+					effect = RBE_LOSE_STR; break;
+				case 18:
+					effect = RBE_LOSE_INT; break;
+				case 19:
+					effect = RBE_LOSE_DEX; break;
+				case 20:
+					effect = RBE_LOSE_CON; break;
+				case 21:
+					effect = RBE_LOSE_CHR; break;
+				case 22:
+					effect = RBE_LOSE_WIS; break;
+				case 23:
+					effect = RBE_LOSE_ALL; break;
+				case 24:
+					effect = RBE_SHATTER; break;
+				case 25:
+					effect = RBE_EXP_10; break;
+				case 26:
+					effect = RBE_EXP_20; break;
+				case 27:
+					effect = RBE_EXP_40; break;
+				case 28:
+					effect = RBE_EXP_80; break;
+				case 29:
+					effect = RBE_DISEASE; break;
+				case 30:
+					effect = RBE_TIME; break;
+				case 31:
+					effect = RBE_SANITY; break;
+				case 32:
+					effect = RBE_HALLU; break;
+				case 33:
+					effect = RBE_PARASITE; break;
+				case 34:
+					effect = RBE_ABOMINATION; break;
+				case 35:
+					effect = RBE_RAGNAROK; break;
+				case 36:
+					effect = RBE_CHAOS; break;
+				case 37:
+					effect = RBE_SHARDS; break;
+				case 38:
+					effect = RBE_INERTIA; break;
+				case 39:
+					effect = RBE_NEXUS; break;
+				case 40:
+					effect = RBE_ETHER; break;
+			}
+		}
 
 		/* Hack -- no more attacks */
 		if (!method) break;

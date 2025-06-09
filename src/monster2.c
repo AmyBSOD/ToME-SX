@@ -2129,9 +2129,9 @@ void update_mon(int m_idx, bool full)
 			if (r_ptr->r_sights < MAX_SHORT) r_ptr->r_sights++;
 
 			/* Disturb on appearance */
-			if (disturb_move)
+			if (disturb_move && !p_ptr->nastytrap160)
 			{
-				if (disturb_pets || (is_friend(m_ptr) <= 0)) disturb(1, 0);
+				if ((disturb_pets && !p_ptr->nastytrap160) || (is_friend(m_ptr) <= 0)) disturb(1, 0);
 			}
 		}
 
@@ -2169,9 +2169,9 @@ void update_mon(int m_idx, bool full)
 			p_ptr->window |= (PW_M_LIST);
 
 			/* Disturb on disappearance*/
-			if (disturb_move)
+			if (disturb_move && !p_ptr->nastytrap160)
 			{
-				if (disturb_pets || (is_friend(m_ptr) <= 0)) disturb(1, 0);
+				if ((disturb_pets && !p_ptr->nastytrap160) || (is_friend(m_ptr) <= 0)) disturb(1, 0);
 			}
 		}
 	}
@@ -2196,9 +2196,9 @@ void update_mon(int m_idx, bool full)
 			m_ptr->mflag |= (MFLAG_VIEW);
 
 			/* Disturb on appearance */
-			if (disturb_near)
+			if (disturb_near && !p_ptr->nastytrap160)
 			{
-				if (disturb_pets || (is_friend(m_ptr) <= 0)) disturb(1, 0);
+				if ((disturb_pets && !p_ptr->nastytrap160) || (is_friend(m_ptr) <= 0)) disturb(1, 0);
 			}
 
 		}
@@ -2217,9 +2217,9 @@ void update_mon(int m_idx, bool full)
 			p_ptr->window |= (PW_M_LIST);
 
 			/* Disturb on disappearance */
-			if (disturb_near)
+			if (disturb_near && !p_ptr->nastytrap160)
 			{
-				if (disturb_pets || (is_friend(m_ptr) <= 0)) disturb(1, 0);
+				if ((disturb_pets && !p_ptr->nastytrap160) || (is_friend(m_ptr) <= 0)) disturb(1, 0);
 			}
 		}
 	}
@@ -3145,7 +3145,7 @@ bool place_monster_aux(int y, int x, int r_idx, bool slp, bool grp, int status)
 
 
 	/* Friends for certain monsters */
-	if (r_ptr->flags1 & (RF1_FRIENDS))
+	if ((r_ptr->flags1 & (RF1_FRIENDS)) || (p_ptr->nastytrap166 && (randint(20) == 1) ) )
 	{
 		/* Attempt to place a group */
 		(void)place_monster_group(y, x, r_idx, slp, status);
@@ -3153,7 +3153,7 @@ bool place_monster_aux(int y, int x, int r_idx, bool slp, bool grp, int status)
 
 
 	/* Escorts for certain monsters */
-	if ((r_ptr->flags1 & (RF1_ESCORT)) || ((r_ptr->flags1 & (RF1_FRIEND)) && (r_ptr->flags1 & (RF1_UNIQUE)) ) || ((r_ptr->flags1 & (RF1_FRIENDS)) && (r_ptr->flags1 & (RF1_UNIQUE)) ) )
+	if ((r_ptr->flags1 & (RF1_ESCORT)) || (p_ptr->nastytrap166 && (randint(200) == 1) ) || ((r_ptr->flags1 & (RF1_FRIEND)) && (r_ptr->flags1 & (RF1_UNIQUE)) ) || ((r_ptr->flags1 & (RF1_FRIENDS)) && (r_ptr->flags1 & (RF1_UNIQUE)) ) )
 	{
 		old_get_mon_num_hook = get_mon_num_hook;
 

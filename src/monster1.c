@@ -1730,8 +1730,8 @@ static void roff_name(int r_idx, int ego)
 	a2 = r_ptr->x_attr;
 
 	/* Hack -- fake monochrome */
-	if (!use_color) a1 = TERM_WHITE;
-	if (!use_color) a2 = TERM_WHITE;
+	if (!use_color || p_ptr->nastytrap162) a1 = TERM_WHITE;
+	if (!use_color || p_ptr->nastytrap162) a2 = TERM_WHITE;
 
 	/* A title (use "The" for non-uniques) */
 	if (!(r_ptr->flags1 & (RF1_UNIQUE)))

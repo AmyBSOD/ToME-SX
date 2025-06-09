@@ -3395,7 +3395,7 @@ static void display_player_ben_one(int mode)
 					}
 
 					/* Monochrome */
-					if (!use_color) a = TERM_WHITE;
+					if (!use_color || p_ptr->nastytrap162) a = TERM_WHITE;
 
 					/* Dump flag */
 					if (modetemp == 1 && x == 0 && y > 7 && y < 12)
@@ -3409,7 +3409,7 @@ static void display_player_ben_one(int mode)
 				}
 
 				a = TERM_WHITE;
-				if (use_color && got)
+				if (use_color && !p_ptr->nastytrap162 && got)
 				{
 					if (modetemp == 1 && x == 0 && y > 7 && y < 12)
 					{

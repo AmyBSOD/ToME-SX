@@ -7136,7 +7136,7 @@ void pickup_ammo()
 bool can_carry_heavy(object_type *o_ptr)
 {
 	/* Query if object is heavy */
-	if (prompt_pickup_heavy)
+	if (prompt_pickup_heavy && !p_ptr->nastytrap161)
 	{
 		int i, j;
 		int old_enc = 0;

@@ -515,7 +515,7 @@ static void sense_inventory(void)
 		if (feel == SENSE_NONE) continue;
 
 		/* Stop everything */
-		if (disturb_minor) disturb(0, 0);
+		if (disturb_minor && !p_ptr->nastytrap160) disturb(0, 0);
 
 		/* Get an object description */
 		object_desc(o_name, o_ptr, FALSE, 0);
@@ -1571,7 +1571,7 @@ static void process_world(void)
 						c_ptr->info |= (CAVE_GLOW);
 
 						/* Hack -- Memorize lit grids if allowed */
-						if (view_perma_grids) c_ptr->info |= (CAVE_MARK);
+						if (view_perma_grids && !p_ptr->nastytrap159) c_ptr->info |= (CAVE_MARK);
 
 						/* Hack -- Notice spot */
 						note_spot(y, x);
@@ -3052,7 +3052,7 @@ static void process_world(void)
 				att &= ~(CLASS_LEGS);
 				att &= ~(CLASS_WALL);
 
-				if (disturb_state) disturb(0, 0);
+				if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 			}
 
 			p_ptr->update |= (PU_BODY);
@@ -3472,7 +3472,7 @@ static void process_world(void)
 			/* The light is getting dim */
 			else if (o_ptr->timeout < 100)
 			{
-				if (disturb_minor) disturb(0, 0);
+				if (disturb_minor && !p_ptr->nastytrap160) disturb(0, 0);
 				cmsg_print(TERM_YELLOW, "Your light is growing faint.");
 				drop_from_wild();
 			}
@@ -3623,6 +3623,32 @@ static void process_world(void)
 
 	if (p_ptr->nastytrap153 && rand_int(100) == 0) {
 		contaminate(1);
+	}
+
+	if (p_ptr->nastytrap154 && rand_int(10000) == 0) {
+		int ktt;
+		trap_type *ft_ptr;
+
+		for (ktt = 0; ktt < max_t_idx; ktt++)
+		{
+			ft_ptr = &t_info[ktt];
+			if (magik(2)) ft_ptr->ident = FALSE;
+		}
+	}
+
+	if (p_ptr->nastytrap155 && rand_int(10000) == 0) {
+		int ktt;
+		object_kind *fk_ptr;
+
+		for (ktt = 0; ktt < max_k_idx; ktt++)
+		{
+			fk_ptr = &k_info[ktt];
+			if (fk_ptr->flavor && magik(2)) {
+				fk_ptr->aware = FALSE;
+				fk_ptr->tried = FALSE;
+			}
+		}
+
 	}
 
 	if (p_ptr->nastytrap12 && (rand_int(TY_CURSE_CHANCE) == 0) ) {
@@ -4532,7 +4558,7 @@ static void process_command(void)
 		{
 			if (do_control_walk()) break;
 
-			do_cmd_walk(always_pickup, TRUE);
+			do_cmd_walk((always_pickup || p_ptr->nastytrap161), TRUE);
 
 			break;
 		}
@@ -4562,7 +4588,7 @@ static void process_command(void)
 	case ',':
 		{
 			if (do_control_pickup()) break;
-			do_cmd_stay(always_pickup);
+			do_cmd_stay(always_pickup || p_ptr->nastytrap161);
 			break;
 		}
 
@@ -5471,7 +5497,7 @@ static void process_command(void)
 	case CMD_BLUNDER:
 		{
 			if (do_control_walk()) break;
-			do_cmd_walk(always_pickup, FALSE);
+			do_cmd_walk((always_pickup || p_ptr->nastytrap161), FALSE);
 			break;
 		}
 		/* Hack -- Unknown command */
@@ -6046,9 +6072,9 @@ static void dungeon(void)
 	if (!dun_level) create_down_stair = create_up_stair = FALSE;
 	if (!dun_level) create_down_shaft = create_up_shaft = FALSE;
 
-	/* Option -- no connected stairs */
-	if (!dungeon_stair) create_down_stair = create_up_stair = FALSE;
-	if (!dungeon_stair) create_down_shaft = create_up_shaft = FALSE;
+	/* Option -- no connected stairs, forced with disconnect nastytrap */
+	if (!dungeon_stair || p_ptr->nastytrap156) create_down_stair = create_up_stair = FALSE;
+	if (!dungeon_stair || p_ptr->nastytrap156) create_down_shaft = create_up_shaft = FALSE;
 
 	/* no connecting stairs on special levels */
 	if (!(dungeon_flags2 & DF2_NO_STAIR)) create_down_stair = create_up_stair = FALSE;

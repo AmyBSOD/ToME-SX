@@ -2250,7 +2250,7 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 	case TV_DAEMON_BOOK:
 		{
 			/* Require permission */
-			if (!stack_allow_items) return (0);
+			if (!stack_allow_items || p_ptr->nastytrap158) return (0);
 
 			/* Fall through */
 		}
@@ -2382,10 +2382,10 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 	if (o_ptr->note && j_ptr->note && (o_ptr->note != j_ptr->note)) return (0);
 
 	/* Hack -- normally require matching "inscriptions" */
-	if (!stack_force_notes && (o_ptr->note != j_ptr->note)) return (0);
+	if ((!stack_force_notes || p_ptr->nastytrap158) && (o_ptr->note != j_ptr->note)) return (0);
 
 	/* Hack -- normally require matching "discounts" */
-	if (!stack_force_costs && (o_ptr->discount != j_ptr->discount)) return (0);
+	if ((!stack_force_costs || p_ptr->nastytrap158) && (o_ptr->discount != j_ptr->discount)) return (0);
 
 
 	/* Maximal "stacking" limit */

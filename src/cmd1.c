@@ -685,6 +685,23 @@ void touch_zap_player(monster_type *m_ptr)
 
 	monster_race *r_ptr = race_inf(m_ptr);
 
+	/* thorns nastytrap: always take passive damage --Amy */
+	if (p_ptr->nastytrap170)
+	{
+		char aura_dam[80];
+
+		aura_damage =
+		        damroll(1 + (m_ptr->level / 26), 1 + (m_ptr->level / 17));
+
+		/* Hack -- Get the "died from" name */
+		monster_desc(aura_dam, m_ptr, 0x88);
+
+		msg_print("You are struck by several thorns.");
+
+		take_hit(aura_damage, aura_dam);
+
+		handle_stuff();
+	}
 
 	if (r_ptr->flags2 & (RF2_AURA_FIRE))
 	{
@@ -3941,7 +3958,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 	new_dtrap = ((cave[y][x].info & CAVE_DETECT) != 0);
 
 	/* Normal movement */
-	if (oktomove && running && disturb_detect)
+	if (oktomove && running && disturb_detect && !p_ptr->nastytrap160)
 	{
 		/*
 		 * Disturb the player when about to leave the trap detected
@@ -5040,7 +5057,7 @@ void run_step(int dir)
 
 
 	/* Move the player, using the "pickup" flag */
-	move_player_aux(find_current, always_pickup, 1, TRUE);
+	move_player_aux(find_current, (always_pickup || p_ptr->nastytrap161), 1, TRUE);
 }
 
 

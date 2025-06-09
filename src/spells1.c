@@ -1633,7 +1633,7 @@ byte spell_color(int type)
 	}
 
 	/* Normal tiles or ASCII */
-	else if (use_color)
+	else if (use_color && !p_ptr->nastytrap162)
 	{
 		/* Analyze */
 		switch (type)
@@ -1961,7 +1961,7 @@ void take_hit(int damage, cptr hit_from)
 	}
 
 	/* Hitpoint warning */
-	if (p_ptr->chp < warning)
+	if ((p_ptr->chp < warning) && !p_ptr->nastytrap165)
 	{
 		/* Hack -- bell on first notice */
 		if (alert_hitpoint && (old_chp > warning)) bell();
@@ -2031,7 +2031,7 @@ void take_hit(int damage, cptr hit_from)
 		}
 	}
 
-	if (player_char_health)
+	if (player_char_health && !p_ptr->nastytrap165)
 		lite_spot(p_ptr->py, p_ptr->px);
 }
 
@@ -2109,7 +2109,7 @@ void take_sanity_hit(int damage, cptr hit_from)
 	}
 
 	/* Hitpoint warning */
-	if (p_ptr->csane < warning)
+	if ((p_ptr->csane < warning) && !p_ptr->nastytrap165)
 	{
 		/* Hack -- bell on first notice */
 		if (alert_hitpoint && (old_csane > warning)) bell();

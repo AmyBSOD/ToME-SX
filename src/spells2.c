@@ -2237,6 +2237,74 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: You get contaminated over time.";
 	}
+	if (p_ptr->nastytrap154)
+	{
+		info[i++] = "You have a problem: Traps get unidentified over time.";
+	}
+	if (p_ptr->nastytrap155)
+	{
+		info[i++] = "You have a problem: Items get unidentified over time.";
+	}
+	if (p_ptr->nastytrap156)
+	{
+		info[i++] = "You have a problem: Dungeons spawn with disconnected stairs.";
+	}
+	if (p_ptr->nastytrap157)
+	{
+		info[i++] = "You have a problem: Rooms in dungeons are no longer aligned.";
+	}
+	if (p_ptr->nastytrap158)
+	{
+		info[i++] = "You have a problem: Items won't stack anymore.";
+	}
+	if (p_ptr->nastytrap159)
+	{
+		info[i++] = "You have a problem: You can't see whether a grid is permanently lit.";
+	}
+	if (p_ptr->nastytrap160)
+	{
+		info[i++] = "You have a problem: Various things no longer interrupt you.";
+	}
+	if (p_ptr->nastytrap161)
+	{
+		info[i++] = "You have a problem: You automatically pick up items.";
+	}
+	if (p_ptr->nastytrap162)
+	{
+		info[i++] = "You have a problem: The game doesn't use color anymore.";
+	}
+	if (p_ptr->nastytrap163)
+	{
+		info[i++] = "You have a problem: You're no longer highlighted and can't see the lit state of grids.";
+	}
+	if (p_ptr->nastytrap164)
+	{
+		info[i++] = "You have a problem: --More-- prompts automatically get cleared.";
+	}
+	if (p_ptr->nastytrap165)
+	{
+		info[i++] = "You have a problem: There is no low hitpoint warning.";
+	}
+	if (p_ptr->nastytrap166)
+	{
+		info[i++] = "You have a problem: Monsters spawn in groups.";
+	}
+	if (p_ptr->nastytrap167)
+	{
+		info[i++] = "You have a problem: Monsters can use secret attacks.";
+	}
+	if (p_ptr->nastytrap168)
+	{
+		info[i++] = "You have a problem: Monsters can use secret spells.";
+	}
+	if (p_ptr->nastytrap169)
+	{
+		info[i++] = "You have a problem: All dungeon levels are arenas.";
+	}
+	if (p_ptr->nastytrap170)
+	{
+		info[i++] = "You have a problem: Monsters have thorns.";
+	}
 
 	if (p_ptr->contamination >= 10000)
 	{

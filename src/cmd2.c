@@ -2415,7 +2415,7 @@ void do_cmd_disarm(void)
 				more = FALSE;
 			}
 			else
-				more = do_cmd_disarm_aux(y, x, dir, always_pickup);
+				more = do_cmd_disarm_aux(y, x, dir, (always_pickup || p_ptr->nastytrap161));
 		}
 	}
 
@@ -2501,7 +2501,7 @@ static bool do_cmd_bash_aux(int y, int x, int dir)
 		sound(SOUND_OPENDOOR);
 
 		/* Hack -- Fall through the door. Can't disarm while falling. */
-		move_player_aux(dir, always_pickup, 0, FALSE);
+		move_player_aux(dir, (always_pickup || p_ptr->nastytrap161), 0, FALSE);
 
 		/* Update some things */
 		p_ptr->update |= (PU_VIEW | PU_MON_LITE);
@@ -2719,7 +2719,7 @@ void do_cmd_alter(void)
 		else if (c_ptr->t_idx != 0)
 		{
 			/* Tunnel */
-			more = do_cmd_disarm_aux(y, x, dir, always_pickup);
+			more = do_cmd_disarm_aux(y, x, dir, (always_pickup || p_ptr->nastytrap161));
 		}
 
 		/* Oops */
@@ -5146,7 +5146,7 @@ void do_cmd_unwalk()
 	                ((feat >= FEAT_WAY_MORE) && (feat <= FEAT_WAY_LESS)) ||
 			    ((feat >= FEAT_SHAFT_DOWN) && (feat <= FEAT_SHAFT_UP)) )
 	{
-		move_player(dir, always_pickup, TRUE);
+		move_player(dir, (always_pickup || p_ptr->nastytrap161), TRUE);
 		more = FALSE;
 	}
 
@@ -5163,7 +5163,7 @@ void do_cmd_unwalk()
 			while (dir == 5);
 		}
 
-		move_player(dir, always_pickup, TRUE);
+		move_player(dir, (always_pickup || p_ptr->nastytrap161), TRUE);
 	}
 
 	/* Walking semantics */
@@ -5328,7 +5328,7 @@ void do_cmd_immovable_special(void)
 
 			if (!get_aim_dir(&dir)) return;
 			fetch(dir, ((p_ptr->lev * 15) + (get_skill(SKILL_WEIGHTLIFTING) * 20) ), TRUE);
-			py_pickup_floor(always_pickup);
+			py_pickup_floor(always_pickup || p_ptr->nastytrap161);
 
 			did_act = TRUE;
 			break;

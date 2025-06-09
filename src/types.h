@@ -2203,23 +2203,23 @@ struct player_type
 	bool nastytrap151; /* appearance shuffling trap - random item appearances can shuffle */
 	bool nastytrap152; /* etherwind trap - slowly get contaminated while out in the open */
 	bool nastytrap153; /* radioactivity trap - slowly get contaminated regardless of where you are */
-	bool nastytrap154;
-	bool nastytrap155;
-	bool nastytrap156;
-	bool nastytrap157;
-	bool nastytrap158;
-	bool nastytrap159;
-	bool nastytrap160;
-	bool nastytrap161;
-	bool nastytrap162;
-	bool nastytrap163;
-	bool nastytrap164;
-	bool nastytrap165;
-	bool nastytrap166;
-	bool nastytrap167;
-	bool nastytrap168;
-	bool nastytrap169;
-	bool nastytrap170;
+	bool nastytrap154; /* obscuration trap - traps unidentify themselves over time */
+	bool nastytrap155; /* knowledge loss trap - items unidentify themselves over time */
+	bool nastytrap156; /* disconnect trap - don't spawn on a stair upon entering a level */
+	bool nastytrap157; /* room alignment trap - rooms don't spawn aligned */
+	bool nastytrap158; /* unstack trap - items won't stack */
+	bool nastytrap159; /* de-light trap - can't see whether grids are permalit */
+	bool nastytrap160; /* disturbance trap - things don't disturb (interrupt) you */
+	bool nastytrap161; /* autopickup trap - you automatically pick up items you walk over */
+	bool nastytrap162; /* monochrome trap - game doesn't use color */
+	bool nastytrap163; /* hilite trap - cannot highlight the player or lit grids */
+	bool nastytrap164; /* automore trap - more prompts automatically get cleared */
+	bool nastytrap165; /* critical HP trap - no hitpoint warning */
+	bool nastytrap166; /* grouping trap - monsters spawn in groups more often */
+	bool nastytrap167; /* secret attack trap - monsters can use secret melee attacks */
+	bool nastytrap168; /* secret spell trap - monsters can use secret spells */
+	bool nastytrap169; /* arena trap - all dungeon levels are arenas */
+	bool nastytrap170; /* thorns trap - meleeing a monster hurts you */
 	bool nastytrap171;
 	bool nastytrap172;
 	bool nastytrap173;

@@ -2100,7 +2100,7 @@ char inkey(void)
 	(void)Term_get_cursor(&v);
 
 	/* Show the cursor if waiting, except sometimes in "command" mode */
-	if (!inkey_scan && (!inkey_flag || hilite_player || character_icky))
+	if (!inkey_scan && (!inkey_flag || (hilite_player && !p_ptr->nastytrap163) || character_icky))
 	{
 		/* Show the cursor */
 		(void)Term_set_cursor(1);
@@ -2669,7 +2669,7 @@ static void msg_flush(int x)
 	byte a = TERM_L_BLUE;
 
 	/* Hack -- fake monochrome */
-	if (!use_color) a = TERM_WHITE;
+	if (!use_color || (character_generated && p_ptr->nastytrap162)) a = TERM_WHITE;
 
 	/* Pause for response */
 	Term_putstr(x, 0, -1, a, "-more-");
@@ -2787,7 +2787,7 @@ void cmsg_print(byte color, cptr msg)
 	if (character_generated && !p_ptr->nastytrap22) message_add(MESSAGE_MSG, msg, color);
 
 	/* Handle "auto_more" */
-	if (auto_more)
+	if (auto_more || (character_generated && p_ptr->nastytrap164) )
 	{
 		/* Window stuff */
 		p_ptr->window |= (PW_MESSAGE);
@@ -2982,7 +2982,7 @@ void cmsg_format(byte color, cptr fmt, ...)
 void c_put_str(byte attr, cptr str, int row, int col)
 {
 	/* Hack -- fake monochrome */
-	if (!use_color) attr = TERM_WHITE;
+	if (!use_color || (character_generated && p_ptr->nastytrap162)) attr = TERM_WHITE;
 
 	/* Position cursor, Dump the attr/text */
 	Term_putstr(col, row, -1, attr, str);
@@ -3006,7 +3006,7 @@ void put_str(cptr str, int row, int col)
 void c_prt(byte attr, cptr str, int row, int col)
 {
 	/* Hack -- fake monochrome */
-	if (!use_color) attr = TERM_WHITE;
+	if (!use_color || (character_generated && p_ptr->nastytrap162)) attr = TERM_WHITE;
 
 	/* Clear line, position cursor */
 	Term_erase(col, row, 255);

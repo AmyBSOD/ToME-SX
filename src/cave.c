@@ -1120,7 +1120,7 @@ void map_info(int y, int x, byte *ap, char *cp)
 		 */
 
 		/* view_special_lite: lighting effects for boring features */
-		if (view_special_lite &&
+		if (view_special_lite && !p_ptr->nastytrap163 &&
 		                ((f_ptr->flags1 & (FF1_FLOOR | FF1_REMEMBER)) == FF1_FLOOR))
 		{
 			if (!p_ptr->wild_mode && !(info & (CAVE_TRDT)) &&
@@ -1130,7 +1130,7 @@ void map_info(int y, int x, byte *ap, char *cp)
 				if (info & (CAVE_SEEN))
 				{
 					/* Only lit by "torch" light */
-					if (view_yellow_lite && !(info & (CAVE_GLOW)))
+					if (view_yellow_lite && !p_ptr->nastytrap163 && !(info & (CAVE_GLOW)))
 					{
 						if (graf_new)
 						{
@@ -1176,7 +1176,7 @@ void map_info(int y, int x, byte *ap, char *cp)
 				}
 
 				/* "Out-of-sight" glowing grids -- handle "view_bright_lite" */
-				else if (view_bright_lite)
+				else if (view_bright_lite && !p_ptr->nastytrap163)
 				{
 					if (graf_new)
 					{
@@ -1198,7 +1198,7 @@ void map_info(int y, int x, byte *ap, char *cp)
 		}
 
 		/* view_granite_lite: lighting effects for walls and doors */
-		else if (view_granite_lite &&
+		else if (view_granite_lite && !p_ptr->nastytrap163 &&
 		                (f_ptr->flags1 & (FF1_NO_VISION | FF1_DOOR)))
 		{
 			if (!p_ptr->wild_mode && !(info & (CAVE_TRDT)) &&
@@ -1226,7 +1226,7 @@ void map_info(int y, int x, byte *ap, char *cp)
 				}
 
 				/* Handle "view_bright_lite" */
-				else if (view_bright_lite)
+				else if (view_bright_lite && !p_ptr->nastytrap163)
 				{
 					if (graf_new)
 					{
@@ -1590,7 +1590,7 @@ void map_info(int y, int x, byte *ap, char *cp)
 		case GRAPHICS_NONE:
 		case GRAPHICS_IBM:
 			{
-				if (player_char_health)
+				if (player_char_health && !p_ptr->nastytrap165)
 				{
 					int percent = p_ptr->chp * 10 / p_ptr->mhp;
 
@@ -1636,7 +1636,7 @@ void map_info(int y, int x, byte *ap, char *cp)
 				}
 
 				/* +AKH 20020421 - Health dispay for graphics, too */
-				if (player_char_health && (graphics_mode == GRAPHICS_NEW))
+				if (player_char_health && !p_ptr->nastytrap165 && (graphics_mode == GRAPHICS_NEW))
 				{
 					int percent = p_ptr->chp * 14 / p_ptr->mhp;
 
@@ -1824,7 +1824,7 @@ void map_info_default(int y, int x, byte *ap, char *cp)
 		 */
 
 		/* view_special_lite: lighting effects for boring features */
-		if (view_special_lite &&
+		if (view_special_lite && !p_ptr->nastytrap163 &&
 		                ((f_ptr->flags1 & (FF1_FLOOR | FF1_REMEMBER)) == FF1_FLOOR))
 		{
 			if (!p_ptr->wild_mode && !(info & (CAVE_TRDT)))
@@ -1833,7 +1833,7 @@ void map_info_default(int y, int x, byte *ap, char *cp)
 				if (info & (CAVE_SEEN))
 				{
 					/* Only lit by "torch" light */
-					if (view_yellow_lite && !(info & (CAVE_GLOW)))
+					if (view_yellow_lite && !p_ptr->nastytrap163 && !(info & (CAVE_GLOW)))
 					{
 						/* Use "yellow" */
 						a = TERM_YELLOW;
@@ -1855,7 +1855,7 @@ void map_info_default(int y, int x, byte *ap, char *cp)
 				}
 
 				/* "Out-of-sight" glowing grids -- handle "view_bright_lite" */
-				else if (view_bright_lite)
+				else if (view_bright_lite && !p_ptr->nastytrap163)
 				{
 					/* Use darker colour */
 					a = dark_attrs[a & 0xF];
@@ -1864,7 +1864,7 @@ void map_info_default(int y, int x, byte *ap, char *cp)
 		}
 
 		/* view_granite_lite: lighting effects for walls and doors */
-		else if (view_granite_lite &&
+		else if (view_granite_lite && !p_ptr->nastytrap163 &&
 		                (f_ptr->flags1 & (FF1_NO_VISION | FF1_DOOR)))
 		{
 			if (!p_ptr->wild_mode && !(info & (CAVE_TRDT)))
@@ -1883,7 +1883,7 @@ void map_info_default(int y, int x, byte *ap, char *cp)
 				}
 
 				/* Handle "view_bright_lite" */
-				else if (view_bright_lite)
+				else if (view_bright_lite && !p_ptr->nastytrap163)
 				{
 					/* Use darker colour */
 					a = dark_attrs[a & 0xF];
@@ -2265,8 +2265,8 @@ void note_spot(int y, int x)
 		{
 			/* Option -- memorise certain floors */
 			if ((info & (CAVE_TRDT)) ||
-			                ((info & (CAVE_GLOW)) && view_perma_grids ) ||
-			                view_torch_grids)
+			                ((info & (CAVE_GLOW)) && view_perma_grids && !p_ptr->nastytrap159 ) ||
+			                (view_torch_grids && !p_ptr->nastytrap159) )
 			{
 				/* Memorize */
 				c_ptr->info |= (CAVE_MARK);
@@ -5028,7 +5028,7 @@ void wiz_lite(void)
 					}
 
 					/* Normally, memorize floors (see above) */
-					if (view_perma_grids && !view_torch_grids)
+					if (view_perma_grids && !p_ptr->nastytrap159 && !view_torch_grids)
 					{
 						/* Memorize the grid */
 						c_ptr->info |= (CAVE_MARK);

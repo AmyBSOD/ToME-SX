@@ -750,7 +750,7 @@ bool new_player_spot(int branch)
 	p_ptr->px = x;
 
 	/* XXX XXX XXX */
-	if (dungeon_stair && !(dungeon_flags2 & DF2_NO_STAIR) && dun_level &&
+	if (dungeon_stair && !p_ptr->nastytrap156 && !(dungeon_flags2 & DF2_NO_STAIR) && dun_level &&
 	                (!is_quest(dun_level) || (old_dun_level < dun_level)) && !branch)
 	{
 
@@ -8447,8 +8447,8 @@ bool level_generate_dungeon(cptr name)
 		Rand_value = seed_dungeon;
 	}*/
 
-	/* Check for arena level */
-	if ((dungeon_flags1 & (DF1_EMPTY)) ||
+	/* Check for arena level, or arena nastytrap (Amy) */
+	if ((dungeon_flags1 & (DF1_EMPTY)) || p_ptr->nastytrap169 ||
 	                (empty_levels && (rand_int(EMPTY_LEVEL) == 0)))
 	{
 		empty_level = TRUE;
@@ -8521,7 +8521,7 @@ bool level_generate_dungeon(cptr name)
 	x = rand_int(dun->col_rooms);
 
 	/* Align dungeon rooms */
-	if (dungeon_align)
+	if (dungeon_align && !p_ptr->nastytrap157)
 	{
 		/* Slide some rooms right */
 		if ((x % 3) == 0) x++;
@@ -8541,7 +8541,7 @@ bool level_generate_dungeon(cptr name)
 		x = rand_int(dun->col_rooms);
 
 		/* Align dungeon rooms */
-		if (dungeon_align)
+		if (dungeon_align && !p_ptr->nastytrap157)
 		{
 			/* Slide some rooms right */
 			if ((x % 3) == 0) x++;
@@ -10053,7 +10053,7 @@ static void arena_gen(void)
 				cave[y][x].info |= (CAVE_GLOW);
 
 				/* Memorize */
-				if (view_perma_grids) cave[y][x].info |= (CAVE_MARK);
+				if (view_perma_grids && !p_ptr->nastytrap159) cave[y][x].info |= (CAVE_MARK);
 			}
 		}
 	}

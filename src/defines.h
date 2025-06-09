@@ -3478,6 +3478,24 @@
 #define TRAP_PERCENT_DMG_VIII             748
 #define TRAP_PERCENT_DMG_IX               749
 
+#define TRAP_NASTY154                     750
+#define TRAP_NASTY155                     751
+#define TRAP_NASTY156                     752
+#define TRAP_NASTY157                     753
+#define TRAP_NASTY158                     754
+#define TRAP_NASTY159                     755
+#define TRAP_NASTY160                     756
+#define TRAP_NASTY161                     757
+#define TRAP_NASTY162                     758
+#define TRAP_NASTY163                     759
+#define TRAP_NASTY164                     760
+#define TRAP_NASTY165                     761
+#define TRAP_NASTY166                     762
+#define TRAP_NASTY167                     763
+#define TRAP_NASTY168                     764
+#define TRAP_NASTY169                     765
+#define TRAP_NASTY170                     766
+
 /*** General index values ***/
 
 

@@ -114,7 +114,7 @@ bool set_parasite(int v, int r)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -166,7 +166,7 @@ bool set_project(int v, s16b gf, s16b dam, s16b rad, s16b flag)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -217,7 +217,7 @@ bool set_roots(int v, s16b ac, s16b dam)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -291,7 +291,7 @@ bool set_tim_breath(int v, bool magical)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -340,7 +340,7 @@ bool set_absorb_soul(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -389,7 +389,7 @@ bool set_disrupt_shield(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -438,7 +438,7 @@ bool set_prob_travel(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -489,7 +489,7 @@ bool set_invis(int v, int p)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -538,7 +538,7 @@ bool set_poison(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -586,7 +586,7 @@ bool set_no_breeders(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -634,7 +634,7 @@ bool set_tim_deadly(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -682,7 +682,7 @@ bool set_tim_ffall(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -730,7 +730,7 @@ bool set_tim_fly(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -778,7 +778,7 @@ bool set_meditation(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -827,7 +827,7 @@ bool set_tim_reflect(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -875,7 +875,7 @@ bool set_tim_res_time(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -923,7 +923,7 @@ bool set_tim_fire_aura(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -971,7 +971,7 @@ bool set_strike(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -1019,7 +1019,7 @@ bool set_oppose_ld(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -1067,7 +1067,7 @@ bool set_oppose_cc(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -1115,7 +1115,7 @@ bool set_oppose_ss(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -1163,7 +1163,7 @@ bool set_oppose_nex(int v)
 		return (FALSE);
 
 	/* Disturb */
-	if (disturb_state)
+	if (disturb_state && !p_ptr->nastytrap160)
 		disturb(0, 0);
 
 	/* Recalculate bonuses */
@@ -1220,7 +1220,7 @@ bool set_mimic(int v, int p, int level)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Redraw title */
 	p_ptr->redraw |= (PR_TITLE);
@@ -1276,7 +1276,7 @@ bool set_blind(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Fully update the visuals */
 	p_ptr->update |= (PU_UN_VIEW | PU_VIEW | PU_MONSTERS | PU_MON_LITE);
@@ -1339,7 +1339,7 @@ bool set_lite(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Fully update the visuals */
 	p_ptr->update |= (PU_VIEW | PU_MONSTERS);
@@ -1396,7 +1396,7 @@ bool set_confused(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Redraw the "confused" */
 	p_ptr->redraw |= (PR_CONFUSED);
@@ -1448,7 +1448,7 @@ bool set_poisoned(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Redraw the "poisoned" */
 	p_ptr->redraw |= (PR_POISONED);
@@ -1500,7 +1500,7 @@ bool set_afraid(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Redraw the "afraid" */
 	p_ptr->redraw |= (PR_AFRAID);
@@ -1551,7 +1551,7 @@ bool set_paralyzed(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Redraw the state */
 	p_ptr->redraw |= (PR_STATE);
@@ -1605,7 +1605,7 @@ bool set_image(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Redraw map */
 	p_ptr->redraw |= (PR_MAP);
@@ -1660,7 +1660,7 @@ bool set_light_speed(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -1708,7 +1708,7 @@ bool set_fast(int v, int p)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -1758,7 +1758,7 @@ bool set_slow(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -1813,7 +1813,7 @@ bool set_shield(int v, int p, s16b o, s16b d1, s16b d2)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -1864,7 +1864,7 @@ bool set_blessed(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -1914,7 +1914,7 @@ bool set_hero(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -1966,7 +1966,7 @@ bool set_holy(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2015,7 +2015,7 @@ bool set_walk_water(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2082,7 +2082,7 @@ bool set_shero(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2135,7 +2135,7 @@ bool set_protevil(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Handle stuff */
 	handle_stuff();
@@ -2181,7 +2181,7 @@ bool set_protgood(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Handle stuff */
 	handle_stuff();
@@ -2227,7 +2227,7 @@ bool set_protundead(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Handle stuff */
 	handle_stuff();
@@ -2295,7 +2295,7 @@ bool set_shadow(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2373,7 +2373,7 @@ bool set_invuln(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2428,7 +2428,7 @@ bool set_tim_esp(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2480,7 +2480,7 @@ bool set_tim_peace(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2532,7 +2532,7 @@ bool set_tim_device(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2584,7 +2584,7 @@ bool set_tim_esp_animal(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2636,7 +2636,7 @@ bool set_tim_bullseye(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2688,7 +2688,7 @@ bool set_tim_sniper(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2740,7 +2740,7 @@ bool set_tim_rapidfire(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2792,7 +2792,7 @@ bool set_tim_bombsquad(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2844,7 +2844,7 @@ bool set_tim_manavoid(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2897,7 +2897,7 @@ bool set_tim_dragonblood_fire(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2950,7 +2950,7 @@ bool set_tim_dragonblood_cold(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3003,7 +3003,7 @@ bool set_tim_dragonblood_elec(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3056,7 +3056,7 @@ bool set_tim_dragonblood_acid(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3108,7 +3108,7 @@ bool set_tim_esp_pot(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3160,7 +3160,7 @@ bool set_tim_levi_pot(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3212,7 +3212,7 @@ bool set_tim_jolt_fa(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3264,7 +3264,7 @@ bool set_tim_boost_pot(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3316,7 +3316,7 @@ bool set_tim_luck_pot(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3368,7 +3368,7 @@ bool set_tim_reshi_pot(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3420,7 +3420,7 @@ bool set_tim_resrare_pot(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3472,7 +3472,7 @@ bool set_tim_air_pot(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3524,7 +3524,7 @@ bool set_tim_antimagic_pot(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3576,7 +3576,7 @@ bool set_tim_timeflow_pot(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3628,7 +3628,7 @@ bool set_tim_regen_pot(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3680,7 +3680,7 @@ bool set_tim_power_pot(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3732,7 +3732,7 @@ bool set_tim_manasilence(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3764,7 +3764,7 @@ bool set_betweensickness(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3796,7 +3796,7 @@ bool set_stairsickness(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3848,7 +3848,7 @@ bool set_tim_repelling(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3902,7 +3902,7 @@ bool set_tim_dancing(int v, int dancebonus)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -3956,7 +3956,7 @@ bool set_tim_elemlull(int v, int elemstr)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -4010,7 +4010,7 @@ bool set_tim_magbreath(int v, int elemstr)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -4064,7 +4064,7 @@ bool set_tim_macarena(int v, int elemstr)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -4118,7 +4118,7 @@ bool set_tim_savmus(int v, int elemstr)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -4172,7 +4172,7 @@ bool set_tim_minersong(int v, int elemstr)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -4226,7 +4226,7 @@ bool set_tim_stealthmus(int v, int elemstr)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -4280,7 +4280,7 @@ bool set_tim_warboogie(int v, int elemstr)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -4334,7 +4334,7 @@ bool set_tim_tankmus(int v, int elemstr)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -4388,7 +4388,7 @@ bool set_tim_slaughtersong(int v, int elemstr)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -4442,7 +4442,7 @@ bool set_tim_mightymus(int v, int elemstr)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -4497,7 +4497,7 @@ bool set_tim_thunder(int v, int p1, int p2)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -4549,7 +4549,7 @@ bool set_tim_invis(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -4602,7 +4602,7 @@ bool set_tim_infra(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -4654,7 +4654,7 @@ bool set_tim_infra_x(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -4706,7 +4706,7 @@ bool set_tim_infra_xx(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -4759,7 +4759,7 @@ bool set_mental_barrier(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Handle stuff */
 	handle_stuff();
@@ -4805,7 +4805,7 @@ bool set_oppose_acid(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Handle stuff */
 	handle_stuff();
@@ -4852,7 +4852,7 @@ bool set_oppose_elec(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Handle stuff */
 	handle_stuff();
@@ -4899,7 +4899,7 @@ bool set_oppose_fire(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Handle stuff */
 	handle_stuff();
@@ -4946,7 +4946,7 @@ bool set_oppose_cold(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Handle stuff */
 	handle_stuff();
@@ -4993,7 +4993,7 @@ bool set_oppose_pois(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Handle stuff */
 	handle_stuff();
@@ -5042,7 +5042,7 @@ bool set_tim_regen(int v, int p)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Handle stuff */
 	handle_stuff();
@@ -5184,7 +5184,7 @@ bool set_stun(int v)
 			/* None */
 		case 0:
 			msg_print("You are no longer stunned.");
-			if (disturb_state) disturb(0, 0);
+			if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 			break;
 		}
 
@@ -5199,7 +5199,7 @@ bool set_stun(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -5394,7 +5394,7 @@ bool set_cut(int v)
 			/* None */
 		case 0:
 			msg_print("You are no longer bleeding.");
-			if (disturb_state) disturb(0, 0);
+			if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 			break;
 		}
 
@@ -5409,7 +5409,7 @@ bool set_cut(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -5623,7 +5623,7 @@ bool set_food(int v)
 	if (!notice) return (FALSE);
 
 	/* Disturb */
-	if (disturb_state) disturb(0, 0);
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
 
 	/* Recalculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -7623,7 +7623,7 @@ void verify_panel(void)
 	panel_col_min = pcol_min;
 
 	/* Hack -- optional disturb on "panel change" */
-	if (disturb_panel && !center_player) disturb(0, 0);
+	if (disturb_panel && !p_ptr->nastytrap160 && !center_player) disturb(0, 0);
 
 	/* Recalculate the boundaries */
 	panel_bounds();

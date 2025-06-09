@@ -543,7 +543,7 @@ void wilderness_gen(int refresh)
 				c_ptr->info |= (CAVE_GLOW);
 
 				/* Hack -- Memorize lit grids if allowed */
-				if (view_perma_grids) c_ptr->info |= (CAVE_MARK);
+				if (view_perma_grids && !p_ptr->nastytrap159) c_ptr->info |= (CAVE_MARK);
 			}
 			else
 			{

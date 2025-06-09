@@ -3692,6 +3692,91 @@ I:50:100:5:5:100:0d0:R
 D:You're hurt!
 F:FLOOR | CHEST | DOOR
 
+N:750:Obscuration Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:751:Knowledge Loss Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:752:Disconnect Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:753:Room Alignment Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:754:Unstack Trap
+I:32:2:50:4:12:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:755:De-Light Trap
+I:35:2:50:4:15:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:756:Disturbance Trap
+I:45:2:50:4:25:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:757:Autopickup Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:758:Monochrome Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:759:Hilite Trap
+I:35:2:50:4:15:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:760:Automore Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:761:Critical HP Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:762:Grouping Trap
+I:35:2:50:4:15:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:763:Secret Attack Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:764:Secret Spell Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:765:Arena Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:766:Thorns Trap
+I:53:2:50:4:33:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 
