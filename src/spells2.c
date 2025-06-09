@@ -1612,6 +1612,18 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "Your dodging chance is affected by your equipment.";
 	}
+	if (f6 & (TR6_MAGIC_FIND))
+	{
+		info[i++] = "Your magic find chance is affected by your equipment.";
+	}
+	if (f6 & (TR6_MARTIAL_ARTS))
+	{
+		info[i++] = "Your martial arts skill is affected by your equipment.";
+	}
+	if (f6 & (TR6_PERCEPTION))
+	{
+		info[i++] = "Your perception ability is affected by your equipment.";
+	}
 
 	if (p_ptr->nastytrap1)
 	{

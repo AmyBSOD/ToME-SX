@@ -2370,7 +2370,7 @@ static void py_attack_hand(int *k, monster_type *m_ptr, s32b *special)
 	{
 		blow_table = ma_blows;
 		max = MAX_MA;
-		plev = get_skill(SKILL_HAND);
+		plev = get_skill(SKILL_HAND) + p_ptr->martial_bonus;
 	}
 	ma_ptr = &blow_table[0];
 	old_ptr = &blow_table[0];
@@ -2386,7 +2386,7 @@ static void py_attack_hand(int *k, monster_type *m_ptr, s32b *special)
 
 	if (plev)
 	{
-		for (times = 0; times < (plev < 7 ? 1 : plev / 7); times++)
+		for (times = 0; times < (plev < 20 ? 1 : plev / 20); times++)
 		{
 			do
 			{
@@ -2463,6 +2463,11 @@ static void py_attack_hand(int *k, monster_type *m_ptr, s32b *special)
 		{
 			*special |= SPEC_CUT;
 		}
+		if (!desc) msg_format(ma_ptr->desc, m_name);
+		desc = TRUE;
+	}
+	if (ma_ptr->effect & MA_DEFAULT)
+	{
 		if (!desc) msg_format(ma_ptr->desc, m_name);
 		desc = TRUE;
 	}

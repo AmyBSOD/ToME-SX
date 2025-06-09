@@ -2499,23 +2499,26 @@ cptr artifact_names_list =
 
 martial_arts ma_blows[MAX_MA] =
 {
-	{ "You punch %s.", 1, 0, 2, 4, 0, 0 },
-	{ "You kick %s.", 2, 0, 2, 6, 0, 0 },
-	{ "You strike %s.", 3, 0, 2, 7, 0, 0 },
+	{ "You punch %s.", 1, 0, 2, 4, MA_DEFAULT, 0 },
+	{ "You kick %s.", 2, 0, 2, 6, MA_DEFAULT, 0 },
+	{ "You strike %s.", 3, 0, 2, 7, MA_DEFAULT, 0 },
 	{ "You hit %s with your knee.", 5, 5, 4, 3, MA_KNEE, 0 },
-	{ "You hit %s with your elbow.", 7, 5, 2, 8, 0, 0 },
-	{ "You butt %s.", 9, 10, 4, 5, 0, 0 },
+	{ "You hit %s with your elbow.", 7, 5, 2, 8, MA_DEFAULT, 0 },
+	{ "You butt %s.", 9, 10, 4, 5, MA_DEFAULT, 0 },
 	{ "You kick %s.", 11, 10, 6, 4, MA_SLOW, 0 },
 	{ "You uppercut %s.", 13, 12, 8, 4, MA_STUN, 6 },
 	{ "You double-kick %s.", 16, 15, 10, 4, MA_STUN, 8 },
-	{ "You hit %s with a Cat's Claw.", 20, 20, 10, 5, 0, 0 },
+	{ "You hit %s with a Cat's Claw.", 20, 20, 10, 5, MA_DEFAULT, 0 },
 	{ "You hit %s with a jump kick.", 25, 25, 10, 6, MA_STUN, 10 },
-	{ "You hit %s with an Eagle's Claw.", 29, 25, 12, 6, 0, 0 },
+	{ "You hit %s with an Eagle's Claw.", 29, 25, 12, 6, MA_DEFAULT, 0 },
 	{ "You hit %s with a circle kick.", 33, 30, 12, 8, MA_STUN, 10 },
 	{ "You hit %s with an Iron Fist.", 37, 35, 16, 8, MA_STUN, 10 },
 	{ "You hit %s with a flying kick.", 41, 35, 16, 10, MA_STUN, 12 },
 	{ "You hit %s with a Dragon Fist.", 45, 35, 20, 10, MA_STUN, 16 },
 	{ "You hit %s with a Crushing Blow.", 48, 35, 20, 12, MA_STUN, 18 },
+	{ "You scratch %s bloodily.", 60, 35, 20, 12, MA_WOUND, 20 },
+	{ "You hit %s with a karate kick.", 75, 35, 20, 12, MA_STUN | MA_FULL_SLOW, 20 },
+	{ "You slit %s with your razor-sharp heels.", 90, 35, 20, 12, MA_WOUND | MA_STUN, 24 },
 };
 
 /*
@@ -2537,6 +2540,8 @@ martial_arts bear_blows[MAX_BEAR] =
 	{ "You hug and claw %s.", 30, 15, 6, 6, MA_FULL_SLOW | MA_WOUND, 60 },
 	{ "You double swat %s.", 35, 20, 9, 7, MA_STUN | MA_WOUND, 20 },
 	{ "You double swat and rake %s.", 40, 25, 10, 10, MA_STUN | MA_WOUND, 25 },
+	{ "You hug and suffocate %s.", 60, 25, 10, 10, MA_FULL_SLOW | MA_WOUND, 75 },
+	{ "You furiously batter and rake %s.", 85, 25, 12, 15, MA_STUN | MA_FULL_SLOW | MA_WOUND, 35 },
 };
 
 
@@ -3382,7 +3387,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		0,
 		0,
 		TR5_LUCK,
-		TR6_RES_MIND,
+		TR6_RES_MIND | TR6_PERCEPTION,
 		0,
 		0,
 		0,
@@ -3398,7 +3403,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		TR3_REGEN,
 		0,
 		TR5_WATER_BREATH,
-		0,
+		TR6_MARTIAL_ARTS,
 		0,
 		0,
 		0,
@@ -3430,7 +3435,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		TR3_WRAITH,
 		TR4_PRECOGNITION | TR4_FLY | TR4_CLONE,
 		TR5_RES_INERTIA,
-		TR6_RES_ETHER,
+		TR6_RES_ETHER | TR6_MAGIC_FIND,
 		0,
 		0,
 		0,

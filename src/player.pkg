@@ -1269,6 +1269,8 @@ struct player_type
 	s16b xtra_crit;
 
 	s16b dodge_chance;
+	s16b mfind_bonus;
+	s16b martial_bonus;
 
 	/** @structvar notice
 	 * @brief Number

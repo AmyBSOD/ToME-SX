@@ -1372,10 +1372,13 @@ s32b object_value_real(object_type *o_ptr)
 			if (f5 & (TR5_CRIT)) value += (o_ptr->pval * 500L);
 			if (f5 & (TR5_DISARM)) value += (o_ptr->pval * 200L);
 			if (f5 & (TR5_DODGE)) value += (o_ptr->pval * 200L);
+			if (f6 & (TR6_MAGIC_FIND)) value += (o_ptr->pval * 250L);
+			if (f6 & (TR6_MARTIAL_ARTS)) value += (o_ptr->pval * 150L);
 
 			/* Give credit for stealth and searching */
 			if (f1 & (TR1_STEALTH)) value += (o_ptr->pval * 100L);
 			if (f1 & (TR1_SEARCH)) value += (o_ptr->pval * 100L);
+			if (f6 & (TR6_PERCEPTION)) value += (o_ptr->pval * 100L);
 
 			/* Give credit for infra-vision and tunneling */
 			if (f1 & (TR1_INFRA)) value += (o_ptr->pval * 50L);
@@ -1699,10 +1702,13 @@ s32b object_value_xtra(object_type *o_ptr)
 			if (f5 & (TR5_CRIT)) value += (o_ptr->pval * 500L);
 			if (f5 & (TR5_DISARM)) value += (o_ptr->pval * 200L);
 			if (f5 & (TR5_DODGE)) value += (o_ptr->pval * 200L);
+			if (f6 & (TR6_MAGIC_FIND)) value += (o_ptr->pval * 250L);
+			if (f6 & (TR6_MARTIAL_ARTS)) value += (o_ptr->pval * 150L);
 
 			/* Give credit for stealth and searching */
 			if (f1 & (TR1_STEALTH)) value += (o_ptr->pval * 100L);
 			if (f1 & (TR1_SEARCH)) value += (o_ptr->pval * 100L);
+			if (f6 & (TR6_PERCEPTION)) value += (o_ptr->pval * 100L);
 
 			/* Give credit for infra-vision and tunneling */
 			if (f1 & (TR1_INFRA)) value += (o_ptr->pval * 50L);
@@ -2794,14 +2800,14 @@ static bool make_artifact_special(object_type *o_ptr)
 
 	/* runecraft improvement by Amy: improve object level */
 	int objlevelmax = object_level;
-	int runebonus = get_skill(SKILL_FORTUNE);
+	int runebonus = get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus;
 	if (p_ptr->nastytrap45) runebonus = 0;
 	if (p_ptr->nastytrap45 && (objlevelmax > 1)) objlevelmax /= 2;
 	if (runebonus > 0) objlevelmax += runebonus;
 
 	int dunlevelmax = dun_level;
 	if (p_ptr->nastytrap45 && (dunlevelmax > 1)) dunlevelmax /= 2;
-	if ((get_skill(SKILL_FORTUNE) > 0) && !p_ptr->nastytrap45) dunlevelmax += get_skill(SKILL_FORTUNE);
+	if (((get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus) > 0) && !p_ptr->nastytrap45) dunlevelmax += (get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus);
 
 	/* Check the artifact list (just the "specials") */
 	for (i = 0; i < max_a_idx; i++)
@@ -3058,7 +3064,7 @@ static bool make_ego_item(object_type *o_ptr, bool good)
 
 		maxposslvl = dun_level;
 		if (p_ptr->nastytrap45 && (maxposslvl > 1)) maxposslvl /= 2;
-		if (!p_ptr->nastytrap45 && (get_skill(SKILL_FORTUNE) > 0) ) maxposslvl += get_skill(SKILL_FORTUNE);
+		if (!p_ptr->nastytrap45 && ((get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus) > 0) ) maxposslvl += (get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus);
 
 		int j = ok_ego[rand_int(ok_num)];
 		e_ptr = &e_info[j];
@@ -3479,6 +3485,25 @@ static void a_m_aux_2(object_type *o_ptr, int level, int power)
 
 			break;
 		}
+	case TV_SOFT_ARMOR:
+		{
+			if (o_ptr->sval == SV_ARENA_ROBE) {
+				o_ptr->pval = randint(4);
+				if (magik(50)) o_ptr->pval += m_bonus(3, level);
+
+				if (power < 0)
+				{
+					/* Cursed */
+					o_ptr->ident |= (IDENT_CURSED);
+
+					/* Reverse pval */
+					o_ptr->pval = 0 - (o_ptr->pval);
+
+					break;
+				}
+			}
+			break;
+		}
 	case TV_SHIELD:
 		{
 			if (o_ptr->sval == SV_DRAGON_SHIELD)
@@ -3641,6 +3666,30 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
 					break;
 				}
 
+				/* ring of magic find, by Amy, uses ring of speed formula to determine the bonus */
+			case SV_RING_FORTUNE:
+				{
+					/* Base value (1 to 10) */
+					o_ptr->pval = randint(5) + m_bonus(5, level);
+
+					/* Super-charge the ring */
+					while (rand_int(100) < 50) o_ptr->pval++;
+
+					/* Cursed Ring */
+					if (power < 0)
+					{
+						/* Cursed */
+						o_ptr->ident |= (IDENT_CURSED);
+
+						/* Reverse pval */
+						o_ptr->pval = 0 - (o_ptr->pval);
+
+						break;
+					}
+
+					break;
+				}
+
 			case SV_RING_LORDLY:
 				{
 					do
@@ -3658,6 +3707,7 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
 
 				/* Searching, Stealth */
 			case SV_RING_SEARCHING:
+			case SV_RING_PERCEPTION:
 			case SV_RING_STEALTH:
 				{
 					/* Bonus to searching */
@@ -4050,7 +4100,7 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 
 	case TV_CORPSE:
 		{
-			int runebonus = get_skill(SKILL_FORTUNE);
+			int runebonus = get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus;
 			if (p_ptr->nastytrap45) runebonus = 0;
 			int egglevel = dun_level;
 			if (p_ptr->nastytrap45 && (egglevel > 1)) egglevel /= 2;
@@ -4075,7 +4125,7 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 			monster_race* r_ptr;
 			int r_idx, count = 0;
 			bool OK = FALSE;
-			int runebonus = get_skill(SKILL_FORTUNE);
+			int runebonus = get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus;
 			if (p_ptr->nastytrap45) runebonus = 0;
 			int egglevel = dun_level;
 			if (p_ptr->nastytrap45 && (egglevel > 1)) egglevel /= 2;
@@ -4103,7 +4153,7 @@ static void a_m_aux_4(object_type *o_ptr, int level, int power)
 
 	case TV_HYPNOS:
 		{
-			int runebonus = get_skill(SKILL_FORTUNE);
+			int runebonus = get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus;
 			if (p_ptr->nastytrap45) runebonus = 0;
 			int egglevel = dun_level;
 			if (p_ptr->nastytrap45 && (egglevel > 1)) egglevel /= 2;
@@ -5697,7 +5747,7 @@ bool make_object(object_type *j_ptr, bool good, bool great, obj_theme theme)
 
 	int objlevelmax = object_level;
 	if (p_ptr->nastytrap45 && (objlevelmax > 1)) objlevelmax /= 2;
-	int runebonus = get_skill(SKILL_FORTUNE);
+	int runebonus = get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus;
 	if (p_ptr->nastytrap45) runebonus = 0;
 	if (runebonus > 0) objlevelmax += runebonus;
 	bool madespecialarti = FALSE;

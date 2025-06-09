@@ -1972,6 +1972,8 @@ struct player_type
 	u32b race_extra7;       /* Variable for race */
 
 	s16b dodge_chance;      /* Dodging chance */
+	s16b mfind_bonus;       /* Bonus to finding useful items */
+	s16b martial_bonus;     /* Bonus to martial arts skill */
 
 	u32b maintain_sum;      /* Do we have partial summons */
 

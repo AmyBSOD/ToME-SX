@@ -1818,7 +1818,7 @@ static void display_player_various(void)
 		{
 			blow_table = ma_blows;
 			max_blow = MAX_MA;
-			plev = get_skill(SKILL_HAND);
+			plev = get_skill(SKILL_HAND) + p_ptr->martial_bonus;
 		}
 		else /* SKILL_BEAR */
 		{
@@ -1962,7 +1962,7 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 	if (get_skill(SKILL_VALARIN) >= 50) (*f2) |= TR2_RES_LITE;
 	if (get_skill(SKILL_NETHER) >= 50) (*f2) |= TR2_RES_NETHER;
 	if (get_skill(SKILL_MINDCRAFT) >= 75) (*esp) |= ESP_ALL;
-	if (p_ptr->melee_style == SKILL_HAND && get_skill(SKILL_HAND) > 24 && !monk_heavy_armor())
+	if (p_ptr->melee_style == SKILL_HAND && (get_skill(SKILL_HAND) + p_ptr->martial_bonus) > 24 && !monk_heavy_armor())
 		(*f2) |= TR2_FREE_ACT;
 /* Hack - from Lua */
 	if (get_skill(SKILL_MANA) >= 35) (*f1) |= TR1_MANA;
@@ -2908,9 +2908,9 @@ static cptr object_flag_names[384] =
 	"Res Nerve",
 	"Res Mind",
 	"Res Ether",
-	NULL,
-	NULL,
-	NULL,
+	"Magic Find",
+	"Martial",
+	"Perception",
 	NULL,
 	NULL,
 	NULL,
@@ -3296,6 +3296,23 @@ static void display_player_ben_one(int mode)
 						if (modetemp == 1 && x == 0 && y > 7 && y < 12)
 						{
 							c = '*';
+						}
+						else if (modetemp == 5 && x == 0 && (y >= 3 && y <= 5) ) /* stuff like perception, searching, everything that uses pval --Amy */
+						{
+							if (n == INVEN_TOTAL - INVEN_WIELD)
+							{
+								c = '+';
+							}
+							else
+							{
+								c = d[n];
+								if (c < 0)
+								{
+									c = -c;
+									a = TERM_RED;
+								}
+								c = (c > 9 ? '*' : I2D(c));
+							}
 						}
 						else if (modetemp == 4 && x == 0 && (y == 5 || y == 9) )
 						{

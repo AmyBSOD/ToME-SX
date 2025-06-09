@@ -15,7 +15,7 @@ M:X:101
 M:Y:66
 
 # Maximum number of randart parts in ra_info.txt
-M:Z:574
+M:Z:581
 
 # Maximum number of monsters in r_info.txt
 # WARNING ! add one more to the real count for the player ghost !!
@@ -28,7 +28,7 @@ M:R:5334
 M:r:75
 
 # Maximum number of items in k_info.txt
-M:K:1187
+M:K:1191
 
 # Maximum number of vaults in v_info.txt
 M:V:312
@@ -46,7 +46,7 @@ M:A:560
 M:s:10
 
 # Maximum number of ego-items in e_info.txt
-M:E:421
+M:E:435
 
 # Maximum number of dungeon types in d_info.txt
 M:D:70

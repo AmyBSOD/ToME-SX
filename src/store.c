@@ -1364,7 +1364,7 @@ int return_level()
 	int level;
 
 	/* Amy edit: make runecraft skill not completely useless */
-	int runebonus = get_skill(SKILL_FORTUNE);
+	int runebonus = get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus;
 
 	/* investing slowly improves the quality of items --Amy */
 	if (st_ptr->investment > 4) {

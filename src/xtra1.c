@@ -1884,7 +1884,13 @@ static void calc_mana(void)
 		if (o_ptr->k_idx &&
 		                !(f2 & (TR2_FREE_ACT)) &&
 		                !((f1 & (TR1_DEX)) && (o_ptr->pval > 0)) &&
-		                !(f5 & TR5_SPELL_CONTAIN))
+		                !((f1 & (TR1_MANA)) && (o_ptr->pval > 0)) &&
+		                !((f1 & (TR1_SPELL)) && (o_ptr->pval > 0)) &&
+		                !(f5 & TR5_SPELL_CONTAIN) &&
+		                !(f5 & TR5_LITHE) &&
+		                !((f5 & (TR5_DODGE)) && (o_ptr->pval > 0)) &&
+		                !((f6 & (TR6_MARTIAL_ARTS)) && (o_ptr->pval > 0)) &&
+		                !(f6 & TR6_RES_NERVE))
 		{
 			/* Encumbered */
 			p_ptr->cumber_glove = TRUE;
@@ -2959,6 +2965,11 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b f6, u32b f7, 
 		p_ptr->skill_fos += actualpval;
 	}
 
+	/* perception, by Amy: affect searching frequency */
+	if (f6 & (TR6_PERCEPTION)) {
+		p_ptr->skill_fos += pval;
+	}
+
 	/* Affect infravision */
 	if (f1 & (TR1_INFRA)) p_ptr->see_infra += pval;
 
@@ -2982,6 +2993,15 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b f6, u32b f7, 
 		if (f5 & (TR5_DODGE)) {
 			p_ptr->dodge_chance += pval;
 		}
+	}
+	if (get_skill(SKILL_HAND))
+	{
+		if (f6 & (TR6_MARTIAL_ARTS)) {
+			p_ptr->martial_bonus += pval;
+		}
+	}
+	if (f6 & (TR6_MAGIC_FIND)) {
+		p_ptr->mfind_bonus += pval;
 	}
 
 	/* Hack -- Sensible fire */
@@ -3402,6 +3422,12 @@ void calc_bonuses(bool silent)
 	/* Base dodge chance (nonzero only if you have the skill) */
 	p_ptr->dodge_chance = 0;
 
+	/* Bonus to finding useful loot --Amy */
+	p_ptr->mfind_bonus = 0;
+
+	/* Bonus to martial arts (nonzero only if you have the skill) --Amy */
+	p_ptr->martial_bonus = 0;
+
 	/* Base skill -- digging */
 	p_ptr->skill_dig = 0;
 
@@ -3453,10 +3479,11 @@ void calc_bonuses(bool silent)
 	{
 		/* Unencumbered Monks become faster every 10 levels */
 		if (!(monk_heavy_armor()))
-			p_ptr->pspeed += get_skill_scale(SKILL_HAND, 5);
+			p_ptr->pspeed += get_skill_scale((SKILL_HAND), 5);
+			p_ptr->pspeed += (p_ptr->martial_bonus / 10);
 
 		/* Free action if unencumbered at level 25 */
-		if ((get_skill(SKILL_HAND) > 24) && !(monk_heavy_armor()))
+		if (( (get_skill(SKILL_HAND) + p_ptr->martial_bonus) > 24) && !(monk_heavy_armor()))
 			p_ptr->free_act = TRUE;
 	}
 
@@ -3592,32 +3619,34 @@ void calc_bonuses(bool silent)
 		if (!(p_ptr->inventory[INVEN_BODY].k_idx))
 		{
 			p_ptr->to_a += get_skill_scale(SKILL_HAND, 75);
+			p_ptr->to_a += (p_ptr->martial_bonus * 3 / 2);
 			p_ptr->dis_to_a += get_skill_scale(SKILL_HAND, 75);
+			p_ptr->dis_to_a += (p_ptr->martial_bonus * 3 / 2);
 		}
-		if (!(p_ptr->inventory[INVEN_OUTER].k_idx) && (get_skill(SKILL_HAND) > 15))
+		if (!(p_ptr->inventory[INVEN_OUTER].k_idx) && ((get_skill(SKILL_HAND) + p_ptr->martial_bonus) > 15))
 		{
-			p_ptr->to_a += ((get_skill(SKILL_HAND) - 13) / 3);
-			p_ptr->dis_to_a += ((get_skill(SKILL_HAND) - 13) / 3);
+			p_ptr->to_a += ((get_skill(SKILL_HAND) + p_ptr->martial_bonus - 13) / 3);
+			p_ptr->dis_to_a += ((get_skill(SKILL_HAND) + p_ptr->martial_bonus - 13) / 3);
 		}
-		if (!(p_ptr->inventory[INVEN_ARM].k_idx) && (get_skill(SKILL_HAND) > 10))
+		if (!(p_ptr->inventory[INVEN_ARM].k_idx) && ((get_skill(SKILL_HAND) + p_ptr->martial_bonus) > 10))
 		{
-			p_ptr->to_a += ((get_skill(SKILL_HAND) - 8) / 3);
-			p_ptr->dis_to_a += ((get_skill(SKILL_HAND) - 8) / 3);
+			p_ptr->to_a += ((get_skill(SKILL_HAND) + p_ptr->martial_bonus - 8) / 3);
+			p_ptr->dis_to_a += ((get_skill(SKILL_HAND) + p_ptr->martial_bonus - 8) / 3);
 		}
-		if (!(p_ptr->inventory[INVEN_HEAD].k_idx) && (get_skill(SKILL_HAND) > 4))
+		if (!(p_ptr->inventory[INVEN_HEAD].k_idx) && ((get_skill(SKILL_HAND) + p_ptr->martial_bonus) > 4))
 		{
-			p_ptr->to_a += (get_skill(SKILL_HAND) - 2) / 3;
-			p_ptr->dis_to_a += (get_skill(SKILL_HAND) - 2) / 3;
+			p_ptr->to_a += (get_skill(SKILL_HAND) + p_ptr->martial_bonus - 2) / 3;
+			p_ptr->dis_to_a += (get_skill(SKILL_HAND) + p_ptr->martial_bonus - 2) / 3;
 		}
 		if (!(p_ptr->inventory[INVEN_HANDS].k_idx))
 		{
-			p_ptr->to_a += (get_skill(SKILL_HAND) / 2);
-			p_ptr->dis_to_a += (get_skill(SKILL_HAND) / 2);
+			p_ptr->to_a += ((get_skill(SKILL_HAND) + p_ptr->martial_bonus) / 2);
+			p_ptr->dis_to_a += ((get_skill(SKILL_HAND) + p_ptr->martial_bonus) / 2);
 		}
 		if (!(p_ptr->inventory[INVEN_FEET].k_idx))
 		{
-			p_ptr->to_a += (get_skill(SKILL_HAND) / 3);
-			p_ptr->dis_to_a += (get_skill(SKILL_HAND) / 3);
+			p_ptr->to_a += ((get_skill(SKILL_HAND) + p_ptr->martial_bonus) / 3);
+			p_ptr->dis_to_a += ((get_skill(SKILL_HAND) + p_ptr->martial_bonus) / 3);
 		}
 	}
 
@@ -4508,7 +4537,7 @@ void calc_bonuses(bool silent)
 	/* Different calculation for bear form with empty hands */
 	else if ((p_ptr->melee_style == SKILL_HAND) && monk_empty_hands())
 	{
-		int plev = get_skill(SKILL_HAND);
+		int plev = get_skill(SKILL_HAND) + p_ptr->martial_bonus;
 
 		p_ptr->num_blow = 0;
 
@@ -4652,7 +4681,7 @@ void calc_bonuses(bool silent)
 		/* Base dodge chance */
 		p_ptr->dodge_chance += get_skill_scale(SKILL_DODGE, 100);
 		/* Amy edit: give martial arts bonuses only when using martial arts style, please! */
-		if (p_ptr->melee_style == SKILL_HAND) p_ptr->dodge_chance += get_skill(SKILL_HAND);
+		if (p_ptr->melee_style == SKILL_HAND) p_ptr->dodge_chance += (get_skill(SKILL_HAND) + p_ptr->martial_bonus);
 
 		if (p_ptr->tim_dancing)
 		{
@@ -5557,7 +5586,7 @@ bool monk_heavy_armor(void)
 	monk_arm_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_HANDS]);
 	monk_arm_wgt += lithe_object_weight(&p_ptr->inventory[INVEN_FEET]);
 
-	return (monk_arm_wgt > (100 + (get_skill(SKILL_HAND) * 3))) ;
+	return (monk_arm_wgt > (100 + ((get_skill(SKILL_HAND) + p_ptr->martial_bonus) * 3))) ;
 }
 
 static int get_artifact_idx(int level)
@@ -5685,7 +5714,7 @@ void gain_fate(byte fate)
 						/* the objects shouldn't be teh sux! --Amy */
 						int maxobjlevel = randint(50) + max_dlv_real[dungeon_type] + p_ptr->lev;
 						if (p_ptr->nastytrap45 && (maxobjlevel > 1)) maxobjlevel /= 2;
-						int runebonus = get_skill(SKILL_FORTUNE);
+						int runebonus = get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus;
 						if (p_ptr->nastytrap45) runebonus = 0;
 						if (runebonus > 0) maxobjlevel += runebonus;
 
@@ -5734,7 +5763,7 @@ void gain_fate(byte fate)
 			{
 				int maxobjlevel = randint(50) + max_dlv_real[dungeon_type] + p_ptr->lev * 2;
 				if (p_ptr->nastytrap45 && (maxobjlevel > 1)) maxobjlevel /= 2;
-				int runebonus = get_skill(SKILL_FORTUNE);
+				int runebonus = get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus;
 				if (p_ptr->nastytrap45) runebonus = 0;
 				if (runebonus > 0) maxobjlevel += runebonus;
 

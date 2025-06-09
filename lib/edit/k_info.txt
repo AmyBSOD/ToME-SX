@@ -9802,7 +9802,7 @@ D:Increases your constitution, but decreases one other stat at random.
 N:1169:Beauty
 G:!:d
 I:72:60:0
-W:10:0:0:4000
+W:10:0:0:400
 A:10/3
 P:0:1d1:0:0:0
 F:FOUNTAIN
@@ -9972,6 +9972,46 @@ a:HARDCORE=BR_CONF
 F:RES_MIND | RES_NERVE | FLY |
 F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 D:A suit of armor made from dragon skin. Its scales emit a purple glow.
+
+N:1187:& Pair~ of Leather Peep-Toes
+G:]:D
+I:30:18:3
+W:60:0:10:30000
+A:60/15
+F:MARTIAL_ARTS
+f:MARTIAL_ARTS
+P:1:1d1:0:0:0
+D:A very elegant pair of stiletto heels with a leathery-soft cap that can 
+D:actually kick very powerfully.
+
+N:1188:Perception
+G:=:d
+I:45:66:0
+W:5:0:2:250
+A:5/1
+F:PERCEPTION | HIDE_TYPE
+f:PERCEPTION 
+D:This ring magically improves your perception, allowing you to recognize traps 
+D:and secret doors more easily.
+
+N:1189:Fortune
+G:=:d
+I:45:67:0
+W:12:0:2:500
+A:12/2
+F:MAGIC_FIND | HIDE_TYPE
+f:MAGIC_FIND 
+D:This ring increases your chance of finding good items.
+
+N:1190:& Arena Robe~
+G:(:b
+I:36:19:0
+W:10:0:20:500
+A:10/3
+P:2:0d0:0:0:0
+F:MARTIAL_ARTS
+f:MARTIAL_ARTS
+D:A lightweight armor that boosts your ability to fight hand to hand.
 
 # N:number:name
 # G:glyph:color

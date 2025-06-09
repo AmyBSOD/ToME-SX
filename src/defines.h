@@ -204,16 +204,17 @@
 
 
 /* bear barehanded attacks      ... */
-#define MAX_BEAR        8
+#define MAX_BEAR        10
 
 /* Monk martial arts... */
-#define MAX_MA          17
+#define MAX_MA          20
 
 #define MA_KNEE         0x0001
 #define MA_SLOW         0x0002
 #define MA_WOUND        0x0004
 #define MA_STUN         0x0008
 #define MA_FULL_SLOW    0x0010
+#define MA_DEFAULT      0x0020
 
 /* Mindcraft */
 #define MAX_MINDCRAFT_POWERS  12
@@ -1717,6 +1718,7 @@
 #define SV_LEATHER_JACK                 12
 #define SV_STONE_AND_HIDE_ARMOR         15  /* 15 */
 #define SV_THUNDERLORD_SUIT             16
+#define SV_ARENA_ROBE                   19
 
 /* The "sval" codes for TV_HARD_ARMOR */
 #define SV_RUSTY_CHAIN_MAIL              1  /* 14- */
@@ -1901,6 +1903,8 @@
 #define SV_RING_STEALTH                 63
 #define SV_RING_RES_NERVE               64
 #define SV_RING_RES_MIND                65
+#define SV_RING_PERCEPTION              66
+#define SV_RING_FORTUNE                 67
 #define SV_RING_VITALITY                69
 #define SV_RING_WIZARDRY                70
 
@@ -3922,6 +3926,9 @@
 #define TR6_RES_NERVE           0x00000001L
 #define TR6_RES_MIND            0x00000002L
 #define TR6_RES_ETHER           0x00000004L
+#define TR6_MAGIC_FIND          0x00000008L     /* pval like the fortune skill */
+#define TR6_MARTIAL_ARTS        0x00000010L     /* pval bonus to bare-handed combat */
+#define TR6_PERCEPTION          0x00000020L     /* pval bonus to perception ability */
 
 /* ESP defines */
 #define ESP_ORC                 0x00000001L
@@ -3954,6 +3961,9 @@
 
 #define TR5_PVAL_MASK   \
 	(TR5_CRIT | TR5_LUCK | TR5_DISARM | TR5_DODGE)
+
+#define TR6_PVAL_MASK   \
+	(TR6_MAGIC_FIND | TR6_MARTIAL_ARTS | TR6_PERCEPTION)
 
 
 /*** Ego flags ***/

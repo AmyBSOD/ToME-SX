@@ -86,7 +86,7 @@ static bool grab_one_power(int *ra_idx, object_type *o_ptr, bool good, s16b *max
 		maxposslvl = p_ptr->lev;
 		if (dun_level > maxposslvl) maxposslvl = dun_level;
 		if (p_ptr->nastytrap45 && (maxposslvl > 1)) maxposslvl /= 2;
-		if (!p_ptr->nastytrap45 && (get_skill(SKILL_FORTUNE) > 0) ) maxposslvl += get_skill(SKILL_FORTUNE);
+		if (!p_ptr->nastytrap45 && ((get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus) > 0) ) maxposslvl += (get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus);
 
 		i = ok_ra[rand_int(ok_num)];
 		ra_ptr = &ra_info[i];
@@ -137,7 +137,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 	while (attempts > 0) {
 		attempts--;
 
-		switch (randint(348)) {
+		switch (randint(355)) {
 
 			case 1:
 			case 2:
@@ -989,6 +989,44 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				return;
 			case 348:
 				o_ptr->art_flags6 |= TR6_RES_ETHER;
+				return;
+			case 349:
+				o_ptr->art_flags6 |= TR6_MAGIC_FIND;
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
+				return;
+			case 350:
+			case 351:
+			case 352:
+				o_ptr->art_flags6 |= TR6_MARTIAL_ARTS;
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
+				return;
+			case 353:
+			case 354:
+			case 355:
+				o_ptr->art_flags6 |= TR6_PERCEPTION;
+				if (randint(8) == 1) o_ptr->pval -= randint(5);
+				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
+				else if (o_ptr->pval < 5) {
+					if (randint(2) == 1) o_ptr->pval += 1;
+				} else {
+					if (randint(5) == 1) o_ptr->pval += 1;
+				}
+				return;
+
+			default: /* fail safe --Amy */
+				o_ptr->art_flags2 |= TR2_SUST_STR;
 				return;
 
 		}

@@ -2707,7 +2707,7 @@ void object_desc(char *buf, object_type *o_ptr, int pref, int mode)
 
 
 	/* Dump "pval" flags for wearable items */
-	if (known && ((f1 & (TR1_PVAL_MASK)) || (f5 & (TR5_PVAL_MASK))))
+	if (known && ((f1 & (TR1_PVAL_MASK)) || (f5 & (TR5_PVAL_MASK)) || (f6 & (TR6_PVAL_MASK)) ))
 	{
 		/* Start the display */
 		t = object_desc_chr(t, ' ');
@@ -3485,6 +3485,9 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		if (f5 & (TR5_DODGE)) vp[vn++] = "dodging";
 		if (f5 & (TR5_LUCK)) vp[vn++] = "luck";
 		if (f1 & (TR1_SPELL)) vp[vn++] = "spell power";
+		if (f6 & (TR6_MAGIC_FIND)) vp[vn++] = "loot quality";
+		if (f6 & (TR6_MARTIAL_ARTS)) vp[vn++] = "martial prowess";
+		if (f6 & (TR6_PERCEPTION)) vp[vn++] = "perception";
 
 		/* Describe */
 		if (vn)
