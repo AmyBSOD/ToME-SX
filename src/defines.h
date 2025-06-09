@@ -1832,6 +1832,7 @@
 #define SV_AMULET_ANIMAL_ESP            52
 #define SV_AMULET_GOOD_ESP              53
 #define SV_AMULET_UNLIFE_ESP            54
+#define SV_AMULET_ETHER_RESISTANCE      55
 
 /* The sval codes for TV_RING */
 #define SV_RING_WOE                      0
@@ -1898,6 +1899,8 @@
 #define SV_RING_RES_PLASMA              61
 #define SV_RING_RES_DISINT              62
 #define SV_RING_STEALTH                 63
+#define SV_RING_RES_NERVE               64
+#define SV_RING_RES_MIND                65
 #define SV_RING_VITALITY                69
 #define SV_RING_WIZARDRY                70
 
@@ -2279,7 +2282,9 @@
 #define SV_BATERIE_WATER     25
 #define SV_BATERIE_INERTIA   26
 #define SV_BATERIE_HOLDING   27
-#define MAX_BATERIE_SVAL     27
+#define SV_BATERIE_NERVE     28
+#define SV_BATERIE_MIND      29
+#define MAX_BATERIE_SVAL     29
 
 /* The "sval" codes for TV_RUNE1 (104) */
 /* The "sval" codes for TV_RUNE2 (105) */
@@ -2317,6 +2322,7 @@
 #define SV_RUNE1_MIND        85
 #define SV_RUNE1_KNOWLEDGE   91
 #define SV_RUNE1_UNDEATH     92
+#define SV_RUNE1_ETHER       93
 #define SV_RUNE2_RUNESTONE   255
 
 /* The "sval" codes for TV_CORPSE */

@@ -4024,6 +4024,18 @@ void do_cmd_alchemist(int crafttype)
 			msg_print("Darkness resistance added.");
 			useup = TRUE;
 			break;
+		case SV_BATERIE_NERVE:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags6 |= TR6_RES_NERVE;
+			msg_print("Nerve resistance added.");
+			useup = TRUE;
+			break;
+		case SV_BATERIE_MIND:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags6 |= TR6_RES_MIND;
+			msg_print("Mind resistance added.");
+			useup = TRUE;
+			break;
 		case SV_BATERIE_KNOWLEDGE:
 			q_ptr->tampered = TRUE;
 			q_ptr->art_flags2 |= TR2_RES_SHARDS;
@@ -7655,6 +7667,12 @@ void do_cmd_runecrafter(int crafttype)
 			q_ptr->tampered = TRUE;
 			q_ptr->art_flags2 |= TR2_RES_NETHER;
 			msg_print("Nether resistance added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_ETHER:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags6 |= TR6_RES_ETHER;
+			msg_print("Ether resistance added.");
 			useup = TRUE;
 			break;
 		case SV_RUNE2_ARROW:

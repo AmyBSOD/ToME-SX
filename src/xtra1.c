@@ -2444,6 +2444,8 @@ void calc_body_bonus()
 	if (r_ptr->flags3 & RF3_RES_NETH) p_ptr->resist_neth = TRUE;
 	if (r_ptr->flags3 & RF3_RES_NEXU) p_ptr->resist_nexus = TRUE;
 	if (r_ptr->flags3 & RF3_RES_DISE) p_ptr->resist_disen = TRUE;
+	if (r_ptr->flags3 & RF3_RES_PLAS) p_ptr->resist_plasma = TRUE;
+	if (r_ptr->flags3 & RF3_RES_WATE) p_ptr->resist_water = TRUE;
 	if (r_ptr->flags3 & RF3_NO_FEAR) p_ptr->resist_fear = TRUE;
 	if (r_ptr->flags3 & RF3_NO_SLEEP) p_ptr->free_act = TRUE;
 	if (r_ptr->flags3 & RF3_NO_CONF) p_ptr->resist_conf = TRUE;

@@ -9,7 +9,7 @@ Nienna is the goddess of sorrow.
  1. As your piety increases, Nienna grants you a bonus to your charisma and
     critical hit chance.
  2. With very high piety, Nienna grants you resistances (in this order) to
-    shards, chaos, nether and plasma.
+    shards, chaos, nether, plasma and nerve.
  3. Nienna likes it when you kill monsters who use elemental breath or
     spell attacks.
 

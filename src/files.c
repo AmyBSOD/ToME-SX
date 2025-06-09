@@ -2696,6 +2696,8 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		if (r_ptr->flags3 & RF3_RES_NETH) (*f2) |= TR2_RES_NETHER;
 		if (r_ptr->flags3 & RF3_RES_NEXU) (*f2) |= TR2_RES_NEXUS;
 		if (r_ptr->flags3 & RF3_RES_DISE) (*f2) |= TR2_RES_DISEN;
+		if (r_ptr->flags3 & RF3_RES_PLAS) (*f5) |= TR5_RES_PLASMA;
+		if (r_ptr->flags3 & RF3_RES_WATE) (*f5) |= TR5_RES_WATER;
 		if (r_ptr->flags3 & RF3_NO_FEAR) (*f2) |= TR2_RES_FEAR;
 		if (r_ptr->flags3 & RF3_NO_SLEEP) (*f2) |= TR2_FREE_ACT;
 		if (r_ptr->flags3 & RF3_NO_CONF) (*f2) |= TR2_RES_CONF;

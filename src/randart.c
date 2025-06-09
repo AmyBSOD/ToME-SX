@@ -137,7 +137,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 	while (attempts > 0) {
 		attempts--;
 
-		switch (randint(345)) {
+		switch (randint(348)) {
 
 			case 1:
 			case 2:
@@ -980,6 +980,15 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				} else {
 					if (randint(5) == 1) o_ptr->pval += 1;
 				}
+				return;
+			case 346:
+				o_ptr->art_flags6 |= TR6_RES_NERVE;
+				return;
+			case 347:
+				o_ptr->art_flags6 |= TR6_RES_MIND;
+				return;
+			case 348:
+				o_ptr->art_flags6 |= TR6_RES_ETHER;
 				return;
 
 		}

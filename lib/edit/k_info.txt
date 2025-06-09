@@ -9909,6 +9909,70 @@ F:FULL_NAME | EASY_KNOW
 D:This great spellbook contains all the spells of the Celestial 
 D:and Hell realms.
 
+N:1180:Nerve
+G:*:G
+I:4:28:20
+W:20:0:50:9000
+A:20/50
+P:0:1d1:0:0:0
+D:An essence that can add nerve resistance to armor or jewelry.
+
+N:1181:Mind
+G:*:G
+I:4:29:20
+W:20:0:50:9000
+A:20/50
+P:0:1d1:0:0:0
+D:An essence that can add mind resistance to armor or jewelry.
+
+N:1182:Ether
+G:?:G
+I:104:93:0
+W:50:5:80:25000
+A:50/50
+P:0:1d1:0:0:0
+F:IGNORE_ACID
+D:Runecrafters can use this rune to add ether resistance to armor or jewelry.
+
+N:1183:Nerve Resistance
+G:=:d
+I:45:64:0
+W:30:0:2:6000
+A:30/3
+F:RES_NERVE | EASY_KNOW
+f:RES_NERVE |
+D:This ring strengthens your nervous system, and grants some resistance to 
+D:paralyzing effects.
+
+N:1184:Mind Resistance
+G:=:d
+I:45:65:0
+W:30:0:2:6000
+A:30/3
+F:RES_MIND | EASY_KNOW
+f:RES_MIND |
+D:This ring protects your mind from negative effects.
+
+N:1185:Ether Resistance
+G:":d
+I:40:55:0
+W:50:0:3:20000
+A:50/5
+F:RES_ETHER | EASY_KNOW
+f:RES_ETHER
+D:Wearing this amulet protects you from ether and contamination.
+
+N:1186:& Spirit Dragon Scale Mail~
+G:[:v
+I:38:34:0
+W:40:0:200:40000
+A:40/5
+P:30:2d4:-2:0:10
+a:HARDCORE=BR_CONF
+F:RES_MIND | RES_NERVE | FLY |
+F:ACTIVATE | IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
+D:A suit of armor made from dragon skin. Its scales emit a purple glow.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

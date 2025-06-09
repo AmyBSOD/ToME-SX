@@ -5048,7 +5048,7 @@ F:RES_BLIND | LITE1
 f:RES_BLIND | LITE1
 
 # helm
-N:403:of the Mind
+N:403:of Wits
 X:A:33:20
 W:15:2:15:2500
 T:32:0:255
@@ -5243,6 +5243,48 @@ F:SPEED | HIDE_TYPE
 f:SPEED
 R:10
 F:PVAL_M3
+
+# helm
+N:417:of the Mind
+X:A:33:20
+W:10:2:13:2000
+T:32:0:255
+T:33:0:255
+T:115:57:57
+C:0:0:2:2
+R:100
+F:RES_MIND | INT
+f:RES_MIND | INT
+
+N:418:of the Spirit
+X:A:33:50
+W:30:2:33:7000
+T:32:0:255
+T:33:0:255
+T:115:57:57
+C:0:0:8:4
+R:100
+F:RES_MIND | WIS | INT
+f:RES_MIND | WIS | INT
+
+# gloves
+N:419:Velvet
+T:31:0:255
+X:B:30:5
+W:0:1:6:4000
+C:0:0:3:0
+R:100
+F:RES_NERVE
+f:RES_NERVE
+
+N:420:Tweed
+T:31:0:255
+X:B:30:40
+W:20:1:20:10000
+C:0:0:9:0
+R:100
+F:RES_NERVE | FREE_ACT
+f:RES_NERVE | FREE_ACT
 
 # N: serial number : ego type
 # D: description
