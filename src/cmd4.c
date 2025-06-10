@@ -920,6 +920,7 @@ static void do_cmd_options_win(void)
 
 			/* Use color */
 			if (use_color && !p_ptr->nastytrap162 && (j == x)) a = TERM_L_BLUE;
+			if (p_ptr->nastytrap172 && (j == x)) a = random_fleecy_color();
 
 			/* Window name, staggered, centered */
 			Term_putstr(35 + j * 5 - strlen(s) / 2, 2 + j % 2, -1, a, s);
@@ -934,6 +935,7 @@ static void do_cmd_options_win(void)
 
 			/* Use color */
 			if (use_color && !p_ptr->nastytrap162 && (i == y)) a = TERM_L_BLUE;
+			if (p_ptr->nastytrap172 && (i == x)) a = random_fleecy_color();
 
 			/* Unused option */
 			if (!str) str = "(Unused option)";
@@ -950,6 +952,7 @@ static void do_cmd_options_win(void)
 
 				/* Use color */
 				if (use_color && !p_ptr->nastytrap162 && (i == y) && (j == x)) a = TERM_L_BLUE;
+				if (p_ptr->nastytrap172 && (i == y) && (j == x)) a = random_fleecy_color();
 
 				/* Active flag */
 				if (window_flag[j] & (1L << i)) c = 'X';
@@ -3145,6 +3148,7 @@ void do_cmd_load_screen(void)
 			}
 
 			/* Hack -- fake monochrome */
+			if (p_ptr->nastytrap172) a = random_fleecy_color();
 			if (!use_color || p_ptr->nastytrap162) a = TERM_WHITE;
 
 			/* Put the attr/char */

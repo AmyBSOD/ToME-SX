@@ -3495,6 +3495,9 @@
 #define TRAP_NASTY168                     764
 #define TRAP_NASTY169                     765
 #define TRAP_NASTY170                     766
+#define TRAP_NASTY171                     767
+#define TRAP_NASTY172                     768
+#define TRAP_NASTY173                     769
 
 /*** General index values ***/
 

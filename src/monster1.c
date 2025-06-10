@@ -1729,6 +1729,9 @@ static void roff_name(int r_idx, int ego)
 	a1 = r_ptr->d_attr;
 	a2 = r_ptr->x_attr;
 
+	if (p_ptr->nastytrap172) a1 = random_fleecy_color();
+	if (p_ptr->nastytrap172) a2 = random_fleecy_color();
+
 	/* Hack -- fake monochrome */
 	if (!use_color || p_ptr->nastytrap162) a1 = TERM_WHITE;
 	if (!use_color || p_ptr->nastytrap162) a2 = TERM_WHITE;

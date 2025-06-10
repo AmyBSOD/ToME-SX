@@ -754,6 +754,9 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY168:
 		case TRAP_NASTY169:
 		case TRAP_NASTY170:
+		case TRAP_NASTY171:
+		case TRAP_NASTY172:
+		case TRAP_NASTY173:
 			return FALSE;
 	}
 
@@ -958,6 +961,9 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY168:
 		case TRAP_NASTY169:
 		case TRAP_NASTY170:
+		case TRAP_NASTY171:
+		case TRAP_NASTY172:
+		case TRAP_NASTY173:
 			return FALSE;
 	}
 
@@ -1165,6 +1171,9 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY168:
 		case TRAP_NASTY169:
 		case TRAP_NASTY170:
+		case TRAP_NASTY171:
+		case TRAP_NASTY172:
+		case TRAP_NASTY173:
 			return TRUE;
 	}
 
@@ -11562,6 +11571,42 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY171:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap171 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY172:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap172 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY173:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap173 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHIT_I:
 		{
 			object_type *j_ptr;
@@ -15730,7 +15775,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(170)) {
+	switch (randint(173)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -16240,6 +16285,15 @@ void give_random_nastytrap_effect(void)
 			break;
 		case 170:
 			p_ptr->nastytrap170 = TRUE;
+			break;
+		case 171:
+			p_ptr->nastytrap171 = TRUE;
+			break;
+		case 172:
+			p_ptr->nastytrap172 = TRUE;
+			break;
+		case 173:
+			p_ptr->nastytrap173 = TRUE;
 			break;
 
 	}

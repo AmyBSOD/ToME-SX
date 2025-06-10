@@ -1547,6 +1547,7 @@ extern void ascii_to_text(char *buf, cptr str);
 extern void keymap_init(void);
 extern errr macro_add(cptr pat, cptr act);
 extern sint macro_find_exact(cptr pat);
+extern int random_fleecy_color(void);
 extern char inkey(void);
 extern cptr quark_str(s16b num);
 extern s16b quark_add(cptr str);

@@ -1080,6 +1080,8 @@ void map_info(int y, int x, byte *ap, char *cp)
 			}
 		}
 
+		if (p_ptr->nastytrap173) a = random_fleecy_color();
+
 		/**** Step 2 -- Apply special random effects ****/
 		if (!avoid_other && !avoid_shimmer && attr_mutable)
 		{
@@ -1335,6 +1337,8 @@ void map_info(int y, int x, byte *ap, char *cp)
 					*ap = make_monochrome(object_attr(o_ptr));
 				}
 
+				if (p_ptr->nastytrap173) *ap = random_fleecy_color();
+
 				/* Multi-hued attr */
 				if (!avoid_other && attr_mutable &&
 				                (k_info[o_ptr->k_idx].flags5 & TR5_ATTR_MULTI))
@@ -1386,6 +1390,8 @@ void map_info(int y, int x, byte *ap, char *cp)
 				if (character_generated && p_ptr->nastytrap25) {
 					*ap = make_monochrome(object_attr(o_ptr));
 				}
+
+				if (p_ptr->nastytrap173) *ap = random_fleecy_color();
 
 				/* Multi-hued attr */
 				if (!avoid_other && attr_mutable &&
@@ -1443,6 +1449,8 @@ void map_info(int y, int x, byte *ap, char *cp)
 				/* Desired attr/char */
 				c = r_ptr->x_char;
 				a = r_ptr->x_attr;
+
+				if (p_ptr->nastytrap173) a = random_fleecy_color();
 
 				if (character_generated && p_ptr->nastytrap25) {
 					a = make_monochrome(a);
@@ -1575,6 +1583,8 @@ void map_info(int y, int x, byte *ap, char *cp)
 		{
 			a = r_ptr->x_attr;
 		}
+
+		if (p_ptr->nastytrap173) a = random_fleecy_color();
 
 		if (character_generated && p_ptr->nastytrap25) {
 			a = make_monochrome(a);
@@ -1806,6 +1816,8 @@ void map_info_default(int y, int x, byte *ap, char *cp)
 			{
 				a = f_ptr->shimmer[rand_int(7)];
 			}
+
+			if (p_ptr->nastytrap173) a = random_fleecy_color();
 		}
 
 
@@ -1944,6 +1956,8 @@ void map_info_default(int y, int x, byte *ap, char *cp)
 				/* Normal attr */
 				*ap = object_attr_default(o_ptr);
 
+				if (p_ptr->nastytrap173) *ap = random_fleecy_color();
+
 				/* Multi-hued attr */
 				if (!avoid_other &&
 				                (k_info[o_ptr->k_idx].flags5 & TR5_ATTR_MULTI))
@@ -1983,6 +1997,8 @@ void map_info_default(int y, int x, byte *ap, char *cp)
 
 				/* Normal attr */
 				*ap = object_attr_default(o_ptr);
+
+				if (p_ptr->nastytrap173) *ap = random_fleecy_color();
 
 				/* Multi-hued attr */
 				if (!avoid_other && !use_graphics &&
@@ -2076,6 +2092,8 @@ void map_info_default(int y, int x, byte *ap, char *cp)
 					}
 				}
 
+				if (p_ptr->nastytrap173) *ap = random_fleecy_color();
+
 				/* Hack -- hallucination */
 				if (p_ptr->image)
 				{
@@ -2103,6 +2121,8 @@ void map_info_default(int y, int x, byte *ap, char *cp)
 		{
 			a = r_ptr->d_attr;
 		}
+
+		if (p_ptr->nastytrap173) a = random_fleecy_color();
 
 		/* Get the "player" char */
 		c = r_ptr->d_char;

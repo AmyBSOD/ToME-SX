@@ -2668,6 +2668,8 @@ static void msg_flush(int x)
 {
 	byte a = TERM_L_BLUE;
 
+	if (character_generated && p_ptr->nastytrap172) a = random_fleecy_color();
+
 	/* Hack -- fake monochrome */
 	if (!use_color || (character_generated && p_ptr->nastytrap162)) a = TERM_WHITE;
 
@@ -2716,6 +2718,48 @@ void display_message(int x, int y, int split, byte color, cptr t)
 			j++;
 		}
 	}
+}
+
+/* select a random color --Amy */
+int random_fleecy_color(void)
+{
+	int color = TERM_WHITE;
+
+	switch (randint(15)) {
+		default:
+		case 1:
+			color = TERM_WHITE; break;
+		case 2:
+			color = TERM_SLATE; break;
+		case 3:
+			color = TERM_ORANGE; break;
+		case 4:
+			color = TERM_RED; break;
+		case 5:
+			color = TERM_GREEN; break;
+		case 6:
+			color = TERM_BLUE; break;
+		case 7:
+			color = TERM_UMBER; break;
+		case 8:
+			color = TERM_L_DARK; break;
+		case 9:
+			color = TERM_L_WHITE; break;
+		case 10:
+			color = TERM_VIOLET; break;
+		case 11:
+			color = TERM_YELLOW; break;
+		case 12:
+			color = TERM_L_RED; break;
+		case 13:
+			color = TERM_L_GREEN; break;
+		case 14:
+			color = TERM_L_BLUE; break;
+		case 15:
+			color = TERM_L_UMBER; break;
+	}
+
+	return color;
 }
 
 /*
@@ -2782,6 +2826,9 @@ void cmsg_print(byte color, cptr msg)
 	/* Paranoia */
 	if (n > 1000) return;
 
+	if (character_generated && p_ptr->nastytrap171) {
+		color = random_fleecy_color();
+	}
 
 	/* Memorize the message */
 	if (character_generated && !p_ptr->nastytrap22) message_add(MESSAGE_MSG, msg, color);
@@ -2981,6 +3028,8 @@ void cmsg_format(byte color, cptr fmt, ...)
 */
 void c_put_str(byte attr, cptr str, int row, int col)
 {
+	if (character_generated && p_ptr->nastytrap172) attr = random_fleecy_color();
+
 	/* Hack -- fake monochrome */
 	if (!use_color || (character_generated && p_ptr->nastytrap162)) attr = TERM_WHITE;
 
@@ -3005,6 +3054,8 @@ void put_str(cptr str, int row, int col)
 */
 void c_prt(byte attr, cptr str, int row, int col)
 {
+	if (character_generated && p_ptr->nastytrap172) attr = random_fleecy_color();
+
 	/* Hack -- fake monochrome */
 	if (!use_color || (character_generated && p_ptr->nastytrap162)) attr = TERM_WHITE;
 

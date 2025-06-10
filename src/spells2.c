@@ -2305,6 +2305,18 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Monsters have thorns.";
 	}
+	if (p_ptr->nastytrap171)
+	{
+		info[i++] = "You have a problem: Messages are fleecy-colored.";
+	}
+	if (p_ptr->nastytrap172)
+	{
+		info[i++] = "You have a problem: Menus are fleecy-colored.";
+	}
+	if (p_ptr->nastytrap173)
+	{
+		info[i++] = "You have a problem: Glyphs are fleecy-colored.";
+	}
 
 	if (p_ptr->contamination >= 10000)
 	{

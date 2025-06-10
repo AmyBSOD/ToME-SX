@@ -3395,6 +3395,7 @@ static void display_player_ben_one(int mode)
 					}
 
 					/* Monochrome */
+					if (p_ptr->nastytrap172) a = random_fleecy_color();
 					if (!use_color || p_ptr->nastytrap162) a = TERM_WHITE;
 
 					/* Dump flag */
@@ -3420,6 +3421,7 @@ static void display_player_ben_one(int mode)
 						a = TERM_GREEN;
 					}
 				}
+				if (p_ptr->nastytrap172 && got) a = random_fleecy_color();
 
 				/* HACK - Check for nether immunity and change "Res Neth" */
 				if (modetemp == 1 && x == 1 && y == 12 && p_ptr->immune_neth)

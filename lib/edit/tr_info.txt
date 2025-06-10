@@ -3777,6 +3777,21 @@ I:53:2:50:4:33:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:767:Fleecy Message Trap
+I:23:2:50:4:3:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:768:Fleecescript Trap
+I:25:2:50:4:5:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:769:Rainbow Trap
+I:32:2:50:4:12:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

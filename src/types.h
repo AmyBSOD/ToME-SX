@@ -2220,9 +2220,9 @@ struct player_type
 	bool nastytrap168; /* secret spell trap - monsters can use secret spells */
 	bool nastytrap169; /* arena trap - all dungeon levels are arenas */
 	bool nastytrap170; /* thorns trap - meleeing a monster hurts you */
-	bool nastytrap171;
-	bool nastytrap172;
-	bool nastytrap173;
+	bool nastytrap171; /* fleecy message trap - messages are randomly colored */
+	bool nastytrap172; /* fleecescript trap - menu lines are randomly colored */
+	bool nastytrap173; /* rainbow trap - glyphs are randomly colored */
 	bool nastytrap174;
 	bool nastytrap175;
 	bool nastytrap176;
