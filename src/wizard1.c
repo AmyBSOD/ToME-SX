@@ -2022,6 +2022,9 @@ static void spoil_mon_info(cptr fname)
 		if (flags7 & (RF7_RES_GRAV)) vp[vn++] = "gravity";
 		if (flags7 & (RF7_RES_DARK)) vp[vn++] = "darkness";
 		if (flags7 & (RF7_RES_SHAR)) vp[vn++] = "shards";
+		if (flags10 & (RF10_RES_NERV)) vp[vn++] = "nerve";
+		if (flags10 & (RF10_RES_MIND)) vp[vn++] = "mind";
+		if (flags10 & (RF10_RES_ETHE)) vp[vn++] = "ethe";
 
 		if (vn)
 		{

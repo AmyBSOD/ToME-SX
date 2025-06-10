@@ -681,6 +681,29 @@ static void roff_aux(int r_idx, int ego, int remem)
 			text_out(format(" for a%s %lu%s level character.  ",
 			                q, (long)i, p));
 		}
+	} else { /* goddammit, you should be able to recognize the race... --Amy */
+
+		text_out("This");
+
+		/* Describe the "quality" */
+		if (flags2 & (RF2_ELDRITCH_HORROR)) text_out_c(TERM_VIOLET, " sanity-blasting");
+		if (flags3 & (RF3_ANIMAL)) text_out_c(TERM_VIOLET, " natural");
+		if (flags3 & (RF3_EVIL)) text_out_c(TERM_VIOLET, " evil");
+		if (flags3 & (RF3_GOOD)) text_out_c(TERM_VIOLET, " good");
+		if (flags3 & (RF3_UNDEAD)) text_out_c(TERM_VIOLET, " undead");
+
+		/* Describe the "race" */
+		if (flags3 & (RF3_DRAGON)) text_out_c(TERM_VIOLET, " dragon");
+		else if (flags3 & (RF3_DEMON)) text_out_c(TERM_VIOLET, " demon");
+		else if (flags3 & (RF3_GIANT)) text_out_c(TERM_VIOLET, " giant");
+		else if (flags3 & (RF3_TROLL)) text_out_c(TERM_VIOLET, " troll");
+		else if (flags3 & (RF3_ORC)) text_out_c(TERM_VIOLET, " orc");
+		else if (flags3 & (RF3_THUNDERLORD))text_out_c(TERM_VIOLET, " Thunderlord");
+		else if (flags7 & (RF7_SPIDER)) text_out_c(TERM_VIOLET, " spider");
+		else if (flags7 & (RF7_NAZGUL)) text_out_c(TERM_VIOLET, " Nazgul");
+		else text_out(" creature");
+
+		text_out(" gives an unknown amount of EXP. ");
 	}
 
 	if ((flags2 & (RF2_AURA_FIRE)) && (flags2 & (RF2_AURA_ELEC)))
@@ -781,6 +804,9 @@ static void roff_aux(int r_idx, int ego, int remem)
 	if (flags4 & (RF4_BR_MANA))	vp[vn++] = "mana";
 	if (flags4 & (RF4_BR_NUKE))	vp[vn++] = "toxic waste";
 	if (flags4 & (RF4_BR_DISI))	vp[vn++] = "disintegration";
+	if (flags11 & (RF11_BR_NERV))	vp[vn++] = "nerve";
+	if (flags11 & (RF11_BR_MIND))	vp[vn++] = "mind";
+	if (flags11 & (RF11_BR_ETHE))	vp[vn++] = "ether";
 
 	/* Describe breaths */
 	if (vn)
@@ -1228,6 +1254,21 @@ static void roff_aux(int r_idx, int ego, int remem)
 	{
 		vp[vn++] = "shards";
 		color[vn - 1] = TERM_L_UMBER;
+	}
+	if (flags10 & (RF10_RES_NERV))
+	{
+		vp[vn++] = "nerve";
+		color[vn - 1] = TERM_GREEN;
+	}
+	if (flags10 & (RF10_RES_MIND))
+	{
+		vp[vn++] = "mind";
+		color[vn - 1] = TERM_VIOLET;
+	}
+	if (flags10 & (RF10_RES_ETHE))
+	{
+		vp[vn++] = "ether";
+		color[vn - 1] = TERM_L_BLUE;
 	}
 
 	/* Describe resistances */

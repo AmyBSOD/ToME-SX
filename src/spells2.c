@@ -1134,6 +1134,12 @@ void self_knowledge(FILE *fff)
 			info[i++] = "You can eat trees.";
 		if (r_ptr->flags9 & RF9_WYRM_PROTECT)
 			info[i++] = "You are protected by great wyrms of power.";
+		if (r_ptr->flags11 & RF11_BR_NERV)
+			info[i++] = "You can breathe nerve.";
+		if (r_ptr->flags11 & RF11_BR_MIND)
+			info[i++] = "You can breathe mind.";
+		if (r_ptr->flags11 & RF11_BR_ETHE)
+			info[i++] = "You can breathe ether.";
 	}
 
 	/* List powers */

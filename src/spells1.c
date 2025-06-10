@@ -5801,6 +5801,12 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			do_stun = 1 + randint(2);
 
+			if ( (r_ptr->flags11 & (RF11_BR_NERV)) || (r_ptr->flags10 & (RF10_RES_NERV)) ) {
+				do_stun = FALSE;
+				dam /= 3;
+				note = " resists.";
+			}
+
 			if ((r_ptr->flags3 & (RF3_UNDEAD)) || (r_ptr->flags3 & (RF3_NONLIVING)) )
 			{
 				note = " resists a lot.";
@@ -5826,6 +5832,12 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				dam /= 2;
 			}
 
+			if ( (r_ptr->flags11 & (RF11_BR_MIND)) || (r_ptr->flags10 & (RF10_RES_MIND)) ) {
+				willconf = FALSE;
+				dam /= 3;
+				note = " resists.";
+			}
+
 			if (r_ptr->flags2 & RF2_EMPTY_MIND)
 			{
 				willconf = FALSE;
@@ -5846,6 +5858,11 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 		/* Ether - no special effect on monsters */
 	case GF_ETHER:
 		{
+			if ( (r_ptr->flags11 & (RF11_BR_ETHE)) || (r_ptr->flags10 & (RF10_RES_ETHE)) ) {
+				dam /= 3;
+				note = " resists.";
+			}
+
 			if (seen) obvious = TRUE;
 
 			break;

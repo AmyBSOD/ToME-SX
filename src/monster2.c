@@ -2845,6 +2845,8 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 
 		/* note by Amy: you shouldn't be able to scum summoned creatures for items!!! */
 		if (m_ptr->status >= MSTATUS_FRIEND) number = 0;
+		/* and multiplying monsters shouldn't be scummable either! */
+		if (r_ptr->flags4 & (RF4_MULTIPLY)) number = 0;
 
 		/* lootcut nastytrap means no monster ever carries stuff --Amy */
 		if (p_ptr->nastytrap65) number = 0;

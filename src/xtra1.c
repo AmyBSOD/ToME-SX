@@ -2463,6 +2463,9 @@ void calc_body_bonus()
 	if (r_ptr->flags7 & RF7_RES_INER) p_ptr->resist_inertia = TRUE;
 	if (r_ptr->flags7 & RF7_RES_DARK) p_ptr->resist_dark = TRUE;
 	if (r_ptr->flags7 & RF7_RES_SHAR) p_ptr->resist_shard = TRUE;
+	if (r_ptr->flags10 & RF10_RES_NERV) p_ptr->resist_nerve = TRUE;
+	if (r_ptr->flags10 & RF10_RES_MIND) p_ptr->resist_mind = TRUE;
+	if (r_ptr->flags10 & RF10_RES_ETHE) p_ptr->resist_ether = TRUE;
 }
 
 

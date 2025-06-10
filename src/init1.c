@@ -483,9 +483,9 @@ static cptr r_info_flags9[] =
  */
 static cptr r_info_flags10[] =
 {
-	"XXX9X0",
-	"XXX9X1",
-	"XXX9X2",
+	"RES_NERV",
+	"RES_MIND",
+	"RES_ETHE",
 	"XXX9X3",
 	"XXX9X4",
 	"XXX9X5",
@@ -522,9 +522,9 @@ static cptr r_info_flags10[] =
  */
 static cptr r_info_flags11[] =
 {
-	"XXX9X0",
-	"XXX9X1",
-	"XXX9X2",
+	"BR_NERV",
+	"BR_MIND",
+	"BR_ETHE",
 	"XXX9X3",
 	"XXX9X4",
 	"XXX9X5",

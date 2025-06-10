@@ -522,7 +522,7 @@ void randommonstermix(void)
 	if (specmons > 10) specmons = 10;
 	while (specmons > 0) {
 		specmons--;
-		switch (random_number(285)) {
+		switch (random_number(291)) {
 			default:
 			case 1:
 				printf("M:UNIQUE\n");
@@ -1378,6 +1378,24 @@ void randommonstermix(void)
 				break;
 			case 285:
 				printf("M:R_CHAR_:\n");
+				break;
+			case 286:
+				printf("S:BR_NERV\n");
+				break;
+			case 287:
+				printf("S:BR_MIND\n");
+				break;
+			case 288:
+				printf("S:BR_ETHE\n");
+				break;
+			case 289:
+				printf("M:RES_NERV\n");
+				break;
+			case 290:
+				printf("M:RES_MIND\n");
+				break;
+			case 291:
+				printf("M:RES_ETHE\n");
 				break;
 		}
 	}

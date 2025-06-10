@@ -1422,7 +1422,7 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 
 	int num = 0, dir = 0 , i;
 
-	int powers[96];
+	int powers[128];
 
 	bool flag;
 

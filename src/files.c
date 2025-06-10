@@ -2708,6 +2708,9 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		if (r_ptr->flags7 & RF7_RES_INER) (*f5) |= TR5_RES_INERTIA;
 		if (r_ptr->flags7 & RF7_RES_DARK) (*f2) |= TR2_RES_DARK;
 		if (r_ptr->flags7 & RF7_RES_SHAR) (*f2) |= TR2_RES_SHARDS;
+		if (r_ptr->flags10 & RF10_RES_NERV) (*f6) |= TR6_RES_NERVE;
+		if (r_ptr->flags10 & RF10_RES_MIND) (*f6) |= TR6_RES_MIND;
+		if (r_ptr->flags10 & RF10_RES_ETHE) (*f6) |= TR6_RES_ETHER;
 	}
 
 	(*f1) |= p_ptr->xtra_f1;

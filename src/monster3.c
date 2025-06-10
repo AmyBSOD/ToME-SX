@@ -415,7 +415,7 @@ bool do_control_magic(void)
 {
 	int power = -1;
 	int num = 0, i;
-	int powers[96];
+	int powers[128];
 	bool flag, redraw;
 	int ask;
 	char choice;

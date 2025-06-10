@@ -272,7 +272,7 @@ static bool int_outof(monster_race *r_ptr, int prob)
 /*
  * Remove the "bad" spells from a spell list
  */
-static void remove_bad_spells(int m_idx, u32b *f4p, u32b *f5p, u32b *f6p)
+static void remove_bad_spells(int m_idx, u32b *f4p, u32b *f5p, u32b *f6p, u32b *f11p)
 {
 	monster_type *m_ptr = &m_list[m_idx];
 	monster_race *r_ptr = race_inf(m_ptr);
@@ -280,6 +280,7 @@ static void remove_bad_spells(int m_idx, u32b *f4p, u32b *f5p, u32b *f6p)
 	u32b f4 = (*f4p);
 	u32b f5 = (*f5p);
 	u32b f6 = (*f6p);
+	u32b f11 = (*f11p);
 
 	u32b smart = 0L;
 
@@ -546,6 +547,7 @@ static void remove_bad_spells(int m_idx, u32b *f4p, u32b *f5p, u32b *f6p)
 	(*f4p) = f4;
 	(*f5p) = f5;
 	(*f6p) = f6;
+	(*f11p) = f11;
 }
 
 
@@ -643,7 +645,7 @@ static void bolt(int m_idx, int typ, int dam_hp)
 /*
  * Return TRUE if a spell is good for hurting the player (directly).
  */
-static bool spell_attack(byte spell)
+static bool spell_attack(int spell)
 {
 	/* Eldritch horror blast by Amy */
 	if (spell == 45) return (TRUE);
@@ -660,6 +662,9 @@ static bool spell_attack(byte spell)
 	/* Hand of Doom */
 	if (spell == 160 + 1) return (TRUE);
 
+	/* RF11 spells */
+	if (spell >= 320 + 0 && spell <= 320 + 31) return (TRUE);
+
 	/* Doesn't hurt */
 	return (FALSE);
 }
@@ -668,7 +673,7 @@ static bool spell_attack(byte spell)
 /*
  * Return TRUE if a spell is good for escaping.
  */
-static bool spell_escape(byte spell)
+static bool spell_escape(int spell)
 {
 	/* Blink or Teleport */
 	if (spell == 160 + 4 || spell == 160 + 5) return (TRUE);
@@ -683,7 +688,7 @@ static bool spell_escape(byte spell)
 /*
  * Return TRUE if a spell is good for annoying the player.
  */
-static bool spell_annoy(byte spell)
+static bool spell_annoy(int spell)
 {
 	/* Shriek */
 	if (spell == 96 + 0) return (TRUE);
@@ -712,7 +717,7 @@ static bool spell_annoy(byte spell)
 /*
  * Return TRUE if a spell summons help.
  */
-static bool spell_summon(byte spell)
+static bool spell_summon(int spell)
 {
 	/* RF4_S_ANIMAL, RF6_S_ANIMALS */
 	if (spell == 96 + 2 || spell == 160 + 3) return (TRUE);
@@ -727,7 +732,7 @@ static bool spell_summon(byte spell)
 /*
  * Return TRUE if a spell is good in a tactical situation.
  */
-static bool spell_tactic(byte spell)
+static bool spell_tactic(int spell)
 {
 	/* Blink */
 	if (spell == 160 + 4) return (TRUE);
@@ -740,7 +745,7 @@ static bool spell_tactic(byte spell)
 /*
  * Return TRUE if a spell hastes.
  */
-static bool spell_haste(byte spell)
+static bool spell_haste(int spell)
 {
 	/* Haste self */
 	if (spell == 160 + 0) return (TRUE);
@@ -753,7 +758,7 @@ static bool spell_haste(byte spell)
 /*
  * Return TRUE if a spell is good for healing.
  */
-static bool spell_heal(byte spell)
+static bool spell_heal(int spell)
 {
 	/* Heal */
 	if (spell == 160 + 2) return (TRUE);
@@ -777,24 +782,24 @@ static bool spell_heal(byte spell)
  *
  * This function may well be an efficiency bottleneck.
  */
-static int choose_attack_spell(int m_idx, byte spells[], byte num)
+static int choose_attack_spell(int m_idx, int spells[], int num)
 {
 	monster_type *m_ptr = &m_list[m_idx];
 	monster_race *r_ptr = race_inf(m_ptr);
 
-	byte escape[96], escape_num = 0;
-	byte attack[96], attack_num = 0;
-	byte summon[96], summon_num = 0;
-	byte tactic[96], tactic_num = 0;
-	byte annoy[96], annoy_num = 0;
-	byte haste[96], haste_num = 0;
-	byte heal[96], heal_num = 0;
+	int escape[256], escape_num = 0;
+	int attack[256], attack_num = 0;
+	int summon[256], summon_num = 0;
+	int tactic[256], tactic_num = 0;
+	int annoy[256], annoy_num = 0;
+	int haste[256], haste_num = 0;
+	int heal[256], heal_num = 0;
 
 	int i;
 
 	/* secret spell nastytrap by Amy: allow monster to cast any random spell, whether or not it actually has the spell in question */
 	if (p_ptr->nastytrap168 && magik(1)) {
-		switch (randint(96)) {
+		switch (randint(99)) {
 			default:
 			case 1:
 				return 96; /* RF4_SHRIEK */
@@ -988,6 +993,12 @@ static int choose_attack_spell(int m_idx, byte spells[], byte num)
 				return 160 + 31;
 			case 96:
 				return 32 + 13; /* 45 = RF2_ELDRITCH_HORROR */
+			case 97:
+				return 320 + 0; /* RF11_BR_NERV */
+			case 98:
+				return 320 + 1;
+			case 99:
+				return 320 + 2;
 		}
 	}
 
@@ -1206,7 +1217,7 @@ static bool monst_spell_monst(int m_idx)
 	int y = 0, x = 0;
 	int i = 1, k, t_idx;
 	int chance, thrown_spell, count = 0;
-	byte spell[96], num = 0;
+	int spell[256], num = 0;
 	char m_name[80], t_name[80];
 	char m_poss[80];
 	char ddesc[80];
@@ -1301,7 +1312,7 @@ static bool monst_spell_monst(int m_idx)
 			f6 &= (RF6_INT_MASK);
 
 			/* No spells left */
-			if ((!f4 && !f5 && !f6) && (monst_spell_monst_spell == -1)) return (FALSE);
+			if ((!f4 && !f5 && !f6 && !f11) && (monst_spell_monst_spell == -1)) return (FALSE);
 		}
 
 		/* Extract the "inate" spells */
@@ -1320,6 +1331,12 @@ static bool monst_spell_monst(int m_idx)
 		for (k = 0; k < 32; k++)
 		{
 			if (f6 & (1L << k)) spell[num++] = k + 32 * 5;
+		}
+
+		/* Extract even more spells */
+		for (k = 0; k < 32; k++)
+		{
+			if (f11 & (1L << k)) spell[num++] = k + 32 * 10;
 		}
 
 		/* No spells left */
@@ -3388,6 +3405,89 @@ static bool monst_spell_monst(int m_idx)
 				}
 				break;
 			}
+
+			/* RF11_BR_NERV */
+		case 320 + 0:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 300) breathdamage = 300;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 300) breathdamage = 300;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (!see_either) monster_msg("You hear breathing noise.");
+				else if (blind) monster_msg("%^s breathes.", m_name);
+				else monster_msg("%^s breathes nerve at %s.", m_name, t_name);
+				sound(SOUND_BREATH);
+
+				monst_breath_monst(m_idx, y, x, GF_NERVE, breathdamage, 0);
+
+				break;
+			}
+			/* RF11_BR_MIND */
+		case 320 + 1:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 500) breathdamage = 500;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 500) breathdamage = 500;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (!see_either) monster_msg("You hear breathing noise.");
+				else if (blind) monster_msg("%^s breathes.", m_name);
+				else monster_msg("%^s breathes mind at %s.", m_name, t_name);
+				sound(SOUND_BREATH);
+
+				monst_breath_monst(m_idx, y, x, GF_MIND, breathdamage, 0);
+
+				break;
+			}
+			/* RF11_BR_ETHE */
+		case 320 + 2:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (!see_either) monster_msg("You hear breathing noise.");
+				else if (blind) monster_msg("%^s breathes.", m_name);
+				else monster_msg("%^s breathes ether at %s.", m_name, t_name);
+				sound(SOUND_BREATH);
+
+				monst_breath_monst(m_idx, y, x, GF_ETHER, breathdamage, 0);
+
+				break;
+			}
+
 		}
 
 		if (wake_up)
@@ -3713,7 +3813,7 @@ bool curse_equipment_prime(int chance, int heavy_chance)
 bool make_attack_spell(int m_idx)
 {
 	int k, chance, thrown_spell, rlev, failrate;
-	byte spell[96], num = 0;
+	int spell[256], num = 0;
 	u32b f2, f4, f5, f6, f11;
 	monster_type *m_ptr = &m_list[m_idx];
 	monster_race *r_ptr = race_inf(m_ptr);
@@ -3834,14 +3934,14 @@ bool make_attack_spell(int m_idx)
 		f6 &= (RF6_INT_MASK);
 
 		/* No spells left */
-		if (!f4 && !f5 && !f6) return (FALSE);
+		if (!f4 && !f5 && !f6 && !f11) return (FALSE);
 	}
 
 	/* Remove the "ineffective" spells */
-	remove_bad_spells(m_idx, &f4, &f5, &f6);
+	remove_bad_spells(m_idx, &f4, &f5, &f6, &f11);
 
 	/* No spells left */
-	if (!f4 && !f5 && !f6 && !(f2 & (RF2_ELDRITCH_HORROR)) ) return (FALSE);
+	if (!f4 && !f5 && !f6 && !f11 && !(f2 & (RF2_ELDRITCH_HORROR)) ) return (FALSE);
 
 	if (!stupid_monsters)
 	{
@@ -3870,7 +3970,7 @@ bool make_attack_spell(int m_idx)
 		}
 
 		/* No spells left */
-		if (!f4 && !f5 && !f6 && !(f2 & (RF2_ELDRITCH_HORROR)) ) return (FALSE);
+		if (!f4 && !f5 && !f6 && !f11 && !(f2 & (RF2_ELDRITCH_HORROR)) ) return (FALSE);
 	}
 
 	if (f2 & (RF2_ELDRITCH_HORROR)) spell[num++] = 45; /* eldritch blast, by Amy */
@@ -3891,6 +3991,12 @@ bool make_attack_spell(int m_idx)
 	for (k = 0; k < 32; k++)
 	{
 		if (f6 & (1L << k)) spell[num++] = k + 32 * 5;
+	}
+
+	/* Extract more spells */
+	for (k = 0; k < 32; k++)
+	{
+		if (f11 & (1L << k)) spell[num++] = k + 32 * 10;
 	}
 
 	/* No spells left */
@@ -3927,7 +4033,7 @@ bool make_attack_spell(int m_idx)
 		if (p_ptr->nastytrap118) failrate = 0;
 
 		/* Check for spell failure (inate attacks never fail) */
-		if ((thrown_spell >= 128) && (rand_int(100) < failrate))
+		if ((thrown_spell >= 128 && thrown_spell < 320) && (rand_int(100) < failrate))
 		{
 			/* Message */
 			msg_format("%^s tries to cast a spell, but fails.", m_name);
@@ -6075,6 +6181,100 @@ bool make_attack_spell(int m_idx)
 				{
 					msg_print("You hear many powerful things appear nearby.");
 				}
+				break;
+			}
+
+			/* RF11_BR_NERV */
+		case 320 + 0:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 300) breathdamage = 300;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 300) breathdamage = 300;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
+				if (blind) msg_format("%^s breathes.", m_name);
+				else msg_format("%^s breathes nerve.", m_name);
+
+				breath(m_idx, GF_NERVE, breathdamage, 0);
+
+				break;
+			}
+			/* RF11_BR_MIND */
+		case 320 + 1:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 500) breathdamage = 500;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 500) breathdamage = 500;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
+				if (blind) msg_format("%^s breathes.", m_name);
+				else msg_format("%^s breathes mind.", m_name);
+
+				breath(m_idx, GF_MIND, breathdamage, 0);
+
+				break;
+			}
+			/* RF11_BR_ETHE */
+		case 320 + 2:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
+				if (blind) msg_format("%^s breathes.", m_name);
+				else msg_format("%^s breathes ether.", m_name);
+
+				breath(m_idx, GF_ETHER, breathdamage, 0);
+
 				break;
 			}
 		}
