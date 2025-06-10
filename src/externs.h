@@ -83,7 +83,7 @@ extern flags_group flags_groups[MAX_FLAG_GROUP];
 extern power_type powers_type_init[POWER_MAX_INIT];
 extern quest_type quest_info[MAX_Q_IDX_INIT];
 extern cptr artifact_names_list;
-extern monster_power monster_powers[96];
+extern monster_power monster_powers[128];
 extern tval_desc tval_descs[];
 extern between_exit between_exits[MAX_BETWEEN_EXITS];
 extern int month_day[9];

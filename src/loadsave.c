@@ -2758,6 +2758,17 @@ static void do_monster(monster_type *m_ptr, int flag)
 		do_u32b(&m_ptr->sr_ptr->flags7, flag);
 		do_u32b(&m_ptr->sr_ptr->flags8, flag);
 		do_u32b(&m_ptr->sr_ptr->flags9, flag);
+		do_u32b(&m_ptr->sr_ptr->flags10, flag);
+		do_u32b(&m_ptr->sr_ptr->flags11, flag);
+		do_u32b(&m_ptr->sr_ptr->flags12, flag);
+		do_u32b(&m_ptr->sr_ptr->flags13, flag);
+		do_u32b(&m_ptr->sr_ptr->flags14, flag);
+		do_u32b(&m_ptr->sr_ptr->flags15, flag);
+		do_u32b(&m_ptr->sr_ptr->flags16, flag);
+		do_u32b(&m_ptr->sr_ptr->flags17, flag);
+		do_u32b(&m_ptr->sr_ptr->flags18, flag);
+		do_u32b(&m_ptr->sr_ptr->flags19, flag);
+		do_u32b(&m_ptr->sr_ptr->flags20, flag);
 
 		/* Attacks */
 		for (i = 0; i < 4; i++)
@@ -2834,6 +2845,17 @@ static void do_lore(int r_idx, int flag)
 	do_u32b(&r_ptr->r_flags7, flag);
 	do_u32b(&r_ptr->r_flags8, flag);
 	do_u32b(&r_ptr->r_flags9, flag);
+	do_u32b(&r_ptr->r_flags10, flag);
+	do_u32b(&r_ptr->r_flags11, flag);
+	do_u32b(&r_ptr->r_flags12, flag);
+	do_u32b(&r_ptr->r_flags13, flag);
+	do_u32b(&r_ptr->r_flags14, flag);
+	do_u32b(&r_ptr->r_flags15, flag);
+	do_u32b(&r_ptr->r_flags16, flag);
+	do_u32b(&r_ptr->r_flags17, flag);
+	do_u32b(&r_ptr->r_flags18, flag);
+	do_u32b(&r_ptr->r_flags19, flag);
+	do_u32b(&r_ptr->r_flags20, flag);
 
 	/* Read the "Racial" monster tmp16b per level */
 	do_s16b(&r_ptr->max_num, flag);
@@ -2852,6 +2874,17 @@ static void do_lore(int r_idx, int flag)
 		r_ptr->r_flags7 &= r_ptr->flags7;
 		r_ptr->r_flags8 &= r_ptr->flags8;
 		r_ptr->r_flags9 &= r_ptr->flags9;
+		r_ptr->r_flags10 &= r_ptr->flags10;
+		r_ptr->r_flags11 &= r_ptr->flags11;
+		r_ptr->r_flags12 &= r_ptr->flags12;
+		r_ptr->r_flags13 &= r_ptr->flags13;
+		r_ptr->r_flags14 &= r_ptr->flags14;
+		r_ptr->r_flags15 &= r_ptr->flags15;
+		r_ptr->r_flags16 &= r_ptr->flags16;
+		r_ptr->r_flags17 &= r_ptr->flags17;
+		r_ptr->r_flags18 &= r_ptr->flags18;
+		r_ptr->r_flags19 &= r_ptr->flags19;
+		r_ptr->r_flags20 &= r_ptr->flags20;
 	}
 }
 

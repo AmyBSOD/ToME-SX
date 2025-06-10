@@ -178,17 +178,45 @@ bool mego_ok(int r_idx, int ego)
 	if (re_ptr->flags1 && ((re_ptr->flags1 & r_ptr->flags1) != re_ptr->flags1)) return FALSE;
 	if (re_ptr->flags2 && ((re_ptr->flags2 & r_ptr->flags2) != re_ptr->flags2)) return FALSE;
 	if (re_ptr->flags3 && ((re_ptr->flags3 & r_ptr->flags3) != re_ptr->flags3)) return FALSE;
+	if (re_ptr->flags4 && ((re_ptr->flags4 & r_ptr->flags4) != re_ptr->flags4)) return FALSE;
+	if (re_ptr->flags5 && ((re_ptr->flags5 & r_ptr->flags5) != re_ptr->flags5)) return FALSE;
+	if (re_ptr->flags6 && ((re_ptr->flags6 & r_ptr->flags6) != re_ptr->flags6)) return FALSE;
 	if (re_ptr->flags7 && ((re_ptr->flags7 & r_ptr->flags7) != re_ptr->flags7)) return FALSE;
 	if (re_ptr->flags8 && ((re_ptr->flags8 & r_ptr->flags8) != re_ptr->flags8)) return FALSE;
 	if (re_ptr->flags9 && ((re_ptr->flags9 & r_ptr->flags9) != re_ptr->flags9)) return FALSE;
+	if (re_ptr->flags10 && ((re_ptr->flags10 & r_ptr->flags10) != re_ptr->flags10)) return FALSE;
+	if (re_ptr->flags11 && ((re_ptr->flags11 & r_ptr->flags11) != re_ptr->flags11)) return FALSE;
+	if (re_ptr->flags12 && ((re_ptr->flags12 & r_ptr->flags12) != re_ptr->flags12)) return FALSE;
+	if (re_ptr->flags13 && ((re_ptr->flags13 & r_ptr->flags13) != re_ptr->flags13)) return FALSE;
+	if (re_ptr->flags14 && ((re_ptr->flags14 & r_ptr->flags14) != re_ptr->flags14)) return FALSE;
+	if (re_ptr->flags15 && ((re_ptr->flags15 & r_ptr->flags15) != re_ptr->flags15)) return FALSE;
+	if (re_ptr->flags16 && ((re_ptr->flags16 & r_ptr->flags16) != re_ptr->flags16)) return FALSE;
+	if (re_ptr->flags17 && ((re_ptr->flags17 & r_ptr->flags17) != re_ptr->flags17)) return FALSE;
+	if (re_ptr->flags18 && ((re_ptr->flags18 & r_ptr->flags18) != re_ptr->flags18)) return FALSE;
+	if (re_ptr->flags19 && ((re_ptr->flags19 & r_ptr->flags19) != re_ptr->flags19)) return FALSE;
+	if (re_ptr->flags20 && ((re_ptr->flags20 & r_ptr->flags20) != re_ptr->flags20)) return FALSE;
 
 	/* unwanted flags */
 	if (re_ptr->hflags1 && (re_ptr->hflags1 & r_ptr->flags1)) return FALSE;
 	if (re_ptr->hflags2 && (re_ptr->hflags2 & r_ptr->flags2)) return FALSE;
 	if (re_ptr->hflags3 && (re_ptr->hflags3 & r_ptr->flags3)) return FALSE;
+	if (re_ptr->hflags4 && (re_ptr->hflags4 & r_ptr->flags4)) return FALSE;
+	if (re_ptr->hflags5 && (re_ptr->hflags5 & r_ptr->flags5)) return FALSE;
+	if (re_ptr->hflags6 && (re_ptr->hflags6 & r_ptr->flags6)) return FALSE;
 	if (re_ptr->hflags7 && (re_ptr->hflags7 & r_ptr->flags7)) return FALSE;
 	if (re_ptr->hflags8 && (re_ptr->hflags8 & r_ptr->flags8)) return FALSE;
 	if (re_ptr->hflags9 && (re_ptr->hflags9 & r_ptr->flags9)) return FALSE;
+	if (re_ptr->hflags10 && (re_ptr->hflags10 & r_ptr->flags10)) return FALSE;
+	if (re_ptr->hflags11 && (re_ptr->hflags11 & r_ptr->flags11)) return FALSE;
+	if (re_ptr->hflags12 && (re_ptr->hflags12 & r_ptr->flags12)) return FALSE;
+	if (re_ptr->hflags13 && (re_ptr->hflags13 & r_ptr->flags13)) return FALSE;
+	if (re_ptr->hflags14 && (re_ptr->hflags14 & r_ptr->flags14)) return FALSE;
+	if (re_ptr->hflags15 && (re_ptr->hflags15 & r_ptr->flags15)) return FALSE;
+	if (re_ptr->hflags16 && (re_ptr->hflags16 & r_ptr->flags16)) return FALSE;
+	if (re_ptr->hflags17 && (re_ptr->hflags17 & r_ptr->flags17)) return FALSE;
+	if (re_ptr->hflags18 && (re_ptr->hflags18 & r_ptr->flags18)) return FALSE;
+	if (re_ptr->hflags19 && (re_ptr->hflags19 & r_ptr->flags19)) return FALSE;
+	if (re_ptr->hflags20 && (re_ptr->hflags20 & r_ptr->flags20)) return FALSE;
 
 	/* Need good race -- IF races are specified */
 	if (re_ptr->r_char[0])
@@ -334,6 +362,17 @@ monster_race* race_info_idx(int r_idx, int ego)
 	nr_ptr->flags7 &= ~(re_ptr->nflags7);
 	nr_ptr->flags8 &= ~(re_ptr->nflags8);
 	nr_ptr->flags9 &= ~(re_ptr->nflags9);
+	nr_ptr->flags10 &= ~(re_ptr->nflags10);
+	nr_ptr->flags11 &= ~(re_ptr->nflags11);
+	nr_ptr->flags12 &= ~(re_ptr->nflags12);
+	nr_ptr->flags13 &= ~(re_ptr->nflags13);
+	nr_ptr->flags14 &= ~(re_ptr->nflags14);
+	nr_ptr->flags15 &= ~(re_ptr->nflags15);
+	nr_ptr->flags16 &= ~(re_ptr->nflags16);
+	nr_ptr->flags17 &= ~(re_ptr->nflags17);
+	nr_ptr->flags18 &= ~(re_ptr->nflags18);
+	nr_ptr->flags19 &= ~(re_ptr->nflags19);
+	nr_ptr->flags20 &= ~(re_ptr->nflags20);
 
 	/* Add some flags */
 	nr_ptr->flags1 |= re_ptr->mflags1;
@@ -345,6 +384,17 @@ monster_race* race_info_idx(int r_idx, int ego)
 	nr_ptr->flags7 |= re_ptr->mflags7;
 	nr_ptr->flags8 |= re_ptr->mflags8;
 	nr_ptr->flags9 |= re_ptr->mflags9;
+	nr_ptr->flags10 |= re_ptr->mflags10;
+	nr_ptr->flags11 |= re_ptr->mflags11;
+	nr_ptr->flags12 |= re_ptr->mflags12;
+	nr_ptr->flags13 |= re_ptr->mflags13;
+	nr_ptr->flags14 |= re_ptr->mflags14;
+	nr_ptr->flags15 |= re_ptr->mflags15;
+	nr_ptr->flags16 |= re_ptr->mflags16;
+	nr_ptr->flags17 |= re_ptr->mflags17;
+	nr_ptr->flags18 |= re_ptr->mflags18;
+	nr_ptr->flags19 |= re_ptr->mflags19;
+	nr_ptr->flags20 |= re_ptr->mflags20;
 
 	/* Change the char/attr is needed */
 	if (re_ptr->d_char != MEGO_CHAR_ANY)
@@ -966,6 +1016,61 @@ bool apply_rule(monster_race *r_ptr, byte rule)
 			if ((d_ptr->rules[rule].mflags9 & r_ptr->flags9) != d_ptr->rules[rule].mflags9)
 				return FALSE;
 		}
+		if (d_ptr->rules[rule].mflags10)
+		{
+			if ((d_ptr->rules[rule].mflags10 & r_ptr->flags10) != d_ptr->rules[rule].mflags10)
+				return FALSE;
+		}
+		if (d_ptr->rules[rule].mflags11)
+		{
+			if ((d_ptr->rules[rule].mflags11 & r_ptr->flags11) != d_ptr->rules[rule].mflags11)
+				return FALSE;
+		}
+		if (d_ptr->rules[rule].mflags12)
+		{
+			if ((d_ptr->rules[rule].mflags12 & r_ptr->flags12) != d_ptr->rules[rule].mflags12)
+				return FALSE;
+		}
+		if (d_ptr->rules[rule].mflags13)
+		{
+			if ((d_ptr->rules[rule].mflags13 & r_ptr->flags13) != d_ptr->rules[rule].mflags13)
+				return FALSE;
+		}
+		if (d_ptr->rules[rule].mflags14)
+		{
+			if ((d_ptr->rules[rule].mflags14 & r_ptr->flags14) != d_ptr->rules[rule].mflags14)
+				return FALSE;
+		}
+		if (d_ptr->rules[rule].mflags15)
+		{
+			if ((d_ptr->rules[rule].mflags15 & r_ptr->flags15) != d_ptr->rules[rule].mflags15)
+				return FALSE;
+		}
+		if (d_ptr->rules[rule].mflags16)
+		{
+			if ((d_ptr->rules[rule].mflags16 & r_ptr->flags16) != d_ptr->rules[rule].mflags16)
+				return FALSE;
+		}
+		if (d_ptr->rules[rule].mflags17)
+		{
+			if ((d_ptr->rules[rule].mflags17 & r_ptr->flags17) != d_ptr->rules[rule].mflags17)
+				return FALSE;
+		}
+		if (d_ptr->rules[rule].mflags18)
+		{
+			if ((d_ptr->rules[rule].mflags18 & r_ptr->flags18) != d_ptr->rules[rule].mflags18)
+				return FALSE;
+		}
+		if (d_ptr->rules[rule].mflags19)
+		{
+			if ((d_ptr->rules[rule].mflags19 & r_ptr->flags19) != d_ptr->rules[rule].mflags19)
+				return FALSE;
+		}
+		if (d_ptr->rules[rule].mflags20)
+		{
+			if ((d_ptr->rules[rule].mflags20 & r_ptr->flags20) != d_ptr->rules[rule].mflags20)
+				return FALSE;
+		}
 		for (a = 0; a < 10; a++)
 		{
 			if (d_ptr->rules[rule].r_char[a] && (d_ptr->rules[rule].r_char[a] != r_ptr->d_char)) return FALSE;
@@ -987,6 +1092,17 @@ bool apply_rule(monster_race *r_ptr, byte rule)
 		if (d_ptr->rules[rule].mflags7 && (r_ptr->flags7 & d_ptr->rules[rule].mflags7)) return TRUE;
 		if (d_ptr->rules[rule].mflags8 && (r_ptr->flags8 & d_ptr->rules[rule].mflags8)) return TRUE;
 		if (d_ptr->rules[rule].mflags9 && (r_ptr->flags9 & d_ptr->rules[rule].mflags9)) return TRUE;
+		if (d_ptr->rules[rule].mflags10 && (r_ptr->flags10 & d_ptr->rules[rule].mflags10)) return TRUE;
+		if (d_ptr->rules[rule].mflags11 && (r_ptr->flags11 & d_ptr->rules[rule].mflags11)) return TRUE;
+		if (d_ptr->rules[rule].mflags12 && (r_ptr->flags12 & d_ptr->rules[rule].mflags12)) return TRUE;
+		if (d_ptr->rules[rule].mflags13 && (r_ptr->flags13 & d_ptr->rules[rule].mflags13)) return TRUE;
+		if (d_ptr->rules[rule].mflags14 && (r_ptr->flags14 & d_ptr->rules[rule].mflags14)) return TRUE;
+		if (d_ptr->rules[rule].mflags15 && (r_ptr->flags15 & d_ptr->rules[rule].mflags15)) return TRUE;
+		if (d_ptr->rules[rule].mflags16 && (r_ptr->flags16 & d_ptr->rules[rule].mflags16)) return TRUE;
+		if (d_ptr->rules[rule].mflags17 && (r_ptr->flags17 & d_ptr->rules[rule].mflags17)) return TRUE;
+		if (d_ptr->rules[rule].mflags18 && (r_ptr->flags18 & d_ptr->rules[rule].mflags18)) return TRUE;
+		if (d_ptr->rules[rule].mflags19 && (r_ptr->flags19 & d_ptr->rules[rule].mflags19)) return TRUE;
+		if (d_ptr->rules[rule].mflags20 && (r_ptr->flags20 & d_ptr->rules[rule].mflags20)) return TRUE;
 
 		for (a = 0; a < 10; a++)
 			if (d_ptr->rules[rule].r_char[a] == r_ptr->d_char) return TRUE;
@@ -3676,7 +3792,7 @@ bool summon_specific_okay(int r_idx)
 			        !(r_ptr->flags3 & (RF3_EVIL)) &&
 			        !(r_ptr->flags3 & (RF3_UNDEAD)) &&
 			        !(r_ptr->flags3 & (RF3_DEMON)) &&
-			        !(r_ptr->flags4 || r_ptr->flags5 || r_ptr->flags6) &&
+			        !(r_ptr->flags4 || r_ptr->flags5 || r_ptr->flags6 || r_ptr->flags11) &&
 			        !(r_ptr->flags1 & (RF1_UNIQUE)));
 			break;
 		}

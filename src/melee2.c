@@ -1215,7 +1215,7 @@ static bool monst_spell_monst(int m_idx)
 	monster_race *r_ptr = race_inf(m_ptr);
 	monster_type *t_ptr;                     /* Putative target */
 	monster_race *tr_ptr;
-	u32b f4, f5, f6;                        /* racial spell flags */
+	u32b f4, f5, f6, f11;                    /* racial spell flags */
 	bool direct = TRUE;
 	bool wake_up = FALSE;
 
@@ -1288,6 +1288,7 @@ static bool monst_spell_monst(int m_idx)
 		f4 = r_ptr->flags4;
 		f5 = r_ptr->flags5;
 		f6 = r_ptr->flags6;
+		f11 = r_ptr->flags11;
 
 		/* Hack -- allow "desperate" spells */
 		if ((r_ptr->flags2 & (RF2_SMART)) &&
@@ -2279,7 +2280,7 @@ static bool monst_spell_monst(int m_idx)
 				/* Heal the monster */
 				if (m_ptr->hp < m_ptr->maxhp)
 				{
-					if (!(tr_ptr->flags4 || tr_ptr->flags5 || tr_ptr->flags6))
+					if (!(tr_ptr->flags4 || tr_ptr->flags5 || tr_ptr->flags6 || tr_ptr->flags11))
 					{
 						if (see_both)
 							monster_msg("%^s is unaffected!", t_name);
@@ -3418,6 +3419,13 @@ static bool monst_spell_monst(int m_idx)
 				r_ptr->r_flags6 |= (1L << (thrown_spell - 32 * 5));
 				if (r_ptr->r_cast_spell < MAX_UCHAR) r_ptr->r_cast_spell++;
 			}
+
+			/* New spell */
+			else if (thrown_spell < 32*11)
+			{
+				r_ptr->r_flags11 |= (1L << (thrown_spell - 32 * 10));
+				if (r_ptr->r_cast_spell < MAX_UCHAR) r_ptr->r_cast_spell++;
+			}
 		}
 
 		/* Always take note of monsters that kill you ---
@@ -3706,7 +3714,7 @@ bool make_attack_spell(int m_idx)
 {
 	int k, chance, thrown_spell, rlev, failrate;
 	byte spell[96], num = 0;
-	u32b f2, f4, f5, f6;
+	u32b f2, f4, f5, f6, f11;
 	monster_type *m_ptr = &m_list[m_idx];
 	monster_race *r_ptr = race_inf(m_ptr);
 	char m_name[80];
@@ -3807,6 +3815,7 @@ bool make_attack_spell(int m_idx)
 	f4 = r_ptr->flags4;
 	f5 = r_ptr->flags5;
 	f6 = r_ptr->flags6;
+	f11 = r_ptr->flags11;
 
 	if (!stupid_monsters)
 	{
@@ -6097,6 +6106,13 @@ bool make_attack_spell(int m_idx)
 		else if (thrown_spell < 32*6)
 		{
 			r_ptr->r_flags6 |= (1L << (thrown_spell - 32 * 5));
+			if (r_ptr->r_cast_spell < MAX_UCHAR) r_ptr->r_cast_spell++;
+		}
+
+		/* New spell */
+		else if (thrown_spell < 32*11)
+		{
+			r_ptr->r_flags11 |= (1L << (thrown_spell - 32 * 10));
 			if (r_ptr->r_cast_spell < MAX_UCHAR) r_ptr->r_cast_spell++;
 		}
 	}
@@ -9133,6 +9149,20 @@ void process_monsters(void)
 	u32b old_r_flags4 = 0L;
 	u32b old_r_flags5 = 0L;
 	u32b old_r_flags6 = 0L;
+	u32b old_r_flags7 = 0L;
+	u32b old_r_flags8 = 0L;
+	u32b old_r_flags9 = 0L;
+	u32b old_r_flags10 = 0L;
+	u32b old_r_flags11 = 0L;
+	u32b old_r_flags12 = 0L;
+	u32b old_r_flags13 = 0L;
+	u32b old_r_flags14 = 0L;
+	u32b old_r_flags15 = 0L;
+	u32b old_r_flags16 = 0L;
+	u32b old_r_flags17 = 0L;
+	u32b old_r_flags18 = 0L;
+	u32b old_r_flags19 = 0L;
+	u32b old_r_flags20 = 0L;
 
 	byte old_r_blows0 = 0;
 	byte old_r_blows1 = 0;
@@ -9165,6 +9195,20 @@ void process_monsters(void)
 		old_r_flags4 = r_ptr->r_flags4;
 		old_r_flags5 = r_ptr->r_flags5;
 		old_r_flags6 = r_ptr->r_flags6;
+		old_r_flags7 = r_ptr->r_flags7;
+		old_r_flags8 = r_ptr->r_flags8;
+		old_r_flags9 = r_ptr->r_flags9;
+		old_r_flags10 = r_ptr->r_flags10;
+		old_r_flags11 = r_ptr->r_flags11;
+		old_r_flags12 = r_ptr->r_flags12;
+		old_r_flags13 = r_ptr->r_flags13;
+		old_r_flags14 = r_ptr->r_flags14;
+		old_r_flags15 = r_ptr->r_flags15;
+		old_r_flags16 = r_ptr->r_flags16;
+		old_r_flags17 = r_ptr->r_flags17;
+		old_r_flags18 = r_ptr->r_flags18;
+		old_r_flags19 = r_ptr->r_flags19;
+		old_r_flags20 = r_ptr->r_flags20;
 
 		/* Memorize blows */
 		old_r_blows0 = r_ptr->r_blows[0];
@@ -9333,6 +9377,20 @@ void process_monsters(void)
 		                (old_r_flags4 != r_ptr->r_flags4) ||
 		                (old_r_flags5 != r_ptr->r_flags5) ||
 		                (old_r_flags6 != r_ptr->r_flags6) ||
+		                (old_r_flags7 != r_ptr->r_flags7) ||
+		                (old_r_flags8 != r_ptr->r_flags8) ||
+		                (old_r_flags9 != r_ptr->r_flags9) ||
+		                (old_r_flags10 != r_ptr->r_flags10) ||
+		                (old_r_flags11 != r_ptr->r_flags11) ||
+		                (old_r_flags12 != r_ptr->r_flags12) ||
+		                (old_r_flags13 != r_ptr->r_flags13) ||
+		                (old_r_flags14 != r_ptr->r_flags14) ||
+		                (old_r_flags15 != r_ptr->r_flags15) ||
+		                (old_r_flags16 != r_ptr->r_flags16) ||
+		                (old_r_flags17 != r_ptr->r_flags17) ||
+		                (old_r_flags18 != r_ptr->r_flags18) ||
+		                (old_r_flags19 != r_ptr->r_flags19) ||
+		                (old_r_flags20 != r_ptr->r_flags20) ||
 		                (old_r_blows0 != r_ptr->r_blows[0]) ||
 		                (old_r_blows1 != r_ptr->r_blows[1]) ||
 		                (old_r_blows2 != r_ptr->r_blows[2]) ||

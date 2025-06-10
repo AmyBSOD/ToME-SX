@@ -4853,7 +4853,7 @@ quest_type quest_init_tome[MAX_Q_IDX_INIT] =
 
 
 /* List of powers for Symbiants/Powers */
-monster_power monster_powers[96] =
+monster_power monster_powers[128] =
 	{
 		{ RF4_SHRIEK, "Aggravate Monster", 1, FALSE },
 		{ RF4_MULTIPLY, "Multiply", 50, FALSE },
@@ -4952,6 +4952,39 @@ monster_power monster_powers[96] =
 		{ RF6_S_HI_UNDEAD, "Summon High Undead", 900, TRUE },
 		{ RF6_S_HI_DRAGON, "Summon High Dragon", 900, TRUE },
 		{ RF6_S_WRAITH, "Summon Wraith", 900, TRUE },
+		{ 0, "(none)", 0, FALSE },
+
+		{ RF11_BR_NERV, "Breathe Nerve", 100, TRUE },
+		{ RF11_BR_MIND, "Breathe Mind", 100, TRUE },
+		{ RF11_BR_ETHE, "Breathe Ether", 180, TRUE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
 		{ 0, "(none)", 0, FALSE },
 	};
 

@@ -1521,7 +1521,7 @@ static void spoil_mon_info(cptr fname)
 	bool breath, magic, sin;
 	cptr p, q;
 	cptr vp[64];
-	u32b flags1, flags2, flags3, flags4, flags5, flags6, flags7, flags8, flags9;
+	u32b flags1, flags2, flags3, flags4, flags5, flags6, flags7, flags8, flags9, flags10, flags11, flags12, flags13, flags14, flags15, flags16, flags17, flags18, flags19, flags20;
 
 
 	/* Build the filename */
@@ -1564,6 +1564,17 @@ static void spoil_mon_info(cptr fname)
 		flags7 = r_ptr->flags7;
 		flags8 = r_ptr->flags8;
 		flags9 = r_ptr->flags9;
+		flags10 = r_ptr->flags10;
+		flags11 = r_ptr->flags11;
+		flags12 = r_ptr->flags12;
+		flags13 = r_ptr->flags13;
+		flags14 = r_ptr->flags14;
+		flags15 = r_ptr->flags15;
+		flags16 = r_ptr->flags16;
+		flags17 = r_ptr->flags17;
+		flags18 = r_ptr->flags18;
+		flags19 = r_ptr->flags19;
+		flags20 = r_ptr->flags20;
 		breath = FALSE;
 		magic = FALSE;
 

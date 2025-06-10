@@ -4500,6 +4500,20 @@
 
 
 /*
+ * Monster race flags
+ */
+#define RF10_RES_NERV           0x00000001 /* Monster resists nerve */
+#define RF10_RES_MIND           0x00000002 /* Monster resists mind */
+#define RF10_RES_ETHE           0x00000004 /* Monster resists ether */
+
+/*
+ * Monster spell flags
+ */
+#define RF11_BR_NERV            0x00000001 /* Nerve breath */
+#define RF11_BR_MIND            0x00000002 /* Mind breath */
+#define RF11_BR_ETHE            0x00000004 /* Ether breath */
+
+/*
  * Hack -- choose "intelligent" spells when desperate
  */
 

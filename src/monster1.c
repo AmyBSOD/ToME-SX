@@ -126,6 +126,17 @@ static void roff_aux(int r_idx, int ego, int remem)
 	u32b flags7;
 	u32b flags8;
 	u32b flags9;
+	u32b flags10;
+	u32b flags11;
+	u32b flags12;
+	u32b flags13;
+	u32b flags14;
+	u32b flags15;
+	u32b flags16;
+	u32b flags17;
+	u32b flags18;
+	u32b flags19;
+	u32b flags20;
 
 	int	vn = 0;
 	byte color[64];
@@ -208,6 +219,17 @@ static void roff_aux(int r_idx, int ego, int remem)
 		r_ptr->r_flags7 = r_ptr->flags7;
 		r_ptr->r_flags8 = r_ptr->flags8;
 		r_ptr->r_flags9 = r_ptr->flags9;
+		r_ptr->r_flags10 = r_ptr->flags10;
+		r_ptr->r_flags11 = r_ptr->flags11;
+		r_ptr->r_flags12 = r_ptr->flags12;
+		r_ptr->r_flags13 = r_ptr->flags13;
+		r_ptr->r_flags14 = r_ptr->flags14;
+		r_ptr->r_flags15 = r_ptr->flags15;
+		r_ptr->r_flags16 = r_ptr->flags16;
+		r_ptr->r_flags17 = r_ptr->flags17;
+		r_ptr->r_flags18 = r_ptr->flags18;
+		r_ptr->r_flags19 = r_ptr->flags19;
+		r_ptr->r_flags20 = r_ptr->flags20;
 	}
 
 
@@ -226,6 +248,17 @@ static void roff_aux(int r_idx, int ego, int remem)
 	flags7 = (r_ptr->flags7 & r_ptr->r_flags7);
 	flags8 = (r_ptr->flags8 & r_ptr->r_flags8);
 	flags9 = (r_ptr->flags9 & r_ptr->r_flags9);
+	flags10 = (r_ptr->flags10 & r_ptr->r_flags10);
+	flags11 = (r_ptr->flags11 & r_ptr->r_flags11);
+	flags12 = (r_ptr->flags12 & r_ptr->r_flags12);
+	flags13 = (r_ptr->flags13 & r_ptr->r_flags13);
+	flags14 = (r_ptr->flags14 & r_ptr->r_flags14);
+	flags15 = (r_ptr->flags15 & r_ptr->r_flags15);
+	flags16 = (r_ptr->flags16 & r_ptr->r_flags16);
+	flags17 = (r_ptr->flags17 & r_ptr->r_flags17);
+	flags18 = (r_ptr->flags18 & r_ptr->r_flags18);
+	flags19 = (r_ptr->flags19 & r_ptr->r_flags19);
+	flags20 = (r_ptr->flags20 & r_ptr->r_flags20);
 
 
 	/* Assume some "obvious" flags */

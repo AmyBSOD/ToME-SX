@@ -1477,6 +1477,17 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 		}
 	}
 
+	/* List the monster powers -- RF11_* */
+	for (i = 0; i < 32; i++)
+	{
+		if (r_ptr->flags11 & BIT(i))
+		{
+			if (monster_powers[i + 96].great && (!great)) continue;
+			if (!monster_powers[i + 96].power) continue;
+			powers[num++] = i + 96;
+		}
+	}
+
 	if (!num)
 	{
 		msg_print("You have no powers you can use.");

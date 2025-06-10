@@ -1095,6 +1095,14 @@ static monster_type lua_monster_forge @ monster_forge;
 #define RF9_NEVER_GENE          0x00004000      
 /** @} */
 
+#define RF10_RES_NERV           0x00000001 /* Monster resists nerve */
+#define RF10_RES_MIND           0x00000002 /* Monster resists mind */
+#define RF10_RES_ETHE           0x00000004 /* Monster resists ether */
+
+#define RF11_BR_NERV            0x00000001 /* Nerve breath */
+#define RF11_BR_MIND            0x00000002 /* Mind breath */
+#define RF11_BR_ETHE            0x00000004 /* Ether breath */
+
 /** @name Monster flags
  * @{ */
 /** @def MFLAG_VIEW
@@ -1280,6 +1288,18 @@ struct monster_race
 	 */
 	u32b flags9;
 
+	u32b flags10;
+	u32b flags11;
+	u32b flags12;
+	u32b flags13;
+	u32b flags14;
+	u32b flags15;
+	u32b flags16;
+	u32b flags17;
+	u32b flags18;
+	u32b flags19;
+	u32b flags20;
+
 	/** @structvar blow[4]
 	 * @brief magic_power
 	 * @note Up to four blows per round 
@@ -1458,6 +1478,18 @@ struct monster_race
 	 * @note Observed racial flags 
 	 */
 	u32b r_flags9;
+
+	u32b r_flags10;
+	u32b r_flags11;
+	u32b r_flags12;
+	u32b r_flags13;
+	u32b r_flags14;
+	u32b r_flags15;
+	u32b r_flags16;
+	u32b r_flags17;
+	u32b r_flags18;
+	u32b r_flags19;
+	u32b r_flags20;
 
 	/** @structvar on_saved
 	 * @brief Boolean

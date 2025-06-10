@@ -1082,6 +1082,61 @@ struct rule_type
 	 */
 	u32b mflags9;
 
+	/** @structvar mflags10
+	 * @brief Number
+	 */
+	u32b mflags10;
+
+	/** @structvar mflags11
+	 * @brief Number
+	 */
+	u32b mflags11;
+
+	/** @structvar mflags12
+	 * @brief Number
+	 */
+	u32b mflags12;
+
+	/** @structvar mflags13
+	 * @brief Number
+	 */
+	u32b mflags13;
+
+	/** @structvar mflags14
+	 * @brief Number
+	 */
+	u32b mflags14;
+
+	/** @structvar mflags15
+	 * @brief Number
+	 */
+	u32b mflags15;
+
+	/** @structvar mflags16
+	 * @brief Number
+	 */
+	u32b mflags16;
+
+	/** @structvar mflags17
+	 * @brief Number
+	 */
+	u32b mflags17;
+
+	/** @structvar mflags18
+	 * @brief Number
+	 */
+	u32b mflags18;
+
+	/** @structvar mflags19
+	 * @brief Number
+	 */
+	u32b mflags19;
+
+	/** @structvar mflags20
+	 * @brief Number
+	 */
+	u32b mflags20;
+
 	/** @structvar r_char[5]
 	 * @brief String
 	 * @note Monster race allowed 

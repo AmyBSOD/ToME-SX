@@ -538,6 +538,17 @@ struct monster_race
 	u32b flags7;			/* Flags 7 (movement related abilities) */
 	u32b flags8;			/* Flags 8 (wilderness info) */
 	u32b flags9;			/* Flags 9 (drops info) */
+	u32b flags10;			/* Flags 10 */
+	u32b flags11;			/* Flags 11 */
+	u32b flags12;			/* Flags 12 */
+	u32b flags13;			/* Flags 13 */
+	u32b flags14;			/* Flags 14 */
+	u32b flags15;			/* Flags 15 */
+	u32b flags16;			/* Flags 16 */
+	u32b flags17;			/* Flags 17 */
+	u32b flags18;			/* Flags 18 */
+	u32b flags19;			/* Flags 19 */
+	u32b flags20;			/* Flags 20 */
 
 	monster_blow blow[4];           /* Up to four blows per round */
 
@@ -589,6 +600,17 @@ struct monster_race
 	u32b r_flags7;			/* Observed racial flags */
 	u32b r_flags8;                  /* Observed racial flags */
 	u32b r_flags9;                  /* Observed racial flags */
+	u32b r_flags10;                  /* Observed racial flags */
+	u32b r_flags11;                  /* Observed racial flags */
+	u32b r_flags12;                  /* Observed racial flags */
+	u32b r_flags13;                  /* Observed racial flags */
+	u32b r_flags14;                  /* Observed racial flags */
+	u32b r_flags15;                  /* Observed racial flags */
+	u32b r_flags16;                  /* Observed racial flags */
+	u32b r_flags17;                  /* Observed racial flags */
+	u32b r_flags18;                  /* Observed racial flags */
+	u32b r_flags19;                  /* Observed racial flags */
+	u32b r_flags20;                  /* Observed racial flags */
 
 	bool on_saved;                  /* Is the (unique) on a saved level ? */
 
@@ -628,15 +650,43 @@ struct monster_ego
 	u32b flags1;                    /* Flags 1 */
 	u32b flags2;                    /* Flags 1 */
 	u32b flags3;                    /* Flags 1 */
+	u32b flags4;                    /* Flags 1 */
+	u32b flags5;                    /* Flags 1 */
+	u32b flags6;                    /* Flags 1 */
 	u32b flags7;                    /* Flags 1 */
 	u32b flags8;                    /* Flags 1 */
 	u32b flags9;                    /* Flags 1 */
+	u32b flags10;                    /* Flags 1 */
+	u32b flags11;                    /* Flags 1 */
+	u32b flags12;                    /* Flags 1 */
+	u32b flags13;                    /* Flags 1 */
+	u32b flags14;                    /* Flags 1 */
+	u32b flags15;                    /* Flags 1 */
+	u32b flags16;                    /* Flags 1 */
+	u32b flags17;                    /* Flags 1 */
+	u32b flags18;                    /* Flags 1 */
+	u32b flags19;                    /* Flags 1 */
+	u32b flags20;                    /* Flags 1 */
 	u32b hflags1;                    /* Flags 1 */
 	u32b hflags2;                    /* Flags 1 */
 	u32b hflags3;                    /* Flags 1 */
+	u32b hflags4;                    /* Flags 1 */
+	u32b hflags5;                    /* Flags 1 */
+	u32b hflags6;                    /* Flags 1 */
 	u32b hflags7;                    /* Flags 1 */
 	u32b hflags8;                    /* Flags 1 */
 	u32b hflags9;                    /* Flags 1 */
+	u32b hflags10;                    /* Flags 1 */
+	u32b hflags11;                    /* Flags 1 */
+	u32b hflags12;                    /* Flags 1 */
+	u32b hflags13;                    /* Flags 1 */
+	u32b hflags14;                    /* Flags 1 */
+	u32b hflags15;                    /* Flags 1 */
+	u32b hflags16;                    /* Flags 1 */
+	u32b hflags17;                    /* Flags 1 */
+	u32b hflags18;                    /* Flags 1 */
+	u32b hflags19;                    /* Flags 1 */
+	u32b hflags20;                    /* Flags 1 */
 
 	/* Monster flags */
 	u32b mflags1;                    /* Flags 1 (general) */
@@ -648,6 +698,17 @@ struct monster_ego
 	u32b mflags7;                    /* Flags 7 (movement related abilities) */
 	u32b mflags8;                    /* Flags 8 (wilderness info) */
 	u32b mflags9;                    /* Flags 9 (drops info) */
+	u32b mflags10;                   /* Flags 10 */
+	u32b mflags11;                   /* Flags 11 */
+	u32b mflags12;                   /* Flags 12 */
+	u32b mflags13;                   /* Flags 13 */
+	u32b mflags14;                   /* Flags 14 */
+	u32b mflags15;                   /* Flags 15 */
+	u32b mflags16;                   /* Flags 16 */
+	u32b mflags17;                   /* Flags 17 */
+	u32b mflags18;                   /* Flags 18 */
+	u32b mflags19;                   /* Flags 19 */
+	u32b mflags20;                   /* Flags 20 */
 
 	/* Negative Flags, to be removed from the monster flags */
 	u32b nflags1;                    /* Flags 1 (general) */
@@ -659,6 +720,17 @@ struct monster_ego
 	u32b nflags7;                    /* Flags 7 (movement related abilities) */
 	u32b nflags8;                    /* Flags 8 (wilderness info) */
 	u32b nflags9;                    /* Flags 9 (drops info) */
+	u32b nflags10;                   /* Flags 10 */
+	u32b nflags11;                   /* Flags 11 */
+	u32b nflags12;                   /* Flags 12 */
+	u32b nflags13;                   /* Flags 13 */
+	u32b nflags14;                   /* Flags 14 */
+	u32b nflags15;                   /* Flags 15 */
+	u32b nflags16;                   /* Flags 16 */
+	u32b nflags17;                   /* Flags 17 */
+	u32b nflags18;                   /* Flags 18 */
+	u32b nflags19;                   /* Flags 19 */
+	u32b nflags20;                   /* Flags 20 */
 
 	s16b level;                     /* Level of creature */
 	s16b rarity;                    /* Rarity of creature */
@@ -2815,6 +2887,17 @@ struct rule_type
 	u32b mflags7;
 	u32b mflags8;
 	u32b mflags9;
+	u32b mflags10;
+	u32b mflags11;
+	u32b mflags12;
+	u32b mflags13;
+	u32b mflags14;
+	u32b mflags15;
+	u32b mflags16;
+	u32b mflags17;
+	u32b mflags18;
+	u32b mflags19;
+	u32b mflags20;
 
 	char r_char[10];                 /* Monster race allowed */
 };

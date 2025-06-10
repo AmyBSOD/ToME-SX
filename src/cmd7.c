@@ -1642,6 +1642,39 @@ int check_artifact_items(int pval, int oldpval, int mode)
 						case 8:
 							if ( !(r_info[o_ptr->pval2].flags9 & mask) ) itemgood = FALSE;
 							break;
+						case 9:
+							if ( !(r_info[o_ptr->pval2].flags10 & mask) ) itemgood = FALSE;
+							break;
+						case 10:
+							if ( !(r_info[o_ptr->pval2].flags11 & mask) ) itemgood = FALSE;
+							break;
+						case 11:
+							if ( !(r_info[o_ptr->pval2].flags12 & mask) ) itemgood = FALSE;
+							break;
+						case 12:
+							if ( !(r_info[o_ptr->pval2].flags13 & mask) ) itemgood = FALSE;
+							break;
+						case 13:
+							if ( !(r_info[o_ptr->pval2].flags14 & mask) ) itemgood = FALSE;
+							break;
+						case 14:
+							if ( !(r_info[o_ptr->pval2].flags15 & mask) ) itemgood = FALSE;
+							break;
+						case 15:
+							if ( !(r_info[o_ptr->pval2].flags16 & mask) ) itemgood = FALSE;
+							break;
+						case 16:
+							if ( !(r_info[o_ptr->pval2].flags17 & mask) ) itemgood = FALSE;
+							break;
+						case 17:
+							if ( !(r_info[o_ptr->pval2].flags18 & mask) ) itemgood = FALSE;
+							break;
+						case 18:
+							if ( !(r_info[o_ptr->pval2].flags19 & mask) ) itemgood = FALSE;
+							break;
+						case 19:
+							if ( !(r_info[o_ptr->pval2].flags20 & mask) ) itemgood = FALSE;
+							break;
 						default:
 							msg_print("This code should never be hit!");
 						}

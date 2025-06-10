@@ -1558,6 +1558,17 @@ static void sell_quest_monster(void)
 		r_ptr->r_flags7 = r_ptr->flags7;
 		r_ptr->r_flags8 = r_ptr->flags8;
 		r_ptr->r_flags9 = r_ptr->flags9;
+		r_ptr->r_flags10 = r_ptr->flags10;
+		r_ptr->r_flags11 = r_ptr->flags11;
+		r_ptr->r_flags12 = r_ptr->flags12;
+		r_ptr->r_flags13 = r_ptr->flags13;
+		r_ptr->r_flags14 = r_ptr->flags14;
+		r_ptr->r_flags15 = r_ptr->flags15;
+		r_ptr->r_flags16 = r_ptr->flags16;
+		r_ptr->r_flags17 = r_ptr->flags17;
+		r_ptr->r_flags18 = r_ptr->flags18;
+		r_ptr->r_flags19 = r_ptr->flags19;
+		r_ptr->r_flags20 = r_ptr->flags20;
 
 		msg_print(NULL);
 
