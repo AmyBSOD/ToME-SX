@@ -197,6 +197,11 @@ bool quest_sauron_resurect_hook(char *fmt)
 		msg_print("Sauron will not be permanently defeated until the One Ring is either destroyed or used...");
 		r_ptr->max_num = 1;
 	}
+	else if (m_ptr->r_idx == 5342 && !(r_info[5342].max_num) )
+	{
+		msg_print("Congratulations, the BOFH is defeated! Your reward is training in a skill of your choice!");
+		do_get_new_skill(0);
+	}
 	return FALSE;
 }
 

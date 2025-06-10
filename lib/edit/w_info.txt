@@ -160,5 +160,8 @@ W:E:59:48:93
 # Mandos
 W:E:8:34:89
 
+# Space Base
+W:E:70:1:26
+
 # Starting position
 W:P:34:21

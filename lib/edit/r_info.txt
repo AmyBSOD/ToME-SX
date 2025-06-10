@@ -92824,6 +92824,23 @@ S:BR_NERV
 S:MULTIPLY
 D:This thing writhes about and looks goofy. Watch out or it'll infect you!
 
+N:5342:Bastard Operator From Hell
+G:@:w
+I:115:40d60:100:50:20
+W:50:5:6000:20000
+E:0:1:1:2:1:1
+O:50:50:0:0
+B:HIT:HURT:5d20
+F:UNIQUE | MALE | CAN_SPEAK |
+F:FORCE_MAXHP | DROP_CORPSE | SPECIAL_GENE | 
+F:ONLY_ITEM | DROP_22 | DROP_GOOD |
+F:OPEN_DOOR | DROP_RANDART | NO_THEFT |
+F:BASEANGBAND | HAS_LITE
+S:1_IN_5
+S:TPORT
+D:A fictional rogue computer operator who takes out his anger on lusers like 
+D:you. 
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness (low = more alert)
