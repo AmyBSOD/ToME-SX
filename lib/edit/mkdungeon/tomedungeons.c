@@ -2083,7 +2083,7 @@ void printRandoms(int lower, int upper, int count)
 
 			} else {
 
-				contnum = random_number(144);
+				contnum = random_number(145);
 
 				printf("# random type %d\n", contnum);
 
@@ -4249,6 +4249,18 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(5) == 1) {
 							randomdungeondamage();
 						}
+						break;
+					case 145:
+						printf("# based on Vaire Temple\n", contnum);
+						printf("L:88:60:94:30:16:10\n");
+						printf("A:16:100:56:0:56:0:16:16\n");
+						printf("O:30:30:30:10\n");
+						printf("F:WATER_RIVER | ADJUST_LEVEL_1 | NO_DOORS | CIRCULAR_ROOMS | NO_DESTROY | SAND_VEIN\n");
+						printf("F:NO_SHAFT\n");
+						printf("R:95:3\n");
+						printf("M:SPIDER | R_CHAR_S |\n");
+						printf("S:TRAPS |\n");
+						printf("R:5:0\n");
 						break;
 				}
 			}

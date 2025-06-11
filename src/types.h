@@ -1744,6 +1744,9 @@ struct player_type
 	s16b tim_thunder;   	/* Timed thunderstorm */
 	s16b tim_thunder_p1;	/* Timed thunderstorm */
 	s16b tim_thunder_p2;	/* Timed thunderstorm */
+	s16b tim_ttempest;   	/* Timed time tempest */
+	s16b tim_ttempest_p1;	/* Timed time tempest */
+	s16b tim_ttempest_p2;	/* Timed time tempest */
 
 	s16b tim_peace;       	/* Timed peacekeeping */
 	s16b tim_device;       	/* Timed device mastery */

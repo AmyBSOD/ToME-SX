@@ -3463,7 +3463,7 @@ bool player_can_enter(byte feature)
 	else if (f_info[feature].flags1 & FF1_NO_WALK)
 		return (FALSE);
 	else if ((f_info[feature].flags1 & FF1_WEB) &&
-	                ((!(r_info[p_ptr->body_monster].flags7 & RF7_SPIDER)) && (p_ptr->mimic_form != resolve_mimic_name("Spider"))))
+	                ((!(r_info[p_ptr->body_monster].flags7 & RF7_SPIDER)) && (p_ptr->mimic_form != resolve_mimic_name("Spider")) && (p_ptr->mimic_form != resolve_mimic_name("Arachnid")) ))
 		return (FALSE);
 
 	return (TRUE);

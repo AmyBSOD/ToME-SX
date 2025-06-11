@@ -224,6 +224,7 @@ ingame_help
 					["Nienna"] = { "g_nienna.txt", 0 },  
 					["Este"] = { "g_este.txt", 0 },  
 					["Vana"] = { "g_vana.txt", 0 },  
+					["Vaire"] = { "g_vaire.txt", 0 },  
 				},
 				["skill"] =
 				{

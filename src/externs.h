@@ -1646,6 +1646,7 @@ extern bool set_tim_deadly(int v);
 extern bool set_tim_res_time(int v);
 extern bool set_tim_reflect(int v);
 extern bool set_tim_thunder(int v, int p1, int p2);
+extern bool set_tim_ttempest(int v, int p1, int p2);
 extern bool set_meditation(int v);
 extern bool set_strike(int v);
 extern bool set_walk_water(int v);

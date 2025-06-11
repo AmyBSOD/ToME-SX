@@ -269,7 +269,7 @@ Read *****gods.txt*0[gods.txt] for a little more information about Gods.
     *****g_ulmo.txt*0[Ulmo]             *****g_mandos.txt*0[Mandos]
     *****g_orome.txt*0[Orome]           *****g_ingebo.txt*0[Ingeborg]
     *****g_nienna.txt*0[Nienna]         *****g_este.txt*0[Este]
-    *****g_vana.txt*0[Vana]
+    *****g_vana.txt*0[Vana]             *****g_vaire.txt*0[Vaire]
 
 
 ~~~~~39|Character|Stats 2

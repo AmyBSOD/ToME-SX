@@ -2126,6 +2126,7 @@ static void process_world(void)
 			inc_piety(GOD_NIENNA, -100);
 			inc_piety(GOD_ESTE, -100);
 			inc_piety(GOD_VANA, -100);
+			inc_piety(GOD_VAIRE, -100);
 		}
 
 		GOD(GOD_MANWE)
@@ -2221,6 +2222,15 @@ static void process_world(void)
 			dec += 5;
 			if (dec < 1) dec = 1;
 			inc_piety(GOD_ULMO, -dec);
+		}
+		GOD(GOD_VAIRE)
+		{
+			int dec = 6 - wisdom_scale(3);
+
+			PRAY_GOD(GOD_VAIRE)
+			dec += 1;
+			if (dec < 1) dec = 1;
+			inc_piety(GOD_VAIRE, -dec);
 		}
 		GOD(GOD_AMYBSOD)
 		{
@@ -2556,6 +2566,43 @@ static void process_world(void)
 		}
 
 		(void)set_tim_thunder(p_ptr->tim_thunder - 1, p_ptr->tim_thunder_p1, p_ptr->tim_thunder_p2);
+	}
+
+	if (p_ptr->tim_ttempest)
+	{
+		int dam = damroll(p_ptr->tim_ttempest_p1, p_ptr->tim_ttempest_p2);
+		int i, tries = 600;
+		monster_type *m_ptr = NULL;
+
+		while (tries)
+		{
+			/* Access the monster */
+			m_ptr = &m_list[i = rand_range(1, m_max - 1)];
+
+			tries--;
+
+			/* Ignore "dead" monsters */
+			if (!m_ptr->r_idx) continue;
+
+			/* Cant see ? cant hit */
+			if (!los(p_ptr->py, p_ptr->px, m_ptr->fy, m_ptr->fx)) continue;
+
+			/* Do not hurt friends! */
+			if (is_friend(m_ptr) >= 0) continue;
+			break;
+		}
+
+		if (tries)
+		{
+			char m_name[80];
+
+			monster_desc(m_name, m_ptr, 0);
+			msg_format("A vortex of time engulfs %s.", m_name);
+			project(0, 0, m_ptr->fy, m_ptr->fx, dam, GF_TIME,
+			        PROJECT_KILL | PROJECT_ITEM | PROJECT_HIDE);
+		}
+
+		(void)set_tim_ttempest(p_ptr->tim_ttempest - 1, p_ptr->tim_ttempest_p1, p_ptr->tim_ttempest_p2);
 	}
 
 	/* Poisonned hands */

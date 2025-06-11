@@ -10013,6 +10013,27 @@ F:MARTIAL_ARTS
 f:MARTIAL_ARTS
 D:A lightweight armor that boosts your ability to fight hand to hand.
 
+N:1191:& Tome~ of History
+G:?:w
+I:111:40:0
+W:50:0:0:25000
+A:50/4
+P:0:1d1:0:0:0
+F:FULL_NAME | EASY_KNOW
+D:This tome seems to weave a timeline of Arda's history...
+
+N:1192:& Piece~ of the Relic of Vaire
+G:~:v
+I:11:25:0
+W:0:0:0:1000
+A:0/1
+P:0:1d1:0:0:0
+F:SPECIAL_GENE | FULL_NAME
+F:IGNORE_ACID | IGNORE_COLD | IGNORE_ELEC | IGNORE_FIRE |
+D:Although it looks like a piece of junk, it is actually part of an ancient
+D:relic belonging to the Priests of Vaire. The relic now lies in pieces, 
+D:hidden from all but the most faithful followers of Vaire.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???

@@ -2205,6 +2205,7 @@ C:a:g:Ingeborg
 C:a:g:Nienna
 C:a:g:Este
 C:a:g:Vana
+C:a:g:Vaire
 C:a:k:+0:+200:Clear-mind
 C:a:k:+0:+200:Cleaning
 
@@ -2410,6 +2411,17 @@ C:a:k:+0:-300:Sneakiness
 C:a:k:+0:-300:Hidden-Sight
 C:a:k:+0:-200:Stealth
 C:a:k:+0:-300:Disarming
+
+C:a:N:Spider Priest
+C:a:D:A priest that serves Vaire to bring down
+C:a:D:the empire of fear and shadows of Morgoth.
+C:a:O:21:5:1d1
+C:a:g:Vaire
+C:a:k:+0:+600:Prayer
+C:a:k:+0:-300:Necromancy
+C:a:k:+0:+400:Temporal
+C:a:k:+0:+200:Mimicry
+C:a:k:+1000:+100:Sneakiness
 
 C:a:N:Death Priest
 C:a:D:A priest that serves Mandos to bring down

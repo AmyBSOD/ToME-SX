@@ -758,6 +758,8 @@ struct player_type
 	 */
 	u16b csane_frac;
 
+	s16b contamination;
+
 	/** @structvar grace
 	 * @brief Number
 	 * @note Your God's appreciation factor.
@@ -1026,6 +1028,22 @@ struct player_type
 	 * @note Timed thunderstorm
 	 */
 	s16b tim_thunder_p2;
+
+	/** @structvar tim_ttempest
+	 * @brief Number
+	 * @note Timed thunderstorm
+	 */
+	s16b tim_ttempest;
+	/** @structvar tim_ttempest_p1
+	 * @brief Number
+	 * @note Timed thunderstorm
+	 */
+	s16b tim_ttempest_p1;
+	/** @structvar tim_ttempest_p2
+	 * @brief Number
+	 * @note Timed thunderstorm
+	 */
+	s16b tim_ttempest_p2;
 
 	/** @structvar resist_magic
 	 * @brief Number
@@ -6047,6 +6065,8 @@ extern void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b f6, u3
  */
 extern bool set_tim_thunder(int v, int p1, int p2);
 
+extern bool set_tim_ttempest(int v, int p1, int p2);
+
 /** @fn set_tim_breath(int v, bool magical)
  * @brief Player has timed magic/water breath.\n
  * @param v Number \n time remaining until effect expires
@@ -6492,6 +6512,9 @@ extern s16b dun_level;
 
 /** @def GOD_VANA */
 #define GOD_VANA	     15
+
+/** @def GOD_VAIRE */
+#define GOD_VAIRE	     16
 
 /** @} */
 

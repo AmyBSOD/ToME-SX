@@ -1056,6 +1056,40 @@ add_mimic_shape
 	end,
 }
 
+-- For spider form spell
+add_mimic_shape
+{
+	["name"] =      "Arachnid",
+	["desc"] = 	"A very powerful spider.",
+	["realm"] =     "nil",
+	["level"] =     1,
+	["rarity"] =    101,
+	["duration"] =  {15, 75},
+	["limit"] =     TRUE,
+	["calc"] =      function ()
+			player.modify_stat(A_STR, -4)
+			player.modify_stat(A_DEX, 1 + (player.mimic_level / 6))
+			player.modify_stat(A_INT, 1 + (player.mimic_level / 4))
+			player.modify_stat(A_WIS, 1 + (player.mimic_level / 4))
+			player.modify_stat(A_CON, -5)
+			player.modify_stat(A_CHR, -7)
+
+			player.pspeed = player.pspeed + 5
+
+			player.resist_pois = TRUE
+			player.resist_fear = TRUE
+			player.resist_dark = TRUE
+
+			if player.mimic_level >= 40 then player.climb = TRUE end
+
+	end,
+	["power"] =     function()
+			if player.mimic_level >= 25 then
+				player.add_power(POWER_WEB)
+			end
+	end,
+}
+
 -- For Geomancy
 add_mimic_shape
 {

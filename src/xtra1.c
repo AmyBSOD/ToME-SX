@@ -1756,6 +1756,14 @@ void calc_sanity(void)
 	if (!p_ptr->hard_mode && !p_ptr->nastytrap124) msane += 50;
 	msane += (get_skill(SKILL_CLEARMIND) * 2);
 
+	/* Vaire piety increases max sanity --Amy */
+	GOD(GOD_VAIRE)
+	{
+		if (p_ptr->grace > 999) {
+			msane += (p_ptr->grace / 1000);
+		}
+	}
+
 	/* contamination reduces your max sanity */
 	if (p_ptr->contamination >= 10000) { /* 50% */
 		msane /= 2;
@@ -2844,6 +2852,18 @@ void calc_gods()
 			if (p_ptr->grace > 10000) p_ptr->resist_continuum = TRUE;
 			if (p_ptr->grace > 20000) p_ptr->immune_neth = TRUE;
 
+		}
+	}
+
+	GOD(GOD_VAIRE)
+	{
+		PRAY_GOD(GOD_VAIRE)
+		{
+			if (p_ptr->grace > 20000) {
+				p_ptr->resist_time = TRUE;
+				p_ptr->resist_continuum = TRUE;
+			}
+			if (p_ptr->grace > 100000) p_ptr->resist_inertia = TRUE;
 		}
 	}
 

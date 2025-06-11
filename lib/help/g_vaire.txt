@@ -1,0 +1,53 @@
+|||||oy
+~~~~~01|Vaire
+~~~~~02|Gods|Vaire
+#####R === Vaire ===
+
+Vaire is the goddess of history, also known as "The Weaver".
+
+#####GThe benefits of Worshipping Vaire
+ 1. Vaire likes it if you kill undead or nonliving beings.
+ 2. Vaire loves it if you kill nether-based monsters.
+ 3. As your piety increases, your maximum sanity will go up.
+ 4. If you are pious enough, she will grant time resistance while praying.
+ 5. If you are extremely pious, she will grant inertia resistance while
+    praying.
+
+#####GThe disadvantages of Worshipping Vaire
+1. Your piety decreases quickly over time.
+2. She will completely abandon you if you wear The One Ring.
+~~~~~03|Vaire|Prayers
+#####GVaire's Magic
+Worshipping Vaire gives the adventurer access to a set of special
+spells that come directly from the hands of Vaire. These spells use your piety
+to cast rather than your spellpoints, and the level of spells that Vaire will 
+permit you to use is determined by your Prayer skill - how skillful you are
+in asking for her help without offending her!
+
+There is a special book called the "Tome of History" which 
+contains instructions for the procedure for each of the prayers Vaire will
+grant. There are five prayers all told, which are:
+1. [[[[[BTick Tock] (Level 1)
+   Shoots a bolt of time from your fingertips.
+   Sometimes it can blast through its first target.
+2. [[[[[BSpider Form] (Level 15)
+   Temporarily turns you into a spider.
+3. [[[[[BTimeline] (Level 20)
+   Creates a time wall that affects monsters who walk into it.
+4. [[[[[BDecontaminate] (Level 30)
+   Reduces your contamination.
+5. [[[[[BTime Tempest] (Level 40)
+   Starts a time-based thunderstorm.
+   Each turn it hits a random monster in sight with time damage.
+   
+Each of these spells can be increased in level both by improving your Prayer
+skill, and by improving your Spell-power skill.
+
+In addition to her specific magic, Vaire will also assist with your ability to
+use some magic from the "standard" schools, in relation to how skilled you 
+are at Prayer. These schools are as follows:
+    *****m_tempo.txt*0[Temporal School] at 2/3 the Prayer skill level.
+    *****m_celest.txt*0[Celestial School] at 1/3 the Prayer skill level.
+    *****m_demono.txt*0[Demonology School] at 1/3 the Prayer skill level.
+
+The spells from these schools are all cast using your normal spellpoints.

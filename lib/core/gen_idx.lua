@@ -18,6 +18,7 @@ files =
 	"g_ingebo.txt",
 	"g_nienna.txt",
 	"g_vana.txt",
+	"g_vaire.txt",
 	"g_este.txt",
 	"skills.txt",
 	"c_bard.txt",

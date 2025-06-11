@@ -236,6 +236,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
     *****g_nienna.txt*02[Nienna]
     *****g_este.txt*02[Este]
     *****g_vana.txt*02[Vana]
+    *****g_vaire.txt*02[Vaire]
   *****birth.txt*16[Gold]
 ~~~~~72
 *****/Hindex.txt*72[H]
@@ -588,6 +589,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
     *****c_unbel.txt*03[Antimagic]
 ~~~~~86
 *****/Vindex.txt*86[V]
+  *****g_vaire.txt*02[Vaire]
   *****rm_vamp.txt*01[Vampire]
   *****g_vana.txt*02[Vana]
   *****g_varda.txt*02[Varda]

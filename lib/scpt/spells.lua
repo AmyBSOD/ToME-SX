@@ -349,6 +349,13 @@ SCHOOL_TEMPORAL = add_school
 			["mul"] = 1,
 			["div"] = 10,
 		},
+		-- Vaire provides the Temporal school at 2/3 the prayer skill
+		[GOD_VAIRE] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 2,
+			["div"] = 3,
+		},
 	},
 }
 SCHOOL_NATURE = add_school
@@ -485,6 +492,16 @@ SCHOOL_DEMON = add_school
 	["name"] = "Demon",
 	["skill"] = SKILL_DAEMON,
 	["no_random"] = TRUE,
+	["gods"] =
+	{
+		-- Vaire provides the Demonology school at 1/3 the prayer skill
+		[GOD_VAIRE] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
+		},
+	},
 }
 
 -- The God specific schools, all tied to the prayer skill
@@ -564,6 +581,13 @@ SCHOOL_VANA = add_school
 	["skill"] = SKILL_PRAY,
 	["spell_power"] = TRUE,
 	["god"] = GOD_VANA,
+}
+SCHOOL_VAIRE = add_school
+{
+	["name"] = "Vaire",
+	["skill"] = SKILL_PRAY,
+	["spell_power"] = TRUE,
+	["god"] = GOD_VAIRE,
 }
 
 -- New schools
@@ -658,6 +682,13 @@ SCHOOL_CELESTIAL = add_school
 			["mul"] = 1,
 			["div"] = 10,
 		},
+		-- Vaire provides the Celestial school at 1/3 the prayer skill
+		[GOD_VAIRE] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
+		},
 	},
 }
 
@@ -738,6 +769,7 @@ tome_dofile("s_ingebo.lua")
 tome_dofile("s_nienna.lua")
 tome_dofile("s_este.lua")
 tome_dofile("s_vana.lua")
+tome_dofile("s_vaire.lua")
 
 -- List of spellbooks
 
@@ -864,6 +896,11 @@ school_book[29] = {
 -- Create the book of vana
 school_book[30] = {
 	VANA_ICY_WIND, VANA_FREEZING_CLOUD, VANA_RESTOR, VANA_PURIFY,
+}
+
+-- Create the book of vaire
+school_book[40] = {
+	VAIRE_TICK_TOCK, VAIRE_SPIDER_FORM, VAIRE_TIMELINE, VAIRE_DECONTAMINATE, VAIRE_TIME_TEMPEST,
 }
 
 -- Dual school books by Amy

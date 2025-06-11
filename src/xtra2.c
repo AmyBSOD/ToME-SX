@@ -4513,6 +4513,61 @@ bool set_tim_thunder(int v, int p1, int p2)
 }
 
 /*
+ * Set "p_ptr->tim_ttempest", notice observable changes
+ */
+bool set_tim_ttempest(int v, int p1, int p2)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tim_ttempest)
+		{
+			msg_print("A time tempest is brewing!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tim_ttempest)
+		{
+			msg_print("The time tempest has ended.");
+			notice = TRUE;
+			p1 = p2 = 0;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tim_ttempest = v;
+	p_ptr->tim_ttempest_p1 = p1;
+	p_ptr->tim_ttempest_p2 = p2;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
+
+	/* Recalculate bonuses */
+	p_ptr->update |= (PU_BONUS);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
  * Set "p_ptr->tim_invis", notice observable changes
  */
 bool set_tim_invis(int v)
@@ -7148,6 +7203,53 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 
 			if (!inc) inc = 1;
 			inc_piety(GOD_ERU, inc);
+		}
+
+		/* Vaire likes it if undead/nonliving are killed */
+		if ( (r_ptr->flags3 & RF3_NONLIVING) || (r_ptr->flags3 & RF3_UNDEAD))
+		{
+			int inc = m_ptr->level * 3 / 4;
+			PRAY_GOD(GOD_VAIRE) inc *= 2;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_VAIRE, inc);
+		}
+
+		/* and even more if nether-based things are killed */
+		if (r_ptr->flags3 & RF3_RES_NETH)
+		{
+			int inc = m_ptr->level * 3 / 4;
+			if (!inc) inc = 1;
+
+			inc_piety(GOD_VAIRE, inc);
+			PRAY_GOD(GOD_VAIRE) inc_piety(GOD_VAIRE, inc);
+		}
+
+		if (r_ptr->flags4 & RF4_BR_NETH)
+		{
+			int inc = m_ptr->level * 2;
+			if (!inc) inc = 1;
+
+			inc_piety(GOD_VAIRE, inc);
+			PRAY_GOD(GOD_VAIRE) inc_piety(GOD_VAIRE, inc);
+		}
+
+		if (r_ptr->flags5 & RF5_BA_NETH)
+		{
+			int inc = m_ptr->level * 3;
+			if (!inc) inc = 1;
+
+			inc_piety(GOD_VAIRE, inc);
+			PRAY_GOD(GOD_VAIRE) inc_piety(GOD_VAIRE, inc);
+		}
+
+		if (r_ptr->flags5 & RF5_BO_NETH)
+		{
+			int inc = m_ptr->level * 3 / 2;
+			if (!inc) inc = 1;
+
+			inc_piety(GOD_VAIRE, inc);
+			PRAY_GOD(GOD_VAIRE) inc_piety(GOD_VAIRE, inc);
 		}
 
 		if (r_ptr->flags2 & RF2_ELDRITCH_HORROR)

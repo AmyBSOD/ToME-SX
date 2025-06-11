@@ -40,11 +40,11 @@ OROME_BULLSEYE = add_spell
 	["random"] = 	SKILL_SPIRITUALITY,
 	["spell"] = function()
 		local obvious
-		obvious = is_obvious(set_tim_bullseye(20 + get_level(OROME_BULLSEYE, 60)), obvious)
+		obvious = is_obvious(set_tim_bullseye(20 + get_level(OROME_BULLSEYE, 120)), obvious)
 		return TRUE
 	end,
 	["info"] = function()
-		return "dur "..(20 + get_level(OROME_BULLSEYE, 60))
+		return "dur "..(20 + get_level(OROME_BULLSEYE, 120))
 	end,
 	["desc"] =
 	{
@@ -66,11 +66,11 @@ OROME_SNIPER = add_spell
 	["random"] = 	SKILL_SPIRITUALITY,
 	["spell"] = function()
 		local obvious
-		obvious = is_obvious(set_tim_sniper(15 + get_level(OROME_SNIPER, 75)), obvious)
+		obvious = is_obvious(set_tim_sniper(15 + get_level(OROME_SNIPER, 140)), obvious)
 		return TRUE
 	end,
 	["info"] = function()
-		return "dur "..(15 + get_level(OROME_SNIPER, 75))
+		return "dur "..(15 + get_level(OROME_SNIPER, 140))
 	end,
 	["desc"] =
 	{
@@ -92,11 +92,11 @@ OROME_RAPIDFIRE = add_spell
 	["random"] = 	SKILL_SPIRITUALITY,
 	["spell"] = function()
 		local obvious
-		obvious = is_obvious(set_tim_rapidfire(40 + get_level(OROME_RAPIDFIRE, 200)), obvious)
+		obvious = is_obvious(set_tim_rapidfire(40 + get_level(OROME_RAPIDFIRE, 350)), obvious)
 		return TRUE
 	end,
 	["info"] = function()
-		return "dur "..(40 + get_level(OROME_RAPIDFIRE, 200))
+		return "dur "..(40 + get_level(OROME_RAPIDFIRE, 350))
 	end,
 	["desc"] =
 	{

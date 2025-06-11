@@ -127,6 +127,8 @@ add_quest
 						god_quest.relic_num = 23
 					elseif player.pgod == GOD_VANA then
 						god_quest.relic_num = 24
+					elseif player.pgod == GOD_VAIRE then
+						god_quest.relic_num = 25
 					end
 
 					-- This var will need resetting
@@ -848,6 +850,49 @@ function set_god_dungeon_attributes()
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags4 = bor(RF4_BR_TIME)
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags6 = bor(RF6_TRAPS)
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags7 = bor(RF7_RES_TIME)
+
+		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
+		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
+
+	elseif player.pgod == GOD_VAIRE then
+
+		-- pleasant
+		dungeon(god_quest.DUNGEON_GOD).min_m_alloc_level = 15
+		dungeon(god_quest.DUNGEON_GOD).min_m_alloc_chance = 80
+
+		-- L: similar to cirith ungol
+		dungeon(god_quest.DUNGEON_GOD).floor1 = 88
+		dungeon(god_quest.DUNGEON_GOD).floor2 = 94
+		dungeon(god_quest.DUNGEON_GOD).floor3 = 16
+		dungeon(god_quest.DUNGEON_GOD).floor_percent1[1] = 60
+		dungeon(god_quest.DUNGEON_GOD).floor_percent2[1] = 30
+		dungeon(god_quest.DUNGEON_GOD).floor_percent3[1] = 10
+
+		-- A: webs
+		dungeon(god_quest.DUNGEON_GOD).fill_type1 = 16
+		dungeon(god_quest.DUNGEON_GOD).fill_percent1[1] = 100
+		dungeon(god_quest.DUNGEON_GOD).outer_wall = 16
+		dungeon(god_quest.DUNGEON_GOD).inner_wall = 16
+		dungeon(god_quest.DUNGEON_GOD).fill_method = 1
+
+		-- O: diverse
+		dungeon(god_quest.DUNGEON_GOD).objs.treasure = 30
+		dungeon(god_quest.DUNGEON_GOD).objs.combat = 30
+		dungeon(god_quest.DUNGEON_GOD).objs.magic = 30
+		dungeon(god_quest.DUNGEON_GOD).objs.tools = 10
+
+		-- F: quartz and magma
+		dungeon(god_quest.DUNGEON_GOD).flags1 = bor(DF1_WATER_RIVER, DF1_ADJUST_LEVEL_1, DF1_NO_RECALL, DF1_NO_DOORS, DF1_CIRCULAR_ROOMS, DF1_NO_DESTROY, DF1_SAND_VEIN)
+		dungeon(god_quest.DUNGEON_GOD).flags2 = bor(DF2_NO_SHAFT, DF2_ADJUST_LEVEL_PLAYER)
+
+		-- R: rather diverse
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mode = 3
+		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 95
+
+		-- M: see above
+		dungeon(god_quest.DUNGEON_GOD).rules[1].r_char = "S"
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags6 = bor(RF6_TRAPS)
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags7 = bor(RF7_SPIDER)
 
 		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
 		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5

@@ -627,6 +627,9 @@ static bool do_extra(int flag)
 	do_s16b(&p_ptr->tim_thunder, flag);
 	do_s16b(&p_ptr->tim_thunder_p1, flag);
 	do_s16b(&p_ptr->tim_thunder_p2, flag);
+	do_s16b(&p_ptr->tim_ttempest, flag);
+	do_s16b(&p_ptr->tim_ttempest_p1, flag);
+	do_s16b(&p_ptr->tim_ttempest_p2, flag);
 	do_s16b(&p_ptr->tim_project, flag);
 	do_s16b(&p_ptr->tim_project_dam, flag);
 	do_s16b(&p_ptr->tim_project_gf, flag);

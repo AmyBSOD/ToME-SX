@@ -1267,10 +1267,10 @@ G:0:w
 F:FLOOR | REMEMBER | NOTICE | CAN_RUN
 D:0:You feel reminded of your childhood.
 
-N:250:Unfinished Altar
-G:0:g
+N:250:Altar of Webs
+G:0:y
 F:FLOOR | REMEMBER | NOTICE | CAN_RUN
-D:0:An altar for a deity who hasn't been implemented yet.
+D:0:You feel like a web-spinning spider.
 
 N:251:Unfinished Altar
 G:0:g

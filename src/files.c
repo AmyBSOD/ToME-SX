@@ -2049,6 +2049,15 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		}
 	}
 
+	GOD(GOD_VAIRE)
+	{
+		PRAY_GOD(GOD_VAIRE)
+		{
+			if (p_ptr->grace > 20000) (*f5) |= TR5_RES_TIME;
+			if (p_ptr->grace > 100000) (*f5) |= TR5_RES_INERTIA;
+		}
+	}
+
 	GOD(GOD_AMYBSOD)
 	{
 		if (p_ptr->grace > 10000) (*f1) |= (TR1_INT | TR1_WIS | TR1_CHR | TR1_STR | TR1_CON | TR1_DEX);
@@ -2352,6 +2361,13 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 	}
 
 	if (p_ptr->mimic_form == resolve_mimic_name("Spider")) {
+		(*f2) |= TR2_RES_POIS;
+		(*f2) |= TR2_RES_FEAR;
+		(*f2) |= TR2_RES_DARK;
+		if (p_ptr->mimic_level >= 40) (*f4) |= TR4_CLIMB;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Arachnid")) {
 		(*f2) |= TR2_RES_POIS;
 		(*f2) |= TR2_RES_FEAR;
 		(*f2) |= TR2_RES_DARK;
