@@ -92841,6 +92841,24 @@ S:TPORT
 D:A fictional rogue computer operator who takes out his anger on lusers like 
 D:you. 
 
+N:5343:Nerve dragon
+G:D:G
+I:110:8d100:20:80:80
+W:40:1:150000:2400
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:4d9
+B:CLAW:HURT:4d9
+B:BITE:PARALYZE:7d9
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_CORPSE
+F:DROP_22 | DROP_42 | CAN_FLY | 
+F:SMART | BASH_DOOR | POWERFUL | MOVE_BODY | WILD_MOUNTAIN | 
+F:EVIL | DRAGON | NO_CONF | NO_SLEEP | BASEANGBAND | HAS_LITE
+S:1_IN_6 | 
+S:BLIND | CONF | SCARE | 
+S:BR_NERV
+D:This huge dragon has paralyzing bite and breath weapons.
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness (low = more alert)
