@@ -3263,7 +3263,7 @@ bool place_monster_aux(int y, int x, int r_idx, bool slp, bool grp, int status)
 
 
 	/* Friends for certain monsters */
-	if ((r_ptr->flags1 & (RF1_FRIENDS)) || (p_ptr->nastytrap166 && (randint(20) == 1) ) )
+	if ((r_ptr->flags1 & (RF1_FRIENDS)) || ((r_ptr->flags1 & (RF1_FRIEND)) && randint(5) == 1) || (p_ptr->nastytrap166 && (randint(20) == 1) ) )
 	{
 		/* Attempt to place a group */
 		(void)place_monster_group(y, x, r_idx, slp, status);

@@ -92859,6 +92859,24 @@ S:BLIND | CONF | SCARE |
 S:BR_NERV
 D:This huge dragon has paralyzing bite and breath weapons.
 
+N:5344:Weeping Angel
+G:A:W
+I:114:9d17:30:35:100
+W:12:3:2600:240
+E:1:1:1:2:1:1
+O:0:40:60:0
+B:GAZE:CONFUSE
+B:HIT:ETHER:2d4
+B:CLAW:EXP_40:2d4
+B:TOUCH:COLD:2d3
+F:NO_FEAR |
+F:ONLY_ITEM | DROP_22 | EVIL | IM_ELEC | RES_CHAO |
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | NO_SLEEP |
+F:IM_POIS | NO_CONF | BASEANGBAND | RES_LITE | IM_COLD | FRIENDS | 
+F:RES_WALL | RES_GRAV | RES_DISE | RES_ETHE | IM_ACID | 
+D:The anti-fun squad. These bastard things spawn in groups and 
+D:constantly hit you with confusion and contamination.
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness (low = more alert)
