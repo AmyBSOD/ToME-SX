@@ -121,6 +121,11 @@ void inc_piety(int god, s32b amt)
 		if(amt < 0 && p_ptr->grace >= old)
 			set_grace(-300000);
 	}
+
+	/* worshipping Vaire? then make sure your sanity is displayed correctly as it scales with piety --Amy */
+	GOD(GOD_VAIRE) {
+		calc_sanity();
+	}
 }
 
 /*
