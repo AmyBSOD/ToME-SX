@@ -2930,7 +2930,7 @@ R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+1000:+000:Disarming
 R:k:+500:+000:Magic-Device
 R:k:+2500:+000:Spirituality
-R:k:-8000:+000:Stealth
+R:k:-8000:-600:Stealth
 R:k:+100:+000:Sneakiness
 R:k:+100:+200:Weaponmastery
 R:k:+500:+000:Archery
@@ -2964,7 +2964,7 @@ R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+600:+000:Disarming
 R:k:+000:+000:Magic-Device
 R:k:+5000:+000:Spirituality
-R:k:-16000:+000:Stealth
+R:k:-16000:-300:Stealth
 R:k:+3000:+000:Sneakiness
 R:k:+1500:+000:Weaponmastery
 R:k:+500:+000:Archery
@@ -3128,6 +3128,10 @@ R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+0:+200:Bow-mastery
 R:k:+0:+300:Antimagic
 R:k:+0:+100:Impale
+R:k:-20000:-800:Stealth
+G:k:-2000:-300:Magic-Device
+G:k:-5000:-300:Prayer
+C:k:-3000:-400:Sneakiness
 
 R:N:24:Sea-Elf
 R:D:Sea-Elves live in and around the coasts.
