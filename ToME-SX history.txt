@@ -1,6 +1,44 @@
 Version history for ToME-SX by AmyBSOD, given in reverse chronological order *bundlebundlebundle* <3
 
+June 2025
+- Nerfed the rohanknight and centaur races.
+- Monsters with the "friend" flag are now capable of spawning in groups.
+- Added a new deity, Vaire.
+- Added a new multi-dungeon branch, ported from ZAPM.
+- Monsters can now also have resistances to ether, nerve or mind.
+- Items can now also have bonuses to loot quality, martial arts prowess or perception.
+- Players who have the ability to fly no longer automatically get all the benefits of levitation anymore. Levitation now has to be obtained separately.
+- Nerve resistance now gives a saving throw against paralysis effects.
+- Added resistances to ether, nerve and mind as item properties.
+
+- Bumped the version number up to 1.28.
+- Shoplifting now penalizes the player by reducing the shop's rank when caught. Shops with a negative rank stock less items on average and only investing in them can bring the rank back to positive values.
+- Fixed the vanilla bug where it was impossible to pay back your loan for some reason.
+- The fate nastytrap now works even if the player has fates turned off, by making the trap ignore that option and giving them a fate anyway.
+- Added new types of melee attacks that monsters can use.
+
+May 2025
+- Using probability travel to instantly move to another dungeon level now enforces a timer before the player can do so again.
+- Monsters who resist ice damage now also resist the stun component of that element's damage, and all other monsters get a saving throw.
+- Summoning totems now have a bigger chance of being used up when the player summons from them.
+- Added a new deity, Vana.
+- Added a couple of new elemental damage types: ether, nerve and mind.
+- Pet commands no longer work on coaligned monsters that aren't pets.
+- Fixed oddities with the randomized appearances of potions which were making it possible sometimes to predict what certain unidentified potions are.
+- Added a new birth option: "masochist mode", which makes the game harder by reverting some ToME-SX specific changes that were making certain players complain that the game had become too easy. The players in question are cordially invited to play with this mode active to see whether it's still too easy.
+- Throwing axes now actually perform better than other melee weapons when thrown, including damage boosts and a greatly reduced breakage chance.
+- Corpse-preservation or demonology skills can now be unlocked only once per game (except when using Fumblefingers, who can still unlock them even if you later become restricted in their use again).
+- Made some important consumables like healing potions or recall scrolls more common.
+- Fixed bugs in breath damage calculations that had mistakenly gotten introduced earlier.
+- The game should no longer freeze when the player gives an invalid target location for a targetted teleport (that was apparently a vanilla bug).
+- Shops will now use a much better algorithm for creating extra items if the player has invested in them, which makes investment have a more noticeable effect.
+- Bumped the version number up to 1.27.
+
 April 2025
+- Ammo creation no longer accepts boulders.
+- The chaos warrior role now gets random effects from the chaos patrons upon leveling up.
+- Eldritch horror monsters can now actively blast the player character by casting "eldritch blast".
+- Completing a princess quest on a double-size dungeon no longer prevents the player from obtaining the reward item.
 - Fixed the vanilla bug where gravity-elemental attacks sometimes did no damage to the player.
 - Rebalanced sanity damaging attacks and spells to make them more manageable.
 - Several priest roles can now pick a wider variety of gods.
