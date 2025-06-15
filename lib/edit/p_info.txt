@@ -3129,9 +3129,9 @@ R:k:+0:+200:Bow-mastery
 R:k:+0:+300:Antimagic
 R:k:+0:+100:Impale
 R:k:-20000:-800:Stealth
-G:k:-2000:-300:Magic-Device
-G:k:-5000:-300:Prayer
-C:k:-3000:-400:Sneakiness
+R:k:-2000:-300:Magic-Device
+R:k:-5000:-300:Prayer
+R:k:-3000:-400:Sneakiness
 
 R:N:24:Sea-Elf
 R:D:Sea-Elves live in and around the coasts.
