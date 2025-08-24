@@ -2776,6 +2776,16 @@ u32b get_school_spell(cptr do_what, cptr check_fct, s16b force_book)
 		o_ptr->tval = TV_BOOK;
 		o_ptr->sval = force_book;
 		o_ptr->pval = 0;
+		o_ptr->art_flags1 = 0;
+		o_ptr->art_flags2 = 0;
+		o_ptr->art_flags3 = 0;
+		o_ptr->art_flags4 = 0;
+		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
 	}
 
 	if (repeat_pull(&tmp))
