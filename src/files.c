@@ -1685,43 +1685,71 @@ static cptr likert(int x, int y)
 	case 21:
 	case 22:
 	case 23:
-	case 24:
-	case 25:
-	case 26:
-	case 27:
-	case 28:
 		{
 			likert_color = TERM_GREEN;
 			return ("Excellent");
 		}
-	case 29:
-	case 30:
-	case 31:
-	case 32:
-	case 33:
-	case 34:
-	case 35:
-	case 36:
+	case 24:
+	case 25:
+	case 26:
 		{
 			likert_color = TERM_GREEN;
 			return ("Superb");
 		}
+	case 27:
+	case 28:
+	case 29:
+		{
+			likert_color = TERM_GREEN;
+			return ("Outstanding");
+		}
+	case 30:
+	case 31:
+	case 32:
+		{
+			likert_color = TERM_GREEN;
+			return ("Renowned");
+		}
+	case 33:
+	case 34:
+	case 35:
+		{
+			likert_color = TERM_GREEN;
+			return ("Valiant");
+		}
+	case 36:
 	case 37:
-	case 38:
-	case 39:
-	case 40:
-	case 41:
-	case 42:
-	case 43:
-	case 44:
 		{
 			likert_color = TERM_L_GREEN;
 			return ("Heroic");
 		}
-	default:
+	case 38:
+	case 39:
 		{
 			likert_color = TERM_L_GREEN;
 			return ("Legendary");
+		}
+	case 40:
+	case 41:
+		{
+			likert_color = TERM_L_GREEN;
+			return ("Splendid");
+		}
+	case 42:
+		{
+			likert_color = TERM_L_GREEN;
+			return ("Titanic");
+		}
+	case 43:
+	case 44:
+		{
+			likert_color = TERM_L_GREEN;
+			return ("Superhuman");
+		}
+	default:
+		{
+			likert_color = TERM_L_GREEN;
+			return ("Herculean");
 		}
 	}
 }
