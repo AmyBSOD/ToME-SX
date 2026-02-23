@@ -82269,7 +82269,7 @@ I:115:2d9:10:11:10
 W:6:3:400:14
 E:0:1:0:2:1:0
 O:0:0:0:0
-B:BITE:HURT:1d6
+B:BITE:HURT:2d4
 F:WILD_TOO | WILD_WOOD | WILD_GRASS | DROP_SKELETON | DROP_CORPSE | 
 F:ANIMAL | MORTAL | BASEANGBAND
 D:A large predator. 
@@ -83502,7 +83502,7 @@ O:20:50:10:5
 B:CLAW:EAT_ITEM
 B:CLAW:EAT_ITEM
 F:FEMALE | DROP_12 | SMART | DROP_CORPSE | CAN_SPEAK | 
-F:MORTAL | BASEANGBAND | TAKE_ITEM | DROP_GREAT | 
+F:MORTAL | BASEANGBAND | TAKE_ITEM | DROP_GREAT | UNIQUE |
 D:This bitch is the queen of nymphs, and her ability to 
 D:steal your items is unmatched! Don't let her near you! 
 
