@@ -2920,10 +2920,19 @@ void calc_gods()
 	{
 		s32b add = p_ptr->grace;
 
-		/* provides speed every 5000 grace */
-		if (add > 35000) add = 35000;
-		add /= 5000;
-		p_ptr->pspeed += add;
+		/* different calculations by Amy: harder to reach high positive amounts of speed now */
+		if (add < 0) {
+			add /= 5000;
+			p_ptr->pspeed += add;
+		} else {
+			if (add >= 5000) p_ptr->pspeed++;
+			if (add >= 25000) p_ptr->pspeed++;
+			if (add >= 45000) p_ptr->pspeed++;
+			if (add >= 65000) p_ptr->pspeed++;
+			if (add >= 85000) p_ptr->pspeed++;
+			if (add >= 105000) p_ptr->pspeed++;
+			if (add >= 125000) p_ptr->pspeed++;
+		}
 
 		/* Provides fly & FA */
 		if (p_ptr->grace >= 7000) p_ptr->free_act = TRUE;
