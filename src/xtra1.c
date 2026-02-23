@@ -3503,8 +3503,8 @@ void calc_bonuses(bool silent)
 	{
 		/* Unencumbered Monks become faster every 10 levels */
 		if (!(monk_heavy_armor()))
-			p_ptr->pspeed += get_skill_scale((SKILL_HAND), 5);
-			p_ptr->pspeed += (p_ptr->martial_bonus / 10);
+			p_ptr->pspeed += get_skill_scale((SKILL_HAND), 2);
+			p_ptr->pspeed += (p_ptr->martial_bonus / 25);
 
 		/* Free action if unencumbered at level 25 */
 		if (( (get_skill(SKILL_HAND) + p_ptr->martial_bonus) > 24) && !(monk_heavy_armor()))
@@ -4565,13 +4565,13 @@ void calc_bonuses(bool silent)
 
 		p_ptr->num_blow = 0;
 
-		if (plev > 9) p_ptr->num_blow++;
-		if (plev > 19) p_ptr->num_blow++;
-		if (plev > 29) p_ptr->num_blow++;
-		if (plev > 34) p_ptr->num_blow++;
-		if (plev > 39) p_ptr->num_blow++;
-		if (plev > 44) p_ptr->num_blow++;
+		if (plev > 12) p_ptr->num_blow++;
+		if (plev > 25) p_ptr->num_blow++;
+		if (plev > 37) p_ptr->num_blow++;
 		if (plev > 49) p_ptr->num_blow++;
+		if (plev > 62) p_ptr->num_blow++;
+		if (plev > 74) p_ptr->num_blow++;
+		if (plev > 86) p_ptr->num_blow++;
 
 		if (monk_heavy_armor()) p_ptr->num_blow /= 2;
 
