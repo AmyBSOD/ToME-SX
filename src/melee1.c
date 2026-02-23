@@ -259,7 +259,7 @@ bool carried_make_attack_normal(int r_idx)
 		int d_side = r_ptr->blow[ap_cnt].d_side;
 
 		/* secret attack nastytrap by Amy */
-		if (p_ptr->nastytrap167 && magik(2) && (effect == RBE_HURT)) {
+		if (p_ptr->nastytrap167 && magik(1) && (effect == RBE_HURT)) {
 			switch (randint(40)) {
 				default:
 				case 1:
@@ -1799,7 +1799,7 @@ bool make_attack_normal(int m_idx, byte divis)
 		int d_side = m_ptr->blow[ap_cnt].d_side;
 
 		/* secret attack nastytrap by Amy */
-		if (p_ptr->nastytrap167 && magik(2) && (effect == RBE_HURT)) {
+		if (p_ptr->nastytrap167 && magik(1) && (effect == RBE_HURT)) {
 			switch (randint(40)) {
 				default:
 				case 1:
@@ -2520,12 +2520,11 @@ bool make_attack_normal(int m_idx, byte divis)
 								/* Uncharge, changed by Amy to be less BS */
 
 								drainedamount = randint(o_ptr->timeout) + 1;
+								if (p_ptr->nastytrap71) drainedamount = o_ptr->timeout;
 								if (drainedamount > o_ptr->timeout) drainedamount = o_ptr->timeout;
 								drainmitigate = get_skill_scale(SKILL_FRESHMINT, 20);
 								if (drainmitigate > 0) drainedamount -= randint(drainmitigate);
 								if (drainedamount < 1) drainedamount = 1;
-
-								if (p_ptr->nastytrap71) drainedamount = o_ptr->timeout;
 
 								o_ptr->timeout -= drainedamount;
 								if (o_ptr->timeout < 0) o_ptr->timeout = 0;
@@ -2548,12 +2547,11 @@ bool make_attack_normal(int m_idx, byte divis)
 								/* Uncharge, changed by Amy to be less BS */
 
 								drainedamount = randint(o_ptr->pval) + 1;
+								if (p_ptr->nastytrap71) drainedamount = o_ptr->pval;
 								if (drainedamount > o_ptr->pval) drainedamount = o_ptr->pval;
 								drainmitigate = get_skill_scale(SKILL_FRESHMINT, 20);
 								if (drainmitigate > 0) drainedamount -= randint(drainmitigate);
 								if (drainedamount < 1) drainedamount = 1;
-
-								if (p_ptr->nastytrap71) drainedamount = o_ptr->pval;
 
 								o_ptr->pval -= drainedamount;
 								if (o_ptr->pval < 0) o_ptr->pval = 0;
