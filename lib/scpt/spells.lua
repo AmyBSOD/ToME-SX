@@ -484,7 +484,7 @@ SCHOOL_UDUN = add_school
 	["name"] = 		"Udun",
 	["skill"] = 		SKILL_UDUN,
 	["bonus_level"] = 	function()
-					return ((player.lev * 2) / 3)
+					return (player.lev / 4)
 				end,
 }
 SCHOOL_DEMON = add_school

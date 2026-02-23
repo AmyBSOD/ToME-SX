@@ -181,7 +181,7 @@ STERILIZE = add_spell
 			},
 	},
 	["spell"] = 	function()
-			set_no_breeders((30) + 20 + get_level(STERILIZE, 70))
+			set_no_breeders(randint(30) + 20 + get_level(STERILIZE, 70))
 			return TRUE
 	end,
 	["info"] = 	function()
