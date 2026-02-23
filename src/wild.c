@@ -1028,7 +1028,7 @@ static void town_gen_hack(int t_idx, int qy, int qx)
 		{
 			/* Create empty floor */
 			cave_set_feat(y, x, (floor) ? floor : floor_type[rand_int(100)]);
-			cave[y][x].info |= (CAVE_ROOM | CAVE_FREE);
+			cave[y][x].info |= (CAVE_ROOM/* | CAVE_FREE*/);
 		}
 	}
 
@@ -1134,7 +1134,7 @@ static void town_gen_circle(int t_idx, int qy, int qx)
 		{
 			/* Create empty floor */
 			cave_set_feat(y, x, (floor) ? floor : floor_type[rand_int(100)]);
-			cave[y][x].info |= CAVE_ROOM | CAVE_FREE;
+			cave[y][x].info |= CAVE_ROOM/* | CAVE_FREE*/;
 		}
 	}
 
@@ -1151,7 +1151,7 @@ static void town_gen_circle(int t_idx, int qy, int qx)
 			if (d < rad - 1)
 			{
 				cave_set_feat(y, x, (floor) ? floor : floor_type[rand_int(100)]);
-				cave[y][x].info |= CAVE_ROOM | CAVE_FREE;
+				cave[y][x].info |= CAVE_ROOM/* | CAVE_FREE*/;
 			}
 		}
 
@@ -1166,7 +1166,7 @@ static void town_gen_circle(int t_idx, int qy, int qx)
 			if (d < rad - 1)
 			{
 				cave_set_feat(y, x, (floor) ? floor : floor_type[rand_int(100)]);
-				cave[y][x].info |= CAVE_ROOM | CAVE_FREE;
+				cave[y][x].info |= CAVE_ROOM/* | CAVE_FREE*/;
 			}
 		}
 
