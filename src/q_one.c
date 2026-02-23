@@ -375,10 +375,6 @@ bool quest_one_death_hook(char *fmt)
 	{
 		ok = TRUE;
 	}
-	else if (magik(10) && (r_idx == test_monster_name("Marike")))
-	{
-		ok = TRUE;
-	}
 	else if (magik(10) && (r_idx == test_monster_name("Dr. Moreau")))
 	{
 		ok = TRUE;
