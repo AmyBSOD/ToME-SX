@@ -858,6 +858,7 @@ extern void do_cmd_cut_corpse(void);
 extern void do_cmd_cure_meat(void);
 extern void do_cmd_drink_fountain(void);
 extern void do_cmd_fill_bottle(void);
+extern void randomnukacolaname(void);
 
 /* cmd7.c */
 extern void do_cmd_create_boulder(void);
