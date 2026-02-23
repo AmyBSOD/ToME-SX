@@ -3612,6 +3612,7 @@ bool curse_armor(void)
 		o_ptr->art_flags8 = 0;
 		o_ptr->art_flags9 = 0;
 		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
@@ -3684,6 +3685,7 @@ bool curse_light(void)
 		o_ptr->art_flags8 = 0;
 		o_ptr->art_flags9 = 0;
 		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
@@ -3755,6 +3757,7 @@ bool curse_tool(void)
 		o_ptr->art_flags8 = 0;
 		o_ptr->art_flags9 = 0;
 		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
@@ -3849,6 +3852,7 @@ bool curse_garment(void)
 		o_ptr->art_flags8 = 0;
 		o_ptr->art_flags9 = 0;
 		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
@@ -3943,6 +3947,7 @@ bool curse_jewelry(void)
 		o_ptr->art_flags8 = 0;
 		o_ptr->art_flags9 = 0;
 		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
@@ -4016,6 +4021,7 @@ bool curse_weapon(void)
 		o_ptr->art_flags8 = 0;
 		o_ptr->art_flags9 = 0;
 		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
@@ -4089,6 +4095,7 @@ bool curse_ammo(void)
 		o_ptr->art_flags8 = 0;
 		o_ptr->art_flags9 = 0;
 		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
@@ -4161,6 +4168,7 @@ bool curse_shooter(void)
 		o_ptr->art_flags8 = 0;
 		o_ptr->art_flags9 = 0;
 		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
 
 		/* Curse it */
 		o_ptr->ident |= (IDENT_CURSED);
