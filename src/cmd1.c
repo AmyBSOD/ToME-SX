@@ -3282,8 +3282,10 @@ bool pattern_tile(int y, int x)
 }
 
 
-static bool pattern_seq(int c_y, int c_x, int n_y, int n_x)
+static int pattern_seq(int c_y, int c_x, int n_y, int n_x)
 {
+	bool patterncheat = FALSE;
+
 	if (!(pattern_tile(c_y, c_x)) && !(pattern_tile(n_y, n_x)))
 		return TRUE;
 
@@ -3338,7 +3340,8 @@ static bool pattern_seq(int c_y, int c_x, int n_y, int n_x)
 		if (!pattern_tile(n_y, n_x))
 		{
 			msg_print("You may not step off from the Straight Road.");
-			return FALSE;
+			patterncheat = TRUE; /* fixing the ultra cheat where you can attack monsters from the straight road without using a turn --Amy */
+			return -1;
 		}
 		else
 		{
@@ -3382,13 +3385,14 @@ static bool pattern_seq(int c_y, int c_x, int n_y, int n_x)
 				return TRUE;
 			else
 			{
-				if (!pattern_tile(n_y, n_x))
+				if (!pattern_tile(n_y, n_x)) {
 					msg_print("You may not step off from the Straight Road.");
-				else
-					msg_print
-					("You must walk the Straight Road in correct order.");
+					patterncheat = TRUE; /* fixing the ultra cheat where you can attack monsters from the straight road without using a turn --Amy */
+				} else {
+					msg_print("You must walk the Straight Road in correct order.");
+				}
 
-				return FALSE;
+				return (patterncheat ? -1 : FALSE);
 			}
 		}
 	}
@@ -3937,11 +3941,14 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 	}
 
 	/* Normal movement */
-	if (!pattern_seq(p_ptr->py, p_ptr->px, y, x))
+	if (pattern_seq(p_ptr->py, p_ptr->px, y, x) != 1)
 	{
 		if (!(p_ptr->confused || p_ptr->stun || p_ptr->image))
 		{
 			energy_use = 0;
+		}
+		if (pattern_seq(p_ptr->py, p_ptr->px, y, x) == -1) { /* you cheater */
+			energy_use = 100;
 		}
 
 		disturb(0, 0); 			/* To avoid a loop with running */
