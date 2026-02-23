@@ -9194,8 +9194,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				j_ptr = &p_ptr->inventory[j];
 				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
-				/* is it a non-artifact speed item? */
-				if ((!j_ptr->name1) && (f1 & TR1_SPEED))
+				/* is it a non-artifact speed item?
+				 * ...which has a fucking POSITIVE speed bonus? --Amy (no idea how there can be such an oversight) */
+				if ((!j_ptr->name1) && (f1 & TR1_SPEED) && (j_ptr->pval > 0) )
 				{
 					if (randint(100) < chance)
 					{
@@ -9248,8 +9249,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				j_ptr = &p_ptr->inventory[j];
 				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
-				/* is it a speed item? (can also affect artifacts :-P --Amy) */
-				if (f1 & TR1_SPEED)
+				/* is it a speed item with a positive bonus? (can also affect artifacts :-P --Amy) */
+				if ((f1 & TR1_SPEED) && (j_ptr->pval > 0))
 				{
 					j_ptr->pval = j_ptr->pval / 2;
 					if (j_ptr->pval == 0)
