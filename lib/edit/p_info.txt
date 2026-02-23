@@ -2906,25 +2906,13 @@ R:P:10:220:0:84
 R:M:20:3:60:3:80:4:54:3:70:4
 R:E:1:1:1:2:1:1
 R:Z:Rohan Knights Powers
-R:R:1:3
-R:F:SPEED | 
-R:R:5:1
-R:F:SPEED | 
-R:R:10:1
-R:F:SPEED | 
-R:R:15:1
+R:R:1:2
 R:F:SPEED | 
 R:R:20:1
 R:F:SPEED | 
-R:R:25:1
-R:F:SPEED | 
-R:R:30:1
-R:F:SPEED | 
 R:R:35:1
 R:F:SPEED | 
-R:R:40:1
-R:F:SPEED | 
-R:R:45:1
+R:R:50:1
 R:F:SPEED | 
 R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+1000:+000:Disarming
@@ -3102,27 +3090,13 @@ R:K:0:-10:10:0:10:15:10:15
 R:P:10:200:0:84
 R:M:20:3:60:3:80:4:54:3:70:4
 R:E:1:1:1:2:1:2
-R:R:1:5
-R:F:SPEED | 
-R:R:5:1
-R:F:SPEED | 
-R:R:10:1
+R:R:1:3
 R:F:SPEED | 
 R:R:15:1
 R:F:SPEED | 
-R:R:20:1
-R:F:SPEED | 
-R:R:25:1
-R:F:SPEED | 
 R:R:30:1
 R:F:SPEED | 
-R:R:35:1
-R:F:SPEED | 
-R:R:40:1
-R:F:SPEED | 
 R:R:45:1
-R:F:SPEED |
-R:R:50:2
 R:F:SPEED | 
 R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+0:+200:Bow-mastery
