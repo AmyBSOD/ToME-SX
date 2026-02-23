@@ -9,7 +9,7 @@ DEMON_BLADE = add_spell
 	["mana"] =      4,
 	["mana_max"] =  44,
 	["fail"] =      10,
-	["random"] =    0,
+	["random"] =    SKILL_DAEMON,
 	["stick"] =
 	{
 			["charge"] =    { 3, 7 },
@@ -63,7 +63,7 @@ DEMON_MADNESS = add_spell
 				["max_level"] =		{ 10, 24 },
 			},
 	},
-	["random"] =    0,
+	["random"] =    SKILL_DAEMON,
 	["spell"] =     function()
 			local ret, dir, type, y1, x1, y2, x2
 
@@ -106,7 +106,7 @@ DEMON_FIELD = add_spell
 	["mana"] =      20,
 	["mana_max"] =  60,
 	["fail"] =      60,
-	["random"] =    0,
+	["random"] =    SKILL_DAEMON,
 	["spell"] =     function()
 			local ret, dir
 
@@ -132,7 +132,7 @@ DOOM_SHIELD = add_spell
 	["mana"] =      2,
 	["mana_max"] =  30,
 	["fail"] =      10,
-	["random"] =    0,
+	["random"] =    SKILL_DAEMON,
 	["spell"] =     function()
 			return set_shield(randint(10) + 20 + get_level(DOOM_SHIELD, 100), -300 + get_level(DOOM_SHIELD, 100), SHIELD_COUNTER, 1 + get_level(DOOM_SHIELD, 14), 10 + get_level(DOOM_SHIELD, 15))
 	end,
@@ -153,7 +153,7 @@ UNHOLY_WORD = add_spell
 	["mana"] =      15,
 	["mana_max"] =  45,
 	["fail"] =      55,
-	["random"] =    0,
+	["random"] =    SKILL_DAEMON,
 	["spell"] =     function()
 			local ret, x, y, c_ptr
 			ret, x, y = tgt_pt()
@@ -204,7 +204,7 @@ DEMON_CLOAK = add_spell
 	["mana"] =      10,
 	["mana_max"] =  40,
 	["fail"] =      70,
-	["random"] =    0,
+	["random"] =    SKILL_DAEMON,
 	["spell"] =     function()
 			return set_tim_reflect(randint(5) + 5 + get_level(DEMON_CLOAK, 15, 0))
 	end,
@@ -226,7 +226,7 @@ DEMON_SUMMON = add_spell
 	["mana"] =      10,
 	["mana_max"] =  50,
 	["fail"] =      30,
-	["random"] =    0,
+	["random"] =    SKILL_DAEMON,
 	["spell"] =     function()
 			local type = SUMMON_DEMON
 			local level = dun_level
@@ -258,7 +258,7 @@ DISCHARGE_MINION = add_spell
 	["mana"] =      20,
 	["mana_max"] =  50,
 	["fail"] =      30,
-	["random"] =    0,
+	["random"] =    SKILL_DAEMON,
 	["spell"] =     function()
 			local ret, x, y, c_ptr
 			ret, x, y = tgt_pt()
@@ -303,7 +303,7 @@ CONTROL_DEMON = add_spell
 	["mana"] =      30,
 	["mana_max"] =  70,
 	["fail"] =      55,
-	["random"] =    0,
+	["random"] =    SKILL_DAEMON,
 	["spell"] =     function()
 			local ret, dir = get_aim_dir()
 			return fire_ball(GF_CONTROL_DEMON, dir, 50 + get_level(CONTROL_DEMON, 250), 0)
