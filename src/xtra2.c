@@ -8648,8 +8648,8 @@ static int target_set_aux(int y, int x, int mode, cptr info)
 			feat = FEAT_NONE;
 		}
 
-		/* Terrain feature if needed */
-		if (boring || (feat >= FEAT_GLYPH))
+		/* Terrain feature if needed - edit by Amy: this is always the case, goddammit! */
+		if (/*boring || (feat >= FEAT_GLYPH)*/TRUE)
 		{
 			cptr name;
 
