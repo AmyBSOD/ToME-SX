@@ -3081,8 +3081,9 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	/* Hack -- Count the monsters on the level */
 	r_ptr->cur_num++;
 
-	/* Unique monsters on saved levels should be "marked" */
-	if ((r_ptr->flags1 & RF1_UNIQUE) && get_dungeon_save(dummy))
+	/* Unique monsters on saved levels should be "marked"
+	 * note by Amy: but only if they're part of the main quest, so that you can't just easily "park" annoying uniques! */
+	if ((r_ptr->flags1 & RF1_UNIQUE) && (r_idx == 862 || r_idx == 860) && get_dungeon_save(dummy))
 	{
 		if (wizard) cmsg_format(TERM_RED, "saving unique on level: %d", r_idx);
 		r_ptr->on_saved = TRUE;
