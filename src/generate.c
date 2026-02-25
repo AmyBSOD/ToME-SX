@@ -822,7 +822,7 @@ static void place_altar(int y, int x)
  */
 static void place_switcher(int y, int x)
 {
-	if (magik(2))
+	if (magik(10))
 		cave_set_feat(y, x, FEAT_SWITCHER);
 }
 
@@ -9679,7 +9679,7 @@ static bool cave_gen(void)
 		/* Put some altars */
 		alloc_object(ALLOC_SET_ROOM, ALLOC_TYP_ALTAR, randnor(DUN_AMT_ALTAR, 3));
 
-		/* Put some altars */
+		/* Put some switchers */
 		alloc_object(ALLOC_SET_ROOM, ALLOC_TYP_SWITCHER, randnor(DUN_AMT_SWITCHER, 3));
 
 		/* Put some between gates */
