@@ -757,14 +757,19 @@ static s16b chest_check(int y, int x)
 static void chest_death(int y, int x, s16b o_idx)
 {
 	int number;
+	int trap;
 
 	bool small;
 
 	object_type forge;
 	object_type *q_ptr;
+	trap_type *t_ptr;
 
 	object_type *o_ptr = &o_list[o_idx];
 
+	trap = o_ptr->pval;
+
+	t_ptr = &t_info[trap];
 
 	/* Small chests often hold "gold" */
 	small = (o_ptr->sval < SV_CHEST_MIN_LARGE);
@@ -778,8 +783,14 @@ static void chest_death(int y, int x, s16b o_idx)
 	/* Opening a chest */
 	opening_chest = TRUE;
 
-	/* Determine the "value" of the items */
-	object_level = ABS(o_ptr->pval) + 10;
+	/* Determine the "value" of the items - gigabug fixed by Amy because omg it used to generate items based on the trap's ID number!!! holy shit!
+	 * changed to a *sane* mechanic that takes the *level* of the trap in question, which is probably what was originally intended
+	 * no wonder I saw speed rings on dungeon level 5, because if the trap has a high ID in the hundreds, the chest would spawn items with levels in the hundreds! :O */
+	if ((trap > 0) && t_ptr) {
+		object_level = t_ptr->minlevel + randint(10);
+	} else {
+		object_level = randint(10);
+	}
 
 	/* Drop some objects (non-chests) */
 	for (; number > 0; --number)
