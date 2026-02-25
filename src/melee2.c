@@ -9601,6 +9601,7 @@ void process_monsters(void)
 	byte old_r_cast_spell = 0;
 
 	int stealthfactor;
+	int distancefactor;
 
 	/* Check the doppleganger */
 	if (doppleganger && !(r_info[m_list[doppleganger].r_idx].flags9 & RF9_DOPPLEGANGER))
@@ -9654,13 +9655,17 @@ void process_monsters(void)
 	 * reaching the point where monsters just stop waking up altogether (would make game too easy) */
 
 	stealthfactor = p_ptr->skill_stl;
-	if (stealthfactor < 0) stealthfactor = 0;
+	if (stealthfactor < 0) stealthfactor = 0; /* has to be that way because otherwise "noise" overflows a 32-bit INT */
 	if (stealthfactor > 20) {
 		int diffstealth = stealthfactor - 20;
 		stealthfactor = 20 + randint(diffstealth);
 	}
 
 	if (stealthfactor > 30) stealthfactor = 30;
+
+	/* negative stealth skill should make monsters wake up from a greater distance --Amy */
+	distancefactor = 0;
+	if (p_ptr->skill_stl < 0) distancefactor += (ABS(p_ptr->skill_stl) * 5);
 
 	/* Hack -- calculate the "player noise" */
 	noise = (1L << (30 - stealthfactor));
@@ -9736,7 +9741,7 @@ void process_monsters(void)
 		else if (m_ptr->mflag & MFLAG_PARTIAL) test = TRUE;
 
 		/* Handle "sensing radius" */
-		else if (m_ptr->cdis <= r_ptr->aaf)
+		else if (m_ptr->cdis <= (r_ptr->aaf + distancefactor))
 		{
 			/* We can "sense" the player */
 			test = TRUE;
