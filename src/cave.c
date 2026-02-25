@@ -1456,8 +1456,21 @@ void map_info(int y, int x, byte *ap, char *cp)
 					a = make_monochrome(a);
 				}
 
+				/* Pets, with code stolen from Poschengband --Amy
+				 * says "ideally we could tweak the background", nethack has that so angband really should be able to do the same...
+				 * ah well, let's just use a number, I think there's not many monsters that use numbers as their glyphs? */
+				if (m_ptr->status >= MSTATUS_PET)
+				{
+					int percent = m_ptr->level / 10;
+					if (percent > 9) percent = 9;
+
+					*ap = a;
+					c = I2D(percent);
+					*cp = c;
+				}
+
 				/* Ignore weird codes */
-				if (avoid_other)
+				else if (avoid_other)
 				{
 					/* Use char */
 					*cp = c;
