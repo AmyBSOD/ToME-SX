@@ -3792,6 +3792,11 @@ I:32:2:50:4:12:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:770:Summonstorm Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

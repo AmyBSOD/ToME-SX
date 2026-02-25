@@ -3057,6 +3057,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_BUG */
 		case 160 + 13:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically codes some software bugs.", m_name);
@@ -3074,6 +3080,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_RNG */
 		case 160 + 14:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically codes some RNGs.", m_name);
@@ -3092,6 +3104,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_THUNDERLORD */
 		case 160 + 15:
 			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons a Thunderlord!", m_name);
@@ -3109,6 +3127,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_SUMMON_KIN */
 		case 160 + 16:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons %s %s.",
@@ -3132,6 +3156,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_HI_DEMON */
 		case 160 + 17:
 			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons greater demons!", m_name);
@@ -3146,6 +3176,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_MONSTER */
 		case 160 + 18:
 			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons help!", m_name);
@@ -3163,6 +3199,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_MONSTERS */
 		case 160 + 19:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons monsters!", m_name);
@@ -3180,6 +3222,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_ANT */
 		case 160 + 20:
 			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons ants.", m_name);
@@ -3197,6 +3245,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_SPIDER */
 		case 160 + 21:
 			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons spiders.", m_name);
@@ -3214,6 +3268,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_HOUND */
 		case 160 + 22:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons hounds.", m_name);
@@ -3231,6 +3291,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_HYDRA */
 		case 160 + 23:
 			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons hydras.", m_name);
@@ -3248,6 +3314,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_ANGEL */
 		case 160 + 24:
 			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons an angel!", m_name);
@@ -3265,6 +3337,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_DEMON */
 		case 160 + 25:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons a demon!", m_name);
@@ -3282,6 +3360,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_UNDEAD */
 		case 160 + 26:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons an undead adversary!", m_name);
@@ -3299,6 +3383,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_DRAGON */
 		case 160 + 27:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons a dragon!", m_name);
@@ -3316,6 +3406,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_HI_UNDEAD */
 		case 160 + 28:
 			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons greater undead!", m_name);
@@ -3336,6 +3432,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_HI_DRAGON */
 		case 160 + 29:
 			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons ancient dragons!", m_name);
@@ -3356,6 +3458,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_WRAITH */
 		case 160 + 30:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons a wraith!", m_name);
@@ -3384,6 +3492,12 @@ static bool monst_spell_monst(int m_idx)
 			/* RF6_S_UNIQUE */
 		case 160 + 31:
 			{
+				if (!p_ptr->nastytrap174 && magik(80)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
 				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
 				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
 				else monster_msg("%^s magically summons special opponents!", m_name);
@@ -5891,6 +6005,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_BUG */
 		case 160 + 13:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically codes some software bugs.", m_name);
@@ -5905,6 +6025,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_RNG */
 		case 160 + 14:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically codes some RNGs.", m_name);
@@ -5919,6 +6045,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_THUNDERLORD */
 		case 160 + 15:
 			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons a Thunderlord!", m_name);
@@ -5933,6 +6065,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_SUMMON_KIN */
 		case 160 + 16:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons %s %s.",
@@ -5953,6 +6091,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_HI_DEMON */
 		case 160 + 17:
 			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons greater demons!", m_name);
@@ -5964,6 +6108,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_MONSTER */
 		case 160 + 18:
 			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons help!", m_name);
@@ -5978,6 +6128,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_MONSTERS */
 		case 160 + 19:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons monsters!", m_name);
@@ -5992,6 +6148,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_ANT */
 		case 160 + 20:
 			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons ants.", m_name);
@@ -6006,6 +6168,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_SPIDER */
 		case 160 + 21:
 			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons spiders.", m_name);
@@ -6020,6 +6188,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_HOUND */
 		case 160 + 22:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons hounds.", m_name);
@@ -6034,6 +6208,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_HYDRA */
 		case 160 + 23:
 			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons hydras.", m_name);
@@ -6048,6 +6228,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_ANGEL */
 		case 160 + 24:
 			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons an angel!", m_name);
@@ -6062,6 +6248,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_DEMON */
 		case 160 + 25:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons a demon!", m_name);
@@ -6076,6 +6268,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_UNDEAD */
 		case 160 + 26:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons an undead adversary!", m_name);
@@ -6090,6 +6288,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_DRAGON */
 		case 160 + 27:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons a dragon!", m_name);
@@ -6104,6 +6308,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_HI_UNDEAD */
 		case 160 + 28:
 			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons greater undead!", m_name);
@@ -6121,6 +6331,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_HI_DRAGON */
 		case 160 + 29:
 			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons ancient dragons!", m_name);
@@ -6138,6 +6354,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_WRAITH */
 		case 160 + 30:
 			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons Wraith!", m_name);
@@ -6166,6 +6388,12 @@ bool make_attack_spell(int m_idx)
 			/* RF6_S_UNIQUE */
 		case 160 + 31:
 			{
+				if (!p_ptr->nastytrap174 && magik(80)) {
+					if (blind) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points at you, then curses.", m_name);
+					break;
+				}
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles.", m_name);
 				else msg_format("%^s magically summons special opponents!", m_name);

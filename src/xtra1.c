@@ -5038,6 +5038,7 @@ void calc_bonuses(bool silent)
 		/* no p_ptr->nastytrap142, because RAND_value monsters should still walk randomly; it's just neutral ones who followed you in vanilla, see melee2.c */
 		p_ptr->nastytrap143 = TRUE; /* monster spell and breath damage is much meaner */
 		p_ptr->nastytrap144 = TRUE; /* monster levelscaling is much more unforgiving */
+		p_ptr->nastytrap174 = TRUE; /* summoning spells used by monsters always summon shit */
 	}
 
 	/* Let the scripts do what they need */

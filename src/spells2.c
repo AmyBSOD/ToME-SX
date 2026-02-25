@@ -2323,6 +2323,10 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Glyphs are fleecy-colored.";
 	}
+	if (p_ptr->nastytrap174)
+	{
+		info[i++] = "You have a problem: Summoner monsters always summon stuff.";
+	}
 
 	if (p_ptr->contamination >= 10000)
 	{

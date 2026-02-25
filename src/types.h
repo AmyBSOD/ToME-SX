@@ -2298,7 +2298,7 @@ struct player_type
 	bool nastytrap171; /* fleecy message trap - messages are randomly colored */
 	bool nastytrap172; /* fleecescript trap - menu lines are randomly colored */
 	bool nastytrap173; /* rainbow trap - glyphs are randomly colored */
-	bool nastytrap174;
+	bool nastytrap174; /* summonstorm trap - monster summoning spells always summon stuff */
 	bool nastytrap175;
 	bool nastytrap176;
 	bool nastytrap177;
