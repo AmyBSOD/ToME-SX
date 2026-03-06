@@ -3237,6 +3237,7 @@ int get_shooter_mult(object_type *o_ptr)
 	switch (o_ptr->sval)
 	{
 	case SV_SLING:
+	case SV_MIGHTY_SLING:
 		{
 			/* Sling and ammo */
 			tmul = 2;
@@ -3244,6 +3245,7 @@ int get_shooter_mult(object_type *o_ptr)
 		}
 
 	case SV_POWER_SLING:
+	case SV_BIBLIC_SLING:
 		{
 			/* Power Sling and ammo */
 			tmul = 3;
@@ -3265,6 +3267,7 @@ int get_shooter_mult(object_type *o_ptr)
 		}
 
 	case SV_LONG_BOW:
+	case SV_WIND_BOW:
 		{
 			/* Long Bow and Arrow */
 			tmul = 3;
@@ -3293,6 +3296,7 @@ int get_shooter_mult(object_type *o_ptr)
 		}
 
 	case SV_HEAVY_XBOW:
+	case SV_POWER_XBOW:
 		{
 			/* Heavy Crossbow and Bolt */
 			tmul = 4;

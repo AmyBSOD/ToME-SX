@@ -2528,8 +2528,9 @@ void object_desc(char *buf, object_type *o_ptr, int pref, int mode)
 		/* Bows get a special "damage string" */
 	case TV_BOW:
 
-		/* Mega-Hack -- Extract the "base power" */
-		power = (o_ptr->sval % 10);
+		/* Mega-Hack -- Extract the "base power"
+		 * Amy note: holy shit you have a fucking function to find that!!! use that, *please*, and don't make stupid hacks that depend on the exact sval! */
+		power = get_shooter_mult(o_ptr);
 
 		/* Apply the "Extra Might" flag */
 		if (f3 & (TR3_XTRA_MIGHT)) power += o_ptr->pval;

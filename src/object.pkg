@@ -333,14 +333,18 @@ static obj_theme lua_obj_theme @ theme_forge;
 #define SV_SLING                         2	/* (x2) */
 #define SV_POWER_SLING                   3	/* (x3) */
 #define SV_MASTER_SLING                  4	/* (x4) */
+#define SV_MIGHTY_SLING                  5	/* (x2) */
+#define SV_BIBLIC_SLING                  6	/* (x3) */
 #define SV_SHORT_BOW                    12	/* (x2) */
 #define SV_LONG_BOW                     13	/* (x3) */
 #define SV_BLADE_BOW                    14	/* (x4) */
 #define SV_HYDRA_BOW                    15	/* (x5) */
+#define SV_WIND_BOW                     16	/* (x3) */
 #define SV_LIGHT_XBOW                   23	/* (x3) */
 #define SV_HEAVY_XBOW                   24	/* (x4) */
 #define SV_ARBALEST                     25	/* (x5) */
 #define SV_SIEGE_XBOW                   26	/* (x6) */
+#define SV_POWER_XBOW                   27	/* (x4) */
 #define SV_PISTOL1                      33	/* (x3) */
 #define SV_PISTOL2                      34	/* (x4) */
 #define SV_PISTOL3                      35	/* (x5) */
@@ -511,6 +515,8 @@ static obj_theme lua_obj_theme @ theme_forge;
 #define SV_FULL_PLATE_ARMOUR            15  /* 25  */
 #define SV_RIBBED_PLATE_ARMOUR          18  /* 28  */
 #define SV_MITHRIL_CHAIN_MAIL           20  /* 28+ */
+#define SV_VOLUME_ARMAMENT              21  /* 19  */
+#define SV_GOTHIC_PLATE_MAIL            23  /* 25  */
 #define SV_MITHRIL_PLATE_MAIL           25  /* 35+ */
 #define SV_ADAMANTITE_PLATE_MAIL        30  /* 40+ */
 
@@ -570,6 +576,35 @@ static obj_theme lua_obj_theme @ theme_forge;
 #define SV_AMULET_WISDOM                28
 #define SV_AMULET_INFRA                 26
 #define SV_AMULET_SPELL                 27
+#define SV_AMULET_WISDOM                28
+#define SV_AMULET_RESIST_ELEC           29
+#define SV_AMULET_REGEN                 30
+#define SV_AMULET_WAR                   31
+#define SV_AMULET_LIFE_SAVING           32
+#define SV_AMULET_LIFE                  33
+#define SV_AMULET_DEVICE_MASTERY        34
+#define SV_AMULET_PEACE                 35
+#define SV_AMULET_WATER_RESISTANCE      36
+#define SV_AMULET_DISARMING             37
+#define SV_AMULET_DODGING               38
+#define SV_AMULET_SPACETIME             39
+#define SV_AMULET_BRACING               40
+#define SV_AMULET_THIEVERY              41
+#define SV_AMULET_KINGS                 42
+#define SV_AMULET_PERCEPTION            43
+#define SV_AMULET_SPELLCRAFT            44
+#define SV_AMULET_BURDEN                45
+#define SV_AMULET_STRANGULATION         46
+#define SV_AMULET_ORC_ESP               47
+#define SV_AMULET_TROLL_ESP             48
+#define SV_AMULET_DRAGON_ESP            49
+#define SV_AMULET_GIANT_ESP             50
+#define SV_AMULET_EVIL_ESP              51
+#define SV_AMULET_ANIMAL_ESP            52
+#define SV_AMULET_GOOD_ESP              53
+#define SV_AMULET_UNLIFE_ESP            54
+#define SV_AMULET_ETHER_RESISTANCE      55
+#define SV_AMULET_SPEED                 56
 
 /* The sval codes for TV_RING */
 #define SV_RING_WOE                      0
@@ -631,6 +666,17 @@ static obj_theme lua_obj_theme @ theme_forge;
 #define SV_RING_ELEC                    56
 #define SV_RING_CRIT                    57
 #define SV_RING_SPELL                   58
+#define SV_RING_CRIT                    59
+#define SV_RING_CLEAR_THOUGHT           60
+#define SV_RING_RES_PLASMA              61
+#define SV_RING_RES_DISINT              62
+#define SV_RING_STEALTH                 63
+#define SV_RING_RES_NERVE               64
+#define SV_RING_RES_MIND                65
+#define SV_RING_PERCEPTION              66
+#define SV_RING_FORTUNE                 67
+#define SV_RING_VITALITY                69
+#define SV_RING_WIZARDRY                70
 
 /* The "sval" codes for TV_STAFF */
 #define SV_STAFF_SCHOOL                 1

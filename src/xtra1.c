@@ -4368,6 +4368,8 @@ void calc_bonuses(bool silent)
 	switch (o_ptr->sval)
 	{
 	case SV_SLING:
+	case SV_MIGHTY_SLING:
+	case SV_BIBLIC_SLING:
 	case SV_POWER_SLING:
 	case SV_MASTER_SLING:
 		{
@@ -4378,6 +4380,7 @@ void calc_bonuses(bool silent)
 	case SV_SHORT_BOW:
 	case SV_LONG_BOW:
 	case SV_BLADE_BOW:
+	case SV_WIND_BOW:
 	case SV_HYDRA_BOW:
 		{
 			p_ptr->tval_ammo = TV_ARROW;
@@ -4386,6 +4389,7 @@ void calc_bonuses(bool silent)
 
 	case SV_LIGHT_XBOW:
 	case SV_HEAVY_XBOW:
+	case SV_POWER_XBOW:
 	case SV_ARBALEST:
 	case SV_SIEGE_XBOW:
 		{

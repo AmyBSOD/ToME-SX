@@ -1555,14 +1555,18 @@
 #define SV_SLING                         2	/* (x2) */
 #define SV_POWER_SLING                   3	/* (x3) */
 #define SV_MASTER_SLING                  4	/* (x4) */
+#define SV_MIGHTY_SLING                  5	/* (x2) */
+#define SV_BIBLIC_SLING                  6	/* (x3) */
 #define SV_SHORT_BOW                    12	/* (x2) */
 #define SV_LONG_BOW                     13	/* (x3) */
 #define SV_BLADE_BOW                    14	/* (x4) */
 #define SV_HYDRA_BOW                    15	/* (x5) */
+#define SV_WIND_BOW                     16	/* (x3) */
 #define SV_LIGHT_XBOW                   23	/* (x3) */
 #define SV_HEAVY_XBOW                   24	/* (x4) */
 #define SV_ARBALEST                     25	/* (x5) */
 #define SV_SIEGE_XBOW                   26	/* (x6) */
+#define SV_POWER_XBOW                   27	/* (x4) */
 #define SV_PISTOL1                      33	/* (x3) */
 #define SV_PISTOL2                      34	/* (x4) */
 #define SV_PISTOL3                      35	/* (x5) */
@@ -1736,6 +1740,8 @@
 #define SV_FULL_PLATE_ARMOUR            15  /* 25  */
 #define SV_RIBBED_PLATE_ARMOUR          18  /* 28  */
 #define SV_MITHRIL_CHAIN_MAIL           20  /* 28+ */
+#define SV_VOLUME_ARMAMENT              21  /* 19  */
+#define SV_GOTHIC_PLATE_MAIL            23  /* 25  */
 #define SV_MITHRIL_PLATE_MAIL           25  /* 35+ */
 #define SV_ADAMANTITE_PLATE_MAIL        30  /* 40+ */
 
@@ -1835,6 +1841,7 @@
 #define SV_AMULET_GOOD_ESP              53
 #define SV_AMULET_UNLIFE_ESP            54
 #define SV_AMULET_ETHER_RESISTANCE      55
+#define SV_AMULET_SPEED                 56
 
 /* The sval codes for TV_RING */
 #define SV_RING_WOE                      0

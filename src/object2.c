@@ -3377,7 +3377,21 @@ static void a_m_aux_1(object_type *o_ptr, int level, int power)
 			}
 			break;
 		}
-	}
+	case TV_BOW:
+		{
+			if ((o_ptr->sval == SV_MIGHTY_SLING) || (o_ptr->sval == SV_BIBLIC_SLING)) {
+				/* Make any resist */
+				if (randint(50) == 1) random_resistance(o_ptr, FALSE, randint(6) + 43); /* "unresistable" element, like TR5_RES_PLASMA */
+				else random_resistance(o_ptr, FALSE, ((randint(36)) + 4)); /* any element, like TR2_RES_ACID or TR2_RES_NEXUS */
+			}
+			if (o_ptr->sval == SV_BIBLIC_SLING) {
+				/* Make any resist */
+				if (randint(50) == 1) random_resistance(o_ptr, FALSE, randint(6) + 43); /* "unresistable" element, like TR5_RES_PLASMA */
+				else random_resistance(o_ptr, FALSE, ((randint(36)) + 4)); /* any element, like TR2_RES_ACID or TR2_RES_NEXUS */
+			}
+		}
+
+	} /* end switch statement */
 }
 
 
@@ -3486,6 +3500,19 @@ static void a_m_aux_2(object_type *o_ptr, int level, int power)
 			if ((cheat_peek) || (p_ptr->precognition)) object_mention(o_ptr);
 
 			break;
+		}
+	case TV_HARD_ARMOR:
+		{
+			if (o_ptr->sval == SV_VOLUME_ARMAMENT) {
+				/* Make any resist */
+				if (randint(50) == 1) random_resistance(o_ptr, FALSE, randint(6) + 43); /* "unresistable" element, like TR5_RES_PLASMA */
+				else random_resistance(o_ptr, FALSE, ((randint(36)) + 4)); /* any element, like TR2_RES_ACID or TR2_RES_NEXUS */
+			}
+			if (o_ptr->sval == SV_GOTHIC_PLATE_MAIL) {
+				/* Make a high resist */
+				if (randint(50) == 1) random_resistance(o_ptr, FALSE, randint(6) + 43); /* "unresistable" element, like TR5_RES_PLASMA */
+				else random_resistance(o_ptr, FALSE, ((randint(24)) + 16)); /* "high" element, like TR2_RES_NEXUS */
+			}
 		}
 	case TV_SOFT_ARMOR:
 		{
@@ -3862,6 +3889,34 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
 					break;
 				}
 
+			case SV_AMULET_SPEED:
+				{
+					/* Base speed (1 to 10) */
+					o_ptr->pval = randint(5) + m_bonus(5, level);
+
+					/* Super-charge the amulet */
+					while (rand_int(100) < 50) o_ptr->pval++;
+
+					/* Cursed amulet */
+					if (power < 0)
+					{
+						/* Cursed */
+						o_ptr->ident |= (IDENT_CURSED);
+
+						/* Reverse pval */
+						o_ptr->pval = 0 - (o_ptr->pval);
+
+						break;
+					}
+
+					/* Rating boost */
+					rating += 25;
+
+					/* Mention the item */
+					if ((cheat_peek) || (p_ptr->precognition)) object_mention(o_ptr);
+
+					break;
+				}
 			case SV_AMULET_BRACING:
 				{
 					/* Bonus to armor class */

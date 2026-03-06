@@ -10034,6 +10034,125 @@ D:Although it looks like a piece of junk, it is actually part of an ancient
 D:relic belonging to the Priests of Vaire. The relic now lies in pieces, 
 D:hidden from all but the most faithful followers of Vaire.
 
+N:1193:& Black Halberd~
+G:/:D
+I:22:37:0
+W:60:0:190:2430
+A:60/3
+P:0:3d5:0:0:0
+F:SHOW_MODS | COULD2H | RES_DISEN
+f:COULD2H | RES_DISEN
+D:A halberd with a high resistance.
+
+N:1194:& Bardiche~
+G:/:s
+I:22:38:0
+W:16:0:320:420
+A:16/1
+P:0:2d8:0:0:0
+F:SHOW_MODS | MUST2H
+f:MUST2H
+D:A rather crude, massive polearm.
+
+N:1195:& Infernal Bardiche~
+G:/:r
+I:22:39:0
+W:100:0:320:5420
+A:100/10
+P:0:2d8:0:0:0
+F:SHOW_MODS | MUST2H | IM_FIRE | IGNORE_ACID | IGNORE_COLD | IGNORE_ELEC | IGNORE_FIRE
+f:MUST2H | IM_FIRE | IGNORE_ACID | IGNORE_COLD | IGNORE_ELEC | IGNORE_FIRE
+D:A massive polearm forged in the fiery pits of Hell.
+
+N:1196:& Wind Bow~
+G:}:U
+I:19:16:2
+W:50:0:40:8120
+A:50/2
+F:SHOW_MODS | SPEED
+f:SPEED
+D:Superpowered bow that grants a speed bonus when wielded.
+
+N:1197:& Power Crossbow~
+G:}:s
+I:19:27:0
+W:50:0:200:3300
+A:50/4
+F:SHOW_MODS | XTRA_SHOTS
+f:XTRA_SHOTS
+D:This crossbow shoots missiles excessively fast.
+
+N:1198:& Mighty Sling~
+G:}:u
+I:19:5:0
+W:30:0:5:1005
+A:30/3
+F:SHOW_MODS
+D:This sling conveys a random resistance when wielded.
+
+N:1199:& Biblic Sling~
+G:}:u
+I:19:6:0
+W:60:0:10:3100
+A:60/5
+F:SHOW_MODS
+D:A powerful sling that conveys various resistances when wielded.
+
+N:1200:& Volume Armament~
+G:[:D
+I:37:21:0
+W:55:0:250:2450
+A:55/3
+P:19:1d4:-2:0:0
+D:This metallic armor conveys some random resistance.
+
+N:1201:& Lead Suit~
+G:[:W
+I:37:22:0
+W:50:0:500:7200
+A:50/5
+P:22:1d6:-3:0:0
+F:RES_ETHER
+f:RES_ETHER
+D:Super heavy armor that provides protection from contamination.
+
+N:1202:& Gothic Plate Mail~
+G:[:W
+I:37:23:0
+W:50:0:380:1350
+A:50/4
+P:25:2d4:-3:0:0
+D:This metallic armor provides a high resistance.
+
+N:1203:& Mage Robe~
+G:(:b
+I:36:23:3
+W:25:0:20:1504
+A:25/4
+P:2:0d0:0:0:0
+F:SPELL
+f:SPELL
+D:This robe is useful for mages due to its boost to spell power.
+
+N:1204:& Speedy Robe~
+G:(:b
+I:36:24:2
+W:30:0:20:20004
+A:30/5
+P:2:0d0:0:0:0
+F:SPEED
+f:SPEED
+D:A useful robe that speeds up the wearer.
+
+N:1205:Speed
+G:":d
+I:40:56:0
+W:75:0:3:100000
+A:75/3
+F:SPEED | HIDE_TYPE
+f:SPEED
+D:A very powerful amulet that speeds up the wearer.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
