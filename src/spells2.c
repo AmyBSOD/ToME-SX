@@ -2343,6 +2343,22 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Monster levels are sometimes rerolled.";
 	}
+	if (p_ptr->nastytrap179)
+	{
+		info[i++] = "You have a problem: You can't inscribe your items anymore.";
+	}
+	if (p_ptr->nastytrap180)
+	{
+		info[i++] = "You have a problem: You can't use cheat codes.";
+	}
+	if (p_ptr->nastytrap181)
+	{
+		info[i++] = "You have a problem: The game uses a leveling system for monsters.";
+	}
+	if (p_ptr->nastytrap182)
+	{
+		info[i++] = "You have a problem: Fountains, altars and other features don't spawn anymore.";
+	}
 
 	if (p_ptr->contamination >= 10000)
 	{

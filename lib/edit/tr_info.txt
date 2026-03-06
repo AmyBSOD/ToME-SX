@@ -3817,6 +3817,26 @@ I:40:2:50:4:20:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:775:Inscription Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:776:Cheat Code Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:777:Mega Leveling Trap
+I:28:2:50:4:8:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:778:Featureless Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

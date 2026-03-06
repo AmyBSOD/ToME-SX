@@ -5847,6 +5847,13 @@ void do_cmd_engrave()
 
 	byte i;
 
+	/* cheat code trap by Amy */
+	if (p_ptr->nastytrap180) {
+		msg_print("Cheater, you can't do that!");
+		msg_print(NULL);
+		return;
+	}
+
 	strnfmt(buf, 41, "%s", inscription_info[cave[p_ptr->py][p_ptr->px].inscription].text);
 
 	get_string("Engrave what? ", buf, 40);

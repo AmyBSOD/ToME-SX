@@ -958,6 +958,12 @@ void do_cmd_inscribe(void)
 
 	cptr q, s;
 
+	/* inscription nastytrap by Amy */
+	if (p_ptr->nastytrap179) {
+		msg_print("You can't inscribe your items!");
+		msg_print(NULL);
+		return;
+	}
 
 	/* Get an item */
 	q = "Inscribe which item? ";

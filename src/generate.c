@@ -814,7 +814,7 @@ static void place_rubble(int y, int x)
  */
 static void place_altar(int y, int x)
 {
-	if (magik(10))
+	if (magik(10) && !p_ptr->nastytrap182)
 		cave_set_feat(y, x, 164);
 }
 
@@ -840,7 +840,7 @@ static void place_switcher(int y, int x)
 static void place_fountain(int y, int x)
 {
 	/* there's just too many fountains IMHO, so we're greatly reducing their rate of occurrence --Amy */
-	if (magik(75)) return;
+	if (magik(75) || p_ptr->nastytrap182) return;
 
 	cave_type *c_ptr = &cave[y][x];
 	int svals[SV_POTION_LAST + SV_POTION2_LAST + 1], maxsval = 0, k;
@@ -886,6 +886,8 @@ static void place_between(int y, int x)
 {
 	cave_type *c_ptr = &cave[y][x], *c1_ptr;
 	int gx, gy;
+
+	if (p_ptr->nastytrap182) return;
 
 	while (TRUE)
 	{

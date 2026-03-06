@@ -2303,10 +2303,10 @@ struct player_type
 	bool nastytrap176; /* lvl 30, rareswitch trap - switchers are less common */
 	bool nastytrap177; /* lvl 40, leveled spawn trap - monsters are more likely to be of a high level */
 	bool nastytrap178; /* lvl 20, hard spawn trap - monsters have a few chances of being higher level */
-	bool nastytrap179;
-	bool nastytrap180;
-	bool nastytrap181;
-	bool nastytrap182;
+	bool nastytrap179; /* lvl 20, inscription trap - can no longer inscribe items */
+	bool nastytrap180; /* lvl 30, cheat code trap - can no longer use floor inscriptions */
+	bool nastytrap181; /* lvl 8, mega leveling trap - game uses leveling system */
+	bool nastytrap182; /* lvl 20, featureless trap - fountains, jumpgates, altars etc. no longer spawn */
 	bool nastytrap183;
 	bool nastytrap184;
 	bool nastytrap185;
