@@ -1293,7 +1293,7 @@ bool create_artifact(object_type *o_ptr, bool a_scroll, bool get_name)
 	o_ptr->art_flags3 |= ( TR3_IGNORE_ACID | TR3_IGNORE_ELEC |
 	                       TR3_IGNORE_FIRE | TR3_IGNORE_COLD);
 
-	total_flags = flag_cost(o_ptr, o_ptr->pval);
+	total_flags = flag_cost(o_ptr, o_ptr->pval, FALSE);
 	if (cheat_peek) msg_format("%ld", total_flags);
 
 	if (a_cursed) curse_artifact(o_ptr);

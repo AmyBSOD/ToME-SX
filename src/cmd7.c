@@ -4417,7 +4417,7 @@ void do_cmd_alchemist(int crafttype)
 			if ( basechance < 0) basechance = 0;
 			if ( basechance > 100) basechance = 100;
 
-			value = object_value_real(o_ptr);
+			value = object_value_real(o_ptr, FALSE);
 
 		}
 		else /* not an ego item */
@@ -4429,7 +4429,7 @@ void do_cmd_alchemist(int crafttype)
 			apply_magic(o_ptr, askill * 2, FALSE, FALSE, FALSE);
 			if ( o_ptr->tval == TV_WAND || o_ptr->tval == TV_STAFF)
 				o_ptr->pval = 0;
-			value = object_value_real(o_ptr);
+			value = object_value_real(o_ptr, FALSE);
 
 			basechance = k_info[o_ptr->k_idx].level - askill * 2;
 			basechance *= 10;

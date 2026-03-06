@@ -1214,7 +1214,7 @@ extern void object_aware(object_type *o_ptr);
 extern void object_tried(object_type *o_ptr);
 extern s32b object_value(object_type *o_ptr);
 extern s32b object_value_shop(object_type *o_ptr);
-extern s32b object_value_real(object_type *o_ptr);
+extern s32b object_value_real(object_type *o_ptr, bool isshop);
 extern s32b object_value_xtra(object_type *o_ptr);
 extern bool object_similar(object_type *o_ptr, object_type *j_ptr);
 extern void object_absorb(object_type *o_ptr, object_type *j_ptr);
@@ -1250,7 +1250,7 @@ extern void object_gain_level(object_type *o_ptr);
 extern void gain_flag_group_flag(object_type *o_ptr, bool silent);
 extern void gain_flag_group(object_type *o_ptr, bool silent);
 extern void get_table_name(char * out_string);
-extern s32b flag_cost(object_type * o_ptr, int plusses);
+extern s32b flag_cost(object_type * o_ptr, int plusses, bool isshop);
 
 /* powers.c */
 extern void do_cmd_power(void);

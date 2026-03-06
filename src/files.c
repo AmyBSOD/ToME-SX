@@ -6051,7 +6051,7 @@ long total_points(void)
 			/* Create fake object */
 			object_prep(i_ptr, k);
 
-			temp += object_value_real(i_ptr);
+			temp += object_value_real(i_ptr, FALSE);
 		}
 	}
 

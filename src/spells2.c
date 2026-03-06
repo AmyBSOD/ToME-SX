@@ -665,7 +665,7 @@ bool alchemy(void) /* Turns an object into gold, gain some of its value in a sho
 		return FALSE;
 	}
 
-	price = object_value_real(o_ptr);
+	price = object_value_real(o_ptr, FALSE);
 
 	if (price <= 0)
 		/* Message */

@@ -801,7 +801,7 @@ void do_cmd_destroy(void)
 	if (cp_ptr->magic_key == MKEY_TELEKINESIS)
 	{
 		/* Good merchants don't break anything... */
-		s32b value = object_value_real(o_ptr);
+		s32b value = object_value_real(o_ptr, FALSE);
 
 		if (value < 0) value = -value;
 

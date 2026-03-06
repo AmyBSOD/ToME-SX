@@ -4968,7 +4968,7 @@ void store_request_item(void)
 
 	if (test_object_wish(name, q_ptr, &forge, "request"))
 	{
-		int value = object_value_real(q_ptr) * 5;
+		int value = object_value_real(q_ptr, FALSE) * 5;
 
 		/* Pay for the delivery */
 		pay_for_requested_item(value, q_ptr);

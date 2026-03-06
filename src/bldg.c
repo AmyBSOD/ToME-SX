@@ -2139,7 +2139,7 @@ bool bldg_process_command(store_type *s_ptr, int i)
 			req = p_ptr->au;
 
 			for (i = 0; i < INVEN_TOTAL; i++)
-				req += object_value_real(&p_ptr->inventory[i]);
+				req += object_value_real(&p_ptr->inventory[i], FALSE);
 
 			if (req > 100000) req = 100000;
 			if ((req + p_ptr->au) > PY_MAX_GOLD) req = PY_MAX_GOLD - p_ptr->au;

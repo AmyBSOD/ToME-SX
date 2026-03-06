@@ -965,8 +965,9 @@ static s32b object_value_base(object_type *o_ptr)
 	return (0L);
 }
 
-/* Return the value of the flags the object has... */
-s32b flag_cost(object_type * o_ptr, int plusses)
+/* Return the value of the flags the object has...
+ * Amy note: "isshop" is for when a shop displays the item; if TRUE, negative modifiers shouldn't reduce the cost */
+s32b flag_cost(object_type * o_ptr, int plusses, bool isshop)
 {
 	s32b total = 0;
 	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
@@ -977,7 +978,7 @@ s32b flag_cost(object_type * o_ptr, int plusses)
 	{
 		return 0;
 	}
-	if (f4 & TR4_CURSE_NO_DROP)
+	if ((f4 & TR4_CURSE_NO_DROP) && !isshop)
 	{
 		return 0;
 	}
@@ -1029,7 +1030,7 @@ s32b flag_cost(object_type * o_ptr, int plusses)
 	if (f2 & TR2_IM_ELEC) total += 10000;
 	if (f2 & TR2_IM_FIRE) total += 10000;
 	if (f2 & TR2_IM_COLD) total += 10000;
-	if (f2 & TR2_SENS_FIRE) total -= 100;
+	if ((f2 & TR2_SENS_FIRE) && !isshop) total -= 100;
 	if (f2 & TR2_REFLECT) total += 10000;
 	if (f2 & TR2_FREE_ACT) total += 4500;
 	if (f2 & TR2_HOLD_LIFE) total += 8500;
@@ -1068,7 +1069,7 @@ s32b flag_cost(object_type * o_ptr, int plusses)
 	if (f3 & TR3_NO_TELE) total += 2500;
 	if (f3 & TR3_NO_MAGIC) total += 2500;
 	if (f3 & TR3_WRAITH) total += 250000;
-	if (f3 & TR3_TY_CURSE) total -= 15000;
+	if ((f3 & TR3_TY_CURSE) && !isshop) total -= 15000;
 	if (f3 & TR3_EASY_KNOW) total += 0;
 	if (f3 & TR3_HIDE_TYPE) total += 0;
 	if (f3 & TR3_SHOW_MODS) total += 0;
@@ -1087,26 +1088,27 @@ s32b flag_cost(object_type * o_ptr, int plusses)
 	if (f3 & TR3_IGNORE_FIRE) total += 100;
 	if (f3 & TR3_IGNORE_COLD) total += 100;
 	if (f3 & TR3_ACTIVATE) total += 100;
-	if (f3 & TR3_DRAIN_EXP) total -= 12500;
+	if ((f3 & TR3_DRAIN_EXP) && !isshop) total -= 12500;
 	if (f3 & TR3_TELEPORT)
 	{
-		if (o_ptr->ident & IDENT_CURSED)
-			total -= 7500;
-		else
+		if (o_ptr->ident & IDENT_CURSED) {
+			if (!isshop) total -= 7500;
+		} else {
 			total += 250;
+		}
 	}
-	if (f3 & TR3_AGGRAVATE) total -= 10000;
+	if ((f3 & TR3_AGGRAVATE) && !isshop) total -= 10000;
 	if (f3 & TR3_BLESSED) total += 750;
-	if ((f3 & TR3_CURSED) && (o_ptr->ident & IDENT_CURSED)) total -= 5000;
-	if ((f3 & TR3_HEAVY_CURSE) && (o_ptr->ident & IDENT_CURSED)) total -= 12500;
-	if (f3 & TR3_PERMA_CURSE) total -= 15000;
+	if ((f3 & TR3_CURSED) && !isshop && (o_ptr->ident & IDENT_CURSED)) total -= 5000;
+	if ((f3 & TR3_HEAVY_CURSE) && !isshop && (o_ptr->ident & IDENT_CURSED)) total -= 12500;
+	if ((f3 & TR3_PERMA_CURSE) && !isshop) total -= 15000;
 	if (f3 & TR3_FEATHER) total += 1250;
 	if (f4 & TR4_FLY) total += 10000;
-	if (f4 & TR4_NEVER_BLOW) total -= 15000;
+	if ((f4 & TR4_NEVER_BLOW) && !isshop) total -= 15000;
 	if (f4 & TR4_PRECOGNITION) total += 250000;
-	if (f4 & TR4_BLACK_BREATH) total -= 12500;
-	if (f4 & TR4_DG_CURSE) total -= 25000;
-	if (f4 & TR4_CLONE) total -= 10000;
+	if ((f4 & TR4_BLACK_BREATH) && !isshop) total -= 12500;
+	if ((f4 & TR4_DG_CURSE) && !isshop) total -= 25000;
+	if ((f4 & TR4_CLONE) && !isshop) total -= 10000;
 	if (f4 & TR4_LEVELS) total += o_ptr->elevel * 2000;
 
 	/* Also, give some extra for activatable powers... */
@@ -1215,7 +1217,7 @@ s32b flag_cost(object_type * o_ptr, int plusses)
  *
  * Every wearable item with a "pval" bonus is worth extra (see below).
  */
-s32b object_value_real(object_type *o_ptr)
+s32b object_value_real(object_type *o_ptr, bool isshop)
 {
 	s32b value;
 	s32b basevalue;
@@ -1246,7 +1248,7 @@ s32b object_value_real(object_type *o_ptr)
 	/* Amy edit: it's real silly if branded ammo costs like 8000 per shot!! no one will ever buy those */
 	if (o_ptr->art_flags1 || o_ptr->art_flags2 || o_ptr->art_flags3)
 	{
-		int flagcostiem = flag_cost(o_ptr, o_ptr->pval);
+		int flagcostiem = flag_cost(o_ptr, o_ptr->pval, isshop);
 
 		switch (o_ptr->tval) {
 			case TV_SHOT:
@@ -1616,7 +1618,7 @@ s32b object_value_xtra(object_type *o_ptr)
 	/* Amy edit: it's real silly if branded ammo costs like 8000 per shot!! no one will ever buy those */
 	if (o_ptr->art_flags1 || o_ptr->art_flags2 || o_ptr->art_flags3)
 	{
-		int flagcostiem = flag_cost(o_ptr, o_ptr->pval);
+		int flagcostiem = flag_cost(o_ptr, o_ptr->pval, TRUE);
 
 		value += flagcostiem;
 	}
@@ -1948,7 +1950,7 @@ s32b object_value(object_type *o_ptr)
 		if (cursed_p(o_ptr)) return (0L);
 
 		/* Real value (see above) */
-		value = object_value_real(o_ptr);
+		value = object_value_real(o_ptr, FALSE);
 	}
 
 	/* Known items -- acquire the actual value */
@@ -1980,11 +1982,11 @@ s32b object_value_shop(object_type *o_ptr)
 	/* Unknown items -- acquire a base value */
 	if (object_known_p(o_ptr))
 	{
-		/* Cursed items -- worthless */
-		if (cursed_p(o_ptr)) return (0L);
+		/* Cursed items -- worthless, but since you're buying them... */
+		/* if (cursed_p(o_ptr)) return (0L); */
 
-		/* Real value (see above) */
-		value = object_value_real(o_ptr);
+		/* Real value (see above), but with "isshop" flag set to TRUE */
+		value = object_value_real(o_ptr, TRUE);
 	}
 
 	/* Known items -- acquire the actual value */
