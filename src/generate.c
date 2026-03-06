@@ -546,8 +546,8 @@ void place_new_way(int *y, int *x)
 		/* Look at the starting location */
 		c_ptr = &cave[yy][xx];
 
-		/* Reject locations inside vaults */
-		if (c_ptr->info & (CAVE_ICKY)) continue;
+		/* Reject locations inside vaults -- edit by Amy: nope, of course they can be in there! */
+		/* if (c_ptr->info & (CAVE_ICKY)) continue; */
 
 		/* Reject permanent features */
 		if ((f_info[c_ptr->feat].flags1 & (FF1_PERMANENT)) &&
@@ -733,7 +733,8 @@ bool new_player_spot(int branch)
 			if (!cave_naked_bold(y, x)) continue;
 
 			/* Refuse to start on anti-teleport grids */
-			if (cave[y][x].info & (CAVE_ICKY)) continue;
+			/* vault appearance nastytrap by Amy allows the player to spawn on such a square */
+			if ((cave[y][x].info & (CAVE_ICKY)) && !p_ptr->nastytrap175) continue;
 
 			/* Done */
 			break;
@@ -822,8 +823,14 @@ static void place_altar(int y, int x)
  */
 static void place_switcher(int y, int x)
 {
-	if (magik(10))
-		cave_set_feat(y, x, FEAT_SWITCHER);
+	/* rareswitch nastytrap makes it much less likely --Amy */
+	if (p_ptr->nastytrap176) {
+		if (magik(2))
+			cave_set_feat(y, x, FEAT_SWITCHER);
+	} else {
+		if (magik(10))
+			cave_set_feat(y, x, FEAT_SWITCHER);
+	}
 }
 
 

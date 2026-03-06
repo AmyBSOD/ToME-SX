@@ -2327,6 +2327,22 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Summoner monsters always summon stuff.";
 	}
+	if (p_ptr->nastytrap175)
+	{
+		info[i++] = "You have a problem: Entering a new level can place you inside a vault.";
+	}
+	if (p_ptr->nastytrap176)
+	{
+		info[i++] = "You have a problem: Switchers are much less common.";
+	}
+	if (p_ptr->nastytrap177)
+	{
+		info[i++] = "You have a problem: Monster levels are more likely to be close to the current depth.";
+	}
+	if (p_ptr->nastytrap178)
+	{
+		info[i++] = "You have a problem: Monster levels are sometimes rerolled.";
+	}
 
 	if (p_ptr->contamination >= 10000)
 	{

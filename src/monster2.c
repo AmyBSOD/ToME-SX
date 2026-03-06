@@ -1201,6 +1201,13 @@ s16b get_mon_num(int level)
 			/* Boost the level */
 			level += ((d < 5) ? d : 5);
 		}
+
+		/* Occasional "super nasty" monster --Amy */
+		if ((rand_int(NASTY_MON) == 0) && (rand_int(NASTY_MON) == 0))
+		{
+			/* Boost the level */
+			level += (10 + rand_int(11));
+		}
 	}
 
 
@@ -1287,8 +1294,9 @@ s16b get_mon_num(int level)
 	/* Power boost */
 	p = rand_int(100);
 
-	/* Try for a "harder" monster once (50%) or twice (10%) */
-	if (p < 60)
+	/* Try for a "harder" monster once (50%) or twice (10%)
+	 * Amy edit: only if hard spawn nastytrap is active (always when playing masochist mode) */
+	if ((p < 60) && p_ptr->nastytrap178 )
 	{
 		/* Save old */
 		j = i;
@@ -1311,7 +1319,7 @@ s16b get_mon_num(int level)
 	}
 
 	/* Try for a "harder" monster twice (10%) */
-	if (p < 10)
+	if ((p < 10) && p_ptr->nastytrap178)
 	{
 		/* Save old */
 		j = i;
@@ -1331,6 +1339,34 @@ s16b get_mon_num(int level)
 
 		/* Keep the "best" one */
 		if (table[i].level < table[j].level) i = j;
+	}
+
+	/* leveled spawn nastytrap: roll four more times to get a higher level monster --Amy */
+	if (p_ptr->nastytrap177) {
+		int extratries = 4;
+		while (extratries > 0) {
+			extratries--;
+
+			/* Save old */
+			j = i;
+
+			/* Pick a monster */
+			value = rand_int(total);
+
+			/* Find the monster */
+			for (i = 0; i < alloc_race_size; i++)
+			{
+				/* Found the entry */
+				if (value < table[i].prob3) break;
+
+				/* Decrement */
+				value = value - table[i].prob3;
+			}
+
+			/* Keep the "best" one */
+			if (table[i].level < table[j].level) i = j;
+		}
+
 	}
 
 

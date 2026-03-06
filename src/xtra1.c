@@ -5040,6 +5040,7 @@ void calc_bonuses(bool silent)
 		p_ptr->nastytrap143 = TRUE; /* monster spell and breath damage is much meaner */
 		p_ptr->nastytrap144 = TRUE; /* monster levelscaling is much more unforgiving */
 		p_ptr->nastytrap174 = TRUE; /* summoning spells used by monsters always summon shit */
+		p_ptr->nastytrap178 = TRUE; /* monster levels are rerolled once or twice to see whether you get a higher-level one */
 	}
 
 	/* Let the scripts do what they need */

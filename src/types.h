@@ -2299,10 +2299,10 @@ struct player_type
 	bool nastytrap172; /* lvl 5, fleecescript trap - menu lines are randomly colored */
 	bool nastytrap173; /* lvl 12, rainbow trap - glyphs are randomly colored */
 	bool nastytrap174; /* lvl 20, summonstorm trap - monster summoning spells always summon stuff */
-	bool nastytrap175;
-	bool nastytrap176;
-	bool nastytrap177;
-	bool nastytrap178;
+	bool nastytrap175; /* lvl 10, vault appearance trap - you can spawn inside a vault when entering a new level */
+	bool nastytrap176; /* lvl 30, rareswitch trap - switchers are less common */
+	bool nastytrap177; /* lvl 40, leveled spawn trap - monsters are more likely to be of a high level */
+	bool nastytrap178; /* lvl 20, hard spawn trap - monsters have a few chances of being higher level */
 	bool nastytrap179;
 	bool nastytrap180;
 	bool nastytrap181;

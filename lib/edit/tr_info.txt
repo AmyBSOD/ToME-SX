@@ -3797,6 +3797,26 @@ I:40:2:50:4:20:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:771:Vault Appearance Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:772:Rareswitch Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:773:Leveled Spawn Trap
+I:60:2:50:4:40:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:774:Hard Spawn Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 
