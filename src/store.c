@@ -2707,6 +2707,9 @@ void store_stole(void)
 
 	char out_val[160];
 
+	bool stealwillfail = FALSE;
+	int stealfailchance = 0;
+
 	if (cur_store_num == 7)
 	{
 		msg_print("You can't steal from your home!");
@@ -2789,106 +2792,142 @@ void store_stole(void)
 	                (( (j_ptr->weight + randint(5) ) * amt) / (5 + get_skill_scale(SKILL_STEALING, 15))) -
 	                (get_skill_scale(SKILL_STEALING, 15))) <= 10) && (rand_int(10) > 0)) /* minimum failure rate --Amy */
 	{
-		/* Hack -- buying an item makes you aware of it */
-		object_aware(j_ptr);
+		/* additional failure chance for pricey items because we don't want the game to become too easy --Amy */
+		stealwillfail = FALSE;
+		stealfailchance = 0;
 
-		/* Be aware of how you found it */
-		j_ptr->found = OBJ_FOUND_STOLEN;
-		j_ptr->found_aux1 = st_ptr->st_idx;
+		if (object_value_real(o_ptr, TRUE) >= 1000) stealfailchance = 10;
+		if (object_value_real(o_ptr, TRUE) >= 5000) stealfailchance = 20;
+		if (object_value_real(o_ptr, TRUE) >= 15000) stealfailchance = 25;
+		if (object_value_real(o_ptr, TRUE) >= 25000) stealfailchance = 33;
+		if (object_value_real(o_ptr, TRUE) >= 50000) stealfailchance = 40;
+		if (object_value_real(o_ptr, TRUE) >= 100000) stealfailchance = 50;
+		if (object_value_real(o_ptr, TRUE) >= 200000) stealfailchance = 60;
+		if (object_value_real(o_ptr, TRUE) >= 300000) stealfailchance = 66;
+		if (object_value_real(o_ptr, TRUE) >= 500000) stealfailchance = 75;
+		if (object_value_real(o_ptr, TRUE) >= 750000) stealfailchance = 80;
+		if (object_value_real(o_ptr, TRUE) >= 1000000) stealfailchance = 90;
 
-		/* Hack -- clear the "fixed" flag from the item */
-		j_ptr->ident &= ~(IDENT_FIXED);
+		if ((stealfailchance > 0) && magik(stealfailchance)) stealwillfail = TRUE;
 
-		/* "Hot" merchandise can't be sold back.  It doesn't make sense
-		   to be able to sell back to a guy what you just stole from him.
-		   Also, without the discount one could fairly easily macro himself
-		   an infinite money supply */
-		j_ptr->discount = 100;
+		if (stealwillfail) {
+			/* Complain */
+			say_comment_4();
 
-		if (o_ptr->tval == TV_WAND)
-		{
-			j_ptr->pval = o_ptr->pval * amt / o_ptr->number;
-			o_ptr->pval -= j_ptr->pval;
-		}
+			/* Reset insults */
+			st_ptr->insult_cur = 0;
+			st_ptr->good_buy = 0;
+			st_ptr->bad_buy = 0;
 
-		/* Describe the transaction */
-		object_desc(o_name, j_ptr, TRUE, 3);
+			/* Kicked out for a LONG time */
+			st_ptr->store_open = turn + 500000 + randint(500000);
+			if (st_ptr->investment > -1000) {
+				if (is_state(st_ptr, STORE_HATED)) st_ptr->investment -= 10;
+				st_ptr->investment -= 10;
+			}
+		} else {
 
-		/* Message */
-		msg_format("You steal %s.", o_name);
+			/* Hack -- buying an item makes you aware of it */
+			object_aware(j_ptr);
 
-		/* Erase the inscription */
-		j_ptr->note = 0;
+			/* Be aware of how you found it */
+			j_ptr->found = OBJ_FOUND_STOLEN;
+			j_ptr->found_aux1 = st_ptr->st_idx;
 
-		/* Give it to the player */
-		item_new = inven_carry(j_ptr, FALSE);
+			/* Hack -- clear the "fixed" flag from the item */
+			j_ptr->ident &= ~(IDENT_FIXED);
 
-		/* Describe the final result */
-		object_desc(o_name, &p_ptr->inventory[item_new], TRUE, 3);
+			/* "Hot" merchandise can't be sold back.  It doesn't make sense
+			   to be able to sell back to a guy what you just stole from him.
+			   Also, without the discount one could fairly easily macro himself
+			   an infinite money supply */
+			j_ptr->discount = 100;
 
-		/* Message */
-		msg_format("You have %s (%c).",
-		           o_name, index_to_label(item_new));
-
-		/* Handle stuff */
-		handle_stuff();
-
-		/* Note how many slots the store used to have */
-		i = st_ptr->stock_num;
-
-		/* Remove the bought items from the store */
-		store_item_increase(item, -amt);
-		store_item_optimize(item);
-
-		/* Store is empty */
-		if (st_ptr->stock_num == 0)
-		{
-			/* Shuffle */
-			if (retire_owner_p())
+			if (o_ptr->tval == TV_WAND)
 			{
-				/* Message */
-				msg_print("The shopkeeper retires.");
-
-				/* Shuffle the store */
-				store_shuffle(cur_store_num);
+				j_ptr->pval = o_ptr->pval * amt / o_ptr->number;
+				o_ptr->pval -= j_ptr->pval;
 			}
 
-			/* Maintain */
+			/* Describe the transaction */
+			object_desc(o_name, j_ptr, TRUE, 3);
+
+			/* Message */
+			msg_format("You steal %s.", o_name);
+
+			/* Erase the inscription */
+			j_ptr->note = 0;
+
+			/* Give it to the player */
+			item_new = inven_carry(j_ptr, FALSE);
+
+			/* Describe the final result */
+			object_desc(o_name, &p_ptr->inventory[item_new], TRUE, 3);
+
+			/* Message */
+			msg_format("You have %s (%c).",
+			           o_name, index_to_label(item_new));
+
+			/* Handle stuff */
+			handle_stuff();
+
+			/* Note how many slots the store used to have */
+			i = st_ptr->stock_num;
+
+			/* Remove the bought items from the store */
+			store_item_increase(item, -amt);
+			store_item_optimize(item);
+
+			/* Store is empty */
+			if (st_ptr->stock_num == 0)
+			{
+				/* Shuffle */
+				if (retire_owner_p())
+				{
+					/* Message */
+					msg_print("The shopkeeper retires.");
+
+					/* Shuffle the store */
+					store_shuffle(cur_store_num);
+				}
+
+				/* Maintain */
+				else
+				{
+					/* Message */
+					msg_print("The shopkeeper brings out some new stock.");
+				}
+
+				/* New inventory */
+				for (i = 0; i < 10; i++)
+				{
+					/* Maintain the store */
+					store_maint(p_ptr->town_num, cur_store_num);
+				}
+
+				/* Start over */
+				store_top = 0;
+
+				/* Redraw everything */
+				display_inventory();
+			}
+
+			/* The item is gone */
+			else if (st_ptr->stock_num != i)
+			{
+				/* Pick the correct screen */
+				if (store_top >= st_ptr->stock_num) store_top -= 12;
+
+				/* Redraw everything */
+				display_inventory();
+			}
+
+			/* Item is still here */
 			else
 			{
-				/* Message */
-				msg_print("The shopkeeper brings out some new stock.");
+				/* Redraw the item */
+				display_entry(item);
 			}
-
-			/* New inventory */
-			for (i = 0; i < 10; i++)
-			{
-				/* Maintain the store */
-				store_maint(p_ptr->town_num, cur_store_num);
-			}
-
-			/* Start over */
-			store_top = 0;
-
-			/* Redraw everything */
-			display_inventory();
-		}
-
-		/* The item is gone */
-		else if (st_ptr->stock_num != i)
-		{
-			/* Pick the correct screen */
-			if (store_top >= st_ptr->stock_num) store_top -= 12;
-
-			/* Redraw everything */
-			display_inventory();
-		}
-
-		/* Item is still here */
-		else
-		{
-			/* Redraw the item */
-			display_entry(item);
 		}
 	}
 	else
