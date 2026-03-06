@@ -12,7 +12,7 @@
 
 # N:<index>:<name>
 # D:<3 letter short name>:<long name>
-# W:<min depth>:<max depth>:<min player level>:<next dungeon>:<min alloc>:<max alloc chance>
+# W:<min depth>:<max depth>:<min player level>:<next dungeon>:<min alloc>:<max alloc chance> - min alloc = minimum amount of monsters, max alloc = 1 in X chance to spawn one
 # L:<floor1>:<%1>:<floor2>:<%2>:<floor3>:<%3>
 # A:<wall1>:<%1>:<wall2>:<%2>:<wall3>:<%3>:<outer wall>:<inner wall>
 # O:<%treasure>:<%combat>:<%magic>:<%tools>
@@ -160,6 +160,7 @@ F:RANDOM_TOWNS | NO_RECALL | NO_SHAFT
 F:FILL_METHOD_0
 #R:100:2
 #M:UNIQUE
+R:100:0
 
 # Cirith Ungol
 # levels 25-50
@@ -884,6 +885,7 @@ O:20:20:20:20
 F:NO_STREAMERS | NO_SHAFT | CAVERN | 
 F:FILL_METHOD_2 
 F:FINAL_GUARDIAN_3916
+R:100:0
 
 N:55:Amon Sul
 D:ASu:the entrance to the tower of Amon Sul.
@@ -895,6 +897,7 @@ O:20:20:20:20
 F:NO_STREAMERS | NO_SHAFT | CAVERN | 
 F:FILL_METHOD_3
 F:FINAL_GUARDIAN_3917
+R:100:0
 
 N:56:Hornburg
 D:Hor:the entrance to Hornburg.
@@ -906,6 +909,7 @@ O:20:20:20:20
 F:NO_SHAFT | RANDOM_TOWNS | 
 F:FILL_METHOD_1
 F:FINAL_GUARDIAN_3918
+R:100:0
 
 N:57:Fornost Erain
 D:For:the entrance to Fornost Erain.
@@ -918,6 +922,7 @@ F:NO_SHAFT | RANDOM_TOWNS | FLAT | CAVE | WATER_RIVER | LAVA_RIVER |
 F:FILL_METHOD_1
 F:FINAL_GUARDIAN_3919
 E:2d5:60:SHARDS
+R:100:0
 
 N:58:Caras Galadhon
 D:Car:the entrance to the remains of Caras Galadhon.
@@ -930,6 +935,7 @@ F:RANDOM_TOWNS | BIG | LAVA_RIVERS | CAVERN | NO_EASY_MOVE |
 F:FILL_METHOD_4
 F:FINAL_GUARDIAN_3920
 E:3d5:30:SOUND
+R:100:0
 
 N:59:R'lyeh
 D:Rly:the entrance to the town of horrors R'lyeh.
@@ -1157,6 +1163,63 @@ F:FINAL_GUARDIAN_5342
 R:10:0
 R:90:3
 M:R_CHAR_U | DEMON
+
+N:74:Mount Fate
+D:MFa:a way to the top of the Mount Fate.
+W:65:99:1:0:14:160
+L:93:90:123:1:94:9
+A:51:75:56:25:0:0:216:92
+O:10:30:10:30
+E:1d1:40:RAISE
+E:1d6:50:MIND
+F:CAVE | LAVA_RIVERS | NO_RECALL | BIG |
+F:FILL_METHOD_3 | NO_EASY_MOVE
+R:10:3
+M:NAZGUL | REVBOSS
+R:40:3
+M:WILD_TOWN | WILD_SHORE | WILD_OCEAN | WILD_WASTE |
+M:WILD_WOOD | WILD_VOLCANO | WILD_MOUNTAIN | WILD_GRASS |
+R:50:0
+
+N:75:Wild Mine
+D:WMi:the entrance to a wild mine.
+W:1:10:1:0:15:150
+L:1:40:94:30:207:30
+A:56:40:51:30:50:30:57:58
+O:30:20:5:30
+F:CAVERN | 
+F:FILL_METHOD_3 
+F:FINAL_GUARDIAN_5345
+R:10:1
+M:WILD_TOWN
+R:10:1
+M:WILD_SHORE
+R:10:1
+M:WILD_OCEAN
+R:10:1
+M:WILD_WASTE
+R:10:1
+M:WILD_WOOD
+R:10:1
+M:WILD_VOLCANO
+R:10:1
+M:WILD_MOUNTAIN
+R:10:1
+M:WILD_GRASS
+R:20:0
+
+N:76:Femmy's Cave
+D:Fem:the entrance to a scented cave.
+W:10:20:1:0:10:120
+L:1:88:84:10:227:2
+A:56:90:229:5:239:5:215:204
+O:30:5:30:30
+F:NO_SHAFT | CAVE | NO_DOORS | SAND_VEIN | MAGMA_VEIN | QUARTZ_VEIN |
+F:FILL_METHOD_3
+F:FINAL_GUARDIAN_5346
+R:50:0
+R:50:1
+M:FEMALE
 
 # N:<index>:<name>
 # D:<3 letter short name>:<long name>

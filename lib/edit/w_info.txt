@@ -165,3 +165,10 @@ W:E:70:1:26
 
 # Starting position
 W:P:34:21
+
+# Wild Mine
+W:E:75:19:45
+
+# Femmy's Cave
+W:E:76:28:50
+

@@ -2943,6 +2943,7 @@ void do_cmd_version(void)
 	msg_format("You are playing %s %d.%d.%d%s made by %s (%s).",
 	           game_module, VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH, IS_CVS,
 	           author, email);
+	msg_format("ToME-SX version %s by AmyBSOD.", TOMESX_VERSION);
 	call_lua("patchs_display", "()", "");
 }
 

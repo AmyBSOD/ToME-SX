@@ -1,0 +1,224 @@
+# Mount Fate
+
+### Terrain Features
+# Permanent Wall
+F:X:177:0
+
+# Lava Wall
+F:#:177:0
+F: :177:0
+
+# Great Fire
+F:$:178:0
+
+# Fire
+F:%:205:0
+
+# Hidden Door
+F:+:48:0:0:0:0:0:0:0:177
+
+# Normal Door
+F:D:32:0
+
+# Shallow Lava
+F:.:86:0
+
+# Deep Lava
+F:L:85:0
+
+# Treasure (random) on shallow lava
+F:*:86:0:0:*
+
+# Trap (random) on deep lava
+F:^:85:0:0:0:0:0:*
+
+# Trap (random) on shallow lava
+F:t:86:0:0:0:0:0:*
+
+# up staircase
+F:<:6:0
+
+### Guaranteed Monsters
+# edited by Amy so they're just random ones
+
+# Greater Balrog on deep lava
+F:A:85:0:*99
+
+# Greater Balrog on shallow lava
+F:a:86:0:*99
+
+# Lesser Balrog on deep lava
+F:B:85:0:*99
+
+# Lesser Balrog on shallow lava
+F:b:86:0:*99
+
+# Pit Fiend on deep lava
+F:C:85:0:*99
+
+# Pit Fiend on shallow lava
+F:c:86:0:*99
+
+# Great Wyrm of Power on deep lava
+F:E:85:0:*99
+
+# Great Wyrm of Power on shallow lava
+F:e:86:0:*99
+
+# Bone Golem on deep lava
+F:F:85:0:*99
+
+# Bone Golem on shallow lava
+F:f:86:0:*99
+
+# Dracolisk on deep lava
+F:G:85:0:*99
+
+# Dracolisk on shallow lava
+F:g:86:0:*99
+
+# Nycadaemon on deep lava
+F:H:85:0:*99
+
+# Nycadaemon on shallow lava
+F:h:86:0:*99
+
+# Barbazu on deep lava
+F:I:85:0:*99
+
+# Barbazu on shallow lava
+F:i:86:0:*99
+
+# Plasma Hounds on deep lava
+F:J:85:0:*99
+
+# Plasma Hounds on shallow lava
+F:j:86:0:*99
+
+# Hell knight on deep lava
+F:K:85:0:*99
+
+# Hell knight on shallow lava
+F:k:86:0:*99
+
+# Nightcrawler on deep lava
+F:M:85:0:*99
+
+# Nightcrawler on shallow lava
+F:m:86:0:*99
+
+# Aether Hound on deep lava
+F:N:85:0:*99
+
+# Aether Hound on shallow lava
+F:n:86:0:*99
+
+# Eye druj on deep lava
+F:O:85:0:*99
+
+# Eye druj on shallow lava
+F:o:86:0:*99
+
+# Skull druj on deep lava
+F:P:85:0:*99
+
+# Skull druj on shallow lava
+F:p:86:0:*99
+
+# Great Hell Wyrm on deep lava
+F:Q:85:0:*99
+
+# Great Hell Wyrm on shallow lava
+F:q:86:0:*99
+
+# Nightwalker on deep lava
+F:R:85:0:*99
+
+# Nightwalker on shallow lava
+F:r:86:0:*99
+
+# Osyluth on deep lava
+F:S:85:0:*99
+
+# Osyluth on shallow lava
+F:s:86:0:*99
+
+# Great Wyrm of Many Colours on deep lava
+F:U:85:0:*99
+
+# Great Wyrm of Many Colours on shallow lava
+F:u:86:0:*99
+
+# Horned Reaper on deep lava
+F:V:85:0:*99
+
+# Horned Reaper on shallow lava
+F:v:86:0:*99
+
+# Bronze Golem on deep lava
+F:W:85:0:*99
+
+# Bronze Golem on shallow lava
+F:w:86:0:*99
+
+### Random Monsters and/or Items
+# Random monster on deep lava
+F:!:85:0:*99
+
+# Random monster on shallow lava
+F:1:86:0:*99
+
+# Random monster (upto 10 levels ood) on deep lava
+F:@:85:0:*109
+
+# Random monster (upto 10 levels ood) on shallow lava
+F:2:86:0:*109
+
+# Random monster on deep lava
+F:&:85:0:*99
+
+# Random monster on shallow lava
+F:7:86:0:*99
+
+# Random monster (upto 10 levels ood) on deep lava
+F:(:85:0:*109
+
+# Random monster (upto 10 levels ood) on shallow lava
+F:9:86:0:*109
+
+
+D:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+D:X          #%%NNLL...JJJ....LL#                                               ##############   X
+D:X #####    #NNNN...Ljjjjj..LLL#   #############################################..1!!!!...L###  X
+D:X##.LL##   #nNNN...LLJJj.LLLLL#   #L....&!&!&....L%%%%%%%L..mRR%R%%M%MML%LL...DL...!1&..@L%%#  X
+D:X#LL<..#   #nn.LL.LLLL...%%%LL#   #..##########################################LLL....LLL%%%#  X
+D:X##%LL##   #....LLL%%LLL..^LLL#   #.L#                                        #LL2.t..q.LLL##  X
+D:X ###+#    #D##############+#######.L#                                       ##%%.LLLL&L...#   X
+D:X   #!#    #.#            #.......L%%#                                      ##%%LL..2...t.##   X
+D:X   #^#    #.############ ##########+#             XXXXXXXXXX                ##.9.t.LLLLL##    X
+D:X   #.#    #LL%%%%LL...p#      #11111#             X########X     ###############.2..LQ#+#     X
+D:X  ##.#    ############D##     #11211#             X#9....9#X     #o.....t...#  ###^L..#(#     X
+D:X  #L##             ##%%V##    #12221#        XXXXXX#..$$..#XXXXXX#LLLLKkk...#    ###D####     X
+D:X  ##!#            ##.VH^%##   #12221#        X######t....m######X#LLLLkkk.LL#      #.#        X
+D:X   #.#           ##.iH%%hv##  #11211###      X#sSSSrrt%.mVVVLLe#X#.LL.kkk...#     ##.#        X
+D:X ###D#########   #tiI%HHhvL#  #11111+9#      X#rRssRr.%.mVvvm..#X#%...LLL...#    ##Lo######   X
+D:X #.^t^LLL...L##  #.LIH%Hc..#  #########      X#.MmmM..%..MMLLL.#X#%%......L&#   ##.L##EBBB#   X
+D:X #.jJ%%%L....L#  ##..ICCL.##                 X#.L..L..%ttL.....#X########D###   #.####LAAB##  X
+D:X #JJJJL%LLL&..#   ##..L.L##                  X#9LLL...%..LL(LLq#X   #..L..#     #.LL..LB%%L#  X
+D:X #J%J..LLL%%LL##   ##.t.##                   X######......######X   #L.####     ###..LL%%%L## X
+D:X #jJJ^..bL%LL..##   ##D#################     XXXXXX#.LUUL.#XXXXXX   #.L#          #.PL%%%@(L# X
+D:X ##....BABLL..L.##   #.uLL^L..L%^^..L%%#          X#.L%%LL#X        #L.####       ###.L%LL..##X
+D:X  ##....B%%L.....##  #################L#          X#LLL..t#X        #..twW#        #L..LL...+pX
+D:X  ###....LLL...LLL####################.#          X#%L..7.#X        #####L#      ###LL...1###oX
+D:X  #9+L%%L...LLL....D.+..%%oF.%%^..%%LL.#          X#LLLLt.#X            #p#      #%%%!@..## #tX
+D:X  ##################L###.L###..###.L####          X#7tt.LL#X            #.#      #########  #EX
+D:X  ##################.# ##############             X#.LLLL.#X       ######D###################LX
+D:X      ##11!!!&LL.+(#L#                            X#LL%%LL#X       #G..LLL.LL...D..LL....^LLL%X
+D:X     ##1!!!%%%%Lp###L#                            X#L%%%%Q#X       #..LF....K...##############X
+D:X     ##!!%%%%%LLL..#.#                            XXXXDDXXXX########.LLLL..KKK..####          X
+D:X      ##.LLLLLLL...+.#                               #%%%%%%%%%%%%%+LL7..LL.k..L+o7#          X
+D:X       ###############                               ###############################          X
+D:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+### Starting location
+P:6:6

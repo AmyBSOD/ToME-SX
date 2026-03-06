@@ -92877,6 +92877,82 @@ F:RES_WALL | RES_GRAV | RES_DISE | RES_ETHE | IM_ACID |
 D:The anti-fun squad. These bastard things spawn in groups and 
 D:constantly hit you with confusion and contamination.
 
+N:5345:Mira
+G:p:y
+I:113:50d20:10:25:50
+W:10:5:1500:500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:ACID:3d4
+B:HIT:ETHER:2d15
+F:UNIQUE | FEMALE | CAN_SPEAK | GOOD | FORCE_MAXHP | SPECIAL_GENE |
+F:DROP_CORPSE | REGENERATE | IM_ACID | RES_ETHE | NO_THEFT |
+F:STUPID | DROP_22 | DROP_GREAT | DROP_RANDART | OPEN_DOOR |
+F:RES_TIME | BASEANGBAND | WEIRD_MIND | RES_WATE | RES_NEXU |
+F:NO_FEAR | NO_STUN | NO_SLEEP | CAN_SWIM | AI_ANNOY | RES_INER | 
+F:RES_WALL | RES_MIND | 
+S:1_IN_5
+S:BR_ACID | BR_ETHE | BA_ACID | MIND_BLAST | CONF | HEAL | 
+D:She leads a spa. But this one is different: instead of water, the basin is 
+D:filled with her urine! Who the hell would want to swim there??? 
+
+N:5346:Femmy
+G:@:w
+I:115:50d40:8:40:120
+W:20:5:3000:2000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:6d6
+B:FART:*
+F:UNIQUE | FEMALE | CAN_SPEAK | FORCE_MAXHP | SPECIAL_GENE |
+F:DROP_CORPSE | NO_THEFT | MOVE_BODY | FORCE_SLEEP | IM_COLD | 
+F:DROP_22 | DROP_GREAT | DROP_RANDART | OPEN_DOOR | IM_POIS | 
+F:BASEANGBAND | WEIRD_MIND | NO_FEAR | CAN_SWIM | RES_LITE | 
+F:RES_CHAO | RES_NERV | 
+S:1_IN_5
+S:BR_NERV | SHRIEK | HASTE | 
+D:A very sexy girl. You'd absolutely want to have intercourse with her. But, 
+D:I'm fairly certain that it's not the best idea to do so and you'd be 
+D:well-advised to spank her butt instead! 
+
+N:5347:The Girl from the Spa
+G:p:y
+I:113:50d20:10:25:50
+W:10:150:1500:500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:ACID:3d4
+B:HIT:ETHER:2d15
+F:UNIQUE | FEMALE | CAN_SPEAK | GOOD | FORCE_MAXHP | 
+F:DROP_CORPSE | REGENERATE | IM_ACID | RES_ETHE | NO_THEFT |
+F:STUPID | DROP_22 | DROP_GREAT | OPEN_DOOR |
+F:RES_TIME | BASEANGBAND | WEIRD_MIND | RES_WATE | RES_NEXU |
+F:NO_FEAR | NO_STUN | NO_SLEEP | CAN_SWIM | AI_ANNOY | RES_INER | 
+F:RES_WALL | RES_MIND | 
+S:1_IN_5
+S:BR_ACID | BR_ETHE | BA_ACID | MIND_BLAST | CONF | HEAL | 
+D:She leads a spa. But this one is different: instead of water, the basin is 
+D:filled with her urine! Who the hell would want to swim there??? 
+
+N:5348:The Dream Woman
+G:@:w
+I:115:50d40:8:40:120
+W:20:150:3000:2000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:6d6
+B:FART:*
+F:UNIQUE | FEMALE | CAN_SPEAK | FORCE_MAXHP | 
+F:DROP_CORPSE | NO_THEFT | MOVE_BODY | FORCE_SLEEP | IM_COLD | 
+F:DROP_22 | DROP_GREAT | OPEN_DOOR | IM_POIS | 
+F:BASEANGBAND | WEIRD_MIND | NO_FEAR | CAN_SWIM | RES_LITE | 
+F:RES_CHAO | RES_NERV | 
+S:1_IN_5
+S:BR_NERV | SHRIEK | HASTE | 
+D:A very sexy girl. You'd absolutely want to have intercourse with her. But, 
+D:I'm fairly certain that it's not the best idea to do so and you'd be 
+D:well-advised to spank her butt instead! 
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness (low = more alert)
