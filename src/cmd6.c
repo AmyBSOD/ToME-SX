@@ -3809,7 +3809,7 @@ bool curse_garment(void)
 	}
 
 
-	/* Curse the body armor */
+	/* Curse the garment */
 	o_ptr = &p_ptr->inventory[whichslot];
 
 	/* Nothing to curse */
@@ -3824,6 +3824,361 @@ bool curse_garment(void)
 	{
 		/* Cool */
 		msg_format("A terrible black aura tries to surround your garments, "
+		           "but your %s resists the effects!", o_name);
+	}
+
+	/* not artifact or failed save... */
+	else
+	{
+		/* Oops */
+		msg_format("A terrible black aura blasts your %s!", o_name);
+
+		/* Blast the armor */
+		o_ptr->name1 = 0;
+		o_ptr->name2 = EGO_BLASTED;
+		if (o_ptr->pval > 0) o_ptr->pval = 0;
+		o_ptr->to_a = 0 - randint(5) - randint(5);
+		o_ptr->to_h = 0;
+		o_ptr->to_d = 0;
+		o_ptr->ac = 0;
+		o_ptr->dd = 0;
+		o_ptr->ds = 0;
+		o_ptr->art_flags1 = 0;
+		o_ptr->art_flags2 = 0;
+		o_ptr->art_flags3 = 0;
+		o_ptr->art_flags4 = 0;
+		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
+
+		/* Curse it */
+		o_ptr->ident |= (IDENT_CURSED);
+
+		/* Recalculate bonuses */
+		p_ptr->update |= (PU_BONUS);
+
+		/* Recalculate mana */
+		p_ptr->update |= (PU_MANA);
+
+		/* Window stuff */
+		p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+	}
+
+	return (TRUE);
+}
+
+/*
+ * Curse the players garment, by Amy
+ */
+bool curse_cloak(void)
+{
+	object_type *o_ptr;
+
+	char o_name[80];
+
+	/* Curse the cloak */
+	o_ptr = &p_ptr->inventory[INVEN_OUTER];
+
+	/* Nothing to curse */
+	if (!o_ptr->k_idx) return (FALSE);
+
+
+	/* Describe */
+	object_desc(o_name, o_ptr, FALSE, 3);
+
+	/* Attempt a saving throw for artifacts */
+	if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
+	{
+		/* Cool */
+		msg_format("A terrible black aura tries to surround your cloak, "
+		           "but your %s resists the effects!", o_name);
+	}
+
+	/* not artifact or failed save... */
+	else
+	{
+		/* Oops */
+		msg_format("A terrible black aura blasts your %s!", o_name);
+
+		/* Blast the armor */
+		o_ptr->name1 = 0;
+		o_ptr->name2 = EGO_BLASTED;
+		if (o_ptr->pval > 0) o_ptr->pval = 0;
+		o_ptr->to_a = 0 - randint(5) - randint(5);
+		o_ptr->to_h = 0;
+		o_ptr->to_d = 0;
+		o_ptr->ac = 0;
+		o_ptr->dd = 0;
+		o_ptr->ds = 0;
+		o_ptr->art_flags1 = 0;
+		o_ptr->art_flags2 = 0;
+		o_ptr->art_flags3 = 0;
+		o_ptr->art_flags4 = 0;
+		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
+
+		/* Curse it */
+		o_ptr->ident |= (IDENT_CURSED);
+
+		/* Recalculate bonuses */
+		p_ptr->update |= (PU_BONUS);
+
+		/* Recalculate mana */
+		p_ptr->update |= (PU_MANA);
+
+		/* Window stuff */
+		p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+	}
+
+	return (TRUE);
+}
+
+/*
+ * Curse the players garment, by Amy
+ */
+bool curse_gauntlets(void)
+{
+	object_type *o_ptr;
+
+	char o_name[80];
+
+	/* Curse the cloak */
+	o_ptr = &p_ptr->inventory[INVEN_HANDS];
+
+	/* Nothing to curse */
+	if (!o_ptr->k_idx) return (FALSE);
+
+
+	/* Describe */
+	object_desc(o_name, o_ptr, FALSE, 3);
+
+	/* Attempt a saving throw for artifacts */
+	if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
+	{
+		/* Cool */
+		msg_format("A terrible black aura tries to surround your cloak, "
+		           "but your %s resists the effects!", o_name);
+	}
+
+	/* not artifact or failed save... */
+	else
+	{
+		/* Oops */
+		msg_format("A terrible black aura blasts your %s!", o_name);
+
+		/* Blast the armor */
+		o_ptr->name1 = 0;
+		o_ptr->name2 = EGO_BLASTED;
+		if (o_ptr->pval > 0) o_ptr->pval = 0;
+		o_ptr->to_a = 0 - randint(5) - randint(5);
+		o_ptr->to_h = 0;
+		o_ptr->to_d = 0;
+		o_ptr->ac = 0;
+		o_ptr->dd = 0;
+		o_ptr->ds = 0;
+		o_ptr->art_flags1 = 0;
+		o_ptr->art_flags2 = 0;
+		o_ptr->art_flags3 = 0;
+		o_ptr->art_flags4 = 0;
+		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
+
+		/* Curse it */
+		o_ptr->ident |= (IDENT_CURSED);
+
+		/* Recalculate bonuses */
+		p_ptr->update |= (PU_BONUS);
+
+		/* Recalculate mana */
+		p_ptr->update |= (PU_MANA);
+
+		/* Window stuff */
+		p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+	}
+
+	return (TRUE);
+}
+
+/*
+ * Curse the players garment, by Amy
+ */
+bool curse_helm(void)
+{
+	object_type *o_ptr;
+
+	char o_name[80];
+
+	/* Curse the cloak */
+	o_ptr = &p_ptr->inventory[INVEN_HEAD];
+
+	/* Nothing to curse */
+	if (!o_ptr->k_idx) return (FALSE);
+
+
+	/* Describe */
+	object_desc(o_name, o_ptr, FALSE, 3);
+
+	/* Attempt a saving throw for artifacts */
+	if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
+	{
+		/* Cool */
+		msg_format("A terrible black aura tries to surround your cloak, "
+		           "but your %s resists the effects!", o_name);
+	}
+
+	/* not artifact or failed save... */
+	else
+	{
+		/* Oops */
+		msg_format("A terrible black aura blasts your %s!", o_name);
+
+		/* Blast the armor */
+		o_ptr->name1 = 0;
+		o_ptr->name2 = EGO_BLASTED;
+		if (o_ptr->pval > 0) o_ptr->pval = 0;
+		o_ptr->to_a = 0 - randint(5) - randint(5);
+		o_ptr->to_h = 0;
+		o_ptr->to_d = 0;
+		o_ptr->ac = 0;
+		o_ptr->dd = 0;
+		o_ptr->ds = 0;
+		o_ptr->art_flags1 = 0;
+		o_ptr->art_flags2 = 0;
+		o_ptr->art_flags3 = 0;
+		o_ptr->art_flags4 = 0;
+		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
+
+		/* Curse it */
+		o_ptr->ident |= (IDENT_CURSED);
+
+		/* Recalculate bonuses */
+		p_ptr->update |= (PU_BONUS);
+
+		/* Recalculate mana */
+		p_ptr->update |= (PU_MANA);
+
+		/* Window stuff */
+		p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+	}
+
+	return (TRUE);
+}
+
+/*
+ * Curse the players garment, by Amy
+ */
+bool curse_shield(void)
+{
+	object_type *o_ptr;
+
+	char o_name[80];
+
+	/* Curse the cloak */
+	o_ptr = &p_ptr->inventory[INVEN_ARM];
+
+	/* Nothing to curse */
+	if (!o_ptr->k_idx) return (FALSE);
+
+
+	/* Describe */
+	object_desc(o_name, o_ptr, FALSE, 3);
+
+	/* Attempt a saving throw for artifacts */
+	if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
+	{
+		/* Cool */
+		msg_format("A terrible black aura tries to surround your cloak, "
+		           "but your %s resists the effects!", o_name);
+	}
+
+	/* not artifact or failed save... */
+	else
+	{
+		/* Oops */
+		msg_format("A terrible black aura blasts your %s!", o_name);
+
+		/* Blast the armor */
+		o_ptr->name1 = 0;
+		o_ptr->name2 = EGO_BLASTED;
+		if (o_ptr->pval > 0) o_ptr->pval = 0;
+		o_ptr->to_a = 0 - randint(5) - randint(5);
+		o_ptr->to_h = 0;
+		o_ptr->to_d = 0;
+		o_ptr->ac = 0;
+		o_ptr->dd = 0;
+		o_ptr->ds = 0;
+		o_ptr->art_flags1 = 0;
+		o_ptr->art_flags2 = 0;
+		o_ptr->art_flags3 = 0;
+		o_ptr->art_flags4 = 0;
+		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
+
+		/* Curse it */
+		o_ptr->ident |= (IDENT_CURSED);
+
+		/* Recalculate bonuses */
+		p_ptr->update |= (PU_BONUS);
+
+		/* Recalculate mana */
+		p_ptr->update |= (PU_MANA);
+
+		/* Window stuff */
+		p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+	}
+
+	return (TRUE);
+}
+
+/*
+ * Curse the players garment, by Amy
+ */
+bool curse_boots(void)
+{
+	object_type *o_ptr;
+
+	char o_name[80];
+
+	/* Curse the cloak */
+	o_ptr = &p_ptr->inventory[INVEN_FEET];
+
+	/* Nothing to curse */
+	if (!o_ptr->k_idx) return (FALSE);
+
+
+	/* Describe */
+	object_desc(o_name, o_ptr, FALSE, 3);
+
+	/* Attempt a saving throw for artifacts */
+	if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
+	{
+		/* Cool */
+		msg_format("A terrible black aura tries to surround your cloak, "
 		           "but your %s resists the effects!", o_name);
 	}
 
@@ -3897,8 +4252,242 @@ bool curse_jewelry(void)
 	}
 
 
-	/* Curse the body armor */
+	/* Curse the jewelry */
 	o_ptr = &p_ptr->inventory[whichslot];
+
+	/* Nothing to curse */
+	if (!o_ptr->k_idx) return (FALSE);
+
+
+	/* Describe */
+	object_desc(o_name, o_ptr, FALSE, 3);
+
+	/* don't destroy a one ring --Amy */
+	if (o_ptr->tval == TV_RING && o_ptr->sval == SV_RING_POWER) {
+		msg_format("A terrible black aura tries to surround your jewelry, "
+		           "but your %s resists the effects!", o_name);
+
+	}
+
+	/* Attempt a saving throw for artifacts */
+	if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
+	{
+		/* Cool */
+		msg_format("A terrible black aura tries to surround your jewelry, "
+		           "but your %s resists the effects!", o_name);
+	}
+
+	/* not artifact or failed save... */
+	else
+	{
+		/* Oops */
+		msg_format("A terrible black aura blasts your %s!", o_name);
+
+		/* Blast the armor */
+		o_ptr->name1 = 0;
+		o_ptr->name2 = EGO_BLASTED;
+		if (o_ptr->pval > 0) o_ptr->pval = 0;
+		o_ptr->to_a = 0 - randint(5) - randint(5);
+		o_ptr->to_h = 0 - randint(5) - randint(5);
+		o_ptr->to_d = 0 - randint(5) - randint(5);
+		o_ptr->ac = 0;
+		o_ptr->dd = 0;
+		o_ptr->ds = 0;
+		o_ptr->art_flags1 = 0;
+		o_ptr->art_flags2 = 0;
+		o_ptr->art_flags3 = 0;
+		o_ptr->art_flags4 = 0;
+		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
+
+		/* Curse it */
+		o_ptr->ident |= (IDENT_CURSED);
+
+		/* Recalculate bonuses */
+		p_ptr->update |= (PU_BONUS);
+
+		/* Recalculate mana */
+		p_ptr->update |= (PU_MANA);
+
+		/* Window stuff */
+		p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+	}
+
+	return (TRUE);
+}
+
+/*
+ * Curse the players jewelry, by Amy
+ */
+bool curse_leftring(void)
+{
+	object_type *o_ptr;
+
+	char o_name[80];
+
+	/* Curse the ring */
+	o_ptr = &p_ptr->inventory[INVEN_RING];
+
+	/* Nothing to curse */
+	if (!o_ptr->k_idx) return (FALSE);
+
+
+	/* Describe */
+	object_desc(o_name, o_ptr, FALSE, 3);
+
+	/* don't destroy a one ring --Amy */
+	if (o_ptr->tval == TV_RING && o_ptr->sval == SV_RING_POWER) {
+		msg_format("A terrible black aura tries to surround your jewelry, "
+		           "but your %s resists the effects!", o_name);
+
+	}
+
+	/* Attempt a saving throw for artifacts */
+	if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
+	{
+		/* Cool */
+		msg_format("A terrible black aura tries to surround your jewelry, "
+		           "but your %s resists the effects!", o_name);
+	}
+
+	/* not artifact or failed save... */
+	else
+	{
+		/* Oops */
+		msg_format("A terrible black aura blasts your %s!", o_name);
+
+		/* Blast the armor */
+		o_ptr->name1 = 0;
+		o_ptr->name2 = EGO_BLASTED;
+		if (o_ptr->pval > 0) o_ptr->pval = 0;
+		o_ptr->to_a = 0 - randint(5) - randint(5);
+		o_ptr->to_h = 0 - randint(5) - randint(5);
+		o_ptr->to_d = 0 - randint(5) - randint(5);
+		o_ptr->ac = 0;
+		o_ptr->dd = 0;
+		o_ptr->ds = 0;
+		o_ptr->art_flags1 = 0;
+		o_ptr->art_flags2 = 0;
+		o_ptr->art_flags3 = 0;
+		o_ptr->art_flags4 = 0;
+		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
+
+		/* Curse it */
+		o_ptr->ident |= (IDENT_CURSED);
+
+		/* Recalculate bonuses */
+		p_ptr->update |= (PU_BONUS);
+
+		/* Recalculate mana */
+		p_ptr->update |= (PU_MANA);
+
+		/* Window stuff */
+		p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+	}
+
+	return (TRUE);
+}
+
+/*
+ * Curse the players jewelry, by Amy
+ */
+bool curse_rightring(void)
+{
+	object_type *o_ptr;
+
+	char o_name[80];
+
+	/* Curse the ring */
+	o_ptr = &p_ptr->inventory[INVEN_RING + 1];
+
+	/* Nothing to curse */
+	if (!o_ptr->k_idx) return (FALSE);
+
+
+	/* Describe */
+	object_desc(o_name, o_ptr, FALSE, 3);
+
+	/* don't destroy a one ring --Amy */
+	if (o_ptr->tval == TV_RING && o_ptr->sval == SV_RING_POWER) {
+		msg_format("A terrible black aura tries to surround your jewelry, "
+		           "but your %s resists the effects!", o_name);
+
+	}
+
+	/* Attempt a saving throw for artifacts */
+	if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
+	{
+		/* Cool */
+		msg_format("A terrible black aura tries to surround your jewelry, "
+		           "but your %s resists the effects!", o_name);
+	}
+
+	/* not artifact or failed save... */
+	else
+	{
+		/* Oops */
+		msg_format("A terrible black aura blasts your %s!", o_name);
+
+		/* Blast the armor */
+		o_ptr->name1 = 0;
+		o_ptr->name2 = EGO_BLASTED;
+		if (o_ptr->pval > 0) o_ptr->pval = 0;
+		o_ptr->to_a = 0 - randint(5) - randint(5);
+		o_ptr->to_h = 0 - randint(5) - randint(5);
+		o_ptr->to_d = 0 - randint(5) - randint(5);
+		o_ptr->ac = 0;
+		o_ptr->dd = 0;
+		o_ptr->ds = 0;
+		o_ptr->art_flags1 = 0;
+		o_ptr->art_flags2 = 0;
+		o_ptr->art_flags3 = 0;
+		o_ptr->art_flags4 = 0;
+		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
+
+		/* Curse it */
+		o_ptr->ident |= (IDENT_CURSED);
+
+		/* Recalculate bonuses */
+		p_ptr->update |= (PU_BONUS);
+
+		/* Recalculate mana */
+		p_ptr->update |= (PU_MANA);
+
+		/* Window stuff */
+		p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+	}
+
+	return (TRUE);
+}
+
+/*
+ * Curse the players jewelry, by Amy
+ */
+bool curse_amulet(void)
+{
+	object_type *o_ptr;
+
+	char o_name[80];
+
+	/* Curse the amulet */
+	o_ptr = &p_ptr->inventory[INVEN_NECK];
 
 	/* Nothing to curse */
 	if (!o_ptr->k_idx) return (FALSE);

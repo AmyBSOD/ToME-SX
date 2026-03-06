@@ -1932,6 +1932,53 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_CURSE_GAUNTLETS:
+		{
+			msg_print("You hear a terrible scream!");
+			ident = curse_gauntlets();
+			break;
+		}
+
+	case TRAP_OF_CURSE_BOOTS:
+		{
+			msg_print("You hear a terrible scream!");
+			ident = curse_boots();
+			break;
+		}
+
+	case TRAP_OF_CURSE_HELM:
+		{
+			msg_print("You hear a terrible scream!");
+			ident = curse_helm();
+			break;
+		}
+
+	case TRAP_OF_CURSE_SHIELD:
+		{
+			msg_print("You hear a terrible scream!");
+			ident = curse_shield();
+			break;
+		}
+
+	case TRAP_OF_CURSE_CLOAK:
+		{
+			msg_print("You hear a terrible scream!");
+			ident = curse_cloak();
+			break;
+		}
+
+	case TRAP_OF_CURSE_GARMENTS:
+		{
+			msg_print("You hear many terrible screams!");
+			ident = FALSE;
+			if (curse_boots()) ident = TRUE;
+			if (curse_cloak()) ident = TRUE;
+			if (curse_shield()) ident = TRUE;
+			if (curse_helm()) ident = TRUE;
+			if (curse_gauntlets()) ident = TRUE;
+			break;
+		}
+
 	case TRAP_OF_CURSE_SHOOTER:
 		{
 			msg_print("You hear a terrible bang!");
@@ -1943,6 +1990,37 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			msg_print("You hear a terrible howl!");
 			ident = curse_jewelry();
+			break;
+		}
+
+	case TRAP_OF_CURSE_JEWELRIES:
+		{
+			msg_print("You hear many terrible howls!");
+			ident = FALSE;
+			if (curse_leftring()) ident = TRUE;
+			if (curse_rightring()) ident = TRUE;
+			if (curse_amulet()) ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_CURSE_LEFTRING:
+		{
+			msg_print("You hear a terrible howl!");
+			ident = curse_leftring();
+			break;
+		}
+
+	case TRAP_OF_CURSE_RIGHTRING:
+		{
+			msg_print("You hear a terrible howl!");
+			ident = curse_rightring();
+			break;
+		}
+
+	case TRAP_OF_CURSE_AMULET:
+		{
+			msg_print("You hear a terrible howl!");
+			ident = curse_amulet();
 			break;
 		}
 
@@ -1976,6 +2054,27 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (curse_garment()) ident = TRUE;
 			if (curse_shooter()) ident = TRUE;
 			if (curse_jewelry()) ident = TRUE;
+			if (curse_light()) ident = TRUE;
+			if (curse_ammo()) ident = TRUE;
+			if (curse_tool()) ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_CURSE_ALL:
+		{
+			msg_print("Terrible noises of all kinds drone all around you!");
+			ident = FALSE;
+			if (curse_weapon()) ident = TRUE;
+			if (curse_armor()) ident = TRUE;
+			if (curse_boots()) ident = TRUE;
+			if (curse_cloak()) ident = TRUE;
+			if (curse_shield()) ident = TRUE;
+			if (curse_helm()) ident = TRUE;
+			if (curse_gauntlets()) ident = TRUE;
+			if (curse_shooter()) ident = TRUE;
+			if (curse_leftring()) ident = TRUE;
+			if (curse_rightring()) ident = TRUE;
+			if (curse_amulet()) ident = TRUE;
 			if (curse_light()) ident = TRUE;
 			if (curse_ammo()) ident = TRUE;
 			if (curse_tool()) ident = TRUE;
@@ -8375,6 +8474,405 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_WASTING_CONS:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if ((j_ptr->tval == TV_WAND) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Wand of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_WAND, SV_WAND_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_STAFF) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Staff of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_STAFF, SV_STAFF_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_SCROLL) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Scroll of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_SCROLL, SV_SCROLL_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_POTION) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Potion of Water */
+					object_prep(j_ptr, lookup_kind(TV_POTION, SV_POTION_WATER));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_POTION2) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Potion of Water */
+					object_prep(j_ptr, lookup_kind(TV_POTION, SV_POTION_WATER));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_ROD) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Rod Tip of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_ROD, SV_ROD_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_ROD_MAIN) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Dirt Rod (useless) */
+					object_prep(j_ptr, lookup_kind(TV_ROD_MAIN, SV_ROD_DIRT));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_FOOD) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Mushroom of Poison */
+					object_prep(j_ptr, lookup_kind(TV_FOOD, SV_FOOD_POISON));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_CORPSE) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Staff of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_FOOD, SV_FOOD_POISON));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_BOOK) && (rand_int(5) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create an Adventurer's Guide */
+					object_prep(j_ptr, lookup_kind(TV_PARCHMENT, 20));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("You feel that everything's been trashed!");
+			}
+			else
+			{
+				msg_print("You hear a staccato of high-pitched screams.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_CONS_II:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if ((j_ptr->tval == TV_WAND) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Wand of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_WAND, SV_WAND_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_STAFF) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Staff of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_STAFF, SV_STAFF_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_SCROLL) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Scroll of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_SCROLL, SV_SCROLL_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_POTION) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Potion of Water */
+					object_prep(j_ptr, lookup_kind(TV_POTION, SV_POTION_WATER));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_POTION2) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Potion of Water */
+					object_prep(j_ptr, lookup_kind(TV_POTION, SV_POTION_WATER));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_ROD) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Rod Tip of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_ROD, SV_ROD_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_ROD_MAIN) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Dirt Rod (useless) */
+					object_prep(j_ptr, lookup_kind(TV_ROD_MAIN, SV_ROD_DIRT));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_FOOD) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Mushroom of Poison */
+					object_prep(j_ptr, lookup_kind(TV_FOOD, SV_FOOD_POISON));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_CORPSE) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Staff of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_FOOD, SV_FOOD_POISON));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if ((j_ptr->tval == TV_BOOK) && (rand_int(2) == 1))
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create an Adventurer's Guide */
+					object_prep(j_ptr, lookup_kind(TV_PARCHMENT, 20));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("You feel that everything's been trashed!");
+			}
+			else
+			{
+				msg_print("You hear a staccato of high-pitched screams.");
+			}
+			break;
+		}
+
+	case TRAP_OF_WASTING_CONS_III:
+		{
+			s16b i;
+			object_type *j_ptr;
+
+			for (i = 0; i < INVEN_PACK; i++)
+			{
+				if (!p_ptr->inventory[i].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[i];
+
+				if (j_ptr->tval == TV_WAND)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Wand of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_WAND, SV_WAND_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if (j_ptr->tval == TV_STAFF)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Staff of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_STAFF, SV_STAFF_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if (j_ptr->tval == TV_SCROLL)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Scroll of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_SCROLL, SV_SCROLL_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if (j_ptr->tval == TV_POTION)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Potion of Water */
+					object_prep(j_ptr, lookup_kind(TV_POTION, SV_POTION_WATER));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if (j_ptr->tval == TV_POTION2)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Potion of Water */
+					object_prep(j_ptr, lookup_kind(TV_POTION, SV_POTION_WATER));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if (j_ptr->tval == TV_ROD)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Rod Tip of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_ROD, SV_ROD_NOTHING));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if (j_ptr->tval == TV_ROD_MAIN)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Dirt Rod (useless) */
+					object_prep(j_ptr, lookup_kind(TV_ROD_MAIN, SV_ROD_DIRT));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if (j_ptr->tval == TV_FOOD)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Mushroom of Poison */
+					object_prep(j_ptr, lookup_kind(TV_FOOD, SV_FOOD_POISON));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if (j_ptr->tval == TV_CORPSE)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create a Staff of Nothing */
+					object_prep(j_ptr, lookup_kind(TV_FOOD, SV_FOOD_POISON));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+				else if (j_ptr->tval == TV_BOOK)
+				{
+					if (object_known_p(j_ptr)) ident = TRUE;
+
+					/* Create an Adventurer's Guide */
+					object_prep(j_ptr, lookup_kind(TV_PARCHMENT, 20));
+					hack_apply_magic_power = -99;
+					apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+					j_ptr->ident &= ~IDENT_KNOWN;
+					p_ptr->notice |= (PN_COMBINE | PN_REORDER);
+				}
+			}
+			if (ident)
+			{
+				msg_print("You feel that everything's been trashed!");
+			}
+			else
+			{
+				msg_print("You hear a staccato of high-pitched screams.");
+			}
+			break;
+		}
+
 		/* Trap of Wasting Wands */
 	case TRAP_OF_WASTING_WANDS:
 		{
@@ -14174,6 +14672,96 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_DIVINE_XTRA1:
+		{
+			if (p_ptr->pgod == 0)
+			{
+				msg_format("Suddenly you feel glad you're a mere %s", spp_ptr->title + c_name);
+			}
+			else
+			{
+				cptr name;
+
+				name = deity_info[p_ptr->pgod].name;
+				msg_format("You feel you have angered %s.", name);
+				inc_piety(p_ptr->pgod, -500);
+			}
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_DIVINE_XTRA2:
+		{
+			if (p_ptr->pgod == 0)
+			{
+				msg_format("Suddenly you feel glad you're a mere %s", spp_ptr->title + c_name);
+			}
+			else
+			{
+				cptr name;
+
+				name = deity_info[p_ptr->pgod].name;
+				msg_format("You feel you have angered %s.", name);
+				inc_piety(p_ptr->pgod, -1000);
+			}
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_DIVINE_XTRA3:
+		{
+			if (p_ptr->pgod == 0)
+			{
+				msg_format("Suddenly you feel glad you're a mere %s", spp_ptr->title + c_name);
+			}
+			else
+			{
+				cptr name;
+
+				name = deity_info[p_ptr->pgod].name;
+				msg_format("You feel you have angered %s.", name);
+				inc_piety(p_ptr->pgod, -5000);
+			}
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_DIVINE_XTRA4:
+		{
+			if (p_ptr->pgod == 0)
+			{
+				msg_format("Suddenly you feel glad you're a mere %s", spp_ptr->title + c_name);
+			}
+			else
+			{
+				cptr name;
+
+				name = deity_info[p_ptr->pgod].name;
+				msg_format("You feel you have angered %s.", name);
+				inc_piety(p_ptr->pgod, -10000);
+			}
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_DIVINE_XTRA5:
+		{
+			if (p_ptr->pgod == 0)
+			{
+				msg_format("Suddenly you feel glad you're a mere %s", spp_ptr->title + c_name);
+			}
+			else
+			{
+				cptr name;
+
+				name = deity_info[p_ptr->pgod].name;
+				msg_format("You feel you have angered %s.", name);
+				inc_piety(p_ptr->pgod, -15000);
+			}
+			ident = TRUE;
+			break;
+		}
+
 		/* Trap of Divine Wrath */
 	case TRAP_OF_DIVINE_WRATH:
 		{
@@ -14189,6 +14777,25 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 				msg_format("%s quakes in rage: ``Thou art supremely insolent, mortal!!''", name);
 				inc_piety(p_ptr->pgod, -500 * p_ptr->lev);
+			}
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_DIVINE_XTRA6:
+		{
+			if (p_ptr->pgod == 0)
+			{
+				msg_format("Suddenly you feel glad you're a mere %s", spp_ptr->title + c_name);
+			}
+			else
+			{
+				cptr name;
+
+				name = deity_info[p_ptr->pgod].name;
+
+				msg_format("%s quakes in rage: ``Thou art supremely insolent, mortal!!''", name);
+				inc_piety(p_ptr->pgod, -1000 * p_ptr->lev);
 			}
 			ident = TRUE;
 			break;
@@ -14210,6 +14817,29 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				msg_format("You have a feeling that %s is angry...", name);
 				if (p_ptr->pgod > 0)
 					inc_piety(p_ptr->pgod, -(p_ptr->grace * 2) );
+				else
+					inc_piety(p_ptr->pgod, -5000);
+				
+			}
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_DIVINE_XTRA7:
+		{
+			if (p_ptr->pgod == 0)
+			{
+				msg_format("Suddenly you feel glad you're a mere %s", spp_ptr->title + c_name);
+			}
+			else
+			{
+				cptr name;
+
+				name = deity_info[p_ptr->pgod].name;
+
+				msg_format("You have a feeling that %s is angry...", name);
+				if (p_ptr->pgod > 0)
+					inc_piety(p_ptr->pgod, -p_ptr->grace);
 				else
 					inc_piety(p_ptr->pgod, -5000);
 				

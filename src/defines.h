@@ -3508,6 +3508,30 @@
 #define TRAP_NASTY181                     777
 #define TRAP_NASTY182                     778
 
+#define TRAP_OF_DIVINE_XTRA1              779
+#define TRAP_OF_DIVINE_XTRA2              780
+#define TRAP_OF_DIVINE_XTRA3              781
+#define TRAP_OF_DIVINE_XTRA4              782
+#define TRAP_OF_DIVINE_XTRA5              783
+#define TRAP_OF_DIVINE_XTRA6              784
+#define TRAP_OF_DIVINE_XTRA7              785
+
+#define TRAP_OF_WASTING_CONS              786
+#define TRAP_OF_WASTING_CONS_II           787
+#define TRAP_OF_WASTING_CONS_III          788
+
+#define TRAP_OF_CURSE_ALL                 789
+#define TRAP_OF_CURSE_CLOAK               790
+#define TRAP_OF_CURSE_BOOTS               791
+#define TRAP_OF_CURSE_GAUNTLETS           792
+#define TRAP_OF_CURSE_HELM                793
+#define TRAP_OF_CURSE_SHIELD              794
+#define TRAP_OF_CURSE_LEFTRING            795
+#define TRAP_OF_CURSE_RIGHTRING           796
+#define TRAP_OF_CURSE_AMULET              797
+#define TRAP_OF_CURSE_JEWELRIES           798
+#define TRAP_OF_CURSE_GARMENTS            799
+
 /*** General index values ***/
 
 

@@ -3118,7 +3118,7 @@ D:You forget a ton of knowledge!
 F:FLOOR | CHEST | DOOR
 
 N:635:Trap of Curse Everything
-I:50:2:0:12:100:0d0:y
+I:50:2:0:12:80:0d0:y
 D:All your equipment was ruined!
 F:FLOOR | CHEST | DOOR
 
@@ -3836,6 +3836,111 @@ N:778:Featureless Trap
 I:40:2:50:4:20:0d0:s
 D:Nasty!
 F:FLOOR
+
+N:779:Trap of Divine Displeasure
+I:2:100:5:0:1:0d0:G
+D:A voice booms out "Have a care, mortal!"
+F:FLOOR | CHEST | DOOR
+
+N:780:Trap of Divine Ire
+I:3:100:5:0:7:0d0:G
+D:A voice booms out "Have a care, mortal!"
+F:FLOOR | CHEST | DOOR
+
+N:781:Trap of Divine Fury
+I:6:100:5:0:20:0d0:G
+D:A voice booms out "Have a care, mortal!"
+F:FLOOR | CHEST | DOOR
+
+N:782:Trap of Divine Frenzy
+I:7:100:5:0:25:0d0:G
+D:A voice booms out "Have a care, mortal!"
+F:FLOOR | CHEST | DOOR
+
+N:783:Trap of Divine Rampage
+I:8:100:5:0:30:0d0:G
+D:A voice booms out "Have a care, mortal!"
+F:FLOOR | CHEST | DOOR
+
+N:784:Trap of Divine Rage
+I:12:50:5:0:60:0d0:G
+D:A voice booms out "Sacrilege!"
+F:FLOOR | CHEST | DOOR
+
+N:785:Trap of Divine Terror
+I:8:100:5:0:70:0d0:G
+D:A voice booms out "Thou hast angered me, mortal."
+F:FLOOR | CHEST | DOOR
+
+N:786:Trap of Wasting Consumables
+I:6:20:40:4:5:0d0:y
+D:Your consumables seem different...
+F:FLOOR | CHEST | DOOR
+
+N:787:Trap of Trashing Consumables
+I:20:8:40:4:30:0d0:y
+D:Your consumables seem different...
+F:FLOOR | CHEST | DOOR
+
+N:788:Trap of Ruining Consumables
+I:50:2:40:4:100:0d0:y
+D:Your consumables seem different...
+F:FLOOR | CHEST | DOOR
+
+N:789:Trap of Curse All Inventory
+I:50:2:0:12:100:0d0:y
+D:All your equipment was ruined!
+F:FLOOR | CHEST | DOOR
+
+N:790:Trap of Curse Cloak
+I:5:15:0:12:20:0d0:y
+D:This trap is doing evil things to your gear...
+F:FLOOR | CHEST | DOOR
+
+N:791:Trap of Curse Boots
+I:5:15:0:12:20:0d0:y
+D:This trap is doing evil things to your gear...
+F:FLOOR | CHEST | DOOR
+
+N:792:Trap of Curse Gauntlets
+I:5:15:0:12:20:0d0:y
+D:This trap is doing evil things to your gear...
+F:FLOOR | CHEST | DOOR
+
+N:793:Trap of Curse Helm
+I:5:15:0:12:20:0d0:y
+D:This trap is doing evil things to your gear...
+F:FLOOR | CHEST | DOOR
+
+N:794:Trap of Curse Shield
+I:5:15:0:12:20:0d0:y
+D:This trap is doing evil things to your gear...
+F:FLOOR | CHEST | DOOR
+
+N:795:Trap of Curse Left Ring
+I:5:15:0:12:20:0d0:y
+D:Now your jewelry is junk.
+F:FLOOR | CHEST | DOOR
+
+N:796:Trap of Curse Right Ring
+I:5:15:0:12:20:0d0:y
+D:Now your jewelry is junk.
+F:FLOOR | CHEST | DOOR
+
+N:797:Trap of Curse Amulet
+I:5:15:0:12:20:0d0:y
+D:Now your jewelry is junk.
+F:FLOOR | CHEST | DOOR
+
+N:798:Trap of Curse All Jewelry
+I:20:5:0:12:45:0d0:y
+D:All your jewelry was ruined!
+F:FLOOR | CHEST | DOOR
+
+N:799:Trap of Curse All Garments
+I:25:5:0:12:60:0d0:y
+D:All your garments were ruined!
+F:FLOOR | CHEST | DOOR
 
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
