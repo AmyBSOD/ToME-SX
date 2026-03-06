@@ -121,8 +121,13 @@ The skills are:
   *****skills.txt*14[Sneakiness]          *****skills.txt*22[Spell-power]        *****skills.txt*38[Spirituality]       *****skills.txt*23[Sorcery]            
   *****skills.txt*19[Stealing]            *****skills.txt*15[Stealth]            *****skills.txt*53[Stunning-blows]     *****skills.txt*43[Summoning]          
   *****skills.txt*03[Sword-mastery]       *****skills.txt*46[Symbiosis]          *****skills.txt*32[Temporal]           *****skills.txt*37[Thaumaturgy]        
-  *****skills.txt*48[Udun]                *****skills.txt*26[Water]              *****skills.txt*02[Weaponmastery]
-
+  *****skills.txt*48[Udun]                *****skills.txt*26[Water]              *****skills.txt*02[Weaponmastery]      *****skills.txt*62[Spell-learning]
+  *****skills.txt*63[Hell]                *****skills.txt*64[Celestial]          *****skills.txt*65[Fortune]            *****skills.txt*66[Dual-wielding]
+  *****skills.txt*67[Two-handed]          *****skills.txt*68[Firearms]           *****skills.txt*69[Ranged-power]       *****skills.txt*70[Chopping]
+  *****skills.txt*71[Impale]              *****skills.txt*72[Weight-lifting]     *****skills.txt*73[Valarin]            *****skills.txt*74[Nether]
+  *****skills.txt*75[Druidistic]          *****skills.txt*76[Cleaning]           *****skills.txt*77[Misc]               *****skills.txt*78[Clear-mind]
+  *****skills.txt*79[Freshmint]           *****skills.txt*80[Hidden-Sight]       *****skills.txt*81[Haggling]           *****skills.txt*82[Investing]
+  *****skills.txt*83[Four-dimensional]    *****skills.txt*84[Anti-nastiness]
 
 ~~~~~01|Skills|Combat
 [[[[[BCombat]
@@ -455,8 +460,8 @@ Investing in the Necromancy skill? You might be interested in the
 ~~~~~36|Skills|Runecraft
 [[[[[BRunecraft]
 This skill is a sub-skill of the Magic skill. This is the base skill of the
-Runecrafter class. Spending 1 skill point on your Runecraft skill adds 0.12
-bonus skill points to your Magic skill.
+Runecrafter class, and allows you to manipulate runes. Spending 1 skill point on your
+Runecraft skill adds 0.12 bonus skill points to your Magic skill.
 ~~~~~37|Skills|Thaumaturgy
 [[[[[BThaumaturgy]
 This skill is a sub-skill of the Magic skill. Each level of *****m_thaum.txt*0[thaumaturgy] gives
@@ -468,7 +473,7 @@ skill.
 ~~~~~49|Skills|Alchemy
 [[[[[BAlchemy]
 The Alchemy skill affects your ability to extract and use essences to create
-magical items. 
+magical items. It allows you to use essences to boost your items.
 
 Investing in the Alchemy skill? You might be interested in the *****ability.txt*09[Artifact Creation] 
 ability.
@@ -537,3 +542,116 @@ This skill is a sub-skill of the Monster-lore skill. It affects your ability
 to use cloaks of mimicry to change form and to cast *****m_mimic.txt*0[Mimicry spells].
 Spending 1 skill point on your Mimicry skill adds 0.1 bonus skill points to 
 your Monster-lore skill.
+
+~~~~~62|Skills|Spell-learning
+[[[[[BSpell-learning]
+A skill that increases the amount of loot carried by monsters. Improving it will
+result in more items being dropped on average.
+~~~~~63|Skills|Hell
+[[[[[BHell]
+A spell school that allows you to cast some rather destructive elemental spells.
+~~~~~64|Skills|Celestial
+[[[[[BCelestial]
+A spell school that allows you to cast some divine elemental spells.
+~~~~~65|Skills|Fortune
+[[[[[BFortune]
+Boosting this skill will allow you to find better loot: every level in this skill
+increases the level of randomly generated items by one. This also affects items
+sold by shops, so a good level in this skill may allow you to purchase better gear.
+~~~~~66|Skills|Dual-wielding
+[[[[[BDual-wielding]
+A skill required for those who want to wield several weapons at once. Be aware that
+this does NOT actually provide a way for you to do so (usually you need to use
+possession to take over a monster body with several weapon slots)! But if you are
+in such a body, you absolutely need this skill or you'll only attack with your
+primary weapon. Higher skill levels increase the odds that your secondary (or
+tertiary, if applicable) melee weapon will attack.
+~~~~~67|Skills|Two-handed
+[[[[[BTwo-handed]
+Boosts the power of two-handed weapons. It also gives a lower boost to weapons that
+can be wielded with two hands if you decide to use them without a shield, but the
+bonus for weapons that must be wielded two-handed is higher.
+~~~~~68|Skills|Firearms
+[[[[[BFirearms]
+Increasing this skill boosts the power of firearms, which include pistols,
+shotguns, SMGs, assault rifles and sniper rifles.
+~~~~~69|Skills|Ranged-power
+[[[[[BRanged-power]
+Every level in this skill slightly boosts the damage of your ranged weapons.
+~~~~~70|Skills|Chopping
+[[[[[BChopping]
+Used by axemasters, this skill allows your axe to deal bleeding damage to the
+enemy. Higher skill levels add more such bonus damage.
+~~~~~71|Skills|Impale
+[[[[[BImpale]
+A skill that works only if your weapon is a polearm. It grants a small chance for
+your melee attack to slow down the target monster. With higher skill levels, this
+chance will go up.
+~~~~~72|Skills|Weight-lifting
+[[[[[BWeight-lifting]
+Increasing this skill boosts your carry capacity, allowing you to carry heavier
+loot and equipment.
+~~~~~73|Skills|Valarin
+[[[[[BValarin]
+A spiritual skill that increases piety loss and gain multipliers when worshipping
+a good god. If you're worshipping an evil god, it reduces piety loss multipliers
+while leaving piety gain multipliers unchanged.
+~~~~~74|Skills|Nether
+[[[[[BNether]
+A spiritual skill that increases piety loss and gain multipliers when worshipping
+an evil god. If you're worshipping a good god, it reduces piety loss multipliers
+while leaving piety gain multipliers unchanged.
+~~~~~75|Skills|Druidistic
+[[[[[BDruidistic]
+This skill was supposed to grant access to Druidistic spells, but someone disabled
+them so now it grants damage bonuses to boomerangs and staves instead. Yes, I know,
+it makes no sense. Blame the person who disabled the Druidistic school! :-P
+~~~~~76|Skills|Cleaning
+[[[[[BCleaning]
+With this skill, monsters who breathe at you have a chance of failing to do so.
+The higher your skill level, the less likely they are to successfully breathe.
+~~~~~77|Skills|Misc
+[[[[[BMisc]
+Originally not supposed to be a skill that the player can increase, this grants a
+chance to resist random bad effects. Higher skill levels give more chance to resist
+such effects.
+~~~~~78|Skills|Clear-mind
+[[[[[BClear-mind]
+Improving this skill boosts your maximum sanity, giving you more of a buffer against
+running out.
+~~~~~79|Skills|Freshmint
+[[[[[BFreshmint]
+Boosting this skill allows you to resist charge draining attacks, which means they
+drain less charges of your wands and staves on average. Higher skill levels allow you
+to resist more, but sadly every such attack still always takes off at least one
+charge.
+~~~~~80|Skills|Hidden-Sight
+[[[[[BHidden-Sight]
+This skill improves your perception, thereby boosting your chance of automatically
+searching for traps and hidden doors. Sneakiness skill does the same but Hidden-Sight
+gives more of a boost.
+~~~~~81|Skills|Haggling
+[[[[[BHaggling]
+With this skill, you gain more money when selling items to vendors. It does not,
+however, reduce prices when you're buying; those will stay the same.
+~~~~~82|Skills|Investing
+[[[[[BInvesting]
+Raising this skill reduces the costs when you invest in a shop. Since the cost goes
+up with shop rank, higher levels in this skill allow you to reach higher ranks more
+easily, thereby increasing the amount and quality of items sold by that particular
+shop and also boosting the maximum amount they're willing to pay for a single item.
+~~~~~83|Skills|Four-dimensional
+[[[[[BFour-dimensional]
+A very useful skill that allows you to access a four-dimensional pocket for storing
+loot. The amount of items, as well as the maximum weight in pounds that a single item
+may have to be put in the storage, is equal to the skill level. Be aware though:
+taking items back out of the 4D pocket only works if you're in a surface town! So if
+you put that potion of greater healing or scroll of star destruction inside to
+prevent it from being destroyed, you won't be able to get it back out in the dungeon,
+as that would be too easy!
+~~~~~84|Skills|Anti-nastiness
+[[[[[BAnti-nastiness]
+Your level in this skill determines the chance that a randomly generated trap will
+be rerolled if it was supposed to be a nasty trap. Those are generally very dangerous
+as they won't display a message nor reveal themselves even when triggered, so this
+skill will help by reducing the odds of you stumbling into one.
