@@ -6654,10 +6654,12 @@ void wipe(int y1, int x1, int r)
 
 	bool flag = FALSE;
 
+	bool genoallowed = TRUE;
+
 	if (dungeon_flags2 & DF2_NO_GENO)
 	{
-		msg_print("Not on special levels!");
-		return;
+		/* duuuuuuude! the flag's named "no genocide", not "no destruction"!!! --Amy */
+		genoallowed = FALSE;
 	}
 	if (p_ptr->inside_quest)
 	{
@@ -6687,7 +6689,7 @@ void wipe(int y1, int x1, int r)
 			/* Lose light and knowledge */
 			c_ptr->info &= ~(CAVE_MARK | CAVE_GLOW);
 
-			if (m_list[c_ptr->m_idx].status != MSTATUS_COMPANION) delete_monster(y, x);
+			if ((m_list[c_ptr->m_idx].status != MSTATUS_COMPANION) && genoallowed) delete_monster(y, x);
 			delete_object(y, x);
 			place_floor(y, x);
 		}
@@ -6742,14 +6744,15 @@ void destroy_area(int y1, int x1, int r, bool full, bool bypass)
 
 	bool flag = FALSE;
 
+	bool genoallowed = TRUE;
 
 	/* XXX XXX */
 	full = full ? full : 0;
 
 	if (dungeon_flags2 & DF2_NO_GENO)
 	{
-		msg_print("Not on special levels!");
-		return;
+		/* duuuuuuude! the flag's named "no genocide", not "no destruction"!!! --Amy */
+		genoallowed = FALSE;
 	}
 	if (p_ptr->inside_quest && (!bypass))
 	{
@@ -6795,8 +6798,9 @@ void destroy_area(int y1, int x1, int r, bool full, bool bypass)
 			/* Delete the monster (if any) */
 			if ((m_list[c_ptr->m_idx].status != MSTATUS_COMPANION) ||
 			                (!(m_list[c_ptr->m_idx].mflag & MFLAG_QUEST)) ||
-			                (!(m_list[c_ptr->m_idx].mflag & MFLAG_QUEST2)))
-				delete_monster(y, x);
+			                (!(m_list[c_ptr->m_idx].mflag & MFLAG_QUEST2))) {
+				if (genoallowed) delete_monster(y, x);
+			}
 
 			/* Destroy "valid" grids */
 			if (cave_valid_bold(y, x))

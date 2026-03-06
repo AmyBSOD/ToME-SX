@@ -7201,7 +7201,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 	case GF_AWAY_UNDEAD:
 		{
 
-			if (dungeon_flags2 & DF2_NO_TELEPORT) break; /* No teleport on special levels */
+			if ((dungeon_flags2 & DF2_NO_TELEPORT) && magik(80)) break; /* No teleport on special levels; small chance retained --Amy */
 			/* Only affect undead */
 			if (r_ptr->flags3 & (RF3_UNDEAD))
 			{
@@ -7247,7 +7247,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 		/* Teleport evil (Use "dam" as "power") */
 	case GF_AWAY_EVIL:
 		{
-			if (dungeon_flags2 & DF2_NO_TELEPORT) break; /* No teleport on special levels */
+			if ((dungeon_flags2 & DF2_NO_TELEPORT) && magik(80)) break; /* No teleport on special levels; small chance retained --Amy */
 			/* Only affect evil */
 			if (r_ptr->flags3 & (RF3_EVIL))
 			{
@@ -7295,7 +7295,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 		{
 			bool resists_tele = FALSE;
 
-			if (dungeon_flags2 & DF2_NO_TELEPORT) break; /* No teleport on special levels */
+			if ((dungeon_flags2 & DF2_NO_TELEPORT) && magik(80)) break; /* No teleport on special levels; small chance retained --Amy */
 			if (r_ptr->flags3 & (RF3_RES_TELE))
 			{
 				if (r_ptr->flags1 & (RF1_UNIQUE))
