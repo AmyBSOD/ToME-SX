@@ -5395,6 +5395,10 @@ void do_cmd_powermage(void)
 		               damroll(s_ptr->dam_dice, s_ptr->dam_sides),
 		               s_ptr->proj_flags);
 	}
+	else if (s_ptr->proj_flags & PROJECT_MANA_PATH)
+	{
+		fire_cloud(s_ptr->GF, 0, damroll(s_ptr->dam_dice, s_ptr->dam_sides), 4, 5);
+	}
 	else
 	{
 		project(0, s_ptr->radius, ty, tx,

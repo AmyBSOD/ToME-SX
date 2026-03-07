@@ -10271,6 +10271,10 @@ static void name_spell(random_spell* s_ptr)
 	{
 		buff2 = "Area";
 	}
+	else if (s_ptr->proj_flags & PROJECT_MANA_PATH) /* noxious cloud-like, by Amy, but can't be targetted */
+	{
+		buff2 = "Spray";
+	}
 	else if (s_ptr->proj_flags & PROJECT_VIEWABLE)
 	{
 		buff2 = "View";
@@ -10322,11 +10326,20 @@ void generate_spell(int plev)
 	chance = randint(100);
 
 	/* Hack -- Always start with Magic Missile or derivative at lev. 1 */
-	if (plev == 1 || chance < 33)
+	if (plev == 1 || chance < 31)
 	{
 		rspell->proj_flags |= PROJECT_STOP; /* bolt */
 		rspell->dam_dice = dice;
 		rspell->dam_sides = sides;
+		rspell->radius = 0;
+	}
+	else if (chance < 33)
+	{
+		rspell->proj_flags |= PROJECT_MANA_PATH; /* spray; would use PROJECT_GRID but someone decided to put that on every such spell... bleh... --Amy */
+		rspell->dam_dice = dice * 2 / 3;
+		if (rspell->dam_dice < 1) rspell->dam_dice = 1;
+		rspell->dam_sides = sides / 3;
+		if (rspell->dam_sides < 1) rspell->dam_sides = 1;
 		rspell->radius = 0;
 	}
 	else if (chance < 64)
