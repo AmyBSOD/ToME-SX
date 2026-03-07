@@ -8,6 +8,7 @@ Ingeborg is the goddess of chaos.
 #####GThe benefits of Worshipping Ingeborg
  1. As you increase your piety, Ingeborg grants you a bonus to your constitution.
  2. Ingeborg likes it if you kill monsters, especially good-aligned ones.
+ 3. Ingeborg grants access to the *****m_udun.txt*0[Udun] school of magic.
 
 #####GThe disadvantages of Worshipping Ingeborg
 1. Your piety decreases over time.
