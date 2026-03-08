@@ -1835,8 +1835,8 @@ bool bldg_process_command(store_type *s_ptr, int i)
 			}
 
 			if (s_ptr->investment < 0) {
-				investcost = 10000;
-				if (is_state(s_ptr, STORE_HATED)) investcost = 15000;
+				investcost = 2000;
+				if (is_state(s_ptr, STORE_HATED)) investcost = 2500;
 			}
 
 			if (investskill >= 1) {

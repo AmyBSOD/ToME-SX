@@ -2796,17 +2796,17 @@ void store_stole(void)
 		stealwillfail = FALSE;
 		stealfailchance = 0;
 
-		if (object_value_real(o_ptr, TRUE) >= 1000) stealfailchance = 10;
-		if (object_value_real(o_ptr, TRUE) >= 5000) stealfailchance = 20;
-		if (object_value_real(o_ptr, TRUE) >= 15000) stealfailchance = 25;
-		if (object_value_real(o_ptr, TRUE) >= 25000) stealfailchance = 33;
-		if (object_value_real(o_ptr, TRUE) >= 50000) stealfailchance = 40;
-		if (object_value_real(o_ptr, TRUE) >= 100000) stealfailchance = 50;
-		if (object_value_real(o_ptr, TRUE) >= 200000) stealfailchance = 60;
-		if (object_value_real(o_ptr, TRUE) >= 300000) stealfailchance = 66;
-		if (object_value_real(o_ptr, TRUE) >= 500000) stealfailchance = 75;
-		if (object_value_real(o_ptr, TRUE) >= 750000) stealfailchance = 80;
-		if (object_value_real(o_ptr, TRUE) >= 1000000) stealfailchance = 90;
+		if (object_value_real(o_ptr, TRUE) >= 1000) stealfailchance = 2;
+		if (object_value_real(o_ptr, TRUE) >= 5000) stealfailchance = 5;
+		if (object_value_real(o_ptr, TRUE) >= 15000) stealfailchance = 10;
+		if (object_value_real(o_ptr, TRUE) >= 25000) stealfailchance = 12;
+		if (object_value_real(o_ptr, TRUE) >= 50000) stealfailchance = 15;
+		if (object_value_real(o_ptr, TRUE) >= 100000) stealfailchance = 18;
+		if (object_value_real(o_ptr, TRUE) >= 200000) stealfailchance = 20;
+		if (object_value_real(o_ptr, TRUE) >= 300000) stealfailchance = 24;
+		if (object_value_real(o_ptr, TRUE) >= 500000) stealfailchance = 30;
+		if (object_value_real(o_ptr, TRUE) >= 750000) stealfailchance = 40;
+		if (object_value_real(o_ptr, TRUE) >= 1000000) stealfailchance = 50;
 
 		if ((stealfailchance > 0) && magik(stealfailchance)) stealwillfail = TRUE;
 
@@ -2822,8 +2822,8 @@ void store_stole(void)
 			/* Kicked out for a LONG time */
 			st_ptr->store_open = turn + 500000 + randint(500000);
 			if (st_ptr->investment > -1000) {
-				if (is_state(st_ptr, STORE_HATED)) st_ptr->investment -= 10;
-				st_ptr->investment -= 10;
+				if (is_state(st_ptr, STORE_HATED)) st_ptr->investment -= randint(10);
+				st_ptr->investment -= randint(10);
 			}
 		} else {
 
@@ -2943,8 +2943,8 @@ void store_stole(void)
 		/* Kicked out for a LONG time */
 		st_ptr->store_open = turn + 500000 + randint(500000);
 		if (st_ptr->investment > -1000) {
-			if (is_state(st_ptr, STORE_HATED)) st_ptr->investment -= 10;
-			st_ptr->investment -= 10;
+			if (is_state(st_ptr, STORE_HATED)) st_ptr->investment -= randint(10);
+			st_ptr->investment -= randint(10);
 		}
 	}
 
