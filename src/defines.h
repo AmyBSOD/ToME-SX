@@ -1844,6 +1844,9 @@
 #define SV_AMULET_UNLIFE_ESP            54
 #define SV_AMULET_ETHER_RESISTANCE      55
 #define SV_AMULET_SPEED                 56
+#define SV_AMULET_VELOCITY              57
+#define SV_AMULET_ACCEL                 58
+#define SV_AMULET_SWIFT                 59
 
 /* The sval codes for TV_RING */
 #define SV_RING_WOE                      0
@@ -1914,8 +1917,11 @@
 #define SV_RING_RES_MIND                65
 #define SV_RING_PERCEPTION              66
 #define SV_RING_FORTUNE                 67
+#define SV_RING_VELOCITY                68
 #define SV_RING_VITALITY                69
 #define SV_RING_WIZARDRY                70
+#define SV_RING_ACCEL                   71
+#define SV_RING_SWIFT                   72
 
 /* The "sval" codes for TV_STAFF */
 #define SV_STAFF_SCHOOL                 1

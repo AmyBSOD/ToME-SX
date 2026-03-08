@@ -21,7 +21,7 @@
 
 # N:number:name
 # G:glyph:color
-# I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
+# I:tval:sval:pval:spell, tval being type, sval being subtype, pval being a bonus to the pval-based property
 # W:level:extra:weight:cost
 # T:btval:bsval for artifacts
 # A:allocation, apparently "level/1 in X chance to spawn" i.e. make items rare by having a high chance behind the /
@@ -10153,9 +10153,104 @@ F:SPEED | HIDE_TYPE
 f:SPEED
 D:A very powerful amulet that speeds up the wearer.
 
+N:1206:Velocity
+G:=:d
+I:45:68:0
+W:10:0:2:20000
+A:10/1
+F:SPEED | HIDE_TYPE
+f:SPEED
+D:A ring that makes you a bit faster.
+
+N:1207:Acceleration
+G:=:d
+I:45:71:0
+W:30:0:2:40000
+A:30/1
+F:SPEED | HIDE_TYPE
+f:SPEED
+D:A ring that makes you quiet a bit faster.
+
+N:1208:Swiftness
+G:=:d
+I:45:72:0
+W:50:0:2:70000
+A:50/1
+F:SPEED | HIDE_TYPE
+f:SPEED
+D:A ring that makes you much faster.
+
+N:1209:Velocity
+G:":d
+I:40:57:0
+W:10:0:3:20000
+A:10/3
+F:SPEED | HIDE_TYPE
+f:SPEED
+D:An amulet that slightly speeds up the wearer.
+
+N:1210:Acceleration
+G:":d
+I:40:58:0
+W:30:0:3:20000
+A:30/3
+F:SPEED | HIDE_TYPE
+f:SPEED
+D:An amulet that speeds up the wearer.
+
+N:1211:Swiftness
+G:":d
+I:40:59:0
+W:50:0:3:20000
+A:50/3
+F:SPEED | HIDE_TYPE
+f:SPEED
+D:An amulet that considerably speeds up the wearer.
+
+N:1212:& Pair~ of Speed Boots
+G:]:u
+I:30:19:1
+W:20:0:30:25000
+A:20/2
+F:SPEED
+f:SPEED
+P:1:1d1:0:0:0
+D:A pair of comfortable boots that makes you slightly faster.
+
+N:1213:& Pair~ of Elite Sneakers
+G:]:w
+I:30:20:2
+W:50:0:20:50000
+A:50/2
+F:SPEED
+f:SPEED
+P:1:1d1:0:0:0
+D:This pair of sneakers is good for running long distances.
+
+N:1214:& Pair~ of Seven League Boots
+G:]:v
+I:30:21:5
+W:100:0:80:300000
+A:100/5
+F:SPEED
+f:SPEED
+P:2:1d1:0:0:0
+D:This wonderful pair of boots makes you really fast.
+
+N:1215:& Pair~ of Italian Shoes
+G:]:D
+I:30:22:1
+W:60:0:40:35000
+A:60/2
+F:SPEED | MARTIAL_ARTS
+f:SPEED | MARTIAL_ARTS
+P:5:1d1:2:0:0
+D:This pair of shoes is of high quality, allowing you to run faster and 
+D:also boosting your martial arts prowess.
+
 # N:number:name
 # G:glyph:color
-# I:tval:sval:pval:spell, tval being type, sval being subtype, pval being ???
+# I:tval:sval:pval:spell, tval being type, sval being subtype, pval being a bonus to the pval-based property
 # W:level:extra:weight:cost
 # T:btval:bsval for artifacts
 # A:allocation, apparently "level/1 in X chance to spawn" i.e. make items rare by having a high chance behind the /

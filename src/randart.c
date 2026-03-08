@@ -53,8 +53,8 @@ static bool grab_one_power(int *ra_idx, object_type *o_ptr, bool good, s16b *max
 			continue;
 		}
 
-		/* Good should be good, bad should be bad */
-		if (good && (ra_ptr->value <= 0)) continue;
+		/* Good should be good, bad should be bad - Amy edit: but it's never called with "bad"! */
+		/* if (good && (ra_ptr->value <= 0)) continue; */
 		if ((!good) && (ra_ptr->value > 0)) continue;
 
 		if (max_times[i] >= ra_ptr->max) continue;
@@ -1219,6 +1219,16 @@ bool create_artifact(object_type *o_ptr, bool a_scroll, bool get_name)
 
 	/* Amy edit: randarts should be a bit better! */
 	powers += randint(4);
+
+	/* randart instruments and climbing sets shouldn't be uber imba --Amy */
+	if (o_ptr->tval == TV_INSTRUMENT) {
+		powers /= 3;
+		if (powers < 1) powers = 1;
+	}
+	if (o_ptr->tval == TV_TOOL) {
+		powers /= 2;
+		if (powers < 1) powers = 1;
+	}
 
 	/* more randomness by Amy */
 	if (a_cursed) xtrapowers = randint(2);

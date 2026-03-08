@@ -3695,6 +3695,84 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
 					break;
 				}
 
+			case SV_RING_VELOCITY:
+				{
+					/* Base speed (1 to 2) */
+					o_ptr->pval = randint(2);
+
+					/* Cursed Ring */
+					if (power < 0)
+					{
+						/* Cursed */
+						o_ptr->ident |= (IDENT_CURSED);
+
+						/* Reverse pval */
+						o_ptr->pval = 0 - (o_ptr->pval);
+
+						break;
+					}
+
+					/* Rating boost */
+					rating += 5;
+
+					/* Mention the item */
+					if ((cheat_peek) || (p_ptr->precognition)) object_mention(o_ptr);
+
+					break;
+				}
+
+			case SV_RING_ACCEL:
+				{
+					/* Base speed (1 to 4) */
+					o_ptr->pval = randint(4);
+
+					/* Cursed Ring */
+					if (power < 0)
+					{
+						/* Cursed */
+						o_ptr->ident |= (IDENT_CURSED);
+
+						/* Reverse pval */
+						o_ptr->pval = 0 - (o_ptr->pval);
+
+						break;
+					}
+
+					/* Rating boost */
+					rating += 10;
+
+					/* Mention the item */
+					if ((cheat_peek) || (p_ptr->precognition)) object_mention(o_ptr);
+
+					break;
+				}
+
+			case SV_RING_SWIFT:
+				{
+					/* Base speed (1 to 6) */
+					o_ptr->pval = randint(6);
+
+					/* Cursed Ring */
+					if (power < 0)
+					{
+						/* Cursed */
+						o_ptr->ident |= (IDENT_CURSED);
+
+						/* Reverse pval */
+						o_ptr->pval = 0 - (o_ptr->pval);
+
+						break;
+					}
+
+					/* Rating boost */
+					rating += 15;
+
+					/* Mention the item */
+					if ((cheat_peek) || (p_ptr->precognition)) object_mention(o_ptr);
+
+					break;
+				}
+
 				/* ring of magic find, by Amy, uses ring of speed formula to determine the bonus */
 			case SV_RING_FORTUNE:
 				{
@@ -3917,6 +3995,84 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
 
 					break;
 				}
+			case SV_AMULET_VELOCITY:
+				{
+					/* Base speed (1 to 2) */
+					o_ptr->pval = randint(2);
+
+					/* Cursed amulet */
+					if (power < 0)
+					{
+						/* Cursed */
+						o_ptr->ident |= (IDENT_CURSED);
+
+						/* Reverse pval */
+						o_ptr->pval = 0 - (o_ptr->pval);
+
+						break;
+					}
+
+					/* Rating boost */
+					rating += 5;
+
+					/* Mention the item */
+					if ((cheat_peek) || (p_ptr->precognition)) object_mention(o_ptr);
+
+					break;
+				}
+
+			case SV_AMULET_ACCEL:
+				{
+					/* Base speed (1 to 4) */
+					o_ptr->pval = randint(4);
+
+					/* Cursed amulet */
+					if (power < 0)
+					{
+						/* Cursed */
+						o_ptr->ident |= (IDENT_CURSED);
+
+						/* Reverse pval */
+						o_ptr->pval = 0 - (o_ptr->pval);
+
+						break;
+					}
+
+					/* Rating boost */
+					rating += 10;
+
+					/* Mention the item */
+					if ((cheat_peek) || (p_ptr->precognition)) object_mention(o_ptr);
+
+					break;
+				}
+
+			case SV_AMULET_SWIFT:
+				{
+					/* Base speed (1 to 6) */
+					o_ptr->pval = randint(6);
+
+					/* Cursed amulet */
+					if (power < 0)
+					{
+						/* Cursed */
+						o_ptr->ident |= (IDENT_CURSED);
+
+						/* Reverse pval */
+						o_ptr->pval = 0 - (o_ptr->pval);
+
+						break;
+					}
+
+					/* Rating boost */
+					rating += 15;
+
+					/* Mention the item */
+					if ((cheat_peek) || (p_ptr->precognition)) object_mention(o_ptr);
+
+					break;
+				}
+
 			case SV_AMULET_BRACING:
 				{
 					/* Bonus to armor class */
