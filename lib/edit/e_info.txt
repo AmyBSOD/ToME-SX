@@ -6207,6 +6207,46 @@ R:100
 F:SPEED | HIDE_TYPE
 f:SPEED
 
+N:514:of Velocity
+X:A:35:25
+W:20:1:10:20000
+C:0:0:0:2
+T:38:0:255
+T:33:0:255
+R:100
+F:SPEED | HIDE_TYPE
+f:SPEED
+
+N:515:of Acceleration
+X:A:35:35
+W:30:1:12:35000
+C:0:0:0:3
+T:38:0:255
+T:33:0:255
+R:100
+F:SPEED | HIDE_TYPE
+f:SPEED
+
+N:516:of Haste
+X:A:35:55
+W:45:1:15:55000
+C:0:0:0:5
+T:38:0:255
+T:33:0:255
+R:100
+F:SPEED | HIDE_TYPE
+f:SPEED
+
+N:517:of Speed
+X:A:35:100
+W:60:1:23:100000
+C:0:0:0:7
+T:38:0:255
+T:33:0:255
+R:100
+F:SPEED | HIDE_TYPE
+f:SPEED
+
 # N: serial number : ego type
 # D: description
 # T: tval : min sval : max sval
