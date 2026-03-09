@@ -361,6 +361,7 @@ mutters something about bugs.
 screams 'ToME rules!'.
 
 N:1086:Elif
+N:5357:Elli
 4
 announces that she'll kick your hands until they start bleeding.
 tells you that she'd like to stroke you softly.
@@ -370,6 +371,7 @@ creates a "Pfffffffff!" sound.
 hopes that you won't actually kill her.
 
 N:1090:Jessica
+N:5358:Jessie
 4
 regards you as a danger to her life.
 gets ready to fight you.
@@ -380,6 +382,7 @@ screams 'I'm an innocent virgin! Stay away from me!'
 sighs 'What a cruel world this is, where even harmless ladies are being raped...'
 
 N:1092:Wendy
+N:5359:Wendy O'Koopa
 4
 farts in your general direction.
 announces 'I'll scratch open your legs with my heels.'
@@ -389,6 +392,7 @@ shouts 'I'll make you pay dearly, just like I did those no-good plumbers.'
 is looking for the nearest toilet.
 
 N:1099:Nadja
+N:5361:Vilja
 4
 tells you to stop acting like a crazy person.
 flips you the bird.
@@ -398,6 +402,7 @@ tells you to stop staring at her all the damn time.
 threatens to report you to the principal.
 
 N:1100:Katia
+N:5362:Little Katia
 4
 starts scratching your legs with her block-heeled combat boots.
 produces charming noises with her butt.
@@ -407,6 +412,7 @@ asks you if you'll allow her to use the WC.
 tries to run for her life.
 
 N:1327:Magdalena
+N:5363:Lenka
 4
 challenges you to a duel on life and death.
 wants to find out whether you can withstand her female combat boots.
@@ -416,6 +422,7 @@ closes in on you to attack.
 feels that she's met her match.
 
 N:1332:Ina
+N:5364:Tender Ina
 4
 screams 'I'm not anorexic! I'm too fat!'
 shouts 'Look at yourself, you're much too skinny! Why don't you eat?'
@@ -425,6 +432,7 @@ remarks that you need something to eat or you'll starve.
 screams 'Nobody ever tells me I'm beautiful! I just can't lose enough weight!'
 
 N:1685:Sunali
+N:5350:Sunija
 5
 announces 'You are going down.'
 says 'I'm a woman who learned to defend herself.'
@@ -435,6 +443,7 @@ tells you that she's the "Farting Queen from India".
 screams 'If you kill me, I'll come back stronger than before!'
 
 N:1691:Meltem
+N:5365:Melirija
 4
 announces 'I hope for a fair battle.'
 shouts 'Allah Akbar!'
@@ -444,6 +453,7 @@ turns her butt towards you and produces beautiful farting noises.
 prays to her god, hoping that you won't kill her.
 
 N:1698:Ariane
+N:5366:Nurse Ariane
 4
 says 'I'm the lady of the elements, and I will defeat you.'
 shouts 'I will extract so much of your blood!'
@@ -453,6 +463,7 @@ wonders how long a weakling like you can withstand her might.
 collects mana for her emergency teleport spell.
 
 N:1710:Miriam
+N:5367:Mirri
 4
 asks 'Do you want me to squeeze your toes with my high-heeled combat boots?'
 shouts 'Your soft toes need to be clamped by my heels!'
@@ -462,6 +473,7 @@ prepares to place her leather boots on your unprotected toes.
 runs away in panic.
 
 N:1711:Elena
+N:5351:Eleanor
 4
 teases you with her feminine charm.
 asks whether you'd like to pull down the soft panties that cover her sexy butt.
@@ -471,6 +483,7 @@ says 'I'm looking forward to having fun with you.'
 says 'You might defeat me, but Katharina will crush you.'
 
 N:1712:Katharina
+N:5352:Kirja
 4
 farts in your face, producing squeaky noises with her butt.
 tries to smash your legs with her very lovely plateau boots.
@@ -480,6 +493,7 @@ says 'If you want to get acquainted with me, use your hands to feel up my butt.'
 seems about to give up the ghost.
 
 N:1717:Nelly
+N:5368:Nellina
 4
 shakes her fists.
 threatens to crush you.
@@ -489,6 +503,7 @@ says 'Any adventurer who dares to fight me will be annihilated.'
 is surprised that she has found her match.
 
 N:1718:Nora
+N:5369:Noko
 4
 announces 'I don't eat too little. But you, adventurer, eat too much.'
 complains about being too fat.
@@ -498,6 +513,7 @@ calls for her minions and instructs them to take away all your food.
 very hurriedly tries to run away from you.
 
 N:1719:Jasieen
+N:5370:Jasajeen
 4
 says 'I'm not a Mary Sue. What makes you think that?'
 announces 'Sorry, but you look like Moderator Breaker to me.'
@@ -507,6 +523,7 @@ happily remarks that ever since she won the show she can live a happy life.
 implores you: 'Please don't kill me! I'm too important to die!'
 
 N:1720:Marike
+N:5353:Marika
 4
 squeaks like a little girl.
 farts in your general direction in a very squeaky, disgusting way.
@@ -516,6 +533,7 @@ shows you her thick butt which she will use to destroy you.
 laughs 'You cannot defeat me. Ha ha ha.'
 
 N:2667:Gudrun
+N:5371:Rungud
 4
 announces 'Pay 10 euros to me or you will be terminated.'
 says 'Work hard if you don't want to anger me.'
@@ -525,6 +543,7 @@ strides toward you with determination in her face.
 shouts 'Ella will avenge me!'
 
 N:2668:Ella
+N:5372:Everella
 4
 announces 'If you touch me I'll make your hands bleed.'
 says 'You have no right to be here. Now I will eliminate you.'
@@ -534,6 +553,7 @@ is ready to kick your butt, you wimpy 'adventurer'!
 mutters 'Where's my sister Gudrun when I need her?'
 
 N:2669:Melissa
+N:5373:Assistant Melissa
 4
 announces 'Abide by my rules or you will be punished.'
 says 'Adventurers are not permitted on this dungeon level.'
@@ -543,6 +563,7 @@ wants to demonstrate her kung-fu abilities to you.
 calls for her fellow assistants.
 
 N:2670:Manuela
+N:5354:Manola
 4
 announces 'Pay 100 euros immediately or I will kill you!'
 shouts 'I'm not here to talk, I'm here to terminate your sorry existence!'
@@ -552,6 +573,7 @@ points at you and screams 'Avada Kedavra!'
 laughs 'I'll revive anyway. Every time you kill me your fine will increase by 200 euros.'
 
 N:2678:Annemarie
+N:5355:Anne-Marie
 4
 giggles 'I'll use the turbo power booster.'
 boasts 'I own a helicopter!'
@@ -561,6 +583,7 @@ poses sexily with her high-heeled sandals.
 announces 'I'll be back.'
 
 N:3570:Elif
+N:5374:Elli
 4
 wants to try out her beautiful combat boots on you.
 tells you that she'd like to stroke you softly.
@@ -570,6 +593,7 @@ creates a "Pfffffffff!" sound.
 hopes that you won't actually kill her.
 
 N:3572:Jessica
+N:5356:Jessie
 4
 regards you as a criminal and will wipe you off the face of the earth.
 gets ready to fight you.
@@ -580,6 +604,7 @@ screams 'I'm an innocent virgin! Stay away from me!'
 sighs 'What a cruel world this is, where even harmless ladies are being raped...'
 
 N:3840:Inge
+N:5375:Inga
 4
 uncovers her butt and starts farting pepper spray into your face.
 is wearing very pretty black combat boots.
@@ -589,6 +614,7 @@ produces air current noises that are barely audible.
 complains about you addressing her with her first name.
 
 N:3849:Helen
+N:5376:Helli
 4
 shouts 'You won't stand against the might of Femen!'
 ushers a huge horde of girls to attack you.
@@ -598,6 +624,7 @@ is driving you mad with her grating, high-pitched voice.
 screams 'Femen shall rise again!'
 
 N:3895:Kati
+N:5377:Elenya
 4
 shouts 'Hey! That's an unfair thing you've done there!'
 presents her sexy butt cheeks, which are looking very lovely.
@@ -607,6 +634,7 @@ gets ready to seduce you with her striking beauty.
 screams 'Why are you so mean to me?'
 
 N:3896:Maurah
+N:5378:Maricia
 4
 just sighs.
 obviously wishes you were far away.
@@ -616,6 +644,7 @@ will definitely not give you what you want, because she wants to make your life 
 has tears running down her cheeks, ruining her make-up...
 
 N:3897:Eveline
+N:5379:Evita
 4
 says 'Black is a good color, you can't do nothing wrong if you wear black clothes.'
 remarks 'Yeah, that red looks pretty good, I appreciate your fashion sense.'
@@ -625,6 +654,7 @@ isn't sure whether her wedge sandals are 'gentle', but is eager to kick you with
 screams 'No! You can't wear PINK of all things! Pick any other color, but not that one, please!'
 
 N:3898:Sandra
+N:5380:Sandrina
 4
 farts in your direction in a very disgusting, squeaking way.
 marvels at the shreds of skin clinging to her sharp-edged combat boot heels.
@@ -634,6 +664,7 @@ presents her incredibly tender, female buttocks to you, which look so very soft!
 sobs 'Please! You can have everything you want, just stop bashing me, please!'
 
 N:3899:Simone
+N:5381:Simona
 4
 seems to be aware of your presence.
 hopes that you treat her nicely.
@@ -643,6 +674,7 @@ wonders whether you like her thick hugging boots.
 mutters 'This time I'll forgive you...'
 
 N:3900:Sue Lyn
+N:5382:Lynette
 4
 announces 'Give up! My boots are harder than your thick head!'
 announces 'People who get bludgeoned by my boots can go to hell!'
@@ -652,6 +684,7 @@ teases you with her very sharp asian fingernails!
 shouts 'No! Don't spank my butt! You're not allowed to do that!'
 
 N:3901:Marleen
+N:5383:Carat Marleen
 4
 shouts 'Don't diss my boyfriend!'
 announces 'The erring wight is the best boyfriend ever and I won't let you contradict me!'
@@ -661,6 +694,7 @@ laughs 'I can kick pretty powerfully, won't you agree?'
 screams 'Run, erring wight! We must split up and lose them!'
 
 N:3902:Claudia
+N:5384:Cloudy
 4
 greets you and hopes for a fair battle.
 wants to test whether you can kick more powerfully than her wooden sandals.
@@ -670,6 +704,7 @@ seems happy to see you again.
 congratulates you for being such a good fighter.
 
 N:3903:Ksenia
+N:5385:Xeni
 4
 says 'Oh I'm sorry that I gave you the wrong date!'
 remarks 'I might look kind, but if you annoy me, I'll slam my sandals into your shins!'
@@ -679,6 +714,7 @@ is looking forward to some melee combat with you.
 seems very sad...
 
 N:3904:Solvejg
+N:5386:Erosina
 4
 annoys you with her grating voice.
 gets ready to intoxicate you with the scent of her mocassins.
@@ -688,6 +724,7 @@ is driving you mad with her constant attempts to tease you!
 screams like a woman all the time, and the loud sound of her annoying voice is resonating in the dungeon.
 
 N:3905:Jennifer
+N:5387:Jynnifyr
 4
 doesn't seem to make a sound.
 mutters 'Stop your silly shenanigans.'
@@ -697,6 +734,7 @@ asks 'Can't you just go somewhere else and mind your own business?'
 is trying to retreat to a safe place.
 
 N:3906:Sarah
+N:5388:Sleepy Sarah
 4
 is ready to kick you in the shins very painfully!
 warns you that her pants are airtight.
@@ -706,6 +744,7 @@ announces 'The winner of this fight may bludgeon the loser. If it ends in a draw
 will come back and kick your butt!
 
 N:3907:Mariya
+N:5389:Mari-ja
 4
 announces 'I'll not let you steal my equipment with the superghost Big-Switchboo!'
 laughs 'No one can steal my ability to fart!'

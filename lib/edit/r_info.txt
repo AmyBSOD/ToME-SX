@@ -19158,7 +19158,8 @@ F:RES_WALL | ANIMAL | HAS_EGG | DROP_CORPSE | FEMALE | RES_TELE | IM_COLD |
 F:MORTAL | BASEANGBAND |
 S:1_IN_3 | 
 S:BR_CONF
-D:Looks like a thick hiking boot for use in mountainous terrain... except it seems to be living, and out to bludgeon you!
+D:Looks like a thick hiking boot for use in mountainous terrain... 
+D:except it seems to be living, and out to bludgeon you! 
 
 N:1090:Jessica
 G:r:B
@@ -19191,7 +19192,9 @@ F:RES_CHAO | ANIMAL | HAS_EGG | DROP_CORPSE | FEMALE | RES_NERV |
 F:MORTAL | BASEANGBAND |
 S:1_IN_15 | 
 S:BR_SHAR
-D:You're thrilled at the sight of this purple high-heeled lady's shoe. But as it starts to scratch open your skin, you realize that you're not in for a thrilling experience but a painful one...
+D:You're thrilled at the sight of this purple high-heeled lady's shoe. But as it starts 
+D:to scratch open your skin, you realize that you're not in for a thrilling experience 
+D:but a painful one... 
 
 N:1092:Wendy
 G:r:v
@@ -19212,7 +19215,9 @@ F:NO_CONF | NO_STUN | NO_SLEEP | NO_FEAR | RES_TELE | RES_NERV | RES_MIND |
 S:1_IN_4 | 
 S:BR_GRAV | BR_POIS | BR_TIME | BR_INER | S_MONSTER | HEAL | BO_WATE | 
 S:S_KIN | TRAPS
-D:A very beautiful, but unfortunately very evil woman. Mario and Luigi have already failed taking her out, losing all of their lives in the process. Can you possibly best her even though you only have a single life?
+D:A very beautiful, but unfortunately very evil woman. Mario and Luigi have already 
+D:failed taking her out, losing all of their lives in the process. Can you 
+D:possibly best her even though you only have a single life? 
 
 N:1093:Mailie
 G:r:D
@@ -19302,7 +19307,9 @@ F:ANIMAL | DROP_CORPSE | FEMALE | IM_FIRE | IM_ACID | NO_CONF | IM_ELEC |
 F:MORTAL | HAS_EGG | BASEANGBAND | NO_FEAR | NO_STUN | IM_COLD | IM_POIS | 
 S:1_IN_3 | 
 S:BR_POIS | BR_CHAO | BR_GRAV | TRAPS 
-D:A razor-sharp stiletto boot. You can see shreds of skin clinging to the heels, giving you a hint as to what happened to the last adventurer who tried to defeat this sentient piece of female footwear...
+D:A razor-sharp stiletto boot. You can see shreds of skin clinging to the heels, 
+D:giving you a hint as to what happened to the last adventurer who tried 
+D:to defeat this sentient piece of female footwear... 
 
 N:1099:Nadja
 G:u:u
@@ -20134,7 +20141,8 @@ F:MORTAL | BASEANGBAND |
 S:1_IN_3 | 
 S:BR_CONF
 S:MULTIPLY
-D:Looks like a thick hiking boot for use in mountainous terrain... except it seems to be living, and out to bludgeon you!
+D:Looks like a thick hiking boot for use in mountainous terrain... 
+D:except it seems to be living, and out to bludgeon you! 
 
 N:1156:Klara
 G:u:D
@@ -20167,7 +20175,9 @@ F:MORTAL | HAS_EGG | BASEANGBAND | NO_FEAR | NO_STUN | IM_COLD | IM_POIS |
 S:1_IN_3 | 
 S:BR_POIS | BR_CHAO | BR_GRAV | TRAPS 
 S:MULTIPLY
-D:A razor-sharp stiletto boot. You can see shreds of skin clinging to the heels, giving you a hint as to what happened to the last adventurer who tried to defeat this sentient piece of female footwear...
+D:A razor-sharp stiletto boot. You can see shreds of skin clinging to the heels, 
+D:giving you a hint as to what happened to the last adventurer who tried 
+D:to defeat this sentient piece of female footwear... 
 
 N:1158:Grid bug
 G:I:v
@@ -73905,7 +73915,7 @@ F:FEMALE | DROP_CORPSE | CAN_SPEAK |
 F:CAN_SWIM | SMART | COLD_BLOOD | WEIRD_MIND | REGENERATE | ELDRITCH_HORROR | 
 F:OPEN_DOOR | DROP_22 | BASEANGBAND | UNIQUE | MOVE_BODY | DRAGON | GOOD | 
 F:AURA_COLD | IM_COLD | IM_POIS | IM_ACID | RES_TELE | RES_WATE | NO_FEAR | 
-F:RES_DARK | NO_SLEEP | REVBOSS | 
+F:RES_DARK | NO_SLEEP |  
 F:SPECIAL_GENE | DROP_RANDART | NO_THEFT | 
 S:1_IN_5 | 
 S:ARROW_3 | BR_COLD | BR_ACID | BA_WATE | CAUSE_3 | 
@@ -92952,6 +92962,802 @@ S:BR_NERV | SHRIEK | HASTE |
 D:A very sexy girl. You'd absolutely want to have intercourse with her. But, 
 D:I'm fairly certain that it's not the best idea to do so and you'd be 
 D:well-advised to spank her butt instead! 
+
+N:5349:An OU Football Fan
+G:t:U
+I:160:1d4:10:1:40
+W:0:100:1300:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BEG:*
+F:MALE | DROP_SKELETON | DROP_CORPSE | 
+F:RAND_25 | WILD_TOWN | 
+F:TAKE_ITEM | OPEN_DOOR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:MULTIPLY
+D:A fan of the Oklahoma University football team. He has been conceived by 
+D:some troll who distributed an Angband version to people from other cities, 
+D:apparently. 
+
+N:5350:Sunija
+G:|:b
+I:125:100d100:25:150:150
+W:85:40:500:50000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:LOSE_ALL:15d15
+B:KICK:SHATTER:10d10
+B:FARTLOUD:INSANITY:2d2
+B:KICK:ACID:6d6
+F:FORCE_MAXHP | FEMALE | WILD_TOO | WILD_OCEAN | WILD_WASTE | WILD_VOLCANO | 
+F:ONLY_ITEM | DROP_42 | NONLIVING | BASEANGBAND | UNIQUE | WILD_MOUNTAIN | 
+F:DROP_GREAT | FRIENDS | SMART | RES_DISE | RES_TELE | ELDRITCH_HORROR | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | CAN_SPEAK | DROP_CORPSE | RES_NERV |
+F:EVIL | DEMON | IM_POIS | NO_CONF | NO_SLEEP | IM_COLD | RES_NETH | 
+F:RES_LITE | RES_DARK | RES_CHAO | RES_GRAV | CAN_SWIM | RES_MIND |
+F:RES_ETHE |
+S:1_IN_3 | 
+S:S_KIN | BR_COLD | BR_ELEC | BR_NETH | BA_NETH | DRAIN_MANA | BRAIN_SMASH | 
+S:CAUSE_4 | S_WRAITH | 
+D:A very dangerous looking dark-skinned woman. You know immediately that she 
+D:is a powerful spellcaster. 
+
+N:5351:Eleanor
+G:G:D
+I:130:100d200:50:100:200
+W:70:10:2000:15000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:PARALYZE:4d4
+B:KICK:HURT:50d3
+B:KICK:COLD:2d10
+B:FART:INSANITY:2d8
+F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | WILD_TOWN | WILD_SHORE | 
+F:DROP_32 | BASEANGBAND | UNIQUE | DROP_GOOD | DROP_GREAT | WILD_OCEAN | 
+F:WILD_WASTE | WILD_WOOD | WILD_VOLCANO | WILD_MOUNTAIN | WILD_GRASS | 
+F:CAN_SWIM | CAN_FLY | SMART | REFLECTING | COLD_BLOOD | 
+F:WEIRD_MIND | REGENERATE | ELDRITCH_HORROR | AURA_FIRE | BASH_DOOR | 
+F:MOVE_BODY | TAKE_ITEM | UNDEAD | EVIL | IM_FIRE | IM_COLD | RES_NETH | 
+F:RES_WATE | RES_NEXU | RES_DISE | NO_FEAR | NO_CONF | NO_STUN | NO_SLEEP | 
+F:RES_DARK | RES_TIME | RES_LITE | RES_CHAO | RES_INER | RES_GRAV | 
+F:RES_ETHE | 
+S:1_IN_3 | 
+S:SHRIEK | ROCKET | BR_FIRE | BR_POIS | BR_NETH | BR_NUKE | BA_NETH | 
+S:CAUSE_4 | MIND_BLAST | HEAL | TELE_TO | TRAPS | S_MONSTERS | S_UNDEAD | 
+D:One of the two "eroticity queens". She is very hard to defeat, yet you're 
+D:lucky because she's less dangerous than her boss. 
+
+N:5352:Kirja
+G:G:w
+I:135:200d200:70:130:250
+W:80:10:2000:30000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:DISEASE:4d6
+B:KICK:HURT:60d4
+B:FART:LOSE_ALL:4d10
+B:FART:TIME:6d8
+F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | WILD_TOWN | WILD_SHORE | 
+F:DROP_42 | BASEANGBAND | UNIQUE | DROP_GOOD | DROP_GREAT | WILD_OCEAN | 
+F:WILD_WASTE | WILD_WOOD | WILD_VOLCANO | WILD_MOUNTAIN | WILD_GRASS | 
+F:CAN_SWIM | CAN_FLY | STUPID | REFLECTING | COLD_BLOOD | 
+F:WEIRD_MIND | REGENERATE | ELDRITCH_HORROR | AURA_COLD | BASH_DOOR | 
+F:MOVE_BODY | KILL_ITEM | UNDEAD | EVIL | IM_COLD | RES_NETH | IM_POIS | 
+F:RES_WATE | RES_NEXU | RES_PLAS | NO_FEAR | NO_CONF | NO_STUN | NO_SLEEP | 
+F:RES_DARK | RES_TIME | RES_LITE | RES_CHAO | RES_INER | RES_GRAV | 
+F:RES_SHAR | RES_SOUN | RES_ETHE | 
+F:POWERFUL
+S:1_IN_3 | 
+S:SHRIEK | ROCKET | BR_COLD | BR_POIS | BR_CHAO | BR_TIME | BA_WATE | 
+S:CAUSE_4 | BRAIN_SMASH | HEAL | TELE_AWAY | TRAPS | BO_ICEE | HAND_DOOM | 
+S:BA_MANA | BA_CHAO | FORGET | S_HI_DEMON | S_ANGEL | S_WRAITH | S_UNIQUE | 
+D:One of the two "eroticity queens". Unlike her minion, she is the real 
+D:deal, and she'll give you a long and arduous fight. If you can take her 
+D:out, you're probably ready to take on Morgoth himself, too. But of course 
+D:it's completely impossible to defeat her. :-P 
+
+N:5353:Marika
+G:I:w
+I:125:40d20:75:25:0
+W:20:5:2500:1000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:UN_BONUS:5d5
+B:FART:LOSE_ALL:5d5
+B:KICK:ACID:5d5
+B:KICK:TIME:5d5
+F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | WILD_TOWN | WILD_SHORE | 
+F:BASH_DOOR | DROP_90 | BASEANGBAND | UNIQUE | WILD_VOLCANO | WILD_MOUNTAIN | 
+F:KILL_TREES | CAN_SWIM | STUPID | WEIRD_MIND | REGENERATE | 
+F:MOVE_BODY | KILL_ITEM | EVIL | IM_COLD | NO_STUN | NO_SLEEP | RES_MIND | 
+S:1_IN_2 | 
+S:SHRIEK | BR_ACID | BR_ELEC | BR_FIRE | BR_COLD | BR_SOUN | BR_CHAO | BR_DISE | 
+S:BR_SHAR | S_BUG | S_RNG | 
+D:This bitch wants to destroy you, and everything that you own. 
+
+N:5354:Manola
+G:@:R
+I:130:100d100:50:140:0
+W:90:5:8000:60000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:INSANITY:10d10
+B:KICK:LOSE_ALL:10d10
+B:KICK:HURT:40d1
+F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | WILD_TOWN | WILD_VOLCANO | 
+F:CAN_SWIM | COLD_BLOOD | WEIRD_MIND | REGENERATE | ELDRITCH_HORROR | 
+F:BASH_DOOR | DROP_22 | BASEANGBAND | UNIQUE | MOVE_BODY | DRAGON | EVIL | 
+F:IM_COLD | IM_POIS | IM_ACID | RES_NETH | RES_WATE | NO_FEAR | RES_TELE | 
+F:NO_CONF | KILL_ITEM | NO_SLEEP | IM_FIRE | RES_PLAS | RES_ETHE | 
+F:RES_TIME | RES_SOUN | RES_CHAO | RES_WALL | RES_GRAV | RES_NERV | 
+S:1_IN_3 | 
+S:BR_NETH | BR_DISE | BR_TIME | BR_INER | BR_GRAV | BA_NUKE | BA_CHAO | 
+S:BA_NETH | BRAIN_SMASH | S_THUNDERLORD | S_HI_UNDEAD | S_HI_DRAGON | 
+S:S_UNIQUE | S_WRAITH | 
+D:The meanest of all the assistants, she will fuck you up and your children 
+D:and your grand children. You're dead. You just don't know it yet. 
+
+N:5355:Anne-Marie
+G:H:s
+I:140:60d50:30:80:20
+W:70:5:2500:5000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:EXP_80:20d6
+B:KICK:SHATTER:20d6
+F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | RAND_50 | WILD_TOWN | WILD_OCEAN | 
+F:OPEN_DOOR | DROP_42 | BASEANGBAND | UNIQUE | CAN_SWIM | WILD_WOOD | WILD_MOUNTAIN | 
+F:SMART | WEIRD_MIND | TAKE_ITEM | EVIL | IM_ELEC | IM_COLD | RES_TELE | 
+F:RES_NETH | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | NO_FEAR | NO_STUN | NO_CONF | 
+F:RES_TIME | RES_GRAV | RES_DARK | RES_SHAR | NO_SLEEP | RES_MIND | 
+S:1_IN_5 | 
+S:BR_ELEC | BR_LITE | BR_PLAS | ROCKET | BR_WALL | BA_FIRE | BA_MANA | SCARE | 
+S:BLIND | HASTE | TELE_LEVEL | 
+D:Boah! You know a model when you see one. This girl is incredibly pretty. 
+
+N:5356:Jessie
+G:r:B
+I:135:90d90:60:200:70
+W:70:5:200:40000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:POISON:10d10
+B:FARTQUIET:UN_BONUS:6d10
+B:KICK:COLD:6d10
+B:KICK:CONFUSE:6d10
+F:WILD_TOO | WILD_WOOD | UNIQUE | CAN_SPEAK | SMART | REGENERATE | 
+F:CAN_SWIM | NO_FEAR | NO_CONF | NO_SLEEP | NO_STUN | ELDRITCH_HORROR | 
+F:ANIMAL | DROP_CORPSE | FEMALE | RES_TELE | IM_COLD | AURA_COLD | 
+F:MORTAL | BASEANGBAND | REGENERATE | GOOD | HURT_LITE | RES_WATE |  
+S:1_IN_3 | 
+S:BR_POIS | BR_DARK | BO_ICEE | SHRIEK | ROCKET | BA_POIS | BA_DARK | 
+S:BRAIN_SMASH | CAUSE_3 | MISSILE | HEAL | BLINK | TPORT | DARKNESS | TRAPS | 
+D:Now she shows her true form... she's a terrible eldritch horror... 
+D:But a pretty one, that's for sure! Those white stiletto boots are just so 
+D:incredibly beautiful; too bad she either wants to kick you in the nuts (if you're 
+D:male) or smash her heel into your forehead (otherwise)!
+
+N:5357:Elli
+G:r:g
+I:130:4d6:8:10:10
+W:1:5:200:10
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:1d5
+B:FARTQUIET:*
+F:RAND_25 | WILD_TOO |  
+F:CAN_SWIM | UNIQUE | CAN_SPEAK | 
+F:ANIMAL | DROP_CORPSE | FEMALE |
+F:MORTAL | BASEANGBAND |
+S:1_IN_5 | 
+S:BR_POIS
+D:This lovely girl seems very gentle, and would like to engage you in a duel.
+
+N:5358:Jessie
+G:r:B
+I:110:48d9:8:75:20
+W:18:5:200:350
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:5d8
+B:KICK:BLIND:2d8
+B:FARTQUIET:*
+F:WILD_TOO | WILD_WOOD | UNIQUE | CAN_SPEAK | 
+F:CAN_SWIM | NO_FEAR | NO_CONF | NO_SLEEP | NO_STUN | 
+F:ANIMAL | DROP_CORPSE | FEMALE | RES_TELE | IM_COLD | 
+F:MORTAL | BASEANGBAND | REGENERATE | 
+S:1_IN_3 | 
+S:BR_POIS | BR_DARK | BO_ICEE
+D:Beware. Many have fallen for this sweet asian girl. If you are not careful, she will not be polite to you!
+
+N:5359:Wendy O'Koopa
+G:r:v
+I:110:200d10:8:125:20
+W:40:5:200:720
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:6d6
+B:KICK:TERRIFY:4d4
+B:KICK:UN_BONUS:4d4
+B:FARTLOUD:LOSE_ALL:4d4
+F:WILD_TOO | WILD_SWAMP | WILD_SHORE | 
+F:CAN_SWIM | UNIQUE | EVIL | CAN_SPEAK | 
+F:RES_TIME | RES_SOUN | ANIMAL | DROP_CORPSE | FEMALE |
+F:MORTAL | BASEANGBAND |
+F:RES_NETH | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:NO_CONF | NO_STUN | NO_SLEEP | NO_FEAR | RES_TELE | RES_NERV | RES_MIND |
+S:1_IN_4 | 
+S:BR_GRAV | BR_POIS | BR_TIME | BR_INER | S_MONSTER | HEAL | BO_WATE | 
+S:S_KIN | TRAPS
+D:A very beautiful, but unfortunately very evil woman. Mario and Luigi have already 
+D:failed taking her out, losing all of their lives in the process. Can you 
+D:possibly best her even though you only have a single life? 
+
+N:5360:Miley
+G:r:D
+I:110:4d9:8:50:20
+W:18:5:200:300
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:25d6
+F:WILD_TOO | WILD_MOUNTAIN | WILD_WOOD | UNIQUE |  
+F:CAN_SWIM | NO_FEAR | NO_CONF | NO_SLEEP | NO_STUN | 
+F:ANIMAL | DROP_CORPSE | FEMALE | RES_TELE | IM_FIRE | 
+F:MORTAL | BASEANGBAND |
+D:This cute little girl is a heck of a lot more dangerous than one might expect...
+
+N:5361:Vilja
+G:u:u
+I:110:35d36:8:154:20
+W:34:5:200:10400
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:12d6
+B:KICK:DISEASE:4d6
+B:KICK:POISON:4d6
+B:FARTQUIET:*
+F:RES_DARK | RES_WALL | WILD_TOO | 
+F:CAN_SWIM | EVIL | WILD_GRASS | WILD_OCEAN | UNIQUE | CAN_SPEAK | 
+F:ANIMAL | DROP_CORPSE | FEMALE | IM_FIRE | IM_ACID | NO_CONF | IM_ELEC | 
+F:MORTAL | BASEANGBAND | NO_FEAR | NO_STUN | IM_COLD | IM_POIS |  
+F:RES_TELE | NO_SLEEP | RES_ETHE
+S:1_IN_3 | 
+S:BR_DARK | TRAPS | CAUSE_2 | BLIND | HASTE | S_MONSTER | SLOW
+D:You really don't want to be fighting this bitch. She has the power to make you end up crying.
+
+N:5362:Little Katia
+G:I:o
+I:120:50d50:30:150:0
+W:50:1:200:30000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:INSANITY:10d8
+B:HIT:DISEASE:10d8
+B:HIT:POISON:5d8
+F:WILD_TOO | WILD_WOOD | WILD_GRASS | UNIQUE | WILD_OCEAN |  
+F:CAN_SWIM | EVIL | WILD_SWAMP | WILD_MOUNTAIN | WILD_WASTE | WILD_SHORE | 
+F:RES_INER | ANIMAL | DROP_CORPSE | FEMALE | IM_ELEC | IM_ACID | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | NO_FEAR | NO_STUN | IM_POIS | CAN_SPEAK | RES_NERV | 
+S:1_IN_2
+S:S_BUG | S_RNG | BR_POIS
+D:This harmless-looking little girl is actually a true nightmare. Don't fight her if you can help it. Just don't.
+
+N:5363:Lenka
+G:r:r
+I:115:48d6:15:25:20
+W:8:5:200:160
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:FIRE:3d6
+F:WILD_TOO | WILD_SWAMP | WILD_MOUNTAIN | WILD_GRASS | AURA_FIRE | 
+F:RES_GRAV | RES_WALL | CAN_SWIM | IM_POIS | IM_FIRE | CAN_SPEAK |
+F:ANIMAL | UNIQUE | DROP_CORPSE | FEMALE | 
+F:MORTAL | BASEANGBAND |
+D:A dangerous-looking burly woman wearing high-heeled combat boots. 
+D:She'll probably try to stomp you if you don't watch out...
+
+N:5364:Tender Ina
+G:U:o
+I:125:50d10:25:75:80
+W:25:5:5:2000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:10d10
+B:KICK:EAT_FOOD
+B:KICK:EAT_FOOD
+B:FART:INSANITY:4d4
+F:FORCE_SLEEP | FORCE_MAXHP | FEMALE | WILD_TOO | WILD_WASTE | RES_NERV | 
+F:ONLY_ITEM | DROP_12 | NONLIVING | BASEANGBAND | UNIQUE | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_STUN | CAN_SPEAK | DROP_CORPSE | 
+F:EVIL | DEMON | IM_POIS | NO_CONF | NO_SLEEP | IM_FIRE | RES_NETH
+S:1_IN_5 | 
+S:BR_DISE | DRAIN_MANA | BRAIN_SMASH | BO_WATE | FORGET | S_MONSTER
+D:She's thin enough to be anorexic. And she'll try to steal both your 
+D:food and your sanity... can you bring yourself to end her misery?
+
+N:5365:Melirija
+G:B:D
+I:125:50d50:70:90:40
+W:45:20:2000:8000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:PARALYZE:4d4
+B:KICK:LOSE_DEX:5d10
+B:FART:*
+F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | WILD_OCEAN | WILD_WASTE | 
+F:WILD_MOUNTAIN | WILD_WOOD | WILD_VOLCANO | ESCORT | MOVE_BODY | TAKE_ITEM | 
+F:DROP_22 | BASEANGBAND | UNIQUE | GIANT | EVIL | IM_ELEC | RES_WATE | NO_FEAR | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_STUN | CAN_SWIM |  
+F:RES_DARK | 
+S:1_IN_8 | 
+S:SHRIEK | BR_ELEC | BR_WALL | MIND_BLAST | CAUSE_2 | FORGET | S_KIN | 
+D:A beautiful, strong girl in black high-heeled combat boots who challenges you. 
+D:She wants to convert you to her religion but you don't believe in her 
+D:eldritch gods, which prompts her to use force... 
+
+N:5366:Nurse Ariane
+G:D:D
+I:150:200d200:100:160:200
+W:90:40:3000:50000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:ELEC:11d11
+B:KICK:FIRE:11d11
+B:KICK:COLD:11d11
+F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | WILD_TOWN | WILD_WASTE | WILD_WOOD | 
+F:DROP_22 | BASEANGBAND | UNIQUE | WILD_MOUNTAIN | WILD_VOLCANO | WILD_GRASS | 
+F:CAN_FLY | CAN_SWIM | SMART | REGENERATE | POWERFUL | AURA_FIRE | AURA_COLD | 
+F:AURA_ELEC | BASH_DOOR | KILL_BODY | TAKE_ITEM | DRAGON | GOOD | IM_COLD | IM_ELEC | 
+F:IM_FIRE | RES_TELE | RES_WATE | RES_PLAS | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | 
+F:RES_DARK | RES_CHAO | RES_INER | RES_WALL | RES_GRAV | RES_SHAR | RES_MIND | 
+F:WYRM_PROTECT |  
+S:1_IN_2 | 
+S:BR_ELEC | BR_FIRE | BR_COLD | BA_ELEC | BA_FIRE | BA_COLD | BA_MANA | CAUSE_4 | 
+S:BO_ELEC | BO_FIRE | BO_COLD | HASTE | HAND_DOOM | TPORT | 
+D:She calls herself "The Lady of the Elements". And she has matching powers. 
+D:Only few adventurers ever encounter her, and nobody was ever capable of defeating 
+D:her. You surely won't succeed where the others failed. It's time to give up. 
+
+N:5367:Mirri
+G:R:D
+I:110:20d30:10:25:100
+W:14:6:800:3000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:PARALYZE:1d6
+B:KICK:HURT:7d9
+F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | WILD_TOWN | WILD_WASTE | 
+F:DROP_12 | BASEANGBAND | UNIQUE | WILD_WOOD | WILD_MOUNTAIN | IMPRESED | 
+F:CAN_SWIM | ESCORTS | WEIRD_MIND | AURA_COLD | BASH_DOOR | MOVE_BODY |
+F:TAKE_ITEM | ORC | EVIL | IM_COLD | RES_TELE | NO_FEAR | NO_CONF |  
+F:RES_DARK | 
+S:1_IN_6 | 
+S:SHRIEK | ARROW_2 | BR_COLD | BR_WALL | 
+D:A beautiful girl, shoulder-length black hair, always a nice smile on her face. 
+D:Yet she has this bizarre fetish that makes her want to stomp the toes of other 
+D:people for fun. She especially wants to stomp yours. And she's wearing 
+D:black combat boots with cone heels... 
+
+N:5368:Nellina
+G:D:R
+I:150:100d40:50:90:30
+W:60:5:5000:20000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:COLD:10d10
+B:KICK:EXP_40:10d10
+B:KICK:HURT:10d1
+F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | CAN_SWIM | ESCORT | 
+F:DROP_22 | BASEANGBAND | UNIQUE | REGENERATE | DRAGON | NO_SLEEP | 
+F:RES_INER | RES_WALL | OPEN_DOOR |  RES_NERV | 
+S:1_IN_6 | 
+S:DRAIN_MANA | BO_MANA | 
+D:Whoa, this girl sure is big and strong! You need to make sure she can't 
+D:knock you out, because this is T-o-M-E, and being knocked out is a 
+D:technical instadeath. You never get back up once you're down. 
+
+N:5369:Noko
+G:j:D
+I:135:50d100:50:130:40
+W:50:5:3:9000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:EAT_FOOD:10d10
+B:KICK:EAT_FOOD
+B:KICK:EAT_FOOD
+B:KICK:INSANITY:8d8
+F:FORCE_SLEEP | FORCE_MAXHP | FEMALE | WILD_TOO | WILD_TOWN | WILD_SHORE | 
+F:ONLY_ITEM | DROP_32 | NONLIVING | BASEANGBAND | UNIQUE | WILD_OCEAN | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_STUN | CAN_SPEAK | DROP_CORPSE | 
+F:EVIL | DEMON | IM_POIS | NO_CONF | NO_SLEEP | IM_FIRE | RES_NETH
+F:WILD_VOLCANO | WILD_MOUNTAIN | CAN_SWIM | ESCORTS | SMART | COLD_BLOOD | 
+F:EMPTY_MIND | ELDRITCH_HORROR | TAKE_ITEM | KILL_BODY | UNDEAD | RES_WATE | 
+F:RES_DISE | NO_FEAR | NO_STUN | RES_NERV | 
+S:1_IN_3 | 
+S:BR_DISE | DRAIN_MANA | BRAIN_SMASH | BO_WATE | FORGET | S_MONSTERS | BR_NETH | 
+S:BA_CHAO | BR_DISI | CAUSE_4 | HEAL | TPORT | S_KIN | S_UNDEAD | 
+D:Yet another anorexic girl. Looking at her makes you glad that you're able 
+D:to eat normally; you really don't want to look like her. But she seems to 
+D:have sort of a "cult" following her, and you'll have to make sure they don't 
+D:drain you of your sanity! 
+
+N:5370:Jasajeen
+G:b:v
+I:130:60d40:4:50:50
+W:40:50:500:5000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:INSANITY:10d4
+B:KICK:UN_BONUS:5d4
+B:KICK:DISEASE:5d5
+B:FART:*
+F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | WILD_TOWN | WILD_SHORE | 
+F:OPEN_DOOR | DROP_42 | BASEANGBAND | UNIQUE | WILD_WASTE | WILD_MOUNTAIN | 
+F:CAN_FLY | FORCE_SLEEP | FORCE_MAXHP | DROP_GREAT | WEIRD_MIND |  
+F:REGENERATE | POWERFUL | ELDRITCH_HORROR | MOVE_BODY | TAKE_ITEM | WILD_GRASS | 
+F:ANIMAL | GOOD | IM_ACID | IM_POIS | IM_FIRE | RES_NETH | RES_WATE | DG_CURSE | 
+F:RES_TIME | RES_ETHE | 
+S:1_IN_3 | 
+S:SHRIEK | BR_POIS | BR_ACID | BR_NETH | BA_POIS | TRAPS | FORGET | 
+D:It's the winning girl from "Apokalyptia's Next Topmodel (by Kylie Lum)"! 
+D:Her beauty is unmatched, and you're mesmerized by her appearance. Such a 
+D:beautiful girl you have not ever seen, and what's more, she is wearing red 
+D:leather combat boots with extra thick block heels. Killing such a pure being 
+D:would invoke the wrath of the gods, so don't do it! 
+
+N:5371:Rungud
+G:@:v
+I:130:50d50:30:100:20
+W:70:5:4000:15000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:CONFUSE:5d15
+B:KICK:LOSE_WIS:3d15
+B:KICK:EXP_40:3d15
+B:FART:*
+F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | WILD_TOWN | WILD_VOLCANO | 
+F:CAN_SWIM | SMART | COLD_BLOOD | WEIRD_MIND | REGENERATE | ELDRITCH_HORROR | 
+F:OPEN_DOOR | DROP_22 | BASEANGBAND | UNIQUE | MOVE_BODY | DRAGON | EVIL | 
+F:AURA_COLD | IM_COLD | IM_POIS | IM_ACID | RES_TELE | RES_WATE | NO_FEAR | 
+F:RES_DARK | NO_SLEEP | RES_MIND | 
+S:1_IN_5 | 
+S:ARROW_3 | BR_COLD | BR_ACID | BA_WATE | CAUSE_3 | 
+D:She's a female assistant who likes to dress in purple. Her stature and 
+D:pose give you a hint that she's not here to mess around. 
+
+N:5372:Everella
+G:@:B
+I:135:75d75:30:120:0
+W:85:5:3000:22000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:UN_BONUS:4d20
+B:KICK:UN_POWER:4d20
+B:KICK:ABOMINATION:4d20
+F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | WILD_TOWN | WILD_SHORE | 
+F:CAN_SWIM | COLD_BLOOD | WEIRD_MIND | REGENERATE | ELDRITCH_HORROR | 
+F:BASH_DOOR | DROP_22 | BASEANGBAND | UNIQUE | MOVE_BODY | DEMON | EVIL | 
+F:RES_TIME | IM_COLD | IM_POIS | IM_ACID | RES_NEXU | RES_WATE | NO_FEAR | RES_NETH | 
+F:RES_INER | RES_CHAO | RES_WALL | NO_CONF | WILD_WOOD | WILD_MOUNTAIN |  
+F:RES_MIND | RES_NERV |
+S:1_IN_5 | 
+S:ARROW_4 | BR_DISE | BR_ACID | BA_MANA | CAUSE_4 | HAND_DOOM | S_HI_DEMON | 
+D:A female assistant who looks very angry. She wants to kill you, violate 
+D:your corpse and feed your remains to the vultures. You should get away ASAP! 
+
+N:5373:Assistant Melissa
+G:@:D
+I:120:60d50:20:80:40
+W:50:5:10000:10000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HALLU:6d10
+B:KICK:ELEC:7d10
+F:FEMALE | WILD_TOO | DROP_CORPSE | CAN_SPEAK | WILD_TOWN | WILD_MOUNTAIN | 
+F:CAN_SWIM | SMART | COLD_BLOOD | REGENERATE | ELDRITCH_HORROR | WILD_GRASS | 
+F:OPEN_DOOR | DROP_22 | BASEANGBAND | UNIQUE | GIANT | EVIL | 
+F:AURA_ELEC | IM_ELEC | IM_POIS | IM_ACID | NO_FEAR | NO_CONF | 
+F:RES_DARK | RES_SOUN | NO_STUN | RES_NERV | RES_MIND | 
+S:1_IN_6 | 
+S:BR_ELEC | BR_CONF | BR_SOUN | BA_ELEC | BA_DARK | HASTE | TPORT | S_UNDEAD | 
+D:A beautiful female assistant in black wedge-heeled combat boots strides 
+D:towards you. She assumes a martial arts stance and challenges you to a 
+D:fight for your life... 
+
+N:5374:Elli
+G:r:w
+I:135:50d100:70:150:0
+W:75:5:200:50000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:TERRIFY:15d15
+B:KICK:COLD:5d5
+B:KICK:EXP_80:5d5
+B:FARTQUIET:*
+F:RAND_25 | WILD_TOO | REGENERATE | UNDEAD | GOOD | AURA_COLD | 
+F:CAN_SWIM | UNIQUE | CAN_SPEAK | NONLIVING | IM_COLD | IM_POIS | 
+F:ANIMAL | DROP_CORPSE | FEMALE | RES_NETH | RES_WATE | 
+F:BASEANGBAND | POWERFUL | CAN_SWIM | COLD_BLOOD |  
+S:1_IN_5 | 
+S:BR_POIS | BR_NETH | BR_COLD | BA_POIS | MISSILE | HASTE | HEAL | 
+S:TPORT | DARKNESS | S_UNDEAD
+D:She wants a rematch, and whoa did she become pretty or what? 
+D:Her white block-heeled combat boots are soooooooooo gentle! <3<3<3 
+D:You absolutely look forward to being knocked out by this beautiful girl! 
+D:Then again... it seems she might actually turn out to be a vampire...
+
+N:5375:Inga
+G:U:D
+I:110:40d80:30:80:40
+W:35:5:4000:1000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:4d6
+B:KICK:COLD:6d6
+B:FARTQUIET:*
+F:WILD_TOO | WILD_SHORE | WILD_WOOD | UNIQUE | IM_COLD | IM_POIS | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | NO_SLEEP | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SWIM |
+F:RES_DARK | RES_WALL | CAN_SPEAK | SMART | GOOD |  
+S:1_IN_4
+S:BO_POIS | HOLD | SLOW
+D:You feel that her name is misspelled. Anyway, 
+D:she can fart pepper spray with her sexy lady butt, while 
+D:producing incredibly tender air current noises. That's a very erotic 
+D:act! You surely look forward to being defeated by this woman. 
+
+N:5376:Helli
+G:~:D
+I:108:10d12:0:20:250
+W:17:5:1000:500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:EAT_ITEM:3d3
+B:KICK:HURT:3d3
+F:WILD_TOO | WILD_SHORE | WILD_OCEAN | WILD_VOLCANO | EMPTY_MIND | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | FRIENDS | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | UNIQUE | ESCORTS | 
+F:RES_TIME | RES_LITE | CAN_SPEAK | RAND_25 | STUPID | EVIL |  
+F:RES_SOUN | RES_MIND | 
+D:She's eleven years old, yet she already has gray hair. 
+D:And she's the leader of a group of feminists. She can't be reasoned 
+D:with, and will usher her followers in an attempt to eliminate you! 
+
+N:5377:Elenya
+G:p:r
+I:115:8d12:5:20:90
+W:9:5:1000:200
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:2d7
+B:FART:EAT_ITEM
+F:RAND_25 | WILD_TOO |  
+F:UNIQUE | CAN_SPEAK | WILD_WOOD | GOOD | 
+F:DROP_CORPSE | FEMALE | REGENERATE | IM_FIRE | RES_PLAS | 
+F:RES_TIME | MORTAL | BASEANGBAND |
+D:She certainly has the sexiest butt of all the girls you've ever seen. 
+D:And she's pretty enough to seduce you, too, but beware, she'll steal 
+D:your stuff if you don't watch out! 
+
+N:5378:Maricia
+G:t:o
+I:115:20d50:20:90:120
+W:27:5:2000:2500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:LOSE_STR:6d8
+B:FART:*
+F:RAND_25 | WILD_TOO |  
+F:UNIQUE | CAN_SPEAK | WILD_WASTE | 
+F:DROP_CORPSE | FEMALE | IM_POIS | 
+F:RES_CHAO | RES_INER | MORTAL | BASEANGBAND |
+S:1_IN_5
+S:BR_POIS | MIND_BLAST | TELE_LEVEL
+D:She's very pretty and has a long bundle. But she doesn't seem to like 
+D:your presence, and wishes you weren't there. 
+
+N:5379:Evita
+G:v:B
+I:130:11d30:10:80:40
+W:34:5:500:20000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:TIME:10d5
+B:ENGULF:EXP_80:5d5
+B:FART:*
+F:RAND_50 | WILD_TOO | SMART | 
+F:UNIQUE | CAN_SPEAK | POWERFUL | BASH_DOOR | CAN_SWIM | 
+F:DROP_CORPSE | FEMALE | CAN_FLY | WILD_SHORE | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | IM_FIRE | IM_COLD | IM_ELEC | 
+F:RES_TIME | RES_SOUN | RES_WALL | NO_CONF | 
+S:1_IN_3
+S:BR_INER | BR_TIME
+D:She's the whirlwind of cuteness. Her lightning-fast kicks will hit you 
+D:with the full force of her hard, unyielding wedge sandals, and she 
+D:thorougly enjoys knocking you down, you loser. 
+
+N:5380:Sandrina
+G:T:o
+I:125:50d40:2:90:200
+W:26:5:5000:10000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:6d11
+B:FART:*
+F:RAND_25 | WILD_TOO |  
+F:UNIQUE | CAN_SPEAK | WILD_WOOD | EVIL | 
+F:DROP_CORPSE | FEMALE | IM_FIRE | IM_COLD | RES_WATE | 
+F:RES_LITE | RES_WALL | MORTAL | BASEANGBAND | NO_STUN | NO_SLEEP | 
+S:1_IN_10
+S:BR_NUKE | BR_CHAO
+D:This beautiful blonde girl is sassy enough to not care how much of your 
+D:skin she scratches into bloody shreds with her sharp-edged combat boot 
+D:heels. And she also likes to produce particularly disgusting, squeaking 
+D:farting noises specially for you. 
+
+N:5381:Simona
+G:c:y
+I:105:12d20:0:30:170
+W:12:5:2000:800
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:3d10
+B:FART:*
+F:RAND_50 | WILD_TOO | STUPID | WEIRD_MIND | 
+F:UNIQUE | CAN_SPEAK | IM_POIS | GOOD | 
+F:RES_LITE | RES_SOUN | DROP_CORPSE | FEMALE | KILL_WALL | 
+F:MORTAL | BASEANGBAND | TROLL | WILD_MOUNTAIN | 
+S:1_IN_14
+S:BR_SHAR | SLOW | HOLD
+D:She doesn't really want to fight you. It might be best to leave her alone, 
+D:as long as she doesn't get in your way. 
+
+N:5382:Lynette
+G:E:B
+I:130:20d60:5:70:60
+W:26:5:2500:9000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:TERRIFY:6d8
+B:KICK:TIME:5d4
+B:KICK:LOSE_WIS:5d4
+B:FART:*
+F:RES_CHAO | RES_GRAV | RAND_25 | WILD_TOO | IM_POIS | 
+F:UNIQUE | CAN_SPEAK | NO_SLEEP | RES_NETH | 
+F:DROP_CORPSE | FEMALE | CAN_SWIM | BASH_DOOR | WILD_VOLCANO | 
+F:MORTAL | BASEANGBAND | THUNDERLORD | WILD_MOUNTAIN | 
+S:1_IN_10
+S:SLOW | CONF
+D:A very beautiful girl wearing thick winter boots, which she likes to use 
+D:as a weapon. Her cute buttocks also like to fart in your face. 
+
+N:5383:Carat Marleen
+G:J:w
+I:130:5d100:2:31:80
+W:20:5:1000:4000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:2d20
+B:FART:*
+F:RAND_25 | WILD_TOO | ESCORT | OPEN_DOOR | CAN_SWIM | 
+F:UNIQUE | CAN_SPEAK | WEIRD_MIND | STUPID | WILD_TOWN | GOOD | 
+F:DROP_CORPSE | FEMALE | RES_WATE | IM_COLD | RES_NERV | RES_MIND | 
+F:RES_TIME | RES_LITE | RES_INER | RES_GRAV | MORTAL | BASEANGBAND |
+S:1_IN_10
+S:HOLD | TRAPS | FORGET | DRAIN_MANA | S_KIN
+D:She knows karate, and will do her best to defeat you in melee. However, 
+D:what really annoys you is her boyfriend, who happens to be a really 
+D:disgusting boy with a severe case of ADHD. Like, how could she fall for 
+D:that guy??? She must be out of her mind! 
+
+N:5384:Cloudy
+G:D:y
+I:108:30d60:9:15:100
+W:30:5:3000:18000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:4d8
+B:FART:*
+F:RAND_25 | WILD_TOO | CAN_SWIM | OPEN_DOOR | GOOD | 
+F:UNIQUE | CAN_SPEAK | IM_COLD | WILD_SHORE | WILD_OCEAN | SMART | 
+F:DROP_CORPSE | FEMALE | DRAGON | RES_NERV | 
+F:RES_LITE | RES_INER | RES_WALL | MORTAL | BASEANGBAND |
+D:Wow! Claudia is such a beautiful woman with wonderful blonde hair, 
+D:wearing cuuuuuute wooden sandals with high heels which she'll gladly 
+D:slam into your shins again and again! Plus her tender buttocks are 
+D:incredibly sexy and produce the loveliest squeaky farting noises that 
+D:you've ever heard. You immediately fall in love with this beautiful 
+D:bundle woman. 
+
+N:5385:Xeni
+G:D:v
+I:130:20d50:10:150:40
+W:33:5:1500:16000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HALLU:6d6
+B:KICK:HURT:5d8
+B:FART:*
+F:RAND_25 | WILD_TOO | WILD_WOOD | 
+F:UNIQUE | CAN_SPEAK | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | NO_SLEEP | 
+F:DROP_CORPSE | FEMALE | RES_WATE | RES_NEXU | RES_DISE | NO_FEAR | 
+F:NO_CONF | NO_STUN | GOOD | DRAGON | RES_ETHE | 
+F:RES_CHAO | RES_SHAR | MORTAL | BASEANGBAND |
+S:1_IN_5
+S:ARROW_4 | BA_NETH | BR_NEXU | MIND_BLAST | TELE_AWAY | 
+D:This russian girl looks very kind, but she can actually be dangerous 
+D:when angered. In that case, she repeatedly slams her high-heeled sandals 
+D:into your shins, giving you some pretty bruises. Also, her sexy butt 
+D:occasionally produces farting noises. 
+
+N:5386:Erosina
+G:r:o
+I:110:5d10:0:8:150
+W:5:5:200:40
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:2d4
+B:KICK:LOSE_STR:2d4
+B:KICK:LOSE_WIS:2d3
+B:FARTQUIET:*
+F:RAND_25 | WILD_TOO | IM_POIS | 
+F:UNIQUE | CAN_SPEAK | WILD_TOWN | WEIRD_MIND | GOOD | 
+F:DROP_CORPSE | FEMALE |
+F:RES_INER | MORTAL | BASEANGBAND |
+D:Erosina will intoxicate you with the beguiling smell of her lovely orange 
+D:mocassins, and then use them to kick your hands repeatedly. 
+
+N:5387:Jynnifyr
+G:R:D
+I:115:8d8:5:20:70
+W:8:5:1000:100
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:2d9
+B:FARTQUIET:*
+F:RAND_50 | WILD_TOO |  
+F:UNIQUE | CAN_SPEAK | RES_NETH | GOOD | OPEN_DOOR | 
+F:DROP_CORPSE | FEMALE | WILD_GRASS | 
+F:RES_DARK | MORTAL | BASEANGBAND |
+S:1_IN_3
+S:DARKNESS
+D:An innocuous girl who likes the color black, and casts spells that make 
+D:the surroundings darker. 
+
+N:5388:Sleepy Sarah
+G:n:B
+I:115:5d15:1:25:250
+W:7:5:1000:50
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:COLD:9d5
+B:FARTQUIET:*
+F:RAND_50 | WILD_TOO | IM_COLD | IM_POIS | CAN_SWIM | STUPID | 
+F:UNIQUE | CAN_SPEAK | FORCE_SLEEP | EMPTY_MIND | REGENERATE | GOOD | 
+F:DROP_CORPSE | FEMALE | WILD_GRASS | 
+F:RES_TIME | RES_DARK | MORTAL | BASEANGBAND |
+D:A rather sleepy girl. Just don't try to annoy her, or she'll use her 
+D:dark blue hugging boots to kick you in the shins rather painfully. 
+
+N:5389:Mari-ja
+G:P:D
+I:130:20d50:10:200:40
+W:31:5:2500:4000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:LOSE_INT:3d20
+B:KICK:UN_POWER:5d8
+B:FARTLOUD:*
+F:RAND_25 | WILD_TOO | IM_POIS | WEIRD_MIND | REGENERATE | 
+F:UNIQUE | CAN_SPEAK | POWERFUL | UNDEAD | DEMON | NO_THEFT | BASH_DOOR | 
+F:DROP_CORPSE | FEMALE | ELDRITCH_HORROR | WILD_VOLCANO | WILD_OCEAN | 
+F:MORTAL | BASEANGBAND | RES_WATE | RES_PLAS | RES_NETH | RES_DISE | 
+F:RES_CHAO | RES_GRAV | RES_DARK | NO_FEAR | NO_SLEEP | RES_NERV | 
+S:1_IN_3
+S:BR_POIS | FORGET | BRAIN_SMASH | 
+D:Eurgh, this girl reeks of farting gas and decay! Do your best to stay 
+D:far away from her, or she'll subject you to whatever she emits, and 
+D:it certainly won't be pleasant! 
 
 # N: serial number : monster name
 # G: symbol : color
