@@ -5941,7 +5941,7 @@ bool make_attack_spell(int m_idx)
 				disturb(1, 0);
 				if (blind) msg_format("%^s mumbles strangely.", m_name);
 				else msg_format("%^s gestures at your feet.", m_name);
-				if (p_ptr->resist_nexus && !p_ptr->nastytrap96)
+				if (p_ptr->resist_nexus && magik(90) && !p_ptr->nastytrap96) /* not 100% protection anymore --Amy */
 				{
 					msg_print("You are unaffected!");
 				}
