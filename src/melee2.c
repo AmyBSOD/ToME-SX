@@ -6006,8 +6006,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 13:
 			{
 				if (!p_ptr->nastytrap174 && magik(66)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6026,8 +6026,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 14:
 			{
 				if (!p_ptr->nastytrap174 && magik(66)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6046,8 +6046,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 15:
 			{
 				if (!p_ptr->nastytrap174 && magik(75)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6066,8 +6066,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 16:
 			{
 				if (!p_ptr->nastytrap174 && magik(66)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6092,8 +6092,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 17:
 			{
 				if (!p_ptr->nastytrap174 && magik(75)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6109,8 +6109,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 18:
 			{
 				if (!p_ptr->nastytrap174 && magik(50)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6129,8 +6129,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 19:
 			{
 				if (!p_ptr->nastytrap174 && magik(66)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6149,8 +6149,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 20:
 			{
 				if (!p_ptr->nastytrap174 && magik(50)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6169,8 +6169,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 21:
 			{
 				if (!p_ptr->nastytrap174 && magik(50)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6189,8 +6189,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 22:
 			{
 				if (!p_ptr->nastytrap174 && magik(66)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6209,8 +6209,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 23:
 			{
 				if (!p_ptr->nastytrap174 && magik(75)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6229,8 +6229,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 24:
 			{
 				if (!p_ptr->nastytrap174 && magik(75)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6249,8 +6249,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 25:
 			{
 				if (!p_ptr->nastytrap174 && magik(66)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6269,8 +6269,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 26:
 			{
 				if (!p_ptr->nastytrap174 && magik(66)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6289,8 +6289,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 27:
 			{
 				if (!p_ptr->nastytrap174 && magik(66)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6309,8 +6309,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 28:
 			{
 				if (!p_ptr->nastytrap174 && magik(75)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6332,8 +6332,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 29:
 			{
 				if (!p_ptr->nastytrap174 && magik(75)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6355,8 +6355,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 30:
 			{
 				if (!p_ptr->nastytrap174 && magik(66)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
@@ -6389,8 +6389,8 @@ bool make_attack_spell(int m_idx)
 		case 160 + 31:
 			{
 				if (!p_ptr->nastytrap174 && magik(80)) {
-					if (blind) monster_msg("%^s curses.", m_name);
-					else monster_msg("%^s points at you, then curses.", m_name);
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
 					break;
 				}
 
