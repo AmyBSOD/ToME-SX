@@ -6452,6 +6452,11 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 				if(f3 & TR3_PERMA_CURSE) continue;
 
+				/* don't screw over items that can be wielded in several slots --Amy
+				 * ideally we'd check for the actual equipment slot of an item, not the "standard" one it uses... */
+				if (j_ptr->tval == TV_INSTRUMENT) continue;
+				if (j_ptr->tval == TV_TOOL) continue;
+
 				slot1 = wield_slot(j_ptr);
 
 				for (j = 0; j < INVEN_WIELD; j++)
