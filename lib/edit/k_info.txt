@@ -10248,6 +10248,19 @@ P:5:1d1:2:0:0
 D:This pair of shoes is of high quality, allowing you to run faster and 
 D:also boosting your martial arts prowess.
 
+N:1216:& Pair~ of Red Overknees
+G:]:R
+I:30:23:0
+W:50:0:50:10000
+A:50/5:60/2
+P:4:1d1:0:0:0
+F:RES_CHAOS
+f:RES_CHAOS
+D:This pair of boots has a long shaft that covers the lower leg including 
+D:the knee, and very beautiful red block heels. You most certainly can't 
+D:resist slipping them over your feet, because they absolutely want to be 
+D:worn by you.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being a bonus to the pval-based property
