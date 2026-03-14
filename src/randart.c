@@ -144,6 +144,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 3:
 			case 4:
 			case 5:
+				if (wizard) msg_print("Adding xtra power: 1-5");
 				o_ptr->art_flags1 |= TR1_STR;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -158,6 +159,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 8:
 			case 9:
 			case 10:
+				if (wizard) msg_print("Adding xtra power: 6-10");
 				o_ptr->art_flags1 |= TR1_DEX;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -172,6 +174,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 13:
 			case 14:
 			case 15:
+				if (wizard) msg_print("Adding xtra power: 11-15");
 				o_ptr->art_flags1 |= TR1_INT;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -186,6 +189,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 18:
 			case 19:
 			case 20:
+				if (wizard) msg_print("Adding xtra power: 16-20");
 				o_ptr->art_flags1 |= TR1_WIS;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -200,6 +204,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 23:
 			case 24:
 			case 25:
+				if (wizard) msg_print("Adding xtra power: 21-25");
 				o_ptr->art_flags1 |= TR1_CON;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -214,6 +219,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 28:
 			case 29:
 			case 30:
+				if (wizard) msg_print("Adding xtra power: 26-30");
 				o_ptr->art_flags1 |= TR1_CHR;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -225,6 +231,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				return;
 			case 31:
 			case 32:
+				if (wizard) msg_print("Adding xtra power: 31-32");
 				o_ptr->art_flags1 |= TR1_MANA;
 				if (randint(8) == 1) o_ptr->pval -= randint(2);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(2);
@@ -236,6 +243,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				return;
 			case 33:
 			case 34:
+				if (wizard) msg_print("Adding xtra power: 33-34");
 				o_ptr->art_flags1 |= TR1_SPELL;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -250,6 +258,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 37:
 			case 38:
 			case 39:
+				if (wizard) msg_print("Adding xtra power: 35-39");
 				o_ptr->art_flags1 |= TR1_STEALTH;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -264,6 +273,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 42:
 			case 43:
 			case 44:
+				if (wizard) msg_print("Adding xtra power: 40-44");
 				o_ptr->art_flags1 |= TR1_SEARCH;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -278,6 +288,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 47:
 			case 48:
 			case 49:
+				if (wizard) msg_print("Adding xtra power: 45-49");
 				o_ptr->art_flags1 |= TR1_INFRA;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -292,6 +303,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 52:
 			case 53:
 			case 54:
+				if (wizard) msg_print("Adding xtra power: 50-54");
 				o_ptr->art_flags1 |= TR1_TUNNEL;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -302,6 +314,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				}
 				return;
 			case 55:
+				if (wizard) msg_print("Adding xtra power: 55");
 				o_ptr->art_flags1 |= TR1_SPEED;
 				if (randint(8) == 1) o_ptr->pval -= randint(3);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(3);
@@ -312,6 +325,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				}
 				return;
 			case 56:
+				if (wizard) msg_print("Adding xtra power: 56");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_BLOWS;
 					if (randint(8) == 1) o_ptr->pval -= randint(2);
@@ -325,12 +339,14 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				}
 				continue;
 			case 57:
+				if (wizard) msg_print("Adding xtra power: 57");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_CHAOTIC;
 					return;
 				}
 				continue;
 			case 58:
+				if (wizard) msg_print("Adding xtra power: 58");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_VAMPIRIC;
 					return;
@@ -339,6 +355,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 59:
 			case 60:
 			case 61:
+				if (wizard) msg_print("Adding xtra power: 59-61");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_ANIMAL;
 					return;
@@ -349,6 +366,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 64:
 			case 65:
 			case 66:
+				if (wizard) msg_print("Adding xtra power: 62-66");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_EVIL;
 					return;
@@ -358,6 +376,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 68:
 			case 69:
 			case 70:
+				if (wizard) msg_print("Adding xtra power: 67-70");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_UNDEAD;
 					return;
@@ -367,6 +386,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 72:
 			case 73:
 			case 74:
+				if (wizard) msg_print("Adding xtra power: 71-74");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_DEMON;
 					return;
@@ -375,6 +395,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 75:
 			case 76:
 			case 77:
+				if (wizard) msg_print("Adding xtra power: 75-77");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_ORC;
 					return;
@@ -383,6 +404,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 78:
 			case 79:
 			case 80:
+				if (wizard) msg_print("Adding xtra power: 78-80");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_TROLL;
 					return;
@@ -391,6 +413,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 81:
 			case 82:
 			case 83:
+				if (wizard) msg_print("Adding xtra power: 81-83");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_GIANT;
 					return;
@@ -399,24 +422,28 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 84:
 			case 85:
 			case 86:
+				if (wizard) msg_print("Adding xtra power: 84-86");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_SLAY_DRAGON;
 					return;
 				}
 				continue;
 			case 87:
+				if (wizard) msg_print("Adding xtra power: 87");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_KILL_DRAGON;
 					return;
 				}
 				continue;
 			case 88:
+				if (wizard) msg_print("Adding xtra power: 88");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_VORPAL;
 					return;
 				}
 				continue;
 			case 89:
+				if (wizard) msg_print("Adding xtra power: 89");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_IMPACT;
 					return;
@@ -425,6 +452,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 90:
 			case 91:
 			case 92:
+				if (wizard) msg_print("Adding xtra power: 90-92");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_BRAND_POIS;
 					return;
@@ -433,6 +461,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 93:
 			case 94:
 			case 95:
+				if (wizard) msg_print("Adding xtra power: 93-95");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_BRAND_ACID;
 					return;
@@ -441,6 +470,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 96:
 			case 97:
 			case 98:
+				if (wizard) msg_print("Adding xtra power: 96-98");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_BRAND_ELEC;
 					return;
@@ -449,6 +479,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 99:
 			case 100:
 			case 101:
+				if (wizard) msg_print("Adding xtra power: 99-101");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_BRAND_FIRE;
 					return;
@@ -457,6 +488,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 102:
 			case 103:
 			case 104:
+				if (wizard) msg_print("Adding xtra power: 102-104");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags1 |= TR1_BRAND_COLD;
 					return;
@@ -467,6 +499,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 107:
 			case 108:
 			case 109:
+				if (wizard) msg_print("Adding xtra power: 105-109");
 				o_ptr->art_flags2 |= TR2_SUST_STR;
 				return;
 			case 110:
@@ -474,6 +507,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 112:
 			case 113:
 			case 114:
+				if (wizard) msg_print("Adding xtra power: 110-114");
 				o_ptr->art_flags2 |= TR2_SUST_INT;
 				return;
 			case 115:
@@ -481,6 +515,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 117:
 			case 118:
 			case 119:
+				if (wizard) msg_print("Adding xtra power: 115-119");
 				o_ptr->art_flags2 |= TR2_SUST_WIS;
 				return;
 			case 120:
@@ -488,6 +523,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 122:
 			case 123:
 			case 124:
+				if (wizard) msg_print("Adding xtra power: 120-124");
 				o_ptr->art_flags2 |= TR2_SUST_DEX;
 				return;
 			case 125:
@@ -495,6 +531,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 127:
 			case 128:
 			case 129:
+				if (wizard) msg_print("Adding xtra power: 125-129");
 				o_ptr->art_flags2 |= TR2_SUST_CON;
 				return;
 			case 130:
@@ -502,14 +539,17 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 132:
 			case 133:
 			case 134:
+				if (wizard) msg_print("Adding xtra power: 130-134");
 				o_ptr->art_flags2 |= TR2_SUST_CHR;
 				return;
 			case 135:
 			case 136:
 			case 137:
+				if (wizard) msg_print("Adding xtra power: 135-137");
 				o_ptr->art_flags2 |= TR2_INVIS;
 				return;
 			case 138:
+				if (wizard) msg_print("Adding xtra power: 138");
 				o_ptr->art_flags2 |= TR2_LIFE;
 				if (randint(8) == 1) o_ptr->pval -= randint(2);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(2);
@@ -520,21 +560,27 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				}
 				return;
 			case 139:
+				if (wizard) msg_print("Adding xtra power: 139");
 				o_ptr->art_flags2 |= TR2_IM_ACID;
 				return;
 			case 140:
+				if (wizard) msg_print("Adding xtra power: 140");
 				o_ptr->art_flags2 |= TR2_IM_COLD;
 				return;
 			case 141:
+				if (wizard) msg_print("Adding xtra power: 141");
 				o_ptr->art_flags2 |= TR2_IM_ELEC;
 				return;
 			case 142:
+				if (wizard) msg_print("Adding xtra power: 142");
 				o_ptr->art_flags2 |= TR2_IM_FIRE;
 				return;
 			case 143:
+				if (wizard) msg_print("Adding xtra power: 143");
 				o_ptr->art_flags2 |= TR2_SENS_FIRE;
 				return;
 			case 144:
+				if (wizard) msg_print("Adding xtra power: 144");
 				o_ptr->art_flags2 |= TR2_REFLECT;
 				return;
 			case 145:
@@ -547,11 +593,13 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 152:
 			case 153:
 			case 154:
+				if (wizard) msg_print("Adding xtra power: 145-154");
 				o_ptr->art_flags2 |= TR2_FREE_ACT;
 				return;
 			case 155:
 			case 156:
 			case 157:
+				if (wizard) msg_print("Adding xtra power: 155-157");
 				o_ptr->art_flags2 |= TR2_HOLD_LIFE;
 				return;
 			case 158:
@@ -559,6 +607,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 160:
 			case 161:
 			case 162:
+				if (wizard) msg_print("Adding xtra power: 158-162");
 				o_ptr->art_flags2 |= TR2_RES_ACID;
 				return;
 			case 163:
@@ -566,6 +615,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 165:
 			case 166:
 			case 167:
+				if (wizard) msg_print("Adding xtra power: 163-167");
 				o_ptr->art_flags2 |= TR2_RES_ELEC;
 				return;
 			case 168:
@@ -573,6 +623,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 170:
 			case 171:
 			case 172:
+				if (wizard) msg_print("Adding xtra power: 168-172");
 				o_ptr->art_flags2 |= TR2_RES_FIRE;
 				return;
 			case 173:
@@ -580,12 +631,14 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 175:
 			case 176:
 			case 177:
+				if (wizard) msg_print("Adding xtra power: 173-177");
 				o_ptr->art_flags2 |= TR2_RES_COLD;
 				return;
 			case 178:
 			case 179:
 			case 180:
 			case 181:
+				if (wizard) msg_print("Adding xtra power: 178-181");
 				o_ptr->art_flags2 |= TR2_RES_POIS;
 				return;
 			case 182:
@@ -593,109 +646,132 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 184:
 			case 185:
 			case 186:
+				if (wizard) msg_print("Adding xtra power: 182-186");
 				o_ptr->art_flags2 |= TR2_RES_FEAR;
 				return;
 			case 187:
 			case 188:
 			case 189:
+				if (wizard) msg_print("Adding xtra power: 187-189");
 				o_ptr->art_flags2 |= TR2_RES_LITE;
 				return;
 			case 190:
 			case 191:
 			case 192:
+				if (wizard) msg_print("Adding xtra power: 190-192");
 				o_ptr->art_flags2 |= TR2_RES_DARK;
 				return;
 			case 193:
 			case 194:
 			case 195:
 			case 196:
+				if (wizard) msg_print("Adding xtra power: 193-196");
 				o_ptr->art_flags2 |= TR2_RES_BLIND;
 				return;
 			case 197:
 			case 198:
 			case 199:
 			case 200:
+				if (wizard) msg_print("Adding xtra power: 197-200");
 				o_ptr->art_flags2 |= TR2_RES_CONF;
 				return;
 			case 201:
 			case 202:
 			case 203:
+				if (wizard) msg_print("Adding xtra power: 201-203");
 				o_ptr->art_flags2 |= TR2_RES_SOUND;
 				return;
 			case 204:
 			case 205:
 			case 206:
+				if (wizard) msg_print("Adding xtra power: 204-206");
 				o_ptr->art_flags2 |= TR2_RES_SHARDS;
 				return;
 			case 207:
 			case 208:
 			case 209:
+				if (wizard) msg_print("Adding xtra power: 207-209");
 				o_ptr->art_flags2 |= TR2_RES_NETHER;
 				return;
 			case 210:
 			case 211:
 			case 212:
+				if (wizard) msg_print("Adding xtra power: 210-212");
 				o_ptr->art_flags2 |= TR2_RES_NEXUS;
 				return;
 			case 213:
 			case 214:
 			case 215:
+				if (wizard) msg_print("Adding xtra power: 213-215");
 				o_ptr->art_flags2 |= TR2_RES_CHAOS;
 				return;
 			case 216:
 			case 217:
 			case 218:
+				if (wizard) msg_print("Adding xtra power: 216-218");
 				o_ptr->art_flags2 |= TR2_RES_DISEN;
 				return;
 			case 219:
+				if (wizard) msg_print("Adding xtra power: 219");
 				o_ptr->art_flags3 |= TR3_SH_FIRE;
 				return;
 			case 220:
+				if (wizard) msg_print("Adding xtra power: 220");
 				o_ptr->art_flags3 |= TR3_SH_ELEC;
 				return;
 			case 221:
+				if (wizard) msg_print("Adding xtra power: 221");
 				o_ptr->art_flags3 |= TR3_AUTO_CURSE;
 				return;
 			case 222:
+				if (wizard) msg_print("Adding xtra power: 222");
 				o_ptr->art_flags3 |= TR3_NO_TELE;
 				return;
 			case 223:
+				if (wizard) msg_print("Adding xtra power: 223");
 				o_ptr->art_flags3 |= TR3_NO_MAGIC;
 				return;
 			case 224:
+				if (wizard) msg_print("Adding xtra power: 224");
 				if (randint(20) == 1) o_ptr->art_flags3 |= TR3_TY_CURSE;
 				return;
 			case 225:
 			case 226:
 			case 227:
 			case 228:
+				if (wizard) msg_print("Adding xtra power: 225-228");
 				o_ptr->art_flags3 |= TR3_FEATHER;
 				return;
 			case 229:
 			case 230:
 			case 231:
+				if (wizard) msg_print("Adding xtra power: 229-231");
 				o_ptr->art_flags3 |= TR3_LITE1;
 				return;
 			case 232:
 			case 233:
 			case 234:
 			case 235:
+				if (wizard) msg_print("Adding xtra power: 232-235");
 				o_ptr->art_flags3 |= TR3_SEE_INVIS;
 				return;
 			case 236:
 			case 237:
 			case 238:
 			case 239:
+				if (wizard) msg_print("Adding xtra power: 236-239");
 				o_ptr->art_flags3 |= TR3_SLOW_DIGEST;
 				return;
 			case 240:
 			case 241:
 			case 242:
+				if (wizard) msg_print("Adding xtra power: 240-242");
 				o_ptr->art_flags3 |= TR3_REGEN;
 				return;
 			case 243:
 			case 244:
 			case 245:
+				if (wizard) msg_print("Adding xtra power: 243-245");
 				if (o_ptr->tval == TV_BOW) {
 					o_ptr->art_flags3 |= TR3_XTRA_MIGHT;
 				}
@@ -703,43 +779,54 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 246:
 			case 247:
 			case 248:
+				if (wizard) msg_print("Adding xtra power: 246-248");
 				if (o_ptr->tval == TV_BOW) {
 					o_ptr->art_flags3 |= TR3_XTRA_SHOTS;
 				}
 				return;
 			case 249:
+				if (wizard) msg_print("Adding xtra power: 249");
 				o_ptr->art_flags3 |= TR3_DRAIN_EXP;
 				return;
 			case 250:
 			case 251:
 			case 252:
+				if (wizard) msg_print("Adding xtra power: 250-252");
 				o_ptr->art_flags3 |= TR3_TELEPORT;
 				return;
 			case 253:
+				if (wizard) msg_print("Adding xtra power: 253");
 				o_ptr->art_flags3 |= TR3_AGGRAVATE;
 				return;
 			case 254:
 			case 255:
 			case 256:
+				if (wizard) msg_print("Adding xtra power: 254-256");
 				o_ptr->art_flags3 |= TR3_BLESSED;
 				return;
 			case 257:
+				if (wizard) msg_print("Adding xtra power: 257");
 				if (randint(100) == 1) o_ptr->art_flags4 |= TR4_PRECOGNITION;
 				return;
 			case 258:
+				if (wizard) msg_print("Adding xtra power: 258");
 				if (randint(20) == 1) o_ptr->art_flags4 |= TR4_BLACK_BREATH;
 				return;
 			case 259:
 			case 260:
+				if (wizard) msg_print("Adding xtra power: 259-260");
 				o_ptr->art_flags4 |= TR4_FLY;
 				return;
 			case 261:
+				if (wizard) msg_print("Adding xtra power: 261");
 				if (randint(1000) == 1) o_ptr->art_flags4 |= TR4_DG_CURSE;
 				return;
 			case 262:
+				if (wizard) msg_print("Adding xtra power: 262");
 				if (randint(20) == 1) o_ptr->art_flags4 |= TR4_CLIMB;
 				return;
 			case 263:
+				if (wizard) msg_print("Adding xtra power: 263");
 				switch (randint(4)) {
 					case 1: o_ptr->art_flags4 |= TR4_ANTIMAGIC_50; return;
 					case 2: o_ptr->art_flags4 |= TR4_ANTIMAGIC_30; return;
@@ -748,37 +835,46 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				}
 				return;
 			case 264:
+				if (wizard) msg_print("Adding xtra power: 264");
 				o_ptr->art_flags4 |= TR4_IM_NETHER;
 				return;
 			case 265:
+				if (wizard) msg_print("Adding xtra power: 265");
 				if (randint(500) == 1) o_ptr->art_flags4 |= TR4_AUTO_ID;
 				return;
 			case 266:
+				if (wizard) msg_print("Adding xtra power: 266");
 				if (randint(5) == 1) o_ptr->art_flags4 |= TR4_LITE3;
 				else o_ptr->art_flags4 |= TR4_LITE2;
 				return;
 			case 267:
+				if (wizard) msg_print("Adding xtra power: 267");
 				o_ptr->art_flags4 |= TR4_CURSE_NO_DROP;
 				return;
 			case 268:
+				if (wizard) msg_print("Adding xtra power: 268");
 				o_ptr->art_flags5 |= TR5_DRAIN_MANA;
 				return;
 			case 269:
+				if (wizard) msg_print("Adding xtra power: 269");
 				o_ptr->art_flags5 |= TR5_DRAIN_HP;
 				return;
 			case 270:
+				if (wizard) msg_print("Adding xtra power: 270");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags5 |= TR5_KILL_DEMON;
 					return;
 				}
 				continue;
 			case 271:
+				if (wizard) msg_print("Adding xtra power: 271");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags5 |= TR5_KILL_UNDEAD;
 					return;
 				}
 				continue;
 			case 272:
+				if (wizard) msg_print("Adding xtra power: 272");
 				o_ptr->art_flags5 |= TR5_CRIT;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -791,6 +887,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 273:
 			case 274:
 			case 275:
+				if (wizard) msg_print("Adding xtra power: 273-275");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags5 |= TR5_WOUNDING;
 				}
@@ -798,6 +895,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 276:
 			case 277:
 			case 278:
+				if (wizard) msg_print("Adding xtra power: 276-278");
 				o_ptr->art_flags5 |= TR5_LUCK;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -808,47 +906,58 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				}
 				return;
 			case 279:
+				if (wizard) msg_print("Adding xtra power: 279");
 				o_ptr->art_flags5 |= TR5_SPELL_CONTAIN;
 				o_ptr->art_flags5 |= TR5_WIELD_CAST;
 				return;
 			case 280:
 			case 281:
 			case 282:
+				if (wizard) msg_print("Adding xtra power: 280-282");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_MSTAFF ) {
 					o_ptr->art_flags5 |= TR5_RES_MORGUL;
 				}
 				continue;
 			case 283:
+				if (wizard) msg_print("Adding xtra power: 283");
 				if (randint(1000) == 1) o_ptr->art_flags5 |= TR5_MAGIC_BREATH;
 				return;
 			case 284:
+				if (wizard) msg_print("Adding xtra power: 284");
 				if (randint(200) == 1) o_ptr->art_flags5 |= TR5_WATER_BREATH;
 				return;
 			case 285:
+				if (wizard) msg_print("Adding xtra power: 285");
 				o_ptr->art_flags5 |= TR5_RES_WATER;
 				return;
 			case 286:
+				if (wizard) msg_print("Adding xtra power: 286");
 				o_ptr->art_flags5 |= TR5_RES_INERTIA;
 				return;
 			case 287:
+				if (wizard) msg_print("Adding xtra power: 287");
 				o_ptr->art_flags5 |= TR5_IM_POISON;
 				return;
 			case 288:
 			case 289:
 			case 290:
+				if (wizard) msg_print("Adding xtra power: 288-290");
 				o_ptr->art_flags5 |= TR5_PEACEKEEPING;
 				return;
 			case 291:
 			case 292:
 			case 293:
+				if (wizard) msg_print("Adding xtra power: 291-293");
 				o_ptr->art_flags5 |= TR5_INV_PROTECT;
 				return;
 			case 294:
 			case 295:
 			case 296:
+				if (wizard) msg_print("Adding xtra power: 294-296");
 				o_ptr->art_flags5 |= TR5_DEVICE_MASTERY;
 				return;
 			case 297:
+				if (wizard) msg_print("Adding xtra power: 297");
 				o_ptr->art_flags5 |= TR5_SAVING_MALUS;
 				return;
 			case 298:
@@ -856,6 +965,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 300:
 			case 301:
 			case 302:
+				if (wizard) msg_print("Adding xtra power: 298-302");
 				o_ptr->art_flags5 |= TR5_DISARM;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -870,6 +980,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 305:
 			case 306:
 			case 307:
+				if (wizard) msg_print("Adding xtra power: 303-307");
 				o_ptr->art_flags5 |= TR5_DODGE;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -884,77 +995,97 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 310:
 			case 311:
 			case 312:
+				if (wizard) msg_print("Adding xtra power: 308-312");
 				if ( (o_ptr->tval >= TV_BOOTS && o_ptr->tval <= TV_DRAG_ARMOR) ) {
 					o_ptr->art_flags5 |= TR5_LITHE;
 				}
 				continue;
 			case 313:
+				if (wizard) msg_print("Adding xtra power: 313");
 				o_ptr->art_flags5 |= TR5_RES_PLASMA;
 				return;
 			case 314:
+				if (wizard) msg_print("Adding xtra power: 314");
 				o_ptr->art_flags5 |= TR5_RES_DISINT;
 				return;
 			case 315:
+				if (wizard) msg_print("Adding xtra power: 315");
 				o_ptr->art_flags5 |= TR5_RES_TIME;
 				return;
 			case 316:
+				if (wizard) msg_print("Adding xtra power: 316");
 				o_ptr->art_flags5 |= TR5_RAPID_HUNGER;
 				return;
 			case 317:
 			case 318:
 			case 319:
+				if (wizard) msg_print("Adding xtra power: 317-319");
 				o_ptr->art_esp |= ESP_ORC;
 				return;
 			case 320:
 			case 321:
 			case 322:
+				if (wizard) msg_print("Adding xtra power: 320-322");
 				o_ptr->art_esp |= ESP_TROLL;
 				return;
 			case 323:
 			case 324:
 			case 325:
+				if (wizard) msg_print("Adding xtra power: 323-325");
 				o_ptr->art_esp |= ESP_DRAGON;
 				return;
 			case 326:
 			case 327:
 			case 328:
+				if (wizard) msg_print("Adding xtra power: 326-328");
 				o_ptr->art_esp |= ESP_GIANT;
 				return;
 			case 329:
 			case 330:
+				if (wizard) msg_print("Adding xtra power: 329-330");
 				o_ptr->art_esp |= ESP_DEMON;
 				return;
 			case 331:
+				if (wizard) msg_print("Adding xtra power: 331");
 				o_ptr->art_esp |= ESP_UNDEAD;
 				return;
 			case 332:
 			case 333:
+				if (wizard) msg_print("Adding xtra power: 332-333");
 				o_ptr->art_esp |= ESP_EVIL;
 				return;
 			case 334:
 			case 335:
+				if (wizard) msg_print("Adding xtra power: 334-335");
 				o_ptr->art_esp |= ESP_ANIMAL;
 				return;
 			case 336:
+				if (wizard) msg_print("Adding xtra power: 336");
 				o_ptr->art_esp |= ESP_THUNDERLORD;
 				return;
 			case 337:
 			case 338:
+				if (wizard) msg_print("Adding xtra power: 337-338");
 				o_ptr->art_esp |= ESP_GOOD;
 				return;
 			case 339:
+				if (wizard) msg_print("Adding xtra power: 339");
 				o_ptr->art_esp |= ESP_NONLIVING;
 				return;
 			case 340:
+				if (wizard) msg_print("Adding xtra power: 340");
 				o_ptr->art_esp |= ESP_UNIQUE;
 				return;
 			case 341:
+				if (wizard) msg_print("Adding xtra power: 341");
 				o_ptr->art_esp |= ESP_SPIDER;
 				return;
 			case 342:
+				if (wizard) msg_print("Adding xtra power: 342");
 				o_ptr->art_esp |= ESP_ALL;
 				return;
 			case 343:
+				if (wizard) msg_print("Adding xtra power: 343");
 				if (randint(8) == 1) o_ptr->to_h += randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
 				else if (o_ptr->pval < 5) {
@@ -964,6 +1095,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				}
 				return;
 			case 344:
+				if (wizard) msg_print("Adding xtra power: 344");
 				if (randint(8) == 1) o_ptr->to_d += randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
 				else if (o_ptr->pval < 5) {
@@ -973,6 +1105,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				}
 				return;
 			case 345:
+				if (wizard) msg_print("Adding xtra power: 345");
 				if (randint(8) == 1) o_ptr->to_a += randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
 				else if (o_ptr->pval < 5) {
@@ -982,15 +1115,19 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				}
 				return;
 			case 346:
+				if (wizard) msg_print("Adding xtra power: 346");
 				o_ptr->art_flags6 |= TR6_RES_NERVE;
 				return;
 			case 347:
+				if (wizard) msg_print("Adding xtra power: 347");
 				o_ptr->art_flags6 |= TR6_RES_MIND;
 				return;
 			case 348:
+				if (wizard) msg_print("Adding xtra power: 348");
 				o_ptr->art_flags6 |= TR6_RES_ETHER;
 				return;
 			case 349:
+				if (wizard) msg_print("Adding xtra power: 349");
 				o_ptr->art_flags6 |= TR6_MAGIC_FIND;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -1003,6 +1140,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 350:
 			case 351:
 			case 352:
+				if (wizard) msg_print("Adding xtra power: 350-352");
 				o_ptr->art_flags6 |= TR6_MARTIAL_ARTS;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -1015,6 +1153,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 353:
 			case 354:
 			case 355:
+				if (wizard) msg_print("Adding xtra power: 353-355");
 				o_ptr->art_flags6 |= TR6_PERCEPTION;
 				if (randint(8) == 1) o_ptr->pval -= randint(5);
 				else if (o_ptr->pval < 1) o_ptr->pval += randint(5);
@@ -1026,6 +1165,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				return;
 
 			default: /* fail safe --Amy */
+				if (wizard) msg_print("Adding xtra power: default");
 				o_ptr->art_flags2 |= TR2_SUST_STR;
 				return;
 
@@ -1208,17 +1348,20 @@ bool create_artifact(object_type *o_ptr, bool a_scroll, bool get_name)
 	i = 0;
 	while (ra_gen[i].chance)
 	{
-		powers += damroll(ra_gen[i].dd, ra_gen[i].ds) + ra_gen[i].plus;
+		/* holy shit! why even have a "percentage chance" if you're treating it as if it was always 100%!!! what the fuck man! --Amy */
+		if (magik(ra_gen[i].chance)) {
+			powers += damroll(ra_gen[i].dd, ra_gen[i].ds) + ra_gen[i].plus;
+		}
 		i++;
 	}
 
 	if ((!a_cursed) && (randint(30) == 1)) powers *= 2;
 
 	/* cursed randarts should have more, not less powers, to make them worth using --Amy */
-	if (a_cursed) powers *= 2;
+	if (a_cursed && magik(50)) powers *= 2;
 
 	/* Amy edit: randarts should be a bit better! */
-	powers += randint(4);
+	if (magik(33)) powers += randint(4);
 
 	/* randart instruments and climbing sets shouldn't be uber imba --Amy */
 	if (o_ptr->tval == TV_INSTRUMENT) {
@@ -1360,7 +1503,7 @@ bool create_artifact(object_type *o_ptr, bool a_scroll, bool get_name)
 		call_lua("find_random_mimic_shape", "(d,d)", "d", 127, TRUE, &mimic);
 		o_ptr->pval2 = mimic;
 	}
-	else if (f5 & TR5_SPELL_CONTAIN)
+	if (f5 & TR5_SPELL_CONTAIN)
 	{
 		o_ptr->spellcontain = -1;
 	}
