@@ -990,12 +990,13 @@ bool psychometry(void)
 
 /*
  * can the player be ambushed? --Amy
- * repel potions prevent it for a while like in Pokemon
+ * repel potions prevent it for a while like in Pokemon (but not 100% because that would be too easy)
  * sneakiness skill reduces the risk 
  */
 bool ambush_ok(void)
 {
-	if (p_ptr->tim_repelling) return FALSE;
+	/* 90% chance to avoid an ambush if you're repelling */
+	if (p_ptr->tim_repelling && magik(90)) return FALSE;
 
 	if (get_skill(SKILL_SNEAK) >= 1) {
 		if (randint(20 + get_skill(SKILL_SNEAK)) > 20) return FALSE;
