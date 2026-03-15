@@ -6614,6 +6614,7 @@ D:amulet makes you feel less adept at using magic.
 
 # New jewelry from T-Plus by Ingeborg S. Norden
 # They reuse some svals and so colors will match. This will change when ToME3 comes out.
+# actually, Amy fixes this because seriously, what the hell?
 
 N:830:Wizardry
 G:=:d
@@ -8386,6 +8387,7 @@ F:FOUNTAIN
 D:Quaffing this potion protects you from ambushes for a limited amount of time.
 D:Since you can't quaff while in the world map, the best way of using it is by
 D:quaffing it while in a surface area just before you switch to world map mode.
+D:Be aware that this protection isn't absolute; rarely, you can still be ambushed!
 
 N:1023:& Potion~ of Training
 G:!:d

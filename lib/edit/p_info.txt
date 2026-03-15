@@ -3104,6 +3104,7 @@ R:k:+0:+300:Antimagic
 R:k:+0:+100:Impale
 R:k:-20000:-800:Stealth
 R:k:-2000:-300:Magic-Device
+R:k:-10000:-400:Magic
 R:k:-5000:-300:Prayer
 R:k:-3000:-400:Sneakiness
 
