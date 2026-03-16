@@ -5894,7 +5894,7 @@ N:488:'Midnight Dragon Scale Mail'
 I:38:1:2
 W:60:8:200:30000
 P:40:2d4:4:4:20
-F:RES_ACID | RES_DARK | 
+F:RES_ACID | RES_DARK | ACTIVATE | 
 a:HARDCORE=BR_ACID
 D:A suit of utterly black scales, against which no metal or wood can rest.
 
@@ -6509,6 +6509,161 @@ F:REGEN | DISARM | DODGE |
 D:Used by the fighters from Cobra Marital Arts Dojo, these boots 
 D:allow the wearer to kick more effectively and also dodge more 
 D:attacks.
+
+# 2h flail
+N:562:of Yeenoghu
+I:21:18:3
+W:40:20:280:20000
+P:0:5d6:10:12:0
+F:MUST2H | STR | SUST_STR | IM_FIRE | RES_ETHER | 
+F:FREE_ACT | REGEN | KILL_UNDEAD | CRIT | WOUNDING | 
+f:MUST2H
+D:This powerful flail was originally wielded by Yeenoghu, 
+D:also known as the Prince of Gnolls. 
+
+# lance
+N:566:'Mighty Barb'
+I:22:20:2
+W:30:20:300:10000
+P:0:3d8:10:17:5
+F:MUST2H | DEX | SPEED | SLAY_DEMON | SUST_DEX | 
+F:RES_FIRE | RES_COLD | RES_ELEC | RES_POIS | 
+F:SEE_INVIS | SLOW_DIGEST | RES_MORGUL | MAGIC_FIND | 
+f:MUST2H
+D:Made by the mighty barbarians, this lance is very powerful. 
+
+# scythe
+N:567:'Father Death'
+I:22:17:4
+W:25:20:250:15000
+P:0:6d3:15:15:0
+F:COULD2H | INT | SUST_INT | SPELL | SEARCH | INFRA | 
+F:SLAY_ORC | SLAY_TROLL | VORPAL | RES_NETHER | PERCEPTION | 
+f:COULD2H
+D:The typical weapon wielded by Death. 
+
+# filthy rag
+N:572:of the Barrows
+I:36:1:6
+W:10:30:20:500
+P:1:0d0:0:0:-1
+F:INT | SEARCH | RES_BLIND | SENS_FIRE | RES_CONF | 
+F:SEE_INVIS | CURSED | HEAVY_CURSE | DRAIN_EXP | AUTO_CURSE | 
+F:AGGRAVATE | SPELL | 
+D:A shitty artifact that you really shouldn't wear if you don't have to. 
+D:Yes, it has resistance to both blindness and confusion, but do you 
+D:really want to stink like a heap of dung?! 
+
+# red dsm
+N:595:'From Mashhad to Ahvaz'
+I:38:4:5
+W:40:40:200:50000
+P:30:2d4:-2:0:25
+F:RES_FIRE | FLY | ACTIVATE | CHR | WIS | SUST_CHR | 
+F:STEALTH | IM_FIRE | FREE_ACT | RES_NEXUS | INV_PROTECT | 
+F:DISARM | LITHE | RES_PLASMA | 
+f:RES_FIRE |
+a:HARDCORE=BR_FIRE
+D:This suit has been optimized for use in arid regions. 
+
+# zweihander
+N:604:'Konrad's Stride'
+I:23:29:0
+W:40:10:280:8000
+P:0:4d6:10:10:0
+F:MUST2H | BRAND_FIRE | IM_FIRE | REGEN | FREE_ACT | 
+f:MUST2H
+D:A very hot two-handed sword that makes its wielder immune to fire. 
+
+# splint mail
+N:607:'Third Next Mission'
+I:37:10:3
+W:20:10:250:2000
+P:19:1d4:-2:0:15
+F:TELEPORT | RES_NEXUS | NO_MAGIC | MAGIC_FIND | 
+D:Supposedly allows you to "play the third next mission", 
+D:whatever that's supposed to mean. 
+
+# splint mail
+N:608:'Demo Case'
+I:37:10:10
+W:20:10:250:2000
+P:19:1d4:-2:0:8
+F:DISARM | SEARCH | PERCEPTION | RES_DISINT | 
+D:This suit lets you handle traps more effectively. 
+
+# splint mail
+N:609:'See The Entire Map'
+I:37:10:0
+W:20:10:250:2000
+P:19:1d4:-2:0:5
+F:ACTIVATE | ESP_TROLL | ESP_ORC | ESP_GIANT | ESP_ANIMAL | 
+F:RES_LITE | 
+a:HARDCORE=MAP_LIGHT
+D:Wearing this suit lets you see various types of monsters, and 
+D:it can be activated to map your surroundings. 
+
+# splint mail
+N:610:'Player Radar'
+I:37:10:4
+W:20:10:250:2000
+P:19:1d4:-2:0:10
+F:ESP_GOOD | HOLD_LIFE | RES_CONF | FEATHER | LUCK | DODGE | 
+F:RES_MIND | 
+D:A suit designed to let you sense the presence of other people. 
+
+# splint mail
+N:611:'Collecting Expansion'
+I:37:10:25
+W:20:10:250:2000
+P:19:1d4:-2:0:10
+F:STR | SUST_STR | LITHE | 
+D:The main purpose of this suit was to enable the wearer to carry 
+D:a lot more loot, but it does so by providing a strength bonus, which 
+D:is also very useful for melee combat. 
+
+# flamberge
+N:617:'Ripsaw Rage'
+I:23:26:6
+W:26:10:230:5000
+P:0:3d7:0:14:0
+F:MUST2H | INT | REGEN | SUST_INT | SUST_STR | 
+F:RES_SHARDS | SEE_INVIS | LITE2 | CRIT | WOUNDING | 
+f:MUST2H
+D:This very sharp sword can cause superbleeding damage to enemies, 
+D:and also makes the wielder resistant to cuts and more capable of 
+D:casting spells. 
+
+# claymore
+N:619:'Soulflay'
+I:23:23:2
+W:19:15:200:10000
+P:0:3d8:1:12:0
+F:COULD2H | VAMPIRIC | RES_FIRE | RES_COLD | RES_ELEC | 
+F:MANA | RES_MIND | INV_PROTECT | PERCEPTION | 
+f:COULD2H
+D:Stolen from Diablo 2, and adapted for ToME-SX. 
+
+# espadon
+N:621:'Crainte Vomir'
+I:23:24:1
+W:42:20:200:20000
+P:0:2d9:4:12:0
+F:MUST2H | SPEED | BLOWS | RES_INERTIA | SUST_CON | CON | 
+F:SLAY_EVIL | LIFE | RES_DISEN | RES_MORGUL | 
+f:MUST2H
+D:A quite powerful artifact sword inspired by the unique item with 
+D:the same name in Diablo 2. 
+
+# mimicry cloak
+N:636:'Mining Travesty'
+I:35:100:4
+W:10:10:30:7000
+P:1:1d1:0:0:8
+F:CHR | SUST_CHR | TUNNEL | INFRA | RES_ACID | RES_FEAR | 
+F:RES_DARK | RES_BLIND | DRAIN_MANA | 
+D:It seems that this cloak is supposed to be worn by miners. 
+D:Be aware, it drains your mana! 
 
 # N:number:name
 # I:tval:sval:pval
