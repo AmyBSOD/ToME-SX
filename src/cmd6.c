@@ -5867,6 +5867,7 @@ void do_cmd_use_staff(void)
 	{
 		if (flush_failure) flush();
 		msg_print("The staff has no charges left.");
+		msg_print(NULL); /* ffs, show a motherfucking --More-- prompt if something that should have a target cursor doesn't have one! --Amy */
 		o_ptr->ident |= (IDENT_EMPTY);
 
 		/* Leave device mode  */
@@ -6073,6 +6074,7 @@ void do_cmd_aim_wand(void)
 	{
 		if (flush_failure) flush();
 		msg_print("The wand has no charges left.");
+		msg_print(NULL); /* ffs, show a motherfucking --More-- prompt if something that should have a target cursor doesn't have one! --Amy */
 		o_ptr->ident |= (IDENT_EMPTY);
 
 		/* Leave device mode  */
