@@ -1812,7 +1812,7 @@ void do_cmd_debug(void)
 
 		/* Detect everything */
 	case 'd':
-		detect_all(DEFAULT_RADIUS);
+		detect_all(400);
 		break;
 
 		/* Change of Dungeon type */
