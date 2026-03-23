@@ -235,6 +235,13 @@ SCHOOL_CONVEYANCE = add_school
 			["mul"] = 1,
 			["div"] = 3,
 		},
+		-- Nessa provides the Conveyance school at 1/2 the prayer skill
+		[GOD_NESSA] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 2,
+		},
 		-- Ingeborg provides every school at 1/10 the prayer skill
 		[GOD_INGEBORG] = 
 		{
@@ -250,6 +257,16 @@ SCHOOL_GEOMANCY = add_school
 	["skill"] = SKILL_GEOMANCY,
 	["spell_power"] = TRUE,
 	-- Require to wield a Mage Staff, as the spells requries the caster to stomp the floor with it
+	["gods"] =
+	{
+		-- Nessa provides the Geomancy school at 1/3 the prayer skill
+		[GOD_NESSA] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
+		},
+	},
 	["depend"] = function()
 		-- Require at least one point in each school
 		if get_skill(SKILL_FIRE) == 0 then return end
@@ -379,6 +396,13 @@ SCHOOL_NATURE = add_school
 			["skill"] = SKILL_PRAY,
 			["mul"] = 1,
 			["div"] = 2,
+		},
+		-- Nessa provides the Nature school at 2/5 the prayer skill
+		[GOD_NESSA] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 2,
+			["div"] = 5,
 		},
 		-- Ulmo provides the Nature school at 1/2 the prayer skill
 		[GOD_ULMO] =
@@ -589,6 +613,13 @@ SCHOOL_VAIRE = add_school
 	["spell_power"] = TRUE,
 	["god"] = GOD_VAIRE,
 }
+SCHOOL_NESSA = add_school
+{
+	["name"] = "Nessa",
+	["skill"] = SKILL_PRAY,
+	["spell_power"] = TRUE,
+	["god"] = GOD_NESSA,
+}
 
 -- New schools
 SCHOOL_AULE = add_school
@@ -770,6 +801,7 @@ tome_dofile("s_nienna.lua")
 tome_dofile("s_este.lua")
 tome_dofile("s_vana.lua")
 tome_dofile("s_vaire.lua")
+tome_dofile("s_nessa.lua")
 
 -- List of spellbooks
 
@@ -901,6 +933,11 @@ school_book[30] = {
 -- Create the book of vaire
 school_book[40] = {
 	VAIRE_TICK_TOCK, VAIRE_SPIDER_FORM, VAIRE_TIMELINE, VAIRE_DECONTAMINATE, VAIRE_TIME_TEMPEST,
+}
+
+-- Create the book of nessa
+school_book[41] = {
+	NESSA_CONFUSION_FU, NESSA_SPEEDBOOST, NESSA_MANA_STORM,
 }
 
 -- Dual school books by Amy

@@ -5522,6 +5522,7 @@ void do_cmd_read_scroll(void)
 				abandon_god(GOD_ESTE);
 				abandon_god(GOD_VANA);
 				abandon_god(GOD_VAIRE);
+				abandon_god(GOD_NESSA);
 
 				ident = TRUE;
 

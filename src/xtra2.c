@@ -7205,6 +7205,54 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 			inc_piety(GOD_ERU, inc);
 		}
 
+		/* Nessa really likes it if you kill eldritch horrors */
+		if (r_ptr->flags2 & RF2_ELDRITCH_HORROR)
+		{
+			int inc = m_ptr->level * 4;
+			PRAY_GOD(GOD_NESSA) inc *= 4;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_NESSA, inc);
+		}
+
+		/* Nessa likes it if you kill things that resist all five "regular" elements */
+		if (r_ptr->flags3 & RF3_IM_ACID && r_ptr->flags3 & RF3_IM_ELEC && r_ptr->flags3 & RF3_IM_FIRE && r_ptr->flags3 & RF3_IM_COLD && r_ptr->flags3 & RF3_IM_POIS)
+		{
+			int inc = m_ptr->level * 2;
+			PRAY_GOD(GOD_NESSA) inc *= 2;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_NESSA, inc);
+		}
+
+		/* Nessa likes it if you kill chaos-based monsters */
+		if (r_ptr->flags7 & RF7_RES_CHAO)
+		{
+			int inc = m_ptr->level * 2;
+			PRAY_GOD(GOD_NESSA) inc *= 2;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_NESSA, inc);
+		}
+
+		if (r_ptr->flags4 & RF4_BR_CHAO)
+		{
+			int inc = m_ptr->level * 2;
+			PRAY_GOD(GOD_NESSA) inc *= 2;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_NESSA, inc);
+		}
+
+		if (r_ptr->flags4 & RF4_BA_CHAO)
+		{
+			int inc = m_ptr->level * 2;
+			PRAY_GOD(GOD_NESSA) inc *= 2;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_NESSA, inc);
+		}
+
 		/* Vaire likes it if undead/nonliving are killed */
 		if ( (r_ptr->flags3 & RF3_NONLIVING) || (r_ptr->flags3 & RF3_UNDEAD))
 		{

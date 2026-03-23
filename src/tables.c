@@ -3046,6 +3046,21 @@ deity_type deity_info_init[MAX_GODS_INIT] =
 			"",
 		},
 	},
+	{
+		"Nessa",
+		{
+			"The goddess of speed and joy.",
+			"She likes dancing, and grants agility to her faithful followers.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+	},
 
 };
 

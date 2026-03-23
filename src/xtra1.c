@@ -2990,6 +2990,19 @@ void calc_gods()
 		if (p_ptr->grace >= 15000) p_ptr->fly = TRUE;
 	}
 
+	/* Nessa grants bonus to dodging with high piety --Amy */
+	GOD(GOD_NESSA)
+	{
+		if (p_ptr->grace >= 5000) p_ptr->dodge_chance += (p_ptr->grace / 5000);
+
+	}
+
+	/* if you pray with high Nessa piety, she grants free action */
+	PRAY_GOD(GOD_NESSA)
+	{
+		if (p_ptr->grace >= 25000) p_ptr->free_act = TRUE;
+	}
+
 	/* Manwe bonus not requiring the praying status */
 	GOD(GOD_MANWE)
 	{

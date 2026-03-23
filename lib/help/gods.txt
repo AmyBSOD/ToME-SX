@@ -47,3 +47,4 @@ your wisdom.
 14.*****g_este.txt*0[Este] - the Goddess of Gentleness.
 15.*****g_vana.txt*0[Vana] - the Goddess of Youth.
 16.*****g_vaire.txt*0[Vaire] - the Goddess of History.
+17.*****g_nessa.txt*0[Nessa] - the Goddess of Speed and Joy.

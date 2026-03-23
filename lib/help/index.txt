@@ -237,6 +237,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
     *****g_este.txt*02[Este]
     *****g_vana.txt*02[Vana]
     *****g_vaire.txt*02[Vaire]
+    *****g_vaire.txt*02[Nessa]
   *****birth.txt*16[Gold]
 ~~~~~72
 *****/Hindex.txt*72[H]
@@ -343,6 +344,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
   *****m_nature.txt*02[Nature Magic]
   *****c_necro.txt*01[Necromancer]
   *****m_necrom.txt*02[Necromancy Magic]
+  *****g_nessa.txt*01[Nessa]
   *****g_nienna.txt*01[Nienna]
 ~~~~~79
 *****/Oindex.txt*79[O]

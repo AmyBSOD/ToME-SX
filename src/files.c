@@ -2109,6 +2109,14 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		}
 	}
 
+	GOD(GOD_NESSA)
+	{
+		PRAY_GOD(GOD_NESSA)
+		{
+			if (p_ptr->grace >= 25000)  (*f2) |= TR2_FREE_ACT;
+		}
+	}
+
 	GOD(GOD_TULKAS)
 	{
 		if (p_ptr->grace > 5000)  (*f1) |= TR1_CON;

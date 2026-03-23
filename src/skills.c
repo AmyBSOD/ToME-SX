@@ -925,6 +925,13 @@ int do_cmd_activate_skill_aux()
 		p[max++] = 0;
 	}
 
+	GOD(GOD_NESSA) {
+		if (get_skill(SKILL_PRAY) > 0) {
+			p_desc[max] = s_text + s_info[59].action_desc;
+			p[max++] = s_info[59].action_mkey;
+		}
+	}
+
 	for (i = 1; i < max_s_idx; i++)
 	{
 		if (s_info[i].action_mkey && s_info[i].value && (!s_info[i].hidden) )
@@ -1092,6 +1099,12 @@ void do_cmd_activate_skill()
 		{
 			if (s_info[i].value && (s_info[i].action_mkey == x_idx))
 				break;
+
+			GOD(GOD_NESSA) {
+				if (x_idx == 101) {
+					break;
+				}
+			}
 		}
 		for (j = 0; j < max_ab_idx; j++)
 		{

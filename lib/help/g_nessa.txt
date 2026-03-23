@@ -1,0 +1,46 @@
+|||||oy
+~~~~~01|Nessa
+~~~~~02|Gods|Nessa
+#####R === Nessa ===
+
+Nessa is the goddess of speed and joy.
+
+#####GThe benefits of Worshipping Nessa
+ 1. Nessa likes it if you kill eldritch horrors.
+ 2. Nessa likes it if you kill chaos-based monsters or ones that resist
+    every regular element.
+ 3. As your piety increases, your chance to dodge will go up.
+ 4. If you have a lot of piety, praying to her grants free action.
+
+#####GThe disadvantages of Worshipping Nessa
+1. Your piety decreases over time.
+2. She will completely abandon you if you wear The One Ring.
+~~~~~03|Nessa|Prayers
+#####GNessa's Magic
+Worshipping Nessa gives the adventurer access to a set of special
+spells that come directly from the hands of Nessa. These spells use your piety
+to cast rather than your spellpoints, and the level of spells that Nessa will 
+permit you to use is determined by your Prayer skill - how skillful you are
+in asking for her help without offending her!
+
+There is a special book called the "Tome of Joy" which 
+contains instructions for the procedure for each of the prayers Nessa will
+grant. There are three prayers all told, which are:
+1. [[[[[BConfusion Fu] (Level 1)
+   Imbues your melee weapon with confusion damage.
+2. [[[[[BSpeedboost] (Level 15)
+   Speeds you up for a few turns.
+3. [[[[[BMana Storm] (Level 30)
+   Casts a powerful ball of mana that can't be resisted.
+   
+Each of these spells can be increased in level both by improving your Prayer
+skill, and by improving your Spell-power skill.
+
+In addition to her specific magic, Nessa will also assist with your ability to
+use some magic from the "standard" schools, in relation to how skilled you 
+are at Prayer. These schools are as follows:
+    *****m_nature.txt*0[Nature School] at 2/5 the Prayer skill level.
+    *****m_convey.txt*0[Conveyance School] at 1/2 the Prayer skill level.
+    *****m_geoman.txt*0[Geomancy] at 1/3 the Prayer skill level.
+
+The spells from these schools are all cast using your normal spellpoints.
