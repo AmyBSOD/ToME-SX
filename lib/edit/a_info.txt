@@ -6665,6 +6665,34 @@ F:RES_DARK | RES_BLIND | DRAIN_MANA |
 D:It seems that this cloak is supposed to be worn by miners. 
 D:Be aware, it drains your mana! 
 
+# combat boots
+N:781:'Lisa's Buckle'
+I:30:24:1
+W:10:20:40:10000
+P:2:1d1:0:0:4
+F:RES_PLASMA | SPEED | STR | SUST_STR | NO_MAGIC | 
+D:A lovely pair of boots with buckles, providing additional stability. 
+
+# block-heeled sandals
+N:782:'Sabrina's Sexiness'
+I:30:25:4
+W:30:50:20:50000
+P:1:1d1:0:0:8
+F:FREE_ACT | SPEED | RES_FIRE | RES_POIS | MARTIAL_ARTS
+f:FREE_ACT
+D:These wonderful sandals allow you to run a lot faster. 
+
+# stealth slippers
+N:783:'Solid Snake's Mission'
+I:30:26:12
+W:40:25:5:15000
+P:1:1d1:0:0:12
+F:STEALTH | PERCEPTION | SEARCH | DEX | FREE_ACT
+F:RES_DISEN | RES_DISINT
+f:STEALTH
+D:If you want to sneak through the dungeon Metal Gear Solid style, 
+D:this is the pair of shoes you should wear. 
+
 # N:number:name
 # I:tval:sval:pval
 # W:level:rarity:item weight:cost

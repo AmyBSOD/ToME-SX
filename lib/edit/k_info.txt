@@ -7199,7 +7199,7 @@ G:/:R
 I:22:51:0
 W:70:0:350:10000
 A:70/50
-P:0:10d10:-50:30:0
+P:-30:10d10:-50:30:0
 F:SHOW_MODS | MUST2H
 f:MUST2H
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
@@ -10262,6 +10262,35 @@ D:This pair of boots has a long shaft that covers the lower leg including
 D:the knee, and very beautiful red block heels. You most certainly can't 
 D:resist slipping them over your feet, because they absolutely want to be 
 D:worn by you.
+
+N:1217:& Pair~ of Combat Boots
+G:]:D
+I:30:24:0
+W:10:0:40:100
+A:10/1
+P:2:1d1:0:0:0
+D:This pair of boots has thick block heels and feels pretty comfortable. 
+
+N:1218:& Pair~ of Block-heeled Sandals
+G:]:r
+I:30:25:0
+W:30:0:20:2500
+A:30/2
+P:1:1d1:0:0:0
+F:FREE_ACT
+f:FREE_ACT
+D:A pair of pretty sandals that provides stability, preventing you from 
+D:being paralyzed.
+
+N:1219:& Pair~ of Stealth Slippers
+G:]:W
+I:30:26:4
+W:40:0:5:1000
+A:40/3
+P:1:1d1:0:0:0
+F:STEALTH
+f:STEALTH
+D:These shoes are useful for stealth missions, reducing the noise you make. 
 
 # N:number:name
 # G:glyph:color
