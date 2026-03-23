@@ -1909,6 +1909,28 @@ static void calc_mana(void)
 		}
 	}
 
+	/* is the player wearing high heels? --Amy */
+	p_ptr->heeled_boots = FALSE;
+	o_ptr = &p_ptr->inventory[INVEN_FEET];
+
+	if (o_ptr->k_idx)
+	{
+		if (o_ptr->sval == SV_PAIR_OF_RUNNING_HEELS || o_ptr->sval == SV_PAIR_OF_PUMPS || o_ptr->sval == SV_PAIR_OF_WEDGE_SANDALS || o_ptr->sval == SV_PAIR_OF_MARY_JANES || o_ptr->sval == SV_PAIR_OF_PEEP_TOES || o_ptr->sval == SV_PAIR_OF_RED_OVERKNEES || o_ptr->sval == SV_PAIR_OF_COMBAT_BOOTS || o_ptr->sval == SV_PAIR_OF_BLOCK_SANDALS) {
+			/* Encumbered */
+			p_ptr->heeled_boots = TRUE;
+		}
+	}
+
+	o_ptr = &p_ptr->inventory[INVEN_FEET + 1];
+
+	if (o_ptr->k_idx)
+	{
+		if (o_ptr->sval == SV_PAIR_OF_RUNNING_HEELS || o_ptr->sval == SV_PAIR_OF_PUMPS || o_ptr->sval == SV_PAIR_OF_WEDGE_SANDALS || o_ptr->sval == SV_PAIR_OF_MARY_JANES || o_ptr->sval == SV_PAIR_OF_PEEP_TOES || o_ptr->sval == SV_PAIR_OF_RED_OVERKNEES || o_ptr->sval == SV_PAIR_OF_COMBAT_BOOTS || o_ptr->sval == SV_PAIR_OF_BLOCK_SANDALS) {
+			/* Encumbered */
+			p_ptr->heeled_boots = TRUE;
+		}
+	}
+
 	/* Augment mana */
 	if (munchkin_multipliers)
 	{
@@ -2006,6 +2028,35 @@ static void calc_mana(void)
 		p_ptr->old_cumber_glove = p_ptr->cumber_glove;
 	}
 
+	if (p_ptr->old_heeled_boots != p_ptr->heeled_boots)
+	{
+		/* Message */
+		if (p_ptr->heeled_boots)
+		{
+			if (!strcmp(spp_ptr->title + c_name, "Topmodel")) {
+				msg_print("You feel very comfortable wearing high heels.");
+			} else if (get_skill(SKILL_HIGHHEELS) > 0) {
+				msg_print("You feel comfortable wearing high heels.");
+			} else {
+				msg_print("You don't feel comfortable wearing high heels.");
+			}
+		}
+		else
+		{
+			if (!strcmp(spp_ptr->title + c_name, "Topmodel")) {
+				msg_print("You feel very bad without your beloved high heels.");
+			} else if (get_skill(SKILL_HIGHHEELS) > 0) {
+				msg_print("You are no longer wearing high heels.");
+			} else {
+				msg_print("You feel more comfortable after taking off your high heels.");
+			}
+		}
+
+		p_ptr->update |= (PU_BONUS);
+
+		/* Save it */
+		p_ptr->old_heeled_boots = p_ptr->heeled_boots;
+	}
 
 	/* Take note when "armor state" changes */
 	if (p_ptr->old_cumber_armor != p_ptr->cumber_armor)
@@ -3706,6 +3757,22 @@ void calc_bonuses(bool silent)
 		p_ptr->stat_add[A_WIS] += 2;
 	}
 
+	if (p_ptr->heeled_boots && (get_skill(SKILL_HIGHHEELS) > 0))
+	{
+		p_ptr->stat_add[A_CHR] += get_skill_scale(SKILL_HIGHHEELS, 5);
+		p_ptr->dis_to_a += get_skill_scale(SKILL_HIGHHEELS, 10);
+		p_ptr->to_a += get_skill_scale(SKILL_HIGHHEELS, 10);
+
+	}
+
+	if (p_ptr->heeled_boots && (get_skill(SKILL_HIGHHEELS) < 0))
+	{
+		p_ptr->stat_add[A_CHR] += get_skill(SKILL_HIGHHEELS);
+		p_ptr->dis_to_a += get_skill(SKILL_HIGHHEELS);
+		p_ptr->to_a += get_skill(SKILL_HIGHHEELS);
+
+	}
+
 	if (p_ptr->nastytrap54) {
 		p_ptr->stat_add[A_STR] -= 5;
 		p_ptr->stat_add[A_CON] -= 5;
@@ -4044,6 +4111,13 @@ void calc_bonuses(bool silent)
 		p_ptr->pspeed -= 10;
 	}
 
+	/* wearing high heels without the skill --Amy */
+	if (p_ptr->heeled_boots && (get_skill(SKILL_HIGHHEELS) <= 0))
+	{
+		p_ptr->pspeed -= 1;
+		if (cave[p_ptr->py][p_ptr->px].feat == FEAT_ROCKYGROUND) p_ptr->pspeed -= 5;
+	}
+
 	if (p_ptr->tim_esp)
 	{
 		p_ptr->telepathy |= ESP_ALL;
@@ -4307,6 +4381,9 @@ void calc_bonuses(bool silent)
 
 	/* Bloating slows the player down (a little) */
 	if (p_ptr->food >= PY_FOOD_MAX) p_ptr->pspeed -= 10;
+
+	/* topmodel is anorexic and gets penalized for being full --Amy */
+	if (p_ptr->food >= PY_FOOD_FULL && (!strcmp(spp_ptr->title + c_name, "Topmodel")) ) p_ptr->pspeed -= 10;
 
 	/* Searching slows the player down */
 	if (p_ptr->searching) p_ptr->pspeed -= 10;
@@ -5066,6 +5143,13 @@ void calc_bonuses(bool silent)
 		p_ptr->pspeed -= speedreductor;
 	}
 
+	/* topmodel has to wear heels or she's slowed down --Amy */
+	if ((!strcmp(spp_ptr->title + c_name, "Topmodel")) && !p_ptr->heeled_boots) {
+		int speedreductor = (p_ptr->pspeed - 110);
+		speedreductor /= 2;
+		p_ptr->pspeed -= speedreductor;
+	}
+
 	if (p_ptr->nastytrap24) {
 		p_ptr->luck_cur -= 13;
 		if (p_ptr->luck_cur > -13) p_ptr->luck_cur = -13;
@@ -5103,6 +5187,14 @@ void calc_bonuses(bool silent)
 		p_ptr->oppose_cold = FALSE;
 		p_ptr->oppose_pois = FALSE;
 		/* oppose light and dark etc. just gives regular resistance and is therefore not affected by the nasty trap --Amy */
+	}
+
+	/* topmodel has to wear high heels or she'll not have certain attributes --Amy */
+	if ((!strcmp(spp_ptr->title + c_name, "Topmodel")) && !p_ptr->heeled_boots) {
+		p_ptr->skill_srh -= 10;
+		p_ptr->skill_dis -= 20;
+		p_ptr->skill_stl -= 5;
+		p_ptr->fly = FALSE;
 	}
 
 	if (p_ptr->nastytrap89) {

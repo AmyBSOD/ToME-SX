@@ -3530,6 +3530,13 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 		tmp = dir;
 	}
 
+	/* handle rocky ground, which can recalculate your speed --Amy */
+	if (c_ptr->feat == FEAT_ROCKYGROUND)
+	{
+		p_ptr->update |= (PU_BONUS);
+
+	}
+
 	if ((c_ptr->feat == FEAT_ICE) && (!p_ptr->ffall && !p_ptr->fly))
 	{
 		if (magik(70 - p_ptr->lev))
@@ -4126,6 +4133,12 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 			cave_set_feat(p_ptr->py, p_ptr->px, FEAT_FLOOR);
 			cure_nasty_traps();
 			msg_print("You pull the switcher! The red light goes out and the green light starts shining brightly...");
+		}
+
+		/* handle rocky ground, which can recalculate your speed --Amy */
+		if (c_ptr->feat == FEAT_ROCKYGROUND)
+		{
+			p_ptr->update |= (PU_BONUS);
 		}
 
 #if 0 /* These are noxious -- pelpel */

@@ -170,6 +170,12 @@ D:Improves quality of loot
 I:1000
 F:RANDOM_GAIN
 
+N:79:HighHeels
+D:Lets you wear high-heeled footwear without penalties
+D:Higher skill levels boost your AC and charisma
+I:1000
+F:RANDOM_GAIN
+
 N:43:Thaumaturgy
 D:Ability to gain and cast innate spells
 D:Spells use the intelligence stat
@@ -668,6 +674,7 @@ T:Combat:Boulder-throwing
 T:Combat:Dual-wielding
 T:Combat:Two-handed
 T:Combat:Antimagic
+T:Combat:HighHeels
 
 T:Main:Sneakiness
 T:Sneakiness:Hidden-Sight

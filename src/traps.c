@@ -12263,6 +12263,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 	case TRAP_OF_SHIT_I:
 		{
+			bool badheel = FALSE;
+			if (p_ptr->heeled_boots && (get_skill(SKILL_HIGHHEELS) <= 0)) badheel = TRUE;
+
 			object_type *j_ptr;
 			msg_print("You stepped into a heap of shit!");
 			take_hit(damroll(2, 4), "a heap of shit");
@@ -12274,6 +12277,13 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				int bootdamagechance = 30;
 				u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
+
+				if (badheel) {
+					if (j_ptr->to_a > -20) {
+						j_ptr->to_a--;
+						msg_print("Ewwwww, your high heels are covered in icky shit!");
+					}
+				}
 
 				if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47) bootdamagechance = 3;
 
@@ -12291,6 +12301,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_SHIT_II:
 	case TRAP_OF_SHIT_IV:
 		{
+			bool badheel = FALSE;
+			if (p_ptr->heeled_boots && (get_skill(SKILL_HIGHHEELS) <= 0)) badheel = TRUE;
+
 			object_type *j_ptr;
 			msg_print("You fully stepped into dog shit!");
 			take_hit(damroll(3, 8), "a heap of dog shit");
@@ -12303,6 +12316,13 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				int bootdamagechance = 70;
 				u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
+
+				if (badheel) {
+					if (j_ptr->to_a > -30) {
+						j_ptr->to_a -= 2;
+						msg_print("Ewwwww, your high heels are covered in icky shit!");
+					}
+				}
 
 				if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47) bootdamagechance = 10;
 
@@ -12320,6 +12340,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_SHIT_III:
 	case TRAP_OF_SHIT_V:
 		{
+			bool badheel = FALSE;
+			if (p_ptr->heeled_boots && (get_skill(SKILL_HIGHHEELS) <= 0)) badheel = TRUE;
+
 			object_type *j_ptr;
 			msg_print("You have stepped into icky cow dung!");
 			take_hit(damroll(5, 9), "a heap of cow dung");
@@ -12333,6 +12356,14 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				int bootdamagechance = 100;
 				u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
+
+				if (badheel) {
+					if (j_ptr->to_a > -40) {
+						j_ptr->to_a -= 2;
+						j_ptr->to_a -= randint(2);
+						msg_print("Ewwwww, your high heels are covered in icky shit!");
+					}
+				}
 
 				if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47) bootdamagechance = 40;
 

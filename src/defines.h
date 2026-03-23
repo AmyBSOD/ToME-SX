@@ -887,6 +887,7 @@
 /* Feature 0xCC -- Underground Tunnel */
 #define FEAT_FIRE               0xCD /* 205 */
 /* Feature 0xCE -- pile of rubble (permanent) */
+#define FEAT_ROCKYGROUND        0xCF /* 207 */
 
 #define FEAT_PURIFIED_WATER     0xD9 /* 217 */
 
@@ -1695,7 +1696,15 @@
 /* The "sval" codes for TV_BOOTS */
 #define SV_PAIR_OF_SOFT_LEATHER_BOOTS    2
 #define SV_PAIR_OF_HARD_LEATHER_BOOTS    3
+#define SV_PAIR_OF_RUNNING_HEELS         4
 #define SV_PAIR_OF_METAL_SHOD_BOOTS      6
+#define SV_PAIR_OF_PUMPS                 8
+#define SV_PAIR_OF_WEDGE_SANDALS         9
+#define SV_PAIR_OF_MARY_JANES            14
+#define SV_PAIR_OF_PEEP_TOES             18
+#define SV_PAIR_OF_RED_OVERKNEES         23
+#define SV_PAIR_OF_COMBAT_BOOTS          24
+#define SV_PAIR_OF_BLOCK_SANDALS         25
 
 /* The "sval" codes for TV_CLOAK */
 #define SV_CLOAK                         1
@@ -5782,10 +5791,11 @@ extern int PlayerUID;
 #define SKILL_INVESTING         76
 #define SKILL_FRESHMINT         77
 #define SKILL_FORTUNE           78
+#define SKILL_HIGHHEELS         79
 /* ATTENTION: always update MAX_GOOD_SKILL below when adding new ones!!! --Amy */
 
 /* Ugly but needed */
-#define MAX_GOOD_SKILL          78
+#define MAX_GOOD_SKILL          79
 
 #define MAX_SKILLS              200
 

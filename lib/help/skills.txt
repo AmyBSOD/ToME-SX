@@ -127,7 +127,7 @@ The skills are:
   *****skills.txt*71[Impale]              *****skills.txt*72[Weight-lifting]     *****skills.txt*73[Valarin]            *****skills.txt*74[Nether]
   *****skills.txt*75[Druidistic]          *****skills.txt*76[Cleaning]           *****skills.txt*77[Misc]               *****skills.txt*78[Clear-mind]
   *****skills.txt*79[Freshmint]           *****skills.txt*80[Hidden-Sight]       *****skills.txt*81[Haggling]           *****skills.txt*82[Investing]
-  *****skills.txt*83[Four-dimensional]    *****skills.txt*84[Anti-nastiness]
+  *****skills.txt*83[Four-dimensional]    *****skills.txt*84[Anti-nastiness]     *****skills.txt*85[HighHeels]
 
 ~~~~~01|Skills|Combat
 [[[[[BCombat]
@@ -655,3 +655,7 @@ Your level in this skill determines the chance that a randomly generated trap wi
 be rerolled if it was supposed to be a nasty trap. Those are generally very dangerous
 as they won't display a message nor reveal themselves even when triggered, so this
 skill will help by reducing the odds of you stumbling into one.
+~~~~~85|Skills|HighHeels
+[[[[[BHighHeels]
+If you wear high heels while not having at least one point in this skill, you get
+a speed malus. Higher skill levels boost your AC and charisma while wearing high heels.

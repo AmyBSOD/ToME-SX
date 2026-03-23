@@ -1783,6 +1783,7 @@ C:a:k:+0:+300:Ranged-power
 C:a:k:+0:+200:Haggling
 C:a:k:+1000:+250:Two-handed
 C:a:k:+0:+200:Investing
+C:a:k:+5000:+800:HighHeels
 C:a:g:All Gods
 
 C:a:N:Jack
@@ -1859,6 +1860,7 @@ C:a:k:=0:=600:Anti-nastiness
 C:a:k:=0:=600:Investing
 C:a:k:=0:=600:Fortune
 C:a:k:=0:=600:Freshmint
+C:a:k:=0:=600:HighHeels
 C:a:O:111:50:1d1
 C:a:O:19:12:1d1
 C:a:O:17:1:4d5
@@ -1952,6 +1954,7 @@ C:a:k:+0:-500:Mimicry
 C:a:k:+1000:+400:Runecraft
 C:a:k:+0:+200:Firearms
 C:a:k:+0:+300:Alchemy
+C:a:k:+0:+300:HighHeels
 C:a:g:Nobody
 
 C:a:N:Polymath
@@ -2020,6 +2023,7 @@ C:a:k:+0:+400:Two-handed
 C:a:k:+0:+400:Firearms
 C:a:k:+0:+500:Investing
 C:a:k:+0:+400:Freshmint
+C:a:k:+0:+300:HighHeels
 C:a:g:Nobody
 
 C:a:N:Weird Master
@@ -2267,6 +2271,7 @@ C:a:k:+0:+300:Prayer
 C:a:k:+0:-300:Mindcraft
 C:a:k:+0:+300:Hell
 C:a:k:+0:+200:Fortune
+C:a:k:+0:+500:HighHeels
 
 C:a:N:Paladin
 C:a:D:A fighting priest that serves Tulkas to bring down
@@ -2308,6 +2313,7 @@ C:a:k:+1000:+700:Monster-lore
 C:a:k:+0:+300:Clear-mind
 C:a:k:+0:+200:Celestial
 C:a:k:+0:+300:Freshmint
+C:a:k:+0:+200:HighHeels
 C:a:O:21:5:1d1
 
 C:a:N:Stonewright
@@ -2346,6 +2352,7 @@ C:a:k:+0:+700:Archery
 C:a:k:+0:+200:Sling-mastery
 C:a:k:+0:+200:Bow-mastery
 C:a:k:+0:+200:Crossbow-mastery
+C:a:k:+0:+200:HighHeels
 
 C:a:N:Chaos Priest
 C:a:D:A priest who serves Ingeborg to bring chaos
@@ -2357,6 +2364,7 @@ C:a:k:+0:-200:Necromancy
 C:a:k:+0:+500:Hell
 C:a:k:+0:-100:Mindcraft
 C:a:k:+0:-100:Stealth
+C:a:k:+0:+400:HighHeels
 
 C:a:N:Water Priest
 C:a:D:A priest that serves Ulmo to bring down
@@ -2394,6 +2402,7 @@ C:a:k:+0:+400:Prayer
 C:a:k:+0:-600:Necromancy
 C:a:k:+0:+200:Spell-power
 C:a:k:+0:+800:Anti-nastiness
+C:a:k:+0:+200:HighHeels
 
 C:a:N:Young Priest
 C:a:D:A priest that serves Vana to bring down
@@ -3252,6 +3261,7 @@ R:k:+0:+400:Music
 R:k:+0:+200:Clear-mind
 R:k:+0:+400:Cleaning
 R:k:+0:+200:Fortune
+R:k:+0:+500:HighHeels
 
 R:N:33:Giant
 R:D:A small, but genuine, giant

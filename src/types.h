@@ -1862,6 +1862,7 @@ struct player_type
 
 	bool old_cumber_armor;
 	bool old_cumber_glove;
+	bool old_heeled_boots;
 	bool old_heavy_wield;
 	bool old_heavy_shoot;
 	bool old_icky_wield;
@@ -1874,6 +1875,7 @@ struct player_type
 
 	bool cumber_armor;	/* Mana draining armor */
 	bool cumber_glove;	/* Mana draining gloves */
+	bool heeled_boots;	/* Player is wearing high heels */
 	bool heavy_wield;	/* Heavy weapon */
 	bool heavy_shoot;	/* Heavy shooter */
 	bool icky_wield;	/* Icky weapon */
