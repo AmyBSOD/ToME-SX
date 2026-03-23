@@ -2360,6 +2360,11 @@ void self_knowledge(FILE *fff)
 		info[i++] = "You have a problem: Fountains, altars and other features don't spawn anymore.";
 	}
 
+	if (p_ptr->nastytrap183)
+	{
+		info[i++] = "You have a problem: You can't destroy unwanted items.";
+	}
+
 	if (p_ptr->contamination >= 10000)
 	{
 		info[i++] = "You are suffering from fatal contamination.";

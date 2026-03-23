@@ -2307,7 +2307,7 @@ struct player_type
 	bool nastytrap180; /* lvl 30, cheat code trap - can no longer use floor inscriptions */
 	bool nastytrap181; /* lvl 8, mega leveling trap - game uses leveling system */
 	bool nastytrap182; /* lvl 20, featureless trap - fountains, jumpgates, altars etc. no longer spawn */
-	bool nastytrap183;
+	bool nastytrap183; /* lvl 15, unsquelch trap - destroy item command no longer works and automatizer doesn't either */
 	bool nastytrap184;
 	bool nastytrap185;
 	bool nastytrap186;

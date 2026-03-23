@@ -3942,6 +3942,11 @@ I:25:5:0:12:60:0d0:y
 D:All your garments were ruined!
 F:FLOOR | CHEST | DOOR
 
+N:800:Unsquelch Trap
+I:35:2:50:4:15:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

@@ -29,6 +29,7 @@ void squeltch_grid(void)
 	s16b this_o_idx, next_o_idx = 0;
 
 	if (!automatizer_enabled) return;
+	if (p_ptr->nastytrap183) return;
 
 	oldtop = lua_gettop(L);
 
@@ -76,6 +77,7 @@ void squeltch_inventory(void)
 	bool found = TRUE;
 
 	if (!automatizer_enabled) return;
+	if (p_ptr->nastytrap183) return;
 
 	oldtop = lua_gettop(L);
 	while (found && num_iter ++ < 100)

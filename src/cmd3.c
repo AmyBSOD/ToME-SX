@@ -748,7 +748,8 @@ void do_cmd_destroy(void)
 
 	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
-	if (((f4 & TR4_CURSE_NO_DROP) || p_ptr->nastytrap102) && cursed_p(o_ptr))
+	/* unsquelch nastytrap: makes it impossible to destroy items with this command */
+	if ((((f4 & TR4_CURSE_NO_DROP) || p_ptr->nastytrap102) && cursed_p(o_ptr)) || p_ptr->nastytrap183)
 	{
 		/* Oops */
 		msg_print("Hmmm, you seem to be unable to destroy it.");

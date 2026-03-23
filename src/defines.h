@@ -3547,6 +3547,8 @@
 #define TRAP_OF_CURSE_JEWELRIES           798
 #define TRAP_OF_CURSE_GARMENTS            799
 
+#define TRAP_NASTY183                     800
+
 /*** General index values ***/
 
 
