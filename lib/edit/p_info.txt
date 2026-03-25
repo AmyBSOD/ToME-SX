@@ -2442,6 +2442,10 @@ C:a:k:+0:+600:Prayer
 C:a:k:+0:-300:Necromancy
 C:a:k:+0:+500:Temporal
 C:a:k:+0:+400:Dodging
+C:a:k:+1000:+0:Fire
+C:a:k:+1000:+0:Air
+C:a:k:+1000:+0:Earth
+C:a:k:+1000:+0:Water
 
 C:a:N:Death Priest
 C:a:D:A priest that serves Mandos to bring down

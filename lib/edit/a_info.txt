@@ -6521,6 +6521,15 @@ f:MUST2H
 D:This powerful flail was originally wielded by Yeenoghu, 
 D:also known as the Prince of Gnolls. 
 
+# pike
+N:565:'Tanner's Gorerod'
+I:22:8:4
+W:20:10:160:4000
+P:0:2d5:6:14:0
+F:COULD2H | RES_FIRE | BRAND_FIRE | CON | LITE2
+f:COULD2H
+D:This pole is fire-branded.
+
 # lance
 N:566:'Mighty Barb'
 I:22:20:2
@@ -6664,6 +6673,186 @@ F:CHR | SUST_CHR | TUNNEL | INFRA | RES_ACID | RES_FEAR |
 F:RES_DARK | RES_BLIND | DRAIN_MANA | 
 D:It seems that this cloak is supposed to be worn by miners. 
 D:Be aware, it drains your mana! 
+
+# decapitator
+N:673:'Hellslayer'
+I:24:35:8
+W:60:20:400:10000
+P:0:3d11:0:20:0
+F:MUST2H | VORPAL | STR | CON | INFRA | BRAND_FIRE
+f:MUST2H | VORPAL
+D:While this axe may deal lots of damage, it's not actually all that special.
+
+# tomahawk
+N:675:'Razor's Edge'
+I:24:37:2
+W:50:30:180:10000
+P:0:3d6:0:24:0
+F:COULD2H | VORPAL | WOUNDING | BLOWS
+f:COULD2H
+D:A rather no-nonsense weapon, it does a lot of damage and gives 
+D:purely offensive bonuses.
+
+# tiara
+# RES_WALL
+N:683:'Kira's Guardian'
+I:33:15:0
+W:70:30:50:25000
+P:4:1d1:0:0:14
+F:IM_COLD | RES_FIRE | RES_ELEC | RES_ACID | RES_POIS | FREE_ACT |
+F:RES_BLIND | RES_NEXUS | RES_CHAOS | RES_WATER | RES_NERVE | RES_MIND | 
+D:A set of royal headgear that boasts one of the highest concentration of 
+D:elemental resistances on a single item.
+
+# diadem
+N:684:'Griffon's Eye'
+I:33:16:8
+W:80:30:70:20000
+P:7:1d1:0:0:20
+F:INT | SPELL | INVIS | RES_LITE | RES_ELEC | SUST_INT | SH_ELEC | 
+F:FEATHER | LITHE | 
+D:Its bonus to spell power makes it particularly popular among mages. 
+
+# plate boots
+N:701:'Goblin Toe'
+I:30:15:6
+W:25:20:200:5000
+P:8:1d1:0:0:6
+F:STR | TUNNEL | RES_DARK | REGEN | CRIT | 
+D:These boots have physical boosts and are therefore most useful for 
+D:melee fighters.
+
+# greaves
+N:702:'Tearhaunch'
+I:30:16:3
+W:20:15:300:6000
+P:10:1d1:0:0:8
+F:SPEED | RES_FIRE | RES_COLD | DEX | STR
+D:A pair of boots with a speed bonus! Yay!
+
+# partisan
+N:706:'Pierre Tombale Couant'
+I:22:18:2
+W:50:40:200:12000
+P:0:2d7:18:16:0
+F:COULD2H | VORPAL | VAMPIRIC | BLOWS | SEE_INVIS | CRIT | 
+F:RES_MORGUL | 
+f:COULD2H
+D:This polearm is a good choice for physical fighters, especially 
+D:those who specialize in polearms.
+
+# spetum
+N:708:of Yaggai
+I:22:19:1
+W:20:20:60:6000
+P:0:3d3:0:0:0
+F:COULD2H | BRAND_ELEC | RES_FIRE | RES_COLD | RES_ELEC | RES_POIS | 
+F:BLOWS
+f:COULD2H
+D:Its lightning damage and resistances are useful in the early game, 
+D:but later on it'll probably be overshadowed by stronger weapons. 
+
+# voulge
+N:712:'Steelgoad'
+I:22:23:0
+W:10:10:250:5000
+P:0:1d8:3:8:0
+F:COULD2H | VORPAL | RES_POIS | ACTIVATE
+f:COULD2H
+a:SPELL=Artifact Maggot
+D:It can be a powerful weapon early in the game, and you can 
+D:also activate it to make monsters flee from you.
+
+# bec-de-corbin
+N:716:'Husoldal Evo'
+I:22:25:1
+W:45:50:160:12000
+P:0:5d3:20:17:0
+F:COULD2H | BLOWS | REGEN | SLAY_EVIL | KILL_DRAGON | 
+F:SUST_STR | KILL_DEMON | KILL_UNDEAD | 
+f:COULD2H
+D:Besides its high damage, it has an interesting set of bonuses. 
+
+# thresher
+N:721:'Reaper's Toll'
+I:22:33:6
+W:60:50:250:20000
+P:0:6d4:30:20:0
+F:MUST2H | BRAND_COLD | VORPAL | VAMPIRIC | IM_COLD | SLOW_DIGEST | 
+F:STR | DEX | IM_NETHER | SLAY_UNDEAD | SUST_STR | SUST_DEX | 
+f:MUST2H
+D:Thankfully this game doesn't require you to play in some stupid ladder mode 
+D:just to be able to find this artifact. 
+
+# baton
+N:736:'Nord's Tenderizer'
+I:21:21:2
+W:60:40:40:20000
+P:0:6d6:2:25:0
+F:BRAND_COLD | KILL_UNDEAD | IM_COLD | BLOWS | 
+D:An incredibly damaging club, especially against monsters who lack 
+D:cold resistance.
+
+# legendary hammer
+N:737:'Schaefer's Hammer'
+I:21:22:5
+W:50:50:450:25000
+P:0:5d5:0:15:0
+F:MUST2H | BRAND_ELEC | KILL_UNDEAD | BLOWS | IM_ELEC | LITE1 | 
+F:LIFE | RES_MORGUL | 
+f:MUST2H
+D:Its bonuses may seem pretty arbitrary but it's still an effective weapon. 
+
+# thunder hammer
+N:738:'Cranium Basher'
+I:21:23:7
+W:70:50:350:25000
+P:0:5d5:3:24:0
+F:MUST2H | BRAND_ELEC | SLAY_UNDEAD | CRIT | BLOWS | 
+F:RES_FIRE | RES_COLD | RES_ELEC | RES_ACID | STR | RES_MORGUL | 
+f:MUST2H | BRAND_ELEC
+D:This hammer dishes out tremendous damage, especially with its high 
+D:chance of critical hits.
+
+# knout
+N:739:'Baezil's Vortex'
+I:21:25:5
+W:35:30:150:12000
+P:0:3d7:0:15:0
+F:COULD2H | BRAND_ELEC | SLAY_UNDEAD | BLOWS | RES_ELEC |
+F:MANA | RES_CHAOS | 
+f:COULD2H
+D:It adds a good amount of lightning damage, and strangely enough it also 
+D:has a boost to mana, allowing you to cast spells more often.
+
+# ogre hammer
+N:740:'Windhammer'
+I:21:26:2
+W:60:40:400:15000
+P:0:4d8:0:22:0
+F:COULD2H | BLOWS | VORPAL | SLAY_UNDEAD | SPEED | 
+f:COULD2H
+D:Its virtues lie in its high damage, speed bonuses, and the 
+D:ability to deal crushing blows.
+
+# gnarled staff
+N:750:'Spire of Lazarus'
+I:6:2:5
+W:20:20:40:6000
+P:0:1d6:0:0:0
+F:COULD2H | BRAND_ELEC | INT | REGEN | RES_ELEC | RES_DARK | 
+f:COULD2H
+D:It looks like an elder staff, and is mostly lightning-based. 
+
+# war staff
+N:751:'Iron Jang Bong'
+I:6:3:5
+W:25:15:70:5000
+P:0:1d8:15:10:15
+F:COULD2H | SPELL | 
+f:COULD2H
+D:While it gives good combat bonuses, spellcasters might find this 
+D:weapon lackluster.
 
 # combat boots
 N:781:'Lisa's Buckle'
