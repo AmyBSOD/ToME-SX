@@ -1,0 +1,102 @@
+In order to get a house in any of the towns, you need to beat a quest that spawns various monsters. You'd better be ready to complete the quest since you can't leave unless you kill all the monsters in there, so don't go in unprepared!
+
+Refer to tomemapNEW.png to see where all the various towns and dungeons are.
+
+*** List of towns ***
+
+Bree - starting town. Quest has thieves, warriors and a mage, hardest opponent is a level 10 bandit; use hit and run if possible.
+Dale - Quest has grassland monsters about level 5. Be careful, occasionally there can be explosive breeders and if you can't contain them, you're pretty much hosed.
+Lothlorien - Quest has wolves and wargs which are level 10-16 or so, but their AI is very dumb, most of the time they run away. You may have to corner them. Watch out, if they hurt you enough they'll swarm all over you which can be dangerous.
+Cerin Amroth - Quest has forest monsters about level 15.
+Hobbiton - Quest has mid-level shoes. I'd recommend you to be at least level 15 or so before going in.
+Imladris - Quest has shore monsters about level 25. These can include stuff like hydras.
+Minas Anor - Quest has liches, wraiths and ghosts, level 30+, and there's also lots of high-level traps.
+Helm's Deep - Quest has desert monsters about level 35.
+Osgiliath - Quest has eldritch horrors, you need a high saving throw or be ready to get eldritch blasted repeatedly. Their levels are about 30 or so.
+Thranduil's Halls - Quest has mountain monsters about level 45. These may include mature dragons and giants.
+Gondolin - Quest has young and mature dragons up to level 30 or so, you should have the basic resists covered before going in.
+Henneth Annun - Quest has ocean monsters about level 55. If you're unlucky, these may include kraken, which will own you.
+Edoras - Quest has ice-based monsters, double cold resistance or ideally immunity to cold will help. Their levels are about 40 or so.
+Beorn's Halls - Quest has volcano monsters about level 65. You really should have fire immunity if you're going to attempt this one.
+Pelargir - Quest has fastitocalons, lesser kraken and one greater kraken. These guys will *wreck your shit* if you're not endgame-capable. The greater kraken in particular can deal over 1000 damage in one round of melee, and also has lethally powerful attack spells.
+Esgaroth - Quest has wilderness monsters about level 75. These can include all kinds of stuff, but if you get really unlucky they can have greater kraken, and then you're probably dead.
+Khazad-Dum - Quest has absurdly high-level balrogs and pit fiends with levels up to 77. Unless you have a full ascension kit and can regularly take down such demons, don't even bother.
+
+Some dungeons can have random towns, which is denoted with TOWN in the following list; these appear on random levels within the dungeon in question, but there's no guarantees that any are generated. If a dungeon does have towns, they'll always be on the levels where you find them and their layout is also (mostly) constant.
+Some dungeons block recall: you can recall out of those, and then recall back to where you've been when you're in the wilderness or town, but you cannot warp to them via the thunderlords and also can't use a scroll of reset recall to set your recall location to those. These are denoted with NORECALL in the list. If you're going to play through one of those, you'd better not set your recall location to any other dungeon before you're done. However, you can still walk back to the dungeon in question, enter, read a scroll of recall and then answer NO when asked "do you want to reset your recall level?". Then, your recall will be set to that dungeon but with the deepest level you've reached. This is particularly important for the Angband and Mount Doom dungeons which you'll have to visit during the main quest.
+
+*** List of dungeons ***
+
+The Old Forest (TOWN) - 13-25, forest and lots of water
+The Orc Cave (TOWN) - 10-22, tight quarters with mountains
+The Helcaraxe - 20-40, icy, double size, background cold damage that constantly destroys your potions unless you're immune to cold
+Cirith Ungol - 25-50, background poison damage, shouldn't enter without resistance
+The Heart of the Earth (NORECALL) - 25-36 accessed from Mirkwood 25, this dungeon is terrible to traverse due to constantly shifting walls and has almost no loot
+Illusory Castle (TOWN) - 35-52, background confusion effect so you really don't want to be here without the resistance; also has illusory walls making levels annoying to traverse
+The Sandworm's Lair - 22-30
+The Maze - 25-37, mazey levels with ultra annoying map amnesia and basically no loot
+The Land of Rhun (TOWN) - 26-40, rather open terrain where you have little cover
+The Paths of the Dead - 40-70, dead monsters occasionally get resurrected as hostile zombies and skeletons
+Mount Doom (NORECALL) - 85-99 accessed from Mordor 65, lava everywhere, you *will* need fire immunity and this dungeon is also mandatory unless you go for the evil ending
+Mount Fate (NORECALL) - 85-99 accessed from Mordor 64, lava rivers, tough monsters, this dungeon can be used as an alternative to mount doom in the main quest
+Mines of Moria (TOWN) - 30-50, tight quarters with mountains and lotsa monsters
+The Small Water Cave (NORECALL) - 32-34, background acid damage that trashes your gear unless you're immune, accessed from Moria 40
+The Sacred Land Of Mountains (TOWN) - 45-70, lots of flying opponents who are likely to swarm you
+The Lost Land of Numenor - 35-50, background acid damage that trashes your gear unless you're immune, and *requires* water breathing or you'll suffocate!
+The tower of Dol Guldur - 57-70, mandatory since the boss at level 70 is the one you need to kill for the main quest
+Erebor (NORECALL) - 60-72, double size, lots and lots of dragons
+The Void (NORECALL) - 128-150, postgame dungeon, *requires* magical breathing or you'll suffocate!
+Nether Realm (TOWN) (NORECALL) - 666-696 postgame dungeon, *requires* magical breathing or you'll suffocate! accessed from Void 148
+
+Forodwaith (NORECALL) - 75-90, background darkness damage and open arenas
+Emyn Luin (TOWN) (NORECALL) - 60-80
+Dol Amroth (TOWN) - 25-35, hard to reach, beware the possible ambushes when going there!
+Angmar - 80-98, background disenchantment damage meaning you need the resistance or going there will just be endlessly frustrating
+Near Harad (TOWN) - 20-45, wide open areasm background inertia damage which makes it basically unplayable unless you have the resistance
+Isengard - 35-60, mountain terrain and fiercely leveled monsters
+Tol Eressea - 40-65, open water areas where you're constantly swarmed
+Utumno (NORECALL) - 101-127
+
+Barad-Dur - 1-20
+Amon Sul - 20-40
+Hornburg (TOWN) - 40-60
+Fornost Erain (TOWN) - 50-70, background shard damage
+Caras Galadhon (TOWN) - 71-98, background sound damage
+R'lyeh (TOWN) - 55-80, spawns lots of eldritch horrors
+Middle Harad (TOWN) - 60-98, background inertia damage and wide open areas, accessed from Near Harad 45
+Far Harad (TOWN) - 40-60, densely forested, accessed from Near Harad 40
+Graveyard - 50-70 contains lots of undead, accessed from Paths of the Dead 50
+Volcano - 50-60, background fire damage so you really want to have immunity to fire, accessed from Mordor 50
+Hell - 66-80, background fire damage so you really want to have immunity to fire, accessed from Emyn Luin 65
+Heaven - 55-70, accessed from Fornost Erain 55
+Mountain - 40-50, accessed from Land of Rhun 38
+Glass Castle (TOWN) - 40-60, accessed from Illusory Castle 40
+Icky Cave - 20-35, accessed from Sandworm Lair 23
+Mount Olympus - 80-90, accessed from Caras Galadhon 81
+Wild Mine - 1-10
+Femmy's Cave - 10-20
+
+Space Base (TOWN) - 20-31
+Sewer - 32-38, background poison damage, accessed from Space Base 31
+Gamma Caves (TOWN) - 39-45, background ether damage, accessed from Sewer 38
+Mainframe - 46-50, prevents teleportation, accessed from Gamma Caves 45
+
+Barrow-Downs - 1-10, trees and mountains
+Mirkwood Forest - 11-33, trees everywhere
+Mordor - 34-66, lava streams
+Angband (NORECALL) - 67-127, main storyline dungeon, occasionally spawns wide open areas which can be incredibly deadly
+
+The wilderness has various types of terrain, some of which can obstruct your movement. You can also be ambushed, which will place you in a wilderness level with a bunch of awake and possibly dangerous monsters; the type of terrain controls the monster mix you see, and every terrain also has a base level for its monsters but they level with you so a higher-level character will see more dangerous monsters.
+
+*** Wilderness features ***
+
+Towns: they'll usually spawn boil-covered wretchs and filthy street urchins etc. but occasionally tougher stuff
+Grassland: generally spawns low-level animals and is relatively safe to traverse
+Forest: can't move over it in world map mode unless you have flying or tree walking, spawns more dangerous animals
+Desert: spawns rather tough monsters
+Glacier: spawns rather tough monsters and also has a tendency to cause ice damage in local map mode, or cause you to walk in the wrong direction in world map mode. Flying and cold resistance/immunity may help.
+Mountain: can't move over it in world map mode unless you have mountain climbing, spawns dragons, giants and stuff, very dangerous! Better have teleport and recall scrolls ready if you absolutely have to traverse this terrain!
+High mountain: absolutely impassable in world map mode but may be accessed in local mode if you have mountain climbing. If you get ambushed here, you'll encounter super high level monsters who may well end your existence unless you have a full ascension kit, and might not even be capable of teleporting out so you'd better have some recall scrolls and the capability of surviving long enough for it to kick in.
+Shallow water: spawns lizards, nagas, hydras etc., can be rather dangerous
+Ocean: spawns leviathans, fastitocalons and giant kraken, and also assorted other nasties but anyone weak enough to die to those others will already be dead ten times over due to the former three. These guys will *wreck your shit* unless you have a full ascension kit; basically, if you get ambushed on the ocean, read teleport and pray to the RNG that you can reach the edge of the map before those ubermonsters end your existence.
+Volcano: spawns lots of fire-based monsters and also has lava terrain, so you'll want fire immunity if possible. The monsters are high-level too so an ambush will probably kill you unless your char is pretty buff.

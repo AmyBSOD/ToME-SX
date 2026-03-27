@@ -1,0 +1,86 @@
+Use the number pad keys to move. Don't move with the arrow keys unless you want to make the game unnecessarily hard.
+
+& interact with colors
+% interact with visuals
+
+= change options (they're saved at lib/user)
+CTRL +*~ creates a HTML screenshot
+#B to trigger a trap on purpose
+n repeats the last used command
+
+i inventory
+h hack meat off a corpse
+e display current equipment
+d drop stuff
+O offer (when standing on an altar)
+p pray
+s search
+k destroy unwanted item
+w equip (weapon, armor, etc.)
+t take off worn item
+v throw
+
+. press this and then a direction to run in that direction
+, stand still (wait a turn)
+g pick up item
+R rest (to regenerate health, mana etc.)
+
+T dig (requires shovel/pick/other digging tool)
+o open a door
+c close a door
+j spike a door (requires iron spikes)
+S toggle search mode
+B bash door
+D disarm trap
+
+b browse a book to see which spells it has
+G skill menu (need to use that if you wanna increase them; they don't increase on their own)
+m cast a spell or use other skill-based ability
+N see special abilities (can buy new ones if your skills are good enough)
+U activate a special power
+
+E eat
+F fill lamp (lanterns can be filled with oil, torches can be "filled" with more torches)
+q quaff a potion
+r read a scroll
+{ inscribe an item
+} remove inscription from item
+
+A activate item (for certain artifacts or other activatable items)
+a zap a wand
+z zap a rod
+u zap a staff
+
+f fire ranged weapon ("wield" appropriate ammo in your quiver if possible)
+* target cursor that lets you inspect what's on nearby tiles; use movement commands while in this mode to switch between targets
+
++ press this and then a direction to attack in that direction, for e.g. forcibly attacking a peaceful monster
+
+M smaller map of the current level
+x engrave
+I inspect your items
+L allows you to view the various sectors of the current level by using movement commands
+
+H interact with a fountain (filling is much safer than quaffing, similar to NetHack)
+
+P Pet Commands (can dismiss your pets or change their AI etc.)
+
+Y chat to monsters
+y give item to monster
+Z try to steal item from monster
+
+Ctrl-F see the level feeling, and possibly the active quest
+Ctrl-P message log
+: write notes
+
+C character menu
+~ display the knowledge menu where you can see e.g. which items or monsters you've found
+Ctrl-Q quest log
+[ sichtbare Monster anzeigen
+
+Ctrl-X save and quit
+Ctrl-S save
+Q commit suicide (this ends your game!)
+
+? help menu
+/ see what a certain symbol means
