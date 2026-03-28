@@ -6563,6 +6563,51 @@ D:A shitty artifact that you really shouldn't wear if you don't have to.
 D:Yes, it has resistance to both blindness and confusion, but do you 
 D:really want to stink like a heap of dung?! 
 
+# soft studded leather
+N:574:'Lightnops'
+I:36:5:2
+W:15:20:90:5000
+P:5:1d1:0:0:0
+F:LITHE | SPEED | DEX | SUST_DEX | RES_CONF | 
+D:This very light suit of armor makes you agile.
+
+# hard studded leather
+N:577:'Hardnail'
+I:36:7:6
+W:20:15:110:6000
+P:7:1d2:-1:0:9
+F:STR | SUST_STR | RES_ELEC | RES_FEAR | BLESSED | 
+D:A rather robust suit of armor.
+
+# metal scale mail
+N:580:'All Clear, Sir!'
+I:37:3:2
+W:20:15:250:6000
+P:13:1d4:-2:0:7
+F:FREE_ACT | RES_BLIND | RES_CONF | INFRA | LITE1 | 
+F:DISARM | 
+D:This suit gives pretty good coverage of some important resistances. 
+
+# partial plate armor
+N:585:'The Impossible Jump'
+I:37:12:5
+W:30:20:260:10000
+P:22:1d6:-3:0:16
+F:LITHE | DEX | SUST_DEX | DODGE | FREE_ACT | FEATHER | 
+F:RES_NERVE | 
+D:This metallic armor is impossibly light. It allows the wearer 
+D:to perform some impressive dodging feats.
+
+# small leather shield
+N:591:of Resistance And More
+I:34:2:0
+W:15:15:50:15000
+P:2:1d1:0:0:6
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | RES_NETHER | 
+F:RES_PLASMA | RES_MIND | 
+D:It looks like a regular ego-item shield of resistance, but upon 
+D:closer inspection you see that it provides extra resistances! Cool!
+
 # red dsm
 N:595:'From Mashhad to Ahvaz'
 I:38:4:5
@@ -6574,6 +6619,20 @@ F:DISARM | LITHE | RES_PLASMA |
 f:RES_FIRE |
 a:HARDCORE=BR_FIRE
 D:This suit has been optimized for use in arid regions. 
+
+# law dsm
+N:598:'There's A Hand'
+I:38:12:6
+W:45:30:200:20000
+P:30:2d4:-2:0:17
+a:HARDCORE=BR_SHARD
+F:RES_SOUND | RES_SHARDS | FLY | ACTIVATE | STR | CON | 
+F:SEARCH | SUST_STR | SUST_CON | SUST_CHR | RES_FIRE | RES_ELEC | 
+F:RES_ACID | RES_COLD | RES_DARK | TELEPORT | CURSE_NO_DROP | 
+F:AUTO_CURSE | PEACEKEEPING | RAPID_HUNGER | 
+f:RES_SOUND | RES_SHARDS |
+D:It provides a nice set of bonuses, but you have to abide the law 
+D:while wearing it...
 
 # zweihander
 N:604:'Konrad's Stride'
@@ -6664,6 +6723,24 @@ f:MUST2H
 D:A quite powerful artifact sword inspired by the unique item with 
 D:the same name in Diablo 2. 
 
+# guisarme
+N:625:'I Wanna Kill Something'
+I:22:16:4
+W:20:20:165:7500
+P:0:3d5:7:14:0
+F:COULD2H | STR | TUNNEL | SLAY_ANIMAL | SLAY_EVIL | 
+F:SLAY_DEMON | SLAY_GIANT | SLAY_DRAGON | SUST_STR | CRIT | 
+f:COULD2H
+D:Well, you do wanna kill something, right? 
+
+# paper armor
+N:631:'Cut Number One Thousand'
+I:36:3:3
+W:10:30:30:10000
+P:4:1d1:0:0:0
+F:SPEED | SPELL | RES_SHARDS | 
+D:It's not all that special... but it speeds you up! 
+
 # mimicry cloak
 N:636:'Mining Travesty'
 I:35:100:4
@@ -6712,6 +6789,18 @@ P:7:1d1:0:0:20
 F:INT | SPELL | INVIS | RES_LITE | RES_ELEC | SUST_INT | SH_ELEC | 
 F:FEATHER | LITHE | 
 D:Its bonus to spell power makes it particularly popular among mages. 
+
+# mary janes
+N:685:'Antonia's Game'
+I:30:14:6
+W:50:40:8:30000
+P:2:1d1:0:2:9
+F:CHR | SPEED | CHR | SUST_CHR | RES_ACID | RES_DISEN | 
+F:CURSED | HEAVY_CURSE | AGGRAVATE | DODGE | MARTIAL_ARTS | 
+F:PERCEPTION | 
+f:CHR
+D:These shoes would be worth wearing for the speed bonus, but they 
+D:aggravate. That's a big drawback. Do you still want to wear them? 
 
 # plate boots
 N:701:'Goblin Toe'

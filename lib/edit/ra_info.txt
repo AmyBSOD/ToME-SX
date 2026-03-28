@@ -24,9 +24,9 @@ V:2.0.0
 
 # General info, number of powers
 G:100:1d5:1
-G:14:0d0:1
-G:10:0d0:1
-G:3:0d0:1
+G:50:0d0:1
+G:20:0d0:1
+G:5:0d0:1
 
 ### Mage Staff randarts ###
 
