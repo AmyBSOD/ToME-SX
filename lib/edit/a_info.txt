@@ -2660,7 +2660,7 @@ P:0:2d9:10:13:0
 F:ACTIVATE | BLESSED | CHR | ESP_ANIMAL | ESP_EVIL | 
 F:HIDE_TYPE | INFRA | INT | MANA | RES_COLD | RES_ELEC | 
 F:RES_FIRE | RES_MORGUL | SEARCH | SEE_INVIS | SHOW_MODS | 
-F:SLAY_ANIMAL | SLAY_EVIL | SPELL | SPELL_CONTAIN | 
+F:SLAY_ANIMAL | SLAY_EVIL | SPELL | SPELL_CONTAIN | WIELD_CAST | 
 F:STEALTH | WATER_BREATH | WIELD_CAST | WIS | COULD2H
 f:COULD2H
 Z:grow trees
@@ -3784,7 +3784,7 @@ I:31:4:2
 W:50:20:25:20000
 P:4:2d4:0:0:19
 F:DEVICE_MASTERY | STR | CON | SEARCH | INFRA | TUNNEL | 
-F:SUST_CON | RES_DARK | FREE_ACT | SPELL_CONTAIN
+F:SUST_CON | RES_DARK | FREE_ACT | SPELL_CONTAIN | WIELD_CAST | 
 f:DEVICE_MASTERY
 D:Some master dwarves with lots of crafting skill have forged 
 D:this pair of gauntlets, which even allows the wearer to use 
@@ -6551,6 +6551,17 @@ F:SLAY_ORC | SLAY_TROLL | VORPAL | RES_NETHER | PERCEPTION |
 f:COULD2H
 D:The typical weapon wielded by Death. 
 
+# pick
+N:569:of Armok
+I:20:4:3
+W:15:20:200:4000
+P:0:1d3:0:0:2
+F:TUNNEL | STR | SUST_CON | FREE_ACT | CURSED | AUTO_CURSE | 
+f:TUNNEL
+D:It's heavier than normal, and wants to enslave the wielder to 
+D:a life of endless work in the Dwarven Mines. At least it's pretty 
+D:good for actual tunneling work, though. 
+
 # filthy rag
 N:572:of the Barrows
 I:36:1:6
@@ -6760,6 +6771,19 @@ F:MUST2H | VORPAL | STR | CON | INFRA | BRAND_FIRE
 f:MUST2H | VORPAL
 D:While this axe may deal lots of damage, it's not actually all that special.
 
+# gigantic axe
+# RES_WALL
+N:674:of Knight Chu
+I:24:36:7
+W:50:30:500:26000
+P:0:6d8:13:17:0
+F:MUST2H | STR | SUST_STR | SLAY_ANIMAL | SLAY_EVIL | 
+F:BRAND_ELEC | RES_ELEC | RES_CHAOS | BLESSED | CRIT | 
+F:WOUNDING | 
+f:MUST2H
+D:The blood-smeared axe of a formidable knight, it absolutely 
+D:wants to cut down your foes. 
+
 # tomahawk
 N:675:'Razor's Edge'
 I:24:37:2
@@ -6802,6 +6826,14 @@ f:CHR
 D:These shoes would be worth wearing for the speed bonus, but they 
 D:aggravate. That's a big drawback. Do you still want to wear them? 
 
+# wool cloak
+N:695:'Rick's High Roll'
+I:35:10:8
+W:10:20:20:6000
+P:2:0d0:0:0:20
+F:LITHE | DODGE | RES_NEXUS | HOLD_LIFE |
+D:This is a pretty defensive, lightweight cloak. 
+
 # plate boots
 N:701:'Goblin Toe'
 I:30:15:6
@@ -6840,6 +6872,16 @@ F:BLOWS
 f:COULD2H
 D:Its lightning damage and resistances are useful in the early game, 
 D:but later on it'll probably be overshadowed by stronger weapons. 
+
+# ranseur
+N:710:'Urgent Need'
+I:22:21:2
+W:5:10:20:6000
+P:0:1d6:3:3:0
+F:COULD2H | FREE_ACT | RES_CONF | STR | DEX |
+f:COULD2H
+D:You urgently need free action and confusion resistance. 
+D:Well, now you've found it. :-)
 
 # voulge
 N:712:'Steelgoad'
@@ -6924,6 +6966,15 @@ f:COULD2H
 D:Its virtues lie in its high damage, speed bonuses, and the 
 D:ability to deal crushing blows.
 
+# metal torch
+N:743:'WideBrightLite'
+I:39:21:0
+W:10:10:30:4000
+P:0:1d1:0:0:0
+F:LITE1 | FUEL_LITE | LITE3 | RES_LITE |
+f:LITE1 | FUEL_LITE |
+D:It shines very brightly. 
+
 # gnarled staff
 N:750:'Spire of Lazarus'
 I:6:2:5
@@ -6942,6 +6993,30 @@ F:COULD2H | SPELL |
 f:COULD2H
 D:While it gives good combat bonuses, spellcasters might find this 
 D:weapon lackluster.
+
+# bardiche
+N:764:'Dumboak's Hew'
+I:22:38:1
+W:10:5:320:2000
+P:0:2d8:4:12:-4
+F:MUST2H | STR | CON | RES_BLIND | SLAY_EVIL | SLAY_UNDEAD | 
+f:MUST2H
+D:"It is called DIMoak's Hew!", you complain. 
+
+# red overknees
+N:780:'Manuela's Cruelty'
+I:30:23:6
+W:80:50:50:70000
+P:4:1d1:0:6:20
+F:RES_CHAOS | CHR | SPELL | SUST_CON | SUST_INT | IM_FIRE | 
+F:FREE_ACT | RES_FEAR | SH_FIRE | NO_TELE | LITE1 | SEE_INVIS | 
+F:CURSED | DRAIN_EXP | AUTO_CURSE | CURSE_NO_DROP | SPELL_CONTAIN | 
+F:RES_WATER | RES_INERTIA | INV_PROTECT | SAVING_MALUS | WIELD_CAST | 
+F:DISARM | RES_PLASMA | RAPID_HUNGER | RES_NERVE | MARTIAL_ARTS | 
+f:RES_CHAOS
+D:The cruel assistant Manuela placed basically every attribute on 
+D:this pair of boots, including some nasty curses to penalize anyone 
+D:who would steal them from her. 
 
 # combat boots
 N:781:'Lisa's Buckle'
