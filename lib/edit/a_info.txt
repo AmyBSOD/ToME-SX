@@ -6510,6 +6510,15 @@ D:Used by the fighters from Cobra Marital Arts Dojo, these boots
 D:allow the wearer to kick more effectively and also dodge more 
 D:attacks.
 
+# broken dagger
+N:560:'Sharp Shard'
+I:23:1:2
+W:10:15:5:1000
+P:0:1d1:-2:-4:-5
+F:CRIT | WOUNDING | 
+D:At least it broke off such that there's still a sharp edge 
+D:remaining! 
+
 # 2h flail
 N:562:of Yeenoghu
 I:21:18:3
@@ -6582,6 +6591,15 @@ P:5:1d1:0:0:0
 F:LITHE | SPEED | DEX | SUST_DEX | RES_CONF | 
 D:This very light suit of armor makes you agile.
 
+# hard leather armor
+N:575:'Mednetter'
+I:36:6:2
+W:20:20:100:3000
+P:6:1d1:-1:0:8
+F:CON | DEX | SUST_DEX | RES_ELEC | RES_FIRE | RES_COLD | 
+F:LITE1 | 
+D:A relatively solid suit of armor for the early game. 
+
 # hard studded leather
 N:577:'Hardnail'
 I:36:7:6
@@ -6619,6 +6637,14 @@ F:RES_PLASMA | RES_MIND |
 D:It looks like a regular ego-item shield of resistance, but upon 
 D:closer inspection you see that it provides extra resistances! Cool!
 
+# double ring mail
+N:592:'Speed Hauberk'
+I:37:5:3
+W:25:30:230:20000
+P:15:1d4:-2:0:12
+F:SPEED | CON | RES_ACID | SLOW_DIGEST | MAGIC_FIND | 
+D:Yes, it *is* possible to run fast while wearing heavy armor! 
+
 # red dsm
 N:595:'From Mashhad to Ahvaz'
 I:38:4:5
@@ -6644,6 +6670,18 @@ F:AUTO_CURSE | PEACEKEEPING | RAPID_HUNGER |
 f:RES_SOUND | RES_SHARDS |
 D:It provides a nice set of bonuses, but you have to abide the law 
 D:while wearing it...
+
+# balance dsm
+N:602:'Platinum Plate'
+I:38:20:5
+W:40:50:300:25000
+P:45:2d4:-2:0:25
+a:HARDCORE=BR_BALANCE
+F:RES_CHAOS | RES_DISEN | RES_SOUND | RES_SHARDS | FLY |
+F:ACTIVATE | SPELL | REFLECT | ESP_GOOD | RES_NETHER | RES_NEXUS | 
+f:RES_CHAOS | RES_DISEN | RES_SOUND | RES_SHARDS |
+D:It's heavier than a regular dragon scale mail, but also provides 
+D:additional protection and, strangely enough, makes spells easier to cast. 
 
 # zweihander
 N:604:'Konrad's Stride'
@@ -6701,6 +6739,15 @@ D:The main purpose of this suit was to enable the wearer to carry
 D:a lot more loot, but it does so by providing a strength bonus, which 
 D:is also very useful for melee combat. 
 
+# khopesh
+N:615:'Bystryy Udar'
+I:23:14:2
+W:24:40:130:30000
+P:0:2d4:4:4:0
+F:SPEED | BLOWS | SLAY_TROLL | KILL_DRAGON | RES_COLD | 
+F:SAVING_MALUS | 
+D:Err, you don't understand russian! What does the name mean?! 
+
 # flamberge
 N:617:'Ripsaw Rage'
 I:23:26:6
@@ -6744,6 +6791,14 @@ F:SLAY_DEMON | SLAY_GIANT | SLAY_DRAGON | SUST_STR | CRIT |
 f:COULD2H
 D:Well, you do wanna kill something, right? 
 
+# basilard
+N:626:'The Long Stick'
+I:23:9:4
+W:16:30:80:15000
+P:0:1d10:7:11:0
+F:INFRA | SLAY_GIANT | FREE_ACT | LITE1 | 
+D:It's slightly longer than normal, and therefore more effective. 
+
 # paper armor
 N:631:'Cut Number One Thousand'
 I:36:3:3
@@ -6751,6 +6806,25 @@ W:10:30:30:10000
 P:4:1d1:0:0:0
 F:SPEED | SPELL | RES_SHARDS | 
 D:It's not all that special... but it speeds you up! 
+
+# padded armor
+N:632:'Kati's Cuddle Jacket'
+I:36:10:5
+W:20:20:60:15000
+P:4:1d1:0:0:5
+F:IM_POISON | FREE_ACT | CHR | SUST_DEX | RES_ACID | 
+F:LITHE | MARTIAL_ARTS | 
+D:Wow, it's very green! You absolutely want to wear this 
+D:super cute jacket. 
+
+# stone and hide armor
+N:634:'Granite Taker'
+I:36:15:6
+W:25:20:200:16000
+P:15:1d1:-1:0:12
+F:CON | FREE_ACT | SUST_CON | SUST_STR | RES_DISINT | RES_ACID | 
+F:RES_CONF | RES_NETHER | SLOW_DIGEST | INV_PROTECT | 
+D:Can a stone be paralyzed? No, of course it can't. 
 
 # mimicry cloak
 N:636:'Mining Travesty'
@@ -6761,6 +6835,15 @@ F:CHR | SUST_CHR | TUNNEL | INFRA | RES_ACID | RES_FEAR |
 F:RES_DARK | RES_BLIND | DRAIN_MANA | 
 D:It seems that this cloak is supposed to be worn by miners. 
 D:Be aware, it drains your mana! 
+
+# spiked gauntlets
+N:655:'Milena's Audible Sharpness'
+I:31:8:4
+W:40:50:25:16000
+P:4:2d2:4:7:8
+F:SPEED | STEALTH | DEX | SEARCH | INVIS | RES_DARK | 
+F:RES_POIS | LITHE | PERCEPTION | DISARM | MARTIAL_ARTS | 
+D:A silent assassin's precious tool. 
 
 # decapitator
 N:673:'Hellslayer'
@@ -6793,6 +6876,14 @@ F:COULD2H | VORPAL | WOUNDING | BLOWS
 f:COULD2H
 D:A rather no-nonsense weapon, it does a lot of damage and gives 
 D:purely offensive bonuses.
+
+# meteoric steel plate
+# RES_DMG
+N:676:'Tha Barrier'
+I:37:36:0
+W:80:50:500:40000
+P:80:2d4:-4:0:40
+D:It's like a wall, providing abnormal amounts of protection! Whoa! 
 
 # tiara
 # RES_WALL
@@ -6834,6 +6925,26 @@ P:2:0d0:0:0:20
 F:LITHE | DODGE | RES_NEXUS | HOLD_LIFE |
 D:This is a pretty defensive, lightweight cloak. 
 
+# free gloves
+N:698:'Falling Enough'
+I:31:12:3
+W:10:10:5:5000
+P:1:0d0:0:0:4
+F:FREE_ACT | FEATHER | DEX | RES_FEAR | INV_PROTECT | LITHE | 
+f:FREE_ACT
+D:Incredibly light gloves, soft as a feather. 
+
+# thick cloak
+N:699:'Purple Protection'
+I:35:11:0
+W:35:20:40:10000
+P:4:0d0:0:0:10
+F:HOLD_LIFE | RES_NEXUS | RES_CHAOS | RES_MIND | ESP_DRAGON | 
+F:ESP_SPIDER | 
+D:This cloak is radiant purple and offers protection from a variety 
+D:of annoying effects while also letting you sense certain kinds of 
+D:monsters. 
+
 # plate boots
 N:701:'Goblin Toe'
 I:30:15:6
@@ -6850,6 +6961,17 @@ W:20:15:300:6000
 P:10:1d1:0:0:8
 F:SPEED | RES_FIRE | RES_COLD | DEX | STR
 D:A pair of boots with a speed bonus! Yay!
+
+# ancient armor
+N:704:'Ludgera's Pride'
+I:37:38:5
+W:70:50:1000:26000
+P:75:2d4:-5:0:20
+F:SPEED | DEX | SUST_DEX | INFRA | SUST_CON | SUST_CHR | 
+F:IM_ACID | RES_COLD | RES_CONF | RES_SOUND | SPELL_CONTAIN | 
+F:WIELD_CAST | RES_MIND | 
+D:Top notch armor. It's worth a fortune and gives great bonuses 
+D:to the wearer all around. 
 
 # partisan
 N:706:'Pierre Tombale Couant'
@@ -6893,6 +7015,17 @@ f:COULD2H
 a:SPELL=Artifact Maggot
 D:It can be a powerful weapon early in the game, and you can 
 D:also activate it to make monsters flee from you.
+
+# bill-guisarme
+N:714:of Reality
+I:22:24:4
+W:40:50:210:20000
+P:0:2d6:15:18:0
+F:COULD2H | RES_MORGUL | SPEED | STR | SUST_STR | TUNNEL | 
+F:IMPACT | SLAY_EVIL | KILL_DEMON | KILL_DRAGON | SUST_CON | 
+F:ANTIMAGIC_10 | CRIT | ESP_DEMON | 
+f:COULD2H
+D:It's time to get real. True melee combat, let's do it. 
 
 # bec-de-corbin
 N:716:'Husoldal Evo'
@@ -6975,6 +7108,16 @@ F:LITE1 | FUEL_LITE | LITE3 | RES_LITE |
 f:LITE1 | FUEL_LITE |
 D:It shines very brightly. 
 
+# steel torch
+N:744:'Tease Me!'
+I:39:22:2
+W:20:10:30:3000
+P:0:1d1:0:0:0
+F:LITE1 | FUEL_LITE | SPEED | DODGE |
+f:LITE1 | FUEL_LITE |
+D:It teases you with the speed bonus it gives, but it only gives 
+D:radius 1 light! Do you still want to use it? 
+
 # gnarled staff
 N:750:'Spire of Lazarus'
 I:6:2:5
@@ -6994,6 +7137,31 @@ f:COULD2H
 D:While it gives good combat bonuses, spellcasters might find this 
 D:weapon lackluster.
 
+# spirit dsm
+N:760:'Sylvie's Sleephelp'
+I:38:34:0
+W:35:30:200:20000
+P:30:2d4:-2:0:20
+a:HARDCORE=BR_CONF
+F:RES_MIND | RES_NERVE | FLY | ACTIVATE | FREE_ACT | RES_FEAR | 
+F:RES_COLD | SUST_CON | RES_DARK | NO_MAGIC | PEACEKEEPING | 
+f:RES_MIND | RES_NERVE | 
+D:Getting some good sleep, and not having nightmares, is important! 
+D:One important factor is wearing the right type of nightgown; this one 
+D:happens to be pretty comfy. 
+
+# leather peep-toes
+N:761:'Juen's Training Unit'
+I:30:18:14
+W:50:35:10:25000
+P:1:1d1:0:4:9
+F:MARTIAL_ARTS | DODGE | STR | SUST_STR | SUST_CON | RES_FIRE | RES_DISEN | 
+F:RES_NETHER | REGEN | DRAIN_MANA | DISARM | RES_PLASMA | 
+f:MARTIAL_ARTS
+D:These black leather beauties look very cute, but can actually kick really 
+D:powerfully! If you're planning to engage in weaponless combat, they'll 
+D:be very helpful to power up your attacks. 
+
 # bardiche
 N:764:'Dumboak's Hew'
 I:22:38:1
@@ -7002,6 +7170,18 @@ P:0:2d8:4:12:-4
 F:MUST2H | STR | CON | RES_BLIND | SLAY_EVIL | SLAY_UNDEAD | 
 f:MUST2H
 D:"It is called DIMoak's Hew!", you complain. 
+
+# speed boots
+# ATTRACT_MON
+N:776:'Battlenest'
+I:30:19:5
+W:30:30:30:30000
+P:1:1d1:0:0:5
+F:SPEED | BLOWS | AGGRAVATE | CURSED | HEAVY_CURSE | 
+F:AUTO_CURSE | 
+f:SPEED
+D:A significant speed increase in all categories... but with a 
+D:pretty high price to pay! Are you gonna make that tradeoff? 
 
 # red overknees
 N:780:'Manuela's Cruelty'

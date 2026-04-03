@@ -2724,6 +2724,17 @@ void random_artifact_resistance(object_type * o_ptr)
 			give_resistance = TRUE;
 		}
 		break;
+	case ART_MIMIC_CLOAK_I:
+	case ART_MIMIC_CLOAK_II:
+		/* in a well-designed game, base item properties would automatically carry over to artifacts without us having to write special code
+		 * for every last one of them... --Amy */
+		{
+			s32b mimic;
+
+			call_lua("find_random_mimic_shape", "(d,d)", "d", randint(100), TRUE, &mimic);
+			o_ptr->pval2 = mimic;
+		}
+		break;
 	case ART_MAEDHROS:
 	case ART_GLAMDRING:
 	case ART_ORCRIST:

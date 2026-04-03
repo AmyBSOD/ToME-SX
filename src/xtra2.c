@@ -5620,7 +5620,11 @@ bool set_food(int v)
 
 			/* Full */
 		case 4:
-			msg_print("You are full!");
+			if (!strcmp(spp_ptr->title + c_name, "Topmodel")) {
+				msg_print("You feel that you've eaten too much!");
+			} else {
+				msg_print("You are full!");
+			}
 			break;
 
 			/* Bloated */

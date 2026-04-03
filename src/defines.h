@@ -1038,6 +1038,8 @@
 #define ART_COLANNON            48
 #define ART_LUTHIEN                     49
 #define ART_TUOR                        50
+#define ART_MIMIC_CLOAK_I               636
+#define ART_MIMIC_CLOAK_II              637
 
 /* Gloves */
 #define ART_CAMBELEG            52
@@ -3919,7 +3921,7 @@
 #define TR3_AUTO_CURSE          0x00000004L     /* The obj will recurse itself */
 #define TR3_DECAY               0x00000008L     /* Decay */
 #define TR3_NO_TELE             0x00000010L     /* Anti-teleportation */
-#define TR3_NO_MAGIC            0x00000020L     /* Anti-magic */
+#define TR3_NO_MAGIC            0x00000020L     /* Anti-magic - really increased saving throw now (Amy) */
 #define TR3_WRAITH              0x00000040L     /* Wraithform */
 #define TR3_TY_CURSE            0x00000080L     /* The Ancient Curse */
 #define TR3_EASY_KNOW           0x00000100L     /* Aware -> Known */
@@ -3994,7 +3996,7 @@
 #define TR5_FULL_NAME           0x00000100L     /* Uses direct name from k_info */
 #define TR5_LUCK                0x00000200L     /* Luck += pval */
 #define TR5_IMMOVABLE           0x00000400L     /* Cannot move */
-#define TR5_SPELL_CONTAIN       0x00000800L     /* Can contain a spell */
+#define TR5_SPELL_CONTAIN       0x00000800L     /* Can contain a spell - MAKE SURE to also add WIELD_CAST !!!!! */
 #define TR5_RES_MORGUL          0x00001000L     /* Is not shattered by morgul fiends(nazguls) */
 #define TR5_ACTIVATE_NO_WIELD   0x00002000L     /* Can be 'A'ctivated without being wielded */
 #define TR5_MAGIC_BREATH        0x00004000L     /* Can breath anywere */
