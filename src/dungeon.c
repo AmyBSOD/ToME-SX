@@ -4253,7 +4253,8 @@ static void process_world(void)
 				/* Determine the level */
 				if (p_ptr->inside_quest)
 				{
-					msg_print("The recall is cancelled by a powerful magic force!");
+					cmsg_print(TERM_RED, "The recall is cancelled by a powerful magic force!");
+					p_ptr->redraw |= (PR_DEPTH); /* ffs --Amy */
 				}
 				else if (dun_level)
 				{
