@@ -10171,7 +10171,7 @@ W:30:0:2:40000
 A:30/1
 F:SPEED | HIDE_TYPE
 f:SPEED
-D:A ring that makes you quiet a bit faster.
+D:A ring that makes you quite a bit faster.
 
 N:1208:Swiftness
 G:=:d

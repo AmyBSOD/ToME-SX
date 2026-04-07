@@ -52,7 +52,7 @@ Forodwaith (NORECALL) - 75-90, background darkness damage and open arenas
 Emyn Luin (TOWN) (NORECALL) - 60-80
 Dol Amroth (TOWN) - 25-35, hard to reach, beware the possible ambushes when going there!
 Angmar - 80-98, background disenchantment damage meaning you need the resistance or going there will just be endlessly frustrating
-Near Harad (TOWN) - 20-45, wide open areasm background inertia damage which makes it basically unplayable unless you have the resistance
+Near Harad (TOWN) - 20-45, wide open areas, background inertia damage which makes it basically unplayable unless you have the resistance
 Isengard - 35-60, mountain terrain and fiercely leveled monsters
 Tol Eressea - 40-65, open water areas where you're constantly swarmed
 Utumno (NORECALL) - 101-127

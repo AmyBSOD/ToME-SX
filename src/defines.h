@@ -1051,6 +1051,7 @@
 #define ART_CAMLOST                     58
 #define ART_FINGOLFIN           59
 #define ART_EOL                 178
+#define ART_EARLYSOSO           694
 
 /* Boots */
 #define ART_FEANOR                      60

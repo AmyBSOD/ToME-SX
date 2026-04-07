@@ -2719,6 +2719,7 @@ void random_artifact_resistance(object_type * o_ptr)
 	case ART_STING:
 	case ART_TURMIL:
 	case ART_THALKETTOTH:
+	case ART_EARLYSOSO:
 		{
 			/* Give a resistance */
 			give_resistance = TRUE;

@@ -6530,6 +6530,17 @@ f:MUST2H
 D:This powerful flail was originally wielded by Yeenoghu, 
 D:also known as the Prince of Gnolls. 
 
+# glaive
+N:563:'Coursing Spear'
+I:22:13:-2
+W:24:20:190:6000
+P:0:4d6:8:20:0
+F:COULD2H | BLOWS | SLAY_EVIL | SLAY_TROLL | SLAY_GIANT | 
+F:KILL_DRAGON | BRAND_COLD | SUST_STR | RES_COLD | RES_SHARDS | 
+F:ANTIMAGIC_30 | DODGE | RAPID_HUNGER | 
+f:COULD2H
+D:A very powerful polearm, but it attacks really slowly. 
+
 # pike
 N:565:'Tanner's Gorerod'
 I:22:8:4
@@ -6584,6 +6595,14 @@ D:Yes, it has resistance to both blindness and confusion, but do you
 D:really want to stink like a heap of dung?! 
 
 # soft studded leather
+N:573:'Red Speed'
+I:36:5:2
+W:15:10:90:10000
+P:5:1d1:0:0:5
+F:SPEED | RES_FIRE | RES_PLASMA | 
+D:It's a racer's outfit! 
+
+# soft studded leather
 N:574:'Lightnops'
 I:36:5:2
 W:15:20:90:5000
@@ -6601,12 +6620,29 @@ F:LITE1 |
 D:A relatively solid suit of armor for the early game. 
 
 # hard studded leather
+N:576:'Deflecting Metal Nail'
+I:36:7:0
+W:18:20:110:6000
+P:7:1d2:-1:0:8
+F:RES_FIRE | RES_COLD | SUST_CON | LITHE | 
+D:A rather robust suit. 
+
+# hard studded leather
 N:577:'Hardnail'
 I:36:7:6
 W:20:15:110:6000
 P:7:1d2:-1:0:9
 F:STR | SUST_STR | RES_ELEC | RES_FEAR | BLESSED | 
 D:A rather robust suit of armor.
+
+# leather scale mail
+N:578:'Blue Soundpelt'
+I:36:11:4
+W:20:20:140:8000
+P:11:1d1:-1:0:5
+F:RES_SOUND | CON | RES_ELEC | SUST_CON | DODGE | 
+D:This suit offers several forms of protection, including granting 
+D:resistance to sound-based attacks. 
 
 # metal scale mail
 N:580:'All Clear, Sir!'
@@ -6626,6 +6662,17 @@ F:LITHE | DEX | SUST_DEX | DODGE | FREE_ACT | FEATHER |
 F:RES_NERVE | 
 D:This metallic armor is impossibly light. It allows the wearer 
 D:to perform some impressive dodging feats.
+
+# double chain mail
+# RES_WALL
+N:588:'Tank Link'
+I:37:7:8
+W:25:30:400:25000
+P:36:1d4:-2:0:20
+F:STR | SUST_CON | RES_ACID | RES_FIRE | RES_FEAR | 
+F:NO_TELE | AUTO_CURSE | SLOW_DIGEST | FREE_ACT | 
+F:PERCEPTION | ESP_GOOD | RAPID_HUNGER | 
+D:Super armored suit that also weighs a whole lot. 
 
 # small leather shield
 N:591:of Resistance And More
@@ -6656,6 +6703,18 @@ F:DISARM | LITHE | RES_PLASMA |
 f:RES_FIRE |
 a:HARDCORE=BR_FIRE
 D:This suit has been optimized for use in arid regions. 
+
+# green dsm
+N:596:'Marlena's Robustness'
+I:38:5:3
+W:20:25:200:25000
+P:30:2d4:-2:0:20
+F:RES_POIS | FLY | ACTIVATE | IM_POISON | FREE_ACT | 
+F:SUST_CON | LUCK | MAGIC_FIND | 
+f:RES_POIS |
+a:HARDCORE=BR_POIS
+D:A sturdy suit which chiefly makes the wearer almost immune 
+D:to poison. 
 
 # law dsm
 N:598:'There's A Hand'
@@ -6738,6 +6797,16 @@ F:STR | SUST_STR | LITHE |
 D:The main purpose of this suit was to enable the wearer to carry 
 D:a lot more loot, but it does so by providing a strength bonus, which 
 D:is also very useful for melee combat. 
+
+# trifurcate spear
+N:612:'Lily's Hunt'
+I:22:26:3
+W:30:20:140:10000
+P:0:2d9:16:6:-10
+F:DEX | SPEED | SUST_DEX | DODGE | SLAY_ANIMAL | ESP_ANIMAL | 
+F:BRAND_ELEC | FREE_ACT | 
+D:This spear belonged to a powerful amazon. Somehow you get the 
+D:feeling that she was a sadomasochist... 
 
 # khopesh
 N:615:'Bystryy Udar'
@@ -6917,6 +6986,40 @@ f:CHR
 D:These shoes would be worth wearing for the speed bonus, but they 
 D:aggravate. That's a big drawback. Do you still want to wear them? 
 
+# protective cloak
+# ATTRACT_MON
+N:689:'Frade Mantle'
+I:35:9:4
+W:60:40:250:50000
+P:8:0d0:0:0:10
+F:DEX | INT | SPELL | SEARCH | INFRA | SUST_DEX | SUST_INT | 
+F:SUST_CHR | INVIS | IM_ACID | RES_ELEC | RES_FIRE | RES_COLD | 
+F:RES_NETHER | SEE_INVIS | REGEN | MAGIC_FIND | DEVICE_MASTERY | 
+F:RES_NERVE | 
+D:You're not sure what the hell a "frade" is supposed to be, but 
+D:this cloak has basically everything. 
+
+# small steel shield
+# RES_WALL
+N:692:'XXXXXXXXXXXXXXXXXXXXX'
+I:34:18:11
+W:55:70:240:20000
+P:14:1d6:0:0:20
+F:IM_ACID | LIFE | RES_SOUND | AUTO_CURSE | NO_TELE | AGGRAVATE | 
+F:ANTIMAGIC_20 | DRAIN_MANA | CURSED | INV_PROTECT | RES_ETHER | 
+F:RAPID_HUNGER | 
+D:Wtf is that?! 
+
+# magic gloves
+# also has a random high resist
+N:694:'Early Soso'
+I:31:11:2
+W:10:10:5:5000
+P:1:0d0:0:0:4
+F:SPELL_CONTAIN | WIELD_CAST | INT | WIS | RES_FIRE | RES_ELEC | 
+f:SPELL_CONTAIN | WIELD_CAST
+D:Spellcasters love to wear this pair.
+
 # wool cloak
 N:695:'Rick's High Roll'
 I:35:10:8
@@ -6924,6 +7027,17 @@ W:10:20:20:6000
 P:2:0d0:0:0:20
 F:LITHE | DODGE | RES_NEXUS | HOLD_LIFE |
 D:This is a pretty defensive, lightweight cloak. 
+
+# iron shod boots
+# RES_WALL
+N:696:'Heavy Metal'
+I:30:11:-2
+W:20:10:80:4000
+P:6:1d1:0:0:12
+F:INT | WIS | MANA | SUST_STR | SUST_DEX | SUST_CON | 
+F:IM_FIRE | RES_POIS | RES_SOUND | DODGE | RES_PLASMA | 
+D:They're very heavy. Spellcasters would be advised to wear 
+D:some other pair, but warriors will have a use for them. 
 
 # free gloves
 N:698:'Falling Enough'
@@ -6984,6 +7098,18 @@ f:COULD2H
 D:This polearm is a good choice for physical fighters, especially 
 D:those who specialize in polearms.
 
+# partisan
+N:707:'Fire Leader'
+I:22:18:8
+W:62:40:200:30000
+P:0:3d7:12:18:0
+F:COULD2H | BRAND_FIRE | STR | CON | SUST_STR | SUST_CON | 
+F:SLAY_EVIL | SLAY_UNDEAD | SLAY_DRAGON | RES_FIRE | FREE_ACT | 
+F:RES_FEAR | RES_BLIND | RES_CHAOS | SEE_INVIS | LITE3 | 
+F:RES_MORGUL | DEVICE_MASTERY | 
+f:COULD2H
+D:It deals preposterous amounts of fire damage. 
+
 # spetum
 N:708:of Yaggai
 I:22:19:1
@@ -7004,6 +7130,16 @@ F:COULD2H | FREE_ACT | RES_CONF | STR | DEX |
 f:COULD2H
 D:You urgently need free action and confusion resistance. 
 D:Well, now you've found it. :-)
+
+# ranseur
+N:711:'Garant of Uara'
+I:22:21:0
+W:20:10:20:3000
+P:0:2d6:2:21:0
+F:COULD2H | BRAND_FIRE | SUST_STR | RES_FIRE | KILL_DEMON | 
+F:LITE2 | 
+f:COULD2H
+D:For a polearm, this thing isn't all that bad. 
 
 # voulge
 N:712:'Steelgoad'
@@ -7037,6 +7173,28 @@ F:SUST_STR | KILL_DEMON | KILL_UNDEAD |
 f:COULD2H
 D:Besides its high damage, it has an interesting set of bonuses. 
 
+# great poleaxe
+N:718:of Usability
+I:22:27:5
+W:60:40:320:20000
+P:0:3d7:20:18:0
+F:MUST2H | SPEED | STR | DEX | SUST_STR | SUST_DEX | 
+F:SUST_CON | INFRA | SLAY_EVIL | RES_MORGUL | SLAY_DRAGON | 
+F:SEE_INVIS | CRIT | 
+f:MUST2H
+D:Finally! A usable polearm. 
+
+# bohemian ear spoon
+N:719:'Bohem Fuelkanal'
+I:22:31:2
+W:20:25:200:16000
+P:0:3d5:8:8:0
+F:COULD2H | RES_INERTIA | DEX | SUST_STR | SEARCH | 
+F:SLAY_TROLL | BLESSED | PERCEPTION | 
+f:COULD2H
+D:A decent weapon, but its special quality is a rare resistance 
+D:that you'd otherwise not find early on. 
+
 # thresher
 N:721:'Reaper's Toll'
 I:22:33:6
@@ -7047,6 +7205,16 @@ F:STR | DEX | IM_NETHER | SLAY_UNDEAD | SUST_STR | SUST_DEX |
 f:MUST2H
 D:Thankfully this game doesn't require you to play in some stupid ladder mode 
 D:just to be able to find this artifact. 
+
+# light plate mail
+N:725:'Rouge Like'
+I:36:17:3
+W:35:15:50:14000
+P:16:1d1:-1:0:12
+F:SPEED | INT | WIS | SUST_INT | SUST_WIS | STEALTH | 
+F:RES_FIRE | RES_CONF | RES_NEXUS | RES_PLASMA | SH_FIRE | 
+F:SLOW_DIGEST | LITHE | DODGE | 
+D:You say it's spelled 'roguelike'? You are wrong! :D 
 
 # baton
 N:736:'Nord's Tenderizer'
@@ -7118,6 +7286,16 @@ f:LITE1 | FUEL_LITE |
 D:It teases you with the speed bonus it gives, but it only gives 
 D:radius 1 light! Do you still want to use it? 
 
+# pipe torch
+N:745:'Da Bomb'
+I:39:23:0
+W:25:30:30:10000
+P:0:1d1:0:0:0
+F:LITE1 | FUEL_LITE | LITE2 | RES_FIRE | ACTIVATE | INV_PROTECT | 
+f:LITE1 | FUEL_LITE |
+a:HARDCORE=BA_FIRE_H
+D:It lets you launch a tubing bomb every once in a while! That's cool! 
+
 # gnarled staff
 N:750:'Spire of Lazarus'
 I:6:2:5
@@ -7170,6 +7348,16 @@ P:0:2d8:4:12:-4
 F:MUST2H | STR | CON | RES_BLIND | SLAY_EVIL | SLAY_UNDEAD | 
 f:MUST2H
 D:"It is called DIMoak's Hew!", you complain. 
+
+# mighty sling
+N:769:'Time's Up'
+I:19:5:4
+W:35:50:5:20000
+P:0:1d1:4:4:-20
+F:RES_TIME | CURSED | AUTO_CURSE | STR | INFRA | SUST_INT | 
+F:RES_ACID | RES_ELEC | XTRA_MIGHT | SAVING_MALUS | HOLD_LIFE | 
+F:ANTIMAGIC_10 | DRAIN_HP | RAPID_HUNGER | MARTIAL_ARTS | 
+D:Running out of time, eh? 
 
 # speed boots
 # ATTRACT_MON
