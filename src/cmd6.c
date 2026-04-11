@@ -9084,6 +9084,20 @@ turn_monsters(40 + p_ptr->lev);
 				break;
 			}
 
+		case ACT_JOLT_COLA:
+			{
+				if (!doit) return "quaff jolt cola every 1000 turns";
+
+				set_image(0);
+				randomnukacolaname();
+				msg_print("You are jolted back to your senses.");
+				(void)set_tim_jolt_fa(p_ptr->tim_jolt_fa + 250);
+
+				o_ptr->timeout = 1000;
+
+				break;
+			}
+
 		case ACT_DIM_DOOR:
 			{
 				if (!doit) return "dimension door every 1000 turns";

@@ -1439,6 +1439,7 @@
 #define ACT_GROW_MOLD			197
 #define ACT_MUSIC				200
 /* 170 -> unused */
+#define ACT_JOLT_COLA           201
 
 /*** Object "tval" and "sval" codes ***/
 

@@ -6654,6 +6654,16 @@ F:DISARM |
 D:This suit gives pretty good coverage of some important resistances. 
 
 # partial plate armor
+N:584:'Message from our Sponsors'
+I:37:12:2
+W:40:20:260:6000
+P:22:1d6:-3:0:12
+F:ACTIVATE | INT | INFRA | RES_NERVE | SUST_CON | 
+F:HOLD_LIFE | RES_ACID | RES_SHARDS | FEATHER | MAGIC_FIND | 
+a:HARDCORE=JOLT_COLA
+D:Sponsored by Jolt Cola! 
+
+# partial plate armor
 N:585:'The Impossible Jump'
 I:37:12:5
 W:30:20:260:10000
@@ -6729,6 +6739,17 @@ F:AUTO_CURSE | PEACEKEEPING | RAPID_HUNGER |
 f:RES_SOUND | RES_SHARDS |
 D:It provides a nice set of bonuses, but you have to abide the law 
 D:while wearing it...
+
+# bronze dsm
+N:599:'Metalgleam'
+I:38:14:2
+W:30:35:200:20000
+P:30:2d4:-2:0:25
+a:HARDCORE=BR_CONF
+F:RES_CONF | FLY | ACTIVATE | RES_ELEC | RES_FIRE | INFRA | 
+F:SUST_STR | INV_PROTECT | LITE1 | ESP_DRAGON | 
+f:RES_CONF | 
+D:The scales shine in an almost metallic way. 
 
 # balance dsm
 N:602:'Platinum Plate'
@@ -6808,6 +6829,14 @@ F:BRAND_ELEC | FREE_ACT |
 D:This spear belonged to a powerful amazon. Somehow you get the 
 D:feeling that she was a sadomasochist... 
 
+# rhino hide armor
+N:614:'Stable Stench'
+I:36:8:2
+W:20:10:110:6000
+P:8:1d1:-1:0:7
+F:STEALTH | FREE_ACT | ESP_ANIMAL | ESP_TROLL | ESP_DRAGON | 
+D:This suit lets you track some monsters via scent. 
+
 # khopesh
 N:615:'Bystryy Udar'
 I:23:14:2
@@ -6886,6 +6915,14 @@ F:LITHE | MARTIAL_ARTS |
 D:Wow, it's very green! You absolutely want to wear this 
 D:super cute jacket. 
 
+# padded armor
+N:633:'Softfleece'
+I:36:10:8
+W:15:10:60:8000
+P:4:1d1:0:0:8
+F:LITHE | RES_FIRE | RES_ACID | RES_COLD | RES_ELEC | DODGE |
+D:Lightweight and offering good protection from the elements. 
+
 # stone and hide armor
 N:634:'Granite Taker'
 I:36:15:6
@@ -6905,6 +6942,17 @@ F:RES_DARK | RES_BLIND | DRAIN_MANA |
 D:It seems that this cloak is supposed to be worn by miners. 
 D:Be aware, it drains your mana! 
 
+# crusader axe
+N:645:'Fully Nothing Suited'
+I:24:6:4
+W:40:50:130:20000
+P:0:2d5:0:0:0
+F:CHR | LEVELS |
+D:You can celebrate that you've found a sentient weapon, but usually 
+D:they're all hype and not much payoff. It takes forever to level them 
+D:up, and once they gain some detrimental properties they're no longer 
+D:worth using. Better find a good randart instead. 
+
 # spiked gauntlets
 N:655:'Milena's Audible Sharpness'
 I:31:8:4
@@ -6913,6 +6961,40 @@ P:4:2d2:4:7:8
 F:SPEED | STEALTH | DEX | SEARCH | INVIS | RES_DARK | 
 F:RES_POIS | LITHE | PERCEPTION | DISARM | MARTIAL_ARTS | 
 D:A silent assassin's precious tool. 
+
+# beretta
+N:657:of the Steady Hand
+I:19:33:18
+W:5:5:80:3000
+P:0:1d1:20:0:0
+F:DEX
+D:You're unlikely to miss with this well-balanced gun. 
+
+# remington 700
+N:660:'Hybrid Model'
+I:19:44:4
+W:10:10:200:6000
+P:0:1d1:4:8:0
+F:LITE2 | INFRA | 
+D:It's a bit more powerful than the standard-issue rifle, 
+D:with improved sights to let you see the enemies. 
+
+# leone m3
+N:663:'Caeauwaesh!'
+I:19:55:2
+W:10:20:300:7000
+P:0:1d1:8:12:0
+F:XTRA_MIGHT
+D:The shots of this powerful gun will definitely count. 
+
+# ingram mac-10
+N:666:'Lars's Throwaway'
+I:19:62:6
+W:10:20:120:7000
+P:0:1d1:0:14:0
+F:LUCK | ESP_ANIMAL | 
+D:A slightly modified version of the standard submachine gun. 
+D:Wielding it makes you feel lucky for some reason. 
 
 # decapitator
 N:673:'Hellslayer'
@@ -6954,6 +7036,14 @@ W:80:50:500:40000
 P:80:2d4:-4:0:40
 D:It's like a wall, providing abnormal amounts of protection! Whoa! 
 
+# circlet
+N:681:'Slightly Less Uber'
+I:33:13:4
+W:30:30:40:20000
+P:1:1d1:4:4:0
+F:RES_ELEC | MARTIAL_ARTS
+D:...but still uber.
+
 # tiara
 # RES_WALL
 N:683:'Kira's Guardian'
@@ -6985,6 +7075,14 @@ F:PERCEPTION |
 f:CHR
 D:These shoes would be worth wearing for the speed bonus, but they 
 D:aggravate. That's a big drawback. Do you still want to wear them? 
+
+# armored gauntlets
+N:687:'Irethe Clean'
+I:31:10:5
+W:25:20:80:8000
+P:5:1d1:0:0:7
+F:SEARCH | DISARM | PERCEPTION | RES_POIS | DEVICE_MASTERY | 
+D:You want to keep things neat and tidy, right? 
 
 # protective cloak
 # ATTRACT_MON
@@ -7038,6 +7136,15 @@ F:INT | WIS | MANA | SUST_STR | SUST_DEX | SUST_CON |
 F:IM_FIRE | RES_POIS | RES_SOUND | DODGE | RES_PLASMA | 
 D:They're very heavy. Spellcasters would be advised to wear 
 D:some other pair, but warriors will have a use for them. 
+
+# light metal boots
+N:697:of the Marathon
+I:30:12:6
+W:30:30:60:50000
+P:5:1d1:0:0:0
+F:SPEED | LITHE | FREE_ACT | 
+D:You want speed, you want agility, you don't want to slow down. 
+D:So, wear these boots already. 
 
 # free gloves
 N:698:'Falling Enough'
@@ -7296,6 +7403,15 @@ f:LITE1 | FUEL_LITE |
 a:HARDCORE=BA_FIRE_H
 D:It lets you launch a tubing bomb every once in a while! That's cool! 
 
+# blue torch
+N:746:'Iceshock'
+I:39:24:0
+W:30:30:30:25000
+P:0:1d1:0:0:0
+F:LITE2 | FUEL_LITE | IM_ELEC | RES_COLD | SH_ELEC | 
+f:LITE2 | FUEL_LITE |
+D:Its flame seems very grounded in reality. 
+
 # gnarled staff
 N:750:'Spire of Lazarus'
 I:6:2:5
@@ -7314,6 +7430,17 @@ F:COULD2H | SPELL |
 f:COULD2H
 D:While it gives good combat bonuses, spellcasters might find this 
 D:weapon lackluster.
+
+# tonfa
+N:759:of the Tour Guide
+I:21:27:4
+W:30:30:60:20000
+P:10:2d4:10:10:10
+F:STR | CON | CHAOTIC | SLAY_EVIL | RES_SOUND | DODGE | 
+F:PERCEPTION | 
+D:The woman that used to own this weapon was very frail, which 
+D:is probably why she's pushing up the daisies now. Hopefully 
+D:you'll fare better than her. 
 
 # spirit dsm
 N:760:'Sylvie's Sleephelp'
