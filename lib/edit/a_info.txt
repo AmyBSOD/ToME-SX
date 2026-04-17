@@ -6571,6 +6571,15 @@ F:SLAY_ORC | SLAY_TROLL | VORPAL | RES_NETHER | PERCEPTION |
 f:COULD2H
 D:The typical weapon wielded by Death. 
 
+# gnomish shovel
+N:568:'Ruggo's Wallsmasher'
+I:20:2:5
+W:25:20:60:7000
+P:0:1d2:0:0:0
+F:TUNNEL | SUST_STR | SUST_CON | 
+f:TUNNEL
+D:A gnome's favorite tool for digging out the mines. 
+
 # pick
 N:569:of Armok
 I:20:4:3
@@ -6653,6 +6662,15 @@ F:FREE_ACT | RES_BLIND | RES_CONF | INFRA | LITE1 |
 F:DISARM | 
 D:This suit gives pretty good coverage of some important resistances. 
 
+# bar chain mail
+N:582:'The Iron Prison'
+I:37:8:4
+W:30:30:280:20000
+P:18:1d4:-2:0:17
+F:FREE_ACT | CON | SUST_CON | RES_POIS | RES_SHARDS | 
+F:DEVICE_MASTERY | DISARM | RES_PLASMA | 
+D:Rather robust, but heavy.
+
 # partial plate armor
 N:584:'Message from our Sponsors'
 I:37:12:2
@@ -6685,6 +6703,14 @@ F:PERCEPTION | ESP_GOOD | RAPID_HUNGER |
 D:Super armored suit that also weighs a whole lot. 
 
 # small leather shield
+N:590:'Fleetpelt'
+I:34:2:7
+W:20:10:50:5000
+P:2:1d1:0:0:5
+F:FREE_ACT | DEX | LITHE | DODGE | 
+D:Very lightweight, this little helper allows you to move freely. 
+
+# small leather shield
 N:591:of Resistance And More
 I:34:2:0
 W:15:15:50:15000
@@ -6701,6 +6727,15 @@ W:25:30:230:20000
 P:15:1d4:-2:0:12
 F:SPEED | CON | RES_ACID | SLOW_DIGEST | MAGIC_FIND | 
 D:Yes, it *is* possible to run fast while wearing heavy armor! 
+
+# brass lantern
+N:594:'Leo's Noodle Dish'
+I:39:1:0
+W:10:20:50:3000
+P:0:1d1:0:0:0
+F:LITE2 | FUEL_LITE | SLOW_DIGEST | 
+f:LITE2 | FUEL_LITE |
+D:If all you want is to stay fed for a while... 
 
 # red dsm
 N:595:'From Mashhad to Ahvaz'
@@ -6942,6 +6977,26 @@ F:RES_DARK | RES_BLIND | DRAIN_MANA |
 D:It seems that this cloak is supposed to be worn by miners. 
 D:Be aware, it drains your mana! 
 
+# small wooden boomerang
+N:638:'Bangclear'
+I:15:1:0
+W:4:10:60:3000
+P:0:1d4:7:12:0
+F:BRAND_FIRE | LITE1 | SPELL_CONTAIN | WIELD_CAST | 
+D:It deals extra fire damage... unfortunately, it's still only 
+D:a boomerang, and one with shitty dice to boot. Its damage 
+D:capability will probably cease to be useful before long. 
+
+# wooden boomerang
+N:639:'Double Timber'
+I:15:2:4
+W:20:20:60:7000
+P:0:2d8:6:6:0
+F:SLAY_EVIL | KILL_DRAGON | SUST_DEX | RES_NERVE | 
+D:While it deals good bonus damage against certain foes, 
+D:it'll probably not be competitive once the stronger monsters 
+D:start to show up. 
+
 # crusader axe
 N:645:'Fully Nothing Suited'
 I:24:6:4
@@ -6952,6 +7007,15 @@ D:You can celebrate that you've found a sentient weapon, but usually
 D:they're all hype and not much payoff. It takes forever to level them 
 D:up, and once they gain some detrimental properties they're no longer 
 D:worth using. Better find a good randart instead. 
+
+# poison needle
+N:652:'Trina's Stabber'
+I:23:42:7
+W:25:30:5:20000
+P:0:1d1:10:15:0
+F:BRAND_POIS | CRIT | DEX | SUST_CON | FREE_ACT | 
+F:SLAY_EVIL | STEALTH | 
+D:It's amazing what a girl can do when she's wielding a sharp needle. 
 
 # spiked gauntlets
 N:655:'Milena's Audible Sharpness'
@@ -7466,6 +7530,16 @@ f:MARTIAL_ARTS
 D:These black leather beauties look very cute, but can actually kick really 
 D:powerfully! If you're planning to engage in weaponless combat, they'll 
 D:be very helpful to power up your attacks. 
+
+# arena robe
+N:762:'Kung-Fu Fighting'
+I:36:19:10
+W:20:40:20:7000
+P:2:0d0:0:0:10
+F:MARTIAL_ARTS | DODGE | LITHE | SUST_STR | SUST_CON | FREE_ACT | 
+F:CRIT | RES_CONF | 
+f:MARTIAL_ARTS
+D:You wanna be a blackbelt? 
 
 # bardiche
 N:764:'Dumboak's Hew'
