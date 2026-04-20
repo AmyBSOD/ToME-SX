@@ -6519,6 +6519,15 @@ F:CRIT | WOUNDING |
 D:At least it broke off such that there's still a sharp edge 
 D:remaining! 
 
+# sabre
+N:561:'Krinziz Skewer'
+I:23:11:2
+W:25:40:50:8000
+P:0:1d7:10:10:0
+F:VAMPIRIC | SPEED | DEX | SLAY_ORC | 
+D:Thanks to the vampirism and speed bonus, this may be a useful 
+D:weapon for a while. 
+
 # 2h flail
 N:562:of Yeenoghu
 I:21:18:3
@@ -6540,6 +6549,15 @@ F:KILL_DRAGON | BRAND_COLD | SUST_STR | RES_COLD | RES_SHARDS |
 F:ANTIMAGIC_30 | DODGE | RAPID_HUNGER | 
 f:COULD2H
 D:A very powerful polearm, but it attacks really slowly. 
+
+# halberd
+N:564:of Cruel Evisceration
+I:22:15:0
+W:30:20:190:10000
+P:0:3d5:0:30:0
+F:COULD2H | SLAY_DEMON | SLAY_DRAGON | 
+f:COULD2H
+D:Useful mostly for dishing out damage. 
 
 # pike
 N:565:'Tanner's Gorerod'
@@ -6590,6 +6608,15 @@ f:TUNNEL
 D:It's heavier than normal, and wants to enslave the wielder to 
 D:a life of endless work in the Dwarven Mines. At least it's pretty 
 D:good for actual tunneling work, though. 
+
+# metal cap
+N:571:'Can't Run From The Slender Man'
+I:32:3:3
+W:30:40:20:10000
+P:3:1d1:0:0:8
+F:INT | SPEED | INFRA | RES_BLIND | RES_CHAOS | SEE_INVIS | 
+F:SAVING_MALUS | LITHE | 
+D:He always watches, yet he has no eyes.
 
 # filthy rag
 N:572:of the Barrows
@@ -6652,6 +6679,15 @@ P:11:1d1:-1:0:5
 F:RES_SOUND | CON | RES_ELEC | SUST_CON | DODGE | 
 D:This suit offers several forms of protection, including granting 
 D:resistance to sound-based attacks. 
+
+# metal scale mail
+N:579:'Hentoteth'
+I:37:3:5
+W:25:30:250:6000
+P:13:1d4:-2:0:7
+F:WIS | CON | SEARCH | SUST_CHR | SUST_INT | RES_ACID | 
+F:RES_FEAR | RES_NEXUS | REGEN | DODGE | RES_MIND | 
+D:A suit with rather odd characteristics. 
 
 # metal scale mail
 N:580:'All Clear, Sir!'
@@ -6760,6 +6796,17 @@ f:RES_POIS |
 a:HARDCORE=BR_POIS
 D:A sturdy suit which chiefly makes the wearer almost immune 
 D:to poison. 
+
+# pseudo dsm
+N:597:of the Stout Mind
+I:38:10:2
+W:30:40:200:25000
+P:30:2d4:-2:0:22
+a:HARDCORE=BR_LIGHT
+F:RES_LITE | RES_DARK | FLY | ACTIVATE | RES_CONF | 
+F:INT | SUST_INT | RES_MIND | ESP_THUNDERLORD | ESP_UNIQUE | 
+f:RES_LITE | RES_DARK | 
+D:It magically protects your gray matter. 
 
 # law dsm
 N:598:'There's A Hand'
@@ -6903,6 +6950,18 @@ F:MANA | RES_MIND | INV_PROTECT | PERCEPTION |
 f:COULD2H
 D:Stolen from Diablo 2, and adapted for ToME-SX. 
 
+# claymore
+N:620:of the Angry Scotsman
+I:23:23:4
+W:24:25:200:8000
+P:0:2d8:8:14:0
+F:COULD2H | STR | CON | SLAY_EVIL | SLAY_ORC | SLAY_TROLL | 
+F:SLAY_DRAGON | BRAND_FIRE | FREE_ACT | AGGRAVATE | CRIT | 
+F:WOUNDING | RES_MORGUL | 
+f:COULD2H
+D:You feel like hacking your opponents to pieces with this sword. 
+D:They'll be drawn to you if you wield it, though... 
+
 # espadon
 N:621:'Crainte Vomir'
 I:23:24:1
@@ -6913,6 +6972,19 @@ F:SLAY_EVIL | LIFE | RES_DISEN | RES_MORGUL |
 f:MUST2H
 D:A quite powerful artifact sword inspired by the unique item with 
 D:the same name in Diablo 2. 
+
+# guisarme
+N:624:'Blade Cannon'
+I:22:16:3
+W:25:30:165:17000
+P:0:2d5:8:16:0
+F:COULD2H | BRAND_FIRE | SLAY_EVIL | DEX | SUST_DEX | 
+F:TUNNEL | RES_PLASMA | RES_NEXUS | SH_FIRE | LITE1 | ACTIVATE | 
+F:BLESSED | DISARM | 
+f:COULD2H
+a:HARDCORE=BR_FIRE
+D:If the enemies are getting on your nerves... arm the cannon, 
+D:and blast them to bits! 
 
 # guisarme
 N:625:'I Wanna Kill Something'
@@ -6931,6 +7003,14 @@ W:16:30:80:15000
 P:0:1d10:7:11:0
 F:INFRA | SLAY_GIANT | FREE_ACT | LITE1 | 
 D:It's slightly longer than normal, and therefore more effective. 
+
+# paper armor
+N:630:'Ignitable Lignine'
+I:36:3:0
+W:4:10:30:6000
+P:4:1d1:0:0:4
+F:SENS_FIRE | RES_ACID | RES_ELEC | RES_COLD | RES_POIS | SLOW_DIGEST | 
+D:Fire really is super effective versus paper... 
 
 # paper armor
 N:631:'Cut Number One Thousand'
@@ -6997,6 +7077,17 @@ D:While it deals good bonus damage against certain foes,
 D:it'll probably not be competitive once the stronger monsters 
 D:start to show up. 
 
+# double axe
+N:644:'Cutdown'
+I:24:4:8
+W:30:60:200:25000
+P:0:3d6:10:20:0
+F:MUST2H | DEX | VORPAL | SLAY_ANIMAL | SLAY_EVIL | KILL_DEMON | 
+F:SLAY_ORC | SLAY_TROLL | SLAY_GIANT | KILL_DRAGON | HOLD_LIFE | 
+F:RES_DISEN | RES_DISINT | CRIT | 
+f:MUST2H
+D:Cut them down where they stand! They all shall fall! 
+
 # crusader axe
 N:645:'Fully Nothing Suited'
 I:24:6:4
@@ -7007,6 +7098,15 @@ D:You can celebrate that you've found a sentient weapon, but usually
 D:they're all hype and not much payoff. It takes forever to level them 
 D:up, and once they gain some detrimental properties they're no longer 
 D:worth using. Better find a good randart instead. 
+
+# buckler
+N:647:'Metal Thorn'
+I:34:1:2
+W:20:80:50:100000
+P:-40:1d1:0:8:-10
+F:BLOWS
+D:Those bonuses are enough right there. Who needs AC when 
+D:you can have damage bonuses and extra blows, after all? 
 
 # poison needle
 N:652:'Trina's Stabber'
@@ -7060,6 +7160,14 @@ F:LUCK | ESP_ANIMAL |
 D:A slightly modified version of the standard submachine gun. 
 D:Wielding it makes you feel lucky for some reason. 
 
+# imi galil
+N:669:'Fast Tides'
+I:19:73:2
+W:20:20:300:20000
+P:0:1d1:4:6:0
+F:SPEED | RES_WATER | WATER_BREATH | 
+D:Weathering the flood by shooting bullets at the waves, huh? 
+
 # decapitator
 N:673:'Hellslayer'
 I:24:35:8
@@ -7099,6 +7207,16 @@ I:37:36:0
 W:80:50:500:40000
 P:80:2d4:-4:0:40
 D:It's like a wall, providing abnormal amounts of protection! Whoa! 
+
+# spandex suit
+N:677:'Jill's Safety'
+I:37:37:6
+W:60:90:500:30000
+P:52:2d4:-4:0:24
+F:DEX | SUST_DEX | SUST_CON | SEARCH | LITHE | DODGE | 
+F:LUCK | FREE_ACT | RES_NETHER | RES_LITE | RES_NEXUS | 
+F:NO_MAGIC | FEATHER | 
+D:Are you going to leave level 13 without saving the prince? 
 
 # circlet
 N:681:'Slightly Less Uber'
@@ -7147,6 +7265,17 @@ W:25:20:80:8000
 P:5:1d1:0:0:7
 F:SEARCH | DISARM | PERCEPTION | RES_POIS | DEVICE_MASTERY | 
 D:You want to keep things neat and tidy, right? 
+
+# armored cloak
+# RES_WALL
+N:688:'Theft of Steel'
+I:35:4:3
+W:30:60:70:20000
+P:5:0d0:0:0:8
+F:SPEED | CON | STEALTH | FREE_ACT | RES_FIRE | RES_COLD | 
+F:DRAIN_MANA | LUCK | DEVICE_MASTERY | MAGIC_FIND | PERCEPTION | 
+D:Considering its weight, this cloak provides surprising amounts 
+D:of agility to the wearer. 
 
 # protective cloak
 # ATTRACT_MON
@@ -7230,6 +7359,14 @@ D:This cloak is radiant purple and offers protection from a variety
 D:of annoying effects while also letting you sense certain kinds of 
 D:monsters. 
 
+# metal-studded cloak
+N:700:'Just Wear It'
+I:35:12:0
+W:40:10:85:5000
+P:6:0d0:0:0:0
+F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD | FREE_ACT | 
+D:You heard the man. 
+
 # plate boots
 N:701:'Goblin Toe'
 I:30:15:6
@@ -7292,6 +7429,16 @@ f:COULD2H
 D:Its lightning damage and resistances are useful in the early game, 
 D:but later on it'll probably be overshadowed by stronger weapons. 
 
+# spetum
+N:709:'Quinto Prong'
+I:22:19:5
+W:25:25:60:5555
+P:0:5d3:5:5:0
+F:COULD2H | WIS | SLAY_UNDEAD | BRAND_ACID | RES_CONF | 
+F:ESP_UNDEAD | 
+f:COULD2H
+D:Seems like the number five is magic in some way. 
+
 # ranseur
 N:710:'Urgent Need'
 I:22:21:2
@@ -7323,6 +7470,15 @@ a:SPELL=Artifact Maggot
 D:It can be a powerful weapon early in the game, and you can 
 D:also activate it to make monsters flee from you.
 
+# voulge
+N:713:'Smackdown'
+I:22:23:4
+W:20:20:250:6000
+P:0:1d8:14:12:0
+F:COULD2H | SPEED | SLAY_EVIL | BRAND_COLD | RES_CHAOS | CRIT | 
+f:COULD2H
+D:You feel ready to take down your opponent. 
+
 # bill-guisarme
 N:714:of Reality
 I:22:24:4
@@ -7333,6 +7489,15 @@ F:IMPACT | SLAY_EVIL | KILL_DEMON | KILL_DRAGON | SUST_CON |
 F:ANTIMAGIC_10 | CRIT | ESP_DEMON | 
 f:COULD2H
 D:It's time to get real. True melee combat, let's do it. 
+
+# bill-guisarme
+N:715:'Factory Payment'
+I:22:24:2
+W:40:70:210:30000
+P:0:2d7:10:10:0
+F:COULD2H | LEVELS | PERCEPTION | 
+f:COULD2H
+D:Go ahead, level it up, and hope it doesn't get some shitty attributes! 
 
 # bec-de-corbin
 N:716:'Husoldal Evo'
@@ -7475,6 +7640,17 @@ P:0:1d1:0:0:0
 F:LITE2 | FUEL_LITE | IM_ELEC | RES_COLD | SH_ELEC | 
 f:LITE2 | FUEL_LITE |
 D:Its flame seems very grounded in reality. 
+
+# cobalt torch
+N:747:'Blue Kob'
+I:39:25:0
+W:30:20:30:10000
+P:0:1d1:0:0:0
+F:LITE2 | FUEL_LITE | RES_ELEC | RES_COLD | ACTIVATE | 
+f:LITE2 | FUEL_LITE |
+a:HARDCORE=LIGHT
+D:An eerie, yet somehow soothing blue light glows at the tip of 
+D:this torch. 
 
 # gnarled staff
 N:750:'Spire of Lazarus'
