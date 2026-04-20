@@ -1549,7 +1549,7 @@ void do_get_new_skill(bool princessbitch)
 
 		if (s_ptr->value + val[max] > SKILL_MAX) val[max] = SKILL_MAX - s_ptr->value;
 		skl[max] = available_skills[i];
-		items[max] = (char *)string_make(format("%-40s: +%02ld.%03ld value, +%01d.%03d modifier", s_ptr->name + s_name, val[max] / SKILL_STEP, val[max] % SKILL_STEP, mod[max] / SKILL_STEP, mod[max] % SKILL_STEP));
+		items[max] = (char *)string_make(format("%-25s: +%02ld.%03ld value, +%01d.%03d modifier", s_ptr->name + s_name, val[max] / SKILL_STEP, val[max] % SKILL_STEP, mod[max] / SKILL_STEP, mod[max] % SKILL_STEP));
 	}
 
 	while (TRUE)

@@ -3781,7 +3781,7 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 				int i;
 
 				/* Intro */
-				text_out("It provides immunity ");
+				text_out("It provides near immunity ");
 
 				/* List */
 				for (i = 0; i < vn; i++)

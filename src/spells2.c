@@ -900,13 +900,13 @@ void self_knowledge(FILE *fff)
 		if (r_ptr->flags3 & RF3_UNIQUE_4)
 			info[i++] = "You are a Nazgul.";
 		if (r_ptr->flags3 & RF3_NO_FEAR)
-			info[i++] = "You are immune to fear.";
+			info[i++] = "You are resistant to fear.";
 		if (r_ptr->flags3 & RF3_NO_STUN)
-			info[i++] = "You are immune to stun.";
+			info[i++] = "You are resistant to stun.";
 		if (r_ptr->flags3 & RF3_NO_CONF)
-			info[i++] = "You are immune to confusion.";
+			info[i++] = "You are resistant to confusion.";
 		if (r_ptr->flags3 & RF3_NO_SLEEP)
-			info[i++] = "You are immune to sleep.";
+			info[i++] = "You are resistant to sleep.";
 
 		if (r_ptr->flags4 & RF4_SHRIEK)
 			info[i++] = "You can aggravate monsters.";
@@ -1376,7 +1376,7 @@ void self_knowledge(FILE *fff)
 
 	if (p_ptr->immune_acid)
 	{
-		info[i++] = "You are completely immune to acid.";
+		info[i++] = "You are nearly immune to acid.";
 	}
 	else if ((p_ptr->resist_acid) && (p_ptr->oppose_acid))
 	{
@@ -1389,7 +1389,7 @@ void self_knowledge(FILE *fff)
 
 	if (p_ptr->immune_elec)
 	{
-		info[i++] = "You are completely immune to lightning.";
+		info[i++] = "You are nearly immune to lightning.";
 	}
 	else if ((p_ptr->resist_elec) && (p_ptr->oppose_elec))
 	{
@@ -1402,7 +1402,7 @@ void self_knowledge(FILE *fff)
 
 	if (p_ptr->immune_fire)
 	{
-		info[i++] = "You are completely immune to fire.";
+		info[i++] = "You are nearly immune to fire.";
 	}
 	else if ((p_ptr->resist_fire) && (p_ptr->oppose_fire))
 	{
@@ -1419,7 +1419,7 @@ void self_knowledge(FILE *fff)
 
 	if (p_ptr->immune_cold)
 	{
-		info[i++] = "You are completely immune to cold.";
+		info[i++] = "You are nearly immune to cold.";
 	}
 	else if ((p_ptr->resist_cold) && (p_ptr->oppose_cold))
 	{
@@ -1432,7 +1432,7 @@ void self_knowledge(FILE *fff)
 
 	if (p_ptr->immune_pois)
 	{
-		info[i++] = "You are completely immune to poison.";
+		info[i++] = "You are nearly immune to poison.";
 	}
 	else if ((p_ptr->resist_pois) && (p_ptr->oppose_pois))
 	{
@@ -1489,7 +1489,7 @@ void self_knowledge(FILE *fff)
 	}
 	if (p_ptr->immune_neth)
 	{
-		info[i++] = "You are immune to nether forces.";
+		info[i++] = "You are nearly immune to nether forces.";
 	}
 	else if (p_ptr->resist_neth)
 	{
@@ -7176,10 +7176,12 @@ void earthquake(int cy, int cx, int r)
 					/* Monster is certainly awake */
 					m_ptr->csleep = 0;
 
-					/* Apply damage directly */
-					m_ptr->hp -= damage;
+					/* Apply damage directly - but not if it's a quest monster --Amy */
+					if (!(m_ptr->mflag & MFLAG_QUEST) && !(m_ptr->mflag & MFLAG_QUEST2)) {
+						m_ptr->hp -= damage;
+					}
 
-					/* Delete (not kill) "dead" monsters */
+					/* Delete (not kill) "dead" monsters - this would make quests impossible to complete which is why they're exempt */
 					if (m_ptr->hp < 0)
 					{
 						/* Message */

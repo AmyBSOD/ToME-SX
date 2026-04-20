@@ -1,4 +1,4 @@
-425
+427
 ******** BUFFER LINE *********************************** DO NOT REMOVE *******
 cackles evilly.
 cackles diabolically.
@@ -425,3 +425,5 @@ decides to erase your save with no confirmation.
 deletes your game, along with your current savegame file.
 screams 'Antivaxxer! You'll never endanger anyone with covid again!'
 announces: 'I just decided to forcibly vaccinate you.'
+suddenly fills your screen with static!
+suddenly emits a horrible 'SKRIIIIIIIIIE' sound and static invades your screen!

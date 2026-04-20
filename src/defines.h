@@ -47,7 +47,7 @@
 
 #define SAVEFILE_VERSION 104
 
-#define TOMESX_VERSION "1.29"
+#define TOMESX_VERSION "1.30"
 
 /*
  * This value is not currently used

@@ -2808,6 +2808,11 @@ void store_stole(void)
 		if (object_value_real(o_ptr, TRUE) >= 750000) stealfailchance = 40;
 		if (object_value_real(o_ptr, TRUE) >= 1000000) stealfailchance = 50;
 
+		/* but here, the stealing skill should help --Amy */
+		if (get_skill(SKILL_STEALING) > 0) {
+			if (get_skill(SKILL_STEALING) > randint(150)) stealfailchance = 0;
+		}
+
 		if ((stealfailchance > 0) && magik(stealfailchance)) stealwillfail = TRUE;
 
 		if (stealwillfail) {
