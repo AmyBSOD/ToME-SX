@@ -6698,6 +6698,14 @@ F:FREE_ACT | RES_BLIND | RES_CONF | INFRA | LITE1 |
 F:DISARM | 
 D:This suit gives pretty good coverage of some important resistances. 
 
+# augmented chain mail
+N:581:of Redundancy
+I:37:6:8
+W:30:40:270:9000
+P:16:1d4:-2:0:10
+F:STR | INT | WIS | DEX | CON | CHR | 
+D:You're kinda bummed that it doesn't increase all stats by 43. 
+
 # bar chain mail
 N:582:'The Iron Prison'
 I:37:8:4
@@ -6706,6 +6714,15 @@ P:18:1d4:-2:0:17
 F:FREE_ACT | CON | SUST_CON | RES_POIS | RES_SHARDS | 
 F:DEVICE_MASTERY | DISARM | RES_PLASMA | 
 D:Rather robust, but heavy.
+
+# metal brigandine armor
+N:583:of the Successful Thief
+I:37:9:6
+W:35:40:290:7000
+P:19:1d4:-3:0:13
+F:DEX | SUST_DEX | STEALTH | CRIT | SEARCH | DISARM | 
+F:PERCEPTION | 
+D:Yet another thievery-based suit. 
 
 # partial plate armor
 N:584:'Message from our Sponsors'
@@ -6726,6 +6743,25 @@ F:LITHE | DEX | SUST_DEX | DODGE | FREE_ACT | FEATHER |
 F:RES_NERVE | 
 D:This metallic armor is impossibly light. It allows the wearer 
 D:to perform some impressive dodging feats.
+
+# full plate armor
+N:586:'Anti-Claw Barrier'
+I:37:15:4
+W:50:30:380:13000
+P:40:2d4:-3:0:30
+F:DEX | DODGE | INFRA | SUST_CON | RES_DMG | NO_MAGIC | 
+F:ESP_ANIMAL | 
+D:For those who want to not have to worry about annoying melee 
+D:enemies, this suit is quite useful. It's really heavy though. 
+
+# ribbed plate armor
+N:587:'Stainless Black'
+I:37:18:3
+W:45:70:380:25000
+P:28:2d4:-3:0:20
+F:SPEED | CON | SUST_CON | IM_ACID | RES_FIRE | RES_DISEN | 
+F:INV_PROTECT | RES_FORCE | 
+D:It's of high quality. 
 
 # double chain mail
 N:588:'Tank Link'
@@ -6927,6 +6963,15 @@ F:SPEED | BLOWS | SLAY_TROLL | KILL_DRAGON | RES_COLD |
 F:SAVING_MALUS | 
 D:Err, you don't understand russian! What does the name mean?! 
 
+# khopesh
+N:616:'Surreal Swing'
+I:23:14:1
+W:20:10:130:6000
+P:0:2d4:7:3:0
+F:DEX | BLOWS | SLAY_DRAGON | SUST_CON | IM_COLD | 
+F:INV_PROTECT | SLOW_DIGEST | 
+D:A sword from the icy wastes. 
+
 # flamberge
 N:617:'Ripsaw Rage'
 I:23:26:6
@@ -7002,6 +7047,25 @@ W:16:30:80:15000
 P:0:1d10:7:11:0
 F:INFRA | SLAY_GIANT | FREE_ACT | LITE1 | 
 D:It's slightly longer than normal, and therefore more effective. 
+
+# basilard
+N:627:of Star Slay Several
+I:23:9:2
+W:15:20:80:16000
+P:0:1d8:10:10:0
+F:KILL_DEMON | SLAY_ORC | ESP_ORC | DEX | SUST_DEX | 
+F:RES_FIRE | RES_CHAOS | INT | ESP_DEMON | 
+D:Are the egotypes too wimpy for your tastes? Then use this. 
+
+# cord armor
+N:629:'Bonechain'
+I:36:9:2
+W:23:40:80:8000
+P:6:1d1:0:0:13
+F:LITHE | DEX | FREE_ACT | RES_NETHER | HOLD_LIFE | 
+F:SUST_CON | SUST_DEX | ACTIVATE | ESP_UNDEAD | 
+a:HARDCORE=DRAIN_2
+D:A rather grisly suit adorned with bones of the dead. 
 
 # paper armor
 N:630:'Ignitable Lignine'
@@ -7527,6 +7591,15 @@ f:COULD2H
 D:A decent weapon, but its special quality is a rare resistance 
 D:that you'd otherwise not find early on. 
 
+# helmet beard
+N:720:'Black Vortex'
+I:22:32:1
+W:50:80:190:20000
+P:0:4d6:20:20:0
+F:COULD2H | ATTRACT_MON | RES_MORGUL | 
+f:COULD2H
+D:Can you improve it to the point where it's worth using? 
+
 # thresher
 N:721:'Reaper's Toll'
 I:22:33:6
@@ -7785,6 +7858,17 @@ F:RES_DISEN | RES_DISINT
 f:STEALTH
 D:If you want to sneak through the dungeon Metal Gear Solid style, 
 D:this is the pair of shoes you should wear. 
+
+# grand armor
+N:784:'The Mojo'
+I:37:39:5
+W:45:50:400:30000
+P:36:2d4:-6:0:20
+F:RES_DMG | INT | SPELL | RES_FIRE | RES_ELEC | RES_POIS | RES_COLD | 
+F:REGEN | MANA | 
+f:RES_DMG
+D:An improbably useful mail for casters, as long as they can somehow 
+D:handle the weight. 
 
 # N:number:name
 # I:tval:sval:pval
