@@ -2367,10 +2367,17 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Fountains, altars and other features don't spawn anymore.";
 	}
-
 	if (p_ptr->nastytrap183)
 	{
 		info[i++] = "You have a problem: You can't destroy unwanted items.";
+	}
+	if (p_ptr->nastytrap184)
+	{
+		info[i++] = "You have a problem: AC no longer reduces the damage you take in melee.";
+	}
+	if (p_ptr->nastytrap185)
+	{
+		info[i++] = "You have a problem: Monsters come out of a portal on occasion.";
 	}
 
 	if (p_ptr->contamination >= 10000)

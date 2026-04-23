@@ -3794,6 +3794,24 @@ static void process_world(void)
 
 	}
 
+	if (p_ptr->nastytrap185 && !(p_ptr->wild_mode) && (rand_int(1000) == 0) ) {
+		int numsummons = 1 + randint(3);
+		int summonlevel = max_dlv_real[dungeon_type];
+		if (summonlevel < 1) summonlevel = 1;
+		summonlevel *= 3;
+		summonlevel /= 2;
+
+		cmsg_print(TERM_VIOLET, "Several monsters come out of a portal.");
+		msg_print(NULL);
+
+		while (numsummons > 0)
+		{
+			numsummons--;
+			summon_specific(p_ptr->py, p_ptr->px, summonlevel, 0);
+		}
+
+	}
+
 	if (p_ptr->nastytrap85 && (rand_int(1000) == 0) ) {
 		if (lose_all_info())
 		{

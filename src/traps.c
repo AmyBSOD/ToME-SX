@@ -767,6 +767,8 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY181:
 		case TRAP_NASTY182:
 		case TRAP_NASTY183:
+		case TRAP_NASTY184:
+		case TRAP_NASTY185:
 			return FALSE;
 	}
 
@@ -984,6 +986,8 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY181:
 		case TRAP_NASTY182:
 		case TRAP_NASTY183:
+		case TRAP_NASTY184:
+		case TRAP_NASTY185:
 			return FALSE;
 	}
 
@@ -1204,6 +1208,8 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY181:
 		case TRAP_NASTY182:
 		case TRAP_NASTY183:
+		case TRAP_NASTY184:
+		case TRAP_NASTY185:
 			return TRUE;
 	}
 
@@ -1865,7 +1871,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_STAT_SAP_I:
 		{
 			int sappings = 5;
-			while (sappings) {
+			while (sappings > 0) {
 				if (do_dec_stat(rand_int(6), STAT_DEC_TEMPORARY)) ident = TRUE;
 				sappings--;
 			}
@@ -1874,7 +1880,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_STAT_SAP_II:
 		{
 			int sappings = 5;
-			while (sappings) {
+			while (sappings > 0) {
 				if (do_dec_stat(rand_int(6), STAT_DEC_NORMAL)) ident = TRUE;
 				sappings--;
 			}
@@ -1883,7 +1889,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_STAT_SAP_III:
 		{
 			int sappings = 5;
-			while (sappings) {
+			while (sappings > 0) {
 				if (do_dec_stat(rand_int(6), STAT_DEC_PERMANENT)) ident = TRUE;
 				sappings--;
 			}
@@ -1892,7 +1898,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_STAT_SAP_IV:
 		{
 			int sappings = 5;
-			while (sappings) {
+			while (sappings > 0) {
 				if (do_dec_stat(rand_int(6), STAT_DEC_PERMANENT_NORESIST)) ident = TRUE;
 				sappings--;
 			}
@@ -12261,6 +12267,30 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY184:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap184 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY185:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap185 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHIT_I:
 		{
 			bool badheel = FALSE;
@@ -16592,7 +16622,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(183)) {
+	switch (randint(185)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -17142,6 +17172,12 @@ void give_random_nastytrap_effect(void)
 		case 183:
 			p_ptr->nastytrap183 = TRUE;
 			break;
+		case 184:
+			p_ptr->nastytrap184 = TRUE;
+			break;
+		case 185:
+			p_ptr->nastytrap185 = TRUE;
+			break;
 
 	}
 }
@@ -17342,8 +17378,8 @@ void cure_nasty_traps(void)
 	if (effect_level >= 8) p_ptr->nastytrap181 = FALSE;
 	if (effect_level >= 20) p_ptr->nastytrap182 = FALSE;
 	if (effect_level >= 15) p_ptr->nastytrap183 = FALSE;
-	p_ptr->nastytrap184 = FALSE;
-	p_ptr->nastytrap185 = FALSE;
+	if (effect_level >= 35) p_ptr->nastytrap184 = FALSE;
+	if (effect_level >= 12) p_ptr->nastytrap185 = FALSE;
 	p_ptr->nastytrap186 = FALSE;
 	p_ptr->nastytrap187 = FALSE;
 	p_ptr->nastytrap188 = FALSE;

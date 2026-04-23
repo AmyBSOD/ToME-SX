@@ -3563,6 +3563,8 @@
 #define TRAP_OF_CURSE_GARMENTS            799
 
 #define TRAP_NASTY183                     800
+#define TRAP_NASTY184                     801
+#define TRAP_NASTY185                     802
 
 /*** General index values ***/
 

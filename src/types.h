@@ -2313,8 +2313,8 @@ struct player_type
 	bool nastytrap181; /* lvl 8, mega leveling trap - game uses leveling system */
 	bool nastytrap182; /* lvl 20, featureless trap - fountains, jumpgates, altars etc. no longer spawn */
 	bool nastytrap183; /* lvl 15, unsquelch trap - destroy item command no longer works and automatizer doesn't either */
-	bool nastytrap184;
-	bool nastytrap185;
+	bool nastytrap184; /* lvl 35, full melee trap - AC no longer reduces melee damage you take */
+	bool nastytrap185; /* lvl 12, attraction trap - you have the attract monster effect */
 	bool nastytrap186;
 	bool nastytrap187;
 	bool nastytrap188;

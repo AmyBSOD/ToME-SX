@@ -3947,6 +3947,16 @@ I:35:2:50:4:15:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:801:Full Melee Trap
+I:55:2:50:4:35:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:802:Attraction Trap
+I:32:2:50:4:12:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 
