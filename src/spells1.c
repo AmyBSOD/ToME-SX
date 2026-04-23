@@ -8675,7 +8675,14 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 	case GF_FORCE:
 		{
 			if (fuzzy) msg_print("You are hit by kinetic force!");
-			if (!p_ptr->resist_sound || (rand_int(3) == 0) )
+
+			if (p_ptr->resist_force)
+			{
+				dam *= 6;
+				dam /= (randint(6) + 6);
+			}
+
+			if ((!p_ptr->resist_sound || (rand_int(3) == 0) ) && (!p_ptr->resist_force || magik(50)) )
 			{
 				(void)set_stun(p_ptr->stun + randint(20));
 				/*

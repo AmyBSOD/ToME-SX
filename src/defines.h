@@ -2355,6 +2355,8 @@
 #define SV_RUNE1_KNOWLEDGE   91
 #define SV_RUNE1_UNDEATH     92
 #define SV_RUNE1_ETHER       93
+#define SV_RUNE1_FORCE       94
+#define SV_RUNE1_DMG         95
 #define SV_RUNE2_RUNESTONE   255
 
 /* The "sval" codes for TV_CORPSE */
@@ -4026,6 +4028,9 @@
 #define TR6_MAGIC_FIND          0x00000008L     /* pval like the fortune skill */
 #define TR6_MARTIAL_ARTS        0x00000010L     /* pval bonus to bare-handed combat */
 #define TR6_PERCEPTION          0x00000020L     /* pval bonus to perception ability */
+#define TR6_ATTRACT_MON         0x00000040L     /* like elona aggravate monster (counts as a kind of curse) */
+#define TR6_RES_FORCE           0x00000080L
+#define TR6_RES_DMG             0x00000100L     /* AC reduces melee damage even if the attack has a side effect */
 
 /* ESP defines */
 #define ESP_ORC                 0x00000001L

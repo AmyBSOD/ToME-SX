@@ -137,7 +137,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 	while (attempts > 0) {
 		attempts--;
 
-		switch (randint(355)) {
+		switch (randint(358)) {
 
 			case 1:
 			case 2:
@@ -1162,6 +1162,18 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				} else {
 					if (randint(5) == 1) o_ptr->pval += 1;
 				}
+				return;
+			case 356:
+				if (wizard) msg_print("Adding xtra power: 356");
+				o_ptr->art_flags6 |= TR6_RES_FORCE;
+				return;
+			case 357:
+				if (wizard) msg_print("Adding xtra power: 357");
+				o_ptr->art_flags6 |= TR6_RES_DMG;
+				return;
+			case 358:
+				if (wizard) msg_print("Adding xtra power: 358");
+				o_ptr->art_flags6 |= TR6_ATTRACT_MON;
 				return;
 
 			default: /* fail safe --Amy */

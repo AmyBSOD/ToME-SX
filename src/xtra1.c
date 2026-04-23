@@ -2523,6 +2523,7 @@ void calc_body_bonus()
 	if (r_ptr->flags7 & RF7_RES_INER) p_ptr->resist_inertia = TRUE;
 	if (r_ptr->flags7 & RF7_RES_DARK) p_ptr->resist_dark = TRUE;
 	if (r_ptr->flags7 & RF7_RES_SHAR) p_ptr->resist_shard = TRUE;
+	if (r_ptr->flags7 & RF7_RES_WALL) p_ptr->resist_force = TRUE;
 	if (r_ptr->flags10 & RF10_RES_NERV) p_ptr->resist_nerve = TRUE;
 	if (r_ptr->flags10 & RF10_RES_MIND) p_ptr->resist_mind = TRUE;
 	if (r_ptr->flags10 & RF10_RES_ETHE) p_ptr->resist_ether = TRUE;
@@ -3177,6 +3178,8 @@ void apply_flags(u32b f1, u32b f2, u32b f3, u32b f4, u32b f5, u32b f6, u32b f7, 
 	if (f6 & (TR6_RES_NERVE)) p_ptr->resist_nerve = TRUE;
 	if (f6 & (TR6_RES_MIND)) p_ptr->resist_mind = TRUE;
 	if (f6 & (TR6_RES_ETHER)) p_ptr->resist_ether = TRUE;
+	if (f6 & (TR6_RES_FORCE)) p_ptr->resist_force = TRUE;
+	if (f6 & (TR6_RES_DMG)) p_ptr->resist_dmg = TRUE;
 
 	if (f5 & (TR5_PEACEKEEPING)) p_ptr->plr_peacekeep = TRUE;
 	if (f5 & (TR5_INV_PROTECT)) p_ptr->plr_invprot = TRUE;
@@ -3449,6 +3452,8 @@ void calc_bonuses(bool silent)
 	p_ptr->resist_disint = FALSE;
 	p_ptr->resist_time = FALSE;
 	p_ptr->resist_nerve = FALSE;
+	p_ptr->resist_force = FALSE;
+	p_ptr->resist_dmg = FALSE;
 	p_ptr->resist_mind = FALSE;
 	p_ptr->resist_ether = FALSE;
 	p_ptr->immune_neth = FALSE;
@@ -4294,6 +4299,7 @@ void calc_bonuses(bool silent)
 		p_ptr->resist_nexus = TRUE;
 		p_ptr->resist_neth = TRUE;
 		p_ptr->resist_nerve = TRUE;
+		p_ptr->resist_force = TRUE;
 		p_ptr->resist_mind = TRUE;
 	}
 

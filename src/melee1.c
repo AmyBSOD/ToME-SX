@@ -787,6 +787,11 @@ bool carried_make_attack_normal(int r_idx)
 					/* Obvious */
 					obvious = TRUE;
 
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Morph, but let mimicry skill have a chance to stop this */
 					if (magik(60 - get_skill_scale(SKILL_MIMICRY, 25)))
 					{
@@ -808,6 +813,11 @@ bool carried_make_attack_normal(int r_idx)
 				{
 					obvious = TRUE;
 
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					int sanitydamage;
 					if (damage >= 1) sanitydamage = damage / 2;
 					else sanitydamage = 1;
@@ -822,6 +832,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_POISON:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -840,6 +855,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_UN_BONUS:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -856,6 +876,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_UN_POWER:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -864,6 +889,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_EAT_GOLD:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -872,6 +902,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_EAT_ITEM:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -880,6 +915,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_EAT_FOOD:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -888,6 +928,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_EAT_LITE:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -898,6 +943,11 @@ bool carried_make_attack_normal(int r_idx)
 				{
 					/* Obvious */
 					obvious = TRUE;
+
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
 
 					/* Message */
 					msg_print("You are covered in acid!");
@@ -913,6 +963,11 @@ bool carried_make_attack_normal(int r_idx)
 				{
 					/* Obvious */
 					obvious = TRUE;
+
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
 
 					/* Message */
 					msg_print("You are struck by electricity!");
@@ -930,6 +985,11 @@ bool carried_make_attack_normal(int r_idx)
 					/* Obvious */
 					obvious = TRUE;
 
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Message */
 					msg_print("You are enveloped in flames!");
 
@@ -946,6 +1006,11 @@ bool carried_make_attack_normal(int r_idx)
 					/* Obvious */
 					obvious = TRUE;
 
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Message */
 					msg_print("You are covered with frost!");
 
@@ -959,6 +1024,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_BLIND:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -978,6 +1048,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_CONFUSE:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -997,6 +1072,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_TERRIFY:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1028,6 +1108,11 @@ bool carried_make_attack_normal(int r_idx)
 				{
 					/* Hack -- Prevent perma-paralysis via damage */
 					if (p_ptr->paralyzed && (damage < 1)) damage = 1;
+
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
 
 					/* Take damage */
 					carried_monster_hit = TRUE;
@@ -1063,6 +1148,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_LOSE_STR:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Damage (physical) */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1075,6 +1165,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_LOSE_INT:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Damage (physical) */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1087,6 +1182,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_LOSE_WIS:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Damage (physical) */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1099,6 +1199,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_LOSE_DEX:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Damage (physical) */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1111,6 +1216,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_LOSE_CON:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Damage (physical) */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1123,6 +1233,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_LOSE_CHR:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Damage (physical) */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1135,6 +1250,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_LOSE_ALL:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Damage (physical) */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1180,6 +1300,11 @@ bool carried_make_attack_normal(int r_idx)
 					/* Obvious */
 					obvious = TRUE;
 
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1209,6 +1334,11 @@ bool carried_make_attack_normal(int r_idx)
 				{
 					/* Obvious */
 					obvious = TRUE;
+
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
 
 					/* Take damage */
 					carried_monster_hit = TRUE;
@@ -1240,6 +1370,11 @@ bool carried_make_attack_normal(int r_idx)
 					/* Obvious */
 					obvious = TRUE;
 
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1270,6 +1405,11 @@ bool carried_make_attack_normal(int r_idx)
 					/* Obvious */
 					obvious = TRUE;
 
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1297,6 +1437,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_DISEASE:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1322,6 +1467,11 @@ bool carried_make_attack_normal(int r_idx)
 				}
 			case RBE_PARASITE:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1335,6 +1485,11 @@ bool carried_make_attack_normal(int r_idx)
 				}
 			case RBE_RAGNAROK:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1348,6 +1503,11 @@ bool carried_make_attack_normal(int r_idx)
 				}
 			case RBE_HALLU:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1366,6 +1526,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_CHAOS:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
 					{
 						(void)set_confused(p_ptr->confused + rand_int(20) + 10);
@@ -1406,6 +1571,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_SHARDS:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					if (!p_ptr->resist_shard || p_ptr->nastytrap94) {
 						(void)set_cut(p_ptr->cut + damage);
 					}
@@ -1419,6 +1589,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_INERTIA:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					int inertiadamage = damage / 4;
 					if (p_ptr->resist_inertia)
 					{
@@ -1441,6 +1616,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_NEXUS:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					carried_monster_hit = TRUE;
 					take_hit(damage, ddesc);
@@ -1454,6 +1634,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_ETHER:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					int etherdamage = damage;
 					if (p_ptr->resist_ether)
 					{
@@ -1472,6 +1657,11 @@ bool carried_make_attack_normal(int r_idx)
 
 			case RBE_TIME:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					if (!p_ptr->resist_time) {
 						switch (randint(10))
 						{
@@ -2396,6 +2586,11 @@ bool make_attack_normal(int m_idx, byte divis)
 					/* Obvious */
 					obvious = TRUE;
 
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Morph, but let mimicry skill have a chance to stop this */
 					if (magik(60 - get_skill_scale(SKILL_MIMICRY, 25)))
 					{
@@ -2417,6 +2612,11 @@ bool make_attack_normal(int m_idx, byte divis)
 				{
 					obvious = TRUE;
 
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					int sanitydamage;
 					if (damage >= 1) sanitydamage = damage / 2;
 					else sanitydamage = 1;
@@ -2431,6 +2631,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_POISON:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -2453,6 +2658,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_UN_BONUS:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -2473,6 +2683,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_UN_POWER:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -2581,6 +2796,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_EAT_GOLD:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -2657,6 +2877,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_EAT_ITEM:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -2801,6 +3026,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_EAT_FOOD:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -2845,6 +3075,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_EAT_LITE:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -2879,6 +3114,11 @@ bool make_attack_normal(int m_idx, byte divis)
 					/* Obvious */
 					obvious = TRUE;
 
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Message */
 					msg_print("You are covered in acid!");
 
@@ -2895,6 +3135,11 @@ bool make_attack_normal(int m_idx, byte divis)
 				{
 					/* Obvious */
 					obvious = TRUE;
+
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
 
 					/* Message */
 					msg_print("You are struck by electricity!");
@@ -2913,6 +3158,11 @@ bool make_attack_normal(int m_idx, byte divis)
 					/* Obvious */
 					obvious = TRUE;
 
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Message */
 					msg_print("You are enveloped in flames!");
 
@@ -2930,6 +3180,11 @@ bool make_attack_normal(int m_idx, byte divis)
 					/* Obvious */
 					obvious = TRUE;
 
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Message */
 					msg_print("You are covered with frost!");
 
@@ -2944,6 +3199,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_BLIND:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -2966,6 +3226,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_CONFUSE:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -2988,6 +3253,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_TERRIFY:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -3022,6 +3292,11 @@ bool make_attack_normal(int m_idx, byte divis)
 				{
 					/* Hack -- Prevent perma-paralysis via damage */
 					if (p_ptr->paralyzed && (damage < 1)) damage = 1;
+
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
 
 					/* Take damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
@@ -3060,6 +3335,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_LOSE_STR:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Damage (physical) */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -3074,6 +3354,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_LOSE_INT:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Damage (physical) */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -3087,6 +3372,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_LOSE_WIS:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Damage (physical) */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -3100,6 +3390,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_LOSE_DEX:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Damage (physical) */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -3113,6 +3408,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_LOSE_CON:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Damage (physical) */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -3126,6 +3426,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_LOSE_CHR:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Damage (physical) */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -3139,6 +3444,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_LOSE_ALL:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Damage (physical) */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -3186,6 +3496,11 @@ bool make_attack_normal(int m_idx, byte divis)
 					/* Obvious */
 					obvious = TRUE;
 
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -3216,6 +3531,11 @@ bool make_attack_normal(int m_idx, byte divis)
 				{
 					/* Obvious */
 					obvious = TRUE;
+
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
 
 					/* Take damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
@@ -3248,6 +3568,11 @@ bool make_attack_normal(int m_idx, byte divis)
 					/* Obvious */
 					obvious = TRUE;
 
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -3279,6 +3604,11 @@ bool make_attack_normal(int m_idx, byte divis)
 					/* Obvious */
 					obvious = TRUE;
 
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -3307,6 +3637,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_DISEASE:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take some damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -3333,6 +3668,11 @@ bool make_attack_normal(int m_idx, byte divis)
 				}
 			case RBE_HALLU:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -3356,6 +3696,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_CHAOS:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
 					{
 						(void)set_confused(p_ptr->confused + rand_int(20) + 10);
@@ -3397,6 +3742,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_SHARDS:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					if (!p_ptr->resist_shard || p_ptr->nastytrap94) {
 						(void)set_cut(p_ptr->cut + damage);
 					}
@@ -3411,6 +3761,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_INERTIA:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					int inertiadamage = damage / 4;
 					if (p_ptr->resist_inertia)
 					{
@@ -3434,6 +3789,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_NEXUS:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
 					take_hit(damage, ddesc);
@@ -3448,6 +3808,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_ETHER:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					int etherdamage = damage;
 					if (p_ptr->resist_ether)
 					{
@@ -3467,6 +3832,11 @@ bool make_attack_normal(int m_idx, byte divis)
 
 			case RBE_TIME:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					if (!p_ptr->resist_time) {
 						switch (randint(10))
 						{
@@ -3539,6 +3909,11 @@ bool make_attack_normal(int m_idx, byte divis)
 				}
 			case RBE_PARASITE:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					carried_monster_hit = TRUE;
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
@@ -3554,6 +3929,11 @@ bool make_attack_normal(int m_idx, byte divis)
 				}
 			case RBE_RAGNAROK:
 				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
 					/* Take damage */
 					carried_monster_hit = TRUE;
 					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;

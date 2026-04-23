@@ -3863,6 +3863,26 @@ static void process_world(void)
 			o_ptr->ident |= IDENT_CURSED;
 		}
 
+		/* attract monsters, from Elona (implementation by Amy) */
+		if ((f6 & TR6_ATTRACT_MON) && !(p_ptr->wild_mode) && (rand_int(1000) == 0))
+		{
+			int numsummons = 1 + randint(3);
+			int summonlevel = max_dlv_real[dungeon_type];
+			if (summonlevel < 1) summonlevel = 1;
+			summonlevel *= 3;
+			summonlevel /= 2;
+
+			cmsg_print(TERM_VIOLET, "Several monsters come out of a portal.");
+			msg_print(NULL);
+
+			while (numsummons > 0)
+			{
+				numsummons--;
+				summon_specific(p_ptr->py, p_ptr->px, summonlevel, 0);
+			}
+
+		}
+
 		/* Auto Curse */
 		if ((f3 & TR3_AUTO_CURSE) && (rand_int(AUTO_CURSE_CHANCE) == 0))
 		{

@@ -1470,6 +1470,16 @@ struct player_type
 	 * @note Resist nerve
 	 */
 	bool resist_nerve;
+	/** @structvar resist_dmg
+	 * @brief Boolean
+	 * @note Resist dmg
+	 */
+	bool resist_dmg;
+	/** @structvar resist_force
+	 * @brief Boolean
+	 * @note Resist force
+	 */
+	bool resist_force;
 	/** @structvar resist_mind
 	 * @brief Boolean
 	 * @note Resist mind

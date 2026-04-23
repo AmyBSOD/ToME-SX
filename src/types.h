@@ -1935,6 +1935,9 @@ struct player_type
 	bool resist_mind;	/* Resist mind */
 	bool resist_ether;	/* Resist ether */
 
+	bool resist_force;	/* Resist force */
+	bool resist_dmg;	/* Resist normal damage */
+
 	bool sensible_fire;     /* Fire does more damage on the player */
 	bool sensible_lite;     /* Lite does more damage on the player and blinds her/him */
 

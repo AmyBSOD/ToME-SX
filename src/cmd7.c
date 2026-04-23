@@ -7712,6 +7712,18 @@ void do_cmd_runecrafter(int crafttype)
 			msg_print("Ether resistance added.");
 			useup = TRUE;
 			break;
+		case SV_RUNE1_DMG:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags6 |= TR6_RES_DMG;
+			msg_print("Damage resistance added.");
+			useup = TRUE;
+			break;
+		case SV_RUNE1_FORCE:
+			q_ptr->tampered = TRUE;
+			q_ptr->art_flags6 |= TR6_RES_FORCE;
+			msg_print("Force resistance added.");
+			useup = TRUE;
+			break;
 		case SV_RUNE2_ARROW:
 			q_ptr->tampered = TRUE;
 			q_ptr->art_flags2 |= TR2_SUST_DEX;

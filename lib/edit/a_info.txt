@@ -6728,14 +6728,13 @@ D:This metallic armor is impossibly light. It allows the wearer
 D:to perform some impressive dodging feats.
 
 # double chain mail
-# RES_WALL
 N:588:'Tank Link'
 I:37:7:8
 W:25:30:400:25000
 P:36:1d4:-2:0:20
 F:STR | SUST_CON | RES_ACID | RES_FIRE | RES_FEAR | 
 F:NO_TELE | AUTO_CURSE | SLOW_DIGEST | FREE_ACT | 
-F:PERCEPTION | ESP_GOOD | RAPID_HUNGER | 
+F:PERCEPTION | ESP_GOOD | RAPID_HUNGER | RES_FORCE | 
 D:Super armored suit that also weighs a whole lot. 
 
 # small leather shield
@@ -7178,14 +7177,13 @@ f:MUST2H | VORPAL
 D:While this axe may deal lots of damage, it's not actually all that special.
 
 # gigantic axe
-# RES_WALL
 N:674:of Knight Chu
 I:24:36:7
 W:50:30:500:26000
 P:0:6d8:13:17:0
 F:MUST2H | STR | SUST_STR | SLAY_ANIMAL | SLAY_EVIL | 
 F:BRAND_ELEC | RES_ELEC | RES_CHAOS | BLESSED | CRIT | 
-F:WOUNDING | 
+F:WOUNDING | RES_FORCE | 
 f:MUST2H
 D:The blood-smeared axe of a formidable knight, it absolutely 
 D:wants to cut down your foes. 
@@ -7201,11 +7199,11 @@ D:A rather no-nonsense weapon, it does a lot of damage and gives
 D:purely offensive bonuses.
 
 # meteoric steel plate
-# RES_DMG
 N:676:'Tha Barrier'
 I:37:36:0
 W:80:50:500:40000
 P:80:2d4:-4:0:40
+F:RES_DMG | 
 D:It's like a wall, providing abnormal amounts of protection! Whoa! 
 
 # spandex suit
@@ -7227,13 +7225,13 @@ F:RES_ELEC | MARTIAL_ARTS
 D:...but still uber.
 
 # tiara
-# RES_WALL
 N:683:'Kira's Guardian'
 I:33:15:0
 W:70:30:50:25000
 P:4:1d1:0:0:14
 F:IM_COLD | RES_FIRE | RES_ELEC | RES_ACID | RES_POIS | FREE_ACT |
 F:RES_BLIND | RES_NEXUS | RES_CHAOS | RES_WATER | RES_NERVE | RES_MIND | 
+F:RES_FORCE | 
 D:A set of royal headgear that boasts one of the highest concentration of 
 D:elemental resistances on a single item.
 
@@ -7267,18 +7265,17 @@ F:SEARCH | DISARM | PERCEPTION | RES_POIS | DEVICE_MASTERY |
 D:You want to keep things neat and tidy, right? 
 
 # armored cloak
-# RES_WALL
 N:688:'Theft of Steel'
 I:35:4:3
 W:30:60:70:20000
 P:5:0d0:0:0:8
 F:SPEED | CON | STEALTH | FREE_ACT | RES_FIRE | RES_COLD | 
 F:DRAIN_MANA | LUCK | DEVICE_MASTERY | MAGIC_FIND | PERCEPTION | 
+F:RES_FORCE | 
 D:Considering its weight, this cloak provides surprising amounts 
 D:of agility to the wearer. 
 
 # protective cloak
-# ATTRACT_MON
 N:689:'Frade Mantle'
 I:35:9:4
 W:60:40:250:50000
@@ -7286,19 +7283,18 @@ P:8:0d0:0:0:10
 F:DEX | INT | SPELL | SEARCH | INFRA | SUST_DEX | SUST_INT | 
 F:SUST_CHR | INVIS | IM_ACID | RES_ELEC | RES_FIRE | RES_COLD | 
 F:RES_NETHER | SEE_INVIS | REGEN | MAGIC_FIND | DEVICE_MASTERY | 
-F:RES_NERVE | 
+F:RES_NERVE | ATTRACT_MON | 
 D:You're not sure what the hell a "frade" is supposed to be, but 
 D:this cloak has basically everything. 
 
 # small steel shield
-# RES_WALL
 N:692:'XXXXXXXXXXXXXXXXXXXXX'
 I:34:18:11
 W:55:70:240:20000
 P:14:1d6:0:0:20
 F:IM_ACID | LIFE | RES_SOUND | AUTO_CURSE | NO_TELE | AGGRAVATE | 
 F:ANTIMAGIC_20 | DRAIN_MANA | CURSED | INV_PROTECT | RES_ETHER | 
-F:RAPID_HUNGER | 
+F:RAPID_HUNGER | RES_FORCE | 
 D:Wtf is that?! 
 
 # magic gloves
@@ -7320,13 +7316,13 @@ F:LITHE | DODGE | RES_NEXUS | HOLD_LIFE |
 D:This is a pretty defensive, lightweight cloak. 
 
 # iron shod boots
-# RES_WALL
 N:696:'Heavy Metal'
 I:30:11:-2
 W:20:10:80:4000
 P:6:1d1:0:0:12
 F:INT | WIS | MANA | SUST_STR | SUST_DEX | SUST_CON | 
 F:IM_FIRE | RES_POIS | RES_SOUND | DODGE | RES_PLASMA | 
+F:RES_FORCE | 
 D:They're very heavy. Spellcasters would be advised to wear 
 D:some other pair, but warriors will have a use for them. 
 
@@ -7737,13 +7733,12 @@ F:ANTIMAGIC_10 | DRAIN_HP | RAPID_HUNGER | MARTIAL_ARTS |
 D:Running out of time, eh? 
 
 # speed boots
-# ATTRACT_MON
 N:776:'Battlenest'
 I:30:19:5
 W:30:30:30:30000
 P:1:1d1:0:0:5
 F:SPEED | BLOWS | AGGRAVATE | CURSED | HEAVY_CURSE | 
-F:AUTO_CURSE | 
+F:AUTO_CURSE | ATTRACT_MON | 
 f:SPEED
 D:A significant speed increase in all categories... but with a 
 D:pretty high price to pay! Are you gonna make that tradeoff? 

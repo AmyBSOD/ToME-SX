@@ -629,6 +629,7 @@ add_mimic_shape
 			player.resist_nerve = TRUE
 			player.resist_mind = TRUE
 			player.resist_ether = TRUE
+			player.resist_force = TRUE
 			player.reflect = TRUE
 			player.sh_fire = TRUE
 			player.sh_elec = TRUE
@@ -950,6 +951,7 @@ add_mimic_shape
 			player.skill_dev = player.skill_dev - 5
 
 			if player.mimic_level >= 10 then player.resist_fear = TRUE end
+			if player.mimic_level >= 18 then player.resist_force = TRUE end
 			if player.mimic_level >= 30 then player.free_act = TRUE end
 			if player.mimic_level >= 40 then player.resist_conf = TRUE end
 			if player.mimic_level >= 60 then player.resist_nexus = TRUE end

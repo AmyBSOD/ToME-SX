@@ -1064,7 +1064,7 @@ void object_flags(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4, u3
 		case EGO_XTRA_POWER:
 			{
 				int xtrapowers = 13;
-				if (randint(10) == 1) xtrapowers = 19;
+				if (randint(10) == 1) xtrapowers = 20;
 
 				/* Choose a power */
 				switch (o_ptr->xtra2 % xtrapowers)
@@ -1125,6 +1125,9 @@ void object_flags(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *f4, u3
 					break;
 				case 18:
 					(*f6) |= (TR6_RES_ETHER);
+					break;
+				case 19:
+					(*f6) |= (TR6_RES_FORCE);
 					break;
 				}
 
@@ -1367,7 +1370,7 @@ void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *
 		case EGO_XTRA_POWER:
 			{
 				int xtrapowers = 13;
-				if (randint(10) == 1) xtrapowers = 19;
+				if (randint(10) == 1) xtrapowers = 20;
 
 				/* Choose a power */
 				switch (o_ptr->xtra2 % xtrapowers)
@@ -1428,6 +1431,9 @@ void object_flags_known(object_type *o_ptr, u32b *f1, u32b *f2, u32b *f3, u32b *
 					break;
 				case 18:
 					(*f6) |= (TR6_RES_ETHER);
+					break;
+				case 19:
+					(*f6) |= (TR6_RES_FORCE);
 					break;
 				}
 
@@ -3939,6 +3945,14 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		{
 			vp[vn++] = "ether";
 		}
+		if (f6 & (TR6_RES_FORCE))
+		{
+			vp[vn++] = "force";
+		}
+		if (f6 & (TR6_RES_DMG))
+		{
+			vp[vn++] = "normal damage";
+		}
 		/* Describe */
 		if (vn)
 		{
@@ -4091,6 +4105,10 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		if (f5 & (TR5_RAPID_HUNGER))
 		{
 			text_out_c(TERM_L_DARK, "It massively increases hunger.  ");
+		}
+		if (f6 & (TR6_ATTRACT_MON))
+		{
+			text_out_c(TERM_ORANGE, "It attracts monsters.  ");
 		}
 		if (f3 & (TR3_XTRA_MIGHT))
 		{

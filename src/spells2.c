@@ -1479,6 +1479,10 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You are resistant to nerve attacks.";
 	}
+	if (p_ptr->resist_force)
+	{
+		info[i++] = "You are resistant to force.";
+	}
 	if (p_ptr->resist_mind)
 	{
 		info[i++] = "You are resistant to mind attacks.";
@@ -1526,6 +1530,10 @@ void self_knowledge(FILE *fff)
 	if (p_ptr->resist_continuum)
 	{
 		info[i++] = "The space-time continuum cannot be disrupted near you.";
+	}
+	if (p_ptr->resist_dmg)
+	{
+		info[i++] = "You are resistant to normal damage.";
 	}
 
 	if (p_ptr->sustain_str)
@@ -4229,17 +4237,18 @@ void curse_artifact(object_type * o_ptr)
 	if (o_ptr->to_d) o_ptr->to_d = 0 - ((o_ptr->to_d) + randint(4));
 	o_ptr->art_flags3 |= ( TR3_HEAVY_CURSE | TR3_CURSED );
 #if 0 /* Silly */
-	if (randint(4) == 1) o_ptr-> art_flags3 |= TR3_PERMA_CURSE;
+	if (randint(4) == 1) o_ptr->art_flags3 |= TR3_PERMA_CURSE;
 #endif
-	if (randint(5) == 1) o_ptr-> art_flags3 |= TR3_TY_CURSE;
-	if (randint(3) == 1) o_ptr-> art_flags3 |= TR3_AGGRAVATE;
-	if (randint(3) == 1) o_ptr-> art_flags3 |= TR3_DRAIN_EXP;
-	if (randint(4) == 1) o_ptr-> art_flags4 |= TR4_BLACK_BREATH;
-	if (randint(20) == 1) o_ptr-> art_flags4 |= TR4_CURSE_NO_DROP; /* muahahahaha --Amy */
-	if (randint(2) == 1) o_ptr-> art_flags3 |= TR3_TELEPORT;
+	if (randint(5) == 1) o_ptr->art_flags3 |= TR3_TY_CURSE;
+	if (randint(3) == 1) o_ptr->art_flags3 |= TR3_AGGRAVATE;
+	if (randint(3) == 1) o_ptr->art_flags3 |= TR3_DRAIN_EXP;
+	if (randint(4) == 1) o_ptr->art_flags4 |= TR4_BLACK_BREATH;
+	if (randint(20) == 1) o_ptr->art_flags4 |= TR4_CURSE_NO_DROP; /* muahahahaha --Amy */
+	if (randint(2) == 1) o_ptr->art_flags3 |= TR3_TELEPORT;
 	else if (randint(3) == 1) o_ptr->art_flags3 |= TR3_NO_TELE;
-	if (randint(7) == 1) o_ptr-> art_flags5 |= TR5_SAVING_MALUS;
-	if (randint(8) == 1) o_ptr-> art_flags5 |= TR5_RAPID_HUNGER;
+	if (randint(7) == 1) o_ptr->art_flags5 |= TR5_SAVING_MALUS;
+	if (randint(8) == 1) o_ptr->art_flags5 |= TR5_RAPID_HUNGER;
+	if (randint(5) == 1) o_ptr->art_flags6 |= TR6_ATTRACT_MON;
 	o_ptr->ident |= IDENT_CURSED;
 }
 
@@ -4797,6 +4806,9 @@ void random_resistance (object_type * o_ptr, bool is_scroll, int specific)
 		break;
 	case 49:
 		o_ptr->art_flags6 |= TR6_RES_ETHER;
+		break;
+	case 50:
+		o_ptr->art_flags6 |= TR6_RES_FORCE;
 		break;
 	}
 }

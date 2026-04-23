@@ -10313,6 +10313,43 @@ D:Although it looks like a piece of junk, it is actually part of an ancient
 D:relic belonging to the Priests of Nessa. The relic now lies in pieces, 
 D:hidden from all but the most faithful followers of Nessa.
 
+N:1222:Sturdiness
+G:?:G
+I:104:95:0
+W:80:5:120:50000
+A:80/50
+P:0:1d1:0:0:0
+F:IGNORE_ACID
+D:Runecrafters can use this rune to add damage resistance to armor or jewelry.
+
+N:1223:Walls
+G:?:G
+I:104:94:0
+W:40:5:80:25000
+A:40/50
+P:0:1d1:0:0:0
+F:IGNORE_ACID
+D:Runecrafters can use this rune to add force resistance to armor or jewelry.
+
+N:1224:& Grand Armor~
+G:[:w
+I:37:39:0
+W:50:0:400:20000
+A:50/10
+P:36:2d4:-6:0:0
+F:RES_DMG
+f:RES_DMG
+D:This very heavy armor makes you resistant to normal damage.
+
+N:1225:Force Resistance
+G:=:d
+I:45:73:0
+W:40:0:2:7500
+A:40/3
+F:RES_FORCE | EASY_KNOW
+f:RES_FORCE |
+D:This ring protects you from force blasts.
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being a bonus to the pval-based property

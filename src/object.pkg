@@ -194,6 +194,12 @@ static obj_theme lua_obj_theme @ theme_forge;
 #define TR6_RES_NERVE           0x00000001L
 #define TR6_RES_MIND            0x00000002L
 #define TR6_RES_ETHER           0x00000004L
+#define TR6_MAGIC_FIND          0x00000008L     /* pval like the fortune skill */
+#define TR6_MARTIAL_ARTS        0x00000010L     /* pval bonus to bare-handed combat */
+#define TR6_PERCEPTION          0x00000020L     /* pval bonus to perception ability */
+#define TR6_ATTRACT_MON         0x00000040L     /* like elona aggravate monster (counts as a kind of curse) */
+#define TR6_RES_FORCE           0x00000080L
+#define TR6_RES_DMG             0x00000100L     /* AC reduces melee damage even if the attack has a side effect */
 
 #define ESP_ORC                 0x00000001L
 #define ESP_TROLL               0x00000002L

@@ -4080,7 +4080,7 @@ X:A:24:40
 W:20:1:4:10000
 C:3:3:0:2
 R:100
-F:WIS | INT | SEE_INVIS
+F:WIS | INT | SEE_INVIS | RES_FORCE
 f:WIS | INT
 
 N:320:of *Life*
@@ -6602,6 +6602,40 @@ R:20
 F:R_HIGH
 R:10
 F:PVAL_M1 | R_HIGH | R_IMMUNITY
+
+# body armor
+N:533:of Damage Resistance
+T:36:0:255
+T:37:0:255
+T:38:0:255
+X:A:30:30
+W:50:9:10:20000
+C:0:0:10:0
+R:100
+F:RES_DMG
+f:RES_DMG
+
+# body armor
+N:534:of Resilience
+T:36:0:255
+T:37:0:255
+T:38:0:255
+X:A:30:30
+W:75:19:20:25000
+C:0:0:25:0
+R:100
+F:RES_DMG
+f:RES_DMG
+
+# shield
+N:535:of Nullification
+T:34:0:255
+X:A:30:30
+W:70:9:10:20000
+C:0:0:12:0
+R:100
+F:RES_DMG
+f:RES_DMG
 
 # N: serial number : ego type
 # D: description
