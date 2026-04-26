@@ -289,6 +289,7 @@ bool disturb_pets; 		/* Pets moving nearby disturb us */
 bool auto_haggle; 			/* Auto-haggle in stores */
 
 bool auto_scum; 				/* Auto-scum for good levels */
+bool dead_ends;				/* Certain quests can fail forever if you screw up */
 
 bool stack_allow_items; 		/* Allow weapons and armor to stack */
 bool stack_allow_wands; 		/* Allow wands/staffs/rods to stack */

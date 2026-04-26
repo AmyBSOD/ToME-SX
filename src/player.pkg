@@ -6469,6 +6469,7 @@ extern bool no_lite(void);
  */
 extern s16b dun_level;
 
+extern bool dead_ends;
 
 /** @name Gods
  * @{ */

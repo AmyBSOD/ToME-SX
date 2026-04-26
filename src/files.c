@@ -4090,6 +4090,11 @@ errr file_character(cptr name, bool full)
 	else
 		fprintf(fff, "\n Autoscum:             OFF");
 
+	if (dead_ends)
+		fprintf(fff, "\n Dead Ends:            ON");
+	else
+		fprintf(fff, "\n Dead Ends:            OFF");
+
 	if (always_small_level)
 		fprintf(fff, "\n Small Levels:         ALWAYS");
 	else if (small_levels)

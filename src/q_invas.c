@@ -147,8 +147,11 @@ bool quest_invasion_turn_hook(char *fmt)
 
 		xtra_maeglin = TRUE;
 
-		/*cquest.status = QUEST_STATUS_FAILED;
-		town_info[2].destroyed = TRUE;*/
+		if (dead_ends) {
+			cquest.status = QUEST_STATUS_FAILED;
+			town_info[2].destroyed = TRUE;
+			return (FALSE);
+		}
 
 		quest_describe(QUEST_INVASION);
 		cquest.status = QUEST_STATUS_TAKEN;
@@ -263,9 +266,12 @@ bool quest_invasion_stair_hook(char *fmt)
 
 			if (!get_check("Really abandon the quest?")) return TRUE;
 			cmsg_print(TERM_YELLOW, "You flee away from Maeglin and his army...");
-			/*cquest.status = QUEST_STATUS_FAILED;
-			town_info[2].destroyed = TRUE;*/
-			quest_fail_penalty(3);
+			if (dead_ends) {
+				cquest.status = QUEST_STATUS_FAILED;
+				town_info[2].destroyed = TRUE;
+			} else {
+				quest_fail_penalty(3);
+			}
 			do_cmd_go_up(TRUE);
 			return (TRUE);
 		}

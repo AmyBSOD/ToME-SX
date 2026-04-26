@@ -185,7 +185,7 @@ add_quest
 				return
 			-- if the relic has been created at this point, then it was created on the *PREVIOUS* call of HOOK_LEVEL_END_GEN, and 
 			-- therefore the player has caused another level generation in the temple and hence failed the quest.
-			elseif (god_quest.relic_generated == TRUE) and quest(GOD_QUEST).status ~= QUEST_STATUS_SCREWED then 
+			elseif (god_quest.relic_generated == TRUE) and (dead_ends ~= TRUE) and quest(GOD_QUEST).status ~= QUEST_STATUS_SCREWED then 
 				
 					-- fail the quest, but give you another shot
 					quest(GOD_QUEST).status = QUEST_STATUS_TAKEN

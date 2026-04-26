@@ -1487,9 +1487,6 @@ option_type option_info[] =
 	{ &auto_haggle, TRUE, 3, 0,
 	  "auto_haggle", "Auto-haggle in stores" },
 
-	{ &auto_scum, TRUE, 3, 1,
-	  "auto_scum", "Auto-scum for good levels" },
-
 	{ &stack_allow_items, TRUE, 3, 2,
 	  "stack_allow_items", "Allow weapons and armor to stack" },
 
@@ -1691,6 +1688,12 @@ option_type option_info[] =
 
 	{ &fate_option, TRUE, 6, 18,
 	  "fate_option", "You can receive fates, good or bad" },
+
+	{ &auto_scum, TRUE, 6, 20,
+	  "auto_scum", "Auto-scum for good levels" },
+
+	{ &dead_ends, TRUE, 6, 21,
+	  "dead_ends", "Allow certain quests to fail permanently" },
 
 	/* XXX 17 is used BEFORE */
 

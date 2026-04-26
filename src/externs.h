@@ -262,6 +262,7 @@ extern bool view_reduce_lite;
 extern bool view_reduce_view;
 extern bool auto_haggle;
 extern bool auto_scum;
+extern bool dead_ends;
 extern bool expand_look;
 extern bool expand_list;
 extern bool dungeon_align;
