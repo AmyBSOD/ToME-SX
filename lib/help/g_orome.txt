@@ -17,6 +17,8 @@ Orome is the god of hunting.
 1. Your piety decreases over time.
 2. Orome hates it if you anger tame animals.
 3. He will completely abandon you if you wear The One Ring.
+4. He hates it if you burn or destroy trees with magic or allow monsters to
+   do so.
 ~~~~~03|Orome|Prayers
 #####GOrome's Magic
 Worshipping Orome gives the adventurer access to a set of special

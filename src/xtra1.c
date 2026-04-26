@@ -4299,7 +4299,6 @@ void calc_bonuses(bool silent)
 		p_ptr->resist_nexus = TRUE;
 		p_ptr->resist_neth = TRUE;
 		p_ptr->resist_nerve = TRUE;
-		p_ptr->resist_force = TRUE;
 		p_ptr->resist_mind = TRUE;
 	}
 
@@ -4310,6 +4309,7 @@ void calc_bonuses(bool silent)
 		p_ptr->resist_plasma = TRUE;
 		p_ptr->resist_disint = TRUE;
 		p_ptr->resist_ether = TRUE;
+		p_ptr->resist_force = TRUE;
 	}
 
 	if (p_ptr->tim_air_pot)

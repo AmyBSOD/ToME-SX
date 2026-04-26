@@ -8299,7 +8299,7 @@ F:FULL_NAME | EASY_KNOW
 D:A very chaotic tome.
 
 N:1014:& Piece~ of the Relic of Ingeborg
-G:~:v
+G:~:G
 I:11:21:0
 W:0:0:0:1000
 A:0/1
@@ -9623,7 +9623,7 @@ P:0:1d1:0:0:0
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD
 F:FOUNTAIN
 D:A potion that temporarily protects you from water, inertia, plasma, 
-D:disintegration and ether damage. 
+D:disintegration, force and ether damage. 
 
 N:1150:Sense Objects
 G:!:d
