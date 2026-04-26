@@ -59,6 +59,15 @@ void inc_piety(int god, s32b amt)
 		}
 	}
 
+	/* Lorien likes it if you're in the town named after him --Amy */
+	if (god == GOD_LORIEN && amt < 0) {
+
+		if (wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].terrain_idx == TERRAIN_TOWN && !dun_level && p_ptr->wilderness_y == 34 && p_ptr->wilderness_x == 50) { /* Lothlorien */
+			amt /= 2;
+			if (amt > -1) amt = -1; /* fail safe */
+		}
+	}
+
 	/* it should be harder to gain piety if you already have a lot of it --Amy */
 	if (amt > 0) {
 

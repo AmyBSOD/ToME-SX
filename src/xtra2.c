@@ -7209,6 +7209,16 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 			inc_piety(GOD_ERU, inc);
 		}
 
+		/* Lorien likes it if you kill things that don't sleep */
+		if (r_ptr->flags3 & RF3_NO_SLEEP)
+		{
+			int inc = m_ptr->level * 4;
+			PRAY_GOD(GOD_LORIEN) inc *= 2;
+
+			if (!inc) inc = 1;
+			inc_piety(GOD_LORIEN, inc);
+		}
+
 		/* Nessa really likes it if you kill eldritch horrors */
 		if (r_ptr->flags2 & RF2_ELDRITCH_HORROR)
 		{

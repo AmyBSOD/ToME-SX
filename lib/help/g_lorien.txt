@@ -1,0 +1,49 @@
+|||||oy
+~~~~~01|Lorien
+~~~~~02|Gods|Lorien
+#####R === Lorien ===
+
+Lorien is the god of sleep.
+
+#####GThe benefits of Worshipping Lorien
+ 1. Lorien likes it if you kill monsters who resist sleep.
+ 2. As you increase your piety, Lorien will eventually grant
+    free action and resistances to confusion, force and dark.
+ 3. He grants an intelligence bonus if you're pious enough and praying.
+
+#####GThe disadvantages of Worshipping Lorien
+1. Your piety decreases over time, especially when praying.
+2. He dislikes it if you burn or destroy trees with magic or allow monsters to
+   do so.
+3. He will completely abandon you if you wear The One Ring.
+~~~~~03|Lorien|Prayers
+#####GLorien's Magic
+Worshipping Lorien gives the adventurer access to a set of special
+spells that come directly from the hands of Lorien. These spells use your piety
+to cast rather than your spellpoints, and the level of spells that Lorien will 
+permit you to use is determined by your Prayer skill - how skillful you are
+in asking for his help without offending him!
+
+There is a special book called the "Tome of Drowsiness" which 
+contains instructions for the procedure for each of the prayers Lorien will
+grant. There are three prayers all told, which are:
+1. [[[[[BSleep Powder] (Level 1)
+   Shoots a ball of sleep at monsters.
+2. [[[[[BCollusion] (Level 15)
+   Creates a cloud of darkness.
+   The cloud will persist for some turns, damaging all monsters passing by.
+3. [[[[[BTime Out] (Level 30)
+   Creates walls around you.
+   
+Each of these spells can be increased in level both by improving your Prayer
+skill, and by improving your Spell-power skill.
+
+In addition to his specific magic, Lorien will also assist with your ability to
+use some magic from the "standard" schools, in relation to how skilled you 
+are at Prayer. These schools are as follows:
+    *****m_nature.txt*0[Nature School] at 1/3 the Prayer skill level.
+    *****m_celest.txt*0[Celestial School] at 1/3 the Prayer skill level.
+    *****m_mind.txt*0[Mind School] at 1/2 the Prayer skill level.
+    *****m_music.txt*0[Music] at 1/2 the Prayer skill level.
+
+The spells from these schools are all cast using your normal spellpoints.

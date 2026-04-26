@@ -397,6 +397,13 @@ SCHOOL_NATURE = add_school
 			["mul"] = 1,
 			["div"] = 2,
 		},
+		-- Lorien provides the Nature school at 1/3 the prayer skill
+		[GOD_LORIEN] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
+		},
 		-- Nessa provides the Nature school at 2/5 the prayer skill
 		[GOD_NESSA] =
 		{
@@ -493,6 +500,13 @@ SCHOOL_MIND = add_school
 			["skill"] = SKILL_PRAY,
 			["mul"] = 1,
 			["div"] = 3,
+		},
+		-- Lorien provides the Mind school at 1/2 the prayer skill
+		[GOD_LORIEN] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 2,
 		},
 		-- Ingeborg provides every school at 1/10 the prayer skill
 		[GOD_INGEBORG] = 
@@ -620,6 +634,13 @@ SCHOOL_NESSA = add_school
 	["spell_power"] = TRUE,
 	["god"] = GOD_NESSA,
 }
+SCHOOL_LORIEN = add_school
+{
+	["name"] = "Lorien",
+	["skill"] = SKILL_PRAY,
+	["spell_power"] = TRUE,
+	["god"] = GOD_LORIEN,
+}
 
 -- New schools
 SCHOOL_AULE = add_school
@@ -674,6 +695,13 @@ SCHOOL_MUSIC = add_school
 			["mul"] = 1,
 			["div"] = 3,
 		},
+		-- Lorien provides the Music school at 1/2 the prayer skill
+		[GOD_LORIEN] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 2,
+		},
 	},
 }
 
@@ -715,6 +743,13 @@ SCHOOL_CELESTIAL = add_school
 		},
 		-- Vaire provides the Celestial school at 1/3 the prayer skill
 		[GOD_VAIRE] =
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
+		},
+		-- Lorien provides the Celestial school at 1/3 the prayer skill
+		[GOD_LORIEN] =
 		{
 			["skill"] = SKILL_PRAY,
 			["mul"] = 1,
@@ -802,6 +837,7 @@ tome_dofile("s_este.lua")
 tome_dofile("s_vana.lua")
 tome_dofile("s_vaire.lua")
 tome_dofile("s_nessa.lua")
+tome_dofile("s_lorien.lua")
 
 -- List of spellbooks
 
@@ -938,6 +974,11 @@ school_book[40] = {
 -- Create the book of nessa
 school_book[41] = {
 	NESSA_CONFUSION_FU, NESSA_SPEEDBOOST, NESSA_MANA_STORM,
+}
+
+-- Create the book of lorien
+school_book[42] = {
+	LORIEN_SLEEP_POWDER, LORIEN_COLLUSION, LORIEN_TIME_OUT,
 }
 
 -- Dual school books by Amy

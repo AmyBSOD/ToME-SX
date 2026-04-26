@@ -3004,6 +3004,29 @@ void calc_gods()
 		if (p_ptr->grace >= 25000) p_ptr->free_act = TRUE;
 	}
 
+	/* Lorien grants free action and a few resists */
+	GOD(GOD_LORIEN)
+	{
+		if (p_ptr->grace >= 25000) p_ptr->free_act = TRUE;
+		if (p_ptr->grace >= 50000) p_ptr->resist_conf = TRUE;
+		if (p_ptr->grace >= 70000) p_ptr->resist_force = TRUE;
+		if (p_ptr->grace >= 90000) p_ptr->resist_dark = TRUE;
+
+	}
+
+	/* praying to Lorien with high piety grants +INT */
+	PRAY_GOD(GOD_LORIEN)
+	{
+		if (p_ptr->grace > 40000) p_ptr->stat_add[A_INT] += 1;
+		if (p_ptr->grace > 80000) p_ptr->stat_add[A_INT] += 1;
+		if (p_ptr->grace > 120000) p_ptr->stat_add[A_INT] += 1;
+		if (p_ptr->grace > 160000) p_ptr->stat_add[A_INT] += 1;
+		if (p_ptr->grace > 200000) p_ptr->stat_add[A_INT] += 1;
+		if (p_ptr->grace > 240000) p_ptr->stat_add[A_INT] += 1;
+		if (p_ptr->grace > 280000) p_ptr->stat_add[A_INT] += 1;
+
+	}
+
 	/* Manwe bonus not requiring the praying status */
 	GOD(GOD_MANWE)
 	{

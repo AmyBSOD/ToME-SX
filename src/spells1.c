@@ -3757,6 +3757,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Silly thing to destroy trees when a yavanna worshipper */
 				inc_piety(GOD_YAVANNA, -50);
 				inc_piety(GOD_OROME, -50);
+				inc_piety(GOD_LORIEN, -10);
 
 				if (seen) obvious = TRUE;
 			}
@@ -3769,6 +3770,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Silly thing to destroy trees when a yavanna worshipper */
 				inc_piety(GOD_YAVANNA, -60);
 				inc_piety(GOD_OROME, -60);
+				inc_piety(GOD_LORIEN, -10);
 
 				if (seen) obvious = TRUE;
 			}
@@ -3916,6 +3918,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				/* Silly thing to destroy trees when a yavanna worshipper */
 				inc_piety(GOD_YAVANNA, -50);
 				inc_piety(GOD_OROME, -50);
+				inc_piety(GOD_LORIEN, -10);
 
 				if (seen) obvious = TRUE;
 			}
@@ -3942,6 +3945,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 				if (c_ptr->feat == FEAT_TREES || c_ptr->feat == FEAT_SMALL_TREES) {
 					inc_piety(GOD_YAVANNA, -50);
 					inc_piety(GOD_OROME, -50);
+					inc_piety(GOD_LORIEN, -10);
 				}
 
 				/* Visibility change */

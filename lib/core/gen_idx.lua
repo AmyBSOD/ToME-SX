@@ -16,6 +16,7 @@ files =
 	"g_amybso.txt",
 	"g_orome.txt",
 	"g_nessa.txt",
+	"g_lorien.txt",
 	"g_ingebo.txt",
 	"g_nienna.txt",
 	"g_vana.txt",

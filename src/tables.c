@@ -3061,6 +3061,21 @@ deity_type deity_info_init[MAX_GODS_INIT] =
 			"",
 		},
 	},
+	{
+		"Lorien",
+		{
+			"The god of sleep.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+	},
 
 };
 

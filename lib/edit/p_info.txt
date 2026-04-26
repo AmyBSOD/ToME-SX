@@ -2342,6 +2342,20 @@ C:a:k:+0:+400:Archery
 C:a:k:+0:+500:Cleaning
 C:a:k:+0:+500:Celestial
 
+C:a:N:Sleep Priest
+C:a:D:A priest who serves Lorien to put all evil
+C:a:D:to sleep.
+C:a:O:21:5:1d1
+C:a:g:Lorien
+C:a:k:+0:+250:Prayer
+C:a:k:+0:-600:Necromancy
+C:a:k:+0:+150:Spell-power
+C:a:k:+0:+100:Magic-Device
+C:a:k:+0:+300:Divination
+C:a:k:+0:+100:Spirituality
+C:a:k:+0:+200:Valarin
+C:a:k:-5000:+0:Hell
+
 C:a:N:Wood Priest
 C:a:D:A priest who serves Orome to hunt down
 C:a:D:all those who are evil.

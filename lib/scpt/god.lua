@@ -131,6 +131,8 @@ add_quest
 						god_quest.relic_num = 25
 					elseif player.pgod == GOD_NESSA then
 						god_quest.relic_num = 26
+					elseif player.pgod == GOD_LORIEN then
+						god_quest.relic_num = 27
 					end
 
 					-- This var will need resetting
@@ -940,6 +942,51 @@ function set_god_dungeon_attributes()
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags2 = bor(RF2_COLD_BLOOD)
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags3 = bor(RF3_DEMON)
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags7 = bor(RF7_AI_ANNOY, RF7_RES_CHAO)
+
+		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
+		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5
+
+	elseif player.pgod == GOD_LORIEN then
+
+		-- pleasant
+		dungeon(god_quest.DUNGEON_GOD).min_m_alloc_level = 15
+		dungeon(god_quest.DUNGEON_GOD).min_m_alloc_chance = 150
+
+		-- L: grasslands
+		dungeon(god_quest.DUNGEON_GOD).floor1 = 89
+		dungeon(god_quest.DUNGEON_GOD).floor2 = 88
+		dungeon(god_quest.DUNGEON_GOD).floor3 = 91
+		dungeon(god_quest.DUNGEON_GOD).floor_percent1[1] = 80
+		dungeon(god_quest.DUNGEON_GOD).floor_percent2[1] = 15
+		dungeon(god_quest.DUNGEON_GOD).floor_percent3[1] = 5
+
+		-- A: trees, a bit of magma
+		dungeon(god_quest.DUNGEON_GOD).fill_type1 = 96
+		dungeon(god_quest.DUNGEON_GOD).fill_percent1[1] = 90
+		dungeon(god_quest.DUNGEON_GOD).fill_type2 = 89
+		dungeon(god_quest.DUNGEON_GOD).fill_percent2[1] = 10
+		dungeon(god_quest.DUNGEON_GOD).outer_wall = 96
+		dungeon(god_quest.DUNGEON_GOD).inner_wall = 96
+		dungeon(god_quest.DUNGEON_GOD).fill_method = 4
+
+		-- O: diverse
+		dungeon(god_quest.DUNGEON_GOD).objs.treasure = 20
+		dungeon(god_quest.DUNGEON_GOD).objs.combat = 20
+		dungeon(god_quest.DUNGEON_GOD).objs.magic = 15
+		dungeon(god_quest.DUNGEON_GOD).objs.tools = 20
+
+		-- F: quartz and magma
+		dungeon(god_quest.DUNGEON_GOD).flags1 = bor(DF1_ADJUST_LEVEL_1, DF1_NO_RECALL, DF1_BIG, DF1_NO_DOORS, DF1_FLAT, DF1_WATER_RIVER)
+		dungeon(god_quest.DUNGEON_GOD).flags2 = bor(DF2_NO_SHAFT, DF2_ADJUST_LEVEL_PLAYER)
+
+		-- R: rather diverse
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mode = 3
+		dungeon(god_quest.DUNGEON_GOD).rules[1].percent = 95
+
+		-- M: see above
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags3 = bor(RF3_NO_SLEEP, RF3_DEMON)
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags4 = bor(RF4_BR_FIRE)
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags5 = bor(RF5_BA_FIRE)
 
 		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
 		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5

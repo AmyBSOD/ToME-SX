@@ -1277,8 +1277,8 @@ G:0:G
 F:FLOOR | REMEMBER | NOTICE | CAN_RUN
 D:0:You feel like running a marathon.
 
-N:252:Unfinished Altar
+N:252:Altar of Sleep
 G:0:g
 F:FLOOR | REMEMBER | NOTICE | CAN_RUN
-D:0:An altar for a deity who hasn't been implemented yet.
+D:0:You feel like laying down on a soft bed.
 

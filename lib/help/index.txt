@@ -237,7 +237,8 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
     *****g_este.txt*02[Este]
     *****g_vana.txt*02[Vana]
     *****g_vaire.txt*02[Vaire]
-    *****g_vaire.txt*02[Nessa]
+    *****g_nessa.txt*02[Nessa]
+    *****g_lorien.txt*02[Lorien]
   *****birth.txt*16[Gold]
 ~~~~~72
 *****/Hindex.txt*72[H]
@@ -277,6 +278,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
   *****dungeon.txt*23[Light]
   *****dungeon.txt*17[Loading old characters]
   *****c_lorema.txt*01[Loremaster]
+  *****g_lorien.txt*01[Lorien]
   *****rm_lsoul.txt*01[Lost Soul]
   *****luckspoi.txt*01[Luck ]
 ~~~~~77

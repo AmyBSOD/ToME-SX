@@ -2117,6 +2117,18 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		}
 	}
 
+	GOD(GOD_LORIEN)
+	{
+		if (p_ptr->grace >= 25000)  (*f2) |= TR2_FREE_ACT;
+		if (p_ptr->grace >= 50000)  (*f2) |= TR2_RES_CONF;
+		if (p_ptr->grace >= 70000)  (*f6) |= TR6_RES_FORCE;
+		if (p_ptr->grace >= 90000)  (*f2) |= TR2_RES_DARK;
+		PRAY_GOD(GOD_LORIEN)
+		{
+			if (p_ptr->grace > 40000) (*f1) |= TR1_INT;
+		}
+	}
+
 	GOD(GOD_TULKAS)
 	{
 		if (p_ptr->grace > 5000)  (*f1) |= TR1_CON;

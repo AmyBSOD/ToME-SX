@@ -3671,7 +3671,7 @@
 #define GF_KILL_WALL    40
 #define GF_KILL_DOOR    41
 #define GF_KILL_TRAP    42
-#define GF_MAKE_WALL    45
+#define GF_MAKE_WALL    45 /* doesn't seem to work! use GF_STONE_WALL below --Amy */
 #define GF_MAKE_DOOR    46
 #define GF_MAKE_TRAP    47
 #define GF_OLD_CLONE    51
@@ -5853,7 +5853,8 @@ extern int PlayerUID;
 #define GOD_VANA                15
 #define GOD_VAIRE               16
 #define GOD_NESSA               17
-#define MAX_GODS_INIT           18
+#define GOD_LORIEN              18
+#define MAX_GODS_INIT           19
 
 #define GOD(g)                  if (p_ptr->pgod == (g))
 #define PRAY_GOD(g)             if ((p_ptr->pgod == (g)) && (p_ptr->praying))

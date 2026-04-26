@@ -6529,6 +6529,9 @@ extern s16b dun_level;
 /** @def GOD_NESSA */
 #define GOD_NESSA	     17
 
+/** @def GOD_LORIEN */
+#define GOD_LORIEN	     18
+
 /** @} */
 
 
