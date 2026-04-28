@@ -1692,7 +1692,7 @@ option_type option_info[] =
 	{ &auto_scum, TRUE, 6, 20,
 	  "auto_scum", "Auto-scum for good levels" },
 
-	{ &dead_ends, TRUE, 6, 21,
+	{ &dead_ends, FALSE, 6, 21,
 	  "dead_ends", "Allow certain quests to fail permanently" },
 
 	/* XXX 17 is used BEFORE */
