@@ -2215,6 +2215,20 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 
 	}
 
+	if (p_ptr->mimic_form == resolve_mimic_name("Sing")) {
+		(*f2) |= (TR2_HOLD_LIFE);
+		(*f2) |= (TR2_RES_DARK);
+		(*f2) |= (TR2_RES_COLD);
+		(*f2) |= (TR2_RES_POIS);
+		(*f2) |= (TR2_RES_NETHER);
+		(*f6) |= (TR6_RES_NERVE);
+		(*f2) |= (TR2_SENS_FIRE);
+		(*f3) |= (TR3_DRAIN_EXP);
+		(*f5) |= TR5_RAPID_HUNGER;
+		if (p_ptr->mimic_level >= 20) (*f2) |= (TR2_INVIS);
+		if (p_ptr->mimic_level >= 25) (*f2) |= (TR2_RES_SOUND);
+	}
+
 	if (p_ptr->mimic_form == resolve_mimic_name("Mana Ball")) {
 		(*f3) |= (TR3_FEATHER);
 		(*f2) |= (TR2_INVIS);
@@ -2383,6 +2397,31 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		if (p_ptr->mimic_level >= 40) (*f2) |= TR2_RES_ELEC;
 		if (p_ptr->mimic_level >= 50) (*f6) |= (TR6_RES_MIND);
 		if (p_ptr->mimic_level >= 60) (*f3) |= TR3_SH_ELEC;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Beetle")) {
+		if (p_ptr->mimic_level >= 50) (*f6) |= TR6_RES_DMG;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Goldfish")) {
+		if (p_ptr->mimic_level >= 25) (*f5) |= TR5_RES_WATER;
+		(*f5) |= TR5_WATER_BREATH;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Shark")) {
+		if (p_ptr->mimic_level >= 25) (*f5) |= TR5_RES_WATER;
+		(*f5) |= TR5_WATER_BREATH;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Lich")) {
+		(*f5) |= TR5_MAGIC_BREATH;
+		(*f2) |= TR2_RES_DARK;
+		(*f2) |= TR2_RES_COLD;
+		(*f2) |= TR2_RES_POIS;
+		(*f2) |= TR2_RES_NETHER;
+		(*f6) |= (TR6_RES_NERVE);
+		(*f2) |= TR2_HOLD_LIFE;
+		if (p_ptr->mimic_level >= 30) (*f4) |= TR4_IM_NETHER;
 	}
 
 	if (p_ptr->mimic_form == resolve_mimic_name("Yith")) {

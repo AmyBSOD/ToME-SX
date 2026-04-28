@@ -1801,7 +1801,7 @@ void sanity_blast(monster_type * m_ptr, bool necro)
 		}
 
 		/* Undead characters are 50% likely to be unaffected */
-		if ((PRACE_FLAG(PR1_UNDEAD)) || (p_ptr->mimic_form == resolve_mimic_name("Vampire")))
+		if ((PRACE_FLAG(PR1_UNDEAD)) || (p_ptr->mimic_form == resolve_mimic_name("Vampire")) || (p_ptr->mimic_form == resolve_mimic_name("Sing")) )
 		{
 			if (randint(100) < (25 + (p_ptr->lev))) return;
 		}

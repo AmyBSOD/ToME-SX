@@ -1716,6 +1716,12 @@ struct player_type
 	 */
 	bool auto_id;
 
+	/** @structvar invis;
+	 * @brief Number
+	 * @note bleh, how invis the player is, why was that missing --Amy
+	 */
+	s16b invis;
+
 	/** @structvar dis_to_h
 	 * @brief Number
 	 * @note Known bonus to hit

@@ -1504,7 +1504,7 @@ void do_cmd_eat_food(void)
 	/* Food can feed the player, in a different ways */
 
 	/* Vampires */
-	if ((PRACE_FLAG(PR1_VAMPIRE)) || (p_ptr->mimic_form == resolve_mimic_name("Vampire")))
+	if ( (PRACE_FLAG(PR1_VAMPIRE)) || (p_ptr->mimic_form == resolve_mimic_name("Vampire")) || (p_ptr->mimic_form == resolve_mimic_name("Sing")) )
 	{
 		/* Reduced nutritional benefit */
 		/*		(void)set_food(p_ptr->food + (fval / 10)); -- No more */

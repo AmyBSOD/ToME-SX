@@ -1671,6 +1671,14 @@ static void calc_powers(void)
 		p = PWR_VAMPIRISM;
 		p_ptr->powers[p] = TRUE;
 	}
+	if (p_ptr->mimic_form == resolve_mimic_name("Vampire")) {
+		p = PWR_VAMPIRISM;
+		p_ptr->powers[p] = TRUE;
+	}
+	if (p_ptr->mimic_form == resolve_mimic_name("Sing")) {
+		p = PWR_VAMPIRISM;
+		p_ptr->powers[p] = TRUE;
+	}
 	if (p_ptr->mimic_form == resolve_mimic_name("Mana Ball")) {
 		p = PWR_VTELEPORT;
 		p_ptr->powers[p] = TRUE;

@@ -90,6 +90,210 @@ add_mimic_shape
 
 add_mimic_shape
 {
+	["name"] =      "Beetle",
+	["obj_name"] =  "Beetle Carapace",
+	["desc"] = 	"Beetles are slow, but well-armored.",
+	["realm"] =     "nature",
+	["level"] =     10,
+	["rarity"] =    10,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.to_a = player.to_a + 30 + player.mimic_level
+			player.dis_to_a = player.dis_to_a + 30 + player.mimic_level
+			player.modify_stat(A_STR, 5 + (player.mimic_level / 8))
+			player.modify_stat(A_CON, 5 + (player.mimic_level / 8))
+			player.modify_stat(A_CHR, -15)
+			player.modify_stat(A_INT, -3)
+			player.modify_stat(A_WIS, -2)
+
+			player.pspeed = player.pspeed - 2
+			player.skill_dev = player.skill_dev - 3
+			player.skill_sav = player.skill_sav + 2 + (player.mimic_level / 8)
+			player.skill_stl = player.skill_stl + 2 + (player.mimic_level / 20)
+			player.skill_srh = player.skill_srh + 2 + (player.mimic_level / 8)
+			player.skill_dig = player.skill_dig + 2 + (player.mimic_level / 7)
+
+			if player.mimic_level >= 50 then player.resist_dmg = TRUE end
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Bull",
+	["obj_name"] =  "Bull Skin",
+	["desc"] = 	"Bulls charge their enemy and hope to hit.",
+	["realm"] =     "nature",
+	["level"] =     25,
+	["rarity"] =    25,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.pspeed = player.pspeed + 10 + (player.mimic_level / 10)
+			player.modify_stat(A_STR, 8 + (player.mimic_level / 6))
+			player.modify_stat(A_INT, -10)
+			player.modify_stat(A_WIS, -10)
+			player.modify_stat(A_DEX, -30)
+			player.to_h_ranged = player.to_h_ranged - 25
+			player.skill_dis = player.skill_dis - 10
+			player.skill_dev = player.skill_dev - 5
+			player.skill_stl = player.skill_stl - 10
+			player.to_h = player.to_h - 12
+			player.dis_to_h = player.dis_to_h - 12
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Goldfish",
+	["obj_name"] =  "Goldfish Fins",
+	["desc"] = 	"Fish can breathe water.",
+	["realm"] =     "nature",
+	["level"] =     5,
+	["rarity"] =    15,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.water_breath = TRUE
+			player.modify_stat(A_STR, -8)
+			player.modify_stat(A_DEX, -5)
+			player.modify_stat(A_CON, -10)
+			player.to_h_ranged = player.to_h_ranged - 5
+			player.to_a = player.to_a - 5
+			player.dis_to_a = player.dis_to_a - 5
+
+			player.skill_dis = player.skill_dis - 10
+			player.skill_srh = player.skill_srh - 10
+			player.skill_fos = player.skill_fos - 10
+
+			if player.mimic_level >= 25 then player.resist_water = TRUE end
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Shark",
+	["obj_name"] =  "Shark Body",
+	["desc"] = 	"Sharks feel at home in the water and are fast and aggressive.",
+	["realm"] =     "nature",
+	["level"] =     30,
+	["rarity"] =    40,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.water_breath = TRUE
+			player.modify_stat(A_DEX, -10)
+			player.modify_stat(A_INT, -6)
+			player.modify_stat(A_WIS, -6)
+			player.modify_stat(A_CHR, -5)
+			player.to_h_ranged = player.to_h_ranged - 20
+			player.to_a = player.to_a - 20
+			player.dis_to_a = player.dis_to_a - 20
+
+			player.pspeed = player.pspeed + 2 + (player.mimic_level / 12)
+
+			player.skill_dis = player.skill_dis - 15
+			player.skill_srh = player.skill_srh - 5
+			player.skill_fos = player.skill_fos - 12
+			player.skill_sav = player.skill_sav - 5
+			player.skill_dev = player.skill_dev - 5
+			player.skill_stl = player.skill_stl - 5
+
+			-- attract monsters
+			player.nastytrap185 = TRUE
+
+			if player.mimic_level >= 25 then player.resist_water = TRUE end
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Sing",
+	["obj_name"] =  "Sing Gear",
+	["desc"] = 	"Sing's vampiric platform boots are very effective martial artists.",
+	["realm"] =     "nature",
+	["level"] =     50,
+	["rarity"] =    50,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.hold_life = TRUE
+			player.resist_dark = TRUE
+			player.resist_nerve = TRUE
+			player.resist_cold = TRUE
+			player.resist_poison = TRUE
+			player.resist_nether = TRUE
+			player.sensible_fire = TRUE
+			player.sensible_lite = TRUE
+			if player.mimic_level >= 25 then player.resist_sound = TRUE end
+
+			player.modify_stat(A_CHR, 5 + (player.mimic_level / 5))
+			player.skill_sav = player.skill_sav + 3 + (player.mimic_level / 8)
+			player.martial_bonus = player.martial_bonus + 5 + (player.mimic_level / 3)
+			player.skill_stl = player.skill_stl - 10
+			player.to_h_ranged = player.to_h_ranged - 20
+			player.to_d_ranged = player.to_d_ranged - 10
+			player.to_a = player.to_a - 10
+			player.dis_to_a = player.dis_to_a - 10
+			player.luck_cur = player.luck_cur - 50
+
+			player.exp_drain = TRUE
+			player.rapid_hunger = TRUE
+
+			-- lower carry cap
+			player.nastytrap44 = TRUE
+			-- traps spawn over time
+			player.nastytrap51 = TRUE
+			-- traps can be higher level
+			player.nastytrap107 = TRUE
+
+			if player.mimic_level >= 20 then player.invis = player.invis + 5 + (player.mimic_level / 10) end
+
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Lich",
+	["obj_name"] =  "Lich Phylactery",
+	["desc"] = 	"Lichs are mighty undead. They're good at spellcasting.",
+	["realm"] =     "nature",
+	["level"] =     50,
+	["rarity"] =    80,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_DEX, -10)
+			player.modify_stat(A_STR, -20)
+			player.modify_stat(A_CON, -10)
+			player.modify_stat(A_INT, 10 + (player.mimic_level / 8))
+			player.modify_stat(A_WIS, 4 + (player.mimic_level / 14))
+			player.pspeed = player.pspeed - 2
+			player.to_s = player.to_s + 2 + (player.mimic_level / 5)
+
+			player.magic_breath = TRUE
+
+			player.resist_cold = TRUE
+			player.resist_dark = TRUE
+			player.resist_neth = TRUE
+			player.resist_poison = TRUE
+			player.resist_nerve = TRUE
+			player.hold_life = TRUE
+			if player.mimic_level >= 30 then player.immune_neth = TRUE end
+
+			-- monster levels are higher
+			player.nastytrap27 = TRUE;
+			-- monster spawn rate increased
+			player.nastytrap81 = TRUE;
+			-- more monsters on new levels
+			player.nastytrap128 = TRUE;
+			-- monsters are higher level more often
+			player.nastytrap177 = TRUE;
+
+			player.skill_sav = player.skill_sav + (player.mimic_level / 4)
+			player.skill_dev = player.skill_dev + (player.mimic_level / 5)
+
+	end,
+}
+
+add_mimic_shape
+{
 	["name"] =      "Insect",
 	["obj_name"] =  "Insect Husk",
 	["desc"] = 	"Insects are smart and fast, and can sense the presence of other insects.",
@@ -407,6 +611,8 @@ add_mimic_shape
 			player.skill_stl = player.skill_stl - 20
 			player.luck_cur = player.luck_cur - 20
 			player.drain_life = player.drain_life + 1
+
+			-- your items curse themselves over time
 			player.nastytrap26 = TRUE
 
 	end,
@@ -461,6 +667,8 @@ add_mimic_shape
 			player.dis_to_h = player.dis_to_h - 20
 			player.to_d = player.to_d - 20
 			player.dis_to_d = player.dis_to_d - 20
+
+			-- you can't heal status effects
 			player.nastytrap36 = TRUE
 
 	end,
@@ -507,7 +715,10 @@ add_mimic_shape
 			player.skill_fos = player.skill_fos - 40
 			player.anti_tele = TRUE
 			player.rapid_hunger = TRUE
+
+			-- you cannot gain piety
 			player.nastytrap4 = TRUE
+
 			player.luck_cur = player.luck_cur - 10
 
 	end,
@@ -639,7 +850,10 @@ add_mimic_shape
 			if player.mimic_level >= 60 then player.num_blow = player.num_blow + 1 end
 			if player.mimic_level >= 80 then player.num_blow = player.num_blow + 1 end
 			if player.mimic_level >= 90 then player.num_blow = player.num_blow + 1 end
+
+			-- you have the ancient foul curse
 			player.nastytrap12 = TRUE
+
 			player.rapid_hunger = TRUE
 			player.resist_time = TRUE
 			player.aggravate = TRUE
