@@ -6938,6 +6938,15 @@ F:SLAY_EVIL | BLESSED | CRIT |
 f:MUST2H
 D:A very powerful sword that also makes you fast when wielded. 
 
+# dwarven lantern
+N:606:'Fearful Tiredom'
+I:39:3:0
+W:30:40:50:8000
+P:0:1d1:0:0:0
+F:LITE2 | FREE_ACT | RES_FEAR | 
+f:LITE2 |
+D:You don't need to be afraid... 
+
 # splint mail
 N:607:'Third Next Mission'
 I:37:10:3
@@ -7088,6 +7097,16 @@ F:SLAY_EVIL | LIFE | RES_DISEN | RES_MORGUL |
 f:MUST2H
 D:A quite powerful artifact sword inspired by the unique item with 
 D:the same name in Diablo 2. 
+
+# espadon
+N:622:'Pluraldida'
+I:23:24:4
+W:30:30:200:7000
+P:0:2d9:10:10:0
+F:MUST2H | SPEED | VORPAL | SLAY_EVIL | SLAY_DEMON | SLAY_DRAGON | 
+F:SLAY_UNDEAD | SLAY_GIANT | BRAND_FIRE | RES_FIRE | LUCK | LITE3 | 
+f:MUST2H
+D:A sword for heavy combat. 
 
 # great scimitar
 N:623:'Perry's Notgo'
@@ -7284,6 +7303,36 @@ F:BLOWS
 D:Those bonuses are enough right there. Who needs AC when 
 D:you can have damage bonuses and extra blows, after all? 
 
+# small mithril boomerang
+N:648:of the Absurd Value
+I:15:5:0
+W:25:40:40:10000
+P:0:2d5:0:34:0
+D:It has a very high damage bonus. That's about it. 
+
+# mithril boomerang
+N:649:'Multiplier Useless'
+I:15:6:2
+W:35:50:40:10000
+P:0:10d6:13:18:0
+F:DEX | SLAY_EVIL | BRAND_ELEC | 
+D:No matter whether the amount of base dice is 10 or 
+D:maybe even 50, it's still a boomerang and by definition 
+D:those are useless. Always. 
+
+# water dsm
+N:650:'TV Topmodel'
+I:38:31:8
+W:35:50:200:23000
+P:30:2d4:0:0:23
+a:HARDCORE=CHARM_OTHERS
+F:RES_WATER | FLY | ACTIVATE | CHR | INFRA | SEARCH | 
+F:STEALTH | ESP_ALL | SLOW_DIGEST | REGEN | ATTRACT_MON | 
+f:RES_WATER |
+D:You want to be a beautiful topmodel who floats through the 
+D:fleecy thermal spa while wearing absolutely gorgeous 
+D:platform high heels. Oh, and a sexy swimsuit, of course. 
+
 # poison needle
 N:652:'Trina's Stabber'
 I:23:42:7
@@ -7318,6 +7367,14 @@ W:5:5:80:3000
 P:0:1d1:20:0:0
 F:DEX
 D:You're unlikely to miss with this well-balanced gun. 
+
+# glock
+N:658:'Bull Mode'
+I:19:34:0
+W:30:30:150:16000
+P:0:1d1:20:14:0
+F:ESP_EVIL | 
+D:Catch the badguys! And if they resist, shoot them! 
 
 # desert eagle
 N:659:of Diana
@@ -7437,6 +7494,15 @@ F:LUCK | FREE_ACT | RES_NETHER | RES_LITE | RES_NEXUS |
 F:NO_MAGIC | FEATHER | 
 D:Are you going to leave level 13 without saving the prince? 
 
+# scuba gear
+N:678:'Town of Beautiful Water'
+I:12:1:10
+W:70:150:100:25000
+P:0:1d1:0:0:0
+F:WATER_BREATH | CHR | RES_WATER | INV_PROTECT | 
+f:WATER_BREATH
+D:Now you can swim to your heart's desire. 
+
 # ethereal slippers
 N:680:of the Faded Lady
 I:30:13:8
@@ -7454,6 +7520,15 @@ W:30:30:40:20000
 P:1:1d1:4:4:0
 F:RES_ELEC | MARTIAL_ARTS
 D:...but still uber.
+
+# coronet
+N:682:'Melee Absurdity'
+I:33:14:-2
+W:60:200:40:25000
+P:2:1d1:0:5:10
+F:BRAND_COLD | STEALTH | CURSED | HEAVY_CURSE | PERMA_CURSE | 
+D:A melee brand on a helmet-slot item. That's absurd. To balance 
+D:this one, we decided to make it impossible to take off. 
 
 # tiara
 N:683:'Kira's Guardian'
@@ -7535,6 +7610,16 @@ F:WIS | INFRA | SUST_CON | RES_ACID | RES_DARK | RES_BLIND |
 F:RES_SOUND | SAVING_MALUS | ESP_EVIL | 
 D:A rather protective helm, but it might cause you to see things 
 D:that'd best be left unseen. 
+
+# full helm
+N:691:'Madness Play'
+I:32:14:6
+W:75:40:250:20000
+P:11:1d3:0:0:21
+F:SAVING_MALUS | SPEED | INT | INFRA | SUST_WIS | 
+F:IM_ACID | RES_CONF | RES_CHAOS | RES_MIND | NO_TELE | 
+F:CURSED | SPELL_CONTAIN | WIELD_CAST | ESP_EVIL | 
+D:Embrace the madness... 
 
 # small steel shield
 N:692:'XXXXXXXXXXXXXXXXXXXXX'
@@ -7766,6 +7851,16 @@ F:SUST_STR | KILL_DEMON | KILL_UNDEAD |
 f:COULD2H
 D:Besides its high damage, it has an interesting set of bonuses. 
 
+# bec-de-corbin
+N:717:'Schrack! Schrack!'
+I:22:25:4
+W:30:40:160:10000
+P:0:4d3:12:19:0
+F:COULD2H | RES_NETHER | SPEED | KILL_UNDEAD | BRAND_FIRE | 
+F:WOUNDING | 
+f:COULD2H
+D:'Schrack!' is the sound made whenever you swing a heavy polearm. 
+
 # great poleaxe
 N:718:of Usability
 I:22:27:5
@@ -7808,6 +7903,16 @@ f:MUST2H
 D:Thankfully this game doesn't require you to play in some stupid ladder mode 
 D:just to be able to find this artifact. 
 
+# hyper spear
+N:724:'The Amazon's Last Chance'
+I:22:36:20
+W:70:40:150:23000
+P:0:3d7:13:19:0
+F:DODGE | DEX | SLAY_ANIMAL | SLAY_DEMON | SUST_DEX | 
+F:RES_ELEC | RES_LITE | RES_MORGUL | CRIT | ESP_ANIMAL | 
+D:Playing a spear amazon? Then this is your last chance of 
+D:getting a proper weapon. 
+
 # light plate mail
 N:725:'Rouge Like'
 I:36:17:3
@@ -7817,6 +7922,16 @@ F:SPEED | INT | WIS | SUST_INT | SUST_WIS | STEALTH |
 F:RES_FIRE | RES_CONF | RES_NEXUS | RES_PLASMA | SH_FIRE | 
 F:SLOW_DIGEST | LITHE | DODGE | 
 D:You say it's spelled 'roguelike'? You are wrong! :D 
+
+# light plate mail
+N:726:'Agile Coat'
+I:36:17:7
+W:33:20:50:7500
+P:16:1d1:-1:0:13
+F:DODGE | LITHE | DEX | SUST_DEX | FREE_ACT | RES_FIRE | 
+F:RES_POIS | RES_NERVE | 
+D:A rather light suit, allowing flexible movement while still 
+D:offering protection. 
 
 # greatsword
 N:729:'The Grandfather'
@@ -7828,6 +7943,17 @@ F:KILL_DRAGON | KILL_DEMON | SLAY_GIANT |
 f:MUST2H
 D:A great damage-disher. 
 
+# light sword
+N:731:'Luke's Jedi Trick'
+I:23:39:2
+W:50:50:150:18000
+P:0:3d7:23:8:0
+F:COULD2H | LITE2 | SLAY_EVIL | DEX | CON | SUST_CON | 
+F:SEARCH | TUNNEL | BRAND_ELEC | RES_LITE | RES_MORGUL | 
+F:DODGE | 
+f:COULD2H
+D:It's a light sword, not a laser sword... 
+
 # legend thorn
 N:734:'Milena's Heartripper'
 I:23:45:6
@@ -7838,6 +7964,17 @@ F:BRAND_POIS | RES_FIRE | RES_ELEC | RES_COLD | RES_POIS |
 F:ACTIVATE | RES_MORGUL | WOUNDING | DISARM | 
 a:HARDCORE=SPEED
 D:Don't underestimate the silent assassin. She kills without mercy. 
+
+# conqueror sword
+N:735:'Hannibal's Conquest'
+I:23:46:4
+W:70:60:200:26000
+P:0:3d8:17:18:0
+F:COULD2H | CLIMB | SPEED | STR | BRAND_ELEC | SUST_STR | SUST_CON | 
+F:RES_FIRE | INV_PROTECT | LITE1 | SLOW_DIGEST | WOUNDING | 
+f:COULD2H
+D:You wanna cross the alps while riding a dumbo, and conquer the 
+D:empire on the other side? 
 
 # baton
 N:736:'Nord's Tenderizer'
@@ -8051,6 +8188,15 @@ P:0:2d8:4:12:-4
 F:MUST2H | STR | CON | RES_BLIND | SLAY_EVIL | SLAY_UNDEAD | 
 f:MUST2H
 D:"It is called DIMoak's Hew!", you complain. 
+
+# bardiche
+N:765:'So heavy...'
+I:22:38:6
+W:20:20:500:6000
+P:0:2d8:5:30:0
+F:MUST2H | STR | FREE_ACT | 
+f:MUST2H
+D:It's particularly heavy, and hits the enemy really hard. 
 
 # mighty sling
 N:769:'Time's Up'
