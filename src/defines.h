@@ -1440,6 +1440,7 @@
 #define ACT_MUSIC				200
 /* 170 -> unused */
 #define ACT_JOLT_COLA           201
+#define ACT_BA_DISI_H           202
 
 /*** Object "tval" and "sval" codes ***/
 

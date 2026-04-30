@@ -2029,6 +2029,7 @@ static const char *activation_names[] =
 	"XXX199",
 	"MUSIC",                /*  200*/
 	"JOLT_COLA",            /* 201 */
+	"BA_DISI_H",            /* 202 */
 	""
 };
 

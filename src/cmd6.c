@@ -9713,6 +9713,19 @@ turn_monsters(40 + p_ptr->lev);
 				break;
 			}
 
+		case ACT_BA_DISI_H:
+			{
+				if (!doit) return "large disintegration ball (500) every 500 turns";
+				fire_ball(GF_DISINTEGRATE, 5, 500, 7);
+
+				o_ptr->timeout = 500;
+
+				/* Window stuff */
+				p_ptr->window |= (PW_INVEN | PW_EQUIP);
+
+				break;
+			}
+
 		case ACT_SPIN:
 			{
 				if (!doit) return "spinning around every 50+d25 turns";

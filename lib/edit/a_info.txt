@@ -6907,6 +6907,20 @@ f:RES_SOUND |
 D:It shines a bright yellow, and is completely impervious to acid. 
 D:However, it also makes you easier to see. 
 
+# chaos dsm
+N:601:'Metallic Robot Suit'
+I:38:18:6
+W:40:50:200:20000
+P:30:2d4:-2:0:25
+a:HARDCORE=BR_CHAOS
+F:ATTR_MULTI | ACTIVATE | 
+F:RES_CHAOS | RES_DISEN | FLY | CON | SUST_CON | SUST_STR | 
+F:IM_FIRE | RES_ACID | RES_ELEC | RES_POIS | RES_FEAR | 
+F:NO_TELE | FEATHER | SLOW_DIGEST | LITE2 | DRAIN_MANA | 
+F:SAVING_MALUS | RES_PLASMA | 
+f:RES_CHAOS | RES_DISEN | 
+D:Turn into the evil floating robot by donning this suit! 
+
 # balance dsm
 N:602:'Platinum Plate'
 I:38:20:5
@@ -6918,6 +6932,16 @@ F:ACTIVATE | SPELL | REFLECT | ESP_GOOD | RES_NETHER | RES_NEXUS |
 f:RES_CHAOS | RES_DISEN | RES_SOUND | RES_SHARDS |
 D:It's heavier than a regular dragon scale mail, but also provides 
 D:additional protection and, strangely enough, makes spells easier to cast. 
+
+# dragon shield
+N:603:of Shimmering
+I:34:6:3
+W:50:40:100:12000
+P:8:1d3:0:0:18
+F:RES_FIRE | RES_COLD | RES_ELEC | RES_POIS | DODGE | 
+F:LITHE | LITE1 | 
+D:Somewhat weak for how long it probably takes for you to find it, 
+D:but at least it has the base resistances covered. 
 
 # zweihander
 N:604:'Konrad's Stride'
@@ -7160,6 +7184,14 @@ F:KILL_DEMON | SLAY_ORC | ESP_ORC | DEX | SUST_DEX |
 F:RES_FIRE | RES_CHAOS | INT | ESP_DEMON | 
 D:Are the egotypes too wimpy for your tastes? Then use this. 
 
+# ring mail
+N:628:of Yawning
+I:37:2:5
+W:10:25:200:6000
+P:12:1d4:-2:0:5
+F:MAGIC_FIND | INT | ESP_TROLL | 
+D:Seeing this underwhelming artifact makes you yawn. 
+
 # cord armor
 N:629:'Bonechain'
 I:36:9:2
@@ -7262,6 +7294,15 @@ F:BRAND_POIS | BRAND_ACID | BRAND_COLD | BRAND_ELEC | BRAND_FIRE |
 D:No matter how many brands it has, it's still a boomerang and you 
 D:know that boomerangs suck. Steer clear. 
 
+# banjo
+N:641:'Brother's Wrong Name'
+I:14:72:4
+W:20:20:30:5000
+P:0:1d1:-2:0:-10
+F:SAVING_MALUS | STR | DEX | MARTIAL_ARTS | 
+D:Yeah, I guess spelling 'banjo' correctly isn't necessarily easy, 
+D:but misspelling it as 'bantor'? Really?! 
+
 # lute
 N:642:'Louten Creek'
 I:14:73:4
@@ -7293,6 +7334,14 @@ D:You can celebrate that you've found a sentient weapon, but usually
 D:they're all hype and not much payoff. It takes forever to level them 
 D:up, and once they gain some detrimental properties they're no longer 
 D:worth using. Better find a good randart instead. 
+
+# small mithril shield
+N:646:'Super Tower'
+I:34:7:8
+W:40:50:65:15000
+P:10:1d2:0:0:20
+F:DEX | LITHE | REFLECT | SUST_STR | RES_DMG | 
+D:This super powerful shield can deflect a lot of attacks. 
 
 # buckler
 N:647:'Metal Thorn'
@@ -7445,6 +7494,18 @@ P:0:1d1:7:15:0
 F:CON | RES_NETHER | XTRA_SHOTS | HOLD_LIFE | MARTIAL_ARTS | 
 D:The gun of an old soldier who is retired by now. 
 
+# glory axe
+N:672:of the Thief's Quest
+I:24:34:5
+W:70:150:360:30000
+P:0:5d8:16:16:0
+F:MUST2H | STEALTH | LEVELS | SEARCH | DISARM | 
+f:MUST2H
+D:Yeah, of course an axe isn't the usual weapon wielded by a thief, 
+D:especially not a two-handed one, but you can level it up and then 
+D:it might gain some additional useful properties. Or it'll start 
+D:causing earthquakes, making it nearly useless. The RNG will decide. 
+
 # decapitator
 N:673:'Hellslayer'
 I:24:35:8
@@ -7521,12 +7582,13 @@ P:1:1d1:4:4:0
 F:RES_ELEC | MARTIAL_ARTS
 D:...but still uber.
 
-# coronet
+# coronet; brand doesn't work on a non-weapon, sadly...
 N:682:'Melee Absurdity'
 I:33:14:-2
 W:60:200:40:25000
-P:2:1d1:0:5:10
+P:2:1d1:0:8:10
 F:BRAND_COLD | STEALTH | CURSED | HEAVY_CURSE | PERMA_CURSE | 
+F:IM_COLD | 
 D:A melee brand on a helmet-slot item. That's absurd. To balance 
 D:this one, we decided to make it impossible to take off. 
 
@@ -7933,6 +7995,25 @@ F:RES_POIS | RES_NERVE |
 D:A rather light suit, allowing flexible movement while still 
 D:offering protection. 
 
+# mage plate mail
+N:727:'Spell Speed'
+I:36:18:7
+W:40:60:60:80000
+P:18:1d1:-1:0:15
+F:SPEED | SPELL | 
+D:It doesn't do much, but the few things it does it'll do 
+D:very effectively! 
+
+# hybrid sword
+N:728:'Middle Way'
+I:23:36:4
+W:35:40:180:16000
+P:0:4d6:12:12:0
+F:COULD2H | DEX | CON | SUST_WIS | SUST_INT | BRAND_ACID | 
+F:WOUNDING | RES_MORGUL | 
+f:COULD2H
+D:A rather sharp sword. 
+
 # greatsword
 N:729:'The Grandfather'
 I:23:37:6
@@ -7953,6 +8034,15 @@ F:SEARCH | TUNNEL | BRAND_ELEC | RES_LITE | RES_MORGUL |
 F:DODGE | 
 f:COULD2H
 D:It's a light sword, not a laser sword... 
+
+# long dagger
+N:732:'The Rondel'
+I:23:40:6
+W:40:20:40:8000
+P:0:2d4:17:6:0
+F:DEX | CRIT | BRAND_POIS | KILL_UNDEAD | IM_POISON | 
+F:SUST_INT | HOLD_LIFE | 
+D:A rather wicked, curved blade. 
 
 # legend thorn
 N:734:'Milena's Heartripper'
@@ -8035,6 +8125,26 @@ P:0:1d1:0:0:0
 F:LITE3 | FUEL_LITE | SPEED | 
 f:LITE3 | FUEL_LITE
 D:Use me! I'll make you move a bit faster! 
+
+# electric lamp
+N:742:of Edison
+I:39:12:0
+W:50:18:50:10000
+P:0:1d1:0:0:0
+F:LITE1 | LITE3 | FUEL_LITE | SEE_INVIS | 
+f:LITE3 | FUEL_LITE
+D:I claim as my invention-- 1. An electric lamp for giving light 
+D:by incandescence, consisting of a filament of carbon of high 
+D:resistance secured to metallic wires. 2. The combination 
+D:of carbon filaments with a receiver made entirely of glass 
+D:and conductors passing through the glass, and from which receiver 
+D:the air is exhausted. 3. a carbon filament or strip coiled 
+D:and connected to electric conductors so that only a portion of 
+D:the surface of such carbon conductors shall be exposed for radiating 
+D:light. 4. The method herein described of securing the platius 
+D:contact-wires to the carbon filament and carbonising of the whole 
+D:in a closed chamber. Signed by me this 1st day of November, A. D. 
+D:1879. Thomas A. Edison, - Patent Number 00223898
 
 # metal torch
 N:743:'WideBrightLite'
@@ -8134,6 +8244,16 @@ f:COULD2H
 a:HARDCORE=BERSERK
 D:The crowbar used by our favorite scientist. 
 
+# impact staff
+N:753:'Dackback'
+I:6:5:3
+W:40:30:40:7000
+P:0:4d6:0:20:0
+F:COULD2H | BRAND_FIRE | RES_COLD | MANA | SPELL_CONTAIN | 
+F:WIELD_CAST | SPELL | 
+f:COULD2H
+D:Great, now you can cast spells and also beat up opponents in melee! 
+
 # tonfa
 N:759:of the Tour Guide
 I:21:27:4
@@ -8198,6 +8318,14 @@ F:MUST2H | STR | FREE_ACT |
 f:MUST2H
 D:It's particularly heavy, and hits the enemy really hard. 
 
+# power crossbow
+N:768:of Common Generation
+I:19:27:3
+W:40:5:200:5000
+P:0:1d1:9:18:0
+F:XTRA_SHOTS | XTRA_MIGHT | 
+D:Why is the game generating so many crossbows, you wonder? 
+
 # mighty sling
 N:769:'Time's Up'
 I:19:5:4
@@ -8207,6 +8335,26 @@ F:RES_TIME | CURSED | AUTO_CURSE | STR | INFRA | SUST_INT |
 F:RES_ACID | RES_ELEC | XTRA_MIGHT | SAVING_MALUS | HOLD_LIFE | 
 F:ANTIMAGIC_10 | DRAIN_HP | RAPID_HUNGER | MARTIAL_ARTS | 
 D:Running out of time, eh? 
+
+# volume armament
+N:771:of Cursed Immunity
+I:37:21:0
+W:30:20:250:5000
+P:19:1d4:-2:0:-15
+F:IM_FIRE | AUTO_CURSE | CURSED | HEAVY_CURSE | ACTIVATE | 
+F:ATTRACT_MON | 
+a:HARDCORE=BA_DISI_H
+D:sssssssssssslllllllllllllll-sssssssssssssdmmmmmmmmmmmmmmmmmmmmmmmmmmmmm-
+D:nnnnnnnnnnnnnnn-mmmmmmmmmmmmmmmmmmmm-nnnnnnnnnnnnn-mmmmmmm-d-dmmmm-
+D:nnnnnnnkrrrkrrbbmmmmmmmmdnndnnnnnnnnndeeeenmnmnmnmmmmmmmmschhhhhhhhddddddddddd-
+D:dddddddd 
+D:dddddmmmnnnnnnnnnnnnnnnnmmmmmmmmmmmmmmnnnnnnnnnnnnnnnschschsch
+D:mmmmmmmmmmmnnnnnnnnnnnnnnooooooooooooschschschkrrr-
+D:BEEP-BEEP-BEEP-BEEP-BEEP-BEEP-BEEP-
+D:schschschkrkrkrkrkrkrkrkrzzzzzzzzzzzzzzzzzzppppschschschsch
+D:rrrrrrrrrrrrrrrrrrrrrrrrrrrfoefoefoefoeoeoeoeoeoeoeoeoeoe
+D:schschschkrrrrrrrrrrrrroeoeoeoeoeoeoeoeoeoeoeoeoeoeoeschhhhhhhhhhhhhhhhdnnnnnn-
+D:dnnnnnnnroeoeoeoeoeoeoeoeoeoeoeoeoebiiiiiiiiiiiiiikrtkrtkrtkrtkrtkrtkrtkrt 
 
 # lead suit
 N:772:'Gammamonious'
@@ -8228,6 +8376,20 @@ F:AUTO_CURSE | ATTRACT_MON |
 f:SPEED
 D:A significant speed increase in all categories... but with a 
 D:pretty high price to pay! Are you gonna make that tradeoff? 
+
+# elite sneakers
+N:777:of Lady Ruth
+I:30:20:4
+W:70:50:20:23000
+P:1:1d1:0:0:18
+F:SPEED | FREE_ACT | RES_COLD | IM_POISON | ESP_UNDEAD | 
+F:SENS_FIRE | REGEN | SUST_CON | SUST_CHR | RES_NETHER | 
+F:AGGRAVATE | ACTIVATE | 
+f:SPEED
+a:HARDCORE=BA_POIS_4
+D:They effectively make you undead. Including the horrible stink 
+D:that comes with it, alerting all the monsters in a ten mile radius 
+D:around you. 
 
 # red overknees
 N:780:'Manuela's Cruelty'
