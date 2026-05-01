@@ -4178,6 +4178,10 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		{
 			text_out_c(TERM_L_RED, "It can't attack.  ");
 		}
+		if (f4 & (TR4_PRECOGNITION))
+		{
+			text_out_c(TERM_L_GREEN, "It can predict the future.  ");
+		}
 		if (f4 & (TR4_BLACK_BREATH))
 		{
 			text_out_c(TERM_L_RED, "It fills you with the Black Breath.  ");

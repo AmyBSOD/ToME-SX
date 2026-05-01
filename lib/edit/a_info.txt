@@ -7265,6 +7265,15 @@ F:RES_DARK | RES_BLIND | DRAIN_MANA |
 D:It seems that this cloak is supposed to be worn by miners. 
 D:Be aware, it drains your mana! 
 
+# mimicry cloak
+N:637:'Bored Conversion'
+I:35:100:2
+W:30:10:30:10000
+P:1:1d1:0:0:10
+F:CON | MANA | RES_CONF | MAGIC_FIND | NO_MAGIC | 
+D:Mimicry cloaks are boring, most of the time they're for 
+D:something lame and therefore not worth using. 
+
 # small wooden boomerang
 N:638:'Bangclear'
 I:15:1:0
@@ -7312,6 +7321,15 @@ F:RES_WATER | WATER_BREATH | AGGRAVATE |
 D:If you don't mind making enough noise to wake up the entire 
 D:neighborhood, equip this and water is officially no longer 
 D:a problem. 
+
+# mandolin
+N:643:'dum dum dumdum dum'
+I:14:74:5
+W:30:20:30:5000
+P:0:1d1:0:0:0
+F:CHR | FREE_ACT | SUST_WIS | LUCK | 
+D:At least it can play all the useless songs it contains. 
+D:But that doesn't make the music skill worth using anyway. 
 
 # double axe
 N:644:'Cutdown'
@@ -7382,6 +7400,20 @@ D:You want to be a beautiful topmodel who floats through the
 D:fleecy thermal spa while wearing absolutely gorgeous 
 D:platform high heels. Oh, and a sexy swimsuit, of course. 
 
+# inertia dsm
+N:651:'Palm Prom'
+I:38:32:4
+W:50:50:200:26000
+P:30:2d4:-2:0:30
+a:HARDCORE=BR_CONF
+F:RES_INERTIA | FLY | ACTIVATE | SPEED | IM_FIRE | CHR | 
+F:SUST_CHR | SUST_CON | SLOW_DIGEST | ATTRACT_MON | 
+F:MARTIAL_ARTS | LITHE | MAGIC_FIND | 
+f:RES_INERTIA |
+D:As long as you don't mind the annoying camera teams following 
+D:your journey everywhere, this lets you cross deserts without 
+D:being affected by the heat. 
+
 # poison needle
 N:652:'Trina's Stabber'
 I:23:42:7
@@ -7400,6 +7432,16 @@ F:BLOWS | SPEED | STR | CON | SLAY_EVIL | SLAY_UNDEAD |
 F:SLAY_DEMON | KILL_DRAGON | SLAY_GIANT | FLY | 
 D:This sword allows you to strike quickly like a bird. 
 
+# death scythe
+N:654:of G-Cheater
+I:22:51:8
+W:100:100:350:20000
+P:-30:10d10:-50:30:0
+F:MUST2H | VORPAL | LEVELS | RES_NETHER | CRIT | 
+f:MUST2H
+D:Collect all the souls of the dead, and use their power to 
+D:boost your weapon! 
+
 # spiked gauntlets
 N:655:'Milena's Audible Sharpness'
 I:31:8:4
@@ -7408,6 +7450,18 @@ P:4:2d2:4:7:8
 F:SPEED | STEALTH | DEX | SEARCH | INVIS | RES_DARK | 
 F:RES_POIS | LITHE | PERCEPTION | DISARM | MARTIAL_ARTS | 
 D:A silent assassin's precious tool. 
+
+# circular saw
+N:656:'Terrorblade'
+I:24:33:4
+W:70:60:360:30000
+P:0:5d6:8:19:0
+F:MUST2H | WOUNDING | SPEED | STR | SLAY_ANIMAL | 
+F:KILL_UNDEAD | KILL_DEMON | SLAY_ORC | SLAY_TROLL | 
+F:SLAY_GIANT | SLAY_DRAGON | RES_FEAR | 
+f:MUST2H | WOUNDING
+D:You feel an intense desire to grind all those pesky 
+D:monsters to bits. 
 
 # beretta
 N:657:of the Steady Hand
@@ -7452,6 +7506,15 @@ F:XTRA_MIGHT | ATTRACT_MON | RES_FEAR | CON |
 D:Superior craftsmanship makes this rifle pretty powerful, but 
 D:the enemy will try their best to take you down! 
 
+# mosin-nagant
+N:662:'One Shot, One Kill'
+I:19:46:10
+W:80:100:1200:40000
+P:0:1d1:35:30:0
+F:XTRA_MIGHT | 
+D:The monster that can survive a shot from this gun hasn't 
+D:been born yet. 
+
 # leone m3
 N:663:'Caeauwaesh!'
 I:19:55:2
@@ -7459,6 +7522,23 @@ W:10:20:300:7000
 P:0:1d1:8:12:0
 F:XTRA_MIGHT
 D:The shots of this powerful gun will definitely count. 
+
+# leone xm1014
+N:664:'BellerBeller'
+I:19:56:0
+W:40:30:600:7000
+P:0:1d1:17:12:5
+F:XTRA_SHOTS | FREE_ACT | 
+D:You feel that you can properly hold this gun even while 
+D:employing rapid fire. 
+
+# citykiller
+N:665:'Every Carnage'
+I:19:57:8
+W:70:70:1000:16000
+P:0:1d1:20:18:0
+F:XTRA_SHOTS | DEX | LITE3 | PERCEPTION | ESP_EVIL | ESP_GOOD | 
+D:Nothing escapes the wrath of the powerful shotgun. 
 
 # ingram mac-10
 N:666:'Lars's Throwaway'
@@ -7478,6 +7558,14 @@ F:XTRA_SHOTS | SUST_DEX | SUST_WIS | RES_CONF | ESP_EVIL |
 D:This standard-issue firearm has been modified to have a 
 D:higher rate of fire and also a radar for detecting badguys. 
 
+# es c90
+N:668:'Bulletfiller'
+I:19:64:40
+W:60:80:450:12000
+P:0:1d1:30:0:0
+F:XTRA_SHOTS | DEX | 
+D:This gun is certainly not inaccurate! 
+
 # imi galil
 N:669:'Fast Tides'
 I:19:73:2
@@ -7493,6 +7581,15 @@ W:40:60:600:12000
 P:0:1d1:7:15:0
 F:CON | RES_NETHER | XTRA_SHOTS | HOLD_LIFE | MARTIAL_ARTS | 
 D:The gun of an old soldier who is retired by now. 
+
+# krieg 552
+N:671:'Havana Revolution'
+I:19:75:2
+W:80:120:1000:25000
+P:0:1d1:13:10:0
+F:ESP_ALL | SPEED | 
+D:Now the opposing soldiers can go home, for you are here, 
+D:and will gun all of them down unless they surrender. 
 
 # glory axe
 N:672:of the Thief's Quest
@@ -7563,6 +7660,17 @@ P:0:1d1:0:0:0
 F:WATER_BREATH | CHR | RES_WATER | INV_PROTECT | 
 f:WATER_BREATH
 D:Now you can swim to your heart's desire. 
+
+# gas mask
+N:679:of Heavier Duty
+I:12:2:0
+W:80:100:500:40000
+P:0:1d1:0:0:0
+F:MAGIC_BREATH | IM_POISON | 
+f:MAGIC_BREATH
+D:No one shall be able to use your respiratory system as 
+D:an attack vector anymore, for now you really no longer 
+D:need to breathe. 
 
 # ethereal slippers
 N:680:of the Faded Lady
@@ -7693,6 +7801,15 @@ F:ANTIMAGIC_20 | DRAIN_MANA | CURSED | INV_PROTECT | RES_ETHER |
 F:RAPID_HUNGER | RES_FORCE | 
 D:Wtf is that?! 
 
+# large steel shield
+N:693:of Eru
+I:34:19:10
+W:80:200:400:100000
+P:20:1d6:0:0:30
+F:AUTO_ID | MANA | ESP_EVIL | CURSED | HEAVY_CURSE | PERMA_CURSE | 
+D:The ultimate artifact of the God of Creation, using it comes 
+D:at a price: you'll never be able to take it off. 
+
 # magic gloves
 # also has a random high resist
 N:694:'Early Soso'
@@ -7775,6 +7892,17 @@ W:20:15:300:6000
 P:10:1d1:0:0:8
 F:SPEED | RES_FIRE | RES_COLD | DEX | STR
 D:A pair of boots with a speed bonus! Yay!
+
+# adamantium boots
+N:703:of Doom Tales
+I:30:17:8
+W:70:60:250:60000
+P:12:1d1:0:0:20
+F:CURSED | HEAVY_CURSE | PERMA_CURSE | PRECOGNITION | IM_NETHER | 
+F:ESP_UNDEAD | RES_TIME | SUST_INT | SUST_WIS | RES_CHAOS | REGEN | 
+D:This pair of boots is infused with the power of Mandos himself. 
+D:They bestow great powers, but the wearer will have to wear them 
+D:until the end of all time. 
 
 # ancient armor
 N:704:'Ludgera's Pride'
@@ -7965,6 +8093,23 @@ f:MUST2H
 D:Thankfully this game doesn't require you to play in some stupid ladder mode 
 D:just to be able to find this artifact. 
 
+# giant scythe
+N:722:of the Little Prick Rat
+I:22:34:1
+W:60:80:300:23000
+P:0:6d5:0:0:0
+F:MUST2H | LEVELS | 
+f:MUST2H
+D:Build up your own artifact weapon by killing things with it! Yeah! 
+
+# long spear
+N:723:'Critical Reach'
+I:22:35:3
+W:40:50:140:23000
+P:0:2d10:17:7:0
+F:SPEED | CRIT | WIS | LITE3 | 
+D:Stab the monsters to death! 
+
 # hyper spear
 N:724:'The Amazon's Last Chance'
 I:22:36:20
@@ -8024,6 +8169,17 @@ F:KILL_DRAGON | KILL_DEMON | SLAY_GIANT |
 f:MUST2H
 D:A great damage-disher. 
 
+# chainsaw
+N:730:'Doomguy's Pleasure'
+I:23:38:6
+W:60:120:450:25000
+P:0:3d12:10:25:0
+F:MUST2H | ESP_EVIL | CHAOTIC | SUST_STR | SUST_CON | 
+F:SUST_DEX | KILL_DEMON | SLAY_UNDEAD | SLAY_GIANT | 
+f:MUST2H
+D:Whether it's an imp or a baron of hell, you will saw it 
+D:to bits. 
+
 # light sword
 N:731:'Luke's Jedi Trick'
 I:23:39:2
@@ -8043,6 +8199,18 @@ P:0:2d4:17:6:0
 F:DEX | CRIT | BRAND_POIS | KILL_UNDEAD | IM_POISON | 
 F:SUST_INT | HOLD_LIFE | 
 D:A rather wicked, curved blade. 
+
+# athame
+N:733:'Elbereth Written'
+I:23:44:2
+W:50:70:40:13000
+P:0:2d5:9:6:0
+F:RES_SHARDS | DEX | ACTIVATE | SLAY_UNDEAD | CRIT | 
+F:WOUNDING | 
+f:RES_SHARDS
+a:SPELL=Artifact Maggot
+D:Actually, you can activate this weapon, which is the 
+D:equivalent of saying "Elbereth". 
 
 # legend thorn
 N:734:'Milena's Heartripper'
@@ -8254,6 +8422,50 @@ F:WIELD_CAST | SPELL |
 f:COULD2H
 D:Great, now you can cast spells and also beat up opponents in melee! 
 
+# mage quarterstaff
+N:754:'Ribcraker'
+I:6:6:8
+W:40:30:80:20000
+P:0:4d7:10:20:0
+F:COULD2H | STR | SLAY_EVIL | KILL_UNDEAD | BRAND_ELEC | 
+f:COULD2H
+D:Even a wizard can bash things to death in melee with the 
+D:right artifact weapon. 
+
+# walking stick
+N:755:of Elder Assistance
+I:6:7:3
+W:55:70:70:30000
+P:0:2d8:8:8:0
+F:COULD2H | SPEED | SPELL_CONTAIN | WIELD_CAST | SPELL | 
+F:INT | WIS | REGEN | RES_MORGUL | 
+f:COULD2H
+D:Faster walking speed is very useful! 
+
+# batarang
+N:756:of Bruce
+I:15:7:5
+W:40:50:80:20000
+P:0:8d6:15:18:0
+F:DEX | STEALTH | INVIS | DISARM | 
+D:Check out the special agent nicknamed "Batman"! 
+
+# dark batarang
+N:757:of Wayne
+I:15:8:6
+W:60:70:80:35000
+P:0:4d15:20:15:0
+F:RES_DARK | CRIT | INFRA | CON | FREE_ACT | 
+D:Did you know that Batman's last name is actually "Wayne"? 
+
+# chakram
+N:758:'Ion Cannon'
+I:15:9:10
+W:70:60:100:22000
+P:0:3d15:20:20:0
+F:BRAND_ELEC | LITE3 | INFRA | 
+D:Insert a paragraph explaining why boomerangs suck here. 
+
 # tonfa
 N:759:of the Tour Guide
 I:21:27:4
@@ -8300,6 +8512,16 @@ F:CRIT | RES_CONF |
 f:MARTIAL_ARTS
 D:You wanna be a blackbelt? 
 
+# black halberd
+N:763:Without Mercy
+I:22:37:0
+W:60:30:190:25000
+P:0:6d5:0:30:0
+F:COULD2H | RES_DISEN | SLAY_EVIL | SLAY_ANIMAL | SLAY_UNDEAD | 
+F:SLAY_DEMON | SLAY_ORC | SLAY_TROLL | SLAY_GIANT | SLAY_DRAGON | 
+f:COULD2H | RES_DISEN
+D:The name says it all: it kills everything without mercy. 
+
 # bardiche
 N:764:'Dumboak's Hew'
 I:22:38:1
@@ -8318,6 +8540,25 @@ F:MUST2H | STR | FREE_ACT |
 f:MUST2H
 D:It's particularly heavy, and hits the enemy really hard. 
 
+# infernal bardiche
+N:766:'Firejet'
+I:22:39:3
+W:60:80:320:22000
+P:0:2d8:10:22:0
+F:MUST2H | IM_FIRE | BRAND_FIRE | STR | SUST_STR | 
+F:INFRA | LITE2 | KILL_UNDEAD | SH_FIRE | 
+f:MUST2H | IM_FIRE
+D:If all else fails, use fire. 
+
+# wind bow
+N:767:'Magic Seven'
+I:19:16:7
+W:80:100:40:30000
+P:0:1d1:7:7:0
+F:SPEED | XTRA_MIGHT | 
+D:I guess the game almost ascends itself if you're an archer 
+D:wielding this. 
+
 # power crossbow
 N:768:of Common Generation
 I:19:27:3
@@ -8335,6 +8576,14 @@ F:RES_TIME | CURSED | AUTO_CURSE | STR | INFRA | SUST_INT |
 F:RES_ACID | RES_ELEC | XTRA_MIGHT | SAVING_MALUS | HOLD_LIFE | 
 F:ANTIMAGIC_10 | DRAIN_HP | RAPID_HUNGER | MARTIAL_ARTS | 
 D:Running out of time, eh? 
+
+# biblic sling
+N:770:of Babylon
+I:19:6:6
+W:70:50:10:25000
+P:0:1d1:10:20:0
+F:ESP_GIANT | STR | DEX | RES_INERTIA | SUST_CHR | 
+D:Nothing can stop you from nailing that giant with a pebble. 
 
 # volume armament
 N:771:of Cursed Immunity
@@ -8366,6 +8615,32 @@ F:SPEED | TUNNEL | RES_MIND | DRAIN_MANA |
 f:RES_ETHER
 D:Now you can really go to a place that has background ether damage. 
 
+# gothic plate mail
+N:773:'Signon's Splurging'
+I:37:23:10
+W:50:50:380:40000
+P:25:2d4:-3:0:30
+F:CHR | RES_FORCE | RES_DMG | 
+D:It's shiny! 
+
+# mage robe
+N:774:of Incantapper
+I:36:23:7
+W:20:30:20:12000
+P:2:0d0:0:0:10
+F:SPELL | RES_BLIND | RES_ELEC | SUST_INT | RES_NERVE | 
+f:SPELL
+D:The apprentice spellcaster's friend. 
+
+# speedy robe
+N:775:of Gonzalez
+I:36:24:6
+W:40:50:20:60000
+P:2:0d0:0:0:12
+F:SPEED | FREE_ACT | ESP_ANIMAL | LITHE | DODGE | 
+f:SPEED
+D:Now you can be so fast, nobody's gonna catch you. 
+
 # speed boots
 N:776:'Battlenest'
 I:30:19:5
@@ -8390,6 +8665,25 @@ a:HARDCORE=BA_POIS_4
 D:They effectively make you undead. Including the horrible stink 
 D:that comes with it, alerting all the monsters in a ten mile radius 
 D:around you. 
+
+# seven league boots
+N:778:of Spirit Cloth
+I:30:21:10
+W:77:77:80:77777
+P:2:1d1:0:0:7
+F:SPEED | LITHE | DODGE | RES_NETHER | RES_COLD | 
+f:SPEED
+D:They're made of a particularly lightweight material. 
+
+# italian shoes
+N:779:of a Famous Brand
+I:30:22:7
+W:50:50:40:50000
+P:5:1d1:2:0:12
+F:SPEED | MARTIAL_ARTS | ESP_ALL | ATTRACT_MON | 
+f:SPEED | MARTIAL_ARTS
+D:In order to avoid copyright infringement, we don't tell you the 
+D:actual name of the brand that made this pair. 
 
 # red overknees
 N:780:'Manuela's Cruelty'
