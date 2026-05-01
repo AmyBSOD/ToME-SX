@@ -1650,6 +1650,7 @@ void object_desc(char *buf, object_type *o_ptr, int pref, int mode)
 	bool known = FALSE;
 
 	bool append_name = FALSE;
+	bool append_mimic = FALSE;
 
 	bool show_weapon = FALSE;
 	bool show_armour = FALSE;
@@ -1919,6 +1920,16 @@ void object_desc(char *buf, object_type *o_ptr, int pref, int mode)
 			if (o_ptr->sval == SV_MIMIC_CLOAK)
 			{
 				call_lua("get_mimic_info", "(d,s)", "s", o_ptr->pval2, "obj_name", &modstr);
+			}
+			if (o_ptr->sval == SV_MIMIC_CLOAK_X)
+			{
+				basenm = "& Thick Cape of ~";
+				append_mimic = TRUE;
+			}
+			if (o_ptr->sval == SV_MIMIC_CLOAK_XX)
+			{
+				basenm = "& Armored Cape of ~";
+				append_mimic = TRUE;
 			}
 			break;
 		}
@@ -2345,6 +2356,12 @@ void object_desc(char *buf, object_type *o_ptr, int pref, int mode)
 		}
 		else
 			t = object_desc_str(t, (k_name + k_ptr->name));
+	}
+
+	if (append_mimic)
+	{
+		call_lua("get_mimic_info", "(d,s)", "s", o_ptr->pval2, "name", &modstr);
+		t = object_desc_str(t, modstr);
 	}
 
 	/* Hack -- Append "Artifact" or "Special" names */

@@ -60,6 +60,16 @@ NESSA_MANA_STORM = add_spell
 	["mana"] = 500,
 	["mana_max"] = 2000,
 	["fail"] = 60,
+	["stick"] =
+	{
+			["charge"] =    { 4, 6 },
+			[TV_WAND] =
+			{
+				["rarity"] = 		30,
+				["base_level"] =	{ 1, 12 },
+				["max_level"] =		{ 20, 40 },
+			},
+	},
 	-- Uses piety to cast
 	["piety"] =     TRUE,
 	["stat"] =      A_WIS,

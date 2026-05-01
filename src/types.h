@@ -1802,6 +1802,11 @@ struct player_type
 	s16b stairsickness;     /* Timer before you can use a stair again --Amy */
 	s16b tim_repelling;     /* Timed repelling */
 
+	s16b tempres_fear;      /* Timed resist fear */
+	s16b tempres_blind;     /* Timed resist blindness */
+	s16b tempres_conf;      /* Timed resist confusion */
+	s16b tempres_hallu;     /* Timed resist hallu */
+
 	s16b gained_demon;      /* You gained demonology skill from the corruption (only works once) --Amy */
 	s16b gained_preserv;    /* You gained corpse-preservation from the bounty quest (only works once) --Amy */
 

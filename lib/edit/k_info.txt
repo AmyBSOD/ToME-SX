@@ -10371,6 +10371,106 @@ D:Although it looks like a piece of junk, it is actually part of an ancient
 D:relic belonging to the Priests of Lorien. The relic now lies in pieces, 
 D:hidden from all but the most faithful followers of Lorien.
 
+N:1228:& Apple~
+G:,:r
+I:80:51:1000
+W:3:0:4:200
+A:3/2
+D:Eating this fruit cures poisoning and makes you resistant to poison for a while.
+
+N:1229:& Carrot~
+G:,:o
+I:80:52:1000
+W:5:0:4:200
+A:5/2
+D:Eating this fruit cures blindness and makes you resistant to blindness for a while.
+
+N:1230:& Melon~
+G:,:G
+I:80:53:1000
+W:10:0:4:200
+A:10/2
+D:Eating this fruit cures confusion and makes you resistant to confusion for a while.
+
+N:1231:& Lemon~
+G:,:y
+I:80:54:1000
+W:15:0:4:200
+A:15/2
+D:Eating this fruit cures fear and makes you resistant to fear for a while.
+
+N:1232:& Banana~
+G:,:y
+I:80:55:1000
+W:20:0:4:200
+A:20/2
+D:Eating this fruit cures hallucination and makes you resistant to hallucination for a while.
+
+N:1233:& Shemagh~
+G:]:D
+I:32:15:0
+W:40:0:30:4000
+A:40/5
+P:3:1d3:0:0:0
+F:RES_BLIND
+f:RES_BLIND
+D:A type of headgear worn in the desert, to protect the wearer from sandstorms. 
+
+# another mimicry cloak
+N:1234:& #~
+G:(:y
+I:35:101:0:50
+W:35:130:30:2000
+A:35/1
+P:4:1d1:0:0:0
+D:This thick cloak lets you polymorph into a different creature, provided that 
+D:you have the necessary mimicry skill to do so. 
+
+# and yet another mimicry cloak
+N:1235:& #~
+G:(:y
+I:35:102:0:50
+W:60:130:60:5000
+A:60/3
+P:7:1d1:0:0:0
+D:A heavy, armored cloak that can be used with the mimicry skill to let you 
+D:transform into a different creature. 
+
+N:1236:Collusion
+G:-:d
+I:65:33:-1:SPELL=Collusion
+W:8:0:2:100
+A:8/2
+P:0:1d1:0:0:0
+
+N:1237:Mana Storm
+G:-:d
+I:65:34:-1:SPELL=Mana Storm
+W:30:0:2:100
+A:30/3
+P:0:1d1:0:0:0
+
+N:1238:Timeline
+G:-:d
+I:65:35:-1:SPELL=Timeline
+W:20:0:2:100
+A:20/4
+P:0:1d1:0:0:0
+
+N:1239:Time Tempest
+G:-:d
+I:65:36:-1:SPELL=Time Tempest
+W:40:0:2:100
+A:40/5
+P:0:1d1:0:0:0
+
+N:1240:Freezing Cloud
+G:-:d
+I:65:37:-1:SPELL=Freezing Cloud
+W:6:0:2:100
+A:6/1
+P:0:1d1:0:0:0
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being a bonus to the pval-based property

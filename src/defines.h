@@ -1040,6 +1040,8 @@
 #define ART_TUOR                        50
 #define ART_MIMIC_CLOAK_I               636
 #define ART_MIMIC_CLOAK_II              637
+#define ART_MIMIC_CLOAK_III             786
+#define ART_MIMIC_CLOAK_IV              787
 
 /* Gloves */
 #define ART_CAMBELEG            52
@@ -1717,6 +1719,8 @@
 #define SV_FUR_CLOAK                     3
 #define SV_SHADOW_CLOAK                  6
 #define SV_MIMIC_CLOAK                   100
+#define SV_MIMIC_CLOAK_X                 101
+#define SV_MIMIC_CLOAK_XX                102
 
 /* The "sval" codes for TV_GLOVES */
 #define SV_SET_OF_LEATHER_GLOVES         1
@@ -2286,6 +2290,11 @@
 #define SV_FOOD_ATHELAS                 40
 #define SV_FOOD_GREAT_HEALTH            41
 #define SV_FOOD_FORTUNE_COOKIE          42
+#define SV_FOOD_APPLE                   51
+#define SV_FOOD_CARROT                  52
+#define SV_FOOD_MELON                   53
+#define SV_FOOD_LEMON                   54
+#define SV_FOOD_BANANA                  55
 
 /* The "sval" codes for TV_BATERIE (4) */
 #define SV_BATERIE_POISON    1

@@ -8739,6 +8739,32 @@ f:RES_DMG
 D:An improbably useful mail for casters, as long as they can somehow 
 D:handle the weight. 
 
+# shemagh
+N:785:'Kemal's Windcloth'
+I:32:15:4
+W:50:20:30:18000
+P:3:1d3:0:0:7
+F:RES_BLIND | CHR | STEALTH | NO_MAGIC | SUST_STR | SUST_CON | 
+F:FREE_ACT | 
+f:RES_BLIND | 
+D:The headgear of a guy who didn't allow any weather to stop him. 
+
+# thick mimicry cloak
+N:786:'Elemental Sheath'
+I:35:101:0
+W:35:50:30:20000
+P:4:0d0:0:0:13
+F:RES_FIRE | RES_COLD | RES_ELEC | RES_ACID | 
+D:It protects you from the elements. 
+
+# armored mimicry cloak
+N:787:'Walktank'
+I:35:102:0
+W:60:60:60:40000
+P:7:0d0:0:0:19
+F:RES_DMG | 
+D:That cloak seems particularly thick and impenetrable. 
+
 # N:number:name
 # I:tval:sval:pval
 # W:level:rarity:item weight:cost

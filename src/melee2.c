@@ -5288,7 +5288,7 @@ bool make_attack_spell(int m_idx)
 						(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 					}
 
-					if ( (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) ) && (randint(3) == 1))
+					if ( ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31 || (rand_int(100) < 5) ) && (randint(3) == 1))
 					{
 						(void) set_image(p_ptr->image + rand_int(250) + 150);
 					}
@@ -5365,7 +5365,7 @@ bool make_attack_spell(int m_idx)
 					while ((rand_int(100) > player_actual_saving_throw()) && (randint(100) != 1) )
 						(void)do_dec_stat(A_WIS, STAT_DEC_NORMAL);
 
-					if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
+					if ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31 || (rand_int(100) < 5) )
 					{
 						(void) set_image(p_ptr->image + rand_int(250) + 150);
 					}

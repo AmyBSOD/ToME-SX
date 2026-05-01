@@ -1517,7 +1517,7 @@ bool carried_make_attack_normal(int r_idx)
 					take_hit(damage, ddesc);
 
 					/* Increase "image" */
-					if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
+					if ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31 || (rand_int(100) < 5) )
 					{
 						if (set_image(p_ptr->image + 3 + randint(rlev / 2)))
 						{
@@ -1539,7 +1539,7 @@ bool carried_make_attack_normal(int r_idx)
 					{
 						(void)set_confused(p_ptr->confused + rand_int(20) + 10);
 					}
-					if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
+					if ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31 || (rand_int(100) < 5) )
 					{
 						(void)set_image(p_ptr->image + randint(10));
 					}
@@ -3687,7 +3687,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					if (!death) lifesave_no_mortal = FALSE;
 
 					/* Increase "image" */
-					if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
+					if ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31 || (rand_int(100) < 5) )
 					{
 						if (set_image(p_ptr->image + 3 + randint(rlev / 2)))
 						{
@@ -3713,7 +3713,7 @@ bool make_attack_normal(int m_idx, byte divis)
 					{
 						(void)set_confused(p_ptr->confused + rand_int(20) + 10);
 					}
-					if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
+					if ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31 || (rand_int(100) < 5) )
 					{
 						(void)set_image(p_ptr->image + randint(10));
 					}

@@ -5057,6 +5057,190 @@ bool set_oppose_pois(int v)
 	return (TRUE);
 }
 
+/*
+ * Set "p_ptr->tempres_blind", notice observable changes
+ */
+bool set_temp_res_blind(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tempres_blind)
+		{
+			msg_print("You feel resistant to blindness!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tempres_blind)
+		{
+			msg_print("You feel less resistant to blindness.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tempres_blind = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tempres_conf", notice observable changes
+ */
+bool set_temp_res_conf(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tempres_conf)
+		{
+			msg_print("You feel resistant to confusion!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tempres_conf)
+		{
+			msg_print("You feel less resistant to confusion.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tempres_conf = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tempres_fear", notice observable changes
+ */
+bool set_temp_res_fear(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tempres_fear)
+		{
+			msg_print("You feel resistant to fear!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tempres_fear)
+		{
+			msg_print("You feel less resistant to fear.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tempres_fear = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
+/*
+ * Set "p_ptr->tempres_hallu", notice observable changes
+ */
+bool set_temp_res_hallu(int v)
+{
+	bool notice = FALSE;
+
+	/* Hack -- Force good values */
+	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
+
+	/* Open */
+	if (v)
+	{
+		if (!p_ptr->tempres_hallu)
+		{
+			msg_print("You feel resistant to hallucination!");
+			notice = TRUE;
+		}
+	}
+
+	/* Shut */
+	else
+	{
+		if (p_ptr->tempres_hallu)
+		{
+			msg_print("You feel less resistant to hallucination.");
+			notice = TRUE;
+		}
+	}
+
+	/* Use the value */
+	p_ptr->tempres_hallu = v;
+
+	/* Nothing to notice */
+	if (!notice) return (FALSE);
+
+	/* Disturb */
+	if (disturb_state && !p_ptr->nastytrap160) disturb(0, 0);
+
+	/* Handle stuff */
+	handle_stuff();
+
+	/* Result */
+	return (TRUE);
+}
+
 
 /*
  * Set "p_ptr->tim_regen", notice observable changes

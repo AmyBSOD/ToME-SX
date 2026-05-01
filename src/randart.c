@@ -1509,7 +1509,7 @@ bool create_artifact(object_type *o_ptr, bool a_scroll, bool get_name)
 	p_ptr->window |= (PW_INVEN | PW_EQUIP);
 
 	/* HACKS for ToME */
-	if (o_ptr->tval == TV_CLOAK && o_ptr->sval == SV_MIMIC_CLOAK)
+	if (o_ptr->tval == TV_CLOAK && (o_ptr->sval == SV_MIMIC_CLOAK || o_ptr->sval == SV_MIMIC_CLOAK_X || o_ptr->sval == SV_MIMIC_CLOAK_XX) )
 	{
 		s32b mimic;
 		call_lua("find_random_mimic_shape", "(d,d)", "d", 127, TRUE, &mimic);

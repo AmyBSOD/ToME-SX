@@ -707,6 +707,10 @@ static bool do_extra(int flag)
 	do_s16b(&p_ptr->tim_power_pot, flag);
 	do_s16b(&p_ptr->tim_infra_x, flag);
 	do_s16b(&p_ptr->tim_infra_xx, flag);
+	do_s16b(&p_ptr->tempres_fear, flag);
+	do_s16b(&p_ptr->tempres_conf, flag);
+	do_s16b(&p_ptr->tempres_hallu, flag);
+	do_s16b(&p_ptr->tempres_blind, flag);
 	do_s16b(&p_ptr->tim_manasilence, flag);
 	do_s16b(&p_ptr->betweensickness, flag);
 	do_s16b(&p_ptr->stairsickness, flag);

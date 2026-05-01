@@ -919,7 +919,7 @@ void do_cmd_mimic_lore()
 	{
 		o_ptr = &p_ptr->inventory[INVEN_OUTER];
 
-		if ((o_ptr->tval != TV_CLOAK) || (o_ptr->sval != SV_MIMIC_CLOAK))
+		if ((o_ptr->tval != TV_CLOAK) || (o_ptr->sval != SV_MIMIC_CLOAK && o_ptr->sval != SV_MIMIC_CLOAK_X && o_ptr->sval != SV_MIMIC_CLOAK_XX))
 		{
 			msg_print("You are not wearing any cloaks of mimicry.");
 			return;

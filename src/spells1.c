@@ -8478,7 +8478,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 			{
 				(void)set_confused(p_ptr->confused + rand_int(20) + 10);
 			}
-			if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
+			if ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31 || (rand_int(100) < 5) )
 			{
 				(void)set_image(p_ptr->image + randint(10));
 			}

@@ -34,6 +34,16 @@ LORIEN_COLLUSION = add_spell
 	["mana"] = 	200,
 	["mana_max"] = 	400,
 	["fail"] = 	25,
+	["stick"] =
+	{
+			["charge"] =    { 5, 7 },
+			[TV_WAND] =
+			{
+				["rarity"] = 		15,
+				["base_level"] =	{ 1, 15 },
+				["max_level"] =		{ 25, 50 },
+			},
+	},
 	-- Uses piety to cast
 	["piety"] =     TRUE,
 	["stat"] =      A_WIS,

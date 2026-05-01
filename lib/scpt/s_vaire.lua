@@ -65,6 +65,16 @@ VAIRE_TIMELINE = add_spell
 	["mana"] = 	250,
 	["mana_max"] = 	800,
 	["fail"] = 	45,
+	["stick"] =
+	{
+			["charge"] =    { 4, 5 },
+			[TV_WAND] =
+			{
+				["rarity"] =	    55,
+				["base_level"] =	{ 1, 10 },
+				["max_level"] =		{ 15, 40 },
+			},
+	},
 	-- Uses piety to cast
 	["piety"] =     TRUE,
 	["stat"] =      A_WIS,
@@ -119,6 +129,16 @@ VAIRE_TIME_TEMPEST = add_spell
 	["mana"] = 	800,
 	["mana_max"] = 	2000,
 	["fail"] = 	66,
+	["stick"] =
+	{
+			["charge"] =    { 5, 5 },
+			[TV_WAND] =
+			{
+				["rarity"] = 		85,
+				["base_level"] =	{ 1, 5 },
+				["max_level"] =		{ 25, 50 },
+			},
+	},
 	-- Uses piety to cast
 	["piety"] =     TRUE,
 	["stat"] =      A_WIS,

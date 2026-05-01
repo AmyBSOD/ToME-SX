@@ -4402,11 +4402,20 @@ void calc_bonuses(bool silent)
 	}*/
 
 	/* Hack -- Hero/Shero -> Res fear */
-	if (p_ptr->hero || p_ptr->shero)
+	if (p_ptr->hero || p_ptr->shero || p_ptr->tempres_fear)
 	{
 		p_ptr->resist_fear = TRUE;
 	}
 
+	if (p_ptr->tempres_conf)
+	{
+		p_ptr->resist_conf = TRUE;
+	}
+
+	if (p_ptr->tempres_blind)
+	{
+		p_ptr->resist_blind = TRUE;
+	}
 
 	/* Hack -- Telepathy Change */
 	if (p_ptr->telepathy != old_telepathy)

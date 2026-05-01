@@ -2911,6 +2911,24 @@ static void process_world(void)
 		(void)set_tim_infra_xx(p_ptr->tim_infra_xx - 1);
 	}
 
+	/* Timed resistance to status effects */
+	if (p_ptr->tempres_fear)
+	{
+		(void)set_temp_res_fear(p_ptr->tempres_fear - 1);
+	}
+	if (p_ptr->tempres_hallu)
+	{
+		(void)set_temp_res_hallu(p_ptr->tempres_hallu - 1);
+	}
+	if (p_ptr->tempres_conf)
+	{
+		(void)set_temp_res_conf(p_ptr->tempres_conf - 1);
+	}
+	if (p_ptr->tempres_blind)
+	{
+		(void)set_temp_res_blind(p_ptr->tempres_blind - 1);
+	}
+
 	/* Silenced */
 	if (p_ptr->tim_manasilence)
 	{

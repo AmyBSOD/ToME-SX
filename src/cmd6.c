@@ -252,7 +252,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 					{
 						set_confused(p_ptr->confused + dam + idam + 10);
 					}
-					if ( (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) ) && rand_int(mdam - dam))
+					if ( ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31 || (rand_int(100) < 5) ) && rand_int(mdam - dam))
 					{
 						set_image(p_ptr->image + dam * 10 + idam * 10 + 100);
 					}
@@ -262,7 +262,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 
 			case RBE_HALLU:
 				{
-					if ( (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) ) && rand_int(mdam - dam))
+					if ( ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31 || (rand_int(100) < 5) ) && rand_int(mdam - dam))
 					{
 						set_image(p_ptr->image + dam * 10 + idam * 10 + 50);
 					}
@@ -668,7 +668,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 			(void)set_confused(p_ptr->confused + rand_int(20) + 10);
 		}
 
-		if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
+		if ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31 || (rand_int(100) < 5) )
 		{
 			(void)set_image(p_ptr->image + randint(10));
 		}
@@ -1060,7 +1060,7 @@ void do_cmd_eat_food(void)
 
 		case SV_FOOD_HALLUCINATION:
 			{
-				if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
+				if ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31 || (rand_int(100) < 5) )
 				{
 					if (set_image(p_ptr->image + rand_int(250) + 250))
 					{
@@ -1291,6 +1291,61 @@ void do_cmd_eat_food(void)
 			{
 				msg_print("That tastes good.");
 
+				ident = TRUE;
+
+				break;
+			}
+
+		case SV_FOOD_APPLE:
+			{
+				msg_print("An apple a day keeps the doctor away.");
+
+				(void)set_poisoned(0);
+				set_oppose_pois(p_ptr->oppose_pois + 50);
+				ident = TRUE;
+
+				break;
+			}
+
+		case SV_FOOD_CARROT:
+			{
+				msg_print("This food is good for your eyesight.");
+
+				(void)set_blind(0);
+				set_temp_res_blind(p_ptr->tempres_blind + 50);
+				ident = TRUE;
+
+				break;
+			}
+
+		case SV_FOOD_LEMON:
+			{
+				msg_print("Rather tangy... but you feel courage welling up inside you.");
+
+				(void)set_afraid(0);
+				set_temp_res_fear(p_ptr->tempres_fear + 50);
+				ident = TRUE;
+
+				break;
+			}
+
+		case SV_FOOD_MELON:
+			{
+				msg_print("Your mind clears.");
+
+				(void)set_confused(0);
+				set_temp_res_conf(p_ptr->tempres_conf + 50);
+				ident = TRUE;
+
+				break;
+			}
+
+		case SV_FOOD_BANANA:
+			{
+				msg_print("You feel that the world is no longer going bananas.");
+
+				(void)set_image(0);
+				set_temp_res_hallu(p_ptr->tempres_hallu + 50);
 				ident = TRUE;
 
 				break;
@@ -1933,7 +1988,7 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 					{
 						ident = TRUE;
 					}
-					if (randint(2) == 1)
+					if ((randint(2) == 1) && !p_ptr->tempres_hallu)
 					{
 						if (set_image(p_ptr->image + rand_int(150) + 150))
 						{
@@ -2584,7 +2639,7 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 
 		case SV_POTION2_HALLU:
 			{
-				if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
+				if ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31 || (rand_int(100) < 5) )
 				{
 					if (set_image(p_ptr->image + rand_int(500) + 500))
 					{

@@ -14496,7 +14496,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				{
 					(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 				}
-				if ( (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) ) && (randint(3) == 1))
+				if ( ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31 || (rand_int(100) < 5) ) && (randint(3) == 1))
 				{
 					(void) set_image(p_ptr->image + rand_int(250) + 150);
 				}
@@ -14558,7 +14558,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					(void)do_dec_stat(A_INT, STAT_DEC_NORMAL);
 				while ((rand_int(100) > player_actual_saving_throw()) && (randint(100) != 1) )
 					(void)do_dec_stat(A_WIS, STAT_DEC_NORMAL);
-				if (!p_ptr->resist_chaos || p_ptr->nastytrap31)
+				if ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31)
 				{
 					(void) set_image(p_ptr->image + rand_int(250) + 150);
 				}
@@ -14935,7 +14935,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("Scintillating colors hypnotise you for a moment.");
 			ident = TRUE;
 
-			set_image(p_ptr->image + 80);
+			if (!p_ptr->tempres_hallu || p_ptr->nastytrap30 || (rand_int(100) < 5) ) set_image(p_ptr->image + 80);
 		}
 		break;
 
@@ -14945,6 +14945,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("Scintillating colors hypnotise you for a moment.");
 			ident = TRUE;
 
+			/* can't resist --Amy */
 			set_image(p_ptr->image + 500);
 		}
 		break;
@@ -14954,7 +14955,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("Suddenly you're afflicted with many status effects!");
 			ident = TRUE;
 
-			set_image(p_ptr->image + 80);
+			if (!p_ptr->tempres_hallu || p_ptr->nastytrap30 || (rand_int(100) < 5) ) set_image(p_ptr->image + 80);
 			if (!p_ptr->resist_fear || p_ptr->nastytrap30 || (rand_int(100) < 5) ) {
 				set_afraid(p_ptr->afraid + 50 + randint(200));
 			}
@@ -14979,6 +14980,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			msg_print("Suddenly you're afflicted with all the status effects!");
 			ident = TRUE;
 
+			/* can't resist --Amy */
 			set_image(p_ptr->image + 500);
 			set_afraid(p_ptr->afraid + 50 + randint(200));
 			(void)set_stun(p_ptr->stun + randint(100) + p_ptr->lev);
@@ -15008,7 +15010,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				(void)set_confused(p_ptr->confused + rand_int(4) + 4);
 			}
 
-			if ( (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) ) && (randint(3) == 1))
+			if ( ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31 || (rand_int(100) < 5) ) && (randint(3) == 1))
 			{
 				(void) set_image(p_ptr->image + rand_int(250) + 150);
 			}
@@ -15065,7 +15067,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			while ((rand_int(100) > player_actual_saving_throw()) && (randint(100) != 1) )
 				(void)do_dec_stat(A_WIS, STAT_DEC_NORMAL);
 
-			if (!p_ptr->resist_chaos || p_ptr->nastytrap31 || (rand_int(100) < 5) )
+			if ( (!p_ptr->resist_chaos && !p_ptr->tempres_hallu) || p_ptr->nastytrap31 || (rand_int(100) < 5) )
 			{
 				(void) set_image(p_ptr->image + rand_int(250) + 150);
 			}
