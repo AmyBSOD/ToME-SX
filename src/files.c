@@ -640,7 +640,11 @@ errr process_pref_file_aux(char *buf)
 			                option_info[i].o_text &&
 			                streq(option_info[i].o_text, buf + 2))
 			{
-				(*option_info[i].o_var) = FALSE;
+				if (option_info[i].o_page == 6) {
+					cmsg_print(TERM_RED, "Cheating attempt detected. Please delete all birth options from the file.");
+				} else {
+					(*option_info[i].o_var) = FALSE;
+				}
 				return (0);
 			}
 		}
@@ -655,7 +659,11 @@ errr process_pref_file_aux(char *buf)
 			                option_info[i].o_text &&
 			                streq(option_info[i].o_text, buf + 2))
 			{
-				(*option_info[i].o_var) = TRUE;
+				if (option_info[i].o_page == 6) {
+					cmsg_print(TERM_RED, "Cheating attempt detected. Please delete all birth options from the file.");
+				} else {
+					(*option_info[i].o_var) = TRUE;
+				}
 				return (0);
 			}
 		}
