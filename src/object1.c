@@ -4265,7 +4265,7 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		{
 			text_out_c(TERM_L_GREEN, "It can resist being shattered by morgul beings.  ");
 		}
-		if ((f3 & (TR3_IGNORE_ACID)) && (f3 & (TR3_IGNORE_FIRE)) && (f3 & (TR3_IGNORE_COLD)) && (f3 & (TR3_IGNORE_ELEC)))
+		if ((f3 & (TR3_IGNORE_ACID)) && (f3 & (TR3_IGNORE_FIRE)) && (f3 & (TR3_IGNORE_COLD)) && (f3 & (TR3_IGNORE_ELEC)) && (f6 & (TR6_IGNORE_POIS)))
 		{
 			text_out("It cannot be harmed bla-bla.  ");
 		}
@@ -4286,6 +4286,10 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 			if (f3 & (TR3_IGNORE_COLD))
 			{
 				text_out("It cannot be harmed by cold.  ");
+			}
+			if (f6 & (TR6_IGNORE_POIS))
+			{
+				text_out("It cannot be harmed by poison.  ");
 			}
 		}
 	}

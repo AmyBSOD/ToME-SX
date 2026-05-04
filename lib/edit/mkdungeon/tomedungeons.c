@@ -71,7 +71,7 @@ int randomfloortype(void)
 		case 10:
 			floornumber = 102; /* nether mist */
 			if (random_number(10) == 1) {
-				int randdmg = random_number(15);
+				int randdmg = random_number(16);
 				switch (randdmg) {
 					case 1:
 					default:
@@ -118,6 +118,9 @@ int randomfloortype(void)
 						break;
 					case 15:
 						floornumber = 124; /* ether mist */
+						break;
+					case 16:
+						floornumber = 125; /* superpoisonous gas */
 						break;
 				}
 			}

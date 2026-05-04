@@ -200,6 +200,7 @@ static obj_theme lua_obj_theme @ theme_forge;
 #define TR6_ATTRACT_MON         0x00000040L     /* like elona aggravate monster (counts as a kind of curse) */
 #define TR6_RES_FORCE           0x00000080L
 #define TR6_RES_DMG             0x00000100L     /* AC reduces melee damage even if the attack has a side effect */
+#define TR6_IGNORE_POIS         0x00000200L     /* Item cannot be destroyed by poison */
 
 #define ESP_ORC                 0x00000001L
 #define ESP_TROLL               0x00000002L

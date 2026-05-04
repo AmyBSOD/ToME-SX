@@ -2411,6 +2411,7 @@ void do_cmd_create_artifact(object_type *q_ptr)
 	/* Just to be sure */
 	q_ptr->art_flags3 |= ( TR3_IGNORE_ACID | TR3_IGNORE_ELEC |
 	                       TR3_IGNORE_FIRE | TR3_IGNORE_COLD );
+	q_ptr->art_flags6 |= ( TR6_IGNORE_POIS );
 
 	{
 		int now = 0, before = 0;

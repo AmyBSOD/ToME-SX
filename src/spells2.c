@@ -5381,6 +5381,10 @@ bool proof_item(int prooftype)
 			o_ptr->art_flags3 |= TR3_IGNORE_ACID;
 			msg_format("Your %s is acidproof now.", o_name);
 			break;
+		case 5: /* poison */
+			o_ptr->art_flags6 |= TR6_IGNORE_POIS;
+			msg_format("Your %s is poison-proof now.", o_name);
+			break;
 
 	}
 	return TRUE;

@@ -3387,7 +3387,7 @@ flags_group flags_groups[MAX_FLAG_GROUP] =
 		TR3_DRAIN_EXP,
 		0,
 		TR5_RES_WATER,
-		0,
+		TR6_IGNORE_POIS,
 		0,
 		0,
 		0,

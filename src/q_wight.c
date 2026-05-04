@@ -59,6 +59,7 @@ bool quest_wight_gen_hook(char *fmt)
 					q_ptr->art_flags2 |= ( TR2_RES_BLIND | TR2_SENS_FIRE | TR2_RES_CONF );
 					q_ptr->art_flags3 |= ( TR3_IGNORE_ACID | TR3_IGNORE_ELEC |
 					                       TR3_IGNORE_FIRE | TR3_IGNORE_COLD | TR3_SEE_INVIS);
+					q_ptr->art_flags6 |= (TR6_IGNORE_POIS);
 
 					/* For game balance... */
 					q_ptr->art_flags3 |= (TR3_CURSED | TR3_HEAVY_CURSE | TR3_DRAIN_EXP | TR3_AUTO_CURSE | TR3_AGGRAVATE);

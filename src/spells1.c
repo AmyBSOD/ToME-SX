@@ -2321,6 +2321,28 @@ bool hates_cold(object_type *o_ptr)
 }
 
 
+/*
+ * Does a given object (usually) hate poison?
+ * by Amy: potions, but also food, eggs and corpses
+ */
+bool hates_pois(object_type *o_ptr)
+{
+	switch (o_ptr->tval)
+	{
+	case TV_POTION2:
+	case TV_POTION:
+	case TV_EGG:
+	case TV_CORPSE:
+	case TV_FOOD:
+		{
+			return (TRUE);
+		}
+	}
+
+	return (FALSE);
+}
+
+
 
 
 
@@ -2384,6 +2406,20 @@ int set_cold_destroy(object_type *o_ptr)
 
 	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 	if ((f3 & (TR3_IGNORE_COLD)) && !p_ptr->nastytrap47) return (FALSE);
+	return (TRUE);
+}
+
+/*
+ * Poison things, inspired by Steamband, implementation by Amy
+ */
+int set_pois_destroy(object_type *o_ptr)
+{
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
+
+	if (!hates_pois(o_ptr)) return (FALSE);
+
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
+	if ((f6 & (TR6_IGNORE_POIS)) && !p_ptr->nastytrap47) return (FALSE);
 	return (TRUE);
 }
 
@@ -8288,6 +8324,41 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 			break;
 		}
 
+		/* Standard damage -- also poisons player and destroys stuff */
+	case GF_UNBREATH:
+		{
+			int inv;
+
+			if (fuzzy) msg_print("You are hit by poison!");
+			if (p_ptr->immune_pois) dam /= 10;
+			else {
+				if (p_ptr->resist_pois) dam = (dam + 2) / 3;
+				if (p_ptr->oppose_pois) dam = (dam + 2) / 3;
+			}
+
+			if ((!(p_ptr->oppose_pois || p_ptr->immune_pois || p_ptr->resist_pois)) &&
+			                randint(HURT_CHANCE) == 1)
+			{
+				do_dec_stat(A_CON, STAT_DEC_NORMAL);
+			}
+
+			take_hit(dam, killer);
+
+			if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
+			{
+				set_poisoned(p_ptr->poisoned + rand_int(dam) + 10);
+			}
+
+			if ( (!(p_ptr->oppose_pois && p_ptr->resist_pois) && !p_ptr->immune_pois) || p_ptr->nastytrap33)
+			{
+				inv = (dam < 30) ? 1 : (dam < 60) ? 2 : 3;
+
+				inven_damage(set_pois_destroy, inv);
+			}
+
+			break;
+		}
+
 		/* Standard damage -- also poisons / mutates player */
 	case GF_NUKE:
 		{
@@ -10189,6 +10260,9 @@ void describe_attack_fully(int type, char* r)
 		break;
 	case GF_POIS:
 		strcpy(r, "poison");
+		break;
+	case GF_UNBREATH:
+		strcpy(r, "phosgene");
 		break;
 	case GF_LITE:
 		strcpy(r, "pure light");

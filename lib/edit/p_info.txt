@@ -3210,7 +3210,7 @@ R:F:RES_FIRE |
 R:R:20:0
 R:F:RES_DARK | RES_LITE
 R:R:40:0
-R:F:IGNORE_FIRE
+R:F:IM_FIRE
 R:Z:fire breath
 
 R:N:26:Asura
@@ -3381,7 +3381,7 @@ R:Z:find secret passages
 R:R:1:0
 R:F:RES_BLIND | RES_COLD 
 R:R:30:0
-R:F:IGNORE_COLD
+R:F:IM_COLD
 R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:k:+0:+200:Axe-mastery
 R:k:+0:+200:Chopping

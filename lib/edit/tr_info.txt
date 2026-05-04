@@ -3962,6 +3962,31 @@ I:8:5:0:10:30:0d0:o
 D:The wilderness seems to change...
 F:FLOOR | CHEST | DOOR
 
+N:804:Phosgene Trap
+I:3:100:0:10:12:0d0:g
+D:You are hit by superpoisonous gas!
+F:FLOOR | CHEST | DOOR
+
+N:805:Phosgene Gas Trap
+I:6:80:5:6:15:3d10:g
+D:A blast of superpoisonous gas hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:806:Phosgene Cloud Trap
+I:8:60:5:8:20:3d18:B
+D:A violent blast of superpoisonous gas hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:807:Phosgene Clouds Trap
+I:13:20:5:8:40:3d18:B
+D:A violent blast of superpoisonous gas hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:808:Superpoisonous Trap
+I:8:20:0:10:30:0d0:o
+D:Deadly poison gas spreads.
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

@@ -846,6 +846,7 @@
 #define FEAT_DMG_NERVE          0x7A 
 #define FEAT_DMG_MIND           0x7B 
 #define FEAT_DMG_ETHER          0x7C 
+#define FEAT_DMG_UNBREATH       0x7D
 
 #define FEAT_BETWEEN            0xA0 /* 160 */
 
@@ -2120,6 +2121,7 @@
 #define SV_SCROLL_DESTRUCTION           60
 #define SV_SCROLL_PATRON_CHANGE         61
 #define SV_SCROLL_SUMMON_ALLY           62
+#define SV_SCROLL_PROOF_POIS            63
 
 /* The "sval" codes for TV_POTION */
 #define SV_POTION_WATER                  0
@@ -3578,6 +3580,13 @@
 
 #define TRAP_OF_WILD_SEED                 803
 
+#define TRAP_OF_ELE_UNBREATH              804
+#define TRAP_OF_UNBREATH_BOLT             805
+#define TRAP_OF_UNBREATH_BALL             806
+#define TRAP_OF_UNBREATH_BALLS            807
+
+#define TRAP_OF_TERRAIN_UNBREATH          808
+
 /*** General index values ***/
 
 
@@ -4045,6 +4054,7 @@
 #define TR6_ATTRACT_MON         0x00000040L     /* like elona aggravate monster (counts as a kind of curse) */
 #define TR6_RES_FORCE           0x00000080L
 #define TR6_RES_DMG             0x00000100L     /* AC reduces melee damage even if the attack has a side effect */
+#define TR6_IGNORE_POIS         0x00000200L     /* Item cannot be destroyed by poison */
 
 /* ESP defines */
 #define ESP_ORC                 0x00000001L

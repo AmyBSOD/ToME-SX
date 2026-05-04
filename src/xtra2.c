@@ -6432,6 +6432,7 @@ void monster_death(int m_idx)
 		                       TR2_RES_CONF );  /* No longer resist_disen */
 		q_ptr->art_flags3 |= ( TR3_IGNORE_ACID | TR3_IGNORE_ELEC |
 		                       TR3_IGNORE_FIRE | TR3_IGNORE_COLD);
+		q_ptr->art_flags6 |= ( TR6_IGNORE_POIS);
 		/* Just to be sure */
 
 		q_ptr->art_flags3 |= TR3_NO_TELE;  /* How's that for a downside? */

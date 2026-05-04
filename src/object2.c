@@ -1089,6 +1089,7 @@ s32b flag_cost(object_type * o_ptr, int plusses, bool isshop)
 	if (f3 & TR3_IGNORE_ELEC) total += 100;
 	if (f3 & TR3_IGNORE_FIRE) total += 100;
 	if (f3 & TR3_IGNORE_COLD) total += 100;
+	if (f6 & TR6_IGNORE_POIS) total += 100;
 	if (f3 & TR3_ACTIVATE) total += 100;
 	if ((f3 & TR3_DRAIN_EXP) && !isshop) total -= 12500;
 	if (f3 & TR3_TELEPORT)

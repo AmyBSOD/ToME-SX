@@ -1154,7 +1154,7 @@ cptr k_info_flags6[] =
 	"ATTRACT_MON",
 	"RES_FORCE",
 	"RES_DMG",
-	"XXX8X09",
+	"IGNORE_POIS",
 	"XXX8X10",
 	"XXX8X11",
 	"XXX8X12",
@@ -1798,6 +1798,7 @@ d_info_dtypes[] =
 	{"NERVE", GF_NERVE},
 	{"MIND", GF_MIND},
 	{"ETHER", GF_ETHER},
+	{"UNBREATH", GF_UNBREATH},
 	{NULL, 0}
 };
 
@@ -6060,6 +6061,7 @@ errr init_a_info_txt(FILE *fp, char *buf)
 			a_ptr->flags3 |= (TR3_IGNORE_ELEC);
 			a_ptr->flags3 |= (TR3_IGNORE_FIRE);
 			a_ptr->flags3 |= (TR3_IGNORE_COLD);
+			a_ptr->flags6 |= (TR6_IGNORE_POIS);
 
 			/* Needed hack */
 			a_ptr->esp = 0;

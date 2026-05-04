@@ -5324,6 +5324,13 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_ELE_UNBREATH:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_UNBREATH, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
 	case TRAP_OF_ELE_TIME:
 		{
 			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_TIME, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
@@ -10011,6 +10018,12 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 						j_ptr->art_flags3 &= ~TR3_IGNORE_ELEC;
 						inven_item_optimize(j);
 					}
+					if (f6 & TR6_IGNORE_POIS)
+					{
+						ident = TRUE;
+						j_ptr->art_flags6 &= ~TR6_IGNORE_POIS;
+						inven_item_optimize(j);
+					}
 				}
 			}
 			if (!ident)
@@ -10078,6 +10091,12 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 						j_ptr->art_flags3 &= ~TR3_IGNORE_ELEC;
 						inven_item_optimize(j);
 					}
+					if (f6 & TR6_IGNORE_POIS)
+					{
+						ident = TRUE;
+						j_ptr->art_flags6 &= ~TR6_IGNORE_POIS;
+						inven_item_optimize(j);
+					}
 				}
 			}
 			if (!ident)
@@ -10141,6 +10160,12 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				{
 					ident = TRUE;
 					j_ptr->art_flags3 &= ~TR3_IGNORE_ELEC;
+					inven_item_optimize(j);
+				}
+				if (f6 & TR6_IGNORE_POIS)
+				{
+					ident = TRUE;
+					j_ptr->art_flags6 &= ~TR6_IGNORE_POIS;
 					inven_item_optimize(j);
 				}
 			}
@@ -12915,6 +12940,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_ETHER_BOLT:
 		ident = player_handle_breath_trap(1, GF_ETHER, TRAP_OF_ETHER_BOLT);
 		break;
+	case TRAP_OF_UNBREATH_BOLT:
+		ident = player_handle_breath_trap(1, GF_UNBREATH, TRAP_OF_UNBREATH_BOLT);
+		break;
 	case TRAP_OF_TIME_BOLT:
 		ident = player_handle_breath_trap(1, GF_TIME, TRAP_OF_TIME_BOLT);
 		break;
@@ -13029,6 +13057,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		break;
 	case TRAP_OF_ETHER_BALL:
 		ident = player_handle_breath_trap(3, GF_ETHER, TRAP_OF_ETHER_BALL);
+		break;
+	case TRAP_OF_UNBREATH_BALL:
+		ident = player_handle_breath_trap(3, GF_UNBREATH, TRAP_OF_UNBREATH_BALL);
 		break;
 	case TRAP_OF_TIME_BALL:
 		ident = player_handle_breath_trap(3, GF_TIME, TRAP_OF_TIME_BALL);
@@ -13341,6 +13372,17 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
 			while (ballamount > 0) {
 				ident = player_handle_breath_trap(3, GF_ETHER, TRAP_OF_ETHER_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_UNBREATH_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_UNBREATH, TRAP_OF_UNBREATH_BALLS);
 				ballamount--;
 			}
 		}
@@ -14189,6 +14231,34 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				place_trap(y, x);
 			}
 			msg_print("You identified that trap as Ether Mist Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_UNBREATH:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 10, FEAT_DMG_UNBREATH, 30);
+
+		msg_print("Superpoisonous gas spreads!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Superpoisonous Trap.");
 		}
 		break;
 

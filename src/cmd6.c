@@ -5205,6 +5205,15 @@ void do_cmd_read_scroll(void)
 				break;
 			}
 
+		case SV_SCROLL_PROOF_POIS:
+			{
+				ident = TRUE;
+
+				if (!proof_item(5)) used_up = FALSE;
+
+				break;
+			}
+
 		case SV_SCROLL_STAR_IDENTIFY:
 			{
 				ident = TRUE;
