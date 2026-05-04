@@ -40,6 +40,7 @@ skill, and by improving your Spell-power skill.
 
 In addition to his specific magic, Tulkas will also assist with your ability to
 use some magic from one of the "standard" schools, in relation to how skilled 
-you are at Prayer. This school is as follows:
+you are at Prayer. These schools are as follows:
     *****m_earth.txt*0[Earth School] at 4/5 the Prayer skill level.
-The spells from this school are all cast using your normal spellpoints.
+    *****m_elemen.txt*0[Elemental School] at 1/3 the Prayer skill level.
+The spells from these schools are all cast using your normal spellpoints.

@@ -1,0 +1,26 @@
+|||||oy
+~~~~~01|Magic|Elemental School
+~~~~~02|Elemental Magic
+~~~~~03|Skills|Elemental - Spell Info
+#####R === ToME Magic - Elemental School ===
+
+The elemental school of magic contains spells which fire elemental
+blasts at the enemy. There are rumors of a "Tome of Elemental Magic"
+which contains all the elemental school spells within its bindings.
+
+#####sElemental Spells
+There are five spells available for the elemental school. These spells are:
+1. [[[[[sFire Lightning] (school level 1)
+   Shoots a bolt that hits a single target.
+   It randomly deals either fire or lightning damage.
+2. [[[[[sCold Ball] (school level 5)
+   Shoots a ball of cold at the enemy.
+   At level 40 it deals ice damage instead.
+3. [[[[[sAcid Rain] (school level 10)
+   Creates a cloud of acid.
+   The cloud will persist for some turns, damaging all monsters passing by.
+4. [[[[[sLightning Bolt] (school level 15)
+   Shoots a lightning bolt from your fingertips.
+   It hits all monsters in a straight line.
+5. [[[[[sEther Spread] (school level 40)
+   Fills the air with ether to continuously damage enemies.

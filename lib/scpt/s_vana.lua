@@ -61,11 +61,11 @@ VANA_FREEZING_CLOUD = add_spell
 
 			ret, dir = get_aim_dir()
 			if ret == FALSE then return end
-			fire_cloud(GF_ICE, dir, 7 + get_level(VANA_FREEZING_CLOUD, 150), 3, 5 + get_level(VANA_FREEZING_CLOUD, 40))
+			fire_cloud(GF_ICE, dir, 7 + get_level(VANA_FREEZING_CLOUD, 150), 3, 5 + get_level(VANA_FREEZING_CLOUD, 15))
 			return TRUE
 	end,
 	["info"] = 	function()
-			return "dam "..(7 + get_level(VANA_FREEZING_CLOUD, 150)).." rad 3 dur "..(5 + get_level(VANA_FREEZING_CLOUD, 40))
+			return "dam "..(7 + get_level(VANA_FREEZING_CLOUD, 150)).." rad 3 dur "..(5 + get_level(VANA_FREEZING_CLOUD, 15))
 	end,
 	["desc"] =	{
 			"Creates a cloud of ice",

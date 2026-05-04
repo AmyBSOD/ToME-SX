@@ -53,11 +53,11 @@ LORIEN_COLLUSION = add_spell
 
 			ret, dir = get_aim_dir()
 			if ret == FALSE then return end
-			fire_cloud(GF_DARK, dir, 10 + get_level(LORIEN_COLLUSION, 240), 3, 5 + get_level(LORIEN_COLLUSION, 50))
+			fire_cloud(GF_DARK, dir, 10 + get_level(LORIEN_COLLUSION, 240), 3, 5 + get_level(LORIEN_COLLUSION, 25))
 			return TRUE
 	end,
 	["info"] = 	function()
-			return "dam "..(10 + get_level(LORIEN_COLLUSION, 240)).." rad 3 dur "..(5 + get_level(LORIEN_COLLUSION, 50))
+			return "dam "..(10 + get_level(LORIEN_COLLUSION, 240)).." rad 3 dur "..(5 + get_level(LORIEN_COLLUSION, 25))
 	end,
 	["desc"] =	{
 			"Creates a cloud of darkness",

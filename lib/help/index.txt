@@ -190,6 +190,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
 ~~~~~69
 *****/Eindex.txt*69[E]
   *****m_earth.txt*02[Earth Magic]
+  *****m_elemen.txt*02[Elemental Magic]
   *****r_elf.txt*01[Elf]
   *****r_ent.txt*01[Ent]
   *****g_eru.txt*02[Eru]
@@ -295,6 +296,7 @@ Don't forget you can browse the help from the *****help.hlp*02[Main menu].
     *****m_earth.txt*01[Earth School]
     *****m_fire.txt*01[Fire School]
     *****m_geoman.txt*01[Geomancy]
+    *****m_elemen.txt*01[Elemental School]
     *****magic.hlp*01[Index]
     *****birth.txt*27[Mana]
     *****m_hell.txt*01[Hell School]

@@ -758,6 +758,42 @@ SCHOOL_CELESTIAL = add_school
 	},
 }
 
+SCHOOL_ELEMENTAL = add_school
+{
+	["name"] = "Elemental",
+	["skill"] = SKILL_ELEMENTAL,
+	["spell_power"] = TRUE,
+	["sorcery"] = TRUE,
+	["gods"] =
+	{
+		-- Ingeborg provides every school at 1/10 the prayer skill
+		[GOD_INGEBORG] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 10,
+		},
+		[GOD_TULKAS] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
+		},
+		[GOD_ULMO] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 3,
+		},
+		[GOD_MANDOS] = 
+		{
+			["skill"] = SKILL_PRAY,
+			["mul"] = 1,
+			["div"] = 2,
+		},
+	},
+}
+
 SCHOOL_HELL = add_school
 {
 	["name"] = "Hell", 
@@ -830,6 +866,7 @@ tome_dofile("s_music.lua")
 
 tome_dofile("s_hell.lua")
 tome_dofile("s_celest.lua")
+tome_dofile("s_elemen.lua")
 tome_dofile("s_orome.lua")
 tome_dofile("s_ingebo.lua")
 tome_dofile("s_nienna.lua")
@@ -909,6 +946,11 @@ school_book[12] = {
 -- Create the book of heavens
 school_book[13] = {
 	FORCEBOLT, CLEANINGFIRE, GROUNDATTACK, CRYSTALSHARDS, TUNGUSKA,
+}
+
+-- Create the book of elements
+school_book[14] = {
+	FIRELIGHTNING, COLDBALL, ACIDRAIN, LIGHTNINGBOLT, ETHERSPREAD,
 }
 
 -- Create the book of eru
@@ -1012,10 +1054,10 @@ school_book[35] = {
 	CHARM, CONFUSE, ARMOROFFEAR, STUN, MIND_BOLT,
 }
 
--- The book of time and udun
+-- The book of time and elements
 school_book[36] = {
 	MAGELOCK, SLOWMONSTER, ESSENCESPEED, BANISHMENT,
-	DRAIN, GENOCIDE, WRAITHFORM, FLAMEOFUDUN,
+	FIRELIGHTNING, COLDBALL, ACIDRAIN, LIGHTNINGBOLT, ETHERSPREAD,
 }
 
 -- The book of heaven and hell
@@ -1031,12 +1073,17 @@ school_book[50] = {
 
 -- Create the book of teleporatation
 school_book[51] = {
-	BLINK, TELEPORT, TELEAWAY
+	BLINK, TELEPORT, TELEAWAY,
 }
 
 -- Create the book of summoning
 school_book[52] = {
-	FIREGOLEM, SUMMONANNIMAL
+	FIREGOLEM, SUMMONANNIMAL,
+}
+
+-- Create the book of elemental cantrips
+school_book[53] = {
+	NETHEREYE, FORCEBOLT, FIRELIGHTNING, GEYSER, INGEBORG_EVERYTHING_BURNS, VANA_ICY_WIND,
 }
 
 

@@ -61,5 +61,6 @@ are at Prayer. These schools are as follows:
     *****m_fire.txt*0[Fire School] at 1/10 the Prayer skill level.
     *****m_air.txt*0[Air School] at 1/10 the Prayer skill level.
     *****m_water.txt*0[Water School] at 1/10 the Prayer skill level.
+    *****m_elemen.txt*0[Elemental School] at 1/10 the Prayer skill level.
 
 The spells from these schools are all cast using your normal spellpoints.

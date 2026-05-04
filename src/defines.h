@@ -5813,10 +5813,11 @@ extern int PlayerUID;
 #define SKILL_FRESHMINT         77
 #define SKILL_FORTUNE           78
 #define SKILL_HIGHHEELS         79
+#define SKILL_ELEMENTAL         80
 /* ATTENTION: always update MAX_GOOD_SKILL below when adding new ones!!! --Amy */
 
 /* Ugly but needed */
-#define MAX_GOOD_SKILL          79
+#define MAX_GOOD_SKILL          80
 
 #define MAX_SKILLS              200
 

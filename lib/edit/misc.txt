@@ -28,7 +28,7 @@ M:R:5400
 M:r:75
 
 # Maximum number of items in k_info.txt
-M:K:1241
+M:K:1247
 
 # Maximum number of vaults in v_info.txt
 M:V:312
@@ -79,7 +79,7 @@ M:P:R:37
 M:P:S:14
 
 # Maximum number of class types in p_info.txt
-M:P:C:122
+M:P:C:123
 
 # Maximum number of meta class types in p_info.txt
 M:P:M:1
@@ -88,7 +88,7 @@ M:P:M:1
 M:P:H:266
 
 # Maximum number of skills in s_info.txt
-M:k:80
+M:k:81
 
 # Maximum number of traits in ab_info.txt
 M:b:50

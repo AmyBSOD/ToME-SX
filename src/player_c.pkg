@@ -964,6 +964,14 @@ skill_type s_info[MAX_SKILLS];
  */
 #define SKILL_HIGHHEELS		79
 
+/** @def SKILL_ELEMENTAL
+ * @brief some skill
+ * @note
+ * bla bla bla
+ * blablablablabla
+ */
+#define SKILL_ELEMENTAL		80
+
 /** @def SKILL_MAX
  * @note Maximun skill value
  */

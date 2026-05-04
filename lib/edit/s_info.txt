@@ -102,6 +102,13 @@ A:17:Cast a spell
 I:1000
 F:RANDOM_GAIN
 
+N:80:Elemental
+D:Ability to learn and use spells from the Elemental school
+D:Spells use the intelligence stat
+A:17:Cast a spell
+I:1000
+F:RANDOM_GAIN
+
 N:7:Earth
 D:Ability to learn and use spells from the Earth school
 D:Spells use the intelligence stat
@@ -220,6 +227,7 @@ f:Divination:Magic%10
 f:Nature:Magic%10
 f:Hell:Magic%10
 f:Celestial:Magic%10
+f:Elemental:Magic%10
 f:Temporal:Magic%10
 f:Meta:Magic%10
 f:Mind:Magic%10
@@ -698,6 +706,7 @@ T:Magic:Mind
 T:Magic:Nature
 T:Magic:Hell
 T:Magic:Celestial
+T:Magic:Elemental
 T:Magic:Udun
 T:Magic:Demonology
 T:Magic:Necromancy

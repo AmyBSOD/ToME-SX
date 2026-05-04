@@ -9898,7 +9898,7 @@ W:80:0:0:75000
 A:80/40
 P:0:1d1:0:0:0
 F:FULL_NAME | EASY_KNOW | IGNORE_FIRE
-D:This great spellbook contains all the spells of the Udun 
+D:This great spellbook contains all the spells of the Elemental
 D:and Temporal realms.
 
 N:1179:& Great Tome~ of Heaven and Hell
@@ -10470,6 +10470,52 @@ I:65:37:-1:SPELL=Freezing Cloud
 W:6:0:2:100
 A:6/1
 P:0:1d1:0:0:0
+
+N:1241:& Tome~ of Elemental Magic
+G:?:r
+I:111:14:0
+W:50:0:0:25000
+A:50/4
+P:0:1d1:0:0:0
+F:FULL_NAME | EASY_KNOW | IGNORE_FIRE
+D:A powerful book that contains all the elemental school spells. 
+
+N:1242:Fire Lightning
+G:-:d
+I:65:38:-1:SPELL=Fire Lightning
+W:1:0:2:100
+A:1/1
+P:0:1d1:0:0:0
+
+N:1243:Acid Rain
+G:-:d
+I:65:39:-1:SPELL=Acid Rain
+W:10:0:2:100
+A:10/1
+P:0:1d1:0:0:0
+
+N:1244:Lightning Bolt
+G:-:d
+I:65:40:-1:SPELL=Lightning Bolt
+W:15:0:2:100
+A:15/1
+P:0:1d1:0:0:0
+
+N:1245:Ether Spread
+G:-:d
+I:65:41:-1:SPELL=Ether Spread
+W:40:0:2:100
+A:40/3
+P:0:1d1:0:0:0
+
+N:1246:& Book~ of Elemental Cantrips
+G:?:o
+I:111:53:0
+W:5:0:0:700
+A:5/10
+P:0:1d1:0:0:0
+D:This book contains a couple of basic elemental spells. 
+D:It has significant amounts of scorch marks, telling you that it was used before. 
 
 # N:number:name
 # G:glyph:color

@@ -112,10 +112,10 @@ DEMON_FIELD = add_spell
 
 			ret, dir = get_aim_dir()
 			if ret == FALSE then return end
-			return fire_cloud(GF_NEXUS, dir, 20 + get_level(DEMON_FIELD, 70), 7, 4 + get_level(DEMON_FIELD, 20))
+			return fire_cloud(GF_NEXUS, dir, 20 + get_level(DEMON_FIELD, 70), 7, 4 + get_level(DEMON_FIELD, 10))
 	end,
 	["info"] =      function()
-			return "dam "..(20 + get_level(DEMON_FIELD, 70)).." dur "..(4 + get_level(DEMON_FIELD, 20))
+			return "dam "..(20 + get_level(DEMON_FIELD, 70)).." dur "..(4 + get_level(DEMON_FIELD, 10))
 	end,
 	["desc"] =      {
 			"Fires a cloud of deadly nexus over a radius of 7",
