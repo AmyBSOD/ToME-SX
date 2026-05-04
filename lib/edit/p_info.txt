@@ -516,11 +516,16 @@ C:a:N:Elementalist
 C:a:D:The elementalist is different from the geomancer by focussing more 
 C:a:D:on raw elemental magic that deals direct damage to the enemy.
 C:a:k:+1000:+150:Spell-power
-C:a:k:+0:+500:Elemental
+C:a:k:+1000:+500:Elemental
 C:a:k:+0:+500:Hell
 C:a:k:+0:+500:Celestial
+C:a:k:+0:+50:Water
+C:a:k:+0:+50:Earth
+C:a:k:+0:+50:Air
+C:a:k:+0:+50:Fire
+C:a:k:-1000:+0:Mana
 C:a:O:23:4:1d1
-C:a:O:111:50:1d1
+C:a:O:111:53:1d1
 C:a:g:All Gods
 
 C:a:N:Sorceror
