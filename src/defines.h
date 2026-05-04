@@ -3576,6 +3576,8 @@
 #define TRAP_NASTY184                     801
 #define TRAP_NASTY185                     802
 
+#define TRAP_OF_WILD_SEED                 803
+
 /*** General index values ***/
 
 

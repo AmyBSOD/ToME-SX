@@ -14939,6 +14939,47 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		}
 		break;
 
+		/* trap that reseeds the wilderness, by Amy */
+	case TRAP_OF_WILD_SEED:
+		{
+			int i, j;
+
+			/* Init wilderness seeds */
+			for (i = 0; i < max_wild_x; i++)
+			{
+				for (j = 0; j < max_wild_y; j++)
+				{
+					wild_map[j][i].seed = rand_int(0x10000000);
+					wild_map[j][i].entrance = 0;
+					wild_map[j][i].known = FALSE;
+				}
+			}
+
+			msg_print("You feel that the wilderness is different now!");
+
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+
+			msg_print("You identified that trap as Wilderness Seed Trap.");
+			ident = FALSE;
+
+			break;
+		}
+
 		/* Super Hallu Trap by Amy */
 	case TRAP_OF_HALLU_X:
 		{

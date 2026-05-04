@@ -3957,6 +3957,11 @@ I:32:2:50:4:12:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:803:Wilderness Seed Trap
+I:8:5:0:10:30:0d0:o
+D:The wilderness seems to change...
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 
