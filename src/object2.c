@@ -990,10 +990,18 @@ s32b flag_cost(object_type * o_ptr, int plusses, bool isshop)
 	if (f1 & TR1_CHR) total += (250 * plusses);
 	if (f1 & TR1_CHAOTIC) total += 10000;
 	if (f1 & TR1_VAMPIRIC) total += 13000;
+	if (f5 & TR5_WOUNDING) total += 8000;
 	if (f1 & TR1_STEALTH) total += (250 * plusses);
 	if (f1 & TR1_SEARCH) total += (100 * plusses);
+	if (f6 & TR6_PERCEPTION) total += (100 * plusses);
 	if (f1 & TR1_INFRA) total += (150 * plusses);
 	if (f1 & TR1_TUNNEL) total += (175 * plusses);
+	if (f5 & TR5_CRIT) total += (300 * plusses);
+	if (f5 & TR5_DISARM) total += (75 * plusses);
+	if (f5 & TR5_DODGE) total += (75 * plusses);
+	if (f6 & TR6_MAGIC_FIND) total += (80 * plusses);
+	if (f6 & TR6_MARTIAL_ARTS) total += (100 * plusses);
+	if (f5 & TR5_LUCK) total += (200 * plusses);
 	if ((f1 & TR1_SPEED) && (plusses > 0))
 		total += (10000 + (2500 * plusses));
 	if ((f1 & TR1_BLOWS) && (plusses > 0))
@@ -1061,9 +1069,16 @@ s32b flag_cost(object_type * o_ptr, int plusses, bool isshop)
 	if (f5 & TR5_RES_PLASMA) total += 5000;
 	if (f5 & TR5_RES_DISINT) total += 10000;
 	if (f5 & TR5_IM_POISON) total += 25000;
+	if (f5 & TR5_RES_MORGUL) total += 2000;
+	if (f5 & TR5_MAGIC_BREATH) total += 200000;
+	if (f5 & TR5_WATER_BREATH) total += 50000;
+	if (f4 & TR4_IM_NETHER) total += 30000;
 	if (f5 & TR5_DEVICE_MASTERY) total += 5000;
 	if (f5 & TR5_INV_PROTECT) total += 5000;
+	if (f5 & TR5_CHARGE_HOLDING) total += 200;
 	if (f5 & TR5_PEACEKEEPING) total += 2000;
+	if ((f5 & TR5_SAVING_MALUS) && !isshop) total -= 3000;
+	if ((f5 & TR5_RAPID_HUNGER) && !isshop) total -= 2000;
 	if (f5 & TR5_LITHE) total += 500;
 	if (f3 & TR3_SH_FIRE) total += 5000;
 	if (f3 & TR3_SH_ELEC) total += 5000;
@@ -1071,6 +1086,7 @@ s32b flag_cost(object_type * o_ptr, int plusses, bool isshop)
 	if (f3 & TR3_NO_TELE) total += 2500;
 	if (f3 & TR3_NO_MAGIC) total += 2500;
 	if (f3 & TR3_WRAITH) total += 250000;
+	if (f4 & TR4_AUTO_ID) total += 200000;
 	if ((f3 & TR3_TY_CURSE) && !isshop) total -= 15000;
 	if (f3 & TR3_EASY_KNOW) total += 0;
 	if (f3 & TR3_HIDE_TYPE) total += 0;
@@ -1079,6 +1095,11 @@ s32b flag_cost(object_type * o_ptr, int plusses, bool isshop)
 	if (f3 & TR3_LITE1) total += 750;
 	if (f4 & TR4_LITE2) total += 1250;
 	if (f4 & TR4_LITE3) total += 2750;
+	if (f4 & TR4_CLIMB) total += 20000;
+	if (f4 & TR4_FAST_CAST) total += 2000;
+	if (f4 & TR4_CAPACITY) total += 5000;
+	if (f4 & TR4_CHARGING) total += 5000;
+	if (f4 & TR4_CHEAPNESS) total += 5000;
 	if (f3 & TR3_SEE_INVIS) total += 2000;
 	if (esp) total += (12500 * count_bits(esp));
 	if (f3 & TR3_SLOW_DIGEST) total += 750;
@@ -1092,6 +1113,8 @@ s32b flag_cost(object_type * o_ptr, int plusses, bool isshop)
 	if (f6 & TR6_IGNORE_POIS) total += 100;
 	if (f3 & TR3_ACTIVATE) total += 100;
 	if ((f3 & TR3_DRAIN_EXP) && !isshop) total -= 12500;
+	if ((f5 & TR5_DRAIN_MANA) && !isshop) total -= 5000;
+	if ((f5 & TR5_DRAIN_HP) && !isshop) total -= 5000;
 	if (f3 & TR3_TELEPORT)
 	{
 		if (o_ptr->ident & IDENT_CURSED) {
@@ -1101,6 +1124,7 @@ s32b flag_cost(object_type * o_ptr, int plusses, bool isshop)
 		}
 	}
 	if ((f3 & TR3_AGGRAVATE) && !isshop) total -= 10000;
+	if ((f6 & TR6_ATTRACT_MON) && !isshop) total -= 4000;
 	if (f3 & TR3_BLESSED) total += 750;
 	if ((f3 & TR3_CURSED) && !isshop && (o_ptr->ident & IDENT_CURSED)) total -= 5000;
 	if ((f3 & TR3_HEAVY_CURSE) && !isshop && (o_ptr->ident & IDENT_CURSED)) total -= 12500;
@@ -1249,7 +1273,7 @@ s32b object_value_real(object_type *o_ptr, bool isshop)
 	if (f5 & TR5_TEMPORARY) return (0L);
 
 	/* Amy edit: it's real silly if branded ammo costs like 8000 per shot!! no one will ever buy those */
-	if (o_ptr->art_flags1 || o_ptr->art_flags2 || o_ptr->art_flags3)
+	if (o_ptr->art_flags1 || o_ptr->art_flags2 || o_ptr->art_flags3 || o_ptr->art_flags4 || o_ptr->art_flags5 || o_ptr->art_flags6 || o_ptr->art_flags7 || o_ptr->art_flags8 || o_ptr->art_flags9 || o_ptr->art_flags10 || o_ptr->art_esp)
 	{
 		int flagcostiem = flag_cost(o_ptr, o_ptr->pval, isshop);
 
@@ -1619,7 +1643,7 @@ s32b object_value_xtra(object_type *o_ptr)
 	if (f5 & TR5_TEMPORARY) return (0L);
 
 	/* Amy edit: it's real silly if branded ammo costs like 8000 per shot!! no one will ever buy those */
-	if (o_ptr->art_flags1 || o_ptr->art_flags2 || o_ptr->art_flags3)
+	if (o_ptr->art_flags1 || o_ptr->art_flags2 || o_ptr->art_flags3 || o_ptr->art_flags4 || o_ptr->art_flags5 || o_ptr->art_flags6 || o_ptr->art_flags7 || o_ptr->art_flags8 || o_ptr->art_flags9 || o_ptr->art_flags10 || o_ptr->art_esp)
 	{
 		int flagcostiem = flag_cost(o_ptr, o_ptr->pval, TRUE);
 
@@ -1996,10 +2020,13 @@ s32b object_value_shop(object_type *o_ptr)
 	else
 	{
 		/* Hack -- Felt cursed items */
-		if ((o_ptr->ident & (IDENT_SENSE)) && cursed_p(o_ptr)) return (0L);
+		/*if ((o_ptr->ident & (IDENT_SENSE)) && cursed_p(o_ptr)) return (0L);*/
 
 		/* Base value (see above) */
-		value = object_value_base(o_ptr);
+		/*value = object_value_base(o_ptr);*/
+
+		/* eh, the shop is selling, so you always get the full price --Amy */
+		value = object_value_real(o_ptr, TRUE);
 	}
 
 
@@ -2377,7 +2404,8 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 	                (o_ptr->art_flags7 != j_ptr->art_flags7) ||
 	                (o_ptr->art_flags8 != j_ptr->art_flags8) ||
 	                (o_ptr->art_flags9 != j_ptr->art_flags9) ||
-	                (o_ptr->art_flags10 != j_ptr->art_flags10))
+	                (o_ptr->art_flags10 != j_ptr->art_flags10) ||
+			    (o_ptr->art_esp != j_ptr->art_esp) )
 		return (0);
 
 	/* Hack -- Require identical "cursed" status */
