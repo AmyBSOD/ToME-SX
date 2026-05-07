@@ -982,32 +982,34 @@ s32b flag_cost(object_type * o_ptr, int plusses, bool isshop)
 	{
 		return 0;
 	}
-	if (f1 & TR1_STR) total += (1000 * plusses);
-	if (f1 & TR1_INT) total += (1000 * plusses);
-	if (f1 & TR1_WIS) total += (1000 * plusses);
-	if (f1 & TR1_DEX) total += (1000 * plusses);
-	if (f1 & TR1_CON) total += (1000 * plusses);
-	if (f1 & TR1_CHR) total += (250 * plusses);
-	if (f1 & TR1_CHAOTIC) total += 10000;
-	if (f1 & TR1_VAMPIRIC) total += 13000;
-	if (f5 & TR5_WOUNDING) total += 8000;
-	if (f1 & TR1_STEALTH) total += (250 * plusses);
-	if (f1 & TR1_SEARCH) total += (100 * plusses);
-	if (f6 & TR6_PERCEPTION) total += (100 * plusses);
-	if (f1 & TR1_INFRA) total += (150 * plusses);
-	if (f1 & TR1_TUNNEL) total += (175 * plusses);
-	if (f5 & TR5_CRIT) total += (300 * plusses);
-	if (f5 & TR5_DISARM) total += (75 * plusses);
-	if (f5 & TR5_DODGE) total += (75 * plusses);
-	if (f6 & TR6_MAGIC_FIND) total += (80 * plusses);
-	if (f6 & TR6_MARTIAL_ARTS) total += (100 * plusses);
-	if (f5 & TR5_LUCK) total += (200 * plusses);
+
+	if ((plusses > 0) || !isshop) {
+		if (f1 & TR1_STR) total += (1000 * plusses);
+		if (f1 & TR1_INT) total += (1000 * plusses);
+		if (f1 & TR1_WIS) total += (1000 * plusses);
+		if (f1 & TR1_DEX) total += (1000 * plusses);
+		if (f1 & TR1_CON) total += (1000 * plusses);
+		if (f2 & TR2_LIFE) total += (5000 * plusses);
+		if (f1 & TR1_CHR) total += (250 * plusses);
+		if (f1 & TR1_STEALTH) total += (250 * plusses);
+		if (f1 & TR1_SEARCH) total += (100 * plusses);
+		if (f6 & TR6_PERCEPTION) total += (100 * plusses);
+		if (f1 & TR1_INFRA) total += (150 * plusses);
+		if (f1 & TR1_TUNNEL) total += (175 * plusses);
+		if (f5 & TR5_CRIT) total += (300 * plusses);
+		if (f5 & TR5_DISARM) total += (75 * plusses);
+		if (f5 & TR5_DODGE) total += (75 * plusses);
+		if (f6 & TR6_MAGIC_FIND) total += (80 * plusses);
+		if (f6 & TR6_MARTIAL_ARTS) total += (100 * plusses);
+		if (f5 & TR5_LUCK) total += (200 * plusses);
+		if (f1 & TR1_MANA) total += (1000 * plusses);
+		if (f1 & TR1_SPELL) total += (2000 * plusses);
+	}
+
 	if ((f1 & TR1_SPEED) && (plusses > 0))
 		total += (10000 + (2500 * plusses));
 	if ((f1 & TR1_BLOWS) && (plusses > 0))
 		total += (10000 + (2500 * plusses));
-	if (f1 & TR1_MANA) total += (1000 * plusses);
-	if (f1 & TR1_SPELL) total += (2000 * plusses);
 	if (f1 & TR1_SLAY_ANIMAL) total += 3500;
 	if (f1 & TR1_SLAY_EVIL) total += 4500;
 	if (f1 & TR1_SLAY_UNDEAD) total += 3500;
@@ -1021,6 +1023,9 @@ s32b flag_cost(object_type * o_ptr, int plusses, bool isshop)
 	if (f1 & TR1_KILL_DRAGON) total += 5500;
 	if (f1 & TR1_VORPAL) total += 5000;
 	if (f1 & TR1_IMPACT) total += 5000;
+	if (f1 & TR1_CHAOTIC) total += 10000;
+	if (f1 & TR1_VAMPIRIC) total += 13000;
+	if (f5 & TR5_WOUNDING) total += 8000;
 	if (f1 & TR1_BRAND_POIS) total += 7500;
 	if (f1 & TR1_BRAND_ACID) total += 7500;
 	if (f1 & TR1_BRAND_ELEC) total += 7500;
@@ -1033,7 +1038,6 @@ s32b flag_cost(object_type * o_ptr, int plusses, bool isshop)
 	if (f2 & TR2_SUST_CON) total += 850;
 	if (f2 & TR2_SUST_CHR) total += 250;
 	if (f2 & TR2_INVIS) total += 3000;
-	if (f2 & TR2_LIFE) total += (5000 * plusses);
 	if (f2 & TR2_IM_ACID) total += 10000;
 	if (f2 & TR2_IM_ELEC) total += 10000;
 	if (f2 & TR2_IM_FIRE) total += 10000;
