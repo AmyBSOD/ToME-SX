@@ -7386,6 +7386,154 @@ void fill_area_terrain(int y1, int x1, int r, int terraintype, int terrchance)
 	p_ptr->window |= (PW_OVERHEAD);
 }
 
+/* Change floor in a certain radius to a random type of damage-dealing terrain, by Amy */
+void fill_area_random_terrain(int y1, int x1, int r, int terrchance)
+{
+	int y, x, k;
+
+	cave_type *c_ptr;
+
+	int terraintype;
+
+	/* Big area of affect */
+	for (y = (y1 - r); y <= (y1 + r); y++)
+	{
+		for (x = (x1 - r); x <= (x1 + r); x++)
+		{
+			/* Skip illegal grids */
+			if (!in_bounds(y, x)) continue;
+
+			/* Extract the distance */
+			k = distance(y1, x1, y, x);
+
+			/* Stay in the circle of death */
+			if (k > r) continue;
+
+			/* Access the grid */
+			c_ptr = &cave[y][x];
+
+			/* Hack -- Notice player affect */
+			if ((x == p_ptr->px) && (y == p_ptr->py))
+			{
+				/* Do not hurt this grid */
+				continue;
+			}
+
+			/* Hack -- Skip the epicenter */
+			if ((y == y1) && (x == x1)) continue;
+
+			/* Destroy "valid" grids */
+			if (cave_valid_bold(y, x) && magik(terrchance))
+			{
+				switch (randint(27)) {
+
+					case 1:
+					default:
+						terraintype = FEAT_SHAL_LAVA;
+						break;
+					case 2:
+						terraintype = FEAT_DEEP_LAVA;
+						break;
+					case 3:
+						terraintype = FEAT_ICE;
+						break;
+					case 4:
+						terraintype = FEAT_SLIPPERY;
+						break;
+					case 5:
+						terraintype = FEAT_FIRE;
+						break;
+					case 6:
+						terraintype = FEAT_NETHER_MIST;
+						break;
+					case 7:
+						terraintype = FEAT_SWAMP_POOL;
+						break;
+					case 8:
+						terraintype = FEAT_ANDUIN;
+						break;
+					case 9:
+						terraintype = FEAT_WATERFALL;
+						break;
+					case 10:
+						terraintype = FEAT_DMG_SHOCK;
+						break;
+					case 11:
+						terraintype = FEAT_DMG_ACID;
+						break;
+					case 12:
+						terraintype = FEAT_DMG_PLASMA;
+						break;
+					case 13:
+						terraintype = FEAT_DMG_DARK;
+						break;
+					case 14:
+						terraintype = FEAT_DMG_SHARD;
+						break;
+					case 15:
+						terraintype = FEAT_DMG_SOUND;
+						break;
+					case 16:
+						terraintype = FEAT_DMG_INERT;
+						break;
+					case 17:
+						terraintype = FEAT_DMG_CHAOS;
+						break;
+					case 18:
+						terraintype = FEAT_DMG_DISEN;
+						break;
+					case 19:
+						terraintype = FEAT_DMG_NEXUS;
+						break;
+					case 20:
+						terraintype = FEAT_DMG_MIND;
+						break;
+					case 21:
+						terraintype = FEAT_DMG_NERVE;
+						break;
+					case 22:
+						terraintype = FEAT_DMG_ETHER;
+						break;
+					case 23:
+						terraintype = FEAT_DMG_UNBREATH;
+						break;
+					case 24:
+						terraintype = FEAT_DMG_HELLFIRE;
+						break;
+					case 25:
+						terraintype = FEAT_DMG_HOLYFIRE;
+						break;
+					case 26:
+						terraintype = FEAT_DMG_TIME;
+						break;
+					case 27:
+						terraintype = FEAT_DMG_NUKE;
+						break;
+
+				}
+
+				/* Create terrain */
+				cave_set_feat(y, x, terraintype);
+			}
+		}
+	}
+
+	/* Mega-Hack -- Forget the view */
+	p_ptr->update |= (PU_UN_VIEW);
+
+	/* Update stuff */
+	p_ptr->update |= (PU_VIEW | PU_FLOW | PU_MON_LITE);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_MONSTERS);
+
+	/* Redraw map */
+	p_ptr->redraw |= (PR_MAP);
+
+	/* Window stuff */
+	p_ptr->window |= (PW_OVERHEAD);
+}
+
 
 /* Ragnarok, from Elona, implemented by Amy */
 void ragnarok(void)

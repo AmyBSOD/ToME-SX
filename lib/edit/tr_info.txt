@@ -736,9 +736,9 @@ D:Your vision is clouded by a blast of kaleidoscopic light!
 F:FLOOR | CHEST | DOOR
 
 # Bolt traps
-N:161:Greater Magic Missile Trap
+N:161:Rocket Trap
 I:6:80:5:6:50:15d10:g
-D:A greater magic missile hits you!
+D:A rocket hits you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
 N:162:Nuke Bolt Trap
@@ -3985,6 +3985,106 @@ F:FLOOR | CHEST | DOOR | LEVEL3
 N:808:Superpoisonous Trap
 I:8:20:0:10:30:0d0:o
 D:Deadly poison gas spreads.
+F:FLOOR | CHEST | DOOR
+
+N:809:Hellfire Trap
+I:8:20:0:10:20:0d0:o
+D:Hellish fire starts burning.
+F:FLOOR | CHEST | DOOR
+
+N:810:Holy Fire Trap
+I:8:20:0:10:20:0d0:o
+D:Holy fire starts burning.
+F:FLOOR | CHEST | DOOR
+
+N:811:Super Rocket Trap
+I:8:80:5:6:70:15d10:B
+D:A rocket hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:812:Multiple Rocket Trap
+I:12:50:5:6:90:15d10:B
+D:A rocket hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:813:Magic Trap
+I:1:100:0:10:1:0d0:g
+D:You are hit by magic!
+F:FLOOR | CHEST | DOOR
+
+N:814:Magic Missile Trap
+I:2:80:5:3:2:1d8:g
+D:A magic missile shoots out at you!
+F:FLOOR | CHEST | DOOR | LEVEL1
+
+N:815:Greater Magic Missile Trap
+I:3:60:5:3:6:3d6:g
+D:A powerful magic missile shoots out at you!
+F:FLOOR | CHEST | DOOR | LEVEL1
+
+N:816:Magic Ball Trap
+I:3:60:5:5:8:3d5:B
+D:You are suddenly drenched in pure magic!
+F:FLOOR | CHEST | DOOR | LEVEL1
+
+N:817:Magic Balls Trap
+I:8:20:5:5:28:3d5:B
+D:You are suddenly drenched in pure magic!
+F:FLOOR | CHEST | DOOR | LEVEL1
+
+N:818:Blast Trap
+I:1:100:5:6:9:0d0:g
+D:A blast hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:819:Damage Terrain Trap
+I:5:10:0:10:10:0d0:o
+D:The terrain becomes dangerous!
+F:FLOOR | CHEST | DOOR
+
+N:820:Greater Damage Terrain Trap
+I:8:10:0:10:30:0d0:o
+D:The terrain becomes dangerous!
+F:FLOOR | CHEST | DOOR
+
+N:821:Absolute Damage Terrain Trap
+I:10:5:0:10:50:0d0:o
+D:The terrain becomes dangerous!
+F:FLOOR | CHEST | DOOR
+
+N:822:Summon Man Trap
+I:3:10:40:6:10:0d0:v
+D:A bunch of guys attacks you!
+F:FLOOR | CHEST | DOOR
+
+N:823:Summon Woman Trap
+I:3:10:40:6:10:0d0:v
+D:A bunch of girls attacks you!
+F:FLOOR | CHEST | DOOR
+
+N:824:Summon Neutrum Trap
+I:3:10:40:6:10:0d0:v
+D:A bunch of neuter creatures attacks you!
+F:FLOOR | CHEST | DOOR
+
+N:825:Random Bolt Trap
+I:6:80:5:6:15:3d12:g
+D:A bolt of some kind hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:826:Random Ball Trap
+I:8:60:5:8:20:3d18:B
+D:A ball of some kind hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:827:Random Balls Trap
+I:13:20:5:8:40:3d18:B
+D:A ball of some kind hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:828:Random Damage Trap
+I:3:100:0:10:12:0d0:g
+D:You are hit by some kind of damage!
 F:FLOOR | CHEST | DOOR
 
 # I:diff:prob:another:pval:minlevel:damage:color

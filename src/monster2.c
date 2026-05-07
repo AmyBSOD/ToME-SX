@@ -3986,6 +3986,24 @@ bool summon_specific_okay(int r_idx)
 			break;
 		}
 
+	case SUMMON_MAN:
+		{
+			okay = (r_ptr->flags1 & RF1_MALE);
+			break;
+		}
+
+	case SUMMON_WOMAN:
+		{
+			okay = (r_ptr->flags1 & RF1_FEMALE);
+			break;
+		}
+
+	case SUMMON_NEUTER:
+		{
+			okay = (!(r_ptr->flags1 & RF1_FEMALE) && !(r_ptr->flags1 & RF1_MALE));
+			break;
+		}
+
 	case SUMMON_HORDE:
 		{
 			okay = ((r_ptr->flags1 & RF1_FRIEND) || (r_ptr->flags1 & RF1_FRIENDS) || (r_ptr->flags1 & RF1_ESCORT) || (r_ptr->flags1 & RF1_ESCORTS));

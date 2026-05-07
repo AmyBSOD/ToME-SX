@@ -13,6 +13,82 @@
 
 #include "angband.h"
 
+/* random elemental damage type, by Amy */
+int randelemdmg(void)
+{
+	switch (randint(34)) {
+		default:
+		case 1:
+			return GF_ELEC;
+		case 2:
+			return GF_POIS;
+		case 3:
+			return GF_ACID;
+		case 4:
+			return GF_COLD;
+		case 5:
+			return GF_FIRE;
+		case 6:
+			return GF_UNBREATH;
+		case 7:
+			return GF_MISSILE;
+		case 8:
+			return GF_PLASMA;
+		case 9:
+			return GF_WATER;
+		case 10:
+			return GF_LITE;
+		case 11:
+			return GF_DARK;
+		case 12:
+			return GF_SHARDS;
+		case 13:
+			return GF_SOUND;
+		case 14:
+			return GF_CONFUSION;
+		case 15:
+			return GF_FORCE;
+		case 16:
+			return GF_INERTIA;
+		case 17:
+			return GF_MANA;
+		case 18:
+			return GF_METEOR;
+		case 19:
+			return GF_ICE;
+		case 20:
+			return GF_CHAOS;
+		case 21:
+			return GF_NETHER;
+		case 22:
+			return GF_DISENCHANT;
+		case 23:
+			return GF_NEXUS;
+		case 24:
+			return GF_TIME;
+		case 25:
+			return GF_GRAVITY;
+		case 26:
+			return GF_ROCKET;
+		case 27:
+			return GF_NUKE;
+		case 28:
+			return GF_HOLY_FIRE;
+		case 29:
+			return GF_HELL_FIRE;
+		case 30:
+			return GF_DISINTEGRATE;
+		case 31:
+			return GF_PSI_DRAIN;
+		case 32:
+			return GF_NERVE;
+		case 33:
+			return GF_MIND;
+		case 34:
+			return GF_ETHER;
+	}
+}
+
 bool do_player_trap_call_out(void)
 {
 	s16b i, sn, cx, cy;
@@ -3445,6 +3521,114 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* Summon Man Trap */
+	case TRAP_OF_SUMMON_MAN:
+		{
+			msg_print("An odorous spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
+				                         SUMMON_MAN);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Man Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Woman Trap */
+	case TRAP_OF_SUMMON_WOMAN:
+		{
+			msg_print("A perfumed spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
+				                         SUMMON_WOMAN);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Woman Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Neutrum Trap */
+	case TRAP_OF_SUMMON_NEUTER:
+		{
+			msg_print("A neutral spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
+				                         SUMMON_NEUTER);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Neutrum Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
 		/* Summon Horde Trap */
 	case TRAP_OF_SUMMON_HORDE:
 		{
@@ -5331,6 +5515,27 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_ELE_RNDDMG:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, randelemdmg(), PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_MAGMIS:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_MISSILE, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_ROCKET:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_ROCKET, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
 	case TRAP_OF_ELE_TIME:
 		{
 			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_TIME, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
@@ -6750,6 +6955,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			ident = TRUE;
 			break;
 		}
@@ -6761,10 +6967,12 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			inven_damage(set_cold_destroy, 3);
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			ident = TRUE;
 			break;
 		}
@@ -6776,14 +6984,17 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			inven_damage(set_cold_destroy, 3);
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			inven_damage(set_cold_destroy, 3);
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			ident = TRUE;
 			break;
 		}
@@ -6795,42 +7006,52 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			inven_damage(set_cold_destroy, 3);
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			inven_damage(set_cold_destroy, 3);
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			inven_damage(set_cold_destroy, 3);
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			inven_damage(set_cold_destroy, 3);
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			inven_damage(set_cold_destroy, 3);
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			inven_damage(set_cold_destroy, 3);
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			inven_damage(set_cold_destroy, 3);
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			inven_damage(set_cold_destroy, 3);
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			inven_damage(set_cold_destroy, 3);
 			inven_damage(set_fire_destroy, 3);
 			inven_damage(set_elec_destroy, 3);
 			inven_damage(set_acid_destroy, 3);
+			inven_damage(set_pois_destroy, 3);
 			ident = TRUE;
 			break;
 		}
@@ -12943,6 +13164,15 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_UNBREATH_BOLT:
 		ident = player_handle_breath_trap(1, GF_UNBREATH, TRAP_OF_UNBREATH_BOLT);
 		break;
+	case TRAP_OF_RNDDMG_BOLT:
+		ident = player_handle_breath_trap(1, randelemdmg(), TRAP_OF_RNDDMG_BOLT);
+		break;
+	case TRAP_OF_MAGMIS_BOLT:
+		ident = player_handle_breath_trap(1, GF_MISSILE, TRAP_OF_MAGMIS_BOLT);
+		break;
+	case TRAP_OF_MAGMIS_BOLT_X:
+		ident = player_handle_breath_trap(1, GF_MISSILE, TRAP_OF_MAGMIS_BOLT_X);
+		break;
 	case TRAP_OF_TIME_BOLT:
 		ident = player_handle_breath_trap(1, GF_TIME, TRAP_OF_TIME_BOLT);
 		break;
@@ -13060,6 +13290,12 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		break;
 	case TRAP_OF_UNBREATH_BALL:
 		ident = player_handle_breath_trap(3, GF_UNBREATH, TRAP_OF_UNBREATH_BALL);
+		break;
+	case TRAP_OF_RNDDMG_BALL:
+		ident = player_handle_breath_trap(3, randelemdmg(), TRAP_OF_RNDDMG_BALL);
+		break;
+	case TRAP_OF_MAGMIS_BALL:
+		ident = player_handle_breath_trap(3, GF_MISSILE, TRAP_OF_MAGMIS_BALL);
 		break;
 	case TRAP_OF_TIME_BALL:
 		ident = player_handle_breath_trap(3, GF_TIME, TRAP_OF_TIME_BALL);
@@ -13387,6 +13623,28 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 		}
 		break;
+	case TRAP_OF_RNDDMG_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, randelemdmg(), TRAP_OF_RNDDMG_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_MAGMIS_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_MISSILE, TRAP_OF_MAGMIS_BALLS);
+				ballamount--;
+			}
+		}
+		break;
 	case TRAP_OF_TIME_BALLS:
 		{
 			int ballamount = 2;
@@ -13449,6 +13707,17 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
 			while (ballamount > 0) {
 				ident = player_handle_breath_trap(3, GF_NUKE, trap);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_ROCKET_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_ROCKET, trap);
 				ballamount--;
 			}
 		}
@@ -14262,6 +14531,62 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		}
 		break;
 
+	case TRAP_OF_TERRAIN_HELLFIRE:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 6, FEAT_DMG_HELLFIRE, 35);
+
+		msg_print("Hellish fires spring up everywhere!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Hellfire Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_HOLYFIRE:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 9, FEAT_DMG_HOLYFIRE, 25);
+
+		msg_print("Holy flames spring up everywhere!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Holy Fire Trap.");
+		}
+		break;
+
 	case TRAP_OF_TERRAIN_TIME:
 		ident = TRUE;
 		fill_area_terrain(p_ptr->py, p_ptr->px, 6, FEAT_DMG_TIME, 40);
@@ -14315,6 +14640,90 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				place_trap(y, x);
 			}
 			msg_print("You identified that trap as Nuclear Spill Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_RND:
+		ident = TRUE;
+		fill_area_random_terrain(p_ptr->py, p_ptr->px, 5, 30);
+
+		msg_print("The area around you becomes dangerous!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Damage Terrain Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_RND_II:
+		ident = TRUE;
+		fill_area_random_terrain(p_ptr->py, p_ptr->px, 7, 50);
+
+		msg_print("The area around you becomes dangerous!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Greater Damage Terrain Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_RND_III:
+		ident = TRUE;
+		fill_area_random_terrain(p_ptr->py, p_ptr->px, 10, 75);
+
+		msg_print("The area around you becomes dangerous!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Absolute Damage Terrain Trap.");
 		}
 		break;
 
@@ -15215,6 +15624,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		break;
 	case TRAP_OF_PSI_BALL:
 		ident = player_handle_breath_trap(3, GF_PSI, trap);
+		break;
+	case TRAP_OF_ROCKET_BALL:
+		ident = player_handle_breath_trap(3, GF_ROCKET, trap);
 		break;
 
 	default:

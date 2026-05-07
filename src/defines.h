@@ -847,6 +847,8 @@
 #define FEAT_DMG_MIND           0x7B 
 #define FEAT_DMG_ETHER          0x7C 
 #define FEAT_DMG_UNBREATH       0x7D
+#define FEAT_DMG_HELLFIRE       0x7E
+#define FEAT_DMG_HOLYFIRE       0x7F
 
 #define FEAT_BETWEEN            0xA0 /* 160 */
 
@@ -3586,6 +3588,32 @@
 #define TRAP_OF_UNBREATH_BALLS            807
 
 #define TRAP_OF_TERRAIN_UNBREATH          808
+#define TRAP_OF_TERRAIN_HELLFIRE          809
+#define TRAP_OF_TERRAIN_HOLYFIRE          810
+
+#define TRAP_OF_ROCKET_BALL               811
+#define TRAP_OF_ROCKET_BALLS              812
+
+#define TRAP_OF_ELE_MAGMIS                813
+#define TRAP_OF_MAGMIS_BOLT               814
+#define TRAP_OF_MAGMIS_BOLT_X             815
+#define TRAP_OF_MAGMIS_BALL               816
+#define TRAP_OF_MAGMIS_BALLS              817
+
+#define TRAP_OF_ELE_ROCKET                818
+
+#define TRAP_OF_TERRAIN_RND               819
+#define TRAP_OF_TERRAIN_RND_II            820
+#define TRAP_OF_TERRAIN_RND_III           821
+
+#define TRAP_OF_SUMMON_MAN                822
+#define TRAP_OF_SUMMON_WOMAN              823
+#define TRAP_OF_SUMMON_NEUTER             824
+
+#define TRAP_OF_RNDDMG_BOLT               825
+#define TRAP_OF_RNDDMG_BALL               826
+#define TRAP_OF_RNDDMG_BALLS              827
+#define TRAP_OF_ELE_RNDDMG                828
 
 /*** General index values ***/
 
@@ -3654,6 +3682,9 @@
 #define SUMMON_SEXY_GIRL            79 /* REVBOSS */
 #define SUMMON_TROLL                80 /* T or TROLL */
 #define SUMMON_ORC                  81 /* o or ORC */
+#define SUMMON_MAN                  82 /* MALE */
+#define SUMMON_WOMAN                83 /* FEMALE */
+#define SUMMON_NEUTER               84 /* neither MALE nor FEMALE */
 
 
 /*
