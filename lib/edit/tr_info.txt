@@ -4087,6 +4087,56 @@ I:3:100:0:10:12:0d0:g
 D:You are hit by some kind of damage!
 F:FLOOR | CHEST | DOOR
 
+N:829:Joined Teleport Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:830:Multiple Gather Trap
+I:10:5:100:5:30:0d0:v
+D:All the monsters gather around you!
+F:FLOOR | CHEST | DOOR
+
+N:831:Short Teleport Trap
+I:3:100:50:3:2:0d0:w
+D:Now you know why nobody ever got close enough to disarm this trap...
+F:FLOOR | CHEST | DOOR
+
+N:832:Medium Teleport Trap
+I:3:100:50:3:2:0d0:w
+D:Now you know why nobody ever got close enough to disarm this trap...
+F:FLOOR | CHEST | DOOR
+
+N:833:Trap of Steep Sinking
+I:3:50:0:0:20:0d0:w
+D:A trapdoor opens up under you!
+F:FLOOR | DOOR
+
+N:834:Trap of Dangerous Sinking
+I:5:50:0:0:40:0d0:w
+D:A trapdoor opens up under you!
+F:FLOOR | DOOR
+
+N:835:Deep Shaft Trap
+I:3:30:0:0:20:0d0:w
+D:A shaft opens up under you!
+F:FLOOR | DOOR
+
+N:836:Extra Deep Shaft Trap
+I:5:30:0:0:35:0d0:w
+D:A shaft opens up under you!
+F:FLOOR | DOOR
+
+N:837:Quick Recall Trap
+I:3:100:50:3:30:0d0:w
+D:Uh-oh, better hurry if you want that loot!
+F:FLOOR | CHEST | DOOR
+
+N:838:Instant Recall Trap
+I:5:33:50:3:40:0d0:w
+D:Too late, now the level is gone.
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

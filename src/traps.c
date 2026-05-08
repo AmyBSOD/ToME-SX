@@ -89,6 +89,50 @@ int randelemdmg(void)
 	}
 }
 
+/* multiple gather trap: transport ALL monsters on the level to you --Amy */
+bool do_player_trap_multiple_gather(void)
+{
+	s16b i;
+	s16b h_index = 0;
+	byte monfx, monfy;
+	s16b m_idx;
+
+	monster_type *m_ptr;
+	cave_type *c_ptr;
+
+	for (i = 1; i < m_max; i++)
+	{
+		m_ptr = &m_list[i];
+
+		/* Paranoia -- Skip dead monsters */
+		if (!m_ptr->r_idx) continue;
+
+		h_index = i;
+
+		monfx = m_ptr->fx;
+		monfy = m_ptr->fy;
+
+		c_ptr = &cave[monfy][monfx];
+
+		m_idx = c_ptr->m_idx;
+
+		/* teleport it to the player */
+		if (m_idx) {
+			teleport_to_player(m_idx);
+		}
+	}
+
+	/* if the level is empty of monsters, h_index will be 0 */
+	if (!h_index) return (FALSE);
+
+	msg_print("Ack, all the monsters have been beamed straight to you!");
+
+	/* this trap is ultra deadly if the monsters then all get a turn! so don't do that --Amy */
+	if (energy_use) energy_use = 1;
+
+	return (TRUE);
+}
+
 bool do_player_trap_call_out(void)
 {
 	s16b i, sn, cx, cy;
@@ -845,6 +889,7 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY183:
 		case TRAP_NASTY184:
 		case TRAP_NASTY185:
+		case TRAP_NASTY186:
 			return FALSE;
 	}
 
@@ -1064,6 +1109,7 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY183:
 		case TRAP_NASTY184:
 		case TRAP_NASTY185:
+		case TRAP_NASTY186:
 			return FALSE;
 	}
 
@@ -1286,6 +1332,7 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY183:
 		case TRAP_NASTY184:
 		case TRAP_NASTY185:
+		case TRAP_NASTY186:
 			return TRUE;
 	}
 
@@ -1989,6 +2036,34 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				break;
 			}
 			recall_player(21, 15);
+			ident = TRUE;
+
+			break;
+		}
+
+	case TRAP_OF_RECALL_II:
+		{
+			if (p_ptr->word_recall) {
+				ident = FALSE;
+				msg_print("You are already being recalled.");
+				break;
+			}
+			recall_player(3, 3);
+			ident = TRUE;
+
+			break;
+		}
+
+	/* instant recall trap by Amy: paralyze player to ensure they can't stop the recall */
+	case TRAP_OF_RECALL_III:
+		{
+			if (p_ptr->word_recall) {
+				ident = FALSE;
+				msg_print("You are already being recalled.");
+				break;
+			}
+			recall_player(1, 1);
+			(void)set_paralyzed(p_ptr->paralyzed + 3);
 			ident = TRUE;
 
 			break;
@@ -4140,6 +4215,22 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_TELEPORT_II:
+		{
+			msg_print("The world whirls around you.");
+			teleport_player(67);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_TELEPORT_III:
+		{
+			msg_print("The world whirls around you.");
+			teleport_player(134);
+			ident = TRUE;
+			break;
+		}
+
 	case TRAP_OF_PHASE_DOOR:
 		{
 			msg_print("The world whirls around you.");
@@ -5967,6 +6058,82 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_SINKING_II:
+		{
+			msg_print("You fell through a trap door!");
+			ident = TRUE;
+
+			if (p_ptr->ffall)
+			{
+				if (dungeon_flags1 & DF1_TOWER)
+				{
+					msg_print("You float gently down to the previous level.");
+				}
+				else
+				{
+					msg_print("You float gently down to the next level.");
+				}
+			}
+			else
+			{
+				take_hit(damroll(4, 8), "a trap door");
+			}
+
+			/* Still alive and autosave enabled */
+			if (autosave_l && (p_ptr->chp >= 0))
+			{
+				is_autosave = TRUE;
+				msg_print("Autosaving the game...");
+				do_cmd_save_game();
+				is_autosave = FALSE;
+			}
+
+			if (dungeon_flags1 & DF1_TOWER) dun_level--;
+			else dun_level++;
+
+			/* Leaving */
+			p_ptr->leaving = TRUE;
+			break;
+		}
+
+	case TRAP_OF_SINKING_III:
+		{
+			msg_print("You fell through a trap door!");
+			ident = TRUE;
+
+			if (p_ptr->ffall)
+			{
+				if (dungeon_flags1 & DF1_TOWER)
+				{
+					msg_print("You float gently down to the previous level.");
+				}
+				else
+				{
+					msg_print("You float gently down to the next level.");
+				}
+			}
+			else
+			{
+				take_hit(damroll(8, 8), "a trap door");
+			}
+
+			/* Still alive and autosave enabled */
+			if (autosave_l && (p_ptr->chp >= 0))
+			{
+				is_autosave = TRUE;
+				msg_print("Autosaving the game...");
+				do_cmd_save_game();
+				is_autosave = FALSE;
+			}
+
+			if (dungeon_flags1 & DF1_TOWER) dun_level--;
+			else dun_level++;
+
+			/* Leaving */
+			p_ptr->leaving = TRUE;
+			break;
+		}
+
 		/* Shaft Trap */
 	case TRAP_OF_SHAFT:
 		{
@@ -6001,6 +6168,110 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 
 			int i = randint(3) + 1, j;
+
+			for (j = 1; j < i; j++)
+			{
+				if (dungeon_flags1 & DF1_TOWER) {
+					dun_level--;
+					if (is_quest(dun_level + i - 1) && (is_quest(dun_level + i - 1) != QUEST_RANDOM) ) break;
+					if (d_ptr->maxdepth == dun_level) break;
+				} else {
+					dun_level++;
+					if (is_quest(dun_level + i - 1) && (is_quest(dun_level + i - 1) != QUEST_RANDOM) ) break;
+					if (d_ptr->maxdepth == dun_level) break;
+				}
+			}
+
+			/* Leaving */
+			p_ptr->leaving = TRUE;
+			break;
+		}
+
+	case TRAP_OF_SHAFT_II:
+		{
+			dungeon_info_type *d_ptr = &d_info[dungeon_type];
+
+			msg_print("You fell through a shaft!");
+			ident = TRUE;
+
+			if (p_ptr->ffall)
+			{
+				if (dungeon_flags1 & DF1_TOWER)
+				{
+					msg_print("You float gently down to the previous level.");
+				}
+				else
+				{
+					msg_print("You float gently down to the next level.");
+				}
+			}
+			else
+			{
+				take_hit(damroll(4, 8), "a trap door");
+			}
+
+			/* Still alive and autosave enabled */
+			if (autosave_l && (p_ptr->chp >= 0))
+			{
+				is_autosave = TRUE;
+				msg_print("Autosaving the game...");
+				do_cmd_save_game();
+				is_autosave = FALSE;
+			}
+
+			int i = randint(10) + 2, j;
+
+			for (j = 1; j < i; j++)
+			{
+				if (dungeon_flags1 & DF1_TOWER) {
+					dun_level--;
+					if (is_quest(dun_level + i - 1) && (is_quest(dun_level + i - 1) != QUEST_RANDOM) ) break;
+					if (d_ptr->maxdepth == dun_level) break;
+				} else {
+					dun_level++;
+					if (is_quest(dun_level + i - 1) && (is_quest(dun_level + i - 1) != QUEST_RANDOM) ) break;
+					if (d_ptr->maxdepth == dun_level) break;
+				}
+			}
+
+			/* Leaving */
+			p_ptr->leaving = TRUE;
+			break;
+		}
+
+	case TRAP_OF_SHAFT_III:
+		{
+			dungeon_info_type *d_ptr = &d_info[dungeon_type];
+
+			msg_print("You fell through a shaft!");
+			ident = TRUE;
+
+			if (p_ptr->ffall)
+			{
+				if (dungeon_flags1 & DF1_TOWER)
+				{
+					msg_print("You float gently down to the previous level.");
+				}
+				else
+				{
+					msg_print("You float gently down to the next level.");
+				}
+			}
+			else
+			{
+				take_hit(damroll(6, 8), "a trap door");
+			}
+
+			/* Still alive and autosave enabled */
+			if (autosave_l && (p_ptr->chp >= 0))
+			{
+				is_autosave = TRUE;
+				msg_print("Autosaving the game...");
+				do_cmd_save_game();
+				is_autosave = FALSE;
+			}
+
+			int i = randint(25) + 3, j;
 
 			for (j = 1; j < i; j++)
 			{
@@ -7101,6 +7372,63 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				}
 
 				if (ident) msg_print("You identified that trap as Trap of Calling Out.");
+				ident = FALSE;
+
+			}
+
+			break;
+		}
+
+		/* Trap of Multiple Gather */
+	case TRAP_OF_MULTIPLE_GATHER:
+		{
+			if (p_ptr->resist_continuum) { /* nothing happens */
+				ident = FALSE;
+				break;
+			}
+
+			ident = do_player_trap_multiple_gather();
+
+			if (!ident)
+			{
+				/* Increase "afraid" */
+				if (p_ptr->resist_fear && !p_ptr->nastytrap30 && (rand_int(100) > 4) )
+				{
+					msg_print("You feel as if you had a horrible nightmare!");
+				}
+				else if (rand_int(100) < player_actual_saving_throw())
+				{
+					msg_print("You remember having a horrible nightmare!");
+				}
+				else
+				{
+					if (set_afraid(p_ptr->afraid + 3 + randint(40)))
+					{
+						msg_print("You have a vision of a lot of enemies.");
+					}
+				}
+			}
+
+			/* thwart endless farming --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Trap of Multiple Gather.");
 				ident = FALSE;
 
 			}
@@ -12537,6 +12865,18 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY186:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap186 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHIT_I:
 		{
 			bool badheel = FALSE;
@@ -17147,7 +17487,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(185)) {
+	switch (randint(186)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -17703,6 +18043,9 @@ void give_random_nastytrap_effect(void)
 		case 185:
 			p_ptr->nastytrap185 = TRUE;
 			break;
+		case 186:
+			p_ptr->nastytrap186 = TRUE;
+			break;
 
 	}
 }
@@ -17905,7 +18248,7 @@ void cure_nasty_traps(void)
 	if (effect_level >= 15) p_ptr->nastytrap183 = FALSE;
 	if (effect_level >= 35) p_ptr->nastytrap184 = FALSE;
 	if (effect_level >= 12) p_ptr->nastytrap185 = FALSE;
-	p_ptr->nastytrap186 = FALSE;
+	if (effect_level >= 10) p_ptr->nastytrap186 = FALSE;
 	p_ptr->nastytrap187 = FALSE;
 	p_ptr->nastytrap188 = FALSE;
 	p_ptr->nastytrap189 = FALSE;

@@ -2379,6 +2379,10 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Monsters come out of a portal on occasion.";
 	}
+	if (p_ptr->nastytrap186)
+	{
+		info[i++] = "You have a problem: Adjacent monsters who can teleport will do so whenever you do.";
+	}
 
 	if (p_ptr->contamination >= 10000)
 	{

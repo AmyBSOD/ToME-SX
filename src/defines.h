@@ -3615,6 +3615,22 @@
 #define TRAP_OF_RNDDMG_BALLS              827
 #define TRAP_OF_ELE_RNDDMG                828
 
+#define TRAP_NASTY186                     829
+
+#define TRAP_OF_MULTIPLE_GATHER           830
+
+#define TRAP_OF_TELEPORT_II               831
+#define TRAP_OF_TELEPORT_III              832
+
+#define TRAP_OF_SINKING_II                833
+#define TRAP_OF_SINKING_III               834
+
+#define TRAP_OF_SHAFT_II                  835
+#define TRAP_OF_SHAFT_III                 836
+
+#define TRAP_OF_RECALL_II                 837
+#define TRAP_OF_RECALL_III                838
+
 /*** General index values ***/
 
 

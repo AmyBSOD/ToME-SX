@@ -445,9 +445,6 @@ void teleport_to_player(int m_idx)
 	/* Paranoia */
 	if (!m_ptr->r_idx) return;
 
-	/* "Skill" test */
-	if (randint(100) > m_ptr->level) return;
-
 	/* Save the old location */
 	oy = m_ptr->fy;
 	ox = m_ptr->fx;
@@ -548,6 +545,8 @@ void teleport_player(int dis)
 {
 	int d, i, min, ox, oy, x = 0, y = 0;
 	int tries = 0;
+
+	monster_type *m_ptr;
 
 	int xx = -1, yy = -1;
 
@@ -680,10 +679,16 @@ void teleport_player(int dis)
 							 * covetous nastytrap reinstates the old cheesy "GAME OVER LOL" behavior where reading teleport acts as if you had just
 							 * waited a turn next to the boss, because the boss doesn't even use a turn for the cheater teleport...
 							 * so if you were one turn from death and try to get away via tele scroll, you just die, great game design, 10/10 would play again */
-							if (p_ptr->nastytrap117) {
-								teleport_to_player(cave[oy + yy][ox + xx].m_idx);
-							} else {
-								teleport_away(cave[oy + yy][ox + xx].m_idx, MAX_SIGHT * 2 + 5);
+
+							m_ptr = &m_list[cave[oy + yy][ox + xx].m_idx];
+
+							/* "Skill" test; joined teleport nastytrap (by Amy) means monster can always teleport */
+							if ((randint(100) <= m_ptr->level) || p_ptr->nastytrap186) {
+								if (p_ptr->nastytrap117) {
+									teleport_to_player(cave[oy + yy][ox + xx].m_idx);
+								} else {
+									teleport_away(cave[oy + yy][ox + xx].m_idx, MAX_SIGHT * 2 + 5);
+								}
 							}
 						}
 					}
@@ -723,6 +728,8 @@ void teleport_player_deathmold(int dis)
 	int tries = 0;
 
 	int xx = -1, yy = -1;
+
+	monster_type *m_ptr;
 
 	bool look = TRUE;
 
@@ -840,10 +847,16 @@ void teleport_player_deathmold(int dis)
 							 * covetous nastytrap reinstates the old cheesy "GAME OVER LOL" behavior where reading teleport acts as if you had just
 							 * waited a turn next to the boss, because the boss doesn't even use a turn for the cheater teleport...
 							 * so if you were one turn from death and try to get away via tele scroll, you just die, great game design, 10/10 would play again */
-							if (p_ptr->nastytrap117) {
-								teleport_to_player(cave[oy + yy][ox + xx].m_idx);
-							} else {
-								teleport_away(cave[oy + yy][ox + xx].m_idx, MAX_SIGHT * 2 + 5);
+
+							m_ptr = &m_list[cave[oy + yy][ox + xx].m_idx];
+
+							/* "Skill" test; joined teleport nastytrap (by Amy) means monster can always teleport */
+							if ((randint(100) <= m_ptr->level) || p_ptr->nastytrap186) {
+								if (p_ptr->nastytrap117) {
+									teleport_to_player(cave[oy + yy][ox + xx].m_idx);
+								} else {
+									teleport_away(cave[oy + yy][ox + xx].m_idx, MAX_SIGHT * 2 + 5);
+								}
 							}
 						}
 					}
@@ -1445,6 +1458,7 @@ void teleport_player_level_trap(void)
 
 /*
  * Recall the player to town or dungeon
+ * timer is d(d) + f turns
  */
 void recall_player(int d, int f)
 {
