@@ -3632,6 +3632,277 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* Summon Breeder Trap */
+	case TRAP_OF_SUMMON_BREEDER:
+		{
+			msg_print("A sexual spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
+				                         SUMMON_BREEDER);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Breeder Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Reproduction Trap */
+	case TRAP_OF_SUMMON_BREEDER_SPC:
+		{
+			bool look;
+			int xx, yy;
+			int tries;
+			int i, d;
+			int dis, min;
+
+			msg_print("You hear a fucking sound.");
+
+				look = TRUE;
+				xx = yy = -1;
+				tries = 0;
+
+				dis = 25;
+				min = 10;
+
+				while (look) {
+					tries++;
+
+					for (i = 0; i < 500; i++)
+					{
+						/* Pick a (possibly illegal) location */
+						while (1)
+						{
+							yy = rand_spread(p_ptr->py, dis);
+							xx = rand_spread(p_ptr->px, dis);
+							d = distance(p_ptr->py, p_ptr->px, yy, xx);
+							if ((d >= min) && (d <= dis)) break;
+						}
+
+						/* Ignore illegal locations */
+						if (!in_bounds(yy, xx)) continue;
+
+						/* Require "naked" floor space */
+						if (!cave_naked_bold(yy, xx)) continue;
+
+						/* This grid looks good */
+						look = FALSE;
+
+						/* Stop looking */
+						break;
+					}
+
+					/* Increase the maximum distance */
+					dis = dis * 2;
+
+					/* Stop after 100 tries */
+					if (tries > 100) {
+						xx = yy = -1;
+						break;
+					}
+
+				}
+
+				if (xx != -1 && yy != -1) {
+					summon_specific(yy, xx, max_dlv_real[dungeon_type], SUMMON_BREEDER);
+				}
+
+				look = TRUE;
+				xx = yy = -1;
+				tries = 0;
+
+				dis = 50;
+				min = 25;
+
+				while (look) {
+					tries++;
+
+					for (i = 0; i < 500; i++)
+					{
+						/* Pick a (possibly illegal) location */
+						while (1)
+						{
+							yy = rand_spread(p_ptr->py, dis);
+							xx = rand_spread(p_ptr->px, dis);
+							d = distance(p_ptr->py, p_ptr->px, yy, xx);
+							if ((d >= min) && (d <= dis)) break;
+						}
+
+						/* Ignore illegal locations */
+						if (!in_bounds(yy, xx)) continue;
+
+						/* Require "naked" floor space */
+						if (!cave_naked_bold(yy, xx)) continue;
+
+						/* This grid looks good */
+						look = FALSE;
+
+						/* Stop looking */
+						break;
+					}
+
+					/* Increase the maximum distance */
+					dis = dis * 2;
+
+					/* Stop after 100 tries */
+					if (tries > 100) {
+						xx = yy = -1;
+						break;
+					}
+
+				}
+
+				if (xx != -1 && yy != -1) {
+					summon_specific(yy, xx, max_dlv_real[dungeon_type], SUMMON_BREEDER);
+				}
+
+				look = TRUE;
+				xx = yy = -1;
+				tries = 0;
+
+				dis = 75;
+				min = 50;
+
+				while (look) {
+					tries++;
+
+					for (i = 0; i < 500; i++)
+					{
+						/* Pick a (possibly illegal) location */
+						while (1)
+						{
+							yy = rand_spread(p_ptr->py, dis);
+							xx = rand_spread(p_ptr->px, dis);
+							d = distance(p_ptr->py, p_ptr->px, yy, xx);
+							if ((d >= min) && (d <= dis)) break;
+						}
+
+						/* Ignore illegal locations */
+						if (!in_bounds(yy, xx)) continue;
+
+						/* Require "naked" floor space */
+						if (!cave_naked_bold(yy, xx)) continue;
+
+						/* This grid looks good */
+						look = FALSE;
+
+						/* Stop looking */
+						break;
+					}
+
+					/* Increase the maximum distance */
+					dis = dis * 2;
+
+					/* Stop after 100 tries */
+					if (tries > 100) {
+						xx = yy = -1;
+						break;
+					}
+
+				}
+
+				if (xx != -1 && yy != -1) {
+					summon_specific(yy, xx, max_dlv_real[dungeon_type], SUMMON_BREEDER);
+				}
+
+				look = TRUE;
+				xx = yy = -1;
+				tries = 0;
+
+				dis = 100;
+				min = 75;
+
+				while (look) {
+					tries++;
+
+					for (i = 0; i < 500; i++)
+					{
+						/* Pick a (possibly illegal) location */
+						while (1)
+						{
+							yy = rand_spread(p_ptr->py, dis);
+							xx = rand_spread(p_ptr->px, dis);
+							d = distance(p_ptr->py, p_ptr->px, yy, xx);
+							if ((d >= min) && (d <= dis)) break;
+						}
+
+						/* Ignore illegal locations */
+						if (!in_bounds(yy, xx)) continue;
+
+						/* Require "naked" floor space */
+						if (!cave_naked_bold(yy, xx)) continue;
+
+						/* This grid looks good */
+						look = FALSE;
+
+						/* Stop looking */
+						break;
+					}
+
+					/* Increase the maximum distance */
+					dis = dis * 2;
+
+					/* Stop after 100 tries */
+					if (tries > 100) {
+						xx = yy = -1;
+						break;
+					}
+
+				}
+
+				if (xx != -1 && yy != -1) {
+					summon_specific(yy, xx, max_dlv_real[dungeon_type], SUMMON_BREEDER);
+				}
+
+			ident = TRUE;
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(10) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Reproduction Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
 		/* Summon Woman Trap */
 	case TRAP_OF_SUMMON_WOMAN:
 		{

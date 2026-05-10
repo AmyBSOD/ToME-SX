@@ -3992,6 +3992,12 @@ bool summon_specific_okay(int r_idx)
 			break;
 		}
 
+	case SUMMON_BREEDER:
+		{
+			okay = (r_ptr->flags4 & RF4_MULTIPLY);
+			break;
+		}
+
 	case SUMMON_WOMAN:
 		{
 			okay = (r_ptr->flags1 & RF1_FEMALE);

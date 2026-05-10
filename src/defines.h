@@ -3631,6 +3631,9 @@
 #define TRAP_OF_RECALL_II                 837
 #define TRAP_OF_RECALL_III                838
 
+#define TRAP_OF_SUMMON_BREEDER            839
+#define TRAP_OF_SUMMON_BREEDER_SPC        840
+
 /*** General index values ***/
 
 
@@ -3701,6 +3704,7 @@
 #define SUMMON_MAN                  82 /* MALE */
 #define SUMMON_WOMAN                83 /* FEMALE */
 #define SUMMON_NEUTER               84 /* neither MALE nor FEMALE */
+#define SUMMON_BREEDER              85 /* MULTIPLY */
 
 
 /*

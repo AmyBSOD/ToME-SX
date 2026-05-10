@@ -4137,6 +4137,16 @@ I:5:33:50:3:40:0d0:w
 D:Too late, now the level is gone.
 F:FLOOR | CHEST | DOOR
 
+N:839:Summon Breeder Trap
+I:3:5:40:6:5:0d0:v
+D:Quick, the monsters started breeding explosively!
+F:FLOOR | CHEST | DOOR
+
+N:840:Reproduction Trap
+I:3:5:40:6:10:0d0:v
+D:It's too late to stop the explosive breeders, methinks.
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 
