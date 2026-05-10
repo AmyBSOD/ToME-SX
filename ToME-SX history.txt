@@ -1,5 +1,67 @@
 Version history for ToME-SX by AmyBSOD, given in reverse chronological order *bundlebundlebundle* <3
 
+May 2026
+- Fixed a vanilla inconsistency where properties present on items would adjust the item's costs only sometimes instead of all the time. Also, negative bonuses to stats and such on items should no longer result in you being able to buy the item from a shop for dirt cheap.
+- Unbreathing damage can now affect the player, and will destroy potions and food unless the player is at least doubly poison resistant.
+- Fixed a huge vanilla bug where putting a birth option into the options file would allow the player to load that file and thereby change birth options during an ongoing game.
+- Added a new spell school, "elemental" spells (not to be confused with water, fire, air or earth spells).
+
+April 2026
+- Monsters are now less likely to become unstunned if their stun timer is high, but higher monster levels still unstun much faster than low-level ones.
+- Autoscum is a birth option now.
+- New birth option: dead end mode, where certain quests can fail permanently like they could in vanilla.
+- Added a new deity, Lorien.
+- Players who worship Orome now need to watch out that no trees are destroyed, because if they are, the player's piety is reduced.
+- New properties: resist force, resist normal damage, attract monsters.
+
+- Bumped the version number up to 1.30.
+- Fixed a vanilla bug where if recall doesn't work due to special rules of the current dungeon, the bottom right status line (which shows the current dungeon level) would incorrectly keep being displayed in orange, misleading the player into thinking that the recall would still happen. Now, it properly becomes white again.
+
+March 2026
+- Fixed a loophole where necromancy could create things that then drop corpses, allowing for an endless cycle of summoning undead over and over.
+- Adjusted several dangerous monsters so that they grant experience when killed.
+- Added a new deity, Nessa.
+- Added a skill for wearing high heels. Characters who wear heels without the skill get penalties.
+- Trying to zap an empty wand now gives a -More- prompt to catch the overshot keystroke.
+- The repelling potion effect now only grants high resistance to ambushes, not complete immunity.
+- Fixed a vanilla bug where the amount of modifiers on randarts was calculated incorrectly.
+- Nexus resistance only gives high resistance instead of immunity against the teleport level monster spell now.
+- Thaumaturgy can also create "spray" spells now, which create clouds that deal damage for a while.
+- Shopkeepers now adjust their prices for more playable races.
+- Teleport Other and Destruction now have a chance of working on special levels, but the latter will generally not delete monsters.
+- Stealing from shops is now less likely to succeed for pricey items.
+- Fixed a problem where shops would sometimes sell cursed items for far too low prices.
+- Bumped the version number up to 1.29.
+
+February 2026
+- Pets now display as numbers to make it easier to tell them apart from hostile monsters.
+- A player with at least 50 levels in mind spells now has mind resistance.
+- Players with negative stealth ratings now wake up monsters from farther away.
+- Fixed a vanilla bug where chests would use very wrong calculations to determine the level of items dropped from the chest.
+- Switchers appear more often, but will only cure nasty trap effects whose level isn't higher than the current dungeon level.
+- Monsters who can summon are less likely to successfully summon things now, unless the player is playing masochist mode.
+- Made certain types of wilderness less difficult to traverse by increasing the percentage of walkable terrain.
+- Cola bottles have names now.
+- Nerfed the geomancy synergies given to the various elemental spell schools.
+- Manwe worshippers now need more piety for gaining speed bonuses.
+- Fixed the oversight where curse foo traps didn't remove ESP flags.
+- Demonology spells can now be copied to other items.
+- Increased the variety of secondary skill descriptions.
+- The freshmint skill now also does something in masochist mode or when the charge draining nastytrap effect is active.
+- Nerfed the speed boost from bare-handed combat skill and re-adjusted the blows per round calculation for that skill.
+- Nerfed the rohanknight and centaur's speed bonuses.
+- Toned down the spell level bonus that the Udun school receives from the character's experience level.
+- The player can no longer attack monsters while standing in the straight road without using up a turn. This introduces a new bug where trying to move off the straight road wastes a turn, sadly.
+- Monsters can now be summoned in a dungeon town.
+- The look command now always cycles through the terrain underneath a monster even if that terrain is "boring", for keystroke consistency reasons (same amount of spacebar presses needed to cycle through to the next monster).
+- Speed drain traps no longer affect negatively enchanted items.
+- Uniques on special levels are no longer saved, unless they're Sauron or Morgoth.
+- Tried to fix a bug where on some systems the piety meter would display incorrectly.
+- Marike can no longer drop the One Ring.
+
+August 2025
+- Fixed an inadvertently introduced bug where geomancy spells sometimes resulted in error message spam.
+
 June 2025
 - Nerfed the rohanknight and centaur races.
 - Monsters with the "friend" flag are now capable of spawning in groups.
