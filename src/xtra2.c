@@ -7397,7 +7397,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		/* Lorien likes it if you kill things that don't sleep */
 		if (r_ptr->flags3 & RF3_NO_SLEEP)
 		{
-			int inc = m_ptr->level * 4;
+			int inc = m_ptr->level * 4 / 3;
 			PRAY_GOD(GOD_LORIEN) inc *= 2;
 
 			if (!inc) inc = 1;
