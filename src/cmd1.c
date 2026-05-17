@@ -4136,7 +4136,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 		}
 
 		/* handle rocky ground, which can recalculate your speed --Amy */
-		if (c_ptr->feat == FEAT_ROCKYGROUND)
+		else if (c_ptr->feat == FEAT_ROCKYGROUND)
 		{
 			p_ptr->update |= (PU_BONUS);
 		}
@@ -4227,7 +4227,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 		}
 
 		/* Discover invisible traps */
-		else if ((c_ptr->t_idx != 0) &&
+		if ((c_ptr->t_idx != 0) &&
 		                !(f_info[cave[y][x].feat].flags1 & FF1_DOOR))
 		{
 			/* Disturb */
@@ -4250,7 +4250,7 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 		}
 
 		/* Execute the inscription */
-		else if (c_ptr->inscription)
+		if (c_ptr->inscription)
 		{
 			/* Disturb */
 			disturb(0, 0);
