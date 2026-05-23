@@ -8860,8 +8860,27 @@ void do_cmd_symbiotic(void)
 				break;
 			}
 
-			/* Summon never-moving pet */
+			/* Force Symbiosis */
 		case 7:
+			{
+				int y, x;
+				cave_type *c_ptr;
+				monster_type *m_ptr;
+
+				if (!tgt_pt(&x, &y)) return;
+
+				c_ptr = &cave[y][x];
+
+				if (!c_ptr->m_idx) break;
+
+				m_ptr = &m_list[c_ptr->m_idx];
+				use_symbiotic_power(m_ptr->r_idx, TRUE, FALSE, TRUE);
+
+				break;
+			}
+
+			/* Summon never-moving pet */
+		case 8:
 			{
 				/* in order to at least reduce the spamfest somewhat... make it cost nutrition --Amy */
 				if (p_ptr->food < 10000) {
@@ -8882,26 +8901,6 @@ void do_cmd_symbiotic(void)
 
 				break;
 			}
-
-			/* Force Symbiosis */
-		case 8:
-			{
-				int y, x;
-				cave_type *c_ptr;
-				monster_type *m_ptr;
-
-				if (!tgt_pt(&x, &y)) return;
-
-				c_ptr = &cave[y][x];
-
-				if (!c_ptr->m_idx) break;
-
-				m_ptr = &m_list[c_ptr->m_idx];
-				use_symbiotic_power(m_ptr->r_idx, TRUE, FALSE, TRUE);
-
-				break;
-			}
-
 
 		default:
 			{

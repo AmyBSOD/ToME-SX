@@ -1625,6 +1625,26 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 		flag = TRUE;
 	}
 
+	if (!no_cost) {
+		int m = monster_powers[power].mana /* / 10 */;
+
+		if (m > p_ptr->csp) {
+			/* looooool we are such great programmers, we make it so that you have to be an ultra OCD autist who constantly checks
+			 * their max mana before using a power :-P why it can't just give a motherfucking warning like EVERYTHING ELSE that
+			 * uses mana, I'll never understand. overcasting other spells gives a y/n check so this should too ffs! --Amy */
+			if (!get_check("Not enough mana! Try anyway? WARNING: you may lose your body!!"))
+			{
+					/* Restore the screen */
+					Term_load(); 
+					character_icky = FALSE; 
+					/* Abort */
+					energy_use = 0;
+					return -1;
+			}
+
+		}
+	}
+
 	/* Restore the screen */
 	Term_load(); 
 	character_icky = FALSE; 
@@ -2625,14 +2645,14 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 		bool willalwayscost = TRUE; /* by Amy, because it's uber imba if you can do that stuff for free so often */
 		if (randint(10) == 1) willalwayscost = FALSE;
 
+		int m = monster_powers[power].mana /* / 10 */;
+
 		chance = (monster_powers[power].mana + r_ptr->level);
 		pchance = adj_str_wgt[p_ptr->stat_ind[A_WIS]] / 2 + get_skill(SKILL_POSSESSION);
 
-		if ((rand_int(chance) >= pchance) && !willalwayscost)
+		if ((rand_int(chance) >= pchance) || willalwayscost)
 		{
-			int m = monster_powers[power].mana /* / 10*/;
-
-			/*if (m > p_ptr->msp) m = p_ptr->msp;*/
+			/* if (m > p_ptr->msp) m = p_ptr->msp; */
 			if (!m) m = 1;
 
 			p_ptr->csp -= m;
