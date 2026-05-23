@@ -132,7 +132,7 @@
 
 #define MAX_BOUNTIES        24
 
-#define MAX_SPELLS          200
+#define MAX_SPELLS          400 /* # of thaumaturgy spells */
 #define MAX_RUNES           100
 
 /*
@@ -5792,7 +5792,7 @@ extern int PlayerUID;
 /*
  * Skills !
  */
-#define SKILL_MAX               100000           /* Maximun skill value */
+#define SKILL_MAX               200000           /* Maximun skill value */
 #define SKILL_STEP              1000            /* 1 skill point */
 
 #define SKILL_EXCLUSIVE         9999            /* Flag to tell exclusive skills */

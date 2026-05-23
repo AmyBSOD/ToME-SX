@@ -21,8 +21,9 @@ void increase_skill(int i, s16b *invest)
 {
 	s32b max_skill_overage;
 
-	/* No skill points to be allocated */
-	if (!p_ptr->skill_points) return;
+	/* No skill points to be allocated
+	 * wizard mode bypasses this, because if I'm the wizard, I don't need to care about skill points --Amy */
+	if (!p_ptr->skill_points && !wizard) return;
 
 	/* The skill cannot be increased */
 	if (!s_info[i].mod) return;
@@ -40,15 +41,18 @@ void increase_skill(int i, s16b *invest)
 		return;
 	}
 
-	/* Cannot allocate more than player level + max_skill_overage levels */
+	/* Cannot allocate more than player level + max_skill_overage levels
+	 * but if I'm in wizard mode, it should be possible... --Amy */
 	call_lua("get_module_info", "(s)", "d", "max_skill_overage", &max_skill_overage);
 	if (((s_info[i].value + s_info[i].mod) / SKILL_STEP) >= (p_ptr->lev + max_skill_overage + 1))
 	{
-		int hgt, wid;
+		if (!wizard) {
+			int hgt, wid;
 
-		Term_get_size(&wid, &hgt);
-		msg_box(format("Cannot raise a skill value above %i + player level.", max_skill_overage), (int)(hgt / 2), (int)(wid / 2));
-		return;
+			Term_get_size(&wid, &hgt);
+			msg_box(format("Cannot raise a skill value above %i + player level.", max_skill_overage), (int)(hgt / 2), (int)(wid / 2));
+			return;
+		}
 	}
 
 	/* Spend an unallocated skill point */
