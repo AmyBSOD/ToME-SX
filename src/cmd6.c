@@ -367,7 +367,10 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 					}
 					else
 					{
-						s32b d = damroll(10, 6) +
+						int flatdrain = damroll(10, 6);
+						if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+						s32b d = flatdrain + 
 						         (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 
 						if (p_ptr->hold_life && !p_ptr->nastytrap95)
@@ -397,7 +400,10 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 					}
 					else
 					{
-						s32b d = damroll(20, 6) +
+						int flatdrain = damroll(20, 6);
+						if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+						s32b d = flatdrain +
 						         (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 
 						if (p_ptr->hold_life && !p_ptr->nastytrap95)
@@ -427,7 +433,10 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 					}
 					else
 					{
-						s32b d = damroll(40, 6) +
+						int flatdrain = damroll(40, 6);
+						if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+						s32b d = flatdrain +
 						         (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 
 						if (p_ptr->hold_life && !p_ptr->nastytrap95)
@@ -457,7 +466,10 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 					}
 					else
 					{
-						s32b d = damroll(80, 6) +
+						int flatdrain = damroll(80, 6);
+						if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+						s32b d = flatdrain +
 						         (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 
 						if (p_ptr->hold_life && !p_ptr->nastytrap95)
@@ -604,13 +616,16 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 	{
 		brdam = ((brpow / 6) > 550 ? 550 : (brpow / 6));
 
+		int flatdrain = 200;
+		if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
 		msg_print("A black aura surrounds the corpse!");
 
 		if (p_ptr->resist_neth)
 		{
 			brdam *= 6;
 			brdam /= (randint(6) + 6);
-			if (p_ptr->nastytrap95) lose_exp(200 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
+			if (p_ptr->nastytrap95) lose_exp(flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
 		}
 		else
 		{
@@ -621,12 +636,12 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 			else if (p_ptr->hold_life && !p_ptr->nastytrap95)
 			{
 				msg_print("You feel your life slipping away!");
-				lose_exp(200 + (p_ptr->exp / 1000) * MON_DRAIN_LIFE);
+				lose_exp(flatdrain + (p_ptr->exp / 1000) * MON_DRAIN_LIFE);
 			}
 			else
 			{
 				msg_print("You feel your life draining away!");
-				lose_exp(200 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
+				lose_exp(flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
 			}
 		}
 
@@ -681,13 +696,19 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 			}
 			else if (p_ptr->hold_life && !p_ptr->nastytrap95)
 			{
+				int flatdrain = 500;
+				if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
 				msg_print("You feel your life slipping away!");
-				lose_exp(500 + (p_ptr->exp / 1000) * MON_DRAIN_LIFE);
+				lose_exp(flatdrain + (p_ptr->exp / 1000) * MON_DRAIN_LIFE);
 			}
 			else
 			{
+				int flatdrain = 5000;
+				if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
 				msg_print("You feel your life draining away!");
-				lose_exp(5000 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
+				lose_exp(flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
 			}
 		}
 

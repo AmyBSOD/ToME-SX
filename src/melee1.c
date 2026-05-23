@@ -1319,7 +1319,10 @@ bool carried_make_attack_normal(int r_idx)
 					}
 					else
 					{
-						s32b d = damroll(10, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+						int flatdrain = damroll(10, 6);
+						if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+						s32b d = flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
@@ -1354,7 +1357,10 @@ bool carried_make_attack_normal(int r_idx)
 					}
 					else
 					{
-						s32b d = damroll(20, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+						int flatdrain = damroll(20, 6);
+						if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+						s32b d = flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
@@ -1389,7 +1395,10 @@ bool carried_make_attack_normal(int r_idx)
 					}
 					else
 					{
-						s32b d = damroll(40, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+						int flatdrain = damroll(40, 6);
+						if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+						s32b d = flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
@@ -1424,7 +1433,10 @@ bool carried_make_attack_normal(int r_idx)
 					}
 					else
 					{
-						s32b d = damroll(80, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+						int flatdrain = damroll(80, 6);
+						if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+						s32b d = flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
@@ -1551,13 +1563,19 @@ bool carried_make_attack_normal(int r_idx)
 						}
 						else if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
+							int flatdrain = 50;
+							if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
 							msg_print("You feel your life slipping away!");
-							lose_exp(50 + (p_ptr->exp / 500) * MON_DRAIN_LIFE);
+							lose_exp(flatdrain + (p_ptr->exp / 500) * MON_DRAIN_LIFE);
 						}
 						else
 						{
+							int flatdrain = 500;
+							if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
 							msg_print("You feel your life draining away!");
-							lose_exp(500 + (p_ptr->exp / 50) * MON_DRAIN_LIFE);
+							lose_exp(flatdrain + (p_ptr->exp / 50) * MON_DRAIN_LIFE);
 						}
 					}
 					if ((!p_ptr->resist_chaos) || p_ptr->nastytrap33 || (randint(9) == 1))
@@ -1675,8 +1693,11 @@ bool carried_make_attack_normal(int r_idx)
 						case 4:
 						case 5:
 							{
+								int flatdrain = 100;
+								if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
 								msg_print("You feel life has clocked back.");
-								lose_exp(100 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
+								lose_exp(flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
 								break;
 							}
 
@@ -3520,7 +3541,10 @@ bool make_attack_normal(int m_idx, byte divis)
 					}
 					else
 					{
-						s32b d = damroll(10, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+						int flatdrain = damroll(10, 6);
+						if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+						s32b d = flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
@@ -3556,7 +3580,10 @@ bool make_attack_normal(int m_idx, byte divis)
 					}
 					else
 					{
-						s32b d = damroll(20, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+						int flatdrain = damroll(20, 6);
+						if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+						s32b d = flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
@@ -3592,7 +3619,10 @@ bool make_attack_normal(int m_idx, byte divis)
 					}
 					else
 					{
-						s32b d = damroll(40, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+						int flatdrain = damroll(40, 6);
+						if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+						s32b d = flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
@@ -3628,7 +3658,10 @@ bool make_attack_normal(int m_idx, byte divis)
 					}
 					else
 					{
-						s32b d = damroll(80, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+						int flatdrain = damroll(80, 6);
+						if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+						s32b d = flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 						if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
 							msg_print("You feel your life slipping away!");
@@ -3725,13 +3758,19 @@ bool make_attack_normal(int m_idx, byte divis)
 						}
 						else if (p_ptr->hold_life && !p_ptr->nastytrap95)
 						{
+							int flatdrain = 50;
+							if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
 							msg_print("You feel your life slipping away!");
-							lose_exp(50 + (p_ptr->exp / 500) * MON_DRAIN_LIFE);
+							lose_exp(flatdrain + (p_ptr->exp / 500) * MON_DRAIN_LIFE);
 						}
 						else
 						{
+							int flatdrain = 500;
+							if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
 							msg_print("You feel your life draining away!");
-							lose_exp(500 + (p_ptr->exp / 50) * MON_DRAIN_LIFE);
+							lose_exp(flatdrain + (p_ptr->exp / 50) * MON_DRAIN_LIFE);
 						}
 					}
 					if ((!p_ptr->resist_chaos) || p_ptr->nastytrap33 || (randint(9) == 1))
@@ -3854,8 +3893,11 @@ bool make_attack_normal(int m_idx, byte divis)
 						case 4:
 						case 5:
 							{
+								int flatdrain = 100;
+								if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
 								msg_print("You feel life has clocked back.");
-								lose_exp(100 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
+								lose_exp(flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
 								break;
 							}
 

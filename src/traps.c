@@ -6702,7 +6702,10 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 			else
 			{
-				s32b d = damroll(10, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+				int flatdrain = damroll(10, 6);
+				if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+				s32b d = flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 				if (p_ptr->hold_life && !p_ptr->nastytrap95)
 				{
 					msg_print("You feel your life slipping away!");
@@ -6728,7 +6731,10 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 			else
 			{
-				s32b d = damroll(20, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+				int flatdrain = damroll(20, 6);
+				if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+				s32b d = flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 				if (p_ptr->hold_life && !p_ptr->nastytrap95)
 				{
 					msg_print("You feel your life slipping away!");
@@ -6754,7 +6760,10 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 			else
 			{
-				s32b d = damroll(40, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+				int flatdrain = damroll(40, 6);
+				if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+				s32b d = flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 				if (p_ptr->hold_life && !p_ptr->nastytrap95)
 				{
 					msg_print("You feel your life slipping away!");
@@ -6780,7 +6789,10 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 			else
 			{
-				s32b d = damroll(80, 6) + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
+				int flatdrain = damroll(80, 6);
+				if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+				s32b d = flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE;
 				if (p_ptr->hold_life && !p_ptr->nastytrap95)
 				{
 					msg_print("You feel your life slipping away!");
@@ -6806,7 +6818,10 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 			else
 			{
-				s32b d = damroll(500, 6) + (p_ptr->exp / 10) * MON_DRAIN_LIFE;
+				int flatdrain = damroll(500, 6);
+				if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
+				s32b d = flatdrain + (p_ptr->exp / 10) * MON_DRAIN_LIFE;
 				if (p_ptr->hold_life && !p_ptr->nastytrap95)
 				{
 					msg_print("You feel your life slipping away!");

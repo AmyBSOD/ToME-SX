@@ -8486,6 +8486,9 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 		/* Nether -- drain experience */
 	case GF_NETHER:
 		{
+			int flatdrain = 200;
+			if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
 			if (fuzzy) msg_print("You are hit by nether forces!");
 			{
 				if (p_ptr->immune_neth) /* only offers very high resistance now --Amy */
@@ -8497,7 +8500,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 				{
 					dam *= 6;
 					dam /= (randint(6) + 6);
-					if (p_ptr->nastytrap95) lose_exp(200 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
+					if (p_ptr->nastytrap95) lose_exp(flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
 				}
 				else
 				{
@@ -8508,12 +8511,12 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 					else if (p_ptr->hold_life && !p_ptr->nastytrap95)
 					{
 						msg_print("You feel your life slipping away!");
-						lose_exp(200 + (p_ptr->exp / 1000) * MON_DRAIN_LIFE);
+						lose_exp(flatdrain + (p_ptr->exp / 1000) * MON_DRAIN_LIFE);
 					}
 					else
 					{
 						msg_print("You feel your life draining away!");
-						lose_exp(200 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
+						lose_exp(flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
 					}
 				}
 
@@ -8576,13 +8579,19 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 				}
 				else if (p_ptr->hold_life && !p_ptr->nastytrap95)
 				{
+					int flatdrain = 50;
+					if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
 					msg_print("You feel your life slipping away!");
-					lose_exp(50 + (p_ptr->exp / 500) * MON_DRAIN_LIFE);
+					lose_exp(flatdrain + (p_ptr->exp / 500) * MON_DRAIN_LIFE);
 				}
 				else
 				{
+					int flatdrain = 500;
+					if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
 					msg_print("You feel your life draining away!");
-					lose_exp(500 + (p_ptr->exp / 50) * MON_DRAIN_LIFE);
+					lose_exp(flatdrain + (p_ptr->exp / 50) * MON_DRAIN_LIFE);
 				}
 			}
 			if ((!p_ptr->resist_chaos) || p_ptr->nastytrap33 || (randint(9) == 1))
@@ -8984,8 +8993,11 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 				case 4:
 				case 5:
 					{
+						int flatdrain = 100;
+						if (flatdrain > (p_ptr->exp / 10)) flatdrain = p_ptr->exp / 10; 
+
 						msg_print("You feel life has clocked back.");
-						lose_exp(100 + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
+						lose_exp(flatdrain + (p_ptr->exp / 100) * MON_DRAIN_LIFE);
 						break;
 					}
 
