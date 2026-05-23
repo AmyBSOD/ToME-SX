@@ -2056,6 +2056,7 @@
 #define SV_ROD_GOLDEN                   125
 #define SV_ROD_MITHRIL                  160
 #define SV_ROD_ADMANTITE                200
+#define SV_ROD_UNOBTAIN                 225
 
 
 /* The "sval" codes for TV_SCROLL */

@@ -5810,8 +5810,17 @@ void do_cmd_read_scroll(void)
 /* Set the 'stick mode' on */
 void set_stick_mode(object_type *o_ptr)
 {
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
+
+	/* Extract object flags */
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
+
 	s32b bonus = o_ptr->pval3 & 0xFFFF;
 	s32b max = o_ptr->pval3 >> 16;
+
+	if (f4 & TR4_CHEAPNESS) {
+		max += get_skill_scale(SKILL_DEVICE, 10);
+	}
 
 	exec_lua(format("get_level_use_stick = %d; get_level_max_stick = %d", bonus, max));
 }
@@ -5909,6 +5918,9 @@ void do_cmd_use_staff(void)
 		chance /= 3;
 	}
 
+	/* can it be zapped faster? */
+	if (f4 & TR4_FAST_CAST) energy_use /= 2;
+
 	/* Give everyone a (slight) chance */
 	if ((chance < USE_DEVICE) && (rand_int(USE_DEVICE - chance + 1) == 0))
 	{
@@ -5961,7 +5973,7 @@ void do_cmd_use_staff(void)
 
 
 	/* Hack -- some uses are "free" */
-	if (!use_charge)
+	if (!use_charge || ((f4 & TR4_CAPACITY) && magik(50)) )
 	{
 		/* Leave device mode  */
 		unset_stick_mode();
@@ -6122,6 +6134,9 @@ void do_cmd_aim_wand(void)
 		chance /= 3;
 	}
 
+	/* can it be zapped faster? */
+	if (f4 & TR4_FAST_CAST) energy_use /= 2;
+
 	/* Roll for usage */
 	if (magik(chance))
 	{
@@ -6166,7 +6181,7 @@ void do_cmd_aim_wand(void)
 	object_tried(o_ptr);
 
 	/* Hack -- some uses are "free" */
-	if (!use_charge)
+	if (!use_charge || ((f4 & TR4_CAPACITY) && magik(50)) )
 	{
 		/* Leave device mode  */
 		unset_stick_mode();

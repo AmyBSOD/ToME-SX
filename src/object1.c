@@ -4256,6 +4256,10 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		{
 			text_out("It regenerates its mana faster.  ");
 		}
+		if (f4 & (TR4_EASY_USE))
+		{
+			text_out("It can be used more easily.  ");
+		}
 		if (f5 & (TR5_CHARGE_HOLDING))
 		{
 			text_out("It resists charge draining.  ");

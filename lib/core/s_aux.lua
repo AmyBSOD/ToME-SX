@@ -202,7 +202,7 @@ end
 
 -- This is the function to use when casting through a stick
 function get_level_device(s, max, min)
-	local lvl
+	local lvl, difflvl
 
 	-- No max specified ? assume 50
 	if not max then
@@ -210,16 +210,24 @@ function get_level_device(s, max, min)
 	end
 
 	lvl = s_info[SKILL_DEVICE + 1].value
+
 	lvl = lvl + (get_level_use_stick * SKILL_STEP)
 
 	-- Sticks are limited
 	if lvl - ((spell(s).skill_level + 1) * SKILL_STEP) >= get_level_max_stick * SKILL_STEP then
+
+		difflvl = lvl
+
 		lvl = (get_level_max_stick + spell(s).skill_level - 1) * SKILL_STEP
+
+		-- Amy edit: slight boost if you have very high magic device skill
+		lvl = lvl + ( difflvl - ((spell(s).skill_level + 1) * SKILL_STEP) ) / 5
 	end
 
 	-- / 10 because otherwise we can overflow a s32b and we can use a u32b because the value can be negative
 	-- The loss of information should be negligible since 1 skill = 1000 internally
 	lvl = lvl / 10
+
 	if not min then
 		lvl = lua_get_level(s, lvl, max, 1, 0)
 	else

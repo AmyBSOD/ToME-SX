@@ -5734,8 +5734,8 @@ bool recharge(int power)
 		/* Paranoia */
 		if (recharge_strength < 0) recharge_strength = 0;
 
-		/* Back-fire */
-		if ((rand_int(recharge_strength) == 0) && (!(f4 & TR4_RECHARGE)))
+		/* Back-fire; "of charging" ego = 90% less risk; "always recharge" ego (artifacts) = can't backfire at all */
+		if ((rand_int(recharge_strength) == 0) && (!(f4 & TR4_CHARGING) || magik(10) ) && (!(f4 & TR4_RECHARGE)))
 		{
 			/* Activate the failure code. */
 			fail = TRUE;
@@ -5772,7 +5772,7 @@ bool recharge(int power)
 
 
 		/* Back-fire XXX XXX XXX */
-		if (((rand_int(recharge_strength) == 0) && (!(f4 & TR4_RECHARGE))) ||
+		if (((rand_int(recharge_strength) == 0) && (!(f4 & TR4_CHARGING) || magik(10) ) && (!(f4 & TR4_RECHARGE))) ||
 		                (f4 & TR4_NO_RECHARGE))
 		{
 			/* Activate the failure code. */

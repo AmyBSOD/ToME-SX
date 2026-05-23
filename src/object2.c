@@ -1103,6 +1103,7 @@ s32b flag_cost(object_type * o_ptr, int plusses, bool isshop)
 	if (f4 & TR4_FAST_CAST) total += 2000;
 	if (f4 & TR4_CAPACITY) total += 5000;
 	if (f4 & TR4_CHARGING) total += 5000;
+	if (f4 & TR4_EASY_USE) total += 3000;
 	if (f4 & TR4_CHEAPNESS) total += 5000;
 	if (f3 & TR3_SEE_INVIS) total += 2000;
 	if (esp) total += (12500 * count_bits(esp));
@@ -5555,6 +5556,11 @@ try_an_other_ego:
 		{
 			/* Set the max mana and the current mana */
 			o_ptr->pval2 = (f4 & TR4_CAPACITY) ? o_ptr->sval * 2 : o_ptr->sval;
+
+			/* which GENIUS made it so that sval can't be higher than 255... --Amy */
+			if (o_ptr->sval == SV_ROD_UNOBTAIN) {
+				o_ptr->pval2 += (f4 & TR4_CAPACITY) ? 150 : 75;
+			}
 
 			o_ptr->timeout = o_ptr->pval2;
 		}
