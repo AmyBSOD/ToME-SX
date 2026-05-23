@@ -5566,21 +5566,24 @@ static void process_command(void)
 		/* Connect to IRC. */
 	case CMD_IRC_CONNECT:
 		{
-			irc_connect();
+			/*irc_connect();*/
+			msg_print("Please do not try to crash the game.");
 			break;
 		}
 
 		/* Speak on IRC. */
 	case CMD_IRC_CHAT:
 		{
-			irc_chat();
+			/*irc_chat();*/
+			msg_print("Please do not try to crash the game.");
 			break;
 		}
 
 		/* Disconnect from IRC. */
 	case CMD_IRC_DISCON:
 		{
-			irc_disconnect();
+			/*irc_disconnect();*/
+			msg_print("Please do not try to crash the game.");
 			break;
 		}
 
