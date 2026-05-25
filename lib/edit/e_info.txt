@@ -6873,6 +6873,26 @@ C:0:0:0:0
 R:100
 F:CAPACITY | EASY_USE | CHEAPNESS | FAST_CAST | CHARGING | 
 
+N:555:of Chargekeeping
+T:55:0:255
+T:65:0:255
+X:A:51:15
+W:10:2:25:5000
+C:0:0:0:0
+R:100
+F:CHARGE_HOLDING | CAPACITY |
+f:CHARGE_HOLDING | CAPACITY |
+
+N:556:of Retention
+T:55:0:255
+T:65:0:255
+X:A:51:25
+W:30:2:50:15000
+C:0:0:0:0
+R:100
+F:CHARGE_HOLDING | CAPACITY | CHARGING |
+f:CHARGE_HOLDING | CAPACITY | CHARGING |
+
 # N: serial number : ego type
 # D: description
 # T: tval : min sval : max sval

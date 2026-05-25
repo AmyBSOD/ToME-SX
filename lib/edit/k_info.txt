@@ -10542,6 +10542,57 @@ A:90/50
 P:0:1d1:0:0:0
 D:Supposedly impossible to obtain, this rod contains enormous amounts of mana. 
 
+N:1250:& Agate Rod~ of#
+G:-:s
+I:67:30:0
+W:16:0:2:1000
+A:16/10
+P:0:1d1:0:0:0
+F:EASY_USE |
+f:EASY_USE |
+D:A rod suitable for beginners, as it can be used more easily. 
+
+N:1251:& Zircon Rod~ of#
+G:-:s
+I:67:90:0
+W:26:0:2:2200
+A:26/20
+P:0:1d1:0:0:0
+F:CHARGING |
+f:CHARGING |
+D:This rod recharges fast, allowing you to zap it more often. 
+
+N:1252:& Steel Rod~ of#
+G:-:s
+I:67:120:0
+W:38:0:2:3000
+A:38/20
+P:0:1d1:0:0:0
+F:IGNORE_ELEC |
+f:IGNORE_ELEC |
+D:A rod that cannot be destroyed by electricity.
+
+N:1253:& Lariat Rod~ of#
+G:-:s
+I:67:155:0
+W:48:0:2:14000
+A:48/50
+P:0:1d1:0:0:0
+F:CAPACITY |
+f:CAPACITY |
+D:Finding this rod is a cause for celebration, as it has a huge amount of mana capacity. 
+
+N:1254:& Larimar Rod~ of#
+G:-:s
+I:67:230:0
+W:70:0:2:15000
+A:70/30
+P:0:1d1:0:0:0
+F:EASY_USE |
+f:EASY_USE |
+D:Just having this high-capacity rod will be enough to make everyone envy you. 
+D:Whatever tip you insert into it, you'll be able to use it fairly easily. 
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being a bonus to the pval-based property
