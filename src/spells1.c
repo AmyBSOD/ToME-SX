@@ -1674,6 +1674,10 @@ byte spell_color(int type)
 			return (randint(5) != 1 ? TERM_VIOLET : TERM_L_BLUE);
 		case GF_ARROW:
 			return (TERM_L_UMBER);
+		case GF_RADIOWAVE:
+			return (TERM_ORANGE);
+		case GF_AMOEBAE:
+			return (TERM_L_GREEN);
 		case GF_WATER:
 			return (randint(4) == 1 ? TERM_L_BLUE : TERM_BLUE);
 		case GF_WAVE:
@@ -3951,6 +3955,7 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 	case GF_NETHER:
 	case GF_NEXUS:
 	case GF_NERVE:
+	case GF_AMOEBAE:
 	case GF_ACID:
 	case GF_SHARDS:
 	case GF_TIME:
@@ -5823,6 +5828,52 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			{
 				note = " resists somewhat.";
 				dam /= 2;
+			}
+			break;
+		}
+
+		/* Radiowave */
+	case GF_RADIOWAVE:
+		{
+			if (seen) obvious = TRUE;
+			do_fear = (10 + randint(15) + r) / (r + 1);
+			/*if (r_ptr->flags4 & (RF4_BR_CONF)) - for when BR_RADI is implemented
+			{
+				note = " resists.";
+				dam *= 2;
+				dam /= (randint(6) + 6);
+				do_fear = 0;
+			}
+			else*/ if (r_ptr->flags3 & (RF3_NO_FEAR))
+			{
+				note = " resists somewhat.";
+				dam /= 2;
+				do_fear = 0;
+			}
+			break;
+		}
+
+		/* Amoebae */
+	case GF_AMOEBAE:
+		{
+			if (seen) obvious = TRUE;
+			/*if (r_ptr->flags4 & (RF4_BR_CONF)) - for when BR_AMEB is implemented
+			{
+				note = " resists.";
+				dam *= 2;
+				dam /= (randint(6) + 6);
+			}
+			else*/
+			if ((r_ptr->flags3 & (RF3_UNDEAD)) || (r_ptr->flags3 & (RF3_NONLIVING)) )
+			{
+				note = " resists a lot.";
+				dam /= 10;
+			}
+
+			else if (r_ptr->flags3 & (RF3_NO_STUN))
+			{
+				note = " resists.";
+				dam /= 3;
 			}
 			break;
 		}
@@ -8668,6 +8719,39 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 			break;
 		}
 
+		/* Radiowaves */
+	case GF_RADIOWAVE:
+		{
+			if (fuzzy) msg_print("Your screen suddenly fills with static!");
+			if (p_ptr->resist_fear && !p_ptr->nastytrap30)
+			{
+				dam *= 5;
+				dam /= (randint(6) + 6);
+			}
+			if (!p_ptr->resist_fear || p_ptr->nastytrap30 || (rand_int(100) < 5) )
+			{
+				(void)set_afraid(p_ptr->afraid + randint(20) + (dam / 5) );
+			}
+			take_hit(dam, killer);
+			break;
+		}
+
+		/* Amoebae */
+	case GF_AMOEBAE:
+		{
+			if (fuzzy) msg_print("You're suddenly covered with amoebae!");
+			if (p_ptr->slow_digest)
+			{
+				dam *= 5;
+				dam /= (randint(6) + 6);
+			}
+
+			set_food(p_ptr->food - dam);
+
+			take_hit(dam, killer);
+			break;
+		}
+
 		/* Disenchantment -- see above */
 	case GF_DISENCHANT:
 		{
@@ -10184,7 +10268,7 @@ static const int destructive_attack_types[10] =
 };
 
 /* Also for Power-mages */
-static const int attack_types[38] =
+static const int attack_types[40] =
 {
 	GF_ARROW,
 	GF_ARROW,
@@ -10224,6 +10308,8 @@ static const int attack_types[38] =
 	GF_NERVE,
 	GF_MIND,
 	GF_ETHER,
+	GF_RADIOWAVE,
+	GF_AMOEBAE,
 };
 
 /*
@@ -10311,6 +10397,12 @@ void describe_attack_fully(int type, char* r)
 		break;
 	case GF_NERVE:
 		strcpy(r, "nerve");
+		break;
+	case GF_RADIOWAVE:
+		strcpy(r, "radiowaves");
+		break;
+	case GF_AMOEBAE:
+		strcpy(r, "amoebae");
 		break;
 	case GF_MIND:
 		strcpy(r, "mind");
@@ -10526,7 +10618,7 @@ void generate_spell(int plev)
 	/* Pick a simple spell */
 	if (simple_gen)
 	{
-		rspell->GF = attack_types[rand_int(38)];
+		rspell->GF = attack_types[rand_int(40)];
 	}
 	/* Pick a destructive spell */
 	else

@@ -4157,6 +4157,56 @@ I:10:2:0:12:50:0d0:y
 D:Your items will never be the same...
 F:FLOOR | CHEST | DOOR
 
+N:843:Radio Deedle Trap
+I:6:20:0:10:15:0d0:o
+D:Evil radios are built!
+F:FLOOR | CHEST | DOOR
+
+N:844:Radio Trap
+I:3:100:0:10:5:0d0:g
+D:You are hit by radiowaves!
+F:FLOOR | CHEST | DOOR
+
+N:845:Radio Bolt Trap
+I:6:80:5:6:15:3d12:g
+D:A stream of radiowaves hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:846:Radio Ball Trap
+I:8:60:5:8:20:3d18:B
+D:A bunch of radiowaves hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:847:Radio Balls Trap
+I:13:20:5:8:40:3d18:B
+D:A bunch of radiowaves hits you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:848:Amoebae Colony Trap
+I:6:20:0:10:15:0d0:o
+D:Oh no, voracious colonies of amoebae are everywhere!
+F:FLOOR | CHEST | DOOR
+
+N:849:Amoebae Trap
+I:3:100:0:10:5:0d0:g
+D:You are covered with amoebae!
+F:FLOOR | CHEST | DOOR
+
+N:850:Amoebae Bolt Trap
+I:6:80:5:6:15:3d12:g
+D:A stream of amoebae attacks you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:851:Amoebae Ball Trap
+I:8:60:5:8:20:3d18:B
+D:A bunch of amoebae attacks you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:852:Amoebae Balls Trap
+I:13:20:5:8:40:3d18:B
+D:A bunch of amoebae attacks you!
+F:FLOOR | CHEST | DOOR | LEVEL3
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

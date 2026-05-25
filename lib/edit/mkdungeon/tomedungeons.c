@@ -71,7 +71,7 @@ int randomfloortype(void)
 		case 10:
 			floornumber = 102; /* nether mist */
 			if (random_number(10) == 1) {
-				int randdmg = random_number(18);
+				int randdmg = random_number(20);
 				switch (randdmg) {
 					case 1:
 					default:
@@ -127,6 +127,12 @@ int randomfloortype(void)
 						break;
 					case 18:
 						floornumber = 127; /* holy fire */
+						break;
+					case 19:
+						floornumber = 128; /* evil radio */
+						break;
+					case 20:
+						floornumber = 129; /* ameba colony */
 						break;
 				}
 			}
@@ -404,7 +410,7 @@ void randomfillmethod(void)
 void randomdungeondamage(void)
 {
 	int dudrand;
-	dudrand = random_number(32);
+	dudrand = random_number(34);
 
 	switch (dudrand) {
 		case 1:
@@ -503,6 +509,12 @@ void randomdungeondamage(void)
 			break;
 		case 32:
 			printf("E:1d%d:%d:HELL_FIRE\n", random_number(6), 9 + random_number(31) );
+			break;
+		case 33:
+			printf("E:1d%d:%d:RADIOWAVE\n", random_number(6), 9 + random_number(31) );
+			break;
+		case 34:
+			printf("E:1d%d:%d:AMOEBAE\n", random_number(6), 9 + random_number(31) );
 			break;
 	}
 

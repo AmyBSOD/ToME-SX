@@ -5719,5 +5719,7 @@ gf_name_type gf_names[] =
 	{ GF_NERVE, "nerve" },
 	{ GF_MIND, "mind" },
 	{ GF_ETHER, "ether" },
+	{ GF_RADIOWAVE, "radiowaves" },
+	{ GF_AMOEBAE, "amoebae" },
 	{ -1, NULL },
 };

@@ -16,7 +16,7 @@
 /* random elemental damage type, by Amy */
 int randelemdmg(void)
 {
-	switch (randint(34)) {
+	switch (randint(36)) {
 		default:
 		case 1:
 			return GF_ELEC;
@@ -86,6 +86,10 @@ int randelemdmg(void)
 			return GF_MIND;
 		case 34:
 			return GF_ETHER;
+		case 35:
+			return GF_RADIOWAVE;
+		case 36:
+			return GF_AMOEBAE;
 	}
 }
 
@@ -5866,6 +5870,20 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_ELE_NERVE:
 		{
 			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_NERVE, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_RADIO:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_RADIOWAVE, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_ELE_AMEBA:
+		{
+			project( -2, 0, p_ptr->py, p_ptr->px, 1, GF_AMOEBAE, PROJECT_KILL | PROJECT_JUMP | PROJECT_CANTREFLECT);
 			ident = TRUE;
 			break;
 		}
@@ -13795,6 +13813,12 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 	case TRAP_OF_NERVE_BOLT:
 		ident = player_handle_breath_trap(1, GF_NERVE, TRAP_OF_NERVE_BOLT);
 		break;
+	case TRAP_OF_RADIO_BOLT:
+		ident = player_handle_breath_trap(1, GF_RADIOWAVE, TRAP_OF_RADIO_BOLT);
+		break;
+	case TRAP_OF_AMEBA_BOLT:
+		ident = player_handle_breath_trap(1, GF_AMOEBAE, TRAP_OF_AMEBA_BOLT);
+		break;
 	case TRAP_OF_MIND_BOLT:
 		ident = player_handle_breath_trap(1, GF_MIND, TRAP_OF_MIND_BOLT);
 		break;
@@ -13921,6 +13945,12 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		break;
 	case TRAP_OF_NERVE_BALL:
 		ident = player_handle_breath_trap(3, GF_NERVE, TRAP_OF_NERVE_BALL);
+		break;
+	case TRAP_OF_RADIO_BALL:
+		ident = player_handle_breath_trap(3, GF_RADIOWAVE, TRAP_OF_RADIO_BALL);
+		break;
+	case TRAP_OF_AMEBA_BALL:
+		ident = player_handle_breath_trap(3, GF_AMOEBAE, TRAP_OF_AMEBA_BALL);
 		break;
 	case TRAP_OF_MIND_BALL:
 		ident = player_handle_breath_trap(3, GF_MIND, TRAP_OF_MIND_BALL);
@@ -14226,6 +14256,28 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
 			while (ballamount > 0) {
 				ident = player_handle_breath_trap(3, GF_NERVE, TRAP_OF_NERVE_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_RADIO_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_RADIOWAVE, TRAP_OF_RADIO_BALLS);
+				ballamount--;
+			}
+		}
+		break;
+	case TRAP_OF_AMEBA_BALLS:
+		{
+			int ballamount = 2;
+			if (max_dlv_real[dungeon_type] >= 70) ballamount = 3;
+			if (max_dlv_real[dungeon_type] >= 120) ballamount = 4;
+			while (ballamount > 0) {
+				ident = player_handle_breath_trap(3, GF_AMOEBAE, TRAP_OF_AMEBA_BALLS);
 				ballamount--;
 			}
 		}
@@ -15084,6 +15136,62 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				place_trap(y, x);
 			}
 			msg_print("You identified that trap as Nerve Tickle Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_RADIO:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 6, FEAT_DMG_RADIOWAVE, 40);
+
+		msg_print("Evil radios are erected in the dungeon!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Radio Deedle Trap.");
+		}
+		break;
+
+	case TRAP_OF_TERRAIN_AMEBA:
+		ident = TRUE;
+		fill_area_terrain(p_ptr->py, p_ptr->px, 10, FEAT_DMG_AMOEBAE, 45);
+
+		msg_print("Amoebae crawl all over the dungeon!");
+
+		if (randint(5) == 1) {
+			ident = FALSE;
+			t_info[trap].ident = TRUE;
+
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You identified that trap as Amoebae Colony Trap.");
 		}
 		break;
 

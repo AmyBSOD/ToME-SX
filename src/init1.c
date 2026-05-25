@@ -1799,6 +1799,8 @@ d_info_dtypes[] =
 	{"MIND", GF_MIND},
 	{"ETHER", GF_ETHER},
 	{"UNBREATH", GF_UNBREATH},
+	{"RADIOWAVE", GF_RADIOWAVE},
+	{"AMOEBAE", GF_AMOEBAE},
 	{NULL, 0}
 };
 

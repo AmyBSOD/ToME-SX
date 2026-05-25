@@ -352,8 +352,14 @@ typedef unsigned int u32b;
 /** @def GF_ETHER */
 #define GF_ETHER    114
 
+/** @def GF_RADIOWAVE */
+#define GF_RADIOWAVE     115
+
+/** @def GF_AMOEBAE */
+#define GF_AMOEBAE    116
+
 /** @def MAX_GF */
-#define MAX_GF          115
+#define MAX_GF          117
 /** @} */
 
 /** @name Spell Projection Flags

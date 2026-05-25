@@ -849,6 +849,8 @@
 #define FEAT_DMG_UNBREATH       0x7D
 #define FEAT_DMG_HELLFIRE       0x7E
 #define FEAT_DMG_HOLYFIRE       0x7F
+#define FEAT_DMG_RADIOWAVE      0x80
+#define FEAT_DMG_AMOEBAE        0x81
 
 #define FEAT_BETWEEN            0xA0 /* 160 */
 
@@ -3638,6 +3640,18 @@
 #define TRAP_OF_CURSE_XTRASLOT            841
 #define TRAP_OF_CURSE_XTRASLOTS           842
 
+#define TRAP_OF_TERRAIN_RADIO             843
+#define TRAP_OF_ELE_RADIO                 844
+#define TRAP_OF_RADIO_BOLT                845
+#define TRAP_OF_RADIO_BALL                846
+#define TRAP_OF_RADIO_BALLS               847
+
+#define TRAP_OF_TERRAIN_AMEBA             848
+#define TRAP_OF_ELE_AMEBA                 849
+#define TRAP_OF_AMEBA_BOLT                850
+#define TRAP_OF_AMEBA_BALL                851
+#define TRAP_OF_AMEBA_BALLS               852
+
 /*** General index values ***/
 
 
@@ -3811,7 +3825,9 @@
 #define GF_NERVE       112
 #define GF_MIND        113
 #define GF_ETHER       114
-#define MAX_GF          115
+#define GF_RADIOWAVE   115
+#define GF_AMOEBAE      116
+#define MAX_GF          117
 
 /*
  * Some things which induce learning
