@@ -4992,6 +4992,7 @@ int spell_chance_random(random_spell* rspell)
 
 /*
  * Print a batch of spells.
+ * Amy note: apparently for thaumaturgy ("power mage")
  */
 static void print_spell_batch(int batch, int max)
 {
@@ -5006,7 +5007,7 @@ static void print_spell_batch(int batch, int max)
 
 	for (i = 0; i < max; i++)
 	{
-		rspell = &random_spells[batch * 10 + i];
+		rspell = &random_spells[batch * 20 + i];
 
 		if (rspell->untried)
 		{
@@ -5032,6 +5033,7 @@ static void print_spell_batch(int batch, int max)
 
 /*
  * List ten random spells and ask to pick one.
+ * Amy note: apparently for thaumaturgy ("power mage")
  */
 static random_spell* select_spell_from_batch(int batch)
 {
@@ -5041,7 +5043,7 @@ static random_spell* select_spell_from_batch(int batch)
 
 	char which;
 
-	int mut_max = 10;
+	int mut_max = 20;
 
 	random_spell* ret;
 
@@ -5052,9 +5054,9 @@ static random_spell* select_spell_from_batch(int batch)
 	/* Save the screen */
 	Term_save();
 
-	if (spell_num < (batch + 1) * 10)
+	if (spell_num < (batch + 1) * 20)
 	{
-		mut_max = spell_num - batch * 10;
+		mut_max = spell_num - batch * 20;
 	}
 
 	strnfmt(tmp, 160, "(a-%c, A-%cto browse, / to rename, - to comment) Select a power: ",
@@ -5087,7 +5089,7 @@ static random_spell* select_spell_from_batch(int batch)
 			/* There are no other choices */
 			if (mut_max == 1)
 			{
-				ret = &random_spells[batch * 10];
+				ret = &random_spells[batch * 20];
 
 				/* Leave the command loop */
 				break;
@@ -5105,10 +5107,10 @@ static random_spell* select_spell_from_batch(int batch)
 
 			if (isalpha(which) && (A2I(which) <= mut_max))
 			{
-				strcpy(out_val, random_spells[batch*10 + A2I(which)].name);
+				strcpy(out_val, random_spells[batch*20 + A2I(which)].name);
 				if (get_string("Name this power: ", out_val, 29))
 				{
-					strcpy(random_spells[batch*10 + A2I(which)].name, out_val);
+					strcpy(random_spells[batch*20 + A2I(which)].name, out_val);
 				}
 				prt(tmp, 0, 0);
 			}
@@ -5130,10 +5132,10 @@ static random_spell* select_spell_from_batch(int batch)
 
 			if (isalpha(which) && (A2I(which) <= mut_max))
 			{
-				strcpy(out_val, random_spells[batch*10 + A2I(which)].desc);
+				strcpy(out_val, random_spells[batch*20 + A2I(which)].desc);
 				if (get_string("Comment this power: ", out_val, 29))
 				{
-					strcpy(random_spells[batch*10 + A2I(which)].desc, out_val);
+					strcpy(random_spells[batch*20 + A2I(which)].desc, out_val);
 				}
 				prt(tmp, 0, 0);
 			}
@@ -5150,7 +5152,7 @@ static random_spell* select_spell_from_batch(int batch)
 		if (isalpha(which) && isupper(which))
 		{
 			which = tolower(which);
-			c_prt(TERM_L_BLUE, format("%s : %s", random_spells[batch*10 + A2I(which)].name, random_spells[batch*10 + A2I(which)].desc), 0, 0);
+			c_prt(TERM_L_BLUE, format("%s : %s", random_spells[batch*20 + A2I(which)].name, random_spells[batch*20 + A2I(which)].desc), 0, 0);
 			inkey();
 			prt(tmp, 0, 0);
 			continue;
@@ -5158,7 +5160,7 @@ static random_spell* select_spell_from_batch(int batch)
 		else if (isalpha(which) && (A2I(which) < mut_max))
 		{
 			/* Pick the power */
-			ret = &random_spells[batch * 10 + A2I(which)];
+			ret = &random_spells[batch * 20 + A2I(which)];
 
 			/* Leave the command loop */
 			break;
@@ -5182,6 +5184,7 @@ static random_spell* select_spell_from_batch(int batch)
 
 /*
  * Pick a random spell from a menu
+ * Amy note: apparently for thaumaturgy ("power mage")
  */
 random_spell* select_spell(bool quick)
 {
@@ -5189,7 +5192,7 @@ random_spell* select_spell(bool quick)
 
 	char which;
 
-	int batch_max = (spell_num - 1) / 10;
+	int batch_max = (spell_num - 1) / 20;
 
 	random_spell *ret;
 
