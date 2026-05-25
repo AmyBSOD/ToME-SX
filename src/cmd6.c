@@ -4303,6 +4303,268 @@ bool curse_boots(void)
 }
 
 /*
+ * Curse the players extra slots, by Amy
+ */
+bool curse_xtraslot(void)
+{
+	object_type *o_ptr;
+
+	char o_name[80];
+
+	int whichslot = INVEN_OUTER;
+
+	/* randomly select one of the extra slots */
+	switch (randint(13)) {
+		case 1:
+		default:
+			whichslot = INVEN_WIELD + 1;
+			break;
+		case 2:
+			whichslot = INVEN_WIELD + 2;
+			break;
+		case 3:
+			whichslot = INVEN_RING + 2;
+			break;
+		case 4:
+			whichslot = INVEN_RING + 3;
+			break;
+		case 5:
+			whichslot = INVEN_RING + 4;
+			break;
+		case 6:
+			whichslot = INVEN_RING + 5;
+			break;
+		case 7:
+			whichslot = INVEN_NECK + 1;
+			break;
+		case 8:
+			whichslot = INVEN_ARM + 1;
+			break;
+		case 9:
+			whichslot = INVEN_ARM + 2;
+			break;
+		case 10:
+			whichslot = INVEN_HEAD + 1;
+			break;
+		case 11:
+			whichslot = INVEN_HANDS + 1;
+			break;
+		case 12:
+			whichslot = INVEN_HANDS + 2;
+			break;
+		case 13:
+			whichslot = INVEN_FEET + 1;
+			break;
+	}
+
+
+	/* Curse the garment */
+	o_ptr = &p_ptr->inventory[whichslot];
+
+	/* Nothing to curse */
+	if (!o_ptr->k_idx) return (FALSE);
+
+
+	/* Describe */
+	object_desc(o_name, o_ptr, FALSE, 3);
+
+	/* don't destroy a one ring --Amy */
+	if (o_ptr->tval == TV_RING && o_ptr->sval == SV_RING_POWER) {
+		msg_format("A terrible black aura tries to surround your equipment, "
+		           "but your %s resists the effects!", o_name);
+	}
+
+	/* Attempt a saving throw for artifacts */
+	else if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
+	{
+		/* Cool */
+		msg_format("A terrible black aura tries to surround your equipment, "
+		           "but your %s resists the effects!", o_name);
+	}
+
+	/* not artifact or failed save... */
+	else
+	{
+		/* Oops */
+		msg_format("A terrible black aura blasts your %s!", o_name);
+
+		/* Blast the armor */
+		o_ptr->name1 = 0;
+		o_ptr->name2 = EGO_BLASTED;
+		if (o_ptr->pval > 0) o_ptr->pval = 0;
+		o_ptr->to_a = 0 - randint(5) - randint(5);
+		o_ptr->to_h = 0 - randint(5) - randint(5);
+		o_ptr->to_d = 0 - randint(5) - randint(5);
+		o_ptr->ac = 0;
+		o_ptr->dd = 0;
+		o_ptr->ds = 0;
+		o_ptr->art_flags1 = 0;
+		o_ptr->art_flags2 = 0;
+		o_ptr->art_flags3 = 0;
+		o_ptr->art_flags4 = 0;
+		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
+
+		/* Curse it */
+		o_ptr->ident |= (IDENT_CURSED);
+
+		/* Recalculate bonuses */
+		p_ptr->update |= (PU_BONUS);
+
+		/* Recalculate mana */
+		p_ptr->update |= (PU_MANA);
+
+		/* Window stuff */
+		p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+	}
+
+	return (TRUE);
+}
+
+/*
+ * Curse the players extra slots, by Amy
+ */
+bool curse_xtraslots(void)
+{
+	object_type *o_ptr;
+
+	char o_name[80];
+
+	int whichslot = INVEN_OUTER;
+	int currentslot = 1;
+
+	bool itemdestructed = FALSE;
+
+anotherslot:
+	/* try all the eligible slots */
+	switch (currentslot) {
+		case 1:
+		default:
+			whichslot = INVEN_WIELD + 1;
+			break;
+		case 2:
+			whichslot = INVEN_WIELD + 2;
+			break;
+		case 3:
+			whichslot = INVEN_RING + 2;
+			break;
+		case 4:
+			whichslot = INVEN_RING + 3;
+			break;
+		case 5:
+			whichslot = INVEN_RING + 4;
+			break;
+		case 6:
+			whichslot = INVEN_RING + 5;
+			break;
+		case 7:
+			whichslot = INVEN_NECK + 1;
+			break;
+		case 8:
+			whichslot = INVEN_ARM + 1;
+			break;
+		case 9:
+			whichslot = INVEN_ARM + 2;
+			break;
+		case 10:
+			whichslot = INVEN_HEAD + 1;
+			break;
+		case 11:
+			whichslot = INVEN_HANDS + 1;
+			break;
+		case 12:
+			whichslot = INVEN_HANDS + 2;
+			break;
+		case 13:
+			whichslot = INVEN_FEET + 1;
+			break;
+	}
+
+
+	/* Curse the garment */
+	o_ptr = &p_ptr->inventory[whichslot];
+
+	/* Nothing to curse */
+	if (!o_ptr->k_idx) {
+		if (currentslot >= 13) return (itemdestructed);
+		currentslot++;
+		goto anotherslot;
+	}
+
+	/* Describe */
+	object_desc(o_name, o_ptr, FALSE, 3);
+
+	/* don't destroy a one ring --Amy */
+	if (o_ptr->tval == TV_RING && o_ptr->sval == SV_RING_POWER) {
+		msg_format("A terrible black aura tries to surround your equipment, "
+		           "but your %s resists the effects!", o_name);
+	}
+
+	/* Attempt a saving throw for artifacts */
+	else if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
+	{
+		/* Cool */
+		msg_format("A terrible black aura tries to surround your equipment, "
+		           "but your %s resists the effects!", o_name);
+	}
+
+	/* not artifact or failed save... */
+	else
+	{
+		/* Oops */
+		msg_format("A terrible black aura blasts your %s!", o_name);
+
+		/* Blast the armor */
+		o_ptr->name1 = 0;
+		o_ptr->name2 = EGO_BLASTED;
+		if (o_ptr->pval > 0) o_ptr->pval = 0;
+		o_ptr->to_a = 0 - randint(5) - randint(5);
+		o_ptr->to_h = 0 - randint(5) - randint(5);
+		o_ptr->to_d = 0 - randint(5) - randint(5);
+		o_ptr->ac = 0;
+		o_ptr->dd = 0;
+		o_ptr->ds = 0;
+		o_ptr->art_flags1 = 0;
+		o_ptr->art_flags2 = 0;
+		o_ptr->art_flags3 = 0;
+		o_ptr->art_flags4 = 0;
+		o_ptr->art_flags5 = 0;
+		o_ptr->art_flags6 = 0;
+		o_ptr->art_flags7 = 0;
+		o_ptr->art_flags8 = 0;
+		o_ptr->art_flags9 = 0;
+		o_ptr->art_flags10 = 0;
+		o_ptr->art_esp = 0;
+
+		/* Curse it */
+		o_ptr->ident |= (IDENT_CURSED);
+
+		/* Recalculate bonuses */
+		p_ptr->update |= (PU_BONUS);
+
+		/* Recalculate mana */
+		p_ptr->update |= (PU_MANA);
+
+		/* Window stuff */
+		p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+	}
+
+	itemdestructed = TRUE;
+
+	if (currentslot < 13) {
+		currentslot++;
+		goto anotherslot;
+	}
+
+	return (itemdestructed);
+}
+
+/*
  * Curse the players jewelry, by Amy
  */
 bool curse_jewelry(void)
@@ -4346,7 +4608,7 @@ bool curse_jewelry(void)
 	}
 
 	/* Attempt a saving throw for artifacts */
-	if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
+	else if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
 	{
 		/* Cool */
 		msg_format("A terrible black aura tries to surround your jewelry, "
@@ -4424,7 +4686,7 @@ bool curse_leftring(void)
 	}
 
 	/* Attempt a saving throw for artifacts */
-	if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
+	else if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
 	{
 		/* Cool */
 		msg_format("A terrible black aura tries to surround your jewelry, "
@@ -4502,7 +4764,7 @@ bool curse_rightring(void)
 	}
 
 	/* Attempt a saving throw for artifacts */
-	if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
+	else if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
 	{
 		/* Cool */
 		msg_format("A terrible black aura tries to surround your jewelry, "
@@ -4580,7 +4842,7 @@ bool curse_amulet(void)
 	}
 
 	/* Attempt a saving throw for artifacts */
-	if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
+	else if (((o_ptr->art_name) || artifact_p(o_ptr)) && (rand_int(100) < 50))
 	{
 		/* Cool */
 		msg_format("A terrible black aura tries to surround your jewelry, "

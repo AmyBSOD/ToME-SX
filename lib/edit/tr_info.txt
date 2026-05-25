@@ -4147,6 +4147,16 @@ I:3:5:40:6:10:0d0:v
 D:It's too late to stop the explosive breeders, methinks.
 F:FLOOR | CHEST | DOOR
 
+N:841:Trap of Curse Extra Slot
+I:5:5:0:12:20:0d0:y
+D:Your items will never be the same...
+F:FLOOR | CHEST | DOOR
+
+N:842:Trap of Curse All Extra Slots
+I:10:2:0:12:50:0d0:y
+D:Your items will never be the same...
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

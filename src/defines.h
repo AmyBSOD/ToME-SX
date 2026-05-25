@@ -3635,6 +3635,9 @@
 #define TRAP_OF_SUMMON_BREEDER            839
 #define TRAP_OF_SUMMON_BREEDER_SPC        840
 
+#define TRAP_OF_CURSE_XTRASLOT            841
+#define TRAP_OF_CURSE_XTRASLOTS           842
+
 /*** General index values ***/
 
 

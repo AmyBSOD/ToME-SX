@@ -1779,6 +1779,8 @@ extern bool curse_armor(void);
 extern bool curse_garment(void);
 extern bool curse_cloak(void);
 extern bool curse_gauntlets(void);
+extern bool curse_xtraslot(void);
+extern bool curse_xtraslots(void);
 extern bool curse_helm(void);
 extern bool curse_shield(void);
 extern bool curse_boots(void);

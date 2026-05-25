@@ -2085,6 +2085,20 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_CURSE_XTRASLOT:
+		{
+			msg_print("You hear a terrible shout!");
+			ident = curse_xtraslot();
+			break;
+		}
+
+	case TRAP_OF_CURSE_XTRASLOTS:
+		{
+			msg_print("You hear many terrible shouts!");
+			ident = curse_xtraslots();
+			break;
+		}
+
 	case TRAP_OF_CURSE_GARMENT:
 		{
 			msg_print("You hear a terrible scream!");
