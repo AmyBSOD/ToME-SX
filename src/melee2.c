@@ -5977,6 +5977,7 @@ bool make_attack_spell(int m_idx)
 				else cmsg_format(TERM_ORANGE, "%^s casts a spell and cackles evilly.", m_name);
 				msg_print(NULL);
 				(void)trap_creation();
+				alloc_trap(); /* by Amy: make one random trap somewhere, instead of only overwriting existing traps */
 				break;
 			}
 
