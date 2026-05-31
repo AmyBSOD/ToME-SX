@@ -92979,6 +92979,8 @@ D:A fan of the Oklahoma University football team. He has been conceived by
 D:some troll who distributed an Angband version to people from other cities, 
 D:apparently. 
 
+# more sentient shoes, by Amy
+
 N:5350:Sunija
 G:|:b
 I:125:100d100:25:150:150
@@ -93759,8 +93761,6 @@ D:Eurgh, this girl reeks of farting gas and decay! Do your best to stay
 D:far away from her, or she'll subject you to whatever she emits, and 
 D:it certainly won't be pleasant! 
 
-# more sentient shoes, by Amy
-
 N:5390:Suna
 G:u:u
 I:113:20d60:20:100:60
@@ -93903,6 +93903,398 @@ F:MORTAL | BASEANGBAND | WILD_WOOD | RES_PLAS | RES_DISE | RES_DARK |
 S:MULTIPLY
 D:A sexy red lady pump with a very high heel. She really wants to 
 D:scratch your unprotected skin with the razor-sharp heels. 
+
+N:5399:Lissie
+G:I:D
+I:121:100d20:30:40:70
+W:40:5:4000:5000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:KICK:UN_BONUS:7d10
+B:HIT:HURT:20d1
+B:FART:*
+F:UNIQUE | FEMALE | CAN_SPEAK | GOOD | FORCE_MAXHP | SPECIAL_GENE |
+F:DROP_CORPSE | NO_THEFT |
+F:DROP_12 | DROP_GOOD | DROP_RANDART | OPEN_DOOR |
+F:BASEANGBAND | IM_ACID | RES_TELE | RES_NETH | RES_WATE | RES_DISE | 
+F:NO_FEAR | NO_STUN | NO_SLEEP | CAN_SWIM | RES_GRAV | RES_NERV | 
+S:1_IN_5
+S:SHRIEK | ARROW_3 | BLIND | CONF | HEAL | 
+D:This girl with long bundle beckons you to join her and admire the view. 
+D:Somehow you get the feeling that this offer is a trap... 
+
+N:5400:Lisa
+G:I:D
+I:121:100d20:30:40:70
+W:40:150:4000:5000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:KICK:UN_BONUS:7d10
+B:HIT:HURT:20d1
+B:FART:*
+F:UNIQUE | FEMALE | CAN_SPEAK | GOOD | FORCE_MAXHP | 
+F:DROP_CORPSE | NO_THEFT |
+F:DROP_12 | DROP_GOOD | OPEN_DOOR |
+F:BASEANGBAND | IM_ACID | RES_TELE | RES_NETH | RES_WATE | RES_DISE | 
+F:NO_FEAR | NO_STUN | NO_SLEEP | CAN_SWIM | RES_GRAV | RES_NERV | 
+S:1_IN_5
+S:SHRIEK | ARROW_3 | BLIND | CONF | HEAL | 
+D:This girl with long bundle beckons you to join her and admire the view. 
+D:Somehow you get the feeling that this offer is a trap... 
+
+N:5401:Miss Grandchildman
+G:n:v
+I:120:40d100:30:120:5
+W:60:5:4000:15000
+E:1:1:1:2:0:1
+O:30:35:35:0
+B:GAZE:EXP_80
+B:GAZE:PARALYZE
+B:HIT:HURT:12d6
+B:HIT:HURT:12d6
+F:UNIQUE | FEMALE | DROP_CORPSE | SPECIAL_GENE | DROP_RANDART | 
+F:FORCE_SLEEP | FORCE_MAXHP | NO_THEFT | 
+F:ONLY_ITEM | DROP_12 | DROP_22 | DROP_GOOD | 
+F:SMART | OPEN_DOOR | BASH_DOOR | CAN_FLY | 
+F:EVIL | IM_ACID | IM_FIRE | IM_POIS |
+F:MORTAL | BASEANGBAND | ELDRITCH_HORROR | 
+S:1_IN_2 | 
+S:HOLD | SCARE | CAUSE_3 | BO_FIRE | BO_PLAS | BA_ACID | 
+S:S_HYDRA | S_KIN | BR_NERV | S_WRAITH | 
+D:Looks like a woman, but is a monster who turns people to stone. 
+D:Don't look at her!! 
+
+N:5402:Miss Handleman
+G:n:v
+I:120:40d100:30:120:5
+W:60:150:4000:15000
+E:1:1:1:2:0:1
+O:30:35:35:0
+B:GAZE:EXP_80
+B:GAZE:PARALYZE
+B:HIT:HURT:12d6
+B:HIT:HURT:12d6
+F:UNIQUE | FEMALE | DROP_CORPSE | 
+F:FORCE_SLEEP | FORCE_MAXHP | NO_THEFT | 
+F:ONLY_ITEM | DROP_12 | DROP_22 | DROP_GOOD | 
+F:SMART | OPEN_DOOR | BASH_DOOR | CAN_FLY | 
+F:EVIL | IM_ACID | IM_FIRE | IM_POIS |
+F:MORTAL | BASEANGBAND | ELDRITCH_HORROR | 
+S:1_IN_2 | 
+S:HOLD | SCARE | CAUSE_3 | BO_FIRE | BO_PLAS | BA_ACID | 
+S:S_HYDRA | S_KIN | BR_NERV | S_WRAITH | 
+D:Looks like a woman, but is a monster who turns people to stone. 
+D:Don't look at her!! 
+
+N:5403:Tyrannosaurus Imperator
+G:D:U
+I:130:50d150:200:100:60
+W:100:5:20000:50000
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:3d6
+B:CLAW:HURT:3d6
+B:BITE:HURT:30d20
+B:BITE:HURT:30d20
+F:STUPID | BASH_DOOR | COLD_BLOOD | BASEANGBAND | DROP_CORPSE | 
+F:DRAGON | ANIMAL | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | MALE | 
+F:UNIQUE | DROP_RANDART | SPECIAL_GENE | DROP_22 | DROP_GREAT | 
+F:REFLECTING | REGENERATE | MOVE_BODY | KILL_ITEM | RES_WATE |
+F:RES_NEXU | NO_THEFT | RES_TIME | RES_CHAO | RES_INER | RES_WALL |
+F:RES_GRAV | KILL_TREES | 
+S:1_IN_10
+S:S_KIN | SHRIEK | 
+D:The king of all the kings of dinosaurs, he'll totally stomp you. 
+
+N:5404:Tyrannosaurus Regina
+G:D:U
+I:130:50d150:200:100:60
+W:100:150:20000:50000
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:3d6
+B:CLAW:HURT:3d6
+B:BITE:HURT:30d20
+B:BITE:HURT:30d20
+F:STUPID | BASH_DOOR | COLD_BLOOD | BASEANGBAND | DROP_CORPSE | 
+F:DRAGON | ANIMAL | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | FEMALE | 
+F:UNIQUE | DROP_22 | DROP_GREAT | 
+F:REFLECTING | REGENERATE | MOVE_BODY | KILL_ITEM | RES_WATE |
+F:RES_NEXU | NO_THEFT | RES_TIME | RES_CHAO | RES_INER | RES_WALL |
+F:RES_GRAV | KILL_TREES | 
+S:1_IN_10
+S:S_KIN | SHRIEK | 
+D:The queen of the kings of dinosaurs, she doesn't like tiny, annoying 
+D:creatures like you. Beware her charge attack! 
+
+N:5405:Sir Reginald
+G:p:o
+I:135:100d100:30:200:15
+W:100:5:1700:60000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:CONFUSE:30d5
+B:HIT:TERRIFY:30d5
+B:HIT:BLIND:30d5
+B:HIT:LOSE_ALL:30d5
+F:UNIQUE | MALE | NO_THEFT | SPECIAL_GENE | DROP_RANDART | 
+F:FORCE_SLEEP | CAN_SPEAK | FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_42 | DROP_GOOD | DROP_GREAT | CAN_SWIM |
+F:SMART | TAKE_ITEM | OPEN_DOOR |
+F:MORTAL | BASEANGBAND | 
+F:GOOD | REGENERATE | DROP_CORPSE |
+F:IM_FIRE | IM_POIS | IM_ACID | IM_COLD | IM_ELEC | RES_TELE | RES_NETH | 
+F:NO_FEAR | NO_STUN | NO_CUT | RES_LITE | RES_WALL | RES_DARK | RES_SHAR | 
+F:RES_MIND | WEIRD_MIND | AURA_FIRE | MOVE_BODY | 
+F:NO_SLEEP | NO_CONF | HAS_LITE
+S:1_IN_3 |
+S:ARROW_4 | BO_MANA | BLINK | TPORT | S_KIN | HEAL | BR_CHAO | BR_DISI | 
+S:DRAIN_MANA | CAUSE_4 | BRAIN_SMASH | HASTE | TELE_LEVEL | S_THUNDERLORD | 
+S:S_HI_DEMON | S_ANGEL | S_UNIQUE | 
+D:This impostor doesn't even belong to the Round Table! You have to kill him!!! 
+
+N:5406:Sir Reggie
+G:p:o
+I:135:100d100:30:200:15
+W:100:150:1700:60000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:CONFUSE:30d5
+B:HIT:TERRIFY:30d5
+B:HIT:BLIND:30d5
+B:HIT:LOSE_ALL:30d5
+F:UNIQUE | MALE | NO_THEFT | 
+F:FORCE_SLEEP | CAN_SPEAK | FORCE_MAXHP | MOVE_BODY |
+F:ONLY_ITEM | DROP_42 | DROP_GOOD | DROP_GREAT | CAN_SWIM |
+F:SMART | TAKE_ITEM | OPEN_DOOR |
+F:MORTAL | BASEANGBAND | 
+F:GOOD | REGENERATE | DROP_CORPSE |
+F:IM_FIRE | IM_POIS | IM_ACID | IM_COLD | IM_ELEC | RES_TELE | RES_NETH | 
+F:NO_FEAR | NO_STUN | NO_CUT | RES_LITE | RES_WALL | RES_DARK | RES_SHAR | 
+F:RES_MIND | WEIRD_MIND | AURA_FIRE | MOVE_BODY | 
+F:NO_SLEEP | NO_CONF | HAS_LITE
+S:1_IN_3 |
+S:ARROW_4 | BO_MANA | BLINK | TPORT | S_KIN | HEAL | BR_CHAO | BR_DISI | 
+S:DRAIN_MANA | CAUSE_4 | BRAIN_SMASH | HASTE | TELE_LEVEL | S_THUNDERLORD | 
+S:S_HI_DEMON | S_ANGEL | S_UNIQUE | 
+D:This impostor doesn't even belong to the Round Table! You have to kill him!!! 
+
+N:5407:Rockford
+G:p:R
+I:120:64d20:20:50:20
+W:28:5:1600:750
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:4d4
+B:HIT:HURT:4d4
+B:TOUCH:EAT_GOLD:4d5
+F:UNIQUE | MALE | JOKEANGBAND | DROP_RANDART | SPECIAL_GENE | 
+F:FORCE_MAXHP | FORCE_SLEEP | 
+F:ONLY_ITEM | DROP_42 | DROP_GOOD | 
+F:SMART | BASH_DOOR | CAN_SPEAK | 
+F:DROP_CORPSE | 
+S:1_IN_15 | 
+S:BR_DISI | TELE_AWAY | 
+D:Something tells you that this pick-axe-wielding dude doesn't like your 
+D:intrusion into his realm. 
+
+N:5408:Stonesford
+G:p:R
+I:120:64d20:20:50:20
+W:28:150:1600:750
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:4d4
+B:HIT:HURT:4d4
+B:TOUCH:EAT_GOLD:4d5
+F:UNIQUE | MALE | JOKEANGBAND | 
+F:FORCE_MAXHP | FORCE_SLEEP | 
+F:ONLY_ITEM | DROP_42 | DROP_GOOD | 
+F:SMART | BASH_DOOR | CAN_SPEAK | 
+F:DROP_CORPSE | 
+S:1_IN_15 | 
+S:BR_DISI | TELE_AWAY | 
+D:Something tells you that this pick-axe-wielding dude doesn't like your 
+D:intrusion into his realm. 
+
+N:5409:Beardez
+G:I:D
+I:125:77d77:5:70:130
+W:40:5:1111:7000
+E:1:1:1:2:1:1
+O:30:5:40:10
+B:SPORE:INERTIA:8d5
+B:MOAN:NEXUS:30d1
+B:INSULT:EAT_FOOD:5d5
+F:UNIQUE | MALE | CAN_SPEAK | FORCE_MAXHP | SPECIAL_GENE | DROP_RANDART | 
+F:NO_THEFT | CHAR_CLEAR | RAND_25 | STUPID | COLD_BLOOD | EMPTY_MIND | 
+F:POWERFUL | AURA_ELEC | BASH_DOOR | KILL_BODY | TAKE_ITEM | EVIL | 
+F:NONLIVING | IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS | 
+F:RES_NETH | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | NO_FEAR | 
+F:DROP_22 | DROP_GOOD | ONLY_GOLD | NO_STUN | NO_CONF | NO_SLEEP | 
+F:CAN_FLY | SPIDER | AI_ANNOY | RES_TIME | RES_LITE | RES_SOUN | 
+F:RES_INER | RES_WALL | RES_GRAV | RES_DARK | RES_SHAR | NO_CUT | 
+F:HAS_LITE | RES_NERV | RES_MIND | 
+F:JOKEANGBAND | 
+S:1_IN_3
+S:BR_GRAV | BR_DISI | BR_WALL | MIND_BLAST | MISSILE | ROCKET | BLINK | 
+S:S_MONSTERS | BR_ETHE | 
+D:A dude in a UFO. He's flying back and forth, shooting missiles at you. 
+
+N:5410:Bearthez
+G:I:D
+I:125:77d77:5:70:130
+W:40:150:1111:7000
+E:1:1:1:2:1:1
+O:30:5:40:10
+B:SPORE:INERTIA:8d5
+B:MOAN:NEXUS:30d1
+B:INSULT:EAT_FOOD:5d5
+F:UNIQUE | MALE | CAN_SPEAK | FORCE_MAXHP | 
+F:NO_THEFT | CHAR_CLEAR | RAND_25 | STUPID | COLD_BLOOD | EMPTY_MIND | 
+F:POWERFUL | AURA_ELEC | BASH_DOOR | KILL_BODY | TAKE_ITEM | EVIL | 
+F:NONLIVING | IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS | 
+F:RES_NETH | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | NO_FEAR | 
+F:DROP_22 | DROP_GOOD | ONLY_GOLD | NO_STUN | NO_CONF | NO_SLEEP | 
+F:CAN_FLY | SPIDER | AI_ANNOY | RES_TIME | RES_LITE | RES_SOUN | 
+F:RES_INER | RES_WALL | RES_GRAV | RES_DARK | RES_SHAR | NO_CUT | 
+F:HAS_LITE | RES_NERV | RES_MIND | 
+F:JOKEANGBAND | 
+S:1_IN_3
+S:BR_GRAV | BR_DISI | BR_WALL | MIND_BLAST | MISSILE | ROCKET | BLINK | 
+S:S_MONSTERS | BR_ETHE | 
+D:A dude in a UFO. He's flying back and forth, shooting missiles at you. 
+
+N:5411:Dora
+G:$:o
+I:115:8d100:40:15:0
+W:5:5:400:120
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:4d4
+B:KICK:EAT_FOOD
+B:KICK:LOSE_ALL
+F:HAS_EGG | DROP_CORPSE | FEMALE | WEIRD_MIND | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND | MOVE_BODY | ORC | EVIL | FRIEND | IM_ACID | IM_POIS | 
+F:RES_CHAO | RES_INER | OPEN_DOOR | NO_FEAR | NO_STUN | RES_NERV | 
+F:UNIQUE | NO_THEFT | DROP_RANDART | SPECIAL_GENE | 
+S:1_IN_15 | 
+S:ARROW_1 | BO_POIS | HEAL | 
+D:Now you can prove that you're capable of defeating this lovely girl and 
+D:her pretty block-heeled combat boots. 
+
+N:5412:Yvonne
+G:R:b
+I:125:20d200:8:60:20
+W:20:5:10:3350
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:COLD:5d6
+F:WEIRD_MIND | CAN_SWIM | DROP_CORPSE | FEMALE |  
+F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND | IM_COLD | NO_STUN | NO_CONF
+F:UNIQUE | NO_THEFT | DROP_RANDART | SPECIAL_GENE | 
+S:1_IN_10 | 
+S:BR_COLD | HASTE
+D:Hopefully you're male, because then the cute Yvonne can totally kick you 
+D:in the nuts with her beautiful blue girl sneakers over and over. 
+
+N:5413:Ute
+G:~:G
+I:108:20d200:20:20:50
+W:20:5:3000:3500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:4d12
+F:IM_POIS | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | GOOD | 
+F:UNIQUE | NO_THEFT | DROP_RANDART | SPECIAL_GENE | 
+D:Do you think you can defeat this beauty and her cute green peep-toes? 
+
+N:5414:Arabella
+G:X:o
+I:110:20d200:20:50:120
+W:15:5:15000:1500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:4d8
+B:KICK:HURT:4d8
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_COLD | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_FLY | GIANT | 
+F:RES_SHAR | RES_WALL | RES_MIND | 
+F:UNIQUE | NO_THEFT | DROP_RANDART | SPECIAL_GENE | 
+D:Now I'm looking forward to seeing you get kicked in the shins by this 
+D:pretty asian girl and her hugging boots again and again. 
+
+N:5415:Henrietta
+G:X:u
+I:115:30d400:80:100:120
+W:26:5:25000:15000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:UN_BONUS:5d15
+B:KICK:HALLU:3d4
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | GIANT | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | NO_SLEEP | RES_NERV | 
+F:RES_SHAR | RES_WALL | IM_POIS | IM_COLD | IM_FIRE | 
+F:UNIQUE | NO_THEFT | DROP_RANDART | SPECIAL_GENE | 
+D:Yeah I know, you don't want to clean the dog shit from Henrietta's 
+D:block-heeled combat boots. But if she defeats you, she'll force you 
+D:to clean them. So you'd better be careful.
+
+N:5416:Sing
+G:V:R
+I:125:50d600:27:70:30
+W:50:5:3400:25000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:EXP_80:5d10
+B:KICK:EXP_80:5d10
+B:KICK:EAT_FOOD:2d10
+B:KICK:EAT_ITEM:2d10
+F:HAS_EGG | DROP_CORPSE | FEMALE | CAN_SWIM | FORCE_SLEEP | COLD_BLOOD | 
+F:OPEN_DOOR | NONLIVING | BASEANGBAND | INVISIBLE | WEIRD_MIND | POWERFUL | 
+F:ELDRITCH_HORROR | TAKE_ITEM | UNDEAD | EVIL | IM_COLD | IM_POIS | RES_NETH | 
+F:RES_SOUN | RES_DARK | NO_SLEEP | 
+F:UNIQUE | NO_THEFT | DROP_RANDART | SPECIAL_GENE | 
+S:1_IN_2 | 
+S:BA_NETH | 
+D:The pretty Sing will defeat all those who aren't cut out for this dungeon. 
+D:Do you think you got what it takes?
+
+N:5417:Marian
+G:R:v
+I:110:15d150:50:40:150
+W:26:5:1500:20000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:DISEASE:2d4
+B:KICK:POISON:4d8
+F:RES_CHAO | RAND_50 | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | DRAGON | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_POIS | ELDRITCH_HORROR | 
+F:UNIQUE | NO_THEFT | DROP_RANDART | SPECIAL_GENE | 
+S:1_IN_3
+S:BR_POIS | BO_POIS
+D:Having gotten this far, you'll probably be able to defeat this girl even though 
+D:her lilac sneakers are very dangerous. Because all the poison in the world won't 
+D:phase you if you're resistant. Well, you *are* poison resistant, right? 
+
+N:5418:Margret
+G:r:b
+I:128:20d750:150:60:0
+W:48:5:1500:40000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:9d24
+F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | REGENERATE |
+F:IM_ELEC | NO_SLEEP | RES_TELE | RES_WATE | RES_NEXU | EVIL | 
+F:RES_DISE | RES_PLAS | NO_FEAR | NO_STUN | NO_CONF | DEMON | 
+F:RES_CHAO | RES_INER | RES_GRAV | RES_NERV | RES_MIND | 
+F:UNIQUE | NO_THEFT | DROP_RANDART | SPECIAL_GENE | 
+D:This lady will mercilessly scratch your legs with her dark blue leather pumps. 
+D:You should try to defeat her before she can defeat you! 
 
 
 

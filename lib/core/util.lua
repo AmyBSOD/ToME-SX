@@ -143,7 +143,11 @@ function approximate_distance(y, x, y2, x2)
 	end
 
 	-- how far away then?
-	if most_dist >= 41 then
+	if most_dist >= 121 then
+		how_far = "an incredibly long way"
+	elseif most_dist >= 81 then
+		how_far = "an extremely long way"
+	elseif most_dist >= 41 then
 		how_far = "a very long way"
 	elseif most_dist >= 25 then
 		how_far = "a long way"

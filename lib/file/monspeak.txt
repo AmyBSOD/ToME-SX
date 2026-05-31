@@ -762,3 +762,20 @@ shouts 'Drinking milk should be prohibited as milking animals hurts them! You sh
 1
 whimpers 'Take my high heels if you want, I don't need them anyway, but please, don't kill me!'
 
+N:5399:Lissie
+N:5400:Lisa
+4
+announces 'Get ready for battle!'
+laughs 'Do you think you got what it takes?'
+presents her high-heeled combat boots, which even have buckles.
+snickers in anticipation of fighting you.
+1
+screams 'That's unfair!! I don't like your behavior at all!'
+
+N:5409:Beardez
+N:5410:Bearthez
+4
+shouts 'Die!'
+shouts 'You will die!'
+0
+

@@ -1444,7 +1444,7 @@ void printRandoms(int lower, int upper, int count)
 	printf("V:2.0.0\n", num);
 	printf("\n", num);
 
-	for (d_id = 0; d_id <= 76; d_id++) {
+	for (d_id = 0; d_id <= 106; d_id++) {
 
 		switch (d_id) {
 			case 0:
@@ -1841,6 +1841,156 @@ void printRandoms(int lower, int upper, int count)
 				printf("D:Fem:the entrance to a scented cave.\n");
 				printf("W:10:20:1:0:10:120\n");
 				break;
+			case 77:
+				printf("N:77:Observation Tower\n");
+				printf("D:Obs:an entrance to an observation tower.\n");
+				printf("W:30:50:1:0:24:200\n");
+				break;
+			case 78:
+				printf("N:78:Stone Volcano\n");
+				printf("D:Stv:the entrance to an inactive volcano.\n");
+				printf("W:50:70:1:0:12:100\n");
+				break;
+			case 79:
+				printf("N:79:Jurassic Park\n");
+				printf("D:Jur:a path to a prehistoric park.\n");
+				printf("W:70:98:1:0:15:180\n");
+				break;
+			case 80:
+				printf("N:80:Camelot\n");
+				printf("D:Cam:a path to the mysterious land of Camelot.\n");
+				printf("W:101:127:1:0:14:160\n");
+				break;
+			case 81:
+				printf("N:81:Glacis Desert\n");
+				printf("D:Gls:a path to an icy wasteland.\n");
+				printf("W:11:20:1:0:15:150\n");
+				break;
+			case 82:
+				printf("N:82:Eloria Thicket\n");
+				printf("D:Elo:a path to an arid plain.\n");
+				printf("W:21:30:1:0:15:150\n");
+				break;
+			case 83:
+				printf("N:83:Neptunia Tide Realm\n");
+				printf("D:Nep:a path to a waterfield.\n");
+				printf("W:31:40:1:0:15:150\n");
+				break;
+			case 84:
+				printf("N:84:Minus World\n");
+				printf("D:Min:a warp pipe to a crazy world.\n");
+				printf("W:35:39:1:0:4:60\n");
+				break;
+			case 85:
+				printf("N:85:Grass Steppes\n");
+				printf("D:Grs:a way to the grassy steppes.\n");
+				printf("W:1:10:1:0:14:150\n");
+				break;
+			case 86:
+				printf("N:86:Windy Woodlands\n");
+				printf("D:Win:a way to the windy woodland.\n");
+				printf("W:11:20:1:0:14:150\n");
+				break;
+			case 87:
+				printf("N:87:Lakeshore\n");
+				printf("D:Lak:a way to the shores of a lake.\n");
+				printf("W:21:30:1:0:14:150\n");
+				break;
+			case 88:
+				printf("N:88:Aranoch Desert\n");
+				printf("D:Ara:a way to the desert of Aranoch.\n");
+				printf("W:31:40:1:0:14:150\n");
+				break;
+			case 89:
+				printf("N:89:Mount Pepper\n");
+				printf("D:Pep:a way to the pepper mountain.\n");
+				printf("W:41:50:1:0:14:150\n");
+				break;
+			case 90:
+				printf("N:90:Town Square\n");
+				printf("D:Tow:a way to a makeshift town.\n");
+				printf("W:51:60:1:0:14:150\n");
+				break;
+			case 91:
+				printf("N:91:Northern Sea\n");
+				printf("D:Nor:a way to the northern seas.\n");
+				printf("W:61:70:1:0:14:150\n");
+				break;
+			case 92:
+				printf("N:92:Seething Volcano\n");
+				printf("D:See:a way to the seething volcano.\n");
+				printf("W:71:80:1:0:14:150\n");
+				break;
+			case 93:
+				printf("N:93:Fang Castle\n");
+				printf("D:FNC:an entrance to Fang Castle.\n");
+				printf("W:128:228:1:0:50:160\n");
+				break;
+			case 94:
+				printf("N:94:Eep Caves\n");
+				printf("D:EEP:an entrance to the Eep Caves.\n");
+				printf("W:188:288:1:0:14:240\n");
+				break;
+			case 95:
+				printf("N:95:Far East Grove\n");
+				printf("D:FEG:an entrance to the Far East Grove.\n");
+				printf("W:248:348:1:0:50:160\n");
+				break;
+			case 96:
+				printf("N:96:Fanny's Cave\n");
+				printf("D:FAC:an entrance to a female cave.\n");
+				printf("W:308:408:1:0:10:120\n");
+				break;
+			case 97:
+				printf("N:97:Enterprise\n");
+				printf("D:ENT:an entrance to the Enterprise Spaceship.\n");
+				printf("W:368:468:1:0:25:180\n");
+				break;
+			case 98:
+				printf("N:98:Veggie Realm\n");
+				printf("D:VEG:an entrance to Veggie Realm.\n");
+				printf("W:428:528:1:0:50:160\n");
+				break;
+			case 99:
+				printf("N:99:555\n");
+				printf("D:FFF:an entrance to 555, aka Heaven.\n");
+				printf("W:488:588:1:0:18:160\n");
+				break;
+			case 100:
+				printf("N:100:The Goddamn Sewer Level\n");
+				printf("D:SWR:an entrance to the Goddamn Sewer Level.\n");
+				printf("W:550:650:1:0:25:180\n");
+				break;
+			case 101:
+				printf("N:101:Tomb of Horrors\n");
+				printf("D:THO:an entrance to the Tomb of Horrors.\n");
+				printf("W:620:720:1:0:30:200\n");
+				break;
+			case 102:
+				printf("N:102:Kehjistan\n");
+				printf("D:KEH:an entrance to the Jungle of Kehjistan.\n");
+				printf("W:680:780:1:0:20:100\n");
+				break;
+			case 103:
+				printf("N:103:Delta Caves\n");
+				printf("D:DEL:an entrance to the Delta Caves.\n");
+				printf("W:740:840:1:0:25:190\n");
+				break;
+			case 104:
+				printf("N:104:666\n");
+				printf("D:SSS:an entrance to 666, aka Hell.\n");
+				printf("W:780:880:1:0:14:160\n");
+				break;
+			case 105:
+				printf("N:105:Monster Mine\n");
+				printf("D:MMI:an entrance to the Monster Mine.\n");
+				printf("W:840:940:1:0:15:150\n");
+				break;
+			case 106:
+				printf("N:106:Computer Core\n");
+				printf("D:CPC:an entrance to the Computer Core.\n");
+				printf("W:880:980:1:0:35:180\n");
+				break;
 		}
 
 		switch (d_id) {
@@ -2001,10 +2151,55 @@ void printRandoms(int lower, int upper, int count)
 			case 76: /* Femmy's Cave */
 				printf("F:FINAL_GUARDIAN_5346\n");
 				break;
+			case 77: /* Observation Tower */
+				printf("F:FINAL_GUARDIAN_5399\n");
+				break;
+			case 78: /* Stone Volcano */
+				printf("F:FINAL_GUARDIAN_5401\n");
+				break;
+			case 79: /* Jurassic Park */
+				printf("F:FINAL_GUARDIAN_5403\n");
+				break;
+			case 80: /* Camelot */
+				printf("F:NO_EASY_MOVE | NO_RECALL | FINAL_GUARDIAN_5405\n");
+				break;
+			case 83: /* Neptunia Tide Realm */
+				printf("F:FINAL_GUARDIAN_5407\n");
+				break;
+			case 84: /* Minus World */
+				printf("F:NO_RECALL | NO_EASY_MOVE | FINAL_GUARDIAN_5409\n");
+				break;
+			case 85: /* Grass Steppes */
+				printf("F:FINAL_GUARDIAN_5411\n");
+				break;
+			case 86: /* Windy Woodlands */
+				printf("F:FINAL_GUARDIAN_5412\n");
+				break;
+			case 87: /* Lakeshore */
+				printf("F:FINAL_GUARDIAN_5413\n");
+				break;
+			case 88: /* Aranoch Desert */
+				printf("F:FINAL_GUARDIAN_5414\n");
+				break;
+			case 89: /* Mount Pepper */
+				printf("F:FINAL_GUARDIAN_5415\n");
+				break;
+			case 90: /* Town Square */
+				printf("F:FINAL_GUARDIAN_5416\n");
+				break;
+			case 91: /* Northern Sea */
+				printf("F:FINAL_GUARDIAN_5417\n");
+				break;
+			case 92: /* Seething Volcano */
+				printf("F:FINAL_GUARDIAN_5418\n");
+				break;
+			case 98: /* Veggie Realm */
+				printf("F:NO_EASY_MOVE\n");
+				break;
 		}
 
 		/* randomized content for those dungeons that should have randomized content --Amy */
-		if ( (d_id >= 1 && d_id <= 11) || (d_id >= 16 && d_id <= 27) || (d_id == 29) || (d_id >= 31 && d_id <= 76) ) {
+		if ( (d_id >= 1 && d_id <= 11) || (d_id >= 16 && d_id <= 27) || (d_id == 29) || (d_id >= 31 && d_id <= 106) ) {
 
 			if (random_number(3) == 2) {
 
@@ -2137,7 +2332,7 @@ void printRandoms(int lower, int upper, int count)
 
 			} else {
 
-				contnum = random_number(158);
+				contnum = random_number(205);
 
 				printf("# random type %d\n", contnum);
 
@@ -4373,9 +4568,9 @@ void printRandoms(int lower, int upper, int count)
 						printf("O:30:5:30:30\n");
 						printf("F:NO_SHAFT | CAVE | NO_DOORS | SAND_VEIN | MAGMA_VEIN | QUARTZ_VEIN |\n");
 						printf("F:FILL_METHOD_3\n");
-						printf("R:50:0\n");
-						printf("R:50:1\n");
+						printf("R:80:1\n");
 						printf("M:FEMALE\n");
+						printf("R:20:0\n");
 						break;
 					case 152:
 						printf("# randomized mount fate\n", contnum);
@@ -4419,7 +4614,7 @@ void printRandoms(int lower, int upper, int count)
 						}
 
 						if (random_number(20) == 1) {
-							if (random_number(5) != 1) printf("F:NO_BREATH\n");
+							if (random_number(5) == 1) printf("F:NO_BREATH\n");
 							else printf("F:WATER_BREATH\n");
 						}
 
@@ -4473,7 +4668,7 @@ void printRandoms(int lower, int upper, int count)
 							}
 						}
 						if (random_number(50) == 1) {
-							if (random_number(5) != 1) printf("F:NO_BREATH\n");
+							if (random_number(5) == 1) printf("F:NO_BREATH\n");
 							else printf("F:WATER_BREATH\n");
 						}
 
@@ -4529,7 +4724,7 @@ void printRandoms(int lower, int upper, int count)
 							}
 						}
 						if (random_number(30) == 1) {
-							if (random_number(5) != 1) printf("F:NO_BREATH\n");
+							if (random_number(5) == 1) printf("F:NO_BREATH\n");
 							else printf("F:WATER_BREATH\n");
 						}
 
@@ -4596,7 +4791,7 @@ void printRandoms(int lower, int upper, int count)
 							}
 						}
 						if (random_number(100) == 1) {
-							if (random_number(5) != 1) printf("F:NO_BREATH\n");
+							if (random_number(5) == 1) printf("F:NO_BREATH\n");
 							else printf("F:WATER_BREATH\n");
 						}
 
@@ -4662,7 +4857,7 @@ void printRandoms(int lower, int upper, int count)
 							}
 						}
 						if (random_number(100) == 1) {
-							if (random_number(5) != 1) printf("F:NO_BREATH\n");
+							if (random_number(5) == 1) printf("F:NO_BREATH\n");
 							else printf("F:WATER_BREATH\n");
 						}
 
@@ -4673,6 +4868,972 @@ void printRandoms(int lower, int upper, int count)
 						}
 
 						if (random_number(25) == 1) {
+							randomdungeondamage();
+						}
+						break;
+					case 159:
+					case 160:
+						printf("# based on Observation Tower\n", contnum);
+						printf("L:200:50:91:50:1:0\n");
+						printf("A:56:90:213:10:56:0:56:56\n");
+						printf("O:50:10:10:10\n");
+						printf("F:FILL_METHOD_2 | SMALL | TOWER | \n");
+						printf("R:100:0\n");
+						break;
+					case 161:
+					case 162:
+						printf("# based on Stone Volcano\n", contnum);
+						printf("L:88:50:93:50:1:0\n");
+						printf("A:56:50:50:25:51:25:57:57\n");
+						printf("O:10:10:10:50\n");
+						printf("F:LAVA_RIVER | CAVERN | QUARTZ_VEIN | MAGMA_VEIN |\n");
+						printf("F:FILL_METHOD_2\n");
+						printf("R:100:0\n");
+						break;
+					case 163:
+					case 164:
+						printf("# based on Jurassic Park\n", contnum);
+						printf("L:89:90:88:10:1:0\n");
+						printf("A:96:90:56:10:56:0:96:96\n");
+						printf("O:15:15:15:15\n");
+						printf("F:DOUBLE | CAVERN | FILL_METHOD_4\n");
+						printf("R:20:3\n");
+						printf("M:DRAGON\n");
+						printf("R:70:3\n");
+						printf("M:ANIMAL\n");
+						printf("R:10:0\n");
+						break;
+					case 165:
+					case 166:
+						printf("# based on Camelot\n", contnum);
+						printf("L:1:100:1:0:1:0\n");
+						printf("A:56:100:56:0:56:0:57:58\n");
+						printf("O:20:20:20:20\n");
+						printf("F:CAVERN | CIRCULAR_ROOMS | FLAT | \n");
+						printf("F:BIG | QUARTZ_VEIN | FILL_METHOD_0\n");
+						printf("R:90:0\n");
+						printf("M:JOKEANGBAND\n");
+						printf("R:10:0\n");
+						break;
+					case 167:
+					case 168:
+						printf("# based on Glacis Desert\n", contnum);
+						printf("L:88:98:90:2:1:0\n");
+						printf("A:90:50:92:50:56:0:90:90\n");
+						printf("O:20:25:5:25\n");
+						printf("F:FILL_METHOD_1 | COLD | \n");
+						printf("R:100:0\n");
+						break;
+					case 169:
+					case 170:
+						printf("# based on Eloria Thicket\n", contnum);
+						printf("L:93:98:86:2:1:0\n");
+						printf("A:56:40:60:50:86:10:96:96\n");
+						printf("O:15:30:10:30\n");
+						printf("F:FILL_METHOD_3 | RANDOM_TOWNS | HOT | BIG | \n");
+						printf("R:100:0\n");
+						break;
+					case 171:
+					case 172:
+						printf("# based on Neptunia Tide Realm\n", contnum);
+						printf("L:1:80:84:20:1:0\n");
+						printf("A:98:60:84:30:129:10:239:95\n");
+						printf("O:20:20:25:25\n");
+						printf("F:FILL_METHOD_4 | RANDOM_TOWNS | WATER_RIVERS | \n");
+						printf("R:100:0\n");
+						break;
+					case 173:
+					case 174:
+						printf("# based on Minus World\n", contnum);
+						printf("L:181:34:187:33:242:33\n");
+						printf("A:231:40:118:35:83:25:193:44\n");
+						printf("O:30:5:40:17\n");
+						printf("F:FILL_METHOD_4 | SMALL | NO_DOORS | LAVA_RIVER | CAVE | \n");
+						printf("F:NO_STAIR | SAND_VEIN | RANDOM_TOWNS | ADJUST_LEVEL_2 | \n");
+						printf("F:NO_TELEPORT | NO_GENO | NO_EASY_MOVE | \n");
+						printf("R:90:3\n");
+						printf("M:UNIQUE | ATTR_MULTI | NEVER_MOVE | DROP_42 | SHAPECHANGER | \n");
+						printf("M:KILL_BODY | THUNDERLORD | AQUATIC | NAZGUL | DG_CURSE | \n");
+						printf("M:WILD_OCEAN | WILD_VOLCANO | \n");
+						printf("S:BR_NUKE | BO_WATE | TELE_LEVEL | TRAPS | \n");
+						printf("R:10:0\n");
+						printf("E:3d7:50:RADIOWAVE\n");
+						break;
+					case 175:
+					case 176:
+						printf("# based on Grass Steppes\n", contnum);
+						printf("L:89:80:88:10:96:10\n");
+						printf("A:96:80:89:15:88:5:96:96\n");
+						printf("O:20:20:20:20\n");
+						printf("F:FLAT | FILL_METHOD_3 | \n");
+						printf("R:80:3\n");
+						printf("M:WILD_GRASS | \n");
+						printf("R:20:0\n");
+						break;
+					case 177:
+					case 178:
+						printf("# based on Windy Woodlands\n", contnum);
+						printf("L:89:40:88:10:96:50\n");
+						printf("A:96:95:89:2:88:3:96:96\n");
+						printf("O:20:20:20:20\n");
+						printf("F:FLAT | FILL_METHOD_3 | \n");
+						printf("R:80:3\n");
+						printf("M:WILD_WOOD\n");
+						printf("R:20:0\n");
+						break;
+					case 179:
+					case 180:
+						printf("# based on Lakeshore\n", contnum);
+						printf("L:89:35:84:60:187:5\n");
+						printf("A:84:90:187:10:56:0:84:84\n");
+						printf("O:20:20:20:20\n");
+						printf("F:FLAT | FILL_METHOD_3 | \n");
+						printf("R:80:3\n");
+						printf("M:WILD_SHORE\n");
+						printf("R:20:0\n");
+						break;
+					case 181:
+					case 182:
+						printf("# based on Aranoch Desert\n", contnum);
+						printf("L:88:30:91:60:98:10\n");
+						printf("A:98:60:92:10:91:30:98:98\n");
+						printf("O:20:20:20:20\n");
+						printf("F:FLAT | FILL_METHOD_3 | \n");
+						printf("R:80:3\n");
+						printf("M:WILD_WASTE\n");
+						printf("R:20:0\n");
+						break;
+					case 183:
+					case 184:
+						printf("# based on Mount Pepper\n", contnum);
+						printf("L:89:20:96:15:97:65\n");
+						printf("A:97:90:88:5:96:5:96:96\n");
+						printf("O:20:20:20:20\n");
+						printf("F:FLAT | FILL_METHOD_3 | RANDOM_TOWNS | \n");
+						printf("R:80:3\n");
+						printf("M:WILD_MOUNTAIN\n");
+						printf("R:20:0\n");
+						break;
+					case 185:
+					case 186:
+						printf("# based on Town Square\n", contnum);
+						printf("L:200:40:89:50:88:10\n");
+						printf("A:193:90:197:5:221:5:231:240\n");
+						printf("O:20:20:20:20\n");
+						printf("F:FLAT | FILL_METHOD_3 | RANDOM_TOWNS | \n");
+						printf("R:80:3\n");
+						printf("M:WILD_TOWN\n");
+						printf("R:20:0\n");
+						break;
+					case 187:
+					case 188:
+						printf("# based on Northern Sea\n", contnum);
+						printf("L:89:20:1:1:187:79\n");
+						printf("A:84:30:187:70:56:0:187:187\n");
+						printf("O:20:20:20:20\n");
+						printf("F:FLAT | FILL_METHOD_3 | \n");
+						printf("R:80:3\n");
+						printf("M:WILD_OCEAN\n");
+						printf("R:20:0\n");
+						break;
+					case 189:
+					case 190:
+						printf("# based on Seething Volcano\n", contnum);
+						printf("L:1:50:86:40:50:10\n");
+						printf("A:86:20:50:70:56:10:177:177\n");
+						printf("O:20:20:20:20\n");
+						printf("F:FLAT | FILL_METHOD_3 | RANDOM_TOWNS | \n");
+						printf("R:80:3\n");
+						printf("M:WILD_VOLCANO\n");
+						printf("R:20:0\n");
+						break;
+					case 191:
+						printf("# randomized observation tower\n", contnum);
+						printf("L:200:50:91:50:1:0\n");
+						printf("A:56:90:213:10:56:0:56:56\n");
+						printf("O:50:10:10:10\n");
+						randomfillmethod();
+
+						if (random_number(20) == 1) printf("F:FLAT\n");
+						if (random_number(100) == 1) printf("F:LAVA_RIVER\n");
+						if (random_number(15) == 1) printf("F:CAVERN\n");
+						if (random_number(15) == 1) printf("F:CAVE\n");
+						if (random_number(100) == 1) printf("F:FORGET\n");
+						if (random_number(2) == 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(25) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(50) == 1) printf("F:DOUBLE\n");
+						if (random_number(20) == 1) printf("F:WATER_RIVER\n");
+						if (random_number(25) == 1) printf("F:WATER_RIVERS\n");
+						if (random_number(30) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(20) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(40) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(12) == 1) printf("F:NO_DOORS\n");
+						if (random_number(15) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(40) == 1) printf("F:EMPTY\n");
+						if (random_number(50) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(3) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(5) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+
+						if (random_number(3) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+
+						if (random_number(40) == 1) {
+							randomdungeondamage();
+						}
+						break;
+					case 192:
+						printf("# randomized stone volcano\n", contnum);
+						printf("L:88:50:93:50:1:0\n");
+						printf("A:56:50:50:25:51:25:57:57\n");
+						printf("O:10:10:10:50\n");
+						randomfillmethod();
+
+						if (random_number(15) == 1) printf("F:FLAT\n");
+						if (random_number(30) == 1) printf("F:LAVA_RIVER\n");
+						if (random_number(50) == 1) printf("F:LAVA_RIVERS\n");
+						if (random_number(10) == 1) printf("F:CAVERN\n");
+						if (random_number(15) == 1) printf("F:CAVE\n");
+						if (random_number(30) == 1) printf("F:FORGET\n");
+						if (random_number(2) == 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(40) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(40) == 1) printf("F:DOUBLE\n");
+						if (random_number(50) == 1) printf("F:WATER_RIVER\n");
+						if (random_number(80) == 1) printf("F:WATER_RIVERS\n");
+						if (random_number(30) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(20) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(10) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(5) == 1) printf("F:NO_DOORS\n");
+						if (random_number(15) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(40) == 1) printf("F:EMPTY\n");
+						if (random_number(75) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(4) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+						if (random_number(100) == 1) {
+							if (random_number(3) == 1) printf("F:NO_BREATH\n");
+							else printf("F:WATER_BREATH\n");
+						}
+
+						if (random_number(2) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+
+						if (random_number(12) == 1) {
+							randomdungeondamage();
+						}
+						break;
+					case 193:
+						printf("# randomized dino park\n", contnum);
+						printf("L:89:90:88:10:1:0\n");
+						printf("A:96:90:56:10:56:0:96:96\n");
+						printf("O:15:15:15:15\n");
+						randomfillmethod();
+
+						if (random_number(20) == 1) printf("F:FLAT\n");
+						if (random_number(100) == 1) printf("F:LAVA_RIVER\n");
+						if (random_number(30) == 1) printf("F:CAVERN\n");
+						if (random_number(25) == 1) printf("F:CAVE\n");
+						if (random_number(40) == 1) printf("F:FORGET\n");
+						if (random_number(2) == 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(40) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(20) == 1) printf("F:DOUBLE\n");
+						if (random_number(20) == 1) printf("F:WATER_RIVER\n");
+						if (random_number(25) == 1) printf("F:WATER_RIVERS\n");
+						if (random_number(30) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(30) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(30) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(5) == 1) printf("F:NO_DOORS\n");
+						if (random_number(20) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(20) == 1) printf("F:EMPTY\n");
+						if (random_number(35) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(12) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+
+						if (random_number(2) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+
+						if (random_number(20) == 1) {
+							randomdungeondamage();
+						}
+						break;
+					case 194:
+						printf("# randomized ice desert\n", contnum);
+						printf("L:88:98:90:2:1:0\n");
+						printf("A:90:50:92:50:56:0:90:90\n");
+						printf("O:20:25:5:25\n");
+						randomfillmethod();
+
+						if (random_number(10) == 1) printf("F:FLAT\n");
+						if (random_number(25) == 1) printf("F:CAVERN\n");
+						if (random_number(25) == 1) printf("F:CAVE\n");
+						if (random_number(40) == 1) printf("F:FORGET\n");
+						if (random_number(3) == 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(20) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(40) == 1) printf("F:DOUBLE\n");
+						if (random_number(20) == 1) printf("F:WATER_RIVER\n");
+						if (random_number(25) == 1) printf("F:WATER_RIVERS\n");
+						if (random_number(40) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(50) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(60) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(8) == 1) printf("F:NO_DOORS\n");
+						if (random_number(20) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(10) == 1) printf("F:EMPTY\n");
+						if (random_number(20) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(8) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+						if (random_number(200) == 1) {
+							if (random_number(5) == 1) printf("F:NO_BREATH\n");
+							else printf("F:WATER_BREATH\n");
+						}
+
+						if (random_number(3) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+
+						if (random_number(20) == 1) {
+							randomdungeondamage();
+						}
+						break;
+					case 195:
+						printf("# randomized arid thicket\n", contnum);
+						printf("L:93:98:86:2:1:0\n");
+						printf("A:56:40:60:50:86:10:96:96\n");
+						printf("O:15:30:10:30\n");
+						randomfillmethod();
+
+						if (random_number(5) == 1) printf("F:FLAT\n");
+						if (random_number(40) == 1) printf("F:LAVA_RIVER\n");
+						if (random_number(20) == 1) printf("F:CAVERN\n");
+						if (random_number(15) == 1) printf("F:CAVE\n");
+						if (random_number(40) == 1) printf("F:FORGET\n");
+						if (random_number(2) == 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(20) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(30) == 1) printf("F:DOUBLE\n");
+						if (random_number(50) == 1) printf("F:WATER_RIVER\n");
+						if (random_number(80) == 1) printf("F:WATER_RIVERS\n");
+						if (random_number(20) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(15) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(15) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(8) == 1) printf("F:NO_DOORS\n");
+						if (random_number(5) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(40) == 1) printf("F:EMPTY\n");
+						if (random_number(30) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(3) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(3) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+
+						if (random_number(3) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+
+						if (random_number(15) == 1) {
+							randomdungeondamage();
+						}
+						break;
+					case 196:
+						printf("# randomized tide fields\n", contnum);
+						printf("L:1:80:84:20:1:0\n");
+						printf("A:98:60:84:30:129:10:239:95\n");
+						printf("O:20:20:25:25\n");
+						randomfillmethod();
+
+						if (random_number(5) == 1) printf("F:FLAT\n");
+						if (random_number(100) == 1) printf("F:LAVA_RIVER\n");
+						if (random_number(15) == 1) printf("F:CAVERN\n");
+						if (random_number(10) == 1) printf("F:CAVE\n");
+						if (random_number(30) == 1) printf("F:FORGET\n");
+						if (random_number(2) == 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(50) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(60) == 1) printf("F:DOUBLE\n");
+						if (random_number(30) == 1) printf("F:WATER_RIVER\n");
+						if (random_number(40) == 1) printf("F:WATER_RIVERS\n");
+						if (random_number(20) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(30) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(30) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(4) == 1) printf("F:NO_DOORS\n");
+						if (random_number(3) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(20) == 1) printf("F:EMPTY\n");
+						if (random_number(20) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(6) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+						if (random_number(100) == 1) {
+							if (random_number(20) == 1) printf("F:NO_BREATH\n");
+							else printf("F:WATER_BREATH\n");
+						}
+
+						if (random_number(2) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+
+						if (random_number(10) == 1) {
+							randomdungeondamage();
+						}
+						break;
+					case 197:
+						printf("# randomized minus world\n", contnum);
+						printf("L:181:34:187:33:242:33\n");
+						printf("A:231:40:118:35:83:25:193:44\n");
+						printf("O:30:5:40:17\n");
+						randomfillmethod();
+
+						if (random_number(5) == 1) printf("F:FLAT\n");
+						if (random_number(17) == 1) printf("F:LAVA_RIVER\n");
+						if (random_number(3) == 1) printf("F:CAVERN\n");
+						if (random_number(4) == 1) printf("F:CAVE\n");
+						if (random_number(10) == 1) printf("F:FORGET\n");
+						if (random_number(2) == 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(7) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(11) == 1) printf("F:DOUBLE\n");
+						if (random_number(3) == 1) printf("F:WATER_RIVER\n");
+						if (random_number(7) == 1) printf("F:WATER_RIVERS\n");
+						if (random_number(5) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(3) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(6) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(2) == 1) printf("F:NO_DOORS\n");
+						if (random_number(3) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(11) == 1) printf("F:EMPTY\n");
+						if (random_number(15) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(3) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(2) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+						if (random_number(40) == 1) {
+							if (random_number(5) == 1) printf("F:NO_BREATH\n");
+							else printf("F:WATER_BREATH\n");
+						}
+
+						if (random_number(2) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+
+						if (random_number(5) == 1) {
+							randomdungeondamage();
+						}
+						break;
+					case 198:
+						printf("# randomized grass steppes\n", contnum);
+						printf("L:89:80:88:10:96:10\n");
+						printf("A:96:80:89:15:88:5:96:96\n");
+						printf("O:20:20:20:20\n");
+						randomfillmethod();
+
+						if (random_number(10) == 1) printf("F:FLAT\n");
+						if (random_number(25) == 1) printf("F:CAVERN\n");
+						if (random_number(40) == 1) printf("F:CAVE\n");
+						if (random_number(100) == 1) printf("F:FORGET\n");
+						if (random_number(3) == 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(40) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(100) == 1) printf("F:DOUBLE\n");
+						if (random_number(20) == 1) printf("F:WATER_RIVER\n");
+						if (random_number(30) == 1) printf("F:WATER_RIVERS\n");
+						if (random_number(40) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(50) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(50) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(10) == 1) printf("F:NO_DOORS\n");
+						if (random_number(20) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(20) == 1) printf("F:EMPTY\n");
+						if (random_number(100) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(5) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+
+						if (random_number(2) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+
+						if (random_number(50) == 1) {
+							randomdungeondamage();
+						}
+						break;
+					case 199:
+						printf("# randomized woodlands\n", contnum);
+						printf("L:89:40:88:10:96:50\n");
+						printf("A:96:95:89:2:88:3:96:96\n");
+						printf("O:20:20:20:20\n");
+						randomfillmethod();
+
+						if (random_number(10) == 1) printf("F:FLAT\n");
+						if (random_number(40) == 1) printf("F:CAVERN\n");
+						if (random_number(45) == 1) printf("F:CAVE\n");
+						if (random_number(30) == 1) printf("F:FORGET\n");
+						if (random_number(2) == 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(40) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(80) == 1) printf("F:DOUBLE\n");
+						if (random_number(10) == 1) printf("F:WATER_RIVER\n");
+						if (random_number(20) == 1) printf("F:WATER_RIVERS\n");
+						if (random_number(40) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(80) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(100) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(4) == 1) printf("F:NO_DOORS\n");
+						if (random_number(3) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(40) == 1) printf("F:EMPTY\n");
+						if (random_number(80) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(5) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+
+						if (random_number(2) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+
+						if (random_number(40) == 1) {
+							randomdungeondamage();
+						}
+						break;
+					case 200:
+						printf("# randomized lakeshore\n", contnum);
+						printf("L:89:35:84:60:187:5\n");
+						printf("A:84:90:187:10:56:0:84:84\n");
+						printf("O:20:20:20:20\n");
+						randomfillmethod();
+
+						if (random_number(10) == 1) printf("F:FLAT\n");
+						if (random_number(30) == 1) printf("F:CAVERN\n");
+						if (random_number(20) == 1) printf("F:CAVE\n");
+						if (random_number(25) == 1) printf("F:FORGET\n");
+						if (random_number(3) == 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(60) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(40) == 1) printf("F:DOUBLE\n");
+						if (random_number(2) == 1) printf("F:WATER_RIVER\n");
+						if (random_number(3) == 1) printf("F:WATER_RIVERS\n");
+						if (random_number(80) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(100) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(120) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(2) == 1) printf("F:NO_DOORS\n");
+						if (random_number(2) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(10) == 1) printf("F:EMPTY\n");
+						if (random_number(100) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(5) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+						if (random_number(40) == 1) {
+							if (random_number(50) == 1) printf("F:NO_BREATH\n");
+							else printf("F:WATER_BREATH\n");
+						}
+
+						if (random_number(2) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+
+						if (random_number(15) == 1) {
+							randomdungeondamage();
+						}
+						break;
+					case 201:
+						printf("# randomized east desert\n", contnum);
+						printf("L:88:30:91:60:98:10\n");
+						printf("A:98:60:92:10:91:30:98:98\n");
+						printf("O:20:20:20:20\n");
+						randomfillmethod();
+
+						if (random_number(10) == 1) printf("F:FLAT\n");
+						if (random_number(100) == 1) printf("F:LAVA_RIVER\n");
+						if (random_number(15) == 1) printf("F:CAVERN\n");
+						if (random_number(10) == 1) printf("F:CAVE\n");
+						if (random_number(30) == 1) printf("F:FORGET\n");
+						if (random_number(2) == 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(20) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(40) == 1) printf("F:DOUBLE\n");
+						if (random_number(30) == 1) printf("F:WATER_RIVER\n");
+						if (random_number(60) == 1) printf("F:WATER_RIVERS\n");
+						if (random_number(2) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(10) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(12) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(3) == 1) printf("F:NO_DOORS\n");
+						if (random_number(20) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(5) == 1) printf("F:EMPTY\n");
+						if (random_number(50) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(5) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+						if (random_number(2) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+
+						if (random_number(20) == 1) {
+							randomdungeondamage();
+						}
+						break;
+					case 202:
+						printf("# randomized pepper mountain\n", contnum);
+						printf("L:89:20:96:15:97:65\n");
+						printf("A:97:90:88:5:96:5:96:96\n");
+						printf("O:20:20:20:20\n");
+						randomfillmethod();
+
+						if (random_number(10) == 1) printf("F:FLAT\n");
+						if (random_number(80) == 1) printf("F:LAVA_RIVER\n");
+						if (random_number(20) == 1) printf("F:CAVERN\n");
+						if (random_number(30) == 1) printf("F:CAVE\n");
+						if (random_number(50) == 1) printf("F:FORGET\n");
+						if (random_number(2) == 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(10) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(60) == 1) printf("F:DOUBLE\n");
+						if (random_number(20) == 1) printf("F:WATER_RIVER\n");
+						if (random_number(40) == 1) printf("F:WATER_RIVERS\n");
+						if (random_number(30) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(20) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(15) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(5) == 1) printf("F:NO_DOORS\n");
+						if (random_number(20) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(40) == 1) printf("F:EMPTY\n");
+						if (random_number(60) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(5) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(5) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+						if (random_number(200) == 1) {
+							if (random_number(3) == 1) printf("F:NO_BREATH\n");
+							else printf("F:WATER_BREATH\n");
+						}
+
+						if (random_number(2) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+
+						if (random_number(23) == 1) {
+							randomdungeondamage();
+						}
+						break;
+					case 203:
+						printf("# randomized town square\n", contnum);
+						printf("L:200:40:89:50:88:10\n");
+						printf("A:193:90:197:5:221:5:231:240\n");
+						printf("O:20:20:20:20\n");
+						randomfillmethod();
+
+						if (random_number(5) == 1) printf("F:FLAT\n");
+						if (random_number(100) == 1) printf("F:LAVA_RIVER\n");
+						if (random_number(50) == 1) printf("F:CAVERN\n");
+						if (random_number(40) == 1) printf("F:CAVE\n");
+						if (random_number(5) != 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(80) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(200) == 1) printf("F:DOUBLE\n");
+						if (random_number(30) == 1) printf("F:WATER_RIVER\n");
+						if (random_number(60) == 1) printf("F:WATER_RIVERS\n");
+						if (random_number(50) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(40) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(40) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(30) == 1) printf("F:NO_DOORS\n");
+						if (random_number(20) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(50) == 1) printf("F:EMPTY\n");
+						if (random_number(20) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(3) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+
+						if (random_number(2) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+
+						if (random_number(100) == 1) {
+							randomdungeondamage();
+						}
+						break;
+					case 204:
+						printf("# randomized northern sea\n", contnum);
+						printf("L:89:20:1:1:187:79\n");
+						printf("A:84:30:187:70:56:0:187:187\n");
+						printf("O:20:20:20:20\n");
+						randomfillmethod();
+
+						if (random_number(4) == 1) printf("F:FLAT\n");
+						if (random_number(30) == 1) printf("F:CAVERN\n");
+						if (random_number(40) == 1) printf("F:CAVE\n");
+						if (random_number(20) == 1) printf("F:FORGET\n");
+						if (random_number(2) == 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(50) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(100) == 1) printf("F:DOUBLE\n");
+						if (random_number(2) == 1) printf("F:WATER_RIVER\n");
+						if (random_number(3) == 1) printf("F:WATER_RIVERS\n");
+						if (random_number(50) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(100) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(200) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(2) == 1) printf("F:NO_DOORS\n");
+						if (random_number(2) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(2) == 1) printf("F:EMPTY\n");
+						if (random_number(100) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(4) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+						if (random_number(30) == 1) {
+							if (random_number(4) == 1) printf("F:NO_BREATH\n");
+							else printf("F:WATER_BREATH\n");
+						}
+
+						if (random_number(2) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+
+						if (random_number(10) == 1) {
+							randomdungeondamage();
+						}
+						break;
+					case 205:
+						printf("# randomized seething volcano\n", contnum);
+						printf("L:1:50:86:40:50:10\n");
+						printf("A:86:20:50:70:56:10:177:177\n");
+						printf("O:20:20:20:20\n");
+						randomfillmethod();
+
+						if (random_number(10) == 1) printf("F:FLAT\n");
+						if (random_number(10) == 1) printf("F:LAVA_RIVER\n");
+						if (random_number(15) == 1) printf("F:LAVA_RIVERS\n");
+						if (random_number(10) == 1) printf("F:CAVERN\n");
+						if (random_number(5) == 1) printf("F:CAVE\n");
+						if (random_number(30) == 1) printf("F:FORGET\n");
+						if (random_number(2) == 1) printf("F:RANDOM_TOWNS\n");
+						if (random_number(20) == 1) printf("F:CIRCULAR_ROOMS\n");
+						if (random_number(20) == 1) printf("F:DOUBLE\n");
+						if (random_number(10) == 1) printf("F:SAND_VEIN\n");
+						if (random_number(5) == 1) printf("F:QUARTZ_VEIN\n");
+						if (random_number(6) == 1) printf("F:MAGMA_VEIN\n");
+						if (random_number(2) == 1) printf("F:NO_DOORS\n");
+						if (random_number(50) == 1) printf("F:NO_DESTROY\n");
+						if (random_number(15) == 1) printf("F:EMPTY\n");
+						if (random_number(35) == 1) printf("F:NO_STREAMERS\n");
+						if (random_number(4) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(4) == 1) {
+							switch (random_number(3)) {
+								case 1:
+								default:
+									printf("F:SMALLEST\n");
+									break;
+								case 2:
+									printf("F:SMALL\n");
+									break;
+								case 3:
+									printf("F:BIG\n");
+									break;
+							}
+						}
+						if (random_number(50) == 1) {
+							if (random_number(6) == 1) printf("F:NO_BREATH\n");
+							else printf("F:WATER_BREATH\n");
+						}
+
+						if (random_number(2) == 1) {
+							printf("R:100:0\n");
+						} else {
+							randommonstermix();
+						}
+
+						if (random_number(12) == 1) {
 							randomdungeondamage();
 						}
 						break;
