@@ -33,6 +33,82 @@ DEVICE_HEAL_MONSTER = add_spell
 	}
 }
 
+DEVICE_AMOEBA_SWARM = add_spell
+{
+	["name"] = 	"Amoeba Swarm",
+	["school"] = 	{SCHOOL_DEVICE},
+	["level"] = 	15,
+	["mana"] = 	10,
+	["mana_max"] = 	60,
+	["fail"] = 	25,
+	["random"] = 	-1,
+	["stick"] =
+	{
+			["charge"] =    { 5, 7 },
+			[TV_WAND] =
+			{
+				["rarity"] = 		15,
+				["base_level"] =	{ 1, 15 },
+				["max_level"] =		{ 25, 50 },
+			},
+	},
+	["spell"] = 	function()
+			local ret, dir, type
+
+			ret, dir = get_aim_dir()
+			if ret == FALSE then return end
+			fire_cloud(GF_AMOEBAE, dir, 6 + get_level(DEVICE_AMOEBA_SWARM, 110), 3, 4 + get_level(DEVICE_AMOEBA_SWARM, 8))
+			return TRUE
+	end,
+	["info"] = 	function()
+			return "dam "..(6 + get_level(DEVICE_AMOEBA_SWARM, 110)).." rad 3 dur "..(4 + get_level(DEVICE_AMOEBA_SWARM, 8))
+	end,
+	["desc"] =	{
+			"Creates a cloud of amoebae",
+			"The cloud will persist for some turns, damaging all monsters passing by",
+	}
+}
+
+function get_radiowave_damage()
+	return get_level(DEVICE_RADIO_WAVE, 10), 5 + get_level(DEVICE_RADIO_WAVE, 50)
+end
+
+DEVICE_RADIO_WAVE = add_spell
+{
+	["name"] = "Radio Wave",
+	["school"] = SCHOOL_DEVICE,
+	["level"] = 15,
+	["mana"] = 18,
+	["mana_max"] = 70,
+	["fail"] = 30,
+	["stick"] =
+	{
+			["charge"] =    { 10, 15 },
+			[TV_WAND] =
+			{
+				["rarity"] = 		30,
+				["base_level"] =	{ 1, 20 },
+				["max_level"] =		{ 30, 50 },
+			},
+	},
+	["spell"] = function()
+		local ret, dir
+		ret, dir = get_aim_dir()
+		if ret == FALSE then return end
+		return fire_beam(GF_RADIOWAVE, dir, damroll(get_radiowave_damage()))
+	end,
+	["info"] = function()
+		local n, d
+		n, d = get_radiowave_damage()
+		return "dam "..n.."d"..d
+	end,
+	["desc"] =
+	{
+		"Shoots radiowaves from your fingertips.",
+		"It hits all monsters in a straight line."
+	},
+}
+
 DEVICE_SPEED_MONSTER = add_spell
 {
 	["name"] = 	"Haste Monster",

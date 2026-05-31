@@ -3952,10 +3952,45 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 			break;
 		}
 
+	case GF_AMOEBAE:
+		{
+			/* "Permanent" features will stay */
+			if ((f_info[c_ptr->feat].flags1 & FF1_PERMANENT)) break;
+
+			if ((c_ptr->feat == FEAT_TREES) ||
+			                (c_ptr->feat == FEAT_SMALL_TREES))
+			{
+				/* Destroy the grid */
+				cave_set_feat(y, x, FEAT_DEAD_TREE);
+
+				/* Silly thing to destroy trees when a yavanna worshipper */
+				inc_piety(GOD_YAVANNA, -50);
+				inc_piety(GOD_OROME, -50);
+				inc_piety(GOD_LORIEN, -10);
+
+				if (seen) obvious = TRUE;
+			}
+
+			/* Floors can become ameba colony (chance == 10%) */
+			else if ((f_info[c_ptr->feat].flags1 & FF1_FLOOR) && (f_info[c_ptr->feat].flags1 & FF1_SUPPORT_GROWTH))
+			{
+				int k = rand_int(100);
+
+				if (k >= 10) break;
+
+				/* Transform floor */
+				cave_set_feat(y, x, FEAT_DMG_AMOEBAE);
+
+				if (seen) obvious = TRUE;
+			}
+
+
+			break;
+		}
+
 	case GF_NETHER:
 	case GF_NEXUS:
 	case GF_NERVE:
-	case GF_AMOEBAE:
 	case GF_ACID:
 	case GF_SHARDS:
 	case GF_TIME:
