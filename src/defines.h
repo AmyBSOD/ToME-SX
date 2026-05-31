@@ -435,6 +435,7 @@
  */
 #define MAX_SIGHT       20      /* Maximum view distance */
 #define MAX_RANGE       18      /* Maximum range (spells, etc) */
+#define MAX_RANGE_NASTY 10      /* Maximum range for the player's spells when low range nastytrap is active */
 #define MAX_RANGE_MONST 20      /* Maximum range for monster spells, you filthy abuser who pelts them with view spells or arrows from a distance of 20! --Amy */
 
 
@@ -3651,6 +3652,8 @@
 #define TRAP_OF_AMEBA_BOLT                850
 #define TRAP_OF_AMEBA_BALL                851
 #define TRAP_OF_AMEBA_BALLS               852
+
+#define TRAP_NASTY187                     853
 
 /*** General index values ***/
 

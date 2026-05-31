@@ -2321,7 +2321,7 @@ struct player_type
 	bool nastytrap184; /* lvl 35, full melee trap - AC no longer reduces melee damage you take */
 	bool nastytrap185; /* lvl 12, attraction trap - you have the attract monster effect */
 	bool nastytrap186; /* lvl 10, joined teleport trap - if you teleport, adjacent monsters with TPORT spell can always teleport too */
-	bool nastytrap187;
+	bool nastytrap187; /* lvl 25, low range trap - your ranged weapons and spells are limited to a range of 10 squares */
 	bool nastytrap188;
 	bool nastytrap189;
 	bool nastytrap190;

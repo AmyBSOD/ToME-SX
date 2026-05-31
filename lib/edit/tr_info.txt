@@ -4207,6 +4207,11 @@ I:13:20:5:8:40:3d18:B
 D:A bunch of amoebae attacks you!
 F:FLOOR | CHEST | DOOR | LEVEL3
 
+N:853:Low Range Trap
+I:45:2:50:4:25:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

@@ -3652,6 +3652,9 @@ void do_cmd_fire(void)
 	/* don't allow players to snipe into the darkness from like 50 tiles away! --Amy */
 	if (tdis > 19) tdis = 19;
 
+	/* low range nastytrap by Amy: limit range to 10 squares */
+	if (p_ptr->nastytrap187 && (tdis > 10)) tdis = 10;
+
 	/* Take a (partial) turn */
 	energy_use = (100 / thits);
 

@@ -894,6 +894,7 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY184:
 		case TRAP_NASTY185:
 		case TRAP_NASTY186:
+		case TRAP_NASTY187:
 			return FALSE;
 	}
 
@@ -1114,6 +1115,7 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY184:
 		case TRAP_NASTY185:
 		case TRAP_NASTY186:
+		case TRAP_NASTY187:
 			return FALSE;
 	}
 
@@ -1337,6 +1339,7 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY184:
 		case TRAP_NASTY185:
 		case TRAP_NASTY186:
+		case TRAP_NASTY187:
 			return TRUE;
 	}
 
@@ -13195,6 +13198,18 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY187:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap187 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHIT_I:
 		{
 			bool badheel = FALSE;
@@ -17895,7 +17910,7 @@ bool mon_hit_trap(int m_idx)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(186)) {
+	switch (randint(187)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -18454,6 +18469,9 @@ void give_random_nastytrap_effect(void)
 		case 186:
 			p_ptr->nastytrap186 = TRUE;
 			break;
+		case 187:
+			p_ptr->nastytrap187 = TRUE;
+			break;
 
 	}
 }
@@ -18657,7 +18675,7 @@ void cure_nasty_traps(void)
 	if (effect_level >= 35) p_ptr->nastytrap184 = FALSE;
 	if (effect_level >= 12) p_ptr->nastytrap185 = FALSE;
 	if (effect_level >= 10) p_ptr->nastytrap186 = FALSE;
-	p_ptr->nastytrap187 = FALSE;
+	if (effect_level >= 25) p_ptr->nastytrap187 = FALSE;
 	p_ptr->nastytrap188 = FALSE;
 	p_ptr->nastytrap189 = FALSE;
 	p_ptr->nastytrap190 = FALSE;

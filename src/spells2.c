@@ -2383,6 +2383,10 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Adjacent monsters who can teleport will do so whenever you do.";
 	}
+	if (p_ptr->nastytrap187)
+	{
+		info[i++] = "You have a problem: The range of your missiles and spells is limited.";
+	}
 
 	if (p_ptr->contamination >= 10000)
 	{
