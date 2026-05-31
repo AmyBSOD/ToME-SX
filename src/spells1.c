@@ -10587,7 +10587,7 @@ void generate_spell(int plev)
 		if (rspell->dam_dice < 1) rspell->dam_dice = 1;
 		rspell->dam_sides = sides / 2;
 		if (rspell->dam_sides < 1) rspell->dam_sides = 1;
-		rspell->radius = sides / 2;
+		rspell->radius = sides / 5; /* controls the amount of projectiles, should be low because duh, balance --Amy */
 		if (rspell->radius < 4) rspell->radius = 4;
 
 		destruc_gen = TRUE;

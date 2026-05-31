@@ -6028,7 +6028,8 @@ void project_meteor(int radius, int typ, int dam, u32b flg)
 {
 	cave_type *c_ptr;
 	int x, y, dx, dy, d, count = 0, i;
-	int b = radius + randint(radius);
+	int b = radius; /* dude, balance!! --Amy */
+
 	for (i = 0; i < b; i++)
 	{
 		for (count = 0; count < 1000; count++)
