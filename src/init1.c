@@ -525,9 +525,9 @@ static cptr r_info_flags11[] =
 	"BR_NERV",
 	"BR_MIND",
 	"BR_ETHE",
-	"XXX9X3",
-	"XXX9X4",
-	"XXX9X5",
+	"BR_AMEB",
+	"BR_RADI",
+	"BR_VENO",
 	"XXX9X6",
 	"XXX9X7",
 	"XXX9X8",
@@ -561,7 +561,7 @@ static cptr r_info_flags11[] =
  */
 static cptr r_info_flags12[] =
 {
-	"XXX9X0",
+	"BA_METE",
 	"XXX9X1",
 	"XXX9X2",
 	"XXX9X3",

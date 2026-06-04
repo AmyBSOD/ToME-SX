@@ -552,7 +552,7 @@ void randommonstermix(void)
 	if (specmons > 10) specmons = 10;
 	while (specmons > 0) {
 		specmons--;
-		switch (random_number(291)) {
+		switch (random_number(295)) {
 			default:
 			case 1:
 				printf("M:UNIQUE\n");
@@ -1426,6 +1426,18 @@ void randommonstermix(void)
 				break;
 			case 291:
 				printf("M:RES_ETHE\n");
+				break;
+			case 292:
+				printf("S:BR_AMEB\n");
+				break;
+			case 293:
+				printf("S:BR_RADI\n");
+				break;
+			case 294:
+				printf("S:BR_VENO\n");
+				break;
+			case 295:
+				printf("S:BA_METE\n");
 				break;
 		}
 	}

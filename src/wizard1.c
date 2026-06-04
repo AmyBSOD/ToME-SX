@@ -1874,6 +1874,7 @@ static void spoil_mon_info(cptr fname)
 		if (flags6 & (RF6_S_HI_DEMON)) vp[vn++] = "summon greater demons";
 		if (flags6 & (RF6_S_WRAITH)) vp[vn++] = "summon Ringwraith";
 		if (flags6 & (RF6_S_UNIQUE)) vp[vn++] = "summon unique monsters";
+		if (flags12 & (RF12_BA_METE)) vp[vn++] = "launch a meteor";
 
 		if (vn)
 		{

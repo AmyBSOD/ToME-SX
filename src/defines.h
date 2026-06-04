@@ -4678,6 +4678,14 @@
 #define RF11_BR_NERV            0x00000001 /* Nerve breath */
 #define RF11_BR_MIND            0x00000002 /* Mind breath */
 #define RF11_BR_ETHE            0x00000004 /* Ether breath */
+#define RF11_BR_AMEB            0x00000008 /* Amoeba breath */
+#define RF11_BR_RADI            0x00000010 /* Radiowave breath */
+#define RF11_BR_VENO            0x00000020 /* Venom breath */
+
+/*
+ * Monster spell flags
+ */
+#define RF12_BA_METE            0x00000001 /* Meteor ball */
 
 /*
  * Hack -- choose "intelligent" spells when desperate

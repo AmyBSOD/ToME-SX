@@ -799,206 +799,214 @@ static int choose_attack_spell(int m_idx, int spells[], int num)
 
 	/* secret spell nastytrap by Amy: allow monster to cast any random spell, whether or not it actually has the spell in question */
 	if (p_ptr->nastytrap168 && magik(1)) {
-		switch (randint(99)) {
+		switch (randint(103)) {
 			default:
 			case 1:
 				return 96; /* RF4_SHRIEK */
 			case 2:
-				return 96 + 2;
+				return 96 + 2; /* RF4_S_ANIMAL */
 			case 3:
-				return 96 + 3;
+				return 96 + 3; /* RF4_ROCKET */
 			case 4:
-				return 96 + 4;
+				return 96 + 4; /* RF4_ARROW_1 */
 			case 5:
-				return 96 + 5;
+				return 96 + 5; /* RF4_ARROW_2 */
 			case 6:
-				return 96 + 6;
+				return 96 + 6; /* RF4_ARROW_3 */
 			case 7:
-				return 96 + 7;
+				return 96 + 7; /* RF4_ARROW_4 */
 			case 8:
-				return 96 + 8;
+				return 96 + 8; /* RF4_BR_ACID */
 			case 9:
-				return 96 + 9;
+				return 96 + 9; /* RF4_BR_ELEC */
 			case 10:
-				return 96 + 10;
+				return 96 + 10; /* RF4_BR_FIRE */
 			case 11:
-				return 96 + 11;
+				return 96 + 11; /* RF4_BR_COLD */
 			case 12:
-				return 96 + 12;
+				return 96 + 12; /* RF4_BR_POIS */
 			case 13:
-				return 96 + 13;
+				return 96 + 13; /* RF4_BR_NETH */
 			case 14:
-				return 96 + 14;
+				return 96 + 14; /* RF4_BR_LITE */
 			case 15:
-				return 96 + 15;
+				return 96 + 15; /* RF4_BR_DARK */
 			case 16:
-				return 96 + 16;
+				return 96 + 16; /* RF4_BR_CONF */
 			case 17:
-				return 96 + 17;
+				return 96 + 17; /* RF4_BR_SOUN */
 			case 18:
-				return 96 + 18;
+				return 96 + 18; /* RF4_BR_CHAO */
 			case 19:
-				return 96 + 19;
+				return 96 + 19; /* RF4_BR_DISE */
 			case 20:
-				return 96 + 20;
+				return 96 + 20; /* RF4_BR_NEXU */
 			case 21:
-				return 96 + 21;
+				return 96 + 21; /* RF4_BR_TIME */
 			case 22:
-				return 96 + 22;
+				return 96 + 22; /* RF4_BR_INER */
 			case 23:
-				return 96 + 23;
+				return 96 + 23; /* RF4_BR_GRAV */
 			case 24:
-				return 96 + 24;
+				return 96 + 24; /* RF4_BR_SHAR */
 			case 25:
-				return 96 + 25;
+				return 96 + 25; /* RF4_BR_PLAS */
 			case 26:
-				return 96 + 26;
+				return 96 + 26; /* RF4_BR_WALL */
 			case 27:
-				return 96 + 27;
+				return 96 + 27; /* RF4_BR_MANA */
 			case 28:
-				return 96 + 28;
+				return 96 + 28; /* RF4_BA_NUKE */
 			case 29:
-				return 96 + 29;
+				return 96 + 29; /* RF4_BR_NUKE */
 			case 30:
-				return 96 + 30;
+				return 96 + 30; /* RF4_BA_CHAO */
 			case 31:
-				return 96 + 31;
+				return 96 + 31; /* RF4_BR_DISI */
 			case 32:
-				return 128 + 0; /* BA_ACID */
+				return 128 + 0; /* RF5_BA_ACID */
 			case 33:
-				return 128 + 1;
+				return 128 + 1; /* RF5_BA_ELEC */
 			case 34:
-				return 128 + 2;
+				return 128 + 2; /* RF5_BA_FIRE */
 			case 35:
-				return 128 + 3;
+				return 128 + 3; /* RF5_BA_COLD */
 			case 36:
-				return 128 + 4;
+				return 128 + 4; /* RF5_BA_POIS */
 			case 37:
-				return 128 + 5;
+				return 128 + 5; /* RF5_BA_NETH */
 			case 38:
-				return 128 + 6;
+				return 128 + 6; /* RF5_BA_WATE */
 			case 39:
-				return 128 + 7;
+				return 128 + 7; /* RF5_BA_MANA */
 			case 40:
-				return 128 + 8;
+				return 128 + 8; /* RF5_BA_DARK */
 			case 41:
-				return 128 + 9;
+				return 128 + 9; /* RF5_DRAIN_MANA */
 			case 42:
-				return 128 + 10;
+				return 128 + 10; /* RF5_MIND_BLAST */
 			case 43:
-				return 128 + 11;
+				return 128 + 11; /* RF5_BRAIN_SMASH */
 			case 44:
-				return 128 + 12;
+				return 128 + 12; /* RF5_CAUSE_1 */
 			case 45:
-				return 128 + 13;
+				return 128 + 13; /* RF5_CAUSE_2 */
 			case 46:
-				return 128 + 14;
+				return 128 + 14; /* RF5_CAUSE_3 */
 			case 47:
-				return 128 + 15;
+				return 128 + 15; /* RF5_CAUSE_4 */
 			case 48:
-				return 128 + 16;
+				return 128 + 16; /* RF5_BO_ACID */
 			case 49:
-				return 128 + 17;
+				return 128 + 17; /* RF5_BO_ELEC */
 			case 50:
-				return 128 + 18;
+				return 128 + 18; /* RF5_BO_FIRE */
 			case 51:
-				return 128 + 19;
+				return 128 + 19; /* RF5_BO_COLD */
 			case 52:
-				return 128 + 20;
+				return 128 + 20; /* RF5_BO_POIS */
 			case 53:
-				return 128 + 21;
+				return 128 + 21; /* RF5_BO_NETH */
 			case 54:
-				return 128 + 22;
+				return 128 + 22; /* RF5_BO_WATE */
 			case 55:
-				return 128 + 23;
+				return 128 + 23; /* RF5_BO_MANA */
 			case 56:
-				return 128 + 24;
+				return 128 + 24; /* RF5_BO_PLAS */
 			case 57:
-				return 128 + 25;
+				return 128 + 25; /* RF5_BO_ICEE */
 			case 58:
-				return 128 + 26;
+				return 128 + 26; /* RF5_MISSILE */
 			case 59:
-				return 128 + 27;
+				return 128 + 27; /* RF5_SCARE */
 			case 60:
-				return 128 + 28;
+				return 128 + 28; /* RF5_BLIND */
 			case 61:
-				return 128 + 29;
+				return 128 + 29; /* RF5_CONF */
 			case 62:
-				return 128 + 30;
+				return 128 + 30; /* RF5_SLOW */
 			case 63:
-				return 128 + 31;
+				return 128 + 31; /* RF5_HOLD */
 			case 64:
-				return 160 + 0;
+				return 160 + 0; /* RF6_HASTE */
 			case 65:
-				return 160 + 1;
+				return 160 + 1; /* RF6_HAND_DOOM */
 			case 66:
-				return 160 + 2;
+				return 160 + 2; /* RF6_HEAL */
 			case 67:
-				return 160 + 3;
+				return 160 + 3; /* RF6_S_ANIMALS */
 			case 68:
-				return 160 + 4;
+				return 160 + 4; /* RF6_BLINK */
 			case 69:
-				return 160 + 5;
+				return 160 + 5; /* RF6_TPORT */
 			case 70:
-				return 160 + 6;
+				return 160 + 6; /* RF6_TELE_TO */
 			case 71:
-				return 160 + 7;
+				return 160 + 7; /* RF6_TELE_AWAY */
 			case 72:
-				return 160 + 8;
+				return 160 + 8; /* RF6_TELE_LEVEL */
 			case 73:
-				return 160 + 9;
+				return 160 + 9; /* RF6_DARKNESS */
 			case 74:
-				return 160 + 10;
+				return 160 + 10; /* RF6_TRAPS */
 			case 75:
-				return 160 + 11;
+				return 160 + 11; /* RF6_FORGET */
 			case 76:
-				return 160 + 12;
+				return 160 + 12; /* RF6_RAISE_DEAD */
 			case 77:
-				return 160 + 13;
+				return 160 + 13; /* RF6_S_BUG */
 			case 78:
-				return 160 + 14;
+				return 160 + 14; /* RF6_S_RNG */
 			case 79:
-				return 160 + 15;
+				return 160 + 15; /* RF6_S_THUNDERLORD */
 			case 80:
-				return 160 + 16;
+				return 160 + 16; /* RF6_S_KIN */
 			case 81:
-				return 160 + 17;
+				return 160 + 17; /* RF6_S_HI_DEMON */
 			case 82:
-				return 160 + 18;
+				return 160 + 18; /* RF6_S_MONSTER */
 			case 83:
-				return 160 + 19;
+				return 160 + 19; /* RF6_S_MONSTERS */
 			case 84:
-				return 160 + 20;
+				return 160 + 20; /* RF6_S_ANT */
 			case 85:
-				return 160 + 21;
+				return 160 + 21; /* RF6_S_SPIDER */
 			case 86:
-				return 160 + 22;
+				return 160 + 22; /* RF6_S_HOUND */
 			case 87:
-				return 160 + 23;
+				return 160 + 23; /* RF6_S_HYDRA */
 			case 88:
-				return 160 + 24;
+				return 160 + 24; /* RF6_S_ANGEL */
 			case 89:
-				return 160 + 25;
+				return 160 + 25; /* RF6_S_DEMON */
 			case 90:
-				return 160 + 26;
+				return 160 + 26; /* RF6_S_UNDEAD */
 			case 91:
-				return 160 + 27;
+				return 160 + 27; /* RF6_S_DRAGON */
 			case 92:
-				return 160 + 28;
+				return 160 + 28; /* RF6_S_HI_UNDEAD */
 			case 93:
-				return 160 + 29;
+				return 160 + 29; /* RF6_S_HI_DRAGON */
 			case 94:
-				return 160 + 30;
+				return 160 + 30; /* RF6_S_WRAITH */
 			case 95:
-				return 160 + 31;
+				return 160 + 31; /* RF6_S_UNIQUE */
 			case 96:
 				return 32 + 13; /* 45 = RF2_ELDRITCH_HORROR */
 			case 97:
 				return 320 + 0; /* RF11_BR_NERV */
 			case 98:
-				return 320 + 1;
+				return 320 + 1; /* RF11_BR_MIND */
 			case 99:
-				return 320 + 2;
+				return 320 + 2; /* RF11_BR_ETHE */
+			case 100:
+				return 320 + 3; /* RF11_BR_AMEB */
+			case 101:
+				return 320 + 4; /* RF11_BR_RADI */
+			case 102:
+				return 320 + 5; /* RF11_BR_VENO */
+			case 103:
+				return 352 + 0; /* RF12_BA_METE */
 		}
 	}
 
@@ -3601,6 +3609,107 @@ static bool monst_spell_monst(int m_idx)
 
 				break;
 			}
+			/* RF11_BR_AMEB */
+		case 320 + 3:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (!see_either) monster_msg("You hear breathing noise.");
+				else if (blind) monster_msg("%^s breathes.", m_name);
+				else monster_msg("%^s breathes amoebae at %s.", m_name, t_name);
+				sound(SOUND_BREATH);
+
+				monst_breath_monst(m_idx, y, x, GF_AMOEBAE, breathdamage, 0);
+
+				break;
+			}
+			/* RF11_BR_RADI */
+		case 320 + 4:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (!see_either) monster_msg("You hear breathing noise.");
+				else if (blind) monster_msg("%^s breathes.", m_name);
+				else monster_msg("%^s breathes radiowaves at %s.", m_name, t_name);
+				sound(SOUND_BREATH);
+
+				monst_breath_monst(m_idx, y, x, GF_RADIOWAVE, breathdamage, 0);
+
+				break;
+			}
+			/* RF11_BR_VENO */
+		case 320 + 5:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (!see_either) monster_msg("You hear breathing noise.");
+				else if (blind) monster_msg("%^s breathes.", m_name);
+				else monster_msg("%^s breathes superpoisonous gas at %s.", m_name, t_name);
+				sound(SOUND_BREATH);
+
+				monst_breath_monst(m_idx, y, x, GF_UNBREATH, breathdamage, 0);
+
+				break;
+			}
+
+			/* RF12_BA_METE */
+		case 352 + 0:
+			{
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (!see_either) monster_msg("You hear someone mumble frighteningly.");
+				else if (blind) monster_msg("%^s mumbles frighteningly.", m_name);
+				else monster_msg("%^s casts a meteor upon %s.", m_name, t_name);
+				sound(SOUND_BREATH);
+				if (p_ptr->nastytrap143) {
+					monst_breath_monst(m_idx, y, x, GF_METEOR,
+				                   (rlev * 5) + damroll(10, 10), 5);
+				} else {
+					monst_breath_monst(m_idx, y, x, GF_METEOR,
+				                   (rlev * 5) + damroll(2, 10), 5);
+				}
+
+				break;
+			}
+
 
 		}
 
@@ -4153,13 +4262,15 @@ bool make_attack_spell(int m_idx)
 		/* spellcasting nastytrap by Amy makes it so that monsters never fail */
 		if (p_ptr->nastytrap118) failrate = 0;
 
-		/* Check for spell failure (inate attacks never fail) */
-		if ((thrown_spell >= 128 && thrown_spell < 320) && (rand_int(100) < failrate))
-		{
-			/* Message */
-			msg_format("%^s tries to cast a spell, but fails.", m_name);
+		/* Check for spell failure (inate attacks never fail)
+		 * bleh, this is really stupid... stuff like BA_NUKE or BA_CHAO is smaller than 128, for example --Amy */
+		if ((thrown_spell >= 128 && thrown_spell < 320) || (thrown_spell == 126) || (thrown_spell == 124) || (thrown_spell >= 352 && thrown_spell < 384) ) {
+			if (rand_int(100) < failrate) {
+				/* Message */
+				msg_format("%^s tries to cast a spell, but fails.", m_name);
 
-			return (TRUE);
+				return (TRUE);
+			}
 		}
 	}
 
@@ -6513,6 +6624,117 @@ bool make_attack_spell(int m_idx)
 
 				break;
 			}
+			/* RF11_BR_AMEB */
+		case 320 + 3:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 400) breathdamage = 400;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
+				if (blind) msg_format("%^s breathes.", m_name);
+				else msg_format("%^s breathes amoebae.", m_name);
+
+				breath(m_idx, GF_AMOEBAE, breathdamage, 0);
+
+				break;
+			}
+			/* RF11_BR_RADI */
+		case 320 + 4:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 200) breathdamage = 200;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
+				if (blind) msg_format("%^s breathes.", m_name);
+				else msg_format("%^s breathes radiowaves.", m_name);
+
+				breath(m_idx, GF_RADIOWAVE, breathdamage, 0);
+
+				break;
+			}
+			/* RF11_BR_VENO */
+		case 320 + 5:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 800) breathdamage = 800;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
+				if (blind) msg_format("%^s breathes.", m_name);
+				else msg_format("%^s breathes superpoisonous gas.", m_name);
+
+				breath(m_idx, GF_UNBREATH, breathdamage, 0);
+
+				update_smart_learn(m_idx, DRS_POIS);
+				break;
+			}
+			/* RF12_BA_METE */
+		case 352 + 0:
+			{
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles powerfully.", m_name);
+				else msg_format("%^s launches a meteor.", m_name);
+				if (p_ptr->nastytrap143) {
+					breath(m_idx, GF_METEOR,
+				       (rlev * 5) + damroll(10, 10), 5);
+				} else {
+					breath(m_idx, GF_METEOR,
+				       (rlev * 5) + damroll(2, 10), 5);
+				}
+				break;
+			}
+
+
 		}
 	}
 

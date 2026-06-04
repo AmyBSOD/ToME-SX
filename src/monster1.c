@@ -807,6 +807,9 @@ static void roff_aux(int r_idx, int ego, int remem)
 	if (flags11 & (RF11_BR_NERV))	vp[vn++] = "nerve";
 	if (flags11 & (RF11_BR_MIND))	vp[vn++] = "mind";
 	if (flags11 & (RF11_BR_ETHE))	vp[vn++] = "ether";
+	if (flags11 & (RF11_BR_AMEB))	vp[vn++] = "amoebae";
+	if (flags11 & (RF11_BR_RADI))	vp[vn++] = "radiowaves";
+	if (flags11 & (RF11_BR_VENO))	vp[vn++] = "superpoisonous gas";
 
 	/* Describe breaths */
 	if (vn)
@@ -900,6 +903,7 @@ static void roff_aux(int r_idx, int ego, int remem)
 	if (flags6 & (RF6_S_HI_DEMON)) vp[vn++] = "summon Greater Demons";
 	if (flags6 & (RF6_S_WRAITH)) vp[vn++] = "summon Ringwraith";
 	if (flags6 & (RF6_S_UNIQUE)) vp[vn++] = "summon Unique Monsters";
+	if (flags12 & (RF12_BA_METE)) vp[vn++] = "launch a meteor";
 
 	/* Describe spells */
 	if (vn)

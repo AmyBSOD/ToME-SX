@@ -5878,14 +5878,14 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 		{
 			if (seen) obvious = TRUE;
 			do_fear = (10 + randint(15) + r) / (r + 1);
-			/*if (r_ptr->flags4 & (RF4_BR_CONF)) - for when BR_RADI is implemented
+			if (r_ptr->flags11 & (RF11_BR_RADI))
 			{
 				note = " resists.";
 				dam *= 2;
 				dam /= (randint(6) + 6);
 				do_fear = 0;
 			}
-			else*/ if (r_ptr->flags3 & (RF3_NO_FEAR))
+			else if (r_ptr->flags3 & (RF3_NO_FEAR))
 			{
 				note = " resists somewhat.";
 				dam /= 2;
@@ -5898,17 +5898,18 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 	case GF_AMOEBAE:
 		{
 			if (seen) obvious = TRUE;
-			/*if (r_ptr->flags4 & (RF4_BR_CONF)) - for when BR_AMEB is implemented
-			{
-				note = " resists.";
-				dam *= 2;
-				dam /= (randint(6) + 6);
-			}
-			else*/
+
 			if ((r_ptr->flags3 & (RF3_UNDEAD)) || (r_ptr->flags3 & (RF3_NONLIVING)) )
 			{
 				note = " resists a lot.";
 				dam /= 10;
+			}
+
+			else if (r_ptr->flags11 & (RF11_BR_AMEB))
+			{
+				note = " resists.";
+				dam *= 2;
+				dam /= (randint(6) + 6);
 			}
 
 			else if (r_ptr->flags3 & (RF3_NO_STUN))
@@ -7879,7 +7880,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 		if ((who > 0) && (dam > m_ptr->hp)) dam = m_ptr->hp;
 	}
 
-	if (do_pois && (!(r_ptr->flags3 & RF3_IM_POIS)) && (!(r_ptr->flags3 & RF4_BR_POIS)) && hurt_monster(m_ptr))
+	if (do_pois && (!(r_ptr->flags3 & RF3_IM_POIS)) && (!(r_ptr->flags4 & RF4_BR_POIS)) && (!(r_ptr->flags11 & RF11_BR_VENO)) && hurt_monster(m_ptr))
 	{
 		if (m_ptr->poisoned) note = " is more poisoned.";
 		else note = " is poisoned.";

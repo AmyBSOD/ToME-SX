@@ -4903,6 +4903,7 @@ quest_type quest_init_tome[MAX_Q_IDX_INIT] =
 /* List of powers for Symbiants/Powers */
 monster_power monster_powers[128] =
 	{
+		/* 0 */
 		{ RF4_SHRIEK, "Aggravate Monster", 1, FALSE },
 		{ RF4_MULTIPLY, "Multiply", 50, FALSE },
 		{ RF4_S_ANIMAL, "Summon Animal", 150, FALSE },
@@ -4936,6 +4937,7 @@ monster_power monster_powers[128] =
 		{ RF4_BA_CHAO, "Chaos Ball", 300, TRUE },
 		{ RF4_BR_DISI, "Breathe Disintegration", 400, TRUE },
 
+		/* 32 */
 		{ RF5_BA_ACID, "Acid Ball", 80, FALSE },
 		{ RF5_BA_ELEC, "Lightning Ball", 80, FALSE },
 		{ RF5_BA_FIRE, "Fire Ball", 80, FALSE },
@@ -4969,6 +4971,7 @@ monster_power monster_powers[128] =
 		{ RF5_SLOW, "Slowness", 50, FALSE },
 		{ RF5_HOLD, "Paralyse", 90, FALSE },
 
+		/* 64 */
 		{ RF6_HASTE, "Haste Self", 100, FALSE },
 		{ RF6_HAND_DOOM, "Hand of Doom", 600, TRUE },
 		{ RF6_HEAL, "Healing", 200, FALSE },
@@ -5002,9 +5005,44 @@ monster_power monster_powers[128] =
 		{ RF6_S_WRAITH, "Summon Wraith", 900, TRUE },
 		{ 0, "(none)", 0, FALSE },
 
+		/* 96 */
 		{ RF11_BR_NERV, "Breathe Nerve", 100, TRUE },
 		{ RF11_BR_MIND, "Breathe Mind", 100, TRUE },
 		{ RF11_BR_ETHE, "Breathe Ether", 180, TRUE },
+		{ RF11_BR_AMEB, "Breathe Amoebae", 150, TRUE },
+		{ RF11_BR_RADI, "Breathe Radiowaves", 90, TRUE },
+		{ RF11_BR_VENO, "Breathe Thick Gas", 120, TRUE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+
+		/* 128 */
+		{ RF12_BA_METE, "Meteor Ball", 500, TRUE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
 		{ 0, "(none)", 0, FALSE },
 		{ 0, "(none)", 0, FALSE },
 		{ 0, "(none)", 0, FALSE },

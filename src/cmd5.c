@@ -2647,7 +2647,80 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 		}
 
 		/* 95 S_UNIQUE -- Not available */
+
+		/* BR_NERV */
+	case 96:
+		{
+			if (!get_aim_dir(&dir)) break;
+
+			fire_ball(GF_NERVE, dir, p_ptr->lev * 4, rad);
+
+			break;
+		}
+
+		/* BR_MIND */
+	case 97:
+		{
+			if (!get_aim_dir(&dir)) break;
+
+			fire_ball(GF_MIND, dir, p_ptr->lev * 4, rad);
+
+			break;
+		}
+
+		/* BR_ETHE */
+	case 98:
+		{
+			if (!get_aim_dir(&dir)) break;
+
+			fire_ball(GF_ETHER, dir, p_ptr->lev * 4, rad);
+
+			break;
+		}
+
+		/* BR_AMEB */
+	case 99:
+		{
+			if (!get_aim_dir(&dir)) break;
+
+			fire_ball(GF_AMOEBAE, dir, p_ptr->lev * 4, rad);
+
+			break;
+		}
+
+		/* BR_RADI */
+	case 100:
+		{
+			if (!get_aim_dir(&dir)) break;
+
+			fire_ball(GF_RADIOWAVE, dir, p_ptr->lev * 4, rad);
+
+			break;
+		}
+
+		/* BR_VENO */
+	case 101:
+		{
+			if (!get_aim_dir(&dir)) break;
+
+			fire_ball(GF_UNBREATH, dir, p_ptr->lev * 5, rad);
+
+			break;
+		}
+
+		/* BA_METE */
+	case 128:
+		{
+			if (!get_aim_dir(&dir)) break;
+
+			fire_ball(GF_METEOR, dir, randint(p_ptr->lev * 3) + 20, 2);
+
+			break;
+		}
+
+
 	}
+
 
 	/* Take some SP */
 	if (!no_cost)

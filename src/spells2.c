@@ -1140,6 +1140,12 @@ void self_knowledge(FILE *fff)
 			info[i++] = "You can breathe mind.";
 		if (r_ptr->flags11 & RF11_BR_ETHE)
 			info[i++] = "You can breathe ether.";
+		if (r_ptr->flags11 & RF11_BR_AMEB)
+			info[i++] = "You can breathe amoebae.";
+		if (r_ptr->flags11 & RF11_BR_RADI)
+			info[i++] = "You can breathe radiowaves.";
+		if (r_ptr->flags11 & RF11_BR_VENO)
+			info[i++] = "You can breathe superpoisonous gas.";
 	}
 
 	/* List powers */
