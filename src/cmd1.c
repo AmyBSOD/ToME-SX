@@ -2780,9 +2780,16 @@ void py_attack(int y, int x, int max_blow)
 		else /* SKILL_HAND */
 			weapons = 1;
 
+		/* dual-wielding skill that increases the chance for more weapons to attack; make sure the skill keeps giving boosts without reaching 100% --Amy */
 		if (weapons > 1) {
-			if (get_skill(SKILL_DUALWIELD) < rand_int(121)) weapons = 1;
-			else if ((weapons > 2) && (get_skill(SKILL_DUALWIELD) < rand_int(121)) ) weapons = 2;
+			int dualwielderchance = get_skill(SKILL_DUALWIELD);
+			if (dualwielderchance > 100) {
+				int dualwieldtemp = 100 + randint(dualwielderchance - 100);
+				dualwielderchance = dualwieldtemp;
+			}
+
+			if (dualwielderchance < rand_int(121)) weapons = 1;
+			else if ((weapons > 2) && (dualwielderchance < rand_int(121)) ) weapons = 2;
 		}
 
 		/* Attack with ALL the weapons !!!!! -- ooh that's gonna hurt YOU
@@ -2882,6 +2889,13 @@ void py_attack(int y, int x, int max_blow)
 							k = damroll(o_ptr->dd, o_ptr->ds);
 							k = tot_dam_aux(o_ptr, k, m_ptr, &special);
 
+							/* don't reach 100% success chance with high skill levels! --Amy */
+							int stunningchance = get_skill_scale(SKILL_STUN, 30);
+							if (stunningchance > 60) {
+								int stuntempval = 60 + randint(stunningchance - 60);
+								stunningchance = stuntempval;
+							}
+
 							if (backstab && (get_skill(SKILL_BACKSTAB) > 0) )
 							{
 								k += (k *
@@ -2903,7 +2917,7 @@ void py_attack(int y, int x, int max_blow)
 							k = critical_norm(o_ptr->weight, o_ptr->to_h, k, o_ptr->tval, &done_crit);
 
 							/* Stunning blow */
-							if (magik(get_skill_scale(SKILL_STUN, 30)) && (o_ptr->tval == TV_HAFTED) && (o_ptr->weight > 50) && done_crit)
+							if (magik(stunningchance) && (o_ptr->tval == TV_HAFTED) && (o_ptr->weight > 50) && done_crit)
 							{
 								if (!(r_ptr->flags4 & (RF4_BR_SOUN)) && !(r_ptr->flags4 & (RF4_BR_WALL)) && k)
 								{
@@ -2943,7 +2957,7 @@ void py_attack(int y, int x, int max_blow)
 
 							/* Chopping, by Amy - flat 30% chance */
 							if (magik(30) && (get_skill(SKILL_CHOPPING) >= 1) && (o_ptr->tval == TV_AXE)) {
-								if (!(r_ptr->flags4 & (RF4_BR_SHAR)) ) { /* shards breathers resist */
+								if (!(r_ptr->flags4 & (RF4_BR_SHAR)) && !(r_ptr->flags8 & (RF8_NO_CUT)) ) { /* shards breathers resist */
 									int tmp;
 									tmp = get_skill_scale(SKILL_CHOPPING, 40) + 1;
 									if (tmp > 1) tmp = randint(tmp);

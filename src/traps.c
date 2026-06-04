@@ -7772,7 +7772,15 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 		/* abomination traps (turn you into a bad mimicry form) --Amy */
 	case TRAP_OF_ABOMINATION_I:
-			if (magik(60 - get_skill_scale(SKILL_MIMICRY, 25)))
+		{
+			/* don't be 100% safe with very high mimicry skill --Amy */
+			int mimicsavechance = get_skill_scale(SKILL_MIMICRY, 25);
+			if (mimicsavechance > 50) {
+				int mimictempvar = 50 + (randint(mimicsavechance - 50));
+				mimicsavechance = mimictempvar;
+			}
+
+			if (magik(60 - mimicsavechance))
 			{
 				cmsg_print(TERM_VIOLET, "You feel the dark powers twisting your body!");
 				set_mimic(50, resolve_mimic_name("Abomination"), 50);
@@ -7782,9 +7790,18 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				cmsg_print(TERM_VIOLET, "You feel the dark powers trying to twisting your body, but they fail.");
 			}
 			ident = TRUE;
+		}
 		break;
 	case TRAP_OF_ABOMINATION_II:
-			if (magik(60 - get_skill_scale(SKILL_MIMICRY, 25)))
+		{
+			/* don't be 100% safe with very high mimicry skill --Amy */
+			int mimicsavechance = get_skill_scale(SKILL_MIMICRY, 25);
+			if (mimicsavechance > 50) {
+				int mimictempvar = 50 + (randint(mimicsavechance - 50));
+				mimicsavechance = mimictempvar;
+			}
+
+			if (magik(60 - mimicsavechance))
 			{
 				cmsg_print(TERM_VIOLET, "You feel the dark powers twisting your body!");
 				set_mimic(250, resolve_mimic_name("Abomination"), 50);
@@ -7794,9 +7811,18 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				cmsg_print(TERM_VIOLET, "You feel the dark powers trying to twisting your body, but they fail.");
 			}
 			ident = TRUE;
+		}
 		break;
 	case TRAP_OF_ABOMINATION_III:
-			if (magik(60 - get_skill_scale(SKILL_MIMICRY, 25)))
+		{
+			/* don't be 100% safe with very high mimicry skill --Amy */
+			int mimicsavechance = get_skill_scale(SKILL_MIMICRY, 25);
+			if (mimicsavechance > 50) {
+				int mimictempvar = 50 + (randint(mimicsavechance - 50));
+				mimicsavechance = mimictempvar;
+			}
+
+			if (magik(60 - mimicsavechance))
 			{
 				cmsg_print(TERM_VIOLET, "You feel the dark powers twisting your body!");
 				set_mimic(5000, resolve_mimic_name("Abomination"), 50);
@@ -7806,6 +7832,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				cmsg_print(TERM_VIOLET, "You feel the dark powers trying to twisting your body, but they fail.");
 			}
 			ident = TRUE;
+		}
 		break;
 
 		/* unknown traps: should normally morph into something else prior to triggering */

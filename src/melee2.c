@@ -3935,8 +3935,13 @@ bool make_attack_spell(int m_idx)
 	bool no_inate = FALSE;
 	int x, y;
 
-	/* Amy edit: cleaning skill is there to reduce chance of breaths, to a minimum of 5% at skill level 100 */
+	/* Amy edit: cleaning skill is there to reduce chance of breaths, but we don't want that to reach 0% */
 	int druidsavingthrow = get_skill_scale(SKILL_CLEANING, 47);
+	if (druidsavingthrow > 90) {
+		int druidtempval = 90 + randint(druidsavingthrow - 90);
+		druidsavingthrow = druidtempval;
+	}
+
 	bool druidsave = FALSE;
 
 	/* Summon count */
@@ -4022,7 +4027,9 @@ bool make_attack_spell(int m_idx)
 		if (breathmax > (rlev * 12)) breathmax = (rlev * 12);
 	}
 
-	if (druidsavingthrow > randint(50 + rlev)) druidsave = TRUE;
+	if (druidsavingthrow > randint(50 + rlev)) {
+		if (magik(90)) druidsave = TRUE; /* make sure you can't reach 100% safety, not even against low-level monsters --Amy */
+	}
 
 	/* Extract the racial spell flags */
 	f2 = r_ptr->flags2;

@@ -178,6 +178,17 @@ void do_poly_wounds(void)
 void do_fart_effect(void)
 {
 	int randomnumber = randint(100);
+
+	/* "misc" skill gives a saving throw against this effect --Amy */
+	int skillsavingthrow = get_skill(SKILL_MISC);
+	int savtempvalue;
+
+	/* make sure you don't just get to 100% safety; skill levels above 100 should do *some*thing --Amy */
+	if (skillsavingthrow > 90) {
+		savtempvalue = 90 + randint(skillsavingthrow - 90);
+		skillsavingthrow = savtempvalue;
+	}
+
 	if (get_skill(SKILL_MISC) > randomnumber) {
 		msg_print("You resist the effects!");
 		return;

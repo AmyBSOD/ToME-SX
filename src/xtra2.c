@@ -6323,6 +6323,8 @@ void monster_death(int m_idx)
 	bool create_stairs = FALSE;
 	int force_coin = get_coin_type(r_ptr);
 
+	int corpsepreschance;
+
 	object_type forge;
 	object_type *q_ptr;
 
@@ -6866,7 +6868,14 @@ void monster_death(int m_idx)
 		}
 	}
 
-	if ((!force_coin) && ( (magik(10 + get_skill_scale(SKILL_PRESERVATION, 45))) || (m_ptr->r_idx == p_ptr->current_bounty_mon) ) && (!(m_ptr->mflag & MFLAG_NO_DROP)))
+	/* don't just reach 100% corpse drop chance; have the skill keep giving better odds beyond skill level 100! --Amy */
+	corpsepreschance = get_skill_scale(SKILL_PRESERVATION, 45);
+	if (corpsepreschance > 80) {
+		int corpsetempval = 80 + randint(corpsepreschance - 80);
+		corpsepreschance = corpsetempval;
+	}
+
+	if ((!force_coin) && ( (magik(10 + corpsepreschance)) || (m_ptr->r_idx == p_ptr->current_bounty_mon) ) && (!(m_ptr->mflag & MFLAG_NO_DROP)))
 		place_corpse(m_ptr);
 
 	/* Take note of any dropped treasure */

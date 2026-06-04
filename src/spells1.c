@@ -1825,6 +1825,12 @@ void take_hit(int damage, cptr hit_from)
 	bool pen_invuln = FALSE;
 	bool monster_take = FALSE;
 
+	/* make sure symbiosis skill doesn't scale too much --Amy */
+	int symbiochance = get_skill_scale(SKILL_SYMBIOTIC, 25);
+	if (symbiochance > 50) {
+		symbiochance -= ((symbiochance - 50) / 2);
+	}
+
 	char death_message[80];
 
 	int warning = (p_ptr->mhp * hitpoint_warn / 10);
@@ -1869,7 +1875,7 @@ void take_hit(int damage, cptr hit_from)
 	}
 
 	/* Hurt the wielded monster if any */
-	if ((o_ptr->k_idx) && (magik(5 + get_skill_scale(SKILL_SYMBIOTIC, 25))) && (!carried_monster_hit))
+	if ((o_ptr->k_idx) && (magik(5 + symbiochance)) && (!carried_monster_hit))
 	{
 		cptr sym_name = symbiote_name(TRUE);
 

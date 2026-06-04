@@ -789,13 +789,20 @@ bool carried_make_attack_normal(int r_idx)
 					/* Obvious */
 					obvious = TRUE;
 
+					/* don't be 100% safe with very high mimicry skill --Amy */
+					int mimicsavechance = get_skill_scale(SKILL_MIMICRY, 25);
+					if (mimicsavechance > 50) {
+						int mimictempvar = 50 + (randint(mimicsavechance - 50));
+						mimicsavechance = mimictempvar;
+					}
+
 					/* AC reduces damage only if you have damage resistance (by Amy) */
 					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
 						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
 					}
 
 					/* Morph, but let mimicry skill have a chance to stop this */
-					if (magik(60 - get_skill_scale(SKILL_MIMICRY, 25)))
+					if (magik(60 - mimicsavechance))
 					{
 						/* Message */
 						cmsg_print(TERM_VIOLET, "You feel the dark powers twisting your body!");
@@ -2613,13 +2620,20 @@ bool make_attack_normal(int m_idx, byte divis)
 					/* Obvious */
 					obvious = TRUE;
 
+					/* don't be 100% safe with very high mimicry skill --Amy */
+					int mimicsavechance = get_skill_scale(SKILL_MIMICRY, 25);
+					if (mimicsavechance > 50) {
+						int mimictempvar = 50 + (randint(mimicsavechance - 50));
+						mimicsavechance = mimictempvar;
+					}
+
 					/* AC reduces damage only if you have damage resistance (by Amy) */
 					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
 						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
 					}
 
 					/* Morph, but let mimicry skill have a chance to stop this */
-					if (magik(60 - get_skill_scale(SKILL_MIMICRY, 25)))
+					if (magik(60 - mimicsavechance))
 					{
 						/* Message */
 						cmsg_print(TERM_VIOLET, "You feel the dark powers twisting your body!");

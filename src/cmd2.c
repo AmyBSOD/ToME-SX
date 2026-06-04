@@ -3146,6 +3146,8 @@ int breakage_chance(object_type *o_ptr)
 {
 	int reducer; /* chance calculation revamped by Amy */
 
+	int morereducer; /* for chars whose archery skill is higher than 100 --Amy */
+
 	/* Examine the item type */
 	switch (o_ptr->tval)
 	{
@@ -3178,7 +3180,16 @@ int breakage_chance(object_type *o_ptr)
 			if (get_skill(SKILL_ARCHERY)) {
 				reducer -= get_skill_scale(SKILL_ARCHERY, 20);
 			}
-			if (reducer < 10) reducer = 10;
+			if (reducer < 10) {
+				reducer = 10;
+				morereducer = get_skill_scale(SKILL_ARCHERY, 20); /* max 80 */
+				if (morereducer > 40) {
+					morereducer = (morereducer - 40);
+					morereducer /= 10; /* max 8 */
+					reducer -= morereducer;
+					if (reducer < 2) reducer = 2;
+				}
+			}
 
 			if (p_ptr->nastytrap39) reducer = 100;
 
@@ -3199,7 +3210,16 @@ int breakage_chance(object_type *o_ptr)
 			if (get_skill(SKILL_ARCHERY)) {
 				reducer -= get_skill_scale(SKILL_ARCHERY, 10);
 			}
-			if (reducer < 5) reducer = 5;
+			if (reducer < 5) {
+				reducer = 5;
+				morereducer = get_skill_scale(SKILL_ARCHERY, 10); /* max 40 */
+				if (morereducer > 20) {
+					morereducer = (morereducer - 20);
+					morereducer /= 10; /* max 4 */
+					reducer -= morereducer;
+					if (reducer < 1) reducer = 1;
+				}
+			}
 
 			if (p_ptr->nastytrap39) reducer = 100;
 
@@ -3684,6 +3704,9 @@ void do_cmd_fire(void)
 		ty = target_row;
 	}
 
+	/* make the piercing shots ability somewhat sane --Amy */
+	int skillpiercechance = get_skill_scale(SKILL_ARCHERY, 33);
+	if (skillpiercechance > 50) skillpiercechance = 50;
 
 	/* Hack -- Handle stuff */
 	handle_stuff();
@@ -4075,7 +4098,7 @@ void do_cmd_fire(void)
 		/* If the ammo doesn't break, it can pierce through
 		 * Amy note: holy shit 45% base chance and 95% with maxxed archery??? no wonder people claim it's OP */
 		if ((num_pierce) && (hit_body) &&
-		                (magik(1 + get_skill_scale(SKILL_ARCHERY, 33))))
+		                (magik(1 + skillpiercechance)))
 		{
 			num_pierce--;
 			hit_body = FALSE;
@@ -5816,6 +5839,11 @@ void do_cmd_steal()
 	{
 		int chance;
 
+		int maxichance = get_skill_scale(SKILL_STEALING, 25);
+		if (maxichance > 50) {
+			maxichance -= ((maxichance - 50) / 2);
+		}
+
 		chance = 40 - p_ptr->stat_ind[A_DEX];
 		chance +=
 		        o_list[item].weight / (get_skill_scale(SKILL_STEALING, 19) + 1);
@@ -5824,7 +5852,7 @@ void do_cmd_steal()
 		chance += m_ptr->level;
 
 		/* Failure check */
-		if (rand_int(chance) > 1 + get_skill_scale(SKILL_STEALING, 25))
+		if (rand_int(chance) > 1 + maxichance)
 		{
 			/* Take a turn */
 			energy_use = 100;

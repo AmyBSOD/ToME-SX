@@ -2852,6 +2852,7 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 		int j;
 
 		int randomnumber = randint(100);
+		int tempnumber;
 
 		int force_coin = get_coin_type(r_ptr);
 
@@ -2875,8 +2876,19 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 		if ((r_ptr->flags1 & (RF1_DROP_4D2)) && (rand_int(100) < 90)) number += damroll(2, 2);
 		if (r_ptr->flags9 & (RF9_MIMIC)) number = 1;
 
+		tempnumber = number; /* to avoid multiplying a multiplier --Amy */
+
+		/* spell-learning skill: create more loot (yeah I know it doesn't make sense for the skill to be called that) --Amy */
 		if (get_skill(SKILL_LEARN) > randomnumber) {
-			if (number > 0) number *= 2;
+			if (number > 0) number += tempnumber;
+		}
+
+		/* make the spell-learning skill keep giving more benefits beyond skill level 100 --Amy */
+		if (get_skill(SKILL_LEARN) > 100) {
+			int xtralearn = get_skill(SKILL_LEARN) - 100;
+			if (xtralearn > randomnumber) {
+				if (number > 0) number += tempnumber;
+			}
 		}
 
 		/* note by Amy: you shouldn't be able to scum summoned creatures for items!!! */

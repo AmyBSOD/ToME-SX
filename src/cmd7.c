@@ -634,6 +634,8 @@ void do_cmd_mindcraft(void)
 				else
 				{
 					int ii, ij;
+					int energyusemc = 60 - plev;
+					if (energyusemc < 10) energyusemc = 10;
 
 					if (dungeon_flags2 & DF2_NO_TELEPORT)
 					{
@@ -644,7 +646,7 @@ void do_cmd_mindcraft(void)
 					msg_print("You open a Void Jumpgate. Choose a destination.");
 
 					if (!tgt_pt(&ii, &ij)) return;
-					p_ptr->energy -= 60 - plev;
+					p_ptr->energy -= energyusemc; /* make sure it's always a positive value... --Amy */
 
 					if (!cave_empty_bold(ij, ii) ||
 					                (cave[ij][ii].info & CAVE_ICKY) ||

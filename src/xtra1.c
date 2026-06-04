@@ -2121,20 +2121,6 @@ void calc_hitpoints(void)
 		if (mhp < 1) mhp = 1;
 	}
 
-	/* Factor in the hero / superhero settings */
-	if (p_ptr->hero) mhp += 10;
-	if (p_ptr->shero) mhp += 30;
-
-	/* Augment Hitpoint */
-	if (munchkin_multipliers)
-	{
-		mhp += mhp * p_ptr->to_l / 5;
-	}
-	else
-	{
-		mhp += mhp * p_ptr->to_l / 10;
-	}
-
 	/* boost by Amy, mainly to make the early game less deadly */
 	if (!p_ptr->hard_mode && !p_ptr->nastytrap124) mhp += 15;
 
@@ -2161,6 +2147,29 @@ void calc_hitpoints(void)
 		}
 
 	}
+
+	/* Factor in the hero / superhero settings */
+	if (p_ptr->hero) mhp += 10;
+	if (p_ptr->shero) mhp += 30;
+
+	/* Augment Hitpoint - Amy note: this must be done after calculating possessor HP... */
+	if (munchkin_multipliers)
+	{
+		mhp += mhp * p_ptr->to_l / 5;
+	}
+	else
+	{
+		mhp += mhp * p_ptr->to_l / 10;
+	}
+
+	/* are you insane enough to pump sorcery up beyond 100? then we'll go after those munchkin multipliers --Amy */
+	if (get_skill(SKILL_SORCERY) > 100) {
+		int sorcerxtramult = get_skill(SKILL_SORCERY) - 100;
+
+		mhp -= mhp * sorcerxtramult / 100;
+		if (mhp < 1) mhp = 1;
+	}
+
 	if (p_ptr->disembodied) mhp = 1;
 
 	/* HACK - being undead means less DP */

@@ -522,6 +522,8 @@ static s32b price_item(object_type *o_ptr, int greed, bool flip)
 	/* Shop is buying */
 	if (flip)
 	{
+		int hagglingvar;
+
 		/* Mega Hack^3 */
 		switch (o_ptr->tval)
 		{
@@ -556,8 +558,15 @@ static s32b price_item(object_type *o_ptr, int greed, bool flip)
 		if (p_ptr->nastytrap76) price /= 3;
 
 		/* Amy edit: items just give way too much gold when you sell them!
-		 * added a new skill that, if maxxed, gives the old values back */
-		price *= (20 + get_skill_scale(SKILL_HAGGLING, 15) );
+		 * added a new skill that, if maxxed, gives the old values back
+		 * this depends on how much the maximum is, currently 200: "hagglingvar" will be exactly 30 at that level */
+
+		hagglingvar = get_skill_scale(SKILL_HAGGLING, 15);
+		if (hagglingvar > 15) {
+			hagglingvar -= ((hagglingvar - 15) * 2 / 3);
+		}
+
+		price *= (20 + hagglingvar);
 		price /= 50;
 	}
 
@@ -2810,7 +2819,12 @@ void store_stole(void)
 
 		/* but here, the stealing skill should help --Amy */
 		if (get_skill(SKILL_STEALING) > 0) {
-			if (get_skill(SKILL_STEALING) > randint(150)) stealfailchance = 0;
+			int stealingbueuen = get_skill(SKILL_STEALING);
+			if (stealingbueuen > 100) { /* don't reach 100% success chance if the skill goes beyond 100!! --Amy */
+				int stealingtemp = 100 + randint(stealingbueuen - 100);
+				stealingbueuen = stealingtemp;
+			}
+			if (stealingbueuen > randint(150)) stealfailchance = 0;
 		}
 
 		if ((stealfailchance > 0) && magik(stealfailchance)) stealwillfail = TRUE;
