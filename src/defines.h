@@ -1535,6 +1535,8 @@
 /* The "sval" codes for TV_JUNK */
 #define SV_BOULDER      1
 
+/* The "sval" codes for TV_BOTTLE */
+#define SV_DOUBLE_BOTTLE 5
 
 /* The "sval" codes for TV_TOOL */
 #define SV_TOOL_CLIMB 0

@@ -10607,6 +10607,45 @@ W:15:0:2:100
 A:15/5
 P:0:1d1:0:0:0
 
+N:1257:& Green Bottle~
+G:!:g
+I:2:2:0
+W:10:0:0:10
+A:10/1
+P:0:1d1:0:0:0
+F:IGNORE_POIS
+f:IGNORE_POIS
+D:A green-colored glass bottle. It's empty.
+
+N:1258:& Blue Bottle~
+G:!:b
+I:2:3:0
+W:10:0:0:10
+A:10/1
+P:0:1d1:0:0:0
+F:IGNORE_COLD
+f:IGNORE_COLD
+D:A blue-colored glass bottle. It's empty.
+
+N:1259:& Cyan Bottle~
+G:!:B
+I:2:4:0
+W:30:0:0:40
+A:30/1
+P:0:1d1:0:0:0
+F:IGNORE_COLD | IGNORE_POIS
+f:IGNORE_COLD | IGNORE_POIS
+D:A cyan-colored glass bottle. It's empty.
+
+N:1260:& Purple Bottle~
+G:!:v
+I:2:5:0
+W:50:0:0:1000
+A:50/1
+P:0:1d1:0:0:0
+D:A purple-colored glass bottle. It's empty, and seems rather big, 
+D:as if it's capable of holding more liquid than a regular one. 
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being a bonus to the pval-based property

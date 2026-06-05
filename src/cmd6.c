@@ -3548,6 +3548,12 @@ void do_cmd_fill_bottle(void)
 
 	object_type *q_ptr, *o_ptr, forge;
 
+	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
+
+	bool doublebottle = FALSE;
+	bool bottlenocold = FALSE;
+	bool bottlenopois = FALSE;
+
 	cptr q, s;
 
 	/* Is the fountain empty? */
@@ -3595,6 +3601,12 @@ void do_cmd_fill_bottle(void)
 
 	if (amt > c_ptr->special2) amt = c_ptr->special2;
 
+	if (o_ptr->sval == SV_DOUBLE_BOTTLE) doublebottle = TRUE;
+
+	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
+	if (f3 & TR3_IGNORE_COLD) bottlenocold = TRUE;
+	if (f6 & TR6_IGNORE_POIS) bottlenopois = TRUE;
+
 	/* Destroy bottles in the pack */
 	if (item >= 0)
 	{
@@ -3615,6 +3627,16 @@ void do_cmd_fill_bottle(void)
 	q_ptr = &forge;
 	object_prep(q_ptr, lookup_kind(tval, sval));
 	q_ptr->number = amt;
+	if (doublebottle) {
+		q_ptr->number *= 2;
+		if (q_ptr->number > 99) q_ptr->number = 99;
+	}
+	if (bottlenocold) {
+		q_ptr->art_flags3 |= TR3_IGNORE_COLD;
+	}
+	if (bottlenopois) {
+		q_ptr->art_flags6 |= TR6_IGNORE_POIS;
+	}
 
 	if (c_ptr->info & CAVE_IDNT)
 	{
