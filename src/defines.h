@@ -3657,6 +3657,14 @@
 
 #define TRAP_NASTY187                     853
 
+#define TRAP_DFT_FORGET                   854
+#define TRAP_DFT_NO_TELEPORT              855
+#define TRAP_DFT_NO_GENO                  856
+#define TRAP_DFT_WATER_BREATH             857
+#define TRAP_DFT_NO_BREATH                858
+#define TRAP_DFT_NO_EASY_MOVE             859
+#define TRAP_DFT_NO_RECALL_OUT            860
+
 /*** General index values ***/
 
 

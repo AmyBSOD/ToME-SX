@@ -7089,6 +7089,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			{
 				msg_print("You feel like staying around.");
 				p_ptr->word_recall = 0;
+				p_ptr->redraw |= (PR_DEPTH); /* ffs --Amy */
 				ident = TRUE;
 			}
 			if (!ident) msg_print("You feel that you'll be here for a while.");
@@ -8218,6 +8219,216 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			/* Never known */
 			ident = FALSE;
 			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Acquirement.");
+		}
+		break;
+
+	case TRAP_DFT_FORGET:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dungeon_flags1 |= DF1_FORGET;
+			msg_print("Your memory seems to be lost...");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Lasting Amnesia.");
+		}
+		break;
+
+	case TRAP_DFT_NO_TELEPORT:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dungeon_flags2 |= DF2_NO_TELEPORT;
+			msg_print("An anti-teleportation field has been erected.");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Anti-Teleportation.");
+		}
+		break;
+
+	case TRAP_DFT_NO_GENO:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dungeon_flags2 |= DF2_NO_GENO;
+			msg_print("The political correctness brigade decides to ban the word 'genocide'.");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Ungenocide.");
+		}
+		break;
+
+	case TRAP_DFT_WATER_BREATH:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dungeon_flags2 |= DF2_WATER_BREATH;
+			msg_print("The dungeon is flooded!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Drowning.");
+		}
+		break;
+
+	case TRAP_DFT_NO_BREATH:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dungeon_flags2 |= DF2_NO_BREATH;
+			msg_print("Suddenly there's no air anymore!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Suffocation.");
+		}
+		break;
+
+	case TRAP_DFT_NO_EASY_MOVE:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dungeon_flags2 |= DF2_NO_EASY_MOVE;
+			msg_print("Some powerfull force prevents your from teleporting."); /* sic --Amy */
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Uneasy Move.");
+		}
+		break;
+
+	case TRAP_DFT_NO_RECALL_OUT:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dungeon_flags2 |= DF2_NO_RECALL_OUT;
+			msg_print("A recall barrier has been erected on this floor!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Recall Lock.");
 		}
 		break;
 

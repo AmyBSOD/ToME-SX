@@ -4260,6 +4260,7 @@ static void process_world(void)
 		if (process_hooks(HOOK_RECALL, "()", ""))
 		{
 			p_ptr->word_recall = 0;
+			p_ptr->redraw |= (PR_DEPTH); /* ffs --Amy */
 		}
 
 		/* No recall. sorry */
@@ -4267,6 +4268,7 @@ static void process_world(void)
 		{
 			cmsg_print(TERM_L_DARK, "You cannot recall from here.");
 			p_ptr->word_recall = 0;
+			p_ptr->redraw |= (PR_DEPTH); /* ffs --Amy */
 		}
 
 		/* Cannot WoR out of death fate levels */
@@ -4274,6 +4276,7 @@ static void process_world(void)
 		{
 			cmsg_print(TERM_L_DARK, "You are fated to die here.  FIGHT for your life!");
 			p_ptr->word_recall = 0;
+			p_ptr->redraw |= (PR_DEPTH); /* ffs --Amy */
 		}
 
 		/* I think the 'inside_quest' code belongs here -- pelpel */
@@ -4283,6 +4286,7 @@ static void process_world(void)
 		{
 			msg_print("As an astral being you can't recall.");
 			p_ptr->word_recall = 0;
+			p_ptr->redraw |= (PR_DEPTH); /* ffs --Amy */
 		}
 
 		/* Normal WoR */
@@ -7140,6 +7144,7 @@ void play_game(bool new_game)
 
 					/* Hack -- Prevent recall */
 					p_ptr->word_recall = 0;
+					p_ptr->redraw |= (PR_DEPTH); /* ffs --Amy */
 				}
 
 				/* Note cause of death XXX XXX XXX */

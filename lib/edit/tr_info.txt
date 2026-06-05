@@ -4212,6 +4212,41 @@ I:45:2:50:4:25:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:854:Lasting Amnesia Trap
+I:10:10:0:10:20:0d0:o
+D:laber
+F:FLOOR | CHEST | DOOR
+
+N:855:Anti-Teleportation Trap
+I:10:10:0:10:30:0d0:o
+D:laber
+F:FLOOR | CHEST | DOOR
+
+N:856:Ungenocide Trap
+I:15:10:0:10:40:0d0:o
+D:laber
+F:FLOOR | CHEST | DOOR
+
+N:857:Drowning Trap
+I:20:10:0:10:50:0d0:o
+D:laber
+F:FLOOR | CHEST | DOOR
+
+N:858:Suffocation Trap
+I:25:10:0:10:80:0d0:o
+D:laber
+F:FLOOR | CHEST | DOOR
+
+N:859:Uneasy Move Trap
+I:20:5:0:10:33:0d0:o
+D:laber
+F:FLOOR | CHEST | DOOR
+
+N:860:Recall Lock Trap
+I:15:5:0:10:25:0d0:o
+D:laber
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 
