@@ -2317,6 +2317,23 @@ void printRandoms(int lower, int upper, int count)
 				if (random_number(10) == 1) printf("F:NO_SHAFT\n");
 
 				if (random_number(20) == 1) {
+					switch (random_number(5)) {
+						case 1:
+						case 2:
+						default:
+							printf("F:ADJUST_LEVEL_1_2\n");
+							break;
+						case 3:
+						case 4:
+							printf("F:ADJUST_LEVEL_1\n");
+							break;
+						case 5:
+							printf("F:ADJUST_LEVEL_2\n");
+							break;
+					}
+				}
+
+				if (random_number(20) == 1) {
 					switch (random_number(3)) {
 						case 1:
 						default:
@@ -3144,6 +3161,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(25) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(3) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(50) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(25) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -3193,6 +3227,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(40) == 1) printf("F:EMPTY\n");
 						if (random_number(25) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(10) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(40) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(20) == 1) {
 							switch (random_number(3)) {
@@ -3244,6 +3295,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(15) == 1) printf("F:EMPTY\n");
 						if (random_number(15) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(8) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(5) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(10) == 1) {
 							switch (random_number(3)) {
@@ -3301,6 +3369,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(50) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(10) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(10) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(12) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -3355,6 +3440,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(50) == 1) printf("F:EMPTY\n");
 						if (random_number(15) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(20) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(25) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(15) == 1) {
 							switch (random_number(3)) {
@@ -3412,6 +3514,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(15) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(8) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(5) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(30) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -3467,6 +3586,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(10) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(15) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(10) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(15) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -3518,6 +3654,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(20) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(8) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(15) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(20) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -3567,6 +3720,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(40) == 1) printf("F:EMPTY\n");
 						if (random_number(10) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(5) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(25) == 1) {
 							switch (random_number(3)) {
@@ -3619,6 +3789,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(12) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(6) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(10) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -3669,6 +3856,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(50) == 1) printf("F:EMPTY\n");
 						if (random_number(15) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(10) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(25) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(12) == 1) {
 							switch (random_number(3)) {
@@ -3722,6 +3926,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(5) == 1) printf("F:NO_SHAFT\n");
 
 						if (random_number(30) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
+						if (random_number(30) == 1) {
 							switch (random_number(3)) {
 								case 1:
 								default:
@@ -3770,6 +3991,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(20) == 1) printf("F:EMPTY\n");
 						if (random_number(20) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(10) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(10) == 1) {
 							switch (random_number(3)) {
@@ -3822,6 +4060,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(20) == 1) printf("F:EMPTY\n");
 						if (random_number(30) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(10) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(15) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(20) == 1) {
 							switch (random_number(3)) {
@@ -3889,6 +4144,23 @@ void printRandoms(int lower, int upper, int count)
 							}
 						}
 
+						if (random_number(15) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(2) == 1) {
 							printf("R:100:0\n");
 						} else {
@@ -3924,6 +4196,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(50) == 1) printf("F:EMPTY\n");
 						if (random_number(20) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(4) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(15) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(15) == 1) {
 							switch (random_number(3)) {
@@ -3976,6 +4265,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(10) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(5) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(25) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -4025,6 +4331,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(10) == 1) printf("F:EMPTY\n");
 						if (random_number(40) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(5) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(15) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(10) == 1) {
 							switch (random_number(3)) {
@@ -4082,6 +4405,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(30) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(8) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(50) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(25) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -4132,6 +4472,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(50) == 1) printf("F:EMPTY\n");
 						if (random_number(40) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(8) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(25) == 1) {
 							switch (random_number(3)) {
@@ -4185,6 +4542,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(10) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(5) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(5) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -4235,6 +4609,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(50) == 1) printf("F:EMPTY\n");
 						if (random_number(40) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(6) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(15) == 1) {
 							switch (random_number(3)) {
@@ -4332,6 +4723,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(40) == 1) printf("F:EMPTY\n");
 						if (random_number(40) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(3) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(25) == 1) {
 							switch (random_number(3)) {
@@ -4434,6 +4842,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(50) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(5) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(15) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(10) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -4487,6 +4912,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(30) == 1) printf("F:EMPTY\n");
 						if (random_number(20) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(5) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(15) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(10) == 1) {
 							switch (random_number(3)) {
@@ -4610,6 +5052,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(15) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(8) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(10) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -4664,6 +5123,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(25) == 1) printf("F:NO_DESTROY\n");
 						if (random_number(20) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(15) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(8) == 1) {
 							switch (random_number(3)) {
@@ -4720,6 +5196,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(12) == 1) printf("F:EMPTY\n");
 						if (random_number(20) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(4) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(20) == 1) {
 							switch (random_number(3)) {
@@ -4788,6 +5281,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(40) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(10) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -4825,7 +5335,8 @@ void printRandoms(int lower, int upper, int count)
 						printf("F:WATER_RIVER | ADJUST_LEVEL_1 | NO_DOORS | FLAT\n");
 						printf("F:NO_SHAFT | BIG\n");
 						printf("R:95:3\n");
-						printf("M:NO_SLEEP | DEMON | BR_FIRE | BA_FIRE |\n");
+						printf("M:NO_SLEEP | DEMON |\n");
+						printf("S:BR_FIRE | BA_FIRE |\n");
 						printf("R:5:0\n");
 						break;
 					case 158:
@@ -4853,6 +5364,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(30) == 1) printf("F:EMPTY\n");
 						if (random_number(50) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(5) == 1) {
 							switch (random_number(3)) {
@@ -5085,6 +5613,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(50) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(3) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(25) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(5) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -5136,6 +5681,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(40) == 1) printf("F:EMPTY\n");
 						if (random_number(75) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(4) == 1) {
 							switch (random_number(3)) {
@@ -5192,6 +5754,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(35) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(10) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(12) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -5241,6 +5820,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(10) == 1) printf("F:EMPTY\n");
 						if (random_number(20) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(10) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(8) == 1) {
 							switch (random_number(3)) {
@@ -5297,6 +5893,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(30) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(3) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(15) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(3) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -5347,6 +5960,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(20) == 1) printf("F:EMPTY\n");
 						if (random_number(20) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(6) == 1) {
 							switch (random_number(3)) {
@@ -5404,6 +6034,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(3) == 1) printf("F:NO_SHAFT\n");
 
 						if (random_number(2) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
+						if (random_number(2) == 1) {
 							switch (random_number(3)) {
 								case 1:
 								default:
@@ -5457,6 +6104,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(100) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(50) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(5) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -5507,6 +6171,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(80) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(5) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -5556,6 +6237,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(10) == 1) printf("F:EMPTY\n");
 						if (random_number(100) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(5) == 1) {
 							switch (random_number(3)) {
@@ -5612,6 +6310,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(50) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(5) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -5661,6 +6376,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(40) == 1) printf("F:EMPTY\n");
 						if (random_number(60) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(5) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(5) == 1) {
 							switch (random_number(3)) {
@@ -5716,6 +6448,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(20) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
 
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
+
 						if (random_number(3) == 1) {
 							switch (random_number(3)) {
 								case 1:
@@ -5765,6 +6514,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(2) == 1) printf("F:EMPTY\n");
 						if (random_number(100) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(2) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(4) == 1) {
 							switch (random_number(3)) {
@@ -5819,6 +6585,23 @@ void printRandoms(int lower, int upper, int count)
 						if (random_number(15) == 1) printf("F:EMPTY\n");
 						if (random_number(35) == 1) printf("F:NO_STREAMERS\n");
 						if (random_number(4) == 1) printf("F:NO_SHAFT\n");
+
+						if (random_number(20) == 1) {
+							switch (random_number(5)) {
+								case 1:
+								case 2:
+								default:
+									printf("F:ADJUST_LEVEL_1_2\n");
+									break;
+								case 3:
+								case 4:
+									printf("F:ADJUST_LEVEL_1\n");
+									break;
+								case 5:
+									printf("F:ADJUST_LEVEL_2\n");
+									break;
+							}
+						}
 
 						if (random_number(4) == 1) {
 							switch (random_number(3)) {
