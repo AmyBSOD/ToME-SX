@@ -2107,10 +2107,18 @@ void calc_hitpoints(void)
 	mhp += p_ptr->hp_mod;
 	if (mhp < 1) mhp = 1;
 
-	/* Hack: Sorcery impose a hp penality */
+	/* Hack: Sorcery impose a hp penality
+	 * Amy note: 1% per skill level up to skill level 50, but we don't want to have -100% HP at skill level 100 considering you can reach skill level 200
+	 * instead, it'll be -80% HP if you take it all the way up to 200, i.e. only 0.2% per skill level starting from skill level 51 */
 	if (mhp && (get_skill(SKILL_SORCERY) > 0))
 	{
-		mhp -= mhp * get_skill_scale(SKILL_SORCERY, 50) / 100;
+		int sorcerymult = get_skill_scale(SKILL_SORCERY, 50);
+		if (sorcerymult > 50) {
+			int sorcerytmpval = 50 + ((sorcerymult - 50) / 5);
+			sorcerymult = sorcerytmpval;
+		}
+
+		mhp -= mhp * sorcerymult / 100;
 		if (mhp < 1) mhp = 1;
 	}
 
@@ -2160,14 +2168,6 @@ void calc_hitpoints(void)
 	else
 	{
 		mhp += mhp * p_ptr->to_l / 10;
-	}
-
-	/* are you insane enough to pump sorcery up beyond 100? then we'll go after those munchkin multipliers --Amy */
-	if (get_skill(SKILL_SORCERY) > 100) {
-		int sorcerxtramult = get_skill(SKILL_SORCERY) - 100;
-
-		mhp -= mhp * sorcerxtramult / 100;
-		if (mhp < 1) mhp = 1;
 	}
 
 	if (p_ptr->disembodied) mhp = 1;
