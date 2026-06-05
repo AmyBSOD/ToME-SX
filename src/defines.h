@@ -3665,6 +3665,75 @@
 #define TRAP_DFT_NO_EASY_MOVE             859
 #define TRAP_DFT_NO_RECALL_OUT            860
 
+#define TRAP_OF_SUMMON_QUYLTHULG          861
+
+#define TRAP_OF_SUMMON_MONSTER_X          862
+#define TRAP_OF_SUMMON_UNDEAD_X           863
+#define TRAP_OF_SUMMON_GREATER_UNDEAD_X   864
+#define TRAP_OF_SUMMON_GREATER_DEMON_X    865
+#define TRAP_OF_SUMMON_GREATER_DRAGON_X   866
+#define TRAP_OF_SUMMON_SPIDER_X           867
+#define TRAP_OF_SUMMON_HOUND_X            868
+#define TRAP_OF_SUMMON_HYDRA_X            869
+#define TRAP_OF_SUMMON_ANGEL_X            870
+#define TRAP_OF_SUMMON_WRAITH_X           871
+#define TRAP_OF_SUMMON_UNIQUE_X           872
+#define TRAP_OF_SUMMON_ANT_X              873
+#define TRAP_OF_SUMMON_GHOST_X            874
+#define TRAP_OF_SUMMON_MIMIC_X            875
+#define TRAP_OF_SUMMON_BAT_X              876
+#define TRAP_OF_SUMMON_VORTEX_X           877
+#define TRAP_OF_SUMMON_TREASURE_X         878
+#define TRAP_OF_SUMMON_ANIMAL_X           879
+#define TRAP_OF_SUMMON_THUNDERLORD_X      880
+#define TRAP_OF_SUMMON_MINE_X             881
+#define TRAP_OF_SUMMON_ELEMENTAL_X        882
+#define TRAP_OF_SUMMON_SNAKE_X            883
+#define TRAP_OF_SUMMON_HORROR_X           884
+#define TRAP_OF_SUMMON_CAT_X              885
+#define TRAP_OF_SUMMON_RAT_X              886
+#define TRAP_OF_SUMMON_WORM_X             887
+#define TRAP_OF_SUMMON_CLOTHES_X          888
+#define TRAP_OF_SUMMON_HYBRID_X           889
+#define TRAP_OF_SUMMON_BEETLE_X           890
+#define TRAP_OF_SUMMON_HORDE_X            891
+#define TRAP_OF_SUMMON_TOWNIE_X           892
+#define TRAP_OF_SUMMON_SHORE_X            893
+#define TRAP_OF_SUMMON_OCEAN_X            894
+#define TRAP_OF_SUMMON_WASTE_X            895
+#define TRAP_OF_SUMMON_WOOD_X             896
+#define TRAP_OF_SUMMON_VOLCANO_X          897
+#define TRAP_OF_SUMMON_MOUNTAIN_X         898
+#define TRAP_OF_SUMMON_GRASS_X            899
+#define TRAP_OF_SUMMON_GIANT_X            900
+#define TRAP_OF_SUMMON_SEXY_GIRL_X        901
+#define TRAP_OF_SUMMON_DEMON_X            902
+#define TRAP_OF_SUMMON_DRAGON_X           903
+#define TRAP_OF_SUMMON_TROLL_X            904
+#define TRAP_OF_SUMMON_ORC_X              905
+#define TRAP_OF_SUMMON_MAN_X              906
+#define TRAP_OF_SUMMON_WOMAN_X            907
+#define TRAP_OF_SUMMON_NEUTER_X           908
+#define TRAP_OF_SUMMON_BREEDER_X          909
+#define TRAP_OF_SUMMON_QUYLTHULG_X        910
+
+#define TRAP_OF_SUMMON_SQUAD_X            911
+
+#define TRAP_OF_ANIMATION_X               912
+
+#define TRAP_OF_SUMMON_GOLEM              913
+#define TRAP_OF_SUMMON_GOLEM_X            914
+
+#define TRAP_OF_ANIMATION_GOLEM           915
+
+#define TRAP_OF_STIR_II                   916
+#define TRAP_OF_STIR_III                  917
+#define TRAP_OF_STIR_IV                   918
+
+#define TRAP_OF_GROUP_II                  919
+#define TRAP_OF_GROUP_III                 920
+#define TRAP_OF_GROUP_IV                  921
+
 /*** General index values ***/
 
 
@@ -3736,6 +3805,7 @@
 #define SUMMON_WOMAN                83 /* FEMALE */
 #define SUMMON_NEUTER               84 /* neither MALE nor FEMALE */
 #define SUMMON_BREEDER              85 /* MULTIPLY */
+#define SUMMON_GOLEM                86 /* g */
 
 
 /*

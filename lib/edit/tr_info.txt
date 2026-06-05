@@ -4247,6 +4247,311 @@ I:15:5:0:10:25:0d0:o
 D:laber
 F:FLOOR | CHEST | DOOR
 
+N:861:Summon Quylthulg Trap
+I:3:50:10:10:10:0d0:v
+D:Parts of the owner seem to return from somewhere else.
+F:FLOOR | CHEST | DOOR
+
+N:862:Summon Monsters Trap
+I:12:50:40:4:20:0d0:v
+D:Monsters defend the memory of the owner...
+F:FLOOR | CHEST | DOOR
+
+N:863:Summon Undead Squad Trap
+I:14:25:40:6:30:0d0:v
+D:Undead rise from the grave to defend this!
+F:FLOOR | CHEST | DOOR
+
+N:864:Summon Greater Undead Squad Trap
+I:18:10:50:20:40:0d0:v
+D:Greater undead defend this!
+F:FLOOR | CHEST | DOOR
+
+N:865:Summon Greater Demons Trap
+I:18:10:50:20:40:0d0:v
+D:Greater demons defend this!
+F:FLOOR | CHEST | DOOR
+
+N:866:Summon Greater Dragons Trap
+I:18:10:50:20:40:0d0:v
+D:Greater dragons defend this!
+F:FLOOR | CHEST | DOOR
+
+N:867:Summon Spiders Trap
+I:14:25:40:6:30:0d0:v
+D:Eek! Creepy crawly thingies jump out!
+F:FLOOR | CHEST | DOOR
+
+N:868:Summon Hounds Trap
+I:18:25:40:6:40:0d0:v
+D:A pack of hounds defends this!
+F:FLOOR | CHEST | DOOR
+
+N:869:Summon Hydras Trap
+I:18:10:40:6:40:0d0:v
+D:A pack of hydras defends this!
+F:FLOOR | CHEST | DOOR
+
+N:870:Summon Angels Trap
+I:20:5:40:6:60:0d0:v
+D:A pack of angels defends this!
+F:FLOOR | CHEST | DOOR
+
+N:871:Summon Wraiths Trap
+I:20:5:40:6:70:0d0:v
+D:A pack of wraiths defends this!
+F:FLOOR | CHEST | DOOR
+
+N:872:Summon Uniques Trap
+I:20:5:40:6:70:0d0:v
+D:A pack of bosses defends this!
+F:FLOOR | CHEST | DOOR
+
+N:873:Summon Ants Trap
+I:13:25:40:6:25:0d0:v
+D:Oh no! Ants! Everywhere!
+F:FLOOR | CHEST | DOOR
+
+N:874:Summon Ghosts Trap
+I:14:25:40:6:30:0d0:v
+D:Mommy! There's a ghost in here!
+F:FLOOR | CHEST | DOOR
+
+N:875:Summon Mimics Trap
+I:14:25:40:6:30:0d0:v
+D:Hmm... more items than usual?
+F:FLOOR | CHEST | DOOR
+
+N:876:Summon Bats Trap
+I:14:25:40:6:30:0d0:v
+D:Argh! Goddamned bats!
+F:FLOOR | CHEST | DOOR
+
+N:877:Summon Vortices Trap
+I:18:25:40:6:40:0d0:v
+D:The air... is whirling...
+F:FLOOR | CHEST | DOOR
+
+N:878:Summon Treasures Trap
+I:14:25:40:6:30:0d0:v
+D:Well, that's extra treasure, right?
+F:FLOOR | CHEST | DOOR
+
+N:879:Summon Animals Trap
+I:13:25:40:6:23:0d0:v
+D:A pack of animals defends this!
+F:FLOOR | CHEST | DOOR
+
+N:880:Summon Thunderlords Trap
+I:20:5:40:6:70:0d0:v
+D:A pack of thunderlords defends this!
+F:FLOOR | CHEST | DOOR
+
+N:881:Summon Mines Trap
+I:14:25:40:6:30:0d0:v
+D:There is a clicking sound.
+F:FLOOR | CHEST | DOOR
+
+N:882:Summon Elementals Trap
+I:20:20:40:6:50:0d0:v
+D:A pack of elementals defends this!
+F:FLOOR | CHEST | DOOR
+
+N:883:Summon Snakes Trap
+I:14:25:40:6:25:0d0:v
+D:Damn, why did it have to be snakes?
+F:FLOOR | CHEST | DOOR
+
+N:884:Summon Horrors Trap
+I:18:10:40:6:40:0d0:v
+D:Oh no! Unspeakable horrors appear from nowhere!
+F:FLOOR | CHEST | DOOR
+
+N:885:Summon Cats Trap
+I:14:25:40:6:25:0d0:v
+D:A pack of cats defends this!
+F:FLOOR | CHEST | DOOR
+
+N:886:Summon Rats Trap
+I:13:25:40:6:23:0d0:v
+D:Annoying vermin everywhere.
+F:FLOOR | CHEST | DOOR
+
+N:887:Summon Worms Trap
+I:13:25:40:6:23:0d0:v
+D:Oops, looks like you've opened a can of whoop-ass.
+F:FLOOR | CHEST | DOOR
+
+N:888:Summon Clothes Heap Trap
+I:13:5:40:6:23:0d0:v
+D:The clothes have come alive and want to strangle you!
+F:FLOOR | CHEST | DOOR
+
+N:889:Summon Hybrids Trap
+I:20:25:40:6:45:0d0:v
+D:A pack of hybrid creatures defends this!
+F:FLOOR | CHEST | DOOR
+
+N:890:Summon Beetles Trap
+I:20:25:40:6:45:0d0:v
+D:The beetles are crawling all over the place!
+F:FLOOR | CHEST | DOOR
+
+N:891:Summon Hordes Trap
+I:14:25:40:6:30:0d0:v
+D:A whole bunch of monsters defends this!
+F:FLOOR | CHEST | DOOR
+
+N:892:Summon Townies Trap
+I:13:5:40:6:22:0d0:v
+D:Town monsters defend this!
+F:FLOOR | CHEST | DOOR
+
+N:893:Summon Shore Squad Trap
+I:20:5:40:6:40:0d0:v
+D:Shore monsters defend this!
+F:FLOOR | CHEST | DOOR
+
+N:894:Summon Ocean Squad Trap
+I:30:5:40:6:70:0d0:v
+D:Ocean monsters defend this!
+F:FLOOR | CHEST | DOOR
+
+N:895:Summon Waste Squad Trap
+I:20:5:40:6:45:0d0:v
+D:Wasteland monsters defend this!
+F:FLOOR | CHEST | DOOR
+
+N:896:Summon Wood Squad Trap
+I:18:5:40:6:35:0d0:v
+D:Woodland monsters defend this!
+F:FLOOR | CHEST | DOOR
+
+N:897:Summon Volcano Squad Trap
+I:30:5:40:6:60:0d0:v
+D:Volcano monsters defend this!
+F:FLOOR | CHEST | DOOR
+
+N:898:Summon Mountain Squad Trap
+I:20:5:40:6:45:0d0:v
+D:Mountain monsters defend this!
+F:FLOOR | CHEST | DOOR
+
+N:899:Summon Grass Squad Trap
+I:14:5:40:6:25:0d0:v
+D:Grassland monsters defend this!
+F:FLOOR | CHEST | DOOR
+
+N:900:Summon Giants Trap
+I:18:10:40:6:50:0d0:v
+D:A pack of giants defends this!
+F:FLOOR | CHEST | DOOR
+
+N:901:Summon Sexy Girls Trap
+I:15:5:40:6:25:0d0:v
+D:Several sexy girls defend this!
+F:FLOOR | CHEST | DOOR
+
+N:902:Summon Demons Trap
+I:14:25:40:6:30:0d0:v
+D:A pack of demons defends this!
+F:FLOOR | CHEST | DOOR
+
+N:903:Summon Dragons Trap
+I:14:25:40:6:30:0d0:v
+D:A pack of dragons defends this!
+F:FLOOR | CHEST | DOOR
+
+N:904:Summon Trolls Trap
+I:14:25:40:6:30:0d0:v
+D:A pack of trolls defends this!
+F:FLOOR | CHEST | DOOR
+
+N:905:Summon Orcs Trap
+I:13:25:40:6:25:0d0:v
+D:The orc hordes appear!
+F:FLOOR | CHEST | DOOR
+
+N:906:Summon Men Trap
+I:13:10:40:6:30:0d0:v
+D:A bunch of guys attacks you!
+F:FLOOR | CHEST | DOOR
+
+N:907:Summon Women Trap
+I:13:10:40:6:30:0d0:v
+D:A bunch of girls attacks you!
+F:FLOOR | CHEST | DOOR
+
+N:908:Summon Neutra Trap
+I:13:10:40:6:30:0d0:v
+D:A bunch of neuter creatures attacks you!
+F:FLOOR | CHEST | DOOR
+
+N:909:Summon Breeders Trap
+I:13:5:40:6:25:0d0:v
+D:Quick, the monsters started breeding explosively!
+F:FLOOR | CHEST | DOOR
+
+N:910:Summon Quylthulgs Trap
+I:13:50:10:10:30:0d0:v
+D:Parts of the owner seem to return from somewhere else.
+F:FLOOR | CHEST | DOOR
+
+N:911:Summon Mega Squad Trap
+I:10:2:40:4:30:0d0:v
+D:Many monsters defend the memory of the owner...
+F:FLOOR | CHEST | DOOR
+
+N:912:Hyper Animation Trap
+I:15:10:0:10:50:0d0:v
+D:Something seems to animate...
+F:FLOOR | CHEST | DOOR
+
+N:913:Summon Golem Trap
+I:5:10:40:6:15:0d0:v
+D:Someone animated a pack of golems!
+F:FLOOR | CHEST | DOOR
+
+N:914:Summon Golems Trap
+I:15:10:40:6:35:0d0:v
+D:Someone animated a pack of golems!
+F:FLOOR | CHEST | DOOR
+
+N:915:Statue Animation Trap
+I:10:10:0:10:25:0d0:v
+D:The statues seem to animate...
+F:FLOOR | CHEST | DOOR
+
+N:916:Loud Stir Trap
+I:5:20:40:6:20:0d0:v
+D:Something's stirring...
+F:FLOOR | CHEST | DOOR
+
+N:917:Droning Stir Trap
+I:10:10:40:6:40:0d0:v
+D:Something's stirring...
+F:FLOOR | CHEST | DOOR
+
+N:918:Deafening Stir Trap
+I:50:2:40:6:80:0d0:v
+D:Something's stirring...
+F:FLOOR | CHEST | DOOR
+
+N:919:Multiple Group Trap
+I:8:20:40:6:30:0d0:v
+D:You feel the presence of a group.
+F:FLOOR | CHEST | DOOR
+
+N:920:Many Group Trap
+I:10:10:40:6:50:0d0:v
+D:You feel the presence of a group.
+F:FLOOR | CHEST | DOOR
+
+N:921:Plentiful Group Trap
+I:50:2:40:6:75:0d0:v
+D:You feel the presence of a group.
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

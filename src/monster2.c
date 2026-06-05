@@ -3998,6 +3998,12 @@ bool summon_specific_okay(int r_idx)
 			break;
 		}
 
+	case SUMMON_GOLEM:
+		{
+			okay = (r_ptr->d_char == 'g');
+			break;
+		}
+
 	case SUMMON_MAN:
 		{
 			okay = (r_ptr->flags1 & RF1_MALE);
