@@ -135,6 +135,11 @@ I:7:100:5:8:40:0d0:b
 D:A poisoned needle scars you permanently!
 F:FLOOR | CHEST | DOOR
 
+N:19:Exploration Trap
+I:5:50:50:3:20:0d0:r
+D:You develop some kind of amnesia...
+F:FLOOR | CHEST | DOOR
+
 #
 # miscellaneous traps
 #
@@ -312,6 +317,16 @@ F:FLOOR | CHEST | DOOR
 N:54:Trap of Drain Speed
 I:8:50:10:25:30:0d0:y
 D:You suddenly seem to have more time to self-reflect...
+F:FLOOR | CHEST | DOOR
+
+N:55:Distribution Trap
+I:2:50:0:3:5:0d0:o
+D:There might be more traps around...
+F:FLOOR | CHEST | DOOR
+
+N:56:Wide Scatter Trap
+I:10:10:0:3:30:0d0:o
+D:There might be more traps around...
 F:FLOOR | CHEST | DOOR
 
 #
@@ -4214,37 +4229,37 @@ F:FLOOR
 
 N:854:Lasting Amnesia Trap
 I:10:10:0:10:20:0d0:o
-D:laber
+D:You forget what the floor looks like!
 F:FLOOR | CHEST | DOOR
 
 N:855:Anti-Teleportation Trap
 I:10:10:0:10:30:0d0:o
-D:laber
+D:You can't teleport anymore!
 F:FLOOR | CHEST | DOOR
 
 N:856:Ungenocide Trap
 I:15:10:0:10:40:0d0:o
-D:laber
+D:The political correctness brigade bans the use of genocide.
 F:FLOOR | CHEST | DOOR
 
 N:857:Drowning Trap
 I:20:10:0:10:50:0d0:o
-D:laber
+D:The dungeon is suddenly underwater!
 F:FLOOR | CHEST | DOOR
 
 N:858:Suffocation Trap
 I:25:10:0:10:80:0d0:o
-D:laber
+D:The dungeon has no air anymore!
 F:FLOOR | CHEST | DOOR
 
 N:859:Uneasy Move Trap
 I:20:5:0:10:33:0d0:o
-D:laber
+D:You cannot use easy move anymore!
 F:FLOOR | CHEST | DOOR
 
 N:860:Recall Lock Trap
 I:15:5:0:10:25:0d0:o
-D:laber
+D:You can't recall out of the level anymore!
 F:FLOOR | CHEST | DOOR
 
 N:861:Summon Quylthulg Trap
@@ -4551,6 +4566,86 @@ N:921:Plentiful Group Trap
 I:50:2:40:6:75:0d0:v
 D:You feel the presence of a group.
 F:FLOOR | CHEST | DOOR
+
+N:922:Necro Trap
+I:20:20:5:0:80:0d0:r
+D:You become undead!
+F:FLOOR | CHEST | DOOR
+
+N:923:Disperse Trap
+I:3:100:5:0:20:0d0:r
+D:Your buffs end!
+F:FLOOR | CHEST | DOOR
+
+N:924:Double Teleport Trap
+I:3:100:50:3:20:0d0:w
+D:Now you know why nobody ever got close enough to disarm this trap...
+F:FLOOR | CHEST | DOOR
+
+N:925:Alter Reality Trap
+I:20:10:0:10:50:0d0:o
+D:The world changes!
+F:FLOOR | CHEST | DOOR
+
+N:926:Bottle Snatch Trap
+I:2:100:10:4:5:0d0:y
+D:Your bottles have been stolen!
+F:FLOOR | CHEST | DOOR
+
+N:927:Cleanup Trap
+I:2:100:10:4:5:0d0:y
+D:You're not carrying any junk anymore!
+F:FLOOR | CHEST | DOOR
+
+N:928:Trap of Blast Weapon
+I:3:100:40:4:10:0d0:y
+D:Your weapon becomes crappy!
+F:FLOOR | CHEST | DOOR
+
+N:929:Trap of Greater Blast Weapon
+I:10:20:40:4:30:0d0:y
+D:Your weapon becomes crappy!
+F:FLOOR | CHEST | DOOR
+
+N:930:Trap of Ultimate Blast Weapon
+I:50:2:40:4:50:0d0:y
+D:Your weapon becomes crappy!
+F:FLOOR | CHEST | DOOR
+
+N:931:Trap of Blast Armor
+I:3:100:40:4:10:0d0:y
+D:Your armor becomes crappy!
+F:FLOOR | CHEST | DOOR
+
+N:932:Trap of Greater Blast Armor
+I:10:20:40:4:30:0d0:y
+D:Your armor becomes crappy!
+F:FLOOR | CHEST | DOOR
+
+N:933:Trap of Ultimate Blast Armor
+I:50:2:40:4:50:0d0:y
+D:Your armor becomes crappy!
+F:FLOOR | CHEST | DOOR
+
+N:934:Double Trap
+I:5:50:5:0:20:0d0:G
+D:What the hell just happened?!
+F:FLOOR
+
+N:935:Triple Trap
+I:10:20:5:0:40:0d0:G
+D:What the hell just happened?!
+F:FLOOR
+
+N:936:Quadruple Trap
+I:20:10:5:0:60:0d0:G
+D:What the hell just happened?!
+F:FLOOR
+
+N:937:Pentuple Trap
+I:50:2:5:0:80:0d0:G
+D:What the hell just happened?!
+F:FLOOR
 
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color

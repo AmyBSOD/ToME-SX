@@ -2705,6 +2705,8 @@
 #define TRAP_OF_BEAUTY_II                  17
 #define TRAP_OF_BEAUTY_III                 18
 
+#define TRAP_OF_EXPLORATION                19
+
 #define TRAP_OF_CURSE_WEAPON               20
 #define TRAP_OF_CURSE_ARMOR                21
 #define TRAP_OF_EARTHQUAKE                 22
@@ -2740,6 +2742,9 @@
 #define TRAP_OF_WASTING_WANDS              52
 #define TRAP_OF_FILLING                    53
 #define TRAP_OF_DRAIN_SPEED                54
+
+#define TRAP_OF_INTERLACE_LOW              55
+#define TRAP_OF_INTERLACE_HI               56
 
 #define TRAP_OF_ELEC_BOLT                  60
 #define TRAP_OF_POIS_BOLT                  61
@@ -3739,6 +3744,25 @@
 #define TRAP_OF_GROUP_II                  919
 #define TRAP_OF_GROUP_III                 920
 #define TRAP_OF_GROUP_IV                  921
+
+#define TRAP_OF_NECRO                     922
+#define TRAP_OF_DISPERSE                  923
+#define TRAP_OF_DOUBLE_TELEPORT           924
+#define TRAP_OF_ALTER_REALITY             925
+#define TRAP_OF_BOTTLE_SNATCH             926
+#define TRAP_OF_UNTRASH                   927
+
+#define TRAP_OF_BLAST_WEAPON              928
+#define TRAP_OF_BLAST_WEAPON_II           929
+#define TRAP_OF_BLAST_WEAPON_III          930
+#define TRAP_OF_BLAST_ARMOR               931
+#define TRAP_OF_BLAST_ARMOR_II            932
+#define TRAP_OF_BLAST_ARMOR_III           933
+
+#define TRAP_OF_UNKNOWN_DOUBLE            934
+#define TRAP_OF_UNKNOWN_TRIPLE            935
+#define TRAP_OF_UNKNOWN_QUAD              936
+#define TRAP_OF_UNKNOWN_PENTA             937
 
 /*** General index values ***/
 
