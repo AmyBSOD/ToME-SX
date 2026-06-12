@@ -816,6 +816,9 @@ static void chest_death(int y, int x, s16b o_idx)
 				continue;
 		}
 
+		q_ptr->found = OBJ_FOUND_CHEST;
+		q_ptr->found_aux2 = object_level;
+
 		/* Drop it in the dungeon */
 		drop_near(q_ptr, -1, y, x);
 	}

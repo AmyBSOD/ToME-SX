@@ -1101,6 +1101,8 @@ void outfit_obj(int tv, int sv, int pval, int dd, int ds)
 	q_ptr->ident |= IDENT_MENTAL;
 	q_ptr->number = damroll(dd, ds);
 
+	q_ptr->found = OBJ_FOUND_BIRTH;
+
 	object_aware(q_ptr);
 	object_known(q_ptr);
 	(void)inven_carry(q_ptr, FALSE);

@@ -4380,9 +4380,21 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		{
 			text_out("\nYou found it lying on the floor of a special level.");
 		}
+		else if (o_ptr->found == OBJ_FOUND_WIZMODE)
+		{
+			text_out("\nYou created this item by using cheat codes.");
+		}
+		else if (o_ptr->found == OBJ_FOUND_BIRTH)
+		{
+			text_out("\nYou brought this item with you when you started your adventure.");
+		}
 		else if (o_ptr->found == OBJ_FOUND_RUBBLE)
 		{
 			text_out("\nYou found it while digging a rubble.");
+		}
+		else if (o_ptr->found == OBJ_FOUND_CHEST)
+		{
+			text_out(format("\nYou found it in a level %d chest.", o_ptr->found_aux2));
 		}
 		else if (o_ptr->found == OBJ_FOUND_REWARD)
 		{

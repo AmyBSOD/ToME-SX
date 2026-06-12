@@ -405,6 +405,9 @@
 #define OBJ_FOUND_STORE         7
 #define OBJ_FOUND_STOLEN        8
 #define OBJ_FOUND_SELFMADE      9
+#define OBJ_FOUND_CHEST         10
+#define OBJ_FOUND_WIZMODE       11
+#define OBJ_FOUND_BIRTH         12
 /*
  * There is a 1/20 (5%) chance of inflating the requested object_level
  * during the creation of an object (see "get_obj_num()" in "object.c").

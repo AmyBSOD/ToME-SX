@@ -1415,6 +1415,8 @@ static void wiz_create_item(void)
 	/* Apply magic (no messages, no artifacts) */
 	apply_magic(q_ptr, dun_level, FALSE, FALSE, FALSE);
 
+	q_ptr->found = OBJ_FOUND_WIZMODE;
+
 	/* Drop the object from heaven */
 	drop_near(q_ptr, -1, p_ptr->py, p_ptr->px);
 
