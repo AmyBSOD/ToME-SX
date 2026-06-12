@@ -1821,6 +1821,13 @@ bool bldg_process_command(store_type *s_ptr, int i)
 			break;
 		}
 
+	case BACT_CURE_CORRUPT:
+		{
+			paid = TRUE;
+			lose_corruption(0);
+			break;
+		}
+
 	case BACT_INVEST:
 		{
 			int investcost = (1 + s_ptr->investment);

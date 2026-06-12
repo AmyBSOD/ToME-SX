@@ -1598,7 +1598,7 @@ int cli_total = 0;
 /*
  * max_bact, only used so that lua scripts can add new bacts without worrying about the numbers
  */
-int max_bact = 54;
+int max_bact = 64;
 
 /*
  * Max corruptions

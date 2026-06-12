@@ -500,7 +500,7 @@ G:+:s
 W:0
 
 N:31:Earth-Dome (Nature)
-A:0:0:39:0:0:0
+A:0:0:39:63:0:0
 O:61:118:119:120
 G:+:U
 W:0
@@ -1593,6 +1593,17 @@ G:7:w
 F:RANDOM | SHALLOW_LEVEL
 F:VERY_RARE
 W:6
+
+N:84:Hospital
+A:2:4:39:63:62:29
+O:146:147:148:149
+G:+:R
+I:100:Cure Light Wounds
+I:100:Cure Serious Wounds
+I:100:Cure Critical Wounds
+I:100:Healing
+I:100:Curing
+W:5
 
 # N:<index>:<name>
 # I:<proba>:<item name> - for making the store sell a specific item

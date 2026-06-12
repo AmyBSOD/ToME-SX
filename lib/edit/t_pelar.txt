@@ -56,6 +56,9 @@ F:j:74:3:0:0:0:0:0:15
 # Beastmaster
 F:k:74:3:0:0:0:0:0:16
 
+# Hospital
+F:q:74:3:0:0:0:0:0:84
+
 # better shops by Amy
 # General Store
 F:1:74:3:0:0:0:0:0:75
@@ -126,7 +129,7 @@ D:#-------------------------------------------------@VVVVV@####,,#####,,,,,O,,,,
 D:#-------------------------------------------------@VVVVV@####,,,,O,,,,,,,,O,,,OO,,,,,#######,,,,##aaaaaaa#####aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#
 D:#-------------------------------------------------@VVVVV@####,,,,O,,,,,.,,OOOO,O,,,,,###B###,,,,,##aaaaaaa##aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#
 D:#-------------------------------------------------@VVVVV@####,,##k##,,,,,O##j##,O,,,,#######,,,,,,##aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#
-D:#-------------------------------------------------@VVVVV@####,,#####,,,,O,#####,,O,,,#######,,,,,,###aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#
+D:#-------------------------------------------------@VVVVV@####,,#####,,,,O,#####,,O,,,###q###,,,,,,###aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#
 D:#-------------------------------------------------@VVVVV@####,,#####,,,O,,#####,,,O,,,,,,,,,,,,,#####aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#
 D:#-------------------------------------------------@VVVVV@####,,,,O,,,,O,,,,,,,,,,,,O,,,,,,,,,#####aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#
 D:#-------------------------------------------------@VVVVV@####,,,,O,,,O,,,,,,,,,,,,,,O,,,,,#####aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa#

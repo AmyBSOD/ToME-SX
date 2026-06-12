@@ -5373,6 +5373,7 @@ extern int PlayerUID;
 #define BACT_GET_LOAN               52
 #define BACT_PAY_BACK_LOAN          53
 #define BACT_INVEST                 62
+#define BACT_CURE_CORRUPT           63
 // If one adds new BACT_ do NOT forget to increase max_bact in variables.c
 
 

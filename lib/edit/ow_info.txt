@@ -21,7 +21,7 @@ N:0:Bilbo the Friendly(Hobbit)
 I:20000:170:108:5:15
 C:120:100:80
 L:Elf | Half-Elf | High-Elf | Dunadan | Hobbit | Dwarf | RohanKnight | Wood-Elf
-L:Sea-Elf | Ice-Dwarf
+L:Sea-Elf | Ice-Dwarf | Seelie-Fae
 H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold | Centaur
 
 N:1:Uldrik(Human)
@@ -48,7 +48,7 @@ H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 N:4:Mirimbar(High-Elf)
 I:0:170:108:1:1
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:5:Raistlin the Chicken(Human)
@@ -67,6 +67,7 @@ N:7:Lyar-el the Comely(Elf)
 I:30000:165:107:6:18
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:8:Kon-Dar the Ugly(Half-Orc)
@@ -74,7 +75,7 @@ I:10000:210:115:5:7
 C:120:100:80
 L:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin
 H:Gnome | Dwarf | Human | RohanKnight | Elf | Half-Elf | High-Elf | Wood-Elf
-H:Sea-Elf | Lizardman | Ice-Dwarf
+H:Sea-Elf | Lizardman | Seelie-Fae | Ice-Dwarf
 
 N:9:Darg-Low the Grim(Human)
 I:20000:190:111:4:9
@@ -102,6 +103,7 @@ N:13:Arndal Beast-Slayer(Half-Elf)
 I:20000:185:110:5:9
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:14:Eddie Beast-Master(Half-Orc)
@@ -109,7 +111,7 @@ I:25000:190:115:5:7
 C:120:100:80
 L:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin
 H:Gnome | Dwarf | Human | RohanKnight | Elf | Half-Elf | High-Elf | Wood-Elf
-H:Sea-Elf | Lizardman | Ice-Dwarf
+H:Sea-Elf | Lizardman | Ice-Dwarf | Seelie-Fae
 
 N:15:Oglign Dragon-Slayer(Dwarf)
 I:30000:195:112:4:8
@@ -148,6 +150,7 @@ N:21:Tanistil(Elf)
 I:5000:210:115:6:6
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:22:Eldore(Human)
@@ -166,6 +169,7 @@ N:24:Angros(Elf)
 I:5000:210:115:6:6
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:25:Palano(Thunderlord)
@@ -185,12 +189,12 @@ I:10000:185:110:5:23
 C:120:100:80
 L:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin
 H:Gnome | Dwarf | Human | RohanKnight | Elf | Half-Elf | High-Elf | Wood-Elf
-H:Sea-Elf | Lizardman | Ice-Dwarf
+H:Sea-Elf | Lizardman | Ice-Dwarf | Seelie-Fae
 
 N:28:Torin the Chosen(High-Elf)
 I:25000:180:107:6:20
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:29:Sarastro the Wise(Human)
@@ -211,7 +215,7 @@ N:31:Wizzle the Chaotic(Hobbit)
 I:20000:190:110:6:8
 C:120:100:80
 L:Elf | Half-Elf | High-Elf | Dunadan | Hobbit | Dwarf | RohanKnight
-L:Wood-Elf | Sea-Elf | Ice-Dwarf
+L:Wood-Elf | Sea-Elf | Ice-Dwarf | Seelie-Fae
 H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold | Gremlin
 H:Centaur
 
@@ -225,6 +229,7 @@ N:33:Ja-Far the Alchemist(Elf)
 I:30000:220:111:4:9
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:34:Ariel the Sorceress(Half-Elf)
@@ -250,20 +255,20 @@ H:Centaur
 N:37:Luthien Starshine(High-Elf)
 I:30000:175:110:5:11
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:38:Gary Gygaz(Half-Troll)
 I:20000:250:150:10:5
 C:120:100:80
 H:Gnome | Dwarf | Human | RohanKnight | Elf | Half-Elf | High-Elf | Wood-Elf
-H:Sea-Elf | Lizardman | Ice-Dwarf
+H:Sea-Elf | Lizardman | Ice-Dwarf | Seelie-Fae
 
 N:39:Histor the Goblin(Half-Orc)
 I:20000:250:150:10:5
 C:120:100:80
 H:Gnome | Dwarf | Human | RohanKnight | Elf | Half-Elf | High-Elf | Wood-Elf
-H:Sea-Elf | Lizardman | Ice-Dwarf
+H:Sea-Elf | Lizardman | Ice-Dwarf | Seelie-Fae
 
 N:40:Zorak the Smart(Dwarf)
 I:30000:250:150:10:5
@@ -286,19 +291,20 @@ H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 N:43:Odnar the Sage(High-Elf)
 I:15000:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:44:Gandar the Neutral(Dark-Elf)
 I:25000:120:110:7:19
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:45:Ro-sha the Patient(Elf)
 I:30000:140:105:6:12
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:46:N'rak the Summoner(Human)
@@ -310,7 +316,7 @@ H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 N:47:Esperion the Beastlover(High-Elf)
 I:15000:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:48:Flarim the Shopkeeper(Dunadan)
@@ -323,114 +329,120 @@ N:49:Tril-akheb the Supreme(Elf)
 I:30000:140:105:6:12
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:50:Dorchel(Elf)
 I:30000:140:105:6:12
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:51:Galadriel(High-Elf)
 I:15000:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:52:Celeborn(High-Elf)
 I:15000:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:53:Aulendil(Elf)
 I:30000:140:105:6:12
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:54:Valceronwe(Elf)
 I:30000:140:105:6:12
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:55:Voronwe(Elf)
 I:30000:140:105:6:12
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:56:Celegail(Elf)
 I:30000:140:105:6:12
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:57:Turgon(High-Elf)
 I:30000:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:58:Pengolodh(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:59:Aerandir(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:60:Celebrimbor(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:61:Lomelosse(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:62:Arlindel(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:63:Sulraen(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:64:Firiel(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:65:Earendur(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:66:Glorfindel(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:67:Ecthelion(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:68:Kanris(Human)
@@ -499,13 +511,14 @@ H:Centaur
 N:77:Rumil(High-Elf)
 I:0:170:108:1:1
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:78:Elrond(Half-Elf)
 I:0:170:108:1:1
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:79:Ethelred(Human)
@@ -554,18 +567,21 @@ N:88:Carahil(Elf)
 I:5000:210:115:6:6
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:89:Uravasa(Elf)
 I:5000:210:115:6:6
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:90:Glistel(Elf)
 I:5000:210:115:6:6
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:91:Edla(Human)
@@ -608,6 +624,7 @@ N:97:Tandilwe(Elf)
 I:5000:210:115:6:6
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:98:Bugak gro-Bol(Half-Orc)
@@ -615,7 +632,7 @@ I:5000:210:115:6:6
 C:120:100:80
 L:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin
 H:Gnome | Dwarf | Human | RohanKnight | Elf | Half-Elf | High-Elf | Wood-Elf
-H:Sea-Elf | Lizardman | Ice-Dwarf
+H:Sea-Elf | Lizardman | Ice-Dwarf | Seelie-Fae
 
 N:99:Martina(Human)
 I:5000:210:115:6:6
@@ -645,223 +662,229 @@ N:103:Ingwe(Elf)
 I:30000:140:105:6:12
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:104:Caranthir(Elf)
 I:30000:140:105:6:12
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:105:Elladan(Elf)
 I:30000:140:105:6:12
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:106:Aredhel(Elf)
 I:30000:140:105:6:12
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:107:Beleg(Elf)
 I:30000:140:105:6:12
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:108:Gildor(Elf)
 I:30000:140:105:6:12
 C:120:100:80
 L:Elf | Half-Elf | Dark-Elf | High-Elf | Wood-Elf | Sea-Elf | Deep-Elf
+L:Unseelie-Fae | Seelie-Fae |
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:109:Emmindor(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:110:Palomir(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:111:Erlinmir(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:112:Nil-Galand(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:113:Lindir(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:114:Alboin(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:115:Enedor(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:116:Landaer(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:117:Gorfuithor(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:118:Naredir(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:119:Nallon(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:120:Thalawestion(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:121:Bothon(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:122:Bamben(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:123:Dammon(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:124:Gannon(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:125:Calemben(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:126:Tara(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:127:Esgal(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:128:Neithor(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:129:Gador(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:130:Galadhel(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:131:Luthil(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:132:Megorien(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:133:Mudadis(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:134:Aphedrien(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:135:Larien(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:136:Thranduil(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:137:Thingol(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:138:Fingolfin(High-Elf)
 I:0:120:105:6:16
 C:120:100:80
-L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf
+L:High-Elf | Half-Elf | Wood-Elf | Sea-Elf | Seelie-Fae
 H:Orc | Troll | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 
 N:139:Bell Gamgee(Hobbit)
 I:100:170:108:4:10
 C:120:100:80
 L:Elf | Half-Elf | High-Elf | Dunadan | Hobbit | Dwarf | RohanKnight
-L:Wood-Elf | Sea-Elf | Ice-Dwarf
+L:Wood-Elf | Sea-Elf | Ice-Dwarf | Seelie-Fae
 H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold | Gremlin
 H:Centaur
 
@@ -869,7 +892,7 @@ N:140:Peregrin Took(Hobbit)
 I:100:170:108:4:10
 C:120:100:80
 L:Elf | Half-Elf | High-Elf | Dunadan | Hobbit | Dwarf | RohanKnight
-L:Wood-Elf | Sea-Elf | Ice-Dwarf
+L:Wood-Elf | Sea-Elf | Ice-Dwarf | Seelie-Fae
 H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold | Gremlin
 H:Centaur
 
@@ -877,7 +900,7 @@ N:141:Folco Boffin(Hobbit)
 I:100:170:108:4:10
 C:120:100:80
 L:Elf | Half-Elf | High-Elf | Dunadan | Hobbit | Dwarf | RohanKnight
-L:Wood-Elf | Sea-Elf | Ice-Dwarf
+L:Wood-Elf | Sea-Elf | Ice-Dwarf | Seelie-Fae
 H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold | Gremlin
 H:Centaur
 
@@ -886,7 +909,7 @@ I:1000:200:150:4:7
 C:180:150:110
 L:Human
 H:Elf | Half-Elf | High-Elf | Dunadan | Hobbit | Dwarf | RohanKnight
-H:Wood-Elf | Centaur | Sea-Elf | Ice-Dwarf
+H:Wood-Elf | Centaur | Sea-Elf | Ice-Dwarf | Seelie-Fae
 H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold | Gremlin
 
 N:143:Ulfberth(Human)
@@ -894,7 +917,7 @@ I:2000:200:150:4:7
 C:180:150:110
 L:Human
 H:Elf | Half-Elf | High-Elf | Dunadan | Hobbit | Dwarf | RohanKnight
-H:Wood-Elf | Centaur | Sea-Elf | Ice-Dwarf
+H:Wood-Elf | Centaur | Sea-Elf | Ice-Dwarf | Seelie-Fae
 H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold | Gremlin
 
 N:144:Ogrok gro-Bonk(Orc)
@@ -902,14 +925,38 @@ I:3000:200:150:4:7
 C:180:150:110
 L:Orc
 H:Elf | Half-Elf | High-Elf | Dunadan | Hobbit | Dwarf | RohanKnight
-H:Wood-Elf | Sea-Elf | Lizardman | Ice-Dwarf
+H:Wood-Elf | Sea-Elf | Lizardman | Ice-Dwarf | Seelie-Fae
 H:Troll | DeathMold | Half-Ogre | Beorning | Kobold | Gremlin
 
 N:145:Feros Duul(Dark-Elf)
 I:5000:200:150:4:7
 C:180:150:110
-L:Dark-Elf | Deep-Elf
+L:Dark-Elf | Deep-Elf | Unseelie-Fae |
 H:Elf | Half-Elf | High-Elf | Dunadan | Hobbit | Dwarf | RohanKnight
 H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold | Gremlin
-H:Wood-Elf | Centaur | Sea-Elf | Ice-Dwarf
+H:Wood-Elf | Centaur | Sea-Elf | Ice-Dwarf | Seelie-Fae
+
+N:146:Fara(Orc)
+I:3000:130:110:4:10
+C:120:100:90
+L:Orc
+H:Elf | Half-Elf | High-Elf | Dunadan | Hobbit | Dwarf | RohanKnight
+H:Wood-Elf | Sea-Elf | Lizardman | Ice-Dwarf | Seelie-Fae
+H:Troll | DeathMold | Half-Ogre | Beorning | Kobold | Gremlin
+
+N:147:Malah(Barbarian)
+I:3000:130:110:4:10
+C:120:100:90
+
+N:148:Akara(Human)
+I:3000:130:110:4:10
+C:120:100:90
+L:Dunadan | Hobbit | Human |
+H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
+
+N:149:Jamella(Human)
+I:3000:130:110:4:10
+C:120:100:90
+L:Dunadan | Hobbit | Human |
+H:Orc | Troll | DeathMold | Half-Ogre | Beorning | Kobold | Gremlin | Centaur
 

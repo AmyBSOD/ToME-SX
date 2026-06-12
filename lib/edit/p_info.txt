@@ -3368,7 +3368,9 @@ R:k:=0:=0:Prayer
 R:k:=0:=0:Demonology
 R:k:=0:=0:Udun
 
-R:N:36:Seelie Fae
+# GNNNNNNNNNNNN who the HELL invented that parser for ow_info.txt that can't handle spaces :/
+# those names look stupid with the hyphens... --Amy
+R:N:36:Seelie-Fae
 R:D:Good fairies.
 R:S:-2:6:-4:2:2:6:2
 R:K:0:0:0:0:0:10:0:0
@@ -3379,7 +3381,7 @@ R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:R:1:0
 R:F:HOLD_LIFE | FEATHER
 
-R:N:37:Unseelie Fae
+R:N:37:Unseelie-Fae
 R:D:Bad fairies.
 R:S:6:2:6:-4:-2:2:-2
 R:K:0:0:0:0:0:10:0:0
