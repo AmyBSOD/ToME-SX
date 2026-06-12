@@ -3368,7 +3368,29 @@ R:k:=0:=0:Prayer
 R:k:=0:=0:Demonology
 R:k:=0:=0:Udun
 
-R:N:36:Ice-Dwarf
+R:N:36:Seelie Fae
+R:D:Good fairies.
+R:S:-2:6:-4:2:2:6:2
+R:K:0:0:0:0:0:10:0:0
+R:P:5:140:6:10
+R:M:120:30:40:3:36:4:90:10:85:15
+R:E:1:1:1:2:1:1
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:R:1:0
+R:F:HOLD_LIFE | FEATHER
+
+R:N:37:Unseelie Fae
+R:D:Bad fairies.
+R:S:6:2:6:-4:-2:2:-2
+R:K:0:0:0:0:0:10:0:0
+R:P:6:140:10:10
+R:M:120:30:40:5:36:5:90:10:85:15
+R:E:1:1:1:2:1:1
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:R:1:0
+R:F:SEE_INVIS | FEATHER | SAVING_MALUS | 
+
+R:N:38:Ice-Dwarf
 R:D:They inhabit the cold northern regions of the world, they are very strong
 R:D:Miners and fighters of legend. These Dwarves stayed in the north since before the eldar
 R:D:came.They are stronger than normal dwarves.
