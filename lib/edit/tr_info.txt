@@ -329,6 +329,21 @@ I:10:10:0:3:30:0d0:o
 D:There might be more traps around...
 F:FLOOR | CHEST | DOOR
 
+N:57:Dispelling Trap
+I:45:2:50:4:25:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:58:Retirement Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:59:Delay Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
 #
 # bolt traps
 #
@@ -560,6 +575,36 @@ N:103:Gravity Ball Trap
 I:8:60:5:8:20:3d18:B
 D:You suddenly feel gravity warp violently around you!
 F:FLOOR | CHEST | DOOR | LEVEL3
+
+N:104:Combustion Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:105:Sun Damage Trap
+I:55:2:50:4:35:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:106:Bad Fighting Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:107:Bad Ranged Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:108:Negative Stealth Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:109:Detection Line Trap
+I:25:2:50:4:5:0d0:s
+D:Nasty!
+F:FLOOR
 
 N:110:Arrow Trap
 I:2:100:0:5:2:0d0:R
@@ -4786,6 +4831,16 @@ N:965:Summon Yeeks Trap
 I:13:20:40:6:22:0d0:v
 D:Hahahahahahaha... are you supposed to be scared now?
 F:FLOOR | CHEST | DOOR
+
+N:966:Stat Trash Trap
+I:70:2:50:4:50:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:967:Anti Digging Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
 
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color

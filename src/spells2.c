@@ -2393,6 +2393,50 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: The range of your missiles and spells is limited.";
 	}
+	if (p_ptr->nastytrap188)
+	{
+		info[i++] = "You have a problem: Your buffs randomly end.";
+	}
+	if (p_ptr->nastytrap189)
+	{
+		info[i++] = "You have a problem: Shopkeepers retire more often.";
+	}
+	if (p_ptr->nastytrap190)
+	{
+		info[i++] = "You have a problem: The graphics delay is maximized.";
+	}
+	if (p_ptr->nastytrap191)
+	{
+		info[i++] = "You have a problem: You're vulnerable to fire.";
+	}
+	if (p_ptr->nastytrap192)
+	{
+		info[i++] = "You have a problem: You're vulnerable to bright light.";
+	}
+	if (p_ptr->nastytrap193)
+	{
+		info[i++] = "You have a problem: Your fighting ability is shit.";
+	}
+	if (p_ptr->nastytrap194)
+	{
+		info[i++] = "You have a problem: Your bows/throw ability is shit.";
+	}
+	if (p_ptr->nastytrap195)
+	{
+		info[i++] = "You have a problem: Your stealth is completely shit.";
+	}
+	if (p_ptr->nastytrap196)
+	{
+		info[i++] = "You have a problem: There is no trap detection line.";
+	}
+	if (p_ptr->nastytrap197)
+	{
+		info[i++] = "You have a problem: Your stats are a lot lower.";
+	}
+	if (p_ptr->nastytrap198)
+	{
+		info[i++] = "You have a problem: Your digging ability is shit.";
+	}
 
 	if (p_ptr->contamination >= 10000)
 	{
@@ -2899,7 +2943,7 @@ bool detect_traps(int rad)
 			c_ptr = &cave[y][x];
 
 			/* mark as detected */
-			c_ptr->info |= CAVE_DETECT;
+			if (!p_ptr->nastytrap196) c_ptr->info |= CAVE_DETECT;
 
 			/* Detect invisible traps */
 			if (c_ptr->t_idx != 0)
@@ -2970,7 +3014,7 @@ bool detect_traps_nasty(int rad)
 			c_ptr = &cave[y][x];
 
 			/* mark as detected */
-			c_ptr->info |= CAVE_DETECT;
+			if (!p_ptr->nastytrap196) c_ptr->info |= CAVE_DETECT;
 
 			/* Detect invisible traps */
 			if (c_ptr->t_idx != 0)
@@ -6307,6 +6351,7 @@ bool invoke(int dam, int typee)
 	char typ;
 	bool result = FALSE;
 	int msec = delay_factor * delay_factor * delay_factor;
+	if (p_ptr->nastytrap190) msec = 9 * 9 * 9;
 
 	if (dungeon_flags2 & DF2_NO_GENO) {
 		msg_print("A mysterious force stops the genocide.");
@@ -6380,6 +6425,7 @@ bool genocide_aux(bool player_cast, char typ)
 	int i;
 	bool result = FALSE;
 	int msec = delay_factor * delay_factor * delay_factor;
+	if (p_ptr->nastytrap190) msec = 9 * 9 * 9;
 	int dam = 0;
 	bool willdelete = TRUE;
 
@@ -6509,6 +6555,7 @@ bool mass_genocide(bool player_cast)
 	int i;
 	bool result = FALSE;
 	int msec = delay_factor * delay_factor * delay_factor;
+	if (p_ptr->nastytrap190) msec = 9 * 9 * 9;
 	int dam = 0;
 	bool willdelete;
 

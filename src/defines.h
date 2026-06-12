@@ -368,6 +368,7 @@
 #define BREAK_GLYPH             550             /* Rune of protection resistance */
 #define BREAK_MINOR_GLYPH       99             /* For explosive runes */
 #define BTH_PLUS_ADJ    3       /* Adjust BTH per plus-to-hit */
+#define BTH_PLUS_ADJ_NASTY    1  /* ditto but with nastytrap effect active --Amy */
 #define MON_MULT_ADJ    50              /* High value slows multiplication */
 #define MON_SUMMON_ADJ  2               /* Adjust level of summoned creatures */
 #define MON_DRAIN_LIFE  2               /* Percent of player exp drained per hit */
@@ -2746,6 +2747,10 @@
 #define TRAP_OF_INTERLACE_LOW              55
 #define TRAP_OF_INTERLACE_HI               56
 
+#define TRAP_NASTY188                      57
+#define TRAP_NASTY189                      58
+#define TRAP_NASTY190                      59
+
 #define TRAP_OF_ELEC_BOLT                  60
 #define TRAP_OF_POIS_BOLT                  61
 #define TRAP_OF_ACID_BOLT                  62
@@ -2791,6 +2796,13 @@
 #define TRAP_OF_NEXUS_BALL                101
 #define TRAP_OF_TIME_BALL                 102
 #define TRAP_OF_GRAVITY_BALL              103
+
+#define TRAP_NASTY191                     104
+#define TRAP_NASTY192                     105
+#define TRAP_NASTY193                     106
+#define TRAP_NASTY194                     107
+#define TRAP_NASTY195                     108
+#define TRAP_NASTY196                     109
 
 #define TRAP_OF_ARROW_I                   110
 #define TRAP_OF_ARROW_II                  111
@@ -3793,6 +3805,8 @@
 #define TRAP_OF_SUMMON_YEEK               964
 #define TRAP_OF_SUMMON_YEEK_X             965
 
+#define TRAP_NASTY197                     966
+#define TRAP_NASTY198                     967
 
 /*** General index values ***/
 

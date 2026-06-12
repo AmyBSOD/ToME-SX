@@ -899,6 +899,17 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY185:
 		case TRAP_NASTY186:
 		case TRAP_NASTY187:
+		case TRAP_NASTY188:
+		case TRAP_NASTY189:
+		case TRAP_NASTY190:
+		case TRAP_NASTY191:
+		case TRAP_NASTY192:
+		case TRAP_NASTY193:
+		case TRAP_NASTY194:
+		case TRAP_NASTY195:
+		case TRAP_NASTY196:
+		case TRAP_NASTY197:
+		case TRAP_NASTY198:
 			return FALSE;
 	}
 
@@ -1124,6 +1135,17 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY185:
 		case TRAP_NASTY186:
 		case TRAP_NASTY187:
+		case TRAP_NASTY188:
+		case TRAP_NASTY189:
+		case TRAP_NASTY190:
+		case TRAP_NASTY191:
+		case TRAP_NASTY192:
+		case TRAP_NASTY193:
+		case TRAP_NASTY194:
+		case TRAP_NASTY195:
+		case TRAP_NASTY196:
+		case TRAP_NASTY197:
+		case TRAP_NASTY198:
 			return FALSE;
 	}
 
@@ -1352,6 +1374,17 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY185:
 		case TRAP_NASTY186:
 		case TRAP_NASTY187:
+		case TRAP_NASTY188:
+		case TRAP_NASTY189:
+		case TRAP_NASTY190:
+		case TRAP_NASTY191:
+		case TRAP_NASTY192:
+		case TRAP_NASTY193:
+		case TRAP_NASTY194:
+		case TRAP_NASTY195:
+		case TRAP_NASTY196:
+		case TRAP_NASTY197:
+		case TRAP_NASTY198:
 			return TRUE;
 	}
 
@@ -17386,6 +17419,138 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY188:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap188 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY189:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap189 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY190:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap190 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY191:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap191 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY192:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap192 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY193:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap193 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY194:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap194 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY195:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap195 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY196:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap196 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY197:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap197 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY198:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap198 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHIT_I:
 		{
 			bool badheel = FALSE;
@@ -22173,7 +22338,7 @@ void multitraptrigger(int triggercnt)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(187)) {
+	switch (randint(198)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -22735,6 +22900,39 @@ void give_random_nastytrap_effect(void)
 		case 187:
 			p_ptr->nastytrap187 = TRUE;
 			break;
+		case 188:
+			p_ptr->nastytrap188 = TRUE;
+			break;
+		case 189:
+			p_ptr->nastytrap189 = TRUE;
+			break;
+		case 190:
+			p_ptr->nastytrap190 = TRUE;
+			break;
+		case 191:
+			p_ptr->nastytrap191 = TRUE;
+			break;
+		case 192:
+			p_ptr->nastytrap192 = TRUE;
+			break;
+		case 193:
+			p_ptr->nastytrap193 = TRUE;
+			break;
+		case 194:
+			p_ptr->nastytrap194 = TRUE;
+			break;
+		case 195:
+			p_ptr->nastytrap195 = TRUE;
+			break;
+		case 196:
+			p_ptr->nastytrap196 = TRUE;
+			break;
+		case 197:
+			p_ptr->nastytrap197 = TRUE;
+			break;
+		case 198:
+			p_ptr->nastytrap198 = TRUE;
+			break;
 
 	}
 }
@@ -22939,17 +23137,17 @@ void cure_nasty_traps(void)
 	if (effect_level >= 12) p_ptr->nastytrap185 = FALSE;
 	if (effect_level >= 10) p_ptr->nastytrap186 = FALSE;
 	if (effect_level >= 25) p_ptr->nastytrap187 = FALSE;
-	p_ptr->nastytrap188 = FALSE;
-	p_ptr->nastytrap189 = FALSE;
-	p_ptr->nastytrap190 = FALSE;
-	p_ptr->nastytrap191 = FALSE;
-	p_ptr->nastytrap192 = FALSE;
-	p_ptr->nastytrap193 = FALSE;
-	p_ptr->nastytrap194 = FALSE;
-	p_ptr->nastytrap195 = FALSE;
-	p_ptr->nastytrap196 = FALSE;
-	p_ptr->nastytrap197 = FALSE;
-	p_ptr->nastytrap198 = FALSE;
+	if (effect_level >= 25) p_ptr->nastytrap188 = FALSE;
+	if (effect_level >= 30) p_ptr->nastytrap189 = FALSE;
+	if (effect_level >= 30) p_ptr->nastytrap190 = FALSE;
+	if (effect_level >= 20) p_ptr->nastytrap191 = FALSE;
+	if (effect_level >= 35) p_ptr->nastytrap192 = FALSE;
+	if (effect_level >= 1) p_ptr->nastytrap193 = FALSE;
+	if (effect_level >= 1) p_ptr->nastytrap194 = FALSE;
+	if (effect_level >= 20) p_ptr->nastytrap195 = FALSE;
+	if (effect_level >= 5) p_ptr->nastytrap196 = FALSE;
+	if (effect_level >= 50) p_ptr->nastytrap197 = FALSE;
+	if (effect_level >= 1) p_ptr->nastytrap198 = FALSE;
 	p_ptr->nastytrap199 = FALSE;
 	p_ptr->nastytrap200 = FALSE;
 	p_ptr->nastytrap201 = FALSE;

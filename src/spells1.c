@@ -9616,6 +9616,7 @@ bool project(int who, int rad, int y, int x, int dam, int typ, int flg)
 	int y_saver, x_saver;  /* For reflecting monsters */
 
 	int msec = delay_factor * delay_factor * delay_factor;
+	if (p_ptr->nastytrap190) msec = 9 * 9 * 9;
 
 	/* Assume the player sees nothing */
 	bool notice = FALSE;

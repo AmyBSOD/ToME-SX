@@ -1603,6 +1603,8 @@ I:100:Cure Serious Wounds
 I:100:Cure Critical Wounds
 I:100:Healing
 I:100:Curing
+F:RANDOM |
+F:VERY_RARE
 W:5
 
 # N:<index>:<name>

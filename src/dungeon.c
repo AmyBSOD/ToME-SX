@@ -3711,6 +3711,17 @@ static void process_world(void)
 		contaminate(1);
 	}
 
+	if (p_ptr->nastytrap188 && rand_int(100) == 0) {
+		(void)set_lite(0);
+		(void)set_fast(0, 0);
+		(void)set_light_speed(0);
+		(void)set_meditation(0);
+		(void)set_hero(0);
+		(void)set_shero(0);
+		(void)set_blessed(0);
+		(void)set_shield(0, 0, 0, 0, 0);
+	}
+
 	if (p_ptr->nastytrap154 && rand_int(10000) == 0) {
 		int ktt;
 		trap_type *ft_ptr;

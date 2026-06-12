@@ -1773,6 +1773,7 @@ static void display_player_various(void)
 	int tmp, tmp2, damdice, damsides, dambonus, blows;
 	int xthn, xthb, xfos, xsrh;
 	int xdis, xdev, xsav, xstl;
+	int xdig;
 	cptr desc;
 	int i;
 
@@ -1783,11 +1784,13 @@ static void display_player_various(void)
 	o_ptr = &p_ptr->inventory[INVEN_WIELD];
 	tmp = p_ptr->to_h + o_ptr->to_h + p_ptr->to_h_melee;
 	xthn = p_ptr->skill_thn + (tmp * BTH_PLUS_ADJ);
+	if (p_ptr->nastytrap193) xthn = p_ptr->skill_thn + (tmp * BTH_PLUS_ADJ_NASTY);
 
 	/* Shooting Skill (with current bow and normal missile) */
 	o_ptr = &p_ptr->inventory[INVEN_BOW];
 	tmp = p_ptr->to_h + o_ptr->to_h + p_ptr->to_h_ranged;
 	xthb = p_ptr->skill_thb + (tmp * BTH_PLUS_ADJ);
+	if (p_ptr->nastytrap194) xthb = p_ptr->skill_thb + (tmp * BTH_PLUS_ADJ_NASTY);
 
 	/* variables for all types of melee damage */
 	dambonus = p_ptr->dis_to_d;
@@ -1800,6 +1803,7 @@ static void display_player_various(void)
 	xstl = p_ptr->skill_stl;
 	xsrh = p_ptr->skill_srh;
 	xfos = p_ptr->skill_fos;
+	xdig = p_ptr->skill_dig;
 
 
 	put_str("Fighting    :", 16, 1);
@@ -1817,6 +1821,10 @@ static void display_player_various(void)
 	put_str("Stealth     :", 19, 1);
 	desc = likert(xstl, 1);
 	c_put_str(likert_color, desc, 19, 15);
+
+	put_str("Digging     :", 20, 1);
+	desc = likert(xdig, 12);
+	c_put_str(likert_color, desc, 20, 15);
 
 
 	put_str("Perception  :", 16, 28);

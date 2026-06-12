@@ -2322,17 +2322,17 @@ struct player_type
 	bool nastytrap185; /* lvl 12, attraction trap - you have the attract monster effect */
 	bool nastytrap186; /* lvl 10, joined teleport trap - if you teleport, adjacent monsters with TPORT spell can always teleport too */
 	bool nastytrap187; /* lvl 25, low range trap - your ranged weapons and spells are limited to a range of 10 squares */
-	bool nastytrap188;
-	bool nastytrap189;
-	bool nastytrap190;
-	bool nastytrap191;
-	bool nastytrap192;
-	bool nastytrap193;
-	bool nastytrap194;
-	bool nastytrap195;
-	bool nastytrap196;
-	bool nastytrap197;
-	bool nastytrap198;
+	bool nastytrap188; /* lvl 25, dispelling trap - 1 in 100 chance per turn that your buffs end */
+	bool nastytrap189; /* lvl 30, retirement trap - shopkeepers retire more often */
+	bool nastytrap190; /* lvl 30, delay trap - graphics delay is maximized */
+	bool nastytrap191; /* lvl 20, combustion trap - you become vulnerable to fire */
+	bool nastytrap192; /* lvl 35, sun damage trap - you become vulnerable to light */
+	bool nastytrap193; /* lvl 1, bad fighting trap - your fighting ability is always shit */
+	bool nastytrap194; /* lvl 1, bad ranged trap - your bows/throw ability is always shit */
+	bool nastytrap195; /* lvl 20, negative stealth trap - your stealth rating is -10 if it was higher */
+	bool nastytrap196; /* lvl 5, detection line trap - dtrap is never set */
+	bool nastytrap197; /* lvl 50, stat trash trap - your stats are a lot lower */
+	bool nastytrap198; /* lvl 1, anti digging trap - your digging ability is always shit */
 	bool nastytrap199;
 	bool nastytrap200;
 	bool nastytrap201;

@@ -3498,6 +3498,7 @@ void do_cmd_fire(void)
 	cptr q, s;
 
 	int msec = delay_factor * delay_factor * delay_factor;
+	if (p_ptr->nastytrap190) msec = 9 * 9 * 9;
 
 	int critshotmult = 0; /* by Amy, because ammos weigh less */
 
@@ -3637,6 +3638,7 @@ void do_cmd_fire(void)
 	bonus = (p_ptr->to_h + p_ptr->to_h_ranged + q_ptr->to_h + j_ptr->to_h);
 
 	chance = (p_ptr->skill_thb + (bonus * BTH_PLUS_ADJ));
+	if (p_ptr->nastytrap194) chance = (p_ptr->skill_thb + (bonus * BTH_PLUS_ADJ_NASTY));
 	if (chance < 5) chance = 5;
 
 	tmul = get_shooter_mult(j_ptr);
@@ -4182,6 +4184,7 @@ void do_cmd_throw(void)
 	char o_name[80];
 
 	int msec = delay_factor * delay_factor * delay_factor;
+	if (p_ptr->nastytrap190) msec = 9 * 9 * 9;
 
 	cptr q, s;
 
@@ -4298,6 +4301,7 @@ void do_cmd_throw(void)
 
 	/* Chance of hitting - adjusted for Weaponmasters -- Gumby */
 	chance = (p_ptr->skill_tht + (p_ptr->to_h * BTH_PLUS_ADJ));
+	if (p_ptr->nastytrap194) chance = (p_ptr->skill_tht + (p_ptr->to_h * BTH_PLUS_ADJ_NASTY));
 
 	/* Take a turn */
 	energy_use = 100;
@@ -4621,6 +4625,7 @@ void do_cmd_boomerang(void)
 	s32b special = 0;
 
 	int msec = delay_factor * delay_factor * delay_factor;
+	if (p_ptr->nastytrap190) msec = 9 * 9 * 9;
 
 
 	/* Get the "bow" (if any) */
@@ -4668,6 +4673,10 @@ void do_cmd_boomerang(void)
 	chance =
 	        (p_ptr->skill_tht + q_ptr->to_h + 
 	         ((p_ptr->to_h + p_ptr->to_h_ranged) * BTH_PLUS_ADJ));
+
+	if (p_ptr->nastytrap194) chance =
+	        (p_ptr->skill_tht + q_ptr->to_h + 
+	         ((p_ptr->to_h + p_ptr->to_h_ranged) * BTH_PLUS_ADJ_NASTY));
 
 	chance += get_skill(SKILL_BOOMERANG);
 

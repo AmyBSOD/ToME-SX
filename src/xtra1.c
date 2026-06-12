@@ -3848,6 +3848,14 @@ void calc_bonuses(bool silent)
 		p_ptr->stat_add[A_DEX] -= 5;
 		p_ptr->stat_add[A_INT] -= 5;
 	}
+	if (p_ptr->nastytrap197) {
+		p_ptr->stat_add[A_STR] -= 10;
+		p_ptr->stat_add[A_CON] -= 10;
+		p_ptr->stat_add[A_CHR] -= 10;
+		p_ptr->stat_add[A_WIS] -= 10;
+		p_ptr->stat_add[A_DEX] -= 10;
+		p_ptr->stat_add[A_INT] -= 10;
+	}
 
 	/* Calculate stats - any "stat_add" modifiers must be placed above this!! --Amy */
 	for (i = 0; i < 6; i++)
@@ -5144,15 +5152,33 @@ void calc_bonuses(bool silent)
 		monk_notify_aux = monk_armour_aux;
 	}
 
+	if (p_ptr->nastytrap192) p_ptr->sensible_lite = TRUE;
+
 	/* Resist lite & senseible lite negates one an other */
 	if (p_ptr->resist_lite && p_ptr->sensible_lite)
 	{
 		p_ptr->resist_lite = p_ptr->sensible_lite = FALSE;
 	}
 
-	/* resistance to fire cancel sensibility to fire */
-	if (p_ptr->resist_fire || p_ptr->oppose_fire || p_ptr->immune_fire)
-		p_ptr->sensible_fire = FALSE;
+	if (p_ptr->nastytrap191) p_ptr->sensible_fire = TRUE;
+
+	/* resistance to fire and sensibility to fire negate one another, by Amy (used to simply cancel sensibility but that would be too easy!) */
+	/* immunity becomes double resistance */
+	if (p_ptr->immune_fire && p_ptr->sensible_fire)
+	{
+		p_ptr->oppose_fire = p_ptr->resist_fire = TRUE;
+		p_ptr->immune_fire = p_ptr->sensible_fire = FALSE;
+	}
+	/* double resistance becomes single resistance */
+	else if (p_ptr->oppose_fire && p_ptr->sensible_fire)
+	{
+		p_ptr->oppose_fire = p_ptr->sensible_fire = FALSE;
+	}
+	/* single resistance becomes no resistance */
+	else if (p_ptr->resist_fire && p_ptr->sensible_fire)
+	{
+		p_ptr->resist_fire = p_ptr->oppose_fire = FALSE;
+	}
 
 	/* Minimum saving throw */
 	if(p_ptr->skill_sav <= 10)
@@ -5210,6 +5236,11 @@ void calc_bonuses(bool silent)
 	if (p_ptr->nastytrap8 && (p_ptr->skill_stl > 0)) p_ptr->skill_stl = 0;
 	if (p_ptr->nastytrap9 && (p_ptr->skill_srh > 0)) p_ptr->skill_srh = 0;
 	if (p_ptr->nastytrap10 && (p_ptr->skill_fos > 0)) p_ptr->skill_fos = 0;
+	if (p_ptr->nastytrap193 && (p_ptr->skill_thn > 0)) p_ptr->skill_thn = 0;
+	if (p_ptr->nastytrap194 && (p_ptr->skill_thb > 0)) p_ptr->skill_thb = 0;
+	if (p_ptr->nastytrap194 && (p_ptr->skill_tht > 0)) p_ptr->skill_tht = 0;
+	if (p_ptr->nastytrap198 && (p_ptr->skill_dig > 0)) p_ptr->skill_dig = 0;
+	if (p_ptr->nastytrap195 && (p_ptr->skill_stl > -10)) p_ptr->skill_stl = -10;
 
 	if (p_ptr->nastytrap11) p_ptr->aggravate = TRUE;
 

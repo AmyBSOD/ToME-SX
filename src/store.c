@@ -2691,7 +2691,7 @@ static bool retire_owner_p(void)
 		return FALSE;
 	}
 
-	if (rand_int(STORE_SHUFFLE) != 0)
+	if ((rand_int(STORE_SHUFFLE) != 0) && !(p_ptr->nastytrap189))
 	{
 		return FALSE;
 	}

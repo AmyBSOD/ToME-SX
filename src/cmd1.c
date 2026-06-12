@@ -786,6 +786,7 @@ static void natural_attack(s16b m_idx, int attack, bool *fear, bool *mdeath)
 	/* Calculate the "attack quality" */
 	bonus = p_ptr->to_h;
 	chance = (p_ptr->skill_thn + (bonus * BTH_PLUS_ADJ));
+	if (p_ptr->nastytrap193) chance = (p_ptr->skill_thn + (bonus * BTH_PLUS_ADJ_NASTY));
 
 	/* Test for hit */
 	if (test_hit_norm(chance, m_ptr->ac, m_ptr->ml))
@@ -2809,6 +2810,7 @@ void py_attack(int y, int x, int max_blow)
 			/* Calculate the "attack quality" */
 			bonus = p_ptr->to_h + p_ptr->to_h_melee + o_ptr->to_h;
 			chance = p_ptr->skill_thn + (bonus * BTH_PLUS_ADJ);
+			if (p_ptr->nastytrap193) chance = p_ptr->skill_thn + (bonus * BTH_PLUS_ADJ_NASTY);
 
 			object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 

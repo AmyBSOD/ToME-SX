@@ -4907,7 +4907,7 @@ void map_area_clair(void)
 		{
 			c_ptr = &cave[y][x];
 
-			c_ptr->info |= CAVE_DETECT;
+			if (!p_ptr->nastytrap196) c_ptr->info |= CAVE_DETECT;
 
 			/* Detect invisible traps */
 			if (c_ptr->t_idx != 0)
