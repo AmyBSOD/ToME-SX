@@ -3980,6 +3980,90 @@ bool summon_specific_okay(int r_idx)
 			break;
 		}
 
+	case SUMMON_AQUA:
+		{
+			okay = (r_ptr->flags7 & RF7_AQUATIC) ? TRUE : FALSE;
+			break;
+		}
+
+	case SUMMON_BIRD:
+		{
+			okay = (r_ptr->d_char == 'B');
+			break;
+		}
+
+	case SUMMON_DOG:
+		{
+			okay = (r_ptr->d_char == 'C');
+			break;
+		}
+
+	case SUMMON_INSECT:
+		{
+			okay = (r_ptr->d_char == 'F' || r_ptr->d_char == 'I' || r_ptr->d_char == 'c' || r_ptr->d_char == 'l');
+			break;
+		}
+
+	case SUMMON_OGRE:
+		{
+			okay = (r_ptr->d_char == 'O');
+			break;
+		}
+
+	case SUMMON_LIZARD:
+		{
+			okay = (r_ptr->d_char == 'R');
+			break;
+		}
+
+	case SUMMON_HULK:
+		{
+			okay = (r_ptr->d_char == 'X');
+			break;
+		}
+
+	case SUMMON_MONKEY:
+		{
+			okay = (r_ptr->d_char == 'Y');
+			break;
+		}
+
+	case SUMMON_EYE:
+		{
+			okay = (r_ptr->d_char == 'e');
+			break;
+		}
+
+	case SUMMON_PERSON:
+		{
+			okay = (r_ptr->d_char == 'h' || r_ptr->d_char == 'p' || r_ptr->d_char == 't');
+			break;
+		}
+
+	case SUMMON_JELLY:
+		{
+			okay = (r_ptr->d_char == 'i' || r_ptr->d_char == 'j' || r_ptr->d_char == 'm' || r_ptr->d_char == ',');
+			break;
+		}
+
+	case SUMMON_KOBOLD:
+		{
+			okay = (r_ptr->d_char == 'k');
+			break;
+		}
+
+	case SUMMON_QUADRUPED:
+		{
+			okay = (r_ptr->d_char == 'q');
+			break;
+		}
+
+	case SUMMON_YEEK:
+		{
+			okay = (r_ptr->d_char == 'y');
+			break;
+		}
+
 	case SUMMON_CLOTHES:
 		{
 			okay = (r_ptr->d_char == 'N' || r_ptr->d_char == 'x');

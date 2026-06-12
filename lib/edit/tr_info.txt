@@ -4647,6 +4647,146 @@ I:50:2:5:0:80:0d0:G
 D:What the hell just happened?!
 F:FLOOR
 
+N:938:Aqua Summon Trap
+I:10:5:40:6:20:0d0:v
+D:How did the area turn into an aquarium?
+F:FLOOR | CHEST | DOOR
+
+N:939:Aqua Squad Summon Trap
+I:20:5:40:6:40:0d0:v
+D:How did the area turn into an aquarium?
+F:FLOOR | CHEST | DOOR
+
+N:940:Summon Bird Trap
+I:4:25:40:6:10:0d0:v
+D:Ack! There's birds on the loose!
+F:FLOOR | CHEST | DOOR
+
+N:941:Summon Birds Trap
+I:14:25:40:6:30:0d0:v
+D:Ack! There's birds on the loose!
+F:FLOOR | CHEST | DOOR
+
+N:942:Summon Dog Trap
+I:4:25:40:6:5:0d0:v
+D:A pack of dogs defends this!
+F:FLOOR | CHEST | DOOR
+
+N:943:Summon Dogs Trap
+I:14:25:40:6:25:0d0:v
+D:A pack of dogs defends this!
+F:FLOOR | CHEST | DOOR
+
+N:944:Summon Insect Trap
+I:3:25:40:6:5:0d0:v
+D:It's an insect invasion!
+F:FLOOR | CHEST | DOOR
+
+N:945:Summon Insects Trap
+I:13:25:40:6:25:0d0:v
+D:It's an insect invasion!
+F:FLOOR | CHEST | DOOR
+
+N:946:Summon Ogre Trap
+I:4:25:40:6:10:0d0:v
+D:A pack of ogres defends this!
+F:FLOOR | CHEST | DOOR
+
+N:947:Summon Ogres Trap
+I:14:25:40:6:30:0d0:v
+D:A pack of ogres defends this!
+F:FLOOR | CHEST | DOOR
+
+N:948:Summon Lizard Trap
+I:3:25:40:6:3:0d0:v
+D:A pack of lizards defends this!
+F:FLOOR | CHEST | DOOR
+
+N:949:Summon Lizards Trap
+I:13:25:40:6:23:0d0:v
+D:A pack of lizards defends this!
+F:FLOOR | CHEST | DOOR
+
+N:950:Summon Hulk Trap
+I:10:10:40:6:20:0d0:v
+D:Oh shit, what're those huge-ass monsters?!
+F:FLOOR | CHEST | DOOR
+
+N:951:Summon Hulks Trap
+I:20:10:40:6:40:0d0:v
+D:Oh shit, what're those huge-ass monsters?!
+F:FLOOR | CHEST | DOOR
+
+N:952:Summon Monkey Trap
+I:3:25:40:6:5:0d0:v
+D:Uh-oh, the monkeys want to steal the treasure!
+F:FLOOR | CHEST | DOOR
+
+N:953:Summon Monkeys Trap
+I:13:25:40:6:25:0d0:v
+D:Uh-oh, the monkeys want to steal the treasure!
+F:FLOOR | CHEST | DOOR
+
+N:954:Summon Eye Trap
+I:3:20:40:6:5:0d0:v
+D:Err... those things are looking at you...
+F:FLOOR | CHEST | DOOR
+
+N:955:Summon Eyes Trap
+I:13:20:40:6:25:0d0:v
+D:Err... those things are looking at you...
+F:FLOOR | CHEST | DOOR
+
+N:956:Summon Person Trap
+I:3:20:40:6:2:0d0:v
+D:Armed people defend this!
+F:FLOOR | CHEST | DOOR
+
+N:957:Summon Persons Trap
+I:13:20:40:6:22:0d0:v
+D:Armed people defend this!
+F:FLOOR | CHEST | DOOR
+
+N:958:Summon Jelly Trap
+I:4:25:40:6:10:0d0:v
+D:Eek, icky monsters jump out of the chest!
+F:FLOOR | CHEST | DOOR
+
+N:959:Summon Jellies Trap
+I:14:25:40:6:30:0d0:v
+D:Eek, icky monsters jump out of the chest!
+F:FLOOR | CHEST | DOOR
+
+N:960:Summon Kobold Trap
+I:3:25:40:6:5:0d0:v
+D:The kobold hordes appear!
+F:FLOOR | CHEST | DOOR
+
+N:961:Summon Kobolds Trap
+I:13:25:40:6:25:0d0:v
+D:The kobold hordes appear!
+F:FLOOR | CHEST | DOOR
+
+N:962:Summon Quadruped Trap
+I:4:25:40:6:5:0d0:v
+D:Hmm, those animals apparently don't like your presence.
+F:FLOOR | CHEST | DOOR
+
+N:963:Summon Quadruped Trap
+I:14:25:40:6:25:0d0:v
+D:Hmm, those animals apparently don't like your presence.
+F:FLOOR | CHEST | DOOR
+
+N:964:Summon Yeek Trap
+I:3:20:40:6:2:0d0:v
+D:Hahahahahahaha... are you supposed to be scared now?
+F:FLOOR | CHEST | DOOR
+
+N:965:Summon Yeeks Trap
+I:13:20:40:6:22:0d0:v
+D:Hahahahahahaha... are you supposed to be scared now?
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

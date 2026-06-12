@@ -3764,6 +3764,36 @@
 #define TRAP_OF_UNKNOWN_QUAD              936
 #define TRAP_OF_UNKNOWN_PENTA             937
 
+#define TRAP_OF_SUMMON_AQUA               938
+#define TRAP_OF_SUMMON_AQUA_X             939
+#define TRAP_OF_SUMMON_BIRD               940
+#define TRAP_OF_SUMMON_BIRD_X             941
+#define TRAP_OF_SUMMON_DOG                942
+#define TRAP_OF_SUMMON_DOG_X              943
+#define TRAP_OF_SUMMON_INSECT             944
+#define TRAP_OF_SUMMON_INSECT_X           945
+#define TRAP_OF_SUMMON_OGRE               946
+#define TRAP_OF_SUMMON_OGRE_X             947
+#define TRAP_OF_SUMMON_LIZARD             948
+#define TRAP_OF_SUMMON_LIZARD_X           949
+#define TRAP_OF_SUMMON_HULK               950
+#define TRAP_OF_SUMMON_HULK_X             951
+#define TRAP_OF_SUMMON_MONKEY             952
+#define TRAP_OF_SUMMON_MONKEY_X           953
+#define TRAP_OF_SUMMON_EYE                954
+#define TRAP_OF_SUMMON_EYE_X              955
+#define TRAP_OF_SUMMON_PERSON             956
+#define TRAP_OF_SUMMON_PERSON_X           957
+#define TRAP_OF_SUMMON_JELLY              958
+#define TRAP_OF_SUMMON_JELLY_X            959
+#define TRAP_OF_SUMMON_KOBOLD             960
+#define TRAP_OF_SUMMON_KOBOLD_X           961
+#define TRAP_OF_SUMMON_QUADRUPED          962
+#define TRAP_OF_SUMMON_QUADRUPED_X        963
+#define TRAP_OF_SUMMON_YEEK               964
+#define TRAP_OF_SUMMON_YEEK_X             965
+
+
 /*** General index values ***/
 
 
@@ -3836,6 +3866,20 @@
 #define SUMMON_NEUTER               84 /* neither MALE nor FEMALE */
 #define SUMMON_BREEDER              85 /* MULTIPLY */
 #define SUMMON_GOLEM                86 /* g */
+#define SUMMON_AQUA                 87 /* AQUATIC */
+#define SUMMON_BIRD                 88 /* B */
+#define SUMMON_DOG                  89 /* C */
+#define SUMMON_INSECT               90 /* F, I, c, l */
+#define SUMMON_OGRE                 91 /* O */
+#define SUMMON_LIZARD               92 /* R */
+#define SUMMON_HULK                 93 /* X */
+#define SUMMON_MONKEY               94 /* Y */
+#define SUMMON_EYE                  95 /* e */
+#define SUMMON_PERSON               96 /* h, p, t */
+#define SUMMON_JELLY                97 /* i, j, m, comma */
+#define SUMMON_KOBOLD               98 /* k */
+#define SUMMON_QUADRUPED            99 /* q */
+#define SUMMON_YEEK                 100 /* y */
 
 
 /*
