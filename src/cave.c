@@ -4059,6 +4059,9 @@ void update_view(void)
 				/* Access the grid */
 				c_ptr = &cave[y][x];
 
+				/* but make sure it's a legal grid!!! --Amy */
+				if (!in_bounds(y, x)) continue;
+
 				/* Get grid info */
 				info = c_ptr->info;
 

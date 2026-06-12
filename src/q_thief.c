@@ -56,7 +56,6 @@ bool quest_thieves_gen_hook(char *fmt)
 		}
 	}
 
-	del_hook(HOOK_GEN_QUEST, quest_thieves_gen_hook);
 	process_hooks_restart = TRUE;
 
 	return TRUE;
@@ -106,6 +105,7 @@ bool quest_thieves_hook(char *fmt)
 
 		quest[p_ptr->inside_quest].status = QUEST_STATUS_COMPLETED;
 		del_hook(HOOK_END_TURN, quest_thieves_hook);
+		del_hook(HOOK_GEN_QUEST, quest_thieves_gen_hook);
 		process_hooks_restart = TRUE;
 
 		p_ptr->skill_points += 1;
