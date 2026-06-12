@@ -104,11 +104,8 @@ Enables you to set traps which harm monsters.
 Rogues are born with this ability.
 ~~~~~12|Abilities|Undead Form
 [[[[[BUndead Form]
-With this ability your character receives a small amount of Death Points (DP) 
-when they 'die'. Every normal (+0 speed) turn, one DP
-is lost; you can regain it like you would do with Hit Points.
-If you manage to kill enough monsters before your DP goes below 0, your
-character is brought back to life.
+With this ability your character receives a set of resistances, and also
+becomes resistant to damage when near death.
 #####UPrereq: Necromancy@30, INT@25
 #####rCost: 15
 Necromancers gain this ability for free at character level 25.

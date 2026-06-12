@@ -109,9 +109,8 @@ A:14:Set trap
 k:15:Disarming
 
 N:10:Undead Form
-D:Ability to turn into a weak undead being when you "die".
-D:You must then kill enough monsters to absorb enough life energy
-D:to come back to life.
+D:Grants resistance to nether, cold, poison and nerve.
+D:Also makes you resistant to damage when near death.
 D:Prereq: Necromancy@30, INT@25
 I:100
 k:30:Necromancy

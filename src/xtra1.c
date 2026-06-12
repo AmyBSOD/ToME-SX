@@ -3648,6 +3648,14 @@ void calc_bonuses(bool silent)
 	if (get_skill(SKILL_NETHER) >= 50) p_ptr->resist_neth = TRUE;
 	if (get_skill(SKILL_MIND) >= 50) p_ptr->resist_mind = TRUE;
 
+	if (has_ability(AB_UNDEAD_FORM)) {
+		p_ptr->resist_neth = TRUE;
+		p_ptr->resist_cold = TRUE;
+		p_ptr->resist_pois = TRUE;
+		p_ptr->resist_nerve = TRUE;
+		p_ptr->hold_life = TRUE;
+	}
+
 	if ( get_skill(SKILL_MINDCRAFT) >= 75 ) p_ptr->telepathy |= ESP_ALL;
 
 	if (p_ptr->mimic_form == resolve_mimic_name("Valar")) p_ptr->telepathy |= ESP_ALL;

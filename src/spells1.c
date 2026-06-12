@@ -1855,6 +1855,13 @@ void take_hit(int damage, cptr hit_from)
 		}
 	}
 
+	/* undead form, instead of giving cheesy infinite life saving, reduces incoming damage if you're near death --Amy */
+	if (has_ability(AB_UNDEAD_FORM) && (damage > 1) ) {
+		if (p_ptr->chp < (p_ptr->mhp / 5)) {
+			damage /= 2;
+		}
+	}
+
 	/* Apply disruption shield */
 	if (p_ptr->disrupt_shield)
 	{
@@ -1919,7 +1926,7 @@ void take_hit(int damage, cptr hit_from)
 	if (p_ptr->chp < 0)
 	{
 		/* Necromancers get a special treatment */
-		if (((!has_ability(AB_UNDEAD_FORM)) || ((p_ptr->necro_extra & CLASS_UNDEAD))))
+		if (!(p_ptr->necro_extra & CLASS_UNDEAD))
 		{
 			/* Sound */
 			sound(SOUND_DEATH);
@@ -1963,7 +1970,6 @@ void take_hit(int damage, cptr hit_from)
 		else
 		{
 			p_ptr->necro_extra |= CLASS_UNDEAD;
-			ab_info[AB_UNDEAD_FORM].acquired = FALSE; /* lol so you thought you could just use it endlessly like an aols that doesn't get used up... --Amy */
 			p_ptr->necro_extra2 = p_ptr->lev + (rand_int(p_ptr->lev / 2) - (p_ptr->lev / 4));
 			if (p_ptr->necro_extra2 < 1) p_ptr->necro_extra2 = 1;
 			cmsg_format(TERM_L_DARK, "You have to kill %d monster%s to be brought back to life.", p_ptr->necro_extra2, (p_ptr->necro_extra2 == 1) ? "" : "s");
