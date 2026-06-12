@@ -1317,6 +1317,18 @@ void do_cmd_eat_food(void)
 				break;
 			}
 
+		case SV_FOOD_LONGBOTTOM:
+			{
+				/* from Theme, but I don't have the true source code of that... --Amy
+				 * according to Google's AI, this could be the effect, not sure if it's what that thing does in the original */
+				ident = TRUE;
+				(void)set_afraid(0);
+				(void)set_confused(0);
+				msg_print("You feel a great sense of relief.");
+
+				break;
+			}
+
 		case SV_FOOD_APPLE:
 			{
 				msg_print("An apple a day keeps the doctor away.");
@@ -3321,6 +3333,15 @@ static bool quaff_potion(int tval, int sval, int pval, int pval2)
 						break;
 				}
 				if (do_inc_stat(A_CHR)) ident = TRUE;
+
+				break;
+			}
+
+		case SV_POTION2_POLYMORPH:
+			{
+				do_poly_self();
+
+				ident = TRUE;
 
 				break;
 			}
@@ -5515,6 +5536,15 @@ void do_cmd_read_scroll(void)
 				ident = TRUE;
 
 				if (!proof_item(5)) used_up = FALSE;
+
+				break;
+			}
+
+		case SV_SCROLL_STERILIZE:
+			{
+				ident = TRUE;
+
+				(void)set_no_breeders(no_breeds + 50 + randint(50));
 
 				break;
 			}

@@ -2133,6 +2133,7 @@
 #define SV_SCROLL_PATRON_CHANGE         61
 #define SV_SCROLL_SUMMON_ALLY           62
 #define SV_SCROLL_PROOF_POIS            63
+#define SV_SCROLL_STERILIZE             64
 
 /* The "sval" codes for TV_POTION */
 #define SV_POTION_WATER                  0
@@ -2265,8 +2266,9 @@
 #define SV_POTION2_SWAP_DEX              58
 #define SV_POTION2_SWAP_CON              59
 #define SV_POTION2_SWAP_CHA              60
+#define SV_POTION2_POLYMORPH             61
 
-#define SV_POTION2_LAST                  60
+#define SV_POTION2_LAST                  61
 
 /* The "sval" codes for TV_FOOD */
 #define SV_FOOD_POISON                   0
@@ -2303,6 +2305,7 @@
 #define SV_FOOD_ATHELAS                 40
 #define SV_FOOD_GREAT_HEALTH            41
 #define SV_FOOD_FORTUNE_COOKIE          42
+#define SV_FOOD_LONGBOTTOM              45
 #define SV_FOOD_APPLE                   51
 #define SV_FOOD_CARROT                  52
 #define SV_FOOD_MELON                   53

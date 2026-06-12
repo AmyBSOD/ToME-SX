@@ -10646,6 +10646,47 @@ P:0:1d1:0:0:0
 D:A purple-colored glass bottle. It's empty, and seems rather big, 
 D:as if it's capable of holding more liquid than a regular one. 
 
+N:1261:& Pinch~ of Longbottom Leaf
+G:,:g
+I:80:45:10
+#Prized at stores :P - note by Amy: but it was 300, which is lower than the cure paranoia/confusion mushrooms...
+W:1:1:1:1000
+A:1/1
+D:It's chewing tobacco, and not very nutritious. It is said to 
+D:contain great stress-relieving properties.
+
+N:1262:& Jar~ of Honey
+G:,:y
+I:80:43:1000
+W:1:1:10:50
+A:1/1:5/1:10/1:15/1
+D:A clay jar filled with pure honey. You can 'E'at it.
+
+N:1263:& Jug~ of Milk
+G:,:w
+I:80:44:1000
+W:1:1:10:50
+A:1/1
+D:A clay jug filled with fresh milk. You wonder how that is 
+D:possible in the dungeon. You can drink it by pressing 'E'.
+
+N:1264:Sterilise
+G:?:d
+I:70:64:0
+W:40:0:5:200
+A:30/1
+D:This scroll humanely neuters all nearby monsters.
+
+N:1265:Polymorph
+G:!:d
+I:72:61:0
+W:40:0:0:30000
+A:40/10
+P:0:1d1:0:0:0
+F:FOUNTAIN
+D:Your body will undergo an uncontrollable change if you quaff this. 
+D:Taking such a risk may in fact be quite a bad idea. 
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being a bonus to the pval-based property
