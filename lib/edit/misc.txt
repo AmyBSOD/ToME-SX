@@ -40,7 +40,7 @@ M:F:257
 M:a:1000
 
 # Maximum number of artifacts in a_info.txt
-M:A:788
+M:A:790
 
 # Maximum number of sets types in set_info.txt
 M:s:10
@@ -52,7 +52,7 @@ M:E:557
 M:D:107
 
 # Maximum number of trap types in tr_info.txt
-M:U:971
+M:U:972
 
 # Maximum number of terrain types in wf_info.txt
 M:W:50

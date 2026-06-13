@@ -6634,7 +6634,7 @@ W:10:30:20:500
 P:1:0d0:0:0:-1
 F:INT | SEARCH | RES_BLIND | SENS_FIRE | RES_CONF | 
 F:SEE_INVIS | CURSED | HEAVY_CURSE | DRAIN_EXP | AUTO_CURSE | 
-F:AGGRAVATE | SPELL | 
+F:AGGRAVATE | RAPID_HUNGER | SAVING_MALUS | SPELL | 
 D:A shitty artifact that you really shouldn't wear if you don't have to. 
 D:Yes, it has resistance to both blindness and confusion, but do you 
 D:really want to stink like a heap of dung?! 
@@ -8764,6 +8764,29 @@ W:60:60:60:40000
 P:7:0d0:0:0:19
 F:RES_DMG | 
 D:That cloak seems particularly thick and impenetrable. 
+
+# stormbringer clone (blade of chaos)
+N:788:'Mournblade'
+I:23:30:2
+W:50:100:180:50000
+P:0:6d6:16:16:0
+F:VAMPIRIC | STR | CON | FREE_ACT | HOLD_LIFE | RES_NETHER | RES_CONF |
+F:RES_CHAOS | BLOWS | RES_NEXUS | NO_TELE | CURSED | HEAVY_CURSE | 
+F:AUTO_CURSE | DRAIN_EXP | AGGRAVATE | 
+D:A cursed blade that makes the wielder slay their own family and friends 
+D:in exchange for awesome power. 
+
+# rags of the wight clone, mana version (572 is spell bonus version)
+N:789:of the Tomb
+I:36:1:2
+W:30:100:20:0
+P:1:0d0:0:0:0
+F:INT | SEARCH | RES_BLIND | SENS_FIRE | RES_CONF | SEE_INVIS | 
+F:CURSED | HEAVY_CURSE | DRAIN_EXP | AUTO_CURSE | AGGRAVATE | 
+F:SAVING_MALUS | RAPID_HUNGER | MANA | 
+D:Are you REALLY going to wear this??? Do you want to stink up the 
+D:whole dungeon and make everyone in a radius of 20 square miles aware 
+D:of your presence? 
 
 # N:number:name
 # I:tval:sval:pval

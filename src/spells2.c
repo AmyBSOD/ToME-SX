@@ -2437,6 +2437,10 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Your digging ability is shit.";
 	}
+	if (p_ptr->nastytrap199)
+	{
+		info[i++] = "You have a problem: Your weapon is bloodthirsty.";
+	}
 
 	if (p_ptr->contamination >= 10000)
 	{

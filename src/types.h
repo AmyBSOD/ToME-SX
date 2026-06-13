@@ -2333,7 +2333,7 @@ struct player_type
 	bool nastytrap196; /* lvl 5, detection line trap - dtrap is never set */
 	bool nastytrap197; /* lvl 50, stat trash trap - your stats are a lot lower */
 	bool nastytrap198; /* lvl 1, anti digging trap - your digging ability is always shit */
-	bool nastytrap199;
+	bool nastytrap199; /* lvl 30, bloodthirsty trap - moving into peaceful monsters attacks them, like stormbringer */
 	bool nastytrap200;
 	bool nastytrap201;
 	bool nastytrap202;

@@ -4928,6 +4928,11 @@ I:5:40:50:3:20:0d0:y
 D:The APEC Cartel wants you to buy more ammo.
 F:FLOOR | CHEST | DOOR
 
+N:971:Bloodthirsty Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

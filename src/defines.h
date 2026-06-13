@@ -3828,6 +3828,8 @@
 #define TRAP_OF_REDUCE_AMMO               969
 #define TRAP_OF_REDUCE_AMMO_X             970
 
+#define TRAP_NASTY199                     971
+
 /*** General index values ***/
 
 

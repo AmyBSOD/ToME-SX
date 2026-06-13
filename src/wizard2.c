@@ -239,6 +239,8 @@ static void wiz_create_named_art()
 	/* Mark the item as fully known */
 	q_ptr->ident |= (IDENT_MENTAL);
 
+	q_ptr->found = OBJ_FOUND_WIZMODE;
+
 	/* Drop the artifact from heaven */
 	drop_near(q_ptr, -1, p_ptr->py, p_ptr->px);
 
@@ -1449,6 +1451,8 @@ static void wiz_create_item_2(void)
 
 	/* Apply magic (no messages, no artifacts) */
 	apply_magic(q_ptr, dun_level, FALSE, FALSE, FALSE);
+
+	q_ptr->found = OBJ_FOUND_WIZMODE;
 
 	/* Drop the object from heaven */
 	drop_near(q_ptr, -1, p_ptr->py, p_ptr->px);

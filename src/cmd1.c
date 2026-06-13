@@ -2718,27 +2718,37 @@ void py_attack(int y, int x, int max_blow)
 
 	if (!p_ptr->nastytrap72) {
 
-		sprintf(securityquestion, "Really attack %s? ", m_name);
+		if (p_ptr->nastytrap199) {
 
-		if ((is_friend(m_ptr) >= 0) &&
-		                !(p_ptr->stun || p_ptr->confused || p_ptr->blind || p_ptr->image ||
-		                  !(m_ptr->ml)) && !get_check(securityquestion) )
-		{
-			if (!(p_ptr->inventory[INVEN_WIELD].art_name))
-			{
-				msg_format("You stop to avoid hitting %s.", m_name);
-				return;
+			if (is_friend(m_ptr) >= 0) {
+				msg_format("You want to see blood, and therefore attack %s!", m_name);
 			}
 
-			if (!
-			                (streq
-			                 (quark_str(p_ptr->inventory[INVEN_WIELD].art_name), "'Stormbringer'")))
-			{
-				msg_format("You stop to avoid hitting %s.", m_name);
-				return;
-			}
+		} else {
 
-			msg_format("Your black blade greedily attacks %s!", m_name);
+			sprintf(securityquestion, "Really attack %s? ", m_name);
+
+			if ((is_friend(m_ptr) >= 0) &&
+			                !(p_ptr->stun || p_ptr->confused || p_ptr->blind || p_ptr->image ||
+			                  !(m_ptr->ml)) && !get_check(securityquestion) )
+			{
+				if (!(p_ptr->inventory[INVEN_WIELD].art_name))
+				{
+					msg_format("You stop to avoid hitting %s.", m_name);
+					return;
+				}
+
+				if (  !(streq(quark_str(p_ptr->inventory[INVEN_WIELD].art_name), "'Stormbringer'")) &&
+					!(streq(quark_str(p_ptr->inventory[INVEN_WIELD].art_name), "'Mournblade'")) &&
+					!(p_ptr->nastytrap199)
+					)
+				{
+					msg_format("You stop to avoid hitting %s.", m_name);
+					return;
+				}
+
+				msg_format("Your black blade greedily attacks %s!", m_name);
+			}
 		}
 	}
 
@@ -3751,9 +3761,15 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 	m_ptr = &m_list[c_ptr->m_idx];
 	mr_ptr = race_inf(m_ptr);
 
+	if (p_ptr->nastytrap199) {
+		stormbringer = TRUE;
+	}
+
 	if (p_ptr->inventory[INVEN_WIELD].art_name)
 	{
 		if (streq(quark_str(p_ptr->inventory[INVEN_WIELD].art_name), "'Stormbringer'"))
+			stormbringer = TRUE;
+		if (streq(quark_str(p_ptr->inventory[INVEN_WIELD].art_name), "'Mournblade'"))
 			stormbringer = TRUE;
 	}
 
@@ -3778,10 +3794,11 @@ void move_player_aux(int dir, int do_pickup, int run, bool disarm)
 			/* Track a new monster */
 			if (m_ptr->ml) health_track(c_ptr->m_idx);
 
-			/* displace? */
-			if (stormbringer && (randint(1000) > 666))
+			/* displace? Amy note: bloodthirsty nastytrap means you always attack, wielding a stormbringer does so only 2 in 3 times */
+			if (stormbringer && ((randint(1000) > 666) || p_ptr->nastytrap199) )
 			{
 				py_attack(y, x, -1);
+				oktomove = FALSE; /* wtf why was that missing --Amy */
 			}
 
 			/* note by Amy: if you stop upon moving into known traps, that should apply when displacing, too... */

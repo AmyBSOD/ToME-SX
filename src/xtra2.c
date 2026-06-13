@@ -6439,14 +6439,13 @@ void monster_death(int m_idx)
 
 		q_ptr->art_flags3 |= TR3_NO_TELE;  /* How's that for a downside? */
 
-		/* For game balance... */
-		q_ptr->art_flags3 |= (TR3_CURSED | TR3_HEAVY_CURSE);
+		/* For game balance... autocurse added by Amy */
+		q_ptr->art_flags3 |= (TR3_CURSED | TR3_HEAVY_CURSE | TR3_AUTO_CURSE);
 		q_ptr->ident |= IDENT_CURSED;
 
-		if (randint(2) == 1)
-			q_ptr->art_flags3 |= (TR3_DRAIN_EXP);
-		else
-			q_ptr->art_flags3 |= (TR3_AGGRAVATE);
+		/* used to have only one of these two but exp drain is way too harmless for such an uberweapon... --Amy */
+		q_ptr->art_flags3 |= (TR3_DRAIN_EXP);
+		q_ptr->art_flags3 |= (TR3_AGGRAVATE);
 
 		q_ptr->found = OBJ_FOUND_MONSTER;
 		q_ptr->found_aux1 = m_ptr->r_idx;
