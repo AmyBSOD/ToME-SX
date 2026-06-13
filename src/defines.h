@@ -2829,9 +2829,25 @@
 #define TRAP_OF_POISON_DAGGERS_I          132
 #define TRAP_OF_POISON_DAGGERS_II         133
 
+#define TRAP_OF_JEWELRY_BURDEN            134
+#define TRAP_OF_JEWELRY_BURDEN_II         135
+#define TRAP_OF_JEWELRY_BURDEN_III        136
+#define TRAP_OF_JEWELRY_BURDEN_IV         137
+#define TRAP_OF_JEWELRY_BURDEN_V          138
+#define TRAP_OF_JEWELRY_BURDEN_VI         139
+
 #define TRAP_OF_DROP_ITEMS                140
 #define TRAP_OF_DROP_ALL_ITEMS            141
 #define TRAP_OF_DROP_EVERYTHING           142
+
+#define TRAP_OF_HEAVY_ARMOR               143
+#define TRAP_OF_HEAVY_ARMOR_II            144
+#define TRAP_OF_HEAVY_ARMOR_III           145
+#define TRAP_OF_HEAVY_ARMOR_IV            146
+#define TRAP_OF_HEAVY_ARMOR_V             147
+
+#define TRAP_OF_DECAY_II                  148
+#define TRAP_OF_DECAY_III                 149
 
 /* -SC- */
 #define TRAP_OF_FEMINITY                  150
@@ -2840,8 +2856,8 @@
 #define TRAP_OF_AGING                     153
 #define TRAP_OF_GROWING                   154
 #define TRAP_OF_SHRINKING                 155
-#define TRAP_OF_ELDRITCH_HORROR           156
-/* XXX */
+#define TRAP_OF_DECAY_IV                  156
+#define TRAP_OF_DECAY_V                   157
 #define TRAP_OF_DIVINE_ANGER              158
 #define TRAP_OF_DIVINE_WRATH              159
 #define TRAP_OF_HALLUCINATION             160
@@ -3807,6 +3823,10 @@
 
 #define TRAP_NASTY197                     966
 #define TRAP_NASTY198                     967
+
+#define TRAP_OF_DOUBLE_PHASE_DOOR         968
+#define TRAP_OF_REDUCE_AMMO               969
+#define TRAP_OF_REDUCE_AMMO_X             970
 
 /*** General index values ***/
 

@@ -730,6 +730,36 @@ I:6:100:0:7:23:0d0:R
 D:Some poisoned daggers shoot out at you.
 F:FLOOR | CHEST | DOOR
 
+N:134:Trap of Burden
+I:3:100:0:2:5:0d0:y
+D:Your jewelry starts to burden you...
+F:FLOOR | CHEST | DOOR
+
+N:135:Trap of Heavy Burden
+I:4:70:0:2:15:0d0:y
+D:Your jewelry starts to burden you...
+F:FLOOR | CHEST | DOOR
+
+N:136:Trap of Considerable Burden
+I:5:50:0:2:30:0d0:y
+D:Your jewelry starts to burden you...
+F:FLOOR | CHEST | DOOR
+
+N:137:Trap of Cumbersome Burden
+I:8:30:0:2:50:0d0:y
+D:Your jewelry starts to burden you...
+F:FLOOR | CHEST | DOOR
+
+N:138:Trap of Aggravating Burden
+I:10:10:0:2:70:0d0:y
+D:Your jewelry starts to burden you...
+F:FLOOR | CHEST | DOOR
+
+N:139:Trap of Total Burden
+I:50:2:0:2:90:0d0:y
+D:Your jewelry starts to burden you...
+F:FLOOR | CHEST | DOOR
+
 N:140:Trap of Drop Item
 I:3:50:0:2:5:0d0:y
 D:A sudden sound startles you and you drop something!
@@ -743,6 +773,41 @@ F:FLOOR | CHEST | DOOR
 N:142:Trap of Drop Everything
 I:8:50:0:8:20:0d0:y
 D:A sudden sound startles you and you drop everything!
+F:FLOOR | CHEST | DOOR
+
+N:143:Trap of Heavy Armor
+I:3:100:0:2:5:0d0:y
+D:Your armor suddenly weighs a lot more!
+F:FLOOR | CHEST | DOOR
+
+N:144:Trap of Very Heavy Armor
+I:4:50:0:2:15:0d0:y
+D:Your armor suddenly weighs a lot more!
+F:FLOOR | CHEST | DOOR
+
+N:145:Trap of Extra Heavy Armor
+I:5:30:0:2:35:0d0:y
+D:Your armor suddenly weighs a lot more!
+F:FLOOR | CHEST | DOOR
+
+N:146:Trap of Ultra Heavy Armor
+I:10:10:0:2:55:0d0:y
+D:Your armor suddenly weighs a lot more!
+F:FLOOR | CHEST | DOOR
+
+N:147:Trap of Heaviest Armor
+I:50:2:0:2:75:0d0:y
+D:Your armor suddenly weighs a lot more!
+F:FLOOR | CHEST | DOOR
+
+N:148:Trap of Fast Decay
+I:10:50:50:4:24:0d0:r
+D:Your stomach isn't empty, but suddenly you think of food.
+F:FLOOR | CHEST | DOOR
+
+N:149:Trap of Rapid Decay
+I:20:20:50:4:44:0d0:r
+D:Your stomach isn't empty, but suddenly you think of food.
 F:FLOOR | CHEST | DOOR
 
 #-SC-
@@ -776,9 +841,15 @@ I:3:75:5:0:5:1d8:r
 D:You begin to shrink!
 F:FLOOR | CHEST | DOOR
 
-#N:156: UNUSED
+N:156:Trap of Extreme Decay
+I:30:10:50:4:64:0d0:r
+D:Your stomach isn't empty, but suddenly you think of food.
+F:FLOOR | CHEST | DOOR
 
-#N:157: UNUSED
+N:157:Trap of Complete Decay
+I:50:2:50:4:84:0d0:r
+D:Your stomach isn't empty, but suddenly you think of food.
+F:FLOOR | CHEST | DOOR
 
 N:158:Trap of Divine Anger
 I:6:100:5:0:15:0d0:G
@@ -4841,6 +4912,21 @@ N:967:Anti Digging Trap
 I:21:2:50:4:1:0d0:s
 D:Nasty!
 F:FLOOR
+
+N:968:Double Phase Door Trap
+I:3:100:50:3:5:0d0:w
+D:Someone doesn't want this property to be touched, it seems.
+F:FLOOR | CHEST | DOOR
+
+N:969:Trap of Reduce Ammo
+I:2:100:50:3:3:0d0:y
+D:The APEC Cartel wants you to buy more ammo.
+F:FLOOR | CHEST | DOOR
+
+N:970:Trap of Empty Ammo
+I:5:40:50:3:20:0d0:y
+D:The APEC Cartel wants you to buy more ammo.
+F:FLOOR | CHEST | DOOR
 
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color

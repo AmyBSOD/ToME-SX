@@ -7581,6 +7581,15 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_DOUBLE_PHASE_DOOR:
+		{
+			msg_print("The world whirls around you.");
+			teleport_player(8 + rand_int(13));
+			teleport_player(8 + rand_int(13));
+			ident = TRUE;
+			break;
+		}
+
 	case TRAP_OF_ALTER_REALITY:
 		{
 			msg_print("You feel a lot of force!");
@@ -7991,7 +8000,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			o_ptr = &p_ptr->inventory[INVEN_LITE];
 
 			/* Drain fuel */
-			if (o_ptr->timeout > 0)
+			if (o_ptr && (o_ptr->timeout > 0))
 			{
 				/* Reduce fuel */
 				o_ptr->timeout -= (250 + randint(250));
@@ -8022,7 +8031,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			o_ptr = &p_ptr->inventory[INVEN_LITE];
 
 			/* Drain fuel */
-			if (o_ptr->pval > 0)
+			if (o_ptr && (o_ptr->pval > 0))
 			{
 				/* Reduce fuel */
 				o_ptr->pval--;
@@ -12587,11 +12596,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (j_ptr->ac > 0) {
 					j_ptr->ac = 0;
 
-					if (object_known_p(j_ptr)) {
-						if (!message) {
-							msg_print("Your armor doesn't seem to work properly anymore!");
-							message = TRUE;
-						}
+					if (!message) {
+						msg_print("Your armor doesn't seem to work properly anymore!");
+						message = TRUE;
 					}
 
 					/* Recalculate bonuses */
@@ -12632,11 +12639,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (j_ptr->ac > 0) {
 					j_ptr->ac = 0;
 
-					if (object_known_p(j_ptr)) {
-						if (!message) {
-							msg_print("Your armor doesn't seem to work properly anymore!");
-							message = TRUE;
-						}
+					if (!message) {
+						msg_print("Your armor doesn't seem to work properly anymore!");
+						message = TRUE;
 					}
 
 					/* Recalculate bonuses */
@@ -12675,11 +12680,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (j_ptr->ac > 0) {
 					j_ptr->ac = 0;
 
-					if (object_known_p(j_ptr)) {
-						if (!message) {
-							msg_print("Your armor doesn't seem to work properly anymore!");
-							message = TRUE;
-						}
+					if (!message) {
+						msg_print("Your armor doesn't seem to work properly anymore!");
+						message = TRUE;
 					}
 
 					/* Recalculate bonuses */
@@ -13046,11 +13049,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (j_ptr->dd > 0) {
 					j_ptr->dd = 0;
 
-					if (object_known_p(j_ptr)) {
-						if (!message) {
-							msg_print("Your weapons don't seem to work properly anymore!");
-							message = TRUE;
-						}
+					if (!message) {
+						msg_print("Your weapons don't seem to work properly anymore!");
+						message = TRUE;
 					}
 
 					/* Recalculate bonuses */
@@ -13065,11 +13066,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (j_ptr->ds > 0) {
 					j_ptr->ds = 0;
 
-					if (object_known_p(j_ptr)) {
-						if (!message) {
-							msg_print("Your weapons don't seem to work properly anymore!");
-							message = TRUE;
-						}
+					if (!message) {
+						msg_print("Your weapons don't seem to work properly anymore!");
+						message = TRUE;
 					}
 
 					/* Recalculate bonuses */
@@ -13110,11 +13109,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (j_ptr->dd > 0) {
 					j_ptr->dd = 0;
 
-					if (object_known_p(j_ptr)) {
-						if (!message) {
-							msg_print("Your weapons don't seem to work properly anymore!");
-							message = TRUE;
-						}
+					if (!message) {
+						msg_print("Your weapons don't seem to work properly anymore!");
+						message = TRUE;
 					}
 
 					/* Recalculate bonuses */
@@ -13129,11 +13126,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (j_ptr->ds > 0) {
 					j_ptr->ds = 0;
 
-					if (object_known_p(j_ptr)) {
-						if (!message) {
-							msg_print("Your weapons don't seem to work properly anymore!");
-							message = TRUE;
-						}
+					if (!message) {
+						msg_print("Your weapons don't seem to work properly anymore!");
+						message = TRUE;
 					}
 
 					/* Recalculate bonuses */
@@ -13172,11 +13167,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (j_ptr->dd > 0) {
 					j_ptr->dd = 0;
 
-					if (object_known_p(j_ptr)) {
-						if (!message) {
-							msg_print("Your weapons don't seem to work properly anymore!");
-							message = TRUE;
-						}
+					if (!message) {
+						msg_print("Your weapons don't seem to work properly anymore!");
+						message = TRUE;
 					}
 
 					/* Recalculate bonuses */
@@ -13191,11 +13184,9 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				if (j_ptr->ds > 0) {
 					j_ptr->ds = 0;
 
-					if (object_known_p(j_ptr)) {
-						if (!message) {
-							msg_print("Your weapons don't seem to work properly anymore!");
-							message = TRUE;
-						}
+					if (!message) {
+						msg_print("Your weapons don't seem to work properly anymore!");
+						message = TRUE;
 					}
 
 					/* Recalculate bonuses */
@@ -13357,6 +13348,477 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* Trap of Heavy Armor, by Amy: equipped armor becomes heavier */
+	case TRAP_OF_HEAVY_ARMOR:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_BODY; j < INVEN_CARRY; j++) /* only affects armor pieces */
+			{
+
+				if (rand_int(10) < 8) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* increase weight up to a max of 1000 pounds */
+				if (j_ptr->weight < 1000) {
+					j_ptr->weight += 10;
+
+					if (!message) {
+						msg_print("Your armor suddenly feels heavier!");
+						message = TRUE;
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("You feel worried about your weight...");
+			break;
+		}
+
+	case TRAP_OF_HEAVY_ARMOR_II:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_BODY; j < INVEN_CARRY; j++) /* only affects armor pieces */
+			{
+
+				if (rand_int(10) < 6) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* increase weight up to a max of 1000 pounds */
+				if (j_ptr->weight < 1000) {
+					j_ptr->weight += 20;
+
+					if (!message) {
+						msg_print("Your armor suddenly feels heavier!");
+						message = TRUE;
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("You feel worried about your weight...");
+			break;
+		}
+
+	case TRAP_OF_HEAVY_ARMOR_III:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_BODY; j < INVEN_CARRY; j++) /* only affects armor pieces */
+			{
+
+				if (rand_int(10) < 4) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* increase weight up to a max of 1000 pounds */
+				if (j_ptr->weight < 1000) {
+					j_ptr->weight += 30;
+
+					if (!message) {
+						msg_print("Your armor suddenly feels heavier!");
+						message = TRUE;
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("You feel worried about your weight...");
+			break;
+		}
+
+	case TRAP_OF_HEAVY_ARMOR_IV:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_BODY; j < INVEN_CARRY; j++) /* only affects armor pieces */
+			{
+
+				if (rand_int(10) < 2) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* increase weight up to a max of 1000 pounds */
+				if (j_ptr->weight < 1000) {
+					j_ptr->weight += 50;
+
+					if (!message) {
+						msg_print("Your armor suddenly feels heavier!");
+						message = TRUE;
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("You feel worried about your weight...");
+			break;
+		}
+
+	case TRAP_OF_HEAVY_ARMOR_V:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_BODY; j < INVEN_CARRY; j++) /* only affects armor pieces */
+			{
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* increase weight up to a max of 1000 pounds */
+				if (j_ptr->weight < 1000) {
+					j_ptr->weight += 100;
+
+					if (!message) {
+						msg_print("Your armor suddenly feels heavier!");
+						message = TRUE;
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("You feel worried about your weight...");
+			break;
+		}
+
+		/* Trap of Burden, by Amy: equipped jewelry becomes heavier */
+	case TRAP_OF_JEWELRY_BURDEN:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_RING; j < INVEN_LITE; j++) /* only affects jewelry */
+			{
+
+				if (rand_int(10) < 8) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* increase weight up to a max of 2000 pounds */
+				if (j_ptr->weight < 2000) {
+					j_ptr->weight += 50;
+
+					if (!message) {
+						msg_print("You feel burdened"); /* missing exclamation mark is intentional */
+						message = TRUE;
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("You feel constricted...");
+			break;
+		}
+
+	case TRAP_OF_JEWELRY_BURDEN_II:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_RING; j < INVEN_LITE; j++) /* only affects jewelry */
+			{
+
+				if (rand_int(10) < 7) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* increase weight up to a max of 2000 pounds */
+				if (j_ptr->weight < 2000) {
+					j_ptr->weight += 100;
+
+					if (!message) {
+						msg_print("You feel burdened"); /* missing exclamation mark is intentional */
+						message = TRUE;
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("You feel constricted...");
+			break;
+		}
+
+	case TRAP_OF_JEWELRY_BURDEN_III:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_RING; j < INVEN_LITE; j++) /* only affects jewelry */
+			{
+
+				if (rand_int(10) < 5) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* increase weight up to a max of 2000 pounds */
+				if (j_ptr->weight < 2000) {
+					j_ptr->weight += 200;
+
+					if (!message) {
+						msg_print("You feel burdened"); /* missing exclamation mark is intentional */
+						message = TRUE;
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("You feel constricted...");
+			break;
+		}
+
+	case TRAP_OF_JEWELRY_BURDEN_IV:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_RING; j < INVEN_LITE; j++) /* only affects jewelry */
+			{
+
+				if (rand_int(10) < 4) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* increase weight up to a max of 2000 pounds */
+				if (j_ptr->weight < 2000) {
+					j_ptr->weight += 500;
+
+					if (!message) {
+						msg_print("You feel burdened"); /* missing exclamation mark is intentional */
+						message = TRUE;
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("You feel constricted...");
+			break;
+		}
+
+	case TRAP_OF_JEWELRY_BURDEN_V:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_RING; j < INVEN_LITE; j++) /* only affects jewelry */
+			{
+
+				if (rand_int(10) < 2) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* increase weight up to a max of 2000 pounds */
+				if (j_ptr->weight < 2000) {
+					j_ptr->weight += 1000;
+
+					if (!message) {
+						msg_print("You feel burdened"); /* missing exclamation mark is intentional */
+						message = TRUE;
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("You feel constricted...");
+			break;
+		}
+
+	case TRAP_OF_JEWELRY_BURDEN_VI:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_RING; j < INVEN_LITE; j++) /* only affects jewelry */
+			{
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* increase weight up to a max of 2000 pounds */
+				if (j_ptr->weight < 2000) {
+					j_ptr->weight += 2000;
+
+					if (!message) {
+						msg_print("You feel burdened"); /* missing exclamation mark is intentional */
+						message = TRUE;
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("You feel constricted...");
+			break;
+		}
+
 		/* Trap of Decay */
 	case TRAP_OF_DECAY:
 		{
@@ -13400,8 +13862,226 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 			if (!ident) msg_print("You hear a growling sound.");
 		}
-
 		break;
+
+	case TRAP_OF_DECAY_II:
+		{
+			s16b i, j;
+			object_type *o_ptr;
+			char o_name[80];
+
+			/* code by Amy - this trap used to do nothing at all... */
+
+			for (j = 0; j < 20; j++)
+			{
+				/* Pick an item from the pack */
+				i = rand_int(INVEN_PACK);
+
+				/* Get the item */
+				o_ptr = &p_ptr->inventory[i];
+
+				/* Skip non-objects */
+				if (!o_ptr->k_idx) continue;
+
+				/* Skip non-food objects */
+				if (o_ptr->tval != TV_FOOD) continue;
+
+				/* Get a description */
+				object_desc(o_name, o_ptr, FALSE, 0);
+
+				/* Message */
+				msg_format("%sour %s (%c) was eaten!",
+				           ((o_ptr->number > 1) ? "One of y" : "Y"),
+				           o_name, index_to_label(i));
+
+				/* Steal the items */
+				inven_item_increase(i, -1);
+				inven_item_optimize(i);
+
+				/* Obvious */
+				ident = TRUE;
+
+			}
+			if (!ident) msg_print("You hear a growling sound.");
+		}
+		break;
+
+	case TRAP_OF_DECAY_III:
+		{
+			s16b i, j;
+			object_type *o_ptr;
+			char o_name[80];
+
+			/* code by Amy - this trap used to do nothing at all... */
+
+			for (j = 0; j < 50; j++)
+			{
+				/* Pick an item from the pack */
+				i = rand_int(INVEN_PACK);
+
+				/* Get the item */
+				o_ptr = &p_ptr->inventory[i];
+
+				/* Skip non-objects */
+				if (!o_ptr->k_idx) continue;
+
+				/* Skip non-food objects */
+				if (o_ptr->tval != TV_FOOD) continue;
+
+				/* Get a description */
+				object_desc(o_name, o_ptr, FALSE, 0);
+
+				/* Message */
+				msg_format("%sour %s (%c) was eaten!",
+				           ((o_ptr->number > 1) ? "One of y" : "Y"),
+				           o_name, index_to_label(i));
+
+				/* Steal the items */
+				inven_item_increase(i, -1);
+				inven_item_optimize(i);
+
+				/* Obvious */
+				ident = TRUE;
+
+			}
+			if (!ident) msg_print("You hear a growling sound.");
+		}
+		break;
+
+	case TRAP_OF_DECAY_IV:
+		{
+			s16b i, j;
+			object_type *o_ptr;
+			char o_name[80];
+
+			/* code by Amy - this trap used to do nothing at all... */
+
+			for (j = 0; j < 200; j++)
+			{
+				/* Pick an item from the pack */
+				i = rand_int(INVEN_PACK);
+
+				/* Get the item */
+				o_ptr = &p_ptr->inventory[i];
+
+				/* Skip non-objects */
+				if (!o_ptr->k_idx) continue;
+
+				/* Skip non-food objects */
+				if (o_ptr->tval != TV_FOOD) continue;
+
+				/* Get a description */
+				object_desc(o_name, o_ptr, FALSE, 0);
+
+				/* Message */
+				msg_format("%sour %s (%c) was eaten!",
+				           ((o_ptr->number > 1) ? "One of y" : "Y"),
+				           o_name, index_to_label(i));
+
+				/* Steal the items */
+				inven_item_increase(i, -1);
+				inven_item_optimize(i);
+
+				/* Obvious */
+				ident = TRUE;
+
+			}
+			if (!ident) msg_print("You hear a growling sound.");
+		}
+		break;
+
+	case TRAP_OF_DECAY_V:
+		{
+			s16b i, j;
+			object_type *o_ptr;
+			char o_name[80];
+
+			/* code by Amy - this trap used to do nothing at all... */
+
+			for (j = 0; j < 1000; j++)
+			{
+				/* Pick an item from the pack */
+				i = rand_int(INVEN_PACK);
+
+				/* Get the item */
+				o_ptr = &p_ptr->inventory[i];
+
+				/* Skip non-objects */
+				if (!o_ptr->k_idx) continue;
+
+				/* Skip non-food objects */
+				if (o_ptr->tval != TV_FOOD) continue;
+
+				/* Get a description */
+				object_desc(o_name, o_ptr, FALSE, 0);
+
+				/* Message */
+				msg_format("%sour %s (%c) was eaten!",
+				           ((o_ptr->number > 1) ? "One of y" : "Y"),
+				           o_name, index_to_label(i));
+
+				/* Steal the items */
+				inven_item_increase(i, -1);
+				inven_item_optimize(i);
+
+				/* Obvious */
+				ident = TRUE;
+
+			}
+			if (!ident) msg_print("You hear a growling sound.");
+		}
+		break;
+
+	case TRAP_OF_REDUCE_AMMO:
+		{
+			object_type *o_ptr;
+
+			/* Access the ammo */
+			o_ptr = &p_ptr->inventory[INVEN_AMMO];
+
+			/* Drain quantity */
+			if (o_ptr && (o_ptr->number > 1))
+			{
+				o_ptr->number = randint(o_ptr->number);
+				if (o_ptr->number > 1) o_ptr->number--;
+				ident = TRUE;
+			}
+
+			if (ident)
+			{
+				msg_print("You suddenly have less ammo remaining!");
+			}
+			else
+			{
+				msg_print("You hear a cocking sound.");
+			}
+			break;
+		}
+
+	case TRAP_OF_REDUCE_AMMO_X:
+		{
+			object_type *o_ptr;
+
+			/* Access the ammo */
+			o_ptr = &p_ptr->inventory[INVEN_AMMO];
+
+			/* Drain quantity */
+			if (o_ptr && (o_ptr->number > 1))
+			{
+				o_ptr->number = 1;
+				ident = TRUE;
+			}
+
+			if (ident)
+			{
+				msg_print("You suddenly have less ammo remaining!");
+			}
+			else
+			{
+				msg_print("You hear a cocking sound.");
+			}
+			break;
+		}
 
 	case TRAP_OF_STACK_REDUCTION:
 		{
