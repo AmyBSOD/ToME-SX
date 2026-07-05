@@ -1,8 +1,8 @@
 # Floor
-F:.:1:6
+F:.:1:2
 
 # Dark floor
-F:,:1:4
+F:,:1:0
 
 # Permanent wall
 F:X:61:4
@@ -14,10 +14,10 @@ F:x:61:6
 F:M:38:22
 
 # Looked door
-F:D:38:6
+F:D:38:2
 
 # Open door
-F:d:4:6
+F:d:4:2
 
 # up staircase
 F:<:6:8

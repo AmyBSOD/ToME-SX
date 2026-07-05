@@ -103,7 +103,11 @@ void teleport_player_directed(int rad, int dir)
 	}
 
 	/* Rooted means no move */
-	if (p_ptr->tim_roots) return;
+	if (p_ptr->tim_roots)
+	{
+		msg_print("Your roots prevent the teleportation.");
+		return;
+	}
 
 	if (yfoo == 0) x_major = TRUE;
 	if (xfoo == 0) y_major = TRUE;
@@ -215,7 +219,11 @@ void teleport_player_directed_DM(int rad, int dir)
 	}
 
 	/* Rooted means no move */
-	if (p_ptr->tim_roots) return;
+	if (p_ptr->tim_roots)
+	{
+		msg_print("Your roots prevent the teleportation.");
+		return;
+	}
 
 	if (yfoo == 0) x_major = TRUE;
 	if (xfoo == 0) y_major = TRUE;
@@ -564,10 +572,18 @@ void teleport_player(int dis)
 		return;
 	}
 
-	if (p_ptr->wild_mode) return;
+	if (p_ptr->wild_mode)
+	{
+		msg_print("You can't teleport in the wilderness.");
+		return;
+	}
 
 	/* Rooted means no move */
-	if (p_ptr->tim_roots) return;
+	if (p_ptr->tim_roots)
+	{
+		msg_print("Your roots prevent the teleportation.");
+		return;
+	}
 
 	if (p_ptr->anti_tele && (!teleport_player_bypass))
 	{
@@ -739,10 +755,18 @@ void teleport_player_deathmold(int dis)
 		return;
 	}
 
-	if (p_ptr->wild_mode) return;
+	if (p_ptr->wild_mode)
+	{
+		msg_print("You can't teleport in the wilderness.");
+		return;
+	}
 
 	/* Rooted means no move */
-	if (p_ptr->tim_roots) return;
+	if (p_ptr->tim_roots)
+	{
+		msg_print("Your roots prevent the teleportation.");
+		return;
+	}
 
 	if (p_ptr->anti_tele && (!teleport_player_bypass))
 	{
@@ -1064,7 +1088,11 @@ void teleport_player_to(int ny, int nx)
 	}
 
 	/* Rooted means no move */
-	if (p_ptr->tim_roots) return;
+	if (p_ptr->tim_roots)
+	{
+		msg_print("Your roots prevent the teleportation.");
+		return;
+	}
 
 	/* Find a usable location */
 	while (1)
@@ -1151,7 +1179,11 @@ void teleport_player_to_DM(int ny, int nx)
 	}
 
 	/* Rooted means no move */
-	if (p_ptr->tim_roots) return;
+	if (p_ptr->tim_roots)
+	{
+		msg_print("Your roots prevent the teleportation.");
+		return;
+	}
 
 	/* Find a usable location */
 	while (1)
@@ -1263,7 +1295,11 @@ void teleport_player_level(void)
 	}
 
 	/* Rooted means no move */
-	if (p_ptr->tim_roots) return;
+	if (p_ptr->tim_roots)
+	{
+		msg_print("Your roots prevent the teleportation.");
+		return;
+	}
 
 	if (!dun_level)
 	{
@@ -1379,7 +1415,11 @@ void teleport_player_level_trap(void)
 	}
 
 	/* Rooted means no move */
-	if (p_ptr->tim_roots) return;
+	if (p_ptr->tim_roots)
+	{
+		msg_print("Your roots prevent the teleportation.");
+		return;
+	}
 
 	if (!dun_level)
 	{
