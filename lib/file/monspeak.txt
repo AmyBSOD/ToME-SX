@@ -362,6 +362,10 @@ screams 'ToME rules!'.
 
 N:1086:Elif
 N:5357:Elli
+N:5421:Elif
+N:5422:Elli
+N:5423:Elif
+N:5424:Elli
 4
 announces that she'll kick your hands until they start bleeding.
 tells you that she'd like to stroke you softly.
@@ -372,6 +376,8 @@ hopes that you won't actually kill her.
 
 N:1090:Jessica
 N:5358:Jessie
+N:5433:Jessica
+N:5434:Jessie
 4
 regards you as a danger to her life.
 gets ready to fight you.
@@ -383,6 +389,8 @@ sighs 'What a cruel world this is, where even harmless ladies are being raped...
 
 N:1092:Wendy
 N:5359:Wendy O'Koopa
+N:5436:Wendy
+N:5437:Wendy O'Koopa
 4
 farts in your general direction.
 announces 'I'll scratch open your legs with my heels.'
@@ -393,6 +401,8 @@ is looking for the nearest toilet.
 
 N:1099:Nadja
 N:5361:Vilja
+N:5449:Nadja
+N:5450:Vilja
 4
 tells you to stop acting like a crazy person.
 flips you the bird.
@@ -413,6 +423,8 @@ tries to run for her life.
 
 N:1327:Magdalena
 N:5363:Lenka
+N:5478:Magdalena
+N:5479:Lenka
 4
 challenges you to a duel on life and death.
 wants to find out whether you can withstand her female combat boots.
@@ -423,6 +435,8 @@ feels that she's met her match.
 
 N:1332:Ina
 N:5364:Tender Ina
+N:5482:Ina
+N:5483:Tender Ina
 4
 screams 'I'm not anorexic! I'm too fat!'
 shouts 'Look at yourself, you're much too skinny! Why don't you eat?'
@@ -444,6 +458,8 @@ screams 'If you kill me, I'll come back stronger than before!'
 
 N:1691:Meltem
 N:5365:Melirija
+N:5493:Meltem
+N:5494:Melirija
 4
 announces 'I hope for a fair battle.'
 shouts 'Allah Akbar!'
@@ -464,6 +480,8 @@ collects mana for her emergency teleport spell.
 
 N:1710:Miriam
 N:5367:Mirri
+N:5509:Miriam
+N:5510:Mirri
 4
 asks 'Do you want me to squeeze your toes with my high-heeled combat boots?'
 shouts 'Your soft toes need to be clamped by my heels!'
@@ -514,6 +532,8 @@ very hurriedly tries to run away from you.
 
 N:1719:Jasieen
 N:5370:Jasajeen
+N:5515:Jasieen
+N:5516:Jasajeen
 4
 says 'I'm not a Mary Sue. What makes you think that?'
 announces 'Sorry, but you look like Moderator Breaker to me.'
@@ -524,6 +544,8 @@ implores you: 'Please don't kill me! I'm too important to die!'
 
 N:1720:Marike
 N:5353:Marika
+N:5517:Marike
+N:5518:Marika
 4
 squeaks like a little girl.
 farts in your general direction in a very squeaky, disgusting way.
@@ -605,6 +627,8 @@ sighs 'What a cruel world this is, where even harmless ladies are being raped...
 
 N:3840:Inge
 N:5375:Inga
+N:5667:Inge
+N:5668:Inga
 4
 uncovers her butt and starts farting pepper spray into your face.
 is wearing very pretty black combat boots.
@@ -615,6 +639,8 @@ complains about you addressing her with her first name.
 
 N:3849:Helen
 N:5376:Helli
+N:5679:Helen
+N:5680:Helli
 4
 shouts 'You won't stand against the might of Femen!'
 ushers a huge horde of girls to attack you.
@@ -625,6 +651,10 @@ screams 'Femen shall rise again!'
 
 N:3895:Kati
 N:5377:Elenya
+N:5691:Kati
+N:5692:Elenya
+N:5693:Kati
+N:5694:Elenya
 4
 shouts 'Hey! That's an unfair thing you've done there!'
 presents her sexy butt cheeks, which are looking very lovely.
@@ -635,6 +665,8 @@ screams 'Why are you so mean to me?'
 
 N:3896:Maurah
 N:5378:Maricia
+N:5695:Maurah
+N:5696:Maricia
 4
 just sighs.
 obviously wishes you were far away.
@@ -645,6 +677,8 @@ has tears running down her cheeks, ruining her make-up...
 
 N:3897:Eveline
 N:5379:Evita
+N:5697:Eveline
+N:5698:Evita
 4
 says 'Black is a good color, you can't do nothing wrong if you wear black clothes.'
 remarks 'Yeah, that red looks pretty good, I appreciate your fashion sense.'
@@ -655,6 +689,8 @@ screams 'No! You can't wear PINK of all things! Pick any other color, but not th
 
 N:3898:Sandra
 N:5380:Sandrina
+N:5699:Sandra
+N:5700:Sandrina
 4
 farts in your direction in a very disgusting, squeaking way.
 marvels at the shreds of skin clinging to her sharp-edged combat boot heels.
@@ -665,6 +701,8 @@ sobs 'Please! You can have everything you want, just stop bashing me, please!'
 
 N:3899:Simone
 N:5381:Simona
+N:5701:Simone
+N:5702:Simona
 4
 seems to be aware of your presence.
 hopes that you treat her nicely.
@@ -675,6 +713,8 @@ mutters 'This time I'll forgive you...'
 
 N:3900:Sue Lyn
 N:5382:Lynette
+N:5703:Sue Lyn
+N:5704:Lynette
 4
 announces 'Give up! My boots are harder than your thick head!'
 announces 'People who get bludgeoned by my boots can go to hell!'
@@ -685,6 +725,8 @@ shouts 'No! Don't spank my butt! You're not allowed to do that!'
 
 N:3901:Marleen
 N:5383:Carat Marleen
+N:5705:Marleen
+N:5706:Carat Marleen
 4
 shouts 'Don't diss my boyfriend!'
 announces 'The erring wight is the best boyfriend ever and I won't let you contradict me!'
@@ -695,6 +737,8 @@ screams 'Run, erring wight! We must split up and lose them!'
 
 N:3902:Claudia
 N:5384:Cloudy
+N:5707:Claudia
+N:5708:Cloudy
 4
 greets you and hopes for a fair battle.
 wants to test whether you can kick more powerfully than her wooden sandals.
@@ -705,6 +749,8 @@ congratulates you for being such a good fighter.
 
 N:3903:Ksenia
 N:5385:Xeni
+N:5709:Ksenia
+N:5710:Xeni
 4
 says 'Oh I'm sorry that I gave you the wrong date!'
 remarks 'I might look kind, but if you annoy me, I'll slam my sandals into your shins!'
@@ -715,6 +761,8 @@ seems very sad...
 
 N:3904:Solvejg
 N:5386:Erosina
+N:5711:Solvejg
+N:5712:Erosina
 4
 annoys you with her grating voice.
 gets ready to intoxicate you with the scent of her mocassins.
@@ -725,6 +773,8 @@ screams like a woman all the time, and the loud sound of her annoying voice is r
 
 N:3905:Jennifer
 N:5387:Jynnifyr
+N:5713:Jennifer
+N:5714:Jynnifyr
 4
 doesn't seem to make a sound.
 mutters 'Stop your silly shenanigans.'
@@ -735,6 +785,8 @@ is trying to retreat to a safe place.
 
 N:3906:Sarah
 N:5388:Sleepy Sarah
+N:5715:Sarah
+N:5716:Sleepy Sarah
 4
 is ready to kick you in the shins very painfully!
 warns you that her pants are airtight.
@@ -745,6 +797,8 @@ will come back and kick your butt!
 
 N:3907:Mariya
 N:5389:Mari-ja
+N:5717:Mariya
+N:5718:Mari-ja
 4
 announces 'I'll not let you steal my equipment with the superghost Big-Switchboo!'
 laughs 'No one can steal my ability to fart!'
@@ -774,7 +828,7 @@ screams 'That's unfair!! I don't like your behavior at all!'
 
 N:5409:Beardez
 N:5410:Bearthez
-4
+2
 shouts 'Die!'
 shouts 'You will die!'
 0

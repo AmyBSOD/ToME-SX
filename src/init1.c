@@ -8670,16 +8670,6 @@ static errr grab_one_basic_flag(monster_race *r_ptr, cptr what)
 		}
 	}
 
-	/* Scan flags12 */
-	for (i = 0; i < 32; i++)
-	{
-		if (streq(what, r_info_flags12[i]))
-		{
-			r_ptr->flags12 |= (1L << i);
-			return (0);
-		}
-	}
-
 	/* Scan flags13 */
 	for (i = 0; i < 32; i++)
 	{
@@ -8811,6 +8801,16 @@ static errr grab_one_spell_flag(monster_race *r_ptr, cptr what)
 		if (streq(what, r_info_flags11[i]))
 		{
 			r_ptr->flags11 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Scan flags12 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, r_info_flags12[i]))
+		{
+			r_ptr->flags12 |= (1L << i);
 			return (0);
 		}
 	}
@@ -9350,19 +9350,6 @@ static errr grab_one_basic_ego_flag(monster_ego *re_ptr, cptr what, bool add)
 		}
 	}
 
-	/* Scan flags12 */
-	for (i = 0; i < 32; i++)
-	{
-		if (streq(what, r_info_flags12[i]))
-		{
-			if (add)
-				re_ptr->mflags12 |= (1L << i);
-			else
-				re_ptr->nflags12 |= (1L << i);
-			return (0);
-		}
-	}
-
 	/* Scan flags13 */
 	for (i = 0; i < 32; i++)
 	{
@@ -9534,6 +9521,19 @@ static errr grab_one_spell_ego_flag(monster_ego *re_ptr, cptr what, bool add)
 		}
 	}
 
+	/* Scan flags12 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, r_info_flags12[i]))
+		{
+			if (add)
+				re_ptr->mflags12 |= (1L << i);
+			else
+				re_ptr->nflags12 |= (1L << i);
+			return (0);
+		}
+	}
+
 	/* Oops */
 	msg_format("Unknown monster spell ego flag '%s'.", what);
 
@@ -9621,17 +9621,6 @@ static errr grab_one_ego_flag(monster_ego *re_ptr, cptr what, bool must)
 		{
 			if (must) re_ptr->flags10 |= (1L << i);
 			else re_ptr->hflags10 |= (1L << i);
-			return (0);
-		}
-	}
-
-	/* Scan flags12 */
-	for (i = 0; i < 32; i++)
-	{
-		if (streq(what, r_info_flags12[i]))
-		{
-			if (must) re_ptr->flags12 |= (1L << i);
-			else re_ptr->hflags12 |= (1L << i);
 			return (0);
 		}
 	}
@@ -10632,16 +10621,6 @@ static errr grab_one_basic_monster_flag(dungeon_info_type *d_ptr, cptr what, byt
 		}
 	}
 
-	/* Scan flags12 */
-	for (i = 0; i < 32; i++)
-	{
-		if (streq(what, r_info_flags12[i]))
-		{
-			d_ptr->rules[rule].mflags12 |= (1L << i);
-			return (0);
-		}
-	}
-
 	/* Scan flags13 */
 	for (i = 0; i < 32; i++)
 	{
@@ -10773,6 +10752,16 @@ static errr grab_one_spell_monster_flag(dungeon_info_type *d_ptr, cptr what, byt
 		if (streq(what, r_info_flags11[i]))
 		{
 			d_ptr->rules[rule].mflags11 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Scan flags12 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, r_info_flags12[i]))
+		{
+			d_ptr->rules[rule].mflags12 |= (1L << i);
 			return (0);
 		}
 	}
