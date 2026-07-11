@@ -6826,7 +6826,8 @@ I:70:54:0
 W:60:0:0:500000
 A:30/50:60/20:80/5
 P:0:1d1:0:0:0
-D:Causes you to become an atheist until you pick up a new religion.
+D:Causes you to become an atheist until you pick up a new religion. 
+D:However, beware of the gods' wrath! 
 
 N:850:Reincarnation
 G:?:d
@@ -10686,6 +10687,25 @@ P:0:1d1:0:0:0
 F:FOUNTAIN
 D:Your body will undergo an uncontrollable change if you quaff this. 
 D:Taking such a risk may in fact be quite a bad idea. 
+
+N:1266:& Superweapon~
+G:/:r
+I:22:40:0
+W:50:0:50:10000
+A:50/10
+P:0:1d6:0:0:0
+F:SHOW_MODS | VORPAL
+f:VORPAL
+D:It's a very sharp spear, but still just a spear. 
+
+N:1267:Digging
+G:=:d
+I:45:74:0
+W:5:0:2:4000
+A:5/1
+F:TUNNEL | EASY_KNOW
+f:TUNNEL |
+D:This ring magically improves your ability to tunnel. 
 
 # N:number:name
 # G:glyph:color

@@ -1952,6 +1952,8 @@
 #define SV_RING_WIZARDRY                70
 #define SV_RING_ACCEL                   71
 #define SV_RING_SWIFT                   72
+#define SV_RING_FORCE_RES               73
+#define SV_RING_DIGGING                 74
 
 /* The "sval" codes for TV_STAFF */
 #define SV_STAFF_SCHOOL                 1

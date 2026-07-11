@@ -5904,6 +5904,8 @@ void do_cmd_read_scroll(void)
 		case SV_SCROLL_RENOUNCE_RELIGION:
 			{
 				msg_print("You feel like an atheist.");
+				msg_print("You feel the wrath of the gods...");
+				give_random_nastytrap_effect();
 
 				abandon_god(GOD_ERU);
 				abandon_god(GOD_MANWE);

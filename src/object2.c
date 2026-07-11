@@ -3866,6 +3866,7 @@ static void a_m_aux_3(object_type *o_ptr, int level, int power)
 			case SV_RING_SEARCHING:
 			case SV_RING_PERCEPTION:
 			case SV_RING_STEALTH:
+			case SV_RING_DIGGING:
 				{
 					/* Bonus to searching */
 					o_ptr->pval = 1 + m_bonus(5, level);
