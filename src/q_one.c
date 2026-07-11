@@ -411,6 +411,26 @@ bool quest_one_death_hook(char *fmt)
 	{
 		ok = TRUE;
 	}
+	else if (magik(10) && (r_idx == test_monster_name("Sizzle")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Rubinho")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Serkan")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Janine")))
+	{
+		ok = TRUE;
+	}
+	else if (magik(10) && (r_idx == test_monster_name("Master Chris")))
+	{
+		ok = TRUE;
+	}
 
 	if (ok)
 	{

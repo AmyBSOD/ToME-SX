@@ -4901,7 +4901,7 @@ quest_type quest_init_tome[MAX_Q_IDX_INIT] =
 
 
 /* List of powers for Symbiants/Powers */
-monster_power monster_powers[128] =
+monster_power monster_powers[160] =
 	{
 		/* 0 */
 		{ RF4_SHRIEK, "Aggravate Monster", 1, FALSE },
@@ -5072,6 +5072,8 @@ monster_power monster_powers[128] =
 		{ 0, "(none)", 0, FALSE },
 		{ 0, "(none)", 0, FALSE },
 		{ 0, "(none)", 0, FALSE },
+
+		/* 160 */
 	};
 
 /* Tval descriptions */
