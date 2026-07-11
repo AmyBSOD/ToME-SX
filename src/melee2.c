@@ -719,8 +719,8 @@ static bool spell_annoy(int spell)
  */
 static bool spell_summon(int spell)
 {
-	/* RF4_S_ANIMAL, RF6_S_ANIMALS */
-	if (spell == 96 + 2 || spell == 160 + 3) return (TRUE);
+	/* RF4_S_ANIMAL, RF6_S_ANIMALS, RF6_RAISE_DEAD */
+	if (spell == 96 + 2 || spell == 160 + 3 || spell == 160 + 12) return (TRUE);
 	/* All other summon spells */
 	if (spell >= 160 + 13 && spell <= 160 + 31) return (TRUE);
 
@@ -3056,9 +3056,34 @@ static bool monst_spell_monst(int m_idx)
 				break;
 			}
 
-			/* RF6_ANIM_DEAD */
+			/* RF6_ANIM_DEAD aka RF6_RAISE_DEAD */
 		case 160 + 12:
 			{
+				disturb(1, 0);
+
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (blind) monster_msg("%^s mumbles an eldritch chant.", m_name);
+				else monster_msg("%^s screams 'EYGOORTS-TOGAAAAAAL, JEZEHH!'", m_name);
+				if (p_ptr->nastytrap143) {
+					monst_breath_monst(m_idx, y, x, GF_RAISE, 1, 15);
+				} else {
+					monst_breath_monst(m_idx, y, x, GF_RAISE, 1, 10);
+				}
+
+				for (k = 0; k < randint(3); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_UNDEAD, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_UNDEAD);
+				}
+				if (blind && count) monster_msg("You hear something appear nearby.");
+
 				break;
 			}
 
@@ -6117,8 +6142,31 @@ bool make_attack_spell(int m_idx)
 				break;
 			}
 
-			/* RF6_ANIM_DEAD */
+			/* RF6_ANIM_DEAD aka RF6_RAISE_DEAD */
 		case 160 + 12:
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles an eldritch chant.", m_name);
+				else msg_format("%^s screams 'EYGOORTS-TOGAAAAAAL, JEZEHH!'", m_name);
+				if (p_ptr->nastytrap143) {
+					breath(m_idx, GF_RAISE,
+				       (rlev * 2) + damroll(4, 4), 15);
+				} else {
+					breath(m_idx, GF_RAISE,
+				       (rlev) + damroll(2, 10), 10);
+				}
+
+				for (k = 0; k < 1; k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_UNDEAD);
+				}
+				if (blind && count) monster_msg("You hear something appear nearby.");
+				break;
 			break;
 
 			/* RF6_S_BUG */

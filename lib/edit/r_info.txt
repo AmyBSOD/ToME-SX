@@ -93834,7 +93834,7 @@ F:MORTAL | BASEANGBAND | WILD_MOUNTAIN | RES_NETH | RES_WATE |
 F:RES_NEXU | NO_SLEEP | NO_CUT | RES_TIME | RES_LITE | RES_INER | 
 F:RES_DARK | GOOD | UNDEAD | 
 S:1_IN_10
-S:S_UNDEAD
+S:S_UNDEAD | ANIM_DEAD
 D:Mmmmmmmmmmmmm, you instantly fall in love with this black platform 
 D:girl sandal! Maya loves to kick Phoenix in the shins with them, 
 D:but since he's not there, she'll gladly kick your shins instead. 
@@ -100106,7 +100106,7 @@ F:RES_NEXU | NO_SLEEP | NO_CUT | RES_TIME | RES_LITE | RES_INER |
 F:RES_DARK | GOOD | UNDEAD | RES_DISE | NO_STUN | NO_CUT | 
 F:RES_CHAO | RES_GRAV | RES_MIND | 
 S:1_IN_9
-S:S_UNDEAD
+S:S_UNDEAD | ANIM_DEAD
 D:You've fallen for these black platform sandals the instant you 
 D:saw them. They're sooooooooooo cuuuuuuuute and really like to 
 D:be worn by Maya's wonderfully soft girl feet! And when the 
