@@ -183,6 +183,8 @@ F:RES_POIS
 # Robe
 N:11:of Permanence
 T:36:2:2
+T:36:19:19
+T:36:23:24
 X:A:30:30
 W:0:1:10:30000
 C:0:0:10:0
@@ -1371,7 +1373,7 @@ f:XTRA_SHOTS |
 
 # Bows only
 N:109:of Lothlorien
-T:19:12:15
+T:19:11:19
 X:A:25:20
 W:50:2:21:30000
 C:10:10:0:2
@@ -1381,7 +1383,7 @@ F:BLESSED | ABILITY
 
 # Crossbows only
 N:110:of the Haradrim
-T:19:23:26
+T:19:21:29
 X:A:25:30
 W:50:2:21:20000
 C:5:15:0:1
@@ -1393,7 +1395,7 @@ N:111:of Buckland
 X:A:25:25
 W:40:2:21:20000
 C:8:8:0:2
-T:19:2:4
+T:19:1:9
 R:100
 F:DEX | XTRA_SHOTS | XTRA_MIGHT | IGNORE_ACID | IGNORE_FIRE | HIDE_TYPE
 
@@ -1527,6 +1529,21 @@ f:SLAY_DRAGON
 W:0:1:12:35
 
 N:120:of Slaying
+T:15:0:255
+T:16:0:255
+T:17:0:255
+T:18:0:255
+T:19:0:255
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+T:25:0:255
+T:26:0:255
+T:27:0:255
+T:28:0:255
+T:29:0:255
+T:115:55:55
 X:A:23:15
 W:0:1:12:20
 C:12:12:0:0
@@ -2142,7 +2159,7 @@ N:173:of Combat
 X:A:34:22
 W:50:1:15:7000
 C:6:8:-20:2
-T:31:2:99
+T:31:2:255
 R:100
 F:STR | CON | SHOW_MODS | AGGRAVATE | HIDE_TYPE | IGNORE_ACID | RES_FEAR | 
 F:DRAIN_HP
@@ -2170,10 +2187,10 @@ F:STEALTH | SPEED | HIDE_TYPE | FEATHER | IGNORE_ACID | IGNORE_FIRE | ABILITY
 N:176:of Fury
 X:A:24:30
 W:40:1:66:20000
-T:21:12:99
-T:22:10:99
-T:23:16:99
-T:24:8:99
+T:21:12:255
+T:22:10:255
+T:23:16:255
+T:24:8:255
 T:125:0:255
 T:115:55:55
 C:10:10:-20:2
@@ -2214,7 +2231,7 @@ f:EASY_USE
 # Lite ego
 N:180:of Warmth
 X:A:0:0
-T:39:0:99
+T:39:0:255
 W:0:1:10:500
 C:0:0:0:0
 R:100
@@ -2294,7 +2311,7 @@ F:REFLECT
 
 # Ego Heavy Crossbow
 N:188:of Siegecraft
-T:19:24:26
+T:19:24:29
 X:A:25:30
 W:60:5:30:30000
 C:10:15:20:2
@@ -2544,10 +2561,9 @@ F:R_IMMUNITY
 ### New ego-items from T-Plus by Ingeborg S. Norden ###
 
 #Demonic - anything but Devotion and Protection from Evil
+# Amy note: silly restriction, waived :-P
 N:209:Demonic
-T:40:0:1
-T:40:3:24
-T:40:26:99
+T:40:0:255
 T:45:0:255
 T:12:0:255
 X:B:0:10
@@ -2562,7 +2578,7 @@ f:ESP_DEMON | RES_FIRE
 N:210:Rohirric
 T:40:0:255
 T:45:0:30
-T:45:32:99
+T:45:32:255
 X:B:0:10
 W:0:5:100:20000
 C:0:0:0:3
@@ -2572,10 +2588,9 @@ F:RES_FEAR | SPEED
 f:RES_FEAR | SPEED
 
 # Draconic - anything but Devotion and Protection from Evil
+# Amy note: nope, everything, see above
 N:211:Draconic
-T:40:0:1
-T:40:3:24
-T:40:26:99
+T:40:0:255
 T:45:0:255
 T:12:0:255
 X:B:0:10
@@ -2587,11 +2602,10 @@ F:ESP_DRAGON
 f:ESP_DRAGON
 
 #Elemental - the ones that already give resists are obviously not eligible
+# Amy edit: wtf? just because it gives resist cold it can't give anything else? BS! of course it can!
 N:212:Elemental
-T:40:16:28
-T:40:30:99
-T:45:10:16
-T:45:20:99
+T:40:0:255
+T:45:0:255
 X:B:0:30
 W:25:5:50:1000
 C:0:0:0:0
@@ -2615,7 +2629,7 @@ F:IM_NETHER
 
 N:213:of Melkor
 T:14:0:59
-T:14:61:99
+T:14:61:255
 T:12:0:255
 X:A:0:30
 W:0:5:30:0
@@ -2639,8 +2653,8 @@ F:PVAL_M5 | R_IMMUNITY
 
 # Reverse Armour of the Maiar (of the Chosen in T-Plus)
 N:215:of the Fallen
-T:36:2:99
-T:37:2:99
+T:36:2:255
+T:37:2:255
 X:A:30:30
 W:0:3:45:0
 C:0:0:-15:0
@@ -2680,6 +2694,8 @@ F:RES_ACID | RES_ELEC | RES_FIRE | RES_COLD |
 # Robe of Fools (reverse of Ithryn/Archmagi in T-Plus)
 N:217:of the Fools
 T:36:2:2
+T:36:19:19
+T:36:23:24
 T:12:0:255
 X:A:30:30
 W:0:3:45:0
@@ -2694,6 +2710,8 @@ F:CURSED | HEAVY_CURSE | AUTO_CURSE | MANA |
 # Robe of Vice (reverse of Sanctity in T-Plus)
 N:218:of Vice
 T:36:2:2
+T:36:19:19
+T:36:23:24
 T:12:0:255
 X:A:30:30
 W:0:3:45:0
@@ -2762,7 +2780,7 @@ F:CURSED | IMMOVABLE
 # Bows of Numenor
 
 N:222:of Numenor
-T:19:12:34
+T:19:11:19
 X:A:50:50
 W:0:1:50:0
 C:10:10:0:3
@@ -2881,16 +2899,15 @@ F:MANA
 f:MANA
 
 # Magical jewelry (no rings/amulets of spell, anti-magic, cursed items)
+# Amy edit: of course cursed ones and anti-magic are allowed...
 N:231:Magical
 X:B:0:2
-T:40:0:12
-T:40:14:26
-T:40:28:99
+T:40:0:26
+T:40:28:255
 T:45:0:56
-T:45:59:99
+T:45:59:255
 W:5:1:10:2000
 C:0:0:0:0
-r:F:CURSED | HEAVY_CURSE | AUTO_CURSE
 R:100
 F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | IGNORE_POIS
 f:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | IGNORE_POIS
@@ -2927,7 +2944,7 @@ f:LEVELS
 
 # Bows of Mirkwood, added in Theme 1.0.2
 N:234:of Mirkwood
-T:19:12:15
+T:19:11:19
 X:A:25:20
 W:50:2:21:50000
 C:10:10:0:2
@@ -2953,10 +2970,10 @@ R:20
 F:R_ANY | R_LOW | SUSTAIN | R_HIGH
 
 # Dwarven jewelry - no speed rings; added in Theme 1.1.4
+# Amy edit: wtf, why would speed rings be exempt...
 N:236:Dwarven
 T:40:0:255
-T:45:0:30
-T:45:32:99
+T:45:0:255
 X:B:0:5
 W:5:1:10:1250
 C:0:0:10:1
@@ -3011,16 +3028,13 @@ F:R_HIGH |
 
 # Glowing (no "Nothings", Amulets of Brilliance, or Rings of 
 # Light and Darkness Resistance)
+# Amy note: makes absolutely zero sense to not allow every type
 
 N:239:Glowing
 X:B:0:5
 T:33:0:255
-T:40:0:5
-T:40:7:15
-T:40:17:99
-T:45:0:38
-T:45:40:49
-T:45:51:255
+T:40:0:255
+T:45:0:255
 W:5:1:10:1250
 C:0:0:0:0
 R:100
@@ -3028,16 +3042,13 @@ F:LITE1 |
 f:LITE1 |
 
 # Dazzling (as above, with more light plus resistance/granted ability)
+# Amy note: see above, just allow everything
 
 N:240:Dazzling
 X:B:0:7
 T:33:0:255
-T:40:0:5
-T:40:7:15
-T:40:17:99
-T:45:0:38
-T:45:40:49
-T:45:51:255
+T:40:0:255
+T:45:0:255
 W:10:3:12:2500
 C:0:0:0:0
 Z:illuminate
@@ -3053,18 +3064,16 @@ f:LITE3 |
 
 # Radiant (Dazzling with some extras;
 # no cursed jewelry)
+# Amy edit: those restrictions just make no sense and are therefore gone now
 
 N:241:Radiant
 X:B:0:12
 T:33:0:255
-T:40:17:99
-T:45:0:38
-T:45:40:49
-T:45:51:99
+T:40:0:255
+T:45:0:255
 W:15:5:15:3500
 C:0:0:0:0
 Z:illuminate
-r:F:CURSED | HEAVY_CURSE | AUTO_CURSE |
 R:100
 F:LITE3 | RES_LITE |
 f:LITE3 | 
@@ -3082,14 +3091,13 @@ F:REFLECT |
 # Blazing (Glowing plus fiery sheath, resistance, undamaged by 
 # fire; restrictions as per Glowing, but no Cold Resistance/Ice 
 # rings either)
+# Amy edit: I'm repeating myself, but anyway, allow everything
 
 N:242:Blazing
 X:B:0:15
 T:33:0:255
-T:40:17:99
-T:45:20:38
-T:45:40:49
-T:45:51:99
+T:40:0:255
+T:45:0:255
 W:15:5:15:3000
 C:0:0:0:0
 R:100
@@ -3106,11 +3114,11 @@ F:IM_FIRE |
 
 # Lucky (amulets only--resists cursing, undamaged by elements, luck 
 # bonus added; no inherently cursed types or Nothing amulets)
+# Amy edit: probably makes sense to avoid cursed ones here, but the rest is fair game
 
 N:243:Lucky
 X:B:0:12
-T:40:2:15
-T:40:17:99
+T:40:0:255
 T:12:0:255
 W:15:5:15:2750
 C:0:0:0:5
@@ -3119,10 +3127,10 @@ R:100
 F:BLESSED | LUCK |
 
 # Unlucky (amulets only; no Prot/Evil, Doom, or Nothing amulets)
+# Amy edit: silly restrictions are silly
 N:244:Unlucky
 X:B:0:0
-T:40:3:15
-T:40:17:99
+T:40:0:255
 T:12:0:255
 W:0:3:10:0
 C:-5:-5:-5:-5
@@ -3134,8 +3142,8 @@ F:HEAVY_CURSE |
 # Armour of the Maiar (of the Chosen in T-Plus)
 
 N:245:of the Maiar
-T:36:2:99
-T:37:2:99
+T:36:2:255
+T:37:2:255
 X:A:30:30
 W:10:3:45:15000
 C:0:0:15:0
@@ -3180,6 +3188,8 @@ F:PVAL_M1
 # Robe of Ithryn (of the Archmagi in T-Plus)
 N:247:of the Ithryn
 T:36:2:2
+T:36:19:19
+T:36:23:24
 X:A:30:30
 W:15:3:45:15000
 C:-5:-5:15:2
@@ -3198,6 +3208,8 @@ F:MANA |
 
 N:248:of Sanctity
 T:36:2:2
+T:36:19:19
+T:36:23:24
 X:A:30:30
 W:15:3:45:15000
 C:0:0:15:2
@@ -3216,6 +3228,8 @@ F:SPELL |
 N:249:Ethereal
 T:35:0:255
 T:36:2:2
+T:36:19:19
+T:36:23:24
 X:B:25:25
 W:15:2:20:27500
 C:0:0:20:0
@@ -3354,7 +3368,7 @@ f:ANTIMAGIC_50
 #Blessed - anything but Doom
 N:257:Blessed
 T:40:0:255
-T:45:1:99
+T:45:1:255
 X:B:0:10
 W:0:5:100:2000
 C:0:0:10:2
@@ -4160,6 +4174,8 @@ f:STR | INT | CON
 # robe of twilight
 N:326:of Twilight
 T:36:2:2
+T:36:19:19
+T:36:23:24
 X:A:30:100
 W:50:1:25:50000
 C:0:0:0:0
@@ -4173,6 +4189,8 @@ F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | IGNORE_POIS
 
 N:327:of the Sorcerer
 T:36:2:2
+T:36:19:19
+T:36:23:24
 X:A:30:100
 W:70:1:10:40000
 C:-25:-25:0:5
@@ -5074,7 +5092,7 @@ f:INFRA
 
 # guns
 N:408:Armor-Piercing
-T:19:33:75
+T:19:31:79
 X:B:25:10
 W:0:2:9:5000
 C:0:12:0:3
@@ -6140,7 +6158,7 @@ f:SPEED
 N:509:Amharic
 T:40:0:255
 T:45:0:30
-T:45:32:99
+T:45:32:255
 X:B:0:50
 W:30:5:100:50000
 C:0:0:0:5
@@ -6152,7 +6170,7 @@ f:RES_FEAR | SPEED
 N:510:Menonnitic
 T:40:0:255
 T:45:0:30
-T:45:32:99
+T:45:32:255
 X:B:0:150
 W:60:5:100:200000
 C:0:0:0:7
@@ -6892,6 +6910,475 @@ C:0:0:0:0
 R:100
 F:CHARGE_HOLDING | CAPACITY | CHARGING |
 f:CHARGE_HOLDING | CAPACITY | CHARGING |
+
+# gloves
+N:557:of Charming
+X:A:34:5
+T:31:0:255
+W:0:1:40:400
+C:0:0:0:6
+R:100
+F:CHR
+R:33
+F:STEALTH
+f:STEALTH
+
+# boots
+N:558:of Dwarvish Endurance
+X:A:35:15
+W:0:1:50:5000
+C:0:0:0:6
+T:30:0:255
+R:100
+F:CON | INFRA | RES_DARK
+R:33
+F:STR
+
+# weapon
+N:559:of Maiming
+T:15:0:255
+T:16:0:255
+T:17:0:255
+T:18:0:255
+T:19:0:255
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+T:25:0:255
+T:26:0:255
+T:27:0:255
+T:28:0:255
+T:29:0:255
+T:115:55:55
+X:A:23:15
+W:0:1:12:20
+C:12:12:0:0
+R:100
+F:DAM_SIZE
+
+# gloves
+N:560:of Thievery
+X:A:34:22
+W:40:1:40:5000
+C:8:3:0:5
+T:31:0:255
+R:100
+F:DEX | SEARCH | SHOW_MODS | FEATHER | FREE_ACT | HIDE_TYPE | IGNORE_ACID
+R:10
+F:SPEED
+
+# gloves
+N:561:of Combat
+X:A:34:22
+W:50:1:45:7000
+C:6:8:-20:2
+T:31:0:255
+R:100
+F:STR | CON | SHOW_MODS | AGGRAVATE | HIDE_TYPE | IGNORE_ACID | RES_FEAR | 
+F:DRAIN_HP
+R:25
+F:BLOWS
+
+# boots
+N:562:of Elvenkind
+X:A:35:30
+W:60:1:100:200000
+C:0:0:0:5
+T:30:0:255
+R:100
+F:STEALTH | SPEED | HIDE_TYPE | FEATHER | IGNORE_ACID | IGNORE_FIRE | ABILITY
+
+# weapon
+N:563:of Fury
+X:A:24:30
+W:40:1:200:20000
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+T:125:0:255
+T:115:55:55
+C:10:10:-20:2
+R:100
+F:STR | BLOWS | AGGRAVATE | RES_FEAR | HIDE_TYPE | 
+F:IGNORE_ACID | IGNORE_FIRE | DRAIN_MANA
+
+# heavy and dragon armor
+N:564:of Extra Immunity
+T:37:0:255
+T:37:0:255
+X:A:30:100
+W:80:1:150:60000
+C:0:0:15:0
+R:100
+F:IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | 
+F:IGNORE_ACID | IGNORE_ELEC | IGNORE_FIRE | IGNORE_COLD | IGNORE_POIS
+R:25
+F:R_HIGH
+R:25
+F:R_HIGH
+R:25
+F:R_HIGH
+R:25
+F:R_HIGH
+R:25
+F:R_HIGH
+
+# light
+N:565:of Valinor
+T:39:0:255
+X:A:60:60
+W:0:1:100:45000
+C:0:0:0:2
+R:100
+F:STR | INT | WIS | DEX | CON | CHR
+F:ESP_ALL
+f:STR | INT | WIS| DEX | CON | CHR | ESP_ALL
+
+# blunt
+N:566:of the Balroeg
+T:21:0:255
+X:A:50:50
+W:0:1:50:12000
+C:-10:10:0:-3
+R:100
+F:STEALTH | BRAND_FIRE | RES_FIRE | LITE2 | 
+F:IGNORE_FIRE | ESP_GOOD | 
+R:5
+F:IM_FIRE
+
+# polearm
+N:567:of Mirkwood
+T:22:0:255
+X:A:24:35
+W:40:1:100:50000
+C:15:15:20:3
+r:F:CURSED | HEAVY_CURSE | AUTO_CURSE
+R:100
+F:STEALTH | HOLD_LIFE | SEE_INVIS | CON |
+F:RES_FEAR | RES_DARK | RES_LITE | RES_BLIND |
+F:IGNORE_ACID | IGNORE_FIRE |
+F:R_ANY | R_LOW | SUSTAIN
+R:30
+F:R_ANY | R_LOW | SUSTAIN
+R:20
+F:R_ANY | R_LOW | SUSTAIN | R_HIGH
+
+# boots
+N:568:Rogue's
+X:B:35:15
+W:15:1:25:2500
+C:-5:-5:0:2
+T:30:0:255
+Z:panic hit
+R:100
+F:SEARCH
+f:SEARCH
+R:50
+F:STEALTH
+f:STEALTH
+R:25
+F:LUCK
+f:LUCK
+R:10
+F:R_HIGH |
+
+# amulet of doom 3
+N:569:For Everyone Else
+X:A:0:2
+T:40:0:0
+W:40:1:35:12000
+C:0:0:15:15
+R:100
+
+# mage staff
+N:570:of Slaying
+T:6:0:255
+X:A:23:15
+W:0:1:240:20
+C:12:12:0:0
+R:100
+F:DAM_DIE
+
+# mage staff
+N:571:of Maiming
+T:6:0:255
+X:A:23:15
+W:0:1:240:20
+C:12:12:0:0
+R:100
+F:DAM_SIZE
+
+# weapon
+N:572:of Ferocity
+T:15:0:255
+T:16:0:255
+T:17:0:255
+T:18:0:255
+T:19:0:255
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+T:25:0:255
+T:26:0:255
+T:27:0:255
+T:28:0:255
+T:29:0:255
+T:115:55:55
+X:A:23:15
+W:0:1:50:20
+C:12:12:0:0
+R:100
+F:DAM_SIZE | DAM_DIE
+
+# mage staff
+N:573:of Ferocity
+T:6:0:255
+X:A:23:15
+W:0:1:1000:20
+C:12:12:0:0
+R:100
+F:DAM_SIZE | DAM_DIE
+
+N:574:of Pelargir
+T:15:0:255
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+T:115:55:55
+X:A:24:20
+W:25:2:60:30000
+C:5:5:0:2
+R:100
+F:STR | DEX | CON |
+F:SLAY_ORC | SLAY_TROLL | SLAY_GIANT | DAM_DIE | 
+F:FREE_ACT | SEE_INVIS | ESP_ORC | ESP_TROLL | ESP_GIANT
+R:33
+F:RES_FEAR
+R:50
+F:RES_MORGUL
+
+N:575:Insidious
+T:125:0:255
+T:21:0:255
+T:22:0:255
+T:23:0:29
+T:23:31:255
+T:24:0:255
+T:115:55:55
+X:B:24:28
+W:30:1:120:20000
+R:100
+F:CHAOTIC | RES_CHAOS | IGNORE_ELEC | IGNORE_ACID | IGNORE_FIRE | 
+F:DAM_DIE | DAM_SIZE | 
+f:CHAOTIC
+F:R_ANY
+
+N:576:of Khazad-Doom
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+T:115:55:55
+X:A:24:26
+W:30:1:100:35000
+C:7:7:0:3
+R:100
+F:STR | CON | ESP_EVIL | RES_FEAR | DAM_DIE | 
+F:SLAY_EVIL | SLAY_TROLL | SLAY_DRAGON | SLAY_DEMON |
+F:FREE_ACT | SEE_INVIS | LITE1 | RES_DARK | ABILITY | 
+F:IGNORE_ACID | IGNORE_FIRE
+R:33
+F:R_HIGH
+R:33
+F:HOLD_LIFE
+R:22
+F:DEX
+
+N:577:of the Valar
+T:15:0:255
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+T:115:55:55
+X:A:24:35
+W:60:5:120:30000
+C:6:6:4:3
+r:F:CHAOTIC | DRAIN_HP | VAMPIRIC | CURSED | HEAVY_CURSE |
+R:100
+F:SLAY_GIANT | SLAY_TROLL | DAM_DIE | 
+F:SEE_INVIS | FREE_ACT | BLESSED | RES_FEAR | 
+F:ESP_GIANT | ESP_TROLL |
+F:LIMIT_BLOWS |
+F:IGNORE_ACID | IGNORE_COLD | IGNORE_ELEC | IGNORE_FIRE | IGNORE_POIS |
+f:FREE_ACT | IGNORE_ACID | IGNORE_COLD | IGNORE_ELEC | IGNORE_FIRE |
+R:33
+F:ESP_EVIL | SLAY_EVIL | R_ANY |
+R:20
+F:DAM_SIZE | 
+R:10
+F:BLOWS
+R:1
+F:PVAL_M1
+
+N:578:of Pelargir
+T:6:0:255
+X:A:24:20
+W:25:2:1200:30000
+C:5:5:0:2
+R:100
+F:STR | DEX | CON |
+F:SLAY_ORC | SLAY_TROLL | SLAY_GIANT | DAM_DIE | 
+F:FREE_ACT | SEE_INVIS | ESP_ORC | ESP_TROLL | ESP_GIANT
+R:33
+F:RES_FEAR
+R:50
+F:RES_MORGUL
+
+N:579:Insidious
+T:6:0:255
+X:B:24:28
+W:30:1:2400:20000
+R:100
+F:CHAOTIC | RES_CHAOS | IGNORE_ELEC | IGNORE_ACID | IGNORE_FIRE | 
+F:DAM_DIE | DAM_SIZE | 
+f:CHAOTIC
+F:R_ANY
+
+N:580:of Khazad-Doom
+T:6:0:255
+X:A:24:26
+W:30:1:2000:35000
+C:7:7:0:3
+R:100
+F:STR | CON | ESP_EVIL | RES_FEAR | DAM_DIE | 
+F:SLAY_EVIL | SLAY_TROLL | SLAY_DRAGON | SLAY_DEMON |
+F:FREE_ACT | SEE_INVIS | LITE1 | RES_DARK | ABILITY | 
+F:IGNORE_ACID | IGNORE_FIRE
+R:33
+F:R_HIGH
+R:33
+F:HOLD_LIFE
+R:22
+F:DEX
+
+N:581:of the Valar
+T:6:0:255
+X:A:24:35
+W:60:5:2400:30000
+C:6:6:4:3
+r:F:CHAOTIC | DRAIN_HP | VAMPIRIC | CURSED | HEAVY_CURSE |
+R:100
+F:SLAY_GIANT | SLAY_TROLL | DAM_DIE | 
+F:SEE_INVIS | FREE_ACT | BLESSED | RES_FEAR | 
+F:ESP_GIANT | ESP_TROLL |
+F:LIMIT_BLOWS |
+F:IGNORE_ACID | IGNORE_COLD | IGNORE_ELEC | IGNORE_FIRE | IGNORE_POIS |
+f:FREE_ACT | IGNORE_ACID | IGNORE_COLD | IGNORE_ELEC | IGNORE_FIRE |
+R:33
+F:ESP_EVIL | SLAY_EVIL | R_ANY |
+R:20
+F:DAM_SIZE | 
+R:10
+F:BLOWS
+R:1
+F:PVAL_M1
+
+N:582:of Ring Power
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+T:115:55:55
+X:A:24:22
+W:50:1:200:23000
+C:12:12:0:2
+a:HARDCORE=TELEPORT
+R:100
+F:SLAY_EVIL | KILL_DRAGON | TELEPORT | FREE_ACT | SEARCH | BRAND_ELEC
+F:REGEN | SLOW_DIGEST | RES_NEXUS | ACTIVATE | FLY | ESP_DRAGON
+F:R_HIGH | SLAY_WEAP | 
+R:12
+F:ABILITY
+R:2
+F:R_P_ABILITY | PVAL_M3 | LIMIT_BLOWS
+
+N:583:of Ring Power
+T:6:0:255
+X:A:24:22
+W:50:1:4000:23000
+C:12:12:0:2
+a:HARDCORE=TELEPORT
+R:100
+F:SLAY_EVIL | KILL_DRAGON | TELEPORT | FREE_ACT | SEARCH | BRAND_ELEC
+F:REGEN | SLOW_DIGEST | RES_NEXUS | ACTIVATE | FLY | ESP_DRAGON
+F:R_HIGH | SLAY_WEAP | 
+R:12
+F:ABILITY
+R:2
+F:R_P_ABILITY | PVAL_M3 | LIMIT_BLOWS
+
+# Weapons
+N:584:of Ithilien
+T:15:0:255
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+T:115:55:55
+X:A:24:50
+W:100:1:500:60000
+C:12:12:0:4
+R:100
+F:STR | DEX | CON | DAM_DIE | DAM_SIZE | 
+F:SLAY_ORC | SLAY_TROLL | SLAY_GIANT | KILL_DEMON | KILL_UNDEAD | 
+F:FREE_ACT | SEE_INVIS | ESP_ORC | ESP_TROLL | ESP_GIANT
+F:RES_FEAR
+R:75
+F:RES_MORGUL
+R:50
+F:R_HIGH
+R:5
+F:R_IMMUNITY
+
+N:585:of *Force*
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+T:115:55:55
+T:15:0:255
+X:A:24:40
+W:50:1:40:30000
+C:8:12:0:2
+R:100
+F:WIS | INT | SEE_INVIS | RES_FORCE | DAM_DIE | 
+f:WIS | INT
+R:25
+F:SLAY_WEAP
+
+N:586:of Star Wars
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+T:115:55:55
+T:15:0:255
+X:A:24:40
+W:75:1:75:50000
+C:10:25:10:6
+R:100
+F:WIS | INT | SEE_INVIS | RES_FORCE | DAM_DIE | REFLECT | 
+F:NO_MAGIC | DEX | 
+f:WIS | INT | REFLECT | NO_MAGIC | DEX | 
+R:25
+F:SLAY_WEAP
+R:10
+F:RES_DMG
 
 # N: serial number : ego type
 # D: description

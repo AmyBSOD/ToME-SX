@@ -137,7 +137,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 	while (attempts > 0) {
 		attempts--;
 
-		switch (randint(358)) {
+		switch (randint(370)) {
 
 			case 1:
 			case 2:
@@ -1175,6 +1175,43 @@ static void add_xtra_arti_power(object_type *o_ptr)
 				if (wizard) msg_print("Adding xtra power: 358");
 				o_ptr->art_flags6 |= TR6_ATTRACT_MON;
 				return;
+			case 359:
+			case 360:
+			case 361:
+			case 362:
+			case 363:
+				if (wizard) msg_print("Adding xtra power: 359-363");
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
+					o_ptr->dd++;
+					return;
+				}
+				continue;
+			case 364:
+			case 365:
+			case 366:
+			case 367:
+			case 368:
+				if (wizard) msg_print("Adding xtra power: 364-368");
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
+					o_ptr->ds++;
+					return;
+				}
+				continue;
+			case 369:
+				if (wizard) msg_print("Adding xtra power: 369");
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
+					o_ptr->dd *= 2;
+					return;
+				}
+				continue;
+			case 370:
+				if (wizard) msg_print("Adding xtra power: 370");
+				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
+					o_ptr->ds *= 2;
+					return;
+				}
+				continue;
+
 
 			default: /* fail safe --Amy */
 				if (wizard) msg_print("Adding xtra power: default");

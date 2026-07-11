@@ -4367,7 +4367,7 @@
 #define ETR4_R_HIGH            0x00000020L     /* Item has a random high resist */
 #define ETR4_R_ANY             0x00000040L     /* Item has one additional resist */
 #define ETR4_R_DRAGON          0x00000080L     /* Item gets "Dragon" Resist */
-#define ETR4_SLAY_WEAP         0x00000100L     /* Special 'Slaying' bonus */
+#define ETR4_SLAY_WEAP         0x00000100L     /* Special 'Slaying' bonus - greatly boosts damage dice and size */
 #define ETR4_DAM_DIE           0x00000200L     /* Item has an additional dam die */
 #define ETR4_DAM_SIZE          0x00000400L     /* Item has greater damage dice */
 #define ETR4_PVAL_M1           0x00000800L     /* Item has +1 to pval */
