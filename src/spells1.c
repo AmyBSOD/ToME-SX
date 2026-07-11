@@ -4040,6 +4040,28 @@ static bool project_f(int who, int r, int y, int x, int dam, int typ)
 			break;
 		}
 
+	case GF_ETHER:
+		{
+			/* "Permanent" features will stay */
+			if ((f_info[c_ptr->feat].flags1 & FF1_PERMANENT)) break;
+
+			/* Floors can become ether mist (chance == 20%) */
+			else if ((f_info[c_ptr->feat].flags1 & FF1_FLOOR) && (f_info[c_ptr->feat].flags1 & FF1_SUPPORT_GROWTH))
+			{
+				int k = rand_int(100);
+
+				if (k >= 20) break;
+
+				/* Transform floor */
+				cave_set_feat(y, x, FEAT_DMG_ETHER);
+
+				if (seen) obvious = TRUE;
+			}
+
+
+			break;
+		}
+
 	case GF_NETHER:
 	case GF_NEXUS:
 	case GF_NERVE:
@@ -5831,7 +5853,14 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 	case GF_CHAOS:
 		{
 			if (seen) obvious = TRUE;
+
 			do_poly = TRUE;
+
+			/* Powerful monsters can resist the polymorph --Amy */
+			if (m_ptr->level > randint((dam - 10) < 1 ? 1 : (dam - 10)) + 10) {
+				do_poly = FALSE;
+			}
+
 			do_conf = (5 + randint(11) + r) / (r + 1);
 			if ((r_ptr->flags4 & (RF4_BR_CHAO)) || (r_ptr->flags7 & (RF7_RES_CHAO)) ||
 			                ((r_ptr->flags3 & (RF3_DEMON)) && (randint(3) == 1)))
