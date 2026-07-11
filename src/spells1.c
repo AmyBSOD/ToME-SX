@@ -5072,7 +5072,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 					else if (r_ptr->level < 26) name = "Imp";
 					else if (r_ptr->level < 34) name = "Arch-vile";
 					else if (r_ptr->level < 42) name = "Bodak";
-					else if (r_ptr->level < 50) name = "Erynies";
+					else if (r_ptr->level < 50) name = "Erinyes";
 					else if (r_ptr->level < 58) name = "Vrock";
 					else if (r_ptr->level < 66) name = "Hezrou";
 					else if (r_ptr->level < 74) name = "Glabrezu";

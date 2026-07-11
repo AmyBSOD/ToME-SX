@@ -29,7 +29,7 @@
 # s slate  for nasty traps
 # W        for compound trap!!!
 # u l umb  for shit traps
-# D ldark  unused
+# D ldark  for environment traps
 # don't use U or you'll get trapped doors that are indistinguishable from untrapped doors!
 #
 #  an unknown character is multi-hued!
@@ -4987,6 +4987,61 @@ N:982:Petscrew Trap
 I:35:2:50:4:15:0d0:s
 D:Nasty!
 F:FLOOR
+
+N:983:Trap of Background Fire
+I:2:33:40:4:3:0d0:D
+D:The area gets hot...
+F:FLOOR | CHEST | DOOR
+
+N:984:Trap of Background Acid
+I:2:33:40:4:3:0d0:D
+D:The area gets acidic...
+F:FLOOR | CHEST | DOOR
+
+N:985:Trap of Background Shock
+I:2:33:40:4:3:0d0:D
+D:The area gets charged...
+F:FLOOR | CHEST | DOOR
+
+N:986:Trap of Background Cold
+I:2:33:40:4:3:0d0:D
+D:The area gets icy...
+F:FLOOR | CHEST | DOOR
+
+N:987:Trap of Background Plasma
+I:3:33:40:4:10:0d0:D
+D:The area gets extremely hot...
+F:FLOOR | CHEST | DOOR
+
+N:988:Trap of Code Editing
+I:5:20:40:4:15:0d0:D
+D:Someone edited the code of the game!
+F:FLOOR | CHEST | DOOR
+
+N:989:Trap of Background Meteor
+I:10:25:40:4:25:0d0:D
+D:Innumerable meteorites drop from the sky!
+F:FLOOR | CHEST | DOOR
+
+N:990:Trap of Background Mana
+I:12:20:40:4:30:0d0:D
+D:The area is filled with energy...
+F:FLOOR | CHEST | DOOR
+
+N:991:Trap of Background Chaos
+I:8:30:40:4:18:0d0:D
+D:The area flickers chaotically...
+F:FLOOR | CHEST | DOOR
+
+N:992:Trap of Animate Dead
+I:5:30:40:4:20:0d0:D
+D:Dude! The walking dead!
+F:FLOOR | CHEST | DOOR
+
+N:993:Trap of Raise Demon
+I:20:10:40:4:40:0d0:D
+D:Demons climb up from the stairways of Hell!
+F:FLOOR | CHEST | DOOR
 
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color

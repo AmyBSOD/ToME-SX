@@ -3846,6 +3846,18 @@
 #define TRAP_NASTY204                     981
 #define TRAP_NASTY205                     982
 
+#define TRAP_OF_BACKGROUND_FIRE           983
+#define TRAP_OF_BACKGROUND_ACID           984
+#define TRAP_OF_BACKGROUND_ELEC           985
+#define TRAP_OF_BACKGROUND_COLD           986
+#define TRAP_OF_BACKGROUND_PLASMA         987
+#define TRAP_OF_BACKGROUND_CORPSE_EXPL    988
+#define TRAP_OF_BACKGROUND_METEOR         989
+#define TRAP_OF_BACKGROUND_MANA           990
+#define TRAP_OF_BACKGROUND_CHAOS          991
+#define TRAP_OF_BACKGROUND_RAISE          992
+#define TRAP_OF_BACKGROUND_RAISE_DEMON    993
+
 /*** General index values ***/
 
 

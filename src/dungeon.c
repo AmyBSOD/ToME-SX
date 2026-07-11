@@ -3203,7 +3203,7 @@ static void process_world(void)
 						{
 							/* If the grid is empty, skip it */
 							if ((cave[j][k].o_idx == 0) &&
-							                ((j != p_ptr->py) && (i != p_ptr->px))) continue;
+							                ((j != p_ptr->py) && (k != p_ptr->px))) continue;
 						}
 
 						/* Let's not hurt poor monsters */
@@ -3235,7 +3235,7 @@ static void process_world(void)
 						{
 							/* If the grid is empty, skip it */
 							if ((cave[j][k].o_idx == 0) &&
-							                ((j != p_ptr->py) && (i != p_ptr->px))) continue;
+							                ((j != p_ptr->py) && (k != p_ptr->px))) continue;
 						}
 
 						/* Let's not hurt poor monsters */

@@ -1271,6 +1271,7 @@ extern bool is_nonvis_trap(int);
 extern void cure_nasty_traps(void);
 extern void give_random_nastytrap_effect(void);
 extern void multitraptrigger(int);
+extern void dgn_background_damage(int);
 
 /* spells1.c */
 extern byte spell_color(int type);

@@ -11581,6 +11581,325 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		}
 		break;
 
+	case TRAP_OF_BACKGROUND_FIRE:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dgn_background_damage(GF_FIRE);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Background Fire.");
+		}
+		break;
+
+	case TRAP_OF_BACKGROUND_CORPSE_EXPL:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dgn_background_damage(GF_CORPSE_EXPL);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Code Editing.");
+		}
+		break;
+
+	case TRAP_OF_BACKGROUND_ACID:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dgn_background_damage(GF_ACID);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Background Acid.");
+		}
+		break;
+
+	case TRAP_OF_BACKGROUND_ELEC:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dgn_background_damage(GF_ELEC);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Background Shock.");
+		}
+		break;
+
+	case TRAP_OF_BACKGROUND_COLD:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dgn_background_damage(GF_COLD);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Background Cold.");
+		}
+		break;
+
+	case TRAP_OF_BACKGROUND_PLASMA:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dgn_background_damage(GF_PLASMA);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Background Plasma.");
+		}
+		break;
+
+	case TRAP_OF_BACKGROUND_METEOR:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dgn_background_damage(GF_METEOR);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Background Meteor.");
+		}
+		break;
+
+	case TRAP_OF_BACKGROUND_MANA:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dgn_background_damage(GF_MANA);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Background Mana.");
+		}
+		break;
+
+	case TRAP_OF_BACKGROUND_CHAOS:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dgn_background_damage(GF_CHAOS);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Background Chaos.");
+		}
+		break;
+
+	case TRAP_OF_BACKGROUND_RAISE:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dgn_background_damage(GF_RAISE);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Animate Dead.");
+		}
+		break;
+
+	case TRAP_OF_BACKGROUND_RAISE_DEMON:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dgn_background_damage(GF_RAISE_DEMON);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Raise Demon.");
+		}
+		break;
+
 	case TRAP_DFT_FORGET:
 		{
 			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
@@ -23341,6 +23660,32 @@ bool mon_hit_trap(int m_idx)
 
 	/* did it die? */
 	return (dead);
+}
+
+/* hit entire level with background elemental damage, like in certain dungeons, by Amy
+ * this deals fixed amounts of damage and also hits tiles with monsters on them
+ * reasoning being that it's mostly meant to hit items on the floor */
+void dgn_background_damage(int damagetype)
+{
+	int j, k;
+
+	for (j = 0; j < cur_hgt - 1; j++)
+	{
+		for (k = 0; k < cur_wid - 1; k++)
+		{
+			if (!(dungeon_flags1 & DF1_DAMAGE_FEAT))
+			{
+				/* If the grid is empty, skip it */
+				if ((cave[j][k].o_idx == 0) &&
+				                ((j != p_ptr->py) && (k != p_ptr->px))) continue;
+			}
+
+			/* Apply damage */
+			project( -100, 0, j, k, 5, damagetype,
+			         PROJECT_KILL | PROJECT_ITEM | PROJECT_HIDE);
+		}
+	}
+
 }
 
 /* trigger several random trap effects, by Amy */
