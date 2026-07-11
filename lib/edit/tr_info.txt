@@ -4933,6 +4933,61 @@ I:50:2:50:4:30:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:972:Superpoison Needle Trap
+I:8:10:50:3:40:0d0:r
+D:A poisoned needle pricks you!
+F:FLOOR | CHEST | DOOR
+
+N:973:Turbocurarine Needle Trap
+I:15:10:50:3:60:0d0:r
+D:A poisoned needle pricks you!
+F:FLOOR | CHEST | DOOR
+
+N:974:Trap of Lose Enchantment
+I:3:50:40:4:5:0d0:y
+D:Your items are disenchanted...
+F:FLOOR | CHEST | DOOR
+
+N:975:Trap of Erase Enchantment
+I:8:20:40:4:30:0d0:y
+D:Your items are disenchanted...
+F:FLOOR | CHEST | DOOR
+
+N:976:Trap of Lose All Enchantment
+I:50:2:40:4:100:0d0:y
+D:Your items are disenchanted...
+F:FLOOR | CHEST | DOOR
+
+N:977:Nonintrinsic Trap
+I:30:2:50:4:10:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:978:Corpseblast Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:979:Hackup Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:980:Runmode Trap
+I:25:2:50:4:5:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:981:Unrest Trap
+I:25:2:50:4:5:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:982:Petscrew Trap
+I:35:2:50:4:15:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

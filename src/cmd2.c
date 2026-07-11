@@ -2942,7 +2942,6 @@ void do_cmd_run_run()
 {
 	int dir;
 
-
 	/* Hack -- no running when confused */
 	if (p_ptr->confused)
 	{
@@ -2969,6 +2968,12 @@ void do_cmd_run_run()
  */
 void do_cmd_run(void)
 {
+	if (p_ptr->nastytrap203) {
+		msg_print("Some sinister force prevents you from running!");
+		msg_print(NULL);
+		return;
+	}
+
 	if (p_ptr->immovable)
 	{
 		return;
@@ -3048,6 +3053,15 @@ void do_cmd_stay(int pickup)
  */
 void do_cmd_rest(void)
 {
+	if (p_ptr->nastytrap204) {
+		/* 'R&\n' is one of our favourite macros, so we have to do this */
+		if (flush_failure) flush();
+
+		msg_print("You can't seem to rest!");
+		msg_print(NULL);
+		return;
+	}
+
 	/* Can't rest on a Void Jumpgate -- too dangerous */
 	if (cave[p_ptr->py][p_ptr->px].feat == FEAT_BETWEEN)
 	{
@@ -3058,6 +3072,7 @@ void do_cmd_rest(void)
 		msg_print(format("Resting on a %s is too dangerous!",
 		                 f_name + f_info[cave[p_ptr->py][p_ptr->px].feat].name));
 
+		msg_print(NULL); /* ffs --Amy */
 		/* Done */
 		return;
 	}
@@ -3070,6 +3085,7 @@ void do_cmd_rest(void)
 
 		/* Tell the player why */
 		msg_print("Resting is impossible while undead!");
+		msg_print(NULL); /* ffs --Amy */
 
 		/* Done */
 		return;

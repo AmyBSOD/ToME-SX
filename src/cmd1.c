@@ -5183,6 +5183,14 @@ void do_cmd_pet(void)
 
 	monster_type *m_ptr;
 
+	if (p_ptr->nastytrap205)
+	{
+		msg_print("Nobody listens to the orders you're trying to give.");
+		msg_print(NULL);
+		energy_use = 0;
+		return;
+
+	}
 
 	for (num = 0; num < 36; num++)
 	{

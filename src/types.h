@@ -2334,12 +2334,12 @@ struct player_type
 	bool nastytrap197; /* lvl 50, stat trash trap - your stats are a lot lower */
 	bool nastytrap198; /* lvl 1, anti digging trap - your digging ability is always shit */
 	bool nastytrap199; /* lvl 30, bloodthirsty trap - moving into peaceful monsters attacks them, like stormbringer */
-	bool nastytrap200;
-	bool nastytrap201;
-	bool nastytrap202;
-	bool nastytrap203;
-	bool nastytrap204;
-	bool nastytrap205;
+	bool nastytrap200; /* lvl 10, nonintrinsic trap - eating corpses can't give good effects */
+	bool nastytrap201; /* lvl 20, corpseblast trap - eating or hacking up corpses gives bad effects more often */
+	bool nastytrap202; /* lvl 20, hackup trap - you can't hack up corpses */
+	bool nastytrap203; /* lvl 5, runmode trap - you can't use the run command */
+	bool nastytrap204; /* lvl 5, unrest trap - you can't use the rest command */
+	bool nastytrap205; /* lvl 15, petscrew trap - you can't use the pet AI command */
 	bool nastytrap206;
 	bool nastytrap207;
 	bool nastytrap208;

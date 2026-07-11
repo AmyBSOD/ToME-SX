@@ -2441,6 +2441,30 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Your weapon is bloodthirsty.";
 	}
+	if (p_ptr->nastytrap200)
+	{
+		info[i++] = "You have a problem: Eating corpses gives no positive effects.";
+	}
+	if (p_ptr->nastytrap201)
+	{
+		info[i++] = "You have a problem: Handling corpses is more dangerous.";
+	}
+	if (p_ptr->nastytrap202)
+	{
+		info[i++] = "You have a problem: You can't hack up corpses.";
+	}
+	if (p_ptr->nastytrap203)
+	{
+		info[i++] = "You have a problem: You can't run in a direction.";
+	}
+	if (p_ptr->nastytrap204)
+	{
+		info[i++] = "You have a problem: You can't rest.";
+	}
+	if (p_ptr->nastytrap205)
+	{
+		info[i++] = "You have a problem: You can't give commands to pets.";
+	}
 
 	if (p_ptr->contamination >= 10000)
 	{

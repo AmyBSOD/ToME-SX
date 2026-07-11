@@ -108,7 +108,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 
 
 	/* How much of the monster's breath attack remains */
-	if (o_ptr->pval <= r_ptr->weight)
+	if ((o_ptr->pval <= r_ptr->weight) && !p_ptr->nastytrap201)
 	{
 		brpow = 0;
 	}
@@ -126,7 +126,9 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 	 * of meat, and only by corpses.
 	 */
 	if ((o_ptr->sval != SV_CORPSE_CORPSE) ||
-	                (rand_int(o_ptr->weight / 5) && !cutting)) brpow = 0;
+	                (rand_int(o_ptr->weight / 5) && !cutting)) {
+		if (!p_ptr->nastytrap201) brpow = 0;
+	}
 
 	/* Immediate effects - poison, acid, fire, etc. */
 	if (!cutting)
@@ -161,7 +163,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 			case RBM_INSULT:
 			case RBM_MOAN:
 				{
-					continue;
+					if (!p_ptr->nastytrap201) continue;
 				}
 			}
 
@@ -180,7 +182,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 			case RBE_COLD:
 			case RBE_SHATTER:
 				{
-					break;
+					if (!p_ptr->nastytrap201) break;
 				}
 
 			case RBE_POISON:
@@ -207,7 +209,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 						take_hit(dam, "acidic food");
 						harmful = TRUE;
 					}
-					else
+					else if (!p_ptr->nastytrap200 && !p_ptr->nastytrap201)
 					{
 						set_oppose_acid(p_ptr->oppose_acid + idam);
 					}
@@ -228,7 +230,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 						take_hit(dam, "a fiery meal");
 						harmful = TRUE;
 					}
-					else
+					else if (!p_ptr->nastytrap200 && !p_ptr->nastytrap201)
 					{
 						set_oppose_fire(p_ptr->oppose_fire + idam);
 					}
@@ -518,7 +520,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 	}
 	else if (r_ptr->flags4 & RF4_BR_ACID)
 	{
-		set_oppose_acid(p_ptr->oppose_acid + rand_int(10) + 10);
+		if (!p_ptr->nastytrap200 && !p_ptr->nastytrap201) set_oppose_acid(p_ptr->oppose_acid + rand_int(10) + 10);
 	}
 
 	/* Electricity */
@@ -540,7 +542,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 	}
 	else if (r_ptr->flags4 & RF4_BR_ELEC)
 	{
-		set_oppose_elec(p_ptr->oppose_elec + rand_int(10) + 10);
+		if (!p_ptr->nastytrap200 && !p_ptr->nastytrap201) set_oppose_elec(p_ptr->oppose_elec + rand_int(10) + 10);
 	}
 
 	/* Fire */
@@ -561,7 +563,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 	}
 	else if (r_ptr->flags4 & RF4_BR_FIRE)
 	{
-		set_oppose_fire(p_ptr->oppose_fire + rand_int(10) + 10);
+		if (!p_ptr->nastytrap200 && !p_ptr->nastytrap201) set_oppose_fire(p_ptr->oppose_fire + rand_int(10) + 10);
 	}
 
 	/* Cold */
@@ -583,7 +585,7 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 	}
 	else if (r_ptr->flags4 & RF4_BR_COLD)
 	{
-		set_oppose_cold(p_ptr->oppose_cold + rand_int(10) + 10);
+		if (!p_ptr->nastytrap200 && !p_ptr->nastytrap201) set_oppose_cold(p_ptr->oppose_cold + rand_int(10) + 10);
 	}
 
 	/* Poison */
@@ -797,8 +799,9 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 	/*
 	 * Bad effects override good effects
 	 * and hacked-up corpses lose intrinsics.
+	 * Amy note: nonintrinsic trap means you never get such good effects
 	 */
-	if (!harmful && !cutting && (o_ptr->sval != SV_CORPSE_MEAT))
+	if (!harmful && !(p_ptr->nastytrap200) && !cutting && (o_ptr->sval != SV_CORPSE_MEAT))
 	{
 		if (r_ptr->flags3 & RF3_IM_ACID)
 		{
@@ -1663,6 +1666,11 @@ void do_cmd_cut_corpse(void)
 
 	cptr q, s;
 
+	if (p_ptr->nastytrap202) {
+		msg_print("You must have misplaced your cutting tool!");
+		msg_print(NULL); /* --More-- */
+		return;
+	}
 
 	/* Restrict choices to corpses */
 	item_tester_tval = TV_CORPSE;

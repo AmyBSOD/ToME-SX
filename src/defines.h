@@ -3832,6 +3832,20 @@
 
 #define TRAP_NASTY199                     971
 
+#define TRAP_OF_POISON_NEEDLE_II          972
+#define TRAP_OF_POISON_NEEDLE_III         973
+
+#define TRAP_OF_LOSE_ENCHANT              974
+#define TRAP_OF_LOSE_ENCHANT_II           975
+#define TRAP_OF_LOSE_ENCHANT_III          976
+
+#define TRAP_NASTY200                     977
+#define TRAP_NASTY201                     978
+#define TRAP_NASTY202                     979
+#define TRAP_NASTY203                     980
+#define TRAP_NASTY204                     981
+#define TRAP_NASTY205                     982
+
 /*** General index values ***/
 
 

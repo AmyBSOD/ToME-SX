@@ -911,6 +911,12 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY197:
 		case TRAP_NASTY198:
 		case TRAP_NASTY199:
+		case TRAP_NASTY200:
+		case TRAP_NASTY201:
+		case TRAP_NASTY202:
+		case TRAP_NASTY203:
+		case TRAP_NASTY204:
+		case TRAP_NASTY205:
 			return FALSE;
 	}
 
@@ -1148,6 +1154,12 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY197:
 		case TRAP_NASTY198:
 		case TRAP_NASTY199:
+		case TRAP_NASTY200:
+		case TRAP_NASTY201:
+		case TRAP_NASTY202:
+		case TRAP_NASTY203:
+		case TRAP_NASTY204:
+		case TRAP_NASTY205:
 			return FALSE;
 	}
 
@@ -1388,6 +1400,12 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY197:
 		case TRAP_NASTY198:
 		case TRAP_NASTY199:
+		case TRAP_NASTY200:
+		case TRAP_NASTY201:
+		case TRAP_NASTY202:
+		case TRAP_NASTY203:
+		case TRAP_NASTY204:
+		case TRAP_NASTY205:
 			return TRUE;
 	}
 
@@ -2434,6 +2452,22 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		{
 			msg_print("You prick yourself on a poisoned needle.");
 			(void)set_poisoned(p_ptr->poisoned + rand_int(50) + 20);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_POISON_NEEDLE_II:
+		{
+			msg_print("You prick yourself on a very poisoned needle.");
+			(void)set_poisoned(p_ptr->poisoned + rand_int(500) + 200);
+			ident = TRUE;
+			break;
+		}
+
+	case TRAP_OF_POISON_NEEDLE_III:
+		{
+			msg_print("You prick yourself on an extremely poisoned needle.");
+			(void)set_poisoned(p_ptr->poisoned + rand_int(5000) + 2000);
 			ident = TRUE;
 			break;
 		}
@@ -12838,6 +12872,254 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* Trap of Lose Enchantment, by Amy: equipped stuff with positive to-hit/to-dam/to-ac bonus becomes +0 */
+	case TRAP_OF_LOSE_ENCHANT:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_WIELD; j < INVEN_TOTAL; j++)
+			{
+
+				if (rand_int(10) < 8) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* does it have an AC bonus? */
+				if (j_ptr->to_d > 0) {
+					j_ptr->to_d = 0;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your equipment lost its enchantment!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+				if (j_ptr->to_h > 0) {
+					j_ptr->to_h = 0;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your equipment lost its enchantment!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+				if (j_ptr->to_a > 0) {
+					j_ptr->to_a = 0;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your equipment lost its enchantment!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("Your body itches strangely!");
+			break;
+		}
+
+	case TRAP_OF_LOSE_ENCHANT_II:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_WIELD; j < INVEN_TOTAL; j++)
+			{
+
+				if (rand_int(10) < 4) continue;
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* does it have an AC bonus? */
+				if (j_ptr->to_d > 0) {
+					j_ptr->to_d = 0;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your equipment lost its enchantment!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+				if (j_ptr->to_h > 0) {
+					j_ptr->to_h = 0;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your equipment lost its enchantment!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+				if (j_ptr->to_a > 0) {
+					j_ptr->to_a = 0;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your equipment lost its enchantment!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("Your body itches strangely!");
+			break;
+		}
+
+	case TRAP_OF_LOSE_ENCHANT_III:
+		{
+			s16b j;
+			bool message = FALSE;
+			object_type *j_ptr;
+
+			for (j = INVEN_WIELD; j < INVEN_TOTAL; j++)
+			{
+
+				/* don't bother the overflow slot */
+				if (j == INVEN_PACK) continue;
+
+				if (!p_ptr->inventory[j].k_idx) continue;
+
+				j_ptr = &p_ptr->inventory[j];
+
+				/* does it have an AC bonus? */
+				if (j_ptr->to_d > 0) {
+					j_ptr->to_d = 0;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your equipment lost its enchantment!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+				if (j_ptr->to_h > 0) {
+					j_ptr->to_h = 0;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your equipment lost its enchantment!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+				if (j_ptr->to_a > 0) {
+					j_ptr->to_a = 0;
+
+					if (object_known_p(j_ptr)) {
+						if (!message) {
+							msg_print("Your equipment lost its enchantment!");
+							message = TRUE;
+						}
+					}
+
+					/* Recalculate bonuses */
+					p_ptr->update |= (PU_BONUS);
+
+					/* Recalculate mana */
+					p_ptr->update |= (PU_MANA);
+
+					/* Window stuff */
+					p_ptr->window |= (PW_INVEN | PW_EQUIP | PW_PLAYER);
+				}
+
+			}
+			ident = message;
+			if (!message) msg_print("Your body itches strangely!");
+			break;
+		}
+
 		/* Trap of Invert Weapon, by Amy: equipped stuff with positive to-hit/to-dam bonus becomes negative */
 	case TRAP_OF_INVERT_WEAPON:
 		{
@@ -18246,6 +18528,78 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY200:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap200 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY201:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap201 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY202:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap202 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY203:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap203 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY204:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap204 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY205:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap205 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHIT_I:
 		{
 			bool badheel = FALSE;
@@ -23033,7 +23387,7 @@ void multitraptrigger(int triggercnt)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(198)) {
+	switch (randint(205)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -23631,6 +23985,24 @@ void give_random_nastytrap_effect(void)
 		case 199:
 			p_ptr->nastytrap199 = TRUE;
 			break;
+		case 200:
+			p_ptr->nastytrap200 = TRUE;
+			break;
+		case 201:
+			p_ptr->nastytrap201 = TRUE;
+			break;
+		case 202:
+			p_ptr->nastytrap202 = TRUE;
+			break;
+		case 203:
+			p_ptr->nastytrap203 = TRUE;
+			break;
+		case 204:
+			p_ptr->nastytrap204 = TRUE;
+			break;
+		case 205:
+			p_ptr->nastytrap205 = TRUE;
+			break;
 
 	}
 }
@@ -23847,12 +24219,12 @@ void cure_nasty_traps(void)
 	if (effect_level >= 50) p_ptr->nastytrap197 = FALSE;
 	if (effect_level >= 1) p_ptr->nastytrap198 = FALSE;
 	if (effect_level >= 30) p_ptr->nastytrap199 = FALSE;
-	p_ptr->nastytrap200 = FALSE;
-	p_ptr->nastytrap201 = FALSE;
-	p_ptr->nastytrap202 = FALSE;
-	p_ptr->nastytrap203 = FALSE;
-	p_ptr->nastytrap204 = FALSE;
-	p_ptr->nastytrap205 = FALSE;
+	if (effect_level >= 10) p_ptr->nastytrap200 = FALSE;
+	if (effect_level >= 20) p_ptr->nastytrap201 = FALSE;
+	if (effect_level >= 20) p_ptr->nastytrap202 = FALSE;
+	if (effect_level >= 5) p_ptr->nastytrap203 = FALSE;
+	if (effect_level >= 5) p_ptr->nastytrap204 = FALSE;
+	if (effect_level >= 15) p_ptr->nastytrap205 = FALSE;
 	p_ptr->nastytrap206 = FALSE;
 	p_ptr->nastytrap207 = FALSE;
 	p_ptr->nastytrap208 = FALSE;
