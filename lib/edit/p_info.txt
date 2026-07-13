@@ -3392,7 +3392,67 @@ R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
 R:R:1:0
 R:F:SEE_INVIS | FEATHER | SAVING_MALUS | 
 
-R:N:38:Ice-Dwarf
+# autowin race from Steamband, but (hopefully) somewhat balanced --Amy
+R:N:38:Steam-Mecha
+R:D:The giant machines of war
+R:S:10:8:10:-2:-8:-8:-6
+R:K:0:0:0:0:0:10:0:0
+R:P:12:200:4:95
+R:M:100:30:100:10:82:10:400:40:380:35
+R:E:1:1:1:2:1:1
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:G:NO_FOOD |
+R:R:1:0
+R:F:SUST_STR | SUST_DEX | SUST_INT | SUST_CON | SUST_WIS | SUST_CHR | 
+R:F:AGGRAVATE | HOLD_LIFE | RES_BLIND | RAPID_HUNGER | 
+R:k:-20000:-300:Magic
+R:k:+0:-200:Prayer
+R:k:-3000:-300:Sneakiness
+R:k:-20000:=0:Stealth
+R:k:-5000:-600:Hidden-Sight
+R:k:+0:-500:Dodging
+
+R:N:39:Ogre
+R:D:A huge humanoid race. Very strong, and very dumb.
+R:S:6:-4:-3:-2:5:-8:-3
+R:K:-3:-5:-5:-2:-1:5:20:0
+R:P:14:150:3:74
+R:M:40:10:92:10:255:60:80:8:235:60
+R:E:1:1:1:2:1:1
+R:R:1:0
+R:F:SUST_STR | RES_DARK | 
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:k:-2000:+000:Disarming
+R:k:-2000:+000:Magic
+R:k:-4000:+000:Magic-Device
+R:k:-5000:+000:Spirituality
+R:k:-5000:-100:Stealth
+R:k:-2000:+000:Sneakiness
+R:k:+3000:+150:Weaponmastery
+R:k:+1000:+100:Archery
+R:k:+5000:+400:Weight-lifting
+
+R:N:40:Daoine-Sidhe
+R:D:An elf with a fancy name.
+R:S:-2:2:2:1:-3:3:0
+R:K:5:6:6:2:8:12:-5:15
+R:P:8:125:3:5
+R:M:75:75:60:4:100:6:54:4:80:6
+R:E:1:1:1:2:1:1
+R:R:1:0
+R:F:RES_LITE | 
+R:R:30:0
+R:F:SEE_INVIS | 
+R:C:Warrior | Archer | Mage | Rogue | Priest | Loremaster
+R:G:ELF
+R:k:+1000:+000:Magic-Device
+R:k:+3000:+000:Spirituality
+R:k:+5000:+200:Stealth
+R:k:+800:+000:Sneakiness
+R:k:-1000:-100:Weaponmastery
+R:k:+1500:+000:Archery
+
+R:N:41:Ice-Dwarf
 R:D:They inhabit the cold northern regions of the world, they are very strong
 R:D:Miners and fighters of legend. These Dwarves stayed in the north since before the eldar
 R:D:came.They are stronger than normal dwarves.
