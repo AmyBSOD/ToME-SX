@@ -137,7 +137,7 @@ static void add_xtra_arti_power(object_type *o_ptr)
 	while (attempts > 0) {
 		attempts--;
 
-		switch (randint(370)) {
+		switch (randint(376)) {
 
 			case 1:
 			case 2:
@@ -1200,18 +1200,51 @@ static void add_xtra_arti_power(object_type *o_ptr)
 			case 369:
 				if (wizard) msg_print("Adding xtra power: 369");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
-					o_ptr->dd *= 2;
+					if (o_ptr->dd < 9) o_ptr->dd *= 2;
+					else o_ptr->dd += 8;
 					return;
 				}
 				continue;
 			case 370:
 				if (wizard) msg_print("Adding xtra power: 370");
 				if ( (o_ptr->tval >= TV_HAFTED && o_ptr->tval <= TV_AXE) || o_ptr->tval == TV_BOOMERANG || o_ptr->tval == TV_MSTAFF ) {
-					o_ptr->ds *= 2;
+					if (o_ptr->ds < 9) o_ptr->ds *= 2;
+					else o_ptr->ds += 8;
 					return;
 				}
 				continue;
-
+			case 371:
+			case 372:
+			case 373:
+			case 374:
+			case 375:
+				if (wizard) msg_print("Adding xtra power: 371-375");
+				if (o_ptr->tval >= TV_BOOTS && o_ptr->tval <= TV_CLOAK) {
+					if (magik(5)) o_ptr->ac += randint(20);
+					else if (magik(20)) o_ptr->ac += randint(10);
+					else o_ptr->ac += randint(5);
+					return;
+				}
+				if (o_ptr->tval >= TV_SOFT_ARMOR && o_ptr->tval <= TV_DRAG_ARMOR) {
+					if (magik(5)) o_ptr->ac += randint(40);
+					else if (magik(20)) o_ptr->ac += randint(20);
+					else o_ptr->ac += randint(10);
+					return;
+				}
+				continue;
+			case 376:
+				if (wizard) msg_print("Adding xtra power: 376");
+				if (o_ptr->tval >= TV_BOOTS && o_ptr->tval <= TV_CLOAK) {
+					if (o_ptr->ac < 26) o_ptr->ac *= 2;
+					else o_ptr->ac += 25;
+					return;
+				}
+				if (o_ptr->tval >= TV_SOFT_ARMOR && o_ptr->tval <= TV_DRAG_ARMOR) {
+					if (o_ptr->ac < 51) o_ptr->ac *= 2;
+					else o_ptr->ac += 50;
+					return;
+				}
+				continue;
 
 			default: /* fail safe --Amy */
 				if (wizard) msg_print("Adding xtra power: default");
