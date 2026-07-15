@@ -76,7 +76,7 @@ Ctrl-P message log
 C character menu
 ~ display the knowledge menu where you can see e.g. which items or monsters you've found
 Ctrl-Q quest log
-[ sichtbare Monster anzeigen
+[ show visible monsters
 
 Ctrl-X save and quit
 Ctrl-S save
