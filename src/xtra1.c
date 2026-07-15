@@ -2331,7 +2331,7 @@ int weight_limit(void)
 	i = adj_str_wgt[p_ptr->stat_ind[A_STR]] * 150;
 	i += (get_skill(SKILL_WEIGHTLIFTING) * 100);
 
-	if (p_ptr->nastytrap44) i /= 3;
+	if (p_ptr->nastytrap44 || (p_ptr->mimic_form == resolve_mimic_name("Sing")) ) i /= 3;
 
 	if (process_hooks_ret(HOOK_CALC_WEIGHT, "d", "(d)", i))
 		i = process_hooks_return[0].num;
@@ -3661,6 +3661,8 @@ void calc_bonuses(bool silent)
 	if (p_ptr->mimic_form == resolve_mimic_name("Valar")) p_ptr->telepathy |= ESP_ALL;
 	if (p_ptr->mimic_form == resolve_mimic_name("Insect")) p_ptr->telepathy |= ESP_ANIMAL;
 	if (p_ptr->mimic_form == resolve_mimic_name("Cold Cloud")) p_ptr->telepathy |= ESP_EVIL;
+	if (p_ptr->mimic_form == resolve_mimic_name("Mold")) p_ptr->immovable = TRUE;
+	if (p_ptr->mimic_form == resolve_mimic_name("Quylthulg")) p_ptr->immovable = TRUE;
 
 	if (p_ptr->astral)
 	{

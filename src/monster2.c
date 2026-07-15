@@ -1342,7 +1342,7 @@ s16b get_mon_num(int level)
 	}
 
 	/* leveled spawn nastytrap: roll four more times to get a higher level monster --Amy */
-	if (p_ptr->nastytrap177) {
+	if (p_ptr->nastytrap177 || (p_ptr->mimic_form == resolve_mimic_name("Lich")) ) {
 		int extratries = 4;
 		while (extratries > 0) {
 			extratries--;
@@ -3400,7 +3400,7 @@ bool place_monster(int y, int x, bool slp, bool grp)
 	int r_idx;
 
 	int actualmonsterlevel = monster_level;
-	if (p_ptr->nastytrap27) actualmonsterlevel += 10;
+	if (p_ptr->nastytrap27 || (p_ptr->mimic_form == resolve_mimic_name("Lich")) ) actualmonsterlevel += 10;
 
 	int scalinglevel = 0;
 
@@ -3452,7 +3452,7 @@ bool alloc_horde(int y, int x)
 	int attempts = 1000;
 
 	int actualmonsterlevel = monster_level;
-	if (p_ptr->nastytrap27) actualmonsterlevel += 10;
+	if (p_ptr->nastytrap27 || (p_ptr->mimic_form == resolve_mimic_name("Lich")) ) actualmonsterlevel += 10;
 
 	/* have some level scaling --Amy */
 	if (randint(1000) == 1) actualmonsterlevel + randint(p_ptr->lev * 2);

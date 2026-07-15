@@ -1509,7 +1509,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			else effect_level = wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level + rand_int(p_ptr->lev);
 			if (monster_level > effect_level) effect_level = monster_level;
 
-			if (p_ptr->nastytrap107) effect_level += randint(10 + p_ptr->lev);
+			if (p_ptr->nastytrap107 || (p_ptr->mimic_form == resolve_mimic_name("Sing")) ) effect_level += randint(10 + p_ptr->lev);
 
 			if (randint(50) == 1) scalinglevel = randint(p_ptr->lev);
 
@@ -1591,7 +1591,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 			effect_level += randint(25);
 
-			if (p_ptr->nastytrap107) effect_level += randint(10 + p_ptr->lev);
+			if (p_ptr->nastytrap107 || (p_ptr->mimic_form == resolve_mimic_name("Sing")) ) effect_level += randint(10 + p_ptr->lev);
 
 			if (randint(50) == 1) scalinglevel = randint(p_ptr->lev);
 
@@ -1672,7 +1672,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 
 			effect_level += randint(25);
 
-			if (p_ptr->nastytrap107) effect_level += randint(10 + p_ptr->lev);
+			if (p_ptr->nastytrap107 || (p_ptr->mimic_form == resolve_mimic_name("Sing")) ) effect_level += randint(10 + p_ptr->lev);
 
 			if (randint(50) == 1) scalinglevel = randint(p_ptr->lev);
 
@@ -1748,7 +1748,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			else effect_level = wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level + rand_int(p_ptr->lev);
 			if (monster_level > effect_level) effect_level = monster_level;
 
-			if (p_ptr->nastytrap107) effect_level += randint(10 + p_ptr->lev);
+			if (p_ptr->nastytrap107 || (p_ptr->mimic_form == resolve_mimic_name("Sing")) ) effect_level += randint(10 + p_ptr->lev);
 
 			if (randint(50) == 1) scalinglevel = randint(p_ptr->lev);
 
@@ -18950,6 +18950,13 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 						j_ptr->to_a--;
 						msg_print("Your boots are damaged!");
 					}
+					if (p_ptr->mimic_form == resolve_mimic_name("Anastasia")) {
+						if (j_ptr->to_a > -20) {
+							j_ptr->to_a--;
+						}
+						msg_print("Spflotch!");
+						do_fart_effect();
+					}
 				}
 			}
 
@@ -18988,6 +18995,13 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					if (j_ptr->to_a > -30) {
 						j_ptr->to_a--;
 						msg_print("Your boots are damaged!");
+					}
+					if (p_ptr->mimic_form == resolve_mimic_name("Anastasia")) {
+						if (j_ptr->to_a > -30) {
+							j_ptr->to_a -= randint(2);
+						}
+						msg_print("Spflotch!");
+						do_fart_effect();
 					}
 				}
 			}
@@ -19029,6 +19043,14 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					if (j_ptr->to_a > -40) {
 						j_ptr->to_a -= randint(3);
 						msg_print("Your boots are damaged!");
+					}
+
+					if (p_ptr->mimic_form == resolve_mimic_name("Anastasia")) {
+						if (j_ptr->to_a > -40) {
+							j_ptr->to_a -= randint(4);
+						}
+						msg_print("Spflotch!");
+						do_fart_effect();
 					}
 				}
 			}
@@ -22207,7 +22229,7 @@ void place_trap(int y, int x)
 	else effect_level = wf_info[wild_map[p_ptr->wilderness_y][p_ptr->wilderness_x].feat].level + rand_int(p_ptr->lev);
 	if (monster_level > effect_level) effect_level = monster_level;
 
-	if (p_ptr->nastytrap107) effect_level += randint(10 + p_ptr->lev);
+	if (p_ptr->nastytrap107 || (p_ptr->mimic_form == resolve_mimic_name("Sing")) ) effect_level += randint(10 + p_ptr->lev);
 
 	if (randint(50) == 1) scalinglevel = randint(p_ptr->lev);
 

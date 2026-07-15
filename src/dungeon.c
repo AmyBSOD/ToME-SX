@@ -1725,7 +1725,7 @@ static void process_world(void)
 	/*** Process the monsters ***/
 
 	monsterallocchance = d_info[(dun_level) ? dungeon_type : DUNGEON_WILDERNESS].max_m_alloc_chance;
-	if (p_ptr->nastytrap81) {
+	if (p_ptr->nastytrap81 || (p_ptr->mimic_form == resolve_mimic_name("Lich")) ) {
 		monsterallocchance /= 5;
 		if (monsterallocchance < 1) monsterallocchance = 1;
 	}
@@ -3748,7 +3748,7 @@ static void process_world(void)
 
 	}
 
-	if (p_ptr->nastytrap12 && (rand_int(TY_CURSE_CHANCE) == 0) ) {
+	if ((p_ptr->nastytrap12 || (p_ptr->mimic_form == resolve_mimic_name("Valar")) ) && (rand_int(TY_CURSE_CHANCE) == 0) ) {
 		activate_ty_curse();
 	}
 	if (p_ptr->nastytrap13 && (rand_int(DG_CURSE_CHANCE) == 0) ) {
@@ -3768,7 +3768,7 @@ static void process_world(void)
 		set_tim_manavoid(p_ptr->tim_manavoid + 20);
 	}
 
-	if (p_ptr->nastytrap26 && (rand_int(100) == 0) ) {
+	if ((p_ptr->nastytrap26 || (p_ptr->mimic_form == resolve_mimic_name("Demon")) ) && (rand_int(100) == 0) ) {
 		curse_equipment(50, 10);
 	}
 
@@ -3777,7 +3777,7 @@ static void process_world(void)
 		disturb(0, 0);
 	}
 
-	if (p_ptr->nastytrap51 && !(p_ptr->wild_mode) && (rand_int(100) == 0) ) {
+	if ( (p_ptr->nastytrap51 || (p_ptr->mimic_form == resolve_mimic_name("Sing")) ) && !(p_ptr->wild_mode) && (rand_int(100) == 0) ) {
 		alloc_trap();
 	}
 
@@ -3833,7 +3833,7 @@ static void process_world(void)
 
 	}
 
-	if (p_ptr->nastytrap185 && !(p_ptr->wild_mode) && (rand_int(1000) == 0) ) {
+	if ( (p_ptr->nastytrap185 || (p_ptr->mimic_form == resolve_mimic_name("Shark")) ) && !(p_ptr->wild_mode) && (rand_int(1000) == 0) ) {
 		int numsummons = 1 + randint(3);
 		int summonlevel = max_dlv_real[dungeon_type];
 		if (summonlevel < 1) summonlevel = 1;

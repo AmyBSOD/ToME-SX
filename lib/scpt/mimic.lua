@@ -145,6 +145,37 @@ add_mimic_shape
 
 add_mimic_shape
 {
+	["name"] =      "Mold",
+	["obj_name"] =  "Mold Spores",
+	["desc"] = 	"Molds can't walk, but they can blink.",
+	["realm"] =     "nature",
+	["level"] =     20,
+	["rarity"] =    90,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.immovable = TRUE -- doesn't work properly for god knows why, have to add it in xtra1.c as well
+			player.modify_stat(A_STR, 5 + (player.mimic_level / 5))
+			player.modify_stat(A_WIS, 5 + (player.mimic_level / 5))
+			player.modify_stat(A_CON, 5 + (player.mimic_level / 5))
+			player.modify_stat(A_CHR, -30)
+			player.modify_stat(A_DEX, -10)
+			player.skill_stl = player.skill_stl + 10 + (player.mimic_level / 3)
+			player.resist_nether = TRUE
+			player.resist_nexus = TRUE
+			player.hold_life = TRUE
+			player.skill_dis = player.skill_dis - 20
+			player.skill_srh = player.skill_srh - 10
+			player.skill_fos = player.skill_fos - 15
+			player.to_a = player.to_a - 10
+			player.dis_to_a = player.dis_to_a - 10
+			player.to_l = player.to_l - 1
+			player.to_m = player.to_m - 1
+
+	end,
+}
+
+add_mimic_shape
+{
 	["name"] =      "Goldfish",
 	["obj_name"] =  "Goldfish Fins",
 	["desc"] = 	"Fish can breathe water.",
@@ -197,10 +228,43 @@ add_mimic_shape
 			player.skill_dev = player.skill_dev - 5
 			player.skill_stl = player.skill_stl - 5
 
-			-- attract monsters
-			player.nastytrap185 = TRUE
+			-- attract monsters: nastytrap185
 
 			if player.mimic_level >= 25 then player.resist_water = TRUE end
+	end,
+}
+
+add_mimic_shape
+{
+	["name"] =      "Anastasia",
+	["obj_name"] =  "Anastasia Gown",
+	["desc"] = 	"A very gentle girl.",
+	["realm"] =     "nature",
+	["level"] =     1,
+	["rarity"] =    10,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_CHR, 10 + (player.mimic_level / 5))
+			player.modify_stat(A_DEX, 5 + (player.mimic_level / 10))
+			player.modify_stat(A_WIS, 2 + (player.mimic_level / 20))
+			player.modify_stat(A_INT, 2 + (player.mimic_level / 20))
+			player.modify_stat(A_STR, -10)
+			if player.mimic_level >= 30 then player.free_act = TRUE end
+
+			player.skill_stl = player.skill_stl + 2 + (player.mimic_level / 10)
+			player.skill_dis = player.skill_dis + 3 + (player.mimic_level / 7)
+			player.skill_sav = player.skill_sav + 3 + (player.mimic_level / 7)
+			player.skill_srh = player.skill_srh + 2 + (player.mimic_level / 8)
+			player.skill_fos = player.skill_fos + 1 + (player.mimic_level / 12)
+
+			player.to_a = player.to_a + (player.mimic_level / 10)
+			player.to_h = player.to_h - 5
+			player.dis_to_h = player.dis_to_h - 5
+			player.to_h_ranged = player.to_h_ranged - 6
+			player.to_d = player.to_d - 2
+			player.dis_to_d = player.dis_to_d - 2
+
+			-- shit traps are more dangerous
 	end,
 }
 
@@ -237,12 +301,11 @@ add_mimic_shape
 			player.exp_drain = TRUE
 			player.rapid_hunger = TRUE
 
-			-- lower carry cap
-			player.nastytrap44 = TRUE
-			-- traps spawn over time
-			player.nastytrap51 = TRUE
-			-- traps can be higher level
-			player.nastytrap107 = TRUE
+			-- lower carry cap: nastytrap44
+			-- traps spawn over time: nastytrap51
+			-- traps can be higher level: nastytrap107
+
+			-- vampiric effects
 
 			if player.mimic_level >= 20 then player.invis = player.invis + 5 + (player.mimic_level / 10) end
 
@@ -277,14 +340,10 @@ add_mimic_shape
 			player.hold_life = TRUE
 			if player.mimic_level >= 30 then player.immune_neth = TRUE end
 
-			-- monster levels are higher
-			player.nastytrap27 = TRUE;
-			-- monster spawn rate increased
-			player.nastytrap81 = TRUE;
-			-- more monsters on new levels
-			player.nastytrap128 = TRUE;
-			-- monsters are higher level more often
-			player.nastytrap177 = TRUE;
+			-- monster levels are higher: nastytrap27
+			-- monster spawn rate increased: nastytrap81
+			-- more monsters on new levels: nastytrap128
+			-- monsters are higher level more often: nastytrap177
 
 			player.skill_sav = player.skill_sav + (player.mimic_level / 4)
 			player.skill_dev = player.skill_dev + (player.mimic_level / 5)
@@ -308,6 +367,8 @@ add_mimic_shape
 			player.modify_stat(A_CON, -15)
 			player.modify_stat(A_CHR, -12)
 			player.pspeed = player.pspeed + 4 + (player.mimic_level / 9)
+
+			-- animal esp
 	end,
 }
 
@@ -381,6 +442,8 @@ add_mimic_shape
 			if player.mimic_level >= 10 then player.resist_blind = TRUE end
 			if player.mimic_level >= 15 then player.resist_nexus = TRUE end
 			player.lite = TRUE
+
+			-- vampiric effects
 
 	end,
 }
@@ -468,6 +531,7 @@ add_mimic_shape
 			player.to_h = player.to_h - 15
 			player.dis_to_h = player.dis_to_h - 15
 
+			-- evil esp
 	end,
 }
 
@@ -612,8 +676,7 @@ add_mimic_shape
 			player.luck_cur = player.luck_cur - 20
 			player.drain_life = player.drain_life + 1
 
-			-- your items curse themselves over time
-			player.nastytrap26 = TRUE
+			-- your items curse themselves over time: nastytrap26
 
 	end,
 }
@@ -661,15 +724,14 @@ add_mimic_shape
 			player.modify_stat(A_CON, 5 + (player.mimic_level / 9))
 			player.modify_stat(A_CHR, -30)
 			player.see_inv = TRUE
-			player.immovable = TRUE
+			player.immovable = TRUE -- doesn't work properly for god knows why, have to add it in xtra1.c as well
 
 			player.to_h = player.to_h - 20
 			player.dis_to_h = player.dis_to_h - 20
 			player.to_d = player.to_d - 20
 			player.dis_to_d = player.dis_to_d - 20
 
-			-- you can't heal status effects
-			player.nastytrap36 = TRUE
+			-- you can't heal status effects: nastytrap36
 
 	end,
 }
@@ -716,8 +778,7 @@ add_mimic_shape
 			player.anti_tele = TRUE
 			player.rapid_hunger = TRUE
 
-			-- you cannot gain piety
-			player.nastytrap4 = TRUE
+			-- you cannot gain piety: nastytrap4
 
 			player.luck_cur = player.luck_cur - 10
 
@@ -851,8 +912,10 @@ add_mimic_shape
 			if player.mimic_level >= 80 then player.num_blow = player.num_blow + 1 end
 			if player.mimic_level >= 90 then player.num_blow = player.num_blow + 1 end
 
-			-- you have the ancient foul curse
-			player.nastytrap12 = TRUE
+			-- you have the ancient foul curse: nastytrap12
+
+			-- piety goes down rapidly
+			-- full esp
 
 			player.rapid_hunger = TRUE
 			player.resist_time = TRUE
@@ -1016,6 +1079,7 @@ add_mimic_shape
 
 			if player.mimic_level >= 40 then player.climb = TRUE end
 
+			-- web walking
 	end,
 	["power"] =     function()
 			if player.mimic_level >= 25 then
@@ -1054,6 +1118,8 @@ add_mimic_shape
 			player.modify_stat(A_DEX, -12)
 			player.modify_stat(A_CON, player.mimic_level / 5)
 			player.modify_stat(A_CHR, -20)
+
+			-- tree walking
 
 	end,
 	["power"] =     function ()
@@ -1298,6 +1364,7 @@ add_mimic_shape
 
 			if player.mimic_level >= 40 then player.climb = TRUE end
 
+			-- web walking
 	end,
 	["power"] =     function()
 			if player.mimic_level >= 25 then

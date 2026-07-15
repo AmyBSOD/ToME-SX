@@ -9496,7 +9496,7 @@ static bool cave_gen(void)
 
 		i += randint(8);
 
-		if (p_ptr->nastytrap128) { /* black diamond nastytrap, by Amy */
+		if (p_ptr->nastytrap128 || (p_ptr->mimic_form == resolve_mimic_name("Lich")) ) { /* black diamond nastytrap, by Amy */
 			if (magik(50)) i *= 2;
 			else i *= 3;
 		}

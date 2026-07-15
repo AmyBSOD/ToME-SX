@@ -2326,6 +2326,14 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		(*f5) |= (TR5_IMMOVABLE);
 	}
 
+	if (p_ptr->mimic_form == resolve_mimic_name("Mold")) {
+		(*f5) |= (TR5_IMMOVABLE);
+		(*f2) |= TR2_HOLD_LIFE;
+		(*f2) |= TR2_RES_NETHER;
+		(*f2) |= TR2_RES_NEXUS;
+
+	}
+
 	if (p_ptr->mimic_form == resolve_mimic_name("Maiar")) {
 		(*f2) |= TR2_RES_ACID;
 		(*f2) |= TR2_RES_ELEC;
@@ -2412,6 +2420,11 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		(*f5) |= TR5_RAPID_HUNGER;
 		(*f3) |= TR3_AGGRAVATE;
 		(*f5) |= TR5_RES_TIME;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Anastasia")) {
+		if (p_ptr->mimic_level >= 30) (*f2) |= TR2_FREE_ACT;
+
 	}
 
 	if (p_ptr->mimic_form == resolve_mimic_name("Eagle")) {

@@ -25,7 +25,7 @@ void inc_piety(int god, s32b amt)
 	if (god == GOD_AMYBSOD || god == GOD_MELKOR || god == GOD_INGEBORG) goodgod = FALSE;
 
 	/* don't gain piety if impious trap is active */
-	if (p_ptr->nastytrap4 && amt > 0) return;
+	if ((p_ptr->nastytrap4 || (p_ptr->mimic_form == resolve_mimic_name("Maiar")) )  && amt > 0) return;
 
 	/* valarin skill is for good goods (Eru, Yavanna, Manwe, Tulkas, Ulmo, Aule, Mandos, Varda)
 	 * nether skill is for evil gods (Melkor, Amy)

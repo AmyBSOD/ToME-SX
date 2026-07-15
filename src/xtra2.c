@@ -1247,7 +1247,7 @@ bool set_blind(int v)
 	/* Hack -- Force good values */
 	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
 
-	if (!v && p_ptr->nastytrap36) return FALSE;
+	if (!v && (p_ptr->nastytrap36 || (p_ptr->mimic_form == resolve_mimic_name("Quylthulg")) ) ) return FALSE;
 
 	/* Open */
 	if (v)
@@ -1367,7 +1367,7 @@ bool set_confused(int v)
 	/* Hack -- Force good values */
 	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
 
-	if (!v && p_ptr->nastytrap36) return FALSE;
+	if (!v && (p_ptr->nastytrap36 || (p_ptr->mimic_form == resolve_mimic_name("Quylthulg")) ) ) return FALSE;
 
 	/* Open */
 	if (v)
@@ -1419,7 +1419,7 @@ bool set_poisoned(int v)
 	/* Hack -- Force good values */
 	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
 
-	if (!v && p_ptr->nastytrap36) return FALSE;
+	if (!v && (p_ptr->nastytrap36 || (p_ptr->mimic_form == resolve_mimic_name("Quylthulg")) ) ) return FALSE;
 
 	/* Open */
 	if (v)
@@ -1471,7 +1471,7 @@ bool set_afraid(int v)
 	/* Hack -- Force good values */
 	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
 
-	if (!v && p_ptr->nastytrap36) return FALSE;
+	if (!v && (p_ptr->nastytrap36 || (p_ptr->mimic_form == resolve_mimic_name("Quylthulg")) ) ) return FALSE;
 
 	/* Open */
 	if (v)
@@ -1576,7 +1576,7 @@ bool set_image(int v)
 	/* Hack -- Force good values */
 	v = (v > 10000) ? 10000 : (v < 0) ? 0 : v;
 
-	if (!v && p_ptr->nastytrap36) return FALSE;
+	if (!v && (p_ptr->nastytrap36 || (p_ptr->mimic_form == resolve_mimic_name("Quylthulg")) ) ) return FALSE;
 
 	/* Open */
 	if (v)
@@ -5307,7 +5307,7 @@ bool set_stun(int v)
 
 	if (PRACE_FLAG(PR1_NO_STUN)) v = 0;
 
-	if (!v && p_ptr->nastytrap36) return FALSE;
+	if (!v && (p_ptr->nastytrap36 || (p_ptr->mimic_form == resolve_mimic_name("Quylthulg")) ) ) return FALSE;
 
 	/* Knocked out */
 	if (p_ptr->stun > 300)
@@ -5470,7 +5470,7 @@ bool set_cut(int v)
 
 	if (PRACE_FLAG(PR1_NO_CUT)) v = 0;
 
-	if (!v && p_ptr->nastytrap36) return FALSE;
+	if (!v && (p_ptr->nastytrap36 || (p_ptr->mimic_form == resolve_mimic_name("Quylthulg")) ) ) return FALSE;
 
 	/* Mortal wound */
 	if (p_ptr->cut > 1000)
