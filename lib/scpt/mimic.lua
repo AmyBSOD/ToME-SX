@@ -314,6 +314,42 @@ add_mimic_shape
 
 add_mimic_shape
 {
+	["name"] =      "Steam-Mecha",
+	["obj_name"] =  "Steam Plating",
+	["desc"] = 	"A super powerful, hulking form.",
+	["realm"] =     "nature",
+	["level"] =     40,
+	["rarity"] =    80,
+	["duration"] =  {20, 40},
+	["calc"] =      function ()
+			player.modify_stat(A_STR, 10 + (player.mimic_level / 7))
+			player.modify_stat(A_CON, 5 + (player.mimic_level / 10))
+			player.modify_stat(A_WIS, -10)
+			player.modify_stat(A_INT, -5)
+			player.modify_stat(A_CHR, -25)
+			player.pspeed = player.pspeed - 10 - (player.mimic_level / 10)
+			player.skill_stl = player.skill_stl - 15
+			player.to_d = player.to_d + 2 + (player.mimic_level / 5)
+			player.dis_to_d = player.dis_to_d + 2 + (player.mimic_level / 5)
+			player.to_d_ranged = player.to_d_ranged + 1 + (player.mimic_level / 10)
+			player.to_a = player.to_a + 8 + (player.mimic_level / 3)
+			player.dis_to_a = player.dis_to_a + 8 + (player.mimic_level / 3)
+
+			player.sustain_str = TRUE
+			player.sustain_con = TRUE
+			player.sustain_chr = TRUE
+			player.sustain_wis = TRUE
+			player.sustain_int = TRUE
+			player.sustain_dex = TRUE
+			player.hold_life = TRUE
+			player.resist_blind = TRUE
+			player.rapid_hunger = TRUE
+
+	end,
+}
+
+add_mimic_shape
+{
 	["name"] =      "Lich",
 	["obj_name"] =  "Lich Phylactery",
 	["desc"] = 	"Lichs are mighty undead. They're good at spellcasting.",
@@ -1370,6 +1406,35 @@ add_mimic_shape
 			if player.mimic_level >= 25 then
 				player.add_power(POWER_WEB)
 			end
+	end,
+}
+
+-- For a staff
+add_mimic_shape
+{
+	["name"] =      "Claudia",
+	["desc"] = 	"A super cute wooden sandal.",
+	["realm"] =     "nil",
+	["level"] =     40,
+	["rarity"] =    101,
+	["duration"] =  {15, 75},
+	["limit"] =     TRUE,
+	["calc"] =      function ()
+			player.modify_stat(A_STR, 10 + (player.mimic_level / 7))
+			player.modify_stat(A_DEX, 4 + (player.mimic_level / 5))
+			player.modify_stat(A_CHR, 10 + (player.mimic_level / 3))
+			player.modify_stat(A_CON, -20)
+
+			player.pspeed = player.pspeed + 5 + (player.mimic_level / 10)
+
+			player.to_d = player.to_d + 10 + (player.mimic_level / 20)
+			player.dis_to_d = player.dis_to_d + 10 + (player.mimic_level / 20)
+
+			player.resist_inertia = TRUE
+			player.resist_fear = TRUE
+			player.resist_nerve = TRUE
+			player.resist_water = TRUE
+
 	end,
 }
 

@@ -1,5 +1,11 @@
 -- Spells that are stick or artifacts/... only
 
+-- explanation for how the stick values work (I think; they're not really documented anywhere *groan*), by Amy:
+-- base_level: first value usually 1, second value seems to be the minimum level to increase spell level? or not? does this even do anything?!
+-- max_level: lower and higher bounds, denotes the "maximum" level that the device can spawn with
+-- rarity: apparently this is a % chance for the device to not spawn with this particular spell?
+-- charge: seems to be X + dY charges when the device spawns
+
 DEVICE_HEAL_MONSTER = add_spell
 {
 	["name"] = 	"Heal Monster",
@@ -66,6 +72,37 @@ DEVICE_AMOEBA_SWARM = add_spell
 	["desc"] =	{
 			"Creates a cloud of amoebae",
 			"The cloud will persist for some turns, damaging all monsters passing by",
+	}
+}
+
+DEVICE_WOOD_CHARM = add_spell
+{
+	["name"] = 	"Wood Charm",
+	["school"] = 	{SCHOOL_DEVICE},
+	["level"] = 	40,
+	["mana"] = 	200,
+	["mana_max"] = 	1000,
+	["fail"] = 	60,
+	["random"] = 	-1,
+	["stick"] =
+	{
+			["charge"] =    { 5, 6 },
+			[TV_STAFF] =
+			{
+				["rarity"] = 		40,
+				["base_level"] =	{ 1, 15 },
+				["max_level"] =		{ 20, 40 },
+			},
+	},
+	["spell"] = 	function()
+			return set_mimic(get_level(DEVICE_WOOD_CHARM, 100) + 10, resolve_mimic_name("Claudia"), player.lev)
+	end,
+	["info"] = 	function()
+			return "dur "..(get_level(DEVICE_WOOD_CHARM, 100)).."+10"
+	end,
+	["desc"] =	{
+			"Turns you into a sandal made of massive wood",
+			"You deal increased damage and become faster, but physically brittle",
 	}
 }
 

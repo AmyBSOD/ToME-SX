@@ -2299,6 +2299,25 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		(*f2) |= (TR2_RES_POIS);
 	}
 
+	if (p_ptr->mimic_form == resolve_mimic_name("Claudia")) {
+		(*f2) |= (TR2_RES_FEAR);
+		(*f5) |= TR5_RES_WATER;
+		(*f6) |= (TR6_RES_NERVE);
+		(*f5) |= TR5_RES_INERTIA;
+	}
+
+	if (p_ptr->mimic_form == resolve_mimic_name("Steam-Mecha")) {
+		(*f2) |= TR2_HOLD_LIFE;
+		(*f2) |= TR2_SUST_STR;
+		(*f2) |= TR2_SUST_CON;
+		(*f2) |= TR2_SUST_CHR;
+		(*f2) |= TR2_SUST_INT;
+		(*f2) |= TR2_SUST_WIS;
+		(*f2) |= TR2_SUST_DEX;
+		(*f2) |= TR2_RES_BLIND;
+		(*f5) |= TR5_RAPID_HUNGER;
+	}
+
 	if (p_ptr->mimic_form == resolve_mimic_name("Dragon")) {
 		if (p_ptr->mimic_level >= 20) (*f4) |= TR4_FLY;
 		(*f2) |= TR2_RES_FIRE;

@@ -18933,6 +18933,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				take_hit(damroll(2, 4), "a heap of shit");
 			} else {
 				int bootdamagechance = 30;
+				if (p_ptr->mimic_form == resolve_mimic_name("Anastasia")) bootdamagechance = 100;
 				u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
@@ -18979,6 +18980,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				(void)set_slow(p_ptr->slow + rand_int(10) + 4);
 			} else {
 				int bootdamagechance = 70;
+				if (p_ptr->mimic_form == resolve_mimic_name("Anastasia")) bootdamagechance = 100;
 				u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 				object_flags(j_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 

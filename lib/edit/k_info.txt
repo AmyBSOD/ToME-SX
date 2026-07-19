@@ -10707,6 +10707,13 @@ F:TUNNEL | EASY_KNOW
 f:TUNNEL |
 D:This ring magically improves your ability to tunnel. 
 
+N:1268:Wood Charm
+G:_:d
+I:55:32:-1:SPELL=Wood Charm
+W:40:0:10:100
+A:40/5
+P:0:1d2:0:0:0
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being a bonus to the pval-based property
