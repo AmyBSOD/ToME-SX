@@ -7380,6 +7380,77 @@ F:SLAY_WEAP
 R:10
 F:RES_DMG
 
+# poison needle
+N:587:of Anthrax
+T:23:42:42
+X:A:24:20
+W:0:1:5:5000
+C:8:8:0:0
+R:100
+F:BRAND_POIS | DAM_DIE
+f:BRAND_POIS | 
+
+N:588:of Curare
+T:23:42:42
+X:A:24:30
+W:20:1:5:10000
+C:20:20:0:0
+R:100
+F:BRAND_POIS | DAM_DIE | DAM_SIZE
+f:BRAND_POIS | 
+
+N:589:of Ricinus
+T:23:42:42
+X:A:24:50
+W:30:1:7:20000
+C:25:25:0:0
+R:100
+F:BRAND_POIS | SLAY_WEAP | KILL_DRAGON
+f:BRAND_POIS | 
+
+# the same for all other weapons, with higher levels and lower chance --Amy
+N:590:of Anthrax
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+T:115:55:55
+T:15:0:255
+X:A:24:20
+W:20:1:25:5000
+C:8:8:0:0
+R:100
+F:BRAND_POIS | DAM_DIE
+f:BRAND_POIS | 
+
+N:591:of Curare
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+T:115:55:55
+T:15:0:255
+X:A:24:30
+W:50:1:35:10000
+C:20:20:0:0
+R:100
+F:BRAND_POIS | DAM_DIE | DAM_SIZE
+f:BRAND_POIS | 
+
+N:592:of Ricinus
+T:21:0:255
+T:22:0:255
+T:23:0:255
+T:24:0:255
+T:115:55:55
+T:15:0:255
+X:A:24:50
+W:70:1:50:20000
+C:25:25:0:0
+R:100
+F:BRAND_POIS | SLAY_WEAP | KILL_DRAGON
+f:BRAND_POIS | 
+
 # N: serial number : ego type
 # D: description
 # T: tval : min sval : max sval
