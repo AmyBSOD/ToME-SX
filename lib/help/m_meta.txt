@@ -65,6 +65,7 @@ There are six spells available for the meta school. These spells are:
    Regeneration
    Remove Curses
    Reveal Ways
+   Seismic Magnitude
    Sense Hidden
    Sense Monsters
    Shake

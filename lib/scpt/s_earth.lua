@@ -182,3 +182,23 @@ SHAKE = add_spell
 			"At level 20 it can be targeted at any location"
 	}
 }
+
+SEISMAGNITUDE = add_spell
+{
+	["name"] =      "Seismic Magnitude",
+	["school"] =    {SCHOOL_EARTH},
+	["level"] =     50,
+	["mana"] =      50,
+	["mana_max"] =  200,
+	["fail"] =      80,
+	["inertia"] = 	{ 20, 60 },
+	["spell"] =     function()
+		return fire_ball(GF_GRAVITY, 0, 200 + get_level(SEISMAGNITUDE, 500), 2 + get_level(SEISMAGNITUDE, 3) )
+	end,
+	["info"] =      function()
+		return "dam "..(200 + get_level(SEISMAGNITUDE, 500)).." rad "..(2 + get_level(SEISMAGNITUDE, 3))
+	end,
+	["desc"] =      {
+			"Blasts nearby monsters with gravity",
+	}
+}

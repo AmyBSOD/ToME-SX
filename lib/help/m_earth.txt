@@ -17,7 +17,7 @@ spells, whereas a worshipper of Yavanna can cast up to level 5 earth school
 spells.
 
 #####uEarth Spells
-There are five spells available for the earth school. These Spells are:
+There are six spells available for the earth school. These Spells are:
 1. [[[[[uStone Skin] (school level 1)
    Creates a shield of earth around you to protect you.
    At spell level 25 it starts dealing damage to attackers.
@@ -33,3 +33,5 @@ There are five spells available for the earth school. These Spells are:
    Creates a micro-ball of force that will push monsters backwards.
    If the monster is caught near a wall, it'll be crushed against it.
    At spell level 12 it turns into a ball of radius 1.
+6. [[[[[uSeismic Magnitude] (school level 50)
+   Blasts nearby monsters with gravity.

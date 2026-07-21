@@ -148,6 +148,29 @@ FLAMEOFUDUN = add_spell
 	}
 }
 
+NIGHTSHADE = add_spell
+{
+	["name"] = "Nightshade",
+	["school"] = {SCHOOL_UDUN, SCHOOL_TEMPORAL},
+	["level"] = 25,
+	["mana"] = 40,
+	["mana_max"] = 120,
+	["fail"] = 30,
+	["spell"] = function()
+		local nightshadedamage
+		nightshadedamage = 40 + get_level(NIGHTSHADE, 100)
+		if ((bst(HOUR, turn) > 5) and (bst(HOUR, turn) < 18) ) then nightshadedamage = nightshadedamage / 5 end
+		return project_los(GF_DARK, nightshadedamage)
+	end,
+	["info"] = function()
+		return "dmg "..(40 + get_level(NIGHTSHADE, 100))
+	end,
+	["desc"] =
+	{
+		"Deals darkness damage to every monster in your field of view",
+		"During daytime, the damage is greatly reduced",
+	},
+}
 
 -- Return the number of Udun/Melkor spells in a given book
 function udun_in_book(sval, pval)

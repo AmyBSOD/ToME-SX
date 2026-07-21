@@ -150,3 +150,28 @@ SUMMONANNIMAL = add_spell
 			"Summons a leveled animal to your aid",
 	}
 }
+
+AMOEBACOLONY = add_spell
+{
+	["name"] =      "Amoeba Colony",
+	["school"] =    {SCHOOL_NATURE},
+	["level"] =     40,
+	["mana"] =      40,
+	["mana_max"] =  180,
+	["fail"] =      75,
+	["spell"] =     function()
+		local ret, dir, type
+		ret, dir = get_aim_dir()
+		if ret == FALSE then return end
+		fire_wall(GF_AMOEBAE, dir, 20 + get_level(AMOEBACOLONY, 130), 8 + get_level(AMOEBACOLONY, 12))
+		return TRUE
+	end,
+	["info"] =      function()
+		return "dam "..(20 + get_level(AMOEBACOLONY, 130)).." dur "..(8 + get_level(AMOEBACOLONY, 12))
+	end,
+	["desc"] =      {
+			"Creates a line of amoebae to damage monsters",
+			"They persist for a while and deal damage every turn"
+	}
+}
+

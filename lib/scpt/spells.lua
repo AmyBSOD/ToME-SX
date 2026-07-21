@@ -895,7 +895,7 @@ school_book[2] = {
 
 -- The book of the impenetrable earth
 school_book[3] = {
-	STONESKIN, DIG, STONEPRISON, SHAKE, STRIKE,
+	STONESKIN, DIG, STONEPRISON, SHAKE, STRIKE, SEISMAGNITUDE, 
 }
 
 -- The book of the unstopable wave
@@ -910,7 +910,7 @@ school_book[5] = {
 
 -- Create the book of the tree
 school_book[6] = {
-	GROWTREE, HEALING, RECOVERY, REGENERATION, SUMMONANNIMAL,
+	GROWTREE, HEALING, RECOVERY, REGENERATION, SUMMONANNIMAL, AMOEBACOLONY,
 }
 
 -- Create the book of Knowledge
@@ -935,7 +935,7 @@ school_book[10] = {
 
 -- Create the book of hellflame
 school_book[11] = {
-	DRAIN, GENOCIDE, WRAITHFORM, FLAMEOFUDUN,
+	DRAIN, GENOCIDE, NIGHTSHADE, WRAITHFORM, FLAMEOFUDUN,
 }
 
 -- Create the book of hell
@@ -1032,7 +1032,7 @@ school_book[31] = {
 
 -- The book of air and earth
 school_book[32] = {
-	STONESKIN, DIG, STONEPRISON, SHAKE, STRIKE,
+	STONESKIN, DIG, STONEPRISON, SHAKE, STRIKE, SEISMAGNITUDE,
 	NOXIOUSCLOUD, POISONBLOOD, INVISIBILITY, STERILIZE, AIRWINGS, THUNDERSTORM,
 }
 
@@ -1050,7 +1050,7 @@ school_book[34] = {
 
 -- The book of nature and mind
 school_book[35] = {
-	GROWTREE, HEALING, RECOVERY, REGENERATION, SUMMONANNIMAL,
+	GROWTREE, HEALING, RECOVERY, REGENERATION, SUMMONANNIMAL, AMOEBACOLONY,
 	CHARM, CONFUSE, ARMOROFFEAR, STUN, MIND_BOLT,
 }
 

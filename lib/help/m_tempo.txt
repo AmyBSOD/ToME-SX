@@ -39,3 +39,12 @@ There are four spells available for the temporal school. These Spells are:
    Makes trees grow extremely quickly around you.
 #####v   Your Nature and Temporal skills must have reached a combined average level 
 #####v   of 6 in order to cast this spell.
+
+#####GUdun spells that can be cast with Temporal skill
+
+1. [[[[[DNightshade] (dual school level 25)
+   Deals darkness damage to every monster in your field of view.
+   During daytime, the damage is greatly reduced.
+#####v   Your Udun and Temporal skills must have reached a combined average level 
+#####v   of 25 in order to cast this spell.
+

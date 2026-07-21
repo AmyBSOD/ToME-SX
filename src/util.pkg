@@ -1071,6 +1071,7 @@ extern void disturb(int stop_search, int flush_output);
  * @brief Break scalar time.\n
  * @param what Number \n the unit time "t" is to be broken into. The following
  * values can be used: MINUTE, HOUR, DAY, YEAR
+ * note by Amy: but then why do you turbowierdo not actually *define* stuff like HOUR so that lua can actually *use* them??????? are you insane?!
  * @brief Unit of time
  * @param t Number \n the time to be broken.
  * @brief Time
@@ -1078,6 +1079,14 @@ extern void disturb(int stop_search, int flush_output);
  * @note (see file util.c)
  */
 extern s32b bst(s32b what, s32b t);
+
+#define DAY                     11520                   /* Number of turns per day */
+#define YEAR                    (DAY * 365)             /* Number of turns per year */
+#define HOUR                    (DAY / 24)              /* Number of turns per hour */
+#define MINUTE                  (HOUR / 60)             /* Number of turns per minute */
+#define DAY_START               (HOUR * 6)              /* Sunrise */
+#define START_YEAR              2890                    /* Bilbo birthday year */
+#define START_DAY               (DAY * (42 + 127))      /* Bilbo birthday */
 
 $static char *path_build_lua(cptr path, cptr file){static char buf[1025]; path_build(buf, 1024, path, file); return buf;}
 
