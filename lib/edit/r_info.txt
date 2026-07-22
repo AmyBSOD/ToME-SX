@@ -1619,7 +1619,7 @@ D:It has a copper head and sharp venomous fangs.
 N:107:Death sword
 G:|:W
 I:130:6d6:20:40:0
-W:6:5:0:30
+W:20:5:0:100
 E:0:0:0:0:0:0
 O:50:0:50:0
 B:HIT:HURT:5d5
@@ -100413,6 +100413,647 @@ D:scratching on your shin bone, and learn that they're very
 D:effective for removing your unprotected skin. If you fail to 
 D:get away in time, they'll draw quite a lot of blood... 
 
+N:5742:Daniela
+G:Q:w
+I:118:20d40:10:20:30
+W:20:5:1000:300
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:3d8
+B:KICK:PARALYZE:1d3
+F:WILD_TOO | WILD_GRASS | WILD_TOWN | WILD_WOOD | WILD_MOUNTAIN | 
+F:ANIMAL | HAS_EGG | DROP_CORPSE | FEMALE | RES_WATE | 
+F:MORTAL | BASEANGBAND | 
+D:This girl sneaker looks brand-new, and she seems to really enjoy 
+D:kicking your sensitive body parts. 
+
+N:5743:Daniela
+G:Q:w
+I:124:40d100:10:50:30
+W:60:5:1000:5000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:6d11
+B:KICK:PARALYZE:3d3
+F:WILD_TOO | WILD_GRASS | WILD_TOWN | WILD_WOOD | WILD_MOUNTAIN | 
+F:ANIMAL | HAS_EGG | DROP_CORPSE | FEMALE | RES_WATE | REFLECTING | 
+F:MORTAL | BASEANGBAND | IM_COLD | NO_FEAR | RES_LITE | RES_MIND | 
+S:1_IN_10
+S:MIND_BLAST | 
+D:You'd be mistaken to underestimate this polished girl sneaker. She can 
+D:kick with full force and slam you into the ground. 
+
+N:5744:Daniela
+G:Q:b
+I:116:30d55:10:25:30
+W:30:5:800:450
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:LOSE_INT:3d14
+F:WILD_TOO | WILD_GRASS | WILD_TOWN | WILD_WOOD | WILD_MOUNTAIN | 
+F:ANIMAL | HAS_EGG | DROP_CORPSE | FEMALE | IM_ELEC | NO_FEAR | 
+F:MORTAL | BASEANGBAND | RES_CHAO | 
+S:1_IN_10
+S:CONF | 
+D:These high-heeled lady shoes are trained in martial arts and aim for 
+D:vulnerable body parts with their massive heels. 
+
+N:5745:Daniela
+G:Q:b
+I:121:70d110:10:70:30
+W:70:5:800:6000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:LOSE_INT:6d22
+B:KICK:PARALYZE:2d6
+F:WILD_TOO | WILD_GRASS | WILD_TOWN | WILD_WOOD | WILD_MOUNTAIN | 
+F:ANIMAL | HAS_EGG | DROP_CORPSE | FEMALE | IM_ELEC | NO_FEAR | 
+F:MORTAL | BASEANGBAND | RES_CHAO | POWERFUL | AURA_ELEC | 
+F:IM_ACID | IM_COLD | NO_SLEEP | RES_TIME | RES_LITE | RES_ETHE | 
+S:1_IN_8
+S:CONF | MIND_BLAST | HEAL | BR_ETHE | BR_MIND | BA_ELEC | 
+D:You'll hear the angels sing your requiem when this pretty lady shoe 
+D:fully kicks you in the head with her very massive high heel. 
+
+N:5746:Little sister
+G:p:v
+I:130:2d6:6:11:0
+W:15:3:1000:12
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:INSULT:LOSE_CHR:1d8
+F:FEMALE | FRIENDS | RAND_25 | 
+F:ONLY_GOLD | DROP_12 | DROP_90 | 
+F:SMART | OPEN_DOOR
+S:1_IN_5 | 
+S:MISSILE | SHRIEK | TRAPS | BO_COLD
+D:"...sssisster? So! You have a sssisster!"
+
+N:5747:Wood wasp
+G:I:y
+I:110:1d5:100:10:0
+W:5:5:100:1
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:STING:HURT:1d2
+F:ANIMAL | PASS_WALL
+D:The dungeon is infested with them!
+
+N:5748:Wood wasp
+G:I:y
+I:110:1d5:100:10:0
+W:5:25:100:1
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:STING:HURT:1d2
+F:ANIMAL | PASS_WALL
+S:MULTIPLY
+D:The dungeon is infested with them!
+
+N:5749:Tektite
+G:S:U
+I:115:20d50:20:250:30
+W:20:1:400:600
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CHARGE:TERRIFY:6d6
+F:WEIRD_MIND | BASH_DOOR | DROP_SKELETON | COLD_BLOOD | 
+F:ANIMAL | SPIDER | IM_ACID | IM_ELEC | IM_COLD | IM_POIS | RES_TELE | 
+F:RES_NETH | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | NO_FEAR | NO_STUN | 
+F:NO_CONF | NO_SLEEP | NO_CUT | RES_TIME | RES_LITE | RES_SOUN | RES_CHAO | 
+F:RES_INER | RES_WALL | RES_GRAV | RES_DARK | RES_SHAR | RES_NERV | 
+F:RES_ETHE | RES_MIND | 
+F:MORTAL | BASEANGBAND
+S:1_IN_10
+S:BLINK
+D:IF ALL ELSE FAILS USE FIRE. 
+
+N:5750:Blue Tektite
+G:S:b
+I:122:100d50:20:250:30
+W:60:1:400:16000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CHARGE:TERRIFY:8d12
+B:CHARGE:EAT_FOOD:8d8
+B:CHARGE:POISON:6d6
+F:WEIRD_MIND | BASH_DOOR | DROP_SKELETON | COLD_BLOOD | 
+F:ANIMAL | SPIDER | IM_ACID | IM_ELEC | IM_COLD | IM_POIS | RES_TELE | 
+F:RES_NETH | RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | NO_FEAR | NO_STUN | 
+F:NO_CONF | NO_SLEEP | NO_CUT | RES_TIME | RES_LITE | RES_SOUN | RES_CHAO | 
+F:RES_INER | RES_WALL | RES_GRAV | RES_DARK | RES_SHAR | RES_NERV | 
+F:RES_ETHE | RES_MIND | 
+F:MORTAL | BASEANGBAND
+S:1_IN_5
+S:BLINK
+D:It looks like a spider. However, for some bizarre reason, everything except 
+D:fire is incapable of properly harming it. 
+
+N:5751:Silver hound
+G:Z:W
+I:110:25d10:30:30:0
+W:25:2:600:250
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+B:BITE:HURT:2d8
+B:CLAW:HURT:2d3
+B:CLAW:HURT:2d3
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | REFLECTING
+S:1_IN_5 | 
+S:BR_DARK | BR_LITE
+D:This shiny hound reflects your projectiles. 
+
+N:5752:Silver hound
+G:Z:W
+I:110:25d10:30:30:0
+W:25:100:600:250
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+B:BITE:HURT:2d8
+B:CLAW:HURT:2d3
+B:CLAW:HURT:2d3
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | REFLECTING
+S:1_IN_5 | 
+S:BR_DARK | BR_LITE
+S:MULTIPLY
+D:This shiny hound reflects your projectiles. 
+
+N:5753:Ice hound
+G:Z:w
+I:110:30d10:30:35:0
+W:30:2:600:300
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+B:BITE:HURT:2d8
+B:CLAW:HURT:4d3
+B:CLAW:HURT:4d3
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | IM_COLD | SUSCEP_FIRE | NO_CUT | RES_SHAR | 
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:BO_ICEE
+D:This hound seems to be from the icy wastes of Forodwaith. 
+
+N:5754:Ice hound
+G:Z:w
+I:110:30d10:30:35:0
+W:30:100:600:300
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+B:BITE:HURT:2d8
+B:CLAW:HURT:4d3
+B:CLAW:HURT:4d3
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | IM_COLD | SUSCEP_FIRE | NO_CUT | RES_SHAR | 
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:BO_ICEE
+S:MULTIPLY
+D:This hound seems to be from the icy wastes of Forodwaith. 
+
+N:5755:Gold hound
+G:Z:y
+I:110:40d10:30:36:0
+W:40:2:700:550
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d8
+B:CLAW:HURT:2d8
+B:BITE:HURT:2d9
+B:BITE:HURT:2d9
+F:FORCE_SLEEP | FRIENDS | DROP_SKELETON | DROP_CORPSE | 
+F:BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | NO_CUT | 
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:BR_SOUN | BR_SHAR
+D:A radiant golden hound. The ground seems to tremble where it walks. 
+
+N:5756:Gold hound
+G:Z:y
+I:110:40d10:30:36:0
+W:40:100:700:550
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d8
+B:CLAW:HURT:2d8
+B:BITE:HURT:2d9
+B:BITE:HURT:2d9
+F:FORCE_SLEEP | FRIENDS | DROP_SKELETON | DROP_CORPSE | 
+F:BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | NO_CUT | 
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:BR_SOUN | BR_SHAR
+S:MULTIPLY
+D:A radiant golden hound. The ground seems to tremble where it walks. 
+
+N:5757:Balance hound
+G:Z:o
+I:125:75d10:30:115:0
+W:70:2:800:6500
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d14
+B:CLAW:HURT:2d14
+B:BITE:HURT:2d14
+B:BITE:HURT:2d14
+F:FORCE_SLEEP | 
+F:FRIENDS | RES_NETH | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BR_NETH | BR_DISE | BR_CHAO
+D:This hound seems to be exceptionally well-built. 
+
+N:5758:Balance hound
+G:Z:o
+I:125:75d10:30:115:0
+W:70:100:800:6500
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d14
+B:CLAW:HURT:2d14
+B:BITE:HURT:2d14
+B:BITE:HURT:2d14
+F:FORCE_SLEEP | 
+F:FRIENDS | RES_NETH | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BR_NETH | BR_DISE | BR_CHAO
+S:MULTIPLY
+D:This hound seems to be exceptionally well-built. 
+
+N:5759:Human Warrior
+G:p:u
+I:110:9d8:10:10:0
+W:12:20:1700:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:5d8
+F:MALE |
+F:FRIENDS | 
+F:ONLY_GOLD | DROP_12 |
+F:OPEN_DOOR | BASH_DOOR
+F:DROP_CORPSE |
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:They are used as the main assault force of the human kings. 
+D:They are intent on taking you out. 
+
+N:5760:Elven archer
+G:h:W
+I:110:9d7:10:10:0
+W:10:20:1400:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:2d8
+F:MALE |
+F:FRIENDS | 
+F:ONLY_GOLD | DROP_12 |
+F:OPEN_DOOR | BASH_DOOR
+F:DROP_CORPSE |
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_1 |
+S:ARROW_2 | ARROW_1 | ARROW_2 | ARROW_1 |
+D:They are used as the main assault force of the elven kings. 
+D:They are intent on taking you out. 
+
+N:5761:Dwarven warrior
+G:h:U
+I:110:8d8:10:10:0
+W:16:20:1500:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:6d8
+F:MALE |
+F:FRIENDS | 
+F:ONLY_GOLD | DROP_12 |
+F:OPEN_DOOR | BASH_DOOR
+F:DROP_CORPSE |
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:They are used as the main assault force of the dwarven kings. 
+D:They are intent on taking you out. 
+
+N:5762:Slender Man
+G:p:W
+I:112:100d100:50:200:0
+W:10:25:3000:1000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:INSANITY:6d9
+F:MALE | OPEN_DOOR | ELDRITCH_HORROR | NO_FEAR | NO_STUN | 
+F:BASEANGBAND | IM_POIS | RES_NETH | RES_WATE | NO_CONF | 
+F:NO_SLEEP | NO_CUT | RES_TIME | RES_LITE | RES_SOUN | 
+F:RES_INER | RES_WALL | RES_GRAV | RES_DARK | RES_NERV | 
+F:RES_MIND | EMPTY_MIND | REFLECTING | REGENERATE | EVIL | 
+S:1_IN_8
+S:MIND_BLAST | BR_RADI | BLINK | BR_SOUN | 
+D:He has no eyes, yet he always watches. 
+
+N:5763:Grim sword
+G:|:W
+I:110:6d6:20:40:0
+W:6:5:0:30
+E:0:0:0:0:0:0
+O:50:0:50:0
+B:HIT:HURT:2d5
+B:HIT:HURT:2d5
+B:HIT:HURT:2d5
+B:HIT:HURT:2d5
+F:NEVER_MOVE | NONLIVING | NO_FEAR | SUSCEP_ACID |
+F:STUPID | EMPTY_MIND | COLD_BLOOD | CHAR_MULTI | NO_CONF | NO_SLEEP | 
+F:DROP_90 | EVIL | IM_COLD | IM_FIRE | FORCE_MAXHP | IM_ELEC | IM_POIS | 
+F:BASEANGBAND | HAS_LITE | NO_CUT
+D:This sword wants to hack you to bits. 
+
+N:5764:Doom sword
+G:|:W
+I:120:6d6:20:40:0
+W:10:5:0:40
+E:0:0:0:0:0:0
+O:50:0:50:0
+B:HIT:HURT:3d5
+B:HIT:HURT:3d5
+B:HIT:HURT:3d5
+B:HIT:HURT:3d5
+F:NEVER_MOVE | NONLIVING | NO_FEAR | SUSCEP_ACID |
+F:STUPID | EMPTY_MIND | COLD_BLOOD | CHAR_MULTI | NO_CONF | NO_SLEEP | 
+F:DROP_90 | EVIL | IM_COLD | IM_FIRE | FORCE_MAXHP | IM_ELEC | IM_POIS | 
+F:BASEANGBAND | HAS_LITE | NO_CUT
+D:Move next to this sword and it'll cut you up good. 
+
+N:5765:Vorpal sword
+G:|:W
+I:140:20d20:20:100:0
+W:50:5:0:500
+E:0:0:0:0:0:0
+O:50:0:50:0
+B:HIT:LOSE_ALL:5d10
+B:HIT:LOSE_ALL:5d10
+B:HIT:LOSE_ALL:5d10
+B:HIT:LOSE_ALL:5d10
+F:NEVER_MOVE | NONLIVING | NO_FEAR | SUSCEP_ACID |
+F:STUPID | EMPTY_MIND | COLD_BLOOD | CHAR_MULTI | NO_CONF | NO_SLEEP | 
+F:DROP_90 | EVIL | IM_COLD | IM_FIRE | FORCE_MAXHP | IM_ELEC | IM_POIS | 
+F:BASEANGBAND | HAS_LITE | NO_CUT
+D:The game-ender, moving next to this stationary sword will allow it to 
+D:own the crap out of you. 
+
+N:5766:Toxic hound
+G:Z:G
+I:122:66d10:30:66:0
+W:60:2:600:800
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:4d8
+B:BITE:POISON:4d8
+B:CLAW:HURT:4d10
+B:CLAW:HURT:4d10
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | IM_POIS | MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:BR_VENO
+D:This hound has a breath that smells extremely toxic! 
+
+N:5767:Toxic hound
+G:Z:G
+I:122:66d10:30:66:0
+W:60:100:600:800
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:4d8
+B:BITE:POISON:4d8
+B:CLAW:HURT:4d10
+B:CLAW:HURT:4d10
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | IM_POIS | MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:BR_VENO
+S:MULTIPLY
+D:This hound has a breath that smells extremely toxic! 
+
+N:5768:Fugu fish
+G:~:w
+I:120:40d40:20:60:30
+W:61:1:600:4000
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:POISON:10d15
+B:BITE:POISON:10d15
+F:EMPTY_MIND | BASH_DOOR | POWERFUL | AQUATIC |
+F:IM_POIS | NO_STUN | WILD_TOO | COLD_BLOOD | 
+F:ANIMAL | MORTAL | BASEANGBAND
+S:1_IN_4 | 
+S:BR_VENO
+D:A super poisonous fish. 
+
+N:5769:Fugu fish
+G:~:w
+I:120:40d40:20:60:30
+W:61:50:600:4000
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:POISON:10d15
+B:BITE:POISON:10d15
+F:EMPTY_MIND | BASH_DOOR | POWERFUL | 
+F:IM_POIS | NO_STUN | WILD_TOO | COLD_BLOOD | 
+F:ANIMAL | MORTAL | BASEANGBAND
+S:1_IN_4 | 
+S:BR_VENO
+D:A super poisonous fish. 
+
+N:5770:Backlash
+G:T:R
+I:120:70d25:14:115:25
+W:69:4:4000:6000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:HURT:6d6
+B:CLAW:HURT:6d6
+B:BITE:POISON:4d20
+B:CRUSH:POISON:4d13
+F:TROLL | EVIL | FRIENDS | OPEN_DOOR | BASH_DOOR | DROP_CORPSE | 
+F:IM_POIS | IM_ACID | REGENERATE | BASEANGBAND | REGENERATE | 
+S:1_IN_9 | BR_VENO
+D:Despite their weird name, this troll is extremely toxic. 
+
+N:5771:Toxic dragon
+G:D:g
+I:120:72d10:20:90:80
+W:40:1:170000:2000
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:4d8
+B:CLAW:HURT:4d8
+B:BITE:POISON:7d8
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_CORPSE | 
+F:DROP_32 | DROP_42 | CAN_FLY |
+F:SMART | BASH_DOOR | POWERFUL | MOVE_BODY | 
+F:EVIL | DRAGON | IM_POIS | NO_CONF | NO_SLEEP | BASEANGBAND | HAS_LITE
+F:ATTR_MULTI
+S:1_IN_5 | 
+S:BLIND | CONF | SCARE | 
+S:BR_VENO
+D:A huge draconic form breathing extremely poisonous gas. 
+
+N:5772:Killer Drolem
+G:g:g
+I:121:30d120:25:150:30
+W:54:3:40000:13000
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:CLAW:HURT:4d10
+B:CLAW:HURT:4d10
+B:BITE:POISON:5d12
+B:BITE:POISON:5d12
+F:FORCE_SLEEP | FORCE_MAXHP | RES_TELE | 
+F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:DRAGON | IM_FIRE | IM_COLD | 
+F:IM_ELEC | IM_POIS | CAN_SWIM |
+F:NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING | BASEANGBAND | NO_CUT
+F:ATTR_MULTI
+S:1_IN_4 | 
+S:BLIND | SLOW | CONF | ARROW_3 | 
+S:BR_VENO
+D:The Mark 2 version of the deadly drolem. It's even more destructive 
+D:than the original one. 
+
+N:5773:Great Toxic Wyrm
+G:D:g
+I:120:40d100:30:150:80
+W:63:2:190000:20000
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:4d12
+B:CLAW:HURT:4d12
+B:BITE:POISON:6d14
+B:BITE:POISON:6d14
+F:FORCE_SLEEP | FORCE_MAXHP | CAN_FLY | 
+F:ONLY_ITEM | DROP_22 | DROP_32 | DROP_42 | DROP_GOOD | 
+F:BASH_DOOR | POWERFUL | MOVE_BODY | DROP_CORPSE | 
+F:EVIL | DRAGON | IM_POIS | NO_CONF | NO_SLEEP | BASEANGBAND | HAS_LITE
+F:ATTR_MULTI
+S:1_IN_4 | 
+S:BLIND | CONF | SCARE | 
+S:BR_VENO
+D:A truly enormous dragon with great powers. Its breath is highly toxic, 
+D:and you can feel your throat constricting. 
+
+N:5774:Toxic vortex
+G:v:G
+I:120:14d15:100:50:0
+W:40:1:0:1000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:POISON:8d8
+F:FORCE_SLEEP | RAND_50 | CAN_FLY | WILD_WASTE |
+F:EMPTY_MIND | BASH_DOOR | POWERFUL | WILD_TOO | 
+F:IM_FIRE | NO_FEAR | NO_CONF | NO_SLEEP | 
+F:NONLIVING | BASEANGBAND | HAS_LITE | NO_CUT | 
+S:1_IN_4 | 
+S:BR_VENO | 
+D:A whirlpool of toxic gases. 
+
+N:5775:Radio hound
+G:Z:o
+I:110:15d8:30:30:0
+W:20:1:600:200
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:BITE:HURT:1d8
+B:CLAW:HURT:3d3
+B:CLAW:HURT:3d3
+F:FORCE_SLEEP | 
+F:FRIENDS | DROP_SKELETON | DROP_CORPSE | 
+F:BASH_DOOR |
+F:ANIMAL | MORTAL | BASEANGBAND | NO_FEAR
+S:1_IN_7 | 
+S:BR_RADI
+D:This hound emits a horrible "SKRIIIIIIIIE" sound every once in a while. 
+
+N:5776:Radio hound
+G:Z:o
+I:110:15d8:30:30:0
+W:20:50:600:200
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:BITE:HURT:1d8
+B:CLAW:HURT:3d3
+B:CLAW:HURT:3d3
+F:FORCE_SLEEP | 
+F:FRIENDS | DROP_SKELETON | DROP_CORPSE | 
+F:BASH_DOOR |
+F:ANIMAL | MORTAL | BASEANGBAND | NO_FEAR
+S:1_IN_7 | 
+S:BR_RADI
+S:MULTIPLY
+D:This hound emits a horrible "SKRIIIIIIIIE" sound every once in a while. 
+
+N:5777:Amorphous hound
+G:Z:w
+I:110:30d10:30:75:0
+W:30:2:600:300
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+B:BITE:HURT:2d8
+B:CLAW:HURT:4d3
+B:CLAW:HURT:4d3
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | IM_POIS | IM_ACID | SUSCEP_ELEC | 
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:BR_AMEB
+D:A blob vaguely shaped like a hound, it seems to spawn little lifeforms 
+D:where it walks. 
+
+N:5778:Amorphous hound
+G:Z:w
+I:110:30d10:30:75:0
+W:30:100:600:300
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+B:BITE:HURT:2d8
+B:CLAW:HURT:4d3
+B:CLAW:HURT:4d3
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | IM_POIS | IM_ACID | SUSCEP_ELEC | 
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:BR_AMEB
+S:MULTIPLY
+D:A blob vaguely shaped like a hound, it seems to spawn little lifeforms 
+D:where it walks. 
 
 
 
