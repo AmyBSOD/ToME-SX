@@ -35746,8 +35746,8 @@ I:120:10d100:6:45:100
 W:32:2:0:300
 E:2:0:2:2:0:2
 O:0:0:0:0
-B:STING:EAT_FOOD:20d10
-B:STING:EAT_FOOD:20d10
+B:STING:EAT_FOOD:8d10
+B:STING:EAT_FOOD:8d10
 F:COLD_BLOOD | NO_STUN | IM_COLD
 F:NO_SLEEP | NO_FEAR | NO_CONF | SMART | OPEN_DOOR | 
 F:ESCORTS | UNIQUE | ATTR_MULTI | FORCE_MAXHP | BASEANGBAND | CAN_SPEAK
@@ -35764,7 +35764,7 @@ I:120:12d100:40:80:40
 W:32:2:0:430
 E:1:1:1:2:1:1
 O:25:50:0:20
-B:HIT:HURT:30d10
+B:HIT:HURT:15d10
 F:UNIQUE | ATTR_MULTI | MALE | FORCE_MAXHP | FORCE_SLEEP |
 F:REGENERATE | HURT_LITE | IM_COLD | RES_NETH | BASEANGBAND | 
 F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | DROP_CORPSE | CAN_SPEAK | 
@@ -36176,8 +36176,8 @@ I:110:95d10:40:75:40
 W:34:1:75:400
 E:1:1:1:2:1:1
 O:25:50:0:20
-B:PUNCH:HURT:15d15
-B:PUNCH:HURT:15d15
+B:PUNCH:HURT:11d11
+B:PUNCH:HURT:11d11
 S:1_IN_3 | 
 S:BO_PLAS | BLINK | HEAL
 F:OPEN_DOOR | SMART | NO_CONF | NO_STUN | NO_SLEEP | MALE | BASEANGBAND | CAN_SPEAK
@@ -36474,8 +36474,8 @@ I:120:102d10:6:50:100
 W:36:2:0:350
 E:2:0:2:2:0:2
 O:0:0:0:0
-B:STING:HURT:22d8
-B:STING:HURT:22d8
+B:STING:HURT:14d8
+B:STING:HURT:14d8
 F:COLD_BLOOD | NO_STUN | IM_COLD | BASEANGBAND | CAN_SPEAK
 F:NO_SLEEP |  | NO_CONF | SMART | OPEN_DOOR
 F:ESCORTS | UNIQUE | ATTR_MULTI | FORCE_MAXHP | MALE
@@ -36718,8 +36718,8 @@ I:115:25d100:20:55:35
 W:38:4:7:350
 E:0:1:0:2:1:0
 O:0:0:0:0
-B:CRUSH:HURT:25d12
-B:CRUSH:HURT:25d12
+B:CRUSH:HURT:16d12
+B:CRUSH:HURT:16d12
 F:MALE | OPEN_DOOR | BASH_DOOR | ANIMAL | RES_DISE
 F:RES_SHAR | RES_WATE | BASEANGBAND | DROP_CORPSE
 S:1_IN_8 | 
@@ -36859,8 +36859,8 @@ I:120:10d100:8:50:200
 W:40:4:40:300
 E:2:0:2:2:0:2
 O:0:0:0:0
-B:PUNCH:BLIND:25d10
-B:STING:BLIND:25d10
+B:PUNCH:BLIND:12d10
+B:STING:BLIND:12d10
 F:COLD_BLOOD | SMART | IM_COLD | ESCORT
 F:NO_STUN | NO_FEAR | NO_CONF | NO_SLEEP
 F:SUSCEP_FIRE | IM_POIS | OPEN_DOOR
@@ -36898,8 +36898,8 @@ I:130:15d100:8:60:100
 W:40:1:0:400
 E:2:0:2:2:0:2
 O:0:0:0:0
-B:PUNCH:HURT:30d10
-B:PUNCH:HURT:30d10
+B:PUNCH:HURT:15d10
+B:PUNCH:HURT:15d10
 S:1_IN_6 | 
 S:BR_FIRE
 F:COLD_BLOOD | NO_STUN | IM_COLD | BASEANGBAND
@@ -45588,8 +45588,8 @@ I:100:100d100:100:140:0
 W:99:5:0:83000
 E:0:0:0:0:0:0
 O:0:50:50:0
-B:HIT:LOSE_INT:9d99
-B:TOUCH:LOSE_INT:9d99
+B:HIT:LOSE_INT:9d40
+B:TOUCH:LOSE_INT:9d40
 F:UNIQUE | MALE | JOKEANGBAND | 
 F:FORCE_SLEEP | FORCE_MAXHP |  
 F:ESCORT | ESCORTS | SMART |
@@ -46831,10 +46831,10 @@ I:180:300d100:100:250:0
 W:100:5:1600:100000
 E:1:1:1:2:1:1
 O:25:50:0:20
-B:PUNCH:SHATTER:10d40
-B:PUNCH:SHATTER:10d40
-B:PUNCH:SHATTER:10d40
-B:GAZE:LOSE_ALL:10d40
+B:PUNCH:SHATTER:10d20
+B:PUNCH:SHATTER:10d20
+B:PUNCH:SHATTER:10d20
+B:GAZE:LOSE_ALL:10d20
 F:ATTR_MULTI | DROP_CORPSE | ELDRITCH_HORROR |
 F:UNIQUE | MALE | KILL_WALL |
 F:FORCE_MAXHP | JOKEANGBAND | 
@@ -101054,6 +101054,256 @@ S:BR_AMEB
 S:MULTIPLY
 D:A blob vaguely shaped like a hound, it seems to spawn little lifeforms 
 D:where it walks. 
+
+N:5779:Ferocious Zombie
+G:z:g
+I:112:50d30:3:25:220
+W:54:2:0:2000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:LOSE_CON:4d10
+B:CLAW:LOSE_CON:6d12
+B:BITE:TERRIFY:3d12
+F:RES_SHAR | RES_GRAV | COLD_BLOOD | WEIRD_MIND | UNDEAD | EVIL | 
+F:RES_SOUN | FRIENDS | IM_COLD | CAN_SWIM | IM_POIS | NO_FEAR | NO_CONF
+F:RES_TIME | RES_DISE | RES_TELE | RES_PLAS | RES_WATE | BASEANGBAND
+F:RES_CHAO | NO_CUT | NO_SLEEP | RES_DARK | 
+D:This zombie seems awfully strong and robust. For a zombie, anyway. 
+
+N:5780:The Varlet of Hearts
+G:c:u
+I:120:10d100:6:45:100
+W:62:2:0:300
+E:2:0:2:2:0:2
+O:0:0:0:0
+B:STING:EAT_FOOD:20d10
+B:STING:EAT_FOOD:20d10
+F:COLD_BLOOD | NO_STUN | IM_COLD
+F:NO_SLEEP | NO_FEAR | NO_CONF | SMART | OPEN_DOOR | 
+F:ESCORTS | UNIQUE | ATTR_MULTI | FORCE_MAXHP | BASEANGBAND | CAN_SPEAK
+D:On this the White Rabbit blew three blasts on the trumpet,
+D: and then unrolled the parchment scroll, and read as follows:-- \n
+D:'The Queen of Hearts, she made some tarts,\n
+D:  All on a summer day:\n
+D: The Varlet of Hearts, he stole those tarts,\n
+D:  And took them quite away!'
+
+N:5781:The Charcoal Dwarf
+G:p:D
+I:120:12d100:40:80:40
+W:52:2:0:430
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:30d10
+F:UNIQUE | ATTR_MULTI | MALE | FORCE_MAXHP | FORCE_SLEEP |
+F:REGENERATE | HURT_LITE | IM_COLD | RES_NETH | BASEANGBAND | 
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | DROP_CORPSE | CAN_SPEAK | 
+D:Sir Walter Scott wrote about this strange person in 1816.
+D: Scott is the creator of a genre of historical fiction.
+D: The Charcoal Dwarf is about Sir Edward Manley (or Mauley).
+D: He is an honored British nobleman. Sadly, he is a terribly
+D: deformed dwarf, hideous to see and only four feet tall.
+D: He is, because of his condition, stripped of everything
+D: that is his right. He flees to Northumbria, and when the
+D: opportunity occurs tries to help people.They do not trust
+D: him, believing him to be 'Canny Elshie the Charcoal Dwarf,'
+D: a terrible figure of nightmare.  His true nature is that
+D: of a poet who longs to belong, but fate has dealt him a
+D: bad hand. He appears to have lost his mind. He stumbles
+D: towards you with a look of madness on his face.
+
+###########################
+# Credited: Steve Latour  #
+###########################
+N:5782:The Master Mason
+G:p:D
+I:110:95d10:40:75:40
+W:62:1:75:400
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:PUNCH:HURT:15d15
+B:PUNCH:HURT:15d15
+S:1_IN_3 | 
+S:BO_PLAS | BLINK | HEAL
+F:OPEN_DOOR | SMART | NO_CONF | NO_STUN | NO_SLEEP | MALE | BASEANGBAND | CAN_SPEAK
+F:UNIQUE | ESCORTS | UNIQUE | ATTR_MULTI | FORCE_MAXHP | AI_ANNOY  | DROP_CORPSE
+D:Before you stands a small man in robes holding an ancient tattered
+D: book.  Although small in size, his level of confidence is supreme.
+D: Rumor has it that the ultimate secret teachings of Freemasonry allow
+D: one to withstand the ravages of time itself.  Could this man be the
+D: founder of the order?
+
+N:5783:The Regent of Hearts
+G:c:o
+I:120:102d10:6:50:100
+W:56:2:0:350
+E:2:0:2:2:0:2
+O:0:0:0:0
+B:STING:HURT:22d8
+B:STING:HURT:22d8
+F:COLD_BLOOD | NO_STUN | IM_COLD | BASEANGBAND | CAN_SPEAK
+F:NO_SLEEP |  | NO_CONF | SMART | OPEN_DOOR
+F:ESCORTS | UNIQUE | ATTR_MULTI | FORCE_MAXHP | MALE
+D:Though nominally the head of the Court, the Regent of Hearts
+D: is very much under the Queen's thumb. He is a timid
+D: card, but with his wife's backing can find some small
+D: measure of backbone.
+
+N:5784:Turbo Elephant
+G:q:s
+I:115:25d100:20:55:35
+W:58:4:7:350
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CRUSH:HURT:25d12
+B:CRUSH:HURT:25d12
+F:MALE | OPEN_DOOR | BASH_DOOR | ANIMAL | RES_DISE
+F:RES_SHAR | RES_WATE | BASEANGBAND | DROP_CORPSE
+S:1_IN_8 | 
+S:BO_WATE
+D:This dumbo will trample you if you don't get away fast. 
+
+###########################
+# Credited: Bridger Flynn #
+###########################
+N:5785:One Eyed Jack
+G:c:o
+I:120:10d100:8:50:200
+W:70:4:40:300
+E:2:0:2:2:0:2
+O:0:0:0:0
+B:PUNCH:BLIND:25d10
+B:STING:BLIND:25d10
+F:COLD_BLOOD | SMART | IM_COLD | ESCORT
+F:NO_STUN | NO_FEAR | NO_CONF | NO_SLEEP
+F:SUSCEP_FIRE | IM_POIS | OPEN_DOOR
+F:TAKE_ITEM | REGENERATE | BASEANGBAND
+S:1_IN_3 | 
+S:BR_DARK
+D:Oblong and flat, with their hands and feet at the corners.
+D: From behind they all look the same, only the faces let you
+D: tell them apart.  The One-Eyed jack was blinded in battle,
+D: and now he tries to hide his weakness by turning in profile.
+
+N:5786:The Empress of Hearts
+G:c:v
+I:130:15d100:8:60:100
+W:65:1:0:400
+E:2:0:2:2:0:2
+O:0:0:0:0
+B:PUNCH:HURT:30d10
+B:PUNCH:HURT:30d10
+S:1_IN_6 | 
+S:BR_FIRE
+F:COLD_BLOOD | NO_STUN | IM_COLD | BASEANGBAND
+F:NO_SLEEP | NO_FEAR | NO_CONF | SMART | OPEN_DOOR
+F:ESCORTS | UNIQUE | ATTR_MULTI | FORCE_MAXHP | CAN_SPEAK
+D:You hear a voice screaming "Off with their heads!" and
+D: The Empress of Hearts storms into view. While no bigger
+D: than any other card, she makes up for this (and more)
+D: in arrogance and bluster.
+D: She is rarely found without a croquet mallet in hand.
+
+N:5787:Chromatic icky thing
+G:i:b
+I:110:40d15:15:40:20
+W:58:4:500:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:POISON:8d8
+B:CRAWL:FIRE:8d8
+B:HIT:COLD:8d8
+B:HIT:ACID:8d8
+F:ATTR_MULTI | FORCE_SLEEP | 
+F:SMART | JOKEANGBAND |
+F:OPEN_DOOR | BASH_DOOR | EVIL | DROP_SKELETON | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:RES_CHAO | RES_NETH | RES_WATE | RES_DARK | RES_NERV | 
+S:1_IN_6 | 
+S:BLIND | CONF | SCARE | 
+S:BO_ACID | BO_FIRE | BO_COLD | BO_ELEC | BO_POIS | 
+S:BA_CHAO | BA_NETH | BA_WATE | BA_DARK | BR_VENO | 
+D:Ha! You thought you could just stomp all those poor icky things, 
+D:you murderer, you! But now they're fighting back, and you'll 
+D:feel ever so sorry! 
+
+N:5788:Aetheric icky thing
+G:i:b
+I:120:60d60:15:75:20
+W:78:4:500:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:POISON:12d12
+B:CRAWL:FIRE:12d12
+B:HIT:COLD:12d12
+B:HIT:ACID:12d12
+F:ATTR_MULTI | FORCE_SLEEP | 
+F:SMART | JOKEANGBAND | REFLECTING | 
+F:OPEN_DOOR | BASH_DOOR | EVIL | DROP_SKELETON | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:RES_CHAO | RES_NETH | RES_WATE | RES_DARK | RES_NERV | 
+S:1_IN_4 | 
+S:BLIND | CONF | SCARE | S_KIN | 
+S:BO_ACID | BO_FIRE | BO_COLD | BO_ELEC | BO_POIS | 
+S:BA_CHAO | BA_NETH | BA_WATE | BA_DARK | BR_VENO | 
+S:BR_LITE | BR_CONF | BR_SOUN | BR_DISE | BR_NEXU | 
+S:BR_TIME | BR_INER | BR_GRAV | BR_SHAR | BR_PLAS | 
+S:BR_WALL | BR_MANA | BR_DISI | BR_NERV | BR_ETHE | 
+S:BR_MIND | BR_AMEB | BR_RADI | 
+D:Now your evil act of killing icky things will come to an end, 
+D:because YOU will be the one to die! 
+
+N:5789:Instant Death
+G:W:D
+I:100:100d100:100:140:0
+W:150:5:0:83000
+E:0:0:0:0:0:0
+O:0:50:50:0
+B:HIT:LOSE_INT:9d99
+B:TOUCH:LOSE_INT:9d99
+F:UNIQUE | MALE | JOKEANGBAND | 
+F:FORCE_SLEEP | FORCE_MAXHP |  
+F:ESCORT | ESCORTS | SMART |
+F:ONLY_ITEM | DROP_22 | DROP_32 | DROP_42 | DROP_GOOD | DROP_GREAT | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY | 
+F:EVIL | UNDEAD | PASS_WALL | INVISIBLE |
+F:IM_FIRE | IM_ELEC | NO_CONF | NO_SLEEP |
+S:1_IN_2 | 
+S:HOLD | BLIND | CONF | SCARE | SLOW | CAUSE_4
+S:S_SPIDER | S_WRAITH | DRAIN_MANA | DRAIN_MANA | TELE_TO |
+D:The bane of all creatures since the beginning of time, Death is an evil
+D: nihilist and should be avoided at all costs.  Death smiteth with powerful
+D: blows and all fear the touch of Death.  He may even be lurking just around
+D: the corner...
+
+N:5790:God MacBauer
+G:p:v
+I:180:300d100:100:250:0
+W:150:5:1600:100000
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:PUNCH:SHATTER:10d40
+B:PUNCH:SHATTER:10d40
+B:PUNCH:SHATTER:10d40
+B:GAZE:LOSE_ALL:10d40
+F:ATTR_MULTI | DROP_CORPSE | ELDRITCH_HORROR |
+F:UNIQUE | MALE | KILL_WALL |
+F:FORCE_MAXHP | JOKEANGBAND | 
+F:ONLY_ITEM | DROP_42 | DROP_GOOD | DROP_GREAT |
+F:SMART | BASH_DOOR | NO_FEAR | NO_CONF | NO_SLEEP | 
+F:REGENERATE | 
+F:IM_COLD | IM_ACID | IM_FIRE | IM_ELEC | IM_POIS |
+S:1_IN_4 | 
+S:HASTE | BLINK | TPORT | HEAL | DRAIN_MANA | DRAIN_MANA | 
+S:ROCKET | BRAIN_SMASH | TELE_TO | HAND_DOOM |
+D:The sole progenitor of the universe, MacBauer, also known as God to the laymen, and His 
+D:glimmering platinum mullet have cast unto the sea of existence life and purpose. No one can 
+D:top Him, and for the sake of all that is balance in reality, no one SHOULD ever top Him. In the 
+D:world of today, MacBauer doesn't exist as He did in the past; he has split into two factions 
+D:which represent Prep Time and Non-Give-A-Shittance; Angus MacGyver, from MacGyver, and Jack 
+D:Bauer from 24.  It has been said that if those two should ever fuse again, the world as we 
+D:know it would instantly end, for NO ONE has seen this almighty being and lived to tell about it.  
+
 
 
 
