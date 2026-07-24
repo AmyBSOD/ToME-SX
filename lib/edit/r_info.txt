@@ -101304,6 +101304,697 @@ D:which represent Prep Time and Non-Give-A-Shittance; Angus MacGyver, from MacGy
 D:Bauer from 24.  It has been said that if those two should ever fuse again, the world as we 
 D:know it would instantly end, for NO ONE has seen this almighty being and lived to tell about it.  
 
+N:5791:Doom hound
+G:Z:D
+I:130:60d10:30:100:0
+W:51:2:800:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:HAND_DOOM
+D:This hound just wants to make your life miserable. 
+
+N:5792:Doom hound
+G:Z:D
+I:130:60d10:30:100:0
+W:51:100:800:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:HAND_DOOM
+S:MULTIPLY
+D:This hound just wants to make your life miserable. 
+
+N:5793:Multiplicator hound
+G:Z:v
+I:130:60d10:30:100:0
+W:51:2:800:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND
+S:1_IN_3 | 
+S:S_HOUND
+D:A hound with the tendency to call for help. 
+
+N:5794:Multiplicator hound
+G:Z:v
+I:130:60d10:30:100:0
+W:51:100:800:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND
+S:1_IN_3 | 
+S:S_HOUND
+S:MULTIPLY
+D:A hound with the tendency to call for help. 
+
+N:5795:Apocalypse hound
+G:Z:D
+I:130:65d10:30:105:0
+W:59:2:800:5500
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:HURT:2d12
+B:BITE:RAGNAROK:4d12
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:BA_METE
+D:An apocalyptic canine that wants to bring an end. 
+
+N:5796:Apocalypse hound
+G:Z:D
+I:130:65d10:30:105:0
+W:59:100:800:5500
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:HURT:2d12
+B:BITE:RAGNAROK:4d12
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | 
+S:BA_METE
+S:MULTIPLY
+D:An apocalyptic canine that wants to bring an end. 
+
+N:5797:Motivator Machine
+G:M:v
+I:125:100d25:20:115:20
+W:54:2:4000:7000
+E:0:1:0:2:2:0
+O:0:0:0:0
+B:CRUSH:LOSE_WIS:4d12
+B:CRUSH:LOSE_CHR:4d12
+B:CRUSH:PARASITE:4d12
+B:CRUSH:INSANITY:4d12
+F:NEVER_MOVE | EVIL | REFLECTING | COLD_BLOOD | EMPTY_MIND | 
+F:NONLIVING | JOKEANGBAND | ELDRITCH_HORROR | NO_THEFT | 
+F:AURA_ELEC | IM_POIS | RES_TELE | RES_NETH | RES_WATE | 
+F:RES_PLAS | RES_NEXU | RES_DISE | NO_FEAR | NO_STUN | 
+F:NO_SLEEP | NO_CUT | RES_TIME | RES_LITE | RES_INER | 
+F:RES_WALL | RES_GRAV | RES_DARK | RES_NERV | RES_MIND | 
+S:1_IN_4 | 
+S:TELE_TO
+D:This machine was built by a purple-haired monster named Kotoko. 
+D:It is equipped with restraining devices to prevent the victim 
+D:from getting away, as well as a bunch of groping hands (which 
+D:Kotoko calls "tentacles" for some reason) meant to, uhh, 
+D:"motivate" you. Allow them to motivate you enough and your 
+D:obedience meter will max out, turning you into a will-less slave. 
+
+N:5798:Instadeath mold
+G:m:D
+I:145:100d100:200:100:0
+W:87:1:100:6000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPORE:UN_BONUS:12d14
+B:SPORE:UN_BONUS:12d14
+B:SPORE:UN_BONUS:12d14
+B:SPORE:EXP_80:10d10
+F:FORCE_SLEEP | NEVER_MOVE | CAN_SWIM |
+F:EVIL | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_8
+S:TELE_TO
+D:Move next to it and you'll be sorry. Allow it to cast its 
+D:"teleport player to monster" spell and you'll be sorry too. 
+
+N:5799:Curare mold
+G:m:G
+I:120:27d40:4:30:0
+W:62:3:20:2000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:POISON:8d12
+B:TOUCH:DISEASE:8d12
+B:SPORE:POISON:8d12
+F:NEVER_MOVE | BASEANGBAND |
+F:STUPID | EMPTY_MIND | AURA_COLD |
+F:IM_POIS | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+S:1_IN_6
+S:BR_VENO
+D:This mold is surprisingly poisonous. 
+
+N:5800:Aetheric mold
+G:m:v
+I:135:40d55:4:90:0
+W:65:3:20:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:CHAOS:12d12
+B:TOUCH:LOSE_CHR
+B:SPORE:ETHER:29d15
+F:NEVER_MOVE | BASEANGBAND |
+F:STUPID | EMPTY_MIND |
+F:IM_FIRE | IM_COLD | IM_POIS | NO_FEAR | NO_STUN |
+F:NO_CONF | NO_SLEEP | 
+S:1_IN_8
+S:BR_ACID | BR_FIRE | BR_COLD | BR_ELEC | BR_VENO | BR_RADI | 
+S:BR_LITE | BR_DARK | BR_SOUN | BR_CONF | BR_CHAO | BR_SHAR | 
+S:BR_NETH | BR_DISE | BR_WALL | BR_INER | BR_TIME | BR_AMEB | 
+S:BR_GRAV | BR_PLAS | BR_NEXU | BR_NERV | BR_MIND | BR_ETHE |
+D:This superpowered mold will pwn the crap out of you. 
+
+N:5801:Rocket mushroom patch
+G:,:R
+I:118:30d40:4:40:0
+W:52:1:40:1500
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW | 
+F:STUPID | EMPTY_MIND | RES_SHAR | 
+F:IM_POIS | WILD_TOO | WILD_SWAMP | DROP_CORPSE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_2 | 
+S:SHRIEK | ROCKET
+D:Holy crap, a mushroom patch that's actually dangerous!!
+
+N:5802:Arcane mushroom patch
+G:,:b
+I:140:45d55:40:50:0
+W:55:2:50:2000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPORE:CONFUSE:5d5
+B:SPORE:UN_BONUS:5d5
+B:SPORE:HALLU:5d5
+B:SPORE:INSANITY:5d5
+F:FORCE_SLEEP | NEVER_MOVE | 
+F:STUPID | RES_TELE | CAN_SWIM |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_2 | 
+S:BLINK | SLOW | SCARE | DARKNESS | HASTE | HEAL | MISSILE | 
+S:BO_MANA | CAUSE_3 | TRAPS | S_MONSTERS | S_UNDEAD | 
+D:This mushroom is actually a surprisingly competent spellcaster. 
+
+N:5803:Clerical mushroom patch
+G:,:B
+I:140:45d55:40:50:0
+W:55:2:50:2000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPORE:CONFUSE:5d5
+B:SPORE:EAT_LITE:5d5
+B:SPORE:HALLU:5d5
+B:SPORE:LOSE_INT:5d5
+F:FORCE_SLEEP | NEVER_MOVE | 
+F:STUPID | RES_TELE | CAN_SWIM |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_2 | 
+S:BLINK | SLOW | SCARE | DARKNESS | HASTE | HEAL | BA_WATE | 
+S:BA_FIRE | BA_ELEC | MIND_BLAST | S_ANIMAL | S_ANT | S_SPIDER | 
+S:CAUSE_3 | HOLD | 
+D:This mushroom casts priestly spells, which can be annoying. 
+
+N:5804:Giant Jaracaca
+G:J:s
+I:112:80d80:30:100:5
+W:64:5:2000:2500
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:POISON:25d15
+F:FRIENDS | COLD_BLOOD | ANIMAL | IM_POIS | RES_WATE | BASEANGBAND
+D:What's worse than a super poisonous snake? That's right: how 
+D:about a GIANT super poisonous snake! 
+
+N:5805:Large black snake
+G:J:s
+I:101:8d35:6:66:50
+W:20:1:1300:100
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d15
+B:CRUSH:ACID:1d20
+F:RAND_25 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | WILD_TOO | 
+F:BASH_DOOR | HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | IM_ACID
+D:It is about ten feet long and acidic. 
+
+N:5806:Large chaos snake
+G:J:s
+I:102:15d40:6:90:50
+W:50:1:1300:700
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:3d15
+B:CRUSH:CHAOS:2d30
+F:RAND_25 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | WILD_TOO | 
+F:BASH_DOOR | HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | RES_CHAO | 
+D:It is about ten feet long and chaotic. 
+
+N:5807:Ice crawler
+G:c:B
+I:110:15d45:15:70:10
+W:52:5:500:2000
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:STING:COLD:6d12
+B:STING:COLD:6d12
+B:STING:COLD:6d12
+F:FRIENDS | RAND_25 |
+F:KILL_WALL | WEIRD_MIND | BASH_DOOR |
+F:EVIL | ANIMAL | IM_COLD | IM_POIS | AURA_COLD | 
+F:DROP_CORPSE | BASEANGBAND |
+S:1_IN_6 |
+S:BR_COLD | BO_ICEE | 
+D:A monstrous centipede with a frosty aura. 
+
+N:5808:Black carrion crawler
+G:c:D
+I:110:50d50:15:80:10
+W:64:2:2000:2500
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:STING:PARALYZE:6d6
+B:STING:PARALYZE:6d6
+B:STING:PARALYZE:6d6
+B:STING:ACID:6d6
+F:RAND_25 | FRIENDS | DROP_SKELETON | 
+F:WEIRD_MIND | BASH_DOOR | IM_ACID | 
+F:ANIMAL | IM_POIS | MORTAL | BASEANGBAND
+D:You feel that this is a stronger version of the carrion crawler. 
+
+N:5809:Giant hell mouse
+G:r:r
+I:120:10d20:8:32:30
+W:50:4:100:700
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:FIRE:6d6
+B:BITE:POISON:6d6
+B:BITE:EAT_FOOD
+F:ANIMAL | BASEANGBAND |
+F:DROP_SKELETON | DROP_CORPSE |
+S:1_IN_10
+S:BR_FIRE | 
+D:It is about four feet long with large teeth, and seems to have 
+D:come straight from the depths of Hell. 
+
+N:5810:Giant hell mouse
+G:r:r
+I:120:10d20:8:32:30
+W:50:20:100:700
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:FIRE:6d6
+B:BITE:POISON:6d6
+B:BITE:EAT_FOOD
+F:ANIMAL | BASEANGBAND |
+F:DROP_SKELETON | DROP_CORPSE |
+S:MULTIPLY
+S:1_IN_10
+S:BR_FIRE | 
+D:It is about four feet long with large teeth, and seems to have 
+D:come straight from the depths of Hell. 
+
+N:5811:War kobold
+G:k:W
+I:110:15d20:20:50:30
+W:15:1:1200:75
+E:1:1:1:2:1:1
+O:0:90:0:5
+B:HIT:HURT:2d12
+F:DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | IM_POIS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:A kobold trained for war. 
+
+N:5812:Slaughter kobold
+G:k:W
+I:115:20d45:20:66:30
+W:30:1:1100:200
+E:1:1:1:2:1:1
+O:0:90:0:5
+B:HIT:HURT:3d12
+B:HIT:HURT:3d12
+F:DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | IM_POIS | FRIENDS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:Members of the kobolds' front line troops, these humanoids 
+D:will fight to the death. 
+
+N:5813:Zerg kobold
+G:k:W
+I:120:30d60:20:78:30
+W:60:1:1100:800
+E:1:1:1:2:1:1
+O:0:90:0:5
+B:HIT:HURT:6d13
+B:HIT:HURT:6d13
+F:DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | IM_POIS | FRIENDS | NO_FEAR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:These kobolds will rush towards you in a blind rage, and 
+D:attack with any weapon available to them. And there's lots 
+D:of them! Arrgh! 
+
+N:5814:Chaos worm mass
+G:w:v
+I:100:40d8:7:15:10
+W:60:3:50:120
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:CHAOS:1d20
+F:RAND_50 | RES_DISE | ATTR_MULTI | CAN_SWIM |
+F:STUPID | WEIRD_MIND | BASH_DOOR | 
+F:ANIMAL | HURT_LITE | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_10
+S:BR_CHAO
+D:It is a strange mass of squirming worms. The air around them 
+D:seems to flicker strangely. 
+
+N:5815:Chaos worm mass
+G:w:v
+I:100:40d8:7:15:10
+W:60:12:50:120
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:CHAOS:1d20
+F:RAND_50 | RES_DISE | ATTR_MULTI | CAN_SWIM |
+F:STUPID | WEIRD_MIND | BASH_DOOR | 
+F:ANIMAL | HURT_LITE | NO_FEAR | BASEANGBAND | NO_CUT
+S:MULTIPLY
+S:1_IN_10
+S:BR_CHAO
+D:It is a strange mass of squirming worms. The air around them 
+D:seems to flicker strangely. 
+
+N:5816:Time worm mass
+G:w:B
+I:102:40d15:7:25:10
+W:75:3:50:250
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:TIME:3d20
+F:RAND_50 | RES_DISE | ATTR_MULTI | CAN_SWIM |
+F:STUPID | WEIRD_MIND | BASH_DOOR | RES_NETH | 
+F:ANIMAL | HURT_LITE | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_8
+S:BR_TIME
+D:This mass of worms looks like it comes from ages past... no, 
+D:wait, now it looks like it came from the future?! 
+
+N:5817:Time worm mass
+G:w:B
+I:102:40d15:7:25:10
+W:75:12:50:250
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:TIME:3d20
+F:RAND_50 | RES_DISE | ATTR_MULTI | CAN_SWIM |
+F:STUPID | WEIRD_MIND | BASH_DOOR | RES_NETH | 
+F:ANIMAL | HURT_LITE | NO_FEAR | BASEANGBAND | NO_CUT
+S:MULTIPLY
+S:1_IN_8
+S:BR_TIME
+D:This mass of worms looks like it comes from ages past... no, 
+D:wait, now it looks like it came from the future?! 
+
+N:5818:Death jelly
+G:j:D
+I:120:13d40:12:40:1
+W:40:3:2500:200
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:EXP_40:4d10
+B:TOUCH:EXP_40:4d10
+B:TOUCH:EXP_40:4d10
+F:NEVER_MOVE | 
+F:STUPID | EMPTY_MIND | COLD_BLOOD | RES_NETH | 
+F:IM_ACID | IM_POIS | HURT_LITE | CAN_SWIM |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:Ha! Thought all jellies were harmless, did you? 
+
+N:5819:Unlife jelly
+G:j:D
+I:125:35d60:12:80:1
+W:70:3:2500:1500
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:EXP_80:12d10
+B:TOUCH:EXP_80:12d10
+B:TOUCH:EXP_80:12d10
+F:NEVER_MOVE | 
+F:STUPID | EMPTY_MIND | COLD_BLOOD | RES_NETH | 
+F:IM_ACID | IM_POIS | HURT_LITE | CAN_SWIM | NONLIVING | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_10
+S:TELE_TO
+D:This jelly tries to drag you to the netherworld. 
+
+N:5820:Giant viridian frog
+G:F:G
+I:120:10d15:12:35:50
+W:37:5:150:250
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:DISEASE:3d10
+B:SPIT:LOSE_STR:5d6
+F:RAND_25 | IM_POIS | 
+F:CAN_SWIM | BASH_DOOR | KILL_BODY |
+F:ANIMAL | BASEANGBAND |
+F:DROP_SKELETON | DROP_CORPSE |
+S:1_IN_8
+S:BR_POIS
+D:It looks very poisonous.
+
+N:5821:Giant curare frog
+G:F:v
+I:125:40d65:12:45:50
+W:67:5:150:3000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:DISEASE:6d10
+B:SPIT:LOSE_ALL:6d18
+F:RAND_25 | IM_POIS | REGENERATE | 
+F:CAN_SWIM | BASH_DOOR | KILL_BODY |
+F:ANIMAL | BASEANGBAND |
+F:DROP_SKELETON | DROP_CORPSE |
+S:1_IN_8
+S:BR_VENO
+D:One touch from this frog, and you'll immediately turn green 
+D:and keel over. 
+
+N:5822:Giant leaf louse
+G:I:D
+I:125:1d15:6:11:10
+W:34:2:100:11
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:PARASITE:1d6
+F:RAND_50 | RAND_25 | CAN_FLY | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND | RES_LITE | 
+D:It is six inches long. 
+
+N:5823:Giant leaf louse
+G:I:D
+I:125:1d15:6:11:10
+W:34:10:100:11
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:PARASITE:1d6
+F:RAND_50 | RAND_25 | CAN_FLY | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND | RES_LITE | 
+S:MULTIPLY
+D:It is six inches long. 
+
+N:5824:Giant camo louse
+G:I:D
+I:128:1d55:6:20:10
+W:64:2:100:25
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:PARASITE:3d6
+B:BITE:EXP_10:1d10
+F:RAND_50 | RAND_25 | CAN_FLY | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND | RES_LITE | 
+F:INVISIBLE | ATTR_MULTI | NO_STUN | 
+D:It is six inches long and camouflaged. 
+
+N:5825:Giant camo louse
+G:I:D
+I:128:1d55:6:20:10
+W:64:10:100:25
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:PARASITE:3d6
+B:BITE:EXP_10:1d10
+F:RAND_50 | RAND_25 | CAN_FLY | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND | RES_LITE | 
+F:INVISIBLE | ATTR_MULTI | NO_STUN | 
+S:MULTIPLY
+D:It is six inches long and camouflaged. 
+
+N:5826:Giant infestation louse
+G:I:v
+I:130:1d85:6:25:10
+W:85:2:100:40
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:PARASITE:6d6
+B:BITE:DISEASE:1d16
+F:RAND_50 | RAND_25 | CAN_FLY | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND | RES_LITE | 
+F:NO_STUN | FRIENDS | IM_POIS | NO_FEAR | 
+S:1_IN_5
+S:S_KIN | BLINK | TPORT | 
+D:It is six inches long and appears in huge swarms. 
+
+N:5827:Giant infestation louse
+G:I:v
+I:130:1d85:6:25:10
+W:85:10:100:40
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:PARASITE:6d6
+B:BITE:DISEASE:1d16
+F:RAND_50 | RAND_25 | CAN_FLY | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND | RES_LITE | 
+F:NO_STUN | FRIENDS | IM_POIS | NO_FEAR | 
+S:MULTIPLY
+S:1_IN_5
+S:S_KIN | BLINK | TPORT | 
+D:It is six inches long and appears in huge swarms. 
+
+N:5828:Arcane naga
+G:n:b
+I:116:14d60:20:90:120
+W:60:2:1800:3400
+E:0:0:0:0:1:0
+O:50:0:50:0
+B:CRUSH:HURT:12d10
+B:BITE:PARALYZE:3d10
+F:FEMALE | CAN_SWIM | 
+F:RAND_25 | DROP_90 | NO_CUT | 
+F:TAKE_ITEM | BASH_DOOR | DROP_CORPSE | 
+F:EVIL | MORTAL | BASEANGBAND
+S:1_IN_4
+S:HASTE | HEAL | BO_MANA | BA_FIRE | MIND_BLAST | DRAIN_MANA | 
+S:CAUSE_3 | S_KIN | FORGET | 
+D:A large blue snake with a woman's torso. It casts spells 
+D:pretty much constantly. 
+
+N:5829:Chaos bat
+G:b:v
+I:130:8d18:12:44:50
+W:52:4:50:350
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:HIT:CHAOS:1d20
+B:HIT:CHAOS:1d20
+F:FORCE_SLEEP | RAND_50 | ANIMAL | MORTAL | ATTR_MULTI | 
+F:DROP_CORPSE | AI_ANNOY | CAN_FLY | BASEANGBAND | WEIRD_MIND
+F:RES_CHAO | 
+D:A giant bat which feeds by creating entropy. 
+
+N:5830:Void dragon bat
+G:b:D
+I:130:6d10:12:55:50
+W:37:2:20:100
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:SHATTER:1d12
+F:FORCE_SLEEP | FRIENDS | RAND_50 |
+F:CAN_FLY | BASH_DOOR | KILL_BODY |
+F:DRAGON | ANIMAL | RES_NETH | RES_DISE |
+F:DROP_CORPSE | BASEANGBAND |
+S:1_IN_7 |
+S:BR_DISI |
+D:It is a sharp-tailed black hole in the shape of a bat. 
+
+N:5831:Ethereal dragon bat
+G:b:w
+I:130:10d10:12:75:50
+W:67:2:20:350
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:ETHER:1d24
+F:FORCE_SLEEP | FRIENDS | RAND_50 |
+F:CAN_FLY | BASH_DOOR | KILL_BODY |
+F:DRAGON | ANIMAL | RES_NETH | RES_DISE |
+F:DROP_CORPSE | BASEANGBAND | INVISIBLE | 
+S:1_IN_6 |
+S:BR_ETHE |
+D:It is a sharp-tailed bat that seems to shimmer. 
+
+N:5832:Hell rat
+G:r:r
+I:120:10d60:10:15:20
+W:58:8:100:700
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:FIRE:5d12
+B:BITE:EAT_FOOD:4d8
+B:BITE:DISEASE:4d4
+F:RAND_50 | FRIENDS | IM_FIRE | RES_NETH | 
+F:WEIRD_MIND | BASH_DOOR | KILL_BODY |
+F:ANIMAL | BASEANGBAND | NO_SLEEP | 
+F:DROP_SKELETON | DROP_CORPSE |  
+D:This rat came straight from Hell and eats everything it finds. 
+
+N:5833:Hell rat
+G:r:r
+I:120:10d60:10:15:20
+W:58:40:100:700
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:FIRE:5d12
+B:BITE:EAT_FOOD:4d8
+B:BITE:DISEASE:4d4
+F:RAND_50 | FRIENDS | IM_FIRE | RES_NETH | 
+F:WEIRD_MIND | BASH_DOOR | KILL_BODY |
+F:ANIMAL | BASEANGBAND | NO_SLEEP | 
+F:DROP_SKELETON | DROP_CORPSE |  
+S:MULTIPLY
+D:This rat came straight from Hell and eats everything it finds. 
+
 
 
 
