@@ -101995,6 +101995,531 @@ F:DROP_SKELETON | DROP_CORPSE |
 S:MULTIPLY
 D:This rat came straight from Hell and eats everything it finds. 
 
+N:5834:Radio Operator
+G:D:B
+I:108:20d24:20:35:70
+W:18:1:50000:2000
+E:1:1:1:6:1:1
+O:0:0:0:0
+B:BITE:HURT:4d8
+B:CHARGE:HURT:3d4
+B:CLAW:HURT:3d4
+F:DROP_CORPSE | ONLY_GOLD | DROP_90 | MALE | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | IM_ELEC |
+F:EVIL | DRAGON | RES_SHAR | BASEANGBAND |
+S:1_IN_6
+S:BR_ELEC | BR_RADI | S_KIN | S_DEMON
+D:This is a dude who operates a radio, allowing him to call 
+D:his colleagues for aid. 
+
+N:5835:Uber Pwnz0r
+G:V:b
+I:110:25d12:20:45:10
+W:27:1:1700:175
+E:1:1:1:2:1:1
+O:20:40:20:10
+B:HIT:HURT:1d6
+B:HIT:HURT:1d6
+B:BITE:EXP_20:2d6
+B:BITE:EXP_20:2d6
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:COLD_BLOOD | DROP_60 | DROP_12 | 
+F:OPEN_DOOR | BASH_DOOR | REGENERATE | CAN_FLY |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | 
+F:BASEANGBAND | NO_CUT
+S:1_IN_6 | 
+S:HOLD | SCARE | CAUSE_2 | MIND_BLAST | FORGET | BA_METE | 
+D:A surprisingly dangerous vampire who casts meteor. 
+
+N:5836:Gosu
+G:V:v
+I:120:25d60:20:80:10
+W:57:1:1700:3000
+E:1:1:1:2:1:1
+O:20:40:20:10
+B:HIT:COLD:6d6
+B:HIT:UN_POWER:6d6
+B:BITE:EXP_80:10d6
+B:BITE:EXP_80:10d6
+F:FORCE_SLEEP | FORCE_MAXHP | REGENERATE | RES_TELE | 
+F:COLD_BLOOD | DROP_60 | DROP_12 | RES_PLAS | RES_NEXU | 
+F:OPEN_DOOR | BASH_DOOR | REGENERATE | CAN_FLY | RES_DISE | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | 
+F:BASEANGBAND | NO_CUT | NO_FEAR | RES_TIME | RES_CHAO | 
+F:RES_DARK | RES_SHAR | RES_MIND | 
+S:1_IN_4 | 
+S:HOLD | SCARE | CAUSE_4 | BRAIN_SMASH | FORGET | BA_METE | 
+S:BA_FIRE | BA_NETH | HASTE | 
+D:The name means "god of starcraft universe". 
+
+N:5837:Anorexic girl
+G:p:y
+I:110:2d8:30:0:20
+W:5:1:800:15
+E:1:1:1:2:1:1
+O:10:50:10:20
+B:HIT:EAT_FOOD:1d6
+B:KICK:EAT_FOOD:1d6
+F:FEMALE | 
+F:DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND | MORTAL | HAS_LITE
+S:1_IN_8 | 
+S:BR_AMEB 
+D:This girl looks extremely skinny, and she's trying to steal your food 
+D:in an attempt to make you equally skinny. 
+
+N:5838:Anorexic woman
+G:p:y
+I:112:4d12:30:3:20
+W:30:1:800:150
+E:1:1:1:2:1:1
+O:10:50:10:20
+B:HIT:EAT_FOOD:7d6
+B:KICK:EAT_FOOD:7d6
+F:FEMALE | 
+F:DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | NO_SLEEP | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND | MORTAL | HAS_LITE
+S:1_IN_6 | 
+S:BR_AMEB 
+D:You're shocked at the lack of body weight of this woman. Worse, she 
+D:also wants to prevent you from eating, stating that you're supposedly 
+D:thick even though you're really just big boned... 
+
+N:5839:Anorexic lady
+G:p:y
+I:115:10d12:30:11:20
+W:50:1:800:1000
+E:1:1:1:2:1:1
+O:10:50:10:20
+B:HIT:EAT_FOOD:7d10
+B:KICK:EAT_FOOD:7d10
+B:GAZE:EAT_FOOD
+F:FEMALE | 
+F:DROP_12 | NO_FEAR | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | NO_SLEEP | ELDRITCH_HORROR | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND | MORTAL | HAS_LITE
+S:1_IN_4 | 
+S:BR_AMEB 
+D:Be very wary of this woman! Anorexia is contagious, just looking 
+D:at her for too long can cause you to get infected! 
+
+N:5840:Giant gray louse
+G:I:W
+I:120:1d1:6:6:10
+W:5:8:100:1
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d1
+F:RAND_50 | RAND_25 | CAN_FLY |
+F:WEIRD_MIND | ANIMAL | MORTAL | BASEANGBAND
+S:MULTIPLY
+D:It is six inches long. 
+
+N:5841:Giant gray louse
+G:I:W
+I:120:1d1:6:6:10
+W:5:2:100:1
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d1
+F:RAND_50 | RAND_25 | CAN_FLY |
+F:WEIRD_MIND | ANIMAL | MORTAL | BASEANGBAND
+D:It is six inches long. 
+
+N:5842:Giant slate louse
+G:I:s
+I:120:1d1:6:6:10
+W:8:8:100:2
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d2
+F:RAND_50 | RAND_25 | CAN_FLY |
+F:WEIRD_MIND | ANIMAL | MORTAL | BASEANGBAND
+S:MULTIPLY
+D:It is six inches long. 
+
+N:5843:Giant slate louse
+G:I:s
+I:120:1d1:6:6:10
+W:8:2:100:2
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d2
+F:RAND_50 | RAND_25 | CAN_FLY |
+F:WEIRD_MIND | ANIMAL | MORTAL | BASEANGBAND
+D:It is six inches long. 
+
+N:5844:Giant purple louse
+G:I:v
+I:120:1d3:6:10:10
+W:20:8:100:4
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d3
+F:RAND_50 | RAND_25 | CAN_FLY |
+F:WEIRD_MIND | ANIMAL | MORTAL | BASEANGBAND
+S:MULTIPLY
+D:It is six inches long. 
+
+N:5845:Giant purple louse
+G:I:v
+I:120:1d3:6:10:10
+W:20:2:100:4
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d3
+F:RAND_50 | RAND_25 | CAN_FLY |
+F:WEIRD_MIND | ANIMAL | MORTAL | BASEANGBAND
+D:It is six inches long. 
+
+N:5846:Giant brown louse
+G:I:u
+I:120:1d5:6:15:10
+W:30:8:100:5
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+F:RAND_50 | RAND_25 | CAN_FLY |
+F:WEIRD_MIND | ANIMAL | MORTAL | BASEANGBAND
+S:MULTIPLY
+D:It is six inches long. 
+
+N:5847:Giant brown louse
+G:I:u
+I:120:1d5:6:15:10
+W:30:2:100:5
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+F:RAND_50 | RAND_25 | CAN_FLY |
+F:WEIRD_MIND | ANIMAL | MORTAL | BASEANGBAND
+D:It is six inches long. 
+
+N:5848:Giant exploding louse
+G:I:o
+I:120:7d5:6:25:10
+W:50:8:100:12
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:FIRE:8d8
+F:RAND_50 | RAND_25 | CAN_FLY | IM_FIRE | 
+F:WEIRD_MIND | ANIMAL | MORTAL | BASEANGBAND
+F:RES_PLAS | 
+S:MULTIPLY
+D:It is six inches long and ready to explode. 
+
+N:5849:Giant exploding louse
+G:I:o
+I:120:7d5:6:25:10
+W:50:2:100:12
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:FIRE:8d8
+F:RAND_50 | RAND_25 | CAN_FLY | IM_FIRE | 
+F:WEIRD_MIND | ANIMAL | MORTAL | BASEANGBAND
+F:RES_PLAS | 
+D:It is six inches long and ready to explode. 
+
+N:5850:Uruk battlemaster
+G:o:o
+I:120:126d15:20:90:10
+W:51:1:900:2000
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:8d8
+B:HIT:HURT:8d8
+F:MALE | DROP_12 |
+F:BASH_DOOR | BASEANGBAND |
+F:ORC | EVIL | DROP_SKELETON | DROP_CORPSE |
+S:1_IN_5 |
+S:ARROW_4
+D:A super powerful orc. 
+
+N:5851:Super elite uruk
+G:o:w
+I:110:10d25:20:66:0
+W:30:1:2000:140
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:HURT:8d9
+B:HIT:HURT:8d9
+F:MALE | FORCE_MAXHP | FRIENDS | DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | ORC | IM_POIS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_7 |
+S:ARROW_3
+D:While still just an orc, this guy is stronger than most of his kin. 
+
+N:5852:Giant ogre
+G:O:u
+I:110:40d15:20:55:30
+W:40:2:3000:400
+E:1:1:1:2:1:1
+O:20:70:0:10
+B:HIT:HURT:8d8
+B:HIT:HURT:8d8
+F:FRIENDS | DROP_60 | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | IM_ACID | 
+F:EVIL | GIANT | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_8
+S:MISSILE
+D:This ogre is huge!! 
+
+N:5853:Obsidian ogre
+G:O:D
+I:110:40d20:20:80:30
+W:50:2:3000:700
+E:1:1:1:2:1:1
+O:20:70:0:10
+B:HIT:HURT:8d12
+B:HIT:HURT:8d12
+F:FRIENDS | DROP_60 | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | IM_ACID | 
+F:EVIL | GIANT | REFLECTING | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_7
+S:MISSILE
+D:This ogre uses a reflecting shield. 
+
+N:5854:Volcano giant
+G:P:o
+I:112:40d35:20:80:40
+W:50:1:13000:2400
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:FIRE:10d8
+B:HIT:FIRE:10d8
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_12 | WILD_TOO | WILD_VOLCANO | AURA_FIRE | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | GIANT | IM_FIRE | MALE | BASEANGBAND | HAS_LITE | RES_PLAS | 
+S:1_IN_7 | 
+S:TELE_TO | BO_PLAS | BR_PLAS | BA_METE
+D:A very fiery giant who wants to burn you to a crisp. 
+
+N:5855:Chaos giant
+G:P:v
+I:116:70d120:30:120:35
+W:75:1:13000:7500
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:CHAOS:10d15
+B:HIT:CHAOS:10d15
+B:HIT:ABOMINATION:8d8
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_22 | WILD_TOO | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | GIANT | IM_ACID | MALE | BASEANGBAND | HAS_LITE | 
+F:ELDRITCH_HORROR | RES_NEXU | NO_FEAR | RES_DARK | 
+S:1_IN_6 | 
+S:BA_CHAO | BR_CHAO | 
+D:The very gaze of this giant can drive you insane. 
+
+N:5856:Giant multicolor ant
+G:a:v
+I:115:20d25:14:75:40
+W:50:1:700:600
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:INSANITY:3d15
+B:BITE:CHAOS:3d15
+F:FORCE_MAXHP | KILL_BODY | FRIENDS | DROP_SKELETON
+F:WEIRD_MIND | BASH_DOOR | IM_ACID | IM_ELEC | IM_FIRE | 
+F:ATTR_MULTI | ANIMAL | IM_POIS | RES_CHAO | RES_TELE | 
+F:MORTAL | BASEANGBAND | RES_NETH | RES_WATE | 
+F:RES_NEXU | NO_SLEEP | RES_INER | RES_MIND | 
+D:A giant ant with scintillating colors. 
+
+N:5857:Primal shapechanger
+G:H:v
+I:120:30d100:10:70:12
+W:51:2:0:4000
+E:1:1:1:2:1:1
+O:20:50:20:6
+B:HIT:CHAOS:6d10
+B:HIT:CONFUSE:6d10
+B:HIT:HALLU:4d6
+F:DROP_90 | EVIL | SHAPECHANGER | ATTR_MULTI | ATTR_ANY | 
+F:MORTAL | BASEANGBAND | ELDRITCH_HORROR | IM_FIRE | IM_POIS | 
+F:RES_WATE | NO_FEAR | NO_CONF | NO_SLEEP | RES_LITE | 
+F:RES_CHAO | RES_WALL | RES_SHAR | RES_NERV | RES_ETHE | 
+F:REGENERATE | NO_THEFT | WEIRD_MIND | 
+S:1_IN_4
+S:BO_FIRE | BO_COLD | CONF | SHRIEK | HEAL | S_KIN | BA_CHAO | 
+S:BO_MANA | CAUSE_3 | TRAPS | TPORT | TELE_AWAY | TELE_LEVEL | 
+D:This creature constantly changes form! 
+
+N:5858:Moon Borloth
+G:q:B
+I:120:20d180:30:50:20
+W:52:1:4000:3000
+E:0:1:0:2:1:0
+O:50:0:40:5
+B:CLAW:HURT:5d8
+B:CLAW:HURT:5d8
+B:BITE:SHARDS:3d10
+F:DROP_12 | ONLY_ITEM | OPEN_DOOR | BASH_DOOR |
+F:EVIL | IM_FIRE | ANIMAL | DROP_CORPSE
+F:MORTAL | BASEANGBAND | 
+S:1_IN_6
+S:HEAL | BLIND | DARKNESS | CONF | CAUSE_2 | TELE_AWAY | 
+S:BR_DARK | BR_LITE | HASTE | 
+D:An unnaturally bright-colored, huge bear that wants to eat you. 
+
+N:5859:Giant platinum dragon fly
+G:F:D
+I:120:4d15:12:30:50
+W:38:2:150:120
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d10
+F:FORCE_SLEEP | 
+F:RAND_50 | RAND_25 | WILD_TOO | WILD_MOUNTAIN |
+F:WEIRD_MIND | BASH_DOOR | RES_WALL | 
+F:ANIMAL | IM_FIRE | CAN_FLY | 
+F:MORTAL | BASEANGBAND
+S:1_IN_10 | 
+S:BR_ETHE
+D:This huge insect looks irradiated. 
+
+N:5860:Giant chaos dragon fly
+G:F:D
+I:122:6d16:12:40:50
+W:53:2:150:180
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:CONFUSE:1d15
+F:FORCE_SLEEP | 
+F:RAND_50 | RAND_25 | WILD_TOO | 
+F:WEIRD_MIND | BASH_DOOR | RES_NEXU | 
+F:ANIMAL | RES_TELE | CAN_FLY | 
+F:MORTAL | BASEANGBAND
+S:1_IN_8 | 
+S:BR_CHAO
+D:A very chaotic insect.
+
+N:5861:Giant chaos dragon fly
+G:F:D
+I:122:6d16:12:40:50
+W:53:50:150:180
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:CONFUSE:1d15
+F:FORCE_SLEEP | 
+F:RAND_50 | RAND_25 | WILD_TOO | 
+F:WEIRD_MIND | BASH_DOOR | RES_NEXU | 
+F:ANIMAL | RES_TELE | CAN_FLY | 
+F:MORTAL | BASEANGBAND
+S:1_IN_8 | 
+S:BR_CHAO
+S:MULTIPLY
+D:A very chaotic insect.
+
+N:5862:Giant black scorpion
+G:S:D
+I:120:20d40:12:70:40
+W:54:4:1200:555
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:EAT_LITE:3d6
+B:STING:POISON:2d10
+F:WEIRD_MIND | BASH_DOOR | WILD_TOO | DROP_SKELETON |
+F:ANIMAL | RES_DARK | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND | 
+D:It is a giant black scorpion. It looks poisonous. 
+
+N:5863:Stairway to Heaven
+G:<:W
+I:120:15d8:90:40:20
+W:28:5:0:125
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:WAIL:EAT_LITE
+B:WAIL:UN_POWER
+B:WAIL:TIME
+B:WAIL:NEXUS
+F:CHAR_MULTI | COLD_BLOOD | GOOD | NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING |
+F:FORCE_MAXHP | IM_COLD | IM_ELEC | IM_POIS | IM_ACID | EMPTY_MIND
+F:NEVER_MOVE | JOKEANGBAND | HAS_LITE | NO_CUT | RES_LITE | 
+S:1_IN_15
+S:S_ANGEL | SHRIEK
+D:"And she's buying a stairway to heaven..." 
+
+N:5864:Massed Affecting Calendared
+G:>:w
+I:110:10d10:25:30:250
+W:18:10:100:60
+E:0:0:0:0:0:0
+O:10:10:10:10
+B:HIT:PARALYZE:2d10
+B:HIT:INSANITY:2d10
+B:MOAN:LOSE_CON
+F:FORCE_SLEEP | SUSCEP_COLD | ORC | 
+F:EMPTY_MIND | COLD_BLOOD | REGENERATE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_6 | 
+S:SHRIEK | 
+D:Huh, a stairway is coming there?! 
+
+N:5865:Bust Supersecret Advice Rifling Unverified Bosoming
+G:u:W
+I:120:77d77:70:77:50
+W:50:20:12050:5000
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:GAZE:RAGNAROK:7d7
+B:BITE:LOSE_ALL:6d8
+F:BASEANGBAND | DEMON | SPIDER | HURT_LITE | PASS_WALL | 
+F:RES_DISE | RES_GRAV | RES_DARK | 
+S:1_IN_8
+S:MIND_BLAST | S_DEMON | 
+D:...err what?! 
+
+N:5866:Giant yellow cricket
+G:I:y
+I:125:3d35:25:40:10
+W:59:40:100:25
+B:BITE:ACID:2d8
+F:RAND_50 | RAND_25 | CAN_FLY | WILD_SWAMP | WILD_TOO | 
+F:WEIRD_MIND | ANIMAL | EVIL | BASEANGBAND | IM_ACID | 
+S:MULTIPLY | 
+S:1_IN_9 | 
+S:SHRIEK | BO_ACID | 
+D:You haven't met a more annoying creature yet. 
+
+N:5867:Giant yellow cricket
+G:I:y
+I:125:3d35:25:40:10
+W:59:10:100:25
+B:BITE:ACID:2d8
+F:RAND_50 | RAND_25 | CAN_FLY | WILD_SWAMP | WILD_TOO | 
+F:WEIRD_MIND | ANIMAL | EVIL | BASEANGBAND | IM_ACID | 
+S:1_IN_9 | 
+S:SHRIEK | BO_ACID | 
+D:You haven't met a more annoying creature yet. 
+
+N:5868:Jesus
+G:u:W
+I:130:60d60:100:75:0
+W:61:1:100:10000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:FIRE:12d9
+B:CLAW:FIRE:12d9
+F:RAND_50 | EVIL | DEMON | FORCE_SLEEP | FORCE_MAXHP | RES_PLAS | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | COLD_BLOOD | WILD_VOLCANO |
+F:IM_FIRE | RES_NETH | NO_CONF | NO_SLEEP | NONLIVING | NO_STUN | 
+F:BASEANGBAND | CAN_SWIM | NO_CUT | NO_FEAR | 
+S:1_IN_3 |
+S:BA_FIRE | ANIM_DEAD | BR_WALL | BO_PLAS | 
+D:Well, he *looks* like Jesus... You're not sure whether he 
+D:can also walk on water. But what's that weird chant he's 
+D:performing? And why are you getting knocked back and taking 
+D:an assload of damage whenever he finishes casting it? 
+
+
 
 
 
