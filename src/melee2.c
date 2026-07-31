@@ -665,6 +665,9 @@ static bool spell_attack(int spell)
 	/* RF11 spells */
 	if (spell >= 320 + 0 && spell <= 320 + 31) return (TRUE);
 
+	/* RF12 spells */
+	if (spell >= 352 + 0 && spell <= 352 + 31) return (TRUE);
+
 	/* Doesn't hurt */
 	return (FALSE);
 }
@@ -1234,7 +1237,7 @@ static bool monst_spell_monst(int m_idx)
 	monster_race *r_ptr = race_inf(m_ptr);
 	monster_type *t_ptr;                     /* Putative target */
 	monster_race *tr_ptr;
-	u32b f4, f5, f6, f11;                    /* racial spell flags */
+	u32b f4, f5, f6, f11, f12;                    /* racial spell flags */
 	bool direct = TRUE;
 	bool wake_up = FALSE;
 
@@ -1308,6 +1311,7 @@ static bool monst_spell_monst(int m_idx)
 		f5 = r_ptr->flags5;
 		f6 = r_ptr->flags6;
 		f11 = r_ptr->flags11;
+		f12 = r_ptr->flags12;
 
 		/* Hack -- allow "desperate" spells */
 		if ((r_ptr->flags2 & (RF2_SMART)) &&
@@ -1320,31 +1324,37 @@ static bool monst_spell_monst(int m_idx)
 			f6 &= (RF6_INT_MASK);
 
 			/* No spells left */
-			if ((!f4 && !f5 && !f6 && !f11) && (monst_spell_monst_spell == -1)) return (FALSE);
+			if ((!f4 && !f5 && !f6 && !f11 && !f12) && (monst_spell_monst_spell == -1)) return (FALSE);
 		}
 
-		/* Extract the "inate" spells */
+		/* Extract the "inate" spells (RF4) */
 		for (k = 0; k < 32; k++)
 		{
 			if (f4 & (1L << k)) spell[num++] = k + 32 * 3;
 		}
 
-		/* Extract the "normal" spells */
+		/* Extract the "normal" spells (RF5) */
 		for (k = 0; k < 32; k++)
 		{
 			if (f5 & (1L << k)) spell[num++] = k + 32 * 4;
 		}
 
-		/* Extract the "bizarre" spells */
+		/* Extract the "bizarre" spells (RF6) */
 		for (k = 0; k < 32; k++)
 		{
 			if (f6 & (1L << k)) spell[num++] = k + 32 * 5;
 		}
 
-		/* Extract even more spells */
+		/* Extract even more spells (RF11) */
 		for (k = 0; k < 32; k++)
 		{
 			if (f11 & (1L << k)) spell[num++] = k + 32 * 10;
+		}
+
+		/* Extract even more spells (RF12) */
+		for (k = 0; k < 32; k++)
+		{
+			if (f12 & (1L << k)) spell[num++] = k + 32 * 11;
 		}
 
 		/* No spells left */
@@ -2305,7 +2315,7 @@ static bool monst_spell_monst(int m_idx)
 				/* Heal the monster */
 				if (m_ptr->hp < m_ptr->maxhp)
 				{
-					if (!(tr_ptr->flags4 || tr_ptr->flags5 || tr_ptr->flags6 || tr_ptr->flags11))
+					if (!(tr_ptr->flags4 || tr_ptr->flags5 || tr_ptr->flags6 || tr_ptr->flags11 || tr_ptr->flags12))
 					{
 						if (see_both)
 							monster_msg("%^s is unaffected!", t_name);
@@ -3774,6 +3784,13 @@ static bool monst_spell_monst(int m_idx)
 				r_ptr->r_flags11 |= (1L << (thrown_spell - 32 * 10));
 				if (r_ptr->r_cast_spell < MAX_UCHAR) r_ptr->r_cast_spell++;
 			}
+
+			/* New spell */
+			else if (thrown_spell < 32*12)
+			{
+				r_ptr->r_flags12 |= (1L << (thrown_spell - 32 * 11));
+				if (r_ptr->r_cast_spell < MAX_UCHAR) r_ptr->r_cast_spell++;
+			}
 		}
 
 		/* Always take note of monsters that kill you ---
@@ -4062,7 +4079,7 @@ bool make_attack_spell(int m_idx)
 {
 	int k, chance, thrown_spell, rlev, failrate;
 	int spell[256], num = 0;
-	u32b f2, f4, f5, f6, f11;
+	u32b f2, f4, f5, f6, f11, f12;
 	monster_type *m_ptr = &m_list[m_idx];
 	monster_race *r_ptr = race_inf(m_ptr);
 	char m_name[80];
@@ -4171,6 +4188,7 @@ bool make_attack_spell(int m_idx)
 	f5 = r_ptr->flags5;
 	f6 = r_ptr->flags6;
 	f11 = r_ptr->flags11;
+	f12 = r_ptr->flags12;
 
 	if (!stupid_monsters)
 	{
@@ -4189,14 +4207,14 @@ bool make_attack_spell(int m_idx)
 		f6 &= (RF6_INT_MASK);
 
 		/* No spells left */
-		if (!f4 && !f5 && !f6 && !f11) return (FALSE);
+		if (!f4 && !f5 && !f6 && !f11 && !f12) return (FALSE);
 	}
 
 	/* Remove the "ineffective" spells */
 	remove_bad_spells(m_idx, &f4, &f5, &f6, &f11);
 
 	/* No spells left */
-	if (!f4 && !f5 && !f6 && !f11 && !(f2 & (RF2_ELDRITCH_HORROR)) ) return (FALSE);
+	if (!f4 && !f5 && !f6 && !f11 && !f12 && !(f2 & (RF2_ELDRITCH_HORROR)) ) return (FALSE);
 
 	if (!stupid_monsters)
 	{
@@ -4225,33 +4243,39 @@ bool make_attack_spell(int m_idx)
 		}
 
 		/* No spells left */
-		if (!f4 && !f5 && !f6 && !f11 && !(f2 & (RF2_ELDRITCH_HORROR)) ) return (FALSE);
+		if (!f4 && !f5 && !f6 && !f11 && !f12 && !(f2 & (RF2_ELDRITCH_HORROR)) ) return (FALSE);
 	}
 
 	if (f2 & (RF2_ELDRITCH_HORROR)) spell[num++] = 45; /* eldritch blast, by Amy */
 
-	/* Extract the "inate" spells */
+	/* Extract the "inate" spells (RF4) */
 	for (k = 0; k < 32; k++)
 	{
 		if (f4 & (1L << k)) spell[num++] = k + 32 * 3;
 	}
 
-	/* Extract the "normal" spells */
+	/* Extract the "normal" spells (RF5) */
 	for (k = 0; k < 32; k++)
 	{
 		if (f5 & (1L << k)) spell[num++] = k + 32 * 4;
 	}
 
-	/* Extract the "bizarre" spells */
+	/* Extract the "bizarre" spells (RF6) */
 	for (k = 0; k < 32; k++)
 	{
 		if (f6 & (1L << k)) spell[num++] = k + 32 * 5;
 	}
 
-	/* Extract more spells */
+	/* Extract more spells (RF11) */
 	for (k = 0; k < 32; k++)
 	{
 		if (f11 & (1L << k)) spell[num++] = k + 32 * 10;
+	}
+
+	/* Extract more spells (RF12) */
+	for (k = 0; k < 32; k++)
+	{
+		if (f12 & (1L << k)) spell[num++] = k + 32 * 11;
 	}
 
 	/* No spells left */
@@ -6819,6 +6843,13 @@ bool make_attack_spell(int m_idx)
 		else if (thrown_spell < 32*11)
 		{
 			r_ptr->r_flags11 |= (1L << (thrown_spell - 32 * 10));
+			if (r_ptr->r_cast_spell < MAX_UCHAR) r_ptr->r_cast_spell++;
+		}
+
+		/* New spell */
+		else if (thrown_spell < 32*12)
+		{
+			r_ptr->r_flags12 |= (1L << (thrown_spell - 32 * 11));
 			if (r_ptr->r_cast_spell < MAX_UCHAR) r_ptr->r_cast_spell++;
 		}
 	}
