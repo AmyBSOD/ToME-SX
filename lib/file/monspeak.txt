@@ -833,3 +833,13 @@ shouts 'Die!'
 shouts 'You will die!'
 0
 
+N:5870:Mima
+5
+mutters 'Atasya koko ni iru yo...'
+mutters 'Sate doushita mon kane...'
+says 'Koko mo nakanaka iitokoro janaika'
+announces 'Sou konakucha!'
+laughs 'Yoku kita ne. Kangei suru yo'
+2
+asks 'Nandai mou owari kai?'
+wonders 'Sate tsugiwa doitsu dai?'

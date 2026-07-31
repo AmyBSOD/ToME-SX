@@ -5739,7 +5739,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if (seen) obvious = TRUE;
 			if ((r_ptr->d_char == 'E') &&
 			                (prefix(name, "W") || prefix(name, "w") ||
-			                 (strstr((r_name + r_ptr->name), "Unmaker"))))
+			                 (strstr((r_name + r_ptr->name), "Unmaker")) || (strstr((r_name + r_ptr->name), "Greater water elemental")) ))
 			{
 				note = " is immune.";
 				dam = 0;
