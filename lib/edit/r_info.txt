@@ -104262,6 +104262,490 @@ S:1_IN_7 |
 S:HOLD | SCARE | CAUSE_3 | DARKNESS
 D:An undead creature living in the ocean. 
 
+N:5974:Giant nexus louse
+G:I:v
+I:120:1d10:6:10:10
+W:30:2:100:11
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:NEXUS:1d5
+F:RAND_50 | RAND_25 | CAN_FLY | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND | RES_NEXU | 
+D:It is six inches long and looks unstable. 
+
+N:5975:Giant nexus louse
+G:I:v
+I:120:1d10:6:10:10
+W:30:10:100:11
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:NEXUS:1d5
+F:RAND_50 | RAND_25 | CAN_FLY | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND | RES_NEXU | 
+S:MULTIPLY
+D:It is six inches long and looks unstable. 
+
+N:5976:Giant reaper louse
+G:I:D
+I:120:7d7:6:29:10
+W:60:8:100:17
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:EXP_80:8d10
+F:RAND_50 | RAND_25 | CAN_FLY | 
+F:WEIRD_MIND | ANIMAL | MORTAL | BASEANGBAND
+F:RES_NETH | 
+S:MULTIPLY
+D:It is six inches long and ready to execute you. 
+
+N:5977:Giant reaper louse
+G:I:D
+I:120:7d7:6:29:10
+W:60:2:100:17
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:EXP_80:8d10
+F:RAND_50 | RAND_25 | CAN_FLY | 
+F:WEIRD_MIND | ANIMAL | MORTAL | BASEANGBAND
+F:RES_NETH | 
+D:It is six inches long and ready to execute you. 
+
+N:5978:Blind mercenary
+G:t:r
+I:116:10d30:0:50:250
+W:30:1:1700:500
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:BLIND:5d10
+F:MALE | DROP_SKELETON | DROP_CORPSE | 
+F:RAND_50 | DROP_90 | WILD_GRASS | WILD_TOWN | WILD_WOOD | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | NO_TARGET | 
+F:EVIL | MORTAL | BASEANGBAND | HAS_LITE
+D:This mercenary is blind, but can also hit to blind you. 
+
+N:5979:Green mercenary
+G:t:g
+I:120:10d60:10:100:250
+W:60:1:1700:2500
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:POISON:12d10
+F:MALE | DROP_SKELETON | DROP_CORPSE | 
+F:RAND_50 | DROP_90 | WILD_GRASS | WILD_TOWN | WILD_WOOD | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | IM_POIS | 
+F:EVIL | MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_8
+S:BR_POIS
+D:A mercenary capable of poisoning you. 
+
+N:5980:Old soldier
+G:t:B
+I:122:10d25:10:55:250
+W:20:1:1650:100
+E:1:1:1:2:1:1
+O:25:50:25:0
+B:HIT:HURT:8d6
+F:MALE | DROP_SKELETON | DROP_CORPSE | 
+F:RAND_50 | DROP_90 | WILD_TOWN | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:A grumpy old man who doesn't like you. 
+
+N:5981:Jaded soldier
+G:t:B
+I:129:10d55:10:75:250
+W:40:1:1650:800
+E:1:1:1:2:1:1
+O:25:50:25:0
+B:HIT:HURT:12d12
+F:MALE | DROP_SKELETON | DROP_CORPSE | 
+F:RAND_50 | DROP_90 | WILD_TOWN | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:He has seen so much death that he'll attack any stranger 
+D:without warning. 
+
+N:5982:Grenade soldier
+G:t:r
+I:129:10d75:10:100:250
+W:60:1:1650:2500
+E:1:1:1:2:1:1
+O:25:50:25:0
+B:HIT:HURT:15d15
+F:MALE | DROP_SKELETON | DROP_CORPSE | 
+F:RAND_50 | DROP_90 | WILD_TOWN | IM_FIRE | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_7
+S:BA_FIRE
+D:A soldier who lobs frag grenades at you. 
+
+N:5983:Rocket soldier
+G:t:o
+I:135:10d100:10:130:250
+W:80:1:1650:4500
+E:1:1:1:2:1:1
+O:25:50:25:0
+B:HIT:HURT:18d18
+F:MALE | DROP_SKELETON | DROP_CORPSE | 
+F:RAND_50 | DROP_90 | WILD_TOWN | RES_SHAR | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_5
+S:ROCKET
+D:This soldier is armed with a RPG and wants to blow you to bits. 
+
+N:5984:Axe man
+G:t:g
+I:130:10d50:10:50:255
+W:50:1:1000:1000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:SHARDS:6d13
+F:MALE | WILD_WOOD | KILL_TREES | 
+F:RAND_25 | DROP_SKELETON | DROP_CORPSE |
+F:ONLY_GOLD | DROP_60 | HAS_LITE | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:MORTAL | BASEANGBAND
+D:This dude wants to chop you to bits. 
+
+N:5985:Sexy Demimondaine
+G:t:R
+I:114:10d30:10:30:155
+W:30:1:0:500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:INSULT:EAT_GOLD:5d8
+F:FEMALE | TAKE_ITEM | WILD_TOWN | BASEANGBAND | DROP_CORPSE
+D:You love the leather-and-lace outfit of this beautiful woman, 
+D:and especially the fact that her tender buttocks are covered 
+D:by half-transparent cloth... 
+
+N:5986:Irresistible Demimondaine
+G:t:R
+I:120:10d60:10:50:155
+W:60:1:0:2500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:INSULT:EAT_GOLD:8d8
+B:INSULT:EAT_ITEM:8d8
+F:FEMALE | TAKE_ITEM | WILD_TOWN | BASEANGBAND | DROP_CORPSE
+D:Seeing this striking beauty fills you with the compelling 
+D:urge to give all your possessions to her. 
+
+N:5987:Rear end in a top hat
+G:t:y
+I:115:9d60:10:40:155
+W:50:3:0:1000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:5d8
+B:FARTLOUD:*
+F:MALE | WILD_TOWN | BASEANGBAND | DROP_CORPSE |
+D:Someone seems to have censored the word "ass" for petty reasons. 
+
+N:5988:Spiker Vicar
+G:t:G
+I:110:5d20:6:22:140
+W:50:1:0:1000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:STING:DISEASE:10d10
+F:MALE | WILD_TOWN | BASEANGBAND | DROP_CORPSE 
+S:1_IN_8
+S:BO_POIS
+D:This cleric is devious. He uses poison to lace people's drinks. 
+
+N:5989:Eerie Chandelier
+G:o:B
+I:115:10d20:15:55:10
+W:38:5:0:250
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:GAZE:SHARDS:10d12
+F:OPEN_DOOR | GIANT | UNDEAD | IM_FIRE | RES_DISE | RES_WATE
+F:IM_ACID | IM_POIS | RES_NETH | NO_FEAR | NO_STUN | NO_CONF
+F:RES_SHAR | NO_SLEEP | BASEANGBAND | IM_COLD | CAN_FLY | 
+F:NO_CUT | IM_ELEC | RES_LITE | RES_DARK | RES_TIME | 
+S:1_IN_4 | 
+S:BR_SHAR
+D:It looks like a normal chandelier hanging from the ceiling... 
+D:until it suddenly starts to move and bombard you with glass 
+D:shards! Aaaaaah! 
+
+N:5990:Mysterious Pipe Organ
+G:o:D
+I:120:40d50:15:100:10
+W:58:5:0:1050
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BUTT:COLD:12d15
+B:BITE:SHARDS:8d10
+F:OPEN_DOOR | GIANT | UNDEAD | IM_FIRE | RES_DISE | RES_WATE
+F:IM_ACID | IM_POIS | RES_NETH | NO_FEAR | NO_STUN | NO_CONF
+F:RES_SHAR | NO_SLEEP | BASEANGBAND | IM_COLD | 
+F:NO_CUT | IM_ELEC | RES_LITE | RES_DARK | RES_TIME | 
+F:RES_DISE | RES_SOUN | EMPTY_MIND | COLD_BLOOD | 
+S:1_IN_4 | 
+S:BR_SOUN | SHRIEK | 
+D:Ack! A musical instrument that has gained sentience and is 
+D:now making a noise that wakes up the entire neighborhood! 
+D:You gotta put it to rest, quickly! 
+
+N:5991:Sentient Boot
+G:]:u
+I:112:23d20:10:40:80
+W:40:2:30:100
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:KICK:HURT:30d4
+F:EVIL | STUPID | WEIRD_MIND | BASEANGBAND | CAN_FLY | 
+F:RES_TIME | NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN | 
+D:This boot has been animated and is floating towards you, 
+D:ready to batter you with kicks. 
+
+N:5992:Conscious Lady Boot
+G:]:D
+I:114:23d40:10:55:80
+W:60:2:30:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:KICK:SHARDS:30d8
+F:EVIL | STUPID | WEIRD_MIND | BASEANGBAND | CAN_FLY | 
+F:RES_TIME | NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN | 
+F:RES_DISE | RES_DARK | REGENERATE | IM_ACID | RES_PLAS | 
+F:NO_CUT | RES_CHAO | 
+S:1_IN_8
+S:BO_NETH | BR_FIRE | DARKNESS | 
+D:A very pretty laced stiletto boot, which used to belong 
+D:to an elegant lady. Now the owner has passed away, and 
+D:her boots have gained sentience, as well as a desire to 
+D:hurt all humans they come across... 
+
+N:5993:Conscious Lady Boot
+G:]:D
+I:114:23d40:10:55:80
+W:60:100:30:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:KICK:SHARDS:30d8
+F:EVIL | STUPID | WEIRD_MIND | BASEANGBAND | CAN_FLY | 
+F:RES_TIME | NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN | 
+F:RES_DISE | RES_DARK | REGENERATE | IM_ACID | RES_PLAS | 
+F:NO_CUT | RES_CHAO | 
+S:1_IN_8
+S:BO_NETH | BR_FIRE | DARKNESS | 
+S:MULTIPLY
+D:A very pretty laced stiletto boot, which used to belong 
+D:to an elegant lady. Now the owner has passed away, and 
+D:her boots have gained sentience, as well as a desire to 
+D:hurt all humans they come across... 
+
+N:5994:Ancient Jiangshi
+G:z:u
+I:110:50d40:4:10:200
+W:62:3:0:3000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:TOUCH:HURT:25d10
+B:TOUCH:HURT:25d10
+F:COLD_BLOOD | WEIRD_MIND | UNDEAD | EVIL | NO_FEAR 
+F:IM_COLD | CAN_SWIM | IM_POIS | FRIEND | RAND_25 | HURT_LITE
+F:RES_GRAV | DROP_32 | DROP_GOOD | BASEANGBAND | 
+F:RES_DISE | NO_SLEEP | RES_TIME | RES_CHAO | RES_INER | 
+F:RES_DARK | RES_SHAR | RES_ETHE | 
+D:The touch of this undead is incredibly deadly. 
+
+N:5995:Greater Jikiniki
+G:z:o
+I:110:90d90:4:10:180
+W:86:2:0:10000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BITE:LOSE_CON:120d8
+F:RES_GRAV | COLD_BLOOD | WEIRD_MIND | UNDEAD | EVIL | 
+F:NO_FEAR | FRIENDS | IM_COLD | CAN_SWIM | IM_POIS | 
+F:DROP_42 | DROP_32 | DROP_GOOD | BASEANGBAND | ELDRITCH_HORROR
+F:RES_DISE | NO_SLEEP | RES_TIME | RES_CHAO | RES_INER | 
+F:RES_DARK | RES_SHAR | RES_ETHE | 
+D:One bite of this zombie can end you. Be VERY careful. 
+
+N:5996:Wrath
+G:u:r
+I:118:35d150:100:60:50
+W:88:2:20:6000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:FIRE:8d10
+B:CRUSH:FIRE:8d10
+B:PUNCH:LOSE_INT:8d10
+B:BITE:EXP_80:8d10
+F:FRIEND | DROP_90 | BASH_DOOR | IM_COLD | IM_ACID | 
+F:DEMON | EVIL | IM_FIRE | IM_ELEC | IM_POIS | NO_FEAR
+F:SUSCEP_COLD | NO_SLEEP | BASEANGBAND | REFLECTING | 
+F:NO_SLEEP | NO_STUN | NO_CUT | RES_DARK | RES_CHAO | 
+S:1_IN_4 | 
+S:HASTE | SHRIEK | TELE_TO
+D:Arguably the deadliest of all the deadly sins. 
+
+N:5997:Greed
+G:u:g
+I:120:35d150:200:70:20
+W:90:2:80:8000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CRUSH:EAT_GOLD:10d5
+B:CRUSH:EAT_ITEM:10d5
+B:CRUSH:EAT_FOOD:10d5
+B:CRUSH:EAT_LITE:10d5
+F:DROP_32 | OPEN_DOOR | TAKE_ITEM | IM_COLD | IM_ACID | 
+F:DEMON | EVIL | IM_FIRE | IM_ELEC | IM_POIS | NO_FEAR
+F:SUSCEP_COLD | AI_ANNOY | BASEANGBAND
+F:NO_SLEEP | NO_STUN | NO_CUT | RES_DARK | RES_CHAO | 
+S:1_IN_3 | 
+S:BO_MANA | BLINK | DRAIN_MANA | TPORT
+D:A bastard of a deadly sin, who wants to steal everything you have. 
+
+N:5998:Furious Biker
+G:t:D
+I:125:20d30:4:40:40
+W:50:2:1200:800
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:5d8
+B:TOUCH:EAT_GOLD
+F:MALE | 
+F:RAND_25 |  FRIENDS | 
+F:TAKE_ITEM | OPEN_DOOR | JOKEANGBAND | WILD_TOWN | DROP_CORPSE
+D:These dudes are racing around on motorcycles and want to steal your stuff! 
+
+N:5999:Horrible Furry
+G:t:b
+I:115:8d36:10:55:99
+W:50:1:1200:1000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:EXP_10:6d9
+B:TOUCH:EAT_ITEM
+F:MALE | DROP_60 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | ELDRITCH_HORROR 
+F:EVIL | JOKEANGBAND | WILD_TOWN | DROP_CORPSE
+D:This dude is dressed up as a furry animal and looks just plain horrible! 
+
+N:6000:Karate Girl
+G:t:o
+I:111:5d12:10:10:255
+W:10:1:1200:5
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:1d15
+F:FEMALE | RAND_50 | 
+F:ONLY_GOLD | DROP_60 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | JOKEANGBAND | WILD_TOWN | DROP_CORPSE
+D:A cute girl who likes to kick people with her soft sneakers. 
+
+N:6001:Karate Teenager
+G:t:o
+I:113:5d30:10:20:255
+W:30:1:1200:40
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:3d15
+F:FEMALE | RAND_50 | 
+F:ONLY_GOLD | DROP_60 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | JOKEANGBAND | WILD_TOWN | DROP_CORPSE
+D:This lovely girl wants to demonstrate her kicking ability. 
+
+N:6002:Karate Woman
+G:t:o
+I:115:8d50:10:40:255
+W:50:1:1200:300
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:6d15
+F:FEMALE | RAND_25 | 
+F:ONLY_GOLD | DROP_60 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | JOKEANGBAND | WILD_TOWN | DROP_CORPSE
+D:A woman who practises martial arts. 
+
+N:6003:Bright green sentai
+G:o:G
+I:115:10d18:20:70:20
+W:38:1:900:350
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:PUNCH:HURT:6d6
+B:KICK:HURT:6d6
+F:MALE | DROP_CORPSE | 
+F:FORCE_MAXHP | FRIENDS | DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:ORC | IM_POIS | JOKEANGBAND
+D:A sentai dressed in bright green. He looks experienced. 
+
+N:6004:Gray sentai
+G:o:W
+I:118:14d35:20:90:20
+W:58:1:900:1100
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:PUNCH:HURT:8d12
+B:KICK:HURT:8d12
+F:MALE | DROP_CORPSE | RES_GRAV | 
+F:FORCE_MAXHP | FRIENDS | DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:ORC | IM_POIS | JOKEANGBAND
+D:A sentai dressed in gray. He seems very strong. 
+
+N:6005:Master Onsokumaru
+G:w:y
+I:130:65d64:14:110:30
+W:69:3:30:2500
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:6d8
+B:BITE:ACID:8d8
+B:HIT:POISON:6d8
+F:BASH_DOOR | JOKEANGBAND | ELDRITCH_HORROR | 
+F:IM_ACID | IM_POIS | DROP_SKELETON
+D:A big yellow ball of wtf.  He has cell animations of a person shitting 
+D:backwards.
+
+N:6006:Master Onsokumaru
+G:w:y
+I:130:65d64:14:110:30
+W:69:150:30:2500
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:6d8
+B:BITE:ACID:8d8
+B:HIT:POISON:6d8
+F:BASH_DOOR | JOKEANGBAND | ELDRITCH_HORROR | 
+F:IM_ACID | IM_POIS | DROP_SKELETON
+S:MULTIPLY
+D:A big yellow ball of wtf.  He has cell animations of a person shitting 
+D:backwards.
+
+N:6007:Foo eyes bar dragon
+G:D:D
+I:125:80d160:30:210:80
+W:84:2:170000:32000
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:6d12
+B:CLAW:HURT:6d12
+B:CLAW:HURT:8d12
+B:BITE:HURT:9d14
+F:FORCE_SLEEP | FORCE_MAXHP | JOKEANGBAND | 
+F:DROP_32 | DROP_42 | DROP_GOOD | DROP_CORPSE | 
+F:BASH_DOOR | POWERFUL | MOVE_BODY | 
+F:EVIL | DRAGON | IM_COLD | NO_CONF | NO_SLEEP
+S:1_IN_4 | 
+S:BLIND | CONF | SCARE | 
+S:BR_RADI | BR_AMEB | BR_NERV | BR_MANA | BR_GRAV | BR_WALL | BR_CONF | 
+D:Yeah I also don't know why Japanese RPGs specifically mention both the 
+D:color of the dragon's body and his eyes. 
+
+
 
 
 
