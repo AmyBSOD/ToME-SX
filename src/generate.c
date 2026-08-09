@@ -281,6 +281,7 @@ struct level_generator_type
 	bool default_monsters;
 	bool default_objects;
 	bool default_miscs;
+	bool default_xtraobjs;
 
 	struct level_generator_type *next;
 };
@@ -290,7 +291,7 @@ static level_generator_type *level_generators = NULL;
 /*
  * Add a new generator
  */
-void add_level_generator(cptr name, bool (*generator)(cptr name), bool stairs, bool monsters, bool objects, bool miscs)
+void add_level_generator(cptr name, bool (*generator)(cptr name), bool stairs, bool monsters, bool objects, bool miscs, bool xtraobjs)
 {
 	level_generator_type *g;
 
@@ -302,6 +303,7 @@ void add_level_generator(cptr name, bool (*generator)(cptr name), bool stairs, b
 	g->default_monsters = monsters;
 	g->default_objects = objects;
 	g->default_miscs = miscs;
+	g->default_xtraobjs = xtraobjs;
 
 	g->next = level_generators;
 	level_generators = g;
@@ -714,7 +716,7 @@ void place_new_way(int *y, int *x)
 bool new_player_spot(int branch)
 {
 	int	y, x;
-	int max_attempts = 5000;
+	int max_attempts = 6000;
 
 	/* Place the player */
 	if (dungeon_flags1 & DF1_FLAT)
@@ -733,8 +735,9 @@ bool new_player_spot(int branch)
 			if (!cave_naked_bold(y, x)) continue;
 
 			/* Refuse to start on anti-teleport grids */
-			/* vault appearance nastytrap by Amy allows the player to spawn on such a square */
-			if ((cave[y][x].info & (CAVE_ICKY)) && !p_ptr->nastytrap175) continue;
+			/* vault appearance nastytrap by Amy allows the player to spawn on such a square
+			 * also, if we can't find a regular place in time, tough luck - allow icky squares anyway... */
+			if ((cave[y][x].info & (CAVE_ICKY)) && (max_attempts < 5000) && !p_ptr->nastytrap175) continue;
 
 			/* Done */
 			break;
@@ -2005,6 +2008,35 @@ static void vault_monsters(int y1, int x1, int num)
 }
 
 /*
+ * Hack -- Place some stronger sleeping monsters near the given location
+ */
+static void vault_monstersX(int y1, int x1, int num)
+{
+	int k, i, y, x;
+
+	/* Try to summon "num" monsters "near" the given location */
+	for (k = 0; k < num; k++)
+	{
+		/* Try nine locations */
+		for (i = 0; i < 9; i++)
+		{
+			int d = 1;
+
+			/* Pick a nearby location */
+			scatter(&y, &x, y1, x1, d, 0);
+
+			/* Require "empty" floor grids */
+			if (!cave_empty_bold(y, x)) continue;
+
+			/* Place the monster (allow groups) */
+			monster_level = dun_level + 10;
+			(void)place_monster(y, x, TRUE, TRUE);
+			monster_level = dun_level;
+		}
+	}
+}
+
+/*
  * Allocate the space needed by a room in the room_map array.
  *
  * width, height represent the size of the room (0...x-1) by (0...y-1).
@@ -2420,11 +2452,19 @@ static void build_type3(int by0, int bx0)
 				break;
 			}
 
-			/* Place a treasure in the vault */
-			place_object(yval, xval, FALSE, FALSE, OBJ_FOUND_FLOOR);
+			if (magik(10)) {
+				/* Place a treasure in the vault */
+				place_object(yval, xval, TRUE, TRUE, OBJ_FOUND_FLOOR);
 
-			/* Let's guard the treasure well */
-			vault_monsters(yval, xval, rand_int(2) + 3);
+				/* Let's guard the treasure well */
+				vault_monstersX(yval, xval, rand_int(2) + 3);
+			} else {
+				/* Place a treasure in the vault */
+				place_object(yval, xval, FALSE, FALSE, OBJ_FOUND_FLOOR);
+
+				/* Let's guard the treasure well */
+				vault_monsters(yval, xval, rand_int(2) + 3);
+			}
 
 			/* Traps naturally */
 			vault_traps(yval, xval, 4, 4, rand_int(3) + 2);
@@ -2557,8 +2597,13 @@ static void build_type4(int by0, int bx0)
 				break;
 			}
 
-			/* Place a monster in the room */
-			vault_monsters(yval, xval, 1);
+			if (magik(10)) {
+				place_object(yval, xval, TRUE, TRUE, OBJ_FOUND_FLOOR);
+				vault_monstersX(yval, xval, 1);
+			} else {
+				/* Place a monster in the room */
+				vault_monsters(yval, xval, 1);
+			}
 
 			break;
 		}
@@ -2605,18 +2650,32 @@ static void build_type4(int by0, int bx0)
 			}
 
 			/* Monsters to guard the "treasure" */
-			vault_monsters(yval, xval, randint(3) + 2);
 
-			/* Object (80%) */
-			if (rand_int(100) < 80)
-			{
-				place_object(yval, xval, FALSE, FALSE, OBJ_FOUND_FLOOR);
-			}
+			if (magik(10)) {
+				vault_monstersX(yval, xval, randint(3) + 2);
 
-			/* Stairs (20%) */
-			else
-			{
-				place_random_stairs(yval, xval);
+				/* Object */
+				place_object(yval, xval, TRUE, TRUE, OBJ_FOUND_FLOOR);
+
+				/* Stairs (20%) */
+				if (magik(20))
+				{
+					place_random_stairs(yval, xval);
+				}
+			} else {
+				vault_monsters(yval, xval, randint(3) + 2);
+
+				/* Object (80%) */
+				if (rand_int(100) < 80)
+				{
+					place_object(yval, xval, FALSE, FALSE, OBJ_FOUND_FLOOR);
+				}
+
+				/* Stairs (20%) */
+				else
+				{
+					place_random_stairs(yval, xval);
+				}
 			}
 
 			/* Traps to protect the treasure */
@@ -2689,13 +2748,23 @@ static void build_type4(int by0, int bx0)
 				place_secret_door(yval - 3 + (randint(2) * 2), xval - 3);
 				place_secret_door(yval - 3 + (randint(2) * 2), xval + 3);
 
-				/* Monsters */
-				vault_monsters(yval, xval - 2, randint(2));
-				vault_monsters(yval, xval + 2, randint(2));
+				if (magik(10)) {
+					/* Monsters */
+					vault_monstersX(yval, xval - 2, randint(2));
+					vault_monstersX(yval, xval + 2, randint(2));
 
-				/* Objects */
-				if (rand_int(3) == 0) place_object(yval, xval - 2, FALSE, FALSE, OBJ_FOUND_FLOOR);
-				if (rand_int(3) == 0) place_object(yval, xval + 2, FALSE, FALSE, OBJ_FOUND_FLOOR);
+					place_object(yval, xval - 2, TRUE, TRUE, OBJ_FOUND_FLOOR);
+					place_object(yval, xval + 2, TRUE, TRUE, OBJ_FOUND_FLOOR);
+				} else {
+					/* Monsters */
+					vault_monsters(yval, xval - 2, randint(2));
+					vault_monsters(yval, xval + 2, randint(2));
+
+					/* Objects */
+					if (rand_int(3) == 0) place_object(yval, xval - 2, FALSE, FALSE, OBJ_FOUND_FLOOR);
+					if (rand_int(3) == 0) place_object(yval, xval + 2, FALSE, FALSE, OBJ_FOUND_FLOOR);
+				}
+
 			}
 
 			break;
@@ -2733,9 +2802,16 @@ static void build_type4(int by0, int bx0)
 				}
 			}
 
-			/* Monsters just love mazes. */
-			vault_monsters(yval, xval - 5, randint(3));
-			vault_monsters(yval, xval + 5, randint(3));
+			if (magik(10)) {
+				vault_monstersX(yval, xval - 5, randint(3));
+				vault_monstersX(yval, xval + 5, randint(3));
+				place_object(yval, xval - 5, TRUE, TRUE, OBJ_FOUND_FLOOR);
+				place_object(yval, xval + 5, TRUE, TRUE, OBJ_FOUND_FLOOR);
+			} else {
+				/* Monsters just love mazes. */
+				vault_monsters(yval, xval - 5, randint(3));
+				vault_monsters(yval, xval + 5, randint(3));
+			}
 
 			/* Traps make them entertaining. */
 			vault_traps(yval, xval - 3, 2, 8, randint(3));
@@ -2743,6 +2819,7 @@ static void build_type4(int by0, int bx0)
 
 			/* Mazes should have some treasure too. */
 			vault_objects(yval, xval, 3);
+			if (magik(20)) vault_objects(yval, xval, 2);
 
 			break;
 		}
@@ -2783,10 +2860,31 @@ static void build_type4(int by0, int bx0)
 			vault_objects(yval, xval, 2 + randint(2));
 
 			/* Gotta have some monsters. */
-			vault_monsters(yval + 1, xval - 4, randint(4));
-			vault_monsters(yval + 1, xval + 4, randint(4));
-			vault_monsters(yval - 1, xval - 4, randint(4));
-			vault_monsters(yval - 1, xval + 4, randint(4));
+
+			if (magik(10)) {
+				vault_monstersX(yval + 1, xval - 4, randint(4));
+				place_object(yval + 1, xval - 4, TRUE, TRUE, OBJ_FOUND_FLOOR);
+			} else {
+				vault_monsters(yval + 1, xval - 4, randint(4));
+			}
+			if (magik(10)) {
+				vault_monstersX(yval + 1, xval + 4, randint(4));
+				place_object(yval + 1, xval + 4, TRUE, TRUE, OBJ_FOUND_FLOOR);
+			} else {
+				vault_monsters(yval + 1, xval + 4, randint(4));
+			}
+			if (magik(10)) {
+				vault_monstersX(yval - 1, xval - 4, randint(4));
+				place_object(yval - 1, xval - 4, TRUE, TRUE, OBJ_FOUND_FLOOR);
+			} else {
+				vault_monsters(yval - 1, xval - 4, randint(4));
+			}
+			if (magik(10)) {
+				vault_monstersX(yval - 1, xval + 4, randint(4));
+				place_object(yval - 1, xval + 4, TRUE, TRUE, OBJ_FOUND_FLOOR);
+			} else {
+				vault_monsters(yval - 1, xval + 4, randint(4));
+			}
 
 			break;
 		}
@@ -6650,7 +6748,7 @@ static void build_bubble_vault(int x0, int y0, int xsize, int ysize)
 
 	/* Fill with monsters and treasure, low difficulty */
 	fill_treasure(x0 - xhsize + 1, x0 - xhsize + xsize - 2,
-	              y0 - yhsize + 1, y0 - yhsize + ysize - 2, randint(5));
+	              y0 - yhsize + 1, y0 - yhsize + ysize - 2, magik(10) ? randint(10) : randint(5));
 }
 
 
@@ -6836,7 +6934,7 @@ static void build_cave_vault(int x0, int y0, int xsiz, int ysiz)
 
 	/* Fill with monsters and treasure, low difficulty */
 	fill_treasure(x0 - xhsize + 1, x0 - xhsize + xsize - 1,
-	              y0 - yhsize + 1, y0 - yhsize + ysize - 1, randint(5));
+	              y0 - yhsize + 1, y0 - yhsize + ysize - 1, magik(10) ? randint(10) : randint(5));
 }
 
 
@@ -7022,7 +7120,7 @@ static void build_maze_vault(int x0, int y0, int xsize, int ysize)
 	r_visit(y1, x1, y2, x2, rand_int(num_vertices), 0, visited);
 
 	/* Fill with monsters and treasure, low difficulty */
-	fill_treasure(x1, x2, y1, y2, randint(5));
+	fill_treasure(x1, x2, y1, y2, magik(20) ? randint(10) : randint(5));
 
 	/* Free the array for visited vertices */
 	C_FREE(visited, num_vertices, int);
@@ -7377,7 +7475,7 @@ static void build_castle_vault(int x0, int y0, int xsize, int ysize)
 	build_recursive_room(x1, y1, x2, y2, randint(5));
 
 	/* Fill with monsters and treasure, low difficulty */
-	fill_treasure(x1, x2, y1, y2, randint(3));
+	fill_treasure(x1, x2, y1, y2, magik(15) ? randint(10) : randint(3));
 }
 
 
@@ -7593,7 +7691,7 @@ static void build_target_vault(int x0, int y0, int xsize, int ysize)
 	add_door(x0, y0 - y);
 
 	/* Fill with stuff - medium difficulty */
-	fill_treasure(x0 - rad, x0 + rad, y0 - rad, y0 + rad, randint(3) + 3);
+	fill_treasure(x0 - rad, x0 + rad, y0 - rad, y0 + rad, magik(20) ? (randint(5) + 5) : (randint(3) + 3) );
 }
 
 
@@ -7771,11 +7869,17 @@ static void build_type12(int by0, int bx0)
 		/* Build the vault */
 		build_small_room(x0, y0);
 
-		/* Place a treasure in the vault */
-		place_object(y0, x0, FALSE, FALSE, OBJ_FOUND_FLOOR);
-
-		/* Let's guard the treasure well */
-		vault_monsters(y0, x0, rand_int(2) + 3);
+		if (magik(10)) {
+			/* Place a treasure in the vault */
+			place_object(y0, x0, TRUE, TRUE, OBJ_FOUND_FLOOR);
+			/* Let's guard the treasure well */
+			vault_monstersX(y0, x0, rand_int(2) + 3);
+		} else {
+			/* Place a treasure in the vault */
+			place_object(y0, x0, FALSE, FALSE, OBJ_FOUND_FLOOR);
+			/* Let's guard the treasure well */
+			vault_monsters(y0, x0, rand_int(2) + 3);
+		}
 
 		/* Traps naturally */
 		vault_traps(y0, x0, 4, 4, rand_int(3) + 2);
@@ -9679,6 +9783,17 @@ static bool cave_gen(void)
 
 		/* Put some objects/gold in the dungeon */
 		if (dungeon_type != DUNGEON_DEATH) alloc_object(ALLOC_SET_BOTH, ALLOC_TYP_OBJECT, randnor(DUN_AMT_ITEM, 3));
+		if (dungeon_type != DUNGEON_DEATH) alloc_object(ALLOC_SET_BOTH, ALLOC_TYP_GOLD, randnor(DUN_AMT_GOLD, 3));
+	}
+
+	/* Only if requested */
+	if (generator->default_xtraobjs)
+	{
+		/* Put some objects in rooms */
+		if (dungeon_type != DUNGEON_DEATH) alloc_object(ALLOC_SET_ROOM, ALLOC_TYP_OBJECT, randnor(DUN_AMT_ROOM, 5));
+
+		/* Put some objects/gold in the dungeon */
+		if (dungeon_type != DUNGEON_DEATH) alloc_object(ALLOC_SET_BOTH, ALLOC_TYP_OBJECT, randnor(DUN_AMT_ITEM, 6));
 		if (dungeon_type != DUNGEON_DEATH) alloc_object(ALLOC_SET_BOTH, ALLOC_TYP_GOLD, randnor(DUN_AMT_GOLD, 3));
 	}
 

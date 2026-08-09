@@ -640,9 +640,9 @@ bool level_generate_script(cptr name)
 	return ret;
 }
 
-void add_scripted_generator(cptr name, bool stairs, bool monsters, bool objects, bool miscs)
+void add_scripted_generator(cptr name, bool stairs, bool monsters, bool objects, bool miscs, bool xtraobjs)
 {
-	add_level_generator(name, level_generate_script, stairs, monsters, objects, miscs);
+	add_level_generator(name, level_generate_script, stairs, monsters, objects, miscs, xtraobjs);
 }
 
 /*

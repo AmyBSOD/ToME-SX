@@ -962,7 +962,7 @@ extern void evolve_level(bool noise);
 
 /* generate.c */
 extern bool new_player_spot(int branch);
-extern void add_level_generator(cptr name, bool (*generator)(cptr), bool stairs, bool monsters, bool objects, bool miscs);
+extern void add_level_generator(cptr name, bool (*generator)(cptr), bool stairs, bool monsters, bool objects, bool miscs, bool xtraobjs);
 extern bool level_generate_dungeon(cptr name);
 extern bool generate_fracave(int y0, int x0,int xsize,int ysize,int cutoff,bool light,bool room);
 extern void generate_hmap(int y0, int x0,int xsiz,int ysiz,int grd,int roug,int cutoff);
@@ -2018,7 +2018,7 @@ extern void lua_close_temp_file(void);
 extern void lua_end_temp_file(void);
 extern cptr lua_get_temp_name(void);
 
-extern void add_scripted_generator(cptr name, bool stairs, bool monsters, bool objects, bool miscs);
+extern void add_scripted_generator(cptr name, bool stairs, bool monsters, bool objects, bool miscs, bool xtraobjs);
 
 /* skills.c */
 extern void dump_skills(FILE *fff);

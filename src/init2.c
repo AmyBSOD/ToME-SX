@@ -6251,9 +6251,9 @@ static errr init_other(void)
 	/*
 	 * Install the various level generators
 	 */
-	add_level_generator("dungeon", level_generate_dungeon, TRUE, TRUE, TRUE, TRUE);
-	add_level_generator("maze", level_generate_maze, TRUE, TRUE, TRUE, TRUE);
-	add_level_generator("life", level_generate_life, TRUE, TRUE, TRUE, TRUE);
+	add_level_generator("dungeon", level_generate_dungeon, TRUE, TRUE, TRUE, TRUE, FALSE);
+	add_level_generator("maze", level_generate_maze, TRUE, TRUE, TRUE, TRUE, TRUE);
+	add_level_generator("life", level_generate_life, TRUE, TRUE, TRUE, TRUE, TRUE);
 
 	/*** Pre-allocate space for the "format()" buffer ***/
 

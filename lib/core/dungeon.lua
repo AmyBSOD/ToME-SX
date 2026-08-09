@@ -81,9 +81,10 @@ function level_generator(t)
 	if not t.monsters then t.monsters = TRUE end
 	if not t.objects then t.objects = TRUE end
 	if not t.miscs then t.miscs = TRUE end
+	if not t.xtraobjs then t.xtraobjs = TRUE end
 
 	__level_generators[t.name] = t.gen
-	add_scripted_generator(t.name, t.stairs, t.monsters, t.objects, t.miscs)
+	add_scripted_generator(t.name, t.stairs, t.monsters, t.objects, t.miscs, t.xtraobjs)
 end
 
 function level_generate(name)
