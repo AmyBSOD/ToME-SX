@@ -1715,6 +1715,26 @@ static void do_cmd_wiz_zap(void)
 	}
 }
 
+/*
+ * Hack -- Delete all monsters on the entire level
+ */
+static void do_cmd_wiz_zap2(void)
+{
+	int i;
+
+	/* Genocide everyone nearby */
+	for (i = 1; i < m_max; i++)
+	{
+		monster_type *m_ptr = &m_list[i];
+
+		/* Paranoia -- Skip dead monsters */
+		if (!m_ptr->r_idx) continue;
+
+		/* Delete all monsters */
+		delete_monster_idx(i);
+	}
+}
+
 
 extern void do_cmd_wiz_body(s16b bidx)
 	/* Might create problems with equipment slots. For safety,
@@ -2028,6 +2048,11 @@ void do_cmd_debug(void)
 		/* Zap Monsters (Genocide) */
 	case 'z':
 		do_cmd_wiz_zap();
+		break;
+
+		/* Zap All Monsters (Total Genocide) */
+	case 'Z':
+		do_cmd_wiz_zap2();
 		break;
 
 		/* Hack -- whatever I desire */
