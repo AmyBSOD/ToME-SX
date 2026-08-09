@@ -3858,6 +3858,8 @@
 #define TRAP_OF_BACKGROUND_RAISE          992
 #define TRAP_OF_BACKGROUND_RAISE_DEMON    993
 
+#define TRAP_OF_EMPTY_POCKETS             994
+
 /*** General index values ***/
 
 

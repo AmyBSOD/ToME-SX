@@ -14768,6 +14768,39 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_EMPTY_POCKETS:
+
+		{
+			store_type *st_ptr = NULL;
+
+			st_ptr = &town_info[TOWN_FOURDIM].store[STORE_HOME];
+
+			int i;
+			object_type *j_ptr;
+
+			if (!st_ptr->stock_num) {
+				msg_print("You feel the need to check your pockets.");
+				break;
+			}
+
+			ident = TRUE;
+
+			/* Check all the items */
+			for (i = 0; i < st_ptr->stock_num; i++)
+			{
+				/* Get the existing item */
+				j_ptr = &st_ptr->stock[i];
+
+				object_prep(j_ptr, lookup_kind(TV_PARCHMENT, 20));
+				hack_apply_magic_power = -99;
+				apply_magic(j_ptr, 0, FALSE, FALSE, FALSE);
+				j_ptr->ident &= ~IDENT_KNOWN;
+			}
+			msg_print("You feel that your pocket just got emptied!");
+
+			break;
+		}
+
 	case TRAP_OF_WASTING_CONS:
 		{
 			s16b i;
