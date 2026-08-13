@@ -104745,6 +104745,1141 @@ S:BR_RADI | BR_AMEB | BR_NERV | BR_MANA | BR_GRAV | BR_WALL | BR_CONF |
 D:Yeah I also don't know why Japanese RPGs specifically mention both the 
 D:color of the dragon's body and his eyes. 
 
+N:6008:Meandering moss
+G:;:v
+I:122:5d20:30:20:5
+W:31:2:0:400
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:CONFUSE:4d8
+B:HIT:CHAOS:4d8
+F:FORCE_SLEEP | NEVER_MOVE | BASEANGBAND |
+F:STUPID | COLD_BLOOD | EMPTY_MIND | RES_CHAO | 
+F:NO_CUT | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+S:1_IN_8 |
+S:TELE_AWAY | BR_NEXU | S_KIN | 
+D:A mass of brown vegetation. It seems to creep in all 
+D:directions. 
+
+N:6009:Magical moss
+G:;:v
+I:124:8d40:30:30:5
+W:51:2:0:1500
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:EAT_LITE:5d15
+B:HIT:HALLU:4d15
+F:FORCE_SLEEP | NEVER_MOVE | BASEANGBAND | RES_DARK | 
+F:STUPID | COLD_BLOOD | EMPTY_MIND | RES_CHAO | REGENERATE | 
+F:NO_CUT | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+S:1_IN_6 |
+S:HASTE | BA_POIS | BA_DARK | BO_PLAS | BO_WATE | S_ANIMALS | 
+S:S_MONSTER | S_MONSTERS | TPORT | 
+D:A mass of brown vegetation. It can cast a variety of spells. 
+
+N:6010:Membranous moss
+G:;:v
+I:128:10d80:30:45:5
+W:71:2:0:6000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:INSANITY:10d20
+B:HIT:HALLU:6d20
+B:HIT:LOSE_INT
+F:FORCE_SLEEP | NEVER_MOVE | BASEANGBAND | RES_DARK | 
+F:STUPID | COLD_BLOOD | EMPTY_MIND | RES_CHAO | REGENERATE | 
+F:NO_CUT | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | 
+F:ELDRITCH_HORROR | 
+S:1_IN_6 |
+S:HASTE | BA_POIS | BA_DARK | BO_PLAS | BO_WATE | S_ANIMALS | 
+S:S_MONSTER | S_MONSTERS | TPORT | BRAIN_SMASH | 
+D:A mass of brown vegetation. It looks horrible and just seeing 
+D:it fills you with a deep sense of unease. 
+
+N:6011:Miasmal moss
+G:;:U
+I:130:13d100:30:55:5
+W:91:2:0:8000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:INSANITY:12d25
+B:HIT:HALLU:8d25
+B:HIT:LOSE_INT
+B:HIT:LOSE_WIS
+F:FORCE_SLEEP | NEVER_MOVE | BASEANGBAND | RES_DARK | 
+F:STUPID | COLD_BLOOD | EMPTY_MIND | RES_CHAO | REGENERATE | 
+F:NO_CUT | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | 
+F:ELDRITCH_HORROR | IM_POIS | RES_TIME | 
+S:1_IN_6 |
+S:HASTE | BA_POIS | BA_DARK | BO_PLAS | BO_WATE | S_ANIMALS | 
+S:S_MONSTER | S_MONSTERS | TPORT | BRAIN_SMASH | BR_VENO | 
+D:A mass of brown vegetation. It has body parts where there 
+D:shouldn't be any and emits a horrible stink. 
+
+N:6012:Noxious dragon
+G:D:D
+I:120:168d10:25:100:15
+W:65:5:170000:9900
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:4d10
+B:CLAW:HURT:4d10
+B:BITE:HURT:7d10
+B:SPORE:DISEASE:4d10
+F:FORCE_MAXHP | FORCE_SLEEP | ONLY_ITEM | DROP_22 | DROP_32 |
+F:SMART | HAS_LITE | POWERFUL | CAN_FLY | REGENERATE | 
+F:NO_CUT | DRAGON | EVIL |  NO_STUN | NO_CONF | NO_SLEEP |
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND |
+S:1_IN_5 |
+S:BR_POIS | BR_VENO | BR_SHAR | BR_AMEB |
+S:SCARE | BLIND | CONF |
+D:A huge dragon that has mastered the element of poison. 
+
+N:6013:Erring light
+G:~:y
+I:120:10d8:6:10:0
+W:20:1:24:20
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_BLOW | RAND_25 | RAND_50 |
+F:RES_LITE | HAS_LITE | EMPTY_MIND | CAN_FLY | 
+F:NONLIVING | BASEANGBAND |
+F:AI_ANNOY | WILD_TOWN | WILD_WOOD | 
+S:1_IN_7
+S:BR_LITE
+D:A will-o-the-wisp. It tries to blind you.
+
+N:6014:Will-o-the-wisp
+G:~:y
+I:122:12d30:6:20:0
+W:50:1:24:200
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPORE:LOSE_INT
+B:SPORE:LOSE_WIS
+F:FORCE_SLEEP | RAND_25 | RAND_50 | RES_GRAV | 
+F:RES_LITE | HAS_LITE | EMPTY_MIND | CAN_FLY | 
+F:NONLIVING | BASEANGBAND | RES_WALL | IM_POIS | 
+F:AI_ANNOY | WILD_TOWN | WILD_WOOD | WILD_SHORE | 
+F:NO_CONF | NO_CUT | RES_DARK | RES_ETHE | 
+S:1_IN_6
+S:BR_LITE | BR_MIND
+D:This light flits around and tries to drain your mind! 
+
+N:6015:Gloam
+G:~:w
+I:125:15d60:6:50:0
+W:80:1:24:1200
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPORE:LOSE_INT
+B:SPORE:LOSE_WIS
+B:GAZE:INSANITY:5d15
+B:GAZE:ETHER:4d4
+F:FORCE_SLEEP | RAND_25 | RAND_50 | RES_GRAV | IM_COLD | 
+F:RES_LITE | HAS_LITE | EMPTY_MIND | CAN_FLY | RES_WATE | 
+F:NONLIVING | BASEANGBAND | RES_WALL | IM_POIS | NO_FEAR | 
+F:AI_ANNOY | WILD_TOWN | WILD_WOOD | WILD_SHORE | NO_SLEEP | 
+F:NO_CONF | NO_CUT | RES_DARK | RES_ETHE | RES_TIME | 
+F:RES_SOUN | RES_CHAO | RES_INER | RES_SHAR | 
+S:1_IN_5
+S:BR_LITE | BR_MIND | BR_ELEC | MIND_BLAST | 
+D:A horrible light that tries to drive you insane! 
+
+N:6016:Illusion weaver
+G:E:y
+I:145:10d45:24:120:10
+W:73:4:0:14000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:8d8
+B:HIT:HURT:8d8
+B:HIT:HURT:8d8
+B:HIT:CONFUSE:8d8
+F:RAND_50 |
+F:INVISIBLE | COLD_BLOOD | EMPTY_MIND | POWERFUL | OPEN_DOOR | BASH_DOOR |
+F:TAKE_ITEM | REFLECTING | REGENERATE | 
+F:PASS_WALL | BASEANGBAND |
+F:EVIL | NONLIVING | IM_ACID | IM_ELEC | IM_POIS | NO_FEAR | NO_CONF |
+F:NO_SLEEP |
+D:Don't try to hit this invisible beast with bolts or arrows. It won't work. 
+
+N:6017:Angry Djinn
+G:E:g
+I:130:8d130:12:80:50
+W:73:4:0:12000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:8d9
+B:HIT:HURT:8d9
+B:HIT:ETHER:8d9
+B:HIT:EAT_LITE:8d9
+F:RAND_25 | DROP_60 | DROP_GOOD | RES_WATE | RES_NEXU | NO_CUT | RES_NERV | 
+F:SMART | POWERFUL | BASH_DOOR | RES_TIME | RES_SOUN | RES_INER | RES_ETHE | 
+F:EVIL |  NONLIVING | IM_ELEC | IM_POIS | NO_STUN | NO_CONF | NO_SLEEP | BASEANGBAND |
+F:RES_MIND | 
+S:1_IN_4 |
+S:BR_GRAV | DRAIN_MANA | S_MONSTERS | BR_LITE | CAUSE_3 | CAUSE_4 | S_KIN | 
+S:BR_TIME | 
+D:This spirit asserts that you've disturbed it, and wants to kill you now! 
+
+N:6018:Greater Death
+G:G:D
+I:130:12d250:20:190:10
+W:74:6:0:110000
+E:0:0:0:0:0:0
+O:50:5:30:10
+B:HIT:EXP_80:18d15
+B:TOUCH:EXP_80
+B:TOUCH:LOSE_ALL
+B:TOUCH:TIME
+F:FORCE_MAXHP | FORCE_SLEEP | ONLY_ITEM | DROP_12 | DROP_32 |
+F:SMART | COLD_BLOOD | POWERFUL | CAN_FLY | PASS_WALL | TAKE_ITEM |
+F:UNDEAD | EVIL | NONLIVING | IM_ACID | IM_COLD | IM_POIS | RES_WATE |
+F:RES_NETH | RES_NEXU | NO_STUN | NO_CONF | NO_SLEEP | BASEANGBAND |
+F:RES_DARK | NO_CUT | RES_DISE | NO_FEAR | RES_TIME | RES_CHAO | 
+F:RES_MIND | 
+S:1_IN_2 |
+S:TELE_TO | TELE_LEVEL | DRAIN_MANA | MIND_BLAST | CAUSE_4 | HAND_DOOM | 
+D:A very deadly ghost. 
+
+N:6019:Horrible soul
+G:G:o
+I:122:8d35:16:35:11
+W:57:3:0:3400
+E:0:0:0:0:0:0
+O:50:5:30:10
+B:HIT:CONFUSE:5d10
+B:HIT:INSANITY:5d10
+B:HIT:LOSE_ALL:2d12
+F:RAND_25 | DROP_60 | DROP_12 | BASEANGBAND |
+F:COLD_BLOOD | CAN_FLY | PASS_WALL | TAKE_ITEM |
+F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_STUN | NO_CONF |
+F:NO_CUT | NO_SLEEP | ELDRITCH_HORROR | 
+S:1_IN_5 |
+S:TPORT | DRAIN_MANA | BLIND | CONF | HOLD | MIND_BLAST | 
+D:It looks just really horrible. 
+
+N:6020:Laughing spirit
+G:G:s
+I:124:8d25:14:40:10
+W:56:3:0:3000
+E:0:0:0:0:0:0
+O:50:5:30:10
+B:TOUCH:EAT_ITEM:2d12
+B:TOUCH:EAT_ITEM:2d12
+B:TOUCH:EAT_ITEM:2d12
+F:FORCE_SLEEP | RAND_25 | DROP_22 | BASEANGBAND |
+F:NO_CUT | INVISIBLE | COLD_BLOOD | CAN_FLY | PASS_WALL |
+F:UNDEAD | EVIL | NONLIVING | IM_COLD | NO_STUN | NO_CONF | NO_SLEEP |
+S:1_IN_5 |
+S:TPORT | S_MONSTERS |
+D:A ghostly apparition that laughs horribly.
+
+N:6021:Belching spirit
+G:G:s
+I:128:10d40:14:55:10
+W:76:3:0:6000
+E:0:0:0:0:0:0
+O:50:5:30:10
+B:TOUCH:EAT_ITEM:2d20
+B:TOUCH:EAT_GOLD:2d20
+B:TOUCH:PARASITE:2d20
+F:FORCE_SLEEP | RAND_25 | DROP_22 | BASEANGBAND |
+F:NO_CUT | INVISIBLE | COLD_BLOOD | CAN_FLY | PASS_WALL |
+F:UNDEAD | EVIL | NONLIVING | IM_COLD | NO_STUN | NO_CONF | NO_SLEEP |
+S:1_IN_5 |
+S:TPORT | BR_AMEB |
+D:A ghostly apparition that belches horribly.
+
+N:6022:Savage harpy
+G:H:D
+I:140:10d50:30:51:0
+W:58:4:500:6000
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:CLAW:EAT_FOOD:20d1
+B:CLAW:EAT_ITEM:1d40
+B:CLAW:SHARDS:5d20
+F:FEMALE | FRIENDS |
+F:SMART | CAN_FLY | BASEANGBAND |
+F:DROP_SKELETON | DROP_CORPSE |  
+F:AI_ANNOY |
+S:1_IN_7 |
+S:TELE_TO | HOLD | SLOW | 
+D:A cross between a woman and a bird, she wants to either steal everything 
+D:you have, or hack you to bits and feast on your dead flesh. 
+
+N:6023:Savage harpy
+G:H:D
+I:140:10d50:30:51:0
+W:58:48:500:6000
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:CLAW:EAT_FOOD:20d1
+B:CLAW:EAT_ITEM:1d40
+B:CLAW:SHARDS:5d20
+F:FEMALE | FRIENDS |
+F:SMART | CAN_FLY | BASEANGBAND |
+F:DROP_SKELETON | DROP_CORPSE |  
+F:AI_ANNOY |
+S:1_IN_7 |
+S:TELE_TO | HOLD | SLOW | 
+S:MULTIPLY
+D:A cross between a woman and a bird, she wants to either steal everything 
+D:you have, or hack you to bits and feast on your dead flesh. 
+
+N:6024:Gangrenous horror
+G:H:W
+I:119:50d20:12:110:10
+W:54:3:500:3000
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d20
+B:BITE:HURT:2d18
+B:STING:DISEASE:2d18
+B:CRUSH:PARALYZE:6d12
+F:CAN_SWIM | BASH_DOOR | KILL_BODY | IM_COLD | IM_POIS | 
+F:ANIMAL | BASEANGBAND | ELDRITCH_HORROR | 
+F:DROP_SKELETON | DROP_CORPSE |
+S:1_IN_8
+S:BR_POIS
+D:A ghastly hybrid of all things that walk, crawl and swim, but mostly
+D: those made up of intestines.
+
+N:6025:Giant ochre locust
+G:I:U
+I:115:4d8:6:10:10
+W:24:4:100:70
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:POISON:1d5
+B:BITE:EAT_FOOD
+F:RAND_50 | BASEANGBAND |
+F:WEIRD_MIND | CAN_FLY |
+F:ANIMAL | IM_FIRE | IM_POIS |
+F:DROP_CORPSE |
+D:It voraciously eats and breeds leaving nothing in its wake.
+
+N:6026:Giant ochre locust
+G:I:U
+I:115:4d8:6:10:10
+W:24:20:100:70
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:POISON:1d5
+B:BITE:EAT_FOOD
+F:RAND_50 | BASEANGBAND |
+F:WEIRD_MIND | CAN_FLY |
+F:ANIMAL | IM_FIRE | IM_POIS |
+F:DROP_CORPSE |
+S:MULTIPLY
+D:It voraciously eats and breeds leaving nothing in its wake.
+
+N:6027:Giant white locust
+G:I:w
+I:118:4d12:6:15:10
+W:34:4:100:90
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:COLD:1d10
+B:BITE:EAT_FOOD
+F:RAND_50 | BASEANGBAND |
+F:WEIRD_MIND | CAN_FLY |
+F:ANIMAL | IM_COLD | IM_POIS |
+F:DROP_CORPSE |
+D:It voraciously eats and breeds leaving nothing in its wake.
+
+N:6028:Giant white locust
+G:I:w
+I:118:4d12:6:15:10
+W:34:20:100:90
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:COLD:1d10
+B:BITE:EAT_FOOD
+F:RAND_50 | BASEANGBAND |
+F:WEIRD_MIND | CAN_FLY |
+F:ANIMAL | IM_COLD | IM_POIS |
+F:DROP_CORPSE |
+S:MULTIPLY
+D:It voraciously eats and breeds leaving nothing in its wake.
+
+N:6029:Giant black locust
+G:I:D
+I:120:6d20:6:25:10
+W:54:4:100:200
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:EAT_LITE:1d20
+B:BITE:EAT_FOOD
+F:RAND_50 | BASEANGBAND |
+F:WEIRD_MIND | CAN_FLY |
+F:ANIMAL | IM_COLD | IM_POIS | IM_FIRE | IM_ACID | RES_DISE | 
+F:DROP_CORPSE |
+D:It voraciously eats and breeds leaving nothing in its wake.
+
+N:6030:Giant black locust
+G:I:D
+I:120:6d20:6:25:10
+W:54:20:100:200
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:EAT_LITE:1d20
+B:BITE:EAT_FOOD
+F:RAND_50 | BASEANGBAND |
+F:WEIRD_MIND | CAN_FLY |
+F:ANIMAL | IM_COLD | IM_POIS | IM_FIRE | IM_ACID | RES_DISE | 
+F:DROP_CORPSE |
+S:MULTIPLY
+D:It voraciously eats and breeds leaving nothing in its wake.
+
+N:6031:Giant blood locust
+G:I:R
+I:122:8d30:6:35:10
+W:74:4:100:400
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:SHARDS:3d20
+B:BITE:EAT_FOOD
+F:RAND_50 | BASEANGBAND |
+F:WEIRD_MIND | CAN_FLY | RES_SHAR | NO_CUT | REGENERATE | 
+F:ANIMAL | IM_COLD | IM_POIS | IM_FIRE | IM_ACID | RES_DISE | 
+F:DROP_CORPSE |
+D:It voraciously eats and breeds leaving nothing in its wake.
+
+N:6032:Giant blood locust
+G:I:R
+I:122:8d30:6:35:10
+W:74:20:100:400
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:SHARDS:3d20
+B:BITE:EAT_FOOD
+F:RAND_50 | BASEANGBAND |
+F:WEIRD_MIND | CAN_FLY | RES_SHAR | NO_CUT | REGENERATE | 
+F:ANIMAL | IM_COLD | IM_POIS | IM_FIRE | IM_ACID | RES_DISE | 
+F:DROP_CORPSE |
+S:MULTIPLY
+D:It voraciously eats and breeds leaving nothing in its wake.
+
+N:6033:Giant horse fly
+G:I:B
+I:122:8d20:12:50:20
+W:58:4:100:200
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:SHARDS:5d15
+F:RAND_25 | NO_FEAR | 
+F:WEIRD_MIND | CAN_FLY | 
+F:ANIMAL | BASEANGBAND |
+F:DROP_CORPSE |
+D:A bloodthirsty pest.
+
+N:6034:Giant horse fly
+G:I:B
+I:122:8d20:12:50:20
+W:58:20:100:200
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:SHARDS:5d15
+F:RAND_25 | NO_FEAR | 
+F:WEIRD_MIND | CAN_FLY | 
+F:ANIMAL | BASEANGBAND |
+F:DROP_CORPSE |
+S:MULTIPLY
+D:A bloodthirsty pest.
+
+N:6035:Giant tre-tre fly
+G:I:v
+I:130:10d80:10:40:10
+W:50:5:100:500
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:STING:DISEASE:1d30
+B:STING:PARALYZE:1d10
+F:RAND_25 | WEIRD_MIND | CAN_FLY | 
+F:ANIMAL | NO_SLEEP |
+F:DROP_CORPSE | BASEANGBAND |
+D:It spreads malaria across the dungeon, and also carries a 
+D:large amount of sleep venom. 
+
+N:6036:Giant tre-tre fly
+G:I:v
+I:130:10d80:10:40:10
+W:50:25:100:500
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:STING:DISEASE:1d30
+B:STING:PARALYZE:1d10
+F:RAND_25 | WEIRD_MIND | CAN_FLY | 
+F:ANIMAL | NO_SLEEP |
+F:DROP_CORPSE | BASEANGBAND |
+S:MULTIPLY
+D:It spreads malaria across the dungeon, and also carries a 
+D:large amount of sleep venom. 
+
+N:6037:Ether vortex
+G:v:G
+I:134:22d18:100:60:0
+W:51:3:0:370
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:DISEASE:8d9
+B:ENGULF:ETHER:8d9
+B:ENGULF:CONFUSE:8d9
+F:RAND_25 | RAND_50 | BASEANGBAND |
+F:EMPTY_MIND | POWERFUL | BASH_DOOR |
+F:NONLIVING | IM_POIS | NO_FEAR | NO_CONF | NO_SLEEP |
+S:1_IN_5 |
+S:BR_VENO | BR_ETHE | BR_NUKE |
+D:A barely substantial whirlpool of energy. 
+
+N:6038:Valar
+G:M:y
+I:145:40d200:30:220:255
+W:87:5:4000:80000
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:GAZE:TERRIFY:8d10
+B:GAZE:LOSE_ALL:8d10
+B:HIT:RAGNAROK:12d15
+B:HIT:CHAOS:12d15
+F:FORCE_SLEEP | ONLY_ITEM | DROP_12 | DROP_22 | DROP_32 | DROP_GOOD |
+F:SMART | HAS_LITE | POWERFUL | OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:BASEANGBAND | REGENERATE | REFLECTING | NO_THEFT | DROP_GREAT | 
+F:IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS | RES_NETH | RES_PLAS |
+F:RES_NEXU | RES_DISE | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+F:DROP_SKELETON | DROP_CORPSE | AURA_FIRE | AURA_ELEC | RES_WATE | 
+F:NO_CUT | RES_TIME | RES_LITE | RES_SOUN | RES_INER | RES_WALL | 
+F:RES_GRAV | RES_SHAR | RES_NERV | RES_ETHE | RES_MIND | 
+S:1_IN_2 |
+S:BR_LITE | BO_PLAS | BO_WATE | BO_MANA | ROCKET | HASTE | BA_CHAO | 
+S:DRAIN_MANA | HEAL | TELE_TO | SCARE | BLIND | BA_DARK | BA_METE | 
+S:S_KIN | S_KIN | S_ANGEL | S_UNIQUE | S_HI_DRAGON | HAND_DOOM | 
+S:CAUSE_4 | BRAIN_SMASH | TELE_LEVEL | S_THUNDERLORD | S_HYDRA | 
+D:You puny creature are going to get erased off the face of Middle-Earth 
+D:by this god! 
+
+N:6039:Living hurricane
+G:~:u
+I:140:30d50:15:100:0
+W:66:4:11:12000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:LOSE_INT:10d15
+B:SPORE:HURT:21d16
+B:SPORE:ELEC:10d14
+F:ATTR_MULTI | FORCE_SLEEP | FRIEND | RAND_25 | RAND_50 | DROP_12 |
+F:RES_CHAO | NO_CUT | DROP_22 | DROP_32 |
+F:COLD_BLOOD | EMPTY_MIND | REGENERATE | CAN_FLY | BASH_DOOR | TAKE_ITEM |
+F:AURA_ELEC | BASEANGBAND | IM_COLD | RES_SHAR | RES_LITE | RES_SOUN | 
+F:NONLIVING | RES_WATE | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+F:RES_CHAO | RES_INER | RES_DARK | RES_NERV | RES_MIND | RES_ETHE | 
+S:1_IN_3 |
+S:BR_SHAR | BR_GRAV | BR_WALL |
+S:BR_WALL | ARROW_3 | BR_ELEC | 
+S:DRAIN_MANA |
+D:Being caught in this savage storm will end your life very quickly. 
+
+N:6040:Sword that ends all
+G:|:s
+I:130:70d30:17:110:5
+W:76:5:0:30000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:RAGNAROK:15d15
+B:HIT:RAGNAROK:15d15
+F:CHAR_MULTI | FORCE_SLEEP | DROP_90 |
+F:RES_CHAO | EMPTY_MIND | CAN_FLY | BASEANGBAND |
+F:NONLIVING | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS | RES_WATE | RES_NETH |
+F:RES_NEXU | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+S:1_IN_4 |
+S:SCARE | 
+D:This animated sword brings an end. 
+
+N:6041:Decaying horror
+G:H:w
+I:118:40d18:12:110:10
+W:55:3:500:2000
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:CLAW:EAT_FOOD:4d15
+B:WAIL:DISEASE:2d18
+B:TOUCH:POISON:2d18
+B:CRUSH:HURT:4d16
+F:COLD_BLOOD | EMPTY_MIND | CAN_SWIM | BASH_DOOR | KILL_BODY |
+F:UNDEAD | EVIL | ANIMAL | NONLIVING | IM_COLD | IM_POIS | NO_FEAR | NO_CONF |
+F:NO_SLEEP | BASEANGBAND | RES_NETH | 
+F:DROP_SKELETON | DROP_CORPSE |
+D:A ghastly undead hybrid of all things that walk, crawl and swim, but
+D: mostly those that waste away. 
+
+N:6042:Patrol cop
+G:t:b
+I:118:8d40:10:50:200
+W:20:1:1700:300
+E:1:1:1:2:1:1
+O:25:50:0:25
+B:HIT:HURT:8d12
+F:MALE | DROP_CORPSE | DROP_SKELETON |
+F:RAND_25 | DROP_90 | WILD_TOWN | KILL_BODY
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | MOVE_BODY
+F:MORTAL | BASEANGBAND | HAS_LITE | NEUTRAL
+D:He watches and sees whether you're up to no good. 
+
+N:6043:Riot control cop
+G:t:D
+I:122:15d100:10:200:200
+W:50:1:1700:2000
+E:1:1:1:2:1:1
+O:25:50:0:25
+B:HIT:HURT:20d20
+B:HIT:INERTIA
+F:MALE | DROP_CORPSE | DROP_SKELETON | NO_THEFT | 
+F:DROP_90 | WILD_TOWN | KILL_BODY | REFLECTING | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | MOVE_BODY | 
+F:MORTAL | BASEANGBAND | HAS_LITE | NEUTRAL | 
+S:1_IN_8
+S:BA_WATE | MISSILE | SHRIEK | HOLD | 
+D:A cop who got sent to stop the rioting people. You'd better not get 
+D:in his way... 
+
+N:6044:Deranged survivor
+G:t:b
+I:115:20d20:6:30:0
+W:20:5:1500:400
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:INSANITY:5d8
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_TOWN | 
+F:RAND_25 | TAKE_ITEM | DROP_12 | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:He constantly shouts "Aaah! Aaah!" and seems to be out of his mind. 
+
+N:6045:Crazed survivor
+G:t:b
+I:120:30d30:6:50:0
+W:50:5:1500:1200
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:INSANITY:8d13
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_TOWN | 
+F:RAND_25 | TAKE_ITEM | DROP_12 | ATTR_CLEAR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:He constantly shouts "Aaah! Aaah!" and seems to be out of his mind. 
+
+N:6046:Giant blood louse
+G:I:r
+I:120:1d12:6:12:10
+W:40:2:100:14
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:SHARDS:1d7
+F:RAND_50 | RAND_25 | CAN_FLY | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND | 
+D:It is six inches long and bloodthirsty. 
+
+N:6047:Giant blood louse
+G:I:r
+I:120:1d12:6:12:10
+W:40:10:100:14
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:SHARDS:1d7
+F:RAND_50 | RAND_25 | CAN_FLY | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND | 
+S:MULTIPLY
+D:It is six inches long and bloodthirsty. 
+
+N:6048:Giant death louse
+G:I:D
+I:120:7d8:6:33:10
+W:70:8:100:25
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:SHARDS:50d1
+F:RAND_50 | RAND_25 | CAN_FLY | 
+F:WEIRD_MIND | ANIMAL | MORTAL | BASEANGBAND
+F:RES_NETH | IM_POIS | NO_SLEEP | 
+S:MULTIPLY
+D:It is six inches long and ready to make your life miserable. 
+
+N:6049:Giant death louse
+G:I:D
+I:120:7d8:6:33:10
+W:70:2:100:25
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:SHARDS:50d1
+F:RAND_50 | RAND_25 | CAN_FLY | 
+F:WEIRD_MIND | ANIMAL | MORTAL | BASEANGBAND
+F:RES_NETH | IM_POIS | NO_SLEEP | 
+D:It is six inches long and ready to make your life miserable. 
+
+N:6050:Darkness rat
+G:r:D
+I:110:5d8:8:20:20
+W:20:5:250:15
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:1d6
+B:BITE:EAT_LITE:1d6
+F:RAND_25 | 
+F:ANIMAL | IM_POIS | HURT_LITE | 
+F:MORTAL | BASEANGBAND
+S:MULTIPLY
+D:A large rat that fears the light. 
+
+N:6051:Darkness rat
+G:r:D
+I:110:5d8:8:20:20
+W:20:1:250:15
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:1d6
+B:BITE:EAT_LITE:1d6
+F:RAND_25 | 
+F:ANIMAL | IM_POIS | HURT_LITE | 
+F:MORTAL | BASEANGBAND
+D:A large rat that fears the light. 
+
+N:6052:Fearsome rat
+G:r:D
+I:114:8d20:8:40:20
+W:50:5:250:100
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:4d6
+B:BITE:EAT_LITE:4d6
+F:RAND_25 | RES_NETH | 
+F:ANIMAL | IM_POIS | HURT_LITE | 
+F:MORTAL | BASEANGBAND
+S:MULTIPLY
+D:A huge, aggressive rat. It doesn't like bright light, though. 
+
+N:6053:Fearsome rat
+G:r:D
+I:114:8d20:8:40:20
+W:50:1:250:100
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:4d6
+B:BITE:EAT_LITE:4d6
+F:RAND_25 | RES_NETH | 
+F:ANIMAL | IM_POIS | HURT_LITE | 
+F:MORTAL | BASEANGBAND
+D:A huge, aggressive rat. It doesn't like bright light, though. 
+
+N:6054:Giant dark mouse
+G:r:D
+I:120:10d20:8:32:30
+W:50:1:100:400
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:EAT_LITE:6d6
+B:BITE:POISON:6d6
+F:ANIMAL | BASEANGBAND | HURT_LITE | 
+F:DROP_SKELETON | DROP_CORPSE | RAND_25 | 
+D:It is about four feet long with large teeth, and seems to 
+D:prefer dark places. 
+
+N:6055:Giant dark mouse
+G:r:D
+I:120:10d20:8:32:30
+W:50:5:100:400
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:EAT_LITE:6d6
+B:BITE:POISON:6d6
+F:ANIMAL | BASEANGBAND | HURT_LITE | 
+F:DROP_SKELETON | DROP_CORPSE | RAND_25 | 
+S:MULTIPLY
+D:It is about four feet long with large teeth, and seems to 
+D:prefer dark places. 
+
+N:6056:Beggar mofo
+G:t:U
+I:113:5d25:10:20:40
+W:20:1:1300:20
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BEG:EAT_GOLD
+F:MALE | DROP_SKELETON | DROP_CORPSE | 
+F:RAND_25 | WILD_TOWN | DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:He's actually a thief, and will try to filch your money if you 
+D:aren't careful! 
+
+N:6057:Beggar mafioso
+G:t:U
+I:118:10d45:10:40:40
+W:50:1:1300:150
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BEG:EAT_GOLD:5d5
+B:BEG:EAT_GOLD:5d5
+F:MALE | DROP_SKELETON | DROP_CORPSE | 
+F:RAND_25 | WILD_TOWN | DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:A member of organized crime who tries to look like a beggar. 
+
+N:6058:Horrible tramp
+G:t:g
+I:113:10d20:6:25:0
+W:20:1:1400:30
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:DROOL:POISON:1d10
+F:MALE | DROP_SKELETON | DROP_CORPSE | WILD_TOWN |
+F:RAND_25 | DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:Urrgh, the stench! You want to stay far away from this creature. 
+
+N:6059:Butt-ugly stinker
+G:t:g
+I:119:15d50:6:45:0
+W:50:1:1400:120
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:DROOL:DISEASE:3d10
+F:MALE | DROP_SKELETON | DROP_CORPSE | WILD_TOWN |
+F:RAND_25 | DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_12
+S:BR_POIS
+D:Ewwwwww, you don't even want to know what this dude's carrying, 
+D:because it might be infectious. 
+
+N:6060:Street gangster
+G:t:D
+I:114:4d80:4:30:40
+W:20:2:1200:35
+E:1:1:1:2:1:1
+O:1:1:1:1
+B:HIT:HURT:1d10
+B:TOUCH:EAT_GOLD:1d10
+F:MALE | EVIL | WILD_TOWN | 
+F:RAND_25 |  FRIENDS | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:These guys want to beat you up and/or steal your money. 
+
+N:6061:Street criminal
+G:t:D
+I:122:12d180:4:55:40
+W:50:2:1200:200
+E:1:1:1:2:1:1
+O:1:1:1:1
+B:HIT:EAT_ITEM:4d10
+B:TOUCH:EAT_GOLD:4d10
+F:MALE | EVIL | WILD_TOWN | 
+F:RAND_25 |  FRIENDS | NO_FEAR | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:He's trying to make a killing by stealing from adventurers like you. 
+
+N:6062:Slasher naga
+G:n:b
+I:121:8d55:20:70:60
+W:50:3:1700:600
+E:0:0:0:0:1:0
+O:0:75:20:5
+B:HIT:HURT:8d10
+B:HIT:HURT:8d10
+B:HIT:SHARDS:8d8
+F:FEMALE | FRIEND | RAND_25 | DROP_22 |
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:EVIL | BASEANGBAND |
+S:1_IN_7 |
+S:SCARE | CONF | 
+D:This snake woman wants to cut you up and then sacrifice you to her 
+D:goddess. 
+
+N:6063:Black faerie
+G:H:D
+I:121:8d35:18:40:10
+W:35:1:500:200
+E:0:1:1:0:1:0
+O:0:0:0:0
+F:NEVER_BLOW | DROP_60 |
+F:HAS_LITE | CAN_FLY | OPEN_DOOR |
+F:RES_DARK | DROP_SKELETON | DROP_CORPSE | 
+F:AI_ANNOY | BASEANGBAND | INVISIBLE |
+S:1_IN_10 |
+S:BR_DISE |
+S:DRAIN_MANA | BLINK | DARKNESS |
+D:A little winged humanoid surrounded by static. 
+
+N:6064:Horror faerie
+G:H:v
+I:121:10d60:18:60:10
+W:65:1:500:800
+E:0:1:1:0:1:0
+O:0:0:0:0
+F:NEVER_BLOW | DROP_60 | ELDRITCH_HORROR | RES_DARK | 
+F:HAS_LITE | CAN_FLY | OPEN_DOOR | NO_SLEEP | RES_SOUN | 
+F:RES_DARK | DROP_SKELETON | DROP_CORPSE | 
+F:AI_ANNOY | BASEANGBAND | INVISIBLE |
+S:1_IN_8 |
+S:BR_MIND | MIND_BLAST | 
+S:DRAIN_MANA | BLINK | DARKNESS |
+D:A little winged humanoid with a grotesque appearance. 
+
+N:6065:Giant ice termite
+G:a:w
+I:116:16d44:14:77:40
+W:57:5:300:910
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:COLD:8d12
+B:BITE:COLD:8d12
+F:FORCE_MAXHP | FRIENDS |
+F:HAS_LITE | WEIRD_MIND | BASH_DOOR |
+F:ANIMAL | IM_COLD | RES_SHAR | NO_CUT | 
+F:DROP_CORPSE | BASEANGBAND |
+S:1_IN_10
+S:BO_ICEE
+D:It looks like an ant, but with shorter legs and bigger fangs. It has a
+D: white exoskeleton that looks chilly. 
+
+N:6066:Giant ice termite
+G:a:w
+I:116:16d44:14:77:40
+W:57:60:300:910
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:COLD:8d12
+B:BITE:COLD:8d12
+F:FORCE_MAXHP | FRIENDS |
+F:HAS_LITE | WEIRD_MIND | BASH_DOOR |
+F:ANIMAL | IM_COLD | RES_SHAR | NO_CUT | 
+F:DROP_CORPSE | BASEANGBAND |
+S:1_IN_10
+S:BO_ICEE
+S:MULTIPLY
+D:It looks like an ant, but with shorter legs and bigger fangs. It has a
+D: white exoskeleton that looks chilly. 
+
+N:6067:Giant crusher termite
+G:a:D
+I:118:16d44:14:77:40
+W:77:5:300:910
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:UN_BONUS:12d14
+B:BITE:UN_BONUS:12d14
+F:FORCE_MAXHP | FRIENDS | KILL_ITEM | 
+F:HAS_LITE | WEIRD_MIND | BASH_DOOR | RES_DARK | 
+F:ANIMAL | RES_DISE | RES_WALL | RES_GRAV | 
+F:DROP_CORPSE | BASEANGBAND | KILL_TREES | 
+S:1_IN_8
+S:BR_DISE
+D:It looks like an ant, but with shorter legs and bigger fangs. It has a
+D: black exoskeleton. 
+
+N:6068:Giant crusher termite
+G:a:D
+I:118:16d44:14:77:40
+W:77:60:300:910
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:UN_BONUS:12d14
+B:BITE:UN_BONUS:12d14
+F:FORCE_MAXHP | FRIENDS | KILL_ITEM | 
+F:HAS_LITE | WEIRD_MIND | BASH_DOOR | RES_DARK | 
+F:ANIMAL | RES_DISE | RES_WALL | RES_GRAV | 
+F:DROP_CORPSE | BASEANGBAND | KILL_TREES | 
+S:1_IN_8
+S:BR_DISE
+S:MULTIPLY
+D:It looks like an ant, but with shorter legs and bigger fangs. It has a
+D: black exoskeleton. 
+
+N:6069:Pure Fear
+G:G:v
+I:128:22d32:20:55:10
+W:72:4:0:9000
+E:0:0:0:0:0:0
+O:50:5:30:10
+B:HIT:TERRIFY:6d12
+B:HIT:TERRIFY:6d12
+B:HIT:LOSE_STR:4d8
+B:HIT:CONFUSE:8d8
+F:FORCE_SLEEP | RAND_25 | ONLY_ITEM | DROP_60 | DROP_22 |
+F:NO_CUT | INVISIBLE | COLD_BLOOD | PASS_WALL | TAKE_ITEM |
+F:UNDEAD | EVIL | NONLIVING | IM_COLD | IM_POIS | NO_STUN | NO_CONF |
+F:NO_SLEEP | BASEANGBAND | ELDRITCH_HORROR | NO_FEAR | EMPTY_MIND | 
+S:1_IN_3 |
+S:BO_NETH | BR_RADI | 
+S:DRAIN_MANA | BLIND | CONF | HOLD |
+D:You are filled with a sense of primal fear as you see this horrible ghost! 
+
+N:6070:Giant mumak
+G:Q:s
+I:120:50d50:20:100:100
+W:60:5:3000:2200
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BUTT:HURT:12d10
+B:BUTT:HURT:12d10
+B:CRUSH:HURT:10d10
+F:FRIENDS | NO_CUT | RES_SHAR | RES_NETH | RES_WATE | 
+F:BASH_DOOR | RES_INER | RES_WALL | RES_GRAV | 
+F:ANIMAL | BASEANGBAND | RES_NERV | NO_STUN | 
+F:DROP_SKELETON | DROP_CORPSE |  
+S:1_IN_4 |
+S:HASTE |
+D:This elephantine beast will trample over you. 
+
+N:6071:Fire wisp
+G:G:y
+I:118:10d50:20:50:10
+W:71:4:0:8000
+E:0:0:0:0:0:0
+O:50:5:30:10
+B:CLAW:FIRE:8d8
+B:CLAW:FIRE:8d8
+B:GAZE:PARALYZE:8d8
+B:GAZE:ETHER:5d5
+F:FORCE_SLEEP | RAND_25 | ONLY_ITEM | DROP_60 | DROP_22 |
+F:HAS_LITE | COLD_BLOOD | CAN_SWIM | POWERFUL | CAN_FLY | PASS_WALL |
+F:NO_CUT | TAKE_ITEM | BASEANGBAND | NO_FEAR | RES_TIME | RES_LITE | 
+F:UNDEAD | EVIL | NONLIVING | IM_FIRE | IM_COLD | IM_POIS | RES_WATE |
+F:NO_STUN | NO_CONF | NO_SLEEP | RES_DARK | RES_SHAR | RES_ETHE | 
+S:1_IN_3 |
+S:BO_FIRE | BR_FIRE | BR_PLAS | HOLD |
+D:A floating candle that burns unnaturally bright. 
+
+N:6072:Repentant
+G:s:s
+I:116:15d40:30:60:40
+W:50:2:800:1000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:4d12
+B:TOUCH:TERRIFY:4d9
+F:NO_CUT | DROP_12 | BASEANGBAND |
+F:SMART | OPEN_DOOR | BASH_DOOR | TAKE_ITEM | AURA_COLD |
+F:UNDEAD | EVIL | NONLIVING | IM_ELEC | IM_COLD | IM_POIS |
+S:1_IN_5 |
+S:DRAIN_MANA | CAUSE_2 | CAUSE_1 |
+S:S_UNDEAD | ANIM_DEAD | 
+D:A skeletal form, capable of casting black magic. 
+
+N:6073:Remorseful
+G:s:s
+I:119:20d60:30:80:40
+W:80:2:800:2000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:6d15
+B:TOUCH:TERRIFY:5d12
+F:NO_CUT | DROP_12 | BASEANGBAND |
+F:SMART | OPEN_DOOR | BASH_DOOR | TAKE_ITEM | AURA_COLD |
+F:UNDEAD | EVIL | NONLIVING | IM_ELEC | IM_COLD | IM_POIS |
+S:1_IN_5 |
+S:DRAIN_MANA | CAUSE_4 | CAUSE_3 |
+S:S_UNDEAD | ANIM_DEAD | S_HI_UNDEAD | 
+D:A skeletal form, casting many dark spells. 
+
+N:6074:Regretful
+G:s:s
+I:121:25d90:30:100:40
+W:100:2:800:3500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:INSANITY:6d25
+B:TOUCH:TERRIFY:6d16
+F:NO_CUT | DROP_12 | BASEANGBAND | NO_FEAR | 
+F:SMART | OPEN_DOOR | BASH_DOOR | TAKE_ITEM | AURA_COLD |
+F:UNDEAD | EVIL | NONLIVING | IM_ELEC | IM_COLD | IM_POIS |
+S:1_IN_4 |
+S:DRAIN_MANA | CAUSE_4 | CAUSE_3 | S_WRAITH | 
+S:S_UNDEAD | ANIM_DEAD | S_HI_UNDEAD | HAND_DOOM | 
+D:A skeletal form, flinging nasty spell after nasty spell. 
+
+N:6075:Chastiser
+G:s:U
+I:121:45d25:40:85:40
+W:66:3:800:3000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:TERRIFY:8d10
+B:TOUCH:LOSE_INT:5d9
+B:SPORE:LOSE_INT
+F:NO_CUT | DROP_12 | BASEANGBAND |
+F:SMART | OPEN_DOOR | BASH_DOOR | TAKE_ITEM | AURA_COLD |
+F:UNDEAD | EVIL | NONLIVING | IM_ELEC | IM_COLD | IM_POIS |
+S:1_IN_4 |
+S:BO_FIRE | MIND_BLAST | 
+S:DRAIN_MANA | BLINK | CAUSE_3 | CAUSE_4 |
+S:S_DEMON | S_HI_DEMON | 
+D:A skeletal form, which summons lots of demons. 
+
+N:6076:Red slime
+G:,:r
+I:118:10d12:4:15:0
+W:53:5:10:200
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:FIRE:6d6
+B:TOUCH:FIRE:6d6
+F:FRIENDS | NEVER_MOVE | RAND_25 | RAND_50 |
+F:NO_CUT | STUPID | COLD_BLOOD | EMPTY_MIND | IM_FIRE | 
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | BASEANGBAND |
+D:Ugh! It quickly creeps along the dungeon floor.
+
+N:6077:Red slime
+G:,:r
+I:118:10d12:4:15:0
+W:53:20:10:200
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:FIRE:6d6
+B:TOUCH:FIRE:6d6
+F:FRIENDS | NEVER_MOVE | RAND_25 | RAND_50 |
+F:NO_CUT | STUPID | COLD_BLOOD | EMPTY_MIND | IM_FIRE | 
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | BASEANGBAND |
+S:MULTIPLY
+D:Ugh! It quickly creeps along the dungeon floor.
+
+N:6078:Sanguine slime
+G:,:r
+I:121:15d19:4:35:0
+W:73:5:10:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:FIRE:8d9
+B:TOUCH:FIRE:8d9
+B:TOUCH:ACID:8d9
+F:FRIENDS | NEVER_MOVE | RAND_25 | RAND_50 | IM_ACID | 
+F:NO_CUT | STUPID | COLD_BLOOD | EMPTY_MIND | IM_FIRE | 
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | BASEANGBAND |
+F:RES_PLAS | 
+D:Ugh! It quickly creeps along the dungeon floor.
+
+N:6079:Sanguine slime
+G:,:r
+I:121:15d19:4:35:0
+W:73:20:10:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:FIRE:8d9
+B:TOUCH:FIRE:8d9
+B:TOUCH:ACID:8d9
+F:FRIENDS | NEVER_MOVE | RAND_25 | RAND_50 | IM_ACID | 
+F:NO_CUT | STUPID | COLD_BLOOD | EMPTY_MIND | IM_FIRE | 
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | BASEANGBAND |
+F:RES_PLAS | 
+S:MULTIPLY
+D:Ugh! It quickly creeps along the dungeon floor.
+
+
 
 
 
