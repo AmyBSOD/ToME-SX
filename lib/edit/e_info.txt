@@ -7451,6 +7451,16 @@ R:100
 F:BRAND_POIS | SLAY_WEAP | KILL_DRAGON
 f:BRAND_POIS | 
 
+# cloak
+N:593:of Water Action
+X:A:31:10
+W:40:1:40:2500
+C:0:0:0:0
+T:35:0:255
+R:100
+F:WATER_BREATH | RES_WATER
+f:WATER_BREATH | RES_WATER
+
 # N: serial number : ego type
 # D: description
 # T: tval : min sval : max sval
