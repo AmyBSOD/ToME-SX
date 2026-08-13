@@ -10623,14 +10623,20 @@ void generate_spell(int plev)
 	bool simple_gen = TRUE;
 	bool ball_desc = FALSE;
 
+	/* don' make ridiculously powerful spells past skill level 50 --Amy */
+	int effplev = plev;
+	if (effplev > 50) {
+		effplev = 50 + ((effplev - 50) / 3);
+	}
+
 	if (spell_num == MAX_SPELLS) return;
 
 	rspell = &random_spells[spell_num];
 
 	power = rand_int(15);
 
-	dice = plev / 5;
-	sides = plev * 2;
+	dice = effplev / 5;
+	sides = effplev * 2;
 	mana = plev;
 
 	/* Make the spell more or less powerful. */
@@ -10709,7 +10715,7 @@ void generate_spell(int plev)
 		if (rspell->dam_dice < 1) rspell->dam_dice = 1;
 		rspell->dam_sides = sides / 2;
 		if (rspell->dam_sides < 1) rspell->dam_sides = 1;
-		rspell->radius = sides / 5; /* controls the amount of projectiles, should be low because duh, balance --Amy */
+		rspell->radius = sides / 10; /* controls the amount of projectiles, should be low because duh, balance --Amy */
 		if (rspell->radius < 4) rspell->radius = 4;
 
 		destruc_gen = TRUE;
