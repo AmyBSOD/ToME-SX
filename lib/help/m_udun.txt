@@ -35,15 +35,19 @@ There are several spells available for the Udun school. These spells are:
    During daytime, the damage is greatly reduced.
 #####v   Your Udun and Temporal skills must have reached a combined average level 
 #####v   of 25 in order to cast this spell.
-5. [[[[[DWraithform] (dual school level 30)
+5. [[[[[DBlack Void] (dual school level 30)
+   Fires a ball of disenchantment.
+#####v   Your Udun and Meta skills must have reached a combined average level 
+#####v   of 30 in order to cast this spell.
+6. [[[[[DWraithform] (dual school level 30)
    Turns you temporarily into an immaterial being.
 #####v   Your Udun and Conveyance skills must have reached a combined average level 
 #####v   of 30 in order to cast this spell.
-6. [[[[[DFlame of Udun] (dual school level 35)
+7. [[[[[DFlame of Udun] (dual school level 35)
    Turns you temporarily into a powerful Balrog.
 #####v   Your Udun and Fire skills must have reached a combined average level 
 #####v   of 35 in order to cast this spell.
-7. [[[[[DBlack Hole] (dual school level 66)
+8. [[[[[DBlack Hole] (dual school level 66)
    Fires a ball of inertia.
 #####v   Your Udun and Prayer skills must have reached a combined average level 
 #####v   of 66 in order to cast this spell, and you must be worshipping Ingeborg.

@@ -172,6 +172,28 @@ NIGHTSHADE = add_spell
 	},
 }
 
+BLACKVOID = add_spell
+{
+	["name"] =      "Black Void",
+	["school"] =    {SCHOOL_UDUN, SCHOOL_META},
+	["level"] =     30,
+	["mana"] =      25,
+	["mana_max"] =  100,
+	["fail"] =      40,
+	["spell"] =     function()
+		local ret, dir, type
+		ret, dir = get_aim_dir()
+		if ret == FALSE then return end
+		return fire_ball(GF_DISENCHANT, dir, 60 + get_level(BLACKVOID, 400), 2 + get_level(BLACKVOID, 3) )
+	end,
+	["info"] =      function()
+		return "dam "..(60 + get_level(BLACKVOID, 400)).." rad "..(2 + get_level(BLACKVOID, 3))
+	end,
+	["desc"] =      {
+			"Fires a ball of disenchantment",
+	}
+}
+
 -- Return the number of Udun/Melkor spells in a given book
 function udun_in_book(sval, pval)
 	local i, y, index, sch, s

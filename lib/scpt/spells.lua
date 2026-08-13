@@ -935,7 +935,7 @@ school_book[10] = {
 
 -- Create the book of hellflame
 school_book[11] = {
-	DRAIN, GENOCIDE, NIGHTSHADE, WRAITHFORM, FLAMEOFUDUN,
+	DRAIN, GENOCIDE, NIGHTSHADE, WRAITHFORM, BLACKVOID, FLAMEOFUDUN,
 }
 
 -- Create the book of hell

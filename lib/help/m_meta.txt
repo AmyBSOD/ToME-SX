@@ -44,6 +44,13 @@ There are six spells available for the meta school. These spells are:
    interval. The inertia-controlled spell reduces your maximum mana by four
    times its cost.
    
+#####GUdun spells that can be cast with Meta skill
+1. [[[[[DBlack Void] (dual school level 30)
+   Fires a ball of disenchantment.
+#####v   Your Udun and Meta skills must have reached a combined average level 
+#####v   of 30 in order to cast this spell.
+
+
 #####R=== List of Controllable Spells ===
    Armor of Fear
    Banishment
