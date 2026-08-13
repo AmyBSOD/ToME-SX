@@ -2975,6 +2975,11 @@ void calc_gods()
 		if (p_ptr->grace > 40000) p_ptr->stat_add[A_WIS] += 1;
 		if (p_ptr->grace > 50000) p_ptr->stat_add[A_WIS] += 1;
 
+		if (p_ptr->heeled_boots) {
+			p_ptr->stat_add[A_CHR] += 5;
+			if (p_ptr->grace >= 20000) p_ptr->martial_bonus += (p_ptr->grace / 20000);
+		}
+
 		if (p_ptr->grace < 0) p_ptr->aggravate = TRUE;
 		PRAY_GOD(GOD_AMYBSOD)
 		{

@@ -14,7 +14,9 @@ Her most faithful followers are those of the class Fleecy Priest.
  3. AmyBSOD likes it if you kill animals.
  4. AmyBSOD *likes* it if you kill eldritch horrors and monsters that are
     aligned with good.
- 5. AmyBSOD grants access to the *****m_udun.txt*0[Udun] school of magic.
+ 5. Wearing high heels grants a bonus to charisma, and if your piety is high
+    enough, AmyBSOD will boost your martial prowess while wearing them.
+ 6. AmyBSOD grants access to the *****m_udun.txt*0[Udun] school of magic.
    
 #####GThe disadvantages of Worshipping AmyBSOD
 1. Your piety decreases rapidly with time.
