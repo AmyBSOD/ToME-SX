@@ -2544,7 +2544,7 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	}
 
 	/* Require empty space */
-	if (!cave_empty_bold(y, x) && !( ( (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_LEVITATE ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_FLY ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_CLIMB ) ) && (!dun_level) && (r_ptr->flags7 & (RF7_CAN_FLY)) ) )
+	if ( ((p_ptr->nastytrap209 || p_ptr->nastytrap208) ? !cave_nomon_bold(y, x) : !cave_empty_bold(y, x) ) && !( ( (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_LEVITATE ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_FLY ) || (f_info[(&cave[y][x])->feat].flags1 & FF1_CAN_CLIMB ) ) && (!dun_level) && (r_ptr->flags7 & (RF7_CAN_FLY)) ) )
 	{
 		if (wizard) cmsg_format(TERM_L_RED, "WARNING: Refused monster(%d): EMPTY BOLD", r_idx);
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
@@ -3223,7 +3223,11 @@ static bool place_monster_group(int y, int x, int r_idx, bool slp, int status)
 			int my = hy + ddy_ddd[i];
 
 			/* Walls and Monsters block flow */
-			if (!cave_empty_bold(my, mx)) continue;
+			if (p_ptr->nastytrap209) {
+				if (!cave_nomon_bold(my, mx)) continue;
+			} else {
+				if (!cave_empty_bold(my, mx)) continue;
+			}
 
 			/* Attempt to place another monster */
 			if (place_monster_one(my, mx, r_idx, pick_ego_monster(r_idx), slp, status))
@@ -3347,7 +3351,11 @@ bool place_monster_aux(int y, int x, int r_idx, bool slp, bool grp, int status)
 			scatter(&ny, &nx, y, x, d, 0);
 
 			/* Require empty grids */
-			if (!cave_empty_bold(ny, nx)) continue;
+			if (p_ptr->nastytrap208 || p_ptr->nastytrap209) {
+				if (!cave_nomon_bold(ny, nx)) continue;
+			} else {
+				if (!cave_empty_bold(ny, nx)) continue;
+			}
 
 			set_mon_num2_hook(ny, nx);
 
@@ -3538,7 +3546,11 @@ bool alloc_monster(int dis, bool slp)
 		x = rand_int(cur_wid);
 
 		/* Require empty floor grid (was "naked") */
-		if (!cave_empty_bold(y, x)) continue;
+		if (p_ptr->nastytrap209) {
+			if (!cave_nomon_bold(y, x)) continue;
+		} else {
+			if (!cave_empty_bold(y, x)) continue;
+		}
 
 		/* Accept far away grids */
 		if (distance(y, x, p_ptr->py, p_ptr->px) > dis) break;
@@ -4223,7 +4235,11 @@ bool summon_specific(int y1, int x1, int lev, int type)
 		scatter(&y, &x, y1, x1, d, 0);
 
 		/* Require "empty" floor grid */
-		if (!cave_empty_bold(y, x)) continue;
+		if (p_ptr->nastytrap208) {
+			if (!cave_nomon_bold(y, x)) continue;
+		} else {
+			if (!cave_empty_bold(y, x)) continue;
+		}
 
 		/* Hack -- no summon on glyph of warding */
 		if (cave[y][x].feat == FEAT_GLYPH) continue;
@@ -4316,7 +4332,11 @@ bool summon_specific_friendly(int y1, int x1, int lev, int type, bool Group_ok)
 		scatter(&y, &x, y1, x1, d, 0);
 
 		/* Require "empty" floor grid */
-		if (!cave_empty_bold(y, x)) continue;
+		if (p_ptr->nastytrap208) {
+			if (!cave_nomon_bold(y, x)) continue;
+		} else {
+			if (!cave_empty_bold(y, x)) continue;
+		}
 
 		/* Hack -- no summon on glyph of warding */
 		if (cave[y][x].feat == FEAT_GLYPH) continue;

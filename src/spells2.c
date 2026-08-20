@@ -2465,6 +2465,22 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: You can't give commands to pets.";
 	}
+	if (p_ptr->nastytrap206)
+	{
+		info[i++] = "You have a problem: Base item types cannot be identified.";
+	}
+	if (p_ptr->nastytrap207)
+	{
+		info[i++] = "You have a problem: Your light radius can't be greater than one square.";
+	}
+	if (p_ptr->nastytrap208)
+	{
+		info[i++] = "You have a problem: Summoning may place monsters inside walls.";
+	}
+	if (p_ptr->nastytrap209)
+	{
+		info[i++] = "You have a problem: Monsters may spawn inside walls.";
+	}
 
 	if (p_ptr->contamination >= 10000)
 	{

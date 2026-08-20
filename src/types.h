@@ -2340,10 +2340,10 @@ struct player_type
 	bool nastytrap203; /* lvl 5, runmode trap - you can't use the run command */
 	bool nastytrap204; /* lvl 5, unrest trap - you can't use the rest command */
 	bool nastytrap205; /* lvl 15, petscrew trap - you can't use the pet AI command */
-	bool nastytrap206;
-	bool nastytrap207;
-	bool nastytrap208;
-	bool nastytrap209;
+	bool nastytrap206; /* lvl 1, anterograde amnesia trap - identifying items doesn't ID the base item type */
+	bool nastytrap207; /* lvl 1, reduce light radius trap - your light radius cannot be higher than 1 */
+	bool nastytrap208; /* lvl 30, wall summon trap - summoning can place monsters inside walls */
+	bool nastytrap209; /* lvl 20, wall spawn trap - regular monsters can spawn inside walls */
 	bool nastytrap210;
 	bool nastytrap211;
 	bool nastytrap212;

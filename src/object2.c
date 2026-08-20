@@ -881,6 +881,8 @@ void object_known(object_type *o_ptr)
  */
 void object_aware(object_type *o_ptr)
 {
+	if (p_ptr->nastytrap206) return; /* anterograde amnesia trap: cannot identify the type of item --Amy */
+
 	/* Fully aware of the effects */
 	k_info[o_ptr->k_idx].aware = TRUE;
 }

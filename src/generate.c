@@ -1997,7 +1997,11 @@ static void vault_monsters(int y1, int x1, int num)
 			scatter(&y, &x, y1, x1, d, 0);
 
 			/* Require "empty" floor grids */
-			if (!cave_empty_bold(y, x)) continue;
+			if (p_ptr->nastytrap209) {
+				if (!cave_nomon_bold(y, x)) continue;
+			} else {
+				if (!cave_empty_bold(y, x)) continue;
+			}
 
 			/* Place the monster (allow groups) */
 			monster_level = dun_level + 2;
@@ -2026,7 +2030,11 @@ static void vault_monstersX(int y1, int x1, int num)
 			scatter(&y, &x, y1, x1, d, 0);
 
 			/* Require "empty" floor grids */
-			if (!cave_empty_bold(y, x)) continue;
+			if (p_ptr->nastytrap209) {
+				if (!cave_nomon_bold(y, x)) continue;
+			} else {
+				if (!cave_empty_bold(y, x)) continue;
+			}
 
 			/* Place the monster (allow groups) */
 			monster_level = dun_level + 10;
@@ -9847,7 +9855,11 @@ static bool cave_gen(void)
 			ox = randint(cur_wid - 4) + 2;
 
 			/* Is it a good spot ? */
-			if (cave_empty_bold(oy, ox)) break;
+			if (p_ptr->nastytrap209) {
+				if (!cave_nomon_bold(oy, ox)) continue;
+			} else {
+				if (!cave_empty_bold(oy, ox)) continue;
+			}
 
 			/* One less try */
 			try--;

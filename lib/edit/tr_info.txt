@@ -5045,8 +5045,28 @@ F:FLOOR | CHEST | DOOR
 
 N:994:Empty Pocket Trap
 I:5:100:50:2:30:0d0:y
-D:Money isn't everything, they say...
+D:You seem to have misplaced your belongings...
 F:FLOOR | CHEST | DOOR
+
+N:995:Anterograde Amnesia Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:996:Reduce Light Radius Trap
+I:21:2:50:4:1:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:997:Wall Summon Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:998:Wall Spawn Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
 
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color

@@ -3860,6 +3860,11 @@
 
 #define TRAP_OF_EMPTY_POCKETS             994
 
+#define TRAP_NASTY206                     995
+#define TRAP_NASTY207                     996
+#define TRAP_NASTY208                     997
+#define TRAP_NASTY209                     998
+
 /*** General index values ***/
 
 
@@ -5186,6 +5191,12 @@
 #define cave_empty_bold(Y,X) \
     (cave_floor_bold(Y,X) && \
      !(cave[Y][X].m_idx) && \
+     !(((Y) == p_ptr->py) && ((X) == p_ptr->px)))
+
+
+/* ditto but can select a wall time --Amy */
+#define cave_nomon_bold(Y,X) \
+    (!(cave[Y][X].m_idx) && \
      !(((Y) == p_ptr->py) && ((X) == p_ptr->px)))
 
 

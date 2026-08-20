@@ -2316,6 +2316,11 @@ static void calc_torch(void)
 		/* Remember the old lite */
 		p_ptr->old_lite = p_ptr->cur_lite;
 	}
+
+	/* reduce light radius nastytrap by Amy */
+	if (p_ptr->nastytrap207) {
+		if (p_ptr->cur_lite > 1) p_ptr->cur_lite = 1;
+	}
 }
 
 
@@ -5248,6 +5253,10 @@ void calc_bonuses(bool silent)
 	if (p_ptr->nastytrap194 && (p_ptr->skill_tht > 0)) p_ptr->skill_tht = 0;
 	if (p_ptr->nastytrap198 && (p_ptr->skill_dig > 0)) p_ptr->skill_dig = 0;
 	if (p_ptr->nastytrap195 && (p_ptr->skill_stl > -10)) p_ptr->skill_stl = -10;
+
+	if (p_ptr->nastytrap207) {
+		if (p_ptr->cur_lite > 1) p_ptr->cur_lite = 1;
+	}
 
 	if (p_ptr->nastytrap11) p_ptr->aggravate = TRUE;
 
