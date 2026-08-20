@@ -8863,7 +8863,7 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 				dam /= (randint(6) + 6);
 			}
 
-			set_food(p_ptr->food - dam);
+			set_food(p_ptr->food - (dam * randint(5)) );
 
 			take_hit(dam, killer);
 			break;
