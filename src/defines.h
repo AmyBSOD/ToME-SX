@@ -5596,6 +5596,8 @@ extern int PlayerUID;
 #define FATE_FIND_R             4 /* encounter monster */
 #define FATE_FIND_V             5 /* seems to be unused??? */
 #define FATE_DIE                6 /* get sent to dungeon with OOD monsters */
+#define FATE_TRAPPING           7 /* dungeon level will have lotsa traps */
+#define FATE_NASTINESS          8 /* random nasty trap effect when entering dlvl */
 
 /*
  * Runes definition

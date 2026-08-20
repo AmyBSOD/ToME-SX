@@ -5910,7 +5910,11 @@ void gain_fate(byte fate)
 					else fates[i].fate = FATE_FIND_O;
 					break;
 				case 1:
+					fates[i].fate = FATE_TRAPPING;
+					break;
 				case 4:
+					fates[i].fate = FATE_NASTINESS;
+					break;
 				case 5:
 				case 10:
 				case 11:
@@ -6004,6 +6008,26 @@ void gain_fate(byte fate)
 				fates[i].serious = rand_int(2);
 				fates[i].know = FALSE;
 				if (wizard) msg_format("New fate : Meet monster %d on level %d", fates[i].r_idx, fates[i].level);
+				break;
+
+			case FATE_TRAPPING:
+			{
+				level = randint(98);
+				fates[i].level = (level < 1) ? 1 : (level > 98) ? 98 : level;
+				fates[i].serious = TRUE;
+				fates[i].know = FALSE;
+				if (wizard) msg_format("New fate : Trapping on level %d", fates[i].level);
+			}
+				break;
+
+			case FATE_NASTINESS:
+			{
+				level = randint(98);
+				fates[i].level = (level < 1) ? 1 : (level > 98) ? 98 : level;
+				fates[i].serious = TRUE;
+				fates[i].know = FALSE;
+				if (wizard) msg_format("New fate : Nastiness on level %d", fates[i].level);
+			}
 				break;
 
 			case FATE_FIND_A:
@@ -6135,6 +6159,18 @@ void fate_desc(char *desc, int fate)
 	case FATE_DIE:
 		{
 			sprintf(buf, "die on level %d.", fates[fate].level);
+			strcat(desc, buf);
+			break;
+		}
+	case FATE_TRAPPING:
+		{
+			sprintf(buf, "become entrapped on level %d.", fates[fate].level);
+			strcat(desc, buf);
+			break;
+		}
+	case FATE_NASTINESS:
+		{
+			sprintf(buf, "encounter nastiness on level %d.", fates[fate].level);
 			strcat(desc, buf);
 			break;
 		}

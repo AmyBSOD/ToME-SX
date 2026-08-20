@@ -9665,6 +9665,25 @@ static bool cave_gen(void)
 				fates[i].icky = TRUE;
 				break;
 			}
+
+		case FATE_NASTINESS:
+			{
+				give_random_nastytrap_effect();
+				fates[i].icky = TRUE;
+				break;
+			}
+		case FATE_TRAPPING:
+			{
+				int trapcount = 50 + randint(150);
+				while (trapcount > 0) {
+					trapcount--;
+					alloc_trap();
+				}
+
+				fates[i].icky = TRUE;
+				break;
+			}
+
 		case FATE_FIND_A:
 			{
 				int oy = p_ptr->py + 1;
