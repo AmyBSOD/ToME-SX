@@ -378,31 +378,51 @@ C:a:k:+0:+150:Firearms
 C:a:O:23:16:1d1
 C:a:g:All Gods
 
-C:a:N:WeirdoWarrior
-C:a:D:Warrior with weird skills
-C:a:k:+0:+200:Bearform-combat
-C:a:k:+0:+300:Combat
-C:a:k:+0:+600:Necromancy
-C:a:k:+0:+400:Disarming
-C:a:k:+0:+300:Critical-hits
-C:a:k:+4000:+100:Fire
-C:a:k:+1000:+100:Meta
-C:a:k:+3000:+800:Monster-lore
+C:a:N:Caveman
+C:a:D:Cavepeople are good at using neolithic weapons, but completely
+C:a:D:unskilled at magic.
+C:a:k:+0:+500:Hafted-mastery
+C:a:k:-0:-400:Sword-mastery
+C:a:k:-0:-400:Axe-mastery
+C:a:k:-0:-400:Polearm-mastery
+C:a:k:+0:+100:Combat
+C:a:k:+0:+700:Sling-mastery
+C:a:k:+0:+50:Weaponmastery
+C:a:k:-0:-400:Sneakiness
+C:a:k:-0:-500:Hidden-Sight
+C:a:k:-0:-200:Stealth
+C:a:k:-0:-550:Antimagic
+C:a:k:-25000:-300:Magic
+C:a:O:21:1:1d1
+C:a:O:19:2:1d1
+C:a:O:16:0:10d3
 C:a:g:All Gods
 
-C:a:N:Mofo warrior
-C:a:D:Warrior with stunted abilities
-C:a:k:-3000:+0:Thaumaturgy
-C:a:k:-4000:+0:Temporal
-C:a:k:-8000:+0:Magic-Device
-C:a:k:-4000:+0:Music
-C:a:k:-8000:+400:Sword-mastery
-C:a:k:-11200:+1800:Disarming
-C:a:k:-5800:+533:Fire
-C:a:k:-21200:+867:Sorcery
-C:a:k:-12500:+675:Stealing
-C:a:k:-6500:+560:Barehand-combat
-C:a:g:All Gods
+#C:a:N:WeirdoWarrior
+#C:a:D:Warrior with weird skills
+#C:a:k:+0:+200:Bearform-combat
+#C:a:k:+0:+300:Combat
+#C:a:k:+0:+600:Necromancy
+#C:a:k:+0:+400:Disarming
+#C:a:k:+0:+300:Critical-hits
+#C:a:k:+4000:+100:Fire
+#C:a:k:+1000:+100:Meta
+#C:a:k:+3000:+800:Monster-lore
+#C:a:g:All Gods
+
+#C:a:N:Mofo warrior
+#C:a:D:Warrior with stunted abilities
+#C:a:k:-3000:+0:Thaumaturgy
+#C:a:k:-4000:+0:Temporal
+#C:a:k:-8000:+0:Magic-Device
+#C:a:k:-4000:+0:Music
+#C:a:k:-8000:+400:Sword-mastery
+#C:a:k:-11200:+1800:Disarming
+#C:a:k:-5800:+533:Fire
+#C:a:k:-21200:+867:Sorcery
+#C:a:k:-12500:+675:Stealing
+#C:a:k:-6500:+560:Barehand-combat
+#C:a:g:All Gods
 
 C:a:N:RandomWarrior
 C:a:D:Warrior with randomized skills
@@ -805,62 +825,85 @@ C:a:O:111:50:1d1
 C:a:O:21:3:1d1
 C:a:g:All Gods
 
-C:a:N:Weird mage
-C:a:D:Mage with weird skills
-C:a:k:+0:+200:Magic-Device
-C:a:k:+0:+300:Music
-C:a:k:+0:+100:Symbiosis
-C:a:k:+0:+300:Thaumaturgy
-C:a:k:+0:+100:Earth
-C:a:k:+1000:+0:Stunning-blows
-C:a:k:+1000:+0:Crossbow-mastery
-C:a:k:+1000:+300:Monster-lore
+C:a:N:Battlemage
+C:a:D:A mage who sacrifices some spell power for melee ability.
+C:a:k:+0:-100:Spell-power
+C:a:k:+0:-100:Fire
+C:a:k:+0:-100:Water
+C:a:k:+0:-100:Air
+C:a:k:+0:-100:Earth
+C:a:k:+0:-100:Temporal
+C:a:k:+0:-100:Divination
+C:a:k:+0:-100:Conveyance
+C:a:k:+0:-100:Nature
+C:a:k:+0:-100:Meta
+C:a:k:+0:-100:Mind
+C:a:k:+0:-100:Elemental
+C:a:k:+0:-600:Necromancy
+C:a:k:+0:-150:Runecraft
+C:a:k:+0:-150:Thaumaturgy
+C:a:k:+0:+500:Combat
+C:a:k:+0:+300:Weaponmastery
+C:a:O:21:3:1d1
+C:a:O:111:50:1d1
 C:a:g:All Gods
 
-C:a:N:Weird caster
-C:a:D:Caster with weird skills
-C:a:k:+0:+200:Symbiosis
-C:a:k:+0:+300:Earth
-C:a:k:+0:+700:Fire
-C:a:k:+0:+400:Alchemy
-C:a:k:+0:+300:Geomancy
-C:a:k:+3000:+0:Udun
-C:a:k:+9000:+0:Crossbow-mastery
-C:a:k:+2000:+800:Demonology
-C:a:g:All Gods
+#C:a:N:Weird mage
+#C:a:D:Mage with weird skills
+#C:a:k:+0:+200:Magic-Device
+#C:a:k:+0:+300:Music
+#C:a:k:+0:+100:Symbiosis
+#C:a:k:+0:+300:Thaumaturgy
+#C:a:k:+0:+100:Earth
+#C:a:k:+1000:+0:Stunning-blows
+#C:a:k:+1000:+0:Crossbow-mastery
+#C:a:k:+1000:+300:Monster-lore
+#C:a:g:All Gods
 
-C:a:N:Mofo mage
-C:a:D:Mage with stunted skills
-C:a:k:-4000:+0:Dodging
-C:a:k:-2000:+0:Conveyance
-C:a:k:-3000:+0:Backstab
-C:a:k:-1000:+0:Necromancy
-C:a:k:-1000:+0:Temporal
-C:a:k:-14600:+1467:Axe-mastery
-C:a:k:-1800:+600:Spirituality
-C:a:k:-3700:+700:Polearm-mastery
-C:a:k:-4800:+450:Thaumaturgy
-C:a:k:-7200:+533:Air
-C:a:k:-6400:+800:Antimagic
-C:a:k:-6000:+480:Mindcraft
-C:a:g:All Gods
+#C:a:N:Weird caster
+#C:a:D:Caster with weird skills
+#C:a:k:+0:+200:Symbiosis
+#C:a:k:+0:+300:Earth
+#C:a:k:+0:+700:Fire
+#C:a:k:+0:+400:Alchemy
+#C:a:k:+0:+300:Geomancy
+#C:a:k:+3000:+0:Udun
+#C:a:k:+9000:+0:Crossbow-mastery
+#C:a:k:+2000:+800:Demonology
+#C:a:g:All Gods
 
-C:a:N:Mofo caster
-C:a:D:Caster with stunted skills
-C:a:k:-2000:+0:Thaumaturgy
-C:a:k:-2000:+0:Udun
-C:a:k:-2000:+0:Disarming
-C:a:k:-1000:+0:Polearm-mastery
-C:a:k:-3000:+0:Barehand-combat
-C:a:k:-6000:+400:Spell-power
-C:a:k:-4700:+525:Stunning-blows
-C:a:k:-6800:+560:Alchemy
-C:a:k:-5700:+720:Geomancy
-C:a:k:-4000:+500:Temporal
-C:a:k:-5800:+560:Mind
-C:a:k:-4600:+800:Nature
-C:a:k:-6200:+400:Necromancy
-C:a:g:All Gods
+#C:a:N:Mofo mage
+#C:a:D:Mage with stunted skills
+#C:a:k:-4000:+0:Dodging
+#C:a:k:-2000:+0:Conveyance
+#C:a:k:-3000:+0:Backstab
+#C:a:k:-1000:+0:Necromancy
+#C:a:k:-1000:+0:Temporal
+#C:a:k:-14600:+1467:Axe-mastery
+#C:a:k:-1800:+600:Spirituality
+#C:a:k:-3700:+700:Polearm-mastery
+#C:a:k:-4800:+450:Thaumaturgy
+#C:a:k:-7200:+533:Air
+#C:a:k:-6400:+800:Antimagic
+#C:a:k:-6000:+480:Mindcraft
+#C:a:g:All Gods
+
+#C:a:N:Mofo caster
+#C:a:D:Caster with stunted skills
+#C:a:k:-2000:+0:Thaumaturgy
+#C:a:k:-2000:+0:Udun
+#C:a:k:-2000:+0:Disarming
+#C:a:k:-1000:+0:Polearm-mastery
+#C:a:k:-3000:+0:Barehand-combat
+#C:a:k:-6000:+400:Spell-power
+#C:a:k:-4700:+525:Stunning-blows
+#C:a:k:-6800:+560:Alchemy
+#C:a:k:-5700:+720:Geomancy
+#C:a:k:-4000:+500:Temporal
+#C:a:k:-5800:+560:Mind
+#C:a:k:-4600:+800:Nature
+#C:a:k:-6200:+400:Necromancy
+#C:a:g:All Gods
 
 C:a:N:Random mage
 C:a:D:Mage with randomized skills
@@ -1124,33 +1167,33 @@ C:a:g:All Gods
 C:a:b:2:Ammo creation
 C:a:b:10:Tree walking
 
-C:a:N:Weird archer
-C:a:D:Archer with weird skills
-C:a:k:+0:+400:Sorcery
-C:a:k:+0:+100:Magic
-C:a:k:+0:+200:Disarming
-C:a:k:+0:+500:Stunning-blows
-C:a:k:+0:+400:Druidistic
-C:a:k:+1000:+0:Spell-power
-C:a:k:+1000:+0:Dodging
-C:a:k:+1000:+100:Necromancy
-C:a:g:All Gods
+#C:a:N:Weird archer
+#C:a:D:Archer with weird skills
+#C:a:k:+0:+400:Sorcery
+#C:a:k:+0:+100:Magic
+#C:a:k:+0:+200:Disarming
+#C:a:k:+0:+500:Stunning-blows
+#C:a:k:+0:+400:Druidistic
+#C:a:k:+1000:+0:Spell-power
+#C:a:k:+1000:+0:Dodging
+#C:a:k:+1000:+100:Necromancy
+#C:a:g:All Gods
 
-C:a:N:Mofo archer
-C:a:D:Archer with stunted skills
-C:a:k:-9000:+0:Runecraft
-C:a:k:-1000:+0:Music
-C:a:k:-10200:+480:Air
-C:a:k:-3000:+0:Antimagic
-C:a:k:-1000:+0:Meta
-C:a:k:-1900:+900:Sword-mastery
-C:a:k:-8100:+560:Sling-mastery
-C:a:k:-2200:+400:Symbiosis
-C:a:k:-3400:+560:Corpse-preservation
-C:a:k:-3600:+480:Bearform-combat
-C:a:k:-9000:+750:Backstab
-C:a:k:-6300:+550:Bow-mastery
-C:a:g:All Gods
+#C:a:N:Mofo archer
+#C:a:D:Archer with stunted skills
+#C:a:k:-9000:+0:Runecraft
+#C:a:k:-1000:+0:Music
+#C:a:k:-10200:+480:Air
+#C:a:k:-3000:+0:Antimagic
+#C:a:k:-1000:+0:Meta
+#C:a:k:-1900:+900:Sword-mastery
+#C:a:k:-8100:+560:Sling-mastery
+#C:a:k:-2200:+400:Symbiosis
+#C:a:k:-3400:+560:Corpse-preservation
+#C:a:k:-3600:+480:Bearform-combat
+#C:a:k:-9000:+750:Backstab
+#C:a:k:-6300:+550:Bow-mastery
+#C:a:g:All Gods
 
 C:a:N:Random archer
 C:a:D:Archer with randomized skills
@@ -1500,33 +1543,50 @@ C:a:O:23:7:1d1
 C:a:O:35:1:1d1
 C:a:g:All Gods
 
-C:a:N:Weird rogue
-C:a:D:Rogue with weird skills
-C:a:k:+0:+200:Water
-C:a:k:+0:+200:Sneakiness
-C:a:k:+0:+100:Critical-hits
-C:a:k:+0:+400:Bearform-combat
-C:a:k:+1000:+300:Weaponmastery
-C:a:k:+1000:+0:Runecraft
-C:a:k:+1000:+100:Mindcraft
+C:a:N:Detective
+C:a:D:Detectives are awesome at the searching skills but less skilled at combat.
+C:a:k:-0:-100:Combat
+C:a:k:-0:-100:Weaponmastery
+C:a:k:-1000:-300:Sword-mastery
+C:a:k:-1000:-500:Critical-hits
+C:a:k:+0:+500:Divination
+C:a:k:+5000:+500:Sneakiness
+C:a:k:+5000:+500:Hidden-Sight
+C:a:k:+5000:+500:Stealth
+C:a:k:+5000:+500:Disarming
+C:a:k:-1000:-500:Backstab
+C:a:k:-1000:-1500:Stealing
+C:a:O:23:4:1d1
+C:a:O:35:1:1d1
 C:a:g:All Gods
 
-C:a:N:Mofo rogue
-C:a:D:Rogue with stunted skills
-C:a:k:-2000:+0:Backstab
-C:a:k:-6000:+0:Meta
-C:a:k:-2000:+0:Critical-hits
-C:a:k:-7000:+0:Disarming
-C:a:k:-2000:+0:Udun
-C:a:k:-2600:+800:Barehand-combat
-C:a:k:-4200:+533:Monster-lore
-C:a:k:-7000:+600:Magic
-C:a:k:-5700:+450:Geomancy
-C:a:k:-7600:+450:Boomerang-mastery
-C:a:k:-2200:+480:Prayer
-C:a:k:-5400:+450:Thaumaturgy
-C:a:k:-6700:+675:Water
-C:a:g:All Gods
+#C:a:N:Weird rogue
+#C:a:D:Rogue with weird skills
+#C:a:k:+0:+200:Water
+#C:a:k:+0:+200:Sneakiness
+#C:a:k:+0:+100:Critical-hits
+#C:a:k:+0:+400:Bearform-combat
+#C:a:k:+1000:+300:Weaponmastery
+#C:a:k:+1000:+0:Runecraft
+#C:a:k:+1000:+100:Mindcraft
+#C:a:g:All Gods
+
+#C:a:N:Mofo rogue
+#C:a:D:Rogue with stunted skills
+#C:a:k:-2000:+0:Backstab
+#C:a:k:-6000:+0:Meta
+#C:a:k:-2000:+0:Critical-hits
+#C:a:k:-7000:+0:Disarming
+#C:a:k:-2000:+0:Udun
+#C:a:k:-2600:+800:Barehand-combat
+#C:a:k:-4200:+533:Monster-lore
+#C:a:k:-7000:+600:Magic
+#C:a:k:-5700:+450:Geomancy
+#C:a:k:-7600:+450:Boomerang-mastery
+#C:a:k:-2200:+480:Prayer
+#C:a:k:-5400:+450:Thaumaturgy
+#C:a:k:-6700:+675:Water
+#C:a:g:All Gods
 
 C:a:N:Random rogue
 C:a:D:Rogue with randomized skills
@@ -2048,75 +2108,75 @@ C:a:k:+0:+400:Elemental
 C:a:k:+0:+300:HighHeels
 C:a:g:Nobody
 
-C:a:N:Weird Master
-C:a:D:Loremaster with weird skills
-C:a:k:+0:+400:Udun
-C:a:k:+0:+300:Symbiosis
-C:a:k:+0:+200:Dodging
-C:a:k:+0:+200:Mimicry
-C:a:k:+0:+500:Geomancy
-C:a:k:+0:+400:Hafted-mastery
-C:a:k:+0:+500:Meta
-C:a:k:+0:+100:Disarming
-C:a:k:+4000:+0:Sword-mastery
-C:a:k:+6000:+200:Combat
-C:a:k:+1000:+0:Bow-mastery
-C:a:k:+6000:+400:Stunning-blows
-C:a:k:+2000:+200:Bearform-combat
-C:a:g:All Gods
+#C:a:N:Weird Master
+#C:a:D:Loremaster with weird skills
+#C:a:k:+0:+400:Udun
+#C:a:k:+0:+300:Symbiosis
+#C:a:k:+0:+200:Dodging
+#C:a:k:+0:+200:Mimicry
+#C:a:k:+0:+500:Geomancy
+#C:a:k:+0:+400:Hafted-mastery
+#C:a:k:+0:+500:Meta
+#C:a:k:+0:+100:Disarming
+#C:a:k:+4000:+0:Sword-mastery
+#C:a:k:+6000:+200:Combat
+#C:a:k:+1000:+0:Bow-mastery
+#C:a:k:+6000:+400:Stunning-blows
+#C:a:k:+2000:+200:Bearform-combat
+#C:a:g:All Gods
 
-C:a:N:Uberweirdo
-C:a:D:Extraordinarily weird character
-C:a:k:+1000:+700:Sorcery
-C:a:k:+2000:+400:Alchemy
-C:a:k:+1000:+500:Mana
-C:a:k:+1000:+500:Boulder-throwing
-C:a:k:+1000:+600:Magic
-C:a:k:+2000:+300:Sling-mastery
-C:a:k:+1000:+400:Archery
-C:a:k:+1000:+100:Prayer
-C:a:g:All Gods
+#C:a:N:Uberweirdo
+#C:a:D:Extraordinarily weird character
+#C:a:k:+1000:+700:Sorcery
+#C:a:k:+2000:+400:Alchemy
+#C:a:k:+1000:+500:Mana
+#C:a:k:+1000:+500:Boulder-throwing
+#C:a:k:+1000:+600:Magic
+#C:a:k:+2000:+300:Sling-mastery
+#C:a:k:+1000:+400:Archery
+#C:a:k:+1000:+100:Prayer
+#C:a:g:All Gods
 
-C:a:N:Motherfucker
-C:a:D:Extraordinarily stunted character
-C:a:k:-1000:+0:Bearform-combat
-C:a:k:-3000:+0:Magic
-C:a:k:-1000:+0:Sorcery
-C:a:k:-3000:+0:Spirituality
-C:a:k:-4000:+0:Prayer
-C:a:k:-7100:+560:Water
-C:a:k:-9300:+733:Sling-mastery
-C:a:k:-9500:+350:Conveyance
-C:a:k:-14200:+867:Crossbow-mastery
-C:a:k:-7600:+720:Backstab
-C:a:k:-8600:+600:Mana
-C:a:k:-9000:+750:Hafted-mastery
-C:a:k:-12600:+800:Monster-lore
-C:a:k:-4700:+600:Stealing
-C:a:k:-4600:+640:Disarming
-C:a:k:-10200:+1400:Necromancy
-C:a:k:-5800:+600:Druidistic
-C:a:k:-7500:+350:Mindcraft
-C:a:k:-7600:+600:Air
-C:a:k:-1900:+600:Combat
-C:a:g:All Gods
+#C:a:N:Motherfucker
+#C:a:D:Extraordinarily stunted character
+#C:a:k:-1000:+0:Bearform-combat
+#C:a:k:-3000:+0:Magic
+#C:a:k:-1000:+0:Sorcery
+#C:a:k:-3000:+0:Spirituality
+#C:a:k:-4000:+0:Prayer
+#C:a:k:-7100:+560:Water
+#C:a:k:-9300:+733:Sling-mastery
+#C:a:k:-9500:+350:Conveyance
+#C:a:k:-14200:+867:Crossbow-mastery
+#C:a:k:-7600:+720:Backstab
+#C:a:k:-8600:+600:Mana
+#C:a:k:-9000:+750:Hafted-mastery
+#C:a:k:-12600:+800:Monster-lore
+#C:a:k:-4700:+600:Stealing
+#C:a:k:-4600:+640:Disarming
+#C:a:k:-10200:+1400:Necromancy
+#C:a:k:-5800:+600:Druidistic
+#C:a:k:-7500:+350:Mindcraft
+#C:a:k:-7600:+600:Air
+#C:a:k:-1900:+600:Combat
+#C:a:g:All Gods
 
-C:a:N:Mofo Master
-C:a:D:Loremaster with stunted skills
-C:a:k:-9000:+0:Divination
-C:a:k:-4000:+0:Demonology
-C:a:k:-4000:+0:Monster-lore
-C:a:k:-3000:+0:Spell-power
-C:a:k:-4000:+0:Boomerang-mastery
-C:a:k:-5400:+700:Conveyance
-C:a:k:-5200:+733:Spirituality
-C:a:k:-5000:+400:Bow-mastery
-C:a:k:-2800:+600:Sorcery
-C:a:k:-8000:+800:Barehand-combat
-C:a:k:-4600:+600:Archery
-C:a:k:-6000:+400:Disarming
-C:a:k:-2200:+450:Summoning
-C:a:g:All Gods
+#C:a:N:Mofo Master
+#C:a:D:Loremaster with stunted skills
+#C:a:k:-9000:+0:Divination
+#C:a:k:-4000:+0:Demonology
+#C:a:k:-4000:+0:Monster-lore
+#C:a:k:-3000:+0:Spell-power
+#C:a:k:-4000:+0:Boomerang-mastery
+#C:a:k:-5400:+700:Conveyance
+#C:a:k:-5200:+733:Spirituality
+#C:a:k:-5000:+400:Bow-mastery
+#C:a:k:-2800:+600:Sorcery
+#C:a:k:-8000:+800:Barehand-combat
+#C:a:k:-4600:+600:Archery
+#C:a:k:-6000:+400:Disarming
+#C:a:k:-2200:+450:Summoning
+#C:a:g:All Gods
 
 C:a:N:Nullskiller
 C:a:D:Challenging character who starts without skills
@@ -2518,31 +2578,31 @@ C:a:k:=0:=0:Necromancy
 C:a:k:+0:+150:Prayer
 C:a:k:+0:-100:Weaponmastery
 
-C:a:N:Weird priest
-C:a:D:Priest with weird skills
-C:a:g:All Gods
-C:a:k:+0:+300:Runecraft
-C:a:k:+0:+100:Sword-mastery
-C:a:k:+0:+100:Water
-C:a:k:+0:+700:Earth
-C:a:k:+2000:+0:Combat
-C:a:k:+2000:+200:Barehand-combat
-C:a:k:+3000:+100:Possession
+#C:a:N:Weird priest
+#C:a:D:Priest with weird skills
+#C:a:g:All Gods
+#C:a:k:+0:+300:Runecraft
+#C:a:k:+0:+100:Sword-mastery
+#C:a:k:+0:+100:Water
+#C:a:k:+0:+700:Earth
+#C:a:k:+2000:+0:Combat
+#C:a:k:+2000:+200:Barehand-combat
+#C:a:k:+3000:+100:Possession
 
-C:a:N:Mofo priest
-C:a:D:Priest with stunted skills
-C:a:g:All Gods
-C:a:k:-2000:+0:Archery
-C:a:k:-5000:+0:Bearform-combat
-C:a:k:-2000:+0:Runecraft
-C:a:k:-5000:+0:Backstab
-C:a:k:-13900:+1200:Hafted-mastery
-C:a:k:-2800:+900:Necromancy
-C:a:k:-6800:+350:Symbiosis
-C:a:k:-3800:+800:Combat
-C:a:k:-7800:+400:Mindcraft
-C:a:k:-5400:+640:Thaumaturgy
-C:a:k:-8200:+400:Meta
+#C:a:N:Mofo priest
+#C:a:D:Priest with stunted skills
+#C:a:g:All Gods
+#C:a:k:-2000:+0:Archery
+#C:a:k:-5000:+0:Bearform-combat
+#C:a:k:-2000:+0:Runecraft
+#C:a:k:-5000:+0:Backstab
+#C:a:k:-13900:+1200:Hafted-mastery
+#C:a:k:-2800:+900:Necromancy
+#C:a:k:-6800:+350:Symbiosis
+#C:a:k:-3800:+800:Combat
+#C:a:k:-7800:+400:Mindcraft
+#C:a:k:-5400:+640:Thaumaturgy
+#C:a:k:-8200:+400:Meta
 
 C:a:N:Random priest
 C:a:D:Priest with randomized skills
