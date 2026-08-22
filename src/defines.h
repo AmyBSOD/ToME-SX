@@ -4587,6 +4587,15 @@
 #define RBE_INERTIA     38
 #define RBE_NEXUS       39
 #define RBE_ETHER       40
+#define RBE_ICE         41
+#define RBE_WATER       42
+#define RBE_PLASMA      43
+#define RBE_DARK        44
+#define RBE_AMEBA       45
+#define RBE_VENOM       46
+#define RBE_SOUND       47
+
+#define RBE_RANDOM      48 /* must be last --Amy */
 
 
 /*** Monster flag values (hard-coded) ***/
@@ -4907,6 +4916,8 @@
 #define RF11_BR_AMEB            0x00000008 /* Amoeba breath */
 #define RF11_BR_RADI            0x00000010 /* Radiowave breath */
 #define RF11_BR_VENO            0x00000020 /* Venom breath */
+#define RF11_BR_WATE            0x00000040 /* Water breath */
+#define RF11_BR_ICEE            0x00000080 /* Ice breath */
 
 /*
  * Monster spell flags

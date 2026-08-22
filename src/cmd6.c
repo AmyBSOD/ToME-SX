@@ -588,6 +588,28 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 		if (!p_ptr->nastytrap200 && !p_ptr->nastytrap201) set_oppose_cold(p_ptr->oppose_cold + rand_int(10) + 10);
 	}
 
+	/* Ice */
+	if (r_ptr->flags11 & RF11_BR_ICEE && brpow > 0)
+	{
+		brdam = ((brpow / 3) > 1600 ? 1600 : (brpow / 3));
+
+		msg_print("You are caught in a freezing liquid!");
+
+		/* Total Immunity */
+		if (!(p_ptr->immune_cold || (brdam <= 0)))
+		{
+			/* Take damage */
+			cold_dam(brdam, "a chilling blast");
+			harmful = TRUE;
+		}
+		o_ptr->weight = o_ptr->weight - brpow;
+		o_ptr->pval = o_ptr->weight;
+	}
+	else if (r_ptr->flags4 & RF4_BR_COLD)
+	{
+		if (!p_ptr->nastytrap200 && !p_ptr->nastytrap201) set_oppose_cold(p_ptr->oppose_cold + rand_int(10) + 10);
+	}
+
 	/* Poison */
 	if (r_ptr->flags4 & RF4_BR_POIS && brpow > 0)
 	{

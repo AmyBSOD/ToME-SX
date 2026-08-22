@@ -215,6 +215,7 @@ M:FRIENDS | SMART | FORCE_MAXHP | DROP_12
 S:1_IN_10 | BR_POIS | BR_ACID | BR_ELEC | BR_FIRE | BR_COLD | BR_NETH | BR_LITE | BR_DARK
 S:BR_CONF | BR_SOUN | BR_CHAO | BR_DISE | BR_NEXU | BR_TIME | BR_INER | BR_GRAV | BR_SHAR
 S:BR_PLAS | BR_WALL | BR_MANA | BR_NERV | BR_ETHE | BR_MIND | BR_AMEB | BR_RADI | BR_VENO
+S:BR_ICEE | BR_WATE
 
 N:22:Bouncer
 G:*:B
@@ -538,6 +539,55 @@ G:*:B
 I:+0:+0d+0:+0:+10:-30
 W:+1:25:%90:%100:A
 B:*:ETHER:+0d+0
+
+N:75:Iceman
+G:*:w
+I:+0:+0d+0:+0:+10:-30
+W:+1:25:%90:%100:A
+B:*:ICE:+0d+0
+
+N:76:Waterlord
+G:*:B
+I:+0:+0d+0:+0:+10:-30
+W:+1:25:%90:%100:A
+B:*:WATER:+0d+0
+
+N:77:Plasma Shooter
+G:*:o
+I:+0:+0d+0:+0:+10:-30
+W:+1:25:%90:%100:A
+B:*:PLASMA:+0d+0
+
+N:78:Endarker
+G:*:D
+I:+0:+0d+0:+0:+10:-30
+W:+1:25:%90:%100:A
+B:*:DARK:+0d+0
+
+N:79:Muncher
+G:*:G
+I:+0:+0d+0:+0:+10:-30
+W:+1:25:%90:%100:A
+B:*:AMEBA:+0d+0
+
+N:80:Superpoisoner
+G:*:G
+I:+0:+0d+0:+0:+10:-30
+W:+1:25:%90:%100:A
+B:*:VENOM:+0d+0
+
+N:81:Sounder
+G:*:y
+I:+0:+0d+0:+0:+10:-30
+W:+1:25:%90:%100:A
+B:*:SOUND:+0d+0
+
+N:82:Unfair Attacker
+G:*:v
+I:+0:+0d+0:+0:+10:-30
+W:+1:25:%90:%100:A
+B:*:RANDOM:+0d+0
+
 
 # N:x:ego name
 # G:x:y                 x is the char, y the attribute, * means the normal one

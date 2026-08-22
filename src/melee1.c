@@ -259,8 +259,8 @@ bool carried_make_attack_normal(int r_idx)
 		int d_side = r_ptr->blow[ap_cnt].d_side;
 
 		/* secret attack nastytrap by Amy */
-		if (p_ptr->nastytrap167 && magik(1) && (effect == RBE_HURT)) {
-			switch (randint(40)) {
+		if ((p_ptr->nastytrap167 && magik(1) && (effect == RBE_HURT)) || (effect == RBE_RANDOM) ) {
+			switch (randint(47)) {
 				default:
 				case 1:
 					effect = RBE_HURT; break;
@@ -342,6 +342,20 @@ bool carried_make_attack_normal(int r_idx)
 					effect = RBE_NEXUS; break;
 				case 40:
 					effect = RBE_ETHER; break;
+				case 41:
+					effect = RBE_ICE; break;
+				case 42:
+					effect = RBE_WATER; break;
+				case 43:
+					effect = RBE_PLASMA; break;
+				case 44:
+					effect = RBE_DARK; break;
+				case 45:
+					effect = RBE_AMEBA; break;
+				case 46:
+					effect = RBE_VENOM; break;
+				case 47:
+					effect = RBE_SOUND; break;
 			}
 		}
 
@@ -434,6 +448,9 @@ bool carried_make_attack_normal(int r_idx)
 		case RBE_LOSE_CHR:
 			power = 0;
 			break;
+		case RBE_RANDOM:
+			power = 0;
+			break;
 		case RBE_LOSE_ALL:
 			power = 2;
 			break;
@@ -459,6 +476,27 @@ bool carried_make_attack_normal(int r_idx)
 			power = 5;
 			break;
 		case RBE_CHAOS:
+			power = 5;
+			break;
+		case RBE_ICE:
+			power = 5;
+			break;
+		case RBE_WATER:
+			power = 5;
+			break;
+		case RBE_PLASMA:
+			power = 5;
+			break;
+		case RBE_DARK:
+			power = 5;
+			break;
+		case RBE_AMEBA:
+			power = 5;
+			break;
+		case RBE_VENOM:
+			power = 5;
+			break;
+		case RBE_SOUND:
 			power = 5;
 			break;
 		case RBE_SHARDS:
@@ -1616,6 +1654,175 @@ bool carried_make_attack_normal(int r_idx)
 					break;
 				}
 
+			case RBE_ICE:
+				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
+					if (!p_ptr->resist_shard || p_ptr->nastytrap94 || (rand_int(3) == 0) )
+					{
+						(void)set_cut(p_ptr->cut + damroll(5, 8));
+					}
+					if (!p_ptr->resist_sound || (rand_int(3) == 0) )
+					{
+						(void)set_stun(p_ptr->stun + randint(15));
+					}
+
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					cold_dam(damage, ddesc);
+
+					break;
+				}
+
+			case RBE_WATER:
+				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
+					if ((!p_ptr->resist_sound || (rand_int(3) == 0)) && (!p_ptr->resist_water || (rand_int(7) == 1) ) )
+					{
+						set_stun(p_ptr->stun + randint(40));
+					}
+					if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
+					{
+						set_confused(p_ptr->confused + randint(5) + 5);
+					}
+
+					if (randint(5) == 1 && (!p_ptr->resist_water || p_ptr->nastytrap33 || (rand_int(13) == 1) ) )
+					{
+						if (p_ptr->nastytrap33 || !p_ptr->resist_water || !p_ptr->plr_invprot) inven_damage(set_cold_destroy, 3);
+					}
+
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					take_hit(damage, ddesc);
+
+					break;
+				}
+
+			case RBE_PLASMA:
+				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
+					if (!(p_ptr->resist_sound || p_ptr->resist_plasma) || (rand_int(3) == 0) )
+					{
+						int k = (randint((damage > 40) ? 35 : (damage * 3 / 4 + 5)));
+						(void)set_stun(p_ptr->stun + k);
+					}
+
+					if (!(p_ptr->resist_fire || p_ptr->oppose_fire || p_ptr->immune_fire) || p_ptr->nastytrap33)
+					{
+						inven_damage(set_acid_destroy, 3);
+					}
+
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					take_hit(damage, ddesc);
+
+					break;
+				}
+
+			case RBE_DARK:
+				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
+					if (!p_ptr->blind && !p_ptr->resist_dark && (!p_ptr->resist_blind || p_ptr->nastytrap29 || (rand_int(100) < 5) ) )
+					{
+						(void)set_blind(p_ptr->blind + randint(5) + 2);
+					}
+
+					msg_print("Darkness surrounds you.");
+					(void)unlite_area(0, 3);
+
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					take_hit(damage, ddesc);
+
+					break;
+				}
+
+			case RBE_AMEBA:
+				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
+					msg_print("You feel hungry.");
+					set_food(p_ptr->food - (damage * randint(5)) );
+
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					take_hit(damage, ddesc);
+
+					break;
+				}
+
+			case RBE_VENOM:
+				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					take_hit(damage, ddesc);
+
+					if ( (!(p_ptr->oppose_pois && p_ptr->resist_pois) && !p_ptr->immune_pois) || p_ptr->nastytrap33)
+					{
+						int inv = (damage < 30) ? 1 : (damage < 60) ? 2 : 3;
+
+						inven_damage(set_pois_destroy, inv);
+					}
+
+					/* Take "poison" effect */
+					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
+					{
+						if (set_poisoned(p_ptr->poisoned + randint(rlev) + 5))
+						{
+							obvious = TRUE;
+						}
+					}
+
+					break;
+				}
+
+			case RBE_SOUND:
+				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
+					if (!p_ptr->resist_sound)
+					{
+						int k = (randint((damage > 90) ? 35 : (damage / 3 + 5)));
+						(void)set_stun(p_ptr->stun + k);
+					}
+					if ((!p_ptr->resist_sound) || p_ptr->nastytrap33 || (randint(13) == 1))
+					{
+						if (!p_ptr->resist_sound || p_ptr->nastytrap33 || !p_ptr->plr_invprot) inven_damage(set_cold_destroy, 2);
+					}
+
+					/* Take damage */
+					carried_monster_hit = TRUE;
+					take_hit(damage, ddesc);
+
+					break;
+				}
+
 			case RBE_INERTIA:
 				{
 					/* AC reduces damage only if you have damage resistance (by Amy) */
@@ -2021,8 +2228,8 @@ bool make_attack_normal(int m_idx, byte divis)
 		int d_side = m_ptr->blow[ap_cnt].d_side;
 
 		/* secret attack nastytrap by Amy */
-		if (p_ptr->nastytrap167 && magik(1) && (effect == RBE_HURT)) {
-			switch (randint(40)) {
+		if ((p_ptr->nastytrap167 && magik(1) && (effect == RBE_HURT)) || (effect == RBE_RANDOM) ) {
+			switch (randint(47)) {
 				default:
 				case 1:
 					effect = RBE_HURT; break;
@@ -2104,6 +2311,20 @@ bool make_attack_normal(int m_idx, byte divis)
 					effect = RBE_NEXUS; break;
 				case 40:
 					effect = RBE_ETHER; break;
+				case 41:
+					effect = RBE_ICE; break;
+				case 42:
+					effect = RBE_WATER; break;
+				case 43:
+					effect = RBE_PLASMA; break;
+				case 44:
+					effect = RBE_DARK; break;
+				case 45:
+					effect = RBE_AMEBA; break;
+				case 46:
+					effect = RBE_VENOM; break;
+				case 47:
+					effect = RBE_SOUND; break;
 			}
 		}
 
@@ -2196,6 +2417,9 @@ bool make_attack_normal(int m_idx, byte divis)
 		case RBE_LOSE_CHR:
 			power = 0;
 			break;
+		case RBE_RANDOM:
+			power = 0;
+			break;
 		case RBE_LOSE_ALL:
 			power = 2;
 			break;
@@ -2221,6 +2445,27 @@ bool make_attack_normal(int m_idx, byte divis)
 			power = 5;
 			break;
 		case RBE_CHAOS:
+			power = 5;
+			break;
+		case RBE_ICE:
+			power = 5;
+			break;
+		case RBE_WATER:
+			power = 5;
+			break;
+		case RBE_PLASMA:
+			power = 5;
+			break;
+		case RBE_DARK:
+			power = 5;
+			break;
+		case RBE_AMEBA:
+			power = 5;
+			break;
+		case RBE_VENOM:
+			power = 5;
+			break;
+		case RBE_SOUND:
 			power = 5;
 			break;
 		case RBE_SHARDS:
@@ -3810,6 +4055,182 @@ bool make_attack_normal(int m_idx, byte divis)
 
 					if (!p_ptr->resist_shard || p_ptr->nastytrap94) {
 						(void)set_cut(p_ptr->cut + damage);
+					}
+
+					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
+					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
+
+					break;
+				}
+
+			case RBE_ICE:
+				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
+					if (!p_ptr->resist_shard || p_ptr->nastytrap94 || (rand_int(3) == 0) )
+					{
+						(void)set_cut(p_ptr->cut + damroll(5, 8));
+					}
+					if (!p_ptr->resist_sound || (rand_int(3) == 0) )
+					{
+						(void)set_stun(p_ptr->stun + randint(15));
+					}
+
+					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
+					cold_dam(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
+
+					break;
+				}
+
+			case RBE_WATER:
+				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
+					if ((!p_ptr->resist_sound || (rand_int(3) == 0)) && (!p_ptr->resist_water || (rand_int(7) == 1) ) )
+					{
+						set_stun(p_ptr->stun + randint(40));
+					}
+					if (!p_ptr->resist_conf || p_ptr->nastytrap28 || (rand_int(100) < 5) )
+					{
+						set_confused(p_ptr->confused + randint(5) + 5);
+					}
+
+					if (randint(5) == 1 && (!p_ptr->resist_water || p_ptr->nastytrap33 || (rand_int(13) == 1) ) )
+					{
+						if (p_ptr->nastytrap33 || !p_ptr->resist_water || !p_ptr->plr_invprot) inven_damage(set_cold_destroy, 3);
+					}
+
+					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
+					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
+
+					break;
+				}
+
+			case RBE_PLASMA:
+				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
+					if (!(p_ptr->resist_sound || p_ptr->resist_plasma) || (rand_int(3) == 0) )
+					{
+						int k = (randint((damage > 40) ? 35 : (damage * 3 / 4 + 5)));
+						(void)set_stun(p_ptr->stun + k);
+					}
+
+					if (!(p_ptr->resist_fire || p_ptr->oppose_fire || p_ptr->immune_fire) || p_ptr->nastytrap33)
+					{
+						inven_damage(set_acid_destroy, 3);
+					}
+
+					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
+					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
+
+					break;
+				}
+
+			case RBE_DARK:
+				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
+					if (!p_ptr->blind && !p_ptr->resist_dark && (!p_ptr->resist_blind || p_ptr->nastytrap29 || (rand_int(100) < 5) ) )
+					{
+						(void)set_blind(p_ptr->blind + randint(5) + 2);
+					}
+
+					msg_print("Darkness surrounds you.");
+					(void)unlite_area(0, 3);
+
+					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
+					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
+
+					break;
+				}
+
+			case RBE_AMEBA:
+				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
+					msg_print("You feel hungry.");
+					set_food(p_ptr->food - (damage * randint(5)) );
+
+					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
+					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
+
+					break;
+				}
+
+			case RBE_VENOM:
+				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
+					/* Take damage */
+					if (r_ptr->flags7 & RF7_MORTAL) lifesave_no_mortal = TRUE;
+					take_hit(damage, ddesc);
+					if (!death) lifesave_no_mortal = FALSE;
+
+					if ( (!(p_ptr->oppose_pois && p_ptr->resist_pois) && !p_ptr->immune_pois) || p_ptr->nastytrap33)
+					{
+						int inv = (damage < 30) ? 1 : (damage < 60) ? 2 : 3;
+
+						inven_damage(set_pois_destroy, inv);
+					}
+
+					/* Take "poison" effect */
+					if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
+					{
+						if (set_poisoned(p_ptr->poisoned + randint(rlev) + 5))
+						{
+							obvious = TRUE;
+						}
+					}
+
+					break;
+				}
+
+			case RBE_SOUND:
+				{
+					/* AC reduces damage only if you have damage resistance (by Amy) */
+					if (p_ptr->resist_dmg && !p_ptr->nastytrap184) {
+						damage -= (damage * ((ac < 150) ? ac : 150) / 250);
+					}
+
+					if (!p_ptr->resist_sound)
+					{
+						int k = (randint((damage > 90) ? 35 : (damage / 3 + 5)));
+						(void)set_stun(p_ptr->stun + k);
+					}
+					if ((!p_ptr->resist_sound) || p_ptr->nastytrap33 || (randint(13) == 1))
+					{
+						if (!p_ptr->resist_sound || p_ptr->nastytrap33 || !p_ptr->plr_invprot) inven_damage(set_cold_destroy, 2);
 					}
 
 					/* Take damage */

@@ -121,6 +121,14 @@ static cptr r_info_blow_effect[] =
 	"INERTIA",
 	"NEXUS",
 	"ETHER",
+	"ICE",
+	"WATER",
+	"PLASMA",
+	"DARK",
+	"AMEBA",
+	"VENOM",
+	"SOUND",
+	"RANDOM",
 	NULL
 };
 
@@ -528,8 +536,8 @@ static cptr r_info_flags11[] =
 	"BR_AMEB",
 	"BR_RADI",
 	"BR_VENO",
-	"XXX9X6",
-	"XXX9X7",
+	"BR_WATE",
+	"BR_ICEE",
 	"XXX9X8",
 	"XXX9X9",
 	"XXX9X10",

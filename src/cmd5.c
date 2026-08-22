@@ -2708,6 +2708,25 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 			break;
 		}
 
+		/* BR_WATE */
+	case 102:
+		{
+			if (!get_aim_dir(&dir)) break;
+
+			fire_ball(GF_WATER, dir, p_ptr->lev * 4, rad);
+
+			break;
+		}
+
+		/* BR_ICEE */
+	case 103:
+		{
+			if (!get_aim_dir(&dir)) break;
+
+			fire_ball(GF_ICE, dir, p_ptr->lev * 5, rad);
+
+			break;
+		}
 		/* BA_METE */
 	case 128:
 		{

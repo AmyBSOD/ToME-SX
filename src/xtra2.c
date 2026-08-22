@@ -6842,6 +6842,27 @@ void monster_death(int m_idx)
 			case RBE_CHAOS:
 				typ = GF_CHAOS;
 				break;
+			case RBE_ICE:
+				typ = GF_ICE;
+				break;
+			case RBE_DARK:
+				typ = GF_DARK;
+				break;
+			case RBE_PLASMA:
+				typ = GF_PLASMA;
+				break;
+			case RBE_WATER:
+				typ = GF_WATER;
+				break;
+			case RBE_AMEBA:
+				typ = GF_AMOEBAE;
+				break;
+			case RBE_VENOM:
+				typ = GF_UNBREATH;
+				break;
+			case RBE_SOUND:
+				typ = GF_SOUND;
+				break;
 			case RBE_SHARDS:
 				typ = GF_SHARDS;
 				break;
@@ -6858,6 +6879,7 @@ void monster_death(int m_idx)
 				typ = GF_MISSILE;
 				break;
 			case RBE_RAGNAROK:
+			case RBE_RANDOM:
 				typ = GF_MISSILE;
 				break;
 			}
@@ -7294,7 +7316,7 @@ bool mon_take_hit(int m_idx, int dam, bool *fear, cptr note)
 		}
 
 		/* Nienna likes when monsters with breath attacks are destroyed */
-		if ((r_ptr->flags4 & RF4_BR_ACID) || (r_ptr->flags4 & RF4_BR_ELEC) || (r_ptr->flags4 & RF4_BR_FIRE) || (r_ptr->flags4 & RF4_BR_COLD) || (r_ptr->flags4 & RF4_BR_POIS) || (r_ptr->flags4 & RF4_BR_NETH) || (r_ptr->flags4 & RF4_BR_LITE) || (r_ptr->flags4 & RF4_BR_DARK) || (r_ptr->flags4 & RF4_BR_CONF) || (r_ptr->flags4 & RF4_BR_SOUN) || (r_ptr->flags4 & RF4_BR_CHAO) || (r_ptr->flags4 & RF4_BR_DISE) || (r_ptr->flags4 & RF4_BR_NEXU) || (r_ptr->flags4 & RF4_BR_TIME) || (r_ptr->flags4 & RF4_BR_INER) || (r_ptr->flags4 & RF4_BR_GRAV) || (r_ptr->flags4 & RF4_BR_SHAR) || (r_ptr->flags4 & RF4_BR_PLAS) || (r_ptr->flags4 & RF4_BR_WALL) || (r_ptr->flags4 & RF4_BR_MANA) || (r_ptr->flags4 & RF4_BR_NUKE) || (r_ptr->flags4 & RF4_BR_DISI) || (r_ptr->flags11 & RF11_BR_NERV) || (r_ptr->flags11 & RF11_BR_AMEB) || (r_ptr->flags11 & RF11_BR_RADI) || (r_ptr->flags11 & RF11_BR_VENO) || (r_ptr->flags11 & RF11_BR_MIND) || (r_ptr->flags11 & RF11_BR_ETHE))
+		if ((r_ptr->flags4 & RF4_BR_ACID) || (r_ptr->flags4 & RF4_BR_ELEC) || (r_ptr->flags4 & RF4_BR_FIRE) || (r_ptr->flags4 & RF4_BR_COLD) || (r_ptr->flags4 & RF4_BR_POIS) || (r_ptr->flags4 & RF4_BR_NETH) || (r_ptr->flags4 & RF4_BR_LITE) || (r_ptr->flags4 & RF4_BR_DARK) || (r_ptr->flags4 & RF4_BR_CONF) || (r_ptr->flags4 & RF4_BR_SOUN) || (r_ptr->flags4 & RF4_BR_CHAO) || (r_ptr->flags4 & RF4_BR_DISE) || (r_ptr->flags4 & RF4_BR_NEXU) || (r_ptr->flags4 & RF4_BR_TIME) || (r_ptr->flags4 & RF4_BR_INER) || (r_ptr->flags4 & RF4_BR_GRAV) || (r_ptr->flags4 & RF4_BR_SHAR) || (r_ptr->flags4 & RF4_BR_PLAS) || (r_ptr->flags4 & RF4_BR_WALL) || (r_ptr->flags4 & RF4_BR_MANA) || (r_ptr->flags4 & RF4_BR_NUKE) || (r_ptr->flags4 & RF4_BR_DISI) || (r_ptr->flags11 & RF11_BR_NERV) || (r_ptr->flags11 & RF11_BR_AMEB) || (r_ptr->flags11 & RF11_BR_RADI) || (r_ptr->flags11 & RF11_BR_VENO) || (r_ptr->flags11 & RF11_BR_MIND) || (r_ptr->flags11 & RF11_BR_ETHE) || (r_ptr->flags11 & RF11_BR_WATE) || (r_ptr->flags11 & RF11_BR_ICEE) )
 		{
 			int inc = m_ptr->level * 2;
 			PRAY_GOD(GOD_NIENNA) {

@@ -2345,8 +2345,32 @@ static void spoil_mon_info(cptr fname)
 			case RBE_INERTIA:
 				q = "slow";
 				break;
+			case RBE_ICE:
+				q = "shoot ice";
+				break;
+			case RBE_WATER:
+				q = "squirt water";
+				break;
+			case RBE_PLASMA:
+				q = "shoot plasma";
+				break;
+			case RBE_DARK:
+				q = "cause darkness";
+				break;
+			case RBE_AMEBA:
+				q = "cause hunger";
+				break;
+			case RBE_VENOM:
+				q = "inject strong poison";
+				break;
+			case RBE_SOUND:
+				q = "make noise";
+				break;
 			case RBE_NEXUS:
 				q = "warp";
+				break;
+			case RBE_RANDOM:
+				q = "cause random effects";
 				break;
 			case RBE_ETHER:
 				q = "contaminate";

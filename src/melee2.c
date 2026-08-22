@@ -802,7 +802,7 @@ static int choose_attack_spell(int m_idx, int spells[], int num)
 
 	/* secret spell nastytrap by Amy: allow monster to cast any random spell, whether or not it actually has the spell in question */
 	if (p_ptr->nastytrap168 && magik(1)) {
-		switch (randint(103)) {
+		switch (randint(105)) {
 			default:
 			case 1:
 				return 96; /* RF4_SHRIEK */
@@ -1010,6 +1010,10 @@ static int choose_attack_spell(int m_idx, int spells[], int num)
 				return 320 + 5; /* RF11_BR_VENO */
 			case 103:
 				return 352 + 0; /* RF12_BA_METE */
+			case 104:
+				return 320 + 6; /* RF11_BR_WATE */
+			case 105:
+				return 320 + 7; /* RF11_BR_ICEE */
 		}
 	}
 
@@ -3722,6 +3726,60 @@ static bool monst_spell_monst(int m_idx)
 				sound(SOUND_BREATH);
 
 				monst_breath_monst(m_idx, y, x, GF_UNBREATH, breathdamage, 0);
+
+				break;
+			}
+			/* RF11_BR_WATE */
+		case 320 + 6:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 300) breathdamage = 300;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 300) breathdamage = 300;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (!see_either) monster_msg("You hear breathing noise.");
+				else if (blind) monster_msg("%^s breathes.", m_name);
+				else monster_msg("%^s breathes water at %s.", m_name, t_name);
+				sound(SOUND_BREATH);
+
+				monst_breath_monst(m_idx, y, x, GF_WATER, breathdamage, 0);
+
+				break;
+			}
+			/* RF11_BR_ICEE */
+		case 320 + 7:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (!see_either) monster_msg("You hear breathing noise.");
+				else if (blind) monster_msg("%^s breathes.", m_name);
+				else monster_msg("%^s breathes ice at %s.", m_name, t_name);
+				sound(SOUND_BREATH);
+
+				monst_breath_monst(m_idx, y, x, GF_ICE, breathdamage, 0);
 
 				break;
 			}
@@ -6790,6 +6848,69 @@ bool make_attack_spell(int m_idx)
 				update_smart_learn(m_idx, DRS_POIS);
 				break;
 			}
+			/* RF11_BR_WATE */
+		case 320 + 6:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 6;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 300) breathdamage = 300;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 8;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 300) breathdamage = 300;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
+				if (blind) msg_format("%^s breathes.", m_name);
+				else msg_format("%^s breathes water.", m_name);
+
+				breath(m_idx, GF_WATER, breathdamage, 0);
+
+				break;
+			}
+			/* RF11_BR_ICEE */
+		case 320 + 7:
+			{
+				int breathdamage;
+				if (p_ptr->nastytrap143) {
+					breathdamage = m_ptr->hp / 3;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
+				} else {
+					breathdamage = m_ptr->hp / 4;
+					if (!p_ptr->nastytrap150) {
+						if (breathdamage > 1600) breathdamage = 1600;
+					}
+				}
+				if (breathdamage > breathmax) breathdamage = breathmax;
+
+				disturb(1, 0);
+
+				if (druidsave) {
+					msg_format("%^s coughs.", m_name);
+					break;
+				}
+
+				if (blind) msg_format("%^s breathes.", m_name);
+				else msg_format("%^s breathes ice.", m_name);
+
+				breath(m_idx, GF_ICE, breathdamage, 0);
+
+				update_smart_learn(m_idx, DRS_COLD);
+				break;
+			}
 			/* RF12_BA_METE */
 		case 352 + 0:
 			{
@@ -7934,6 +8055,9 @@ static bool monst_attack_monst(int m_idx, int t_idx)
 		case RBE_LOSE_CHR:
 			power = 0;
 			break;
+		case RBE_RANDOM:
+			power = 0;
+			break;
 		case RBE_LOSE_ALL:
 			power = 2;
 			break;
@@ -7962,6 +8086,27 @@ static bool monst_attack_monst(int m_idx, int t_idx)
 			power = 5;
 			break;
 		case RBE_SHARDS:
+			power = 5;
+			break;
+		case RBE_ICE:
+			power = 5;
+			break;
+		case RBE_WATER:
+			power = 5;
+			break;
+		case RBE_PLASMA:
+			power = 5;
+			break;
+		case RBE_DARK:
+			power = 5;
+			break;
+		case RBE_AMEBA:
+			power = 5;
+			break;
+		case RBE_VENOM:
+			power = 5;
+			break;
+		case RBE_SOUND:
 			power = 5;
 			break;
 		case RBE_INERTIA:
@@ -8291,6 +8436,7 @@ static bool monst_attack_monst(int m_idx, int t_idx)
 			case RBE_LOSE_CHR:
 			case RBE_LOSE_ALL:
 			case RBE_PARASITE:
+			case RBE_RANDOM:
 				{
 					break;
 				}
@@ -8345,6 +8491,41 @@ static bool monst_attack_monst(int m_idx, int t_idx)
 			case RBE_ETHER:
 				{
 					pt = GF_ETHER;
+					break;
+				}
+			case RBE_ICE:
+				{
+					pt = GF_ICE;
+					break;
+				}
+			case RBE_WATER:
+				{
+					pt = GF_WATER;
+					break;
+				}
+			case RBE_PLASMA:
+				{
+					pt = GF_PLASMA;
+					break;
+				}
+			case RBE_DARK:
+				{
+					pt = GF_DARK;
+					break;
+				}
+			case RBE_AMEBA:
+				{
+					pt = GF_AMOEBAE;
+					break;
+				}
+			case RBE_VENOM:
+				{
+					pt = GF_UNBREATH;
+					break;
+				}
+			case RBE_SOUND:
+				{
+					pt = GF_SOUND;
 					break;
 				}
 			default:

@@ -13981,9 +13981,9 @@ F:DROP_CORPSE | DROP_SKELETON |
 F:ANIMAL | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
 S:1_IN_5 | 
-S:BR_ACID | BR_FIRE | BR_COLD | BR_ELEC | BR_POIS | 
+S:BR_ACID | BR_FIRE | BR_COLD | BR_ELEC | BR_POIS | BR_ICEE | 
 S:BR_LITE | BR_DARK | BR_SOUN | BR_CONF | BR_CHAO | BR_SHAR | 
-S:BR_NETH | BR_DISE | BR_WALL | BR_INER | BR_TIME | 
+S:BR_NETH | BR_DISE | BR_WALL | BR_INER | BR_TIME | BR_WATE | 
 S:BR_GRAV | BR_PLAS | BR_NEXU | BR_NERV | BR_MIND | BR_ETHE |
 D:A shifting, swirling form. It seems to be all colors and sizes and 
 D:shapes, though the dominant form is that of a huge dog. You feel very 
@@ -14793,8 +14793,8 @@ S:1_IN_4 |
 S:S_HI_DRAGON | S_DRAGON | S_KIN | 
 S:BR_ACID | BR_ELEC | BR_FIRE |
 S:BR_COLD | BR_POIS | BR_NETH | BR_LITE | BR_DARK |
-S:BR_CONF | BR_SOUN | BR_CHAO | BR_DISE | BR_NEXU |
-S:BR_TIME | BR_INER | BR_GRAV | BR_SHAR | BR_PLAS |
+S:BR_CONF | BR_SOUN | BR_CHAO | BR_DISE | BR_NEXU | BR_WATE | 
+S:BR_TIME | BR_INER | BR_GRAV | BR_SHAR | BR_PLAS | BR_ICEE | 
 S:BR_WALL | BR_MANA | BR_DISI | BR_NERV | BR_MIND | BR_ETHE |
 D:The mightiest of all dragonkind, a great wyrm of power is seldom 
 D:encountered in our world. It can crush stars with its might. 
@@ -22249,9 +22249,9 @@ F:DROP_CORPSE | DROP_SKELETON |
 F:ANIMAL | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
 F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
 S:1_IN_5 | 
-S:BR_ACID | BR_FIRE | BR_COLD | BR_ELEC | BR_POIS | 
+S:BR_ACID | BR_FIRE | BR_COLD | BR_ELEC | BR_POIS | BR_ICEE | 
 S:BR_LITE | BR_DARK | BR_SOUN | BR_CONF | BR_CHAO | BR_SHAR | 
-S:BR_NETH | BR_DISE | BR_WALL | BR_INER | BR_TIME | 
+S:BR_NETH | BR_DISE | BR_WALL | BR_INER | BR_TIME | BR_WATE | 
 S:BR_GRAV | BR_PLAS | BR_NEXU | BR_NERV | BR_MIND | BR_ETHE | 
 S:MULTIPLY
 D:A shifting, swirling form. It seems to be all colors and sizes and 
@@ -30165,7 +30165,7 @@ F:KILL_TREES | CAN_SWIM | NAZGUL | STUPID | WEIRD_MIND | REGENERATE |
 F:MOVE_BODY | KILL_ITEM | EVIL | IM_COLD | NO_STUN | NO_SLEEP | RES_MIND | 
 S:1_IN_2 | 
 S:SHRIEK | BR_ACID | BR_ELEC | BR_FIRE | BR_COLD | BR_SOUN | BR_CHAO | BR_DISE | 
-S:BR_SHAR | S_BUG | S_RNG | 
+S:BR_SHAR | S_BUG | S_RNG | BR_WATE | 
 D:This bitch wants to destroy you, and everything that you own. If I were you 
 D:I wouldn't even get anywhere near her... 
 
@@ -58453,7 +58453,7 @@ S:1_IN_2 |
 S:BR_ACID | BR_ELEC | BR_FIRE | BR_COLD | BR_POIS | BR_PLAS |
 S:BR_LITE | BR_DARK | BR_CONF | BR_SOUN | BR_SHAR | BR_INER |
 S:BR_GRAV | BR_WALL | BR_NEXU | BR_NETH | BR_CHAO | BR_DISE |
-S:BR_TIME | BR_MANA | BR_NERV | BR_MIND | BR_ETHE | 
+S:BR_TIME | BR_MANA | BR_NERV | BR_MIND | BR_ETHE | BR_ICEE | BR_WATE | 
 S:SCARE | BLIND | CONF |
 D:An awesome wyrm of pure magic.  It seems to be all colors and sizes and
 D: shapes, though the dominant form is that of a great dragon.
@@ -59772,7 +59772,7 @@ S:1_IN_2 |
 S:BR_ACID | BR_ELEC | BR_FIRE | BR_COLD | BR_POIS | BR_PLAS |
 S:BR_LITE | BR_DARK | BR_CONF | BR_SOUN | BR_SHAR | BR_INER |
 S:BR_GRAV | BR_WALL | BR_NEXU | BR_NETH | BR_CHAO | BR_DISE |
-S:BR_TIME | BR_NERV | BR_MIND | BR_ETHE | 
+S:BR_TIME | BR_NERV | BR_MIND | BR_ETHE | BR_ICEE | BR_WATE | 
 S:MIND_BLAST | CAUSE_1 | BLIND | CONF | SLOW | HOLD |
 S:S_HI_DRAGON |
 D:A gigantic wyrm, in command of forces elemental and ethereal.  You
@@ -70263,7 +70263,7 @@ S:BR_ELEC | BR_FIRE | BR_COLD | BR_POIS | BR_NETH | BR_LITE | BR_DARK | BR_CONF 
 S:BR_SOUN | BR_CHAO | BR_DISE | BR_NEXU | BR_TIME | BR_INER | BR_GRAV | BR_SHAR |
 S:BR_PLAS | BR_WALL | BR_MANA | BA_NUKE | BR_NUKE | BA_CHAO | BR_DISI | BA_ACID |
 S:BA_ELEC | BA_FIRE | BA_COLD | BA_POIS | BA_NETH | BA_WATE | BA_MANA | BA_DARK |
-S:BR_NERV | BR_MIND | BR_ETHE | 
+S:BR_NERV | BR_MIND | BR_ETHE | BR_ICEE | BR_WATE | 
 S:DRAIN_MANA | MIND_BLAST | BRAIN_SMASH | CAUSE_1 | CAUSE_2 | CAUSE_3 | CAUSE_4 |
 S:BO_ACID | BO_ELEC | BO_FIRE | BO_COLD | BO_NETH | BO_WATE | BO_MANA |
 S:BO_PLAS | BO_ICEE | MISSILE | BLIND | CONF | SLOW | HOLD | HASTE | HAND_DOOM |
@@ -70575,7 +70575,7 @@ F:BASEANGBAND |
 F:IM_COLD | IM_ELEC | IM_POIS | POWERFUL |
 F:NO_SLEEP | NO_CONF | OPEN_DOOR | CAN_FLY | REGENERATE |
 S:1_IN_3 |
-S:BR_COLD | BR_POIS | BA_COLD | BO_ICEE |
+S:BR_COLD | BR_POIS | BA_COLD | BO_ICEE | BR_ICEE | 
 S:CONF | SCARE | HOLD | S_DEMON
 D:Apparently, this is a unique ice demon.
 
@@ -70946,7 +70946,7 @@ F:DRAGON | GOOD | IM_COLD | NO_CONF | NO_SLEEP | AURA_COLD |
 F:RES_WATE | NO_STUN | 
 F:DROP_CORPSE | 
 S:1_IN_3 |
-S:BRAIN_SMASH | BR_COLD | BA_COLD
+S:BRAIN_SMASH | BR_COLD | BA_COLD | BR_ICEE | 
 D:The oldest and wisest of the ancient dragons of Lodoss, it protects the land from 
 D:its evil counterparts.
 
@@ -73443,7 +73443,7 @@ F:MORTAL | BASEANGBAND |
 F:IM_COLD | NO_CONF | NO_SLEEP | SUSCEP_FIRE
 F:DROP_SKELETON | DROP_CORPSE | 
 S:1_IN_3 |
-S:BR_COLD | BO_ICEE | HEAL | TELE_TO | BLINK | ARROW_4
+S:BR_COLD | BO_ICEE | HEAL | TELE_TO | BLINK | ARROW_4 | BR_ICEE | 
 D:An ancient giant nearly twenty feet tall. The air around 
 D:you suddenly grows chill.
 
@@ -91105,7 +91105,7 @@ F:BASH_DOOR | POWERFUL | IM_COLD | WILD_MOUNTAIN |
 F:IM_POIS | RES_WALL | RES_GRAV | RES_SHAR | RES_NEXU |
 F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 S:1_IN_7
-S:BR_COLD | BO_ICEE
+S:BR_ICEE | BO_ICEE
 D:This elemental breathes ice. 
 
 N:5239:Grass Elemental
@@ -93076,7 +93076,7 @@ F:KILL_TREES | CAN_SWIM | STUPID | WEIRD_MIND | REGENERATE |
 F:MOVE_BODY | KILL_ITEM | EVIL | IM_COLD | NO_STUN | NO_SLEEP | RES_MIND | 
 S:1_IN_2 | 
 S:SHRIEK | BR_ACID | BR_ELEC | BR_FIRE | BR_COLD | BR_SOUN | BR_CHAO | BR_DISE | 
-S:BR_SHAR | S_BUG | S_RNG | 
+S:BR_SHAR | S_BUG | S_RNG | BR_WATE | 
 D:This bitch wants to destroy you, and everything that you own. 
 
 N:5354:Manola
@@ -96117,6 +96117,7 @@ F:RES_LITE | RES_NERV | RES_ETHE |
 S:1_IN_2 | 
 S:SHRIEK | BR_ACID | BR_ELEC | BR_FIRE | BR_COLD | BR_SOUN | BR_CHAO | BR_DISE | 
 S:BR_SHAR | S_BUG | S_RNG | ROCKET | BR_GRAV | BR_PLAS | BR_VENO | BA_METE | 
+S:BR_WATE | 
 D:Ha, ha, ha, this bitch is a ringwraith and will totally screw you over. 
 
 N:5518:Marika
@@ -96138,6 +96139,7 @@ F:RES_LITE | RES_NERV | RES_ETHE |
 S:1_IN_2 | 
 S:SHRIEK | BR_ACID | BR_ELEC | BR_FIRE | BR_COLD | BR_SOUN | BR_CHAO | BR_DISE | 
 S:BR_SHAR | S_BUG | S_RNG | ROCKET | BR_GRAV | BR_PLAS | BR_VENO | BA_METE | 
+S:BR_WATE | 
 D:Ha, ha, ha, this bitch will totally screw you over. 
 
 N:5519:Sarah
@@ -98094,7 +98096,7 @@ F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_COLD |
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | KILL_WALL | RES_WATE | 
 F:RES_PLAS | NO_FEAR | NO_SLEEP | RES_LITE | 
 S:1_IN_4
-S:BR_COLD | BR_FIRE | BR_ELEC | BR_PLAS | BA_METE | 
+S:BR_ICEE | BR_FIRE | BR_ELEC | BR_PLAS | BA_METE | 
 D:You may think these girl boots are cute, but they're actually 
 D:capable fighters. 
 
@@ -98184,7 +98186,7 @@ F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_COLD | STUPID |
 F:SUSCEP_ACID | RES_WATE | NO_STUN | RES_TIME | RES_ETHE | 
 F:RES_MIND | REFLECTING | ELDRITCH_HORROR | 
 S:1_IN_5
-S:BR_COLD | BO_ICEE | BO_COLD | BA_COLD | S_MONSTERS | 
+S:BR_ICEE | BO_ICEE | BO_COLD | BA_COLD | S_MONSTERS | 
 D:The ice queen Vera has trained her bright cyan sneakers, and now 
 D:they can use the "Sheer Cold" move to freeze you solid. Be careful 
 D:or you'll turn into an ice sculpture and shatter into a million 
@@ -101500,6 +101502,7 @@ S:BR_ACID | BR_FIRE | BR_COLD | BR_ELEC | BR_VENO | BR_RADI |
 S:BR_LITE | BR_DARK | BR_SOUN | BR_CONF | BR_CHAO | BR_SHAR | 
 S:BR_NETH | BR_DISE | BR_WALL | BR_INER | BR_TIME | BR_AMEB | 
 S:BR_GRAV | BR_PLAS | BR_NEXU | BR_NERV | BR_MIND | BR_ETHE |
+S:BR_ICEE | BR_WATE | 
 D:This superpowered mold will pwn the crap out of you. 
 
 N:5801:Rocket mushroom patch
@@ -101602,7 +101605,7 @@ F:KILL_WALL | WEIRD_MIND | BASH_DOOR |
 F:EVIL | ANIMAL | IM_COLD | IM_POIS | AURA_COLD | 
 F:DROP_CORPSE | BASEANGBAND |
 S:1_IN_6 |
-S:BR_COLD | BO_ICEE | 
+S:BR_ICEE | BO_ICEE | 
 D:A monstrous centipede with a frosty aura. 
 
 N:5808:Black carrion crawler
@@ -103062,7 +103065,7 @@ F:FORCE_MAXHP | NO_CONF | NO_FEAR | NO_SLEEP | CHAR_MULTI |
 F:IM_ACID | IM_POIS | IM_COLD | IM_ELEC | SUSCEP_FIRE | RES_NETH | RES_TELE | 
 F:BASEANGBAND | HAS_LITE | NO_CUT
 S:1_IN_2  |
-S:BR_FIRE | BO_MANA | BR_COLD | BR_POIS | BR_CHAO | BR_DISI | BR_NUKE | 
+S:BR_FIRE | BO_MANA | BR_ICEE | BR_POIS | BR_CHAO | BR_DISI | BR_NUKE | 
 S:BO_WATE | BA_POIS | BR_NETH | HAND_DOOM | BR_MANA | BA_METE | 
 D:This animated spellbook will bombard you with the most destructive spells. 
 
@@ -106337,7 +106340,410 @@ S:BR_ETHE | BR_CONF |
 D:You absolutely hate the anti-fun squad. They constantly contaminate 
 D:you and are annoyingly hard to kill. 
 
+N:6106:Familiar
+G:b:u
+I:130:10d30:10:50:30
+W:50:1:600:200
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:PARASITE:5d8
+F:RAND_25 | CAN_FLY | IM_ELEC | RES_DARK | 
+F:ANIMAL | DROP_CORPSE |
+F:MORTAL | BASEANGBAND
+D:A rather deceptive bat. 
 
+N:6107:Familiar
+G:b:u
+I:130:10d30:10:50:30
+W:50:20:600:200
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:PARASITE:5d8
+F:RAND_25 | CAN_FLY | IM_ELEC | RES_DARK | 
+F:ANIMAL | DROP_CORPSE | AI_ANNOY
+F:MORTAL | BASEANGBAND
+S:MULTIPLY
+D:A rather deceptive bat. 
+
+N:6108:Big boar
+G:c:r
+I:115:20d70:0:45:20
+W:30:1:800:500
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:BUTT:HURT:8d10
+B:BUTT:HURT:8d10
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | WILD_TOO | 
+F:WILD_GRASS | FORCE_SLEEP | WEIRD_MIND | WILD_WOOD | 
+S:1_IN_8
+S:TELE_TO
+D:A rather dangerous wild animal. 
+
+N:6109:Destroy boar
+G:c:R
+I:121:40d120:0:65:20
+W:80:1:800:5000
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:BUTT:HURT:15d12
+B:BUTT:HURT:15d12
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | WILD_TOO | 
+F:WILD_GRASS | FORCE_SLEEP | WEIRD_MIND | WILD_WOOD | 
+S:1_IN_5
+S:TELE_TO
+D:This boar will annihilate you. 
+
+N:6110:Silky sheep
+G:c:w
+I:105:15d30:0:50:255
+W:30:1:2000:50
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:KICK:HURT:8d8
+B:KICK:HURT:8d8
+B:KICK:HURT:8d8
+B:TOUCH:PARALYZE:1d8
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | WILD_GRASS | 
+F:FRIEND | FORCE_SLEEP | WEIRD_MIND | SUSCEP_POIS | 
+D:A seemingly fluffy animal, but beware, contact with its skin 
+D:can put you to sleep. 
+
+N:6111:Electric sheep
+G:c:w
+I:111:25d60:0:60:255
+W:60:1:2000:300
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:KICK:ELEC:10d10
+B:KICK:ELEC:10d10
+B:KICK:ELEC:10d10
+B:KICK:ELEC:10d10
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | WILD_GRASS | 
+F:FRIEND | FORCE_SLEEP | WEIRD_MIND | SUSCEP_POIS | IM_ELEC | 
+F:AURA_ELEC | 
+D:This farm animal is surrounded by static electricity. 
+
+N:6112:Giant ice dragon fly
+G:F:w
+I:110:3d10:12:20:50
+W:17:2:150:60
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:ICE:1d8
+F:FORCE_SLEEP | WILD_TOO | WILD_WASTE |
+F:RAND_50 | CAN_FLY | SUSCEP_FIRE |
+F:WEIRD_MIND | BASH_DOOR | 
+F:ANIMAL | IM_COLD | 
+F:MORTAL | BASEANGBAND
+S:1_IN_10 | 
+S:BR_ICEE
+D:It is a large fly that leaves ice cubes in its wake. 
+
+N:6113:Ice vortex
+G:v:w
+I:110:12d14:100:35:0
+W:31:1:0:100
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:ICE:3d6
+F:FORCE_SLEEP | RAND_50 | AURA_COLD | COLD_BLOOD | SUSCEP_FIRE |
+F:EMPTY_MIND | BASH_DOOR | POWERFUL | CAN_FLY |
+F:IM_COLD | NO_FEAR | NO_CONF | NO_SLEEP | NONLIVING | BASEANGBAND | NO_CUT
+S:1_IN_6 | 
+S:BR_ICEE
+D:A twisting whirlpool of ice. 
+
+N:6114:Baby ice dragon
+G:d:w
+I:110:10d12:20:34:70
+W:11:2:4000:35
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d3
+B:CLAW:HURT:1d4
+B:BITE:HURT:1d5
+F:FORCE_MAXHP | FORCE_SLEEP | CAN_FLY | DROP_CORPSE | 
+F:ONLY_GOLD | DROP_60 | DROP_12 | 
+F:OPEN_DOOR | BASH_DOOR | ATTR_MULTI
+F:EVIL | DRAGON | IM_COLD | SUSCEP_FIRE | HAS_EGG | IMPRESED | BASEANGBAND
+F:ATTR_MULTI
+S:1_IN_12 | 
+S:BR_ICEE
+D:This hatchling dragon is still soft, its eyes unaccustomed to light and 
+D:its scales a pale white. 
+
+N:6115:Young ice dragon
+G:d:w
+I:110:28d12:20:55:70
+W:33:1:20000:500
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:2d4
+B:CLAW:HURT:2d5
+B:BITE:HURT:2d6
+F:FORCE_SLEEP | FORCE_MAXHP | WILD_TOO | WILD_MOUNTAIN | WILD_WASTE |
+F:DROP_22 | DROP_CORPSE | ATTR_MULTI
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | SUSCEP_FIRE |
+F:EVIL | DRAGON | IM_COLD | BASEANGBAND | ATTR_MULTI
+S:1_IN_10 | 
+S:SCARE | 
+S:BR_ICEE
+D:It has a form out of legend. Its still-tender scales are a 
+D:frosty white in hue. Icy blasts of cold air come from it as it breathes. 
+
+N:6116:Mature ice dragon
+G:d:w
+I:110:40d12:20:75:70
+W:37:1:110000:1200
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:2d9
+B:CLAW:HURT:2d9
+B:BITE:HURT:4d8
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_42 | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | CAN_FLY | WILD_TOO | WILD_WASTE | WILD_MOUNTAIN | 
+F:EVIL | DRAGON | IM_COLD | NO_CONF | NO_SLEEP | SUSCEP_FIRE | BASEANGBAND | 
+F:HAS_LITE | ATTR_MULTI
+S:1_IN_9 |
+S:SCARE |
+S:BR_ICEE
+D:A large dragon, scales gleaming bright white. 
+
+N:6117:Ancient ice dragon
+G:D:w
+I:120:72d14:20:100:80
+W:44:1:170000:2000
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:4d9
+B:CLAW:HURT:4d9
+B:BITE:ICE:7d9
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:DROP_32 | DROP_42 | DROP_CORPSE | 
+F:SMART | BASH_DOOR | POWERFUL | MOVE_BODY | CAN_FLY |
+F:EVIL | DRAGON | IM_COLD | NO_CONF | NO_SLEEP | SUSCEP_FIRE | BASEANGBAND
+F:HAS_LITE | ATTR_MULTI
+S:1_IN_6 | 
+S:BLIND | CONF | SCARE | 
+S:BR_ICEE
+D:A huge draconic form. Frost covers it from head to tail. 
+
+N:6118:Great Freeze Wyrm
+G:D:w
+I:120:45d105:30:165:80
+W:73:2:190000:20000
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:4d14
+B:CLAW:HURT:4d14
+B:BITE:ICE:6d15
+B:BITE:ICE:6d15
+F:FORCE_SLEEP | FORCE_MAXHP | CAN_FLY | AURA_COLD |
+F:ONLY_ITEM | DROP_22 | DROP_32 | DROP_42 | DROP_GOOD | SUSCEP_FIRE |
+F:BASH_DOOR | POWERFUL | MOVE_BODY | DROP_CORPSE
+F:EVIL | DRAGON | IM_COLD | NO_CONF | NO_SLEEP | BASEANGBAND | HAS_LITE
+F:ATTR_MULTI
+S:1_IN_4 | 
+S:BLIND | CONF | SCARE | 
+S:BR_ICEE
+D:An immense dragon capable of awesome destruction. You have never felt 
+D:such extreme cold, or witnessed such an icy stare. Begone quickly or feel 
+D:its wrath! 
+
+N:6119:Ice dragon worm
+G:w:W
+I:100:14d15:10:45:80
+W:25:12:4500:12
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d3
+B:CLAW:HURT:3d3
+B:BITE:HURT:3d5
+F:RAND_50 | RAND_25 |
+F:DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | DRAGON | IM_COLD | 
+F:MORTAL | BASEANGBAND | ATTR_MULTI
+S:MULTIPLY | 
+S:1_IN_6 | BR_ICEE
+D:You thought dragons used eggs, but this worm has the scales, and the bad  
+D:breath, and the fiery eyes, of a real dragon. Its breath seems to freeze the air.
+
+N:6120:Ice dragon worm
+G:w:W
+I:100:14d15:10:45:80
+W:25:3:4500:12
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d3
+B:CLAW:HURT:3d3
+B:BITE:HURT:3d5
+F:RAND_50 | RAND_25 |
+F:DROP_60 | ONLY_GOLD | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | DRAGON | IM_COLD | 
+F:MORTAL | BASEANGBAND | ATTR_MULTI
+S:1_IN_6 | BR_ICEE
+D:You thought dragons used eggs, but this worm has the scales, and the bad  
+D:breath, and the fiery eyes, of a real dragon. Its breath seems to freeze the air.
+
+N:6121:Freeze Spider
+G:S:w
+I:113:45d15:30:130:40
+W:52:2:30:660
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:ICE:10d4
+F:COLD_BLOOD | WEIRD_MIND | IM_COLD | IM_POIS |
+F:FRIEND | RAND_25 | DROP_60 | ANIMAL | 
+F:NO_STUN | SUSCEP_FIRE | BASEANGBAND | DROP_SKELETON 
+S:1_IN_4 | 
+S:BR_ICEE | SLOW | HOLD
+D:A silk spinner made entirely of ice. Frost covers the ground
+D: where its spindly icicle legs touch.
+
+N:6122:Freeze Spider
+G:S:w
+I:113:45d15:30:130:40
+W:52:16:30:660
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:ICE:10d4
+F:COLD_BLOOD | WEIRD_MIND | IM_COLD | IM_POIS |
+F:FRIEND | RAND_25 | ANIMAL | 
+F:NO_STUN | SUSCEP_FIRE | BASEANGBAND | DROP_SKELETON 
+S:1_IN_4 | 
+S:BR_ICEE | SLOW | HOLD
+S:MULTIPLY
+D:A silk spinner made entirely of ice. Frost covers the ground
+D: where its spindly icicle legs touch.
+
+N:6123:Frost Scourge
+G:E:w
+I:112:35d140:14:162:125
+W:82:3:40:9500
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRUSH:ICE:100d5
+F:EVIL | IM_COLD | EMPTY_MIND | COLD_BLOOD | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN | KILL_ITEM | SUSCEP_FIRE
+F:AURA_COLD | BASEANGBAND | REGENERATE | 
+S:1_IN_4 | 
+S:BA_COLD | BO_ICEE | SLOW | BR_ICEE | CAUSE_1
+D:This gigantic ice beast will beat you to a pulp or transform you into 
+D:a huge ice sculpture. 
+
+N:6124:Cyan eyes gray dragon
+G:D:w
+I:124:70d140:30:210:80
+W:74:2:170000:28000
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:CLAW:HURT:3d14
+B:BITE:ICE:4d18
+F:FORCE_SLEEP | FORCE_MAXHP | JOKEANGBAND | 
+F:DROP_32 | DROP_42 | DROP_GOOD | DROP_CORPSE | 
+F:BASH_DOOR | POWERFUL | MOVE_BODY | IM_FIRE | 
+F:EVIL | DRAGON | IM_COLD | NO_CONF | NO_SLEEP | 
+F:RES_WALL | RES_GRAV | 
+S:1_IN_5 | 
+S:BLIND | CONF | SCARE | 
+S:BR_ICEE | BR_FIRE | 
+D:You are so in awe by the fact that both the eye and skin color of this 
+D:dragon are being mentioned that you forget to actually watch out for 
+D:its breath weapon. 
+
+N:6125:Orb dragon
+G:D:w
+I:130:80d200:30:240:80
+W:94:2:170000:45000
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:6d12
+B:CLAW:HURT:6d12
+B:CLAW:HURT:10d14
+B:BITE:ICE:10d18
+F:FORCE_SLEEP | FORCE_MAXHP | JOKEANGBAND | 
+F:DROP_32 | DROP_42 | DROP_GOOD | DROP_CORPSE | 
+F:BASH_DOOR | POWERFUL | MOVE_BODY | IM_FIRE | 
+F:EVIL | DRAGON | IM_COLD | NO_CONF | NO_SLEEP | 
+F:RES_WALL | RES_GRAV | DEATH_ORB | 
+S:1_IN_5 | 
+S:BLIND | CONF | SCARE | 
+S:BR_ICEE | BR_FIRE | 
+D:Something isn't right about this dragon... 
+
+N:6126:Stream hound
+G:Z:r
+I:110:12d10:30:35:0
+W:53:1:600:150
+B:BITE:HURT:1d7
+B:CLAW:HURT:1d5
+B:CLAW:HURT:1d5
+E:0:1:0:2:1:0
+O:0:0:0:0
+F:FORCE_SLEEP | BASH_DOOR | DROP_CORPSE | FRIENDS
+F:ANIMAL | IM_COLD | MORTAL | BASEANGBAND | RES_WATE | NO_CUT
+S:1_IN_5 | BR_WATE
+D:The sound of a hundred waterfalls rushes through your ears as 
+D:a huge wave of water, vaguely hound-shaped, rushes towards you.
+
+N:6127:Stream hound
+G:Z:r
+I:110:12d10:30:35:0
+W:53:50:600:150
+B:BITE:HURT:1d7
+B:CLAW:HURT:1d5
+B:CLAW:HURT:1d5
+E:0:1:0:2:1:0
+O:0:0:0:0
+F:FORCE_SLEEP | BASH_DOOR | DROP_CORPSE | FRIENDS
+F:ANIMAL | IM_COLD | MORTAL | BASEANGBAND | RES_WATE | NO_CUT
+S:1_IN_5 | BR_WATE
+S:MULTIPLY
+D:The sound of a hundred waterfalls rushes through your ears as 
+D:a huge wave of water, vaguely hound-shaped, rushes towards you.
+
+N:6128:Frost hound
+G:Z:w
+I:120:60d10:30:100:0
+W:51:2:800:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+F:FORCE_SLEEP | SUSCEP_FIRE |
+F:FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | IM_COLD | NO_CONF | NO_SLEEP | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BR_ICEE
+D:A hound whose breath is so cold that you immediately start freezing. 
+
+N:6129:Frost hound
+G:Z:w
+I:120:60d10:30:100:0
+W:51:100:800:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+F:FORCE_SLEEP | SUSCEP_FIRE |
+F:FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | IM_COLD | NO_CONF | NO_SLEEP | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BR_ICEE
+S:MULTIPLY
+D:A hound whose breath is so cold that you immediately start freezing. 
 
 
 

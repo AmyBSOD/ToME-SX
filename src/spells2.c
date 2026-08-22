@@ -1146,6 +1146,10 @@ void self_knowledge(FILE *fff)
 			info[i++] = "You can breathe radiowaves.";
 		if (r_ptr->flags11 & RF11_BR_VENO)
 			info[i++] = "You can breathe superpoisonous gas.";
+		if (r_ptr->flags11 & RF11_BR_WATE)
+			info[i++] = "You can breathe water.";
+		if (r_ptr->flags11 & RF11_BR_ICEE)
+			info[i++] = "You can breathe ice.";
 	}
 
 	/* List powers */

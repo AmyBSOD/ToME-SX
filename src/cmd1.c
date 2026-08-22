@@ -1034,6 +1034,9 @@ static void carried_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 		case RBE_LOSE_CHR:
 			power = 0;
 			break;
+		case RBE_RANDOM:
+			power = 0;
+			break;
 		case RBE_LOSE_ALL:
 			power = 2;
 			break;
@@ -1059,6 +1062,27 @@ static void carried_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 			power = 5;
 			break;
 		case RBE_CHAOS:
+			power = 5;
+			break;
+		case RBE_ICE:
+			power = 5;
+			break;
+		case RBE_WATER:
+			power = 5;
+			break;
+		case RBE_PLASMA:
+			power = 5;
+			break;
+		case RBE_DARK:
+			power = 5;
+			break;
+		case RBE_AMEBA:
+			power = 5;
+			break;
+		case RBE_VENOM:
+			power = 5;
+			break;
+		case RBE_SOUND:
 			power = 5;
 			break;
 		case RBE_SHARDS:
@@ -1380,6 +1404,7 @@ static void carried_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 			case RBE_LOSE_CHR:
 			case RBE_LOSE_ALL:
 			case RBE_PARASITE:
+			case RBE_RANDOM:
 				{
 					break;
 				}
@@ -1419,6 +1444,48 @@ static void carried_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 			case RBE_CHAOS:
 				{
 					pt = GF_CHAOS;
+					break;
+				}
+
+			case RBE_ICE:
+				{
+					pt = GF_ICE;
+					break;
+				}
+
+			case RBE_WATER:
+				{
+					pt = GF_WATER;
+					break;
+				}
+
+			case RBE_PLASMA:
+				{
+					pt = GF_PLASMA;
+					break;
+				}
+
+			case RBE_DARK:
+				{
+					pt = GF_DARK;
+					break;
+				}
+
+			case RBE_AMEBA:
+				{
+					pt = GF_AMOEBAE;
+					break;
+				}
+
+			case RBE_VENOM:
+				{
+					pt = GF_UNBREATH;
+					break;
+				}
+
+			case RBE_SOUND:
+				{
+					pt = GF_SOUND;
 					break;
 				}
 
@@ -1717,6 +1784,9 @@ static void incarnate_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 		case RBE_LOSE_CHR:
 			power = 0;
 			break;
+		case RBE_RANDOM:
+			power = 0;
+			break;
 		case RBE_LOSE_ALL:
 			power = 2;
 			break;
@@ -1742,6 +1812,27 @@ static void incarnate_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 			power = 5;
 			break;
 		case RBE_CHAOS:
+			power = 5;
+			break;
+		case RBE_ICE:
+			power = 5;
+			break;
+		case RBE_WATER:
+			power = 5;
+			break;
+		case RBE_PLASMA:
+			power = 5;
+			break;
+		case RBE_DARK:
+			power = 5;
+			break;
+		case RBE_AMEBA:
+			power = 5;
+			break;
+		case RBE_VENOM:
+			power = 5;
+			break;
+		case RBE_SOUND:
 			power = 5;
 			break;
 		case RBE_SHARDS:
@@ -2062,6 +2153,7 @@ static void incarnate_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 			case RBE_LOSE_CHR:
 			case RBE_LOSE_ALL:
 			case RBE_PARASITE:
+			case RBE_RANDOM:
 				{
 					break;
 				}
@@ -2101,6 +2193,48 @@ static void incarnate_monster_attack(s16b m_idx, bool *fear, bool *mdeath,
 			case RBE_CHAOS:
 				{
 					pt = GF_CHAOS;
+					break;
+				}
+
+			case RBE_ICE:
+				{
+					pt = GF_ICE;
+					break;
+				}
+
+			case RBE_WATER:
+				{
+					pt = GF_WATER;
+					break;
+				}
+
+			case RBE_PLASMA:
+				{
+					pt = GF_PLASMA;
+					break;
+				}
+
+			case RBE_DARK:
+				{
+					pt = GF_DARK;
+					break;
+				}
+
+			case RBE_AMEBA:
+				{
+					pt = GF_AMOEBAE;
+					break;
+				}
+
+			case RBE_VENOM:
+				{
+					pt = GF_UNBREATH;
+					break;
+				}
+
+			case RBE_SOUND:
+				{
+					pt = GF_SOUND;
 					break;
 				}
 

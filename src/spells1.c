@@ -5498,7 +5498,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				dam *= 3;
 				if (seen) r_ptr->r_flags9 |= (RF9_SUSCEP_ACID);
 			}
-			if (r_ptr->flags3 & (RF3_IM_ACID))
+			if ((r_ptr->flags3 & (RF3_IM_ACID)) || (r_ptr->flags4 & (RF4_BR_ACID)) )
 			{
 				note = " resists a lot.";
 				dam /= 9;
@@ -5517,7 +5517,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				dam *= 3;
 				if (seen) r_ptr->r_flags9 |= (RF9_SUSCEP_ELEC);
 			}
-			if (r_ptr->flags3 & (RF3_IM_ELEC))
+			if ((r_ptr->flags3 & (RF3_IM_ELEC)) || (r_ptr->flags4 & (RF4_BR_ELEC)) )
 			{
 				note = " resists a lot.";
 				dam /= 9;
@@ -5536,7 +5536,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				dam *= 3;
 				if (seen) r_ptr->r_flags3 |= (RF3_SUSCEP_FIRE);
 			}
-			if (r_ptr->flags3 & (RF3_IM_FIRE))
+			if ((r_ptr->flags3 & (RF3_IM_FIRE)) || (r_ptr->flags4 & (RF4_BR_FIRE)) )
 			{
 				note = " resists a lot.";
 				dam /= 9;
@@ -5555,7 +5555,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				dam *= 3;
 				if (seen) r_ptr->r_flags3 |= (RF3_SUSCEP_COLD);
 			}
-			if (r_ptr->flags3 & (RF3_IM_COLD))
+			if ((r_ptr->flags3 & (RF3_IM_COLD)) || (r_ptr->flags4 & (RF4_BR_COLD)) || (r_ptr->flags11 & (RF11_BR_ICEE)) )
 			{
 				note = " resists a lot.";
 				dam /= 9;
@@ -5576,7 +5576,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				do_pois *= 2;
 				if (seen) r_ptr->r_flags9 |= (RF9_SUSCEP_POIS);
 			}
-			if (r_ptr->flags3 & (RF3_IM_POIS))
+			if ((r_ptr->flags3 & (RF3_IM_POIS)) || (r_ptr->flags4 & (RF4_BR_POIS)) || (r_ptr->flags11 & (RF11_BR_VENO)) )
 			{
 				note = " resists a lot.";
 				dam /= 9;
@@ -5606,7 +5606,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 					do_pois *= 2;
 					if (seen) r_ptr->r_flags9 |= (RF9_SUSCEP_POIS);
 				}
-				if (r_ptr->flags3 & (RF3_IM_POIS)) /* don't just ignore poison res --Amy */
+				if ((r_ptr->flags3 & (RF3_IM_POIS)) || (r_ptr->flags4 & (RF4_BR_POIS)) || (r_ptr->flags11 & (RF11_BR_VENO)) ) /* don't just ignore poison res --Amy */
 				{
 					note = " resists.";
 					dam /= 2;
@@ -5622,7 +5622,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 		{
 			if (seen) obvious = TRUE;
 
-			if (r_ptr->flags3 & (RF3_IM_POIS))
+			if ((r_ptr->flags3 & (RF3_IM_POIS)) || (r_ptr->flags4 & (RF4_BR_POIS)) || (r_ptr->flags4 & (RF4_BR_NUKE)) || (r_ptr->flags11 & (RF11_BR_VENO)) )
 			{
 				note = " resists.";
 				dam *= 3;
@@ -5674,7 +5674,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				dam *= 3;
 				dam /= (randint(6) + 6);
 			}
-			if (r_ptr->flags3 & (RF3_IM_FIRE))
+			if ((r_ptr->flags3 & (RF3_IM_FIRE)) || (r_ptr->flags4 & (RF4_BR_FIRE)) )
 			{
 				note = " resists.";
 				dam /= 2;
@@ -5733,13 +5733,18 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			break;
 		}
 
-		/* Water (acid) damage -- Water spirits/elementals are immune */
+		/* Water (acid) damage -- Water spirits/elementals and water breathers are immune */
 	case GF_WATER:
 		{
 			if (seen) obvious = TRUE;
 			if ((r_ptr->d_char == 'E') &&
 			                (prefix(name, "W") || prefix(name, "w") ||
 			                 (strstr((r_name + r_ptr->name), "Unmaker")) || (strstr((r_name + r_ptr->name), "Greater water elemental")) ))
+			{
+				note = " is immune.";
+				dam = 0;
+			}
+			else if (r_ptr->flags11 & (RF11_BR_WATE))
 			{
 				note = " is immune.";
 				dam = 0;
@@ -5761,6 +5766,11 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 			if ((r_ptr->d_char == 'E') &&
 			                (prefix(name, "W") || prefix(name, "w") ||
 			                 (strstr((r_name + r_ptr->name), "Unmaker"))))
+			{
+				note = " is immune.";
+				dam = 0;
+			}
+			else if (r_ptr->flags11 & (RF11_BR_WATE))
 			{
 				note = " is immune.";
 				dam = 0;
@@ -6654,7 +6664,7 @@ bool project_m(int who, int r, int y, int x, int dam, int typ)
 				do_cut *= 2;
 				if (seen) r_ptr->r_flags3 |= (RF3_SUSCEP_COLD);
 			}
-			if (r_ptr->flags3 & (RF3_IM_COLD))
+			if ((r_ptr->flags3 & (RF3_IM_COLD)) || (r_ptr->flags11 & (RF11_BR_ICEE)) )
 			{
 				note = " resists a lot.";
 				dam /= 9;
