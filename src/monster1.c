@@ -2275,6 +2275,11 @@ bool monster_can_cross_terrain(byte feat, monster_race *r_ptr)
 		else
 			return TRUE;
 	}
+	/* other types of water --Amy */
+	else if (feat == FEAT_ANDUIN || feat == FEAT_WATERFALL || feat == FEAT_TAINTED_WATER || feat == FEAT_COND_WATER || feat == FEAT_PURIFIED_WATER || feat == FEAT_SWAMP_POOL)
+	{
+		return TRUE;
+	}
 	/* Aquatic monster */
 	else if ((r_ptr->flags7 & RF7_AQUATIC) &&
 	                !(r_ptr->flags7 & RF7_CAN_FLY))
