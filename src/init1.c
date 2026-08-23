@@ -538,7 +538,7 @@ static cptr r_info_flags11[] =
 	"BR_VENO",
 	"BR_WATE",
 	"BR_ICEE",
-	"XXX9X8",
+	"BOULDER",
 	"XXX9X9",
 	"XXX9X10",
 	"XXX9X11",
@@ -608,38 +608,38 @@ static cptr r_info_flags12[] =
  */
 static cptr r_info_flags13[] =
 {
-	"XXX9X0",
-	"XXX9X1",
-	"XXX9X2",
-	"XXX9X3",
-	"XXX9X4",
-	"XXX9X5",
-	"XXX9X6",
-	"XXX9X7",
-	"XXX9X8",
-	"XXX9X9",
-	"XXX9X10",
-	"XXX9X11",
-	"XXX9X12",
-	"XXX9X13",
-	"XXX9X14",
-	"XXX9X15",
-	"XXX9X16",
-	"XXX9X17",
-	"XXX9X18",
-	"XXX9X19",
-	"XXX9X20",
-	"XXX9X21",
-	"XXX9X22",
-	"XXX9X23",
-	"XXX9X24",
-	"XXX9X25",
-	"XXX9X26",
-	"XXX9X27",
-	"XXX9X28",
-	"XXX9X29",
-	"XXX9X30",
-	"XXX9X31",
+	"S_MOLD",
+	"S_BAT",
+	"S_QUYLTHULG",
+	"S_VORTEX",
+	"S_TREASURE",
+	"S_IMMOBILE",
+	"S_PEOPLE",
+	"S_ELEMENTAL",
+	"S_SNAKE",
+	"S_ELDRITCH",
+	"S_CAT",
+	"S_RAT",
+	"S_WORM",
+	"S_CLOTHES",
+	"S_HYBRID",
+	"S_BEETLE",
+	"S_HORDE",
+	"S_GIANT",
+	"S_SEXY_GIRL",
+	"S_TROLL",
+	"S_ORC",
+	"S_MAN",
+	"S_WOMAN",
+	"S_BREEDER",
+	"S_GOLEM",
+	"S_BIRD",
+	"S_INSECT",
+	"S_OGRE",
+	"S_LIZARD",
+	"S_HULK",
+	"S_MONKEY",
+	"S_EYE",
 };
 
 /*
@@ -647,10 +647,10 @@ static cptr r_info_flags13[] =
  */
 static cptr r_info_flags14[] =
 {
-	"XXX9X0",
-	"XXX9X1",
-	"XXX9X2",
-	"XXX9X3",
+	"S_JELLY",
+	"S_KOBOLD",
+	"S_QUADRUPED",
+	"S_YEEK",
 	"XXX9X4",
 	"XXX9X5",
 	"XXX9X6",
@@ -8823,6 +8823,26 @@ static errr grab_one_spell_flag(monster_race *r_ptr, cptr what)
 		}
 	}
 
+	/* Scan flags13 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, r_info_flags13[i]))
+		{
+			r_ptr->flags13 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Scan flags14 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, r_info_flags14[i]))
+		{
+			r_ptr->flags14 |= (1L << i);
+			return (0);
+		}
+	}
+
 	/* Oops */
 	msg_format("Unknown monster spell flag '%s'.", what);
 
@@ -9542,6 +9562,32 @@ static errr grab_one_spell_ego_flag(monster_ego *re_ptr, cptr what, bool add)
 		}
 	}
 
+	/* Scan flags13 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, r_info_flags13[i]))
+		{
+			if (add)
+				re_ptr->mflags13 |= (1L << i);
+			else
+				re_ptr->nflags13 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Scan flags14 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, r_info_flags14[i]))
+		{
+			if (add)
+				re_ptr->mflags14 |= (1L << i);
+			else
+				re_ptr->nflags14 |= (1L << i);
+			return (0);
+		}
+	}
+
 	/* Oops */
 	msg_format("Unknown monster spell ego flag '%s'.", what);
 
@@ -10227,7 +10273,7 @@ errr init_re_info_txt(FILE *fp, char *buf)
 				if (!strcmp(s, "MF_ALL"))
 				{
 					/* No flags */
-					re_ptr->nflags4 = re_ptr->nflags5 = re_ptr->nflags6 = re_ptr->nflags11 = 0xFFFFFFFF;
+					re_ptr->nflags4 = re_ptr->nflags5 = re_ptr->nflags6 = re_ptr->nflags11 = re_ptr->nflags12 = re_ptr->nflags13 = re_ptr->nflags14 = 0xFFFFFFFF;
 
 					/* Start at next entry */
 					s = t;
@@ -10770,6 +10816,26 @@ static errr grab_one_spell_monster_flag(dungeon_info_type *d_ptr, cptr what, byt
 		if (streq(what, r_info_flags12[i]))
 		{
 			d_ptr->rules[rule].mflags12 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Scan flags13 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, r_info_flags13[i]))
+		{
+			d_ptr->rules[rule].mflags13 |= (1L << i);
+			return (0);
+		}
+	}
+
+	/* Scan flags14 */
+	for (i = 0; i < 32; i++)
+	{
+		if (streq(what, r_info_flags14[i]))
+		{
+			d_ptr->rules[rule].mflags14 |= (1L << i);
 			return (0);
 		}
 	}

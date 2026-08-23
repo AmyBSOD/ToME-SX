@@ -1433,7 +1433,7 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 
 	int num = 0, dir = 0 , i;
 
-	int powers[160];
+	int powers[224];
 
 	bool flag;
 
@@ -1441,7 +1441,7 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 
 	char choice;
 
-	char out_val[160];
+	char out_val[224];
 
 	monster_race *r_ptr = &r_info[r_idx];
 
@@ -1496,6 +1496,39 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 			if (monster_powers[i + 96].great && (!great)) continue;
 			if (!monster_powers[i + 96].power) continue;
 			powers[num++] = i + 96;
+		}
+	}
+
+	/* List the monster powers -- RF12_* */
+	for (i = 0; i < 32; i++)
+	{
+		if (r_ptr->flags12 & BIT(i))
+		{
+			if (monster_powers[i + 128].great && (!great)) continue;
+			if (!monster_powers[i + 128].power) continue;
+			powers[num++] = i + 128;
+		}
+	}
+
+	/* List the monster powers -- RF13_* */
+	for (i = 0; i < 32; i++)
+	{
+		if (r_ptr->flags13 & BIT(i))
+		{
+			if (monster_powers[i + 160].great && (!great)) continue;
+			if (!monster_powers[i + 160].power) continue;
+			powers[num++] = i + 160;
+		}
+	}
+
+	/* List the monster powers -- RF14_* */
+	for (i = 0; i < 32; i++)
+	{
+		if (r_ptr->flags14 & BIT(i))
+		{
+			if (monster_powers[i + 192].great && (!great)) continue;
+			if (!monster_powers[i + 192].power) continue;
+			powers[num++] = i + 192;
 		}
 	}
 
@@ -1623,7 +1656,7 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 		/* Verify it */
 		if (ask)
 		{
-			char tmp_val[160];
+			char tmp_val[224];
 
 			/* Prompt */
 			strnfmt(tmp_val, 78, "Use %s? ", monster_powers[power].name);
@@ -2561,7 +2594,7 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 		/* S_HYDRA */
 	case 87:
 		{
-			for (k = 0; k < 6; k++)
+			for (k = 0; k < 3; k++)
 			{
 				summon_specific_friendly(y, x, rlev, SUMMON_HYDRA, TRUE);
 			}
@@ -2658,6 +2691,8 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 			break;
 		}
 
+		/**** RF11 (bit position + 96) ****/
+
 		/* BR_MIND */
 	case 97:
 		{
@@ -2727,6 +2762,19 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 
 			break;
 		}
+
+		/* BOULDER */
+	case 104:
+		{
+			if (!get_aim_dir(&dir)) break;
+
+			fire_bolt(GF_ARROW, dir, damroll(p_ptr->lev, 5) + randint(10) );
+
+			break;
+		}
+
+		/**** RF12 (bit position + 128) ****/
+
 		/* BA_METE */
 	case 128:
 		{
@@ -2737,6 +2785,396 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 			break;
 		}
 
+		/**** RF13 (bit position + 160) ****/
+
+		/* S_MOLD */
+	case 160:
+		{
+			for (k = 0; k < 6; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_BIZARRE1, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_BAT */
+	case 161:
+		{
+			for (k = 0; k < 6; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_BIZARRE2, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_QUYLTHULG */
+	case 162:
+		{
+			for (k = 0; k < 2; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_BIZARRE3, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_VORTEX */
+	case 163:
+		{
+			for (k = 0; k < 3; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_BIZARRE4, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_TREASURE */
+	case 164:
+		{
+			for (k = 0; k < 4; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_BIZARRE6, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_IMMOBILE */
+	case 165:
+		{
+			for (k = 0; k < 4; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_MINE, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_PEOPLE */
+	case 166:
+		{
+			for (k = 0; k < 3; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_PERSON, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_ELEMENTAL */
+	case 167:
+		{
+			for (k = 0; k < 2; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_E, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_SNAKE */
+	case 168:
+		{
+			for (k = 0; k < 5; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_SNAKE, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_ELDRITCH */
+	case 169:
+		{
+			for (k = 0; k < 2; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_ELDRITCH, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_CAT */
+	case 170:
+		{
+			for (k = 0; k < 4; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_CAT, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_RAT */
+	case 171:
+		{
+			for (k = 0; k < 6; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_RAT, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_WORM */
+	case 172:
+		{
+			for (k = 0; k < 5; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_WORM, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_CLOTHES */
+	case 173:
+		{
+			for (k = 0; k < 2; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_CLOTHES, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_HYBRID */
+	case 174:
+		{
+			for (k = 0; k < 3; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_HYBRID, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_BEETLE */
+	case 175:
+		{
+			for (k = 0; k < 4; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_BEETLE, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_HORDE */
+	case 176:
+		{
+			for (k = 0; k < 1; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_HORDE, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_GIANT */
+	case 177:
+		{
+			for (k = 0; k < 3; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_GIANT, TRUE);
+			}
+
+			break;
+		}
+
+		/* 178 S_SEXY_GIRL -- Not available */
+
+		/* S_TROLL */
+	case 179:
+		{
+			for (k = 0; k < 4; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_TROLL, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_ORC */
+	case 180:
+		{
+			for (k = 0; k < 6; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_ORC, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_MAN */
+	case 181:
+		{
+			for (k = 0; k < 2; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_MAN, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_WOMAN */
+	case 182:
+		{
+			for (k = 0; k < 2; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_WOMAN, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_BREEDER */
+	case 183:
+		{
+			for (k = 0; k < 3; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_BREEDER, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_GOLEM */
+	case 184:
+		{
+			for (k = 0; k < 3; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_GOLEM, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_BIRD */
+	case 185:
+		{
+			for (k = 0; k < 4; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_BIRD, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_INSECT */
+	case 186:
+		{
+			for (k = 0; k < 6; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_INSECT, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_OGRE */
+	case 187:
+		{
+			for (k = 0; k < 4; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_OGRE, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_LIZARD */
+	case 188:
+		{
+			for (k = 0; k < 4; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_LIZARD, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_HULK */
+	case 189:
+		{
+			for (k = 0; k < 2; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_HULK, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_MONKEY */
+	case 190:
+		{
+			for (k = 0; k < 4; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_MONKEY, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_EYE */
+	case 191:
+		{
+			for (k = 0; k < 4; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_EYE, TRUE);
+			}
+
+			break;
+		}
+
+		/**** RF14 (bit position + 192) ****/
+
+		/* S_JELLY */
+	case 192:
+		{
+			for (k = 0; k < 4; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_JELLY, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_KOBOLD */
+	case 193:
+		{
+			for (k = 0; k < 6; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_KOBOLD, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_QUADRUPED */
+	case 194:
+		{
+			for (k = 0; k < 4; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_QUADRUPED, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_YEEK */
+	case 195:
+		{
+			for (k = 0; k < 6; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_YEEK, TRUE);
+			}
+
+			break;
+		}
 
 	}
 

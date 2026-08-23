@@ -25,7 +25,7 @@ M:R:6131
 # Maximum number of monsters in re_info.txt
 # WARNING ! Use the exact amount of ego types used, if not you
 # will get weird results !
-M:r:83
+M:r:84
 
 # Maximum number of items in k_info.txt
 M:K:1269

@@ -920,6 +920,8 @@ void self_knowledge(FILE *fff)
 			info[i++] = "You can fire a light missile.";
 		if (r_ptr->flags4 & RF4_ARROW_4)
 			info[i++] = "You can fire a heavy missile.";
+		if (r_ptr->flags11 & RF11_BOULDER)
+			info[i++] = "You can throw boulders.";
 		if (r_ptr->flags4 & RF4_BR_ACID)
 			info[i++] = "You can breathe acid.";
 		if (r_ptr->flags4 & RF4_BR_ELEC)
@@ -1150,6 +1152,78 @@ void self_knowledge(FILE *fff)
 			info[i++] = "You can breathe water.";
 		if (r_ptr->flags11 & RF11_BR_ICEE)
 			info[i++] = "You can breathe ice.";
+		if (r_ptr->flags13 & RF13_S_MOLD)
+			info[i++] = "You can magically summon molds.";
+		if (r_ptr->flags13 & RF13_S_BAT)
+			info[i++] = "You can magically summon bats.";
+		if (r_ptr->flags13 & RF13_S_QUYLTHULG)
+			info[i++] = "You can magically summon quylthulgs.";
+		if (r_ptr->flags13 & RF13_S_VORTEX)
+			info[i++] = "You can magically summon vortices.";
+		if (r_ptr->flags13 & RF13_S_TREASURE)
+			info[i++] = "You can magically summon treasure.";
+		if (r_ptr->flags13 & RF13_S_IMMOBILE)
+			info[i++] = "You can magically summon stationary monsters.";
+		if (r_ptr->flags13 & RF13_S_PEOPLE)
+			info[i++] = "You can magically summon people.";
+		if (r_ptr->flags13 & RF13_S_ELEMENTAL)
+			info[i++] = "You can magically summon elementals.";
+		if (r_ptr->flags13 & RF13_S_SNAKE)
+			info[i++] = "You can magically summon snakes.";
+		if (r_ptr->flags13 & RF13_S_ELDRITCH)
+			info[i++] = "You can magically summon horrors.";
+		if (r_ptr->flags13 & RF13_S_CAT)
+			info[i++] = "You can magically summon cats.";
+		if (r_ptr->flags13 & RF13_S_RAT)
+			info[i++] = "You can magically summon rats.";
+		if (r_ptr->flags13 & RF13_S_WORM)
+			info[i++] = "You can magically summon worms.";
+		if (r_ptr->flags13 & RF13_S_CLOTHES)
+			info[i++] = "You can magically summon clothes.";
+		if (r_ptr->flags13 & RF13_S_HYBRID)
+			info[i++] = "You can magically summon hybrids.";
+		if (r_ptr->flags13 & RF13_S_BEETLE)
+			info[i++] = "You can magically summon beetles.";
+		if (r_ptr->flags13 & RF13_S_HORDE)
+			info[i++] = "You can magically summon hordes.";
+		if (r_ptr->flags13 & RF13_S_GIANT)
+			info[i++] = "You can magically summon giants.";
+		if (r_ptr->flags13 & RF13_S_SEXY_GIRL)
+			info[i++] = "You can magically summon sexy girls.";
+		if (r_ptr->flags13 & RF13_S_TROLL)
+			info[i++] = "You can magically summon trolls.";
+		if (r_ptr->flags13 & RF13_S_ORC)
+			info[i++] = "You can magically summon orcs.";
+		if (r_ptr->flags13 & RF13_S_MAN)
+			info[i++] = "You can magically summon men.";
+		if (r_ptr->flags13 & RF13_S_WOMAN)
+			info[i++] = "You can magically summon women.";
+		if (r_ptr->flags13 & RF13_S_BREEDER)
+			info[i++] = "You can magically summon breeders.";
+		if (r_ptr->flags13 & RF13_S_GOLEM)
+			info[i++] = "You can magically summon golems.";
+		if (r_ptr->flags13 & RF13_S_BIRD)
+			info[i++] = "You can magically summon birds.";
+		if (r_ptr->flags13 & RF13_S_INSECT)
+			info[i++] = "You can magically summon insects.";
+		if (r_ptr->flags13 & RF13_S_OGRE)
+			info[i++] = "You can magically summon ogres.";
+		if (r_ptr->flags13 & RF13_S_LIZARD)
+			info[i++] = "You can magically summon lizards.";
+		if (r_ptr->flags13 & RF13_S_HULK)
+			info[i++] = "You can magically summon hulks.";
+		if (r_ptr->flags13 & RF13_S_MONKEY)
+			info[i++] = "You can magically summon monkeys.";
+		if (r_ptr->flags13 & RF13_S_EYE)
+			info[i++] = "You can magically summon eyes.";
+		if (r_ptr->flags14 & RF14_S_JELLY)
+			info[i++] = "You can magically summon jellies.";
+		if (r_ptr->flags14 & RF14_S_KOBOLD)
+			info[i++] = "You can magically summon kobolds.";
+		if (r_ptr->flags14 & RF14_S_QUADRUPED)
+			info[i++] = "You can magically summon quadrupeds.";
+		if (r_ptr->flags14 & RF14_S_YEEK)
+			info[i++] = "You can magically summon yeeks.";
 	}
 
 	/* List powers */

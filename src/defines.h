@@ -2480,8 +2480,9 @@
 #define PROJECT_MANA_PATH  0x00004000   /* Follow a mana path. */
 #define PROJECT_ABSORB_MANA 0x00008000   /* The spell increase in power as it absord grid's mana. */
 #define PROJECT_STAY       0x00010000
-#define PROJECT_CANTREFLECT 0x00020000   /* Player cannot reflect this projectile */
+#define PROJECT_CANTREFLECT 0x00020000   /* Player cannot reflect or dodge this projectile */
 #define PROJECT_LOWRANGE   0x00040000   /* Projectile has a range of one square */
+#define PROJECT_ONLYDODGE  0x00080000   /* Player cannot reflect this projectile, but it can be dodged */
 
 /*
  * Bit flags for the "enchant()" function
@@ -3872,44 +3873,44 @@
 /*
  * Legal restrictions for "summon_specific()"
  */
-#define SUMMON_ANT                  11
-#define SUMMON_SPIDER               12
-#define SUMMON_HOUND                13
-#define SUMMON_HYDRA                14
-#define SUMMON_ANGEL                15
-#define SUMMON_DEMON                16
-#define SUMMON_UNDEAD               17
-#define SUMMON_DRAGON               18
-#define SUMMON_HI_UNDEAD            21
-#define SUMMON_HI_DRAGON            22
-#define SUMMON_WRAITH               31
-#define SUMMON_UNIQUE               32
-#define SUMMON_BIZARRE1             33
-#define SUMMON_BIZARRE2             34
-#define SUMMON_BIZARRE3             35
-#define SUMMON_BIZARRE4             36
-#define SUMMON_BIZARRE5             37
-#define SUMMON_BIZARRE6             38
-#define SUMMON_HI_DEMON             39
-#define SUMMON_KIN                  40
-#define SUMMON_DAWN                 41
-#define SUMMON_ANIMAL               42
-#define SUMMON_ANIMAL_RANGER        43
-#define SUMMON_HI_UNDEAD_NO_UNIQUES 44
-#define SUMMON_HI_DRAGON_NO_UNIQUES 45
-#define SUMMON_NO_UNIQUES           46
-#define SUMMON_PHANTOM              47
-#define SUMMON_ELEMENTAL            48
-#define SUMMON_THUNDERLORD          49
-#define SUMMON_BLUE_HORROR          50
-#define SUMMON_BUG                  51
-#define SUMMON_RNG                  52
-#define SUMMON_MINE                 53
-#define SUMMON_HUMAN                54
-#define SUMMON_SHADOWS              55
-#define SUMMON_GHOST                56
-#define SUMMON_QUYLTHULG            57
-#define SUMMON_LUA                  58
+#define SUMMON_ANT                  11 /* a */
+#define SUMMON_SPIDER               12 /* S */
+#define SUMMON_HOUND                13 /* C and Z */
+#define SUMMON_HYDRA                14 /* M */
+#define SUMMON_ANGEL                15 /* A */
+#define SUMMON_DEMON                16 /* DEMON */
+#define SUMMON_UNDEAD               17 /* UNDEAD */
+#define SUMMON_DRAGON               18 /* DRAGON */
+#define SUMMON_HI_UNDEAD            21 /* L, V, W */
+#define SUMMON_HI_DRAGON            22 /* D */
+#define SUMMON_WRAITH               31 /* W */
+#define SUMMON_UNIQUE               32 /* UNIQUE */
+#define SUMMON_BIZARRE1             33 /* m */
+#define SUMMON_BIZARRE2             34 /* b */
+#define SUMMON_BIZARRE3             35 /* Q */
+#define SUMMON_BIZARRE4             36 /* v */
+#define SUMMON_BIZARRE5             37 /* $ */
+#define SUMMON_BIZARRE6             38 /* !, ?, =, $ and | */
+#define SUMMON_HI_DEMON             39 /* U *and* DEMON */
+#define SUMMON_KIN                  40 /* same as the summoner's glyph */
+#define SUMMON_DAWN                 41 /* "the Dawn" in the name */
+#define SUMMON_ANIMAL               42 /* ANIMAL */
+#define SUMMON_ANIMAL_RANGER        43 /* ANIMAL of certain types, no dragons, undead, demons, spellcasters or evil ones */
+#define SUMMON_HI_UNDEAD_NO_UNIQUES 44 /* L, V, W */
+#define SUMMON_HI_DRAGON_NO_UNIQUES 45 /* D */
+#define SUMMON_NO_UNIQUES           46 /* not UNIQUE */
+#define SUMMON_PHANTOM              47 /* "Phantom" in the name */
+#define SUMMON_ELEMENTAL            48 /* "lemental" in the name */
+#define SUMMON_THUNDERLORD          49 /* THUNDERLORD */
+#define SUMMON_BLUE_HORROR          50 /* "lue horror" in the name */
+#define SUMMON_BUG                  51 /* "Software bug" in the name */
+#define SUMMON_RNG                  52 /* "Random Number Generator" in the name */
+#define SUMMON_MINE                 53 /* NEVER_MOVE */
+#define SUMMON_HUMAN                54 /* p */
+#define SUMMON_SHADOWS              55 /* G */
+#define SUMMON_GHOST                56 /* G */
+#define SUMMON_QUYLTHULG            57 /* Q */
+#define SUMMON_LUA                  58 /* lua script */
 #define SUMMON_E                    59 /* E */
 #define SUMMON_SNAKE                60 /* J and n */
 #define SUMMON_ELDRITCH             61 /* ELDRITCH_HORROR */
@@ -4918,11 +4919,57 @@
 #define RF11_BR_VENO            0x00000020 /* Venom breath */
 #define RF11_BR_WATE            0x00000040 /* Water breath */
 #define RF11_BR_ICEE            0x00000080 /* Ice breath */
+#define RF11_BOULDER            0x00000100 /* boulder throwing (giants) */
 
 /*
  * Monster spell flags
  */
 #define RF12_BA_METE            0x00000001 /* Meteor ball */
+
+/*
+ * Monster spell flags
+ */
+#define RF13_S_MOLD             0x00000001 /* Summon Mold */
+#define RF13_S_BAT              0x00000002 /* Summon Bat */
+#define RF13_S_QUYLTHULG        0x00000004 /* Summon Quylthulg */
+#define RF13_S_VORTEX           0x00000008 /* Summon Vortex */
+#define RF13_S_TREASURE         0x00000010 /* Summon Bizarre 6 (treasure) */
+#define RF13_S_IMMOBILE         0x00000020 /* Summon Mine (immobile) */
+#define RF13_S_PEOPLE           0x00000040 /* Summon Person */
+#define RF13_S_ELEMENTAL        0x00000080 /* Summon E */
+#define RF13_S_SNAKE            0x00000100 /* Summon Snake */
+#define RF13_S_ELDRITCH         0x00000200 /* Summon Eldritch Horror */
+#define RF13_S_CAT              0x00000400 /* Summon Cat */
+#define RF13_S_RAT              0x00000800 /* Summon Rat */
+#define RF13_S_WORM             0x00001000 /* Summon Worm */
+#define RF13_S_CLOTHES          0x00002000 /* Summon Clothes */
+#define RF13_S_HYBRID           0x00004000 /* Summon Hybrid */
+#define RF13_S_BEETLE           0x00008000 /* Summon Beetle */
+#define RF13_S_HORDE            0x00010000 /* Summon Horde */
+#define RF13_S_GIANT            0x00020000 /* Summon Giant */
+#define RF13_S_SEXY_GIRL        0x00040000 /* Summon Sexy Girl */
+#define RF13_S_TROLL            0x00080000 /* Summon Troll */
+#define RF13_S_ORC              0x00100000 /* Summon Orc */
+#define RF13_S_MAN              0x00200000 /* Summon Man */
+#define RF13_S_WOMAN            0x00400000 /* Summon Woman */
+#define RF13_S_BREEDER          0x00800000 /* Summon Breeder */
+#define RF13_S_GOLEM            0x01000000 /* Summon Golem */
+#define RF13_S_BIRD             0x02000000 /* Summon Bird */
+#define RF13_S_INSECT           0x04000000 /* Summon Insect */
+#define RF13_S_OGRE             0x08000000 /* Summon Ogre */
+#define RF13_S_LIZARD           0x10000000 /* Summon Lizard */
+#define RF13_S_HULK             0x20000000 /* Summon Hulk */
+#define RF13_S_MONKEY           0x40000000 /* Summon Monkey */
+#define RF13_S_EYE              0x80000000 /* Summon Eye */
+
+/*
+ * Monster spell flags
+ */
+#define RF14_S_JELLY            0x00000001 /* Summon Jelly */
+#define RF14_S_KOBOLD           0x00000002 /* Summon Kobold */
+#define RF14_S_QUADRUPED        0x00000004 /* Summon Quadruped */
+#define RF14_S_YEEK             0x00000008 /* Summon Yeek */
+
 
 /*
  * Hack -- choose "intelligent" spells when desperate
@@ -4943,6 +4990,18 @@
     RF6_S_HI_DRAGON | RF6_S_HI_UNDEAD | RF6_S_WRAITH | RF6_S_UNIQUE | \
     RF6_S_THUNDERLORD | RF6_S_BUG | RF6_S_RNG | RF6_S_ANIMALS)
 
+#define RF13_INT_MASK \
+   (RF13_S_MOLD | RF13_S_BAT | RF13_S_QUYLTHULG | RF13_S_VORTEX | \
+    RF13_S_TREASURE | RF13_S_IMMOBILE | RF13_S_PEOPLE | RF13_S_ELEMENTAL | \
+    RF13_S_SNAKE | RF13_S_ELDRITCH | RF13_S_CAT | RF13_S_RAT | \
+    RF13_S_WORM | RF13_S_CLOTHES | RF13_S_HYBRID | RF13_S_BEETLE | \
+    RF13_S_HORDE | RF13_S_GIANT | RF13_S_SEXY_GIRL | RF13_S_TROLL | \
+    RF13_S_ORC | RF13_S_MAN | RF13_S_WOMAN | RF13_S_BREEDER | \
+    RF13_S_GOLEM | RF13_S_BIRD | RF13_S_INSECT | RF13_S_OGRE | \
+    RF13_S_LIZARD | RF13_S_HULK | RF13_S_MONKEY | RF13_S_EYE)
+
+#define RF14_INT_MASK \
+   (RF14_S_JELLY | RF14_S_KOBOLD | RF14_S_QUADRUPED | RF14_S_YEEK)
 
 /*
  * Hack -- "bolt" spells that may hurt fellow monsters
@@ -4957,6 +5016,9 @@
 
 #define RF6_BOLT_MASK \
    0L
+
+#define RF11_BOLT_MASK \
+  (RF11_BOULDER)
 
 
 /* Hack -- summon spells */
@@ -4973,6 +5035,19 @@
      RF6_S_UNDEAD | RF6_S_DRAGON | RF6_S_HI_UNDEAD | RF6_S_HI_DRAGON | \
      RF6_S_WRAITH | RF6_S_UNIQUE | RF6_S_THUNDERLORD | RF6_S_BUG | RF6_S_RNG | \
      RF6_S_ANIMALS)
+
+#define RF13_SUMMON_MASK \
+   (RF13_S_MOLD | RF13_S_BAT | RF13_S_QUYLTHULG | RF13_S_VORTEX | \
+    RF13_S_TREASURE | RF13_S_IMMOBILE | RF13_S_PEOPLE | RF13_S_ELEMENTAL | \
+    RF13_S_SNAKE | RF13_S_ELDRITCH | RF13_S_CAT | RF13_S_RAT | \
+    RF13_S_WORM | RF13_S_CLOTHES | RF13_S_HYBRID | RF13_S_BEETLE | \
+    RF13_S_HORDE | RF13_S_GIANT | RF13_S_SEXY_GIRL | RF13_S_TROLL | \
+    RF13_S_ORC | RF13_S_MAN | RF13_S_WOMAN | RF13_S_BREEDER | \
+    RF13_S_GOLEM | RF13_S_BIRD | RF13_S_INSECT | RF13_S_OGRE | \
+    RF13_S_LIZARD | RF13_S_HULK | RF13_S_MONKEY | RF13_S_EYE)
+
+#define RF14_SUMMON_MASK \
+   (RF14_S_JELLY | RF14_S_KOBOLD | RF14_S_QUADRUPED | RF14_S_YEEK)
 
 
 /*** Macro Definitions ***/

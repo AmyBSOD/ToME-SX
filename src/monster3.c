@@ -419,7 +419,7 @@ bool do_control_magic(void)
 	bool flag, redraw;
 	int ask;
 	char choice;
-	char out_val[160];
+	char out_val[224];
 	monster_race *r_ptr = &r_info[m_list[p_ptr->control].r_idx];
 	int label;
 
@@ -470,6 +470,36 @@ bool do_control_magic(void)
 		{
 			if (!monster_powers[i + 96].power) continue;
 			powers[num++] = i + 96;
+		}
+	}
+
+	/* List the monster powers -- RF12_* */
+	for (i = 0; i < 32; i++)
+	{
+		if (r_ptr->flags12 & BIT(i))
+		{
+			if (!monster_powers[i + 128].power) continue;
+			powers[num++] = i + 128;
+		}
+	}
+
+	/* List the monster powers -- RF13_* */
+	for (i = 0; i < 32; i++)
+	{
+		if (r_ptr->flags13 & BIT(i))
+		{
+			if (!monster_powers[i + 160].power) continue;
+			powers[num++] = i + 160;
+		}
+	}
+
+	/* List the monster powers -- RF14_* */
+	for (i = 0; i < 32; i++)
+	{
+		if (r_ptr->flags14 & BIT(i))
+		{
+			if (!monster_powers[i + 192].power) continue;
+			powers[num++] = i + 192;
 		}
 	}
 

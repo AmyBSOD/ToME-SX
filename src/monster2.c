@@ -2895,6 +2895,8 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 		if (m_ptr->status >= MSTATUS_FRIEND) number = 0;
 		/* and multiplying monsters shouldn't be scummable either! */
 		if (r_ptr->flags4 & (RF4_MULTIPLY)) number = 0;
+		/* death orb is multiplied by genociding, so shouldn't be scummable either */
+		if (r_ptr->flags2 & (RF2_DEATH_ORB)) number = 0;
 
 		/* lootcut nastytrap means no monster ever carries stuff --Amy */
 		if (p_ptr->nastytrap65) number = 0;
@@ -3856,7 +3858,7 @@ bool summon_specific_okay(int r_idx)
 			        !(r_ptr->flags3 & (RF3_EVIL)) &&
 			        !(r_ptr->flags3 & (RF3_UNDEAD)) &&
 			        !(r_ptr->flags3 & (RF3_DEMON)) &&
-			        !(r_ptr->flags4 || r_ptr->flags5 || r_ptr->flags6 || r_ptr->flags11) &&
+			        !(r_ptr->flags4 || r_ptr->flags5 || r_ptr->flags6 || r_ptr->flags11 || r_ptr->flags12 || r_ptr->flags13 || r_ptr->flags14) &&
 			        !(r_ptr->flags1 & (RF1_UNIQUE)));
 			break;
 		}

@@ -1107,8 +1107,47 @@ static monster_type lua_monster_forge @ monster_forge;
 #define RF11_BR_VENO            0x00000020 /* Venom breath */
 #define RF11_BR_WATE            0x00000040 /* Water breath */
 #define RF11_BR_ICEE            0x00000080 /* Ice breath */
+#define RF11_BOULDER            0x00000100 /* boulder throwing (giants) */
 
 #define RF12_BA_METE            0x00000001 /* Meteor ball */
+
+#define RF13_S_MOLD             0x00000001 /* Summon Mold */
+#define RF13_S_BAT              0x00000002 /* Summon Bat */
+#define RF13_S_QUYLTHULG        0x00000004 /* Summon Quylthulg */
+#define RF13_S_VORTEX           0x00000008 /* Summon Vortex */
+#define RF13_S_TREASURE         0x00000010 /* Summon Bizarre 6 (treasure) */
+#define RF13_S_IMMOBILE         0x00000020 /* Summon Mine (immobile) */
+#define RF13_S_PEOPLE           0x00000040 /* Summon Person */
+#define RF13_S_ELEMENTAL        0x00000080 /* Summon E */
+#define RF13_S_SNAKE            0x00000100 /* Summon Snake */
+#define RF13_S_ELDRITCH         0x00000200 /* Summon Eldritch Horror */
+#define RF13_S_CAT              0x00000400 /* Summon Cat */
+#define RF13_S_RAT              0x00000800 /* Summon Rat */
+#define RF13_S_WORM             0x00001000 /* Summon Worm */
+#define RF13_S_CLOTHES          0x00002000 /* Summon Clothes */
+#define RF13_S_HYBRID           0x00004000 /* Summon Hybrid */
+#define RF13_S_BEETLE           0x00008000 /* Summon Beetle */
+#define RF13_S_HORDE            0x00010000 /* Summon Horde */
+#define RF13_S_GIANT            0x00020000 /* Summon Giant */
+#define RF13_S_SEXY_GIRL        0x00040000 /* Summon Sexy Girl */
+#define RF13_S_TROLL            0x00080000 /* Summon Troll */
+#define RF13_S_ORC              0x00100000 /* Summon Orc */
+#define RF13_S_MAN              0x00200000 /* Summon Man */
+#define RF13_S_WOMAN            0x00400000 /* Summon Woman */
+#define RF13_S_BREEDER          0x00800000 /* Summon Breeder */
+#define RF13_S_GOLEM            0x01000000 /* Summon Golem */
+#define RF13_S_BIRD             0x02000000 /* Summon Bird */
+#define RF13_S_INSECT           0x04000000 /* Summon Insect */
+#define RF13_S_OGRE             0x08000000 /* Summon Ogre */
+#define RF13_S_LIZARD           0x10000000 /* Summon Lizard */
+#define RF13_S_HULK             0x20000000 /* Summon Hulk */
+#define RF13_S_MONKEY           0x40000000 /* Summon Monkey */
+#define RF13_S_EYE              0x80000000 /* Summon Eye */
+
+#define RF14_S_JELLY            0x00000001 /* Summon Jelly */
+#define RF14_S_KOBOLD           0x00000002 /* Summon Kobold */
+#define RF14_S_QUADRUPED        0x00000004 /* Summon Quadruped */
+#define RF14_S_YEEK             0x00000008 /* Summon Yeek */
 
 /** @name Monster flags
  * @{ */

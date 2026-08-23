@@ -552,7 +552,7 @@ void randommonstermix(void)
 	if (specmons > 10) specmons = 10;
 	while (specmons > 0) {
 		specmons--;
-		switch (random_number(297)) {
+		switch (random_number(334)) {
 			default:
 			case 1:
 				printf("M:UNIQUE\n");
@@ -1444,6 +1444,117 @@ void randommonstermix(void)
 				break;
 			case 297:
 				printf("S:BR_ICEE\n");
+				break;
+			case 298:
+				printf("S:BOULDER\n");
+				break;
+			case 299:
+				printf("S:S_MOLD\n");
+				break;
+			case 300:
+				printf("S:S_BAT\n");
+				break;
+			case 301:
+				printf("S:S_QUYLTHULG\n");
+				break;
+			case 302:
+				printf("S:S_VORTEX\n");
+				break;
+			case 303:
+				printf("S:S_TREASURE\n");
+				break;
+			case 304:
+				printf("S:S_IMMOBILE\n");
+				break;
+			case 305:
+				printf("S:S_PEOPLE\n");
+				break;
+			case 306:
+				printf("S:S_ELEMENTAL\n");
+				break;
+			case 307:
+				printf("S:S_SNAKE\n");
+				break;
+			case 308:
+				printf("S:S_ELDRITCH\n");
+				break;
+			case 309:
+				printf("S:S_CAT\n");
+				break;
+			case 310:
+				printf("S:S_RAT\n");
+				break;
+			case 311:
+				printf("S:S_WORM\n");
+				break;
+			case 312:
+				printf("S:S_CLOTHES\n");
+				break;
+			case 313:
+				printf("S:S_HYBRID\n");
+				break;
+			case 314:
+				printf("S:S_BEETLE\n");
+				break;
+			case 315:
+				printf("S:S_HORDE\n");
+				break;
+			case 316:
+				printf("S:S_GIANT\n");
+				break;
+			case 317:
+				printf("S:S_SEXY_GIRL\n");
+				break;
+			case 318:
+				printf("S:S_TROLL\n");
+				break;
+			case 319:
+				printf("S:S_ORC\n");
+				break;
+			case 320:
+				printf("S:S_MAN\n");
+				break;
+			case 321:
+				printf("S:S_WOMAN\n");
+				break;
+			case 322:
+				printf("S:S_BREEDER\n");
+				break;
+			case 323:
+				printf("S:S_GOLEM\n");
+				break;
+			case 324:
+				printf("S:S_BIRD\n");
+				break;
+			case 325:
+				printf("S:S_INSECT\n");
+				break;
+			case 326:
+				printf("S:S_OGRE\n");
+				break;
+			case 327:
+				printf("S:S_LIZARD\n");
+				break;
+			case 328:
+				printf("S:S_HULK\n");
+				break;
+			case 329:
+				printf("S:S_MONKEY\n");
+				break;
+			case 330:
+				printf("S:S_EYE\n");
+				break;
+			case 331:
+				printf("S:S_JELLY\n");
+				break;
+			case 332:
+				printf("S:S_KOBOLD\n");
+				break;
+			case 333:
+				printf("S:S_QUADRUPED\n");
+				break;
+			case 334:
+				printf("S:S_YEEK\n");
 				break;
 		}
 	}
@@ -3141,7 +3252,8 @@ void printRandoms(int lower, int upper, int count)
 						printf("F:NO_SHAFT\n");
 						printf("R:95:3\n");
 						printf("M:ANIMAL\n");
-						printf("S:S_ANT | S_SPIDER | S_HOUND\n");
+						printf("S:S_ANT | S_SPIDER | S_HOUND | S_BAT | S_SNAKE | S_CAT | S_RAT |\n");
+						printf("S:S_WORM | S_BEETLE | S_BIRD | S_INSECT | S_LIZARD | S_MONKEY | S_QUADRUPED\n");
 						printf("R:5:0\n");
 						break;
 					case 108:

@@ -756,6 +756,7 @@ static void roff_aux(int r_idx, int ego, int remem)
 	if (flags4 & (RF4_ARROW_2))	vp[vn++] = "fire arrows";
 	if (flags4 & (RF4_ARROW_3))	vp[vn++] = "fire a missile";
 	if (flags4 & (RF4_ARROW_4))	vp[vn++] = "fire missiles";
+	if (flags11 & (RF11_BOULDER))	vp[vn++] = "throw boulders";
 
 	/* Describe inate attacks */
 	if (vn)
@@ -906,6 +907,42 @@ static void roff_aux(int r_idx, int ego, int remem)
 	if (flags6 & (RF6_S_WRAITH)) vp[vn++] = "summon Ringwraith";
 	if (flags6 & (RF6_S_UNIQUE)) vp[vn++] = "summon Unique Monsters";
 	if (flags12 & (RF12_BA_METE)) vp[vn++] = "launch a meteor";
+	if (flags13 & (RF13_S_MOLD)) vp[vn++] = "summon molds";
+	if (flags13 & (RF13_S_BAT)) vp[vn++] = "summon bats";
+	if (flags13 & (RF13_S_QUYLTHULG)) vp[vn++] = "summon quylthulgs";
+	if (flags13 & (RF13_S_VORTEX)) vp[vn++] = "summon vortices";
+	if (flags13 & (RF13_S_TREASURE)) vp[vn++] = "summon treasure";
+	if (flags13 & (RF13_S_IMMOBILE)) vp[vn++] = "summon stationary monsters";
+	if (flags13 & (RF13_S_PEOPLE)) vp[vn++] = "summon people";
+	if (flags13 & (RF13_S_ELEMENTAL)) vp[vn++] = "summon elementals";
+	if (flags13 & (RF13_S_SNAKE)) vp[vn++] = "summon snakes";
+	if (flags13 & (RF13_S_ELDRITCH)) vp[vn++] = "summon horrors";
+	if (flags13 & (RF13_S_CAT)) vp[vn++] = "summon cats";
+	if (flags13 & (RF13_S_RAT)) vp[vn++] = "summon rats";
+	if (flags13 & (RF13_S_WORM)) vp[vn++] = "summon worms";
+	if (flags13 & (RF13_S_CLOTHES)) vp[vn++] = "summon clothes";
+	if (flags13 & (RF13_S_HYBRID)) vp[vn++] = "summon hybrids";
+	if (flags13 & (RF13_S_BEETLE)) vp[vn++] = "summon beetles";
+	if (flags13 & (RF13_S_HORDE)) vp[vn++] = "summon hordes";
+	if (flags13 & (RF13_S_GIANT)) vp[vn++] = "summon giants";
+	if (flags13 & (RF13_S_SEXY_GIRL)) vp[vn++] = "summon sexy girls";
+	if (flags13 & (RF13_S_TROLL)) vp[vn++] = "summon trolls";
+	if (flags13 & (RF13_S_ORC)) vp[vn++] = "summon orcs";
+	if (flags13 & (RF13_S_MAN)) vp[vn++] = "summon men";
+	if (flags13 & (RF13_S_WOMAN)) vp[vn++] = "summon women";
+	if (flags13 & (RF13_S_BREEDER)) vp[vn++] = "summon breeders";
+	if (flags13 & (RF13_S_GOLEM)) vp[vn++] = "summon golems";
+	if (flags13 & (RF13_S_BIRD)) vp[vn++] = "summon birds";
+	if (flags13 & (RF13_S_INSECT)) vp[vn++] = "summon insects";
+	if (flags13 & (RF13_S_OGRE)) vp[vn++] = "summon ogres";
+	if (flags13 & (RF13_S_LIZARD)) vp[vn++] = "summon lizards";
+	if (flags13 & (RF13_S_HULK)) vp[vn++] = "summon hulks";
+	if (flags13 & (RF13_S_MONKEY)) vp[vn++] = "summon monkeys";
+	if (flags13 & (RF13_S_EYE)) vp[vn++] = "summon eyes";
+	if (flags14 & (RF14_S_JELLY)) vp[vn++] = "summon jellies";
+	if (flags14 & (RF14_S_KOBOLD)) vp[vn++] = "summon kobolds";
+	if (flags14 & (RF14_S_QUADRUPED)) vp[vn++] = "summon quadrupeds";
+	if (flags14 & (RF14_S_YEEK)) vp[vn++] = "summon yeeks";
 
 	/* Describe spells */
 	if (vn)

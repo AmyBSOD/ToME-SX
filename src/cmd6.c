@@ -880,78 +880,280 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 		{
 			(void)set_confused(0);
 		}
+	}
+
+	if ((!harmful || p_ptr->nastytrap200) && !cutting && (o_ptr->sval != SV_CORPSE_MEAT))
+	{
 		if (r_ptr->flags6 & RF6_S_THUNDERLORD)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_THUNDERLORD, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_THUNDERLORD, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_THUNDERLORD);
 		}
 		if (r_ptr->flags6 & RF6_S_DEMON)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_DEMON, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_DEMON, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_DEMON);
 		}
 		if (r_ptr->flags6 & RF6_S_KIN)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_KIN, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_KIN, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_KIN);
 		}
 		if (r_ptr->flags6 & RF6_S_HI_DEMON)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_HI_DEMON, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_HI_DEMON, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_HI_DEMON);
 		}
 		if (r_ptr->flags6 & RF6_S_MONSTER)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, 0, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, 0, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, 0);
 		}
 		if (r_ptr->flags6 & RF6_S_MONSTERS)
 		{
 			int k;
 			for (k = 0; k < 8; k++)
 			{
-				summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, 0, FALSE);
+				if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, 0, FALSE);
+				else summon_specific(p_ptr->py, p_ptr->px, dun_level, 0);
 			}
 		}
 		if (r_ptr->flags6 & RF6_S_UNDEAD)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_UNDEAD, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_UNDEAD, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_UNDEAD);
 		}
 		if (r_ptr->flags6 & RF6_S_DRAGON)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_DRAGON, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_DRAGON, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_DRAGON);
 		}
 		if (r_ptr->flags6 & RF6_S_ANT)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_ANT, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_ANT, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_ANT);
 		}
 		if (r_ptr->flags6 & RF6_S_SPIDER)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_SPIDER, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_SPIDER, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_SPIDER);
 		}
 		if (r_ptr->flags6 & RF6_S_HOUND)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_HOUND, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_HOUND, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_HOUND);
 		}
 		if (r_ptr->flags6 & RF6_S_HYDRA)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_HYDRA, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_HYDRA, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_HYDRA);
 		}
 		if (r_ptr->flags6 & RF6_S_ANGEL)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_ANGEL, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_ANGEL, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_ANGEL);
 		}
 		if (r_ptr->flags6 & RF6_S_HI_DRAGON)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_HI_DRAGON, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_HI_DRAGON, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_HI_DRAGON);
 		}
 		if (r_ptr->flags6 & RF6_S_HI_UNDEAD)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_HI_UNDEAD, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_HI_UNDEAD, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_HI_UNDEAD);
 		}
 		if (r_ptr->flags6 & RF6_S_WRAITH)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_WRAITH, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_WRAITH, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_WRAITH);
 		}
 		if (r_ptr->flags6 & RF6_S_UNIQUE)
 		{
-			summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_UNIQUE, FALSE);
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_UNIQUE, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_UNIQUE);
 		}
+		if (r_ptr->flags13 & RF13_S_MOLD)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_BIZARRE1, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_BIZARRE1);
+		}
+		if (r_ptr->flags13 & RF13_S_BAT)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_BIZARRE2, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_BIZARRE2);
+		}
+		if (r_ptr->flags13 & RF13_S_QUYLTHULG)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_BIZARRE3, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_BIZARRE3);
+		}
+		if (r_ptr->flags13 & RF13_S_VORTEX)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_BIZARRE4, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_BIZARRE4);
+		}
+		if (r_ptr->flags13 & RF13_S_TREASURE)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_BIZARRE6, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_BIZARRE6);
+		}
+		if (r_ptr->flags13 & RF13_S_IMMOBILE)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_MINE, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_MINE);
+		}
+		if (r_ptr->flags13 & RF13_S_PEOPLE)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_PERSON, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_PERSON);
+		}
+		if (r_ptr->flags13 & RF13_S_ELEMENTAL)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_E, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_E);
+		}
+		if (r_ptr->flags13 & RF13_S_SNAKE)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_SNAKE, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_SNAKE);
+		}
+		if (r_ptr->flags13 & RF13_S_ELDRITCH)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_ELDRITCH, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_ELDRITCH);
+		}
+		if (r_ptr->flags13 & RF13_S_CAT)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_CAT, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_CAT);
+		}
+		if (r_ptr->flags13 & RF13_S_RAT)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_RAT, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_RAT);
+		}
+		if (r_ptr->flags13 & RF13_S_WORM)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_WORM, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_WORM);
+		}
+		if (r_ptr->flags13 & RF13_S_CLOTHES)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_CLOTHES, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_CLOTHES);
+		}
+		if (r_ptr->flags13 & RF13_S_HYBRID)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_HYBRID, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_HYBRID);
+		}
+		if (r_ptr->flags13 & RF13_S_BEETLE)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_BEETLE, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_BEETLE);
+		}
+		if (r_ptr->flags13 & RF13_S_HORDE)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_HORDE, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_HORDE);
+		}
+		if (r_ptr->flags13 & RF13_S_GIANT)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_GIANT, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_GIANT);
+		}
+		if (r_ptr->flags13 & RF13_S_SEXY_GIRL)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_SEXY_GIRL, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_SEXY_GIRL);
+		}
+		if (r_ptr->flags13 & RF13_S_TROLL)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_TROLL, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_TROLL);
+		}
+		if (r_ptr->flags13 & RF13_S_ORC)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_ORC, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_ORC);
+		}
+		if (r_ptr->flags13 & RF13_S_MAN)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_MAN, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_MAN);
+		}
+		if (r_ptr->flags13 & RF13_S_WOMAN)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_WOMAN, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_WOMAN);
+		}
+		if (r_ptr->flags13 & RF13_S_BREEDER)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_BREEDER, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_BREEDER);
+		}
+		if (r_ptr->flags13 & RF13_S_GOLEM)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_GOLEM, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_GOLEM);
+		}
+		if (r_ptr->flags13 & RF13_S_BIRD)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_BIRD, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_BIRD);
+		}
+		if (r_ptr->flags13 & RF13_S_INSECT)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_INSECT, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_INSECT);
+		}
+		if (r_ptr->flags13 & RF13_S_OGRE)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_OGRE, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_OGRE);
+		}
+		if (r_ptr->flags13 & RF13_S_LIZARD)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_LIZARD, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_LIZARD);
+		}
+		if (r_ptr->flags13 & RF13_S_HULK)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_HULK, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_HULK);
+		}
+		if (r_ptr->flags13 & RF13_S_MONKEY)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_MONKEY, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_MONKEY);
+		}
+		if (r_ptr->flags13 & RF13_S_EYE)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_EYE, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_EYE);
+		}
+		if (r_ptr->flags14 & RF14_S_JELLY)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_JELLY, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_JELLY);
+		}
+		if (r_ptr->flags14 & RF14_S_KOBOLD)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_KOBOLD, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_KOBOLD);
+		}
+		if (r_ptr->flags14 & RF14_S_QUADRUPED)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_QUADRUPED, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_QUADRUPED);
+		}
+		if (r_ptr->flags14 & RF14_S_YEEK)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_YEEK, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_YEEK);
+		}
+
 	}
 }
 

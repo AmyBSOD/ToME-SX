@@ -272,7 +272,7 @@ static bool int_outof(monster_race *r_ptr, int prob)
 /*
  * Remove the "bad" spells from a spell list
  */
-static void remove_bad_spells(int m_idx, u32b *f4p, u32b *f5p, u32b *f6p, u32b *f11p)
+static void remove_bad_spells(int m_idx, u32b *f4p, u32b *f5p, u32b *f6p, u32b *f11p, u32b *f13p, u32b *f14p)
 {
 	monster_type *m_ptr = &m_list[m_idx];
 	monster_race *r_ptr = race_inf(m_ptr);
@@ -281,6 +281,8 @@ static void remove_bad_spells(int m_idx, u32b *f4p, u32b *f5p, u32b *f6p, u32b *
 	u32b f5 = (*f5p);
 	u32b f6 = (*f6p);
 	u32b f11 = (*f11p);
+	u32b f13 = (*f13p);
+	u32b f14 = (*f14p);
 
 	u32b smart = 0L;
 
@@ -548,6 +550,8 @@ static void remove_bad_spells(int m_idx, u32b *f4p, u32b *f5p, u32b *f6p, u32b *
 	(*f5p) = f5;
 	(*f6p) = f6;
 	(*f11p) = f11;
+	(*f13p) = f13;
+	(*f14p) = f14;
 }
 
 
@@ -636,6 +640,14 @@ static bool clean_shot(int y1, int x1, int y2, int x2)
 static void bolt(int m_idx, int typ, int dam_hp)
 {
 	int flg = PROJECT_STOP | PROJECT_KILL;
+
+	/* Target the player with a bolt attack */
+	(void)project(m_idx, 0, p_ptr->py, p_ptr->px, dam_hp, typ, flg);
+}
+
+static void bolt_cantreflect(int m_idx, int typ, int dam_hp)
+{
+	int flg = PROJECT_STOP | PROJECT_KILL | PROJECT_ONLYDODGE;
 
 	/* Target the player with a bolt attack */
 	(void)project(m_idx, 0, p_ptr->py, p_ptr->px, dam_hp, typ, flg);
@@ -802,7 +814,7 @@ static int choose_attack_spell(int m_idx, int spells[], int num)
 
 	/* secret spell nastytrap by Amy: allow monster to cast any random spell, whether or not it actually has the spell in question */
 	if (p_ptr->nastytrap168 && magik(1)) {
-		switch (randint(105)) {
+		switch (randint(142)) {
 			default:
 			case 1:
 				return 96; /* RF4_SHRIEK */
@@ -1014,6 +1026,80 @@ static int choose_attack_spell(int m_idx, int spells[], int num)
 				return 320 + 6; /* RF11_BR_WATE */
 			case 105:
 				return 320 + 7; /* RF11_BR_ICEE */
+			case 106:
+				return 320 + 8; /* RF11_BOULDER */
+			case 107:
+				return 384 + 0; /* RF13_S_MOLD */
+			case 108:
+				return 384 + 1; /* RF13_S_BAT */
+			case 109:
+				return 384 + 2; /* RF13_S_QUYLTHULG */
+			case 110:
+				return 384 + 3; /* RF13_S_VORTEX */
+			case 111:
+				return 384 + 4; /* RF13_S_TREASURE */
+			case 112:
+				return 384 + 5; /* RF13_S_IMMOBILE */
+			case 113:
+				return 384 + 6; /* RF13_S_PEOPLE */
+			case 114:
+				return 384 + 7; /* RF13_S_ELEMENTAL */
+			case 115:
+				return 384 + 8; /* RF13_S_SNAKE */
+			case 116:
+				return 384 + 9; /* RF13_S_ELDRITCH */
+			case 117:
+				return 384 + 10; /* RF13_S_CAT */
+			case 118:
+				return 384 + 11; /* RF13_S_RAT */
+			case 119:
+				return 384 + 12; /* RF13_S_WORM */
+			case 120:
+				return 384 + 13; /* RF13_S_CLOTHES */
+			case 121:
+				return 384 + 14; /* RF13_S_HYBRID */
+			case 122:
+				return 384 + 15; /* RF13_S_BEETLE */
+			case 123:
+				return 384 + 16; /* RF13_S_HORDE */
+			case 124:
+				return 384 + 17; /* RF13_S_GIANT */
+			case 125:
+				return 384 + 18; /* RF13_S_SEXY_GIRL */
+			case 126:
+				return 384 + 19; /* RF13_S_TROLL */
+			case 127:
+				return 384 + 20; /* RF13_S_ORC */
+			case 128:
+				return 384 + 21; /* RF13_S_MAN */
+			case 129:
+				return 384 + 22; /* RF13_S_WOMAN */
+			case 130:
+				return 384 + 23; /* RF13_S_BREEDER */
+			case 131:
+				return 384 + 24; /* RF13_S_GOLEM */
+			case 132:
+				return 384 + 25; /* RF13_S_BIRD */
+			case 133:
+				return 384 + 26; /* RF13_S_INSECT */
+			case 134:
+				return 384 + 27; /* RF13_S_OGRE */
+			case 135:
+				return 384 + 28; /* RF13_S_LIZARD */
+			case 136:
+				return 384 + 29; /* RF13_S_HULK */
+			case 137:
+				return 384 + 30; /* RF13_S_MONKEY */
+			case 138:
+				return 384 + 31; /* RF13_S_EYE */
+			case 139:
+				return 416 + 0; /* RF14_S_JELLY */
+			case 140:
+				return 416 + 1; /* RF14_S_KOBOLD */
+			case 141:
+				return 416 + 2; /* RF14_S_QUADRUPED */
+			case 142:
+				return 416 + 3; /* RF14_S_YEEK */
 		}
 	}
 
@@ -1241,7 +1327,7 @@ static bool monst_spell_monst(int m_idx)
 	monster_race *r_ptr = race_inf(m_ptr);
 	monster_type *t_ptr;                     /* Putative target */
 	monster_race *tr_ptr;
-	u32b f4, f5, f6, f11, f12;                    /* racial spell flags */
+	u32b f4, f5, f6, f11, f12, f13, f14;     /* racial spell flags */
 	bool direct = TRUE;
 	bool wake_up = FALSE;
 
@@ -1316,6 +1402,8 @@ static bool monst_spell_monst(int m_idx)
 		f6 = r_ptr->flags6;
 		f11 = r_ptr->flags11;
 		f12 = r_ptr->flags12;
+		f13 = r_ptr->flags13;
+		f14 = r_ptr->flags14;
 
 		/* Hack -- allow "desperate" spells */
 		if ((r_ptr->flags2 & (RF2_SMART)) &&
@@ -1326,9 +1414,11 @@ static bool monst_spell_monst(int m_idx)
 			f4 &= (RF4_INT_MASK);
 			f5 &= (RF5_INT_MASK);
 			f6 &= (RF6_INT_MASK);
+			f13 &= (RF13_INT_MASK);
+			f14 &= (RF14_INT_MASK);
 
 			/* No spells left */
-			if ((!f4 && !f5 && !f6 && !f11 && !f12) && (monst_spell_monst_spell == -1)) return (FALSE);
+			if ((!f4 && !f5 && !f6 && !f11 && !f12 && !f13 && !f14) && (monst_spell_monst_spell == -1)) return (FALSE);
 		}
 
 		/* Extract the "inate" spells (RF4) */
@@ -1359,6 +1449,18 @@ static bool monst_spell_monst(int m_idx)
 		for (k = 0; k < 32; k++)
 		{
 			if (f12 & (1L << k)) spell[num++] = k + 32 * 11;
+		}
+
+		/* Extract even more spells (RF13) */
+		for (k = 0; k < 32; k++)
+		{
+			if (f13 & (1L << k)) spell[num++] = k + 32 * 12;
+		}
+
+		/* Extract even more spells (RF14) */
+		for (k = 0; k < 32; k++)
+		{
+			if (f14 & (1L << k)) spell[num++] = k + 32 * 13;
 		}
 
 		/* No spells left */
@@ -2319,7 +2421,7 @@ static bool monst_spell_monst(int m_idx)
 				/* Heal the monster */
 				if (m_ptr->hp < m_ptr->maxhp)
 				{
-					if (!(tr_ptr->flags4 || tr_ptr->flags5 || tr_ptr->flags6 || tr_ptr->flags11 || tr_ptr->flags12))
+					if (!(tr_ptr->flags4 || tr_ptr->flags5 || tr_ptr->flags6 || tr_ptr->flags11 || tr_ptr->flags12 || tr_ptr->flags13 || tr_ptr->flags14))
 					{
 						if (see_both)
 							monster_msg("%^s is unaffected!", t_name);
@@ -3784,6 +3886,18 @@ static bool monst_spell_monst(int m_idx)
 				break;
 			}
 
+			/* RF11_BOULDER */
+		case 320 + 8:
+			{
+				if (!see_either) monster_msg("You hear a strange noise.");
+				else if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind) monster_msg("%^s makes a strange noise.", m_name);
+				else monster_msg("%^s throws a boulder at %s.", m_name, t_name);
+				sound(SOUND_SHOOT);
+				monst_bolt_monst(m_idx, y, x, GF_ARROW, damroll(rlev + 1, 5) + randint(10) );
+				break;
+			}
+
 			/* RF12_BA_METE */
 		case 352 + 0:
 			{
@@ -3803,6 +3917,834 @@ static bool monst_spell_monst(int m_idx)
 				break;
 			}
 
+
+			/* RF13_S_MOLD */
+		case 384 + 0:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons molds.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_BIZARRE1, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_BIZARRE1);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_BAT */
+		case 384 + 1:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons flapping things.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_BIZARRE2, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_BIZARRE2);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_QUYLTHULG */
+		case 384 + 2:
+			{
+				if (!p_ptr->nastytrap174 && magik(80)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons quylthulgs.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_BIZARRE3, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_BIZARRE3);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_VORTEX */
+		case 384 + 3:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons vortices.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_BIZARRE4, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_BIZARRE4);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_TREASURE */
+		case 384 + 4:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically spawns some treasure.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_BIZARRE6, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_BIZARRE6);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_IMMOBILE */
+		case 384 + 5:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons immobile creatures.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_MINE, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_MINE);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_PEOPLE */
+		case 384 + 6:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons people.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_PERSON, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_PERSON);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_ELEMENTAL */
+		case 384 + 7:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons elementals.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_E, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_E);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_SNAKE */
+		case 384 + 8:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s transforms sticks into snakes.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_SNAKE, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_SNAKE);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_ELDRITCH */
+		case 384 + 9:
+			{
+				if (!p_ptr->nastytrap174 && magik(80)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons horrors.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_ELDRITCH, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_ELDRITCH);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_CAT */
+		case 384 + 10:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons cats.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_CAT, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_CAT);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_RAT */
+		case 384 + 11:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons rats.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_RAT, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_RAT);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_WORM */
+		case 384 + 12:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s opens up a can of whoop-ass.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_WORM, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_WORM);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_CLOTHES */
+		case 384 + 13:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically spawns clothes.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_CLOTHES, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_CLOTHES);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_HYBRID */
+		case 384 + 14:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons hybrids.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_HYBRID, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_HYBRID);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_BEETLE */
+		case 384 + 15:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons beetles.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_BEETLE, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_BEETLE);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_HORDE */
+		case 384 + 16:
+			{
+				if (!p_ptr->nastytrap174 && magik(80)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons hordes.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_HORDE, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_HORDE);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_GIANT */
+		case 384 + 17:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons giants.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_GIANT, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_GIANT);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_SEXY_GIRL */
+		case 384 + 18:
+			{
+				if (!p_ptr->nastytrap174 && magik(80)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons sexy girls.", m_name);
+				for (k = 0; k < randint(2); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_SEXY_GIRL, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_SEXY_GIRL);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_TROLL */
+		case 384 + 19:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons trolls.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_TROLL, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_TROLL);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_ORC */
+		case 384 + 20:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons orcs.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_ORC, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_ORC);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_MAN */
+		case 384 + 21:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons men.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_MAN, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_MAN);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_WOMAN */
+		case 384 + 22:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons women.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_WOMAN, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_WOMAN);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_BREEDER */
+		case 384 + 23:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons breeders.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_BREEDER, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_BREEDER);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_GOLEM */
+		case 384 + 24:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons golems.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_GOLEM, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_GOLEM);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_BIRD */
+		case 384 + 25:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons birds.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_BIRD, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_BIRD);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_INSECT */
+		case 384 + 26:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons insects.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_INSECT, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_INSECT);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_OGRE */
+		case 384 + 27:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons ogres.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_OGRE, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_OGRE);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_LIZARD */
+		case 384 + 28:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons lizards.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_LIZARD, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_LIZARD);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_HULK */
+		case 384 + 29:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons hulks.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_HULK, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_HULK);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_MONKEY */
+		case 384 + 30:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons monkeys.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_MONKEY, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_MONKEY);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_EYE */
+		case 384 + 31:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons eyes.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_EYE, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_EYE);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF14_S_JELLY */
+		case 416 + 0:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons jellies.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_JELLY, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_JELLY);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF14_S_KOBOLD */
+		case 416 + 1:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons kobolds.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_KOBOLD, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_KOBOLD);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF14_S_QUADRUPED */
+		case 416 + 2:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons quadrupeds.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_QUADRUPED, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_QUADRUPED);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF14_S_YEEK */
+		case 416 + 3:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons yeeks.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_YEEK, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_YEEK);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
 
 		}
 
@@ -3847,6 +4789,20 @@ static bool monst_spell_monst(int m_idx)
 			else if (thrown_spell < 32*12)
 			{
 				r_ptr->r_flags12 |= (1L << (thrown_spell - 32 * 11));
+				if (r_ptr->r_cast_spell < MAX_UCHAR) r_ptr->r_cast_spell++;
+			}
+
+			/* New spell */
+			else if (thrown_spell < 32*13)
+			{
+				r_ptr->r_flags13 |= (1L << (thrown_spell - 32 * 12));
+				if (r_ptr->r_cast_spell < MAX_UCHAR) r_ptr->r_cast_spell++;
+			}
+
+			/* New spell */
+			else if (thrown_spell < 32*14)
+			{
+				r_ptr->r_flags14 |= (1L << (thrown_spell - 32 * 13));
 				if (r_ptr->r_cast_spell < MAX_UCHAR) r_ptr->r_cast_spell++;
 			}
 		}
@@ -4137,7 +5093,7 @@ bool make_attack_spell(int m_idx)
 {
 	int k, chance, thrown_spell, rlev, failrate;
 	int spell[256], num = 0;
-	u32b f2, f4, f5, f6, f11, f12;
+	u32b f2, f4, f5, f6, f11, f12, f13, f14;
 	monster_type *m_ptr = &m_list[m_idx];
 	monster_race *r_ptr = race_inf(m_ptr);
 	char m_name[80];
@@ -4247,6 +5203,8 @@ bool make_attack_spell(int m_idx)
 	f6 = r_ptr->flags6;
 	f11 = r_ptr->flags11;
 	f12 = r_ptr->flags12;
+	f13 = r_ptr->flags13;
+	f14 = r_ptr->flags14;
 
 	if (!stupid_monsters)
 	{
@@ -4263,21 +5221,23 @@ bool make_attack_spell(int m_idx)
 		f4 &= (RF4_INT_MASK);
 		f5 &= (RF5_INT_MASK);
 		f6 &= (RF6_INT_MASK);
+		f13 &= (RF13_INT_MASK);
+		f14 &= (RF14_INT_MASK);
 
 		/* No spells left */
-		if (!f4 && !f5 && !f6 && !f11 && !f12) return (FALSE);
+		if (!f4 && !f5 && !f6 && !f11 && !f12 && !f13 && !f14) return (FALSE);
 	}
 
 	/* Remove the "ineffective" spells */
-	remove_bad_spells(m_idx, &f4, &f5, &f6, &f11);
+	remove_bad_spells(m_idx, &f4, &f5, &f6, &f11, &f13, &f14);
 
 	/* No spells left */
-	if (!f4 && !f5 && !f6 && !f11 && !f12 && !(f2 & (RF2_ELDRITCH_HORROR)) ) return (FALSE);
+	if (!f4 && !f5 && !f6 && !f11 && !f12 && !f13 && !f14 && !(f2 & (RF2_ELDRITCH_HORROR)) ) return (FALSE);
 
 	if (!stupid_monsters)
 	{
 		/* Check for a clean bolt shot */
-		if ((f4&(RF4_BOLT_MASK) || f5 & (RF5_BOLT_MASK) ||
+		if ((f4&(RF4_BOLT_MASK) || f5 & (RF5_BOLT_MASK) || f11 & (RF11_BOLT_MASK) ||
 		                f6&(RF6_BOLT_MASK)) &&
 		                !(r_ptr->flags2 & (RF2_STUPID)) &&
 		                !clean_shot(m_ptr->fy, m_ptr->fx, y, x))
@@ -4286,10 +5246,11 @@ bool make_attack_spell(int m_idx)
 			f4 &= ~(RF4_BOLT_MASK);
 			f5 &= ~(RF5_BOLT_MASK);
 			f6 &= ~(RF6_BOLT_MASK);
+			f11 &= ~(RF11_BOLT_MASK);
 		}
 
 		/* Check for a possible summon */
-		if ((f4 & (RF4_SUMMON_MASK) || f5 & (RF5_SUMMON_MASK) ||
+		if ((f4 & (RF4_SUMMON_MASK) || f5 & (RF5_SUMMON_MASK) || f13 & (RF13_SUMMON_MASK) || f14 & (RF14_SUMMON_MASK) ||
 		                f6 & (RF6_SUMMON_MASK)) &&
 		                !(r_ptr->flags2 & (RF2_STUPID)) &&
 		                !(summon_possible(y, x)))
@@ -4298,10 +5259,12 @@ bool make_attack_spell(int m_idx)
 			f4 &= ~(RF4_SUMMON_MASK);
 			f5 &= ~(RF5_SUMMON_MASK);
 			f6 &= ~(RF6_SUMMON_MASK);
+			f13 &= ~(RF13_SUMMON_MASK);
+			f14 &= ~(RF14_SUMMON_MASK);
 		}
 
 		/* No spells left */
-		if (!f4 && !f5 && !f6 && !f11 && !f12 && !(f2 & (RF2_ELDRITCH_HORROR)) ) return (FALSE);
+		if (!f4 && !f5 && !f6 && !f11 && !f12 && !f13 && !f14 && !(f2 & (RF2_ELDRITCH_HORROR)) ) return (FALSE);
 	}
 
 	if (f2 & (RF2_ELDRITCH_HORROR)) spell[num++] = 45; /* eldritch blast, by Amy */
@@ -4334,6 +5297,18 @@ bool make_attack_spell(int m_idx)
 	for (k = 0; k < 32; k++)
 	{
 		if (f12 & (1L << k)) spell[num++] = k + 32 * 11;
+	}
+
+	/* Extract more spells (RF13) */
+	for (k = 0; k < 32; k++)
+	{
+		if (f13 & (1L << k)) spell[num++] = k + 32 * 12;
+	}
+
+	/* Extract more spells (RF14) */
+	for (k = 0; k < 32; k++)
+	{
+		if (f14 & (1L << k)) spell[num++] = k + 32 * 13;
 	}
 
 	/* No spells left */
@@ -6911,6 +7886,19 @@ bool make_attack_spell(int m_idx)
 				update_smart_learn(m_idx, DRS_COLD);
 				break;
 			}
+
+			/* RF11_BOULDER */
+		case 320 + 8:
+			{
+				disturb(1, 0);
+				if (blind) msg_format("%^s makes a strange noise.", m_name);
+				else msg_format("%^s throws a boulder!", m_name);
+				/* boulders can't be reflected, but you can dodge them --Amy */
+				bolt_cantreflect(m_idx, GF_ARROW, damroll(rlev + 1, 5));
+				break;
+			}
+
+
 			/* RF12_BA_METE */
 		case 352 + 0:
 			{
@@ -6927,6 +7915,725 @@ bool make_attack_spell(int m_idx)
 				break;
 			}
 
+			/* RF13_S_MOLD */
+		case 384 + 0:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons molds.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_BIZARRE1);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_BAT */
+		case 384 + 1:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons flapping things.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_BIZARRE2);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_QUYLTHULG */
+		case 384 + 2:
+			{
+				if (!p_ptr->nastytrap174 && magik(80)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons quylthulgs.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_BIZARRE3);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_VORTEX */
+		case 384 + 3:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons vortices.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_BIZARRE4);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_TREASURE */
+		case 384 + 4:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically spawns some treasure.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_BIZARRE6);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_IMMOBILE */
+		case 384 + 5:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons immobile creatures.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_MINE);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_PEOPLE */
+		case 384 + 6:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons people.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_PERSON);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_ELEMENTAL */
+		case 384 + 7:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons elementals.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_E);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_SNAKE */
+		case 384 + 8:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s transforms sticks into snakes.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_SNAKE);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_ELDRITCH */
+		case 384 + 9:
+			{
+				if (!p_ptr->nastytrap174 && magik(80)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons horrors.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_ELDRITCH);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_CAT */
+		case 384 + 10:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons cats.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_CAT);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_RAT */
+		case 384 + 11:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons rats.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_RAT);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_WORM */
+		case 384 + 12:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s opens up a can of whoop-ass.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_WORM);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_CLOTHES */
+		case 384 + 13:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically spawns clothes.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_CLOTHES);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_HYBRID */
+		case 384 + 14:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons hybrids.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_HYBRID);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_BEETLE */
+		case 384 + 15:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons beetles.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_BEETLE);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_HORDE */
+		case 384 + 16:
+			{
+				if (!p_ptr->nastytrap174 && magik(80)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons hordes.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_HORDE);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_GIANT */
+		case 384 + 17:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons giants.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_GIANT);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_SEXY_GIRL */
+		case 384 + 18:
+			{
+				if (!p_ptr->nastytrap174 && magik(80)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons sexy girls.", m_name);
+				for (k = 0; k < randint(2); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_SEXY_GIRL);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_TROLL */
+		case 384 + 19:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons trolls.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_TROLL);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_ORC */
+		case 384 + 20:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons orcs.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_ORC);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_MAN */
+		case 384 + 21:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons men.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_MAN);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_WOMAN */
+		case 384 + 22:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons women.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_WOMAN);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_BREEDER */
+		case 384 + 23:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons breeders.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_BREEDER);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_GOLEM */
+		case 384 + 24:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons golems.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_GOLEM);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_BIRD */
+		case 384 + 25:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons birds.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_BIRD);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_INSECT */
+		case 384 + 26:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons insects.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_INSECT);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_OGRE */
+		case 384 + 27:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons ogres.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_OGRE);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_LIZARD */
+		case 384 + 28:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons lizards.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_LIZARD);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_HULK */
+		case 384 + 29:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons hulks.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_HULK);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_MONKEY */
+		case 384 + 30:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons monkeys.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_MONKEY);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF13_S_EYE */
+		case 384 + 31:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons eyes.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_EYE);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF14_S_JELLY */
+		case 416 + 0:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons jellies.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_JELLY);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF14_S_KOBOLD */
+		case 416 + 1:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons kobolds.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_KOBOLD);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF14_S_QUADRUPED */
+		case 416 + 2:
+			{
+				if (!p_ptr->nastytrap174 && magik(66)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons quadrupeds.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_QUADRUPED);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF14_S_YEEK */
+		case 416 + 3:
+			{
+				if (!p_ptr->nastytrap174 && magik(50)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons yeeks.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_YEEK);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
 
 		}
 	}
@@ -6971,6 +8678,20 @@ bool make_attack_spell(int m_idx)
 		else if (thrown_spell < 32*12)
 		{
 			r_ptr->r_flags12 |= (1L << (thrown_spell - 32 * 11));
+			if (r_ptr->r_cast_spell < MAX_UCHAR) r_ptr->r_cast_spell++;
+		}
+
+		/* New spell */
+		else if (thrown_spell < 32*13)
+		{
+			r_ptr->r_flags13 |= (1L << (thrown_spell - 32 * 12));
+			if (r_ptr->r_cast_spell < MAX_UCHAR) r_ptr->r_cast_spell++;
+		}
+
+		/* New spell */
+		else if (thrown_spell < 32*14)
+		{
+			r_ptr->r_flags14 |= (1L << (thrown_spell - 32 * 13));
 			if (r_ptr->r_cast_spell < MAX_UCHAR) r_ptr->r_cast_spell++;
 		}
 	}

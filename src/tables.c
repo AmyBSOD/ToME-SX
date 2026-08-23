@@ -4900,10 +4900,11 @@ quest_type quest_init_tome[MAX_Q_IDX_INIT] =
 };
 
 
-/* List of powers for Symbiants/Powers */
-monster_power monster_powers[160] =
+/* List of powers for Symbiants/Powers
+ * KEEP THIS LINKED TO monster3.c and cmd5.c use_symbiotic_power !!! --Amy */
+monster_power monster_powers[224] =
 	{
-		/* 0 */
+		/* 0 - RF4 */
 		{ RF4_SHRIEK, "Aggravate Monster", 1, FALSE },
 		{ RF4_MULTIPLY, "Multiply", 50, FALSE },
 		{ RF4_S_ANIMAL, "Summon Animal", 150, FALSE },
@@ -4937,7 +4938,7 @@ monster_power monster_powers[160] =
 		{ RF4_BA_CHAO, "Chaos Ball", 300, TRUE },
 		{ RF4_BR_DISI, "Breathe Disintegration", 400, TRUE },
 
-		/* 32 */
+		/* 32 - RF5 */
 		{ RF5_BA_ACID, "Acid Ball", 80, FALSE },
 		{ RF5_BA_ELEC, "Lightning Ball", 80, FALSE },
 		{ RF5_BA_FIRE, "Fire Ball", 80, FALSE },
@@ -4971,7 +4972,7 @@ monster_power monster_powers[160] =
 		{ RF5_SLOW, "Slowness", 50, FALSE },
 		{ RF5_HOLD, "Paralyse", 90, FALSE },
 
-		/* 64 */
+		/* 64 - RF6 */
 		{ RF6_HASTE, "Haste Self", 100, FALSE },
 		{ RF6_HAND_DOOM, "Hand of Doom", 600, TRUE },
 		{ RF6_HEAL, "Healing", 200, FALSE },
@@ -5005,7 +5006,7 @@ monster_power monster_powers[160] =
 		{ RF6_S_WRAITH, "Summon Wraith", 900, TRUE },
 		{ 0, "(none)", 0, FALSE },
 
-		/* 96 */
+		/* 96 - RF11 */
 		{ RF11_BR_NERV, "Breathe Nerve", 100, TRUE },
 		{ RF11_BR_MIND, "Breathe Mind", 100, TRUE },
 		{ RF11_BR_ETHE, "Breathe Ether", 180, TRUE },
@@ -5014,7 +5015,7 @@ monster_power monster_powers[160] =
 		{ RF11_BR_VENO, "Breathe Thick Gas", 120, TRUE },
 		{ RF11_BR_WATE, "Breathe Water", 90, TRUE },
 		{ RF11_BR_ICEE, "Breathe Ice", 100, TRUE },
-		{ 0, "(none)", 0, FALSE },
+		{ RF11_BOULDER, "Boulder", 80, TRUE },
 		{ 0, "(none)", 0, FALSE },
 		{ 0, "(none)", 0, FALSE },
 		{ 0, "(none)", 0, FALSE },
@@ -5039,7 +5040,7 @@ monster_power monster_powers[160] =
 		{ 0, "(none)", 0, FALSE },
 		{ 0, "(none)", 0, FALSE },
 
-		/* 128 */
+		/* 128 - RF12 */
 		{ RF12_BA_METE, "Meteor Ball", 500, TRUE },
 		{ 0, "(none)", 0, FALSE },
 		{ 0, "(none)", 0, FALSE },
@@ -5073,7 +5074,75 @@ monster_power monster_powers[160] =
 		{ 0, "(none)", 0, FALSE },
 		{ 0, "(none)", 0, FALSE },
 
-		/* 160 */
+		/* 160 - RF13 */
+		{ RF13_S_MOLD, "Summon Mold", 300, FALSE },
+		{ RF13_S_BAT, "Summon Bat", 300, FALSE },
+		{ RF13_S_QUYLTHULG, "Summon Quylthulg", 500, TRUE },
+		{ RF13_S_VORTEX, "Summon Vortex", 400, FALSE },
+		{ RF13_S_TREASURE, "Summon Treasure", 400, FALSE },
+		{ RF13_S_IMMOBILE, "Summon Immobile", 500, FALSE },
+		{ RF13_S_PEOPLE, "Summon People", 450, FALSE },
+		{ RF13_S_ELEMENTAL, "Summon Elemental", 600, TRUE },
+		{ RF13_S_SNAKE, "Summon Snake", 400, FALSE },
+		{ RF13_S_ELDRITCH, "Summon Eldritch Horror", 750, TRUE },
+		{ RF13_S_CAT, "Summon Cat", 300, FALSE },
+		{ RF13_S_RAT, "Summon Rat", 300, FALSE },
+		{ RF13_S_WORM, "Summon Worm", 350, FALSE },
+		{ RF13_S_CLOTHES, "Summon Clothes", 600, TRUE },
+		{ RF13_S_HYBRID, "Summon Hybrid", 550, TRUE },
+		{ RF13_S_BEETLE, "Summon Beetle", 450, FALSE },
+		{ RF13_S_HORDE, "Summon Horde", 600, TRUE },
+		{ RF13_S_GIANT, "Summon Giant", 600, TRUE },
+		{ 0, "(none)", 0, FALSE },
+		{ RF13_S_TROLL, "Summon Troll", 500, FALSE },
+		{ RF13_S_ORC, "Summon Orc", 300, FALSE },
+		{ RF13_S_MAN, "Summon Man", 600, TRUE },
+		{ RF13_S_WOMAN, "Summon Woman", 600, TRUE },
+		{ RF13_S_BREEDER, "Summon Breeder", 750, TRUE },
+		{ RF13_S_GOLEM, "Summon Golem", 500, TRUE },
+		{ RF13_S_BIRD, "Summon Bird", 350, FALSE },
+		{ RF13_S_INSECT, "Summon Insect", 400, FALSE },
+		{ RF13_S_OGRE, "Summon Ogre", 500, FALSE },
+		{ RF13_S_LIZARD, "Summon Lizard", 350, FALSE },
+		{ RF13_S_HULK, "Summon Hulk", 550, TRUE },
+		{ RF13_S_MONKEY, "Summon Monkey", 450, FALSE },
+		{ RF13_S_EYE, "Summon Eye", 500, FALSE },
+
+		/* 192 - RF14 */
+		{ RF14_S_JELLY, "Summon Jelly", 500, FALSE },
+		{ RF14_S_KOBOLD, "Summon Kobold", 300, FALSE },
+		{ RF14_S_QUADRUPED, "Summon Quadruped", 450, FALSE },
+		{ RF14_S_YEEK, "Summon Yeek", 300, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+		{ 0, "(none)", 0, FALSE },
+
+		/* 224 */
 	};
 
 /* Tval descriptions */

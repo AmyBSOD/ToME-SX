@@ -727,6 +727,8 @@ function set_god_dungeon_attributes()
 		-- M: Animals
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags3 = bor(RF3_ANIMAL)
 		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags6 = bor(RF6_S_ANT, RF6_S_SPIDER, RF6_S_HOUND)
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags13 = bor(RF13_S_BAT, RF13_S_SNAKE, RF13_S_CAT, RF13_S_RAT, RF13_S_WORM, RF13_S_BEETLE, RF13_S_BIRD, RF13_S_INSECT, RF13_S_LIZARD, RF13_S_MONKEY)
+		dungeon(god_quest.DUNGEON_GOD).rules[1].mflags14 = bor(RF14_S_QUADRUPED)
 
 		dungeon(god_quest.DUNGEON_GOD).rules[2].mode = 0
 		dungeon(god_quest.DUNGEON_GOD).rules[2].percent = 5

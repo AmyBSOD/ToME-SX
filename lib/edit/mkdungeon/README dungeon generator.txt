@@ -3,12 +3,15 @@ This is a random dungeon generator C program for ToME-SX, written by Amy.
 Usage:
 1. Run makedungeons.bat
 2. Copy the d_info.txt file it creates over the existing d_info.txt file in lib/edit
-3. Run ToME-SX
+3. Delete the d_info.raw file in the lib/data folder (IMPORTANT! if you don't, the changed file might not take effect)
+4. Run ToME-SX
 
 In order to revert back to the "standard" dungeon definition file:
 1. Delete any d_info.txt file created by the "makedungeons" program
 2. Copy the "orig d_info.txt" file to "d_info.txt"
 3. Copy that file to the lib/edit folder
+4. Delete the d_info.raw file in the lib/data folder (IMPORTANT! if you don't, the changed file might not take effect)
+5. Run ToME-SX
 
 *Make sure you don't accidentally delete the "orig d_info.txt" file; it contains the original dungeon definitions!*
 
