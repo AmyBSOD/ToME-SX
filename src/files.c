@@ -4383,6 +4383,18 @@ errr file_character(cptr name, bool full)
 			fprintf(fff, "\n %d of your companions have been killed.", p_ptr->companion_killed);
 	}
 
+	/* call out players who actually use easymode options (or in this case, turn off certain options in order to get an easier game) --Amy
+	 * personally, I'm not really a fan of having these be options at all, leveling system and fates should be an integral part of the game... */
+	if (!p_ptr->lvling_system)
+	{
+		fprintf(fff, "\n You were a coward and turned the leveling system off, thereby making the game laughably easy.");
+	}
+
+	if (!fate_option)
+	{
+		fprintf(fff, "\n You wussie turned off the fate system because you were too afraid of playing a challenging game.");
+	}
+
 	if (p_ptr->char_death_count)
 	{
 		if (p_ptr->char_death_count == 1)
