@@ -5418,8 +5418,43 @@ void scatter(int *yp, int *xp, int y, int x, int d, int m)
 		/* Ignore "excessively distant" locations */
 		if ((d > 1) && (distance(y, x, ny, nx) > d)) continue;
 
-		/* Require "line of sight" */
+		/* Require "line of sight" - apparently this is the "accept it" line */
 		if (los(y, x, ny, nx)) break;
+	}
+
+	if (attempts_left > 0)
+	{
+		/* Save the location */
+		(*yp) = ny;
+		(*xp) = nx;
+	}
+}
+
+/* The same function but without requiring LOS --Amy */
+void scatter_nolos(int *yp, int *xp, int y, int x, int d, int m)
+{
+	int nx, ny;
+	int attempts_left = 5000;
+
+	/* Unused */
+	m = m;
+
+
+	/* Pick a location */
+	while (--attempts_left)
+	{
+		/* Pick a new location */
+		ny = rand_spread(y, d);
+		nx = rand_spread(x, d);
+
+		/* Ignore illegal locations and outer walls */
+		if (!in_bounds(ny, nx)) continue;
+
+		/* Ignore "excessively distant" locations */
+		if ((d > 1) && (distance(y, x, ny, nx) > d)) continue;
+
+		/* accept the result */
+		break;
 	}
 
 	if (attempts_left > 0)

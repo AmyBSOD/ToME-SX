@@ -2538,7 +2538,7 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 	/* Verify location */
 	if (!in_bounds(y, x))
 	{
-		if (wizard) cmsg_print(TERM_L_RED, "WARNING: Refused monster: out of bounds");
+		if (wizard) cmsg_format(TERM_L_RED, "WARNING: Refused monster: out of bounds y:%d x:%d", y, x);
 		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
 		return 0;
 	}
@@ -4228,13 +4228,13 @@ bool summon_specific(int y1, int x1, int lev, int type)
 	bool (*old_get_mon_num_hook)(int r_idx);
 
 	/* Look for a location */
-	for (i = 0; i < 20; ++i)
+	for (i = 0; i < 2000; ++i)
 	{
 		/* Pick a distance */
 		int d = (i / 15) + 1;
 
-		/* Pick a location */
-		scatter(&y, &x, y1, x1, d, 0);
+		/* Pick a location, ignoring LOS because I'm Amy and decided that anti-summoning corridors are cheesy :-P */
+		scatter_nolos(&y, &x, y1, x1, d, 0);
 
 		/* Require "empty" floor grid */
 		if (p_ptr->nastytrap208) {

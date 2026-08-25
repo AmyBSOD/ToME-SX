@@ -563,6 +563,9 @@ static bool summon_possible(int y1, int x1)
 {
 	int y, x;
 
+	/* changed by Amy because summons shouldn't just be shut down because you made a lame anti-summoning corridor... */
+	return TRUE;
+
 	/* Start at the player's location, and check 2 grids in each dir */
 	for (y = y1 - 2; y <= y1 + 2; y++)
 	{
