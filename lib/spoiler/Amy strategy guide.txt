@@ -1,5 +1,7 @@
 This is a strategy guide for ToME-SX written by AmyBSOD. It's supposed to give hints on how to play this variant, based on my own experiences with the game, and will hopefully be useful for newbies although some of it will be rather advanced stuff for the late game which a newbie won't reach anyway. Keep in mind that I'm no Lord Dimwit, so I'm not all that skilled at the game; in fact, I'd consider myself a noob even though I've managed to stumble my way to a few ascensions (one with the warrior and one with a rogue) at the time of writing. Incidentally, I started writing this document at March 27 of 2026.
 
+Actually, it feels like this isn't as much a strategy guide as it's more of a spoiler collection; most actual strategy is in Lord Dimwit's guide, which is also what inspired this guide but if I were to repeat how to e.g. hockey-stick a monster or set up an anti-summoning corridor, I'd just be plagiarizing. So if you need a refresher on how to do those things, please refer to Lord Dimwit's guide ;) This document is supposed to be a guide for ToME-SX and will therefore mostly focus on things that are different or all-new to SX, and assumes that you have some basic knowledge of how Angband/ToME works.
+
 If your text editor doesn't have line wrap, this document will probably look weird, so I *highly recommend* to turn line wrap on (use a text editor that has this feature, WordPad for example, which is what I used to write it) :-P
 
 *** Other spoiler documents ***
@@ -110,6 +112,8 @@ All skills are coded to keep getting better with higher skill level, so this can
 
 All the standard elemental damage types from ToME are still there in SX, but there's also some new ones and existing ones sometimes behave slightly differently. One of the key differences is that in many cases, just having a binary resistance is no longer complete immunity from side effects, this is most prominently seen with status effects: Confusion, fear, blindness... you used to be fully immune to those when you had the resistance, but in SX it's only a high chance to avoid the effect. Occasionally it'll get past your resistance and afflict you with the status effect anyway. Hell, even free action has a chance of failure now, it's only 1% or so but you *can* still get paralyzed even if you have FA! Luckily, most sources of paralysis also respect your saving throw, which works on top of that 1% so if you have, say, 80% saving throw, paralysis attacks have only 0.2% actual chance of affecting you. Also, the risk of being paralyzed is low enough that when you have it, "chain-paralysis" basically does not happen because it's extremely unlikely to have two paralysis attacks get past the resistance in succession. Still, not only do you absolutely need FA like you do in vanilla, you also have to be aware of the slight risk that a paralysis attacks gets through.
 
+Be aware that chaos resistance no longer implies confusion resistance in ToME-SX! Confusion resist has to be obtained separately if you wanna be protected from that annoying status effect.
+
 In vanilla, many elemental damage types can destroy your items and it's not always possible to shut down that rampant inventory destruction completely. Yes, having resistance to sound, chaos or whatever helps, but those are also binary resistances and even with the resistance there's a small remaining chance that your shit gets destroyed. In ToME-SX, there's a new "inventory protection" item property that can fix that, but it does nothing on its own, you need to have the corresponding resistance. Which is to say, if you merely have inventory protection, shards breath still blows up all of your potions, but if you have inventory protection AND shard resistance, it can't touch your potions. This obviously means that if you want your inventory to be truly safe, you need not only inventory protection but also *all* the resistances to item-destroying elements. And the property only works for those elements whose inventory-destroying side effects you couldn't already shut down via other means. Read that as, "combining inventory protection with shards resistance helps, because you were previously unable to become immune to shards-based item destruction, but combining inventory protection with acid resistance does nothing because there already is a way to become immune to acid-based item destruction".
 Yeah I know this sounds ultra confusing, I can't think of a better wording so instead of futilely trying to explain it, let's just have a list for the various elements and how you can immunize yourself to their item-destroying side effects.
 - Acid: Destroys acid-susceptible items. You need double acid resistance or acid immunity to prevent that. It also damages acid-susceptible worn armor pieces (unless the armor piece in question is itself immune to acid, e.g. by being an artifact); annoyingly, double acid resistance *does not* prevent that, you NEED acid immunity, it's the only way to keep non-acidproof armor safe.
@@ -132,6 +136,8 @@ So, looking at that list, it becomes obvious that inventory protection works aga
 
 Speaking of immunity! In SX, "immunity" to an element has been changed to "near immunity": all the detrimental side effects of the element are suppressed, but you still take 10% of the original damage. Which, yes, means that if you have cold immunity and that great ice wyrm breathes at you, it'll still deal 160 damage, but at least that's generally survivable. Just be aware that you can no longer simply ignore monsters who use elements you're immune to, and it's also no longer a good idea to tapdance on lava just because you're immune to fire - your scrolls and books may be safe, but you still take fire damage!
 
+At least disenchantment resistance still protects your items' pluses from disenchantment attacks 100% of the time. Which, combined with the difficulty of enchanting artifacts, means that you'll definitely want to have that resistance to avoid semi-permanently losing your equipment's pluses.
+
 ToME-SX also introduces a bunch of new elements, which will be shown here:
 - Venom: in vanilla this is "unbreathing damage" and can still be used by the player (it's the element used by a high-level noxious cloud spell or wand), although poison-resistant monsters will now resist this damage type somewhat. However, it can also target the player now, some monsters breathe it with a cap of 800 and it works exactly like regular poison but can also destroy your potions, food and eggs. You need at least double poison resistance to prevent that item destruction, as shown above.
 - Nerve: Causes a few turns of paralysis. The breath caps out at 300 damage. Nerve resistance greatly reduces the risk of being paralyzed, and both free action and your character's saving throw can also prevent it. Plus, having nerve resistance will also reduce the odds that any other paralyzing attack affects you, not by nearly as much as FA but if you can't find a source of FA and have the choice of using something with resist nerve, do it! Using nerve against monsters can paralyze them for a turn or two, but all undead or nonliving monsters resist the damage a lot and are (obviously) immune to the paralysis effect.
@@ -146,9 +152,17 @@ Generally, if a monster breathes a given element, it's resistant to the element 
 
 Properties on items go here
 
+*** Skills ***
+
+Explanation of skills goes here
+
 *** Gods ***
 
 A description of the various gods goes here
+
+*** Traps ***
+
+Traps description goes here
 
 *** Key differences between ToME-SX and regular ToME ***
 
