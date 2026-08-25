@@ -3567,6 +3567,8 @@ bool get_string(cptr prompt, char *buf, int len)
 * The "prompt" should take the form "Query? "
 *
 * Note that "[y/n]" is appended to the prompt.
+*
+* Returns TRUE if you answer "yes", otherwise FALSE
 */
 bool get_check(cptr prompt)
 {

@@ -7775,15 +7775,36 @@ void object_gain_level(object_type *o_ptr)
 		if (k < 33)
 		{
 			if (o_ptr->to_h < 15) o_ptr->to_h += randint(2);
+			else if (o_ptr->to_h < 40 && magik(30)) o_ptr->to_h += 1;
+
 			if (o_ptr->to_d < 15) o_ptr->to_d += 1;
+			else if (o_ptr->to_d < 40 && magik(30)) o_ptr->to_d += 1;
+
 		}
 		/* +1 and 1 point */
 		else if (k < 66)
 		{
 			if (o_ptr->to_h < 15) o_ptr->to_h += 1;
-			if (o_ptr->pval2 < 5) o_ptr->pval2++;
+			else if (o_ptr->to_h < 40 && magik(30)) o_ptr->to_h += 1;
 
-			if (magik(NEW_GROUP_CHANCE)) gain_flag_group(o_ptr, FALSE);
+			o_ptr->pval2++; /* apparently this controls whether the artifact can "buy" a new realm and doesn't do any other pval-related stuff --Amy */
+
+			if (magik(NEW_GROUP_CHANCE)) {
+
+				msg_print("Your sentient weapon wants to gain access to a new realm!");
+				/* Flush input */
+				flush();
+
+				if (get_check("Do you want to roll for a new realm?")) gain_flag_group(o_ptr, FALSE);
+				else {
+					msg_print("You decided to decline. Are you sure that you want to hold off? Your weapon will save up its points if you don't spend them now.");
+					/* Flush input */
+					flush();
+
+					if (get_check("Reconsider and roll for a new realm now?")) gain_flag_group(o_ptr, FALSE);
+					else if (get_check("Last chance: press y to roll for a realm, otherwise you'll hold off!")) gain_flag_group(o_ptr, FALSE);
+				}
+			}
 		}
 		else
 		{
@@ -7792,7 +7813,7 @@ void object_gain_level(object_type *o_ptr)
 			gain_flag_group_flag(o_ptr, FALSE);
 
 			if (!o_ptr->pval) o_ptr->pval = 1;
-			else
+			else if (o_ptr->pval < 5)
 			{
 				while (magik(20 - (o_ptr->pval * 2))) o_ptr->pval++;
 
