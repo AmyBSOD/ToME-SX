@@ -11385,6 +11385,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			bool seen = FALSE;
 			s16b index_x[20], index_y[20];  /* 20 stairs per level is enough? */
 			cave_type *cv_ptr;
+			feature_type *f_ptr;
 
 			if (max_dlv[dungeon_type] == 99)
 			{
@@ -11398,6 +11399,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				{
 					cv_ptr = &cave[cy][cx];
 
+					/*  */
 					if ((cv_ptr->feat != FEAT_LESS) &&
 					                (cv_ptr->feat != FEAT_MORE) &&
 					                (cv_ptr->feat != FEAT_WAY_LESS) &&
@@ -11435,12 +11437,14 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					if ((cx == index_x[i]) || (cy == index_y[i])) continue;
 
 					cv_ptr2 = &cave[cy][cx];
+					f_ptr = &f_info[cv_ptr2->feat];
 
 					if (!cave_valid_bold(cy, cx) || cv_ptr2->o_idx != 0) continue;
 
 					/* don't put anything in vaults */
-					/* Amy edit: why not? */
+					/* Amy edit: why not? but, we should totally avoid permanent wall tiles! */
 					/* if (cv_ptr2->info & CAVE_ICKY) continue; */
+					if (f_ptr->flags1 & FF1_PERMANENT) continue;
 
 					tmpx = cv_ptr2->mimic;
 					tmps = cv_ptr2->info;
