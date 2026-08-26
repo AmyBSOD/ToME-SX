@@ -4909,7 +4909,7 @@
 #define RF10_RES_ETHE           0x00000004 /* Monster resists ether */
 
 /*
- * Monster spell flags
+ * Monster spell flags: breaths and innate attacks
  */
 #define RF11_BR_NERV            0x00000001 /* Nerve breath */
 #define RF11_BR_MIND            0x00000002 /* Mind breath */
@@ -4922,12 +4922,12 @@
 #define RF11_BOULDER            0x00000100 /* boulder throwing (giants) */
 
 /*
- * Monster spell flags
+ * Monster spell flags: actual spells
  */
 #define RF12_BA_METE            0x00000001 /* Meteor ball */
 
 /*
- * Monster spell flags
+ * Monster spell flags: summoning spells
  */
 #define RF13_S_MOLD             0x00000001 /* Summon Mold */
 #define RF13_S_BAT              0x00000002 /* Summon Bat */
@@ -4963,7 +4963,7 @@
 #define RF13_S_EYE              0x80000000 /* Summon Eye */
 
 /*
- * Monster spell flags
+ * Monster spell flags: more summoning spells
  */
 #define RF14_S_JELLY            0x00000001 /* Summon Jelly */
 #define RF14_S_KOBOLD           0x00000002 /* Summon Kobold */

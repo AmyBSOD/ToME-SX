@@ -662,19 +662,19 @@ static void bolt_cantreflect(int m_idx, int typ, int dam_hp)
  */
 static bool spell_attack(int spell)
 {
-	/* Eldritch horror blast by Amy */
+	/* Eldritch horror blast by Amy (RF2_ELDRITCH_HORROR) */
 	if (spell == 45) return (TRUE);
 
 	/* All RF4 spells hurt (except for shriek, multiply, summon animal) */
 	if (spell >= 96 + 3 && spell <= 96 + 31) return (TRUE);
 
-	/* Various "ball" spells */
+	/* Various "ball" spells (RF5_BA_ACID and others) */
 	if (spell >= 128 && spell <= 128 + 8) return (TRUE);
 
-	/* "Cause wounds" and "bolt" spells */
+	/* "Cause wounds" and "bolt" spells (RF5_CAUSE_something, RF5_BO_ACID etc.) */
 	if (spell >= 128 + 12 && spell <= 128 + 26) return (TRUE);
 
-	/* Hand of Doom */
+	/* Hand of Doom (RF6_HAND_DOOM) */
 	if (spell == 160 + 1) return (TRUE);
 
 	/* RF11 spells */
@@ -693,10 +693,10 @@ static bool spell_attack(int spell)
  */
 static bool spell_escape(int spell)
 {
-	/* Blink or Teleport */
+	/* Blink or Teleport (RF6_BLINK, RF6_TPORT) */
 	if (spell == 160 + 4 || spell == 160 + 5) return (TRUE);
 
-	/* Teleport the player away */
+	/* Teleport the player away (RF6_TELE_AWAY, RF6_TELE_LEVEL) */
 	if (spell == 160 + 7 || spell == 160 + 8) return (TRUE);
 
 	/* Isn't good for escaping */
@@ -708,16 +708,16 @@ static bool spell_escape(int spell)
  */
 static bool spell_annoy(int spell)
 {
-	/* Shriek */
+	/* Shriek (RF4_SHRIEK) */
 	if (spell == 96 + 0) return (TRUE);
 
-	/* Brain smash, et al (added curses) */
+	/* Brain smash, et al (added curses) RF5_MIND_BLAST, RF5_CAUSE_something... */
 	if (spell >= 128 + 9 && spell <= 128 + 14) return (TRUE);
 
-	/* Scare, confuse, blind, slow, paralyze */
+	/* Scare, confuse, blind, slow, paralyze - RF5_SCARE ... RF5_HOLD */
 	if (spell >= 128 + 27 && spell <= 128 + 31) return (TRUE);
 
-	/* Teleport to */
+	/* Teleport to (RF6_TELE_TO) */
 	if (spell == 160 + 6) return (TRUE);
 
 #if 0
@@ -725,7 +725,7 @@ static bool spell_annoy(int spell)
 	if (spell == 160 + 1) return (TRUE);
 #endif
 
-	/* Darkness, make traps, cause amnesia */
+	/* Darkness, make traps, cause amnesia (RF6_DARKNESS, RF6_FORGET ...) */
 	if (spell >= 160 + 9 && spell <= 160 + 11) return (TRUE);
 
 	/* Doesn't annoy */
@@ -739,8 +739,12 @@ static bool spell_summon(int spell)
 {
 	/* RF4_S_ANIMAL, RF6_S_ANIMALS, RF6_RAISE_DEAD */
 	if (spell == 96 + 2 || spell == 160 + 3 || spell == 160 + 12) return (TRUE);
-	/* All other summon spells */
+	/* Other RF6 summon spells */
 	if (spell >= 160 + 13 && spell <= 160 + 31) return (TRUE);
+	/* RF13 summon spells */
+	if (spell >= 384 + 0 && spell <= 384 + 31) return (TRUE);
+	/* RF14 summon spells */
+	if (spell >= 416 + 0 && spell <= 416 + 31) return (TRUE);
 
 	/* Doesn't summon */
 	return (FALSE);
@@ -752,7 +756,7 @@ static bool spell_summon(int spell)
  */
 static bool spell_tactic(int spell)
 {
-	/* Blink */
+	/* Blink (RF6_BLINK) */
 	if (spell == 160 + 4) return (TRUE);
 
 	/* Not good */
@@ -765,7 +769,7 @@ static bool spell_tactic(int spell)
  */
 static bool spell_haste(int spell)
 {
-	/* Haste self */
+	/* Haste self (RF6_HASTE) */
 	if (spell == 160 + 0) return (TRUE);
 
 	/* Not a haste spell */
@@ -778,7 +782,7 @@ static bool spell_haste(int spell)
  */
 static bool spell_heal(int spell)
 {
-	/* Heal */
+	/* Heal (RF6_HEAL) */
 	if (spell == 160 + 2) return (TRUE);
 
 	/* No healing */
@@ -3897,7 +3901,11 @@ static bool monst_spell_monst(int m_idx)
 				if (blind) monster_msg("%^s makes a strange noise.", m_name);
 				else monster_msg("%^s throws a boulder at %s.", m_name, t_name);
 				sound(SOUND_SHOOT);
-				monst_bolt_monst(m_idx, y, x, GF_ARROW, damroll(rlev + 1, 5) + randint(10) );
+				if (p_ptr->nastytrap143) {
+					monst_bolt_monst(m_idx, y, x, GF_ARROW, damroll(rlev + 1, 5) + randint(10) );
+				} else {
+					monst_bolt_monst(m_idx, y, x, GF_ARROW, damroll(rlev + 1, randint(4)) + randint(10) );
+				}
 				break;
 			}
 
@@ -7897,7 +7905,11 @@ bool make_attack_spell(int m_idx)
 				if (blind) msg_format("%^s makes a strange noise.", m_name);
 				else msg_format("%^s throws a boulder!", m_name);
 				/* boulders can't be reflected, but you can dodge them --Amy */
-				bolt_cantreflect(m_idx, GF_ARROW, damroll(rlev + 1, 5));
+				if (p_ptr->nastytrap143) {
+					bolt_cantreflect(m_idx, GF_ARROW, damroll(rlev + 1, 5));
+				} else {
+					bolt_cantreflect(m_idx, GF_ARROW, damroll(rlev + 1, randint(4)));
+				}
 				break;
 			}
 
