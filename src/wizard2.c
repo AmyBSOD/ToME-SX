@@ -339,8 +339,8 @@ static void do_cmd_wiz_bamf(void)
 	/* Must have a target */
 	if (!target_who) return;
 
-	/* Teleport to the target */
-	teleport_player_to(target_row, target_col);
+	/* Teleport to the target, ignoring any and all restrictions because fuckdammit, I'm in wizard mode, I can do *anything*! --Amy */
+	teleport_player_to_wizmode(target_row, target_col);
 }
 
 

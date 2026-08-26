@@ -1162,6 +1162,79 @@ void teleport_player_to(int ny, int nx)
 	handle_stuff();
 }
 
+/* Wizard mode teleport, which ignores restrictions --Amy */
+void teleport_player_to_wizmode(int ny, int nx)
+{
+	int y, x, oy, ox, dis = 0, ctr = 0, testamount = 0;
+
+	/* Find a usable location */
+	while (1)
+	{
+		testamount = 10000;
+
+		/* Pick a nearby legal location */
+		while (testamount > 0)
+		{
+			/* fix ridiculous bug where you could target out of bounds squares and freeze the game --Amy */
+			testamount--;
+			y = rand_spread(ny, dis);
+			x = rand_spread(nx, dis);
+			if (in_bounds(y, x)) break;
+			if (testamount < 1) {
+				dis++;
+				testamount = 10000;
+			}
+		}
+
+		/* Accept all floor grids, not just "naked floor" ones --Amy */
+		break;
+
+		/* Occasionally advance the distance */
+		if (++ctr > (4 * dis * dis + 4 * dis + 1))
+		{
+			ctr = 0;
+			dis++;
+		}
+	}
+
+	/* Sound */
+	sound(SOUND_TELEPORT);
+
+	/* Save the old location */
+	oy = p_ptr->py;
+	ox = p_ptr->px;
+
+	/* Move the player */
+	p_ptr->py = y;
+	p_ptr->px = x;
+	last_teleportation_y = y;
+	last_teleportation_x = x;
+
+	/* Redraw the old spot */
+	lite_spot(oy, ox);
+
+	/* Redraw the new spot */
+	lite_spot(p_ptr->py, p_ptr->px);
+
+	/* Check for new panel (redraw map) */
+	verify_panel();
+
+	/* Update stuff */
+	p_ptr->update |= (PU_VIEW | PU_FLOW | PU_MON_LITE);
+
+	/* Update the monsters */
+	p_ptr->update |= (PU_DISTANCE);
+
+	/* Redraw trap detection status */
+	p_ptr->redraw |= (PR_DTRAP);
+
+	/* Window stuff */
+	p_ptr->window |= (PW_OVERHEAD);
+
+	/* Handle stuff XXX XXX XXX */
+	handle_stuff();
+}
+
 void teleport_player_to_DM(int ny, int nx)
 {
 	int y, x, oy, ox, dis = 0, ctr = 0;

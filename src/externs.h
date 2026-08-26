@@ -1286,6 +1286,7 @@ extern void teleport_away(int m_idx, int dis);
 extern void teleport_player(int dis);
 extern void teleport_player_deathmold(int dis);
 extern void teleport_player_to(int ny, int nx);
+extern void teleport_player_to_wizmode(int ny, int nx);
 extern void teleport_player_to_DM(int ny, int nx);
 extern void teleport_monster_to(int m_idx, int ny, int nx);
 extern void teleport_player_level(void);
