@@ -1287,27 +1287,34 @@ static void gen_random_quests(int n)
 			if (r_ptr->flags9 & RF9_NEVER_GENE) continue;
 
 			/* Accept only monsters that are not breeders */
-			if (r_ptr->flags4 & RF4_MULTIPLY) continue;
+			/* Amy note: nope, they work fine, and if they're "annoying" because you have to fight through 200 worm masses or lice, oh well, deal with it bitch :-P */
+			/*if (r_ptr->flags4 & RF4_MULTIPLY) continue;*/
 
 			/* Forbid joke monsters */
+			/* Amy note: err nope? you can't disable them anymore so of course they're eligible! */
 			/*if (r_ptr->flags8 & RF8_JOKEANGBAND) continue;*/
 
 			/* Accept only monsters that are not friends */
+			/* Amy note: neutral ones are okay, you just have to anger them first I guess :-P */
 			if (r_ptr->flags7 & RF7_PET) continue;
 
 			/* Refuse nazguls */
+			/* Amy note: can stay that way because if we allow them, you'd just have to fight them once for the quest and then never again */
 			if (r_ptr->flags7 & RF7_NAZGUL) continue;
 
 			/* Refuse reviving bosses */
+			/* Amy note: can stay that way because if we allow them, you'd just have to fight them once for the quest and then never again */
 			if (r_ptr->flags7 & RF7_REVBOSS) continue;
 
 			/* Accept only monsters that are not good */
+			/* Amy note: wtf??? of course good ones are eligible too! */
 			/*if (r_ptr->flags3 & RF3_GOOD) continue;*/
 
 			/* Assume no explosion attacks */
 			ok = TRUE;
 
 			/* Reject monsters with exploding attacks */
+			/* Amy note: can stay that way because exploders would just autodie once they're in melee with you, making quests too easy */
 			for (k = 0; k < 4; k++)
 			{
 				if (r_ptr->blow[k].method == RBM_EXPLODE) ok = FALSE;

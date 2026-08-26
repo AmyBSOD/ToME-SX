@@ -1981,10 +1981,12 @@ bool monster_quest(int r_idx)
 	if (!(r_ptr->flags8 & RF8_DUNGEON)) return FALSE;
 
 	/* No random quests for aquatic monsters */
+	/* Amy note: makes sense, because not all dungeon levels actually have water where those could spawn */
 	if (r_ptr->flags7 & RF7_AQUATIC) return FALSE;
 
 	/* No random quests for multiplying monsters */
-	if (r_ptr->flags4 & RF4_MULTIPLY) return FALSE;
+	/* Amy note: yes, they're eligible of course! there is no monster counting error! */
+	/*if (r_ptr->flags4 & RF4_MULTIPLY) return FALSE;*/
 
 	return TRUE;
 }
