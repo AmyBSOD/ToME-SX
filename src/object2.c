@@ -2562,10 +2562,11 @@ void object_prep(object_type *o_ptr, int k_idx)
 	if (k_ptr->flags3 & (TR3_CURSED)) o_ptr->ident |= (IDENT_CURSED);
 
 	/* Hack give a basic exp/exp level to an object that needs it */
+	/* Amy edit: always start at XL1 because what is this shit, having those things start at higher levels and thereby reducing the amount of level ups they gain??? */
 	if (k_ptr->flags4 & TR4_LEVELS)
 	{
-		o_ptr->elevel = (k_ptr->level / 10) + 1;
-		o_ptr->exp = player_exp[o_ptr->elevel - 1];
+		o_ptr->elevel = 1;
+		o_ptr->exp = 0;
 		o_ptr->pval2 = 1;        /* Start with one point */
 		o_ptr->pval3 = 0;        /* No flags groups */
 	}
@@ -2929,10 +2930,11 @@ static bool make_artifact_special(object_type *o_ptr)
 		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Hack give a basic exp/exp level to an object that needs it */
+		/* Amy edit: always start at XL1 because what is this shit, having those things start at higher levels and thereby reducing the amount of level ups they gain??? */
 		if (f4 & TR4_LEVELS)
 		{
-			o_ptr->elevel = (k_info[k_idx].level / 10) + 1;
-			o_ptr->exp = player_exp[o_ptr->elevel - 1];
+			o_ptr->elevel = 1;
+			o_ptr->exp = 0;
 		}
 
 		/* Success */
@@ -3021,10 +3023,11 @@ static bool make_artifact(object_type *o_ptr)
 		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Hack give a basic exp/exp level to an object that needs it */
+		/* Amy edit: always start at XL1 because what is this shit, having those things start at higher levels and thereby reducing the amount of level ups they gain??? */
 		if (f4 & TR4_LEVELS)
 		{
-			o_ptr->elevel = (k_ptr->level / 10) + 1;
-			o_ptr->exp = player_exp[o_ptr->elevel - 1];
+			o_ptr->elevel = 1;
+			o_ptr->exp = 0;
 		}
 
 		/* Success */
@@ -5322,10 +5325,11 @@ void apply_magic(object_type *o_ptr, int lev, bool okay, bool good, bool great)
 			o_ptr->spellcontain = -1;
 
 		/* Give a basic exp/exp level to an artifact that needs it */
+		/* Amy edit: always start at XL1 because what is this shit, having those things start at higher levels and thereby reducing the amount of level ups they gain??? */
 		if (a_ptr->flags4 & TR4_LEVELS)
 		{
-			o_ptr->elevel = (k_ptr->level / 10) + 1;
-			o_ptr->exp = player_exp[o_ptr->elevel - 1];
+			o_ptr->elevel = 1;
+			o_ptr->exp = 0;
 		}
 
 		/* Done */
@@ -5529,10 +5533,11 @@ try_an_other_ego:
 		object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 		/* Hack give a basic exp/exp level to an object that needs it */
+		/* Amy edit: always start at XL1 because what is this shit, having those things start at higher levels and thereby reducing the amount of level ups they gain??? */
 		if (f4 & TR4_LEVELS)
 		{
-			o_ptr->elevel = (k_ptr->level / 10) + 1;
-			o_ptr->exp = player_exp[o_ptr->elevel - 1];
+			o_ptr->elevel = 1;
+			o_ptr->exp = 0;
 		}
 
 		/* Spell in it ? no ! */

@@ -7791,7 +7791,7 @@ void object_gain_level(object_type *o_ptr)
 
 			if (magik(NEW_GROUP_CHANCE)) {
 
-				msg_print("Your sentient weapon wants to gain access to a new realm!");
+				cmsg_format(TERM_L_GREEN, "Your sentient weapon has %d points saved up and wants to gain access to a new realm!", o_ptr->pval2);
 				/* Flush input */
 				flush();
 
@@ -7803,6 +7803,7 @@ void object_gain_level(object_type *o_ptr)
 
 					if (get_check("Reconsider and roll for a new realm now?")) gain_flag_group(o_ptr, FALSE);
 					else if (get_check("Last chance: press y to roll for a realm, otherwise you'll hold off!")) gain_flag_group(o_ptr, FALSE);
+					else msg_print("Your sentient weapon doesn't gain access to a new realm.");
 				}
 			}
 		}
