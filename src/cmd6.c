@@ -1153,6 +1153,16 @@ static void corpse_effect(object_type *o_ptr, bool cutting)
 			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_YEEK, FALSE);
 			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_YEEK);
 		}
+		if (r_ptr->flags14 & RF14_S_SUMMONER)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_SUMMONER, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_SUMMONER);
+		}
+		if (r_ptr->flags14 & RF14_S_RANDOM)
+		{
+			if (magik(50) && !(p_ptr->nastytrap200)) summon_specific_friendly(p_ptr->py, p_ptr->px, dun_level, SUMMON_RANDOM, FALSE);
+			else summon_specific(p_ptr->py, p_ptr->px, dun_level, SUMMON_RANDOM);
+		}
 
 	}
 }

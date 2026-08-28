@@ -3867,6 +3867,46 @@
 #define TRAP_NASTY208                     997
 #define TRAP_NASTY209                     998
 
+#define TRAP_OF_BACKGROUND_ICE            999
+#define TRAP_OF_BACKGROUND_SHARDS         1000
+#define TRAP_OF_BACKGROUND_SOUND          1001
+#define TRAP_OF_BACKGROUND_FORCE          1002
+
+#define TRAP_OF_SUMMON_SUMMONER           1003
+#define TRAP_OF_SUMMON_SUMMONER_X         1004
+#define TRAP_OF_SUMMON_RANDOM             1005
+#define TRAP_OF_SUMMON_RANDOM_X           1006
+
+#define TRAP_OF_MONSTER_HP                1007
+#define TRAP_OF_MONSTER_HP_II             1008
+#define TRAP_OF_MONSTER_HP_III            1009
+#define TRAP_OF_MONSTER_HP_IV             1010
+#define TRAP_OF_MONSTER_HP_V              1011
+
+#define TRAP_OF_MONSTER_SPEED             1012
+#define TRAP_OF_MONSTER_SPEED_II          1013
+#define TRAP_OF_MONSTER_SPEED_III         1014
+#define TRAP_OF_MONSTER_SPEED_IV          1015
+#define TRAP_OF_MONSTER_SPEED_V           1016
+
+#define TRAP_OF_MONSTER_AC                1017
+#define TRAP_OF_MONSTER_AC_II             1018
+#define TRAP_OF_MONSTER_AC_III            1019
+#define TRAP_OF_MONSTER_AC_IV             1020
+#define TRAP_OF_MONSTER_AC_V              1021
+
+#define TRAP_OF_MONSTER_MELEE             1022
+#define TRAP_OF_MONSTER_MELEE_II          1023
+#define TRAP_OF_MONSTER_MELEE_III         1024
+#define TRAP_OF_MONSTER_MELEE_IV          1025
+#define TRAP_OF_MONSTER_MELEE_V           1026
+
+#define TRAP_OF_MONSTER_LEVEL             1027
+#define TRAP_OF_MONSTER_LEVEL_II          1028
+#define TRAP_OF_MONSTER_LEVEL_III         1029
+#define TRAP_OF_MONSTER_LEVEL_IV          1030
+#define TRAP_OF_MONSTER_LEVEL_V           1031
+
 /*** General index values ***/
 
 
@@ -3953,6 +3993,8 @@
 #define SUMMON_KOBOLD               98 /* k */
 #define SUMMON_QUADRUPED            99 /* q */
 #define SUMMON_YEEK                 100 /* y */
+#define SUMMON_SUMMONER             101 /* anything with summoning spells */
+#define SUMMON_RANDOM               102 /* selects a random summon */
 
 
 /*
@@ -4969,6 +5011,8 @@
 #define RF14_S_KOBOLD           0x00000002 /* Summon Kobold */
 #define RF14_S_QUADRUPED        0x00000004 /* Summon Quadruped */
 #define RF14_S_YEEK             0x00000008 /* Summon Yeek */
+#define RF14_S_SUMMONER         0x00000010 /* Summon Summoner */
+#define RF14_S_RANDOM           0x00000020 /* Summon Random */
 
 
 /*
@@ -5001,7 +5045,8 @@
     RF13_S_LIZARD | RF13_S_HULK | RF13_S_MONKEY | RF13_S_EYE)
 
 #define RF14_INT_MASK \
-   (RF14_S_JELLY | RF14_S_KOBOLD | RF14_S_QUADRUPED | RF14_S_YEEK)
+   (RF14_S_JELLY | RF14_S_KOBOLD | RF14_S_QUADRUPED | RF14_S_YEEK | \
+    RF14_S_SUMMONER | RF14_S_RANDOM)
 
 /*
  * Hack -- "bolt" spells that may hurt fellow monsters
@@ -5047,7 +5092,8 @@
     RF13_S_LIZARD | RF13_S_HULK | RF13_S_MONKEY | RF13_S_EYE)
 
 #define RF14_SUMMON_MASK \
-   (RF14_S_JELLY | RF14_S_KOBOLD | RF14_S_QUADRUPED | RF14_S_YEEK)
+   (RF14_S_JELLY | RF14_S_KOBOLD | RF14_S_QUADRUPED | RF14_S_YEEK | \
+    RF14_S_SUMMONER | RF14_S_RANDOM)
 
 
 /*** Macro Definitions ***/

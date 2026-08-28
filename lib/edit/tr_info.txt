@@ -5068,6 +5068,171 @@ I:40:2:50:4:20:0d0:s
 D:Nasty!
 F:FLOOR
 
+N:999:Trap of Background Ice
+I:5:20:40:4:15:0d0:D
+D:An icy storm blows through the dungeon!
+F:FLOOR | CHEST | DOOR
+
+N:1000:Trap of Background Shards
+I:5:20:40:4:15:0d0:D
+D:Glass shards are raining down!
+F:FLOOR | CHEST | DOOR
+
+N:1001:Trap of Background Sound
+I:5:20:40:4:15:0d0:D
+D:A loud, droning sound can be heard...
+F:FLOOR | CHEST | DOOR
+
+N:1002:Trap of Background Force
+I:5:20:40:4:15:0d0:D
+D:There seems to be a force field!
+F:FLOOR | CHEST | DOOR
+
+N:1003:Summon Summoner Trap
+I:10:5:40:6:30:0d0:v
+D:A summoning storm is brewing!
+F:FLOOR | CHEST | DOOR
+
+N:1004:Summon Summoners Trap
+I:20:5:40:6:50:0d0:v
+D:A summoning storm is brewing!
+F:FLOOR | CHEST | DOOR
+
+N:1005:Summon Random Trap
+I:10:10:40:6:20:0d0:v
+D:Random stuff protects this!
+F:FLOOR | CHEST | DOOR
+
+N:1006:Summon Randomizer Trap
+I:20:10:40:6:40:0d0:v
+D:Random stuff protects this!
+F:FLOOR | CHEST | DOOR
+
+N:1007:Monster HP Trap
+I:2:20:40:4:1:0d0:D
+D:The monsters become hardier!
+F:FLOOR | CHEST | DOOR
+
+N:1008:Greater Monster HP Trap
+I:4:20:40:4:20:0d0:D
+D:The monsters become hardier!
+F:FLOOR | CHEST | DOOR
+
+N:1009:High Monster HP Trap
+I:7:20:40:4:40:0d0:D
+D:The monsters become hardier!
+F:FLOOR | CHEST | DOOR
+
+N:1010:Absurd Monster HP Trap
+I:10:20:40:4:60:0d0:D
+D:The monsters become hardier!
+F:FLOOR | CHEST | DOOR
+
+N:1011:Insane Monster HP Trap
+I:15:20:40:4:80:0d0:D
+D:The monsters become hardier!
+F:FLOOR | CHEST | DOOR
+
+N:1012:Monster Speed Trap
+I:2:20:40:4:1:0d0:D
+D:The monsters become faster!
+F:FLOOR | CHEST | DOOR
+
+N:1013:Greater Monster Speed Trap
+I:4:20:40:4:20:0d0:D
+D:The monsters become faster!
+F:FLOOR | CHEST | DOOR
+
+N:1014:High Monster Speed Trap
+I:7:20:40:4:40:0d0:D
+D:The monsters become faster!
+F:FLOOR | CHEST | DOOR
+
+N:1015:Absurd Monster Speed Trap
+I:10:20:40:4:60:0d0:D
+D:The monsters become faster!
+F:FLOOR | CHEST | DOOR
+
+N:1016:Insane Monster Speed Trap
+I:15:20:40:4:80:0d0:D
+D:The monsters become faster!
+F:FLOOR | CHEST | DOOR
+
+N:1017:Monster AC Trap
+I:2:20:40:4:1:0d0:D
+D:The monsters become sturdier!
+F:FLOOR | CHEST | DOOR
+
+N:1018:Greater Monster AC Trap
+I:4:20:40:4:20:0d0:D
+D:The monsters become sturdier!
+F:FLOOR | CHEST | DOOR
+
+N:1019:High Monster AC Trap
+I:7:20:40:4:40:0d0:D
+D:The monsters become sturdier!
+F:FLOOR | CHEST | DOOR
+
+N:1020:Absurd Monster AC Trap
+I:10:20:40:4:60:0d0:D
+D:The monsters become sturdier!
+F:FLOOR | CHEST | DOOR
+
+N:1021:Insane Monster AC Trap
+I:15:20:40:4:80:0d0:D
+D:The monsters become sturdier!
+F:FLOOR | CHEST | DOOR
+
+N:1022:Monster Melee Trap
+I:2:20:40:4:1:0d0:D
+D:The monsters hit harder!
+F:FLOOR | CHEST | DOOR
+
+N:1023:Greater Monster Melee Trap
+I:4:20:40:4:20:0d0:D
+D:The monsters hit harder!
+F:FLOOR | CHEST | DOOR
+
+N:1024:High Monster Melee Trap
+I:7:20:40:4:40:0d0:D
+D:The monsters hit harder!
+F:FLOOR | CHEST | DOOR
+
+N:1025:Absurd Monster Melee Trap
+I:10:20:40:4:60:0d0:D
+D:The monsters hit harder!
+F:FLOOR | CHEST | DOOR
+
+N:1026:Insane Monster Melee Trap
+I:15:20:40:4:80:0d0:D
+D:The monsters hit harder!
+F:FLOOR | CHEST | DOOR
+
+N:1027:Monster Level Trap
+I:2:5:40:4:1:0d0:D
+D:The monsters have leveled up!
+F:FLOOR | CHEST | DOOR
+
+N:1028:Greater Monster Level Trap
+I:4:5:40:4:20:0d0:D
+D:The monsters have leveled up!
+F:FLOOR | CHEST | DOOR
+
+N:1029:High Monster Level Trap
+I:7:5:40:4:40:0d0:D
+D:The monsters have leveled up!
+F:FLOOR | CHEST | DOOR
+
+N:1030:Absurd Monster Level Trap
+I:10:5:40:4:60:0d0:D
+D:The monsters have leveled up!
+F:FLOOR | CHEST | DOOR
+
+N:1031:Insane Monster Level Trap
+I:15:5:40:4:80:0d0:D
+D:The monsters have leveled up!
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

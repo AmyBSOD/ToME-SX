@@ -1224,6 +1224,10 @@ void self_knowledge(FILE *fff)
 			info[i++] = "You can magically summon quadrupeds.";
 		if (r_ptr->flags14 & RF14_S_YEEK)
 			info[i++] = "You can magically summon yeeks.";
+		if (r_ptr->flags14 & RF14_S_SUMMONER)
+			info[i++] = "You can magically summon summoners.";
+		if (r_ptr->flags14 & RF14_S_RANDOM)
+			info[i++] = "You can magically summon random monsters.";
 	}
 
 	/* List powers */

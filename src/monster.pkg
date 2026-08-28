@@ -1148,6 +1148,8 @@ static monster_type lua_monster_forge @ monster_forge;
 #define RF14_S_KOBOLD           0x00000002 /* Summon Kobold */
 #define RF14_S_QUADRUPED        0x00000004 /* Summon Quadruped */
 #define RF14_S_YEEK             0x00000008 /* Summon Yeek */
+#define RF14_S_SUMMONER         0x00000010 /* Summon Summoner */
+#define RF14_S_RANDOM           0x00000020 /* Summon Random */
 
 /** @name Monster flags
  * @{ */

@@ -3649,6 +3649,8 @@ bool summon_specific_okay(int r_idx)
 {
 	monster_race *r_ptr = &r_info[r_idx];
 
+	u32b f2, f4, f5, f6, f11, f12, f13, f14;
+
 	bool okay = FALSE;
 
 	/* Hack - Only summon dungeon monsters */
@@ -3656,6 +3658,16 @@ bool summon_specific_okay(int r_idx)
 
 	/* Hack -- no specific type specified */
 	if (!summon_specific_type) return (TRUE);
+
+	/* Extract the racial spell flags */
+	f2 = r_ptr->flags2;
+	f4 = r_ptr->flags4;
+	f5 = r_ptr->flags5;
+	f6 = r_ptr->flags6;
+	f11 = r_ptr->flags11;
+	f12 = r_ptr->flags12;
+	f13 = r_ptr->flags13;
+	f14 = r_ptr->flags14;
 
 	/* Check our requirements */
 	switch (summon_specific_type)
@@ -4024,6 +4036,18 @@ bool summon_specific_okay(int r_idx)
 			break;
 		}
 
+	case SUMMON_SUMMONER:
+		{
+			okay = ( (f4 & (RF4_SUMMON_MASK)) || (f5 & (RF5_SUMMON_MASK)) || (f6 & (RF6_SUMMON_MASK)) || (f13 & (RF13_SUMMON_MASK)) || (f14 & (RF14_SUMMON_MASK)) );
+			break;
+		}
+
+	case SUMMON_RANDOM:
+		{
+			okay = TRUE;
+			break;
+		}
+
 	case SUMMON_LIZARD:
 		{
 			okay = (r_ptr->d_char == 'R');
@@ -4195,6 +4219,176 @@ bool summon_specific_okay(int r_idx)
 	return (okay);
 }
 
+/* for SUMMON_RANDOM, by Amy: pick a random summon that makes sense */
+int pick_random_summon(void)
+{
+	switch (randint(80)) {
+
+		case 1:
+			return SUMMON_ANT;
+		case 2:
+			return SUMMON_SPIDER;
+		case 3:
+			return SUMMON_HOUND;
+		case 4:
+			return SUMMON_HYDRA;
+		case 5:
+			return SUMMON_ANGEL;
+		case 6:
+			return SUMMON_DEMON;
+		case 7:
+			return SUMMON_UNDEAD;
+		case 8:
+			return SUMMON_DRAGON;
+		case 9:
+			return SUMMON_GIANT;
+		case 10:
+			return SUMMON_TROLL;
+		case 11:
+			return SUMMON_ORC;
+		case 12:
+			return SUMMON_SEXY_GIRL;
+		case 13:
+			return SUMMON_HI_UNDEAD;
+		case 14:
+			return SUMMON_HI_DRAGON;
+		case 15:
+			return SUMMON_WRAITH;
+		case 16:
+			return SUMMON_GHOST;
+		case 17:
+			return SUMMON_UNIQUE;
+		case 18:
+			return SUMMON_BIZARRE1;
+		case 19:
+			return SUMMON_BIZARRE2;
+		case 20:
+			return SUMMON_BIZARRE3;
+		case 21:
+			return SUMMON_BIZARRE4;
+		case 22:
+			return SUMMON_BIZARRE5;
+		case 23:
+			return SUMMON_BIZARRE6;
+		case 24:
+			return SUMMON_HI_DEMON;
+		case 25:
+			return SUMMON_KIN;
+		case 26:
+			return SUMMON_DAWN;
+		case 27:
+			return SUMMON_ANIMAL;
+		case 28:
+			return SUMMON_ANIMAL_RANGER;
+		case 29:
+			return SUMMON_HI_UNDEAD_NO_UNIQUES;
+		case 30:
+			return SUMMON_HI_DRAGON_NO_UNIQUES;
+		case 31:
+			return SUMMON_NO_UNIQUES;
+		case 32:
+			return SUMMON_PHANTOM;
+		case 33:
+			return SUMMON_ELEMENTAL;
+		case 34:
+			return SUMMON_THUNDERLORD;
+		case 35:
+			return SUMMON_BLUE_HORROR;
+		case 36:
+			return SUMMON_BUG;
+		case 37:
+			return SUMMON_RNG;
+		case 38:
+			return SUMMON_MINE;
+		case 39:
+			return SUMMON_HUMAN;
+		case 40:
+			return SUMMON_SHADOWS;
+		case 41:
+			return SUMMON_QUYLTHULG;
+		case 42:
+			return SUMMON_E;
+		case 43:
+			return SUMMON_SNAKE;
+		case 44:
+			return SUMMON_ELDRITCH;
+		case 45:
+			return SUMMON_CAT;
+		case 46:
+			return SUMMON_RAT;
+		case 47:
+			return SUMMON_WORM;
+		case 48:
+			return SUMMON_AQUA;
+		case 49:
+			return SUMMON_BIRD;
+		case 50:
+			return SUMMON_DOG;
+		case 51:
+			return SUMMON_INSECT;
+		case 52:
+			return SUMMON_OGRE;
+		case 53:
+			return SUMMON_SUMMONER;
+		case 54:
+			return SUMMON_LIZARD;
+		case 55:
+			return SUMMON_HULK;
+		case 56:
+			return SUMMON_MONKEY;
+		case 57:
+			return SUMMON_EYE;
+		case 58:
+			return SUMMON_PERSON;
+		case 59:
+			return SUMMON_JELLY;
+		case 60:
+			return SUMMON_KOBOLD;
+		case 61:
+			return SUMMON_QUADRUPED;
+		case 62:
+			return SUMMON_YEEK;
+		case 63:
+			return SUMMON_CLOTHES;
+		case 64:
+			return SUMMON_HYBRID;
+		case 65:
+			return SUMMON_BEETLE;
+		case 66:
+			return SUMMON_GOLEM;
+		case 67:
+			return SUMMON_MAN;
+		case 68:
+			return SUMMON_BREEDER;
+		case 69:
+			return SUMMON_WOMAN;
+		case 70:
+			return SUMMON_NEUTER;
+		case 71:
+			return SUMMON_HORDE;
+		case 72:
+			return SUMMON_AMBERITE;
+		case 73:
+			return SUMMON_TOWNIE;
+		case 74:
+			return SUMMON_SHORE;
+		case 75:
+			return SUMMON_OCEAN;
+		case 76:
+			return SUMMON_WASTE;
+		case 77:
+			return SUMMON_WOOD;
+		case 78:
+			return SUMMON_VOLCANO;
+		case 79:
+			return SUMMON_MOUNTAIN;
+		case 80:
+			return SUMMON_GRASS;
+	}
+
+
+	return SUMMON_ANT; /* fail safe */
+}
 
 /*
  * Place a monster (of the specified "type") near the given

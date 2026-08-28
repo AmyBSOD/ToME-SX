@@ -4794,6 +4794,154 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+		/* Summon Random Trap */
+	case TRAP_OF_SUMMON_RANDOM:
+		{
+			int summontype = pick_random_summon();
+
+			msg_print("A random spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
+				                         summontype);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Random Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Random Trap */
+	case TRAP_OF_SUMMON_RANDOM_X:
+		{
+			int summontype = pick_random_summon();
+
+			msg_print("A random spell hangs in the air.");
+			for (k = 0; k < (3 + randint(3)); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
+				                         summontype);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(3) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Random Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Summoner Trap */
+	case TRAP_OF_SUMMON_SUMMONER:
+		{
+			msg_print("A multiplying spell hangs in the air.");
+			for (k = 0; k < randint(3); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
+				                         SUMMON_SUMMONER);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(2) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Summoner Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
+		/* Summon Summoner Trap */
+	case TRAP_OF_SUMMON_SUMMONER_X:
+		{
+			msg_print("A multiplying spell hangs in the air.");
+			for (k = 0; k < (3 + randint(3)); k++)
+			{
+				ident |= summon_specific(y, x, max_dlv_real[dungeon_type],
+				                         SUMMON_SUMMONER);
+			}
+
+			/* thwart endless farming, since I just know some player will be lame enough to do so --Amy */
+			if (randint(2) == 1) {
+				t_info[trap].ident = ident;
+
+				if ((item == -1) || (item == -2))
+				{
+					place_trap(y, x);
+					if (player_has_los_bold(y, x))
+					{
+						note_spot(y, x);
+						lite_spot(y, x);
+					}
+				}
+				else
+				{
+					/* re-trap the chest */
+					place_trap(y, x);
+				}
+
+				if (ident) msg_print("You identified that trap as Summon Summoner Trap.");
+				ident = FALSE;
+
+			}
+			break;
+		}
+
 		/* Summon Lizard Trap */
 	case TRAP_OF_SUMMON_LIZARD:
 		{
@@ -8887,6 +9035,1296 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_OF_MONSTER_SPEED:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				if (m_ptr->speed < 230) {
+					m_ptr->speed += 1;
+					m_ptr->mspeed += 1;
+				}
+			}
+
+			msg_print("You feel that the monsters speed up!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Monster Speed.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_SPEED_II:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				if (m_ptr->speed < 230) {
+					m_ptr->speed += 2;
+					m_ptr->mspeed += 2;
+				}
+			}
+
+			msg_print("You feel that the monsters speed up!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Greater Monster Speed.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_SPEED_III:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				if (m_ptr->speed < 230) {
+					m_ptr->speed += 5;
+					m_ptr->mspeed += 5;
+				}
+			}
+
+			msg_print("You feel that the monsters speed up!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of High Monster Speed.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_SPEED_IV:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				if (m_ptr->speed < 230) {
+					m_ptr->speed += 10;
+					m_ptr->mspeed += 10;
+				}
+			}
+
+			msg_print("You feel that the monsters speed up!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Absurd Monster Speed.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_SPEED_V:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				if (m_ptr->speed < 230) {
+					m_ptr->speed += 20;
+					m_ptr->mspeed += 20;
+				}
+			}
+
+			msg_print("You feel that the monsters speed up!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Insane Monster Speed.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_AC:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				if (m_ptr->ac < 1000) {
+					m_ptr->ac += 1;
+				}
+			}
+
+			msg_print("You feel that the monsters become sturdier!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Monster AC.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_AC_II:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				if (m_ptr->ac < 1000) {
+					m_ptr->ac += 3;
+				}
+			}
+
+			msg_print("You feel that the monsters become sturdier!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Greater Monster AC.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_AC_III:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				if (m_ptr->ac < 1000) {
+					m_ptr->ac += 5;
+				}
+			}
+
+			msg_print("You feel that the monsters become sturdier!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of High Monster AC.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_AC_IV:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				if (m_ptr->ac < 1000) {
+					m_ptr->ac += 10;
+				}
+			}
+
+			msg_print("You feel that the monsters become sturdier!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Absurd Monster AC.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_AC_V:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				if (m_ptr->ac < 1000) {
+					m_ptr->ac += 20;
+				}
+			}
+
+			msg_print("You feel that the monsters become sturdier!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Insane Monster AC.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_MELEE:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				int j = rand_int(3), meleetries = 20;
+				while ((meleetries--) && !m_ptr->blow[j].d_dice) j = rand_int(3);
+				m_ptr->blow[j].d_dice += 1;
+			}
+
+			msg_print("You feel that the monsters hit harder!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Monster Melee.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_MELEE_II:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				int j = rand_int(3), meleetries = 20;
+				while ((meleetries--) && !m_ptr->blow[j].d_dice) j = rand_int(3);
+				m_ptr->blow[j].d_dice += 2;
+			}
+
+			msg_print("You feel that the monsters hit harder!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Greater Monster Melee.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_MELEE_III:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				int j = rand_int(3), meleetries = 20;
+				while ((meleetries--) && !m_ptr->blow[j].d_dice) j = rand_int(3);
+				m_ptr->blow[j].d_dice += 3;
+			}
+
+			msg_print("You feel that the monsters hit harder!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of High Monster Melee.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_MELEE_IV:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				int j = rand_int(3), meleetries = 20;
+				while ((meleetries--) && !m_ptr->blow[j].d_dice) j = rand_int(3);
+				m_ptr->blow[j].d_dice += 4;
+			}
+
+			msg_print("You feel that the monsters hit harder!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Absurd Monster Melee.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_MELEE_V:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				int j = rand_int(3), meleetries = 20;
+				while ((meleetries--) && !m_ptr->blow[j].d_dice) j = rand_int(3);
+				m_ptr->blow[j].d_dice += 5;
+			}
+
+			msg_print("You feel that the monsters hit harder!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Insane Monster Melee.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_HP:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				if (m_ptr->maxhp < 90000) {
+					m_ptr->maxhp *= 11;
+					m_ptr->maxhp /= 10;
+					m_ptr->hp *= 11;
+					m_ptr->hp /= 10;
+				}
+			}
+
+			msg_print("You feel that the monsters became hardier!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Monster HP.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_HP_II:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				if (m_ptr->maxhp < 90000) {
+					m_ptr->maxhp *= 12;
+					m_ptr->maxhp /= 10;
+					m_ptr->hp *= 12;
+					m_ptr->hp /= 10;
+				}
+			}
+
+			msg_print("You feel that the monsters became hardier!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Greater Monster HP.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_HP_III:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				if (m_ptr->maxhp < 90000) {
+					m_ptr->maxhp *= 15;
+					m_ptr->maxhp /= 10;
+					m_ptr->hp *= 15;
+					m_ptr->hp /= 10;
+				}
+			}
+
+			msg_print("You feel that the monsters became hardier!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of High Monster HP.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_HP_IV:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				if (m_ptr->maxhp < 90000) {
+					m_ptr->maxhp *= 20;
+					m_ptr->maxhp /= 10;
+					m_ptr->hp *= 20;
+					m_ptr->hp /= 10;
+				}
+			}
+
+			msg_print("You feel that the monsters became hardier!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Absurd Monster HP.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_HP_V:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				if (m_ptr->maxhp < 90000) {
+					m_ptr->maxhp *= 25;
+					m_ptr->maxhp /= 10;
+					m_ptr->hp *= 25;
+					m_ptr->hp /= 10;
+				}
+			}
+
+			msg_print("You feel that the monsters became hardier!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Insane Monster HP.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_LEVEL:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				m_ptr->level += 1;
+				if (m_ptr->level > MONSTER_LEVEL_MAX) m_ptr->level = MONSTER_LEVEL_MAX;
+
+				if (m_ptr->speed < 230) {
+					m_ptr->speed += 1;
+					m_ptr->mspeed += 1;
+				}
+
+				if (m_ptr->ac < 1000) {
+					m_ptr->ac += 1;
+				}
+
+				if (m_ptr->maxhp < 90000) {
+					m_ptr->maxhp *= 11;
+					m_ptr->maxhp /= 10;
+					m_ptr->hp *= 11;
+					m_ptr->hp /= 10;
+				}
+
+				int j = rand_int(3), meleetries = 20;
+				while ((meleetries--) && !m_ptr->blow[j].d_dice) j = rand_int(3);
+				m_ptr->blow[j].d_dice += 1;
+			}
+
+			msg_print("You feel that the monsters have gained experience!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Monster Level.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_LEVEL_II:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				m_ptr->level += 2;
+				if (m_ptr->level > MONSTER_LEVEL_MAX) m_ptr->level = MONSTER_LEVEL_MAX;
+
+				if (m_ptr->speed < 230) {
+					m_ptr->speed += 2;
+					m_ptr->mspeed += 2;
+				}
+
+				if (m_ptr->ac < 1000) {
+					m_ptr->ac += 3;
+				}
+
+				if (m_ptr->maxhp < 90000) {
+					m_ptr->maxhp *= 12;
+					m_ptr->maxhp /= 10;
+					m_ptr->hp *= 12;
+					m_ptr->hp /= 10;
+				}
+
+				int j = rand_int(3), meleetries = 20;
+				while ((meleetries--) && !m_ptr->blow[j].d_dice) j = rand_int(3);
+				m_ptr->blow[j].d_dice += 2;
+			}
+
+			msg_print("You feel that the monsters have gained experience!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Greater Monster Level.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_LEVEL_III:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				m_ptr->level += 3;
+				if (m_ptr->level > MONSTER_LEVEL_MAX) m_ptr->level = MONSTER_LEVEL_MAX;
+
+				if (m_ptr->speed < 230) {
+					m_ptr->speed += 3;
+					m_ptr->mspeed += 3;
+				}
+
+				if (m_ptr->ac < 1000) {
+					m_ptr->ac += 5;
+				}
+
+				if (m_ptr->maxhp < 90000) {
+					m_ptr->maxhp *= 15;
+					m_ptr->maxhp /= 10;
+					m_ptr->hp *= 15;
+					m_ptr->hp /= 10;
+				}
+
+				int j = rand_int(3), meleetries = 20;
+				while ((meleetries--) && !m_ptr->blow[j].d_dice) j = rand_int(3);
+				m_ptr->blow[j].d_dice += 3;
+			}
+
+			msg_print("You feel that the monsters have gained experience!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of High Monster Level.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_LEVEL_IV:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				m_ptr->level += 4;
+				if (m_ptr->level > MONSTER_LEVEL_MAX) m_ptr->level = MONSTER_LEVEL_MAX;
+
+				if (m_ptr->speed < 230) {
+					m_ptr->speed += 4;
+					m_ptr->mspeed += 4;
+				}
+
+				if (m_ptr->ac < 1000) {
+					m_ptr->ac += 10;
+				}
+
+				if (m_ptr->maxhp < 90000) {
+					m_ptr->maxhp *= 20;
+					m_ptr->maxhp /= 10;
+					m_ptr->hp *= 20;
+					m_ptr->hp /= 10;
+				}
+
+				int j = rand_int(3), meleetries = 20;
+				while ((meleetries--) && !m_ptr->blow[j].d_dice) j = rand_int(3);
+				m_ptr->blow[j].d_dice += 4;
+			}
+
+			msg_print("You feel that the monsters have gained experience!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Absurd Monster Level.");
+
+			break;
+		}
+
+	case TRAP_OF_MONSTER_LEVEL_V:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int i;
+
+			for (i = 1; i < m_max; i++)
+			{
+				monster_type *m_ptr = &m_list[i];
+
+				/* Paranoia -- Skip dead monsters */
+				if (!m_ptr->r_idx) continue;
+
+				/* Don't buff things allied to the player */
+				if (is_friend(m_ptr) > 0) continue;
+
+				m_ptr->level += 5;
+				if (m_ptr->level > MONSTER_LEVEL_MAX) m_ptr->level = MONSTER_LEVEL_MAX;
+
+				if (m_ptr->speed < 230) {
+					m_ptr->speed += 5;
+					m_ptr->mspeed += 5;
+				}
+
+				if (m_ptr->ac < 1000) {
+					m_ptr->ac += 20;
+				}
+
+				if (m_ptr->maxhp < 90000) {
+					m_ptr->maxhp *= 25;
+					m_ptr->maxhp /= 10;
+					m_ptr->hp *= 25;
+					m_ptr->hp /= 10;
+				}
+
+				int j = rand_int(3), meleetries = 20;
+				while ((meleetries--) && !m_ptr->blow[j].d_dice) j = rand_int(3);
+				m_ptr->blow[j].d_dice += 5;
+			}
+
+			msg_print("You feel that the monsters have gained experience!");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Insane Monster Level.");
+
+			break;
+		}
+
 	case TRAP_OF_EXPLORATION:
 		{
 			msg_print("You've forgotten who you are. Well, at least now you can explore the world like you've never done before...");
@@ -11829,6 +13267,35 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		}
 		break;
 
+	case TRAP_OF_BACKGROUND_FORCE:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dgn_background_damage(GF_FORCE);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Background Force.");
+		}
+		break;
+
 	case TRAP_OF_BACKGROUND_CHAOS:
 		{
 			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
@@ -11855,6 +13322,93 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			/* Never known */
 			ident = FALSE;
 			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Background Chaos.");
+		}
+		break;
+
+	case TRAP_OF_BACKGROUND_ICE:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dgn_background_damage(GF_ICE);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Background Ice.");
+		}
+		break;
+
+	case TRAP_OF_BACKGROUND_SHARDS:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dgn_background_damage(GF_SHARDS);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Background Shards.");
+		}
+		break;
+
+	case TRAP_OF_BACKGROUND_SOUND:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			dgn_background_damage(GF_SOUND);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Background Sound.");
 		}
 		break;
 
@@ -23802,7 +25356,7 @@ void dgn_background_damage(int damagetype)
 			}
 
 			/* Apply damage */
-			project( -100, 0, j, k, 5, damagetype,
+			project( 0, 0, j, k, 5, damagetype,
 			         PROJECT_KILL | PROJECT_ITEM | PROJECT_HIDE);
 		}
 	}

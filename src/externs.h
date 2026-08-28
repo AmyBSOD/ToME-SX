@@ -1125,6 +1125,7 @@ extern void set_mon_num_hook(void);
 extern void set_mon_num2_hook(int y, int x);
 extern bool monster_can_cross_terrain(byte feat, monster_race *r_ptr);
 extern void corrupt_corrupted(void);
+extern int pick_random_summon(void);
 
 /* monster3.c */
 extern void dump_companions(FILE *outfile); 

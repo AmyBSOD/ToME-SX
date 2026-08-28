@@ -821,7 +821,7 @@ static int choose_attack_spell(int m_idx, int spells[], int num)
 
 	/* secret spell nastytrap by Amy: allow monster to cast any random spell, whether or not it actually has the spell in question */
 	if (p_ptr->nastytrap168 && magik(1)) {
-		switch (randint(142)) {
+		switch (randint(144)) {
 			default:
 			case 1:
 				return 96; /* RF4_SHRIEK */
@@ -1107,6 +1107,10 @@ static int choose_attack_spell(int m_idx, int spells[], int num)
 				return 416 + 2; /* RF14_S_QUADRUPED */
 			case 142:
 				return 416 + 3; /* RF14_S_YEEK */
+			case 143:
+				return 416 + 4; /* RF14_S_SUMMONER */
+			case 144:
+				return 416 + 5; /* RF14_S_RANDOM */
 		}
 	}
 
@@ -4752,6 +4756,54 @@ static bool monst_spell_monst(int m_idx)
 						count += summon_specific_friendly(y, x, rlev, SUMMON_YEEK, TRUE);
 					else
 						count += summon_specific(y, x, rlev, SUMMON_YEEK);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF14_S_SUMMONER */
+		case 416 + 4:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically starts a summoning storm.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, SUMMON_SUMMONER, TRUE);
+					else
+						count += summon_specific(y, x, rlev, SUMMON_SUMMONER);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF14_S_RANDOM */
+		case 416 + 5:
+			{
+				int summontype = pick_random_summon();
+
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind || !see_m) monster_msg("%^s curses.", m_name);
+					else monster_msg("%^s points all around, then curses.", m_name);
+					break;
+				}
+
+				if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (blind || !see_m) monster_msg("%^s mumbles.", m_name);
+				else monster_msg("%^s magically summons something random.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					if (friendly)
+						count += summon_specific_friendly(y, x, rlev, summontype, TRUE);
+					else
+						count += summon_specific(y, x, rlev, summontype);
 				}
 				if (blind && count) monster_msg("You hear many things appear nearby.");
 				break;
@@ -8645,6 +8697,48 @@ bool make_attack_spell(int m_idx)
 				for (k = 0; k < randint(4); k++)
 				{
 					count += summon_specific(y, x, rlev, SUMMON_YEEK);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF14_S_SUMMONER */
+		case 416 + 4:
+			{
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically starts a summoning storm.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, SUMMON_SUMMONER);
+				}
+				if (blind && count) monster_msg("You hear many things appear nearby.");
+				break;
+			}
+
+			/* RF14_S_RANDOM */
+		case 416 + 5:
+			{
+				int summontype = pick_random_summon();
+
+				if (!p_ptr->nastytrap174 && magik(75)) {
+					if (blind) msg_format("%^s curses.", m_name);
+					else msg_format("%^s points at you, then curses.", m_name);
+					break;
+				}
+
+				disturb(1, 0);
+				if (blind) msg_format("%^s mumbles.", m_name);
+				else msg_format("%^s magically summons something random.", m_name);
+				for (k = 0; k < randint(4); k++)
+				{
+					count += summon_specific(y, x, rlev, summontype);
 				}
 				if (blind && count) monster_msg("You hear many things appear nearby.");
 				break;

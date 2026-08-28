@@ -943,6 +943,8 @@ static void roff_aux(int r_idx, int ego, int remem)
 	if (flags14 & (RF14_S_KOBOLD)) vp[vn++] = "summon kobolds";
 	if (flags14 & (RF14_S_QUADRUPED)) vp[vn++] = "summon quadrupeds";
 	if (flags14 & (RF14_S_YEEK)) vp[vn++] = "summon yeeks";
+	if (flags14 & (RF14_S_SUMMONER)) vp[vn++] = "summon summoners";
+	if (flags14 & (RF14_S_RANDOM)) vp[vn++] = "summon random monsters";
 
 	/* Describe spells */
 	if (vn)

@@ -3176,6 +3176,28 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 			break;
 		}
 
+		/* S_SUMMONER */
+	case 196:
+		{
+			for (k = 0; k < 2; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_SUMMONER, TRUE);
+			}
+
+			break;
+		}
+
+		/* S_RANDOM */
+	case 197:
+		{
+			for (k = 0; k < 1; k++)
+			{
+				summon_specific_friendly(y, x, rlev, SUMMON_RANDOM, TRUE);
+			}
+
+			break;
+		}
+
 	}
 
 
