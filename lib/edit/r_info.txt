@@ -106785,7 +106785,1667 @@ S:BR_ICEE
 S:MULTIPLY
 D:A hound whose breath is so cold that you immediately start freezing. 
 
+N:6130:Nexus dragon worm
+G:w:v
+I:100:10d30:10:50:80
+W:30:12:4500:20
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d3
+B:CLAW:HURT:3d3
+B:BITE:HURT:3d5
+F:RAND_50 | RAND_25 | ATTR_MULTI | 
+F:DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | DRAGON | 
+F:MORTAL | BASEANGBAND
+S:MULTIPLY | 
+S:1_IN_5 | BR_NEXU
+D:You thought dragons used eggs, but this worm has the scales, and the bad 
+D:breath, and the fiery eyes, of a real dragon. Its scales seem unstable. 
 
+N:6131:Nexus dragon worm
+G:w:v
+I:100:10d30:10:50:80
+W:30:3:4500:20
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d3
+B:CLAW:HURT:3d3
+B:BITE:HURT:3d5
+F:RAND_50 | RAND_25 | ATTR_MULTI | 
+F:DROP_60 | ONLY_GOLD | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | DRAGON | 
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | BR_NEXU
+D:You thought dragons used eggs, but this worm has the scales, and the bad 
+D:breath, and the fiery eyes, of a real dragon. Its scales seem unstable. 
+
+N:6132:Shadow dragon worm
+G:w:D
+I:102:10d40:10:54:80
+W:40:12:4500:35
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d4
+B:CLAW:HURT:3d4
+B:BITE:HURT:3d5
+F:RAND_50 | RAND_25 | ATTR_MULTI | 
+F:DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | DRAGON | 
+F:MORTAL | BASEANGBAND
+S:MULTIPLY | 
+S:1_IN_5 | BR_DARK | BR_LITE
+D:You thought dragons used eggs, but this worm has the scales, and the bad 
+D:breath, and the fiery eyes, of a real dragon. Its scales seem to absorb 
+D:the light. 
+
+N:6133:Shadow dragon worm
+G:w:D
+I:102:10d40:10:54:80
+W:40:3:4500:35
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d4
+B:CLAW:HURT:3d4
+B:BITE:HURT:3d5
+F:RAND_50 | RAND_25 | ATTR_MULTI | 
+F:DROP_60 | ONLY_GOLD | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | DRAGON | 
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | BR_DARK | BR_LITE
+D:You thought dragons used eggs, but this worm has the scales, and the bad 
+D:breath, and the fiery eyes, of a real dragon. Its scales seem to absorb 
+D:the light. 
+
+N:6134:Balance dragon worm
+G:w:y
+I:103:12d50:10:59:80
+W:50:12:4500:50
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d5
+B:CLAW:HURT:3d5
+B:BITE:HURT:3d5
+F:RAND_50 | RAND_25 | ATTR_MULTI | 
+F:DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | DRAGON | 
+F:MORTAL | BASEANGBAND
+S:MULTIPLY | 
+S:1_IN_5 | BR_CONF | BR_SOUN | BR_SHAR
+D:You thought dragons used eggs, but this worm has the scales, and the bad 
+D:breath, and the fiery eyes, of a real dragon. Its scales seem 
+D:well-balanced. 
+
+N:6135:Balance dragon worm
+G:w:y
+I:103:12d50:10:59:80
+W:50:3:4500:50
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d5
+B:CLAW:HURT:3d5
+B:BITE:HURT:3d5
+F:RAND_50 | RAND_25 | ATTR_MULTI | 
+F:DROP_60 | ONLY_GOLD | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | DRAGON | 
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | BR_CONF | BR_SOUN | BR_SHAR
+D:You thought dragons used eggs, but this worm has the scales, and the bad 
+D:breath, and the fiery eyes, of a real dragon. Its scales seem 
+D:well-balanced. 
+
+N:6136:Nether dragon worm
+G:w:D
+I:105:15d60:10:66:80
+W:60:12:4500:66
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d6
+B:CLAW:HURT:3d6
+B:BITE:HURT:3d6
+F:RAND_50 | RAND_25 | ATTR_MULTI | 
+F:DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | DRAGON | 
+F:MORTAL | BASEANGBAND
+S:MULTIPLY | 
+S:1_IN_5 | BR_NETH | BR_DISE | BR_CHAO
+D:You thought dragons used eggs, but this worm has the scales, and the bad 
+D:breath, and the fiery eyes, of a real dragon. Its scales seem 
+D:to have been consumed by rotting processes. 
+
+N:6137:Nether dragon worm
+G:w:D
+I:105:15d60:10:66:80
+W:60:3:4500:66
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d6
+B:CLAW:HURT:3d6
+B:BITE:HURT:3d6
+F:RAND_50 | RAND_25 | ATTR_MULTI | 
+F:DROP_60 | ONLY_GOLD | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | DRAGON | 
+F:MORTAL | BASEANGBAND
+S:1_IN_5 | BR_NETH | BR_DISE | BR_CHAO
+D:You thought dragons used eggs, but this worm has the scales, and the bad 
+D:breath, and the fiery eyes, of a real dragon. Its scales seem 
+D:to have been consumed by rotting processes. 
+
+N:6138:Ethereal dragon worm
+G:w:w
+I:106:18d70:10:77:80
+W:70:12:4500:77
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d8
+B:CLAW:HURT:3d8
+B:BITE:HURT:3d8
+F:RAND_50 | RAND_25 | ATTR_MULTI | 
+F:DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | DRAGON | PASS_WALL | 
+F:MORTAL | BASEANGBAND | NO_CONF 
+S:MULTIPLY | 
+S:1_IN_5 | BR_ETHE | BR_MIND | BR_RADI
+D:You thought dragons used eggs, but this worm has the scales, and the bad 
+D:breath, and the fiery eyes, of a real dragon. Its scales seem 
+D:to glide straight through the wall. 
+
+N:6139:Ethereal dragon worm
+G:w:w
+I:106:18d70:10:77:80
+W:70:3:4500:77
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d8
+B:CLAW:HURT:3d8
+B:BITE:HURT:3d8
+F:RAND_50 | RAND_25 | ATTR_MULTI | 
+F:DROP_60 | ONLY_GOLD | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | DRAGON | PASS_WALL | 
+F:MORTAL | BASEANGBAND | NO_CONF 
+S:1_IN_5 | BR_ETHE | BR_MIND | BR_RADI
+D:You thought dragons used eggs, but this worm has the scales, and the bad 
+D:breath, and the fiery eyes, of a real dragon. Its scales seem 
+D:to glide straight through the wall. 
+
+N:6140:Disintegrator dragon worm
+G:w:D
+I:108:20d88:10:88:80
+W:80:12:4500:88
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d12
+B:CLAW:HURT:3d12
+B:BITE:HURT:3d12
+F:RAND_50 | RAND_25 | ATTR_MULTI | 
+F:DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | DRAGON | KILL_WALL | 
+F:MORTAL | BASEANGBAND | NO_CONF 
+S:MULTIPLY | 
+S:1_IN_5 | BR_DISI | BR_NUKE | BR_MANA 
+D:You thought dragons used eggs, but this worm has the scales, and the bad 
+D:breath, and the fiery eyes, of a real dragon. Its scales seem 
+D:to bore straight through the wall. 
+
+N:6141:Disintegrator dragon worm
+G:w:D
+I:108:20d88:10:88:80
+W:80:3:4500:88
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d12
+B:CLAW:HURT:3d12
+B:BITE:HURT:3d12
+F:RAND_50 | RAND_25 | ATTR_MULTI | 
+F:DROP_60 | ONLY_GOLD | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | DRAGON | KILL_WALL | 
+F:MORTAL | BASEANGBAND | NO_CONF 
+S:1_IN_5 | BR_DISI | BR_NUKE | BR_MANA 
+D:You thought dragons used eggs, but this worm has the scales, and the bad 
+D:breath, and the fiery eyes, of a real dragon. Its scales seem 
+D:to bore straight through the wall. 
+
+N:6142:Multi-hued hound
+G:Z:v
+I:110:30d10:25:40:0
+W:33:150:600:600
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d8
+B:CLAW:HURT:2d8
+B:BITE:HURT:4d4
+B:BITE:HURT:4d4
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:BASH_DOOR | ATTR_MULTI | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:IM_ELEC | IM_POIS | IM_ACID | IM_FIRE | IM_COLD | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:MULTIPLY
+S:1_IN_5 | 
+S:BR_ACID | BR_POIS | BR_COLD | BR_FIRE | BR_ELEC
+D:Shimmering in rainbow hues, this hound is beautiful and deadly. 
+
+N:6143:Rainbow hound
+G:Z:v
+I:120:40d30:25:70:0
+W:50:3:600:1400
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:6d8
+B:CLAW:HURT:6d8
+B:BITE:HURT:8d4
+B:BITE:HURT:8d4
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:BASH_DOOR | ATTR_MULTI | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:IM_ELEC | IM_POIS | IM_ACID | IM_FIRE | IM_COLD | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_5 | 
+S:BR_ACID | BR_POIS | BR_COLD | BR_FIRE | BR_ELEC | 
+S:BR_VENO | BR_PLAS | BR_ICEE | 
+D:This rainbow-colored must be very dangerous...
+
+N:6144:Rainbow hound
+G:Z:v
+I:120:40d30:25:70:0
+W:50:150:600:1400
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:6d8
+B:CLAW:HURT:6d8
+B:BITE:HURT:8d4
+B:BITE:HURT:8d4
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:BASH_DOOR | ATTR_MULTI | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:IM_ELEC | IM_POIS | IM_ACID | IM_FIRE | IM_COLD | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:MULTIPLY
+S:1_IN_5 | 
+S:BR_ACID | BR_POIS | BR_COLD | BR_FIRE | BR_ELEC
+S:BR_VENO | BR_PLAS | BR_ICEE | 
+D:This rainbow-colored must be very dangerous...
+
+N:6145:Scintillating hound
+G:Z:v
+I:120:40d45:25:85:0
+W:60:3:600:2500
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:7d8
+B:CLAW:HURT:7d8
+B:BITE:HURT:9d4
+B:BITE:HURT:9d4
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:BASH_DOOR | ATTR_MULTI | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_5 | 
+S:BR_NETH | BR_LITE | BR_DARK | BR_CONF | BR_SOUN | BR_CHAO | BR_DISE | 
+S:BR_NEXU | BR_GRAV | BR_SHAR | BR_NERV | BR_MIND | BR_RADI | 
+D:A hound that shimmers. Probably capable of breathing something nasty. 
+
+N:6146:Scintillating hound
+G:Z:v
+I:120:40d45:25:85:0
+W:60:150:600:2500
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:7d8
+B:CLAW:HURT:7d8
+B:BITE:HURT:9d4
+B:BITE:HURT:9d4
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:BASH_DOOR | ATTR_MULTI | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:MULTIPLY
+S:1_IN_5 | 
+S:BR_NETH | BR_LITE | BR_DARK | BR_CONF | BR_SOUN | BR_CHAO | BR_DISE | 
+S:BR_NEXU | BR_GRAV | BR_SHAR | BR_NERV | BR_MIND | BR_RADI | 
+D:A hound that shimmers. Probably capable of breathing something nasty. 
+
+N:6147:Shimmering hound
+G:Z:v
+I:125:50d55:25:100:0
+W:70:3:600:4000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:8d8
+B:CLAW:HURT:8d8
+B:BITE:HURT:12d4
+B:BITE:HURT:12d4
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:BASH_DOOR | ATTR_MULTI | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_5 | 
+S:BR_TIME | BR_INER | BR_WALL | BR_MANA | BR_DISI | BR_ETHE | 
+S:BR_AMEB | BR_WATE | 
+D:You just know from seeing that hound that its breath is deadly. 
+
+N:6148:Shimmering hound
+G:Z:v
+I:125:50d55:25:100:0
+W:70:150:600:4000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:8d8
+B:CLAW:HURT:8d8
+B:BITE:HURT:12d4
+B:BITE:HURT:12d4
+F:FORCE_SLEEP | 
+F:FRIENDS | 
+F:BASH_DOOR | ATTR_MULTI | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:MULTIPLY
+S:1_IN_5 | 
+S:BR_TIME | BR_INER | BR_WALL | BR_MANA | BR_DISI | BR_ETHE | 
+S:BR_AMEB | BR_WATE | 
+D:You just know from seeing that hound that its breath is deadly. 
+
+N:6149:Foot druj
+G:s:U
+I:130:60d10:20:110:10
+W:57:2:10:18000
+E:0:0:0:1:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | RES_TELE | 
+F:SMART | COLD_BLOOD | CAN_SWIM |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_1 | 
+S:BR_NERV | HOLD | S_WOMAN | BO_POIS | BA_NETH | MIND_BLAST | 
+D:A skeletal foot floating in the air, which seems to try to kick you 
+D:every now and then. 
+
+N:6150:Tentacle druj
+G:s:v
+I:132:25d100:20:150:10
+W:69:2:1000:26000
+E:0:0:0:0:1:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | RES_TELE | 
+F:SMART | COLD_BLOOD | CAN_FLY | 
+F:EVIL | UNDEAD | CAN_SWIM |
+F:IM_FIRE | IM_COLD | IM_POIS | ELDRITCH_HORROR | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_1 | 
+S:HOLD | CAUSE_4 | HAND_DOOM | BRAIN_SMASH | TRAPS | BA_FIRE | 
+S:BA_DARK | BR_MIND | S_ELDRITCH
+D:A magical, grotesque-looking tentacle that casts spells constantly. 
+
+N:6151:Finger druj
+G:s:y
+I:120:20d10:20:60:10
+W:32:2:10:4000
+E:0:0:0:1:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | RES_TELE | 
+F:SMART | COLD_BLOOD | CAN_SWIM |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_1 | 
+S:TELE_AWAY | BLIND | CONF | SCARE | CAUSE_2 | FORGET | DARKNESS | 
+S:MISSILE
+D:A magically animated finger that casts spells. 
+
+N:6152:Nose druj
+G:s:o
+I:120:20d11:20:62:10
+W:34:2:10:4050
+E:0:0:0:1:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | RES_TELE | 
+F:SMART | COLD_BLOOD | CAN_SWIM | CAN_FLY | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_1 | 
+S:S_BUG | BR_RADI | MIND_BLAST | CONF | TRAPS | 
+D:A floating nose that blasts you with spells. 
+
+N:6153:Toe druj
+G:s:y
+I:111:6d10:20:25:10
+W:8:2:10:300
+E:0:0:0:1:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | RES_TELE | 
+F:SMART | COLD_BLOOD | CAN_SWIM |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_1 | 
+S:CONF | SCARE | S_MONSTER | BO_POIS
+D:A magically animated toe that casts spells. 
+
+N:6154:Nut druj
+G:s:u
+I:113:10d10:20:40:10
+W:17:2:10:1000
+E:0:0:0:1:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | RES_TELE | 
+F:SMART | COLD_BLOOD | CAN_SWIM | CAN_FLY | ELDRITCH_HORROR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_1 | 
+S:S_MAN | BR_CONF | MISSILE | BR_ETHE | CAUSE_1 | 
+D:You... wish you hadn't seen this thing. And what's worse, it 
+D:casts spells all the time! 
+
+N:6155:Multi druj
+G:s:g
+I:132:25d100:20:150:10
+W:69:2:1000:26000
+E:0:0:0:0:1:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | RES_TELE | 
+F:SMART | COLD_BLOOD | CAN_FLY | 
+F:EVIL | UNDEAD | CAN_SWIM |
+F:IM_FIRE | IM_COLD | IM_POIS | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_1 | 
+S:S_KIN | S_BREEDER | S_SUMMONER | HASTE | TPORT | SHRIEK | 
+S:BR_AMEB | TELE_AWAY | 
+D:You're not sure what this entity is, but it seems to be 
+D:casting spells that allow it to multiply... 
+
+N:6156:Multi druj
+G:s:g
+I:132:25d100:20:150:10
+W:69:100:1000:26000
+E:0:0:0:0:1:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | RES_TELE | 
+F:SMART | COLD_BLOOD | CAN_FLY | 
+F:EVIL | UNDEAD | CAN_SWIM |
+F:IM_FIRE | IM_COLD | IM_POIS | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:MULTIPLY
+S:1_IN_1 | 
+S:S_KIN | S_BREEDER | S_SUMMONER | HASTE | TPORT | SHRIEK | 
+S:BR_AMEB | TELE_AWAY | 
+D:You're not sure what this entity is, but it seems to be 
+D:casting spells that allow it to multiply... 
+
+N:6157:Busy Weeping Angel
+G:A:W
+I:114:9d17:30:35:100
+W:12:3:2600:240
+E:1:1:1:2:1:1
+O:0:40:60:0
+B:GAZE:CONFUSE
+B:HIT:ETHER:2d4
+B:CLAW:EXP_40:2d4
+B:TOUCH:COLD:2d3
+F:NO_FEAR |
+F:ONLY_ITEM | DROP_22 | EVIL | IM_ELEC | RES_CHAO | DEATH_ORB | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | NO_SLEEP |
+F:IM_POIS | NO_CONF | BASEANGBAND | RES_LITE | IM_COLD | FRIENDS | 
+F:RES_WALL | RES_GRAV | RES_DISE | RES_ETHE | IM_ACID | 
+D:The anti-fun squad. They seem to be busy with something. 
+
+N:6158:Time Loop Weeping Angel
+G:A:W
+I:125:15d200:30:90:100
+W:52:3:2600:4000
+E:1:1:1:2:1:1
+O:0:40:60:0
+B:GAZE:CONFUSE:4d8
+B:HIT:ETHER:5d12
+B:CLAW:EXP_80:4d8
+B:TOUCH:COLD:6d6
+F:NO_FEAR |
+F:ONLY_ITEM | DROP_22 | EVIL | IM_ELEC | RES_CHAO | DEATH_ORB | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | NO_SLEEP |
+F:IM_POIS | NO_CONF | BASEANGBAND | RES_LITE | IM_COLD | FRIENDS | 
+F:RES_WALL | RES_GRAV | RES_DISE | RES_ETHE | IM_ACID | 
+S:1_IN_7
+S:BR_ETHE | BR_CONF | 
+D:You absolutely hate the anti-fun squad. They seem to be caught in 
+D:a time loop, which you may or may not be able to use to your 
+D:advantage... 
+
+N:6159:Antimagic mold
+G:m:D
+I:120:20d40:4:30:0
+W:52:3:20:1400
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:UN_BONUS:8d12
+B:TOUCH:DARK:8d12
+B:SPORE:LOSE_ALL:8d12
+F:NEVER_MOVE | BASEANGBAND | DEATH_ORB | 
+F:STUPID | EMPTY_MIND | AURA_COLD |
+F:IM_POIS | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+D:A mold that isn't affected by magic. 
+
+N:6160:Cursed Talisman
+G:":B
+I:125:15d95:20:80:10
+W:55:2:0:3500
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:RANDOM:8d10
+F:CHAR_MULTI | FORCE_SLEEP | NEVER_MOVE | DROP_12 |
+F:SMART | COLD_BLOOD | DEATH_ORB | 
+F:UNDEAD | EVIL |  NONLIVING | IM_FIRE | IM_COLD | IM_POIS |
+F:NO_FEAR | NO_CONF | NO_SLEEP | BASEANGBAND |
+S:1_IN_3 |
+S:CAUSE_3 | HAND_DOOM | MIND_BLAST | MISSILE | TELE_AWAY | 
+S:TELE_LEVEL | 
+D:Oh hey, an amulet! Let's grab it... ugh huh, what's that? 
+D:Why is it fighting back?! 
+
+N:6161:Kobold digger
+G:k:W
+I:110:5d14:20:20:30
+W:7:1:1200:15
+E:1:1:1:2:1:1
+O:0:90:0:5
+B:HIT:HURT:2d6
+F:DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | IM_POIS | KILL_WALL | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:A kobold with a pick-axe. 
+
+N:6162:Cobalt kobold
+G:k:b
+I:115:20d45:20:66:30
+W:30:1:1100:200
+E:1:1:1:2:1:1
+O:0:90:0:5
+B:HIT:HURT:3d11
+B:HIT:HURT:3d11
+F:DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | IM_POIS | KILL_WALL | IM_COLD | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:This kobold is digging out the walls in the hopes of 
+D:finding minerals. 
+
+N:6163:Pick kobold
+G:k:D
+I:120:25d55:20:72:30
+W:50:1:1100:500
+E:1:1:1:2:1:1
+O:0:90:0:5
+B:HIT:HURT:5d11
+B:HIT:HURT:5d11
+F:DROP_90 | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | IM_POIS | KILL_WALL | IM_COLD | 
+F:MORTAL | BASEANGBAND | HAS_LITE | FRIEND | 
+D:This type of kobold is digging paths through the dungeon. 
+
+N:6164:Blinking possessor (soul)
+G:G:y
+I:123:6d6:30:60:10
+W:50:3:10:0
+O:0:0:0:0
+F:SMART | POSSESSOR | RAND_25 | 
+F:BASEANGBAND | NO_CUT
+S:1_IN_4
+S:BLINK
+D:It does not look that powerful. 
+
+N:6165:Blinking possessor (soul)
+G:G:y
+I:123:6d6:30:60:10
+W:50:120:10:0
+O:0:0:0:0
+F:SMART | POSSESSOR | RAND_25 | 
+F:BASEANGBAND | NO_CUT
+S:MULTIPLY
+S:1_IN_4
+S:BLINK
+D:It does not look that powerful. 
+
+N:6166:Bug Catcher
+G:t:g
+I:110:5d10:6:10:0
+W:10:1:1500:20
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:2d5
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_GRASS | 
+F:RAND_25 | DROP_12 | TAKE_ITEM | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_10
+S:S_INSECT
+D:He likes shorts, because they're comfy and easy to wear.
+
+N:6167:Beetle Collector
+G:t:g
+I:120:10d30:6:25:0
+W:30:1:1500:500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:6d8
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_GRASS | 
+F:RAND_25 | DROP_12 | TAKE_ITEM | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_7
+S:S_INSECT | S_BEETLE | 
+D:He is the son of wind, the child of spirit.
+
+N:6168:Wannabe Entomologist
+G:t:g
+I:130:10d50:6:50:0
+W:50:1:1500:1000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:POISON:8d15
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_GRASS | 
+F:RAND_25 | DROP_12 | TAKE_ITEM | IM_POIS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_5
+S:S_INSECT | S_BEETLE | S_ANT | 
+D:The self-proclaimed master of all insects. 
+
+N:6169:Friendcaller
+G:t:v
+I:120:10d20:6:25:0
+W:20:1:1400:100
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:5d5
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_TOWN | 
+F:RAND_25 | DROP_12 | TAKE_ITEM | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_8 | 
+S:S_PEOPLE
+D:He seems to have invited friends. 
+
+N:6170:Party Pooper
+G:t:v
+I:129:10d45:6:55:0
+W:40:1:1400:800
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:8d12
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_TOWN | 
+F:RAND_25 | DROP_12 | TAKE_ITEM | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_6 | 
+S:S_PEOPLE
+D:He's bringing his pals along for the ride. 
+
+N:6171:Party Crasher
+G:t:v
+I:131:10d60:6:70:0
+W:60:1:1400:2500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:10d15
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_TOWN | 
+F:RAND_25 | DROP_12 | TAKE_ITEM | ESCORT | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_5 | 
+S:S_PEOPLE
+D:He came with a whole bunch of uninvited guests! 
+
+N:6172:Uninvited Guest
+G:t:v
+I:135:15d90:6:100:0
+W:80:1:1400:4500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:TERRIFY:15d18
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_TOWN | 
+F:RAND_25 | DROP_12 | TAKE_ITEM | ESCORT | ESCORTS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_4 | 
+S:S_PEOPLE
+D:This dude just doesn't respect the rules, and brought 
+D:all of his abnormal friends. You expect them to shout 
+D:and litter and generally be a very unpleasant lot... 
+
+N:6173:Uninvited Guest
+G:t:v
+I:135:15d90:6:100:0
+W:80:50:1400:4500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:TERRIFY:15d18
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_TOWN | 
+F:RAND_25 | TAKE_ITEM | ESCORT | ESCORTS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:MULTIPLY
+S:1_IN_4 | 
+S:S_PEOPLE
+D:This dude just doesn't respect the rules, and brought 
+D:all of his abnormal friends. You expect them to shout 
+D:and litter and generally be a very unpleasant lot... 
+
+N:6174:Snake Ranger
+G:p:W
+I:110:15d11:20:40:40
+W:20:1:1700:55
+E:1:1:1:2:1:1
+O:20:50:20:0
+B:HIT:HURT:5d4
+B:HIT:HURT:5d4
+F:MALE | 
+F:DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND | MORTAL | HAS_LITE
+S:1_IN_4 |  
+S:ARROW_2 | MISSILE | BO_COLD | BO_ELEC | BLINK | S_SNAKE
+D:A warrior who is at one with nature.  A master of both bow and sword, with 
+D:minor spellcasting skills. 
+
+N:6175:Aviary Ranger
+G:p:W
+I:110:15d11:20:40:40
+W:20:1:1700:55
+E:1:1:1:2:1:1
+O:20:50:20:0
+B:HIT:HURT:5d4
+B:HIT:HURT:5d4
+F:MALE | 
+F:DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND | MORTAL | HAS_LITE
+S:1_IN_4 |  
+S:ARROW_2 | MISSILE | BO_COLD | BO_ELEC | BLINK | S_BIRD | S_BAT
+D:A warrior who is at one with nature.  A master of both bow and sword, with 
+D:minor spellcasting skills. 
+
+N:6176:Ozmanian ranger
+G:p:g
+I:112:10d15:36:80:2
+W:18:2:1600:100
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:2d5
+B:HIT:HURT:2d5
+B:TOUCH:EAT_ITEM
+F:EVIL | MALE | FRIEND | RES_SHAR | DROP_12 | DROP_90 | 
+F:MORTAL | BASEANGBAND | 
+F:IM_POIS | IM_FIRE | OPEN_DOOR | BASH_DOOR | WILD_WOOD |
+F:DROP_SKELETON | DROP_CORPSE
+S:1_IN_6
+S:ARROW_4 | S_MONKEY | S_LIZARD | 
+D:A hardened survivor of the pitiless bush.
+
+N:6177:Quad Ranger
+G:p:W
+I:120:50d20:20:60:10
+W:41:2:1800:1800
+E:1:1:1:2:1:1
+O:30:50:20:0
+B:HIT:HURT:5d5
+B:HIT:HURT:5d5
+B:HIT:HURT:5d5
+F:MALE | INVISIBLE | 
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_SKELETON | DROP_CORPSE
+F:ONLY_ITEM | DROP_22 | TAKE_ITEM | 
+F:SMART | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | NO_CONF | NO_SLEEP | IM_FIRE | IM_ELEC | IM_COLD | IM_POIS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_4 |
+S:S_MONSTERS |  
+S:ARROW_2 | ARROW_3 | ARROW_4 | MISSILE | BO_FIRE | BO_ELEC | BA_COLD | 
+S:HASTE | BLINK | S_QUADRUPED
+D:This ranger is calling four-legged beasts to do his bidding. 
+
+N:6178:Master Ranger
+G:p:W
+I:126:60d37:20:90:10
+W:61:2:1800:4400
+E:1:1:1:2:1:1
+O:30:50:20:0
+B:HIT:HURT:5d12
+B:HIT:HURT:5d12
+B:HIT:HURT:5d12
+F:MALE | INVISIBLE | 
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_SKELETON | DROP_CORPSE
+F:ONLY_ITEM | DROP_22 | TAKE_ITEM | 
+F:SMART | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | NO_CONF | NO_SLEEP | IM_FIRE | IM_ELEC | IM_COLD | IM_POIS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_4 |
+S:S_MONSTERS | S_ANT | S_SPIDER | S_HOUND | S_BAT | S_SNAKE | S_CAT | 
+S:ARROW_4 | MISSILE | BO_FIRE | BO_ELEC | BA_COLD | BO_PLAS | BA_POIS | 
+S:HASTE | BLINK | S_QUADRUPED | S_ANIMALS | S_BEETLE | S_BIRD | 
+S:S_INSECT | S_LIZARD | S_MONKEY | 
+D:The master of all the woodsmen, he fires powerful missiles and is 
+D:also very skilled at commanding all kinds of animals. 
+
+N:6179:Hell Wizard
+G:h:B
+I:125:15d45:20:50:20
+W:50:1:1200:1000
+E:1:1:1:2:1:1
+O:20:20:50:10
+B:HIT:CHAOS:8d10
+F:DROP_12 | WILD_TOO | IM_FIRE | WILD_TOWN | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | BASEANGBAND | TAKE_ITEM | REGENERATE | MALE | 
+S:1_IN_5
+S:BLINK | TPORT | SLOW | HEAL | BA_FIRE | BA_ELEC | BO_ICEE | 
+S:S_MONSTER | S_ELEMENTAL | S_DEMON | S_DRAGON | 
+D:These dudes are a nightmare for the normal town population. 
+D:He comes along, casts all kinds of spells, and quickly, 
+D:buildings are aflame and strange creatures are tearing apart 
+D:harmless villagers... 
+
+N:6180:Retailer Lady
+G:t:w
+I:114:10d30:10:30:155
+W:30:1:0:500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:INSULT:EAT_GOLD:5d8
+F:FEMALE | TAKE_ITEM | WILD_TOWN | BASEANGBAND | DROP_CORPSE
+S:1_IN_7
+S:S_CLOTHES
+D:She seems to have come to this town in an attempt to sell her 
+D:wares... except that no one wants to buy. Which is causing her 
+D:to get really angry and attempt to force her clothes onto you! 
+
+N:6181:Frustrated Saleswoman
+G:t:w
+I:120:10d60:10:50:155
+W:60:1:0:2500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:INSULT:EAT_GOLD:8d8
+B:INSULT:EAT_GOLD:8d8
+F:FEMALE | TAKE_ITEM | WILD_TOWN | BASEANGBAND | DROP_CORPSE
+S:1_IN_5
+S:S_CLOTHES
+D:Isn't it a pity that no one wants to buy this lady's supply of 
+D:fine clothes? Because of that, she's now magically animating 
+D:all those socks and panties, and instructs them to attack! 
+
+N:6182:Big quylthulg
+G:Q:r
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_MONSTERS
+D:It is a large strange pulsing mound of flesh. 
+
+N:6183:Huge quylthulg
+G:Q:r
+I:120:50d10:10:1:0
+W:50:1:5000:330
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_MONSTERS
+D:It is a huge strange pulsing mound of flesh. 
+
+N:6184:Gigantic quylthulg
+G:Q:r
+I:130:40d100:10:1:0
+W:80:1:20000:15000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_1 | 
+S:BLINK | TPORT | 
+S:S_MONSTERS
+D:It is a gigantic strange pulsing mound of flesh. 
+
+N:6185:Moldy quylthulg
+G:Q:G
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_MOLD
+D:It is a pulsing mound of flesh, covered with spores. 
+
+N:6186:Flapping quylthulg
+G:Q:r
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | CAN_FLY | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_BAT
+D:It is a strange pulsing mound of flesh that seems to have 
+D:grown wings. 
+
+N:6187:Extreme quylthulg
+G:Q:v
+I:120:48d10:20:1:0
+W:45:1:3000:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_QUYLTHULG
+D:It is a pulsing flesh mound that wants to grow. 
+
+N:6188:Greater extreme quylthulg
+G:Q:D
+I:120:15d100:20:1:0
+W:71:2:5000:10500
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | RES_TELE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TELE_TO | 
+S:S_QUYLTHULG
+D:A massive pulsating mound of flesh, with an intense desire to 
+D:let the quylthulg race take over the world. 
+
+N:6189:Spinning quylthulg
+G:Q:v
+I:120:48d10:20:1:0
+W:45:1:3000:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_VORTEX
+D:It is a pulsing flesh mound that seems to spin around and around. 
+
+N:6190:Worthful quylthulg
+G:Q:y
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | DROP_90
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_TREASURE
+D:It is a strange pulsing mound of flesh that seems to contain treasure. 
+
+N:6191:Imprisoned quylthulg
+G:Q:u
+I:120:48d10:20:1:0
+W:45:1:3000:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | RES_TELE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:S_IMMOBILE
+D:It is a pulsing flesh mound that seems fixed to the spot. 
+
+N:6192:Upright quylthulg
+G:Q:b
+I:120:48d10:20:1:0
+W:45:1:3000:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_PEOPLE
+D:It is a pulsing flesh mound that seems to stand upright. 
+
+N:6193:Greater upright quylthulg
+G:Q:B
+I:120:15d100:20:1:0
+W:71:2:5000:10500
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | RES_TELE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TELE_TO | 
+S:S_PEOPLE
+D:A massive pulsating mound of flesh, standing on two legs. 
+
+N:6194:Elemental quylthulg
+G:Q:g
+I:120:48d10:20:1:0
+W:45:1:3000:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | ATTR_MULTI | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | 
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | IM_ACID | 
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_ELEMENTAL
+D:It is a pulsing flesh mound that controls the elements. 
+
+N:6195:Greater elemental quylthulg
+G:Q:G
+I:120:15d100:20:1:0
+W:71:2:5000:10500
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | RES_TELE | ATTR_MULTI | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | 
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | IM_ACID | 
+S:1_IN_2 | 
+S:BLINK | TELE_TO | 
+S:S_ELEMENTAL
+D:A massive pulsating mound of flesh, which has mastered the 
+D:elements. 
+
+N:6196:Snake quylthulg
+G:Q:w
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_SNAKE
+D:It is a strange pulsing mound of flesh, looking somewhat snake-like. 
+
+N:6197:Eldritch quylthulg
+G:Q:v
+I:120:48d10:20:1:0
+W:45:2:3000:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | ELDRITCH_HORROR | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_ELDRITCH
+D:It is a pulsing flesh mound that looks horrendous.  
+
+N:6198:Greater eldritch quylthulg
+G:Q:v
+I:120:15d100:20:1:0
+W:71:4:5000:10500
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | RES_TELE | ELDRITCH_HORROR | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TELE_TO | 
+S:S_ELDRITCH
+D:A massive pulsating mound of flesh, with so many grotesquely shaped 
+D:tentacles that you feel the need to look away. 
+
+N:6199:Feline quylthulg
+G:Q:w
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_CAT
+D:It is a strange pulsing mound of flesh shaped like a cat. 
+
+N:6200:Rodent quylthulg
+G:Q:u
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_RAT
+D:It is a strange pulsing mound of flesh with little, sharp teeth. 
+
+N:6201:Crawly quylthulg
+G:Q:g
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_WORM
+D:It is a strange pulsing mound of flesh, looking amorphous. 
+
+N:6202:Outfitter quylthulg
+G:Q:u
+I:121:50d10:20:20:0
+W:50:1:3000:3200
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_CLOTHES
+D:It is a pulsing flesh mound wearing clothes. 
+
+N:6203:Hybrid quylthulg
+G:Q:u
+I:120:48d10:20:1:0
+W:45:1:3000:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_HYBRID
+D:It is a cross of a pulsing flesh mound and some other, 
+D:undefined creature. 
+
+N:6204:Armored quylthulg
+G:Q:U
+I:120:60d10:20:100:0
+W:50:1:3000:3300
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_BEETLE
+D:It is a pulsing flesh mound with a thick carapace. 
+
+N:6205:Horde quylthulg
+G:Q:U
+I:120:15d100:20:1:0
+W:71:2:5000:10500
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | RES_TELE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TELE_TO | 
+S:S_HORDE
+D:A massive pulsating mound of flesh, looking very powerful.  
+
+N:6206:Giant quylthulg
+G:Q:u
+I:120:200d10:20:1:0
+W:50:1:20000:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | REGENERATE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_GIANT
+D:It is a very large pulsing flesh mound. 
+
+N:6207:Sexy quylthulg
+G:Q:u
+I:120:50d10:20:1:0
+W:50:1:3000:3200
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | TELE_TO | 
+S:S_SEXY_GIRL
+D:It is a pulsing flesh mound that somehow looks attractive. 
+
+N:6208:Stinking quylthulg
+G:Q:u
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_TROLL
+D:It is a strange pulsing mound of flesh that reeks of ickiness. 
+
+N:6209:Orcish quylthulg
+G:Q:W
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | ORC | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_ORC
+D:It is a strange pulsing mound of flesh that used to be an orc. 
+
+N:6210:Masculine quylthulg
+G:Q:D
+I:120:50d10:20:1:0
+W:50:1:3000:3050
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | MALE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_MAN
+D:It is a pulsing flesh mound that looks like it was once a man. 
+
+N:6211:Feminine quylthulg
+G:Q:v
+I:120:50d10:20:1:0
+W:50:1:3000:3050
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | FEMALE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_WOMAN
+D:It is a pulsing flesh mound that looks like it was once a woman. 
+
+N:6212:Growing quylthulg
+G:Q:u
+I:120:50d10:20:1:0
+W:50:1:3000:3100
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_BREEDER
+D:It is a pulsing flesh mound that seems to be growing. 
+
+N:6213:Growing quylthulg
+G:Q:u
+I:120:50d10:20:1:0
+W:50:100:3000:3100
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:MULTIPLY
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_BREEDER
+D:It is a pulsing flesh mound that seems to be growing. 
+
+N:6214:Mech quylthulg
+G:Q:g
+I:120:48d10:20:1:0
+W:45:1:3000:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_GOLEM
+D:It is a pulsing flesh mound that seems to actually be a construct. 
+
+N:6215:Greater mech quylthulg
+G:Q:g
+I:120:15d100:20:1:0
+W:71:2:5000:10500
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | RES_TELE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TELE_TO | 
+S:S_GOLEM
+D:A massive pulsating mound of flesh, or at least that's what it looks 
+D:like. But it's really a machine.  
+
+N:6216:Aviary quylthulg
+G:Q:r
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_BIRD
+D:It is a strange pulsing mound of flesh that seems to squawk. 
+
+N:6217:Insect quylthulg
+G:Q:u
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_INSECT
+D:It is a strange pulsing mound of flesh with little insects crawling 
+D:all over it. 
+
+N:6218:Ogre quylthulg
+G:Q:u
+I:115:13d18:10:1:0
+W:30:1:5000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_OGRE
+D:It is a strange pulsing mound of flesh that seems slightly larger. 
+
+N:6219:Reptile quylthulg
+G:Q:o
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW | COLD_BLOOD | 
+F:EMPTY_MIND | INVISIBLE | ANIMAL | IM_FIRE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_LIZARD
+D:It is a strange pulsing mound of flesh that likes warm climates. 
+
+N:6220:Hulking quylthulg
+G:Q:u
+I:120:48d10:20:1:0
+W:45:1:3000:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_HULK
+D:It is a pulsing flesh mound that towers menacingly. 
+
+N:6221:Jungle quylthulg
+G:Q:G
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | IM_POIS | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_MONKEY
+D:It is a strange pulsing mound of flesh that seems at home 
+D:in the rainforest. 
+
+N:6222:Eye quylthulg
+G:Q:b
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_EYE
+D:It is a strange pulsing mound of flesh with a single eye. 
+
+N:6223:Jelly quylthulg
+G:Q:u
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | IM_ACID | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_JELLY
+D:It is a strange pulsing mound of flesh without a defined shape. 
+
+N:6224:Kobold quylthulg
+G:Q:r
+I:115:13d10:10:1:0
+W:30:1:3000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_KOBOLD
+D:It is a strange pulsing mound of flesh that used to be a little humanoid. 
+
+N:6225:Beast quylthulg
+G:Q:u
+I:120:48d10:20:1:0
+W:45:1:3000:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_QUADRUPED
+D:It is a pulsing flesh mound that smells like a stable. 
+
+N:6226:Mini quylthulg
+G:Q:r
+I:110:1d8:10:1:0
+W:20:1:3000:50
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | NEVER_MOVE | NEVER_BLOW
+F:EMPTY_MIND | INVISIBLE | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_4 | 
+S:BLINK | 
+S:S_YEEK
+D:It is a very small pulsing mound of flesh. 
+
+N:6227:Mage quylthulg
+G:Q:r
+I:120:48d10:20:1:0
+W:45:1:3000:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_SUMMONER
+D:It is a pulsing flesh mound that wants to summon endlessly. 
+
+N:6228:Greater mage quylthulg
+G:Q:R
+I:120:15d100:20:1:0
+W:71:2:5000:10500
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | RES_TELE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TELE_TO | 
+S:S_SUMMONER
+D:A massive pulsating mound of flesh, summoning monsters who 
+D:are themselves capable of summoning. 
+
+N:6229:Random quylthulg
+G:Q:v
+I:120:48d10:20:1:0
+W:45:1:3000:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TPORT | 
+S:S_RANDOM
+D:It is a pulsing flesh mound that summons all kinds of stuff. 
+
+N:6230:Greater random quylthulg
+G:Q:v
+I:120:15d100:20:1:0
+W:71:2:5000:10500
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | RES_TELE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TELE_TO | 
+S:S_RANDOM
+D:A massive pulsating mound of flesh, with unpredictable summoning spells. 
+
+N:6231:Bug quylthulg
+G:Q:u
+I:120:30d100:20:1:0
+W:76:2:7000:15000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | RES_TELE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TELE_TO | S_BUG | S_ANT | S_BEETLE | S_INSECT | S_SPIDER | 
+D:A giant seething mass of flesh, summoning loads and loads of creepy crawlies. 
+
+N:6232:Fauna quylthulg
+G:Q:g
+I:120:30d100:20:1:0
+W:76:2:7000:15000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | RES_TELE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TELE_TO | S_ANIMAL | S_ANIMALS | S_HOUND | S_BAT | S_SNAKE | S_CAT | 
+S:S_RAT | S_WORM | S_BIRD | S_LIZARD | S_MONKEY | S_QUADRUPED | 
+D:A giant seething mass of flesh, summoning loads and loads of animals. 
+
+N:6233:Evolved quylthulg
+G:Q:B
+I:120:30d100:20:1:0
+W:76:2:7000:15000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | RES_TELE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TELE_TO | S_PEOPLE | S_GIANT | S_TROLL | S_ORC | S_SEXY_GIRL | S_MAN | 
+S:S_WOMAN | S_GOLEM | S_OGRE | S_KOBOLD | S_YEEK |  
+D:A giant seething mass of flesh, summoning loads and loads of people and humanoids. 
+
+N:6234:Monster quylthulg
+G:Q:D
+I:120:30d100:20:1:0
+W:76:2:7000:15000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | RES_TELE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TELE_TO | S_VORTEX | S_ELEMENTAL | S_ELDRITCH | S_HYBRID | S_HULK | 
+S:S_SUMMONER | 
+D:A giant seething mass of flesh, summoning loads and loads of horrible monsters. 
+
+N:6235:Evil quylthulg
+G:Q:v
+I:120:30d100:20:1:0
+W:76:2:7000:15000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:INVISIBLE | EMPTY_MIND | ANIMAL | RES_TELE | ATTR_MULTI | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+S:1_IN_2 | 
+S:BLINK | TELE_TO | S_RNG | S_THUNDERLORD | S_UNIQUE | S_QUYLTHULG | S_CLOTHES | 
+S:S_RANDOM | S_HORDE | 
+S:S_SUMMONER | 
+D:A giant seething mass of flesh, summoning loads and loads of dangerous creatures. 
 
 
 
