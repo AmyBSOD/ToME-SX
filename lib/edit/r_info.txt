@@ -117127,6 +117127,2075 @@ S:HEAL | BLINK | BLIND | SLOW | HASTE | BA_DARK | S_KIN |
 S:BO_FIRE | MISSILE | 
 D:One of the highest-ranking yeeks in existence. 
 
+# 6742-6874 are ported from Sil-Q or inspired by the Sil-Q monsters
+# credits go to the original authors of these monsters
+
+N:6742:Wolf
+G:C:u
+I:113:6d4:20:5:20
+W:1:1:600:1
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d3
+F:RAND_25 | FRIENDS | 
+F:ANIMAL | DROP_CORPSE |
+F:MORTAL | BASEANGBAND
+D:This ragged wolf is part of the orcish packs.
+
+N:6743:Tanglethorn
+G:&:s
+I:112:4d4:0:2:0
+W:1:1:200:1
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:STING:SHARDS:3d3
+F:NEVER_MOVE | EMPTY_MIND | STUPID | FRIEND | 
+F:WILD_WOOD | SUSCEP_FIRE | BASEANGBAND | 
+F:NO_FEAR | IM_POIS | NO_CONF | NO_SLEEP | 
+D:'... great writhing, tangled brambles sprawled. Some had long stabbing
+D: thorns, some hooked barbs that rent like knives.'
+
+N:6744:Human slave
+G:p:g
+I:106:8d4:10:0:60
+W:1:1:1600:1
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:1d1
+F:MALE | SMART | RAND_50 | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | 
+D:A scarred and dirty man clad only in a loincloth. A metal collar
+D: is about his neck, and a long chain leads from it to the wall.
+
+N:6745:Elven slave
+G:p:g
+I:106:10d4:20:0:60
+W:1:1:1600:1
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:1d1
+F:MALE | SMART | RAND_50 | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | 
+D:A chained elf slumps here, filthy hair hanging to his shoulders
+D: and eyes vacant. His back and arms bear the marks of a whip.
+
+N:6746:Orc slavemaster
+G:o:g
+I:112:6d4:50:10:0
+W:1:1:900:1
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:1d6
+B:HIT:HURT:1d4
+F:MALE | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | SMART | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+D:He is one of Morgoth's grim mockeries of the firstborn.
+D: Clad in tattered leather, he wields a cudgel and a whip.
+
+N:6747:Alert human slave
+G:p:g
+I:112:8d4:10:0:60
+W:2:1:1600:2
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:1d2
+F:MALE | SMART | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | 
+D:A scarred and dirty man shackled to the wall with a long chain.
+D: His head is raised and he takes in his surroundings alertly.
+
+N:6748:Alert elven slave
+G:p:g
+I:112:10d4:20:0:60
+W:2:1:1600:2
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:1d2
+F:MALE | SMART | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | 
+D:A chained elf crouches here, filthy hair hanging to his shoulders.
+D: Dried blood encrusts a noble face. His eyes are fixed on you. 
+
+N:6749:Orc skirmisher
+G:o:u
+I:112:7d4:10:5:15
+W:2:1:900:3
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:2d6
+F:MALE | DROP_SKELETON | DROP_CORPSE | DROP_60 | 
+F:OPEN_DOOR | SMART | FRIEND | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+D:He is one of Morgoth's grim mockeries of the firstborn.
+D: He has little armour but carries a cruel blade.
+
+N:6750:Grimhawk
+G:B:u
+I:114:1d4:40:7:5
+W:2:2:500:2
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d9
+F:ANIMAL | CAN_FLY | DROP_CORPSE | RAND_50
+F:MORTAL | HAS_EGG | BASEANGBAND
+D:A hunting bird, beloved of the orcs, with iron barbs on its talons.
+
+N:6751:Mewlip
+G:i:u
+I:113:5d4:10:5:5
+W:2:1:0:2
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CLAW:SHARDS:2d4
+F:BASEANGBAND | EMPTY_MIND | SMART | DROP_90 | NO_FEAR | 
+F:UNDEAD | CAN_SWIM | EVIL | OPEN_DOOR | 
+S:1_IN_8
+S:DARKNESS
+D:An evil swamp dwelling creature that feeds on the bones
+D: of those who draw near.
+
+N:6752:Mewlip
+G:i:u
+I:113:5d4:10:5:5
+W:2:10:0:2
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CLAW:SHARDS:2d4
+F:BASEANGBAND | EMPTY_MIND | SMART | NO_FEAR | 
+F:UNDEAD | CAN_SWIM | EVIL | OPEN_DOOR | 
+S:MULTIPLY
+S:1_IN_8
+S:DARKNESS
+D:An evil swamp dwelling creature that feeds on the bones
+D: of those who draw near.
+
+N:6753:Orc scout
+G:o:u
+I:112:6d4:40:5:15
+W:3:1:900:5
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:1d11
+F:MALE | DROP_SKELETON | DROP_CORPSE | DROP_60 | 
+F:OPEN_DOOR | SMART | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_5
+S:SHRIEK
+D:He is one of Morgoth's grim mockeries of the firstborn.
+D: The miserable creature tries to stay away from you and
+D: attract attention. It has a crude spear.
+
+N:6754:Cave spider
+G:S:U
+I:112:1d4:10:5:20
+W:3:2:400:5
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:1d7
+F:FRIENDS | 
+F:WEIRD_MIND | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | SPIDER | IM_POIS
+F:MORTAL | BASEANGBAND
+D:Monstrous newly-hatched spiders; already the height of a dog.
+D: They would probably present little threat, but for the
+D: venom in their bite...
+
+N:6755:Blue serpent
+G:J:b
+I:112:2d4:10:19:15
+W:3:2:1000:11
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:2d5
+F:RAND_50 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | 
+F:HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | IM_COLD | 
+F:SUSCEP_FIRE | 
+S:1_IN_5
+S:BR_COLD
+D:A snake the length of a man, with hard blue scales.
+D: There is a chill in the air around it.
+
+N:6756:Orc soldier
+G:o:s
+I:112:8d4:10:10:15
+W:4:1:900:8
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:2d7
+F:MALE | DROP_SKELETON | DROP_CORPSE | DROP_60 | 
+F:OPEN_DOOR | SMART | FRIENDS | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+D:He is one of Morgoth's grim mockeries of the firstborn.
+D: He is arrayed in black leathers with a crude sword and
+D: shield: a soldier in the dark hosts of Bauglir.
+
+N:6757:Madthorn
+G:&:y
+I:112:8d4:0:6:0
+W:4:1:200:10
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:STING:CONFUSE:4d3
+F:NEVER_MOVE | EMPTY_MIND | STUPID | FRIEND | 
+F:WILD_WOOD | SUSCEP_FIRE | BASEANGBAND | 
+F:NO_FEAR | IM_POIS | NO_CONF | NO_SLEEP | 
+D:Found most often in the depths of Taur-nu-Fuin,
+D: it is more feared by travellers than wolves,
+D: for the poison on its thorns can bring madness.
+
+N:6758:Gorcrow
+G:B:D
+I:114:1d4:20:9:15
+W:4:2:500:11
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:BLIND:1d5
+F:ANIMAL | CAN_FLY | DROP_CORPSE | RAND_25
+F:MORTAL | HAS_EGG | BASEANGBAND | FRIEND | 
+D:A dark creature, related to the crow. It pecks at any exposed flesh,
+D: especially the face and eyes.
+
+N:6759:Brood spider
+G:S:U
+I:111:14d4:50:6:10
+W:4:3:400:10
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:2d8
+F:WEIRD_MIND | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | SPIDER | IM_POIS
+F:MORTAL | BASEANGBAND
+S:1_IN_10
+S:S_SPIDER
+D:A huge ponderous spider with clusters of eggs on its back.
+D: Its hairy mandibles are wet with a dark fluid.
+
+N:6760:Orc archer
+G:o:U
+I:112:7d4:10:6:15
+W:5:3:900:12
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:2d5
+F:MALE | DROP_SKELETON | DROP_CORPSE | DROP_60 | 
+F:OPEN_DOOR | SMART | FRIENDS | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_2
+S:ARROW_1
+D:He is one of Morgoth's grim mockeries of the firstborn.
+D: He carries a crude sword and bow.
+
+N:6761:White wolf
+G:C:w
+I:113:8d4:30:7:20
+W:5:1:600:11
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:SHARDS:2d4
+F:RAND_25 | FRIENDS | IM_COLD | 
+F:ANIMAL | DROP_CORPSE |
+F:MORTAL | BASEANGBAND
+D:A large and fierce wolf from the northern wastes.
+
+N:6762:Red serpent
+G:J:r
+I:112:2d4:10:19:15
+W:5:2:1000:14
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:2d6
+F:RAND_50 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | 
+F:HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | IM_FIRE | 
+F:SUSCEP_COLD | 
+S:1_IN_5
+S:BR_FIRE
+D:A snake the length of a man, with hard red scales.
+D: The air around it shimmers with heat.
+
+N:6763:Gorgol, the Butcher
+G:o:G
+I:112:12d4:20:14:15
+W:5:10:900:20
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:3d7
+F:UNIQUE | MALE | FORCE_MAXHP | ESCORT | ONLY_ITEM | DROP_12 | DROP_GOOD |
+F:SMART | OPEN_DOOR | BASH_DOOR | CAN_SPEAK | 
+F:ORC | EVIL | BASEANGBAND |
+F:DROP_SKELETON | DROP_CORPSE |
+S:1_IN_20
+S:SHRIEK
+D:A captain of an orcish band, Gorgol keeps his troop in
+D: order with displays of violence.
+
+N:6764:Orc warrior
+G:o:W
+I:112:9d4:20:10:15
+W:6:1:900:13
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:3d6
+F:MALE | DROP_SKELETON | DROP_CORPSE | DROP_60 | 
+F:OPEN_DOOR | SMART | FRIEND | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+D:He is one of Morgoth's grim mockeries of the firstborn.
+D: He wears hardened leathers and runs towards you with axe in hand.
+
+N:6765:Sword spider
+G:S:s
+I:113:12d4:10:10:15
+W:6:2:400:14
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d9
+F:WEIRD_MIND | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | SPIDER | 
+F:MORTAL | BASEANGBAND
+D:A giant black spider with sword-sharp mandibles.
+D: It skitters back and forth.
+
+N:6766:Crebain
+G:B:s
+I:114:1d4:60:11:15
+W:6:2:500:15
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:SHARDS:1d5
+F:ANIMAL | CAN_FLY | DROP_CORPSE | RAND_25
+F:MORTAL | HAS_EGG | BASEANGBAND | FRIENDS | 
+S:1_IN_8
+S:SHRIEK
+D:A type of crow, specially bred by the forces of evil as spies.
+
+N:6767:Phantom
+G:G:s
+I:111:2d4:80:5:0
+W:6:3:0:15
+E:0:0:0:0:0:0
+O:50:5:30:10
+B:TOUCH:TERRIFY:1d15
+F:RAND_50 | CAN_FLY | INVISIBLE | COLD_BLOOD | 
+F:EVIL | UNDEAD | FRIEND | NO_FEAR | 
+F:IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+S:1_IN_2 | 
+S:DARKNESS
+D:A faded presence that perhaps once was man or elf,
+D: but is now an insubstantial thing of necromancy and shadow.
+
+N:6768:Attercop
+G:S:D
+I:113:3d4:20:10:10
+W:7:1:400:17
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:PARALYZE:1d8
+F:WEIRD_MIND | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | SPIDER | IM_POIS | SMART | 
+F:MORTAL | BASEANGBAND
+S:1_IN_20
+S:HOLD
+D:A spider as big as a dog, covered in thick bristles, with the light
+D: reflecting off its pale bulbous eyes.
+
+N:6769:Nightthorn
+G:&:D
+I:112:8d4:0:8:0
+W:7:1:200:15
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:STING:HURT:5d3
+F:NEVER_MOVE | EMPTY_MIND | STUPID | 
+F:WILD_WOOD | SUSCEP_FIRE | BASEANGBAND | 
+F:NO_FEAR | IM_POIS | NO_CONF | NO_SLEEP | 
+D:This twisted plant drinks in the light from the air around.
+
+N:6770:Eclipsethorn
+G:&:D
+I:116:8d10:0:35:0
+W:27:1:200:150
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:STING:EAT_LITE:5d6
+F:NEVER_MOVE | EMPTY_MIND | STUPID | 
+F:WILD_WOOD | SUSCEP_FIRE | BASEANGBAND | 
+F:NO_FEAR | IM_POIS | NO_CONF | NO_SLEEP | 
+S:1_IN_4
+S:BR_DARK
+D:A very dark plant that sucks in all light.
+
+N:6771:Randothorn
+G:&:v
+I:120:12d80:0:65:0
+W:57:1:200:1000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:STING:RANDOM:6d8
+B:STING:RANDOM:6d8
+F:NEVER_MOVE | EMPTY_MIND | STUPID | ATTR_MULTI | 
+F:WILD_WOOD | SUSCEP_FIRE | BASEANGBAND | 
+F:NO_FEAR | IM_POIS | NO_CONF | NO_SLEEP | 
+S:1_IN_3
+S:BR_ACID | BR_ELEC | BR_FIRE | BR_COLD | BR_POIS | BR_NETH | BR_LITE | 
+S:BR_DARK | BR_CONF | BR_SOUN | BR_CHAO | BR_DISE | BR_NEXU | BR_TIME | 
+S:BR_INER | BR_GRAV | BR_SHAR | BR_PLAS | BR_WALL | BR_MANA | BR_NUKE | 
+S:BR_DISI | BR_NERV | BR_ETHE | BR_MIND | BR_AMEB | BR_RADI | BR_VENO | 
+S:BR_ICEE | BR_WATE | 
+D:This plant seems to be pure RNG. 
+
+N:6772:Randothorn
+G:&:v
+I:120:12d80:0:65:0
+W:57:20:200:1000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:STING:RANDOM:6d8
+B:STING:RANDOM:6d8
+F:NEVER_MOVE | EMPTY_MIND | STUPID | ATTR_MULTI | 
+F:WILD_WOOD | SUSCEP_FIRE | BASEANGBAND | 
+F:NO_FEAR | IM_POIS | NO_CONF | NO_SLEEP | 
+S:MULTIPLY
+S:1_IN_3
+S:BR_ACID | BR_ELEC | BR_FIRE | BR_COLD | BR_POIS | BR_NETH | BR_LITE | 
+S:BR_DARK | BR_CONF | BR_SOUN | BR_CHAO | BR_DISE | BR_NEXU | BR_TIME | 
+S:BR_INER | BR_GRAV | BR_SHAR | BR_PLAS | BR_WALL | BR_MANA | BR_NUKE | 
+S:BR_DISI | BR_NERV | BR_ETHE | BR_MIND | BR_AMEB | BR_RADI | BR_VENO | 
+S:BR_ICEE | BR_WATE | 
+D:This plant seems to be pure RNG. 
+
+N:6773:Green serpent
+G:J:g
+I:112:2d4:20:23:10
+W:7:2:1000:20
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:2d7
+F:RAND_50 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | 
+F:HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | 
+S:1_IN_5
+S:BR_POIS
+D:A snake the length of a man, with hard green scales.
+D: It smells of decay.
+
+N:6774:Mountain troll
+G:T:W
+I:112:14d4:10:10:15
+W:7:1:3000:20
+E:1:1:1:2:1:1
+O:30:70:0:0
+B:HIT:HURT:4d5
+F:MALE | 
+F:FRIEND | DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | REGENERATE | SMART | 
+F:EVIL | TROLL | HURT_LITE | BASEANGBAND | NO_FEAR | 
+D:A tall troll from the mountains of the north.
+
+N:6775:Tattered wight
+G:W:D
+I:111:4d4:60:17:10
+W:7:2:0:22
+E:0:0:0:0:0:0
+O:0:50:50:0
+B:HIT:HURT:2d9
+B:TOUCH:LOSE_DEX:1d9
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | SMART | NO_FEAR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | 
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+S:1_IN_5 |
+S:DARKNESS | SLOW
+D:It is a ghostly form, wrapped in a torn and faded shroud,
+D: its treasure long since been plundered.
+
+N:6776:Boldog, the Merciless
+G:o:y
+I:112:13d4:40:18:15
+W:7:20:900:40
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:1d16
+F:UNIQUE | MALE | FORCE_MAXHP | ESCORTS | ONLY_ITEM | DROP_12 | DROP_GOOD |
+F:SMART | OPEN_DOOR | BASH_DOOR | NO_FEAR | CAN_SPEAK | 
+F:ORC | EVIL | BASEANGBAND | HURT_LITE | 
+F:DROP_SKELETON | DROP_CORPSE |
+S:1_IN_8
+S:ARROW_2
+D:A great captain of the orcs, who led many raids into the
+D: lands of the elves.
+
+N:6777:Orc champion
+G:o:b
+I:112:11d4:30:17:15
+W:8:2:900:19
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:3d8
+F:MALE | DROP_SKELETON | DROP_CORPSE | DROP_90 | 
+F:OPEN_DOOR | SMART | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+D:A champion of the orc hordes. He wears well-fitting armour and
+D: wields a battle axe.
+
+N:6778:Easterling warrior
+G:p:W
+I:112:10d4:30:17:15
+W:8:2:1600:20
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:2d8
+F:MALE | DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | FRIENDS | SMART | 
+F:MORTAL | BASEANGBAND | 
+D:Yet neither by wolf, nor by Balrog, nor by Dragon, would
+D: Morgoth have achieved his end, but for the treachery of Men.
+D: He is of a people who have come recently to
+D: Beleriand out of the far east, and have fallen under
+D: Morgoth's sway.
+
+N:6779:Bumblebee
+G:I:y
+I:114:2d4:30:14:5
+W:8:3:100:3
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:CONFUSE:1d7
+F:RAND_50 | RAND_25 | CAN_FLY | FRIENDS | 
+F:WEIRD_MIND | ANIMAL | BASEANGBAND
+D:A giant buzzing wasp, its stinger drips venom. 
+
+N:6780:Bumblebee
+G:I:y
+I:114:2d4:30:14:5
+W:8:12:100:3
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:CONFUSE:1d7
+F:RAND_50 | RAND_25 | CAN_FLY | FRIENDS | 
+F:WEIRD_MIND | ANIMAL | BASEANGBAND
+S:MULTIPLY
+D:A giant buzzing wasp, its stinger drips venom. 
+
+N:6781:Balcmeg, the Relentless
+G:o:o
+I:112:15d4:30:20:15
+W:8:20:900:48
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:3d8
+F:UNIQUE | MALE | FORCE_MAXHP | ONLY_ITEM | DROP_90 | DROP_GOOD |
+F:SMART | OPEN_DOOR | BASH_DOOR | ESCORT | CAN_SPEAK | 
+F:ORC | EVIL | BASEANGBAND | HURT_LITE | 
+F:DROP_SKELETON | DROP_CORPSE |
+D:A huge champion of the orcs, clad in thick black armor
+D: and carrying a shield and much-notched axe. He is
+D: scarred of face and his eyes are small and baleful.
+
+N:6782:Lug, the Grotesque
+G:o:v
+I:112:10d4:50:24:15
+W:8:20:900:48
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:4d4
+B:HIT:HURT:1d7
+F:UNIQUE | MALE | FORCE_MAXHP | ONLY_ITEM | DROP_90 | DROP_GREAT |
+F:SMART | OPEN_DOOR | BASH_DOOR | ESCORT | CAN_SPEAK | 
+F:ORC | EVIL | BASEANGBAND | HURT_LITE | 
+F:DROP_SKELETON | DROP_CORPSE |
+D:A small and exceptionally ugly orc, wearing dark leather
+D: and carrying a short broad blade which he tosses from
+D: one hand to the other with unsettling dexterity.
+
+N:6783:Orc captain
+G:o:r
+I:112:10d4:40:19:15
+W:9:3:900:22
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:2d8
+B:HIT:HURT:2d5
+F:MALE | DROP_SKELETON | DROP_CORPSE | DROP_12 | 
+F:OPEN_DOOR | BASH_DOOR | SMART | ESCORT | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_20
+S:SHRIEK
+D:An armoured orc that walks with confidence. His curved blade
+D: has many notches along its edge.
+
+N:6784:Warg
+G:C:s
+I:113:10d4:60:12:20
+W:9:1:700:20
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:SHARDS:2d5
+F:RAND_25 | BASH_DOOR | FRIENDS | SMART | 
+F:WILD_TOO | WILD_WOOD | WILD_MOUNTAIN | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | EVIL | MORTAL | BASEANGBAND
+D:It is a great wolf with eyes full of cunning.
+
+N:6785:Grave wight
+G:W:U
+I:112:4d4:60:19:10
+W:9:2:0:30
+E:0:0:0:0:0:0
+O:0:50:50:0
+B:HIT:HURT:2d9
+B:TOUCH:LOSE_STR:1d11
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | SMART | NO_FEAR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | 
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+S:1_IN_5 |
+S:DARKNESS | SLOW
+D:It is a ghostly form, wrapped in a stained shroud.
+D: It protects that with which is was buried.
+
+N:6786:Dark serpent
+G:J:v
+I:112:2d4:40:25:10
+W:9:2:1000:30
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+F:RAND_50 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | 
+F:HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | 
+S:1_IN_5
+S:BR_DARK
+D:A snake the length of a man, with hard scales that
+D: reflect no light.
+
+N:6787:Orcobal, Champion of the Orcs
+G:o:B
+I:112:15d4:50:20:15
+W:9:15:900:55
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:3d10
+F:UNIQUE | MALE | FORCE_MAXHP | ONLY_ITEM | DROP_12 | DROP_GOOD |
+F:SMART | OPEN_DOOR | BASH_DOOR | ESCORT | CAN_SPEAK | 
+F:ORC | EVIL | BASEANGBAND | HURT_LITE | 
+F:DROP_SKELETON | DROP_CORPSE |
+S:1_IN_20
+S:SHRIEK
+D:The chief champion of the orcs of Morgoth.
+
+N:6788:Whispering shadow
+G:G:D
+I:111:6d4:30:5:10
+W:10:1:0:30
+E:0:0:0:0:0:0
+O:50:5:30:10
+B:TOUCH:DARK:2d6
+F:RAND_50 | CAN_FLY | INVISIBLE | COLD_BLOOD | 
+F:EVIL | UNDEAD | FRIEND | NO_FEAR | 
+F:IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+S:1_IN_2 | 
+S:DARKNESS
+D:A flickering darkness, spreading through the halls.
+D: From its midst, you hear faint sounds (voices?)
+D: yearning, beckoning.
+
+N:6789:Whispering shadow
+G:G:D
+I:111:6d4:30:5:10
+W:10:5:0:30
+E:0:0:0:0:0:0
+O:50:5:30:10
+B:TOUCH:DARK:2d6
+F:RAND_50 | CAN_FLY | INVISIBLE | COLD_BLOOD | 
+F:EVIL | UNDEAD | FRIEND | NO_FEAR | 
+F:IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+S:MULTIPLY
+S:1_IN_2 | 
+S:DARKNESS
+D:A flickering darkness, spreading through the halls.
+D: From its midst, you hear faint sounds (voices?)
+D: yearning, beckoning.
+
+N:6790:Distended spider
+G:S:u
+I:112:20d4:40:7:15
+W:10:1:400:28
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:2d11
+F:WEIRD_MIND | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | SPIDER | IM_POIS | SMART | 
+F:MORTAL | BASEANGBAND
+D:It is a vast spider whose bulbous body is bloated with poison.
+
+N:6791:Easterling archer
+G:p:u
+I:112:9d4:40:17:15
+W:10:3:1600:28
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:1d7
+F:MALE | DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | FRIEND | SMART | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_2
+S:ARROW_2
+D:Yet neither by wolf, nor by Balrog, nor by Dragon, would
+D: Morgoth have achieved his end, but for the treachery of Men.
+D: He is of a people who have come recently to
+D: Beleriand out of the far east, and have fallen under
+D: Morgoth's sway.
+
+N:6792:Twisted bat
+G:b:r
+I:114:2d4:70:20:15
+W:10:4:20:8
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:LOSE_CON:2d5
+F:ANIMAL | CAN_FLY | DROP_CORPSE | RAND_50 | 
+F:MORTAL | BASEANGBAND | 
+D:A fluttering bat the size of a large dog. Its head is
+D: misshapen out of any natural proportion, with long curving
+D: fangs hanging from its mouth.
+
+N:6793:Twisted bat
+G:b:r
+I:114:2d4:70:20:15
+W:10:48:20:8
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:LOSE_CON:2d5
+F:ANIMAL | CAN_FLY | DROP_CORPSE | RAND_50 | 
+F:MORTAL | BASEANGBAND | 
+S:MULTIPLY
+D:A fluttering bat the size of a large dog. Its head is
+D: misshapen out of any natural proportion, with long curving
+D: fangs hanging from its mouth.
+
+N:6794:Soul-rending bat
+G:b:v
+I:130:8d18:12:44:50
+W:52:4:50:350
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:HIT:INSANITY:1d20
+B:HIT:INSANITY:1d20
+F:FORCE_SLEEP | RAND_50 | ANIMAL | MORTAL | ATTR_MULTI | 
+F:DROP_CORPSE | AI_ANNOY | CAN_FLY | BASEANGBAND | WEIRD_MIND
+F:RES_MIND | 
+D:A giant bat which wants to drive you insane. 
+
+N:6795:Soul-rending bat
+G:b:v
+I:130:8d18:12:44:50
+W:52:48:50:350
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:HIT:INSANITY:1d20
+B:HIT:INSANITY:1d20
+F:FORCE_SLEEP | RAND_50 | ANIMAL | MORTAL | ATTR_MULTI | 
+F:DROP_CORPSE | AI_ANNOY | CAN_FLY | BASEANGBAND | WEIRD_MIND
+F:RES_MIND | 
+S:MULTIPLY
+D:A giant bat which wants to drive you insane. 
+
+N:6796:Othrod, the Orc Lord
+G:o:R
+I:112:15d4:60:25:15
+W:10:10:900:60
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:2d9
+B:HIT:HURT:2d4
+F:UNIQUE | MALE | FORCE_MAXHP | ONLY_ITEM | DROP_12 | DROP_GREAT |
+F:SMART | OPEN_DOOR | BASH_DOOR | ESCORTS | CAN_SPEAK | 
+F:ORC | EVIL | BASEANGBAND | HURT_LITE | 
+F:DROP_SKELETON | DROP_CORPSE |
+S:1_IN_20
+S:SHRIEK
+D:The cruelty in the eyes of this massive orc belies
+D: the intelligence that has kept him a favourite
+D: of the black enemy for many years.
+
+N:6797:Snow troll
+G:T:w
+I:112:16d4:20:15:15
+W:11:1:3000:33
+E:1:1:1:2:1:1
+O:30:70:0:0
+B:HIT:HURT:4d6
+B:BITE:COLD:2d9
+F:MALE | 
+F:FRIEND | DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | REGENERATE | SMART | 
+F:EVIL | TROLL | HURT_LITE | BASEANGBAND | NO_FEAR | 
+F:IM_COLD | SUSCEP_FIRE | 
+D:He is a white troll with powerfully clawed hands.
+
+N:6798:Barrow wight
+G:W:W
+I:112:4d4:70:20:10
+W:11:100:0:40
+E:0:0:0:0:0:0
+O:0:50:50:0
+B:HIT:HURT:2d9
+B:TOUCH:LOSE_INT:1d13
+F:COLD_BLOOD | OPEN_DOOR | SMART | NO_FEAR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | DROP_90 | 
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT | 
+S:1_IN_5 |
+S:DARKNESS | SLOW
+D:This ghostly, shrouded form dwells within its burial
+D: chamber, unable to find release.
+
+N:6799:Lurking horror
+G:H:D
+I:112:10d4:70:15:1
+W:11:5:500:40
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:PARALYZE:2d9
+F:ANIMAL | BASEANGBAND | NO_FEAR | HURT_LITE | 
+F:DROP_SKELETON | DROP_CORPSE |
+S:1_IN_8
+S:SCARE
+D:It waits for you in the ink-black of the dungeon.
+D: It seems to be made entirely of claws and of teeth.
+
+N:6800:Giant
+G:P:U
+I:112:30d4:10:7:15
+W:11:1:3500:50
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:4d9
+F:DROP_90 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | SMART | 
+F:EVIL | GIANT | MORTAL | BASEANGBAND | 
+S:1_IN_8
+S:BOULDER
+D:As tall as three men, this hulking opponent is crudely
+D: armed with a great club.
+
+N:6801:Uldor, the Accursed
+G:p:U
+I:112:14d4:60:25:15
+W:11:10:1600:60
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:2d7
+F:MALE | DROP_90 | DROP_SKELETON | DROP_CORPSE | UNIQUE | 
+F:OPEN_DOOR | BASH_DOOR | ESCORT | SMART | DROP_GOOD | 
+F:FORCE_MAXHP | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SPEAK | 
+S:1_IN_2
+S:ARROW_1
+D:Son of Ulfang, the Black, and the leader in the treason against
+D: the elves in the Battle of Unnumbered Tears.
+
+N:6802:Aldor, the Risen King
+G:W:R
+I:112:8d4:120:20:10
+W:11:100:0:80
+E:0:0:0:0:0:0
+O:0:50:50:0
+B:TOUCH:LOSE_CON:1d15
+B:HIT:HURT:2d9
+F:UNIQUE | DROP_90 | DROP_GREAT | CAN_SPEAK | 
+F:COLD_BLOOD | OPEN_DOOR | SMART | MALE | 
+F:UNDEAD | EVIL | NONLIVING | HURT_LITE | IM_COLD | IM_POIS | NO_CONF |
+F:NO_SLEEP | BASEANGBAND |
+S:1_IN_5 |
+S:SLOW | HOLD |
+D:A king of men before the Noldor returned to Middle-earth,
+D: the black power of Morgoth has kept his spirit bound to
+D: this place, far from Mandos' halls. He is arrayed in
+D: finery and holds a long blade in ghostly fingers.
+
+N:6803:Easterling spy
+G:p:D
+I:112:8d4:120:17:5
+W:12:3:1600:35
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:1d8
+F:MALE | DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | SMART | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_5
+S:ARROW_1 | SHRIEK
+D:Yet neither by wolf, nor by Balrog, nor by Dragon, would
+D: Morgoth have achieved his end, but for the treachery of Men.
+D: He is of a people who have come recently to
+D: Beleriand out of the far east, and have fallen under
+D: Morgoth's sway.
+
+N:6804:Shadow bat
+G:b:D
+I:114:2d4:100:23:15
+W:12:4:20:13
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:HURT:2d5
+F:ANIMAL | CAN_FLY | DROP_CORPSE | RAND_50 | 
+F:MORTAL | BASEANGBAND | HURT_LITE | 
+D:A screeching flutter of darkness.
+
+N:6805:Sulrauko
+G:U:W
+I:112:5d4:70:22:10
+W:12:2:2700:50
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:HURT:3d5
+F:EVIL | DEMON | BASEANGBAND | INVISIBLE | BASH_DOOR | 
+F:IM_POIS | CAN_FLY | RAND_50 | SMART | 
+D:A wind spirit, bent to Morgoth's will.
+
+N:6806:Fire-drake hatchling
+G:d:R
+I:112:10d4:50:15:30
+W:12:6:4000:55
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:FIRE:2d5
+F:FORCE_MAXHP | FORCE_SLEEP | CAN_FLY | DROP_CORPSE | SUSCEP_COLD |
+F:WILD_VOLCANO | OPEN_DOOR | BASH_DOOR | FRIEND | RAND_25 | 
+F:EVIL | DRAGON | IM_FIRE | HAS_EGG | IMPRESED | BASEANGBAND | 
+S:1_IN_5 | 
+S:BR_FIRE
+D:Not more than a few months old, this young dragon
+D: is already as big as a man, and has begun to use
+D: its fearsome breath.
+
+N:6807:Ulfang the Black
+G:p:s
+I:112:15d4:60:29:15
+W:12:10:1600:66
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:2d8
+F:MALE | DROP_22 | DROP_SKELETON | DROP_CORPSE | UNIQUE | 
+F:OPEN_DOOR | BASH_DOOR | ESCORT | SMART | DROP_GOOD | 
+F:FORCE_MAXHP | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_SPEAK | 
+S:1_IN_20
+S:SHRIEK
+D:Ulfang was a great leader of the Easterlings and led them in
+D: their treachery. He and his sons once openly swore allegiance
+D: to the High Elves, but were secretly in the pay of Morgoth.
+
+N:6808:Duruin, Least of the Balrogs
+G:U:o
+I:112:28d4:70:29:5
+W:12:30:13000:200
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:FIRE:2d12
+B:HIT:HURT:3d6
+F:UNIQUE | MALE | DROP_90 | CAN_SPEAK | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | 
+F:DROP_CORPSE | NONLIVING | 
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | 
+F:NO_FEAR | BASH_DOOR | POWERFUL | 
+F:EVIL | DEMON | IM_FIRE | SUSCEP_COLD | 
+F:BASEANGBAND | HAS_LITE
+D:The Valaraukar, demons of power, are among the mightiest
+D: of Morgoth's servants and widely feared. Before you stands
+D: Duruin, Flame of the Night, a great figure wrapped in fire
+D: and shadow. He wields fiery sword and whip.
+
+N:6809:Werewolf
+G:C:U
+I:113:12d4:90:20:15
+W:13:1:700:60
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:SHARDS:3d5
+B:BITE:POISON:2d9
+F:RAND_25 | BASH_DOOR | FRIEND | SMART | 
+F:DROP_SKELETON | DROP_CORPSE | OPEN_DOOR | BASH_DOOR | 
+F:ANIMAL | EVIL | MORTAL | BASEANGBAND
+D:No mere wolf, some malevolent spirit lurks behind
+D: those glowing eyes.
+
+N:6810:Shadow spider
+G:S:D
+I:113:14d4:60:13:15
+W:13:1:400:44
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:BLIND:2d9
+F:WEIRD_MIND | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | SPIDER | IM_POIS | SMART | HURT_LITE | 
+F:MORTAL | BASEANGBAND
+D:It is a great black spider wreathed in shadow.
+
+N:6811:Shadow
+G:G:d
+I:112:3d4:60:25:0
+W:13:3:0:50
+E:0:0:0:0:0:0
+O:50:5:30:10
+B:TOUCH:DARK:2d5
+F:RAND_25 | CAN_FLY | INVISIBLE | COLD_BLOOD | 
+F:EVIL | UNDEAD | NO_FEAR | 
+F:IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+D:It seems nothing more than a patch of darkness in
+D: the room, and yet it stalks you.
+
+N:6812:Sapphire serpent
+G:J:B
+I:112:8d4:60:29:15
+W:13:3:1000:55
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:COLD:2d6
+F:RAND_25 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | ATTR_MULTI | 
+F:HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | IM_COLD | SUSCEP_FIRE | 
+S:1_IN_5
+S:BR_COLD
+D:A great serpent with scales of gleaming sapphire.
+D: An icy chill surrounds it.
+
+N:6813:Gilim, the Giant of Eruman
+G:P:w
+I:112:35d4:50:13:15
+W:13:10:3500:240
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:COLD:4d9
+F:UNIQUE | MALE | FORCE_MAXHP | SMART | ONLY_ITEM | DROP_12 | DROP_GOOD |
+F:OPEN_DOOR | BASH_DOOR | CAN_SPEAK | 
+F:GIANT | EVIL | IM_COLD | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND |
+S:1_IN_5
+S:BOULDER
+D:Known as the giant of winter and the northern reaches,
+D: he is tall even among giants, and his name is cursed in many lands.
+
+N:6814:Ruby serpent
+G:J:R
+I:112:8d4:60:30:15
+W:14:3:1000:59
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:FIRE:2d6
+F:RAND_25 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | ATTR_MULTI | 
+F:HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | IM_FIRE | SUSCEP_COLD | 
+S:1_IN_5
+S:BR_FIRE
+D:A great serpent with scales of gleaming ruby.
+D: An intense heat radiates from it.
+
+N:6815:Creeping horror
+G:H:g
+I:111:14d4:80:21:10
+W:14:4:500:60
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:CLAW:ACID:3d10
+F:ANIMAL | BASEANGBAND | NO_FEAR | HURT_LITE | 
+F:DROP_SKELETON | DROP_CORPSE | BASH_DOOR | 
+S:1_IN_8
+S:SCARE
+D:It slithers and crawls across the floor towards you.
+D: The thought of it catching you tears at your mind.
+
+N:6816:Ringrauko
+G:U:B
+I:112:10d4:60:22:10
+W:14:1:2700:65
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:COLD:2d8
+F:EVIL | DEMON | BASEANGBAND | BASH_DOOR | 
+F:SMART | IM_COLD | SUSCEP_FIRE | 
+D:A chill hangs in the air around this figure which is
+D: almost that of a person. A cold gleaming blade is in its hand.
+
+N:6817:Delthaur, Balrog of Terror
+G:U:g
+I:112:32d4:70:31:5
+W:14:20:13000:300
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:FIRE:3d10
+B:HIT:HURT:3d8
+F:UNIQUE | MALE | DROP_90 | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | 
+F:DROP_CORPSE | NONLIVING | CAN_SPEAK | 
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | 
+F:NO_FEAR | BASH_DOOR | POWERFUL | 
+F:EVIL | DEMON | IM_FIRE | SUSCEP_COLD | 
+F:BASEANGBAND | HAS_LITE
+S:1_IN_8
+S:SCARE
+D:Some have called the Balrogs 'Demons of Terror', but none
+D: inspires such fear as Delthaur. The very air around him
+D: is filled with menace.
+
+N:6818:Nan, the Giant
+G:P:G
+I:112:40d4:50:17:15
+W:14:30:3500:320
+E:1:1:1:2:1:1
+O:20:50:20:5
+B:HIT:HURT:3d13
+F:UNIQUE | MALE | FORCE_MAXHP | SMART | ONLY_ITEM | DROP_12 | DROP_GOOD |
+F:OPEN_DOOR | BASH_DOOR | CAN_SPEAK | 
+F:GIANT | EVIL | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND |
+S:1_IN_10
+S:BOULDER
+D:Known as the giant of summer and the south, he towers above you
+D: like a great tree. In his right hand, he holds the longest
+D: sword you have ever beheld.
+
+N:6819:Cave troll
+G:T:u
+I:112:18d4:40:19:15
+W:15:1:3000:60
+E:1:1:1:2:1:1
+O:30:70:0:0
+B:HIT:HURT:4d7
+B:BITE:SHARDS:2d11
+F:MALE | 
+F:FRIEND | DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | REGENERATE | SMART | 
+F:EVIL | TROLL | HURT_LITE | BASEANGBAND | NO_FEAR | 
+D:A great brute of a troll, it seems to have come
+D: from the depths of the very earth.
+
+N:6820:Emerald serpent
+G:J:G
+I:112:8d4:70:31:15
+W:15:3:1000:66
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:POISON:2d6
+F:RAND_25 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | ATTR_MULTI | 
+F:HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | IM_POIS | 
+S:1_IN_5
+S:BR_POIS
+D:A great serpent with scales of gleaming emerald.
+D: Noxious vapours surround it.
+
+N:6821:Oathwraith
+G:W:D
+I:112:12d4:110:26:10
+W:15:6:0:80
+E:0:0:0:0:0:0
+O:0:50:50:0
+B:HIT:AMEBA:1d25
+F:COLD_BLOOD | OPEN_DOOR | SMART | NO_FEAR | OPEN_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | 
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT | 
+S:1_IN_5 |
+S:HOLD
+D:A figure that seems made of void, its strangely human shape is cloaked
+D: in shadow.  It reaches out at you.
+
+N:6822:Cat warrior
+G:f:U
+I:113:8d4:100:19:20
+W:15:1:0:55
+E:1:1:1:2:1:1
+O:30:70:0:0
+B:CLAW:SHARDS:1d9
+B:CLAW:SHARDS:2d9
+F:OPEN_DOOR | BASEANGBAND | DROP_CORPSE | FRIENDS | BASH_DOOR | 
+F:SMART | DROP_60 | 
+D:It is as though a great cat stood like a man.
+D: You cannot tell whether its long scything claws
+D: could be natural. It moves with astonishing
+D: speed and agility.
+
+N:6823:Amethyst serpent
+G:J:v
+I:112:8d4:70:32:15
+W:16:3:1000:72
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:DARK:2d6
+F:RAND_25 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | ATTR_MULTI | 
+F:HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | HURT_LITE | 
+S:1_IN_5
+S:BR_DARK
+D:A great serpent with scales of darkly glinting amethyst.
+D: Shadows darken as it approaches.
+
+N:6824:Kemenrauko
+G:U:s
+I:112:10d4:60:28:10
+W:16:2:2700:75
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:SHATTER:4d6
+F:EVIL | DEMON | BASEANGBAND | BASH_DOOR | KILL_WALL | 
+F:SMART | IM_COLD | IM_FIRE | IM_POIS | HURT_ROCK | 
+D:It seems the very stone from which Angband is hewn
+D: now opposes you.
+
+N:6825:Grotesque
+G:H:W
+I:114:10d4:100:30:0
+W:16:5:500:80
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:CLAW:SHARDS:3d9
+F:ANIMAL | BASEANGBAND | IM_COLD | IM_FIRE | HURT_ROCK | 
+F:DROP_SKELETON | DROP_CORPSE | BASH_DOOR | OPEN_DOOR | 
+F:EMPTY_MIND | NO_FEAR | IM_POIS | NO_CONF | NO_SLEEP | 
+D:'Huge shapes there stood like carven trolls
+D: enormous hewn of blasted rock
+D: to forms that mortal likeness mock;
+D: monstrous and menacing, entombed,
+D: at every turn they silent loomed
+D: in fitful glares that leaped and died.'
+
+N:6826:Young cold-drake
+G:d:w
+I:112:30d4:80:19:30
+W:16:6:4000:80
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d11
+B:BITE:SHARDS:2d21
+F:FORCE_MAXHP | FORCE_SLEEP | CAN_FLY | DROP_CORPSE | 
+F:BASH_DOOR | DROP_12 | DROP_GOOD | SMART | 
+F:EVIL | DRAGON | HAS_EGG | IMPRESED | BASEANGBAND | 
+S:1_IN_5 | 
+S:CONF | SCARE | HOLD
+D:Not all dragons have the gift of fire, but it is hardly
+D: needed -- the lashing tail, the great claws, the sharp
+D: teeth, and the mesmerising eyes...
+
+N:6827:Umuiyan, the Doorkeeper
+G:f:y
+I:113:12d4:130:24:20
+W:16:15:0:250
+E:0:1:0:2:1:0
+O:30:60:0:10
+B:CLAW:SHARDS:1d11
+B:CLAW:SHARDS:1d25
+F:UNIQUE | MALE | CAN_SPEAK | FORCE_MAXHP | ESCORT | 
+F:EVIL | OPEN_DOOR | BASH_DOOR | ANIMAL | SMART | 
+F:MORTAL | 
+F:DROP_90 | DROP_GOOD | ONLY_ITEM | BASEANGBAND | 
+S:1_IN_2
+S:ARROW_2
+D:This cat seems older than most, and more sly.
+D: He has long guarded the entrance to the fortress of Tevildo.
+
+N:6828:Belegwath, Balrog of Shadow
+G:U:v
+I:112:36d4:90:31:5
+W:16:20:13000:350
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:FIRE:2d14
+B:HIT:HURT:3d8
+F:UNIQUE | MALE | DROP_90 | CAN_SPEAK | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | 
+F:DROP_CORPSE | NONLIVING | CAN_FLY | 
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | 
+F:NO_FEAR | BASH_DOOR | POWERFUL | 
+F:EVIL | DEMON | IM_FIRE | SUSCEP_COLD | 
+F:BASEANGBAND | HAS_LITE
+S:1_IN_8
+S:SCARE
+D:A fell fiery figure, great wings of shadow unfolding around
+D: him. For many of the Children of Iluvatar, this has been their
+D: final vision.
+
+N:6829:Spectre
+G:G:w
+I:112:8d4:120:10:10
+W:16:6:0:80
+E:0:0:0:0:0:0
+O:50:5:30:10
+B:TOUCH:COLD:2d10
+B:TOUCH:LOSE_INT:1d30
+F:RAND_25 | CAN_FLY | COLD_BLOOD | FRIENDS | SMART | 
+F:EVIL | UNDEAD | NO_FEAR | PASS_WALL | 
+F:IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+D:An insubstantial and ragged figure, scarcely to be seen.
+D: Its eyes form two dark pits in a ruined face.
+
+N:6830:Spider of Gorgoroth
+G:S:r
+I:112:18d4:80:17:15
+W:17:1:400:60
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:PARALYZE:2d13
+F:WEIRD_MIND | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | SPIDER | IM_POIS | SMART | HURT_LITE | 
+F:MORTAL | BASEANGBAND
+D:This great spider was one of the brood laid by the
+D: Unlight, Ungoliant, in the mountains of Ered Gorgoroth.
+D: Some have made their way North to Angband, and crept down
+D: to the very darkest parts of the stronghold.
+
+N:6831:Greater werewolf
+G:C:D
+I:113:14d4:110:26:15
+W:17:1:700:100
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:SHARDS:3d7
+B:BITE:POISON:2d11
+F:RAND_25 | BASH_DOOR | FRIEND | SMART | 
+F:DROP_SKELETON | DROP_CORPSE | OPEN_DOOR | BASH_DOOR | 
+F:ANIMAL | EVIL | MORTAL | BASEANGBAND
+D:It is a huge wolf with eyes that glow with manly intelligence.
+
+N:6832:Adamant serpent
+G:J:w
+I:112:8d4:80:33:15
+W:17:3:1000:80
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:SHARDS:3d6
+F:RAND_25 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | ATTR_MULTI | 
+F:HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | IM_FIRE | 
+F:IM_COLD | IM_POIS | 
+S:1_IN_3
+S:BR_DARK | BR_FIRE | BR_COLD | BR_POIS | 
+D:A great serpent with scales of gleaming diamond.
+D: It sparkles with prismatic hues.
+
+N:6833:Lesser vampire
+G:V:s
+I:113:8d4:90:25:20
+W:17:1:1700:100
+E:1:1:1:2:1:1
+O:20:40:20:10
+B:CLAW:SHARDS:3d5
+B:BITE:LOSE_CON:2d7
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:COLD_BLOOD | CAN_FLY | 
+F:OPEN_DOOR | RAND_25 | SMART | 
+F:EVIL | UNDEAD | HURT_LITE | 
+F:BASEANGBAND | NO_CUT
+D:It flits quickly back and forth, like a great bat,
+D: although surely no bat could harbour so much malice
+D: behind its eyes.
+
+N:6834:Cat assassin
+G:f:D
+I:113:8d4:120:23:5
+W:17:3:0:65
+E:1:1:1:2:1:1
+O:30:70:0:0
+B:CLAW:SHARDS:1d11
+B:CLAW:SHARDS:2d10
+F:OPEN_DOOR | BASEANGBAND | DROP_CORPSE | FRIEND | BASH_DOOR | 
+F:SMART | DROP_90 | INVISIBLE | 
+S:1_IN_2
+S:ARROW_1
+D:Slinking in the shadows, this jet-black cat is hard
+D: to discern even as it fires its cruel bow.
+
+N:6835:Scatha the Worm
+G:D:B
+I:112:35d4:90:22:30
+W:17:30:210000:350
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:3d11
+B:BITE:SHARDS:2d21
+F:UNIQUE | MALE | CAN_SPEAK | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | 
+F:ONLY_ITEM | DROP_22 | DROP_GOOD | DROP_CORPSE
+F:BASH_DOOR | POWERFUL | MOVE_BODY | 
+F:EVIL | DRAGON | BASEANGBAND | 
+S:1_IN_8 | 
+S:CONF | SCARE | HOLD
+D:A long and sinuous worm, coiling on the floor.
+D: His claws are sharp, and by some force,  cunning or
+D: treachery his hoard is large for a young worm.
+
+N:6836:Oikeroi, Guard of Tevildo
+G:f:o
+I:113:18d4:130:25:15
+W:17:15:0:260
+E:0:1:0:2:1:0
+O:30:60:0:10
+B:CLAW:SHARDS:1d11
+B:CLAW:SHARDS:1d28
+F:UNIQUE | MALE | CAN_SPEAK | FORCE_MAXHP | 
+F:EVIL | OPEN_DOOR | BASH_DOOR | ANIMAL | SMART | 
+F:MORTAL | ESCORT | 
+F:DROP_12 | DROP_GOOD | ONLY_ITEM | BASEANGBAND | 
+D:A fierce and warlike cat, thane of Tevildo
+D: and ever at his side.
+
+N:6837:Young fire-drake
+G:d:r
+I:112:30d4:90:21:30
+W:18:6:4000:115
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d11
+B:BITE:FIRE:2d21
+F:FORCE_MAXHP | FORCE_SLEEP | CAN_FLY | DROP_CORPSE | SUSCEP_COLD |
+F:WILD_VOLCANO | OPEN_DOOR | BASH_DOOR | RAND_25 | 
+F:EVIL | DRAGON | IM_FIRE | HAS_EGG | IMPRESED | BASEANGBAND | 
+F:SMART | DROP_12 | DROP_GOOD | 
+S:1_IN_3 | 
+S:BR_FIRE | SCARE
+D:...no feet he heard, though the earth quaked.
+D: when the young dragon his thirst slaked.
+D: and the stream smoked at his dark door.
+D: The flames hissed on the dank floor,
+D: and he died alone in the red fire;
+D: his bones were ashes in the hot mire.
+
+N:6838:Darting horror
+G:H:r
+I:114:6d4:140:28:10
+W:18:5:500:100
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:HALLU:2d9
+F:ANIMAL | BASEANGBAND | 
+F:DROP_SKELETON | DROP_CORPSE | BASH_DOOR | 
+F:RAND_25 | NO_FEAR | 
+S:1_IN_8
+S:SCARE
+D:No larger than a wolf, but much swifter,
+D: it is hard to comprehend what evil thought
+D: first brought this into the world.
+D: You would prefer not to see it any closer.
+
+N:6839:Wraith
+G:W:s
+I:112:14d4:150:29:10
+W:18:4:0:120
+E:0:0:0:0:0:0
+O:0:50:50:0
+B:TOUCH:DARK:2d8
+F:COLD_BLOOD | OPEN_DOOR | SMART | NO_FEAR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | 
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT | 
+S:1_IN_10 |
+S:HOLD | SLOW
+D:A mantled shape of void that was once perhaps man or elf,
+D: but through Morgoth's black arts walks as his servant. Noseless
+D: it scents the air, turning this way and that.
+
+N:6840:Ururauko
+G:U:R
+I:112:4d4:80:23:10
+W:18:1:2700:110
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:FIRE:4d8
+F:EVIL | DEMON | BASEANGBAND | BASH_DOOR | 
+F:SMART | IM_FIRE | SUSCEP_COLD | 
+D:A form of pure flame, it is bright to look at and
+D: hard to tell the shape. A lesser relative, perhaps,
+D: of Arien, who guides the Sun, it was one of those who
+D: flocked to the banner of Melkor when the World was
+D: yet young.
+
+N:6841:Tevildo, Prince of Cats
+G:f:u
+I:113:14d4:140:30:15
+W:18:10:0:330
+E:0:1:0:2:1:0
+O:30:60:0:10
+B:CLAW:SHARDS:1d13
+B:CLAW:SHARDS:1d26
+F:UNIQUE | MALE | CAN_SPEAK | FORCE_MAXHP | 
+F:EVIL | OPEN_DOOR | BASH_DOOR | ANIMAL | SMART | 
+F:MORTAL | ESCORT | 
+F:DROP_12 | DROP_GREAT | ONLY_ITEM | BASEANGBAND | 
+D:Renowned for his cruelty even among the cruel
+D: cat-people, is it a wonder that this fierce
+D: warrior is royalty?
+
+N:6842:Turkano, Balrog of the Hosts
+G:U:b
+I:112:40d4:90:39:5
+W:18:20:13000:420
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:FIRE:2d16
+B:HIT:HURT:3d8
+F:UNIQUE | MALE | DROP_90 | ESCORTS | CAN_SPEAK | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | 
+F:DROP_CORPSE | NONLIVING | CAN_FLY | 
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | 
+F:NO_FEAR | BASH_DOOR | POWERFUL | 
+F:EVIL | DEMON | IM_FIRE | SUSCEP_COLD | 
+F:BASEANGBAND | HAS_LITE
+D:All of the Balrogs are held among the mighty of Angband and
+D: obeyed swiftly. But Turkano is a true battle-commander, 
+D: leading a host of Raukar to bring
+D: glory after glory for his fell master.
+
+N:6843:Ancient sapphire serpent
+G:J:B
+I:112:10d4:80:39:15
+W:19:6:1000:120
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:COLD:2d9
+F:RAND_25 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | ATTR_MULTI | 
+F:HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | IM_COLD | SUSCEP_FIRE | 
+S:1_IN_5
+S:BR_COLD
+D:A vast serpentine form encrusted with scales of sapphire.
+D: Frost covers it from head to tail.
+
+N:6844:Troll guard
+G:T:s
+I:112:20d4:50:26:15
+W:19:1:3000:100
+E:1:1:1:2:1:1
+O:30:70:0:0
+B:HIT:HURT:4d8
+F:MALE | 
+F:FRIENDS | DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | REGENERATE | SMART | 
+F:EVIL | TROLL | HURT_LITE | BASEANGBAND | NO_FEAR | 
+D:The very largest and toughest of the trolls are
+D: taken into the train of Gothmog. They are trained
+D: for war and given dark armour and great vicious weapons.
+
+N:6845:Vampire
+G:V:W
+I:113:10d4:110:33:20
+W:19:1:1700:160
+E:1:1:1:2:1:1
+O:20:40:20:10
+B:CLAW:SHARDS:3d5
+B:BITE:LOSE_CON:2d9
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:COLD_BLOOD | CAN_FLY | 
+F:OPEN_DOOR | RAND_25 | SMART | 
+F:EVIL | UNDEAD | HURT_LITE | 
+F:BASEANGBAND | NO_CUT
+D:A nightmarish bat-like form, the size of a man.
+
+N:6846:Nameless thing
+G:N:s
+I:111:70d4:50:33:5
+W:19:1:500:200
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:CRUSH:ACID:5d10
+F:EVIL | KILL_WALL | REGENERATE | EMPTY_MIND | 
+F:ONLY_ITEM | RES_DARK | RAND_25 | RAND_50 | 
+F:SMART | BASH_DOOR | 
+F:BASEANGBAND
+D:'Far, far below the deepest delvings of the Dwarves, the world is
+D: gnawed by nameless things...' It is as a vast grub,
+D: eating its way through the roots of the earth.
+
+N:6847:Smaug the Golden
+G:D:y
+I:113:35d4:90:22:30
+W:19:30:210000:450
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:3d11
+B:BITE:FIRE:2d21
+F:UNIQUE | MALE | CAN_SPEAK | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | CAN_FLY | 
+F:ONLY_ITEM | DROP_22 | DROP_GOOD | DROP_CORPSE
+F:BASH_DOOR | POWERFUL | MOVE_BODY | BASH_DOOR | 
+F:EVIL | DRAGON | BASEANGBAND | IM_FIRE | SUSCEP_COLD | 
+S:1_IN_5 | 
+S:CONF | BR_FIRE | HOLD
+D:A dragon with the inquisitiveness of youth --
+D: but a young dragon is a deadly foe still, and
+D: this one flies through the dark halls on great wings.
+
+N:6848:Maeglin, Betrayer of Gondolin
+G:p:D
+I:112:15d4:150:43:15
+W:19:100:1600:500
+E:1:1:1:2:1:1
+O:25:50:0:20
+B:HIT:HURT:2d8
+B:HIT:HURT:3d11
+F:MALE | DROP_12 | DROP_SKELETON | DROP_CORPSE | UNIQUE | 
+F:OPEN_DOOR | BASH_DOOR | SMART | DROP_GREAT | CAN_SPEAK | 
+F:FORCE_MAXHP | MORTAL | BASEANGBAND | TAKE_ITEM | 
+D:Named "sharp-glance" by his father Eol, the dark elf. Maeglin
+D: was close in the counsels of Turgon, King of Gondolin, but
+D: betrayed him to the black enemy Morgoth Bauglir.
+D: Who can say what twist of fate has brought him at last
+D: to that dark king's deep halls?
+
+N:6849:Ancient ruby serpent
+G:J:R
+I:112:10d4:80:40:15
+W:20:3:1000:150
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:FIRE:2d9
+F:RAND_25 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | ATTR_MULTI | 
+F:HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | IM_FIRE | SUSCEP_COLD | 
+S:1_IN_5
+S:BR_FIRE
+D:A vast serpentine form encrusted with scales of ruby.
+D: Wisps of smoke rise from its nostrils and the
+D: extreme heat surrounding it makes you gasp for breath.
+
+N:6850:Great cold-drake
+G:D:W
+I:112:50d4:90:21:30
+W:20:6:4000:180
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d13
+B:BITE:SHARDS:2d23
+F:FORCE_MAXHP | FORCE_SLEEP | CAN_FLY | DROP_CORPSE | 
+F:BASH_DOOR | DROP_22 | DROP_GOOD | SMART | 
+F:EVIL | DRAGON | HAS_EGG | IMPRESED | BASEANGBAND | 
+S:1_IN_5 | 
+S:CONF | SCARE | HOLD
+D:Dragons never stop growing, and may reach a dreadful size.
+D: The oldest of the dragons are both vast and cunning beyond
+D: the understanding of mortals.
+
+N:6851:Silent watcher
+G:H:s
+I:112:10d4:0:30:5
+W:20:10:500:200
+E:0:1:1:0:1:0
+O:0:0:0:0
+F:ANIMAL | BASEANGBAND | NEVER_BLOW | IM_COLD | IM_FIRE | 
+F:DROP_SKELETON | DROP_CORPSE | BASH_DOOR | HURT_ROCK | 
+F:NO_FEAR | IM_POIS | NO_CONF | NO_SLEEP | 
+S:1_IN_1
+S:SHRIEK
+D:They were like great figures seated upon thrones.
+D: Each had three joined bodies, and three heads facing outward,
+D: and inward, and across the gateway. The heads had vulture-faces,
+D: and on their great knees were laid clawlike hands.
+D: They seemed to be carved out of huge blocks of stone, immovable,
+D: and yet they were aware: some dreadful spirit of evil
+D: vigilance abode in them. They knew an enemy. Visible or
+D: invisible none could pass unheeded. They would forbid his entry,
+D: or his escape.
+
+N:6852:Gwathrauko
+G:U:D
+I:112:8d4:80:30:10
+W:20:4:2700:160
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:DARK:2d8
+F:EVIL | DEMON | BASEANGBAND | BASH_DOOR | 
+F:SMART | HURT_LITE | 
+D:A spirit of Darkness itself, it was easily swayed to Melkor's
+D: side when his black banner was raised in defiance of Iluvatar.
+
+N:6853:Draugluin, Sire of Werewolves
+G:C:W
+I:113:22d4:170:36:20
+W:20:15:1000:400
+E:0:1:0:2:1:0
+O:0:0:100:0
+B:CLAW:SHARDS:3d9
+B:BITE:POISON:2d13
+F:UNIQUE | MALE | CAN_SPEAK |
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:ESCORT | DROP_CORPSE | RAND_25 | 
+F:ONLY_ITEM | DROP_12 | DROP_GOOD | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:ANIMAL | EVIL | BASEANGBAND
+D:Draugluin provides Sauron with a fearsome personal guard.  He is an
+D: enormous wolf inhabited with a human spirit.  He is chief of all his
+D: kind.
+
+N:6854:Vallach, Balrog of Sudden Flame
+G:U:y
+I:113:44d4:120:41:5
+W:20:20:13000:480
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:FIRE:3d12
+B:HIT:HURT:3d8
+F:UNIQUE | MALE | DROP_90 | ESCORTS | CAN_SPEAK | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | 
+F:DROP_CORPSE | NONLIVING | CAN_FLY | 
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | 
+F:NO_FEAR | BASH_DOOR | POWERFUL | 
+F:EVIL | DEMON | IM_FIRE | SUSCEP_COLD | 
+F:BASEANGBAND | HAS_LITE
+D:A huge man-like shape, cloaked in flame and darkness both. He swings
+D: a cruel fiery axe, and moves more swiftly than should be possible in
+D: such a being.
+
+N:6855:Ancient spider
+G:S:g
+I:112:20d4:80:23:15
+W:21:3:400:100
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:2d19
+F:WEIRD_MIND | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | SPIDER | IM_POIS | SMART | 
+F:MORTAL | BASEANGBAND
+D:One of the oldest of brood of Ungoliant, its huge bloated body
+D: drips with venom.
+
+N:6856:Ancient emerald serpent
+G:J:G
+I:112:10d4:90:41:15
+W:21:3:1000:160
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:POISON:2d9
+F:RAND_25 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | ATTR_MULTI | 
+F:HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | IM_POIS | 
+S:1_IN_5
+S:BR_POIS
+D:A vast serpentine form encrusted with scales of emerald.
+D: It is enveloped in clouds of poisonous vapour.
+
+N:6857:Vampire lord
+G:V:v
+I:113:12d4:110:30:20
+W:21:2:1700:190
+E:1:1:1:2:1:1
+O:20:40:20:10
+B:CLAW:SHARDS:3d7
+B:BITE:LOSE_ALL:2d9
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:COLD_BLOOD | CAN_FLY | 
+F:OPEN_DOOR | RAND_25 | SMART | 
+F:EVIL | UNDEAD | HURT_LITE | 
+F:BASEANGBAND | NO_CUT
+D:Like a graceful, humanoid bat. Its black eyes regard
+D: everything around it as prey.
+
+N:6858:Dagorhir, the Elfbane
+G:T:r
+I:112:24d4:60:31:15
+W:21:15:5000:500
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:4d10
+F:UNIQUE | MALE | FORCE_MAXHP | 
+F:ESCORT | REGENERATE | CAN_SPEAK | 
+F:ONLY_ITEM | DROP_12 | DROP_GOOD | NO_FEAR | SMART | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | TROLL | HURT_LITE | BASEANGBAND | 
+D:A mountain of a troll, clad in rusted iron plates.
+D: He leads a patrol of the feared Troll Guard.
+
+N:6859:Gostir, the Dread Glance
+G:D:B
+I:112:60d4:130:22:30
+W:21:30:210000:500
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:3d13
+B:BITE:SHARDS:2d23
+F:UNIQUE | MALE | CAN_SPEAK | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | CAN_FLY | 
+F:ONLY_ITEM | DROP_22 | DROP_GREAT | DROP_CORPSE
+F:BASH_DOOR | POWERFUL | MOVE_BODY | BASH_DOOR | 
+F:EVIL | DRAGON | BASEANGBAND | 
+S:1_IN_5 | 
+S:CONF | SCARE | HOLD
+D:When the gaze of a worm is so deadly, what need
+D: has he fire?
+
+N:6860:Ancient amethyst serpent
+G:J:v
+I:112:10d4:100:42:15
+W:22:3:1000:170
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:DARK:2d9
+F:RAND_25 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | ATTR_MULTI | 
+F:HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | HURT_LITE | 
+S:1_IN_5
+S:BR_DARK
+D:A vast serpentine form encrusted with scales of amethyst.
+D: It is wreathed in shadow.
+
+N:6861:Great fire-drake
+G:D:r
+I:112:50d4:120:22:30
+W:22:6:4000:200
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:CLAW:HURT:3d13
+B:BITE:FIRE:2d23
+F:FORCE_MAXHP | FORCE_SLEEP | CAN_FLY | DROP_CORPSE | SUSCEP_COLD |
+F:WILD_VOLCANO | OPEN_DOOR | BASH_DOOR | RAND_25 | 
+F:EVIL | DRAGON | IM_FIRE | HAS_EGG | IMPRESED | BASEANGBAND | 
+F:SMART | DROP_22 | DROP_GOOD | 
+S:1_IN_3 | 
+S:BR_FIRE | SCARE | HOLD
+D:The oldest and largest drakes are likely to have accrued
+D: large hoards, for even in the pits of Angband, where
+D: the nightmarish teeth and claws might do not distinguish
+D: them, who could ever compare with the flames of a Dragon?
+
+N:6862:Hithrauko
+G:U:B
+I:113:4d4:90:31:10
+W:22:4:2700:190
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:ENGULF:HALLU:4d5
+F:EVIL | DEMON | BASEANGBAND | CAN_FLY | INVISIBLE | 
+F:SMART | BASH_DOOR | IM_POIS | RAND_50 | 
+D:There are many smokes and strange airs in the depths
+D: of Angband, and not a few are unwholesome, but rarely
+D: do they move with such active malice...
+
+N:6863:Shelob, Spider of Darkness
+G:S:D
+I:112:22d4:80:28:20
+W:22:30:2000:500
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:PARALYZE:2d15
+F:DROP_SKELETON | DROP_CORPSE | SMART | BASH_DOOR | 
+F:ANIMAL | SPIDER | UNIQUE | CAN_SPEAK | HURT_LITE | 
+F:MORTAL | BASEANGBAND | FEMALE | IM_POIS | 
+D:The line of Ungoliant seems to run true in this great
+D: spider, for the very dungeon around her is sucked
+D: of its light, that she takes to weave her deadly webs.
+
+N:6864:Lungorthin, Lord of Balrogs
+G:U:w
+I:112:48d4:140:43:5
+W:22:20:13000:600
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:FIRE:2d18
+B:HIT:HURT:3d10
+F:UNIQUE | MALE | DROP_90 | ESCORTS | CAN_SPEAK | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | 
+F:DROP_CORPSE | NONLIVING | CAN_FLY | 
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | 
+F:NO_FEAR | BASH_DOOR | POWERFUL | 
+F:EVIL | DEMON | IM_FIRE | SUSCEP_COLD | 
+F:BASEANGBAND | HAS_LITE
+S:1_IN_10
+S:BR_FIRE
+D:A massive form cloaked in flame.  Lungorthin stares balefully at you
+D: with eyes that smoulder.  The dungeon floor where he stands is
+D: scorched by the heat of his body.
+
+N:6865:Ancient adamant serpent
+G:J:w
+I:112:10d4:100:43:15
+W:23:3:1000:200
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:SHARDS:3d9
+F:RAND_25 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | ATTR_MULTI | 
+F:HAS_EGG | ANIMAL | MORTAL | BASEANGBAND | IM_FIRE | 
+F:IM_COLD | IM_POIS | 
+S:1_IN_3
+S:BR_DARK | BR_FIRE | BR_COLD | BR_POIS | 
+D:A vast serpentine form encrusted with scales of adamant.
+D: Prismatic colours gleam in its scales. Few live to see another.
+
+N:6866:Unrelenting horror
+G:H:G
+I:111:100d4:10:23:5
+W:23:2:500:250
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:POISON:6d5
+F:ANIMAL | BASEANGBAND | BASH_DOOR | REGENERATE | NO_FEAR | 
+F:DROP_SKELETON | DROP_CORPSE | 
+S:1_IN_8
+S:SCARE
+D:You have no idea what could have created the creature
+D: that shambles towards you -- if creature is the right
+D: word. You have the sense that it is constantly devouring
+D: itself, and yet never growing any less. It is not
+D: clear how one could ever slay such a thing.
+
+N:6867:Ancalagon the Black
+G:D:D
+I:113:35d4:110:25:30
+W:23:6:210000:600
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:3d11
+B:BITE:FIRE:2d21
+F:UNIQUE | MALE | CAN_SPEAK | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | CAN_FLY | 
+F:ONLY_ITEM | DROP_22 | DROP_GREAT | DROP_CORPSE
+F:BASH_DOOR | POWERFUL | MOVE_BODY | BASH_DOOR | 
+F:EVIL | DRAGON | BASEANGBAND | IM_FIRE | SUSCEP_COLD | 
+S:1_IN_3 | 
+S:BR_FIRE
+D:Out of the pits of Angband there issued the winged dragons,
+D: that had not before been seen; and so sudden and ruinous
+D: was the onset of that dreadful fleet that the host of the
+D: Valar was driven back, for the coming of the dragons was
+D: with great thunder, and lightning, and a tempest of fire.
+
+N:6868:Thuringwethil, the Vampire Messenger
+G:V:r
+I:114:16d4:150:34:10
+W:23:3:1500:600
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:CLAW:SHARDS:3d7
+B:BITE:LOSE_ALL:2d9
+F:UNIQUE | FEMALE | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | CAN_SPEAK | CAN_FLY |
+F:ONLY_ITEM | DROP_22 | DROP_GOOD | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | REGENERATE |
+F:EVIL | UNDEAD | HURT_LITE | RAND_25 | 
+F:BASEANGBAND | NO_CUT | 
+D:Chief messenger between Sauron and Morgoth, she is surely the most
+D: deadly of her vampire race.  At first she is charming to meet, but
+D: her wings and eyes give away her true form.
+
+N:6869:Gothmog, High Captain of Balrogs
+G:U:r
+I:112:52d4:150:49:5
+W:24:3:13000:750
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:HIT:FIRE:3d14
+B:HIT:HURT:3d10
+F:UNIQUE | MALE | DROP_90 | ESCORTS | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | 
+F:DROP_CORPSE | NONLIVING | CAN_FLY | 
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | 
+F:NO_FEAR | BASH_DOOR | POWERFUL | 
+F:EVIL | DEMON | IM_FIRE | SUSCEP_COLD | 
+F:BASEANGBAND | HAS_LITE | CAN_SPEAK | 
+D:Gothmog is the High Captain of Angband and Morgoth's personal guard.  He is
+D: renowned for slaying Feanor and Fingon, two of the High Kings of the
+D: Noldor Elves, and has never been defeated in combat.  With his whip
+D: of flame and awesome fiery breath he saved his master from
+D: Ungoliant's rage.
+
+N:6870:Ungoliant, the Gloomweaver
+G:S:D
+I:112:36d4:80:32:20
+W:24:3:2000:660
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:2d21
+F:DROP_SKELETON | DROP_CORPSE | SMART | BASH_DOOR | 
+F:ANIMAL | SPIDER | UNIQUE | CAN_SPEAK | HURT_LITE | 
+F:MORTAL | BASEANGBAND | FEMALE | IM_POIS | 
+S:1_IN_8
+S:BR_DARK
+D:This enormous, hideous spirit of void is in the form of a spider of
+D: immense proportions.  She is surrounded by a cloud of Unlight as she
+D: sucks in all living light into her bloated body, and breathes out the
+D: blackest of darkness.  She is always ravenously hungry and would even
+D: eat herself to avoid starvation.
+
+N:6871:Glaurung, the Deceiver
+G:D:y
+I:112:60d4:100:23:20
+W:24:6:210000:700
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:3d15
+B:BITE:FIRE:2d25
+F:UNIQUE | MALE | CAN_SPEAK | 
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | CAN_FLY | 
+F:ONLY_ITEM | DROP_32 | DROP_GREAT | DROP_CORPSE
+F:BASH_DOOR | POWERFUL | MOVE_BODY | BASH_DOOR | 
+F:EVIL | DRAGON | BASEANGBAND | IM_FIRE | SUSCEP_COLD | 
+S:1_IN_2 | 
+S:BR_FIRE | SCARE | HOLD | CONF
+D:Lo! the golden dragon of the God of Hell...
+D: Father and forefather to the other dragons, he is grown
+D: now to an enormous size, matched only by the size of the
+D: hoard he has gathered around him.
+
+N:6872:Gorthaur, Servant of Morgoth
+G:C:u
+I:113:30d4:200:41:10
+W:24:3:1000:800
+E:0:1:0:2:1:0
+O:0:0:100:0
+B:CLAW:SHARDS:3d11
+B:BITE:POISON:2d15
+F:UNIQUE | MALE | CAN_SPEAK |
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:ESCORT | DROP_CORPSE | SMART | 
+F:ONLY_ITEM | DROP_22 | DROP_GREAT | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:ANIMAL | EVIL | BASEANGBAND
+S:1_IN_4
+S:HOLD | S_WRAITH | 
+D:He is Morgoth's most powerful servant, and marshals great
+D: forces of his own. Also known as Thu or Sauron, he is a
+D: powerful maia, able to take on many forms. He appears
+D: now before you as a great wolf with matted fur and glowing
+D: eyes.
+
+N:6873:First Age Morgoth, Lord of Darkness
+G:P:D
+I:112:140d4:100:40:10
+W:25:1:200000:1000
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:SHATTER:6d10
+F:UNIQUE | CAN_SPEAK | MALE | 
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:ONLY_ITEM | DROP_32 | 
+F:DROP_GOOD | DROP_GREAT | NO_FEAR | 
+F:SMART | KILL_WALL | MOVE_BODY | 
+F:POWERFUL | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | BASEANGBAND | HAS_LITE
+S:1_IN_4
+S:BR_DISI | HOLD | BR_DISE | 
+D:He is the Master of the Pits of Angband. He rages with everlasting
+D: anger, seeking forever to dominate all that is light
+D: and good in the world. He is the origin of man's fear of darkness
+D: and created many foul creatures with his evil powers. Orcs, Dragons,
+D: and Trolls are his most foul corruptions, causing much pain and
+D: suffering in the world to please him. In his right hand he bears
+D: Grond, the mighty Hammer of the Underworld. His disgusting visage,
+D: twisted with evil, is crowned with iron, the three Silmarils forever
+D: burning him. You need to get to that crown.
+
+N:6874:Carcharoth, the Jaws of Thirst
+G:C:r
+I:114:30d4:200:38:20
+W:25:1:1000:880
+E:0:1:0:2:1:0
+O:0:0:100:0
+B:BITE:POISON:2d17
+F:UNIQUE | MALE | CAN_SPEAK |
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:DROP_CORPSE | SMART | 
+F:ANIMAL | EVIL | BASEANGBAND
+D:At last before them far away
+D: they saw the glimmering wraith of day,
+D: the mighty archway of the gate -
+D: and there a horror new did wait.
+D: Upon the threshold, watchful, dire,
+D: his eyes new-kindled with dull fire,
+D: towered Carcharoth, a biding doom:
+D: his jaws were gaping like a tomb,
+D: his teeth were bare, his tongue aflame;
+D: aroused he watched that no one came,
+D: no flitting shade nor hunted shape,
+D: seeking from Angband to escape.
+
+
 
 
 
