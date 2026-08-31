@@ -11696,6 +11696,8 @@ N:704:Winged Horror
 G:B:D
 I:120:25d80:30:80:5
 W:48:3:4500:4000
+E:0:1:1:0:1:0
+O:0:0:0:0
 B:CLAW:HURT:3d8
 B:CLAW:HURT:3d8
 B:BITE:EXP_40:4d6
@@ -116088,6 +116090,315 @@ D:has blank, featureless skin where there should be a face.  His great sword
 D:shines with a dazzling golden light, which throws forth shadowy shapes.  
 D:You know that this Earth will never be free of Chaos unless you destroy 
 D:Mabelrode's body, thus banishing him back to the Realms of Chaos.
+
+# 6686-6699 are ported from Ironband or inspired by the Ironband monsters
+# credits go to the original authors of these monsters
+
+N:6686:Black Lotus
+G:,:D
+I:110:1d4:2:8:0
+W:5:4:0:3
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPORE:PARALYZE:0d0
+F:NEVER_MOVE | EMPTY_MIND | IM_POIS | NO_FEAR | BASEANGBAND
+F:NO_CONF | NO_SLEEP | FRIENDS | WILD_WOOD | WILD_SHORE
+D:A gorgeous flower, it emits a mesmerisingly beautiful scent. 
+D: You feel like you could lie down among the flowers and sleep forever...
+
+N:6686:Black Lotus
+G:,:D
+I:110:1d4:2:8:0
+W:5:16:0:3
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPORE:PARALYZE:0d0
+F:NEVER_MOVE | EMPTY_MIND | IM_POIS | NO_FEAR | BASEANGBAND
+F:NO_CONF | NO_SLEEP | FRIENDS | WILD_WOOD | WILD_SHORE
+S:MULTIPLY
+D:A gorgeous flower, it emits a mesmerisingly beautiful scent. 
+D: You feel like you could lie down among the flowers and sleep forever...
+
+N:6687:The Giant Mutant Troll
+G:T:R
+I:132:100d100:100:110:10
+W:49:1:5000:10000
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:SHATTER:6d10
+B:HIT:SHATTER:6d10
+B:BITE:SHARDS:5d10
+B:SPIT:ACID:3d10
+F:UNIQUE | CAN_SPEAK | DROP_CORPSE
+F:MALE | FORCE_MAXHP | ONLY_ITEM | KILL_BODY
+F:DROP_32 | DROP_42 | DROP_GOOD | DROP_GREAT
+F:REGENERATE | OPEN_DOOR | BASH_DOOR | SMART | BASEANGBAND
+F:TAKE_ITEM | TROLL | EVIL | IM_COLD | IM_POIS | RAND_25
+S:1_IN_5
+S:S_TROLL | S_UNIQUE | HEAL | BOULDER
+D:The Witch King found this twisted and oversized troll in the grim 
+D:mountains to the East. He raised him, hand-fed him on the entrails 
+D:of his enemies, and cast vile spells upon him until he was a giant 
+D:creature of unparalleled ferocity. Then he turned him loose to wreak 
+D:havoc. 'Why?' you ask. 'Why not?' I reply. 'When you're as bad ass as 
+D:the Witch King you don't have to have a reason for doing evil shit!' 
+D:Whatever the case, you must defeat him before you can reach the Witch 
+D:King on level 50. (And be warned that High Elves will find both these 
+D:final fights particularly difficult.)
+
+N:6688:The Crash-King of Angmar
+G:W:D
+I:130:100d100:90:120:0
+W:50:1:1800:13000
+E:1:1:1:2:1:1
+O:30:30:30:10
+B:HIT:LOSE_ALL:8d8
+B:HIT:TERRIFY:8d8
+B:HIT:PARALYZE:8d8
+B:HIT:CONFUSE:8d8
+F:UNIQUE | CAN_SPEAK
+F:MALE | FORCE_MAXHP | FORCE_SLEEP | ONLY_ITEM
+F:DROP_12 | DROP_22 | DROP_42 | DROP_GOOD | DROP_GREAT | KILL_BODY
+F:SMART | COLD_BLOOD | NAZGUL | OPEN_DOOR | BASH_DOOR | PASS_WALL
+F:UNDEAD | EVIL | HURT_LITE | IM_COLD | IM_POIS | IM_ACID | RES_NEXU
+F:NO_CONF | NO_SLEEP | RES_INER | BASEANGBAND
+S:1_IN_2
+S:BA_NETH | BO_MANA | BO_NETH | HEAL | TELE_TO | DRAIN_MANA
+S:TELE_AWAY | BRAIN_SMASH | CAUSE_4 | BLIND
+S:S_MONSTERS | S_HI_DRAGON | S_HI_DEMON
+S:S_HI_UNDEAD | S_WRAITH | S_UNIQUE
+D:Lord of Angmar and leader of the Ringwraiths. In the Second Age he
+D: was a powerful king who was corrupted by Sauron. He served Sauron
+D: as his second-in-command for over 1000 years. Following Sauron's
+D: defeat, he disappeared from Middle Earth, but later reappeared in
+D: the north and founded the kingdom of Angmar. Here he ruled with 
+D: an iron grip, defeating the lands of Rhudaur and Cardolan.
+D: He will kick your ass with his enormous skull-crunching mace!
+
+N:6689:Cerevas the Deranged
+G:p:v
+I:115:60d10:20:50:10
+W:23:4:1000:800
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:2d6
+B:HIT:HURT:2d6
+F:MALE | FORCE_MAXHP | UNIQUE | CAN_SPEAK | DROP_CORPSE
+F:ONLY_ITEM | DROP_22 | DROP_GOOD | OPEN_DOOR | BASH_DOOR
+F:SMART | HAS_LITE | SMART
+F:EVIL | IM_FIRE | IM_COLD | BASEANGBAND
+S:1_IN_3
+S:BO_FIRE | BO_COLD | DRAIN_MANA | TPORT
+S:SCARE | BA_FIRE
+D:A deranged sorcerer of the court of Rhudaur, Cerevas 
+D:discontinued his studies after learning the Fireball spell, 
+D:which he felt was a perfectly sufficient solution to any 
+D:problems or social situations he might encounter.
+
+N:6690:Ardomar, Former King of Cardolan
+G:z:o
+I:115:90d10:20:50:10
+W:27:3:600:1200
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:CLAW:LOSE_CON:4d6
+B:CLAW:LOSE_DEX:4d6
+F:MALE | FORCE_MAXHP | UNIQUE | BASEANGBAND | CAN_SPEAK
+F:ONLY_ITEM | DROP_12 | DROP_GOOD | OPEN_DOOR | BASH_DOOR
+F:UNDEAD | EVIL
+F:SUSCEP_FIRE | IM_COLD | IM_POIS | RES_INER | NO_FEAR
+F:NO_STUN | NO_CONF | NO_SLEEP
+S:1_IN_3
+S:TPORT | TELE_TO | HASTE | HEAL | DARKNESS | SCARE | BLIND
+S:S_UNDEAD
+D:The land of Cardolan was taken over by the Witch King of 
+D:Angmar. It was not what you would call a peaceful transition 
+D:and democratic elections were not involved. The Witch King 
+D:soon found a role for the former King of Cardolan in the 
+D:new government - as a shuffling and near-mindless zombie!
+
+N:6691:Thrukur, Undead Dwarf Lord
+G:G:y
+I:120:50d10:20:50:10
+W:34:3:0:2000
+E:1:1:1:2:1:1
+O:40:40:10:10
+B:WAIL:TERRIFY
+B:HIT:LOSE_WIS:5d8
+B:HIT:EAT_LITE:5d8
+B:TOUCH:EAT_ITEM
+F:FORCE_MAXHP | UNIQUE | RAND_25 | ONLY_ITEM | DROP_32 | DROP_GOOD
+F:SMART | INVISIBLE | COLD_BLOOD | CAN_FLY | CAN_SPEAK
+F:PASS_WALL | TAKE_ITEM | UNDEAD | EVIL | BASEANGBAND
+F:IM_COLD | IM_POIS | NO_SLEEP
+S:1_IN_5
+S:BO_ACID | TRAPS | CAUSE_3
+S:BLIND | CONF | HOLD | S_UNDEAD
+D:Thrukur was the bearer of one of the seven Dwarven Rings 
+D:wrought by Sauron at the forge of Celebrimbor. Overcome by 
+D:greed for gold, he soon succumbed to the Ring's evil and 
+D:faded until he became a shade. The ring, Bunglost, fell from 
+D:his insubstantial fingers and was lost to man and dwarf alike.
+D:Thrukur remains a greedy and malevolent ghost.
+
+N:6692:Sythsyxxths, the Ambitious Drake
+G:d:U
+I:118:16d100:30:110:40
+W:43:3:5000:4000
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:ACID:5d5
+B:CLAW:ELEC:5d5
+B:BITE:FIRE:6d8
+F:FORCE_MAXHP | UNIQUE | ONLY_ITEM | DROP_32 | DROP_GREAT
+F:ATTR_MULTI | MALE | BASEANGBAND | DROP_CORPSE
+F:CAN_FLY | BASH_DOOR | DRAGON | EVIL
+F:IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS
+F:RES_CHAO | RES_NETH | RES_WATE | RES_PLAS | RES_NEXU
+F:RES_DISE | RES_INER | NO_STUN | NO_CONF
+S:1_IN_4
+S:BR_POIS | BR_LITE | BR_DARK | BR_CONF | BR_SOUN | BR_NEXU
+S:BR_NETH | BR_CHAO | BR_DISE | BR_TIME | SCARE | BLIND
+S:CONF | S_KIN
+D:Sythsyxxths is a young, talented and ambitious Power Drake. 
+D:He prides himself on being able to breathe every 
+D:exotic element known. Well - all except toxic waste: he's never 
+D:quite managed toxic waste. Don't mention it. It's a bit of a sore 
+D:spot.
+
+N:6693:Spreading infestation
+G:m:G
+I:120:40d20:200:60:0
+W:31:4:200:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPORE:CONFUSE:7d7
+B:SPORE:TERRIFY:7d7
+B:SPORE:POISON:7d7
+B:SPORE:LOSE_CON:5d5
+F:NEVER_MOVE | EVIL | IM_ACID | IM_ELEC
+F:IM_FIRE | IM_COLD | IM_POIS | RES_INER | NO_FEAR
+F:NO_STUN | NO_CONF | NO_SLEEP | ESCORTS | BASEANGBAND
+S:1_IN_6
+S:S_KIN | BLINK
+D:A despicable mould that seems to spread like a giant decaying 
+D:carpet throughout the dungeon.
+
+N:6694:Spreading infestation
+G:m:G
+I:120:40d20:200:60:0
+W:31:24:200:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPORE:CONFUSE:7d7
+B:SPORE:TERRIFY:7d7
+B:SPORE:POISON:7d7
+B:SPORE:LOSE_CON:5d5
+F:NEVER_MOVE | EVIL | IM_ACID | IM_ELEC
+F:IM_FIRE | IM_COLD | IM_POIS | RES_INER | NO_FEAR
+F:NO_STUN | NO_CONF | NO_SLEEP | ESCORTS | BASEANGBAND
+S:MULTIPLY
+S:1_IN_6
+S:S_KIN | BLINK
+D:A despicable mould that seems to spread like a giant decaying 
+D:carpet throughout the dungeon.
+
+N:6695:Master quylthulg
+G:Q:w
+I:120:48d10:20:1:0
+W:50:3:7000:3000
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_MAXHP | FORCE_SLEEP | NEVER_BLOW | NEVER_MOVE | INVISIBLE
+F:EMPTY_MIND | ANIMAL | RES_INER | NO_FEAR | NO_STUN
+F:NO_CONF | NO_SLEEP | BASEANGBAND
+S:1_IN_2
+S:BLINK | S_DRAGON | S_UNDEAD | S_DEMON | S_KIN
+D:Great is OEDE-Shoggog, who is the servant of the Elder Gods. Iah! 
+D:OEDE-Shoggog!
+
+N:6696:Geung, Treasurer of the Witch-King
+G:y:o
+I:120:25d100:40:90:10
+W:51:4:500:5000
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:TOUCH:HURT:5d5
+B:TOUCH:CONFUSE:5d5
+F:UNIQUE | MALE | FORCE_MAXHP | ONLY_ITEM | BASEANGBAND | CAN_SPEAK
+F:DROP_32 | DROP_GOOD | DROP_GREAT | AI_ANNOY | OPEN_DOOR
+F:BASH_DOOR | TAKE_ITEM | IM_POIS | RES_INER | INVISIBLE | DROP_CORPSE
+S:1_IN_2
+S:HEAL | TRAPS | SLOW | BLINK | TPORT | HOLD 
+S:DRAIN_MANA | TELE_AWAY
+D:The Witch-King entrusts his treasures to Geung, who scurries away
+D: with them and hides them in the dark and secret places of the earth.
+D: (Except when he drops them somewhere along the way, or loses them
+D: gambling, or a passing monster beats him up and takes them.)
+D: Geung is not powerful, but he is a cunning little creature, and he
+D: will take some catching. 
+
+N:6697:The ghost of Tathor
+G:G:B
+I:120:13d10:20:20:10
+W:10:3:0:120
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:TOUCH:TERRIFY:1d6
+B:TOUCH:EAT_LITE:1d6
+F:MALE | UNIQUE | FORCE_MAXHP | BASEANGBAND | CAN_SPEAK
+F:ONLY_ITEM | DROP_GOOD | DROP_22 | RAND_25
+F:INVISIBLE | COLD_BLOOD | CAN_FLY | PASS_WALL | UNDEAD | EVIL
+F:SUSCEP_FIRE | IM_COLD | NO_CONF | NO_SLEEP | 
+S:1_IN_4
+S:BLINK | DARKNESS | SCARE | S_MONSTER 
+D:Tathor was an early victim of the pits of Ironband. A Hill Orc
+D: struck him down from behind as he was about to deal the death
+D: blow to a Kobold. Now Tathor's ghost roams the shallower halls 
+D: eternally. Be wary, so that you do not suffer Tathor's fate!
+
+N:6698:Nugrush, the Goblin Lobber
+G:o:R
+I:110:40d10:20:20:10
+W:20:4:800:400
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:3d5
+B:HIT:HURT:3d5
+F:UNIQUE | MALE | FORCE_MAXHP | BASEANGBAND | CAN_SPEAK
+F:ONLY_ITEM | DROP_22 | DROP_GOOD | OPEN_DOOR | BASH_DOOR
+F:ORC | EVIL | IM_POIS | RAND_25 | IM_FIRE | SMART | DROP_CORPSE
+S:1_IN_2
+S:MISSILE | BA_FIRE
+D:Nugrush is not particularly strong or clever or devious,
+D: but he is a great shot and is widely considered to be a
+D: dab hand with a Molotov cocktail.
+
+N:6699:The Lord of the Nazgul's Steed
+G:B:W
+I:125:45d80:90:60:0
+W:60:4:4500:20000
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:CLAW:TERRIFY:7d8
+B:CLAW:HURT:7d8
+B:BITE:EXP_80:9d6
+B:BITE:EXP_80:9d6
+F:UNIQUE | FORCE_MAXHP | EVIL | BASEANGBAND
+F:CAN_FLY | ANIMAL | IM_COLD | IM_POIS | IM_FIRE
+F:NO_CONF | RES_INER | OPEN_DOOR | BASH_DOOR
+F:RES_NETH
+S:1_IN_4
+S:BR_POIS | BR_DARK | BR_NETH | S_KIN
+D: "The great shadow descended like a falling cloud, and behold! it
+D: was a winged creature: if bird, then greater than all other birds,
+D: and it was naked, and neither quill nor feather did it bear, and its
+D: vast pinions were as webs of hide between horned fingers; and it
+D: stank. A creature of an older world maybe it was, whose kind,
+D: lingering in forgotten mountains cold beneath the Moon, outstayed
+D: their day, and in hideous eyrie bred this last untimely brood, apt
+D: to evil."
+
 
 
 
