@@ -67955,7 +67955,7 @@ B:STING:HURT:2d4
 F:WEIRD_MIND | BASH_DOOR |
 F:BASEANGBAND | 
 F:ANIMAL | DROP_SKELETON
-D:It is a vast armoured centipede with massive mandibles and a spiked tail.
+D:It is a vast armored centipede with massive mandibles and a spiked tail.
 
 N:3933:Nixie
 G:h:B
@@ -69948,7 +69948,7 @@ B:CHARGE:HURT:4d6
 F:MORTAL | BASEANGBAND | 
 F:MALE | ONLY_ITEM | DROP_90 | DROP_CORPSE | DROP_SKELETON | GOOD | 
 F:OPEN_DOOR | BASH_DOOR | HAS_LITE |
-D:A warrior clad in ornate but effective armour, holding katana so sharp it 
+D:A warrior clad in ornate but effective armor, holding katana so sharp it 
 D:can cut your throat and you won't notice till you nod.
 
 N:4027:Magma intrusion
@@ -70042,7 +70042,7 @@ B:HIT:INSANITY:4d8
 F:MORTAL | BASEANGBAND | 
 F:RAND_25 | DROP_90 | OPEN_DOOR | BASH_DOOR | DROP_CORPSE | EVIL | GIANT | MOVE_BODY
 F:WILD_WASTE
-D:It is a massive ogre in metal armour, a champion of its kind.
+D:It is a massive ogre in metal armor, a champion of its kind.
 
 N:4033:Pole axe of animated attack
 G:/:w
@@ -71150,7 +71150,7 @@ F:DROP_CORPSE |
 S:1_IN_3 |
 S:HOLD | SCARE | DARKNESS | BLIND
 D:A grim-faced dark elf, garbed in layer upon layer of gleaming black 
-D:armour. As strong as he is magical, Eol is a worthy opponent.
+D:armor. As strong as he is magical, Eol is a worthy opponent.
 
 N:4092:Maeglin, Betrayer of Gondolin
 G:h:r
@@ -75149,7 +75149,7 @@ F:OPEN_DOOR | BASH_DOOR | ESCORT | DROP_SKELETON | DROP_CORPSE
 F:EVIL | ORC | RES_DARK | CAN_SPEAK
 S:1_IN_10 |
 S:ARROW_4 | S_KIN | 
-D:An armoured orc of great size who has won respect and power among 
+D:An armored orc of great size who has won respect and power among 
 D:his fellow orcs.
 
 # new
@@ -75580,7 +75580,7 @@ F:BASH_DOOR | WILD_GRASS | FRIEND
 F:ANIMAL | 
 F:DROP_CORPSE | 
 D:A giant armadillo-like creature shuffling along awkwardly beneath its 
-D:massive armoured shell.
+D:massive armored shell.
 
 N:4318:Dimetrodon
 G:R:U
@@ -83503,7 +83503,7 @@ D:long, thick hair, radiant skin and perfect teeth, full lips
 D:and gentle eyes.  A nymph's scent is delightful, and her 
 D:long robe glows, hemmed with golden threads and embroidered 
 D:with rainbow hues of unearthly magnificence.  A nymph's 
-D:demeanour is graceful and charming, her mind quick and witty. 
+D:demeanor is graceful and charming, her mind quick and witty. 
 
 N:4765:Water nymph
 G:h:B
@@ -83627,7 +83627,7 @@ D:needing any clothing, they do like to dress in variegated
 D:apparels.  Suspicious by nature, orcs live in tribes or 
 D:hordes.  They tend to live underground as well as above 
 D:ground (but they dislike sunlight).  Orcs can use all weapons, 
-D:tools and armours that are used by men.  Since they don't have 
+D:tools and armors that are used by men.  Since they don't have 
 D:the talent to fashion these themselves, they are constantly 
 D:hunting for them.  There is nothing a horde of orcs cannot 
 D:use. 
@@ -85033,7 +85033,7 @@ D:The couatl are feathered serpents of myth and lore. It is believed
 D:that they are distant relatives of dragons, though this remains 
 D:unproven. So rare as to be considered legendary, the couatl are 
 D:some of the most beautiful creatures in existence. A couatl has 
-D:the body of a long serpent and feathered wings the colour of the 
+D:the body of a long serpent and feathered wings the color of the 
 D:rainbow. Occasionally sent as messengers from the gods to their 
 D:erring servants, a couatl will always seek to punish those who 
 D:deserve it. 
@@ -87130,7 +87130,7 @@ D:His yellow skin scarcely covered the work of muscles and
 D:arteries beneath; his hair was of a lustrous black, and 
 D:flowing; his teeth of a pearly whiteness; but these luxuriances 
 D:only formed a more horrid contrast with his watery eyes, that 
-D:seemed almost of the same colour as the dun white sockets in 
+D:seemed almost of the same color as the dun white sockets in 
 D:which they were set, his shrivelled complexion and straight 
 D:black lips. 
 D:[ Frankenstein, by Mary Wollstonecraft Shelley ] 
@@ -87147,7 +87147,7 @@ F:STUPID | KILL_ITEM | DROP_CORPSE |
 F:NO_CONF | CAN_SWIM |
 F:MORTAL | BASEANGBAND
 D:These strange creatures live on a diet of metals.  They can 
-D:turn a suit of armour into so much useless rusted scrap in no 
+D:turn a suit of armor into so much useless rusted scrap in no 
 D:time at all. 
 
 N:5000:Disenchanter
@@ -88521,7 +88521,7 @@ D:up from Erebus -- fresh brides, unmarried youths, old men
 D:with life's long suffering behind them, tender young girls 
 D:still nursing this first anguish in their hearts, and a great 
 D:throng of warriors killed in battle, their spear-wounds gaping 
-D:yet and all their armour stained with blood.  From this 
+D:yet and all their armor stained with blood.  From this 
 D:multitude of souls, as they fluttered to and fro by the 
 D:trench, there came a moaning that was horrible to hear. 
 D:Panic drained the blood from my cheeks. 
@@ -110715,7 +110715,7 @@ F:ONLY_ITEM | OPEN_DOOR | IM_COLD | NO_CONF | RES_DISE |
 F:UNIQUE | CAN_SPEAK | 
 F:BASEANGBAND | DROP_CORPSE
 S:1_IN_8 | BO_FIRE | HASTE | HEAL
-D:An outcast from his race due to his strange colouring, Mome is even greedier
+D:An outcast from his race due to his strange coloring, Mome is even greedier
 D: than his kin.
 
 N:6384:The Scintillating serpent
@@ -110734,7 +110734,7 @@ F:ESCORTS | RES_LITE | RES_DARK | RES_CHAO | NO_STUN | UNIQUE
 F:BASEANGBAND | DROP_CORPSE
 S:1_IN_4 | HEAL | HOLD | BRAIN_SMASH | MIND_BLAST | S_KIN 
 D:A huge serpent, each of its thousands of scales shining in a different
-D: colour. 
+D: color. 
 
 # 6385-6483 are ported from Frazband or inspired by the Frazband monsters
 # credits go to the original authors of these monsters
@@ -112242,8 +112242,8 @@ S:1_IN_2 |
 S:BRAIN_SMASH | 
 S:S_HI_UNDEAD | S_HI_DRAGON
 D:A huge seething mass of flesh with a rudimentary intelligence, the Emperor 
-D:Quylthulg changes colours in front of your eyes.  Pulsating first one 
-D:colour then the next, it knows only it must bring help to protect itself.
+D:Quylthulg changes colors in front of your eyes.  Pulsating first one 
+D:color then the next, it knows only it must bring help to protect itself.
 
 N:6465:Ctuchik of Rak Cthol
 G:p:D
@@ -113442,7 +113442,7 @@ B:HIT:HURT:3d4
 B:HIT:HURT:3d4
 F:BASEANGBAND | DROP_CORPSE | 
 F:MALE | DROP_90 | OPEN_DOOR | BASH_DOOR | ESCORT
-D:An armoured warrior with an air of authority.
+D:An armored warrior with an air of authority.
 
 N:6544:Great Mishassa
 G:S:o
@@ -113663,7 +113663,7 @@ B:GAZE:TERRIFY
 F:FORCE_MAXHP | STUPID | REFLECTING | COLD_BLOOD | BASH_DOOR | MOVE_BODY | 
 F:KILL_ITEM | ANIMAL | RES_TELE | NO_FEAR
 F:BASEANGBAND | DROP_CORPSE | 
-D:"It was of a sickly yellowish colour, with long fangs curving out of its
+D:"It was of a sickly yellowish color, with long fangs curving out of its
 D: mouth from the upper jaw. There was a stale, unwholesome smell about it,
 D: and once it opened its great jaws and gave forth a horrid hissing,
 D: revealing a gaping red maw and a huge forked tongue." -- _City of the
@@ -114161,7 +114161,7 @@ B:HIT:HURT:3d6
 F:BASEANGBAND | DROP_CORPSE | 
 F:MALE | FRIENDS | DROP_60 | OPEN_DOOR | BASH_DOOR | TAKE_ITEM | EVIL
 D:Filthy and violent Mabden warriors dressed in a mix of stolen or
-D: crudely-made clothes and armour, the Denledhyssi ("murderers") consider
+D: crudely-made clothes and armor, the Denledhyssi ("murderers") consider
 D: it their duty to murder all of the old races, as well as any who don't
 D: whole-heartedly embrace their mission of genocide.
 
@@ -114964,7 +114964,7 @@ F:DROP_90 | DROP_12 | DROP_GOOD | REFLECTING | COLD_BLOOD | EMPTY_MIND |
 F:ATTR_ANY | BASH_DOOR | KILL_BODY | KILL_ITEM | NONLIVING | IM_ACID | 
 F:IM_ELEC | IM_FIRE | IM_COLD | IM_POIS | RES_TELE | NO_FEAR | NO_SLEEP | 
 F:RES_CHAO | KILL_WALL | CAN_SPEAK | 
-D:It crouches on metal feet, towering over you, its multicoloured scales
+D:It crouches on metal feet, towering over you, its multicolored scales
 D: half-blinding you.  The length of its back, save for its neck, is a mass
 D: of knife-sharp horns.  Its body is fashioned somewhat like an ape's, with
 D: short forelegs ending in hands of taloned metal.  Its snout is filled
@@ -115734,7 +115734,7 @@ F:RES_PLAS | RES_NEXU | NO_FEAR | NO_SLEEP
 S:1_IN_3 | 
 S:BR_FIRE | BR_PLAS | HEAL | TPORT | TELE_AWAY
 D:"It was a huge beast. A dragon whose scales rippled in the glow of the sun.
-D: A dragon whose crest burned with the richest colours of the rainbow. A
+D: A dragon whose crest burned with the richest colors of the rainbow. A
 D: dragon whose red nostrils flared and whose white teeth clashed, whose coils
 D: rose skyward with exquisite grace, whose wings spread wider and wider,
 D: beating strongly as the beast ascended into the clear, blue sky."
@@ -115999,7 +115999,7 @@ S:1_IN_3 |
 S:BR_CHAO | BA_CHAO | BA_ACID | BA_ELEC | BA_DARK | BRAIN_SMASH | 
 S:CAUSE_4 | BO_ICEE | CONF | HOLD | S_MONSTERS | S_KIN | S_DEMON
 D:A powerful Lord of Chaos, Balarizaaf exists in this realm in a form nearly
-D: as powerful as the Sword Rulers. In his war-garb, his armour flows
+D: as powerful as the Sword Rulers. In his war-garb, his armor flows
 D: around him like mercury and he appears as an all-powerful giant.
 
 N:6683:Arioch, Prince of Swords
@@ -117230,7 +117230,7 @@ F:OPEN_DOOR | SMART | FRIEND |
 F:EVIL | ORC | HURT_LITE | 
 F:MORTAL | BASEANGBAND | 
 D:He is one of Morgoth's grim mockeries of the firstborn.
-D: He has little armour but carries a cruel blade.
+D: He has little armor but carries a cruel blade.
 
 N:6750:Grimhawk
 G:B:u
@@ -117639,7 +117639,7 @@ F:MALE | DROP_SKELETON | DROP_CORPSE | DROP_90 |
 F:OPEN_DOOR | SMART | 
 F:EVIL | ORC | HURT_LITE | 
 F:MORTAL | BASEANGBAND | 
-D:A champion of the orc hordes. He wears well-fitting armour and
+D:A champion of the orc hordes. He wears well-fitting armor and
 D: wields a battle axe.
 
 N:6778:Easterling warrior
@@ -117726,7 +117726,7 @@ F:EVIL | ORC | HURT_LITE |
 F:MORTAL | BASEANGBAND | 
 S:1_IN_20
 S:SHRIEK
-D:An armoured orc that walks with confidence. His curved blade
+D:An armored orc that walks with confidence. His curved blade
 D: has many notches along its edge.
 
 N:6784:Warg
@@ -118666,7 +118666,7 @@ F:OPEN_DOOR | BASH_DOOR | REGENERATE | SMART |
 F:EVIL | TROLL | HURT_LITE | BASEANGBAND | NO_FEAR | 
 D:The very largest and toughest of the trolls are
 D: taken into the train of Gothmog. They are trained
-D: for war and given dark armour and great vicious weapons.
+D: for war and given dark armor and great vicious weapons.
 
 N:6845:Vampire
 G:V:W
@@ -119006,7 +119006,7 @@ F:IM_COLD | IM_POIS |
 S:1_IN_3
 S:BR_DARK | BR_FIRE | BR_COLD | BR_POIS | 
 D:A vast serpentine form encrusted with scales of adamant.
-D: Prismatic colours gleam in its scales. Few live to see another.
+D: Prismatic colors gleam in its scales. Few live to see another.
 
 N:6866:Unrelenting horror
 G:H:G
@@ -119194,6 +119194,3159 @@ D: his teeth were bare, his tongue aflame;
 D: aroused he watched that no one came,
 D: no flitting shade nor hunted shape,
 D: seeking from Angband to escape.
+
+# 6875-7071 are ported from ToME 3 or inspired by the ToME 3 monsters
+# credits go to DarkGod probably (at least I assume he made them)
+# there's lotsa spelling errors in the descriptions; I decided to keep them for posterity
+
+N:6875:Lone wolf
+G:C:w
+I:115:5d6:30:30:70
+W:9:1:600:30
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d12
+F:BASH_DOOR | WILD_TOO | WILD_WOOD | WILD_WASTE | WILD_MOUNTAIN | 
+F:ANIMAL | DROP_CORPSE |
+F:MORTAL | BASEANGBAND
+D:A lone wolf, abandoned by its pack.
+
+N:6876:Fox
+G:C:o
+I:115:6d4:40:30:70
+W:6:1:600:25
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d5
+F:WILD_TOO | WILD_WOOD | WILD_WASTE | WILD_MOUNTAIN | 
+F:ANIMAL | DROP_CORPSE | MORTAL | BASEANGBAND | SMART
+S:1_IN_10 | 
+S:SHRIEK
+D:A dog-like carnivore of wood and farmland distinctive for 
+D:it's reddish coat and plaintive cries. 
+
+N:6877:Hobbit delinquent
+G:h:w
+I:110:5d3:30:12:70
+W:2:1:700:10
+E:1:1:1:2:1:1
+O:0:50:0:40
+B:TOUCH:EAT_GOLD
+B:TOUCH:EAT_ITEM
+F:MALE | SMART | 
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | DROP_60 | 
+D:Young whippersnapper! This brat doesn't look a day over 30, and 
+D:has an eye for your wallet, your dinner and your possessions! 
+
+N:6878:Southerner
+G:t:b
+I:110:6d8:40:15:80
+W:4:2:200:15
+E:1:1:1:2:1:1
+O:40:60:0:0
+B:HIT:HURT:3d3
+F:MALE | DROP_SKELETON | DROP_CORPSE | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_60 | 
+F:EVIL | MORTAL | BASEANGBAND | HAS_LITE
+D:A swarthy man from the south, visiting in Bree. He watches 
+D:you suspicously as he fingers his knife. 
+
+N:6879:Orc scout
+G:o:g
+I:115:4d10:60:14:0
+W:7:3:2200:15
+E:1:1:1:2:1:1
+O:20:60:0:0
+B:HIT:HURT:2d6
+F:MALE | AI_ANNOY | TAKE_ITEM | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_2
+S:ARROW_1 | SHRIEK
+D:This orc appears to be a scout for the main party, 
+D:armed with a bow and a large hunting horn. 
+
+N:6880:Bill the Pony
+G:q:w
+I:110:8d4:40:12:80
+W:2:3:800:10
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:KICK:HURT:2d4
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | 
+F:UNIQUE | WEIRD_MIND | FORCE_MAXHP | NEUTRAL | 
+D:Once owned by Bill Ferny, this scrawny pony looks 
+D:wistfully your way. It wants to be friends. 
+
+N:6881:Boar
+G:c:o
+I:117:6d5:30:15:70
+W:3:1:1600:10
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:BUTT:HURT:3d5
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | WILD_TOO | 
+F:WILD_GRASS | FORCE_SLEEP | WEIRD_MIND | WILD_WOOD | 
+D:An agressive wild pig, with huge tusks! 
+
+N:6882:Barrows warrior
+G:s:g
+I:110:4d5:30:15:90
+W:3:3:0:10
+E:1:1:1:2:1:1
+O:0:80:0:20
+B:HIT:HURT:1d9
+F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | DROP_60 | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A figure approaches, and you note with a shudder his 
+D:empty eye sockets and the mouldy ribs that poke out from 
+D:holes in his armor. His rusty sword still looks sharp! 
+
+N:6883:Barrows legionnaire
+G:s:g
+I:110:4d5:30:15:90
+W:3:4:0:12
+E:1:1:1:2:1:1
+O:0:80:0:20
+B:HIT:HURT:1d9
+F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR | FRIENDS |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | DROP_60 | STUPID | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A crowd of warriors approach, and you note their empty 
+D:eye sockets and the mouldy ribs poke out from the holes 
+D:in their armor. The rusty swords still look sharp! 
+
+N:6884:Skeleton jackal
+G:s:u
+I:110:5d3:30:10:90
+W:2:4:0:8
+E:1:1:1:2:1:1
+O:0:80:0:20
+B:BITE:HURT:2d3
+F:COLD_BLOOD | EMPTY_MIND | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | STUPID | ANIMAL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A clicking sound approaches you and you see a dog-like 
+D:form approaching. It has the form of a jackal, but 
+D:appears to have been dead for some time. 
+
+N:6885:Barrows wight
+G:W:u
+I:117:5d8:30:25:0
+W:6:3:0:28
+E:0:0:0:0:0:0
+O:0:35:35:20
+B:WAIL:PARALYZE:1d6
+B:TOUCH:DARK:1d3
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | FORCE_MAXHP | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | CAN_SWIM | FRIENDS | 
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT | CAN_FLY | 
+F:DROP_60 | 
+S:1_IN_2 | 
+S:SCARE | DRAIN_MANA | 
+D:A whispering translucent figure, with a skeletal hand extending 
+D:from the ends of his robe. He died in battle long ago, and will 
+D:suck the life out of all who cross his way. 
+
+# was a unique in T3 but I decided it's going to be a regular monster --Amy
+N:6886:King of the Barrows
+G:W:v
+I:117:10d14:30:25:0
+W:12:3:0:50
+E:0:0:0:0:0:0
+O:0:35:35:20
+B:HIT:HURT:3d3
+B:WAIL:PARALYZE:1d6
+B:TOUCH:DARK:1d8
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | FORCE_MAXHP | MALE | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | CAN_SWIM | SMART | 
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT | CAN_FLY | 
+F:DROP_90 | ESCORT | 
+S:1_IN_4 | 
+S:SCARE | DRAIN_MANA | CAUSE_1 | BO_COLD | 
+D:A tall, whispering figure with a circlet of gold on his brow. He 
+D:has lived in the Barrow-Downs for centuries after his first death. 
+D:Now he only wishes to suck the life of all who cross his way. 
+
+N:6887:Zombie human
+G:z:W
+I:107:12d10:35:10:90
+W:4:3:1600:8
+E:1:1:1:2:1:1
+O:0:40:0:0
+B:CLAW:HURT:1d3
+B:CLAW:HURT:1d3
+F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | SUSCEP_FIRE | DROP_60 | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:A shambling figure approaches, along with a terrible stench 
+D:of decay. With horror, you see that this human has been dead 
+D:for some time. 
+
+N:6888:Zombie hobbit
+G:z:w
+I:110:9d8:30:18:90
+W:3:2:800:7
+E:1:1:1:2:1:1
+O:0:40:0:0
+B:CLAW:HURT:1d2
+B:CLAW:HURT:1d2
+F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | SUSCEP_FIRE | DROP_60 | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:This hobbit appears to have been dead for some time, but his 
+D:milky white eyes still seem to focus on you hungrily. 
+
+N:6889:Ent sapling
+G:#:G
+I:100:10d12:30:30:30
+W:15:3:5000:100
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CRUSH:HURT:4d6
+B:CRUSH:HURT:4d6
+F:FORCE_SLEEP | FORCE_MAXHP | SUSCEP_FIRE | 
+F:BASH_DOOR | 
+F:GOOD | BASEANGBAND | NO_CUT
+D:This tree is young, only a few metres high, but has pulled up its roots 
+D:and is walking Arda! Though it is still spindly, it has the knobbly 
+D:fingers and craggy brows of all ents! 
+
+N:6890:Ent
+G:#:y
+I:110:15d15:30:40:50
+W:30:3:9000:220
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CRUSH:HURT:8d8
+B:CRUSH:HURT:8d8
+F:FORCE_SLEEP | FORCE_MAXHP | SUSCEP_FIRE | 
+F:BASH_DOOR | 
+F:GOOD | BASEANGBAND | NO_CUT
+D:This huge sentient tree turns slowly on its roots, and you spy massive 
+D:woody fingers clench and unclench. It looks slow, but you would not like 
+D:to get in its way if it got up a head of speed! 
+
+N:6891:Huorn
+G:#:g
+I:120:20d20:30:55:50
+W:40:5:9000:200
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CHARGE:HURT:4d10
+B:CRUSH:HURT:8d10
+B:CRUSH:HURT:8d10
+F:FORCE_SLEEP | FORCE_MAXHP | SUSCEP_FIRE | 
+F:BASH_DOOR | FRIENDS | WEIRD_MIND | 
+F:GOOD | BASEANGBAND | NO_CUT
+S:1_IN_8
+S:BLINK
+D:This towering tree is wreathed in darkness and its twisted branches 
+D:writhe wihtout wind to stir them. This Huorn is a dark and terrible 
+D:Ent, not entirely under anyone's control. 
+
+N:6892:Old Ent
+G:#:g
+I:110:30d20:30:30:100
+W:65:3:15000:500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CHARGE:HURT:15d15
+B:CRUSH:HURT:10d11
+F:FORCE_SLEEP | FORCE_MAXHP | NO_SLEEP | NO_STUN | 
+F:BASH_DOOR | NO_CONF | IM_COLD | RES_DARK | NO_FEAR | 
+F:GOOD | BASEANGBAND | NO_CUT | REGENERATE | ESCORT | 
+F:REFLECTING | 
+S:1_IN_5
+S:MISSILE | S_KIN | S_ANIMALS | 
+D:This massive ent is an old, old tree whose line reaches back to the 
+D:first age. It is king of the forest and wise beyond measure. Its 
+D:branches are covered in moss and its bark is as thick as plate armor! 
+
+N:6893:Ancient Ent
+G:#:g
+I:115:60d100:30:200:100
+W:85:3:50000:5000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CHARGE:HURT:20d20
+B:CRUSH:SHATTER:10d18
+F:FORCE_SLEEP | FORCE_MAXHP | NO_SLEEP | NO_STUN | 
+F:BASH_DOOR | NO_CONF | IM_COLD | RES_DARK | NO_FEAR | 
+F:GOOD | BASEANGBAND | NO_CUT | REGENERATE | ESCORT | 
+F:REFLECTING | KILL_TREES | REFLECTING | IM_ELEC | 
+F:RES_WATE | RES_NEXU | RES_TIME | RES_LITE | RES_SOUN | 
+F:RES_INER | RES_WALL | RES_GRAV | RES_SHAR | RES_NERV | 
+F:RES_ETHE | RES_MIND | 
+S:1_IN_4
+S:MISSILE | S_KIN | S_ANIMALS | SHRIEK | BOULDER | CAUSE_4 | 
+S:TPORT | S_MOLD | S_BREEDER | S_HULK | S_QUADRUPED | 
+D:This walking tree is thousands of years old and will absolutely crush 
+D:you if you get in its way, so you should flee while you still have legs. 
+
+N:6894:Bat of Morgul
+G:b:R
+I:120:24d14:16:75:30
+W:32:2:150:150
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:DARK:1d12
+B:BITE:DARK:1d12
+B:BITE:DARK:1d12
+F:CAN_FLY | DROP_CORPSE | RES_DARK | IM_FIRE | WEIRD_MIND | 
+F:BASH_DOOR | MOVE_BODY | AI_ANNOY | EVIL | 
+F:ANIMAL | MORTAL | BASEANGBAND | AURA_FIRE | 
+D:It is a fast moving creature of shadow, a gigantic black bat 
+D:surrounded by flickering bright red flames. 
+
+N:6895:Giant house centipede
+G:c:w
+I:110:3d6:7:8:40
+W:1:1:500:3
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d2
+B:STING:POISON:1d2
+F:DROP_SKELETON | BASH_DOOR | IM_POIS | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:It is about four feet long and poisonous. Fifteen 
+D:pairs of legs undulate along its single-sectioned body. 
+
+N:6896:Giant garden centipede
+G:c:y
+I:110:4d4:8:12:40
+W:2:1:500:5
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d3
+B:STING:POISON:1d2
+F:DROP_SKELETON | BASH_DOOR | IM_POIS | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:It is about four feet long and poisonous, with 
+D:scores of legs along its sinuous, many-sectioned body! 
+
+N:6897:Giant forest centipede
+G:c:g
+I:115:4d6:5:16:10
+W:3:1:500:7
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:STING:POISON:1d2
+F:DROP_SKELETON | BASH_DOOR | IM_POIS | 
+F:ANIMAL | MORTAL | BASEANGBAND | WILD_WOOD | 
+D:It is about four feet long and carnivorous. Its many pairs of legs 
+D:move it at a frigtening speed! 
+
+N:6898:Giant red centipede
+G:c:r
+I:110:8d10:8:12:20
+W:8:1:500:10
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:STING:POISON:1d6
+F:DROP_SKELETON | BASH_DOOR | IM_POIS | 
+F:ANIMAL | MORTAL | BASEANGBAND | 
+D:It is about eight feet long and carnivorous, 
+D:with feathery antennae waving at the front 
+D:of its sinuous body! 
+
+N:6899:Giant dragon fly
+G:F:w
+I:130:3d8:12:25:50
+W:14:2:150:60
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+F:FORCE_SLEEP | CAN_FLY | 
+F:WEIRD_MIND | BASH_DOOR | 
+F:ANIMAL | 
+F:MORTAL | BASEANGBAND
+D:It is a large dragonfly, buzzing anxiously. 
+
+N:6900:Renegade hobbit
+G:h:u
+I:110:4d4:20:20:5
+W:2:1:800:6
+E:1:1:1:2:1:1
+O:0:25:0:25
+B:HIT:HURT:2d4
+B:TOUCH:EAT_GOLD
+B:TOUCH:EAT_ITEM
+F:MALE | SMART | DROP_60 | WILD_TOWN | 
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | 
+D:A rather shifty hobbit, who has abandoned the shire and opted to make 
+D:his own shifty living on the margins of the towns. He has an eye for 
+D:your possessions, including your life! 
+
+N:6901:Dwarf tinker
+G:h:s
+I:110:8d8:30:12:60
+W:4:2:2400:13
+E:1:1:1:2:1:1
+O:0:25:0:25
+B:HIT:HURT:3d4
+B:HIT:HURT:3d4
+F:MALE | RES_DARK | REGENERATE | WILD_TOWN | 
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | DROP_60 | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | 
+D:Carrying what looks like his entire life on his back, this dwarf makes 
+D:a living from mending pots and ironwork, many of which appear to be 
+D:jingling from his clothing. 
+
+N:6902:Avari
+G:h:y
+I:110:6d6:60:20:20
+W:8:3:1900:15
+E:1:1:1:2:1:1
+O:0:25:0:25
+B:HIT:HURT:5d4
+F:MALE | RES_LITE | CAN_FLY | WILD_TOWN | WILD_WOOD | 
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | DROP_60 | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | 
+S:1_IN_4
+S:BO_MANA | CONF | 
+D:This haggard elf, cast out from his lands, retains some of his 
+D:ancestral lore, but none of their honor. Watch yourself! 
+
+N:6903:Silvan pathbreaker
+G:h:G
+I:110:8d8:60:30:10
+W:15:2:2000:45
+E:1:1:1:2:1:1
+O:0:25:0:25
+B:HIT:HURT:5d4
+B:HIT:HURT:5d4
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | RES_LITE | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | CAN_FLY | WILD_WOOD | 
+F:WILD_GRASS | DROP_60 | 
+S:1_IN_4
+S:ARROW_2
+D:Lithe and swift, this elf is a scout for the King of the Wood Elves, 
+D:clearing the path for the much larger force which follows. 
+
+N:6904:Dwarvish miner
+G:h:s
+I:110:9d9:20:22:40
+W:18:4:2200:25
+E:1:1:1:2:1:1
+O:0:25:0:25
+B:HIT:HURT:3d6
+B:HIT:HURT:4d6
+F:MALE | RES_DARK | REGENERATE | FRIENDS | WILD_MOUNTAIN | 
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | DROP_60 | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | 
+D:This dwarf is mining for riches down here in the cave, armed and 
+D:armored in case of interruption. A dim lantern is fixed to his helmet 
+D:and his face is intent on the rock he is chipping at. Best not to come 
+D:between a dwarf and his riches. 
+
+N:6905:Hobbit slinger
+G:h:U
+I:110:6d6:50:30:20
+W:22:3:1400:55
+E:1:1:1:2:1:1
+O:0:25:0:25
+B:HIT:HURT:4d4
+F:MALE | SMART | FRIENDS | 
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | DROP_60 | 
+S:1_IN_3
+S:MISSILE
+D:This hobbit eyes you speculatively and licks his finger, raising it to 
+D:test the wind. In his other hand hangs a sling from which he can launch 
+D:iron shot with deadly accuracy! 
+
+N:6906:Sindarin messenger
+G:h:g
+I:115:9d10:50:45:0
+W:30:4:1700:120
+E:1:1:1:2:1:1
+O:0:25:0:25
+B:HIT:HURT:6d5
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | RES_LITE | NO_CONF | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | CAN_FLY | NO_FEAR | HAS_LITE | 
+F:GOOD | DROP_60 | 
+S:1_IN_3
+S:CONF | BA_POIS | HASTE | SLOW | 
+D:This lightly armored elf is carrying a scroll-tube at his belt. He is 
+D:a royal messenger and has full authority from the King to take whatever 
+D:steps are necessary to get his message through! 
+
+N:6907:Silvan elf archer
+G:h:g
+I:110:8d9:60:30:40
+W:34:2:2000:130
+E:1:1:1:2:1:1
+O:0:25:0:25
+B:HIT:HURT:6d6
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | RES_LITE | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | CAN_FLY | WILD_WOOD | 
+F:WILD_GRASS | DROP_60 | 
+S:1_IN_2
+S:ARROW_4
+D:This all elf is clad in leathers and has but a small sword to protect 
+D:himself. But for the great bow and the quiver of elven arrows mark him 
+D:as one of the Elf-King's most valuable, and lethal servants. 
+
+N:6908:Sindarin warrior
+G:h:G
+I:120:10d11:20:37:60
+W:33:3:1800:150
+E:1:1:1:2:1:1
+O:0:50:0:0
+B:HIT:HURT:7d7
+B:HIT:BLIND:7d7
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | RES_LITE | IM_POIS | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | NO_FEAR | HAS_LITE | 
+F:GOOD | REFLECTING | FRIENDS | WILD_WOOD | WILD_GRASS | DROP_60 | 
+D:This lean elven warrior is the mainstay of the elven forces. Lightly 
+D:mailed, and armed with a slender, gleaming blade, they are the 
+D:scourge of evil! 
+
+N:6909:Hobbit thief
+G:h:U
+I:120:8d11:90:60:10
+W:34:2:1200:220
+E:1:1:1:2:1:1
+O:30:40:0:30
+B:HIT:HURT:4d7
+B:TOUCH:EAT_GOLD
+B:TOUCH:EAT_ITEM
+F:MALE | SMART | RES_DARK | INVISIBLE | WILD_TOWN | WILD_GRASS | 
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | WILD_WOOD | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | DROP_60 | 
+S:1_IN_5
+S:MISSILE | TRAPS | 
+D:There it is again! With dificulty, you see the small humanoid sheltering 
+D:under a grey-brown cloak. This hobbit has left the shire to make his 
+D:nefarious living elsewhere, and may be looking to make it off you! 
+
+N:6910:Sindarin ranger
+G:h:y
+I:120:10d12:80:45:30
+W:38:3:1900:300
+E:1:1:1:2:1:1
+O:10:70:20:0
+B:HIT:HURT:6d8
+B:HIT:HURT:6d8
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | IM_POIS | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | RES_LITE | HAS_LITE | 
+F:GOOD | DROP_60 | CAN_FLY | WILD_WOOD | WILD_GRASS | 
+S:1_IN_4
+S:ARROW_4 | S_ANIMAL | HEAL | CONF | 
+D:At one with the forest, this elf sits cross-legged on the ground. A slim 
+D:sword lays across his knees and a greatbow is slung at his back. He is a 
+D:ranger of the Sindarin elves, and in a forest he acknowledges no equal. 
+
+N:6911:Dwarven paladin
+G:h:r
+I:120:20d20:40:70:20
+W:40:3:300:450
+E:1:1:1:2:1:1
+O:10:60:30:0
+B:PUNCH:HURT:6d6
+B:PUNCH:HURT:6d6
+B:KICK:HURT:8d10
+F:MALE | IM_COLD | NO_CONF | IM_ELEC | NO_FEAR | IM_FIRE | IM_POIS | 
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | DROP_60 | KILL_WALL | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | HAS_LITE | REFLECTING | 
+F:WILD_WOOD | WILD_GRASS | 
+S:1_IN_3
+S:BR_WALL | 
+D:This dwarf is a ball of glistening muscle and clad in a simple robe. 
+D:He is a disciple of Tulkas and has been granted access to many of the 
+D:Valar's mysteries, and his skin is as hard and white as marble. 
+
+# was a unique in T3 for some reason but IMHO really should be an ordinary monster --Amy
+N:6912:Defender of the shire
+G:h:u
+I:125:12d19:80:65:20
+W:40:5:1500:500
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:6d6
+B:HIT:HURT:6d6
+F:MALE | SMART | NO_FEAR | ESCORTS | FORCE_MAXHP | WILD_GRASS | 
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | WILD_WOOD | WILD_TOWN | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | DROP_60 | 
+S:1_IN_3
+S:MISSILE | TRAPS | 
+D:This doughty hobbit has appointed himself Defender of the Shire, and 
+D:has rallied like-minded hobbits around him. Mailed and armed with an 
+D:lead-weighted club, he is a cunning warrior. 
+
+N:6913:Silvan druid
+G:h:g
+I:120:10d20:70:50:20
+W:50:3:1400:700
+E:1:1:1:2:1:1
+O:0:20:60:0
+B:HIT:HURT:4d4
+B:HIT:HURT:4d4
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | IM_POIS | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | CAN_SWIM | REGENERATE | 
+F:GOOD | DROP_60 | CAN_FLY | WILD_GRASS | WILD_WOOD | 
+S:1_IN_3
+S:S_ANIMAL | S_ANIMALS | S_MOLD | HEAL | BR_ICEE | BO_WATE
+D:This elf is a friend of fur, fin and forest, and can summon all of them 
+D:to his aid in combat. He is also not without resources of his own! 
+
+N:6914:Dwarven mine leader
+G:h:W
+I:120:25d30:40:30:40
+W:60:4:3000:800
+E:1:1:1:2:1:1
+O:40:20:0:40
+B:HIT:HURT:8d8
+B:HIT:HURT:8d8
+B:HIT:HURT:8d8
+F:MALE | IM_ACID | IM_FIRE | IM_POIS | ESCORT | REFLECTING | 
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | DROP_60 | SMART | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | WILD_MOUNTAIN | 
+S:1_IN_3
+S:BR_WALL
+D:This noble dwarf is a mine-leader, and has responsibility for the entire 
+D:workings down here. His armor is thick and his face is covered in a 
+D:mask, allowing him to work where mine-gasses would overcome lesser dwarfs. 
+
+N:6915:Hobbit traitor
+G:h:o
+I:125:14d34:60:60:20
+W:67:4:1600:850
+E:1:1:1:2:1:1
+O:0:30:70:0
+B:HIT:HURT:6d6
+B:HIT:POISON:6d6
+B:HIT:CONFUSE:6d6
+B:HIT:DARK:6d6
+F:MALE | SMART | IM_ACID | IM_COLD | RES_DARK | IM_FIRE | 
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | IM_ELEC | IM_POIS | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | DROP_60 | EVIL | INVISIBLE | 
+F:AURA_FIRE | WILD_TOWN | 
+S:1_IN_3
+S:BLINK | ANIM_DEAD | BR_VENO | TRAPS | DRAIN_MANA | 
+D:This hobbit has betrayed his kind, travelled to Minas Ithil and offerred 
+D:himself as a servant to the dark lord. The Dark-Lord is pleased with 
+D:his new servant, and has scrawled runes in the foul language of Mordor 
+D:all over the hobbit's body. He is now not only lost, but a terrible threat! 
+
+N:6916:Avari sorcerer
+G:h:v
+I:110:9d39:40:30:30
+W:70:2:1100:900
+E:1:1:1:2:1:1
+O:20:0:80:0
+B:HIT:HURT:1d10
+F:MALE | NO_CONF | RES_DARK | IM_POIS | HAS_LITE | SMART | 
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | DROP_60 | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | 
+S:1_IN_2
+S:BA_FIRE | DARKNESS | CONF | BO_MANA | HASTE | DRAIN_MANA | 
+S:BLINK | TPORT | S_MONSTER | BA_WATE | BR_VENO | 
+D:Filled with the mysteries of Valinor and the wisdom of Elfkind, this 
+D:oucast has fallen prey to the temptations of Melkor, and serves Sauron 
+D:willingly. Power crackles from his fingers and shines out balefully 
+D:from his eyes. 
+
+N:6917:Knight of stone
+G:h:w
+I:125:16d50:30:50:50
+W:73:2:3500:800
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:12d12
+B:HIT:HURT:12d12
+B:HIT:HURT:12d12
+F:MALE | IM_COLD | IM_ELEC | IM_FIRE | IM_POIS | REFLECTING | 
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | DROP_60 | HAS_LITE | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | POWERFUL | REGENERATE | 
+F:FRIENDS | WILD_MOUNTAIN | 
+D:These gleaming dwarven warriors are the cream of the Dwarven race and 
+D:their armor gleams with the deepest secrets of their craft. Their 
+D:blades are keen and their eyes unwavering in their dedication to 
+D:the honor of their king! 
+
+N:6918:Sindarin sorceror
+G:h:v
+I:120:11d40:40:30:30
+W:80:3:1100:900
+E:1:1:1:2:1:1
+O:20:0:80:0
+B:HIT:HURT:1d20
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | NO_CONF | NO_FEAR | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | IM_POIS | HAS_LITE | 
+F:GOOD | DROP_60 | SMART | 
+S:1_IN_2
+S:TELE_AWAY | SLOW | CONF | BO_WATE | HASTE | HEAL | BLINK | 
+S:TPORT | S_MOLD | S_ANIMAL | BA_WATE | BR_ICEE | BA_POIS | 
+D:An aura of light surrounds this elf, dressed in robes of great finery 
+D:adorned with silver and gold runes of power. This High Elf is truly 
+D:deserving of his name, an embodiment of all the power and wisdom of 
+D:his people. 
+
+N:6919:Elven war leader
+G:h:g
+I:125:18d66:60:75:10
+W:84:3:2000:1200
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:HIT:BLIND:14d14
+B:HIT:BLIND:14d14
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | IM_COLD | IM_ELEC | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | IM_FIRE | RES_LITE | 
+F:GOOD | DROP_60 | IM_POIS | HAS_LITE | POWERFUL | ESCORTS | 
+F:REGENERATE | SMART | WILD_WOOD | WILD_GRASS | WILD_MOUNTAIN | 
+S:1_IN_2
+S:BR_LITE | S_KIN | 
+D:Leading the hosts of elfkind, this war-leader is kin to Galadriel and 
+D:is of like majesty, though his gifts lie more in war than magic. He 
+D:is revered by his men and his bright blade and commanding voice are 
+D:a shining beacon of command! 
+
+N:6920:Dwarven king
+G:h:D
+I:130:24d90:30:70:60
+W:85:3:3000:1500
+E:1:1:1:2:1:1
+O:30:40:30:0
+B:HIT:HURT:14d14
+B:HIT:HURT:14d14
+B:HIT:HURT:14d14
+F:MALE | IM_COLD | NO_CONF | IM_ELEC | NO_FEAR | IM_FIRE | RES_LITE | 
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | DROP_60 | IM_POIS | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | HAS_LITE | NO_STUN | POWERFUL | 
+F:ESCORTS | REFLECTING | 
+D:Proud, tall for his race and as immovable and enduring as a mountain, 
+D:this dwarvish king is the leader of his people and a fearsome warrior 
+D:in his own right. His axe is deceptively plain, but his bearing and 
+D:grace even in heavy plate mail marks him as of royal blood! 
+
+N:6921:Corrupted Sindarin elven sorceror
+G:h:v
+I:130:15d60:30:40:50
+W:90:3:1500:2000
+E:1:1:1:2:1:1
+O:20:0:80:0
+B:HIT:HURT:1d25
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | IM_ACID | IM_COLD | 
+F:MORTAL | BASEANGBAND | OPEN_DOOR | NO_CONF | RES_DARK | IM_ELEC | 
+F:EVIL | DROP_60 | NO_FEAR | IM_FIRE | CHAR_MULTI | HAS_LITE | 
+F:NO_SLEEP | NO_STUN | 
+S:1_IN_3
+S:BA_DARK | SLOW | CONF | BA_CHAO | HASTE | HEAL | BLINK | TPORT | 
+S:S_MONSTERS | BA_WATE | BR_ICEE | BA_POIS | S_ELEMENTAL | HAND_DOOM | 
+D:This once noble-elf is now a corrupted shell of a being, laughing and 
+D:crying by turns. Melkor's whispers slowly drove him mad, but did not 
+D:affect his mastery of magic! 
+
+N:6922:Giant kingsnake
+G:J:o
+I:110:4d6:4:20:99
+W:1:1:600:3
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | CAN_SWIM | 
+F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND
+D:It is about eight feet long and has colorful bands 
+D:down the length of its body. 
+
+N:6923:Small boa
+G:J:w
+I:105:6d6:4:20:99
+W:1:1:600:2
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:2d2
+B:CRUSH:HURT:3d2
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND
+D:It is about twelve feet long. 
+
+N:6924:Giant hognose
+G:J:y
+I:105:5d8:5:20:75
+W:2:1:600:5
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+B:BUTT:HURT:1d6
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | CAN_SWIM | 
+F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND
+D:It is about ten feet long with a heavy snout. 
+
+N:6925:Large boa
+G:J:s
+I:105:6d8:6:20:50
+W:4:1:1300:7
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+B:CRUSH:HURT:1d9
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | CAN_SWIM | 
+F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND
+D:It is about sixteen feet long. 
+
+N:6926:Emperor cobra
+G:J:g
+I:110:10d10:8:22:1
+W:12:2:300:12
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:SPIT:BLIND:1d6
+B:CRUSH:POISON:1d9
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | CAN_SWIM | 
+F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND | IM_POIS | 
+D:This huge snake must be at least twenty feet long 
+D:and its giant hood conceals massive jaws. 
+
+N:6927:Giant python
+G:J:u
+I:110:40d15:15:10:70
+W:30:2:5000:140
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:5d11
+B:CRUSH:HURT:6d12
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND | 
+D:This huge serpent lies in long loops upon the floor, and you see 
+D:massive muscles ripple under its heavy scales. 
+
+N:6928:Orcish raider
+G:o:u
+I:110:10d7:40:25:30
+W:15:1:1900:30
+E:1:1:1:2:1:1
+O:30:50:0:0
+B:HIT:HURT:5d8
+F:MALE | TAKE_ITEM | RES_DARK | FRIENDS | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | HAS_LITE | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+D:A lightly armored party of orcs, come down from the Misty Mountains 
+D:to make mischief upon the races of men. These are more robbers than 
+D:soldiers of Morgoth, but their cruel, curved swords are sharp nonetheless! 
+
+N:6929:Orc of the White Hand
+G:o:g
+I:110:10d7:50:30:40
+W:18:1:2100:35
+E:1:1:1:2:1:1
+O:40:60:0:0
+B:HIT:HURT:6d6
+B:HIT:HURT:6d6
+F:MALE | TAKE_ITEM | RES_DARK | FRIENDS | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+D:An armored party of orcs, with white handprints on their shields. 
+D:Their armor is mismatched and their weapons crudely forged and dirty, 
+D:but they have a discipline and purpose unusual amongst their kind... 
+
+N:6930:Orcish archer
+G:o:g
+I:110:10d7:60:20:20
+W:22:2:1900:45
+E:1:1:1:2:1:1
+O:30:50:0:0
+B:HIT:HURT:7d6
+F:MALE | TAKE_ITEM | RES_DARK | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_2
+S:ARROW_3
+D:A lithe orc with a huge greatbow and a quiver bristling with arrows 
+D:he peers into the distance, seeking out new targets to snipe at. 
+
+N:6931:Uruk-hai
+G:o:w
+I:110:10d10:60:35:20
+W:25:1:2200:55
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:8d8
+B:HIT:HURT:8d8
+F:MALE | TAKE_ITEM | RES_DARK | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | FRIENDS | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_6
+S:ARROW_3
+D:They are the fighting Uruk-Hai! An heavily armored party of orcs, 
+D:with white handprints on their shields and war-chants on their lips. 
+D:Most orcs are simple warriors, but these are terrible foemen! 
+
+N:6932:Orcish crossbowman
+G:o:s
+I:110:8d8:60:15:40
+W:24:2:2500:60
+E:1:1:1:2:1:1
+O:80:20:0:0
+B:HIT:HURT:5d6
+F:MALE | TAKE_ITEM | RES_DARK | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_3
+S:ARROW_4
+D:This heavy-set orc is staggering under the weight of 
+D:a heavy iron crossbow of orcish design. Orcs are slipshod 
+D:in many crafts but excel in the engines of war! 
+
+N:6933:Orcish slaver
+G:o:v
+I:120:8d6:50:27:30
+W:28:2:2000:60
+E:1:1:1:2:1:1
+O:0:20:0:0
+B:HIT:HURT:4d4
+B:HIT:HURT:4d4
+F:MALE | TAKE_ITEM | RES_DARK | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | ESCORT | HAS_LITE | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_4
+S:SHRIEK
+D:This lightly armored orc carries a many-thonged whip and has as 
+D:vicious a tongue as his weapon. He exists only to motivate orcish 
+D:slaves, be they men or other orcs. 
+
+N:6934:Orcish shaman
+G:o:R
+I:110:8d6:80:27:80
+W:30:2:1800:80
+E:1:1:1:2:1:1
+O:30:0:30:0
+B:HIT:HURT:6d4
+F:FEMALE | TAKE_ITEM | RES_DARK | NO_CONF | NO_FEAR | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | HAS_LITE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_4
+S:SCARE | CONF | DARKNESS | HEAL | BA_POIS | CAUSE_2 | 
+D:The orcs too have magic of a sort, and here is one of their shamans, 
+D:covered in relics and bones. She mutters, and you see light flicker from 
+D:the top of her skull-crowned staff. Foul her magic may be, but it is 
+D:still powerful! 
+
+N:6935:Orcish assassin
+G:o:D
+I:120:9d12:80:50:10
+W:35:2:1700:120
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:POISON:10d4
+B:HIT:HURT:7d8
+F:MALE | TAKE_ITEM | RES_DARK | IM_POIS | INVISIBLE | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | WEIRD_MIND | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_4
+S:BO_POIS
+D:This small orc is almost invisible in his dark grey clothes, and he 
+D:will only show himself with poison-tipped steel! 
+
+N:6936:Half orc
+G:o:D
+I:120:12d14:50:40:30
+W:35:1:2200:130
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:8d9
+B:HIT:HURT:8d9
+F:MALE | TAKE_ITEM | RES_DARK | FRIENDS | WILD_GRASS | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | WILD_MOUNTAIN | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+D:These tall and swarthy warriors almost look like men, but the trace 
+D:of orcish fang and the gutteral sounds of the dark tongue confirm your 
+D:suspicions, these are an unnatural mixture of orcish and Edain blood. 
+
+N:6937:Orcish commander
+G:o:R
+I:120:20d15:80:55:0
+W:40:3:3000:400
+E:1:1:1:2:1:1
+O:40:60:0:0
+B:HIT:HURT:8d10
+B:HIT:HURT:8d10
+B:HIT:HURT:8d10
+F:MALE | TAKE_ITEM | RES_DARK | NO_CONF | NO_FEAR | SMART | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | ESCORTS | HAS_LITE | 
+F:OPEN_DOOR | BASH_DOOR | FORCE_MAXHP | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+D:This orc is dressed in fine armor and walks with an erect carriage and 
+D:almost noble countenance. He is one of Sauron's captains, commanding a 
+D:great orcish horde and his great spear is as much banner as weapon. 
+
+N:6938:Uruk-hai commander
+G:o:R
+I:115:20d18:80:55:0
+W:43:3:3400:450
+E:1:1:1:2:1:1
+O:40:60:0:0
+B:HIT:HURT:13d12
+B:HIT:HURT:13d12
+F:MALE | TAKE_ITEM | RES_DARK | NO_CONF | NO_FEAR | SMART | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | ESCORTS | HAS_LITE | 
+F:OPEN_DOOR | BASH_DOOR | FORCE_MAXHP | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_4
+S:ARROW_4
+D:Padding like a great cat, this Uruk-Hai must be near to seven feet tall 
+D:and wears his brutal authority like a mantle. He is the finest, the toughest 
+D:and most disturbingly the brightest that orc-kind has to offer. 
+
+N:6939:Orcish sapper
+G:o:o
+I:120:10d12:40:30:10
+W:50:2:2000:120
+E:1:1:1:2:1:1
+O:40:60:0:0
+B:EXPLODE:HURT:20d20
+F:MALE | TAKE_ITEM | RES_DARK | NO_CONF | NO_FEAR | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | CHAR_MULTI | WEIRD_MIND | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+D:This orc looks towards you with a blank expression, his mind destroyed 
+D:by too much orc-liquor. His body is strapped with orcish devices which 
+D:will explode upon whomever he throws himself at. 
+
+N:6940:Orcish abomination
+G:o:g
+I:140:25d15:40:60:60
+W:54:2:3200:550
+E:1:1:1:2:1:1
+O:20:20:0:0
+B:CLAW:HURT:14d10
+B:CLAW:HURT:14d10
+B:BITE:HURT:12d9
+F:MALE | TAKE_ITEM | RES_DARK | NO_FEAR | IM_POIS | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | NO_CONF | REGENERATE | 
+F:EVIL | ORC | HURT_LITE | WEIRD_MIND | CAN_FLY | 
+F:MORTAL | BASEANGBAND | 
+D:Clawed and fanged far beyond the norm, this hulking beast is a failure 
+D:of Orthanc's twisted experiments. But it appears that its main failure 
+D:was its control, as it appears consumed by animalistic rage. 
+
+N:6941:Elite guard of Mordor
+G:o:s
+I:120:18d30:60:50:20
+W:58:1:3200:400
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:14d10
+B:HIT:HURT:10d10
+F:MALE | TAKE_ITEM | RES_DARK | NO_FEAR | IM_POIS | REFLECTING | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | HAS_LITE | 
+F:OPEN_DOOR | BASH_DOOR | FRIENDS | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+D:Armed with the finest weapons Mordor has and armored in the black, 
+D:spiked armor of Sauron's personal guard, these fearsome orcish 
+D:warriors are the worst nightmare of the other inhabitants of Arda. 
+
+N:6942:The Chosen of Isengard
+G:o:W
+I:125:18d50:60:60:20
+W:60:1:3000:400
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:13d13
+B:HIT:HURT:13d13
+F:MALE | TAKE_ITEM | RES_DARK | NO_FEAR | IM_POIS | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | REFLECTING | 
+F:OPEN_DOOR | BASH_DOOR | HAS_LITE | FRIENDS | 
+F:EVIL | ORC | HURT_LITE | 
+F:MORTAL | BASEANGBAND | 
+D:These heavy infantry soliders are savage foemen, fearless in the service 
+D:of the White Hand and equipped by him with fine weapons and a hatred for 
+D:all who oppose his will! 
+
+N:6943:Ruffian
+G:t:b
+I:110:4d5:40:10:70
+W:1:1:1800:3
+E:1:1:1:2:1:1
+O:0:30:0:0
+B:HIT:HURT:2d3
+F:MALE | EVIL | WILD_TOWN | RES_DARK | DROP_60 | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | FRIENDS | HAS_LITE | 
+D:This gang of toughs are expert at intimidation. You don't scare that 
+D:easily... do you? 
+
+N:6944:Bravo
+G:t:u
+I:110:5d5:30:15:70
+W:1:1:2000:4
+E:1:1:1:2:1:1
+O:50:50:0:0
+B:HIT:HURT:1d4
+B:HIT:HURT:1d4
+F:MALE | EVIL | WILD_TOWN | DROP_60 | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | HAS_LITE | FRIENDS | 
+D:This novice warrior holds his sword nervously and his armor is almost 
+D:without a scratch, but he still looks dangerous! 
+
+N:6945:Conjuror
+G:p:R
+I:110:4d4:40:6:50
+W:1:1:1650:4
+E:1:1:1:2:1:1
+O:0:0:70:0
+B:HIT:HURT:1d3
+F:MALE | EVIL | DROP_60 | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | HAS_LITE | 
+S:1_IN_2
+S:MISSILE | BLINK | 
+D:This callow youth is only one step above a street conjuror, but still 
+D:works some dangerous magicks! 
+
+N:6946:Paladin
+G:p:u
+I:110:6d5:40:20:60
+W:4:2:1800:8
+E:1:1:1:2:1:1
+O:30:20:50:0
+B:PUNCH:HURT:1d4
+B:PUNCH:HURT:1d4
+F:MALE | GOOD | DROP_60 | NO_FEAR | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | HAS_LITE | 
+D:This disciple of Tulkas appears unarmed, but his fists have the hard 
+D:calluses of a bare-knucked fighter, and his skin the stony sheen of a 
+D:mystic armor granted by his Valar. 
+
+N:6947:Hunter
+G:p:G
+I:110:6d5:80:10:40
+W:4:1:1600:8
+E:1:1:1:2:1:1
+O:30:70:0:0
+B:HIT:HURT:2d3
+F:MALE | DROP_60 | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | WILD_WOOD | 
+S:1_IN_4
+S:ARROW_1
+D:This relaxed woodsman leans on his greatbow. A quiver of arrows hangs 
+D:from his belt, and his eyes keenly search the surrounding landscape. 
+
+N:6948:Easterling
+G:p:r
+I:110:6d8:40:20:60
+W:8:5:2000:10
+E:1:1:1:2:1:1
+O:20:60:0:0
+B:HIT:HURT:3d7
+F:MALE | DROP_60 | HAS_LITE | FRIENDS | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | 
+D:With their curved scimitars and fierce cries, these humans from the 
+D:east of Arda are among the most dedicated enemies of Gondor. 
+
+N:6949:Pikeman of Morgoth
+G:p:D
+I:110:6d6:40:30:60
+W:8:1:1900:9
+E:1:1:1:2:1:1
+O:30:60:0:0
+B:CHARGE:HURT:3d10
+F:MALE | DROP_60 | HAS_LITE | RES_DARK | FRIENDS | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | 
+D:Grim and unsmiling, these soldiers of Morgoth hold heavy pikes before 
+D:then, tightly holding together in close formation. Anyone trying to ride 
+D:through this swarm would feel their sting! 
+
+N:6950:Gondorian footman
+G:p:w
+I:110:8d6:60:40:40
+W:14:1:2700:15
+E:1:1:1:2:1:1
+O:20:70:0:0
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+F:MALE | GOOD | DROP_60 | NO_FEAR | REFLECTING | FRIENDS | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | HAS_LITE | 
+D:Dressed in fine armor and wielding sharp blades of Gondor, these 
+D:fierce warriors bear the symbol of the white tree on their gleaming 
+D:shields. 
+
+N:6951:Gondorian archer
+G:p:W
+I:110:6d6:80:30:30
+W:18:2:2000:20
+E:1:1:1:2:1:1
+O:20:70:0:0
+B:HIT:HURT:6d6
+F:MALE | GOOD | DROP_60 | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | HAS_LITE | 
+S:1_IN_3
+S:ARROW_3
+D:Dressed in fine scale mail and bearing a great bow of horn and yew, 
+D:this bowman of Gondor looks keenly into the middle distance, quiver of 
+D:broadheads hanging within easy reach on his belt. 
+
+N:6952:Gondorian captain
+G:p:w
+I:120:12d12:70:40:60
+W:25:2:2300:75
+E:1:1:1:2:1:1
+O:20:60:20:0
+B:HIT:HURT:6d9
+B:HIT:HURT:6d9
+F:MALE | GOOD | DROP_60 | NO_CONF | NO_FEAR | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | HAS_LITE | ESCORTS | SMART | 
+D:This thickset warrior strides across the ground, dark hair covered by 
+D:a steel helmet topped with a captain's plume. The naked blade in his hand 
+D:is held easily at his side as he scans the situation before him with the 
+D:careful eye of a seasoned warrior. 
+
+N:6953:Easterling captain
+G:p:R
+I:120:12d10:70:45:60
+W:25:2:2100:75
+E:1:1:1:2:1:1
+O:20:60:20:0
+B:HIT:HURT:5d7
+B:HIT:HURT:5d7
+B:HIT:POISON:4d6
+F:MALE | DROP_60 | HAS_LITE | NO_CONF | NO_FEAR | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | ESCORTS | SMART | 
+D:This swarthy warrior stands arrogantly in the midst of his troop, the 
+D:brass roundels on his armor gleaming dully in the light. He and his 
+D:men have come to make war upon the men of Gondor, for plunder and the 
+D:satisfaction of ancient hatred! 
+
+N:6954:Easterling shaman
+G:p:v
+I:110:8d8:90:25:30
+W:28:2:1900:90
+E:1:1:1:2:1:1
+O:30:0:60:0
+B:HIT:HURT:4d4
+F:MALE | DROP_60 | HAS_LITE | NO_CONF | NO_FEAR | RES_DARK | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | 
+S:1_IN_2
+S:DARKNESS | SCARE | BA_POIS | BA_FIRE | HEAL | BLINK | 
+D:This Easterling is garbed in blackest silk and garish jerwellery, his 
+D:eyes barely visible beneath his gold and ivory mask. Those eyes, however 
+D:radiate with dark power, bequeathed by his patron, Sauron! 
+
+N:6955:Thief
+G:p:s
+I:115:9d12:90:50:10
+W:30:2:1800:160
+E:1:1:1:2:1:1
+O:30:40:0:30
+B:HIT:HURT:7d7
+B:HIT:HURT:7d7
+B:TOUCH:EAT_GOLD
+B:TOUCH:EAT_ITEM
+F:MALE | DROP_60 | RES_DARK | SMART | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | INVISIBLE | 
+S:1_IN_5
+S:ARROW_4 | TRAPS
+D:This shifty character is barely visible under his dark cloak, and his 
+D:blade is darkened with pitch. Rake thin and agile, you realise that this 
+D:cutpurse is far more dangerous than he appears! 
+
+N:6956:Unhorsed rohirrim
+G:p:B
+I:110:15d17:40:30:60
+W:30:2:3000:150
+E:1:1:1:2:1:1
+O:20:60:20:0
+B:HIT:HURT:10d8
+B:HIT:HURT:10d8
+F:MALE | GOOD | DROP_60 | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | REFLECTING | 
+D:This son of Rohan has lost his horse, but still has his sword and the
+D:proud demeanor of his people! 
+
+N:6957:Dark priest
+G:p:g
+I:110:10d14:60:30:60
+W:33:1:1750:180
+E:1:1:1:2:1:1
+O:20:0:70:0
+B:HIT:POISON:4d4
+F:MALE | DROP_60 | IM_POIS | NO_CONF | NO_FEAR | RES_DARK | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | HAS_LITE | SMART | 
+S:1_IN_3
+S:DARKNESS | SCARE | BA_POIS | BR_VENO | DRAIN_MANA | ANIM_DEAD | BLINK | 
+D:A strange keening reaches your ears and you identify it's source as a 
+D:huddled figure sitting on the ground, garbed in dark and noisome clothes. 
+D:A disciple of Melkor sings his praises in a disquieting discord. 
+
+N:6958:Assassin
+G:p:g
+I:120:13d17:90:50:10
+W:35:2:1800:300
+E:1:1:1:2:1:1
+O:10:50:20:20
+B:HIT:POISON:8d7
+B:HIT:POISON:8d7
+F:MALE | DROP_60 | INVISIBLE | ATTR_CLEAR | SMART | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | RES_DARK | 
+S:1_IN_4
+S:BO_POIS | TRAPS | 
+D:Like a ghost, this figure slips over the ground. An evil metal crossbow 
+D:hangs by his side, and his hand hovers over the hilt of a razor-sharp 
+D:shortsword. It seems someone wants you dead, and he's the man to make 
+D:it happen! 
+
+N:6959:Easterling swordsman
+G:p:v
+I:120:12d20:30:70:70
+W:37:2:2000:330
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:9d8
+B:HIT:HURT:9d8
+B:HIT:HURT:9d8
+F:MALE | DROP_60 | HAS_LITE | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | 
+D:This Easterling carries a very large curved sword, and appears to be 
+D:very well versed in it's use, swinging it in swift and graceful curves 
+D:quickly enough that you can barely see! 
+
+N:6960:Knight of Morgoth
+G:p:D
+I:110:14d25:40:45:40
+W:40:2:3100:380
+E:1:1:1:2:1:1
+O:20:60:20:0
+B:HIT:DARK:10d9
+B:HIT:DARK:10d9
+F:MALE | DROP_60 | RES_DARK | NO_FEAR | HAS_LITE | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | FRIENDS | RES_CHAO | 
+S:1_IN_4
+S:DARKNESS | SCARE | BR_VENO | 
+D:Clad in armor black as pitch and armed with a sword glowing with dark 
+D:power, this disciple of Morgoth is dedicated to his service and to your 
+D:destruction! 
+
+N:6961:Ranger
+G:p:G
+I:120:13d20:70:45:30
+W:40:1:2100:300
+E:1:1:1:2:1:1
+O:10:70:20:0
+B:HIT:HURT:8d8
+B:HIT:HURT:8d8
+F:MALE | DROP_60 | IM_POIS | HAS_LITE | CAN_FLY | WILD_WOOD | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_4
+S:ARROW_4 | HEAL | SLOW | 
+D:This tall and relaxed hunter is more than he appears,and both the great 
+D:bow by his side and the weapon on his hip seem well used! 
+
+N:6962:Warlock
+G:p:o
+I:110:12d19:50:30:50
+W:44:1:2000:350
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:HIT:HURT:8d8
+B:HIT:FIRE:9d9
+F:MALE | DROP_60 | NO_CONF | NO_FEAR | HAS_LITE | AURA_FIRE | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | 
+S:1_IN_2
+S:BA_FIRE | BA_POIS | BO_MANA | HASTE | HEAL | BLINK | TPORT | 
+D:This figure appears in a blaze of magic fire, holding a gleaming metal 
+D:sword that seems to slice reality just as much as the air. This warlock 
+D:is a master of both blade and spell, and will use both to destroy you! 
+
+N:6963:Corrupted Geomancer
+G:p:B
+I:110:9d18:30:50:60
+W:50:2:1800:400
+E:1:1:1:2:1:1
+O:30:0:70:0
+B:HIT:COLD:4d4
+B:HIT:ELEC:4d4
+B:HIT:HURT:6d4
+B:HIT:FIRE:4d4
+F:MALE | DROP_60 | IM_ACID | IM_COLD | IM_FIRE | IM_ELEC | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | CAN_FLY | 
+F:MORTAL | BASEANGBAND | EVIL | HAS_LITE | RES_CHAO | KILL_WALL | 
+F:ESCORT | 
+S:1_IN_2
+S:BA_FIRE | BR_ICEE | S_ELEMENTAL | HEAL | BA_WATE | BA_POIS | BO_WATE | 
+D:Flickering with eldritch energy, this powerful mage of the elements has been 
+D:corrupted by Morgoth. With such mastery of the mysteries of the world,he 
+D:will be a very difficult foe to defeat! 
+
+N:6964:Archer
+G:p:u
+I:120:15d25:90:40:20
+W:50:2:2000:450
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:5d5
+B:HIT:HURT:5d5
+F:MALE | DROP_60 | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | 
+S:1_IN_2
+S:ARROW_4 | BOULDER | 
+D:This yeoman is a master archer, the calluses on his fingers and the far-
+D:away look in his eye as much a warning as the finely polished bow of yew 
+D:in his hands. He is an expert at killing at range. 
+
+N:6965:Druid
+G:p:g
+I:120:15d22:60:40:40
+W:51:2:2100:500
+E:1:1:1:2:1:1
+O:0:20:60:0
+B:HIT:HURT:8d8
+B:HIT:HURT:8d8
+F:MALE | DROP_60 | IM_POIS | CAN_SWIM | REGENERATE | CAN_FLY | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | WILD_WOOD | 
+S:1_IN_3
+S:S_ANIMAL | S_ANIMALS | S_MOLD | HEAL | BR_ICEE | BO_WATE | BA_WATE | 
+D:This human walks in simple robes, verging on grubby, and is crowned by 
+D:a wreath of woven holly. This druid worships Yavanna Kementari, and his 
+D:loyalties lie more with the creatures of air and forest than with men. 
+
+N:6966:Dark mage
+G:p:b
+I:110:9d18:30:30:50
+W:53:1:1550:550
+E:1:1:1:2:1:1
+O:30:0:70:0
+B:HIT:HURT:4d4
+F:MALE | DROP_60 | NO_CONF | HAS_LITE | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | 
+S:1_IN_2
+S:BA_FIRE | SLOW | DARKNESS | CONF | BO_MANA | HASTE | HEAL | 
+S:BLINK | TPORT | 
+D:Clad in blue robes speckled with runes, this mage fairly crackles with 
+D:power, and the eyes peering over his tightly cropped black beard glow 
+D:dull red. 
+
+N:6967:Easterling chieftain
+G:p:o
+I:135:18d40:70:65:10
+W:58:2:3500:700
+E:1:1:1:2:1:1
+O:20:60:20:0
+B:HIT:POISON:8d10
+B:HIT:POISON:8d10
+B:HIT:POISON:8d10
+F:MALE | DROP_60 | NO_CONF | RES_DARK | NO_FEAR | IM_POIS | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | HAS_LITE | ESCORTS | 
+F:REFLECTING | SMART | 
+S:1_IN_10
+S:S_KIN
+D:Respelndent in his barbaric finery, this giant lord of the Easterlings drips 
+D:with finery set into gleaming steel armor, painted with a lacquer the color 
+D:of blood. He is a scourge of Gondor, and legions of warriors answer his call! 
+
+N:6968:Gondorian commander
+G:p:y
+I:130:20d50:70:50:10
+W:58:2:3600:700
+E:1:1:1:2:1:1
+O:20:60:20:0
+B:HIT:BLIND:10d15
+B:HIT:BLIND:10d15
+F:MALE | GOOD | DROP_60 | NO_CONF | NO_FEAR | IM_FIRE | SMART | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | HAS_LITE | ESCORT | REFLECTING | 
+S:1_IN_10
+S:S_KIN
+D:Tall and noble, this great lord of Gondor bears an ancient sword of Gondor 
+D:alive with flame and a great host of warriors ready to cry aloud the name 
+D:of Gondor and smite the forces of darkness. 
+
+N:6969:Legionnaire of Morgoth
+G:p:v
+I:120:13d65:20:55:60
+W:62:1:2800:450
+E:1:1:1:2:1:1
+O:20:60:20:0
+B:HIT:DARK:10d10
+B:HIT:DARK:10d10
+F:MALE | DROP_60 | RES_DARK | IM_FIRE | FRIENDS | REFLECTING | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | RES_CHAO | HAS_LITE | 
+S:1_IN_8
+S:CAUSE_3 | BA_DARK | DARKNESS | 
+D:These warriors wear armor dark and twisted, as if burned in the fires 
+D:of Orodruin, and their gutteral war-chants are spoken in the foul tongue 
+D:of Mordor. They are Sauron's elite guard, and are filled with his power! 
+
+N:6970:Master thief
+G:p:d
+I:130:20d50:90:80:0
+W:65:2:1800:770
+E:1:1:1:2:1:1
+O:30:40:0:30
+B:HIT:BLIND:14d7
+B:HIT:POISON:14d7
+B:TOUCH:EAT_GOLD
+B:TOUCH:EAT_ITEM
+F:MALE | DROP_60 | RES_DARK | ATTR_CLEAR | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | SMART | INVISIBLE | 
+S:1_IN_3
+S:ARROW_4 | BR_CONF | TRAPS | 
+D:A man-shaped shadow detaches itself from a wall and glides towards you. 
+D:This thief is a master of his stealthy crafts, and has cunning, guile and 
+D:a bevy of tricks, devices and traps to separate you from both treasure 
+D:and your ability to breathe. 
+
+N:6971:Necromancer
+G:p:w
+I:120:11d45:40:40:40
+W:67:2:1600:800
+E:1:1:1:2:1:1
+O:30:0:70:0
+B:HIT:HURT:4d8
+B:HIT:DARK:4d16
+F:MALE | DROP_60 | NO_CONF | RES_DARK | NO_FEAR | IM_POIS | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | HAS_LITE | SMART | ESCORT | 
+S:1_IN_2
+S:SCARE | ANIM_DEAD | SLOW | S_UNDEAD | S_HI_UNDEAD | BR_VENO | 
+D:Tall and sepuchural, this mage is adorned with a variety of charms and 
+D:amulets to protect himself against evil. Little wonder, given that he 
+D:is surrounded by his undead minions, whose hatred for the living is 
+D:surpassed only by their fear of their master! 
+
+N:6972:Old druid
+G:p:g
+I:120:25d50:60:60:20
+W:73:2:1700:900
+E:1:1:1:2:1:1
+O:0:20:60:0
+B:HIT:HURT:10d11
+B:HIT:COLD:10d11
+B:HIT:ACID:10d11
+F:MALE | DROP_60 | NO_CONF | IM_POIS | NO_STUN | REGENERATE | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | CAN_FLY | ESCORT | 
+S:1_IN_3
+S:S_ANIMAL | S_ANIMALS | S_MOLD | HEAL | SLOW | BA_WATE | HASTE | 
+S:BR_ICEE | BR_WALL | 
+D:This old druid is whipcord thin, and brown as a nut. Age amongst his 
+D:brotherhood denotes power rather than decripitude, and he is amongst 
+D:the most powerful and most dangerous of nature's champions! 
+
+N:6973:Corrupted mindcrafter
+G:p:B
+I:115:18d50:90:45:10
+W:75:2:190:900
+E:1:1:1:2:1:1
+O:30:0:70:0
+B:HIT:CONFUSE:4d4
+B:HIT:PARALYZE:4d4
+B:HIT:TERRIFY:4d4
+F:MALE | DROP_60 | NO_CONF | NO_FEAR | CHAR_MULTI | WEIRD_MIND | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | SMART | NO_SLEEP | NO_STUN | 
+F:RES_CHAO | 
+S:1_IN_2
+S:BR_MIND | CONF | SCARE | SLOW | BLINK | TPORT | TELE_AWAY | 
+D:This disciple of Saruman is a master of the mind, able to bend men and 
+D:even anumals to his will. You force your gaze away from his, for even 
+D:the strongest of men would eventually fall under his sway. 
+
+N:6974:Alchemist
+G:p:u
+I:120:16d60:40:60:60
+W:77:5:2000:940
+E:1:1:1:2:1:1
+O:20:0:20:0
+B:HIT:HURT:6d6
+B:HIT:HURT:6d6
+F:MALE | DROP_60 | IM_ACID | IM_COLD | RES_DISE | RES_LITE | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | IM_FIRE | IM_ELEC | IM_POIS | 
+F:HAS_LITE | 
+S:1_IN_3
+S:BA_POIS | BA_ELEC | TPORT | BA_FIRE | BO_MANA | CONF | HEAL | 
+S:BR_ICEE | HASTE | 
+D:Clad from head to toe in heavy leathers, wearing black glass goggles 
+D:this strange man is a master alchemist, expert at crafting all manner 
+D:of magical device, most of which he seems to have brought with him! 
+
+N:6975:Witch-soldier of Mordor
+G:p:W
+I:140:20d70:30:70:30
+W:80:2:3000:980
+E:1:1:1:2:1:1
+O:10:60:30:0
+B:HIT:HURT:12d12
+B:HIT:POISON:12d12
+B:HIT:DARK:12d12
+F:MALE | DROP_60 | IM_COLD | RES_DARK | IM_FIRE | HURT_LITE | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | IM_POIS | 
+F:MORTAL | BASEANGBAND | EVIL | HAS_LITE | REFLECTING | FORCE_MAXHP | 
+F:FRIENDS | REGENERATE | 
+S:1_IN_5
+S:DARKNESS | DRAIN_MANA | BR_VENO | BA_DARK | S_UNDEAD | 
+D:These terrible warriors are the most dangerous soldiers that Sauron has 
+D:and their mastery of both blade and spell make them man-for-man without 
+D:peer throughout Arda. Their skull-masks are made from mithril and their 
+D:black cloaks seem to suck the light from the air... 
+
+N:6976:Sorceror
+G:p:r
+I:110:11d66:40:40:30
+W:84:3:1600:1100
+E:1:1:1:2:1:1
+O:20:0:80:0
+B:HIT:HURT:2d12
+F:MALE | DROP_60 | IM_ACID | IM_COLD | NO_CONF | IM_FIRE | IM_ELEC | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | IM_POIS | 
+F:MORTAL | BASEANGBAND | EVIL | HAS_LITE | 
+S:1_IN_2
+S:BA_FIRE | SLOW | DARKNESS | CONF | BO_MANA | HASTE | HEAL | BLINK | 
+S:TPORT | S_MONSTER | BA_WATE | BR_ICEE | BA_POIS | 
+D:This red-clad mage is a master of all the world's magick, and uses these 
+D:masteries to plunder unwary adventures like yourself! He looks at 
+D:you, wondering which spell he will select to destroy you! 
+
+N:6977:Demonologist
+G:p:o
+I:125:20d100:40:0:40
+W:85:2:4000:1300
+E:1:1:1:2:1:1
+O:20:50:30:0
+B:HIT:DARK:13d9
+B:CLAW:HURT:12d10
+F:MALE | DROP_60 | MORTAL | BASEANGBAND | EVIL | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:IM_FIRE | RES_DARK | SUSCEP_COLD | SUSCEP_ELEC | RES_CHAO | 
+F:REFLECTING | CAN_FLY | DEMON | ESCORTS | 
+S:1_IN_8
+S:BR_CONF | BA_CHAO | S_DEMON | BR_NEXU | HEAL | BR_RADI | 
+D:A demon! No... despite the horns, claws and the shadowy wings, there is 
+D:a human within this horrific figure, a man steeped so deeply in demon 
+D:lore, he is able to ape their shape and their magic with ease! 
+
+N:6978:Warrior lord
+G:p:U
+I:140:30d150:50:85:20
+W:87:2:3000:1500
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:15d15
+B:HIT:HURT:15d15
+B:HIT:HURT:15d15
+F:MALE | DROP_60 | MORTAL | BASEANGBAND | EVIL | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:IM_ACID | IM_COLD | NO_CONF | IM_ELEC | NO_FEAR | IM_FIRE | 
+F:HAS_LITE | SMART | NO_STUN | NO_SLEEP | 
+S:1_IN_7
+S:ARROW_4
+D:This warrior is clad in the heaviest of plate yet moves fast as the wind 
+D:and holds a great lance in his hand as if it were no more than a sapling! 
+D:He is the cream of the warrior class and a fearsome foe for even the 
+D:mightiest of lords! 
+
+N:6979:Dagger of Mordor
+G:p:s
+I:140:13d200:90:90:0
+W:87:2:1800:1800
+E:1:1:1:2:1:1
+O:10:50:20:20
+B:HIT:POISON:12d12
+B:HIT:CONFUSE:8d9
+B:HIT:PARALYZE:8d9
+B:HIT:HURT:8d9
+F:MALE | DROP_60 | MORTAL | BASEANGBAND | EVIL | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:RES_DARK | IM_POIS | INVISIBLE | ATTR_CLEAR | SMART | 
+S:1_IN_4
+S:BO_POIS | TRAPS | BLINK | TPORT | 
+D:Sauron has many secrets in his fortress, and here is one of the deadliest, 
+D:an assassin trained since birth to kill quietly and without detection. A 
+D:cloak of grey hides many devices of compact death! 
+
+N:6980:Old sorceror
+G:p:y
+I:130:15d100:40:60:30
+W:95:6:1600:2300
+E:1:1:1:2:1:1
+O:20:0:80:0
+B:HIT:HURT:2d12
+F:MALE | DROP_60 | MORTAL | BASEANGBAND | EVIL | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:IM_ACID | IM_COLD | NO_CONF | IM_FIRE | IM_ELEC | IM_POIS | 
+F:HAS_LITE | NO_SLEEP | NO_STUN | SMART | 
+S:1_IN_2
+S:BA_FIRE | SLOW | DARKNESS | CONF | BO_MANA | HASTE | HEAL | 
+S:BLINK | TPORT | S_MONSTERS | BA_WATE | BR_ICEE | BA_POIS | 
+S:S_HI_UNDEAD | HAND_DOOM | TELE_AWAY | 
+D:Ths old, fine-boned man wears a simple robe, and is without jewels 
+D:or ornament. He is also one of the most powerful mages in Arda, with 
+D:power pulsing in the air above him! 
+
+N:6981:Knight Commander of Mordor
+G:p:B
+I:140:30d250:90:90:0
+W:95:5:3200:2600
+E:1:1:1:2:1:1
+O:20:0:80:0
+B:HIT:DARK:15d15
+B:HIT:DARK:15d15
+B:HIT:HURT:15d15
+B:HIT:HURT:15d15
+F:MALE | DROP_60 | MORTAL | BASEANGBAND | EVIL | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:IM_ACID | IM_COLD | NO_CONF | RES_DARK | IM_ELEC | NO_FEAR | IM_FIRE | 
+F:IM_POIS | FORCE_MAXHP | NO_SLEEP | NO_STUN | ESCORTS | HAS_LITE | 
+F:SMART | RES_CHAO | 
+S:1_IN_5
+S:DARKNESS | DRAIN_MANA | BR_VENO | BA_DARK | S_UNDEAD | S_KIN | 
+S:S_HI_UNDEAD | HAND_DOOM | TPORT | 
+D:Encased in gleaming silver armor, this human looks almost noble until 
+D:you see the foul standard of Mordor engraved on his shield. He is a 
+D:High Commander, answering to Sauron himself. He is mighty in both the 
+D:arts of war and of magic. You will not find a more fearsome living 
+D:servant of darkness in the whole of Arda! 
+
+N:6982:Cart horse
+G:q:D
+I:110:10d4:20:9:70
+W:5:3:3000:4
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:KICK:HURT:4d4
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | WILD_GRASS | 
+F:FORCE_SLEEP | FEMALE | STUPID | 
+D:This old nag has seen better days. 
+
+N:6983:Black bear
+G:q:D
+I:110:6d6:80:15:40
+W:8:2:1800:10
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:CLAW:HURT:1d5
+B:CLAW:HURT:1d5
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | 
+F:FORCE_SLEEP | STUPID | CAN_FLY | 
+D:This small bear is usually shy around humans. 
+
+N:6984:Rohirrim scout
+G:q:B
+I:115:7d7:70:30:20
+W:10:2:4700:16
+E:0:1:0:2:1:2
+O:20:50:0:0
+B:KICK:HURT:2d5
+B:HIT:HURT:1d6
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | 
+F:FORCE_SLEEP | GOOD | DROP_60 | 
+D:This lightly armed and armored horseman rides one of the lean 
+D:racing horses of Rohir. 
+
+N:6985:Easterling skirmisher
+G:q:r
+I:110:8d8:50:30:50
+W:20:2:4700:30
+E:0:1:0:2:1:2
+O:20:50:0:0
+B:HIT:HURT:8d8
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | RES_DARK | 
+F:FORCE_SLEEP | EVIL | DROP_60 | FRIENDS | 
+D:Waving their curved blades wildly, these mounted troops hunt in packs 
+D:and fall upon the weak! 
+
+N:6986:Warg rider
+G:q:s
+I:120:7d12:40:40:40
+W:30:2:3000:90
+E:0:1:0:2:1:2
+O:20:60:0:0
+B:HIT:HURT:6d6
+B:BITE:HURT:8d8
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | 
+F:FORCE_SLEEP | EVIL | DROP_60 | RES_DARK | HURT_LITE | 
+F:ORC | FRIENDS | 
+D:Each of these massive Wargs are topped by an orc wielding a wicked 
+D:looking flail. They both howl at you, and it's a toss-up as to who 
+D:looks the more bestial! 
+
+N:6987:Rohirrim lancer
+G:q:b
+I:115:11d15:28:50:30
+W:35:4:5500:200
+E:0:1:0:2:1:2
+O:30:70:0:0
+B:HIT:HURT:10d8
+B:KICK:HURT:6d6
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | 
+F:FORCE_SLEEP | GOOD | DROP_60 | FRIENDS | 
+D:Holding long and deadly spears, these fierce horsemen form the backbone 
+D:of the forces of Rohan, man and beast alike in skill and valor! 
+
+N:6988:Brown bear
+G:q:U
+I:110:9d8:60:20:40
+W:23:2:2100:100
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:CLAW:HURT:4d4
+B:CLAW:HURT:4d4
+B:BITE:HURT:6d6
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | 
+F:FORCE_SLEEP | NO_FEAR | CAN_FLY | 
+D:This large bear is big enough to cause some serious damage if it got 
+D:close to you! Best keep your distance. 
+
+N:6989:Cave bear
+G:q:g
+I:115:12d12:40:40:40
+W:35:5:4000:250
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:CLAW:HURT:6d6
+B:CLAW:HURT:6d6
+B:BITE:HURT:8d8
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | REGENERATE | 
+F:FORCE_SLEEP | NO_FEAR | CAN_FLY | NO_CONF | POWERFUL | 
+D:This massive bear is a throwback to an earlier age of Arda, its 
+D:great claws and fangs a relic to a simpler, more violent time! 
+
+N:6990:War bear
+G:q:v
+I:115:10d10:60:30:60
+W:40:2:3000:250
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:CLAW:HURT:6d4
+B:CLAW:HURT:6d4
+B:BITE:HURT:6d8
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | FORCE_SLEEP | 
+F:NO_CONF | RES_DARK | NO_FEAR | EVIL | FRIENDS | 
+F:REGENERATE | RES_CHAO | 
+D:With rings and spikes driven into their very flesh and their eyes burning 
+D:with the suffering of the pits of Barad-Dur, these bears are lost to 
+D:Sauron's corruption and hunt in packs to tear and rend his foes! 
+
+N:6991:Meara
+G:q:g
+I:120:12d12:20:50:30
+W:40:4:4000:200
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:KICK:HURT:6d6
+B:KICK:HURT:6d6
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | FORCE_SLEEP | 
+F:NO_STUN | 
+D:Proud and free, this great warhorse paws the earth nervously. and 
+D:tosses its mane Trained for battle by some unknown lord, it is 
+D:here, riderless. 
+
+N:6992:Easterling horseman
+G:q:r
+I:120:12d18:30:40:30
+W:40:3:5000:300
+E:0:1:0:2:1:2
+O:20:70:0:0
+B:HIT:HURT:8d8
+B:KICK:HURT:6d6
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | 
+F:FORCE_SLEEP | EVIL | DROP_60 | 
+F:RES_DARK | FRIENDS | 
+D:These grim-faced cavalry from the east wield large swords and are 
+D:poosesed with hatred for all who oppose their lord Sauron! 
+
+N:6993:Beorning
+G:q:s
+I:120:15d25:60:35:30
+W:50:4:4000:500
+E:0:1:0:2:1:2
+O:0:0:20:0
+B:CLAW:HURT:8d8
+B:CLAW:HURT:8d8
+B:BITE:HURT:10d9
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | FORCE_SLEEP | 
+F:NO_CONF | NO_FEAR | REGENERATE | CAN_FLY | DROP_60 | 
+S:1_IN_5
+S:S_ANIMAL
+D:This huge beast seems has a disturbing look of intelligence in its 
+D:eyes, although its massive paws and fanged snout belong firmly to 
+D:the bear family. 
+
+N:6994:Rohirrim mounted archer
+G:q:B
+I:115:12d32:30:45:0
+W:57:3:5500:450
+E:0:1:0:2:1:2
+O:20:80:0:0
+B:HIT:HURT:6d6
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | 
+F:FORCE_SLEEP | GOOD | DROP_60 | 
+S:1_IN_3
+S:ARROW_4 | BOULDER
+D:This Rohirrhim archer appears to not be holding the great lance of his 
+D:comptriots, and you relax. Then you spy the deadly little recurve bow 
+D:strapped to the saddle and you tense up again. This horseman is as 
+D:deadly a killer as his compatriots. 
+
+N:6995:Easterling cavalry captain
+G:q:R
+I:120:16d36:60:60:60
+W:56:3:6500:875
+E:0:1:0:2:1:2
+O:30:70:0:0
+B:HIT:HURT:9d8
+B:HIT:HURT:9d8
+B:HIT:HURT:9d8
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | 
+F:FORCE_SLEEP | EVIL | DROP_60 | NO_CONF | RES_DARK | NO_FEAR | 
+F:SMART | ESCORT | 
+D:Resplendent in silks and mailed leathers, this barbarian commander sits 
+D:astride a desert destrier, huge scimitar in hand and his dark eyes 
+D:gleaming with both calculation and hatred! 
+
+N:6996:Rohirrim heavy lancer
+G:q:B
+I:118:16d44:30:40:60
+W:65:2:7000:500
+E:0:1:0:2:1:2
+O:30:70:0:0
+B:HIT:HURT:14d9
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | 
+F:FORCE_SLEEP | GOOD | DROP_60 | NO_FEAR | REFLECTING | FRIENDS | 
+D:This gleaming warrior is seated upon the biggest, heaviest warhorse 
+D:in all of Rohan, which is itself clad in heavy mail. The long lance and 
+D:kite-like shield complete one of the deadlist cavalry fighters in Arda! 
+
+N:6997:Rohirrim cavalry commander
+G:q:B
+I:120:17d46:60:45:40
+W:70:3:7500:900
+E:0:1:0:2:1:2
+O:30:70:0:0
+B:HIT:HURT:10d8
+B:HIT:HURT:10d8
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | 
+F:FORCE_SLEEP | GOOD | DROP_60 | NO_CONF | NO_FEAR | REFLECTING | 
+F:SMART | ESCORT | 
+D:Proud sons of Rohan, arise! This noble warrior sits upon a great steed 
+D:finely mailed and armed. A hero to his people and a terror to the foes 
+D:of Rohan, this flaxen-haired horseman commands a troop of lancers. 
+
+# was a unique in T3 for some reason but everything about it screams "regular monster" to me --Amy
+N:6998:Orcish houndmaster
+G:q:w
+I:125:15d55:60:65:40
+W:75:3:6000:950
+E:0:1:0:2:1:2
+O:20:50:0:0
+B:HIT:HURT:9d8
+B:HIT:HURT:5d5
+B:BITE:HURT:10d8
+B:BITE:HURT:10d8
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | 
+F:FORCE_SLEEP | EVIL | DROP_60 | ORC | 
+F:RES_DARK | HURT_LITE | ESCORT | 
+S:1_IN_5
+S:SCARE | S_KIN
+D:Mounted on a huge white wolf, this tall orc bears a spear in one hand 
+D:and a whip in the other hand to keep Sauron's packs in line. These two 
+D:crave manflesh, and will try to feast on yours! 
+
+N:6999:Elder beorning
+G:q:D
+I:120:20d80:70:65:30
+W:80:4:5000:1200
+E:0:1:0:2:1:2
+O:0:30:40:0
+B:CLAW:HURT:10d10
+B:CLAW:HURT:10d10
+B:BITE:HURT:12d11
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | FORCE_SLEEP | DROP_60 | 
+F:NO_CONF | NO_FEAR | IM_POIS | POWERFUL | REGENERATE | CAN_FLY | 
+S:1_IN_3
+S:S_ANIMALS | S_KIN | HEAL | 
+D:Streaks of grey mark the muzzle of this huge bear, although the fire 
+D:in its eyes seems to have only grown with age, and it regards you 
+D:without fear. This kin of Beorn is wise beyond measure and cunning in 
+D:both human knowledge and the deeper mysteries of nature. You would be 
+D:be wise not to quarrel with it! 
+
+N:7000:Nightmare
+G:q:g
+I:120:40d70:90:60:0
+W:80:3:6000:3000
+E:0:1:0:2:1:2
+O:40:0:0:0
+B:GAZE:CONFUSE:5d5
+B:GAZE:PARALYZE:5d5
+B:GAZE:TERRIFY:5d5
+B:KICK:DARK:30d10
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | FORCE_SLEEP | 
+F:IM_ACID | IM_COLD | NO_CONF | RES_DARK | IM_ELEC | NO_FEAR | 
+F:IM_FIRE | IM_POIS | COLD_BLOOD | REGENERATE | EVIL | UNDEAD | 
+F:NONLIVING | EMPTY_MIND | PASS_WALL | NO_SLEEP | NO_CUT | 
+F:CAN_FLY | DROP_60 | 
+S:1_IN_3
+S:SHRIEK | S_WRAITH
+D:Ahead of you, a bone-white horse stands and paws the ground. When you 
+D:get closer, you realise it's not just bone-white, but bone. It is a 
+D:gruesome Nightmare, an undead horse created from the terrified screams 
+D:of the sleeping and released into the waking world. 
+
+# lol someone REALLY managed to think "kine" was a misspelling, and changed it to "king"...
+# the description correctly keeps the term "kine" but the monster's name does not, wtf...
+N:7001:King of Araw
+G:q:r
+I:105:18d18:40:3:85
+W:8:2:20000:8
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:KICK:HURT:2d8
+B:BUTT:HURT:1d11
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | FORCE_SLEEP | 
+F:STUPID | FRIENDS | 
+D:The oxen that live on the lands around the Sea of Rhun are hardier 
+D:and wilder than any others in Middle-earth. Legends claim that they 
+D:are descended from the cattle of the Huntsman of the Valar, Orome 
+D:himself, and so they are named the Kine of Araw (Araw being the Sindarin 
+D:form of Orome's name). It is a huge four-legged beast that won't attack 
+D:unless provoked.
+
+N:7002:Mumak calf
+G:q:W
+I:110:12d12:40:3:20
+W:16:3:8000:30
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BUTT:HURT:5d5
+F:BASH_DOOR | DROP_CORPSE | RAND_50 | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:This young calf is about as small as a Mumak gets, with its head ony 
+D:at the height of a man and it's tusks mere stubs on its face. It lows 
+D:mournfully at you. 
+
+N:7003:Razorback
+G:q:u
+I:110:14d14:80:30:60
+W:20:3:6500:125
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BUTT:HURT:4d8
+B:BUTT:HURT:4d8
+F:BASH_DOOR | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND | NO_CONF | NO_FEAR | WEIRD_MIND | 
+F:STUPID | 
+S:1_IN_10
+S:SHRIEK
+D:This wild pig has grown to a massive size that dwarfs many horses! It 
+D:is the lord of its domain and bows down to no one, man or beast. Beware! 
+D:You may find yourself adorning its gigantic tusks! 
+
+N:7004:Slave mumak
+G:q:g
+I:105:30d30:60:20:40
+W:25:2:120000:180
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BUTT:HURT:8d14
+F:BASH_DOOR | DROP_CORPSE | FRIEND | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:This mumak has been bred for heavy labor in the southern lands, and 
+D:has a rider seated on its neck with a long, flexible whip. The clipped 
+D:tusks should not fool you, for it still has the mumakil's thick, grey hide 
+D:and monstrous strength! 
+
+N:7005:Mumak cow
+G:q:D
+I:105:35d35:20:30:80
+W:30:2:130000:300
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BUTT:HURT:12d16
+F:BASH_DOOR | DROP_CORPSE | FRIENDS | ESCORT | 
+F:ANIMAL | MORTAL | BASEANGBAND | FEMALE | 
+D:This large female mumak is relatively docile, and will not anger easily 
+D:but you would be unwise to exctie her wrath, as she is still a large and 
+D:powerful beast. You will often see them with mumak calves. 
+
+N:7006:Rhinocerous
+G:q:W
+I:115:13d13:60:40:70
+W:35:3:100000:350
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BUTT:HURT:8d10
+B:BUTT:HURT:8d10
+F:BASH_DOOR | DROP_CORPSE | ANIMAL | MORTAL | BASEANGBAND | 
+F:NO_FEAR | NO_STUN | REFLECTING | 
+D:This horn-nosed beast is the terror of the plans, with a grumpy attitude 
+D:and enough mass and power to give pause to a troll! It has a thick, 
+D:armored hide and stumpy legs that give it a surprising turn of speed! 
+
+N:7007:Bull mumak
+G:q:s
+I:115:40d40:40:40:60
+W:40:2:180000:900
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BUTT:HURT:10d16
+B:CRUSH:HURT:8d20
+F:BASH_DOOR | DROP_CORPSE | ANIMAL | MORTAL | BASEANGBAND | MALE | 
+F:REFLECTING | ESCORT | 
+S:1_IN_10
+S:SCARE
+D:This majestic bull is the master of his harem of females, his tusks 
+D:long and sharp. The thickness of his scarred and pitted hide renders 
+D:him all but immune to the attacks of punier creatures, and the ground 
+D:shakes with his power. He is a King of Mumakil and not to be trifled 
+D:with! 
+
+N:7008:Rogue mumak
+G:q:r
+I:120:50d40:40:20:0
+W:50:4:180000:1500
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BUTT:HURT:10d20
+B:CRUSH:HURT:12d20
+F:BASH_DOOR | DROP_CORPSE | ANIMAL | MORTAL | BASEANGBAND | 
+F:NO_CONF | NO_FEAR | REFLECTING | KILL_BODY | WEIRD_MIND | 
+S:1_IN_8
+S:SHRIEK 
+D:This bull mumak is separate from the herd, and for good reason, as it 
+D:is in musk and nearly mad from it. It charges blindly at imaginary 
+D:rivals and uproots mighty trees merely because they are in his way! 
+
+N:7009:War mumak
+G:q:r
+I:120:50d50:40:35:0
+W:50:2:200000:1800
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BUTT:HURT:10d20
+B:CRUSH:HURT:12d20
+F:BASH_DOOR | DROP_CORPSE | ANIMAL | MORTAL | BASEANGBAND | 
+F:NO_FEAR | REFLECTING | KILL_BODY | FRIENDS | 
+D:Jingling with with the weight of great brass rings and painted for war 
+D:by its Easterling riders, this mumak is a terrible foeman. Its tusks 
+D:are capped in bronze and its eyes are wild with the cruel prodding 
+D:from its riders, it is one of the most fearsome cavalry on Middle Earth! 
+
+N:7010:Battle mumak
+G:q:o
+I:120:50d40:40:40:0
+W:60:3:220000:2000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BUTT:HURT:15d20
+B:CRUSH:HURT:16d20
+F:BASH_DOOR | DROP_CORPSE | ANIMAL | MORTAL | BASEANGBAND | 
+F:NO_FEAR | REFLECTING | KILL_BODY | FRIENDS | 
+S:1_IN_2
+S:ARROW_4
+D:These mumakil have a great howdah on their backs filled with half a 
+D:dozen easterlng archers. This mumak has range with which to sting its 
+D:enemies and its great tusks and heavy armor to smite foes which stray 
+D:too close! 
+
+# was a unique... wtf... nope, sorry, it's a regular monster in SX :-P --Amy
+N:7011:Mumak of Isengard
+G:q:B
+I:110:60d50:80:20:10
+W:80:5:300000:8000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BUTT:HURT:18d25
+B:CRUSH:HURT:24d20
+F:BASH_DOOR | DROP_CORPSE | ANIMAL | MORTAL | BASEANGBAND | INVISIBLE | 
+F:IM_ACID | IM_COLD | NO_CONF | RES_DARK | SUSCEP_ELEC | NO_FEAR | 
+F:IM_FIRE | IM_POIS | CHAR_MULTI | FORCE_MAXHP | NO_SLEEP | CAN_FLY | 
+F:REFLECTING | REGENERATE | WEIRD_MIND | NO_STUN | CAN_SPEAK | 
+S:1_IN_6
+S:HEAL | HASTE | 
+D:A towering amalgam of flesh and steel, this mumak has been raised in 
+D:the depths of Isengard and has been the subject of many cruel 
+D:experiments and alterations. Spiked armor have been bolted into its 
+D:flesh, and it has been fed many foul potions and unguents. Atop its 
+D:back sits a rattling orcish machine, feeding further elixirs into it 
+D:from great bubbling vats. Its eyes show both madness and an inhuman 
+D:cunning. It will kill you, if it can! 
+
+N:7012:Giant glow worm
+G:w:B
+I:100:31d3:14:10:30
+W:29:1:1000:40
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:PARALYZE
+B:GAZE:CONFUSE
+B:BITE:HURT:6d8
+F:ANIMAL | MORTAL | BASEANGBAND | HAS_LITE | INVISIBLE | FRIENDS | 
+F:NEVER_MOVE | CAN_FLY | REGENERATE | 
+D:Hidden on the ceiling, this creature attracts its prey with 
+D:its mesmerising lights and enfolds them in its sticky webs! 
+
+N:7013:Giant glow worm
+G:w:B
+I:100:31d3:14:10:30
+W:29:4:1000:40
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:PARALYZE
+B:GAZE:CONFUSE
+B:BITE:HURT:6d8
+F:ANIMAL | MORTAL | BASEANGBAND | HAS_LITE | INVISIBLE | FRIENDS | 
+F:NEVER_MOVE | CAN_FLY | REGENERATE | 
+S:MULTIPLY
+D:Hidden on the ceiling, this creature attracts its prey with 
+D:its mesmerising lights and enfolds them in its sticky webs! 
+
+N:7014:Eldritch glow worm
+G:w:B
+I:110:31d12:14:30:30
+W:69:1:1000:200
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:PARALYZE
+B:GAZE:CONFUSE
+B:BITE:EAT_LITE:6d15
+B:BITE:LOSE_CON:1d10
+F:ANIMAL | MORTAL | BASEANGBAND | HAS_LITE | INVISIBLE | FRIENDS | 
+F:CAN_FLY | REGENERATE | FRIENDS | ELDRITCH_HORROR | RES_LITE | 
+F:WEIRD_MIND | 
+D:Oh NO! These little insects are just waiting for night to fall, 
+D:and then they'll descend on you in groups, feast on your exposed 
+D:flesh until only a skeleton remains, and finally they'll spin a 
+D:cocoon around you to preserve your grisly bones! 
+
+N:7015:Eldritch glow worm
+G:w:B
+I:110:31d12:14:30:30
+W:69:4:1000:200
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:PARALYZE
+B:GAZE:CONFUSE
+B:BITE:EAT_LITE:6d15
+B:BITE:LOSE_CON:1d10
+F:ANIMAL | MORTAL | BASEANGBAND | HAS_LITE | INVISIBLE | FRIENDS | 
+F:CAN_FLY | REGENERATE | FRIENDS | ELDRITCH_HORROR | RES_LITE | 
+F:WEIRD_MIND | 
+S:MULTIPLY
+D:Oh NO! These little insects are just waiting for night to fall, 
+D:and then they'll descend on you in groups, feast on your exposed 
+D:flesh until only a skeleton remains, and finally they'll spin a 
+D:cocoon around you to preserve your grisly bones! 
+
+N:7016:Nandorin hunter
+G:h:g
+I:116:5d21:120:15:15
+W:34:5:1000:320
+E:1:1:1:2:1:1
+O:0:25:0:25
+B:HIT:HURT:5d5
+B:HIT:HURT:6d5
+B:HIT:HURT:2d12
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | MORTAL | BASEANGBAND | OPEN_DOOR | 
+F:GOOD | DROP_60 | 
+F:CAN_SWIM | INVISIBLE | SMART | FRIENDS | 
+S:1_IN_2
+S:ARROW_4
+D:Silent and unseen are the ways of the elves, and this hunter even more 
+D:so. He fears little, even within Mirkwood Forest, and you are a 
+D:distraction to his hunt! 
+
+N:7017:Nandorin war party
+G:h:u
+I:120:6d21:55:30:30
+W:38:5:160:375
+E:1:1:1:2:1:1
+O:0:25:0:25
+B:HIT:HURT:6d5
+B:HIT:HURT:6d5
+B:HIT:HURT:6d5
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | MORTAL | BASEANGBAND | OPEN_DOOR | 
+F:GOOD | DROP_60 | 
+F:SMART | FRIENDS | 
+D:Here come a party of Wood Elves dressed from war. They are the fiercest 
+D:forest fighters upon Middle Earth and you would be wise not to seek 
+D:quarrel with them! 
+
+N:7018:Nandorin hero
+G:h:R
+I:122:25d22:15:18:30
+W:45:1:2200:550
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:5d5
+B:HIT:COLD:5d5
+B:HIT:HURT:8d8
+B:HIT:BLIND:8d8
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | MORTAL | BASEANGBAND | OPEN_DOOR | 
+F:GOOD | DROP_22 | 
+F:IM_FIRE | NO_FEAR | IM_POIS | RES_LITE | SMART | FORCE_MAXHP | 
+F:DROP_GOOD | ESCORTS | HAS_LITE | 
+S:1_IN_4
+S:HEAL | S_ANIMAL | HASTE | 
+D:Wielding an enchanted sword and dagger, this formidable warrior 
+D:is among the elite of the elven army. 
+
+N:7019:Nandorin legend
+G:h:R
+I:131:25d85:15:45:30
+W:75:1:2200:4000
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:POISON:5d12
+B:HIT:COLD:5d12
+B:HIT:WATER:8d12
+B:HIT:BLIND:8d12
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | MORTAL | BASEANGBAND | OPEN_DOOR | 
+F:GOOD | DROP_22 | RES_WATE | NO_SLEEP | RES_SOUN | RES_SHAR | RES_MIND | 
+F:IM_FIRE | NO_FEAR | IM_POIS | RES_LITE | SMART | FORCE_MAXHP | 
+F:DROP_GOOD | ESCORTS | HAS_LITE | 
+S:1_IN_4
+S:HEAL | S_ANIMAL | HASTE | BA_COLD | CAUSE_3 | MIND_BLAST | TRAPS | 
+S:S_ANIMALS | S_SPIDER | S_SNAKE | S_BEETLE | S_BIRD | 
+D:A legendary elf who just decided that he doesn't like you. 
+
+N:7020:Nandorin warrior
+G:h:W
+I:125:8d18:25:18:35
+W:30:10:2000:345
+E:1:1:1:2:1:1
+O:0:25:0:25
+B:HIT:HURT:4d5
+B:HIT:HURT:6d5
+B:HIT:HURT:4d6
+F:TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | MORTAL | BASEANGBAND | OPEN_DOOR | 
+F:GOOD | DROP_60 | NO_FEAR | SMART | FRIENDS | 
+D:These veteran warriors make up the bulk of the 
+D:great army of Mirkwood. They are fearsome foes. 
+
+N:7021:Giant black squirrel
+G:r:s
+I:118:5d10:15:5:5
+W:30:5:275:105
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:8d3
+B:BITE:HURT:8d3
+B:BITE:HALLU:5d3
+F:ANIMAL | DROP_CORPSE | MORTAL | BASEANGBAND | 
+F:NO_FEAR | STUPID | FRIENDS | CAN_FLY | 
+D:A very large, very black squirrel. 
+
+N:7022:Giant black squirrel
+G:r:s
+I:118:5d10:15:5:5
+W:30:20:275:105
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:8d3
+B:BITE:HURT:8d3
+B:BITE:HALLU:5d3
+F:ANIMAL | DROP_CORPSE | MORTAL | BASEANGBAND | 
+F:NO_FEAR | STUPID | FRIENDS | CAN_FLY | 
+S:MULTIPLY
+D:A very large, very black squirrel. 
+
+N:7023:Giant shadow squirrel
+G:r:d
+I:125:40d10:15:20:5
+W:60:5:275:666
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:DARK:8d8
+B:BITE:EAT_LITE:8d8
+B:BITE:HALLU:7d7
+F:ANIMAL | DROP_CORPSE | MORTAL | BASEANGBAND | RES_DARK | 
+F:NO_FEAR | STUPID | FRIENDS | CAN_FLY | 
+D:You can only see a mere shadow that is roughly shaped like a squirrel. 
+
+N:7024:Giant shadow squirrel
+G:r:d
+I:125:40d10:15:20:5
+W:60:20:275:666
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:DARK:8d8
+B:BITE:EAT_LITE:8d8
+B:BITE:HALLU:7d7
+F:ANIMAL | DROP_CORPSE | MORTAL | BASEANGBAND | RES_DARK | 
+F:NO_FEAR | STUPID | FRIENDS | CAN_FLY | 
+S:MULTIPLY
+D:You can only see a mere shadow that is roughly shaped like a squirrel. 
+
+N:7025:White stag
+G:q:w
+I:124:20d10:15:6:30
+W:32:5:1800:115
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:HIT:HURT:6d5
+B:BUTT:HURT:8d5
+B:KICK:HURT:5d5
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND | NO_FEAR | STUPID | 
+S:1_IN_4
+S:TELE_TO
+D:A beautiful white stag, with over fourteen points on its magnificent antlers. 
+
+N:7026:Black stag
+G:q:D
+I:132:20d120:15:40:30
+W:72:5:1800:2500
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CHARGE:SHARDS:10d20
+B:HIT:HURT:6d12
+B:BUTT:HURT:8d12
+B:KICK:HURT:5d12
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | EVIL | 
+F:ANIMAL | MORTAL | BASEANGBAND | NO_FEAR | STUPID | 
+S:1_IN_4
+S:TELE_TO
+D:An ugly black stag, which is charging at you with the intent to impale you 
+D:on its antlers. 
+
+N:7027:Great bear
+G:q:u
+I:123:30d12:25:30:20
+W:38:5:2750:320
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:BITE:HURT:5d8
+B:CLAW:HURT:9d3
+B:CRUSH:HURT:3d5
+B:BITE:HURT:3d5
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | FORCE_SLEEP | 
+F:NO_FEAR | SMART | FRIENDS | 
+D:These enormous shaggy bears make their homes in the shadowy retreats 
+D:of Mirkwood forest, and are rarley seen alone. 
+
+N:7028:Shaggy great bear
+G:q:g
+I:128:30d16:30:35:30
+W:45:3:3800:320
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:CLAW:HURT:8d8
+B:CLAW:HURT:10d6
+B:BITE:HURT:2d7
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | FORCE_SLEEP | 
+F:NO_FEAR | SMART | REFLECTING | FORCE_MAXHP | 
+D:Of the great bears of Mirkwood, this one seems to be somewhat fiercer than the others. 
+D:These bears have distinctly longer fur than their more common cousins. 
+
+N:7029:Crazy great bear
+G:q:v
+I:133:30d126:30:120:30
+W:75:3:3800:4500
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:CLAW:HURT:8d20
+B:CLAW:HURT:10d15
+B:BITE:HURT:2d17
+F:BASEANGBAND | ANIMAL | MORTAL | DROP_CORPSE | FORCE_SLEEP | 
+F:NO_FEAR | STUPID | REFLECTING | FORCE_MAXHP | RES_CHAO | EVIL | 
+F:EMPTY_MIND | 
+D:A bear corrupted by chaos, it wants to trample you and, once you're 
+D:dead, feat on your stinking corpse. 
+
+N:7030:Mirkwood warg
+G:C:U
+I:122:5d10:15:15:30
+W:30:5:2750:320
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:19d4
+B:BITE:HURT:19d4
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | EVIL | MORTAL | BASEANGBAND | NO_FEAR | 
+F:RES_DARK | SUSCEP_FIRE | SMART | FRIENDS | 
+S:1_IN_6
+S:SHRIEK
+D:Once thought to be extinct, these enormous wolves 
+D:are again ravaging the forest. 
+
+N:7031:Mirkwood spirit
+G:G:g
+I:110:8d6:15:15:30
+W:35:2:10:300
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:INSANITY:1d2
+B:TOUCH:BLIND:9d4
+B:TOUCH:TIME:5d2
+F:EVIL | UNDEAD | BASEANGBAND | NO_CUT | FEMALE | 
+F:NO_FEAR | IM_FIRE | SMART | MORTAL | INVISIBLE | 
+F:CAN_FLY | 
+D:This spirit died of exposure long ago in Mirkwood, insane and alone 
+D:it clings to you for comfort, at the same time trying to make you as 
+D:dead as she! 
+
+N:7032:Huldra
+G:G:B
+I:118:18d26:15:80:30
+W:65:2:10:2500
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:INSANITY:2d25
+B:TOUCH:BLIND:9d13
+B:TOUCH:TIME:5d14
+B:TOUCH:AMEBA:8d10
+F:EVIL | UNDEAD | BASEANGBAND | NO_CUT | FEMALE | RES_WATE | 
+F:NO_FEAR | IM_FIRE | SMART | MORTAL | INVISIBLE | RES_TIME | 
+F:CAN_FLY | POWERFUL | IM_COLD | IM_POIS | NO_SLEEP | RES_MIND | 
+F:RES_ETHE | 
+S:1_IN_8
+S:SCARE | CONF | BR_RADI | BR_CONF | 
+D:A spirit that looks like a beautiful woman. But if you look at her 
+D:back, she'll look like a rotting tree stump with a cow's tail. 
+D:She'll try to entice you into the wilderness where she will kill you. 
+
+N:7033:Skeletal elf
+G:s:y
+I:111:8d14:15:20:30
+W:39:5:1000:250
+E:1:1:1:2:1:1
+O:0:40:0:0
+B:HIT:HURT:8d4
+B:HIT:HURT:1d10
+B:HIT:HURT:5d5
+F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | NO_FEAR | STUPID | 
+F:BASEANGBAND | NO_CUT
+D:This wood elf met a grisly end many years ago, and now only its bones 
+D:are left. These bones have absorbed the evil energy that abounds in 
+D:Mirkwood, and have arisen, picked up the elf's rusty sword and are 
+D:out in search of the living to revenge itself on. 
+
+N:7034:Skeletal orc champion
+G:s:B
+I:110:20d16:15:13:30
+W:40:5:1200:260
+E:1:1:1:2:1:1
+O:0:40:0:0
+B:HIT:HURT:7d7
+B:HIT:HURT:7d7
+B:HIT:HURT:7d7
+F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | NO_FEAR | STUPID | 
+F:BASEANGBAND | NO_CUT | ORC | 
+D:The remains of an ancient orcish champion risen from its mossy 
+D:grave at the behest of the Necromancer. The creature snarls at you, 
+D:canines especially prominent now it has no lips to curl. 
+
+N:7035:Web sprayer
+G:S:B
+I:115:6d12:15:30:30
+W:30:12:900:300
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:PARALYZE:8d4
+B:BITE:POISON:19d4
+B:BITE:POISON:15d5
+F:DROP_SKELETON | OPEN_DOOR | BASH_DOOR | ANIMAL | SPIDER | BASEANGBAND | 
+F:NO_FEAR | SUSCEP_FIRE | HURT_LITE | SMART | MORTAL | 
+S:1_IN_2
+S:HOLD
+D:With its enormous blue spotted abdomen, this speciment is quite easy 
+D:to spot in any Mathom-house. Getting it dead and in there will, 
+D:however, be quite difficult. 
+
+N:7036:Mirkwood spider
+G:S:d
+I:115:9d9:60:30:30
+W:30:2:600:125
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:8d8
+F:DROP_SKELETON | OPEN_DOOR | BASH_DOOR | ANIMAL | SPIDER | BASEANGBAND | 
+F:IM_POIS | SMART | MORTAL | FRIENDS | 
+S:1_IN_2
+S:HOLD
+D:The trees around you are alive with chittering as the reflective eyes 
+D:of the true Lords of Mirkwood stare out at you. These spiders are 
+D:intelligent, and what's worse, co-operate to feed on their prey. 
+
+N:7037:Black weaver
+G:S:W
+I:115:8d12:15:20:30
+W:33:5:900:360
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:PARALYZE:8d4
+B:BITE:POISON:9d4
+F:DROP_SKELETON | OPEN_DOOR | BASH_DOOR | ANIMAL | SPIDER | BASEANGBAND | 
+F:NO_FEAR | SUSCEP_FIRE | HURT_LITE | SMART | MORTAL | INVISIBLE | 
+D:Its gray and inky black carapace makes it invisible for all practical 
+D:purposes. This spider does not spin webs, but waits carefully for its 
+D:prey in the shadows. 
+
+N:7038:Hawk spider
+G:S:u
+I:115:8d12:10:10:30
+W:34:5:700:330
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:9d4
+B:BITE:POISON:9d4
+F:DROP_SKELETON | OPEN_DOOR | BASH_DOOR | ANIMAL | SPIDER | BASEANGBAND | 
+F:NO_FEAR | SUSCEP_FIRE | HURT_LITE | MORTAL | CAN_FLY | 
+S:1_IN_10
+S:HOLD
+D:This bizarre breed of spider has learned to fly by spinning a web 
+D:between six of its legs and moving them rapidly. 
+
+N:7039:Moth spider
+G:S:y
+I:120:8d12:10:10:30
+W:35:5:900:360
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:STING:EAT_LITE:8d4
+B:BITE:POISON:9d5
+F:DROP_SKELETON | OPEN_DOOR | BASH_DOOR | ANIMAL | SPIDER | BASEANGBAND | 
+F:NO_FEAR | IM_FIRE | HURT_LITE | SMART | MORTAL |
+S:1_IN_8
+S:HOLD
+D:So named for its attraction to fire and not for any ability of, 
+D:flight, this spider hungrily eyes both you and your light source! 
+
+N:7040:Spitting spider
+G:S:g
+I:125:8d12:15:15:30
+W:38:2:900:360
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:SPIT:PARALYZE:8d4
+B:BITE:POISON:9d4
+B:BITE:POISON:5d5
+F:DROP_SKELETON | OPEN_DOOR | BASH_DOOR | ANIMAL | SPIDER | BASEANGBAND | 
+F:NO_FEAR | SUSCEP_FIRE | HURT_LITE | SMART | MORTAL | 
+S:1_IN_10
+S:HOLD | BR_POIS | 
+D:This spider has a modified venom gland that allows it to spit a 
+D:combination of venom and webbing which envelopes and paralyzes 
+D:its prey (you). 
+
+# used to be a unique but that's really a regular monster if you ask me --Amy
+N:7041:Nameless weaver
+G:S:o
+I:130:18d15:15:20:30
+W:45:1:3200:360
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:STING:PARALYZE:8d4
+B:STING:HALLU:5d4
+B:BITE:POISON:8d5
+B:BITE:POISON:16d5
+F:DROP_CORPSE | OPEN_DOOR | BASH_DOOR | ANIMAL | SPIDER | BASEANGBAND | 
+F:NO_FEAR | IM_FIRE | IM_COLD | HURT_LITE | RES_DARK | 
+F:SMART | MORTAL | FORCE_MAXHP | 
+S:1_IN_5
+S:HOLD | BR_POIS | SCARE
+D:One of the oldest and most evil of all 
+D:of the spiders in Mirkwood.  Its sight strikes 
+D:fear in the hearts of all who behold it. 
+
+N:7042:Ancient weaver
+G:S:v
+I:130:18d65:15:60:30
+W:65:1:3200:2400
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:STING:PARALYZE:8d12
+B:STING:HALLU:8d9
+B:BITE:VENOM:8d13
+B:BITE:INSANITY:8d8
+F:DROP_CORPSE | OPEN_DOOR | BASH_DOOR | ANIMAL | SPIDER | BASEANGBAND | 
+F:NO_FEAR | IM_FIRE | IM_COLD | HURT_LITE | RES_DARK | RES_MIND | 
+F:SMART | MORTAL | FORCE_MAXHP | RES_NETH | RES_CHAO | RES_INER | 
+S:1_IN_4
+S:HOLD | BR_POIS | SCARE | S_KIN | TRAPS | 
+D:A spider that's older than Jesus. 
+
+N:7043:Arachno weaver
+G:S:v
+I:140:35d111:15:111:30
+W:85:1:3200:8400
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:STING:PARALYZE:8d21
+B:STING:HALLU:8d17
+B:BITE:VENOM:8d23
+B:BITE:INSANITY:12d15
+F:DROP_CORPSE | OPEN_DOOR | BASH_DOOR | ANIMAL | SPIDER | BASEANGBAND | 
+F:NO_FEAR | IM_FIRE | IM_COLD | HURT_LITE | RES_DARK | RES_MIND | 
+F:SMART | MORTAL | FORCE_MAXHP | RES_NETH | RES_CHAO | RES_INER | 
+F:REGENERATE | IM_ACID | IM_POIS | IM_ELEC | RES_WATE | NO_SLEEP | 
+F:NO_STUN | NO_CUT | RES_TIME | RES_NERV | RES_ETHE | 
+S:1_IN_3
+S:HOLD | BR_POIS | SCARE | S_KIN | TRAPS | ROCKET | HASTE | BA_DARK | 
+S:BR_GRAV | CAUSE_4 | S_RANDOM | S_ELDRITCH | 
+D:Are you arachnophobic? If yes, you should run for your life now. 
+D:Actually, you should do so even if you aren't, because this spider 
+D:will KILL you if you stay around. 
+
+N:7044:Tree golem
+G:g:u
+I:115:20d20:10:30:0
+W:18:3:8000:60
+E:1:1:1:2:1:1
+O:0:0:20:0
+B:CLAW:HURT:6d9
+B:CLAW:HURT:6d9
+F:EMPTY_MIND | BASH_DOOR | NONLIVING | IM_ELEC | NO_FEAR | 
+F:MORTAL | BASEANGBAND | NO_CUT | IM_ACID | IM_COLD | NO_CONF | 
+F:SUSCEP_FIRE | COLD_BLOOD | REGENERATE | DROP_12 | CAN_FLY | 
+D:A dead tree ahead of you begins to wave its sharp branches. Is it an Ent? 
+D:The glowing symbols carved on it's trunk reveal otherwise, it is the 
+D:creation of a sorceror who doesn't take kindly to strangers in the forest! 
+
+N:7045:Forest fire
+G:#:r
+I:100:10d2:0:5:0
+W:13:3:8000:30
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:FIRE:6d4
+F:BASEANGBAND | EMPTY_MIND | IM_ACID | SUSCEP_COLD | NO_CONF | 
+F:IM_ELEC | RES_DARK | NO_FEAR | IM_FIRE | RES_LITE | CHAR_MULTI | 
+F:NONLIVING | RAND_50 | KILL_TREES | 
+D:You see a glow ahead of you, illuminating a tree. It's not illuminating, 
+D:the tree is on FIRE! 
+
+N:7046:Forest fire
+G:#:r
+I:100:10d2:0:5:0
+W:13:15:8000:30
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:FIRE:6d4
+F:BASEANGBAND | EMPTY_MIND | IM_ACID | SUSCEP_COLD | NO_CONF | 
+F:IM_ELEC | RES_DARK | NO_FEAR | IM_FIRE | RES_LITE | CHAR_MULTI | 
+F:NONLIVING | RAND_50 | KILL_TREES | 
+S:MULTIPLY
+D:You see a glow ahead of you, illuminating a tree. It's not illuminating, 
+D:the tree is on FIRE! 
+
+N:7047:Tree ant
+G:a:g
+I:110:6d5:10:15:10
+W:10:1:300:10
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:3d7
+F:DROP_SKELETON | BASH_DOOR | ANIMAL | MORTAL | BASEANGBAND
+F:FRIENDS | KILL_TREES | 
+D:Large ants with powerful, sickle-like mandibles. They are 
+D:carrying tree branches in their claws, back to the nest. 
+
+N:7048:Symbiant adept
+G:m:G
+I:110:9d9:30:20:50
+W:13:1:2000:20
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:2d10
+B:SPORE:POISON:2d7
+F:DROP_CORPSE | MORTAL | BASEANGBAND | TAKE_ITEM | 
+F:SUSCEP_FIRE | HURT_LITE | IM_POIS | OPEN_DOOR | 
+F:BASH_DOOR | 
+S:1_IN_8
+S:HEAL
+D:You stare at the slight figure approaching you, who seems 
+D:covered in a light sheen of moss. It hefts its mace 
+D:thoughtfully. 
+
+N:7049:Symbiant
+G:m:s
+I:115:15d12:80:25:10
+W:17:1:2200:50
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:3d10
+B:HIT:HURT:3d10
+B:SPORE:POISON:2d8
+B:SPORE:TERRIFY:2d8
+F:DROP_CORPSE | MORTAL | BASEANGBAND | TAKE_ITEM | 
+F:SUSCEP_FIRE | HURT_LITE | IM_POIS | OPEN_DOOR | 
+F:BASH_DOOR | SMART | REGENERATE | 
+S:1_IN_4
+S:HEAL | BLINK | S_KIN | 
+D:This man-shaped figure strides towards you, but you'd be 
+D:hard pressed to identify it as human, with its entire body 
+D:body covered in a heavy layer of moss. The sword in its hand 
+D:still looks sharp (if rusty)! 
+
+N:7050:Ancient symbiant
+G:m:s
+I:120:20d20:100:38:0
+W:21:1:3000:75
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:3d11
+B:HIT:HURT:3d11
+B:SPORE:POISON:2d11
+B:SPORE:CONFUSE:2d11
+F:DROP_CORPSE | MORTAL | BASEANGBAND | TAKE_ITEM | 
+F:SUSCEP_FIRE | IM_POIS | OPEN_DOOR | ESCORTS | 
+F:BASH_DOOR | SMART | REGENERATE | NO_CONF | 
+S:1_IN_2
+S:HEAL | BLINK | S_KIN | TPORT | SHRIEK | S_MONSTERS | 
+D:This creature looks fat on first glance, then you realise 
+D:that it is merely covered in layer upon layer of mold and 
+D:vegetation, although the eyes that peer out from the mass 
+D:at you crackle with power and intelligence. 
+
+N:7051:Master symbiant
+G:m:s
+I:128:20d150:100:160:0
+W:51:1:3000:2000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:POISON:3d25
+B:HIT:POISON:3d25
+B:SPORE:POISON:2d18
+B:SPORE:RANDOM:2d18
+F:DROP_CORPSE | MORTAL | BASEANGBAND | TAKE_ITEM | 
+F:IM_POIS | OPEN_DOOR | ESCORTS | POWERFUL | WEIRD_MIND | 
+F:BASH_DOOR | SMART | REGENERATE | NO_CONF | AURA_FIRE | 
+F:RES_WATE | NO_FEAR | RES_MIND | 
+S:1_IN_2
+S:HEAL | BLINK | S_KIN | TPORT | SHRIEK | S_MONSTERS | 
+S:BOULDER | ROCKET | S_MOLD | BR_POIS | BR_INER | 
+S:BR_DISI | TELE_LEVEL | S_RNG | S_THUNDERLORD | S_HI_DRAGON | 
+S:S_QUYLTHULG | S_IMMOBILE | S_CLOTHES | S_SEXY_GIRL | 
+S:S_SUMMONER | 
+D:You feel that this dude used a hack to obtain a symbiote that 
+D:isn't normally a valid symbiote. 
+
+N:7052:Orc sniper
+G:o:g
+I:100:4d10:60:14:0
+W:7:3:1800:15
+E:1:1:1:2:1:1
+O:20:60:0:0
+B:HIT:HURT:4d4
+F:MALE | TAKE_ITEM | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | INVISIBLE | 
+F:EVIL | ORC | MORTAL | BASEANGBAND | 
+F:DROP_12 | CAN_FLY | 
+S:1_IN_2
+S:ARROW_2
+D:Slow moving and almost invisible, this orc lurks 
+D:in the trees and launches arrows from his powerful bow. 
+
+N:7053:Crazed woodsman
+G:p:w
+I:115:8d8:10:12:80
+W:12:1:2000:20
+E:1:1:1:2:1:1
+O:20:20:0:0
+B:HIT:HURT:2d8
+B:HIT:HURT:2d8
+F:MALE | WILD_WOOD | NO_CONF | NO_FEAR | RAND_25 | 
+F:DROP_SKELETON | DROP_CORPSE | NO_STUN | DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:MORTAL | BASEANGBAND
+S:1_IN_10
+S:SHRIEK
+D:A human with an axe clad in goatskins mutters distractedly 
+D:to himself. He wandered into the Old Forest long ago and 
+D:appears to have been driven quite, quite mad. 
+
+N:7054:Tree spider
+G:S:g
+I:125:10d8:80:30:10
+W:15:1:800:30
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:2d8
+B:BITE:POISON:2d8
+F:DROP_SKELETON | OPEN_DOOR | BASH_DOOR | ANIMAL | SPIDER | BASEANGBAND | 
+F:IM_POIS | COLD_BLOOD | CAN_FLY | 
+S:1_IN_3
+S:HOLD
+D:You pass a tree, then turn to stare hard at it. What you thought 
+D:were waving branches appear to be waving legs, eight of them! 
+
+N:7055:Huntsman
+G:S:u
+I:130:10d8:80:40:10
+W:17:1:800:38
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:2d9
+B:BITE:POISON:2d9
+F:DROP_SKELETON | OPEN_DOOR | BASH_DOOR | ANIMAL | SPIDER | BASEANGBAND | 
+F:IM_POIS | COLD_BLOOD | 
+D:This huge spider rushes at you, baring its huge hairy fangs! 
+
+N:7056:Rogue of the Thieves Guild
+G:p:b
+I:110:8d4:20:12:5
+W:2:1:1400:6
+E:1:1:1:2:1:1
+O:50:25:0:25
+B:HIT:HURT:1d6
+B:TOUCH:EAT_GOLD
+F:MALE | 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | WILD_TOO |
+F:EVIL | MORTAL | BASEANGBAND
+D:A rather shifty individual. 
+
+N:7057:Guard of the Thieves Guild
+G:p:u
+I:110:10d4:20:16:5
+W:2:1:1600:6
+E:1:1:1:2:1:1
+O:25:50:0:25
+B:HIT:HURT:1d7
+B:HIT:HURT:1d6
+F:MALE | 
+F:DROP_60 | WILD_TOO | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+D:He looks inexperienced but tough. 
+
+N:7058:Conjurer of the Thieves Guild
+G:p:r
+I:110:6d4:20:6:5
+W:2:1:1400:6
+E:1:1:1:2:1:1
+O:25:0:50:25
+B:HIT:HURT:1d4
+F:MALE | 
+F:FORCE_SLEEP | WILD_TOO | DROP_SKELETON | DROP_CORPSE | 
+F:DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_3 | 
+S:BLINK | BLIND | CONF | MISSILE
+D:He is leaving behind a trail of dropped spell components. 
+
+N:7059:Bandit of the Thieves Guild
+G:p:b
+I:110:8d8:20:24:10
+W:10:2:1500:26
+E:1:1:1:2:1:1
+O:20:60:0:0
+B:HIT:HURT:2d5
+B:TOUCH:EAT_GOLD
+F:MALE | 
+F:DROP_60 | WILD_TOO | WILD_WOOD | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | MORTAL | BASEANGBAND | HAS_LITE
+D:He is after your cash, and your life! 
+
+# joke monster, obviously, but this is ToME-SX so it can spawn :-P --Amy
+N:7060:Darkgod's Personnal Test-o-Saur
+G:D:s
+I:130:250d20:13:45:10
+W:90:2:40000:4500
+E:0:1:0:6:1:0
+O:20:20:20:20
+B:HIT:HURT:10d10
+B:HIT:HURT:10d10
+B:BUTT:HURT:8d6
+B:BUTT:HURT:8d6
+F:BASEANGBAND | IM_FIRE | RES_DARK | SMART | RES_TELE | BASH_DOOR | 
+F:DROP_CORPSE | EVIL | FORCE_SLEEP | FORCE_MAXHP | MORTAL | 
+F:REGENERATE | ONLY_ITEM | DROP_42 | DROP_GOOD | DROP_GREAT | 
+S:1_IN_1
+S:BO_MANA | BA_FIRE | BR_WALL | HEAL | BLINK | BA_WATE | 
+S:S_ANIMAL | 
+D:It is a belligerent test-o-saur with a destructive magical arsenal, armed 
+D:with a hammer. It bounds towards you, snorting spells. 
+
+# ditto; had no attacks so I decided to add one --Amy
+N:7061:Darkgod's Personnal Townspeople
+G:t:s
+I:130:250d20:13:45:10
+W:50:2:40000:500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:10d10
+F:WILD_TOWN | MOVE_BODY | ONLY_ITEM | DROP_12
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | 
+D:It is a belligerent townspeople with a destructive magical arsenal, armed 
+D:with a hammer. It bounds towards you, snorting spells. 
+
+# ditto; had NEVER_MOVE but that's just silly so I allow it to move --Amy
+N:7062:Multi-armed Test Monster
+G:M:s
+I:130:250d20:13:45:10
+W:50:2:40000:500
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:6d6
+B:HIT:HURT:6d6
+B:HIT:HURT:6d6
+B:HIT:HURT:6d6
+F:DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | 
+D:Lots of arms, can attack with lots of weapons. 
+
+# ditto; good luck killing them when you're low-level... --Amy
+N:7063:Symbiote Test Monster
+G:m:G
+I:100:100d100:5:255:5
+W:1:4:50:10
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPORE:HURT:1d1
+F:MORTAL | BASEANGBAND | NEVER_MOVE | STUPID | EMPTY_MIND | 
+F:IM_POIS | 
+S:1_IN_6
+S:BLINK | MISSILE | 
+D:For symbiosis testing. 
+
+N:7064:Wanderer
+G:t:w
+I:110:2d3:10:1:50
+W:0:1:1500:1
+E:1:1:1:2:1:1
+O:1:1:1:1
+B:HIT:HURT:1d3
+F:WILD_TOWN | TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | 
+F:DROP_SKELETON | MORTAL | BASEANGBAND | MALE | 
+F:DROP_60 | BASH_DOOR | HAS_LITE | 
+D:A simple traveler that came here for whatever purpose suits him. 
+
+N:7065:Child
+G:t:r
+I:110:1d1:14:0:50
+W:0:1:700:0
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:WAIL:*
+F:WILD_TOWN | TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | 
+F:DROP_SKELETON | MORTAL | BASEANGBAND | 
+F:DROP_60
+D:A local town's child. 
+
+N:7066:Farmer
+G:t:g
+I:110:2d4:10:3:50
+W:0:1:1500:1
+E:1:1:1:2:1:1
+O:1:1:1:1
+B:HIT:HURT:1d2
+B:HIT:HURT:1d2
+F:WILD_TOWN | TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | 
+F:DROP_SKELETON | MORTAL | BASEANGBAND | MALE | 
+F:DROP_60 | 
+D:A local town's farmer. 
+
+N:7067:Miner
+G:t:u
+I:110:2d4:10:3:50
+W:0:1:1500:1
+E:1:1:1:2:1:1
+O:1:1:1:1
+B:HIT:HURT:2d2
+F:WILD_TOWN | TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | 
+F:DROP_SKELETON | MORTAL | BASEANGBAND | MALE | 
+F:DROP_60
+D:A local town's miner. 
+
+# was supposed to be unkillable but... meh --Amy
+N:7068:Farlina Snowfoot
+G:t:r
+I:110:10d10:40:2:0
+W:1:1:730:0
+E:0:1:1:2:1:1
+O:20:20:20:20
+F:UNIQUE | FEMALE | CAN_SPEAK | DROP_CORPSE | DROP_SKELETON |
+F:OPEN_DOOR | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | 
+F:MORTAL | BASEANGBAND | GOOD | NO_TARGET | 
+D:Farlina seems worried.
+
+N:7069:Lady Galadriel
+G:t:y
+I:160:100d100:40:250:0
+W:100:1:730:0
+E:0:1:1:2:1:1
+O:20:20:20:20
+F:UNIQUE | FEMALE | CAN_SPEAK | DROP_CORPSE | DROP_SKELETON |
+F:OPEN_DOOR | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | NEUTRAL | 
+F:MORTAL | BASEANGBAND | GOOD | NO_TARGET | CAN_SPEAK | 
+D:The beautiful lady Galadriel, Queen of the elves of Lothlorien. 
+
+N:7070:Lord Elrond, the half-elven
+G:t:B
+I:160:100d100:40:250:0
+W:100:1:730:0
+E:0:1:1:2:1:1
+O:20:20:20:20
+F:UNIQUE | MALE | CAN_SPEAK | DROP_CORPSE | DROP_SKELETON |
+F:OPEN_DOOR | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | NEUTRAL | 
+F:MORTAL | BASEANGBAND | GOOD | NO_TARGET | CAN_SPEAK | 
+D:One of the greatest Elves of Middle-earth, ruler of Rivendell. He is wise and powerful. 
+
+N:7071:Balin, Lord of Moria
+G:t:u
+I:160:100d100:40:250:0
+W:100:1:730:0
+E:0:1:1:2:1:1
+O:20:20:20:20
+F:UNIQUE | MALE | CAN_SPEAK | DROP_CORPSE | DROP_SKELETON |
+F:OPEN_DOOR | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | NEUTRAL | 
+F:MORTAL | BASEANGBAND | GOOD | NO_TARGET | CAN_SPEAK | 
+D:Describe me! 
+
 
 
 
