@@ -3092,7 +3092,8 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 		add_level = TRUE;
 	}
 
-	if (add_level) monster_set_level(c_ptr->m_idx, rand_range(min_level, max_level));
+	/* do not allow friendly (especially summoned) monsters to benefit from level scaling!!! --Amy */
+	if (add_level && (m_ptr->status < MSTATUS_FRIEND)) monster_set_level(c_ptr->m_idx, rand_range(min_level, max_level));
 
 	/* Give a random starting energy */
 	m_ptr->energy = (byte)rand_int(100);
