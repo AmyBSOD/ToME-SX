@@ -13035,6 +13035,84 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 		}
 		break;
 
+	case TRAP_OF_ICKY_LEVEL:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int j, k;
+
+			for (j = 0; j < cur_hgt; j++)
+			{
+				for (k = 0; k < cur_wid; k++)
+				{
+					cave[j][k].info |= CAVE_ICKY;
+				}
+			}
+
+			msg_print("You feel unable to teleport on this floor...");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Ickyfying.");
+		}
+		break;
+
+	case TRAP_OF_UNICKY_LEVEL:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			int j, k;
+
+			for (j = 0; j < cur_hgt; j++)
+			{
+				for (k = 0; k < cur_wid; k++)
+				{
+					cave[j][k].info &= ~CAVE_ICKY;
+				}
+			}
+
+			msg_print("You feel able to teleport freely on this floor.");
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Unickyfying.");
+		}
+		break;
+
 	case TRAP_OF_BACKGROUND_FIRE:
 		{
 			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
@@ -17514,6 +17592,24 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			}
 			break;
 		}
+
+	case TRAP_OF_ETERNAL_DARKNESS:
+		{
+			ident = TRUE;
+
+			int j, k;
+
+			for (j = 0; j < cur_hgt; j++)
+			{
+				for (k = 0; k < cur_wid; k++)
+				{
+					cave[j][k].info &= ~CAVE_GLOW;
+				}
+			}
+
+			msg_print("Eternal darkness seems to consume your surroundings...");
+		}
+		break;
 
 		/* Trap of Filling */
 	case TRAP_OF_FILLING:

@@ -5233,6 +5233,21 @@ I:15:5:40:4:80:0d0:D
 D:The monsters have leveled up!
 F:FLOOR | CHEST | DOOR
 
+N:1032:Ickyfying Trap
+I:5:20:40:4:20:0d0:D
+D:Teleportation seems impossible for you now...
+F:FLOOR | CHEST | DOOR
+
+N:1033:Unickyfying Trap
+I:5:20:40:4:20:0d0:D
+D:Teleportation seems easier for you now...
+F:FLOOR | CHEST | DOOR
+
+N:1034:Eternal Darkness Trap
+I:3:50:40:4:10:0d0:D
+D:Eternal darkness seems to consume you!
+F:FLOOR | CHEST | DOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

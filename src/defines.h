@@ -3907,6 +3907,10 @@
 #define TRAP_OF_MONSTER_LEVEL_IV          1030
 #define TRAP_OF_MONSTER_LEVEL_V           1031
 
+#define TRAP_OF_ICKY_LEVEL                1032
+#define TRAP_OF_UNICKY_LEVEL              1033
+#define TRAP_OF_ETERNAL_DARKNESS          1034
+
 /*** General index values ***/
 
 
