@@ -10631,6 +10631,26 @@ static void process_monster(int m_idx, bool is_frien)
 		}
 	}
 
+	/* Handle slowness, by Amy because it's dumb if slowed monsters never un-slow
+	 * this still carries the problem that if a monster is slowed down considerably, it'll rarely get a turn and therefore rarely run this code... */
+	if (m_ptr->mspeed < r_ptr->speed)
+	{
+		if (magik(5)) {
+			m_ptr->mspeed = r_ptr->speed;
+
+			/* Message if visible */
+			if (m_ptr->ml)
+			{
+				char m_name[80];
+
+				/* Get the monster name */
+				monster_desc(m_name, m_ptr, 0);
+
+				msg_format("%^s is no longer slowed.", m_name);
+			}
+		}
+	}
+
 	/* Handle "poisoned" */
 	if (m_ptr->poisoned)
 	{
