@@ -8375,6 +8375,8 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 	/* Hack -- messages */
 	cptr act = NULL;
 
+	/* force breath side effect --Amy */
+	int pushdamage = 0;
 
 	/* Player is not here */
 	if ((x != p_ptr->px) || (y != p_ptr->py)) return (FALSE);
@@ -9579,13 +9581,14 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 			if (back == 2)
 			{
 				msg_print("You are knocked back!");
+				pushdamage = 0;
 			}
 			if (back == 1)
 			{
 				msg_print("You are knocked back and crushed!");
 
 				/* was kept from being pushed all the way, do extra dam */
-				dam = dam * 13 / 10;
+				pushdamage = dam * 3 / 10;
 			}
 
 			/* Get new position */
@@ -9597,10 +9600,10 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 			msg_print("You are severely crushed!");
 
 			/* Do extra damage (1/3)*/
-			dam = dam * 15 / 10;
+			pushdamage = dam * 5 / 10;
 		}
 
-		take_hit(dam, killer);
+		if (pushdamage > 0) take_hit(dam, killer);
 
 	}
 
