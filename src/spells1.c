@@ -10205,8 +10205,9 @@ bool project(int who, int rad, int y, int x, int dam, int typ, int flg)
 			{
 				monster_race *ref_ptr = race_inf(&m_list[cave[y][x].m_idx]);
 
+				/* not sure why but disthack seems to always be 0... no wonder monster reflection never worked! WTF --Amy */
 				if ((ref_ptr->flags2 & (RF2_REFLECTING)) && (randint(10) != 1)
-				                && (dist_hack > 1))
+				                /*&& (dist_hack > 1)*/ )
 				{
 					int t_y, t_x;
 					int max_attempts = 10;

@@ -3800,8 +3800,20 @@ void do_cmd_fire(void)
 				/* Note the collision */
 				hit_body = TRUE;
 
+				/* Let reflecting monsters reflect, dammit! --Amy */
+				if ((r_ptr->flags2 & (RF2_REFLECTING)) && (randint(10) != 1) )
+				{
+					char m_name[80];
+
+					monster_desc(m_name, m_ptr, 0);
+
+					msg_print("The attack bounces!");
+					r_ptr->r_flags2 |= RF2_REFLECTING;
+
+				}
+
 				/* Did we hit it (penalize range) */
-				if (test_hit_fire(chance - cur_dis, m_ptr->ac, m_ptr->ml))
+				else if (test_hit_fire(chance - cur_dis, m_ptr->ac, m_ptr->ml))
 				{
 					bool fear = FALSE;
 
@@ -4403,8 +4415,20 @@ void do_cmd_throw(void)
 			/* Note the collision */
 			hit_body = TRUE;
 
+			/* Let reflecting monsters reflect, dammit! --Amy */
+			if ((r_ptr->flags2 & (RF2_REFLECTING)) && (randint(10) != 1) )
+			{
+				char m_name[80];
+
+				monster_desc(m_name, m_ptr, 0);
+
+				msg_print("The attack bounces!");
+				r_ptr->r_flags2 |= RF2_REFLECTING;
+
+			}
+
 			/* Did we hit it (penalize range) */
-			if (test_hit_fire(chance - cur_dis, m_ptr->ac, m_ptr->ml))
+			else if (test_hit_fire(chance - cur_dis, m_ptr->ac, m_ptr->ml))
 			{
 				bool fear = FALSE;
 
@@ -4792,8 +4816,20 @@ void do_cmd_boomerang(void)
 			/* Note the collision */
 			hit_body = TRUE;
 
+			/* Let reflecting monsters reflect, dammit! --Amy */
+			if ((r_ptr->flags2 & (RF2_REFLECTING)) && (randint(10) != 1) )
+			{
+				char m_name[80];
+
+				monster_desc(m_name, m_ptr, 0);
+
+				msg_print("The attack bounces!");
+				r_ptr->r_flags2 |= RF2_REFLECTING;
+
+			}
+
 			/* Did we hit it (penalize range) */
-			if (test_hit_fire(chance - cur_dis, m_ptr->ac, m_ptr->ml))
+			else if (test_hit_fire(chance - cur_dis, m_ptr->ac, m_ptr->ml))
 			{
 				bool fear = FALSE;
 
