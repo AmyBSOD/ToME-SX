@@ -18531,7 +18531,7 @@ F:SPIRIT | CAN_SWIM | IM_POIS | IM_ACID |
 F:DROP_60 | DROP_22 | FRIENDS | DROP_CORPSE |
 F:OPEN_DOOR | BASH_DOOR | EVIL | BASEANGBAND
 S:1_IN_4 |
-S:BA_POIS | S_MONSTER | SCARE | HOLD
+S:BA_POIS | S_MONSTER | SCARE | HOLD | S_SNAKE
 D:It slides towards you, a horrible scaly, slidy thing. 
 
 # Spirit of seeing
@@ -122346,6 +122346,1148 @@ F:UNIQUE | MALE | CAN_SPEAK | DROP_CORPSE | DROP_SKELETON |
 F:OPEN_DOOR | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | NEUTRAL | 
 F:MORTAL | BASEANGBAND | GOOD | NO_TARGET | CAN_SPEAK | 
 D:Describe me! 
+
+N:7072:Giant flesh fly
+G:I:r
+I:124:8d15:8:25:10
+W:62:3:100:35
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:AMEBA:2d25
+F:RAND_50 | CAN_FLY | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:These despicable insects lay their eggs on raw meat, and then 
+D:the meat in question becomes unsafe for consumption! 
+
+N:7073:Giant flesh fly
+G:I:r
+I:124:8d15:8:25:10
+W:62:15:100:35
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:AMEBA:2d25
+F:RAND_50 | CAN_FLY | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND
+S:MULTIPLY
+D:These despicable insects lay their eggs on raw meat, and then 
+D:the meat in question becomes unsafe for consumption! 
+
+N:7074:Giant bed bug
+G:I:v
+I:116:4d8:8:25:10
+W:20:3:100:20
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:SHARDS:3d8
+F:RAND_50 | WEIRD_MIND | INVISIBLE | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:About the worst pest you can have in your house. Getting rid 
+D:of an infestation is almost impossible, and they want to suck 
+D:your blood. 
+
+N:7075:Giant bed bug
+G:I:v
+I:116:4d8:8:25:10
+W:20:15:100:20
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:SHARDS:3d8
+F:RAND_50 | WEIRD_MIND | INVISIBLE | 
+F:ANIMAL | MORTAL | BASEANGBAND
+S:MULTIPLY
+D:About the worst pest you can have in your house. Getting rid 
+D:of an infestation is almost impossible, and they want to suck 
+D:your blood. 
+
+N:7076:Giant spy bug
+G:I:g
+I:119:5d12:8:35:10
+W:40:3:100:30
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:2d11
+F:RAND_50 | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND
+S:1_IN_4
+S:SHRIEK
+D:Oh, how annoying. An insect that wakes up the entire neighborhood 
+D:and tells them about your position. 
+
+N:7077:Giant spy bug
+G:I:g
+I:119:5d12:8:35:10
+W:40:15:100:30
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:2d11
+F:RAND_50 | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND
+S:1_IN_4
+S:SHRIEK
+D:Oh, how annoying. An insect that wakes up the entire neighborhood 
+D:and tells them about your position. 
+
+N:7078:Giant blood bug
+G:I:R
+I:121:8d18:8:45:10
+W:60:3:100:50
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:EXP_80:4d18
+F:RAND_25 | WEIRD_MIND | NO_FEAR | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:A mean-looking insect. And sure enough, turn your back of them and 
+D:they'll open their mouth, to bite off huge chunks of flesh from 
+D:your exposed body. 
+
+N:7079:Giant blood bug
+G:I:R
+I:121:8d18:8:45:10
+W:60:15:100:50
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:EXP_80:4d18
+F:RAND_25 | WEIRD_MIND | NO_FEAR | 
+F:ANIMAL | MORTAL | BASEANGBAND
+D:A mean-looking insect. And sure enough, turn your back of them and 
+D:they'll open their mouth, to bite off huge chunks of flesh from 
+D:your exposed body. 
+
+N:7080:Giant glowfly
+G:I:y
+I:120:4d6:8:20:10
+W:25:3:100:12
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:BLIND:1d8
+F:RAND_50 | RAND_25 | CAN_FLY | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND | HAS_LITE | 
+D:This flying bug lights up the dark. You can't shake the feeling 
+D:that there's something sinister about it, though... 
+
+N:7081:Giant glowfly
+G:I:y
+I:120:4d6:8:20:10
+W:25:15:100:12
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:BLIND:1d8
+F:RAND_50 | RAND_25 | CAN_FLY | WEIRD_MIND | 
+F:ANIMAL | MORTAL | BASEANGBAND | HAS_LITE | 
+S:MULTIPLY
+D:This flying bug lights up the dark. You can't shake the feeling 
+D:that there's something sinister about it, though... 
+
+N:7082:Gray Thunderlord
+G:B:s
+I:115:20d50:20:50:50
+W:20:4:30000:2500
+E:1:1:1:2:1:1
+O:50:50:0:0
+B:HIT:HURT:4d6
+B:HIT:HURT:4d6
+F:FEMALE |
+F:THUNDERLORD | DROP_SKELETON | DROP_CORPSE |
+F:ONLY_ITEM | DROP_90 | DROP_GOOD |
+F:IM_FIRE | REGENERATE | OPEN_DOOR | BASH_DOOR |
+F:RES_TELE | NO_CONF | NO_SLEEP | CAN_FLY | HAS_LITE
+S:1_IN_7 |
+S:BR_FIRE |
+S:BLINK | TELE_AWAY
+D:A rather weak Thunderlord. Don't underestimate them, though. 
+
+N:7083:White Thunderlord
+G:B:w
+I:110:10d20:20:20:50
+W:10:4:30000:300
+E:1:1:1:2:1:1
+O:50:50:0:0
+B:HIT:HURT:2d6
+B:HIT:HURT:2d6
+F:FEMALE |
+F:THUNDERLORD | DROP_SKELETON | DROP_CORPSE |
+F:ONLY_ITEM | DROP_60 | DROP_GOOD |
+F:IM_FIRE | REGENERATE | OPEN_DOOR | BASH_DOOR |
+F:RES_TELE | NO_CONF | NO_SLEEP | CAN_FLY | HAS_LITE
+S:1_IN_10 |
+S:BR_FIRE | BLINK | 
+D:One of the youngest Thunderlords. A taste of things to come. 
+
+N:7084:Greater black reaver
+G:L:D
+I:130:100d150:20:240:50
+W:89:3:1900:35000
+E:0:0:0:0:0:0
+O:0:60:40:0
+B:HIT:UN_BONUS:8d12
+B:HIT:UN_BONUS:8d12
+B:HIT:LOSE_ALL:6d8
+B:HIT:LOSE_ALL:6d8
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | CAN_SWIM |
+F:ONLY_ITEM | DROP_12 | DROP_22 | DROP_GOOD | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | IM_ACID | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | RES_TELE | 
+F:NO_CONF | NO_SLEEP | KILL_WALL | NO_FEAR | 
+F:MORTAL | BASEANGBAND | NO_CUT | RES_DARK | RES_DISE | 
+F:NO_STUN | 
+S:1_IN_3 | 
+S:TELE_TO | BLIND | HOLD | CONF | CAUSE_3 | CAUSE_4 | DRAIN_MANA | 
+S:BRAIN_SMASH | BA_MANA | BA_NETH | S_UNDEAD | S_HI_UNDEAD | 
+S:HASTE | BA_DARK | HAND_DOOM | ANIM_DEAD | S_RANDOM | 
+D:This dreadful undead wants to annihilate you. 
+
+N:7085:Chaos reaver
+G:L:v
+I:120:50d100:20:170:50
+W:74:3:1900:23000
+E:0:0:0:0:0:0
+O:0:60:40:0
+B:HIT:UN_BONUS:6d8
+B:HIT:UN_BONUS:6d8
+B:HIT:CHAOS:4d6
+B:HIT:CHAOS:4d6
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | CAN_SWIM |
+F:ONLY_ITEM | DROP_12 | DROP_22 | DROP_GOOD | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | RES_TELE | 
+F:NO_CONF | NO_SLEEP | KILL_WALL | NO_FEAR | 
+F:MORTAL | BASEANGBAND | NO_CUT
+S:1_IN_3 | 
+S:TELE_TO | BLIND | HOLD | BR_CHAO | CAUSE_3 | CAUSE_4 | DRAIN_MANA | 
+S:BRAIN_SMASH | BA_MANA | BA_CHAO | S_UNDEAD | TPORT
+D:This dread lich is surrounded by flickering particles. 
+
+N:7086:Shadow hound
+G:Z:D
+I:120:60d10:30:100:0
+W:51:2:800:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:DARK:2d12
+B:BITE:DARK:2d12
+F:FORCE_SLEEP | FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BR_DARK
+D:A hound as dark as night. 
+
+N:7087:Shadow hound
+G:Z:D
+I:120:60d10:30:100:0
+W:51:100:800:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:DARK:2d12
+B:BITE:DARK:2d12
+F:FORCE_SLEEP | FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BR_DARK
+S:MULTIPLY
+D:A hound as dark as night. 
+
+N:7088:Techno hound
+G:Z:y
+I:120:60d10:30:100:0
+W:51:2:800:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:SOUND:2d12
+B:BITE:SOUND:2d12
+F:FORCE_SLEEP | FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BR_SOUN
+D:These hounds cause a noise more horrible than any you've ever 
+D:heard before! 
+
+N:7089:Techno hound
+G:Z:y
+I:120:60d10:30:100:0
+W:51:100:800:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:SOUND:2d12
+B:BITE:SOUND:2d12
+F:FORCE_SLEEP | FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BR_SOUN
+S:MULTIPLY
+D:These hounds cause a noise more horrible than any you've ever 
+D:heard before! 
+
+N:7090:Bulbous hound
+G:Z:y
+I:120:60d30:30:100:0
+W:65:2:900:10000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+B:CLAW:TERRIFY:2d12
+F:DROP_SKELETON | DROP_CORPSE | 
+F:FORCE_SLEEP | FRIENDS | BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | BASEANGBAND
+S:1_IN_5 | 
+S:BR_RADI | BR_LITE
+D:You feel that this giant hound glows with an unnatural light. 
+
+N:7091:Bulbous hound
+G:Z:y
+I:120:60d30:30:100:0
+W:65:100:900:10000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+B:CLAW:TERRIFY:2d12
+F:DROP_SKELETON | DROP_CORPSE | 
+F:FORCE_SLEEP | FRIENDS | BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | BASEANGBAND
+S:1_IN_5 | 
+S:BR_RADI | BR_LITE
+S:MULTIPLY
+D:You feel that this giant hound glows with an unnatural light. 
+
+N:7092:Stasis hound
+G:Z:u
+I:120:60d10:30:100:0
+W:51:2:800:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:INERTIA:2d12
+B:BITE:INERTIA:2d12
+F:FORCE_SLEEP | FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BR_INER
+D:You feel... lethargic... from looking at this hound... 
+
+N:7093:Stasis hound
+G:Z:u
+I:120:60d10:30:100:0
+W:51:100:800:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:INERTIA:2d12
+B:BITE:INERTIA:2d12
+F:FORCE_SLEEP | FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BR_INER
+S:MULTIPLY
+D:You feel... lethargic... from looking at this hound... 
+
+N:7094:Strike hound
+G:Z:s
+I:120:60d30:30:100:0
+W:65:2:900:10000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+B:CLAW:HURT:2d12
+F:DROP_SKELETON | DROP_CORPSE | 
+F:FORCE_SLEEP | FRIENDS | BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | BASEANGBAND
+S:1_IN_5 | 
+S:BR_WALL | BR_GRAV
+D:This hound is ready for combat, and wants to crush you! 
+
+N:7095:Strike hound
+G:Z:s
+I:120:60d30:30:100:0
+W:65:100:900:10000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+B:CLAW:HURT:2d12
+F:DROP_SKELETON | DROP_CORPSE | 
+F:FORCE_SLEEP | FRIENDS | BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | BASEANGBAND
+S:MULTIPLY
+S:1_IN_5 | 
+S:BR_WALL | BR_GRAV
+D:This hound is ready for combat, and wants to crush you! 
+
+N:7096:Great crystal hound
+G:Z:v
+I:122:60d40:30:110:0
+W:70:4:1200:5500
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+B:CLAW:SHARDS:2d12
+B:CLAW:SHARDS:2d12
+F:FORCE_SLEEP | FRIENDS |
+F:NO_CUT | KILL_WALL | BASH_DOOR | KILL_WALL |
+F:ANIMAL | BASEANGBAND | NO_CONF | NO_SLEEP | 
+S:1_IN_5 |
+S:BR_SHAR |
+D:Nothing can stop the terror of this hound, not even the walls of 
+D:the dungeon. 
+
+N:7097:Great crystal hound
+G:Z:v
+I:122:60d40:30:110:0
+W:70:200:1200:5500
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+B:CLAW:SHARDS:2d12
+B:CLAW:SHARDS:2d12
+F:FORCE_SLEEP | FRIENDS |
+F:NO_CUT | KILL_WALL | BASH_DOOR | KILL_WALL |
+F:ANIMAL | BASEANGBAND | NO_CONF | NO_SLEEP | 
+S:1_IN_5 |
+S:BR_SHAR |
+S:MULTIPLY
+D:Nothing can stop the terror of this hound, not even the walls of 
+D:the dungeon. 
+
+N:7098:Eldritch hound
+G:Z:v
+I:120:60d30:30:100:0
+W:65:2:900:10000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+B:CLAW:INSANITY:2d12
+B:CLAW:INSANITY:2d12
+F:DROP_SKELETON | DROP_CORPSE | ELDRITCH_HORROR | 
+F:FORCE_SLEEP | FRIENDS | BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | BASEANGBAND
+S:1_IN_5 | 
+S:BR_MIND
+D:At last, it's here - the hound that makes you feel extremely uneasy 
+D:just by looking at it. You have to protect your sanity! 
+
+N:7099:Eldritch hound
+G:Z:v
+I:120:60d30:30:100:0
+W:65:100:900:10000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+B:CLAW:INSANITY:2d12
+B:CLAW:INSANITY:2d12
+F:DROP_SKELETON | DROP_CORPSE | ELDRITCH_HORROR | 
+F:FORCE_SLEEP | FRIENDS | BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | BASEANGBAND
+S:MULTIPLY
+S:1_IN_5 | 
+S:BR_MIND
+D:At last, it's here - the hound that makes you feel extremely uneasy 
+D:just by looking at it. You have to protect your sanity! 
+
+N:7100:Hungry hound
+G:Z:g
+I:120:60d30:30:100:0
+W:65:2:900:10000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+B:CLAW:AMEBA:2d12
+B:CLAW:AMEBA:2d12
+F:DROP_SKELETON | DROP_CORPSE | 
+F:FORCE_SLEEP | FRIENDS | BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | BASEANGBAND
+S:1_IN_5 | 
+S:BR_AMEB
+D:A hound that is very hungry... for your flesh. 
+
+N:7101:Hungry hound
+G:Z:g
+I:120:60d30:30:100:0
+W:65:100:900:10000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+B:CLAW:AMEBA:2d12
+B:CLAW:AMEBA:2d12
+F:DROP_SKELETON | DROP_CORPSE | 
+F:FORCE_SLEEP | FRIENDS | BASH_DOOR | 
+F:ANIMAL | NO_CONF | NO_SLEEP | BASEANGBAND
+S:MULTIPLY
+S:1_IN_5 | 
+S:BR_AMEB
+D:A hound that is very hungry... for your flesh. 
+
+N:7102:Slender hound
+G:Z:u
+I:120:60d10:30:100:0
+W:51:2:400:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:TERRIFY:2d12
+B:BITE:TERRIFY:2d12
+F:FORCE_SLEEP | FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BR_RADI
+D:This hound seems unusually thin for some reason. 
+
+N:7103:Slender hound
+G:Z:u
+I:120:60d10:30:100:0
+W:51:100:400:5000
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d12
+B:CLAW:HURT:2d12
+B:BITE:TERRIFY:2d12
+B:BITE:TERRIFY:2d12
+F:FORCE_SLEEP | FRIENDS | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:ANIMAL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BR_RADI
+S:MULTIPLY
+D:This hound seems unusually thin for some reason. 
+
+N:7104:Taisabachi
+G:I:y
+I:110:40d100:50:100:20
+W:75:3:999:20000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:STING:HURT:5d12
+B:STING:HURT:5d12
+B:STING:HURT:5d12
+B:STING:HURT:5d12
+F:UNIQUE
+F:FORCE_MAXHP 
+F:BASH_DOOR | NEVER_MOVE | NONLIVING | EMPTY_MIND
+F:EVIL | AURA_FIRE | CAN_SPEAK | POWERFUL 
+F:IM_COLD | IM_ACID | IM_POIS | RES_PLAS | RES_SHAR 
+F:RES_LITE | RES_SOUN | RES_DISE 
+F:NO_CONF | NO_SLEEP | NO_STUN
+S:1_IN_3 |
+S:BOULDER | BO_FIRE | BO_PLAS | BR_DISI | ROCKET
+D:A strange rooted bee.
+D:You feel immense fury emanating from inside.
+
+N:7105:Hibachi
+G:I:R
+I:150:40d100:50:100:20
+W:75:3:999:35000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:STING:HURT:7d12
+B:STING:HURT:7d12
+B:STING:HURT:7d12
+B:STING:HURT:7d12
+F:UNIQUE
+F:ONLY_ITEM | DROP_22 | HAS_LITE | DROP_GREAT | FORCE_MAXHP 
+F:BASH_DOOR | SMART | CAN_FLY | NONLIVING 
+F:EVIL | AURA_FIRE | CAN_SPEAK | POWERFUL 
+F:IM_COLD | IM_ACID | IM_POIS | RES_PLAS | RES_SHAR 
+F:RES_LITE | RES_SOUN | RES_DISE 
+F:IM_FIRE | NO_CONF | NO_SLEEP | NO_STUN
+S:1_IN_3 |
+S:ROCKET | BOULDER | BO_FIRE | BO_PLAS | BO_MANA | BLINK | 
+D:A giant mechanical bee, engulfed in raging fire.
+
+N:7106:Ice worm mass
+G:w:W
+I:115:8d10:10:9:6
+W:36:6:30:310
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:ICE:1d5
+B:CRAWL:ICE:1d5
+F:IM_COLD | RAND_25 | RAND_50 |
+F:COLD_BLOOD | WEIRD_MIND | BASH_DOOR |
+F:ANIMAL | DROP_CORPSE | BASEANGBAND |
+D:These worms seem ice-cold. 
+
+N:7107:Ice worm mass
+G:w:W
+I:115:8d10:10:9:6
+W:36:30:30:310
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:ICE:1d5
+B:CRAWL:ICE:1d5
+F:IM_COLD | RAND_25 | RAND_50 |
+F:COLD_BLOOD | WEIRD_MIND | BASH_DOOR |
+F:ANIMAL | DROP_CORPSE | BASEANGBAND |
+S:MULTIPLY
+D:These worms seem ice-cold. 
+
+N:7108:Aqueous icky thing
+G:i:b
+I:105:20d15:15:40:20
+W:50:4:500:50
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:WATER:2d8
+B:CRAWL:WATER:2d8
+F:FORCE_SLEEP | BASEANGBAND | CAN_SWIM | 
+F:OPEN_DOOR | BASH_DOOR | RES_WATE | 
+F:EVIL | DROP_SKELETON | 
+D:A rather wet icky thing. It's not confined to water though; 
+D:they're amphibious. 
+
+N:7109:Alarm mushroom patch
+G:,:R
+I:118:30d40:4:40:0
+W:52:1:40:1000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPORE:SOUND:2d15
+F:FORCE_SLEEP | NEVER_MOVE | RES_SOUN | 
+F:STUPID | EMPTY_MIND | 
+F:IM_POIS | DROP_CORPSE | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_4 | 
+S:SHRIEK
+D:Yum!  It looks quite tasty.  It doesn't sound so nice, though... 
+
+N:7110:Ancient giant
+G:P:s
+I:114:40d45:20:100:40
+W:60:1:18000:2500
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:HURT:10d14
+B:HIT:HURT:10d14
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_12 | WILD_TOO | WILD_MOUNTAIN |
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | GIANT | MALE | BASEANGBAND | HAS_LITE | REGENERATE | 
+D:A very old, very huge giant. 
+
+N:7111:Eternal giant
+G:P:W
+I:118:50d75:20:140:40
+W:80:1:26000:5500
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:HURT:16d18
+B:HIT:HURT:16d18
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_12 | WILD_TOO | WILD_MOUNTAIN |
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | GIANT | MALE | BASEANGBAND | HAS_LITE | REGENERATE | 
+F:RES_TIME | 
+D:This giant must've been around since the beginning of the universe. 
+
+N:7112:War Olog
+G:T:y
+I:118:42d35:20:90:50
+W:56:1:10000:1150
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:HURT:2d15
+B:HIT:HURT:2d15
+B:BITE:HURT:2d8
+B:BITE:HURT:2d8
+F:FORCE_MAXHP | OPEN_DOOR | FRIENDS | DROP_60 | REGENERATE | 
+F:SMART | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | TROLL | IM_POIS | BASEANGBAND
+D:A troll bred for war by Morgoth's army. 
+
+N:7113:Frenzied Olog
+G:T:o
+I:124:48d65:20:130:50
+W:76:1:15000:3250
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:HURT:5d15
+B:HIT:HURT:5d15
+B:BITE:HURT:2d15
+B:BITE:HURT:2d15
+F:FORCE_MAXHP | OPEN_DOOR | FRIENDS | DROP_60 | REGENERATE | 
+F:SMART | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | TROLL | IM_POIS | BASEANGBAND | NO_FEAR | NO_SLEEP | 
+F:NO_STUN | NO_CONF | WEIRD_MIND | 
+D:This troll can't be stopped at all, except by its own death. 
+
+N:7114:Killer frost beetle
+G:K:W
+I:110:25d12:16:60:30
+W:31:3:800:220
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:ICE:5d10
+F:WEIRD_MIND | BASH_DOOR | WILD_TOO | DROP_CORPSE | 
+F:ANIMAL | CAN_FLY | MORTAL | BASEANGBAND | IM_COLD | RES_SHAR | 
+D:It is a giant beetle accustomed to cold climates. 
+
+N:7115:Giant ice ant
+G:a:W
+I:110:20d10:14:49:40
+W:35:1:700:350
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:ICE:3d12
+B:BITE:ICE:3d12
+F:FORCE_MAXHP | KILL_BODY | FRIENDS | DROP_SKELETON
+F:WEIRD_MIND | BASH_DOOR | SUSCEP_FIRE | WILD_MOUNTAIN |
+F:ANIMAL | IM_COLD
+F:MORTAL | BASEANGBAND
+D:A giant ant adapted to cold environments. 
+
+N:7116:Deranged Witch
+G:p:v
+I:130:52d10:20:60:10
+W:40:4:1700:2100
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:HIT:HURT:2d6
+B:HIT:HURT:2d6
+B:HIT:HURT:2d8
+F:FEMALE | 
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_SKELETON | DROP_CORPSE
+F:ONLY_ITEM | DROP_22 | DROP_GOOD | WEIRD_MIND | 
+F:OPEN_DOOR | BASH_DOOR | EVIL | NO_CONF | NO_SLEEP
+F:MORTAL | BASEANGBAND | HAS_LITE | ATTR_MULTI | 
+S:1_IN_3 | 
+S:S_RANDOM
+D:Beware this crone, she tends to summon all kinds of creatures! 
+
+N:7117:Dark elven conjurer
+G:h:v
+I:130:80d10:20:70:10
+W:41:2:1300:3000
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:HIT:HURT:2d8
+B:HIT:HURT:2d8
+B:HIT:HURT:2d8
+F:MALE | 
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_SKELETON | DROP_CORPSE
+F:ONLY_ITEM | DROP_90 | DROP_42 | 
+F:SMART | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | HURT_LITE | NO_CONF | NO_SLEEP | BASEANGBAND | HAS_LITE
+S:1_IN_2 | 
+S:HEAL | BLINK | TELE_TO | BLIND | CONF | CAUSE_3 | DARKNESS | 
+S:BO_ACID | BA_FIRE | BA_COLD | S_GIANT
+S:MISSILE | S_TROLL | S_ORC | S_OGRE | 
+D:A dark elven figure, dressed in deepest black. He flings a lot of 
+D:spells, and likes to summon nasty creatures. 
+
+N:7118:Radiant Archon
+G:A:y
+I:130:100d35:30:140:255
+W:55:5:3200:12000
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:GAZE:TERRIFY:4d4
+B:GAZE:TERRIFY:4d4
+B:HIT:HURT:8d6
+B:HIT:HURT:8d6
+F:FORCE_SLEEP | 
+F:ONLY_ITEM | DROP_32 | DROP_42 | DROP_GOOD | NO_FEAR | GOOD | REFLECTING |
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | RES_TELE | CAN_FLY 
+F:BASEANGBAND | HAS_LITE
+S:1_IN_3 | 
+S:TELE_TO | BLIND | SCARE | CAUSE_4 | BO_MANA | 
+S:S_MAN | S_WOMAN | 
+D:This angel will summon all the angry men and women you've wronged, and 
+D:instruct them to attack without mercy! 
+
+N:7119:Renegade priest
+G:p:D
+I:120:52d10:20:60:10
+W:40:2:1800:1800
+E:1:1:1:2:1:1
+O:0:10:90:0
+B:HIT:HURT:3d4
+B:HIT:HURT:3d4
+B:HIT:HURT:3d5
+F:MALE | 
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_SKELETON | DROP_CORPSE | 
+F:ONLY_ITEM | DROP_90 | DROP_22 | 
+F:SMART | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_2 | 
+S:HEAL | BLIND | HOLD | CAUSE_4 | CAUSE_3 | S_SNAKE | S_WORM | 
+S:S_BREEDER | S_INSECT | S_HULK | 
+D:This evil priest of Morgoth summons annoying creatures in an attempt 
+D:to stop you. 
+
+N:7120:Necro titan
+G:P:D
+I:120:38d100:30:125:15
+W:66:3:50000:23500
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:CONFUSE:12d12
+B:HIT:CONFUSE:12d12
+B:HIT:CONFUSE:12d12
+B:HIT:CONFUSE:12d12
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_SKELETON | DROP_CORPSE | 
+F:ONLY_ITEM | DROP_42 | DROP_12 | DROP_GOOD | MOVE_BODY |
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR | RES_DISE | 
+F:EVIL | GIANT | MALE | BASEANGBAND | HAS_LITE | RES_DARK | 
+S:1_IN_3 | 
+S:HEAL | TELE_TO | ANIM_DEAD | 
+S:S_HI_UNDEAD | BOULDER
+D:A forty foot tall humanoid that shakes the ground as it walks. He has 
+D:studied black magic, and will summon the spirits of the dead! 
+
+N:7121:Familiar Master
+G:p:R
+I:130:52d25:20:60:10
+W:54:2:0:5000:0
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:HIT:HURT:6d8
+B:HIT:HURT:6d8
+B:HIT:HURT:6d8
+F:MALE |
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:ONLY_ITEM | DROP_42 | 
+F:OPEN_DOOR | BASH_DOOR | TAKE_ITEM |
+F:EVIL | NO_CONF | NO_SLEEP | BASEANGBAND | HAS_LITE
+S:1_IN_2 |
+S:BLINK | TELE_TO | BLIND | CONF | CAUSE_3 | CAUSE_4 | TRAPS |
+S:BO_ACID | BA_FIRE | BA_COLD | BA_POIS |
+S:S_ANT | S_BAT | S_VORTEX | S_ELEMENTAL | S_CAT | S_RAT | S_BEETLE | 
+S:S_BIRD | S_LIZARD | S_MONKEY | S_QUADRUPED | 
+D:A human figure in robes, he moves with magically improved speed, and his 
+D:hands are ablur with spell casting. He keeps summoning aid. 
+
+N:7122:Shai-Hulud
+G:W:D
+I:120:80d60:20:160:10
+W:69:5:10000:1500
+E:0:0:0:0:1:0
+O:40:0:50:10
+B:STING:LOSE_CON:8d8
+B:STING:LOSE_CON:8d8
+B:BITE:ACID:10d10
+B:BITE:ACID:10d10
+F:FORCE_SLEEP | SMART | KILL_WALL | CAN_SWIM | FORCE_MAXHP | 
+F:ONLY_ITEM | DROP_12 | DROP_22 | DROP_GOOD | IM_ACID | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | ELDRITCH_HORROR | 
+F:EVIL | UNDEAD | IM_FIRE | IM_COLD | IM_POIS | RES_TELE | 
+F:HURT_LITE | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+S:1_IN_4 | 
+S:BLIND | SCARE | BRAIN_SMASH | 
+S:BO_MANA | BO_NETH | BA_NETH | BR_NETH | S_WORM | S_BREEDER | 
+D:This intensely evil creature bears the form of a gargantuan black worm. 
+D:Its gaping maw is a void of blackness, and acid drips from its steely hide. 
+D:It is like nothing you have ever seen before, and a terrible chill runs 
+D:down your spine as you face it. 
+
+N:7123:Undead Titan
+G:W:D
+I:130:80d70:20:175:10
+W:73:3:75000:20000
+E:1:1:1:2:1:1
+O:30:0:70:0
+B:HIT:UN_BONUS:10d10
+B:HIT:UN_BONUS:10d10
+B:HIT:UN_BONUS:7d7
+B:HIT:UN_BONUS:7d7
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:ONLY_ITEM | DROP_42 | DROP_GOOD | CAN_SWIM |
+F:SMART | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | RES_TELE | 
+F:EVIL | UNDEAD | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:HURT_LITE | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+S:1_IN_4 | 
+S:BLIND | SCARE | BRAIN_SMASH | BOULDER | S_RANDOM | 
+S:BO_MANA | BO_NETH | BA_NETH | 
+D:A huge giant garbed in black, more massive than a titan and stronger than 
+D:a dragon. With terrible blows, it breaks your armor from your back, 
+D:leaving you defenseless against its evil wrath. It can smell your fear, 
+D:and you in turn smell the awful stench of death as this ghastly figure 
+D:strides towards you menacingly. 
+
+N:7124:Laughingstock Lich
+G:L:B
+I:120:45d100:20:120:50
+W:64:2:0:20000
+E:0:0:0:0:0:0
+O:0:0:100:0
+B:TOUCH:EXP_80
+B:TOUCH:UN_POWER
+B:TOUCH:LOSE_DEX:8d12
+B:TOUCH:LOSE_DEX:8d12
+F:FORCE_SLEEP | FORCE_MAXHP | SMART | RES_TELE | CAN_FLY |
+F:ONLY_ITEM | DROP_42 |  DROP_22 | DROP_GOOD |
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | NO_CONF | NO_SLEEP | BASEANGBAND
+F:NO_CUT
+S:1_IN_3 | 
+S:BLINK | TELE_TO | BLIND | HOLD | SCARE | CAUSE_4 | 
+S:DRAIN_MANA | BRAIN_SMASH | FORGET | TPORT | HEAL | BA_NETH | 
+S:S_ANIMALS | S_SPIDER | S_MOLD | S_BAT | S_VORTEX | S_TREASURE | 
+S:S_CAT | S_RAT | S_WORM | S_HYBRID | S_BEETLE | S_BREEDER | 
+S:S_BIRD | S_INSECT | S_EYE | 
+D:This lich casts seemingly wimpy summoning spells. 
+D:Laugh at him at your own peril. 
+
+N:7125:Total Randomizer
+G:I:v
+I:130:1d6:10:50:0
+W:10:50:0:10
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:INSULT:*
+B:MOAN:*
+B:HIT:RANDOM:1d6
+F:EVIL |
+F:EMPTY_MIND | RAND_50 | RAND_25 | JOKEANGBAND
+S:MULTIPLY
+D:The dice keep rolling all kinds of different values... 
+
+N:7126:Total Randomizer
+G:I:v
+I:130:1d6:10:50:0
+W:10:10:0:10
+E:0:0:0:0:0:0
+O:20:20:20:20
+B:INSULT:*
+B:MOAN:*
+B:HIT:RANDOM:1d6
+F:DROP_12 | EVIL |
+F:EMPTY_MIND | RAND_50 | RAND_25 | JOKEANGBAND
+D:The dice keep rolling all kinds of different values... 
+
+N:7127:Singing vampire
+G:V:r
+I:120:34d100:20:90:10
+W:54:3:1700:4500
+E:1:1:1:2:1:1
+O:0:70:30:0
+B:HIT:HURT:4d6
+B:HIT:HURT:4d6
+B:BITE:EXP_80:5d6
+B:BITE:EXP_80:5d6
+F:FORCE_SLEEP | FORCE_MAXHP | CAN_FLY |
+F:DROP_60 | DROP_42 | DROP_GOOD | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | REGENERATE | RES_TELE | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | 
+F:NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+S:1_IN_7 | 
+S:BLIND | HOLD | SCARE | CAUSE_3 | CAUSE_4 | DRAIN_MANA | 
+S:BRAIN_SMASH | DARKNESS | BO_NETH | S_CLOTHES | BR_SOUN | 
+D:A vampire that seems to sing a merry tune. Don't get lulled in... 
+
+N:7128:Beastlord
+G:p:o
+I:130:11d100:30:60:5
+W:50:3:1600:6000
+E:1:1:1:2:1:1
+O:40:0:40:20
+B:KICK:HURT:10d2
+B:KICK:HURT:10d2
+B:HIT:POISON:20d1
+B:HIT:PARALYZE:15d1
+F:MALE | 
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_CORPSE | DROP_SKELETON | 
+F:ONLY_ITEM | DROP_12 | DROP_22 | 
+F:INVISIBLE | OPEN_DOOR | BASH_DOOR | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:NO_CONF | NO_SLEEP
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_3 | 
+S:HEAL | 
+S:S_INSECT | S_QUADRUPED | 
+D:A lord of all that is natural, skilled in the mystic ways. He is a master 
+D:of martial arts and is at one with nature, able to summon help from the 
+D:wild if need be.
+
+N:7129:Greater Beastlord
+G:p:o
+I:130:22d100:30:80:5
+W:57:3:1800:15000
+E:1:1:1:2:1:1
+O:40:0:40:20
+B:KICK:HURT:20d2
+B:KICK:HURT:10d2
+B:HIT:POISON:20d1
+B:HIT:PARALYZE:15d1
+F:MALE | 
+F:FORCE_SLEEP | FORCE_MAXHP | DROP_CORPSE | DROP_SKELETON | 
+F:ONLY_ITEM | DROP_42 | 
+F:INVISIBLE | OPEN_DOOR | BASH_DOOR | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | NO_CONF | NO_SLEEP | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_2 | 
+S:HEAL | MIND_BLAST | 
+S:S_INSECT | S_QUADRUPED | S_BEETLE | S_BIRD | S_SNAKE | S_BREEDER | 
+D:He is one of the few true masters of the art, being extremely skillful in 
+D:all forms of unarmed combat and controlling the world's natural creatures 
+D:with disdainful ease. 
+
+N:7130:RNG golem
+G:g:v
+I:120:35d100:20:170:50
+W:61:10:5000:23000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:RANDOM:12d12
+B:HIT:RANDOM:12d12
+F:FORCE_SLEEP | FORCE_MAXHP | EMPTY_MIND | 
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | ATTR_MULTI | 
+F:IM_COLD | IM_POIS | IM_FIRE | IM_ELEC | RES_TELE | RES_CHAO | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING | BASEANGBAND | 
+S:1_IN_3 | 
+S:TELE_TO | BR_NEXU | BR_CONF | 
+S:BA_CHAO | S_RANDOM | 
+D:A flickering purple golem. You'll never know what to expect. 
+
+N:7131:Lovecraft Worshipper
+G:p:v
+I:120:52d20:20:70:10
+W:57:2:1800:2100
+E:1:1:1:2:1:1
+O:20:0:80:0
+B:HIT:INSANITY:6d5
+B:HIT:INSANITY:6d5
+F:MALE | 
+F:FORCE_SLEEP | FORCE_MAXHP | ATTR_MULTI | 
+F:ONLY_ITEM | DROP_90 | DROP_22 | 
+F:SMART | OPEN_DOOR | BASH_DOOR | 
+F:DROP_SKELETON | DROP_CORPSE | 
+F:EVIL | NO_CONF | NO_SLEEP | RES_CHAO | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_2 | 
+S:HEAL | HOLD | CAUSE_3 | 
+S:S_ELDRITCH | BA_CHAO | BRAIN_SMASH
+D:An evil priest, chanting "Ia! Ia! Shub-Niggurath!" all the time. 
+
+N:7132:Servitor of the inner gods
+G:H:y
+I:130:100d45:30:155:255
+W:51:6:2100:18000
+E:0:0:0:0:0:0
+O:10:20:70:0
+B:GAZE:RANDOM:5d5
+B:HIT:HURT:8d7
+F:FORCE_SLEEP | 
+F:ONLY_ITEM | DROP_32 | DROP_42 | DROP_GOOD | NO_FEAR | REFLECTING |
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | NONLIVING | 
+F:RES_TELE | ELDRITCH_HORROR | SHAPECHANGER | ATTR_MULTI | 
+F:BASEANGBAND
+S:1_IN_3 | 
+S:TELE_TO | BLIND | SCARE | CAUSE_4 | BO_MANA | S_RANDOM
+D:You're not sure what these monsters are worshipping but it's certainly 
+D:some dangerous entity. 
+
+N:7133:Crawling Chaos
+G:p:R
+I:120:30d30:20:80:20
+W:55:2:0:650
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:RANDOM:6d8
+F:IM_POIS | IM_FIRE | IM_ELEC | IM_ACID | IM_COLD | RES_CHAO | 
+F:NO_SLEEP | NO_FEAR | SHAPECHANGER | ELDRITCH_HORROR | NONLIVING | 
+F:MALE | OPEN_DOOR | BASH_DOOR | BASEANGBAND | HAS_LITE
+D:Also known as Nyarlathotep, these creatures will keep spawning. 
+
+# Spirit of water 
+N:7134:Spirit
+G:G:b
+I:136:60d70:40:70:30
+W:134:2:60:8000
+E:1:1:1:2:1:1
+O:0:10:90:0
+B:HIT:WATER:10d10
+B:HIT:WATER:10d10
+B:HIT:WATER:10d10
+F:SMART | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | NO_CONF | NO_SLEEP | CAN_SWIM | 
+F:SPIRIT | BASEANGBAND | 
+S:1_IN_2 | 
+S:BO_WATE | BR_WATE | BA_WATE | 
+D:You feel that this spirit controls the elemental force of water. 
+D:Being close to it gives you a vision of drowning... 
+
+# Spirit of randomness
+N:7135:Spirit
+G:G:v
+I:120:40d100:30:120:40
+W:141:3:1700:10000
+E:0:1:0:6:1:0
+B:HIT:RANDOM:10d10
+B:HIT:RANDOM:10d10
+B:HIT:RANDOM:10d10
+F:INVISIBLE | CAN_FLY | SPIRIT | WEIRD_MIND | ATTR_MULTI | 
+F:PASS_WALL | POWERFUL | MOVE_BODY | 
+F:EVIL | NO_CONF | NO_SLEEP | BASEANGBAND | 
+F:IM_ACID | IM_ELEC | IM_FIRE | IM_COLD | IM_POIS | RES_TELE | RES_NETH | 
+F:RES_WATE | RES_PLAS | RES_NEXU | RES_DISE | NO_FEAR | NO_STUN | NO_CONF | 
+F:NO_SLEEP | NO_CUT | RES_TIME | RES_LITE | RES_SOUN | RES_CHAO | RES_INER | 
+F:RES_WALL | RES_GRAV | RES_DARK | RES_SHAR | RES_NERV | RES_ETHE | RES_MIND
+S:1_IN_2 | 
+S:S_RANDOM
+D:You'll never know what this spirit is up to... 
+
+# Spirit of summoning
+N:7136:Spirit
+G:G:W
+I:130:35d100:40:150:100
+W:136:3:200:10000
+E:0:1:0:2:1:0
+O:50:50:0:0
+B:BITE:HURT:12d12
+B:BITE:HURT:12d12
+B:BITE:HURT:12d8
+B:BITE:HURT:12d8
+F:SPIRIT | BASEANGBAND | FRIEND | 
+F:OPEN_DOOR | BASH_DOOR 
+S:1_IN_2 | 
+S:S_ANIMAL | S_ANIMALS | S_BUG | S_RNG | S_THUNDERLORD | S_KIN | 
+S:S_HI_DEMON | S_MONSTER | S_MONSTERS | S_ANT | S_SPIDER | S_HOUND | 
+S:S_HYDRA | S_ANGEL | S_DEMON | S_UNDEAD | S_DRAGON | S_HI_UNDEAD | 
+S:S_HI_DRAGON | S_WRAITH | S_UNIQUE | ANIM_DEAD | S_MOLD | S_BAT | 
+S:S_QUYLTHULG | S_VORTEX | S_TREASURE | S_IMMOBILE | S_PEOPLE | 
+S:S_ELEMENTAL | S_SNAKE | S_ELDRITCH | S_CAT | S_RAT | S_WORM | 
+S:S_CLOTHES | S_HYBRID | S_BEETLE | S_HORDE | S_GIANT | S_SEXY_GIRL | 
+S:S_TROLL | S_ORC | S_MAN | S_WOMAN | S_BREEDER | S_GOLEM | S_BIRD | 
+S:S_INSECT | S_OGRE | S_LIZARD | S_HULK | S_MONKEY | S_EYE | S_JELLY | 
+S:S_KOBOLD | S_QUADRUPED | S_YEEK | S_SUMMONER | S_RANDOM 
+D:This spirit keeps summoning aid... 
+
 
 
 
