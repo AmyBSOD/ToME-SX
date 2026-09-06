@@ -19232,7 +19232,7 @@ F:RES_NETH | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
 F:NO_CONF | NO_STUN | NO_SLEEP | NO_FEAR | RES_TELE | RES_NERV | RES_MIND |
 S:1_IN_4 | 
 S:BR_GRAV | BR_POIS | BR_TIME | BR_INER | S_MONSTER | HEAL | BO_WATE | 
-S:S_KIN | TRAPS
+S:S_KIN | TRAPS | S_CLOTHES
 D:A very beautiful, but unfortunately very evil woman. Mario and Luigi have already 
 D:failed taking her out, losing all of their lives in the process. Can you 
 D:possibly best her even though you only have a single life? 
@@ -22935,7 +22935,7 @@ F:WEIRD_MIND | BASH_DOOR |
 F:ANIMAL | IM_COLD | FEMALE | HAS_EGG | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND
 S:1_IN_6 | 
-S:BR_POIS | BR_NETH | BO_ICEE
+S:BR_POIS | BR_NETH | BO_ICEE | BR_WATE | 
 D:A flat female sandal which is actually a real bitch. She will try 
 D:to smash your shins, then laugh at your inability to fight. Show her 
 D:that you're not a wimp but a great warrior!
@@ -22955,7 +22955,7 @@ F:WEIRD_MIND | BASH_DOOR |
 F:ANIMAL | IM_COLD | FEMALE | HAS_EGG | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND
 S:1_IN_6 | 
-S:BR_POIS | BR_NETH | BO_ICEE
+S:BR_POIS | BR_NETH | BO_ICEE | BR_WATE | 
 S:MULTIPLY
 D:A flat female sandal which is actually a real bitch. She will try 
 D:to smash your shins, then laugh at your inability to fight. Show her 
@@ -29566,7 +29566,7 @@ F:WILD_GRASS | STUPID | REFLECTING | COLD_BLOOD | EMPTY_MIND | REGENERATE |
 F:TAKE_ITEM | RES_NETH | NO_FEAR | ELDRITCH_HORROR | AI_ANNOY | RES_MIND | 
 F:RES_DARK | RES_SHAR | 
 S:1_IN_7 | 
-S:BR_POIS | CONF | BO_POIS | BA_POIS | TELE_TO | TRAPS | S_SPIDER | 
+S:BR_POIS | CONF | BO_POIS | BA_POIS | TELE_TO | TRAPS | S_SPIDER | S_WOMAN | 
 D:This black high-heeled lady's pump belongs to a mute journalist. Don't 
 D:think she can't cast spells though; that would be a fatal mistake. 
 
@@ -29585,7 +29585,7 @@ F:WILD_GRASS | STUPID | REFLECTING | COLD_BLOOD | EMPTY_MIND | REGENERATE |
 F:TAKE_ITEM | RES_NETH | NO_FEAR | ELDRITCH_HORROR | AI_ANNOY | RES_MIND | 
 F:RES_DARK | RES_SHAR | 
 S:1_IN_7 | 
-S:BR_POIS | CONF | BO_POIS | BA_POIS | TELE_TO | TRAPS | S_SPIDER | 
+S:BR_POIS | CONF | BO_POIS | BA_POIS | TELE_TO | TRAPS | S_SPIDER | S_WOMAN | 
 S:MULTIPLY
 D:This black high-heeled lady's pump belongs to a mute journalist. Don't 
 D:think she can't cast spells though; that would be a fatal mistake. 
@@ -29906,7 +29906,7 @@ F:OPEN_DOOR | NONLIVING | BASEANGBAND | IM_ELEC | IM_POIS | RES_NETH | RES_NEXU 
 F:RES_WALL | NO_FEAR | NO_STUN | KILL_ITEM | RES_NERV | 
 S:1_IN_5 | 
 S:ARROW_3 | ARROW_4 | BR_POIS | BR_SOUN | BR_GRAV | BA_WATE | BRAIN_SMASH | 
-S:CAUSE_4 | TPORT | DARKNESS | 
+S:CAUSE_4 | TPORT | DARKNESS | S_BEETLE | 
 D:A beautiful female combat boot with buckles and zippers appears before you. 
 D:She has a pretty block heel, too. But if there's one thing you've learned on 
 D:your journeys, it is the fact that the more pretty they are, the more deadly 
@@ -29925,7 +29925,7 @@ F:OPEN_DOOR | NONLIVING | BASEANGBAND | IM_ELEC | IM_POIS | RES_NETH | RES_NEXU 
 F:RES_WALL | NO_FEAR | NO_STUN | KILL_ITEM | RES_NERV | 
 S:1_IN_5 | 
 S:ARROW_3 | ARROW_4 | BR_POIS | BR_SOUN | BR_GRAV | BA_WATE | BRAIN_SMASH | 
-S:CAUSE_4 | TPORT | DARKNESS | 
+S:CAUSE_4 | TPORT | DARKNESS | S_BEETLE | 
 S:MULTIPLY
 D:A beautiful female combat boot with buckles and zippers appears before you. 
 D:She has a pretty block heel, too. But if there's one thing you've learned on 
@@ -30005,6 +30005,7 @@ F:RES_ETHE |
 S:1_IN_3 | 
 S:SHRIEK | ROCKET | BR_FIRE | BR_POIS | BR_NETH | BR_NUKE | BA_NETH | 
 S:CAUSE_4 | MIND_BLAST | HEAL | TELE_TO | TRAPS | S_MONSTERS | S_UNDEAD | 
+S:S_CLOTHES | 
 D:One of the two "eroticity queens". She is very hard to defeat, yet you're 
 D:lucky because she's less dangerous than her boss. Still, trying to fight 
 D:her can prove fatal, so better think twice whether you really want to 
@@ -30149,7 +30150,7 @@ F:EMPTY_MIND | ELDRITCH_HORROR | TAKE_ITEM | KILL_BODY | UNDEAD | RES_WATE |
 F:RES_DISE | NO_FEAR | NO_STUN | REVBOSS | RES_NERV | 
 S:1_IN_3 | 
 S:BR_DISE | DRAIN_MANA | BRAIN_SMASH | BO_WATE | FORGET | S_MONSTERS | BR_NETH | 
-S:BA_CHAO | BR_DISI | CAUSE_4 | HEAL | TPORT | S_KIN | S_UNDEAD | 
+S:BA_CHAO | BR_DISI | CAUSE_4 | HEAL | TPORT | S_KIN | S_UNDEAD | S_WORM | 
 D:Yet another anorexic girl. Looking at her makes you glad that you're able 
 D:to eat normally; you really don't want to look like her. But she seems to 
 D:have sort of a "cult" following her, and you'll have to make sure they don't 
@@ -30261,7 +30262,7 @@ F:BASH_DOOR | MORTAL | BASEANGBAND | KILL_WALL | IM_ACID | IM_ELEC | IM_COLD |
 F:RES_INER | RES_SHAR | NO_FEAR | NO_STUN | NO_SLEEP | 
 S:1_IN_4 | 
 S:BR_COLD | BA_NUKE | BR_DISI | CAUSE_4 | HEAL | TELE_AWAY | S_THUNDERLORD | 
-S:S_KIN | S_HI_DEMON | 
+S:S_KIN | S_HI_DEMON | BR_WATE | 
 D:A little female dancing shoe, how sweet! She can't possibly be dangerous... 
 D:uhh, wait, forget I said that. Her kick hurts a lot! 
 
@@ -32264,7 +32265,7 @@ D: a German name which literally means "double-sucker".
 
 N:1858:Spitting Lizard
 G:R:v
-I:11:3d10:12:3:20
+I:100:3d10:12:3:20
 W:12:1:0:5
 E:0:1:0:2:1:0
 O:0:0:0:0
@@ -93070,6 +93071,7 @@ F:RES_ETHE |
 S:1_IN_3 | 
 S:SHRIEK | ROCKET | BR_FIRE | BR_POIS | BR_NETH | BR_NUKE | BA_NETH | 
 S:CAUSE_4 | MIND_BLAST | HEAL | TELE_TO | TRAPS | S_MONSTERS | S_UNDEAD | 
+S:S_CLOTHES | 
 D:One of the two "eroticity queens". She is very hard to defeat, yet you're 
 D:lucky because she's less dangerous than her boss. 
 
@@ -93234,7 +93236,7 @@ F:RES_NETH | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
 F:NO_CONF | NO_STUN | NO_SLEEP | NO_FEAR | RES_TELE | RES_NERV | RES_MIND |
 S:1_IN_4 | 
 S:BR_GRAV | BR_POIS | BR_TIME | BR_INER | S_MONSTER | HEAL | BO_WATE | 
-S:S_KIN | TRAPS
+S:S_KIN | TRAPS | S_CLOTHES
 D:A very beautiful, but unfortunately very evil woman. Mario and Luigi have already 
 D:failed taking her out, losing all of their lives in the process. Can you 
 D:possibly best her even though you only have a single life? 
@@ -93421,7 +93423,7 @@ F:EMPTY_MIND | ELDRITCH_HORROR | TAKE_ITEM | KILL_BODY | UNDEAD | RES_WATE |
 F:RES_DISE | NO_FEAR | NO_STUN | RES_NERV | 
 S:1_IN_3 | 
 S:BR_DISE | DRAIN_MANA | BRAIN_SMASH | BO_WATE | FORGET | S_MONSTERS | BR_NETH | 
-S:BA_CHAO | BR_DISI | CAUSE_4 | HEAL | TPORT | S_KIN | S_UNDEAD | 
+S:BA_CHAO | BR_DISI | CAUSE_4 | HEAL | TPORT | S_KIN | S_UNDEAD | S_WORM | 
 D:Yet another anorexic girl. Looking at her makes you glad that you're able 
 D:to eat normally; you really don't want to look like her. But she seems to 
 D:have sort of a "cult" following her, and you'll have to make sure they don't 
@@ -94648,7 +94650,7 @@ F:RES_NETH | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
 F:NO_CONF | NO_STUN | NO_SLEEP | NO_FEAR | RES_TELE | RES_NERV | RES_MIND |
 S:1_IN_4 | 
 S:BR_GRAV | BR_POIS | BR_TIME | BR_INER | S_MONSTER | HEAL | BO_WATE | 
-S:S_KIN | TRAPS | SHRIEK | BR_NEXU | MIND_BLAST | TPORT | 
+S:S_KIN | TRAPS | SHRIEK | BR_NEXU | MIND_BLAST | TPORT | S_CLOTHES | 
 D:Suddenly, a very long, three-part bossfight music starts playing, and you 
 D:realize that defeating the beautiful Wendy won't be easy this time. 
 D:Will you beat her? Or are you going to get stomped by her pink pumps? 
@@ -94671,7 +94673,7 @@ F:RES_NETH | IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
 F:NO_CONF | NO_STUN | NO_SLEEP | NO_FEAR | RES_TELE | RES_NERV | RES_MIND |
 S:1_IN_4 | 
 S:BR_GRAV | BR_POIS | BR_TIME | BR_INER | S_MONSTER | HEAL | BO_WATE | 
-S:S_KIN | TRAPS | SHRIEK | BR_NEXU | MIND_BLAST | TPORT | 
+S:S_KIN | TRAPS | SHRIEK | BR_NEXU | MIND_BLAST | TPORT | S_CLOTHES | 
 D:Suddenly, a very long, three-part bossfight music starts playing, and you 
 D:realize that defeating the beautiful Wendy won't be easy this time. 
 D:Will you beat her? Or are you going to get stomped by her pink pumps? 
@@ -95049,7 +95051,7 @@ I:125:20d150:8:120:20
 W:60:5:10:4000
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:COLD:5d15
+B:KICK:ICE:5d15
 F:WEIRD_MIND | CAN_SWIM | WILD_TOO | DROP_CORPSE | FEMALE | WILD_TOWN | 
 F:WILD_WOOD | WILD_WASTE | WILD_SHORE | WILD_SWAMP | WILD_MOUNTAIN |
 F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND | IM_COLD | NO_STUN | NO_CONF |
@@ -95066,7 +95068,7 @@ I:125:20d150:8:120:20
 W:60:100:10:4000
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:COLD:5d15
+B:KICK:ICE:5d15
 F:WEIRD_MIND | CAN_SWIM | WILD_TOO | DROP_CORPSE | FEMALE | WILD_TOWN | 
 F:WILD_WOOD | WILD_WASTE | WILD_SHORE | WILD_SWAMP | WILD_MOUNTAIN |
 F:ANIMAL | HAS_EGG | MORTAL | BASEANGBAND | IM_COLD | NO_STUN | NO_CONF |
@@ -95329,7 +95331,7 @@ F:WEIRD_MIND | BASH_DOOR | RES_INER |
 F:ANIMAL | IM_COLD | FEMALE | HAS_EGG | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND
 S:1_IN_6 | 
-S:BR_POIS | BR_NETH | BO_ICEE | BR_NEXU | TELE_AWAY | 
+S:BR_POIS | BR_NETH | BO_ICEE | BR_NEXU | TELE_AWAY | BR_WATE |  
 D:You long to touch these female sandals, but they won't let you. 
 D:Instead, they'll try their best to break your legs by placing 
 D:very painful kicks. 
@@ -95349,7 +95351,7 @@ F:WEIRD_MIND | BASH_DOOR | RES_INER |
 F:ANIMAL | IM_COLD | FEMALE | HAS_EGG | DROP_CORPSE | 
 F:MORTAL | BASEANGBAND
 S:1_IN_6 | 
-S:BR_POIS | BR_NETH | BO_ICEE | BR_NEXU | TELE_AWAY | 
+S:BR_POIS | BR_NETH | BO_ICEE | BR_NEXU | TELE_AWAY | BR_WATE | 
 S:MULTIPLY
 D:You long to touch these female sandals, but they won't let you. 
 D:Instead, they'll try their best to break your legs by placing 
@@ -95591,7 +95593,7 @@ F:NO_SLEEP | RES_TIME | RES_SOUN | RES_ETHE |
 S:1_IN_5 | 
 S:BR_VENO | CONF | BO_POIS | BA_POIS | TELE_TO | TRAPS | S_SPIDER | 
 S:ROCKET | BR_SOUN | S_KIN | BA_METE | BR_MANA | BR_NUKE | BRAIN_SMASH | 
-S:HAND_DOOM | 
+S:HAND_DOOM | S_WOMAN | 
 D:Rhea may be mute, but her high-heeled lady pumps know martial arts. They 
 D:will pwn the crap out of you if you pick a fight. 
 
@@ -95614,7 +95616,7 @@ F:NO_SLEEP | RES_TIME | RES_SOUN | RES_ETHE |
 S:1_IN_5 | 
 S:BR_VENO | CONF | BO_POIS | BA_POIS | TELE_TO | TRAPS | S_SPIDER | 
 S:ROCKET | BR_SOUN | S_KIN | BA_METE | BR_MANA | BR_NUKE | BRAIN_SMASH | 
-S:HAND_DOOM | 
+S:HAND_DOOM | S_WOMAN | 
 S:MULTIPLY
 D:Rhea may be mute, but her high-heeled lady pumps know martial arts. They 
 D:will pwn the crap out of you if you pick a fight. 
@@ -123487,6 +123489,406 @@ S:S_TROLL | S_ORC | S_MAN | S_WOMAN | S_BREEDER | S_GOLEM | S_BIRD |
 S:S_INSECT | S_OGRE | S_LIZARD | S_HULK | S_MONKEY | S_EYE | S_JELLY | 
 S:S_KOBOLD | S_QUADRUPED | S_YEEK | S_SUMMONER | S_RANDOM 
 D:This spirit keeps summoning aid... 
+
+N:7137:Giant mosquito
+G:I:r
+I:120:2d8:8:22:10
+W:10:3:100:6
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:EXP_20:1d2
+B:BITE:SHARDS:2d3
+F:RAND_25 | CAN_FLY | WEIRD_MIND | FRIEND | 
+F:ANIMAL | MORTAL | BASEANGBAND | FEMALE | 
+D:It wants to suck your blood!
+
+N:7138:Giant mosquito
+G:I:r
+I:120:2d8:8:22:10
+W:10:15:100:6
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:EXP_20:1d2
+B:BITE:SHARDS:2d3
+F:RAND_25 | CAN_FLY | WEIRD_MIND | FRIEND | 
+F:ANIMAL | MORTAL | BASEANGBAND | FEMALE | 
+S:MULTIPLY
+D:It wants to suck your blood!
+
+N:7139:Bloodsucker mosquito
+G:I:v
+I:120:5d9:8:40:10
+W:30:3:100:35
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:EXP_40:2d8
+B:BITE:SHARDS:2d10
+F:RAND_25 | CAN_FLY | WEIRD_MIND | FRIENDS | 
+F:ANIMAL | MORTAL | BASEANGBAND | FEMALE | 
+D:You must prevent this wretched creature from sucking your blood, 
+D:because it'll be able to lay eggs once it does! 
+
+N:7140:Bloodsucker mosquito
+G:I:v
+I:120:5d9:8:40:10
+W:30:15:100:35
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:EXP_40:2d8
+B:BITE:SHARDS:2d10
+F:RAND_25 | CAN_FLY | WEIRD_MIND | FRIENDS | 
+F:ANIMAL | MORTAL | BASEANGBAND | FEMALE | 
+S:MULTIPLY
+D:You must prevent this wretched creature from sucking your blood, 
+D:because it'll be able to lay eggs once it does! 
+
+N:7141:Tiger mosquito
+G:I:v
+I:127:10d19:8:66:10
+W:50:3:100:75
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:EXP_80:6d8
+B:BITE:SHARDS:4d14
+F:RAND_25 | CAN_FLY | WEIRD_MIND | FRIEND | FRIENDS | 
+F:ANIMAL | MORTAL | BASEANGBAND | FEMALE | IM_FIRE | 
+F:NO_SLEEP | 
+D:This horrible pest was imported here from a much warmer country, 
+D:and is trying to make its home in the dungeon! You must 
+D:eradicate it before it can breed explosively!!! 
+
+N:7142:Tiger mosquito
+G:I:v
+I:127:10d19:8:66:10
+W:50:15:100:75
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:EXP_80:6d8
+B:BITE:SHARDS:4d14
+F:RAND_25 | CAN_FLY | WEIRD_MIND | FRIEND | FRIENDS | 
+F:ANIMAL | MORTAL | BASEANGBAND | FEMALE | IM_FIRE | 
+F:NO_SLEEP | 
+S:MULTIPLY
+D:This horrible pest was imported here from a much warmer country, 
+D:and is trying to make its home in the dungeon! You must 
+D:eradicate it before it can breed explosively!!! 
+
+N:7143:Insect broodling
+G:I:G
+I:110:4d4:8:10:50
+W:30:3:100:8
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:2d5
+F:CAN_FLY | WEIRD_MIND | ESCORTS | 
+F:ANIMAL | MORTAL | BASEANGBAND | 
+D:A rather unspecific insect that doesn't do much itself, but 
+D:it has brought some friends... 
+
+N:7144:Insect hivemind
+G:I:y
+I:120:10d10:8:20:50
+W:60:3:100:33
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:4d8
+F:CAN_FLY | WEIRD_MIND | ESCORTS | ESCORT | 
+F:ANIMAL | MORTAL | BASEANGBAND | 
+S:1_IN_4
+S:S_KIN | S_INSECT | 
+D:This insect is planning to fill the entire dungeon with more 
+D:insects! 
+
+N:7145:Insect hivemind
+G:I:y
+I:120:10d10:8:20:50
+W:60:15:100:33
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:4d8
+F:CAN_FLY | WEIRD_MIND | ESCORTS | ESCORT | 
+F:ANIMAL | MORTAL | BASEANGBAND | 
+S:MULTIPLY
+S:1_IN_4
+S:S_KIN | S_INSECT | 
+D:This insect is planning to fill the entire dungeon with more 
+D:insects! 
+
+N:7146:25-headed hydra
+G:M:v
+I:135:200d33:20:200:20
+W:95:4:8500:16000
+E:0:1:0:2:2:0
+O:0:0:0:0
+B:BITE:RANDOM:10d12
+B:BITE:RANDOM:10d12
+B:BITE:RANDOM:10d12
+B:BITE:RANDOM:10d12
+F:FORCE_SLEEP | WILD_TOO | WILD_SHORE | WILD_SWAMP | 
+F:ONLY_GOLD | DROP_22 | DROP_42 | DROP_CORPSE | RES_CHAO | 
+F:OPEN_DOOR | BASH_DOOR | MOVE_BODY | ATTR_MULTI | IM_POIS | 
+F:ANIMAL | IM_FIRE | CAN_SWIM | IM_ELEC | IM_COLD | IM_ACID |
+F:MORTAL | BASEANGBAND | CAN_FLY | WILD_VOLCANO | WILD_WASTE
+S:1_IN_3 | 
+S:SCARE | BO_FIRE | BO_PLAS | BA_FIRE | BR_FIRE | BR_ACID | S_KIN
+S:FORGET | TELE_AWAY | HEAL | S_HYDRA | BR_POIS | BR_CHAO | 
+S:S_RANDOM | BR_WATE | 
+D:A strange reptilian hybrid with twenty-five multicolored heads. 
+
+N:7147:Inertia hulk
+G:X:y
+I:110:32d30:20:120:10
+W:60:1:500000:2800
+E:0:0:0:3:0:0
+O:0:0:0:0
+B:HIT:INERTIA:5d7
+B:HIT:INERTIA:5d7
+B:HIT:INERTIA:5d7
+B:HIT:INERTIA:5d7
+F:FORCE_MAXHP | RES_INER | HURT_LITE | 
+F:EMPTY_MIND | COLD_BLOOD |
+F:ONLY_GOLD | DROP_22 | 
+F:KILL_ITEM | PASS_WALL | 
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:HURT_ROCK | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+D:It is a tougher relative of the Xorn. It seems to move slowly... 
+
+N:7148:Ether hulk
+G:X:g
+I:125:32d30:20:120:10
+W:60:1:500000:2800
+E:0:0:0:3:0:0
+O:0:0:0:0
+B:HIT:ETHER:5d7
+B:HIT:ETHER:5d7
+B:HIT:ETHER:5d7
+B:HIT:ETHER:5d7
+F:FORCE_MAXHP | RES_ETHE | HURT_LITE | 
+F:EMPTY_MIND | COLD_BLOOD |
+F:ONLY_GOLD | DROP_22 | 
+F:KILL_ITEM | PASS_WALL | 
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:HURT_ROCK | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+D:It is a tougher relative of the Xorn. It looks half-transparent. 
+
+N:7149:Ice hulk
+G:X:B
+I:125:32d30:20:120:10
+W:60:1:500000:2800
+E:0:0:0:3:0:0
+O:0:0:0:0
+B:HIT:ICE:5d7
+B:HIT:ICE:5d7
+B:HIT:ICE:5d7
+B:HIT:ICE:5d7
+F:FORCE_MAXHP | HURT_LITE | 
+F:EMPTY_MIND | COLD_BLOOD |
+F:ONLY_GOLD | DROP_22 | 
+F:KILL_ITEM | PASS_WALL | 
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:HURT_ROCK | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+D:It is a tougher relative of the Xorn. It looks like an ice statue. 
+
+N:7150:RNG hulk
+G:X:v
+I:127:40d60:20:150:10
+W:80:1:500000:5500
+E:0:0:0:3:0:0
+O:0:0:0:0
+B:HIT:RANDOM:6d10
+B:HIT:RANDOM:6d10
+B:HIT:RANDOM:6d10
+B:HIT:RANDOM:6d10
+F:FORCE_MAXHP | HURT_LITE | RES_CHAO | 
+F:EMPTY_MIND | COLD_BLOOD |
+F:ONLY_GOLD | DROP_22 | 
+F:KILL_ITEM | PASS_WALL | 
+F:IM_FIRE | IM_COLD | IM_ELEC | IM_POIS | 
+F:HURT_ROCK | NO_CONF | NO_SLEEP | BASEANGBAND | NO_CUT
+D:It is a tougher relative of the Xorn. It looks quite weird. 
+
+N:7151:Vampire giant
+G:V:u
+I:110:35d35:20:45:10
+W:27:1:10000:175
+E:1:1:1:2:1:1
+O:20:40:20:10
+B:HIT:HURT:1d6
+B:HIT:HURT:1d6
+B:BITE:EXP_20:2d6
+B:BITE:EXP_20:2d6
+F:FORCE_SLEEP | FORCE_MAXHP | GIANT | SMART | HAS_LITE | 
+F:COLD_BLOOD | DROP_60 | DROP_12 | SUSCEP_FIRE | 
+F:OPEN_DOOR | BASH_DOOR | REGENERATE | CAN_FLY |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | 
+F:BASEANGBAND | NO_CUT
+S:1_IN_9 | 
+S:TELE_TO | HOLD | SCARE | CAUSE_2 | MIND_BLAST | FORGET | DARKNESS | 
+S:BOULDER | 
+D:It is a giant with an aura of power. You notice a sharp set of front 
+D:teeth. 
+
+N:7152:Vampire demon
+G:V:U
+I:112:35d20:20:55:10
+W:34:1:1700:275
+E:1:1:1:2:1:1
+O:20:40:20:10
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+B:BITE:EXP_20:3d6
+B:BITE:EXP_20:3d6
+F:FORCE_SLEEP | FORCE_MAXHP | DEMON | 
+F:COLD_BLOOD | DROP_60 | DROP_12 | 
+F:OPEN_DOOR | BASH_DOOR | REGENERATE | CAN_FLY |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | 
+F:BASEANGBAND | NO_CUT
+S:1_IN_9 | 
+S:TELE_TO | HOLD | SCARE | CAUSE_2 | MIND_BLAST | FORGET | DARKNESS | 
+S:S_DEMON | 
+D:It is a demon with an aura of power. You notice a sharp set of front 
+D:teeth. 
+
+N:7153:Vampire dragon
+G:V:w
+I:111:35d27:20:80:120
+W:40:1:8000:350
+E:1:1:1:2:1:1
+O:20:40:20:10
+B:HIT:HURT:2d8
+B:HIT:HURT:2d8
+B:BITE:EXP_20:2d9
+B:BITE:EXP_20:2d9
+F:FORCE_SLEEP | FORCE_MAXHP | DRAGON | 
+F:COLD_BLOOD | DROP_60 | DROP_12 | 
+F:OPEN_DOOR | BASH_DOOR | REGENERATE | CAN_FLY |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | 
+F:BASEANGBAND | NO_CUT
+S:1_IN_9 | 
+S:TELE_TO | HOLD | SCARE | CAUSE_2 | MIND_BLAST | FORGET | DARKNESS | 
+S:BR_COLD | BR_POIS | BR_CONF | 
+D:It is a dragon with an aura of power. You notice a sharp set of front 
+D:teeth. 
+
+N:7154:Giant dark dragon fly
+G:F:D
+I:120:3d8:12:20:50
+W:20:2:150:70
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:DARK:1d6
+F:FORCE_SLEEP | RAND_50 | RAND_25 | 
+F:WEIRD_MIND | BASH_DOOR | CAN_FLY | WILD_TOO | WILD_SWAMP | 
+F:ANIMAL | NO_CUT | RES_DARK | 
+F:MORTAL | BASEANGBAND
+S:1_IN_10 | 
+S:BR_DARK
+D:The size of a large bird, this fly likes dark areas. 
+
+N:7155:Amorphous mold
+G:m:G
+I:110:17d8:2:16:70
+W:19:1:40:64
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPORE:AMEBA:4d4
+F:NEVER_MOVE | 
+F:STUPID | EMPTY_MIND | 
+F:IM_POIS | CAN_SWIM |
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+D:It is a strange silvery growth on the dungeon floor; it seems hungry. 
+
+N:7156:Plasma Device
+G:*:R
+I:110:90d30:20:110:50
+W:68:3:7000:4000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:PLASMA:24d24
+F:FORCE_MAXHP | NEVER_MOVE | IM_FIRE | IM_POIS | BASEANGBAND
+F:NO_FEAR | NO_STUN | NO_CUT | NO_SLEEP | NO_CONF | RES_TELE
+F:RES_NETH | AURA_FIRE | STUPID | EMPTY_MIND | NONLIVING
+F:SUSCEP_COLD | RES_PLAS | 
+D:*tick* *tick* *tick* You feel that this could be a bomb... 
+
+N:7157:Spiteful Slug
+G:A:D
+I:115:9d14:2:28:2
+W:28:1:0:180
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRUSH:ACID:8d12
+F:WEIRD_MIND | BASH_DOOR | KILL_ITEM | IM_ACID | 
+F:ORC | IM_POIS | NO_FEAR | BASEANGBAND
+D:A horrible creature that wants to melt both the objects on the 
+D:dungeon floor and your body. 
+
+N:7158:Dissolving Slug
+G:A:D
+I:119:15d45:2:50:2
+W:58:1:0:1200
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRUSH:ACID:9d12
+B:CRUSH:ACID:9d12
+F:WEIRD_MIND | BASH_DOOR | KILL_ITEM | IM_ACID | 
+F:ORC | IM_POIS | NO_FEAR | BASEANGBAND
+S:1_IN_6
+S:BR_ACID
+D:This huge slug is capable of melting everything.
+
+N:7159:Glowing Buckyball
+G:E:R
+I:126:35d34:3:50:90
+W:56:8:0:800
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRUSH:HURT:6d8
+B:CRUSH:PLASMA:8d12
+B:CRUSH:PLASMA:6d16
+B:CRUSH:PLASMA:6d16
+F:STUPID | EMPTY_MIND | RAND_25 | IM_FIRE | BASEANGBAND | RES_PLAS | 
+D:A truncated icosahedron several metres high, it has 32 faces, of
+D: which 20 are regular hexagons and 12 are regular pentagons. These
+D: faces come together at 60 points, or vertices. A grossly oversized
+D: carbon atom sits at each of the vertices.
+D: The entire assembly is ablaze and burns vigorously, leaving scorch
+D: marks and trails of fire as it bounces and rolls around the room.
+D: Brought to you complements of Mr. Buckminster Fuller, Professor
+D: Robert F. Curl, Jr. (Rice University), Professor Sir Harold W. Kroto
+D: (University of Sussex), and Professor Richard E. Smalley, (Rice
+D: University).
+
+N:7160:Platnik
+G:V:D
+I:120:80d20:8:130:50
+W:64:2:2:2700
+E:1:1:1:2:1:1
+O:20:40:20:10
+B:PUNCH:EXP_40:40d6
+B:PUNCH:UN_POWER:60d5
+F:COLD_BLOOD | WEIRD_MIND | UNDEAD | EVIL | NO_FEAR | NO_SLEEP | BASEANGBAND
+F:RES_GRAV | IM_COLD | CAN_SWIM | IM_POIS | BASH_DOOR | INVISIBLE | 
+S:1_IN_5 | 
+S:SHRIEK | BR_POIS | DRAIN_MANA | 
+D:This restless spirit has risen to the grave. It wants to harass you 
+D:and drain your energy. 
+
+N:7161:Cuttenclip Captain
+G:o:B
+I:120:18d100:80:18:220
+W:80:3:0:1800
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CHARGE:HURT:12d14
+B:STING:HURT:12d14
+F:COLD_BLOOD | OPEN_DOOR | ESCORT | WEIRD_MIND |
+F:GIANT | SUSCEP_FIRE | CAN_SWIM | IM_POIS |  
+F:RES_GRAV | BASEANGBAND | DROP_CORPSE | IM_COLD | 
+S:1_IN_5 | 
+S:ROCKET
+D:An elite cuttenclip soldier. 
+
 
 
 
