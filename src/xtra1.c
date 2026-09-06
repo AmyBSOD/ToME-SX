@@ -2156,6 +2156,11 @@ void calc_hitpoints(void)
 
 	}
 
+	/* currently in soul mode (possessor without a body)? have very little HP, but more than 1 because otherwise a pinprick can kill you --Amy */
+	if (p_ptr->disembodied && (mhp > p_ptr->lev)) mhp = p_ptr->lev;
+	/* it's not like you were going to spend much time in soul mode anyway due to not having any equipment,
+	 * so having *some* leeway against getting killed is in order */
+
 	/* Factor in the hero / superhero settings */
 	if (p_ptr->hero) mhp += 10;
 	if (p_ptr->shero) mhp += 30;
@@ -2169,8 +2174,6 @@ void calc_hitpoints(void)
 	{
 		mhp += mhp * p_ptr->to_l / 10;
 	}
-
-	if (p_ptr->disembodied) mhp = 1;
 
 	/* HACK - being undead means less DP */
 	if (p_ptr->necro_extra & CLASS_UNDEAD)
