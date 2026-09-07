@@ -47107,6 +47107,7 @@ F:RES_INER | RES_CHAO | RES_WALL | NO_CONF | WILD_WOOD | WILD_MOUNTAIN | REVBOSS
 F:RES_MIND | RES_NERV |
 S:1_IN_5 | 
 S:ARROW_4 | BR_DISE | BR_ACID | BA_MANA | CAUSE_4 | HAND_DOOM | S_HI_DEMON | 
+S:S_WOMAN | 
 D:A female assistant who looks very angry. She wants to kill you, violate 
 D:your corpse and feed your remains to the vultures. You should get away ASAP! 
 
@@ -47147,7 +47148,7 @@ F:RES_TIME | RES_SOUN | RES_CHAO | RES_WALL | RES_GRAV | RES_NERV |
 S:1_IN_3 | 
 S:BR_NETH | BR_DISE | BR_TIME | BR_INER | BR_GRAV | BA_NUKE | BA_CHAO | 
 S:BA_NETH | BRAIN_SMASH | S_THUNDERLORD | S_HI_UNDEAD | S_HI_DRAGON | 
-S:S_UNIQUE | S_WRAITH | 
+S:S_UNIQUE | S_WRAITH | S_CLOTHES | 
 D:The meanest of all the assistants, she will fuck you up and your children 
 D:and your grand children. You're dead. You just don't know it yet. Oh, and 
 D:she's also the 14th Nazgul, not that it matters much. 
@@ -93141,7 +93142,7 @@ F:RES_TIME | RES_SOUN | RES_CHAO | RES_WALL | RES_GRAV | RES_NERV |
 S:1_IN_3 | 
 S:BR_NETH | BR_DISE | BR_TIME | BR_INER | BR_GRAV | BA_NUKE | BA_CHAO | 
 S:BA_NETH | BRAIN_SMASH | S_THUNDERLORD | S_HI_UNDEAD | S_HI_DRAGON | 
-S:S_UNIQUE | S_WRAITH | 
+S:S_UNIQUE | S_WRAITH | S_CLOTHES | 
 D:The meanest of all the assistants, she will fuck you up and your children 
 D:and your grand children. You're dead. You just don't know it yet. 
 
@@ -93490,6 +93491,7 @@ F:RES_INER | RES_CHAO | RES_WALL | NO_CONF | WILD_WOOD | WILD_MOUNTAIN |
 F:RES_MIND | RES_NERV |
 S:1_IN_5 | 
 S:ARROW_4 | BR_DISE | BR_ACID | BA_MANA | CAUSE_4 | HAND_DOOM | S_HI_DEMON | 
+S:S_WOMAN | 
 D:A female assistant who looks very angry. She wants to kill you, violate 
 D:your corpse and feed your remains to the vultures. You should get away ASAP! 
 
@@ -123888,6 +123890,137 @@ F:RES_GRAV | BASEANGBAND | DROP_CORPSE | IM_COLD |
 S:1_IN_5 | 
 S:ROCKET
 D:An elite cuttenclip soldier. 
+
+N:7162:Demon attorney
+G:U:v
+I:120:30d120:20:140:10
+W:80:3:1900:10000
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:TOUCH:EAT_GOLD:4d25
+B:TOUCH:EAT_ITEM:4d25
+B:TOUCH:EAT_FOOD:4d25
+B:TOUCH:EAT_LITE:4d25
+F:MALE | 
+F:DROP_22 | REGENERATE | NO_THEFT | NO_FEAR | NO_STUN | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | RES_NETH | RES_NERV | 
+F:GOOD | DROP_SKELETON | DROP_CORPSE | NO_SLEEP | COLD_BLOOD | 
+F:MORTAL | BASEANGBAND | IM_COLD | IM_POIS | WEIRD_MIND | 
+F:NO_CUT | RES_TIME | RES_DARK | DEMON | RES_PLAS | 
+S:1_IN_4
+S:TPORT | TELE_AWAY | BR_ETHE | BR_SOUN | HAND_DOOM | HOLD | 
+S:SLOW | S_PEOPLE | 
+D:A hotshot prosecutor wearing a magenta-red coat with a 
+D:distinct large white cravat. He never lost a case and is 
+D:rumored to be totally ruthless. In an attempt to intimidate you, 
+D:he constantly slams his desk, shouts "OBJECTION!" and wags his 
+D:finger at you. Then he proceeds to present an updated autopsy 
+D:report, which you suspect he had forged a couple hours ago.  
+
+N:7163:Bacteria
+G:;:w
+I:115:30d20:20:40:50
+W:30:4:5000:1000
+E:1:1:1:0:0:0
+O:0:0:0:0
+B:SPORE:HURT:8d10
+F:SMART | DROP_CORPSE | MORTAL | BASEANGBAND | 
+D:What the hell is this monster?! It looks vaguely humanoid, 
+D:but seems to be infested with some sort of parasites... 
+
+N:7164:Meshera Beta
+G:;:v
+I:118:30d40:20:60:50
+W:50:4:5000:2000
+E:1:1:1:0:0:0
+O:0:0:0:0
+B:SPORE:HURT:10d12
+F:SMART | DROP_CORPSE | MORTAL | BASEANGBAND | 
+D:This thing probably cannot be killed at all. 
+
+N:7165:Meshera Gamma
+G:;:r
+I:120:30d50:20:70:50
+W:60:4:5000:2500
+E:1:1:1:0:0:0
+O:0:0:0:0
+B:SPORE:HURT:12d12
+F:SMART | DROP_CORPSE | MORTAL | BASEANGBAND | 
+S:1_IN_6
+S:BO_MANA | BA_CHAO | 
+D:A bacteria-infested human who doesn't want to kill you, 
+D:but is instructed to do so by the parasites. 
+
+N:7166:Meshera Delta
+G:;:R
+I:122:30d60:20:80:50
+W:70:4:5000:3000
+E:1:1:1:0:0:0
+O:0:0:0:0
+B:SPORE:LOSE_STR:14d12
+F:SMART | DROP_CORPSE | MORTAL | BASEANGBAND | 
+S:1_IN_6
+S:SLOW | BR_CONF | 
+D:Beware the hexes and debuffs used by this bacteria-infested 
+D:human. 
+
+# was a unique in Elona, but I decided to turn them into a regular monster --Amy
+N:7167:Meshera Alpha
+G:;:o
+I:130:50d150:20:150:50
+W:100:4:5000:10000
+E:1:1:1:0:0:0
+O:0:0:0:0
+B:SPORE:LOSE_ALL:18d20
+F:SMART | DROP_CORPSE | MORTAL | BASEANGBAND | REGENERATE | 
+F:FEMALE | NO_STUN | NO_CONF | NO_SLEEP | 
+S:1_IN_4
+S:BR_SOUN | BR_MANA | MISSILE | TELE_TO | BRAIN_SMASH | BR_MIND | 
+S:HEAL | 
+D:The mother of all the Meshera. She is a formidable opponent and will 
+D:regenerate quickly when wounded. 
+
+# was a unique in Elona, but I decided to turn them into a regular monster --Amy
+N:7168:Meshera Plant
+G:&:R
+I:125:30d120:20:120:50
+W:90:4:5000:8000
+E:1:1:1:0:0:0
+O:20:20:20:20
+B:SPORE:HURT:16d18
+F:SMART | DROP_CORPSE | MORTAL | BASEANGBAND | REGENERATE | 
+F:FEMALE | NO_STUN | NO_CONF | NO_SLEEP | NEVER_MOVE | DROP_22 | 
+S:1_IN_5
+S:BO_NETH | MISSILE | TELE_TO | S_RANDOM | 
+D:A huge bacteria-infested plant that absorbs the souls of those she killed. 
+
+N:7169:Tester
+G:&:r
+I:128:30d140:20:140:50
+W:95:4:5000:9000
+E:1:1:1:0:0:0
+O:0:0:0:0
+B:SPORE:HURT:17d19
+F:SMART | DROP_CORPSE | MORTAL | BASEANGBAND | REGENERATE | 
+F:NO_FEAR | NEVER_MOVE | 
+S:1_IN_5
+S:HEAL | TELE_TO | BO_NETH | BO_POIS | BA_POIS | 
+D:You're not sure what this clump of flesh is supposed to be. 
+
+N:7170:Bomb boy
+G:p:r
+I:110:64d60:20:80:20
+W:60:5:1600:500
+E:1:1:1:2:1:1
+O:25:50:0:20
+F:ATTR_MULTI |
+F:MALE | NEVER_BLOW | DROP_CORPSE | 
+F:FORCE_MAXHP | JOKEANGBAND | 
+F:SMART | NEUTRAL | IM_FIRE | 
+S:1_IN_2
+S:BA_METE
+D:A delivery boy. He delivers... bombs. 
+
 
 
 
