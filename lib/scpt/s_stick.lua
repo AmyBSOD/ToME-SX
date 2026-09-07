@@ -118,6 +118,7 @@ DEVICE_RADIO_WAVE = add_spell
 	["mana"] = 18,
 	["mana_max"] = 70,
 	["fail"] = 30,
+	["random"] =    -1,
 	["stick"] =
 	{
 			["charge"] =    { 10, 15 },
