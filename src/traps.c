@@ -921,6 +921,8 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY207:
 		case TRAP_NASTY208:
 		case TRAP_NASTY209:
+		case TRAP_NASTY210:
+		case TRAP_NASTY211:
 			return FALSE;
 	}
 
@@ -1168,6 +1170,8 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY207:
 		case TRAP_NASTY208:
 		case TRAP_NASTY209:
+		case TRAP_NASTY210:
+		case TRAP_NASTY211:
 			return FALSE;
 	}
 
@@ -1418,6 +1422,8 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY207:
 		case TRAP_NASTY208:
 		case TRAP_NASTY209:
+		case TRAP_NASTY210:
+		case TRAP_NASTY211:
 			return TRUE;
 	}
 
@@ -8938,10 +8944,132 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;
 		}
 
+	case TRAP_SKILL_VALUE_II:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			swap_skill_value();
+			swap_skill_value();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Value Swap.");
+			break;
+		}
+
+	case TRAP_SKILL_VALUE_III:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			swap_skill_value();
+			swap_skill_value();
+			swap_skill_value();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Value Swap.");
+			break;
+		}
+
 	case TRAP_SKILL_MULT:
 		{
 			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
 
+			swap_skill_mult();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Multiplier Swap.");
+			break;
+		}
+
+	case TRAP_SKILL_MULT_II:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			swap_skill_mult();
+			swap_skill_mult();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Multiplier Swap.");
+			break;
+		}
+
+	case TRAP_SKILL_MULT_III:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			swap_skill_mult();
+			swap_skill_mult();
 			swap_skill_mult();
 
 			/* If we're on a floor or on a door, place a new trap */
@@ -8993,6 +9121,685 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			/* Never known */
 			ident = FALSE;
 			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Swap.");
+			break;
+		}
+
+	case TRAP_SKILL_SWAP_II:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			swap_skill_both();
+			swap_skill_both();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Swap.");
+			break;
+		}
+
+	case TRAP_SKILL_SWAP_III:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			swap_skill_both();
+			swap_skill_both();
+			swap_skill_both();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Swap.");
+			break;
+		}
+
+	case TRAP_SKILL_SHIFT:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			shift_skill_value(1);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Shift.");
+			break;
+		}
+
+	case TRAP_SKILL_SHIFT_II:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			shift_skill_value(2);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Shift.");
+			break;
+		}
+
+	case TRAP_SKILL_SHIFT_III:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			shift_skill_value(3);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Shift.");
+			break;
+		}
+
+	case TRAP_SKILL_SHIFT_IV:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			shift_skill_value(5);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Shift.");
+			break;
+		}
+
+	case TRAP_SKILL_FLUCT:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			shift_skill_mult(1);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Fluctuate.");
+			break;
+		}
+
+	case TRAP_SKILL_FLUCT_II:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			shift_skill_mult(2);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Fluctuate.");
+			break;
+		}
+
+	case TRAP_SKILL_FLUCT_III:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			shift_skill_mult(3);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Fluctuate.");
+			break;
+		}
+
+	case TRAP_SKILL_FLUCT_IV:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			shift_skill_mult(5);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Fluctuate.");
+			break;
+		}
+
+	case TRAP_SKILL_WARP:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			shift_skill_both(1);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Warp.");
+			break;
+		}
+
+	case TRAP_SKILL_WARP_II:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			shift_skill_both(2);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Warp.");
+			break;
+		}
+
+	case TRAP_SKILL_WARP_III:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			shift_skill_both(3);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Warp.");
+			break;
+		}
+
+	case TRAP_SKILL_WARP_IV:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			shift_skill_both(5);
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Warp.");
+			break;
+		}
+
+	case TRAP_SKILL_TR_VALUE:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			transfer_skill_value();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Value Transfer.");
+			break;
+		}
+
+	case TRAP_SKILL_TR_VALUE_II:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			transfer_skill_value();
+			transfer_skill_value();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Value Transfer.");
+			break;
+		}
+
+	case TRAP_SKILL_TR_VALUE_III:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			transfer_skill_value();
+			transfer_skill_value();
+			transfer_skill_value();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Value Transfer.");
+			break;
+		}
+
+	case TRAP_SKILL_TR_MULT:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			transfer_skill_mult();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Multiplier Transfer.");
+			break;
+		}
+
+	case TRAP_SKILL_TR_MULT_II:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			transfer_skill_mult();
+			transfer_skill_mult();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Multiplier Transfer.");
+			break;
+		}
+
+	case TRAP_SKILL_TR_MULT_III:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			transfer_skill_mult();
+			transfer_skill_mult();
+			transfer_skill_mult();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Multiplier Transfer.");
+			break;
+		}
+
+	case TRAP_SKILL_TR_BOTH:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			transfer_skill_both();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Transfer.");
+			break;
+		}
+
+	case TRAP_SKILL_TR_BOTH_II:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			transfer_skill_both();
+			transfer_skill_both();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Transfer.");
+			break;
+		}
+
+	case TRAP_SKILL_TR_BOTH_III:
+		{
+			if (!p_ptr->nastytrap3) t_info[trap].ident = TRUE;
+
+			transfer_skill_both();
+			transfer_skill_both();
+			transfer_skill_both();
+
+			/* If we're on a floor or on a door, place a new trap */
+			if ((item == -1) || (item == -2))
+			{
+				place_trap(y, x);
+				if (player_has_los_bold(y, x))
+				{
+					note_spot(y, x);
+					lite_spot(y, x);
+				}
+			}
+			else
+			{
+				/* Re-trap the chest */
+				place_trap(y, x);
+			}
+			msg_print("You hear a noise, and then its echo.");
+
+			/* Never known */
+			ident = FALSE;
+			if (!p_ptr->nastytrap3) msg_print("You identified that trap as Trap of Skill Transfer.");
 			break;
 		}
 
@@ -20666,6 +21473,30 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY210:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap210 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY211:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap211 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHIT_I:
 		{
 			bool badheel = FALSE;
@@ -25503,7 +26334,7 @@ void multitraptrigger(int triggercnt)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(209)) {
+	switch (randint(211)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -26131,6 +26962,12 @@ void give_random_nastytrap_effect(void)
 		case 209:
 			p_ptr->nastytrap209 = TRUE;
 			break;
+		case 210:
+			p_ptr->nastytrap210 = TRUE;
+			break;
+		case 211:
+			p_ptr->nastytrap211 = TRUE;
+			break;
 
 	}
 }
@@ -26357,8 +27194,8 @@ void cure_nasty_traps(void)
 	if (effect_level >= 1) p_ptr->nastytrap207 = FALSE;
 	if (effect_level >= 30) p_ptr->nastytrap208 = FALSE;
 	if (effect_level >= 20) p_ptr->nastytrap209 = FALSE;
-	p_ptr->nastytrap210 = FALSE;
-	p_ptr->nastytrap211 = FALSE;
+	if (effect_level >= 30) p_ptr->nastytrap210 = FALSE;
+	if (effect_level >= 20) p_ptr->nastytrap211 = FALSE;
 	p_ptr->nastytrap212 = FALSE;
 	p_ptr->nastytrap213 = FALSE;
 	p_ptr->nastytrap214 = FALSE;

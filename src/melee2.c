@@ -612,7 +612,7 @@ static bool clean_shot(int y1, int x1, int y2, int x2)
 	y = y1, x = x1;
 
 	/* See "project()" and "projectable()" */
-	for (dist = 0; dist <= MAX_RANGE_MONST; dist++)
+	for (dist = 0; dist <= (p_ptr->nastytrap210 ? MAX_RANGE_MONST_ELONG : MAX_RANGE_MONST); dist++)
 	{
 		/* Never pass through walls */
 		if (dist && (!cave_sight_bold(y, x) || !cave_floor_bold(y, x))) break;
@@ -1390,7 +1390,7 @@ static bool monst_spell_monst(int m_idx)
 		t_ptr = &m_list[t_idx];
 		tr_ptr = race_inf(t_ptr);
 
-		/* Hack -- no fighting >100 squares from player */
+		/* Hack -- no fighting >100 squares from player; elongation does not affect this (not a bug) --Amy */
 		if (t_ptr->cdis > MAX_RANGE_MONST) return FALSE;
 
 		/* Monster must be projectable */
@@ -5239,8 +5239,8 @@ bool make_attack_spell(int m_idx)
 	/* Hack -- require projectable player */
 	if (normal)
 	{
-		/* Check range */
-		if (m_ptr->cdis > MAX_RANGE_MONST) return (FALSE);
+		/* Check range; elongation trap by Amy prevents this and allows them to fire from very far away */
+		if ((m_ptr->cdis > MAX_RANGE_MONST) && !p_ptr->nastytrap210) return (FALSE);
 
 		/* Check path */
 		if (!projectable_monst(m_ptr->fy, m_ptr->fx, y, x)) return (FALSE);
@@ -10635,7 +10635,7 @@ static void process_monster(int m_idx, bool is_frien)
 	 * this still carries the problem that if a monster is slowed down considerably, it'll rarely get a turn and therefore rarely run this code... */
 	if (m_ptr->mspeed < r_ptr->speed)
 	{
-		if (magik(5)) {
+		if (magik(5) || ((r_ptr->flags1 & (RF1_UNIQUE)) && magik(20)) ) {
 			m_ptr->mspeed = r_ptr->speed;
 
 			/* Message if visible */
@@ -12060,7 +12060,7 @@ void process_monsters(void)
 
 
 		/* Hack -- Require proximity */
-		if (m_ptr->cdis >= 100) continue;
+		if ((m_ptr->cdis >= 100) && !p_ptr->nastytrap211) continue;
 
 
 		/* Access the race */

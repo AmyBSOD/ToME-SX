@@ -441,6 +441,7 @@
 #define MAX_RANGE       18      /* Maximum range (spells, etc) */
 #define MAX_RANGE_NASTY 10      /* Maximum range for the player's spells when low range nastytrap is active */
 #define MAX_RANGE_MONST 20      /* Maximum range for monster spells, you filthy abuser who pelts them with view spells or arrows from a distance of 20! --Amy */
+#define MAX_RANGE_MONST_ELONG 250      /* Maximum range for monster spells when elongation nastytrap is active --Amy */
 
 
 
@@ -3910,6 +3911,39 @@
 #define TRAP_OF_ICKY_LEVEL                1032
 #define TRAP_OF_UNICKY_LEVEL              1033
 #define TRAP_OF_ETERNAL_DARKNESS          1034
+
+#define TRAP_SKILL_VALUE_II               1035
+#define TRAP_SKILL_MULT_II                1036
+#define TRAP_SKILL_SWAP_II                1037
+#define TRAP_SKILL_VALUE_III              1038
+#define TRAP_SKILL_MULT_III               1039
+#define TRAP_SKILL_SWAP_III               1040
+
+#define TRAP_SKILL_SHIFT                  1041
+#define TRAP_SKILL_FLUCT                  1042
+#define TRAP_SKILL_WARP                   1043
+#define TRAP_SKILL_SHIFT_II               1044
+#define TRAP_SKILL_FLUCT_II               1045
+#define TRAP_SKILL_WARP_II                1046
+#define TRAP_SKILL_SHIFT_III              1047
+#define TRAP_SKILL_FLUCT_III              1048
+#define TRAP_SKILL_WARP_III               1049
+#define TRAP_SKILL_SHIFT_IV               1050
+#define TRAP_SKILL_FLUCT_IV               1051
+#define TRAP_SKILL_WARP_IV                1052
+
+#define TRAP_SKILL_TR_VALUE               1053
+#define TRAP_SKILL_TR_MULT                1054
+#define TRAP_SKILL_TR_BOTH                1055
+#define TRAP_SKILL_TR_VALUE_II            1056
+#define TRAP_SKILL_TR_MULT_II             1057
+#define TRAP_SKILL_TR_BOTH_II             1058
+#define TRAP_SKILL_TR_VALUE_III           1059
+#define TRAP_SKILL_TR_MULT_III            1060
+#define TRAP_SKILL_TR_BOTH_III            1061
+
+#define TRAP_NASTY210                     1062
+#define TRAP_NASTY211                     1063
 
 /*** General index values ***/
 

@@ -5248,6 +5248,151 @@ I:3:50:40:4:10:0d0:D
 D:Eternal darkness seems to consume you!
 F:FLOOR | CHEST | DOOR
 
+N:1035:Trap of Double Swap Skill Value
+I:15:2:10:25:50:0d0:y
+D:Your skill values seem to scramble...
+F:FLOOR | CHEST | DOOR
+
+N:1036:Trap of Double Swap Skill Multiplier
+I:20:2:10:25:60:0d0:y
+D:Your skill multipliers seem to scramble...
+F:FLOOR | CHEST | DOOR
+
+N:1037:Trap of Double Swap Skill
+I:25:2:10:25:70:0d0:y
+D:Your skills seem to scramble...
+F:FLOOR | CHEST | DOOR
+
+N:1038:Trap of Triple Swap Skill Value
+I:15:2:10:25:80:0d0:y
+D:Your skill values seem to scramble...
+F:FLOOR | CHEST | DOOR
+
+N:1039:Trap of Triple Swap Skill Multiplier
+I:20:2:10:25:90:0d0:y
+D:Your skill multipliers seem to scramble...
+F:FLOOR | CHEST | DOOR
+
+N:1040:Trap of Triple Swap Skill
+I:25:2:10:25:100:0d0:y
+D:Your skills seem to scramble...
+F:FLOOR | CHEST | DOOR
+
+N:1041:Trap of Skill Shift
+I:20:2:10:25:20:0d0:y
+D:Your skills seem to shift...
+F:FLOOR | CHEST | DOOR
+
+N:1042:Trap of Skill Fluctuate
+I:20:2:10:25:20:0d0:y
+D:Your skills seem to fluctuate...
+F:FLOOR | CHEST | DOOR
+
+N:1043:Trap of Skill Warp
+I:20:2:10:25:20:0d0:y
+D:Your skills seem to warp...
+F:FLOOR | CHEST | DOOR
+
+N:1044:Trap of Greater Skill Shift
+I:20:2:10:25:40:0d0:y
+D:Your skills seem to shift...
+F:FLOOR | CHEST | DOOR
+
+N:1045:Trap of Greater Skill Fluctuate
+I:20:2:10:25:40:0d0:y
+D:Your skills seem to fluctuate...
+F:FLOOR | CHEST | DOOR
+
+N:1046:Trap of Greater Skill Warp
+I:20:2:10:25:40:0d0:y
+D:Your skills seem to warp...
+F:FLOOR | CHEST | DOOR
+
+N:1047:Trap of High Skill Shift
+I:20:2:10:25:60:0d0:y
+D:Your skills seem to shift...
+F:FLOOR | CHEST | DOOR
+
+N:1048:Trap of High Skill Fluctuate
+I:20:2:10:25:60:0d0:y
+D:Your skills seem to fluctuate...
+F:FLOOR | CHEST | DOOR
+
+N:1049:Trap of High Skill Warp
+I:20:2:10:25:60:0d0:y
+D:Your skills seem to warp...
+F:FLOOR | CHEST | DOOR
+
+N:1050:Trap of Ultimate Skill Shift
+I:20:2:10:25:80:0d0:y
+D:Your skills seem to shift...
+F:FLOOR | CHEST | DOOR
+
+N:1051:Trap of Ultimate Skill Fluctuate
+I:20:2:10:25:80:0d0:y
+D:Your skills seem to fluctuate...
+F:FLOOR | CHEST | DOOR
+
+N:1052:Trap of Ultimate Skill Warp
+I:20:2:10:25:80:0d0:y
+D:Your skills seem to warp...
+F:FLOOR | CHEST | DOOR
+
+N:1053:Trap of Transfer Skill Value
+I:25:2:10:25:30:0d0:y
+D:Your skills seem to be transferred...
+F:FLOOR | CHEST | DOOR
+
+N:1054:Trap of Transfer Skill Multiplier
+I:25:2:10:25:30:0d0:y
+D:Your skills seem to be transferred...
+F:FLOOR | CHEST | DOOR
+
+N:1055:Trap of Transfer Skill
+I:25:2:10:25:30:0d0:y
+D:Your skills seem to be transferred...
+F:FLOOR | CHEST | DOOR
+
+N:1056:Trap of Double Transfer Skill Value
+I:25:2:10:25:60:0d0:y
+D:Your skills seem to be transferred...
+F:FLOOR | CHEST | DOOR
+
+N:1057:Trap of Double Transfer Skill Multiplier
+I:25:2:10:25:60:0d0:y
+D:Your skills seem to be transferred...
+F:FLOOR | CHEST | DOOR
+
+N:1058:Trap of Double Transfer Skill
+I:25:2:10:25:60:0d0:y
+D:Your skills seem to be transferred...
+F:FLOOR | CHEST | DOOR
+
+N:1059:Trap of Triple Transfer Skill Value
+I:25:2:10:25:90:0d0:y
+D:Your skills seem to be transferred...
+F:FLOOR | CHEST | DOOR
+
+N:1060:Trap of Triple Transfer Skill Multiplier
+I:25:2:10:25:90:0d0:y
+D:Your skills seem to be transferred...
+F:FLOOR | CHEST | DOOR
+
+N:1061:Trap of Triple Transfer Skill
+I:25:2:10:25:90:0d0:y
+D:Your skills seem to be transferred...
+F:FLOOR | CHEST | DOOR
+
+N:1062:Elongation Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:1063:Distance Trap
+I:40:2:50:4:20:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

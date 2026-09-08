@@ -2563,6 +2563,14 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Monsters may spawn inside walls.";
 	}
+	if (p_ptr->nastytrap210)
+	{
+		info[i++] = "You have a problem: Monsters can use ranged attacks from very far away.";
+	}
+	if (p_ptr->nastytrap211)
+	{
+		info[i++] = "You have a problem: Monsters move even when very far away.";
+	}
 
 	if (p_ptr->contamination >= 10000)
 	{

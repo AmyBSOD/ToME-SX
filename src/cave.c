@@ -5360,7 +5360,7 @@ bool projectable_monst(int y1, int x1, int y2, int x2)
 	y = y1, x = x1;
 
 	/* See "project()" */
-	for (dist = 0; dist <= MAX_RANGE_MONST; dist++)
+	for (dist = 0; dist <= (p_ptr->nastytrap210 ? MAX_RANGE_MONST_ELONG : MAX_RANGE_MONST); dist++)
 	{
 		/* Check for arrival at "final target" */
 		/*

@@ -2053,6 +2053,12 @@ extern void drain_skill_random(void);
 extern void swap_skill_value(void);
 extern void swap_skill_mult(void);
 extern void swap_skill_both(void);
+extern void shift_skill_value(int magnitude);
+extern void shift_skill_mult(int magnitude);
+extern void shift_skill_both(int magnitude);
+extern void transfer_skill_value(void);
+extern void transfer_skill_mult(void);
+extern void transfer_skill_both(void);
 
 /* gods.c */
 extern void inc_piety(int god, s32b amt);

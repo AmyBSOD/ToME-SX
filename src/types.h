@@ -2344,8 +2344,8 @@ struct player_type
 	bool nastytrap207; /* lvl 1, reduce light radius trap - your light radius cannot be higher than 1 */
 	bool nastytrap208; /* lvl 30, wall summon trap - summoning can place monsters inside walls */
 	bool nastytrap209; /* lvl 20, wall spawn trap - regular monsters can spawn inside walls */
-	bool nastytrap210;
-	bool nastytrap211;
+	bool nastytrap210; /* lvl 30, elongation trap - monsters can use ranged attacks, breaths and spells from far away */
+	bool nastytrap211; /* lvl 20, distance trap - monsters move even when very far away */
 	bool nastytrap212;
 	bool nastytrap213;
 	bool nastytrap214;

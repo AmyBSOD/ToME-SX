@@ -360,21 +360,43 @@ void do_fart_effect(void)
 	case 29:
 		{
 			if (randint(1000) == 1) {
-				switch (randint(5)) {
+				switch (randint(15)) {
 					case 1:
+					case 2:
+					case 3:
 						drain_skill_lore();
 						break;
-					case 2:
+					case 4:
+					case 5:
+					case 6:
 						drain_skill_random();
 						break;
-					case 3:
+					case 7:
 						swap_skill_value();
 						break;
-					case 4:
+					case 8:
 						swap_skill_mult();
 						break;
-					case 5:
+					case 9:
 						swap_skill_both();
+						break;
+					case 10:
+						shift_skill_value(1);
+						break;
+					case 11:
+						shift_skill_mult(1);
+						break;
+					case 12:
+						shift_skill_both(1);
+						break;
+					case 13:
+						transfer_skill_value();
+						break;
+					case 14:
+						transfer_skill_mult();
+						break;
+					case 15:
+						transfer_skill_both();
 						break;
 				}
 

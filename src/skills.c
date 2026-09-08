@@ -119,13 +119,24 @@ void swap_skill_value(void)
 {
 	int skill1, skill2;
 	int tempvalue;
+	int attempts = 0;
+
+tryagain:
+	attempts++;
 	skill1 = randint(MAX_GOOD_SKILL);
 	skill2 = randint(MAX_GOOD_SKILL);
+
 	if (skill1 == skill2) {
+		if (attempts < 1000) goto tryagain;
 		msg_print("One of your skills had its value swapped with itself.");
 		msg_print("Which means, nothing happens.");
 		return;
 	}
+
+	if (s_info[skill1].value == s_info[skill2].value) {
+		if (attempts < 1000) goto tryagain;
+	}
+
 	tempvalue = s_info[skill1].value;
 	s_info[skill1].value = s_info[skill2].value;
 	s_info[skill2].value = tempvalue;
@@ -137,13 +148,24 @@ void swap_skill_mult(void)
 {
 	int skill1, skill2;
 	int tempvalue;
+	int attempts = 0;
+
+tryagain:
+	attempts++;
 	skill1 = randint(MAX_GOOD_SKILL);
 	skill2 = randint(MAX_GOOD_SKILL);
+
 	if (skill1 == skill2) {
+		if (attempts < 1000) goto tryagain;
 		msg_print("One of your skills had its multiplier swapped with itself.");
 		msg_print("Which means, nothing happens.");
 		return;
 	}
+
+	if (s_info[skill1].mod == s_info[skill2].mod) {
+		if (attempts < 1000) goto tryagain;
+	}
+
 	tempvalue = s_info[skill1].mod;
 	s_info[skill1].mod = s_info[skill2].mod;
 	s_info[skill2].mod = tempvalue;
@@ -155,13 +177,26 @@ void swap_skill_both(void)
 {
 	int skill1, skill2;
 	int tempvalue;
+	int attempts = 0;
+
+tryagain:
+	attempts++;
 	skill1 = randint(MAX_GOOD_SKILL);
 	skill2 = randint(MAX_GOOD_SKILL);
+
 	if (skill1 == skill2) {
+		if (attempts < 1000) goto tryagain;
 		msg_print("One of your skills was swapped with itself.");
 		msg_print("Which means, nothing happens.");
 		return;
 	}
+
+	if (s_info[skill1].mod == s_info[skill2].mod) {
+		if (s_info[skill1].value == s_info[skill2].value) {
+			if (attempts < 1000) goto tryagain;
+		}
+	}
+
 	tempvalue = s_info[skill1].mod;
 	s_info[skill1].mod = s_info[skill2].mod;
 	s_info[skill2].mod = tempvalue;
@@ -171,6 +206,240 @@ void swap_skill_both(void)
 	s_info[skill2].value = tempvalue;
 
 	msg_format("Your %s and %s skills were swapped completely!", s_info[skill1].name + s_name, s_info[skill2].name + s_name);
+}
+
+/* by Amy: shift skills */
+void shift_skill_value(int magnitude)
+{
+	int skill1, skill2;
+	int attempts = 0;
+
+tryagain:
+	attempts++;
+	skill1 = randint(MAX_GOOD_SKILL);
+	skill2 = randint(MAX_GOOD_SKILL);
+
+	if (skill1 == skill2) {
+		if (attempts < 1000) goto tryagain;
+		msg_print("One of your skills had its value shifted with itself.");
+		msg_print("Which means, nothing happens.");
+		return;
+	}
+
+	if (s_info[skill1].value < -50000) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill2].value > 50000) {
+		if (attempts < 1000) goto tryagain;
+	}
+
+	s_info[skill1].value -= (5000 * magnitude);
+	s_info[skill2].value += (5000 * magnitude);
+
+	msg_format("Your %s skill had its value lowered while the %s skill value was raised!", s_info[skill1].name + s_name, s_info[skill2].name + s_name);
+}
+
+void shift_skill_mult(int magnitude)
+{
+	int skill1, skill2;
+	int attempts = 0;
+
+tryagain:
+	attempts++;
+	skill1 = randint(MAX_GOOD_SKILL);
+	skill2 = randint(MAX_GOOD_SKILL);
+
+	if (skill1 == skill2) {
+		if (attempts < 1000) goto tryagain;
+		msg_print("One of your skills had its multiplier shifted with itself.");
+		msg_print("Which means, nothing happens.");
+		return;
+	}
+
+	if (s_info[skill1].mod < (100 * magnitude)) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill2].mod > 1500) {
+		if (attempts < 1000) goto tryagain;
+	}
+
+	s_info[skill1].mod -= (100 * magnitude);
+	s_info[skill2].mod += (100 * magnitude);
+
+	msg_format("Your %s skill had its multiplier lowered while the %s skill multiplier was raised!", s_info[skill1].name + s_name, s_info[skill2].name + s_name);
+}
+
+void shift_skill_both(int magnitude)
+{
+	int skill1, skill2;
+	int attempts = 0;
+
+tryagain:
+	attempts++;
+	skill1 = randint(MAX_GOOD_SKILL);
+	skill2 = randint(MAX_GOOD_SKILL);
+
+	if (skill1 == skill2) {
+		if (attempts < 1000) goto tryagain;
+		msg_print("One of your skills had its numbers shifted with itself.");
+		msg_print("Which means, nothing happens.");
+		return;
+	}
+
+	if (s_info[skill1].mod < (100 * magnitude)) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill2].mod > 1500) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill1].value < -50000) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill2].value > 50000) {
+		if (attempts < 1000) goto tryagain;
+	}
+
+	s_info[skill1].value -= (5000 * magnitude);
+	s_info[skill2].value += (5000 * magnitude);
+	s_info[skill1].mod -= (100 * magnitude);
+	s_info[skill2].mod += (100 * magnitude);
+
+	msg_format("Your %s skill had its numbers lowered while the %s skill numbers was raised!", s_info[skill1].name + s_name, s_info[skill2].name + s_name);
+}
+
+/* by Amy: transfer skills */
+void transfer_skill_value(void)
+{
+	int skill1, skill2;
+	int attempts = 0;
+	int tempvalue;
+
+tryagain:
+	attempts++;
+	skill1 = randint(MAX_GOOD_SKILL);
+	skill2 = randint(MAX_GOOD_SKILL);
+
+	if (skill1 == skill2) {
+		if (attempts < 1000) goto tryagain;
+		msg_print("One of your skills had its value transferred to itself.");
+		msg_print("Which means, nothing happens.");
+		return;
+	}
+
+	if (s_info[skill1].value < -100000) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill1].value > 100000) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if ((s_info[skill1].value > -100) && (s_info[skill1].value < 100)) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill2].value < -50000) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill2].value > 50000) {
+		if (attempts < 1000) goto tryagain;
+	}
+
+	tempvalue = (s_info[skill1].value / 2);
+
+	s_info[skill1].value -= tempvalue;
+	s_info[skill2].value += tempvalue;
+
+	msg_format("Your %s skill transferred half of its value to the %s skill!", s_info[skill1].name + s_name, s_info[skill2].name + s_name);
+}
+
+void transfer_skill_mult(void)
+{
+	int skill1, skill2;
+	int attempts = 0;
+	int tempvalue;
+
+tryagain:
+	attempts++;
+	skill1 = randint(MAX_GOOD_SKILL);
+	skill2 = randint(MAX_GOOD_SKILL);
+
+	if (skill1 == skill2) {
+		if (attempts < 1000) goto tryagain;
+		msg_print("One of your skills had its multiplier transferred to itself.");
+		msg_print("Which means, nothing happens.");
+		return;
+	}
+
+	if (s_info[skill1].mod < 100) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill1].mod > 3000) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill2].mod > 1500) {
+		if (attempts < 1000) goto tryagain;
+	}
+
+	tempvalue = (s_info[skill1].mod / 2);
+
+	s_info[skill1].mod -= tempvalue;
+	s_info[skill2].mod += tempvalue;
+
+	msg_format("Your %s skill transferred half of its multiplier to the %s skill!", s_info[skill1].name + s_name, s_info[skill2].name + s_name);
+}
+
+void transfer_skill_both(void)
+{
+	int skill1, skill2;
+	int attempts = 0;
+	int tempvalue;
+
+tryagain:
+	attempts++;
+	skill1 = randint(MAX_GOOD_SKILL);
+	skill2 = randint(MAX_GOOD_SKILL);
+
+	if (skill1 == skill2) {
+		if (attempts < 1000) goto tryagain;
+		msg_print("One of your skills had its numbers transferred to itself.");
+		msg_print("Which means, nothing happens.");
+		return;
+	}
+
+	if (s_info[skill1].mod < 100) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill1].mod > 3000) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill2].mod > 1500) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill1].value < -100000) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill1].value > 100000) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if ((s_info[skill1].value > -100) && (s_info[skill1].value < 100)) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill2].value < -50000) {
+		if (attempts < 1000) goto tryagain;
+	}
+	if (s_info[skill2].value > 50000) {
+		if (attempts < 1000) goto tryagain;
+	}
+
+	tempvalue = (s_info[skill1].mod / 2);
+
+	s_info[skill1].mod -= tempvalue;
+	s_info[skill2].mod += tempvalue;
+
+	tempvalue = (s_info[skill1].value / 2);
+
+	s_info[skill1].value -= tempvalue;
+	s_info[skill2].value += tempvalue;
+
+	msg_format("Your %s skill transferred half of its numbers to the %s skill!", s_info[skill1].name + s_name, s_info[skill2].name + s_name);
 }
 
 /*
