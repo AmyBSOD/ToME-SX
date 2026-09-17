@@ -1137,6 +1137,25 @@ G:;:B
 F:FLOOR | DONT_NOTICE_RUNNING | CAN_RUN
 F:SUPPORT_GROWTH
 
+N:223:part of the Dead Marshes
+G:~:G
+E:1d10:6:CONFUSION
+F:FLOOR | CAN_LEVITATE | CAN_FLY | REMEMBER | SUPPORT_LIGHT
+
+N:224:stone column
+G:-:D
+F:WALL | NO_WALK | CAN_PASS | NO_VISION | NOTICE | SUPPORT_LIGHT
+F:DONT_NOTICE_RUNNING | CAN_FLY | TUNNELABLE
+D:1:You tunnel through the column.
+D:2:a stone column blocking your way
+
+N:225:cracked glass wall
+G:#:b
+F:NO_WALK | WALL | TUNNELABLE | NOTICE
+F:DONT_NOTICE_RUNNING
+D:1:You start smashing the glass.
+D:2:a glass wall blocking your way
+
 #Swamp
 N:226:swamp pool
 G:~:g

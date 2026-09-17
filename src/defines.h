@@ -901,10 +901,15 @@
 #define FEAT_ROCKYGROUND        0xCF /* 207 */
 #define FEAT_COND_WATER         0xD1 /* 209 */
 
+#define FEAT_BATTLEMENT         0xD8 /* 216 */
 #define FEAT_PURIFIED_WATER     0xD9 /* 217 */
 
+#define FEAT_DEAD_MARSH         0xDF /* 223 */
+#define FEAT_COLUMN             0xE0 /* 224 */
+#define FEAT_CRACKED_GLASS      0xE1 /* 225 */
 #define FEAT_SWAMP_POOL         0xE2 /* 226 */
 #define FEAT_ANDUIN             0xE3 /* 227 */
+#define FEAT_BEEHIVE            0xE5 /* 229 */
 #define FEAT_WATERFALL          0xEE /* 238 */
 #define FEAT_SLIPPERY           0xEF /* 239 */
 #define FEAT_SWITCHER           0xF4 /* 244 */
@@ -3944,6 +3949,12 @@
 
 #define TRAP_NASTY210                     1062
 #define TRAP_NASTY211                     1063
+
+#define TRAP_OF_TERRAIN_DEAD_MARSH        1064
+#define TRAP_OF_TERRAIN_BEES              1065
+#define TRAP_OF_TERRAIN_BATTLEMENT        1066
+#define TRAP_OF_TERRAIN_COLUMN            1067
+#define TRAP_OF_TERRAIN_CRACKEDGLASS      1068
 
 /*** General index values ***/
 

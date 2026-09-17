@@ -71,7 +71,7 @@ int randomfloortype(void)
 		case 10:
 			floornumber = 102; /* nether mist */
 			if (random_number(10) == 1) {
-				int randdmg = random_number(20);
+				int randdmg = random_number(21);
 				switch (randdmg) {
 					case 1:
 					default:
@@ -133,6 +133,9 @@ int randomfloortype(void)
 						break;
 					case 20:
 						floornumber = 129; /* ameba colony */
+						break;
+					case 21:
+						floornumber = 223; /* dead marsh */
 						break;
 				}
 			}
@@ -214,7 +217,7 @@ int randomfloortype(void)
 /* select a random type of non-walkable or otherwise obstructing terrain */
 int randomwalltype(int flags)
 {
-	int randfloor = random_number(41);
+	int randfloor = random_number(45);
 	int floornumber = 56;
 
 	/* small chance of something walkable */
@@ -309,26 +312,34 @@ int randomwalltype(int flags)
 		case 28:
 		case 29:
 		case 30:
-			floornumber = 56; /* granite wall */
-			break;
 		case 31:
 		case 32:
-		case 33:
-			floornumber = 50; /* magma vein */
+			floornumber = 56; /* granite wall */
 			break;
+		case 33:
 		case 34:
 		case 35:
-			floornumber = 96; /* tree */
+			floornumber = 50; /* magma vein */
 			break;
 		case 36:
 		case 37:
+			floornumber = 96; /* tree */
+			break;
 		case 38:
 		case 39:
 		case 40:
+		case 41:
+		case 42:
 			floornumber = 56; /* granite wall */
 			break;
-		case 41:
+		case 43:
 			floornumber = 239; /* slippery rock ledge */
+			break;
+		case 44:
+			floornumber = 224; /* stone column */
+			break;
+		case 45:
+			floornumber = 224; /* cracked glass */
 			break;
 
 		default:
