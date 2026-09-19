@@ -8788,6 +8788,16 @@ D:Are you REALLY going to wear this??? Do you want to stink up the
 D:whole dungeon and make everyone in a radius of 20 square miles aware 
 D:of your presence? 
 
+# vindale cloak
+N:790:'Hero's Cloak'
+I:35:13:12
+W:50:30:10:25000
+P:1:0d0:0:0:10
+F:RES_ETHER | STR | LUCK | RES_MIND | ESP_GOOD | SLOW_DIGEST | 
+f:RES_ETHER | 
+D:This seemingly shabby cloak has a black tint and is occasionally worn 
+D:by travelers in South Tyris. 
+
 # N:number:name
 # I:tval:sval:pval
 # W:level:rarity:item weight:cost

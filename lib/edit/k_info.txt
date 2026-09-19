@@ -10714,6 +10714,16 @@ W:40:0:10:100
 A:40/5
 P:0:1d2:0:0:0
 
+N:1269:& Vindale Cloak~
+G:(:B
+I:35:13:0
+W:50:0:10:10000
+A:50/10
+P:1:0d0:0:0:0
+F:RES_ETHER
+f:RES_ETHER
+D:This light cloak protects you from etherwind. 
+
 # N:number:name
 # G:glyph:color
 # I:tval:sval:pval:spell, tval being type, sval being subtype, pval being a bonus to the pval-based property
