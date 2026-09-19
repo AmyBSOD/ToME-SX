@@ -72851,7 +72851,7 @@ F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS | IM_ELEC
 F:NO_STUN | NO_CONF | NO_SLEEP | POWERFUL | 
 S:1_IN_3 |
 S:BR_ELEC | BR_DISE | HASTE | TELE_TO | S_KIN | 
-S:TPORT | ROCKET | BR_CHAO | BOULDER | 
+S:TPORT | ROCKET | BR_CHAO | BOULDER | S_GIANT | 
 D:Zeus, King of the gods and ruler of Mount Olympus, god of the Sky 
 D:and Thunder, and nominal husband of Hera. He commands the 
 D:Olympians, and his wrath is fearsome. Flee his presence! Unless 
@@ -76824,7 +76824,7 @@ D:him tougher and given him more experience and opportunities to learn.
 N:4376:Filthy Rag
 G:::D
 I:110:1d1:0:0:0
-W:50:0:20:0
+W:50:1:20:0
 E:0:1:0:0:0:0
 O:20:20:20:20
 F:BASEANGBAND | 
@@ -76840,7 +76840,7 @@ D:to the original rag, allowing it to walk about and punch its enemies...
 N:4377:Sexy Swimsuit
 G:::v
 I:110:1d1:0:0:0
-W:50:0:20:0
+W:50:1:20:0
 E:0:1:0:0:0:0
 O:20:20:20:20
 F:BASEANGBAND | 
@@ -78918,7 +78918,7 @@ D:creative energy and things that flow. Her origin as a great river goddess
 D:is all too apparent as she drowns you in a whirlpool with disdainful 
 D:indifference.
 
-# Watch out for that S_PANTHEON...
+# Watch out for that S_PANTHEON... Amy edit: doesn't exist in SX so he summons other stuff
 N:4483:Indra, the Heavenly King of Meru
 G:P:b
 I:134:144d100:40:160:5
@@ -78939,7 +78939,7 @@ F:IM_FIRE | IM_COLD | IM_ACID | IM_POIS | IM_ELEC |
 F:RES_WATE | NO_CONF | NO_SLEEP | AURA_ELEC
 S:1_IN_2
 S:BR_ELEC | S_WRAITH | BO_MANA | BO_ELEC
-S:BO_PLAS |
+S:BO_PLAS | S_SUMMONER | S_UNIQUE | 
 D:Indra is the god of thunder and the heavens, famed for his defeat of the 
 D:demonic wyrm Vritra; and while his recognition as the leader of the Devas 
 D:has waned over the long years, he still resides atop the holy mountain of 
@@ -94008,7 +94008,7 @@ F:EVIL | IM_ACID | IM_FIRE | IM_POIS |
 F:MORTAL | BASEANGBAND | ELDRITCH_HORROR | 
 S:1_IN_2 | 
 S:HOLD | SCARE | CAUSE_3 | BO_FIRE | BO_PLAS | BA_ACID | 
-S:S_HYDRA | S_KIN | BR_NERV | S_WRAITH | 
+S:S_HYDRA | S_KIN | BR_NERV | S_WRAITH | S_PEOPLE | S_WOMAN | 
 D:Looks like a woman, but is a monster who turns people to stone. 
 D:Don't look at her!! 
 
@@ -94030,7 +94030,7 @@ F:EVIL | IM_ACID | IM_FIRE | IM_POIS |
 F:MORTAL | BASEANGBAND | ELDRITCH_HORROR | 
 S:1_IN_2 | 
 S:HOLD | SCARE | CAUSE_3 | BO_FIRE | BO_PLAS | BA_ACID | 
-S:S_HYDRA | S_KIN | BR_NERV | S_WRAITH | 
+S:S_HYDRA | S_KIN | BR_NERV | S_WRAITH | S_PEOPLE | S_WOMAN | 
 D:Looks like a woman, but is a monster who turns people to stone. 
 D:Don't look at her!! 
 
@@ -94098,7 +94098,7 @@ F:NO_SLEEP | NO_CONF | HAS_LITE
 S:1_IN_3 |
 S:ARROW_4 | BO_MANA | BLINK | TPORT | S_KIN | HEAL | BR_CHAO | BR_DISI | 
 S:DRAIN_MANA | CAUSE_4 | BRAIN_SMASH | HASTE | TELE_LEVEL | S_THUNDERLORD | 
-S:S_HI_DEMON | S_ANGEL | S_UNIQUE | 
+S:S_HI_DEMON | S_ANGEL | S_UNIQUE | S_PEOPLE | 
 D:This impostor doesn't even belong to the Round Table! You have to kill him!!! 
 
 N:5406:Sir Reggie
@@ -94124,7 +94124,7 @@ F:NO_SLEEP | NO_CONF | HAS_LITE
 S:1_IN_3 |
 S:ARROW_4 | BO_MANA | BLINK | TPORT | S_KIN | HEAL | BR_CHAO | BR_DISI | 
 S:DRAIN_MANA | CAUSE_4 | BRAIN_SMASH | HASTE | TELE_LEVEL | S_THUNDERLORD | 
-S:S_HI_DEMON | S_ANGEL | S_UNIQUE | 
+S:S_HI_DEMON | S_ANGEL | S_UNIQUE | S_PEOPLE | 
 D:This impostor doesn't even belong to the Round Table! You have to kill him!!! 
 
 N:5407:Rockford
@@ -124638,6 +124638,23 @@ D:She has no problems kicking you in the nuts. And since she's
 D:spectacularly unfair, she'll also try to scratch your eyes out. 
 D:You feel like telling her a painful lesson, but watch out, she's 
 D:a black belt in karate... 
+
+N:7205:BOFH
+G:@:w
+I:115:40d60:100:50:20
+W:50:100:6000:20000
+E:0:1:1:2:1:1
+O:50:50:0:0
+B:HIT:HURT:5d20
+F:UNIQUE | MALE | CAN_SPEAK |
+F:FORCE_MAXHP | DROP_CORPSE | 
+F:ONLY_ITEM | DROP_22 | DROP_GOOD |
+F:OPEN_DOOR | NO_THEFT |
+F:BASEANGBAND | HAS_LITE
+S:1_IN_5
+S:TPORT
+D:A fictional rogue computer operator who takes out his anger on lusers like 
+D:you. 
 
 
 
