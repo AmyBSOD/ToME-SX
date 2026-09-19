@@ -65553,7 +65553,7 @@ I:108:20d9:80:60:100
 W:19:5:7000:360
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:HURT:3d6
+B:KICK:AMEBA:3d6
 F:WILD_TOO | WILD_MOUNTAIN | WILD_SHORE | WILD_OCEAN | EVIL | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM |
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_ACID | 
@@ -65797,7 +65797,7 @@ F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | REFLECTING | IM_ELEC |
 F:RES_DARK | NO_SLEEP | EVIL | RES_DISE | RES_NETH | NO_FEAR | GIANT | 
 F:RES_TIME | RES_CHAO | 
 S:1_IN_10
-S:BR_POIS
+S:BR_POIS | BOULDER
 D:You'll not have an easy time fighting these black combat boots with 
 D:massive block heels. They may easily stomp you. 
 
@@ -65882,7 +65882,7 @@ I:110:20d20:50:35:60
 W:22:5:6000:150
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:HURT:6d4
+B:KICK:DARK:6d4
 B:KICK:HURT:4d3
 F:WILD_TOO | WILD_WOOD | WILD_MOUNTAIN | WILD_VOLCANO | IM_COLD | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | RES_MIND | 
@@ -66668,7 +66668,7 @@ I:108:20d9:80:60:100
 W:19:100:7000:360
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:HURT:3d6
+B:KICK:AMEBA:3d6
 F:WILD_TOO | WILD_MOUNTAIN | WILD_SHORE | WILD_OCEAN | EVIL | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM |
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_ACID | 
@@ -67145,7 +67145,7 @@ D:Teh meme! Although it's really just a mummy.
 N:3892:Thai masseuse
 G:t:D
 I:110:10d10:6:3:0
-W:14:3:1500:0
+W:14:3:1500:30
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:HURT:7d10
@@ -94317,13 +94317,13 @@ W:26:5:1500:20000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:DISEASE:2d4
-B:KICK:POISON:4d8
+B:KICK:VENOM:4d8
 F:RES_CHAO | RAND_50 | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | DRAGON | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_POIS | ELDRITCH_HORROR | 
 F:UNIQUE | NO_THEFT | DROP_RANDART | SPECIAL_GENE | 
 S:1_IN_3
-S:BR_POIS | BO_POIS
+S:BR_VENO | BO_POIS
 D:Having gotten this far, you'll probably be able to defeat this girl even though 
 D:her lilac sneakers are very dangerous. Because all the poison in the world won't 
 D:phase you if you're resistant. Well, you *are* poison resistant, right? 
@@ -98223,9 +98223,9 @@ I:130:60d60:10:110:200
 W:55:5:900:7500
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:COLD:6d8
-B:KICK:COLD:8d8
-B:KICK:COLD:15d1
+B:KICK:ICE:6d8
+B:KICK:ICE:8d8
+B:KICK:ICE:15d1
 F:WILD_TOO | WILD_MOUNTAIN | WILD_WOOD | RAND_25 | RAND_50 | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | ORC | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_COLD | STUPID | 
@@ -98335,7 +98335,7 @@ I:120:70d80:50:77:60
 W:63:5:6000:6000
 E:1:1:1:2:1:1
 O:0:0:0:0
-B:KICK:HURT:6d13
+B:KICK:DARK:6d13
 B:KICK:EAT_LITE:5d10
 F:WILD_TOO | WILD_WOOD | WILD_MOUNTAIN | WILD_VOLCANO | IM_COLD | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | RES_MIND | 
@@ -98477,7 +98477,7 @@ W:76:5:1500:19000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:DISEASE:6d11
-B:KICK:POISON:8d14
+B:KICK:VENOM:8d14
 B:KICK:EAT_FOOD:2d10
 F:RES_CHAO | WILD_TOO | WILD_OCEAN | WILD_MOUNTAIN | WILD_WASTE | RAND_50 | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM | DRAGON | 
@@ -124021,14 +124021,623 @@ S:1_IN_2
 S:BA_METE
 D:A delivery boy. He delivers... bombs. 
 
+N:7171:Dune Soldier
+G:t:o
+I:120:10d20:6:25:0
+W:20:1:1400:100
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:5d5
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_WASTE | 
+F:RAND_25 | DROP_12 | TAKE_ITEM | MORTAL | BASEANGBAND | 
+S:1_IN_8 | 
+S:S_WORM
+D:This soldier has read the Dune novels by Frank Herbert a couple 
+D:times too often, and is now obsessed with sandworms. 
 
+N:7172:Dune Lieutenant
+G:t:o
+I:130:10d50:6:50:0
+W:50:1:1400:1000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:8d10
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_WASTE | IM_FIRE | 
+F:RAND_25 | DROP_12 | TAKE_ITEM | MORTAL | BASEANGBAND | 
+S:1_IN_5 | 
+S:S_WORM
+D:A dude who managed to tame the sandworms, and now he's 
+D:commanding them in an attempt to kill you. 
 
+N:7173:Golemlord
+G:p:R
+I:110:28d10:20:50:10
+W:36:2:1600:666
+E:1:1:1:2:1:1
+O:10:0:90:0
+B:HIT:HURT:2d6
+B:HIT:HURT:2d6
+F:MALE | FORCE_SLEEP | FORCE_MAXHP | 
+F:ONLY_ITEM | DROP_12 | DROP_SKELETON
+F:SMART | OPEN_DOOR | BASH_DOOR | EVIL | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_3 | 
+S:HASTE | TPORT | TELE_TO | BLIND | HOLD | SCARE | CAUSE_3 | 
+S:BO_NETH | MIND_BLAST | FORGET | S_GOLEM
+D:A mage who controls golems. 
 
+N:7174:Golem Master
+G:p:D
+I:120:11d45:40:40:40
+W:67:2:1600:800
+E:1:1:1:2:1:1
+O:30:0:70:0
+B:HIT:HURT:4d8
+B:HIT:DARK:4d16
+F:MALE | DROP_60 | NO_CONF | RES_DARK | NO_FEAR | IM_POIS | 
+F:TAKE_ITEM | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON | 
+F:MORTAL | BASEANGBAND | EVIL | HAS_LITE | SMART | ESCORT | 
+S:1_IN_2
+S:SCARE | S_GOLEM | SLOW | BR_VENO | 
+D:Be aware of the squads of golems summoned by this dark mage. 
 
+N:7175:Magellanic moss
+G:;:w
+I:120:4d8:30:1:5
+W:20:2:0:70
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:NEXUS:2d4
+F:FORCE_SLEEP | NEVER_MOVE | BASEANGBAND |
+F:STUPID | COLD_BLOOD | EMPTY_MIND | 
+F:NO_CUT | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+S:1_IN_4 |
+S:BR_NEXU | TPORT | TELE_AWAY | 
+D:A mass of white vegetation. It seems to have a desire to see 
+D:different locations. 
 
+N:7176:Moronic moss
+G:;:u
+I:124:8d40:30:30:5
+W:51:2:0:1500
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:RANDOM:5d15
+B:HIT:RANDOM:4d15
+F:FORCE_SLEEP | NEVER_MOVE | BASEANGBAND | 
+F:STUPID | COLD_BLOOD | EMPTY_MIND | REGENERATE | 
+F:NO_CUT | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+S:1_IN_3 |
+S:BR_INER | ROCKET | SHRIEK | HASTE | BR_CHAO | BR_TIME | BA_MANA | 
+S:BR_ETHE | BR_WATE | BA_DARK | BRAIN_SMASH | CAUSE_4 | TRAPS | 
+S:TELE_LEVEL | S_RNG | S_WRAITH | S_UNIQUE | S_QUYLTHULG | 
+S:S_SEXY_GIRL | S_BREEDER | S_SUMMONER | 
+D:A mass of brown vegetation. It seems to be a capital asshole. 
 
+N:7177:Mundane moss
+G:;:u
+I:110:3d5:30:1:5
+W:6:1:0:8
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:HURT:1d4
+F:FORCE_SLEEP | NEVER_MOVE | BASEANGBAND |
+F:NO_CUT | STUPID | COLD_BLOOD | EMPTY_MIND | 
+F:NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+S:1_IN_8 |
+S:ARROW_1 |
+D:A mass of brown vegetation. It seems to not be very special. 
 
+N:7178:Mesoamerican moss
+G:;:B
+I:122:5d20:30:20:5
+W:31:2:0:400
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:FIRE:4d8
+B:HIT:UN_POWER:4d8
+F:FORCE_SLEEP | NEVER_MOVE | BASEANGBAND |
+F:STUPID | COLD_BLOOD | EMPTY_MIND | IM_FIRE | 
+F:NO_CUT | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+S:1_IN_6 |
+S:ARROW_4 | SLOW | S_YEEK | 
+D:A mass of cyan vegetation. It seems to like hot climates. 
 
+N:7179:Miscellaneous moss
+G:;:v
+I:124:8d39:30:29:5
+W:50:2:0:1500
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:RANDOM:5d14
+B:HIT:RANDOM:4d15
+F:FORCE_SLEEP | NEVER_MOVE | BASEANGBAND | 
+F:STUPID | COLD_BLOOD | EMPTY_MIND | REGENERATE | 
+F:NO_CUT | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+S:1_IN_3 |
+S:ARROW_4 | HASTE | HEAL | BOULDER | BR_ACID | BR_ELEC | BR_FIRE | 
+S:BR_COLD | BR_POIS | BR_NETH | BR_LITE | BR_DARK | BR_CONF | 
+S:BR_SOUN | BR_CHAO | BR_DISE | BR_NEXU | BR_TIME | BR_INER | 
+S:BR_GRAV | BR_SHAR | BR_PLAS | BR_WALL | BR_MANA | BR_NUKE | 
+S:BR_DISI | BR_NERV | BR_ETHE | BR_MIND | BR_AMEB | BR_RADI | 
+S:BR_VENO | BR_ICEE | BR_WATE | BA_NUKE | BA_CHAO | BA_ACID | 
+S:BA_ELEC | BA_FIRE | BA_COLD | BA_POIS | BA_NETH | BA_WATE | 
+S:BA_MANA | BA_DARK | BA_METE | BO_ACID | BO_ELEC | BO_FIRE | 
+S:BO_COLD | BO_POIS | BO_NETH | BO_WATE | BO_MANA | BO_PLAS | 
+S:BO_ICEE | MISSILE | DRAIN_MANA | MIND_BLAST | BRAIN_SMASH | 
+S:CAUSE_1 | CAUSE_2 | CAUSE_3 | CAUSE_4 | HAND_DOOM | SCARE | 
+S:BLIND | CONF | SLOW | HOLD | DARKNESS | TRAPS | FORGET | 
+S:BLINK | TPORT | TELE_TO | TELE_AWAY | TELE_LEVEL | S_ANIMAL | 
+S:S_ANIMALS | S_BUG | S_RNG | S_THUNDERLORD | S_KIN | S_HI_DEMON | 
+S:S_MONSTER | S_MONSTERS | S_ANT | S_SPIDER | S_HOUND | S_HYDRA | 
+S:S_ANGEL | S_DEMON | S_UNDEAD | S_DRAGON | S_HI_UNDEAD | 
+S:S_HI_DRAGON | S_WRAITH | S_UNIQUE | ANIM_DEAD | S_MOLD | S_BAT | 
+S:S_QUYLTHULG | S_VORTEX | S_TREASURE | S_IMMOBILE | S_PEOPLE | 
+S:S_ELEMENTAL | S_SNAKE | S_ELDRITCH | S_CAT | S_RAT | S_WORM | 
+S:S_CLOTHES | S_HYBRID | S_BEETLE | S_HORDE | S_GIANT | S_SEXY_GIRL | 
+S:S_TROLL | S_ORC | S_MAN | S_WOMAN | S_BREEDER | S_GOLEM | S_BIRD | 
+S:S_INSECT | S_OGRE | S_LIZARD | S_HULK | S_MONKEY | S_EYE | S_JELLY | 
+S:S_KOBOLD | S_QUADRUPED | S_YEEK | S_SUMMONER | 
+D:A mass of purple vegetation. It seems to behave quite randomly. 
+
+N:7180:Miscellaneous moss
+G:;:v
+I:124:8d39:30:29:5
+W:50:50:0:1500
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:RANDOM:5d14
+B:HIT:RANDOM:4d15
+F:FORCE_SLEEP | NEVER_MOVE | BASEANGBAND | 
+F:STUPID | COLD_BLOOD | EMPTY_MIND | REGENERATE | 
+F:NO_CUT | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+S:MULTIPLY
+S:1_IN_3 |
+S:ARROW_4 | HASTE | HEAL | BOULDER | BR_ACID | BR_ELEC | BR_FIRE | 
+S:BR_COLD | BR_POIS | BR_NETH | BR_LITE | BR_DARK | BR_CONF | 
+S:BR_SOUN | BR_CHAO | BR_DISE | BR_NEXU | BR_TIME | BR_INER | 
+S:BR_GRAV | BR_SHAR | BR_PLAS | BR_WALL | BR_MANA | BR_NUKE | 
+S:BR_DISI | BR_NERV | BR_ETHE | BR_MIND | BR_AMEB | BR_RADI | 
+S:BR_VENO | BR_ICEE | BR_WATE | BA_NUKE | BA_CHAO | BA_ACID | 
+S:BA_ELEC | BA_FIRE | BA_COLD | BA_POIS | BA_NETH | BA_WATE | 
+S:BA_MANA | BA_DARK | BA_METE | BO_ACID | BO_ELEC | BO_FIRE | 
+S:BO_COLD | BO_POIS | BO_NETH | BO_WATE | BO_MANA | BO_PLAS | 
+S:BO_ICEE | MISSILE | DRAIN_MANA | MIND_BLAST | BRAIN_SMASH | 
+S:CAUSE_1 | CAUSE_2 | CAUSE_3 | CAUSE_4 | HAND_DOOM | SCARE | 
+S:BLIND | CONF | SLOW | HOLD | DARKNESS | TRAPS | FORGET | 
+S:BLINK | TPORT | TELE_TO | TELE_AWAY | TELE_LEVEL | S_ANIMAL | 
+S:S_ANIMALS | S_BUG | S_RNG | S_THUNDERLORD | S_KIN | S_HI_DEMON | 
+S:S_MONSTER | S_MONSTERS | S_ANT | S_SPIDER | S_HOUND | S_HYDRA | 
+S:S_ANGEL | S_DEMON | S_UNDEAD | S_DRAGON | S_HI_UNDEAD | 
+S:S_HI_DRAGON | S_WRAITH | S_UNIQUE | ANIM_DEAD | S_MOLD | S_BAT | 
+S:S_QUYLTHULG | S_VORTEX | S_TREASURE | S_IMMOBILE | S_PEOPLE | 
+S:S_ELEMENTAL | S_SNAKE | S_ELDRITCH | S_CAT | S_RAT | S_WORM | 
+S:S_CLOTHES | S_HYBRID | S_BEETLE | S_HORDE | S_GIANT | S_SEXY_GIRL | 
+S:S_TROLL | S_ORC | S_MAN | S_WOMAN | S_BREEDER | S_GOLEM | S_BIRD | 
+S:S_INSECT | S_OGRE | S_LIZARD | S_HULK | S_MONKEY | S_EYE | S_JELLY | 
+S:S_KOBOLD | S_QUADRUPED | S_YEEK | S_SUMMONER | 
+D:A mass of purple vegetation. It seems to behave quite randomly. 
+
+N:7181:Mana moss
+G:;:b
+I:129:12d90:30:50:5
+W:80:2:0:7000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:UN_POWER:10d25
+B:HIT:UN_POWER:7d20
+F:FORCE_SLEEP | NEVER_MOVE | BASEANGBAND | REFLECTING | 
+F:STUPID | COLD_BLOOD | EMPTY_MIND | REGENERATE | 
+F:NO_CUT | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | 
+S:1_IN_5 |
+S:BO_MANA | BA_MANA | BR_MANA | 
+D:A mass of blue vegetation. It seems filled with magical energy. 
+
+N:7182:Cursed piano
+G:/:D
+I:120:30d15:20:100:15
+W:35:5:0:1850
+E:0:0:0:0:0:0
+O:20:0:80:0
+B:BITE:SHARDS:8d10
+F:NONLIVING | RES_NETH | RES_DISE | RES_TIME | RES_LITE | 
+F:FORCE_SLEEP | DROP_60 | COLD_BLOOD | EMPTY_MIND |
+F:NO_CONF | NO_FEAR | NO_SLEEP | NO_STUN | IM_FIRE | 
+F:BASEANGBAND | HAS_LITE | NO_CUT | IM_ELEC | IM_POIS | 
+F:RES_DARK | RES_WALL | RES_NERV | RES_MIND | 
+S:1_IN_3 |
+S:BR_SOUN | 
+D:Oh no! This piano has come to life and is not only playing horrible 
+D:noise that you wouldn't call "music", it also grew teeth with which 
+D:it wants to bite you to death! 
+
+N:7183:Detuned banjo
+G:/:U
+I:127:40d35:20:80:15
+W:55:5:0:3350
+E:0:0:0:0:0:0
+O:20:0:80:0
+B:GAZE:SOUND:6d10
+B:GAZE:SOUND:6d10
+F:NONLIVING | 
+F:FORCE_SLEEP | DROP_90 | COLD_BLOOD | EMPTY_MIND |
+F:NO_CONF | NO_FEAR | NO_SLEEP | NO_STUN | IM_FIRE | 
+F:BASEANGBAND | HAS_LITE | NO_CUT | IM_POIS | POWERFUL | 
+S:1_IN_2 |
+S:BR_SOUN | 
+D:Uaaaaaaaargh, the noise emitted by this sentient instrument is 
+D:making you crazy! 
+
+N:7184:Dazzle vampire
+G:V:B
+I:110:25d13:20:48:10
+W:30:1:1700:195
+E:1:1:1:2:1:1
+O:20:40:20:10
+B:HIT:HURT:1d6
+B:HIT:HURT:1d6
+B:BITE:EXP_20:2d6
+B:BITE:EXP_20:2d6
+F:FORCE_SLEEP | FORCE_MAXHP | 
+F:COLD_BLOOD | DROP_60 | DROP_12 | 
+F:OPEN_DOOR | BASH_DOOR | REGENERATE | CAN_FLY |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | 
+F:BASEANGBAND | NO_CUT
+S:1_IN_3 | 
+S:HOLD | 
+D:A vampire whose gaze can paralyze. Hopefully you have free action. 
+
+N:7185:Mizuho
+G:t:s
+I:170:3d6:6:150:0
+W:30:1:1400:500
+E:1:1:1:2:1:1
+O:20:20:20:20
+F:FEMALE | DROP_CORPSE | DROP_SKELETON | NEVER_BLOW | REFLECTING | 
+F:DROP_60 | MORTAL | BASEANGBAND | IM_ACID | IM_ELEC | IM_FIRE | 
+F:IM_COLD | IM_POIS | RES_TELE | RES_NETH | RES_WATE | RES_PLAS | 
+F:RES_NEXU | RES_DISE | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP | 
+F:NO_CUT | RES_TIME | RES_LITE | RES_SOUN | RES_CHAO | RES_INER | 
+F:RES_WALL | RES_GRAV | RES_DARK | RES_SHAR | RES_NERV | RES_ETHE | 
+F:RES_MIND | WILD_TOO | 
+S:1_IN_1 | 
+S:S_WOMAN
+D:This elder sister is racing towards you with lightning speed and tries 
+D:to fill entire hallways with summoned girls until you can't fight 
+D:back anymore. She's a horrible glass cannon and probably dies in a 
+D:single hit, but good luck hitting her... 
+
+N:7186:Yeek archer
+G:y:g
+I:110:2d7:18:15:10
+W:4:1:700:4
+E:1:1:1:2:1:1
+O:25:0:0:55
+B:HIT:HURT:1d6
+F:DROP_60 | OPEN_DOOR | BASH_DOOR | DROP_CORPSE | 
+F:ANIMAL | MORTAL | BASEANGBAND
+S:1_IN_5
+S:ARROW_1
+D:A yeek with a bow. 
+
+N:7187:Yeek hard worker
+G:y:U
+I:123:18d25:20:40:20
+W:25:2:0:200
+E:1:1:1:2:1:1
+O:25:0:0:55
+B:HIT:HURT:1d12
+B:HIT:HURT:1d12
+F:BASEANGBAND | ONLY_ITEM | DROP_90 | 
+F:SMART | OPEN_DOOR | BASH_DOOR
+F:ANIMAL | EVIL | 
+S:1_IN_3
+S:HASTE
+D:A yeek who can haste up. 
+
+N:7188:Archayeek
+G:y:b
+I:128:20d32:20:55:20
+W:50:2:0:700
+E:1:1:1:2:1:1
+O:25:0:0:55
+B:HIT:HURT:2d16
+B:HIT:HURT:2d16
+F:BASEANGBAND | ONLY_ITEM | DROP_90 | 
+F:SMART | OPEN_DOOR | BASH_DOOR
+F:ANIMAL | EVIL | 
+S:1_IN_4
+S:BR_GRAV | TELE_TO | 
+D:A yeek who uses a ground attack and tries to pull you near. 
+
+N:7189:Archayeek gunner
+G:y:b
+I:132:30d40:20:66:20
+W:70:2:0:1400
+E:1:1:1:2:1:1
+O:25:0:0:55
+B:HIT:HURT:3d18
+B:HIT:HURT:3d18
+F:BASEANGBAND | ONLY_ITEM | DROP_90 | 
+F:SMART | OPEN_DOOR | BASH_DOOR
+F:ANIMAL | EVIL | REFLECTING | 
+S:1_IN_4
+S:BR_LITE | MISSILE | BOULDER | 
+D:A yeek who wants to shoot you. 
+
+N:7190:Master archayeek
+G:y:o
+I:133:32d45:20:70:20
+W:80:2:0:1600
+E:1:1:1:2:1:1
+O:25:0:0:55
+B:HIT:HURT:4d18
+B:HIT:HURT:4d18
+F:BASEANGBAND | ONLY_ITEM | DROP_90 | 
+F:SMART | OPEN_DOOR | BASH_DOOR
+F:ANIMAL | EVIL | REFLECTING | DEATH_ORB | 
+S:1_IN_4
+S:S_KIN | BO_WATE | BR_DARK | 
+D:A very powerful yeek. 
+
+N:7191:Lunatyeek
+G:y:b
+I:135:35d50:20:75:20
+W:90:2:0:2000
+E:1:1:1:2:1:1
+O:25:0:0:55
+B:HIT:HURT:4d25
+B:HIT:HURT:4d25
+F:BASEANGBAND | ONLY_ITEM | DROP_90 | 
+F:SMART | OPEN_DOOR | BASH_DOOR
+F:ANIMAL | EVIL | 
+S:1_IN_3
+S:BRAIN_SMASH | BR_MIND | 
+D:A crazy yeek. 
+
+N:7192:Heroyeek
+G:y:y
+I:138:40d55:20:80:20
+W:100:2:0:2300
+E:1:1:1:2:1:1
+O:25:0:0:55
+B:HIT:HURT:5d28
+B:HIT:HURT:5d28
+F:BASEANGBAND | ONLY_ITEM | DROP_90 | 
+F:SMART | OPEN_DOOR | BASH_DOOR
+F:ANIMAL | EVIL | NO_FEAR | 
+S:1_IN_3
+S:TELE_TO | SLOW | 
+D:A heroic yeek. 
+
+N:7193:Unremoved Dolgsman
+G:h:D
+I:110:5d14:20:30:40
+W:15:10:900:40
+E:1:1:1:2:1:1
+O:0:50:0:30
+B:HIT:HURT:3d8
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | HAS_LITE | AI_ANNOY | FRIEND | 
+S:1_IN_5
+S:ARROW_3
+D:Someone wanted to remove these guys because they're supposedly 
+D:"annoying". They revolted against the idea, and are back in even 
+D:greater force now! 
+
+N:7194:Dolgsman Lord
+G:h:D
+I:115:8d25:20:45:40
+W:35:10:900:150
+E:1:1:1:2:1:1
+O:0:50:0:30
+B:HIT:HURT:5d12
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | HAS_LITE | AI_ANNOY | FRIENDS | 
+S:1_IN_4
+S:ARROW_4
+D:The dolgsmen shall not be removed! They brought friends, and 
+D:will annoy the hell out of any variant developer who tried 
+D:to apply the axe to them! 
+
+N:7195:Dolgsman Master
+G:h:v
+I:119:12d40:20:60:40
+W:55:10:900:450
+E:1:1:1:2:1:1
+O:0:50:0:30
+B:HIT:HURT:8d18
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | HAS_LITE | AI_ANNOY | FRIENDS | 
+S:1_IN_3
+S:ARROW_4 | MISSILE | BOULDER | 
+D:Now you're in for some REAL annoyance, bruh! Enjoy getting 
+D:peppered with arrows and missiles non-stop, mua ha ha ha! 
+
+N:7196:Dolgsman Master
+G:h:v
+I:119:12d40:20:60:40
+W:55:200:900:450
+E:1:1:1:2:1:1
+O:0:50:0:30
+B:HIT:HURT:8d18
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | HAS_LITE | AI_ANNOY | FRIENDS | 
+S:MULTIPLY
+S:1_IN_3
+S:ARROW_4 | MISSILE | BOULDER | 
+D:Now you're in for some REAL annoyance, bruh! Enjoy getting 
+D:peppered with arrows and missiles non-stop, mua ha ha ha! 
+
+N:7197:Dolgsman Champion
+G:h:v
+I:124:15d50:20:80:40
+W:75:10:900:1000
+E:1:1:1:2:1:1
+O:0:50:0:30
+B:HIT:HURT:12d24
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:MORTAL | BASEANGBAND | HAS_LITE | AI_ANNOY | FRIENDS | 
+F:REFLECTING | 
+S:1_IN_2
+S:ARROW_4 | MISSILE | BOULDER | S_KIN | 
+D:Blame the developers who wrote the "remove them if they get 
+D:too annoying" comment for the base dolgsman monster. Anyone 
+D:who finds a monster "annoying" can be certain to encounter 
+D:even more of that type in the next version of ToME-SX. And 
+D:if you ragequit because of them, the developer will say 
+D:"git gud at the game bro". 
+
+N:7198:Ultimate Spam Demon
+G:U:R
+I:125:60d100:30:80:0
+W:90:6:1900:25000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:INSULT:LOSE_ALL:15d8
+B:INSULT:LOSE_ALL:15d8
+B:TOUCH:RANDOM:8d8
+B:TOUCH:RAGNAROK:6d6
+F:FORCE_SLEEP | FORCE_MAXHP | FRIENDS | FRIEND | 
+F:BASH_DOOR | KILL_WALL | ESCORTS | 
+F:ONLY_ITEM | DROP_42 | DROP_32 | DROP_22 | DROP_60 |
+F:DROP_CORPSE | MOVE_BODY | STUPID | CAN_FLY | 
+F:CAN_SPEAK | WEIRD_MIND | REFLECTING | POWERFUL | 
+F:EVIL | DEMON | NO_CONF | NO_SLEEP | IM_ACID | 
+F:AURA_ELEC | IM_ELEC | IM_POIS | RES_WATE | 
+F:JOKEANGBAND | HAS_LITE | RES_NEXU | NO_STUN | 
+F:NO_CUT | RES_TIME | RES_SOUN | RES_CHAO | 
+F:RES_WALL | RES_DARK | RES_NERV | RES_ETHE | 
+S:1_IN_2
+S:BR_INER | BR_NUKE | BR_TIME | ROCKET | SHRIEK | 
+S:BRAIN_SMASH | SHRIEK | TRAPS | HASTE | BR_DISE | BR_DISI | 
+S:BR_MANA | BR_ETHE | S_RNG | S_THUNDERLORD | S_HI_DEMON | 
+S:S_HI_UNDEAD | S_UNIQUE | ANIM_DEAD | S_CLOTHES | S_TREASURE | 
+S:S_HORDE | S_BREEDER | S_SUMMONER | 
+D:An immense block of vile-smelling pink flesh, which glistens 
+D:with a greasy, jelly-like secretion. It will end your sorry 
+D:existence unless you get off the level FAST, because its spell 
+D:spammage can't be prevented by any means. And if you think 
+D:you're clever by using antimagic, it can still breathe, too. 
+
+N:7199:Death Spam Demon
+G:U:D
+I:120:50d75:30:50:0
+W:76:10:1900:20000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:INSULT:EXP_80:15d5
+B:INSULT:EXP_80:15d5
+B:TOUCH:DISEASE:5d5
+B:TOUCH:EAT_GOLD:5d5
+F:FORCE_SLEEP | FORCE_MAXHP | FRIENDS |
+F:BASH_DOOR | KILL_WALL |
+F:ONLY_ITEM | DROP_42 | DROP_32 | DROP_22 | DROP_60 |
+F:DROP_CORPSE | RES_NETH | 
+F:CAN_SPEAK | WEIRD_MIND | 
+F:EVIL | DEMON | NO_CONF | NO_SLEEP |
+F:AURA_ELEC | IM_ELEC | IM_POIS | ELDRITCH_HORROR | 
+F:JOKEANGBAND | HAS_LITE | DEATH_ORB | 
+S:1_IN_2
+S:BR_INER | BR_NUKE | BR_TIME |
+S:BRAIN_SMASH | SHRIEK | TRAPS |
+D:An immense block of vile-smelling black flesh, which glistens 
+D:with a greasy, jelly-like secretion. It is horrible to look at, 
+D:and ignores all of your attempts to use magic against it. 
+
+N:7200:Inundation cloud
+G:#:b
+I:144:35d18:100:110:0
+W:66:6:0:1400
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | POWERFUL | REFLECTING |
+F:NEVER_BLOW | TAKE_ITEM | AURA_COLD | WEIRD_MIND | GOOD | 
+F:IM_ACID | IM_COLD | IM_ELEC | IM_FIRE | IM_POIS | CAN_FLY | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING | BASEANGBAND | 
+F:NO_CUT | NO_STUN | RES_LITE | RES_SOUN | RES_INER | 
+F:RES_WALL | RES_GRAV | RES_DARK | RES_SHAR | RES_NERV | 
+F:RES_ETHE | RES_MIND | COLD_BLOOD | RAND_25 | 
+S:1_IN_5 | 
+S:BR_WATE | BO_WATE | 
+D:A sentient rain cloud. It wants to drown you. 
+
+N:7201:Thunder cloud
+G:#:b
+I:146:38d22:100:125:0
+W:75:9:0:1900
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:FORCE_SLEEP | FORCE_MAXHP | POWERFUL | REFLECTING |
+F:NEVER_BLOW | TAKE_ITEM | AURA_COLD | WEIRD_MIND | GOOD | 
+F:IM_ACID | IM_COLD | IM_ELEC | IM_FIRE | IM_POIS | CAN_FLY | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING | BASEANGBAND | 
+F:NO_CUT | NO_STUN | RES_LITE | RES_SOUN | RES_INER | 
+F:RES_WALL | RES_GRAV | RES_DARK | RES_SHAR | RES_NERV | 
+F:RES_ETHE | RES_MIND | COLD_BLOOD | RAND_25 | 
+S:1_IN_4 | 
+S:BR_WATE | BO_WATE | BR_ELEC | BA_ELEC | BR_SOUN | 
+D:The cloud that brings a thunderstorm. Watch out for lightning strikes! 
+
+N:7202:Randomizer Spam Demon
+G:U:R
+I:120:50d75:30:50:0
+W:76:6:1900:20000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:INSULT:RANDOM:15d5
+B:INSULT:RANDOM:15d5
+B:TOUCH:RANDOM:5d5
+B:TOUCH:RANDOM:5d5
+F:FORCE_SLEEP | FORCE_MAXHP | FRIENDS |
+F:BASH_DOOR | KILL_WALL |
+F:ONLY_ITEM | DROP_42 | DROP_32 | DROP_22 | DROP_60 |
+F:DROP_CORPSE |
+F:CAN_SPEAK | WEIRD_MIND | 
+F:EVIL | DEMON | NO_CONF | NO_SLEEP |
+F:AURA_ELEC | IM_ELEC | IM_POIS |
+F:JOKEANGBAND | HAS_LITE | RAND_50 | 
+S:1_IN_2
+S:BR_INER | BR_NUKE | BR_TIME | S_RANDOM | S_MONSTERS | S_MONSTER | 
+S:BRAIN_SMASH | SHRIEK | TRAPS | CAUSE_3 | CAUSE_4 | BR_CHAO | 
+D:An immense block of vile-smelling pink flesh, which glistens 
+D:with a greasy, jelly-like secretion. It mumbles about random 
+D:stuff and seems to be hard to predict... 
+
+N:7203:Cute asian woman
+G:t:D
+I:116:12d15:6:8:0
+W:34:3:1500:200
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:120d1
+F:FEMALE | DROP_CORPSE | DROP_SKELETON | 
+F:RAND_25 | TAKE_ITEM | DROP_12 | NO_SLEEP | IM_POIS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_5
+S:HOLD
+D:You may think she's an easy target, but you'd be so very wrong. 
+D:When she drives her very lovely stiletto heels up between your 
+D:legs, there is a sizable chance of her breaking your pubic bone. 
+
+N:7204:Asian businesswoman
+G:t:D
+I:120:14d20:6:12:0
+W:54:3:1500:1500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:80d1
+B:KICK:HURT:80d1
+B:STING:BLIND:2d25
+F:FEMALE | DROP_CORPSE | DROP_SKELETON | NO_FEAR | 
+F:TAKE_ITEM | DROP_22 | NO_SLEEP | IM_POIS | NO_STUN | 
+F:MORTAL | BASEANGBAND | HAS_LITE | NO_CONF | 
+S:1_IN_3
+S:HOLD
+D:She has no problems kicking you in the nuts. And since she's 
+D:spectacularly unfair, she'll also try to scratch your eyes out. 
+D:You feel like telling her a painful lesson, but watch out, she's 
+D:a black belt in karate... 
 
 
 
