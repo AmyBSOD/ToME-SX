@@ -1281,6 +1281,8 @@ static void process_corruption_effects(void)
 
 /*
  * Handle staying spell effects once every 10 game turns
+ * Amy note: THIS FUNCTION DOES NOT RUN, because "pelpel" is not defined.
+ * instead, the actual function is in process_world!!!
  */
 static void process_effects(void)
 {
@@ -1307,8 +1309,10 @@ static void process_effects(void)
 				if (e_ptr->time)
 				{
 					/* Apply damage */
+					/* Amy note: this one also had the gigabug where noxious clouds wouldn't work correctly if you moved away from them...
+					 * the actual fix is in process_world, but for the sake of consistency I applied it here as well */
 					project(0, 0, j, i, e_ptr->dam, e_ptr->type,
-					        PROJECT_KILL | PROJECT_ITEM | PROJECT_HIDE);
+					        PROJECT_KILL | PROJECT_ITEM | PROJECT_HIDE | PROJECT_WALL | PROJECT_JUMP);
 				}
 				else
 				{
@@ -3287,8 +3291,9 @@ static void process_world(void)
 					if (e_ptr->time)
 					{
 						/* Apply damage */
+						/* ....... DUDE! it should still affect the same square even if you move behind a wall! why did no one EVER fix that??? --Amy */
 						project(0, 0, j, i, e_ptr->dam, e_ptr->type,
-						        PROJECT_KILL | PROJECT_ITEM | PROJECT_HIDE);
+						        PROJECT_KILL | PROJECT_ITEM | PROJECT_HIDE | PROJECT_WALL | PROJECT_JUMP);
 					}
 					else
 					{

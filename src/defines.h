@@ -2469,24 +2469,24 @@
  *   KILL: Affect each monster in the "blast area" in some way
  *   HIDE: Hack -- disable "visual" feedback from projection
  */
-#define PROJECT_JUMP       0x00000001
-#define PROJECT_BEAM       0x00000002
-#define PROJECT_THRU       0x00000004
-#define PROJECT_STOP       0x00000008
-#define PROJECT_GRID       0x00000010
-#define PROJECT_ITEM       0x00000020
-#define PROJECT_KILL       0x00000040
-#define PROJECT_HIDE       0x00000080
+#define PROJECT_JUMP       0x00000001   /* jump directly to the target location */
+#define PROJECT_BEAM       0x00000002   /* work as a beam weapon - affect every grid passed through */
+#define PROJECT_THRU       0x00000004   /* continues through the target, for beams I guess */
+#define PROJECT_STOP       0x00000008   /* stop as soon as it hits a monster, for bolts */
+#define PROJECT_GRID       0x00000010   /* affects each grid in the blast area */
+#define PROJECT_ITEM       0x00000020   /* affects each item in the blast area */
+#define PROJECT_KILL       0x00000040   /* affects each monster in the blast area */
+#define PROJECT_HIDE       0x00000080   /* disables visual feedback */
 #define PROJECT_VIEWABLE   0x00000100   /* Affect monsters in LOS */
-#define PROJECT_METEOR_SHOWER 0x00000200        /* Affect random grids */
+#define PROJECT_METEOR_SHOWER 0x00000200 /* Affect random grids */
 #define PROJECT_BLAST      0x00000400   /* Like Mega_blast, but will only affect viewable grids */
 #define PROJECT_PANEL      0x00000800   /* Affect everything in the panel. */
 #define PROJECT_ALL        0x00001000   /* Affect every single grid. */
-#define PROJECT_WALL       0x00002000
+#define PROJECT_WALL       0x00002000   /* effect continues through walls */
 #define PROJECT_MANA_PATH  0x00004000   /* Follow a mana path. */
-#define PROJECT_ABSORB_MANA 0x00008000   /* The spell increase in power as it absord grid's mana. */
-#define PROJECT_STAY       0x00010000
-#define PROJECT_CANTREFLECT 0x00020000   /* Player cannot reflect or dodge this projectile */
+#define PROJECT_ABSORB_MANA 0x00008000  /* The spell increase in power as it absord grid's mana. */
+#define PROJECT_STAY       0x00010000   /* for "cloud" (e.g. vapor) and "line" (e.g. firewall) spells, probably to make the effect persist for a while */
+#define PROJECT_CANTREFLECT 0x00020000  /* Player cannot reflect or dodge this projectile */
 #define PROJECT_LOWRANGE   0x00040000   /* Projectile has a range of one square */
 #define PROJECT_ONLYDODGE  0x00080000   /* Player cannot reflect this projectile, but it can be dodged */
 
