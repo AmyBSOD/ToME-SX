@@ -94884,6 +94884,7 @@ F:ELDRITCH_HORROR |
 S:1_IN_3 | 
 S:BR_DARK | TRAPS | CAUSE_2 | BLIND | HASTE | S_MONSTERS | SLOW | SHRIEK | 
 S:ROCKET | BR_LITE | BR_RADI | BO_PLAS | BRAIN_SMASH | FORGET | TELE_AWAY | 
+S:S_HULK | 
 D:This erotic bitch seems to be really conceited with her lacquered block-heeled 
 D:lady shoes. She annoys you so much, you want to tear the buckles out of her 
 D:footwear just to take her down a peg or two. 
@@ -94907,6 +94908,7 @@ F:ELDRITCH_HORROR |
 S:1_IN_3 | 
 S:BR_DARK | TRAPS | CAUSE_2 | BLIND | HASTE | S_MONSTERS | SLOW | SHRIEK | 
 S:ROCKET | BR_LITE | BR_RADI | BO_PLAS | BRAIN_SMASH | FORGET | TELE_AWAY | 
+S:S_HULK | 
 D:This erotic bitch seems to be really conceited with her lacquered block-heeled 
 D:lady shoes. She annoys you so much, you want to tear the buckles out of her 
 D:footwear just to take her down a peg or two. 
@@ -95292,7 +95294,7 @@ F:RES_DARK | NO_FEAR | IM_ACID | RES_NETH | RES_WATE | RES_DISE |
 F:MORTAL | BASEANGBAND | CAN_FLY | IM_POIS | RES_NEXU | RES_GRAV | 
 F:RES_NERV | RES_MIND | 
 S:1_IN_8 | 
-S:ARROW_4 | DRAIN_MANA | S_KIN | BR_DARK | BA_DARK | 
+S:ARROW_4 | DRAIN_MANA | S_KIN | BR_DARK | BA_DARK | S_WOMAN | 
 D:You will lose to the block-heeled "Thai" combat boots, because they 
 D:can kick you powerfully with their fleecy block heels. Don't pretend 
 D:I didn't warn you if they cause you to end up in the hospital. 
@@ -95312,7 +95314,7 @@ F:RES_DARK | NO_FEAR | IM_ACID | RES_NETH | RES_WATE | RES_DISE |
 F:MORTAL | BASEANGBAND | CAN_FLY | IM_POIS | RES_NEXU | RES_GRAV | 
 F:RES_NERV | RES_MIND | 
 S:1_IN_8 | 
-S:ARROW_4 | DRAIN_MANA | S_KIN | BR_DARK | BA_DARK | 
+S:ARROW_4 | DRAIN_MANA | S_KIN | BR_DARK | BA_DARK | S_WOMAN | 
 S:MULTIPLY
 D:You will lose to the block-heeled "Thai" combat boots, because they 
 D:can kick you powerfully with their fleecy block heels. Don't pretend 
@@ -95489,7 +95491,7 @@ F:EVIL | DEMON | IM_POIS | NO_CONF | NO_SLEEP | IM_FIRE | RES_NETH |
 F:IM_COLD | RES_TIME | RES_LITE | ELDRITCH_HORROR | 
 S:1_IN_5 | 
 S:BR_DISE | DRAIN_MANA | BRAIN_SMASH | BO_WATE | FORGET | S_MONSTER | 
-S:SHRIEK | HEAL | BR_LITE | BR_AMEB | TELE_TO | 
+S:SHRIEK | HEAL | BR_LITE | BR_AMEB | TELE_TO | S_MOLD | S_IMMOBILE | 
 D:Oh my... why wouldn't this girl eat?! She's way too skinny! You try to 
 D:offer her a slice of cake, but that only causes her to get all defensive 
 D:and tell you not to offer food to her anymore... 
@@ -95511,7 +95513,7 @@ F:EVIL | DEMON | IM_POIS | NO_CONF | NO_SLEEP | IM_FIRE | RES_NETH |
 F:IM_COLD | RES_TIME | RES_LITE | ELDRITCH_HORROR | 
 S:1_IN_5 | 
 S:BR_DISE | DRAIN_MANA | BRAIN_SMASH | BO_WATE | FORGET | S_MONSTER | 
-S:SHRIEK | HEAL | BR_LITE | BR_AMEB | TELE_TO | 
+S:SHRIEK | HEAL | BR_LITE | BR_AMEB | TELE_TO | S_MOLD | S_IMMOBILE | 
 D:Oh my... why wouldn't this girl eat?! She's way too skinny! You try to 
 D:offer her a slice of cake, but that only causes her to get all defensive 
 D:and tell you not to offer food to her anymore... 
@@ -95709,7 +95711,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_STUN | CAN_SWIM | REVBOSS |
 F:RES_DARK | IM_ACID | IM_FIRE | RES_NETH | RES_DISE | NO_FEAR | 
 S:1_IN_7 | 
 S:SHRIEK | BR_ELEC | BR_WALL | MIND_BLAST | CAUSE_3 | FORGET | S_KIN | 
-S:BR_NETH | BR_DARK | 
+S:BR_NETH | BR_DARK | S_ELDRITCH | 
 D:You want to put your nose in front of the beautiful buttocks of this big girl. 
 D:And once she's broken your will to fight with her squeaky farting noises, 
 D:she'll finish you off with her black block-heeled lady boots. 
@@ -95731,7 +95733,7 @@ F:OPEN_DOOR | BASH_DOOR | POWERFUL | NO_STUN | CAN_SWIM |
 F:RES_DARK | IM_ACID | IM_FIRE | RES_NETH | RES_DISE | NO_FEAR | 
 S:1_IN_7 | 
 S:SHRIEK | BR_ELEC | BR_WALL | MIND_BLAST | CAUSE_3 | FORGET | S_KIN | 
-S:BR_NETH | BR_DARK | 
+S:BR_NETH | BR_DARK | S_ELDRITCH | 
 D:You want to put your nose in front of the beautiful buttocks of this big girl. 
 D:And once she's broken your will to fight with her squeaky farting noises, 
 D:she'll finish you off with her black block-heeled lady boots. 
@@ -95902,7 +95904,7 @@ F:HAS_EGG | DROP_CORPSE | FEMALE | COLD_BLOOD | TAKE_ITEM | EVIL | DEMON | IM_CO
 F:RES_DARK | OPEN_DOOR | MORTAL | BASEANGBAND | RES_NETH | RES_WATE | RES_DISE | 
 F:NO_FEAR | NO_STUN | NO_CONF | 
 S:1_IN_8 | 
-S:ARROW_4 | HASTE | HEAL | S_UNDEAD | BR_NETH | 
+S:ARROW_4 | HASTE | HEAL | S_UNDEAD | BR_NETH | S_TREASURE | 
 D:Wow *swoon*, you absolutely love the cuuuuuute stiletto heels of this black 
 D:women's sandal, and especially the erotic clacking noise when she walks on a hard 
 D:floor! But she absolutely wants to whack you over the head with her heel, which 
@@ -95921,7 +95923,7 @@ F:HAS_EGG | DROP_CORPSE | FEMALE | COLD_BLOOD | TAKE_ITEM | EVIL | DEMON | IM_CO
 F:RES_DARK | OPEN_DOOR | MORTAL | BASEANGBAND | RES_NETH | RES_WATE | RES_DISE | 
 F:NO_FEAR | NO_STUN | NO_CONF | 
 S:1_IN_8 | 
-S:ARROW_4 | HASTE | HEAL | S_UNDEAD | BR_NETH | 
+S:ARROW_4 | HASTE | HEAL | S_UNDEAD | BR_NETH | S_TREASURE | 
 S:MULTIPLY
 D:Wow *swoon*, you absolutely love the cuuuuuute stiletto heels of this black 
 D:women's sandal, and especially the erotic clacking noise when she walks on a hard 
@@ -96074,7 +96076,7 @@ F:RES_TELE | REGENERATE | AURA_FIRE | NO_FEAR | RES_SOUN | RES_WALL |
 F:RES_SHAR | 
 S:1_IN_5 | 
 S:SHRIEK | BR_ACID | BR_CONF | BR_PLAS | CAUSE_3 | BO_PLAS | CONF | HEAL | 
-S:S_KIN | BR_MIND | BRAIN_SMASH | 
+S:S_KIN | BR_MIND | BRAIN_SMASH | S_BREEDER | 
 D:Uh-oh, now you're in for it. These thick hugging boots are going to 
 D:bludgeon the crap out of you, that's for sure. 
 
@@ -96095,7 +96097,7 @@ F:RES_TELE | REGENERATE | AURA_FIRE | NO_FEAR | RES_SOUN | RES_WALL |
 F:RES_SHAR | 
 S:1_IN_5 | 
 S:SHRIEK | BR_ACID | BR_CONF | BR_PLAS | CAUSE_3 | BO_PLAS | CONF | HEAL | 
-S:S_KIN | BR_MIND | BRAIN_SMASH | 
+S:S_KIN | BR_MIND | BRAIN_SMASH | S_BREEDER | 
 S:MULTIPLY
 D:Uh-oh, now you're in for it. These thick hugging boots are going to 
 D:bludgeon the crap out of you, that's for sure. 
@@ -96118,7 +96120,7 @@ F:ANIMAL | GOOD | IM_ACID | IM_POIS | IM_FIRE | RES_NETH | RES_WATE | DG_CURSE |
 F:RES_TIME | RES_ETHE | RES_PLAS | NO_SLEEP | 
 S:1_IN_3 | 
 S:SHRIEK | BR_VENO | BR_ACID | BR_NETH | BA_POIS | TRAPS | FORGET | S_MONSTERS | 
-S:S_UNIQUE | 
+S:S_UNIQUE | S_WOMAN | S_SEXY_GIRL | 
 D:If you lay a hand on this beautiful girl and her red block-heeled leather 
 D:boots, you will be forever cursed. My advice would be to leave her be. 
 
@@ -96140,7 +96142,7 @@ F:ANIMAL | GOOD | IM_ACID | IM_POIS | IM_FIRE | RES_NETH | RES_WATE | DG_CURSE |
 F:RES_TIME | RES_ETHE | RES_PLAS | NO_SLEEP | 
 S:1_IN_3 | 
 S:SHRIEK | BR_VENO | BR_ACID | BR_NETH | BA_POIS | TRAPS | FORGET | S_MONSTERS | 
-S:S_UNIQUE | 
+S:S_UNIQUE | S_WOMAN | S_SEXY_GIRL | 
 D:If you lay a hand on this beautiful girl and her red block-heeled leather 
 D:boots, you will be forever cursed. My advice would be to leave her be. 
 
@@ -96163,7 +96165,7 @@ F:RES_LITE | RES_NERV | RES_ETHE |
 S:1_IN_2 | 
 S:SHRIEK | BR_ACID | BR_ELEC | BR_FIRE | BR_COLD | BR_SOUN | BR_CHAO | BR_DISE | 
 S:BR_SHAR | S_BUG | S_RNG | ROCKET | BR_GRAV | BR_PLAS | BR_VENO | BA_METE | 
-S:BR_WATE | 
+S:BR_WATE | S_QUYLTHULG | S_ELDRITCH | S_WOMAN | S_BREEDER | S_SUMMONER | 
 D:Ha, ha, ha, this bitch is a ringwraith and will totally screw you over. 
 
 N:5518:Marika
@@ -96185,7 +96187,7 @@ F:RES_LITE | RES_NERV | RES_ETHE |
 S:1_IN_2 | 
 S:SHRIEK | BR_ACID | BR_ELEC | BR_FIRE | BR_COLD | BR_SOUN | BR_CHAO | BR_DISE | 
 S:BR_SHAR | S_BUG | S_RNG | ROCKET | BR_GRAV | BR_PLAS | BR_VENO | BA_METE | 
-S:BR_WATE | 
+S:BR_WATE | S_QUYLTHULG | S_ELDRITCH | S_WOMAN | S_BREEDER | S_SUMMONER | 
 D:Ha, ha, ha, this bitch will totally screw you over. 
 
 N:5519:Sarah
@@ -96345,6 +96347,7 @@ F:RES_DARK | RES_INER | RES_CHAO | RES_MIND | IM_ELEC | IM_COLD | RES_PLAS |
 F:NO_FEAR | NO_STUN | RES_SOUN | 
 S:1_IN_8 | 
 S:BR_DARK | BA_DARK | SCARE | BLIND | SLOW | HASTE | BR_ACID | S_KIN | 
+S:S_PEOPLE | 
 D:You used to think she was merely annoying, but now she's actually 
 D:threatening. 
 
@@ -96364,6 +96367,7 @@ F:RES_DARK | RES_INER | RES_CHAO | RES_MIND | IM_ELEC | IM_COLD | RES_PLAS |
 F:NO_FEAR | NO_STUN | RES_SOUN | 
 S:1_IN_8 | 
 S:BR_DARK | BA_DARK | SCARE | BLIND | SLOW | HASTE | BR_ACID | S_KIN | 
+S:S_PEOPLE | 
 S:MULTIPLY
 D:You used to think she was merely annoying, but now she's actually 
 D:threatening. 
@@ -96532,7 +96536,7 @@ F:WILD_TOO | WILD_GRASS | ORC | EVIL | IM_ELEC | RES_TELE | NO_FEAR | NO_STUN |
 F:HAS_EGG | DROP_CORPSE | FEMALE | RES_ETHE | REGENERATE | POWERFUL | RES_DISE | 
 F:RES_DARK | BASH_DOOR | MORTAL | BASEANGBAND | NO_CONF | NO_SLEEP | RES_CHAO | 
 S:1_IN_7 | 
-S:CAUSE_3 | BO_ELEC | BO_NETH | TELE_TO | BRAIN_SMASH | BA_DARK | S_KIN | 
+S:CAUSE_3 | BO_ELEC | BO_NETH | TELE_TO | BRAIN_SMASH | BA_DARK | S_KIN | S_WOMAN | 
 D:Now you are however to! These black lady pumps will totally scratch your legs 
 D:and rip off so many shreds of skin that your blood squirts in all directions. 
 D:Then her heel tips will be red instead of black. 
@@ -96691,7 +96695,7 @@ F:RES_CHAO | RES_GRAV | RES_NERV | RES_ETHE |
 S:1_IN_7 |
 S:BO_ACID | DRAIN_MANA | SCARE | MIND_BLAST | BR_AMEB | HASTE | BR_ACID | 
 S:BR_NETH | BA_DARK | S_KIN | S_DEMON | S_UNDEAD | BA_WATE | BR_DISE | 
-S:BR_CHAO | BR_WALL | BR_DISI | BR_ETHE | TRAPS | 
+S:BR_CHAO | BR_WALL | BR_DISI | BR_ETHE | TRAPS | S_TREASURE | 
 D:These high heels will make your life into hell on earth. Or at least that's 
 D:their plan. 
 
@@ -97822,7 +97826,7 @@ F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_ACID |
 F:NO_SLEEP | IM_POIS | NO_STUN | UNDEAD | ELDRITCH_HORROR | 
 F:IM_FIRE | RES_WATE | NO_CUT | RES_PLAS | NO_FEAR | RES_SHAR | 
 S:1_IN_2
-S:BR_SHAR | BR_MIND | S_KIN | CAUSE_4 | 
+S:BR_SHAR | BR_MIND | S_KIN | CAUSE_4 | S_IMMOBILE | 
 D:This pair of wedge skiers seems to have been cleaned recently, and they 
 D:try to move their metal edges underneath your fingernails, then force 
 D:them upward. You don't even want to imagine how bloody the wounds caused 
@@ -97841,7 +97845,7 @@ F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_ACID |
 F:NO_SLEEP | IM_POIS | NO_STUN | UNDEAD | ELDRITCH_HORROR | 
 F:IM_FIRE | RES_WATE | NO_CUT | RES_PLAS | NO_FEAR | RES_SHAR | 
 S:1_IN_2
-S:BR_SHAR | BR_MIND | S_KIN | CAUSE_4 | 
+S:BR_SHAR | BR_MIND | S_KIN | CAUSE_4 | S_IMMOBILE | 
 S:MULTIPLY
 D:This pair of wedge skiers seems to have been cleaned recently, and they 
 D:try to move their metal edges underneath your fingernails, then force 
@@ -98291,6 +98295,7 @@ S:1_IN_7
 S:BR_ACID | BR_NETH | BR_DARK | BR_LITE | BR_SOUN | BR_DISE | 
 S:BR_WALL | BR_MANA | BR_RADI | MIND_BLAST | CAUSE_3 | CAUSE_4 | 
 S:S_KIN | S_HI_UNDEAD | S_THUNDERLORD | S_WRAITH | S_UNIQUE | 
+S:S_MAN | S_PEOPLE | 
 D:You'll regret messing with these black high-heeled combat boots. 
 
 N:5634:Bettina
@@ -98310,6 +98315,7 @@ S:1_IN_7
 S:BR_ACID | BR_NETH | BR_DARK | BR_LITE | BR_SOUN | BR_DISE | 
 S:BR_WALL | BR_MANA | BR_RADI | MIND_BLAST | CAUSE_3 | CAUSE_4 | 
 S:S_KIN | S_HI_UNDEAD | S_THUNDERLORD | S_WRAITH | S_UNIQUE | 
+S:S_MAN | S_PEOPLE | 
 S:MULTIPLY
 D:You'll regret messing with these black high-heeled combat boots. 
 
@@ -98667,7 +98673,7 @@ W:68:5:700:5000
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:SHARDS:7d13
-B:KICK:HURT:8d17
+B:KICK:PLASMA:8d17
 F:WILD_TOO | WILD_WASTE | WILD_WOOD | IM_COLD | IM_ELEC | TROLL | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | IM_POIS | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | RES_NETH | 
@@ -98916,7 +98922,7 @@ F:RES_SOUN | RES_WALL | RES_GRAV | DRAGON | IM_ELEC | RES_PLAS |
 F:NO_FEAR | NO_STUN | NO_CONF | RES_TIME | RES_CHAO | RES_DARK | 
 F:RES_NERV | 
 S:1_IN_4
-S:BR_FIRE | BR_ACID | BR_VENO | S_KIN | 
+S:BR_FIRE | BR_ACID | BR_VENO | S_KIN | S_IMMOBILE | 
 D:Heike's blue hugging boots look nice, however they're everything 
 D:but that. A single kick, and the hydrofluoric acid covering them 
 D:will melt your clothes, burn its way through your skin and badly 
@@ -99181,7 +99187,7 @@ W:67:5:1000:500
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:EAT_ITEM:3d3
-B:KICK:HURT:3d3
+B:KICK:SOUND:3d3
 F:WILD_TOO | WILD_SHORE | WILD_OCEAN | WILD_VOLCANO | EMPTY_MIND | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | FRIENDS | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | UNIQUE | ESCORTS | 
@@ -99190,7 +99196,7 @@ F:RES_SOUN | RES_MIND | ELDRITCH_HORROR | REGENERATE | IM_COLD |
 F:IM_ELEC | RES_WATE | NO_FEAR | NO_CONF | NO_CUT | RES_CHAO | 
 F:RES_INER | RES_GRAV | RES_DARK | 
 S:1_IN_8
-S:S_MONSTERS | BR_SOUN | BR_DISI | 
+S:S_MONSTERS | BR_SOUN | BR_DISI | S_WOMAN | S_CLOTHES | 
 D:You meet the feminist leader... and she's gotten very dangerous. 
 D:Not only will she summon swarms of her peers to make your life hard, 
 D:her unbearable voice is also likely to shatter your ears. 
@@ -99202,7 +99208,7 @@ W:67:5:1000:500
 E:1:1:1:2:1:1
 O:0:0:0:0
 B:KICK:EAT_ITEM:3d3
-B:KICK:HURT:3d3
+B:KICK:SOUND:3d3
 F:WILD_TOO | WILD_SHORE | WILD_OCEAN | WILD_VOLCANO | EMPTY_MIND | 
 F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | FRIENDS | 
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | UNIQUE | ESCORTS | 
@@ -99211,7 +99217,7 @@ F:RES_SOUN | RES_MIND | ELDRITCH_HORROR | REGENERATE | IM_COLD |
 F:IM_ELEC | RES_WATE | NO_FEAR | NO_CONF | NO_CUT | RES_CHAO | 
 F:RES_INER | RES_GRAV | RES_DARK | 
 S:1_IN_8
-S:S_MONSTERS | BR_SOUN | BR_DISI | 
+S:S_MONSTERS | BR_SOUN | BR_DISI | S_WOMAN | S_CLOTHES | 
 D:You meet the feminist leader... and she's gotten very dangerous. 
 D:Not only will she summon swarms of her peers to make your life hard, 
 D:her unbearable voice is also likely to shatter your ears. 
@@ -99258,7 +99264,8 @@ S:1_IN_3
 S:TELE_TO | ROCKET | HASTE | SHRIEK | BR_CHAO | BR_DISE | BR_TIME | 
 S:BR_SHAR | BR_WALL | BR_MANA | BR_MIND | BA_METE | BRAIN_SMASH | 
 S:HAND_DOOM | FORGET | S_KIN | S_HI_DEMON | S_HI_UNDEAD | S_UNIQUE | 
-S:S_WRAITH | 
+S:S_WRAITH | S_PEOPLE | S_ELDRITCH | S_GIANT | S_TROLL | S_GOLEM | 
+S:S_SUMMONER | 
 D:While this block-heeled sandal looks super sexy, she knows no mercy 
 D:and doesn't want you to die... at least not immediately. Instead, she 
 D:wants you to SUFFER - and then, eventually, die a violent death. 
@@ -99284,7 +99291,8 @@ S:1_IN_3
 S:TELE_TO | ROCKET | HASTE | SHRIEK | BR_CHAO | BR_DISE | BR_TIME | 
 S:BR_SHAR | BR_WALL | BR_MANA | BR_MIND | BA_METE | BRAIN_SMASH | 
 S:HAND_DOOM | FORGET | S_KIN | S_HI_DEMON | S_HI_UNDEAD | S_UNIQUE | 
-S:S_WRAITH | 
+S:S_WRAITH | S_PEOPLE | S_ELDRITCH | S_GIANT | S_TROLL | S_GOLEM | 
+S:S_SUMMONER | 
 S:MULTIPLY
 D:While this block-heeled sandal looks super sexy, she knows no mercy 
 D:and doesn't want you to die... at least not immediately. Instead, she 
@@ -99683,7 +99691,7 @@ F:MORTAL | BASEANGBAND | THUNDERLORD | WILD_MOUNTAIN |
 F:IM_FIRE | IM_ELEC | NO_FEAR | NO_STUN | NO_CUT | RES_TIME | 
 F:RES_ETHE | 
 S:1_IN_10
-S:SLOW | CONF | S_KIN | BR_DARK | BA_ELEC | MIND_BLAST | 
+S:SLOW | CONF | S_KIN | BR_DARK | BA_ELEC | MIND_BLAST | S_MAN | S_WOMAN | 
 D:It seems that this beautiful girl is rather sadistic, and wants to 
 D:kick you in the shins repeatedly with her thick winter boots. She 
 D:expects you to bear the pain; if you dare to break down, she'll get 
@@ -99706,7 +99714,7 @@ F:MORTAL | BASEANGBAND | THUNDERLORD | WILD_MOUNTAIN |
 F:IM_FIRE | IM_ELEC | NO_FEAR | NO_STUN | NO_CUT | RES_TIME | 
 F:RES_ETHE | 
 S:1_IN_10
-S:SLOW | CONF | S_KIN | BR_DARK | BA_ELEC | MIND_BLAST | 
+S:SLOW | CONF | S_KIN | BR_DARK | BA_ELEC | MIND_BLAST | S_MAN | S_WOMAN | 
 D:It seems that this beautiful girl is rather sadistic, and wants to 
 D:kick you in the shins repeatedly with her thick winter boots. She 
 D:expects you to bear the pain; if you dare to break down, she'll get 
@@ -99729,7 +99737,7 @@ F:ELDRITCH_HORROR | IM_ACID | IM_POIS | RES_WATE | RES_PLAS |
 F:NO_FEAR | NO_SLEEP | RES_SOUN | RES_SHAR | RES_ETHE | RES_MIND | 
 S:1_IN_10
 S:HOLD | TRAPS | FORGET | DRAIN_MANA | S_KIN | BR_LITE | 
-S:BR_MIND | BR_RADI | BO_ICEE | S_MONSTER | 
+S:BR_MIND | BR_RADI | BO_ICEE | S_MONSTER | S_PEOPLE | 
 D:Now look at this bitch of a girl, hanging around with that icky 
 D:boyfriend of hers. Just seeing them makes you want to smash both 
 D:of them with a large hammer. But unfortunately for you, Marleen 
@@ -99754,7 +99762,7 @@ F:ELDRITCH_HORROR | IM_ACID | IM_POIS | RES_WATE | RES_PLAS |
 F:NO_FEAR | NO_SLEEP | RES_SOUN | RES_SHAR | RES_ETHE | RES_MIND | 
 S:1_IN_10
 S:HOLD | TRAPS | FORGET | DRAIN_MANA | S_KIN | BR_LITE | 
-S:BR_MIND | BR_RADI | BO_ICEE | S_MONSTER | 
+S:BR_MIND | BR_RADI | BO_ICEE | S_MONSTER | S_PEOPLE | 
 D:Now look at this bitch of a girl, hanging around with that icky 
 D:boyfriend of hers. Just seeing them makes you want to smash both 
 D:of them with a large hammer. But unfortunately for you, Marleen 
@@ -100254,7 +100262,7 @@ F:RES_DISE | NO_STUN | RES_TIME | RES_LITE | RES_SOUN |
 F:RES_WALL | RES_ETHE | RES_MIND | 
 S:1_IN_6
 S:MIND_BLAST | S_MONSTER | S_UNIQUE | BR_DISI | BA_DARK | 
-S:CAUSE_3 | CAUSE_4 | 
+S:CAUSE_3 | CAUSE_4 | S_MAN | S_WOMAN | 
 D:Before you know it, you'll be bludgeoned by this seemingly 
 D:soft leather-and-lace shoe. 
 
@@ -100275,7 +100283,7 @@ F:RES_DISE | NO_STUN | RES_TIME | RES_LITE | RES_SOUN |
 F:RES_WALL | RES_ETHE | RES_MIND | 
 S:1_IN_6
 S:MIND_BLAST | S_MONSTER | S_UNIQUE | BR_DISI | BA_DARK | 
-S:CAUSE_3 | CAUSE_4 | 
+S:CAUSE_3 | CAUSE_4 | S_MAN | S_WOMAN | 
 S:MULTIPLY
 D:Before you know it, you'll be bludgeoned by this seemingly 
 D:soft leather-and-lace shoe. 
@@ -100353,7 +100361,7 @@ F:RES_DARK | RES_ETHE | REFLECTING | IM_FIRE | IM_POIS | RES_WATE |
 F:RES_PLAS | NO_CUT | 
 S:1_IN_7
 S:S_KIN | BA_DARK | BR_DISE | BRAIN_SMASH | BR_NERV | BR_RADI | HOLD | 
-S:HAND_DOOM | TRAPS | 
+S:HAND_DOOM | TRAPS | S_CLOTHES | 
 D:This hugging boot belongs to the leader of the Hussy Club, and is 
 D:therefore extremely powerful despite looking lovely. 
 
@@ -101299,7 +101307,7 @@ S:BA_CHAO | BA_NETH | BA_WATE | BA_DARK | BR_VENO |
 S:BR_LITE | BR_CONF | BR_SOUN | BR_DISE | BR_NEXU | 
 S:BR_TIME | BR_INER | BR_GRAV | BR_SHAR | BR_PLAS | 
 S:BR_WALL | BR_MANA | BR_DISI | BR_NERV | BR_ETHE | 
-S:BR_MIND | BR_AMEB | BR_RADI | 
+S:BR_MIND | BR_AMEB | BR_RADI | BR_ICEE | 
 D:Now your evil act of killing icky things will come to an end, 
 D:because YOU will be the one to die! 
 
@@ -101599,7 +101607,7 @@ F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
 S:1_IN_2 | 
 S:BLINK | SLOW | SCARE | DARKNESS | HASTE | HEAL | BA_WATE | 
 S:BA_FIRE | BA_ELEC | MIND_BLAST | S_ANIMAL | S_ANT | S_SPIDER | 
-S:CAUSE_3 | HOLD | 
+S:CAUSE_3 | HOLD | S_BAT | S_SNAKE | S_WORM | S_LIZARD | 
 D:This mushroom casts priestly spells, which can be annoying. 
 
 N:5804:Giant Jaracaca
@@ -101643,9 +101651,9 @@ I:110:15d45:15:70:10
 W:52:5:500:2000
 E:0:0:0:0:1:0
 O:0:0:0:0
-B:STING:COLD:6d12
-B:STING:COLD:6d12
-B:STING:COLD:6d12
+B:STING:ICE:6d12
+B:STING:ICE:6d12
+B:STING:ICE:6d12
 F:FRIENDS | RAND_25 |
 F:KILL_WALL | WEIRD_MIND | BASH_DOOR |
 F:EVIL | ANIMAL | IM_COLD | IM_POIS | AURA_COLD | 
@@ -101862,7 +101870,7 @@ I:125:40d65:12:45:50
 W:67:5:150:3000
 E:0:1:0:2:1:0
 O:0:0:0:0
-B:BITE:DISEASE:6d10
+B:BITE:VENOM:6d10
 B:SPIT:LOSE_ALL:6d18
 F:RAND_25 | IM_POIS | REGENERATE | 
 F:CAN_SWIM | BASH_DOOR | KILL_BODY |
@@ -103068,7 +103076,7 @@ I:126:35d50:10:110:90
 W:66:3:0:3375
 E:0:0:0:0:0:0
 O:0:0:0:0
-B:ENGULF:FIRE:8d6
+B:ENGULF:PLASMA:8d6
 B:ENGULF:ETHER:8d6
 F:FORCE_SLEEP | EMPTY_MIND | 
 F:KILL_ITEM | KILL_BODY | BASH_DOOR | POWERFUL | 
@@ -103121,7 +103129,7 @@ I:110:35d50:10:120:90
 W:67:3:0:4650
 E:0:0:0:0:0:0
 O:0:0:0:0
-B:TOUCH:COLD:4d10
+B:TOUCH:ICE:4d10
 B:HIT:SHARDS:4d15
 B:TOUCH:COLD:4d10
 F:FORCE_SLEEP | SUSCEP_FIRE | RES_WATE | RES_ETHE | 
@@ -103606,7 +103614,7 @@ F:OPEN_DOOR | BASH_DOOR | PASS_WALL | NO_SLEEP | NO_STUN | NO_CONF | NO_FEAR |
 F:EVIL | UNDEAD | JOKEANGBAND | NO_CUT | 
 F:IM_FIRE | IM_COLD | IM_ELEC | IM_ACID | IM_POIS | 
 S:1_IN_2 |
-S:S_KIN | S_WRAITH | 
+S:S_KIN | S_WRAITH | S_BREEDER | S_SUMMONER | 
 D:The RNG has rolled the jackpot. Due to sheer dumb luck, the worst possible 
 D:result has been rolled; and so, Frustration, the Fifth Horseman of the 
 D:Apocalypse, has arrived. 
@@ -105685,8 +105693,8 @@ I:116:16d44:14:77:40
 W:57:5:300:910
 E:0:1:0:2:1:0
 O:0:0:0:0
-B:BITE:COLD:8d12
-B:BITE:COLD:8d12
+B:BITE:ICE:8d12
+B:BITE:ICE:8d12
 F:FORCE_MAXHP | FRIENDS |
 F:HAS_LITE | WEIRD_MIND | BASH_DOOR |
 F:ANIMAL | IM_COLD | RES_SHAR | NO_CUT | 
@@ -105702,8 +105710,8 @@ I:116:16d44:14:77:40
 W:57:60:300:910
 E:0:1:0:2:1:0
 O:0:0:0:0
-B:BITE:COLD:8d12
-B:BITE:COLD:8d12
+B:BITE:ICE:8d12
+B:BITE:ICE:8d12
 F:FORCE_MAXHP | FRIENDS |
 F:HAS_LITE | WEIRD_MIND | BASH_DOOR |
 F:ANIMAL | IM_COLD | RES_SHAR | NO_CUT | 
@@ -105792,7 +105800,7 @@ W:71:4:0:8000
 E:0:0:0:0:0:0
 O:50:5:30:10
 B:CLAW:FIRE:8d8
-B:CLAW:FIRE:8d8
+B:CLAW:PLASMA:8d8
 B:GAZE:PARALYZE:8d8
 B:GAZE:ETHER:5d5
 F:FORCE_SLEEP | RAND_25 | ONLY_ITEM | DROP_60 | DROP_22 |
@@ -105904,7 +105912,7 @@ W:73:5:10:600
 E:0:0:0:0:0:0
 O:0:0:0:0
 B:TOUCH:FIRE:8d9
-B:TOUCH:FIRE:8d9
+B:TOUCH:PLASMA:8d9
 B:TOUCH:ACID:8d9
 F:FRIENDS | NEVER_MOVE | RAND_25 | RAND_50 | IM_ACID | 
 F:NO_CUT | STUPID | COLD_BLOOD | EMPTY_MIND | IM_FIRE | 
@@ -105919,7 +105927,7 @@ W:73:20:10:600
 E:0:0:0:0:0:0
 O:0:0:0:0
 B:TOUCH:FIRE:8d9
-B:TOUCH:FIRE:8d9
+B:TOUCH:PLASMA:8d9
 B:TOUCH:ACID:8d9
 F:FRIENDS | NEVER_MOVE | RAND_25 | RAND_50 | IM_ACID | 
 F:NO_CUT | STUPID | COLD_BLOOD | EMPTY_MIND | IM_FIRE | 
