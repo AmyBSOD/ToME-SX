@@ -10697,6 +10697,14 @@ static void name_spell(random_spell* s_ptr)
 	{
 		buff2 = "Spray";
 	}
+	else if (s_ptr->proj_flags & PROJECT_ABSORB_MANA) /* firewall-like, by Amy */
+	{
+		buff2 = "Line";
+	}
+	else if (s_ptr->proj_flags & PROJECT_CANTREFLECT) /* tidal wave-like, by Amy */
+	{
+		buff2 = "Wave";
+	}
 	else if (s_ptr->proj_flags & PROJECT_VIEWABLE)
 	{
 		buff2 = "View";
@@ -10763,12 +10771,27 @@ void generate_spell(int plev)
 	}
 	else if (chance < 33)
 	{
-		rspell->proj_flags |= PROJECT_MANA_PATH; /* spray; would use PROJECT_GRID but someone decided to put that on every such spell... bleh... --Amy */
-		rspell->dam_dice = dice * 2 / 3;
-		if (rspell->dam_dice < 1) rspell->dam_dice = 1;
-		rspell->dam_sides = sides / 3;
-		if (rspell->dam_sides < 1) rspell->dam_sides = 1;
-		rspell->radius = 0;
+		if (magik(33)) {
+			rspell->proj_flags |= PROJECT_MANA_PATH; /* spray; would use PROJECT_GRID but someone decided to put that on every such spell... bleh... --Amy */
+			rspell->dam_dice = dice * 2 / 3;
+			if (rspell->dam_dice < 1) rspell->dam_dice = 1;
+			rspell->dam_sides = sides / 3;
+			if (rspell->dam_sides < 1) rspell->dam_sides = 1;
+			rspell->radius = 0;
+		} else if (magik(50)) {
+			rspell->proj_flags |= PROJECT_ABSORB_MANA; /* line, like firewall */
+			rspell->dam_dice = dice * 2 / 3;
+			if (rspell->dam_dice < 1) rspell->dam_dice = 1;
+			rspell->dam_sides = sides / 3;
+			if (rspell->dam_sides < 1) rspell->dam_sides = 1;
+			rspell->radius = 0;
+		} else {
+			rspell->proj_flags |= PROJECT_CANTREFLECT; /* wave, like tidal wave */
+			rspell->dam_dice = dice;
+			rspell->dam_sides = sides / 2;
+			if (rspell->dam_sides < 1) rspell->dam_sides = 1;
+			rspell->radius = 0;
+		}
 	}
 	else if (chance < 64)
 	{

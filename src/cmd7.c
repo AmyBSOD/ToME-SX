@@ -5385,25 +5385,37 @@ void do_cmd_powermage(void)
 		}
 	}
 
+	if (s_ptr->proj_flags & PROJECT_ABSORB_MANA) /* firewall-type, needs direction */
+	{
+		if (!get_aim_dir(&dir)) return;
+
+		fire_wall(s_ptr->GF, dir, damroll(s_ptr->dam_dice, s_ptr->dam_sides), 6);
+
+	}
+
 	if (s_ptr->proj_flags & PROJECT_BLAST)
 	{
 		ty = p_ptr->py;
 		tx = p_ptr->px;
 	}
 
-	if (s_ptr->proj_flags & PROJECT_VIEWABLE)
+	if (s_ptr->proj_flags & PROJECT_VIEWABLE) /* hit everything in view */
 	{
 		project_hack(s_ptr->GF, damroll(s_ptr->dam_dice, s_ptr->dam_sides));
 	}
-	else if (s_ptr->proj_flags & PROJECT_METEOR_SHOWER)
+	else if (s_ptr->proj_flags & PROJECT_METEOR_SHOWER) /* area spell (multiple balls in random directions) */
 	{
 		project_meteor(s_ptr->radius, s_ptr->GF,
 		               damroll(s_ptr->dam_dice, s_ptr->dam_sides),
 		               s_ptr->proj_flags);
 	}
-	else if (s_ptr->proj_flags & PROJECT_MANA_PATH)
+	else if (s_ptr->proj_flags & PROJECT_MANA_PATH) /* cloud on player's location */
 	{
 		fire_cloud(s_ptr->GF, 0, damroll(s_ptr->dam_dice, s_ptr->dam_sides), 4, 5);
+	}
+	else if (s_ptr->proj_flags & PROJECT_CANTREFLECT) /* wave emanating from player's location */
+	{
+		fire_wave(s_ptr->GF, 0, damroll(s_ptr->dam_dice, s_ptr->dam_sides), 0, 7, EFF_WAVE);
 	}
 	else
 	{
