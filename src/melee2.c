@@ -10902,12 +10902,18 @@ static void process_monster(int m_idx, bool is_frien)
 	ox = m_ptr->fx;
 
 	/* Attempt to "multiply" if able and allowed */
-	if ((r_ptr->flags4 & (RF4_MULTIPLY)) && (num_repro < MAX_REPRO))
+	if ((r_ptr->flags4 & (RF4_MULTIPLY)) && (m_ptr->status < MSTATUS_FRIEND) && (num_repro < MAX_REPRO))
 	{
 		if (ai_multiply(m_idx)) return;
 	}
 
-	if (p_ptr->nastytrap78 && (r_ptr->flags4 & (RF4_MULTIPLY)) && (num_repro < (MAX_REPRO * 2) ))
+	/* but a lot less if the monster is on your side; this is called "game balance", a concept that's alien to many players :-P --Amy */
+	if ((r_ptr->flags4 & (RF4_MULTIPLY)) && (m_ptr->status >= MSTATUS_FRIEND) && (num_repro < (MAX_REPRO / 5)))
+	{
+		if (ai_multiply(m_idx)) return;
+	}
+
+	if (p_ptr->nastytrap78 && (m_ptr->status < MSTATUS_FRIEND) && (r_ptr->flags4 & (RF4_MULTIPLY)) && (num_repro < (MAX_REPRO * 2) ))
 	{
 		if (ai_multiply(m_idx)) return;
 	}

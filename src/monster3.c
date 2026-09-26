@@ -126,6 +126,9 @@ bool ai_multiply(int m_idx)
 		is_frien = FALSE;
 	}
 
+	/* coaligned/pet breeders shouldn't be completely ridiculous --Amy */
+	if ((m_ptr->status >= MSTATUS_FRIEND) && magik(98)) return FALSE;
+
 	/* Hack -- multiply slower in crowded areas */
 	if ((k < 4) && (!k || !rand_int(k * MON_MULT_ADJ)))
 	{
