@@ -2108,6 +2108,40 @@ C:a:k:+0:+400:Elemental
 C:a:k:+0:+300:HighHeels
 C:a:g:Nobody
 
+C:a:N:Weirdo
+C:a:D:A character with a rather weird skill set.
+C:a:O:23:4:1d1
+C:a:k:+0:-100:Combat
+C:a:k:+0:-100:Weaponmastery
+C:a:k:+0:-200:Archery
+C:a:k:+0:-200:Hidden-Sight
+C:a:k:+0:-100:Sneakiness
+C:a:k:+0:-100:Stealth
+C:a:k:+0:-100:Disarming
+C:a:k:+0:-100:Monster-lore
+C:a:k:+0:-200:Spirituality
+C:a:k:+0:-200:Corpse-preservation
+C:a:k:+0:-500:Possession
+C:a:k:+0:-500:Symbiosis
+C:a:k:+0:-500:Summoning
+C:a:k:+0:-500:Mimicry
+C:a:k:+0:+200:Music
+C:a:k:+1000:+1000:Spell-learning
+C:a:k:+1000:+1000:Geomancy
+C:a:k:+1000:+1000:Misc
+C:a:k:+1000:+600:Freshmint
+C:a:k:+0:+300:Hell
+C:a:k:+0:+300:Celestial
+C:a:k:+0:+300:Demonology
+C:a:k:+0:+300:Valarin
+C:a:k:+0:+300:Nether
+C:a:k:+0:+300:Druidistic
+C:a:k:+0:+500:Cleaning
+C:a:k:+0:+500:Anti-nastiness
+C:a:k:+0:+300:Bearform-combat
+C:a:k:+0:+100:Udun
+C:a:g:All Gods
+
 #C:a:N:Weird Master
 #C:a:D:Loremaster with weird skills
 #C:a:k:+0:+400:Udun
