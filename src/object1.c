@@ -4396,6 +4396,10 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		{
 			text_out(format("\nYou found it in a level %d chest.", o_ptr->found_aux2));
 		}
+		else if (o_ptr->found == OBJ_FOUND_FATE)
+		{
+			text_out(format("\nYou were fated to find this item on level %d.", o_ptr->found_aux2));
+		}
 		else if (o_ptr->found == OBJ_FOUND_REWARD)
 		{
 			text_out("\nIt was given to you as a reward.");

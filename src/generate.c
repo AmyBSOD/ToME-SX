@@ -9652,6 +9652,9 @@ static bool cave_gen(void)
 				/* Mega-Hack */
 				apply_magic(q_ptr, dun_level, TRUE, TRUE, fates[i].serious);
 
+				q_ptr->found = OBJ_FOUND_FATE;
+				q_ptr->found_aux2 = dun_level;
+
 				get_pos_player(10, &oy, &ox);
 
 				/* Drop it from the heaven */
@@ -9736,6 +9739,9 @@ static bool cave_gen(void)
 					/* SoAC it */
 					create_artifact(q_ptr, FALSE, TRUE);
 
+					q_ptr->found = OBJ_FOUND_FATE;
+					q_ptr->found_aux2 = dun_level;
+
 					/* Drop the artifact from heaven */
 					drop_near(q_ptr, -1, oy, ox);
 				}
@@ -9762,6 +9768,9 @@ static bool cave_gen(void)
 					q_ptr->name1 = fates[i].a_idx;
 
 					apply_magic(q_ptr, -1, TRUE, TRUE, TRUE);
+
+					q_ptr->found = OBJ_FOUND_FATE;
+					q_ptr->found_aux2 = dun_level;
 
 					/* Drop the artifact from heaven */
 					drop_near(q_ptr, -1, oy, ox);

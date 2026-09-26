@@ -6050,7 +6050,8 @@ void gain_fate(byte fate)
 				if (p_ptr->nastytrap45) runebonus = 0;
 				if (runebonus > 0) maxobjlevel += runebonus;
 
-				fates[i].a_idx = get_artifact_idx(maxobjlevel);
+				if (magik(50)) fates[i].a_idx = 0; /* have a chance of getting a randart instead --Amy */
+				else fates[i].a_idx = get_artifact_idx(maxobjlevel);
 				level = randint(98);
 				fates[i].level = (level < 1) ? 1 : (level > 98) ? 98 : level;
 				fates[i].serious = TRUE;
