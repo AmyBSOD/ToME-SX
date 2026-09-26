@@ -362,7 +362,93 @@ Here I'll try to give details on the various gods, and in the case of SX-specifi
 
 *** Traps ***
 
-Traps description goes here
+There's a lot of different types of trap in the game, most of which detrimental, although some can also be useful on occasion. They're color-coded for convenience: traps with similar effects usually have the same color. SX also has some traps that can't be magically detected and/or disarmed, which means you'll need the searching and disarming skills to deal with them manually; just because you have trap detection and disarming spells no longer means you can avoid every single trap! Still, you really should get a renewable means of trap detection at some point because you *need* to detect traps at all times. Maybe you can get away with not detecting them on dungeon levels 1-10 or so but later on, some traps exist that can really ruin your whole day.
+
+Identifying a trap requires setting it off, and in most cases also to have an observable effect. Unlike vanilla ToME, all traps in SX can be identified given the right circumstances. Also unlike vanilla ToME, traps can occasionally appear out of depth; just because you're on dungeon level 18 and the curse armor trap is level 20 doesn't mean you're completely safe from that one!
+
+Blue traps: stat damage
+- Many of these damage a single stat when triggered. High-level versions can cause permanent damage; having the stat in question sustained can help, but very high-level traps ignore the sustains and damage your stat anyway, forcing you to find a stat potion if you want the values back! Some rarer varieties of this trap can drain several stats at once, too.
+
+White traps: teleportation effects
+- Various teleport or phase door traps exist which move you around the dungeon. They can come in handy on occasion, but if they're in a vault blocking a 1-tile wide corridor, you have to either disarm them or equip something with anti-teleportation to proceed.
+- Some of these teleport your items away, which can be horrible. You'll have to find and hunt down your items without leaving the level or they're lost forever! This is particularly harrowing if the level isn't "clear" yet; worst case, some item-crusher bastards will destroy some of your items before you can retrieve them.
+- Trapdoors will move you to the dungeon level below, or some types will move you down several levels. In particular, there's one which moves you to the very bottom of the current dungeon, where you may well find yourself hugely out of your depth! However, trapdoors will not appear on "flat" dungeons like the Barrow-Downs or Mirkwood, so if you are actively looking for them (e.g. because you want them identified) you must go to a different dungeon, e.g. Barad-Dur or Amon Sul.
+- Recall traps are similar to reading the scroll, except that one specific type paralyzes you as well, thereby forcing the recall to take place without you being able to do anything about it. Hopefully there weren't any items left on the level that you wanted to bring with you! The ones that don't recall you immediately can be cancelled by reading a recall scroll, though.
+- Teleport level traps will randomly place you either on the level above or below the current one. If that happens to be beyond the confines of the current dungeon, this causes you to be ejected from the dungeon, possibly even when you're in areas like the Void or Halls of Mandos.
+
+Orange traps: dungeon rearrangement
+- Earthquake traps will transform nearby areas into a random mass of quartz and granite. They might also affect monsters in the radius, not sure though.
+- Aggravation traps will alert nearby monsters. Unless you were planning to be stealthy, this probably won't do all that much; just kill the monsters as they come. Of course, if you trigger it inside a vault, you might alert OOD monsters.
+- Multiplication traps will fill the area with more traps. These can be useful if you're looking for a particular trap and/or just want to identify as many trap types as possible.
+- The trap of walls surrounds you with walls. You might need a pick or teleportation to get out, but you should always have those anyway.
+- The trap of stair movement moves around all the stairs on the current dungeon level. It can be tricky to find them afterwards. Supposedly, branch staircases can also end up becoming bugged by that effect but I've never seen that happen; allegedly, a player got to the Void early that way once.
+- Ragnarok traps randomly transform the terrain on the current level to lava and summons many demons and dragons everywhere. It may be a very good idea to get off the level ASAP if you trigger this one.
+- Some of these traps transform nearby tiles into certain types of terrain, e.g. water, ice or lava. Depending on the exact terrain type, these can be annoying.
+- The darkness trap makes your surroundings dark. Big whoop. Just use a way of illumination to undo it.
+
+Violet traps: summoning effects
+- Many of these just summon monsters of a specific type around you. They can be triggered repeatedly but will eventually morph into other trap types to prevent endless farming.
+- Traps of Calling Out teleport the highest-level monster on the current dungeon level to you. It used to be trivial to clear out fumblefingers or princess quests that way; now, the trap will morph into a different one when triggered often enough, but it can still help. Or it could draw a 40 levels OOD monster from some vault that turboowns you, so use at your own peril.
+- Acquirement traps are useful, as they'll spawn an item guaranteed to be at least "excellent". Unlike vanilla, this trap can also be identified now so you'll recognize it at a glance and can seek it out on purpose. It was silly that they couldn't be ided in vanilla anyway, since all other violet traps can, so once all those are ided you'll know that any unknown violet traps would be acquirement, so I decided "fuck that noise" and just made it possible to identify them.
+- Fart traps cause random bad effects, and while they can be magically detected, they cannot be magically disarmed.
+
+Yellow traps: mostly affect the character's equipment but some also affect the character itself
+- Curse foo: these "curse" a worn piece of equipment, which is much more dangerous than it sounds because the item gets trashed, losing all its magical effects and becoming effectively useless. Artifacts have 50% chance of resisting but if they don't, they transform into useless hunks of metal. Generally you NEVER want to trigger those, unless all your equipment slots are only wearing throwaway equipment that you don't really care about.
+- Some of these steal your items, and often drop them on the floor near you. As long as no dangerous monsters are in the vicinity, it should be easy enough to just pick the items back up.
+- Money-stealing traps reduce your amount of cash. Since you can't stash the cash, there's no real way of mitigating this effect other than not triggering the trap in the first place. But if you only have 84 AU, the trap won't be able to steal much, so ideally that'll be the time at which you identify it ;)
+- The trap of no return tries to erase all of your recalling items. Due to quirky programming, it doesn't always get them all, but if you're trying to identify every yellow trap and haven't gotten this one yet, drop all but one of your recall scrolls before triggering that unknown yellow trap, so it'll only erase the one ;)
+- The trap of silent switching tries to find equipment in your inventory that matches the equipment slots of your char, and is supposed to swap items randomly. This one seems very buggy; I've ended up having a staff in my quiver slot once.
+- Charge draining traps reduce the amount of charges in your wands and staves. Annoying but not too horrible.
+- Various traps exist that trash your wands, scrolls, potions, spellbooks or other items. These are generally horrible because the items transform into worthless ones like scrolls of nothing or adventurers guides to Middle-Earth.
+- Speed drain traps will reduce the pval of your speed-granting items; the higher-level versions of this trap can even affect artifacts, so suddenly your Cubragol crossbow only gives +5 to speed (and whatever else it gives that's affected by pval) rather than +10! You really don't want to trigger this trap unless the only speed-increasing item you carry is one you're not planning to use anyway (i.e. one you carry around as a dummy so the trap gets identified). Also be aware that items in the backpack are affected too, not just worn ones!
+- Weight-affecting traps will permanently increase the weight of equipment pieces like rings or armors. Not weapons though, as those would be able to benefit by getting better critical hits. Generally these traps are just annoying because they mean less carry capacity for other stuff and there is no way to get an item back to its original weight, although if you're playing e.g. a monk, this type of trap will be really detrimental since you'll want to wear as little weight as possible when using bare-handed combat or dodging.
+- Corruption traps start appearing at about level 60 and give you a corruption, which is very hard to remove. Potions of cure corruption are extremely rare and the only other way is a really expensive service in certain towns (e.g. Gondolin).
+- The ancient morgothian trap causes the AMC to go off, potentially ruining your equipment. Thankfully this trap is level 80, so you're not likely to encounter it any time soon, but IMHO it's a reason to never trigger unknown yellow traps when you've gotten to the point where this trap is possible.
+- Topi Ylinen traps cause the TY curse to go off, which can paralyze you through free action and summon monsters around you. It starts showing up at around level 35.
+- Item-cursing traps (e.g. trap of item curse, not to be confused with traps of curse armor and the like) curse your items, similar to the cursing spell used by enemy spellcasters. Be aware, there's a trap of prime curse (level 70), which permanently curses your items and makes it wholly impossible to remove them! Well, except via the aforementioned traps of curse foo: if you e.g. have a prime cursed torso armor and trigger a trap of curse armor, it mysteriously changes it to a regular curse which can then be removed with a simple remove curse scroll. Still, that requires trashing the item in question, so if the prime curse trap hits one you want to keep, you'll be stuck with it for all eternity...
+- Stack-reducing traps reduce the amount of items in stacks that have more than one of them. This can be annoying if you were carrying a lot of potions of healing or the like.
+- The kill symbiote trap will kill your current symbiote, regardless of how many HP it has.
+- Invert foo: looks for positively enchanted equipment in your pack, and changes them to negative values. This can also affect modifiers that you can't get back, e.g. those spiked gauntlets with (+3,+2) to melee can be trashed into (-3,-2) and then there's no way to fix them. Also, artifacts with very high pluses may be affected and then you'll spend the next eon and a half trying to enchant them back up.
+- The traps of trash equipment will invert the pval of your equipment, so that ring of speed (+5) may suddenly be a ring of speed (-5). Generally there's no way to fix an item affected by this, and it can also affect artifacts; at least this trap normally only appears at about dungeon level 60 onwards.
+- Unworth traps put a 100% discount on random items in your inventory, making it forever impossible to sell them.
+
+Red traps: usually affect the character itself
+- Lots of these cause status effects. Later versions might be unresistable, giving you a status effect even if you're resistant.
+- Paralysis traps are dangerous, especially the higher-level one which cannot be resisted. You don't want to trigger them when there's a bunch of araneas nearby; I once lost a promising char that way.
+- Exploding traps just deal some damage to you. These can be very dangerous if you're a low-HP mage.
+- Hunger-level-affecting traps can make you either starving or gorged, both of which have negative effects. The bowel cramps trap in particular means that if you don't eat something right away, you faint from lack of food every couple turns.
+- Mana-reducing traps do exactly what they say on the tin; some of them also prevent you from regenerating mana for a while. These can be annoying if you're a caster.
+- The traps of decay reduces your amount of food items available. If you have 50 food rations, losing one won't do much though, but higher-level versions of this trap consume several comestibles from a stack at once, which can be dangerous.
+- Flavor traps can change your gender, weight, age etc., which does basically nothing. They do deal a bit of damage when triggered though.
+- The black breath trap gives you the plague, and then you need to eat an athelas or use the herbal healing town service to get rid of it. Can be really annoying if you trigger it while you don't have athelas yet, and this trap is native to level 20 so it's well possible for you to have none at that point.
+- Sanity-draining traps can be very dangerous if your max sanity is low and/or your current sanity has been considerably damaged. Use sanity-restoring potions to offset the effects.
+- Eldritch traps are like encountering an eldritch horror monster and failing the saving throw; these mostly cause various status effects, some of which can be resisted.
+- Stat scramble is similar to the side effects of nexus attacks: it can swap some of your stats. If it swaps your most important stat (e.g. STR or CON) with your dump stat (usually CHA), you may be forced to scum for stat potions to get the previous values back.
+- Polymorph traps can be highly dangerous, possibly giving you a character-ruining mutation or changing your race permanently. They start appearing at about level 24.
+
+Green traps: elemental bolt
+- There's plenty of traps for all kinds of elements, but the death ray trap in particular is the poison pill among these: it deals massive EXP and permanent stat damage. Stat sustains help, but any stat that's not sustained will *permanently* drop by 5, and then it'll take a lot of scumming for stat potions to undo the effect. The death ray trap is coded to be native to level 25, so if you're still a ways away from that depth, the odds of triggering one are slim.
+
+Bright green traps: divine anger, among other things
+- Divine anger traps reduce your piety, which does nothing when you're an atheist but can be detrimental if you're trying to stay on good terms with your deity. High-level versions of these can take off five-digit numbers of piety at once, ruining all the hard work you put into raising the piety!
+- Shoe/heel traps deal some damage, sometimes they also cause status effects. They can be magically detected but not magically disarmed.
+- Abomination traps are just like the monster attack that transforms you into an abomination, which means much suckier stats and speed all around and also aggravate monster until it times out. Good mimicry skill gives a saving throw.
+- Unknown traps cannot be magically detected or disarmed, and trigger the effect of any random trap. Some trigger several random effects. Since these can morph into pretty much any kind of trap, you'll never be 100% safe from a sudden trap of curse armor or the like... better to get some searching and perception skills to hopefully detect these suckers before you blunder into them!
+
+Light blue traps: elemental ball
+- There's plenty of traps for all kinds of elements, and they're "balls" so they can also hit nearby monsters but be aware that some of these shoot multiple death rays, greatly trashing your experience and trying to deal permanent stat damage of 10 or even 15 points to all stats (can be resisted with stat sustains, but since those aren't foolproof, you're likely to still lose a few points even with all stats sustained). Also, high-level traps exist that fire several elemental balls at once, which can be very dangerous if you don't resist the element in question.
+
+Light red traps: projectile
+- Many of these are arrow, bolt, dagger etc. traps. It used to be that these would drop the respective projectiles on the ground which was just pure cheese because that screams "farming", so that's no longer possible. Generally, higher-level traps of this kind deal more damage, but unless you're something frail (e.g. a sorcerer), you shouldn't be oneshotted by them. Some of these traps also cause poisoning but you should try to get poison resistance by level 20-30 or so and then the poison effect won't trigger anymore.
+
+Gray traps: "nasty" traps
+- These traps don't print a message and won't reveal themselves even when triggered. And to further complicate things, they also cannot be magically detected or disarmed, so you need the searching and disarming skills for them. Every such trap gives a lasting effect that *never* times out; the only way to cure them is by finding a switcher, which is a random dungeon feature that can be found in most dungeons. Walking over a switcher cures all nasty trap effects whose base level isn't higher than the current dungeon level. This uses the base level of the trap in question, not the level where you actually triggered it, so if you're affected by e.g. the dispelling trap (which makes your buffs randomly end), you must find a switcher on dungeon level 25 or deeper. Many nasty traps affect gameplay in generally detrimental effects, e.g. the "bad ranged trap" means your bows/throw ability is always Bad, or the "pseudo id trap" means that your items no longer pseudo-identify themselves. There's also interface-screwing traps, like the "monochrome trap" (which makes the entire game display monochrome) or the "monster window trap" (which makes the monster recall window display nothing). Generally, you never want to trigger nasty traps, but since they're so hard to find you may well end up triggering some without even noticing, since unless their effect is obvious, there's no in-game indication that something happened at all. You can, however, use enlightenment to see which nasty trap effects are currently active.
+
+Brown traps: shit traps
+
+Black traps: environmental effects
+
+476 is the next one that needs adding here
 
 *** Key differences between ToME-SX and regular ToME ***
 
