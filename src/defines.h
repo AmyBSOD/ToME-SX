@@ -410,6 +410,7 @@
 #define OBJ_FOUND_WIZMODE       11
 #define OBJ_FOUND_BIRTH         12
 #define OBJ_FOUND_FATE          13
+#define OBJ_FOUND_ACQUIRE       14
 /*
  * There is a 1/20 (5%) chance of inflating the requested object_level
  * during the creation of an object (see "get_obj_num()" in "object.c").

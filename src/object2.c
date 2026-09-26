@@ -6756,6 +6756,8 @@ void acquirement(int y1, int x1, int num, bool great, bool known)
 			object_known(i_ptr);
 		}
 
+		i_ptr->found = OBJ_FOUND_ACQUIRE;
+
 		/* Drop the object */
 		drop_near(i_ptr, -1, y1, x1);
 	}
