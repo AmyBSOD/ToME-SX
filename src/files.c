@@ -2047,6 +2047,12 @@ void player_flags(u32b *f1, u32b *f2, u32b *f3, u32b *f4, u32b *f5, u32b *f6, u3
 		if (p_ptr->grace > 5000)  (*f2) |= TR2_RES_FIRE;
 	}
 
+	GOD(GOD_INGEBORG)
+	{
+		if (p_ptr->grace > 20000)  (*f2) |= TR2_RES_CHAOS;
+		if (p_ptr->grace > 100000) (*f2) |= TR2_LIFE;
+	}
+
 	GOD(GOD_NIENNA)
 	{
 		if (p_ptr->grace > 20000)  (*f2) |= TR2_RES_SHARDS;

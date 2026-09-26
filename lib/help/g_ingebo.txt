@@ -9,6 +9,8 @@ Ingeborg is the goddess of chaos.
  1. As you increase your piety, Ingeborg grants you a bonus to your constitution.
  2. Ingeborg likes it if you kill monsters, especially good-aligned ones.
  3. Ingeborg grants access to the *****m_udun.txt*0[Udun] school of magic.
+ 4. If you are very pious, Ingeborg grants chaos resistance.
+ 5. If you are extremely pious, Ingeborg slightly increases your maximum HP.
 
 #####GThe disadvantages of Worshipping Ingeborg
 1. Your piety decreases over time.
@@ -34,7 +36,7 @@ grant. There are five prayers all told, which are:
 3. [[[[[BDisintegrate] (Level 30)
    Fires a ball of disintegration.
 4. [[[[[BStar Destruction] (Level 50)
-   Destroys the area around you..
+   Destroys the area around you.
 
 #####GUdun spells that can be cast with Ingeborg's prayer skill
 1. [[[[[BBlack Hole] (dual school level 66)

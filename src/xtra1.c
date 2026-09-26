@@ -2827,6 +2827,9 @@ void calc_gods()
 		if (conbonus > 10) conbonus = 10;
 
 		p_ptr->stat_add[A_CON] += conbonus;
+
+		if (p_ptr->grace > 20000) p_ptr->resist_chaos = TRUE;
+		if (p_ptr->grace > 100000) p_ptr->to_l += 1;
 	}
 
 	GOD(GOD_NIENNA)
