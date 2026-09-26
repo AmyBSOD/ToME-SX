@@ -76,6 +76,76 @@ Completed the Thieves Quest? Great, you now have a home; you can talk to the may
 
 The game's first dungeon, the Barrow-Downs, are accessed in the western half of Bree. This dungeon goes from level 1 to 10 and will keep you busy for a while. You can also venture a bit to the east of Bree on the overworld map instead and go to Barad-Dur, another dungeon that starts out at level 1, or if you dare to cross the river (make sure you have a bunch of teleport scrolls that you can read to reach the edge in case you get ambushed!), a bit to the northeast of Barad-Dur you find the Wild Mine which is yet another level 1 dungeon. But careful: the boss on level 10 of Wild Mine can kill you quickly if you don't know what you're doing.
 
+*** Other options ***
+
+The game has a bunch of options; all those that weren't given under "birth options" can be set after the game has started, and IMHO there's some that should always be set to certain "correct" settings. Here I'll give details for the ones I consider important.
+- Prompt before picking up heavy objects: This should be turned on, because not turning it on means that if you try to pick up that 2000lb dragon corpse, you'll actually pick it up with no confirmation and be put to -100 speed or so. Be aware though, if you try to pick up something heavy and decline, the game "helpfully" still uses up a turn!
+- "Use color" should always be on, why on earth would you want to play the game in monochrome mode?! Doing so would make it impossible to e.g. tell the type of dragon apart at a glance!
+- Alert user to critical hitpoints: for the love of god, turn this on and also set the hitpoint warning to a value above 0%. I always set it to 30%, so that when my char goes below that threshold the game displays a ***LOW HITPOINT WARNING!!!***
+- Confirm to wear/wield known cursed items: should be a no-brainer, of course this option should always be on.
+- Automatically disarm traps: TURN THIS OFF!!! If it's on, moving into a trap will cause you to attempt to disarm it, risking you to set it off. If the option is turned off, moving into a known trap will just cause you to stop, and you can still use the D command to disarm the trap if you really want to risk it. With this option enabled, you'll be forever at risk of accidentally moving into a yellow trap, it turning out to be curse weapon, and blam, there goes your kickass artifact. So, you should really turn it off. Also be aware that the #B command (literally, pressing the hash key and then a capital B, i.e. shift-b) gives a direction prompt for the "blunder" command that lets you intentionally set off a trap, in case you want to do so without the risk of disarming it.
+- Auto-haggle in stores: Keep this turned on at all times, for if you turn it off, you have to haggle whenever you use the stores and even if you're very good at the haggling minigame, you're very likely to get far worse prices than you'd get with the option turned on.
+- Expand the power of the look command: I always felt that the look command wasn't capable of letting you select everything that could be looked at, until I found out about this option. So, *turn this option on* and never look back.
+- Allow some monsters to carry light: If you turn this on, certain monsters have a light radius, making them easier to spot from a distance. Turning it off not only makes the game unnecessarily harder, it also reduces flavor. Which is why I always have this option turned on.
+- Allow unusually small dungeon levels: I always have this turned on, because if you turn it off, dungeons that aren't specifically coded to make smaller dungeon levels will always make huge levels. A bit of variety doesn't hurt, so, turn this one on ;)
+- Allow empty arena levels: IMHO, if you turn this off you're a wussie. Really feels like it should be a birth option, too, but currently it isn't one. Anyway, turning it off means that dungeons which aren't specifically coded to only generate arena levels will never generate them, reducing flavor. And yes, I'm fully aware of the fact that most players hate arena levels since they're a lot harder to play, but my point about you being a wussie if you turn them off entirely still stands :-P In my book, your ascension will be worth less if you had this option set to off.
+- Hilite the player with the cursor: I'll never get the players who don't use this option, in fact I've often read about players specifically not wearing invis items if they find them before see invisible "because the player's glyph disappears"... Man, just turn on this option, your location will be clearly visible via the cursor! Easiest thing in the world! If you die to something that you'd have survived had you just donned that invis ring, you only have yourself to blame. So, *turn this option on* and don't make tactically poor choices, like not wearing the ring until you find a source of SI. Instead, wear the ring and enjoy the benefit of being invisible to monsters.
+- Center the view on the player: By all means, turn this on!!! Don't pay attention to the "very slow" remark, that one's probably from the olden times when the fastest PC on the market was a 166 MHz toaster that would lag the hell out of the game when you play with this option. Nowadays, every PC should be fast enough to handle the screen scrolling with each step, in fact even my toaster (which lags like hell when playing Saints Row 2 or Slender The Eight Pages, games which really aren't THAT graphically demanding...) can handle this option just fine. If you turn it off and then get breathed on by a drolem that you'd have seen with the option enabled, you only have yourself to blame. So, *turn this option on* and you'll be able to see the drolems before they kill you.
+- Player char represents his/her health: I generally turn this on, because then your glyph will change to a number if your health drops below 60%. Makes it much easier to gauge whether you still have enough health left for whatever you're currently fighting, without having to constantly blink back and forth between the game window and your HP display with your eyes.
+- Stats are represented in a linear way: I always have this on, because values like "18/118" or "18/220" read like chinese to me. I wanna know at a glance how much of a given stat I have! What's next, do you want to force me to wear an analogue watch, where I have to cumbersomely identify "ah, that's the small pointer, I think it's close to the 9, so it's 8:something o'clock, let's see where the large pointer is, hmm, is it before or after the 11? Ah it's just a little after, so I guess it's 8:55 or so!" Do you have any idea how many CPU cycles my brain has to go through until I finally know what time it is, while with a digital watch I just take one glance and see it's 8:57 and 44 seconds? Similar problem with that uberwierdo stat display where you have to calculate the actual value. And I also don't know how the game does the rounding, does 18/118 mean 29 or 30 in the given stat? Hell no, I always use the linear display and then I see instantly what value my stat is, thank you very much.
+- Base Delay Factor: for some weird reason, this calculates the amount of milliseconds in between graphical effects (bolts, breaths etc.) in a quadratic way, so setting it to 1 means 1 millisecond while 2 means 8 milliseconds and 3 already bumps it up to 27 msecs etc. Usually I use a value of 2 or 3, because I don't want the delay to be so short that I'd miss the graphical effect if I blink (seeing where projectiles come from can be tactically useful) but I also don't want it to be too long or I'll wait forever until my arrows have travelled to their target.
+- Hitpoint Warning: set this to a value that you feel comfortable with, so you'll be warned if your HP get low. Might require the "Alert user to critical hitpoints" options to be on, so what are you waiting for? Turn that one on already!
+- Autosave options: you can set the game to autosave when entering a new level and/or after a certain amount of turns have passed. In the case of the latter, you need to also specify a frequency, I usually set it to 500. The main reason for this option is that on the very rare case that the game crashes, you'll not be thrown back too godawfully far. One known bug when entering new levels, especially on double-size dungeons, is that the game may rarely hang trying to generate a level; this bug seems to be caused by the water/tree/whatever streamers that are often present on dungeon levels, and which apparently spaz out on a double-size level. If you know how to fix that one, I'd be *very* thrilled to get a commit that I'll implement to make that stupid bug go away ;)
+
+You should also dump your options setting once you've set all the options to the desired values. Annoyingly, the game is coded such that whenever you do so, the new set of options is appended to your options file instead of overwriting the existing ones (arrrrrrgh)! In order to keep the file size down and avoid annoying duplicate entries where the same option has several different values in the same options file, you might have to delete the old records manually. And if you create a new savegame file while there's an options file present that you'd like to use, you have to manually load them via the "load options setting" menu choice. Ultra annoyingly, this doesn't set stuff like hitpoint warnings, delay factors or autosave options; you still have to set them manually. But at least all the options persist if your character dies and you then start a new one from the same savegame file (which you should probably do anyway because then the pokedex entries you got from the previous char also persist).
+
+*** Macros ***
+
+This is hilariously complicated, you can set macros to make certain keypresses do certain things but it's never explained properly in the game's help files. Instead, they all seem like Chinese to me. But I did manage to figure out how to make a bunch of useful macros, this is taken directly from my "Amy.prf" options file (you need to copy this to your personal user file and then manually load that file in-game in order for it to take effect; of course you can also make adjustments):
+
+A:\e\e\e\em@Cast\sa\sspell\n
+P:\[F1]
+
+A:\e\e\e\em@Use\sMindcraft\n
+P:\[F2]
+
+A:\e\e\e\em@Cast\sa\sthaumaturgy\sspell\n
+P:\[F3]
+
+A:\e\e\e\em@Use\sthe\spossession\sskill\n
+P:\[F4]
+
+A:\e\e\e\em@Use\sNecromancy\n
+P:\[F5]
+
+A:\e\e\e\em@Use\santimagic\n
+P:\[F6]
+
+# Death Mold Powers
+A:\e\e\e\eU@52\n
+P:\[F7]
+
+A:\e\e\e\em@Use\sMimicry\n
+P:\[F8]
+
+A:\e\e\e\em@Manipulate\stotems\n
+P:\[F9]
+
+A:\e\e\e\em@Use\sFour-dimensional\sPocket\n
+P:\[F10]
+
+Optionally, you can use specific macros for spells that you cast all the time, like this:
+
+A:\e\e\e\em@Cast\sa\sspell\n@Stone\sSkin\n
+P:\[alt-F3]
+
+That way, you can press F1 to cast a spell, F2 to cast a mindcraft spell and so on. You can also use inscriptions on your items with the { command (and remove them with the } command), which can affect how that item behaves in your inventory and which is obviously also not properly explained anywhere; the help files are once again in Chinese for me. Anyway, I figured out a bunch of useful inscriptions, mostly by looking at other players' char dumps:
+!d!s!k!k!k - give one warning when trying to drop or sell the item in question, and three warnings when trying to destroy the item. I always put that on my entire worn kit to avoid typos; before I started doing that, I often ended up suddenly not having an item anymore with no idea where it disappeared to! The !k's are probably not needed for artifacts, as those cannot be destroyed anyway.
+@m1 or @r2 etc. - allows you to select the item via a number key when using the specified command. So for spellbooks, you'll use the @m1 inscription (because m is the spellcasting command) and then you can just press 1 to select whichever spellbook is inscribed as @m1. Use ascending numbers if you have several spellbooks, of course. Combined with the macro above, I can press F1 (to cast a spell) followed by 1 (to select the book inscribed as @m1) and then only need to select whichever spell from that book I want to cast. And I always inscribe my identify scrolls as @r2 so I can press r2 to read one, my rod of trap location is usually @z1 allowing me to press z1 to zap it etc. Really makes things much easier, because you'll no longer have to be super OCD and constantly watch which letter slot your item was moved to; the numbers are constant, giving some much-needed keystroke consistency that wards off annoying typos ;)
+!* - gives a confirmation prompt whenever you try to do anything to that item. Using several such inscriptions, e.g. !*!*!* gives several such prompts. Useful for stuff like recall, genocide or destruction scrolls, to ensure you don't accidentally read one when you didn't mean to.
+
+There's certainly more macros and inscriptions that you can use. I wish there was a help file written in plain English with *examples* of how to use them, instead of pages and pages of technical lingo. If you have a useful macro or inscription that you want to share, tell me and I'll add it to this document!
+
 *** God quests ***
 
 If you're worshipping a god, every once in a while you'll get a quest upon leveling up. These quests task you to find a forgotten temple somewhere on the world map, and within that temple, find and pick up a relic for some free boosts to your prayer skill. Now there's several caveats with these quests:
