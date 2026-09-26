@@ -165,8 +165,8 @@ MANDOS_CALL_HALLS = add_spell
 			local y, x, m_idx
 			local summons =
 				{
-				test_monster_name("Experienced spirit"),
-				test_monster_name("Wise spirit"),
+				932, --experienced spirit
+				933, --wise spirit
 				}
 			y, x = find_position(player.py, player.px)
 			m_idx = place_monster_one(y, x, summons[rand_range(1, 2)], 0, FALSE, MSTATUS_FRIEND)

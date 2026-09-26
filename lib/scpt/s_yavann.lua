@@ -145,7 +145,8 @@ YAVANNA_UPROOT = add_spell
 
 				-- Summon it
 				y, x = find_position(y, x)
-				m_idx = place_monster_one(y, x, test_monster_name("Ent"), 0, FALSE, MSTATUS_FRIEND)
+				--ent
+				m_idx = place_monster_one(y, x, 708, 0, FALSE, MSTATUS_FRIEND)
 
 				-- level it
 				if m_idx ~= 0 then

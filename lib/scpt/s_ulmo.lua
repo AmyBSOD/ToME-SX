@@ -93,8 +93,8 @@ ULMO_CALL_ULUMURI = add_spell
 			local y, x, m_idx
 			local summons =
 				{
-				test_monster_name("Water spirit"),
-				test_monster_name("Water elemental"),
+				303, --water spirit
+				512, --water elemental
 				}
 			y, x = find_position(player.py, player.px)
 			m_idx = place_monster_one(y, x, summons[rand_range(1, 2)], 0, FALSE, MSTATUS_FRIEND)
