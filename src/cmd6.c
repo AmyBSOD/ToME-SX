@@ -6430,7 +6430,7 @@ void do_cmd_use_staff(void)
 	cptr q, s;
 
 	/* No magic */
-	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && (magik(p_ptr->antimagic)))
+	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && magik(90) && (magik(p_ptr->antimagic)))
 	{
 		msg_print("Your anti-magic field disrupts your magic attempts.");
 		msg_print(NULL);
@@ -6646,7 +6646,7 @@ void do_cmd_aim_wand(void)
 
 
 	/* No magic */
-	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && (magik(p_ptr->antimagic)))
+	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && magik(90) && (magik(p_ptr->antimagic)))
 	{
 		msg_print("Your anti-magic field disrupts your magic attempts.");
 		msg_print(NULL);
@@ -6855,7 +6855,7 @@ void zap_combine_rod_tip(object_type *q_ptr, int tip_item) /* q_ptr is the rod t
 
 
 	/* No magic */
-	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && (magik(p_ptr->antimagic)))
+	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && magik(90) && (magik(p_ptr->antimagic)))
 	{
 		msg_print("Your anti-magic field disrupts your magic attempts.");
 		msg_print(NULL);
@@ -6968,7 +6968,7 @@ void do_cmd_zap_rod(void)
 
 
 	/* No magic */
-	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && (magik(p_ptr->antimagic)))
+	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && magik(90) && (magik(p_ptr->antimagic)))
 	{
 		msg_print("Your anti-magic field disrupts your magic attempts.");
 		msg_print(NULL);

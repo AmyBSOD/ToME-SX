@@ -3562,7 +3562,7 @@ void cast_school_spell()
 	/*msg_format("antimagic dis %d", p_ptr->antimagic_dis);
 	msg_format("player antimagic %d", p_ptr->antimagic);*/
 
-	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && (magik(p_ptr->antimagic)))
+	if ( ( (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) || (p_ptr->antimagic_dis >= randint(p_ptr->lev) ) ) && magik(90) && (magik(p_ptr->antimagic)))
 	{
 		msg_print("Your anti-magic field disrupts your magic attempts.");
 		msg_print(NULL);
