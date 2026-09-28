@@ -142,7 +142,7 @@ static void power_activate(int power)
 		break;
 	case PWR_BEAR:
 		{
-			set_mimic(150 + (p_ptr->lev * 10) , resolve_mimic_name("Bear"), p_ptr->lev);
+			set_mimic(30 + (p_ptr->lev * 3) , resolve_mimic_name("Bear"), p_ptr->lev);
 		}
 		break;
 	case PWR_COMPANION:
