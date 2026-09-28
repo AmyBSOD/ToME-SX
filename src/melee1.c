@@ -2999,11 +2999,11 @@ bool make_attack_normal(int m_idx, byte divis)
 						if (!o_ptr->k_idx) continue;
 
 						/* Drain charged wands/staffs
-						   Hack -- don't let artifacts get drained */
+						   Hack -- don't let artifacts get drained; Amy edit: they only resist and aren't immune now */
 						if (((o_ptr->tval == TV_STAFF) || (o_ptr->tval == TV_ROD_MAIN) ||
 						                (o_ptr->tval == TV_WAND)) &&
 						                (o_ptr->pval) &&
-					                     !artifact_p(o_ptr))
+					                     (!artifact_p(o_ptr) || magik(50) ) )
 						{
 							int drainedamount;
 							int drainmitigate;
