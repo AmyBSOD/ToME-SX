@@ -12898,6 +12898,8 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 					/* this is a crude hack, but it prevent wielding 6 torches... */
 					if (k_ptr->number > 1) continue;
 
+					/* okay this is ultra bugged! why would you trigger the effect several times but not adjust the slot again?! --Amy */
+					slot1 = wield_slot(j_ptr);
 					slot2 = wield_slot(k_ptr);
 
 					/* a chance of 4 in 5 of switching something, then 2 in 5 to do it again */
