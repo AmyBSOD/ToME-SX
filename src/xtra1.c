@@ -4713,6 +4713,7 @@ void calc_bonuses(bool silent)
 
 		int num = 0, wgt = 0, mul = 0, div = 0;
 
+
 		analyze_blow(&num, &wgt, &mul);
 
 		/* Enforce a minimum "weight" (tenth pounds) */
@@ -4828,7 +4829,7 @@ void calc_bonuses(bool silent)
 
 		p_ptr->num_blow = 0;
 
-		p_ptr->num_blow += 2 + (plev / 5) + extra_blows;
+		p_ptr->num_blow += 1 + (plev / 20) + extra_blows;
 
 		p_ptr->to_h -= (plev / 5);
 		p_ptr->dis_to_h -= (plev / 5);
