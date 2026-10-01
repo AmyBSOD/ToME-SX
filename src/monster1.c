@@ -757,6 +757,7 @@ static void roff_aux(int r_idx, int ego, int remem)
 	if (flags4 & (RF4_ARROW_3))	vp[vn++] = "fire a missile";
 	if (flags4 & (RF4_ARROW_4))	vp[vn++] = "fire missiles";
 	if (flags11 & (RF11_BOULDER))	vp[vn++] = "throw boulders";
+	if (flags11 & (RF11_PERFUME))	vp[vn++] = "spread perfume";
 
 	/* Describe inate attacks */
 	if (vn)

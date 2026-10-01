@@ -2795,6 +2795,30 @@ int use_symbiotic_power(int r_idx, bool great, bool only_number, bool no_cost)
 			break;
 		}
 
+		/* PERFUME */
+	case 105:
+		{
+			if (!get_aim_dir(&dir)) break;
+
+			switch (randint(4)) {
+				default:
+				case 1:
+					fear_monster(dir, plev);
+					break;
+				case 2:
+					fire_bolt(GF_CONFUSION, dir, damroll(7, 8) + (p_ptr->lev / 3));
+					break;
+				case 3:
+					fire_bolt(GF_OLD_SLOW, dir, damroll(6, 8) + (p_ptr->lev / 3));
+					break;
+				case 4:
+					fire_bolt(GF_OLD_SLEEP, dir, damroll(5, 8) + (p_ptr->lev / 3));
+					break;
+			}
+
+			break;
+		}
+
 		/**** RF12 (bit position + 128) ****/
 
 		/* BA_METE */

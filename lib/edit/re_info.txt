@@ -663,6 +663,12 @@ I:+0:+0d+0:+0:+10:-30
 W:+1:5:%90:%100:A
 M:AI_ANNOY
 
+N:94:Perfume-Spreader
+G:*:v
+I:+0:+0d+0:+0:+10:-30
+W:+1:10:+0:+0:B
+S:1_IN_7 | PERFUME
+
 # N:x:ego name
 # G:x:y                 x is the char, y the attribute, * means the normal one
 # I:speed:(dice)d(side):aaf:ac:sleep

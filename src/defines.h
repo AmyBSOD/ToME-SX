@@ -5013,6 +5013,7 @@
 #define RF11_BR_WATE            0x00000040 /* Water breath */
 #define RF11_BR_ICEE            0x00000080 /* Ice breath */
 #define RF11_BOULDER            0x00000100 /* boulder throwing (giants) */
+#define RF11_PERFUME            0x00000200 /* perfume spreading */
 
 /*
  * Monster spell flags: actual spells

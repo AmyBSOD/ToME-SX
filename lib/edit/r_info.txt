@@ -17755,7 +17755,7 @@ F:OPEN_DOOR | BASH_DOOR | IM_POIS | IM_COLD | DEMON | EVIL |
 F:BASEANGBAND
 S:1_IN_3 |
 S:CAUSE_3 | HOLD | BLIND | BO_ACID | S_DEMON |
-S:FORGET | BO_NETH | MIND_BLAST | DARKNESS
+S:FORGET | BO_NETH | MIND_BLAST | DARKNESS | PERFUME
 D:Drop dead gorgeous - literally. 
 
 N:1012:Vermicious Knid
@@ -23021,7 +23021,7 @@ F:RES_WALL | RES_GRAV | NO_CONF | NO_FEAR | NO_STUN | RES_MIND |
 S:1_IN_5 | 
 S:BR_POIS | BR_NETH | BR_NEXU | BR_CHAO | BR_TIME | BR_SHAR | 
 S:BA_POIS | CAUSE_3 | MIND_BLAST | BO_MANA | BO_PLAS | BLIND | CONF
-S:HOLD | HASTE | HEAL | TELE_TO | TRAPS | FORGET | 
+S:HOLD | HASTE | HEAL | TELE_TO | TRAPS | FORGET | PERFUME | 
 D:This pretty female sneaker/trainer looks very soft and lovely. 
 D:But you have met others of their kind on your journeys, so you know 
 D:that you'll have to expect them to be dangerous. You ready your 
@@ -23049,7 +23049,7 @@ F:RES_WALL | RES_GRAV | NO_CONF | NO_FEAR | NO_STUN | RES_MIND |
 S:1_IN_5 | 
 S:BR_POIS | BR_NETH | BR_NEXU | BR_CHAO | BR_TIME | BR_SHAR | 
 S:BA_POIS | CAUSE_3 | MIND_BLAST | BO_MANA | BO_PLAS | BLIND | CONF
-S:HOLD | HASTE | HEAL | TELE_TO | TRAPS | FORGET | 
+S:HOLD | HASTE | HEAL | TELE_TO | TRAPS | FORGET | PERFUME | 
 S:MULTIPLY
 D:This pretty female sneaker/trainer looks very soft and lovely. 
 D:But you have met others of their kind on your journeys, so you know 
@@ -43371,7 +43371,7 @@ F:FORCE_MAXHP | JOKEANGBAND |
 F:ONLY_ITEM | DROP_90 | DROP_GOOD | 
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
 S:1_IN_3 | 
-S:MISSILE
+S:PERFUME | MISSILE
 D:She is known as a temptress, and a mistress of the night.  Her looks
 D: belie the fact that she is the rightful ruler of Makai 
 
@@ -65559,7 +65559,7 @@ F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM |
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_ACID | 
 F:NO_SLEEP | IM_POIS | NO_STUN | UNDEAD | 
 S:1_IN_2
-S:BR_SHAR
+S:PERFUME | BR_SHAR
 D:Eww, this wedge-heeled skier's soles are covered with dog shit! You don't 
 D:want to be kicked by them, in fact you'd prefer to not get into contact 
 D:with them at all... 
@@ -66674,7 +66674,7 @@ F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_SWIM |
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_ACID | 
 F:NO_SLEEP | IM_POIS | NO_STUN | UNDEAD | 
 S:1_IN_2
-S:BR_SHAR
+S:PERFUME | BR_SHAR
 S:MULTIPLY
 D:Eww, this wedge-heeled skier's soles are covered with dog shit! You don't 
 D:want to be kicked by them, in fact you'd prefer to not get into contact 
@@ -67335,6 +67335,8 @@ F:RAND_25 | WILD_TOO | REVBOSS | CAN_SWIM | OPEN_DOOR | GOOD |
 F:UNIQUE | CAN_SPEAK | IM_COLD | WILD_SHORE | WILD_OCEAN | SMART | 
 F:DROP_CORPSE | FEMALE | DRAGON | RES_NERV | 
 F:RES_LITE | RES_INER | RES_WALL | MORTAL | BASEANGBAND |
+S:1_IN_10
+S:PERFUME | 
 D:Wow! Claudia is such a beautiful woman with wonderful blonde hair, 
 D:wearing cuuuuuute wooden sandals with high heels which she'll gladly 
 D:slam into your shins again and again! Plus her tender buttocks are 
@@ -92966,7 +92968,7 @@ F:DROP_22 | DROP_GREAT | DROP_RANDART | OPEN_DOOR | IM_POIS |
 F:BASEANGBAND | WEIRD_MIND | NO_FEAR | CAN_SWIM | RES_LITE | 
 F:RES_CHAO | RES_NERV | 
 S:1_IN_5
-S:BR_NERV | SHRIEK | HASTE | 
+S:BR_NERV | SHRIEK | HASTE | PERFUME | 
 D:A very sexy girl. You'd absolutely want to have intercourse with her. But, 
 D:I'm fairly certain that it's not the best idea to do so and you'd be 
 D:well-advised to spank her butt instead! 
@@ -93004,7 +93006,7 @@ F:DROP_22 | DROP_GREAT | OPEN_DOOR | IM_POIS |
 F:BASEANGBAND | WEIRD_MIND | NO_FEAR | CAN_SWIM | RES_LITE | 
 F:RES_CHAO | RES_NERV | 
 S:1_IN_5
-S:BR_NERV | SHRIEK | HASTE | 
+S:BR_NERV | SHRIEK | HASTE | PERFUME | 
 D:A very sexy girl. You'd absolutely want to have intercourse with her. But, 
 D:I'm fairly certain that it's not the best idea to do so and you'd be 
 D:well-advised to spank her butt instead! 
@@ -93712,6 +93714,8 @@ F:RAND_25 | WILD_TOO | CAN_SWIM | OPEN_DOOR | GOOD |
 F:UNIQUE | CAN_SPEAK | IM_COLD | WILD_SHORE | WILD_OCEAN | SMART | 
 F:DROP_CORPSE | FEMALE | DRAGON | RES_NERV | 
 F:RES_LITE | RES_INER | RES_WALL | MORTAL | BASEANGBAND |
+S:1_IN_10
+S:PERFUME | 
 D:Wow! Claudia is such a beautiful woman with wonderful blonde hair, 
 D:wearing cuuuuuute wooden sandals with high heels which she'll gladly 
 D:slam into your shins again and again! Plus her tender buttocks are 
@@ -94460,7 +94464,7 @@ F:CAN_SWIM | IM_POIS | NO_CONF |
 F:ANIMAL | HAS_EGG | DROP_CORPSE | FEMALE |
 F:MORTAL | BASEANGBAND |
 S:1_IN_8
-S:CONF |
+S:CONF | PERFUME | 
 D:Boah, these orange lady slippers are really odoriferous! 
 
 N:5426:Solvejg
@@ -94477,7 +94481,7 @@ F:ANIMAL | HAS_EGG | DROP_CORPSE | FEMALE |
 F:MORTAL | BASEANGBAND |
 S:MULTIPLY
 S:1_IN_8
-S:CONF |
+S:CONF | PERFUME | 
 D:Boah, these orange lady slippers are really odoriferous! 
 
 N:5427:Solvejg
@@ -94493,7 +94497,7 @@ F:CAN_SWIM | IM_POIS | NO_CONF | NO_SLEEP |
 F:ANIMAL | HAS_EGG | DROP_CORPSE | FEMALE |
 F:MORTAL | BASEANGBAND |
 S:1_IN_8
-S:CONF | SCARE | 
+S:CONF | SCARE | PERFUME | 
 D:You're really annoyed as these orange mocassins keep stinking up 
 D:the area while constantly aiming for the blood vessels of your hands. 
 
@@ -94511,7 +94515,7 @@ F:ANIMAL | HAS_EGG | DROP_CORPSE | FEMALE |
 F:MORTAL | BASEANGBAND |
 S:MULTIPLY
 S:1_IN_8
-S:CONF | SCARE | 
+S:CONF | SCARE | PERFUME | 
 D:You're really annoyed as these orange mocassins keep stinking up 
 D:the area while constantly aiming for the blood vessels of your hands. 
 
@@ -94724,7 +94728,7 @@ F:CAN_SWIM | IM_FIRE | RES_WATE | NO_FEAR | RES_TIME | RES_SOUN |
 F:ANIMAL | HAS_EGG | DROP_CORPSE | FEMALE |
 F:MORTAL | BASEANGBAND | NO_CONF | 
 S:1_IN_10 | 
-S:BR_CONF | CONF | BR_NERV | 
+S:BR_CONF | CONF | BR_NERV | PERFUME | 
 D:Maybe the kick of these soft girl sneakers isn't all that dangerous, but beware 
 D:the intense female odor they emit. 
 
@@ -94740,7 +94744,7 @@ F:CAN_SWIM | IM_FIRE | RES_WATE | NO_FEAR | RES_TIME | RES_SOUN |
 F:ANIMAL | HAS_EGG | DROP_CORPSE | FEMALE | RES_PLAS | RES_INER | 
 F:MORTAL | BASEANGBAND | NO_CONF | RES_ETHE | 
 S:1_IN_5 | 
-S:BR_CONF | CONF | BR_NERV | SLOW | MIND_BLAST | FORGET | 
+S:BR_CONF | CONF | BR_NERV | SLOW | MIND_BLAST | FORGET | PERFUME | 
 D:You may end up falling in love with the beautifully soft "Anja" shoes! They 
 D:look so lovely, and their intense feminine scent is just irresistible! 
 
@@ -94884,7 +94888,7 @@ F:ELDRITCH_HORROR |
 S:1_IN_3 | 
 S:BR_DARK | TRAPS | CAUSE_2 | BLIND | HASTE | S_MONSTERS | SLOW | SHRIEK | 
 S:ROCKET | BR_LITE | BR_RADI | BO_PLAS | BRAIN_SMASH | FORGET | TELE_AWAY | 
-S:S_HULK | 
+S:S_HULK | PERFUME | 
 D:This erotic bitch seems to be really conceited with her lacquered block-heeled 
 D:lady shoes. She annoys you so much, you want to tear the buckles out of her 
 D:footwear just to take her down a peg or two. 
@@ -94908,7 +94912,7 @@ F:ELDRITCH_HORROR |
 S:1_IN_3 | 
 S:BR_DARK | TRAPS | CAUSE_2 | BLIND | HASTE | S_MONSTERS | SLOW | SHRIEK | 
 S:ROCKET | BR_LITE | BR_RADI | BO_PLAS | BRAIN_SMASH | FORGET | TELE_AWAY | 
-S:S_HULK | 
+S:S_HULK | PERFUME | 
 D:This erotic bitch seems to be really conceited with her lacquered block-heeled 
 D:lady shoes. She annoys you so much, you want to tear the buckles out of her 
 D:footwear just to take her down a peg or two. 
@@ -95752,7 +95756,7 @@ F:HAS_EGG | DROP_CORPSE | FEMALE | WILD_MOUNTAIN | WEIRD_MIND | COLD_BLOOD |
 F:MORTAL | BASEANGBAND | MOVE_BODY | ORC | EVIL | FRIEND | IM_ACID | IM_POIS | 
 F:RES_CHAO | RES_INER | OPEN_DOOR | NO_FEAR | NO_STUN | RES_NERV | NO_FEAR | 
 S:1_IN_8 | 
-S:ARROW_3 | BO_POIS | HEAL | SHRIEK | CAUSE_2 | 
+S:ARROW_3 | BO_POIS | HEAL | SHRIEK | CAUSE_2 | PERFUME | 
 D:You love the soft block heels of this ochre leather combat boot. She really 
 D:enjoys kicking your various body parts and testing your pain threshold. 
 
@@ -95770,7 +95774,7 @@ F:HAS_EGG | DROP_CORPSE | FEMALE | WILD_MOUNTAIN | WEIRD_MIND | COLD_BLOOD |
 F:MORTAL | BASEANGBAND | MOVE_BODY | ORC | EVIL | FRIEND | IM_ACID | IM_POIS | 
 F:RES_CHAO | RES_INER | OPEN_DOOR | NO_FEAR | NO_STUN | RES_NERV | NO_FEAR | 
 S:1_IN_8 | 
-S:ARROW_3 | BO_POIS | HEAL | SHRIEK | CAUSE_2 | 
+S:ARROW_3 | BO_POIS | HEAL | SHRIEK | CAUSE_2 | PERFUME | 
 S:MULTIPLY
 D:You love the soft block heels of this ochre leather combat boot. She really 
 D:enjoys kicking your various body parts and testing your pain threshold. 
@@ -95791,7 +95795,7 @@ F:MORTAL | BASEANGBAND | MOVE_BODY | ORC | EVIL | FRIEND | IM_ACID | IM_POIS |
 F:RES_CHAO | RES_INER | OPEN_DOOR | NO_FEAR | NO_STUN | RES_NERV | NO_FEAR | 
 F:NO_CONF | 
 S:1_IN_8 | 
-S:ARROW_4 | BO_POIS | HEAL | SHRIEK | CAUSE_3 | FORGET | BR_MIND | 
+S:ARROW_4 | BO_POIS | HEAL | SHRIEK | CAUSE_3 | FORGET | BR_MIND | PERFUME | 
 D:Now you'll learn how powerful the "Dora" combat boots really are. Their 
 D:annoying odor makes it hard for you to concentrate while the lovely ochre 
 D:block heels constantly scratch your shins, stomp your feet or kick your 
@@ -95813,7 +95817,7 @@ F:MORTAL | BASEANGBAND | MOVE_BODY | ORC | EVIL | FRIEND | IM_ACID | IM_POIS |
 F:RES_CHAO | RES_INER | OPEN_DOOR | NO_FEAR | NO_STUN | RES_NERV | NO_FEAR | 
 F:NO_CONF | 
 S:1_IN_8 | 
-S:ARROW_4 | BO_POIS | HEAL | SHRIEK | CAUSE_3 | FORGET | BR_MIND | 
+S:ARROW_4 | BO_POIS | HEAL | SHRIEK | CAUSE_3 | FORGET | BR_MIND | PERFUME | 
 S:MULTIPLY
 D:Now you'll learn how powerful the "Dora" combat boots really are. Their 
 D:annoying odor makes it hard for you to concentrate while the lovely ochre 
@@ -96958,6 +96962,7 @@ F:RES_INER | RES_GRAV | DRAGON | IM_COLD | RES_WATE | NO_SLEEP |
 F:HAS_EGG | MORTAL | BASEANGBAND | FEMALE | RES_TIME | NO_FEAR | 
 S:1_IN_9 | 
 S:SHRIEK | SCARE | BLIND | HOLD | SLOW | MIND_BLAST | BR_CONF | BR_MIND | 
+S:PERFUME | 
 D:Now these girl sneakers with sexy cyan stripes are fighting at the highest 
 D:difficulty level, and can use their sweaty insoles to intoxicate you. Still, 
 D:you should be able to defeat them. 
@@ -96975,6 +96980,7 @@ F:RES_INER | RES_GRAV | DRAGON | IM_COLD | RES_WATE | NO_SLEEP |
 F:HAS_EGG | MORTAL | BASEANGBAND | FEMALE | RES_TIME | NO_FEAR | 
 S:1_IN_9 | 
 S:SHRIEK | SCARE | BLIND | HOLD | SLOW | MIND_BLAST | BR_CONF | BR_MIND | 
+S:PERFUME | 
 S:MULTIPLY
 D:Now these girl sneakers with sexy cyan stripes are fighting at the highest 
 D:difficulty level, and can use their sweaty insoles to intoxicate you. Still, 
@@ -97521,7 +97527,7 @@ F:RES_SOUN | RES_SHAR | RES_DISE | NO_FEAR | NO_STUN | THUNDERLORD |
 F:ELDRITCH_HORROR | IM_ACID | IM_FIRE | NO_CONF | RES_LITE | RES_INER | 
 F:RES_ETHE | 
 S:1_IN_6
-S:BO_NETH | BR_NETH | BR_LITE | BR_INER | HOLD | 
+S:BO_NETH | BR_NETH | BR_LITE | BR_INER | HOLD | PERFUME | 
 D:You immediately fall in love with the beautiful lady shoes of Lena 
 D:"Cuddle-Bundle", because they look so pretty with their lacquered leather. 
 D:Being kicked and stomped by them feels absolutely wonderful! <3<3<3 
@@ -97826,7 +97832,7 @@ F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_ACID |
 F:NO_SLEEP | IM_POIS | NO_STUN | UNDEAD | ELDRITCH_HORROR | 
 F:IM_FIRE | RES_WATE | NO_CUT | RES_PLAS | NO_FEAR | RES_SHAR | 
 S:1_IN_2
-S:BR_SHAR | BR_MIND | S_KIN | CAUSE_4 | S_IMMOBILE | 
+S:PERFUME | BR_SHAR | BR_MIND | S_KIN | CAUSE_4 | S_IMMOBILE | 
 D:This pair of wedge skiers seems to have been cleaned recently, and they 
 D:try to move their metal edges underneath your fingernails, then force 
 D:them upward. You don't even want to imagine how bloody the wounds caused 
@@ -97845,7 +97851,7 @@ F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_ACID |
 F:NO_SLEEP | IM_POIS | NO_STUN | UNDEAD | ELDRITCH_HORROR | 
 F:IM_FIRE | RES_WATE | NO_CUT | RES_PLAS | NO_FEAR | RES_SHAR | 
 S:1_IN_2
-S:BR_SHAR | BR_MIND | S_KIN | CAUSE_4 | S_IMMOBILE | 
+S:PERFUME | BR_SHAR | BR_MIND | S_KIN | CAUSE_4 | S_IMMOBILE | 
 S:MULTIPLY
 D:This pair of wedge skiers seems to have been cleaned recently, and they 
 D:try to move their metal edges underneath your fingernails, then force 
@@ -98602,7 +98608,7 @@ F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | CAN_FLY | GIANT |
 F:RES_SHAR | RES_WALL | RES_MIND | IM_ACID | RES_NETH | RES_PLAS | 
 F:RES_DISE | NO_FEAR | NO_SLEEP | NO_CUT | RES_LITE | RES_INER | 
 S:1_IN_10
-S:MIND_BLAST | CONF | 
+S:MIND_BLAST | CONF | PERFUME | 
 D:Ugh, apparently these girl hugging boots fully stepped into dog 
 D:shit. And they're still trying to kick and stomp you repeatedly, 
 D:which can be really icky. But at least it seems that this also 
@@ -98776,7 +98782,7 @@ F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_POIS | IM_COLD |
 F:NO_SLEEP | UNDEAD | EVIL | RES_NETH | RES_WATE | NO_CONF | 
 F:RES_DARK | RES_MIND | 
 S:1_IN_6
-S:HOLD | BR_CONF | BR_CHAO | MIND_BLAST | 
+S:HOLD | BR_CONF | BR_CHAO | MIND_BLAST | PERFUME | 
 D:This girl sneaker really wants to know it now. She'll constantly attack 
 D:you by sliding over your exposed skin, and the stench emanating from 
 D:her sweaty inlays is just unbearable! 
@@ -98795,7 +98801,7 @@ F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_POIS | IM_COLD |
 F:NO_SLEEP | UNDEAD | EVIL | RES_NETH | RES_WATE | NO_CONF | 
 F:RES_DARK | RES_MIND | 
 S:1_IN_6
-S:HOLD | BR_CONF | BR_CHAO | MIND_BLAST | 
+S:HOLD | BR_CONF | BR_CHAO | MIND_BLAST | PERFUME | 
 S:MULTIPLY
 D:This girl sneaker really wants to know it now. She'll constantly attack 
 D:you by sliding over your exposed skin, and the stench emanating from 
@@ -99356,7 +99362,7 @@ F:RES_WALL | EVIL | NO_STUN | GIANT | IM_ACID | IM_COLD |
 F:ELDRITCH_HORROR | NO_FEAR | RES_TIME | RES_CHAO | RES_INER | 
 F:RES_ETHE | 
 S:1_IN_10
-S:BA_ACID | 
+S:BA_ACID | PERFUME | 
 D:At first, this thick lady shoe looks charming... but then you realize 
 D:that her owner was so stupid and fully stepped into dog shit, and 
 D:the platform soles want to stomp you! That would transfer all the 
@@ -99389,7 +99395,7 @@ F:HAS_EGG | DROP_CORPSE | FEMALE | FORCE_SLEEP | CAN_FLY | RES_WATE |
 F:OPEN_DOOR | MORTAL | BASEANGBAND | TAKE_ITEM | IM_COLD | GOOD | 
 F:RES_LITE | RES_ETHE | ELDRITCH_HORROR | 
 S:1_IN_15
-S:MIND_BLAST | 
+S:MIND_BLAST | PERFUME | 
 D:Such a pretty blue high-heeled women's sandal... but it appears that 
 D:Ute somehow stepped into dog shit with them. And you're the poor sap 
 D:tasked to clean them, by hand, armed with nothing but a can of shoe 
@@ -99787,7 +99793,7 @@ F:AURA_COLD | IM_FIRE | IM_POIS | RES_NETH | RES_WATE | RES_PLAS |
 F:RES_DISE | NO_FEAR | NO_STUN | NO_SLEEP | NO_CUT | RES_TIME | 
 F:RES_SOUN | RES_CHAO | RES_DARK | RES_NERV | 
 S:1_IN_8
-S:S_DEMON | S_HI_DEMON | S_UNIQUE | BRAIN_SMASH | TPORT | 
+S:S_DEMON | S_HI_DEMON | S_UNIQUE | BRAIN_SMASH | TPORT | PERFUME | 
 D:You realize that this wonderfully lovely woman is in fact Pale Night, 
 D:the demon lady who kills everyone unfortunate enough to fall in love 
 D:with her. Either you can control your emotions and withstand her 
@@ -99810,7 +99816,7 @@ F:AURA_COLD | IM_FIRE | IM_POIS | RES_NETH | RES_WATE | RES_PLAS |
 F:RES_DISE | NO_FEAR | NO_STUN | NO_SLEEP | NO_CUT | RES_TIME | 
 F:RES_SOUN | RES_CHAO | RES_DARK | RES_NERV | 
 S:1_IN_8
-S:S_DEMON | S_HI_DEMON | S_UNIQUE | BRAIN_SMASH | TPORT | 
+S:S_DEMON | S_HI_DEMON | S_UNIQUE | BRAIN_SMASH | TPORT | PERFUME | 
 D:You realize that this wonderfully lovely woman is in fact Pale Night, 
 D:the demon lady who kills everyone unfortunate enough to fall in love 
 D:with her. Either you can control your emotions and withstand her 
@@ -99877,7 +99883,7 @@ F:UNIQUE | CAN_SPEAK | WILD_TOWN | WEIRD_MIND | GOOD |
 F:DROP_CORPSE | FEMALE | IM_FIRE | RES_PLAS | 
 F:RES_INER | MORTAL | BASEANGBAND | NO_STUN | 
 S:1_IN_8
-S:HOLD | SLOW | MIND_BLAST | BR_CONF | BR_POIS | 
+S:HOLD | SLOW | MIND_BLAST | BR_CONF | BR_POIS | PERFUME | 
 D:She wants to play with you by sliding her lovely orange mocassins over 
 D:your hands and opening your blood vessels. And boah, those slippers 
 D:of hers are emitting an asphyxiating stench... 
@@ -99897,7 +99903,7 @@ F:UNIQUE | CAN_SPEAK | WILD_TOWN | WEIRD_MIND | GOOD |
 F:DROP_CORPSE | FEMALE | IM_FIRE | RES_PLAS | 
 F:RES_INER | MORTAL | BASEANGBAND | NO_STUN | 
 S:1_IN_8
-S:HOLD | SLOW | MIND_BLAST | BR_CONF | BR_POIS | 
+S:HOLD | SLOW | MIND_BLAST | BR_CONF | BR_POIS | PERFUME | 
 D:She wants to play with you by sliding her lovely orange mocassins over 
 D:your hands and opening your blood vessels. And boah, those slippers 
 D:of hers are emitting an asphyxiating stench... 
@@ -100045,7 +100051,7 @@ F:REFLECTING | RES_WATE | RES_DISE | NO_FEAR | NO_CUT | RES_WALL |
 F:RES_GRAV | RES_SHAR | ELDRITCH_HORROR | GOOD | IM_POIS | RES_NETH | 
 F:RES_PLAS | RES_LITE | RES_SOUN | RES_INER | 
 S:1_IN_10
-S:HOLD | BR_MIND | 
+S:HOLD | BR_MIND | PERFUME | 
 D:Ugghh, you discover that these gorgeous block-heeled lady boots 
 D:have dog shit on their treaded soles. You absolutely don't feel 
 D:like cleaning them, nor do you want to be kicked by them as 
@@ -100108,7 +100114,7 @@ F:MORTAL | BASEANGBAND | WILD_WOOD | RES_PLAS | RES_DISE | RES_DARK |
 F:RES_WATE | NO_FEAR | NO_SLEEP | RES_SHAR | RES_ETHE | ELDRITCH_HORROR | 
 F:AURA_FIRE | 
 S:1_IN_10
-S:HOLD | MIND_BLAST | 
+S:HOLD | MIND_BLAST | PERFUME | 
 D:Why do all those ladies step into shit with their high heels?! 
 D:These red pumps would be super sexy otherwise, but as it is, 
 D:they're icky and you don't want to touch them with a 10-foot pole! 
@@ -100127,7 +100133,7 @@ F:MORTAL | BASEANGBAND | WILD_WOOD | RES_PLAS | RES_DISE | RES_DARK |
 F:RES_WATE | NO_FEAR | NO_SLEEP | RES_SHAR | RES_ETHE | ELDRITCH_HORROR | 
 F:AURA_FIRE | 
 S:1_IN_10
-S:HOLD | MIND_BLAST | 
+S:HOLD | MIND_BLAST | PERFUME | 
 S:MULTIPLY
 D:Why do all those ladies step into shit with their high heels?! 
 D:These red pumps would be super sexy otherwise, but as it is, 
@@ -116443,7 +116449,9 @@ B:BITE:ELEC:1d10
 F:ANIMAL | FRIENDS | IM_ELEC | AURA_ELEC | EVIL | BASEANGBAND | 
 S:1_IN_10
 S:HEAL
-D:Some sort of cat that is annoying. 
+D:Some sort of cat that is annoying. Seems like Jose Machete wrote a description 
+D:for it though, which the Poschengband devs had neglected, and it reads: 
+D:A feline surrounded by a strange energy. 
 
 N:6702:Iridescent worm mass
 G:w:v
@@ -124663,6 +124671,107 @@ S:1_IN_5
 S:TPORT
 D:A fictional rogue computer operator who takes out his anger on lusers like 
 D:you. 
+
+N:7206:Perfumed woman
+G:t:u
+I:110:10d10:6:3:0
+W:14:3:1500:30
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:2d10
+F:FEMALE | DROP_CORPSE | DROP_SKELETON | 
+F:RAND_25 | TAKE_ITEM | DROP_12 | NO_SLEEP | IM_POIS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_8
+S:PERFUME
+D:This woman is surrounded by a perfume cloud. 
+
+N:7207:Scented woman
+G:t:u
+I:116:12d15:6:8:0
+W:34:3:1500:200
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:4d10
+F:FEMALE | DROP_CORPSE | DROP_SKELETON | 
+F:RAND_25 | TAKE_ITEM | DROP_12 | NO_SLEEP | IM_POIS | 
+F:MORTAL | BASEANGBAND | HAS_LITE
+S:1_IN_5
+S:PERFUME
+D:A woman whose perfume emits a very powerful scent. 
+
+N:7208:Odoriferous woman
+G:t:u
+I:120:14d20:6:12:0
+W:54:3:1500:1500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:5d10
+B:HIT:HURT:5d10
+F:FEMALE | DROP_CORPSE | DROP_SKELETON | NO_FEAR | 
+F:TAKE_ITEM | DROP_22 | NO_SLEEP | IM_POIS | NO_STUN | 
+F:MORTAL | BASEANGBAND | HAS_LITE | NO_CONF | 
+S:1_IN_3
+S:PERFUME
+D:You can smell her perfume from a mile and a half away. She's 
+D:obviously using it as a weapon.
+
+N:7209:Perfumed HC girl
+G:p:U
+I:115:4d8:30:5:20
+W:5:10:1400:15
+E:1:1:1:2:1:1
+O:10:50:10:20
+B:HIT:HURT:1d5
+B:KICK:HURT:1d5
+F:FEMALE | 
+F:DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | WILD_WASTE | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND | MORTAL | HAS_LITE
+S:1_IN_8 |  
+S:CONF | DRAIN_MANA | PERFUME | 
+D:"HC" means hardcore. This annoying lass is trying to get on 
+D:your nerves. And she's using some horrible, stinky perfume, too... 
+
+N:7210:Scented HC woman
+G:p:U
+I:113:12d10:20:10:40
+W:15:10:1700:45
+E:1:1:1:2:1:1
+O:20:50:20:0
+B:HIT:HURT:3d5
+B:KICK:HURT:3d5
+F:FEMALE | 
+F:DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | WILD_WASTE | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND | MORTAL | HAS_LITE
+S:1_IN_4 |  
+S:CONF | DRAIN_MANA | SCARE | PERFUME | 
+D:"HC" means hardcore. This woman tries to convert you to her religion. 
+D:You also really can't stand the perfume she's using. Like, what is 
+D:that stench?! 
+
+N:7211:Odoriferous HC lady
+G:p:U
+I:111:18d20:50:40:80
+W:30:10:1700:150
+E:1:1:1:2:1:1
+O:15:20:50:5
+B:HIT:HURT:6d5
+B:KICK:HURT:6d5
+F:FEMALE | 
+F:DROP_12 | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | WILD_WASTE | NO_FEAR | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND | MORTAL | HAS_LITE
+S:1_IN_3 |  
+S:CONF | DRAIN_MANA | SCARE | SLOW | BR_DARK | TELE_AWAY | HEAL | 
+S:PERFUME | 
+D:"HC" means hardcore. You don't feel that this person is really 
+D:a lady, but she refers to herself as one and you wish she was 
+D:far away because she's just so damn full of herself. In fact, if 
+D:she weren't here, you'd at least not have to smell her god-awful 
+D:perfume anymore... 
+
 
 
 

@@ -5016,7 +5016,7 @@ monster_power monster_powers[224] =
 		{ RF11_BR_WATE, "Breathe Water", 90, TRUE },
 		{ RF11_BR_ICEE, "Breathe Ice", 100, TRUE },
 		{ RF11_BOULDER, "Boulder", 80, TRUE },
-		{ 0, "(none)", 0, FALSE },
+		{ RF11_PERFUME, "Spread Perfume", 75, FALSE },
 		{ 0, "(none)", 0, FALSE },
 		{ 0, "(none)", 0, FALSE },
 		{ 0, "(none)", 0, FALSE },

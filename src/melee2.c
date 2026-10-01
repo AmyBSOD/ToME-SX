@@ -821,7 +821,7 @@ static int choose_attack_spell(int m_idx, int spells[], int num)
 
 	/* secret spell nastytrap by Amy: allow monster to cast any random spell, whether or not it actually has the spell in question */
 	if (p_ptr->nastytrap168 && magik(1)) {
-		switch (randint(144)) {
+		switch (randint(145)) {
 			default:
 			case 1:
 				return 96; /* RF4_SHRIEK */
@@ -1111,6 +1111,8 @@ static int choose_attack_spell(int m_idx, int spells[], int num)
 				return 416 + 4; /* RF14_S_SUMMONER */
 			case 144:
 				return 416 + 5; /* RF14_S_RANDOM */
+			case 145:
+				return 320 + 9; /* RF11_PERFUME */
 		}
 	}
 
@@ -3910,6 +3912,83 @@ static bool monst_spell_monst(int m_idx)
 				} else {
 					monst_bolt_monst(m_idx, y, x, GF_ARROW, damroll(rlev + 1, randint(4)) + randint(10) );
 				}
+				break;
+			}
+
+			/* RF11_PERFUME */
+		case 320 + 9:
+			{
+				if (!see_either) monster_msg("You smell perfume.");
+				else if (disturb_other && !p_ptr->nastytrap160) disturb(1, 0);
+				if (!blind) monster_msg("%^s spreads perfume at %s.", m_name, t_name);
+
+				switch (randint(4)) {
+					default:
+					case 1:
+						if (tr_ptr->flags3 & RF3_NO_FEAR)
+						{
+							if (see_t) monster_msg("%^s refuses to be frightened.", t_name);
+						}
+						else if (t_ptr->level > randint((rlev - 10) < 1 ? 1 : (rlev - 10)) + 10)
+						{
+							if (see_t) monster_msg("%^s refuses to be frightened.", t_name);
+						}
+						else
+						{
+							if (!(t_ptr->monfear) && see_t) monster_msg("%^s flees in terror!", t_name);
+							t_ptr->monfear += rand_int(4) + 4;
+						}
+						break;
+					case 2:
+						if (tr_ptr->flags3 & RF3_NO_CONF)  /* Simulate blindness with confusion */
+						{
+							if (see_t) monster_msg("%^s is unaffected.", t_name);
+						}
+						else if (t_ptr->level > randint((rlev - 10) < 1 ? 1 : (rlev - 10)) + 10)
+						{
+							if (see_t) monster_msg("%^s is unaffected.", t_name);
+						}
+						else
+						{
+							if (see_t) monster_msg("%^s is blinded!", t_name);
+							t_ptr->confused += 12 + (byte)rand_int(4);
+						}
+						break;
+					case 3:
+						if (tr_ptr->flags1 & RF1_UNIQUE)
+						{
+							if (see_t) monster_msg("%^s is unaffected.", t_name);
+						}
+						else if (t_ptr->level > randint((rlev - 10) < 1 ? 1 : (rlev - 10)) + 10)
+						{
+							if (see_t) monster_msg("%^s is unaffected.", t_name);
+						}
+						else
+						{
+							t_ptr->mspeed -= 10;
+							if (see_t) monster_msg("%^s starts moving slower.", t_name);
+						}
+						break;
+					case 4:
+						if ((tr_ptr->flags1 & RF1_UNIQUE) ||
+						                (tr_ptr->flags3 & RF3_NO_STUN))
+						{
+							if (see_t) monster_msg("%^s is unaffected.", t_name);
+						}
+						else if (t_ptr->level > randint((rlev - 10) < 1 ? 1 : (rlev - 10)) + 10)
+						{
+							if (see_t) monster_msg("%^s is unaffected.", t_name);
+						}
+						else
+						{
+							t_ptr->stunned += randint(4) + 4;
+							if (see_t) monster_msg("%^s is paralyzed!", t_name);
+						}
+						break;
+				}
+
+				wake_up = TRUE;
+
 				break;
 			}
 
@@ -7962,6 +8041,59 @@ bool make_attack_spell(int m_idx)
 				} else {
 					bolt_cantreflect(m_idx, GF_ARROW, damroll(rlev + 1, randint(4)));
 				}
+				break;
+			}
+
+			/* RF11_PERFUME */
+		case 320 + 9:
+			{
+				disturb(1, 0);
+
+				switch (randint(10)) {
+					default:
+					case 1:
+						if (blind) msg_print("Urgh! You inhale some vile stench!");
+						else msg_format("Urgh! You inhale the vile stench that emanates from %s!", m_name);
+						break;
+					case 2:
+						if (blind) msg_print("The perfume is beguiling, and you have trouble concentrating!");
+						else msg_format("%^s's perfume is beguiling, and you have trouble concentrating!", m_name);
+						break;
+					case 3:
+						if (blind) msg_print("The feminine scent makes you dizzy.");
+						else msg_format("You deeply inhale %s's feminine scent.", m_name);
+						break;
+					case 4:
+						if (blind) msg_print("An odor cloud made of concentrated perfume infiltrates your nose!");
+						else msg_format("%^s's odor cloud made of concentrated perfume infiltrates your nose!", m_name);
+						break;
+					case 5:
+						if (blind) msg_print("Your lungs are having trouble dealing with the asphyxiating stench that wafts through the dungeon!");
+						else msg_format("Your lungs are having trouble dealing with the asphyxiating stench that comes from %s!", m_name);
+						break;
+					case 6:
+						if (blind) msg_print("You are hit by a fragrance cloud!");
+						else msg_format("%^s attacks you with a fragrance cloud!", m_name);
+						break;
+					case 7:
+						if (blind) msg_print("You get dizzy from inhaling the intense aroma of perfume!");
+						else msg_format("You get dizzy from inhaling the intense aroma of %s's perfume!", m_name);
+						break;
+					case 8:
+						msg_print("The lovely scent of perfume floods your nostrils... but it's getting ever stronger, and you can hardly breathe!");
+						break;
+					case 9:
+						if (blind) msg_print("You sense a perfume that is so scentful, it reminds you of what your aunt smells like when she comes for a visit on Christmas! Ugh!");
+						else msg_format("%^s's perfume is so scentful that it reminds you of what your aunt smells like when she comes for a visit on Christmas! Ugh!", m_name);
+						break;
+					case 10:
+						if (blind) msg_print("You sense an odor that reminds you of an oriental brothel! What an intrusive perfume is that, anyway?");
+						else msg_format("%^s's odor reminds you of an oriental brothel! What an intrusive perfume is that, anyway?", m_name);
+						break;
+				}
+
+				do_fart_effect();
+
 				break;
 			}
 

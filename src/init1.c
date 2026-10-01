@@ -539,7 +539,7 @@ static cptr r_info_flags11[] =
 	"BR_WATE",
 	"BR_ICEE",
 	"BOULDER",
-	"XXX9X9",
+	"PERFUME",
 	"XXX9X10",
 	"XXX9X11",
 	"XXX9X12",

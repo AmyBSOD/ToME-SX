@@ -563,7 +563,7 @@ void randommonstermix(void)
 	if (specmons > 10) specmons = 10;
 	while (specmons > 0) {
 		specmons--;
-		switch (random_number(336)) {
+		switch (random_number(337)) {
 			default:
 			case 1:
 				printf("M:UNIQUE\n");
@@ -1572,6 +1572,9 @@ void randommonstermix(void)
 				break;
 			case 336:
 				printf("S:S_RANDOM\n");
+				break;
+			case 337:
+				printf("S:PERFUME\n");
 				break;
 		}
 	}
@@ -5157,8 +5160,10 @@ void printRandoms(int lower, int upper, int count)
 						printf("O:30:5:30:30\n");
 						printf("F:NO_SHAFT | CAVE | NO_DOORS | SAND_VEIN | MAGMA_VEIN | QUARTZ_VEIN |\n");
 						printf("F:FILL_METHOD_3\n");
-						printf("R:80:1\n");
+						printf("R:75:1\n");
 						printf("M:FEMALE\n");
+						printf("R:5:1\n");
+						printf("S:PERFUME\n");
 						printf("R:20:0\n");
 						break;
 					case 152:

@@ -922,6 +922,8 @@ void self_knowledge(FILE *fff)
 			info[i++] = "You can fire a heavy missile.";
 		if (r_ptr->flags11 & RF11_BOULDER)
 			info[i++] = "You can throw boulders.";
+		if (r_ptr->flags11 & RF11_PERFUME)
+			info[i++] = "You can spread scentful perfume.";
 		if (r_ptr->flags4 & RF4_BR_ACID)
 			info[i++] = "You can breathe acid.";
 		if (r_ptr->flags4 & RF4_BR_ELEC)
