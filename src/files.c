@@ -6444,6 +6444,10 @@ static void show_info(void)
 	{
 		char out_val[160];
 
+		int askforauxes = 10;
+
+askforauxagain:
+
 		/* Prompt */
 		put_str("Filename(you can post it to http://angband.oook.cz/): ", 23, 0);
 
@@ -6451,7 +6455,22 @@ static void show_info(void)
 		strcpy(out_val, "");
 
 		/* Ask for filename (or abort) */
-		if (!askfor_aux(out_val, 60)) return;
+		if (!askfor_aux(out_val, 60)) {
+			prt("WARNING: this is your last chance to dump your char!! You must press @ to confirm!", 0, 0);
+			flush();
+			i = inkey();
+			prt("", 0, 0);
+			if (i == '@') break;
+
+			if (askforauxes > 0) {
+				askforauxes--;
+				goto askforauxagain;
+			}
+
+			/* what the HELL, half of the postgame DYWYPI screen was just made UNAVAILABLE because someone thought they should return here??? --Amy
+			 * like, that's the biggest bug EVER, nuking so much of the post-game wrapup (keeping its code but having a bug that causes that part to never
+			 * be reached) and then never actually noticing it! how on earth can such a thing even HAPPEN */
+		}
 
 		/* Return means "show on screen" */
 		if (!out_val[0]) break;
@@ -6476,8 +6495,9 @@ static void show_info(void)
 	prt("Hit any key to see more information (ESC to abort): ", 23, 0);
 
 	/* Allow abort at this point */
-	if (inkey() == ESCAPE) return;
-
+	if (inkey() == ESCAPE) {
+		return;
+	}
 
 	/* Show equipment and inventory */
 
