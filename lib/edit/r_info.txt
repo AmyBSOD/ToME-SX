@@ -123016,6 +123016,8 @@ B:HIT:HURT:10d14
 F:FORCE_SLEEP | FORCE_MAXHP | DROP_12 | WILD_TOO | WILD_MOUNTAIN |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:EVIL | GIANT | MALE | BASEANGBAND | HAS_LITE | REGENERATE | 
+S:1_IN_8
+S:BOULDER
 D:A very old, very huge giant. 
 
 N:7111:Eternal giant
@@ -123030,6 +123032,8 @@ F:FORCE_SLEEP | FORCE_MAXHP | DROP_12 | WILD_TOO | WILD_MOUNTAIN |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
 F:EVIL | GIANT | MALE | BASEANGBAND | HAS_LITE | REGENERATE | 
 F:RES_TIME | 
+S:1_IN_6
+S:BOULDER
 D:This giant must've been around since the beginning of the universe. 
 
 N:7112:War Olog
@@ -131357,7 +131361,7 @@ F:WILD_WOOD | BASEANGBAND
 F:EMPTY_MIND | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | FRIENDS
 F:NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN
 D:A splotch of grayish fungal vegetation.  
-D:You don't remember seeing anything like it
+D:You don't remember seeing anything like it 
 D:before.
 
 N:7624:Yog-Sothoth Fanatic Cultist
@@ -131590,6 +131594,147 @@ F:EVIL | ORC | UNDEAD | BASEANGBAND |
 F:IM_COLD | IM_POIS | DROP_60 | FORCE_MAXHP
 F:NO_CONF | NO_SLEEP | NO_FEAR | DROP_60 | DROP_60
 D:It is an animated snaggletooth skeleton.
+
+N:7639:Muck moss
+G:;:g
+I:120:4d9:30:1:5
+W:25:2:0:70
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:POISON:1d8
+B:HIT:CONFUSE:1d8
+F:FORCE_SLEEP | NEVER_MOVE | BASEANGBAND |
+F:STUPID | COLD_BLOOD | EMPTY_MIND | 
+F:NO_CUT | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+S:1_IN_4 |
+S:BR_CONF | BR_VENO | PERFUME
+D:A mass of green vegetation. It emits a very strong scent. 
+
+N:7640:Melt moss
+G:;:o
+I:128:11d80:30:46:5
+W:75:2:0:6060
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:FIRE:10d20
+B:HIT:PLASMA:6d21
+F:FORCE_SLEEP | NEVER_MOVE | BASEANGBAND | REGENERATE | 
+F:STUPID | COLD_BLOOD | EMPTY_MIND | IM_FIRE | 
+F:NO_CUT | NO_FEAR | NO_STUN | NO_CONF | NO_SLEEP |
+S:1_IN_1 |
+S:BA_METE | BR_PLAS | PERFUME
+D:A mass of red-hot vegetation. It emits a very strong scent. 
+
+N:7641:Scented faerie
+G:H:v
+I:115:4d25:18:28:10
+W:20:1:500:40
+E:0:1:1:0:1:0
+O:0:0:0:0
+F:NEVER_BLOW | DROP_60 |
+F:HAS_LITE | CAN_FLY | 
+F:RES_LITE | DROP_SKELETON | DROP_CORPSE | 
+F:AI_ANNOY | BASEANGBAND |
+S:1_IN_4 |
+S:BLINK | SCARE | SLOW | PERFUME | 
+D:It is a small winged humanoid surrounded by a glowing brown light, 
+D:as well as a cloud of perfume. 
+
+N:7642:Perfumed faerie
+G:H:v
+I:115:9d45:18:50:10
+W:50:1:500:400
+E:0:1:1:0:1:0
+O:0:0:0:0
+F:NEVER_BLOW | DROP_60 |
+F:HAS_LITE | CAN_FLY | RES_SOUN | 
+F:RES_LITE | DROP_SKELETON | DROP_CORPSE | 
+F:AI_ANNOY | BASEANGBAND | RES_ETHE | RES_LITE | 
+S:1_IN_3 |
+S:BLINK | SCARE | SLOW | PERFUME | ARROW_3 | MIND_BLAST | 
+D:It is a small winged humanoid surrounded by a glowing brown light, 
+D:as well as a cloud of perfume. They want to mess with your mind. 
+
+N:7643:Perfume dispenser
+G:):v
+I:110:5d5:20:10:40
+W:5:1:300:5
+E:0:1:0:2:1:0
+O:0:0:0:0
+F:NEVER_BLOW | NEVER_MOVE | DROP_60 | 
+F:STUPID | EMPTY_MIND | BASEANGBAND |
+F:NO_FEAR | NO_CONF | NO_SLEEP | NO_STUN | NO_CUT | 
+S:1_IN_3 |
+S:PERFUME | 
+D:This box contains perfume, which is wafting out and infiltrates 
+D:your nose... 
+
+N:7644:Fragrance dispenser
+G:):v
+I:118:10d50:20:30:40
+W:30:1:300:200
+E:0:1:0:2:1:0
+O:0:0:0:0
+F:NEVER_BLOW | NEVER_MOVE | DROP_60 | RES_DARK | 
+F:STUPID | EMPTY_MIND | BASEANGBAND |
+F:NO_FEAR | NO_CONF | NO_SLEEP | NO_STUN | NO_CUT | 
+S:1_IN_2 |
+S:PERFUME | 
+D:A box full of perfume. Being near it forces you to smell it. 
+
+N:7645:Giant perfume dispenser
+G:):v
+I:124:40d200:20:60:40
+W:60:1:2500:1200
+E:0:1:0:2:1:0
+O:0:0:0:0
+F:NEVER_BLOW | NEVER_MOVE | DROP_60 | RES_DARK | RES_TIME | 
+F:STUPID | EMPTY_MIND | BASEANGBAND | IM_POIS | RES_NEXU | 
+F:NO_FEAR | NO_CONF | NO_SLEEP | NO_STUN | NO_CUT | RES_LITE | 
+F:RES_CHAO | RES_INER | RES_ETHE | 
+S:1_IN_1 |
+S:PERFUME | 
+D:This huge box of perfume is stinking up the entire dungeon! 
+D:You feel that you might need a gas mask... 
+
+N:7646:Stench elemental
+G:E:g
+I:114:15d20:10:100:90
+W:56:3:0:500
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:ACID:1d15
+B:TOUCH:ACID:1d15
+B:TOUCH:ACID:1d15
+F:FORCE_SLEEP | 
+F:EMPTY_MIND | COLD_BLOOD | WILD_TOO | WILD_SHORE | WILD_SWAMP |
+F:KILL_ITEM | KILL_BODY | BASH_DOOR | POWERFUL | 
+F:IM_ACID | IM_FIRE | CAN_SWIM | IM_COLD | IM_POIS | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND | NO_CUT
+S:1_IN_5 | 
+S:BO_ACID | BA_ACID | PERFUME
+D:This grotesque mass reeks of stench. Urgh. 
+
+N:7647:Perfume Angel
+G:A:y
+I:130:100d40:30:145:255
+W:51:6:2600:15500
+E:1:1:1:2:1:1
+O:0:40:60:0
+B:GAZE:TERRIFY:4d5
+B:GAZE:TERRIFY:4d5
+B:HIT:HURT:8d7
+B:HIT:HURT:8d7
+F:FORCE_SLEEP | JOKEANGBAND | 
+F:DROP_32 | DROP_42 | DROP_GOOD | RES_NEXU | RES_DISE | 
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY | 
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS
+S:1_IN_3 | 
+S:TELE_TO | BLIND | SCARE | CAUSE_2 | CAUSE_4 | BO_MANA | 
+S:S_ANGEL | PERFUME | 
+D:This angel may look nice, but actually wants to punish you. And 
+D:it's covered with some thick, odoriferous perfume! Urrgh! 
+
 
 
 
