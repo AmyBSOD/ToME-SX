@@ -124772,6 +124772,6826 @@ D:far away because she's just so damn full of herself. In fact, if
 D:she weren't here, you'd at least not have to smell her god-awful 
 D:perfume anymore... 
 
+# 7212-7638 are ported from ZMangband or inspired by the ZMangband monsters
+# credits go to the original creators of those monsters
+# there's lotsa spelling errors in the descriptions and also some in the monster
+# names themselves; I decided to keep them for posterity
+
+N:7212:Stray scrawny cat
+G:f:s
+I:112:1d4:30:3:50
+W:0:3:100:1
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d2
+F:RAND_25 | WILD_TOWN | ANIMAL | DROP_CORPSE | 
+F:DROP_SKELETON | NEUTRAL | BASEANGBAND
+D:A skinny little furball with sharp claws and a sarcastic face.
+
+N:7213:Stray little dog
+G:C:U
+I:110:1d4:20:3:5
+W:0:1:100:1
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d2
+F:RAND_25 | DROP_SKELETON | DROP_CORPSE | WILD_TOWN | 
+F:ANIMAL | NEUTRAL | BASEANGBAND
+D:A thin flea-ridden mutt, growling as you get close.
+
+N:7214:Stuttering idiot
+G:t:W
+I:110:1d8:6:6:5
+W:0:1:1500:2
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:DROOL:*
+F:MALE | DROP_CORPSE | DROP_SKELETON | WILD_TOWN | 
+F:RAND_25 | DROP_CHOSEN | CAN_SPEAK | BASEANGBAND
+D:He tends to blubber a lot, always talking about nonsense... from the woods.
+
+N:7215:Leper outcast
+G:t:u
+I:110:1d8:6:3:150
+W:0:3:1000:1
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BEG:*
+B:TOUCH:DISEASE
+F:MALE | DROP_CORPSE | DROP_SKELETON | CAN_SPEAK
+F:RAND_25 | WILD_TOWN | TAKE_ITEM | OPEN_DOOR | BASEANGBAND
+D:You feel it isn't safe to touch him.
+
+N:7216:Nomadic merchant
+G:t:o
+I:110:1d8:10:12:50
+W:0:1:1500:2
+E:1:1:1:2:1:1
+O:50:50:0:0
+B:HIT:HURT:1d4
+F:MALE | RAND_50 | ONLY_GOLD | DROP_60 | DROP_SKELETON | DROP_CORPSE
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:WILD_TOWN | HAS_LITE | NEUTRAL | BASEANGBAND
+D:They roam the land, always looking for a chande to trade.
+
+N:7217:Rhan-Tegoth's Cultist
+G:P:w
+I:110:30d8:15:12:50
+W:0:4:1500:2
+E:1:1:1:2:1:1
+O:50:50:0:0
+B:HIT:TERRIFY
+B:GAZE:PARALYZE
+F:MALE | DROP_CORPSE | WILD_TOWN | OPEN_DOOR | BASH_DOOR | WEIRD_MIND |
+F:NO_CONF | NO_SLEEP | DROP_60 | DROP_60 | 
+F:CAN_SPEAK | FORCE_MAXHP | BASEANGBAND
+D:A madman, a preacher, sometimes a priest of our Lord And Destructor 
+D:of Worlds, Cthulhu. Wanders the land, lost the mind.
+
+N:7218:Giant Longnosed snake
+G:J:w
+I:100:2d8:15:15:100
+W:1:1:600:2
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:BITE:POISON:1d4
+F:RAND_25 | WILD_WOOD | FORCE_MAXHP | BASEANGBAND
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | ANIMAL
+D:It is about 11 feet long, and shiny white scaled.
+
+N:7219:Floating Spectral Skull
+G:s:y
+I:105:2d8:10:12:50
+W:1:2:500:2
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:GAZE:PARALYZE
+B:BITE:HURT:1d8
+F:WILD_WOOD | WILD_MOUNTAIN
+F:EVIL | EMPTY_MIND | RAND_25 | ONLY_ITEM | DROP_12 | DROP_12 |
+F:IM_FIRE | FORCE_MAXHP | BASEANGBAND
+F:NO_CONF | NO_SLEEP | NO_FEAR | HAS_LITE | CAN_SPEAK
+S:1_IN_9 |
+S:BLINK | S_UNDEAD
+D:Lost souls, wander the dungeon in an eternal search for a never found peace of spirit, their eyes
+D: like glowing embers of hatred...
+
+N:7220:Nether Skull
+G:s:D
+I:108:30d30:10:45:50
+W:50:2:500:2000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:GAZE:PARALYZE
+B:BITE:EXP_40:6d8
+F:EVIL | EMPTY_MIND | RAND_25 | ONLY_ITEM | DROP_12 | 
+F:IM_FIRE | FORCE_MAXHP | BASEANGBAND
+F:NO_CONF | NO_SLEEP | NO_FEAR | HAS_LITE | CAN_SPEAK
+S:1_IN_5 |
+S:BLINK | S_UNDEAD | BR_NETH
+D:A very evil skull who doesn't like living people. You know, people like you. 
+
+N:7221:Giant Crested Gecko
+G:R:y
+I:110:2d8:20:12:30
+W:1:1:10:2
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:BITE:HURT:1d4
+F:WEIRD_MIND | CAN_SWIM | WILD_WOOD | WILD_SWAMP
+F:WILD_WASTE | WILD_SHORE | WILD_MOUNTAIN | BASEANGBAND |
+F:WILD_TOWN | ANIMAL | DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP
+D:A big, but mostly harmless lizard.
+
+N:7222:Giant Frost Crab
+G:c:w
+I:110:4d8:12:20:40
+W:3:1:2000:8
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:BITE:COLD:1d4
+F:WEIRD_MIND | CAN_SWIM | WILD_SWAMP | BASEANGBAND
+F:WILD_WASTE | WILD_SHORE | WILD_MOUNTAIN |
+F:RAND_25 | DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP
+F:WEIRD_MIND | BASH_DOOR | ANIMAL | SUSCEP_FIRE
+S:1_IN_10 |
+S:BO_COLD
+D:It is white, as big as a pig, and twice as ravenous, can spit frozen projectiles.
+
+N:7223:Giant Horned Viper snake
+G:J:u
+I:100:3d8:15:15:50
+W:1:1:600:3
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:BITE:POISON:1d6
+F:RAND_25 | CAN_SWIM | | BASEANGBAND
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | ANIMAL | FORCE_MAXHP
+D:It is about 11 feet long, with a beautiful chesnut colored body.
+
+N:7224:Kobold Soldier
+G:k:g
+I:110:6d8:30:15:6
+W:3:1:900:7
+E:1:1:1:2:1:1
+O:25:50:0:10
+B:HIT:HURT:1d8
+F:DROP_12 | WILD_WASTE | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | IM_POIS | HURT_LITE | CAN_SPEAK | FORCE_MAXHP
+S:1_IN_6
+S:ARROW_1 | 
+D:It is a fairly medium sized, dog-headed humanoid, scaly skin, yellowish fangs, and mean manners.
+
+N:7225:Artic Scale Worm
+G:w:w
+I:105:2d8:10:6:20
+W:2:1:40:4
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | FORCE_MAXHP | BASEANGBAND
+F:WILD_SWAMP | WILD_SHORE | 
+F:RAND_25 | CAN_SWIM | FORCE_SLEEP | DROP_SKELETON |
+F:EMPTY_MIND | ANIMAL | IM_POIS | SUSCEP_FIRE | NO_FEAR
+D:It is a large slimy white worm. Has an articulated exoesqueleton that is covered in white bristles.
+
+N:7226:Artic Scale Worm
+G:w:w
+I:105:2d8:10:6:20
+W:2:4:40:4
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | FORCE_MAXHP | BASEANGBAND
+F:WILD_SWAMP | WILD_SHORE | 
+F:RAND_25 | CAN_SWIM | FORCE_SLEEP | DROP_SKELETON |
+F:EMPTY_MIND | ANIMAL | IM_POIS | SUSCEP_FIRE | NO_FEAR
+S:MULTIPLY
+D:It is a large slimy white worm. Has an articulated exoesqueleton that is covered in white bristles.
+
+N:7227:Huge oilskin bat
+G:b:v
+I:115:2d8:30:16:20
+W:2:1:600:2
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:BITE:HURT:1d6
+F:WEIRD_MIND | 
+F:RAND_25 | DROP_CORPSE | FRIENDS | BASEANGBAND
+F:ANIMAL | CAN_FLY | WILD_WOOD |
+F:WILD_SWAMP | WILD_SHORE | DROP_CORPSE | DROP_SKELETON | FORCE_MAXHP
+D:Huge bat, its wingspan being 2 feet, hairless and with an oily, 
+D:slippery skin. Always in cauldrons. Be careful.
+
+N:7228:Creeper
+G:I:u
+I:110:1d8:10:10:10
+W:1:1:100:1
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:STING:HURT:1d4
+F:ANIMAL | WEIRD_MIND | CAN_FLY | RAND_25 | 
+F:WILD_GRASS | WILD_WOOD | WILD_SWAMP | FRIENDS
+F:DROP_SKELETON | FORCE_MAXHP | WILD_SHORE | BASEANGBAND
+D:A lone creeper criature may be harmless, but there's a whole swarm of them here!
+
+N:7229:Creeper
+G:I:u
+I:110:1d8:10:10:10
+W:1:15:100:1
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:STING:HURT:1d4
+F:ANIMAL | WEIRD_MIND | CAN_FLY | RAND_25 | 
+F:WILD_GRASS | WILD_WOOD | WILD_SWAMP | FRIENDS
+F:DROP_SKELETON | FORCE_MAXHP | WILD_SHORE | BASEANGBAND
+S:MULTIPLY
+D:A lone creeper criature may be harmless, but there's a whole swarm of them here!
+
+N:7230:Giant Stygian centipede
+G:c:G
+I:110:2d8:10:10:10
+W:2:1:500:4
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:STING:POISON:1d4
+F:FORCE_MAXHP
+F:WEIRD_MIND | CAN_SWIM | WILD_SWAMP | BASEANGBAND
+F:WILD_WASTE | WILD_SHORE | WILD_MOUNTAIN |
+F:RAND_25 | DROP_SKELETON | DROP_CORPSE | ANIMAL
+D:It is about 6 feet long and carnivorous, its big mandibles dripping poison.
+
+N:7231:Giant green horned toad
+G:R:g
+I:110:2d8:15:12:30
+W:1:1:150:3
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+B:BITE:HURT:1d6
+B:BITE:PARALYZE:1d6
+F:WILD_SHORE | WILD_SWAMP | DROP_CORPSE | BASEANGBAND | 
+F:BASH_DOOR | ANIMAL | DROP_SKELETON | FORCE_MAXHP
+D:It is as big as a wolf, and nearly as aggressive.
+
+N:7232:Green Toxic Earthworm
+G:w:g
+I:105:2d8:10:12:50
+W:2:1:40:3
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:ACID:1d4
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_50 | CAN_SWIM | FORCE_SLEEP | EMPTY_MIND | 
+F:ANIMAL | IM_ACID | SUSCEP_FIRE | NO_FEAR | FORCE_SLEEP | FORCE_MAXHP
+D:It is a very large slimy worm, of a toxic, greenish colour.
+
+N:7233:Green Toxic Earthworm
+G:w:g
+I:105:2d8:10:12:50
+W:2:4:40:3
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:ACID:1d4
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_50 | CAN_SWIM | FORCE_SLEEP | EMPTY_MIND | 
+F:ANIMAL | IM_ACID | SUSCEP_FIRE | NO_FEAR | FORCE_SLEEP | FORCE_MAXHP
+S:MULTIPLY
+D:It is a very large slimy worm, of a toxic, greenish colour.
+
+N:7234:Giant Jungle Carpet snake
+G:J:y
+I:105:5d8:10:20:50
+W:4:1:600:18
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:POISON:1d4
+B:CRUSH:HURT:1d6
+F:RAND_25 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | BASEANGBAND
+F:BASH_DOOR | WILD_WOOD | WILD_GRASS | ANIMAL | FORCE_MAXHP
+D:It is about 13 feet long, and bright yellowish.
+
+N:7235:Giant cave spider
+G:S:D
+I:110:6d8:20:16:80
+W:6:1:800:21
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+B:BITE:HURT:1d6
+B:BITE:PARALYZE:1d6
+F:DROP_SKELETON | RAND_25 | DROP_CORPSE | FORCE_MAXHP
+F:WEIRD_MIND | WILD_WOOD | 
+F:ANIMAL | IM_POIS | BASEANGBAND |
+D:A huge sized black spider that moves in fits and starts, always lurking in caves' corners.
+D: They bite but luckily they are not poisonous, but beware, they will try to catch 
+D: you with their silk.
+
+N:7236:Gollum (Smeagol)
+G:h:u
+I:115:100d8:40:18:10
+W:7:3:670:50
+E:1:1:1:2:1:1
+O:30:30:25:10
+B:CLAW:HURT:2d8
+B:BITE:HURT:3d8
+B:CRUSH:HURT:3d8
+F:UNIQUE | MALE | CAN_SWIM | DROP_SKELETON | DROP_CORPSE
+F:CAN_SPEAK | SMART | FORCE_MAXHP | BASEANGBAND
+F:RAND_25 | WILD_WOOD | WILD_MOUNTAIN
+F:ONLY_ITEM | DROP_22 | DROP_90 | DROP_GOOD | DROP_GREAT |
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | INVISIBLE | EVIL
+D:"Down the face of a precipice, sheer and almost smooth it seemed in the pale 
+D:moonlight, a small black shape was moving with its thin limbs splayed out. 
+D:Maybe its soft clinging hands and toes were used, but it looked as if it was 
+D:just creeping down on sticky pads, like some large prowling thing of 
+D:insect-kind.  And it was coming down head first, as if it was smelling its 
+D:way.  Now and again it lifted its head slowly, turning it right back on its 
+D:long skinny neck, and the hobbits caught a glimpse of two small pale gleaming 
+D:lights, its eyes that blinked at the moon for a moment and then were quickly 
+D:lidded again." 
+
+N:7237:Giant Blue Legged centipede
+G:c:B
+I:110:2d8:10:10:10
+W:5:1:770:7
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:STING:HURT:1d4
+F:RAND_25 | FORCE_MAXHP | BASEANGBAND
+F:WEIRD_MIND | CAN_SWIM | WILD_SWAMP
+F:WILD_WASTE | WILD_SHORE | WILD_MOUNTAIN |
+F:DROP_SKELETON | DROP_CORPSE | WILD_WOOD | ANIMAL
+D:It is about 6 feet long and carnivorous.
+
+N:7238:Giant white ash moth
+G:I:w
+I:110:1d8:10:10:10
+W:5:1:100:2
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d8 
+B:BITE:POISON:1d4
+F:RAND_50 | FRIENDS | WEIRD_MIND | FORCE_MAXHP
+F:ANIMAL | BASEANGBAND | 
+D:It is six inches long, its skin looks like covered in ash, hence its name. It's poisonous.
+
+N:7239:Giant white ash moth
+G:I:w
+I:110:1d8:10:10:10
+W:5:4:100:2
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d8 
+B:BITE:POISON:1d4
+F:RAND_50 | FRIENDS | WEIRD_MIND | FORCE_MAXHP
+F:ANIMAL | BASEANGBAND | 
+S:MULTIPLY
+D:It is six inches long, its skin looks like covered in ash, hence its name. It's poisonous.
+
+N:7240:Snaggletooth
+G:h:v
+I:110:8d8:20:18:10
+W:7:1:1000:12
+E:1:1:1:2:1:1
+O:20:50:0:15
+B:HIT:HURT:1d8
+B:BITE:HURT:1d12
+B:CHARGE:HURT:1d6
+F:MALE | WILD_GRASS
+F:DROP_60 | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | FRIENDS | CAN_SPEAK | FORCE_MAXHP | BASEANGBAND
+D:A short little nasty pig resembling creature. Smells foul enough 
+D:to make you gag. Dressed in bedraggled clothes. 
+D: They always move in packs, sometimes on four legs, sometimes 
+D:on two. They came from the depths of the earth.
+
+N:7241:Giant Fireteeth centipede
+G:c:R
+I:110:4d8:10:13:10
+W:7:1:800:15
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CRAWL:HURT:1d6
+B:BITE:HURT:1d6
+B:BITE:HURT:1d6
+F:FORCE_MAXHP
+F:WEIRD_MIND | CAN_SWIM | WILD_SWAMP | BASEANGBAND
+F:WILD_WASTE | WILD_SHORE | WILD_MOUNTAIN |
+F:RAND_25 | DROP_SKELETON | DROP_CORPSE | ANIMAL
+D:It is about 7 feet long, carnivorous, and very aggressive.
+
+N:7242:Arsenic Glowing Yellow Worm
+G:w:y
+I:105:3d8:10:10:10
+W:4:1:200:6
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:ACID:1d4
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_25 | CAN_SWIM | FORCE_SLEEP | EMPTY_MIND | 
+F:ANIMAL | IM_ELEC | SUSCEP_COLD | NO_FEAR | SUSCEP_FIRE | FORCE_SLEEP
+D:It is a large yellowish slimy worm, its smell is very disgusting.
+
+N:7243:Arsenic Glowing Yellow Worm
+G:w:y
+I:105:3d8:10:10:10
+W:4:4:200:6
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:ACID:1d4
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_25 | CAN_SWIM | FORCE_SLEEP | EMPTY_MIND | 
+F:ANIMAL | IM_ELEC | SUSCEP_COLD | NO_FEAR | SUSCEP_FIRE | FORCE_SLEEP
+S:MULTIPLY
+D:It is a large yellowish slimy worm, its smell is very disgusting.
+
+N:7244:Manure Worm
+G:w:B
+I:105:2d8:10:10:10
+W:3:1:200:4
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:HURT:1d4
+B:CRAWL:POISON:1d4
+B:BITE:PARALYZE:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_25 | CAN_SWIM | FORCE_SLEEP | EMPTY_MIND | 
+F:ANIMAL | IM_POIS | SUSCEP_FIRE | NO_FEAR | FORCE_MAXHP
+D:It is a disgusting and poisonous worms, always feeding off excretions of other beings.
+
+N:7245:Manure Worm
+G:w:B
+I:105:2d8:10:10:10
+W:3:4:200:4
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:HURT:1d4
+B:CRAWL:POISON:1d4
+B:BITE:PARALYZE:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_25 | CAN_SWIM | FORCE_SLEEP | EMPTY_MIND | 
+F:ANIMAL | IM_POIS | SUSCEP_FIRE | NO_FEAR | FORCE_MAXHP
+S:MULTIPLY
+D:It is a disgusting and poisonous worms, always feeding off excretions of other beings.
+
+N:7246:Giant white snow rat
+G:r:W
+I:110:1d8:20:12:30
+W:5:1:200:2
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:1d4
+B:BITE:POISON:1d4
+F:RAND_25 | BASEANGBAND | 
+F:FRIENDS | ANIMAL | DROP_CORPSE | DROP_SKELETON | FORCE_MAXHP
+D:It is a very vicious rodent, as big as a small dog and white furred.
+
+N:7247:Orc cub
+G:o:G
+I:110:3d8:25:15:30
+W:4:1:900:15
+E:1:1:1:2:1:1
+O:25:50:0:0
+B:HIT:HURT:1d6
+B:HIT:HURT:1d6
+F:MALE | CAN_SPEAK | BASEANGBAND
+F:FRIENDS | DROP_60 | DROP_SKELETON | DROP_CORPSE
+F:OPEN_DOOR | BASH_DOOR | WILD_WOOD |
+F:EVIL | ORC | HURT_LITE | FORCE_MAXHP
+D:A pathetic quasi-larval state of Orcs. They just born from the mudpits 
+D:and they're running erratically around and screaming all the time!
+
+N:7248:Blue Slug Worm
+G:w:b
+I:105:4d8:10:10:10
+W:5:1:40:7
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:COLD:1d4
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d6
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_25 | CAN_SWIM | FORCE_SLEEP | EMPTY_MIND | 
+F:ANIMAL | SUSCEP_FIRE | NO_FEAR | FORCE_MAXHP
+D:It is a huge slimy slug of a blue ish colour, their veins pulsating visibly.
+
+N:7249:Blue Slug Worm
+G:w:b
+I:105:4d8:10:10:10
+W:5:4:40:7
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:COLD:1d4
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d6
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_25 | CAN_SWIM | FORCE_SLEEP | EMPTY_MIND | 
+F:ANIMAL | SUSCEP_FIRE | NO_FEAR | FORCE_MAXHP
+S:MULTIPLY
+D:It is a huge slimy slug of a blue ish colour, their veins pulsating visibly.
+
+N:7250:Giant Coachwhip snake
+G:J:s
+I:105:5d8:10:20:50
+W:4:1:1300:14
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:POISON:1d6
+B:CRUSH:HURT:1d8
+F:RAND_25 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | 
+F:WILD_WOOD | FORCE_MAXHP | BASEANGBAND
+F:ANIMAL
+D:It is about 13 feet long, his light grey body glistening.
+
+N:7251:Novice sorcerer
+G:p:R
+I:110:3d8:20:13:10
+W:6:1:1400:6
+E:1:1:1:2:1:1
+O:25:0:75:0
+B:HIT:HURT:1d4
+F:MALE | FORCE_SLEEP | DROP_90 | WILD_GRASS | 
+F:DROP_SKELETON | DROP_CORPSE
+F:OPEN_DOOR | BASH_DOOR | HAS_LITE | FORCE_MAXHP | BASEANGBAND
+S:1_IN_6 | 
+S:BLINK | BLIND | CONF | MISSILE
+D:He is leaving behind a trail of dropped spell components.
+
+N:7252:Kobold Brigand
+G:k:w
+I:110:13d8:20:20:30
+W:8:1:1000:40
+E:1:1:1:2:1:1
+O:50:50:0:0
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+F:ESCORT | CAN_SPEAK | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | IM_POIS | FORCE_MAXHP | DROP_12
+D:It is a man-sized figure with the all too recognizable face of a kobold, armored to the teeth.
+
+N:7253:Ribbon Worm
+G:w:r
+I:105:4d8:10:10:10
+W:6:1:40:8
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:HURT:1d6
+B:CRAWL:POISON:1d4
+B:BITE:PARALYZE:1d6
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_25 | CAN_SWIM | FORCE_SLEEP | EMPTY_MIND | 
+F:ANIMAL | IM_POIS | SUSCEP_FIRE | NO_FEAR | FORCE_MAXHP
+D:It is a large reddish, slimy worm. Beware of its nightmarish, outlandish attack.
+
+N:7254:Ribbon Worm
+G:w:r
+I:105:4d8:10:10:10
+W:6:4:40:8
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:HURT:1d6
+B:CRAWL:POISON:1d4
+B:BITE:PARALYZE:1d6
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_25 | CAN_SWIM | FORCE_SLEEP | EMPTY_MIND | 
+F:ANIMAL | IM_POIS | SUSCEP_FIRE | NO_FEAR | FORCE_MAXHP
+S:MULTIPLY
+D:It is a large reddish, slimy worm. Beware of its nightmarish, outlandish attack.
+
+N:7255:Smaller death sword
+G:|:W
+I:115:12d8:20:20:0
+W:12:2:0:60
+E:0:0:0:0:0:0
+O:50:0:50:0
+B:HIT:HURT:5d6
+B:HIT:HURT:5d6
+B:HIT:HURT:5d4
+F:NONLIVING | NO_FEAR | 
+F:EMPTY_MIND | COLD_BLOOD | NO_CONF | NO_SLEEP |
+F:DROP_90 | EVIL | IM_FIRE | IM_POIS | FORCE_MAXHP | BASEANGBAND
+D:A bloodthirsty enchanted blade lurking for prey. Beware! 
+
+N:7256:Novice Cultist
+G:p:B
+I:110:12d8:20:14:5
+W:13:1:1500:15
+E:1:1:1:2:1:1
+O:20:50:20:0
+B:HIT:HURT:1d6
+B:HIT:HURT:2d4
+F:MALE | FORCE_SLEEP | 
+F:DROP_SKELETON | DROP_CORPSE | OPEN_DOOR | BASH_DOOR
+F:DROP_60 | WILD_GRASS | FORCE_SLEEP
+F:OPEN_DOOR | BASH_DOOR | HAS_LITE | BASEANGBAND
+S:1_IN_12 | 
+S:HEAL | SCARE | CAUSE_1
+D:He is tripping over his cult's robes.
+
+N:7257:Disembodied strangling hand
+G:z:g
+I:105:11d8:10:17:20
+W:11:2:300:40
+E:0:0:0:1:0:0
+O:0:0:0:0
+B:CRUSH:HURT:1d8
+B:CRUSH:TERRIFY:1d6
+F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | FORCE_MAXHP
+F:EVIL | UNDEAD | IM_POIS | CAN_FLY | EMPTY_MIND
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+D:Even today, nobody knows where it lurks... 
+
+N:7258:Novice Archer
+G:p:G
+I:110:5d8:20:14:5
+W:8:1:1400:8
+E:1:1:1:2:1:1
+O:20:50:0:0
+B:HIT:HURT:1d4
+B:HIT:HURT:1d4
+F:MALE | 
+F:FORCE_SLEEP | WILD_GRASS | DROP_SKELETON | DROP_CORPSE
+F:ONLY_GOLD | DROP_12 | HAS_LITE | FORCE_MAXHP
+F:OPEN_DOOR | BASH_DOOR | BASEANGBAND
+S:1_IN_6 | 
+S:ARROW_2
+D:A nasty little fellow with a bow and arrow.
+
+N:7259:Giant Rattlesnake
+G:J:r
+I:105:20d8:6:12:1
+W:10:1:200:35
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:POISON:2d8
+B:BITE:POISON:2d8
+F:CAN_SWIM | DROP_SKELETON | DROP_CORPSE
+F:WILD_WASTE | WILD_MOUNTAIN | BASEANGBAND
+F:ANIMAL | IM_POIS | FORCE_MAXHP
+D:It is recognized by the hard-scaled end of its body that is often rattled 
+D:to frighten its prey.
+
+N:7260:Giant Spitting Slug
+G:w:U
+I:100:13d8:10:12:25
+W:11:1:600:50
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:POISON:2d4
+B:BITE:HURT:2d4
+B:SPIT:ACID:2d4
+F:WILD_WOOD | FORCE_MAXHP | BASEANGBAND
+F:ANIMAL | EMPTY_MIND | KILL_ITEM | KILL_BODY | CAN_SWIM
+F:DROP_CORPSE | RAND_25 | SUSCEP_FIRE | IM_ACID
+D:This giant, repulsing, nauseating slug, slowly making its way towards you, eating everything in 
+D: its path. Can spit acid bile.
+
+N:7261:Giant Spitting Slug
+G:w:U
+I:100:13d8:10:12:25
+W:11:12:600:50
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:POISON:2d4
+B:BITE:HURT:2d4
+B:SPIT:ACID:2d4
+F:WILD_WOOD | FORCE_MAXHP | BASEANGBAND
+F:ANIMAL | EMPTY_MIND | KILL_ITEM | KILL_BODY | CAN_SWIM
+F:DROP_CORPSE | RAND_25 | SUSCEP_FIRE | IM_ACID
+S:MULTIPLY
+D:This giant, repulsing, nauseating slug, slowly making its way towards you, eating everything in 
+D: its path. Can spit acid bile.
+
+N:7262:Dark elven scout
+G:h:D
+I:110:7d8:20:10:20
+W:10:1:1200:38
+E:1:1:1:2:1:1
+O:20:20:20:20
+B:HIT:HURT:1d6
+B:HIT:HURT:1d6
+F:FORCE_SLEEP | DROP_90 | OPEN_DOOR | 
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | HURT_LITE | FORCE_MAXHP | BASEANGBAND
+S:1_IN_10 | 
+S:CONF | DARKNESS | MISSILE
+D:An elven figure with jet black skin and white hair, his eyes are large and 
+D:twisted with evil.
+
+N:7263:Giant Crab spider
+G:S:o
+I:110:9d8:20:22:30
+W:5:1:600:12
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+B:STING:POISON:1d6
+B:BITE:HURT:1d6
+B:BITE:PARALYZE:1d6
+F:DROP_SKELETON | RAND_25 | DROP_CORPSE |
+F:WEIRD_MIND | WILD_WOOD | 
+F:ANIMAL | IM_POIS | FORCE_MAXHP | BASEANGBAND
+D:It resembles a giant crab, but it's a huge arachnid.
+
+N:7264:Ganelon, the Rogue of Avalon
+G:p:G
+I:110:60d8:20:15:20
+W:20:3:1600:350
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:1d6
+B:HIT:HURT:1d8
+B:TOUCH:EAT_GOLD
+F:UNIQUE | MALE | FORCE_SLEEP | CAN_SPEAK | FORCE_SLEEP
+F:ONLY_ITEM | DROP_12 | DROP_GOOD | DROP_60
+F:WILD_WOOD | WILD_GRASS | BASEANGBAND | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | DROP_SKELETON | DROP_CORPSE
+S:1_IN_6
+S:HEAL | TRAPS | ARROW_3
+D:The rogue knight from Corwin's Avalon. A fierce enemy.
+
+N:7265:Tindalos lesser hound
+G:C:D
+I:110:9d8:30:15:20
+W:14:2:800:72
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:BITE:TERRIFY:1d4
+F:EVIL | RAND_25 |
+F:DROP_CORPSE | PASS_WALL | NO_CONF | NO_SLEEP | NONLIVING | CAN_FLY |
+F:DROP_SKELETON | FORCE_MAXHP | BASEANGBAND
+D:A horrendous hound from another dimension that hunts through 
+D: holes it carves off the fabric of reality. 
+
+N:7266:Tindalos lesser hound
+G:C:D
+I:110:9d8:30:15:20
+W:14:25:800:72
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:BITE:TERRIFY:1d4
+F:EVIL | RAND_25 |
+F:DROP_CORPSE | PASS_WALL | NO_CONF | NO_SLEEP | NONLIVING | CAN_FLY |
+F:DROP_SKELETON | FORCE_MAXHP | BASEANGBAND
+S:MULTIPLY
+D:A horrendous hound from another dimension that hunts through 
+D: holes it carves off the fabric of reality. 
+
+N:7267:Larval demon
+G:u:o
+I:110:17d8:20:18:30
+W:11:2:1000:25
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:BITE:FIRE:1d6
+F:ESCORT | OPEN_DOOR | BASH_DOOR | CAN_SPEAK | FORCE_MAXHP
+F:EVIL | DEMON | IM_FIRE | NO_FEAR | DROP_12 | BASEANGBAND
+S:1_IN_9
+S:BO_FIRE
+D:It is the larval form of a major demon.
+
+N:7268:Giant grey sewer rat
+G:r:s
+I:110:1d8:20:10:40
+W:1:1:250:1
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:1d4
+F:RAND_25 | FRIENDS | BASEANGBAND | 
+F:ANIMAL | IM_POIS | DROP_CORPSE | DROP_SKELETON | FORCE_MAXHP
+D:It is a rodent of unusual size, usually found in stale bodies of water.
+
+N:7269:Red bear
+G:q:r
+I:110:24d8:20:24:10
+W:20:2:3000:55
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d10
+B:CLAW:HURT:1d10
+B:BITE:HURT:1d10
+F:BASH_DOOR | FORCE_SLEEP | DROP_CORPSE | FORCE_MAXHP
+F:ANIMAL | WILD_WOOD | WILD_GRASS | WILD_MOUNTAIN | BASEANGBAND
+D:A reddish furred bear, a little smaller than a grizzly but still dangerous.
+
+N:7270:Man-o-war Jellyfish
+G:j:v
+I:105:10d8:10:15:75
+W:2:2:1500:4
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:TOUCH:PARALYZE:1d6
+B:TOUCH:PARALYZE:1d6
+F:ANIMAL | AQUATIC | IM_POIS | WILD_SHORE |
+F:WILD_OCEAN | FORCE_MAXHP | DROP_90 | BASEANGBAND
+D:A strange water creature, whose touch can be deadly.
+
+N:7271:Man-o-war Jellyfish
+G:j:v
+I:105:10d8:10:15:75
+W:2:100:1500:4
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:TOUCH:PARALYZE:1d6
+B:TOUCH:PARALYZE:1d6
+F:ANIMAL | IM_POIS | WILD_SHORE |
+F:WILD_OCEAN | FORCE_MAXHP | DROP_90 | BASEANGBAND
+D:A strange water creature, whose touch can be deadly.
+
+N:7272:Orc Shaman
+G:o:b
+I:110:18d8:20:18:20
+W:15:1:1000:40
+E:1:1:1:2:1:1
+O:20:30:50:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d8
+F:MALE | FORCE_SLEEP | DROP_90 | WILD_WOOD | BASEANGBAND | 
+F:WILD_SWAMP | WILD_SHORE | WILD_MOUNTAIN | DROP_90
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | ORC | HURT_LITE | CAN_SPEAK | FORCE_MAXHP
+S:1_IN_8 | 
+S:BLINK | CAUSE_1 | MISSILE
+D:An orc dressed in skins who gestures wildly.
+
+N:7273:Black Eagle
+G:B:D
+I:110:18d8:30:20:10
+W:3:1:600:5
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d6
+B:CLAW:HURT:1d6
+B:BITE:HURT:1d6
+F:ANIMAL | CAN_FLY | WILD_WASTE | WILD_MOUNTAIN | WILD_WOOD
+F:DROP_CORPSE | FORCE_MAXHP | SMART | BASEANGBAND
+D:A magnificent medium-sized predatory bird.
+
+N:7274:War bear
+G:q:u
+I:110:15d8:10:22:5
+W:16:1:2000:50
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:2d4
+B:CLAW:HURT:2d4
+B:BITE:HURT:2d6
+F:RAND_25 | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:ANIMAL | FORCE_MAXHP | BASEANGBAND
+D:Bears with partial chain armour strapped them, with large tusks, trained to kill.
+
+N:7275:Killer Wasp
+G:I:y
+I:115:3d8:15:15:20
+W:12:1:50:24
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:STING:POISON:1d4
+B:STING:LOSE_STR:1d2
+B:BITE:PARALYZE:1d6
+F:WEIRD_MIND | FRIENDS | CAN_FLY | WILD_WOOD
+F:ANIMAL | FORCE_MAXHP | BASEANGBAND
+D:It is poisonous and aggressive. Oh, and fast.
+
+N:7276:Killer Wasp
+G:I:y
+I:115:3d8:15:15:20
+W:12:8:50:24
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:STING:POISON:1d4
+B:STING:LOSE_STR:1d2
+B:BITE:PARALYZE:1d6
+F:WEIRD_MIND | FRIENDS | CAN_FLY | WILD_WOOD
+F:ANIMAL | FORCE_MAXHP | BASEANGBAND
+S:MULTIPLY
+D:It is poisonous and aggressive. Oh, and fast.
+
+N:7277:Giant Huntsman spider
+G:S:s
+I:110:12d8:20:22:80
+W:9:1:700:30
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:3d6
+B:BITE:POISON:3d6
+B:BITE:PARALYZE:2d6
+F:DROP_SKELETON | RAND_25 | DROP_CORPSE
+F:WEIRD_MIND | WILD_WOOD | 
+F:ANIMAL | IM_POIS | FORCE_MAXHP | BASEANGBAND
+D:It is a vast greyish spider whose bulbous body is bloated with poison.
+
+N:7278:Translucid mushroom patch
+G:,:w
+I:110:1d8:0:6:99
+W:14:1:30:8
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:POISON:1d4
+B:SPORE:DISEASE:1d6
+F:ATTR_CLEAR | 
+F:INVISIBLE | COLD_BLOOD | FORCE_MAXHP | NEVER_MOVE
+F:EMPTY_MIND | NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+D:Yum!  It looks quite tasty.
+
+N:7279:Spitting Trap
+G:^:U
+I:110:8d8:0:16:50
+W:5:1:60:10
+E:0:0:0:0:0:0
+O:80:20:0:0
+B:SPORE:CONFUSE:1d6
+B:SPIT:POISON:1d6
+B:SPIT:FIRE:1d6
+B:EXPLODE:POISON:2d4
+F:DROP_12 | FORCE_MAXHP
+F:COLD_BLOOD | IM_POIS | NO_CONF | NO_SLEEP | 
+F:DROP_90 | NO_FEAR | NO_STUN | NEVER_MOVE | BASEANGBAND
+D:Shaped like a normal looking toadstool, camouflaged to be mistaken for a non-threatening 
+D: fungi, they open their wide mouths when unaware adventurers get into their spitting
+D: range, and unleash a barrage of attacks from afar. 
+
+N:7280:Giant corpse fly
+G:I:u
+I:115:2d8:10:12:10
+W:14:1:100:5
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:BITE:DISEASE:1d4
+F:RAND_25 | CAN_FLY | BASEANGBAND | 
+F:FRIENDS | WEIRD_MIND | ANIMAL | DROP_SKELETON | 
+F:DROP_CORPSE | FORCE_MAXHP
+D:A fast-breeding, corpse eating, nasty pest.
+
+N:7281:Giant corpse fly
+G:I:u
+I:115:2d8:10:12:10
+W:14:8:100:5
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:BITE:DISEASE:1d4
+F:RAND_25 | CAN_FLY | BASEANGBAND | 
+F:FRIENDS | WEIRD_MIND | ANIMAL | DROP_SKELETON | 
+F:DROP_CORPSE | FORCE_MAXHP
+S:MULTIPLY
+D:A fast-breeding, corpse eating, nasty pest.
+
+N:7282:Souls Collector
+G:p:D
+I:110:36d8:10:16:10
+W:28:2:1700:108
+E:1:1:1:2:1:1
+O:90:0:10:0
+B:TOUCH:TERRIFY:1d6
+B:HIT:LOSE_WIS:1d6
+B:HIT:HURT:1d8
+F:WILD_GRASS | EVIL | BASEANGBAND | 
+F:DROP_12 | DROP_90 | DROP_GOOD | NONLIVING | UNDEAD
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | FORCE_MAXHP
+D:Somebody said he's the worst nightmare to ever been had.
+
+N:7283:Sheerkan the Tiger
+G:f:o
+I:115:30d8:40:18:0
+W:18:3:1600:90
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d12
+B:CLAW:HURT:1d12
+B:BITE:HURT:1d6
+F:WILD_GRASS | WILD_WOOD | BASEANGBAND
+F:BASH_DOOR | UNIQUE | NO_CONF | NO_SLEEP | POWERFUL | FORCE_MAXHP
+F:ANIMAL | MALE | CAN_SPEAK | DROP_CORPSE | EVIL | DROP_SKELETON
+D:Fast-moving, with a taste for eating Adventurers...
+
+N:7284:Jackalope
+G:r:w
+I:115:21d8:20:20:20
+W:19:1:600:80
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+B:BITE:HURT:1d8
+B:BUTT:HURT:2d4
+F:BASH_DOOR | WILD_MOUNTAIN | DROP_CORPSE | BASEANGBAND
+F:ANIMAL | DROP_SKELETON | WEIRD_MIND | FORCE_MAXHP
+S:1_IN_8
+S:BLINK | 
+D:It looks very cute, except for the razor sharp teeth. It moans 
+D:ominously as it jumps at your throat!
+
+N:7285:Black Mamba snake
+G:J:D
+I:105:19d8:10:16:10
+W:19:2:300:70
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:POISON:4d8
+B:BITE:HURT:2d6
+F:CAN_SWIM | WILD_WOOD | BASEANGBAND
+F:WILD_SWAMP | FORCE_MAXHP | WILD_SHORE
+F:ANIMAL | IM_POIS | DROP_SKELETON | DROP_CORPSE
+D:It has glistening black skin, a sleek body and highly venomous fangs.
+
+N:7286:Dark jelly
+G:j:D
+I:110:36d8:0:9:99
+W:26:2:2600:188
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:EXP_10
+B:TOUCH:HURT:2d6
+F:DROP_60 | DROP_90 | BASEANGBAND
+F:EMPTY_MIND | FORCE_MAXHP
+F:IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP | NO_FEAR |
+S:1_IN_11 | 
+S:DRAIN_MANA
+D:It is a pulsing mound of glowing flesh.
+
+N:7287:Ghost Worm
+G:w:w
+I:105:14d8:10:10:10
+W:16:2:200:9
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:EXP_10
+B:CRAWL:ACID:1d4
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:CAN_SWIM | FORCE_SLEEP | EMPTY_MIND | 
+F:ANIMAL | HURT_LITE | NO_FEAR | SUSCEP_FIRE | FORCE_MAXHP
+D:It is a disgusting dark worm, semi trasnlucent and repulsing...
+
+N:7288:Ghost Worm
+G:w:w
+I:105:14d8:10:10:10
+W:16:8:200:9
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:TOUCH:EXP_10
+B:CRAWL:ACID:1d4
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:CAN_SWIM | FORCE_SLEEP | EMPTY_MIND | 
+F:ANIMAL | HURT_LITE | NO_FEAR | SUSCEP_FIRE | FORCE_MAXHP
+S:MULTIPLY
+D:It is a disgusting dark worm, semi trasnlucent and repulsing...
+
+N:7289:Abyssal Worm
+G:w:D
+I:105:30d8:10:10:10
+W:28:2:200:20
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:EXP_10
+B:CRAWL:LOSE_CON:1d4
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:CAN_SWIM | FORCE_SLEEP | EMPTY_MIND | FORCE_MAXHP
+F:ANIMAL | IM_COLD | HURT_LITE | SUSCEP_FIRE | 
+F:NO_FEAR | KILL_WALL | COLD_BLOOD
+S:1_IN_10
+S:BLINK
+D:Even bigger and more disgusting than ghost worms, their essence is emptiness itself.
+
+N:7290:Abyssal Worm
+G:w:D
+I:105:30d8:10:10:10
+W:28:8:200:20
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:EXP_10
+B:CRAWL:LOSE_CON:1d4
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:CAN_SWIM | FORCE_SLEEP | EMPTY_MIND | FORCE_MAXHP
+F:ANIMAL | IM_COLD | HURT_LITE | SUSCEP_FIRE | 
+F:NO_FEAR | KILL_WALL | COLD_BLOOD
+S:MULTIPLY
+S:1_IN_10
+S:BLINK
+D:Even bigger and more disgusting than ghost worms, their essence is emptiness itself.
+
+N:7291:Swordsman Soldier
+G:p:U
+I:110:11d8:20:20:20
+W:14:1:1800:50
+E:1:1:1:2:1:1
+O:30:70:0:0
+B:HIT:HURT:3d6
+B:HIT:HURT:3d6
+F:MALE | WILD_GRASS
+F:DROP_12 | DROP_SKELETON | DROP_CORPSE | 
+F:OPEN_DOOR | BASH_DOOR | HAS_LITE
+F:FORCE_MAXHP | DROP_60 | BASEANGBAND
+D:A warrior of considerable skill.
+
+N:7292:Skaven Fanatic Priest of Plague
+G:r:g
+I:110:18d8:20:17:20
+W:17:1:600:55
+E:1:1:1:2:1:1
+O:20:20:50:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d8
+F:WILD_SWAMP | WILD_SHORE | WILD_WASTE |
+F:FORCE_SLEEP | DROP_90 | HAS_LITE | DROP_12
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | ANIMAL | BASEANGBAND |
+S:1_IN_12 | 
+S:BLINK | CAUSE_1 | MISSILE | CONF | SCARE
+D:The fanatics of a skaven tribe get their powers from a mystic 
+D:stone corrupted by chaos, called a Warp Stone.
+
+N:7293:Kina's Cultist Priest
+G:p:B
+I:110:31d8:20:18:40
+W:5:1:1500:10
+E:1:1:1:2:1:1
+O:0:20:80:0
+B:HIT:HURT:2d4
+B:HIT:HURT:2d4
+F:MALE | EVIL | CAN_SPEAK | FORCE_MAXHP | BASEANGBAND
+F:FORCE_SLEEP | DROP_12 | HAS_LITE | DROP_GOOD | DROP_90
+F:SMART | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+S:1_IN_6 |
+S:HEAL | CAUSE_1 |
+S:S_MONSTER
+D:A robed humanoid dedicated to Kina's Cult. Lost his or her mind to their deity.
+
+N:7294:Dark elven Fanatic
+G:h:b
+I:110:7d8:20:15:30
+W:15:1:1200:56
+E:1:1:1:2:1:1
+O:0:10:90:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d10
+F:MALE | FORCE_SLEEP | FORCE_MAXHP | 
+F:ONLY_ITEM | DROP_12 | ESCORT | BASEANGBAND
+F:SMART | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | HURT_LITE | DROP_90
+S:1_IN_9 | 
+S:BLIND | CONF | DARKNESS | MISSILE | S_SPIDER
+D:A dark elven figure, dressed all in black, chanting curses and waiting to 
+D:deliver your soul to hell.
+
+N:7295:Lesser Ghoul
+G:z:s
+I:110:3d8:20:12:15
+W:5:1:800:8
+E:1:1:1:2:1:1
+O:0:50:0:0
+B:CLAW:HURT:1d6
+B:BITE:DISEASE:1d6
+F:DROP_60 | WILD_WASTE | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE |
+F:MALE | EVIL | FRIENDS | FORCE_MAXHP | BASEANGBAND
+D:It is a small sized, doglike humanoid with sharp ugly fangs and claws.
+D:Usually can be found in small groups, near corpses to feed upon.
+
+N:7296:Sea Elf
+G:h:B
+I:110:16d8:20:22:50
+W:21:2:50:128
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:6d4
+B:HIT:HURT:6d4
+F:AQUATIC | WILD_SHORE | DROP_12 | DROP_60 | BASEANGBAND
+F:MALE | DROP_SKELETON | DROP_CORPSE | EVIL | FORCE_MAXHP
+D:A race of fair yet belligerent sea elves.
+
+N:7297:Sea Elf
+G:h:B
+I:110:16d8:20:22:50
+W:21:100:50:128
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:6d4
+B:HIT:HURT:6d4
+F:WILD_SHORE | DROP_12 | DROP_60 | BASEANGBAND
+F:MALE | DROP_SKELETON | DROP_CORPSE | EVIL | FORCE_MAXHP
+D:A race of fair yet belligerent sea elves.
+
+N:7298:Velociraptor
+G:R:s
+I:115:20d8:25:20:50
+W:20:1:1000:60
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d10
+B:CLAW:HURT:1d10
+B:CLAW:BLIND:1d8
+F:WILD_GRASS | WILD_WOOD | SMART | FRIENDS | BASEANGBAND
+F:OPEN_DOOR | DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP | ANIMAL
+F:BASH_DOOR | 
+D:This extremely cunning, and lethal hunter dinosaur, was probably introduced 
+D: in the Dungeons by Jungle Ogres, as pets, and soon after that, ate their captors.
+
+N:7299:Utahraptor
+G:R:s
+I:125:20d20:25:40:50
+W:40:1:1000:500
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d15
+B:CLAW:HURT:2d15
+B:CLAW:BLIND:1d13
+F:WILD_GRASS | WILD_WOOD | SMART | FRIENDS | BASEANGBAND
+F:OPEN_DOOR | DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP | ANIMAL
+F:BASH_DOOR | 
+D:A very fast, very aggressive dinosaur. 
+
+N:7300:Death Raptor
+G:R:U
+I:135:40d50:25:66:50
+W:60:1:1000:2500
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:3d18
+B:CLAW:UN_BONUS:3d18
+B:CLAW:BLIND:1d18
+F:WILD_GRASS | WILD_WOOD | SMART | FRIENDS | BASEANGBAND
+F:OPEN_DOOR | DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP | ANIMAL
+F:BASH_DOOR | RES_DISE | 
+D:This dinosaur will rend you and your armor. 
+
+N:7301:Goblin
+G:g:G
+I:110:2d8:20:16:10
+W:2:1:500:3
+E:1:1:1:2:1:1
+O:50:50:0:0
+B:HIT:HURT:1d6
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | CAN_SPEAK | FORCE_MAXHP 
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | FRIENDS
+F:EVIL | ORC | HURT_LITE |
+D:A race of small evil beings, used as slaves by orcs. Hideous and small creatures.
+
+N:7302:Dark Spotted naga
+G:n:D
+I:110:24d8:30:30:60
+W:25:2:1900:184
+E:0:0:0:0:1:0
+O:0:20:80:0
+B:STING:HURT:2d10
+B:BITE:HURT:2d10
+F:FEMALE | WILD_SHORE | DROP_SKELETON | BASEANGBAND
+F:RAND_25 | DROP_60 | DROP_12 | IM_POIS | IM_COLD | RES_WATE | CAN_SPEAK
+F:OPEN_DOOR | BASH_DOOR | CAN_SWIM | DROP_CORPSE | EVIL | FORCE_MAXHP
+S:1_IN_6
+S:HOLD | CONF | BO_COLD | HEAL | DARKNESS
+D:A giant snake-like figure with a woman's torso. Not as strong 
+D:as other nagas, but more talented in magic.
+
+N:7303:Flying Burning Skull
+G:s:s
+I:110:12d8:30:15:20
+W:14:2:500:45
+E:0:0:0:0:1:0
+O:90:0:10:0
+B:BITE:POISON:1d6
+B:BITE:LOSE_WIS:1d4
+B:WAIL:HURT:2d6
+F:FORCE_MAXHP | DROP_12 | BASEANGBAND
+F:UNDEAD | EVIL | IM_POIS | WEIRD_MIND | NO_FEAR | CAN_FLY |
+F:NO_CONF | NO_SLEEP | DROP_60 | COLD_BLOOD | CAN_SPEAK
+S:1_IN_9 |
+S:BR_FIRE | S_UNDEAD
+D:A skullpack animated by necromantic spells, enveloped in dark magic's flames.
+
+N:7304:Flying Blazing Skull
+G:s:o
+I:118:15d15:30:25:20
+W:34:2:500:345
+E:0:0:0:0:1:0
+O:90:0:10:0
+B:BITE:POISON:1d6
+B:BITE:LOSE_WIS:1d4
+B:WAIL:FIRE:8d6
+F:FORCE_MAXHP | DROP_12 | BASEANGBAND | 
+F:UNDEAD | EVIL | IM_POIS | WEIRD_MIND | NO_FEAR | CAN_FLY |
+F:NO_CONF | NO_SLEEP | DROP_60 | COLD_BLOOD | CAN_SPEAK
+S:1_IN_5 |
+S:BR_FIRE | S_UNDEAD | BR_PLAS | 
+D:A very fiery skull. 
+
+N:7305:Flying Scorching Skull
+G:s:o
+I:122:18d40:30:35:20
+W:54:2:500:3345
+E:0:0:0:0:1:0
+O:90:0:10:0
+B:BITE:POISON:3d6
+B:BITE:LOSE_WIS:4d4
+B:WAIL:FIRE:12d12
+B:GAZE:PLASMA:4d12
+F:FORCE_MAXHP | DROP_12 | BASEANGBAND | 
+F:UNDEAD | EVIL | IM_POIS | WEIRD_MIND | NO_FEAR | CAN_FLY |
+F:NO_CONF | NO_SLEEP | DROP_60 | COLD_BLOOD | CAN_SPEAK
+S:1_IN_5 |
+S:BR_FIRE | S_UNDEAD | BR_PLAS | BA_MANA | 
+D:A skull that is so hot it can melt the strongest armor. 
+
+N:7306:Giant Slime Crab
+G:c:w
+I:110:8d8:10:15:30
+W:4:1:400:7
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:POISON:2d4
+B:STING:HURT:2d4
+B:BITE:PARALYZE:1d6
+F:WEIRD_MIND | CAN_SWIM | WILD_SWAMP | BASEANGBAND
+F:WILD_WASTE | WILD_SHORE | WILD_MOUNTAIN |
+F:RAND_25 | DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP
+S:1_IN_6 |
+S:BO_POIS
+D:It is about 8 feet long, bulbous and carnivorous.
+
+N:7307:Orbweaver spider
+G:S:y
+I:110:45d8:15:34:80
+W:20:2:1200:35
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:3d6
+B:BITE:PARALYZE:4d6
+B:BITE:POISON:3d6
+B:STING:HURT:2d6
+F:DROP_SKELETON | RAND_25 | DROP_CORPSE | BASEANGBAND
+F:EVIL | WILD_WOOD | 
+F:ANIMAL | IM_POIS | WEIRD_MIND | FORCE_MAXHP
+S:1_IN_6 |
+S:BO_POIS
+D:A strong and powerful spider from the deep jungles. Cunning and evil, it
+D: craves to taste your juicy insides.
+
+N:7308:Gnome Warlock
+G:h:R
+I:110:6d8:20:10:20
+W:23:2:900:66
+E:1:1:1:2:1:1
+O:20:0:80:0
+B:HIT:HURT:1d6
+F:MALE | WILD_MOUNTAIN | FORCE_MAXHP | BASEANGBAND
+F:FORCE_SLEEP | DROP_60 | OPEN_DOOR | BASH_DOOR | DROP_22
+F:EVIL | HAS_LITE | DROP_SKELETON | DROP_CORPSE | DROP_GREAT
+S:1_IN_12 | 
+S:BLINK | DARKNESS | BO_COLD | 
+S:S_MONSTER
+D:Small in stature but truly evilly natured, this gnome will use 
+D:all his dark magic powers to squash you like a bug...
+
+N:7309:Fire hound
+G:Z:r
+I:110:14d8:30:15:0
+W:26:1:600:112
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:FIRE:1d6
+B:BITE:FIRE:1d6
+B:BITE:FIRE:1d6
+F:FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:HAS_LITE | ANIMAL | IM_FIRE | DROP_SKELETON | DROP_CORPSE
+S:1_IN_10 | 
+S:BR_FIRE
+D:Flames lick at its feet and its tongue is a blade of fire.  You can feel a 
+D:furnace heat radiating from the creature.
+
+N:7310:Fire hound
+G:Z:r
+I:110:14d8:30:15:0
+W:26:50:600:112
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:FIRE:1d6
+B:BITE:FIRE:1d6
+B:BITE:FIRE:1d6
+F:FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:HAS_LITE | ANIMAL | IM_FIRE | DROP_SKELETON | DROP_CORPSE
+S:MULTIPLY
+S:1_IN_10 | 
+S:BR_FIRE
+D:Flames lick at its feet and its tongue is a blade of fire.  You can feel a 
+D:furnace heat radiating from the creature.
+
+N:7311:Frost hound
+G:Z:W
+I:110:14d8:30:15:0
+W:28:1:600:112
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:COLD:1d6
+B:CLAW:HURT:1d8
+B:BITE:HURT:1d6
+F:FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | ANIMAL | IM_COLD
+S:1_IN_10 |
+S:BR_COLD
+D:A hound as tall as a man, this creature appears to be composed of angular 
+D:planes of ice.  Cold radiates from it and freezes your breath in the air.
+
+N:7312:Frost hound
+G:Z:W
+I:110:14d8:30:15:0
+W:28:50:600:112
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:COLD:1d6
+B:CLAW:HURT:1d8
+B:BITE:HURT:1d6
+F:FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | ANIMAL | IM_COLD
+S:MULTIPLY
+S:1_IN_10 |
+S:BR_COLD
+D:A hound as tall as a man, this creature appears to be composed of angular 
+D:planes of ice.  Cold radiates from it and freezes your breath in the air.
+
+N:7313:Energy hound
+G:Z:y
+I:110:16d8:30:15:0
+W:27:1:600:128
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:ELEC:1d6
+B:BITE:ELEC:1d6
+B:BITE:ELEC:1d6
+F:FORCE_SLEEP | BASEANGBAND | 
+F:DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP
+F:BASH_DOOR | HAS_LITE | ANIMAL | IM_ELEC
+S:1_IN_10 | 
+S:BR_ELEC
+D:Saint Elmo's Fire forms a ghostly halo around this hound, and sparks sting 
+D:your fingers as energy builds up in the air around you.
+
+N:7314:Energy hound
+G:Z:y
+I:110:16d8:30:15:0
+W:27:50:600:128
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:ELEC:1d6
+B:BITE:ELEC:1d6
+B:BITE:ELEC:1d6
+F:FORCE_SLEEP | BASEANGBAND | 
+F:DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP
+F:BASH_DOOR | HAS_LITE | ANIMAL | IM_ELEC
+S:MULTIPLY
+S:1_IN_10 | 
+S:BR_ELEC
+D:Saint Elmo's Fire forms a ghostly halo around this hound, and sparks sting 
+D:your fingers as energy builds up in the air around you.
+
+N:7315:Lizardman Captain
+G:h:R
+I:110:30d8:20:20:20
+W:30:1:1600:240
+E:1:1:1:2:1:1
+O:50:50:0:0
+B:HIT:HURT:5d6
+B:HIT:HURT:5d6
+B:SPIT:POISON:5d6
+B:WAIL:TERRIFY
+F:MALE | CAN_SWIM | IM_ACID | IM_POIS | WILD_SHORE | BASEANGBAND | 
+F:DROP_60 | DROP_12 | DROP_CORPSE | ESCORT | DROP_12 | DROP_GOOD
+F:OPEN_DOOR | BASH_DOOR | EVIL | ANIMAL | FORCE_MAXHP
+D:A lizardman leader, often surrounded by enslaved bodyguards.
+
+N:7316:Lizardman Boss
+G:h:R
+I:115:30d30:20:40:20
+W:50:1:1600:2240
+E:1:1:1:2:1:1
+O:50:50:0:0
+B:HIT:HURT:8d9
+B:HIT:HURT:8d9
+B:SPIT:POISON:8d10
+B:WAIL:TERRIFY
+F:MALE | CAN_SWIM | IM_ACID | IM_POIS | WILD_SHORE | BASEANGBAND | 
+F:DROP_60 | DROP_12 | DROP_CORPSE | ESCORT | DROP_12 | DROP_GOOD
+F:OPEN_DOOR | BASH_DOOR | EVIL | ANIMAL | FORCE_MAXHP
+D:A strong lizardman. 
+
+N:7317:Acid hound
+G:Z:b
+I:110:15d8:30:15:0
+W:30:2:600:240
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:ACID:2d8
+B:ENGULF:POISON:2d8
+B:CLAW:HURT:3d6
+F:FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:BASH_DOOR | CAN_SWIM | DROP_SKELETON | DROP_CORPSE
+F:ANIMAL | IM_ACID
+S:1_IN_10 | 
+S:BR_ACID
+D:Liquid footprints follow this hound as it pads around the dungeon.  
+D: An acrid smell of acid rises from the dog's pelt.
+
+N:7318:Acid hound
+G:Z:b
+I:110:15d8:30:15:0
+W:30:100:600:240
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:ACID:2d8
+B:ENGULF:POISON:2d8
+B:CLAW:HURT:3d6
+F:FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:BASH_DOOR | CAN_SWIM | DROP_SKELETON | DROP_CORPSE
+F:ANIMAL | IM_ACID
+S:MULTIPLY
+S:1_IN_10 | 
+S:BR_ACID
+D:Liquid footprints follow this hound as it pads around the dungeon.  
+D: An acrid smell of acid rises from the dog's pelt.
+
+N:7319:Dark elven commander
+G:h:D
+I:110:36d8:20:20:30
+W:25:2:1400:576
+E:1:1:1:2:1:1
+O:0:80:20:0
+B:HIT:HURT:3d8
+B:HIT:HURT:3d6
+F:WILD_WOOD | FORCE_MAXHP | BASEANGBAND
+F:FORCE_SLEEP | ONLY_ITEM | DROP_22 | DROP_SKELETON | DROP_CORPSE
+F:OPEN_DOOR | BASH_DOOR | EVIL | HURT_LITE | DROP_GOOD
+S:1_IN_7 | 
+S:DARKNESS | BLIND | CONF | BO_FIRE | BO_COLD | MISSILE
+D:A dark elven figure in armour and radiating evil power. Commander role are often
+D: portrayed by females, since their cunning widely overcomes their male counterparts.
+
+N:7320:Carrion Bird
+G:B:W
+I:110:28d8:20:15:20
+W:32:1:5000:224
+E:0:1:1:0:1:0
+O:40:30:0:0
+B:CLAW:POISON:2d4
+B:CLAW:POISON:2d4
+B:WAIL:LOSE_WIS:1d8
+F:DROP_90 | 
+F:COLD_BLOOD | BASH_DOOR | EVIL | ANIMAL | UNDEAD | CAN_FLY |
+F:IM_COLD | IM_POIS | SUSCEP_FIRE | HURT_LITE | FORCE_MAXHP
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+D:A mummified, undead great avian creature, who now serves as 
+D:a steed for mighty undead creatures.
+
+N:7321:Naga Shaman Priest Of Seth
+G:n:G
+I:105:46d8:20:28:20
+W:33:2:900:220
+E:1:1:1:2:1:1
+O:30:20:30:20
+B:BITE:POISON:5d6
+B:BITE:POISON:5d6
+B:CRUSH:PARALYZE
+F:WILD_SWAMP | WILD_SHORE | FEMALE | CAN_SWIM | IM_POIS | IM_ACID |
+F:DROP_12 | DROP_CORPSE | DROP_SKELETON | FORCE_MAXHP | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | HAS_LITE | EVIL | CAN_SPEAK | DROP_90
+S:1_IN_15
+S:BA_POIS | SCARE | HOLD | BO_POIS
+D:"They walked lithely and sinnously erect on pre-mammalian 
+D:members, their pied and hairless bodies bending with great 
+D:suppleness. There was a loud hissing of formulae as they 
+D:went to and fro."
+
+N:7322:Black Mist
+G:~:D
+I:100:15d8:10:10:10
+W:10:1:0:18
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:EXP_80:2d6
+F:RAND_25 | FORCE_MAXHP | BASEANGBAND
+F:IM_POIS | IM_ACID | RES_NETH | WILD_SWAMP | WILD_SHORE | 
+F:EVIL | EMPTY_MIND | COLD_BLOOD | FRIENDS | NONLIVING | 
+F:NO_CONF | NO_FEAR | NO_SLEEP | NO_STUN
+D:A cloud of evil, sentient mist, out of the Black Road.
+
+N:7323:White Mist
+G:~:w
+I:105:15d16:10:20:10
+W:20:1:0:70
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:ICE:4d6
+F:RAND_25 | FORCE_MAXHP | BASEANGBAND | IM_COLD | 
+F:IM_POIS | IM_ACID | RES_NETH | WILD_MOUNTAIN | 
+F:EVIL | EMPTY_MIND | COLD_BLOOD | FRIENDS | NONLIVING | 
+F:NO_CONF | NO_FEAR | NO_SLEEP | NO_STUN
+D:A cloud of evil, sentient mist, hailed from the glaciers. 
+
+N:7324:Hobgoblin
+G:g:g
+I:110:16d8:20:17:30
+W:3:1:1100:6
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:HIT:HURT:2d6
+F:MALE | 
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_60 | DROP_SKELETON | DROP_CORPSE
+F:EVIL | ORC | HURT_LITE | FORCE_MAXHP | DROP_90
+D:Hobgoblins are sturdier and bigger than the average goblin and usually they are commanding 
+D: their smaller relatives into forced tasks.
+
+N:7325:Iced skeleton
+G:s:B
+I:110:17d8:20:25:60
+W:33:1:0:132
+E:1:1:1:2:1:1
+O:20:0:80:0
+B:CLAW:COLD:2d6
+B:CLAW:COLD:2d6
+F:ONLY_ITEM | DROP_90 | DROP_60 | BASEANGBAND
+F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | SUSCEP_FIRE
+F:NO_CONF | NO_SLEEP | NO_FEAR | FORCE_MAXHP | ESCORT
+D:It is a skeleton covered in frost, surrounded by less powerful undead minions.
+
+N:7326:Green wraith
+G:W:G
+I:110:9d8:20:15:30
+W:34:1:0:82
+E:1:1:1:2:1:1
+O:20:0:40:30
+B:HIT:HURT:1d6
+B:HIT:HURT:1d6
+B:TOUCH:EXP_20
+F:RAND_25 | DROP_90 | DROP_60 | FORCE_MAXHP | BASEANGBAND
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | CAN_FLY | SUSCEP_FIRE
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP
+S:1_IN_10 |
+S:SCARE | DRAIN_MANA
+D:It is a ghostly apparition with a humanoid form.
+
+N:7327:Nightbeast
+G:U:s
+I:110:141d8:10:50:50
+W:43:2:4000:956
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:GAZE:TERRIFY:1d4
+B:GAZE:TERRIFY:1d4
+B:CRUSH:HURT:2d20
+F:EVIL | IM_FIRE | RAND_25 | FORCE_MAXHP | DROP_SKELETON | BASEANGBAND
+F:RES_NETH | RES_WATE | RES_PLAS | RES_DISE | RES_NEXU |
+F:KILL_WALL | CAN_SWIM | DROP_CORPSE | WEIRD_MIND | DROP_32
+S:1_IN_9 |
+S:TPORT | BLINK | TELE_AWAY
+D:This creature just might crush you.
+
+N:7328:Giant vampire bat
+G:b:D
+I:115:20d8:22:20:50
+W:35:1:100:160
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:EXP_40:1d4
+B:BITE:HURT:1d6
+B:BITE:HURT:1d6
+F:FORCE_SLEEP | WEIRD_MIND | 
+F:RAND_25 | DROP_CORPSE | BASEANGBAND |
+F:DROP_SKELETON | CAN_FLY | FRIENDS |
+F:WILD_WASTE | WILD_MOUNTAIN | COLD_BLOOD |
+F:EVIL | ANIMAL | UNDEAD | IM_COLD | NO_CONF | NO_FEAR | FORCE_MAXHP
+S:1_IN_6
+S:BR_COLD
+D:An undead bat that flies at your neck hungrily.
+
+N:7329:Troll Shaman
+G:T:b
+I:110:31d8:20:25:30
+W:40:1:4000:248
+E:1:1:1:2:1:1
+O:0:30:60:10
+B:HIT:HURT:1d8
+B:HIT:HURT:1d8
+B:BITE:HURT:3d4
+F:MALE | WILD_WOOD | WILD_MOUNTAIN | WILD_WASTE
+F:FORCE_SLEEP | DROP_60 | DROP_SKELETON | DROP_CORPSE
+F:OPEN_DOOR | BASH_DOOR | CAN_SPEAK | FORCE_MAXHP
+F:EVIL | TROLL | HURT_LITE | NO_CONF | DROP_90 | BASEANGBAND
+S:1_IN_9 | 
+S:BLINK | SCARE | CAUSE_1 | MISSILE | DARKNESS
+D:A troll who is so bright he knows how to read.
+
+N:7330:Giant red tick
+G:S:r
+I:105:20d8:10:27:20
+W:35:1:200:80
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:FIRE:3d6
+B:STING:EXP_80:3d4
+B:BITE:PARALYZE:2d6
+F:DROP_SKELETON | RAND_25 | BASEANGBAND
+F:WEIRD_MIND | WILD_WOOD | 
+F:ANIMAL | IM_POIS | FORCE_MAXHP
+D:It is smoldering and burning with great heat.
+
+N:7331:Giant red tick
+G:S:r
+I:105:20d8:10:27:20
+W:35:6:200:80
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:FIRE:3d6
+B:STING:EXP_80:3d4
+B:BITE:PARALYZE:2d6
+F:DROP_SKELETON | RAND_25 | BASEANGBAND
+F:WEIRD_MIND | WILD_WOOD | 
+F:ANIMAL | IM_POIS | FORCE_MAXHP
+S:MULTIPLY
+D:It is smoldering and burning with great heat.
+
+N:7332:Saturn beast
+G:f:b
+I:110:22d8:35:35:20
+W:39:2:1800:352
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:3d8
+B:HIT:HURT:2d10
+B:HIT:HURT:2d10
+F:INVISIBLE | BASH_DOOR | DROP_CORPSE | 
+F:ANIMAL | NO_FEAR | FORCE_MAXHP | BASEANGBAND
+D:It is a huge black panther, clubbed tentacles sprouting from its shoulders.
+
+N:7333:Ogre sorcerer
+G:O:o
+I:110:33d8:20:20:30
+W:48:2:2700:528
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:HIT:HURT:3d8
+B:HIT:HURT:3d8
+B:HIT:HURT:3d8
+F:FORCE_SLEEP | FORCE_MAXHP
+F:DROP_90 | WILD_MOUNTAIN | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_CORPSE | DROP_12
+F:EVIL | GIANT | ESCORT
+S:1_IN_12 | 
+S:HEAL | HOLD | BA_COLD | 
+S:S_MONSTER
+D:A hideous ogre wrapped in black sorcerous robes.
+
+N:7334:Nosferatu, the Vampire
+G:V:W
+I:110:29d8:20:22:10
+W:43:3:1700:870
+E:1:1:1:2:1:1
+O:20:50:20:10
+B:HIT:HURT:1d6
+B:HIT:HURT:1d6
+B:BITE:EXP_80:1d8
+F:UNIQUE | FORCE_SLEEP | 
+F:COLD_BLOOD | DROP_12 | POWERFUL | FORCE_MAXHP | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | REGENERATE | CAN_FLY |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | NO_CONF |
+S:1_IN_9 | 
+S:TELE_TO | SCARE | CAUSE_2 | MIND_BLAST | FORGET | DARKNESS
+D:It is a non-living former human with an aura of power. Usually lonely, as they disdain company.
+
+N:7335:Goblin Priest of Chaos
+G:g:b
+I:110:74d8:12:34:10
+W:27:1:1000:240
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:ELEC:3d8
+B:HIT:COLD:3d8
+F:FORCE_SLEEP | CAN_SPEAK | BASEANGBAND
+F:MALE | EVIL | WEIRD_MIND | BASH_DOOR | ORC | 
+F:OPEN_DOOR | DROP_CORPSE | DROP_SKELETON
+F:IM_ELEC | AURA_ELEC | DROP_GOOD | DROP_90 | DROP_12
+F:NO_CONF | NO_FEAR | HAS_LITE | ESCORT | FORCE_MAXHP 
+S:1_IN_9 | 
+S:BO_ELEC | CAUSE_2 |
+D:A huge Goblin, engorged its body with Chaos' corruption, surrounded by pulse living sparks crackling all over 
+D: this madness inducing figure.
+
+N:7336:Orc Priest of Chaos
+G:o:b
+I:110:104d8:20:40:10
+W:40:1:900:332
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:ELEC:3d8
+B:HIT:COLD:3d8
+B:WAIL:TERRIFY:1D8
+F:FORCE_SLEEP | 
+F:MALE | EVIL | WEIRD_MIND | BASH_DOOR | ORC | 
+F:OPEN_DOOR | DROP_CORPSE | DROP_SKELETON
+F:IM_ELEC | AURA_ELEC | DROP_GREAT | DROP_60 | DROP_22 | BASEANGBAND
+F:NO_CONF | NO_FEAR | HAS_LITE | ESCORT | FORCE_MAXHP
+S:1_IN_9 | 
+S:BO_ELEC | CAUSE_2 |
+D:A huge Orc, engorged its body with Chaos' corruption, 
+D:surrounded by pulse living sparks crackling all over 
+D: this madness inducing figure.
+
+N:7337:Swampborn Aberration
+G:R:v
+I:100:90d8:10:30:20
+W:46:1:5000:900
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:HIT:LOSE_STR:1d8
+B:SPIT:HURT:1d8
+B:BITE:ACID:1d10
+F:DROP_12 | DROP_GOOD | DROP_GREAT | ONLY_ITEM | FORCE_MAXHP
+F:EVIL | MALE | WEIRD_MIND | CAN_SWIM | DROP_CORPSE | DROP_SKELETON
+F:ANIMAL | IM_POIS | NO_CONF | BASEANGBAND |
+S:1_IN_6
+S:SLOW | BLIND | DRAIN_MANA
+S:BA_POIS | BR_ACID |
+D:...hushed in dark corners of some taverns, they speak of a 
+D:horrendous legend of a giant aberration that looks like a 
+D:horned toad, its skin smells and looks like a rusted iron 
+D:shroud, empty eyes flashing of evil cruelty...
+
+N:7338:Red Wizard
+G:p:r
+I:110:11d8:20:20:10
+W:43:1:1500:110
+E:1:1:1:2:1:1
+O:10:0:90:0
+B:HIT:HURT:2d6
+B:HIT:HURT:2d6
+F:MALE | WILD_GRASS | EVIL
+F:FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:ONLY_ITEM | DROP_90 | DROP_SKELETON | DROP_CORPSE
+F:SMART | OPEN_DOOR | BASH_DOOR | HAS_LITE
+S:1_IN_5 | 
+S:HASTE | TPORT | TELE_TO | BLIND | CONF | 
+S:BO_FIRE | BO_COLD | BO_ELEC | 
+S:S_MONSTER
+D:A fat mage with glasses and a pointy hat.
+
+N:7339:Ilithid Warrior
+G:h:v
+I:110:25d8:20:25:10
+E:1:1:1:2:1:1
+W:44:1:1400:250
+O:0:10:90:0
+B:GAZE:LOSE_INT:4d6
+B:HIT:HURT:4d6
+F:WILD_WASTE | FORCE_MAXHP | BASEANGBAND
+F:FORCE_SLEEP | DROP_CORPSE
+F:ONLY_ITEM | DROP_12 | OPEN_DOOR | BASH_DOOR | EVIL | NO_CONF | 
+S:1_IN_8 | 
+S:BLIND | HOLD | SCARE | MIND_BLAST | BRAIN_SMASH | FORGET
+D:A humanoid form with a gruesome head, tentacular mouth, and piercing 
+D:eyes.  Claws reach out for you and you feel a presence invade your mind.
+
+N:7340:Carachang, Iron Jaws
+G:l:w
+I:115:81d8:30:40:12
+W:42:3:8000:2430
+E:0:0:0:0:1:0
+O:20:0:60:20
+B:BITE:HURT:2d12
+B:BITE:HURT:1d20
+B:BITE:HURT:1d20
+F:UNIQUE | MOVE_BODY | POWERFUL | FORCE_MAXHP 
+F:WILD_OCEAN | BASEANGBAND | 
+F:BASH_DOOR | IM_POIS | ANIMAL | AQUATIC |
+F:NO_CONF | NO_SLEEP | DROP_90 | DROP_12
+D:The biggest white shark who has ever lived, it is hunting for you now! 
+
+N:7341:Carachang, Iron Jaws
+G:l:w
+I:115:81d8:30:40:12
+W:42:150:8000:2430
+E:0:0:0:0:1:0
+O:20:0:60:20
+B:BITE:HURT:2d12
+B:BITE:HURT:1d20
+B:BITE:HURT:1d20
+F:UNIQUE | MOVE_BODY | POWERFUL | FORCE_MAXHP 
+F:WILD_OCEAN | BASEANGBAND | 
+F:BASH_DOOR | IM_POIS | ANIMAL | 
+F:NO_CONF | NO_SLEEP | DROP_90 | DROP_12
+D:The biggest white shark who has ever lived, it is hunting for you now! 
+
+N:7342:Thorondor
+G:B:u
+I:115:96d8:20:32:20
+W:16:3:1600:222
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:4d8
+B:CLAW:HURT:4d8
+B:BITE:HURT:4d10
+F:CAN_FLY | UNIQUE | DROP_CORPSE | POWERFUL | FORCE_MAXHP
+F:WILD_MOUNTAIN | WILD_WASTE | BASEANGBAND | ANIMAL | 
+D:An agent of supernatural being, Thorondor is the lord of eagles.
+
+N:7343:Giant Guardian ant
+G:a:o
+I:110:12d8:10:20:40
+W:41:1:600:120
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d12
+B:BITE:HURT:2d12
+F:RAND_25 | KILL_BODY | DROP_SKELETON | BASEANGBAND
+F:WEIRD_MIND | BASH_DOOR | 
+F:ANIMAL | ESCORT | DROP_CORPSE | DROP_SKELETON | FORCE_MAXHP
+D:An armoured form moving with purpose.  Powerful on its own, flee when 
+D:hordes of them march.
+
+N:7344:Spotted Horned Toad
+G:R:b
+I:110:69d8:10:20:10
+W:47:1:150:390
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:SPIT:PARALYZE:1d20
+B:SPIT:HURT:1d10
+B:BITE:LOSE_STR:1d6
+F:FORCE_SLEEP | RAND_25 | DROP_12 | WILD_GRASS | WILD_SWAMP 
+F:EVIL | UNDEAD | IM_COLD | CAN_FLY | FORCE_MAXHP | WILD_SHORE
+F:IM_POIS | NO_CONF | SUSCEP_FIRE | COLD_BLOOD | BASEANGBAND
+S:1_IN_15 |
+S:BO_WATE
+D:Blue ish and with black, horrendously looking spots, these giant toads are dangerous.
+
+N:7345:Poisonous moss
+G:.:G
+I:110:1d8:30:1:5
+W:1:1:50:8
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPORE:CONFUSE:1d4
+B:SPIT:POISON:1d4
+B:SPIT:DISEASE:1d4
+F:WILD_WOOD
+F:EMPTY_MIND | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | FRIENDS
+F:NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN | BASEANGBAND
+D:A mass of green vegetation.  You don't remember seeing anything like it 
+D:before.
+
+N:7346:Dune Troll
+G:T:o
+I:110:31d8:20:30:50
+W:46:1:3000:310
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:CLAW:HURT:2d6
+B:CLAW:HURT:2d6
+B:BUTT:HURT:2d6
+B:BITE:HURT:2d6
+F:MALE | WILD_WASTE
+F:FORCE_MAXHP | DROP_60
+F:ONLY_ITEM | DROP_60 | DROP_SKELETON | DROP_CORPSE |
+F:OPEN_DOOR | BASH_DOOR |
+F:EVIL | TROLL | IM_POIS | BASEANGBAND
+D:A huge, ugly, desert adapted Troll, in search of plunder and fresh meat to devour.
+
+N:7347:Drake of Chaos
+G:d:v
+I:110:390d8:25:50:30
+W:49:2:18000:1950
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:8d8
+B:CLAW:HURT:8d8
+B:BITE:HURT:8d6
+F:WILD_WASTE | FORCE_MAXHP | BASEANGBAND
+F:ATTR_MULTI | ATTR_ANY | CAN_FLY | FORCE_SLEEP |
+F:ONLY_ITEM | DROP_12 | RES_DISE | OPEN_DOOR | BASH_DOOR | DROP_CORPSE |
+F:EVIL | DRAGON | IM_FIRE | NO_CONF |
+S:1_IN_6 |
+S:SLOW | CONF | SCARE | BR_DISE | BR_CHAO
+D:A dragon twisted by the forces of chaos.  It seems first ugly, then fair, 
+D:as its form shimmers and changes in front of your eyes.
+
+N:7348:Law drake
+G:d:W
+I:110:164d8:25:50:30
+W:48:2:18000:2200
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:5d8
+B:CLAW:HURT:5d8
+B:BITE:HURT:5d6
+F:WILD_MOUNTAIN | FORCE_MAXHP | BASEANGBAND
+F:FORCE_SLEEP | GOOD | ONLY_ITEM | DROP_12 | CAN_FLY |
+F:OPEN_DOOR | BASH_DOOR | DROP_CORPSE | DRAGON | IM_COLD | NO_CONF
+S:1_IN_6 | 
+S:SLOW | CONF | SCARE | BR_SOUN | BR_SHAR
+D:This dragon is clever and cunning.  It laughs at your puny efforts to 
+D:disturb it.
+
+N:7349:Void drake
+G:d:s
+I:110:170d8:25:45:30
+W:50:2:18000:2500
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:5d8
+B:CLAW:HURT:5d8
+B:BITE:HURT:5d6
+F:ATTR_MULTI | ATTR_ANY | WILD_WOOD | BASEANGBAND
+F:FORCE_SLEEP | ONLY_ITEM | DROP_12 | RES_DISE | FORCE_MAXHP
+F:OPEN_DOOR | BASH_DOOR | DROP_CORPSE
+F:EVIL | DRAGON | GOOD | CAN_FLY |
+F:IM_FIRE | IM_COLD | NO_CONF |
+S:1_IN_6 | 
+S:SLOW | CONF | SCARE | 
+S:BR_SOUN | BR_SHAR | BR_DISE | BR_CHAO
+D:A mighty dragon, the balance drake seeks to maintain the Cosmic Balance, 
+D:and despises your feeble efforts to destroy evil.
+
+N:7350:Ethereal drake
+G:d:o
+I:110:124d8:25:45:15
+W:48:2:0:2200
+E:0:1:0:6:1:0
+O:40:50:10:0
+B:CLAW:HURT:5d8
+B:CLAW:HURT:5d8
+B:BITE:HURT:5d6
+F:FORCE_SLEEP | WILD_WOOD | BASEANGBAND
+F:ONLY_ITEM | DROP_12 | CAN_FLY | FORCE_MAXHP
+F:INVISIBLE | PASS_WALL |
+F:EVIL | DRAGON | NO_CONF |
+S:1_IN_6 | 
+S:SLOW | CONF | SCARE | 
+S:BR_LITE | BR_DARK
+D:A dragon of elemental power, with control over light and dark, the 
+D:ethereal drake's eyes glare with white hatred from the shadows.
+
+N:7351:Crawling Genestealer
+G:X:v
+I:110:42d8:15:20:10
+W:45:1:2000:2100
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:STING:PARALYZE:2d6
+B:CLAW:HURT:1d8
+B:CLAW:HURT:1d8
+B:BITE:DISEASE:1d4
+F:RAND_25 | FRIENDS | DROP_CORPSE | DROP_SKELETON | EVIL | DEMON  
+F:WEIRD_MIND | BASH_DOOR | COLD_BLOOD | BASEANGBAND
+F:IM_ACID | NO_FEAR | CAN_SWIM | 
+F:AURA_COLD | FORCE_MAXHP
+S:1_IN_9
+S:HOLD | SCARE | MIND_BLAST | FORGET | DARKNESS | BA_ACID |
+D:A xenomorph creature, moves half crawling half walking, hideous claws and 
+D:acid dripping mouths, they are the Cosmic World-Eaters. Some warlock must 
+D:have been summoning the wrong stuff...
+
+N:7352:Vampire Master
+G:V:s
+I:110:62d8:20:30:10
+W:52:3:1600:1860
+E:1:1:1:2:1:1
+O:20:50:30:0
+B:HIT:HURT:2d6
+B:HIT:HURT:2d6
+B:BITE:EXP_80:3d8
+F:FORCE_SLEEP | BASEANGBAND | 
+F:DROP_22 | ESCORT | FORCE_MAXHP | POWERFUL
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | REGENERATE | CAN_FLY |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | NO_CONF 
+S:1_IN_9 | 
+S:TELE_TO | HOLD | CONF | SCARE | CAUSE_3 | MIND_BLAST | FORGET | 
+S:DARKNESS | BO_NETH
+D:Formerly a human being, corrupted by evil forces long time ago. It despises all forms
+D: of life, specially in the shape of adventurers. A great, dreadful Power emanates from 
+D: its chilling frame.
+
+N:7353:Jungle vampire
+G:V:g
+I:110:45d8:20:30:10
+W:51:1:0:450
+E:1:1:1:2:1:1
+O:10:50:40:0
+B:HIT:HURT:4d6
+B:HIT:HURT:4d6
+B:BITE:EXP_80:3d8
+F:FORCE_SLEEP | 
+F:DROP_22 | CAN_FLY | FORCE_MAXHP | BASEANGBAND
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | REGENERATE | INVISIBLE | PASS_WALL |
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | HURT_LITE | NO_CONF | RES_TELE
+S:1_IN_9 | 
+S:TELE_TO | HOLD | CONF | SCARE | CAUSE_3 | MIND_BLAST | FORGET | 
+S:DARKNESS |
+D:The jungles are haunted by the human-hunters of old aeons...
+
+N:7354:Wicker golem
+G:G:y
+I:100:175d8:12:40:10
+W:54:1:12000:175
+E:1:1:1:2:1:1
+O:100:0:0:0
+B:HIT:HURT:8d6
+B:HIT:HURT:6d6
+B:CRUSH:LOSE_STR:2d4
+F:ONLY_GOLD | DROP_22 | 
+F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | REFLECTING |
+F:IM_FIRE | IM_COLD | IM_POIS | FORCE_MAXHP | BASEANGBAND
+F:NO_CONF | NO_FEAR | NONLIVING
+D:It is a massive wicker hominoid figure, animated by black magick. 
+D:Your magic surprisingly feels much less powerful now.
+
+N:7355:Absorber golem
+G:G:y
+I:114:175d20:12:80:10
+W:84:1:12000:5175
+E:1:1:1:2:1:1
+O:100:0:0:0
+B:HIT:UN_BONUS:8d12
+B:HIT:UN_BONUS:6d12
+B:CRUSH:LOSE_STR:4d12
+B:CRUSH:EAT_LITE:2d10
+F:ONLY_GOLD | DROP_22 | RES_NETH | RES_NEXU | RES_CHAO | 
+F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | REFLECTING |
+F:IM_FIRE | IM_COLD | IM_POIS | FORCE_MAXHP | BASEANGBAND
+F:NO_CONF | NO_FEAR | NONLIVING | IM_ELEC | IM_POIS | 
+S:1_IN_10
+S:BR_DISE | BR_DARK | 
+D:This golem wants to drain all your magic! 
+
+N:7356:Servant of Bit-Yakin
+G:h:b
+I:110:29d8:10:40:12
+W:55:1:0:1450
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BITE:HURT:1d12
+B:CLAW:HURT:1d10
+B:CLAW:HURT:1d10
+F:FORCE_SLEEP | EVIL | DEMON | IM_POIS | IM_FIRE | FORCE_MAXHP
+F:RAND_25 | COLD_BLOOD | BASH_DOOR | DROP_CORPSE | DROP_60
+F:NO_FEAR | NO_CONF | NONLIVING | DROP_12 | FRIENDS | BASEANGBAND
+D:...and then the Servants of Bit-Yakin, surged like a bursting flood from Hell. Half rat, 
+D: half human, half pig, and with blue-ish leathery wings. Oh and strong they were...
+
+N:7357:Night Dread
+G:G:o
+I:110:43d8:20:15:10
+W:54:2:0:860
+E:0:0:0:0:0:0
+O:0:50:50:0
+B:HIT:HURT:9d6
+B:HIT:HURT:9d6
+B:HIT:LOSE_WIS:5d4
+F:FORCE_SLEEP | RAND_25 | 
+F:ONLY_ITEM | DROP_12 | DROP_60 | BASEANGBAND
+F:TAKE_ITEM | INVISIBLE | COLD_BLOOD | PASS_WALL | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | CAN_FLY |
+F:NO_CONF | FORCE_MAXHP
+S:1_IN_15 | 
+S:BLIND | HOLD | CONF | DRAIN_MANA | BO_NETH
+D:It is a form that screams its presence against the eye.  Death incarnate, 
+D:its hideous black body seems to struggle against reality as the universe 
+D:itself struggles to banish it.
+
+N:7358:Star vampire
+G:V:r
+I:115:73d8:20:20:10
+W:55:2:1700:1840
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:LOSE_STR:4d4
+B:BITE:EXP_80:4d4
+B:CLAW:LOSE_DEX:4d4
+F:FORCE_MAXHP | BASEANGBAND
+F:EVIL | IM_FIRE | IM_ELEC | IM_POIS |
+F:NONLIVING | CAN_FLY | ELDRITCH_HORROR | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN
+D:"It was red and dripping; an immensity of pulsing, moving jelly;
+D:a scarlet blob with myriad tentacular trunks that waved and waved. 
+D:There were suckers on the tips of the appendages, and these were 
+D:opening and closing with ghoulish lust... the thing was bloated and 
+D:obscene; a headless, faceless, eyeless bulk, with the ravenous maw and 
+D:titanic talons of a star-born monster."
+
+N:7359:Vholog
+G:T:g
+I:110:32d8:20:35:50
+W:51:1:6000:320
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:HURT:2d12
+B:HIT:HURT:2d12
+B:BITE:HURT:4d4
+F:FORCE_MAXHP | EVIL | TROLL | IM_POIS
+F:OPEN_DOOR | DROP_60 | DROP_12 | BASEANGBAND
+F:SMART | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+D:It is a massive intelligent troll with needle sharp fangs.
+
+N:7360:Halfling Slingshooter Hunter
+G:h:U
+I:110:27d8:20:20:30
+W:47:1:900:270
+E:1:1:1:2:1:1
+O:100:0:0:0
+B:HIT:HURT:3d6
+B:HIT:HURT:3d6
+F:WILD_WOOD | WILD_GRASS | BASEANGBAND
+F:OPEN_DOOR | DROP_90 | DROP_12 | INVISIBLE | FORCE_MAXHP
+F:SMART | EVIL | IM_POIS | MALE | DROP_SKELETON | DROP_CORPSE
+S:1_IN_6
+S:BOULDER | ARROW_4
+D:A rebel halfling who has rejected the halfling tradition of archery, mastering the lethal slingshot.
+
+N:7361:Dark elven nightblade
+G:h:D
+I:115:32d8:20:30:10
+W:27:2:1600:256
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:POISON:8d4
+B:HIT:HURT:8d4
+B:HIT:LOSE_CON:2d4
+F:MALE | WILD_WOOD | BASEANGBAND
+F:DROP_90 | INVISIBLE | DROP_SKELETON | DROP_CORPSE | DROP_GOOD | DROP_12
+F:OPEN_DOOR | BASH_DOOR | HURT_LITE | FORCE_MAXHP |
+F:EVIL | NO_CONF |
+S:1_IN_7 |
+S:DARKNESS | ARROW_4
+D:A dark elven assassin, so stealthy that he is almost impossible to see.
+
+N:7362:Trap Mouth
+G:.:w
+I:110:45d8:30:35:10
+W:42:1:1300:450
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:3d8
+B:HIT:HURT:3d8
+B:HIT:PARALYZE:1d12
+B:HIT:PARALYZE:1d12
+F:CHAR_CLEAR | ATTR_CLEAR | 
+F:INVISIBLE | EMPTY_MIND | COLD_BLOOD | NEVER_MOVE
+F:NO_CONF | NO_FEAR | FORCE_MAXHP | BASEANGBAND
+D:This creature traps unsuspecting victims 
+D: and paralyzes them, to be slowly digested later.
+
+N:7363:Mine bomb
+G:.:w
+I:110:14d8:30:20:0
+W:57:1:0:140
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:TIME:3d40
+F:CHAR_CLEAR | ATTR_CLEAR | 
+F:EMPTY_MIND | INVISIBLE | COLD_BLOOD | FORCE_MAXHP
+F:NO_CONF | NO_SLEEP | NO_FEAR | NEVER_MOVE | BASEANGBAND
+D:It was left here to be used against intruders.
+
+N:7364:Plasma bomb
+G:.:o
+I:110:14d8:30:20:0
+W:57:1:0:140
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:PLASMA:3d40
+F:CHAR_CLEAR | ATTR_CLEAR | 
+F:EMPTY_MIND | INVISIBLE | COLD_BLOOD | FORCE_MAXHP
+F:NO_CONF | NO_SLEEP | NO_FEAR | NEVER_MOVE | BASEANGBAND
+D:It was left here to be used against intruders.
+
+N:7365:Bio bomb
+G:.:G
+I:110:14d8:30:20:0
+W:57:1:0:140
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:AMEBA:3d40
+F:CHAR_CLEAR | ATTR_CLEAR | 
+F:EMPTY_MIND | INVISIBLE | COLD_BLOOD | FORCE_MAXHP
+F:NO_CONF | NO_SLEEP | NO_FEAR | NEVER_MOVE | BASEANGBAND
+D:It was left here to be used against intruders.
+
+N:7366:Ice bomb
+G:.:B
+I:110:14d8:30:20:0
+W:57:1:0:140
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:ICE:3d40
+F:CHAR_CLEAR | ATTR_CLEAR | 
+F:EMPTY_MIND | INVISIBLE | COLD_BLOOD | FORCE_MAXHP
+F:NO_CONF | NO_SLEEP | NO_FEAR | NEVER_MOVE | BASEANGBAND
+D:It was left here to be used against intruders.
+
+N:7367:Mantidaemon
+G:u:o
+I:110:50d8:10:34:90
+W:54:2:0:2500
+E:1:1:1:0:1:1
+O:0:0:0:0
+B:CLAW:HURT:8d6
+B:BITE:HURT:8d6
+F:FORCE_SLEEP | PASS_WALL | INVISIBLE | 
+F:IM_POIS | IM_ACID | IM_FIRE | FORCE_MAXHP | ONLY_ITEM | DROP_90
+F:NO_CONF | NO_STUN | NONLIVING | DROP_12 | BASEANGBAND
+F:EVIL | DEMON 
+S:1_IN_6 | 
+S:BLINK | DARKNESS | S_DEMON
+D:An ugly demon with insect-like extremities and large bulbous eyes.
+
+N:7368:Fire angel of Chaos
+G:d:y
+I:110:300d8:20:50:25
+W:52:2:18000:5000
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:3d8
+B:CLAW:HURT:3d8
+B:BITE:HURT:5d6
+F:DROP_GOOD | DROP_22 | FORCE_MAXHP | BASEANGBAND
+F:EVIL | DRAGON | SMART | NO_CONF | NO_SLEEP | IM_FIRE
+F:DROP_22 | BASH_DOOR | RES_PLAS | CAN_FLY | DROP_CORPSE | HAS_LITE
+S:1_IN_9
+S:BR_PLAS | BR_CHAO
+D:It is a fast, deadly dragonoid creature. It was bred and trained 
+D: in the Courts of Chaos for assassination.
+
+N:7369:Major Nightgaunt
+G:B:D
+I:110:120d8:20:30:80
+W:59:2:0:9600
+E:0:0:0:0:0:0
+O:50:0:50:0
+B:STING:LOSE_STR:2d6
+B:TOUCH:PARALYZE:6d4
+F:FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:ONLY_ITEM | DROP_60 | 
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | CAN_FLY |
+F:EVIL | DEMON | ELDRITCH_HORROR | 
+F:IM_FIRE | IM_POIS | NO_CONF |
+S:1_IN_7 | 
+S:BLIND | CONF | BO_FIRE | 
+D:"Shocking and uncouth black things with smooth, oily, whale-like 
+D:surfaces, unpleasant horns that curved inward toward each other, 
+D:bat wings whose beating made no sound, ugly prehensile paws, and 
+D:barbed tails that lashed needlessly and disquietingly. And worst 
+D:of all, they never spoke or laughed, and never smiled because they 
+D:had no faces at all to smile with, but only to a suggestive 
+D:blankness where a face ought to be."
+
+N:7370:Fire vampire
+G:V:r
+I:110:60d8:30:55:0
+W:60:2:1700:1200
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:TOUCH:FIRE:1d10
+B:TOUCH:LOSE_WIS:1d10
+B:TOUCH:LOSE_DEX:1d10
+F:FORCE_MAXHP | BASEANGBAND
+F:FORCE_SLEEP | RAND_25 | CAN_FLY | EVIL |
+F:SMART | EMPTY_MIND | AURA_FIRE | RES_PLAS | KILL_ITEM |
+F:PASS_WALL | IM_FIRE | IM_POIS | HAS_LITE
+F:NO_CONF | NO_FEAR | NONLIVING | NO_STUN
+S:1_IN_6 | 
+S:BLINK | TPORT | CONF | BA_FIRE | DRAIN_MANA | HASTE | BO_PLAS
+D:It is a living entity of fire. Fire springs up wherever this 
+D:creature touches.
+
+# was a unique in ZMangband
+N:7371:Fatblob
+G:X:D
+I:105:39d8:10:34:12
+W:62:3:0:1700
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:SHATTER:4d10
+F:FORCE_MAXHP | POWERFUL | 
+F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | JOKEANGBAND |
+F:IM_FIRE | IM_COLD | IM_POIS | DROP_SKELETON |
+F:NO_FEAR | NO_CONF | NO_SLEEP | NONLIVING | RES_TELE
+D:A shining machine of death and destruction.
+
+N:7372:Ether Worm
+G:w:D
+I:105:24d2:7:5:10
+W:54:3:50:100
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:UN_BONUS:1d4
+B:CRAWL:ACID:1d4
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_25 | CAN_SWIM | FORCE_SLEEP | FORCE_MAXHP
+F:STUPID | RES_DISE | ANIMAL | IM_COLD | HURT_LITE | NO_FEAR
+D:It is a strange mass of squirming worms. Magical energy is negated around its disgusting form.
+
+N:7373:Ether Worm
+G:w:D
+I:105:24d2:7:5:10
+W:54:12:50:100
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:UN_BONUS:1d4
+B:CRAWL:ACID:1d4
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_25 | CAN_SWIM | FORCE_SLEEP | FORCE_MAXHP
+F:STUPID | RES_DISE | ANIMAL | IM_COLD | HURT_LITE | NO_FEAR
+S:MULTIPLY
+D:It is a strange mass of squirming worms. Magical energy is negated around its disgusting form.
+
+N:7374:Young titan
+G:P:y
+I:110:76d8:30:35:15
+W:57:2:15000:1520
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:CONFUSE:6d6
+B:HIT:CONFUSE:6d6
+B:HIT:CONFUSE:6d6
+F:FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:DROP_22 | DROP_SKELETON | DROP_CORPSE
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR |
+F:EVIL | GIANT | MALE
+S:1_IN_6 | 
+S:HEAL | TELE_TO | SCARE | 
+S:S_MONSTERS | BOULDER
+D:It is a humanoid figure thirty feet tall that gives off an aura of power 
+D:and hate.
+
+N:7375:Witch of the swamps
+G:p:y
+I:110:79d8:20:25:10
+W:57:2:1700:312
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:HIT:HURT:2d6
+B:HIT:PARALYZE
+B:HIT:HURT:2d8
+F:FEMALE | WILD_GRASS | WILD_WOOD | FORCE_MAXHP
+F:FORCE_SLEEP | DROP_SKELETON | DROP_CORPSE
+F:ONLY_ITEM | DROP_12 | DROP_GOOD | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | EVIL | NO_CONF |
+S:1_IN_9 | 
+S:BLIND | 
+S:S_MONSTER | S_SPIDER
+D:This elusive female spellcaster has her habitat in the deep of the swamps.
+
+N:7376:Archacolyte of Darkness
+G:P:b
+I:110:85d8:20:30:10
+W:60:1:1800:700
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:HIT:HURT:3d4
+B:HIT:HURT:3d4
+F:WILD_GRASS | WILD_WOOD | FORCE_MAXHP
+F:FORCE_SLEEP | DROP_SKELETON | DROP_CORPSE
+F:ONLY_ITEM | DROP_22 | HAS_LITE | BASEANGBAND
+F:SMART | OPEN_DOOR | BASH_DOOR | EVIL | NO_CONF |
+S:1_IN_6 | 
+S:HEAL | BLIND | HOLD | CONF | CAUSE_3 | ANIM_DEAD
+S:S_MONSTER | S_UNDEAD | BOULDER
+D:An evil priest, dressed all in black.  Deadly spells hit you at an 
+D:alarming rate as his black spiked mace rains down blow after blow on your 
+D:pitiful frame.
+
+N:7377:Sorceror of Darkness
+G:P:o
+I:110:80d8:20:25:10
+W:64:1:1700:640
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:HIT:HURT:2d8
+B:HIT:HURT:2d8
+B:HIT:PARALYZE
+F:MALE | WILD_GRASS | WILD_WASTE | FORCE_MAXHP
+F:FORCE_SLEEP | DROP_SKELETON | DROP_CORPSE
+F:ONLY_ITEM | DROP_12 | DROP_22 | HAS_LITE | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | EVIL | NO_CONF |
+S:1_IN_5 | 
+S:BLINK | TELE_TO | BLIND | CONF | CAUSE_3 | TRAPS | 
+S:BO_ACID | BA_FIRE | BA_COLD | 
+S:S_MONSTER | S_UNDEAD | S_DEMON | BOULDER
+D:A human figure in robes, he moves with magically improved speed, and his 
+D:hands are ablur with spell casting.
+
+N:7378:Thunderbird
+G:B:u
+I:110:76d8:20:30:10
+W:58:2:6000:608
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:CRUSH:HURT:8d12
+B:HIT:ELEC:12d12
+F:BASH_DOOR | CAN_FLY | WILD_MOUNTAIN | WILD_WOOD | WILD_GRASS
+F:ANIMAL | IM_ELEC | DROP_CORPSE | FORCE_MAXHP | BASEANGBAND
+D:A vast legendary bird, its iron talons rake the most impenetrable of 
+D:surfaces and its screech echoes through the many winding dungeon corridors.
+
+N:7379:Minotaur Guard
+G:H:U
+I:110:170d8:40:35:10
+W:35:1:15000:852
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BUTT:HURT:4d6
+B:CHARGE:HURT:3d6
+B:BITE:HURT:2d6
+B:HIT:HURT:2d6
+F:BASH_DOOR | DROP_SKELETON | DROP_CORPSE | POWERFUL | 
+D:SMART | DROP_22 | DROP_90 | DROP_GOOD
+F:EVIL | WILD_MOUNTAIN | FORCE_MAXHP | BASEANGBAND
+D:A cross between a human and a bull, terrible wardens of the labyrinthine dungeons. 
+
+N:7380:Fallen angel
+G:A:D
+I:115:306d8:30:70:255
+W:70:2:0:8360
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:GAZE:EXP_80:4d4
+B:HIT:HURT:8d6
+B:HIT:HURT:8d6
+F:FORCE_SLEEP | FORCE_MAXHP
+F:ONLY_ITEM | DROP_42 | DROP_GOOD | NO_FEAR | EVIL | REGENERATE
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR | POWERFUL | MOVE_BODY |
+F:IM_FIRE | IM_COLD | IM_POIS | RES_TELE | RES_NETH | 
+F:CAN_FLY | HAS_LITE | BASEANGBAND
+S:1_IN_6 | 
+S:TELE_TO | BLIND | SCARE | CAUSE_2 | BO_MANA | 
+S:S_DEMON | BO_NETH |
+D:An angelic being who was mighty once but dared defy the Omnipotent 
+D:to arms.
+
+N:7381:Bycefal Giant
+G:H:u
+I:110:470d8:20:25:40
+W:60:2:4000:6320
+E:1:1:1:2:1:0
+O:0:100:0:0
+B:HIT:HURT:6d8
+B:HIT:HURT:6d8
+B:HIT:HURT:6d8
+F:DROP_22 | OPEN_DOOR | BASH_DOOR | FORCE_MAXHP |
+F:DROP_SKELETON | DROP_CORPSE | IM_POIS | WILD_WASTE
+F:EVIL | POWERFUL | GIANT | BASEANGBAND
+S:1_IN_6
+S:SCARE | BA_NUKE | BLIND
+D:Giant double-headed humanoid abominations created by a magical mutation.
+
+N:7382:Dark elven sacrificer
+G:h:D
+I:110:92d8:20:28:10
+W:40:2:1300:920
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:HIT:HURT:2d8
+B:HIT:HURT:2d8
+F:FEMALE | WILD_WOOD
+F:FORCE_SLEEP | DROP_SKELETON | DROP_CORPSE
+F:ONLY_ITEM | DROP_22 | DROP_90 | FORCE_MAXHP
+F:SMART | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | HURT_LITE | NO_CONF | NO_SLEEP | BASEANGBAND
+S:1_IN_9 | 
+S:HEAL | BLINK | TELE_TO | BLIND | CONF | CAUSE_3 | DARKNESS | 
+S:BO_ACID | BA_FIRE | BA_COLD | ANIM_DEAD 
+S:S_MONSTER | S_UNDEAD | S_DEMON | MISSILE
+D:A dark elven figure, dressed in deepest black.  Power seems to crackle 
+D:from his slender frame.
+
+N:7383:Shadow demon
+G:G:v
+I:110:59d8:30:15:20
+W:60:2:0:2950
+E:0:0:0:0:0:0
+O:90:10:0:0
+B:TOUCH:EXP_80
+B:CLAW:LOSE_INT:3d10
+B:CLAW:LOSE_WIS:3d10
+F:FORCE_SLEEP | CAN_FLY | FORCE_MAXHP | BASEANGBAND |
+F:ONLY_ITEM | DROP_90 | POWERFUL | REGENERATE | HURT_LITE |
+F:INVISIBLE | COLD_BLOOD | PASS_WALL | RES_NETH |
+F:EVIL | DEMON | IM_COLD | IM_POIS | NO_CONF |
+S:1_IN_9 | 
+S:SCARE | BO_ICEE
+D:A mighty spirit of darkness of vaguely humanoid form.  Razor-edged claws 
+D:reach out to end your life as it glides towards you, seeking to suck the 
+D:energy from your soul to feed its power.
+
+N:7384:Iron Lich Skull
+G:L:s
+I:110:247d8:30:70:10
+W:60:2:0:2470
+E:0:0:0:0:1:0
+O:0:0:100:0
+B:BUTT:COLD:6d6
+B:BUTT:FIRE:6d6
+B:CHARGE:ELEC:6d6
+F:FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:COLD_BLOOD | BASH_DOOR | CAN_FLY | CAN_SPEAK
+F:EVIL | UNDEAD | POWERFUL | SMART |
+F:IM_FIRE | IM_COLD | IM_POIS | RES_TELE
+F:ONLY_ITEM | DROP_60 | DROP_GOOD | NO_CONF | 
+S:1_IN_9 |
+S:BA_WATE | BR_FIRE | BO_ICEE | BA_ELEC | BA_COLD |
+S:CAUSE_4 | DRAIN_MANA | BRAIN_SMASH |
+S:S_UNDEAD
+D:It is a huge, twisted grey skull floating through the air. Its cold eyes 
+D:burn with hatred towards all who live.
+
+N:7385:Dark goatling of Shub-Niggurath
+G:#:D
+I:110:186d8:20:37:80
+W:64:2:0:4880
+E:0:0:0:0:0:0
+O:0:50:30:5
+B:CRUSH:HURT:8d6
+B:CRUSH:HURT:8d6
+B:BITE:LOSE_STR:4d6
+F:FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:ONLY_ITEM | DROP_90 | NONLIVING | CAN_SWIM |
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | HURT_LITE |
+F:EVIL | DEMON | IM_FIRE | NO_CONF | RES_TELE | ELDRITCH_HORROR | 
+S:1_IN_9 | 
+S:BLIND | CAUSE_2 | 
+S:S_DEMON | HEAL 
+D:"Something black in the road, something that wasn't a tree. 
+D:Something big and black and ropy, just squatting there, waiting, 
+D:with ropy arms squirming and reaching... It came crawling up the 
+D:hillside... and it was the black thing of my dreams... that black, 
+D:ropy, slimy jelly tree-thing out of the woods. It crawled up and it 
+D:flowed up on its hoofs and mouths and snaky arms."
+
+N:7386:High Cultist Priest of Kina
+G:p:w
+I:110:145d8:20:35:10
+W:35:2:1800:1600
+E:1:1:1:2:1:1
+O:0:10:90:0
+B:HIT:HURT:3d4
+B:HIT:HURT:3d6
+F:MALE | WILD_GRASS | WILD_WOOD | BASEANGBAND
+F:FORCE_SLEEP | DROP_SKELETON | DROP_CORPSE
+F:ONLY_ITEM | DROP_22 | 
+F:SMART | OPEN_DOOR | BASH_DOOR | HAS_LITE
+F:EVIL | NO_CONF | ESCORT | FORCE_MAXHP
+S:1_IN_9 | 
+S:HEAL | BLIND | HOLD | CAUSE_4 | BRAIN_SMASH | ANIM_DEAD 
+S:S_MONSTERS | S_UNDEAD
+D:A dark priest of the highest order.  Powerful and evil, beware his many 
+D:spells.
+
+N:7387:Purple reaver
+G:L:v
+I:110:222d8:20:60:50
+W:66:1:2600:2220
+E:0:0:0:0:0:0
+O:0:0:100:0
+B:HIT:UN_BONUS:8d8
+B:HIT:LOSE_STR:8d6
+F:FORCE_SLEEP | SMART | FORCE_MAXHP | BASEANGBAND
+F:ONLY_ITEM | DROP_12 | DROP_GOOD | CAN_SWIM |
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | RES_TELE |
+F:NO_CONF | KILL_WALL | NO_FEAR
+S:1_IN_5 | 
+S:TELE_TO | BLIND | HOLD | CONF | CAUSE_3 | DRAIN_MANA | 
+S:MIND_BLAST | BA_NETH | ANIM_DEAD
+D:A humanoid form, of a midnight colored skin, advancing steadily and unstoppably.
+
+N:7388:Snapping Dracoturtle
+G:D:g
+I:110:399d8:25:75:30
+W:64:2:250000:19950
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:10d8
+B:BITE:HURT:10d8
+B:CRUSH:POISON:10d10
+F:FORCE_SLEEP | RES_TELE | AQUATIC | 
+F:WILD_OCEAN | FORCE_MAXHP | BASEANGBAND
+F:IM_FIRE | IM_ACID | DRAGON | NO_CONF | NO_FEAR
+S:1_IN_6 | 
+S:BO_ICEE | BR_ACID
+D:A huge aquatic dragon, its shell is as large as a small island. Some 
+D:have called this creature a dragon-turtle.
+
+N:7389:Snapping Dracoturtle
+G:D:g
+I:110:399d8:25:75:30
+W:64:100:250000:19950
+E:0:1:0:6:1:0
+O:0:0:0:0
+B:BITE:HURT:10d8
+B:BITE:HURT:10d8
+B:CRUSH:POISON:10d10
+F:FORCE_SLEEP | RES_TELE |  
+F:WILD_OCEAN | FORCE_MAXHP | BASEANGBAND
+F:IM_FIRE | IM_ACID | DRAGON | NO_CONF | NO_FEAR
+S:1_IN_6 | 
+S:BO_ICEE | BR_ACID
+D:A huge aquatic dragon, its shell is as large as a small island. Some 
+D:have called this creature a dragon-turtle.
+
+N:7390:Evil Ent
+G:%:G
+I:95:351d8:30:60:15
+W:61:2:0:3510
+E:1:1:1:2:1:1
+O:30:50:20:0
+B:CRUSH:HURT:10d10
+B:KICK:HURT:10d10
+F:FORCE_SLEEP | WILD_WOOD | BASEANGBAND
+F:ONLY_ITEM | DROP_22 | DROP_GOOD | MOVE_BODY |
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR |
+F:GIANT | MALE | FORCE_MAXHP |
+D:A treeherd; a sentient, moving tree. Its wrath is fearsome!
+
+# was a unique in ZMangband
+N:7391:Spectral Guardian of the Gates
+G:p:D
+I:110:219d7:40:45:0
+W:58:3:1600:25700
+E:1:1:1:2:1:1
+O:50:50:0:0
+B:CHARGE:EAT_GOLD:1d20
+B:CHARGE:EAT_ITEM:1d20
+B:SPIT:BLIND:5d10
+B:DROOL:DISEASE:8d4
+F:MALE | CAN_SPEAK | DROP_SKELETON | DROP_CORPSE
+F:FORCE_SLEEP | CAN_SWIM | FORCE_MAXHP
+F:ONLY_ITEM | DROP_22 | DROP_GOOD | BASEANGBAND | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:IM_POIS | IM_FIRE | NO_CONF | NO_SLEEP | EVIL | RES_TELE
+S:1_IN_6 | 
+S:TRAPS
+D:A mighty spectre, once a guardian of a legendary knowledge, long lost.
+
+N:7392:Krampus, Eater of Children
+G:h:r
+I:110:222d8:90:50:10
+W:73:3:2600:66660
+E:1:1:1:2:1:1
+O:25:25:25:25
+B:HIT:TERRIFY:5d6
+B:TOUCH:EAT_ITEM:1d10
+B:CHARGE:EAT_GOLD
+F:UNIQUE | MALE | CAN_SPEAK | REFLECTING | 
+F:DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP
+F:FORCE_SLEEP | SMART | CAN_SWIM | ONLY_ITEM | 
+F:DROP_32 | DROP_90 | DROP_GREAT | BASEANGBAND |
+F:NO_STUN | NO_CONF | IM_ELEC | IM_POIS | IM_COLD | 
+F:COLD_BLOOD | RES_TELE
+S:1_IN_5 |
+S:HOLD | DRAIN_MANA | SCARE | BLIND | DARKNESS
+S:S_DEMON | S_UNIQUE | 
+S:BA_NETH | FORGET | TRAPS | BRAIN_SMASH | TELE_AWAY 
+D:A demonic entity, a horned anthropomorphic figure who, in opposing Santa Claus, is said to stalk
+D: on him,  snatching the kids who are on the naughty list... 
+
+N:7393:Lord Priest of Chaos
+G:p:v
+I:110:234d8:30:40:5
+W:77:1:0:2340
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:KICK:HURT:30d2
+B:KICK:HURT:20d2
+B:HIT:POISON:30d1
+F:MALE | EVIL | DROP_GOOD | DROP_12 | BASEANGBAND
+F:FORCE_SLEEP | DROP_SKELETON | FORCE_MAXHP
+F:ONLY_ITEM | DROP_22 | ATTR_MULTI | SHAPECHANGER | ATTR_ANY |
+F:INVISIBLE | OPEN_DOOR | BASH_DOOR | SMART | POWERFUL |
+F:IM_ACID | IM_FIRE | IM_POIS | NO_CONF | HAS_LITE
+S:1_IN_6 |
+S:HEAL | MIND_BLAST | BR_CHAO |
+S:S_SPIDER | S_HOUND | S_DEMON
+D:He is one of the few true masters of the art, being extremely skillful in 
+D:all forms of unarmed combat and controlling the Logrus 
+D:with disdainful ease.
+
+N:7394:Chaos vortex
+G:v:v
+I:115:62d8:100:40:0
+W:76:1:0:620
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:ENGULF:ELEC:5d6
+B:ENGULF:FIRE:1d8
+B:ENGULF:ACID:1d8
+B:ENGULF:COLD:1d8
+F:ATTR_MULTI | ATTR_ANY | FORCE_MAXHP | BASEANGBAND
+F:NEVER_BLOW | RAND_25 | CAN_FLY |
+F:EMPTY_MIND | BASH_DOOR | POWERFUL | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING
+S:1_IN_6 | 
+S:BR_CHAO
+D:Void, nothingness, spinning destructively.
+
+N:7395:Spidergoblin
+G:S:g
+I:105:48d8:28:35:30
+W:30:1:500:480
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BITE:HURT:2d6
+B:CRUSH:HURT:2d8
+B:STING:POISON:2d8
+B:BITE:PARALYZE:1d6
+F:SMART | ANIMAL | EVIL | BASH_DOOR | OPEN_DOOR | CAN_SPEAK |
+F:IM_POIS | BASEANGBAND | 
+F:FORCE_MAXHP | DROP_90 | DROP_60 | DROP_12
+S:1_IN_9
+S:BO_POIS | S_SPIDER
+D:"...out of Hell, nightmarish abomination... Ahead of them it crawled 
+D:something with purulent, putrid, and blotchy green-skinned but also 
+D:quitinoid creature, and then they knew they were looking at something 
+D:only a crazed Goblin Shaman could ever come up with..."
+
+N:7396:Rotting Abomination of the swamps
+G:h:g
+I:105:100d8:10:30:20
+W:20:1:3000:1000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BITE:HURT:8d3
+B:CRUSH:HURT:8d3
+B:CLAW:POISON:2d4
+F:EMPTY_MIND | BASH_DOOR | IM_POIS | FORCE_MAXHP | BASEANGBAND
+F:NO_FEAR | NO_CONF | NO_SLEEP | NONLIVING | WILD_WASTE
+D:Formerly a humanoid form of life, raised from the dead by the toxic fumes of the swamps.
+
+N:7397:Creeping dust
+G:.:b
+I:105:1d8:30:30:100
+W:90:2:0:10
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:CONFUSE:3d4
+F:ATTR_MULTI | ATTR_ANY | 
+F:RAND_50 | RAND_25 | FRIENDS | BASEANGBAND |
+F:FORCE_SLEEP | HURT_ROCK |
+F:EMPTY_MIND | COLD_BLOOD | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | FORCE_MAXHP
+S:1_IN_6 | 
+S:BLINK | TPORT | BO_MANA |
+S:S_MONSTER | S_DEMON | S_HI_UNDEAD |
+D:This is what happens to a mage when a powerful spell fails.
+
+N:7398:Creeping dust
+G:.:b
+I:105:1d8:30:30:100
+W:90:10:0:10
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:CONFUSE:3d4
+F:ATTR_MULTI | ATTR_ANY | 
+F:RAND_50 | RAND_25 | FRIENDS | BASEANGBAND |
+F:FORCE_SLEEP | HURT_ROCK |
+F:EMPTY_MIND | COLD_BLOOD | 
+F:NO_CONF | NO_SLEEP | NO_FEAR | FORCE_MAXHP
+S:1_IN_6 | 
+S:BLINK | TPORT | BO_MANA |
+S:S_MONSTER | S_DEMON | S_HI_UNDEAD |
+S:MULTIPLY
+D:This is what happens to a mage when a powerful spell fails.
+
+N:7399:Dark elven torturer
+G:h:w
+I:62:92d8:20:35:10
+W:52:1:1700:920
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:TOUCH:EXP_80:2d8
+B:TOUCH:UN_POWER
+B:TOUCH:LOSE_DEX:8d4
+B:TOUCH:LOSE_INT:8d4
+F:FEMALE | FORCE_SLEEP | ONLY_ITEM | BASEANGBAND | DROP_22 | DROP_12
+F:SMART | INVISIBLE | COLD_BLOOD | UNDEAD | 
+F:EVIL | HURT_LITE | NO_CONF | FORCE_MAXHP
+S:1_IN_6 | 
+S:HEAL | BLINK | BLIND | CONF | CAUSE_3 | DARKNESS | 
+S:ANIM_DEAD | SHRIEK | TELE_AWAY | BA_DARK | DRAIN_MANA |
+S:S_MONSTER | S_UNDEAD | S_DEMON | S_KIN |
+D:A dark elven figure that glows with an inner light.
+
+N:7400:Aracnovore
+G:S:v
+I:110:93d8:20:30:40
+W:54:2:700:1860
+E:0:1:0:2:1:0
+O:50:0:50:0
+B:CLAW:HURT:4d8
+B:CLAW:HURT:8d4
+B:BITE:PARALYZE:1d6
+F:ESCORT | FORCE_MAXHP | BASEANGBAND
+F:DROP_12 | DROP_SKELETON | DROP_CORPSE
+F:OPEN_DOOR | BASH_DOOR | IM_POIS | IM_ACID | IM_COLD
+F:EVIL
+S:1_IN_6
+S:BO_POIS | HOLD
+D:A gaunt, vaguely humanoid torso merged with the form of a giant 
+D:spider, ugly as sin. It screams horribly as it charges at you.
+
+N:7401:Giant bullet ant
+G:a:w
+I:110:41d8:14:50:20
+W:55:1:500:410
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:3d10
+B:BITE:HURT:3d10
+B:BITE:HURT:3d10
+F:KILL_BODY | FRIENDS | DROP_SKELETON | FORCE_MAXHP
+F:WEIRD_MIND | BASH_DOOR | BASEANGBAND | 
+F:ANIMAL | IM_ACID | IM_FIRE | IM_COLD | DROP_CORPSE
+D:This ant is the champion of its Queen, and they are never alone.
+
+N:7402:Giant Iridescent Worm
+G:w:B
+I:105:8d8:10:10:10
+W:48:2:40:50
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:UN_POWER:1d3
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_50 | CAN_SWIM | FORCE_SLEEP | FORCE_MAXHP
+F:ANIMAL | IM_COLD | SUSCEP_FIRE | NO_FEAR | ATTR_MULTI | CAN_SWIM |
+F:WEIRD_MIND | BASH_DOOR | HAS_LITE
+D:This huge, almost 4 feet long, iridescent worm seems to shimmer with strange power.
+
+N:7403:Giant Iridescent Worm
+G:w:B
+I:105:8d8:10:10:10
+W:48:8:40:50
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:UN_POWER:1d3
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_50 | CAN_SWIM | FORCE_SLEEP | FORCE_MAXHP
+F:ANIMAL | IM_COLD | SUSCEP_FIRE | NO_FEAR | ATTR_MULTI | CAN_SWIM |
+F:WEIRD_MIND | BASH_DOOR | HAS_LITE
+S:MULTIPLY
+D:This huge, almost 4 feet long, iridescent worm seems to shimmer with strange power.
+
+N:7404:Giant Death Moth
+G:F:G
+I:110:13d8:12:10:50
+W:10:1:100:13
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:PARALYZE:1d4
+B:STING:HURT:1d8
+F:FORCE_SLEEP | WILD_WASTE | BASEANGBAND
+F:RAND_25 | WILD_MOUNTAIN | WILD_WOOD | WILD_SWAMP | WILD_SHORE
+F:WEIRD_MIND | 
+F:ANIMAL | CAN_FLY | DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP
+S:1_IN_6 | 
+S:BO_COLD
+D:A strange, creepy, bad-omen fated moth, with a skull pattern on its back.
+
+N:7405:Giant Death Moth
+G:F:G
+I:110:13d8:12:10:50
+W:10:8:100:13
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:PARALYZE:1d4
+B:STING:HURT:1d8
+F:FORCE_SLEEP | WILD_WASTE | BASEANGBAND
+F:RAND_25 | WILD_MOUNTAIN | WILD_WOOD | WILD_SWAMP | WILD_SHORE
+F:WEIRD_MIND | 
+F:ANIMAL | CAN_FLY | DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP
+S:MULTIPLY
+S:1_IN_6 | 
+S:BO_COLD
+D:A strange, creepy, bad-omen fated moth, with a skull pattern on its back.
+
+N:7406:War Dog
+G:C:r
+I:110:6d8:20:24:10
+W:4:1:600:8
+E:0:1:0:2:1:0
+O:30:30:0:10
+B:BITE:HURT:2d8
+B:BITE:HURT:2d8
+F:BASH_DOOR | EVIL | NO_SLEEP | NO_FEAR | FRIENDS 
+F:WILD_WASTE | BASEANGBAND | 
+F:ANIMAL | DROP_CORPSE | DROP_SKELETON | FORCE_MAXHP
+D:A specially war trained breed of mastiff, set free to roam the 
+D:dungeon in packs, to hunt down any intruder.  
+
+N:7407:Warp drake
+G:d:o
+I:110:152d8:25:65:15
+W:55:2:18000:7600
+E:0:1:0:6:1:0
+O:40:50:10:0
+B:CLAW:HURT:2d6
+B:CLAW:HURT:2d6
+B:BITE:HURT:2d8
+F:FORCE_SLEEP | WILD_WOOD | BASEANGBAND
+F:ONLY_ITEM | DROP_12 | DROP_GOOD | FORCE_MAXHP
+F:INVISIBLE | ATTR_CLEAR | CAN_FLY | PASS_WALL |
+F:DRAGON | NO_CONF | WEIRD_MIND | RES_NEXU | RES_TELE |
+S:1_IN_6 |
+S:BLINK | TPORT | TELE_TO | TELE_AWAY | TELE_LEVEL |
+S:BR_NEXU | BR_GRAV |
+D:A vaguely dragon-shaped distortion in the ether; it shimmers
+D:like a heat haze as you study it carefully.
+
+N:7408:Great dimensional wyrm
+G:D:G
+I:110:253d8:25:80:15
+W:70:2:190000:12650
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:6d12
+B:BITE:HURT:8d12
+F:FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:ONLY_ITEM | DROP_32 | INVISIBLE | ATTR_CLEAR | DROP_GOOD |
+F:CAN_FLY | PASS_WALL | POWERFUL | MOVE_BODY |
+F:SMART | WEIRD_MIND | DRAGON | NO_CONF |
+F:RES_NEXU | RES_TELE |
+S:1_IN_6 |
+S:BR_GRAV | BR_INER | BR_NEXU | BR_TIME |
+S:HASTE | SLOW | HOLD |
+S:BLINK | TPORT | TELE_TO | TELE_AWAY | TELE_LEVEL |
+D:This immense, vaguely dragon-shaped distortion in the ether has
+D:mastered the magics of both space and time.
+
+N:7409:Giant Tiger Scolopendra
+G:c:y
+I:110:2d8:10:12:30
+W:1:1:300:2
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:STING:HURT:1d4
+F:FORCE_MAXHP | BASEANGBAND
+F:WEIRD_MIND | CAN_SWIM | WILD_SWAMP
+F:WILD_WASTE | WILD_SHORE | WILD_MOUNTAIN |
+F:ANIMAL | WILD_WOOD |
+F:WILD_GRASS | RAND_25 | DROP_SKELETON | DROP_CORPSE |
+D:It is about 5 feet long and carnivorous.
+
+N:7410:Thulsa Doom, Archbishop of Set
+G:W:D
+I:110:450d8:90:60:10
+W:50:3:1500:15000
+E:1:1:1:2:1:1
+O:0:20:20:10
+B:HIT:HURT:5d10
+B:HIT:PARALYZE:5d10
+F:UNIQUE | MALE | RES_TELE | 
+F:FORCE_SLEEP | SMART | BASEANGBAND | 
+F:ONLY_ITEM | DROP_42 | DROP_GOOD | CAN_SPEAK | FORCE_MAXHP
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | MOVE_BODY | ESCORT
+F:EVIL | UNDEAD | IM_COLD | HURT_LITE | NO_CONF |
+S:1_IN_10 | 
+S:BLIND | HOLD | BRAIN_SMASH |  
+S:S_UNDEAD | HAND_DOOM
+D:The Evil Wizard, nemesis of Kull Of Atlantis. His face like a bare 
+D:white skull, in whose eye sockets flamed livid fire.
+D: He is the Unholy Servant of Set, commander of the Black Legion. 
+D: Roams the Earth in search of the True Power.
+
+N:7411:Giant Redback spider
+G:S:R
+I:110:50d8:20:45:50
+W:40:1:500:500
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:POISON:2d8
+B:BITE:POISON:2d6
+B:STING:PARALYZE:2d6
+F:FORCE_SLEEP | WEIRD_MIND | FORCE_MAXHP
+F:EVIL | ANIMAL | HURT_LITE | 
+F:IM_POIS | BASEANGBAND | 
+S:1_IN_6
+S:BA_ACID | MISSILE | SLOW |
+D:An intelligent arachnid whose victims die in a horrendous way.
+
+N:7412:Urock
+G:U:s
+I:110:163d8:20:50:80
+W:55:2:2700:8150
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:HIT:HURT:3d4
+B:CRUSH:HURT:8d12
+F:FORCE_SLEEP | ONLY_ITEM | DROP_60 | BASEANGBAND
+F:DROP_60 | POWERFUL | OPEN_DOOR | BASH_DOOR | DEMON | 
+F:EVIL | IM_FIRE | NO_CONF | NO_SLEEP | 
+S:1_IN_8
+S:BLIND | CONF
+D:It is a demon with a long neck and raking claws.
+
+N:7413:Hezrck
+G:U:g
+I:110:165d8:20:40:80
+W:56:2:2700:8250
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:HIT:HURT:3d4
+B:HIT:HURT:3d4
+F:FORCE_SLEEP | ESCORT | ONLY_ITEM | DROP_12 | FORCE_MAXHP
+F:DROP_12 | POWERFUL | OPEN_DOOR | BASH_DOOR | DEMON | 
+F:EVIL | IM_FIRE | NO_CONF | NO_SLEEP | BASEANGBAND | 
+S:1_IN_9
+S:BO_FIRE | S_DEMON
+D:It is a demon of lizard form with cruel-looking jaws.
+
+N:7414:Marilithian
+G:U:y
+I:110:170d8:20:60:80
+W:64:2:2700:8500
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:HIT:HURT:4d6
+B:HIT:HURT:4d6
+F:FEMALE | FORCE_SLEEP | ONLY_ITEM | DROP_12 | FORCE_MAXHP
+F:DROP_12 | POWERFUL | OPEN_DOOR | BASH_DOOR | DEMON
+F:EVIL | IM_FIRE | NO_CONF | NO_SLEEP | BASEANGBAND
+S:1_IN_9
+S:CAUSE_2 | BLIND | S_DEMON
+D:She is a demon of female form with many arms, each bearing deadly weapons.
+
+N:7415:Larval Balrog
+G:U:v
+I:100:350d8:20:45:80
+W:69:2:2700:17500
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:HIT:FIRE:4d12
+B:HIT:FIRE:4d12
+B:CRUSH:HURT:3d12
+F:FORCE_SLEEP | ONLY_ITEM | DROP_12 | DROP_22 | BASEANGBAND
+F:DROP_22 | DROP_GOOD | POWERFUL | OPEN_DOOR | BASH_DOOR
+F:MOVE_BODY | DEMON | EVIL | IM_FIRE | FORCE_MAXHP
+F:NO_CONF | 
+S:1_IN_6
+S:BR_FIRE | BLIND | CONF | S_DEMON | BO_PLAS | BO_FIRE
+D:It is a massive humanoid demon wreathed in flames.
+
+N:7416:Dark elven summoner
+G:p:o
+I:110:130d8:30:60:5
+W:50:3:1700:5500
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:KICK:HURT:2d10
+B:KICK:HURT:2d10
+B:HIT:PARALYZE:1d10
+F:MALE | FORCE_SLEEP | ONLY_ITEM | DROP_12 | FORCE_MAXHP
+F:DROP_12 | DROP_22 | INVISIBLE | OPEN_DOOR |
+F:BASH_DOOR | IM_ACID | IM_ELEC | IM_FIRE | IM_COLD
+F:IM_POIS | NO_CONF | BASEANGBAND | 
+S:1_IN_6
+S:HEAL | S_HOUND  | S_SPIDER |
+D:A lord of all that is natural, skilled in the mystic ways.  He is a master 
+D:of martial arts and is at one with nature, able to summon help from the 
+D:wild if need be.
+
+N:7417:Grand master monk
+G:p:o
+I:110:277d8:30:80:5
+W:74:2:1700:8310
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:KICK:HURT:2d20
+B:HIT:PARALYZE:1d12
+F:MALE | FORCE_SLEEP | ONLY_ITEM | DROP_42 | FORCE_MAXHP
+F:DROP_42 | OPEN_DOOR | BASH_DOOR | IM_ACID
+F:IM_ELEC | IM_FIRE | IM_COLD | IM_POIS | 
+F:NO_CONF | BASEANGBAND | 
+S:1_IN_6
+S:MIND_BLAST | HEAL | S_ANT | S_SPIDER | S_HOUND
+D:He is one of the few true masters of the art, being extremely skillful in 
+D:all forms of unarmed combat and controlling the world's natural creatures 
+D:with disdainful ease.
+
+N:7418:Black Paladin
+G:p:D
+I:110:20d8:20:40:40
+W:30:1:1700:400
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:HIT:HURT:4d6
+B:HIT:HURT:4d6
+F:MALE | DROP_12 | OPEN_DOOR | BASH_DOOR |
+F:FORCE_MAXHP | BASEANGBAND
+S:1_IN_6
+S:CAUSE_2 | SCARE | BLIND | SLOW | HEAL
+D:A warrior for a holy cause.  Unfortunately, his god is not yours, and 
+D:there is rivalry even between the various gods of Good, so he is your 
+D:enemy.
+
+N:7419:Bakemono
+G:k:u
+I:110:22d8:20:22:10
+W:4:1:600:12
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:HIT:HURT:2d8
+B:HIT:HURT:2d8
+F:DROP_90 | OPEN_DOOR | BASH_DOOR | EVIL | DROP_12 | FORCE_MAXHP
+F:WILD_WASTE | BASEANGBAND | 
+F:MALE | DROP_CORPSE | DROP_SKELETON | CAN_SPEAK
+S:1_IN_9 | 
+S:BO_PLAS | MISSILE 
+D:It is a lesser demonlike creature, white fangs and yellow 
+D:flashing eyes. Laughs at you histerically.
+
+N:7420:Kobold Shaman
+G:k:r
+I:110:13d8:20:18:15
+W:4:1:800:3
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d8
+F:DROP_60 | OPEN_DOOR | BASH_DOOR | EVIL | IM_POIS | HAS_LITE | FORCE_MAXHP
+F:IM_POIS | WILD_WASTE | DROP_12 | CAN_SPEAK | BASEANGBAND
+S:1_IN_6
+S:MISSILE | CONF | HEAL |
+D:It is a kobold dressed in skins and gesturing wildly.
+
+N:7421:Nighthawk
+G:B:u
+I:115:22d8:30:25:10
+W:12:2:800:28
+E:0:1:1:0:1:0
+O:30:30:40:0
+B:CLAW:HURT:1d8
+B:CLAW:HURT:1d8
+B:BITE:HURT:1d10
+F:ANIMAL | NO_FEAR | WILD_WASTE | WILD_WOOD |
+F:FORCE_MAXHP | BASEANGBAND
+S:1_IN_6
+S:DARKNESS
+D:Trained to hunt and kill without fear.
+
+N:7422:Werewolf chieftain
+G:C:D
+I:110:160d8:20:20:5
+W:40:2:1000:1600
+E:0:1:0:2:1:0
+O:30:30:40:0
+B:CLAW:HURT:2d6
+B:CLAW:HURT:2d6
+B:BITE:HURT:2d10
+B:WAIL:TERRIFY
+F:MALE | ESCORT | SMART | BASEANGBAND | 
+F:SMART | OPEN_DOOR | BASH_DOOR | EVIL | ANIMAL | FORCE_MAXHP
+F:IM_ACID | IM_COLD | NO_FEAR | 
+S:1_IN_6
+S:ARROW_4 | SCARE
+D:A great wolf-chieftain whose pack is in the service of the Dark Lord, and 
+D:whose howls strike fear into even the boldest heart.
+
+N:7423:Kobold Archer
+G:k:g
+I:110:3d8:20:12:10
+W:5:1:800:6
+E:1:1:1:2:1:1
+O:0:50:0:0
+B:HIT:HURT:1d6
+F:WILD_WASTE | FORCE_MAXHP | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | IM_POIS | FORCE_MAXHP | DROP_12
+S:1_IN_8
+S:ARROW_1 
+D:It is a small, dog-headed humanoid with a bow.
+
+N:7424:Kobold chieftain
+G:k:D
+I:110:45d8:20:24:30
+W:14:1:800:25
+E:1:1:1:2:1:1
+O:0:90:0:0
+B:HIT:HURT:1d12
+F:DROP_22 | DROP_60 | BASEANGBAND
+F:ESCORT | CAN_SPEAK | FORCE_MAXHP
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | IM_POIS
+D:It is an important-looking kobold wearing furs and weilding a mace.
+
+N:7425:Masked Thief
+G:p:D
+I:110:15d8:20:16:25
+W:15:2:1700:100
+E:1:1:1:2:1:1
+O:55:40:5:0
+B:HIT:HURT:2d6
+B:HIT:EAT_GOLD:1d6
+F:WILD_WOOD | WILD_WASTE | WILD_GRASS | 
+F:MALE | DROP_SKELETON | DROP_CORPSE | CAN_SPEAK | FORCE_MAXHP
+F:DROP_12 | DROP_90 | BASEANGBAND
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | 
+F:EVIL
+D:A shifty character, who eyes your money pouch greedily.
+
+N:7426:Manpig abomination
+G:H:v
+I:110:104d8:30:40:25
+W:55:3:2000:7500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:HURT:5d5
+B:CLAW:HURT:5d5
+B:BITE:HURT:4d4
+F:BASH_DOOR | OPEN_DOOR | KILL_ITEM | WILD_WOOD | WILD_WASTE | 
+F:ANIMAL | EVIL | DROP_12 | DROP_CORPSE | BASEANGBAND
+F:DROP_GREAT
+F:MALE | EVIL | IM_COLD | IM_POIS | FORCE_MAXHP
+S:1_IN_9
+S:HASTE | SCARE | SHRIEK
+D:An horrendous abomination, part human, part pig, 
+D:all rotting teeth. You can smell it before you see it.  
+
+N:7427:Hunter
+G:p:u
+I:110:3d8:20:12:50
+W:1:1:1700:2
+E:1:1:1:2:1:1
+O:50:25:0:25
+B:HIT:HURT:1d8
+F:MALE | WILD_WOOD | WILD_WASTE | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND |
+F:DROP_60 | ONLY_ITEM | DROP_12 | FORCE_MAXHP
+F:OPEN_DOOR | BASH_DOOR |
+S:1_IN_6
+S:ARROW_1 |
+D:He makes a living from hunting and selling the game, and maybe your head.
+
+#Added the Green Slime mold, Great of the Roguelikes.
+N:7428:Slime Fungus
+G:m:g
+I:110:1d8:0:6:10
+W:1:1:150:1
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:POISON:2d4
+B:SPIT:HURT:1d4
+B:SPORE:HURT:1d4
+F:FORCE_MAXHP
+F:EMPTY_MIND | NEVER_MOVE | BASEANGBAND
+F:IM_POIS | DROP_SKELETON | NO_FEAR | NO_SLEEP | CAN_SPEAK
+S:1_IN_6
+S:SHRIEK
+D:A slimy green growth. Where did you think the Slime Mold comes from?
+
+N:7429:Skaven Priest of Chaos
+G:r:g
+I:110:120d8:18:25:90
+W:10:1:600:12
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:CLAW:HURT:4d4
+B:CLAW:POISON:4d4
+B:BITE:HURT:4d6
+F:DROP_90 | DROP_GOOD | DROP_12 | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | ESCORT | ANIMAL | EVIL | FORCE_MAXHP
+F:DROP_CORPSE | IM_POIS | DROP_SKELETON | AURA_ELEC
+S:1_IN_9
+S:BA_POIS | CAUSE_2
+D:A crazed disease-ridden fanatic from clan Pestilens.
+
+N:7430:Wild Boar
+G:q:u
+I:110:6d8:10:13:100
+W:4:1:800:6
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:BITE:HURT:1d4
+B:CHARGE:HURT:1d6
+F:ANIMAL | RAND_25 | FRIENDS | BASEANGBAND | 
+F:DROP_CORPSE | DROP_SKELETON | BASH_DOOR | FORCE_MAXHP
+D:A fiery boar, foraging the dungeons, huge in  size, with even huger tusks. 
+
+N:7431:Giant swamp rat
+G:r:g
+I:110:4d8:20:12:50
+W:5:1:200:3
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d3
+B:BITE:POISON:3d3
+F:EVIL | ANIMAL | 
+F:RAND_25 | BASEANGBAND | 
+F:DROP_CORPSE | FRIENDS | DROP_SKELETON | FORCE_MAXHP
+D:A disgusting four foot rodent with grimy fur. It stinks of refuse.
+
+N:7432:Giant swamp rat
+G:r:g
+I:110:4d8:20:12:50
+W:5:5:200:3
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d3
+B:BITE:POISON:3d3
+F:EVIL | ANIMAL | 
+F:RAND_25 | BASEANGBAND | 
+F:DROP_CORPSE | FRIENDS | DROP_SKELETON | FORCE_MAXHP
+S:MULTIPLY
+D:A disgusting four foot rodent with grimy fur. It stinks of refuse.
+
+N:7433:Giant whitewinged bat
+G:b:W
+I:120:1d8:20:15:15
+W:5:1:500:2
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+B:BITE:HURT:1d6
+F:RAND_25 | DROP_CORPSE | FRIENDS | BASEANGBAND
+F:WEIRD_MIND | ANIMAL | CAN_FLY | WILD_WOOD |
+F:WILD_SWAMP | WILD_SHORE | DROP_CORPSE | DROP_SKELETON | AURA_COLD
+F:IM_COLD | IM_ELEC | FORCE_MAXHP
+D:A giant vampire bat, of unnatural origin, shrouded in cold, its wings white leathery looking.
+
+N:7434:Boskovlado, King of Goblins
+G:g:v
+I:110:175d8:20:28:20
+W:10:3:800:250
+E:1:1:1:2:1:1
+O:25:25:0:25
+B:CLAW:HURT:1d8
+B:HIT:HURT:1d8
+B:HIT:HURT:1d6
+F:UNIQUE | MALE | EVIL | SMART | ESCORT | DROP_SKELETON | DROP_CORPSE
+F:ONLY_ITEM | DROP_90 | DROP_22 | DROP_GOOD | 
+F:OPEN_DOOR | BASH_DOOR | ORC | CAN_SPEAK | FORCE_MAXHP
+F:RAND_25 | BASEANGBAND | 
+S:1_IN_9 |
+S:HEAL | SHRIEK | MISSILE | S_KIN 
+D:A huge goblin, always thirsty of the blood of adventurers, 
+D:claiming their heads. Commanding a little army.
+
+N:7435:Glowing bug
+G:x:y
+I:110:2d8:5:10:10
+W:3:1:10:2
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPIT:POISON:1d6
+B:STING:POISON:1d4
+F:SMART | EMPTY_MIND | HAS_LITE | CAN_FLY | 
+F:CAN_SWIM | DROP_CORPSE | BASEANGBAND
+F:NO_FEAR | NO_SLEEP | NO_CONF | NO_STUN | 
+F:FRIENDS | DROP_SKELETON | CAN_SPEAK | FORCE_MAXHP
+D:A strange huge crawling bug, its abdomen glowing eerily in the dark.
+
+N:7436:Glowing bug
+G:x:y
+I:110:2d8:5:10:10
+W:3:10:10:2
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPIT:POISON:1d6
+B:STING:POISON:1d4
+F:SMART | EMPTY_MIND | HAS_LITE | CAN_FLY | 
+F:CAN_SWIM | DROP_CORPSE | BASEANGBAND
+F:NO_FEAR | NO_SLEEP | NO_CONF | NO_STUN | 
+F:FRIENDS | DROP_SKELETON | CAN_SPEAK | FORCE_MAXHP
+S:MULTIPLY
+D:A strange huge crawling bug, its abdomen glowing eerily in the dark.
+
+N:7437:Chained fairy
+G:*:W
+I:110:1d1:5:5:5
+W:5:1:100:1
+E:1:1:1:2:1:1
+O:0:0:0:0
+F:DROP_SKELETON | DROP_CORPSE | DROP_12 | BASEANGBAND
+F:EMPTY_MIND | HAS_LITE | DROP_GOOD | DROP_90 | NEVER_MOVE
+F:NO_FEAR | NO_SLEEP | NO_CONF | NO_STUN | CAN_SPEAK | NEUTRAL
+D:Here lies a fairy, chained to the ground. Goblin's cruelty is horrible.
+
+N:7438:Sewer crocodile
+G:R:g
+I:110:9d8:20:16:15
+W:3:2:2000:5
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+B:BITE:PARALYZE
+F:RAND_25 | BASH_DOOR | EVIL | FORCE_SLEEP | NO_FEAR | FORCE_MAXHP
+F:WILD_WASTE | BASEANGBAND | 
+F:WILD_SHORE | WILD_SWAMP
+F:ANIMAL | MALE | DROP_CORPSE | DROP_SKELETON
+D:They say from the bellies of the cities, came a race of dark, hard-scaled, stenchy crocs,
+D: lethal hunters of everything and anything they can swallow down...
+
+N:7439:Bugbear
+G:o:u
+I:110:28d8:20:28:50
+W:7:1:1000:24
+E:1:1:1:2:1:1
+O:10:80:10:0
+B:HIT:HURT:2d6
+B:HIT:HURT:1d8
+F:MALE | BASEANGBAND | 
+F:DROP_90 | DROP_GOOD | WILD_WOOD | WILD_MOUNTAIN
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | DROP_60
+F:EVIL | ORC | HURT_LITE | CAN_SPEAK | FORCE_MAXHP
+S:1_IN_6
+S:MISSILE
+D:A big, wide-shouldered hybrid of the orc and goblin races, breeded for battle and mayhem.
+
+N:7440:Genestealer Cultist Priest
+G:p:v
+I:110:28d8:20:20:10
+W:4:1:1700:8
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:2d4
+B:HIT:HURT:2d6
+B:CLAW:DISEASE:1d8
+F:DROP_CORPSE | DROP_SKELETON | EVIL | REGENERATE
+F:WEIRD_MIND | BASH_DOOR | COLD_BLOOD
+F:NO_FEAR | BASEANGBAND | FORCE_MAXHP
+S:1_IN_9
+S:HEAL | S_MONSTER
+D:The Genestealer Cult needs biohosts, to carry the World-Eating seed, and any adventurer with
+D: enough bad luck to encounter their Fanatic Cultist is a good candidate...
+
+N:7441:Spectral pirate
+G:G:R
+I:110:2d8:10:15:10
+W:5:1:600:7
+E:0:0:0:0:0:0
+O:50:5:30:15
+B:WAIL:EAT_GOLD
+B:TOUCH:TERRIFY
+B:TOUCH:PARALYZE:1d6
+F:RAND_25 | CAN_FLY | BASEANGBAND | 
+F:DROP_60 | DROP_90 | WILD_SHORE | WILD_SWAMP | FORCE_MAXHP
+F:INVISIBLE | COLD_BLOOD | PASS_WALL |
+F:EVIL | UNDEAD | 
+F:IM_COLD | IM_POIS | HURT_LITE | NO_CONF | NO_SLEEP
+S:1_IN_10 | 
+S:BLINK | SHRIEK
+D:It is a ghastly, ghostly form.
+
+N:7442:Chained Demondog
+G:u:r
+I:110:35d8:20:24:30
+W:10:1:800:17
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:BITE:HURT:1d8
+B:WAIL:TERRIFY:1d8
+F:NO_SLEEP | BASEANGBAND | 
+F:DROP_SKELETON | DROP_CORPSE | NEVER_MOVE
+F:EVIL | DEMON | IM_FIRE | NO_FEAR | AURA_FIRE
+S:1_IN_10
+S:BO_FIRE | SHRIEK
+D:A terrible form of canine demon, chained to the ground to guard the dungeons, 
+D: by other greater demons.
+
+N:7443:Minor Demogorgon
+G:u:r
+I:110:50d8:20:26:10
+W:10:2:300:25
+E:0:1:0:2:1:0
+O:30:30:40:0
+B:BITE:HURT:1d10
+B:BITE:TERRIFY:1d10
+F:RAND_25 | DROP_60 | BASH_DOOR | EVIL | NO_FEAR | FORCE_MAXHP
+F:WILD_WASTE | BASEANGBAND | 
+F:NO_SLEEP | NO_FEAR
+F:DEMON | MALE | DROP_CORPSE | DROP_SKELETON | IM_FIRE | IM_COLD
+D:Often called life-seeker, a doglike demon, but walking on 
+D:two legs, in the place of its head there's a gaping maw,
+D: in the horrid shape of a blood-dripping, teeth-filled, flower-like bud.
+
+N:7444:Pterodactyl
+G:R:s
+I:105:60d8:10:24:25
+W:15:1:2500:18
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:HURT:2d10
+B:BITE:TERRIFY:2d8
+F:RAND_25 | CAN_FLY | ANIMAL | NO_FEAR | FORCE_MAXHP
+F:DROP_CORPSE | DROP_SKELETON | BASEANGBAND
+D:A prehistoric beast, a giant bat-like, humongous wings 
+D:dragging, grayish leathery skin, the head
+D: shaped like an elongated version of one of a horrid reptile.
+
+N:7445:Bantha
+G:q:U
+I:105:110d8:10:28:125
+W:17:1:2500:22
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BUTT:HURT:2d10
+B:BUTT:HURT:2d10
+B:CHARGE:HURT:2d12
+F:RAND_25 | ANIMAL | NO_FEAR | NO_STUN | FORCE_SLEEP | FORCE_MAXHP
+F:POWERFUL | BASEANGBAND
+F:WILD_WOOD | WILD_GRASS | WILD_MOUNTAIN | WILD_SWAMP | WILD_WASTE
+F:DROP_CORPSE | DROP_SKELETON | WILD_SHORE
+D:Large, quadrupedal mammals, with long, sharp, spiraling horns. 
+D:Usually peaceful but lethal when in packs and break into stampede.
+
+N:7446:Stinking Bantha
+G:q:U
+I:110:110d14:10:48:125
+W:37:1:2500:225
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BUTT:HURT:4d10
+B:BUTT:HURT:4d10
+B:CHARGE:HURT:4d12
+F:RAND_25 | ANIMAL | NO_FEAR | NO_STUN | FORCE_SLEEP | FORCE_MAXHP
+F:POWERFUL | BASEANGBAND
+F:WILD_WOOD | WILD_GRASS | WILD_MOUNTAIN | WILD_SWAMP | WILD_WASTE
+F:DROP_CORPSE | DROP_SKELETON | WILD_SHORE | FRIEND
+S:1_IN_8
+S:PERFUME
+D:Large, quadrupedal mammals, with long, sharp, spiraling horns. 
+D:Usually peaceful but lethal when in packs and break into stampede. 
+D:They also tend to emit a horrible stink. 
+
+N:7447:Frenzied Stinking Bantha
+G:q:U
+I:120:110d22:10:60:125
+W:57:1:2500:1225
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BUTT:HURT:5d10
+B:BUTT:HURT:5d10
+B:CHARGE:HURT:5d12
+F:RAND_25 | ANIMAL | NO_FEAR | NO_STUN | FORCE_SLEEP | FORCE_MAXHP
+F:POWERFUL | BASEANGBAND
+F:WILD_WOOD | WILD_GRASS | WILD_MOUNTAIN | WILD_SWAMP | WILD_WASTE
+F:DROP_CORPSE | DROP_SKELETON | WILD_SHORE | FRIENDS
+S:1_IN_7
+S:PERFUME
+D:Large, quadrupedal mammals, with long, sharp, spiraling horns. 
+D:Usually peaceful but lethal when in packs and break into stampede. 
+D:They also tend to emit a horrible stink, and seem to be out of 
+D:control. Watch out to not get overrun! 
+
+N:7448:Giant Python
+G:J:g
+I:105:15d8:6:20:50
+W:4:1:1200:8
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:CRUSH:HURT:1d8
+B:BITE:HURT:1d8
+B:CRUSH:PARALYZE:1d8
+F:RAND_25 | CAN_SWIM | DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP
+F:WILD_WOOD | WILD_GRASS | WILD_MOUNTAIN | WILD_SWAMP | WILD_WASTE
+F:BASH_DOOR | WILD_SHORE | BASEANGBAND
+F:ANIMAL | 
+D:It is about 16 feet long, his dark, greenish scaled body, perfectly made to prey on big victims.
+
+N:7449:Swamp Dweller
+G:h:U
+I:105:14d8:10:20:20
+W:7:3:800:15
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BITE:HURT:2d8
+B:CLAW:POISON:2d4
+F:EVIL | EMPTY_MIND | BASH_DOOR | IM_POIS | WILD_SWAMP | WILD_SHORE
+F:NO_FEAR | SUSCEP_FIRE | NONLIVING | WILD_WASTE | FRIENDS
+F:DROP_CORPSE | DROP_SKELETON | FORCE_MAXHP | BASEANGBAND
+D:A long forsaken race of disformed humanoids, forced to live in humid and stale areas, avoiding
+D: contact with any other living race. They say they are related to ghouls.
+
+N:7450:The Slashier Lord
+G:p:B
+I:110:158d8:25:50:10
+W:54:3:1700:7400
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:6d6
+B:HIT:HURT:6d6
+B:KICK:HURT:3d8
+F:UNIQUE | MALE | CAN_SPEAK | 
+F:FORCE_SLEEP | DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP
+F:ONLY_ITEM | DROP_12 | DROP_GOOD | DROP_90 | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | EVIL | IM_ACID | IM_POIS | 
+F:NO_CONF | ESCORT
+S:1_IN_6 | 
+S:HEAL | SCARE | CAUSE_1
+D:A mighty Vampire Killer Lord, on his journey from Castlevania's Rogue Temple, searching to 
+D: destroy his Nemesis, the Count Vlad Dracula.
+
+N:7451:Re-animated corpse
+G:h:G
+I:105:14d8:20:12:20
+W:10:1:400:6
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:POISON:1d4
+B:BITE:HURT:1d4
+B:CLAW:DISEASE:1d4
+F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | BASEANGBAND | 
+F:UNDEAD | IM_COLD | IM_POIS | DROP_SKELETON | DROP_CORPSE
+F:NO_CONF | NO_SLEEP | NO_FEAR | SUSCEP_FIRE | FORCE_MAXHP | 
+F:DROP_60 | DROP_60
+D:Similar to a zombie, but this thing is the failed result of poor black magic spellcasting,
+D: turning a living victim into mindless walking shell.
+
+N:7452:Goristhro Hierophant, Lord of Hell
+G:W:D
+I:110:350d8:90:60:10
+W:55:3:1000:10500
+E:1:1:1:2:1:1
+O:0:20:20:10
+B:HIT:HURT:2d10
+B:HIT:PARALYZE:2d10
+B:BUTT:HURT:2d10
+F:UNIQUE | MALE | RES_TELE | 
+F:FORCE_SLEEP | SMART | BASEANGBAND | 
+F:ONLY_ITEM | DROP_42 | DROP_GOOD  | DROP_SKELETON | DROP_CORPSE
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | MOVE_BODY | CAN_SWIM 
+F:EVIL | UNDEAD | IM_COLD | HURT_LITE | NO_CONF | FORCE_MAXHP
+S:1_IN_6 | 
+S:BLIND | HOLD | BRAIN_SMASH |  
+S:S_UNDEAD | S_MONSTERS | ANIM_DEAD |
+D:One of the most powerful lords of Hell, half bull, half wolf, half human, once a mighty evil 
+D: wizard, guards the Gates of the Black Knowledge.
+
+N:7453:Goblin Shaman
+G:g:R
+I:110:12d8:20:25:30
+W:2:1:500:5
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d8
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN
+F:OPEN_DOOR | BASH_DOOR | CAN_SPEAK | FORCE_MAXHP
+F:DROP_90 | DROP_SKELETON | DROP_CORPSE | DROP_90
+F:EVIL | ORC | HURT_LITE | BASEANGBAND |
+S:1_IN_10
+S:HEAL | DARKNESS | MISSILE | 
+D:The crude shamanism in the goblin race is present in some of 
+D:them as well. Pure evil in small size, but dangerous.
+
+N:7454:Undead Goblin
+G:g:D
+I:105:14d8:20:20:30
+W:10:1:200:14
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d10
+B:HIT:COLD:1d10
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | FORCE_MAXHP
+F:OPEN_DOOR | BASH_DOOR | UNDEAD | AURA_COLD | IM_POIS | IM_COLD
+F:RAND_25 | DROP_60 | DROP_SKELETON | DROP_CORPSE | COLD_BLOOD
+F:EVIL | ORC | HURT_LITE | DROP_90 | BASEANGBAND
+D:The ultimate abomination created by a crazy shaman goblin, 
+D:a mock of goblinoid life, cruel and horrible.
+
+N:7455:Firespitting bug
+G:x:R
+I:110:4d8:10:10:10
+W:5:1:0:8
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:FIRE:1d8
+B:STING:POISON:1d6
+F:RAND_25 | FRIENDS | CAN_FLY | WEIRD_MIND | 
+F:HAS_LITE | DROP_SKELETON | FORCE_MAXHP | BASEANGBAND
+F:ANIMAL | NO_FEAR | IM_FIRE | SMART | SUSCEP_COLD | 
+F:CAN_SWIM | CAN_SPEAK | DROP_CORPSE
+D:Fierce and spitting fire, it can be small but it's dangerous... 
+
+N:7456:Firespitting bug
+G:x:R
+I:110:4d8:10:10:10
+W:5:10:0:8
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:FIRE:1d8
+B:STING:POISON:1d6
+F:RAND_25 | FRIENDS | CAN_FLY | WEIRD_MIND | 
+F:HAS_LITE | DROP_SKELETON | FORCE_MAXHP | BASEANGBAND
+F:ANIMAL | NO_FEAR | IM_FIRE | SMART | SUSCEP_COLD | 
+F:CAN_SWIM | CAN_SPEAK | DROP_CORPSE
+S:MULTIPLY
+D:Fierce and spitting fire, it can be small but it's dangerous... 
+
+N:7457:Flesh Eating bug
+G:x:g
+I:110:7d8:10:10:10
+W:7:1:0:10
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:ACID:1d8
+B:STING:POISON:1d8
+F:FORCE_MAXHP
+F:RAND_25 | FRIENDS | CAN_FLY | CAN_SWIM | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND
+F:SMART | WEIRD_MIND | ANIMAL | NO_FEAR | 
+F:IM_POIS | SUSCEP_FIRE | CAN_SPEAK
+D:They look rotting and slow but don't let them get close to you... or it can get INSIDE you... 
+
+N:7458:Flesh Eating bug
+G:x:g
+I:110:7d8:10:10:10
+W:7:10:0:10
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:ACID:1d8
+B:STING:POISON:1d8
+F:FORCE_MAXHP
+F:RAND_25 | FRIENDS | CAN_FLY | CAN_SWIM | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND
+F:SMART | WEIRD_MIND | ANIMAL | NO_FEAR | 
+F:IM_POIS | SUSCEP_FIRE | CAN_SPEAK
+S:MULTIPLY
+D:They look rotting and slow but don't let them get close to you... or it can get INSIDE you... 
+
+N:7459:Freezing bug
+G:x:B
+I:110:10d8:10:10:10
+W:10:1:0:14
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:COLD:3d6
+B:STING:POISON:1d4
+F:FORCE_MAXHP
+F:RAND_25 | FRIENDS | CAN_FLY | SMART | 
+F:WEIRD_MIND | HAS_LITE | DROP_CORPSE | BASEANGBAND
+F:ANIMAL | NO_FEAR | IM_ELEC | CAN_SWIM | DROP_SKELETON | CAN_SPEAK
+D:They look like little snowflakes, crawling towards you, with bad intentions...
+
+N:7460:Freezing bug
+G:x:B
+I:110:10d8:10:10:10
+W:10:10:0:14
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:COLD:3d6
+B:STING:POISON:1d4
+F:FORCE_MAXHP
+F:RAND_25 | FRIENDS | CAN_FLY | SMART | 
+F:WEIRD_MIND | HAS_LITE | DROP_CORPSE | BASEANGBAND
+F:ANIMAL | NO_FEAR | IM_ELEC | CAN_SWIM | DROP_SKELETON | CAN_SPEAK
+S:MULTIPLY
+D:They look like little snowflakes, crawling towards you, with bad intentions...
+
+N:7461:Shocking bug
+G:x:y
+I:110:15d8:10:15:10
+W:15:1:0:24
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:ELEC:3d8
+B:STING:POISON:1d5
+F:FORCE_MAXHP
+F:RAND_25 | FRIENDS | CAN_FLY | SMART | 
+F:WEIRD_MIND | HAS_LITE | DROP_CORPSE | BASEANGBAND
+F:ANIMAL | NO_FEAR | IM_ELEC | CAN_SWIM | DROP_SKELETON | CAN_SPEAK
+D:It looks a bit like a grid bug. 
+
+N:7462:Shocking bug
+G:x:y
+I:110:15d8:10:15:10
+W:15:10:0:24
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:ELEC:3d8
+B:STING:POISON:1d5
+F:FORCE_MAXHP
+F:RAND_25 | FRIENDS | CAN_FLY | SMART | 
+F:WEIRD_MIND | HAS_LITE | DROP_CORPSE | BASEANGBAND
+F:ANIMAL | NO_FEAR | IM_ELEC | CAN_SWIM | DROP_SKELETON | CAN_SPEAK
+S:MULTIPLY
+D:It looks a bit like a grid bug. 
+
+N:7463:Gnoll
+G:g:U
+I:110:16d8:20:22:20
+W:12:1:700:24
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:3d6
+B:HIT:HURT:3d6
+F:FORCE_MAXHP
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | 
+F:ESCORT | DROP_90 | DROP_60 | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | SUSCEP_COLD | SMART
+D:Rumours of a mad warlock crossing goblins with other 
+D:bigger races to create a fierce guard seems to be true,
+D: this creature looks like a hyena with the cruelty of 
+D:a goblin and the body of a small troll.
+
+N:7464:Gnoll Captain
+G:g:u
+I:110:32d8:20:26:20
+W:17:1:700:38
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:3d8
+B:HIT:HURT:3d8
+F:MALE | 
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | 
+F:DROP_90 | DROP_12 | DROP_GOOD | FORCE_MAXHP | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | ESCORT | SUSCEP_COLD
+S:1_IN_12
+S:ARROW_3
+D:The elite of the Gnoll race, a dreadful enemy, strong and cunning.
+
+N:7465:Giant solpugid
+G:S:s
+I:110:38d8:12:24:20
+W:25:1:1600:380
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:BITE:HURT:1d8
+B:BITE:PARALYZE:3d6
+F:DROP_SKELETON | RAND_25 | BASEANGBAND
+F:WEIRD_MIND | WILD_WOOD | 
+F:ANIMAL | IM_POIS | DROP_CORPSE | FORCE_MAXHP
+D:It is a dreadful hybrid, halfway into a spider and a scorpion... And huge.
+
+N:7466:Giant snow spider
+G:S:w
+I:110:35d8:22:29:20
+W:25:1:500:350
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d10
+B:BITE:POISON:2d8
+B:BITE:PARALYZE:2D8
+F:DROP_SKELETON | RAND_25 | BASEANGBAND
+F:WEIRD_MIND | WILD_WOOD | 
+F:ANIMAL | IM_POIS | DROP_CORPSE | FORCE_MAXHP
+D:It is a giant spider, its body covered in snow-white brittles, and enormous fangs.
+
+N:7467:Giant Black Widow spider
+G:S:D
+I:110:35d8:15:20:100
+W:30:1:500:350
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+B:BITE:POISON:2d12
+B:STING:LOSE_STR:2d6
+B:BITE:PARALYZE:2d6
+F:DROP_SKELETON | EVIL | FORCE_MAXHP | BASEANGBAND
+F:WEIRD_MIND | WILD_WOOD | 
+F:ANIMAL | IM_POIS | DROP_CORPSE
+D:A venomous, humongous black bodied spider, with a red cross on her back. Extremely dangerous.
+
+N:7468:Death Widow
+G:S:D
+I:115:35d15:15:40:100
+W:50:1:500:2350
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:VENOM:2d15
+B:BITE:VENOM:2d16
+B:STING:LOSE_STR:2d12
+B:BITE:PARALYZE:2d12
+F:DROP_SKELETON | EVIL | FORCE_MAXHP | BASEANGBAND
+F:WEIRD_MIND | WILD_WOOD | 
+F:ANIMAL | IM_POIS | DROP_CORPSE
+D:A very deadly black widow. 
+
+N:7469:Coyote
+G:C:u
+I:110:1d8:10:5:10
+W:2:1:600:4
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+F:WILD_WOOD | WILD_GRASS | FORCE_MAXHP | BASEANGBAND
+F:FRIENDS | ANIMAL | DROP_SKELETON | DROP_CORPSE | WILD_MOUNTAIN
+D:It is a small canine, brownish fur, dangerous when in a pack.
+
+N:7470:Giant silkworm moth
+G:I:G
+I:110:1d8:6:3:10
+W:5:1:40:1
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d8 
+B:BITE:POISON:1d8
+F:RAND_50 | FRIENDS | WEIRD_MIND | WILD_GRASS | WILD_WOOD 
+F:ANIMAL | DROP_SKELETON | FORCE_MAXHP | BASEANGBAND
+D:It is 7 inches long, with bright green brittles over its poisonous body.
+
+N:7471:Giant silkworm moth
+G:I:G
+I:110:1d8:6:3:10
+W:5:8:40:1
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d8 
+B:BITE:POISON:1d8
+F:RAND_50 | FRIENDS | WEIRD_MIND | WILD_GRASS | WILD_WOOD 
+F:ANIMAL | DROP_SKELETON | FORCE_MAXHP | BASEANGBAND
+S:MULTIPLY
+D:It is 7 inches long, with bright green brittles over its poisonous body.
+
+N:7472:Julian The Wyrm Hunter
+G:p:s
+I:110:158d8:25:50:10
+W:54:2:1700:7400
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:6d6
+B:HIT:HURT:6d6
+B:KICK:HURT:3d8
+F:UNIQUE | MALE | 
+F:FORCE_SLEEP | DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP
+F:ONLY_ITEM | DROP_12 | DROP_GOOD | DROP_90 | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | EVIL | IM_ACID | IM_POIS | 
+F:NO_CONF | NO_FEAR
+S:1_IN_6 | 
+S:DARKNESS | MISSILE | ARROW_4
+D:A mighty Wyrm Hunter, on his life goal of hunting down all the evil wyrms of the world.
+
+N:7473:The Baron of the Skeletons
+G:W:s
+I:110:330d8:90:40:10
+W:40:2:1000:9900
+E:1:1:1:2:1:1
+O:0:20:20:10
+B:HIT:HURT:5d10
+B:HIT:PARALYZE:5d10
+F:UNIQUE | MALE | RES_TELE | 
+F:FORCE_SLEEP | SMART | BASEANGBAND | 
+F:ONLY_ITEM | DROP_42 | DROP_GREAT | ESCORT
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | MOVE_BODY | FORCE_MAXHP
+F:EVIL | UNDEAD | IM_COLD | HURT_LITE | NO_CONF | 
+F:DROP_SKELETON | DROP_CORPSE
+S:1_IN_9 |
+S:BLIND | DARKNESS | BRAIN_SMASH |  
+S:S_UNDEAD | ANIM_DEAD |
+D:Once a powerful priest, his ancient soul was corrupted by Chaos, and now he is in a 
+D: neverending search of vengeance upon the living.
+
+N:7474:Oni
+G:K:U 
+I:110:30d8:20:25:20
+W:4:2:2000:8
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d10
+F:DROP_60 | OPEN_DOOR | BASH_DOOR | EVIL | CAN_SPEAK | FORCE_MAXHP 
+F:WILD_WASTE | BASEANGBAND | 
+F:MALE | DROP_CORPSE | DROP_SKELETON | 
+F:DROP_12 
+D:It is a major form of a humanoid,  demonlike creature, muscular and 
+D:with huge white fangs and yellow smoldering eyes. 
+
+N:7475:Goblin Slavemaster
+G:g:D
+I:110:8d8:20:24:30
+W:6:1:500:8
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d6
+B:HIT:HURT:2d6
+F:FEMALE | BASEANGBAND | 
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | FORCE_MAXHP
+F:OPEN_DOOR | BASH_DOOR | DROP_60 | DROP_CORPSE | CAN_SPEAK
+F:EVIL | ORC | HURT_LITE | DROP_12 | DROP_SKELETON
+S:1_IN_12
+S:S_KIN
+D:Goblins usually enslave their weaker relatives, 
+D:and those slaves are commanded by a Slavemaster. 
+D: They are ruthless and dangerous.
+
+N:7476:Goblin Beastmaster
+G:g:u
+I:110:8d8:20:24:30
+W:6:1:500:8
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:2d8
+B:HIT:HURT:2d8
+F:MALE | BASEANGBAND | 
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | FORCE_MAXHP
+F:OPEN_DOOR | BASH_DOOR | DROP_12 | DROP_SKELETON | DROP_CORPSE
+F:EVIL | ORC | HURT_LITE | DROP_90 | DROP_12 | CAN_SPEAK
+S:1_IN_12
+S:S_SPIDER
+D:Goblins Beastmasters are the Battlemaster Shamans, using their magical communion with 
+D: Spiders to summon them against their enemies.
+
+N:7477:Kobold Trapper
+G:k:o
+I:110:4d8:20:13:20
+W:4:1:800:6
+E:1:1:1:2:1:1
+O:0:50:0:25
+B:HIT:HURT:1d6
+B:HIT:HURT:1d6
+F:WILD_WASTE | FORCE_MAXHP | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | HURT_LITE | DROP_90
+S:1_IN_15
+S:TRAPS | ARROW_1
+D:Smarter and more cunning than the average Kobold, roams the Dungeons laying its traps.
+
+N:7478:Goblin Trapper
+G:g:o
+I:110:5d8:20:14:20
+W:5:1:500:6
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d6
+F:MALE | BASEANGBAND | 
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN
+F:OPEN_DOOR | BASH_DOOR | DROP_90 | DROP_SKELETON | DROP_CORPSE
+F:EVIL | ORC | HURT_LITE | CAN_SPEAK | FORCE_MAXHP
+S:1_IN_12
+S:TRAPS | ARROW_1 |
+D:Goblins can be good with almost all sorts of traps, so watch out for them!
+
+N:7479:Uru-aklos Birdman
+G:B:v
+I:105:48d8:20:27:80
+W:22:2:2220:380
+E:1:1:1:2:1:1
+O:0:50:50:0
+B:CLAW:HURT:3d4
+B:CLAW:HURT:3d4
+B:BITE:PARALYZE:3d4
+F:FORCE_SLEEP | ESCORT | BASEANGBAND | 
+F:DROP_12 | DROP_60 | OPEN_DOOR | BASH_DOOR | FORCE_MAXHP | CAN_FLY
+F:EVIL | ANIMAL | NO_CONF | NO_FEAR | DROP_SKELETON | DROP_CORPSE
+D:"...walking on two twisted legs, featherless pinkish wrinkled skin, like 
+D:ancient parchment. Long curved beaks for mouths, arms too much human-like, 
+D:finished in eagle-like claws, sharp as razors..." The corrupted old race 
+D:of the Uru-aklos, the Birdmen.
+
+N:7480:Goblin Archer
+G:g:y
+I:110:5d8:20:20:10
+W:5:1:500:6
+E:1:1:1:2:1:1
+O:0:50:0:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d6
+F:DROP_90 | WILD_WASTE | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | SMART | FORCE_MAXHP
+S:1_IN_8
+S:ARROW_1
+D:Usually small sized goblins are used to stay in the flanks of the pack, 
+D:shooting their poor crude arrows.
+
+N:7481:Skeleton goblin
+G:s:w
+I:110:5d8:20:15:40
+W:6:1:200:6
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d8
+F:FORCE_MAXHP | BASEANGBAND
+F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | UNDEAD | IM_COLD | IM_POIS |
+F:NO_CONF | NO_SLEEP | NO_FEAR | DROP_12
+D:It is a small animated goblin skeleton.
+
+N:7482:Tanglehorn
+G:7:D
+I:110:2d8:10:10:20
+W:1:2:0:2
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:HIT:POISON:1d6
+F:NO_CONF | NO_FEAR | NO_SLEEP | NO_STUN | 
+F:FRIENDS | NEVER_MOVE | BASEANGBAND
+F:DROP_60 | ONLY_ITEM | ANIMAL | SUSCEP_FIRE | SUSCEP_COLD |
+D:A giant sentient bush, its long and twisted vines, 
+D:full of spiky thorns always ready to catch unaware explorers.
+
+N:7483:City Patrol Guard
+G:t:b
+I:110:2d8:10:10:250
+W:0:1:1700:2
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:1d10
+F:MALE | DROP_SKELETON | DROP_CORPSE | CAN_SPEAK
+F:RAND_25 | DROP_60 | WILD_TOWN | WILD_WOOD | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | HAS_LITE | EMPTY_MIND | FORCE_MAXHP
+D:Always patrolling the city to protect the citizens.
+
+N:7484:Bestial Thing
+G:q:D
+I:110:35d8:15:18:20
+W:15:2:1800:30
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+B:BITE:HURT:1d6
+B:CHARGE:HURT:1d8
+F:RAND_25 | WILD_WASTE | BASEANGBAND
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_CORPSE | DROP_60
+F:ANIMAL | EVIL | WEIRD_MIND | DROP_SKELETON | FORCE_MAXHP
+D:It is a huge animal-like being, resembles a cross between a wolf and a pig.
+D: Its skin is splotchy, pink and raw in some spots, greyish 
+D:furred in others. With huge fangs and little evil yellow eyes.
+
+N:7485:Black One
+G:u:D
+I:110:15d8:15:18:20
+W:10:2:800:20
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BITE:HURT:1d6
+B:BITE:HURT:1d6
+F:RAND_25 | WILD_WASTE | BASEANGBAND
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_CORPSE | DROP_60
+F:ANIMAL | EVIL | WEIRD_MIND | FRIENDS | DROP_SKELETON | FORCE_MAXHP
+D:"...black skinned, with fish-like features but walking on 
+D:two feet, those little demons were summoned to snatch and 
+D:torture any civilian in the islands..."
+
+N:7486:Brylukas, the Bat-Demon
+G:B:D
+I:110:240d8:30:24:10
+W:17:3:2400:720
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d4
+B:CLAW:HURT:1d4
+B:BITE:HURT:1d6
+F:ANIMAL | CAN_FLY | WILD_WASTE | WILD_MOUNTAIN | 
+F:WILD_WOOD | FORCE_MAXHP | BASEANGBAND
+F:UNIQUE| DROP_CORPSE | DROP_22 | DROP_GOOD | 
+F:ESCORT | EVIL | DROP_SKELETON
+D:From what little we know of Zaporoskan Lore, the Brylukas 
+D:lives only to soar the night on black leathery wings, half bat, 
+D:half hominid, half beast...
+
+N:7487:Child of the Night
+G:R:D
+I:110:5d8:20:18:30
+W:3:1:500:5
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:HIT:HURT:1d6
+B:HIT:DISEASE:1d6
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | FORCE_MAXHP
+F:OPEN_DOOR | BASH_DOOR | DROP_60 | DROP_SKELETON | DROP_CORPSE
+F:EVIL | HURT_LITE | FRIENDS | CAN_SPEAK | BASEANGBAND
+D:Small reptiloid creatures, they live in damp and dark areas. 
+D:They hunt in packs, always chatting their Nightspeak gibberish.
+
+N:7488:Demon of the Deep
+G:U:g
+I:110:225d8:20:30:25
+W:24:2:3000:250
+E:1:1:1:2:1:1
+O:50:0:50:0
+B:CRUSH:LOSE_STR:1d10
+B:TOUCH:PARALYZE:3d4
+B:HIT:HURT:1d10
+F:FORCE_SLEEP | FORCE_MAXHP
+F:DROP_90 | OPEN_DOOR | BASH_DOOR | CAN_SWIM | EVIL | DEMON |
+F:IM_POIS | NO_CONF | SUSCEP_FIRE | SUSCEP_COLD | 
+F:DROP_SKELETON | DROP_CORPSE | BASEANGBAND
+S:1_IN_12 | 
+S:BLIND | CONF | S_DEMON
+D:"...it was composed of brackish water and rotting swamp roots and 
+D:weeds, and it was summoned as escorts by mad warlocks that did not 
+D:even care for their lives..."
+
+N:7489:Giant Mantid
+G:I:G
+I:115:40d8:12:20:10
+W:11:1:100:13
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:STING:POISON:1d6
+B:STING:HURT:1d6
+B:BITE:PARALYZE:1D8
+F:WEIRD_MIND | CAN_FLY | WILD_WOOD | 
+F:ANIMAL | SUSCEP_FIRE | IM_POIS | SUSCEP_COLD | 
+F:FORCE_SLEEP | DROP_CORPSE | BASH_DOOR
+F:DROP_SKELETON | FORCE_MAXHP | BASEANGBAND
+D:They hunt down and devour whatever living creature they can!
+
+N:7490:Giant Mantid
+G:I:G
+I:115:40d8:12:20:10
+W:11:5:100:13
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:STING:POISON:1d6
+B:STING:HURT:1d6
+B:BITE:PARALYZE:1D8
+F:WEIRD_MIND | CAN_FLY | WILD_WOOD | 
+F:ANIMAL | SUSCEP_FIRE | IM_POIS | SUSCEP_COLD | 
+F:FORCE_SLEEP | DROP_CORPSE | BASH_DOOR
+F:DROP_SKELETON | FORCE_MAXHP | BASEANGBAND
+S:MULTIPLY
+D:They hunt down and devour whatever living creature they can!
+
+N:7491:Grey Ape
+G:H:D
+I:110:60d8:20:28:50
+W:20:2:900:120
+E:1:1:1:2:1:1
+O:0:80:0:10
+B:HIT:HURT:2d8
+B:HIT:HURT:2d8
+B:CLAW:HURT:d28
+B:CRUSH:LOSE_STR:1d6
+F:WILD_MOUNTAIN | WILD_WASTE | DROP_CORPSE | BASEANGBAND
+F:DROP_60 | OPEN_DOOR | BASH_DOOR | EVIL | GIANT | POWERFUL
+F:DROP_SKELETON | DROP_60 | FORCE_MAXHP
+D:These powerful omnivores resemble giant gorillas, far more aggressive 
+D:and bearing huge tusks, they can attack to gore out enemies, 
+D:which they hunt down ruthlessly.
+
+N:7492:Dire White Hyena
+G:C:w
+I:110:12d8:30:17:20
+W:13:1:600:10
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+B:BITE:HURT:1d10
+F:FRIENDS | BASH_DOOR | WILD_WASTE | WILD_WOOD | WILD_GRASS
+F:ANIMAL | IM_COLD | DROP_SKELETON | DROP_CORPSE | SUSCEP_FIRE
+F:FORCE_MAXHP | BASEANGBAND
+D:A large and muscle-ripped canid, originary from the Northern Tundras, 
+D:they scourge warmer places, always looking for prey. They can 
+D:be found on closed environments too.
+
+N:7493:Werehyena
+G:h:s
+I:110:78d8:15:28:30
+W:28:2:1300:360
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BITE:HURT:1d6
+B:BITE:HURT:1d6
+B:BITE:DISEASE:1d10
+F:WILD_WASTE
+F:OPEN_DOOR | BASH_DOOR | DROP_CORPSE | 
+F:DROP_12 | DROP_12 | FORCE_MAXHP | BASEANGBAND
+F:ANIMAL | EVIL | WEIRD_MIND | DROP_SKELETON |
+D:A specially cruel form of lycantrophy, werehyenas always 
+D:walk on two hind legs, and are cunning and ill-witted.
+
+N:7494:Man-brute
+G:h:u
+I:105:22d8:15:17:20
+W:9:1:2000:22
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d12
+B:HIT:HURT:1d12
+F:EMPTY_MIND | ORC | WILD_WASTE
+F:ONLY_ITEM | DROP_12 | DROP_90 | OPEN_DOOR | 
+F:BASH_DOOR | DROP_CORPSE | BASEANGBAND |
+F:EVIL | HURT_LITE | NO_FEAR | DROP_SKELETON | 
+F:CAN_SPEAK | FORCE_MAXHP 
+D:Man-brutes are the result of ages of breeding slave men and lesser demons, ogres and
+D: lycanthropes of varied kind, by black magic warlocks. Huge and piggish looking, long
+D:  hairy arms and wide, full fanged mouths, they are stupid but terrible servants.
+
+N:7495:Pictish hound
+G:C:D
+I:110:15d8:30:15:50
+W:19:2:700:155
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d10
+B:BITE:HURT:1d10
+F:EVIL | ANIMAL | DROP_SKELETON | FRIENDS | BASEANGBAND
+F:DROP_CORPSE | NO_FEAR | NO_SLEEP | CAN_SWIM | FORCE_MAXHP
+D:Crossbreeded from direwolves and mastiffs of the Picts tribes, those dark furred
+D:  shaggy canines can grow to the size of a brown bear. Used by Shamans to hunt down
+D:  enemies and bring them back alive... or not.
+
+N:7496:Pictish hound
+G:C:D
+I:110:15d8:30:15:50
+W:19:25:700:155
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d10
+B:BITE:HURT:1d10
+F:EVIL | ANIMAL | DROP_SKELETON | FRIENDS | BASEANGBAND
+F:DROP_CORPSE | NO_FEAR | NO_SLEEP | CAN_SWIM | FORCE_MAXHP
+S:MULTIPLY
+D:Crossbreeded from direwolves and mastiffs of the Picts tribes, those dark furred
+D:  shaggy canines can grow to the size of a brown bear. Used by Shamans to hunt down
+D:  enemies and bring them back alive... or not.
+
+N:7497:River Lion
+G:C:o
+I:110:29d8:30:24:50
+W:19:2:900:180
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:BITE:HURT:1d6
+F:WILD_SHORE | WILD_SWAMP | BASEANGBAND
+F:DROP_60 | ANIMAL | AQUATIC | IM_COLD | DROP_SKELETON |
+F:DROP_CORPSE | NO_FEAR | FORCE_SLEEP | CAN_SWIM | BASH_DOOR |
+D:Sized twice as a walrus and with more than only two tusks, 
+D:these lethal and savage members of the aquatic lions family are formidable.
+
+N:7498:River Lion
+G:C:o
+I:110:29d8:30:24:50
+W:19:100:900:180
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:BITE:HURT:1d6
+F:WILD_SHORE | WILD_SWAMP | BASEANGBAND
+F:DROP_60 | ANIMAL | IM_COLD | DROP_SKELETON |
+F:DROP_CORPSE | NO_FEAR | FORCE_SLEEP | CAN_SWIM | BASH_DOOR |
+D:Sized twice as a walrus and with more than only two tusks, 
+D:these lethal and savage members of the aquatic lions family are formidable.
+
+N:7499:Saber Tooth Cub
+G:f:y
+I:110:15d8:40:15:2
+W:18:2:900:100
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d8
+B:CLAW:HURT:1d8
+B:BITE:HURT:1d12
+F:BASH_DOOR | WILD_WOOD | WILD_GRASS | BASEANGBAND
+F:DROP_SKELETON | DROP_CORPSE | ANIMAL | FORCE_MAXHP
+D:A huge yellowish feline, with long-as-arms tusks, specialized 
+D:in hunting down big prey. They will not skip a meal if they see you.
+
+N:7500:Lizard-man of Set
+G:R:G 
+I:110:30d8:20:22:50
+W:6:1:1600:15
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:BITE:HURT:1d8
+B:HIT:HURT:1d10
+F:DROP_90 | OPEN_DOOR | BASH_DOOR | EVIL | ESCORT |
+F:WILD_WASTE | BASEANGBAND | 
+F:MALE | DROP_CORPSE | DROP_SKELETON | 
+F:SUSCEP_FIRE | HURT_LITE | IM_POIS | ESCORT | CAN_SPEAK
+S:1_IN_9
+S:DARKNESS | CAUSE_1
+D:It is a major form of a humanoid,  demonlike creature, 
+D:muscular and with huge white fangs and yellow 
+D: smoldering eyes. Enemies to the Serpent-men of the same Cult of Set.
+
+N:7501:Sand Kobold
+G:k:U
+I:110:6d8:20:16:10
+W:3:1:800:4
+E:1:1:1:2:1:1
+O:0:50:0:20
+B:HIT:HURT:1d8
+B:HIT:HURT:1d6
+F:WILD_WASTE | 
+F:DROP_12 | FORCE_MAXHP | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | IM_POIS | HURT_LITE | CAN_SPEAK |
+S:1_IN_12
+S:ARROW_1 | MISSILE
+D:It is a lesser known member of the Kobold-like family, a medium 
+D:sized, dog-headed humanoid. They are not specially aggressive but 
+D:can be a terible enemy when they feel threatened. In difference with 
+D:other Kobolds, they like to be alone. They usually can be found in 
+D:deserts, where they like to live in caverns, dug under the dunes.
+
+N:7502:Green Lotus
+G:7:g
+I:110:5d8:10:15:20
+W:1:3:0:2
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:HIT:POISON:1d8
+B:HIT:PARALYZE:1d4
+F:NO_CONF | NO_FEAR | NO_SLEEP | NO_STUN | 
+F:FRIENDS | NEVER_MOVE | BASEANGBAND
+F:DROP_90 | ONLY_ITEM | ANIMAL | SUSCEP_FIRE | 
+F:SUSCEP_COLD | FORCE_MAXHP
+D:Green lotus are thorn-festered little bush plants, 
+D:they look like a weeping willow, but when victims draw
+D:  closer, they reveal gaping mouths, and sharp, diminute, poison dripping teeth.
+
+N:7503:Komainu Lion
+G:f:D
+I:110:18d8:40:25:2
+W:24:2:900:200
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d8
+B:CLAW:HURT:1d8
+B:BITE:HURT:1d8
+F:BASH_DOOR | 
+F:DROP_CORPSE | ANIMAL | DEMON | IM_POIS | IM_ELEC |
+F:DROP_60 | DROP_GOOD | NONLIVING | FORCE_MAXHP | BASEANGBAND
+D:A cross between large hound and a mountain lion... in gargoyle 
+D:animated non-living form. Used from centuries ago as terrible 
+D:Guards for Temples. Poweferful and fearsome.
+
+N:7504:Carmine Lotus
+G:7:r
+I:110:6d8:10:15:20
+W:1:3:0:2
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:HIT:HURT:1d10
+B:HIT:POISON:1d10
+B:HIT:PARALYZE:1d4
+F:FORCE_MAXHP | NO_CONF | NO_FEAR | NO_SLEEP | NO_STUN | 
+F:FRIENDS | NEVER_MOVE | BASEANGBAND
+F:DROP_90 | ONLY_ITEM | ANIMAL | SUSCEP_FIRE | SUSCEP_COLD |
+D:Looking inoffensive from afar, but a deadly plant when you draw 
+D:close. They have hidden mouths that spring like little traps to 
+D:their victims, then entangle them with their thorny roots and 
+D:slowly devour them alive.
+
+N:7505:Centipede Matriarch
+G:c:v
+I:105:200d8:14:30:25
+W:46:3:300:600
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:SPIT:ACID:1d8
+B:BITE:POISON:2d8
+B:CRUSH:HURT:4d8
+F:ANIMAL | EVIL | IM_POIS | SUSCEP_FIRE | 
+F:IM_ACID | DROP_SKELETON | BASEANGBAND |
+F:CAN_SWIM | DROP_CORPSE | ESCORT | UNIQUE | FORCE_MAXHP
+S:1_IN_9
+S:BO_POIS |
+D:A gigantic Centipede, enormous mandibles and a bigger sting 
+D:in the tail. So big than cannot even walk fast, half dragging 
+D:half jerking its body towards you.
+
+N:7506:Worm Matriarch
+G:w:v
+I:105:200d8:14:30:25
+W:46:3:6000:600
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPIT:PARALYZE:1d8
+B:CRUSH:HURT:4d8
+B:BITE:HURT:4d8
+F:ESCORT | BASEANGBAND |
+F:ANIMAL | EVIL | IM_ACID | IM_POIS | CAN_SWIM | 
+F:DROP_CORPSE | UNIQUE | DROP_SKELETON
+S:1_IN_12
+S:BO_ACID | 
+D:A gigantic Worm, mouth dripping with acid. Humongous ringleted 
+D:body, quitinous monstrosity. So big than cannot even drag itself 
+D:fast, half dragging half jerking its body towards you.
+
+N:7507:Giant cockroach
+G:x:U
+I:110:2d8:10:10:10
+W:1:1:1000:1
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:DISEASE:1d8
+B:STING:POISON:1d4
+F:FORCE_MAXHP
+F:RAND_25 | FRIENDS | CAN_FLY | CAN_SWIM | CAN_SPEAK | DROP_CORPSE
+F:SMART | WEIRD_MIND | ANIMAL | DROP_SKELETON | 
+F:NO_FEAR | HURT_LITE | SUSCEP_FIRE | BASEANGBAND
+D:They look nasty, and smell nastier. But a dozen times 
+D:bigger than your household cockroaches. Oh and murderous.
+
+N:7508:Giant cockroach
+G:x:U
+I:110:2d8:10:10:10
+W:1:5:1000:1
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:DISEASE:1d8
+B:STING:POISON:1d4
+F:FORCE_MAXHP
+F:RAND_25 | FRIENDS | CAN_FLY | CAN_SWIM | CAN_SPEAK | DROP_CORPSE
+F:SMART | WEIRD_MIND | ANIMAL | DROP_SKELETON | 
+F:NO_FEAR | HURT_LITE | SUSCEP_FIRE | BASEANGBAND
+S:MULTIPLY
+D:They look nasty, and smell nastier. But a dozen times 
+D:bigger than your household cockroaches. Oh and murderous.
+
+N:7509:Queen Cockroach
+G:X:v
+I:105:200d8:14:30:25
+W:46:3:5000:6000
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPIT:ACID:1d8
+B:CRUSH:HURT:4d8
+B:BITE:DISEASE:4d8
+F:ESCORT | CAN_FLY
+F:ANIMAL | EVIL | IM_ACID | IM_POIS | CAN_SWIM | 
+F:DROP_CORPSE | UNIQUE | DROP_SKELETON
+F:CAN_SWIM | CAN_SPEAK | FORCE_MAXHP | BASEANGBAND
+S:1_IN_12
+S:BA_POIS | 
+D:A gigantic, enormous bellied Cockroach, smells worse than 
+D:all your nightmares together. Dripping with rottenness and decay. 
+D:So big than cannot even walk fast, half dragging half jerking 
+D:its body towards you...
+
+N:7510:Giant Pit Viper snake
+G:J:G
+I:105:6d8:5:20:75
+W:4:1:600:4
+E:0:0:0:0:1:0
+O:0:0:0:0
+B:BITE:POISON:1d6
+B:CRUSH:HURT:1d6
+F:CAN_SWIM | DROP_SKELETON | DROP_CORPSE | BASEANGBAND
+F:BASH_DOOR | WILD_WOOD | WILD_GRASS | ANIMAL | FORCE_MAXHP
+D:The huge version of the super venomous Pit Viper. Be careful with it.
+
+N:7511:Snow orc
+G:o:w
+I:110:15d8:20:22:20
+W:15:1:1100:50
+E:1:1:1:2:1:1
+O:10:50:20:10
+B:HIT:HURT:3d6
+B:HIT:HURT:3d4
+F:MALE | WILD_MOUNTAIN | DROP_SKELETON | DROP_CORPSE | 
+F:DROP_60 | DROP_12 | OPEN_DOOR | BASH_DOOR | BASEANGBAND | 
+F:EVIL | ORC | HURT_LITE | IM_COLD | SUSCEP_FIRE | 
+F:CAN_SPEAK | FORCE_MAXHP
+S:1_IN_12
+S:ARROW_2 | MISSILE
+D:A seldom spotted breed of orcs specially adapted to the 
+D:snowy peaks of the mountains. Rarely seen in the dungeon, 
+D:but not impossible. They are very much hardy and aggressive.
+
+N:7512:Flame harpy
+G:H:o
+I:110:4d8:16:18:10
+W:5:1:1500:8
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d6
+B:CLAW:HURT:1d6
+B:BITE:HURT:1d6
+F:FEMALE | CAN_FLY | WILD_MOUNTAIN | SUSCEP_COLD | BASEANGBAND
+F:RAND_25 | DROP_CORPSE | ANIMAL | EVIL | DROP_SKELETON | DROP_60 
+F:IM_FIRE | FORCE_MAXHP
+D:A flying, screeching bird with a woman's face.
+
+N:7513:Snow Kobold
+G:k:w
+I:110:7d8:20:18:20
+W:3:1:800:5
+E:1:1:1:2:1:1
+O:0:50:0:30
+B:HIT:HURT:1d10
+F:DROP_60 | WILD_WASTE | 
+F:WILD_MOUNTAIN | CAN_SPEAK | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | DROP_60
+F:EVIL | IM_COLD | HURT_LITE | SUSCEP_FIRE | FORCE_MAXHP
+S:1_IN_12
+S:ARROW_1
+D:It is a big breed of kobolds, used to the extreme climate 
+D:conditions of the snowy moountains. Their skin is ash coloured 
+D:and covered with a thick fur over the scales.
+
+N:7514:Snow Goblin
+G:g:w
+I:110:9d8:20:20:30
+W:6:1:600:10
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d6
+B:HIT:HURT:1d6
+F:MALE | 
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | CAN_SPEAK | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_60 | DROP_CORPSE | DROP_60 | FORCE_MAXHP
+F:EVIL | ORC | HURT_LITE | DROP_SKELETON | SUSCEP_FIRE | IM_COLD
+S:1_IN_12
+S:ARROW_1 
+D:Goblins can also inhabit the snowy mountains, but they are 
+D:rarely seen outside their frozen lairs, but not impossible.
+
+N:7515:Snow Ogre
+G:O:w
+I:110:27d8:20:22:30
+W:15:1:2000:35
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:HURT:2d8
+B:HIT:HURT:1d8
+F:WILD_MOUNTAIN | BASEANGBAND
+F:DROP_90 | WILD_WASTE | WILD_WOOD | DROP_CORPSE
+F:OPEN_DOOR | BASH_DOOR | DROP_12 | FORCE_MAXHP
+F:EVIL | DROP_SKELETON |
+D:A specially hardened breed of ogres, adapted to the cold of the 
+D:snowy mountains. Those ones never venture around alone, so be careful.
+
+N:7516:Kenku Rogue
+G:K:g 
+I:110:30d8:20:25:20
+W:4:2:1700:6
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d6
+B:CLAW:HURT:1d8
+F:DROP_12 | DROP_90 | OPEN_DOOR | BASH_DOOR | EVIL | CAN_FLY | CAN_SPEAK
+F:WILD_WASTE | BASEANGBAND | 
+F:MALE | DROP_CORPSE | DROP_SKELETON | FORCE_MAXHP
+D:Kenkus can make the best rogues, for they are swift in 
+D:movement and highly skilled fighters.
+
+N:7517:Kenku Ronin
+G:K:g 
+I:110:30d8:20:25:20
+W:4:2:1700:6
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d6
+B:CLAW:HURT:1d6
+F:DROP_12 | DROP_90 | OPEN_DOOR | BASH_DOOR | EVIL | CAN_FLY | CAN_SPEAK
+F:WILD_WASTE | BASEANGBAND | 
+F:MALE | DROP_CORPSE | DROP_SKELETON | FORCE_MAXHP
+D:Kenkus are often Ronins, their highly skilled 
+D:swordmanship and their talons are lethal.
+
+N:7518:Skaven Necromancer
+G:s:r
+I:110:10d8:20:20:30
+W:6:1:600:12
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:BITE:HURT:1d8
+B:CLAW:HURT:1d6
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | CAN_SPEAK | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_60 | DROP_CORPSE | DROP_60 | FORCE_MAXHP
+F:EVIL | ANIMAL | HURT_LITE | DROP_12 | DROP_SKELETON | ESCORT
+D:Among the ruthless, merciless Slavemasters, the Skavens 
+D:are the worst, for the use their depraved
+D: magic arts to enslave dead creature. Cruelty and lack of 
+D:pity their normal, they would enslave you if they could, 
+D:but they prefer dead adventurers...
+
+N:7519:Carrion Crow
+G:B:D
+I:115:6d8:30:15:5
+W:2:2:800:2
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:BITE:HURT:1d4
+B:CLAW:DISEASE:1d6
+F:ANIMAL | CAN_FLY | DROP_CORPSE | WILD_GRASS | DROP_SKELETON | EVIL | CAN_SPEAK
+F:IM_COLD | UNDEAD | AURA_COLD | FRIENDS | WILD_SWAMP | NO_SLEEP | NO_FEAR
+F:FORCE_MAXHP | WILD_WOOD | BASEANGBAND | 
+F:HURT_LITE | SUSCEP_FIRE | FORCE_MAXHP | WILD_SHORE
+D:A larger breed of crows, re-animated by dark spells, brought to 
+D:life to tirelessly hunt down and feast on inexperienced 
+D:adventurers, for they don`t need to rest nor sleep...
+
+N:7520:Gamal, The Master Strangler
+G:h:v
+I:115:154d8:28:18:20
+W:21:3:1500:2620
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d8
+B:TOUCH:PARALYZE
+F:UNIQUE | MALE | NO_SLEEP | DROP_22 | DROP_GREAT | DROP_60 |
+F:WILD_WOOD | WILD_GRASS | CAN_SPEAK | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | EVIL | DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP
+S:1_IN_9
+S:ARROW_3 | HEAL | TRAPS | DARKNESS
+D:The Chief of the Stranglers' cult of Kina. Master of 
+D:the murdering art with his lethal rumel.
+
+N:7521:Kina, the Dark Goddess
+G:W:v
+I:110:450d8:75:60:10
+W:50:3:4000:13500
+E:1:1:1:2:1:1
+O:0:20:20:20
+B:HIT:HURT:5d10
+B:HIT:PARALYZE:5d10
+B:WAIL:HURT:4d8
+F:UNIQUE | FEMALE | RES_TELE | 
+F:SMART | FORCE_MAXHP | BASEANGBAND
+F:ONLY_ITEM | DROP_42 | DROP_GREAT | RES_NETH | NONLIVING
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | MOVE_BODY | CAN_SWIM 
+F:EVIL | IM_COLD | HURT_LITE | NO_CONF |
+S:1_IN_9 | 
+S:BLIND | HOLD | BRAIN_SMASH |  
+S:ANIM_DEAD |
+D:The Dark Goddess, The Darkness of the Worlds.
+
+N:7522:Katha Dhen, The Spider God
+G:S:v
+I:110:350d8:60:50:10
+W:50:3:5000:10500
+E:0:1:0:2:1:0
+O:0:20:20:20
+B:HIT:HURT:5d10
+B:HIT:PARALYZE:5d10
+B:BITE:DISEASE:4d8
+F:UNIQUE | MALE | RES_TELE | 
+F:FORCE_SLEEP | SMART | FORCE_MAXHP | BASEANGBAND
+F:DROP_22 | DROP_22 | DROP_GREAT | FORCE_MAXHP | POWERFUL
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | MOVE_BODY | CAN_SWIM 
+F:EVIL | ANIMAL | IM_COLD | SUSCEP_FIRE | NO_CONF | NO_FEAR | GIANT
+S:1_IN_9 | 
+S:BLIND | HOLD | S_MONSTERS |
+D:The Evil Spider God, the Holder of Sorrows, the Assassin of 
+D:Hopes. Has been slumbering in his dark corner for thousands of years.
+
+N:7523:Strangler Cultist of Kina
+G:h:D
+I:110:12d8:20:24:30
+W:8:1:1600:12
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:HIT:POISON:1d8
+B:TOUCH:PARALYZE:1d6
+F:MALE | BASEANGBAND | 
+F:WILD_WASTE | CAN_SPEAK | FORCE_MAXHP
+F:OPEN_DOOR | BASH_DOOR | DROP_60 | DROP_CORPSE |
+F:EVIL | HURT_LITE | FRIENDS | DROP_12 | DROP_SKELETON
+D:Fanatic individuals, they worship and kill for Kina the 
+D:Dark Goddess with their rumels and their poisoned daggers.
+
+N:7524:Gorlak
+G:o:R
+I:110:35d8:20:28:30
+W:12:1:1000:17
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BITE:HURT:1d10
+B:CLAW:HURT:1d12
+B:GAZE:TERRIFY:1d6
+F:NO_SLEEP | BASEANGBAND | 
+F:DROP_SKELETON | DROP_CORPSE | CAN_SPEAK
+F:EVIL | DEMON | IM_FIRE | NO_FEAR | RES_NETH | IM_POIS | FORCE_MAXHP
+D:A horrible, ugly looking orc-like creature, probably the 
+D:failed magic experiment of a deranged warlock. Terrible 
+D:teeth and limbs finished in claws and talons.
+
+N:7525:The Possessed Former Dwarf Player_1
+G:@:u
+I:110:75d8:20:15:20
+W:20:2:1700:225
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+B:TOUCH:EAT_LITE:1d4
+B:TOUCH:EAT_GOLD:1d4 
+F:UNIQUE | MALE | FORCE_SLEEP | FORCE_MAXHP
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | DROP_60
+F:WILD_WOOD | WILD_GRASS | BASEANGBAND | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | EVIL | DROP_SKELETON | DROP_CORPSE
+S:1_IN_5
+S:ARROW_3 | HEAL | DARKNESS
+D:This was a former Player_1, now a possessed evil creature in eternal raging,
+D: soul-devouring, search for  vengeance.
+
+N:7526:The Possessed Former Elf Player_1
+G:@:G
+I:110:75d8:20:15:20
+W:20:2:1700:225
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+B:TOUCH:EAT_LITE:1d4
+B:TOUCH:EAT_GOLD:1d4
+F:UNIQUE | MALE | FORCE_SLEEP | BASEANGBAND |
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | DROP_60 | FORCE_MAXHP
+F:WILD_WOOD | WILD_GRASS | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | EVIL | DROP_SKELETON | DROP_CORPSE
+S:1_IN_5
+S:ARROW_3 | HEAL | DARKNESS
+D:This was a former Player_1, now a possessed evil creature in eternal raging,
+D: soul-devouring, search for  vengeance.
+
+N:7527:The Possessed Former Barbarian Player_1
+G:@:R
+I:110:75d8:20:15:20
+W:20:2:1700:225
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+B:TOUCH:EAT_LITE:1d4
+B:TOUCH:EAT_GOLD:1d4
+F:UNIQUE | MALE | FORCE_SLEEP | BASEANGBAND |
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | DROP_60 | FORCE_MAXHP
+F:WILD_WOOD | WILD_GRASS | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | EVIL | DROP_SKELETON | DROP_CORPSE
+S:1_IN_5
+S:ARROW_3 | HEAL | DARKNESS
+D:This was a former Player_1, now a possessed evil creature in eternal raging,
+D: soul-devouring, search for  vengeance.
+
+N:7528:The Possessed Former Human Player_1
+G:@:w
+I:110:75d8:20:15:20
+W:20:2:1700:225
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+B:TOUCH:EAT_LITE:1d4
+B:TOUCH:EAT_GOLD:1d4
+F:UNIQUE | MALE | FORCE_SLEEP | BASEANGBAND |
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | DROP_60 | FORCE_MAXHP
+F:WILD_WOOD | WILD_GRASS | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | EVIL | DROP_SKELETON | DROP_CORPSE
+S:1_IN_5
+S:ARROW_3 | HEAL | DARKNESS
+D:This was a former Player_1, now a possessed evil creature in eternal raging,
+D: soul-devouring, search for  vengeance.
+
+N:7529:The Possessed Former Dark-Elf Player_1
+G:@:D
+I:110:75d8:20:15:20
+W:20:2:1700:225
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+B:TOUCH:EAT_LITE:1d4
+B:TOUCH:EAT_GOLD:1d4
+F:UNIQUE | MALE | FORCE_SLEEP | BASEANGBAND |
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | DROP_60 | FORCE_MAXHP
+F:WILD_WOOD | WILD_GRASS | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | EVIL | DROP_SKELETON | DROP_CORPSE
+S:1_IN_5
+S:ARROW_3 | HEAL | DARKNESS
+D:This was a former Player_1, now a possessed evil creature in eternal raging,
+D: soul-devouring, search for  vengeance.
+
+N:7530:The Possessed Former Hobbit Player_1
+G:@:U
+I:110:75d8:20:15:20
+W:20:2:1700:225
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+B:TOUCH:EAT_LITE:1d4
+B:TOUCH:EAT_GOLD:1d4
+F:UNIQUE | MALE | FORCE_SLEEP | BASEANGBAND |
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | DROP_60 | FORCE_MAXHP
+F:WILD_WOOD | WILD_GRASS | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | EVIL | DROP_SKELETON | DROP_CORPSE
+S:1_IN_5
+S:ARROW_3 | HEAL | DARKNESS
+D:This was a former Player_1, now a possessed evil creature in eternal raging,
+D: soul-devouring, search for  vengeance.
+
+N:7531:The Possessed Former Amberite Player_1
+G:@:y
+I:110:100d8:30:15:20
+W:30:2:1700:300
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:HURT:1d12
+B:HIT:HURT:1d12
+B:TOUCH:EAT_LITE:1d4
+B:TOUCH:EAT_GOLD:1d4
+F:UNIQUE | MALE | FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | DROP_90 | REGENERATE
+F:WILD_WOOD | WILD_GRASS | 
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | EVIL | DROP_SKELETON | DROP_CORPSE
+S:1_IN_5
+S:ARROW_4 | HEAL | DARKNESS
+D:This was a former Player_1, now a possessed evil creature in eternal raging,
+D: soul-devouring, search for  vengeance.
+
+N:7532:The Bodak
+G:H:w
+I:105:120d8:35:15:20
+W:30:3:0:3600
+E:1:1:1:2:1:1
+O:20:80:0:0
+B:HIT:PARALYZE:2d8
+B:HIT:DISEASE:1d12
+B:TOUCH:EAT_LITE:1d10
+F:UNIQUE | MALE | FORCE_SLEEP | UNDEAD | COLD_BLOOD 
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | DROP_60 | FORCE_MAXHP
+F:WILD_WOOD | WILD_GRASS | BASEANGBAND | 
+F:SMART
+F:OPEN_DOOR | BASH_DOOR | EVIL | DROP_SKELETON | DROP_CORPSE 
+S:1_IN_9
+S:HEAL | DARKNESS | SCARE
+D:...an skeletal humanoid, embodying corruption and decay. 
+D:His deadly gaze can drive a whole pack of
+D: adventurers mad in one second... 
+D:To devour their souls while they are still alive.
+
+N:7533:Corrosive Crawler
+G:u:G
+I:110:35d8:28:16:30
+W:12:2:1000:17
+E:1:1:1:2:1:0
+O:0:0:0:0
+B:BITE:ACID:1d10 
+B:CLAW:HURT:1d6
+B:CLAW:HURT:1d6
+F:OPEN_DOOR | BASH_DOOR | IM_ACID | CAN_SPEAK | FORCE_MAXHP
+F:EVIL | DEMON | NO_FEAR | DROP_SKELETON | DROP_CORPSE | BASEANGBAND
+D:It is a minor demon of unknown planar origin, 
+D:lurks in dark places, crawling on its belly, legless.
+D: Moves by dragging itself around, attracted by the smell of uncorrupted flesh. 
+D: Greenish, leathery, putrid and purulent skin; its stench is utterly nauseating.
+
+N:7534:Swamp golem
+G:G:g
+I:110:65d8:12:18:10
+W:20:2:5000:30
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:2d6
+B:CRUSH:HURT:3d6
+B:CRUSH:HURT:2d8
+F:WILD_SWAMP | WILD_WASTE | WILD_SHORE | 
+F:EMPTY_MIND | BASH_DOOR | CAN_SWIM | BASEANGBAND |
+F:IM_POIS | SUSCEP_FIRE | DROP_SKELETON | DROP_CORPSE
+F:NO_CONF | NO_SLEEP | NO_FEAR | NONLIVING | FORCE_MAXHP
+D:A towering humanoid monster, brought to life by the Bog's Shamans.
+
+N:7535:Firedrake
+G:d:o
+I:110:250d8:28:30:50
+W:25:2:10000:1250
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:2d8
+B:CLAW:HURT:2d8
+B:BITE:HURT:1d8
+B:SPIT:FIRE:1d10
+F:FORCE_SLEEP | CAN_FLY | DROP_CORPSE |
+F:DROP_60 | BASH_DOOR | DRAGON | FORCE_MAXHP | BASEANGBAND
+S:1_IN_11 |
+S:CONF | SCARE | BR_LITE | BR_FIRE
+D:A relative of the Wyrm's family, of fiery scaled skin and fire breathing capability.
+
+N:7536:Skreech Verminking, Lord of Skavens
+G:r:v
+I:110:275d8:20:25:20
+W:35:3:700:825
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:HURT:1d12
+B:BITE:DISEASE:1d12
+B:BITE:POISON:1d12
+F:UNIQUE | MALE | EVIL | 
+F:WILD_WASTE | DROP_SKELETON | DROP_CORPSE | ANIMAL | BASEANGBAND
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | GIANT | POWERFUL | ESCORT
+F:OPEN_DOOR | BASH_DOOR | HAS_LITE | FORCE_MAXHP
+D:Known to be one of the mightiest skaven underworld Kingdom's Lords, 
+D:his power involves the collective knowledge of the Pestilens 
+D:plague-bearing,  the shadow twisting of the Eshins, 
+D:the warped fury of the Verminus... 
+
+N:7537:The Forvalaka
+G:f:v
+I:110:180d8:35:38:10
+W:28:3:2000:540
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d6
+B:BITE:HURT:1d6
+B:BITE:DISEASE:1d10
+F:UNIQUE | WILD_WASTE | 
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | 
+F:DROP_12 | DROP_GREAT | BASEANGBAND
+F:ANIMAL | EVIL | WEIRD_MIND | COLD_BLOOD | IM_POIS | 
+F:HURT_LITE | FORCE_MAXHP
+D:"...blood-drinking, liver-eating wereleopards. Ancient, 
+D:darkness-wise, oh, and filled with a millennia of hatred 
+D:and unsatiable-hunger..."
+
+N:7538:Gargantuan Wolf Spider
+G:S:u 
+I:110:60d8:30:22:50
+W:20:2:1600:100
+E:0:1:0:2:1:0
+O:30:30:40:0
+B:BITE:POISON:1d8
+B:BITE:HURT:1d10
+B:STING:PARALYZE:1d8
+F:BASH_DOOR | EVIL | ESCORT | 
+F:WILD_WASTE | BASEANGBAND | 
+F:FEMALE | DROP_CORPSE | DROP_SKELETON | 
+F:SUSCEP_FIRE | HURT_LITE | IM_POIS | FORCE_MAXHP 
+S:1_IN_12
+S:BO_POIS
+D:A madness-driving gigantic Wolf Spider, carrying her babies 
+D:around with her, so big, so beyond animal kingdom laws,
+D: that a regular Adventurer would go mad just to spot her. 
+D:Oh, and she is so zealeously caring for her spawn...
+
+N:7539:Okkoto, The Boar God
+G:q:v
+I:105:560d8:38:40:80
+W:40:3:8000:1680
+E:0:1:0:2:1:2
+O:20:30:50:0
+B:CHARGE:HURT:6d6
+B:BITE:LOSE_STR:3d6
+B:BITE:HURT:6d6
+F:UNIQUE | MALE | WILD_WOOD | BASEANGBAND | 
+F:FORCE_SLEEP | ESCORT | DROP_CORPSE | DROP_SKELETON
+F:ONLY_ITEM | DROP_12 | DROP_GREAT | FORCE_MAXHP | POWERFUL
+F:SMART | BASH_DOOR | GIANT 
+F:ANIMAL | HURT_ROCK | NO_CONF | NO_SLEEP
+S:1_IN_10 | 
+S:HEAL | BLIND | CONF | SCARE | CAUSE_2 |
+S:BR_COLD | S_KIN
+D:Okkoto is one of the Boar Gods that have lead the 
+D:mighty Giant Boars' Clans to battle for centuries, 
+D: proud and wise, he is one of the bastions left against the Human Empire.
+
+N:7540:Living Granite Statue
+G:8:D
+I:50:32d8:10:45:15
+W:20:2:0:50
+E:1:1:1:2:1:1
+O:100:0:0:0
+B:CLAW:HURT:2d6
+B:CLAW:HURT:2d6
+B:HIT:HURT:1d6
+F:DROP_90 | EVIL | DEMON | HURT_LITE | NO_FEAR | FORCE_MAXHP
+F:FORCE_SLEEP | BASEANGBAND
+F:IM_POIS | IM_COLD | IM_FIRE | HURT_ROCK | NONLIVING | DROP_GOOD | DROP_12
+S:1_IN_9
+S:BO_COLD | SCARE 
+D:...A rather normal granite statue... if it were not because it's ALIVE!!!
+
+N:7541:Living White Marble Statue of a White Mamba
+G:2:w
+I:50:32d8:10:45:15
+W:20:2:0:50
+E:0:0:0:0:1:0
+O:100:0:0:0
+B:BITE:HURT:2d6
+B:CRUSH:HURT:2d6
+B:CRUSH:PARALYZE:1d6
+F:DROP_90 | EVIL | DEMON | HURT_LITE | NO_FEAR | DROP_12 | ONLY_GOLD
+F:FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:IM_POIS | IM_COLD | IM_FIRE | HURT_ROCK | NONLIVING | DROP_GREAT |
+S:1_IN_9
+S:BO_POIS | SCARE
+D:...A rather normal white marble statue... if it were not because it's ALIVE!!!
+
+N:7542:Living Basalt Statue of a Black Raven
+G:8:D
+I:50:32d8:10:45:15
+W:20:2:0:50
+E:0:1:1:0:1:0
+O:100:0:0:0
+B:CLAW:HURT:2d6
+B:CLAW:HURT:2d6
+B:BITE:HURT:2d6
+F:DROP_90 | EVIL | DEMON | HURT_LITE | NO_FEAR | DROP_12 | ONLY_GOLD
+F:FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:IM_POIS | IM_COLD | IM_FIRE | HURT_ROCK | NONLIVING | DROP_GREAT |
+S:1_IN_9
+S:BO_COLD | SCARE 
+D:...A rather normal basalt statue... if it were not because it's ALIVE!!!
+
+N:7543:Living Jade Statue of a Naga
+G:2:G
+I:50:32d8:10:45:15
+W:20:2:0:50
+E:0:0:0:0:1:0
+O:100:0:0:0
+B:SPIT:ACID:2d6
+B:HIT:HURT:2d6
+B:CRUSH:HURT:2d6
+F:DROP_90 | EVIL | DEMON | HURT_LITE | NO_FEAR | ONLY_ITEM | DROP_12
+F:FORCE_SLEEP | FORCE_MAXHP | BASEANGBAND
+F:IM_POIS | IM_COLD | IM_FIRE | HURT_ROCK | NONLIVING | DROP_GREAT |
+S:1_IN_12
+S:BO_POIS | SCARE 
+D:...A rather normal jade statue... if it were not because it's ALIVE!!!
+
+N:7544:Zhryleg, Commander of Zogs
+G:h:v
+I:110:175d8:20:28:20
+W:28:3:800:525
+E:1:1:1:2:1:1
+O:30:30:0:20
+B:CLAW:HURT:2d8
+B:HIT:HURT:2d6
+B:HIT:HURT:2d6
+B:DROOL:DISEASE:1d6
+F:UNIQUE | MALE | EVIL | SMART | ESCORT | DROP_SKELETON | DROP_CORPSE
+F:ONLY_ITEM | DROP_90 | DROP_12 | DROP_GOOD | DROP_60
+F:OPEN_DOOR | BASH_DOOR | POWERFUL | CAN_SPEAK | FORCE_MAXHP 
+F:RAND_25 | BASEANGBAND | 
+S:1_IN_6 |
+S:HEAL | SHRIEK | MISSILE |
+D:Biggest and meanest of all Zogs, looking for the flesh 
+D:of adventurers to consume. He commands his big squad 
+D: of those nasty insectoid aliens.
+
+N:7545:Serpent-man of Set
+G:J:v 
+I:110:30d8:20:22:50
+W:8:2:1700:15
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:BITE:HURT:1d8
+B:HIT:HURT:1d10
+F:DROP_90 | OPEN_DOOR | BASH_DOOR | EVIL | ESCORT |
+F:WILD_WASTE | BASEANGBAND | 
+F:MALE | DROP_CORPSE | DROP_SKELETON | 
+F:SUSCEP_FIRE | HURT_LITE | IM_POIS | ESCORT | CAN_SPEAK | FORCE_MAXHP
+S:1_IN_12
+S:DARKNESS | SCARE | BO_POIS 
+D:It is a serpentine form of a humanoid,  demonlike creature, 
+D:muscular and with huge white fangs and yellow 
+D: smoldering eyes. Enemies to the Lizard-men of the same Cult of Set.
+
+N:7546:Goblin Slingshooter
+G:g:y
+I:110:3d8:20:20:10
+W:5:1:400:6
+E:1:1:1:2:1:1
+O:0:50:0:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d6
+F:DROP_60 | WILD_WASTE | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | SMART | FORCE_MAXHP
+S:1_IN_8
+S:ARROW_1
+D:Usually small sized goblins are used to stay in the flanks 
+D:of the pack, these ones shooting their slingshots.
+
+N:7547:Giant Rabid Hammerhead bat
+G:B:u
+I:115:12d8:15:15:20
+W:8:1:600:4
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d10
+B:BITE:DISEASE:1d10
+F:WEIRD_MIND | BASEANGBAND | 
+F:RAND_25 | DROP_CORPSE | FRIENDS
+F:ANIMAL | CAN_FLY | WILD_WOOD | FORCE_MAXHP
+F:WILD_SWAMP | WILD_SHORE | DROP_CORPSE | DROP_SKELETON | FORCE_SLEEP
+D:It is a extremely big breed of Hammerhead bat. 
+D:They are usually not aggressive but... Rabids.
+
+N:7548:Outcast Samurai
+G:p:s
+I:110:72d8:20:27:40
+W:31:1:1700:140
+E:1:1:1:2:1:1
+O:0:100:0:0
+B:HIT:HURT:3d6
+B:HIT:HURT:3d6
+F:WILD_GRASS | FORCE_MAXHP | BASEANGBAND
+F:DROP_12 | HAS_LITE | WEIRD_MIND | DROP_60
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE | EVIL
+D: Once a proud warrior, this Samurai has lost 
+D:his Daimyo, driving him insane with grief.
+
+N:7549:Undead gravehound
+G:C:g
+I:110:20d8:26:16:0
+W:12:2:400:80
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+B:BITE:HURT:1d6
+B:BITE:DISEASE:2d8
+F:ANIMAL | NO_FEAR | FRIENDS | DROP_SKELETON | DROP_CORPSE | NO_SLEEP | 
+F:UNDEAD | FORCE_MAXHP | BASEANGBAND
+D:Undead canine servants of Kina, the Black Goddess.
+
+N:7550:Undead gravehound
+G:C:g
+I:110:20d8:26:16:0
+W:12:25:400:80
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+B:BITE:HURT:1d6
+B:BITE:DISEASE:2d8
+F:ANIMAL | NO_FEAR | FRIENDS | DROP_SKELETON | DROP_CORPSE | NO_SLEEP | 
+F:UNDEAD | FORCE_MAXHP | BASEANGBAND
+S:MULTIPLY
+D:Undead canine servants of Kina, the Black Goddess.
+
+N:7551:Silverback Boar
+G:q:W
+I:110:8d8:10:13:100
+W:8:1:2000:8
+E:0:1:0:2:1:2
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:BITE:HURT:1d8
+B:CHARGE:HURT:1d8
+F:ANIMAL | RAND_25 | FRIENDS | BASEANGBAND | 
+F:DROP_CORPSE | DROP_SKELETON | BASH_DOOR | FORCE_MAXHP
+D:A legendary breed of boars that live in the deep 
+D:of the North Forest. Bigger even in  size, with 
+D: even huger tusks than their common wild cousins.
+
+N:7552:Ogre Priest of Chaos
+G:O:R
+I:110:148d8:12:40:10
+W:20:1:2400:48
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:ELEC:3d8
+B:HIT:COLD:3d8
+B:WAIL:TERRIFY:1D8
+F:MALE | EVIL | WEIRD_MIND | BASH_DOOR | ORC | OPEN_DOOR | 
+F:FORCE_SLEEP | DROP_CORPSE | DROP_SKELETON
+F:IM_ELEC | AURA_ELEC | DROP_GREAT | DROP_60 | DROP_GOOD | DROP_12
+F:NO_CONF | NO_FEAR | HAS_LITE | ESCORT | FORCE_MAXHP | BASEANGBAND
+S:1_IN_9 | 
+S:BO_ELEC | CAUSE_2 |
+D:A bulking Ogre, engorged its body with Chaos' corruption, 
+D:surrounded by pulse living sparks crackling all over 
+D: this madness inducing figure.
+
+N:7553:Carnivorous Trap
+G:^:r
+I:110:8d8:15:20:10
+W:5:1:0:10
+E:0:0:0:0:0:0
+O:100:0:0:0
+B:BITE:HURT:1d6
+B:BITE:HURT:1d4
+B:BITE:PARALYZE:2d4
+B:EXPLODE:HURT:2d4
+F:ONLY_GOLD | DROP_12 | 
+F:COLD_BLOOD | IM_POIS | NO_CONF | NO_SLEEP | DROP_90 | 
+F:NO_FEAR | NO_STUN | NEVER_MOVE
+F:FORCE_MAXHP | BASEANGBAND
+D:Shaped like a normal looking shut beartrap, camouflaged 
+D:to be mistaken for a non-threatening object,
+D: they open their wide mouths when unaware adventurers 
+D:get too close, revealing a nightmarish vision
+D: of hundreds of razor-sharp little teeth, and red, pulsating tongue.  
+
+N:7554:Zombified goblin
+G:z:s
+I:110:12d8:10:14:30
+W:7:1:200:6
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:2d4
+B:HIT:HURT:2d4
+F:EMPTY_MIND | COLD_BLOOD | BASH_DOOR | FORCE_MAXHP
+F:EVIL | UNDEAD | IM_COLD | IM_POIS | DROP_90 | BASEANGBAND
+F:NO_CONF | NO_SLEEP | NO_FEAR | FRIENDS | DROP_CORPSE | DROP_SKELETON
+D:It is an animated goblin corpse.  Flesh falls off in large chunks as it 
+D: shambles forward. 
+
+N:7555:Undead Ogre
+G:O:g
+I:110:60d8:20:18:50
+W:15:2:800:24
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:HURT:2d8
+B:BITE:DISEASE:2d6
+F:DROP_90 | WILD_WASTE | WILD_WOOD | WILD_MOUNTAIN | DROP_CORPSE
+F:BASH_DOOR | DROP_22 | UNDEAD | BASEANGBAND
+F:FORCE_MAXHP | EVIL | GIANT | DROP_SKELETON |
+D:Risen from the dead by crazed Goblin Necromancers, 
+D:Undead Ogres are a terrible foe...
+
+N:7556:Shub-Niggurath's Cultist Priest
+G:p:b
+I:110:31d8:20:17:40
+W:9:1:1700:13
+E:1:1:1:2:1:1
+O:0:20:80:0
+B:HIT:HURT:2d4
+B:HIT:HURT:2d4
+F:EVIL | CAN_SPEAK | FORCE_MAXHP | BASEANGBAND
+F:FORCE_SLEEP | DROP_12 | HAS_LITE | DROP_90
+F:SMART | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+S:1_IN_9 |
+S:HEAL | CAUSE_1 |
+S:S_MONSTER
+D:A robed humanoid dedicated to Shub-Niggurath's Cult. 
+D:Lost his or her mind to their deity.
+
+N:7557:Crazed Cultist
+G:h:u
+I:110:10d8:20:18:10
+W:5:1:1700:10
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:2d3
+B:HIT:HURT:1d6
+F:WEIRD_MIND | FRIENDS | DROP_CORPSE | DROP_SKELETON | EVIL |  
+F:BASH_DOOR | FORCE_MAXHP | BASEANGBAND
+F:NO_FEAR | 
+D:Whichever might be her or his Cult, this person's 
+D:long gone mind is just a black mess.
+
+N:7558:The Wicker Man, The Limper
+G:W:D
+I:110:450d8:90:60:10
+W:60:3:1000:13500
+E:1:1:1:2:1:1
+O:0:20:20:25
+B:HIT:HURT:5d10
+B:HIT:PARALYZE:5d10
+F:UNIQUE | MALE | RES_TELE | 
+F:FORCE_SLEEP | SMART | BASEANGBAND | 
+F:ONLY_ITEM | DROP_42 | DROP_GOOD | CAN_SPEAK | NONLIVING
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | MOVE_BODY | CAN_SWIM 
+F:EVIL | UNDEAD | IM_COLD | HURT_LITE | NO_CONF | FORCE_MAXHP
+S:1_IN_9 | 
+S:BLIND | CAUSE_2 | BRAIN_SMASH |  
+S:S_HI_UNDEAD | HAND_DOOM
+D:The most powerful of the Ten Who Were Taken, an extremely 
+D:evil sorcerer, nemesis of The Black Company 
+D: and a hell of a foe to any army. 
+
+N:7559:Toadkiller Dog
+G:C:D
+I:110:105d8:30:18:20
+W:15:3:800:30
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d10
+B:BITE:HURT:2d10
+F:WILD_SWAMP | WILD_SHORE | CAN_SPEAK | BASEANGBAND
+F:BASH_DOOR | WILD_GRASS | WILD_WOOD | DROP_CORPSE | POWERFUL
+F:ANIMAL | UNIQUE | EVIL | DROP_SKELETON | DEMON | NO_SLEEP | FORCE_MAXHP
+S:1_IN_9 | 
+S:HEAL | CAUSE_2 |
+D:A hound which was in reality a powerful demon, of flashing 
+D:red eyes. Of inmense power and endurance.
+
+N:7560:Toadkiller Dog
+G:C:D
+I:110:105d8:30:18:20
+W:15:37:800:30
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:1d10
+B:BITE:HURT:2d10
+F:WILD_SWAMP | WILD_SHORE | CAN_SPEAK | BASEANGBAND
+F:BASH_DOOR | WILD_GRASS | WILD_WOOD | DROP_CORPSE | POWERFUL
+F:ANIMAL | UNIQUE | EVIL | DROP_SKELETON | DEMON | NO_SLEEP | FORCE_MAXHP
+S:MULTIPLY
+S:1_IN_9 | 
+S:HEAL | CAUSE_2 |
+D:A hound which was in reality a powerful demon, of flashing 
+D:red eyes. Of inmense power and endurance.
+
+N:7561:Undead Penitent
+G:z:b
+I:105:12d8:20:14:20
+W:3:1:300:3
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:CLAW:DISEASE:1d8
+B:CLAW:DISEASE:1d8
+F:OPEN_DOOR | BASH_DOOR | HURT_LITE | SUSCEP_FIRE | ONLY_GOLD | DROP_60 | DROP_90
+F:NO_CONF | NO_SLEEP | UNDEAD | EVIL | NO_FEAR | IM_POIS | FORCE_MAXHP
+F:COLD_BLOOD | DROP_SKELETON | DROP_CORPSE | SMART | BASEANGBAND
+S:1_IN_9
+S:CAUSE_1 | SCARE
+D:Decayed and emaciated, always starving.
+
+N:7562:Lesser Nightgaunt
+G:b:D
+I:110:15d8:20:10:20
+W:10:1:0:15
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d8
+B:CLAW:DISEASE:1d8
+B:CLAW:TERRIFY:1d8
+B:CRUSH:PARALYZE:1d8
+F:OPEN_DOOR | BASH_DOOR | FRIENDS | HURT_LITE | SUSCEP_FIRE | FORCE_MAXHP
+F:NO_CONF | NO_SLEEP | EVIL | NO_FEAR | IM_POIS | CAN_FLY
+F:COLD_BLOOD | DROP_SKELETON | DROP_CORPSE | SMART | BASEANGBAND
+S:1_IN_9
+S:SCARE
+D:Faceless Devils of the Dark Nights...
+
+N:7563:Poisonous Trap
+G:^:g
+I:110:8d8:15:20:10
+W:5:1:0:10
+E:0:0:0:0:0:0
+O:100:0:0:0
+B:BITE:PARALYZE:1d6
+B:SPIT:POISON:1d4
+B:SPORE:POISON:2d4
+B:EXPLODE:POISON:2d4
+F:ONLY_GOLD | DROP_12 | 
+F:COLD_BLOOD | IM_POIS | NO_CONF | NO_SLEEP | DROP_90 | 
+F:NO_FEAR | NO_STUN | NEVER_MOVE
+F:FORCE_MAXHP | BASEANGBAND
+D:Shaped like a normal looking shut beartrap, camouflaged 
+D:to be mistaken for a non-threatening object,
+D: they open their wide mouths when unaware adventurers get 
+D:too close, revealing a nightmarish vision
+D: of hundreds of razor-sharp little teeth, and a toxic green 
+D:gland that expels poisonous spores.
+
+N:7564:Bursting Trap
+G:^:g
+I:110:8d8:15:20:10
+W:5:1:0:10
+E:0:0:0:0:0:0
+O:100:0:0:0
+B:BITE:HURT:1d4
+B:EXPLODE:POISON:2d4
+B:BITE:PARALYZE:1d6
+F:ONLY_GOLD | DROP_12 | 
+F:COLD_BLOOD | IM_POIS | NO_CONF | NO_SLEEP | DROP_90 | 
+F:NO_FEAR | NO_STUN | NEVER_MOVE
+F:FORCE_MAXHP | BASEANGBAND
+D:Shaped like a normal looking shut beartrap, camouflaged 
+D:to be mistaken for a non-threatening object,
+D: they open their wide mouths when unaware adventurers 
+D:get too close, revealing a nightmarish vision
+D: of hundreds of razor-sharp little teeth. This one 
+D:explodes when exposed to danger.
+
+N:7565:Freezing Trap
+G:^:B
+I:110:8d8:15:20:10
+W:5:1:0:10
+E:0:0:0:0:0:0
+O:100:0:0:0
+B:BITE:COLD:1d4
+B:SPORE:POISON:2d4
+B:BITE:PARALYZE:1d6
+B:EXPLODE:COLD:2d4
+F:ONLY_GOLD | DROP_12 | 
+F:COLD_BLOOD | IM_COLD | NO_CONF | NO_SLEEP | DROP_90 | 
+F:NO_FEAR | NO_STUN | NEVER_MOVE
+F:FORCE_MAXHP | BASEANGBAND
+D:Shaped like a normal looking shut beartrap, camouflaged 
+D:to be mistaken for a non-threatening object,
+D: they open their wide mouths when unaware adventurers 
+D:get too close, revealing a nightmarish vision
+D: of hundreds of razor-sharp frozen little teeth, and 
+D:swirls of a freezing breathe coming off of them.
+
+N:7566:Electrocuting Trap
+G:^:B
+I:110:8d8:15:20:10
+W:5:1:0:10
+E:0:0:0:0:0:0
+O:100:0:0:0
+B:BITE:ELEC:1d4
+B:SPIT:POISON:2d4
+B:BITE:PARALYZE:1d6
+B:EXPLODE:ELEC:2d4
+F:ONLY_GOLD | DROP_12 | 
+F:COLD_BLOOD | IM_COLD | NO_CONF | NO_SLEEP | DROP_90 | 
+F:NO_FEAR | NO_STUN | NEVER_MOVE
+F:FORCE_MAXHP | BASEANGBAND
+D:Shaped like a normal looking shut beartrap, camouflaged 
+D:to be mistaken for a non-threatening object,
+D: they open their wide mouths when unaware adventurers 
+D:get too close, revealing a nightmarish vision
+D: of hundreds of razor-sharp and electrifying little 
+D:teeth, crackling menacingly. 
+
+N:7567:Captain Yeek
+G:y:s
+I:110:38d8:23:28:10
+W:17:1:400:38
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1D8
+F:DROP_60 | | DROP_SKELETON | DROP_60 | ESCORT | EVIL | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | HAS_LITE | ANIMAL | EVIL | 
+F:DROP_CORPSE | FORCE_MAXHP
+D:A medium sized mustelid humanoid, commanding a small 
+D:squad of his peers. Fierce and cruel.
+
+N:7568:Soldier Yeek
+G:y:U
+I:110:15d8:21:19:10
+W:9:1:400:15
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:HIT:HURT:1d6
+B:HIT:HURT:1d6
+F:DROP_60 | | DROP_SKELETON | DROP_12 | ESCORT | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | HAS_LITE | ANIMAL | EVIL | 
+F:DROP_CORPSE | FORCE_MAXHP
+D:A valuable unit in any Yeek group, the yeek Soldier 
+D:can be small, but it is fierce.
+
+N:7569:Klackon Soldier
+G:K:u
+I:110:25d8:25:20:5
+W:15:2:1000:50
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:HIT:HURT:1d8
+B:BITE:HURT:1d8
+B:STING:POISON:1d8
+F:DROP_60 | | DROP_SKELETON | DROP_12 | FORCE_MAXHP | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | HAS_LITE | ANIMAL | DROP_CORPSE | 
+F:NO_FEAR | NO_CONF | ESCORT
+D:A squad member of the Klackon Hive Mind. Always looking 
+D:to expand the Klackon Underworld colonies.
+
+N:7570:Klackon Worker
+G:K:D
+I:110:12d8:23:20:5
+W:5:2:1000:10
+E:1:1:1:2:1:1
+O:0:0:100:0
+B:HIT:HURT:1d6
+B:BITE:HURT:1D6 
+F:DROP_60 | | DROP_SKELETON | DROP_12 | FRIENDS | 
+F:FORCE_MAXHP | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | HAS_LITE | ANIMAL | 
+F:DROP_CORPSE | NO_FEAR | NO_CONF 
+D:A working member of the Klackon Hive Mind, searching 
+D:tirelessly for food and resources.
+
+N:7571:Corpse Eating Worm
+G:w:s
+I:105:3d8:8:3:10
+W:1:1:40:3
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_25 | CAN_SWIM | FORCE_SLEEP | DROP_SKELETON | FORCE_MAXHP
+F:EMPTY_MIND | ANIMAL | IM_POIS | SUSCEP_FIRE | NO_FEAR
+D:It is a large sickly greenish slimy worm. Often found 
+D:around feeding off dead... things.
+
+N:7572:Corpse Eating Worm
+G:w:s
+I:105:3d8:8:3:10
+W:1:4:40:3
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:CRAWL:POISON:1d4
+B:BITE:HURT:1d4
+F:WILD_WASTE | WILD_SWAMP | WILD_SHORE | BASEANGBAND
+F:RAND_25 | CAN_SWIM | FORCE_SLEEP | DROP_SKELETON | FORCE_MAXHP
+F:EMPTY_MIND | ANIMAL | IM_POIS | SUSCEP_FIRE | NO_FEAR
+S:MULTIPLY
+D:It is a large sickly greenish slimy worm. Often found 
+D:around feeding off dead... things.
+
+N:7573:Giant Corpse Eating Crab
+G:c:w
+I:110:4d8:12:21:40
+W:5:1:300:6
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:BITE:DISEASE:1d4
+F:FORCE_MAXHP
+F:WEIRD_MIND | CAN_SWIM | WILD_SWAMP | BASEANGBAND
+F:WILD_WASTE | WILD_SHORE | WILD_MOUNTAIN |
+F:RAND_25 | DROP_SKELETON | DROP_CORPSE | IM_ACID
+F:WEIRD_MIND | BASH_DOOR | ANIMAL | SUSCEP_FIRE
+S:1_IN_12 |
+S:BO_ACID
+D:A giant solitary crab that feeds on fresh corpses, 
+D:as they can smell them from long distances. 
+D: They can be seen attacking living creatures if hungry enough.
+
+N:7574:Dissolving Trap
+G:^:g
+I:110:10d8:15:20:10
+W:5:1:0:10
+E:0:0:0:0:0:0
+O:100:0:0:0
+B:SPIT:ACID:1d4
+B:SPORE:POISON:2d4
+B:BITE:PARALYZE:1d6
+B:EXPLODE:ACID:2d4
+F:ONLY_GOLD | DROP_12 | 
+F:COLD_BLOOD | IM_POIS | NO_CONF | NO_SLEEP | DROP_90 | 
+F:NO_FEAR | NO_STUN | NEVER_MOVE
+F:FORCE_MAXHP | BASEANGBAND
+D:Shaped like a normal looking shut beartrap, camouflaged 
+D:to be mistaken for a non-threatening object,
+D: they open their wide mouths when unaware adventurers 
+D:get too close, revealing a nightmarish vision
+D: of hundreds of razor-sharp little teeth, dripping 
+D:acidic saliva and exuding greenish fumes.
+
+N:7575:Giant Swamp spider
+G:S:g
+I:110:21d8:18:22:80
+W:9:2:500:14
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:3d6
+B:BITE:POISON:3d6
+B:BITE:ACID:1d6
+B:BITE:PARALYZE:1d6
+F:DROP_SKELETON | DROP_CORPSE | WILD_SWAMP | WILD_WASTE
+F:WEIRD_MIND | WILD_SHORE | 
+F:ANIMAL | IM_POIS | FORCE_MAXHP | BASEANGBAND
+D:It is a giant greenish spider, whose body is covered 
+D:with some kind of corrosive fungal layer.
+D: Usually found in swamps and lands covered in shallow stale waters.
+
+N:7576:Undead Orc
+G:o:D
+I:105:15d8:20:25:20
+W:10:1:500:12
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d10
+B:HIT:COLD:1d10
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | UNDEAD | AURA_COLD | IM_POIS | IM_COLD
+F:DROP_60 | DROP_SKELETON | DROP_CORPSE | COLD_BLOOD
+F:EVIL | ORC | HURT_LITE | DROP_12 | FORCE_MAXHP
+D:The orcish abomination, created by a crazy shaman orc, 
+D:a mock of orcish life, cruel and horrible.
+
+N:7577:Undead Snaggletooth
+G:h:D
+I:110:20d8:20:21:10
+W:7:2:300:4
+E:1:1:1:2:1:1
+O:0:50:0:20
+B:HIT:HURT:1d12
+B:BITE:POISON:2d8
+B:CHARGE:HURT:1d8
+F:MALE | WILD_GRASS | BASEANGBAND
+F:DROP_60 | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | FORCE_MAXHP | UNDEAD
+D:A short little nasty pig resembling creature. Smells 
+D:foul enough to make you gag. Dressed in bedraggled clothes. 
+D: Sometimes, Snaggletooth shamans bring the less 
+D:damaged corpses back to serve them.
+
+N:7578:Snaggletooth Captain
+G:h:r
+I:110:34d8:24:24:10
+W:9:1:1000:7
+E:1:1:1:2:1:1
+O:0:50:0:20
+B:HIT:HURT:2d8
+B:BITE:HURT:1d12
+B:CHARGE:HURT:1d10
+F:MALE | WILD_GRASS | BASEANGBAND
+F:DROP_60 | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | ESCORT | CAN_SPEAK | FORCE_MAXHP
+D:The Snagletooth society only understands two orders, to fight and to eat. 
+D: When their Captains commands a squad to carry them both... 
+D: Beware of their wrath... And their hunger!
+
+N:7579:Living Demonic Cauldron
+G:U:D
+I:110:30d8:15:25:30
+W:10:2:2700:15
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:WAIL:HURT:1d8
+B:SPIT:ACID:2d8
+B:WAIL:TERRIFY:1d8
+F:NO_SLEEP | BASEANGBAND | 
+F:NONLIVING | COLD_BLOOD | DROP_60 | DROP_GOOD
+F:EVIL | DEMON | IM_FIRE | NO_FEAR | AURA_FIRE | 
+F:NEVER_MOVE | FORCE_MAXHP
+S:1_IN_12
+S:SHRIEK | S_DEMON | CAUSE_1
+D:Some obscure legends talk about a demonic entity 
+D:living in a cauldron, after summoned using 
+D: sacrificed adventurers, to serve the will of those powerful, or mad, enough.
+
+N:7580:Swamp Goblin
+G:g:g
+I:110:10d8:24:20:30
+W:6:1:400:8
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d6
+B:BITE:ACID:1d6
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | CAN_SPEAK | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_90 | DROP_CORPSE | IM_POIS | FORCE_MAXHP
+F:EVIL | ORC | HURT_LITE | DROP_SKELETON | SUSCEP_FIRE | FORCE_SLEEP
+S:1_IN_12
+S:ARROW_1 | MISSILE
+D:Goblins are adapted very well to toxic environments, 
+D:like swamps. Their cruelty is notorious.
+
+N:7581:Dune Goblin
+G:g:U
+I:110:9d8:24:20:30
+W:6:1:400:9
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d6
+B:HIT:HURT:1d6
+B:BITE:PARALYZE:1d6
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | CAN_SPEAK | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_90 | DROP_CORPSE | IM_FIRE | FORCE_MAXHP
+F:EVIL | ORC | HURT_LITE | DROP_SKELETON | SUSCEP_FIRE | FORCE_SLEEP
+S:1_IN_12
+S:ARROW_1 | MISSILE
+D:Goblins can also inhabit the vastness of the deserts, 
+D:being extremely resistant to heat,
+D: but vulnerable to light, since they live in caves 
+D:and only get out at night.
+
+N:7582:Goblin Necromancer
+G:g:D
+I:110:13d8:20:22:30
+W:10:1:400:13
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d6
+B:HIT:HURT:1d6
+F:MALE | 
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_60 | DROP_CORPSE | FORCE_MAXHP
+F:EVIL | ORC | HURT_LITE | DROP_12 | DROP_SKELETON |
+S:1_IN_9
+S:S_UNDEAD
+D:Goblins that are initiates of Dark Chaos Magic, 
+D:often use their dubious skills to
+D: enslave lesser undead beings, or major ones 
+D:if they can control them...
+D: which they often cannot.
+
+N:7583:Swampdrake
+G:d:G
+I:110:270d8:28:30:50
+W:25:2:12000:1350
+E:0:1:0:6:1:0
+O:50:50:0:0
+B:CLAW:HURT:2d8
+B:CLAW:HURT:2d8
+B:BITE:HURT:3d8
+B:SPIT:ACID:2d10
+F:FORCE_SLEEP | CAN_FLY | DROP_CORPSE | FORCE_MAXHP
+F:DROP_60 | BASH_DOOR | DRAGON | BASEANGBAND
+S:1_IN_12 |
+S:CONF | SCARE | BR_POIS | BO_ACID
+D:A relative of the Wyrm's family, of toxic, poison 
+D:oozing  skin and acid breathing capability.
+D: Possibly one of the worst members of the drake family to encounter.
+
+N:7584:Naked Mole-Rat Queen
+G:r:v
+I:110:250d8:25:50:20
+W:20:2:600:750
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d10
+B:BITE:HURT:2d10
+F:WEIRD_MIND | BASH_DOOR | KILL_WALL | DROP_CORPSE | FORCE_MAXHP
+F:ANIMAL | DROP_SKELETON | FEMALE | FORCE_SLEEP | BASEANGBAND
+D:In the depths, there is a legendary old burrowing 
+D:creature, spawning her breed since 
+D: the dawn of the Time, Mother to all ratids. And 
+D:legend has it that her wrath is 
+D: something horrible to behold.
+
+N:7585:High Patriarch Priest of Chaos
+G:p:b
+I:110:158d8:24:40:10
+W:27:2:1700:316
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:ELEC:3d8
+B:HIT:COLD:3d8
+F:FORCE_SLEEP | CAN_SPEAK | BASEANGBAND
+F:MALE | EVIL | WEIRD_MIND | BASH_DOOR | ORC | OPEN_DOOR | 
+F:DROP_CORPSE | DROP_SKELETON
+F:IM_ELEC | AURA_ELEC | DROP_GOOD | DROP_90 | FORCE_MAXHP
+F:NO_CONF | NO_FEAR | HAS_LITE | ESCORT | MALE | DROP_22
+S:1_IN_9 | 
+S:BO_ELEC | CAUSE_2 |
+D:A corrupted human being, purulent, engorged body, 
+D:reeking of Chaos' corruption, 
+D: surrounded by pulse living sparks crackling 
+D:all over his madness inducing figure.
+
+N:7586:High Matriarch Cultist of Chaos
+G:p:b
+I:110:168d8:24:40:10
+W:27:2:1700:336
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:ELEC:3d8
+B:HIT:COLD:3d8
+F:FORCE_SLEEP | CAN_SPEAK | BASEANGBAND
+F:MALE | EVIL | WEIRD_MIND | BASH_DOOR | ORC | OPEN_DOOR | 
+F:DROP_CORPSE | DROP_SKELETON
+F:IM_ELEC | AURA_ELEC | DROP_GOOD | DROP_90 | DROP_22
+F:NO_CONF | NO_FEAR | HAS_LITE | ESCORT | FEMALE | FORCE_MAXHP
+S:1_IN_9 | 
+S:BO_ELEC | CAUSE_2 |
+D:A corrupted human being, purulent, engorged body, 
+D:reeking of Chaos' corruption, 
+D: surrounded by pulse living sparks crackling all 
+D:over her madness inducing figure.
+
+N:7587:Undead Gnoll
+G:g:D
+I:110:32d8:20:25:20
+W:13:1:400:16
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d10
+B:HIT:COLD:1d10
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | UNDEAD | AURA_COLD | IM_POIS | IM_COLD
+F:RAND_25 | DROP_60 | DROP_SKELETON | DROP_CORPSE | COLD_BLOOD
+F:EVIL | ORC | HURT_LITE | DROP_12 | FORCE_MAXHP |
+D:Undead Gnolls, created by Orc Shamans as elite 
+D:corps, make terrible bodyguards.
+
+N:7588:Skeleton gnoll
+G:s:w
+I:110:16d8:20:21:40
+W:16:1:400:16
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:3d8
+F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | ORC | UNDEAD | BASEANGBAND | 
+F:IM_COLD | IM_POIS | DROP_60 | FORCE_MAXHP
+F:NO_CONF | NO_SLEEP | NO_FEAR | DROP_60 | DROP_60
+D:It is an animated gnoll skeleton.
+
+N:7589:Zombified gnoll
+G:z:s
+I:105:18d8:10:22:10
+W:13:1:400:18
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d8
+B:BITE:DISEASE:1d8
+F:FORCE_MAXHP | DROP_60 | DROP_12 | BASEANGBAND
+F:COLD_BLOOD | EMPTY_MIND | BASH_DOOR | EVIL | ORC | UNDEAD |
+F:IM_COLD | IM_POIS | NO_CONF | NO_SLEEP | NO_FEAR | FRIENDS
+D:It is a shambling gnoll corpse leaving behind a trail of gore.
+
+N:7590:Zombified ogre
+G:z:s
+I:105:25d8:10:24:10
+W:20:1:800:50
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d10
+B:HIT:HURT:1d10
+F:COLD_BLOOD | EMPTY_MIND | BASH_DOOR | EVIL | ORC | UNDEAD | 
+F:IM_COLD | IM_POIS | FORCE_MAXHP | DROP_60 | DROP_12
+F:NO_CONF | NO_SLEEP | NO_FEAR | ESCORT | BASEANGBAND
+D:It is a staggering ogre corpse leaving behind a trail of decay.
+
+N:7591:Zombified troll
+G:z:s
+I:105:40d8:10:30:10
+W:24:1:1000:40
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:3d8
+B:HIT:HURT:3d8
+F:COLD_BLOOD | EMPTY_MIND | BASH_DOOR | EVIL | TROLL | UNDEAD | 
+F:IM_COLD | IM_POIS | FORCE_MAXHP | DROP_90 | DROP_12 | ESCORT
+F:NO_CONF | NO_SLEEP | NO_FEAR | BASEANGBAND
+D:It is a huge, shambling, stenchy trollish corpse 
+D:leaving behind a trail of flesh.
+
+N:7592:Swamp Kobold
+G:k:g
+I:110:10d8:24:20:30
+W:6:1:700:8
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d6
+B:BITE:ACID:1d6
+F:WILD_SWAMP | WILD_SHORE | BASEANGBAND | 
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN | CAN_SPEAK
+F:OPEN_DOOR | BASH_DOOR | DROP_60 | DROP_CORPSE | IM_POIS | FORCE_MAXHP
+F:EVIL | DROP_SKELETON | SUSCEP_FIRE | FORCE_SLEEP | DROP_60
+S:1_IN_12
+S:ARROW_1
+D:Kobolds thrive in toxic environments, like swamps. 
+D:They hunt in packs when the sun
+D: is down.
+
+N:7593:Bulbous mushroom patch
+G:,:G
+I:110:1d8:2:3:0
+W:5:1:30:10
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:EXPLODE:POISON:1d4
+B:SPORE:POISON:2d4
+F:NEVER_MOVE | BASEANGBAND
+F:WILD_SWAMP | WILD_SHORE | STUPID | EMPTY_MIND | 
+F:IM_POIS | NO_CONF | NO_SLEEP | NO_FEAR
+D:Yum! It looks quite tasty.
+
+N:7594:Snow Bobcat
+G:f:w
+I:110:15d8:40:25:5
+W:17:2:600:24
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:CLAW:HURT:1d8
+B:CLAW:HURT:1d8
+B:BITE:HURT:1d8
+F:BASH_DOOR | WILD_WOOD | WILD_GRASS | BASEANGBAND
+F:DROP_SKELETON | DROP_CORPSE | ANIMAL | SMART
+D:A large legendar lynx, who lives in the snowy peak of the Kolvir.
+D:meal.
+
+N:7595:Giant Lonomya Moth
+G:I:U
+I:110:4d8:18:10:50
+W:20:2:20:8
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:POISON:4d4
+B:SPORE:POISON:4d4
+F:FORCE_SLEEP | WILD_WASTE | BASEANGBAND
+F:RAND_25 | WILD_MOUNTAIN | WILD_WOOD | WILD_SWAMP
+F:WEIRD_MIND | BASH_DOOR | FORCE_MAXHP | WILD_SHORE
+F:ANIMAL | CAN_FLY | DROP_SKELETON | DROP_CORPSE
+D:A lethally venomous, fuzzy looking moth. Avoid its touch at all cost.
+
+N:7596:Giant Lonomya Moth
+G:I:U
+I:110:4d8:18:10:50
+W:20:12:20:8
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:POISON:4d4
+B:SPORE:POISON:4d4
+F:FORCE_SLEEP | WILD_WASTE | BASEANGBAND
+F:RAND_25 | WILD_MOUNTAIN | WILD_WOOD | WILD_SWAMP
+F:WEIRD_MIND | BASH_DOOR | FORCE_MAXHP | WILD_SHORE
+F:ANIMAL | CAN_FLY | DROP_SKELETON | DROP_CORPSE
+S:MULTIPLY
+D:A lethally venomous, fuzzy looking moth. Avoid its touch at all cost.
+
+N:7597:Orc Scout
+G:o:s
+I:110:14d8:20:23:30
+W:10:1:1000:14
+E:1:1:1:2:1:1
+O:10:80:10:0
+B:HIT:HURT:1d10
+B:HIT:HURT:1d8
+F:MALE | 
+F:DROP_60 | CAN_SPEAK | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | ORC | HURT_LITE | FORCE_MAXHP
+S:1_IN_9
+S:ARROW_2 | 
+D:A well trained Orc explorer and tracker.
+
+N:7598:Orc Archer
+G:o:s
+I:110:12d8:20:20:30
+W:10:1:1000:12
+E:1:1:1:2:1:1
+O:10:80:10:0
+B:HIT:HURT:1d10
+B:HIT:HURT:1d8
+F:MALE | 
+F:DROP_60 | CAN_SPEAK | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | ORC | HURT_LITE | FORCE_MAXHP
+S:1_IN_9
+S:ARROW_2
+D:A terrific foe, attacking from behind the lines with their black arrows.
+
+N:7599:Skaven Horned Rat's Priest
+G:r:D
+I:110:20d8:18:20:90
+W:7:1:600:10
+E:1:1:1:2:1:1
+O:20:20:50:5
+B:CLAW:HURT:1d4
+B:CLAW:POISON:1d4
+B:BITE:HURT:1d6
+F:DROP_90 | 
+F:FORCE_MAXHP | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | ANIMAL | EVIL | DROP_12
+F:DROP_CORPSE | IM_POIS | DROP_SKELETON |
+S:1_IN_9  
+S:MISSILE | DARKNESS
+D:A fanatic cultist of the Horned Rat Goddess.
+
+N:7600:Skaven Nurgle's Cultist
+G:r:b
+I:110:22d8:18:20:90
+W:7:1:600:10
+E:1:1:1:2:1:1
+O:25:25:40:10
+B:CLAW:HURT:1d4
+B:CLAW:POISON:1d4
+B:BITE:HURT:1d6
+F:DROP_90 | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | ANIMAL | EVIL | DROP_12
+F:DROP_CORPSE | IM_POIS | DROP_SKELETON |
+S:1_IN_10  
+S:CAUSE_1 | DARKNESS 
+D:A mind-gone, corrupted, bloated, Skaven Chaos Priest.
+
+N:7601:Skaven Scout
+G:r:r
+I:110:12d8:26:20:30
+W:7:1:600:6
+E:1:1:1:2:1:1
+O:25:25:25:25
+B:CLAW:HURT:1d6
+B:CLAW:POISON:1d6
+B:BITE:HURT:1d8
+F:DROP_90 | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | ANIMAL | EVIL | FORCE_MAXHP
+F:DROP_CORPSE | IM_POIS | DROP_SKELETON |
+S:1_IN_10  
+S:ARROW_1
+D:Extremely cunning and cruel, they enjoy tracking 
+D:down and hunting their enemies.
+
+N:7602:Yeek Trapper
+G:y:o
+I:110:2d8:20:12:50
+W:1:1:400:2
+E:1:1:1:2:1:1
+O:50:25:0:25
+B:HIT:HURT:1d6
+F:MALE | WILD_WOOD | WILD_WASTE | 
+F:DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP | EVIL
+F:ONLY_ITEM | DROP_90 | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | CAN_SPEAK
+S:1_IN_12
+S:TRAPS | ARROW_1
+D:A cunning member of the yeek tribe.
+
+N:7603:Orc Hunter
+G:o:w
+I:110:15d8:20:20:30
+W:10:1:1000:14
+E:1:1:1:2:1:1
+O:10:80:10:0
+B:HIT:HURT:1d10
+B:HIT:HURT:1d8
+F:MALE | DROP_60 | CAN_SPEAK | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | ORC | HURT_LITE | FORCE_MAXHP
+S:1_IN_9
+S:ARROW_2 | 
+D:An extremely cruel and well trained Orc hunter. 
+D:Adventurers its favourite prey.
+
+N:7604:Goblin Hunter
+G:g:w
+I:110:5d8:20:17:30
+W:2:1:400:2
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d8
+F:MALE | BASEANGBAND | 
+F:WILD_WASTE | WILD_GRASS | WILD_MOUNTAIN
+F:OPEN_DOOR | BASH_DOOR | DROP_90 | DROP_SKELETON | DROP_CORPSE
+F:EVIL | ORC | HURT_LITE | FORCE_MAXHP
+S:1_IN_9
+S:ARROW_1 | 
+D:Goblins are always sending packs of hunters to 
+D:bring food to the tribe.
+
+N:7605:Kobold Hunter
+G:k:w
+I:110:4d8:20:15:10
+W:2:1:800:3
+E:1:1:1:2:1:1
+O:0:50:0:40
+B:HIT:HURT:1d8
+F:DROP_60 | WILD_WASTE | 
+F:FORCE_MAXHP | DROP_90 | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | IM_POIS | HURT_LITE | CAN_SPEAK
+S:1_IN_6
+S:ARROW_1 |  
+D:It is a fairly medium sized, dog-headed humanoid, 
+D:scaly skin, yellowish fangs, and mean manners.
+
+N:7606:Black mold
+G:m:D
+I:110:7d8:2:2:0
+W:2:1:20:6
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPORE:HURT:1d8
+B:SPIT:POISON:1d8
+B:SPIT:EXP_80:1d8
+B:EXPLODE:POISON:1d8
+F:STUPID | EMPTY_MIND | IM_POIS | DROP_SKELETON | FORCE_MAXHP
+F:NO_CONF | NO_SLEEP | NO_FEAR | CAN_SPEAK | NEVER_MOVE | BASEANGBAND
+D:A small strange growth, attached somehow to the ground. Kind of looks evil.
+
+N:7607:Skaven Priest Shaman
+G:r:r
+I:110:16d8:26:25:30
+W:7:1:600:8
+E:1:1:1:2:1:1
+O:20:20:50:5
+B:CLAW:HURT:1d6
+B:CLAW:POISON:1d6
+B:BITE:HURT:1d8
+F:DROP_90 | BASEANGBAND | 
+F:OPEN_DOOR | BASH_DOOR | ANIMAL | EVIL | FORCE_MAXHP | DROP_90
+F:DROP_CORPSE | IM_POIS | DROP_SKELETON | CAN_SPEAK
+S:1_IN_10  
+S:HEAL | DARKNESS | MISSILE
+D:Some sort of even-crazier-than-normal Skaven, who channels Chaos' powers.
+
+N:7608:Kobold Slingshooter
+G:g:y
+I:110:3d8:20:20:10
+W:5:1:800:5
+E:1:1:1:2:1:1
+O:0:50:0:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d6
+F:DROP_60 | WILD_WASTE | BASEANGBAND
+F:OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | SMART | FORCE_MAXHP | DROP_90
+S:1_IN_8
+S:ARROW_1
+D:Usually small sized goblins are used to stay in the 
+D:flanks of the pack, these ones shooting their slingshots.
+
+N:7609:Mummified ogre
+G:z:u
+I:105:42d8:10:18:50
+W:20:1:500:224
+E:1:1:1:2:1:1
+O:10:80:0:0
+B:HIT:HURT:2d4
+B:HIT:HURT:2d4
+B:CLAW:DISEASE:2d4
+F:DROP_90 | FORCE_MAXHP | BASEANGBAND
+F:EMPTY_MIND | COLD_BLOOD | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | ORC | UNDEAD | IM_POIS | SUSCEP_FIRE | SUSCEP_COLD
+F:NO_CONF | NO_SLEEP | NO_FEAR
+D:It is an old mummy of an ogre, covered in wrappings.
+
+N:7610:Ninja
+G:p:D
+I:110:15d8:10:16:2
+W:3:1:1700:2
+E:1:1:1:2:1:1
+O:25:50:25:0
+B:HIT:HURT:2d6
+B:HIT:HURT:2d6
+B:HIT:POISON:2d6
+F:DROP_SKELETON | DROP_CORPSE | CAN_SPEAK
+F:DROP_90 | WILD_TOWN | EVIL | SMART | FORCE_MAXHP
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | BASEANGBAND
+S:1_IN_8
+S:ARROW_1 | DARKNESS
+D:A person, either man or woman, trained and 
+D:initiated in the Shinobi arts.
+D: Usually Fu-Leng worshippers, and thus, fanatics.
+
+N:7611:Domoko Lizard
+G:R:g
+I:110:80d8:20:32:5
+W:12:2:1200:8
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:6d8
+B:BITE:POISON:6d8
+B:BITE:PARALYZE
+F:BASH_DOOR | FORCE_SLEEP | NO_FEAR | POWERFUL | FORCE_MAXHP
+F:WILD_WASTE | IM_POIS | BASEANGBAND
+F:WILD_SHORE | WILD_SWAMP | 
+F:ANIMAL | DROP_CORPSE | DROP_SKELETON
+D:An ancient race of huge, gigantic lizards, 
+D:that can eat up an adventurer in two bites.
+D: Slow and terribly bad tempered, a dreadful foe.
+
+N:7612:Black bat
+G:b:D
+I:115:1d8:30:12:30
+W:1:1:400:1
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:HURT:1d4
+B:BITE:HURT:1d6
+F:WEIRD_MIND | 
+F:RAND_25 | DROP_CORPSE | FRIENDS | BASEANGBAND
+F:ANIMAL | CAN_FLY | WILD_WOOD |
+F:WILD_SWAMP | WILD_SHORE | DROP_CORPSE | DROP_SKELETON | FORCE_MAXHP
+D:A black bat that lives in the dungeons, 
+D:big in comparison with the normal bat, 
+D: its wingspan being 1 foot.
+
+N:7613:Gluttonous cube
+G:j:v
+I:105:68d8:12:6:1
+W:40:2:1600:1044
+E:0:0:0:0:0:0
+O:50:30:20:0
+B:TOUCH:COLD:1d10
+B:TOUCH:HURT:1d10
+B:TOUCH:ACID:1d10
+B:TOUCH:POISON:1d10
+F:DROP_GREAT | DROP_42 | BASEANGBAND | 
+F:STUPID | EMPTY_MIND | COLD_BLOOD | FORCE_MAXHP
+F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | CAN_SWIM | KILL_BODY
+F:IM_ACID | IM_ELEC | IM_POIS | KILL_ITEM | SUSCEP_FIRE | SUSCEP_COLD
+F:NO_CONF | NO_SLEEP | NO_FEAR | DROP_SKELETON | DROP_CORPSE
+D:It is a strange, vast gelatinous structure that assumes cubic proportions 
+D:as it lines all four walls of the corridors it patrols.  Through its 
+D:transparent jelly structure you can see treasures it has engulfed, and a 
+D:few corpses as well.
+
+N:7614:Green dragon bat
+G:b:g
+I:115:9d8:12:13:50
+W:30:1:600:90
+E:0:1:1:0:1:0
+O:0:0:0:0
+B:BITE:POISON:1d6
+B:BITE:HURT:1d6
+F:FORCE_SLEEP | WEIRD_MIND | 
+F:RAND_25 | DROP_CORPSE | FORCE_MAXHP | BASEANGBAND
+F:CAN_FLY | DROP_SKELETON | HAS_LITE | ANIMAL | IM_FIRE | FRIENDS
+S:1_IN_6 | 
+S:BR_POIS
+D:It is a sharp-tailed bat, wreathed in toxic clouds, 
+D:and flying in cauldrons engulfed in green pollution.
+
+# Latest addition to the townfolk, the Wandering Drew.
+N:7615:Wandering Werd
+G:h:U
+I:110:64d8:15:17:150
+W:0:3:1700:6
+E:1:1:1:2:1:1
+O:50:50:0:0
+B:HIT:HURT:2d8
+F:MALE | DROP_CORPSE | WILD_TOWN | OPEN_DOOR | 
+F:BASH_DOOR | WEIRD_MIND | NEUTRAL | BASEANGBAND
+F:NO_CONF | NO_SLEEP | DROP_60 | RAND_25 | 
+F:CAN_SPEAK | FORCE_MAXHP | UNIQUE
+D:Always walking around, just enjoying the Town 
+D:he has spent all his life defending
+D: and fighting for. An old warrior he might look 
+D:like, but be fooled not, his vast
+D: experience and knowledge makes him an uttermost valuable fellow.
+
+N:7616:Fafhrd The Lean
+G:h:r
+I:110:40d8:16:28:10
+W:15:3:1700:360
+E:1:1:1:2:1:1
+O:0:70:30:0
+B:HIT:HURT:2d8
+B:HIT:HURT:2d8
+F:UNIQUE | MALE | ONLY_ITEM | DROP_22 | HAS_LITE
+F:DROP_22 | DROP_GOOD | OPEN_DOOR | BASH_DOOR | FORCE_MAXHP
+F:NEUTRAL | WILD_WOOD | BASEANGBAND | 
+D:He is the loyal companion of the Gray Mouser, 
+D:together they are two swords for hire
+D: who seek adventures.
+
+N:7617:Gray Mouser
+G:h:s
+I:110:38d8:16:8:10
+W:18:3:1700:1200
+E:1:1:1:2:1:1
+O:0:70:30:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d8
+F:UNIQUE | MALE | ONLY_ITEM | DROP_22 | HAS_LITE
+F:DROP_22 | DROP_GOOD | OPEN_DOOR | BASH_DOOR | FORCE_MAXHP
+F:NEUTRAL | WILD_WOOD | BASEANGBAND | 
+D:He is the loyal companion of Fafhrd the Lean, 
+D:together they are two swords for hire
+D: who seek adventures.
+
+N:7618:Axeman Soldier
+G:p:U
+I:110:11d8:20:20:20
+W:14:1:1700:135
+E:1:1:1:2:1:1
+O:30:70:0:0
+B:HIT:HURT:3d6
+B:HIT:HURT:3d6
+F:MALE | WILD_GRASS | BASEANGBAND
+F:DROP_12 | DROP_SKELETON | DROP_CORPSE | OPEN_DOOR | BASH_DOOR | HAS_LITE
+F:FORCE_MAXHP | DROP_60
+D:A warrior of considerable skill.
+
+N:7619:Pikeman Soldier
+G:p:U
+I:110:11d8:20:20:20
+W:14:1:1700:135
+E:1:1:1:2:1:1
+O:30:70:0:0
+B:HIT:HURT:3d6
+B:HIT:HURT:3d6
+F:MALE | WILD_GRASS | BASEANGBAND
+F:DROP_12 | DROP_SKELETON | DROP_CORPSE | OPEN_DOOR | BASH_DOOR | HAS_LITE
+F:FORCE_MAXHP | DROP_60
+D:A warrior of considerable skill.
+
+N:7620:Bendyrazar The Small
+G:h:g
+I:110:38d8:16:8:10
+W:20:3:1700:1200
+E:1:1:1:2:1:1
+O:0:70:30:0
+B:HIT:HURT:1d8
+B:HIT:HURT:1d8
+F:UNIQUE | MALE | ONLY_ITEM | DROP_90 | HAS_LITE | FORCE_MAXHP
+F:DROP_22 | DROP_GOOD | OPEN_DOOR | BASH_DOOR | WILD_SHORE
+F:NEUTRAL | WILD_WOOD | BASEANGBAND | 
+D:A young Sea Elf, hungry for adventures!
+
+N:7621:Giant Magmaeater Crab
+G:c:r
+I:110:10d8:10:25:30
+W:6:1:300:8
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:BITE:HURT:3d4
+B:STING:HURT:4d4
+B:CRUSH:HURT:2d6
+F:WEIRD_MIND | CAN_SWIM | WILD_SWAMP | BASEANGBAND
+F:WILD_WASTE | WILD_SHORE | WILD_MOUNTAIN |
+F:RAND_25 | DROP_SKELETON | DROP_CORPSE | FORCE_MAXHP
+S:1_IN_6 |
+S:BO_FIRE
+D:It is about 8 feet long, can be found near lava, 
+D:where it likes to hold its prey
+D: above the scorching heat before consuming them.
+
+N:7622:Great Oni
+G:K:U
+I:110:73d8:20:29:20
+W:17:2:2000:120
+E:1:1:1:2:1:1
+O:30:30:40:0
+B:HIT:HURT:3d8
+B:HIT:HURT:1d10
+F:DROP_60 | OPEN_DOOR | BASH_DOOR | EVIL | CAN_SPEAK | FORCE_MAXHP
+F:WILD_WASTE | BASEANGBAND | 
+F:MALE | DROP_CORPSE | DROP_SKELETON | 
+F:DROP_12 | 
+D:It is a major form of a humanoid,  demonlike creature, 
+D:muscular and with huge white fangs and yellow smoldering eyes.
+D: This one is just bigger, broader and meaner.
+
+N:7623:Poisonous lichen
+G:.:s
+I:110:1d8:30:1:5
+W:1:1:10:4
+E:0:0:0:0:0:0
+O:0:0:0:0
+B:SPORE:CONFUSE:1d4
+B:SPIT:POISON:1d4
+B:SPIT:DISEASE:1d4
+F:WILD_WOOD | BASEANGBAND
+F:EMPTY_MIND | FORCE_MAXHP | NEVER_MOVE | NEVER_BLOW | FRIENDS
+F:NO_CONF | NO_SLEEP | NO_FEAR | NO_STUN
+D:A splotch of grayish fungal vegetation.  
+D:You don't remember seeing anything like it
+D:before.
+
+N:7624:Yog-Sothoth Fanatic Cultist
+G:h:D
+I:110:15d8:20:19:10
+W:7:1:1700:8
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:2d3
+B:HIT:HURT:2d4
+F:WEIRD_MIND | FRIENDS | DROP_CORPSE | DROP_SKELETON | EVIL |  
+F:BASH_DOOR | FORCE_MAXHP | BASEANGBAND
+F:NO_FEAR | 
+D:...over a balding hill, there were an 
+D:erratically dancing group of fanatics, lost
+D: their minds to the ultimate horror, 
+D:unquenchable their thirst for souls...
+
+N:7625:Snap Turtle
+G:R:g
+I:110:9d8:20:36:15
+W:3:2:1000:6
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:2d8
+B:BITE:HURT:2d8
+F:RAND_25 | BASH_DOOR | EVIL | FORCE_SLEEP | NO_FEAR | FORCE_MAXHP
+F:WILD_WASTE | BASEANGBAND | 
+F:WILD_SHORE | WILD_SWAMP
+F:ANIMAL | MALE | DROP_CORPSE | DROP_SKELETON
+D:They say some folks would get rid of their 
+D:reptile pets without a second thought...
+
+N:7626:Kodama
+G:*:W
+I:105:1d1:5:5:200
+W:10:2:0:1
+E:0:0:0:0:0:0
+O:0:0:0:0
+F:WILD_WOOD | WILD_MOUNTAIN | BASEANGBAND
+F:DROP_SKELETON | DROP_CORPSE | 
+F:EMPTY_MIND | HAS_LITE | FRIENDS 
+F:NO_FEAR | NO_SLEEP | NO_CONF | NO_STUN | CAN_SPEAK | NEUTRAL
+D:Most ancient spirits, the Children of old trees, 
+D:they guide the adventurers through
+D: dark forests (or Dungeons).
+
+N:7627:Orc Cultist Priest of Beogh
+G:o:o
+I:110:74d8:20:34:10
+W:24:1:1000:104
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:3d8
+B:HIT:POISON:3d8
+B:WAIL:TERRIFY:1D8
+F:MALE | EVIL | WEIRD_MIND | BASH_DOOR | ORC | 
+F:FORCE_SLEEP | OPEN_DOOR | DROP_CORPSE | DROP_SKELETON
+F:IM_COLD | DROP_GOOD | DROP_60 | DROP_22 | BASEANGBAND
+F:NO_CONF | NO_FEAR | HAS_LITE | ESCORT | FORCE_MAXHP
+S:1_IN_9 | 
+S:BO_ELEC | CAUSE_2 |
+D:A crazed Orc, spreading the blood-thirsty word of Beogh.
+
+N:7628:Orc Fanatic of Beogh
+G:o:D
+I:110:12d8:20:20:20
+W:9:1:1000:20
+E:1:1:1:2:1:1
+O:10:50:20:10
+B:HIT:HURT:2d4
+B:HIT:HURT:2d4
+F:MALE | WILD_MOUNTAIN | DROP_SKELETON | DROP_CORPSE
+F:DROP_90 | DROP_12 | OPEN_DOOR | BASH_DOOR | FRIENDS
+F:EVIL | ORC | HURT_LITE | FORCE_MAXHP | BASEANGBAND
+S:1_IN_12
+S:SCARE | CAUSE_1
+D:He is a large orc with powerful arms and deep black skin.
+
+N:7629:Crested Tuatara
+G:R:s
+I:110:108d8:20:32:5
+W:18:2:1100:106
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:POISON:6d8
+B:BITE:POISON:6d8
+B:BITE:PARALYZE
+F:BASH_DOOR | FORCE_SLEEP | NO_FEAR | POWERFUL | FORCE_MAXHP
+F:WILD_WASTE | IM_POIS | BASEANGBAND
+F:WILD_SHORE | WILD_SWAMP
+F:ANIMAL | DROP_CORPSE | DROP_SKELETON
+D:Almost driven to extinction by mad warlocks who thought their skin had some 
+D: hallunogenic properties, now survive in the depth of the dungeons.
+
+N:7630:Olog-Hai
+G:T:g
+I:110:109d8:20:39:50
+W:31:1:4000:490
+E:1:1:1:2:1:1
+O:10:90:0:0
+B:HIT:HURT:1d12
+B:HIT:HURT:1d12
+B:BITE:HURT:2d8
+F:FORCE_MAXHP | OPEN_DOOR | DROP_90 | DROP_12 | DROP_GOOD
+F:SMART | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | TROLL | IM_POIS | POWERFUL | BASEANGBAND
+S:1_IN_9
+S:SHRIEK
+D:It is a the ultimate war machine bred to be thrown to Mordor's enemies. 
+D: Sauron's masterpiece.
+
+N:7631:Zombified Snaggletooth
+G:z:D
+I:110:20d8:20:18:10
+W:7:1:300:11
+E:1:1:1:2:1:1
+O:0:50:0:20
+B:HIT:HURT:1d12
+B:BITE:POISON:2d8
+B:CHARGE:HURT:1d8
+F:MALE | WILD_GRASS
+F:DROP_60 | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | FORCE_MAXHP | UNDEAD | FRIENDS | BASEANGBAND
+D:A miserable form of shambling no-life, in the shape 
+D:of a Snaggletooth, rotting skin faling in
+D: chunks and layers.
+
+N:7632:Kelpie Horse
+G:q:g
+I:110:37d8:20:13:10
+W:20:2:2200:270
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:3d6
+B:BITE:HURT:3d6
+F:AQUATIC | WILD_WASTE | DROP_CORPSE | WILD_SWAMP
+F:ANIMAL | FORCE_MAXHP | WILD_SHORE | BASEANGBAND
+S:1_IN_9
+S:SHRIEK | SCARE | DARKNESS
+D:A mythical creature that lives in aquatic environments, 
+D:known for its cruelty and otherwordly power.
+
+N:7633:Kelpie Horse
+G:q:g
+I:110:37d8:20:13:10
+W:20:100:2200:270
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:BITE:HURT:3d6
+B:BITE:HURT:3d6
+F:WILD_WASTE | DROP_CORPSE | WILD_SWAMP
+F:ANIMAL | FORCE_MAXHP | WILD_SHORE | BASEANGBAND
+S:1_IN_9
+S:SHRIEK | SCARE | DARKNESS
+D:A mythical creature that lives in aquatic environments, 
+D:known for its cruelty and otherwordly power.
+
+N:7634:The Bog Wizard
+G:W:g
+I:110:275d8:90:46:20
+W:35:3:1000:825
+E:1:1:1:2:1:1
+O:0:20:20:15
+B:HIT:HURT:5d10
+B:HIT:HURT:5d10
+F:UNIQUE | MALE | RES_TELE | WILD_SWAMP | WILD_SHORE
+F:FORCE_SLEEP | SMART | BASEANGBAND | 
+F:ONLY_ITEM | DROP_42 | DROP_GOOD | CAN_SPEAK | FORCE_MAXHP
+F:COLD_BLOOD | OPEN_DOOR | BASH_DOOR | MOVE_BODY | AURA_COLD
+F:EVIL | UNDEAD | IM_COLD | HURT_LITE | NO_CONF |
+S:1_IN_10 | 
+S:BLIND | HOLD | SHRIEK |  
+S:S_UNDEAD | CAUSE_2
+D:The Evil Wizard that lives in the Bog. The creatures 
+D:of all the swamps know him by name, and fear him.
+
+N:7635:Crab Man
+G:h:W
+I:110:28d8:20:28:10
+W:13:1:1700:28
+E:1:1:1:2:1:1
+O:20:50:0:25
+B:CRUSH:HURT:1d10
+B:CRUSH:HURT:1d10
+B:BITE:HURT:1d8
+F:WILD_SWAMP | WILD_SHORE | WILD_GRASS | BASEANGBAND
+F:DROP_60 | DROP_12 | OPEN_DOOR | BASH_DOOR | DROP_SKELETON | DROP_CORPSE
+F:EVIL | FRIENDS | CAN_SPEAK | FORCE_MAXHP
+D:Crab People are quite an obscure ancient race of 
+D:hominoids of unknown origins. They are short and stout. 
+D: Their pincers, evolved to be used to manipulate 
+D:tools, have also evolved to deal with enemies.
+
+N:7636:Swamp eel
+G:J:G
+I:110:16d8:15:20:70
+W:7:1:500:7
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:TOUCH:ACID:2d8
+B:BITE:HURT:2d8
+F:FORCE_MAXHP | FRIENDS | BASEANGBAND |
+F:AQUATIC | ANIMAL | IM_ACID | RES_WATE | WILD_OCEAN
+D:This cute little serpentine creature can corrode you to death... 
+D:Better watch out!
+
+N:7637:Swamp eel
+G:J:G
+I:110:16d8:15:20:70
+W:7:50:500:7
+E:0:1:0:2:1:0
+O:0:0:0:0
+B:TOUCH:ACID:2d8
+B:BITE:HURT:2d8
+F:FORCE_MAXHP | FRIENDS | BASEANGBAND |
+F:ANIMAL | IM_ACID | RES_WATE | WILD_OCEAN
+D:This cute little serpentine creature can corrode you to death... 
+D:Better watch out!
+
+N:7638:Skeleton snaggletooth
+G:s:w
+I:110:24d8:20:21:40
+W:16:1:300:40
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:HIT:HURT:3d8
+F:COLD_BLOOD | EMPTY_MIND | OPEN_DOOR | BASH_DOOR | 
+F:EVIL | ORC | UNDEAD | BASEANGBAND | 
+F:IM_COLD | IM_POIS | DROP_60 | FORCE_MAXHP
+F:NO_CONF | NO_SLEEP | NO_FEAR | DROP_60 | DROP_60
+D:It is an animated snaggletooth skeleton.
+
+
 
 
 
