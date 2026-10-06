@@ -214,3 +214,21 @@ W:E:91:1:180
 # Seething Volcano
 W:E:92:32:196
 
+# Construction Zone
+W:E:107:16:136
+
+# Giant Playground
+W:E:108:23:190
+
+# Demon Realm
+W:E:109:53:185
+
+# Gond-en-Amarth
+W:E:110:17:110
+
+# Solaria Sanctum
+W:E:111:13:185
+
+# Ignis Caldera
+W:E:112:36:170
+
