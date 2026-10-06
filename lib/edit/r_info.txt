@@ -131832,6 +131832,125 @@ S:1_IN_4 |
 S:BA_FIRE | BR_FIRE | BR_PLAS | BR_ETHE | S_KIN | 
 D:A very hot, burning fire elemental. 
 
+N:7653:Denise
+G:y:r
+I:115:12d140:20:30:40
+W:16:5:100:240
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:FIRE:1d10
+B:KICK:EAT_GOLD:1d5
+F:WILD_TOO | WILD_TOWN | WILD_SHORE | WILD_WOOD | WILD_GRASS | WEIRD_MIND | REGENERATE | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | GOOD | IM_FIRE | RES_PLAS | SPECIAL_GENE | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | UNIQUE | 
+D:This soft and lovely girl wants to do battle with you. 
+
+N:7654:Corina
+G:q:U
+I:115:15d70:50:32:10
+W:20:5:300:145
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:17d6
+F:BASH_DOOR | FORCE_MAXHP | DROP_CORPSE | FEMALE | HAS_EGG | 
+F:ANIMAL | WILD_TOO | WILD_WOOD | WILD_MOUNTAIN | WILD_VOLCANO | 
+F:MORTAL | BASEANGBAND | CAN_FLY | ESCORT | IM_POIS | RES_NEXU |
+F:RES_SHAR | NO_SLEEP | NO_FEAR | NO_STUN | NO_CONF
+F:SPECIAL_GENE | UNIQUE | 
+S:1_IN_30 | 
+S:BR_TIME | BR_INER | BR_GRAV
+D:She is eagerly waiting for the opportunity to use her razor-sharp 
+D:brown stiletto heels as dangerous weapons on you. 
+
+N:7655:Verena
+G:|:D
+I:120:25d400:2:50:250
+W:22:5:200:400
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:ACID:2d10
+B:KICK:COLD:1d2
+F:WILD_TOO | WILD_SHORE | WILD_GRASS | CAN_SWIM | RAND_25 | STUPID | EMPTY_MIND | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | TROLL | GOOD | IM_COLD | IM_ACID | RES_NETH | 
+F:RES_DARK | MORTAL | BASEANGBAND | NO_FEAR | NO_STUN | NO_SLEEP | 
+F:SPECIAL_GENE | UNIQUE | 
+S:1_IN_50 | 
+S:CAUSE_1 |
+D:Are you going to be humiliated when Verena bludgeons you with her 
+D:worn-out black combat boot heels? 
+
+N:7656:Yasaman
+G:w:o
+I:130:10d100:20:20:250
+W:15:5:800:50
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:3d5
+F:WILD_TOO | WILD_GRASS | CAN_SWIM | AI_ANNOY | ELDRITCH_HORROR | ANIMAL | GOOD | 
+F:RES_INER | HAS_EGG | DROP_CORPSE | FEMALE | IM_ELEC | IM_POIS | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | RES_NERV | 
+F:SPECIAL_GENE | UNIQUE | 
+S:1_IN_8 | 
+S:BR_POIS | PERFUME | 
+D:You absolutely want to have fun with this beautiful persian girl. 
+D:In particular, you wanna inhale her scentful perfume. 
+
+N:7657:Victoria
+G:A:u
+I:120:25d400:30:65:20
+W:40:5:1000:1500
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:CONFUSE:10d5
+B:KICK:LOSE_STR:10d5
+F:WILD_TOO | WILD_TOWN | WILD_WASTE | WILD_WOOD | WILD_MOUNTAIN | CAN_SWIM | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | ATTR_MULTI | FORCE_MAXHP | FRIENDS | 
+F:OPEN_DOOR | MORTAL | BASEANGBAND | COLD_BLOOD | WEIRD_MIND | POWERFUL | 
+F:TAKE_ITEM | DRAGON | EVIL | IM_ELEC | IM_FIRE | IM_COLD | NO_CONF | 
+F:RES_INER | RES_SOUN | RES_SHAR | 
+F:SPECIAL_GENE | UNIQUE | 
+S:1_IN_4 | 
+S:ARROW_2 | BR_CONF | BA_DARK | MIND_BLAST | HEAL | BLINK | DARKNESS
+D:She looks like she knows karate. You long to find out whether her 
+D:fleecy black block heels can bludgeon you because her light brown 
+D:"sister" combat boots look so incredibly pretty. 
+
+N:7658:Sabine
+G:P:w
+I:115:10d1000:30:100:15
+W:40:5:4000:1450
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:SHATTER:15d15
+F:RES_LITE | FORCE_SLEEP | FORCE_MAXHP | NO_FEAR | 
+F:WILD_TOO | WILD_OCEAN | WILD_MOUNTAIN | WILD_VOLCANO | 
+F:ONLY_GOLD | MOVE_BODY | CAN_SWIM | FEMALE | HAS_EGG | 
+F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR | DROP_CORPSE |
+F:EVIL | GIANT | NO_CUT | IM_ACID
+F:SPECIAL_GENE | UNIQUE | 
+S:1_IN_10 | 
+S:ARROW_3 | BOULDER
+D:She wants to kill you by kicking you in the back of your head repeatedly 
+D:with her very cute white block-heeled sandals. 
+
+N:7659:Conny
+G:U:D
+I:130:100d400:50:100:0
+W:60:5:2000:9000
+E:1:1:1:2:1:1
+O:0:0:0:0
+B:KICK:HURT:70d2
+F:WILD_TOO | WILD_MOUNTAIN | WILD_VOLCANO | KILL_TREES | COLD_BLOOD | WEIRD_MIND | 
+F:HAS_EGG | DROP_CORPSE | FEMALE | ELDRITCH_HORROR | TROLL | EVIL | IM_COLD | 
+F:OPEN_DOOR | NONLIVING | BASEANGBAND | IM_ELEC | IM_POIS | RES_NETH | RES_NEXU | 
+F:RES_WALL | NO_FEAR | NO_STUN | KILL_ITEM | RES_NERV | 
+F:SPECIAL_GENE | UNIQUE | 
+S:1_IN_5 | 
+S:ARROW_3 | ARROW_4 | BR_POIS | BR_SOUN | BR_GRAV | BA_WATE | BRAIN_SMASH | 
+S:CAUSE_4 | TPORT | DARKNESS | S_BEETLE | 
+D:You're not going to be the first "hero" who underestimates this very thick 
+D:girl and her block-heeled combat boots which have both zippers and buckles. 
+
 
 
 

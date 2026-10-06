@@ -4997,6 +4997,181 @@ quest_type quest_init_tome[MAX_Q_IDX_INIT] =
 		quest_themy_init_hook,
 		{0, 0},
 	},
+	/* Aeonvale */
+	{
+		FALSE,
+		FALSE,
+		"Grass Cleaning!",
+		{
+			"An evil girl from the grassland has seized a house.",
+			"Defeat her and the monsters encamped therein, and the",
+			"house will be yours.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+		QUEST_STATUS_UNTAKEN,
+		7,
+	
+		&plots[PLOT_AEON],
+		HOOK_TYPE_C,
+		quest_aeon_init_hook,
+		{0, 0},
+	},
+	/* Silvoria */
+	{
+		FALSE,
+		FALSE,
+		"Forest Cleaning!",
+		{
+			"An evil girl from the forest has seized a house.",
+			"Defeat her and the monsters encamped therein, and the",
+			"house will be yours.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+		QUEST_STATUS_UNTAKEN,
+		22,
+	
+		&plots[PLOT_SILV],
+		HOOK_TYPE_C,
+		quest_silv_init_hook,
+		{0, 0},
+	},
+	/* Aethelmere */
+	{
+		FALSE,
+		FALSE,
+		"Shore Cleaning!",
+		{
+			"An evil girl from the shore has seized a house.",
+			"Defeat her and the monsters encamped therein, and the",
+			"house will be yours.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+		QUEST_STATUS_UNTAKEN,
+		37,
+	
+		&plots[PLOT_AETH],
+		HOOK_TYPE_C,
+		quest_aeth_init_hook,
+		{0, 0},
+	},
+	/* Sarihem */
+	{
+		FALSE,
+		FALSE,
+		"Desert Cleaning!",
+		{
+			"An evil girl from the desert has seized a house.",
+			"Defeat her and the monsters encamped therein, and the",
+			"house will be yours.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+		QUEST_STATUS_UNTAKEN,
+		52,
+	
+		&plots[PLOT_SARI],
+		HOOK_TYPE_C,
+		quest_sari_init_hook,
+		{0, 0},
+	},
+	/* Orodrim */
+	{
+		FALSE,
+		FALSE,
+		"Mountain Cleaning!",
+		{
+			"An evil girl from the mountains has seized a house.",
+			"Defeat her and the monsters encamped therein, and the",
+			"house will be yours.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+		QUEST_STATUS_UNTAKEN,
+		67,
+	
+		&plots[PLOT_OROD],
+		HOOK_TYPE_C,
+		quest_orod_init_hook,
+		{0, 0},
+	},
+	/* Marifell */
+	{
+		FALSE,
+		FALSE,
+		"Ocean Cleaning!",
+		{
+			"An evil girl from the ocean has seized a house.",
+			"Defeat her and the monsters encamped therein, and the",
+			"house will be yours.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+		QUEST_STATUS_UNTAKEN,
+		82,
+	
+		&plots[PLOT_MARI],
+		HOOK_TYPE_C,
+		quest_mari_init_hook,
+		{0, 0},
+	},
+	/* Pyrgard */
+	{
+		FALSE,
+		FALSE,
+		"Volcano Cleaning!",
+		{
+			"An evil girl from the volcano has seized a house.",
+			"Defeat her and the monsters encamped therein, and the",
+			"house will be yours.",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+		QUEST_STATUS_UNTAKEN,
+		97,
+	
+		&plots[PLOT_PYRG],
+		HOOK_TYPE_C,
+		quest_pyrg_init_hook,
+		{0, 0},
+	},
 };
 
 
@@ -5815,6 +5990,104 @@ between_exit between_exits[MAX_BETWEEN_EXITS] =
 		FALSE,
 		196, 19,
 		101, 35,
+		0, 0
+	},
+	{ /* 40 = annuminas to aeonvale */
+		47,
+		FALSE,
+		107, 43,
+		98, 33,
+		0, 0
+	},
+	{ /* 41 = annuminas to silvoria */
+		48,
+		FALSE,
+		148, 19,
+		98, 33,
+		0, 0
+	},
+	{ /* 42 = annuminas to aethelmere */
+		49,
+		FALSE,
+		149, 42,
+		98, 33,
+		0, 0
+	},
+	{ /* 43 = annuminas to sarihem */
+		50,
+		FALSE,
+		139, 60,
+		98, 33,
+		0, 0
+	},
+	{ /* 44 = annuminas to orodrim */
+		51,
+		FALSE,
+		134, 8,
+		98, 33,
+		0, 0
+	},
+	{ /* 45 = annuminas to marifell */
+		52,
+		FALSE,
+		193, 43,
+		98, 33,
+		0, 0
+	},
+	{ /* 46 = annuminas to pyrgard */
+		53,
+		FALSE,
+		192, 7,
+		98, 33,
+		0, 0
+	},
+	{ /* 47 = aeonvale to annuminas */
+		40,
+		FALSE,
+		196, 19,
+		82, 31,
+		0, 0
+	},
+	{ /* 48 = silvoria to annuminas */
+		41,
+		FALSE,
+		196, 19,
+		118, 31,
+		0, 0
+	},
+	{ /* 49 = aethelmere to annuminas */
+		42,
+		FALSE,
+		196, 19,
+		114, 38,
+		0, 0
+	},
+	{ /* 50 = sarihem to annuminas */
+		43,
+		FALSE,
+		196, 19,
+		83, 39,
+		0, 0
+	},
+	{ /* 51 = orodrim to annuminas */
+		44,
+		FALSE,
+		196, 19,
+		100, 40,
+		0, 0
+	},
+	{ /* 52 = marifell to annuminas */
+		45,
+		FALSE,
+		196, 19,
+		111, 32,
+		0, 0
+	},
+	{ /* 53 = pyrgard to annuminas */
+		46,
+		FALSE,
+		196, 19,
+		88, 35,
 		0, 0
 	},
 };

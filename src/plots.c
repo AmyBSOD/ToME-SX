@@ -516,6 +516,27 @@ bool quest_null_hook(int q)
 /*************************** Themyscira plot ************************/
 #include "q_themy.c"
 
+/*************************** Aeonvale plot ************************/
+#include "q_aeon.c"
+
+/*************************** Silvoria plot ************************/
+#include "q_silv.c"
+
+/*************************** Aethelmere plot ************************/
+#include "q_aeth.c"
+
+/*************************** Sarihem plot ************************/
+#include "q_sari.c"
+
+/*************************** Orodrim plot ************************/
+#include "q_orod.c"
+
+/*************************** Marifell plot ************************/
+#include "q_mari.c"
+
+/*************************** Pyrgard plot ************************/
+#include "q_pyrg.c"
+
 /*************************** Other plot ***************************/
 #include "q_narsil.c"
 #include "q_thrain.c"

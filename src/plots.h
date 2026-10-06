@@ -90,6 +90,27 @@ extern bool quest_mithl_init_hook(int q_idx);
 /******* Plot Themyscira *********/
 extern bool quest_themy_init_hook(int q_idx);
 
+/******* Plot Aeonvale *********/
+extern bool quest_aeon_init_hook(int q_idx);
+
+/******* Plot Silvoria *********/
+extern bool quest_silv_init_hook(int q_idx);
+
+/******* Plot Aethelmere *********/
+extern bool quest_aeth_init_hook(int q_idx);
+
+/******* Plot Sarihem *********/
+extern bool quest_sari_init_hook(int q_idx);
+
+/******* Plot Orodrim *********/
+extern bool quest_orod_init_hook(int q_idx);
+
+/******* Plot Marifell *********/
+extern bool quest_mari_init_hook(int q_idx);
+
+/******* Plot Pyrgard *********/
+extern bool quest_pyrg_init_hook(int q_idx);
+
 /******* Plot Other *********/
 extern bool quest_narsil_init_hook(int q_idx);
 extern bool quest_thrain_init_hook(int q_idx);

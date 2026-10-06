@@ -152,3 +152,52 @@
 %:t_themy.txt
 ?:1
 
+# Aeonvale
+?:[AND [EQU $TOWN 22] [EQU $TOWN_DESTROY22 1] ]
+%:t_d_aeon.txt
+?:[AND [EQU $TOWN 22] [NOT [EQU $TOWN_DESTROY7 22] ] ]
+%:t_aeon.txt
+?:1
+
+# Silvoria
+?:[AND [EQU $TOWN 23] [EQU $TOWN_DESTROY23 1] ]
+%:t_d_silv.txt
+?:[AND [EQU $TOWN 23] [NOT [EQU $TOWN_DESTROY7 23] ] ]
+%:t_silv.txt
+?:1
+
+# Aethelmere
+?:[AND [EQU $TOWN 24] [EQU $TOWN_DESTROY24 1] ]
+%:t_d_aeth.txt
+?:[AND [EQU $TOWN 24] [NOT [EQU $TOWN_DESTROY7 24] ] ]
+%:t_aeth.txt
+?:1
+
+# Sarihem
+?:[AND [EQU $TOWN 25] [EQU $TOWN_DESTROY25 1] ]
+%:t_d_sari.txt
+?:[AND [EQU $TOWN 25] [NOT [EQU $TOWN_DESTROY7 25] ] ]
+%:t_sari.txt
+?:1
+
+# Orodrim
+?:[AND [EQU $TOWN 26] [EQU $TOWN_DESTROY26 1] ]
+%:t_d_orod.txt
+?:[AND [EQU $TOWN 26] [NOT [EQU $TOWN_DESTROY7 26] ] ]
+%:t_orod.txt
+?:1
+
+# Marifell
+?:[AND [EQU $TOWN 27] [EQU $TOWN_DESTROY27 1] ]
+%:t_d_mari.txt
+?:[AND [EQU $TOWN 27] [NOT [EQU $TOWN_DESTROY7 27] ] ]
+%:t_mari.txt
+?:1
+
+# Pyrgard
+?:[AND [EQU $TOWN 28] [EQU $TOWN_DESTROY28 1] ]
+%:t_d_pyrg.txt
+?:[AND [EQU $TOWN 28] [NOT [EQU $TOWN_DESTROY7 28] ] ]
+%:t_pyrg.txt
+?:1
+

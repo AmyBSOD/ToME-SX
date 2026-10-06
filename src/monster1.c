@@ -2274,12 +2274,14 @@ void set_mon_num_hook(void)
 			get_mon_num_hook = monster_town;
 			break;
 		case TERRAIN_DEEP_WATER:
+		case TERRAIN_DEEP_WATER_Y:
 			get_mon_num_hook = monster_ocean;
 			break;
 		case TERRAIN_DEEP_WATER_X:
 			get_mon_num_hook = monster_ocean_x;
 			break;
 		case TERRAIN_SHALLOW_WATER:
+		case TERRAIN_SHALLOW_WATER_Y:
 			get_mon_num_hook = monster_shore;
 			break;
 		case TERRAIN_SHALLOW_WATER_X:
@@ -2287,18 +2289,21 @@ void set_mon_num_hook(void)
 			break;
 		case TERRAIN_DIRT:
 		case TERRAIN_DESERT:
+		case TERRAIN_DESERT_Y:
 			get_mon_num_hook = monster_waste;
 			break;
 		case TERRAIN_DESERT_X:
 			get_mon_num_hook = monster_waste_x;
 			break;
 		case TERRAIN_GRASS:
+		case TERRAIN_GRASS_Y:
 			get_mon_num_hook = monster_grass;
 			break;
 		case TERRAIN_GRASS_X:
 			get_mon_num_hook = monster_grass_x;
 			break;
 		case TERRAIN_TREES:
+		case TERRAIN_TREES_Y:
 			get_mon_num_hook = monster_wood;
 			break;
 		case TERRAIN_TREES_X:
@@ -2306,12 +2311,14 @@ void set_mon_num_hook(void)
 			break;
 		case TERRAIN_SHALLOW_LAVA:
 		case TERRAIN_DEEP_LAVA:
+		case TERRAIN_DEEP_LAVA_Y:
 			get_mon_num_hook = monster_volcano;
 			break;
 		case TERRAIN_DEEP_LAVA_X:
 			get_mon_num_hook = monster_volcano_x;
 			break;
 		case TERRAIN_MOUNTAIN:
+		case TERRAIN_MOUNTAIN_Y:
 			get_mon_num_hook = monster_mountain;
 			break;
 		case TERRAIN_MOUNTAIN_X:

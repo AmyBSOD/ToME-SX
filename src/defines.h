@@ -922,7 +922,7 @@
 /* Features 0xCF - 0xFF -- unused */
 
 
-#define MAX_BETWEEN_EXITS       40
+#define MAX_BETWEEN_EXITS       54
 
 /*
  * Number of effects
@@ -970,6 +970,15 @@
 
 #define TERRAIN_RANDMONST       20 /* random monsters */
 #define TERRAIN_WOMEN_X         21 /* female monsters */
+
+/* "Y" version: only spawns that type, but towns still count as towns */
+#define TERRAIN_GRASS_Y         22 /* Grass */
+#define TERRAIN_TREES_Y         23 /* Trees */
+#define TERRAIN_SHALLOW_WATER_Y 24 /* Shallow water */
+#define TERRAIN_DESERT_Y        25 /* Desert */
+#define TERRAIN_MOUNTAIN_Y      26 /* Mountain */
+#define TERRAIN_DEEP_WATER_Y    27 /* Deep water */
+#define TERRAIN_DEEP_LAVA_Y     28 /* Deep lava */
 
 /* this is the amount of "X:<number>" terrains in wf_info.txt - DO NOT CHANGE!!!!! has NOTHING to do with the idxes above */
 #define MAX_WILD_TERRAIN        18
@@ -6101,7 +6110,14 @@ extern int PlayerUID;
 #define QUEST_MICH              39
 #define QUEST_MITHL             40
 #define QUEST_THEMY             41
-#define MAX_Q_IDX_INIT          42
+#define QUEST_AEON              42
+#define QUEST_SILV              43
+#define QUEST_AETH              44
+#define QUEST_SARI              45
+#define QUEST_OROD              46
+#define QUEST_MARI              47
+#define QUEST_PYRG              48
+#define MAX_Q_IDX_INIT          49
 
 #define PLOT_MAIN               0
 #define PLOT_BREE               1
@@ -6126,7 +6142,14 @@ extern int PlayerUID;
 #define PLOT_MICH               20
 #define PLOT_MITHL              21
 #define PLOT_THEMY              22
-#define MAX_PLOTS               23
+#define PLOT_AEON               23
+#define PLOT_SILV               24
+#define PLOT_AETH               25
+#define PLOT_SARI               26
+#define PLOT_OROD               27
+#define PLOT_MARI               28
+#define PLOT_PYRG               29
+#define MAX_PLOTS               30
 
 /*
  * Hooks

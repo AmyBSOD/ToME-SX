@@ -2607,6 +2607,27 @@ static bool player_birth_aux_ask()
 		plots[PLOT_THEMY] = QUEST_THEMY;
 		quest[plots[PLOT_THEMY]].status = QUEST_STATUS_UNTAKEN;
 
+		plots[PLOT_AEON] = QUEST_AEON;
+		quest[plots[PLOT_AEON]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_SILV] = QUEST_SILV;
+		quest[plots[PLOT_SILV]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_AETH] = QUEST_AETH;
+		quest[plots[PLOT_AETH]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_SARI] = QUEST_SARI;
+		quest[plots[PLOT_SARI]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_OROD] = QUEST_OROD;
+		quest[plots[PLOT_OROD]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_MARI] = QUEST_MARI;
+		quest[plots[PLOT_MARI]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_PYRG] = QUEST_PYRG;
+		quest[plots[PLOT_PYRG]].status = QUEST_STATUS_UNTAKEN;
+
 		plots[PLOT_OTHER] = QUEST_NULL;
 	}
 
