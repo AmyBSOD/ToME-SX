@@ -3601,7 +3601,8 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura | 
+S:A:Seelie-Fae | Unseelie-Fae | Steam-Mecha | Ogre | Daoine-Sidhe | 
 
 # Just a place holder, the actualy setting are done with corruptions, see
 # corrupt.lua and player.lua
@@ -3618,7 +3619,8 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura | 
+S:A:Seelie-Fae | Unseelie-Fae | Steam-Mecha | Ogre | Daoine-Sidhe | 
 S:O:70:0:5d3
 S:O:70:32:2d3
 
@@ -3635,7 +3637,8 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura | 
+S:A:Seelie-Fae | Unseelie-Fae | Steam-Mecha | Ogre | Daoine-Sidhe | 
 S:G:UNDEAD | NO_CUT | NO_FOOD | SEMI_WRAITH | NO_SUBRACE_CHANGE
 S:R:1:0
 S:F:SEE_INVIS | HOLD_LIFE | 
@@ -3662,7 +3665,8 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura | 
+S:A:Seelie-Fae | Unseelie-Fae | Steam-Mecha | Ogre | Daoine-Sidhe | 
 S:G:UNDEAD | NO_CUT | NO_FOOD | NO_SUBRACE_CHANGE
 S:R:1:0
 S:F:SEE_INVIS | HOLD_LIFE | 
@@ -3690,7 +3694,8 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura | 
+S:A:Seelie-Fae | Unseelie-Fae | Steam-Mecha | Ogre | Daoine-Sidhe | 
 S:G:UNDEAD | NO_FOOD | NO_SUBRACE_CHANGE
 S:R:1:0
 S:F:SEE_INVIS | HOLD_LIFE | 
@@ -3719,7 +3724,8 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura | 
+S:A:Seelie-Fae | Unseelie-Fae | Steam-Mecha | Ogre | Daoine-Sidhe | 
 S:R:10:0
 S:F:RES_FEAR | 
 S:k:-200:+000:Disarming
@@ -3743,7 +3749,8 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura | 
+S:A:Seelie-Fae | Unseelie-Fae | Steam-Mecha | Ogre | Daoine-Sidhe | 
 S:k:+500:+000:Disarming
 S:k:+1000:+000:Magic-Device
 S:k:+500:+000:Spirituality
@@ -3767,7 +3774,8 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura | 
+S:A:Seelie-Fae | Unseelie-Fae | Steam-Mecha | Ogre | Daoine-Sidhe | 
 S:O:70:32:25d2
 S:O:70:12:25d3
 
@@ -3794,7 +3802,8 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura | 
+S:A:Seelie-Fae | Unseelie-Fae | Steam-Mecha | Ogre | Daoine-Sidhe | 
 
 S:N:11:Knight
 S:D:A:Mounted soldiers.
@@ -3810,7 +3819,8 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura | 
+S:A:Seelie-Fae | Unseelie-Fae | Steam-Mecha | Ogre | Daoine-Sidhe | 
 S:F:RES_FEAR
 S:k:+0:+200:Polearm-mastery
 S:k:+0:-200:Archery
@@ -3850,7 +3860,8 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura | 
+S:A:Seelie-Fae | Unseelie-Fae | Steam-Mecha | Ogre | Daoine-Sidhe | 
 
 S:N:13:Herald
 S:D:B:Herald Angels have the Archangel Gabriel as patron.  They are more charismatic 
@@ -3866,7 +3877,8 @@ S:A:Orc | Troll | Dunadan | High-Elf | Half-Ogre | Beorning |
 S:A:Kobold | Petty-Dwarf | Dark-Elf | Ent | RohanKnight | Thunderlord | 
 S:A:DeathMold | Yeek | Wood-Elf | Maia | Ancipital | Dolgsman | Nomad | 
 S:A:Gremlin | Centaur | Sea-Elf | Deep-Elf | Ice-Dwarf | Lizardman |
-S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura
+S:A:Fawn | Satre | Giant | Dufflepud | Jotun | Asura | 
+S:A:Seelie-Fae | Unseelie-Fae | Steam-Mecha | Ogre | Daoine-Sidhe | 
 S:G:NO_SUBRACE_CHANGE |
 S:R:1:0
 S:F:RES_SOUND | SUST_CHR 
