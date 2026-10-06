@@ -2190,6 +2190,18 @@ bool monster_too_x(int r_idx)
 		return FALSE;
 }
 
+bool monster_women_x(int r_idx)
+{
+	monster_race *r_ptr = &r_info[r_idx];
+
+	if (r_ptr->flags1 & RF1_FEMALE)
+		return TRUE;
+	else if (r_ptr->flags8 & RF8_WILD_TOWN)
+		return TRUE;
+	else
+		return FALSE;
+}
+
 
 bool monster_deep_water(int r_idx)
 {
@@ -2308,7 +2320,11 @@ void set_mon_num_hook(void)
 		case TERRAIN_TOO_X:
 			get_mon_num_hook = monster_too_x;
 			break;
+		case TERRAIN_WOMEN_X:
+			get_mon_num_hook = monster_women_x;
+			break;
 		default:
+		case TERRAIN_RANDMONST:
 			get_mon_num_hook = monster_dungeon;
 			break;
 		}

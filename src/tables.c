@@ -4897,6 +4897,106 @@ quest_type quest_init_tome[MAX_Q_IDX_INIT] =
 		quest_esga_init_hook,
 		{0, 0},
 	},
+	/* Annuminas */
+	{
+		FALSE,
+		FALSE,
+		"Terrain terror!",
+		{
+			"There is a house where monsters from the elemental planes",
+			"have taken refuge! They don't let anyone near that house.",
+			"If you can eradicate them, the house will be yours!",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+		QUEST_STATUS_UNTAKEN,
+		100,
+	
+		&plots[PLOT_ANNU],
+		HOOK_TYPE_C,
+		quest_annu_init_hook,
+		{0, 0},
+	},
+	/* Michel Delving */
+	{
+		FALSE,
+		FALSE,
+		"Randomness Attack!",
+		{
+			"Help! The Random Number Generator has taken over a house!",
+			"It keeps spawning all kinds of creatures, and we want you",
+			"to drive them out!",
+			"The house will be yours to keep if you're successful!",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+		QUEST_STATUS_UNTAKEN,
+		95,
+	
+		&plots[PLOT_MICH],
+		HOOK_TYPE_C,
+		quest_mich_init_hook,
+		{0, 0},
+	},
+	/* Mithlond */
+	{
+		FALSE,
+		FALSE,
+		"Volcano Danger!",
+		{
+			"There's a bunch of fire-based monsters gathering in a",
+			"house, and I fear they want to make the volcano erupt!",
+			"Kill them all! The house will be yours if you",
+			"can save our town!",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+		QUEST_STATUS_UNTAKEN,
+		90,
+	
+		&plots[PLOT_MITHL],
+		HOOK_TYPE_C,
+		quest_mithl_init_hook,
+		{0, 0},
+	},
+	/* Themyscira */
+	{
+		FALSE,
+		FALSE,
+		"Feminism Power!",
+		{
+			"A group of evil women is living in a house in this town.",
+			"They come out at night and rob our people. We can't",
+			"tolerate them any longer. The one who can defeat them",
+			"will inherit the house in question!",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+		},
+		QUEST_STATUS_UNTAKEN,
+		85,
+	
+		&plots[PLOT_THEMY],
+		HOOK_TYPE_C,
+		quest_themy_init_hook,
+		{0, 0},
+	},
 };
 
 
@@ -5673,6 +5773,48 @@ between_exit between_exits[MAX_BETWEEN_EXITS] =
 		FALSE,
 		44, 39,
 		89, 31,
+		0, 0
+	},
+	{ /* 34 = annuminas to themyscira */
+		37,
+		FALSE,
+		170, 8,
+		70, 39,
+		0, 0
+	},
+	{ /* 35 = annuminas to mithlond */
+		38,
+		FALSE,
+		166, 28,
+		84, 41,
+		0, 0
+	},
+	{ /* 36 = annuminas to michel delving */
+		39,
+		FALSE,
+		165, 64,
+		107, 38,
+		0, 0
+	},
+	{ /* 37 = themyscira to annuminas */
+		34,
+		FALSE,
+		196, 19,
+		98, 35,
+		0, 0
+	},
+	{ /* 38 = mithlond to annuminas */
+		35,
+		FALSE,
+		196, 19,
+		95, 35,
+		0, 0
+	},
+	{ /* 39 = michel delving to annuminas */
+		36,
+		FALSE,
+		196, 19,
+		101, 35,
 		0, 0
 	},
 };

@@ -78,6 +78,18 @@ extern bool quest_beorn_init_hook(int q_idx);
 /******* Plot Esgaroth *********/
 extern bool quest_esga_init_hook(int q_idx);
 
+/******* Plot Annuminas *********/
+extern bool quest_annu_init_hook(int q_idx);
+
+/******* Plot Michel Delving *********/
+extern bool quest_mich_init_hook(int q_idx);
+
+/******* Plot Mithlond *********/
+extern bool quest_mithl_init_hook(int q_idx);
+
+/******* Plot Themyscira *********/
+extern bool quest_themy_init_hook(int q_idx);
+
 /******* Plot Other *********/
 extern bool quest_narsil_init_hook(int q_idx);
 extern bool quest_thrain_init_hook(int q_idx);

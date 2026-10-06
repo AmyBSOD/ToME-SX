@@ -922,7 +922,7 @@
 /* Features 0xCF - 0xFF -- unused */
 
 
-#define MAX_BETWEEN_EXITS       34
+#define MAX_BETWEEN_EXITS       40
 
 /*
  * Number of effects
@@ -958,6 +958,7 @@
 #define TERRAIN_DEEP_LAVA       10 /* Deep lava */
 #define TERRAIN_MOUNTAIN        11 /* Mountain */
 
+/* "X" version: also spawns town monsters */
 #define TERRAIN_DEEP_WATER_X    12 /* Deep water */
 #define TERRAIN_SHALLOW_WATER_X 13 /* Shallow water */
 #define TERRAIN_TOO_X           14 /* Wild */
@@ -967,7 +968,10 @@
 #define TERRAIN_DEEP_LAVA_X     18 /* Deep lava */
 #define TERRAIN_MOUNTAIN_X      19 /* Mountain */
 
-/* this is the amount of "X:<number>" terrains in wf_info.txt */
+#define TERRAIN_RANDMONST       20 /* random monsters */
+#define TERRAIN_WOMEN_X         21 /* female monsters */
+
+/* this is the amount of "X:<number>" terrains in wf_info.txt - DO NOT CHANGE!!!!! has NOTHING to do with the idxes above */
 #define MAX_WILD_TERRAIN        18
 
 /*** Artifact indexes (see "lib/edit/a_info.txt") ***/
@@ -5946,8 +5950,8 @@ extern int PlayerUID;
 #define BIT(x) (1L << (x))
 
 /* Town defines */
-#define TOWN_FOURDIM    20              /* for 4D pocket */
-#define TOWN_RANDOM     21              /* First random town */
+#define TOWN_FOURDIM    50              /* for 4D pocket */
+#define TOWN_RANDOM     51              /* First random town */
 #define TOWN_DUNGEON    4               /* Maximun number of towns per dungeon */
 #define TOWN_CHANCE     50              /* Chance of 1 town */
 
@@ -6093,7 +6097,11 @@ extern int PlayerUID;
 #define QUEST_HENN              35
 #define QUEST_BEORN             36
 #define QUEST_ESGA              37
-#define MAX_Q_IDX_INIT          38
+#define QUEST_ANNU              38
+#define QUEST_MICH              39
+#define QUEST_MITHL             40
+#define QUEST_THEMY             41
+#define MAX_Q_IDX_INIT          42
 
 #define PLOT_MAIN               0
 #define PLOT_BREE               1
@@ -6114,7 +6122,11 @@ extern int PlayerUID;
 #define PLOT_HENN               16
 #define PLOT_BEORN              17
 #define PLOT_ESGA               18
-#define MAX_PLOTS               19
+#define PLOT_ANNU               19
+#define PLOT_MICH               20
+#define PLOT_MITHL              21
+#define PLOT_THEMY              22
+#define MAX_PLOTS               23
 
 /*
  * Hooks

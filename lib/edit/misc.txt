@@ -5,8 +5,8 @@
 # Maximum number of towns
 M:T:100
 
-# Maximum number of non random towns(must be < 20)
-M:t:17
+# Maximum number of non random towns(must be < 50)
+M:t:21
 
 # Maximum x size of the wilderness
 M:X:197
@@ -55,7 +55,7 @@ M:D:113
 M:U:1069
 
 # Maximum number of terrain types in wf_info.txt
-M:W:50
+M:W:52
 
 # Maximum number of owners types in ow_info.txt
 M:N:150

@@ -1,0 +1,43 @@
+# permanent wall
+F:X:61:0
+
+# tree
+F:T:96:0
+
+# granite
+F:#:57:0
+
+# up staircase
+F:<:6:0
+
+# Floor
+F:.:1:0
+
+# Dungeon layout
+D:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+D:X....X........X.................X
+D:X....X........X.................X
+D:X....X........X.................X
+D:X....X........X.................X
+D:X....X.............XXXXXXXXX....X
+D:X....X.............X............X
+D:X....X.............X............X
+D:X....XXXXXXXXXX....X............X
+D:X..................X............X
+D:X..................X............X
+D:X..................X............X
+D:X..................X......XXXXXXX
+D:X..................X............X
+D:X....XXXXXXXXXX....XX...........X
+D:X....X..............XX..........X
+D:X....X...............XX.........X
+D:X....X................XX........X
+D:X....X....XXXXXXXXXXXXXXXXXXX...X
+D:X....X..........................X
+D:X....X..........................X
+D:X....X..........................X
+D:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+# Starting position
+P:3:4
+

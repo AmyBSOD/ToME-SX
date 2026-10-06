@@ -281,3 +281,27 @@ D:the city of Lake-Men
 W:75:17:0:203:14:a
 X:88:88:89:89:89:89:79:96:96:96:96:96:96:96:96:96:96:96
 
+# Annuminas
+N:48:Annuminas
+D:the city of Scenic Terrain
+W:100:18:0:203:1:h
+X:88:88:89:89:89:89:79:96:96:96:96:96:96:96:96:96:96:96
+
+# Michel Delving
+N:49:Michel Delving
+D:the city of Randomness
+W:95:19:0:203:20:i
+X:88:88:89:89:89:89:79:96:96:96:96:96:96:96:96:96:96:96
+
+# Mithlond
+N:50:Mithlond
+D:the volcanic city
+W:90:20:0:203:1:j
+X:88:88:89:89:89:89:79:96:96:96:96:96:96:96:96:96:96:96
+
+# Themyscira
+N:51:Themyscira
+D:the women's city
+W:85:21:0:203:21:k
+X:88:88:89:89:89:89:79:96:96:96:96:96:96:96:96:96:96:96
+

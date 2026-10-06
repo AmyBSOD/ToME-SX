@@ -2595,6 +2595,18 @@ static bool player_birth_aux_ask()
 		plots[PLOT_ESGA] = QUEST_ESGA;
 		quest[plots[PLOT_ESGA]].status = QUEST_STATUS_UNTAKEN;
 
+		plots[PLOT_ANNU] = QUEST_ANNU;
+		quest[plots[PLOT_ANNU]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_MICH] = QUEST_MICH;
+		quest[plots[PLOT_MICH]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_MITHL] = QUEST_MITHL;
+		quest[plots[PLOT_MITHL]].status = QUEST_STATUS_UNTAKEN;
+
+		plots[PLOT_THEMY] = QUEST_THEMY;
+		quest[plots[PLOT_THEMY]].status = QUEST_STATUS_UNTAKEN;
+
 		plots[PLOT_OTHER] = QUEST_NULL;
 	}
 

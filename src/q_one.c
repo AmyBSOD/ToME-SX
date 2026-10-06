@@ -232,6 +232,17 @@ bool quest_one_wield_hook(char *fmt)
 	town_info[15].destroyed = TRUE;
 	town_info[16].destroyed = TRUE;
 	town_info[17].destroyed = TRUE;
+	town_info[18].destroyed = TRUE;
+	town_info[19].destroyed = TRUE;
+	town_info[20].destroyed = TRUE;
+	town_info[21].destroyed = TRUE;
+	town_info[22].destroyed = TRUE;
+	town_info[23].destroyed = TRUE;
+	town_info[24].destroyed = TRUE;
+	town_info[25].destroyed = TRUE;
+	town_info[26].destroyed = TRUE;
+	town_info[27].destroyed = TRUE;
+	town_info[28].destroyed = TRUE;
 
 	/* Continue the plot */
 	cquest.status = QUEST_STATUS_FAILED_DONE;

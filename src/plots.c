@@ -504,6 +504,18 @@ bool quest_null_hook(int q)
 /*************************** Esgaroth plot ************************/
 #include "q_esga.c"
 
+/*************************** Annuminas plot ************************/
+#include "q_annu.c"
+
+/*************************** Michel Delving plot ************************/
+#include "q_mich.c"
+
+/*************************** Mithlond plot ************************/
+#include "q_mithl.c"
+
+/*************************** Themyscira plot ************************/
+#include "q_themy.c"
+
 /*************************** Other plot ***************************/
 #include "q_narsil.c"
 #include "q_thrain.c"
