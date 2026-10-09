@@ -442,6 +442,10 @@ bool quest_one_death_hook(char *fmt)
 	{
 		ok = TRUE;
 	}
+	else if (magik(10) && (r_idx == test_monster_name("Diablo, Lord of Terror")))
+	{
+		ok = TRUE;
+	}
 
 	if (ok)
 	{

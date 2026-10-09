@@ -118978,7 +118978,7 @@ D:There are many smokes and strange airs in the depths
 D: of Angband, and not a few are unwholesome, but rarely
 D: do they move with such active malice...
 
-N:6863:Shelob, Spider of Darkness
+N:6863:Shelob, the Spider of Darkness
 G:S:D
 I:112:22d4:80:28:20
 W:22:30:2000:500
