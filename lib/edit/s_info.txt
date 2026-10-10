@@ -519,6 +519,11 @@ D:Protects against charge drain attacks
 I:1000
 F:RANDOM_GAIN
 
+N:81:Dummyskill
+D:Does nothing
+I:1000
+F:HIDDEN
+
 # Antimagic exclude all magic
 # E:Magic-Device:Antimagic
 # E:Mana:Antimagic
@@ -745,4 +750,5 @@ T:Misc:Four-dimensional
 T:Misc:Anti-nastiness
 T:Misc:Fortune
 T:Misc:Freshmint
+T:Misc:Dummyskill
 
