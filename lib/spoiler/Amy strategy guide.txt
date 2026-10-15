@@ -150,7 +150,39 @@ Oh, and there's something even more Chinese, namely, the automatizer. Basically,
 
 *** Ring carriers ***
 
-Information about monsters who can drop the One Ring goes here
+There's a bunch of monsters in the game capable of dropping the One Ring. But the thing is, they can only drop it if you've already killed the Necromancer of Dol Guldur (he's waiting for you on level 70 of Dol Guldur) and talked to Galadriel in Lothlorien afterwards! And since they all only have a 10% chance of dropping it, you will want to leave them alive until they can drop the ring to maximize your chances of obtaining it. Because otherwise you'll have to go to level 99 of Angband and battle Sauron to get the ring, and since the developers want you to actually play through that part of the game, you cannot use the thunderlords or other methods of skipping levels in Angband; you have to play through every level to get there. Who wants to have to do that before the ring is destroyed? It's much more convenient to just get the ring from one of the various other bosses who can drop it, and then take it to the great fire to destroy it without having to go through all of Angband.
+
+Now, many of these bosses are at the bottom of some dungeon, and will only spawn once. Some others can spawn randomly, and you can use the scroll of mass resurrection to revive them, or some are even nazgul who cannot be killed permanently so they can spawn again even without the aid of that scroll, but trying to get a specific boss to randomly spawn can take... a while. Which is why it's a good idea to leave all dungeon bosses alive who are potential ring carriers, at least until you've killed the necro and set the flag that allows the ring to spawn. Many of the dungeons that have such bosses will even allow you to use the thunderlords to warp straight to the bottom, and then you'll just have to search one dungeon level for the boss and hope to hit that 10% chance to obtain the ring. You can, of course, play through part of a dungeon that has a potential ring carrier; just don't actually kill the boss at the bottom if the ring cannot drop yet!
+
+If you've screwed up and killed all those bosses before you offed the necro, or got unlucky to not obtain the ring from any of them, you can still try to get it from the randomly spawning bosses that can have it, but failing that, Sauron on level 99 of Angband will also eventually drop it. He has a 30% chance every time you kill him and cannot be killed permanently while the ring hasn't been dealt with, so you can kill him repeatedly until he coughs it up.
+
+Here's the list of the various bosses who can drop the one ring; take note of the ones that are dungeon bosses (and the dungeons they appear in) in particular, so that you avoid killing them early:
+- Ar-Pharazon the Golden: yellow "p", level 55, rather dangerous in melee and also has some spells. Appears on dungeon level 50. He's the boss of the Submerged Ruins (aka Numenor), a dungeon where you should really have water breathing and acid immunity or going there will just be endlessly annoying.
+- Shelob, Spider of Darkness: black "S", level 55, weakish melee and has a bunch of spells. Appears on dungeon level 50. Boss of Cirith Ungol; if you're strong enough to handle the Necromancer, you should have no trouble with anything at that depth and will probably steamroller Shelob herself easily too.
+- The Watcher in the Water: purple "~", level 45, has some annoyance spells and not much else. Appears on dungeon level 34. He's the boss of the Small Water Cave, a dungeon with background acid damage so you'll want acid immunity in order to not lose your items. Not sure why such a weaksauce boss can even have the ring, but anyway, a char who can beat the necro will certainly mop the floor with the watcher. You cannot recall directly into the cave though: have to enter from Moria level 40.
+- Glaurung, Father of the Dragons: red "D", level 70, decently strong melee, powerful breaths (fire, poison, sound) and can summon ancient dragons. Appears on dungeon level 72. Boss of Erebor (the Lonely Mountain), a rather high-level dungeon; be prepared to meet great wyrms there, among other things. That dungeon also blocks recall but at least it's only 13 levels in length so it shouldn't take too long.
+- Feagwath, the Undead Sorcerer: yellow "L", level 77, reasonably strong melee with an ultra-annoying charge draining attack, often casts spells including some surprisingly weak summoning spells, I'd have expected summon greater undead but he only has summon regular undead for some reason?! Appears on dungeon level 70. He's the boss of the Paths of the Dead, a mind-numbingly long dungeon full of undead with a background "raise dead" effect that periodically resurrects things you kill; you'll most probably not want to have to play through the 31 levels of that place, but thankfully it doesn't block recall so you can just use the thunderlords to go straight to the bottom.
+- Smeagol: cyan "h", level 3, steals gold, spawns randomly. Yep, the annoying little creature that annoys you during the early game with his invisibility and tendency to steal your gold can actually carry the ring. If you've left him alive for long enough, or used the mass resurrection scroll, you can then potentially obtain the ring from him. You could even go back and forth between dungeon level 3 and 4 for hours with a bunch of such scrolls in your pack, kill Smeagol whenever he appears, and if he didn't drop the ring, read the scroll so he can spawn again. Enough scrolls and patience may eventually reward you with the ring.
+- DarkGod, the Mighty Coder of Hell
+- Marylene, Heartbreakeress of the Netherworld
+- Tom Bombadil
+- Ingeborg, the Runemistress
+- Sunali
+- Ariane
+- Elena
+- Katharina
+- Dr. Moreau
+- Fu Manchu, The Yellow Peril
+- The Real Serpent of Chaos
+- Lina Inverse
+- Neo, bane of the lands of Rgra
+- Ken-Oh
+- Sizzle
+- Rubinho
+- Serkan
+- Janine
+- Master Chris
+- Diablo, Lord of Terror
 
 *** God quests ***
 
