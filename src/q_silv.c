@@ -43,7 +43,7 @@ bool quest_silv_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			summon_specific(y, x, 15, SUMMON_WOOD);
+			summon_specific(y, x, 22, SUMMON_WOOD);
 			--i;
 		}
 	}

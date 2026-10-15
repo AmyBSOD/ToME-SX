@@ -43,7 +43,7 @@ bool quest_pyrg_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			summon_specific(y, x, 15, SUMMON_VOLCANO);
+			summon_specific(y, x, 97, SUMMON_VOLCANO);
 			--i;
 		}
 	}

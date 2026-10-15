@@ -6,21 +6,32 @@ Refer to tomemapNEW.png to see where all the various towns and dungeons are.
 
 Bree - starting town. Quest has thieves, warriors and a mage, hardest opponent is a level 10 bandit; use hit and run if possible.
 Dale - Quest has grassland monsters about level 5. Be careful, occasionally there can be explosive breeders and if you can't contain them, you're pretty much hosed.
+Aeonvale - Quest has grassland monsters up to level 7 and Denise, a boss who uses fire attacks and steals your gold. She can be troublesome to defeat; you should have a way of dealing damage quickly.
 Lothlorien - Quest has wolves and wargs which are level 10-16 or so, but their AI is very dumb, most of the time they run away. You may have to corner them. Watch out, if they hurt you enough they'll swarm all over you which can be dangerous.
 Cerin Amroth - Quest has forest monsters about level 15.
 Hobbiton - Quest has mid-level shoes. I'd recommend you to be at least level 15 or so before going in.
+Silvoria - Quest has forest monsters up to level 22 and Corina, a boss who dishes out damage quickly and occasionally breathes time, inertia or gravity. Good AC is recommended for this one.
 Imladris - Quest has shore monsters about level 25. These can include stuff like hydras.
 Minas Anor - Quest has liches, wraiths and ghosts, level 30+, and there's also lots of high-level traps.
 Helm's Deep - Quest has desert monsters about level 35.
+Aethelmere - Quest has shore monsters up to level 37 and Verena, a boss who has acid and cold attacks and surprisingly high HP.
 Osgiliath - Quest has eldritch horrors, you need a high saving throw or be ready to get eldritch blasted repeatedly. Their levels are about 30 or so.
 Thranduil's Halls - Quest has mountain monsters about level 45. These may include mature dragons and giants.
 Gondolin - Quest has young and mature dragons up to level 30 or so, you should have the basic resists covered before going in.
+Sarihem - Quest has desert monsters up to level 52 and Yasaman, a boss who tends to run away instead of letting you get into melee distance and is also an eldritch horror. Having some saving throw is recommended, and you might need ranged weapons or spells to defeat her.
 Henneth Annun - Quest has ocean monsters about level 55. If you're unlucky, these may include kraken, which will own you.
 Edoras - Quest has ice-based monsters, double cold resistance or ideally immunity to cold will help. Their levels are about 40 or so.
 Beorn's Halls - Quest has volcano monsters about level 65. You really should have fire immunity if you're going to attempt this one.
+Orodrim - Quest has mountain monsters up to level 67 and Victoria, a boss who confuses and drains strength in melee and has a bunch of spells.
 Pelargir - Quest has fastitocalons, lesser kraken and one greater kraken. These guys will *wreck your shit* if you're not endgame-capable. The greater kraken in particular can deal over 1000 damage in one round of melee, and also has lethally powerful attack spells.
 Esgaroth - Quest has wilderness monsters about level 75. These can include all kinds of stuff, but if you get really unlucky they can have greater kraken, and then you're probably dead.
 Khazad-Dum - Quest has absurdly high-level balrogs and pit fiends with levels up to 77. Unless you have a full ascension kit and can regularly take down such demons, don't even bother.
+Marifell - Quest has ocean monsters up to level 82 and Sabine, a boss who has a hard-hitting "shatter" attack.
+Themyscira - Quest has a bunch of women up to level 85. You should be high-level when taking them on.
+Mithlond - Quest has random monsters up to level 85. Be very well-prepared for this one.
+Michel Delving - Quest has random monsters up to level 90. Again, be very well-prepared for this one.
+Pyrgard - Quest has volcano monsters up to level 97 and Conny, a boss who has a ton of health, quite a bunch of spells and also counts as an eldritch horror.
+Annuminas - Quest has random monsters up to level 95. Once again, be very well-prepared for this one.
 
 Some dungeons can have random towns, which is denoted with TOWN in the following list; these appear on random levels within the dungeon in question, but there's no guarantees that any are generated. If a dungeon does have towns, they'll always be on the levels where you find them and their layout is also (mostly) constant.
 Some dungeons block recall: you can recall out of those, and then recall back to where you've been when you're in the wilderness or town, but you cannot warp to them via the thunderlords and also can't use a scroll of reset recall to set your recall location to those. These are denoted with NORECALL in the list. If you're going to play through one of those, you'd better not set your recall location to any other dungeon before you're done. However, you can still walk back to the dungeon in question, enter, read a scroll of recall and then answer NO when asked "do you want to reset your recall level?". Then, your recall will be set to that dungeon but with the deepest level you've reached. This is particularly important for the Angband and Mount Doom dungeons which you'll have to visit during the main quest.
@@ -68,23 +79,47 @@ Far Harad (TOWN) - 40-60, densely forested, accessed from Near Harad 40
 Graveyard - 50-70 contains lots of undead, accessed from Paths of the Dead 50
 Volcano - 50-60, background fire damage so you really want to have immunity to fire, accessed from Mordor 50
 Hell - 66-80, background fire damage so you really want to have immunity to fire, accessed from Emyn Luin 65
-Heaven - 55-70, accessed from Fornost Erain 55
+Heaven - 55-70, double size, spawns lots of good monsters, accessed from Fornost Erain 55
 Mountain - 40-50, accessed from Land of Rhun 38
 Glass Castle (TOWN) - 40-60, accessed from Illusory Castle 40
-Icky Cave - 20-35, accessed from Sandworm Lair 23
-Mount Olympus - 80-90, accessed from Caras Galadhon 81
+Icky Cave - 20-35, spawns lots of icky things, jellies and hydras, accessed from Sandworm Lair 23
+Mount Olympus - 80-90, spawns giants pretty often, accessed from Caras Galadhon 81
 Wild Mine - 1-10
-Femmy's Cave - 10-20
+Femmy's Cave - 10-20, spawns lots of female monsters
 
 Space Base (TOWN) - 20-31
 Sewer - 32-38, background poison damage, accessed from Space Base 31
 Gamma Caves (TOWN) - 39-45, background ether damage, accessed from Sewer 38
-Mainframe - 46-50, prevents teleportation, accessed from Gamma Caves 45
+Mainframe - 46-50, prevents teleportation, spawns lots of demons, levels are always mazes, accessed from Gamma Caves 45
+
+Observation Tower - 30-50
+Stone Volcano - 50-70
+Jurassic Park - 70-98, spawns dragons and many animals
+Camelot (NORECALL) - 101-127, spawns lots of joke monsters; deeper levels have several pink staircases leading to various postgame dungeons covering all the depths from 128 to 980.
+Gond-en-Amarth - 1-10
+Glacis Desert - 11-20, icy terrain
+Eloria Thicket (TOWN) - 21-30, annoying lava streams, accessed from Glacis Desert 20
+Neptunia Tide Realm (TOWN) - 31-40, slippery rock ledges and ameba colonies, accessed from Eloria Thicket 30
+Solaria Sanctum (TOWN) - 41-50
+Ignis Caldera - 51-60, occasional hellfire tiles
+Minus World (TOWN) (NORECALL) - 35-39, very wacky dungeon, background radiowaves
+Construction Zone - 30-70
+Giant Playground - 40-60, double size, spawns giants frequently
+Demon Realm - 66-88, spawns demons frequently, occasional plasma clouds and hellfire
+
+Grass Steppes - 1-10, grassland monsters, forest where you often have to clear trees to continue
+Windy Woodlands - 11-20, forest monsters, thick forest where you can't really get anywhere without clearing lots of trees
+Lakeshore - 21-30, shore monsters, open water
+Aranoch Desert - 31-40, desert monsters, sandwalls that you usually have to clear to continue
+Mount Pepper (TOWN) - 41-50, mountain monsters, mountain terrain everywhere so mountain climbing is REQUIRED to get anywhere in this dungeon
+Town Square (TOWN) - 51-60, town monsters, non-tunnelable walls in otherwise normal dungeons
+Northern Sea - 61-70, ocean monsters, deep water everywhere
+Seething Volcano (TOWN) - 71-80, volcano monsters, lava streams, rooms have undiggable walls, often have to dig through magma to move around
 
 Barrow-Downs - 1-10, trees and mountains
 Mirkwood Forest - 11-33, trees everywhere
 Mordor - 34-66, lava streams
-Angband (NORECALL) - 67-127, main storyline dungeon, occasionally spawns wide open areas which can be incredibly deadly
+Angband (NORECALL) - 67-127, main storyline dungeon, occasionally spawns wide open areas which can be incredibly deadly; the deep levels past 101 have several pink staircases leading to various postgame dungeons covering all the depths from 128 to 980.
 
 The wilderness has various types of terrain, some of which can obstruct your movement. You can also be ambushed, which will place you in a wilderness level with a bunch of awake and possibly dangerous monsters; the type of terrain controls the monster mix you see, and every terrain also has a base level for its monsters but they level with you so a higher-level character will see more dangerous monsters.
 

@@ -43,7 +43,7 @@ bool quest_aeon_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			summon_specific(y, x, 15, SUMMON_GRASS);
+			summon_specific(y, x, 7, SUMMON_GRASS);
 			--i;
 		}
 	}
