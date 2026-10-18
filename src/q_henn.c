@@ -86,7 +86,7 @@ bool quest_henn_death_hook(char *fmt)
 		r_ptr = &r_info[m_ptr->r_idx];
 
 		/* Ignore breeders because they can spawn awake and breed out of control before you can do anything --Amy */
-		if ((m_ptr->status <= MSTATUS_ENEMY) && !(r_ptr->flags4 & RF4_MULTIPLY)) mcnt++;
+		if ((m_ptr->status <= MSTATUS_ENEMY) && !(r_ptr->flags4 & RF4_MULTIPLY) && !(r_ptr->flags7 & RF7_NO_DEATH)) mcnt++;
 	}
 
 	/* Nobody left ? */

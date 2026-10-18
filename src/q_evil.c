@@ -64,11 +64,15 @@ bool quest_evil_death_hook(char *fmt)
 	{
 		/* Access the monster */
 		monster_type *m_ptr = &m_list[i];
+		monster_race *r_ptr;
 
 		/* Ignore "dead" monsters */
 		if (!m_ptr->r_idx) continue;
 
-		if (m_ptr->status <= MSTATUS_ENEMY) mcnt++;
+		r_ptr = &r_info[m_ptr->r_idx];
+
+		/* don't try to make the player kill monsters with the invulnerable egotype --Amy */
+		if ((m_ptr->status <= MSTATUS_ENEMY) && !(r_ptr->flags7 & RF7_NO_DEATH)) mcnt++;
 	}
 
 	/* Nobody left ? */
