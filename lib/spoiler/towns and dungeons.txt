@@ -49,7 +49,7 @@ The Maze - 25-37, mazey levels with ultra annoying map amnesia and basically no 
 The Land of Rhun (TOWN) - 26-40, rather open terrain where you have little cover
 The Paths of the Dead - 40-70, dead monsters occasionally get resurrected as hostile zombies and skeletons
 Mount Doom (NORECALL) - 85-99 accessed from Mordor 65, lava everywhere, you *will* need fire immunity and this dungeon is also mandatory unless you go for the evil ending
-Mount Fate (NORECALL) - 85-99 accessed from Mordor 64, lava rivers, tough monsters, this dungeon can be used as an alternative to mount doom in the main quest
+Mount Fate (NORECALL) - 65-99 accessed from Mordor 64, lava rivers, tough monsters, this dungeon can be used as an alternative to mount doom in the main quest
 Mines of Moria (TOWN) - 30-50, tight quarters with mountains and lotsa monsters
 The Small Water Cave (NORECALL) - 32-34, background acid damage that trashes your gear unless you're immune, accessed from Moria 40
 The Sacred Land Of Mountains (TOWN) - 45-70, lots of flying opponents who are likely to swarm you

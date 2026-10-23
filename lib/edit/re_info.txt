@@ -648,6 +648,7 @@ N:91:Invulnerable
 G:*:v
 I:+0:%200d%200:+0:+100:+0
 W:+1:50:%90:%100:B
+H:FORCE_DEPTH
 M:NO_DEATH | ATTR_MULTI
 
 N:92:Invulnerable
@@ -655,6 +656,7 @@ G:*:v
 I:+0:%200d%200:+0:+100:+0
 W:+1:5:%90:%100:B
 F:REVBOSS
+H:FORCE_DEPTH
 M:NO_DEATH | ATTR_MULTI
 
 N:93:Annoyer
