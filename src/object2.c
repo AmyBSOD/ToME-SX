@@ -2083,6 +2083,22 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 	if ((f5 & TR5_SPELL_CONTAIN) || (ff15 & TR5_SPELL_CONTAIN))
 		return FALSE;
 
+	/* Hack -- Identical art_flags! and once again some genius programmer forgot that there's five, not three, of those... --Amy
+	 * even more genius: this check was after the tval check and some tval checks just return true under certain circumstances! Gah! */
+	if ((o_ptr->art_flags1 != j_ptr->art_flags1) ||
+	                (o_ptr->art_flags2 != j_ptr->art_flags2) ||
+	                (o_ptr->art_flags3 != j_ptr->art_flags3) ||
+	                (o_ptr->art_flags4 != j_ptr->art_flags4) ||
+	                (o_ptr->art_flags5 != j_ptr->art_flags5) ||
+	                (o_ptr->art_flags6 != j_ptr->art_flags6) ||
+	                (o_ptr->art_flags7 != j_ptr->art_flags7) ||
+	                (o_ptr->art_flags8 != j_ptr->art_flags8) ||
+	                (o_ptr->art_flags9 != j_ptr->art_flags9) ||
+	                (o_ptr->art_flags10 != j_ptr->art_flags10) ||
+			    (o_ptr->art_esp != j_ptr->art_esp) )
+		return (0);
+
+
 	/* Analyze the items */
 	switch (o_ptr->tval)
 	{
@@ -2400,20 +2416,6 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 		}
 	}
 
-
-	/* Hack -- Identical art_flags! and once again some genius programmer forgot that there's five, not three, of those... --Amy */
-	if ((o_ptr->art_flags1 != j_ptr->art_flags1) ||
-	                (o_ptr->art_flags2 != j_ptr->art_flags2) ||
-	                (o_ptr->art_flags3 != j_ptr->art_flags3) ||
-	                (o_ptr->art_flags4 != j_ptr->art_flags4) ||
-	                (o_ptr->art_flags5 != j_ptr->art_flags5) ||
-	                (o_ptr->art_flags6 != j_ptr->art_flags6) ||
-	                (o_ptr->art_flags7 != j_ptr->art_flags7) ||
-	                (o_ptr->art_flags8 != j_ptr->art_flags8) ||
-	                (o_ptr->art_flags9 != j_ptr->art_flags9) ||
-	                (o_ptr->art_flags10 != j_ptr->art_flags10) ||
-			    (o_ptr->art_esp != j_ptr->art_esp) )
-		return (0);
 
 	/* Hack -- Require identical "cursed" status */
 	if ((o_ptr->ident & (IDENT_CURSED)) != (j_ptr->ident & (IDENT_CURSED))) return (0);

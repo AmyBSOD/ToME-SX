@@ -7169,7 +7169,7 @@ void pickup_ammo()
 		/* Acquire object */
 		o_ptr = &o_list[this_o_idx];
 
-		if (object_similar(o_ptr, &p_ptr->inventory[INVEN_AMMO]))
+		if (object_similar(o_ptr, &p_ptr->inventory[INVEN_AMMO]) && (wield_slot_ideal(o_ptr, TRUE) == INVEN_AMMO) )
 		{
 			msg_print("You add the ammo to your quiver.");
 			slot = wear_ammo(o_ptr);
@@ -7271,7 +7271,7 @@ void object_pickup(int this_o_idx)
 		q_ptr = &p_ptr->inventory[INVEN_AMMO];
 
 		/* Carry the item */
-		if (object_similar(o_ptr, q_ptr))
+		if (object_similar(o_ptr, q_ptr) && (wield_slot_ideal(o_ptr, TRUE) == INVEN_AMMO) )
 		{
 			msg_print("You add the ammo to your quiver.");
 			slot = wear_ammo(o_ptr);
