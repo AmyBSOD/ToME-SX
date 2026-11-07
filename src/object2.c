@@ -6040,6 +6040,7 @@ bool make_object(object_type *j_ptr, bool good, bool great, obj_theme theme)
 	/* Chance of "special object"
 	 * Amy edit: was too high, lowered and instead randart chances (mods/mods_aux.lua) increased */
 	invprob = (good ? 50 - luck( -9, 9) : 1000);
+	invprob *= 5;
 
 	/* Amy: since alchemy has been scrapped, artifact generation ability now instead makes artifacts spawn more often */
 	if (has_ability(AB_CREATE_ART)) {
