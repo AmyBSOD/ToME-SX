@@ -16933,7 +16933,7 @@ D:These friendly beings ride their sharks into combat to assist you.
 N:967:Novice possessor (soul)
 G:G:D
 I:110:1d1:30:1:10
-W:10:3:10:0
+W:10:3:10:4
 E:0:0:0:0:0:0
 O:0:0:0:0
 F:SMART | POSSESSOR | 
@@ -17019,7 +17019,7 @@ D:A great warrior.
 N:973:Experienced possessor (soul)
 G:G:D
 I:120:5d5:30:50:10
-W:30:3:10:0
+W:30:3:10:10
 O:0:0:0:0
 F:SMART | POSSESSOR | 
 F:BASEANGBAND | NO_CUT
@@ -17030,7 +17030,7 @@ D:It does not look that powerful.
 N:974:Old possessor (soul)
 G:G:D
 I:130:10d10:30:100:10
-W:95:3:10:0
+W:95:3:10:50
 O:0:0:0:0
 F:SMART | POSSESSOR | 
 F:BASEANGBAND | NO_CUT
@@ -72063,7 +72063,7 @@ D:are set against each other.
 N:4143:Chameleon
 G:R:v
 I:110:10d100:20:0:0
-W:20:1:1500:0
+W:20:1:1500:50
 E:0:1:0:2:1:0
 O:20:20:20:20
 B:BITE:HURT:5d10
@@ -72075,7 +72075,7 @@ D:It looks like a different creature.
 N:4144:Chameleon Lord
 G:R:v
 I:110:25d100:20:0:0
-W:45:1:1500:0
+W:45:1:1500:300
 E:0:1:0:2:1:0
 O:20:20:20:20
 B:BITE:HURT:10d10
@@ -73561,7 +73561,7 @@ D:massive frame.
 N:4217:Soul
 G:G:B
 I:110:1d1:4:1:40
-W:50:0:600:0
+W:50:0:600:15
 E:1:1:1:2:1:1
 O:20:20:20:20
 F:PASS_WALL | INVISIBLE | COLD_BLOOD | POSSESSOR |
@@ -76826,7 +76826,7 @@ D:him tougher and given him more experience and opportunities to learn.
 N:4376:Filthy Rag
 G:::D
 I:110:1d1:0:0:0
-W:50:1:20:0
+W:50:1:20:20
 E:0:1:0:0:0:0
 O:20:20:20:20
 F:BASEANGBAND | 
@@ -76842,7 +76842,7 @@ D:to the original rag, allowing it to walk about and punch its enemies...
 N:4377:Sexy Swimsuit
 G:::v
 I:110:1d1:0:0:0
-W:50:1:20:0
+W:50:1:20:20
 E:0:1:0:0:0:0
 O:20:20:20:20
 F:BASEANGBAND | 
@@ -103792,7 +103792,7 @@ D:It is moving slowly towards you and wants to suck your blood.
 N:5940:Possessor (soul)
 G:G:D
 I:115:3d3:30:30:10
-W:20:3:10:0
+W:20:3:10:7
 E:0:0:0:0:0:0
 O:0:0:0:0
 F:SMART | POSSESSOR | 
@@ -103804,7 +103804,7 @@ D:It does not look that powerful.
 N:5941:Powerful possessor (soul)
 G:G:D
 I:123:6d6:30:60:10
-W:50:3:10:0
+W:50:3:10:15
 O:0:0:0:0
 F:SMART | POSSESSOR | 
 F:BASEANGBAND | NO_CUT
@@ -103815,7 +103815,7 @@ D:It does not look that powerful.
 N:5942:Magic possessor (soul)
 G:G:D
 I:124:6d6:30:60:10
-W:60:3:10:0
+W:60:3:10:18
 O:0:0:0:0
 F:SMART | POSSESSOR | 
 F:BASEANGBAND | NO_CUT
@@ -103826,7 +103826,7 @@ D:It does not look that powerful.
 N:5943:Enhanced possessor (soul)
 G:G:D
 I:125:7d7:30:70:10
-W:70:3:10:0
+W:70:3:10:24
 O:0:0:0:0
 F:SMART | POSSESSOR | 
 F:BASEANGBAND | NO_CUT
@@ -103837,7 +103837,7 @@ D:It does not look that powerful.
 N:5944:Crazed possessor (soul)
 G:G:D
 I:127:8d8:30:80:10
-W:80:3:10:0
+W:80:3:10:32
 O:0:0:0:0
 F:SMART | POSSESSOR | 
 F:BASEANGBAND | NO_CUT
@@ -103848,7 +103848,7 @@ D:It does not look that powerful.
 N:5945:Eldritch possessor (soul)
 G:G:D
 I:129:9d9:30:90:10
-W:90:3:10:0
+W:90:3:10:40
 O:0:0:0:0
 F:SMART | POSSESSOR | 
 F:BASEANGBAND | NO_CUT | ELDRITCH_HORROR | 
@@ -107421,7 +107421,7 @@ D:This type of kobold is digging paths through the dungeon.
 N:6164:Blinking possessor (soul)
 G:G:y
 I:123:6d6:30:60:10
-W:50:3:10:0
+W:50:3:10:15
 O:0:0:0:0
 F:SMART | POSSESSOR | RAND_25 | 
 F:BASEANGBAND | NO_CUT
@@ -107432,7 +107432,7 @@ D:It does not look that powerful.
 N:6165:Blinking possessor (soul)
 G:G:y
 I:123:6d6:30:60:10
-W:50:120:10:0
+W:50:120:10:15
 O:0:0:0:0
 F:SMART | POSSESSOR | RAND_25 | 
 F:BASEANGBAND | NO_CUT
@@ -111970,7 +111970,7 @@ F:ANIMAL
 S:1_IN_5 | 
 S:CAUSE_4 | 
 S:BR_CHAO
-D:With biting jaws and catching claws, this immense beetle is like
+D:With biting jaws and catching claws, this immense beetle is like 
 D:death incarnate chasing behind you!
 
 N:6451:Etrius

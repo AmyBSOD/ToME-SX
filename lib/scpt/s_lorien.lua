@@ -36,12 +36,12 @@ LORIEN_COLLUSION = add_spell
 	["fail"] = 	25,
 	["stick"] =
 	{
-			["charge"] =    { 5, 7 },
+			["charge"] =    { 2, 4 },
 			[TV_WAND] =
 			{
-				["rarity"] = 		15,
+				["rarity"] = 		66,
 				["base_level"] =	{ 1, 15 },
-				["max_level"] =		{ 25, 50 },
+				["max_level"] =		{ 10, 20 },
 			},
 	},
 	-- Uses piety to cast

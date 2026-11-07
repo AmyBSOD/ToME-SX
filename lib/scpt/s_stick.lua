@@ -1,7 +1,7 @@
 -- Spells that are stick or artifacts/... only
 
 -- explanation for how the stick values work (I think; they're not really documented anywhere *groan*), by Amy:
--- base_level: first value usually 1, second value seems to be the minimum level to increase spell level? or not? does this even do anything?!
+-- base_level: first value usually 1, second value might be the max amount of "extra spell effect level" in the wand
 -- max_level: lower and higher bounds, denotes the "maximum" level that the device can spawn with
 -- rarity: apparently this is a % chance for the device to not spawn with this particular spell?
 -- charge: seems to be X + dY charges when the device spawns
@@ -21,7 +21,7 @@ DEVICE_HEAL_MONSTER = add_spell
 			[TV_WAND] =
 			{
 				["rarity"] = 		17,
-				["base_level"] =	{ 1, 15 },
+				["base_level"] =	{ 1, 5 },
 				["max_level"] =		{ 20, 50 },
 			},
 	},

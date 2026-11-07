@@ -49,11 +49,11 @@ CLEANINGFIRE = add_spell
 			},
 	},
 	["spell"] = 	function()
-			fire_cloud(GF_PLASMA, 0, 2 + get_level(CLEANINGFIRE, 25), 2 + get_level(CLEANINGFIRE, 3, 0), 3 + get_level(CLEANINGFIRE, 4) )
+			fire_cloud(GF_PLASMA, 0, 7 + get_level(CLEANINGFIRE, 45), 2 + get_level(CLEANINGFIRE, 3, 0), 3 + get_level(CLEANINGFIRE, 4) )
 			return TRUE
 	end,
 	["info"] = 	function()
-       			return "dam "..(2 + get_level(CLEANINGFIRE, 25)).." rad "..(2 + get_level(CLEANINGFIRE, 3, 0)).." dur "..(3 + get_level(CLEANINGFIRE, 4))
+       			return "dam "..(7 + get_level(CLEANINGFIRE, 45)).." rad "..(2 + get_level(CLEANINGFIRE, 3, 0)).." dur "..(3 + get_level(CLEANINGFIRE, 4))
 	end,
 	["desc"] =	{
 			"Fills the air around you with extremely hot plasma to eradicate the enemy."

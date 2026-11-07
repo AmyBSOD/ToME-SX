@@ -66,7 +66,7 @@ IDENTIFY = add_spell
 			end
 	end,
 	["info"] = 	function()
-			if get_level(IDENTIFY, 50) >= 27 then
+			if get_level(IDENTIFY, 50) >= 50 then
 				return "rad "..(get_level(IDENTIFY, 3))
 			else
 				return ""
