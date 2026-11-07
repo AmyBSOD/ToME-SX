@@ -3292,9 +3292,8 @@ static bool player_birth_aux()
 
 			s_ptr = &s_info[skilltoincrease];
 
-			switch (randint(3)) {
+			switch (randint(42)) {
 				case 1:
-				default:
 					increasetempvar = randint(50);
 					if ((increasetempvar > 45) && magik(33)) increasetempvar += randint(50);
 					increasetempvar *= 100; /* 0.1-5.0 (or rarely up to 10.0) to base value */
@@ -3302,13 +3301,14 @@ static bool player_birth_aux()
 					if (s_ptr->value > SKILL_MAX) s_ptr->value = SKILL_MAX;
 					break;
 				case 2:
+				default:
 					increasetempvar = randint(10);
 					increasetempvar *= 100; /* 0.1-1.0 to base value */
 					s_ptr->value += increasetempvar;
 					if (s_ptr->value > SKILL_MAX) s_ptr->value = SKILL_MAX;
 
-					increasetempvar = randint(5);
-					increasetempvar *= 100; /* 0.1-0.5 to multiplier */
+					increasetempvar = randint(10);
+					increasetempvar *= 100; /* 0.1-1.0 to multiplier */
 					s_ptr->mod += increasetempvar;
 					break;
 				case 3:
@@ -3316,10 +3316,10 @@ static bool player_birth_aux()
 					increasetempvar *= -1000; /* -1 to -20 to base value */
 					s_ptr->value += increasetempvar;
 
-					increasetempvar = randint(8);
-					if (randint(25) == 1) increasetempvar = 9;
-					else if (randint(100) == 1) increasetempvar = 10;
-					increasetempvar *= 100; /* 0.1-1.0 to multiplier, but rarely above 0.8 */
+					increasetempvar = randint(14);
+					if (randint(25) == 1) increasetempvar = 14 + randint(3);
+					else if (randint(100) == 1) increasetempvar = 17 + randint(3);
+					increasetempvar *= 100; /* 0.1-1.4 to multiplier, but rarely above 1.4 */
 					s_ptr->mod += increasetempvar;
 					break;
 			}
