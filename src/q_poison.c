@@ -155,6 +155,7 @@ bool quest_poison_quest_hook(char *fmt)
 	object_known(q_ptr);
 	q_ptr->ident |= IDENT_STOREB;
 	q_ptr->note = quark_add("quest");
+	q_ptr->found = OBJ_FOUND_REWARD;
 	(void)inven_carry(q_ptr, FALSE);
 
 	del_hook(HOOK_INIT_QUEST, quest_poison_quest_hook);

@@ -79,6 +79,8 @@ bool quest_wight_gen_hook(char *fmt)
 						q_ptr->pval = 2;
 					}
 
+					q_ptr->found = OBJ_FOUND_SPECIAL;
+
 					/* Get new object */
 					o_idx = o_pop();
 

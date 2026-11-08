@@ -28,6 +28,7 @@ bool quest_shroom_town_gen_hook(char *fmt)
 			q_ptr->number = 1;
 			/* Mark them */
 			q_ptr->pval2 = 1;
+			q_ptr->found = OBJ_FOUND_SPECIAL;
 			drop_near(q_ptr, -1, rand_range((cur_hgt / 2) - 5, (cur_hgt / 2) + 5), rand_range((cur_wid / 2) - 7, (cur_wid / 2) + 7));
 		}
 

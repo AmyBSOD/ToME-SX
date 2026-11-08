@@ -10589,6 +10589,7 @@ void make_wish(void)
 		msg_print("Your wish becomes truth!");
 
 		/* Give it to the player */
+		o_ptr->found = OBJ_FOUND_WISH;
 		drop_near(o_ptr, -1, p_ptr->py, p_ptr->px);
 
 		return;

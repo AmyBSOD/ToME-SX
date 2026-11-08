@@ -217,6 +217,8 @@ bool quest_ultra_good_death_hook(char *fmt)
 		/* Mark the item as fully known */
 		q_ptr->ident |= (IDENT_MENTAL);
 
+		q_ptr->found = OBJ_FOUND_REWARD;
+
 		/* Find a space */
 		for (i = 0; i < INVEN_PACK; i++)
 		{

@@ -411,6 +411,7 @@
 #define OBJ_FOUND_BIRTH         12
 #define OBJ_FOUND_FATE          13
 #define OBJ_FOUND_ACQUIRE       14
+#define OBJ_FOUND_WISH          15
 /*
  * There is a 1/20 (5%) chance of inflating the requested object_level
  * during the creation of an object (see "get_obj_num()" in "object.c").
@@ -2470,6 +2471,7 @@
 #define CAVE_DETECT     0x1000    /* Traps detected here */
 #define CAVE_PLIT       0x2000    /* Player lit grid */
 #define CAVE_MLIT       0x4000    /* Monster lit grid */
+#define CAVE_DTOWN      0x8000    /* Dungeon town */
 
 /*
  * Bit flags for the "project()" function

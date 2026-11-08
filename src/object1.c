@@ -4408,6 +4408,10 @@ bool object_out_desc(object_type *o_ptr, FILE *fff, bool trim_down, bool wait_fo
 		{
 			text_out("\nYou obtained this item via acquirement.");
 		}
+		else if (o_ptr->found == OBJ_FOUND_WISH)
+		{
+			text_out("\nYou obtained this item via wishing.");
+		}
 		else if (o_ptr->found == OBJ_FOUND_STORE)
 		{
 			text_out(format("\nYou bought it from the %s.",

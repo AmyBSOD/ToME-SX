@@ -59,6 +59,8 @@ bool quest_troll_gen_hook(char *fmt)
 					/* Mega-Hack -- Actually create "Glamdring" */
 					apply_magic(q_ptr, -1, TRUE, TRUE, TRUE);
 
+					q_ptr->found = OBJ_FOUND_SPECIAL;
+
 					a_allow_special[ART_GLAMDRING] = FALSE;
 
 					/* Get new object */
