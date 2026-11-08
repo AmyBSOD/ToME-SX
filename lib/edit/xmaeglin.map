@@ -14,52 +14,52 @@ F:<:172:3
 F:{:6:3:825
 
 # Floor with dirt
-F:.:88:5
+F:.:88:1
 
 # Floor with dirt with an Ettin
-F:e:88:5:621
+F:e:88:1:621
 
 # Floor with dirt with a War Troll
-F:w:88:5:631
+F:w:88:1:631
 
 # Floor with dirt with a Troll Chieftan
-F:t:88:5:799
+F:t:88:1:799
 
 # Floor with dirt with a Snagga sapper
-F:s:88:5:251
+F:s:88:1:251
 
 # Floor with dirt with an Orc Captain
-F:o:88:5:285
+F:o:88:1:285
 
 # Floor with dirt with an Elite Uruk
-F:u:88:5:866
+F:u:88:1:866
 
 # Floor with dirt with an Ancient blue dragon
-F:L:88:5:601
+F:L:88:1:601
 
 # Floor with dirt with an Ancient bronze dragon
-F:Z:88:5:602
+F:Z:88:1:602
 
 # Floor with dirt with an Ancient white dragon
-F:W:88:5:617
+F:W:88:1:617
 
 # Floor with dirt with an Ancient green dragon
-F:G:88:5:618
+F:G:88:1:618
 
 # Floor with dirt with an Ancient black dragon
-F:B:88:5:624
+F:B:88:1:624
 
 # Floor with dirt with an Ancient red dragon
-F:R:88:5:644
+F:R:88:1:644
 
 # Floor with dirt with an Ancient gold dragon
-F:O:88:5:645
+F:O:88:1:645
 
 # Floor with dirt with a Lesser Balrog
-F:U:88:5:996
+F:U:88:1:996
 
 # Granite wall
-F:#:56:5
+F:#:56:1
 
 # Floor with Trap
 F:p:1:8:0:0:0:0:*

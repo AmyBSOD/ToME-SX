@@ -5,19 +5,19 @@ F:X:63:3
 F:<:6:3
 
 # Floor with dirt
-F:.:1:5
+F:.:1:1
 
-# Dirt (no-tele)
-F:s:88:5
+# Dirt (used to be no-tele but fuck you, of course you can tele --Amy)
+F:s:88:1
 
 # Shallow water
-F:V:84:5
+F:V:84:1
 
 # Dirt with Olog
-F:a:88:5:538
+F:a:88:1:538
 
 # Dirt with Cave Troll
-F:b:88:5:496
+F:b:88:1:496
 
 # Dirt with with Eldrak
 F:c:88:1:620
@@ -32,10 +32,10 @@ F:f:88:1:631
 F:g:88:1:709
 
 # Dirt with Ulik the Troll
-F:h:88:5:729
+F:h:88:1:729
 
 # Dirt with Ancient green dragon
-F:i:88:5:618
+F:i:88:1:618
 
 # Dungeon
 D:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
