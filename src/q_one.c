@@ -507,7 +507,8 @@ bool quest_one_gen_hook(char *fmt)
 
 	/* Paranoia */
 	if (cquest.status != QUEST_STATUS_TAKEN) return (FALSE);
-	if ((dungeon_type != DUNGEON_ANGBAND) || (dun_level != 99)) return (FALSE);
+	/* Amy note: guarantee Sauron on Angband, Mount Doom and Mount Fate */
+	if ((dungeon_type != DUNGEON_ANGBAND && dungeon_type != DUNGEON_MOUNT_DOOM && dungeon_type != DUNGEON_MOUNT_FATE) || (dun_level != 99)) return (FALSE);
 
 	/* Find a good position */
 	while (try)

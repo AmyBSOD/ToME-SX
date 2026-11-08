@@ -5838,6 +5838,7 @@ extern int PlayerUID;
 #define DUNGEON_VOID            11
 #define DUNGEON_MAZE            18
 #define DUNGEON_DOL_GULDUR      23
+#define DUNGEON_MOUNT_FATE      74
 
 /* Max depth of each dungeon(max_depth - min_depth) */
 #define MAX_DUNGEON_DEPTH       128

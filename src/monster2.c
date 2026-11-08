@@ -2559,6 +2559,20 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 		return 0;
 	}
 
+	if ((r_idx == 860) && (dungeon_type != DUNGEON_ANGBAND) && (dungeon_type != DUNGEON_MOUNT_DOOM) && (dungeon_type != DUNGEON_MOUNT_FATE) )
+	{
+		if (wizard) cmsg_format(TERM_L_RED, "WARNING: Refused monster(%d): Sauron in wrong dungeon", r_idx);
+		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
+		return 0;
+	}
+
+	if ((r_idx == 862) && (dungeon_type != DUNGEON_ANGBAND) )
+	{
+		if (wizard) cmsg_format(TERM_L_RED, "WARNING: Refused monster(%d): Morgoth in wrong dungeon", r_idx);
+		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
+		return 0;
+	}
+
 	/* Hack -- no creation on glyph of warding */
 	if (cave[y][x].feat == FEAT_GLYPH)
 	{

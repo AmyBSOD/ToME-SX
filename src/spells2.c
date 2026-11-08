@@ -9946,6 +9946,13 @@ int reset_recall_aux()
 				msg_print(NULL);
 				continue;
 			}
+			/* cannot warp to dungeons that start at 101 or deeper (postgame) unless Morgoth is defeated --Amy */
+			else if ((d_info[i].mindepth > 100) && r_info[862].max_num && !wizard)
+			{
+				msg_print("You cannot go there yet!");
+				msg_print(NULL);
+				continue;
+			}
 			else if ((d_info[i].min_plev > p_ptr->lev) && !wizard)
 			{
 				msg_print("You cannot go there yet!");
