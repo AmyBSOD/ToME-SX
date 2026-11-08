@@ -7145,8 +7145,10 @@ void earthquake(int cy, int cx, int r)
 	bool map[32][32];
 	int quakeefflvl; /* by Amy - dumb if you get a flat 300 damage because not everyone has that much HP early on */
 
+	/* give a MOTHERFUCKING message indicating WHY the fuck your shake spell just fizzled without doing anything --Amy */
 	if (p_ptr->inside_quest)
 	{
+		msg_print("The dungeon seems to tremble...");
 		return;
 	}
 
