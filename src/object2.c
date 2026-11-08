@@ -2066,6 +2066,8 @@ s32b object_value_shop(object_type *o_ptr)
  * Food, potions, scrolls, and "easy know" items always stack.
  *
  * Chests, and activatable items, never stack (for various reasons).
+ *
+ * Amy grepping keywords: "merge" "merging" "stackable"
  */
 bool object_similar(object_type *o_ptr, object_type *j_ptr)
 {
@@ -2098,6 +2100,12 @@ bool object_similar(object_type *o_ptr, object_type *j_ptr)
 			    (o_ptr->art_esp != j_ptr->art_esp) )
 		return (0);
 
+	/* more checks by Amy: tampered items and ones who have their weight increased are absolutely unstackable
+	 * ones that gained the morgothian or no attack curse post-creation won't stack unless the other item is exactly identical in that regard */
+	if (o_ptr->tampered || j_ptr->tampered) return FALSE;
+	if (o_ptr->morgycurse != j_ptr->morgycurse) return FALSE;
+	if (o_ptr->noattcurse != j_ptr->noattcurse) return FALSE;
+	if (o_ptr->weightincrease || j_ptr->weightincrease) return FALSE;
 
 	/* Analyze the items */
 	switch (o_ptr->tval)

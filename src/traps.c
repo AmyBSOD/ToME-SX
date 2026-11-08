@@ -16431,6 +16431,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				/* increase weight up to a max of 1000 pounds */
 				if (j_ptr->weight < 1000) {
 					j_ptr->weight += 10;
+					j_ptr->weightincrease = TRUE;
 
 					if (!message) {
 						msg_print("Your armor suddenly feels heavier!");
@@ -16474,6 +16475,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				/* increase weight up to a max of 1000 pounds */
 				if (j_ptr->weight < 1000) {
 					j_ptr->weight += 20;
+					j_ptr->weightincrease = TRUE;
 
 					if (!message) {
 						msg_print("Your armor suddenly feels heavier!");
@@ -16517,6 +16519,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				/* increase weight up to a max of 1000 pounds */
 				if (j_ptr->weight < 1000) {
 					j_ptr->weight += 30;
+					j_ptr->weightincrease = TRUE;
 
 					if (!message) {
 						msg_print("Your armor suddenly feels heavier!");
@@ -16560,6 +16563,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				/* increase weight up to a max of 1000 pounds */
 				if (j_ptr->weight < 1000) {
 					j_ptr->weight += 50;
+					j_ptr->weightincrease = TRUE;
 
 					if (!message) {
 						msg_print("Your armor suddenly feels heavier!");
@@ -16601,6 +16605,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				/* increase weight up to a max of 1000 pounds */
 				if (j_ptr->weight < 1000) {
 					j_ptr->weight += 100;
+					j_ptr->weightincrease = TRUE;
 
 					if (!message) {
 						msg_print("Your armor suddenly feels heavier!");
@@ -16645,6 +16650,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				/* increase weight up to a max of 2000 pounds */
 				if (j_ptr->weight < 2000) {
 					j_ptr->weight += 50;
+					j_ptr->weightincrease = TRUE;
 
 					if (!message) {
 						msg_print("You feel burdened"); /* missing exclamation mark is intentional */
@@ -16688,6 +16694,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				/* increase weight up to a max of 2000 pounds */
 				if (j_ptr->weight < 2000) {
 					j_ptr->weight += 100;
+					j_ptr->weightincrease = TRUE;
 
 					if (!message) {
 						msg_print("You feel burdened"); /* missing exclamation mark is intentional */
@@ -16731,6 +16738,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				/* increase weight up to a max of 2000 pounds */
 				if (j_ptr->weight < 2000) {
 					j_ptr->weight += 200;
+					j_ptr->weightincrease = TRUE;
 
 					if (!message) {
 						msg_print("You feel burdened"); /* missing exclamation mark is intentional */
@@ -16774,6 +16782,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				/* increase weight up to a max of 2000 pounds */
 				if (j_ptr->weight < 2000) {
 					j_ptr->weight += 500;
+					j_ptr->weightincrease = TRUE;
 
 					if (!message) {
 						msg_print("You feel burdened"); /* missing exclamation mark is intentional */
@@ -16817,6 +16826,7 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 				/* increase weight up to a max of 2000 pounds */
 				if (j_ptr->weight < 2000) {
 					j_ptr->weight += 1000;
+					j_ptr->weightincrease = TRUE;
 
 					if (!message) {
 						msg_print("You feel burdened"); /* missing exclamation mark is intentional */

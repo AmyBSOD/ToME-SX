@@ -919,6 +919,7 @@ struct object_type
 	s32b tampered;		/* alchemy or runecraft has been used on this item --Amy */
 	s32b morgycurse;		/* item has gained the AMC post-creation --Amy */
 	s32b noattcurse;		/* item has gained the no attack flag post-creation --Amy */
+	s32b weightincrease;	/* item has had its weight increased --Amy */
 
 	byte discount;		/* Discount (if any) */
 

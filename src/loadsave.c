@@ -2442,6 +2442,7 @@ static void do_item(object_type *o_ptr, int flag)
 	do_s32b(&o_ptr->tampered, flag);
 	do_s32b(&o_ptr->morgycurse, flag);
 	do_s32b(&o_ptr->noattcurse, flag);
+	do_s32b(&o_ptr->weightincrease, flag);
 
 	do_byte(&o_ptr->discount, flag);
 	do_byte(&o_ptr->number, flag);

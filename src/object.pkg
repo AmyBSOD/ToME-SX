@@ -1145,6 +1145,13 @@ struct object_type
 	s32b pval3;                     /* Item extra-parameter for some special
 					   items*/
 
+	s32b spellcontain;      /* because SOMEone thought it was a good idea to misuse pval2... --Amy */
+
+	s32b tampered;		/* alchemy or runecraft has been used on this item --Amy */
+	s32b morgycurse;		/* item has gained the AMC post-creation --Amy */
+	s32b noattcurse;		/* item has gained the no attack flag post-creation --Amy */
+	s32b weightincrease;	/* item has had its weight increased --Amy */
+
 	byte discount;		/* Discount (if any) */
 
 	byte number;		/* Number of items */
@@ -1154,7 +1161,7 @@ struct object_type
 	byte elevel;            /* Item exp level */
 	s32b exp;               /* Item exp */
 
-	byte name1;			/* Artifact type, if any */
+	s16b name1;			/* Artifact type, if any */
 	s16b name2;                     /* Ego-Item type, if any */
 	s16b name2b;                    /* Second Ego-Item type, if any */
 
@@ -1197,9 +1204,11 @@ struct object_type
 
 	byte sense;             /* Pseudo-id status */
 
-        byte found;             /* How did we find it */
-        s16b found_aux1;        /* Stores info for found */
-        s16b found_aux2;        /* Stores info for found */
+      byte found;             /* How did we find it */
+      s16b found_aux1;        /* Stores info for found */
+      s16b found_aux2;        /* Stores info for found */
+	s16b found_aux3;        /* Stores info for found */
+	s16b found_aux4;        /* Stores info for found */
 };
 
 /* Pseudo-id defines */

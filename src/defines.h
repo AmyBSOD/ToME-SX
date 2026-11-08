@@ -45,7 +45,8 @@
 
 #define ANGBAND_2_8_1
 
-#define SAVEFILE_VERSION 104
+/* savefile version is supposed to be the same as ToME-SX version --Amy */
+#define SAVEFILE_VERSION 132
 
 #define TOMESX_VERSION "1.32"
 
