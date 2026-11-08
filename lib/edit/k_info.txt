@@ -10676,7 +10676,7 @@ D:possible in the dungeon. You can drink it by pressing 'E'.
 N:1264:Sterilise
 G:?:d
 I:70:64:0
-W:40:0:5:200
+W:40:0:0:200
 A:30/1
 D:This scroll humanely neuters all nearby monsters.
 
