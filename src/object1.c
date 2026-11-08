@@ -7624,6 +7624,7 @@ void gain_flag_group_flag(object_type *o_ptr, bool silent)
 	int grp = 0, k = 0;
 	u32b f = 0;
 	int tries = 20000;
+	int flagtries = 100;
 	int usertries = 500;
 	char etrdt; /* by Amy: can select a realm, because it's silly if the artifact just decides for itself */
 
@@ -7636,7 +7637,7 @@ trynewflag:
 	while (tries--)
 	{
 		/* Get a flag set */
-		k = rand_int(6);
+		k = rand_int(11);
 
 		/* get a flag group */
 		grp = rand_int(MAX_FLAG_GROUP);
@@ -7671,12 +7672,21 @@ trynewflag:
 			}
 		} else {
 
+			flagtries = 100;
+
+rollflag:
 			/* Return a flag from the group/set */
 			f = get_flag(o_ptr, grp, k);
 
 			if (!f) {
-				msg_print("Whoops! Failed to roll a property from that realm!");
-				continue;
+				if (flagtries > 0) {
+					flagtries--;
+					k = rand_int(11);
+					goto rollflag;
+				} else {
+					msg_print("Whoops! Failed to roll a property from that realm!");
+					continue;
+				}
 			}
 
 		}
