@@ -2979,6 +2979,9 @@ bool make_attack_normal(int m_idx, byte divis)
 					take_hit(damage, ddesc);
 					if (!death) lifesave_no_mortal = FALSE;
 
+					/* make freshmint not completely useless: have a chance to avoid the FUCKing drain effect entirely --Amy */
+					if (randint(100) < player_freshmint_avoidance()) break;
+
 					/* Find an item */
 					for (k = 0; k < 10; k++)
 					{
@@ -3010,11 +3013,6 @@ bool make_attack_normal(int m_idx, byte divis)
 
 							if (o_ptr->tval == TV_ROD_MAIN) {
 
-								/* Heal */
-								j = rlev;
-								m_ptr->hp += j * o_ptr->timeout * o_ptr->number;
-								if (m_ptr->hp > m_ptr->maxhp) m_ptr->hp = m_ptr->maxhp;
-
 								/* Redraw (later) if needed */
 								if (health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
 
@@ -3027,6 +3025,12 @@ bool make_attack_normal(int m_idx, byte divis)
 								if (drainmitigate > 0) drainedamount -= randint(drainmitigate);
 								if (drainedamount < 1) drainedamount = 1;
 
+								/* Heal */
+								j = (rlev / 2) + 1;
+								if (p_ptr->nastytrap71) j = rlev;
+								m_ptr->hp += j * ((drainedamount / 10) + 1) * o_ptr->number;
+								if (m_ptr->hp > m_ptr->maxhp) m_ptr->hp = m_ptr->maxhp;
+
 								o_ptr->timeout -= drainedamount;
 								if (o_ptr->timeout < 0) o_ptr->timeout = 0;
 
@@ -3037,10 +3041,6 @@ bool make_attack_normal(int m_idx, byte divis)
 								p_ptr->window |= (PW_INVEN);
 
 							} else {
-								/* Heal */
-								j = rlev;
-								m_ptr->hp += j * o_ptr->pval * o_ptr->number;
-								if (m_ptr->hp > m_ptr->maxhp) m_ptr->hp = m_ptr->maxhp;
 
 								/* Redraw (later) if needed */
 								if (health_who == m_idx) p_ptr->redraw |= (PR_HEALTH);
@@ -3053,6 +3053,12 @@ bool make_attack_normal(int m_idx, byte divis)
 								drainmitigate = get_skill_scale(SKILL_FRESHMINT, 20);
 								if (drainmitigate > 0) drainedamount -= randint(drainmitigate);
 								if (drainedamount < 1) drainedamount = 1;
+
+								/* Heal */
+								j = (rlev / 2) + 1;
+								if (p_ptr->nastytrap71) j = rlev;
+								m_ptr->hp += j * drainedamount * o_ptr->number;
+								if (m_ptr->hp > m_ptr->maxhp) m_ptr->hp = m_ptr->maxhp;
 
 								o_ptr->pval -= drainedamount;
 								if (o_ptr->pval < 0) o_ptr->pval = 0;
@@ -4731,6 +4737,20 @@ int player_actual_saving_throw(void)
 		int diffsav = playersav - 89;
 
 		playersav = 89 + randint(diffsav);
+	}
+
+	return playersav;
+}
+
+/* freshmint chance to avoid having your charges drained, by Amy; can't reach 100%, every point beyond 80 gets you infinitesimally closer */
+int player_freshmint_avoidance(void)
+{
+	int playersav = get_skill_scale(SKILL_FRESHMINT, 50);
+
+	if (playersav > 79) {
+		int diffsav = playersav - 79;
+
+		playersav = 79 + randint(diffsav);
 	}
 
 	return playersav;

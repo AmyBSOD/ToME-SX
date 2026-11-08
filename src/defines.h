@@ -6369,6 +6369,10 @@ extern int PlayerUID;
 /* Ugly but needed */
 #define MAX_GOOD_SKILL          80
 
+/* workaround for a FUCKING BUG that shouldn't even be able to exist... --Amy
+ * this one NEEDS to have a higher index number than MAX_GOOD_SKILL!! */
+#define SKILL_DUMMY             81
+
 #define MAX_SKILLS              200
 
 /* SKill flags */
