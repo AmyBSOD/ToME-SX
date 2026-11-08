@@ -21,12 +21,30 @@ void increase_skill(int i, s16b *invest)
 {
 	s32b max_skill_overage;
 
+	char etrdt;
+
 	/* No skill points to be allocated
 	 * wizard mode bypasses this, because if I'm the wizard, I don't need to care about skill points --Amy */
 	if (!p_ptr->skill_points && !wizard) return;
 
-	/* The skill cannot be increased */
-	if (!s_info[i].mod) return;
+	/* The skill cannot be increased
+	 * wizard mode can also bypass this, because if I'm the wizard, of course I can just unlock skills as I please --Amy */
+	if (!s_info[i].mod) {
+		if (wizard) {
+			prt("Forcibly unlock the skill (y/n)? ", 0, 0);
+			flush();
+			etrdt = inkey();
+			prt("", 0, 0);
+			if (etrdt != 'y') {
+				return;
+			} else {
+				s_info[i].mod = 500;
+				msg_print("Skill unlocked.");
+			}
+		} else {
+			return;
+		}
+	}
 
 	/* The skill is already maxed */
 	if (s_info[i].value >= SKILL_MAX) return;
