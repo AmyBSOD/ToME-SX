@@ -4756,3 +4756,36 @@ int player_freshmint_avoidance(void)
 	return playersav;
 }
 
+/* chance to block arrows, boulders and stuff if you have a shield --Amy
+ * returns TRUE if you manage to block the missile, otherwise FALSE */
+bool player_blocking_chance(int projdamage)
+{
+	int blockchance = 0;
+	object_type *o_ptr = &p_ptr->inventory[INVEN_ARM]; /* shield slot */
+
+	if (!o_ptr->k_idx) return FALSE;
+
+	/* now we're sure that you have a shield equipped */
+	blockchance = o_ptr->ac + o_ptr->to_a;
+
+	blockchance += (blockchance * get_skill(SKILL_SHIELD) / 100);
+
+	if (blockchance < 1) return FALSE;
+
+	/* low-damage missiles are easier to block */
+	if (projdamage < blockchance) {
+		blockchance += ((blockchance - projdamage) / 2);
+	}
+
+	/* high-damage missiles are harder to block */
+	if (projdamage > blockchance) {
+		if ((randint(projdamage) > blockchance) && magik(75)) return FALSE;
+	}
+
+	/* totally not stolen from Diablo 2: 75% max chance to block */
+	if (blockchance > 75) blockchance = 75;
+
+	if (magik(blockchance)) return TRUE;
+	return FALSE;
+}
+

@@ -1057,6 +1057,7 @@ extern bool curse_equipment_prime(int chance, int heavy_chance);
 
 extern int player_actual_saving_throw(void);
 extern int player_freshmint_avoidance(void);
+extern bool player_blocking_chance(int projdamage);
 
 /* monster1.c */
 extern void screen_roff(int r_idx, int ego, int remember);

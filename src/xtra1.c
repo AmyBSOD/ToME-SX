@@ -4869,6 +4869,17 @@ void calc_bonuses(bool silent)
 		p_ptr->dis_to_a += lev / 25;
 	}
 
+	if (get_skill(SKILL_SHIELD)) {
+		object_type *shi_ptr = &p_ptr->inventory[INVEN_ARM]; /* shield slot */
+
+		if (shi_ptr->k_idx) {
+			int actoboost = shi_ptr->ac + shi_ptr->to_a;
+
+			p_ptr->to_a += (actoboost * get_skill(SKILL_SHIELD) / 100);
+			p_ptr->dis_to_a += (actoboost * get_skill(SKILL_SHIELD) / 100);
+		}
+	}
+
 	if (get_skill(SKILL_COMBAT))
 	{
 		int lev = get_skill_scale(SKILL_COMBAT, 5);

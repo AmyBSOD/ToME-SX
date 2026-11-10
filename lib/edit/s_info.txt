@@ -290,6 +290,11 @@ D:One-and-a-half-handed weapons give lesser bonuses
 I:1000
 F:RANDOM_GAIN
 
+N:81:Shield
+D:Boosts AC and chance to block when using a shield
+I:1000
+F:RANDOM_GAIN
+
 N:23:Archery
 D:General ability to use ranged weapons
 I:1000
@@ -409,6 +414,7 @@ f:Boulder-throwing:Combat%40
 f:Weight-lifting:Combat%10
 f:Dual-wielding:Combat%10
 f:Two-handed:Combat%10
+f:Shield:Combat%10
 
 # No more, let's see how it turns out
 # Sorcery and Weaponmastery aren't exactly friendly to each other
@@ -519,7 +525,7 @@ D:Protects against charge drain attacks
 I:1000
 F:RANDOM_GAIN
 
-N:81:Dummyskill
+N:82:Dummyskill
 D:Does nothing
 I:1000
 F:HIDDEN
@@ -686,6 +692,7 @@ T:Combat:Bearform-combat
 T:Combat:Boulder-throwing
 T:Combat:Dual-wielding
 T:Combat:Two-handed
+T:Combat:Shield
 T:Combat:Antimagic
 T:Combat:HighHeels
 

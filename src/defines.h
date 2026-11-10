@@ -6369,14 +6369,15 @@ extern int PlayerUID;
 #define SKILL_FORTUNE           78
 #define SKILL_HIGHHEELS         79
 #define SKILL_ELEMENTAL         80
+#define SKILL_SHIELD            81
 /* ATTENTION: always update MAX_GOOD_SKILL below when adding new ones!!! --Amy */
 
 /* Ugly but needed */
-#define MAX_GOOD_SKILL          80
+#define MAX_GOOD_SKILL          81
 
 /* workaround for a FUCKING BUG that shouldn't even be able to exist... --Amy
  * this one NEEDS to have a higher index number than MAX_GOOD_SKILL!! */
-#define SKILL_DUMMY             81
+#define SKILL_DUMMY             82
 
 #define MAX_SKILLS              200
 

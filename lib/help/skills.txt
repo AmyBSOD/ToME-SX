@@ -128,6 +128,7 @@ The skills are:
   *****skills.txt*75[Druidistic]          *****skills.txt*76[Cleaning]           *****skills.txt*77[Misc]               *****skills.txt*78[Clear-mind]
   *****skills.txt*79[Freshmint]           *****skills.txt*80[Hidden-Sight]       *****skills.txt*81[Haggling]           *****skills.txt*82[Investing]
   *****skills.txt*83[Four-dimensional]    *****skills.txt*84[Anti-nastiness]     *****skills.txt*85[HighHeels]          *****skills.txt*86[Elemental]
+  *****skills.txt*87[Shield]
 
 ~~~~~01|Skills|Combat
 [[[[[BCombat]
@@ -662,3 +663,8 @@ a speed malus. Higher skill levels boost your AC and charisma while wearing high
 ~~~~~86|Skills|Elemental
 [[[[[BElemental]
 A spell school that allows you to cast some damaging elemental spells.
+~~~~~87|Skills|Shield
+[[[[[BShield]
+Boosts your AC and chance to block when wearing a shield. Both of these are based on
+your shield's AC value (plus bonuses to AC on the shield), meaning the effect is
+stronger when wearing a high-AC shield.

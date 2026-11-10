@@ -84,6 +84,7 @@ C:k:+0:+400:Sword-mastery
 C:k:+0:+400:Axe-mastery
 C:k:+0:+400:Hafted-mastery
 C:k:+0:+400:Polearm-mastery
+C:k:+0:+500:Shield
 C:k:+1000:+600:Archery
 C:k:+1000:+900:Sneakiness
 C:k:+0:+900:Hidden-Sight
@@ -104,6 +105,7 @@ C:a:O:23:16:1d1
 C:a:g:All Gods
 C:a:k:+1000:+700:Dual-wielding
 C:a:k:+1000:+900:Two-handed
+C:a:k:+1000:+350:Shield
 
 C:a:N:Swordmaster
 C:a:D:Fighters specialised in the use of swords
@@ -114,6 +116,7 @@ C:a:k:+0:-100:Axe-mastery
 C:a:k:+0:-100:Hafted-mastery
 C:a:k:+0:-100:Polearm-mastery
 C:a:k:+1000:+400:Dual-wielding
+C:a:k:+1000:+400:Shield
 C:a:k:+0:+600:Two-handed
 C:a:O:23:16:1d1
 C:a:g:All Gods
@@ -130,6 +133,7 @@ C:a:k:+0:-100:Hafted-mastery
 C:a:k:+0:-100:Polearm-mastery
 C:a:k:+1000:+600:Dual-wielding
 C:a:k:+0:+1000:Two-handed
+C:a:k:+0:+200:Shield
 C:a:O:24:1:1d1
 C:a:g:All Gods
 
@@ -156,6 +160,7 @@ C:a:k:+0:-100:Hafted-mastery
 C:a:k:+0:-100:Sword-mastery
 C:a:k:+0:+400:Impale
 C:a:k:+0:+800:Two-handed
+C:a:k:+0:-100:Shield
 C:a:O:22:8:1d1
 C:a:g:All Gods
 
@@ -169,6 +174,7 @@ C:a:k:+0:=0:Antimagic
 C:a:k:+1000:+800:Haggling
 C:a:k:+1000:+400:Investing
 C:a:k:+0:+600:Two-handed
+C:a:k:+0:-200:Shield
 C:a:O:22:17:1d1
 C:a:g:All Gods
 
@@ -180,6 +186,7 @@ C:a:k:=0:=0:Magic-Device
 C:a:k:=0:=0:Spirituality
 C:a:k:+1000:+100:Antimagic
 C:a:k:+0:+400:Anti-nastiness
+C:a:k:+1000:+300:Shield
 C:a:O:23:33:1d1
 C:a:g:Nobody
 
@@ -195,6 +202,7 @@ C:a:k:+0:-200:Polearm-mastery
 C:a:k:+1000:+300:Dual-wielding
 C:a:k:+1000:+650:Music
 C:a:k:+0:+400:Two-handed
+C:a:k:+0:+200:Shield
 C:a:O:24:1:1d1
 C:a:O:20:5:1d1
 C:a:O:14:73:1d1
@@ -218,6 +226,7 @@ C:a:k:+1000:+400:Magic
 C:a:k:+1000:+300:Spirituality
 C:a:k:=0:=0:Antimagic
 C:a:k:+1000:+1000:Demonology
+C:a:k:+1000:+150:Shield
 C:a:g:All Gods
 
 C:a:N:Eco-Warrior
@@ -244,6 +253,7 @@ C:a:k:+0:+300:Necromancy
 C:a:k:+0:+300:Udun
 C:a:k:+0:+100:Corpse-preservation
 C:a:k:+0:+300:Fire
+C:a:k:+0:+400:Shield
 C:a:O:23:32:1d1
 C:a:g:All Gods
 
@@ -269,6 +279,7 @@ C:a:k:+1000:+700:Water
 C:a:k:+1000:+700:Air
 C:a:k:+1000:+700:Earth
 C:a:k:+1000:+500:Elemental
+C:a:k:+0:+200:Shield
 C:a:g:All Gods
 
 C:a:N:Chaos Warrior
@@ -311,6 +322,7 @@ C:a:k:+0:+950:Two-handed
 C:a:k:-1000:-600:Sneakiness
 C:a:k:-1000:-900:Hidden-Sight
 C:a:k:-1000:-400:Disarming
+C:a:k:+0:-500:Shield
 C:a:k:=0:=0:Archery
 C:a:k:=0:=0:Antimagic
 C:a:k:=0:=0:Magic
@@ -338,6 +350,7 @@ C:a:k:+1000:+800:Magic
 C:a:k:+0:-300:Magic-Device
 C:a:k:+0:+700:Divination
 C:a:k:+1000:+600:Conveyance
+C:a:k:+0:+200:Shield
 C:a:k:+0:+600:Nature
 C:a:k:+0:+500:Earth
 C:a:k:+0:+400:Mind
@@ -741,6 +754,7 @@ C:a:k:+0:-200:Combat
 C:a:k:+0:-100:Necromancy
 C:a:k:+0:-100:Thaumaturgy
 C:a:k:+0:-200:Runecraft
+C:a:k:+0:+200:Shield
 C:a:O:23:4:1d1
 C:a:O:111:50:1d1
 C:a:g:All Gods
@@ -790,6 +804,7 @@ C:a:k:+0:+300:Sword-mastery
 C:a:k:+0:+300:Axe-mastery 
 C:a:k:+0:+300:Hafted-mastery 
 C:a:k:+0:+300:Polearm-mastery
+C:a:k:+0:+150:Shield
 C:a:k:=0:=0:Sorcery 
 C:a:O:111:50:1d1
 C:a:b:30:Spread blows
@@ -844,6 +859,7 @@ C:a:k:+0:-150:Runecraft
 C:a:k:+0:-150:Thaumaturgy
 C:a:k:+0:+500:Combat
 C:a:k:+0:+300:Weaponmastery
+C:a:k:+0:+150:Shield
 C:a:O:21:3:1d1
 C:a:O:111:50:1d1
 C:a:g:All Gods
@@ -1434,6 +1450,7 @@ C:a:k:+1000:+200:Firearms
 C:a:k:+0:-500:Backstab
 C:a:k:+0:-1000:Stealing
 C:a:k:+0:-1000:Dodging
+C:a:k:+0:+300:Shield
 C:a:b:10:Extra Max Blow(1)
 C:a:b:20:Trapping
 C:a:O:23:4:1d1
@@ -1538,6 +1555,7 @@ C:a:k:=0:=0:Conveyance
 C:a:k:=0:=0:Divination
 C:a:k:+0:+500:Temporal
 C:a:k:+0:+300:Investing
+C:a:k:+0:+400:Shield
 C:a:b:15:Extra Max Blow(2)
 C:a:O:23:7:1d1
 C:a:O:35:1:1d1
@@ -1869,79 +1887,80 @@ C:a:g:All Gods
 C:a:N:Jack
 C:a:D:Jack of all trades, master of none, Jack's can learn all skills,
 C:a:D:they just can't get very good at any, regardless of race.
-C:a:k:=0:=600:Combat
-C:a:k:=0:=600:Weaponmastery
-C:a:k:=0:=600:Sword-mastery
-C:a:k:=0:=600:Critical-hits
-C:a:k:=0:=600:Axe-mastery
-C:a:k:=0:=600:Hafted-mastery
-C:a:k:=0:=600:Stunning-blows
-C:a:k:=0:=600:Polearm-mastery
-C:a:k:=0:=600:Archery
-C:a:k:=0:=600:Sling-mastery
-C:a:k:=0:=600:Bow-mastery
-C:a:k:=0:=600:Crossbow-mastery
-C:a:k:=0:=600:Firearms
-C:a:k:=0:=600:Boomerang-mastery
-C:a:k:=0:=600:Barehand-combat
-C:a:k:=0:=600:Bearform-combat
-C:a:k:=0:=600:Boulder-throwing
-C:a:k:=0:=600:Antimagic
-C:a:k:=0:=600:Sneakiness
-C:a:k:=0:=600:Hidden-Sight
-C:a:k:=0:=600:Stealth
-C:a:k:=0:=600:Disarming
-C:a:k:=0:=600:Dodging
-C:a:k:=0:=600:Stealing
-C:a:k:=0:=600:Backstab
-C:a:k:=0:=600:Magic
-C:a:k:=0:=600:Magic-Device
-C:a:k:=0:=600:Spell-power
-C:a:k:=0:=600:Sorcery
-C:a:k:=0:=600:Geomancy
-C:a:k:=0:=600:Mana
-C:a:k:=0:=600:Fire
-C:a:k:=0:=600:Water
-C:a:k:=0:=600:Air
-C:a:k:=0:=600:Earth
-C:a:k:=0:=600:Meta
-C:a:k:=0:=600:Conveyance
-C:a:k:=0:=600:Divination
-C:a:k:=0:=600:Temporal
-C:a:k:=0:=600:Mind
-C:a:k:=0:=600:Nature
-C:a:k:=0:=600:Demonology
-C:a:k:=0:=600:Necromancy
-C:a:k:=0:=600:Runecraft
-C:a:k:=0:=600:Thaumaturgy
-C:a:k:=0:=600:Alchemy
-C:a:k:=0:=600:Spirituality
-C:a:k:=0:=600:Prayer
-C:a:k:=0:=600:Mindcraft
-C:a:k:=0:=600:Music
-C:a:k:=0:=600:Monster-lore
-C:a:k:=0:=600:Summoning
-C:a:k:=0:=600:Corpse-preservation
-C:a:k:=0:=600:Possession
-C:a:k:=0:=600:Symbiosis
-C:a:k:=0:=600:Mimicry
-C:a:k:=0:=600:Weight-lifting
-C:a:k:=0:=600:Chopping
-C:a:k:=0:=600:Clear-mind
-C:a:k:=0:=600:Cleaning
-C:a:k:=0:=600:Impale
-C:a:k:=0:=600:Hell
-C:a:k:=0:=600:Celestial
-C:a:k:=0:=600:Ranged-power
-C:a:k:=0:=600:Haggling
-C:a:k:=0:=600:Dual-wielding
-C:a:k:=0:=600:Two-handed
-C:a:k:=0:=600:Anti-nastiness
-C:a:k:=0:=600:Investing
-C:a:k:=0:=600:Fortune
-C:a:k:=0:=600:Freshmint
-C:a:k:=0:=600:HighHeels
-C:a:k:=0:=600:Elemental
+C:a:k:=0:=400:Combat
+C:a:k:=0:=400:Weaponmastery
+C:a:k:=0:=400:Sword-mastery
+C:a:k:=0:=400:Critical-hits
+C:a:k:=0:=400:Axe-mastery
+C:a:k:=0:=400:Hafted-mastery
+C:a:k:=0:=400:Stunning-blows
+C:a:k:=0:=400:Polearm-mastery
+C:a:k:=0:=400:Archery
+C:a:k:=0:=400:Sling-mastery
+C:a:k:=0:=400:Bow-mastery
+C:a:k:=0:=400:Crossbow-mastery
+C:a:k:=0:=400:Firearms
+C:a:k:=0:=400:Boomerang-mastery
+C:a:k:=0:=400:Barehand-combat
+C:a:k:=0:=400:Bearform-combat
+C:a:k:=0:=400:Boulder-throwing
+C:a:k:=0:=400:Antimagic
+C:a:k:=0:=400:Sneakiness
+C:a:k:=0:=400:Hidden-Sight
+C:a:k:=0:=400:Stealth
+C:a:k:=0:=400:Disarming
+C:a:k:=0:=400:Dodging
+C:a:k:=0:=400:Stealing
+C:a:k:=0:=400:Backstab
+C:a:k:=0:=400:Magic
+C:a:k:=0:=400:Magic-Device
+C:a:k:=0:=400:Spell-power
+C:a:k:=0:=400:Sorcery
+C:a:k:=0:=400:Geomancy
+C:a:k:=0:=400:Mana
+C:a:k:=0:=400:Fire
+C:a:k:=0:=400:Water
+C:a:k:=0:=400:Air
+C:a:k:=0:=400:Earth
+C:a:k:=0:=400:Meta
+C:a:k:=0:=400:Conveyance
+C:a:k:=0:=400:Divination
+C:a:k:=0:=400:Temporal
+C:a:k:=0:=400:Mind
+C:a:k:=0:=400:Nature
+C:a:k:=0:=400:Demonology
+C:a:k:=0:=400:Necromancy
+C:a:k:=0:=400:Runecraft
+C:a:k:=0:=400:Thaumaturgy
+C:a:k:=0:=400:Alchemy
+C:a:k:=0:=400:Spirituality
+C:a:k:=0:=400:Prayer
+C:a:k:=0:=400:Mindcraft
+C:a:k:=0:=400:Music
+C:a:k:=0:=400:Monster-lore
+C:a:k:=0:=400:Summoning
+C:a:k:=0:=400:Corpse-preservation
+C:a:k:=0:=400:Possession
+C:a:k:=0:=400:Symbiosis
+C:a:k:=0:=400:Mimicry
+C:a:k:=0:=400:Weight-lifting
+C:a:k:=0:=400:Chopping
+C:a:k:=0:=400:Clear-mind
+C:a:k:=0:=400:Cleaning
+C:a:k:=0:=400:Impale
+C:a:k:=0:=400:Hell
+C:a:k:=0:=400:Celestial
+C:a:k:=0:=400:Ranged-power
+C:a:k:=0:=400:Haggling
+C:a:k:=0:=400:Dual-wielding
+C:a:k:=0:=400:Two-handed
+C:a:k:=0:=400:Anti-nastiness
+C:a:k:=0:=400:Investing
+C:a:k:=0:=400:Fortune
+C:a:k:=0:=400:Freshmint
+C:a:k:=0:=400:HighHeels
+C:a:k:=0:=400:Elemental
+C:a:k:=0:=400:Shield
 C:a:O:111:50:1d1
 C:a:O:19:12:1d1
 C:a:O:17:1:4d5
@@ -2106,6 +2125,7 @@ C:a:k:+0:+500:Investing
 C:a:k:+0:+400:Freshmint
 C:a:k:+0:+400:Elemental
 C:a:k:+0:+300:HighHeels
+C:a:k:+0:+500:Shield
 C:a:g:Nobody
 
 C:a:N:Weirdo
@@ -2304,6 +2324,7 @@ C:k:+1000:+900:Sneakiness
 C:k:+1000:+900:Hidden-Sight
 C:k:+0000:+900:Disarming
 C:k:+0000:+400:Stealth
+C:k:+1000:+500:Shield
 C:k:+0:+50:Magic-Device
 C:b:1:Perfect casting
 
@@ -2330,6 +2351,7 @@ C:a:g:Nessa
 C:a:g:Lorien
 C:a:k:+0:+200:Clear-mind
 C:a:k:+0:+200:Cleaning
+C:a:k:+0:+100:Shield
 
 C:a:N:CreatorPriest
 C:a:D:A priest that serves Eru Iluvatar to bring down
@@ -2340,6 +2362,7 @@ C:a:k:+0:+300:Prayer
 C:a:k:+0:-600:Necromancy
 C:a:k:+0:+100:Spell-power
 C:a:k:+0:+400:Celestial
+C:a:k:+0:+200:Shield
 
 C:a:N:Air Priest
 C:a:D:A priest that serves Manwe Sulimo to bring down
@@ -2351,6 +2374,7 @@ C:a:k:+0:-600:Necromancy
 C:a:k:+0:+50:Weaponmastery
 C:a:k:+0:+200:Celestial
 C:a:k:+0:+200:Freshmint
+C:a:k:+0:+100:Shield
 
 C:a:N:Druid
 C:a:D:A priest that serves Yavanna Kementari to protect
@@ -2378,6 +2402,7 @@ C:a:k:+0:-300:Mindcraft
 C:a:k:+0:+200:Spell-power
 C:a:k:+1000:+1000:Corpse-preservation
 C:a:k:+0:+500:Hell
+C:a:k:+0:-200:Shield
 
 C:a:N:Fleecy Priest
 C:a:D:A priest that serves AmyBSOD to bring fleecy colors
@@ -2403,6 +2428,7 @@ C:a:k:+0:+100:Combat
 C:a:k:+0:+900:Barehand-combat
 C:a:k:+0:+600:Celestial
 C:a:k:+0:+100:Fortune
+C:a:k:+0:+400:Shield
 C:a:b:1:Extra Max Blow(1)
 
 C:a:N:Mindcrafter
@@ -2445,6 +2471,7 @@ C:a:k:+0:-600:Necromancy
 C:a:k:+0:+100:Spell-power
 C:a:k:+0:+600:Weight-lifting
 C:a:k:+0:+200:Two-handed
+C:a:k:+0:+300:Shield
 C:a:b:10:Extra Max Blow(1)
 
 C:a:N:Light Priest
@@ -2458,6 +2485,7 @@ C:a:k:+0:+100:Spell-power
 C:a:k:+0:+400:Archery
 C:a:k:+0:+500:Cleaning
 C:a:k:+0:+500:Celestial
+C:a:k:+0:+200:Shield
 
 C:a:N:Sleep Priest
 C:a:D:A priest who serves Lorien to put all evil
@@ -2472,6 +2500,7 @@ C:a:k:+0:+300:Divination
 C:a:k:+0:+100:Spirituality
 C:a:k:+0:+200:Valarin
 C:a:k:-5000:+0:Hell
+C:a:k:+0:+100:Shield
 
 C:a:N:Wood Priest
 C:a:D:A priest who serves Orome to hunt down
@@ -2509,6 +2538,7 @@ C:a:k:+0:+300:Prayer
 C:a:k:+0:-600:Necromancy
 C:a:k:+0:+100:Spell-power
 C:a:k:+0:+300:Impale
+C:a:k:+0:+100:Shield
 
 C:a:N:Tear Priest
 C:a:D:A priest that serves Nienna to bring down
@@ -2525,6 +2555,7 @@ C:a:k:+0:+400:Hidden-Sight
 C:a:k:+0:+200:Disarming
 C:a:k:+0:-200:Combat
 C:a:k:+0:-200:Weaponmastery
+C:a:k:+0:+200:Shield
 
 C:a:N:Gentle Priest
 C:a:D:A priest that serves Este to bring down
@@ -2536,6 +2567,7 @@ C:a:k:+0:-600:Necromancy
 C:a:k:+0:+200:Spell-power
 C:a:k:+0:+800:Anti-nastiness
 C:a:k:+0:+200:HighHeels
+C:a:k:+0:+400:Shield
 
 C:a:N:Young Priest
 C:a:D:A priest that serves Vana to bring down
@@ -2553,6 +2585,7 @@ C:a:k:+0:-300:Sneakiness
 C:a:k:+0:-300:Hidden-Sight
 C:a:k:+0:-200:Stealth
 C:a:k:+0:-300:Disarming
+C:a:k:+0:+250:Shield
 
 C:a:N:Spider Priest
 C:a:D:A priest that serves Vaire to bring down
@@ -2564,6 +2597,7 @@ C:a:k:+0:-300:Necromancy
 C:a:k:+0:+400:Temporal
 C:a:k:+0:+200:Mimicry
 C:a:k:+1000:+100:Sneakiness
+C:a:k:+0:+100:Shield
 
 C:a:N:Speed Priest
 C:a:D:A priest that serves Nessa to bring down
@@ -2589,6 +2623,7 @@ C:a:k:+0:+300:Prayer
 C:a:k:+0:-600:Necromancy
 C:a:k:+0:+100:Spell-power
 C:a:k:+2000:+350:Hell
+C:a:k:+0:+200:Shield
 
 C:a:N:AtheistPriest
 C:a:D:A priest who somehow doesn't believe in gods.
@@ -2600,6 +2635,7 @@ C:a:k:+1000:+100:Antimagic
 C:a:k:+0:+300:Sword-mastery
 C:a:k:+0:+500:Clear-mind
 C:a:k:+0:+300:Freshmint
+C:a:k:+0:+300:Shield
 
 C:a:N:ArdaBeseecher
 C:a:D:A priest who seeks help from divine entities.
@@ -2611,6 +2647,7 @@ C:a:k:=0:=0:Mindcraft
 C:a:k:=0:=0:Necromancy
 C:a:k:+0:+150:Prayer
 C:a:k:+0:-100:Weaponmastery
+C:a:k:+0:+250:Shield
 
 #C:a:N:Weird priest
 #C:a:D:Priest with weird skills
@@ -3452,6 +3489,7 @@ R:k:+1000:+200:Combat
 R:k:+0:+200:Weaponmastery
 R:k:+0:+500:Magic
 R:k:+0:+500:Runecraft
+R:k:+0:+300:Shield
 R:k:+3000:+500:Weight-lifting
 R:k:=0:=0:Archery
 R:k:=0:=0:Bow-mastery

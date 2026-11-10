@@ -1586,7 +1586,7 @@ static bool monst_spell_monst(int m_idx)
 				else if (blind) monster_msg("%^s makes a strange noise.", m_name);
 				else monster_msg("%^s fires an arrow at %s.", m_name, t_name);
 				sound(SOUND_SHOOT);
-				monst_bolt_monst(m_idx, y, x, GF_ARROW, damroll(1, 6));
+				monst_bolt_monst(m_idx, y, x, GF_ARROW, (damroll(1, 6) + (rlev / 20)) );
 				break;
 			}
 
@@ -1598,7 +1598,7 @@ static bool monst_spell_monst(int m_idx)
 				else if (blind) monster_msg("%^s makes a strange noise.", m_name);
 				else monster_msg("%^s fires an arrow at %s.", m_name, t_name);
 				sound(SOUND_SHOOT);
-				monst_bolt_monst(m_idx, y, x, GF_ARROW, damroll(3, 6));
+				monst_bolt_monst(m_idx, y, x, GF_ARROW, (damroll(3, 6) + (rlev / 15)) );
 				break;
 			}
 
@@ -1611,7 +1611,7 @@ static bool monst_spell_monst(int m_idx)
 				else if (blind) monster_msg("%^s makes a strange noise.", m_name);
 				else monster_msg("%^s fires a missile at %s.", m_name, t_name);
 				sound(SOUND_SHOOT);
-				monst_bolt_monst(m_idx, y, x, GF_ARROW, damroll(5, 6));
+				monst_bolt_monst(m_idx, y, x, GF_ARROW, (damroll(5, 6) + (rlev / 10)) );
 				break;
 			}
 
@@ -1623,7 +1623,7 @@ static bool monst_spell_monst(int m_idx)
 				if (blind) monster_msg("%^s makes a strange noise.", m_name);
 				else monster_msg("%^s fires a missile at %s.", m_name, t_name);
 				sound(SOUND_SHOOT);
-				monst_bolt_monst(m_idx, y, x, GF_ARROW, damroll(7, 6));
+				monst_bolt_monst(m_idx, y, x, GF_ARROW, (damroll(7, 6) + (rlev / 5)) );
 				break;
 			}
 
@@ -5591,24 +5591,33 @@ bool make_attack_spell(int m_idx)
 			/* RF4_ARROW_1 */
 		case 96 + 4:
 			{
+				int boltdamage = damroll(1, 6) + (rlev / 20);
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s makes a strange noise.", m_name);
 				else msg_format("%^s fires an arrow.", m_name);
-				bolt(m_idx, GF_ARROW, damroll(1, 6));
-				update_smart_learn(m_idx, DRS_REFLECT);
+				if (player_blocking_chance(boltdamage)) {
+					msg_print("Your shield blocks the projectile!");
+				} else {
+					bolt(m_idx, GF_ARROW, boltdamage);
+					update_smart_learn(m_idx, DRS_REFLECT);
+				}
 				break;
 			}
 
 			/* RF4_ARROW_2 */
 		case 96 + 5:
 			{
+				int boltdamage = damroll(3, 6) + (rlev / 15);
+				if (rlev < 3) boltdamage = damroll(rlev, 6);
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s makes a strange noise.", m_name);
 				else msg_format("%^s fires an arrow!", m_name);
-				if (rlev < 3) {
-					bolt(m_idx, GF_ARROW, damroll(rlev, 6));
+				if (player_blocking_chance(boltdamage)) {
+					msg_print("Your shield blocks the projectile!");
 				} else {
-					bolt(m_idx, GF_ARROW, damroll(3, 6));
+					bolt(m_idx, GF_ARROW, boltdamage);
 				}
 				update_smart_learn(m_idx, DRS_REFLECT);
 				break;
@@ -5617,13 +5626,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_ARROW_3 */
 		case 96 + 6:
 			{
+				int boltdamage = damroll(5, 6) + (rlev / 10);
+				if (rlev < 5) boltdamage = damroll(rlev, 6);
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s makes a strange noise.", m_name);
 				else msg_format("%^s fires a missile.", m_name);
-				if (rlev < 5) {
-					bolt(m_idx, GF_ARROW, damroll(rlev, 6));
+				if (player_blocking_chance(boltdamage)) {
+					msg_print("Your shield blocks the projectile!");
 				} else {
-					bolt(m_idx, GF_ARROW, damroll(5, 6));
+					bolt(m_idx, GF_ARROW, boltdamage);
 				}
 				update_smart_learn(m_idx, DRS_REFLECT);
 				break;
@@ -5632,13 +5644,16 @@ bool make_attack_spell(int m_idx)
 			/* RF4_ARROW_4 */
 		case 96 + 7:
 			{
+				int boltdamage = damroll(7, 6) + (rlev / 5);
+				if (rlev < 5) boltdamage = damroll(rlev, 6);
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s makes a strange noise.", m_name);
 				else msg_format("%^s fires a missile!", m_name);
-				if (rlev < 7) {
-					bolt(m_idx, GF_ARROW, damroll(rlev, 6));
+				if (player_blocking_chance(boltdamage)) {
+					msg_print("Your shield blocks the projectile!");
 				} else {
-					bolt(m_idx, GF_ARROW, damroll(7, 6));
+					bolt(m_idx, GF_ARROW, boltdamage);
 				}
 				update_smart_learn(m_idx, DRS_REFLECT);
 				break;
@@ -8032,14 +8047,17 @@ bool make_attack_spell(int m_idx)
 			/* RF11_BOULDER */
 		case 320 + 8:
 			{
+				int boltdamage = damroll((rlev / 2) + 1, randint(4));
+				if (p_ptr->nastytrap143) boltdamage = damroll(rlev + 1, 5);
+
 				disturb(1, 0);
 				if (blind) msg_format("%^s makes a strange noise.", m_name);
 				else msg_format("%^s throws a boulder!", m_name);
-				/* boulders can't be reflected, but you can dodge them --Amy */
-				if (p_ptr->nastytrap143) {
-					bolt_cantreflect(m_idx, GF_ARROW, damroll(rlev + 1, 5));
+				/* boulders can't be reflected, but you can dodge or block them --Amy */
+				if (player_blocking_chance(boltdamage)) {
+					msg_print("Your shield blocks the projectile!");
 				} else {
-					bolt_cantreflect(m_idx, GF_ARROW, damroll(rlev + 1, randint(4)));
+					bolt_cantreflect(m_idx, GF_ARROW, boltdamage);
 				}
 				break;
 			}
