@@ -233,7 +233,7 @@ AULE_CHILD = add_spell
 
 		y, x = find_position(player.py, player.px) 
 		--dwarven warrior
-		m_idx = place_monster_one(y, x, 865, 0, FALSE, MSTATUS_FRIEND) 
+		m_idx = place_monster_one(y, x, 865, 0, FALSE, MSTATUS_FRIEND, FALSE) 
  
 		if m_idx ~= 0 then 
 			monster_set_level(m_idx, 20 + get_level(AULE_CHILD, 50, 0)) 

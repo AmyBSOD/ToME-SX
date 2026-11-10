@@ -62,7 +62,7 @@ bool quest_eol_gen_hook(char *fmt)
 			if (!m_idx)
 			{
 				m_allow_special[test_monster_name("Eol, the Dark Elf")] = TRUE;
-				m_idx = place_monster_one(y, x, test_monster_name("Eol, the Dark Elf"), 0, FALSE, MSTATUS_ENEMY);
+				m_idx = place_monster_one(y, x, test_monster_name("Eol, the Dark Elf"), 0, FALSE, MSTATUS_ENEMY, FALSE);
 				m_allow_special[test_monster_name("Eol, the Dark Elf")] = FALSE;
 			}
 

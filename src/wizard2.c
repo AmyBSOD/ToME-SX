@@ -263,7 +263,7 @@ void do_cmd_wiz_hack_ben(int num)
 	        r_ptr->freq_inate = r_ptr->freq_spell = 90;
 
 	        place_monster_one_race = r_ptr;
-	        place_monster_one(p_ptr->py - 1, p_ptr->px, 500, 0, TRUE, MSTATUS_PET);*/
+	        place_monster_one(p_ptr->py - 1, p_ptr->px, 500, 0, TRUE, MSTATUS_PET, FALSE);*/
 
 	get_lua_var("a", 'd', &a);
 	msg_format("a: %d", a);

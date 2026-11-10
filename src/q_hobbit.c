@@ -28,7 +28,7 @@ bool quest_hobbit_town_gen_hook(char *fmt)
 
 	/* Place Melinda */
 	m_allow_special[test_monster_name("Melinda Proudfoot")] = TRUE;
-	place_monster_one(y, x, test_monster_name("Melinda Proudfoot"), 0, FALSE, MSTATUS_ENEMY);
+	place_monster_one(y, x, test_monster_name("Melinda Proudfoot"), 0, FALSE, MSTATUS_ENEMY, FALSE);
 	m_allow_special[test_monster_name("Melinda Proudfoot")] = FALSE;
 
 	return FALSE;
@@ -55,7 +55,7 @@ bool quest_hobbit_gen_hook(char *fmt)
 
 	/* Place the hobbit */
 	m_allow_special[test_monster_name("Merton Proudfoot, the lost hobbit")] = TRUE;
-	place_monster_one(y, x, test_monster_name("Merton Proudfoot, the lost hobbit"), 0, FALSE, MSTATUS_FRIEND);
+	place_monster_one(y, x, test_monster_name("Merton Proudfoot, the lost hobbit"), 0, FALSE, MSTATUS_FRIEND, TRUE);
 	m_allow_special[test_monster_name("Merton Proudfoot, the lost hobbit")] = FALSE;
 
 	return FALSE;

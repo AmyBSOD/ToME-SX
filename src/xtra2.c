@@ -91,7 +91,7 @@ bool set_parasite(int v, int r)
 				}
 				while (!(in_bounds(wy, wx) && cave_floor_bold(wy, wx)) && --attempts);
 
-				if (place_monster_one(wy, wx, p_ptr->parasite_r_idx, 0, FALSE, MSTATUS_ENEMY))
+				if (place_monster_one(wy, wx, p_ptr->parasite_r_idx, 0, FALSE, MSTATUS_ENEMY, TRUE))
 				{
 					cmsg_format(TERM_L_BLUE, "Your body convulses and spawns %s.", r_name);
 					set_food(p_ptr->food - 750);
@@ -10670,7 +10670,7 @@ void make_wish(void)
 					while (!(in_bounds(wy, wx) && cave_floor_bold(wy, wx)) && --attempts);
 
 					/* Create the monster */
-					if (place_monster_one(wy, wx, i, j, FALSE, mstatus))
+					if (place_monster_one(wy, wx, i, j, FALSE, mstatus, TRUE))
 						msg_print("Your wish becomes truth!");
 
 					/* Don't search any more */

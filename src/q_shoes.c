@@ -43,7 +43,7 @@ bool quest_shoes_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			place_monster_one(y, x, 1088, 0, magik(50), MSTATUS_ENEMY);
+			place_monster_one(y, x, 1088, 0, magik(50), MSTATUS_ENEMY, TRUE);
 			--i;
 		}
 	}
@@ -57,7 +57,7 @@ bool quest_shoes_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			place_monster_one(y, x, 1096, 0, magik(50), MSTATUS_ENEMY);
+			place_monster_one(y, x, 1096, 0, magik(50), MSTATUS_ENEMY, TRUE);
 			--i;
 		}
 	}
@@ -71,7 +71,7 @@ bool quest_shoes_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			place_monster_one(y, x, 1305, 0, magik(50), MSTATUS_ENEMY);
+			place_monster_one(y, x, 1305, 0, magik(50), MSTATUS_ENEMY, TRUE);
 			--i;
 		}
 	}
@@ -85,7 +85,7 @@ bool quest_shoes_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			place_monster_one(y, x, 1314, 0, magik(50), MSTATUS_ENEMY);
+			place_monster_one(y, x, 1314, 0, magik(50), MSTATUS_ENEMY, TRUE);
 			--i;
 		}
 	}
@@ -99,7 +99,7 @@ bool quest_shoes_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			place_monster_one(y, x, 3784, 0, magik(50), MSTATUS_ENEMY);
+			place_monster_one(y, x, 3784, 0, magik(50), MSTATUS_ENEMY, TRUE);
 			--i;
 		}
 	}
@@ -113,7 +113,7 @@ bool quest_shoes_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			place_monster_one(y, x, 3791, 0, magik(50), MSTATUS_ENEMY);
+			place_monster_one(y, x, 3791, 0, magik(50), MSTATUS_ENEMY, TRUE);
 			--i;
 		}
 	}

@@ -1105,7 +1105,7 @@ extern void update_smart_learn(int m_idx, int what);
 extern bool summon_specific_friendly(int y1, int x1, int lev, int type, bool Group_ok);
 extern bool place_monster_one_no_drop;
 extern monster_race *place_monster_one_race;
-extern s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status);
+extern s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status, bool bypass);
 extern s16b player_place(int y, int x);
 extern void monster_drop_carried_objects(monster_type *m_ptr);
 extern bool monster_dungeon(int r_idx);

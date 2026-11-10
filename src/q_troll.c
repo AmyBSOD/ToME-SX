@@ -38,7 +38,7 @@ bool quest_troll_gen_hook(char *fmt)
 				int m_idx;
 
 				m_allow_special[test_monster_name("Tom the Stone Troll")] = TRUE;
-				m_idx = place_monster_one(y, x, test_monster_name("Tom the Stone Troll"), 0, FALSE, MSTATUS_ENEMY);
+				m_idx = place_monster_one(y, x, test_monster_name("Tom the Stone Troll"), 0, FALSE, MSTATUS_ENEMY, FALSE);
 				m_allow_special[test_monster_name("Tom the Stone Troll")] = FALSE;
 
 				if (m_idx)
@@ -167,7 +167,7 @@ bool quest_troll_death_hook(char *fmt)
 				c_ptr->info &= ~CAVE_SPEC;
 
 				r_idx = (rand_int(2) == 0) ? test_monster_name("Forest troll") : test_monster_name("Stone troll");
-				place_monster_one(y, x, r_idx, 0, FALSE, MSTATUS_ENEMY);
+				place_monster_one(y, x, r_idx, 0, FALSE, MSTATUS_ENEMY, FALSE);
 			}
 		}
 

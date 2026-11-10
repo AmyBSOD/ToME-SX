@@ -1028,7 +1028,7 @@ static void town_gen_hack(int t_idx, int qy, int qx)
 		{
 			/* Create empty floor */
 			cave_set_feat(y, x, (floor) ? floor : floor_type[rand_int(100)]);
-			cave[y][x].info |= (CAVE_ROOM/* | CAVE_FREE*/);
+			cave[y][x].info |= (CAVE_ROOM | CAVE_DTOWN /* | CAVE_FREE*/);
 		}
 	}
 
@@ -1075,14 +1075,14 @@ static void town_gen_hack(int t_idx, int qy, int qx)
 
 			/* Only in town */
 			if (!in_bounds(y, x)) continue;
-			if (!(cave[y][x].info & CAVE_FREE)) continue;
+			if (!(cave[y][x].info & CAVE_DTOWN)) continue;
 			if (!cave_empty_bold(y, x)) continue;
 
 			if (rand_int(100)) continue;
 
 			r_idx = get_mon_num(dun_level);
 			m_allow_special[r_idx] = TRUE;
-			m_idx = place_monster_one(y, x, r_idx, 0, TRUE, MSTATUS_ENEMY);
+			m_idx = place_monster_one(y, x, r_idx, 0, TRUE, MSTATUS_ENEMY, FALSE);
 			m_allow_special[r_idx] = FALSE;
 
 			if (m_idx)
@@ -1134,7 +1134,7 @@ static void town_gen_circle(int t_idx, int qy, int qx)
 		{
 			/* Create empty floor */
 			cave_set_feat(y, x, (floor) ? floor : floor_type[rand_int(100)]);
-			cave[y][x].info |= CAVE_ROOM/* | CAVE_FREE*/;
+			cave[y][x].info |= (CAVE_ROOM | CAVE_DTOWN /* | CAVE_FREE*/);
 		}
 	}
 
@@ -1151,7 +1151,7 @@ static void town_gen_circle(int t_idx, int qy, int qx)
 			if (d < rad - 1)
 			{
 				cave_set_feat(y, x, (floor) ? floor : floor_type[rand_int(100)]);
-				cave[y][x].info |= CAVE_ROOM/* | CAVE_FREE*/;
+				cave[y][x].info |= (CAVE_ROOM | CAVE_DTOWN /* | CAVE_FREE*/);
 			}
 		}
 
@@ -1166,7 +1166,7 @@ static void town_gen_circle(int t_idx, int qy, int qx)
 			if (d < rad - 1)
 			{
 				cave_set_feat(y, x, (floor) ? floor : floor_type[rand_int(100)]);
-				cave[y][x].info |= CAVE_ROOM/* | CAVE_FREE*/;
+				cave[y][x].info |= (CAVE_ROOM | CAVE_DTOWN /* | CAVE_FREE*/);
 			}
 		}
 
@@ -1209,14 +1209,14 @@ static void town_gen_circle(int t_idx, int qy, int qx)
 
 			/* Only in town */
 			if (!in_bounds(y, x)) continue;
-			if (!(cave[y][x].info & CAVE_FREE)) continue;
+			if (!(cave[y][x].info & CAVE_DTOWN)) continue;
 			if (!cave_empty_bold(y, x)) continue;
 
 			if (rand_int(100)) continue;
 
 			r_idx = get_mon_num(dun_level);
 			m_allow_special[r_idx] = TRUE;
-			m_idx = place_monster_one(y, x, r_idx, 0, TRUE, MSTATUS_ENEMY);
+			m_idx = place_monster_one(y, x, r_idx, 0, TRUE, MSTATUS_ENEMY, FALSE);
 			m_allow_special[r_idx] = FALSE;
 			if (m_idx)
 			{

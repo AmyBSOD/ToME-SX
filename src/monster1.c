@@ -2391,7 +2391,6 @@ bool monster_can_cross_terrain(byte feat, monster_race *r_ptr)
 	return TRUE;
 }
 
-
 void set_mon_num2_hook(int y, int x)
 {
 	/* Set the monster list */

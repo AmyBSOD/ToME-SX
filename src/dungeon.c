@@ -1711,7 +1711,7 @@ static void process_world(void)
 
 					/* Summon a monster */
 					m_idx = place_monster_one(yy, xx, magik(80) ? merc : agent,
-					                          0, FALSE, MSTATUS_ENEMY);
+					                          0, FALSE, MSTATUS_ENEMY, FALSE);
 
 					/* Level it */
 					if (m_idx)
@@ -4258,7 +4258,8 @@ static void process_world(void)
 				my = o_ptr->iy;
 				get_pos_player(5, &my, &mx);
 				msg_print("An egg hatches!");
-				place_monster_one(my, mx, o_ptr->pval2, 0, FALSE, MSTATUS_ENEMY);
+				/* make sure it doesn't fail due to wrong terrain --Amy */
+				place_monster_one(my, mx, o_ptr->pval2, 0, FALSE, MSTATUS_ENEMY, TRUE);
 				floor_item_increase(i, -1);
 				floor_item_describe(i);
 				floor_item_optimize(i);

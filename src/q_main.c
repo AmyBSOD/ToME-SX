@@ -40,7 +40,7 @@ bool quest_main_gen_hook(char *fmt)
 		try--;
 	}
 
-	if (try) place_monster_one(y, x, test_monster_name("Sauron, the Sorcerer"), 0, FALSE, MSTATUS_ENEMY);
+	if (try) place_monster_one(y, x, test_monster_name("Sauron, the Sorcerer"), 0, FALSE, MSTATUS_ENEMY, TRUE);
 
 	return (FALSE);
 }
@@ -67,7 +67,7 @@ bool quest_mainmorg_gen_hook(char *fmt)
 		try--;
 	}
 
-	if (try) place_monster_one(y, x, test_monster_name("Morgoth, Lord of Darkness"), 0, FALSE, MSTATUS_ENEMY);
+	if (try) place_monster_one(y, x, test_monster_name("Morgoth, Lord of Darkness"), 0, FALSE, MSTATUS_ENEMY, TRUE);
 
 	return (FALSE);
 }

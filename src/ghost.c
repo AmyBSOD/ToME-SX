@@ -1125,7 +1125,7 @@ s16b place_ghost(void)
 	r_ptr->cur_num = 0;
 	r_ptr->max_num = 1;
 
-	if (!place_monster_one(y, x, max_r_idx - 1, 0, FALSE, MSTATUS_ENEMY))
+	if (!place_monster_one(y, x, max_r_idx - 1, 0, FALSE, MSTATUS_ENEMY, TRUE))
 	{
 		return FALSE;
 	}

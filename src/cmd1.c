@@ -5922,7 +5922,7 @@ bool execute_inscription(byte i, byte y, byte x)
 
 			scatter(&yy, &xx, y, x, 3, 0);
 			place_monster_one(yy, xx, test_monster_name("Dwarven Warrior"),
-			                  0, FALSE, MSTATUS_FRIEND);
+			                  0, FALSE, MSTATUS_FRIEND, FALSE);
 
 			break;
 		}

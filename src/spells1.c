@@ -5125,7 +5125,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 				{
 					int ego = raise_ego[rand_int(MAX_RAISE)];
 
-					if (place_monster_one(y, x, o_ptr->pval2, ego, FALSE, (!who) ? MSTATUS_PET : MSTATUS_ENEMY))
+					if (place_monster_one(y, x, o_ptr->pval2, ego, FALSE, (!who) ? MSTATUS_PET : MSTATUS_ENEMY, TRUE))
 						msg_print("A monster rises from the grave!");
 					do_kill = TRUE;
 				}
@@ -5153,7 +5153,7 @@ static bool project_o(int who, int r, int y, int x, int dam, int typ)
 					else if (r_ptr->level < 90) name = "Marilith";
 					else name = "Nycadaemon";
 
-					if (place_monster_one(y, x, test_monster_name(name), 0, FALSE, (!who) ? MSTATUS_PET : MSTATUS_ENEMY))
+					if (place_monster_one(y, x, test_monster_name(name), 0, FALSE, (!who) ? MSTATUS_PET : MSTATUS_ENEMY, TRUE))
 						msg_print("A demon emerges from Hell!");
 				}
 

@@ -77,7 +77,7 @@ AMYBSOD_TROLL = add_spell
 
 			y, x = find_position(player.py, player.px)
 			--cave troll
-			m_idx = place_monster_one(y, x, 496, 0, FALSE, MSTATUS_FRIEND)
+			m_idx = place_monster_one(y, x, 496, 0, FALSE, MSTATUS_FRIEND, FALSE)
 
 			if m_idx ~= 0 then
 				monster_set_level(m_idx, 20 + get_level(AMYBSOD_TROLL, 40, 0))

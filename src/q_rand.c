@@ -213,7 +213,7 @@ void hero_death(s32b m_idx, s32b r_idx)
 			int m_idx;
 
 			m_allow_special[test_monster_name("Adventurer")] = TRUE;
-			m_idx = place_monster_one(y, x, test_monster_name("Adventurer"), 0, FALSE, MSTATUS_COMPANION);
+			m_idx = place_monster_one(y, x, test_monster_name("Adventurer"), 0, FALSE, MSTATUS_COMPANION, TRUE);
 			m_allow_special[test_monster_name("Adventurer")] = FALSE;
 			if (m_idx)
 			{
@@ -308,7 +308,7 @@ bool quest_random_gen_hero_hook(char *fmt)
 		int m_idx, y = rand_range(1, cur_hgt - 2), x = rand_range(1, cur_wid - 2);
 
 		if (cave_empty_bold(y, x)) {
-			m_idx = place_monster_one(y, x, random_quests[dun_level].r_idx, 0, FALSE, MSTATUS_ENEMY);
+			m_idx = place_monster_one(y, x, random_quests[dun_level].r_idx, 0, FALSE, MSTATUS_ENEMY, TRUE);
 			if (m_idx)
 			{
 				monster_type *m_ptr = &m_list[m_idx];
@@ -399,7 +399,7 @@ bool quest_random_gen_hook(char *fmt)
 				int i;
 
 				m_allow_special[random_quests[dun_level].r_idx] = TRUE;
-				i = place_monster_one(y, x, random_quests[dun_level].r_idx, 0, FALSE, MSTATUS_ENEMY);
+				i = place_monster_one(y, x, random_quests[dun_level].r_idx, 0, FALSE, MSTATUS_ENEMY, TRUE);
 				m_allow_special[random_quests[dun_level].r_idx] = FALSE;
 				if (i)
 				{

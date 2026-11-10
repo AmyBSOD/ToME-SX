@@ -244,7 +244,7 @@ int pick_ego_monster(int r_idx)
 {
 	/* Assume no ego */
 	int ego = 0, lvl;
-	int tries = max_re_idx + 10;
+	int tries = max_re_idx + 500;
 	monster_ego *re_ptr;
 
 	/* changed by Amy: remove useless dwarf/elf egotype, allow egotypes for town NPCs etc. */
@@ -277,6 +277,14 @@ int pick_ego_monster(int r_idx)
 
 			/* Each ego types have a rarity */
 			if (rand_int(re_ptr->rarity)) continue;
+
+			/* no invulnerable monsters inside quests --Amy */
+			if (p_ptr->inside_quest && (ego == 91) ) continue;
+			if (p_ptr->inside_quest && (ego == 92) ) continue;
+
+			/* nor on special levels --Amy */
+			if ((dungeon_flags2 & DF2_SPECIAL) && (ego == 91) ) continue;
+			if ((dungeon_flags2 & DF2_SPECIAL) && (ego == 92) ) continue;
 
 			/* We finally got one ? GREAT */
 			return ego;
@@ -2501,12 +2509,14 @@ bool kind_is_randart(int k_idx)
  *
  * This is the only function which may place a monster in the dungeon,
  * except for the savefile loading code.
+ *
+ * Amy note: "bypass" means the monster is allowed to spawn on certain terrain that would normally be disallowed
  */
 bool bypass_r_ptr_max_num = FALSE;
 int place_monster_result = 0;
 bool place_monster_one_no_drop = FALSE;
 monster_race *place_monster_one_race = NULL;
-s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
+s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status, bool bypass)
 {
 	int i, base;
 	char dummy[5];
@@ -2663,11 +2673,13 @@ s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
 		r_ptr = race_info_idx(r_idx, ego);
 	}
 
-	if (!monster_can_cross_terrain(cave[y][x].feat, r_ptr))
-	{
-		if (wizard) cmsg_print(TERM_L_RED, "WARNING: Refused monster: cannot cross terrain");
-		if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
-		return 0;
+	if (!bypass) {
+		if (!monster_can_cross_terrain(cave[y][x].feat, r_ptr))
+		{
+			if (wizard) cmsg_print(TERM_L_RED, "WARNING: Refused monster: cannot cross terrain");
+			if (place_monster_one_race) KILL(place_monster_one_race, monster_race);
+			return 0;
+		}
 	}
 
 	/* Unallow some uniques to be generated outside of their quests/special levels/dungeons */
@@ -3247,7 +3259,7 @@ static bool place_monster_group(int y, int x, int r_idx, bool slp, int status)
 			}
 
 			/* Attempt to place another monster */
-			if (place_monster_one(my, mx, r_idx, pick_ego_monster(r_idx), slp, status))
+			if (place_monster_one(my, mx, r_idx, pick_ego_monster(r_idx), slp, status, FALSE))
 			{
 				/* Add it to the "hack" set */
 				hack_y[hack_n] = my;
@@ -3326,7 +3338,7 @@ bool place_monster_aux(int y, int x, int r_idx, bool slp, bool grp, int status)
 
 
 	/* Place one monster, or fail */
-	if (!place_monster_one(y, x, r_idx, pick_ego_monster(r_idx), slp, status)) return (FALSE);
+	if (!place_monster_one(y, x, r_idx, pick_ego_monster(r_idx), slp, status, FALSE)) return (FALSE);
 
 
 	/* Require the "group" flag */
@@ -3392,7 +3404,7 @@ bool place_monster_aux(int y, int x, int r_idx, bool slp, bool grp, int status)
 			if (!z) break;
 
 			/* Place a single escort */
-			place_monster_one(ny, nx, z, pick_ego_monster(z), slp, status);
+			place_monster_one(ny, nx, z, pick_ego_monster(z), slp, status, FALSE);
 
 			/* Place a "group" of escorts if needed */
 			if ((r_info[z].flags1 & (RF1_FRIENDS)) ||

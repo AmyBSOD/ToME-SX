@@ -159,7 +159,7 @@ bool quest_thrain_gen_hook(char *fmt)
 				int i;
 
 				m_allow_special[test_monster_name("Thrain, the King Under the Mountain")] = TRUE;
-				i = place_monster_one(y, x, test_monster_name("Thrain, the King Under the Mountain"), 0, FALSE, MSTATUS_NEUTRAL);
+				i = place_monster_one(y, x, test_monster_name("Thrain, the King Under the Mountain"), 0, FALSE, MSTATUS_NEUTRAL, TRUE);
 				m_allow_special[test_monster_name("Thrain, the King Under the Mountain")] = FALSE;
 			}
 			if (cave[y][x].m_idx)

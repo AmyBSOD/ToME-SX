@@ -6,7 +6,7 @@ function gen_joke_place_monster(r_idx)
 	while try > 0 do
 		x = randint(cur_hgt - 4) + 2
 		y = randint(cur_wid - 4) + 2
-		if not (0 == place_monster_one(y, x, r_idx, 0, FALSE, MSTATUS_ENEMY)) then
+		if not (0 == place_monster_one(y, x, r_idx, 0, FALSE, MSTATUS_ENEMY, FALSE)) then
 			return
 		end
 		try = try - 1

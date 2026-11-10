@@ -50,16 +50,19 @@ bool quest_mari_gen_hook(char *fmt)
 
 	/* Place a boss monster */
 
-	int flags;
-	y = rand_int(21) + 3;
-	x = rand_int(31) + 3;
-	flags = f_info[cave[y][x].feat].flags1;
-	if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
+	for (i = 1; i > 0;)
 	{
-		m_allow_special[7658] = TRUE;
-		place_monster_one(y, x, 7658, 0, magik(50), MSTATUS_ENEMY);
-		m_allow_special[7658] = FALSE;
-		--i;
+		int flags;
+		y = rand_int(21) + 3;
+		x = rand_int(31) + 3;
+		flags = f_info[cave[y][x].feat].flags1;
+		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
+		{
+			m_allow_special[7658] = TRUE;
+			place_monster_one(y, x, 7658, 0, magik(50), MSTATUS_ENEMY, TRUE);
+			m_allow_special[7658] = FALSE;
+			--i;
+		}
 	}
 
 	process_hooks_restart = TRUE;

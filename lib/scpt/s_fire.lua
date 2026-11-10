@@ -196,7 +196,7 @@ FIREGOLEM = add_spell
 			-- Summon it
 			m_allow_special[1043 + 1] = TRUE
 			y, x = find_position(player.py, player.px)
-			m_idx = place_monster_one(y, x, 1043, 0, FALSE, MSTATUS_FRIEND)
+			m_idx = place_monster_one(y, x, 1043, 0, FALSE, MSTATUS_FRIEND, FALSE)
 			m_allow_special[1043 + 1] = FALSE
 
 			-- level it

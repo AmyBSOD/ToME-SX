@@ -38,7 +38,7 @@ bool quest_wight_gen_hook(char *fmt)
 				int m_idx = 0;
 
 				m_allow_special[test_monster_name("The Wight-King of the Barrow-downs")] = TRUE;
-				m_idx = place_monster_one(y, x, test_monster_name("The Wight-King of the Barrow-downs"), 0, FALSE, MSTATUS_ENEMY);
+				m_idx = place_monster_one(y, x, test_monster_name("The Wight-King of the Barrow-downs"), 0, FALSE, MSTATUS_ENEMY, FALSE);
 				m_allow_special[test_monster_name("The Wight-King of the Barrow-downs")] = FALSE;
 
 				if (m_idx)

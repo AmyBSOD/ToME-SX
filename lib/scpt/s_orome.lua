@@ -161,7 +161,7 @@ OROME_GOODHUNT = add_spell
 			if get_level(OROME_GOODHUNT, 50) >= 45 then
 				tempidx = summons[rand_range(1, 20)]
 			end
-			m_idx = place_monster_one(y, x, tempidx, 0, FALSE, MSTATUS_FRIEND)
+			m_idx = place_monster_one(y, x, tempidx, 0, FALSE, MSTATUS_FRIEND, FALSE)
 			if m_idx ~= 0 then
 				monster_set_level(m_idx, 20 + get_level(OROME_GOODHUNT, 50))
 				return TRUE

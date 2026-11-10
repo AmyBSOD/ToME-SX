@@ -43,7 +43,7 @@ bool quest_evil_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			place_monster_one(y, x, 996, 0, FALSE, MSTATUS_ENEMY);
+			place_monster_one(y, x, 996, 0, FALSE, MSTATUS_ENEMY, FALSE);
 			--i;
 		}
 	}

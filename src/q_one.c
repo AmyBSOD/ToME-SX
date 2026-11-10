@@ -524,7 +524,7 @@ bool quest_one_gen_hook(char *fmt)
 		try--;
 	}
 
-	if (try) place_monster_one(y, x, test_monster_name("Sauron, the Sorcerer"), 0, FALSE, MSTATUS_ENEMY);
+	if (try) place_monster_one(y, x, test_monster_name("Sauron, the Sorcerer"), 0, FALSE, MSTATUS_ENEMY, TRUE);
 
 	return (FALSE);
 }

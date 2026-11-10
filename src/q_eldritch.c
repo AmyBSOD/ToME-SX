@@ -43,7 +43,7 @@ bool quest_eldritch_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			place_monster_one(y, x, 434, 0, magik(50), MSTATUS_ENEMY);
+			place_monster_one(y, x, 434, 0, magik(50), MSTATUS_ENEMY, FALSE);
 			--i;
 		}
 	}
@@ -57,7 +57,7 @@ bool quest_eldritch_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			place_monster_one(y, x, 452, 0, magik(50), MSTATUS_ENEMY);
+			place_monster_one(y, x, 452, 0, magik(50), MSTATUS_ENEMY, FALSE);
 			--i;
 		}
 	}
@@ -71,7 +71,7 @@ bool quest_eldritch_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			place_monster_one(y, x, 535, 0, magik(50), MSTATUS_ENEMY);
+			place_monster_one(y, x, 535, 0, magik(50), MSTATUS_ENEMY, FALSE);
 			--i;
 		}
 	}
@@ -85,7 +85,7 @@ bool quest_eldritch_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			place_monster_one(y, x, 608, 0, magik(50), MSTATUS_ENEMY);
+			place_monster_one(y, x, 608, 0, magik(50), MSTATUS_ENEMY, FALSE);
 			--i;
 		}
 	}
@@ -99,7 +99,7 @@ bool quest_eldritch_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			place_monster_one(y, x, 1520, 0, magik(50), MSTATUS_ENEMY);
+			place_monster_one(y, x, 1520, 0, magik(50), MSTATUS_ENEMY, FALSE);
 			--i;
 		}
 	}

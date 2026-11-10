@@ -57,7 +57,7 @@ bool quest_dale_gen_hook(char *fmt)
 		flags = f_info[cave[y][x].feat].flags1;
 		if (!(flags & FF1_PERMANENT) && (flags & FF1_FLOOR))
 		{
-			place_monster_one(y, x, 35, 0, magik(50), MSTATUS_ENEMY);
+			place_monster_one(y, x, 35, 0, magik(50), MSTATUS_ENEMY, FALSE);
 			--i;
 		}
 	}

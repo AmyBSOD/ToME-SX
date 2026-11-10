@@ -2020,7 +2020,7 @@ extern bool place_monster_aux(int y, int x, int r_idx, bool slp, bool grp, int s
  */
 extern bool place_monster(int y, int x, bool slp, bool grp);
 
-/** @fn place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status)
+/** @fn place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status, bool bypass)
  * @brief Attempt to place a monster with monster race index "r_idx", monster
  * ego "ego" and status "status" at grid "y", "x". The monster may be asleep
  * ("slp").\n
@@ -2056,7 +2056,7 @@ extern bool place_monster(int y, int x, bool slp, bool grp);
  * except for the savefile loading code.
  * @note (see file monster2.c)
  */
-extern s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status);
+extern s16b place_monster_one(int y, int x, int r_idx, int ego, bool slp, int status, bool bypass);
 
 /** @fn is_friend(monster_type *m_ptr)
  * @brief Return a value to indicate the status of monster "m_ptr".\n

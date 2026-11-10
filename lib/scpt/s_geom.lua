@@ -630,7 +630,7 @@ ELEMENTAL_MINION = add_spell
 
 				-- Summon it
 				local my, mx = find_position(y, x)
-				local m_idx = place_monster_one(my, mx, r_idx, 0, FALSE, MSTATUS_FRIEND)
+				local m_idx = place_monster_one(my, mx, r_idx, 0, FALSE, MSTATUS_FRIEND, FALSE)
 
 				-- level it
 				if m_idx ~= 0 then

@@ -813,7 +813,7 @@ static void power_activate(int power)
 
 			if (d >= 100) return;
 
-			if ((m_idx = place_monster_one(y, x, o_ptr->pval, 0, FALSE, MSTATUS_PET)) == 0) return;
+			if ((m_idx = place_monster_one(y, x, o_ptr->pval, 0, FALSE, MSTATUS_PET, FALSE)) == 0) return;
 
 			m_ptr = &m_list[m_idx];
 			m_ptr->hp = o_ptr->pval2;

@@ -169,7 +169,7 @@ MANDOS_CALL_HALLS = add_spell
 				933, --wise spirit
 				}
 			y, x = find_position(player.py, player.px)
-			m_idx = place_monster_one(y, x, summons[rand_range(1, 2)], 0, FALSE, MSTATUS_FRIEND)
+			m_idx = place_monster_one(y, x, summons[rand_range(1, 2)], 0, FALSE, MSTATUS_FRIEND, FALSE)
 			if m_idx ~= 0 then
 				monster_set_level(m_idx, 20 + get_level(MANDOS_CALL_HALLS, 50, 0))
 				return TRUE

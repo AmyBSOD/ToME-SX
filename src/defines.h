@@ -4579,7 +4579,7 @@
 #define DF1_SAND_VEIN           0x00040000L	/* Like in the sandworm lair */
 #define DF1_CIRCULAR_ROOMS      0x00080000L	/* Allow circular rooms */
 #define DF1_EMPTY               0x00100000L	/* Allow arena levels */
-#define DF1_DAMAGE_FEAT         0x00200000L
+#define DF1_DAMAGE_FEAT         0x00200000L     /* background damage effects affect the terrain */
 #define DF1_FLAT                0x00400000L	/* Creates paths to next areas at edge of level, like Barrowdowns */
 #define DF1_TOWER               0x00800000L	/* You start at bottom and go up rather than the reverse */
 #define DF1_RANDOM_TOWNS        0x01000000L	/* Allow random towns */
@@ -4594,13 +4594,13 @@
 #define DF2_ADJUST_LEVEL_1_2    0x00000001L	/* Minimum monster level will be half the dungeon level */
 #define DF2_NO_SHAFT            0x00000002L	/* No shafts */
 #define DF2_ADJUST_LEVEL_PLAYER 0x00000004L	/* Uses player level*2 instead of dungeon level for other ADJUST_LEVEL flags */
-#define DF2_NO_TELEPORT         0x00000008L
-#define DF2_ASK_LEAVE           0x00000010L
-#define DF2_NO_STAIR            0x00000020L
-#define DF2_SPECIAL             0x00000040L
-#define DF2_NO_NEW_MONSTER      0x00000080L
-#define DF2_DESC                0x00000100L
-#define DF2_NO_GENO             0x00000200L
+#define DF2_NO_TELEPORT         0x00000008L     /* teleportation is not allowed */
+#define DF2_ASK_LEAVE           0x00000010L     /* ask when the player is leaving */
+#define DF2_NO_STAIR            0x00000020L     /* don't create connecting stairs */
+#define DF2_SPECIAL             0x00000040L     /* special level */
+#define DF2_NO_NEW_MONSTER      0x00000080L     /* new monsters spawn very slowly (used to be none spawning at all --Amy) */
+#define DF2_DESC                0x00000100L     /* take description from file instead of getting a feeling */
+#define DF2_NO_GENO             0x00000200L     /* genocide disallowed */
 #define DF2_NO_BREATH           0x00000400L     /* Oups, cannot breath here */
 #define DF2_WATER_BREATH        0x00000800L     /* Oups, cannot breath here, need water breathing */
 #define DF2_ELVEN               0x00001000L     /* Try to create elven monster ego */

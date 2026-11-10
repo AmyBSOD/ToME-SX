@@ -73,7 +73,7 @@ bool quest_poison_gen_hook(char *fmt)
 				int m_idx;
 
 				r_idx = get_mon_num(30);
-				m_idx = place_monster_one(y, x, r_idx, 0, FALSE, MSTATUS_ENEMY);
+				m_idx = place_monster_one(y, x, r_idx, 0, FALSE, MSTATUS_ENEMY, FALSE);
 
 				/* Sometimes make it up some levels */
 				if (magik(80) && m_idx)

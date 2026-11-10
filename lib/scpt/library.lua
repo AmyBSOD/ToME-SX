@@ -76,7 +76,7 @@ P:4:4
 library_quest.place_random = function(minY, minX, maxY, maxX, monster)
 	y = randint(maxY - minY + 1) + minY
 	x = randint(maxX - minX + 1) + minX
-	return place_monster_one(y, x, monster, 0, TRUE, MSTATUS_ENEMY)
+	return place_monster_one(y, x, monster, 0, TRUE, MSTATUS_ENEMY, FALSE)
 end
 
 -- Book creation helpers

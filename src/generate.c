@@ -9671,7 +9671,8 @@ static bool cave_gen(void)
 
 				get_pos_player(10, &oy, &ox);
 
-				place_monster_one(oy, ox, fates[i].r_idx, 0, fates[i].serious, MSTATUS_ENEMY);
+				/* guarantee that the monster can spawn --Amy */
+				place_monster_one(oy, ox, fates[i].r_idx, 0, fates[i].serious, MSTATUS_ENEMY, TRUE);
 
 				fates[i].icky = TRUE;
 				break;
@@ -9852,10 +9853,11 @@ static bool cave_gen(void)
 	/* Put an Artifact and Artifact Guardian is requested */
 	if (d_ptr->final_guardian && (d_ptr->maxdepth == dun_level))
 	{
-		int oy;
-		int ox;
-		int m_idx, try = 10000;
+		int oy = randint(cur_hgt - 4) + 2;
+		int ox = randint(cur_wid - 4) + 2;
+		int m_idx, try = 10000, guardiantries = 1000;
 
+tryguardian:
 		/* Find a good position */
 		while (try)
 		{
@@ -9876,13 +9878,20 @@ static bool cave_gen(void)
 
 		/* Place the guardian */
 		m_allow_special[d_ptr->final_guardian] = TRUE;
-		place_monster_one(oy, ox, d_ptr->final_guardian, 0, FALSE, MSTATUS_ENEMY);
+		place_monster_one(oy, ox, d_ptr->final_guardian, 0, FALSE, MSTATUS_ENEMY, (guardiantries < 100) ? TRUE : FALSE);
 		m_allow_special[d_ptr->final_guardian] = FALSE;
 
 
 		m_idx = cave[oy][ox].m_idx;
 
-		if (!m_idx && wizard) cmsg_print(TERM_L_RED, "WARNING: Could not place guardian.");
+		if (!m_idx) {
+			if (guardiantries > 0) {
+				guardiantries--;
+				goto tryguardian;
+			} else if (wizard) {
+				cmsg_print(TERM_L_RED, "WARNING: Could not place guardian.");
+			}
+		}
 		if (m_idx && wizard) cmsg_print(TERM_GREEN, "Guardian has been placed.");
 
 		/*

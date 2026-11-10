@@ -79,7 +79,7 @@ bool quest_dragons_gen_hook(char *fmt)
 				dragon = mature_dragons[color];
 
 			--i;
-			place_monster_one(y, x, dragon, 0, magik(33), MSTATUS_ENEMY);
+			place_monster_one(y, x, dragon, 0, magik(33), MSTATUS_ENEMY, FALSE);
 		}
 	}
 
