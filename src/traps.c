@@ -923,6 +923,8 @@ bool can_disarm_trap_type(int traptype)
 		case TRAP_NASTY209:
 		case TRAP_NASTY210:
 		case TRAP_NASTY211:
+		case TRAP_NASTY212:
+		case TRAP_NASTY213:
 			return FALSE;
 	}
 
@@ -1172,6 +1174,8 @@ bool can_detect_trap_type(int traptype)
 		case TRAP_NASTY209:
 		case TRAP_NASTY210:
 		case TRAP_NASTY211:
+		case TRAP_NASTY212:
+		case TRAP_NASTY213:
 			return FALSE;
 	}
 
@@ -1424,6 +1428,8 @@ bool is_nasty_trap(int traptype)
 		case TRAP_NASTY209:
 		case TRAP_NASTY210:
 		case TRAP_NASTY211:
+		case TRAP_NASTY212:
+		case TRAP_NASTY213:
 			return TRUE;
 	}
 
@@ -21509,6 +21515,30 @@ bool player_activate_trap_type(s16b y, s16b x, object_type *i_ptr, s16b item)
 			break;			
 		}
 
+	case TRAP_NASTY212:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap212 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
+	case TRAP_NASTY213:
+
+		{
+			ident = FALSE;
+			if (c_ptr->info & (CAVE_TRDT)) ident = TRUE;
+
+			p_ptr->nastytrap213 = TRUE;
+			calc_bonuses(FALSE);
+
+			break;			
+		}
+
 	case TRAP_OF_SHIT_I:
 		{
 			bool badheel = FALSE;
@@ -26486,7 +26516,7 @@ void multitraptrigger(int triggercnt)
 
 void give_random_nastytrap_effect(void)
 {
-	switch (randint(211)) {
+	switch (randint(213)) {
 		case 1:
 			p_ptr->nastytrap1 = TRUE;
 			break;
@@ -27120,6 +27150,12 @@ void give_random_nastytrap_effect(void)
 		case 211:
 			p_ptr->nastytrap211 = TRUE;
 			break;
+		case 212:
+			p_ptr->nastytrap212 = TRUE;
+			break;
+		case 213:
+			p_ptr->nastytrap213 = TRUE;
+			break;
 
 	}
 }
@@ -27137,219 +27173,219 @@ void cure_nasty_traps(void)
 		return;
 	}
 
-	if (effect_level >= 1) p_ptr->nastytrap1 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap2 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap3 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap4 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap5 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap6 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap7 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap8 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap9 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap10 = FALSE;
-	if (effect_level >= 15) p_ptr->nastytrap11 = FALSE;
-	if (effect_level >= 80) p_ptr->nastytrap12 = FALSE;
-	if (effect_level >= 100) p_ptr->nastytrap13 = FALSE;
-	if (effect_level >= 25) p_ptr->nastytrap14 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap15 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap16 = FALSE;
-	if (effect_level >= 50) p_ptr->nastytrap17 = FALSE;
-	if (effect_level >= 80) p_ptr->nastytrap18 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap19 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap20 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap21 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap22 = FALSE;
-	if (effect_level >= 50) p_ptr->nastytrap23 = FALSE;
-	if (effect_level >= 13) p_ptr->nastytrap24 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap25 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap26 = FALSE;
-	if (effect_level >= 16) p_ptr->nastytrap27 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap28 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap29 = FALSE;
-	if (effect_level >= 8) p_ptr->nastytrap30 = FALSE;
-	if (effect_level >= 25) p_ptr->nastytrap31 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap32 = FALSE;
-	if (effect_level >= 22) p_ptr->nastytrap33 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap34 = FALSE;
-	if (effect_level >= 15) p_ptr->nastytrap35 = FALSE;
-	if (effect_level >= 25) p_ptr->nastytrap36 = FALSE;
-	if (effect_level >= 15) p_ptr->nastytrap37 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap38 = FALSE;
-	if (effect_level >= 33) p_ptr->nastytrap39 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap40 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap41 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap42 = FALSE;
-	if (effect_level >= 25) p_ptr->nastytrap43 = FALSE;
-	if (effect_level >= 5) p_ptr->nastytrap44 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap45 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap46 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap47 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap48 = FALSE;
-	if (effect_level >= 5) p_ptr->nastytrap49 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap50 = FALSE;
-	if (effect_level >= 15) p_ptr->nastytrap51 = FALSE;
-	if (effect_level >= 35) p_ptr->nastytrap52 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap53 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap54 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap55 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap56 = FALSE;
-	if (effect_level >= 5) p_ptr->nastytrap57 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap58 = FALSE;
-	if (effect_level >= 60) p_ptr->nastytrap59 = FALSE;
-	if (effect_level >= 50) p_ptr->nastytrap60 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap61 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap62 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap63 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap64 = FALSE;
-	if (effect_level >= 25) p_ptr->nastytrap65 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap66 = FALSE;
-	if (effect_level >= 15) p_ptr->nastytrap67 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap68 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap69 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap70 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap71 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap72 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap73 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap74 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap75 = FALSE;
-	if (effect_level >= 15) p_ptr->nastytrap76 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap77 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap78 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap79 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap80 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap81 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap82 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap83 = FALSE;
-	if (effect_level >= 24) p_ptr->nastytrap84 = FALSE;
-	if (effect_level >= 33) p_ptr->nastytrap85 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap86 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap87 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap88 = FALSE;
-	if (effect_level >= 12) p_ptr->nastytrap89 = FALSE;
-	if (effect_level >= 8) p_ptr->nastytrap90 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap91 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap92 = FALSE;
-	if (effect_level >= 25) p_ptr->nastytrap93 = FALSE;
-	if (effect_level >= 8) p_ptr->nastytrap94 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap95 = FALSE;
-	if (effect_level >= 25) p_ptr->nastytrap96 = FALSE;
-	if (effect_level >= 50) p_ptr->nastytrap97 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap98 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap99 = FALSE;
-	if (effect_level >= 15) p_ptr->nastytrap100 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap101 = FALSE;
-	if (effect_level >= 25) p_ptr->nastytrap102 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap103 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap104 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap105 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap106 = FALSE;
-	if (effect_level >= 5) p_ptr->nastytrap107 = FALSE;
-	if (effect_level >= 50) p_ptr->nastytrap108 = FALSE;
-	if (effect_level >= 15) p_ptr->nastytrap109 = FALSE;
-	if (effect_level >= 50) p_ptr->nastytrap110 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap111 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap112 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap113 = FALSE;
-	if (effect_level >= 2) p_ptr->nastytrap114 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap115 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap116 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap117 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap118 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap119 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap120 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap121 = FALSE;
-	if (effect_level >= 25) p_ptr->nastytrap122 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap123 = FALSE;
-	if (effect_level >= 5) p_ptr->nastytrap124 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap125 = FALSE;
-	if (effect_level >= 12) p_ptr->nastytrap126 = FALSE;
-	if (effect_level >= 25) p_ptr->nastytrap127 = FALSE;
-	if (effect_level >= 5) p_ptr->nastytrap128 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap129 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap130 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap131 = FALSE;
-	if (effect_level >= 24) p_ptr->nastytrap132 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap133 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap134 = FALSE;
-	if (effect_level >= 2) p_ptr->nastytrap135 = FALSE;
-	if (effect_level >= 15) p_ptr->nastytrap136 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap137 = FALSE;
-	if (effect_level >= 50) p_ptr->nastytrap138 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap139 = FALSE;
-	if (effect_level >= 50) p_ptr->nastytrap140 = FALSE;
-	if (effect_level >= 15) p_ptr->nastytrap141 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap142 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap143 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap144 = FALSE;
-	if (effect_level >= 3) p_ptr->nastytrap145 = FALSE;
-	if (effect_level >= 5) p_ptr->nastytrap146 = FALSE;
-	if (effect_level >= 2) p_ptr->nastytrap147 = FALSE;
-	if (effect_level >= 2) p_ptr->nastytrap148 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap149 = FALSE;
-	if (effect_level >= 50) p_ptr->nastytrap150 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap151 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap152 = FALSE;
-	if (effect_level >= 60) p_ptr->nastytrap153 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap154 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap155 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap156 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap157 = FALSE;
-	if (effect_level >= 12) p_ptr->nastytrap158 = FALSE;
-	if (effect_level >= 15) p_ptr->nastytrap159 = FALSE;
-	if (effect_level >= 25) p_ptr->nastytrap160 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap161 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap162 = FALSE;
-	if (effect_level >= 15) p_ptr->nastytrap163 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap164 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap165 = FALSE;
-	if (effect_level >= 15) p_ptr->nastytrap166 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap167 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap168 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap169 = FALSE;
-	if (effect_level >= 33) p_ptr->nastytrap170 = FALSE;
-	if (effect_level >= 3) p_ptr->nastytrap171 = FALSE;
-	if (effect_level >= 5) p_ptr->nastytrap172 = FALSE;
-	if (effect_level >= 12) p_ptr->nastytrap173 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap174 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap175 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap176 = FALSE;
-	if (effect_level >= 40) p_ptr->nastytrap177 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap178 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap179 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap180 = FALSE;
-	if (effect_level >= 8) p_ptr->nastytrap181 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap182 = FALSE;
-	if (effect_level >= 15) p_ptr->nastytrap183 = FALSE;
-	if (effect_level >= 35) p_ptr->nastytrap184 = FALSE;
-	if (effect_level >= 12) p_ptr->nastytrap185 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap186 = FALSE;
-	if (effect_level >= 25) p_ptr->nastytrap187 = FALSE;
-	if (effect_level >= 25) p_ptr->nastytrap188 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap189 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap190 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap191 = FALSE;
-	if (effect_level >= 35) p_ptr->nastytrap192 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap193 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap194 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap195 = FALSE;
-	if (effect_level >= 5) p_ptr->nastytrap196 = FALSE;
-	if (effect_level >= 50) p_ptr->nastytrap197 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap198 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap199 = FALSE;
-	if (effect_level >= 10) p_ptr->nastytrap200 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap201 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap202 = FALSE;
-	if (effect_level >= 5) p_ptr->nastytrap203 = FALSE;
-	if (effect_level >= 5) p_ptr->nastytrap204 = FALSE;
-	if (effect_level >= 15) p_ptr->nastytrap205 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap206 = FALSE;
-	if (effect_level >= 1) p_ptr->nastytrap207 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap208 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap209 = FALSE;
-	if (effect_level >= 30) p_ptr->nastytrap210 = FALSE;
-	if (effect_level >= 20) p_ptr->nastytrap211 = FALSE;
-	p_ptr->nastytrap212 = FALSE;
-	p_ptr->nastytrap213 = FALSE;
+	if (!p_ptr->eternalnastytrap1 && (effect_level >= 1)) p_ptr->nastytrap1 = FALSE;
+	if (!p_ptr->eternalnastytrap2 && (effect_level >= 20)) p_ptr->nastytrap2 = FALSE;
+	if (!p_ptr->eternalnastytrap3 && (effect_level >= 10)) p_ptr->nastytrap3 = FALSE;
+	if (!p_ptr->eternalnastytrap4 && (effect_level >= 20)) p_ptr->nastytrap4 = FALSE;
+	if (!p_ptr->eternalnastytrap5 && (effect_level >= 1)) p_ptr->nastytrap5 = FALSE;
+	if (!p_ptr->eternalnastytrap6 && (effect_level >= 1)) p_ptr->nastytrap6 = FALSE;
+	if (!p_ptr->eternalnastytrap7 && (effect_level >= 1)) p_ptr->nastytrap7 = FALSE;
+	if (!p_ptr->eternalnastytrap8 && (effect_level >= 1)) p_ptr->nastytrap8 = FALSE;
+	if (!p_ptr->eternalnastytrap9 && (effect_level >= 1)) p_ptr->nastytrap9 = FALSE;
+	if (!p_ptr->eternalnastytrap10 && (effect_level >= 1)) p_ptr->nastytrap10 = FALSE;
+	if (!p_ptr->eternalnastytrap11 && (effect_level >= 15)) p_ptr->nastytrap11 = FALSE;
+	if (!p_ptr->eternalnastytrap12 && (effect_level >= 80)) p_ptr->nastytrap12 = FALSE;
+	if (!p_ptr->eternalnastytrap13 && (effect_level >= 100)) p_ptr->nastytrap13 = FALSE;
+	if (!p_ptr->eternalnastytrap14 && (effect_level >= 25)) p_ptr->nastytrap14 = FALSE;
+	if (!p_ptr->eternalnastytrap15 && (effect_level >= 30)) p_ptr->nastytrap15 = FALSE;
+	if (!p_ptr->eternalnastytrap16 && (effect_level >= 30)) p_ptr->nastytrap16 = FALSE;
+	if (!p_ptr->eternalnastytrap17 && (effect_level >= 50)) p_ptr->nastytrap17 = FALSE;
+	if (!p_ptr->eternalnastytrap18 && (effect_level >= 80)) p_ptr->nastytrap18 = FALSE;
+	if (!p_ptr->eternalnastytrap19 && (effect_level >= 1)) p_ptr->nastytrap19 = FALSE;
+	if (!p_ptr->eternalnastytrap20 && (effect_level >= 10)) p_ptr->nastytrap20 = FALSE;
+	if (!p_ptr->eternalnastytrap21 && (effect_level >= 40)) p_ptr->nastytrap21 = FALSE;
+	if (!p_ptr->eternalnastytrap22 && (effect_level >= 30)) p_ptr->nastytrap22 = FALSE;
+	if (!p_ptr->eternalnastytrap23 && (effect_level >= 50)) p_ptr->nastytrap23 = FALSE;
+	if (!p_ptr->eternalnastytrap24 && (effect_level >= 13)) p_ptr->nastytrap24 = FALSE;
+	if (!p_ptr->eternalnastytrap25 && (effect_level >= 30)) p_ptr->nastytrap25 = FALSE;
+	if (!p_ptr->eternalnastytrap26 && (effect_level >= 20)) p_ptr->nastytrap26 = FALSE;
+	if (!p_ptr->eternalnastytrap27 && (effect_level >= 16)) p_ptr->nastytrap27 = FALSE;
+	if (!p_ptr->eternalnastytrap28 && (effect_level >= 20)) p_ptr->nastytrap28 = FALSE;
+	if (!p_ptr->eternalnastytrap29 && (effect_level >= 10)) p_ptr->nastytrap29 = FALSE;
+	if (!p_ptr->eternalnastytrap30 && (effect_level >= 8)) p_ptr->nastytrap30 = FALSE;
+	if (!p_ptr->eternalnastytrap31 && (effect_level >= 25)) p_ptr->nastytrap31 = FALSE;
+	if (!p_ptr->eternalnastytrap32 && (effect_level >= 20)) p_ptr->nastytrap32 = FALSE;
+	if (!p_ptr->eternalnastytrap33 && (effect_level >= 22)) p_ptr->nastytrap33 = FALSE;
+	if (!p_ptr->eternalnastytrap34 && (effect_level >= 10)) p_ptr->nastytrap34 = FALSE;
+	if (!p_ptr->eternalnastytrap35 && (effect_level >= 15)) p_ptr->nastytrap35 = FALSE;
+	if (!p_ptr->eternalnastytrap36 && (effect_level >= 25)) p_ptr->nastytrap36 = FALSE;
+	if (!p_ptr->eternalnastytrap37 && (effect_level >= 15)) p_ptr->nastytrap37 = FALSE;
+	if (!p_ptr->eternalnastytrap38 && (effect_level >= 40)) p_ptr->nastytrap38 = FALSE;
+	if (!p_ptr->eternalnastytrap39 && (effect_level >= 33)) p_ptr->nastytrap39 = FALSE;
+	if (!p_ptr->eternalnastytrap40 && (effect_level >= 30)) p_ptr->nastytrap40 = FALSE;
+	if (!p_ptr->eternalnastytrap41 && (effect_level >= 20)) p_ptr->nastytrap41 = FALSE;
+	if (!p_ptr->eternalnastytrap42 && (effect_level >= 20)) p_ptr->nastytrap42 = FALSE;
+	if (!p_ptr->eternalnastytrap43 && (effect_level >= 25)) p_ptr->nastytrap43 = FALSE;
+	if (!p_ptr->eternalnastytrap44 && (effect_level >= 5)) p_ptr->nastytrap44 = FALSE;
+	if (!p_ptr->eternalnastytrap45 && (effect_level >= 1)) p_ptr->nastytrap45 = FALSE;
+	if (!p_ptr->eternalnastytrap46 && (effect_level >= 20)) p_ptr->nastytrap46 = FALSE;
+	if (!p_ptr->eternalnastytrap47 && (effect_level >= 20)) p_ptr->nastytrap47 = FALSE;
+	if (!p_ptr->eternalnastytrap48 && (effect_level >= 40)) p_ptr->nastytrap48 = FALSE;
+	if (!p_ptr->eternalnastytrap49 && (effect_level >= 5)) p_ptr->nastytrap49 = FALSE;
+	if (!p_ptr->eternalnastytrap50 && (effect_level >= 1)) p_ptr->nastytrap50 = FALSE;
+	if (!p_ptr->eternalnastytrap51 && (effect_level >= 15)) p_ptr->nastytrap51 = FALSE;
+	if (!p_ptr->eternalnastytrap52 && (effect_level >= 35)) p_ptr->nastytrap52 = FALSE;
+	if (!p_ptr->eternalnastytrap53 && (effect_level >= 40)) p_ptr->nastytrap53 = FALSE;
+	if (!p_ptr->eternalnastytrap54 && (effect_level >= 30)) p_ptr->nastytrap54 = FALSE;
+	if (!p_ptr->eternalnastytrap55 && (effect_level >= 20)) p_ptr->nastytrap55 = FALSE;
+	if (!p_ptr->eternalnastytrap56 && (effect_level >= 10)) p_ptr->nastytrap56 = FALSE;
+	if (!p_ptr->eternalnastytrap57 && (effect_level >= 5)) p_ptr->nastytrap57 = FALSE;
+	if (!p_ptr->eternalnastytrap58 && (effect_level >= 10)) p_ptr->nastytrap58 = FALSE;
+	if (!p_ptr->eternalnastytrap59 && (effect_level >= 60)) p_ptr->nastytrap59 = FALSE;
+	if (!p_ptr->eternalnastytrap60 && (effect_level >= 50)) p_ptr->nastytrap60 = FALSE;
+	if (!p_ptr->eternalnastytrap61 && (effect_level >= 40)) p_ptr->nastytrap61 = FALSE;
+	if (!p_ptr->eternalnastytrap62 && (effect_level >= 30)) p_ptr->nastytrap62 = FALSE;
+	if (!p_ptr->eternalnastytrap63 && (effect_level >= 10)) p_ptr->nastytrap63 = FALSE;
+	if (!p_ptr->eternalnastytrap64 && (effect_level >= 20)) p_ptr->nastytrap64 = FALSE;
+	if (!p_ptr->eternalnastytrap65 && (effect_level >= 25)) p_ptr->nastytrap65 = FALSE;
+	if (!p_ptr->eternalnastytrap66 && (effect_level >= 30)) p_ptr->nastytrap66 = FALSE;
+	if (!p_ptr->eternalnastytrap67 && (effect_level >= 15)) p_ptr->nastytrap67 = FALSE;
+	if (!p_ptr->eternalnastytrap68 && (effect_level >= 40)) p_ptr->nastytrap68 = FALSE;
+	if (!p_ptr->eternalnastytrap69 && (effect_level >= 30)) p_ptr->nastytrap69 = FALSE;
+	if (!p_ptr->eternalnastytrap70 && (effect_level >= 20)) p_ptr->nastytrap70 = FALSE;
+	if (!p_ptr->eternalnastytrap71 && (effect_level >= 40)) p_ptr->nastytrap71 = FALSE;
+	if (!p_ptr->eternalnastytrap72 && (effect_level >= 30)) p_ptr->nastytrap72 = FALSE;
+	if (!p_ptr->eternalnastytrap73 && (effect_level >= 30)) p_ptr->nastytrap73 = FALSE;
+	if (!p_ptr->eternalnastytrap74 && (effect_level >= 1)) p_ptr->nastytrap74 = FALSE;
+	if (!p_ptr->eternalnastytrap75 && (effect_level >= 10)) p_ptr->nastytrap75 = FALSE;
+	if (!p_ptr->eternalnastytrap76 && (effect_level >= 15)) p_ptr->nastytrap76 = FALSE;
+	if (!p_ptr->eternalnastytrap77 && (effect_level >= 40)) p_ptr->nastytrap77 = FALSE;
+	if (!p_ptr->eternalnastytrap78 && (effect_level >= 10)) p_ptr->nastytrap78 = FALSE;
+	if (!p_ptr->eternalnastytrap79 && (effect_level >= 30)) p_ptr->nastytrap79 = FALSE;
+	if (!p_ptr->eternalnastytrap80 && (effect_level >= 20)) p_ptr->nastytrap80 = FALSE;
+	if (!p_ptr->eternalnastytrap81 && (effect_level >= 10)) p_ptr->nastytrap81 = FALSE;
+	if (!p_ptr->eternalnastytrap82 && (effect_level >= 30)) p_ptr->nastytrap82 = FALSE;
+	if (!p_ptr->eternalnastytrap83 && (effect_level >= 30)) p_ptr->nastytrap83 = FALSE;
+	if (!p_ptr->eternalnastytrap84 && (effect_level >= 24)) p_ptr->nastytrap84 = FALSE;
+	if (!p_ptr->eternalnastytrap85 && (effect_level >= 33)) p_ptr->nastytrap85 = FALSE;
+	if (!p_ptr->eternalnastytrap86 && (effect_level >= 30)) p_ptr->nastytrap86 = FALSE;
+	if (!p_ptr->eternalnastytrap87 && (effect_level >= 40)) p_ptr->nastytrap87 = FALSE;
+	if (!p_ptr->eternalnastytrap88 && (effect_level >= 40)) p_ptr->nastytrap88 = FALSE;
+	if (!p_ptr->eternalnastytrap89 && (effect_level >= 12)) p_ptr->nastytrap89 = FALSE;
+	if (!p_ptr->eternalnastytrap90 && (effect_level >= 8)) p_ptr->nastytrap90 = FALSE;
+	if (!p_ptr->eternalnastytrap91 && (effect_level >= 30)) p_ptr->nastytrap91 = FALSE;
+	if (!p_ptr->eternalnastytrap92 && (effect_level >= 10)) p_ptr->nastytrap92 = FALSE;
+	if (!p_ptr->eternalnastytrap93 && (effect_level >= 25)) p_ptr->nastytrap93 = FALSE;
+	if (!p_ptr->eternalnastytrap94 && (effect_level >= 8)) p_ptr->nastytrap94 = FALSE;
+	if (!p_ptr->eternalnastytrap95 && (effect_level >= 20)) p_ptr->nastytrap95 = FALSE;
+	if (!p_ptr->eternalnastytrap96 && (effect_level >= 25)) p_ptr->nastytrap96 = FALSE;
+	if (!p_ptr->eternalnastytrap97 && (effect_level >= 50)) p_ptr->nastytrap97 = FALSE;
+	if (!p_ptr->eternalnastytrap98 && (effect_level >= 10)) p_ptr->nastytrap98 = FALSE;
+	if (!p_ptr->eternalnastytrap99 && (effect_level >= 20)) p_ptr->nastytrap99 = FALSE;
+	if (!p_ptr->eternalnastytrap100 && (effect_level >= 15)) p_ptr->nastytrap100 = FALSE;
+	if (!p_ptr->eternalnastytrap101 && (effect_level >= 30)) p_ptr->nastytrap101 = FALSE;
+	if (!p_ptr->eternalnastytrap102 && (effect_level >= 25)) p_ptr->nastytrap102 = FALSE;
+	if (!p_ptr->eternalnastytrap103 && (effect_level >= 20)) p_ptr->nastytrap103 = FALSE;
+	if (!p_ptr->eternalnastytrap104 && (effect_level >= 10)) p_ptr->nastytrap104 = FALSE;
+	if (!p_ptr->eternalnastytrap105 && (effect_level >= 10)) p_ptr->nastytrap105 = FALSE;
+	if (!p_ptr->eternalnastytrap106 && (effect_level >= 10)) p_ptr->nastytrap106 = FALSE;
+	if (!p_ptr->eternalnastytrap107 && (effect_level >= 5)) p_ptr->nastytrap107 = FALSE;
+	if (!p_ptr->eternalnastytrap108 && (effect_level >= 50)) p_ptr->nastytrap108 = FALSE;
+	if (!p_ptr->eternalnastytrap109 && (effect_level >= 15)) p_ptr->nastytrap109 = FALSE;
+	if (!p_ptr->eternalnastytrap110 && (effect_level >= 50)) p_ptr->nastytrap110 = FALSE;
+	if (!p_ptr->eternalnastytrap111 && (effect_level >= 10)) p_ptr->nastytrap111 = FALSE;
+	if (!p_ptr->eternalnastytrap112 && (effect_level >= 1)) p_ptr->nastytrap112 = FALSE;
+	if (!p_ptr->eternalnastytrap113 && (effect_level >= 20)) p_ptr->nastytrap113 = FALSE;
+	if (!p_ptr->eternalnastytrap114 && (effect_level >= 2)) p_ptr->nastytrap114 = FALSE;
+	if (!p_ptr->eternalnastytrap115 && (effect_level >= 10)) p_ptr->nastytrap115 = FALSE;
+	if (!p_ptr->eternalnastytrap116 && (effect_level >= 10)) p_ptr->nastytrap116 = FALSE;
+	if (!p_ptr->eternalnastytrap117 && (effect_level >= 40)) p_ptr->nastytrap117 = FALSE;
+	if (!p_ptr->eternalnastytrap118 && (effect_level >= 10)) p_ptr->nastytrap118 = FALSE;
+	if (!p_ptr->eternalnastytrap119 && (effect_level >= 20)) p_ptr->nastytrap119 = FALSE;
+	if (!p_ptr->eternalnastytrap120 && (effect_level >= 20)) p_ptr->nastytrap120 = FALSE;
+	if (!p_ptr->eternalnastytrap121 && (effect_level >= 10)) p_ptr->nastytrap121 = FALSE;
+	if (!p_ptr->eternalnastytrap122 && (effect_level >= 25)) p_ptr->nastytrap122 = FALSE;
+	if (!p_ptr->eternalnastytrap123 && (effect_level >= 20)) p_ptr->nastytrap123 = FALSE;
+	if (!p_ptr->eternalnastytrap124 && (effect_level >= 5)) p_ptr->nastytrap124 = FALSE;
+	if (!p_ptr->eternalnastytrap125 && (effect_level >= 20)) p_ptr->nastytrap125 = FALSE;
+	if (!p_ptr->eternalnastytrap126 && (effect_level >= 12)) p_ptr->nastytrap126 = FALSE;
+	if (!p_ptr->eternalnastytrap127 && (effect_level >= 25)) p_ptr->nastytrap127 = FALSE;
+	if (!p_ptr->eternalnastytrap128 && (effect_level >= 5)) p_ptr->nastytrap128 = FALSE;
+	if (!p_ptr->eternalnastytrap129 && (effect_level >= 20)) p_ptr->nastytrap129 = FALSE;
+	if (!p_ptr->eternalnastytrap130 && (effect_level >= 20)) p_ptr->nastytrap130 = FALSE;
+	if (!p_ptr->eternalnastytrap131 && (effect_level >= 10)) p_ptr->nastytrap131 = FALSE;
+	if (!p_ptr->eternalnastytrap132 && (effect_level >= 24)) p_ptr->nastytrap132 = FALSE;
+	if (!p_ptr->eternalnastytrap133 && (effect_level >= 10)) p_ptr->nastytrap133 = FALSE;
+	if (!p_ptr->eternalnastytrap134 && (effect_level >= 40)) p_ptr->nastytrap134 = FALSE;
+	if (!p_ptr->eternalnastytrap135 && (effect_level >= 2)) p_ptr->nastytrap135 = FALSE;
+	if (!p_ptr->eternalnastytrap136 && (effect_level >= 15)) p_ptr->nastytrap136 = FALSE;
+	if (!p_ptr->eternalnastytrap137 && (effect_level >= 20)) p_ptr->nastytrap137 = FALSE;
+	if (!p_ptr->eternalnastytrap138 && (effect_level >= 50)) p_ptr->nastytrap138 = FALSE;
+	if (!p_ptr->eternalnastytrap139 && (effect_level >= 20)) p_ptr->nastytrap139 = FALSE;
+	if (!p_ptr->eternalnastytrap140 && (effect_level >= 50)) p_ptr->nastytrap140 = FALSE;
+	if (!p_ptr->eternalnastytrap141 && (effect_level >= 15)) p_ptr->nastytrap141 = FALSE;
+	if (!p_ptr->eternalnastytrap142 && (effect_level >= 20)) p_ptr->nastytrap142 = FALSE;
+	if (!p_ptr->eternalnastytrap143 && (effect_level >= 30)) p_ptr->nastytrap143 = FALSE;
+	if (!p_ptr->eternalnastytrap144 && (effect_level >= 40)) p_ptr->nastytrap144 = FALSE;
+	if (!p_ptr->eternalnastytrap145 && (effect_level >= 3)) p_ptr->nastytrap145 = FALSE;
+	if (!p_ptr->eternalnastytrap146 && (effect_level >= 5)) p_ptr->nastytrap146 = FALSE;
+	if (!p_ptr->eternalnastytrap147 && (effect_level >= 2)) p_ptr->nastytrap147 = FALSE;
+	if (!p_ptr->eternalnastytrap148 && (effect_level >= 2)) p_ptr->nastytrap148 = FALSE;
+	if (!p_ptr->eternalnastytrap149 && (effect_level >= 30)) p_ptr->nastytrap149 = FALSE;
+	if (!p_ptr->eternalnastytrap150 && (effect_level >= 50)) p_ptr->nastytrap150 = FALSE;
+	if (!p_ptr->eternalnastytrap151 && (effect_level >= 30)) p_ptr->nastytrap151 = FALSE;
+	if (!p_ptr->eternalnastytrap152 && (effect_level >= 30)) p_ptr->nastytrap152 = FALSE;
+	if (!p_ptr->eternalnastytrap153 && (effect_level >= 60)) p_ptr->nastytrap153 = FALSE;
+	if (!p_ptr->eternalnastytrap154 && (effect_level >= 40)) p_ptr->nastytrap154 = FALSE;
+	if (!p_ptr->eternalnastytrap155 && (effect_level >= 40)) p_ptr->nastytrap155 = FALSE;
+	if (!p_ptr->eternalnastytrap156 && (effect_level >= 20)) p_ptr->nastytrap156 = FALSE;
+	if (!p_ptr->eternalnastytrap157 && (effect_level >= 1)) p_ptr->nastytrap157 = FALSE;
+	if (!p_ptr->eternalnastytrap158 && (effect_level >= 12)) p_ptr->nastytrap158 = FALSE;
+	if (!p_ptr->eternalnastytrap159 && (effect_level >= 15)) p_ptr->nastytrap159 = FALSE;
+	if (!p_ptr->eternalnastytrap160 && (effect_level >= 25)) p_ptr->nastytrap160 = FALSE;
+	if (!p_ptr->eternalnastytrap161 && (effect_level >= 20)) p_ptr->nastytrap161 = FALSE;
+	if (!p_ptr->eternalnastytrap162 && (effect_level >= 10)) p_ptr->nastytrap162 = FALSE;
+	if (!p_ptr->eternalnastytrap163 && (effect_level >= 15)) p_ptr->nastytrap163 = FALSE;
+	if (!p_ptr->eternalnastytrap164 && (effect_level >= 30)) p_ptr->nastytrap164 = FALSE;
+	if (!p_ptr->eternalnastytrap165 && (effect_level >= 40)) p_ptr->nastytrap165 = FALSE;
+	if (!p_ptr->eternalnastytrap166 && (effect_level >= 15)) p_ptr->nastytrap166 = FALSE;
+	if (!p_ptr->eternalnastytrap167 && (effect_level >= 30)) p_ptr->nastytrap167 = FALSE;
+	if (!p_ptr->eternalnastytrap168 && (effect_level >= 30)) p_ptr->nastytrap168 = FALSE;
+	if (!p_ptr->eternalnastytrap169 && (effect_level >= 10)) p_ptr->nastytrap169 = FALSE;
+	if (!p_ptr->eternalnastytrap170 && (effect_level >= 33)) p_ptr->nastytrap170 = FALSE;
+	if (!p_ptr->eternalnastytrap171 && (effect_level >= 3)) p_ptr->nastytrap171 = FALSE;
+	if (!p_ptr->eternalnastytrap172 && (effect_level >= 5)) p_ptr->nastytrap172 = FALSE;
+	if (!p_ptr->eternalnastytrap173 && (effect_level >= 12)) p_ptr->nastytrap173 = FALSE;
+	if (!p_ptr->eternalnastytrap174 && (effect_level >= 20)) p_ptr->nastytrap174 = FALSE;
+	if (!p_ptr->eternalnastytrap175 && (effect_level >= 10)) p_ptr->nastytrap175 = FALSE;
+	if (!p_ptr->eternalnastytrap176 && (effect_level >= 30)) p_ptr->nastytrap176 = FALSE;
+	if (!p_ptr->eternalnastytrap177 && (effect_level >= 40)) p_ptr->nastytrap177 = FALSE;
+	if (!p_ptr->eternalnastytrap178 && (effect_level >= 20)) p_ptr->nastytrap178 = FALSE;
+	if (!p_ptr->eternalnastytrap179 && (effect_level >= 20)) p_ptr->nastytrap179 = FALSE;
+	if (!p_ptr->eternalnastytrap180 && (effect_level >= 30)) p_ptr->nastytrap180 = FALSE;
+	if (!p_ptr->eternalnastytrap181 && (effect_level >= 8)) p_ptr->nastytrap181 = FALSE;
+	if (!p_ptr->eternalnastytrap182 && (effect_level >= 20)) p_ptr->nastytrap182 = FALSE;
+	if (!p_ptr->eternalnastytrap183 && (effect_level >= 15)) p_ptr->nastytrap183 = FALSE;
+	if (!p_ptr->eternalnastytrap184 && (effect_level >= 35)) p_ptr->nastytrap184 = FALSE;
+	if (!p_ptr->eternalnastytrap185 && (effect_level >= 12)) p_ptr->nastytrap185 = FALSE;
+	if (!p_ptr->eternalnastytrap186 && (effect_level >= 10)) p_ptr->nastytrap186 = FALSE;
+	if (!p_ptr->eternalnastytrap187 && (effect_level >= 25)) p_ptr->nastytrap187 = FALSE;
+	if (!p_ptr->eternalnastytrap188 && (effect_level >= 25)) p_ptr->nastytrap188 = FALSE;
+	if (!p_ptr->eternalnastytrap189 && (effect_level >= 30)) p_ptr->nastytrap189 = FALSE;
+	if (!p_ptr->eternalnastytrap190 && (effect_level >= 30)) p_ptr->nastytrap190 = FALSE;
+	if (!p_ptr->eternalnastytrap191 && (effect_level >= 20)) p_ptr->nastytrap191 = FALSE;
+	if (!p_ptr->eternalnastytrap192 && (effect_level >= 35)) p_ptr->nastytrap192 = FALSE;
+	if (!p_ptr->eternalnastytrap193 && (effect_level >= 1)) p_ptr->nastytrap193 = FALSE;
+	if (!p_ptr->eternalnastytrap194 && (effect_level >= 1)) p_ptr->nastytrap194 = FALSE;
+	if (!p_ptr->eternalnastytrap195 && (effect_level >= 20)) p_ptr->nastytrap195 = FALSE;
+	if (!p_ptr->eternalnastytrap196 && (effect_level >= 5)) p_ptr->nastytrap196 = FALSE;
+	if (!p_ptr->eternalnastytrap197 && (effect_level >= 50)) p_ptr->nastytrap197 = FALSE;
+	if (!p_ptr->eternalnastytrap198 && (effect_level >= 1)) p_ptr->nastytrap198 = FALSE;
+	if (!p_ptr->eternalnastytrap199 && (effect_level >= 30)) p_ptr->nastytrap199 = FALSE;
+	if (!p_ptr->eternalnastytrap200 && (effect_level >= 10)) p_ptr->nastytrap200 = FALSE;
+	if (!p_ptr->eternalnastytrap201 && (effect_level >= 20)) p_ptr->nastytrap201 = FALSE;
+	if (!p_ptr->eternalnastytrap202 && (effect_level >= 20)) p_ptr->nastytrap202 = FALSE;
+	if (!p_ptr->eternalnastytrap203 && (effect_level >= 5)) p_ptr->nastytrap203 = FALSE;
+	if (!p_ptr->eternalnastytrap204 && (effect_level >= 5)) p_ptr->nastytrap204 = FALSE;
+	if (!p_ptr->eternalnastytrap205 && (effect_level >= 15)) p_ptr->nastytrap205 = FALSE;
+	if (!p_ptr->eternalnastytrap206 && (effect_level >= 1)) p_ptr->nastytrap206 = FALSE;
+	if (!p_ptr->eternalnastytrap207 && (effect_level >= 1)) p_ptr->nastytrap207 = FALSE;
+	if (!p_ptr->eternalnastytrap208 && (effect_level >= 30)) p_ptr->nastytrap208 = FALSE;
+	if (!p_ptr->eternalnastytrap209 && (effect_level >= 20)) p_ptr->nastytrap209 = FALSE;
+	if (!p_ptr->eternalnastytrap210 && (effect_level >= 30)) p_ptr->nastytrap210 = FALSE;
+	if (!p_ptr->eternalnastytrap211 && (effect_level >= 20)) p_ptr->nastytrap211 = FALSE;
+	if (!p_ptr->eternalnastytrap212 && (effect_level >= 30)) p_ptr->nastytrap212 = FALSE;
+	if (!p_ptr->eternalnastytrap213 && (effect_level >= 30)) p_ptr->nastytrap213 = FALSE;
 	p_ptr->nastytrap214 = FALSE;
 	p_ptr->nastytrap215 = FALSE;
 	p_ptr->nastytrap216 = FALSE;

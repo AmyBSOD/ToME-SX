@@ -2573,6 +2573,14 @@ void self_knowledge(FILE *fff)
 	{
 		info[i++] = "You have a problem: Monsters move even when very far away.";
 	}
+	if (p_ptr->nastytrap212)
+	{
+		info[i++] = "You have a problem: All items are vulnerable to all kinds of elemental damage.";
+	}
+	if (p_ptr->nastytrap213)
+	{
+		info[i++] = "You have a problem: Elemental damage can reduce the enchantment of your gear.";
+	}
 
 	if (p_ptr->contamination >= 10000)
 	{

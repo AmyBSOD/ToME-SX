@@ -5418,6 +5418,16 @@ I:8:10:0:10:30:0d0:o
 D:The glass seems to have gotten cracks!
 F:FLOOR | CHEST | DOOR
 
+N:1069:Equipment Damage Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
+N:1070:No Future Trap
+I:50:2:50:4:30:0d0:s
+D:Nasty!
+F:FLOOR
+
 # I:diff:prob:another:pval:minlevel:damage:color
 # I:diff:prob:            :minlevel:      :color
 

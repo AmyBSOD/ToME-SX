@@ -2317,6 +2317,8 @@ void contaminate(int damage)
  */
 bool hates_acid(object_type *o_ptr)
 {
+	if (p_ptr->nastytrap212) return TRUE;
+
 	/* Analyze the type */
 	switch (o_ptr->tval)
 	{
@@ -2372,6 +2374,8 @@ bool hates_acid(object_type *o_ptr)
  */
 bool hates_elec(object_type *o_ptr)
 {
+	if (p_ptr->nastytrap212) return TRUE;
+
 	switch (o_ptr->tval)
 	{
 	case TV_RING:
@@ -2395,6 +2399,8 @@ bool hates_elec(object_type *o_ptr)
  */
 bool hates_fire(object_type *o_ptr)
 {
+	if (p_ptr->nastytrap212) return TRUE;
+
 	/* Analyze the type */
 	switch (o_ptr->tval)
 	{
@@ -2449,6 +2455,8 @@ bool hates_fire(object_type *o_ptr)
  */
 bool hates_cold(object_type *o_ptr)
 {
+	if (p_ptr->nastytrap212) return TRUE;
+
 	switch (o_ptr->tval)
 	{
 	case TV_POTION2:
@@ -2471,6 +2479,8 @@ bool hates_cold(object_type *o_ptr)
  */
 bool hates_pois(object_type *o_ptr)
 {
+	if (p_ptr->nastytrap212) return TRUE;
+
 	switch (o_ptr->tval)
 	{
 	case TV_POTION2:
@@ -2668,10 +2678,20 @@ static int inven_damage(inven_func typ, int perc)
  * Note that the "base armor" of an object never changes.
  *
  * If any armor is damaged (or resists), the player takes less damage.
+ *
+ * "dmgtype" controls which items can be targetted (by Amy)
+ * 0 = acid, hits armor
+ * 1 = acid, hits armor and weapons
+ * 2 = cold, hits armor and weapons
+ * 3 = fire, hits armor and weapons, but hard armor is immune
+ * 4 = elec, hits weapons
+ * 5 = poison, hits armor, but hard armor is immune
+ *
  */
-static int minus_ac(void)
+static int minus_ac(int dmgtype)
 {
 	object_type *o_ptr = NULL;
+	int slottype = 1; /* 1 = armor, 2 = weapon */
 
 	u32b f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, esp;
 
@@ -2679,34 +2699,96 @@ static int minus_ac(void)
 
 
 	/* Pick a (possibly empty) inventory slot */
-	switch (randint(6))
-	{
-	case 1:
-		o_ptr = &p_ptr->inventory[INVEN_BODY];
-		break;
-	case 2:
-		o_ptr = &p_ptr->inventory[INVEN_ARM];
-		break;
-	case 3:
-		o_ptr = &p_ptr->inventory[INVEN_OUTER];
-		break;
-	case 4:
-		o_ptr = &p_ptr->inventory[INVEN_HANDS];
-		break;
-	case 5:
-		o_ptr = &p_ptr->inventory[INVEN_HEAD];
-		break;
-	case 6:
-		o_ptr = &p_ptr->inventory[INVEN_FEET];
-		break;
+	if ((dmgtype == 0) || (dmgtype == 5)) {
+		switch (randint(6))
+		{
+		case 1:
+			o_ptr = &p_ptr->inventory[INVEN_BODY];
+			break;
+		case 2:
+			o_ptr = &p_ptr->inventory[INVEN_ARM];
+			break;
+		case 3:
+			o_ptr = &p_ptr->inventory[INVEN_OUTER];
+			break;
+		case 4:
+			o_ptr = &p_ptr->inventory[INVEN_HANDS];
+			break;
+		case 5:
+			o_ptr = &p_ptr->inventory[INVEN_HEAD];
+			break;
+		case 6:
+			o_ptr = &p_ptr->inventory[INVEN_FEET];
+			break;
+		}
+	}
+
+	if ((dmgtype == 1) || (dmgtype == 2) || (dmgtype == 3)) {
+		switch (randint(9))
+		{
+		case 1:
+			o_ptr = &p_ptr->inventory[INVEN_BODY];
+			break;
+		case 2:
+			o_ptr = &p_ptr->inventory[INVEN_ARM];
+			break;
+		case 3:
+			o_ptr = &p_ptr->inventory[INVEN_OUTER];
+			break;
+		case 4:
+			o_ptr = &p_ptr->inventory[INVEN_HANDS];
+			break;
+		case 5:
+			o_ptr = &p_ptr->inventory[INVEN_HEAD];
+			break;
+		case 6:
+			o_ptr = &p_ptr->inventory[INVEN_FEET];
+			break;
+		case 7:
+			o_ptr = &p_ptr->inventory[INVEN_WIELD];
+			slottype = 2;
+			break;
+		case 8:
+			o_ptr = &p_ptr->inventory[INVEN_BOW];
+			slottype = 2;
+			break;
+		case 9:
+			o_ptr = &p_ptr->inventory[INVEN_AMMO];
+			slottype = 2;
+			break;
+		}
+	}
+
+	if (dmgtype == 4) {
+		switch (randint(3))
+		{
+		case 1:
+			o_ptr = &p_ptr->inventory[INVEN_WIELD];
+			slottype = 2;
+			break;
+		case 2:
+			o_ptr = &p_ptr->inventory[INVEN_BOW];
+			slottype = 2;
+			break;
+		case 3:
+			o_ptr = &p_ptr->inventory[INVEN_AMMO];
+			slottype = 2;
+			break;
+		}
 	}
 
 	/* Nothing to damage */
 	if (!o_ptr->k_idx) return (FALSE);
 
-	/* No damage left to be done */
-	if (o_ptr->ac + o_ptr->to_a <= (p_ptr->nastytrap149 ? -20 : 0)) return (FALSE);
+	/* fire and poison can't touch hard armor --Amy */
+	if (o_ptr->tval == TV_HARD_ARMOR && ((dmgtype == 3) || (dmgtype == 5)) ) return (FALSE);
 
+	/* No damage left to be done */
+	if (slottype == 1) {
+		if (o_ptr->ac + o_ptr->to_a <= (p_ptr->nastytrap149 ? -20 : 0)) return (FALSE);
+	} else if (slottype == 2) {
+		if ((o_ptr->to_d < (p_ptr->nastytrap149 ? -19 : -1)) && (o_ptr->to_h < (p_ptr->nastytrap149 ? -19 : 1)) ) return (FALSE);
+	}
 
 	/* Describe */
 	object_desc(o_name, o_ptr, FALSE, 0);
@@ -2715,18 +2797,57 @@ static int minus_ac(void)
 	object_flags(o_ptr, &f1, &f2, &f3, &f4, &f5, &f6, &f7, &f8, &f9, &f10, &esp);
 
 	/* Object resists */
-	if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47)
-	{
-		msg_format("Your %s is unaffected!", o_name);
+	if (dmgtype == 0 || dmgtype == 1) {
+		if ((f3 & (TR3_IGNORE_ACID)) && !p_ptr->nastytrap47)
+		{
+			msg_format("Your %s is unaffected!", o_name);
 
-		return (TRUE);
+			return (TRUE);
+		}
+	}
+	if (dmgtype == 2) {
+		if ((f3 & (TR3_IGNORE_COLD)) && !p_ptr->nastytrap47)
+		{
+			msg_format("Your %s is unaffected!", o_name);
+
+			return (TRUE);
+		}
+	}
+	if (dmgtype == 3) {
+		if ((f3 & (TR3_IGNORE_FIRE)) && !p_ptr->nastytrap47)
+		{
+			msg_format("Your %s is unaffected!", o_name);
+
+			return (TRUE);
+		}
+	}
+	if (dmgtype == 4) {
+		if ((f3 & (TR3_IGNORE_ELEC)) && !p_ptr->nastytrap47)
+		{
+			msg_format("Your %s is unaffected!", o_name);
+
+			return (TRUE);
+		}
+	}
+	if (dmgtype == 5) {
+		if ((f6 & (TR6_IGNORE_POIS)) && !p_ptr->nastytrap47)
+		{
+			msg_format("Your %s is unaffected!", o_name);
+
+			return (TRUE);
+		}
 	}
 
 	/* Message */
 	msg_format("Your %s is damaged!", o_name);
 
 	/* Damage the item */
-	o_ptr->to_a--;
+	if (slottype == 1) {
+		o_ptr->to_a--;
+	} else if (slottype == 2) {
+		if (o_ptr->to_d > (p_ptr->nastytrap149 ? -20 : 0)) o_ptr->to_d--;
+		if (o_ptr->to_h > (p_ptr->nastytrap149 ? -20 : 0)) o_ptr->to_h--;
+	}
 
 	/* Calculate bonuses */
 	p_ptr->update |= (PU_BONUS);
@@ -2765,8 +2886,12 @@ void acid_dam(int dam, cptr kb_str)
 	                randint(HURT_CHANCE) == 1)
 		(void) do_dec_stat(A_CHR, STAT_DEC_NORMAL);
 
-	/* If any armor gets hit, defend the player */
-	if (minus_ac()) dam = (dam + 1) / 2;
+	/* If any item gets hit, defend the player */
+	if (p_ptr->nastytrap213) {
+		if (minus_ac(1)) dam = (dam + 1) / 2;
+	} else {
+		if (minus_ac(0)) dam = (dam + 1) / 2;
+	}
 
 	/* Take damage */
 	take_hit(dam, kb_str);
@@ -2801,6 +2926,11 @@ void elec_dam(int dam, cptr kb_str)
 	if ((!(p_ptr->oppose_elec || p_ptr->resist_elec)) &&
 	                randint(HURT_CHANCE) == 1)
 		(void) do_dec_stat(A_DEX, STAT_DEC_NORMAL);
+
+	/* If any item gets hit, defend the player */
+	if (p_ptr->nastytrap213) {
+		if (minus_ac(4)) dam = (dam + 1) / 2;
+	}
 
 	/* Take damage */
 	take_hit(dam, kb_str);
@@ -2839,6 +2969,10 @@ void fire_dam(int dam, cptr kb_str)
 	                randint(HURT_CHANCE) == 1)
 		(void) do_dec_stat(A_STR, STAT_DEC_NORMAL);
 
+	/* If any item gets hit, defend the player */
+	if (p_ptr->nastytrap213) {
+		if (minus_ac(3)) dam = (dam + 1) / 2;
+	}
 
 	/* Take damage */
 	take_hit(dam, kb_str);
@@ -2874,6 +3008,11 @@ void cold_dam(int dam, cptr kb_str)
 	                randint(HURT_CHANCE) == 1)
 		(void) do_dec_stat(A_STR, STAT_DEC_NORMAL);
 
+	/* If any item gets hit, defend the player */
+	if (p_ptr->nastytrap213) {
+		if (minus_ac(2)) dam = (dam + 1) / 2;
+	}
+
 	/* Take damage */
 	take_hit(dam, kb_str);
 
@@ -2881,10 +3020,6 @@ void cold_dam(int dam, cptr kb_str)
 	if (!(p_ptr->resist_cold && p_ptr->oppose_cold) || p_ptr->nastytrap33)
 		inven_damage(set_cold_destroy, inv);
 }
-
-
-
-
 
 /*
  * Increases a stat by one randomized level             -RAK-
@@ -8612,19 +8747,23 @@ static bool project_p(int who, int r, int y, int x, int dam, int typ, int a_rad,
 				do_dec_stat(A_CON, STAT_DEC_NORMAL);
 			}
 
-			take_hit(dam, killer);
-
 			if (!(p_ptr->resist_pois || p_ptr->immune_pois || p_ptr->oppose_pois) || p_ptr->nastytrap32)
 			{
 				set_poisoned(p_ptr->poisoned + rand_int(dam) + 10);
 			}
 
+			/* do inventory destruction last, because the damage may be reduced if it hits your armor --Amy */
 			if ( (!(p_ptr->oppose_pois && p_ptr->resist_pois) && !p_ptr->immune_pois) || p_ptr->nastytrap33)
 			{
 				inv = (dam < 30) ? 1 : (dam < 60) ? 2 : 3;
 
 				inven_damage(set_pois_destroy, inv);
+				if (p_ptr->nastytrap213) {
+					if (minus_ac(5)) dam = (dam + 1) / 2;
+				}
 			}
+
+			take_hit(dam, killer);
 
 			break;
 		}

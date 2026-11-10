@@ -3974,6 +3974,9 @@
 #define TRAP_OF_TERRAIN_COLUMN            1067
 #define TRAP_OF_TERRAIN_CRACKEDGLASS      1068
 
+#define TRAP_NASTY212                     1069
+#define TRAP_NASTY213                     1070
+
 /*** General index values ***/
 
 
