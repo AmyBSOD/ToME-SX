@@ -36,6 +36,7 @@ screams, 'Don't hurt a poor helpless hobbit!'
 yells, 'Where are my vicious dogs when I need them?'
 
 N:63:Smeagol
+N:7236:Gollum (Smeagol)
 27
 sniggers.
 grovels.
@@ -843,3 +844,429 @@ laughs 'Yoku kita ne. Kangei suru yo'
 2
 asks 'Nandai mou owari kai?'
 wonders 'Sate tsugiwa doitsu dai?'
+
+N:7217:Rhan-Tegoth's Cultist
+3
+says, 'Have you heard, about our Lord and Saviour He Who Sleeps the Eternal Slumber?'
+says, 'Your sins are meaningless triffles out there in the Cosmos...'
+yells and screams a maddening nonsense.
+0
+
+N:7219:Floating Spectral Skull
+N:7220:Nether Skull
+N:7303:Flying Burning Skull
+N:7304:Flying Blazing Skull
+N:7305:Flying Scorching Skull
+N:7384:Iron Lich Skull
+6
+says something you don't understand, flames coming out its eyes' sockets.
+floats up and down, mystic flames crackling horribly.
+laughs at you with a spectral voice.
+hisses, making sickening noises.
+mumbles some strange words.
+whispers ancient evil spells.
+0
+
+N:7435:Glowing bug
+N:7436:Glowing bug
+N:7455:Firespitting bug
+N:7456:Firespitting bug
+N:7457:Flesh Eating bug
+N:7458:Flesh Eating bug
+N:7459:Freezing bug
+N:7460:Freezing bug
+N:7461:Shocking bug
+N:7462:Shocking bug
+N:7507:Giant cockroach
+N:7508:Giant cockroach
+N:7509:Queen Cockroach
+6
+chitters nervously.
+twitches its anntenae. 
+squeals.
+unfolds its wings menacingly.
+makes clacking sounds.
+lifts its upper body, probing the air.
+0
+
+N:7247:Orc cub
+6
+snarls aggressively.
+sneers at you.
+shouts with a high pitched voice.
+bares its yellowish fangs at you.
+screams and stomps the ground violently.
+sniffs the air.
+0
+
+N:7252:Kobold Brigand
+N:7424:Kobold chieftain
+10
+bares its fangs as it sniffs around.
+laughs full of mockery.
+rubs its fists in anticipation.
+growls menacingly.
+grunts noisely.
+bares its fangs to you with resentment.
+shouts something at you.
+screams loudly!
+says, 'Hey you, get ready to die for the Kobold Lord!'
+sneers at you spitefully.
+0
+
+N:7264:Ganelon, the Rogue of Avalon
+6
+says something about Shadow creatures.
+yells at you.
+swings his blade around, menacingly.
+chuckles scornfully.
+looks square at you in the eyes.
+says with sadness, 'You are getting morbid, Adventurer. Or drunk. Or both. Bitter, too. You don't need that.'
+0
+
+N:7267:Larval demon
+6
+growls and sniffs the air.
+cackles while baring its fangs.
+sneers at you.
+growls dreadfully.
+shouts with a pitching loud voice.
+screams with a horrid voice.
+0
+
+N:7293:Kina's Cultist Priest
+7
+shouts at you!
+makes strange gestures with its mummified hands.
+spits on the ground.
+snickers and chuckles mockingly.
+yells, 'The Goddess wants your blood! Nowww!'
+screams maniacally
+mumbles weird sounding words.
+0
+
+N:7501:Sand Kobold
+9
+sniffs the air and growls.
+shouts at you!
+yells, 'For the Kobold Lord, boissss!'
+snarls, baring its fangs, saliva dripping from its mouth.
+laughs hoarsely.
+makes a mocking, barking sound.
+says, 'You are going to be our next meal!'
+says something you don't understand.
+grins widely, yellowish fangs showing.
+0
+
+N:7519:Carrion Crow
+6
+moves its decaying head around, probing the air.
+makes a pitiful mourning caw.
+caws, sputtering ichor.
+sqwaks with a sickening noise.
+flaps its decaying wings.
+makes strange noises.
+0
+
+N:7224:Kobold Soldier
+N:7513:Snow Kobold
+9
+shouts at you with a doglike, deep voice.
+growls with hate.
+screams, 'Die, you vermin!'
+snarls and growls.
+snickers with malice.
+yells angrily at you.
+says, 'You cannot hide from us Kobolds.'
+spits at you a nasty looking glob.
+sniffs the air and growls.
+0
+
+N:7395:Spidergoblin
+4
+sniffs the air and chuckles.
+makes sickening clicking noises.
+grins evilly, poisonous saliva dripping from its fangs.
+sputters some words of hate to you.
+0
+
+N:7272:Orc Shaman
+N:7329:Troll Shaman
+N:7627:Orc Cultist Priest of Beogh
+10
+cuts his arms, black blood dripping on the ground.
+screams, 'Die for Beogh the Souleater!'
+sniffs the air and growls loudly.
+laughs maniacally!
+spits a blackened substance on the ground.
+takes a swig from a flask and puts it back away.
+opens its bloodshot eyes wide and laughs.
+points at you with its staff and screams in a rageful fit.
+yells, 'Beogh claims your soul, either you want it or not!'
+screams, 'Convert to Beogh and be happy dying for Him!'
+0
+
+N:7420:Kobold Shaman
+N:7453:Goblin Shaman
+12
+sniffs the air and growls.
+chuckles and licks its lips.
+sneers evilly.
+screams, 'I want your skin!'
+yells at you!
+screams with hoarse voice.
+growls and snarls at you.
+says, 'I want your blood for my cauldron!'
+laughs madly.
+lick its purple, pus-festered lips.
+says, 'Your blood belongs to me!'
+says, 'Your blood belongs to Beogh!'
+0
+
+N:7240:Snaggletooth
+8
+sniffs the air and wails.
+grunts and puffs devilishly.
+shouts angrily at you!
+snarls, saliva dripping both sides of its wide mouth.
+howls with a porcine voice.
+screams with a horribly pitching voice.
+smells the ground, tracking you.
+bares its huge tusks at you.
+0
+
+N:7302:Dark Spotted naga
+N:7321:Naga Shaman Priest Of Seth
+7
+sniffs the air and spits.
+hisses angrily.
+probes the air with its nauseating tongue.
+lowers its body, menacingly.
+bares its long fangs at you.
+screeches with a high-pitched imitation of voice.
+mutters something in a strange tongue.
+0
+
+N:7301:Goblin
+11
+sniffs the air and growls.
+makes a sick laughing sound.
+screams!
+howls with a piercing voice.
+screams maniacally.
+snarls, with hateful eyes fixed on you.
+laughs, full of cruel hate.
+shouts with a piercing voice, 'Kill kill kill!'
+shouts histerically at you.
+yells and screams at you.
+cries out for your blood.
+0
+
+N:7335:Goblin Priest of Chaos
+7
+sniffs the air and growls.
+says, 'Your soul belongs to the Chaos' Gods!'
+screams a burst of nonsense at you.
+howls like a mad coyote.
+acts like it's been possessed by some demonic force.
+shouts, 'Give me your soul, now!'
+chuckles with sheer malice.
+0
+
+N:7410:Thulsa Doom, Archbishop of Set
+7
+sniffs the air and spits.
+says, 'Steel isn't strong, boy, flesh is stronger!'
+mumbles, 'What is the riddle of steel? It's the least I can do...'
+sticks a nauseating, purple, bulbous, bifidous tongue out of his mouth.
+sneers mockingly at you.
+stares deep at you in the eye.
+whispers, 'Purging is at last at hand, Day of Doom is here...'
+0
+
+N:7419:Bakemono
+5
+sniffs the air and growls.
+laughs histerically.
+starts blabbering and stuttering.
+snarls evilly.
+yells, 'Get him! I want to eeaaattt!'
+0
+
+N:7425:Masked Thief
+7
+sniffs the air and growls.
+probs you with suspicion.
+chuckles.
+hushes you.
+says, 'All you have will be for sale in the Black Market by midnight'.
+puffs and huffs.
+rubs its gloved hands impatiently.
+0
+
+N:7437:Chained fairy
+6
+sniffs the air and cries.
+says, "please, set me free and my last fairy dust will show you my gratitude".
+cries pitifully, her tiny body shaking from despair.
+sobs, full of pain.
+babbles some nonsensical words.
+mutters, cursing the Goblins that enslaved her.
+0
+
+N:7483:City Patrol Guard
+4
+yells at you!
+commands you to stop.
+asks, 'What are you up to?'
+says, 'We don't want no crime in this town!'
+0
+
+N:7487:Child of the Night
+7
+sniffs the air and growls.
+cackles with malice.
+chitters.
+mumbles something spitefully at you.
+growls softly.
+licks its brownish broken teeth.
+yells with a weird imitation of voice.
+0
+
+N:7494:Man-brute
+7
+sniffs the air and growls.
+yells angrily.
+tries to say something.
+mutters some weird noises.
+shake its huge fists at you.
+drools and chuckles.
+growls in a low, menacing tone.
+0
+
+N:7511:Snow orc
+8
+sniffs the air and growls.
+bares its huge brownish tusks at you.
+squints its eyes and grinds its teeth.
+spits a brown glob at you.
+growls while sniffing the air.
+screams with a deep bestial voice.
+says, 'Your warm blood with soak our weapons!'
+sneers and says, 'The killing storm is here, now you die.'
+0
+
+N:7514:Snow Goblin
+7
+sniffs the air and growls.
+sniffs the air, smelling your scent.
+bares its yellowish fangs.
+snarls spitefully.
+shouts and points at you.
+screams with a screeching voice.
+barks and *coughs*
+0
+
+N:7518:Skaven Necromancer
+7
+sniffs the air and growls.
+shouts at you!
+command its minions against you.
+growls in a high pitched horrid tone.
+gestures like a maniac.
+yells, 'Get that one, blood for the Red Cauldron!'
+screams, frothing at the mouth.
+0
+
+N:7523:Strangler Cultist of Kina
+8
+sniffs the air and growls.
+yells at you!
+shouts and froths at the mouth.
+rolls the eyes blank in trance.
+screams something at you.
+snarls like a rabid beast.
+scratches the skin of its face bloody.
+says something in a strange tongue.
+0
+
+N:7500:Lizard-man of Set
+N:7545:Serpent-man of Set
+11
+sniffs the air and spits.
+says, 'Your soul belongs to Set, your flesh belongs to me!'
+screams and hisses angrily.
+yells with a deep raspy voice.
+makes strange gurgling sounds.
+hisses angrily.
+tastes the air with his viscous split tongue.
+clicks weirdly.
+opens its mouth in an impossible wide angle.
+licks its yellowish, long fangs.
+spits a strange bubbling ichor on the ground.
+0
+
+N:7544:Zhryleg, Commander of Zogs
+6
+sniffs the air and growls.
+snarls and growls with anger.
+closes his terrible mandibles violently towards you.
+says, 'I'm gonna give the hull of your body to the Zog Queen!'
+says, 'Your body will serve as dinner to my larvae!'
+screams at you!
+0
+
+N:7434:Boskovlado, King of Goblins
+7
+sniffs the air and growls.
+screams like a maniac at you!
+says, 'Time for you to pay for the spilled Goblin blood!'
+screeches loudly.
+says. 'Your skin will be a nice carpet!'
+laughs like mad.
+chuckles evilly.
+0
+
+N:7520:Gamal, The Master Strangler
+6
+mumbles something in a strange tongue.
+mutters strange words nervously.
+shouts at you!
+sneers spitefully.
+says, 'My rumel with be your shroud!'
+says, 'The Black Goddess craves for your soul.'
+0
+
+N:7524:Gorlak
+8
+sniffs the air and growls.
+makes horrid screeching sounds.
+gets on all four, sniffs the ground.
+yells and clenches its clawlike hands.
+screams like a demon.
+says something you don't understand.
+spits a greenish, steaming glob of ichor.
+howls with a horrible voice.
+0
+
+N:7533:Corrosive Crawler
+6
+sniffs the air and growls.
+laughs and chuckles with malice.
+makes strange gurgling sounds.
+hisses painfully.
+produces a nauseating stench.
+screams horribly!
+0
+
+N:7615:Wandering Werd
+7
+says, '"Oh, hey-hey there, young fellow, how is your day going?'
+says, 'Have you heard about the Multi-hued Dragon Armor? They say it is... beautiful.'
+mutters, 'Well, you should sit down with me and rest for a spell.'
+mumbles to himself, 'I should be heading home by now...'
+yells, 'Take care and stay safe while you venture down those Dungeons!'
+cries out loud, 'They say the Dungeons are guarded by terrible monsters! That's bad!'
+whistles a tune.
+0
+
