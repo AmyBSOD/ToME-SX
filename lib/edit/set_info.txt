@@ -67,11 +67,17 @@ N:3:Gothmog's Armory
 D:It is from a group of items that once belonged to Gothmog, 
 D:the High Captain of the Balrogs
 # The demonblade of Gothmog
+P:181:2:7
+F:STR
 P:181:3:7
-F:STR | CON | SPEED | VAMPIRIC
+F:CON | SPEED | VAMPIRIC
 # The demonshield of Gothmog
+P:182:2:0
+F:SH_ELEC
 P:182:3:0
-F:IM_FIRE | IM_COLD | SH_ELEC
+F:IM_FIRE | IM_COLD
 # The demonhorn of Gothmog
+P:183:2:0
+F:ESP_GOOD
 P:183:3:0
-F:ESP_EVIL | ESP_GOOD | AUTO_ID
+F:ESP_EVIL | AUTO_ID
