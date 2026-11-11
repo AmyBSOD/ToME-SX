@@ -1445,6 +1445,33 @@ bool create_artifact(object_type *o_ptr, bool a_scroll, bool get_name)
 	/* Amy edit: randarts should be a bit better! */
 	if (magik(33)) powers += randint(4);
 
+	int dunlevelmax = dun_level;
+	if (p_ptr->nastytrap45 && (dunlevelmax > 1)) dunlevelmax /= 2;
+	if (((get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus) > 0) && !p_ptr->nastytrap45) dunlevelmax += (get_skill(SKILL_FORTUNE) + p_ptr->mfind_bonus);
+
+	/* high-level randarts of certain types should be better --Amy */
+	if (o_ptr->tval == TV_MSTAFF || o_ptr->tval == TV_HAFTED || o_ptr->tval == TV_POLEARM || o_ptr->tval == TV_SWORD || o_ptr->tval == TV_AXE) {
+		if (dunlevelmax >= 15 && magik(66)) powers++;
+		if (dunlevelmax >= 30 && magik(66)) powers++;
+		if (dunlevelmax >= 45 && magik(66)) powers++;
+		if (dunlevelmax >= 60 && magik(66)) powers++;
+		if (dunlevelmax >= 75 && magik(66)) powers++;
+		if (dunlevelmax >= 90 && magik(66)) powers++;
+	}
+
+	if (o_ptr->tval == TV_BOOTS || o_ptr->tval == TV_GLOVES || o_ptr->tval == TV_HELM || o_ptr->tval == TV_CROWN || o_ptr->tval == TV_SHIELD || o_ptr->tval == TV_CLOAK || o_ptr->tval == TV_SOFT_ARMOR || o_ptr->tval == TV_HARD_ARMOR || o_ptr->tval == TV_DRAG_ARMOR || o_ptr->tval == TV_DAEMON_BOOK) {
+		if (dunlevelmax >= 20 && magik(66)) powers++;
+		if (dunlevelmax >= 40 && magik(66)) powers++;
+		if (dunlevelmax >= 60 && magik(66)) powers++;
+		if (dunlevelmax >= 80 && magik(66)) powers++;
+	}
+
+	if (o_ptr->tval == TV_AMULET || o_ptr->tval == TV_RING) {
+		if (dunlevelmax >= 30 && magik(66)) powers++;
+		if (dunlevelmax >= 60 && magik(66)) powers++;
+		if (dunlevelmax >= 90 && magik(66)) powers++;
+	}
+
 	/* randart instruments and climbing sets shouldn't be uber imba --Amy */
 	if (o_ptr->tval == TV_INSTRUMENT) {
 		powers /= 3;
@@ -1458,6 +1485,8 @@ bool create_artifact(object_type *o_ptr, bool a_scroll, bool get_name)
 	/* more randomness by Amy */
 	if (a_cursed) xtrapowers = randint(2);
 	else xtrapowers = rand_int(2);
+
+	if (randint(10) == 1) xtrapowers++;
 
 	if (randint(50) == 1) {
 		xtrapowers += powers;
